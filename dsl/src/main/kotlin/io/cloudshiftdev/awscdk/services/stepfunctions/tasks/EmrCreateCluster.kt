@@ -30,116 +30,81 @@ public open class EmrCreateCluster internal constructor(
   public open fun serviceRole(): IRole = unwrap(this).getServiceRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun additionalInfo(additionalInfo: String) {
-    }
+    public fun additionalInfo(additionalInfo: String)
 
-    public fun applications(applications: List<ApplicationConfigProperty>) {
-    }
+    public fun applications(applications: List<ApplicationConfigProperty>)
 
-    public fun autoScalingRole(autoScalingRole: IRole) {
-    }
+    public fun autoScalingRole(autoScalingRole: IRole)
 
-    public fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>) {
-    }
+    public fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>)
 
-    public fun clusterRole(clusterRole: IRole) {
-    }
+    public fun clusterRole(clusterRole: IRole)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun configurations(configurations: List<ConfigurationProperty>) {
-    }
+    public fun configurations(configurations: List<ConfigurationProperty>)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb5f460e0e2cfd6af91ce0e7b89d551a99a1db683817e26654ab34ee73268da1")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
-    public fun customAmiId(customAmiId: String) {
-    }
+    public fun customAmiId(customAmiId: String)
 
-    public fun ebsRootVolumeSize(ebsRootVolumeSize: Size) {
-    }
+    public fun ebsRootVolumeSize(ebsRootVolumeSize: Size)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun instances(instances: InstancesConfigProperty) {
-    }
+    public fun instances(instances: InstancesConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10af92922533ae8a24ffcad71bb2c27c2cd7261090d74dc74f03665583298f1d")
-    public fun instances(instances: InstancesConfigProperty.Builder.() -> Unit) {
-    }
+    public fun instances(instances: InstancesConfigProperty.Builder.() -> Unit)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty) {
-    }
+    public fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("009696d119485783fe485fae2584ed39873548c64acbcf4b360c05866bd665ec")
-    public
-        fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty.Builder.() -> Unit) {
-    }
+    public fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty.Builder.() -> Unit)
 
-    public fun logUri(logUri: String) {
-    }
+    public fun logUri(logUri: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun releaseLabel(releaseLabel: String) {
-    }
+    public fun releaseLabel(releaseLabel: String)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun scaleDownBehavior(scaleDownBehavior: EmrClusterScaleDownBehavior) {
-    }
+    public fun scaleDownBehavior(scaleDownBehavior: EmrClusterScaleDownBehavior)
 
-    public fun securityConfiguration(securityConfiguration: String) {
-    }
+    public fun securityConfiguration(securityConfiguration: String)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun stepConcurrencyLevel(stepConcurrencyLevel: Number) {
-    }
+    public fun stepConcurrencyLevel(stepConcurrencyLevel: Number)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun visibleToAllUsers(visibleToAllUsers: Boolean) {
-    }
+    public fun visibleToAllUsers(visibleToAllUsers: Boolean)
   }
 
   private class BuilderImpl(
@@ -151,145 +116,145 @@ public open class EmrCreateCluster internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.Builder.create(scope,
         id)
 
-    public override fun additionalInfo(additionalInfo: String) {
+    override fun additionalInfo(additionalInfo: String) {
       cdkBuilder.additionalInfo(additionalInfo)
     }
 
-    public override fun applications(applications: List<ApplicationConfigProperty>) {
+    override fun applications(applications: List<ApplicationConfigProperty>) {
       cdkBuilder.applications(applications.map(ApplicationConfigProperty::unwrap))
     }
 
-    public override fun autoScalingRole(autoScalingRole: IRole) {
+    override fun autoScalingRole(autoScalingRole: IRole) {
       cdkBuilder.autoScalingRole(autoScalingRole.let(IRole::unwrap))
     }
 
-    public override fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>) {
+    override fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>) {
       cdkBuilder.bootstrapActions(bootstrapActions.map(BootstrapActionConfigProperty::unwrap))
     }
 
-    public override fun clusterRole(clusterRole: IRole) {
+    override fun clusterRole(clusterRole: IRole) {
       cdkBuilder.clusterRole(clusterRole.let(IRole::unwrap))
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun configurations(configurations: List<ConfigurationProperty>) {
+    override fun configurations(configurations: List<ConfigurationProperty>) {
       cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb5f460e0e2cfd6af91ce0e7b89d551a99a1db683817e26654ab34ee73268da1")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
-    public override fun customAmiId(customAmiId: String) {
+    override fun customAmiId(customAmiId: String) {
       cdkBuilder.customAmiId(customAmiId)
     }
 
-    public override fun ebsRootVolumeSize(ebsRootVolumeSize: Size) {
+    override fun ebsRootVolumeSize(ebsRootVolumeSize: Size) {
       cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize.let(Size::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun instances(instances: InstancesConfigProperty) {
+    override fun instances(instances: InstancesConfigProperty) {
       cdkBuilder.instances(instances.let(InstancesConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10af92922533ae8a24ffcad71bb2c27c2cd7261090d74dc74f03665583298f1d")
-    public override fun instances(instances: InstancesConfigProperty.Builder.() -> Unit): Unit =
+    override fun instances(instances: InstancesConfigProperty.Builder.() -> Unit): Unit =
         instances(InstancesConfigProperty(instances))
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty) {
+    override fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty) {
       cdkBuilder.kerberosAttributes(kerberosAttributes.let(KerberosAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("009696d119485783fe485fae2584ed39873548c64acbcf4b360c05866bd665ec")
-    public override
+    override
         fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty.Builder.() -> Unit):
         Unit = kerberosAttributes(KerberosAttributesProperty(kerberosAttributes))
 
-    public override fun logUri(logUri: String) {
+    override fun logUri(logUri: String) {
       cdkBuilder.logUri(logUri)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun releaseLabel(releaseLabel: String) {
+    override fun releaseLabel(releaseLabel: String) {
       cdkBuilder.releaseLabel(releaseLabel)
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun scaleDownBehavior(scaleDownBehavior: EmrClusterScaleDownBehavior) {
+    override fun scaleDownBehavior(scaleDownBehavior: EmrClusterScaleDownBehavior) {
       cdkBuilder.scaleDownBehavior(scaleDownBehavior.let(EmrClusterScaleDownBehavior::unwrap))
     }
 
-    public override fun securityConfiguration(securityConfiguration: String) {
+    override fun securityConfiguration(securityConfiguration: String) {
       cdkBuilder.securityConfiguration(securityConfiguration)
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun stepConcurrencyLevel(stepConcurrencyLevel: Number) {
+    override fun stepConcurrencyLevel(stepConcurrencyLevel: Number) {
       cdkBuilder.stepConcurrencyLevel(stepConcurrencyLevel)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun visibleToAllUsers(visibleToAllUsers: Boolean) {
+    override fun visibleToAllUsers(visibleToAllUsers: Boolean) {
       cdkBuilder.visibleToAllUsers(visibleToAllUsers)
     }
 
@@ -328,14 +293,11 @@ public open class EmrCreateCluster internal constructor(
     public fun properties(): Map<String, String> = unwrap(this).getProperties() ?: emptyMap()
 
     public interface Builder {
-      public fun classification(classification: String) {
-      }
+      public fun classification(classification: String)
 
-      public fun configurations(configurations: List<ConfigurationProperty>) {
-      }
+      public fun configurations(configurations: List<ConfigurationProperty>)
 
-      public fun properties(properties: Map<String, String>) {
-      }
+      public fun properties(properties: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -344,15 +306,15 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ConfigurationProperty.builder()
 
-      public override fun classification(classification: String) {
+      override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
-      public override fun configurations(configurations: List<ConfigurationProperty>) {
+      override fun configurations(configurations: List<ConfigurationProperty>) {
         cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
       }
 
-      public override fun properties(properties: Map<String, String>) {
+      override fun properties(properties: Map<String, String>) {
         cdkBuilder.properties(properties)
       }
 
@@ -365,13 +327,12 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ConfigurationProperty,
     ) : ConfigurationProperty {
-      public override fun classification(): String? = unwrap(this).getClassification()
+      override fun classification(): String? = unwrap(this).getClassification()
 
-      public override fun configurations(): List<ConfigurationProperty> =
+      override fun configurations(): List<ConfigurationProperty> =
           unwrap(this).getConfigurations()?.map(ConfigurationProperty::wrap) ?: emptyList()
 
-      public override fun properties(): Map<String, String> = unwrap(this).getProperties() ?:
-          emptyMap()
+      override fun properties(): Map<String, String> = unwrap(this).getProperties() ?: emptyMap()
     }
 
     public companion object {
@@ -427,17 +388,14 @@ public open class EmrCreateCluster internal constructor(
     public fun scriptBootstrapAction(): ScriptBootstrapActionConfigProperty
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty) {
-      }
+      public fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e46424a100529b23b874f3d97c0f1eb4a4773b914c6ee48bbba8948c430ae044")
       public
-          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit) {
-      }
+          fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -446,18 +404,18 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.BootstrapActionConfigProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override
+      override
           fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty) {
         cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e46424a100529b23b874f3d97c0f1eb4a4773b914c6ee48bbba8948c430ae044")
-      public override
+      override
           fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty.Builder.() -> Unit):
           Unit = scriptBootstrapAction(ScriptBootstrapActionConfigProperty(scriptBootstrapAction))
 
@@ -470,9 +428,9 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.BootstrapActionConfigProperty,
     ) : BootstrapActionConfigProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun scriptBootstrapAction(): ScriptBootstrapActionConfigProperty =
+      override fun scriptBootstrapAction(): ScriptBootstrapActionConfigProperty =
           unwrap(this).getScriptBootstrapAction().let(ScriptBootstrapActionConfigProperty::wrap)
     }
 
@@ -538,17 +496,14 @@ public open class EmrCreateCluster internal constructor(
     public fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
 
     public interface Builder {
-      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-      }
+      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d6f90ce225f535e721d478357450c309793426146555761af77137d6011275d2")
       public
-          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit)
 
-      public fun volumesPerInstance(volumesPerInstance: Number) {
-      }
+      public fun volumesPerInstance(volumesPerInstance: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -557,17 +512,17 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsBlockDeviceConfigProperty.builder()
 
-      public override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
+      override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
         cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d6f90ce225f535e721d478357450c309793426146555761af77137d6011275d2")
-      public override
+      override
           fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit):
           Unit = volumeSpecification(VolumeSpecificationProperty(volumeSpecification))
 
-      public override fun volumesPerInstance(volumesPerInstance: Number) {
+      override fun volumesPerInstance(volumesPerInstance: Number) {
         cdkBuilder.volumesPerInstance(volumesPerInstance)
       }
 
@@ -580,10 +535,10 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsBlockDeviceConfigProperty,
     ) : EbsBlockDeviceConfigProperty {
-      public override fun volumeSpecification(): VolumeSpecificationProperty =
+      override fun volumeSpecification(): VolumeSpecificationProperty =
           unwrap(this).getVolumeSpecification().let(VolumeSpecificationProperty::wrap)
 
-      public override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
+      override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
     }
 
     public companion object {
@@ -614,14 +569,11 @@ public open class EmrCreateCluster internal constructor(
     public fun volumeType(): EbsBlockDeviceVolumeType
 
     public interface Builder {
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun volumeSize(volumeSize: Size) {
-      }
+      public fun volumeSize(volumeSize: Size)
 
-      public fun volumeType(volumeType: EbsBlockDeviceVolumeType) {
-      }
+      public fun volumeType(volumeType: EbsBlockDeviceVolumeType)
     }
 
     private class BuilderImpl : Builder {
@@ -630,15 +582,15 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.VolumeSpecificationProperty.builder()
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun volumeSize(volumeSize: Size) {
+      override fun volumeSize(volumeSize: Size) {
         cdkBuilder.volumeSize(volumeSize.let(Size::unwrap))
       }
 
-      public override fun volumeType(volumeType: EbsBlockDeviceVolumeType) {
+      override fun volumeType(volumeType: EbsBlockDeviceVolumeType) {
         cdkBuilder.volumeType(volumeType.let(EbsBlockDeviceVolumeType::unwrap))
       }
 
@@ -651,11 +603,11 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.VolumeSpecificationProperty,
     ) : VolumeSpecificationProperty {
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun volumeSize(): Size = unwrap(this).getVolumeSize().let(Size::wrap)
+      override fun volumeSize(): Size = unwrap(this).getVolumeSize().let(Size::wrap)
 
-      public override fun volumeType(): EbsBlockDeviceVolumeType =
+      override fun volumeType(): EbsBlockDeviceVolumeType =
           unwrap(this).getVolumeType().let(EbsBlockDeviceVolumeType::wrap)
     }
 
@@ -690,17 +642,13 @@ public open class EmrCreateCluster internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun additionalInfo(additionalInfo: Map<String, String>) {
-      }
+      public fun additionalInfo(additionalInfo: Map<String, String>)
 
-      public fun args(args: List<String>) {
-      }
+      public fun args(args: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -709,19 +657,19 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ApplicationConfigProperty.builder()
 
-      public override fun additionalInfo(additionalInfo: Map<String, String>) {
+      override fun additionalInfo(additionalInfo: Map<String, String>) {
         cdkBuilder.additionalInfo(additionalInfo)
       }
 
-      public override fun args(args: List<String>) {
+      override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -734,14 +682,14 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ApplicationConfigProperty,
     ) : ApplicationConfigProperty {
-      public override fun additionalInfo(): Map<String, String> = unwrap(this).getAdditionalInfo()
-          ?: emptyMap()
+      override fun additionalInfo(): Map<String, String> = unwrap(this).getAdditionalInfo() ?:
+          emptyMap()
 
-      public override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -781,28 +729,21 @@ public open class EmrCreateCluster internal constructor(
     public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
 
     public interface Builder {
-      public fun bidPrice(bidPrice: String) {
-      }
+      public fun bidPrice(bidPrice: String)
 
-      public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
-      }
+      public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number)
 
-      public fun configurations(configurations: List<ConfigurationProperty>) {
-      }
+      public fun configurations(configurations: List<ConfigurationProperty>)
 
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("133da82e296eb42525c1f9483336b2cf7e322346309773613f5c5555f23f23a1")
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun weightedCapacity(weightedCapacity: Number) {
-      }
+      public fun weightedCapacity(weightedCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -811,34 +752,33 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceTypeConfigProperty.builder()
 
-      public override fun bidPrice(bidPrice: String) {
+      override fun bidPrice(bidPrice: String) {
         cdkBuilder.bidPrice(bidPrice)
       }
 
-      public override
+      override
           fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
         cdkBuilder.bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice)
       }
 
-      public override fun configurations(configurations: List<ConfigurationProperty>) {
+      override fun configurations(configurations: List<ConfigurationProperty>) {
         cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
       }
 
-      public override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
         cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("133da82e296eb42525c1f9483336b2cf7e322346309773613f5c5555f23f23a1")
-      public override
-          fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit): Unit
-          = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
+          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun weightedCapacity(weightedCapacity: Number) {
+      override fun weightedCapacity(weightedCapacity: Number) {
         cdkBuilder.weightedCapacity(weightedCapacity)
       }
 
@@ -851,20 +791,20 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceTypeConfigProperty,
     ) : InstanceTypeConfigProperty {
-      public override fun bidPrice(): String? = unwrap(this).getBidPrice()
+      override fun bidPrice(): String? = unwrap(this).getBidPrice()
 
-      public override fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
+      override fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
           unwrap(this).getBidPriceAsPercentageOfOnDemandPrice()
 
-      public override fun configurations(): List<ConfigurationProperty> =
+      override fun configurations(): List<ConfigurationProperty> =
           unwrap(this).getConfigurations()?.map(ConfigurationProperty::wrap) ?: emptyList()
 
-      public override fun ebsConfiguration(): EbsConfigurationProperty? =
+      override fun ebsConfiguration(): EbsConfigurationProperty? =
           unwrap(this).getEbsConfiguration()?.let(EbsConfigurationProperty::wrap)
 
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
 
-      public override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
+      override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
     }
 
     public companion object {
@@ -910,43 +850,31 @@ public open class EmrCreateCluster internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-      }
+      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac2482af47863b3a51f0bc8765595bbe84c51d68d67eae14b91ffa4868f55b85")
-      public
-          fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit)
 
-      public fun bidPrice(bidPrice: String) {
-      }
+      public fun bidPrice(bidPrice: String)
 
-      public fun configurations(configurations: List<ConfigurationProperty>) {
-      }
+      public fun configurations(configurations: List<ConfigurationProperty>)
 
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("14867309e2488f898214a5b68d3ac2bc85d329c3b00acb0ef46ad1903ac33246")
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
 
-      public fun instanceCount(instanceCount: Number) {
-      }
+      public fun instanceCount(instanceCount: Number)
 
-      public fun instanceRole(instanceRole: InstanceRoleType) {
-      }
+      public fun instanceRole(instanceRole: InstanceRoleType)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun market(market: InstanceMarket) {
-      }
+      public fun market(market: InstanceMarket)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -955,51 +883,50 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceGroupConfigProperty.builder()
 
-      public override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
+      override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
         cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac2482af47863b3a51f0bc8765595bbe84c51d68d67eae14b91ffa4868f55b85")
-      public override
+      override
           fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit):
           Unit = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
 
-      public override fun bidPrice(bidPrice: String) {
+      override fun bidPrice(bidPrice: String) {
         cdkBuilder.bidPrice(bidPrice)
       }
 
-      public override fun configurations(configurations: List<ConfigurationProperty>) {
+      override fun configurations(configurations: List<ConfigurationProperty>) {
         cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
       }
 
-      public override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
         cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("14867309e2488f898214a5b68d3ac2bc85d329c3b00acb0ef46ad1903ac33246")
-      public override
-          fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit): Unit
-          = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
+          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
 
-      public override fun instanceCount(instanceCount: Number) {
+      override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)
       }
 
-      public override fun instanceRole(instanceRole: InstanceRoleType) {
+      override fun instanceRole(instanceRole: InstanceRoleType) {
         cdkBuilder.instanceRole(instanceRole.let(InstanceRoleType::unwrap))
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun market(market: InstanceMarket) {
+      override fun market(market: InstanceMarket) {
         cdkBuilder.market(market.let(InstanceMarket::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1012,28 +939,27 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceGroupConfigProperty,
     ) : InstanceGroupConfigProperty {
-      public override fun autoScalingPolicy(): AutoScalingPolicyProperty? =
+      override fun autoScalingPolicy(): AutoScalingPolicyProperty? =
           unwrap(this).getAutoScalingPolicy()?.let(AutoScalingPolicyProperty::wrap)
 
-      public override fun bidPrice(): String? = unwrap(this).getBidPrice()
+      override fun bidPrice(): String? = unwrap(this).getBidPrice()
 
-      public override fun configurations(): List<ConfigurationProperty> =
+      override fun configurations(): List<ConfigurationProperty> =
           unwrap(this).getConfigurations()?.map(ConfigurationProperty::wrap) ?: emptyList()
 
-      public override fun ebsConfiguration(): EbsConfigurationProperty? =
+      override fun ebsConfiguration(): EbsConfigurationProperty? =
           unwrap(this).getEbsConfiguration()?.let(EbsConfigurationProperty::wrap)
 
-      public override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
 
-      public override fun instanceRole(): InstanceRoleType =
+      override fun instanceRole(): InstanceRoleType =
           unwrap(this).getInstanceRole().let(InstanceRoleType::wrap)
 
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
 
-      public override fun market(): InstanceMarket? =
-          unwrap(this).getMarket()?.let(InstanceMarket::wrap)
+      override fun market(): InstanceMarket? = unwrap(this).getMarket()?.let(InstanceMarket::wrap)
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -1078,32 +1004,23 @@ public open class EmrCreateCluster internal constructor(
     public fun unit(): CloudWatchAlarmUnit? = unwrap(this).getUnit()?.let(CloudWatchAlarmUnit::wrap)
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: CloudWatchAlarmComparisonOperator) {
-      }
+      public fun comparisonOperator(comparisonOperator: CloudWatchAlarmComparisonOperator)
 
-      public fun dimensions(dimensions: List<MetricDimensionProperty>) {
-      }
+      public fun dimensions(dimensions: List<MetricDimensionProperty>)
 
-      public fun evaluationPeriods(evaluationPeriods: Number) {
-      }
+      public fun evaluationPeriods(evaluationPeriods: Number)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun period(period: Duration) {
-      }
+      public fun period(period: Duration)
 
-      public fun statistic(statistic: CloudWatchAlarmStatistic) {
-      }
+      public fun statistic(statistic: CloudWatchAlarmStatistic)
 
-      public fun threshold(threshold: Number) {
-      }
+      public fun threshold(threshold: Number)
 
-      public fun unit(unit: CloudWatchAlarmUnit) {
-      }
+      public fun unit(unit: CloudWatchAlarmUnit)
     }
 
     private class BuilderImpl : Builder {
@@ -1112,40 +1029,39 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.CloudWatchAlarmDefinitionProperty.builder()
 
-      public override
-          fun comparisonOperator(comparisonOperator: CloudWatchAlarmComparisonOperator) {
+      override fun comparisonOperator(comparisonOperator: CloudWatchAlarmComparisonOperator) {
         cdkBuilder.comparisonOperator(comparisonOperator.let(CloudWatchAlarmComparisonOperator::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<MetricDimensionProperty>) {
+      override fun dimensions(dimensions: List<MetricDimensionProperty>) {
         cdkBuilder.dimensions(dimensions.map(MetricDimensionProperty::unwrap))
       }
 
-      public override fun evaluationPeriods(evaluationPeriods: Number) {
+      override fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun period(period: Duration) {
+      override fun period(period: Duration) {
         cdkBuilder.period(period.let(Duration::unwrap))
       }
 
-      public override fun statistic(statistic: CloudWatchAlarmStatistic) {
+      override fun statistic(statistic: CloudWatchAlarmStatistic) {
         cdkBuilder.statistic(statistic.let(CloudWatchAlarmStatistic::unwrap))
       }
 
-      public override fun threshold(threshold: Number) {
+      override fun threshold(threshold: Number) {
         cdkBuilder.threshold(threshold)
       }
 
-      public override fun unit(unit: CloudWatchAlarmUnit) {
+      override fun unit(unit: CloudWatchAlarmUnit) {
         cdkBuilder.unit(unit.let(CloudWatchAlarmUnit::unwrap))
       }
 
@@ -1158,26 +1074,26 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.CloudWatchAlarmDefinitionProperty,
     ) : CloudWatchAlarmDefinitionProperty {
-      public override fun comparisonOperator(): CloudWatchAlarmComparisonOperator =
+      override fun comparisonOperator(): CloudWatchAlarmComparisonOperator =
           unwrap(this).getComparisonOperator().let(CloudWatchAlarmComparisonOperator::wrap)
 
-      public override fun dimensions(): List<MetricDimensionProperty> =
+      override fun dimensions(): List<MetricDimensionProperty> =
           unwrap(this).getDimensions()?.map(MetricDimensionProperty::wrap) ?: emptyList()
 
-      public override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
+      override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun period(): Duration = unwrap(this).getPeriod().let(Duration::wrap)
+      override fun period(): Duration = unwrap(this).getPeriod().let(Duration::wrap)
 
-      public override fun statistic(): CloudWatchAlarmStatistic? =
+      override fun statistic(): CloudWatchAlarmStatistic? =
           unwrap(this).getStatistic()?.let(CloudWatchAlarmStatistic::wrap)
 
-      public override fun threshold(): Number? = unwrap(this).getThreshold()
+      override fun threshold(): Number? = unwrap(this).getThreshold()
 
-      public override fun unit(): CloudWatchAlarmUnit? =
+      override fun unit(): CloudWatchAlarmUnit? =
           unwrap(this).getUnit()?.let(CloudWatchAlarmUnit::wrap)
     }
 
@@ -1243,58 +1159,41 @@ public open class EmrCreateCluster internal constructor(
     public fun terminationProtected(): Boolean? = unwrap(this).getTerminationProtected()
 
     public interface Builder {
-      public fun additionalMasterSecurityGroups(additionalMasterSecurityGroups: List<String>) {
-      }
+      public fun additionalMasterSecurityGroups(additionalMasterSecurityGroups: List<String>)
 
-      public fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>) {
-      }
+      public fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>)
 
-      public fun ec2KeyName(ec2KeyName: String) {
-      }
+      public fun ec2KeyName(ec2KeyName: String)
 
-      public fun ec2SubnetId(ec2SubnetId: String) {
-      }
+      public fun ec2SubnetId(ec2SubnetId: String)
 
-      public fun ec2SubnetIds(ec2SubnetIds: List<String>) {
-      }
+      public fun ec2SubnetIds(ec2SubnetIds: List<String>)
 
-      public fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String) {
-      }
+      public fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String)
 
-      public fun emrManagedSlaveSecurityGroup(emrManagedSlaveSecurityGroup: String) {
-      }
+      public fun emrManagedSlaveSecurityGroup(emrManagedSlaveSecurityGroup: String)
 
-      public fun hadoopVersion(hadoopVersion: String) {
-      }
+      public fun hadoopVersion(hadoopVersion: String)
 
-      public fun instanceCount(instanceCount: Number) {
-      }
+      public fun instanceCount(instanceCount: Number)
 
-      public fun instanceFleets(instanceFleets: List<InstanceFleetConfigProperty>) {
-      }
+      public fun instanceFleets(instanceFleets: List<InstanceFleetConfigProperty>)
 
-      public fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>) {
-      }
+      public fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>)
 
-      public fun masterInstanceType(masterInstanceType: String) {
-      }
+      public fun masterInstanceType(masterInstanceType: String)
 
-      public fun placement(placement: PlacementTypeProperty) {
-      }
+      public fun placement(placement: PlacementTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e3b0f389fd006aec3b704b161d2f4aadc8aa927fc43eb4badeb7b51c29ca11f")
-      public fun placement(placement: PlacementTypeProperty.Builder.() -> Unit) {
-      }
+      public fun placement(placement: PlacementTypeProperty.Builder.() -> Unit)
 
-      public fun serviceAccessSecurityGroup(serviceAccessSecurityGroup: String) {
-      }
+      public fun serviceAccessSecurityGroup(serviceAccessSecurityGroup: String)
 
-      public fun slaveInstanceType(slaveInstanceType: String) {
-      }
+      public fun slaveInstanceType(slaveInstanceType: String)
 
-      public fun terminationProtected(terminationProtected: Boolean) {
-      }
+      public fun terminationProtected(terminationProtected: Boolean)
     }
 
     private class BuilderImpl : Builder {
@@ -1303,74 +1202,72 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstancesConfigProperty.builder()
 
-      public override
-          fun additionalMasterSecurityGroups(additionalMasterSecurityGroups: List<String>) {
+      override fun additionalMasterSecurityGroups(additionalMasterSecurityGroups: List<String>) {
         cdkBuilder.additionalMasterSecurityGroups(additionalMasterSecurityGroups)
       }
 
-      public override
-          fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>) {
+      override fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>) {
         cdkBuilder.additionalSlaveSecurityGroups(additionalSlaveSecurityGroups)
       }
 
-      public override fun ec2KeyName(ec2KeyName: String) {
+      override fun ec2KeyName(ec2KeyName: String) {
         cdkBuilder.ec2KeyName(ec2KeyName)
       }
 
-      public override fun ec2SubnetId(ec2SubnetId: String) {
+      override fun ec2SubnetId(ec2SubnetId: String) {
         cdkBuilder.ec2SubnetId(ec2SubnetId)
       }
 
-      public override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
+      override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
         cdkBuilder.ec2SubnetIds(ec2SubnetIds)
       }
 
-      public override fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String) {
+      override fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String) {
         cdkBuilder.emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup)
       }
 
-      public override fun emrManagedSlaveSecurityGroup(emrManagedSlaveSecurityGroup: String) {
+      override fun emrManagedSlaveSecurityGroup(emrManagedSlaveSecurityGroup: String) {
         cdkBuilder.emrManagedSlaveSecurityGroup(emrManagedSlaveSecurityGroup)
       }
 
-      public override fun hadoopVersion(hadoopVersion: String) {
+      override fun hadoopVersion(hadoopVersion: String) {
         cdkBuilder.hadoopVersion(hadoopVersion)
       }
 
-      public override fun instanceCount(instanceCount: Number) {
+      override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)
       }
 
-      public override fun instanceFleets(instanceFleets: List<InstanceFleetConfigProperty>) {
+      override fun instanceFleets(instanceFleets: List<InstanceFleetConfigProperty>) {
         cdkBuilder.instanceFleets(instanceFleets.map(InstanceFleetConfigProperty::unwrap))
       }
 
-      public override fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>) {
+      override fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>) {
         cdkBuilder.instanceGroups(instanceGroups.map(InstanceGroupConfigProperty::unwrap))
       }
 
-      public override fun masterInstanceType(masterInstanceType: String) {
+      override fun masterInstanceType(masterInstanceType: String) {
         cdkBuilder.masterInstanceType(masterInstanceType)
       }
 
-      public override fun placement(placement: PlacementTypeProperty) {
+      override fun placement(placement: PlacementTypeProperty) {
         cdkBuilder.placement(placement.let(PlacementTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e3b0f389fd006aec3b704b161d2f4aadc8aa927fc43eb4badeb7b51c29ca11f")
-      public override fun placement(placement: PlacementTypeProperty.Builder.() -> Unit): Unit =
+      override fun placement(placement: PlacementTypeProperty.Builder.() -> Unit): Unit =
           placement(PlacementTypeProperty(placement))
 
-      public override fun serviceAccessSecurityGroup(serviceAccessSecurityGroup: String) {
+      override fun serviceAccessSecurityGroup(serviceAccessSecurityGroup: String) {
         cdkBuilder.serviceAccessSecurityGroup(serviceAccessSecurityGroup)
       }
 
-      public override fun slaveInstanceType(slaveInstanceType: String) {
+      override fun slaveInstanceType(slaveInstanceType: String) {
         cdkBuilder.slaveInstanceType(slaveInstanceType)
       }
 
-      public override fun terminationProtected(terminationProtected: Boolean) {
+      override fun terminationProtected(terminationProtected: Boolean) {
         cdkBuilder.terminationProtected(terminationProtected)
       }
 
@@ -1383,46 +1280,45 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstancesConfigProperty,
     ) : InstancesConfigProperty {
-      public override fun additionalMasterSecurityGroups(): List<String> =
+      override fun additionalMasterSecurityGroups(): List<String> =
           unwrap(this).getAdditionalMasterSecurityGroups() ?: emptyList()
 
-      public override fun additionalSlaveSecurityGroups(): List<String> =
+      override fun additionalSlaveSecurityGroups(): List<String> =
           unwrap(this).getAdditionalSlaveSecurityGroups() ?: emptyList()
 
-      public override fun ec2KeyName(): String? = unwrap(this).getEc2KeyName()
+      override fun ec2KeyName(): String? = unwrap(this).getEc2KeyName()
 
-      public override fun ec2SubnetId(): String? = unwrap(this).getEc2SubnetId()
+      override fun ec2SubnetId(): String? = unwrap(this).getEc2SubnetId()
 
-      public override fun ec2SubnetIds(): List<String> = unwrap(this).getEc2SubnetIds() ?:
-          emptyList()
+      override fun ec2SubnetIds(): List<String> = unwrap(this).getEc2SubnetIds() ?: emptyList()
 
-      public override fun emrManagedMasterSecurityGroup(): String? =
+      override fun emrManagedMasterSecurityGroup(): String? =
           unwrap(this).getEmrManagedMasterSecurityGroup()
 
-      public override fun emrManagedSlaveSecurityGroup(): String? =
+      override fun emrManagedSlaveSecurityGroup(): String? =
           unwrap(this).getEmrManagedSlaveSecurityGroup()
 
-      public override fun hadoopVersion(): String? = unwrap(this).getHadoopVersion()
+      override fun hadoopVersion(): String? = unwrap(this).getHadoopVersion()
 
-      public override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
+      override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
 
-      public override fun instanceFleets(): List<InstanceFleetConfigProperty> =
+      override fun instanceFleets(): List<InstanceFleetConfigProperty> =
           unwrap(this).getInstanceFleets()?.map(InstanceFleetConfigProperty::wrap) ?: emptyList()
 
-      public override fun instanceGroups(): List<InstanceGroupConfigProperty> =
+      override fun instanceGroups(): List<InstanceGroupConfigProperty> =
           unwrap(this).getInstanceGroups()?.map(InstanceGroupConfigProperty::wrap) ?: emptyList()
 
-      public override fun masterInstanceType(): String? = unwrap(this).getMasterInstanceType()
+      override fun masterInstanceType(): String? = unwrap(this).getMasterInstanceType()
 
-      public override fun placement(): PlacementTypeProperty? =
+      override fun placement(): PlacementTypeProperty? =
           unwrap(this).getPlacement()?.let(PlacementTypeProperty::wrap)
 
-      public override fun serviceAccessSecurityGroup(): String? =
+      override fun serviceAccessSecurityGroup(): String? =
           unwrap(this).getServiceAccessSecurityGroup()
 
-      public override fun slaveInstanceType(): String? = unwrap(this).getSlaveInstanceType()
+      override fun slaveInstanceType(): String? = unwrap(this).getSlaveInstanceType()
 
-      public override fun terminationProtected(): Boolean? = unwrap(this).getTerminationProtected()
+      override fun terminationProtected(): Boolean? = unwrap(this).getTerminationProtected()
     }
 
     public companion object {
@@ -1474,14 +1370,12 @@ public open class EmrCreateCluster internal constructor(
 
     public interface Builder {
       public
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
-      }
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c5143f0f368b10f8293c7c19139035f9e5f156e01d3eb4a4af5de4067bfb8bd")
       public
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1490,14 +1384,14 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingTriggerProperty.builder()
 
-      public override
+      override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
         cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c5143f0f368b10f8293c7c19139035f9e5f156e01d3eb4a4af5de4067bfb8bd")
-      public override
+      override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit):
           Unit =
           cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty(cloudWatchAlarmDefinition))
@@ -1511,7 +1405,7 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingTriggerProperty,
     ) : ScalingTriggerProperty {
-      public override fun cloudWatchAlarmDefinition(): CloudWatchAlarmDefinitionProperty =
+      override fun cloudWatchAlarmDefinition(): CloudWatchAlarmDefinitionProperty =
           unwrap(this).getCloudWatchAlarmDefinition().let(CloudWatchAlarmDefinitionProperty::wrap)
     }
 
@@ -1571,23 +1465,19 @@ public open class EmrCreateCluster internal constructor(
 
     public interface Builder {
       public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-      }
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2cc5c6e36111350c146653cc34d554ba1cb7c4998de9d5153e62997276118c5d")
       public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit)
 
-      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-      }
+      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb28faea62562f38e013d4b232ac177ef55ad2d2f527c7520bd0752b03f014d1")
       public
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1596,26 +1486,25 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetProvisioningSpecificationsProperty.builder()
 
-      public override
+      override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
         cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2cc5c6e36111350c146653cc34d554ba1cb7c4998de9d5153e62997276118c5d")
-      public override
+      override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit):
           Unit =
           onDemandSpecification(OnDemandProvisioningSpecificationProperty(onDemandSpecification))
 
-      public override
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
+      override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
         cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb28faea62562f38e013d4b232ac177ef55ad2d2f527c7520bd0752b03f014d1")
-      public override
+      override
           fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit):
           Unit = spotSpecification(SpotProvisioningSpecificationProperty(spotSpecification))
 
@@ -1628,10 +1517,10 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetProvisioningSpecificationsProperty,
     ) : InstanceFleetProvisioningSpecificationsProperty {
-      public override fun onDemandSpecification(): OnDemandProvisioningSpecificationProperty? =
+      override fun onDemandSpecification(): OnDemandProvisioningSpecificationProperty? =
           unwrap(this).getOnDemandSpecification()?.let(OnDemandProvisioningSpecificationProperty::wrap)
 
-      public override fun spotSpecification(): SpotProvisioningSpecificationProperty? =
+      override fun spotSpecification(): SpotProvisioningSpecificationProperty? =
           unwrap(this).getSpotSpecification()?.let(SpotProvisioningSpecificationProperty::wrap)
     }
 
@@ -1672,30 +1561,23 @@ public open class EmrCreateCluster internal constructor(
     public fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
 
     public interface Builder {
-      public fun instanceFleetType(instanceFleetType: InstanceRoleType) {
-      }
+      public fun instanceFleetType(instanceFleetType: InstanceRoleType)
 
-      public fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>) {
-      }
+      public fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>)
 
       public
-          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
-      }
+          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb2478130551805471ecf26441a7e34a3479fc96116d2c647f7b4de2d1ba04fc")
       public
-          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit) {
-      }
+          fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
-      }
+      public fun targetOnDemandCapacity(targetOnDemandCapacity: Number)
 
-      public fun targetSpotCapacity(targetSpotCapacity: Number) {
-      }
+      public fun targetSpotCapacity(targetSpotCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1704,36 +1586,35 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetConfigProperty.builder()
 
-      public override fun instanceFleetType(instanceFleetType: InstanceRoleType) {
+      override fun instanceFleetType(instanceFleetType: InstanceRoleType) {
         cdkBuilder.instanceFleetType(instanceFleetType.let(InstanceRoleType::unwrap))
       }
 
-      public override
-          fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>) {
+      override fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>) {
         cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map(InstanceTypeConfigProperty::unwrap))
       }
 
-      public override
+      override
           fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
         cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb2478130551805471ecf26441a7e34a3479fc96116d2c647f7b4de2d1ba04fc")
-      public override
+      override
           fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit):
           Unit =
           launchSpecifications(InstanceFleetProvisioningSpecificationsProperty(launchSpecifications))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
+      override fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
         cdkBuilder.targetOnDemandCapacity(targetOnDemandCapacity)
       }
 
-      public override fun targetSpotCapacity(targetSpotCapacity: Number) {
+      override fun targetSpotCapacity(targetSpotCapacity: Number) {
         cdkBuilder.targetSpotCapacity(targetSpotCapacity)
       }
 
@@ -1746,22 +1627,21 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.InstanceFleetConfigProperty,
     ) : InstanceFleetConfigProperty {
-      public override fun instanceFleetType(): InstanceRoleType =
+      override fun instanceFleetType(): InstanceRoleType =
           unwrap(this).getInstanceFleetType().let(InstanceRoleType::wrap)
 
-      public override fun instanceTypeConfigs(): List<InstanceTypeConfigProperty> =
+      override fun instanceTypeConfigs(): List<InstanceTypeConfigProperty> =
           unwrap(this).getInstanceTypeConfigs()?.map(InstanceTypeConfigProperty::wrap) ?:
           emptyList()
 
-      public override fun launchSpecifications(): InstanceFleetProvisioningSpecificationsProperty? =
+      override fun launchSpecifications(): InstanceFleetProvisioningSpecificationsProperty? =
           unwrap(this).getLaunchSpecifications()?.let(InstanceFleetProvisioningSpecificationsProperty::wrap)
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun targetOnDemandCapacity(): Number? =
-          unwrap(this).getTargetOnDemandCapacity()
+      override fun targetOnDemandCapacity(): Number? = unwrap(this).getTargetOnDemandCapacity()
 
-      public override fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
+      override fun targetSpotCapacity(): Number? = unwrap(this).getTargetSpotCapacity()
     }
 
     public companion object {
@@ -1823,11 +1703,9 @@ public open class EmrCreateCluster internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1836,11 +1714,11 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.MetricDimensionProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1853,9 +1731,9 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.MetricDimensionProperty,
     ) : MetricDimensionProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1884,16 +1762,13 @@ public open class EmrCreateCluster internal constructor(
     public fun rules(): List<ScalingRuleProperty>
 
     public interface Builder {
-      public fun constraints(constraints: ScalingConstraintsProperty) {
-      }
+      public fun constraints(constraints: ScalingConstraintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51fc13e916d8f62d76ddddc327ded07f986aa53a7deb5d169ecc47452ad10bcb")
-      public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit) {
-      }
+      public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit)
 
-      public fun rules(rules: List<ScalingRuleProperty>) {
-      }
+      public fun rules(rules: List<ScalingRuleProperty>)
     }
 
     private class BuilderImpl : Builder {
@@ -1902,16 +1777,16 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.AutoScalingPolicyProperty.builder()
 
-      public override fun constraints(constraints: ScalingConstraintsProperty) {
+      override fun constraints(constraints: ScalingConstraintsProperty) {
         cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51fc13e916d8f62d76ddddc327ded07f986aa53a7deb5d169ecc47452ad10bcb")
-      public override fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit):
-          Unit = constraints(ScalingConstraintsProperty(constraints))
+      override fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit): Unit =
+          constraints(ScalingConstraintsProperty(constraints))
 
-      public override fun rules(rules: List<ScalingRuleProperty>) {
+      override fun rules(rules: List<ScalingRuleProperty>) {
         cdkBuilder.rules(rules.map(ScalingRuleProperty::unwrap))
       }
 
@@ -1924,10 +1799,10 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.AutoScalingPolicyProperty,
     ) : AutoScalingPolicyProperty {
-      public override fun constraints(): ScalingConstraintsProperty =
+      override fun constraints(): ScalingConstraintsProperty =
           unwrap(this).getConstraints().let(ScalingConstraintsProperty::wrap)
 
-      public override fun rules(): List<ScalingRuleProperty> =
+      override fun rules(): List<ScalingRuleProperty> =
           unwrap(this).getRules().map(ScalingRuleProperty::wrap)
     }
 
@@ -2041,22 +1916,17 @@ public open class EmrCreateCluster internal constructor(
     public fun timeoutDurationMinutes(): Number? = unwrap(this).getTimeoutDurationMinutes()
 
     public interface Builder {
-      public fun allocationStrategy(allocationStrategy: SpotAllocationStrategy) {
-      }
+      public fun allocationStrategy(allocationStrategy: SpotAllocationStrategy)
 
       @Deprecated(message = "deprecated in CDK")
-      public fun blockDurationMinutes(blockDurationMinutes: Number) {
-      }
+      public fun blockDurationMinutes(blockDurationMinutes: Number)
 
-      public fun timeout(timeout: Duration) {
-      }
+      public fun timeout(timeout: Duration)
 
-      public fun timeoutAction(timeoutAction: SpotTimeoutAction) {
-      }
+      public fun timeoutAction(timeoutAction: SpotTimeoutAction)
 
       @Deprecated(message = "deprecated in CDK")
-      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
-      }
+      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2065,25 +1935,25 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SpotProvisioningSpecificationProperty.builder()
 
-      public override fun allocationStrategy(allocationStrategy: SpotAllocationStrategy) {
+      override fun allocationStrategy(allocationStrategy: SpotAllocationStrategy) {
         cdkBuilder.allocationStrategy(allocationStrategy.let(SpotAllocationStrategy::unwrap))
       }
 
       @Deprecated(message = "deprecated in CDK")
-      public override fun blockDurationMinutes(blockDurationMinutes: Number) {
+      override fun blockDurationMinutes(blockDurationMinutes: Number) {
         cdkBuilder.blockDurationMinutes(blockDurationMinutes)
       }
 
-      public override fun timeout(timeout: Duration) {
+      override fun timeout(timeout: Duration) {
         cdkBuilder.timeout(timeout.let(Duration::unwrap))
       }
 
-      public override fun timeoutAction(timeoutAction: SpotTimeoutAction) {
+      override fun timeoutAction(timeoutAction: SpotTimeoutAction) {
         cdkBuilder.timeoutAction(timeoutAction.let(SpotTimeoutAction::unwrap))
       }
 
       @Deprecated(message = "deprecated in CDK")
-      public override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
+      override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
         cdkBuilder.timeoutDurationMinutes(timeoutDurationMinutes)
       }
 
@@ -2096,20 +1966,19 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SpotProvisioningSpecificationProperty,
     ) : SpotProvisioningSpecificationProperty {
-      public override fun allocationStrategy(): SpotAllocationStrategy? =
+      override fun allocationStrategy(): SpotAllocationStrategy? =
           unwrap(this).getAllocationStrategy()?.let(SpotAllocationStrategy::wrap)
 
       @Deprecated(message = "deprecated in CDK")
-      public override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
 
-      public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+      override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-      public override fun timeoutAction(): SpotTimeoutAction =
+      override fun timeoutAction(): SpotTimeoutAction =
           unwrap(this).getTimeoutAction().let(SpotTimeoutAction::wrap)
 
       @Deprecated(message = "deprecated in CDK")
-      public override fun timeoutDurationMinutes(): Number? =
-          unwrap(this).getTimeoutDurationMinutes()
+      override fun timeoutDurationMinutes(): Number? = unwrap(this).getTimeoutDurationMinutes()
     }
 
     public companion object {
@@ -2137,8 +2006,7 @@ public open class EmrCreateCluster internal constructor(
     public fun allocationStrategy(): OnDemandAllocationStrategy
 
     public interface Builder {
-      public fun allocationStrategy(allocationStrategy: OnDemandAllocationStrategy) {
-      }
+      public fun allocationStrategy(allocationStrategy: OnDemandAllocationStrategy)
     }
 
     private class BuilderImpl : Builder {
@@ -2147,7 +2015,7 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.OnDemandProvisioningSpecificationProperty.builder()
 
-      public override fun allocationStrategy(allocationStrategy: OnDemandAllocationStrategy) {
+      override fun allocationStrategy(allocationStrategy: OnDemandAllocationStrategy) {
         cdkBuilder.allocationStrategy(allocationStrategy.let(OnDemandAllocationStrategy::unwrap))
       }
 
@@ -2160,7 +2028,7 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.OnDemandProvisioningSpecificationProperty,
     ) : OnDemandProvisioningSpecificationProperty {
-      public override fun allocationStrategy(): OnDemandAllocationStrategy =
+      override fun allocationStrategy(): OnDemandAllocationStrategy =
           unwrap(this).getAllocationStrategy().let(OnDemandAllocationStrategy::wrap)
     }
 
@@ -2222,11 +2090,9 @@ public open class EmrCreateCluster internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun availabilityZones(availabilityZones: List<String>) {
-      }
+      public fun availabilityZones(availabilityZones: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2235,11 +2101,11 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.PlacementTypeProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun availabilityZones(availabilityZones: List<String>) {
+      override fun availabilityZones(availabilityZones: List<String>) {
         cdkBuilder.availabilityZones(availabilityZones)
       }
 
@@ -2252,9 +2118,9 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.PlacementTypeProperty,
     ) : PlacementTypeProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
+      override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
           emptyList()
     }
 
@@ -2284,11 +2150,9 @@ public open class EmrCreateCluster internal constructor(
     public fun path(): String
 
     public interface Builder {
-      public fun args(args: List<String>) {
-      }
+      public fun args(args: List<String>)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2297,11 +2161,11 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScriptBootstrapActionConfigProperty.builder()
 
-      public override fun args(args: List<String>) {
+      override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -2314,9 +2178,9 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScriptBootstrapActionConfigProperty,
     ) : ScriptBootstrapActionConfigProperty {
-      public override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
 
-      public override fun path(): String = unwrap(this).getPath()
+      override fun path(): String = unwrap(this).getPath()
     }
 
     public companion object {
@@ -2346,11 +2210,9 @@ public open class EmrCreateCluster internal constructor(
     public fun minCapacity(): Number
 
     public interface Builder {
-      public fun maxCapacity(maxCapacity: Number) {
-      }
+      public fun maxCapacity(maxCapacity: Number)
 
-      public fun minCapacity(minCapacity: Number) {
-      }
+      public fun minCapacity(minCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2359,11 +2221,11 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingConstraintsProperty.builder()
 
-      public override fun maxCapacity(maxCapacity: Number) {
+      override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
       }
 
-      public override fun minCapacity(minCapacity: Number) {
+      override fun minCapacity(minCapacity: Number) {
         cdkBuilder.minCapacity(minCapacity)
       }
 
@@ -2376,9 +2238,9 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingConstraintsProperty,
     ) : ScalingConstraintsProperty {
-      public override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
+      override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
 
-      public override fun minCapacity(): Number = unwrap(this).getMinCapacity()
+      override fun minCapacity(): Number = unwrap(this).getMinCapacity()
     }
 
     public companion object {
@@ -2414,20 +2276,15 @@ public open class EmrCreateCluster internal constructor(
     public fun realm(): String
 
     public interface Builder {
-      public fun adDomainJoinPassword(adDomainJoinPassword: String) {
-      }
+      public fun adDomainJoinPassword(adDomainJoinPassword: String)
 
-      public fun adDomainJoinUser(adDomainJoinUser: String) {
-      }
+      public fun adDomainJoinUser(adDomainJoinUser: String)
 
-      public fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
-      }
+      public fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String)
 
-      public fun kdcAdminPassword(kdcAdminPassword: String) {
-      }
+      public fun kdcAdminPassword(kdcAdminPassword: String)
 
-      public fun realm(realm: String) {
-      }
+      public fun realm(realm: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2436,24 +2293,23 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.KerberosAttributesProperty.builder()
 
-      public override fun adDomainJoinPassword(adDomainJoinPassword: String) {
+      override fun adDomainJoinPassword(adDomainJoinPassword: String) {
         cdkBuilder.adDomainJoinPassword(adDomainJoinPassword)
       }
 
-      public override fun adDomainJoinUser(adDomainJoinUser: String) {
+      override fun adDomainJoinUser(adDomainJoinUser: String) {
         cdkBuilder.adDomainJoinUser(adDomainJoinUser)
       }
 
-      public override
-          fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
+      override fun crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword: String) {
         cdkBuilder.crossRealmTrustPrincipalPassword(crossRealmTrustPrincipalPassword)
       }
 
-      public override fun kdcAdminPassword(kdcAdminPassword: String) {
+      override fun kdcAdminPassword(kdcAdminPassword: String) {
         cdkBuilder.kdcAdminPassword(kdcAdminPassword)
       }
 
-      public override fun realm(realm: String) {
+      override fun realm(realm: String) {
         cdkBuilder.realm(realm)
       }
 
@@ -2466,16 +2322,16 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.KerberosAttributesProperty,
     ) : KerberosAttributesProperty {
-      public override fun adDomainJoinPassword(): String? = unwrap(this).getAdDomainJoinPassword()
+      override fun adDomainJoinPassword(): String? = unwrap(this).getAdDomainJoinPassword()
 
-      public override fun adDomainJoinUser(): String? = unwrap(this).getAdDomainJoinUser()
+      override fun adDomainJoinUser(): String? = unwrap(this).getAdDomainJoinUser()
 
-      public override fun crossRealmTrustPrincipalPassword(): String? =
+      override fun crossRealmTrustPrincipalPassword(): String? =
           unwrap(this).getCrossRealmTrustPrincipalPassword()
 
-      public override fun kdcAdminPassword(): String? = unwrap(this).getKdcAdminPassword()
+      override fun kdcAdminPassword(): String? = unwrap(this).getKdcAdminPassword()
 
-      public override fun realm(): String = unwrap(this).getRealm()
+      override fun realm(): String = unwrap(this).getRealm()
     }
 
     public companion object {
@@ -2507,14 +2363,11 @@ public open class EmrCreateCluster internal constructor(
     public fun scalingAdjustment(): Number
 
     public interface Builder {
-      public fun adjustmentType(adjustmentType: ScalingAdjustmentType) {
-      }
+      public fun adjustmentType(adjustmentType: ScalingAdjustmentType)
 
-      public fun coolDown(coolDown: Number) {
-      }
+      public fun coolDown(coolDown: Number)
 
-      public fun scalingAdjustment(scalingAdjustment: Number) {
-      }
+      public fun scalingAdjustment(scalingAdjustment: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2523,15 +2376,15 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SimpleScalingPolicyConfigurationProperty.builder()
 
-      public override fun adjustmentType(adjustmentType: ScalingAdjustmentType) {
+      override fun adjustmentType(adjustmentType: ScalingAdjustmentType) {
         cdkBuilder.adjustmentType(adjustmentType.let(ScalingAdjustmentType::unwrap))
       }
 
-      public override fun coolDown(coolDown: Number) {
+      override fun coolDown(coolDown: Number) {
         cdkBuilder.coolDown(coolDown)
       }
 
-      public override fun scalingAdjustment(scalingAdjustment: Number) {
+      override fun scalingAdjustment(scalingAdjustment: Number) {
         cdkBuilder.scalingAdjustment(scalingAdjustment)
       }
 
@@ -2544,12 +2397,12 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.SimpleScalingPolicyConfigurationProperty,
     ) : SimpleScalingPolicyConfigurationProperty {
-      public override fun adjustmentType(): ScalingAdjustmentType? =
+      override fun adjustmentType(): ScalingAdjustmentType? =
           unwrap(this).getAdjustmentType()?.let(ScalingAdjustmentType::wrap)
 
-      public override fun coolDown(): Number? = unwrap(this).getCoolDown()
+      override fun coolDown(): Number? = unwrap(this).getCoolDown()
 
-      public override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
+      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
     }
 
     public companion object {
@@ -2581,11 +2434,9 @@ public open class EmrCreateCluster internal constructor(
     public fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
 
     public interface Builder {
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<EbsBlockDeviceConfigProperty>) {
-      }
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<EbsBlockDeviceConfigProperty>)
 
-      public fun ebsOptimized(ebsOptimized: Boolean) {
-      }
+      public fun ebsOptimized(ebsOptimized: Boolean)
     }
 
     private class BuilderImpl : Builder {
@@ -2594,12 +2445,12 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsConfigurationProperty.builder()
 
-      public override
+      override
           fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<EbsBlockDeviceConfigProperty>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map(EbsBlockDeviceConfigProperty::unwrap))
       }
 
-      public override fun ebsOptimized(ebsOptimized: Boolean) {
+      override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
       }
 
@@ -2612,11 +2463,11 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.EbsConfigurationProperty,
     ) : EbsConfigurationProperty {
-      public override fun ebsBlockDeviceConfigs(): List<EbsBlockDeviceConfigProperty> =
+      override fun ebsBlockDeviceConfigs(): List<EbsBlockDeviceConfigProperty> =
           unwrap(this).getEbsBlockDeviceConfigs()?.map(EbsBlockDeviceConfigProperty::wrap) ?:
           emptyList()
 
-      public override fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
+      override fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
     }
 
     public companion object {
@@ -2748,27 +2599,21 @@ public open class EmrCreateCluster internal constructor(
     public fun trigger(): ScalingTriggerProperty
 
     public interface Builder {
-      public fun action(action: ScalingActionProperty) {
-      }
+      public fun action(action: ScalingActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("419a416e51f605bf57d25fa82dcf2bbcf704147957ee6f675c027e9ec5fe9ad2")
-      public fun action(action: ScalingActionProperty.Builder.() -> Unit) {
-      }
+      public fun action(action: ScalingActionProperty.Builder.() -> Unit)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun trigger(trigger: ScalingTriggerProperty) {
-      }
+      public fun trigger(trigger: ScalingTriggerProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b5c45c94aca8ef11b0a1bb5a0ef0a77aa1be244839715fcb3ffff379edfdf4aa")
-      public fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit) {
-      }
+      public fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2777,30 +2622,30 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingRuleProperty.builder()
 
-      public override fun action(action: ScalingActionProperty) {
+      override fun action(action: ScalingActionProperty) {
         cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("419a416e51f605bf57d25fa82dcf2bbcf704147957ee6f675c027e9ec5fe9ad2")
-      public override fun action(action: ScalingActionProperty.Builder.() -> Unit): Unit =
+      override fun action(action: ScalingActionProperty.Builder.() -> Unit): Unit =
           action(ScalingActionProperty(action))
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun trigger(trigger: ScalingTriggerProperty) {
+      override fun trigger(trigger: ScalingTriggerProperty) {
         cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b5c45c94aca8ef11b0a1bb5a0ef0a77aa1be244839715fcb3ffff379edfdf4aa")
-      public override fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit): Unit =
+      override fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit): Unit =
           trigger(ScalingTriggerProperty(trigger))
 
       public fun build():
@@ -2812,14 +2657,14 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingRuleProperty,
     ) : ScalingRuleProperty {
-      public override fun action(): ScalingActionProperty =
+      override fun action(): ScalingActionProperty =
           unwrap(this).getAction().let(ScalingActionProperty::wrap)
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun trigger(): ScalingTriggerProperty =
+      override fun trigger(): ScalingTriggerProperty =
           unwrap(this).getTrigger().let(ScalingTriggerProperty::wrap)
     }
 
@@ -2873,18 +2718,15 @@ public open class EmrCreateCluster internal constructor(
     public fun simpleScalingPolicyConfiguration(): SimpleScalingPolicyConfigurationProperty
 
     public interface Builder {
-      public fun market(market: InstanceMarket) {
-      }
+      public fun market(market: InstanceMarket)
 
       public
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
-      }
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52fa52aefda71e5cc5ed6656af95c8e2fdc117aa5e1fe1d0b00f1070bb4f5c82")
       public
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2893,18 +2735,18 @@ public open class EmrCreateCluster internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingActionProperty.builder()
 
-      public override fun market(market: InstanceMarket) {
+      override fun market(market: InstanceMarket) {
         cdkBuilder.market(market.let(InstanceMarket::unwrap))
       }
 
-      public override
+      override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
         cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52fa52aefda71e5cc5ed6656af95c8e2fdc117aa5e1fe1d0b00f1070bb4f5c82")
-      public override
+      override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit):
           Unit =
           simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty(simpleScalingPolicyConfiguration))
@@ -2918,11 +2760,9 @@ public open class EmrCreateCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.ScalingActionProperty,
     ) : ScalingActionProperty {
-      public override fun market(): InstanceMarket? =
-          unwrap(this).getMarket()?.let(InstanceMarket::wrap)
+      override fun market(): InstanceMarket? = unwrap(this).getMarket()?.let(InstanceMarket::wrap)
 
-      public override fun simpleScalingPolicyConfiguration():
-          SimpleScalingPolicyConfigurationProperty =
+      override fun simpleScalingPolicyConfiguration(): SimpleScalingPolicyConfigurationProperty =
           unwrap(this).getSimpleScalingPolicyConfiguration().let(SimpleScalingPolicyConfigurationProperty::wrap)
     }
 

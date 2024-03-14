@@ -47,17 +47,13 @@ public open class CfnSchedule internal constructor(
   }
 
   public interface Builder {
-    public fun cronExpression(cronExpression: String) {
-    }
+    public fun cronExpression(cronExpression: String)
 
-    public fun jobNames(jobNames: List<String>) {
-    }
+    public fun jobNames(jobNames: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -67,19 +63,19 @@ public open class CfnSchedule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnSchedule.Builder =
         software.amazon.awscdk.services.databrew.CfnSchedule.Builder.create(scope, id)
 
-    public override fun cronExpression(cronExpression: String) {
+    override fun cronExpression(cronExpression: String) {
       cdkBuilder.cronExpression(cronExpression)
     }
 
-    public override fun jobNames(jobNames: List<String>) {
+    override fun jobNames(jobNames: List<String>) {
       cdkBuilder.jobNames(jobNames)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

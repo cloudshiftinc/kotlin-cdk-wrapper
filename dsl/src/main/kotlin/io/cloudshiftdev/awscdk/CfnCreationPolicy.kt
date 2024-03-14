@@ -16,53 +16,48 @@ public interface CfnCreationPolicy {
 
   public interface Builder {
     public
-        fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy) {
-    }
+        fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4add8616539c69239c0783c9278278081595b1ad9633d76522b1be1545be2e2c")
     public
-        fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy.Builder.() -> Unit) {
-    }
+        fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy.Builder.() -> Unit)
 
-    public fun resourceSignal(resourceSignal: CfnResourceSignal) {
-    }
+    public fun resourceSignal(resourceSignal: CfnResourceSignal)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("413cf468f1ed163d6fc53c57ce4ebee9f545d2b69a4fbdaaaef4058e7d8b2373")
-    public fun resourceSignal(resourceSignal: CfnResourceSignal.Builder.() -> Unit) {
-    }
+    public fun resourceSignal(resourceSignal: CfnResourceSignal.Builder.() -> Unit)
 
-    public fun startFleet(startFleet: Boolean) {
-    }
+    public fun startFleet(startFleet: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnCreationPolicy.Builder =
         software.amazon.awscdk.CfnCreationPolicy.builder()
 
-    public override
+    override
         fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy) {
       cdkBuilder.autoScalingCreationPolicy(autoScalingCreationPolicy.let(CfnResourceAutoScalingCreationPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4add8616539c69239c0783c9278278081595b1ad9633d76522b1be1545be2e2c")
-    public override
+    override
         fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy.Builder.() -> Unit):
         Unit =
         autoScalingCreationPolicy(CfnResourceAutoScalingCreationPolicy(autoScalingCreationPolicy))
 
-    public override fun resourceSignal(resourceSignal: CfnResourceSignal) {
+    override fun resourceSignal(resourceSignal: CfnResourceSignal) {
       cdkBuilder.resourceSignal(resourceSignal.let(CfnResourceSignal::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("413cf468f1ed163d6fc53c57ce4ebee9f545d2b69a4fbdaaaef4058e7d8b2373")
-    public override fun resourceSignal(resourceSignal: CfnResourceSignal.Builder.() -> Unit): Unit =
+    override fun resourceSignal(resourceSignal: CfnResourceSignal.Builder.() -> Unit): Unit =
         resourceSignal(CfnResourceSignal(resourceSignal))
 
-    public override fun startFleet(startFleet: Boolean) {
+    override fun startFleet(startFleet: Boolean) {
       cdkBuilder.startFleet(startFleet)
     }
 
@@ -72,13 +67,13 @@ public interface CfnCreationPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCreationPolicy,
   ) : CfnCreationPolicy {
-    public override fun autoScalingCreationPolicy(): CfnResourceAutoScalingCreationPolicy? =
+    override fun autoScalingCreationPolicy(): CfnResourceAutoScalingCreationPolicy? =
         unwrap(this).getAutoScalingCreationPolicy()?.let(CfnResourceAutoScalingCreationPolicy::wrap)
 
-    public override fun resourceSignal(): CfnResourceSignal? =
+    override fun resourceSignal(): CfnResourceSignal? =
         unwrap(this).getResourceSignal()?.let(CfnResourceSignal::wrap)
 
-    public override fun startFleet(): Boolean? = unwrap(this).getStartFleet()
+    override fun startFleet(): Boolean? = unwrap(this).getStartFleet()
   }
 
   public companion object {

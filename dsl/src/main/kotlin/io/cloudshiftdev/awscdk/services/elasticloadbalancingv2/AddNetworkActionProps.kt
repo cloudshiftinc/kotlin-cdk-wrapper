@@ -6,8 +6,7 @@ public interface AddNetworkActionProps {
   public fun action(): NetworkListenerAction
 
   public interface Builder {
-    public fun action(action: NetworkListenerAction) {
-    }
+    public fun action(action: NetworkListenerAction)
   }
 
   private class BuilderImpl : Builder {
@@ -15,7 +14,7 @@ public interface AddNetworkActionProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.builder()
 
-    public override fun action(action: NetworkListenerAction) {
+    override fun action(action: NetworkListenerAction) {
       cdkBuilder.action(action.let(NetworkListenerAction::unwrap))
     }
 
@@ -27,7 +26,7 @@ public interface AddNetworkActionProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps,
   ) : AddNetworkActionProps {
-    public override fun action(): NetworkListenerAction =
+    override fun action(): NetworkListenerAction =
         unwrap(this).getAction().let(NetworkListenerAction::wrap)
   }
 

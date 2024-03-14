@@ -70,11 +70,9 @@ public open class SecretTargetAttachment internal constructor(
       unwrap(this).secretValueFromJson(jsonField).let(SecretValue::wrap)
 
   public interface Builder {
-    public fun secret(secret: ISecret) {
-    }
+    public fun secret(secret: ISecret)
 
-    public fun target(target: ISecretAttachmentTarget) {
-    }
+    public fun target(target: ISecretAttachmentTarget)
   }
 
   private class BuilderImpl(
@@ -86,11 +84,11 @@ public open class SecretTargetAttachment internal constructor(
         software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment.Builder.create(scope,
         id)
 
-    public override fun secret(secret: ISecret) {
+    override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }
 
-    public override fun target(target: ISecretAttachmentTarget) {
+    override fun target(target: ISecretAttachmentTarget) {
       cdkBuilder.target(target.let(ISecretAttachmentTarget::unwrap))
     }
 

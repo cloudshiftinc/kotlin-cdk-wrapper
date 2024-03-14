@@ -126,59 +126,41 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun attachMissingPermission(attachMissingPermission: Boolean) {
-    }
+    public fun attachMissingPermission(attachMissingPermission: Boolean)
 
-    public fun attachMissingPermission(attachMissingPermission: IResolvable) {
-    }
+    public fun attachMissingPermission(attachMissingPermission: IResolvable)
 
-    public fun autoConfigurationEnabled(autoConfigurationEnabled: Boolean) {
-    }
+    public fun autoConfigurationEnabled(autoConfigurationEnabled: Boolean)
 
-    public fun autoConfigurationEnabled(autoConfigurationEnabled: IResolvable) {
-    }
+    public fun autoConfigurationEnabled(autoConfigurationEnabled: IResolvable)
 
-    public fun componentMonitoringSettings(componentMonitoringSettings: IResolvable) {
-    }
+    public fun componentMonitoringSettings(componentMonitoringSettings: IResolvable)
 
-    public fun componentMonitoringSettings(componentMonitoringSettings: List<Any>) {
-    }
+    public fun componentMonitoringSettings(componentMonitoringSettings: List<Any>)
 
-    public fun customComponents(customComponents: IResolvable) {
-    }
+    public fun customComponents(customComponents: IResolvable)
 
-    public fun customComponents(customComponents: List<Any>) {
-    }
+    public fun customComponents(customComponents: List<Any>)
 
-    public fun cweMonitorEnabled(cweMonitorEnabled: Boolean) {
-    }
+    public fun cweMonitorEnabled(cweMonitorEnabled: Boolean)
 
-    public fun cweMonitorEnabled(cweMonitorEnabled: IResolvable) {
-    }
+    public fun cweMonitorEnabled(cweMonitorEnabled: IResolvable)
 
-    public fun groupingType(groupingType: String) {
-    }
+    public fun groupingType(groupingType: String)
 
-    public fun logPatternSets(logPatternSets: IResolvable) {
-    }
+    public fun logPatternSets(logPatternSets: IResolvable)
 
-    public fun logPatternSets(logPatternSets: List<Any>) {
-    }
+    public fun logPatternSets(logPatternSets: List<Any>)
 
-    public fun opsCenterEnabled(opsCenterEnabled: Boolean) {
-    }
+    public fun opsCenterEnabled(opsCenterEnabled: Boolean)
 
-    public fun opsCenterEnabled(opsCenterEnabled: IResolvable) {
-    }
+    public fun opsCenterEnabled(opsCenterEnabled: IResolvable)
 
-    public fun opsItemSnsTopicArn(opsItemSnsTopicArn: String) {
-    }
+    public fun opsItemSnsTopicArn(opsItemSnsTopicArn: String)
 
-    public fun resourceGroupName(resourceGroupName: String) {
-    }
+    public fun resourceGroupName(resourceGroupName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -189,75 +171,75 @@ public open class CfnApplication internal constructor(
         software.amazon.awscdk.services.applicationinsights.CfnApplication.Builder =
         software.amazon.awscdk.services.applicationinsights.CfnApplication.Builder.create(scope, id)
 
-    public override fun attachMissingPermission(attachMissingPermission: Boolean) {
+    override fun attachMissingPermission(attachMissingPermission: Boolean) {
       cdkBuilder.attachMissingPermission(attachMissingPermission)
     }
 
-    public override fun attachMissingPermission(attachMissingPermission: IResolvable) {
+    override fun attachMissingPermission(attachMissingPermission: IResolvable) {
       cdkBuilder.attachMissingPermission(attachMissingPermission.let(IResolvable::unwrap))
     }
 
-    public override fun autoConfigurationEnabled(autoConfigurationEnabled: Boolean) {
+    override fun autoConfigurationEnabled(autoConfigurationEnabled: Boolean) {
       cdkBuilder.autoConfigurationEnabled(autoConfigurationEnabled)
     }
 
-    public override fun autoConfigurationEnabled(autoConfigurationEnabled: IResolvable) {
+    override fun autoConfigurationEnabled(autoConfigurationEnabled: IResolvable) {
       cdkBuilder.autoConfigurationEnabled(autoConfigurationEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun componentMonitoringSettings(componentMonitoringSettings: IResolvable) {
+    override fun componentMonitoringSettings(componentMonitoringSettings: IResolvable) {
       cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.let(IResolvable::unwrap))
     }
 
-    public override fun componentMonitoringSettings(componentMonitoringSettings: List<Any>) {
+    override fun componentMonitoringSettings(componentMonitoringSettings: List<Any>) {
       cdkBuilder.componentMonitoringSettings(componentMonitoringSettings)
     }
 
-    public override fun customComponents(customComponents: IResolvable) {
+    override fun customComponents(customComponents: IResolvable) {
       cdkBuilder.customComponents(customComponents.let(IResolvable::unwrap))
     }
 
-    public override fun customComponents(customComponents: List<Any>) {
+    override fun customComponents(customComponents: List<Any>) {
       cdkBuilder.customComponents(customComponents)
     }
 
-    public override fun cweMonitorEnabled(cweMonitorEnabled: Boolean) {
+    override fun cweMonitorEnabled(cweMonitorEnabled: Boolean) {
       cdkBuilder.cweMonitorEnabled(cweMonitorEnabled)
     }
 
-    public override fun cweMonitorEnabled(cweMonitorEnabled: IResolvable) {
+    override fun cweMonitorEnabled(cweMonitorEnabled: IResolvable) {
       cdkBuilder.cweMonitorEnabled(cweMonitorEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun groupingType(groupingType: String) {
+    override fun groupingType(groupingType: String) {
       cdkBuilder.groupingType(groupingType)
     }
 
-    public override fun logPatternSets(logPatternSets: IResolvable) {
+    override fun logPatternSets(logPatternSets: IResolvable) {
       cdkBuilder.logPatternSets(logPatternSets.let(IResolvable::unwrap))
     }
 
-    public override fun logPatternSets(logPatternSets: List<Any>) {
+    override fun logPatternSets(logPatternSets: List<Any>) {
       cdkBuilder.logPatternSets(logPatternSets)
     }
 
-    public override fun opsCenterEnabled(opsCenterEnabled: Boolean) {
+    override fun opsCenterEnabled(opsCenterEnabled: Boolean) {
       cdkBuilder.opsCenterEnabled(opsCenterEnabled)
     }
 
-    public override fun opsCenterEnabled(opsCenterEnabled: IResolvable) {
+    override fun opsCenterEnabled(opsCenterEnabled: IResolvable) {
       cdkBuilder.opsCenterEnabled(opsCenterEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun opsItemSnsTopicArn(opsItemSnsTopicArn: String) {
+    override fun opsItemSnsTopicArn(opsItemSnsTopicArn: String) {
       cdkBuilder.opsItemSnsTopicArn(opsItemSnsTopicArn)
     }
 
-    public override fun resourceGroupName(resourceGroupName: String) {
+    override fun resourceGroupName(resourceGroupName: String) {
       cdkBuilder.resourceGroupName(resourceGroupName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -293,11 +275,9 @@ public open class CfnApplication internal constructor(
     public fun severity(): String? = unwrap(this).getSeverity()
 
     public interface Builder {
-      public fun alarmName(alarmName: String) {
-      }
+      public fun alarmName(alarmName: String)
 
-      public fun severity(severity: String) {
-      }
+      public fun severity(severity: String)
     }
 
     private class BuilderImpl : Builder {
@@ -305,11 +285,11 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty.Builder =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty.builder()
 
-      public override fun alarmName(alarmName: String) {
+      override fun alarmName(alarmName: String) {
         cdkBuilder.alarmName(alarmName)
       }
 
-      public override fun severity(severity: String) {
+      override fun severity(severity: String) {
         cdkBuilder.severity(severity)
       }
 
@@ -322,9 +302,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty,
     ) : AlarmProperty {
-      public override fun alarmName(): String = unwrap(this).getAlarmName()
+      override fun alarmName(): String = unwrap(this).getAlarmName()
 
-      public override fun severity(): String? = unwrap(this).getSeverity()
+      override fun severity(): String? = unwrap(this).getSeverity()
     }
 
     public companion object {
@@ -353,14 +333,11 @@ public open class CfnApplication internal constructor(
     public fun patternSetName(): String
 
     public interface Builder {
-      public fun logPatterns(logPatterns: IResolvable) {
-      }
+      public fun logPatterns(logPatterns: IResolvable)
 
-      public fun logPatterns(logPatterns: List<Any>) {
-      }
+      public fun logPatterns(logPatterns: List<Any>)
 
-      public fun patternSetName(patternSetName: String) {
-      }
+      public fun patternSetName(patternSetName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -369,15 +346,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty.builder()
 
-      public override fun logPatterns(logPatterns: IResolvable) {
+      override fun logPatterns(logPatterns: IResolvable) {
         cdkBuilder.logPatterns(logPatterns.let(IResolvable::unwrap))
       }
 
-      public override fun logPatterns(logPatterns: List<Any>) {
+      override fun logPatterns(logPatterns: List<Any>) {
         cdkBuilder.logPatterns(logPatterns)
       }
 
-      public override fun patternSetName(patternSetName: String) {
+      override fun patternSetName(patternSetName: String) {
         cdkBuilder.patternSetName(patternSetName)
       }
 
@@ -390,9 +367,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty,
     ) : LogPatternSetProperty {
-      public override fun logPatterns(): Any = unwrap(this).getLogPatterns()
+      override fun logPatterns(): Any = unwrap(this).getLogPatterns()
 
-      public override fun patternSetName(): String = unwrap(this).getPatternSetName()
+      override fun patternSetName(): String = unwrap(this).getPatternSetName()
     }
 
     public companion object {
@@ -425,17 +402,13 @@ public open class CfnApplication internal constructor(
     public fun patternSet(): String? = unwrap(this).getPatternSet()
 
     public interface Builder {
-      public fun eventLevels(eventLevels: List<String>) {
-      }
+      public fun eventLevels(eventLevels: List<String>)
 
-      public fun eventName(eventName: String) {
-      }
+      public fun eventName(eventName: String)
 
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
 
-      public fun patternSet(patternSet: String) {
-      }
+      public fun patternSet(patternSet: String)
     }
 
     private class BuilderImpl : Builder {
@@ -444,19 +417,19 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty.builder()
 
-      public override fun eventLevels(eventLevels: List<String>) {
+      override fun eventLevels(eventLevels: List<String>) {
         cdkBuilder.eventLevels(eventLevels)
       }
 
-      public override fun eventName(eventName: String) {
+      override fun eventName(eventName: String) {
         cdkBuilder.eventName(eventName)
       }
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
-      public override fun patternSet(patternSet: String) {
+      override fun patternSet(patternSet: String) {
         cdkBuilder.patternSet(patternSet)
       }
 
@@ -469,13 +442,13 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
     ) : WindowsEventProperty {
-      public override fun eventLevels(): List<String> = unwrap(this).getEventLevels() ?: emptyList()
+      override fun eventLevels(): List<String> = unwrap(this).getEventLevels() ?: emptyList()
 
-      public override fun eventName(): String = unwrap(this).getEventName()
+      override fun eventName(): String = unwrap(this).getEventName()
 
-      public override fun logGroupName(): String = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String = unwrap(this).getLogGroupName()
 
-      public override fun patternSet(): String? = unwrap(this).getPatternSet()
+      override fun patternSet(): String? = unwrap(this).getPatternSet()
     }
 
     public companion object {
@@ -502,8 +475,7 @@ public open class CfnApplication internal constructor(
     public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
 
     public interface Builder {
-      public fun prometheusPort(prometheusPort: String) {
-      }
+      public fun prometheusPort(prometheusPort: String)
     }
 
     private class BuilderImpl : Builder {
@@ -512,7 +484,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty.builder()
 
-      public override fun prometheusPort(prometheusPort: String) {
+      override fun prometheusPort(prometheusPort: String) {
         cdkBuilder.prometheusPort(prometheusPort)
       }
 
@@ -525,7 +497,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty,
     ) : HAClusterPrometheusExporterProperty {
-      public override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
     }
 
     public companion object {
@@ -556,23 +528,18 @@ public open class CfnApplication internal constructor(
         unwrap(this).getSubComponentTypeConfigurations()
 
     public interface Builder {
-      public fun configurationDetails(configurationDetails: IResolvable) {
-      }
+      public fun configurationDetails(configurationDetails: IResolvable)
 
-      public fun configurationDetails(configurationDetails: ConfigurationDetailsProperty) {
-      }
+      public fun configurationDetails(configurationDetails: ConfigurationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c31fec2a673113a2f0535a28bdacf3bd652f763fb0267ea8f90d608c943331fb")
       public
-          fun configurationDetails(configurationDetails: ConfigurationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun configurationDetails(configurationDetails: ConfigurationDetailsProperty.Builder.() -> Unit)
 
-      public fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
-      }
+      public fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable)
 
-      public fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>) {
-      }
+      public fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -581,27 +548,25 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty.builder()
 
-      public override fun configurationDetails(configurationDetails: IResolvable) {
+      override fun configurationDetails(configurationDetails: IResolvable) {
         cdkBuilder.configurationDetails(configurationDetails.let(IResolvable::unwrap))
       }
 
-      public override fun configurationDetails(configurationDetails: ConfigurationDetailsProperty) {
+      override fun configurationDetails(configurationDetails: ConfigurationDetailsProperty) {
         cdkBuilder.configurationDetails(configurationDetails.let(ConfigurationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c31fec2a673113a2f0535a28bdacf3bd652f763fb0267ea8f90d608c943331fb")
-      public override
+      override
           fun configurationDetails(configurationDetails: ConfigurationDetailsProperty.Builder.() -> Unit):
           Unit = configurationDetails(ConfigurationDetailsProperty(configurationDetails))
 
-      public override
-          fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
+      override fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
         cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations.let(IResolvable::unwrap))
       }
 
-      public override
-          fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>) {
+      override fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>) {
         cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations)
       }
 
@@ -614,9 +579,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty,
     ) : ComponentConfigurationProperty {
-      public override fun configurationDetails(): Any? = unwrap(this).getConfigurationDetails()
+      override fun configurationDetails(): Any? = unwrap(this).getConfigurationDetails()
 
-      public override fun subComponentTypeConfigurations(): Any? =
+      override fun subComponentTypeConfigurations(): Any? =
           unwrap(this).getSubComponentTypeConfigurations()
     }
 
@@ -656,66 +621,49 @@ public open class CfnApplication internal constructor(
     public fun windowsEvents(): Any? = unwrap(this).getWindowsEvents()
 
     public interface Builder {
-      public fun alarmMetrics(alarmMetrics: IResolvable) {
-      }
+      public fun alarmMetrics(alarmMetrics: IResolvable)
 
-      public fun alarmMetrics(alarmMetrics: List<Any>) {
-      }
+      public fun alarmMetrics(alarmMetrics: List<Any>)
 
-      public fun alarms(alarms: IResolvable) {
-      }
+      public fun alarms(alarms: IResolvable)
 
-      public fun alarms(alarms: List<Any>) {
-      }
+      public fun alarms(alarms: List<Any>)
 
-      public fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable) {
-      }
+      public fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable)
 
       public
-          fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty) {
-      }
+          fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b240cc430e2691632bfe6703e7ff48a1d7892b48371717ea9ce01800aa7ee918")
       public
-          fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty.Builder.() -> Unit) {
-      }
+          fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty.Builder.() -> Unit)
 
-      public fun hanaPrometheusExporter(hanaPrometheusExporter: IResolvable) {
-      }
+      public fun hanaPrometheusExporter(hanaPrometheusExporter: IResolvable)
 
-      public fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty) {
-      }
+      public fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79f8791fcbb36ad22dcb6a4f2eb05b19c3c8dcefd897b634c4f7c283a5ba7364")
       public
-          fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty.Builder.() -> Unit) {
-      }
+          fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty.Builder.() -> Unit)
 
-      public fun jmxPrometheusExporter(jmxPrometheusExporter: IResolvable) {
-      }
+      public fun jmxPrometheusExporter(jmxPrometheusExporter: IResolvable)
 
-      public fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty) {
-      }
+      public fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9226526fedbe04dc0b210d6f7b6d77d9bf46aee3db36046c8621718f50ce50ee")
       public
-          fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty.Builder.() -> Unit) {
-      }
+          fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty.Builder.() -> Unit)
 
-      public fun logs(logs: IResolvable) {
-      }
+      public fun logs(logs: IResolvable)
 
-      public fun logs(logs: List<Any>) {
-      }
+      public fun logs(logs: List<Any>)
 
-      public fun windowsEvents(windowsEvents: IResolvable) {
-      }
+      public fun windowsEvents(windowsEvents: IResolvable)
 
-      public fun windowsEvents(windowsEvents: List<Any>) {
-      }
+      public fun windowsEvents(windowsEvents: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -724,81 +672,79 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty.builder()
 
-      public override fun alarmMetrics(alarmMetrics: IResolvable) {
+      override fun alarmMetrics(alarmMetrics: IResolvable) {
         cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable::unwrap))
       }
 
-      public override fun alarmMetrics(alarmMetrics: List<Any>) {
+      override fun alarmMetrics(alarmMetrics: List<Any>) {
         cdkBuilder.alarmMetrics(alarmMetrics)
       }
 
-      public override fun alarms(alarms: IResolvable) {
+      override fun alarms(alarms: IResolvable) {
         cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
       }
 
-      public override fun alarms(alarms: List<Any>) {
+      override fun alarms(alarms: List<Any>) {
         cdkBuilder.alarms(alarms)
       }
 
-      public override fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable) {
+      override fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable) {
         cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty) {
         cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(HAClusterPrometheusExporterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b240cc430e2691632bfe6703e7ff48a1d7892b48371717ea9ce01800aa7ee918")
-      public override
+      override
           fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty.Builder.() -> Unit):
           Unit =
           haClusterPrometheusExporter(HAClusterPrometheusExporterProperty(haClusterPrometheusExporter))
 
-      public override fun hanaPrometheusExporter(hanaPrometheusExporter: IResolvable) {
+      override fun hanaPrometheusExporter(hanaPrometheusExporter: IResolvable) {
         cdkBuilder.hanaPrometheusExporter(hanaPrometheusExporter.let(IResolvable::unwrap))
       }
 
-      public override
-          fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty) {
+      override fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty) {
         cdkBuilder.hanaPrometheusExporter(hanaPrometheusExporter.let(HANAPrometheusExporterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79f8791fcbb36ad22dcb6a4f2eb05b19c3c8dcefd897b634c4f7c283a5ba7364")
-      public override
+      override
           fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty.Builder.() -> Unit):
           Unit = hanaPrometheusExporter(HANAPrometheusExporterProperty(hanaPrometheusExporter))
 
-      public override fun jmxPrometheusExporter(jmxPrometheusExporter: IResolvable) {
+      override fun jmxPrometheusExporter(jmxPrometheusExporter: IResolvable) {
         cdkBuilder.jmxPrometheusExporter(jmxPrometheusExporter.let(IResolvable::unwrap))
       }
 
-      public override
-          fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty) {
+      override fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty) {
         cdkBuilder.jmxPrometheusExporter(jmxPrometheusExporter.let(JMXPrometheusExporterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9226526fedbe04dc0b210d6f7b6d77d9bf46aee3db36046c8621718f50ce50ee")
-      public override
+      override
           fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty.Builder.() -> Unit):
           Unit = jmxPrometheusExporter(JMXPrometheusExporterProperty(jmxPrometheusExporter))
 
-      public override fun logs(logs: IResolvable) {
+      override fun logs(logs: IResolvable) {
         cdkBuilder.logs(logs.let(IResolvable::unwrap))
       }
 
-      public override fun logs(logs: List<Any>) {
+      override fun logs(logs: List<Any>) {
         cdkBuilder.logs(logs)
       }
 
-      public override fun windowsEvents(windowsEvents: IResolvable) {
+      override fun windowsEvents(windowsEvents: IResolvable) {
         cdkBuilder.windowsEvents(windowsEvents.let(IResolvable::unwrap))
       }
 
-      public override fun windowsEvents(windowsEvents: List<Any>) {
+      override fun windowsEvents(windowsEvents: List<Any>) {
         cdkBuilder.windowsEvents(windowsEvents)
       }
 
@@ -811,20 +757,20 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty,
     ) : ConfigurationDetailsProperty {
-      public override fun alarmMetrics(): Any? = unwrap(this).getAlarmMetrics()
+      override fun alarmMetrics(): Any? = unwrap(this).getAlarmMetrics()
 
-      public override fun alarms(): Any? = unwrap(this).getAlarms()
+      override fun alarms(): Any? = unwrap(this).getAlarms()
 
-      public override fun haClusterPrometheusExporter(): Any? =
+      override fun haClusterPrometheusExporter(): Any? =
           unwrap(this).getHaClusterPrometheusExporter()
 
-      public override fun hanaPrometheusExporter(): Any? = unwrap(this).getHanaPrometheusExporter()
+      override fun hanaPrometheusExporter(): Any? = unwrap(this).getHanaPrometheusExporter()
 
-      public override fun jmxPrometheusExporter(): Any? = unwrap(this).getJmxPrometheusExporter()
+      override fun jmxPrometheusExporter(): Any? = unwrap(this).getJmxPrometheusExporter()
 
-      public override fun logs(): Any? = unwrap(this).getLogs()
+      override fun logs(): Any? = unwrap(this).getLogs()
 
-      public override fun windowsEvents(): Any? = unwrap(this).getWindowsEvents()
+      override fun windowsEvents(): Any? = unwrap(this).getWindowsEvents()
     }
 
     public companion object {
@@ -855,23 +801,17 @@ public open class CfnApplication internal constructor(
     public fun windowsEvents(): Any? = unwrap(this).getWindowsEvents()
 
     public interface Builder {
-      public fun alarmMetrics(alarmMetrics: IResolvable) {
-      }
+      public fun alarmMetrics(alarmMetrics: IResolvable)
 
-      public fun alarmMetrics(alarmMetrics: List<Any>) {
-      }
+      public fun alarmMetrics(alarmMetrics: List<Any>)
 
-      public fun logs(logs: IResolvable) {
-      }
+      public fun logs(logs: IResolvable)
 
-      public fun logs(logs: List<Any>) {
-      }
+      public fun logs(logs: List<Any>)
 
-      public fun windowsEvents(windowsEvents: IResolvable) {
-      }
+      public fun windowsEvents(windowsEvents: IResolvable)
 
-      public fun windowsEvents(windowsEvents: List<Any>) {
-      }
+      public fun windowsEvents(windowsEvents: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -880,27 +820,27 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty.builder()
 
-      public override fun alarmMetrics(alarmMetrics: IResolvable) {
+      override fun alarmMetrics(alarmMetrics: IResolvable) {
         cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable::unwrap))
       }
 
-      public override fun alarmMetrics(alarmMetrics: List<Any>) {
+      override fun alarmMetrics(alarmMetrics: List<Any>) {
         cdkBuilder.alarmMetrics(alarmMetrics)
       }
 
-      public override fun logs(logs: IResolvable) {
+      override fun logs(logs: IResolvable) {
         cdkBuilder.logs(logs.let(IResolvable::unwrap))
       }
 
-      public override fun logs(logs: List<Any>) {
+      override fun logs(logs: List<Any>) {
         cdkBuilder.logs(logs)
       }
 
-      public override fun windowsEvents(windowsEvents: IResolvable) {
+      override fun windowsEvents(windowsEvents: IResolvable) {
         cdkBuilder.windowsEvents(windowsEvents.let(IResolvable::unwrap))
       }
 
-      public override fun windowsEvents(windowsEvents: List<Any>) {
+      override fun windowsEvents(windowsEvents: List<Any>) {
         cdkBuilder.windowsEvents(windowsEvents)
       }
 
@@ -913,11 +853,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty,
     ) : SubComponentConfigurationDetailsProperty {
-      public override fun alarmMetrics(): Any? = unwrap(this).getAlarmMetrics()
+      override fun alarmMetrics(): Any? = unwrap(this).getAlarmMetrics()
 
-      public override fun logs(): Any? = unwrap(this).getLogs()
+      override fun logs(): Any? = unwrap(this).getLogs()
 
-      public override fun windowsEvents(): Any? = unwrap(this).getWindowsEvents()
+      override fun windowsEvents(): Any? = unwrap(this).getWindowsEvents()
     }
 
     public companion object {
@@ -949,14 +889,11 @@ public open class CfnApplication internal constructor(
     public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
 
     public interface Builder {
-      public fun hostPort(hostPort: String) {
-      }
+      public fun hostPort(hostPort: String)
 
-      public fun jmxurl(jmxurl: String) {
-      }
+      public fun jmxurl(jmxurl: String)
 
-      public fun prometheusPort(prometheusPort: String) {
-      }
+      public fun prometheusPort(prometheusPort: String)
     }
 
     private class BuilderImpl : Builder {
@@ -965,15 +902,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty.builder()
 
-      public override fun hostPort(hostPort: String) {
+      override fun hostPort(hostPort: String) {
         cdkBuilder.hostPort(hostPort)
       }
 
-      public override fun jmxurl(jmxurl: String) {
+      override fun jmxurl(jmxurl: String) {
         cdkBuilder.jmxurl(jmxurl)
       }
 
-      public override fun prometheusPort(prometheusPort: String) {
+      override fun prometheusPort(prometheusPort: String) {
         cdkBuilder.prometheusPort(prometheusPort)
       }
 
@@ -986,11 +923,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty,
     ) : JMXPrometheusExporterProperty {
-      public override fun hostPort(): String? = unwrap(this).getHostPort()
+      override fun hostPort(): String? = unwrap(this).getHostPort()
 
-      public override fun jmxurl(): String? = unwrap(this).getJmxurl()
+      override fun jmxurl(): String? = unwrap(this).getJmxurl()
 
-      public override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
     }
 
     public companion object {
@@ -1025,20 +962,15 @@ public open class CfnApplication internal constructor(
     public fun patternSet(): String? = unwrap(this).getPatternSet()
 
     public interface Builder {
-      public fun encoding(encoding: String) {
-      }
+      public fun encoding(encoding: String)
 
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
 
-      public fun logPath(logPath: String) {
-      }
+      public fun logPath(logPath: String)
 
-      public fun logType(logType: String) {
-      }
+      public fun logType(logType: String)
 
-      public fun patternSet(patternSet: String) {
-      }
+      public fun patternSet(patternSet: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1046,23 +978,23 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty.Builder =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty.builder()
 
-      public override fun encoding(encoding: String) {
+      override fun encoding(encoding: String) {
         cdkBuilder.encoding(encoding)
       }
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
-      public override fun logPath(logPath: String) {
+      override fun logPath(logPath: String) {
         cdkBuilder.logPath(logPath)
       }
 
-      public override fun logType(logType: String) {
+      override fun logType(logType: String) {
         cdkBuilder.logType(logType)
       }
 
-      public override fun patternSet(patternSet: String) {
+      override fun patternSet(patternSet: String) {
         cdkBuilder.patternSet(patternSet)
       }
 
@@ -1075,15 +1007,15 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty,
     ) : LogProperty {
-      public override fun encoding(): String? = unwrap(this).getEncoding()
+      override fun encoding(): String? = unwrap(this).getEncoding()
 
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
-      public override fun logPath(): String? = unwrap(this).getLogPath()
+      override fun logPath(): String? = unwrap(this).getLogPath()
 
-      public override fun logType(): String = unwrap(this).getLogType()
+      override fun logType(): String = unwrap(this).getLogType()
 
-      public override fun patternSet(): String? = unwrap(this).getPatternSet()
+      override fun patternSet(): String? = unwrap(this).getPatternSet()
     }
 
     public companion object {
@@ -1112,21 +1044,17 @@ public open class CfnApplication internal constructor(
     public fun subComponentType(): String
 
     public interface Builder {
-      public fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable) {
-      }
+      public fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable)
 
       public
-          fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty) {
-      }
+          fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6cceeff7e3247f0f06789a218f95b07fda8f6430d9c7a9c50818fb81d6839d17")
       public
-          fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty.Builder.() -> Unit)
 
-      public fun subComponentType(subComponentType: String) {
-      }
+      public fun subComponentType(subComponentType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1135,24 +1063,23 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty.builder()
 
-      public override
-          fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable) {
+      override fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable) {
         cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty) {
         cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails.let(SubComponentConfigurationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6cceeff7e3247f0f06789a218f95b07fda8f6430d9c7a9c50818fb81d6839d17")
-      public override
+      override
           fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty.Builder.() -> Unit):
           Unit =
           subComponentConfigurationDetails(SubComponentConfigurationDetailsProperty(subComponentConfigurationDetails))
 
-      public override fun subComponentType(subComponentType: String) {
+      override fun subComponentType(subComponentType: String) {
         cdkBuilder.subComponentType(subComponentType)
       }
 
@@ -1165,10 +1092,10 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty,
     ) : SubComponentTypeConfigurationProperty {
-      public override fun subComponentConfigurationDetails(): Any =
+      override fun subComponentConfigurationDetails(): Any =
           unwrap(this).getSubComponentConfigurationDetails()
 
-      public override fun subComponentType(): String = unwrap(this).getSubComponentType()
+      override fun subComponentType(): String = unwrap(this).getSubComponentType()
     }
 
     public companion object {
@@ -1198,11 +1125,9 @@ public open class CfnApplication internal constructor(
     public fun resourceList(): List<String>
 
     public interface Builder {
-      public fun componentName(componentName: String) {
-      }
+      public fun componentName(componentName: String)
 
-      public fun resourceList(resourceList: List<String>) {
-      }
+      public fun resourceList(resourceList: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1211,11 +1136,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty.builder()
 
-      public override fun componentName(componentName: String) {
+      override fun componentName(componentName: String) {
         cdkBuilder.componentName(componentName)
       }
 
-      public override fun resourceList(resourceList: List<String>) {
+      override fun resourceList(resourceList: List<String>) {
         cdkBuilder.resourceList(resourceList)
       }
 
@@ -1228,10 +1153,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty,
     ) : CustomComponentProperty {
-      public override fun componentName(): String = unwrap(this).getComponentName()
+      override fun componentName(): String = unwrap(this).getComponentName()
 
-      public override fun resourceList(): List<String> = unwrap(this).getResourceList() ?:
-          emptyList()
+      override fun resourceList(): List<String> = unwrap(this).getResourceList() ?: emptyList()
     }
 
     public companion object {
@@ -1266,23 +1190,17 @@ public open class CfnApplication internal constructor(
     public fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
 
     public interface Builder {
-      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean) {
-      }
+      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean)
 
-      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable) {
-      }
+      public fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable)
 
-      public fun hanaPort(hanaPort: String) {
-      }
+      public fun hanaPort(hanaPort: String)
 
-      public fun hanaSecretName(hanaSecretName: String) {
-      }
+      public fun hanaSecretName(hanaSecretName: String)
 
-      public fun hanasid(hanasid: String) {
-      }
+      public fun hanasid(hanasid: String)
 
-      public fun prometheusPort(prometheusPort: String) {
-      }
+      public fun prometheusPort(prometheusPort: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1291,27 +1209,27 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty.builder()
 
-      public override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean) {
+      override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: Boolean) {
         cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient)
       }
 
-      public override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable) {
+      override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable) {
         cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient.let(IResolvable::unwrap))
       }
 
-      public override fun hanaPort(hanaPort: String) {
+      override fun hanaPort(hanaPort: String) {
         cdkBuilder.hanaPort(hanaPort)
       }
 
-      public override fun hanaSecretName(hanaSecretName: String) {
+      override fun hanaSecretName(hanaSecretName: String) {
         cdkBuilder.hanaSecretName(hanaSecretName)
       }
 
-      public override fun hanasid(hanasid: String) {
+      override fun hanasid(hanasid: String) {
         cdkBuilder.hanasid(hanasid)
       }
 
-      public override fun prometheusPort(prometheusPort: String) {
+      override fun prometheusPort(prometheusPort: String) {
         cdkBuilder.prometheusPort(prometheusPort)
       }
 
@@ -1324,16 +1242,15 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty,
     ) : HANAPrometheusExporterProperty {
-      public override fun agreeToInstallHanadbClient(): Any =
-          unwrap(this).getAgreeToInstallHanadbClient()
+      override fun agreeToInstallHanadbClient(): Any = unwrap(this).getAgreeToInstallHanadbClient()
 
-      public override fun hanaPort(): String = unwrap(this).getHanaPort()
+      override fun hanaPort(): String = unwrap(this).getHanaPort()
 
-      public override fun hanaSecretName(): String = unwrap(this).getHanaSecretName()
+      override fun hanaSecretName(): String = unwrap(this).getHanaSecretName()
 
-      public override fun hanasid(): String = unwrap(this).getHanasid()
+      override fun hanasid(): String = unwrap(this).getHanasid()
 
-      public override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
+      override fun prometheusPort(): String? = unwrap(this).getPrometheusPort()
     }
 
     public companion object {
@@ -1364,14 +1281,11 @@ public open class CfnApplication internal constructor(
     public fun rank(): Number
 
     public interface Builder {
-      public fun pattern(pattern: String) {
-      }
+      public fun pattern(pattern: String)
 
-      public fun patternName(patternName: String) {
-      }
+      public fun patternName(patternName: String)
 
-      public fun rank(rank: Number) {
-      }
+      public fun rank(rank: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1380,15 +1294,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty.builder()
 
-      public override fun pattern(pattern: String) {
+      override fun pattern(pattern: String) {
         cdkBuilder.pattern(pattern)
       }
 
-      public override fun patternName(patternName: String) {
+      override fun patternName(patternName: String) {
         cdkBuilder.patternName(patternName)
       }
 
-      public override fun rank(rank: Number) {
+      override fun rank(rank: Number) {
         cdkBuilder.rank(rank)
       }
 
@@ -1401,11 +1315,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty,
     ) : LogPatternProperty {
-      public override fun pattern(): String = unwrap(this).getPattern()
+      override fun pattern(): String = unwrap(this).getPattern()
 
-      public override fun patternName(): String = unwrap(this).getPatternName()
+      override fun patternName(): String = unwrap(this).getPatternName()
 
-      public override fun rank(): Number = unwrap(this).getRank()
+      override fun rank(): Number = unwrap(this).getRank()
     }
 
     public companion object {
@@ -1443,44 +1357,34 @@ public open class CfnApplication internal constructor(
     public fun tier(): String
 
     public interface Builder {
-      public fun componentArn(componentArn: String) {
-      }
+      public fun componentArn(componentArn: String)
 
-      public fun componentConfigurationMode(componentConfigurationMode: String) {
-      }
+      public fun componentConfigurationMode(componentConfigurationMode: String)
 
-      public fun componentName(componentName: String) {
-      }
+      public fun componentName(componentName: String)
 
-      public fun customComponentConfiguration(customComponentConfiguration: IResolvable) {
-      }
+      public fun customComponentConfiguration(customComponentConfiguration: IResolvable)
 
       public
-          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty) {
-      }
+          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("457cc7c6eb707505dd8cb7ff3054381f5738ce732f8bf3fb55022aa362f0e924")
       public
-          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit)
 
       public
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable) {
-      }
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable)
 
       public
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty) {
-      }
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e4791a30d1187c148ce4f3612f5b25e8c8f513997350b6e911df83437cc08c45")
       public
-          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit)
 
-      public fun tier(tier: String) {
-      }
+      public fun tier(tier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1489,52 +1393,52 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty.builder()
 
-      public override fun componentArn(componentArn: String) {
+      override fun componentArn(componentArn: String) {
         cdkBuilder.componentArn(componentArn)
       }
 
-      public override fun componentConfigurationMode(componentConfigurationMode: String) {
+      override fun componentConfigurationMode(componentConfigurationMode: String) {
         cdkBuilder.componentConfigurationMode(componentConfigurationMode)
       }
 
-      public override fun componentName(componentName: String) {
+      override fun componentName(componentName: String) {
         cdkBuilder.componentName(componentName)
       }
 
-      public override fun customComponentConfiguration(customComponentConfiguration: IResolvable) {
+      override fun customComponentConfiguration(customComponentConfiguration: IResolvable) {
         cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty) {
         cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("457cc7c6eb707505dd8cb7ff3054381f5738ce732f8bf3fb55022aa362f0e924")
-      public override
+      override
           fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit):
           Unit =
           customComponentConfiguration(ComponentConfigurationProperty(customComponentConfiguration))
 
-      public override
+      override
           fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable) {
         cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty) {
         cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e4791a30d1187c148ce4f3612f5b25e8c8f513997350b6e911df83437cc08c45")
-      public override
+      override
           fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty.Builder.() -> Unit):
           Unit =
           defaultOverwriteComponentConfiguration(ComponentConfigurationProperty(defaultOverwriteComponentConfiguration))
 
-      public override fun tier(tier: String) {
+      override fun tier(tier: String) {
         cdkBuilder.tier(tier)
       }
 
@@ -1547,20 +1451,20 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty,
     ) : ComponentMonitoringSettingProperty {
-      public override fun componentArn(): String? = unwrap(this).getComponentArn()
+      override fun componentArn(): String? = unwrap(this).getComponentArn()
 
-      public override fun componentConfigurationMode(): String =
+      override fun componentConfigurationMode(): String =
           unwrap(this).getComponentConfigurationMode()
 
-      public override fun componentName(): String? = unwrap(this).getComponentName()
+      override fun componentName(): String? = unwrap(this).getComponentName()
 
-      public override fun customComponentConfiguration(): Any? =
+      override fun customComponentConfiguration(): Any? =
           unwrap(this).getCustomComponentConfiguration()
 
-      public override fun defaultOverwriteComponentConfiguration(): Any? =
+      override fun defaultOverwriteComponentConfiguration(): Any? =
           unwrap(this).getDefaultOverwriteComponentConfiguration()
 
-      public override fun tier(): String = unwrap(this).getTier()
+      override fun tier(): String = unwrap(this).getTier()
     }
 
     public companion object {
@@ -1588,8 +1492,7 @@ public open class CfnApplication internal constructor(
     public fun alarmMetricName(): String
 
     public interface Builder {
-      public fun alarmMetricName(alarmMetricName: String) {
-      }
+      public fun alarmMetricName(alarmMetricName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1598,7 +1501,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty.builder()
 
-      public override fun alarmMetricName(alarmMetricName: String) {
+      override fun alarmMetricName(alarmMetricName: String) {
         cdkBuilder.alarmMetricName(alarmMetricName)
       }
 
@@ -1611,7 +1514,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty,
     ) : AlarmMetricProperty {
-      public override fun alarmMetricName(): String = unwrap(this).getAlarmMetricName()
+      override fun alarmMetricName(): String = unwrap(this).getAlarmMetricName()
     }
 
     public companion object {

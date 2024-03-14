@@ -15,33 +15,23 @@ public open class Subscription internal constructor(
   public open fun deadLetterQueue(): IQueue? = unwrap(this).getDeadLetterQueue()?.let(IQueue::wrap)
 
   public interface Builder {
-    public fun deadLetterQueue(deadLetterQueue: IQueue) {
-    }
+    public fun deadLetterQueue(deadLetterQueue: IQueue)
 
-    public fun endpoint(endpoint: String) {
-    }
+    public fun endpoint(endpoint: String)
 
-    public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
-    }
+    public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>)
 
-    public
-        fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
-    }
+    public fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>)
 
-    public fun protocol(protocol: SubscriptionProtocol) {
-    }
+    public fun protocol(protocol: SubscriptionProtocol)
 
-    public fun rawMessageDelivery(rawMessageDelivery: Boolean) {
-    }
+    public fun rawMessageDelivery(rawMessageDelivery: Boolean)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun subscriptionRoleArn(subscriptionRoleArn: String) {
-    }
+    public fun subscriptionRoleArn(subscriptionRoleArn: String)
 
-    public fun topic(topic: ITopic) {
-    }
+    public fun topic(topic: ITopic)
   }
 
   private class BuilderImpl(
@@ -51,41 +41,40 @@ public open class Subscription internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sns.Subscription.Builder =
         software.amazon.awscdk.services.sns.Subscription.Builder.create(scope, id)
 
-    public override fun deadLetterQueue(deadLetterQueue: IQueue) {
+    override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
     }
 
-    public override fun endpoint(endpoint: String) {
+    override fun endpoint(endpoint: String) {
       cdkBuilder.endpoint(endpoint)
     }
 
-    public override fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
-      cdkBuilder.filterPolicy(filterPolicy.mapValues { SubscriptionFilter.unwrap(it.value)})
+    override fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
+      cdkBuilder.filterPolicy(filterPolicy.mapValues{SubscriptionFilter.unwrap(it.value)})
     }
 
-    public override
+    override
         fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
-      cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody.mapValues {
-          FilterOrPolicy.unwrap(it.value)})
+      cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody.mapValues{FilterOrPolicy.unwrap(it.value)})
     }
 
-    public override fun protocol(protocol: SubscriptionProtocol) {
+    override fun protocol(protocol: SubscriptionProtocol) {
       cdkBuilder.protocol(protocol.let(SubscriptionProtocol::unwrap))
     }
 
-    public override fun rawMessageDelivery(rawMessageDelivery: Boolean) {
+    override fun rawMessageDelivery(rawMessageDelivery: Boolean) {
       cdkBuilder.rawMessageDelivery(rawMessageDelivery)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun subscriptionRoleArn(subscriptionRoleArn: String) {
+    override fun subscriptionRoleArn(subscriptionRoleArn: String) {
       cdkBuilder.subscriptionRoleArn(subscriptionRoleArn)
     }
 
-    public override fun topic(topic: ITopic) {
+    override fun topic(topic: ITopic) {
       cdkBuilder.topic(topic.let(ITopic::unwrap))
     }
 

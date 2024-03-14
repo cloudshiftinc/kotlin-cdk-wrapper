@@ -9,22 +9,20 @@ public interface AclPortRange {
   public fun to(): Number? = unwrap(this).getTo()
 
   public interface Builder {
-    public fun from(from: Number) {
-    }
+    public fun from(from: Number)
 
-    public fun to(to: Number) {
-    }
+    public fun to(to: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AclPortRange.Builder =
         software.amazon.awscdk.services.ec2.AclPortRange.builder()
 
-    public override fun from(from: Number) {
+    override fun from(from: Number) {
       cdkBuilder.from(from)
     }
 
-    public override fun to(to: Number) {
+    override fun to(to: Number) {
       cdkBuilder.to(to)
     }
 
@@ -34,9 +32,9 @@ public interface AclPortRange {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AclPortRange,
   ) : AclPortRange {
-    public override fun from(): Number? = unwrap(this).getFrom()
+    override fun from(): Number? = unwrap(this).getFrom()
 
-    public override fun to(): Number? = unwrap(this).getTo()
+    override fun to(): Number? = unwrap(this).getTo()
   }
 
   public companion object {

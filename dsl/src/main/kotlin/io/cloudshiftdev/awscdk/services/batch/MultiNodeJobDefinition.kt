@@ -57,35 +57,25 @@ public open class MultiNodeJobDefinition internal constructor(
   public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun containers(containers: List<MultiNodeContainer>) {
-    }
+    public fun containers(containers: List<MultiNodeContainer>)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun jobDefinitionName(jobDefinitionName: String) {
-    }
+    public fun jobDefinitionName(jobDefinitionName: String)
 
-    public fun mainNode(mainNode: Number) {
-    }
+    public fun mainNode(mainNode: Number)
 
-    public fun parameters(parameters: Map<String, Any>) {
-    }
+    public fun parameters(parameters: Map<String, Any>)
 
-    public fun propagateTags(propagateTags: Boolean) {
-    }
+    public fun propagateTags(propagateTags: Boolean)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
 
-    public fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-    }
+    public fun retryStrategies(retryStrategies: List<RetryStrategy>)
 
-    public fun schedulingPriority(schedulingPriority: Number) {
-    }
+    public fun schedulingPriority(schedulingPriority: Number)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -95,43 +85,43 @@ public open class MultiNodeJobDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.MultiNodeJobDefinition.Builder =
         software.amazon.awscdk.services.batch.MultiNodeJobDefinition.Builder.create(scope, id)
 
-    public override fun containers(containers: List<MultiNodeContainer>) {
+    override fun containers(containers: List<MultiNodeContainer>) {
       cdkBuilder.containers(containers.map(MultiNodeContainer::unwrap))
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun jobDefinitionName(jobDefinitionName: String) {
+    override fun jobDefinitionName(jobDefinitionName: String) {
       cdkBuilder.jobDefinitionName(jobDefinitionName)
     }
 
-    public override fun mainNode(mainNode: Number) {
+    override fun mainNode(mainNode: Number) {
       cdkBuilder.mainNode(mainNode)
     }
 
-    public override fun parameters(parameters: Map<String, Any>) {
+    override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun propagateTags(propagateTags: Boolean) {
+    override fun propagateTags(propagateTags: Boolean) {
       cdkBuilder.propagateTags(propagateTags)
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 
-    public override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
+    override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
       cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
     }
 
-    public override fun schedulingPriority(schedulingPriority: Number) {
+    override fun schedulingPriority(schedulingPriority: Number) {
       cdkBuilder.schedulingPriority(schedulingPriority)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

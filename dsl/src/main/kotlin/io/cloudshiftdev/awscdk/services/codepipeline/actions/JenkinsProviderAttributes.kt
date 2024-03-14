@@ -11,14 +11,11 @@ public interface JenkinsProviderAttributes {
   public fun version(): String? = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun providerName(providerName: String) {
-    }
+    public fun providerName(providerName: String)
 
-    public fun serverUrl(serverUrl: String) {
-    }
+    public fun serverUrl(serverUrl: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface JenkinsProviderAttributes {
         software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderAttributes.Builder =
         software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderAttributes.builder()
 
-    public override fun providerName(providerName: String) {
+    override fun providerName(providerName: String) {
       cdkBuilder.providerName(providerName)
     }
 
-    public override fun serverUrl(serverUrl: String) {
+    override fun serverUrl(serverUrl: String) {
       cdkBuilder.serverUrl(serverUrl)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -47,11 +44,11 @@ public interface JenkinsProviderAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderAttributes,
   ) : JenkinsProviderAttributes {
-    public override fun providerName(): String = unwrap(this).getProviderName()
+    override fun providerName(): String = unwrap(this).getProviderName()
 
-    public override fun serverUrl(): String = unwrap(this).getServerUrl()
+    override fun serverUrl(): String = unwrap(this).getServerUrl()
 
-    public override fun version(): String? = unwrap(this).getVersion()
+    override fun version(): String? = unwrap(this).getVersion()
   }
 
   public companion object {

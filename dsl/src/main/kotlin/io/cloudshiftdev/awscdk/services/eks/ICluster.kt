@@ -120,10 +120,10 @@ public interface ICluster : IResource, IConnectable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.ICluster,
   ) : ICluster {
-    public override fun addCdk8sChart(arg0: String, arg1: Construct): KubernetesManifest =
+    override fun addCdk8sChart(arg0: String, arg1: Construct): KubernetesManifest =
         unwrap(this).addCdk8sChart(arg0, arg1.let(Construct::unwrap)).let(KubernetesManifest::wrap)
 
-    public override fun addCdk8sChart(
+    override fun addCdk8sChart(
       arg0: String,
       arg1: Construct,
       arg2: KubernetesManifestOptions,
@@ -132,64 +132,63 @@ public interface ICluster : IResource, IConnectable {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4aa4d5820d067ab42381b831bba59abb594ff3ec3fffee74d03c34cc3e2a1a91")
-    public override fun addCdk8sChart(
+    override fun addCdk8sChart(
       arg0: String,
       arg1: Construct,
       arg2: KubernetesManifestOptions.Builder.() -> Unit,
     ): KubernetesManifest = addCdk8sChart(arg0, arg1, KubernetesManifestOptions(arg2))
 
-    public override fun addHelmChart(arg0: String, arg1: HelmChartOptions): HelmChart =
+    override fun addHelmChart(arg0: String, arg1: HelmChartOptions): HelmChart =
         unwrap(this).addHelmChart(arg0, arg1.let(HelmChartOptions::unwrap)).let(HelmChart::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("390cea0e170c7ad005d57b32e1fc98aa144800a81fa525deaaaed667af0283fe")
-    public override fun addHelmChart(arg0: String, arg1: HelmChartOptions.Builder.() -> Unit):
-        HelmChart = addHelmChart(arg0, HelmChartOptions(arg1))
+    override fun addHelmChart(arg0: String, arg1: HelmChartOptions.Builder.() -> Unit): HelmChart =
+        addHelmChart(arg0, HelmChartOptions(arg1))
 
-    public override fun addManifest(arg0: String, arg1: Map<String, Any>): KubernetesManifest =
+    override fun addManifest(arg0: String, arg1: Map<String, Any>): KubernetesManifest =
         unwrap(this).addManifest(arg0, arg1).let(KubernetesManifest::wrap)
 
-    public override fun addServiceAccount(arg0: String): ServiceAccount =
+    override fun addServiceAccount(arg0: String): ServiceAccount =
         unwrap(this).addServiceAccount(arg0).let(ServiceAccount::wrap)
 
-    public override fun addServiceAccount(arg0: String, arg1: ServiceAccountOptions): ServiceAccount
-        = unwrap(this).addServiceAccount(arg0,
+    override fun addServiceAccount(arg0: String, arg1: ServiceAccountOptions): ServiceAccount =
+        unwrap(this).addServiceAccount(arg0,
         arg1.let(ServiceAccountOptions::unwrap)).let(ServiceAccount::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d1c04bf62363d27f7f1fcd0ee00a0a93e786f9d5a35ef2d9e35f27368f469899")
-    public override fun addServiceAccount(arg0: String,
-        arg1: ServiceAccountOptions.Builder.() -> Unit): ServiceAccount = addServiceAccount(arg0,
-        ServiceAccountOptions(arg1))
+    override fun addServiceAccount(arg0: String, arg1: ServiceAccountOptions.Builder.() -> Unit):
+        ServiceAccount = addServiceAccount(arg0, ServiceAccountOptions(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun awscliLayer(): ILayerVersion? =
+    override fun awscliLayer(): ILayerVersion? =
         unwrap(this).getAwscliLayer()?.let(ILayerVersion::wrap)
 
-    public override fun clusterArn(): String = unwrap(this).getClusterArn()
+    override fun clusterArn(): String = unwrap(this).getClusterArn()
 
-    public override fun clusterCertificateAuthorityData(): String =
+    override fun clusterCertificateAuthorityData(): String =
         unwrap(this).getClusterCertificateAuthorityData()
 
-    public override fun clusterEncryptionConfigKeyArn(): String =
+    override fun clusterEncryptionConfigKeyArn(): String =
         unwrap(this).getClusterEncryptionConfigKeyArn()
 
-    public override fun clusterEndpoint(): String = unwrap(this).getClusterEndpoint()
+    override fun clusterEndpoint(): String = unwrap(this).getClusterEndpoint()
 
-    public override fun clusterHandlerSecurityGroup(): ISecurityGroup? =
+    override fun clusterHandlerSecurityGroup(): ISecurityGroup? =
         unwrap(this).getClusterHandlerSecurityGroup()?.let(ISecurityGroup::wrap)
 
-    public override fun clusterName(): String = unwrap(this).getClusterName()
+    override fun clusterName(): String = unwrap(this).getClusterName()
 
-    public override fun clusterSecurityGroup(): ISecurityGroup =
+    override fun clusterSecurityGroup(): ISecurityGroup =
         unwrap(this).getClusterSecurityGroup().let(ISecurityGroup::wrap)
 
-    public override fun clusterSecurityGroupId(): String = unwrap(this).getClusterSecurityGroupId()
+    override fun clusterSecurityGroupId(): String = unwrap(this).getClusterSecurityGroupId()
 
-    public override fun connectAutoScalingGroupCapacity(arg0: AutoScalingGroup,
+    override fun connectAutoScalingGroupCapacity(arg0: AutoScalingGroup,
         arg1: AutoScalingGroupOptions) {
       unwrap(this).connectAutoScalingGroupCapacity(arg0.let(AutoScalingGroup::unwrap),
           arg1.let(AutoScalingGroupOptions::unwrap))
@@ -197,53 +196,50 @@ public interface ICluster : IResource, IConnectable {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("14775e4c3ffbed9dd29c98a40fe0f205fa9aac6c3d18b1d2bf8d6614dd76554c")
-    public override fun connectAutoScalingGroupCapacity(arg0: AutoScalingGroup,
+    override fun connectAutoScalingGroupCapacity(arg0: AutoScalingGroup,
         arg1: AutoScalingGroupOptions.Builder.() -> Unit): Unit =
         connectAutoScalingGroupCapacity(arg0, AutoScalingGroupOptions(arg1))
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun ipFamily(): IpFamily? = unwrap(this).getIpFamily()?.let(IpFamily::wrap)
+    override fun ipFamily(): IpFamily? = unwrap(this).getIpFamily()?.let(IpFamily::wrap)
 
-    public override fun kubectlEnvironment(): Map<String, String> =
-        unwrap(this).getKubectlEnvironment() ?: emptyMap()
+    override fun kubectlEnvironment(): Map<String, String> = unwrap(this).getKubectlEnvironment() ?:
+        emptyMap()
 
-    public override fun kubectlLambdaRole(): IRole? =
-        unwrap(this).getKubectlLambdaRole()?.let(IRole::wrap)
+    override fun kubectlLambdaRole(): IRole? = unwrap(this).getKubectlLambdaRole()?.let(IRole::wrap)
 
-    public override fun kubectlLayer(): ILayerVersion? =
+    override fun kubectlLayer(): ILayerVersion? =
         unwrap(this).getKubectlLayer()?.let(ILayerVersion::wrap)
 
-    public override fun kubectlMemory(): Size? = unwrap(this).getKubectlMemory()?.let(Size::wrap)
+    override fun kubectlMemory(): Size? = unwrap(this).getKubectlMemory()?.let(Size::wrap)
 
-    public override fun kubectlPrivateSubnets(): List<ISubnet> =
+    override fun kubectlPrivateSubnets(): List<ISubnet> =
         unwrap(this).getKubectlPrivateSubnets()?.map(ISubnet::wrap) ?: emptyList()
 
-    public override fun kubectlProvider(): IKubectlProvider? =
+    override fun kubectlProvider(): IKubectlProvider? =
         unwrap(this).getKubectlProvider()?.let(IKubectlProvider::wrap)
 
-    public override fun kubectlRole(): IRole? = unwrap(this).getKubectlRole()?.let(IRole::wrap)
+    override fun kubectlRole(): IRole? = unwrap(this).getKubectlRole()?.let(IRole::wrap)
 
-    public override fun kubectlSecurityGroup(): ISecurityGroup? =
+    override fun kubectlSecurityGroup(): ISecurityGroup? =
         unwrap(this).getKubectlSecurityGroup()?.let(ISecurityGroup::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun onEventLayer(): ILayerVersion? =
+    override fun onEventLayer(): ILayerVersion? =
         unwrap(this).getOnEventLayer()?.let(ILayerVersion::wrap)
 
-    public override fun openIdConnectProvider(): IOpenIdConnectProvider =
+    override fun openIdConnectProvider(): IOpenIdConnectProvider =
         unwrap(this).getOpenIdConnectProvider().let(IOpenIdConnectProvider::wrap)
 
-    public override fun prune(): Boolean = unwrap(this).getPrune()
+    override fun prune(): Boolean = unwrap(this).getPrune()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+    override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
   }
 
   public companion object {

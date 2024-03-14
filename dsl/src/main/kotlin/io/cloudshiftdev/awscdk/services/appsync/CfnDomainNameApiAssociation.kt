@@ -31,11 +31,9 @@ public open class CfnDomainNameApiAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
   }
 
   private class BuilderImpl(
@@ -47,11 +45,11 @@ public open class CfnDomainNameApiAssociation internal constructor(
         software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation.Builder.create(scope,
         id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 

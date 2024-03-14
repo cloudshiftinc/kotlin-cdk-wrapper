@@ -14,29 +14,26 @@ public interface SourceConfig {
   public fun zipObjectKey(): String
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun markers(markers: Map<String, Any>) {
-    }
+    public fun markers(markers: Map<String, Any>)
 
-    public fun zipObjectKey(zipObjectKey: String) {
-    }
+    public fun zipObjectKey(zipObjectKey: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.deployment.SourceConfig.Builder =
         software.amazon.awscdk.services.s3.deployment.SourceConfig.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun markers(markers: Map<String, Any>) {
+    override fun markers(markers: Map<String, Any>) {
       cdkBuilder.markers(markers)
     }
 
-    public override fun zipObjectKey(zipObjectKey: String) {
+    override fun zipObjectKey(zipObjectKey: String) {
       cdkBuilder.zipObjectKey(zipObjectKey)
     }
 
@@ -47,11 +44,11 @@ public interface SourceConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.deployment.SourceConfig,
   ) : SourceConfig {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun markers(): Map<String, Any> = unwrap(this).getMarkers() ?: emptyMap()
+    override fun markers(): Map<String, Any> = unwrap(this).getMarkers() ?: emptyMap()
 
-    public override fun zipObjectKey(): String = unwrap(this).getZipObjectKey()
+    override fun zipObjectKey(): String = unwrap(this).getZipObjectKey()
   }
 
   public companion object {

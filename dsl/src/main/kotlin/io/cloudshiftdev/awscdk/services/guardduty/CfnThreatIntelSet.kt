@@ -68,26 +68,19 @@ public open class CfnThreatIntelSet internal constructor(
   }
 
   public interface Builder {
-    public fun activate(activate: Boolean) {
-    }
+    public fun activate(activate: Boolean)
 
-    public fun activate(activate: IResolvable) {
-    }
+    public fun activate(activate: IResolvable)
 
-    public fun detectorId(detectorId: String) {
-    }
+    public fun detectorId(detectorId: String)
 
-    public fun format(format: String) {
-    }
+    public fun format(format: String)
 
-    public fun location(location: String) {
-    }
+    public fun location(location: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -97,31 +90,31 @@ public open class CfnThreatIntelSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.guardduty.CfnThreatIntelSet.Builder =
         software.amazon.awscdk.services.guardduty.CfnThreatIntelSet.Builder.create(scope, id)
 
-    public override fun activate(activate: Boolean) {
+    override fun activate(activate: Boolean) {
       cdkBuilder.activate(activate)
     }
 
-    public override fun activate(activate: IResolvable) {
+    override fun activate(activate: IResolvable) {
       cdkBuilder.activate(activate.let(IResolvable::unwrap))
     }
 
-    public override fun detectorId(detectorId: String) {
+    override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
     }
 
-    public override fun format(format: String) {
+    override fun format(format: String) {
       cdkBuilder.format(format)
     }
 
-    public override fun location(location: String) {
+    override fun location(location: String) {
       cdkBuilder.location(location)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

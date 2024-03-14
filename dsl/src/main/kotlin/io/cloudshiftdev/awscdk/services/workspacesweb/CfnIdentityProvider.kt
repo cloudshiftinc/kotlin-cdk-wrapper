@@ -49,20 +49,15 @@ public open class CfnIdentityProvider internal constructor(
   }
 
   public interface Builder {
-    public fun identityProviderDetails(identityProviderDetails: IResolvable) {
-    }
+    public fun identityProviderDetails(identityProviderDetails: IResolvable)
 
-    public fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
-    }
+    public fun identityProviderDetails(identityProviderDetails: Map<String, String>)
 
-    public fun identityProviderName(identityProviderName: String) {
-    }
+    public fun identityProviderName(identityProviderName: String)
 
-    public fun identityProviderType(identityProviderType: String) {
-    }
+    public fun identityProviderType(identityProviderType: String)
 
-    public fun portalArn(portalArn: String) {
-    }
+    public fun portalArn(portalArn: String)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnIdentityProvider internal constructor(
         software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider.Builder =
         software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider.Builder.create(scope, id)
 
-    public override fun identityProviderDetails(identityProviderDetails: IResolvable) {
+    override fun identityProviderDetails(identityProviderDetails: IResolvable) {
       cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable::unwrap))
     }
 
-    public override fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
+    override fun identityProviderDetails(identityProviderDetails: Map<String, String>) {
       cdkBuilder.identityProviderDetails(identityProviderDetails)
     }
 
-    public override fun identityProviderName(identityProviderName: String) {
+    override fun identityProviderName(identityProviderName: String) {
       cdkBuilder.identityProviderName(identityProviderName)
     }
 
-    public override fun identityProviderType(identityProviderType: String) {
+    override fun identityProviderType(identityProviderType: String) {
       cdkBuilder.identityProviderType(identityProviderType)
     }
 
-    public override fun portalArn(portalArn: String) {
+    override fun portalArn(portalArn: String) {
       cdkBuilder.portalArn(portalArn)
     }
 

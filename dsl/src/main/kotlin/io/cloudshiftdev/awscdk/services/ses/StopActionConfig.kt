@@ -9,22 +9,20 @@ public interface StopActionConfig {
   public fun topicArn(): String? = unwrap(this).getTopicArn()
 
   public interface Builder {
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun topicArn(topicArn: String) {
-    }
+    public fun topicArn(topicArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.StopActionConfig.Builder =
         software.amazon.awscdk.services.ses.StopActionConfig.builder()
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun topicArn(topicArn: String) {
+    override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
 
@@ -34,9 +32,9 @@ public interface StopActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.StopActionConfig,
   ) : StopActionConfig {
-    public override fun scope(): String = unwrap(this).getScope()
+    override fun scope(): String = unwrap(this).getScope()
 
-    public override fun topicArn(): String? = unwrap(this).getTopicArn()
+    override fun topicArn(): String? = unwrap(this).getTopicArn()
   }
 
   public companion object {

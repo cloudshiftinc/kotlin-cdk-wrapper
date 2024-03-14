@@ -1,13 +1,20 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
-import software.constructs.Construct as SoftwareConstructsConstruct
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import kotlin.Boolean
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
 
 public open class NetworkLoadBalancer internal constructor(
   private val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer,
@@ -150,34 +157,25 @@ public open class NetworkLoadBalancer internal constructor(
   public override fun vpc(): IVpc? = INetworkLoadBalancer.unwrap(this).vpc?.let(IVpc::wrap)
 
   public interface Builder {
-    public fun crossZoneEnabled(crossZoneEnabled: Boolean) {
-    }
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun internetFacing(internetFacing: Boolean) {
-    }
+    public fun internetFacing(internetFacing: Boolean)
 
-    public fun ipAddressType(ipAddressType: IpAddressType) {
-    }
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
-    public fun loadBalancerName(loadBalancerName: String) {
-    }
+    public fun loadBalancerName(loadBalancerName: String)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("76b4d38b2541f097e5e9a086970529ede085f84e55e0e84f8d77525b2e7f8bb5")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -189,41 +187,41 @@ public open class NetworkLoadBalancer internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer.Builder.create(scope,
         id)
 
-    public override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
       cdkBuilder.crossZoneEnabled(crossZoneEnabled)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun internetFacing(internetFacing: Boolean) {
+    override fun internetFacing(internetFacing: Boolean) {
       cdkBuilder.internetFacing(internetFacing)
     }
 
-    public override fun ipAddressType(ipAddressType: IpAddressType) {
+    override fun ipAddressType(ipAddressType: IpAddressType) {
       cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
     }
 
-    public override fun loadBalancerName(loadBalancerName: String) {
+    override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("76b4d38b2541f097e5e9a086970529ede085f84e55e0e84f8d77525b2e7f8bb5")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer =

@@ -7,15 +7,14 @@ public interface RepositoryImageProps {
   public fun credentials(): ISecret? = unwrap(this).getCredentials()?.let(ISecret::wrap)
 
   public interface Builder {
-    public fun credentials(credentials: ISecret) {
-    }
+    public fun credentials(credentials: ISecret)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.RepositoryImageProps.Builder =
         software.amazon.awscdk.services.ecs.RepositoryImageProps.builder()
 
-    public override fun credentials(credentials: ISecret) {
+    override fun credentials(credentials: ISecret) {
       cdkBuilder.credentials(credentials.let(ISecret::unwrap))
     }
 
@@ -26,7 +25,7 @@ public interface RepositoryImageProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.RepositoryImageProps,
   ) : RepositoryImageProps {
-    public override fun credentials(): ISecret? = unwrap(this).getCredentials()?.let(ISecret::wrap)
+    override fun credentials(): ISecret? = unwrap(this).getCredentials()?.let(ISecret::wrap)
   }
 
   public companion object {

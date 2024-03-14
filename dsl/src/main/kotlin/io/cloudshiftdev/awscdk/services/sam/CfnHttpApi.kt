@@ -195,120 +195,86 @@ public open class CfnHttpApi internal constructor(
   }
 
   public interface Builder {
-    public fun accessLogSetting(accessLogSetting: IResolvable) {
-    }
+    public fun accessLogSetting(accessLogSetting: IResolvable)
 
-    public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
-    }
+    public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27fc057401a5d7a5d013ac2bb6d28842a5ff241951767bce13ec3850d1f787ad")
-    public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit) {
-    }
+    public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit)
 
-    public fun auth(auth: IResolvable) {
-    }
+    public fun auth(auth: IResolvable)
 
-    public fun auth(auth: HttpApiAuthProperty) {
-    }
+    public fun auth(auth: HttpApiAuthProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a779237a63b2c50dcc942019ee720af6ff6a169c8ee8100e54f5fbdbe7495cd9")
-    public fun auth(auth: HttpApiAuthProperty.Builder.() -> Unit) {
-    }
+    public fun auth(auth: HttpApiAuthProperty.Builder.() -> Unit)
 
-    public fun corsConfiguration(corsConfiguration: Boolean) {
-    }
+    public fun corsConfiguration(corsConfiguration: Boolean)
 
-    public fun corsConfiguration(corsConfiguration: IResolvable) {
-    }
+    public fun corsConfiguration(corsConfiguration: IResolvable)
 
-    public fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty) {
-    }
+    public fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c4352e90c50a24ba2c5ab20731e2d41f0d2cdd3c4b1c8c36a20b7145bd68ca5")
     public
-        fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty.Builder.() -> Unit) {
-    }
+        fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty.Builder.() -> Unit)
 
-    public fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-    }
+    public fun defaultRouteSettings(defaultRouteSettings: IResolvable)
 
-    public fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
-    }
+    public fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d02f4ebd0b0030589ef3027f71a159ddd8df4faf6defa9c9b36f4f96faf2ded")
-    public
-        fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty.Builder.() -> Unit)
 
-    public fun definitionBody(definitionBody: Any) {
-    }
+    public fun definitionBody(definitionBody: Any)
 
-    public fun definitionUri(definitionUri: String) {
-    }
+    public fun definitionUri(definitionUri: String)
 
-    public fun definitionUri(definitionUri: IResolvable) {
-    }
+    public fun definitionUri(definitionUri: IResolvable)
 
-    public fun definitionUri(definitionUri: S3LocationProperty) {
-    }
+    public fun definitionUri(definitionUri: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ccd2a4751970c416ab43589ee56d5f47ba4322661d82c438df9fc9c7b171174")
-    public fun definitionUri(definitionUri: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun definitionUri(definitionUri: S3LocationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable)
 
-    public fun domain(domain: IResolvable) {
-    }
+    public fun domain(domain: IResolvable)
 
-    public fun domain(domain: HttpApiDomainConfigurationProperty) {
-    }
+    public fun domain(domain: HttpApiDomainConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("055db83241c767b60ce00b8122ea0426e3797afdd652679e11aa097044dae30c")
-    public fun domain(domain: HttpApiDomainConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun domain(domain: HttpApiDomainConfigurationProperty.Builder.() -> Unit)
 
-    public fun failOnWarnings(failOnWarnings: Boolean) {
-    }
+    public fun failOnWarnings(failOnWarnings: Boolean)
 
-    public fun failOnWarnings(failOnWarnings: IResolvable) {
-    }
+    public fun failOnWarnings(failOnWarnings: IResolvable)
 
-    public fun routeSettings(routeSettings: IResolvable) {
-    }
+    public fun routeSettings(routeSettings: IResolvable)
 
-    public fun routeSettings(routeSettings: RouteSettingsProperty) {
-    }
+    public fun routeSettings(routeSettings: RouteSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93572e5fb6b2eb215ed7e170356249b7724ef9b63ed9dc5385838c39ee82aa8c")
-    public fun routeSettings(routeSettings: RouteSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun routeSettings(routeSettings: RouteSettingsProperty.Builder.() -> Unit)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun stageVariables(stageVariables: IResolvable) {
-    }
+    public fun stageVariables(stageVariables: IResolvable)
 
-    public fun stageVariables(stageVariables: Map<String, String>) {
-    }
+    public fun stageVariables(stageVariables: Map<String, String>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -318,145 +284,144 @@ public open class CfnHttpApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sam.CfnHttpApi.Builder =
         software.amazon.awscdk.services.sam.CfnHttpApi.Builder.create(scope, id)
 
-    public override fun accessLogSetting(accessLogSetting: IResolvable) {
+    override fun accessLogSetting(accessLogSetting: IResolvable) {
       cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
     }
 
-    public override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
+    override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
       cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27fc057401a5d7a5d013ac2bb6d28842a5ff241951767bce13ec3850d1f787ad")
-    public override
-        fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit): Unit =
-        accessLogSetting(AccessLogSettingProperty(accessLogSetting))
+    override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit):
+        Unit = accessLogSetting(AccessLogSettingProperty(accessLogSetting))
 
-    public override fun auth(auth: IResolvable) {
+    override fun auth(auth: IResolvable) {
       cdkBuilder.auth(auth.let(IResolvable::unwrap))
     }
 
-    public override fun auth(auth: HttpApiAuthProperty) {
+    override fun auth(auth: HttpApiAuthProperty) {
       cdkBuilder.auth(auth.let(HttpApiAuthProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a779237a63b2c50dcc942019ee720af6ff6a169c8ee8100e54f5fbdbe7495cd9")
-    public override fun auth(auth: HttpApiAuthProperty.Builder.() -> Unit): Unit =
+    override fun auth(auth: HttpApiAuthProperty.Builder.() -> Unit): Unit =
         auth(HttpApiAuthProperty(auth))
 
-    public override fun corsConfiguration(corsConfiguration: Boolean) {
+    override fun corsConfiguration(corsConfiguration: Boolean) {
       cdkBuilder.corsConfiguration(corsConfiguration)
     }
 
-    public override fun corsConfiguration(corsConfiguration: IResolvable) {
+    override fun corsConfiguration(corsConfiguration: IResolvable) {
       cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty) {
+    override fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty) {
       cdkBuilder.corsConfiguration(corsConfiguration.let(CorsConfigurationObjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c4352e90c50a24ba2c5ab20731e2d41f0d2cdd3c4b1c8c36a20b7145bd68ca5")
-    public override
+    override
         fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty.Builder.() -> Unit):
         Unit = corsConfiguration(CorsConfigurationObjectProperty(corsConfiguration))
 
-    public override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
+    override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
       cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
     }
 
-    public override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
+    override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
       cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d02f4ebd0b0030589ef3027f71a159ddd8df4faf6defa9c9b36f4f96faf2ded")
-    public override
+    override
         fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty.Builder.() -> Unit):
         Unit = defaultRouteSettings(RouteSettingsProperty(defaultRouteSettings))
 
-    public override fun definitionBody(definitionBody: Any) {
+    override fun definitionBody(definitionBody: Any) {
       cdkBuilder.definitionBody(definitionBody)
     }
 
-    public override fun definitionUri(definitionUri: String) {
+    override fun definitionUri(definitionUri: String) {
       cdkBuilder.definitionUri(definitionUri)
     }
 
-    public override fun definitionUri(definitionUri: IResolvable) {
+    override fun definitionUri(definitionUri: IResolvable) {
       cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
     }
 
-    public override fun definitionUri(definitionUri: S3LocationProperty) {
+    override fun definitionUri(definitionUri: S3LocationProperty) {
       cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ccd2a4751970c416ab43589ee56d5f47ba4322661d82c438df9fc9c7b171174")
-    public override fun definitionUri(definitionUri: S3LocationProperty.Builder.() -> Unit): Unit =
+    override fun definitionUri(definitionUri: S3LocationProperty.Builder.() -> Unit): Unit =
         definitionUri(S3LocationProperty(definitionUri))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun domain(domain: IResolvable) {
+    override fun domain(domain: IResolvable) {
       cdkBuilder.domain(domain.let(IResolvable::unwrap))
     }
 
-    public override fun domain(domain: HttpApiDomainConfigurationProperty) {
+    override fun domain(domain: HttpApiDomainConfigurationProperty) {
       cdkBuilder.domain(domain.let(HttpApiDomainConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("055db83241c767b60ce00b8122ea0426e3797afdd652679e11aa097044dae30c")
-    public override fun domain(domain: HttpApiDomainConfigurationProperty.Builder.() -> Unit): Unit
-        = domain(HttpApiDomainConfigurationProperty(domain))
+    override fun domain(domain: HttpApiDomainConfigurationProperty.Builder.() -> Unit): Unit =
+        domain(HttpApiDomainConfigurationProperty(domain))
 
-    public override fun failOnWarnings(failOnWarnings: Boolean) {
+    override fun failOnWarnings(failOnWarnings: Boolean) {
       cdkBuilder.failOnWarnings(failOnWarnings)
     }
 
-    public override fun failOnWarnings(failOnWarnings: IResolvable) {
+    override fun failOnWarnings(failOnWarnings: IResolvable) {
       cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
     }
 
-    public override fun routeSettings(routeSettings: IResolvable) {
+    override fun routeSettings(routeSettings: IResolvable) {
       cdkBuilder.routeSettings(routeSettings.let(IResolvable::unwrap))
     }
 
-    public override fun routeSettings(routeSettings: RouteSettingsProperty) {
+    override fun routeSettings(routeSettings: RouteSettingsProperty) {
       cdkBuilder.routeSettings(routeSettings.let(RouteSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93572e5fb6b2eb215ed7e170356249b7724ef9b63ed9dc5385838c39ee82aa8c")
-    public override fun routeSettings(routeSettings: RouteSettingsProperty.Builder.() -> Unit): Unit
-        = routeSettings(RouteSettingsProperty(routeSettings))
+    override fun routeSettings(routeSettings: RouteSettingsProperty.Builder.() -> Unit): Unit =
+        routeSettings(RouteSettingsProperty(routeSettings))
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun stageVariables(stageVariables: IResolvable) {
+    override fun stageVariables(stageVariables: IResolvable) {
       cdkBuilder.stageVariables(stageVariables.let(IResolvable::unwrap))
     }
 
-    public override fun stageVariables(stageVariables: Map<String, String>) {
+    override fun stageVariables(stageVariables: Map<String, String>) {
       cdkBuilder.stageVariables(stageVariables)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -490,11 +455,9 @@ public open class CfnHttpApi internal constructor(
     public fun format(): String? = unwrap(this).getFormat()
 
     public interface Builder {
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
 
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
     }
 
     private class BuilderImpl : Builder {
@@ -502,11 +465,11 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty.builder()
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
@@ -518,9 +481,9 @@ public open class CfnHttpApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnHttpApi.AccessLogSettingProperty,
     ) : AccessLogSettingProperty {
-      public override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
 
-      public override fun format(): String? = unwrap(this).getFormat()
+      override fun format(): String? = unwrap(this).getFormat()
     }
 
     public companion object {
@@ -555,26 +518,19 @@ public open class CfnHttpApi internal constructor(
     public fun ipV6(): Any? = unwrap(this).getIpV6()
 
     public interface Builder {
-      public fun distributedDomainName(distributedDomainName: String) {
-      }
+      public fun distributedDomainName(distributedDomainName: String)
 
-      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-      }
+      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
 
-      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-      }
+      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
 
-      public fun hostedZoneName(hostedZoneName: String) {
-      }
+      public fun hostedZoneName(hostedZoneName: String)
 
-      public fun ipV6(ipV6: Boolean) {
-      }
+      public fun ipV6(ipV6: Boolean)
 
-      public fun ipV6(ipV6: IResolvable) {
-      }
+      public fun ipV6(ipV6: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -582,31 +538,31 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty.builder()
 
-      public override fun distributedDomainName(distributedDomainName: String) {
+      override fun distributedDomainName(distributedDomainName: String) {
         cdkBuilder.distributedDomainName(distributedDomainName)
       }
 
-      public override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
         cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
       }
 
-      public override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
         cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
-      public override fun hostedZoneName(hostedZoneName: String) {
+      override fun hostedZoneName(hostedZoneName: String) {
         cdkBuilder.hostedZoneName(hostedZoneName)
       }
 
-      public override fun ipV6(ipV6: Boolean) {
+      override fun ipV6(ipV6: Boolean) {
         cdkBuilder.ipV6(ipV6)
       }
 
-      public override fun ipV6(ipV6: IResolvable) {
+      override fun ipV6(ipV6: IResolvable) {
         cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
       }
 
@@ -619,15 +575,15 @@ public open class CfnHttpApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnHttpApi.Route53ConfigurationProperty,
     ) : Route53ConfigurationProperty {
-      public override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
+      override fun distributedDomainName(): String? = unwrap(this).getDistributedDomainName()
 
-      public override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
 
-      public override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
 
-      public override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
 
-      public override fun ipV6(): Any? = unwrap(this).getIpV6()
+      override fun ipV6(): Any? = unwrap(this).getIpV6()
     }
 
     public companion object {
@@ -656,11 +612,9 @@ public open class CfnHttpApi internal constructor(
     public fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
 
     public interface Builder {
-      public fun authorizers(authorizers: Any) {
-      }
+      public fun authorizers(authorizers: Any)
 
-      public fun defaultAuthorizer(defaultAuthorizer: String) {
-      }
+      public fun defaultAuthorizer(defaultAuthorizer: String)
     }
 
     private class BuilderImpl : Builder {
@@ -668,11 +622,11 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty.builder()
 
-      public override fun authorizers(authorizers: Any) {
+      override fun authorizers(authorizers: Any) {
         cdkBuilder.authorizers(authorizers)
       }
 
-      public override fun defaultAuthorizer(defaultAuthorizer: String) {
+      override fun defaultAuthorizer(defaultAuthorizer: String) {
         cdkBuilder.defaultAuthorizer(defaultAuthorizer)
       }
 
@@ -683,9 +637,9 @@ public open class CfnHttpApi internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiAuthProperty,
     ) : HttpApiAuthProperty {
-      public override fun authorizers(): Any? = unwrap(this).getAuthorizers()
+      override fun authorizers(): Any? = unwrap(this).getAuthorizers()
 
-      public override fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
+      override fun defaultAuthorizer(): String? = unwrap(this).getDefaultAuthorizer()
     }
 
     public companion object {
@@ -716,14 +670,11 @@ public open class CfnHttpApi internal constructor(
     public fun version(): Number
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun version(version: Number) {
-      }
+      public fun version(version: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -731,15 +682,15 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun version(version: Number) {
+      override fun version(version: Number) {
         cdkBuilder.version(version)
       }
 
@@ -750,11 +701,11 @@ public open class CfnHttpApi internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun version(): Number = unwrap(this).getVersion()
+      override fun version(): Number = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -791,26 +742,19 @@ public open class CfnHttpApi internal constructor(
     public fun maxAge(): Number? = unwrap(this).getMaxAge()
 
     public interface Builder {
-      public fun allowCredentials(allowCredentials: Boolean) {
-      }
+      public fun allowCredentials(allowCredentials: Boolean)
 
-      public fun allowCredentials(allowCredentials: IResolvable) {
-      }
+      public fun allowCredentials(allowCredentials: IResolvable)
 
-      public fun allowHeaders(allowHeaders: List<String>) {
-      }
+      public fun allowHeaders(allowHeaders: List<String>)
 
-      public fun allowMethods(allowMethods: List<String>) {
-      }
+      public fun allowMethods(allowMethods: List<String>)
 
-      public fun allowOrigins(allowOrigins: List<String>) {
-      }
+      public fun allowOrigins(allowOrigins: List<String>)
 
-      public fun exposeHeaders(exposeHeaders: List<String>) {
-      }
+      public fun exposeHeaders(exposeHeaders: List<String>)
 
-      public fun maxAge(maxAge: Number) {
-      }
+      public fun maxAge(maxAge: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -818,31 +762,31 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty.builder()
 
-      public override fun allowCredentials(allowCredentials: Boolean) {
+      override fun allowCredentials(allowCredentials: Boolean) {
         cdkBuilder.allowCredentials(allowCredentials)
       }
 
-      public override fun allowCredentials(allowCredentials: IResolvable) {
+      override fun allowCredentials(allowCredentials: IResolvable) {
         cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
       }
 
-      public override fun allowHeaders(allowHeaders: List<String>) {
+      override fun allowHeaders(allowHeaders: List<String>) {
         cdkBuilder.allowHeaders(allowHeaders)
       }
 
-      public override fun allowMethods(allowMethods: List<String>) {
+      override fun allowMethods(allowMethods: List<String>) {
         cdkBuilder.allowMethods(allowMethods)
       }
 
-      public override fun allowOrigins(allowOrigins: List<String>) {
+      override fun allowOrigins(allowOrigins: List<String>) {
         cdkBuilder.allowOrigins(allowOrigins)
       }
 
-      public override fun exposeHeaders(exposeHeaders: List<String>) {
+      override fun exposeHeaders(exposeHeaders: List<String>) {
         cdkBuilder.exposeHeaders(exposeHeaders)
       }
 
-      public override fun maxAge(maxAge: Number) {
+      override fun maxAge(maxAge: Number) {
         cdkBuilder.maxAge(maxAge)
       }
 
@@ -855,21 +799,17 @@ public open class CfnHttpApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnHttpApi.CorsConfigurationObjectProperty,
     ) : CorsConfigurationObjectProperty {
-      public override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
+      override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
 
-      public override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?:
-          emptyList()
+      override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?: emptyList()
 
-      public override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?:
-          emptyList()
+      override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?: emptyList()
 
-      public override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?:
-          emptyList()
+      override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?: emptyList()
 
-      public override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?:
-          emptyList()
+      override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?: emptyList()
 
-      public override fun maxAge(): Number? = unwrap(this).getMaxAge()
+      override fun maxAge(): Number? = unwrap(this).getMaxAge()
     }
 
     public companion object {
@@ -904,26 +844,19 @@ public open class CfnHttpApi internal constructor(
     public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
 
     public interface Builder {
-      public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
 
-      public fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
 
-      public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
-      }
+      public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
 
-      public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-      }
+      public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable)
 
-      public fun loggingLevel(loggingLevel: String) {
-      }
+      public fun loggingLevel(loggingLevel: String)
 
-      public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-      }
+      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
-      public fun throttlingRateLimit(throttlingRateLimit: Number) {
-      }
+      public fun throttlingRateLimit(throttlingRateLimit: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -931,31 +864,31 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty.builder()
 
-      public override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled)
       }
 
-      public override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
+      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
+      override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
         cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
       }
 
-      public override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
+      override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
         cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun loggingLevel(loggingLevel: String) {
+      override fun loggingLevel(loggingLevel: String) {
         cdkBuilder.loggingLevel(loggingLevel)
       }
 
-      public override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
         cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
       }
 
-      public override fun throttlingRateLimit(throttlingRateLimit: Number) {
+      override fun throttlingRateLimit(throttlingRateLimit: Number) {
         cdkBuilder.throttlingRateLimit(throttlingRateLimit)
       }
 
@@ -966,15 +899,15 @@ public open class CfnHttpApi internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi.RouteSettingsProperty,
     ) : RouteSettingsProperty {
-      public override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
 
-      public override fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
+      override fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
 
-      public override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
 
-      public override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
 
-      public override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
     }
 
     public companion object {
@@ -1013,43 +946,32 @@ public open class CfnHttpApi internal constructor(
     public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
 
     public interface Builder {
-      public fun basePath(basePath: String) {
-      }
+      public fun basePath(basePath: String)
 
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun endpointConfiguration(endpointConfiguration: String) {
-      }
+      public fun endpointConfiguration(endpointConfiguration: String)
 
-      public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-      }
+      public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
 
-      public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-      }
+      public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ebbd369bbb40ad9e4f1179ca1cc8feae7276cbb795324b2f8da2fccf02b0b79")
       public
-          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit) {
-      }
+          fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit)
 
-      public fun route53(route53: IResolvable) {
-      }
+      public fun route53(route53: IResolvable)
 
-      public fun route53(route53: Route53ConfigurationProperty) {
-      }
+      public fun route53(route53: Route53ConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6331a04a6ef8ba36f6b2651865c2f144da7d8b7b382edf672071be6f227a254")
-      public fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit)
 
-      public fun securityPolicy(securityPolicy: String) {
-      }
+      public fun securityPolicy(securityPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1058,51 +980,51 @@ public open class CfnHttpApi internal constructor(
           =
           software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiDomainConfigurationProperty.builder()
 
-      public override fun basePath(basePath: String) {
+      override fun basePath(basePath: String) {
         cdkBuilder.basePath(basePath)
       }
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun endpointConfiguration(endpointConfiguration: String) {
+      override fun endpointConfiguration(endpointConfiguration: String) {
         cdkBuilder.endpointConfiguration(endpointConfiguration)
       }
 
-      public override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
+      override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
         cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
         cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ebbd369bbb40ad9e4f1179ca1cc8feae7276cbb795324b2f8da2fccf02b0b79")
-      public override
+      override
           fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit):
           Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
 
-      public override fun route53(route53: IResolvable) {
+      override fun route53(route53: IResolvable) {
         cdkBuilder.route53(route53.let(IResolvable::unwrap))
       }
 
-      public override fun route53(route53: Route53ConfigurationProperty) {
+      override fun route53(route53: Route53ConfigurationProperty) {
         cdkBuilder.route53(route53.let(Route53ConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6331a04a6ef8ba36f6b2651865c2f144da7d8b7b382edf672071be6f227a254")
-      public override fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun route53(route53: Route53ConfigurationProperty.Builder.() -> Unit): Unit =
           route53(Route53ConfigurationProperty(route53))
 
-      public override fun securityPolicy(securityPolicy: String) {
+      override fun securityPolicy(securityPolicy: String) {
         cdkBuilder.securityPolicy(securityPolicy)
       }
 
@@ -1115,20 +1037,19 @@ public open class CfnHttpApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnHttpApi.HttpApiDomainConfigurationProperty,
     ) : HttpApiDomainConfigurationProperty {
-      public override fun basePath(): String? = unwrap(this).getBasePath()
+      override fun basePath(): String? = unwrap(this).getBasePath()
 
-      public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
 
-      public override fun domainName(): String = unwrap(this).getDomainName()
+      override fun domainName(): String = unwrap(this).getDomainName()
 
-      public override fun endpointConfiguration(): String? = unwrap(this).getEndpointConfiguration()
+      override fun endpointConfiguration(): String? = unwrap(this).getEndpointConfiguration()
 
-      public override fun mutualTlsAuthentication(): Any? =
-          unwrap(this).getMutualTlsAuthentication()
+      override fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
 
-      public override fun route53(): Any? = unwrap(this).getRoute53()
+      override fun route53(): Any? = unwrap(this).getRoute53()
 
-      public override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
     }
 
     public companion object {
@@ -1158,14 +1079,11 @@ public open class CfnHttpApi internal constructor(
     public fun truststoreVersion(): Any? = unwrap(this).getTruststoreVersion()
 
     public interface Builder {
-      public fun truststoreUri(truststoreUri: String) {
-      }
+      public fun truststoreUri(truststoreUri: String)
 
-      public fun truststoreVersion(truststoreVersion: Boolean) {
-      }
+      public fun truststoreVersion(truststoreVersion: Boolean)
 
-      public fun truststoreVersion(truststoreVersion: IResolvable) {
-      }
+      public fun truststoreVersion(truststoreVersion: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1173,15 +1091,15 @@ public open class CfnHttpApi internal constructor(
           software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty.Builder =
           software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty.builder()
 
-      public override fun truststoreUri(truststoreUri: String) {
+      override fun truststoreUri(truststoreUri: String) {
         cdkBuilder.truststoreUri(truststoreUri)
       }
 
-      public override fun truststoreVersion(truststoreVersion: Boolean) {
+      override fun truststoreVersion(truststoreVersion: Boolean) {
         cdkBuilder.truststoreVersion(truststoreVersion)
       }
 
-      public override fun truststoreVersion(truststoreVersion: IResolvable) {
+      override fun truststoreVersion(truststoreVersion: IResolvable) {
         cdkBuilder.truststoreVersion(truststoreVersion.let(IResolvable::unwrap))
       }
 
@@ -1194,9 +1112,9 @@ public open class CfnHttpApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnHttpApi.MutualTlsAuthenticationProperty,
     ) : MutualTlsAuthenticationProperty {
-      public override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
 
-      public override fun truststoreVersion(): Any? = unwrap(this).getTruststoreVersion()
+      override fun truststoreVersion(): Any? = unwrap(this).getTruststoreVersion()
     }
 
     public companion object {

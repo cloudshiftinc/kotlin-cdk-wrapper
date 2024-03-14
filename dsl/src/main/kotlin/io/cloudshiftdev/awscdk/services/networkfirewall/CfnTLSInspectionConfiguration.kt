@@ -70,27 +70,21 @@ public open class CfnTLSInspectionConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable) {
-    }
+    public fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable)
 
     public
-        fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty) {
-    }
+        fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b47cfa714e373457b6664ee322a3314374976f96a20e814d00f38a39b6901695")
     public
-        fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty.Builder.() -> Unit)
 
-    public fun tlsInspectionConfigurationName(tlsInspectionConfigurationName: String) {
-    }
+    public fun tlsInspectionConfigurationName(tlsInspectionConfigurationName: String)
   }
 
   private class BuilderImpl(
@@ -102,31 +96,31 @@ public open class CfnTLSInspectionConfiguration internal constructor(
         software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable) {
+    override fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable) {
       cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty) {
       cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(TLSInspectionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b47cfa714e373457b6664ee322a3314374976f96a20e814d00f38a39b6901695")
-    public override
+    override
         fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty.Builder.() -> Unit):
         Unit =
         tlsInspectionConfiguration(TLSInspectionConfigurationProperty(tlsInspectionConfiguration))
 
-    public override fun tlsInspectionConfigurationName(tlsInspectionConfigurationName: String) {
+    override fun tlsInspectionConfigurationName(tlsInspectionConfigurationName: String) {
       cdkBuilder.tlsInspectionConfigurationName(tlsInspectionConfigurationName)
     }
 
@@ -164,11 +158,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun toPort(): Number
 
     public interface Builder {
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -177,11 +169,11 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty.builder()
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -194,9 +186,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.PortRangeProperty,
     ) : PortRangeProperty {
-      public override fun fromPort(): Number = unwrap(this).getFromPort()
+      override fun fromPort(): Number = unwrap(this).getFromPort()
 
-      public override fun toPort(): Number = unwrap(this).getToPort()
+      override fun toPort(): Number = unwrap(this).getToPort()
     }
 
     public companion object {
@@ -224,11 +216,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
         unwrap(this).getServerCertificateConfigurations()
 
     public interface Builder {
-      public fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable) {
-      }
+      public fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable)
 
-      public fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
-      }
+      public fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -237,13 +227,11 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty.builder()
 
-      public override
-          fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable) {
+      override fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable) {
         cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations.let(IResolvable::unwrap))
       }
 
-      public override
-          fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
+      override fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
         cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations)
       }
 
@@ -256,7 +244,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty,
     ) : TLSInspectionConfigurationProperty {
-      public override fun serverCertificateConfigurations(): Any? =
+      override fun serverCertificateConfigurations(): Any? =
           unwrap(this).getServerCertificateConfigurations()
     }
 
@@ -285,8 +273,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun addressDefinition(): String
 
     public interface Builder {
-      public fun addressDefinition(addressDefinition: String) {
-      }
+      public fun addressDefinition(addressDefinition: String)
     }
 
     private class BuilderImpl : Builder {
@@ -295,7 +282,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty.builder()
 
-      public override fun addressDefinition(addressDefinition: String) {
+      override fun addressDefinition(addressDefinition: String) {
         cdkBuilder.addressDefinition(addressDefinition)
       }
 
@@ -308,7 +295,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.AddressProperty,
     ) : AddressProperty {
-      public override fun addressDefinition(): String = unwrap(this).getAddressDefinition()
+      override fun addressDefinition(): String = unwrap(this).getAddressDefinition()
     }
 
     public companion object {
@@ -335,8 +322,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun resourceArn(): String? = unwrap(this).getResourceArn()
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -345,7 +331,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -358,7 +344,7 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateProperty,
     ) : ServerCertificateProperty {
-      public override fun resourceArn(): String? = unwrap(this).getResourceArn()
+      override fun resourceArn(): String? = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -387,11 +373,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun unknownStatusAction(): String? = unwrap(this).getUnknownStatusAction()
 
     public interface Builder {
-      public fun revokedStatusAction(revokedStatusAction: String) {
-      }
+      public fun revokedStatusAction(revokedStatusAction: String)
 
-      public fun unknownStatusAction(unknownStatusAction: String) {
-      }
+      public fun unknownStatusAction(unknownStatusAction: String)
     }
 
     private class BuilderImpl : Builder {
@@ -400,11 +384,11 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty.builder()
 
-      public override fun revokedStatusAction(revokedStatusAction: String) {
+      override fun revokedStatusAction(revokedStatusAction: String) {
         cdkBuilder.revokedStatusAction(revokedStatusAction)
       }
 
-      public override fun unknownStatusAction(unknownStatusAction: String) {
+      override fun unknownStatusAction(unknownStatusAction: String) {
         cdkBuilder.unknownStatusAction(unknownStatusAction)
       }
 
@@ -417,9 +401,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.CheckCertificateRevocationStatusProperty,
     ) : CheckCertificateRevocationStatusProperty {
-      public override fun revokedStatusAction(): String? = unwrap(this).getRevokedStatusAction()
+      override fun revokedStatusAction(): String? = unwrap(this).getRevokedStatusAction()
 
-      public override fun unknownStatusAction(): String? = unwrap(this).getUnknownStatusAction()
+      override fun unknownStatusAction(): String? = unwrap(this).getUnknownStatusAction()
     }
 
     public companion object {
@@ -455,35 +439,25 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun sources(): Any? = unwrap(this).getSources()
 
     public interface Builder {
-      public fun destinationPorts(destinationPorts: IResolvable) {
-      }
+      public fun destinationPorts(destinationPorts: IResolvable)
 
-      public fun destinationPorts(destinationPorts: List<Any>) {
-      }
+      public fun destinationPorts(destinationPorts: List<Any>)
 
-      public fun destinations(destinations: IResolvable) {
-      }
+      public fun destinations(destinations: IResolvable)
 
-      public fun destinations(destinations: List<Any>) {
-      }
+      public fun destinations(destinations: List<Any>)
 
-      public fun protocols(protocols: IResolvable) {
-      }
+      public fun protocols(protocols: IResolvable)
 
-      public fun protocols(protocols: List<Number>) {
-      }
+      public fun protocols(protocols: List<Number>)
 
-      public fun sourcePorts(sourcePorts: IResolvable) {
-      }
+      public fun sourcePorts(sourcePorts: IResolvable)
 
-      public fun sourcePorts(sourcePorts: List<Any>) {
-      }
+      public fun sourcePorts(sourcePorts: List<Any>)
 
-      public fun sources(sources: IResolvable) {
-      }
+      public fun sources(sources: IResolvable)
 
-      public fun sources(sources: List<Any>) {
-      }
+      public fun sources(sources: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -492,43 +466,43 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty.builder()
 
-      public override fun destinationPorts(destinationPorts: IResolvable) {
+      override fun destinationPorts(destinationPorts: IResolvable) {
         cdkBuilder.destinationPorts(destinationPorts.let(IResolvable::unwrap))
       }
 
-      public override fun destinationPorts(destinationPorts: List<Any>) {
+      override fun destinationPorts(destinationPorts: List<Any>) {
         cdkBuilder.destinationPorts(destinationPorts)
       }
 
-      public override fun destinations(destinations: IResolvable) {
+      override fun destinations(destinations: IResolvable) {
         cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
       }
 
-      public override fun destinations(destinations: List<Any>) {
+      override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
 
-      public override fun protocols(protocols: IResolvable) {
+      override fun protocols(protocols: IResolvable) {
         cdkBuilder.protocols(protocols.let(IResolvable::unwrap))
       }
 
-      public override fun protocols(protocols: List<Number>) {
+      override fun protocols(protocols: List<Number>) {
         cdkBuilder.protocols(protocols)
       }
 
-      public override fun sourcePorts(sourcePorts: IResolvable) {
+      override fun sourcePorts(sourcePorts: IResolvable) {
         cdkBuilder.sourcePorts(sourcePorts.let(IResolvable::unwrap))
       }
 
-      public override fun sourcePorts(sourcePorts: List<Any>) {
+      override fun sourcePorts(sourcePorts: List<Any>) {
         cdkBuilder.sourcePorts(sourcePorts)
       }
 
-      public override fun sources(sources: IResolvable) {
+      override fun sources(sources: IResolvable) {
         cdkBuilder.sources(sources.let(IResolvable::unwrap))
       }
 
-      public override fun sources(sources: List<Any>) {
+      override fun sources(sources: List<Any>) {
         cdkBuilder.sources(sources)
       }
 
@@ -541,15 +515,15 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty,
     ) : ServerCertificateScopeProperty {
-      public override fun destinationPorts(): Any? = unwrap(this).getDestinationPorts()
+      override fun destinationPorts(): Any? = unwrap(this).getDestinationPorts()
 
-      public override fun destinations(): Any? = unwrap(this).getDestinations()
+      override fun destinations(): Any? = unwrap(this).getDestinations()
 
-      public override fun protocols(): Any? = unwrap(this).getProtocols()
+      override fun protocols(): Any? = unwrap(this).getProtocols()
 
-      public override fun sourcePorts(): Any? = unwrap(this).getSourcePorts()
+      override fun sourcePorts(): Any? = unwrap(this).getSourcePorts()
 
-      public override fun sources(): Any? = unwrap(this).getSources()
+      override fun sources(): Any? = unwrap(this).getSources()
     }
 
     public companion object {
@@ -583,33 +557,25 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
 
     public interface Builder {
-      public fun certificateAuthorityArn(certificateAuthorityArn: String) {
-      }
+      public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
-      public fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable) {
-      }
+      public fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable)
 
       public
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty) {
-      }
+          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a9141f699fe4042459f98b128e176533dcff6e1200b985ef4d872e13b87a334")
       public
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit) {
-      }
+          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit)
 
-      public fun scopes(scopes: IResolvable) {
-      }
+      public fun scopes(scopes: IResolvable)
 
-      public fun scopes(scopes: List<Any>) {
-      }
+      public fun scopes(scopes: List<Any>)
 
-      public fun serverCertificates(serverCertificates: IResolvable) {
-      }
+      public fun serverCertificates(serverCertificates: IResolvable)
 
-      public fun serverCertificates(serverCertificates: List<Any>) {
-      }
+      public fun serverCertificates(serverCertificates: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -618,40 +584,39 @@ public open class CfnTLSInspectionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty.builder()
 
-      public override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+      override fun certificateAuthorityArn(certificateAuthorityArn: String) {
         cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
       }
 
-      public override
-          fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable) {
+      override fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable) {
         cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty) {
         cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(CheckCertificateRevocationStatusProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a9141f699fe4042459f98b128e176533dcff6e1200b985ef4d872e13b87a334")
-      public override
+      override
           fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty.Builder.() -> Unit):
           Unit =
           checkCertificateRevocationStatus(CheckCertificateRevocationStatusProperty(checkCertificateRevocationStatus))
 
-      public override fun scopes(scopes: IResolvable) {
+      override fun scopes(scopes: IResolvable) {
         cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
       }
 
-      public override fun scopes(scopes: List<Any>) {
+      override fun scopes(scopes: List<Any>) {
         cdkBuilder.scopes(scopes)
       }
 
-      public override fun serverCertificates(serverCertificates: IResolvable) {
+      override fun serverCertificates(serverCertificates: IResolvable) {
         cdkBuilder.serverCertificates(serverCertificates.let(IResolvable::unwrap))
       }
 
-      public override fun serverCertificates(serverCertificates: List<Any>) {
+      override fun serverCertificates(serverCertificates: List<Any>) {
         cdkBuilder.serverCertificates(serverCertificates)
       }
 
@@ -664,15 +629,14 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty,
     ) : ServerCertificateConfigurationProperty {
-      public override fun certificateAuthorityArn(): String? =
-          unwrap(this).getCertificateAuthorityArn()
+      override fun certificateAuthorityArn(): String? = unwrap(this).getCertificateAuthorityArn()
 
-      public override fun checkCertificateRevocationStatus(): Any? =
+      override fun checkCertificateRevocationStatus(): Any? =
           unwrap(this).getCheckCertificateRevocationStatus()
 
-      public override fun scopes(): Any? = unwrap(this).getScopes()
+      override fun scopes(): Any? = unwrap(this).getScopes()
 
-      public override fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
+      override fun serverCertificates(): Any? = unwrap(this).getServerCertificates()
     }
 
     public companion object {

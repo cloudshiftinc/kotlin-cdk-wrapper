@@ -97,41 +97,29 @@ public open class CfnAlarm internal constructor(
   }
 
   public interface Builder {
-    public fun alarmName(alarmName: String) {
-    }
+    public fun alarmName(alarmName: String)
 
-    public fun comparisonOperator(comparisonOperator: String) {
-    }
+    public fun comparisonOperator(comparisonOperator: String)
 
-    public fun contactProtocols(contactProtocols: List<String>) {
-    }
+    public fun contactProtocols(contactProtocols: List<String>)
 
-    public fun datapointsToAlarm(datapointsToAlarm: Number) {
-    }
+    public fun datapointsToAlarm(datapointsToAlarm: Number)
 
-    public fun evaluationPeriods(evaluationPeriods: Number) {
-    }
+    public fun evaluationPeriods(evaluationPeriods: Number)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun monitoredResourceName(monitoredResourceName: String) {
-    }
+    public fun monitoredResourceName(monitoredResourceName: String)
 
-    public fun notificationEnabled(notificationEnabled: Boolean) {
-    }
+    public fun notificationEnabled(notificationEnabled: Boolean)
 
-    public fun notificationEnabled(notificationEnabled: IResolvable) {
-    }
+    public fun notificationEnabled(notificationEnabled: IResolvable)
 
-    public fun notificationTriggers(notificationTriggers: List<String>) {
-    }
+    public fun notificationTriggers(notificationTriggers: List<String>)
 
-    public fun threshold(threshold: Number) {
-    }
+    public fun threshold(threshold: Number)
 
-    public fun treatMissingData(treatMissingData: String) {
-    }
+    public fun treatMissingData(treatMissingData: String)
   }
 
   private class BuilderImpl(
@@ -141,51 +129,51 @@ public open class CfnAlarm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnAlarm.Builder =
         software.amazon.awscdk.services.lightsail.CfnAlarm.Builder.create(scope, id)
 
-    public override fun alarmName(alarmName: String) {
+    override fun alarmName(alarmName: String) {
       cdkBuilder.alarmName(alarmName)
     }
 
-    public override fun comparisonOperator(comparisonOperator: String) {
+    override fun comparisonOperator(comparisonOperator: String) {
       cdkBuilder.comparisonOperator(comparisonOperator)
     }
 
-    public override fun contactProtocols(contactProtocols: List<String>) {
+    override fun contactProtocols(contactProtocols: List<String>) {
       cdkBuilder.contactProtocols(contactProtocols)
     }
 
-    public override fun datapointsToAlarm(datapointsToAlarm: Number) {
+    override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
     }
 
-    public override fun evaluationPeriods(evaluationPeriods: Number) {
+    override fun evaluationPeriods(evaluationPeriods: Number) {
       cdkBuilder.evaluationPeriods(evaluationPeriods)
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun monitoredResourceName(monitoredResourceName: String) {
+    override fun monitoredResourceName(monitoredResourceName: String) {
       cdkBuilder.monitoredResourceName(monitoredResourceName)
     }
 
-    public override fun notificationEnabled(notificationEnabled: Boolean) {
+    override fun notificationEnabled(notificationEnabled: Boolean) {
       cdkBuilder.notificationEnabled(notificationEnabled)
     }
 
-    public override fun notificationEnabled(notificationEnabled: IResolvable) {
+    override fun notificationEnabled(notificationEnabled: IResolvable) {
       cdkBuilder.notificationEnabled(notificationEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun notificationTriggers(notificationTriggers: List<String>) {
+    override fun notificationTriggers(notificationTriggers: List<String>) {
       cdkBuilder.notificationTriggers(notificationTriggers)
     }
 
-    public override fun threshold(threshold: Number) {
+    override fun threshold(threshold: Number) {
       cdkBuilder.threshold(threshold)
     }
 
-    public override fun treatMissingData(treatMissingData: String) {
+    override fun treatMissingData(treatMissingData: String) {
       cdkBuilder.treatMissingData(treatMissingData)
     }
 

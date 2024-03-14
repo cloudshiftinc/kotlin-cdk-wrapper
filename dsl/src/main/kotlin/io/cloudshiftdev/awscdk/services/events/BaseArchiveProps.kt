@@ -16,46 +16,41 @@ public interface BaseArchiveProps {
   public fun retention(): Duration? = unwrap(this).getRetention()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun archiveName(archiveName: String) {
-    }
+    public fun archiveName(archiveName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventPattern(eventPattern: EventPattern) {
-    }
+    public fun eventPattern(eventPattern: EventPattern)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13ac5df233fe96d816e0408ba6d1cd1172ea899f4b2b563458e7941f9418c84c")
-    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit) {
-    }
+    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
 
-    public fun retention(retention: Duration) {
-    }
+    public fun retention(retention: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.BaseArchiveProps.Builder =
         software.amazon.awscdk.services.events.BaseArchiveProps.builder()
 
-    public override fun archiveName(archiveName: String) {
+    override fun archiveName(archiveName: String) {
       cdkBuilder.archiveName(archiveName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventPattern(eventPattern: EventPattern) {
+    override fun eventPattern(eventPattern: EventPattern) {
       cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13ac5df233fe96d816e0408ba6d1cd1172ea899f4b2b563458e7941f9418c84c")
-    public override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
+    override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
         eventPattern(EventPattern(eventPattern))
 
-    public override fun retention(retention: Duration) {
+    override fun retention(retention: Duration) {
       cdkBuilder.retention(retention.let(Duration::unwrap))
     }
 
@@ -65,14 +60,14 @@ public interface BaseArchiveProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.BaseArchiveProps,
   ) : BaseArchiveProps {
-    public override fun archiveName(): String? = unwrap(this).getArchiveName()
+    override fun archiveName(): String? = unwrap(this).getArchiveName()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun eventPattern(): EventPattern =
+    override fun eventPattern(): EventPattern =
         unwrap(this).getEventPattern().let(EventPattern::wrap)
 
-    public override fun retention(): Duration? = unwrap(this).getRetention()?.let(Duration::wrap)
+    override fun retention(): Duration? = unwrap(this).getRetention()?.let(Duration::wrap)
   }
 
   public companion object {

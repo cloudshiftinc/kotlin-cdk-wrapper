@@ -9,22 +9,20 @@ public interface ThrottleSettings {
   public fun rateLimit(): Number? = unwrap(this).getRateLimit()
 
   public interface Builder {
-    public fun burstLimit(burstLimit: Number) {
-    }
+    public fun burstLimit(burstLimit: Number)
 
-    public fun rateLimit(rateLimit: Number) {
-    }
+    public fun rateLimit(rateLimit: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ThrottleSettings.Builder =
         software.amazon.awscdk.services.apigateway.ThrottleSettings.builder()
 
-    public override fun burstLimit(burstLimit: Number) {
+    override fun burstLimit(burstLimit: Number) {
       cdkBuilder.burstLimit(burstLimit)
     }
 
-    public override fun rateLimit(rateLimit: Number) {
+    override fun rateLimit(rateLimit: Number) {
       cdkBuilder.rateLimit(rateLimit)
     }
 
@@ -35,9 +33,9 @@ public interface ThrottleSettings {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ThrottleSettings,
   ) : ThrottleSettings {
-    public override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
+    override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
-    public override fun rateLimit(): Number? = unwrap(this).getRateLimit()
+    override fun rateLimit(): Number? = unwrap(this).getRateLimit()
   }
 
   public companion object {

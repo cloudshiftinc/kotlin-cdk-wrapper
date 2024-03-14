@@ -23,20 +23,15 @@ public open class VpnConnection internal constructor(
   public override fun vpnId(): String = unwrap(this).getVpnId()
 
   public interface Builder {
-    public fun asn(asn: Number) {
-    }
+    public fun asn(asn: Number)
 
-    public fun ip(ip: String) {
-    }
+    public fun ip(ip: String)
 
-    public fun staticRoutes(staticRoutes: List<String>) {
-    }
+    public fun staticRoutes(staticRoutes: List<String>)
 
-    public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
-    }
+    public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -46,23 +41,23 @@ public open class VpnConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnConnection.Builder =
         software.amazon.awscdk.services.ec2.VpnConnection.Builder.create(scope, id)
 
-    public override fun asn(asn: Number) {
+    override fun asn(asn: Number) {
       cdkBuilder.asn(asn)
     }
 
-    public override fun ip(ip: String) {
+    override fun ip(ip: String) {
       cdkBuilder.ip(ip)
     }
 
-    public override fun staticRoutes(staticRoutes: List<String>) {
+    override fun staticRoutes(staticRoutes: List<String>) {
       cdkBuilder.staticRoutes(staticRoutes)
     }
 
-    public override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
+    override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
       cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

@@ -79,34 +79,25 @@ public open class CfnFilter internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun detectorId(detectorId: String) {
-    }
+    public fun detectorId(detectorId: String)
 
-    public fun findingCriteria(findingCriteria: IResolvable) {
-    }
+    public fun findingCriteria(findingCriteria: IResolvable)
 
-    public fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
-    }
+    public fun findingCriteria(findingCriteria: FindingCriteriaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("931a05aefa29d36a8fd2cb68df3a2abeaf89aabac29d1179200ca079a5c9fc6f")
-    public fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit) {
-    }
+    public fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rank(rank: Number) {
-    }
+    public fun rank(rank: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -116,41 +107,40 @@ public open class CfnFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.guardduty.CfnFilter.Builder =
         software.amazon.awscdk.services.guardduty.CfnFilter.Builder.create(scope, id)
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun detectorId(detectorId: String) {
+    override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
     }
 
-    public override fun findingCriteria(findingCriteria: IResolvable) {
+    override fun findingCriteria(findingCriteria: IResolvable) {
       cdkBuilder.findingCriteria(findingCriteria.let(IResolvable::unwrap))
     }
 
-    public override fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
+    override fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
       cdkBuilder.findingCriteria(findingCriteria.let(FindingCriteriaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("931a05aefa29d36a8fd2cb68df3a2abeaf89aabac29d1179200ca079a5c9fc6f")
-    public override
-        fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit): Unit =
-        findingCriteria(FindingCriteriaProperty(findingCriteria))
+    override fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit): Unit
+        = findingCriteria(FindingCriteriaProperty(findingCriteria))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rank(rank: Number) {
+    override fun rank(rank: Number) {
       cdkBuilder.rank(rank)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -204,41 +194,29 @@ public open class CfnFilter internal constructor(
     public fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
 
     public interface Builder {
-      public fun eq(eq: List<String>) {
-      }
+      public fun eq(eq: List<String>)
 
-      public fun equalTo(equalTo: List<String>) {
-      }
+      public fun equalTo(equalTo: List<String>)
 
-      public fun greaterThan(greaterThan: Number) {
-      }
+      public fun greaterThan(greaterThan: Number)
 
-      public fun greaterThanOrEqual(greaterThanOrEqual: Number) {
-      }
+      public fun greaterThanOrEqual(greaterThanOrEqual: Number)
 
-      public fun gt(gt: Number) {
-      }
+      public fun gt(gt: Number)
 
-      public fun gte(gte: Number) {
-      }
+      public fun gte(gte: Number)
 
-      public fun lessThan(lessThan: Number) {
-      }
+      public fun lessThan(lessThan: Number)
 
-      public fun lessThanOrEqual(lessThanOrEqual: Number) {
-      }
+      public fun lessThanOrEqual(lessThanOrEqual: Number)
 
-      public fun lt(lt: Number) {
-      }
+      public fun lt(lt: Number)
 
-      public fun lte(lte: Number) {
-      }
+      public fun lte(lte: Number)
 
-      public fun neq(neq: List<String>) {
-      }
+      public fun neq(neq: List<String>)
 
-      public fun notEquals(notEquals: List<String>) {
-      }
+      public fun notEquals(notEquals: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -246,51 +224,51 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty.Builder =
           software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty.builder()
 
-      public override fun eq(eq: List<String>) {
+      override fun eq(eq: List<String>) {
         cdkBuilder.eq(eq)
       }
 
-      public override fun equalTo(equalTo: List<String>) {
+      override fun equalTo(equalTo: List<String>) {
         cdkBuilder.equalTo(equalTo)
       }
 
-      public override fun greaterThan(greaterThan: Number) {
+      override fun greaterThan(greaterThan: Number) {
         cdkBuilder.greaterThan(greaterThan)
       }
 
-      public override fun greaterThanOrEqual(greaterThanOrEqual: Number) {
+      override fun greaterThanOrEqual(greaterThanOrEqual: Number) {
         cdkBuilder.greaterThanOrEqual(greaterThanOrEqual)
       }
 
-      public override fun gt(gt: Number) {
+      override fun gt(gt: Number) {
         cdkBuilder.gt(gt)
       }
 
-      public override fun gte(gte: Number) {
+      override fun gte(gte: Number) {
         cdkBuilder.gte(gte)
       }
 
-      public override fun lessThan(lessThan: Number) {
+      override fun lessThan(lessThan: Number) {
         cdkBuilder.lessThan(lessThan)
       }
 
-      public override fun lessThanOrEqual(lessThanOrEqual: Number) {
+      override fun lessThanOrEqual(lessThanOrEqual: Number) {
         cdkBuilder.lessThanOrEqual(lessThanOrEqual)
       }
 
-      public override fun lt(lt: Number) {
+      override fun lt(lt: Number) {
         cdkBuilder.lt(lt)
       }
 
-      public override fun lte(lte: Number) {
+      override fun lte(lte: Number) {
         cdkBuilder.lte(lte)
       }
 
-      public override fun neq(neq: List<String>) {
+      override fun neq(neq: List<String>) {
         cdkBuilder.neq(neq)
       }
 
-      public override fun notEquals(notEquals: List<String>) {
+      override fun notEquals(notEquals: List<String>) {
         cdkBuilder.notEquals(notEquals)
       }
 
@@ -301,29 +279,29 @@ public open class CfnFilter internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty,
     ) : ConditionProperty {
-      public override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
+      override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
 
-      public override fun equalTo(): List<String> = unwrap(this).getEqualTo() ?: emptyList()
+      override fun equalTo(): List<String> = unwrap(this).getEqualTo() ?: emptyList()
 
-      public override fun greaterThan(): Number? = unwrap(this).getGreaterThan()
+      override fun greaterThan(): Number? = unwrap(this).getGreaterThan()
 
-      public override fun greaterThanOrEqual(): Number? = unwrap(this).getGreaterThanOrEqual()
+      override fun greaterThanOrEqual(): Number? = unwrap(this).getGreaterThanOrEqual()
 
-      public override fun gt(): Number? = unwrap(this).getGt()
+      override fun gt(): Number? = unwrap(this).getGt()
 
-      public override fun gte(): Number? = unwrap(this).getGte()
+      override fun gte(): Number? = unwrap(this).getGte()
 
-      public override fun lessThan(): Number? = unwrap(this).getLessThan()
+      override fun lessThan(): Number? = unwrap(this).getLessThan()
 
-      public override fun lessThanOrEqual(): Number? = unwrap(this).getLessThanOrEqual()
+      override fun lessThanOrEqual(): Number? = unwrap(this).getLessThanOrEqual()
 
-      public override fun lt(): Number? = unwrap(this).getLt()
+      override fun lt(): Number? = unwrap(this).getLt()
 
-      public override fun lte(): Number? = unwrap(this).getLte()
+      override fun lte(): Number? = unwrap(this).getLte()
 
-      public override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
+      override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
 
-      public override fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
+      override fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
     }
 
     public companion object {
@@ -352,19 +330,15 @@ public open class CfnFilter internal constructor(
     public fun itemType(): Any? = unwrap(this).getItemType()
 
     public interface Builder {
-      public fun criterion(criterion: Any) {
-      }
+      public fun criterion(criterion: Any)
 
-      public fun itemType(itemType: IResolvable) {
-      }
+      public fun itemType(itemType: IResolvable)
 
-      public fun itemType(itemType: ConditionProperty) {
-      }
+      public fun itemType(itemType: ConditionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("897a74b3e78942542e7d1b032849a233ae4e0ba8dddd14fdf896c74ee82093a8")
-      public fun itemType(itemType: ConditionProperty.Builder.() -> Unit) {
-      }
+      public fun itemType(itemType: ConditionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -372,21 +346,21 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty.Builder =
           software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty.builder()
 
-      public override fun criterion(criterion: Any) {
+      override fun criterion(criterion: Any) {
         cdkBuilder.criterion(criterion)
       }
 
-      public override fun itemType(itemType: IResolvable) {
+      override fun itemType(itemType: IResolvable) {
         cdkBuilder.itemType(itemType.let(IResolvable::unwrap))
       }
 
-      public override fun itemType(itemType: ConditionProperty) {
+      override fun itemType(itemType: ConditionProperty) {
         cdkBuilder.itemType(itemType.let(ConditionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("897a74b3e78942542e7d1b032849a233ae4e0ba8dddd14fdf896c74ee82093a8")
-      public override fun itemType(itemType: ConditionProperty.Builder.() -> Unit): Unit =
+      override fun itemType(itemType: ConditionProperty.Builder.() -> Unit): Unit =
           itemType(ConditionProperty(itemType))
 
       public fun build():
@@ -398,9 +372,9 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnFilter.FindingCriteriaProperty,
     ) : FindingCriteriaProperty {
-      public override fun criterion(): Any? = unwrap(this).getCriterion()
+      override fun criterion(): Any? = unwrap(this).getCriterion()
 
-      public override fun itemType(): Any? = unwrap(this).getItemType()
+      override fun itemType(): Any? = unwrap(this).getItemType()
     }
 
     public companion object {

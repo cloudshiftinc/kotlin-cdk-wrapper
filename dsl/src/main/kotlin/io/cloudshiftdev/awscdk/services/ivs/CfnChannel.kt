@@ -88,35 +88,25 @@ public open class CfnChannel internal constructor(
   }
 
   public interface Builder {
-    public fun authorized(authorized: Boolean) {
-    }
+    public fun authorized(authorized: Boolean)
 
-    public fun authorized(authorized: IResolvable) {
-    }
+    public fun authorized(authorized: IResolvable)
 
-    public fun insecureIngest(insecureIngest: Boolean) {
-    }
+    public fun insecureIngest(insecureIngest: Boolean)
 
-    public fun insecureIngest(insecureIngest: IResolvable) {
-    }
+    public fun insecureIngest(insecureIngest: IResolvable)
 
-    public fun latencyMode(latencyMode: String) {
-    }
+    public fun latencyMode(latencyMode: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun preset(preset: String) {
-    }
+    public fun preset(preset: String)
 
-    public fun recordingConfigurationArn(recordingConfigurationArn: String) {
-    }
+    public fun recordingConfigurationArn(recordingConfigurationArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -126,43 +116,43 @@ public open class CfnChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivs.CfnChannel.Builder =
         software.amazon.awscdk.services.ivs.CfnChannel.Builder.create(scope, id)
 
-    public override fun authorized(authorized: Boolean) {
+    override fun authorized(authorized: Boolean) {
       cdkBuilder.authorized(authorized)
     }
 
-    public override fun authorized(authorized: IResolvable) {
+    override fun authorized(authorized: IResolvable) {
       cdkBuilder.authorized(authorized.let(IResolvable::unwrap))
     }
 
-    public override fun insecureIngest(insecureIngest: Boolean) {
+    override fun insecureIngest(insecureIngest: Boolean) {
       cdkBuilder.insecureIngest(insecureIngest)
     }
 
-    public override fun insecureIngest(insecureIngest: IResolvable) {
+    override fun insecureIngest(insecureIngest: IResolvable) {
       cdkBuilder.insecureIngest(insecureIngest.let(IResolvable::unwrap))
     }
 
-    public override fun latencyMode(latencyMode: String) {
+    override fun latencyMode(latencyMode: String) {
       cdkBuilder.latencyMode(latencyMode)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun preset(preset: String) {
+    override fun preset(preset: String) {
       cdkBuilder.preset(preset)
     }
 
-    public override fun recordingConfigurationArn(recordingConfigurationArn: String) {
+    override fun recordingConfigurationArn(recordingConfigurationArn: String) {
       cdkBuilder.recordingConfigurationArn(recordingConfigurationArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

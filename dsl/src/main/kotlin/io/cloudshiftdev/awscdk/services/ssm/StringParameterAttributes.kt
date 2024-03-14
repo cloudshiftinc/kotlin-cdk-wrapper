@@ -18,52 +18,46 @@ public interface StringParameterAttributes : CommonStringParameterAttributes {
   public fun version(): Number? = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun forceDynamicReference(forceDynamicReference: Boolean) {
-    }
+    public fun forceDynamicReference(forceDynamicReference: Boolean)
 
-    public fun parameterName(parameterName: String) {
-    }
+    public fun parameterName(parameterName: String)
 
-    public fun simpleName(simpleName: Boolean) {
-    }
+    public fun simpleName(simpleName: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun type(type: ParameterType) {
-    }
+    public fun type(type: ParameterType)
 
-    public fun valueType(valueType: ParameterValueType) {
-    }
+    public fun valueType(valueType: ParameterValueType)
 
-    public fun version(version: Number) {
-    }
+    public fun version(version: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ssm.StringParameterAttributes.Builder =
         software.amazon.awscdk.services.ssm.StringParameterAttributes.builder()
 
-    public override fun forceDynamicReference(forceDynamicReference: Boolean) {
+    override fun forceDynamicReference(forceDynamicReference: Boolean) {
       cdkBuilder.forceDynamicReference(forceDynamicReference)
     }
 
-    public override fun parameterName(parameterName: String) {
+    override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
-    public override fun simpleName(simpleName: Boolean) {
+    override fun simpleName(simpleName: Boolean) {
       cdkBuilder.simpleName(simpleName)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun type(type: ParameterType) {
+    override fun type(type: ParameterType) {
       cdkBuilder.type(type.let(ParameterType::unwrap))
     }
 
-    public override fun valueType(valueType: ParameterValueType) {
+    override fun valueType(valueType: ParameterValueType) {
       cdkBuilder.valueType(valueType.let(ParameterValueType::unwrap))
     }
 
-    public override fun version(version: Number) {
+    override fun version(version: Number) {
       cdkBuilder.version(version)
     }
 
@@ -74,19 +68,19 @@ public interface StringParameterAttributes : CommonStringParameterAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ssm.StringParameterAttributes,
   ) : StringParameterAttributes {
-    public override fun forceDynamicReference(): Boolean? = unwrap(this).getForceDynamicReference()
+    override fun forceDynamicReference(): Boolean? = unwrap(this).getForceDynamicReference()
 
-    public override fun parameterName(): String = unwrap(this).getParameterName()
+    override fun parameterName(): String = unwrap(this).getParameterName()
 
-    public override fun simpleName(): Boolean? = unwrap(this).getSimpleName()
+    override fun simpleName(): Boolean? = unwrap(this).getSimpleName()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun type(): ParameterType? = unwrap(this).getType()?.let(ParameterType::wrap)
+    override fun type(): ParameterType? = unwrap(this).getType()?.let(ParameterType::wrap)
 
-    public override fun valueType(): ParameterValueType? =
+    override fun valueType(): ParameterValueType? =
         unwrap(this).getValueType()?.let(ParameterValueType::wrap)
 
-    public override fun version(): Number? = unwrap(this).getVersion()
+    override fun version(): Number? = unwrap(this).getVersion()
   }
 
   public companion object {

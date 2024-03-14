@@ -107,34 +107,25 @@ public open class CfnConnectPeer internal constructor(
   }
 
   public interface Builder {
-    public fun bgpOptions(bgpOptions: IResolvable) {
-    }
+    public fun bgpOptions(bgpOptions: IResolvable)
 
-    public fun bgpOptions(bgpOptions: BgpOptionsProperty) {
-    }
+    public fun bgpOptions(bgpOptions: BgpOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef3cfeb0160be5b40a7dad5d7ed794fe5cf58ba20edd90fcd2558d674a1d1b25")
-    public fun bgpOptions(bgpOptions: BgpOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun bgpOptions(bgpOptions: BgpOptionsProperty.Builder.() -> Unit)
 
-    public fun connectAttachmentId(connectAttachmentId: String) {
-    }
+    public fun connectAttachmentId(connectAttachmentId: String)
 
-    public fun coreNetworkAddress(coreNetworkAddress: String) {
-    }
+    public fun coreNetworkAddress(coreNetworkAddress: String)
 
-    public fun insideCidrBlocks(insideCidrBlocks: List<String>) {
-    }
+    public fun insideCidrBlocks(insideCidrBlocks: List<String>)
 
-    public fun peerAddress(peerAddress: String) {
-    }
+    public fun peerAddress(peerAddress: String)
 
-    public fun subnetArn(subnetArn: String) {
-    }
+    public fun subnetArn(subnetArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -144,40 +135,40 @@ public open class CfnConnectPeer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.Builder =
         software.amazon.awscdk.services.networkmanager.CfnConnectPeer.Builder.create(scope, id)
 
-    public override fun bgpOptions(bgpOptions: IResolvable) {
+    override fun bgpOptions(bgpOptions: IResolvable) {
       cdkBuilder.bgpOptions(bgpOptions.let(IResolvable::unwrap))
     }
 
-    public override fun bgpOptions(bgpOptions: BgpOptionsProperty) {
+    override fun bgpOptions(bgpOptions: BgpOptionsProperty) {
       cdkBuilder.bgpOptions(bgpOptions.let(BgpOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef3cfeb0160be5b40a7dad5d7ed794fe5cf58ba20edd90fcd2558d674a1d1b25")
-    public override fun bgpOptions(bgpOptions: BgpOptionsProperty.Builder.() -> Unit): Unit =
+    override fun bgpOptions(bgpOptions: BgpOptionsProperty.Builder.() -> Unit): Unit =
         bgpOptions(BgpOptionsProperty(bgpOptions))
 
-    public override fun connectAttachmentId(connectAttachmentId: String) {
+    override fun connectAttachmentId(connectAttachmentId: String) {
       cdkBuilder.connectAttachmentId(connectAttachmentId)
     }
 
-    public override fun coreNetworkAddress(coreNetworkAddress: String) {
+    override fun coreNetworkAddress(coreNetworkAddress: String) {
       cdkBuilder.coreNetworkAddress(coreNetworkAddress)
     }
 
-    public override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
+    override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
       cdkBuilder.insideCidrBlocks(insideCidrBlocks)
     }
 
-    public override fun peerAddress(peerAddress: String) {
+    override fun peerAddress(peerAddress: String) {
       cdkBuilder.peerAddress(peerAddress)
     }
 
-    public override fun subnetArn(subnetArn: String) {
+    override fun subnetArn(subnetArn: String) {
       cdkBuilder.subnetArn(subnetArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -216,17 +207,13 @@ public open class CfnConnectPeer internal constructor(
     public fun peerAsn(): Number? = unwrap(this).getPeerAsn()
 
     public interface Builder {
-      public fun coreNetworkAddress(coreNetworkAddress: String) {
-      }
+      public fun coreNetworkAddress(coreNetworkAddress: String)
 
-      public fun coreNetworkAsn(coreNetworkAsn: Number) {
-      }
+      public fun coreNetworkAsn(coreNetworkAsn: Number)
 
-      public fun peerAddress(peerAddress: String) {
-      }
+      public fun peerAddress(peerAddress: String)
 
-      public fun peerAsn(peerAsn: Number) {
-      }
+      public fun peerAsn(peerAsn: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -235,19 +222,19 @@ public open class CfnConnectPeer internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty.builder()
 
-      public override fun coreNetworkAddress(coreNetworkAddress: String) {
+      override fun coreNetworkAddress(coreNetworkAddress: String) {
         cdkBuilder.coreNetworkAddress(coreNetworkAddress)
       }
 
-      public override fun coreNetworkAsn(coreNetworkAsn: Number) {
+      override fun coreNetworkAsn(coreNetworkAsn: Number) {
         cdkBuilder.coreNetworkAsn(coreNetworkAsn)
       }
 
-      public override fun peerAddress(peerAddress: String) {
+      override fun peerAddress(peerAddress: String) {
         cdkBuilder.peerAddress(peerAddress)
       }
 
-      public override fun peerAsn(peerAsn: Number) {
+      override fun peerAsn(peerAsn: Number) {
         cdkBuilder.peerAsn(peerAsn)
       }
 
@@ -260,13 +247,13 @@ public open class CfnConnectPeer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty,
     ) : ConnectPeerBgpConfigurationProperty {
-      public override fun coreNetworkAddress(): String? = unwrap(this).getCoreNetworkAddress()
+      override fun coreNetworkAddress(): String? = unwrap(this).getCoreNetworkAddress()
 
-      public override fun coreNetworkAsn(): Number? = unwrap(this).getCoreNetworkAsn()
+      override fun coreNetworkAsn(): Number? = unwrap(this).getCoreNetworkAsn()
 
-      public override fun peerAddress(): String? = unwrap(this).getPeerAddress()
+      override fun peerAddress(): String? = unwrap(this).getPeerAddress()
 
-      public override fun peerAsn(): Number? = unwrap(this).getPeerAsn()
+      override fun peerAsn(): Number? = unwrap(this).getPeerAsn()
     }
 
     public companion object {
@@ -294,8 +281,7 @@ public open class CfnConnectPeer internal constructor(
     public fun peerAsn(): Number? = unwrap(this).getPeerAsn()
 
     public interface Builder {
-      public fun peerAsn(peerAsn: Number) {
-      }
+      public fun peerAsn(peerAsn: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -303,7 +289,7 @@ public open class CfnConnectPeer internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty.Builder =
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty.builder()
 
-      public override fun peerAsn(peerAsn: Number) {
+      override fun peerAsn(peerAsn: Number) {
         cdkBuilder.peerAsn(peerAsn)
       }
 
@@ -316,7 +302,7 @@ public open class CfnConnectPeer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty,
     ) : BgpOptionsProperty {
-      public override fun peerAsn(): Number? = unwrap(this).getPeerAsn()
+      override fun peerAsn(): Number? = unwrap(this).getPeerAsn()
     }
 
     public companion object {
@@ -351,23 +337,17 @@ public open class CfnConnectPeer internal constructor(
     public fun protocol(): String? = unwrap(this).getProtocol()
 
     public interface Builder {
-      public fun bgpConfigurations(bgpConfigurations: IResolvable) {
-      }
+      public fun bgpConfigurations(bgpConfigurations: IResolvable)
 
-      public fun bgpConfigurations(bgpConfigurations: List<Any>) {
-      }
+      public fun bgpConfigurations(bgpConfigurations: List<Any>)
 
-      public fun coreNetworkAddress(coreNetworkAddress: String) {
-      }
+      public fun coreNetworkAddress(coreNetworkAddress: String)
 
-      public fun insideCidrBlocks(insideCidrBlocks: List<String>) {
-      }
+      public fun insideCidrBlocks(insideCidrBlocks: List<String>)
 
-      public fun peerAddress(peerAddress: String) {
-      }
+      public fun peerAddress(peerAddress: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -376,27 +356,27 @@ public open class CfnConnectPeer internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty.builder()
 
-      public override fun bgpConfigurations(bgpConfigurations: IResolvable) {
+      override fun bgpConfigurations(bgpConfigurations: IResolvable) {
         cdkBuilder.bgpConfigurations(bgpConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun bgpConfigurations(bgpConfigurations: List<Any>) {
+      override fun bgpConfigurations(bgpConfigurations: List<Any>) {
         cdkBuilder.bgpConfigurations(bgpConfigurations)
       }
 
-      public override fun coreNetworkAddress(coreNetworkAddress: String) {
+      override fun coreNetworkAddress(coreNetworkAddress: String) {
         cdkBuilder.coreNetworkAddress(coreNetworkAddress)
       }
 
-      public override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
+      override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
         cdkBuilder.insideCidrBlocks(insideCidrBlocks)
       }
 
-      public override fun peerAddress(peerAddress: String) {
+      override fun peerAddress(peerAddress: String) {
         cdkBuilder.peerAddress(peerAddress)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -409,16 +389,16 @@ public open class CfnConnectPeer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty,
     ) : ConnectPeerConfigurationProperty {
-      public override fun bgpConfigurations(): Any? = unwrap(this).getBgpConfigurations()
+      override fun bgpConfigurations(): Any? = unwrap(this).getBgpConfigurations()
 
-      public override fun coreNetworkAddress(): String? = unwrap(this).getCoreNetworkAddress()
+      override fun coreNetworkAddress(): String? = unwrap(this).getCoreNetworkAddress()
 
-      public override fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?:
+      override fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?:
           emptyList()
 
-      public override fun peerAddress(): String? = unwrap(this).getPeerAddress()
+      override fun peerAddress(): String? = unwrap(this).getPeerAddress()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
     }
 
     public companion object {

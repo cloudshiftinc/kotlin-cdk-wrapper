@@ -41,14 +41,11 @@ public open class CfnDevice internal constructor(
   }
 
   public interface Builder {
-    public fun deviceId(deviceId: String) {
-    }
+    public fun deviceId(deviceId: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
   }
 
   private class BuilderImpl(
@@ -58,15 +55,15 @@ public open class CfnDevice internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot1click.CfnDevice.Builder =
         software.amazon.awscdk.services.iot1click.CfnDevice.Builder.create(scope, id)
 
-    public override fun deviceId(deviceId: String) {
+    override fun deviceId(deviceId: String) {
       cdkBuilder.deviceId(deviceId)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 

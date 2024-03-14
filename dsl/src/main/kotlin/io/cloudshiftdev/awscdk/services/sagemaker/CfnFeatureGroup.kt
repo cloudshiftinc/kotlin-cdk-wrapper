@@ -107,46 +107,33 @@ public open class CfnFeatureGroup internal constructor(
       throughputConfig(ThroughputConfigProperty(`value`))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventTimeFeatureName(eventTimeFeatureName: String) {
-    }
+    public fun eventTimeFeatureName(eventTimeFeatureName: String)
 
-    public fun featureDefinitions(featureDefinitions: IResolvable) {
-    }
+    public fun featureDefinitions(featureDefinitions: IResolvable)
 
-    public fun featureDefinitions(featureDefinitions: List<Any>) {
-    }
+    public fun featureDefinitions(featureDefinitions: List<Any>)
 
-    public fun featureGroupName(featureGroupName: String) {
-    }
+    public fun featureGroupName(featureGroupName: String)
 
-    public fun offlineStoreConfig(offlineStoreConfig: Any) {
-    }
+    public fun offlineStoreConfig(offlineStoreConfig: Any)
 
-    public fun onlineStoreConfig(onlineStoreConfig: Any) {
-    }
+    public fun onlineStoreConfig(onlineStoreConfig: Any)
 
-    public fun recordIdentifierFeatureName(recordIdentifierFeatureName: String) {
-    }
+    public fun recordIdentifierFeatureName(recordIdentifierFeatureName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun throughputConfig(throughputConfig: IResolvable) {
-    }
+    public fun throughputConfig(throughputConfig: IResolvable)
 
-    public fun throughputConfig(throughputConfig: ThroughputConfigProperty) {
-    }
+    public fun throughputConfig(throughputConfig: ThroughputConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("feeb221954c6f330aee919a38c50d43bdb2806eba422525d9ff849dd44995890")
-    public fun throughputConfig(throughputConfig: ThroughputConfigProperty.Builder.() -> Unit) {
-    }
+    public fun throughputConfig(throughputConfig: ThroughputConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -156,59 +143,58 @@ public open class CfnFeatureGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.Builder =
         software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventTimeFeatureName(eventTimeFeatureName: String) {
+    override fun eventTimeFeatureName(eventTimeFeatureName: String) {
       cdkBuilder.eventTimeFeatureName(eventTimeFeatureName)
     }
 
-    public override fun featureDefinitions(featureDefinitions: IResolvable) {
+    override fun featureDefinitions(featureDefinitions: IResolvable) {
       cdkBuilder.featureDefinitions(featureDefinitions.let(IResolvable::unwrap))
     }
 
-    public override fun featureDefinitions(featureDefinitions: List<Any>) {
+    override fun featureDefinitions(featureDefinitions: List<Any>) {
       cdkBuilder.featureDefinitions(featureDefinitions)
     }
 
-    public override fun featureGroupName(featureGroupName: String) {
+    override fun featureGroupName(featureGroupName: String) {
       cdkBuilder.featureGroupName(featureGroupName)
     }
 
-    public override fun offlineStoreConfig(offlineStoreConfig: Any) {
+    override fun offlineStoreConfig(offlineStoreConfig: Any) {
       cdkBuilder.offlineStoreConfig(offlineStoreConfig)
     }
 
-    public override fun onlineStoreConfig(onlineStoreConfig: Any) {
+    override fun onlineStoreConfig(onlineStoreConfig: Any) {
       cdkBuilder.onlineStoreConfig(onlineStoreConfig)
     }
 
-    public override fun recordIdentifierFeatureName(recordIdentifierFeatureName: String) {
+    override fun recordIdentifierFeatureName(recordIdentifierFeatureName: String) {
       cdkBuilder.recordIdentifierFeatureName(recordIdentifierFeatureName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun throughputConfig(throughputConfig: IResolvable) {
+    override fun throughputConfig(throughputConfig: IResolvable) {
       cdkBuilder.throughputConfig(throughputConfig.let(IResolvable::unwrap))
     }
 
-    public override fun throughputConfig(throughputConfig: ThroughputConfigProperty) {
+    override fun throughputConfig(throughputConfig: ThroughputConfigProperty) {
       cdkBuilder.throughputConfig(throughputConfig.let(ThroughputConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("feeb221954c6f330aee919a38c50d43bdb2806eba422525d9ff849dd44995890")
-    public override
-        fun throughputConfig(throughputConfig: ThroughputConfigProperty.Builder.() -> Unit): Unit =
-        throughputConfig(ThroughputConfigProperty(throughputConfig))
+    override fun throughputConfig(throughputConfig: ThroughputConfigProperty.Builder.() -> Unit):
+        Unit = throughputConfig(ThroughputConfigProperty(throughputConfig))
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnFeatureGroup =
         cdkBuilder.build()
@@ -245,37 +231,27 @@ public open class CfnFeatureGroup internal constructor(
     public fun tableFormat(): String? = unwrap(this).getTableFormat()
 
     public interface Builder {
-      public fun dataCatalogConfig(dataCatalogConfig: IResolvable) {
-      }
+      public fun dataCatalogConfig(dataCatalogConfig: IResolvable)
 
-      public fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty) {
-      }
+      public fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e047b0fe9e5caed0af2f193bd89b57a611aa498fc2d1fb1eae59793dc052a66")
-      public
-          fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty.Builder.() -> Unit) {
-      }
+      public fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty.Builder.() -> Unit)
 
-      public fun disableGlueTableCreation(disableGlueTableCreation: Boolean) {
-      }
+      public fun disableGlueTableCreation(disableGlueTableCreation: Boolean)
 
-      public fun disableGlueTableCreation(disableGlueTableCreation: IResolvable) {
-      }
+      public fun disableGlueTableCreation(disableGlueTableCreation: IResolvable)
 
-      public fun s3StorageConfig(s3StorageConfig: IResolvable) {
-      }
+      public fun s3StorageConfig(s3StorageConfig: IResolvable)
 
-      public fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty) {
-      }
+      public fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b930ec4e1b421a35978668af54bfe7fe10be792f7c06729aaead85ddd0ee8bab")
-      public fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty.Builder.() -> Unit) {
-      }
+      public fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty.Builder.() -> Unit)
 
-      public fun tableFormat(tableFormat: String) {
-      }
+      public fun tableFormat(tableFormat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -284,43 +260,42 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OfflineStoreConfigProperty.builder()
 
-      public override fun dataCatalogConfig(dataCatalogConfig: IResolvable) {
+      override fun dataCatalogConfig(dataCatalogConfig: IResolvable) {
         cdkBuilder.dataCatalogConfig(dataCatalogConfig.let(IResolvable::unwrap))
       }
 
-      public override fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty) {
+      override fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty) {
         cdkBuilder.dataCatalogConfig(dataCatalogConfig.let(DataCatalogConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e047b0fe9e5caed0af2f193bd89b57a611aa498fc2d1fb1eae59793dc052a66")
-      public override
+      override
           fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty.Builder.() -> Unit):
           Unit = dataCatalogConfig(DataCatalogConfigProperty(dataCatalogConfig))
 
-      public override fun disableGlueTableCreation(disableGlueTableCreation: Boolean) {
+      override fun disableGlueTableCreation(disableGlueTableCreation: Boolean) {
         cdkBuilder.disableGlueTableCreation(disableGlueTableCreation)
       }
 
-      public override fun disableGlueTableCreation(disableGlueTableCreation: IResolvable) {
+      override fun disableGlueTableCreation(disableGlueTableCreation: IResolvable) {
         cdkBuilder.disableGlueTableCreation(disableGlueTableCreation.let(IResolvable::unwrap))
       }
 
-      public override fun s3StorageConfig(s3StorageConfig: IResolvable) {
+      override fun s3StorageConfig(s3StorageConfig: IResolvable) {
         cdkBuilder.s3StorageConfig(s3StorageConfig.let(IResolvable::unwrap))
       }
 
-      public override fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty) {
+      override fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty) {
         cdkBuilder.s3StorageConfig(s3StorageConfig.let(S3StorageConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b930ec4e1b421a35978668af54bfe7fe10be792f7c06729aaead85ddd0ee8bab")
-      public override
-          fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty.Builder.() -> Unit): Unit =
-          s3StorageConfig(S3StorageConfigProperty(s3StorageConfig))
+      override fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty.Builder.() -> Unit):
+          Unit = s3StorageConfig(S3StorageConfigProperty(s3StorageConfig))
 
-      public override fun tableFormat(tableFormat: String) {
+      override fun tableFormat(tableFormat: String) {
         cdkBuilder.tableFormat(tableFormat)
       }
 
@@ -333,14 +308,13 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OfflineStoreConfigProperty,
     ) : OfflineStoreConfigProperty {
-      public override fun dataCatalogConfig(): Any? = unwrap(this).getDataCatalogConfig()
+      override fun dataCatalogConfig(): Any? = unwrap(this).getDataCatalogConfig()
 
-      public override fun disableGlueTableCreation(): Any? =
-          unwrap(this).getDisableGlueTableCreation()
+      override fun disableGlueTableCreation(): Any? = unwrap(this).getDisableGlueTableCreation()
 
-      public override fun s3StorageConfig(): Any = unwrap(this).getS3StorageConfig()
+      override fun s3StorageConfig(): Any = unwrap(this).getS3StorageConfig()
 
-      public override fun tableFormat(): String? = unwrap(this).getTableFormat()
+      override fun tableFormat(): String? = unwrap(this).getTableFormat()
     }
 
     public companion object {
@@ -373,14 +347,11 @@ public open class CfnFeatureGroup internal constructor(
     public fun throughputMode(): String
 
     public interface Builder {
-      public fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number) {
-      }
+      public fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number)
 
-      public fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number) {
-      }
+      public fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number)
 
-      public fun throughputMode(throughputMode: String) {
-      }
+      public fun throughputMode(throughputMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -389,15 +360,15 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty.builder()
 
-      public override fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number) {
+      override fun provisionedReadCapacityUnits(provisionedReadCapacityUnits: Number) {
         cdkBuilder.provisionedReadCapacityUnits(provisionedReadCapacityUnits)
       }
 
-      public override fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number) {
+      override fun provisionedWriteCapacityUnits(provisionedWriteCapacityUnits: Number) {
         cdkBuilder.provisionedWriteCapacityUnits(provisionedWriteCapacityUnits)
       }
 
-      public override fun throughputMode(throughputMode: String) {
+      override fun throughputMode(throughputMode: String) {
         cdkBuilder.throughputMode(throughputMode)
       }
 
@@ -410,13 +381,13 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.ThroughputConfigProperty,
     ) : ThroughputConfigProperty {
-      public override fun provisionedReadCapacityUnits(): Number? =
+      override fun provisionedReadCapacityUnits(): Number? =
           unwrap(this).getProvisionedReadCapacityUnits()
 
-      public override fun provisionedWriteCapacityUnits(): Number? =
+      override fun provisionedWriteCapacityUnits(): Number? =
           unwrap(this).getProvisionedWriteCapacityUnits()
 
-      public override fun throughputMode(): String = unwrap(this).getThroughputMode()
+      override fun throughputMode(): String = unwrap(this).getThroughputMode()
     }
 
     public companion object {
@@ -443,8 +414,7 @@ public open class CfnFeatureGroup internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -453,7 +423,7 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -466,7 +436,7 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreSecurityConfigProperty,
     ) : OnlineStoreSecurityConfigProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {
@@ -496,11 +466,9 @@ public open class CfnFeatureGroup internal constructor(
     public fun featureType(): String
 
     public interface Builder {
-      public fun featureName(featureName: String) {
-      }
+      public fun featureName(featureName: String)
 
-      public fun featureType(featureType: String) {
-      }
+      public fun featureType(featureType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -509,11 +477,11 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty.builder()
 
-      public override fun featureName(featureName: String) {
+      override fun featureName(featureName: String) {
         cdkBuilder.featureName(featureName)
       }
 
-      public override fun featureType(featureType: String) {
+      override fun featureType(featureType: String) {
         cdkBuilder.featureType(featureType)
       }
 
@@ -526,9 +494,9 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.FeatureDefinitionProperty,
     ) : FeatureDefinitionProperty {
-      public override fun featureName(): String = unwrap(this).getFeatureName()
+      override fun featureName(): String = unwrap(this).getFeatureName()
 
-      public override fun featureType(): String = unwrap(this).getFeatureType()
+      override fun featureType(): String = unwrap(this).getFeatureType()
     }
 
     public companion object {
@@ -559,14 +527,11 @@ public open class CfnFeatureGroup internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun catalog(catalog: String) {
-      }
+      public fun catalog(catalog: String)
 
-      public fun database(database: String) {
-      }
+      public fun database(database: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -575,15 +540,15 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty.builder()
 
-      public override fun catalog(catalog: String) {
+      override fun catalog(catalog: String) {
         cdkBuilder.catalog(catalog)
       }
 
-      public override fun database(database: String) {
+      override fun database(database: String) {
         cdkBuilder.database(database)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -596,11 +561,11 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.DataCatalogConfigProperty,
     ) : DataCatalogConfigProperty {
-      public override fun catalog(): String = unwrap(this).getCatalog()
+      override fun catalog(): String = unwrap(this).getCatalog()
 
-      public override fun database(): String = unwrap(this).getDatabase()
+      override fun database(): String = unwrap(this).getDatabase()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -629,11 +594,9 @@ public open class CfnFeatureGroup internal constructor(
     public fun `value`(): Number? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -641,11 +604,11 @@ public open class CfnFeatureGroup internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty.builder()
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -658,9 +621,9 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.TtlDurationProperty,
     ) : TtlDurationProperty {
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
 
-      public override fun `value`(): Number? = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -693,37 +656,28 @@ public open class CfnFeatureGroup internal constructor(
     public fun ttlDuration(): Any? = unwrap(this).getTtlDuration()
 
     public interface Builder {
-      public fun enableOnlineStore(enableOnlineStore: Boolean) {
-      }
+      public fun enableOnlineStore(enableOnlineStore: Boolean)
 
-      public fun enableOnlineStore(enableOnlineStore: IResolvable) {
-      }
+      public fun enableOnlineStore(enableOnlineStore: IResolvable)
 
-      public fun securityConfig(securityConfig: IResolvable) {
-      }
+      public fun securityConfig(securityConfig: IResolvable)
 
-      public fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty) {
-      }
+      public fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73f873d31d41619f0d72a0f13cfd0f2e7d0de00346b39a50ebd5118695396812")
       public
-          fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty.Builder.() -> Unit) {
-      }
+          fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty.Builder.() -> Unit)
 
-      public fun storageType(storageType: String) {
-      }
+      public fun storageType(storageType: String)
 
-      public fun ttlDuration(ttlDuration: IResolvable) {
-      }
+      public fun ttlDuration(ttlDuration: IResolvable)
 
-      public fun ttlDuration(ttlDuration: TtlDurationProperty) {
-      }
+      public fun ttlDuration(ttlDuration: TtlDurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb1b501373f2a46a285536f1241140627190292598e965d8a4636541a81400e7")
-      public fun ttlDuration(ttlDuration: TtlDurationProperty.Builder.() -> Unit) {
-      }
+      public fun ttlDuration(ttlDuration: TtlDurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -732,43 +686,43 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreConfigProperty.builder()
 
-      public override fun enableOnlineStore(enableOnlineStore: Boolean) {
+      override fun enableOnlineStore(enableOnlineStore: Boolean) {
         cdkBuilder.enableOnlineStore(enableOnlineStore)
       }
 
-      public override fun enableOnlineStore(enableOnlineStore: IResolvable) {
+      override fun enableOnlineStore(enableOnlineStore: IResolvable) {
         cdkBuilder.enableOnlineStore(enableOnlineStore.let(IResolvable::unwrap))
       }
 
-      public override fun securityConfig(securityConfig: IResolvable) {
+      override fun securityConfig(securityConfig: IResolvable) {
         cdkBuilder.securityConfig(securityConfig.let(IResolvable::unwrap))
       }
 
-      public override fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty) {
+      override fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty) {
         cdkBuilder.securityConfig(securityConfig.let(OnlineStoreSecurityConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73f873d31d41619f0d72a0f13cfd0f2e7d0de00346b39a50ebd5118695396812")
-      public override
+      override
           fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty.Builder.() -> Unit):
           Unit = securityConfig(OnlineStoreSecurityConfigProperty(securityConfig))
 
-      public override fun storageType(storageType: String) {
+      override fun storageType(storageType: String) {
         cdkBuilder.storageType(storageType)
       }
 
-      public override fun ttlDuration(ttlDuration: IResolvable) {
+      override fun ttlDuration(ttlDuration: IResolvable) {
         cdkBuilder.ttlDuration(ttlDuration.let(IResolvable::unwrap))
       }
 
-      public override fun ttlDuration(ttlDuration: TtlDurationProperty) {
+      override fun ttlDuration(ttlDuration: TtlDurationProperty) {
         cdkBuilder.ttlDuration(ttlDuration.let(TtlDurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb1b501373f2a46a285536f1241140627190292598e965d8a4636541a81400e7")
-      public override fun ttlDuration(ttlDuration: TtlDurationProperty.Builder.() -> Unit): Unit =
+      override fun ttlDuration(ttlDuration: TtlDurationProperty.Builder.() -> Unit): Unit =
           ttlDuration(TtlDurationProperty(ttlDuration))
 
       public fun build():
@@ -780,13 +734,13 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.OnlineStoreConfigProperty,
     ) : OnlineStoreConfigProperty {
-      public override fun enableOnlineStore(): Any? = unwrap(this).getEnableOnlineStore()
+      override fun enableOnlineStore(): Any? = unwrap(this).getEnableOnlineStore()
 
-      public override fun securityConfig(): Any? = unwrap(this).getSecurityConfig()
+      override fun securityConfig(): Any? = unwrap(this).getSecurityConfig()
 
-      public override fun storageType(): String? = unwrap(this).getStorageType()
+      override fun storageType(): String? = unwrap(this).getStorageType()
 
-      public override fun ttlDuration(): Any? = unwrap(this).getTtlDuration()
+      override fun ttlDuration(): Any? = unwrap(this).getTtlDuration()
     }
 
     public companion object {
@@ -815,11 +769,9 @@ public open class CfnFeatureGroup internal constructor(
     public fun s3Uri(): String
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -828,11 +780,11 @@ public open class CfnFeatureGroup internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.S3StorageConfigProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
@@ -845,9 +797,9 @@ public open class CfnFeatureGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnFeatureGroup.S3StorageConfigProperty,
     ) : S3StorageConfigProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
     }
 
     public companion object {

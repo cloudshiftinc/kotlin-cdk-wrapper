@@ -61,23 +61,17 @@ public open class CfnResourceDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun initialVersion(initialVersion: IResolvable) {
-    }
+    public fun initialVersion(initialVersion: IResolvable)
 
-    public fun initialVersion(initialVersion: ResourceDefinitionVersionProperty) {
-    }
+    public fun initialVersion(initialVersion: ResourceDefinitionVersionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b45c7964550cb0ecf3f5f1a733f690a533a66561ec64ac86c995487386ae899")
-    public
-        fun initialVersion(initialVersion: ResourceDefinitionVersionProperty.Builder.() -> Unit) {
-    }
+    public fun initialVersion(initialVersion: ResourceDefinitionVersionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -87,25 +81,25 @@ public open class CfnResourceDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.greengrass.CfnResourceDefinition.Builder
         = software.amazon.awscdk.services.greengrass.CfnResourceDefinition.Builder.create(scope, id)
 
-    public override fun initialVersion(initialVersion: IResolvable) {
+    override fun initialVersion(initialVersion: IResolvable) {
       cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
     }
 
-    public override fun initialVersion(initialVersion: ResourceDefinitionVersionProperty) {
+    override fun initialVersion(initialVersion: ResourceDefinitionVersionProperty) {
       cdkBuilder.initialVersion(initialVersion.let(ResourceDefinitionVersionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b45c7964550cb0ecf3f5f1a733f690a533a66561ec64ac86c995487386ae899")
-    public override
+    override
         fun initialVersion(initialVersion: ResourceDefinitionVersionProperty.Builder.() -> Unit):
         Unit = initialVersion(ResourceDefinitionVersionProperty(initialVersion))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -138,11 +132,9 @@ public open class CfnResourceDefinition internal constructor(
     public fun resources(): Any
 
     public interface Builder {
-      public fun resources(resources: IResolvable) {
-      }
+      public fun resources(resources: IResolvable)
 
-      public fun resources(resources: List<Any>) {
-      }
+      public fun resources(resources: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -151,11 +143,11 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty.builder()
 
-      public override fun resources(resources: IResolvable) {
+      override fun resources(resources: IResolvable) {
         cdkBuilder.resources(resources.let(IResolvable::unwrap))
       }
 
-      public override fun resources(resources: List<Any>) {
+      override fun resources(resources: List<Any>) {
         cdkBuilder.resources(resources)
       }
 
@@ -168,7 +160,7 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDefinitionVersionProperty,
     ) : ResourceDefinitionVersionProperty {
-      public override fun resources(): Any = unwrap(this).getResources()
+      override fun resources(): Any = unwrap(this).getResources()
     }
 
     public companion object {
@@ -199,12 +191,9 @@ public open class CfnResourceDefinition internal constructor(
     public fun arn(): String
 
     public interface Builder {
-      public
-          fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>) {
-      }
+      public fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>)
 
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,12 +202,12 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty.builder()
 
-      public override
+      override
           fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>) {
         cdkBuilder.additionalStagingLabelsToDownload(additionalStagingLabelsToDownload)
       }
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -231,10 +220,10 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SecretsManagerSecretResourceDataProperty,
     ) : SecretsManagerSecretResourceDataProperty {
-      public override fun additionalStagingLabelsToDownload(): List<String> =
+      override fun additionalStagingLabelsToDownload(): List<String> =
           unwrap(this).getAdditionalStagingLabelsToDownload() ?: emptyList()
 
-      public override fun arn(): String = unwrap(this).getArn()
+      override fun arn(): String = unwrap(this).getArn()
     }
 
     public companion object {
@@ -266,23 +255,17 @@ public open class CfnResourceDefinition internal constructor(
     public fun s3Uri(): String
 
     public interface Builder {
-      public fun destinationPath(destinationPath: String) {
-      }
+      public fun destinationPath(destinationPath: String)
 
-      public fun ownerSetting(ownerSetting: IResolvable) {
-      }
+      public fun ownerSetting(ownerSetting: IResolvable)
 
-      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
-      }
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b322291179e4c0587cd6764ee886a458c1e495c94e49aad683966fdfe3e2a6b")
-      public
-          fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit) {
-      }
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
 
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -291,25 +274,25 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty.builder()
 
-      public override fun destinationPath(destinationPath: String) {
+      override fun destinationPath(destinationPath: String) {
         cdkBuilder.destinationPath(destinationPath)
       }
 
-      public override fun ownerSetting(ownerSetting: IResolvable) {
+      override fun ownerSetting(ownerSetting: IResolvable) {
         cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
       }
 
-      public override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
+      override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
         cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b322291179e4c0587cd6764ee886a458c1e495c94e49aad683966fdfe3e2a6b")
-      public override
+      override
           fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit):
           Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
@@ -322,11 +305,11 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.S3MachineLearningModelResourceDataProperty,
     ) : S3MachineLearningModelResourceDataProperty {
-      public override fun destinationPath(): String = unwrap(this).getDestinationPath()
+      override fun destinationPath(): String = unwrap(this).getDestinationPath()
 
-      public override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
+      override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
 
-      public override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
     }
 
     public companion object {
@@ -358,23 +341,17 @@ public open class CfnResourceDefinition internal constructor(
     public fun sageMakerJobArn(): String
 
     public interface Builder {
-      public fun destinationPath(destinationPath: String) {
-      }
+      public fun destinationPath(destinationPath: String)
 
-      public fun ownerSetting(ownerSetting: IResolvable) {
-      }
+      public fun ownerSetting(ownerSetting: IResolvable)
 
-      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
-      }
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e80aef52452dc8b668b395a82205060b415ac013a2d979f12ca8b3720a6af7e8")
-      public
-          fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit) {
-      }
+      public fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit)
 
-      public fun sageMakerJobArn(sageMakerJobArn: String) {
-      }
+      public fun sageMakerJobArn(sageMakerJobArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -383,25 +360,25 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty.builder()
 
-      public override fun destinationPath(destinationPath: String) {
+      override fun destinationPath(destinationPath: String) {
         cdkBuilder.destinationPath(destinationPath)
       }
 
-      public override fun ownerSetting(ownerSetting: IResolvable) {
+      override fun ownerSetting(ownerSetting: IResolvable) {
         cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
       }
 
-      public override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
+      override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
         cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e80aef52452dc8b668b395a82205060b415ac013a2d979f12ca8b3720a6af7e8")
-      public override
+      override
           fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty.Builder.() -> Unit):
           Unit = ownerSetting(ResourceDownloadOwnerSettingProperty(ownerSetting))
 
-      public override fun sageMakerJobArn(sageMakerJobArn: String) {
+      override fun sageMakerJobArn(sageMakerJobArn: String) {
         cdkBuilder.sageMakerJobArn(sageMakerJobArn)
       }
 
@@ -414,11 +391,11 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.SageMakerMachineLearningModelResourceDataProperty,
     ) : SageMakerMachineLearningModelResourceDataProperty {
-      public override fun destinationPath(): String = unwrap(this).getDestinationPath()
+      override fun destinationPath(): String = unwrap(this).getDestinationPath()
 
-      public override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
+      override fun ownerSetting(): Any? = unwrap(this).getOwnerSetting()
 
-      public override fun sageMakerJobArn(): String = unwrap(this).getSageMakerJobArn()
+      override fun sageMakerJobArn(): String = unwrap(this).getSageMakerJobArn()
     }
 
     public companion object {
@@ -450,23 +427,17 @@ public open class CfnResourceDefinition internal constructor(
     public fun sourcePath(): String
 
     public interface Builder {
-      public fun destinationPath(destinationPath: String) {
-      }
+      public fun destinationPath(destinationPath: String)
 
-      public fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
-      }
+      public fun groupOwnerSetting(groupOwnerSetting: IResolvable)
 
-      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
-      }
+      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d2ba809514e8753cc7b3c36c4756ea36411805335e2f2e214e4b3a274cca3c2f")
-      public
-          fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit) {
-      }
+      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit)
 
-      public fun sourcePath(sourcePath: String) {
-      }
+      public fun sourcePath(sourcePath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -475,25 +446,25 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty.builder()
 
-      public override fun destinationPath(destinationPath: String) {
+      override fun destinationPath(destinationPath: String) {
         cdkBuilder.destinationPath(destinationPath)
       }
 
-      public override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
+      override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
         cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable::unwrap))
       }
 
-      public override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
+      override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
         cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d2ba809514e8753cc7b3c36c4756ea36411805335e2f2e214e4b3a274cca3c2f")
-      public override
+      override
           fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit):
           Unit = groupOwnerSetting(GroupOwnerSettingProperty(groupOwnerSetting))
 
-      public override fun sourcePath(sourcePath: String) {
+      override fun sourcePath(sourcePath: String) {
         cdkBuilder.sourcePath(sourcePath)
       }
 
@@ -506,11 +477,11 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalVolumeResourceDataProperty,
     ) : LocalVolumeResourceDataProperty {
-      public override fun destinationPath(): String = unwrap(this).getDestinationPath()
+      override fun destinationPath(): String = unwrap(this).getDestinationPath()
 
-      public override fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
+      override fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
 
-      public override fun sourcePath(): String = unwrap(this).getSourcePath()
+      override fun sourcePath(): String = unwrap(this).getSourcePath()
     }
 
     public companion object {
@@ -539,20 +510,15 @@ public open class CfnResourceDefinition internal constructor(
     public fun sourcePath(): String
 
     public interface Builder {
-      public fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
-      }
+      public fun groupOwnerSetting(groupOwnerSetting: IResolvable)
 
-      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
-      }
+      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3aa219c6edc900b545d41570be768782e2e9cccf35bda45acb6abddf3a2155e4")
-      public
-          fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit) {
-      }
+      public fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit)
 
-      public fun sourcePath(sourcePath: String) {
-      }
+      public fun sourcePath(sourcePath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -561,21 +527,21 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty.builder()
 
-      public override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
+      override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
         cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable::unwrap))
       }
 
-      public override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
+      override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
         cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3aa219c6edc900b545d41570be768782e2e9cccf35bda45acb6abddf3a2155e4")
-      public override
+      override
           fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty.Builder.() -> Unit):
           Unit = groupOwnerSetting(GroupOwnerSettingProperty(groupOwnerSetting))
 
-      public override fun sourcePath(sourcePath: String) {
+      override fun sourcePath(sourcePath: String) {
         cdkBuilder.sourcePath(sourcePath)
       }
 
@@ -588,9 +554,9 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.LocalDeviceResourceDataProperty,
     ) : LocalDeviceResourceDataProperty {
-      public override fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
+      override fun groupOwnerSetting(): Any? = unwrap(this).getGroupOwnerSetting()
 
-      public override fun sourcePath(): String = unwrap(this).getSourcePath()
+      override fun sourcePath(): String = unwrap(this).getSourcePath()
     }
 
     public companion object {
@@ -621,23 +587,18 @@ public open class CfnResourceDefinition internal constructor(
     public fun resourceDataContainer(): Any
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun resourceDataContainer(resourceDataContainer: IResolvable) {
-      }
+      public fun resourceDataContainer(resourceDataContainer: IResolvable)
 
-      public fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty) {
-      }
+      public fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f37c08c90f935f1f997b4f8c90ea5149cdc55f38601647c2878651ff719535a")
       public
-          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit) {
-      }
+          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -646,26 +607,25 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun resourceDataContainer(resourceDataContainer: IResolvable) {
+      override fun resourceDataContainer(resourceDataContainer: IResolvable) {
         cdkBuilder.resourceDataContainer(resourceDataContainer.let(IResolvable::unwrap))
       }
 
-      public override
-          fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty) {
+      override fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty) {
         cdkBuilder.resourceDataContainer(resourceDataContainer.let(ResourceDataContainerProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f37c08c90f935f1f997b4f8c90ea5149cdc55f38601647c2878651ff719535a")
-      public override
+      override
           fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty.Builder.() -> Unit):
           Unit = resourceDataContainer(ResourceDataContainerProperty(resourceDataContainer))
 
@@ -678,11 +638,11 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceInstanceProperty,
     ) : ResourceInstanceProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun resourceDataContainer(): Any = unwrap(this).getResourceDataContainer()
+      override fun resourceDataContainer(): Any = unwrap(this).getResourceDataContainer()
     }
 
     public companion object {
@@ -720,70 +680,54 @@ public open class CfnResourceDefinition internal constructor(
         unwrap(this).getSecretsManagerSecretResourceData()
 
     public interface Builder {
-      public fun localDeviceResourceData(localDeviceResourceData: IResolvable) {
-      }
+      public fun localDeviceResourceData(localDeviceResourceData: IResolvable)
 
-      public fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty) {
-      }
+      public fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f18045f1a07083f608f8030c060c6ce07e5582e55faceb64f61aca27f171b8e2")
       public
-          fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty.Builder.() -> Unit) {
-      }
+          fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty.Builder.() -> Unit)
 
-      public fun localVolumeResourceData(localVolumeResourceData: IResolvable) {
-      }
+      public fun localVolumeResourceData(localVolumeResourceData: IResolvable)
 
-      public fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty) {
-      }
+      public fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e671e3203a0dd456cfd14a4c2526402225b1aa9d59f134b8479ce9b1159955b")
       public
-          fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty.Builder.() -> Unit) {
-      }
+          fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty.Builder.() -> Unit)
+
+      public fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: IResolvable)
 
       public
-          fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: IResolvable) {
-      }
-
-      public
-          fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty) {
-      }
+          fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0db1d9d931fd3c1477d3a734d7fb1f94b5658b2191fe5941d654f0c1a196a1ad")
       public
-          fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty.Builder.() -> Unit) {
-      }
+          fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty.Builder.() -> Unit)
 
       public
-          fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable) {
-      }
+          fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable)
 
       public
-          fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty) {
-      }
+          fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d765df094e5bca3ebc387e99ef4bcf53f5556f1662b724d4ad3cdb9393a53ac2")
       public
-          fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty.Builder.() -> Unit) {
-      }
+          fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty.Builder.() -> Unit)
 
-      public fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: IResolvable) {
-      }
+      public fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: IResolvable)
 
       public
-          fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty) {
-      }
+          fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b7b73f807c94710295a55c1b244c751cbad3689f0201541e7e78f9bf18b3182")
       public
-          fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty.Builder.() -> Unit) {
-      }
+          fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -792,83 +736,82 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty.builder()
 
-      public override fun localDeviceResourceData(localDeviceResourceData: IResolvable) {
+      override fun localDeviceResourceData(localDeviceResourceData: IResolvable) {
         cdkBuilder.localDeviceResourceData(localDeviceResourceData.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty) {
         cdkBuilder.localDeviceResourceData(localDeviceResourceData.let(LocalDeviceResourceDataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f18045f1a07083f608f8030c060c6ce07e5582e55faceb64f61aca27f171b8e2")
-      public override
+      override
           fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty.Builder.() -> Unit):
           Unit = localDeviceResourceData(LocalDeviceResourceDataProperty(localDeviceResourceData))
 
-      public override fun localVolumeResourceData(localVolumeResourceData: IResolvable) {
+      override fun localVolumeResourceData(localVolumeResourceData: IResolvable) {
         cdkBuilder.localVolumeResourceData(localVolumeResourceData.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty) {
         cdkBuilder.localVolumeResourceData(localVolumeResourceData.let(LocalVolumeResourceDataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e671e3203a0dd456cfd14a4c2526402225b1aa9d59f134b8479ce9b1159955b")
-      public override
+      override
           fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty.Builder.() -> Unit):
           Unit = localVolumeResourceData(LocalVolumeResourceDataProperty(localVolumeResourceData))
 
-      public override
+      override
           fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: IResolvable) {
         cdkBuilder.s3MachineLearningModelResourceData(s3MachineLearningModelResourceData.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty) {
         cdkBuilder.s3MachineLearningModelResourceData(s3MachineLearningModelResourceData.let(S3MachineLearningModelResourceDataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0db1d9d931fd3c1477d3a734d7fb1f94b5658b2191fe5941d654f0c1a196a1ad")
-      public override
+      override
           fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty.Builder.() -> Unit):
           Unit =
           s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty(s3MachineLearningModelResourceData))
 
-      public override
+      override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable) {
         cdkBuilder.sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty) {
         cdkBuilder.sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData.let(SageMakerMachineLearningModelResourceDataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d765df094e5bca3ebc387e99ef4bcf53f5556f1662b724d4ad3cdb9393a53ac2")
-      public override
+      override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty.Builder.() -> Unit):
           Unit =
           sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty(sageMakerMachineLearningModelResourceData))
 
-      public override
-          fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: IResolvable) {
+      override fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: IResolvable) {
         cdkBuilder.secretsManagerSecretResourceData(secretsManagerSecretResourceData.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty) {
         cdkBuilder.secretsManagerSecretResourceData(secretsManagerSecretResourceData.let(SecretsManagerSecretResourceDataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b7b73f807c94710295a55c1b244c751cbad3689f0201541e7e78f9bf18b3182")
-      public override
+      override
           fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty.Builder.() -> Unit):
           Unit =
           secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty(secretsManagerSecretResourceData))
@@ -882,19 +825,17 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDataContainerProperty,
     ) : ResourceDataContainerProperty {
-      public override fun localDeviceResourceData(): Any? =
-          unwrap(this).getLocalDeviceResourceData()
+      override fun localDeviceResourceData(): Any? = unwrap(this).getLocalDeviceResourceData()
 
-      public override fun localVolumeResourceData(): Any? =
-          unwrap(this).getLocalVolumeResourceData()
+      override fun localVolumeResourceData(): Any? = unwrap(this).getLocalVolumeResourceData()
 
-      public override fun s3MachineLearningModelResourceData(): Any? =
+      override fun s3MachineLearningModelResourceData(): Any? =
           unwrap(this).getS3MachineLearningModelResourceData()
 
-      public override fun sageMakerMachineLearningModelResourceData(): Any? =
+      override fun sageMakerMachineLearningModelResourceData(): Any? =
           unwrap(this).getSageMakerMachineLearningModelResourceData()
 
-      public override fun secretsManagerSecretResourceData(): Any? =
+      override fun secretsManagerSecretResourceData(): Any? =
           unwrap(this).getSecretsManagerSecretResourceData()
     }
 
@@ -924,11 +865,9 @@ public open class CfnResourceDefinition internal constructor(
     public fun groupPermission(): String
 
     public interface Builder {
-      public fun groupOwner(groupOwner: String) {
-      }
+      public fun groupOwner(groupOwner: String)
 
-      public fun groupPermission(groupPermission: String) {
-      }
+      public fun groupPermission(groupPermission: String)
     }
 
     private class BuilderImpl : Builder {
@@ -937,11 +876,11 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDownloadOwnerSettingProperty.builder()
 
-      public override fun groupOwner(groupOwner: String) {
+      override fun groupOwner(groupOwner: String) {
         cdkBuilder.groupOwner(groupOwner)
       }
 
-      public override fun groupPermission(groupPermission: String) {
+      override fun groupPermission(groupPermission: String) {
         cdkBuilder.groupPermission(groupPermission)
       }
 
@@ -954,9 +893,9 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.ResourceDownloadOwnerSettingProperty,
     ) : ResourceDownloadOwnerSettingProperty {
-      public override fun groupOwner(): String = unwrap(this).getGroupOwner()
+      override fun groupOwner(): String = unwrap(this).getGroupOwner()
 
-      public override fun groupPermission(): String = unwrap(this).getGroupPermission()
+      override fun groupPermission(): String = unwrap(this).getGroupPermission()
     }
 
     public companion object {
@@ -986,14 +925,11 @@ public open class CfnResourceDefinition internal constructor(
     public fun groupOwner(): String? = unwrap(this).getGroupOwner()
 
     public interface Builder {
-      public fun autoAddGroupOwner(autoAddGroupOwner: Boolean) {
-      }
+      public fun autoAddGroupOwner(autoAddGroupOwner: Boolean)
 
-      public fun autoAddGroupOwner(autoAddGroupOwner: IResolvable) {
-      }
+      public fun autoAddGroupOwner(autoAddGroupOwner: IResolvable)
 
-      public fun groupOwner(groupOwner: String) {
-      }
+      public fun groupOwner(groupOwner: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1002,15 +938,15 @@ public open class CfnResourceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty.builder()
 
-      public override fun autoAddGroupOwner(autoAddGroupOwner: Boolean) {
+      override fun autoAddGroupOwner(autoAddGroupOwner: Boolean) {
         cdkBuilder.autoAddGroupOwner(autoAddGroupOwner)
       }
 
-      public override fun autoAddGroupOwner(autoAddGroupOwner: IResolvable) {
+      override fun autoAddGroupOwner(autoAddGroupOwner: IResolvable) {
         cdkBuilder.autoAddGroupOwner(autoAddGroupOwner.let(IResolvable::unwrap))
       }
 
-      public override fun groupOwner(groupOwner: String) {
+      override fun groupOwner(groupOwner: String) {
         cdkBuilder.groupOwner(groupOwner)
       }
 
@@ -1023,9 +959,9 @@ public open class CfnResourceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnResourceDefinition.GroupOwnerSettingProperty,
     ) : GroupOwnerSettingProperty {
-      public override fun autoAddGroupOwner(): Any = unwrap(this).getAutoAddGroupOwner()
+      override fun autoAddGroupOwner(): Any = unwrap(this).getAutoAddGroupOwner()
 
-      public override fun groupOwner(): String? = unwrap(this).getGroupOwner()
+      override fun groupOwner(): String? = unwrap(this).getGroupOwner()
     }
 
     public companion object {

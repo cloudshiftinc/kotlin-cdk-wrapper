@@ -7,8 +7,7 @@ public interface ApiMappingAttributes {
   public fun apiMappingId(): String
 
   public interface Builder {
-    public fun apiMappingId(apiMappingId: String) {
-    }
+    public fun apiMappingId(apiMappingId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ApiMappingAttributes {
         software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes.builder()
 
-    public override fun apiMappingId(apiMappingId: String) {
+    override fun apiMappingId(apiMappingId: String) {
       cdkBuilder.apiMappingId(apiMappingId)
     }
 
@@ -27,7 +26,7 @@ public interface ApiMappingAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes,
   ) : ApiMappingAttributes {
-    public override fun apiMappingId(): String = unwrap(this).getApiMappingId()
+    override fun apiMappingId(): String = unwrap(this).getApiMappingId()
   }
 
   public companion object {

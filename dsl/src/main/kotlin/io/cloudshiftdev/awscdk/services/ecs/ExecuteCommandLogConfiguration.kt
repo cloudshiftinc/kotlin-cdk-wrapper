@@ -19,20 +19,15 @@ public interface ExecuteCommandLogConfiguration {
   public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
   public interface Builder {
-    public fun cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled: Boolean) {
-    }
+    public fun cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled: Boolean)
 
-    public fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
-    }
+    public fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup)
 
-    public fun s3Bucket(s3Bucket: IBucket) {
-    }
+    public fun s3Bucket(s3Bucket: IBucket)
 
-    public fun s3EncryptionEnabled(s3EncryptionEnabled: Boolean) {
-    }
+    public fun s3EncryptionEnabled(s3EncryptionEnabled: Boolean)
 
-    public fun s3KeyPrefix(s3KeyPrefix: String) {
-    }
+    public fun s3KeyPrefix(s3KeyPrefix: String)
   }
 
   private class BuilderImpl : Builder {
@@ -40,23 +35,23 @@ public interface ExecuteCommandLogConfiguration {
         software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration.Builder =
         software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration.builder()
 
-    public override fun cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled: Boolean) {
+    override fun cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled: Boolean) {
       cdkBuilder.cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled)
     }
 
-    public override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
+    override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
       cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun s3Bucket(s3Bucket: IBucket) {
+    override fun s3Bucket(s3Bucket: IBucket) {
       cdkBuilder.s3Bucket(s3Bucket.let(IBucket::unwrap))
     }
 
-    public override fun s3EncryptionEnabled(s3EncryptionEnabled: Boolean) {
+    override fun s3EncryptionEnabled(s3EncryptionEnabled: Boolean) {
       cdkBuilder.s3EncryptionEnabled(s3EncryptionEnabled)
     }
 
-    public override fun s3KeyPrefix(s3KeyPrefix: String) {
+    override fun s3KeyPrefix(s3KeyPrefix: String) {
       cdkBuilder.s3KeyPrefix(s3KeyPrefix)
     }
 
@@ -67,17 +62,17 @@ public interface ExecuteCommandLogConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration,
   ) : ExecuteCommandLogConfiguration {
-    public override fun cloudWatchEncryptionEnabled(): Boolean? =
+    override fun cloudWatchEncryptionEnabled(): Boolean? =
         unwrap(this).getCloudWatchEncryptionEnabled()
 
-    public override fun cloudWatchLogGroup(): ILogGroup? =
+    override fun cloudWatchLogGroup(): ILogGroup? =
         unwrap(this).getCloudWatchLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun s3Bucket(): IBucket? = unwrap(this).getS3Bucket()?.let(IBucket::wrap)
+    override fun s3Bucket(): IBucket? = unwrap(this).getS3Bucket()?.let(IBucket::wrap)
 
-    public override fun s3EncryptionEnabled(): Boolean? = unwrap(this).getS3EncryptionEnabled()
+    override fun s3EncryptionEnabled(): Boolean? = unwrap(this).getS3EncryptionEnabled()
 
-    public override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
+    override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
   }
 
   public companion object {

@@ -14,12 +14,12 @@ public interface IEventDestination {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.IEventDestination,
   ) : IEventDestination {
-    public override fun extensionUri(): String = unwrap(this).getExtensionUri()
+    override fun extensionUri(): String = unwrap(this).getExtensionUri()
 
-    public override fun policyDocument(): PolicyDocument? =
+    override fun policyDocument(): PolicyDocument? =
         unwrap(this).getPolicyDocument()?.let(PolicyDocument::wrap)
 
-    public override fun type(): SourceType = unwrap(this).getType().let(SourceType::wrap)
+    override fun type(): SourceType = unwrap(this).getType().let(SourceType::wrap)
   }
 
   public companion object {

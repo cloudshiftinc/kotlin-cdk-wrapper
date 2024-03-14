@@ -10,22 +10,20 @@ public interface CsvOptions {
   public fun headerList(): List<String> = unwrap(this).getHeaderList() ?: emptyList()
 
   public interface Builder {
-    public fun delimiter(delimiter: String) {
-    }
+    public fun delimiter(delimiter: String)
 
-    public fun headerList(headerList: List<String>) {
-    }
+    public fun headerList(headerList: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.CsvOptions.Builder =
         software.amazon.awscdk.services.dynamodb.CsvOptions.builder()
 
-    public override fun delimiter(delimiter: String) {
+    override fun delimiter(delimiter: String) {
       cdkBuilder.delimiter(delimiter)
     }
 
-    public override fun headerList(headerList: List<String>) {
+    override fun headerList(headerList: List<String>) {
       cdkBuilder.headerList(headerList)
     }
 
@@ -35,9 +33,9 @@ public interface CsvOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.CsvOptions,
   ) : CsvOptions {
-    public override fun delimiter(): String? = unwrap(this).getDelimiter()
+    override fun delimiter(): String? = unwrap(this).getDelimiter()
 
-    public override fun headerList(): List<String> = unwrap(this).getHeaderList() ?: emptyList()
+    override fun headerList(): List<String> = unwrap(this).getHeaderList() ?: emptyList()
   }
 
   public companion object {

@@ -29,11 +29,9 @@ public open class CfnBucketPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun bucket(bucket: String) {
-    }
+    public fun bucket(bucket: String)
 
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
   }
 
   private class BuilderImpl(
@@ -43,11 +41,11 @@ public open class CfnBucketPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.CfnBucketPolicy.Builder =
         software.amazon.awscdk.services.s3.CfnBucketPolicy.Builder.create(scope, id)
 
-    public override fun bucket(bucket: String) {
+    override fun bucket(bucket: String) {
       cdkBuilder.bucket(bucket)
     }
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 

@@ -83,32 +83,23 @@ public open class Role internal constructor(
       IRole = withoutPolicyUpdates(WithoutPolicyUpdatesOptions(options))
 
   public interface Builder {
-    public fun assumedBy(assumedBy: IPrincipal) {
-    }
+    public fun assumedBy(assumedBy: IPrincipal)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun externalIds(externalIds: List<String>) {
-    }
+    public fun externalIds(externalIds: List<String>)
 
-    public fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>) {
-    }
+    public fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>)
 
-    public fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-    }
+    public fun managedPolicies(managedPolicies: List<IManagedPolicy>)
 
-    public fun maxSessionDuration(maxSessionDuration: Duration) {
-    }
+    public fun maxSessionDuration(maxSessionDuration: Duration)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: IManagedPolicy)
 
-    public fun roleName(roleName: String) {
-    }
+    public fun roleName(roleName: String)
   }
 
   private class BuilderImpl(
@@ -118,39 +109,39 @@ public open class Role internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.Role.Builder =
         software.amazon.awscdk.services.iam.Role.Builder.create(scope, id)
 
-    public override fun assumedBy(assumedBy: IPrincipal) {
+    override fun assumedBy(assumedBy: IPrincipal) {
       cdkBuilder.assumedBy(assumedBy.let(IPrincipal::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun externalIds(externalIds: List<String>) {
+    override fun externalIds(externalIds: List<String>) {
       cdkBuilder.externalIds(externalIds)
     }
 
-    public override fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>) {
-      cdkBuilder.inlinePolicies(inlinePolicies.mapValues { PolicyDocument.unwrap(it.value)})
+    override fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>) {
+      cdkBuilder.inlinePolicies(inlinePolicies.mapValues{PolicyDocument.unwrap(it.value)})
     }
 
-    public override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
+    override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
       cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
     }
 
-    public override fun maxSessionDuration(maxSessionDuration: Duration) {
+    override fun maxSessionDuration(maxSessionDuration: Duration) {
       cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration::unwrap))
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
+    override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
     }
 
-    public override fun roleName(roleName: String) {
+    override fun roleName(roleName: String) {
       cdkBuilder.roleName(roleName)
     }
 

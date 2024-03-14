@@ -10,11 +10,9 @@ public interface CloudFormationTemplateConfig {
   public fun httpUrl(): String
 
   public interface Builder {
-    public fun assetBucket(assetBucket: IBucket) {
-    }
+    public fun assetBucket(assetBucket: IBucket)
 
-    public fun httpUrl(httpUrl: String) {
-    }
+    public fun httpUrl(httpUrl: String)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface CloudFormationTemplateConfig {
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig.Builder =
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig.builder()
 
-    public override fun assetBucket(assetBucket: IBucket) {
+    override fun assetBucket(assetBucket: IBucket) {
       cdkBuilder.assetBucket(assetBucket.let(IBucket::unwrap))
     }
 
-    public override fun httpUrl(httpUrl: String) {
+    override fun httpUrl(httpUrl: String) {
       cdkBuilder.httpUrl(httpUrl)
     }
 
@@ -38,9 +36,9 @@ public interface CloudFormationTemplateConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig,
   ) : CloudFormationTemplateConfig {
-    public override fun assetBucket(): IBucket? = unwrap(this).getAssetBucket()?.let(IBucket::wrap)
+    override fun assetBucket(): IBucket? = unwrap(this).getAssetBucket()?.let(IBucket::wrap)
 
-    public override fun httpUrl(): String = unwrap(this).getHttpUrl()
+    override fun httpUrl(): String = unwrap(this).getHttpUrl()
   }
 
   public companion object {

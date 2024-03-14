@@ -59,42 +59,32 @@ public open class WebSocketApi internal constructor(
 
   public interface Builder {
     public
-        fun apiKeySelectionExpression(apiKeySelectionExpression: WebSocketApiKeySelectionExpression) {
-    }
+        fun apiKeySelectionExpression(apiKeySelectionExpression: WebSocketApiKeySelectionExpression)
 
-    public fun apiName(apiName: String) {
-    }
+    public fun apiName(apiName: String)
 
-    public fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions) {
-    }
+    public fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c8481261f0d0b5b22f2484e1bf6df92e016beb803127615edc0bb99ffab26dd")
-    public fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit) {
-    }
+    public fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit)
 
-    public fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions) {
-    }
+    public fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("658fb1801d4908fefb4409e8a8144733a7a2b9c1a89b30c10509c532847209c1")
-    public fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions.Builder.() -> Unit) {
-    }
+    public fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions) {
-    }
+    public fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1dc1e815caf975e336a52d5223f2005704be9555aa0dce37203039ecdd5b08fa")
     public
-        fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit) {
-    }
+        fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit)
 
-    public fun routeSelectionExpression(routeSelectionExpression: String) {
-    }
+    public fun routeSelectionExpression(routeSelectionExpression: String)
   }
 
   private class BuilderImpl(
@@ -104,50 +94,48 @@ public open class WebSocketApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.WebSocketApi.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketApi.Builder.create(scope, id)
 
-    public override
+    override
         fun apiKeySelectionExpression(apiKeySelectionExpression: WebSocketApiKeySelectionExpression) {
       cdkBuilder.apiKeySelectionExpression(apiKeySelectionExpression.let(WebSocketApiKeySelectionExpression::unwrap))
     }
 
-    public override fun apiName(apiName: String) {
+    override fun apiName(apiName: String) {
       cdkBuilder.apiName(apiName)
     }
 
-    public override fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions) {
+    override fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions) {
       cdkBuilder.connectRouteOptions(connectRouteOptions.let(WebSocketRouteOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c8481261f0d0b5b22f2484e1bf6df92e016beb803127615edc0bb99ffab26dd")
-    public override
-        fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit): Unit
-        = connectRouteOptions(WebSocketRouteOptions(connectRouteOptions))
+    override fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit):
+        Unit = connectRouteOptions(WebSocketRouteOptions(connectRouteOptions))
 
-    public override fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions) {
+    override fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions) {
       cdkBuilder.defaultRouteOptions(defaultRouteOptions.let(WebSocketRouteOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("658fb1801d4908fefb4409e8a8144733a7a2b9c1a89b30c10509c532847209c1")
-    public override
-        fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions.Builder.() -> Unit): Unit
-        = defaultRouteOptions(WebSocketRouteOptions(defaultRouteOptions))
+    override fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions.Builder.() -> Unit):
+        Unit = defaultRouteOptions(WebSocketRouteOptions(defaultRouteOptions))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions) {
+    override fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions) {
       cdkBuilder.disconnectRouteOptions(disconnectRouteOptions.let(WebSocketRouteOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1dc1e815caf975e336a52d5223f2005704be9555aa0dce37203039ecdd5b08fa")
-    public override
+    override
         fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions.Builder.() -> Unit):
         Unit = disconnectRouteOptions(WebSocketRouteOptions(disconnectRouteOptions))
 
-    public override fun routeSelectionExpression(routeSelectionExpression: String) {
+    override fun routeSelectionExpression(routeSelectionExpression: String) {
       cdkBuilder.routeSelectionExpression(routeSelectionExpression)
     }
 

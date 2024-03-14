@@ -77,34 +77,25 @@ public open class CfnDetector internal constructor(
   }
 
   public interface Builder {
-    public fun dataSources(dataSources: IResolvable) {
-    }
+    public fun dataSources(dataSources: IResolvable)
 
-    public fun dataSources(dataSources: CFNDataSourceConfigurationsProperty) {
-    }
+    public fun dataSources(dataSources: CFNDataSourceConfigurationsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("12f3111304e64b8670160f76d2eb3865a3499096f6aab5133b06c3b39dec7d4d")
-    public fun dataSources(dataSources: CFNDataSourceConfigurationsProperty.Builder.() -> Unit) {
-    }
+    public fun dataSources(dataSources: CFNDataSourceConfigurationsProperty.Builder.() -> Unit)
 
-    public fun enable(enable: Boolean) {
-    }
+    public fun enable(enable: Boolean)
 
-    public fun enable(enable: IResolvable) {
-    }
+    public fun enable(enable: IResolvable)
 
-    public fun features(features: IResolvable) {
-    }
+    public fun features(features: IResolvable)
 
-    public fun features(features: List<Any>) {
-    }
+    public fun features(features: List<Any>)
 
-    public fun findingPublishingFrequency(findingPublishingFrequency: String) {
-    }
+    public fun findingPublishingFrequency(findingPublishingFrequency: String)
 
-    public fun tags(tags: List<TagItemProperty>) {
-    }
+    public fun tags(tags: List<TagItemProperty>)
   }
 
   private class BuilderImpl(
@@ -114,41 +105,40 @@ public open class CfnDetector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.guardduty.CfnDetector.Builder =
         software.amazon.awscdk.services.guardduty.CfnDetector.Builder.create(scope, id)
 
-    public override fun dataSources(dataSources: IResolvable) {
+    override fun dataSources(dataSources: IResolvable) {
       cdkBuilder.dataSources(dataSources.let(IResolvable::unwrap))
     }
 
-    public override fun dataSources(dataSources: CFNDataSourceConfigurationsProperty) {
+    override fun dataSources(dataSources: CFNDataSourceConfigurationsProperty) {
       cdkBuilder.dataSources(dataSources.let(CFNDataSourceConfigurationsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("12f3111304e64b8670160f76d2eb3865a3499096f6aab5133b06c3b39dec7d4d")
-    public override
-        fun dataSources(dataSources: CFNDataSourceConfigurationsProperty.Builder.() -> Unit): Unit =
-        dataSources(CFNDataSourceConfigurationsProperty(dataSources))
+    override fun dataSources(dataSources: CFNDataSourceConfigurationsProperty.Builder.() -> Unit):
+        Unit = dataSources(CFNDataSourceConfigurationsProperty(dataSources))
 
-    public override fun enable(enable: Boolean) {
+    override fun enable(enable: Boolean) {
       cdkBuilder.enable(enable)
     }
 
-    public override fun enable(enable: IResolvable) {
+    override fun enable(enable: IResolvable) {
       cdkBuilder.enable(enable.let(IResolvable::unwrap))
     }
 
-    public override fun features(features: IResolvable) {
+    override fun features(features: IResolvable) {
       cdkBuilder.features(features.let(IResolvable::unwrap))
     }
 
-    public override fun features(features: List<Any>) {
+    override fun features(features: List<Any>) {
       cdkBuilder.features(features)
     }
 
-    public override fun findingPublishingFrequency(findingPublishingFrequency: String) {
+    override fun findingPublishingFrequency(findingPublishingFrequency: String) {
       cdkBuilder.findingPublishingFrequency(findingPublishingFrequency)
     }
 
-    public override fun tags(tags: List<TagItemProperty>) {
+    override fun tags(tags: List<TagItemProperty>) {
       cdkBuilder.tags(tags.map(TagItemProperty::unwrap))
     }
 
@@ -180,11 +170,9 @@ public open class CfnDetector internal constructor(
     public fun enable(): Any
 
     public interface Builder {
-      public fun enable(enable: Boolean) {
-      }
+      public fun enable(enable: Boolean)
 
-      public fun enable(enable: IResolvable) {
-      }
+      public fun enable(enable: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -193,11 +181,11 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty.builder()
 
-      public override fun enable(enable: Boolean) {
+      override fun enable(enable: Boolean) {
         cdkBuilder.enable(enable)
       }
 
-      public override fun enable(enable: IResolvable) {
+      override fun enable(enable: IResolvable) {
         cdkBuilder.enable(enable.let(IResolvable::unwrap))
       }
 
@@ -210,7 +198,7 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty,
     ) : CFNS3LogsConfigurationProperty {
-      public override fun enable(): Any = unwrap(this).getEnable()
+      override fun enable(): Any = unwrap(this).getEnable()
     }
 
     public companion object {
@@ -241,39 +229,30 @@ public open class CfnDetector internal constructor(
     public fun s3Logs(): Any? = unwrap(this).getS3Logs()
 
     public interface Builder {
-      public fun kubernetes(kubernetes: IResolvable) {
-      }
+      public fun kubernetes(kubernetes: IResolvable)
 
-      public fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty) {
-      }
+      public fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da89073ca4a8da88eea36dbf6050555252d6cc3186da82a4552bb6b1a2baeca2")
-      public fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty.Builder.() -> Unit)
 
-      public fun malwareProtection(malwareProtection: IResolvable) {
-      }
+      public fun malwareProtection(malwareProtection: IResolvable)
 
-      public fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty) {
-      }
+      public fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e3effefbc4c0cc2723d3da80754a6a847ac438126eec9abed90532060d6d7936")
       public
-          fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3Logs(s3Logs: IResolvable) {
-      }
+      public fun s3Logs(s3Logs: IResolvable)
 
-      public fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty) {
-      }
+      public fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("711f6f15565c642dd31247863071fda2b82b1efbeadca4038b6baf110ab42212")
-      public fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -282,46 +261,44 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty.builder()
 
-      public override fun kubernetes(kubernetes: IResolvable) {
+      override fun kubernetes(kubernetes: IResolvable) {
         cdkBuilder.kubernetes(kubernetes.let(IResolvable::unwrap))
       }
 
-      public override fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty) {
+      override fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty) {
         cdkBuilder.kubernetes(kubernetes.let(CFNKubernetesConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da89073ca4a8da88eea36dbf6050555252d6cc3186da82a4552bb6b1a2baeca2")
-      public override
-          fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty.Builder.() -> Unit): Unit =
-          kubernetes(CFNKubernetesConfigurationProperty(kubernetes))
+      override fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty.Builder.() -> Unit):
+          Unit = kubernetes(CFNKubernetesConfigurationProperty(kubernetes))
 
-      public override fun malwareProtection(malwareProtection: IResolvable) {
+      override fun malwareProtection(malwareProtection: IResolvable) {
         cdkBuilder.malwareProtection(malwareProtection.let(IResolvable::unwrap))
       }
 
-      public override
-          fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty) {
+      override fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty) {
         cdkBuilder.malwareProtection(malwareProtection.let(CFNMalwareProtectionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e3effefbc4c0cc2723d3da80754a6a847ac438126eec9abed90532060d6d7936")
-      public override
+      override
           fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty.Builder.() -> Unit):
           Unit = malwareProtection(CFNMalwareProtectionConfigurationProperty(malwareProtection))
 
-      public override fun s3Logs(s3Logs: IResolvable) {
+      override fun s3Logs(s3Logs: IResolvable) {
         cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
       }
 
-      public override fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty) {
+      override fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty) {
         cdkBuilder.s3Logs(s3Logs.let(CFNS3LogsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("711f6f15565c642dd31247863071fda2b82b1efbeadca4038b6baf110ab42212")
-      public override fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty.Builder.() -> Unit): Unit =
           s3Logs(CFNS3LogsConfigurationProperty(s3Logs))
 
       public fun build():
@@ -333,11 +310,11 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty,
     ) : CFNDataSourceConfigurationsProperty {
-      public override fun kubernetes(): Any? = unwrap(this).getKubernetes()
+      override fun kubernetes(): Any? = unwrap(this).getKubernetes()
 
-      public override fun malwareProtection(): Any? = unwrap(this).getMalwareProtection()
+      override fun malwareProtection(): Any? = unwrap(this).getMalwareProtection()
 
-      public override fun s3Logs(): Any? = unwrap(this).getS3Logs()
+      override fun s3Logs(): Any? = unwrap(this).getS3Logs()
     }
 
     public companion object {
@@ -365,11 +342,9 @@ public open class CfnDetector internal constructor(
     public fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
 
     public interface Builder {
-      public fun ebsVolumes(ebsVolumes: Boolean) {
-      }
+      public fun ebsVolumes(ebsVolumes: Boolean)
 
-      public fun ebsVolumes(ebsVolumes: IResolvable) {
-      }
+      public fun ebsVolumes(ebsVolumes: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -378,11 +353,11 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty.builder()
 
-      public override fun ebsVolumes(ebsVolumes: Boolean) {
+      override fun ebsVolumes(ebsVolumes: Boolean) {
         cdkBuilder.ebsVolumes(ebsVolumes)
       }
 
-      public override fun ebsVolumes(ebsVolumes: IResolvable) {
+      override fun ebsVolumes(ebsVolumes: IResolvable) {
         cdkBuilder.ebsVolumes(ebsVolumes.let(IResolvable::unwrap))
       }
 
@@ -395,7 +370,7 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty,
     ) : CFNScanEc2InstanceWithFindingsConfigurationProperty {
-      public override fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
+      override fun ebsVolumes(): Any? = unwrap(this).getEbsVolumes()
     }
 
     public companion object {
@@ -425,11 +400,9 @@ public open class CfnDetector internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -437,11 +410,11 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.Builder =
           software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -452,9 +425,9 @@ public open class CfnDetector internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty,
     ) : TagItemProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -485,17 +458,13 @@ public open class CfnDetector internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun additionalConfiguration(additionalConfiguration: IResolvable) {
-      }
+      public fun additionalConfiguration(additionalConfiguration: IResolvable)
 
-      public fun additionalConfiguration(additionalConfiguration: List<Any>) {
-      }
+      public fun additionalConfiguration(additionalConfiguration: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -504,19 +473,19 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty.builder()
 
-      public override fun additionalConfiguration(additionalConfiguration: IResolvable) {
+      override fun additionalConfiguration(additionalConfiguration: IResolvable) {
         cdkBuilder.additionalConfiguration(additionalConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun additionalConfiguration(additionalConfiguration: List<Any>) {
+      override fun additionalConfiguration(additionalConfiguration: List<Any>) {
         cdkBuilder.additionalConfiguration(additionalConfiguration)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -529,12 +498,11 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty,
     ) : CFNFeatureConfigurationProperty {
-      public override fun additionalConfiguration(): Any? =
-          unwrap(this).getAdditionalConfiguration()
+      override fun additionalConfiguration(): Any? = unwrap(this).getAdditionalConfiguration()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -561,17 +529,14 @@ public open class CfnDetector internal constructor(
     public fun auditLogs(): Any
 
     public interface Builder {
-      public fun auditLogs(auditLogs: IResolvable) {
-      }
+      public fun auditLogs(auditLogs: IResolvable)
 
-      public fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty) {
-      }
+      public fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("738bdb5e869b53db911111402c113994a8d258edeea2fe650a66f07da18fedde")
       public
-          fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -580,17 +545,17 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty.builder()
 
-      public override fun auditLogs(auditLogs: IResolvable) {
+      override fun auditLogs(auditLogs: IResolvable) {
         cdkBuilder.auditLogs(auditLogs.let(IResolvable::unwrap))
       }
 
-      public override fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty) {
+      override fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty) {
         cdkBuilder.auditLogs(auditLogs.let(CFNKubernetesAuditLogsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("738bdb5e869b53db911111402c113994a8d258edeea2fe650a66f07da18fedde")
-      public override
+      override
           fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty.Builder.() -> Unit):
           Unit = auditLogs(CFNKubernetesAuditLogsConfigurationProperty(auditLogs))
 
@@ -603,7 +568,7 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty,
     ) : CFNKubernetesConfigurationProperty {
-      public override fun auditLogs(): Any = unwrap(this).getAuditLogs()
+      override fun auditLogs(): Any = unwrap(this).getAuditLogs()
     }
 
     public companion object {
@@ -631,18 +596,15 @@ public open class CfnDetector internal constructor(
     public fun scanEc2InstanceWithFindings(): Any? = unwrap(this).getScanEc2InstanceWithFindings()
 
     public interface Builder {
-      public fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: IResolvable) {
-      }
+      public fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: IResolvable)
 
       public
-          fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty) {
-      }
+          fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9afee8570cec8991e5a18f46e0d0e2cdb58c8a0d9e80e067afc42c9b29d028ed")
       public
-          fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -651,18 +613,18 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty.builder()
 
-      public override fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: IResolvable) {
+      override fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: IResolvable) {
         cdkBuilder.scanEc2InstanceWithFindings(scanEc2InstanceWithFindings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty) {
         cdkBuilder.scanEc2InstanceWithFindings(scanEc2InstanceWithFindings.let(CFNScanEc2InstanceWithFindingsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9afee8570cec8991e5a18f46e0d0e2cdb58c8a0d9e80e067afc42c9b29d028ed")
-      public override
+      override
           fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty.Builder.() -> Unit):
           Unit =
           scanEc2InstanceWithFindings(CFNScanEc2InstanceWithFindingsConfigurationProperty(scanEc2InstanceWithFindings))
@@ -676,7 +638,7 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty,
     ) : CFNMalwareProtectionConfigurationProperty {
-      public override fun scanEc2InstanceWithFindings(): Any? =
+      override fun scanEc2InstanceWithFindings(): Any? =
           unwrap(this).getScanEc2InstanceWithFindings()
     }
 
@@ -705,11 +667,9 @@ public open class CfnDetector internal constructor(
     public fun enable(): Any
 
     public interface Builder {
-      public fun enable(enable: Boolean) {
-      }
+      public fun enable(enable: Boolean)
 
-      public fun enable(enable: IResolvable) {
-      }
+      public fun enable(enable: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -718,11 +678,11 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty.builder()
 
-      public override fun enable(enable: Boolean) {
+      override fun enable(enable: Boolean) {
         cdkBuilder.enable(enable)
       }
 
-      public override fun enable(enable: IResolvable) {
+      override fun enable(enable: IResolvable) {
         cdkBuilder.enable(enable.let(IResolvable::unwrap))
       }
 
@@ -735,7 +695,7 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty,
     ) : CFNKubernetesAuditLogsConfigurationProperty {
-      public override fun enable(): Any = unwrap(this).getEnable()
+      override fun enable(): Any = unwrap(this).getEnable()
     }
 
     public companion object {
@@ -765,11 +725,9 @@ public open class CfnDetector internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -778,11 +736,11 @@ public open class CfnDetector internal constructor(
           =
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -795,9 +753,9 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty,
     ) : CFNFeatureAdditionalConfigurationProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {

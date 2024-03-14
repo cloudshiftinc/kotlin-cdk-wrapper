@@ -103,48 +103,35 @@ public open class CfnService internal constructor(
   }
 
   public interface Builder {
-    public fun applicationIdentifier(applicationIdentifier: String) {
-    }
+    public fun applicationIdentifier(applicationIdentifier: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun endpointType(endpointType: String) {
-    }
+    public fun endpointType(endpointType: String)
 
-    public fun environmentIdentifier(environmentIdentifier: String) {
-    }
+    public fun environmentIdentifier(environmentIdentifier: String)
 
-    public fun lambdaEndpoint(lambdaEndpoint: IResolvable) {
-    }
+    public fun lambdaEndpoint(lambdaEndpoint: IResolvable)
 
-    public fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty) {
-    }
+    public fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6231c439ee4d9e501fb467b9f8e57e8b658fd232b6b74ea00bfbce15775d6ea")
-    public fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty.Builder.() -> Unit) {
-    }
+    public fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun urlEndpoint(urlEndpoint: IResolvable) {
-    }
+    public fun urlEndpoint(urlEndpoint: IResolvable)
 
-    public fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty) {
-    }
+    public fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("039f05d004b16fc1e37d9d89a671b729283050b461d9b1154fec48fd0ce04faa")
-    public fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty.Builder.() -> Unit) {
-    }
+    public fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty.Builder.() -> Unit)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -154,58 +141,57 @@ public open class CfnService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.refactorspaces.CfnService.Builder =
         software.amazon.awscdk.services.refactorspaces.CfnService.Builder.create(scope, id)
 
-    public override fun applicationIdentifier(applicationIdentifier: String) {
+    override fun applicationIdentifier(applicationIdentifier: String) {
       cdkBuilder.applicationIdentifier(applicationIdentifier)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun endpointType(endpointType: String) {
+    override fun endpointType(endpointType: String) {
       cdkBuilder.endpointType(endpointType)
     }
 
-    public override fun environmentIdentifier(environmentIdentifier: String) {
+    override fun environmentIdentifier(environmentIdentifier: String) {
       cdkBuilder.environmentIdentifier(environmentIdentifier)
     }
 
-    public override fun lambdaEndpoint(lambdaEndpoint: IResolvable) {
+    override fun lambdaEndpoint(lambdaEndpoint: IResolvable) {
       cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty) {
+    override fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty) {
       cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(LambdaEndpointInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6231c439ee4d9e501fb467b9f8e57e8b658fd232b6b74ea00bfbce15775d6ea")
-    public override
-        fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty.Builder.() -> Unit): Unit =
-        lambdaEndpoint(LambdaEndpointInputProperty(lambdaEndpoint))
+    override fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty.Builder.() -> Unit):
+        Unit = lambdaEndpoint(LambdaEndpointInputProperty(lambdaEndpoint))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun urlEndpoint(urlEndpoint: IResolvable) {
+    override fun urlEndpoint(urlEndpoint: IResolvable) {
       cdkBuilder.urlEndpoint(urlEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty) {
+    override fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty) {
       cdkBuilder.urlEndpoint(urlEndpoint.let(UrlEndpointInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("039f05d004b16fc1e37d9d89a671b729283050b461d9b1154fec48fd0ce04faa")
-    public override fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty.Builder.() -> Unit): Unit
-        = urlEndpoint(UrlEndpointInputProperty(urlEndpoint))
+    override fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty.Builder.() -> Unit): Unit =
+        urlEndpoint(UrlEndpointInputProperty(urlEndpoint))
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -240,11 +226,9 @@ public open class CfnService internal constructor(
     public fun url(): String
 
     public interface Builder {
-      public fun healthUrl(healthUrl: String) {
-      }
+      public fun healthUrl(healthUrl: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -253,11 +237,11 @@ public open class CfnService internal constructor(
           =
           software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty.builder()
 
-      public override fun healthUrl(healthUrl: String) {
+      override fun healthUrl(healthUrl: String) {
         cdkBuilder.healthUrl(healthUrl)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -270,9 +254,9 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.refactorspaces.CfnService.UrlEndpointInputProperty,
     ) : UrlEndpointInputProperty {
-      public override fun healthUrl(): String? = unwrap(this).getHealthUrl()
+      override fun healthUrl(): String? = unwrap(this).getHealthUrl()
 
-      public override fun url(): String = unwrap(this).getUrl()
+      override fun url(): String = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -299,8 +283,7 @@ public open class CfnService internal constructor(
     public fun arn(): String
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -309,7 +292,7 @@ public open class CfnService internal constructor(
           =
           software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -322,7 +305,7 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.refactorspaces.CfnService.LambdaEndpointInputProperty,
     ) : LambdaEndpointInputProperty {
-      public override fun arn(): String = unwrap(this).getArn()
+      override fun arn(): String = unwrap(this).getArn()
     }
 
     public companion object {

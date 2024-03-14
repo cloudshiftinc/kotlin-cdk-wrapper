@@ -13,29 +13,26 @@ public interface BucketMetrics {
   public fun tagFilters(): Map<String, Any> = unwrap(this).getTagFilters() ?: emptyMap()
 
   public interface Builder {
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
 
-    public fun tagFilters(tagFilters: Map<String, Any>) {
-    }
+    public fun tagFilters(tagFilters: Map<String, Any>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.BucketMetrics.Builder =
         software.amazon.awscdk.services.s3.BucketMetrics.builder()
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
-    public override fun tagFilters(tagFilters: Map<String, Any>) {
+    override fun tagFilters(tagFilters: Map<String, Any>) {
       cdkBuilder.tagFilters(tagFilters)
     }
 
@@ -45,11 +42,11 @@ public interface BucketMetrics {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.BucketMetrics,
   ) : BucketMetrics {
-    public override fun id(): String = unwrap(this).getId()
+    override fun id(): String = unwrap(this).getId()
 
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
 
-    public override fun tagFilters(): Map<String, Any> = unwrap(this).getTagFilters() ?: emptyMap()
+    override fun tagFilters(): Map<String, Any> = unwrap(this).getTagFilters() ?: emptyMap()
   }
 
   public companion object {

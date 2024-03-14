@@ -108,41 +108,29 @@ public open class CfnLoadBalancer internal constructor(
 
   public interface Builder {
     public
-        fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String) {
-    }
+        fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String)
 
-    public fun ipAddressType(ipAddressType: String) {
-    }
+    public fun ipAddressType(ipAddressType: String)
 
-    public fun loadBalancerAttributes(loadBalancerAttributes: IResolvable) {
-    }
+    public fun loadBalancerAttributes(loadBalancerAttributes: IResolvable)
 
-    public fun loadBalancerAttributes(loadBalancerAttributes: List<Any>) {
-    }
+    public fun loadBalancerAttributes(loadBalancerAttributes: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun scheme(scheme: String) {
-    }
+    public fun scheme(scheme: String)
 
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun subnetMappings(subnetMappings: IResolvable) {
-    }
+    public fun subnetMappings(subnetMappings: IResolvable)
 
-    public fun subnetMappings(subnetMappings: List<Any>) {
-    }
+    public fun subnetMappings(subnetMappings: List<Any>)
 
-    public fun subnets(subnets: List<String>) {
-    }
+    public fun subnets(subnets: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -154,52 +142,52 @@ public open class CfnLoadBalancer internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.Builder.create(scope,
         id)
 
-    public override
+    override
         fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String) {
       cdkBuilder.enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic)
     }
 
-    public override fun ipAddressType(ipAddressType: String) {
+    override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
     }
 
-    public override fun loadBalancerAttributes(loadBalancerAttributes: IResolvable) {
+    override fun loadBalancerAttributes(loadBalancerAttributes: IResolvable) {
       cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun loadBalancerAttributes(loadBalancerAttributes: List<Any>) {
+    override fun loadBalancerAttributes(loadBalancerAttributes: List<Any>) {
       cdkBuilder.loadBalancerAttributes(loadBalancerAttributes)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun scheme(scheme: String) {
+    override fun scheme(scheme: String) {
       cdkBuilder.scheme(scheme)
     }
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun subnetMappings(subnetMappings: IResolvable) {
+    override fun subnetMappings(subnetMappings: IResolvable) {
       cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
     }
 
-    public override fun subnetMappings(subnetMappings: List<Any>) {
+    override fun subnetMappings(subnetMappings: List<Any>) {
       cdkBuilder.subnetMappings(subnetMappings)
     }
 
-    public override fun subnets(subnets: List<String>) {
+    override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -239,17 +227,13 @@ public open class CfnLoadBalancer internal constructor(
     public fun subnetId(): String
 
     public interface Builder {
-      public fun allocationId(allocationId: String) {
-      }
+      public fun allocationId(allocationId: String)
 
-      public fun iPv6Address(iPv6Address: String) {
-      }
+      public fun iPv6Address(iPv6Address: String)
 
-      public fun privateIPv4Address(privateIPv4Address: String) {
-      }
+      public fun privateIPv4Address(privateIPv4Address: String)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -258,19 +242,19 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty.builder()
 
-      public override fun allocationId(allocationId: String) {
+      override fun allocationId(allocationId: String) {
         cdkBuilder.allocationId(allocationId)
       }
 
-      public override fun iPv6Address(iPv6Address: String) {
+      override fun iPv6Address(iPv6Address: String) {
         cdkBuilder.iPv6Address(iPv6Address)
       }
 
-      public override fun privateIPv4Address(privateIPv4Address: String) {
+      override fun privateIPv4Address(privateIPv4Address: String) {
         cdkBuilder.privateIPv4Address(privateIPv4Address)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -283,13 +267,13 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty,
     ) : SubnetMappingProperty {
-      public override fun allocationId(): String? = unwrap(this).getAllocationId()
+      override fun allocationId(): String? = unwrap(this).getAllocationId()
 
-      public override fun iPv6Address(): String? = unwrap(this).getIPv6Address()
+      override fun iPv6Address(): String? = unwrap(this).getIPv6Address()
 
-      public override fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
+      override fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
 
-      public override fun subnetId(): String = unwrap(this).getSubnetId()
+      override fun subnetId(): String = unwrap(this).getSubnetId()
     }
 
     public companion object {
@@ -318,11 +302,9 @@ public open class CfnLoadBalancer internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -331,11 +313,11 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -348,9 +330,9 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty,
     ) : LoadBalancerAttributeProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

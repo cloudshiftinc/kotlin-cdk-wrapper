@@ -21,50 +21,44 @@ public interface FunctionAttributes {
   public fun skipPermissions(): Boolean? = unwrap(this).getSkipPermissions()
 
   public interface Builder {
-    public fun architecture(architecture: Architecture) {
-    }
+    public fun architecture(architecture: Architecture)
 
-    public fun functionArn(functionArn: String) {
-    }
+    public fun functionArn(functionArn: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun sameEnvironment(sameEnvironment: Boolean) {
-    }
+    public fun sameEnvironment(sameEnvironment: Boolean)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun skipPermissions(skipPermissions: Boolean) {
-    }
+    public fun skipPermissions(skipPermissions: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.FunctionAttributes.Builder =
         software.amazon.awscdk.services.lambda.FunctionAttributes.builder()
 
-    public override fun architecture(architecture: Architecture) {
+    override fun architecture(architecture: Architecture) {
       cdkBuilder.architecture(architecture.let(Architecture::unwrap))
     }
 
-    public override fun functionArn(functionArn: String) {
+    override fun functionArn(functionArn: String) {
       cdkBuilder.functionArn(functionArn)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun sameEnvironment(sameEnvironment: Boolean) {
+    override fun sameEnvironment(sameEnvironment: Boolean) {
       cdkBuilder.sameEnvironment(sameEnvironment)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun skipPermissions(skipPermissions: Boolean) {
+    override fun skipPermissions(skipPermissions: Boolean) {
       cdkBuilder.skipPermissions(skipPermissions)
     }
 
@@ -75,19 +69,19 @@ public interface FunctionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.FunctionAttributes,
   ) : FunctionAttributes {
-    public override fun architecture(): Architecture? =
+    override fun architecture(): Architecture? =
         unwrap(this).getArchitecture()?.let(Architecture::wrap)
 
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
-    public override fun sameEnvironment(): Boolean? = unwrap(this).getSameEnvironment()
+    override fun sameEnvironment(): Boolean? = unwrap(this).getSameEnvironment()
 
-    public override fun securityGroup(): ISecurityGroup? =
+    override fun securityGroup(): ISecurityGroup? =
         unwrap(this).getSecurityGroup()?.let(ISecurityGroup::wrap)
 
-    public override fun skipPermissions(): Boolean? = unwrap(this).getSkipPermissions()
+    override fun skipPermissions(): Boolean? = unwrap(this).getSkipPermissions()
   }
 
   public companion object {

@@ -98,44 +98,31 @@ public open class CfnReportDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun additionalArtifacts(additionalArtifacts: List<String>) {
-    }
+    public fun additionalArtifacts(additionalArtifacts: List<String>)
 
-    public fun additionalSchemaElements(additionalSchemaElements: List<String>) {
-    }
+    public fun additionalSchemaElements(additionalSchemaElements: List<String>)
 
-    public fun billingViewArn(billingViewArn: String) {
-    }
+    public fun billingViewArn(billingViewArn: String)
 
-    public fun compression(compression: String) {
-    }
+    public fun compression(compression: String)
 
-    public fun format(format: String) {
-    }
+    public fun format(format: String)
 
-    public fun refreshClosedReports(refreshClosedReports: Boolean) {
-    }
+    public fun refreshClosedReports(refreshClosedReports: Boolean)
 
-    public fun refreshClosedReports(refreshClosedReports: IResolvable) {
-    }
+    public fun refreshClosedReports(refreshClosedReports: IResolvable)
 
-    public fun reportName(reportName: String) {
-    }
+    public fun reportName(reportName: String)
 
-    public fun reportVersioning(reportVersioning: String) {
-    }
+    public fun reportVersioning(reportVersioning: String)
 
-    public fun s3Bucket(s3Bucket: String) {
-    }
+    public fun s3Bucket(s3Bucket: String)
 
-    public fun s3Prefix(s3Prefix: String) {
-    }
+    public fun s3Prefix(s3Prefix: String)
 
-    public fun s3Region(s3Region: String) {
-    }
+    public fun s3Region(s3Region: String)
 
-    public fun timeUnit(timeUnit: String) {
-    }
+    public fun timeUnit(timeUnit: String)
   }
 
   private class BuilderImpl(
@@ -145,55 +132,55 @@ public open class CfnReportDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cur.CfnReportDefinition.Builder =
         software.amazon.awscdk.services.cur.CfnReportDefinition.Builder.create(scope, id)
 
-    public override fun additionalArtifacts(additionalArtifacts: List<String>) {
+    override fun additionalArtifacts(additionalArtifacts: List<String>) {
       cdkBuilder.additionalArtifacts(additionalArtifacts)
     }
 
-    public override fun additionalSchemaElements(additionalSchemaElements: List<String>) {
+    override fun additionalSchemaElements(additionalSchemaElements: List<String>) {
       cdkBuilder.additionalSchemaElements(additionalSchemaElements)
     }
 
-    public override fun billingViewArn(billingViewArn: String) {
+    override fun billingViewArn(billingViewArn: String) {
       cdkBuilder.billingViewArn(billingViewArn)
     }
 
-    public override fun compression(compression: String) {
+    override fun compression(compression: String) {
       cdkBuilder.compression(compression)
     }
 
-    public override fun format(format: String) {
+    override fun format(format: String) {
       cdkBuilder.format(format)
     }
 
-    public override fun refreshClosedReports(refreshClosedReports: Boolean) {
+    override fun refreshClosedReports(refreshClosedReports: Boolean) {
       cdkBuilder.refreshClosedReports(refreshClosedReports)
     }
 
-    public override fun refreshClosedReports(refreshClosedReports: IResolvable) {
+    override fun refreshClosedReports(refreshClosedReports: IResolvable) {
       cdkBuilder.refreshClosedReports(refreshClosedReports.let(IResolvable::unwrap))
     }
 
-    public override fun reportName(reportName: String) {
+    override fun reportName(reportName: String) {
       cdkBuilder.reportName(reportName)
     }
 
-    public override fun reportVersioning(reportVersioning: String) {
+    override fun reportVersioning(reportVersioning: String) {
       cdkBuilder.reportVersioning(reportVersioning)
     }
 
-    public override fun s3Bucket(s3Bucket: String) {
+    override fun s3Bucket(s3Bucket: String) {
       cdkBuilder.s3Bucket(s3Bucket)
     }
 
-    public override fun s3Prefix(s3Prefix: String) {
+    override fun s3Prefix(s3Prefix: String) {
       cdkBuilder.s3Prefix(s3Prefix)
     }
 
-    public override fun s3Region(s3Region: String) {
+    override fun s3Region(s3Region: String) {
       cdkBuilder.s3Region(s3Region)
     }
 
-    public override fun timeUnit(timeUnit: String) {
+    override fun timeUnit(timeUnit: String) {
       cdkBuilder.timeUnit(timeUnit)
     }
 

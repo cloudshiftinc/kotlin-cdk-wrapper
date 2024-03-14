@@ -12,29 +12,26 @@ public interface CaaRecordValue {
   public fun `value`(): String
 
   public interface Builder {
-    public fun flag(flag: Number) {
-    }
+    public fun flag(flag: Number)
 
-    public fun tag(tag: CaaTag) {
-    }
+    public fun tag(tag: CaaTag)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.CaaRecordValue.Builder =
         software.amazon.awscdk.services.route53.CaaRecordValue.builder()
 
-    public override fun flag(flag: Number) {
+    override fun flag(flag: Number) {
       cdkBuilder.flag(flag)
     }
 
-    public override fun tag(tag: CaaTag) {
+    override fun tag(tag: CaaTag) {
       cdkBuilder.tag(tag.let(CaaTag::unwrap))
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -44,11 +41,11 @@ public interface CaaRecordValue {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.CaaRecordValue,
   ) : CaaRecordValue {
-    public override fun flag(): Number = unwrap(this).getFlag()
+    override fun flag(): Number = unwrap(this).getFlag()
 
-    public override fun tag(): CaaTag = unwrap(this).getTag().let(CaaTag::wrap)
+    override fun tag(): CaaTag = unwrap(this).getTag().let(CaaTag::wrap)
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

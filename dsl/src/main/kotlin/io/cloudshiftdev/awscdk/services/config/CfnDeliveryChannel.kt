@@ -70,33 +70,25 @@ public open class CfnDeliveryChannel internal constructor(
   }
 
   public interface Builder {
-    public fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: IResolvable) {
-    }
+    public fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: IResolvable)
 
     public
-        fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty) {
-    }
+        fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfb4bf1ae0c01b5dff6b36efd667367546cb7272c7922473fbf7054028e9e546")
     public
-        fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty.Builder.() -> Unit) {
-    }
+        fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun s3BucketName(s3BucketName: String) {
-    }
+    public fun s3BucketName(s3BucketName: String)
 
-    public fun s3KeyPrefix(s3KeyPrefix: String) {
-    }
+    public fun s3KeyPrefix(s3KeyPrefix: String)
 
-    public fun s3KmsKeyArn(s3KmsKeyArn: String) {
-    }
+    public fun s3KmsKeyArn(s3KmsKeyArn: String)
 
-    public fun snsTopicArn(snsTopicArn: String) {
-    }
+    public fun snsTopicArn(snsTopicArn: String)
   }
 
   private class BuilderImpl(
@@ -106,40 +98,39 @@ public open class CfnDeliveryChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.config.CfnDeliveryChannel.Builder =
         software.amazon.awscdk.services.config.CfnDeliveryChannel.Builder.create(scope, id)
 
-    public override
-        fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: IResolvable) {
+    override fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: IResolvable) {
       cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty) {
       cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(ConfigSnapshotDeliveryPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfb4bf1ae0c01b5dff6b36efd667367546cb7272c7922473fbf7054028e9e546")
-    public override
+    override
         fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty.Builder.() -> Unit):
         Unit =
         configSnapshotDeliveryProperties(ConfigSnapshotDeliveryPropertiesProperty(configSnapshotDeliveryProperties))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun s3BucketName(s3BucketName: String) {
+    override fun s3BucketName(s3BucketName: String) {
       cdkBuilder.s3BucketName(s3BucketName)
     }
 
-    public override fun s3KeyPrefix(s3KeyPrefix: String) {
+    override fun s3KeyPrefix(s3KeyPrefix: String) {
       cdkBuilder.s3KeyPrefix(s3KeyPrefix)
     }
 
-    public override fun s3KmsKeyArn(s3KmsKeyArn: String) {
+    override fun s3KmsKeyArn(s3KmsKeyArn: String) {
       cdkBuilder.s3KmsKeyArn(s3KmsKeyArn)
     }
 
-    public override fun snsTopicArn(snsTopicArn: String) {
+    override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
 
@@ -172,8 +163,7 @@ public open class CfnDeliveryChannel internal constructor(
     public fun deliveryFrequency(): String? = unwrap(this).getDeliveryFrequency()
 
     public interface Builder {
-      public fun deliveryFrequency(deliveryFrequency: String) {
-      }
+      public fun deliveryFrequency(deliveryFrequency: String)
     }
 
     private class BuilderImpl : Builder {
@@ -182,7 +172,7 @@ public open class CfnDeliveryChannel internal constructor(
           =
           software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty.builder()
 
-      public override fun deliveryFrequency(deliveryFrequency: String) {
+      override fun deliveryFrequency(deliveryFrequency: String) {
         cdkBuilder.deliveryFrequency(deliveryFrequency)
       }
 
@@ -195,7 +185,7 @@ public open class CfnDeliveryChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty,
     ) : ConfigSnapshotDeliveryPropertiesProperty {
-      public override fun deliveryFrequency(): String? = unwrap(this).getDeliveryFrequency()
+      override fun deliveryFrequency(): String? = unwrap(this).getDeliveryFrequency()
     }
 
     public companion object {

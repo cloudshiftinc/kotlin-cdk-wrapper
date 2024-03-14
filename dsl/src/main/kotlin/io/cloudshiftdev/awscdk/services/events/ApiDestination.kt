@@ -17,23 +17,17 @@ public open class ApiDestination internal constructor(
   public open fun connection(): IConnection = unwrap(this).getConnection().let(IConnection::wrap)
 
   public interface Builder {
-    public fun apiDestinationName(apiDestinationName: String) {
-    }
+    public fun apiDestinationName(apiDestinationName: String)
 
-    public fun connection(connection: IConnection) {
-    }
+    public fun connection(connection: IConnection)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun endpoint(endpoint: String) {
-    }
+    public fun endpoint(endpoint: String)
 
-    public fun httpMethod(httpMethod: HttpMethod) {
-    }
+    public fun httpMethod(httpMethod: HttpMethod)
 
-    public fun rateLimitPerSecond(rateLimitPerSecond: Number) {
-    }
+    public fun rateLimitPerSecond(rateLimitPerSecond: Number)
   }
 
   private class BuilderImpl(
@@ -43,27 +37,27 @@ public open class ApiDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.ApiDestination.Builder =
         software.amazon.awscdk.services.events.ApiDestination.Builder.create(scope, id)
 
-    public override fun apiDestinationName(apiDestinationName: String) {
+    override fun apiDestinationName(apiDestinationName: String) {
       cdkBuilder.apiDestinationName(apiDestinationName)
     }
 
-    public override fun connection(connection: IConnection) {
+    override fun connection(connection: IConnection) {
       cdkBuilder.connection(connection.let(IConnection::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun endpoint(endpoint: String) {
+    override fun endpoint(endpoint: String) {
       cdkBuilder.endpoint(endpoint)
     }
 
-    public override fun httpMethod(httpMethod: HttpMethod) {
+    override fun httpMethod(httpMethod: HttpMethod) {
       cdkBuilder.httpMethod(httpMethod.let(HttpMethod::unwrap))
     }
 
-    public override fun rateLimitPerSecond(rateLimitPerSecond: Number) {
+    override fun rateLimitPerSecond(rateLimitPerSecond: Number) {
       cdkBuilder.rateLimitPerSecond(rateLimitPerSecond)
     }
 

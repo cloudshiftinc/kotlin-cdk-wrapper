@@ -45,14 +45,11 @@ public open class CfnPlaybackKeyPair internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun publicKeyMaterial(publicKeyMaterial: String) {
-    }
+    public fun publicKeyMaterial(publicKeyMaterial: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnPlaybackKeyPair internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair.Builder =
         software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun publicKeyMaterial(publicKeyMaterial: String) {
+    override fun publicKeyMaterial(publicKeyMaterial: String) {
       cdkBuilder.publicKeyMaterial(publicKeyMaterial)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

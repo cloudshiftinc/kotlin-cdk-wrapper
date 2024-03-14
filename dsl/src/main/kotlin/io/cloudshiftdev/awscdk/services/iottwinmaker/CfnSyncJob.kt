@@ -53,17 +53,13 @@ public open class CfnSyncJob internal constructor(
   }
 
   public interface Builder {
-    public fun syncRole(syncRole: String) {
-    }
+    public fun syncRole(syncRole: String)
 
-    public fun syncSource(syncSource: String) {
-    }
+    public fun syncSource(syncSource: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun workspaceId(workspaceId: String) {
-    }
+    public fun workspaceId(workspaceId: String)
   }
 
   private class BuilderImpl(
@@ -73,19 +69,19 @@ public open class CfnSyncJob internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iottwinmaker.CfnSyncJob.Builder =
         software.amazon.awscdk.services.iottwinmaker.CfnSyncJob.Builder.create(scope, id)
 
-    public override fun syncRole(syncRole: String) {
+    override fun syncRole(syncRole: String) {
       cdkBuilder.syncRole(syncRole)
     }
 
-    public override fun syncSource(syncSource: String) {
+    override fun syncSource(syncSource: String) {
       cdkBuilder.syncSource(syncSource)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun workspaceId(workspaceId: String) {
+    override fun workspaceId(workspaceId: String) {
       cdkBuilder.workspaceId(workspaceId)
     }
 

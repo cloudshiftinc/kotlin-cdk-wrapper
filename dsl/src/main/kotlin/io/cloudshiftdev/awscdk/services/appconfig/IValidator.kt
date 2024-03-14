@@ -10,9 +10,9 @@ public interface IValidator {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.IValidator,
   ) : IValidator {
-    public override fun content(): String = unwrap(this).getContent()
+    override fun content(): String = unwrap(this).getContent()
 
-    public override fun type(): ValidatorType = unwrap(this).getType().let(ValidatorType::wrap)
+    override fun type(): ValidatorType = unwrap(this).getType().let(ValidatorType::wrap)
   }
 
   public companion object {

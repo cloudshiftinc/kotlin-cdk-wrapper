@@ -68,17 +68,13 @@ public open class CfnFirewallRuleGroup internal constructor(
   }
 
   public interface Builder {
-    public fun firewallRules(firewallRules: IResolvable) {
-    }
+    public fun firewallRules(firewallRules: IResolvable)
 
-    public fun firewallRules(firewallRules: List<Any>) {
-    }
+    public fun firewallRules(firewallRules: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -90,19 +86,19 @@ public open class CfnFirewallRuleGroup internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.Builder.create(scope,
         id)
 
-    public override fun firewallRules(firewallRules: IResolvable) {
+    override fun firewallRules(firewallRules: IResolvable) {
       cdkBuilder.firewallRules(firewallRules.let(IResolvable::unwrap))
     }
 
-    public override fun firewallRules(firewallRules: List<Any>) {
+    override fun firewallRules(firewallRules: List<Any>) {
       cdkBuilder.firewallRules(firewallRules)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -150,29 +146,21 @@ public open class CfnFirewallRuleGroup internal constructor(
     public fun qtype(): String? = unwrap(this).getQtype()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun blockOverrideDnsType(blockOverrideDnsType: String) {
-      }
+      public fun blockOverrideDnsType(blockOverrideDnsType: String)
 
-      public fun blockOverrideDomain(blockOverrideDomain: String) {
-      }
+      public fun blockOverrideDomain(blockOverrideDomain: String)
 
-      public fun blockOverrideTtl(blockOverrideTtl: Number) {
-      }
+      public fun blockOverrideTtl(blockOverrideTtl: Number)
 
-      public fun blockResponse(blockResponse: String) {
-      }
+      public fun blockResponse(blockResponse: String)
 
-      public fun firewallDomainListId(firewallDomainListId: String) {
-      }
+      public fun firewallDomainListId(firewallDomainListId: String)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun qtype(qtype: String) {
-      }
+      public fun qtype(qtype: String)
     }
 
     private class BuilderImpl : Builder {
@@ -181,35 +169,35 @@ public open class CfnFirewallRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun blockOverrideDnsType(blockOverrideDnsType: String) {
+      override fun blockOverrideDnsType(blockOverrideDnsType: String) {
         cdkBuilder.blockOverrideDnsType(blockOverrideDnsType)
       }
 
-      public override fun blockOverrideDomain(blockOverrideDomain: String) {
+      override fun blockOverrideDomain(blockOverrideDomain: String) {
         cdkBuilder.blockOverrideDomain(blockOverrideDomain)
       }
 
-      public override fun blockOverrideTtl(blockOverrideTtl: Number) {
+      override fun blockOverrideTtl(blockOverrideTtl: Number) {
         cdkBuilder.blockOverrideTtl(blockOverrideTtl)
       }
 
-      public override fun blockResponse(blockResponse: String) {
+      override fun blockResponse(blockResponse: String) {
         cdkBuilder.blockResponse(blockResponse)
       }
 
-      public override fun firewallDomainListId(firewallDomainListId: String) {
+      override fun firewallDomainListId(firewallDomainListId: String) {
         cdkBuilder.firewallDomainListId(firewallDomainListId)
       }
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun qtype(qtype: String) {
+      override fun qtype(qtype: String) {
         cdkBuilder.qtype(qtype)
       }
 
@@ -222,21 +210,21 @@ public open class CfnFirewallRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup.FirewallRuleProperty,
     ) : FirewallRuleProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
 
-      public override fun blockOverrideDnsType(): String? = unwrap(this).getBlockOverrideDnsType()
+      override fun blockOverrideDnsType(): String? = unwrap(this).getBlockOverrideDnsType()
 
-      public override fun blockOverrideDomain(): String? = unwrap(this).getBlockOverrideDomain()
+      override fun blockOverrideDomain(): String? = unwrap(this).getBlockOverrideDomain()
 
-      public override fun blockOverrideTtl(): Number? = unwrap(this).getBlockOverrideTtl()
+      override fun blockOverrideTtl(): Number? = unwrap(this).getBlockOverrideTtl()
 
-      public override fun blockResponse(): String? = unwrap(this).getBlockResponse()
+      override fun blockResponse(): String? = unwrap(this).getBlockResponse()
 
-      public override fun firewallDomainListId(): String = unwrap(this).getFirewallDomainListId()
+      override fun firewallDomainListId(): String = unwrap(this).getFirewallDomainListId()
 
-      public override fun priority(): Number = unwrap(this).getPriority()
+      override fun priority(): Number = unwrap(this).getPriority()
 
-      public override fun qtype(): String? = unwrap(this).getQtype()
+      override fun qtype(): String? = unwrap(this).getQtype()
     }
 
     public companion object {

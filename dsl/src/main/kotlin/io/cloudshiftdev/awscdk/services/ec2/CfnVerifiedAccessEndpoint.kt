@@ -163,76 +163,55 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun applicationDomain(applicationDomain: String) {
-    }
+    public fun applicationDomain(applicationDomain: String)
 
-    public fun attachmentType(attachmentType: String) {
-    }
+    public fun attachmentType(attachmentType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainCertificateArn(domainCertificateArn: String) {
-    }
+    public fun domainCertificateArn(domainCertificateArn: String)
 
-    public fun endpointDomainPrefix(endpointDomainPrefix: String) {
-    }
+    public fun endpointDomainPrefix(endpointDomainPrefix: String)
 
-    public fun endpointType(endpointType: String) {
-    }
+    public fun endpointType(endpointType: String)
 
-    public fun loadBalancerOptions(loadBalancerOptions: IResolvable) {
-    }
+    public fun loadBalancerOptions(loadBalancerOptions: IResolvable)
 
-    public fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty) {
-    }
+    public fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("143e30768e84ff117f0de95a9204553a81b007de64b519d78dda6c2e926011c5")
     public
-        fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty.Builder.() -> Unit) {
-    }
+        fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty.Builder.() -> Unit)
 
-    public fun networkInterfaceOptions(networkInterfaceOptions: IResolvable) {
-    }
+    public fun networkInterfaceOptions(networkInterfaceOptions: IResolvable)
 
-    public fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty) {
-    }
+    public fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93b2625a3c0c0e0f890aae64cb437a3d456fd501658d5fff8b2c449e92f2d719")
     public
-        fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty.Builder.() -> Unit) {
-    }
+        fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty.Builder.() -> Unit)
 
-    public fun policyDocument(policyDocument: String) {
-    }
+    public fun policyDocument(policyDocument: String)
 
-    public fun policyEnabled(policyEnabled: Boolean) {
-    }
+    public fun policyEnabled(policyEnabled: Boolean)
 
-    public fun policyEnabled(policyEnabled: IResolvable) {
-    }
+    public fun policyEnabled(policyEnabled: IResolvable)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun sseSpecification(sseSpecification: IResolvable) {
-    }
+    public fun sseSpecification(sseSpecification: IResolvable)
 
-    public fun sseSpecification(sseSpecification: SseSpecificationProperty) {
-    }
+    public fun sseSpecification(sseSpecification: SseSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("90791316987fd26f73cbd2cfebc78c4966a8f66169472336106115aafd42b831")
-    public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit) {
-    }
+    public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun verifiedAccessGroupId(verifiedAccessGroupId: String) {
-    }
+    public fun verifiedAccessGroupId(verifiedAccessGroupId: String)
   }
 
   private class BuilderImpl(
@@ -242,94 +221,92 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.Builder =
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.Builder.create(scope, id)
 
-    public override fun applicationDomain(applicationDomain: String) {
+    override fun applicationDomain(applicationDomain: String) {
       cdkBuilder.applicationDomain(applicationDomain)
     }
 
-    public override fun attachmentType(attachmentType: String) {
+    override fun attachmentType(attachmentType: String) {
       cdkBuilder.attachmentType(attachmentType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainCertificateArn(domainCertificateArn: String) {
+    override fun domainCertificateArn(domainCertificateArn: String) {
       cdkBuilder.domainCertificateArn(domainCertificateArn)
     }
 
-    public override fun endpointDomainPrefix(endpointDomainPrefix: String) {
+    override fun endpointDomainPrefix(endpointDomainPrefix: String) {
       cdkBuilder.endpointDomainPrefix(endpointDomainPrefix)
     }
 
-    public override fun endpointType(endpointType: String) {
+    override fun endpointType(endpointType: String) {
       cdkBuilder.endpointType(endpointType)
     }
 
-    public override fun loadBalancerOptions(loadBalancerOptions: IResolvable) {
+    override fun loadBalancerOptions(loadBalancerOptions: IResolvable) {
       cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(IResolvable::unwrap))
     }
 
-    public override fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty) {
+    override fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty) {
       cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(LoadBalancerOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("143e30768e84ff117f0de95a9204553a81b007de64b519d78dda6c2e926011c5")
-    public override
+    override
         fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty.Builder.() -> Unit):
         Unit = loadBalancerOptions(LoadBalancerOptionsProperty(loadBalancerOptions))
 
-    public override fun networkInterfaceOptions(networkInterfaceOptions: IResolvable) {
+    override fun networkInterfaceOptions(networkInterfaceOptions: IResolvable) {
       cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty) {
+    override fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty) {
       cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(NetworkInterfaceOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93b2625a3c0c0e0f890aae64cb437a3d456fd501658d5fff8b2c449e92f2d719")
-    public override
+    override
         fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty.Builder.() -> Unit):
         Unit = networkInterfaceOptions(NetworkInterfaceOptionsProperty(networkInterfaceOptions))
 
-    public override fun policyDocument(policyDocument: String) {
+    override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyEnabled(policyEnabled: Boolean) {
+    override fun policyEnabled(policyEnabled: Boolean) {
       cdkBuilder.policyEnabled(policyEnabled)
     }
 
-    public override fun policyEnabled(policyEnabled: IResolvable) {
+    override fun policyEnabled(policyEnabled: IResolvable) {
       cdkBuilder.policyEnabled(policyEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun sseSpecification(sseSpecification: IResolvable) {
+    override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
+    override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
       cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("90791316987fd26f73cbd2cfebc78c4966a8f66169472336106115aafd42b831")
-    public override
-        fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit): Unit =
-        sseSpecification(SseSpecificationProperty(sseSpecification))
+    override fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit):
+        Unit = sseSpecification(SseSpecificationProperty(sseSpecification))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun verifiedAccessGroupId(verifiedAccessGroupId: String) {
+    override fun verifiedAccessGroupId(verifiedAccessGroupId: String) {
       cdkBuilder.verifiedAccessGroupId(verifiedAccessGroupId)
     }
 
@@ -366,14 +343,11 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     public fun protocol(): String? = unwrap(this).getProtocol()
 
     public interface Builder {
-      public fun networkInterfaceId(networkInterfaceId: String) {
-      }
+      public fun networkInterfaceId(networkInterfaceId: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -382,15 +356,15 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.builder()
 
-      public override fun networkInterfaceId(networkInterfaceId: String) {
+      override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -403,11 +377,11 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty,
     ) : NetworkInterfaceOptionsProperty {
-      public override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
     }
 
     public companion object {
@@ -436,14 +410,11 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
-      }
+      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean)
 
-      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
-      }
+      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -452,15 +423,15 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty.builder()
 
-      public override fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
+      override fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
         cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled)
       }
 
-      public override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
+      override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
         cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -473,10 +444,9 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty,
     ) : SseSpecificationProperty {
-      public override fun customerManagedKeyEnabled(): Any? =
-          unwrap(this).getCustomerManagedKeyEnabled()
+      override fun customerManagedKeyEnabled(): Any? = unwrap(this).getCustomerManagedKeyEnabled()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
@@ -509,17 +479,13 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun loadBalancerArn(loadBalancerArn: String) {
-      }
+      public fun loadBalancerArn(loadBalancerArn: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -528,19 +494,19 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.builder()
 
-      public override fun loadBalancerArn(loadBalancerArn: String) {
+      override fun loadBalancerArn(loadBalancerArn: String) {
         cdkBuilder.loadBalancerArn(loadBalancerArn)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -553,13 +519,13 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty,
     ) : LoadBalancerOptionsProperty {
-      public override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+      override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {

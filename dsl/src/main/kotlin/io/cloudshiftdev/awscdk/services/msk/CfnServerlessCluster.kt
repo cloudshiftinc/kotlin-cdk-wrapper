@@ -66,29 +66,22 @@ public open class CfnServerlessCluster internal constructor(
   }
 
   public interface Builder {
-    public fun clientAuthentication(clientAuthentication: IResolvable) {
-    }
+    public fun clientAuthentication(clientAuthentication: IResolvable)
 
-    public fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty) {
-    }
+    public fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc6ddd365d03cf7342a5451145f746ae7a22b32387a6f891094210535c9d63b7")
     public
-        fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty.Builder.() -> Unit) {
-    }
+        fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty.Builder.() -> Unit)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun vpcConfigs(vpcConfigs: IResolvable) {
-    }
+    public fun vpcConfigs(vpcConfigs: IResolvable)
 
-    public fun vpcConfigs(vpcConfigs: List<Any>) {
-    }
+    public fun vpcConfigs(vpcConfigs: List<Any>)
   }
 
   private class BuilderImpl(
@@ -98,33 +91,33 @@ public open class CfnServerlessCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.msk.CfnServerlessCluster.Builder =
         software.amazon.awscdk.services.msk.CfnServerlessCluster.Builder.create(scope, id)
 
-    public override fun clientAuthentication(clientAuthentication: IResolvable) {
+    override fun clientAuthentication(clientAuthentication: IResolvable) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable::unwrap))
     }
 
-    public override fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty) {
+    override fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty) {
       cdkBuilder.clientAuthentication(clientAuthentication.let(ClientAuthenticationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc6ddd365d03cf7342a5451145f746ae7a22b32387a6f891094210535c9d63b7")
-    public override
+    override
         fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty.Builder.() -> Unit):
         Unit = clientAuthentication(ClientAuthenticationProperty(clientAuthentication))
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun vpcConfigs(vpcConfigs: IResolvable) {
+    override fun vpcConfigs(vpcConfigs: IResolvable) {
       cdkBuilder.vpcConfigs(vpcConfigs.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfigs(vpcConfigs: List<Any>) {
+    override fun vpcConfigs(vpcConfigs: List<Any>) {
       cdkBuilder.vpcConfigs(vpcConfigs)
     }
 
@@ -159,11 +152,9 @@ public open class CfnServerlessCluster internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun securityGroups(securityGroups: List<String>) {
-      }
+      public fun securityGroups(securityGroups: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -171,11 +162,11 @@ public open class CfnServerlessCluster internal constructor(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty.builder()
 
-      public override fun securityGroups(securityGroups: List<String>) {
+      override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -187,10 +178,9 @@ public open class CfnServerlessCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?:
-          emptyList()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -217,16 +207,13 @@ public open class CfnServerlessCluster internal constructor(
     public fun iam(): Any
 
     public interface Builder {
-      public fun iam(iam: IResolvable) {
-      }
+      public fun iam(iam: IResolvable)
 
-      public fun iam(iam: IamProperty) {
-      }
+      public fun iam(iam: IamProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
-      public fun iam(iam: IamProperty.Builder.() -> Unit) {
-      }
+      public fun iam(iam: IamProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -234,17 +221,17 @@ public open class CfnServerlessCluster internal constructor(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.Builder =
           software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty.builder()
 
-      public override fun iam(iam: IResolvable) {
+      override fun iam(iam: IResolvable) {
         cdkBuilder.iam(iam.let(IResolvable::unwrap))
       }
 
-      public override fun iam(iam: IamProperty) {
+      override fun iam(iam: IamProperty) {
         cdkBuilder.iam(iam.let(IamProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c34c9bf0119fd310be992cabba59f51a54b78c65b04929f9828e945991a85a1f")
-      public override fun iam(iam: IamProperty.Builder.() -> Unit): Unit = iam(IamProperty(iam))
+      override fun iam(iam: IamProperty.Builder.() -> Unit): Unit = iam(IamProperty(iam))
 
       public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty =
           cdkBuilder.build()
@@ -253,7 +240,7 @@ public open class CfnServerlessCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.SaslProperty,
     ) : SaslProperty {
-      public override fun iam(): Any = unwrap(this).getIam()
+      override fun iam(): Any = unwrap(this).getIam()
     }
 
     public companion object {
@@ -280,11 +267,9 @@ public open class CfnServerlessCluster internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -292,11 +277,11 @@ public open class CfnServerlessCluster internal constructor(
           software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.Builder =
           software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -307,7 +292,7 @@ public open class CfnServerlessCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty,
     ) : IamProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -334,16 +319,13 @@ public open class CfnServerlessCluster internal constructor(
     public fun sasl(): Any
 
     public interface Builder {
-      public fun sasl(sasl: IResolvable) {
-      }
+      public fun sasl(sasl: IResolvable)
 
-      public fun sasl(sasl: SaslProperty) {
-      }
+      public fun sasl(sasl: SaslProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25f43126068a4cef9e1fa0c00143bd78f445f833d035b8763d66db2835fd7a87")
-      public fun sasl(sasl: SaslProperty.Builder.() -> Unit) {
-      }
+      public fun sasl(sasl: SaslProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -352,18 +334,17 @@ public open class CfnServerlessCluster internal constructor(
           =
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty.builder()
 
-      public override fun sasl(sasl: IResolvable) {
+      override fun sasl(sasl: IResolvable) {
         cdkBuilder.sasl(sasl.let(IResolvable::unwrap))
       }
 
-      public override fun sasl(sasl: SaslProperty) {
+      override fun sasl(sasl: SaslProperty) {
         cdkBuilder.sasl(sasl.let(SaslProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25f43126068a4cef9e1fa0c00143bd78f445f833d035b8763d66db2835fd7a87")
-      public override fun sasl(sasl: SaslProperty.Builder.() -> Unit): Unit =
-          sasl(SaslProperty(sasl))
+      override fun sasl(sasl: SaslProperty.Builder.() -> Unit): Unit = sasl(SaslProperty(sasl))
 
       public fun build():
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty =
@@ -374,7 +355,7 @@ public open class CfnServerlessCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.msk.CfnServerlessCluster.ClientAuthenticationProperty,
     ) : ClientAuthenticationProperty {
-      public override fun sasl(): Any = unwrap(this).getSasl()
+      override fun sasl(): Any = unwrap(this).getSasl()
     }
 
     public companion object {

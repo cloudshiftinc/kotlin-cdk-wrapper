@@ -93,42 +93,31 @@ public open class CfnRule internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: IResolvable) {
-    }
+    public fun action(action: IResolvable)
 
-    public fun action(action: ActionProperty) {
-    }
+    public fun action(action: ActionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0cdfa0dc66bc15dc2277561cb0cc0da120c71b67f6f3561f6de721c39cd897b2")
-    public fun action(action: ActionProperty.Builder.() -> Unit) {
-    }
+    public fun action(action: ActionProperty.Builder.() -> Unit)
 
-    public fun listenerIdentifier(listenerIdentifier: String) {
-    }
+    public fun listenerIdentifier(listenerIdentifier: String)
 
-    public fun match(match: IResolvable) {
-    }
+    public fun match(match: IResolvable)
 
-    public fun match(match: MatchProperty) {
-    }
+    public fun match(match: MatchProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9695a756ba1a6109e12c8b356ec6e7eedda0c35214677257b0f458ff02af6971")
-    public fun match(match: MatchProperty.Builder.() -> Unit) {
-    }
+    public fun match(match: MatchProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun serviceIdentifier(serviceIdentifier: String) {
-    }
+    public fun serviceIdentifier(serviceIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -138,49 +127,48 @@ public open class CfnRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.vpclattice.CfnRule.Builder =
         software.amazon.awscdk.services.vpclattice.CfnRule.Builder.create(scope, id)
 
-    public override fun action(action: IResolvable) {
+    override fun action(action: IResolvable) {
       cdkBuilder.action(action.let(IResolvable::unwrap))
     }
 
-    public override fun action(action: ActionProperty) {
+    override fun action(action: ActionProperty) {
       cdkBuilder.action(action.let(ActionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0cdfa0dc66bc15dc2277561cb0cc0da120c71b67f6f3561f6de721c39cd897b2")
-    public override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
+    override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
         action(ActionProperty(action))
 
-    public override fun listenerIdentifier(listenerIdentifier: String) {
+    override fun listenerIdentifier(listenerIdentifier: String) {
       cdkBuilder.listenerIdentifier(listenerIdentifier)
     }
 
-    public override fun match(match: IResolvable) {
+    override fun match(match: IResolvable) {
       cdkBuilder.match(match.let(IResolvable::unwrap))
     }
 
-    public override fun match(match: MatchProperty) {
+    override fun match(match: MatchProperty) {
       cdkBuilder.match(match.let(MatchProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9695a756ba1a6109e12c8b356ec6e7eedda0c35214677257b0f458ff02af6971")
-    public override fun match(match: MatchProperty.Builder.() -> Unit): Unit =
-        match(MatchProperty(match))
+    override fun match(match: MatchProperty.Builder.() -> Unit): Unit = match(MatchProperty(match))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun serviceIdentifier(serviceIdentifier: String) {
+    override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -214,27 +202,21 @@ public open class CfnRule internal constructor(
     public fun forward(): Any? = unwrap(this).getForward()
 
     public interface Builder {
-      public fun fixedResponse(fixedResponse: IResolvable) {
-      }
+      public fun fixedResponse(fixedResponse: IResolvable)
 
-      public fun fixedResponse(fixedResponse: FixedResponseProperty) {
-      }
+      public fun fixedResponse(fixedResponse: FixedResponseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("df1da1bf9c6b9ee1fb3ff32972e833de1241e802607d2c9b9e68ad469a86fce5")
-      public fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit) {
-      }
+      public fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit)
 
-      public fun forward(forward: IResolvable) {
-      }
+      public fun forward(forward: IResolvable)
 
-      public fun forward(forward: ForwardProperty) {
-      }
+      public fun forward(forward: ForwardProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fe455445f49766a9458412bdf9461a35c665b90503285f546ac9908f8fcdd8e9")
-      public fun forward(forward: ForwardProperty.Builder.() -> Unit) {
-      }
+      public fun forward(forward: ForwardProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -242,30 +224,30 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty.builder()
 
-      public override fun fixedResponse(fixedResponse: IResolvable) {
+      override fun fixedResponse(fixedResponse: IResolvable) {
         cdkBuilder.fixedResponse(fixedResponse.let(IResolvable::unwrap))
       }
 
-      public override fun fixedResponse(fixedResponse: FixedResponseProperty) {
+      override fun fixedResponse(fixedResponse: FixedResponseProperty) {
         cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("df1da1bf9c6b9ee1fb3ff32972e833de1241e802607d2c9b9e68ad469a86fce5")
-      public override fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit):
-          Unit = fixedResponse(FixedResponseProperty(fixedResponse))
+      override fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit): Unit =
+          fixedResponse(FixedResponseProperty(fixedResponse))
 
-      public override fun forward(forward: IResolvable) {
+      override fun forward(forward: IResolvable) {
         cdkBuilder.forward(forward.let(IResolvable::unwrap))
       }
 
-      public override fun forward(forward: ForwardProperty) {
+      override fun forward(forward: ForwardProperty) {
         cdkBuilder.forward(forward.let(ForwardProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fe455445f49766a9458412bdf9461a35c665b90503285f546ac9908f8fcdd8e9")
-      public override fun forward(forward: ForwardProperty.Builder.() -> Unit): Unit =
+      override fun forward(forward: ForwardProperty.Builder.() -> Unit): Unit =
           forward(ForwardProperty(forward))
 
       public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty =
@@ -275,9 +257,9 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ActionProperty,
     ) : ActionProperty {
-      public override fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
+      override fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
 
-      public override fun forward(): Any? = unwrap(this).getForward()
+      override fun forward(): Any? = unwrap(this).getForward()
     }
 
     public companion object {
@@ -308,25 +290,19 @@ public open class CfnRule internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun caseSensitive(caseSensitive: Boolean) {
-      }
+      public fun caseSensitive(caseSensitive: Boolean)
 
-      public fun caseSensitive(caseSensitive: IResolvable) {
-      }
+      public fun caseSensitive(caseSensitive: IResolvable)
 
-      public fun match(match: IResolvable) {
-      }
+      public fun match(match: IResolvable)
 
-      public fun match(match: HeaderMatchTypeProperty) {
-      }
+      public fun match(match: HeaderMatchTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("74f1fa1344a5fe6e95184685e8bc22efdb4b10d412031998a58e82f907101084")
-      public fun match(match: HeaderMatchTypeProperty.Builder.() -> Unit) {
-      }
+      public fun match(match: HeaderMatchTypeProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -334,28 +310,28 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty.builder()
 
-      public override fun caseSensitive(caseSensitive: Boolean) {
+      override fun caseSensitive(caseSensitive: Boolean) {
         cdkBuilder.caseSensitive(caseSensitive)
       }
 
-      public override fun caseSensitive(caseSensitive: IResolvable) {
+      override fun caseSensitive(caseSensitive: IResolvable) {
         cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
       }
 
-      public override fun match(match: IResolvable) {
+      override fun match(match: IResolvable) {
         cdkBuilder.match(match.let(IResolvable::unwrap))
       }
 
-      public override fun match(match: HeaderMatchTypeProperty) {
+      override fun match(match: HeaderMatchTypeProperty) {
         cdkBuilder.match(match.let(HeaderMatchTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("74f1fa1344a5fe6e95184685e8bc22efdb4b10d412031998a58e82f907101084")
-      public override fun match(match: HeaderMatchTypeProperty.Builder.() -> Unit): Unit =
+      override fun match(match: HeaderMatchTypeProperty.Builder.() -> Unit): Unit =
           match(HeaderMatchTypeProperty(match))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -367,11 +343,11 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchProperty,
     ) : HeaderMatchProperty {
-      public override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+      override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
 
-      public override fun match(): Any = unwrap(this).getMatch()
+      override fun match(): Any = unwrap(this).getMatch()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -402,14 +378,11 @@ public open class CfnRule internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun contains(contains: String) {
-      }
+      public fun contains(contains: String)
 
-      public fun exact(exact: String) {
-      }
+      public fun exact(exact: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -417,15 +390,15 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty.builder()
 
-      public override fun contains(contains: String) {
+      override fun contains(contains: String) {
         cdkBuilder.contains(contains)
       }
 
-      public override fun exact(exact: String) {
+      override fun exact(exact: String) {
         cdkBuilder.exact(exact)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -437,11 +410,11 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnRule.HeaderMatchTypeProperty,
     ) : HeaderMatchTypeProperty {
-      public override fun contains(): String? = unwrap(this).getContains()
+      override fun contains(): String? = unwrap(this).getContains()
 
-      public override fun exact(): String? = unwrap(this).getExact()
+      override fun exact(): String? = unwrap(this).getExact()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -468,8 +441,7 @@ public open class CfnRule internal constructor(
     public fun statusCode(): Number
 
     public interface Builder {
-      public fun statusCode(statusCode: Number) {
-      }
+      public fun statusCode(statusCode: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -477,7 +449,7 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty.builder()
 
-      public override fun statusCode(statusCode: Number) {
+      override fun statusCode(statusCode: Number) {
         cdkBuilder.statusCode(statusCode)
       }
 
@@ -489,7 +461,7 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnRule.FixedResponseProperty,
     ) : FixedResponseProperty {
-      public override fun statusCode(): Number = unwrap(this).getStatusCode()
+      override fun statusCode(): Number = unwrap(this).getStatusCode()
     }
 
     public companion object {
@@ -518,11 +490,9 @@ public open class CfnRule internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun exact(exact: String) {
-      }
+      public fun exact(exact: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -530,11 +500,11 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty.builder()
 
-      public override fun exact(exact: String) {
+      override fun exact(exact: String) {
         cdkBuilder.exact(exact)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -546,9 +516,9 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchTypeProperty,
     ) : PathMatchTypeProperty {
-      public override fun exact(): String? = unwrap(this).getExact()
+      override fun exact(): String? = unwrap(this).getExact()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -575,11 +545,9 @@ public open class CfnRule internal constructor(
     public fun targetGroups(): Any
 
     public interface Builder {
-      public fun targetGroups(targetGroups: IResolvable) {
-      }
+      public fun targetGroups(targetGroups: IResolvable)
 
-      public fun targetGroups(targetGroups: List<Any>) {
-      }
+      public fun targetGroups(targetGroups: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -587,11 +555,11 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty.builder()
 
-      public override fun targetGroups(targetGroups: IResolvable) {
+      override fun targetGroups(targetGroups: IResolvable) {
         cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
       }
 
-      public override fun targetGroups(targetGroups: List<Any>) {
+      override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
 
@@ -602,7 +570,7 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty,
     ) : ForwardProperty {
-      public override fun targetGroups(): Any = unwrap(this).getTargetGroups()
+      override fun targetGroups(): Any = unwrap(this).getTargetGroups()
     }
 
     public companion object {
@@ -629,16 +597,13 @@ public open class CfnRule internal constructor(
     public fun httpMatch(): Any
 
     public interface Builder {
-      public fun httpMatch(httpMatch: IResolvable) {
-      }
+      public fun httpMatch(httpMatch: IResolvable)
 
-      public fun httpMatch(httpMatch: HttpMatchProperty) {
-      }
+      public fun httpMatch(httpMatch: HttpMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac03b8d70d9360570b784633448685f84a835d082ee07d5773c5640701dba642")
-      public fun httpMatch(httpMatch: HttpMatchProperty.Builder.() -> Unit) {
-      }
+      public fun httpMatch(httpMatch: HttpMatchProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -646,17 +611,17 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty.builder()
 
-      public override fun httpMatch(httpMatch: IResolvable) {
+      override fun httpMatch(httpMatch: IResolvable) {
         cdkBuilder.httpMatch(httpMatch.let(IResolvable::unwrap))
       }
 
-      public override fun httpMatch(httpMatch: HttpMatchProperty) {
+      override fun httpMatch(httpMatch: HttpMatchProperty) {
         cdkBuilder.httpMatch(httpMatch.let(HttpMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac03b8d70d9360570b784633448685f84a835d082ee07d5773c5640701dba642")
-      public override fun httpMatch(httpMatch: HttpMatchProperty.Builder.() -> Unit): Unit =
+      override fun httpMatch(httpMatch: HttpMatchProperty.Builder.() -> Unit): Unit =
           httpMatch(HttpMatchProperty(httpMatch))
 
       public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty =
@@ -666,7 +631,7 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.MatchProperty,
     ) : MatchProperty {
-      public override fun httpMatch(): Any = unwrap(this).getHttpMatch()
+      override fun httpMatch(): Any = unwrap(this).getHttpMatch()
     }
 
     public companion object {
@@ -695,22 +660,17 @@ public open class CfnRule internal constructor(
     public fun match(): Any
 
     public interface Builder {
-      public fun caseSensitive(caseSensitive: Boolean) {
-      }
+      public fun caseSensitive(caseSensitive: Boolean)
 
-      public fun caseSensitive(caseSensitive: IResolvable) {
-      }
+      public fun caseSensitive(caseSensitive: IResolvable)
 
-      public fun match(match: IResolvable) {
-      }
+      public fun match(match: IResolvable)
 
-      public fun match(match: PathMatchTypeProperty) {
-      }
+      public fun match(match: PathMatchTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a4e38510e114fb9aa7bbe175a25af8c12ff95a5d4ea6cc961bd44ea4699b537")
-      public fun match(match: PathMatchTypeProperty.Builder.() -> Unit) {
-      }
+      public fun match(match: PathMatchTypeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -718,25 +678,25 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty.builder()
 
-      public override fun caseSensitive(caseSensitive: Boolean) {
+      override fun caseSensitive(caseSensitive: Boolean) {
         cdkBuilder.caseSensitive(caseSensitive)
       }
 
-      public override fun caseSensitive(caseSensitive: IResolvable) {
+      override fun caseSensitive(caseSensitive: IResolvable) {
         cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
       }
 
-      public override fun match(match: IResolvable) {
+      override fun match(match: IResolvable) {
         cdkBuilder.match(match.let(IResolvable::unwrap))
       }
 
-      public override fun match(match: PathMatchTypeProperty) {
+      override fun match(match: PathMatchTypeProperty) {
         cdkBuilder.match(match.let(PathMatchTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a4e38510e114fb9aa7bbe175a25af8c12ff95a5d4ea6cc961bd44ea4699b537")
-      public override fun match(match: PathMatchTypeProperty.Builder.() -> Unit): Unit =
+      override fun match(match: PathMatchTypeProperty.Builder.() -> Unit): Unit =
           match(PathMatchTypeProperty(match))
 
       public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty =
@@ -746,9 +706,9 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.PathMatchProperty,
     ) : PathMatchProperty {
-      public override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+      override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
 
-      public override fun match(): Any = unwrap(this).getMatch()
+      override fun match(): Any = unwrap(this).getMatch()
     }
 
     public companion object {
@@ -777,11 +737,9 @@ public open class CfnRule internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun targetGroupIdentifier(targetGroupIdentifier: String) {
-      }
+      public fun targetGroupIdentifier(targetGroupIdentifier: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -789,11 +747,11 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty.builder()
 
-      public override fun targetGroupIdentifier(targetGroupIdentifier: String) {
+      override fun targetGroupIdentifier(targetGroupIdentifier: String) {
         cdkBuilder.targetGroupIdentifier(targetGroupIdentifier)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -806,9 +764,9 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnRule.WeightedTargetGroupProperty,
     ) : WeightedTargetGroupProperty {
-      public override fun targetGroupIdentifier(): String = unwrap(this).getTargetGroupIdentifier()
+      override fun targetGroupIdentifier(): String = unwrap(this).getTargetGroupIdentifier()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {
@@ -839,25 +797,19 @@ public open class CfnRule internal constructor(
     public fun pathMatch(): Any? = unwrap(this).getPathMatch()
 
     public interface Builder {
-      public fun headerMatches(headerMatches: IResolvable) {
-      }
+      public fun headerMatches(headerMatches: IResolvable)
 
-      public fun headerMatches(headerMatches: List<Any>) {
-      }
+      public fun headerMatches(headerMatches: List<Any>)
 
-      public fun method(method: String) {
-      }
+      public fun method(method: String)
 
-      public fun pathMatch(pathMatch: IResolvable) {
-      }
+      public fun pathMatch(pathMatch: IResolvable)
 
-      public fun pathMatch(pathMatch: PathMatchProperty) {
-      }
+      public fun pathMatch(pathMatch: PathMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21de76d3671e887303a3cfb6606976297979e6ca33813a916c73c7ca9015475c")
-      public fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit) {
-      }
+      public fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -865,29 +817,29 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty.builder()
 
-      public override fun headerMatches(headerMatches: IResolvable) {
+      override fun headerMatches(headerMatches: IResolvable) {
         cdkBuilder.headerMatches(headerMatches.let(IResolvable::unwrap))
       }
 
-      public override fun headerMatches(headerMatches: List<Any>) {
+      override fun headerMatches(headerMatches: List<Any>) {
         cdkBuilder.headerMatches(headerMatches)
       }
 
-      public override fun method(method: String) {
+      override fun method(method: String) {
         cdkBuilder.method(method)
       }
 
-      public override fun pathMatch(pathMatch: IResolvable) {
+      override fun pathMatch(pathMatch: IResolvable) {
         cdkBuilder.pathMatch(pathMatch.let(IResolvable::unwrap))
       }
 
-      public override fun pathMatch(pathMatch: PathMatchProperty) {
+      override fun pathMatch(pathMatch: PathMatchProperty) {
         cdkBuilder.pathMatch(pathMatch.let(PathMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21de76d3671e887303a3cfb6606976297979e6ca33813a916c73c7ca9015475c")
-      public override fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit): Unit =
+      override fun pathMatch(pathMatch: PathMatchProperty.Builder.() -> Unit): Unit =
           pathMatch(PathMatchProperty(pathMatch))
 
       public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty =
@@ -897,11 +849,11 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.vpclattice.CfnRule.HttpMatchProperty,
     ) : HttpMatchProperty {
-      public override fun headerMatches(): Any? = unwrap(this).getHeaderMatches()
+      override fun headerMatches(): Any? = unwrap(this).getHeaderMatches()
 
-      public override fun method(): String? = unwrap(this).getMethod()
+      override fun method(): String? = unwrap(this).getMethod()
 
-      public override fun pathMatch(): Any? = unwrap(this).getPathMatch()
+      override fun pathMatch(): Any? = unwrap(this).getPathMatch()
     }
 
     public companion object {

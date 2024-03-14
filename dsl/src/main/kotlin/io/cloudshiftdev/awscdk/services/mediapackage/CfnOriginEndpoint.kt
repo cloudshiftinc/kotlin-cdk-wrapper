@@ -162,87 +162,63 @@ public open class CfnOriginEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun authorization(authorization: IResolvable) {
-    }
+    public fun authorization(authorization: IResolvable)
 
-    public fun authorization(authorization: AuthorizationProperty) {
-    }
+    public fun authorization(authorization: AuthorizationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97fcf3e9063ad56e7085d7c35a18890a28370cabd5ef99a38f46be5db7b69107")
-    public fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit) {
-    }
+    public fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit)
 
-    public fun channelId(channelId: String) {
-    }
+    public fun channelId(channelId: String)
 
-    public fun cmafPackage(cmafPackage: IResolvable) {
-    }
+    public fun cmafPackage(cmafPackage: IResolvable)
 
-    public fun cmafPackage(cmafPackage: CmafPackageProperty) {
-    }
+    public fun cmafPackage(cmafPackage: CmafPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cfa5760a41763aac28b9e675a3b40c4e18606545322da91febad65639153df08")
-    public fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit) {
-    }
+    public fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit)
 
-    public fun dashPackage(dashPackage: IResolvable) {
-    }
+    public fun dashPackage(dashPackage: IResolvable)
 
-    public fun dashPackage(dashPackage: DashPackageProperty) {
-    }
+    public fun dashPackage(dashPackage: DashPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2c7b8292e6e0e6a0d73c620650197ed90918cd10e794c28f5bef40278c14926e")
-    public fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit) {
-    }
+    public fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun hlsPackage(hlsPackage: IResolvable) {
-    }
+    public fun hlsPackage(hlsPackage: IResolvable)
 
-    public fun hlsPackage(hlsPackage: HlsPackageProperty) {
-    }
+    public fun hlsPackage(hlsPackage: HlsPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2b04ac551306ae3ac6c2d3d4f1f64dbdf984e40f7166ffd884b7c18e7705e978")
-    public fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit) {
-    }
+    public fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun manifestName(manifestName: String) {
-    }
+    public fun manifestName(manifestName: String)
 
-    public fun mssPackage(mssPackage: IResolvable) {
-    }
+    public fun mssPackage(mssPackage: IResolvable)
 
-    public fun mssPackage(mssPackage: MssPackageProperty) {
-    }
+    public fun mssPackage(mssPackage: MssPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00fd056cbafc82c1730dc05dd4c3dc0d7502008627714d8b3e0a5c7700e49ba0")
-    public fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit) {
-    }
+    public fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit)
 
-    public fun origination(origination: String) {
-    }
+    public fun origination(origination: String)
 
-    public fun startoverWindowSeconds(startoverWindowSeconds: Number) {
-    }
+    public fun startoverWindowSeconds(startoverWindowSeconds: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeDelaySeconds(timeDelaySeconds: Number) {
-    }
+    public fun timeDelaySeconds(timeDelaySeconds: Number)
 
-    public fun whitelist(whitelist: List<String>) {
-    }
+    public fun whitelist(whitelist: List<String>)
   }
 
   private class BuilderImpl(
@@ -252,104 +228,104 @@ public open class CfnOriginEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.Builder =
         software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.Builder.create(scope, id)
 
-    public override fun authorization(authorization: IResolvable) {
+    override fun authorization(authorization: IResolvable) {
       cdkBuilder.authorization(authorization.let(IResolvable::unwrap))
     }
 
-    public override fun authorization(authorization: AuthorizationProperty) {
+    override fun authorization(authorization: AuthorizationProperty) {
       cdkBuilder.authorization(authorization.let(AuthorizationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97fcf3e9063ad56e7085d7c35a18890a28370cabd5ef99a38f46be5db7b69107")
-    public override fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit): Unit
-        = authorization(AuthorizationProperty(authorization))
+    override fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit): Unit =
+        authorization(AuthorizationProperty(authorization))
 
-    public override fun channelId(channelId: String) {
+    override fun channelId(channelId: String) {
       cdkBuilder.channelId(channelId)
     }
 
-    public override fun cmafPackage(cmafPackage: IResolvable) {
+    override fun cmafPackage(cmafPackage: IResolvable) {
       cdkBuilder.cmafPackage(cmafPackage.let(IResolvable::unwrap))
     }
 
-    public override fun cmafPackage(cmafPackage: CmafPackageProperty) {
+    override fun cmafPackage(cmafPackage: CmafPackageProperty) {
       cdkBuilder.cmafPackage(cmafPackage.let(CmafPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cfa5760a41763aac28b9e675a3b40c4e18606545322da91febad65639153df08")
-    public override fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit): Unit =
+    override fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit): Unit =
         cmafPackage(CmafPackageProperty(cmafPackage))
 
-    public override fun dashPackage(dashPackage: IResolvable) {
+    override fun dashPackage(dashPackage: IResolvable) {
       cdkBuilder.dashPackage(dashPackage.let(IResolvable::unwrap))
     }
 
-    public override fun dashPackage(dashPackage: DashPackageProperty) {
+    override fun dashPackage(dashPackage: DashPackageProperty) {
       cdkBuilder.dashPackage(dashPackage.let(DashPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2c7b8292e6e0e6a0d73c620650197ed90918cd10e794c28f5bef40278c14926e")
-    public override fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit): Unit =
+    override fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit): Unit =
         dashPackage(DashPackageProperty(dashPackage))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun hlsPackage(hlsPackage: IResolvable) {
+    override fun hlsPackage(hlsPackage: IResolvable) {
       cdkBuilder.hlsPackage(hlsPackage.let(IResolvable::unwrap))
     }
 
-    public override fun hlsPackage(hlsPackage: HlsPackageProperty) {
+    override fun hlsPackage(hlsPackage: HlsPackageProperty) {
       cdkBuilder.hlsPackage(hlsPackage.let(HlsPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2b04ac551306ae3ac6c2d3d4f1f64dbdf984e40f7166ffd884b7c18e7705e978")
-    public override fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit): Unit =
+    override fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit): Unit =
         hlsPackage(HlsPackageProperty(hlsPackage))
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun manifestName(manifestName: String) {
+    override fun manifestName(manifestName: String) {
       cdkBuilder.manifestName(manifestName)
     }
 
-    public override fun mssPackage(mssPackage: IResolvable) {
+    override fun mssPackage(mssPackage: IResolvable) {
       cdkBuilder.mssPackage(mssPackage.let(IResolvable::unwrap))
     }
 
-    public override fun mssPackage(mssPackage: MssPackageProperty) {
+    override fun mssPackage(mssPackage: MssPackageProperty) {
       cdkBuilder.mssPackage(mssPackage.let(MssPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00fd056cbafc82c1730dc05dd4c3dc0d7502008627714d8b3e0a5c7700e49ba0")
-    public override fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit): Unit =
+    override fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit): Unit =
         mssPackage(MssPackageProperty(mssPackage))
 
-    public override fun origination(origination: String) {
+    override fun origination(origination: String) {
       cdkBuilder.origination(origination)
     }
 
-    public override fun startoverWindowSeconds(startoverWindowSeconds: Number) {
+    override fun startoverWindowSeconds(startoverWindowSeconds: Number) {
       cdkBuilder.startoverWindowSeconds(startoverWindowSeconds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeDelaySeconds(timeDelaySeconds: Number) {
+    override fun timeDelaySeconds(timeDelaySeconds: Number) {
       cdkBuilder.timeDelaySeconds(timeDelaySeconds)
     }
 
-    public override fun whitelist(whitelist: List<String>) {
+    override fun whitelist(whitelist: List<String>) {
       cdkBuilder.whitelist(whitelist)
     }
 
@@ -388,33 +364,25 @@ public open class CfnOriginEndpoint internal constructor(
     public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
     public interface Builder {
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: MssEncryptionProperty) {
-      }
+      public fun encryption(encryption: MssEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6440d39ca8d9a8c40d15cf80df5bd57e971d7d2bd1803cd4107003b46af13628")
-      public fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit)
 
-      public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
-      }
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4175e1ef5ed609f7966bcfad0b3aeb10b8b4956ec2e456c2f1057f60ebb641a9")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -423,40 +391,39 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty.builder()
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: MssEncryptionProperty) {
+      override fun encryption(encryption: MssEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(MssEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6440d39ca8d9a8c40d15cf80df5bd57e971d7d2bd1803cd4107003b46af13628")
-      public override fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(MssEncryptionProperty(encryption))
 
-      public override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4175e1ef5ed609f7966bcfad0b3aeb10b8b4956ec2e456c2f1057f60ebb641a9")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty =
@@ -467,14 +434,13 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty,
     ) : MssPackageProperty {
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
     }
 
     public companion object {
@@ -509,39 +475,29 @@ public open class CfnOriginEndpoint internal constructor(
     public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
     public interface Builder {
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: CmafEncryptionProperty) {
-      }
+      public fun encryption(encryption: CmafEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78196d1b0daab96676bcb7cb1ed6a754d345c918367a6bb55f3e6c4f33a733a7")
-      public fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit)
 
-      public fun hlsManifests(hlsManifests: IResolvable) {
-      }
+      public fun hlsManifests(hlsManifests: IResolvable)
 
-      public fun hlsManifests(hlsManifests: List<Any>) {
-      }
+      public fun hlsManifests(hlsManifests: List<Any>)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
-      public fun segmentPrefix(segmentPrefix: String) {
-      }
+      public fun segmentPrefix(segmentPrefix: String)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87448f8eefe25bed723f1b18695f5ec731121e2d992694889b75880fa85e14c9")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -550,48 +506,47 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty.builder()
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: CmafEncryptionProperty) {
+      override fun encryption(encryption: CmafEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(CmafEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78196d1b0daab96676bcb7cb1ed6a754d345c918367a6bb55f3e6c4f33a733a7")
-      public override fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(CmafEncryptionProperty(encryption))
 
-      public override fun hlsManifests(hlsManifests: IResolvable) {
+      override fun hlsManifests(hlsManifests: IResolvable) {
         cdkBuilder.hlsManifests(hlsManifests.let(IResolvable::unwrap))
       }
 
-      public override fun hlsManifests(hlsManifests: List<Any>) {
+      override fun hlsManifests(hlsManifests: List<Any>) {
         cdkBuilder.hlsManifests(hlsManifests)
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
-      public override fun segmentPrefix(segmentPrefix: String) {
+      override fun segmentPrefix(segmentPrefix: String) {
         cdkBuilder.segmentPrefix(segmentPrefix)
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87448f8eefe25bed723f1b18695f5ec731121e2d992694889b75880fa85e14c9")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty =
@@ -602,16 +557,15 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty,
     ) : CmafPackageProperty {
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun hlsManifests(): Any? = unwrap(this).getHlsManifests()
+      override fun hlsManifests(): Any? = unwrap(this).getHlsManifests()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
-      public override fun segmentPrefix(): String? = unwrap(this).getSegmentPrefix()
+      override fun segmentPrefix(): String? = unwrap(this).getSegmentPrefix()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
     }
 
     public companion object {
@@ -640,11 +594,9 @@ public open class CfnOriginEndpoint internal constructor(
     public fun secretsRoleArn(): String
 
     public interface Builder {
-      public fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
-      }
+      public fun cdnIdentifierSecret(cdnIdentifierSecret: String)
 
-      public fun secretsRoleArn(secretsRoleArn: String) {
-      }
+      public fun secretsRoleArn(secretsRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -653,11 +605,11 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty.builder()
 
-      public override fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
+      override fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
         cdkBuilder.cdnIdentifierSecret(cdnIdentifierSecret)
       }
 
-      public override fun secretsRoleArn(secretsRoleArn: String) {
+      override fun secretsRoleArn(secretsRoleArn: String) {
         cdkBuilder.secretsRoleArn(secretsRoleArn)
       }
 
@@ -670,9 +622,9 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty,
     ) : AuthorizationProperty {
-      public override fun cdnIdentifierSecret(): String = unwrap(this).getCdnIdentifierSecret()
+      override fun cdnIdentifierSecret(): String = unwrap(this).getCdnIdentifierSecret()
 
-      public override fun secretsRoleArn(): String = unwrap(this).getSecretsRoleArn()
+      override fun secretsRoleArn(): String = unwrap(this).getSecretsRoleArn()
     }
 
     public companion object {
@@ -710,33 +662,25 @@ public open class CfnOriginEndpoint internal constructor(
     public fun url(): String
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
-      }
+      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
 
       public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
-      }
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76fba1a01bae904772c3b3b4f3acadd72b1868f4529f2b5d53749d90fe77850f")
       public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit)
 
-      public fun resourceId(resourceId: String) {
-      }
+      public fun resourceId(resourceId: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun systemIds(systemIds: List<String>) {
-      }
+      public fun systemIds(systemIds: List<String>)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -745,40 +689,39 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override
-          fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
+      override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
         cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
         cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76fba1a01bae904772c3b3b4f3acadd72b1868f4529f2b5d53749d90fe77850f")
-      public override
+      override
           fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit):
           Unit =
           encryptionContractConfiguration(EncryptionContractConfigurationProperty(encryptionContractConfiguration))
 
-      public override fun resourceId(resourceId: String) {
+      override fun resourceId(resourceId: String) {
         cdkBuilder.resourceId(resourceId)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun systemIds(systemIds: List<String>) {
+      override fun systemIds(systemIds: List<String>) {
         cdkBuilder.systemIds(systemIds)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -791,18 +734,18 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty,
     ) : SpekeKeyProviderProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
-      public override fun encryptionContractConfiguration(): Any? =
+      override fun encryptionContractConfiguration(): Any? =
           unwrap(this).getEncryptionContractConfiguration()
 
-      public override fun resourceId(): String = unwrap(this).getResourceId()
+      override fun resourceId(): String = unwrap(this).getResourceId()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun systemIds(): List<String> = unwrap(this).getSystemIds() ?: emptyList()
+      override fun systemIds(): List<String> = unwrap(this).getSystemIds() ?: emptyList()
 
-      public override fun url(): String = unwrap(this).getUrl()
+      override fun url(): String = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -848,38 +791,27 @@ public open class CfnOriginEndpoint internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun adMarkers(adMarkers: String) {
-      }
+      public fun adMarkers(adMarkers: String)
 
-      public fun adTriggers(adTriggers: List<String>) {
-      }
+      public fun adTriggers(adTriggers: List<String>)
 
-      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
-      }
+      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
 
-      public fun manifestName(manifestName: String) {
-      }
+      public fun manifestName(manifestName: String)
 
-      public fun playlistType(playlistType: String) {
-      }
+      public fun playlistType(playlistType: String)
 
-      public fun playlistWindowSeconds(playlistWindowSeconds: Number) {
-      }
+      public fun playlistWindowSeconds(playlistWindowSeconds: Number)
 
-      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
-      }
+      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -888,47 +820,47 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty.builder()
 
-      public override fun adMarkers(adMarkers: String) {
+      override fun adMarkers(adMarkers: String) {
         cdkBuilder.adMarkers(adMarkers)
       }
 
-      public override fun adTriggers(adTriggers: List<String>) {
+      override fun adTriggers(adTriggers: List<String>) {
         cdkBuilder.adTriggers(adTriggers)
       }
 
-      public override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
+      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
         cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
       }
 
-      public override fun manifestName(manifestName: String) {
+      override fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
       }
 
-      public override fun playlistType(playlistType: String) {
+      override fun playlistType(playlistType: String) {
         cdkBuilder.playlistType(playlistType)
       }
 
-      public override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
+      override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
         cdkBuilder.playlistWindowSeconds(playlistWindowSeconds)
       }
 
-      public override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
+      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
         cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -941,28 +873,27 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty,
     ) : HlsManifestProperty {
-      public override fun adMarkers(): String? = unwrap(this).getAdMarkers()
+      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
 
-      public override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
 
-      public override fun adsOnDeliveryRestrictions(): String? =
+      override fun adsOnDeliveryRestrictions(): String? =
           unwrap(this).getAdsOnDeliveryRestrictions()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun includeIframeOnlyStream(): Any? =
-          unwrap(this).getIncludeIframeOnlyStream()
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
 
-      public override fun manifestName(): String? = unwrap(this).getManifestName()
+      override fun manifestName(): String? = unwrap(this).getManifestName()
 
-      public override fun playlistType(): String? = unwrap(this).getPlaylistType()
+      override fun playlistType(): String? = unwrap(this).getPlaylistType()
 
-      public override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
+      override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
 
-      public override fun programDateTimeIntervalSeconds(): Number? =
+      override fun programDateTimeIntervalSeconds(): Number? =
           unwrap(this).getProgramDateTimeIntervalSeconds()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -1012,66 +943,47 @@ public open class CfnOriginEndpoint internal constructor(
     public fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
 
     public interface Builder {
-      public fun adMarkers(adMarkers: String) {
-      }
+      public fun adMarkers(adMarkers: String)
 
-      public fun adTriggers(adTriggers: List<String>) {
-      }
+      public fun adTriggers(adTriggers: List<String>)
 
-      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
-      }
+      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
 
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: HlsEncryptionProperty) {
-      }
+      public fun encryption(encryption: HlsEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b900de351db94148571062a983ca815c20f194a2d322cd02772af17c93c6febc")
-      public fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit)
 
-      public fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
-      }
+      public fun includeDvbSubtitles(includeDvbSubtitles: Boolean)
 
-      public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
-      }
+      public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
 
-      public fun playlistType(playlistType: String) {
-      }
+      public fun playlistType(playlistType: String)
 
-      public fun playlistWindowSeconds(playlistWindowSeconds: Number) {
-      }
+      public fun playlistWindowSeconds(playlistWindowSeconds: Number)
 
-      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
-      }
+      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e619665dfc697c58e1e80ef5fb726de90301736ca4ea3fd52eec226effa20d3f")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
 
-      public fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
-      }
+      public fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean)
 
-      public fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
-      }
+      public fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1080,82 +992,81 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty.builder()
 
-      public override fun adMarkers(adMarkers: String) {
+      override fun adMarkers(adMarkers: String) {
         cdkBuilder.adMarkers(adMarkers)
       }
 
-      public override fun adTriggers(adTriggers: List<String>) {
+      override fun adTriggers(adTriggers: List<String>) {
         cdkBuilder.adTriggers(adTriggers)
       }
 
-      public override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
+      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
         cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
       }
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: HlsEncryptionProperty) {
+      override fun encryption(encryption: HlsEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(HlsEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b900de351db94148571062a983ca815c20f194a2d322cd02772af17c93c6febc")
-      public override fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(HlsEncryptionProperty(encryption))
 
-      public override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
+      override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
         cdkBuilder.includeDvbSubtitles(includeDvbSubtitles)
       }
 
-      public override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
+      override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
         cdkBuilder.includeDvbSubtitles(includeDvbSubtitles.let(IResolvable::unwrap))
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
       }
 
-      public override fun playlistType(playlistType: String) {
+      override fun playlistType(playlistType: String) {
         cdkBuilder.playlistType(playlistType)
       }
 
-      public override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
+      override fun playlistWindowSeconds(playlistWindowSeconds: Number) {
         cdkBuilder.playlistWindowSeconds(playlistWindowSeconds)
       }
 
-      public override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
+      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
         cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e619665dfc697c58e1e80ef5fb726de90301736ca4ea3fd52eec226effa20d3f")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
-      public override fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
+      override fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
         cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup)
       }
 
-      public override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
+      override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
         cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup.let(IResolvable::unwrap))
       }
 
@@ -1168,33 +1079,31 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty,
     ) : HlsPackageProperty {
-      public override fun adMarkers(): String? = unwrap(this).getAdMarkers()
+      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
 
-      public override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
 
-      public override fun adsOnDeliveryRestrictions(): String? =
+      override fun adsOnDeliveryRestrictions(): String? =
           unwrap(this).getAdsOnDeliveryRestrictions()
 
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
+      override fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
 
-      public override fun includeIframeOnlyStream(): Any? =
-          unwrap(this).getIncludeIframeOnlyStream()
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
 
-      public override fun playlistType(): String? = unwrap(this).getPlaylistType()
+      override fun playlistType(): String? = unwrap(this).getPlaylistType()
 
-      public override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
+      override fun playlistWindowSeconds(): Number? = unwrap(this).getPlaylistWindowSeconds()
 
-      public override fun programDateTimeIntervalSeconds(): Number? =
+      override fun programDateTimeIntervalSeconds(): Number? =
           unwrap(this).getProgramDateTimeIntervalSeconds()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
-      public override fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
+      override fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
     }
 
     public companion object {
@@ -1225,14 +1134,11 @@ public open class CfnOriginEndpoint internal constructor(
     public fun streamOrder(): String? = unwrap(this).getStreamOrder()
 
     public interface Builder {
-      public fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
-      }
+      public fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number)
 
-      public fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
-      }
+      public fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number)
 
-      public fun streamOrder(streamOrder: String) {
-      }
+      public fun streamOrder(streamOrder: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1241,15 +1147,15 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty.builder()
 
-      public override fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
+      override fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
         cdkBuilder.maxVideoBitsPerSecond(maxVideoBitsPerSecond)
       }
 
-      public override fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
+      override fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
         cdkBuilder.minVideoBitsPerSecond(minVideoBitsPerSecond)
       }
 
-      public override fun streamOrder(streamOrder: String) {
+      override fun streamOrder(streamOrder: String) {
         cdkBuilder.streamOrder(streamOrder)
       }
 
@@ -1262,11 +1168,11 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty,
     ) : StreamSelectionProperty {
-      public override fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
+      override fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
 
-      public override fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
+      override fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
 
-      public override fun streamOrder(): String? = unwrap(this).getStreamOrder()
+      override fun streamOrder(): String? = unwrap(this).getStreamOrder()
     }
 
     public companion object {
@@ -1300,25 +1206,19 @@ public open class CfnOriginEndpoint internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun constantInitializationVector(constantInitializationVector: String) {
-      }
+      public fun constantInitializationVector(constantInitializationVector: String)
 
-      public fun encryptionMethod(encryptionMethod: String) {
-      }
+      public fun encryptionMethod(encryptionMethod: String)
 
-      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
-      }
+      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
 
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28d41f3d947944d41f0bac8496160097adc1e6c97148897e374c518d63e4efba")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1327,31 +1227,30 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty.builder()
 
-      public override fun constantInitializationVector(constantInitializationVector: String) {
+      override fun constantInitializationVector(constantInitializationVector: String) {
         cdkBuilder.constantInitializationVector(constantInitializationVector)
       }
 
-      public override fun encryptionMethod(encryptionMethod: String) {
+      override fun encryptionMethod(encryptionMethod: String) {
         cdkBuilder.encryptionMethod(encryptionMethod)
       }
 
-      public override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
+      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
         cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28d41f3d947944d41f0bac8496160097adc1e6c97148897e374c518d63e4efba")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty =
@@ -1362,15 +1261,15 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty,
     ) : CmafEncryptionProperty {
-      public override fun constantInitializationVector(): String? =
+      override fun constantInitializationVector(): String? =
           unwrap(this).getConstantInitializationVector()
 
-      public override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
+      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
 
-      public override fun keyRotationIntervalSeconds(): Number? =
+      override fun keyRotationIntervalSeconds(): Number? =
           unwrap(this).getKeyRotationIntervalSeconds()
 
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -1399,11 +1298,9 @@ public open class CfnOriginEndpoint internal constructor(
     public fun presetSpeke20Video(): String
 
     public interface Builder {
-      public fun presetSpeke20Audio(presetSpeke20Audio: String) {
-      }
+      public fun presetSpeke20Audio(presetSpeke20Audio: String)
 
-      public fun presetSpeke20Video(presetSpeke20Video: String) {
-      }
+      public fun presetSpeke20Video(presetSpeke20Video: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1412,11 +1309,11 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty.builder()
 
-      public override fun presetSpeke20Audio(presetSpeke20Audio: String) {
+      override fun presetSpeke20Audio(presetSpeke20Audio: String) {
         cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
       }
 
-      public override fun presetSpeke20Video(presetSpeke20Video: String) {
+      override fun presetSpeke20Video(presetSpeke20Video: String) {
         cdkBuilder.presetSpeke20Video(presetSpeke20Video)
       }
 
@@ -1429,9 +1326,9 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty,
     ) : EncryptionContractConfigurationProperty {
-      public override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
+      override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
 
-      public override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
+      override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
     }
 
     public companion object {
@@ -1468,31 +1365,23 @@ public open class CfnOriginEndpoint internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun constantInitializationVector(constantInitializationVector: String) {
-      }
+      public fun constantInitializationVector(constantInitializationVector: String)
 
-      public fun encryptionMethod(encryptionMethod: String) {
-      }
+      public fun encryptionMethod(encryptionMethod: String)
 
-      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
-      }
+      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
 
-      public fun repeatExtXKey(repeatExtXKey: Boolean) {
-      }
+      public fun repeatExtXKey(repeatExtXKey: Boolean)
 
-      public fun repeatExtXKey(repeatExtXKey: IResolvable) {
-      }
+      public fun repeatExtXKey(repeatExtXKey: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2cef8146b0592c3a2aabbb8a511c58ba9dc55a21669525f5b827d482e6256add")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1501,39 +1390,38 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty.builder()
 
-      public override fun constantInitializationVector(constantInitializationVector: String) {
+      override fun constantInitializationVector(constantInitializationVector: String) {
         cdkBuilder.constantInitializationVector(constantInitializationVector)
       }
 
-      public override fun encryptionMethod(encryptionMethod: String) {
+      override fun encryptionMethod(encryptionMethod: String) {
         cdkBuilder.encryptionMethod(encryptionMethod)
       }
 
-      public override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
+      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
         cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
       }
 
-      public override fun repeatExtXKey(repeatExtXKey: Boolean) {
+      override fun repeatExtXKey(repeatExtXKey: Boolean) {
         cdkBuilder.repeatExtXKey(repeatExtXKey)
       }
 
-      public override fun repeatExtXKey(repeatExtXKey: IResolvable) {
+      override fun repeatExtXKey(repeatExtXKey: IResolvable) {
         cdkBuilder.repeatExtXKey(repeatExtXKey.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2cef8146b0592c3a2aabbb8a511c58ba9dc55a21669525f5b827d482e6256add")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty =
@@ -1544,17 +1432,17 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty,
     ) : HlsEncryptionProperty {
-      public override fun constantInitializationVector(): String? =
+      override fun constantInitializationVector(): String? =
           unwrap(this).getConstantInitializationVector()
 
-      public override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
+      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
 
-      public override fun keyRotationIntervalSeconds(): Number? =
+      override fun keyRotationIntervalSeconds(): Number? =
           unwrap(this).getKeyRotationIntervalSeconds()
 
-      public override fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
+      override fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
 
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -1612,72 +1500,51 @@ public open class CfnOriginEndpoint internal constructor(
     public fun utcTimingUri(): String? = unwrap(this).getUtcTimingUri()
 
     public interface Builder {
-      public fun adTriggers(adTriggers: List<String>) {
-      }
+      public fun adTriggers(adTriggers: List<String>)
 
-      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
-      }
+      public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
 
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: DashEncryptionProperty) {
-      }
+      public fun encryption(encryption: DashEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("948d988176ac0bb0cc86f0f8d83bc2275d1ae219a4aeb6ece1359fe2cf199d11")
-      public fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
 
-      public fun manifestLayout(manifestLayout: String) {
-      }
+      public fun manifestLayout(manifestLayout: String)
 
-      public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
-      }
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
 
-      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
-      }
+      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number)
 
-      public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
-      }
+      public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number)
 
-      public fun periodTriggers(periodTriggers: List<String>) {
-      }
+      public fun periodTriggers(periodTriggers: List<String>)
 
-      public fun profile(profile: String) {
-      }
+      public fun profile(profile: String)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
-      public fun segmentTemplateFormat(segmentTemplateFormat: String) {
-      }
+      public fun segmentTemplateFormat(segmentTemplateFormat: String)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("879539f71955f2beaacfa5fe377ab9909ae70367607cfb4ea736f8bcc1ce6e0c")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
 
-      public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
-      }
+      public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number)
 
-      public fun utcTiming(utcTiming: String) {
-      }
+      public fun utcTiming(utcTiming: String)
 
-      public fun utcTimingUri(utcTimingUri: String) {
-      }
+      public fun utcTimingUri(utcTimingUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1686,91 +1553,89 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty.builder()
 
-      public override fun adTriggers(adTriggers: List<String>) {
+      override fun adTriggers(adTriggers: List<String>) {
         cdkBuilder.adTriggers(adTriggers)
       }
 
-      public override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
+      override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
         cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
       }
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: DashEncryptionProperty) {
+      override fun encryption(encryption: DashEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(DashEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("948d988176ac0bb0cc86f0f8d83bc2275d1ae219a4aeb6ece1359fe2cf199d11")
-      public override fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(DashEncryptionProperty(encryption))
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
       }
 
-      public override fun manifestLayout(manifestLayout: String) {
+      override fun manifestLayout(manifestLayout: String) {
         cdkBuilder.manifestLayout(manifestLayout)
       }
 
-      public override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
       }
 
-      public override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
+      override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
         cdkBuilder.minBufferTimeSeconds(minBufferTimeSeconds)
       }
 
-      public override fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
+      override fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
         cdkBuilder.minUpdatePeriodSeconds(minUpdatePeriodSeconds)
       }
 
-      public override fun periodTriggers(periodTriggers: List<String>) {
+      override fun periodTriggers(periodTriggers: List<String>) {
         cdkBuilder.periodTriggers(periodTriggers)
       }
 
-      public override fun profile(profile: String) {
+      override fun profile(profile: String) {
         cdkBuilder.profile(profile)
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
-      public override fun segmentTemplateFormat(segmentTemplateFormat: String) {
+      override fun segmentTemplateFormat(segmentTemplateFormat: String) {
         cdkBuilder.segmentTemplateFormat(segmentTemplateFormat)
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("879539f71955f2beaacfa5fe377ab9909ae70367607cfb4ea736f8bcc1ce6e0c")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
-      public override
-          fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
+      override fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
         cdkBuilder.suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds)
       }
 
-      public override fun utcTiming(utcTiming: String) {
+      override fun utcTiming(utcTiming: String) {
         cdkBuilder.utcTiming(utcTiming)
       }
 
-      public override fun utcTimingUri(utcTimingUri: String) {
+      override fun utcTimingUri(utcTimingUri: String) {
         cdkBuilder.utcTimingUri(utcTimingUri)
       }
 
@@ -1783,43 +1648,39 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty,
     ) : DashPackageProperty {
-      public override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
+      override fun adTriggers(): List<String> = unwrap(this).getAdTriggers() ?: emptyList()
 
-      public override fun adsOnDeliveryRestrictions(): String? =
+      override fun adsOnDeliveryRestrictions(): String? =
           unwrap(this).getAdsOnDeliveryRestrictions()
 
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun includeIframeOnlyStream(): Any? =
-          unwrap(this).getIncludeIframeOnlyStream()
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
 
-      public override fun manifestLayout(): String? = unwrap(this).getManifestLayout()
+      override fun manifestLayout(): String? = unwrap(this).getManifestLayout()
 
-      public override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
-      public override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
+      override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
 
-      public override fun minUpdatePeriodSeconds(): Number? =
-          unwrap(this).getMinUpdatePeriodSeconds()
+      override fun minUpdatePeriodSeconds(): Number? = unwrap(this).getMinUpdatePeriodSeconds()
 
-      public override fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?:
-          emptyList()
+      override fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?: emptyList()
 
-      public override fun profile(): String? = unwrap(this).getProfile()
+      override fun profile(): String? = unwrap(this).getProfile()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
-      public override fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
+      override fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
-      public override fun suggestedPresentationDelaySeconds(): Number? =
+      override fun suggestedPresentationDelaySeconds(): Number? =
           unwrap(this).getSuggestedPresentationDelaySeconds()
 
-      public override fun utcTiming(): String? = unwrap(this).getUtcTiming()
+      override fun utcTiming(): String? = unwrap(this).getUtcTiming()
 
-      public override fun utcTimingUri(): String? = unwrap(this).getUtcTimingUri()
+      override fun utcTimingUri(): String? = unwrap(this).getUtcTimingUri()
     }
 
     public companion object {
@@ -1846,16 +1707,13 @@ public open class CfnOriginEndpoint internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9eb9558174361d4e1c7efd9c34c14fa88ec14494c90196e6cd0f0db58597a31")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1864,19 +1722,18 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty.builder()
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9eb9558174361d4e1c7efd9c34c14fa88ec14494c90196e6cd0f0db58597a31")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty =
@@ -1887,7 +1744,7 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty,
     ) : MssEncryptionProperty {
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -1916,19 +1773,15 @@ public open class CfnOriginEndpoint internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
-      }
+      public fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number)
 
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69f8de9ebec4b03286ed4459ce6d5aebf729a7ac320196f5140a4a873a44556e")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1937,23 +1790,22 @@ public open class CfnOriginEndpoint internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty.builder()
 
-      public override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
+      override fun keyRotationIntervalSeconds(keyRotationIntervalSeconds: Number) {
         cdkBuilder.keyRotationIntervalSeconds(keyRotationIntervalSeconds)
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69f8de9ebec4b03286ed4459ce6d5aebf729a7ac320196f5140a4a873a44556e")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty =
@@ -1964,10 +1816,10 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty,
     ) : DashEncryptionProperty {
-      public override fun keyRotationIntervalSeconds(): Number? =
+      override fun keyRotationIntervalSeconds(): Number? =
           unwrap(this).getKeyRotationIntervalSeconds()
 
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {

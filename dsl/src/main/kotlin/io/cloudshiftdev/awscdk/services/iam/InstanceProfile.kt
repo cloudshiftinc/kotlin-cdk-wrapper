@@ -18,14 +18,11 @@ public open class InstanceProfile internal constructor(
   public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun instanceProfileName(instanceProfileName: String) {
-    }
+    public fun instanceProfileName(instanceProfileName: String)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -35,15 +32,15 @@ public open class InstanceProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.InstanceProfile.Builder =
         software.amazon.awscdk.services.iam.InstanceProfile.Builder.create(scope, id)
 
-    public override fun instanceProfileName(instanceProfileName: String) {
+    override fun instanceProfileName(instanceProfileName: String) {
       cdkBuilder.instanceProfileName(instanceProfileName)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 

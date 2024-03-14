@@ -83,32 +83,23 @@ public open class CfnDecoderManifest internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun modelManifestArn(modelManifestArn: String) {
-    }
+    public fun modelManifestArn(modelManifestArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun networkInterfaces(networkInterfaces: IResolvable) {
-    }
+    public fun networkInterfaces(networkInterfaces: IResolvable)
 
-    public fun networkInterfaces(networkInterfaces: List<Any>) {
-    }
+    public fun networkInterfaces(networkInterfaces: List<Any>)
 
-    public fun signalDecoders(signalDecoders: IResolvable) {
-    }
+    public fun signalDecoders(signalDecoders: IResolvable)
 
-    public fun signalDecoders(signalDecoders: List<Any>) {
-    }
+    public fun signalDecoders(signalDecoders: List<Any>)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -118,39 +109,39 @@ public open class CfnDecoderManifest internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.Builder
         = software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun modelManifestArn(modelManifestArn: String) {
+    override fun modelManifestArn(modelManifestArn: String) {
       cdkBuilder.modelManifestArn(modelManifestArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun networkInterfaces(networkInterfaces: IResolvable) {
+    override fun networkInterfaces(networkInterfaces: IResolvable) {
       cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
     }
 
-    public override fun networkInterfaces(networkInterfaces: List<Any>) {
+    override fun networkInterfaces(networkInterfaces: List<Any>) {
       cdkBuilder.networkInterfaces(networkInterfaces)
     }
 
-    public override fun signalDecoders(signalDecoders: IResolvable) {
+    override fun signalDecoders(signalDecoders: IResolvable) {
       cdkBuilder.signalDecoders(signalDecoders.let(IResolvable::unwrap))
     }
 
-    public override fun signalDecoders(signalDecoders: List<Any>) {
+    override fun signalDecoders(signalDecoders: List<Any>) {
       cdkBuilder.signalDecoders(signalDecoders)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -187,14 +178,11 @@ public open class CfnDecoderManifest internal constructor(
     public fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun protocolName(protocolName: String) {
-      }
+      public fun protocolName(protocolName: String)
 
-      public fun protocolVersion(protocolVersion: String) {
-      }
+      public fun protocolVersion(protocolVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -203,15 +191,15 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanInterfaceProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun protocolName(protocolName: String) {
+      override fun protocolName(protocolName: String) {
         cdkBuilder.protocolName(protocolName)
       }
 
-      public override fun protocolVersion(protocolVersion: String) {
+      override fun protocolVersion(protocolVersion: String) {
         cdkBuilder.protocolVersion(protocolVersion)
       }
 
@@ -224,11 +212,11 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanInterfaceProperty,
     ) : CanInterfaceProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun protocolName(): String? = unwrap(this).getProtocolName()
+      override fun protocolName(): String? = unwrap(this).getProtocolName()
 
-      public override fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
+      override fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
     }
 
     public companion object {
@@ -271,32 +259,23 @@ public open class CfnDecoderManifest internal constructor(
     public fun startByte(): String
 
     public interface Builder {
-      public fun bitMaskLength(bitMaskLength: String) {
-      }
+      public fun bitMaskLength(bitMaskLength: String)
 
-      public fun bitRightShift(bitRightShift: String) {
-      }
+      public fun bitRightShift(bitRightShift: String)
 
-      public fun byteLength(byteLength: String) {
-      }
+      public fun byteLength(byteLength: String)
 
-      public fun offset(offset: String) {
-      }
+      public fun offset(offset: String)
 
-      public fun pid(pid: String) {
-      }
+      public fun pid(pid: String)
 
-      public fun pidResponseLength(pidResponseLength: String) {
-      }
+      public fun pidResponseLength(pidResponseLength: String)
 
-      public fun scaling(scaling: String) {
-      }
+      public fun scaling(scaling: String)
 
-      public fun serviceMode(serviceMode: String) {
-      }
+      public fun serviceMode(serviceMode: String)
 
-      public fun startByte(startByte: String) {
-      }
+      public fun startByte(startByte: String)
     }
 
     private class BuilderImpl : Builder {
@@ -305,39 +284,39 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty.builder()
 
-      public override fun bitMaskLength(bitMaskLength: String) {
+      override fun bitMaskLength(bitMaskLength: String) {
         cdkBuilder.bitMaskLength(bitMaskLength)
       }
 
-      public override fun bitRightShift(bitRightShift: String) {
+      override fun bitRightShift(bitRightShift: String) {
         cdkBuilder.bitRightShift(bitRightShift)
       }
 
-      public override fun byteLength(byteLength: String) {
+      override fun byteLength(byteLength: String) {
         cdkBuilder.byteLength(byteLength)
       }
 
-      public override fun offset(offset: String) {
+      override fun offset(offset: String) {
         cdkBuilder.offset(offset)
       }
 
-      public override fun pid(pid: String) {
+      override fun pid(pid: String) {
         cdkBuilder.pid(pid)
       }
 
-      public override fun pidResponseLength(pidResponseLength: String) {
+      override fun pidResponseLength(pidResponseLength: String) {
         cdkBuilder.pidResponseLength(pidResponseLength)
       }
 
-      public override fun scaling(scaling: String) {
+      override fun scaling(scaling: String) {
         cdkBuilder.scaling(scaling)
       }
 
-      public override fun serviceMode(serviceMode: String) {
+      override fun serviceMode(serviceMode: String) {
         cdkBuilder.serviceMode(serviceMode)
       }
 
-      public override fun startByte(startByte: String) {
+      override fun startByte(startByte: String) {
         cdkBuilder.startByte(startByte)
       }
 
@@ -350,23 +329,23 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty,
     ) : ObdSignalProperty {
-      public override fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
+      override fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
 
-      public override fun bitRightShift(): String? = unwrap(this).getBitRightShift()
+      override fun bitRightShift(): String? = unwrap(this).getBitRightShift()
 
-      public override fun byteLength(): String = unwrap(this).getByteLength()
+      override fun byteLength(): String = unwrap(this).getByteLength()
 
-      public override fun offset(): String = unwrap(this).getOffset()
+      override fun offset(): String = unwrap(this).getOffset()
 
-      public override fun pid(): String = unwrap(this).getPid()
+      override fun pid(): String = unwrap(this).getPid()
 
-      public override fun pidResponseLength(): String = unwrap(this).getPidResponseLength()
+      override fun pidResponseLength(): String = unwrap(this).getPidResponseLength()
 
-      public override fun scaling(): String = unwrap(this).getScaling()
+      override fun scaling(): String = unwrap(this).getScaling()
 
-      public override fun serviceMode(): String = unwrap(this).getServiceMode()
+      override fun serviceMode(): String = unwrap(this).getServiceMode()
 
-      public override fun startByte(): String = unwrap(this).getStartByte()
+      override fun startByte(): String = unwrap(this).getStartByte()
     }
 
     public companion object {
@@ -397,22 +376,17 @@ public open class CfnDecoderManifest internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun interfaceId(interfaceId: String) {
-      }
+      public fun interfaceId(interfaceId: String)
 
-      public fun obdInterface(obdInterface: IResolvable) {
-      }
+      public fun obdInterface(obdInterface: IResolvable)
 
-      public fun obdInterface(obdInterface: ObdInterfaceProperty) {
-      }
+      public fun obdInterface(obdInterface: ObdInterfaceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b4e925efad6770cab1c4f601f1ca931315944f146f2e4ff09af99a7ecf270c6")
-      public fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit) {
-      }
+      public fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -421,24 +395,24 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdNetworkInterfaceProperty.builder()
 
-      public override fun interfaceId(interfaceId: String) {
+      override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
       }
 
-      public override fun obdInterface(obdInterface: IResolvable) {
+      override fun obdInterface(obdInterface: IResolvable) {
         cdkBuilder.obdInterface(obdInterface.let(IResolvable::unwrap))
       }
 
-      public override fun obdInterface(obdInterface: ObdInterfaceProperty) {
+      override fun obdInterface(obdInterface: ObdInterfaceProperty) {
         cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b4e925efad6770cab1c4f601f1ca931315944f146f2e4ff09af99a7ecf270c6")
-      public override fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit): Unit
-          = obdInterface(ObdInterfaceProperty(obdInterface))
+      override fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit): Unit =
+          obdInterface(ObdInterfaceProperty(obdInterface))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -451,11 +425,11 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdNetworkInterfaceProperty,
     ) : ObdNetworkInterfaceProperty {
-      public override fun interfaceId(): String = unwrap(this).getInterfaceId()
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
-      public override fun obdInterface(): Any = unwrap(this).getObdInterface()
+      override fun obdInterface(): Any = unwrap(this).getObdInterface()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -488,25 +462,19 @@ public open class CfnDecoderManifest internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
 
-      public fun interfaceId(interfaceId: String) {
-      }
+      public fun interfaceId(interfaceId: String)
 
-      public fun obdSignal(obdSignal: IResolvable) {
-      }
+      public fun obdSignal(obdSignal: IResolvable)
 
-      public fun obdSignal(obdSignal: ObdSignalProperty) {
-      }
+      public fun obdSignal(obdSignal: ObdSignalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("545450d963d2c02495fc803f670fba23cdd13545e14eb56d63ec0a8a0ac6c982")
-      public fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit) {
-      }
+      public fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -515,28 +483,28 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty.builder()
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
-      public override fun interfaceId(interfaceId: String) {
+      override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
       }
 
-      public override fun obdSignal(obdSignal: IResolvable) {
+      override fun obdSignal(obdSignal: IResolvable) {
         cdkBuilder.obdSignal(obdSignal.let(IResolvable::unwrap))
       }
 
-      public override fun obdSignal(obdSignal: ObdSignalProperty) {
+      override fun obdSignal(obdSignal: ObdSignalProperty) {
         cdkBuilder.obdSignal(obdSignal.let(ObdSignalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("545450d963d2c02495fc803f670fba23cdd13545e14eb56d63ec0a8a0ac6c982")
-      public override fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit): Unit =
+      override fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit): Unit =
           obdSignal(ObdSignalProperty(obdSignal))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -549,13 +517,13 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty,
     ) : ObdSignalDecoderProperty {
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
-      public override fun interfaceId(): String = unwrap(this).getInterfaceId()
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
-      public override fun obdSignal(): Any = unwrap(this).getObdSignal()
+      override fun obdSignal(): Any = unwrap(this).getObdSignal()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -594,26 +562,19 @@ public open class CfnDecoderManifest internal constructor(
     public fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
 
     public interface Builder {
-      public fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String) {
-      }
+      public fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String)
 
-      public fun hasTransmissionEcu(hasTransmissionEcu: String) {
-      }
+      public fun hasTransmissionEcu(hasTransmissionEcu: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun obdStandard(obdStandard: String) {
-      }
+      public fun obdStandard(obdStandard: String)
 
-      public fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String) {
-      }
+      public fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String)
 
-      public fun requestMessageId(requestMessageId: String) {
-      }
+      public fun requestMessageId(requestMessageId: String)
 
-      public fun useExtendedIds(useExtendedIds: String) {
-      }
+      public fun useExtendedIds(useExtendedIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -622,31 +583,31 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty.builder()
 
-      public override fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String) {
+      override fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String) {
         cdkBuilder.dtcRequestIntervalSeconds(dtcRequestIntervalSeconds)
       }
 
-      public override fun hasTransmissionEcu(hasTransmissionEcu: String) {
+      override fun hasTransmissionEcu(hasTransmissionEcu: String) {
         cdkBuilder.hasTransmissionEcu(hasTransmissionEcu)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun obdStandard(obdStandard: String) {
+      override fun obdStandard(obdStandard: String) {
         cdkBuilder.obdStandard(obdStandard)
       }
 
-      public override fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String) {
+      override fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String) {
         cdkBuilder.pidRequestIntervalSeconds(pidRequestIntervalSeconds)
       }
 
-      public override fun requestMessageId(requestMessageId: String) {
+      override fun requestMessageId(requestMessageId: String) {
         cdkBuilder.requestMessageId(requestMessageId)
       }
 
-      public override fun useExtendedIds(useExtendedIds: String) {
+      override fun useExtendedIds(useExtendedIds: String) {
         cdkBuilder.useExtendedIds(useExtendedIds)
       }
 
@@ -659,21 +620,21 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty,
     ) : ObdInterfaceProperty {
-      public override fun dtcRequestIntervalSeconds(): String? =
+      override fun dtcRequestIntervalSeconds(): String? =
           unwrap(this).getDtcRequestIntervalSeconds()
 
-      public override fun hasTransmissionEcu(): String? = unwrap(this).getHasTransmissionEcu()
+      override fun hasTransmissionEcu(): String? = unwrap(this).getHasTransmissionEcu()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun obdStandard(): String? = unwrap(this).getObdStandard()
+      override fun obdStandard(): String? = unwrap(this).getObdStandard()
 
-      public override fun pidRequestIntervalSeconds(): String? =
+      override fun pidRequestIntervalSeconds(): String? =
           unwrap(this).getPidRequestIntervalSeconds()
 
-      public override fun requestMessageId(): String = unwrap(this).getRequestMessageId()
+      override fun requestMessageId(): String = unwrap(this).getRequestMessageId()
 
-      public override fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
+      override fun useExtendedIds(): String? = unwrap(this).getUseExtendedIds()
     }
 
     public companion object {
@@ -706,25 +667,19 @@ public open class CfnDecoderManifest internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun canSignal(canSignal: IResolvable) {
-      }
+      public fun canSignal(canSignal: IResolvable)
 
-      public fun canSignal(canSignal: CanSignalProperty) {
-      }
+      public fun canSignal(canSignal: CanSignalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1f2a1842cbcac4f2b866b161094e72b63d3112354f748ef6d99bc66cf3d200f3")
-      public fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit) {
-      }
+      public fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit)
 
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
 
-      public fun interfaceId(interfaceId: String) {
-      }
+      public fun interfaceId(interfaceId: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -733,28 +688,28 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty.builder()
 
-      public override fun canSignal(canSignal: IResolvable) {
+      override fun canSignal(canSignal: IResolvable) {
         cdkBuilder.canSignal(canSignal.let(IResolvable::unwrap))
       }
 
-      public override fun canSignal(canSignal: CanSignalProperty) {
+      override fun canSignal(canSignal: CanSignalProperty) {
         cdkBuilder.canSignal(canSignal.let(CanSignalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1f2a1842cbcac4f2b866b161094e72b63d3112354f748ef6d99bc66cf3d200f3")
-      public override fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit): Unit =
+      override fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit): Unit =
           canSignal(CanSignalProperty(canSignal))
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
-      public override fun interfaceId(interfaceId: String) {
+      override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -767,13 +722,13 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty,
     ) : CanSignalDecoderProperty {
-      public override fun canSignal(): Any = unwrap(this).getCanSignal()
+      override fun canSignal(): Any = unwrap(this).getCanSignal()
 
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
-      public override fun interfaceId(): String = unwrap(this).getInterfaceId()
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -806,33 +761,25 @@ public open class CfnDecoderManifest internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun canInterface(canInterface: IResolvable) {
-      }
+      public fun canInterface(canInterface: IResolvable)
 
-      public fun canInterface(canInterface: CanInterfaceProperty) {
-      }
+      public fun canInterface(canInterface: CanInterfaceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8562fca49c5ff0d4d8b84f5158b802d27f9e743abe47c01088703b8768d205d")
-      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit) {
-      }
+      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit)
 
-      public fun interfaceId(interfaceId: String) {
-      }
+      public fun interfaceId(interfaceId: String)
 
-      public fun obdInterface(obdInterface: IResolvable) {
-      }
+      public fun obdInterface(obdInterface: IResolvable)
 
-      public fun obdInterface(obdInterface: ObdInterfaceProperty) {
-      }
+      public fun obdInterface(obdInterface: ObdInterfaceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f2d33ddb6c1a7eb3c8b36cf64dc8a3941cd226a91a76c00910c2807f6d9ca34")
-      public fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit) {
-      }
+      public fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -841,37 +788,37 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty.builder()
 
-      public override fun canInterface(canInterface: IResolvable) {
+      override fun canInterface(canInterface: IResolvable) {
         cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
       }
 
-      public override fun canInterface(canInterface: CanInterfaceProperty) {
+      override fun canInterface(canInterface: CanInterfaceProperty) {
         cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8562fca49c5ff0d4d8b84f5158b802d27f9e743abe47c01088703b8768d205d")
-      public override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit
-          = canInterface(CanInterfaceProperty(canInterface))
+      override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit =
+          canInterface(CanInterfaceProperty(canInterface))
 
-      public override fun interfaceId(interfaceId: String) {
+      override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
       }
 
-      public override fun obdInterface(obdInterface: IResolvable) {
+      override fun obdInterface(obdInterface: IResolvable) {
         cdkBuilder.obdInterface(obdInterface.let(IResolvable::unwrap))
       }
 
-      public override fun obdInterface(obdInterface: ObdInterfaceProperty) {
+      override fun obdInterface(obdInterface: ObdInterfaceProperty) {
         cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f2d33ddb6c1a7eb3c8b36cf64dc8a3941cd226a91a76c00910c2807f6d9ca34")
-      public override fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit): Unit
-          = obdInterface(ObdInterfaceProperty(obdInterface))
+      override fun obdInterface(obdInterface: ObdInterfaceProperty.Builder.() -> Unit): Unit =
+          obdInterface(ObdInterfaceProperty(obdInterface))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -884,13 +831,13 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty,
     ) : NetworkInterfacesItemsProperty {
-      public override fun canInterface(): Any? = unwrap(this).getCanInterface()
+      override fun canInterface(): Any? = unwrap(this).getCanInterface()
 
-      public override fun interfaceId(): String = unwrap(this).getInterfaceId()
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
-      public override fun obdInterface(): Any? = unwrap(this).getObdInterface()
+      override fun obdInterface(): Any? = unwrap(this).getObdInterface()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -931,29 +878,21 @@ public open class CfnDecoderManifest internal constructor(
     public fun startBit(): String
 
     public interface Builder {
-      public fun factor(factor: String) {
-      }
+      public fun factor(factor: String)
 
-      public fun isBigEndian(isBigEndian: String) {
-      }
+      public fun isBigEndian(isBigEndian: String)
 
-      public fun isSigned(isSigned: String) {
-      }
+      public fun isSigned(isSigned: String)
 
-      public fun length(length: String) {
-      }
+      public fun length(length: String)
 
-      public fun messageId(messageId: String) {
-      }
+      public fun messageId(messageId: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun offset(offset: String) {
-      }
+      public fun offset(offset: String)
 
-      public fun startBit(startBit: String) {
-      }
+      public fun startBit(startBit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -962,35 +901,35 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty.builder()
 
-      public override fun factor(factor: String) {
+      override fun factor(factor: String) {
         cdkBuilder.factor(factor)
       }
 
-      public override fun isBigEndian(isBigEndian: String) {
+      override fun isBigEndian(isBigEndian: String) {
         cdkBuilder.isBigEndian(isBigEndian)
       }
 
-      public override fun isSigned(isSigned: String) {
+      override fun isSigned(isSigned: String) {
         cdkBuilder.isSigned(isSigned)
       }
 
-      public override fun length(length: String) {
+      override fun length(length: String) {
         cdkBuilder.length(length)
       }
 
-      public override fun messageId(messageId: String) {
+      override fun messageId(messageId: String) {
         cdkBuilder.messageId(messageId)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun offset(offset: String) {
+      override fun offset(offset: String) {
         cdkBuilder.offset(offset)
       }
 
-      public override fun startBit(startBit: String) {
+      override fun startBit(startBit: String) {
         cdkBuilder.startBit(startBit)
       }
 
@@ -1003,21 +942,21 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty,
     ) : CanSignalProperty {
-      public override fun factor(): String = unwrap(this).getFactor()
+      override fun factor(): String = unwrap(this).getFactor()
 
-      public override fun isBigEndian(): String = unwrap(this).getIsBigEndian()
+      override fun isBigEndian(): String = unwrap(this).getIsBigEndian()
 
-      public override fun isSigned(): String = unwrap(this).getIsSigned()
+      override fun isSigned(): String = unwrap(this).getIsSigned()
 
-      public override fun length(): String = unwrap(this).getLength()
+      override fun length(): String = unwrap(this).getLength()
 
-      public override fun messageId(): String = unwrap(this).getMessageId()
+      override fun messageId(): String = unwrap(this).getMessageId()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun offset(): String = unwrap(this).getOffset()
+      override fun offset(): String = unwrap(this).getOffset()
 
-      public override fun startBit(): String = unwrap(this).getStartBit()
+      override fun startBit(): String = unwrap(this).getStartBit()
     }
 
     public companion object {
@@ -1052,36 +991,27 @@ public open class CfnDecoderManifest internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun canSignal(canSignal: IResolvable) {
-      }
+      public fun canSignal(canSignal: IResolvable)
 
-      public fun canSignal(canSignal: CanSignalProperty) {
-      }
+      public fun canSignal(canSignal: CanSignalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c03da5aff98cc945bf7b5a2ff25eb67f4a53368d2e72df6c9ee9ce7fae3fb9e0")
-      public fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit) {
-      }
+      public fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit)
 
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
 
-      public fun interfaceId(interfaceId: String) {
-      }
+      public fun interfaceId(interfaceId: String)
 
-      public fun obdSignal(obdSignal: IResolvable) {
-      }
+      public fun obdSignal(obdSignal: IResolvable)
 
-      public fun obdSignal(obdSignal: ObdSignalProperty) {
-      }
+      public fun obdSignal(obdSignal: ObdSignalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f78cea4a7a5bf3090f416aab0c323829366ec9091c55a3229b65fd9ae57a0b33")
-      public fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit) {
-      }
+      public fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1090,41 +1020,41 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty.builder()
 
-      public override fun canSignal(canSignal: IResolvable) {
+      override fun canSignal(canSignal: IResolvable) {
         cdkBuilder.canSignal(canSignal.let(IResolvable::unwrap))
       }
 
-      public override fun canSignal(canSignal: CanSignalProperty) {
+      override fun canSignal(canSignal: CanSignalProperty) {
         cdkBuilder.canSignal(canSignal.let(CanSignalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c03da5aff98cc945bf7b5a2ff25eb67f4a53368d2e72df6c9ee9ce7fae3fb9e0")
-      public override fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit): Unit =
+      override fun canSignal(canSignal: CanSignalProperty.Builder.() -> Unit): Unit =
           canSignal(CanSignalProperty(canSignal))
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
-      public override fun interfaceId(interfaceId: String) {
+      override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
       }
 
-      public override fun obdSignal(obdSignal: IResolvable) {
+      override fun obdSignal(obdSignal: IResolvable) {
         cdkBuilder.obdSignal(obdSignal.let(IResolvable::unwrap))
       }
 
-      public override fun obdSignal(obdSignal: ObdSignalProperty) {
+      override fun obdSignal(obdSignal: ObdSignalProperty) {
         cdkBuilder.obdSignal(obdSignal.let(ObdSignalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f78cea4a7a5bf3090f416aab0c323829366ec9091c55a3229b65fd9ae57a0b33")
-      public override fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit): Unit =
+      override fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit): Unit =
           obdSignal(ObdSignalProperty(obdSignal))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1137,15 +1067,15 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty,
     ) : SignalDecodersItemsProperty {
-      public override fun canSignal(): Any? = unwrap(this).getCanSignal()
+      override fun canSignal(): Any? = unwrap(this).getCanSignal()
 
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
-      public override fun interfaceId(): String = unwrap(this).getInterfaceId()
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
-      public override fun obdSignal(): Any? = unwrap(this).getObdSignal()
+      override fun obdSignal(): Any? = unwrap(this).getObdSignal()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1176,22 +1106,17 @@ public open class CfnDecoderManifest internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun canInterface(canInterface: IResolvable) {
-      }
+      public fun canInterface(canInterface: IResolvable)
 
-      public fun canInterface(canInterface: CanInterfaceProperty) {
-      }
+      public fun canInterface(canInterface: CanInterfaceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2bb3dae54526a244431924d675fa419eff6b69f0d87bbfe3ffc677046131a6f5")
-      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit) {
-      }
+      public fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit)
 
-      public fun interfaceId(interfaceId: String) {
-      }
+      public fun interfaceId(interfaceId: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1200,24 +1125,24 @@ public open class CfnDecoderManifest internal constructor(
           =
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty.builder()
 
-      public override fun canInterface(canInterface: IResolvable) {
+      override fun canInterface(canInterface: IResolvable) {
         cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
       }
 
-      public override fun canInterface(canInterface: CanInterfaceProperty) {
+      override fun canInterface(canInterface: CanInterfaceProperty) {
         cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2bb3dae54526a244431924d675fa419eff6b69f0d87bbfe3ffc677046131a6f5")
-      public override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit
-          = canInterface(CanInterfaceProperty(canInterface))
+      override fun canInterface(canInterface: CanInterfaceProperty.Builder.() -> Unit): Unit =
+          canInterface(CanInterfaceProperty(canInterface))
 
-      public override fun interfaceId(interfaceId: String) {
+      override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1230,11 +1155,11 @@ public open class CfnDecoderManifest internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty,
     ) : CanNetworkInterfaceProperty {
-      public override fun canInterface(): Any = unwrap(this).getCanInterface()
+      override fun canInterface(): Any = unwrap(this).getCanInterface()
 
-      public override fun interfaceId(): String = unwrap(this).getInterfaceId()
+      override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

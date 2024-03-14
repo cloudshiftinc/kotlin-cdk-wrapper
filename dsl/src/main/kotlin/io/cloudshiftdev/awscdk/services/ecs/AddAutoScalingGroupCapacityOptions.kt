@@ -16,17 +16,13 @@ public interface AddAutoScalingGroupCapacityOptions {
   public fun topicEncryptionKey(): IKey? = unwrap(this).getTopicEncryptionKey()?.let(IKey::wrap)
 
   public interface Builder {
-    public fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
-    }
+    public fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean)
 
-    public fun machineImageType(machineImageType: MachineImageType) {
-    }
+    public fun machineImageType(machineImageType: MachineImageType)
 
-    public fun spotInstanceDraining(spotInstanceDraining: Boolean) {
-    }
+    public fun spotInstanceDraining(spotInstanceDraining: Boolean)
 
-    public fun topicEncryptionKey(topicEncryptionKey: IKey) {
-    }
+    public fun topicEncryptionKey(topicEncryptionKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -34,19 +30,19 @@ public interface AddAutoScalingGroupCapacityOptions {
         software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions.Builder =
         software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions.builder()
 
-    public override fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
+    override fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
       cdkBuilder.canContainersAccessInstanceRole(canContainersAccessInstanceRole)
     }
 
-    public override fun machineImageType(machineImageType: MachineImageType) {
+    override fun machineImageType(machineImageType: MachineImageType) {
       cdkBuilder.machineImageType(machineImageType.let(MachineImageType::unwrap))
     }
 
-    public override fun spotInstanceDraining(spotInstanceDraining: Boolean) {
+    override fun spotInstanceDraining(spotInstanceDraining: Boolean) {
       cdkBuilder.spotInstanceDraining(spotInstanceDraining)
     }
 
-    public override fun topicEncryptionKey(topicEncryptionKey: IKey) {
+    override fun topicEncryptionKey(topicEncryptionKey: IKey) {
       cdkBuilder.topicEncryptionKey(topicEncryptionKey.let(IKey::unwrap))
     }
 
@@ -57,16 +53,15 @@ public interface AddAutoScalingGroupCapacityOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions,
   ) : AddAutoScalingGroupCapacityOptions {
-    public override fun canContainersAccessInstanceRole(): Boolean? =
+    override fun canContainersAccessInstanceRole(): Boolean? =
         unwrap(this).getCanContainersAccessInstanceRole()
 
-    public override fun machineImageType(): MachineImageType? =
+    override fun machineImageType(): MachineImageType? =
         unwrap(this).getMachineImageType()?.let(MachineImageType::wrap)
 
-    public override fun spotInstanceDraining(): Boolean? = unwrap(this).getSpotInstanceDraining()
+    override fun spotInstanceDraining(): Boolean? = unwrap(this).getSpotInstanceDraining()
 
-    public override fun topicEncryptionKey(): IKey? =
-        unwrap(this).getTopicEncryptionKey()?.let(IKey::wrap)
+    override fun topicEncryptionKey(): IKey? = unwrap(this).getTopicEncryptionKey()?.let(IKey::wrap)
   }
 
   public companion object {

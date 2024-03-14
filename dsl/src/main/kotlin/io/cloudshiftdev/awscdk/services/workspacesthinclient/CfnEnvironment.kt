@@ -114,40 +114,29 @@ public open class CfnEnvironment internal constructor(
   }
 
   public interface Builder {
-    public fun desiredSoftwareSetId(desiredSoftwareSetId: String) {
-    }
+    public fun desiredSoftwareSetId(desiredSoftwareSetId: String)
 
-    public fun desktopArn(desktopArn: String) {
-    }
+    public fun desktopArn(desktopArn: String)
 
-    public fun desktopEndpoint(desktopEndpoint: String) {
-    }
+    public fun desktopEndpoint(desktopEndpoint: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun maintenanceWindow(maintenanceWindow: IResolvable) {
-    }
+    public fun maintenanceWindow(maintenanceWindow: IResolvable)
 
-    public fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty) {
-    }
+    public fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("519fda3457d6ed44d5fc04754070dfd2014c3c36808a6805fc980825a2fdd616")
-    public fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty.Builder.() -> Unit) {
-    }
+    public fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun softwareSetUpdateMode(softwareSetUpdateMode: String) {
-    }
+    public fun softwareSetUpdateMode(softwareSetUpdateMode: String)
 
-    public fun softwareSetUpdateSchedule(softwareSetUpdateSchedule: String) {
-    }
+    public fun softwareSetUpdateSchedule(softwareSetUpdateSchedule: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -159,49 +148,48 @@ public open class CfnEnvironment internal constructor(
         software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.Builder.create(scope,
         id)
 
-    public override fun desiredSoftwareSetId(desiredSoftwareSetId: String) {
+    override fun desiredSoftwareSetId(desiredSoftwareSetId: String) {
       cdkBuilder.desiredSoftwareSetId(desiredSoftwareSetId)
     }
 
-    public override fun desktopArn(desktopArn: String) {
+    override fun desktopArn(desktopArn: String) {
       cdkBuilder.desktopArn(desktopArn)
     }
 
-    public override fun desktopEndpoint(desktopEndpoint: String) {
+    override fun desktopEndpoint(desktopEndpoint: String) {
       cdkBuilder.desktopEndpoint(desktopEndpoint)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun maintenanceWindow(maintenanceWindow: IResolvable) {
+    override fun maintenanceWindow(maintenanceWindow: IResolvable) {
       cdkBuilder.maintenanceWindow(maintenanceWindow.let(IResolvable::unwrap))
     }
 
-    public override fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty) {
+    override fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty) {
       cdkBuilder.maintenanceWindow(maintenanceWindow.let(MaintenanceWindowProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("519fda3457d6ed44d5fc04754070dfd2014c3c36808a6805fc980825a2fdd616")
-    public override
-        fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty.Builder.() -> Unit): Unit
-        = maintenanceWindow(MaintenanceWindowProperty(maintenanceWindow))
+    override fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty.Builder.() -> Unit):
+        Unit = maintenanceWindow(MaintenanceWindowProperty(maintenanceWindow))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun softwareSetUpdateMode(softwareSetUpdateMode: String) {
+    override fun softwareSetUpdateMode(softwareSetUpdateMode: String) {
       cdkBuilder.softwareSetUpdateMode(softwareSetUpdateMode)
     }
 
-    public override fun softwareSetUpdateSchedule(softwareSetUpdateSchedule: String) {
+    override fun softwareSetUpdateSchedule(softwareSetUpdateSchedule: String) {
       cdkBuilder.softwareSetUpdateSchedule(softwareSetUpdateSchedule)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -247,26 +235,19 @@ public open class CfnEnvironment internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun applyTimeOf(applyTimeOf: String) {
-      }
+      public fun applyTimeOf(applyTimeOf: String)
 
-      public fun daysOfTheWeek(daysOfTheWeek: List<String>) {
-      }
+      public fun daysOfTheWeek(daysOfTheWeek: List<String>)
 
-      public fun endTimeHour(endTimeHour: Number) {
-      }
+      public fun endTimeHour(endTimeHour: Number)
 
-      public fun endTimeMinute(endTimeMinute: Number) {
-      }
+      public fun endTimeMinute(endTimeMinute: Number)
 
-      public fun startTimeHour(startTimeHour: Number) {
-      }
+      public fun startTimeHour(startTimeHour: Number)
 
-      public fun startTimeMinute(startTimeMinute: Number) {
-      }
+      public fun startTimeMinute(startTimeMinute: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -275,31 +256,31 @@ public open class CfnEnvironment internal constructor(
           =
           software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty.builder()
 
-      public override fun applyTimeOf(applyTimeOf: String) {
+      override fun applyTimeOf(applyTimeOf: String) {
         cdkBuilder.applyTimeOf(applyTimeOf)
       }
 
-      public override fun daysOfTheWeek(daysOfTheWeek: List<String>) {
+      override fun daysOfTheWeek(daysOfTheWeek: List<String>) {
         cdkBuilder.daysOfTheWeek(daysOfTheWeek)
       }
 
-      public override fun endTimeHour(endTimeHour: Number) {
+      override fun endTimeHour(endTimeHour: Number) {
         cdkBuilder.endTimeHour(endTimeHour)
       }
 
-      public override fun endTimeMinute(endTimeMinute: Number) {
+      override fun endTimeMinute(endTimeMinute: Number) {
         cdkBuilder.endTimeMinute(endTimeMinute)
       }
 
-      public override fun startTimeHour(startTimeHour: Number) {
+      override fun startTimeHour(startTimeHour: Number) {
         cdkBuilder.startTimeHour(startTimeHour)
       }
 
-      public override fun startTimeMinute(startTimeMinute: Number) {
+      override fun startTimeMinute(startTimeMinute: Number) {
         cdkBuilder.startTimeMinute(startTimeMinute)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -312,20 +293,19 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment.MaintenanceWindowProperty,
     ) : MaintenanceWindowProperty {
-      public override fun applyTimeOf(): String? = unwrap(this).getApplyTimeOf()
+      override fun applyTimeOf(): String? = unwrap(this).getApplyTimeOf()
 
-      public override fun daysOfTheWeek(): List<String> = unwrap(this).getDaysOfTheWeek() ?:
-          emptyList()
+      override fun daysOfTheWeek(): List<String> = unwrap(this).getDaysOfTheWeek() ?: emptyList()
 
-      public override fun endTimeHour(): Number? = unwrap(this).getEndTimeHour()
+      override fun endTimeHour(): Number? = unwrap(this).getEndTimeHour()
 
-      public override fun endTimeMinute(): Number? = unwrap(this).getEndTimeMinute()
+      override fun endTimeMinute(): Number? = unwrap(this).getEndTimeMinute()
 
-      public override fun startTimeHour(): Number? = unwrap(this).getStartTimeHour()
+      override fun startTimeHour(): Number? = unwrap(this).getStartTimeHour()
 
-      public override fun startTimeMinute(): Number? = unwrap(this).getStartTimeMinute()
+      override fun startTimeMinute(): Number? = unwrap(this).getStartTimeMinute()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

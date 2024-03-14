@@ -9,11 +9,9 @@ public open class EcsDeploymentConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), IEcsDeploymentConfig {
   public interface Builder {
-    public fun deploymentConfigName(deploymentConfigName: String) {
-    }
+    public fun deploymentConfigName(deploymentConfigName: String)
 
-    public fun trafficRouting(trafficRouting: TrafficRouting) {
-    }
+    public fun trafficRouting(trafficRouting: TrafficRouting)
   }
 
   private class BuilderImpl(
@@ -23,11 +21,11 @@ public open class EcsDeploymentConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.Builder =
         software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.Builder.create(scope, id)
 
-    public override fun deploymentConfigName(deploymentConfigName: String) {
+    override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
-    public override fun trafficRouting(trafficRouting: TrafficRouting) {
+    override fun trafficRouting(trafficRouting: TrafficRouting) {
       cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
     }
 

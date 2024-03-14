@@ -75,34 +75,25 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun location(location: String) {
-    }
+    public fun location(location: String)
 
-    public fun location(location: IResolvable) {
-    }
+    public fun location(location: IResolvable)
 
-    public fun location(location: ApplicationLocationProperty) {
-    }
+    public fun location(location: ApplicationLocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("52158d726646327e9d094bf58b871f34607bb62eb3f1bdc9c8d0fde88e133c5d")
-    public fun location(location: ApplicationLocationProperty.Builder.() -> Unit) {
-    }
+    public fun location(location: ApplicationLocationProperty.Builder.() -> Unit)
 
-    public fun notificationArns(notificationArns: List<String>) {
-    }
+    public fun notificationArns(notificationArns: List<String>)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun timeoutInMinutes(timeoutInMinutes: Number) {
-    }
+    public fun timeoutInMinutes(timeoutInMinutes: Number)
   }
 
   private class BuilderImpl(
@@ -112,40 +103,40 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sam.CfnApplication.Builder =
         software.amazon.awscdk.services.sam.CfnApplication.Builder.create(scope, id)
 
-    public override fun location(location: String) {
+    override fun location(location: String) {
       cdkBuilder.location(location)
     }
 
-    public override fun location(location: IResolvable) {
+    override fun location(location: IResolvable) {
       cdkBuilder.location(location.let(IResolvable::unwrap))
     }
 
-    public override fun location(location: ApplicationLocationProperty) {
+    override fun location(location: ApplicationLocationProperty) {
       cdkBuilder.location(location.let(ApplicationLocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("52158d726646327e9d094bf58b871f34607bb62eb3f1bdc9c8d0fde88e133c5d")
-    public override fun location(location: ApplicationLocationProperty.Builder.() -> Unit): Unit =
+    override fun location(location: ApplicationLocationProperty.Builder.() -> Unit): Unit =
         location(ApplicationLocationProperty(location))
 
-    public override fun notificationArns(notificationArns: List<String>) {
+    override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun timeoutInMinutes(timeoutInMinutes: Number) {
+    override fun timeoutInMinutes(timeoutInMinutes: Number) {
       cdkBuilder.timeoutInMinutes(timeoutInMinutes)
     }
 
@@ -179,11 +170,9 @@ public open class CfnApplication internal constructor(
     public fun semanticVersion(): String
 
     public interface Builder {
-      public fun applicationId(applicationId: String) {
-      }
+      public fun applicationId(applicationId: String)
 
-      public fun semanticVersion(semanticVersion: String) {
-      }
+      public fun semanticVersion(semanticVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -191,11 +180,11 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty.Builder =
           software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty.builder()
 
-      public override fun applicationId(applicationId: String) {
+      override fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
       }
 
-      public override fun semanticVersion(semanticVersion: String) {
+      override fun semanticVersion(semanticVersion: String) {
         cdkBuilder.semanticVersion(semanticVersion)
       }
 
@@ -208,9 +197,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty,
     ) : ApplicationLocationProperty {
-      public override fun applicationId(): String = unwrap(this).getApplicationId()
+      override fun applicationId(): String = unwrap(this).getApplicationId()
 
-      public override fun semanticVersion(): String = unwrap(this).getSemanticVersion()
+      override fun semanticVersion(): String = unwrap(this).getSemanticVersion()
     }
 
     public companion object {

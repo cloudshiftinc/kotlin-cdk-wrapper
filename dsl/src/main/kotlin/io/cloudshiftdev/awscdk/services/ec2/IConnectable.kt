@@ -6,8 +6,7 @@ public interface IConnectable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IConnectable,
   ) : IConnectable {
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
   }
 
   public companion object {

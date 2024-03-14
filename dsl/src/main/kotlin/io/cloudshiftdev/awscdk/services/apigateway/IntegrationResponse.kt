@@ -19,43 +19,38 @@ public interface IntegrationResponse {
   public fun statusCode(): String
 
   public interface Builder {
-    public fun contentHandling(contentHandling: ContentHandling) {
-    }
+    public fun contentHandling(contentHandling: ContentHandling)
 
-    public fun responseParameters(responseParameters: Map<String, String>) {
-    }
+    public fun responseParameters(responseParameters: Map<String, String>)
 
-    public fun responseTemplates(responseTemplates: Map<String, String>) {
-    }
+    public fun responseTemplates(responseTemplates: Map<String, String>)
 
-    public fun selectionPattern(selectionPattern: String) {
-    }
+    public fun selectionPattern(selectionPattern: String)
 
-    public fun statusCode(statusCode: String) {
-    }
+    public fun statusCode(statusCode: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.IntegrationResponse.Builder =
         software.amazon.awscdk.services.apigateway.IntegrationResponse.builder()
 
-    public override fun contentHandling(contentHandling: ContentHandling) {
+    override fun contentHandling(contentHandling: ContentHandling) {
       cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
     }
 
-    public override fun responseParameters(responseParameters: Map<String, String>) {
+    override fun responseParameters(responseParameters: Map<String, String>) {
       cdkBuilder.responseParameters(responseParameters)
     }
 
-    public override fun responseTemplates(responseTemplates: Map<String, String>) {
+    override fun responseTemplates(responseTemplates: Map<String, String>) {
       cdkBuilder.responseTemplates(responseTemplates)
     }
 
-    public override fun selectionPattern(selectionPattern: String) {
+    override fun selectionPattern(selectionPattern: String) {
       cdkBuilder.selectionPattern(selectionPattern)
     }
 
-    public override fun statusCode(statusCode: String) {
+    override fun statusCode(statusCode: String) {
       cdkBuilder.statusCode(statusCode)
     }
 
@@ -66,18 +61,18 @@ public interface IntegrationResponse {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.IntegrationResponse,
   ) : IntegrationResponse {
-    public override fun contentHandling(): ContentHandling? =
+    override fun contentHandling(): ContentHandling? =
         unwrap(this).getContentHandling()?.let(ContentHandling::wrap)
 
-    public override fun responseParameters(): Map<String, String> =
-        unwrap(this).getResponseParameters() ?: emptyMap()
+    override fun responseParameters(): Map<String, String> = unwrap(this).getResponseParameters() ?:
+        emptyMap()
 
-    public override fun responseTemplates(): Map<String, String> =
-        unwrap(this).getResponseTemplates() ?: emptyMap()
+    override fun responseTemplates(): Map<String, String> = unwrap(this).getResponseTemplates() ?:
+        emptyMap()
 
-    public override fun selectionPattern(): String? = unwrap(this).getSelectionPattern()
+    override fun selectionPattern(): String? = unwrap(this).getSelectionPattern()
 
-    public override fun statusCode(): String = unwrap(this).getStatusCode()
+    override fun statusCode(): String = unwrap(this).getStatusCode()
   }
 
   public companion object {

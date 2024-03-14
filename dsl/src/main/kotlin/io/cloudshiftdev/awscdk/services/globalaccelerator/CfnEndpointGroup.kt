@@ -92,41 +92,29 @@ public open class CfnEndpointGroup internal constructor(
   }
 
   public interface Builder {
-    public fun endpointConfigurations(endpointConfigurations: IResolvable) {
-    }
+    public fun endpointConfigurations(endpointConfigurations: IResolvable)
 
-    public fun endpointConfigurations(endpointConfigurations: List<Any>) {
-    }
+    public fun endpointConfigurations(endpointConfigurations: List<Any>)
 
-    public fun endpointGroupRegion(endpointGroupRegion: String) {
-    }
+    public fun endpointGroupRegion(endpointGroupRegion: String)
 
-    public fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number) {
-    }
+    public fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number)
 
-    public fun healthCheckPath(healthCheckPath: String) {
-    }
+    public fun healthCheckPath(healthCheckPath: String)
 
-    public fun healthCheckPort(healthCheckPort: Number) {
-    }
+    public fun healthCheckPort(healthCheckPort: Number)
 
-    public fun healthCheckProtocol(healthCheckProtocol: String) {
-    }
+    public fun healthCheckProtocol(healthCheckProtocol: String)
 
-    public fun listenerArn(listenerArn: String) {
-    }
+    public fun listenerArn(listenerArn: String)
 
-    public fun portOverrides(portOverrides: IResolvable) {
-    }
+    public fun portOverrides(portOverrides: IResolvable)
 
-    public fun portOverrides(portOverrides: List<Any>) {
-    }
+    public fun portOverrides(portOverrides: List<Any>)
 
-    public fun thresholdCount(thresholdCount: Number) {
-    }
+    public fun thresholdCount(thresholdCount: Number)
 
-    public fun trafficDialPercentage(trafficDialPercentage: Number) {
-    }
+    public fun trafficDialPercentage(trafficDialPercentage: Number)
   }
 
   private class BuilderImpl(
@@ -137,51 +125,51 @@ public open class CfnEndpointGroup internal constructor(
         software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.Builder =
         software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.Builder.create(scope, id)
 
-    public override fun endpointConfigurations(endpointConfigurations: IResolvable) {
+    override fun endpointConfigurations(endpointConfigurations: IResolvable) {
       cdkBuilder.endpointConfigurations(endpointConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun endpointConfigurations(endpointConfigurations: List<Any>) {
+    override fun endpointConfigurations(endpointConfigurations: List<Any>) {
       cdkBuilder.endpointConfigurations(endpointConfigurations)
     }
 
-    public override fun endpointGroupRegion(endpointGroupRegion: String) {
+    override fun endpointGroupRegion(endpointGroupRegion: String) {
       cdkBuilder.endpointGroupRegion(endpointGroupRegion)
     }
 
-    public override fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number) {
+    override fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number) {
       cdkBuilder.healthCheckIntervalSeconds(healthCheckIntervalSeconds)
     }
 
-    public override fun healthCheckPath(healthCheckPath: String) {
+    override fun healthCheckPath(healthCheckPath: String) {
       cdkBuilder.healthCheckPath(healthCheckPath)
     }
 
-    public override fun healthCheckPort(healthCheckPort: Number) {
+    override fun healthCheckPort(healthCheckPort: Number) {
       cdkBuilder.healthCheckPort(healthCheckPort)
     }
 
-    public override fun healthCheckProtocol(healthCheckProtocol: String) {
+    override fun healthCheckProtocol(healthCheckProtocol: String) {
       cdkBuilder.healthCheckProtocol(healthCheckProtocol)
     }
 
-    public override fun listenerArn(listenerArn: String) {
+    override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
     }
 
-    public override fun portOverrides(portOverrides: IResolvable) {
+    override fun portOverrides(portOverrides: IResolvable) {
       cdkBuilder.portOverrides(portOverrides.let(IResolvable::unwrap))
     }
 
-    public override fun portOverrides(portOverrides: List<Any>) {
+    override fun portOverrides(portOverrides: List<Any>) {
       cdkBuilder.portOverrides(portOverrides)
     }
 
-    public override fun thresholdCount(thresholdCount: Number) {
+    override fun thresholdCount(thresholdCount: Number) {
       cdkBuilder.thresholdCount(thresholdCount)
     }
 
-    public override fun trafficDialPercentage(trafficDialPercentage: Number) {
+    override fun trafficDialPercentage(trafficDialPercentage: Number) {
       cdkBuilder.trafficDialPercentage(trafficDialPercentage)
     }
 
@@ -217,11 +205,9 @@ public open class CfnEndpointGroup internal constructor(
     public fun listenerPort(): Number
 
     public interface Builder {
-      public fun endpointPort(endpointPort: Number) {
-      }
+      public fun endpointPort(endpointPort: Number)
 
-      public fun listenerPort(listenerPort: Number) {
-      }
+      public fun listenerPort(listenerPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -230,11 +216,11 @@ public open class CfnEndpointGroup internal constructor(
           =
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty.builder()
 
-      public override fun endpointPort(endpointPort: Number) {
+      override fun endpointPort(endpointPort: Number) {
         cdkBuilder.endpointPort(endpointPort)
       }
 
-      public override fun listenerPort(listenerPort: Number) {
+      override fun listenerPort(listenerPort: Number) {
         cdkBuilder.listenerPort(listenerPort)
       }
 
@@ -247,9 +233,9 @@ public open class CfnEndpointGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.PortOverrideProperty,
     ) : PortOverrideProperty {
-      public override fun endpointPort(): Number = unwrap(this).getEndpointPort()
+      override fun endpointPort(): Number = unwrap(this).getEndpointPort()
 
-      public override fun listenerPort(): Number = unwrap(this).getListenerPort()
+      override fun listenerPort(): Number = unwrap(this).getListenerPort()
     }
 
     public companion object {
@@ -282,20 +268,15 @@ public open class CfnEndpointGroup internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun attachmentArn(attachmentArn: String) {
-      }
+      public fun attachmentArn(attachmentArn: String)
 
-      public fun clientIpPreservationEnabled(clientIpPreservationEnabled: Boolean) {
-      }
+      public fun clientIpPreservationEnabled(clientIpPreservationEnabled: Boolean)
 
-      public fun clientIpPreservationEnabled(clientIpPreservationEnabled: IResolvable) {
-      }
+      public fun clientIpPreservationEnabled(clientIpPreservationEnabled: IResolvable)
 
-      public fun endpointId(endpointId: String) {
-      }
+      public fun endpointId(endpointId: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -304,23 +285,23 @@ public open class CfnEndpointGroup internal constructor(
           =
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty.builder()
 
-      public override fun attachmentArn(attachmentArn: String) {
+      override fun attachmentArn(attachmentArn: String) {
         cdkBuilder.attachmentArn(attachmentArn)
       }
 
-      public override fun clientIpPreservationEnabled(clientIpPreservationEnabled: Boolean) {
+      override fun clientIpPreservationEnabled(clientIpPreservationEnabled: Boolean) {
         cdkBuilder.clientIpPreservationEnabled(clientIpPreservationEnabled)
       }
 
-      public override fun clientIpPreservationEnabled(clientIpPreservationEnabled: IResolvable) {
+      override fun clientIpPreservationEnabled(clientIpPreservationEnabled: IResolvable) {
         cdkBuilder.clientIpPreservationEnabled(clientIpPreservationEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun endpointId(endpointId: String) {
+      override fun endpointId(endpointId: String) {
         cdkBuilder.endpointId(endpointId)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -333,14 +314,14 @@ public open class CfnEndpointGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup.EndpointConfigurationProperty,
     ) : EndpointConfigurationProperty {
-      public override fun attachmentArn(): String? = unwrap(this).getAttachmentArn()
+      override fun attachmentArn(): String? = unwrap(this).getAttachmentArn()
 
-      public override fun clientIpPreservationEnabled(): Any? =
+      override fun clientIpPreservationEnabled(): Any? =
           unwrap(this).getClientIpPreservationEnabled()
 
-      public override fun endpointId(): String = unwrap(this).getEndpointId()
+      override fun endpointId(): String = unwrap(this).getEndpointId()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {

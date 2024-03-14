@@ -23,26 +23,19 @@ public interface BaseNetworkListenerProps {
   public fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
 
   public interface Builder {
-    public fun alpnPolicy(alpnPolicy: AlpnPolicy) {
-    }
+    public fun alpnPolicy(alpnPolicy: AlpnPolicy)
 
-    public fun certificates(certificates: List<IListenerCertificate>) {
-    }
+    public fun certificates(certificates: List<IListenerCertificate>)
 
-    public fun defaultAction(defaultAction: NetworkListenerAction) {
-    }
+    public fun defaultAction(defaultAction: NetworkListenerAction)
 
-    public fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
-    }
+    public fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
 
-    public fun sslPolicy(sslPolicy: SslPolicy) {
-    }
+    public fun sslPolicy(sslPolicy: SslPolicy)
   }
 
   private class BuilderImpl : Builder {
@@ -50,31 +43,31 @@ public interface BaseNetworkListenerProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps.builder()
 
-    public override fun alpnPolicy(alpnPolicy: AlpnPolicy) {
+    override fun alpnPolicy(alpnPolicy: AlpnPolicy) {
       cdkBuilder.alpnPolicy(alpnPolicy.let(AlpnPolicy::unwrap))
     }
 
-    public override fun certificates(certificates: List<IListenerCertificate>) {
+    override fun certificates(certificates: List<IListenerCertificate>) {
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
-    public override fun defaultAction(defaultAction: NetworkListenerAction) {
+    override fun defaultAction(defaultAction: NetworkListenerAction) {
       cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction::unwrap))
     }
 
-    public override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
+    override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
       cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
-    public override fun sslPolicy(sslPolicy: SslPolicy) {
+    override fun sslPolicy(sslPolicy: SslPolicy) {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
     }
 
@@ -87,23 +80,22 @@ public interface BaseNetworkListenerProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps,
   ) : BaseNetworkListenerProps {
-    public override fun alpnPolicy(): AlpnPolicy? =
-        unwrap(this).getAlpnPolicy()?.let(AlpnPolicy::wrap)
+    override fun alpnPolicy(): AlpnPolicy? = unwrap(this).getAlpnPolicy()?.let(AlpnPolicy::wrap)
 
-    public override fun certificates(): List<IListenerCertificate> =
+    override fun certificates(): List<IListenerCertificate> =
         unwrap(this).getCertificates()?.map(IListenerCertificate::wrap) ?: emptyList()
 
-    public override fun defaultAction(): NetworkListenerAction? =
+    override fun defaultAction(): NetworkListenerAction? =
         unwrap(this).getDefaultAction()?.let(NetworkListenerAction::wrap)
 
-    public override fun defaultTargetGroups(): List<INetworkTargetGroup> =
+    override fun defaultTargetGroups(): List<INetworkTargetGroup> =
         unwrap(this).getDefaultTargetGroups()?.map(INetworkTargetGroup::wrap) ?: emptyList()
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
+    override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
 
-    public override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
+    override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
   }
 
   public companion object {

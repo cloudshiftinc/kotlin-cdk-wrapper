@@ -6,15 +6,14 @@ public interface MeshServiceDiscovery {
   public fun ipPreference(): IpPreference? = unwrap(this).getIpPreference()?.let(IpPreference::wrap)
 
   public interface Builder {
-    public fun ipPreference(ipPreference: IpPreference) {
-    }
+    public fun ipPreference(ipPreference: IpPreference)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.MeshServiceDiscovery.Builder =
         software.amazon.awscdk.services.appmesh.MeshServiceDiscovery.builder()
 
-    public override fun ipPreference(ipPreference: IpPreference) {
+    override fun ipPreference(ipPreference: IpPreference) {
       cdkBuilder.ipPreference(ipPreference.let(IpPreference::unwrap))
     }
 
@@ -25,7 +24,7 @@ public interface MeshServiceDiscovery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.MeshServiceDiscovery,
   ) : MeshServiceDiscovery {
-    public override fun ipPreference(): IpPreference? =
+    override fun ipPreference(): IpPreference? =
         unwrap(this).getIpPreference()?.let(IpPreference::wrap)
   }
 

@@ -13,20 +13,15 @@ public open class RotationSchedule internal constructor(
   private val cdkObject: software.amazon.awscdk.services.secretsmanager.RotationSchedule,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun automaticallyAfter(automaticallyAfter: Duration) {
-    }
+    public fun automaticallyAfter(automaticallyAfter: Duration)
 
-    public fun hostedRotation(hostedRotation: HostedRotation) {
-    }
+    public fun hostedRotation(hostedRotation: HostedRotation)
 
-    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
-    }
+    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean)
 
-    public fun rotationLambda(rotationLambda: IFunction) {
-    }
+    public fun rotationLambda(rotationLambda: IFunction)
 
-    public fun secret(secret: ISecret) {
-    }
+    public fun secret(secret: ISecret)
   }
 
   private class BuilderImpl(
@@ -36,23 +31,23 @@ public open class RotationSchedule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.RotationSchedule.Builder
         = software.amazon.awscdk.services.secretsmanager.RotationSchedule.Builder.create(scope, id)
 
-    public override fun automaticallyAfter(automaticallyAfter: Duration) {
+    override fun automaticallyAfter(automaticallyAfter: Duration) {
       cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
     }
 
-    public override fun hostedRotation(hostedRotation: HostedRotation) {
+    override fun hostedRotation(hostedRotation: HostedRotation) {
       cdkBuilder.hostedRotation(hostedRotation.let(HostedRotation::unwrap))
     }
 
-    public override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+    override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
     }
 
-    public override fun rotationLambda(rotationLambda: IFunction) {
+    override fun rotationLambda(rotationLambda: IFunction) {
       cdkBuilder.rotationLambda(rotationLambda.let(IFunction::unwrap))
     }
 
-    public override fun secret(secret: ISecret) {
+    override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }
 

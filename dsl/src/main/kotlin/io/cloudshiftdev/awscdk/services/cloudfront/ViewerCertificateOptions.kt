@@ -13,14 +13,11 @@ public interface ViewerCertificateOptions {
   public fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
 
   public interface Builder {
-    public fun aliases(aliases: List<String>) {
-    }
+    public fun aliases(aliases: List<String>)
 
-    public fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
-    }
+    public fun securityPolicy(securityPolicy: SecurityPolicyProtocol)
 
-    public fun sslMethod(sslMethod: SSLMethod) {
-    }
+    public fun sslMethod(sslMethod: SSLMethod)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface ViewerCertificateOptions {
         software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions.Builder =
         software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions.builder()
 
-    public override fun aliases(aliases: List<String>) {
+    override fun aliases(aliases: List<String>) {
       cdkBuilder.aliases(aliases)
     }
 
-    public override fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
+    override fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
       cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicyProtocol::unwrap))
     }
 
-    public override fun sslMethod(sslMethod: SSLMethod) {
+    override fun sslMethod(sslMethod: SSLMethod) {
       cdkBuilder.sslMethod(sslMethod.let(SSLMethod::unwrap))
     }
 
@@ -47,12 +44,12 @@ public interface ViewerCertificateOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions,
   ) : ViewerCertificateOptions {
-    public override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+    override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
 
-    public override fun securityPolicy(): SecurityPolicyProtocol? =
+    override fun securityPolicy(): SecurityPolicyProtocol? =
         unwrap(this).getSecurityPolicy()?.let(SecurityPolicyProtocol::wrap)
 
-    public override fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
+    override fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
   }
 
   public companion object {

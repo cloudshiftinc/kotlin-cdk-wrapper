@@ -49,22 +49,17 @@ public open class CfnDocumentationPart internal constructor(
   }
 
   public interface Builder {
-    public fun location(location: IResolvable) {
-    }
+    public fun location(location: IResolvable)
 
-    public fun location(location: LocationProperty) {
-    }
+    public fun location(location: LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("007c62623872feb70c8fab744c082daa348ed138da9d3521c1388ee6a20b895f")
-    public fun location(location: LocationProperty.Builder.() -> Unit) {
-    }
+    public fun location(location: LocationProperty.Builder.() -> Unit)
 
-    public fun properties(properties: String) {
-    }
+    public fun properties(properties: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
   }
 
   private class BuilderImpl(
@@ -74,24 +69,24 @@ public open class CfnDocumentationPart internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnDocumentationPart.Builder
         = software.amazon.awscdk.services.apigateway.CfnDocumentationPart.Builder.create(scope, id)
 
-    public override fun location(location: IResolvable) {
+    override fun location(location: IResolvable) {
       cdkBuilder.location(location.let(IResolvable::unwrap))
     }
 
-    public override fun location(location: LocationProperty) {
+    override fun location(location: LocationProperty) {
       cdkBuilder.location(location.let(LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("007c62623872feb70c8fab744c082daa348ed138da9d3521c1388ee6a20b895f")
-    public override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+    override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
         location(LocationProperty(location))
 
-    public override fun properties(properties: String) {
+    override fun properties(properties: String) {
       cdkBuilder.properties(properties)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
@@ -132,20 +127,15 @@ public open class CfnDocumentationPart internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun method(method: String) {
-      }
+      public fun method(method: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun statusCode(statusCode: String) {
-      }
+      public fun statusCode(statusCode: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -153,23 +143,23 @@ public open class CfnDocumentationPart internal constructor(
           software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty.builder()
 
-      public override fun method(method: String) {
+      override fun method(method: String) {
         cdkBuilder.method(method)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun statusCode(statusCode: String) {
+      override fun statusCode(statusCode: String) {
         cdkBuilder.statusCode(statusCode)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -182,15 +172,15 @@ public open class CfnDocumentationPart internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnDocumentationPart.LocationProperty,
     ) : LocationProperty {
-      public override fun method(): String? = unwrap(this).getMethod()
+      override fun method(): String? = unwrap(this).getMethod()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun statusCode(): String? = unwrap(this).getStatusCode()
+      override fun statusCode(): String? = unwrap(this).getStatusCode()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

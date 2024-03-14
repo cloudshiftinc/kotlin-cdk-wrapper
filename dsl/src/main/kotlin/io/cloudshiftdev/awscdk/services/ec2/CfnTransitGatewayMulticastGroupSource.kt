@@ -55,14 +55,11 @@ public open class CfnTransitGatewayMulticastGroupSource internal constructor(
   }
 
   public interface Builder {
-    public fun groupIpAddress(groupIpAddress: String) {
-    }
+    public fun groupIpAddress(groupIpAddress: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
 
-    public fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
-    }
+    public fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String)
   }
 
   private class BuilderImpl(
@@ -74,15 +71,15 @@ public open class CfnTransitGatewayMulticastGroupSource internal constructor(
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource.Builder.create(scope,
         id)
 
-    public override fun groupIpAddress(groupIpAddress: String) {
+    override fun groupIpAddress(groupIpAddress: String) {
       cdkBuilder.groupIpAddress(groupIpAddress)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
-    public override fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
+    override fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
       cdkBuilder.transitGatewayMulticastDomainId(transitGatewayMulticastDomainId)
     }
 

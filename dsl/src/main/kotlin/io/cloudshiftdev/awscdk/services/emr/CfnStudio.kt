@@ -140,59 +140,41 @@ public open class CfnStudio internal constructor(
   }
 
   public interface Builder {
-    public fun authMode(authMode: String) {
-    }
+    public fun authMode(authMode: String)
 
-    public fun defaultS3Location(defaultS3Location: String) {
-    }
+    public fun defaultS3Location(defaultS3Location: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun encryptionKeyArn(encryptionKeyArn: String) {
-    }
+    public fun encryptionKeyArn(encryptionKeyArn: String)
 
-    public fun engineSecurityGroupId(engineSecurityGroupId: String) {
-    }
+    public fun engineSecurityGroupId(engineSecurityGroupId: String)
 
-    public fun idcInstanceArn(idcInstanceArn: String) {
-    }
+    public fun idcInstanceArn(idcInstanceArn: String)
 
-    public fun idcUserAssignment(idcUserAssignment: String) {
-    }
+    public fun idcUserAssignment(idcUserAssignment: String)
 
-    public fun idpAuthUrl(idpAuthUrl: String) {
-    }
+    public fun idpAuthUrl(idpAuthUrl: String)
 
-    public fun idpRelayStateParameterName(idpRelayStateParameterName: String) {
-    }
+    public fun idpRelayStateParameterName(idpRelayStateParameterName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun serviceRole(serviceRole: String) {
-    }
+    public fun serviceRole(serviceRole: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: Boolean) {
-    }
+    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: Boolean)
 
-    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable) {
-    }
+    public fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable)
 
-    public fun userRole(userRole: String) {
-    }
+    public fun userRole(userRole: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
 
-    public fun workspaceSecurityGroupId(workspaceSecurityGroupId: String) {
-    }
+    public fun workspaceSecurityGroupId(workspaceSecurityGroupId: String)
   }
 
   private class BuilderImpl(
@@ -202,77 +184,75 @@ public open class CfnStudio internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emr.CfnStudio.Builder =
         software.amazon.awscdk.services.emr.CfnStudio.Builder.create(scope, id)
 
-    public override fun authMode(authMode: String) {
+    override fun authMode(authMode: String) {
       cdkBuilder.authMode(authMode)
     }
 
-    public override fun defaultS3Location(defaultS3Location: String) {
+    override fun defaultS3Location(defaultS3Location: String) {
       cdkBuilder.defaultS3Location(defaultS3Location)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun encryptionKeyArn(encryptionKeyArn: String) {
+    override fun encryptionKeyArn(encryptionKeyArn: String) {
       cdkBuilder.encryptionKeyArn(encryptionKeyArn)
     }
 
-    public override fun engineSecurityGroupId(engineSecurityGroupId: String) {
+    override fun engineSecurityGroupId(engineSecurityGroupId: String) {
       cdkBuilder.engineSecurityGroupId(engineSecurityGroupId)
     }
 
-    public override fun idcInstanceArn(idcInstanceArn: String) {
+    override fun idcInstanceArn(idcInstanceArn: String) {
       cdkBuilder.idcInstanceArn(idcInstanceArn)
     }
 
-    public override fun idcUserAssignment(idcUserAssignment: String) {
+    override fun idcUserAssignment(idcUserAssignment: String) {
       cdkBuilder.idcUserAssignment(idcUserAssignment)
     }
 
-    public override fun idpAuthUrl(idpAuthUrl: String) {
+    override fun idpAuthUrl(idpAuthUrl: String) {
       cdkBuilder.idpAuthUrl(idpAuthUrl)
     }
 
-    public override fun idpRelayStateParameterName(idpRelayStateParameterName: String) {
+    override fun idpRelayStateParameterName(idpRelayStateParameterName: String) {
       cdkBuilder.idpRelayStateParameterName(idpRelayStateParameterName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun serviceRole(serviceRole: String) {
+    override fun serviceRole(serviceRole: String) {
       cdkBuilder.serviceRole(serviceRole)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override
-        fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: Boolean) {
+    override fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: Boolean) {
       cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled)
     }
 
-    public override
-        fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable) {
+    override fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable) {
       cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun userRole(userRole: String) {
+    override fun userRole(userRole: String) {
       cdkBuilder.userRole(userRole)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
-    public override fun workspaceSecurityGroupId(workspaceSecurityGroupId: String) {
+    override fun workspaceSecurityGroupId(workspaceSecurityGroupId: String) {
       cdkBuilder.workspaceSecurityGroupId(workspaceSecurityGroupId)
     }
 

@@ -9,22 +9,20 @@ public interface RuntimeConfig {
   public fun runtimeVersion(): String
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun runtimeVersion(runtimeVersion: String) {
-    }
+    public fun runtimeVersion(runtimeVersion: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.RuntimeConfig.Builder =
         software.amazon.awscdk.services.appsync.RuntimeConfig.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun runtimeVersion(runtimeVersion: String) {
+    override fun runtimeVersion(runtimeVersion: String) {
       cdkBuilder.runtimeVersion(runtimeVersion)
     }
 
@@ -34,9 +32,9 @@ public interface RuntimeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.RuntimeConfig,
   ) : RuntimeConfig {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
+    override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
   }
 
   public companion object {

@@ -11,11 +11,9 @@ public open class ApplicationListenerCertificate internal constructor(
       software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun certificates(certificates: List<IListenerCertificate>) {
-    }
+    public fun certificates(certificates: List<IListenerCertificate>)
 
-    public fun listener(listener: IApplicationListener) {
-    }
+    public fun listener(listener: IApplicationListener)
   }
 
   private class BuilderImpl(
@@ -28,11 +26,11 @@ public open class ApplicationListenerCertificate internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate.Builder.create(scope,
         id)
 
-    public override fun certificates(certificates: List<IListenerCertificate>) {
+    override fun certificates(certificates: List<IListenerCertificate>) {
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
-    public override fun listener(listener: IApplicationListener) {
+    override fun listener(listener: IApplicationListener) {
       cdkBuilder.listener(listener.let(IApplicationListener::unwrap))
     }
 

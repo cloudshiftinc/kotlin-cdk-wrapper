@@ -8,7 +8,7 @@ public interface IModel {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.bedrock.IModel,
   ) : IModel {
-    public override fun modelArn(): String = unwrap(this).getModelArn()
+    override fun modelArn(): String = unwrap(this).getModelArn()
   }
 
   public companion object {

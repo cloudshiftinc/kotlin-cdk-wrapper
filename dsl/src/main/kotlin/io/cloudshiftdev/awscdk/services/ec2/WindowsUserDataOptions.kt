@@ -7,15 +7,14 @@ public interface WindowsUserDataOptions {
   public fun persist(): Boolean? = unwrap(this).getPersist()
 
   public interface Builder {
-    public fun persist(persist: Boolean) {
-    }
+    public fun persist(persist: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.WindowsUserDataOptions.Builder =
         software.amazon.awscdk.services.ec2.WindowsUserDataOptions.builder()
 
-    public override fun persist(persist: Boolean) {
+    override fun persist(persist: Boolean) {
       cdkBuilder.persist(persist)
     }
 
@@ -26,7 +25,7 @@ public interface WindowsUserDataOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.WindowsUserDataOptions,
   ) : WindowsUserDataOptions {
-    public override fun persist(): Boolean? = unwrap(this).getPersist()
+    override fun persist(): Boolean? = unwrap(this).getPersist()
   }
 
   public companion object {

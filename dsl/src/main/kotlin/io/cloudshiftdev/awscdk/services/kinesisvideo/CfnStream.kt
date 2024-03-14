@@ -62,23 +62,17 @@ public open class CfnStream internal constructor(
   }
 
   public interface Builder {
-    public fun dataRetentionInHours(dataRetentionInHours: Number) {
-    }
+    public fun dataRetentionInHours(dataRetentionInHours: Number)
 
-    public fun deviceName(deviceName: String) {
-    }
+    public fun deviceName(deviceName: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun mediaType(mediaType: String) {
-    }
+    public fun mediaType(mediaType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -88,27 +82,27 @@ public open class CfnStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kinesisvideo.CfnStream.Builder =
         software.amazon.awscdk.services.kinesisvideo.CfnStream.Builder.create(scope, id)
 
-    public override fun dataRetentionInHours(dataRetentionInHours: Number) {
+    override fun dataRetentionInHours(dataRetentionInHours: Number) {
       cdkBuilder.dataRetentionInHours(dataRetentionInHours)
     }
 
-    public override fun deviceName(deviceName: String) {
+    override fun deviceName(deviceName: String) {
       cdkBuilder.deviceName(deviceName)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun mediaType(mediaType: String) {
+    override fun mediaType(mediaType: String) {
       cdkBuilder.mediaType(mediaType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

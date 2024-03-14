@@ -9,22 +9,20 @@ public interface GatewayRouteAttributes {
   public fun virtualGateway(): IVirtualGateway
 
   public interface Builder {
-    public fun gatewayRouteName(gatewayRouteName: String) {
-    }
+    public fun gatewayRouteName(gatewayRouteName: String)
 
-    public fun virtualGateway(virtualGateway: IVirtualGateway) {
-    }
+    public fun virtualGateway(virtualGateway: IVirtualGateway)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRouteAttributes.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRouteAttributes.builder()
 
-    public override fun gatewayRouteName(gatewayRouteName: String) {
+    override fun gatewayRouteName(gatewayRouteName: String) {
       cdkBuilder.gatewayRouteName(gatewayRouteName)
     }
 
-    public override fun virtualGateway(virtualGateway: IVirtualGateway) {
+    override fun virtualGateway(virtualGateway: IVirtualGateway) {
       cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
     }
 
@@ -35,9 +33,9 @@ public interface GatewayRouteAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteAttributes,
   ) : GatewayRouteAttributes {
-    public override fun gatewayRouteName(): String = unwrap(this).getGatewayRouteName()
+    override fun gatewayRouteName(): String = unwrap(this).getGatewayRouteName()
 
-    public override fun virtualGateway(): IVirtualGateway =
+    override fun virtualGateway(): IVirtualGateway =
         unwrap(this).getVirtualGateway().let(IVirtualGateway::wrap)
   }
 

@@ -14,17 +14,13 @@ public interface ResponseHeadersXSSProtection {
   public fun reportUri(): String? = unwrap(this).getReportUri()
 
   public interface Builder {
-    public fun modeBlock(modeBlock: Boolean) {
-    }
+    public fun modeBlock(modeBlock: Boolean)
 
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
 
-    public fun protection(protection: Boolean) {
-    }
+    public fun protection(protection: Boolean)
 
-    public fun reportUri(reportUri: String) {
-    }
+    public fun reportUri(reportUri: String)
   }
 
   private class BuilderImpl : Builder {
@@ -32,19 +28,19 @@ public interface ResponseHeadersXSSProtection {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection.builder()
 
-    public override fun modeBlock(modeBlock: Boolean) {
+    override fun modeBlock(modeBlock: Boolean) {
       cdkBuilder.modeBlock(modeBlock)
     }
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
-    public override fun protection(protection: Boolean) {
+    override fun protection(protection: Boolean) {
       cdkBuilder.protection(protection)
     }
 
-    public override fun reportUri(reportUri: String) {
+    override fun reportUri(reportUri: String) {
       cdkBuilder.reportUri(reportUri)
     }
 
@@ -55,13 +51,13 @@ public interface ResponseHeadersXSSProtection {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersXSSProtection,
   ) : ResponseHeadersXSSProtection {
-    public override fun modeBlock(): Boolean? = unwrap(this).getModeBlock()
+    override fun modeBlock(): Boolean? = unwrap(this).getModeBlock()
 
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
 
-    public override fun protection(): Boolean = unwrap(this).getProtection()
+    override fun protection(): Boolean = unwrap(this).getProtection()
 
-    public override fun reportUri(): String? = unwrap(this).getReportUri()
+    override fun reportUri(): String? = unwrap(this).getReportUri()
   }
 
   public companion object {

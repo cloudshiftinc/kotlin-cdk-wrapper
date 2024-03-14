@@ -20,14 +20,11 @@ public open class Deployment internal constructor(
   public open fun deploymentId(): String = unwrap(this).getDeploymentId()
 
   public interface Builder {
-    public fun api(api: IRestApi) {
-    }
+    public fun api(api: IRestApi)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun retainDeployments(retainDeployments: Boolean) {
-    }
+    public fun retainDeployments(retainDeployments: Boolean)
   }
 
   private class BuilderImpl(
@@ -37,15 +34,15 @@ public open class Deployment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.Deployment.Builder =
         software.amazon.awscdk.services.apigateway.Deployment.Builder.create(scope, id)
 
-    public override fun api(api: IRestApi) {
+    override fun api(api: IRestApi) {
       cdkBuilder.api(api.let(IRestApi::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun retainDeployments(retainDeployments: Boolean) {
+    override fun retainDeployments(retainDeployments: Boolean) {
       cdkBuilder.retainDeployments(retainDeployments)
     }
 

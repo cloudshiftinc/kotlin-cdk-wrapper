@@ -30,55 +30,41 @@ public open class ApiKey internal constructor(
   public override fun keyId(): String = unwrap(this).getKeyId()
 
   public interface Builder {
-    public fun apiKeyName(apiKeyName: String) {
-    }
+    public fun apiKeyName(apiKeyName: String)
 
-    public fun customerId(customerId: String) {
-    }
+    public fun customerId(customerId: String)
 
-    public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-    }
+    public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ceb4d64eca0f465918941fc63b8d30e14ea7bbd91b8cbd1d4b2234280d025cd")
     public
-        fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit) {
-    }
+        fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit)
 
-    public fun defaultIntegration(defaultIntegration: Integration) {
-    }
+    public fun defaultIntegration(defaultIntegration: Integration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c1d5bfcca76c9e57f022bd3364f99bb0ac4ff30a341312056574fce113b61c67")
-    public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit) {
-    }
+    public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit)
 
-    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-    }
+    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8e13b14747b217ff1767710747d396aa04262995491c811c71dd6836c7a1e6f3")
-    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit) {
-    }
+    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun generateDistinctId(generateDistinctId: Boolean) {
-    }
+    public fun generateDistinctId(generateDistinctId: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun resources(resources: List<IRestApi>) {
-    }
+    public fun resources(resources: List<IRestApi>)
 
-    public fun stages(stages: List<IStage>) {
-    }
+    public fun stages(stages: List<IStage>)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl(
@@ -88,65 +74,64 @@ public open class ApiKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ApiKey.Builder =
         software.amazon.awscdk.services.apigateway.ApiKey.Builder.create(scope, id)
 
-    public override fun apiKeyName(apiKeyName: String) {
+    override fun apiKeyName(apiKeyName: String) {
       cdkBuilder.apiKeyName(apiKeyName)
     }
 
-    public override fun customerId(customerId: String) {
+    override fun customerId(customerId: String) {
       cdkBuilder.customerId(customerId)
     }
 
-    public override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
+    override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
       cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ceb4d64eca0f465918941fc63b8d30e14ea7bbd91b8cbd1d4b2234280d025cd")
-    public override
+    override
         fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit):
         Unit = defaultCorsPreflightOptions(CorsOptions(defaultCorsPreflightOptions))
 
-    public override fun defaultIntegration(defaultIntegration: Integration) {
+    override fun defaultIntegration(defaultIntegration: Integration) {
       cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c1d5bfcca76c9e57f022bd3364f99bb0ac4ff30a341312056574fce113b61c67")
-    public override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit
-        = defaultIntegration(Integration(defaultIntegration))
+    override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit =
+        defaultIntegration(Integration(defaultIntegration))
 
-    public override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
+    override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
       cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8e13b14747b217ff1767710747d396aa04262995491c811c71dd6836c7a1e6f3")
-    public override
-        fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit =
-        defaultMethodOptions(MethodOptions(defaultMethodOptions))
+    override fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit
+        = defaultMethodOptions(MethodOptions(defaultMethodOptions))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun generateDistinctId(generateDistinctId: Boolean) {
+    override fun generateDistinctId(generateDistinctId: Boolean) {
       cdkBuilder.generateDistinctId(generateDistinctId)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun resources(resources: List<IRestApi>) {
+    override fun resources(resources: List<IRestApi>) {
       cdkBuilder.resources(resources.map(IRestApi::unwrap))
     }
 
-    public override fun stages(stages: List<IStage>) {
+    override fun stages(stages: List<IStage>) {
       cdkBuilder.stages(stages.map(IStage::unwrap))
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 

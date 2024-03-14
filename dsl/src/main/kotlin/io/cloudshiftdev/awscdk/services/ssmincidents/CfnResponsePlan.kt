@@ -104,51 +104,37 @@ public open class CfnResponsePlan internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: IResolvable) {
-    }
+    public fun actions(actions: IResolvable)
 
-    public fun actions(actions: List<Any>) {
-    }
+    public fun actions(actions: List<Any>)
 
-    public fun chatChannel(chatChannel: IResolvable) {
-    }
+    public fun chatChannel(chatChannel: IResolvable)
 
-    public fun chatChannel(chatChannel: ChatChannelProperty) {
-    }
+    public fun chatChannel(chatChannel: ChatChannelProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6753cc5e0723c78cfbb510065a013e2332c3b5f3fe56d9719df52b9989730a52")
-    public fun chatChannel(chatChannel: ChatChannelProperty.Builder.() -> Unit) {
-    }
+    public fun chatChannel(chatChannel: ChatChannelProperty.Builder.() -> Unit)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun engagements(engagements: List<String>) {
-    }
+    public fun engagements(engagements: List<String>)
 
-    public fun incidentTemplate(incidentTemplate: IResolvable) {
-    }
+    public fun incidentTemplate(incidentTemplate: IResolvable)
 
-    public fun incidentTemplate(incidentTemplate: IncidentTemplateProperty) {
-    }
+    public fun incidentTemplate(incidentTemplate: IncidentTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0e9785cd11cdaa6f6c209eb5f084c2947c773ffbb1286e908b50e3a0871eb7d")
-    public fun incidentTemplate(incidentTemplate: IncidentTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun incidentTemplate(incidentTemplate: IncidentTemplateProperty.Builder.() -> Unit)
 
-    public fun integrations(integrations: IResolvable) {
-    }
+    public fun integrations(integrations: IResolvable)
 
-    public fun integrations(integrations: List<Any>) {
-    }
+    public fun integrations(integrations: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -158,62 +144,61 @@ public open class CfnResponsePlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.Builder =
         software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.Builder.create(scope, id)
 
-    public override fun actions(actions: IResolvable) {
+    override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable::unwrap))
     }
 
-    public override fun actions(actions: List<Any>) {
+    override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun chatChannel(chatChannel: IResolvable) {
+    override fun chatChannel(chatChannel: IResolvable) {
       cdkBuilder.chatChannel(chatChannel.let(IResolvable::unwrap))
     }
 
-    public override fun chatChannel(chatChannel: ChatChannelProperty) {
+    override fun chatChannel(chatChannel: ChatChannelProperty) {
       cdkBuilder.chatChannel(chatChannel.let(ChatChannelProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6753cc5e0723c78cfbb510065a013e2332c3b5f3fe56d9719df52b9989730a52")
-    public override fun chatChannel(chatChannel: ChatChannelProperty.Builder.() -> Unit): Unit =
+    override fun chatChannel(chatChannel: ChatChannelProperty.Builder.() -> Unit): Unit =
         chatChannel(ChatChannelProperty(chatChannel))
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun engagements(engagements: List<String>) {
+    override fun engagements(engagements: List<String>) {
       cdkBuilder.engagements(engagements)
     }
 
-    public override fun incidentTemplate(incidentTemplate: IResolvable) {
+    override fun incidentTemplate(incidentTemplate: IResolvable) {
       cdkBuilder.incidentTemplate(incidentTemplate.let(IResolvable::unwrap))
     }
 
-    public override fun incidentTemplate(incidentTemplate: IncidentTemplateProperty) {
+    override fun incidentTemplate(incidentTemplate: IncidentTemplateProperty) {
       cdkBuilder.incidentTemplate(incidentTemplate.let(IncidentTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0e9785cd11cdaa6f6c209eb5f084c2947c773ffbb1286e908b50e3a0871eb7d")
-    public override
-        fun incidentTemplate(incidentTemplate: IncidentTemplateProperty.Builder.() -> Unit): Unit =
-        incidentTemplate(IncidentTemplateProperty(incidentTemplate))
+    override fun incidentTemplate(incidentTemplate: IncidentTemplateProperty.Builder.() -> Unit):
+        Unit = incidentTemplate(IncidentTemplateProperty(incidentTemplate))
 
-    public override fun integrations(integrations: IResolvable) {
+    override fun integrations(integrations: IResolvable) {
       cdkBuilder.integrations(integrations.let(IResolvable::unwrap))
     }
 
-    public override fun integrations(integrations: List<Any>) {
+    override fun integrations(integrations: List<Any>) {
       cdkBuilder.integrations(integrations)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -248,11 +233,9 @@ public open class CfnResponsePlan internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -261,11 +244,11 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -278,9 +261,9 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty,
     ) : SsmParameterProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -307,8 +290,7 @@ public open class CfnResponsePlan internal constructor(
     public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
 
     public interface Builder {
-      public fun snsTopicArn(snsTopicArn: String) {
-      }
+      public fun snsTopicArn(snsTopicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -317,7 +299,7 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty.builder()
 
-      public override fun snsTopicArn(snsTopicArn: String) {
+      override fun snsTopicArn(snsTopicArn: String) {
         cdkBuilder.snsTopicArn(snsTopicArn)
       }
 
@@ -330,7 +312,7 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.NotificationTargetItemProperty,
     ) : NotificationTargetItemProperty {
-      public override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
+      override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
     }
 
     public companion object {
@@ -357,17 +339,14 @@ public open class CfnResponsePlan internal constructor(
     public fun pagerDutyConfiguration(): Any
 
     public interface Builder {
-      public fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
-      }
+      public fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable)
 
-      public fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty) {
-      }
+      public fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5b1365cb72066145322131b300cd557680855b99d2eedb46ae39d3281fc00c0a")
       public
-          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -375,18 +354,17 @@ public open class CfnResponsePlan internal constructor(
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty.Builder =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty.builder()
 
-      public override fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
+      override fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
         cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty) {
+      override fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty) {
         cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(PagerDutyConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5b1365cb72066145322131b300cd557680855b99d2eedb46ae39d3281fc00c0a")
-      public override
+      override
           fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty.Builder.() -> Unit):
           Unit = pagerDutyConfiguration(PagerDutyConfigurationProperty(pagerDutyConfiguration))
 
@@ -399,7 +377,7 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IntegrationProperty,
     ) : IntegrationProperty {
-      public override fun pagerDutyConfiguration(): Any = unwrap(this).getPagerDutyConfiguration()
+      override fun pagerDutyConfiguration(): Any = unwrap(this).getPagerDutyConfiguration()
     }
 
     public companion object {
@@ -436,29 +414,21 @@ public open class CfnResponsePlan internal constructor(
     public fun targetAccount(): String? = unwrap(this).getTargetAccount()
 
     public interface Builder {
-      public fun documentName(documentName: String) {
-      }
+      public fun documentName(documentName: String)
 
-      public fun documentVersion(documentVersion: String) {
-      }
+      public fun documentVersion(documentVersion: String)
 
-      public fun dynamicParameters(dynamicParameters: IResolvable) {
-      }
+      public fun dynamicParameters(dynamicParameters: IResolvable)
 
-      public fun dynamicParameters(dynamicParameters: List<Any>) {
-      }
+      public fun dynamicParameters(dynamicParameters: List<Any>)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: List<Any>) {
-      }
+      public fun parameters(parameters: List<Any>)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun targetAccount(targetAccount: String) {
-      }
+      public fun targetAccount(targetAccount: String)
     }
 
     private class BuilderImpl : Builder {
@@ -467,35 +437,35 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty.builder()
 
-      public override fun documentName(documentName: String) {
+      override fun documentName(documentName: String) {
         cdkBuilder.documentName(documentName)
       }
 
-      public override fun documentVersion(documentVersion: String) {
+      override fun documentVersion(documentVersion: String) {
         cdkBuilder.documentVersion(documentVersion)
       }
 
-      public override fun dynamicParameters(dynamicParameters: IResolvable) {
+      override fun dynamicParameters(dynamicParameters: IResolvable) {
         cdkBuilder.dynamicParameters(dynamicParameters.let(IResolvable::unwrap))
       }
 
-      public override fun dynamicParameters(dynamicParameters: List<Any>) {
+      override fun dynamicParameters(dynamicParameters: List<Any>) {
         cdkBuilder.dynamicParameters(dynamicParameters)
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: List<Any>) {
+      override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun targetAccount(targetAccount: String) {
+      override fun targetAccount(targetAccount: String) {
         cdkBuilder.targetAccount(targetAccount)
       }
 
@@ -508,17 +478,17 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmAutomationProperty,
     ) : SsmAutomationProperty {
-      public override fun documentName(): String = unwrap(this).getDocumentName()
+      override fun documentName(): String = unwrap(this).getDocumentName()
 
-      public override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
-      public override fun dynamicParameters(): Any? = unwrap(this).getDynamicParameters()
+      override fun dynamicParameters(): Any? = unwrap(this).getDynamicParameters()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun targetAccount(): String? = unwrap(this).getTargetAccount()
+      override fun targetAccount(): String? = unwrap(this).getTargetAccount()
     }
 
     public companion object {
@@ -545,8 +515,7 @@ public open class CfnResponsePlan internal constructor(
     public fun serviceId(): String
 
     public interface Builder {
-      public fun serviceId(serviceId: String) {
-      }
+      public fun serviceId(serviceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -555,7 +524,7 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty.builder()
 
-      public override fun serviceId(serviceId: String) {
+      override fun serviceId(serviceId: String) {
         cdkBuilder.serviceId(serviceId)
       }
 
@@ -568,7 +537,7 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyIncidentConfigurationProperty,
     ) : PagerDutyIncidentConfigurationProperty {
-      public override fun serviceId(): String = unwrap(this).getServiceId()
+      override fun serviceId(): String = unwrap(this).getServiceId()
     }
 
     public companion object {
@@ -596,16 +565,13 @@ public open class CfnResponsePlan internal constructor(
     public fun ssmAutomation(): Any? = unwrap(this).getSsmAutomation()
 
     public interface Builder {
-      public fun ssmAutomation(ssmAutomation: IResolvable) {
-      }
+      public fun ssmAutomation(ssmAutomation: IResolvable)
 
-      public fun ssmAutomation(ssmAutomation: SsmAutomationProperty) {
-      }
+      public fun ssmAutomation(ssmAutomation: SsmAutomationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d09bb1ec3b9413c6175608dd0244bd27f53894d04e2f3c80042da9e1638c9cee")
-      public fun ssmAutomation(ssmAutomation: SsmAutomationProperty.Builder.() -> Unit) {
-      }
+      public fun ssmAutomation(ssmAutomation: SsmAutomationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -613,18 +579,18 @@ public open class CfnResponsePlan internal constructor(
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty.Builder =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty.builder()
 
-      public override fun ssmAutomation(ssmAutomation: IResolvable) {
+      override fun ssmAutomation(ssmAutomation: IResolvable) {
         cdkBuilder.ssmAutomation(ssmAutomation.let(IResolvable::unwrap))
       }
 
-      public override fun ssmAutomation(ssmAutomation: SsmAutomationProperty) {
+      override fun ssmAutomation(ssmAutomation: SsmAutomationProperty) {
         cdkBuilder.ssmAutomation(ssmAutomation.let(SsmAutomationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d09bb1ec3b9413c6175608dd0244bd27f53894d04e2f3c80042da9e1638c9cee")
-      public override fun ssmAutomation(ssmAutomation: SsmAutomationProperty.Builder.() -> Unit):
-          Unit = ssmAutomation(SsmAutomationProperty(ssmAutomation))
+      override fun ssmAutomation(ssmAutomation: SsmAutomationProperty.Builder.() -> Unit): Unit =
+          ssmAutomation(SsmAutomationProperty(ssmAutomation))
 
       public fun build():
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty =
@@ -635,7 +601,7 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ActionProperty,
     ) : ActionProperty {
-      public override fun ssmAutomation(): Any? = unwrap(this).getSsmAutomation()
+      override fun ssmAutomation(): Any? = unwrap(this).getSsmAutomation()
     }
 
     public companion object {
@@ -664,19 +630,15 @@ public open class CfnResponsePlan internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: DynamicSsmParameterValueProperty) {
-      }
+      public fun `value`(`value`: DynamicSsmParameterValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3fc880425978a155fceda534e935c6cd1c33134d904c0d20d072fa38894ebfba")
-      public fun `value`(`value`: DynamicSsmParameterValueProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: DynamicSsmParameterValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -685,22 +647,22 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: DynamicSsmParameterValueProperty) {
+      override fun `value`(`value`: DynamicSsmParameterValueProperty) {
         cdkBuilder.`value`(`value`.let(DynamicSsmParameterValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3fc880425978a155fceda534e935c6cd1c33134d904c0d20d072fa38894ebfba")
-      public override fun `value`(`value`: DynamicSsmParameterValueProperty.Builder.() -> Unit):
-          Unit = `value`(DynamicSsmParameterValueProperty(`value`))
+      override fun `value`(`value`: DynamicSsmParameterValueProperty.Builder.() -> Unit): Unit =
+          `value`(DynamicSsmParameterValueProperty(`value`))
 
       public fun build():
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty =
@@ -711,9 +673,9 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterProperty,
     ) : DynamicSsmParameterProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {
@@ -740,8 +702,7 @@ public open class CfnResponsePlan internal constructor(
     public fun variable(): String? = unwrap(this).getVariable()
 
     public interface Builder {
-      public fun variable(variable: String) {
-      }
+      public fun variable(variable: String)
     }
 
     private class BuilderImpl : Builder {
@@ -750,7 +711,7 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty.builder()
 
-      public override fun variable(variable: String) {
+      override fun variable(variable: String) {
         cdkBuilder.variable(variable)
       }
 
@@ -763,7 +724,7 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.DynamicSsmParameterValueProperty,
     ) : DynamicSsmParameterValueProperty {
-      public override fun variable(): String? = unwrap(this).getVariable()
+      override fun variable(): String? = unwrap(this).getVariable()
     }
 
     public companion object {
@@ -800,29 +761,21 @@ public open class CfnResponsePlan internal constructor(
     public fun title(): String
 
     public interface Builder {
-      public fun dedupeString(dedupeString: String) {
-      }
+      public fun dedupeString(dedupeString: String)
 
-      public fun impact(impact: Number) {
-      }
+      public fun impact(impact: Number)
 
-      public fun incidentTags(incidentTags: IResolvable) {
-      }
+      public fun incidentTags(incidentTags: IResolvable)
 
-      public fun incidentTags(incidentTags: List<Any>) {
-      }
+      public fun incidentTags(incidentTags: List<Any>)
 
-      public fun notificationTargets(notificationTargets: IResolvable) {
-      }
+      public fun notificationTargets(notificationTargets: IResolvable)
 
-      public fun notificationTargets(notificationTargets: List<Any>) {
-      }
+      public fun notificationTargets(notificationTargets: List<Any>)
 
-      public fun summary(summary: String) {
-      }
+      public fun summary(summary: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
     }
 
     private class BuilderImpl : Builder {
@@ -831,35 +784,35 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty.builder()
 
-      public override fun dedupeString(dedupeString: String) {
+      override fun dedupeString(dedupeString: String) {
         cdkBuilder.dedupeString(dedupeString)
       }
 
-      public override fun impact(impact: Number) {
+      override fun impact(impact: Number) {
         cdkBuilder.impact(impact)
       }
 
-      public override fun incidentTags(incidentTags: IResolvable) {
+      override fun incidentTags(incidentTags: IResolvable) {
         cdkBuilder.incidentTags(incidentTags.let(IResolvable::unwrap))
       }
 
-      public override fun incidentTags(incidentTags: List<Any>) {
+      override fun incidentTags(incidentTags: List<Any>) {
         cdkBuilder.incidentTags(incidentTags)
       }
 
-      public override fun notificationTargets(notificationTargets: IResolvable) {
+      override fun notificationTargets(notificationTargets: IResolvable) {
         cdkBuilder.notificationTargets(notificationTargets.let(IResolvable::unwrap))
       }
 
-      public override fun notificationTargets(notificationTargets: List<Any>) {
+      override fun notificationTargets(notificationTargets: List<Any>) {
         cdkBuilder.notificationTargets(notificationTargets)
       }
 
-      public override fun summary(summary: String) {
+      override fun summary(summary: String) {
         cdkBuilder.summary(summary)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
@@ -872,17 +825,17 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.IncidentTemplateProperty,
     ) : IncidentTemplateProperty {
-      public override fun dedupeString(): String? = unwrap(this).getDedupeString()
+      override fun dedupeString(): String? = unwrap(this).getDedupeString()
 
-      public override fun impact(): Number = unwrap(this).getImpact()
+      override fun impact(): Number = unwrap(this).getImpact()
 
-      public override fun incidentTags(): Any? = unwrap(this).getIncidentTags()
+      override fun incidentTags(): Any? = unwrap(this).getIncidentTags()
 
-      public override fun notificationTargets(): Any? = unwrap(this).getNotificationTargets()
+      override fun notificationTargets(): Any? = unwrap(this).getNotificationTargets()
 
-      public override fun summary(): String? = unwrap(this).getSummary()
+      override fun summary(): String? = unwrap(this).getSummary()
 
-      public override fun title(): String = unwrap(this).getTitle()
+      override fun title(): String = unwrap(this).getTitle()
     }
 
     public companion object {
@@ -909,8 +862,7 @@ public open class CfnResponsePlan internal constructor(
     public fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
 
     public interface Builder {
-      public fun chatbotSns(chatbotSns: List<String>) {
-      }
+      public fun chatbotSns(chatbotSns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -918,7 +870,7 @@ public open class CfnResponsePlan internal constructor(
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.Builder =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty.builder()
 
-      public override fun chatbotSns(chatbotSns: List<String>) {
+      override fun chatbotSns(chatbotSns: List<String>) {
         cdkBuilder.chatbotSns(chatbotSns)
       }
 
@@ -931,7 +883,7 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty,
     ) : ChatChannelProperty {
-      public override fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
+      override fun chatbotSns(): List<String> = unwrap(this).getChatbotSns() ?: emptyList()
     }
 
     public companion object {
@@ -962,24 +914,19 @@ public open class CfnResponsePlan internal constructor(
     public fun secretId(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable) {
-      }
+      public fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable)
 
       public
-          fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty) {
-      }
+          fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a2f87025500874ad7b8eb420748449070320a8ecd81dd2015b2b6b1f7c14e0a3")
       public
-          fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty.Builder.() -> Unit)
 
-      public fun secretId(secretId: String) {
-      }
+      public fun secretId(secretId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -988,28 +935,27 @@ public open class CfnResponsePlan internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override
-          fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable) {
+      override fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable) {
         cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty) {
         cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration.let(PagerDutyIncidentConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a2f87025500874ad7b8eb420748449070320a8ecd81dd2015b2b6b1f7c14e0a3")
-      public override
+      override
           fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty.Builder.() -> Unit):
           Unit =
           pagerDutyIncidentConfiguration(PagerDutyIncidentConfigurationProperty(pagerDutyIncidentConfiguration))
 
-      public override fun secretId(secretId: String) {
+      override fun secretId(secretId: String) {
         cdkBuilder.secretId(secretId)
       }
 
@@ -1022,12 +968,12 @@ public open class CfnResponsePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.PagerDutyConfigurationProperty,
     ) : PagerDutyConfigurationProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun pagerDutyIncidentConfiguration(): Any =
+      override fun pagerDutyIncidentConfiguration(): Any =
           unwrap(this).getPagerDutyIncidentConfiguration()
 
-      public override fun secretId(): String = unwrap(this).getSecretId()
+      override fun secretId(): String = unwrap(this).getSecretId()
     }
 
     public companion object {

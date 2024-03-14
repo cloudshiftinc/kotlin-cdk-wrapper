@@ -66,28 +66,21 @@ public open class CfnDeviceFleet internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun deviceFleetName(deviceFleetName: String) {
-    }
+    public fun deviceFleetName(deviceFleetName: String)
 
-    public fun outputConfig(outputConfig: IResolvable) {
-    }
+    public fun outputConfig(outputConfig: IResolvable)
 
-    public fun outputConfig(outputConfig: EdgeOutputConfigProperty) {
-    }
+    public fun outputConfig(outputConfig: EdgeOutputConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b88d294cea23b1a959185b36e0dfa87ca8e9236822f671a0ae3e563a506650d")
-    public fun outputConfig(outputConfig: EdgeOutputConfigProperty.Builder.() -> Unit) {
-    }
+    public fun outputConfig(outputConfig: EdgeOutputConfigProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -97,32 +90,32 @@ public open class CfnDeviceFleet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.Builder =
         software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun deviceFleetName(deviceFleetName: String) {
+    override fun deviceFleetName(deviceFleetName: String) {
       cdkBuilder.deviceFleetName(deviceFleetName)
     }
 
-    public override fun outputConfig(outputConfig: IResolvable) {
+    override fun outputConfig(outputConfig: IResolvable) {
       cdkBuilder.outputConfig(outputConfig.let(IResolvable::unwrap))
     }
 
-    public override fun outputConfig(outputConfig: EdgeOutputConfigProperty) {
+    override fun outputConfig(outputConfig: EdgeOutputConfigProperty) {
       cdkBuilder.outputConfig(outputConfig.let(EdgeOutputConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b88d294cea23b1a959185b36e0dfa87ca8e9236822f671a0ae3e563a506650d")
-    public override fun outputConfig(outputConfig: EdgeOutputConfigProperty.Builder.() -> Unit):
-        Unit = outputConfig(EdgeOutputConfigProperty(outputConfig))
+    override fun outputConfig(outputConfig: EdgeOutputConfigProperty.Builder.() -> Unit): Unit =
+        outputConfig(EdgeOutputConfigProperty(outputConfig))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -157,11 +150,9 @@ public open class CfnDeviceFleet internal constructor(
     public fun s3OutputLocation(): String
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun s3OutputLocation(s3OutputLocation: String) {
-      }
+      public fun s3OutputLocation(s3OutputLocation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -170,11 +161,11 @@ public open class CfnDeviceFleet internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.EdgeOutputConfigProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun s3OutputLocation(s3OutputLocation: String) {
+      override fun s3OutputLocation(s3OutputLocation: String) {
         cdkBuilder.s3OutputLocation(s3OutputLocation)
       }
 
@@ -187,9 +178,9 @@ public open class CfnDeviceFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDeviceFleet.EdgeOutputConfigProperty,
     ) : EdgeOutputConfigProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun s3OutputLocation(): String = unwrap(this).getS3OutputLocation()
+      override fun s3OutputLocation(): String = unwrap(this).getS3OutputLocation()
     }
 
     public companion object {

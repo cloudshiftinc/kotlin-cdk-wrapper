@@ -25,8 +25,7 @@ public open class CfnRegistryPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyText(policyText: Any) {
-    }
+    public fun policyText(policyText: Any)
   }
 
   private class BuilderImpl(
@@ -36,7 +35,7 @@ public open class CfnRegistryPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecr.CfnRegistryPolicy.Builder =
         software.amazon.awscdk.services.ecr.CfnRegistryPolicy.Builder.create(scope, id)
 
-    public override fun policyText(policyText: Any) {
+    override fun policyText(policyText: Any) {
       cdkBuilder.policyText(policyText)
     }
 

@@ -60,14 +60,11 @@ public open class CfnTransitGatewayPeering internal constructor(
   }
 
   public interface Builder {
-    public fun coreNetworkId(coreNetworkId: String) {
-    }
+    public fun coreNetworkId(coreNetworkId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitGatewayArn(transitGatewayArn: String) {
-    }
+    public fun transitGatewayArn(transitGatewayArn: String)
   }
 
   private class BuilderImpl(
@@ -79,15 +76,15 @@ public open class CfnTransitGatewayPeering internal constructor(
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering.Builder.create(scope,
         id)
 
-    public override fun coreNetworkId(coreNetworkId: String) {
+    override fun coreNetworkId(coreNetworkId: String) {
       cdkBuilder.coreNetworkId(coreNetworkId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitGatewayArn(transitGatewayArn: String) {
+    override fun transitGatewayArn(transitGatewayArn: String) {
       cdkBuilder.transitGatewayArn(transitGatewayArn)
     }
 

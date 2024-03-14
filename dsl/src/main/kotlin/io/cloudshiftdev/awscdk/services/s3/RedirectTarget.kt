@@ -9,22 +9,20 @@ public interface RedirectTarget {
   public fun protocol(): RedirectProtocol? = unwrap(this).getProtocol()?.let(RedirectProtocol::wrap)
 
   public interface Builder {
-    public fun hostName(hostName: String) {
-    }
+    public fun hostName(hostName: String)
 
-    public fun protocol(protocol: RedirectProtocol) {
-    }
+    public fun protocol(protocol: RedirectProtocol)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.RedirectTarget.Builder =
         software.amazon.awscdk.services.s3.RedirectTarget.builder()
 
-    public override fun hostName(hostName: String) {
+    override fun hostName(hostName: String) {
       cdkBuilder.hostName(hostName)
     }
 
-    public override fun protocol(protocol: RedirectProtocol) {
+    override fun protocol(protocol: RedirectProtocol) {
       cdkBuilder.protocol(protocol.let(RedirectProtocol::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface RedirectTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.RedirectTarget,
   ) : RedirectTarget {
-    public override fun hostName(): String = unwrap(this).getHostName()
+    override fun hostName(): String = unwrap(this).getHostName()
 
-    public override fun protocol(): RedirectProtocol? =
+    override fun protocol(): RedirectProtocol? =
         unwrap(this).getProtocol()?.let(RedirectProtocol::wrap)
   }
 

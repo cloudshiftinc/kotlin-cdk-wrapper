@@ -10,22 +10,20 @@ public interface ActionBindOptions {
   public fun role(): IRole
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.ActionBindOptions.Builder =
         software.amazon.awscdk.services.codepipeline.ActionBindOptions.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -36,9 +34,9 @@ public interface ActionBindOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.ActionBindOptions,
   ) : ActionBindOptions {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+    override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
   }
 
   public companion object {

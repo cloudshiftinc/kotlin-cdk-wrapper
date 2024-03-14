@@ -67,26 +67,19 @@ public open class CfnJobQueue internal constructor(
   }
 
   public interface Builder {
-    public fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
-    }
+    public fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable)
 
-    public fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
-    }
+    public fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>)
 
-    public fun jobQueueName(jobQueueName: String) {
-    }
+    public fun jobQueueName(jobQueueName: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun schedulingPolicyArn(schedulingPolicyArn: String) {
-    }
+    public fun schedulingPolicyArn(schedulingPolicyArn: String)
 
-    public fun state(state: String) {
-    }
+    public fun state(state: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnJobQueue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.CfnJobQueue.Builder =
         software.amazon.awscdk.services.batch.CfnJobQueue.Builder.create(scope, id)
 
-    public override fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
+    override fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
       cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.let(IResolvable::unwrap))
     }
 
-    public override fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
+    override fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
       cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder)
     }
 
-    public override fun jobQueueName(jobQueueName: String) {
+    override fun jobQueueName(jobQueueName: String) {
       cdkBuilder.jobQueueName(jobQueueName)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun schedulingPolicyArn(schedulingPolicyArn: String) {
+    override fun schedulingPolicyArn(schedulingPolicyArn: String) {
       cdkBuilder.schedulingPolicyArn(schedulingPolicyArn)
     }
 
-    public override fun state(state: String) {
+    override fun state(state: String) {
       cdkBuilder.state(state)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -154,11 +147,9 @@ public open class CfnJobQueue internal constructor(
     public fun order(): Number
 
     public interface Builder {
-      public fun computeEnvironment(computeEnvironment: String) {
-      }
+      public fun computeEnvironment(computeEnvironment: String)
 
-      public fun order(order: Number) {
-      }
+      public fun order(order: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -167,11 +158,11 @@ public open class CfnJobQueue internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty.builder()
 
-      public override fun computeEnvironment(computeEnvironment: String) {
+      override fun computeEnvironment(computeEnvironment: String) {
         cdkBuilder.computeEnvironment(computeEnvironment)
       }
 
-      public override fun order(order: Number) {
+      override fun order(order: Number) {
         cdkBuilder.order(order)
       }
 
@@ -184,9 +175,9 @@ public open class CfnJobQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty,
     ) : ComputeEnvironmentOrderProperty {
-      public override fun computeEnvironment(): String = unwrap(this).getComputeEnvironment()
+      override fun computeEnvironment(): String = unwrap(this).getComputeEnvironment()
 
-      public override fun order(): Number = unwrap(this).getOrder()
+      override fun order(): Number = unwrap(this).getOrder()
     }
 
     public companion object {

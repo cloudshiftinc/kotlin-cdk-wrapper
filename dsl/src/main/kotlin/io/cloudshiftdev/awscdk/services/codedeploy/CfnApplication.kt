@@ -41,14 +41,11 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun computePlatform(computePlatform: String) {
-    }
+    public fun computePlatform(computePlatform: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -58,15 +55,15 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.CfnApplication.Builder =
         software.amazon.awscdk.services.codedeploy.CfnApplication.Builder.create(scope, id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun computePlatform(computePlatform: String) {
+    override fun computePlatform(computePlatform: String) {
       cdkBuilder.computePlatform(computePlatform)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

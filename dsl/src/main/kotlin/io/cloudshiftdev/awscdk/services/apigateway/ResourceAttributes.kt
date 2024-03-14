@@ -11,29 +11,26 @@ public interface ResourceAttributes {
   public fun restApi(): IRestApi
 
   public interface Builder {
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun restApi(restApi: IRestApi) {
-    }
+    public fun restApi(restApi: IRestApi)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ResourceAttributes.Builder =
         software.amazon.awscdk.services.apigateway.ResourceAttributes.builder()
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun restApi(restApi: IRestApi) {
+    override fun restApi(restApi: IRestApi) {
       cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
     }
 
@@ -44,11 +41,11 @@ public interface ResourceAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ResourceAttributes,
   ) : ResourceAttributes {
-    public override fun path(): String = unwrap(this).getPath()
+    override fun path(): String = unwrap(this).getPath()
 
-    public override fun resourceId(): String = unwrap(this).getResourceId()
+    override fun resourceId(): String = unwrap(this).getResourceId()
 
-    public override fun restApi(): IRestApi = unwrap(this).getRestApi().let(IRestApi::wrap)
+    override fun restApi(): IRestApi = unwrap(this).getRestApi().let(IRestApi::wrap)
   }
 
   public companion object {

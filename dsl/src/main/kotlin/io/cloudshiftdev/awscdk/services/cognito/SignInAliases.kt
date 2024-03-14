@@ -13,36 +13,32 @@ public interface SignInAliases {
   public fun username(): Boolean? = unwrap(this).getUsername()
 
   public interface Builder {
-    public fun email(email: Boolean) {
-    }
+    public fun email(email: Boolean)
 
-    public fun phone(phone: Boolean) {
-    }
+    public fun phone(phone: Boolean)
 
-    public fun preferredUsername(preferredUsername: Boolean) {
-    }
+    public fun preferredUsername(preferredUsername: Boolean)
 
-    public fun username(username: Boolean) {
-    }
+    public fun username(username: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.SignInAliases.Builder =
         software.amazon.awscdk.services.cognito.SignInAliases.builder()
 
-    public override fun email(email: Boolean) {
+    override fun email(email: Boolean) {
       cdkBuilder.email(email)
     }
 
-    public override fun phone(phone: Boolean) {
+    override fun phone(phone: Boolean) {
       cdkBuilder.phone(phone)
     }
 
-    public override fun preferredUsername(preferredUsername: Boolean) {
+    override fun preferredUsername(preferredUsername: Boolean) {
       cdkBuilder.preferredUsername(preferredUsername)
     }
 
-    public override fun username(username: Boolean) {
+    override fun username(username: Boolean) {
       cdkBuilder.username(username)
     }
 
@@ -52,13 +48,13 @@ public interface SignInAliases {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.SignInAliases,
   ) : SignInAliases {
-    public override fun email(): Boolean? = unwrap(this).getEmail()
+    override fun email(): Boolean? = unwrap(this).getEmail()
 
-    public override fun phone(): Boolean? = unwrap(this).getPhone()
+    override fun phone(): Boolean? = unwrap(this).getPhone()
 
-    public override fun preferredUsername(): Boolean? = unwrap(this).getPreferredUsername()
+    override fun preferredUsername(): Boolean? = unwrap(this).getPreferredUsername()
 
-    public override fun username(): Boolean? = unwrap(this).getUsername()
+    override fun username(): Boolean? = unwrap(this).getUsername()
   }
 
   public companion object {

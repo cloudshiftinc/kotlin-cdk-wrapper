@@ -74,32 +74,23 @@ public open class CfnAnomalySubscription internal constructor(
   }
 
   public interface Builder {
-    public fun frequency(frequency: String) {
-    }
+    public fun frequency(frequency: String)
 
-    public fun monitorArnList(monitorArnList: List<String>) {
-    }
+    public fun monitorArnList(monitorArnList: List<String>)
 
-    public fun resourceTags(resourceTags: IResolvable) {
-    }
+    public fun resourceTags(resourceTags: IResolvable)
 
-    public fun resourceTags(resourceTags: List<Any>) {
-    }
+    public fun resourceTags(resourceTags: List<Any>)
 
-    public fun subscribers(subscribers: IResolvable) {
-    }
+    public fun subscribers(subscribers: IResolvable)
 
-    public fun subscribers(subscribers: List<Any>) {
-    }
+    public fun subscribers(subscribers: List<Any>)
 
-    public fun subscriptionName(subscriptionName: String) {
-    }
+    public fun subscriptionName(subscriptionName: String)
 
-    public fun threshold(threshold: Number) {
-    }
+    public fun threshold(threshold: Number)
 
-    public fun thresholdExpression(thresholdExpression: String) {
-    }
+    public fun thresholdExpression(thresholdExpression: String)
   }
 
   private class BuilderImpl(
@@ -109,39 +100,39 @@ public open class CfnAnomalySubscription internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ce.CfnAnomalySubscription.Builder =
         software.amazon.awscdk.services.ce.CfnAnomalySubscription.Builder.create(scope, id)
 
-    public override fun frequency(frequency: String) {
+    override fun frequency(frequency: String) {
       cdkBuilder.frequency(frequency)
     }
 
-    public override fun monitorArnList(monitorArnList: List<String>) {
+    override fun monitorArnList(monitorArnList: List<String>) {
       cdkBuilder.monitorArnList(monitorArnList)
     }
 
-    public override fun resourceTags(resourceTags: IResolvable) {
+    override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
     }
 
-    public override fun resourceTags(resourceTags: List<Any>) {
+    override fun resourceTags(resourceTags: List<Any>) {
       cdkBuilder.resourceTags(resourceTags)
     }
 
-    public override fun subscribers(subscribers: IResolvable) {
+    override fun subscribers(subscribers: IResolvable) {
       cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
     }
 
-    public override fun subscribers(subscribers: List<Any>) {
+    override fun subscribers(subscribers: List<Any>) {
       cdkBuilder.subscribers(subscribers)
     }
 
-    public override fun subscriptionName(subscriptionName: String) {
+    override fun subscriptionName(subscriptionName: String) {
       cdkBuilder.subscriptionName(subscriptionName)
     }
 
-    public override fun threshold(threshold: Number) {
+    override fun threshold(threshold: Number) {
       cdkBuilder.threshold(threshold)
     }
 
-    public override fun thresholdExpression(thresholdExpression: String) {
+    override fun thresholdExpression(thresholdExpression: String) {
       cdkBuilder.thresholdExpression(thresholdExpression)
     }
 
@@ -176,11 +167,9 @@ public open class CfnAnomalySubscription internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -188,11 +177,11 @@ public open class CfnAnomalySubscription internal constructor(
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty.Builder =
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -205,9 +194,9 @@ public open class CfnAnomalySubscription internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty,
     ) : ResourceTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -238,14 +227,11 @@ public open class CfnAnomalySubscription internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -253,15 +239,15 @@ public open class CfnAnomalySubscription internal constructor(
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty.Builder =
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -274,11 +260,11 @@ public open class CfnAnomalySubscription internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty,
     ) : SubscriberProperty {
-      public override fun address(): String = unwrap(this).getAddress()
+      override fun address(): String = unwrap(this).getAddress()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

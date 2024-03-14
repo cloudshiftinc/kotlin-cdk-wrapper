@@ -13,29 +13,26 @@ public interface LambdaAuthorizerConfig {
   public fun validationRegex(): String? = unwrap(this).getValidationRegex()
 
   public interface Builder {
-    public fun handler(handler: IFunction) {
-    }
+    public fun handler(handler: IFunction)
 
-    public fun resultsCacheTtl(resultsCacheTtl: Duration) {
-    }
+    public fun resultsCacheTtl(resultsCacheTtl: Duration)
 
-    public fun validationRegex(validationRegex: String) {
-    }
+    public fun validationRegex(validationRegex: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig.Builder =
         software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig.builder()
 
-    public override fun handler(handler: IFunction) {
+    override fun handler(handler: IFunction) {
       cdkBuilder.handler(handler.let(IFunction::unwrap))
     }
 
-    public override fun resultsCacheTtl(resultsCacheTtl: Duration) {
+    override fun resultsCacheTtl(resultsCacheTtl: Duration) {
       cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
     }
 
-    public override fun validationRegex(validationRegex: String) {
+    override fun validationRegex(validationRegex: String) {
       cdkBuilder.validationRegex(validationRegex)
     }
 
@@ -46,12 +43,12 @@ public interface LambdaAuthorizerConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig,
   ) : LambdaAuthorizerConfig {
-    public override fun handler(): IFunction = unwrap(this).getHandler().let(IFunction::wrap)
+    override fun handler(): IFunction = unwrap(this).getHandler().let(IFunction::wrap)
 
-    public override fun resultsCacheTtl(): Duration? =
+    override fun resultsCacheTtl(): Duration? =
         unwrap(this).getResultsCacheTtl()?.let(Duration::wrap)
 
-    public override fun validationRegex(): String? = unwrap(this).getValidationRegex()
+    override fun validationRegex(): String? = unwrap(this).getValidationRegex()
   }
 
   public companion object {

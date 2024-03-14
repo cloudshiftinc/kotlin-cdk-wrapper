@@ -10,11 +10,9 @@ public interface LogSubscriptionDestinationConfig {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun arn(arn: String) {
-    }
+    public fun arn(arn: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface LogSubscriptionDestinationConfig {
         software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig.Builder =
         software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig.builder()
 
-    public override fun arn(arn: String) {
+    override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface LogSubscriptionDestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig,
   ) : LogSubscriptionDestinationConfig {
-    public override fun arn(): String = unwrap(this).getArn()
+    override fun arn(): String = unwrap(this).getArn()
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 
   public companion object {

@@ -20,51 +20,37 @@ public open class AthenaStopQueryExecution internal constructor(
       software.amazon.awscdk.services.stepfunctions.tasks.AthenaStopQueryExecution,
 ) : TaskStateBase(cdkObject) {
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bbd12bf7e06dc74dfffe4146109689714f53587009fa9f0250d5efc2f49ba61a")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun queryExecutionId(queryExecutionId: String) {
-    }
+    public fun queryExecutionId(queryExecutionId: String)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -76,62 +62,62 @@ public open class AthenaStopQueryExecution internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.AthenaStopQueryExecution.Builder.create(scope,
         id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bbd12bf7e06dc74dfffe4146109689714f53587009fa9f0250d5efc2f49ba61a")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun queryExecutionId(queryExecutionId: String) {
+    override fun queryExecutionId(queryExecutionId: String) {
       cdkBuilder.queryExecutionId(queryExecutionId)
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

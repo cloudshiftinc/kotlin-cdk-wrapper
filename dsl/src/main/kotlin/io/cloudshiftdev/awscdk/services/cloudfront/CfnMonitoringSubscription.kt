@@ -42,20 +42,16 @@ public open class CfnMonitoringSubscription internal constructor(
       monitoringSubscription(MonitoringSubscriptionProperty(`value`))
 
   public interface Builder {
-    public fun distributionId(distributionId: String) {
-    }
+    public fun distributionId(distributionId: String)
 
-    public fun monitoringSubscription(monitoringSubscription: IResolvable) {
-    }
+    public fun monitoringSubscription(monitoringSubscription: IResolvable)
 
-    public fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty) {
-    }
+    public fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("960c31d5e6d26a8705b4f2a0f41859f3c7358310c77d732a335fdc0c2d49da4c")
     public
-        fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty.Builder.() -> Unit) {
-    }
+        fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -67,22 +63,21 @@ public open class CfnMonitoringSubscription internal constructor(
         software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.Builder.create(scope,
         id)
 
-    public override fun distributionId(distributionId: String) {
+    override fun distributionId(distributionId: String) {
       cdkBuilder.distributionId(distributionId)
     }
 
-    public override fun monitoringSubscription(monitoringSubscription: IResolvable) {
+    override fun monitoringSubscription(monitoringSubscription: IResolvable) {
       cdkBuilder.monitoringSubscription(monitoringSubscription.let(IResolvable::unwrap))
     }
 
-    public override
-        fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty) {
+    override fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty) {
       cdkBuilder.monitoringSubscription(monitoringSubscription.let(MonitoringSubscriptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("960c31d5e6d26a8705b4f2a0f41859f3c7358310c77d732a335fdc0c2d49da4c")
-    public override
+    override
         fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty.Builder.() -> Unit):
         Unit = monitoringSubscription(MonitoringSubscriptionProperty(monitoringSubscription))
 
@@ -116,8 +111,7 @@ public open class CfnMonitoringSubscription internal constructor(
     public fun realtimeMetricsSubscriptionStatus(): String
 
     public interface Builder {
-      public fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String) {
-      }
+      public fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String)
     }
 
     private class BuilderImpl : Builder {
@@ -126,8 +120,7 @@ public open class CfnMonitoringSubscription internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty.builder()
 
-      public override
-          fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String) {
+      override fun realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus: String) {
         cdkBuilder.realtimeMetricsSubscriptionStatus(realtimeMetricsSubscriptionStatus)
       }
 
@@ -140,7 +133,7 @@ public open class CfnMonitoringSubscription internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.RealtimeMetricsSubscriptionConfigProperty,
     ) : RealtimeMetricsSubscriptionConfigProperty {
-      public override fun realtimeMetricsSubscriptionStatus(): String =
+      override fun realtimeMetricsSubscriptionStatus(): String =
           unwrap(this).getRealtimeMetricsSubscriptionStatus()
     }
 
@@ -170,18 +163,15 @@ public open class CfnMonitoringSubscription internal constructor(
         unwrap(this).getRealtimeMetricsSubscriptionConfig()
 
     public interface Builder {
-      public fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: IResolvable) {
-      }
+      public fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: IResolvable)
 
       public
-          fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty) {
-      }
+          fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("646758f52c4c776f22979f6af944bbfdec50fc60d3445e1ae97199497f862312")
       public
-          fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty.Builder.() -> Unit) {
-      }
+          fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -190,19 +180,19 @@ public open class CfnMonitoringSubscription internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty.builder()
 
-      public override
+      override
           fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: IResolvable) {
         cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty) {
         cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig.let(RealtimeMetricsSubscriptionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("646758f52c4c776f22979f6af944bbfdec50fc60d3445e1ae97199497f862312")
-      public override
+      override
           fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty.Builder.() -> Unit):
           Unit =
           realtimeMetricsSubscriptionConfig(RealtimeMetricsSubscriptionConfigProperty(realtimeMetricsSubscriptionConfig))
@@ -216,7 +206,7 @@ public open class CfnMonitoringSubscription internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription.MonitoringSubscriptionProperty,
     ) : MonitoringSubscriptionProperty {
-      public override fun realtimeMetricsSubscriptionConfig(): Any? =
+      override fun realtimeMetricsSubscriptionConfig(): Any? =
           unwrap(this).getRealtimeMetricsSubscriptionConfig()
     }
 

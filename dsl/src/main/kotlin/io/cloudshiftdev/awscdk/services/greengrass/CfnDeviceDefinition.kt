@@ -61,22 +61,17 @@ public open class CfnDeviceDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun initialVersion(initialVersion: IResolvable) {
-    }
+    public fun initialVersion(initialVersion: IResolvable)
 
-    public fun initialVersion(initialVersion: DeviceDefinitionVersionProperty) {
-    }
+    public fun initialVersion(initialVersion: DeviceDefinitionVersionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4a9c6093ebdd2b7b760d2e78030469c7097e411ac682b04db29bd9cf45d91e8")
-    public fun initialVersion(initialVersion: DeviceDefinitionVersionProperty.Builder.() -> Unit) {
-    }
+    public fun initialVersion(initialVersion: DeviceDefinitionVersionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -86,25 +81,24 @@ public open class CfnDeviceDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.Builder =
         software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.Builder.create(scope, id)
 
-    public override fun initialVersion(initialVersion: IResolvable) {
+    override fun initialVersion(initialVersion: IResolvable) {
       cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
     }
 
-    public override fun initialVersion(initialVersion: DeviceDefinitionVersionProperty) {
+    override fun initialVersion(initialVersion: DeviceDefinitionVersionProperty) {
       cdkBuilder.initialVersion(initialVersion.let(DeviceDefinitionVersionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4a9c6093ebdd2b7b760d2e78030469c7097e411ac682b04db29bd9cf45d91e8")
-    public override
-        fun initialVersion(initialVersion: DeviceDefinitionVersionProperty.Builder.() -> Unit): Unit
-        = initialVersion(DeviceDefinitionVersionProperty(initialVersion))
+    override fun initialVersion(initialVersion: DeviceDefinitionVersionProperty.Builder.() -> Unit):
+        Unit = initialVersion(DeviceDefinitionVersionProperty(initialVersion))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -143,20 +137,15 @@ public open class CfnDeviceDefinition internal constructor(
     public fun thingArn(): String
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun syncShadow(syncShadow: Boolean) {
-      }
+      public fun syncShadow(syncShadow: Boolean)
 
-      public fun syncShadow(syncShadow: IResolvable) {
-      }
+      public fun syncShadow(syncShadow: IResolvable)
 
-      public fun thingArn(thingArn: String) {
-      }
+      public fun thingArn(thingArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -164,23 +153,23 @@ public open class CfnDeviceDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty.Builder =
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun syncShadow(syncShadow: Boolean) {
+      override fun syncShadow(syncShadow: Boolean) {
         cdkBuilder.syncShadow(syncShadow)
       }
 
-      public override fun syncShadow(syncShadow: IResolvable) {
+      override fun syncShadow(syncShadow: IResolvable) {
         cdkBuilder.syncShadow(syncShadow.let(IResolvable::unwrap))
       }
 
-      public override fun thingArn(thingArn: String) {
+      override fun thingArn(thingArn: String) {
         cdkBuilder.thingArn(thingArn)
       }
 
@@ -193,13 +182,13 @@ public open class CfnDeviceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceProperty,
     ) : DeviceProperty {
-      public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun syncShadow(): Any? = unwrap(this).getSyncShadow()
+      override fun syncShadow(): Any? = unwrap(this).getSyncShadow()
 
-      public override fun thingArn(): String = unwrap(this).getThingArn()
+      override fun thingArn(): String = unwrap(this).getThingArn()
     }
 
     public companion object {
@@ -226,11 +215,9 @@ public open class CfnDeviceDefinition internal constructor(
     public fun devices(): Any
 
     public interface Builder {
-      public fun devices(devices: IResolvable) {
-      }
+      public fun devices(devices: IResolvable)
 
-      public fun devices(devices: List<Any>) {
-      }
+      public fun devices(devices: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -239,11 +226,11 @@ public open class CfnDeviceDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty.builder()
 
-      public override fun devices(devices: IResolvable) {
+      override fun devices(devices: IResolvable) {
         cdkBuilder.devices(devices.let(IResolvable::unwrap))
       }
 
-      public override fun devices(devices: List<Any>) {
+      override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
 
@@ -256,7 +243,7 @@ public open class CfnDeviceDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty,
     ) : DeviceDefinitionVersionProperty {
-      public override fun devices(): Any = unwrap(this).getDevices()
+      override fun devices(): Any = unwrap(this).getDevices()
     }
 
     public companion object {

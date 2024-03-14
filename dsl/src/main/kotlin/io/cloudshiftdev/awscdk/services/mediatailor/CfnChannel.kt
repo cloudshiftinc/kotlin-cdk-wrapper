@@ -110,58 +110,43 @@ public open class CfnChannel internal constructor(
       timeShiftConfiguration(TimeShiftConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun fillerSlate(fillerSlate: IResolvable) {
-    }
+    public fun fillerSlate(fillerSlate: IResolvable)
 
-    public fun fillerSlate(fillerSlate: SlateSourceProperty) {
-    }
+    public fun fillerSlate(fillerSlate: SlateSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc15b775dcda1f69f258cd144d43b770592da7ee3b924c346b59f344eb6fe9dd")
-    public fun fillerSlate(fillerSlate: SlateSourceProperty.Builder.() -> Unit) {
-    }
+    public fun fillerSlate(fillerSlate: SlateSourceProperty.Builder.() -> Unit)
 
-    public fun logConfiguration(logConfiguration: IResolvable) {
-    }
+    public fun logConfiguration(logConfiguration: IResolvable)
 
-    public fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty) {
-    }
+    public fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94949cb391a71a94dd70b8af0b88f622a6f1eebba3e9fcf8a4b988a3c3fcc69d")
     public
-        fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty.Builder.() -> Unit) {
-    }
+        fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty.Builder.() -> Unit)
 
-    public fun outputs(outputs: IResolvable) {
-    }
+    public fun outputs(outputs: IResolvable)
 
-    public fun outputs(outputs: List<Any>) {
-    }
+    public fun outputs(outputs: List<Any>)
 
-    public fun playbackMode(playbackMode: String) {
-    }
+    public fun playbackMode(playbackMode: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tier(tier: String) {
-    }
+    public fun tier(tier: String)
 
-    public fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
-    }
+    public fun timeShiftConfiguration(timeShiftConfiguration: IResolvable)
 
-    public fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty) {
-    }
+    public fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("379d6e486ade6dcc94011afd8012251d9b7f6e360478a5a4b0add39a85684605")
     public
-        fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -171,69 +156,68 @@ public open class CfnChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediatailor.CfnChannel.Builder =
         software.amazon.awscdk.services.mediatailor.CfnChannel.Builder.create(scope, id)
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun fillerSlate(fillerSlate: IResolvable) {
+    override fun fillerSlate(fillerSlate: IResolvable) {
       cdkBuilder.fillerSlate(fillerSlate.let(IResolvable::unwrap))
     }
 
-    public override fun fillerSlate(fillerSlate: SlateSourceProperty) {
+    override fun fillerSlate(fillerSlate: SlateSourceProperty) {
       cdkBuilder.fillerSlate(fillerSlate.let(SlateSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc15b775dcda1f69f258cd144d43b770592da7ee3b924c346b59f344eb6fe9dd")
-    public override fun fillerSlate(fillerSlate: SlateSourceProperty.Builder.() -> Unit): Unit =
+    override fun fillerSlate(fillerSlate: SlateSourceProperty.Builder.() -> Unit): Unit =
         fillerSlate(SlateSourceProperty(fillerSlate))
 
-    public override fun logConfiguration(logConfiguration: IResolvable) {
+    override fun logConfiguration(logConfiguration: IResolvable) {
       cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty) {
+    override fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty) {
       cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationForChannelProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94949cb391a71a94dd70b8af0b88f622a6f1eebba3e9fcf8a4b988a3c3fcc69d")
-    public override
+    override
         fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty.Builder.() -> Unit):
         Unit = logConfiguration(LogConfigurationForChannelProperty(logConfiguration))
 
-    public override fun outputs(outputs: IResolvable) {
+    override fun outputs(outputs: IResolvable) {
       cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
     }
 
-    public override fun outputs(outputs: List<Any>) {
+    override fun outputs(outputs: List<Any>) {
       cdkBuilder.outputs(outputs)
     }
 
-    public override fun playbackMode(playbackMode: String) {
+    override fun playbackMode(playbackMode: String) {
       cdkBuilder.playbackMode(playbackMode)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tier(tier: String) {
+    override fun tier(tier: String) {
       cdkBuilder.tier(tier)
     }
 
-    public override fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
+    override fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
       cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty) {
+    override fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty) {
       cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(TimeShiftConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("379d6e486ade6dcc94011afd8012251d9b7f6e360478a5a4b0add39a85684605")
-    public override
+    override
         fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty.Builder.() -> Unit):
         Unit = timeShiftConfiguration(TimeShiftConfigurationProperty(timeShiftConfiguration))
 
@@ -265,8 +249,7 @@ public open class CfnChannel internal constructor(
     public fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
 
     public interface Builder {
-      public fun logTypes(logTypes: List<String>) {
-      }
+      public fun logTypes(logTypes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -275,7 +258,7 @@ public open class CfnChannel internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty.builder()
 
-      public override fun logTypes(logTypes: List<String>) {
+      override fun logTypes(logTypes: List<String>) {
         cdkBuilder.logTypes(logTypes)
       }
 
@@ -288,7 +271,7 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty,
     ) : LogConfigurationForChannelProperty {
-      public override fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
+      override fun logTypes(): List<String> = unwrap(this).getLogTypes() ?: emptyList()
     }
 
     public companion object {
@@ -316,8 +299,7 @@ public open class CfnChannel internal constructor(
     public fun maxTimeDelaySeconds(): Number
 
     public interface Builder {
-      public fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number) {
-      }
+      public fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -326,7 +308,7 @@ public open class CfnChannel internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty.builder()
 
-      public override fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number) {
+      override fun maxTimeDelaySeconds(maxTimeDelaySeconds: Number) {
         cdkBuilder.maxTimeDelaySeconds(maxTimeDelaySeconds)
       }
 
@@ -339,7 +321,7 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnChannel.TimeShiftConfigurationProperty,
     ) : TimeShiftConfigurationProperty {
-      public override fun maxTimeDelaySeconds(): Number = unwrap(this).getMaxTimeDelaySeconds()
+      override fun maxTimeDelaySeconds(): Number = unwrap(this).getMaxTimeDelaySeconds()
     }
 
     public companion object {
@@ -368,11 +350,9 @@ public open class CfnChannel internal constructor(
     public fun vodSourceName(): String? = unwrap(this).getVodSourceName()
 
     public interface Builder {
-      public fun sourceLocationName(sourceLocationName: String) {
-      }
+      public fun sourceLocationName(sourceLocationName: String)
 
-      public fun vodSourceName(vodSourceName: String) {
-      }
+      public fun vodSourceName(vodSourceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -380,11 +360,11 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty.Builder =
           software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty.builder()
 
-      public override fun sourceLocationName(sourceLocationName: String) {
+      override fun sourceLocationName(sourceLocationName: String) {
         cdkBuilder.sourceLocationName(sourceLocationName)
       }
 
-      public override fun vodSourceName(vodSourceName: String) {
+      override fun vodSourceName(vodSourceName: String) {
         cdkBuilder.vodSourceName(vodSourceName)
       }
 
@@ -396,9 +376,9 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnChannel.SlateSourceProperty,
     ) : SlateSourceProperty {
-      public override fun sourceLocationName(): String? = unwrap(this).getSourceLocationName()
+      override fun sourceLocationName(): String? = unwrap(this).getSourceLocationName()
 
-      public override fun vodSourceName(): String? = unwrap(this).getVodSourceName()
+      override fun vodSourceName(): String? = unwrap(this).getVodSourceName()
     }
 
     public companion object {
@@ -427,11 +407,9 @@ public open class CfnChannel internal constructor(
     public fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
     public interface Builder {
-      public fun adMarkupType(adMarkupType: List<String>) {
-      }
+      public fun adMarkupType(adMarkupType: List<String>)
 
-      public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
-      }
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -440,11 +418,11 @@ public open class CfnChannel internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty.builder()
 
-      public override fun adMarkupType(adMarkupType: List<String>) {
+      override fun adMarkupType(adMarkupType: List<String>) {
         cdkBuilder.adMarkupType(adMarkupType)
       }
 
-      public override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
       }
 
@@ -457,10 +435,9 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnChannel.HlsPlaylistSettingsProperty,
     ) : HlsPlaylistSettingsProperty {
-      public override fun adMarkupType(): List<String> = unwrap(this).getAdMarkupType() ?:
-          emptyList()
+      override fun adMarkupType(): List<String> = unwrap(this).getAdMarkupType() ?: emptyList()
 
-      public override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
     }
 
     public companion object {
@@ -494,17 +471,13 @@ public open class CfnChannel internal constructor(
         unwrap(this).getSuggestedPresentationDelaySeconds()
 
     public interface Builder {
-      public fun manifestWindowSeconds(manifestWindowSeconds: Number) {
-      }
+      public fun manifestWindowSeconds(manifestWindowSeconds: Number)
 
-      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
-      }
+      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number)
 
-      public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
-      }
+      public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number)
 
-      public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
-      }
+      public fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -513,20 +486,19 @@ public open class CfnChannel internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty.builder()
 
-      public override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
+      override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)
       }
 
-      public override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
+      override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
         cdkBuilder.minBufferTimeSeconds(minBufferTimeSeconds)
       }
 
-      public override fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
+      override fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number) {
         cdkBuilder.minUpdatePeriodSeconds(minUpdatePeriodSeconds)
       }
 
-      public override
-          fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
+      override fun suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds: Number) {
         cdkBuilder.suggestedPresentationDelaySeconds(suggestedPresentationDelaySeconds)
       }
 
@@ -539,14 +511,13 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnChannel.DashPlaylistSettingsProperty,
     ) : DashPlaylistSettingsProperty {
-      public override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
+      override fun manifestWindowSeconds(): Number? = unwrap(this).getManifestWindowSeconds()
 
-      public override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
+      override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
 
-      public override fun minUpdatePeriodSeconds(): Number? =
-          unwrap(this).getMinUpdatePeriodSeconds()
+      override fun minUpdatePeriodSeconds(): Number? = unwrap(this).getMinUpdatePeriodSeconds()
 
-      public override fun suggestedPresentationDelaySeconds(): Number? =
+      override fun suggestedPresentationDelaySeconds(): Number? =
           unwrap(this).getSuggestedPresentationDelaySeconds()
     }
 
@@ -580,35 +551,27 @@ public open class CfnChannel internal constructor(
     public fun sourceGroup(): String
 
     public interface Builder {
-      public fun dashPlaylistSettings(dashPlaylistSettings: IResolvable) {
-      }
+      public fun dashPlaylistSettings(dashPlaylistSettings: IResolvable)
 
-      public fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty) {
-      }
+      public fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7a7710c565431f307a58d27f8ce88a64ad27492db8239912d9a637e74265fe0")
       public
-          fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty.Builder.() -> Unit) {
-      }
+          fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty.Builder.() -> Unit)
 
-      public fun hlsPlaylistSettings(hlsPlaylistSettings: IResolvable) {
-      }
+      public fun hlsPlaylistSettings(hlsPlaylistSettings: IResolvable)
 
-      public fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty) {
-      }
+      public fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4cf35f7d5127c92b88381658a8f5a573c1972c7ba3540a432e108990d3915006")
       public
-          fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty.Builder.() -> Unit) {
-      }
+          fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty.Builder.() -> Unit)
 
-      public fun manifestName(manifestName: String) {
-      }
+      public fun manifestName(manifestName: String)
 
-      public fun sourceGroup(sourceGroup: String) {
-      }
+      public fun sourceGroup(sourceGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -616,39 +579,39 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty.Builder =
           software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty.builder()
 
-      public override fun dashPlaylistSettings(dashPlaylistSettings: IResolvable) {
+      override fun dashPlaylistSettings(dashPlaylistSettings: IResolvable) {
         cdkBuilder.dashPlaylistSettings(dashPlaylistSettings.let(IResolvable::unwrap))
       }
 
-      public override fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty) {
+      override fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty) {
         cdkBuilder.dashPlaylistSettings(dashPlaylistSettings.let(DashPlaylistSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7a7710c565431f307a58d27f8ce88a64ad27492db8239912d9a637e74265fe0")
-      public override
+      override
           fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty.Builder.() -> Unit):
           Unit = dashPlaylistSettings(DashPlaylistSettingsProperty(dashPlaylistSettings))
 
-      public override fun hlsPlaylistSettings(hlsPlaylistSettings: IResolvable) {
+      override fun hlsPlaylistSettings(hlsPlaylistSettings: IResolvable) {
         cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings.let(IResolvable::unwrap))
       }
 
-      public override fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty) {
+      override fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty) {
         cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings.let(HlsPlaylistSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4cf35f7d5127c92b88381658a8f5a573c1972c7ba3540a432e108990d3915006")
-      public override
+      override
           fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty.Builder.() -> Unit):
           Unit = hlsPlaylistSettings(HlsPlaylistSettingsProperty(hlsPlaylistSettings))
 
-      public override fun manifestName(manifestName: String) {
+      override fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
       }
 
-      public override fun sourceGroup(sourceGroup: String) {
+      override fun sourceGroup(sourceGroup: String) {
         cdkBuilder.sourceGroup(sourceGroup)
       }
 
@@ -661,13 +624,13 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnChannel.RequestOutputItemProperty,
     ) : RequestOutputItemProperty {
-      public override fun dashPlaylistSettings(): Any? = unwrap(this).getDashPlaylistSettings()
+      override fun dashPlaylistSettings(): Any? = unwrap(this).getDashPlaylistSettings()
 
-      public override fun hlsPlaylistSettings(): Any? = unwrap(this).getHlsPlaylistSettings()
+      override fun hlsPlaylistSettings(): Any? = unwrap(this).getHlsPlaylistSettings()
 
-      public override fun manifestName(): String = unwrap(this).getManifestName()
+      override fun manifestName(): String = unwrap(this).getManifestName()
 
-      public override fun sourceGroup(): String = unwrap(this).getSourceGroup()
+      override fun sourceGroup(): String = unwrap(this).getSourceGroup()
     }
 
     public companion object {

@@ -42,17 +42,13 @@ public open class CfnClientVpnRoute internal constructor(
   }
 
   public interface Builder {
-    public fun clientVpnEndpointId(clientVpnEndpointId: String) {
-    }
+    public fun clientVpnEndpointId(clientVpnEndpointId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun targetVpcSubnetId(targetVpcSubnetId: String) {
-    }
+    public fun targetVpcSubnetId(targetVpcSubnetId: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnClientVpnRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnClientVpnRoute.Builder =
         software.amazon.awscdk.services.ec2.CfnClientVpnRoute.Builder.create(scope, id)
 
-    public override fun clientVpnEndpointId(clientVpnEndpointId: String) {
+    override fun clientVpnEndpointId(clientVpnEndpointId: String) {
       cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun targetVpcSubnetId(targetVpcSubnetId: String) {
+    override fun targetVpcSubnetId(targetVpcSubnetId: String) {
       cdkBuilder.targetVpcSubnetId(targetVpcSubnetId)
     }
 

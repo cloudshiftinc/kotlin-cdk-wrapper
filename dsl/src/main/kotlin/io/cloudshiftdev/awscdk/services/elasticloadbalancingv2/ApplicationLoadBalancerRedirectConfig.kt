@@ -18,20 +18,15 @@ public interface ApplicationLoadBalancerRedirectConfig {
       unwrap(this).getTargetProtocol()?.let(ApplicationProtocol::wrap)
 
   public interface Builder {
-    public fun `open`(`open`: Boolean) {
-    }
+    public fun `open`(`open`: Boolean)
 
-    public fun sourcePort(sourcePort: Number) {
-    }
+    public fun sourcePort(sourcePort: Number)
 
-    public fun sourceProtocol(sourceProtocol: ApplicationProtocol) {
-    }
+    public fun sourceProtocol(sourceProtocol: ApplicationProtocol)
 
-    public fun targetPort(targetPort: Number) {
-    }
+    public fun targetPort(targetPort: Number)
 
-    public fun targetProtocol(targetProtocol: ApplicationProtocol) {
-    }
+    public fun targetProtocol(targetProtocol: ApplicationProtocol)
   }
 
   private class BuilderImpl : Builder {
@@ -40,23 +35,23 @@ public interface ApplicationLoadBalancerRedirectConfig {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig.builder()
 
-    public override fun `open`(`open`: Boolean) {
+    override fun `open`(`open`: Boolean) {
       cdkBuilder.`open`(`open`)
     }
 
-    public override fun sourcePort(sourcePort: Number) {
+    override fun sourcePort(sourcePort: Number) {
       cdkBuilder.sourcePort(sourcePort)
     }
 
-    public override fun sourceProtocol(sourceProtocol: ApplicationProtocol) {
+    override fun sourceProtocol(sourceProtocol: ApplicationProtocol) {
       cdkBuilder.sourceProtocol(sourceProtocol.let(ApplicationProtocol::unwrap))
     }
 
-    public override fun targetPort(targetPort: Number) {
+    override fun targetPort(targetPort: Number) {
       cdkBuilder.targetPort(targetPort)
     }
 
-    public override fun targetProtocol(targetProtocol: ApplicationProtocol) {
+    override fun targetProtocol(targetProtocol: ApplicationProtocol) {
       cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol::unwrap))
     }
 
@@ -69,16 +64,16 @@ public interface ApplicationLoadBalancerRedirectConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig,
   ) : ApplicationLoadBalancerRedirectConfig {
-    public override fun `open`(): Boolean? = unwrap(this).getOpen()
+    override fun `open`(): Boolean? = unwrap(this).getOpen()
 
-    public override fun sourcePort(): Number? = unwrap(this).getSourcePort()
+    override fun sourcePort(): Number? = unwrap(this).getSourcePort()
 
-    public override fun sourceProtocol(): ApplicationProtocol? =
+    override fun sourceProtocol(): ApplicationProtocol? =
         unwrap(this).getSourceProtocol()?.let(ApplicationProtocol::wrap)
 
-    public override fun targetPort(): Number? = unwrap(this).getTargetPort()
+    override fun targetPort(): Number? = unwrap(this).getTargetPort()
 
-    public override fun targetProtocol(): ApplicationProtocol? =
+    override fun targetProtocol(): ApplicationProtocol? =
         unwrap(this).getTargetProtocol()?.let(ApplicationProtocol::wrap)
   }
 

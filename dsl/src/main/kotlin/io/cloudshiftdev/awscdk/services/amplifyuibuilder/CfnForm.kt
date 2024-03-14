@@ -137,71 +137,51 @@ public open class CfnForm internal constructor(
   }
 
   public interface Builder {
-    public fun appId(appId: String) {
-    }
+    public fun appId(appId: String)
 
-    public fun cta(cta: IResolvable) {
-    }
+    public fun cta(cta: IResolvable)
 
-    public fun cta(cta: FormCTAProperty) {
-    }
+    public fun cta(cta: FormCTAProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73d6a8098e1d4f4e193c57cb283688503c9689880c83a0eecbd6552e4762df03")
-    public fun cta(cta: FormCTAProperty.Builder.() -> Unit) {
-    }
+    public fun cta(cta: FormCTAProperty.Builder.() -> Unit)
 
-    public fun dataType(dataType: IResolvable) {
-    }
+    public fun dataType(dataType: IResolvable)
 
-    public fun dataType(dataType: FormDataTypeConfigProperty) {
-    }
+    public fun dataType(dataType: FormDataTypeConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7bc3170471ecc0ebfaea6e8b3dba9bf4efabffb0f5dbcd11cac2470b510221b2")
-    public fun dataType(dataType: FormDataTypeConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dataType(dataType: FormDataTypeConfigProperty.Builder.() -> Unit)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun fields(fields: IResolvable) {
-    }
+    public fun fields(fields: IResolvable)
 
-    public fun fields(fields: Map<String, Any>) {
-    }
+    public fun fields(fields: Map<String, Any>)
 
-    public fun formActionType(formActionType: String) {
-    }
+    public fun formActionType(formActionType: String)
 
-    public fun labelDecorator(labelDecorator: String) {
-    }
+    public fun labelDecorator(labelDecorator: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun schemaVersion(schemaVersion: String) {
-    }
+    public fun schemaVersion(schemaVersion: String)
 
-    public fun sectionalElements(sectionalElements: IResolvable) {
-    }
+    public fun sectionalElements(sectionalElements: IResolvable)
 
-    public fun sectionalElements(sectionalElements: Map<String, Any>) {
-    }
+    public fun sectionalElements(sectionalElements: Map<String, Any>)
 
-    public fun style(style: IResolvable) {
-    }
+    public fun style(style: IResolvable)
 
-    public fun style(style: FormStyleProperty) {
-    }
+    public fun style(style: FormStyleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2634a16848ce7a3e78cc5d2160df60325ece2be95a5fa3ff0ba9456a1f0880ed")
-    public fun style(style: FormStyleProperty.Builder.() -> Unit) {
-    }
+    public fun style(style: FormStyleProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -211,86 +191,85 @@ public open class CfnForm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amplifyuibuilder.CfnForm.Builder =
         software.amazon.awscdk.services.amplifyuibuilder.CfnForm.Builder.create(scope, id)
 
-    public override fun appId(appId: String) {
+    override fun appId(appId: String) {
       cdkBuilder.appId(appId)
     }
 
-    public override fun cta(cta: IResolvable) {
+    override fun cta(cta: IResolvable) {
       cdkBuilder.cta(cta.let(IResolvable::unwrap))
     }
 
-    public override fun cta(cta: FormCTAProperty) {
+    override fun cta(cta: FormCTAProperty) {
       cdkBuilder.cta(cta.let(FormCTAProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73d6a8098e1d4f4e193c57cb283688503c9689880c83a0eecbd6552e4762df03")
-    public override fun cta(cta: FormCTAProperty.Builder.() -> Unit): Unit =
-        cta(FormCTAProperty(cta))
+    override fun cta(cta: FormCTAProperty.Builder.() -> Unit): Unit = cta(FormCTAProperty(cta))
 
-    public override fun dataType(dataType: IResolvable) {
+    override fun dataType(dataType: IResolvable) {
       cdkBuilder.dataType(dataType.let(IResolvable::unwrap))
     }
 
-    public override fun dataType(dataType: FormDataTypeConfigProperty) {
+    override fun dataType(dataType: FormDataTypeConfigProperty) {
       cdkBuilder.dataType(dataType.let(FormDataTypeConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7bc3170471ecc0ebfaea6e8b3dba9bf4efabffb0f5dbcd11cac2470b510221b2")
-    public override fun dataType(dataType: FormDataTypeConfigProperty.Builder.() -> Unit): Unit =
+    override fun dataType(dataType: FormDataTypeConfigProperty.Builder.() -> Unit): Unit =
         dataType(FormDataTypeConfigProperty(dataType))
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun fields(fields: IResolvable) {
+    override fun fields(fields: IResolvable) {
       cdkBuilder.fields(fields.let(IResolvable::unwrap))
     }
 
-    public override fun fields(fields: Map<String, Any>) {
+    override fun fields(fields: Map<String, Any>) {
       cdkBuilder.fields(fields)
     }
 
-    public override fun formActionType(formActionType: String) {
+    override fun formActionType(formActionType: String) {
       cdkBuilder.formActionType(formActionType)
     }
 
-    public override fun labelDecorator(labelDecorator: String) {
+    override fun labelDecorator(labelDecorator: String) {
       cdkBuilder.labelDecorator(labelDecorator)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun schemaVersion(schemaVersion: String) {
+    override fun schemaVersion(schemaVersion: String) {
       cdkBuilder.schemaVersion(schemaVersion)
     }
 
-    public override fun sectionalElements(sectionalElements: IResolvable) {
+    override fun sectionalElements(sectionalElements: IResolvable) {
       cdkBuilder.sectionalElements(sectionalElements.let(IResolvable::unwrap))
     }
 
-    public override fun sectionalElements(sectionalElements: Map<String, Any>) {
+    override fun sectionalElements(sectionalElements: Map<String, Any>) {
       cdkBuilder.sectionalElements(sectionalElements)
     }
 
-    public override fun style(style: IResolvable) {
+    override fun style(style: IResolvable) {
       cdkBuilder.style(style.let(IResolvable::unwrap))
     }
 
-    public override fun style(style: FormStyleProperty) {
+    override fun style(style: FormStyleProperty) {
       cdkBuilder.style(style.let(FormStyleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2634a16848ce7a3e78cc5d2160df60325ece2be95a5fa3ff0ba9456a1f0880ed")
-    public override fun style(style: FormStyleProperty.Builder.() -> Unit): Unit =
+    override fun style(style: FormStyleProperty.Builder.() -> Unit): Unit =
         style(FormStyleProperty(style))
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -327,38 +306,29 @@ public open class CfnForm internal constructor(
     public fun verticalGap(): Any? = unwrap(this).getVerticalGap()
 
     public interface Builder {
-      public fun horizontalGap(horizontalGap: IResolvable) {
-      }
+      public fun horizontalGap(horizontalGap: IResolvable)
 
-      public fun horizontalGap(horizontalGap: FormStyleConfigProperty) {
-      }
+      public fun horizontalGap(horizontalGap: FormStyleConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8a12023b55a24b6429e79c0814ac53caaf170936f4d8368e65dff1446a4d3b6")
-      public fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit) {
-      }
+      public fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit)
 
-      public fun outerPadding(outerPadding: IResolvable) {
-      }
+      public fun outerPadding(outerPadding: IResolvable)
 
-      public fun outerPadding(outerPadding: FormStyleConfigProperty) {
-      }
+      public fun outerPadding(outerPadding: FormStyleConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce45d7f38411ba695c26d1741ceb0e0d065e1c6077f4fd619309a3ca38008f19")
-      public fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit) {
-      }
+      public fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit)
 
-      public fun verticalGap(verticalGap: IResolvable) {
-      }
+      public fun verticalGap(verticalGap: IResolvable)
 
-      public fun verticalGap(verticalGap: FormStyleConfigProperty) {
-      }
+      public fun verticalGap(verticalGap: FormStyleConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f105ff7e1666f9fc3e9461df44db047b2bf72dcd40425ca3d5e5224856a53e57")
-      public fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit) {
-      }
+      public fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -366,44 +336,44 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty.builder()
 
-      public override fun horizontalGap(horizontalGap: IResolvable) {
+      override fun horizontalGap(horizontalGap: IResolvable) {
         cdkBuilder.horizontalGap(horizontalGap.let(IResolvable::unwrap))
       }
 
-      public override fun horizontalGap(horizontalGap: FormStyleConfigProperty) {
+      override fun horizontalGap(horizontalGap: FormStyleConfigProperty) {
         cdkBuilder.horizontalGap(horizontalGap.let(FormStyleConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8a12023b55a24b6429e79c0814ac53caaf170936f4d8368e65dff1446a4d3b6")
-      public override fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit):
-          Unit = horizontalGap(FormStyleConfigProperty(horizontalGap))
+      override fun horizontalGap(horizontalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit =
+          horizontalGap(FormStyleConfigProperty(horizontalGap))
 
-      public override fun outerPadding(outerPadding: IResolvable) {
+      override fun outerPadding(outerPadding: IResolvable) {
         cdkBuilder.outerPadding(outerPadding.let(IResolvable::unwrap))
       }
 
-      public override fun outerPadding(outerPadding: FormStyleConfigProperty) {
+      override fun outerPadding(outerPadding: FormStyleConfigProperty) {
         cdkBuilder.outerPadding(outerPadding.let(FormStyleConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce45d7f38411ba695c26d1741ceb0e0d065e1c6077f4fd619309a3ca38008f19")
-      public override fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit):
-          Unit = outerPadding(FormStyleConfigProperty(outerPadding))
+      override fun outerPadding(outerPadding: FormStyleConfigProperty.Builder.() -> Unit): Unit =
+          outerPadding(FormStyleConfigProperty(outerPadding))
 
-      public override fun verticalGap(verticalGap: IResolvable) {
+      override fun verticalGap(verticalGap: IResolvable) {
         cdkBuilder.verticalGap(verticalGap.let(IResolvable::unwrap))
       }
 
-      public override fun verticalGap(verticalGap: FormStyleConfigProperty) {
+      override fun verticalGap(verticalGap: FormStyleConfigProperty) {
         cdkBuilder.verticalGap(verticalGap.let(FormStyleConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f105ff7e1666f9fc3e9461df44db047b2bf72dcd40425ca3d5e5224856a53e57")
-      public override fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit
-          = verticalGap(FormStyleConfigProperty(verticalGap))
+      override fun verticalGap(verticalGap: FormStyleConfigProperty.Builder.() -> Unit): Unit =
+          verticalGap(FormStyleConfigProperty(verticalGap))
 
       public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty
           = cdkBuilder.build()
@@ -413,11 +383,11 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleProperty,
     ) : FormStyleProperty {
-      public override fun horizontalGap(): Any? = unwrap(this).getHorizontalGap()
+      override fun horizontalGap(): Any? = unwrap(this).getHorizontalGap()
 
-      public override fun outerPadding(): Any? = unwrap(this).getOuterPadding()
+      override fun outerPadding(): Any? = unwrap(this).getOuterPadding()
 
-      public override fun verticalGap(): Any? = unwrap(this).getVerticalGap()
+      override fun verticalGap(): Any? = unwrap(this).getVerticalGap()
     }
 
     public companion object {
@@ -448,27 +418,21 @@ public open class CfnForm internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun bindingProperties(bindingProperties: IResolvable) {
-      }
+      public fun bindingProperties(bindingProperties: IResolvable)
 
       public
-          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty) {
-      }
+          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07939339dd165ac82ec59948a81aac59321a5986d4f3ed9a39e58c1b5f19abc")
       public
-          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit)
 
-      public fun concat(concat: IResolvable) {
-      }
+      public fun concat(concat: IResolvable)
 
-      public fun concat(concat: List<Any>) {
-      }
+      public fun concat(concat: List<Any>)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -477,31 +441,31 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty.builder()
 
-      public override fun bindingProperties(bindingProperties: IResolvable) {
+      override fun bindingProperties(bindingProperties: IResolvable) {
         cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty) {
         cdkBuilder.bindingProperties(bindingProperties.let(FormInputValuePropertyBindingPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07939339dd165ac82ec59948a81aac59321a5986d4f3ed9a39e58c1b5f19abc")
-      public override
+      override
           fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty.Builder.() -> Unit):
           Unit =
           bindingProperties(FormInputValuePropertyBindingPropertiesProperty(bindingProperties))
 
-      public override fun concat(concat: IResolvable) {
+      override fun concat(concat: IResolvable) {
         cdkBuilder.concat(concat.let(IResolvable::unwrap))
       }
 
-      public override fun concat(concat: List<Any>) {
+      override fun concat(concat: List<Any>) {
         cdkBuilder.concat(concat)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -514,11 +478,11 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyProperty,
     ) : FormInputValuePropertyProperty {
-      public override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
 
-      public override fun concat(): Any? = unwrap(this).getConcat()
+      override fun concat(): Any? = unwrap(this).getConcat()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -551,20 +515,15 @@ public open class CfnForm internal constructor(
     public fun validationMessage(): String? = unwrap(this).getValidationMessage()
 
     public interface Builder {
-      public fun numValues(numValues: IResolvable) {
-      }
+      public fun numValues(numValues: IResolvable)
 
-      public fun numValues(numValues: List<Number>) {
-      }
+      public fun numValues(numValues: List<Number>)
 
-      public fun strValues(strValues: List<String>) {
-      }
+      public fun strValues(strValues: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun validationMessage(validationMessage: String) {
-      }
+      public fun validationMessage(validationMessage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -573,23 +532,23 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty.builder()
 
-      public override fun numValues(numValues: IResolvable) {
+      override fun numValues(numValues: IResolvable) {
         cdkBuilder.numValues(numValues.let(IResolvable::unwrap))
       }
 
-      public override fun numValues(numValues: List<Number>) {
+      override fun numValues(numValues: List<Number>) {
         cdkBuilder.numValues(numValues)
       }
 
-      public override fun strValues(strValues: List<String>) {
+      override fun strValues(strValues: List<String>) {
         cdkBuilder.strValues(strValues)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun validationMessage(validationMessage: String) {
+      override fun validationMessage(validationMessage: String) {
         cdkBuilder.validationMessage(validationMessage)
       }
 
@@ -602,13 +561,13 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldValidationConfigurationProperty,
     ) : FieldValidationConfigurationProperty {
-      public override fun numValues(): Any? = unwrap(this).getNumValues()
+      override fun numValues(): Any? = unwrap(this).getNumValues()
 
-      public override fun strValues(): List<String> = unwrap(this).getStrValues() ?: emptyList()
+      override fun strValues(): List<String> = unwrap(this).getStrValues() ?: emptyList()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun validationMessage(): String? = unwrap(this).getValidationMessage()
+      override fun validationMessage(): String? = unwrap(this).getValidationMessage()
     }
 
     public companion object {
@@ -646,29 +605,21 @@ public open class CfnForm internal constructor(
     public fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
 
     public interface Builder {
-      public fun acceptedFileTypes(acceptedFileTypes: List<String>) {
-      }
+      public fun acceptedFileTypes(acceptedFileTypes: List<String>)
 
-      public fun accessLevel(accessLevel: String) {
-      }
+      public fun accessLevel(accessLevel: String)
 
-      public fun isResumable(isResumable: Boolean) {
-      }
+      public fun isResumable(isResumable: Boolean)
 
-      public fun isResumable(isResumable: IResolvable) {
-      }
+      public fun isResumable(isResumable: IResolvable)
 
-      public fun maxFileCount(maxFileCount: Number) {
-      }
+      public fun maxFileCount(maxFileCount: Number)
 
-      public fun maxSize(maxSize: Number) {
-      }
+      public fun maxSize(maxSize: Number)
 
-      public fun showThumbnails(showThumbnails: Boolean) {
-      }
+      public fun showThumbnails(showThumbnails: Boolean)
 
-      public fun showThumbnails(showThumbnails: IResolvable) {
-      }
+      public fun showThumbnails(showThumbnails: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -677,35 +628,35 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty.builder()
 
-      public override fun acceptedFileTypes(acceptedFileTypes: List<String>) {
+      override fun acceptedFileTypes(acceptedFileTypes: List<String>) {
         cdkBuilder.acceptedFileTypes(acceptedFileTypes)
       }
 
-      public override fun accessLevel(accessLevel: String) {
+      override fun accessLevel(accessLevel: String) {
         cdkBuilder.accessLevel(accessLevel)
       }
 
-      public override fun isResumable(isResumable: Boolean) {
+      override fun isResumable(isResumable: Boolean) {
         cdkBuilder.isResumable(isResumable)
       }
 
-      public override fun isResumable(isResumable: IResolvable) {
+      override fun isResumable(isResumable: IResolvable) {
         cdkBuilder.isResumable(isResumable.let(IResolvable::unwrap))
       }
 
-      public override fun maxFileCount(maxFileCount: Number) {
+      override fun maxFileCount(maxFileCount: Number) {
         cdkBuilder.maxFileCount(maxFileCount)
       }
 
-      public override fun maxSize(maxSize: Number) {
+      override fun maxSize(maxSize: Number) {
         cdkBuilder.maxSize(maxSize)
       }
 
-      public override fun showThumbnails(showThumbnails: Boolean) {
+      override fun showThumbnails(showThumbnails: Boolean) {
         cdkBuilder.showThumbnails(showThumbnails)
       }
 
-      public override fun showThumbnails(showThumbnails: IResolvable) {
+      override fun showThumbnails(showThumbnails: IResolvable) {
         cdkBuilder.showThumbnails(showThumbnails.let(IResolvable::unwrap))
       }
 
@@ -718,18 +669,18 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
     ) : FileUploaderFieldConfigProperty {
-      public override fun acceptedFileTypes(): List<String> = unwrap(this).getAcceptedFileTypes() ?:
+      override fun acceptedFileTypes(): List<String> = unwrap(this).getAcceptedFileTypes() ?:
           emptyList()
 
-      public override fun accessLevel(): String = unwrap(this).getAccessLevel()
+      override fun accessLevel(): String = unwrap(this).getAccessLevel()
 
-      public override fun isResumable(): Any? = unwrap(this).getIsResumable()
+      override fun isResumable(): Any? = unwrap(this).getIsResumable()
 
-      public override fun maxFileCount(): Number? = unwrap(this).getMaxFileCount()
+      override fun maxFileCount(): Number? = unwrap(this).getMaxFileCount()
 
-      public override fun maxSize(): Number? = unwrap(this).getMaxSize()
+      override fun maxSize(): Number? = unwrap(this).getMaxSize()
 
-      public override fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
+      override fun showThumbnails(): Any? = unwrap(this).getShowThumbnails()
     }
 
     public companion object {
@@ -758,21 +709,17 @@ public open class CfnForm internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun bindingProperties(bindingProperties: IResolvable) {
-      }
+      public fun bindingProperties(bindingProperties: IResolvable)
 
       public
-          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty) {
-      }
+          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("068d8d4bfa9fce6e7705c4e49fec73461aa875f27d186222db7d59a13f9c65ae")
       public
-          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit) {
-      }
+          fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -781,23 +728,23 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty.builder()
 
-      public override fun bindingProperties(bindingProperties: IResolvable) {
+      override fun bindingProperties(bindingProperties: IResolvable) {
         cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty) {
         cdkBuilder.bindingProperties(bindingProperties.let(FormInputBindingPropertiesValuePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("068d8d4bfa9fce6e7705c4e49fec73461aa875f27d186222db7d59a13f9c65ae")
-      public override
+      override
           fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty.Builder.() -> Unit):
           Unit =
           bindingProperties(FormInputBindingPropertiesValuePropertiesProperty(bindingProperties))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -810,9 +757,9 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValueProperty,
     ) : FormInputBindingPropertiesValueProperty {
-      public override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -846,41 +793,31 @@ public open class CfnForm internal constructor(
     public fun submit(): Any? = unwrap(this).getSubmit()
 
     public interface Builder {
-      public fun cancel(cancel: IResolvable) {
-      }
+      public fun cancel(cancel: IResolvable)
 
-      public fun cancel(cancel: FormButtonProperty) {
-      }
+      public fun cancel(cancel: FormButtonProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e10ffc6077cfdea59b4b69d4aba771b4edabf72c7e985b24a609acb520ad0c29")
-      public fun cancel(cancel: FormButtonProperty.Builder.() -> Unit) {
-      }
+      public fun cancel(cancel: FormButtonProperty.Builder.() -> Unit)
 
-      public fun clear(clear: IResolvable) {
-      }
+      public fun clear(clear: IResolvable)
 
-      public fun clear(clear: FormButtonProperty) {
-      }
+      public fun clear(clear: FormButtonProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a2368f12872aac3777c653e431f7b0f7aec0c02dae3f26efd5c2947552f2c9f")
-      public fun clear(clear: FormButtonProperty.Builder.() -> Unit) {
-      }
+      public fun clear(clear: FormButtonProperty.Builder.() -> Unit)
 
-      public fun position(position: String) {
-      }
+      public fun position(position: String)
 
-      public fun submit(submit: IResolvable) {
-      }
+      public fun submit(submit: IResolvable)
 
-      public fun submit(submit: FormButtonProperty) {
-      }
+      public fun submit(submit: FormButtonProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32f04f26d3e185a85d2564ea012630e118c35b0d78826c61679dabad9da7f557")
-      public fun submit(submit: FormButtonProperty.Builder.() -> Unit) {
-      }
+      public fun submit(submit: FormButtonProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -888,47 +825,47 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty.builder()
 
-      public override fun cancel(cancel: IResolvable) {
+      override fun cancel(cancel: IResolvable) {
         cdkBuilder.cancel(cancel.let(IResolvable::unwrap))
       }
 
-      public override fun cancel(cancel: FormButtonProperty) {
+      override fun cancel(cancel: FormButtonProperty) {
         cdkBuilder.cancel(cancel.let(FormButtonProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e10ffc6077cfdea59b4b69d4aba771b4edabf72c7e985b24a609acb520ad0c29")
-      public override fun cancel(cancel: FormButtonProperty.Builder.() -> Unit): Unit =
+      override fun cancel(cancel: FormButtonProperty.Builder.() -> Unit): Unit =
           cancel(FormButtonProperty(cancel))
 
-      public override fun clear(clear: IResolvable) {
+      override fun clear(clear: IResolvable) {
         cdkBuilder.clear(clear.let(IResolvable::unwrap))
       }
 
-      public override fun clear(clear: FormButtonProperty) {
+      override fun clear(clear: FormButtonProperty) {
         cdkBuilder.clear(clear.let(FormButtonProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a2368f12872aac3777c653e431f7b0f7aec0c02dae3f26efd5c2947552f2c9f")
-      public override fun clear(clear: FormButtonProperty.Builder.() -> Unit): Unit =
+      override fun clear(clear: FormButtonProperty.Builder.() -> Unit): Unit =
           clear(FormButtonProperty(clear))
 
-      public override fun position(position: String) {
+      override fun position(position: String) {
         cdkBuilder.position(position)
       }
 
-      public override fun submit(submit: IResolvable) {
+      override fun submit(submit: IResolvable) {
         cdkBuilder.submit(submit.let(IResolvable::unwrap))
       }
 
-      public override fun submit(submit: FormButtonProperty) {
+      override fun submit(submit: FormButtonProperty) {
         cdkBuilder.submit(submit.let(FormButtonProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32f04f26d3e185a85d2564ea012630e118c35b0d78826c61679dabad9da7f557")
-      public override fun submit(submit: FormButtonProperty.Builder.() -> Unit): Unit =
+      override fun submit(submit: FormButtonProperty.Builder.() -> Unit): Unit =
           submit(FormButtonProperty(submit))
 
       public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty =
@@ -939,13 +876,13 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormCTAProperty,
     ) : FormCTAProperty {
-      public override fun cancel(): Any? = unwrap(this).getCancel()
+      override fun cancel(): Any? = unwrap(this).getCancel()
 
-      public override fun clear(): Any? = unwrap(this).getClear()
+      override fun clear(): Any? = unwrap(this).getClear()
 
-      public override fun position(): String? = unwrap(this).getPosition()
+      override fun position(): String? = unwrap(this).getPosition()
 
-      public override fun submit(): Any? = unwrap(this).getSubmit()
+      override fun submit(): Any? = unwrap(this).getSubmit()
     }
 
     public companion object {
@@ -974,11 +911,9 @@ public open class CfnForm internal constructor(
     public fun `property`(): String
 
     public interface Builder {
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -987,11 +922,11 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty.builder()
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
@@ -1004,9 +939,9 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputValuePropertyBindingPropertiesProperty,
     ) : FormInputValuePropertyBindingPropertiesProperty {
-      public override fun `field`(): String? = unwrap(this).getField()
+      override fun `field`(): String? = unwrap(this).getField()
 
-      public override fun `property`(): String = unwrap(this).getProperty()
+      override fun `property`(): String = unwrap(this).getProperty()
     }
 
     public companion object {
@@ -1038,25 +973,19 @@ public open class CfnForm internal constructor(
     public fun position(): Any? = unwrap(this).getPosition()
 
     public interface Builder {
-      public fun children(children: String) {
-      }
+      public fun children(children: String)
 
-      public fun excluded(excluded: Boolean) {
-      }
+      public fun excluded(excluded: Boolean)
 
-      public fun excluded(excluded: IResolvable) {
-      }
+      public fun excluded(excluded: IResolvable)
 
-      public fun position(position: IResolvable) {
-      }
+      public fun position(position: IResolvable)
 
-      public fun position(position: FieldPositionProperty) {
-      }
+      public fun position(position: FieldPositionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3dd5d47f0a18ebc35782bbd119ab231637ce6f836228b583012f274916f67995")
-      public fun position(position: FieldPositionProperty.Builder.() -> Unit) {
-      }
+      public fun position(position: FieldPositionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1064,29 +993,29 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty.builder()
 
-      public override fun children(children: String) {
+      override fun children(children: String) {
         cdkBuilder.children(children)
       }
 
-      public override fun excluded(excluded: Boolean) {
+      override fun excluded(excluded: Boolean) {
         cdkBuilder.excluded(excluded)
       }
 
-      public override fun excluded(excluded: IResolvable) {
+      override fun excluded(excluded: IResolvable) {
         cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
       }
 
-      public override fun position(position: IResolvable) {
+      override fun position(position: IResolvable) {
         cdkBuilder.position(position.let(IResolvable::unwrap))
       }
 
-      public override fun position(position: FieldPositionProperty) {
+      override fun position(position: FieldPositionProperty) {
         cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3dd5d47f0a18ebc35782bbd119ab231637ce6f836228b583012f274916f67995")
-      public override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
+      override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
           position(FieldPositionProperty(position))
 
       public fun build():
@@ -1098,11 +1027,11 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormButtonProperty,
     ) : FormButtonProperty {
-      public override fun children(): String? = unwrap(this).getChildren()
+      override fun children(): String? = unwrap(this).getChildren()
 
-      public override fun excluded(): Any? = unwrap(this).getExcluded()
+      override fun excluded(): Any? = unwrap(this).getExcluded()
 
-      public override fun position(): Any? = unwrap(this).getPosition()
+      override fun position(): Any? = unwrap(this).getPosition()
     }
 
     public companion object {
@@ -1131,11 +1060,9 @@ public open class CfnForm internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun tokenReference(tokenReference: String) {
-      }
+      public fun tokenReference(tokenReference: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1143,11 +1070,11 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty.builder()
 
-      public override fun tokenReference(tokenReference: String) {
+      override fun tokenReference(tokenReference: String) {
         cdkBuilder.tokenReference(tokenReference)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1160,9 +1087,9 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormStyleConfigProperty,
     ) : FormStyleConfigProperty {
-      public override fun tokenReference(): String? = unwrap(this).getTokenReference()
+      override fun tokenReference(): String? = unwrap(this).getTokenReference()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1219,82 +1146,58 @@ public open class CfnForm internal constructor(
     public fun valueMappings(): Any? = unwrap(this).getValueMappings()
 
     public interface Builder {
-      public fun defaultChecked(defaultChecked: Boolean) {
-      }
+      public fun defaultChecked(defaultChecked: Boolean)
 
-      public fun defaultChecked(defaultChecked: IResolvable) {
-      }
+      public fun defaultChecked(defaultChecked: IResolvable)
 
-      public fun defaultCountryCode(defaultCountryCode: String) {
-      }
+      public fun defaultCountryCode(defaultCountryCode: String)
 
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun descriptiveText(descriptiveText: String) {
-      }
+      public fun descriptiveText(descriptiveText: String)
 
-      public fun fileUploaderConfig(fileUploaderConfig: IResolvable) {
-      }
+      public fun fileUploaderConfig(fileUploaderConfig: IResolvable)
 
-      public fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty) {
-      }
+      public fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d72304510be7d4f339609e15528c03a344679c2b87ce1714ad3f07bb096ea0c9")
       public
-          fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty.Builder.() -> Unit) {
-      }
+          fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty.Builder.() -> Unit)
 
-      public fun isArray(isArray: Boolean) {
-      }
+      public fun isArray(isArray: Boolean)
 
-      public fun isArray(isArray: IResolvable) {
-      }
+      public fun isArray(isArray: IResolvable)
 
-      public fun maxValue(maxValue: Number) {
-      }
+      public fun maxValue(maxValue: Number)
 
-      public fun minValue(minValue: Number) {
-      }
+      public fun minValue(minValue: Number)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun placeholder(placeholder: String) {
-      }
+      public fun placeholder(placeholder: String)
 
-      public fun readOnly(readOnly: Boolean) {
-      }
+      public fun readOnly(readOnly: Boolean)
 
-      public fun readOnly(readOnly: IResolvable) {
-      }
+      public fun readOnly(readOnly: IResolvable)
 
-      public fun required(required: Boolean) {
-      }
+      public fun required(required: Boolean)
 
-      public fun required(required: IResolvable) {
-      }
+      public fun required(required: IResolvable)
 
-      public fun step(step: Number) {
-      }
+      public fun step(step: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
 
-      public fun valueMappings(valueMappings: IResolvable) {
-      }
+      public fun valueMappings(valueMappings: IResolvable)
 
-      public fun valueMappings(valueMappings: ValueMappingsProperty) {
-      }
+      public fun valueMappings(valueMappings: ValueMappingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24dc45d8d1e745487188d349d0ad4e6938c2c88ccad6784f1ce749cc82d20433")
-      public fun valueMappings(valueMappings: ValueMappingsProperty.Builder.() -> Unit) {
-      }
+      public fun valueMappings(valueMappings: ValueMappingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1303,104 +1206,104 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty.builder()
 
-      public override fun defaultChecked(defaultChecked: Boolean) {
+      override fun defaultChecked(defaultChecked: Boolean) {
         cdkBuilder.defaultChecked(defaultChecked)
       }
 
-      public override fun defaultChecked(defaultChecked: IResolvable) {
+      override fun defaultChecked(defaultChecked: IResolvable) {
         cdkBuilder.defaultChecked(defaultChecked.let(IResolvable::unwrap))
       }
 
-      public override fun defaultCountryCode(defaultCountryCode: String) {
+      override fun defaultCountryCode(defaultCountryCode: String) {
         cdkBuilder.defaultCountryCode(defaultCountryCode)
       }
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun descriptiveText(descriptiveText: String) {
+      override fun descriptiveText(descriptiveText: String) {
         cdkBuilder.descriptiveText(descriptiveText)
       }
 
-      public override fun fileUploaderConfig(fileUploaderConfig: IResolvable) {
+      override fun fileUploaderConfig(fileUploaderConfig: IResolvable) {
         cdkBuilder.fileUploaderConfig(fileUploaderConfig.let(IResolvable::unwrap))
       }
 
-      public override fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty) {
+      override fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty) {
         cdkBuilder.fileUploaderConfig(fileUploaderConfig.let(FileUploaderFieldConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d72304510be7d4f339609e15528c03a344679c2b87ce1714ad3f07bb096ea0c9")
-      public override
+      override
           fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty.Builder.() -> Unit):
           Unit = fileUploaderConfig(FileUploaderFieldConfigProperty(fileUploaderConfig))
 
-      public override fun isArray(isArray: Boolean) {
+      override fun isArray(isArray: Boolean) {
         cdkBuilder.isArray(isArray)
       }
 
-      public override fun isArray(isArray: IResolvable) {
+      override fun isArray(isArray: IResolvable) {
         cdkBuilder.isArray(isArray.let(IResolvable::unwrap))
       }
 
-      public override fun maxValue(maxValue: Number) {
+      override fun maxValue(maxValue: Number) {
         cdkBuilder.maxValue(maxValue)
       }
 
-      public override fun minValue(minValue: Number) {
+      override fun minValue(minValue: Number) {
         cdkBuilder.minValue(minValue)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun placeholder(placeholder: String) {
+      override fun placeholder(placeholder: String) {
         cdkBuilder.placeholder(placeholder)
       }
 
-      public override fun readOnly(readOnly: Boolean) {
+      override fun readOnly(readOnly: Boolean) {
         cdkBuilder.readOnly(readOnly)
       }
 
-      public override fun readOnly(readOnly: IResolvable) {
+      override fun readOnly(readOnly: IResolvable) {
         cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
       }
 
-      public override fun required(required: Boolean) {
+      override fun required(required: Boolean) {
         cdkBuilder.required(required)
       }
 
-      public override fun required(required: IResolvable) {
+      override fun required(required: IResolvable) {
         cdkBuilder.required(required.let(IResolvable::unwrap))
       }
 
-      public override fun step(step: Number) {
+      override fun step(step: Number) {
         cdkBuilder.step(step)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
-      public override fun valueMappings(valueMappings: IResolvable) {
+      override fun valueMappings(valueMappings: IResolvable) {
         cdkBuilder.valueMappings(valueMappings.let(IResolvable::unwrap))
       }
 
-      public override fun valueMappings(valueMappings: ValueMappingsProperty) {
+      override fun valueMappings(valueMappings: ValueMappingsProperty) {
         cdkBuilder.valueMappings(valueMappings.let(ValueMappingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24dc45d8d1e745487188d349d0ad4e6938c2c88ccad6784f1ce749cc82d20433")
-      public override fun valueMappings(valueMappings: ValueMappingsProperty.Builder.() -> Unit):
-          Unit = valueMappings(ValueMappingsProperty(valueMappings))
+      override fun valueMappings(valueMappings: ValueMappingsProperty.Builder.() -> Unit): Unit =
+          valueMappings(ValueMappingsProperty(valueMappings))
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty =
@@ -1411,37 +1314,37 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldInputConfigProperty,
     ) : FieldInputConfigProperty {
-      public override fun defaultChecked(): Any? = unwrap(this).getDefaultChecked()
+      override fun defaultChecked(): Any? = unwrap(this).getDefaultChecked()
 
-      public override fun defaultCountryCode(): String? = unwrap(this).getDefaultCountryCode()
+      override fun defaultCountryCode(): String? = unwrap(this).getDefaultCountryCode()
 
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun descriptiveText(): String? = unwrap(this).getDescriptiveText()
+      override fun descriptiveText(): String? = unwrap(this).getDescriptiveText()
 
-      public override fun fileUploaderConfig(): Any? = unwrap(this).getFileUploaderConfig()
+      override fun fileUploaderConfig(): Any? = unwrap(this).getFileUploaderConfig()
 
-      public override fun isArray(): Any? = unwrap(this).getIsArray()
+      override fun isArray(): Any? = unwrap(this).getIsArray()
 
-      public override fun maxValue(): Number? = unwrap(this).getMaxValue()
+      override fun maxValue(): Number? = unwrap(this).getMaxValue()
 
-      public override fun minValue(): Number? = unwrap(this).getMinValue()
+      override fun minValue(): Number? = unwrap(this).getMinValue()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun placeholder(): String? = unwrap(this).getPlaceholder()
+      override fun placeholder(): String? = unwrap(this).getPlaceholder()
 
-      public override fun readOnly(): Any? = unwrap(this).getReadOnly()
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
 
-      public override fun required(): Any? = unwrap(this).getRequired()
+      override fun required(): Any? = unwrap(this).getRequired()
 
-      public override fun step(): Number? = unwrap(this).getStep()
+      override fun step(): Number? = unwrap(this).getStep()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
 
-      public override fun valueMappings(): Any? = unwrap(this).getValueMappings()
+      override fun valueMappings(): Any? = unwrap(this).getValueMappings()
     }
 
     public companion object {
@@ -1478,34 +1381,25 @@ public open class CfnForm internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun excluded(excluded: Boolean) {
-      }
+      public fun excluded(excluded: Boolean)
 
-      public fun excluded(excluded: IResolvable) {
-      }
+      public fun excluded(excluded: IResolvable)
 
-      public fun level(level: Number) {
-      }
+      public fun level(level: Number)
 
-      public fun orientation(orientation: String) {
-      }
+      public fun orientation(orientation: String)
 
-      public fun position(position: IResolvable) {
-      }
+      public fun position(position: IResolvable)
 
-      public fun position(position: FieldPositionProperty) {
-      }
+      public fun position(position: FieldPositionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("29f5995b373681bbb8afd12257b52048879f0802b7450f689680aa8c60c76bea")
-      public fun position(position: FieldPositionProperty.Builder.() -> Unit) {
-      }
+      public fun position(position: FieldPositionProperty.Builder.() -> Unit)
 
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1514,40 +1408,40 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty.builder()
 
-      public override fun excluded(excluded: Boolean) {
+      override fun excluded(excluded: Boolean) {
         cdkBuilder.excluded(excluded)
       }
 
-      public override fun excluded(excluded: IResolvable) {
+      override fun excluded(excluded: IResolvable) {
         cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
       }
 
-      public override fun level(level: Number) {
+      override fun level(level: Number) {
         cdkBuilder.level(level)
       }
 
-      public override fun orientation(orientation: String) {
+      override fun orientation(orientation: String) {
         cdkBuilder.orientation(orientation)
       }
 
-      public override fun position(position: IResolvable) {
+      override fun position(position: IResolvable) {
         cdkBuilder.position(position.let(IResolvable::unwrap))
       }
 
-      public override fun position(position: FieldPositionProperty) {
+      override fun position(position: FieldPositionProperty) {
         cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("29f5995b373681bbb8afd12257b52048879f0802b7450f689680aa8c60c76bea")
-      public override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
+      override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
           position(FieldPositionProperty(position))
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1560,17 +1454,17 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.SectionalElementProperty,
     ) : SectionalElementProperty {
-      public override fun excluded(): Any? = unwrap(this).getExcluded()
+      override fun excluded(): Any? = unwrap(this).getExcluded()
 
-      public override fun level(): Number? = unwrap(this).getLevel()
+      override fun level(): Number? = unwrap(this).getLevel()
 
-      public override fun orientation(): String? = unwrap(this).getOrientation()
+      override fun orientation(): String? = unwrap(this).getOrientation()
 
-      public override fun position(): Any? = unwrap(this).getPosition()
+      override fun position(): Any? = unwrap(this).getPosition()
 
-      public override fun text(): String? = unwrap(this).getText()
+      override fun text(): String? = unwrap(this).getText()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1597,8 +1491,7 @@ public open class CfnForm internal constructor(
     public fun model(): String? = unwrap(this).getModel()
 
     public interface Builder {
-      public fun model(model: String) {
-      }
+      public fun model(model: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1607,7 +1500,7 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty.builder()
 
-      public override fun model(model: String) {
+      override fun model(model: String) {
         cdkBuilder.model(model)
       }
 
@@ -1620,7 +1513,7 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormInputBindingPropertiesValuePropertiesProperty,
     ) : FormInputBindingPropertiesValuePropertiesProperty {
-      public override fun model(): String? = unwrap(this).getModel()
+      override fun model(): String? = unwrap(this).getModel()
     }
 
     public companion object {
@@ -1650,11 +1543,9 @@ public open class CfnForm internal constructor(
     public fun dataTypeName(): String
 
     public interface Builder {
-      public fun dataSourceType(dataSourceType: String) {
-      }
+      public fun dataSourceType(dataSourceType: String)
 
-      public fun dataTypeName(dataTypeName: String) {
-      }
+      public fun dataTypeName(dataTypeName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1663,11 +1554,11 @@ public open class CfnForm internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty.builder()
 
-      public override fun dataSourceType(dataSourceType: String) {
+      override fun dataSourceType(dataSourceType: String) {
         cdkBuilder.dataSourceType(dataSourceType)
       }
 
-      public override fun dataTypeName(dataTypeName: String) {
+      override fun dataTypeName(dataTypeName: String) {
         cdkBuilder.dataTypeName(dataTypeName)
       }
 
@@ -1680,9 +1571,9 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FormDataTypeConfigProperty,
     ) : FormDataTypeConfigProperty {
-      public override fun dataSourceType(): String = unwrap(this).getDataSourceType()
+      override fun dataSourceType(): String = unwrap(this).getDataSourceType()
 
-      public override fun dataTypeName(): String = unwrap(this).getDataTypeName()
+      override fun dataTypeName(): String = unwrap(this).getDataTypeName()
     }
 
     public companion object {
@@ -1713,14 +1604,11 @@ public open class CfnForm internal constructor(
     public fun rightOf(): String? = unwrap(this).getRightOf()
 
     public interface Builder {
-      public fun below(below: String) {
-      }
+      public fun below(below: String)
 
-      public fun fixed(fixed: String) {
-      }
+      public fun fixed(fixed: String)
 
-      public fun rightOf(rightOf: String) {
-      }
+      public fun rightOf(rightOf: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1728,15 +1616,15 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty.builder()
 
-      public override fun below(below: String) {
+      override fun below(below: String) {
         cdkBuilder.below(below)
       }
 
-      public override fun fixed(fixed: String) {
+      override fun fixed(fixed: String) {
         cdkBuilder.fixed(fixed)
       }
 
-      public override fun rightOf(rightOf: String) {
+      override fun rightOf(rightOf: String) {
         cdkBuilder.rightOf(rightOf)
       }
 
@@ -1749,11 +1637,11 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldPositionProperty,
     ) : FieldPositionProperty {
-      public override fun below(): String? = unwrap(this).getBelow()
+      override fun below(): String? = unwrap(this).getBelow()
 
-      public override fun fixed(): String? = unwrap(this).getFixed()
+      override fun fixed(): String? = unwrap(this).getFixed()
 
-      public override fun rightOf(): String? = unwrap(this).getRightOf()
+      override fun rightOf(): String? = unwrap(this).getRightOf()
     }
 
     public companion object {
@@ -1782,17 +1670,13 @@ public open class CfnForm internal constructor(
     public fun values(): Any
 
     public interface Builder {
-      public fun bindingProperties(bindingProperties: IResolvable) {
-      }
+      public fun bindingProperties(bindingProperties: IResolvable)
 
-      public fun bindingProperties(bindingProperties: Map<String, Any>) {
-      }
+      public fun bindingProperties(bindingProperties: Map<String, Any>)
 
-      public fun values(values: IResolvable) {
-      }
+      public fun values(values: IResolvable)
 
-      public fun values(values: List<Any>) {
-      }
+      public fun values(values: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1800,19 +1684,19 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty.builder()
 
-      public override fun bindingProperties(bindingProperties: IResolvable) {
+      override fun bindingProperties(bindingProperties: IResolvable) {
         cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
       }
 
-      public override fun bindingProperties(bindingProperties: Map<String, Any>) {
+      override fun bindingProperties(bindingProperties: Map<String, Any>) {
         cdkBuilder.bindingProperties(bindingProperties)
       }
 
-      public override fun values(values: IResolvable) {
+      override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
 
-      public override fun values(values: List<Any>) {
+      override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
 
@@ -1825,9 +1709,9 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty,
     ) : ValueMappingsProperty {
-      public override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
 
-      public override fun values(): Any = unwrap(this).getValues()
+      override fun values(): Any = unwrap(this).getValues()
     }
 
     public companion object {
@@ -1862,42 +1746,31 @@ public open class CfnForm internal constructor(
     public fun validations(): Any? = unwrap(this).getValidations()
 
     public interface Builder {
-      public fun excluded(excluded: Boolean) {
-      }
+      public fun excluded(excluded: Boolean)
 
-      public fun excluded(excluded: IResolvable) {
-      }
+      public fun excluded(excluded: IResolvable)
 
-      public fun inputType(inputType: IResolvable) {
-      }
+      public fun inputType(inputType: IResolvable)
 
-      public fun inputType(inputType: FieldInputConfigProperty) {
-      }
+      public fun inputType(inputType: FieldInputConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c64032d2e345e9547d0f3723ea7d0e92e4b928e6587669dd5bb3f6dc3742b141")
-      public fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit) {
-      }
+      public fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit)
 
-      public fun label(label: String) {
-      }
+      public fun label(label: String)
 
-      public fun position(position: IResolvable) {
-      }
+      public fun position(position: IResolvable)
 
-      public fun position(position: FieldPositionProperty) {
-      }
+      public fun position(position: FieldPositionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4d0acb41da5497eb76185a9fa1f05138d22a493616d0de6fdae657e8289e1d15")
-      public fun position(position: FieldPositionProperty.Builder.() -> Unit) {
-      }
+      public fun position(position: FieldPositionProperty.Builder.() -> Unit)
 
-      public fun validations(validations: IResolvable) {
-      }
+      public fun validations(validations: IResolvable)
 
-      public fun validations(validations: List<Any>) {
-      }
+      public fun validations(validations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1905,49 +1778,49 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty.builder()
 
-      public override fun excluded(excluded: Boolean) {
+      override fun excluded(excluded: Boolean) {
         cdkBuilder.excluded(excluded)
       }
 
-      public override fun excluded(excluded: IResolvable) {
+      override fun excluded(excluded: IResolvable) {
         cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
       }
 
-      public override fun inputType(inputType: IResolvable) {
+      override fun inputType(inputType: IResolvable) {
         cdkBuilder.inputType(inputType.let(IResolvable::unwrap))
       }
 
-      public override fun inputType(inputType: FieldInputConfigProperty) {
+      override fun inputType(inputType: FieldInputConfigProperty) {
         cdkBuilder.inputType(inputType.let(FieldInputConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c64032d2e345e9547d0f3723ea7d0e92e4b928e6587669dd5bb3f6dc3742b141")
-      public override fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit): Unit =
+      override fun inputType(inputType: FieldInputConfigProperty.Builder.() -> Unit): Unit =
           inputType(FieldInputConfigProperty(inputType))
 
-      public override fun label(label: String) {
+      override fun label(label: String) {
         cdkBuilder.label(label)
       }
 
-      public override fun position(position: IResolvable) {
+      override fun position(position: IResolvable) {
         cdkBuilder.position(position.let(IResolvable::unwrap))
       }
 
-      public override fun position(position: FieldPositionProperty) {
+      override fun position(position: FieldPositionProperty) {
         cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4d0acb41da5497eb76185a9fa1f05138d22a493616d0de6fdae657e8289e1d15")
-      public override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
+      override fun position(position: FieldPositionProperty.Builder.() -> Unit): Unit =
           position(FieldPositionProperty(position))
 
-      public override fun validations(validations: IResolvable) {
+      override fun validations(validations: IResolvable) {
         cdkBuilder.validations(validations.let(IResolvable::unwrap))
       }
 
-      public override fun validations(validations: List<Any>) {
+      override fun validations(validations: List<Any>) {
         cdkBuilder.validations(validations)
       }
 
@@ -1960,15 +1833,15 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty,
     ) : FieldConfigProperty {
-      public override fun excluded(): Any? = unwrap(this).getExcluded()
+      override fun excluded(): Any? = unwrap(this).getExcluded()
 
-      public override fun inputType(): Any? = unwrap(this).getInputType()
+      override fun inputType(): Any? = unwrap(this).getInputType()
 
-      public override fun label(): String? = unwrap(this).getLabel()
+      override fun label(): String? = unwrap(this).getLabel()
 
-      public override fun position(): Any? = unwrap(this).getPosition()
+      override fun position(): Any? = unwrap(this).getPosition()
 
-      public override fun validations(): Any? = unwrap(this).getValidations()
+      override fun validations(): Any? = unwrap(this).getValidations()
     }
 
     public companion object {
@@ -1997,27 +1870,21 @@ public open class CfnForm internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun displayValue(displayValue: IResolvable) {
-      }
+      public fun displayValue(displayValue: IResolvable)
 
-      public fun displayValue(displayValue: FormInputValuePropertyProperty) {
-      }
+      public fun displayValue(displayValue: FormInputValuePropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f2d66ecd117a0518e7526fb410cb6fd154848ed15171575daf97d7c89f93274")
-      public fun displayValue(displayValue: FormInputValuePropertyProperty.Builder.() -> Unit) {
-      }
+      public fun displayValue(displayValue: FormInputValuePropertyProperty.Builder.() -> Unit)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: FormInputValuePropertyProperty) {
-      }
+      public fun `value`(`value`: FormInputValuePropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1d5251c5427e224c5f176efeba18536c54d33b5366e834e5700aa70bcb9ebc2a")
-      public fun `value`(`value`: FormInputValuePropertyProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: FormInputValuePropertyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2025,32 +1892,31 @@ public open class CfnForm internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty.builder()
 
-      public override fun displayValue(displayValue: IResolvable) {
+      override fun displayValue(displayValue: IResolvable) {
         cdkBuilder.displayValue(displayValue.let(IResolvable::unwrap))
       }
 
-      public override fun displayValue(displayValue: FormInputValuePropertyProperty) {
+      override fun displayValue(displayValue: FormInputValuePropertyProperty) {
         cdkBuilder.displayValue(displayValue.let(FormInputValuePropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f2d66ecd117a0518e7526fb410cb6fd154848ed15171575daf97d7c89f93274")
-      public override
-          fun displayValue(displayValue: FormInputValuePropertyProperty.Builder.() -> Unit): Unit =
-          displayValue(FormInputValuePropertyProperty(displayValue))
+      override fun displayValue(displayValue: FormInputValuePropertyProperty.Builder.() -> Unit):
+          Unit = displayValue(FormInputValuePropertyProperty(displayValue))
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: FormInputValuePropertyProperty) {
+      override fun `value`(`value`: FormInputValuePropertyProperty) {
         cdkBuilder.`value`(`value`.let(FormInputValuePropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1d5251c5427e224c5f176efeba18536c54d33b5366e834e5700aa70bcb9ebc2a")
-      public override fun `value`(`value`: FormInputValuePropertyProperty.Builder.() -> Unit): Unit
-          = `value`(FormInputValuePropertyProperty(`value`))
+      override fun `value`(`value`: FormInputValuePropertyProperty.Builder.() -> Unit): Unit =
+          `value`(FormInputValuePropertyProperty(`value`))
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty =
@@ -2061,9 +1927,9 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingProperty,
     ) : ValueMappingProperty {
-      public override fun displayValue(): Any? = unwrap(this).getDisplayValue()
+      override fun displayValue(): Any? = unwrap(this).getDisplayValue()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {

@@ -63,40 +63,29 @@ public open class Key internal constructor(
   public override fun keyId(): String = unwrap(this).getKeyId()
 
   public interface Builder {
-    public fun admins(admins: List<IPrincipal>) {
-    }
+    public fun admins(admins: List<IPrincipal>)
 
-    public fun alias(alias: String) {
-    }
+    public fun alias(alias: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enableKeyRotation(enableKeyRotation: Boolean) {
-    }
+    public fun enableKeyRotation(enableKeyRotation: Boolean)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun keySpec(keySpec: KeySpec) {
-    }
+    public fun keySpec(keySpec: KeySpec)
 
-    public fun keyUsage(keyUsage: KeyUsage) {
-    }
+    public fun keyUsage(keyUsage: KeyUsage)
 
-    public fun pendingWindow(pendingWindow: Duration) {
-    }
+    public fun pendingWindow(pendingWindow: Duration)
 
-    public fun policy(policy: PolicyDocument) {
-    }
+    public fun policy(policy: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c7475e42519d6a2cabeb2117fee0a8b686e15b9804c0b06233e8ae6370d2268")
-    public fun policy(policy: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun policy(policy: PolicyDocument.Builder.() -> Unit)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -106,48 +95,48 @@ public open class Key internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kms.Key.Builder =
         software.amazon.awscdk.services.kms.Key.Builder.create(scope, id)
 
-    public override fun admins(admins: List<IPrincipal>) {
+    override fun admins(admins: List<IPrincipal>) {
       cdkBuilder.admins(admins.map(IPrincipal::unwrap))
     }
 
-    public override fun alias(alias: String) {
+    override fun alias(alias: String) {
       cdkBuilder.alias(alias)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enableKeyRotation(enableKeyRotation: Boolean) {
+    override fun enableKeyRotation(enableKeyRotation: Boolean) {
       cdkBuilder.enableKeyRotation(enableKeyRotation)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun keySpec(keySpec: KeySpec) {
+    override fun keySpec(keySpec: KeySpec) {
       cdkBuilder.keySpec(keySpec.let(KeySpec::unwrap))
     }
 
-    public override fun keyUsage(keyUsage: KeyUsage) {
+    override fun keyUsage(keyUsage: KeyUsage) {
       cdkBuilder.keyUsage(keyUsage.let(KeyUsage::unwrap))
     }
 
-    public override fun pendingWindow(pendingWindow: Duration) {
+    override fun pendingWindow(pendingWindow: Duration) {
       cdkBuilder.pendingWindow(pendingWindow.let(Duration::unwrap))
     }
 
-    public override fun policy(policy: PolicyDocument) {
+    override fun policy(policy: PolicyDocument) {
       cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c7475e42519d6a2cabeb2117fee0a8b686e15b9804c0b06233e8ae6370d2268")
-    public override fun policy(policy: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun policy(policy: PolicyDocument.Builder.() -> Unit): Unit =
         policy(PolicyDocument(policy))
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

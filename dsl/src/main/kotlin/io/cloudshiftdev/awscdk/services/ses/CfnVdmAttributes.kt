@@ -53,29 +53,22 @@ public open class CfnVdmAttributes internal constructor(
   }
 
   public interface Builder {
-    public fun dashboardAttributes(dashboardAttributes: IResolvable) {
-    }
+    public fun dashboardAttributes(dashboardAttributes: IResolvable)
 
-    public fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty) {
-    }
+    public fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4a692f1ea2143d633e81ff1451b925182bdddc1301c184b2a2a0c2d86ed08ff")
     public
-        fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty.Builder.() -> Unit) {
-    }
+        fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty.Builder.() -> Unit)
 
-    public fun guardianAttributes(guardianAttributes: IResolvable) {
-    }
+    public fun guardianAttributes(guardianAttributes: IResolvable)
 
-    public fun guardianAttributes(guardianAttributes: GuardianAttributesProperty) {
-    }
+    public fun guardianAttributes(guardianAttributes: GuardianAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d456f0e3099a8dac0b7281769a5de33cc908e5afffc3f15fa111de935db37551")
-    public
-        fun guardianAttributes(guardianAttributes: GuardianAttributesProperty.Builder.() -> Unit) {
-    }
+    public fun guardianAttributes(guardianAttributes: GuardianAttributesProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -85,31 +78,31 @@ public open class CfnVdmAttributes internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnVdmAttributes.Builder =
         software.amazon.awscdk.services.ses.CfnVdmAttributes.Builder.create(scope, id)
 
-    public override fun dashboardAttributes(dashboardAttributes: IResolvable) {
+    override fun dashboardAttributes(dashboardAttributes: IResolvable) {
       cdkBuilder.dashboardAttributes(dashboardAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty) {
+    override fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty) {
       cdkBuilder.dashboardAttributes(dashboardAttributes.let(DashboardAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4a692f1ea2143d633e81ff1451b925182bdddc1301c184b2a2a0c2d86ed08ff")
-    public override
+    override
         fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty.Builder.() -> Unit):
         Unit = dashboardAttributes(DashboardAttributesProperty(dashboardAttributes))
 
-    public override fun guardianAttributes(guardianAttributes: IResolvable) {
+    override fun guardianAttributes(guardianAttributes: IResolvable) {
       cdkBuilder.guardianAttributes(guardianAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun guardianAttributes(guardianAttributes: GuardianAttributesProperty) {
+    override fun guardianAttributes(guardianAttributes: GuardianAttributesProperty) {
       cdkBuilder.guardianAttributes(guardianAttributes.let(GuardianAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d456f0e3099a8dac0b7281769a5de33cc908e5afffc3f15fa111de935db37551")
-    public override
+    override
         fun guardianAttributes(guardianAttributes: GuardianAttributesProperty.Builder.() -> Unit):
         Unit = guardianAttributes(GuardianAttributesProperty(guardianAttributes))
 
@@ -141,8 +134,7 @@ public open class CfnVdmAttributes internal constructor(
     public fun engagementMetrics(): String? = unwrap(this).getEngagementMetrics()
 
     public interface Builder {
-      public fun engagementMetrics(engagementMetrics: String) {
-      }
+      public fun engagementMetrics(engagementMetrics: String)
     }
 
     private class BuilderImpl : Builder {
@@ -150,7 +142,7 @@ public open class CfnVdmAttributes internal constructor(
           software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty.Builder =
           software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty.builder()
 
-      public override fun engagementMetrics(engagementMetrics: String) {
+      override fun engagementMetrics(engagementMetrics: String) {
         cdkBuilder.engagementMetrics(engagementMetrics)
       }
 
@@ -163,7 +155,7 @@ public open class CfnVdmAttributes internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnVdmAttributes.DashboardAttributesProperty,
     ) : DashboardAttributesProperty {
-      public override fun engagementMetrics(): String? = unwrap(this).getEngagementMetrics()
+      override fun engagementMetrics(): String? = unwrap(this).getEngagementMetrics()
     }
 
     public companion object {
@@ -190,8 +182,7 @@ public open class CfnVdmAttributes internal constructor(
     public fun optimizedSharedDelivery(): String? = unwrap(this).getOptimizedSharedDelivery()
 
     public interface Builder {
-      public fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
-      }
+      public fun optimizedSharedDelivery(optimizedSharedDelivery: String)
     }
 
     private class BuilderImpl : Builder {
@@ -199,7 +190,7 @@ public open class CfnVdmAttributes internal constructor(
           software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty.Builder =
           software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty.builder()
 
-      public override fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
+      override fun optimizedSharedDelivery(optimizedSharedDelivery: String) {
         cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
       }
 
@@ -212,8 +203,7 @@ public open class CfnVdmAttributes internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnVdmAttributes.GuardianAttributesProperty,
     ) : GuardianAttributesProperty {
-      public override fun optimizedSharedDelivery(): String? =
-          unwrap(this).getOptimizedSharedDelivery()
+      override fun optimizedSharedDelivery(): String? = unwrap(this).getOptimizedSharedDelivery()
     }
 
     public companion object {

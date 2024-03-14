@@ -119,51 +119,37 @@ public open class CfnUserSettings internal constructor(
   }
 
   public interface Builder {
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
-    public fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: IResolvable) {
-    }
+    public fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: IResolvable)
 
     public
-        fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty) {
-    }
+        fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb5a968876b8ff47bab3c96a6738da36f0321b45e40f0b06cbde77afdab9ff35")
     public
-        fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty.Builder.() -> Unit)
 
-    public fun copyAllowed(copyAllowed: String) {
-    }
+    public fun copyAllowed(copyAllowed: String)
 
-    public fun customerManagedKey(customerManagedKey: String) {
-    }
+    public fun customerManagedKey(customerManagedKey: String)
 
-    public fun disconnectTimeoutInMinutes(disconnectTimeoutInMinutes: Number) {
-    }
+    public fun disconnectTimeoutInMinutes(disconnectTimeoutInMinutes: Number)
 
-    public fun downloadAllowed(downloadAllowed: String) {
-    }
+    public fun downloadAllowed(downloadAllowed: String)
 
-    public fun idleDisconnectTimeoutInMinutes(idleDisconnectTimeoutInMinutes: Number) {
-    }
+    public fun idleDisconnectTimeoutInMinutes(idleDisconnectTimeoutInMinutes: Number)
 
-    public fun pasteAllowed(pasteAllowed: String) {
-    }
+    public fun pasteAllowed(pasteAllowed: String)
 
-    public fun printAllowed(printAllowed: String) {
-    }
+    public fun printAllowed(printAllowed: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun uploadAllowed(uploadAllowed: String) {
-    }
+    public fun uploadAllowed(uploadAllowed: String)
   }
 
   private class BuilderImpl(
@@ -173,65 +159,64 @@ public open class CfnUserSettings internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.workspacesweb.CfnUserSettings.Builder =
         software.amazon.awscdk.services.workspacesweb.CfnUserSettings.Builder.create(scope, id)
 
-    public override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
     }
 
-    public override
-        fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
-    public override
+    override
         fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: IResolvable) {
       cdkBuilder.cookieSynchronizationConfiguration(cookieSynchronizationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty) {
       cdkBuilder.cookieSynchronizationConfiguration(cookieSynchronizationConfiguration.let(CookieSynchronizationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb5a968876b8ff47bab3c96a6738da36f0321b45e40f0b06cbde77afdab9ff35")
-    public override
+    override
         fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty.Builder.() -> Unit):
         Unit =
         cookieSynchronizationConfiguration(CookieSynchronizationConfigurationProperty(cookieSynchronizationConfiguration))
 
-    public override fun copyAllowed(copyAllowed: String) {
+    override fun copyAllowed(copyAllowed: String) {
       cdkBuilder.copyAllowed(copyAllowed)
     }
 
-    public override fun customerManagedKey(customerManagedKey: String) {
+    override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
     }
 
-    public override fun disconnectTimeoutInMinutes(disconnectTimeoutInMinutes: Number) {
+    override fun disconnectTimeoutInMinutes(disconnectTimeoutInMinutes: Number) {
       cdkBuilder.disconnectTimeoutInMinutes(disconnectTimeoutInMinutes)
     }
 
-    public override fun downloadAllowed(downloadAllowed: String) {
+    override fun downloadAllowed(downloadAllowed: String) {
       cdkBuilder.downloadAllowed(downloadAllowed)
     }
 
-    public override fun idleDisconnectTimeoutInMinutes(idleDisconnectTimeoutInMinutes: Number) {
+    override fun idleDisconnectTimeoutInMinutes(idleDisconnectTimeoutInMinutes: Number) {
       cdkBuilder.idleDisconnectTimeoutInMinutes(idleDisconnectTimeoutInMinutes)
     }
 
-    public override fun pasteAllowed(pasteAllowed: String) {
+    override fun pasteAllowed(pasteAllowed: String) {
       cdkBuilder.pasteAllowed(pasteAllowed)
     }
 
-    public override fun printAllowed(printAllowed: String) {
+    override fun printAllowed(printAllowed: String) {
       cdkBuilder.printAllowed(printAllowed)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun uploadAllowed(uploadAllowed: String) {
+    override fun uploadAllowed(uploadAllowed: String) {
       cdkBuilder.uploadAllowed(uploadAllowed)
     }
 
@@ -266,17 +251,13 @@ public open class CfnUserSettings internal constructor(
     public fun blocklist(): Any? = unwrap(this).getBlocklist()
 
     public interface Builder {
-      public fun allowlist(allowlist: IResolvable) {
-      }
+      public fun allowlist(allowlist: IResolvable)
 
-      public fun allowlist(allowlist: List<Any>) {
-      }
+      public fun allowlist(allowlist: List<Any>)
 
-      public fun blocklist(blocklist: IResolvable) {
-      }
+      public fun blocklist(blocklist: IResolvable)
 
-      public fun blocklist(blocklist: List<Any>) {
-      }
+      public fun blocklist(blocklist: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -285,19 +266,19 @@ public open class CfnUserSettings internal constructor(
           =
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty.builder()
 
-      public override fun allowlist(allowlist: IResolvable) {
+      override fun allowlist(allowlist: IResolvable) {
         cdkBuilder.allowlist(allowlist.let(IResolvable::unwrap))
       }
 
-      public override fun allowlist(allowlist: List<Any>) {
+      override fun allowlist(allowlist: List<Any>) {
         cdkBuilder.allowlist(allowlist)
       }
 
-      public override fun blocklist(blocklist: IResolvable) {
+      override fun blocklist(blocklist: IResolvable) {
         cdkBuilder.blocklist(blocklist.let(IResolvable::unwrap))
       }
 
-      public override fun blocklist(blocklist: List<Any>) {
+      override fun blocklist(blocklist: List<Any>) {
         cdkBuilder.blocklist(blocklist)
       }
 
@@ -310,9 +291,9 @@ public open class CfnUserSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty,
     ) : CookieSynchronizationConfigurationProperty {
-      public override fun allowlist(): Any = unwrap(this).getAllowlist()
+      override fun allowlist(): Any = unwrap(this).getAllowlist()
 
-      public override fun blocklist(): Any? = unwrap(this).getBlocklist()
+      override fun blocklist(): Any? = unwrap(this).getBlocklist()
     }
 
     public companion object {
@@ -344,14 +325,11 @@ public open class CfnUserSettings internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun domain(domain: String) {
-      }
+      public fun domain(domain: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -360,15 +338,15 @@ public open class CfnUserSettings internal constructor(
           =
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty.builder()
 
-      public override fun domain(domain: String) {
+      override fun domain(domain: String) {
         cdkBuilder.domain(domain)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -381,11 +359,11 @@ public open class CfnUserSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSpecificationProperty,
     ) : CookieSpecificationProperty {
-      public override fun domain(): String = unwrap(this).getDomain()
+      override fun domain(): String = unwrap(this).getDomain()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {

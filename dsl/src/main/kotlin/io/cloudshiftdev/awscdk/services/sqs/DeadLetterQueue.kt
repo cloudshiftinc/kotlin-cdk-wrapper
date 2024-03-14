@@ -9,22 +9,20 @@ public interface DeadLetterQueue {
   public fun queue(): IQueue
 
   public interface Builder {
-    public fun maxReceiveCount(maxReceiveCount: Number) {
-    }
+    public fun maxReceiveCount(maxReceiveCount: Number)
 
-    public fun queue(queue: IQueue) {
-    }
+    public fun queue(queue: IQueue)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.sqs.DeadLetterQueue.Builder =
         software.amazon.awscdk.services.sqs.DeadLetterQueue.builder()
 
-    public override fun maxReceiveCount(maxReceiveCount: Number) {
+    override fun maxReceiveCount(maxReceiveCount: Number) {
       cdkBuilder.maxReceiveCount(maxReceiveCount)
     }
 
-    public override fun queue(queue: IQueue) {
+    override fun queue(queue: IQueue) {
       cdkBuilder.queue(queue.let(IQueue::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface DeadLetterQueue {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue,
   ) : DeadLetterQueue {
-    public override fun maxReceiveCount(): Number = unwrap(this).getMaxReceiveCount()
+    override fun maxReceiveCount(): Number = unwrap(this).getMaxReceiveCount()
 
-    public override fun queue(): IQueue = unwrap(this).getQueue().let(IQueue::wrap)
+    override fun queue(): IQueue = unwrap(this).getQueue().let(IQueue::wrap)
   }
 
   public companion object {

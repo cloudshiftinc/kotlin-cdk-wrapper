@@ -8,7 +8,7 @@ public interface IRouteTable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IRouteTable,
   ) : IRouteTable {
-    public override fun routeTableId(): String = unwrap(this).getRouteTableId()
+    override fun routeTableId(): String = unwrap(this).getRouteTableId()
   }
 
   public companion object {

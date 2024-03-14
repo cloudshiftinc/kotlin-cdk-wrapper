@@ -21,50 +21,44 @@ public interface RollingUpdateOptions {
   public fun waitOnResourceSignals(): Boolean? = unwrap(this).getWaitOnResourceSignals()
 
   public interface Builder {
-    public fun maxBatchSize(maxBatchSize: Number) {
-    }
+    public fun maxBatchSize(maxBatchSize: Number)
 
-    public fun minInstancesInService(minInstancesInService: Number) {
-    }
+    public fun minInstancesInService(minInstancesInService: Number)
 
-    public fun minSuccessPercentage(minSuccessPercentage: Number) {
-    }
+    public fun minSuccessPercentage(minSuccessPercentage: Number)
 
-    public fun pauseTime(pauseTime: Duration) {
-    }
+    public fun pauseTime(pauseTime: Duration)
 
-    public fun suspendProcesses(suspendProcesses: List<ScalingProcess>) {
-    }
+    public fun suspendProcesses(suspendProcesses: List<ScalingProcess>)
 
-    public fun waitOnResourceSignals(waitOnResourceSignals: Boolean) {
-    }
+    public fun waitOnResourceSignals(waitOnResourceSignals: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.RollingUpdateOptions.Builder
         = software.amazon.awscdk.services.autoscaling.RollingUpdateOptions.builder()
 
-    public override fun maxBatchSize(maxBatchSize: Number) {
+    override fun maxBatchSize(maxBatchSize: Number) {
       cdkBuilder.maxBatchSize(maxBatchSize)
     }
 
-    public override fun minInstancesInService(minInstancesInService: Number) {
+    override fun minInstancesInService(minInstancesInService: Number) {
       cdkBuilder.minInstancesInService(minInstancesInService)
     }
 
-    public override fun minSuccessPercentage(minSuccessPercentage: Number) {
+    override fun minSuccessPercentage(minSuccessPercentage: Number) {
       cdkBuilder.minSuccessPercentage(minSuccessPercentage)
     }
 
-    public override fun pauseTime(pauseTime: Duration) {
+    override fun pauseTime(pauseTime: Duration) {
       cdkBuilder.pauseTime(pauseTime.let(Duration::unwrap))
     }
 
-    public override fun suspendProcesses(suspendProcesses: List<ScalingProcess>) {
+    override fun suspendProcesses(suspendProcesses: List<ScalingProcess>) {
       cdkBuilder.suspendProcesses(suspendProcesses.map(ScalingProcess::unwrap))
     }
 
-    public override fun waitOnResourceSignals(waitOnResourceSignals: Boolean) {
+    override fun waitOnResourceSignals(waitOnResourceSignals: Boolean) {
       cdkBuilder.waitOnResourceSignals(waitOnResourceSignals)
     }
 
@@ -75,18 +69,18 @@ public interface RollingUpdateOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.RollingUpdateOptions,
   ) : RollingUpdateOptions {
-    public override fun maxBatchSize(): Number? = unwrap(this).getMaxBatchSize()
+    override fun maxBatchSize(): Number? = unwrap(this).getMaxBatchSize()
 
-    public override fun minInstancesInService(): Number? = unwrap(this).getMinInstancesInService()
+    override fun minInstancesInService(): Number? = unwrap(this).getMinInstancesInService()
 
-    public override fun minSuccessPercentage(): Number? = unwrap(this).getMinSuccessPercentage()
+    override fun minSuccessPercentage(): Number? = unwrap(this).getMinSuccessPercentage()
 
-    public override fun pauseTime(): Duration? = unwrap(this).getPauseTime()?.let(Duration::wrap)
+    override fun pauseTime(): Duration? = unwrap(this).getPauseTime()?.let(Duration::wrap)
 
-    public override fun suspendProcesses(): List<ScalingProcess> =
+    override fun suspendProcesses(): List<ScalingProcess> =
         unwrap(this).getSuspendProcesses()?.map(ScalingProcess::wrap) ?: emptyList()
 
-    public override fun waitOnResourceSignals(): Boolean? = unwrap(this).getWaitOnResourceSignals()
+    override fun waitOnResourceSignals(): Boolean? = unwrap(this).getWaitOnResourceSignals()
   }
 
   public companion object {

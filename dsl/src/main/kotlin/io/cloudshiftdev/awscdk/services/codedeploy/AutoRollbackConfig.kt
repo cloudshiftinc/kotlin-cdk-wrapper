@@ -11,29 +11,26 @@ public interface AutoRollbackConfig {
   public fun stoppedDeployment(): Boolean? = unwrap(this).getStoppedDeployment()
 
   public interface Builder {
-    public fun deploymentInAlarm(deploymentInAlarm: Boolean) {
-    }
+    public fun deploymentInAlarm(deploymentInAlarm: Boolean)
 
-    public fun failedDeployment(failedDeployment: Boolean) {
-    }
+    public fun failedDeployment(failedDeployment: Boolean)
 
-    public fun stoppedDeployment(stoppedDeployment: Boolean) {
-    }
+    public fun stoppedDeployment(stoppedDeployment: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig.Builder =
         software.amazon.awscdk.services.codedeploy.AutoRollbackConfig.builder()
 
-    public override fun deploymentInAlarm(deploymentInAlarm: Boolean) {
+    override fun deploymentInAlarm(deploymentInAlarm: Boolean) {
       cdkBuilder.deploymentInAlarm(deploymentInAlarm)
     }
 
-    public override fun failedDeployment(failedDeployment: Boolean) {
+    override fun failedDeployment(failedDeployment: Boolean) {
       cdkBuilder.failedDeployment(failedDeployment)
     }
 
-    public override fun stoppedDeployment(stoppedDeployment: Boolean) {
+    override fun stoppedDeployment(stoppedDeployment: Boolean) {
       cdkBuilder.stoppedDeployment(stoppedDeployment)
     }
 
@@ -44,11 +41,11 @@ public interface AutoRollbackConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.AutoRollbackConfig,
   ) : AutoRollbackConfig {
-    public override fun deploymentInAlarm(): Boolean? = unwrap(this).getDeploymentInAlarm()
+    override fun deploymentInAlarm(): Boolean? = unwrap(this).getDeploymentInAlarm()
 
-    public override fun failedDeployment(): Boolean? = unwrap(this).getFailedDeployment()
+    override fun failedDeployment(): Boolean? = unwrap(this).getFailedDeployment()
 
-    public override fun stoppedDeployment(): Boolean? = unwrap(this).getStoppedDeployment()
+    override fun stoppedDeployment(): Boolean? = unwrap(this).getStoppedDeployment()
   }
 
   public companion object {

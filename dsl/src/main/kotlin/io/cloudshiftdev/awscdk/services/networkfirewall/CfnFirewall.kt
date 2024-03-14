@@ -103,44 +103,31 @@ public open class CfnFirewall internal constructor(
   }
 
   public interface Builder {
-    public fun deleteProtection(deleteProtection: Boolean) {
-    }
+    public fun deleteProtection(deleteProtection: Boolean)
 
-    public fun deleteProtection(deleteProtection: IResolvable) {
-    }
+    public fun deleteProtection(deleteProtection: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun firewallName(firewallName: String) {
-    }
+    public fun firewallName(firewallName: String)
 
-    public fun firewallPolicyArn(firewallPolicyArn: String) {
-    }
+    public fun firewallPolicyArn(firewallPolicyArn: String)
 
-    public fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: Boolean) {
-    }
+    public fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: Boolean)
 
-    public fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable) {
-    }
+    public fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable)
 
-    public fun subnetChangeProtection(subnetChangeProtection: Boolean) {
-    }
+    public fun subnetChangeProtection(subnetChangeProtection: Boolean)
 
-    public fun subnetChangeProtection(subnetChangeProtection: IResolvable) {
-    }
+    public fun subnetChangeProtection(subnetChangeProtection: IResolvable)
 
-    public fun subnetMappings(subnetMappings: IResolvable) {
-    }
+    public fun subnetMappings(subnetMappings: IResolvable)
 
-    public fun subnetMappings(subnetMappings: List<Any>) {
-    }
+    public fun subnetMappings(subnetMappings: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -150,56 +137,55 @@ public open class CfnFirewall internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkfirewall.CfnFirewall.Builder =
         software.amazon.awscdk.services.networkfirewall.CfnFirewall.Builder.create(scope, id)
 
-    public override fun deleteProtection(deleteProtection: Boolean) {
+    override fun deleteProtection(deleteProtection: Boolean) {
       cdkBuilder.deleteProtection(deleteProtection)
     }
 
-    public override fun deleteProtection(deleteProtection: IResolvable) {
+    override fun deleteProtection(deleteProtection: IResolvable) {
       cdkBuilder.deleteProtection(deleteProtection.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun firewallName(firewallName: String) {
+    override fun firewallName(firewallName: String) {
       cdkBuilder.firewallName(firewallName)
     }
 
-    public override fun firewallPolicyArn(firewallPolicyArn: String) {
+    override fun firewallPolicyArn(firewallPolicyArn: String) {
       cdkBuilder.firewallPolicyArn(firewallPolicyArn)
     }
 
-    public override fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: Boolean) {
+    override fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: Boolean) {
       cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection)
     }
 
-    public override
-        fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable) {
+    override fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable) {
       cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection.let(IResolvable::unwrap))
     }
 
-    public override fun subnetChangeProtection(subnetChangeProtection: Boolean) {
+    override fun subnetChangeProtection(subnetChangeProtection: Boolean) {
       cdkBuilder.subnetChangeProtection(subnetChangeProtection)
     }
 
-    public override fun subnetChangeProtection(subnetChangeProtection: IResolvable) {
+    override fun subnetChangeProtection(subnetChangeProtection: IResolvable) {
       cdkBuilder.subnetChangeProtection(subnetChangeProtection.let(IResolvable::unwrap))
     }
 
-    public override fun subnetMappings(subnetMappings: IResolvable) {
+    override fun subnetMappings(subnetMappings: IResolvable) {
       cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
     }
 
-    public override fun subnetMappings(subnetMappings: List<Any>) {
+    override fun subnetMappings(subnetMappings: List<Any>) {
       cdkBuilder.subnetMappings(subnetMappings)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -234,11 +220,9 @@ public open class CfnFirewall internal constructor(
     public fun subnetId(): String
 
     public interface Builder {
-      public fun ipAddressType(ipAddressType: String) {
-      }
+      public fun ipAddressType(ipAddressType: String)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -247,11 +231,11 @@ public open class CfnFirewall internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty.builder()
 
-      public override fun ipAddressType(ipAddressType: String) {
+      override fun ipAddressType(ipAddressType: String) {
         cdkBuilder.ipAddressType(ipAddressType)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -264,9 +248,9 @@ public open class CfnFirewall internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewall.SubnetMappingProperty,
     ) : SubnetMappingProperty {
-      public override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
-      public override fun subnetId(): String = unwrap(this).getSubnetId()
+      override fun subnetId(): String = unwrap(this).getSubnetId()
     }
 
     public companion object {

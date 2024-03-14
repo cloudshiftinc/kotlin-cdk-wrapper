@@ -42,14 +42,11 @@ public open class CfnSink internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -59,15 +56,15 @@ public open class CfnSink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.oam.CfnSink.Builder =
         software.amazon.awscdk.services.oam.CfnSink.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

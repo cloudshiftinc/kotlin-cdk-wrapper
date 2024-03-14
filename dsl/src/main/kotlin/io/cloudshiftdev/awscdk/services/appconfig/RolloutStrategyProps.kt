@@ -12,29 +12,26 @@ public interface RolloutStrategyProps {
   public fun growthFactor(): Number
 
   public interface Builder {
-    public fun deploymentDuration(deploymentDuration: Duration) {
-    }
+    public fun deploymentDuration(deploymentDuration: Duration)
 
-    public fun finalBakeTime(finalBakeTime: Duration) {
-    }
+    public fun finalBakeTime(finalBakeTime: Duration)
 
-    public fun growthFactor(growthFactor: Number) {
-    }
+    public fun growthFactor(growthFactor: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.RolloutStrategyProps.Builder =
         software.amazon.awscdk.services.appconfig.RolloutStrategyProps.builder()
 
-    public override fun deploymentDuration(deploymentDuration: Duration) {
+    override fun deploymentDuration(deploymentDuration: Duration) {
       cdkBuilder.deploymentDuration(deploymentDuration.let(Duration::unwrap))
     }
 
-    public override fun finalBakeTime(finalBakeTime: Duration) {
+    override fun finalBakeTime(finalBakeTime: Duration) {
       cdkBuilder.finalBakeTime(finalBakeTime.let(Duration::unwrap))
     }
 
-    public override fun growthFactor(growthFactor: Number) {
+    override fun growthFactor(growthFactor: Number) {
       cdkBuilder.growthFactor(growthFactor)
     }
 
@@ -45,13 +42,12 @@ public interface RolloutStrategyProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategyProps,
   ) : RolloutStrategyProps {
-    public override fun deploymentDuration(): Duration =
+    override fun deploymentDuration(): Duration =
         unwrap(this).getDeploymentDuration().let(Duration::wrap)
 
-    public override fun finalBakeTime(): Duration? =
-        unwrap(this).getFinalBakeTime()?.let(Duration::wrap)
+    override fun finalBakeTime(): Duration? = unwrap(this).getFinalBakeTime()?.let(Duration::wrap)
 
-    public override fun growthFactor(): Number = unwrap(this).getGrowthFactor()
+    override fun growthFactor(): Number = unwrap(this).getGrowthFactor()
   }
 
   public companion object {

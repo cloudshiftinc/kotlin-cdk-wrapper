@@ -21,20 +21,16 @@ public open class CustomLambdaDeploymentConfig internal constructor(
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun deploymentConfigName(deploymentConfigName: String) {
-    }
+    public fun deploymentConfigName(deploymentConfigName: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun interval(interval: Duration) {
-    }
+    public fun interval(interval: Duration)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun percentage(percentage: Number) {
-    }
+    public fun percentage(percentage: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun type(type: CustomLambdaDeploymentConfigType) {
-    }
+    public fun type(type: CustomLambdaDeploymentConfigType)
   }
 
   private class BuilderImpl(
@@ -47,22 +43,22 @@ public open class CustomLambdaDeploymentConfig internal constructor(
         id)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun deploymentConfigName(deploymentConfigName: String) {
+    override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun interval(interval: Duration) {
+    override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun percentage(percentage: Number) {
+    override fun percentage(percentage: Number) {
       cdkBuilder.percentage(percentage)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun type(type: CustomLambdaDeploymentConfigType) {
+    override fun type(type: CustomLambdaDeploymentConfigType) {
       cdkBuilder.type(type.let(CustomLambdaDeploymentConfigType::unwrap))
     }
 

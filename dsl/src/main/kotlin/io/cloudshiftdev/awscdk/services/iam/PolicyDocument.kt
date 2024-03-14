@@ -44,29 +44,26 @@ public open class PolicyDocument internal constructor(
       unwrap(this).validateForResourcePolicy() ?: emptyList()
 
   public interface Builder {
-    public fun assignSids(assignSids: Boolean) {
-    }
+    public fun assignSids(assignSids: Boolean)
 
-    public fun minimize(minimize: Boolean) {
-    }
+    public fun minimize(minimize: Boolean)
 
-    public fun statements(statements: List<PolicyStatement>) {
-    }
+    public fun statements(statements: List<PolicyStatement>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.PolicyDocument.Builder =
         software.amazon.awscdk.services.iam.PolicyDocument.Builder.create()
 
-    public override fun assignSids(assignSids: Boolean) {
+    override fun assignSids(assignSids: Boolean) {
       cdkBuilder.assignSids(assignSids)
     }
 
-    public override fun minimize(minimize: Boolean) {
+    override fun minimize(minimize: Boolean) {
       cdkBuilder.minimize(minimize)
     }
 
-    public override fun statements(statements: List<PolicyStatement>) {
+    override fun statements(statements: List<PolicyStatement>) {
       cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
     }
 

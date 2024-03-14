@@ -9,14 +9,11 @@ public open class NoneDataSource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.NoneDataSource,
 ) : BaseDataSource(cdkObject) {
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -26,15 +23,15 @@ public open class NoneDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.NoneDataSource.Builder =
         software.amazon.awscdk.services.appsync.NoneDataSource.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

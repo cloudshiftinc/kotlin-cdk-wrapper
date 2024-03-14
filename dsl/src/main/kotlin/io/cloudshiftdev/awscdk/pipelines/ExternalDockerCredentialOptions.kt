@@ -16,36 +16,32 @@ public interface ExternalDockerCredentialOptions {
       unwrap(this).getUsages()?.map(DockerCredentialUsage::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun assumeRole(assumeRole: IRole) {
-    }
+    public fun assumeRole(assumeRole: IRole)
 
-    public fun secretPasswordField(secretPasswordField: String) {
-    }
+    public fun secretPasswordField(secretPasswordField: String)
 
-    public fun secretUsernameField(secretUsernameField: String) {
-    }
+    public fun secretUsernameField(secretUsernameField: String)
 
-    public fun usages(usages: List<DockerCredentialUsage>) {
-    }
+    public fun usages(usages: List<DockerCredentialUsage>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions.Builder
         = software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions.builder()
 
-    public override fun assumeRole(assumeRole: IRole) {
+    override fun assumeRole(assumeRole: IRole) {
       cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
     }
 
-    public override fun secretPasswordField(secretPasswordField: String) {
+    override fun secretPasswordField(secretPasswordField: String) {
       cdkBuilder.secretPasswordField(secretPasswordField)
     }
 
-    public override fun secretUsernameField(secretUsernameField: String) {
+    override fun secretUsernameField(secretUsernameField: String) {
       cdkBuilder.secretUsernameField(secretUsernameField)
     }
 
-    public override fun usages(usages: List<DockerCredentialUsage>) {
+    override fun usages(usages: List<DockerCredentialUsage>) {
       cdkBuilder.usages(usages.map(DockerCredentialUsage::unwrap))
     }
 
@@ -56,13 +52,13 @@ public interface ExternalDockerCredentialOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions,
   ) : ExternalDockerCredentialOptions {
-    public override fun assumeRole(): IRole? = unwrap(this).getAssumeRole()?.let(IRole::wrap)
+    override fun assumeRole(): IRole? = unwrap(this).getAssumeRole()?.let(IRole::wrap)
 
-    public override fun secretPasswordField(): String? = unwrap(this).getSecretPasswordField()
+    override fun secretPasswordField(): String? = unwrap(this).getSecretPasswordField()
 
-    public override fun secretUsernameField(): String? = unwrap(this).getSecretUsernameField()
+    override fun secretUsernameField(): String? = unwrap(this).getSecretUsernameField()
 
-    public override fun usages(): List<DockerCredentialUsage> =
+    override fun usages(): List<DockerCredentialUsage> =
         unwrap(this).getUsages()?.map(DockerCredentialUsage::wrap) ?: emptyList()
   }
 

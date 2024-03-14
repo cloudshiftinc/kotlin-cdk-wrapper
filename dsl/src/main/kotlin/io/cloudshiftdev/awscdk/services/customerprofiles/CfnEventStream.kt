@@ -62,17 +62,13 @@ public open class CfnEventStream internal constructor(
   }
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun eventStreamName(eventStreamName: String) {
-    }
+    public fun eventStreamName(eventStreamName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun uri(uri: String) {
-    }
+    public fun uri(uri: String)
   }
 
   private class BuilderImpl(
@@ -82,19 +78,19 @@ public open class CfnEventStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.customerprofiles.CfnEventStream.Builder
         = software.amazon.awscdk.services.customerprofiles.CfnEventStream.Builder.create(scope, id)
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun eventStreamName(eventStreamName: String) {
+    override fun eventStreamName(eventStreamName: String) {
       cdkBuilder.eventStreamName(eventStreamName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun uri(uri: String) {
+    override fun uri(uri: String) {
       cdkBuilder.uri(uri)
     }
 
@@ -129,11 +125,9 @@ public open class CfnEventStream internal constructor(
     public fun uri(): String
 
     public interface Builder {
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun uri(uri: String) {
-      }
+      public fun uri(uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -142,11 +136,11 @@ public open class CfnEventStream internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty.builder()
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun uri(uri: String) {
+      override fun uri(uri: String) {
         cdkBuilder.uri(uri)
       }
 
@@ -159,9 +153,9 @@ public open class CfnEventStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnEventStream.DestinationDetailsProperty,
     ) : DestinationDetailsProperty {
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
 
-      public override fun uri(): String = unwrap(this).getUri()
+      override fun uri(): String = unwrap(this).getUri()
     }
 
     public companion object {

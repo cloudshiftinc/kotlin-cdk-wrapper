@@ -13,14 +13,11 @@ public open class KeyGroup internal constructor(
   public override fun keyGroupId(): String = unwrap(this).getKeyGroupId()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun items(items: List<IPublicKey>) {
-    }
+    public fun items(items: List<IPublicKey>)
 
-    public fun keyGroupName(keyGroupName: String) {
-    }
+    public fun keyGroupName(keyGroupName: String)
   }
 
   private class BuilderImpl(
@@ -30,15 +27,15 @@ public open class KeyGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.KeyGroup.Builder =
         software.amazon.awscdk.services.cloudfront.KeyGroup.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun items(items: List<IPublicKey>) {
+    override fun items(items: List<IPublicKey>) {
       cdkBuilder.items(items.map(IPublicKey::unwrap))
     }
 
-    public override fun keyGroupName(keyGroupName: String) {
+    override fun keyGroupName(keyGroupName: String) {
       cdkBuilder.keyGroupName(keyGroupName)
     }
 

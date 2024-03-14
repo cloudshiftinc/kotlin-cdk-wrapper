@@ -57,17 +57,13 @@ public open class CfnChannel internal constructor(
   }
 
   public interface Builder {
-    public fun channelGroupName(channelGroupName: String) {
-    }
+    public fun channelGroupName(channelGroupName: String)
 
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -77,19 +73,19 @@ public open class CfnChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediapackagev2.CfnChannel.Builder =
         software.amazon.awscdk.services.mediapackagev2.CfnChannel.Builder.create(scope, id)
 
-    public override fun channelGroupName(channelGroupName: String) {
+    override fun channelGroupName(channelGroupName: String) {
       cdkBuilder.channelGroupName(channelGroupName)
     }
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -124,11 +120,9 @@ public open class CfnChannel internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -136,11 +130,11 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty.Builder =
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -153,9 +147,9 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty,
     ) : IngestEndpointProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {

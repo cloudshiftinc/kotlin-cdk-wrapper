@@ -203,103 +203,72 @@ public open class CfnUserPoolClient internal constructor(
   }
 
   public interface Builder {
-    public fun accessTokenValidity(accessTokenValidity: Number) {
-    }
+    public fun accessTokenValidity(accessTokenValidity: Number)
 
-    public fun allowedOAuthFlows(allowedOAuthFlows: List<String>) {
-    }
+    public fun allowedOAuthFlows(allowedOAuthFlows: List<String>)
 
-    public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean) {
-    }
+    public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean)
 
-    public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
-    }
+    public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable)
 
-    public fun allowedOAuthScopes(allowedOAuthScopes: List<String>) {
-    }
+    public fun allowedOAuthScopes(allowedOAuthScopes: List<String>)
 
-    public fun analyticsConfiguration(analyticsConfiguration: IResolvable) {
-    }
+    public fun analyticsConfiguration(analyticsConfiguration: IResolvable)
 
-    public fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty) {
-    }
+    public fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48cae7ce2dc592da94fa21c75ec0358a510ee6100105ad2c0c70cb8f3838fdba")
     public
-        fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty.Builder.() -> Unit)
 
-    public fun authSessionValidity(authSessionValidity: Number) {
-    }
+    public fun authSessionValidity(authSessionValidity: Number)
 
-    public fun callbackUrLs(callbackUrLs: List<String>) {
-    }
+    public fun callbackUrLs(callbackUrLs: List<String>)
 
-    public fun clientName(clientName: String) {
-    }
+    public fun clientName(clientName: String)
 
-    public fun defaultRedirectUri(defaultRedirectUri: String) {
-    }
+    public fun defaultRedirectUri(defaultRedirectUri: String)
 
     public
-        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean) {
-    }
+        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean)
 
     public
-        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable) {
-    }
+        fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable)
 
-    public fun enableTokenRevocation(enableTokenRevocation: Boolean) {
-    }
+    public fun enableTokenRevocation(enableTokenRevocation: Boolean)
 
-    public fun enableTokenRevocation(enableTokenRevocation: IResolvable) {
-    }
+    public fun enableTokenRevocation(enableTokenRevocation: IResolvable)
 
-    public fun explicitAuthFlows(explicitAuthFlows: List<String>) {
-    }
+    public fun explicitAuthFlows(explicitAuthFlows: List<String>)
 
-    public fun generateSecret(generateSecret: Boolean) {
-    }
+    public fun generateSecret(generateSecret: Boolean)
 
-    public fun generateSecret(generateSecret: IResolvable) {
-    }
+    public fun generateSecret(generateSecret: IResolvable)
 
-    public fun idTokenValidity(idTokenValidity: Number) {
-    }
+    public fun idTokenValidity(idTokenValidity: Number)
 
-    public fun logoutUrLs(logoutUrLs: List<String>) {
-    }
+    public fun logoutUrLs(logoutUrLs: List<String>)
 
-    public fun preventUserExistenceErrors(preventUserExistenceErrors: String) {
-    }
+    public fun preventUserExistenceErrors(preventUserExistenceErrors: String)
 
-    public fun readAttributes(readAttributes: List<String>) {
-    }
+    public fun readAttributes(readAttributes: List<String>)
 
-    public fun refreshTokenValidity(refreshTokenValidity: Number) {
-    }
+    public fun refreshTokenValidity(refreshTokenValidity: Number)
 
-    public fun supportedIdentityProviders(supportedIdentityProviders: List<String>) {
-    }
+    public fun supportedIdentityProviders(supportedIdentityProviders: List<String>)
 
-    public fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
-    }
+    public fun tokenValidityUnits(tokenValidityUnits: IResolvable)
 
-    public fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty) {
-    }
+    public fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("443f031b846120e488d68c74c4d139304198bea73f85c4e88d462430a8525142")
-    public
-        fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty.Builder.() -> Unit) {
-    }
+    public fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty.Builder.() -> Unit)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
 
-    public fun writeAttributes(writeAttributes: List<String>) {
-    }
+    public fun writeAttributes(writeAttributes: List<String>)
   }
 
   private class BuilderImpl(
@@ -309,131 +278,129 @@ public open class CfnUserPoolClient internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CfnUserPoolClient.Builder =
         software.amazon.awscdk.services.cognito.CfnUserPoolClient.Builder.create(scope, id)
 
-    public override fun accessTokenValidity(accessTokenValidity: Number) {
+    override fun accessTokenValidity(accessTokenValidity: Number) {
       cdkBuilder.accessTokenValidity(accessTokenValidity)
     }
 
-    public override fun allowedOAuthFlows(allowedOAuthFlows: List<String>) {
+    override fun allowedOAuthFlows(allowedOAuthFlows: List<String>) {
       cdkBuilder.allowedOAuthFlows(allowedOAuthFlows)
     }
 
-    public override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean) {
+    override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean) {
       cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient)
     }
 
-    public override
-        fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
+    override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
       cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient.let(IResolvable::unwrap))
     }
 
-    public override fun allowedOAuthScopes(allowedOAuthScopes: List<String>) {
+    override fun allowedOAuthScopes(allowedOAuthScopes: List<String>) {
       cdkBuilder.allowedOAuthScopes(allowedOAuthScopes)
     }
 
-    public override fun analyticsConfiguration(analyticsConfiguration: IResolvable) {
+    override fun analyticsConfiguration(analyticsConfiguration: IResolvable) {
       cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty) {
+    override fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty) {
       cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(AnalyticsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48cae7ce2dc592da94fa21c75ec0358a510ee6100105ad2c0c70cb8f3838fdba")
-    public override
+    override
         fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty.Builder.() -> Unit):
         Unit = analyticsConfiguration(AnalyticsConfigurationProperty(analyticsConfiguration))
 
-    public override fun authSessionValidity(authSessionValidity: Number) {
+    override fun authSessionValidity(authSessionValidity: Number) {
       cdkBuilder.authSessionValidity(authSessionValidity)
     }
 
-    public override fun callbackUrLs(callbackUrLs: List<String>) {
+    override fun callbackUrLs(callbackUrLs: List<String>) {
       cdkBuilder.callbackUrLs(callbackUrLs)
     }
 
-    public override fun clientName(clientName: String) {
+    override fun clientName(clientName: String) {
       cdkBuilder.clientName(clientName)
     }
 
-    public override fun defaultRedirectUri(defaultRedirectUri: String) {
+    override fun defaultRedirectUri(defaultRedirectUri: String) {
       cdkBuilder.defaultRedirectUri(defaultRedirectUri)
     }
 
-    public override
+    override
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: Boolean) {
       cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData)
     }
 
-    public override
+    override
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable) {
       cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData.let(IResolvable::unwrap))
     }
 
-    public override fun enableTokenRevocation(enableTokenRevocation: Boolean) {
+    override fun enableTokenRevocation(enableTokenRevocation: Boolean) {
       cdkBuilder.enableTokenRevocation(enableTokenRevocation)
     }
 
-    public override fun enableTokenRevocation(enableTokenRevocation: IResolvable) {
+    override fun enableTokenRevocation(enableTokenRevocation: IResolvable) {
       cdkBuilder.enableTokenRevocation(enableTokenRevocation.let(IResolvable::unwrap))
     }
 
-    public override fun explicitAuthFlows(explicitAuthFlows: List<String>) {
+    override fun explicitAuthFlows(explicitAuthFlows: List<String>) {
       cdkBuilder.explicitAuthFlows(explicitAuthFlows)
     }
 
-    public override fun generateSecret(generateSecret: Boolean) {
+    override fun generateSecret(generateSecret: Boolean) {
       cdkBuilder.generateSecret(generateSecret)
     }
 
-    public override fun generateSecret(generateSecret: IResolvable) {
+    override fun generateSecret(generateSecret: IResolvable) {
       cdkBuilder.generateSecret(generateSecret.let(IResolvable::unwrap))
     }
 
-    public override fun idTokenValidity(idTokenValidity: Number) {
+    override fun idTokenValidity(idTokenValidity: Number) {
       cdkBuilder.idTokenValidity(idTokenValidity)
     }
 
-    public override fun logoutUrLs(logoutUrLs: List<String>) {
+    override fun logoutUrLs(logoutUrLs: List<String>) {
       cdkBuilder.logoutUrLs(logoutUrLs)
     }
 
-    public override fun preventUserExistenceErrors(preventUserExistenceErrors: String) {
+    override fun preventUserExistenceErrors(preventUserExistenceErrors: String) {
       cdkBuilder.preventUserExistenceErrors(preventUserExistenceErrors)
     }
 
-    public override fun readAttributes(readAttributes: List<String>) {
+    override fun readAttributes(readAttributes: List<String>) {
       cdkBuilder.readAttributes(readAttributes)
     }
 
-    public override fun refreshTokenValidity(refreshTokenValidity: Number) {
+    override fun refreshTokenValidity(refreshTokenValidity: Number) {
       cdkBuilder.refreshTokenValidity(refreshTokenValidity)
     }
 
-    public override fun supportedIdentityProviders(supportedIdentityProviders: List<String>) {
+    override fun supportedIdentityProviders(supportedIdentityProviders: List<String>) {
       cdkBuilder.supportedIdentityProviders(supportedIdentityProviders)
     }
 
-    public override fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
+    override fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
       cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable::unwrap))
     }
 
-    public override fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty) {
+    override fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty) {
       cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(TokenValidityUnitsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("443f031b846120e488d68c74c4d139304198bea73f85c4e88d462430a8525142")
-    public override
+    override
         fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty.Builder.() -> Unit):
         Unit = tokenValidityUnits(TokenValidityUnitsProperty(tokenValidityUnits))
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
-    public override fun writeAttributes(writeAttributes: List<String>) {
+    override fun writeAttributes(writeAttributes: List<String>) {
       cdkBuilder.writeAttributes(writeAttributes)
     }
 
@@ -470,14 +437,11 @@ public open class CfnUserPoolClient internal constructor(
     public fun refreshToken(): String? = unwrap(this).getRefreshToken()
 
     public interface Builder {
-      public fun accessToken(accessToken: String) {
-      }
+      public fun accessToken(accessToken: String)
 
-      public fun idToken(idToken: String) {
-      }
+      public fun idToken(idToken: String)
 
-      public fun refreshToken(refreshToken: String) {
-      }
+      public fun refreshToken(refreshToken: String)
     }
 
     private class BuilderImpl : Builder {
@@ -486,15 +450,15 @@ public open class CfnUserPoolClient internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty.builder()
 
-      public override fun accessToken(accessToken: String) {
+      override fun accessToken(accessToken: String) {
         cdkBuilder.accessToken(accessToken)
       }
 
-      public override fun idToken(idToken: String) {
+      override fun idToken(idToken: String) {
         cdkBuilder.idToken(idToken)
       }
 
-      public override fun refreshToken(refreshToken: String) {
+      override fun refreshToken(refreshToken: String) {
         cdkBuilder.refreshToken(refreshToken)
       }
 
@@ -507,11 +471,11 @@ public open class CfnUserPoolClient internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.TokenValidityUnitsProperty,
     ) : TokenValidityUnitsProperty {
-      public override fun accessToken(): String? = unwrap(this).getAccessToken()
+      override fun accessToken(): String? = unwrap(this).getAccessToken()
 
-      public override fun idToken(): String? = unwrap(this).getIdToken()
+      override fun idToken(): String? = unwrap(this).getIdToken()
 
-      public override fun refreshToken(): String? = unwrap(this).getRefreshToken()
+      override fun refreshToken(): String? = unwrap(this).getRefreshToken()
     }
 
     public companion object {
@@ -546,23 +510,17 @@ public open class CfnUserPoolClient internal constructor(
     public fun userDataShared(): Any? = unwrap(this).getUserDataShared()
 
     public interface Builder {
-      public fun applicationArn(applicationArn: String) {
-      }
+      public fun applicationArn(applicationArn: String)
 
-      public fun applicationId(applicationId: String) {
-      }
+      public fun applicationId(applicationId: String)
 
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun userDataShared(userDataShared: Boolean) {
-      }
+      public fun userDataShared(userDataShared: Boolean)
 
-      public fun userDataShared(userDataShared: IResolvable) {
-      }
+      public fun userDataShared(userDataShared: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -571,27 +529,27 @@ public open class CfnUserPoolClient internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty.builder()
 
-      public override fun applicationArn(applicationArn: String) {
+      override fun applicationArn(applicationArn: String) {
         cdkBuilder.applicationArn(applicationArn)
       }
 
-      public override fun applicationId(applicationId: String) {
+      override fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
       }
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun userDataShared(userDataShared: Boolean) {
+      override fun userDataShared(userDataShared: Boolean) {
         cdkBuilder.userDataShared(userDataShared)
       }
 
-      public override fun userDataShared(userDataShared: IResolvable) {
+      override fun userDataShared(userDataShared: IResolvable) {
         cdkBuilder.userDataShared(userDataShared.let(IResolvable::unwrap))
       }
 
@@ -604,15 +562,15 @@ public open class CfnUserPoolClient internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty,
     ) : AnalyticsConfigurationProperty {
-      public override fun applicationArn(): String? = unwrap(this).getApplicationArn()
+      override fun applicationArn(): String? = unwrap(this).getApplicationArn()
 
-      public override fun applicationId(): String? = unwrap(this).getApplicationId()
+      override fun applicationId(): String? = unwrap(this).getApplicationId()
 
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun userDataShared(): Any? = unwrap(this).getUserDataShared()
+      override fun userDataShared(): Any? = unwrap(this).getUserDataShared()
     }
 
     public companion object {

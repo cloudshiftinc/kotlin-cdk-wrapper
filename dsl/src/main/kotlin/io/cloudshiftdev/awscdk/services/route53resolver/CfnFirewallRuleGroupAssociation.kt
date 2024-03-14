@@ -77,23 +77,17 @@ public open class CfnFirewallRuleGroupAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun firewallRuleGroupId(firewallRuleGroupId: String) {
-    }
+    public fun firewallRuleGroupId(firewallRuleGroupId: String)
 
-    public fun mutationProtection(mutationProtection: String) {
-    }
+    public fun mutationProtection(mutationProtection: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -105,27 +99,27 @@ public open class CfnFirewallRuleGroupAssociation internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation.Builder.create(scope,
         id)
 
-    public override fun firewallRuleGroupId(firewallRuleGroupId: String) {
+    override fun firewallRuleGroupId(firewallRuleGroupId: String) {
       cdkBuilder.firewallRuleGroupId(firewallRuleGroupId)
     }
 
-    public override fun mutationProtection(mutationProtection: String) {
+    override fun mutationProtection(mutationProtection: String) {
       cdkBuilder.mutationProtection(mutationProtection)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

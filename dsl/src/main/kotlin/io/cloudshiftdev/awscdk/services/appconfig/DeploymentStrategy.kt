@@ -29,14 +29,11 @@ public open class DeploymentStrategy internal constructor(
   public override fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun deploymentStrategyName(deploymentStrategyName: String) {
-    }
+    public fun deploymentStrategyName(deploymentStrategyName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun rolloutStrategy(rolloutStrategy: RolloutStrategy) {
-    }
+    public fun rolloutStrategy(rolloutStrategy: RolloutStrategy)
   }
 
   private class BuilderImpl(
@@ -46,15 +43,15 @@ public open class DeploymentStrategy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.DeploymentStrategy.Builder =
         software.amazon.awscdk.services.appconfig.DeploymentStrategy.Builder.create(scope, id)
 
-    public override fun deploymentStrategyName(deploymentStrategyName: String) {
+    override fun deploymentStrategyName(deploymentStrategyName: String) {
       cdkBuilder.deploymentStrategyName(deploymentStrategyName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun rolloutStrategy(rolloutStrategy: RolloutStrategy) {
+    override fun rolloutStrategy(rolloutStrategy: RolloutStrategy) {
       cdkBuilder.rolloutStrategy(rolloutStrategy.let(RolloutStrategy::unwrap))
     }
 

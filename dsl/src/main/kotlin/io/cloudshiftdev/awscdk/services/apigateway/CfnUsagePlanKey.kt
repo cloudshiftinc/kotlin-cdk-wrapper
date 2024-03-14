@@ -36,14 +36,11 @@ public open class CfnUsagePlanKey internal constructor(
   }
 
   public interface Builder {
-    public fun keyId(keyId: String) {
-    }
+    public fun keyId(keyId: String)
 
-    public fun keyType(keyType: String) {
-    }
+    public fun keyType(keyType: String)
 
-    public fun usagePlanId(usagePlanId: String) {
-    }
+    public fun usagePlanId(usagePlanId: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnUsagePlanKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnUsagePlanKey.Builder =
         software.amazon.awscdk.services.apigateway.CfnUsagePlanKey.Builder.create(scope, id)
 
-    public override fun keyId(keyId: String) {
+    override fun keyId(keyId: String) {
       cdkBuilder.keyId(keyId)
     }
 
-    public override fun keyType(keyType: String) {
+    override fun keyType(keyType: String) {
       cdkBuilder.keyType(keyType)
     }
 
-    public override fun usagePlanId(usagePlanId: String) {
+    override fun usagePlanId(usagePlanId: String) {
       cdkBuilder.usagePlanId(usagePlanId)
     }
 

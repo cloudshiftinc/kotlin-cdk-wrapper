@@ -34,11 +34,9 @@ public open class CfnResolverConfig internal constructor(
   }
 
   public interface Builder {
-    public fun autodefinedReverseFlag(autodefinedReverseFlag: String) {
-    }
+    public fun autodefinedReverseFlag(autodefinedReverseFlag: String)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
   }
 
   private class BuilderImpl(
@@ -49,11 +47,11 @@ public open class CfnResolverConfig internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverConfig.Builder =
         software.amazon.awscdk.services.route53resolver.CfnResolverConfig.Builder.create(scope, id)
 
-    public override fun autodefinedReverseFlag(autodefinedReverseFlag: String) {
+    override fun autodefinedReverseFlag(autodefinedReverseFlag: String) {
       cdkBuilder.autodefinedReverseFlag(autodefinedReverseFlag)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 

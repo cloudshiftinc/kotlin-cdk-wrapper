@@ -88,38 +88,27 @@ public open class CfnPipeline internal constructor(
   }
 
   public interface Builder {
-    public fun activate(activate: Boolean) {
-    }
+    public fun activate(activate: Boolean)
 
-    public fun activate(activate: IResolvable) {
-    }
+    public fun activate(activate: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun parameterObjects(parameterObjects: IResolvable) {
-    }
+    public fun parameterObjects(parameterObjects: IResolvable)
 
-    public fun parameterObjects(parameterObjects: List<Any>) {
-    }
+    public fun parameterObjects(parameterObjects: List<Any>)
 
-    public fun parameterValues(parameterValues: IResolvable) {
-    }
+    public fun parameterValues(parameterValues: IResolvable)
 
-    public fun parameterValues(parameterValues: List<Any>) {
-    }
+    public fun parameterValues(parameterValues: List<Any>)
 
-    public fun pipelineObjects(pipelineObjects: IResolvable) {
-    }
+    public fun pipelineObjects(pipelineObjects: IResolvable)
 
-    public fun pipelineObjects(pipelineObjects: List<Any>) {
-    }
+    public fun pipelineObjects(pipelineObjects: List<Any>)
 
-    public fun pipelineTags(pipelineTags: List<PipelineTagProperty>) {
-    }
+    public fun pipelineTags(pipelineTags: List<PipelineTagProperty>)
   }
 
   private class BuilderImpl(
@@ -129,47 +118,47 @@ public open class CfnPipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datapipeline.CfnPipeline.Builder =
         software.amazon.awscdk.services.datapipeline.CfnPipeline.Builder.create(scope, id)
 
-    public override fun activate(activate: Boolean) {
+    override fun activate(activate: Boolean) {
       cdkBuilder.activate(activate)
     }
 
-    public override fun activate(activate: IResolvable) {
+    override fun activate(activate: IResolvable) {
       cdkBuilder.activate(activate.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun parameterObjects(parameterObjects: IResolvable) {
+    override fun parameterObjects(parameterObjects: IResolvable) {
       cdkBuilder.parameterObjects(parameterObjects.let(IResolvable::unwrap))
     }
 
-    public override fun parameterObjects(parameterObjects: List<Any>) {
+    override fun parameterObjects(parameterObjects: List<Any>) {
       cdkBuilder.parameterObjects(parameterObjects)
     }
 
-    public override fun parameterValues(parameterValues: IResolvable) {
+    override fun parameterValues(parameterValues: IResolvable) {
       cdkBuilder.parameterValues(parameterValues.let(IResolvable::unwrap))
     }
 
-    public override fun parameterValues(parameterValues: List<Any>) {
+    override fun parameterValues(parameterValues: List<Any>) {
       cdkBuilder.parameterValues(parameterValues)
     }
 
-    public override fun pipelineObjects(pipelineObjects: IResolvable) {
+    override fun pipelineObjects(pipelineObjects: IResolvable) {
       cdkBuilder.pipelineObjects(pipelineObjects.let(IResolvable::unwrap))
     }
 
-    public override fun pipelineObjects(pipelineObjects: List<Any>) {
+    override fun pipelineObjects(pipelineObjects: List<Any>) {
       cdkBuilder.pipelineObjects(pipelineObjects)
     }
 
-    public override fun pipelineTags(pipelineTags: List<PipelineTagProperty>) {
+    override fun pipelineTags(pipelineTags: List<PipelineTagProperty>) {
       cdkBuilder.pipelineTags(pipelineTags.map(PipelineTagProperty::unwrap))
     }
 
@@ -204,14 +193,11 @@ public open class CfnPipeline internal constructor(
     public fun id(): String
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: List<Any>) {
-      }
+      public fun attributes(attributes: List<Any>)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
@@ -219,15 +205,15 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty.Builder =
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: List<Any>) {
+      override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
@@ -240,9 +226,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterObjectProperty,
     ) : ParameterObjectProperty {
-      public override fun attributes(): Any = unwrap(this).getAttributes()
+      override fun attributes(): Any = unwrap(this).getAttributes()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
     }
 
     public companion object {
@@ -271,11 +257,9 @@ public open class CfnPipeline internal constructor(
     public fun stringValue(): String
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -283,11 +267,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty.Builder =
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -300,9 +284,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterValueProperty,
     ) : ParameterValueProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun stringValue(): String = unwrap(this).getStringValue()
+      override fun stringValue(): String = unwrap(this).getStringValue()
     }
 
     public companion object {
@@ -333,17 +317,13 @@ public open class CfnPipeline internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun fields(fields: IResolvable) {
-      }
+      public fun fields(fields: IResolvable)
 
-      public fun fields(fields: List<Any>) {
-      }
+      public fun fields(fields: List<Any>)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -351,19 +331,19 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty.Builder =
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty.builder()
 
-      public override fun fields(fields: IResolvable) {
+      override fun fields(fields: IResolvable) {
         cdkBuilder.fields(fields.let(IResolvable::unwrap))
       }
 
-      public override fun fields(fields: List<Any>) {
+      override fun fields(fields: List<Any>) {
         cdkBuilder.fields(fields)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -376,11 +356,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineObjectProperty,
     ) : PipelineObjectProperty {
-      public override fun fields(): Any = unwrap(this).getFields()
+      override fun fields(): Any = unwrap(this).getFields()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -409,11 +389,9 @@ public open class CfnPipeline internal constructor(
     public fun stringValue(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -422,11 +400,11 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -439,9 +417,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datapipeline.CfnPipeline.ParameterAttributeProperty,
     ) : ParameterAttributeProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun stringValue(): String = unwrap(this).getStringValue()
+      override fun stringValue(): String = unwrap(this).getStringValue()
     }
 
     public companion object {
@@ -470,11 +448,9 @@ public open class CfnPipeline internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -482,11 +458,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty.Builder =
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -499,9 +475,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datapipeline.CfnPipeline.PipelineTagProperty,
     ) : PipelineTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -532,14 +508,11 @@ public open class CfnPipeline internal constructor(
     public fun stringValue(): String? = unwrap(this).getStringValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun refValue(refValue: String) {
-      }
+      public fun refValue(refValue: String)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -547,15 +520,15 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty.Builder =
           software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun refValue(refValue: String) {
+      override fun refValue(refValue: String) {
         cdkBuilder.refValue(refValue)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -567,11 +540,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datapipeline.CfnPipeline.FieldProperty,
     ) : FieldProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun refValue(): String? = unwrap(this).getRefValue()
+      override fun refValue(): String? = unwrap(this).getRefValue()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
     }
 
     public companion object {

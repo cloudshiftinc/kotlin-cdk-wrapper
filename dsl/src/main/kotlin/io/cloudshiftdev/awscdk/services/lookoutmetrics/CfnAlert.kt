@@ -62,28 +62,21 @@ public open class CfnAlert internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: IResolvable) {
-    }
+    public fun action(action: IResolvable)
 
-    public fun action(action: ActionProperty) {
-    }
+    public fun action(action: ActionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("278d5b12b8e89982419453ae1ea077de5bb3941638eeabea7724e0a04e604d45")
-    public fun action(action: ActionProperty.Builder.() -> Unit) {
-    }
+    public fun action(action: ActionProperty.Builder.() -> Unit)
 
-    public fun alertDescription(alertDescription: String) {
-    }
+    public fun alertDescription(alertDescription: String)
 
-    public fun alertName(alertName: String) {
-    }
+    public fun alertName(alertName: String)
 
-    public fun alertSensitivityThreshold(alertSensitivityThreshold: Number) {
-    }
+    public fun alertSensitivityThreshold(alertSensitivityThreshold: Number)
 
-    public fun anomalyDetectorArn(anomalyDetectorArn: String) {
-    }
+    public fun anomalyDetectorArn(anomalyDetectorArn: String)
   }
 
   private class BuilderImpl(
@@ -93,32 +86,32 @@ public open class CfnAlert internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.Builder =
         software.amazon.awscdk.services.lookoutmetrics.CfnAlert.Builder.create(scope, id)
 
-    public override fun action(action: IResolvable) {
+    override fun action(action: IResolvable) {
       cdkBuilder.action(action.let(IResolvable::unwrap))
     }
 
-    public override fun action(action: ActionProperty) {
+    override fun action(action: ActionProperty) {
       cdkBuilder.action(action.let(ActionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("278d5b12b8e89982419453ae1ea077de5bb3941638eeabea7724e0a04e604d45")
-    public override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
+    override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
         action(ActionProperty(action))
 
-    public override fun alertDescription(alertDescription: String) {
+    override fun alertDescription(alertDescription: String) {
       cdkBuilder.alertDescription(alertDescription)
     }
 
-    public override fun alertName(alertName: String) {
+    override fun alertName(alertName: String) {
       cdkBuilder.alertName(alertName)
     }
 
-    public override fun alertSensitivityThreshold(alertSensitivityThreshold: Number) {
+    override fun alertSensitivityThreshold(alertSensitivityThreshold: Number) {
       cdkBuilder.alertSensitivityThreshold(alertSensitivityThreshold)
     }
 
-    public override fun anomalyDetectorArn(anomalyDetectorArn: String) {
+    override fun anomalyDetectorArn(anomalyDetectorArn: String) {
       cdkBuilder.anomalyDetectorArn(anomalyDetectorArn)
     }
 
@@ -152,28 +145,22 @@ public open class CfnAlert internal constructor(
     public fun snsConfiguration(): Any? = unwrap(this).getSnsConfiguration()
 
     public interface Builder {
-      public fun lambdaConfiguration(lambdaConfiguration: IResolvable) {
-      }
+      public fun lambdaConfiguration(lambdaConfiguration: IResolvable)
 
-      public fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty) {
-      }
+      public fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a3986527e9aa6ec69402be8b4e46fed80a6999a2031ccfe032e4b81c8bdbba2")
       public
-          fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty.Builder.() -> Unit)
 
-      public fun snsConfiguration(snsConfiguration: IResolvable) {
-      }
+      public fun snsConfiguration(snsConfiguration: IResolvable)
 
-      public fun snsConfiguration(snsConfiguration: SNSConfigurationProperty) {
-      }
+      public fun snsConfiguration(snsConfiguration: SNSConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63e72e0610e94a8ffa8307fe364f6918789fc16738b62a3a110b3403b0808faa")
-      public fun snsConfiguration(snsConfiguration: SNSConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun snsConfiguration(snsConfiguration: SNSConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -181,33 +168,32 @@ public open class CfnAlert internal constructor(
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty.Builder =
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty.builder()
 
-      public override fun lambdaConfiguration(lambdaConfiguration: IResolvable) {
+      override fun lambdaConfiguration(lambdaConfiguration: IResolvable) {
         cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty) {
+      override fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty) {
         cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(LambdaConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a3986527e9aa6ec69402be8b4e46fed80a6999a2031ccfe032e4b81c8bdbba2")
-      public override
+      override
           fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty.Builder.() -> Unit):
           Unit = lambdaConfiguration(LambdaConfigurationProperty(lambdaConfiguration))
 
-      public override fun snsConfiguration(snsConfiguration: IResolvable) {
+      override fun snsConfiguration(snsConfiguration: IResolvable) {
         cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun snsConfiguration(snsConfiguration: SNSConfigurationProperty) {
+      override fun snsConfiguration(snsConfiguration: SNSConfigurationProperty) {
         cdkBuilder.snsConfiguration(snsConfiguration.let(SNSConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63e72e0610e94a8ffa8307fe364f6918789fc16738b62a3a110b3403b0808faa")
-      public override
-          fun snsConfiguration(snsConfiguration: SNSConfigurationProperty.Builder.() -> Unit): Unit
-          = snsConfiguration(SNSConfigurationProperty(snsConfiguration))
+      override fun snsConfiguration(snsConfiguration: SNSConfigurationProperty.Builder.() -> Unit):
+          Unit = snsConfiguration(SNSConfigurationProperty(snsConfiguration))
 
       public fun build(): software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty =
           cdkBuilder.build()
@@ -217,9 +203,9 @@ public open class CfnAlert internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty,
     ) : ActionProperty {
-      public override fun lambdaConfiguration(): Any? = unwrap(this).getLambdaConfiguration()
+      override fun lambdaConfiguration(): Any? = unwrap(this).getLambdaConfiguration()
 
-      public override fun snsConfiguration(): Any? = unwrap(this).getSnsConfiguration()
+      override fun snsConfiguration(): Any? = unwrap(this).getSnsConfiguration()
     }
 
     public companion object {
@@ -248,11 +234,9 @@ public open class CfnAlert internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,11 +245,11 @@ public open class CfnAlert internal constructor(
           =
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty.builder()
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -278,9 +262,9 @@ public open class CfnAlert internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty,
     ) : LambdaConfigurationProperty {
-      public override fun lambdaArn(): String = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String = unwrap(this).getLambdaArn()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -309,11 +293,9 @@ public open class CfnAlert internal constructor(
     public fun snsTopicArn(): String
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun snsTopicArn(snsTopicArn: String) {
-      }
+      public fun snsTopicArn(snsTopicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -321,11 +303,11 @@ public open class CfnAlert internal constructor(
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty.Builder =
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun snsTopicArn(snsTopicArn: String) {
+      override fun snsTopicArn(snsTopicArn: String) {
         cdkBuilder.snsTopicArn(snsTopicArn)
       }
 
@@ -338,9 +320,9 @@ public open class CfnAlert internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty,
     ) : SNSConfigurationProperty {
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
+      override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
     }
 
     public companion object {

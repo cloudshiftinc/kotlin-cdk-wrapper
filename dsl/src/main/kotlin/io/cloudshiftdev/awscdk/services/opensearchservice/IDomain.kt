@@ -172,225 +172,223 @@ public interface IDomain : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.IDomain,
   ) : IDomain {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun domainArn(): String = unwrap(this).getDomainArn()
+    override fun domainArn(): String = unwrap(this).getDomainArn()
 
-    public override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
+    override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
 
-    public override fun domainId(): String = unwrap(this).getDomainId()
+    override fun domainId(): String = unwrap(this).getDomainId()
 
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantIndexRead(arg0: String, arg1: IGrantable): Grant =
+    override fun grantIndexRead(arg0: String, arg1: IGrantable): Grant =
         unwrap(this).grantIndexRead(arg0, arg1.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantIndexReadWrite(arg0: String, arg1: IGrantable): Grant =
+    override fun grantIndexReadWrite(arg0: String, arg1: IGrantable): Grant =
         unwrap(this).grantIndexReadWrite(arg0, arg1.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantIndexWrite(arg0: String, arg1: IGrantable): Grant =
+    override fun grantIndexWrite(arg0: String, arg1: IGrantable): Grant =
         unwrap(this).grantIndexWrite(arg0, arg1.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantPathRead(arg0: String, arg1: IGrantable): Grant =
+    override fun grantPathRead(arg0: String, arg1: IGrantable): Grant =
         unwrap(this).grantPathRead(arg0, arg1.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantPathReadWrite(arg0: String, arg1: IGrantable): Grant =
+    override fun grantPathReadWrite(arg0: String, arg1: IGrantable): Grant =
         unwrap(this).grantPathReadWrite(arg0, arg1.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantPathWrite(arg0: String, arg1: IGrantable): Grant =
+    override fun grantPathWrite(arg0: String, arg1: IGrantable): Grant =
         unwrap(this).grantPathWrite(arg0, arg1.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantRead(arg0: IGrantable): Grant =
+    override fun grantRead(arg0: IGrantable): Grant =
         unwrap(this).grantRead(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantReadWrite(arg0: IGrantable): Grant =
+    override fun grantReadWrite(arg0: IGrantable): Grant =
         unwrap(this).grantReadWrite(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantWrite(arg0: IGrantable): Grant =
+    override fun grantWrite(arg0: IGrantable): Grant =
         unwrap(this).grantWrite(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
+    override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
 
-    public override fun metric(arg0: String, arg1: MetricOptions): Metric =
-        unwrap(this).metric(arg0, arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
+    override fun metric(arg0: String, arg1: MetricOptions): Metric = unwrap(this).metric(arg0,
+        arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-    public override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric =
-        metric(arg0, MetricOptions(arg1))
+    override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric = metric(arg0,
+        MetricOptions(arg1))
 
-    public override fun metricAutomatedSnapshotFailure(): Metric =
+    override fun metricAutomatedSnapshotFailure(): Metric =
         unwrap(this).metricAutomatedSnapshotFailure().let(Metric::wrap)
 
-    public override fun metricAutomatedSnapshotFailure(arg0: MetricOptions): Metric =
+    override fun metricAutomatedSnapshotFailure(arg0: MetricOptions): Metric =
         unwrap(this).metricAutomatedSnapshotFailure(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f9f702cdc4e375e8b739cdce26ff5c0a5606646a98edb39614863885f1182c7f")
-    public override fun metricAutomatedSnapshotFailure(arg0: MetricOptions.Builder.() -> Unit):
-        Metric = metricAutomatedSnapshotFailure(MetricOptions(arg0))
+    override fun metricAutomatedSnapshotFailure(arg0: MetricOptions.Builder.() -> Unit): Metric =
+        metricAutomatedSnapshotFailure(MetricOptions(arg0))
 
-    public override fun metricClusterIndexWritesBlocked(): Metric =
+    override fun metricClusterIndexWritesBlocked(): Metric =
         unwrap(this).metricClusterIndexWritesBlocked().let(Metric::wrap)
 
-    public override fun metricClusterIndexWritesBlocked(arg0: MetricOptions): Metric =
+    override fun metricClusterIndexWritesBlocked(arg0: MetricOptions): Metric =
         unwrap(this).metricClusterIndexWritesBlocked(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("016b489514978517ae80814c783dc254d3f821a64ba427a0725fa9ed3e854018")
-    public override fun metricClusterIndexWritesBlocked(arg0: MetricOptions.Builder.() -> Unit):
-        Metric = metricClusterIndexWritesBlocked(MetricOptions(arg0))
+    override fun metricClusterIndexWritesBlocked(arg0: MetricOptions.Builder.() -> Unit): Metric =
+        metricClusterIndexWritesBlocked(MetricOptions(arg0))
 
-    public override fun metricClusterStatusRed(): Metric =
+    override fun metricClusterStatusRed(): Metric =
         unwrap(this).metricClusterStatusRed().let(Metric::wrap)
 
-    public override fun metricClusterStatusRed(arg0: MetricOptions): Metric =
+    override fun metricClusterStatusRed(arg0: MetricOptions): Metric =
         unwrap(this).metricClusterStatusRed(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e0926b5a2e18fffe32b1ec2076e81bbcc7d98107a425301c58fbc9d2905a860")
-    public override fun metricClusterStatusRed(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricClusterStatusRed(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricClusterStatusRed(MetricOptions(arg0))
 
-    public override fun metricClusterStatusYellow(): Metric =
+    override fun metricClusterStatusYellow(): Metric =
         unwrap(this).metricClusterStatusYellow().let(Metric::wrap)
 
-    public override fun metricClusterStatusYellow(arg0: MetricOptions): Metric =
+    override fun metricClusterStatusYellow(arg0: MetricOptions): Metric =
         unwrap(this).metricClusterStatusYellow(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ef39420c98f9d4cfefd45b8c2db0c21ea1a1e68a7c9b723df1412af465bda2f")
-    public override fun metricClusterStatusYellow(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricClusterStatusYellow(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricClusterStatusYellow(MetricOptions(arg0))
 
-    public override fun metricCpuUtilization(): Metric =
+    override fun metricCpuUtilization(): Metric =
         unwrap(this).metricCPUUtilization().let(Metric::wrap)
 
-    public override fun metricCpuUtilization(arg0: MetricOptions): Metric =
+    override fun metricCpuUtilization(arg0: MetricOptions): Metric =
         unwrap(this).metricCPUUtilization(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("06a38048efcdd43000e7f66d74001004b818625d95136f460bf350a2397a31d0")
-    public override fun metricCpuUtilization(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricCpuUtilization(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricCpuUtilization(MetricOptions(arg0))
 
-    public override fun metricFreeStorageSpace(): Metric =
+    override fun metricFreeStorageSpace(): Metric =
         unwrap(this).metricFreeStorageSpace().let(Metric::wrap)
 
-    public override fun metricFreeStorageSpace(arg0: MetricOptions): Metric =
+    override fun metricFreeStorageSpace(arg0: MetricOptions): Metric =
         unwrap(this).metricFreeStorageSpace(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("368af7ac3be4f10e672f08286b7e70f8633b6e9198d1685bfedc9108b3414e62")
-    public override fun metricFreeStorageSpace(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricFreeStorageSpace(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricFreeStorageSpace(MetricOptions(arg0))
 
-    public override fun metricIndexingLatency(): Metric =
+    override fun metricIndexingLatency(): Metric =
         unwrap(this).metricIndexingLatency().let(Metric::wrap)
 
-    public override fun metricIndexingLatency(arg0: MetricOptions): Metric =
+    override fun metricIndexingLatency(arg0: MetricOptions): Metric =
         unwrap(this).metricIndexingLatency(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("07b87f2aa9d61ee51a0627ce9ffe82c5e5f6e38fef54d0ff7ab95be9c0731c15")
-    public override fun metricIndexingLatency(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricIndexingLatency(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricIndexingLatency(MetricOptions(arg0))
 
-    public override fun metricJvmMemoryPressure(): Metric =
+    override fun metricJvmMemoryPressure(): Metric =
         unwrap(this).metricJVMMemoryPressure().let(Metric::wrap)
 
-    public override fun metricJvmMemoryPressure(arg0: MetricOptions): Metric =
+    override fun metricJvmMemoryPressure(arg0: MetricOptions): Metric =
         unwrap(this).metricJVMMemoryPressure(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("283ffec8edbd9b28227078700405c8b7b7fe0f6bf433f6323ba9205b4c8a528f")
-    public override fun metricJvmMemoryPressure(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricJvmMemoryPressure(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricJvmMemoryPressure(MetricOptions(arg0))
 
-    public override fun metricKmsKeyError(): Metric =
-        unwrap(this).metricKMSKeyError().let(Metric::wrap)
+    override fun metricKmsKeyError(): Metric = unwrap(this).metricKMSKeyError().let(Metric::wrap)
 
-    public override fun metricKmsKeyError(arg0: MetricOptions): Metric =
+    override fun metricKmsKeyError(arg0: MetricOptions): Metric =
         unwrap(this).metricKMSKeyError(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("309d28dee34b268d496bc1e8ba269d5bff9ec10e9e17132d9a884e208a805741")
-    public override fun metricKmsKeyError(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricKmsKeyError(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricKmsKeyError(MetricOptions(arg0))
 
-    public override fun metricKmsKeyInaccessible(): Metric =
+    override fun metricKmsKeyInaccessible(): Metric =
         unwrap(this).metricKMSKeyInaccessible().let(Metric::wrap)
 
-    public override fun metricKmsKeyInaccessible(arg0: MetricOptions): Metric =
+    override fun metricKmsKeyInaccessible(arg0: MetricOptions): Metric =
         unwrap(this).metricKMSKeyInaccessible(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfca9e4cdc1ad37f6d57f9fdeb4258e1c6235ab92ed8224c8ee4cda359baaad6")
-    public override fun metricKmsKeyInaccessible(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricKmsKeyInaccessible(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricKmsKeyInaccessible(MetricOptions(arg0))
 
-    public override fun metricMasterCpuUtilization(): Metric =
+    override fun metricMasterCpuUtilization(): Metric =
         unwrap(this).metricMasterCPUUtilization().let(Metric::wrap)
 
-    public override fun metricMasterCpuUtilization(arg0: MetricOptions): Metric =
+    override fun metricMasterCpuUtilization(arg0: MetricOptions): Metric =
         unwrap(this).metricMasterCPUUtilization(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8a46b211229de3f431630b8ea4f99843647a1cab494f599c79138732a397c709")
-    public override fun metricMasterCpuUtilization(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricMasterCpuUtilization(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricMasterCpuUtilization(MetricOptions(arg0))
 
-    public override fun metricMasterJvmMemoryPressure(): Metric =
+    override fun metricMasterJvmMemoryPressure(): Metric =
         unwrap(this).metricMasterJVMMemoryPressure().let(Metric::wrap)
 
-    public override fun metricMasterJvmMemoryPressure(arg0: MetricOptions): Metric =
+    override fun metricMasterJvmMemoryPressure(arg0: MetricOptions): Metric =
         unwrap(this).metricMasterJVMMemoryPressure(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fbcf8e4882306bcb2bed673a80ed7a54a16cc27adfc1a7fe173fbb566b335350")
-    public override fun metricMasterJvmMemoryPressure(arg0: MetricOptions.Builder.() -> Unit):
-        Metric = metricMasterJvmMemoryPressure(MetricOptions(arg0))
+    override fun metricMasterJvmMemoryPressure(arg0: MetricOptions.Builder.() -> Unit): Metric =
+        metricMasterJvmMemoryPressure(MetricOptions(arg0))
 
-    public override fun metricNodes(): Metric = unwrap(this).metricNodes().let(Metric::wrap)
+    override fun metricNodes(): Metric = unwrap(this).metricNodes().let(Metric::wrap)
 
-    public override fun metricNodes(arg0: MetricOptions): Metric =
+    override fun metricNodes(arg0: MetricOptions): Metric =
         unwrap(this).metricNodes(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("355f82e0d8db21f2bb54b9766182780100c904a3efcf3167fc2c3468c208268b")
-    public override fun metricNodes(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricNodes(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricNodes(MetricOptions(arg0))
 
-    public override fun metricSearchLatency(): Metric =
+    override fun metricSearchLatency(): Metric =
         unwrap(this).metricSearchLatency().let(Metric::wrap)
 
-    public override fun metricSearchLatency(arg0: MetricOptions): Metric =
+    override fun metricSearchLatency(arg0: MetricOptions): Metric =
         unwrap(this).metricSearchLatency(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b37148931823e387018afa8190e3e362020aa1dc4211a32e63ee13acb1e89fd6")
-    public override fun metricSearchLatency(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricSearchLatency(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricSearchLatency(MetricOptions(arg0))
 
-    public override fun metricSearchableDocuments(): Metric =
+    override fun metricSearchableDocuments(): Metric =
         unwrap(this).metricSearchableDocuments().let(Metric::wrap)
 
-    public override fun metricSearchableDocuments(arg0: MetricOptions): Metric =
+    override fun metricSearchableDocuments(arg0: MetricOptions): Metric =
         unwrap(this).metricSearchableDocuments(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("92e1cde4c44cd4a6f76bd4af6b9e03846698bfe485a039b042b4989c8258df65")
-    public override fun metricSearchableDocuments(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricSearchableDocuments(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricSearchableDocuments(MetricOptions(arg0))
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

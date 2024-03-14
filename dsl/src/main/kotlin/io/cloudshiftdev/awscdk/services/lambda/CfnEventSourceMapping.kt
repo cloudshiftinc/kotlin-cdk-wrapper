@@ -250,147 +250,106 @@ public open class CfnEventSourceMapping internal constructor(
   }
 
   public interface Builder {
-    public
-        fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: IResolvable) {
-    }
+    public fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: IResolvable)
 
     public
-        fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty) {
-    }
+        fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a18729a436a40c6ab3d5a14bf28967743c4f06ebf58a4c3399a07176c1be7fa")
     public
-        fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty.Builder.() -> Unit) {
-    }
+        fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty.Builder.() -> Unit)
 
-    public fun batchSize(batchSize: Number) {
-    }
+    public fun batchSize(batchSize: Number)
 
-    public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean) {
-    }
+    public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean)
 
-    public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
-    }
+    public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable)
 
-    public fun destinationConfig(destinationConfig: IResolvable) {
-    }
+    public fun destinationConfig(destinationConfig: IResolvable)
 
-    public fun destinationConfig(destinationConfig: DestinationConfigProperty) {
-    }
+    public fun destinationConfig(destinationConfig: DestinationConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf1365091f9febe46c1e47ec28c4a9206a26547b34731f5baf261a0af4eaa6b6")
-    public fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit) {
-    }
+    public fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit)
 
-    public fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable) {
-    }
+    public fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable)
 
     public
-        fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty) {
-    }
+        fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3b3fe70f00ec954d7ece91179c11a46159eb84371098c41dbdad143a0d405a0")
     public
-        fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty.Builder.() -> Unit) {
-    }
+        fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty.Builder.() -> Unit)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun eventSourceArn(eventSourceArn: String) {
-    }
+    public fun eventSourceArn(eventSourceArn: String)
 
-    public fun filterCriteria(filterCriteria: IResolvable) {
-    }
+    public fun filterCriteria(filterCriteria: IResolvable)
 
-    public fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
-    }
+    public fun filterCriteria(filterCriteria: FilterCriteriaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("916dc1790836cb4d0d61fbac02ff601607532a144ed6fba129679e6bf27e1e3c")
-    public fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit) {
-    }
+    public fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun functionResponseTypes(functionResponseTypes: List<String>) {
-    }
+    public fun functionResponseTypes(functionResponseTypes: List<String>)
 
-    public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
-    }
+    public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number)
 
-    public fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number) {
-    }
+    public fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number)
 
-    public fun maximumRetryAttempts(maximumRetryAttempts: Number) {
-    }
+    public fun maximumRetryAttempts(maximumRetryAttempts: Number)
 
-    public fun parallelizationFactor(parallelizationFactor: Number) {
-    }
+    public fun parallelizationFactor(parallelizationFactor: Number)
 
-    public fun queues(queues: List<String>) {
-    }
+    public fun queues(queues: List<String>)
 
-    public fun scalingConfig(scalingConfig: IResolvable) {
-    }
+    public fun scalingConfig(scalingConfig: IResolvable)
 
-    public fun scalingConfig(scalingConfig: ScalingConfigProperty) {
-    }
+    public fun scalingConfig(scalingConfig: ScalingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ef3b9f703fbf78497da8a3697e58d20913edff366643d85f736a432c376080e")
-    public fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit) {
-    }
+    public fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit)
 
-    public fun selfManagedEventSource(selfManagedEventSource: IResolvable) {
-    }
+    public fun selfManagedEventSource(selfManagedEventSource: IResolvable)
 
-    public fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty) {
-    }
+    public fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("338dd05b1ecb9f9b6cac5db40b22f8a8756113fd3faf8ec5704f4aa12283dda4")
     public
-        fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty.Builder.() -> Unit) {
-    }
+        fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty.Builder.() -> Unit)
 
-    public fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable) {
-    }
+    public fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable)
 
     public
-        fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty) {
-    }
+        fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("98f5b4474f72c44225b79c9d86688eedd8ec8f540ead775e215a15e7562423d3")
     public
-        fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty.Builder.() -> Unit) {
-    }
+        fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty.Builder.() -> Unit)
 
-    public fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable) {
-    }
+    public fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable)
 
-    public fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>) {
-    }
+    public fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>)
 
-    public fun startingPosition(startingPosition: String) {
-    }
+    public fun startingPosition(startingPosition: String)
 
-    public fun startingPositionTimestamp(startingPositionTimestamp: Number) {
-    }
+    public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
-    public fun topics(topics: List<String>) {
-    }
+    public fun topics(topics: List<String>)
 
-    public fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number) {
-    }
+    public fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number)
   }
 
   private class BuilderImpl(
@@ -400,184 +359,181 @@ public open class CfnEventSourceMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnEventSourceMapping.Builder =
         software.amazon.awscdk.services.lambda.CfnEventSourceMapping.Builder.create(scope, id)
 
-    public override
+    override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: IResolvable) {
       cdkBuilder.amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty) {
       cdkBuilder.amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig.let(AmazonManagedKafkaEventSourceConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a18729a436a40c6ab3d5a14bf28967743c4f06ebf58a4c3399a07176c1be7fa")
-    public override
+    override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty.Builder.() -> Unit):
         Unit =
         amazonManagedKafkaEventSourceConfig(AmazonManagedKafkaEventSourceConfigProperty(amazonManagedKafkaEventSourceConfig))
 
-    public override fun batchSize(batchSize: Number) {
+    override fun batchSize(batchSize: Number) {
       cdkBuilder.batchSize(batchSize)
     }
 
-    public override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean) {
+    override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean) {
       cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError)
     }
 
-    public override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
+    override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
       cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable::unwrap))
     }
 
-    public override fun destinationConfig(destinationConfig: IResolvable) {
+    override fun destinationConfig(destinationConfig: IResolvable) {
       cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
     }
 
-    public override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
+    override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
       cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf1365091f9febe46c1e47ec28c4a9206a26547b34731f5baf261a0af4eaa6b6")
-    public override
-        fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit): Unit
-        = destinationConfig(DestinationConfigProperty(destinationConfig))
+    override fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit):
+        Unit = destinationConfig(DestinationConfigProperty(destinationConfig))
 
-    public override fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable) {
+    override fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable) {
       cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty) {
       cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(DocumentDBEventSourceConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3b3fe70f00ec954d7ece91179c11a46159eb84371098c41dbdad143a0d405a0")
-    public override
+    override
         fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty.Builder.() -> Unit):
         Unit =
         documentDbEventSourceConfig(DocumentDBEventSourceConfigProperty(documentDbEventSourceConfig))
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun eventSourceArn(eventSourceArn: String) {
+    override fun eventSourceArn(eventSourceArn: String) {
       cdkBuilder.eventSourceArn(eventSourceArn)
     }
 
-    public override fun filterCriteria(filterCriteria: IResolvable) {
+    override fun filterCriteria(filterCriteria: IResolvable) {
       cdkBuilder.filterCriteria(filterCriteria.let(IResolvable::unwrap))
     }
 
-    public override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
+    override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
       cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("916dc1790836cb4d0d61fbac02ff601607532a144ed6fba129679e6bf27e1e3c")
-    public override fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit):
-        Unit = filterCriteria(FilterCriteriaProperty(filterCriteria))
+    override fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit): Unit =
+        filterCriteria(FilterCriteriaProperty(filterCriteria))
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun functionResponseTypes(functionResponseTypes: List<String>) {
+    override fun functionResponseTypes(functionResponseTypes: List<String>) {
       cdkBuilder.functionResponseTypes(functionResponseTypes)
     }
 
-    public override fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
+    override fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
       cdkBuilder.maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds)
     }
 
-    public override fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number) {
+    override fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number) {
       cdkBuilder.maximumRecordAgeInSeconds(maximumRecordAgeInSeconds)
     }
 
-    public override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
+    override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
       cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
     }
 
-    public override fun parallelizationFactor(parallelizationFactor: Number) {
+    override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
 
-    public override fun queues(queues: List<String>) {
+    override fun queues(queues: List<String>) {
       cdkBuilder.queues(queues)
     }
 
-    public override fun scalingConfig(scalingConfig: IResolvable) {
+    override fun scalingConfig(scalingConfig: IResolvable) {
       cdkBuilder.scalingConfig(scalingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun scalingConfig(scalingConfig: ScalingConfigProperty) {
+    override fun scalingConfig(scalingConfig: ScalingConfigProperty) {
       cdkBuilder.scalingConfig(scalingConfig.let(ScalingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ef3b9f703fbf78497da8a3697e58d20913edff366643d85f736a432c376080e")
-    public override fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit): Unit
-        = scalingConfig(ScalingConfigProperty(scalingConfig))
+    override fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit): Unit =
+        scalingConfig(ScalingConfigProperty(scalingConfig))
 
-    public override fun selfManagedEventSource(selfManagedEventSource: IResolvable) {
+    override fun selfManagedEventSource(selfManagedEventSource: IResolvable) {
       cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(IResolvable::unwrap))
     }
 
-    public override
-        fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty) {
+    override fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty) {
       cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(SelfManagedEventSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("338dd05b1ecb9f9b6cac5db40b22f8a8756113fd3faf8ec5704f4aa12283dda4")
-    public override
+    override
         fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty.Builder.() -> Unit):
         Unit = selfManagedEventSource(SelfManagedEventSourceProperty(selfManagedEventSource))
 
-    public override
-        fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable) {
+    override fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable) {
       cdkBuilder.selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty) {
       cdkBuilder.selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig.let(SelfManagedKafkaEventSourceConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("98f5b4474f72c44225b79c9d86688eedd8ec8f540ead775e215a15e7562423d3")
-    public override
+    override
         fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty.Builder.() -> Unit):
         Unit =
         selfManagedKafkaEventSourceConfig(SelfManagedKafkaEventSourceConfigProperty(selfManagedKafkaEventSourceConfig))
 
-    public override fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable) {
+    override fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable) {
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>) {
+    override fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>) {
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations)
     }
 
-    public override fun startingPosition(startingPosition: String) {
+    override fun startingPosition(startingPosition: String) {
       cdkBuilder.startingPosition(startingPosition)
     }
 
-    public override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
+    override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
       cdkBuilder.startingPositionTimestamp(startingPositionTimestamp)
     }
 
-    public override fun topics(topics: List<String>) {
+    override fun topics(topics: List<String>) {
       cdkBuilder.topics(topics)
     }
 
-    public override fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number) {
+    override fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number) {
       cdkBuilder.tumblingWindowInSeconds(tumblingWindowInSeconds)
     }
 
@@ -610,8 +566,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
 
     public interface Builder {
-      public fun consumerGroupId(consumerGroupId: String) {
-      }
+      public fun consumerGroupId(consumerGroupId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -620,7 +575,7 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.builder()
 
-      public override fun consumerGroupId(consumerGroupId: String) {
+      override fun consumerGroupId(consumerGroupId: String) {
         cdkBuilder.consumerGroupId(consumerGroupId)
       }
 
@@ -633,7 +588,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty,
     ) : SelfManagedKafkaEventSourceConfigProperty {
-      public override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+      override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
     }
 
     public companion object {
@@ -661,8 +616,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun pattern(): String? = unwrap(this).getPattern()
 
     public interface Builder {
-      public fun pattern(pattern: String) {
-      }
+      public fun pattern(pattern: String)
     }
 
     private class BuilderImpl : Builder {
@@ -670,7 +624,7 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty.builder()
 
-      public override fun pattern(pattern: String) {
+      override fun pattern(pattern: String) {
         cdkBuilder.pattern(pattern)
       }
 
@@ -683,7 +637,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterProperty,
     ) : FilterProperty {
-      public override fun pattern(): String? = unwrap(this).getPattern()
+      override fun pattern(): String? = unwrap(this).getPattern()
     }
 
     public companion object {
@@ -710,16 +664,13 @@ public open class CfnEventSourceMapping internal constructor(
     public fun endpoints(): Any? = unwrap(this).getEndpoints()
 
     public interface Builder {
-      public fun endpoints(endpoints: IResolvable) {
-      }
+      public fun endpoints(endpoints: IResolvable)
 
-      public fun endpoints(endpoints: EndpointsProperty) {
-      }
+      public fun endpoints(endpoints: EndpointsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
-      public fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit) {
-      }
+      public fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -728,17 +679,17 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty.builder()
 
-      public override fun endpoints(endpoints: IResolvable) {
+      override fun endpoints(endpoints: IResolvable) {
         cdkBuilder.endpoints(endpoints.let(IResolvable::unwrap))
       }
 
-      public override fun endpoints(endpoints: EndpointsProperty) {
+      override fun endpoints(endpoints: EndpointsProperty) {
         cdkBuilder.endpoints(endpoints.let(EndpointsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e698f9f1f113c096b2840307c27cfc7d5cb23bd03b30dc2ed0d25276ace3f91")
-      public override fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit): Unit =
+      override fun endpoints(endpoints: EndpointsProperty.Builder.() -> Unit): Unit =
           endpoints(EndpointsProperty(endpoints))
 
       public fun build():
@@ -750,7 +701,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SelfManagedEventSourceProperty,
     ) : SelfManagedEventSourceProperty {
-      public override fun endpoints(): Any? = unwrap(this).getEndpoints()
+      override fun endpoints(): Any? = unwrap(this).getEndpoints()
     }
 
     public companion object {
@@ -777,8 +728,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
 
     public interface Builder {
-      public fun consumerGroupId(consumerGroupId: String) {
-      }
+      public fun consumerGroupId(consumerGroupId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -787,7 +737,7 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty.builder()
 
-      public override fun consumerGroupId(consumerGroupId: String) {
+      override fun consumerGroupId(consumerGroupId: String) {
         cdkBuilder.consumerGroupId(consumerGroupId)
       }
 
@@ -800,7 +750,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty,
     ) : AmazonManagedKafkaEventSourceConfigProperty {
-      public override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
+      override fun consumerGroupId(): String? = unwrap(this).getConsumerGroupId()
     }
 
     public companion object {
@@ -828,11 +778,9 @@ public open class CfnEventSourceMapping internal constructor(
     public fun filters(): Any? = unwrap(this).getFilters()
 
     public interface Builder {
-      public fun filters(filters: IResolvable) {
-      }
+      public fun filters(filters: IResolvable)
 
-      public fun filters(filters: List<Any>) {
-      }
+      public fun filters(filters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -841,11 +789,11 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty.builder()
 
-      public override fun filters(filters: IResolvable) {
+      override fun filters(filters: IResolvable) {
         cdkBuilder.filters(filters.let(IResolvable::unwrap))
       }
 
-      public override fun filters(filters: List<Any>) {
+      override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
 
@@ -858,7 +806,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty,
     ) : FilterCriteriaProperty {
-      public override fun filters(): Any? = unwrap(this).getFilters()
+      override fun filters(): Any? = unwrap(this).getFilters()
     }
 
     public companion object {
@@ -885,8 +833,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun destination(): String? = unwrap(this).getDestination()
 
     public interface Builder {
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
     }
 
     private class BuilderImpl : Builder {
@@ -894,7 +841,7 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty.builder()
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
@@ -907,7 +854,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.OnFailureProperty,
     ) : OnFailureProperty {
-      public override fun destination(): String? = unwrap(this).getDestination()
+      override fun destination(): String? = unwrap(this).getDestination()
     }
 
     public companion object {
@@ -934,16 +881,13 @@ public open class CfnEventSourceMapping internal constructor(
     public fun onFailure(): Any? = unwrap(this).getOnFailure()
 
     public interface Builder {
-      public fun onFailure(onFailure: IResolvable) {
-      }
+      public fun onFailure(onFailure: IResolvable)
 
-      public fun onFailure(onFailure: OnFailureProperty) {
-      }
+      public fun onFailure(onFailure: OnFailureProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("284a94b85ae136287cec3526f52f06be29bceaf51b2211a83f73e8de76313ce2")
-      public fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit) {
-      }
+      public fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -952,17 +896,17 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty.builder()
 
-      public override fun onFailure(onFailure: IResolvable) {
+      override fun onFailure(onFailure: IResolvable) {
         cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
       }
 
-      public override fun onFailure(onFailure: OnFailureProperty) {
+      override fun onFailure(onFailure: OnFailureProperty) {
         cdkBuilder.onFailure(onFailure.let(OnFailureProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("284a94b85ae136287cec3526f52f06be29bceaf51b2211a83f73e8de76313ce2")
-      public override fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit): Unit =
+      override fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit): Unit =
           onFailure(OnFailureProperty(onFailure))
 
       public fun build():
@@ -974,7 +918,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DestinationConfigProperty,
     ) : DestinationConfigProperty {
-      public override fun onFailure(): Any? = unwrap(this).getOnFailure()
+      override fun onFailure(): Any? = unwrap(this).getOnFailure()
     }
 
     public companion object {
@@ -1003,11 +947,9 @@ public open class CfnEventSourceMapping internal constructor(
     public fun uri(): String? = unwrap(this).getUri()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun uri(uri: String) {
-      }
+      public fun uri(uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1016,11 +958,11 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun uri(uri: String) {
+      override fun uri(uri: String) {
         cdkBuilder.uri(uri)
       }
 
@@ -1033,9 +975,9 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.SourceAccessConfigurationProperty,
     ) : SourceAccessConfigurationProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun uri(): String? = unwrap(this).getUri()
+      override fun uri(): String? = unwrap(this).getUri()
     }
 
     public companion object {
@@ -1063,8 +1005,7 @@ public open class CfnEventSourceMapping internal constructor(
     public fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
 
     public interface Builder {
-      public fun maximumConcurrency(maximumConcurrency: Number) {
-      }
+      public fun maximumConcurrency(maximumConcurrency: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1073,7 +1014,7 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty.builder()
 
-      public override fun maximumConcurrency(maximumConcurrency: Number) {
+      override fun maximumConcurrency(maximumConcurrency: Number) {
         cdkBuilder.maximumConcurrency(maximumConcurrency)
       }
 
@@ -1086,7 +1027,7 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.ScalingConfigProperty,
     ) : ScalingConfigProperty {
-      public override fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
+      override fun maximumConcurrency(): Number? = unwrap(this).getMaximumConcurrency()
     }
 
     public companion object {
@@ -1117,14 +1058,11 @@ public open class CfnEventSourceMapping internal constructor(
     public fun fullDocument(): String? = unwrap(this).getFullDocument()
 
     public interface Builder {
-      public fun collectionName(collectionName: String) {
-      }
+      public fun collectionName(collectionName: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun fullDocument(fullDocument: String) {
-      }
+      public fun fullDocument(fullDocument: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1133,15 +1071,15 @@ public open class CfnEventSourceMapping internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.builder()
 
-      public override fun collectionName(collectionName: String) {
+      override fun collectionName(collectionName: String) {
         cdkBuilder.collectionName(collectionName)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun fullDocument(fullDocument: String) {
+      override fun fullDocument(fullDocument: String) {
         cdkBuilder.fullDocument(fullDocument)
       }
 
@@ -1154,11 +1092,11 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.DocumentDBEventSourceConfigProperty,
     ) : DocumentDBEventSourceConfigProperty {
-      public override fun collectionName(): String? = unwrap(this).getCollectionName()
+      override fun collectionName(): String? = unwrap(this).getCollectionName()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun fullDocument(): String? = unwrap(this).getFullDocument()
+      override fun fullDocument(): String? = unwrap(this).getFullDocument()
     }
 
     public companion object {
@@ -1187,8 +1125,7 @@ public open class CfnEventSourceMapping internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
-      }
+      public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1196,7 +1133,7 @@ public open class CfnEventSourceMapping internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty.builder()
 
-      public override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
+      override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
         cdkBuilder.kafkaBootstrapServers(kafkaBootstrapServers)
       }
 
@@ -1209,8 +1146,8 @@ public open class CfnEventSourceMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty,
     ) : EndpointsProperty {
-      public override fun kafkaBootstrapServers(): List<String> =
-          unwrap(this).getKafkaBootstrapServers() ?: emptyList()
+      override fun kafkaBootstrapServers(): List<String> = unwrap(this).getKafkaBootstrapServers()
+          ?: emptyList()
     }
 
     public companion object {

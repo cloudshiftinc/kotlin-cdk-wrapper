@@ -24,64 +24,56 @@ public interface LoggingOptions {
       unwrap(this).getSlowSearchLogGroup()?.let(ILogGroup::wrap)
 
   public interface Builder {
-    public fun appLogEnabled(appLogEnabled: Boolean) {
-    }
+    public fun appLogEnabled(appLogEnabled: Boolean)
 
-    public fun appLogGroup(appLogGroup: ILogGroup) {
-    }
+    public fun appLogGroup(appLogGroup: ILogGroup)
 
-    public fun auditLogEnabled(auditLogEnabled: Boolean) {
-    }
+    public fun auditLogEnabled(auditLogEnabled: Boolean)
 
-    public fun auditLogGroup(auditLogGroup: ILogGroup) {
-    }
+    public fun auditLogGroup(auditLogGroup: ILogGroup)
 
-    public fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
-    }
+    public fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean)
 
-    public fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
-    }
+    public fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup)
 
-    public fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
-    }
+    public fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean)
 
-    public fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
-    }
+    public fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.opensearchservice.LoggingOptions.Builder
         = software.amazon.awscdk.services.opensearchservice.LoggingOptions.builder()
 
-    public override fun appLogEnabled(appLogEnabled: Boolean) {
+    override fun appLogEnabled(appLogEnabled: Boolean) {
       cdkBuilder.appLogEnabled(appLogEnabled)
     }
 
-    public override fun appLogGroup(appLogGroup: ILogGroup) {
+    override fun appLogGroup(appLogGroup: ILogGroup) {
       cdkBuilder.appLogGroup(appLogGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun auditLogEnabled(auditLogEnabled: Boolean) {
+    override fun auditLogEnabled(auditLogEnabled: Boolean) {
       cdkBuilder.auditLogEnabled(auditLogEnabled)
     }
 
-    public override fun auditLogGroup(auditLogGroup: ILogGroup) {
+    override fun auditLogGroup(auditLogGroup: ILogGroup) {
       cdkBuilder.auditLogGroup(auditLogGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
+    override fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
       cdkBuilder.slowIndexLogEnabled(slowIndexLogEnabled)
     }
 
-    public override fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
+    override fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
       cdkBuilder.slowIndexLogGroup(slowIndexLogGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
+    override fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
       cdkBuilder.slowSearchLogEnabled(slowSearchLogEnabled)
     }
 
-    public override fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
+    override fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
       cdkBuilder.slowSearchLogGroup(slowSearchLogGroup.let(ILogGroup::unwrap))
     }
 
@@ -92,24 +84,22 @@ public interface LoggingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.LoggingOptions,
   ) : LoggingOptions {
-    public override fun appLogEnabled(): Boolean? = unwrap(this).getAppLogEnabled()
+    override fun appLogEnabled(): Boolean? = unwrap(this).getAppLogEnabled()
 
-    public override fun appLogGroup(): ILogGroup? =
-        unwrap(this).getAppLogGroup()?.let(ILogGroup::wrap)
+    override fun appLogGroup(): ILogGroup? = unwrap(this).getAppLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun auditLogEnabled(): Boolean? = unwrap(this).getAuditLogEnabled()
+    override fun auditLogEnabled(): Boolean? = unwrap(this).getAuditLogEnabled()
 
-    public override fun auditLogGroup(): ILogGroup? =
-        unwrap(this).getAuditLogGroup()?.let(ILogGroup::wrap)
+    override fun auditLogGroup(): ILogGroup? = unwrap(this).getAuditLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun slowIndexLogEnabled(): Boolean? = unwrap(this).getSlowIndexLogEnabled()
+    override fun slowIndexLogEnabled(): Boolean? = unwrap(this).getSlowIndexLogEnabled()
 
-    public override fun slowIndexLogGroup(): ILogGroup? =
+    override fun slowIndexLogGroup(): ILogGroup? =
         unwrap(this).getSlowIndexLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun slowSearchLogEnabled(): Boolean? = unwrap(this).getSlowSearchLogEnabled()
+    override fun slowSearchLogEnabled(): Boolean? = unwrap(this).getSlowSearchLogEnabled()
 
-    public override fun slowSearchLogGroup(): ILogGroup? =
+    override fun slowSearchLogGroup(): ILogGroup? =
         unwrap(this).getSlowSearchLogGroup()?.let(ILogGroup::wrap)
   }
 

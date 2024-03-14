@@ -19,23 +19,17 @@ public open class Connection internal constructor(
   public override fun connectionSecretArn(): String = unwrap(this).getConnectionSecretArn()
 
   public interface Builder {
-    public fun authorization(authorization: Authorization) {
-    }
+    public fun authorization(authorization: Authorization)
 
-    public fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
-    }
+    public fun bodyParameters(bodyParameters: Map<String, HttpParameter>)
 
-    public fun connectionName(connectionName: String) {
-    }
+    public fun connectionName(connectionName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun headerParameters(headerParameters: Map<String, HttpParameter>) {
-    }
+    public fun headerParameters(headerParameters: Map<String, HttpParameter>)
 
-    public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
-    }
+    public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>)
   }
 
   private class BuilderImpl(
@@ -45,29 +39,28 @@ public open class Connection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.Connection.Builder =
         software.amazon.awscdk.services.events.Connection.Builder.create(scope, id)
 
-    public override fun authorization(authorization: Authorization) {
+    override fun authorization(authorization: Authorization) {
       cdkBuilder.authorization(authorization.let(Authorization::unwrap))
     }
 
-    public override fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
-      cdkBuilder.bodyParameters(bodyParameters.mapValues { HttpParameter.unwrap(it.value)})
+    override fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
+      cdkBuilder.bodyParameters(bodyParameters.mapValues{HttpParameter.unwrap(it.value)})
     }
 
-    public override fun connectionName(connectionName: String) {
+    override fun connectionName(connectionName: String) {
       cdkBuilder.connectionName(connectionName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun headerParameters(headerParameters: Map<String, HttpParameter>) {
-      cdkBuilder.headerParameters(headerParameters.mapValues { HttpParameter.unwrap(it.value)})
+    override fun headerParameters(headerParameters: Map<String, HttpParameter>) {
+      cdkBuilder.headerParameters(headerParameters.mapValues{HttpParameter.unwrap(it.value)})
     }
 
-    public override fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
-      cdkBuilder.queryStringParameters(queryStringParameters.mapValues {
-          HttpParameter.unwrap(it.value)})
+    override fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
+      cdkBuilder.queryStringParameters(queryStringParameters.mapValues{HttpParameter.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.events.Connection = cdkBuilder.build()

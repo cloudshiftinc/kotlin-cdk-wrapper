@@ -6,7 +6,7 @@ public interface ISecretAttachmentTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
   ) : ISecretAttachmentTarget {
-    public override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
+    override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
         unwrap(this).asSecretAttachmentTarget().let(SecretAttachmentTargetProps::wrap)
   }
 

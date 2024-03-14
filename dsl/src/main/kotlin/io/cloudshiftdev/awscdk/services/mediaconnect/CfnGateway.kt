@@ -46,17 +46,13 @@ public open class CfnGateway internal constructor(
   }
 
   public interface Builder {
-    public fun egressCidrBlocks(egressCidrBlocks: List<String>) {
-    }
+    public fun egressCidrBlocks(egressCidrBlocks: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun networks(networks: IResolvable) {
-    }
+    public fun networks(networks: IResolvable)
 
-    public fun networks(networks: List<Any>) {
-    }
+    public fun networks(networks: List<Any>)
   }
 
   private class BuilderImpl(
@@ -66,19 +62,19 @@ public open class CfnGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnGateway.Builder =
         software.amazon.awscdk.services.mediaconnect.CfnGateway.Builder.create(scope, id)
 
-    public override fun egressCidrBlocks(egressCidrBlocks: List<String>) {
+    override fun egressCidrBlocks(egressCidrBlocks: List<String>) {
       cdkBuilder.egressCidrBlocks(egressCidrBlocks)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun networks(networks: IResolvable) {
+    override fun networks(networks: IResolvable) {
       cdkBuilder.networks(networks.let(IResolvable::unwrap))
     }
 
-    public override fun networks(networks: List<Any>) {
+    override fun networks(networks: List<Any>) {
       cdkBuilder.networks(networks)
     }
 
@@ -112,11 +108,9 @@ public open class CfnGateway internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun cidrBlock(cidrBlock: String) {
-      }
+      public fun cidrBlock(cidrBlock: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -124,11 +118,11 @@ public open class CfnGateway internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty.builder()
 
-      public override fun cidrBlock(cidrBlock: String) {
+      override fun cidrBlock(cidrBlock: String) {
         cdkBuilder.cidrBlock(cidrBlock)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -141,9 +135,9 @@ public open class CfnGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty,
     ) : GatewayNetworkProperty {
-      public override fun cidrBlock(): String = unwrap(this).getCidrBlock()
+      override fun cidrBlock(): String = unwrap(this).getCidrBlock()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {

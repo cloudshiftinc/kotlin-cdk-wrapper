@@ -14,11 +14,11 @@ public interface IInterfaceVpcEndpointService {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IInterfaceVpcEndpointService,
   ) : IInterfaceVpcEndpointService {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun privateDnsDefault(): Boolean? = unwrap(this).getPrivateDnsDefault()
+    override fun privateDnsDefault(): Boolean? = unwrap(this).getPrivateDnsDefault()
   }
 
   public companion object {

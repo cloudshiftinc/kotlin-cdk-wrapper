@@ -39,14 +39,11 @@ public open class CfnCidrCollection internal constructor(
   }
 
   public interface Builder {
-    public fun locations(locations: IResolvable) {
-    }
+    public fun locations(locations: IResolvable)
 
-    public fun locations(locations: List<Any>) {
-    }
+    public fun locations(locations: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnCidrCollection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnCidrCollection.Builder =
         software.amazon.awscdk.services.route53.CfnCidrCollection.Builder.create(scope, id)
 
-    public override fun locations(locations: IResolvable) {
+    override fun locations(locations: IResolvable) {
       cdkBuilder.locations(locations.let(IResolvable::unwrap))
     }
 
-    public override fun locations(locations: List<Any>) {
+    override fun locations(locations: List<Any>) {
       cdkBuilder.locations(locations)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -99,11 +96,9 @@ public open class CfnCidrCollection internal constructor(
     public fun locationName(): String
 
     public interface Builder {
-      public fun cidrList(cidrList: List<String>) {
-      }
+      public fun cidrList(cidrList: List<String>)
 
-      public fun locationName(locationName: String) {
-      }
+      public fun locationName(locationName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -111,11 +106,11 @@ public open class CfnCidrCollection internal constructor(
           software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty.Builder =
           software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty.builder()
 
-      public override fun cidrList(cidrList: List<String>) {
+      override fun cidrList(cidrList: List<String>) {
         cdkBuilder.cidrList(cidrList)
       }
 
-      public override fun locationName(locationName: String) {
+      override fun locationName(locationName: String) {
         cdkBuilder.locationName(locationName)
       }
 
@@ -127,9 +122,9 @@ public open class CfnCidrCollection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
     ) : LocationProperty {
-      public override fun cidrList(): List<String> = unwrap(this).getCidrList() ?: emptyList()
+      override fun cidrList(): List<String> = unwrap(this).getCidrList() ?: emptyList()
 
-      public override fun locationName(): String = unwrap(this).getLocationName()
+      override fun locationName(): String = unwrap(this).getLocationName()
     }
 
     public companion object {

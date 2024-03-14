@@ -15,20 +15,15 @@ public open class ConfigurationSetEventDestination internal constructor(
       unwrap(this).getConfigurationSetEventDestinationId()
 
   public interface Builder {
-    public fun configurationSet(configurationSet: IConfigurationSet) {
-    }
+    public fun configurationSet(configurationSet: IConfigurationSet)
 
-    public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
-    }
+    public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String)
 
-    public fun destination(destination: EventDestination) {
-    }
+    public fun destination(destination: EventDestination)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun events(events: List<EmailSendingEvent>) {
-    }
+    public fun events(events: List<EmailSendingEvent>)
   }
 
   private class BuilderImpl(
@@ -40,24 +35,24 @@ public open class ConfigurationSetEventDestination internal constructor(
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestination.Builder.create(scope,
         id)
 
-    public override fun configurationSet(configurationSet: IConfigurationSet) {
+    override fun configurationSet(configurationSet: IConfigurationSet) {
       cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet::unwrap))
     }
 
-    public override
+    override
         fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
       cdkBuilder.configurationSetEventDestinationName(configurationSetEventDestinationName)
     }
 
-    public override fun destination(destination: EventDestination) {
+    override fun destination(destination: EventDestination) {
       cdkBuilder.destination(destination.let(EventDestination::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun events(events: List<EmailSendingEvent>) {
+    override fun events(events: List<EmailSendingEvent>) {
       cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
     }
 

@@ -17,32 +17,23 @@ public open class WebSocketIntegration internal constructor(
       unwrap(this).getWebSocketApi().let(IWebSocketApi::wrap)
 
   public interface Builder {
-    public fun credentialsRole(credentialsRole: IRole) {
-    }
+    public fun credentialsRole(credentialsRole: IRole)
 
-    public fun integrationMethod(integrationMethod: String) {
-    }
+    public fun integrationMethod(integrationMethod: String)
 
-    public fun integrationType(integrationType: WebSocketIntegrationType) {
-    }
+    public fun integrationType(integrationType: WebSocketIntegrationType)
 
-    public fun integrationUri(integrationUri: String) {
-    }
+    public fun integrationUri(integrationUri: String)
 
-    public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-    }
+    public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior)
 
-    public fun requestParameters(requestParameters: Map<String, String>) {
-    }
+    public fun requestParameters(requestParameters: Map<String, String>)
 
-    public fun requestTemplates(requestTemplates: Map<String, String>) {
-    }
+    public fun requestTemplates(requestTemplates: Map<String, String>)
 
-    public fun templateSelectionExpression(templateSelectionExpression: String) {
-    }
+    public fun templateSelectionExpression(templateSelectionExpression: String)
 
-    public fun webSocketApi(webSocketApi: IWebSocketApi) {
-    }
+    public fun webSocketApi(webSocketApi: IWebSocketApi)
   }
 
   private class BuilderImpl(
@@ -53,39 +44,39 @@ public open class WebSocketIntegration internal constructor(
         software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration.Builder.create(scope, id)
 
-    public override fun credentialsRole(credentialsRole: IRole) {
+    override fun credentialsRole(credentialsRole: IRole) {
       cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
     }
 
-    public override fun integrationMethod(integrationMethod: String) {
+    override fun integrationMethod(integrationMethod: String) {
       cdkBuilder.integrationMethod(integrationMethod)
     }
 
-    public override fun integrationType(integrationType: WebSocketIntegrationType) {
+    override fun integrationType(integrationType: WebSocketIntegrationType) {
       cdkBuilder.integrationType(integrationType.let(WebSocketIntegrationType::unwrap))
     }
 
-    public override fun integrationUri(integrationUri: String) {
+    override fun integrationUri(integrationUri: String) {
       cdkBuilder.integrationUri(integrationUri)
     }
 
-    public override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
+    override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
       cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
     }
 
-    public override fun requestParameters(requestParameters: Map<String, String>) {
+    override fun requestParameters(requestParameters: Map<String, String>) {
       cdkBuilder.requestParameters(requestParameters)
     }
 
-    public override fun requestTemplates(requestTemplates: Map<String, String>) {
+    override fun requestTemplates(requestTemplates: Map<String, String>) {
       cdkBuilder.requestTemplates(requestTemplates)
     }
 
-    public override fun templateSelectionExpression(templateSelectionExpression: String) {
+    override fun templateSelectionExpression(templateSelectionExpression: String) {
       cdkBuilder.templateSelectionExpression(templateSelectionExpression)
     }
 
-    public override fun webSocketApi(webSocketApi: IWebSocketApi) {
+    override fun webSocketApi(webSocketApi: IWebSocketApi) {
       cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
     }
 

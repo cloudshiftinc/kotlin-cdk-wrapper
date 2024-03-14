@@ -93,32 +93,23 @@ public open class CfnEventSubscription internal constructor(
   }
 
   public interface Builder {
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun eventCategories(eventCategories: List<String>) {
-    }
+    public fun eventCategories(eventCategories: List<String>)
 
-    public fun severity(severity: String) {
-    }
+    public fun severity(severity: String)
 
-    public fun snsTopicArn(snsTopicArn: String) {
-    }
+    public fun snsTopicArn(snsTopicArn: String)
 
-    public fun sourceIds(sourceIds: List<String>) {
-    }
+    public fun sourceIds(sourceIds: List<String>)
 
-    public fun sourceType(sourceType: String) {
-    }
+    public fun sourceType(sourceType: String)
 
-    public fun subscriptionName(subscriptionName: String) {
-    }
+    public fun subscriptionName(subscriptionName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -128,39 +119,39 @@ public open class CfnEventSubscription internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.redshift.CfnEventSubscription.Builder =
         software.amazon.awscdk.services.redshift.CfnEventSubscription.Builder.create(scope, id)
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun eventCategories(eventCategories: List<String>) {
+    override fun eventCategories(eventCategories: List<String>) {
       cdkBuilder.eventCategories(eventCategories)
     }
 
-    public override fun severity(severity: String) {
+    override fun severity(severity: String) {
       cdkBuilder.severity(severity)
     }
 
-    public override fun snsTopicArn(snsTopicArn: String) {
+    override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
 
-    public override fun sourceIds(sourceIds: List<String>) {
+    override fun sourceIds(sourceIds: List<String>) {
       cdkBuilder.sourceIds(sourceIds)
     }
 
-    public override fun sourceType(sourceType: String) {
+    override fun sourceType(sourceType: String) {
       cdkBuilder.sourceType(sourceType)
     }
 
-    public override fun subscriptionName(subscriptionName: String) {
+    override fun subscriptionName(subscriptionName: String) {
       cdkBuilder.subscriptionName(subscriptionName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

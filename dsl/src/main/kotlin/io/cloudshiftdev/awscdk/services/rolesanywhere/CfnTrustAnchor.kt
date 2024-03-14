@@ -80,34 +80,25 @@ public open class CfnTrustAnchor internal constructor(
   }
 
   public interface Builder {
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun notificationSettings(notificationSettings: IResolvable) {
-    }
+    public fun notificationSettings(notificationSettings: IResolvable)
 
-    public fun notificationSettings(notificationSettings: List<Any>) {
-    }
+    public fun notificationSettings(notificationSettings: List<Any>)
 
-    public fun source(source: IResolvable) {
-    }
+    public fun source(source: IResolvable)
 
-    public fun source(source: SourceProperty) {
-    }
+    public fun source(source: SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73cdafd30f11ea0f3f26b5a9a7461217ecb4f5a1582cd00a959b41f8cba00c28")
-    public fun source(source: SourceProperty.Builder.() -> Unit) {
-    }
+    public fun source(source: SourceProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -117,40 +108,40 @@ public open class CfnTrustAnchor internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.Builder =
         software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.Builder.create(scope, id)
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun notificationSettings(notificationSettings: IResolvable) {
+    override fun notificationSettings(notificationSettings: IResolvable) {
       cdkBuilder.notificationSettings(notificationSettings.let(IResolvable::unwrap))
     }
 
-    public override fun notificationSettings(notificationSettings: List<Any>) {
+    override fun notificationSettings(notificationSettings: List<Any>) {
       cdkBuilder.notificationSettings(notificationSettings)
     }
 
-    public override fun source(source: IResolvable) {
+    override fun source(source: IResolvable) {
       cdkBuilder.source(source.let(IResolvable::unwrap))
     }
 
-    public override fun source(source: SourceProperty) {
+    override fun source(source: SourceProperty) {
       cdkBuilder.source(source.let(SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73cdafd30f11ea0f3f26b5a9a7461217ecb4f5a1582cd00a959b41f8cba00c28")
-    public override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
+    override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
         source(SourceProperty(source))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -185,11 +176,9 @@ public open class CfnTrustAnchor internal constructor(
     public fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
 
     public interface Builder {
-      public fun acmPcaArn(acmPcaArn: String) {
-      }
+      public fun acmPcaArn(acmPcaArn: String)
 
-      public fun x509CertificateData(x509CertificateData: String) {
-      }
+      public fun x509CertificateData(x509CertificateData: String)
     }
 
     private class BuilderImpl : Builder {
@@ -197,11 +186,11 @@ public open class CfnTrustAnchor internal constructor(
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty.Builder =
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty.builder()
 
-      public override fun acmPcaArn(acmPcaArn: String) {
+      override fun acmPcaArn(acmPcaArn: String) {
         cdkBuilder.acmPcaArn(acmPcaArn)
       }
 
-      public override fun x509CertificateData(x509CertificateData: String) {
+      override fun x509CertificateData(x509CertificateData: String) {
         cdkBuilder.x509CertificateData(x509CertificateData)
       }
 
@@ -214,9 +203,9 @@ public open class CfnTrustAnchor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty,
     ) : SourceDataProperty {
-      public override fun acmPcaArn(): String? = unwrap(this).getAcmPcaArn()
+      override fun acmPcaArn(): String? = unwrap(this).getAcmPcaArn()
 
-      public override fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
+      override fun x509CertificateData(): String? = unwrap(this).getX509CertificateData()
     }
 
     public companion object {
@@ -249,20 +238,15 @@ public open class CfnTrustAnchor internal constructor(
     public fun threshold(): Number? = unwrap(this).getThreshold()
 
     public interface Builder {
-      public fun channel(channel: String) {
-      }
+      public fun channel(channel: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun event(event: String) {
-      }
+      public fun event(event: String)
 
-      public fun threshold(threshold: Number) {
-      }
+      public fun threshold(threshold: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -271,23 +255,23 @@ public open class CfnTrustAnchor internal constructor(
           =
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty.builder()
 
-      public override fun channel(channel: String) {
+      override fun channel(channel: String) {
         cdkBuilder.channel(channel)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun event(event: String) {
+      override fun event(event: String) {
         cdkBuilder.event(event)
       }
 
-      public override fun threshold(threshold: Number) {
+      override fun threshold(threshold: Number) {
         cdkBuilder.threshold(threshold)
       }
 
@@ -300,13 +284,13 @@ public open class CfnTrustAnchor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty,
     ) : NotificationSettingProperty {
-      public override fun channel(): String? = unwrap(this).getChannel()
+      override fun channel(): String? = unwrap(this).getChannel()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun event(): String = unwrap(this).getEvent()
+      override fun event(): String = unwrap(this).getEvent()
 
-      public override fun threshold(): Number? = unwrap(this).getThreshold()
+      override fun threshold(): Number? = unwrap(this).getThreshold()
     }
 
     public companion object {
@@ -335,19 +319,15 @@ public open class CfnTrustAnchor internal constructor(
     public fun sourceType(): String? = unwrap(this).getSourceType()
 
     public interface Builder {
-      public fun sourceData(sourceData: IResolvable) {
-      }
+      public fun sourceData(sourceData: IResolvable)
 
-      public fun sourceData(sourceData: SourceDataProperty) {
-      }
+      public fun sourceData(sourceData: SourceDataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67dcf808ea62ad5bd45b3233e85ec02737844c3fe2796855e264f638ead6bc52")
-      public fun sourceData(sourceData: SourceDataProperty.Builder.() -> Unit) {
-      }
+      public fun sourceData(sourceData: SourceDataProperty.Builder.() -> Unit)
 
-      public fun sourceType(sourceType: String) {
-      }
+      public fun sourceType(sourceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -355,20 +335,20 @@ public open class CfnTrustAnchor internal constructor(
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty.Builder =
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty.builder()
 
-      public override fun sourceData(sourceData: IResolvable) {
+      override fun sourceData(sourceData: IResolvable) {
         cdkBuilder.sourceData(sourceData.let(IResolvable::unwrap))
       }
 
-      public override fun sourceData(sourceData: SourceDataProperty) {
+      override fun sourceData(sourceData: SourceDataProperty) {
         cdkBuilder.sourceData(sourceData.let(SourceDataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67dcf808ea62ad5bd45b3233e85ec02737844c3fe2796855e264f638ead6bc52")
-      public override fun sourceData(sourceData: SourceDataProperty.Builder.() -> Unit): Unit =
+      override fun sourceData(sourceData: SourceDataProperty.Builder.() -> Unit): Unit =
           sourceData(SourceDataProperty(sourceData))
 
-      public override fun sourceType(sourceType: String) {
+      override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
       }
 
@@ -381,9 +361,9 @@ public open class CfnTrustAnchor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty,
     ) : SourceProperty {
-      public override fun sourceData(): Any? = unwrap(this).getSourceData()
+      override fun sourceData(): Any? = unwrap(this).getSourceData()
 
-      public override fun sourceType(): String? = unwrap(this).getSourceType()
+      override fun sourceType(): String? = unwrap(this).getSourceType()
     }
 
     public companion object {

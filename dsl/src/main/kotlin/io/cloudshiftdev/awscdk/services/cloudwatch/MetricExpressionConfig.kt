@@ -17,20 +17,15 @@ public interface MetricExpressionConfig {
   public fun usingMetrics(): Map<String, IMetric>
 
   public interface Builder {
-    public fun expression(expression: String) {
-    }
+    public fun expression(expression: String)
 
-    public fun period(period: Number) {
-    }
+    public fun period(period: Number)
 
-    public fun searchAccount(searchAccount: String) {
-    }
+    public fun searchAccount(searchAccount: String)
 
-    public fun searchRegion(searchRegion: String) {
-    }
+    public fun searchRegion(searchRegion: String)
 
-    public fun usingMetrics(usingMetrics: Map<String, IMetric>) {
-    }
+    public fun usingMetrics(usingMetrics: Map<String, IMetric>)
   }
 
   private class BuilderImpl : Builder {
@@ -38,24 +33,24 @@ public interface MetricExpressionConfig {
         software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig.Builder =
         software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig.builder()
 
-    public override fun expression(expression: String) {
+    override fun expression(expression: String) {
       cdkBuilder.expression(expression)
     }
 
-    public override fun period(period: Number) {
+    override fun period(period: Number) {
       cdkBuilder.period(period)
     }
 
-    public override fun searchAccount(searchAccount: String) {
+    override fun searchAccount(searchAccount: String) {
       cdkBuilder.searchAccount(searchAccount)
     }
 
-    public override fun searchRegion(searchRegion: String) {
+    override fun searchRegion(searchRegion: String) {
       cdkBuilder.searchRegion(searchRegion)
     }
 
-    public override fun usingMetrics(usingMetrics: Map<String, IMetric>) {
-      cdkBuilder.usingMetrics(usingMetrics.mapValues { IMetric.unwrap(it.value)})
+    override fun usingMetrics(usingMetrics: Map<String, IMetric>) {
+      cdkBuilder.usingMetrics(usingMetrics.mapValues{IMetric.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig =
@@ -65,16 +60,16 @@ public interface MetricExpressionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig,
   ) : MetricExpressionConfig {
-    public override fun expression(): String = unwrap(this).getExpression()
+    override fun expression(): String = unwrap(this).getExpression()
 
-    public override fun period(): Number = unwrap(this).getPeriod()
+    override fun period(): Number = unwrap(this).getPeriod()
 
-    public override fun searchAccount(): String? = unwrap(this).getSearchAccount()
+    override fun searchAccount(): String? = unwrap(this).getSearchAccount()
 
-    public override fun searchRegion(): String? = unwrap(this).getSearchRegion()
+    override fun searchRegion(): String? = unwrap(this).getSearchRegion()
 
-    public override fun usingMetrics(): Map<String, IMetric> =
-        unwrap(this).getUsingMetrics().mapValues { IMetric.wrap(it.value)} ?: emptyMap()
+    override fun usingMetrics(): Map<String, IMetric> =
+        unwrap(this).getUsingMetrics().mapValues{IMetric.wrap(it.value)} ?: emptyMap()
   }
 
   public companion object {

@@ -13,19 +13,15 @@ public open class EventBusPolicy internal constructor(
   private val cdkObject: software.amazon.awscdk.services.events.EventBusPolicy,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun eventBus(eventBus: IEventBus) {
-    }
+    public fun eventBus(eventBus: IEventBus)
 
-    public fun statement(statement: PolicyStatement) {
-    }
+    public fun statement(statement: PolicyStatement)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("29e8ed3497b5beb6432837edb02ee514842c6dcfde77834c4ab2433f0dae5ef8")
-    public fun statement(statement: PolicyStatement.Builder.() -> Unit) {
-    }
+    public fun statement(statement: PolicyStatement.Builder.() -> Unit)
 
-    public fun statementId(statementId: String) {
-    }
+    public fun statementId(statementId: String)
   }
 
   private class BuilderImpl(
@@ -35,20 +31,20 @@ public open class EventBusPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.EventBusPolicy.Builder =
         software.amazon.awscdk.services.events.EventBusPolicy.Builder.create(scope, id)
 
-    public override fun eventBus(eventBus: IEventBus) {
+    override fun eventBus(eventBus: IEventBus) {
       cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
     }
 
-    public override fun statement(statement: PolicyStatement) {
+    override fun statement(statement: PolicyStatement) {
       cdkBuilder.statement(statement.let(PolicyStatement::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("29e8ed3497b5beb6432837edb02ee514842c6dcfde77834c4ab2433f0dae5ef8")
-    public override fun statement(statement: PolicyStatement.Builder.() -> Unit): Unit =
+    override fun statement(statement: PolicyStatement.Builder.() -> Unit): Unit =
         statement(PolicyStatement(statement))
 
-    public override fun statementId(statementId: String) {
+    override fun statementId(statementId: String) {
       cdkBuilder.statementId(statementId)
     }
 

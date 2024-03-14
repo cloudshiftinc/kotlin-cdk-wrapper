@@ -202,89 +202,61 @@ public open class CfnDBCluster internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
-    public fun backupRetentionPeriod(backupRetentionPeriod: Number) {
-    }
+    public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable)
 
-    public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-    }
+    public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
-    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
-    }
+    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String)
 
-    public fun dbSubnetGroupName(dbSubnetGroupName: String) {
-    }
+    public fun dbSubnetGroupName(dbSubnetGroupName: String)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun deletionProtection(deletionProtection: IResolvable) {
-    }
+    public fun deletionProtection(deletionProtection: IResolvable)
 
-    public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
-    }
+    public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun masterUserPassword(masterUserPassword: String) {
-    }
+    public fun masterUserPassword(masterUserPassword: String)
 
-    public fun masterUsername(masterUsername: String) {
-    }
+    public fun masterUsername(masterUsername: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredBackupWindow(preferredBackupWindow: String) {
-    }
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun restoreToTime(restoreToTime: String) {
-    }
+    public fun restoreToTime(restoreToTime: String)
 
-    public fun restoreType(restoreType: String) {
-    }
+    public fun restoreType(restoreType: String)
 
-    public fun snapshotIdentifier(snapshotIdentifier: String) {
-    }
+    public fun snapshotIdentifier(snapshotIdentifier: String)
 
-    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
-    }
+    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun storageEncrypted(storageEncrypted: IResolvable) {
-    }
+    public fun storageEncrypted(storageEncrypted: IResolvable)
 
-    public fun storageType(storageType: String) {
-    }
+    public fun storageType(storageType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
-    }
+    public fun useLatestRestorableTime(useLatestRestorableTime: Boolean)
 
-    public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-    }
+    public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -294,115 +266,115 @@ public open class CfnDBCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdb.CfnDBCluster.Builder =
         software.amazon.awscdk.services.docdb.CfnDBCluster.Builder.create(scope, id)
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
-    public override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
+    override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
       cdkBuilder.backupRetentionPeriod(backupRetentionPeriod)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
     }
 
-    public override fun dbClusterIdentifier(dbClusterIdentifier: String) {
+    override fun dbClusterIdentifier(dbClusterIdentifier: String) {
       cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
     }
 
-    public override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
+    override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
       cdkBuilder.dbClusterParameterGroupName(dbClusterParameterGroupName)
     }
 
-    public override fun dbSubnetGroupName(dbSubnetGroupName: String) {
+    override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deletionProtection(deletionProtection: IResolvable) {
+    override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
     }
 
-    public override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
+    override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
       cdkBuilder.enableCloudwatchLogsExports(enableCloudwatchLogsExports)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun masterUserPassword(masterUserPassword: String) {
+    override fun masterUserPassword(masterUserPassword: String) {
       cdkBuilder.masterUserPassword(masterUserPassword)
     }
 
-    public override fun masterUsername(masterUsername: String) {
+    override fun masterUsername(masterUsername: String) {
       cdkBuilder.masterUsername(masterUsername)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredBackupWindow(preferredBackupWindow: String) {
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
       cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun restoreToTime(restoreToTime: String) {
+    override fun restoreToTime(restoreToTime: String) {
       cdkBuilder.restoreToTime(restoreToTime)
     }
 
-    public override fun restoreType(restoreType: String) {
+    override fun restoreType(restoreType: String) {
       cdkBuilder.restoreType(restoreType)
     }
 
-    public override fun snapshotIdentifier(snapshotIdentifier: String) {
+    override fun snapshotIdentifier(snapshotIdentifier: String) {
       cdkBuilder.snapshotIdentifier(snapshotIdentifier)
     }
 
-    public override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
+    override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
       cdkBuilder.sourceDbClusterIdentifier(sourceDbClusterIdentifier)
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun storageEncrypted(storageEncrypted: IResolvable) {
+    override fun storageEncrypted(storageEncrypted: IResolvable) {
       cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
     }
 
-    public override fun storageType(storageType: String) {
+    override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
+    override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
 
-    public override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
+    override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 

@@ -9,13 +9,11 @@ public interface VirtualServiceBackendOptions {
       unwrap(this).getTlsClientPolicy()?.let(TlsClientPolicy::wrap)
 
   public interface Builder {
-    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
-    }
+    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7088fe453c32d32cf94952126da458090c76dae9149f3c2aedf01918c5d22594")
-    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit) {
-    }
+    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -23,13 +21,13 @@ public interface VirtualServiceBackendOptions {
         software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions.Builder =
         software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions.builder()
 
-    public override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
+    override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
       cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7088fe453c32d32cf94952126da458090c76dae9149f3c2aedf01918c5d22594")
-    public override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit): Unit =
+    override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit): Unit =
         tlsClientPolicy(TlsClientPolicy(tlsClientPolicy))
 
     public fun build(): software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions =
@@ -39,7 +37,7 @@ public interface VirtualServiceBackendOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceBackendOptions,
   ) : VirtualServiceBackendOptions {
-    public override fun tlsClientPolicy(): TlsClientPolicy? =
+    override fun tlsClientPolicy(): TlsClientPolicy? =
         unwrap(this).getTlsClientPolicy()?.let(TlsClientPolicy::wrap)
   }
 

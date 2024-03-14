@@ -127,64 +127,46 @@ public open class CfnFlowOutput internal constructor(
       vpcInterfaceAttachment(VpcInterfaceAttachmentProperty(`value`))
 
   public interface Builder {
-    public fun cidrAllowList(cidrAllowList: List<String>) {
-    }
+    public fun cidrAllowList(cidrAllowList: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun destination(destination: String) {
-    }
+    public fun destination(destination: String)
 
-    public fun encryption(encryption: IResolvable) {
-    }
+    public fun encryption(encryption: IResolvable)
 
-    public fun encryption(encryption: EncryptionProperty) {
-    }
+    public fun encryption(encryption: EncryptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40bfe21686627a21508f97b0b94d2276d2b7a80627f2b75acc06b464e5314460")
-    public fun encryption(encryption: EncryptionProperty.Builder.() -> Unit) {
-    }
+    public fun encryption(encryption: EncryptionProperty.Builder.() -> Unit)
 
-    public fun flowArn(flowArn: String) {
-    }
+    public fun flowArn(flowArn: String)
 
-    public fun maxLatency(maxLatency: Number) {
-    }
+    public fun maxLatency(maxLatency: Number)
 
-    public fun minLatency(minLatency: Number) {
-    }
+    public fun minLatency(minLatency: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: String) {
-    }
+    public fun protocol(protocol: String)
 
-    public fun remoteId(remoteId: String) {
-    }
+    public fun remoteId(remoteId: String)
 
-    public fun smoothingLatency(smoothingLatency: Number) {
-    }
+    public fun smoothingLatency(smoothingLatency: Number)
 
-    public fun streamId(streamId: String) {
-    }
+    public fun streamId(streamId: String)
 
-    public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-    }
+    public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable)
 
-    public fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-    }
+    public fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d453e2c57e9a6614af8b22f664e7a79444a20efe7a3e2be75552713a7e6a708b")
     public
-        fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit) {
-    }
+        fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -194,79 +176,78 @@ public open class CfnFlowOutput internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.Builder =
         software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.Builder.create(scope, id)
 
-    public override fun cidrAllowList(cidrAllowList: List<String>) {
+    override fun cidrAllowList(cidrAllowList: List<String>) {
       cdkBuilder.cidrAllowList(cidrAllowList)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun destination(destination: String) {
+    override fun destination(destination: String) {
       cdkBuilder.destination(destination)
     }
 
-    public override fun encryption(encryption: IResolvable) {
+    override fun encryption(encryption: IResolvable) {
       cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
     }
 
-    public override fun encryption(encryption: EncryptionProperty) {
+    override fun encryption(encryption: EncryptionProperty) {
       cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40bfe21686627a21508f97b0b94d2276d2b7a80627f2b75acc06b464e5314460")
-    public override fun encryption(encryption: EncryptionProperty.Builder.() -> Unit): Unit =
+    override fun encryption(encryption: EncryptionProperty.Builder.() -> Unit): Unit =
         encryption(EncryptionProperty(encryption))
 
-    public override fun flowArn(flowArn: String) {
+    override fun flowArn(flowArn: String) {
       cdkBuilder.flowArn(flowArn)
     }
 
-    public override fun maxLatency(maxLatency: Number) {
+    override fun maxLatency(maxLatency: Number) {
       cdkBuilder.maxLatency(maxLatency)
     }
 
-    public override fun minLatency(minLatency: Number) {
+    override fun minLatency(minLatency: Number) {
       cdkBuilder.minLatency(minLatency)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: String) {
+    override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun remoteId(remoteId: String) {
+    override fun remoteId(remoteId: String) {
       cdkBuilder.remoteId(remoteId)
     }
 
-    public override fun smoothingLatency(smoothingLatency: Number) {
+    override fun smoothingLatency(smoothingLatency: Number) {
       cdkBuilder.smoothingLatency(smoothingLatency)
     }
 
-    public override fun streamId(streamId: String) {
+    override fun streamId(streamId: String) {
       cdkBuilder.streamId(streamId)
     }
 
-    public override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
+    override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
       cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
     }
 
-    public override
-        fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
+    override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
       cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d453e2c57e9a6614af8b22f664e7a79444a20efe7a3e2be75552713a7e6a708b")
-    public override
+    override
         fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
         Unit = vpcInterfaceAttachment(VpcInterfaceAttachmentProperty(vpcInterfaceAttachment))
 
@@ -305,17 +286,13 @@ public open class CfnFlowOutput internal constructor(
     public fun secretArn(): String
 
     public interface Builder {
-      public fun algorithm(algorithm: String) {
-      }
+      public fun algorithm(algorithm: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -323,19 +300,19 @@ public open class CfnFlowOutput internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty.builder()
 
-      public override fun algorithm(algorithm: String) {
+      override fun algorithm(algorithm: String) {
         cdkBuilder.algorithm(algorithm)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
@@ -348,13 +325,13 @@ public open class CfnFlowOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.EncryptionProperty,
     ) : EncryptionProperty {
-      public override fun algorithm(): String? = unwrap(this).getAlgorithm()
+      override fun algorithm(): String? = unwrap(this).getAlgorithm()
 
-      public override fun keyType(): String? = unwrap(this).getKeyType()
+      override fun keyType(): String? = unwrap(this).getKeyType()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
     }
 
     public companion object {
@@ -381,8 +358,7 @@ public open class CfnFlowOutput internal constructor(
     public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
     public interface Builder {
-      public fun vpcInterfaceName(vpcInterfaceName: String) {
-      }
+      public fun vpcInterfaceName(vpcInterfaceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -391,7 +367,7 @@ public open class CfnFlowOutput internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty.builder()
 
-      public override fun vpcInterfaceName(vpcInterfaceName: String) {
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
       }
 
@@ -404,7 +380,7 @@ public open class CfnFlowOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlowOutput.VpcInterfaceAttachmentProperty,
     ) : VpcInterfaceAttachmentProperty {
-      public override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
     }
 
     public companion object {

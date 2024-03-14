@@ -34,14 +34,11 @@ public open class CfnLogging internal constructor(
   }
 
   public interface Builder {
-    public fun accountId(accountId: String) {
-    }
+    public fun accountId(accountId: String)
 
-    public fun defaultLogLevel(defaultLogLevel: String) {
-    }
+    public fun defaultLogLevel(defaultLogLevel: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -51,15 +48,15 @@ public open class CfnLogging internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnLogging.Builder =
         software.amazon.awscdk.services.iot.CfnLogging.Builder.create(scope, id)
 
-    public override fun accountId(accountId: String) {
+    override fun accountId(accountId: String) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun defaultLogLevel(defaultLogLevel: String) {
+    override fun defaultLogLevel(defaultLogLevel: String) {
       cdkBuilder.defaultLogLevel(defaultLogLevel)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

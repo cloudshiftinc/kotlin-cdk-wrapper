@@ -15,32 +15,32 @@ public interface IAssumeRolePrincipal : IPrincipal {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.IAssumeRolePrincipal,
   ) : IAssumeRolePrincipal {
-    public override fun addToAssumeRolePolicy(arg0: PolicyDocument) {
+    override fun addToAssumeRolePolicy(arg0: PolicyDocument) {
       unwrap(this).addToAssumeRolePolicy(arg0.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cef9e06c9678a219d566dc6f09959675ba743f7c64440ddbd5b37c4d552db9c0")
-    public override fun addToAssumeRolePolicy(arg0: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun addToAssumeRolePolicy(arg0: PolicyDocument.Builder.() -> Unit): Unit =
         addToAssumeRolePolicy(PolicyDocument(arg0))
 
-    public override fun addToPrincipalPolicy(arg0: PolicyStatement): AddToPrincipalPolicyResult =
+    override fun addToPrincipalPolicy(arg0: PolicyStatement): AddToPrincipalPolicyResult =
         unwrap(this).addToPrincipalPolicy(arg0.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e5a2b0fec5c17722d0dc719c3fd27344bee07d931f9f715b331523f4aadc0661")
-    public override fun addToPrincipalPolicy(arg0: PolicyStatement.Builder.() -> Unit):
+    override fun addToPrincipalPolicy(arg0: PolicyStatement.Builder.() -> Unit):
         AddToPrincipalPolicyResult = addToPrincipalPolicy(PolicyStatement(arg0))
 
-    public override fun assumeRoleAction(): String = unwrap(this).getAssumeRoleAction()
+    override fun assumeRoleAction(): String = unwrap(this).getAssumeRoleAction()
 
-    public override fun grantPrincipal(): IPrincipal =
+    override fun grantPrincipal(): IPrincipal =
         unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
 
-    public override fun policyFragment(): PrincipalPolicyFragment =
+    override fun policyFragment(): PrincipalPolicyFragment =
         unwrap(this).getPolicyFragment().let(PrincipalPolicyFragment::wrap)
 
-    public override fun principalAccount(): String? = unwrap(this).getPrincipalAccount()
+    override fun principalAccount(): String? = unwrap(this).getPrincipalAccount()
   }
 
   public companion object {

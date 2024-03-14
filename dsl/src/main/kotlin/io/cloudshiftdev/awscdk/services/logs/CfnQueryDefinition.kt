@@ -37,14 +37,11 @@ public open class CfnQueryDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun logGroupNames(logGroupNames: List<String>) {
-    }
+    public fun logGroupNames(logGroupNames: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun queryString(queryString: String) {
-    }
+    public fun queryString(queryString: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnQueryDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnQueryDefinition.Builder =
         software.amazon.awscdk.services.logs.CfnQueryDefinition.Builder.create(scope, id)
 
-    public override fun logGroupNames(logGroupNames: List<String>) {
+    override fun logGroupNames(logGroupNames: List<String>) {
       cdkBuilder.logGroupNames(logGroupNames)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun queryString(queryString: String) {
+    override fun queryString(queryString: String) {
       cdkBuilder.queryString(queryString)
     }
 

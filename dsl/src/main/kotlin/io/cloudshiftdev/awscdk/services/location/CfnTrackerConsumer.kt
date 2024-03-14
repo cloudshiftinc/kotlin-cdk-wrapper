@@ -28,11 +28,9 @@ public open class CfnTrackerConsumer internal constructor(
   }
 
   public interface Builder {
-    public fun consumerArn(consumerArn: String) {
-    }
+    public fun consumerArn(consumerArn: String)
 
-    public fun trackerName(trackerName: String) {
-    }
+    public fun trackerName(trackerName: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnTrackerConsumer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnTrackerConsumer.Builder =
         software.amazon.awscdk.services.location.CfnTrackerConsumer.Builder.create(scope, id)
 
-    public override fun consumerArn(consumerArn: String) {
+    override fun consumerArn(consumerArn: String) {
       cdkBuilder.consumerArn(consumerArn)
     }
 
-    public override fun trackerName(trackerName: String) {
+    override fun trackerName(trackerName: String) {
       cdkBuilder.trackerName(trackerName)
     }
 

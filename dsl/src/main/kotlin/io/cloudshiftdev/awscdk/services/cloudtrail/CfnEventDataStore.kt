@@ -148,68 +148,47 @@ public open class CfnEventDataStore internal constructor(
   }
 
   public interface Builder {
-    public fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
-    }
+    public fun advancedEventSelectors(advancedEventSelectors: IResolvable)
 
-    public fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
-    }
+    public fun advancedEventSelectors(advancedEventSelectors: List<Any>)
 
-    public fun billingMode(billingMode: String) {
-    }
+    public fun billingMode(billingMode: String)
 
-    public fun federationEnabled(federationEnabled: Boolean) {
-    }
+    public fun federationEnabled(federationEnabled: Boolean)
 
-    public fun federationEnabled(federationEnabled: IResolvable) {
-    }
+    public fun federationEnabled(federationEnabled: IResolvable)
 
-    public fun federationRoleArn(federationRoleArn: String) {
-    }
+    public fun federationRoleArn(federationRoleArn: String)
 
-    public fun ingestionEnabled(ingestionEnabled: Boolean) {
-    }
+    public fun ingestionEnabled(ingestionEnabled: Boolean)
 
-    public fun ingestionEnabled(ingestionEnabled: IResolvable) {
-    }
+    public fun ingestionEnabled(ingestionEnabled: IResolvable)
 
-    public fun insightSelectors(insightSelectors: IResolvable) {
-    }
+    public fun insightSelectors(insightSelectors: IResolvable)
 
-    public fun insightSelectors(insightSelectors: List<Any>) {
-    }
+    public fun insightSelectors(insightSelectors: List<Any>)
 
-    public fun insightsDestination(insightsDestination: String) {
-    }
+    public fun insightsDestination(insightsDestination: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun multiRegionEnabled(multiRegionEnabled: Boolean) {
-    }
+    public fun multiRegionEnabled(multiRegionEnabled: Boolean)
 
-    public fun multiRegionEnabled(multiRegionEnabled: IResolvable) {
-    }
+    public fun multiRegionEnabled(multiRegionEnabled: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun organizationEnabled(organizationEnabled: Boolean) {
-    }
+    public fun organizationEnabled(organizationEnabled: Boolean)
 
-    public fun organizationEnabled(organizationEnabled: IResolvable) {
-    }
+    public fun organizationEnabled(organizationEnabled: IResolvable)
 
-    public fun retentionPeriod(retentionPeriod: Number) {
-    }
+    public fun retentionPeriod(retentionPeriod: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun terminationProtectionEnabled(terminationProtectionEnabled: Boolean) {
-    }
+    public fun terminationProtectionEnabled(terminationProtectionEnabled: Boolean)
 
-    public fun terminationProtectionEnabled(terminationProtectionEnabled: IResolvable) {
-    }
+    public fun terminationProtectionEnabled(terminationProtectionEnabled: IResolvable)
   }
 
   private class BuilderImpl(
@@ -219,87 +198,87 @@ public open class CfnEventDataStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.Builder =
         software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.Builder.create(scope, id)
 
-    public override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
+    override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
       cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable::unwrap))
     }
 
-    public override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
+    override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
       cdkBuilder.advancedEventSelectors(advancedEventSelectors)
     }
 
-    public override fun billingMode(billingMode: String) {
+    override fun billingMode(billingMode: String) {
       cdkBuilder.billingMode(billingMode)
     }
 
-    public override fun federationEnabled(federationEnabled: Boolean) {
+    override fun federationEnabled(federationEnabled: Boolean) {
       cdkBuilder.federationEnabled(federationEnabled)
     }
 
-    public override fun federationEnabled(federationEnabled: IResolvable) {
+    override fun federationEnabled(federationEnabled: IResolvable) {
       cdkBuilder.federationEnabled(federationEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun federationRoleArn(federationRoleArn: String) {
+    override fun federationRoleArn(federationRoleArn: String) {
       cdkBuilder.federationRoleArn(federationRoleArn)
     }
 
-    public override fun ingestionEnabled(ingestionEnabled: Boolean) {
+    override fun ingestionEnabled(ingestionEnabled: Boolean) {
       cdkBuilder.ingestionEnabled(ingestionEnabled)
     }
 
-    public override fun ingestionEnabled(ingestionEnabled: IResolvable) {
+    override fun ingestionEnabled(ingestionEnabled: IResolvable) {
       cdkBuilder.ingestionEnabled(ingestionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun insightSelectors(insightSelectors: IResolvable) {
+    override fun insightSelectors(insightSelectors: IResolvable) {
       cdkBuilder.insightSelectors(insightSelectors.let(IResolvable::unwrap))
     }
 
-    public override fun insightSelectors(insightSelectors: List<Any>) {
+    override fun insightSelectors(insightSelectors: List<Any>) {
       cdkBuilder.insightSelectors(insightSelectors)
     }
 
-    public override fun insightsDestination(insightsDestination: String) {
+    override fun insightsDestination(insightsDestination: String) {
       cdkBuilder.insightsDestination(insightsDestination)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun multiRegionEnabled(multiRegionEnabled: Boolean) {
+    override fun multiRegionEnabled(multiRegionEnabled: Boolean) {
       cdkBuilder.multiRegionEnabled(multiRegionEnabled)
     }
 
-    public override fun multiRegionEnabled(multiRegionEnabled: IResolvable) {
+    override fun multiRegionEnabled(multiRegionEnabled: IResolvable) {
       cdkBuilder.multiRegionEnabled(multiRegionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun organizationEnabled(organizationEnabled: Boolean) {
+    override fun organizationEnabled(organizationEnabled: Boolean) {
       cdkBuilder.organizationEnabled(organizationEnabled)
     }
 
-    public override fun organizationEnabled(organizationEnabled: IResolvable) {
+    override fun organizationEnabled(organizationEnabled: IResolvable) {
       cdkBuilder.organizationEnabled(organizationEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun retentionPeriod(retentionPeriod: Number) {
+    override fun retentionPeriod(retentionPeriod: Number) {
       cdkBuilder.retentionPeriod(retentionPeriod)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun terminationProtectionEnabled(terminationProtectionEnabled: Boolean) {
+    override fun terminationProtectionEnabled(terminationProtectionEnabled: Boolean) {
       cdkBuilder.terminationProtectionEnabled(terminationProtectionEnabled)
     }
 
-    public override fun terminationProtectionEnabled(terminationProtectionEnabled: IResolvable) {
+    override fun terminationProtectionEnabled(terminationProtectionEnabled: IResolvable) {
       cdkBuilder.terminationProtectionEnabled(terminationProtectionEnabled.let(IResolvable::unwrap))
     }
 
@@ -332,8 +311,7 @@ public open class CfnEventDataStore internal constructor(
     public fun insightType(): String? = unwrap(this).getInsightType()
 
     public interface Builder {
-      public fun insightType(insightType: String) {
-      }
+      public fun insightType(insightType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -342,7 +320,7 @@ public open class CfnEventDataStore internal constructor(
           =
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty.builder()
 
-      public override fun insightType(insightType: String) {
+      override fun insightType(insightType: String) {
         cdkBuilder.insightType(insightType)
       }
 
@@ -355,7 +333,7 @@ public open class CfnEventDataStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.InsightSelectorProperty,
     ) : InsightSelectorProperty {
-      public override fun insightType(): String? = unwrap(this).getInsightType()
+      override fun insightType(): String? = unwrap(this).getInsightType()
     }
 
     public companion object {
@@ -394,26 +372,19 @@ public open class CfnEventDataStore internal constructor(
     public fun startsWith(): List<String> = unwrap(this).getStartsWith() ?: emptyList()
 
     public interface Builder {
-      public fun endsWith(endsWith: List<String>) {
-      }
+      public fun endsWith(endsWith: List<String>)
 
-      public fun equalTo(equalTo: List<String>) {
-      }
+      public fun equalTo(equalTo: List<String>)
 
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun notEndsWith(notEndsWith: List<String>) {
-      }
+      public fun notEndsWith(notEndsWith: List<String>)
 
-      public fun notEquals(notEquals: List<String>) {
-      }
+      public fun notEquals(notEquals: List<String>)
 
-      public fun notStartsWith(notStartsWith: List<String>) {
-      }
+      public fun notStartsWith(notStartsWith: List<String>)
 
-      public fun startsWith(startsWith: List<String>) {
-      }
+      public fun startsWith(startsWith: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -422,31 +393,31 @@ public open class CfnEventDataStore internal constructor(
           =
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty.builder()
 
-      public override fun endsWith(endsWith: List<String>) {
+      override fun endsWith(endsWith: List<String>) {
         cdkBuilder.endsWith(endsWith)
       }
 
-      public override fun equalTo(equalTo: List<String>) {
+      override fun equalTo(equalTo: List<String>) {
         cdkBuilder.equalTo(equalTo)
       }
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun notEndsWith(notEndsWith: List<String>) {
+      override fun notEndsWith(notEndsWith: List<String>) {
         cdkBuilder.notEndsWith(notEndsWith)
       }
 
-      public override fun notEquals(notEquals: List<String>) {
+      override fun notEquals(notEquals: List<String>) {
         cdkBuilder.notEquals(notEquals)
       }
 
-      public override fun notStartsWith(notStartsWith: List<String>) {
+      override fun notStartsWith(notStartsWith: List<String>) {
         cdkBuilder.notStartsWith(notStartsWith)
       }
 
-      public override fun startsWith(startsWith: List<String>) {
+      override fun startsWith(startsWith: List<String>) {
         cdkBuilder.startsWith(startsWith)
       }
 
@@ -459,20 +430,19 @@ public open class CfnEventDataStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedFieldSelectorProperty,
     ) : AdvancedFieldSelectorProperty {
-      public override fun endsWith(): List<String> = unwrap(this).getEndsWith() ?: emptyList()
+      override fun endsWith(): List<String> = unwrap(this).getEndsWith() ?: emptyList()
 
-      public override fun equalTo(): List<String> = unwrap(this).getEqualTo() ?: emptyList()
+      override fun equalTo(): List<String> = unwrap(this).getEqualTo() ?: emptyList()
 
-      public override fun `field`(): String = unwrap(this).getField()
+      override fun `field`(): String = unwrap(this).getField()
 
-      public override fun notEndsWith(): List<String> = unwrap(this).getNotEndsWith() ?: emptyList()
+      override fun notEndsWith(): List<String> = unwrap(this).getNotEndsWith() ?: emptyList()
 
-      public override fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
+      override fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
 
-      public override fun notStartsWith(): List<String> = unwrap(this).getNotStartsWith() ?:
-          emptyList()
+      override fun notStartsWith(): List<String> = unwrap(this).getNotStartsWith() ?: emptyList()
 
-      public override fun startsWith(): List<String> = unwrap(this).getStartsWith() ?: emptyList()
+      override fun startsWith(): List<String> = unwrap(this).getStartsWith() ?: emptyList()
     }
 
     public companion object {
@@ -501,14 +471,11 @@ public open class CfnEventDataStore internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun fieldSelectors(fieldSelectors: IResolvable) {
-      }
+      public fun fieldSelectors(fieldSelectors: IResolvable)
 
-      public fun fieldSelectors(fieldSelectors: List<Any>) {
-      }
+      public fun fieldSelectors(fieldSelectors: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -517,15 +484,15 @@ public open class CfnEventDataStore internal constructor(
           =
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty.builder()
 
-      public override fun fieldSelectors(fieldSelectors: IResolvable) {
+      override fun fieldSelectors(fieldSelectors: IResolvable) {
         cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable::unwrap))
       }
 
-      public override fun fieldSelectors(fieldSelectors: List<Any>) {
+      override fun fieldSelectors(fieldSelectors: List<Any>) {
         cdkBuilder.fieldSelectors(fieldSelectors)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -538,9 +505,9 @@ public open class CfnEventDataStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnEventDataStore.AdvancedEventSelectorProperty,
     ) : AdvancedEventSelectorProperty {
-      public override fun fieldSelectors(): Any = unwrap(this).getFieldSelectors()
+      override fun fieldSelectors(): Any = unwrap(this).getFieldSelectors()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {

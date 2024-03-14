@@ -24,32 +24,30 @@ public interface ISubnet : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ISubnet,
   ) : ISubnet {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun associateNetworkAcl(arg0: String, arg1: INetworkAcl) {
+    override fun associateNetworkAcl(arg0: String, arg1: INetworkAcl) {
       unwrap(this).associateNetworkAcl(arg0, arg1.let(INetworkAcl::unwrap))
     }
 
-    public override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+    override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun internetConnectivityEstablished(): IDependable =
+    override fun internetConnectivityEstablished(): IDependable =
         unwrap(this).getInternetConnectivityEstablished().let(IDependable::wrap)
 
-    public override fun ipv4CidrBlock(): String = unwrap(this).getIpv4CidrBlock()
+    override fun ipv4CidrBlock(): String = unwrap(this).getIpv4CidrBlock()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun routeTable(): IRouteTable =
-        unwrap(this).getRouteTable().let(IRouteTable::wrap)
+    override fun routeTable(): IRouteTable = unwrap(this).getRouteTable().let(IRouteTable::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun subnetId(): String = unwrap(this).getSubnetId()
+    override fun subnetId(): String = unwrap(this).getSubnetId()
   }
 
   public companion object {

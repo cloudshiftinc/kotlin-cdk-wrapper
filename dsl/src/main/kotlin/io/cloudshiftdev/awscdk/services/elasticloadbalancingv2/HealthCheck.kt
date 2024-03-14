@@ -28,35 +28,25 @@ public interface HealthCheck {
   public fun unhealthyThresholdCount(): Number? = unwrap(this).getUnhealthyThresholdCount()
 
   public interface Builder {
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun healthyGrpcCodes(healthyGrpcCodes: String) {
-    }
+    public fun healthyGrpcCodes(healthyGrpcCodes: String)
 
-    public fun healthyHttpCodes(healthyHttpCodes: String) {
-    }
+    public fun healthyHttpCodes(healthyHttpCodes: String)
 
-    public fun healthyThresholdCount(healthyThresholdCount: Number) {
-    }
+    public fun healthyThresholdCount(healthyThresholdCount: Number)
 
-    public fun interval(interval: Duration) {
-    }
+    public fun interval(interval: Duration)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun port(port: String) {
-    }
+    public fun port(port: String)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
-    }
+    public fun unhealthyThresholdCount(unhealthyThresholdCount: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -64,43 +54,43 @@ public interface HealthCheck {
         software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck.builder()
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun healthyGrpcCodes(healthyGrpcCodes: String) {
+    override fun healthyGrpcCodes(healthyGrpcCodes: String) {
       cdkBuilder.healthyGrpcCodes(healthyGrpcCodes)
     }
 
-    public override fun healthyHttpCodes(healthyHttpCodes: String) {
+    override fun healthyHttpCodes(healthyHttpCodes: String) {
       cdkBuilder.healthyHttpCodes(healthyHttpCodes)
     }
 
-    public override fun healthyThresholdCount(healthyThresholdCount: Number) {
+    override fun healthyThresholdCount(healthyThresholdCount: Number) {
       cdkBuilder.healthyThresholdCount(healthyThresholdCount)
     }
 
-    public override fun interval(interval: Duration) {
+    override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun port(port: String) {
+    override fun port(port: String) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
+    override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
       cdkBuilder.unhealthyThresholdCount(unhealthyThresholdCount)
     }
 
@@ -111,26 +101,25 @@ public interface HealthCheck {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck,
   ) : HealthCheck {
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun healthyGrpcCodes(): String? = unwrap(this).getHealthyGrpcCodes()
+    override fun healthyGrpcCodes(): String? = unwrap(this).getHealthyGrpcCodes()
 
-    public override fun healthyHttpCodes(): String? = unwrap(this).getHealthyHttpCodes()
+    override fun healthyHttpCodes(): String? = unwrap(this).getHealthyHttpCodes()
 
-    public override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
+    override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
 
-    public override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
+    override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
 
-    public override fun path(): String? = unwrap(this).getPath()
+    override fun path(): String? = unwrap(this).getPath()
 
-    public override fun port(): String? = unwrap(this).getPort()
+    override fun port(): String? = unwrap(this).getPort()
 
-    public override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
+    override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun unhealthyThresholdCount(): Number? =
-        unwrap(this).getUnhealthyThresholdCount()
+    override fun unhealthyThresholdCount(): Number? = unwrap(this).getUnhealthyThresholdCount()
   }
 
   public companion object {

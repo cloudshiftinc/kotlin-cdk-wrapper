@@ -100,45 +100,33 @@ public open class CfnSchema internal constructor(
   }
 
   public interface Builder {
-    public fun checkpointVersion(checkpointVersion: IResolvable) {
-    }
+    public fun checkpointVersion(checkpointVersion: IResolvable)
 
-    public fun checkpointVersion(checkpointVersion: SchemaVersionProperty) {
-    }
+    public fun checkpointVersion(checkpointVersion: SchemaVersionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3eeb7859853555ddbc8e034fa3c713d1c5d55ef36b6839602ae57bb54808494c")
-    public fun checkpointVersion(checkpointVersion: SchemaVersionProperty.Builder.() -> Unit) {
-    }
+    public fun checkpointVersion(checkpointVersion: SchemaVersionProperty.Builder.() -> Unit)
 
-    public fun compatibility(compatibility: String) {
-    }
+    public fun compatibility(compatibility: String)
 
-    public fun dataFormat(dataFormat: String) {
-    }
+    public fun dataFormat(dataFormat: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun registry(registry: IResolvable) {
-    }
+    public fun registry(registry: IResolvable)
 
-    public fun registry(registry: RegistryProperty) {
-    }
+    public fun registry(registry: RegistryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e1c454a8571fb2f1580d2ce942f579497f8e983dfe9fa7a990003f276a9b9d0")
-    public fun registry(registry: RegistryProperty.Builder.() -> Unit) {
-    }
+    public fun registry(registry: RegistryProperty.Builder.() -> Unit)
 
-    public fun schemaDefinition(schemaDefinition: String) {
-    }
+    public fun schemaDefinition(schemaDefinition: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -148,54 +136,53 @@ public open class CfnSchema internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnSchema.Builder =
         software.amazon.awscdk.services.glue.CfnSchema.Builder.create(scope, id)
 
-    public override fun checkpointVersion(checkpointVersion: IResolvable) {
+    override fun checkpointVersion(checkpointVersion: IResolvable) {
       cdkBuilder.checkpointVersion(checkpointVersion.let(IResolvable::unwrap))
     }
 
-    public override fun checkpointVersion(checkpointVersion: SchemaVersionProperty) {
+    override fun checkpointVersion(checkpointVersion: SchemaVersionProperty) {
       cdkBuilder.checkpointVersion(checkpointVersion.let(SchemaVersionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3eeb7859853555ddbc8e034fa3c713d1c5d55ef36b6839602ae57bb54808494c")
-    public override
-        fun checkpointVersion(checkpointVersion: SchemaVersionProperty.Builder.() -> Unit): Unit =
-        checkpointVersion(SchemaVersionProperty(checkpointVersion))
+    override fun checkpointVersion(checkpointVersion: SchemaVersionProperty.Builder.() -> Unit):
+        Unit = checkpointVersion(SchemaVersionProperty(checkpointVersion))
 
-    public override fun compatibility(compatibility: String) {
+    override fun compatibility(compatibility: String) {
       cdkBuilder.compatibility(compatibility)
     }
 
-    public override fun dataFormat(dataFormat: String) {
+    override fun dataFormat(dataFormat: String) {
       cdkBuilder.dataFormat(dataFormat)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun registry(registry: IResolvable) {
+    override fun registry(registry: IResolvable) {
       cdkBuilder.registry(registry.let(IResolvable::unwrap))
     }
 
-    public override fun registry(registry: RegistryProperty) {
+    override fun registry(registry: RegistryProperty) {
       cdkBuilder.registry(registry.let(RegistryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e1c454a8571fb2f1580d2ce942f579497f8e983dfe9fa7a990003f276a9b9d0")
-    public override fun registry(registry: RegistryProperty.Builder.() -> Unit): Unit =
+    override fun registry(registry: RegistryProperty.Builder.() -> Unit): Unit =
         registry(RegistryProperty(registry))
 
-    public override fun schemaDefinition(schemaDefinition: String) {
+    override fun schemaDefinition(schemaDefinition: String) {
       cdkBuilder.schemaDefinition(schemaDefinition)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -229,14 +216,11 @@ public open class CfnSchema internal constructor(
     public fun versionNumber(): Number? = unwrap(this).getVersionNumber()
 
     public interface Builder {
-      public fun isLatest(isLatest: Boolean) {
-      }
+      public fun isLatest(isLatest: Boolean)
 
-      public fun isLatest(isLatest: IResolvable) {
-      }
+      public fun isLatest(isLatest: IResolvable)
 
-      public fun versionNumber(versionNumber: Number) {
-      }
+      public fun versionNumber(versionNumber: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -244,15 +228,15 @@ public open class CfnSchema internal constructor(
           software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty.Builder =
           software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty.builder()
 
-      public override fun isLatest(isLatest: Boolean) {
+      override fun isLatest(isLatest: Boolean) {
         cdkBuilder.isLatest(isLatest)
       }
 
-      public override fun isLatest(isLatest: IResolvable) {
+      override fun isLatest(isLatest: IResolvable) {
         cdkBuilder.isLatest(isLatest.let(IResolvable::unwrap))
       }
 
-      public override fun versionNumber(versionNumber: Number) {
+      override fun versionNumber(versionNumber: Number) {
         cdkBuilder.versionNumber(versionNumber)
       }
 
@@ -263,9 +247,9 @@ public open class CfnSchema internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnSchema.SchemaVersionProperty,
     ) : SchemaVersionProperty {
-      public override fun isLatest(): Any? = unwrap(this).getIsLatest()
+      override fun isLatest(): Any? = unwrap(this).getIsLatest()
 
-      public override fun versionNumber(): Number? = unwrap(this).getVersionNumber()
+      override fun versionNumber(): Number? = unwrap(this).getVersionNumber()
     }
 
     public companion object {
@@ -294,11 +278,9 @@ public open class CfnSchema internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -306,11 +288,11 @@ public open class CfnSchema internal constructor(
           software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty.Builder =
           software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -321,9 +303,9 @@ public open class CfnSchema internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnSchema.RegistryProperty,
     ) : RegistryProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {

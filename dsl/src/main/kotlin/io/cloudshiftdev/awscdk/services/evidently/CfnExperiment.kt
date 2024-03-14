@@ -133,66 +133,47 @@ public open class CfnExperiment internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun metricGoals(metricGoals: IResolvable) {
-    }
+    public fun metricGoals(metricGoals: IResolvable)
 
-    public fun metricGoals(metricGoals: List<Any>) {
-    }
+    public fun metricGoals(metricGoals: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun onlineAbConfig(onlineAbConfig: IResolvable) {
-    }
+    public fun onlineAbConfig(onlineAbConfig: IResolvable)
 
-    public fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty) {
-    }
+    public fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("862d38592f3888a79f5461082228603345d6544d9a808f77a8db7edf6c319354")
-    public fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty.Builder.() -> Unit) {
-    }
+    public fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty.Builder.() -> Unit)
 
-    public fun project(project: String) {
-    }
+    public fun project(project: String)
 
-    public fun randomizationSalt(randomizationSalt: String) {
-    }
+    public fun randomizationSalt(randomizationSalt: String)
 
-    public fun removeSegment(removeSegment: Boolean) {
-    }
+    public fun removeSegment(removeSegment: Boolean)
 
-    public fun removeSegment(removeSegment: IResolvable) {
-    }
+    public fun removeSegment(removeSegment: IResolvable)
 
-    public fun runningStatus(runningStatus: IResolvable) {
-    }
+    public fun runningStatus(runningStatus: IResolvable)
 
-    public fun runningStatus(runningStatus: RunningStatusObjectProperty) {
-    }
+    public fun runningStatus(runningStatus: RunningStatusObjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02995d143134d43c96b097a1a914adef4caefd28099e90f563cf8211181a48c9")
-    public fun runningStatus(runningStatus: RunningStatusObjectProperty.Builder.() -> Unit) {
-    }
+    public fun runningStatus(runningStatus: RunningStatusObjectProperty.Builder.() -> Unit)
 
-    public fun samplingRate(samplingRate: Number) {
-    }
+    public fun samplingRate(samplingRate: Number)
 
-    public fun segment(segment: String) {
-    }
+    public fun segment(segment: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun treatments(treatments: IResolvable) {
-    }
+    public fun treatments(treatments: IResolvable)
 
-    public fun treatments(treatments: List<Any>) {
-    }
+    public fun treatments(treatments: List<Any>)
   }
 
   private class BuilderImpl(
@@ -202,83 +183,81 @@ public open class CfnExperiment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.evidently.CfnExperiment.Builder =
         software.amazon.awscdk.services.evidently.CfnExperiment.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun metricGoals(metricGoals: IResolvable) {
+    override fun metricGoals(metricGoals: IResolvable) {
       cdkBuilder.metricGoals(metricGoals.let(IResolvable::unwrap))
     }
 
-    public override fun metricGoals(metricGoals: List<Any>) {
+    override fun metricGoals(metricGoals: List<Any>) {
       cdkBuilder.metricGoals(metricGoals)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun onlineAbConfig(onlineAbConfig: IResolvable) {
+    override fun onlineAbConfig(onlineAbConfig: IResolvable) {
       cdkBuilder.onlineAbConfig(onlineAbConfig.let(IResolvable::unwrap))
     }
 
-    public override fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty) {
+    override fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty) {
       cdkBuilder.onlineAbConfig(onlineAbConfig.let(OnlineAbConfigObjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("862d38592f3888a79f5461082228603345d6544d9a808f77a8db7edf6c319354")
-    public override
-        fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty.Builder.() -> Unit): Unit =
-        onlineAbConfig(OnlineAbConfigObjectProperty(onlineAbConfig))
+    override fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty.Builder.() -> Unit):
+        Unit = onlineAbConfig(OnlineAbConfigObjectProperty(onlineAbConfig))
 
-    public override fun project(project: String) {
+    override fun project(project: String) {
       cdkBuilder.project(project)
     }
 
-    public override fun randomizationSalt(randomizationSalt: String) {
+    override fun randomizationSalt(randomizationSalt: String) {
       cdkBuilder.randomizationSalt(randomizationSalt)
     }
 
-    public override fun removeSegment(removeSegment: Boolean) {
+    override fun removeSegment(removeSegment: Boolean) {
       cdkBuilder.removeSegment(removeSegment)
     }
 
-    public override fun removeSegment(removeSegment: IResolvable) {
+    override fun removeSegment(removeSegment: IResolvable) {
       cdkBuilder.removeSegment(removeSegment.let(IResolvable::unwrap))
     }
 
-    public override fun runningStatus(runningStatus: IResolvable) {
+    override fun runningStatus(runningStatus: IResolvable) {
       cdkBuilder.runningStatus(runningStatus.let(IResolvable::unwrap))
     }
 
-    public override fun runningStatus(runningStatus: RunningStatusObjectProperty) {
+    override fun runningStatus(runningStatus: RunningStatusObjectProperty) {
       cdkBuilder.runningStatus(runningStatus.let(RunningStatusObjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02995d143134d43c96b097a1a914adef4caefd28099e90f563cf8211181a48c9")
-    public override
-        fun runningStatus(runningStatus: RunningStatusObjectProperty.Builder.() -> Unit): Unit =
-        runningStatus(RunningStatusObjectProperty(runningStatus))
+    override fun runningStatus(runningStatus: RunningStatusObjectProperty.Builder.() -> Unit): Unit
+        = runningStatus(RunningStatusObjectProperty(runningStatus))
 
-    public override fun samplingRate(samplingRate: Number) {
+    override fun samplingRate(samplingRate: Number) {
       cdkBuilder.samplingRate(samplingRate)
     }
 
-    public override fun segment(segment: String) {
+    override fun segment(segment: String) {
       cdkBuilder.segment(segment)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun treatments(treatments: IResolvable) {
+    override fun treatments(treatments: IResolvable) {
       cdkBuilder.treatments(treatments.let(IResolvable::unwrap))
     }
 
-    public override fun treatments(treatments: List<Any>) {
+    override fun treatments(treatments: List<Any>) {
       cdkBuilder.treatments(treatments)
     }
 
@@ -320,23 +299,17 @@ public open class CfnExperiment internal constructor(
     public fun valueKey(): String
 
     public interface Builder {
-      public fun desiredChange(desiredChange: String) {
-      }
+      public fun desiredChange(desiredChange: String)
 
-      public fun entityIdKey(entityIdKey: String) {
-      }
+      public fun entityIdKey(entityIdKey: String)
 
-      public fun eventPattern(eventPattern: String) {
-      }
+      public fun eventPattern(eventPattern: String)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun unitLabel(unitLabel: String) {
-      }
+      public fun unitLabel(unitLabel: String)
 
-      public fun valueKey(valueKey: String) {
-      }
+      public fun valueKey(valueKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -344,27 +317,27 @@ public open class CfnExperiment internal constructor(
           software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty.builder()
 
-      public override fun desiredChange(desiredChange: String) {
+      override fun desiredChange(desiredChange: String) {
         cdkBuilder.desiredChange(desiredChange)
       }
 
-      public override fun entityIdKey(entityIdKey: String) {
+      override fun entityIdKey(entityIdKey: String) {
         cdkBuilder.entityIdKey(entityIdKey)
       }
 
-      public override fun eventPattern(eventPattern: String) {
+      override fun eventPattern(eventPattern: String) {
         cdkBuilder.eventPattern(eventPattern)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun unitLabel(unitLabel: String) {
+      override fun unitLabel(unitLabel: String) {
         cdkBuilder.unitLabel(unitLabel)
       }
 
-      public override fun valueKey(valueKey: String) {
+      override fun valueKey(valueKey: String) {
         cdkBuilder.valueKey(valueKey)
       }
 
@@ -377,17 +350,17 @@ public open class CfnExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnExperiment.MetricGoalObjectProperty,
     ) : MetricGoalObjectProperty {
-      public override fun desiredChange(): String = unwrap(this).getDesiredChange()
+      override fun desiredChange(): String = unwrap(this).getDesiredChange()
 
-      public override fun entityIdKey(): String = unwrap(this).getEntityIdKey()
+      override fun entityIdKey(): String = unwrap(this).getEntityIdKey()
 
-      public override fun eventPattern(): String? = unwrap(this).getEventPattern()
+      override fun eventPattern(): String? = unwrap(this).getEventPattern()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun unitLabel(): String? = unwrap(this).getUnitLabel()
+      override fun unitLabel(): String? = unwrap(this).getUnitLabel()
 
-      public override fun valueKey(): String = unwrap(this).getValueKey()
+      override fun valueKey(): String = unwrap(this).getValueKey()
     }
 
     public companion object {
@@ -416,11 +389,9 @@ public open class CfnExperiment internal constructor(
     public fun treatment(): String
 
     public interface Builder {
-      public fun splitWeight(splitWeight: Number) {
-      }
+      public fun splitWeight(splitWeight: Number)
 
-      public fun treatment(treatment: String) {
-      }
+      public fun treatment(treatment: String)
     }
 
     private class BuilderImpl : Builder {
@@ -429,11 +400,11 @@ public open class CfnExperiment internal constructor(
           =
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty.builder()
 
-      public override fun splitWeight(splitWeight: Number) {
+      override fun splitWeight(splitWeight: Number) {
         cdkBuilder.splitWeight(splitWeight)
       }
 
-      public override fun treatment(treatment: String) {
+      override fun treatment(treatment: String) {
         cdkBuilder.treatment(treatment)
       }
 
@@ -446,9 +417,9 @@ public open class CfnExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentToWeightProperty,
     ) : TreatmentToWeightProperty {
-      public override fun splitWeight(): Number = unwrap(this).getSplitWeight()
+      override fun splitWeight(): Number = unwrap(this).getSplitWeight()
 
-      public override fun treatment(): String = unwrap(this).getTreatment()
+      override fun treatment(): String = unwrap(this).getTreatment()
     }
 
     public companion object {
@@ -481,17 +452,13 @@ public open class CfnExperiment internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun analysisCompleteTime(analysisCompleteTime: String) {
-      }
+      public fun analysisCompleteTime(analysisCompleteTime: String)
 
-      public fun desiredState(desiredState: String) {
-      }
+      public fun desiredState(desiredState: String)
 
-      public fun reason(reason: String) {
-      }
+      public fun reason(reason: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -500,19 +467,19 @@ public open class CfnExperiment internal constructor(
           =
           software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty.builder()
 
-      public override fun analysisCompleteTime(analysisCompleteTime: String) {
+      override fun analysisCompleteTime(analysisCompleteTime: String) {
         cdkBuilder.analysisCompleteTime(analysisCompleteTime)
       }
 
-      public override fun desiredState(desiredState: String) {
+      override fun desiredState(desiredState: String) {
         cdkBuilder.desiredState(desiredState)
       }
 
-      public override fun reason(reason: String) {
+      override fun reason(reason: String) {
         cdkBuilder.reason(reason)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -525,13 +492,13 @@ public open class CfnExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnExperiment.RunningStatusObjectProperty,
     ) : RunningStatusObjectProperty {
-      public override fun analysisCompleteTime(): String? = unwrap(this).getAnalysisCompleteTime()
+      override fun analysisCompleteTime(): String? = unwrap(this).getAnalysisCompleteTime()
 
-      public override fun desiredState(): String? = unwrap(this).getDesiredState()
+      override fun desiredState(): String? = unwrap(this).getDesiredState()
 
-      public override fun reason(): String? = unwrap(this).getReason()
+      override fun reason(): String? = unwrap(this).getReason()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -564,17 +531,13 @@ public open class CfnExperiment internal constructor(
     public fun variation(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun feature(feature: String) {
-      }
+      public fun feature(feature: String)
 
-      public fun treatmentName(treatmentName: String) {
-      }
+      public fun treatmentName(treatmentName: String)
 
-      public fun variation(variation: String) {
-      }
+      public fun variation(variation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -582,19 +545,19 @@ public open class CfnExperiment internal constructor(
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun feature(feature: String) {
+      override fun feature(feature: String) {
         cdkBuilder.feature(feature)
       }
 
-      public override fun treatmentName(treatmentName: String) {
+      override fun treatmentName(treatmentName: String) {
         cdkBuilder.treatmentName(treatmentName)
       }
 
-      public override fun variation(variation: String) {
+      override fun variation(variation: String) {
         cdkBuilder.variation(variation)
       }
 
@@ -607,13 +570,13 @@ public open class CfnExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnExperiment.TreatmentObjectProperty,
     ) : TreatmentObjectProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun feature(): String = unwrap(this).getFeature()
+      override fun feature(): String = unwrap(this).getFeature()
 
-      public override fun treatmentName(): String = unwrap(this).getTreatmentName()
+      override fun treatmentName(): String = unwrap(this).getTreatmentName()
 
-      public override fun variation(): String = unwrap(this).getVariation()
+      override fun variation(): String = unwrap(this).getVariation()
     }
 
     public companion object {
@@ -642,14 +605,11 @@ public open class CfnExperiment internal constructor(
     public fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
 
     public interface Builder {
-      public fun controlTreatmentName(controlTreatmentName: String) {
-      }
+      public fun controlTreatmentName(controlTreatmentName: String)
 
-      public fun treatmentWeights(treatmentWeights: IResolvable) {
-      }
+      public fun treatmentWeights(treatmentWeights: IResolvable)
 
-      public fun treatmentWeights(treatmentWeights: List<Any>) {
-      }
+      public fun treatmentWeights(treatmentWeights: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -658,15 +618,15 @@ public open class CfnExperiment internal constructor(
           =
           software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty.builder()
 
-      public override fun controlTreatmentName(controlTreatmentName: String) {
+      override fun controlTreatmentName(controlTreatmentName: String) {
         cdkBuilder.controlTreatmentName(controlTreatmentName)
       }
 
-      public override fun treatmentWeights(treatmentWeights: IResolvable) {
+      override fun treatmentWeights(treatmentWeights: IResolvable) {
         cdkBuilder.treatmentWeights(treatmentWeights.let(IResolvable::unwrap))
       }
 
-      public override fun treatmentWeights(treatmentWeights: List<Any>) {
+      override fun treatmentWeights(treatmentWeights: List<Any>) {
         cdkBuilder.treatmentWeights(treatmentWeights)
       }
 
@@ -679,9 +639,9 @@ public open class CfnExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty,
     ) : OnlineAbConfigObjectProperty {
-      public override fun controlTreatmentName(): String? = unwrap(this).getControlTreatmentName()
+      override fun controlTreatmentName(): String? = unwrap(this).getControlTreatmentName()
 
-      public override fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
+      override fun treatmentWeights(): Any? = unwrap(this).getTreatmentWeights()
     }
 
     public companion object {

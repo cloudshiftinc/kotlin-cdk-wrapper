@@ -34,14 +34,11 @@ public open class CfnVolumeAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun device(device: String) {
-    }
+    public fun device(device: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun volumeId(volumeId: String) {
-    }
+    public fun volumeId(volumeId: String)
   }
 
   private class BuilderImpl(
@@ -51,15 +48,15 @@ public open class CfnVolumeAttachment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVolumeAttachment.Builder =
         software.amazon.awscdk.services.ec2.CfnVolumeAttachment.Builder.create(scope, id)
 
-    public override fun device(device: String) {
+    override fun device(device: String) {
       cdkBuilder.device(device)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun volumeId(volumeId: String) {
+    override fun volumeId(volumeId: String) {
       cdkBuilder.volumeId(volumeId)
     }
 

@@ -88,37 +88,27 @@ public open class CfnFaq internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun fileFormat(fileFormat: String) {
-    }
+    public fun fileFormat(fileFormat: String)
 
-    public fun indexId(indexId: String) {
-    }
+    public fun indexId(indexId: String)
 
-    public fun languageCode(languageCode: String) {
-    }
+    public fun languageCode(languageCode: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun s3Path(s3Path: IResolvable) {
-    }
+    public fun s3Path(s3Path: IResolvable)
 
-    public fun s3Path(s3Path: S3PathProperty) {
-    }
+    public fun s3Path(s3Path: S3PathProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0148d928706a8212ce1eeb005579e2999c3f08f5d0389b43b8264c1df05eab20")
-    public fun s3Path(s3Path: S3PathProperty.Builder.() -> Unit) {
-    }
+    public fun s3Path(s3Path: S3PathProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -128,44 +118,44 @@ public open class CfnFaq internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kendra.CfnFaq.Builder =
         software.amazon.awscdk.services.kendra.CfnFaq.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun fileFormat(fileFormat: String) {
+    override fun fileFormat(fileFormat: String) {
       cdkBuilder.fileFormat(fileFormat)
     }
 
-    public override fun indexId(indexId: String) {
+    override fun indexId(indexId: String) {
       cdkBuilder.indexId(indexId)
     }
 
-    public override fun languageCode(languageCode: String) {
+    override fun languageCode(languageCode: String) {
       cdkBuilder.languageCode(languageCode)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun s3Path(s3Path: IResolvable) {
+    override fun s3Path(s3Path: IResolvable) {
       cdkBuilder.s3Path(s3Path.let(IResolvable::unwrap))
     }
 
-    public override fun s3Path(s3Path: S3PathProperty) {
+    override fun s3Path(s3Path: S3PathProperty) {
       cdkBuilder.s3Path(s3Path.let(S3PathProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0148d928706a8212ce1eeb005579e2999c3f08f5d0389b43b8264c1df05eab20")
-    public override fun s3Path(s3Path: S3PathProperty.Builder.() -> Unit): Unit =
+    override fun s3Path(s3Path: S3PathProperty.Builder.() -> Unit): Unit =
         s3Path(S3PathProperty(s3Path))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -199,22 +189,20 @@ public open class CfnFaq internal constructor(
     public fun key(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -225,9 +213,9 @@ public open class CfnFaq internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.kendra.CfnFaq.S3PathProperty,
     ) : S3PathProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
     }
 
     public companion object {

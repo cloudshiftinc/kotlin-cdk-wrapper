@@ -7,15 +7,14 @@ public interface BucketCacheOptions {
   public fun prefix(): String? = unwrap(this).getPrefix()
 
   public interface Builder {
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.BucketCacheOptions.Builder =
         software.amazon.awscdk.services.codebuild.BucketCacheOptions.builder()
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
@@ -26,7 +25,7 @@ public interface BucketCacheOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions,
   ) : BucketCacheOptions {
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
   }
 
   public companion object {

@@ -78,36 +78,27 @@ public open class CfnAccessPoint internal constructor(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public interface Builder {
-    public fun accessPointTags(accessPointTags: List<AccessPointTagProperty>) {
-    }
+    public fun accessPointTags(accessPointTags: List<AccessPointTagProperty>)
 
-    public fun clientToken(clientToken: String) {
-    }
+    public fun clientToken(clientToken: String)
 
-    public fun fileSystemId(fileSystemId: String) {
-    }
+    public fun fileSystemId(fileSystemId: String)
 
-    public fun posixUser(posixUser: IResolvable) {
-    }
+    public fun posixUser(posixUser: IResolvable)
 
-    public fun posixUser(posixUser: PosixUserProperty) {
-    }
+    public fun posixUser(posixUser: PosixUserProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2fee7216d59d6314a6fcae17cbc03dad344c68f3cf3ab2460e766204dbf6b8c0")
-    public fun posixUser(posixUser: PosixUserProperty.Builder.() -> Unit) {
-    }
+    public fun posixUser(posixUser: PosixUserProperty.Builder.() -> Unit)
 
-    public fun rootDirectory(rootDirectory: IResolvable) {
-    }
+    public fun rootDirectory(rootDirectory: IResolvable)
 
-    public fun rootDirectory(rootDirectory: RootDirectoryProperty) {
-    }
+    public fun rootDirectory(rootDirectory: RootDirectoryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("400b9ce47bd6ce7f9764d451902b3926a5c9c8a268421895da866638da931b79")
-    public fun rootDirectory(rootDirectory: RootDirectoryProperty.Builder.() -> Unit) {
-    }
+    public fun rootDirectory(rootDirectory: RootDirectoryProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -117,43 +108,43 @@ public open class CfnAccessPoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.efs.CfnAccessPoint.Builder =
         software.amazon.awscdk.services.efs.CfnAccessPoint.Builder.create(scope, id)
 
-    public override fun accessPointTags(accessPointTags: List<AccessPointTagProperty>) {
+    override fun accessPointTags(accessPointTags: List<AccessPointTagProperty>) {
       cdkBuilder.accessPointTags(accessPointTags.map(AccessPointTagProperty::unwrap))
     }
 
-    public override fun clientToken(clientToken: String) {
+    override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
 
-    public override fun fileSystemId(fileSystemId: String) {
+    override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
-    public override fun posixUser(posixUser: IResolvable) {
+    override fun posixUser(posixUser: IResolvable) {
       cdkBuilder.posixUser(posixUser.let(IResolvable::unwrap))
     }
 
-    public override fun posixUser(posixUser: PosixUserProperty) {
+    override fun posixUser(posixUser: PosixUserProperty) {
       cdkBuilder.posixUser(posixUser.let(PosixUserProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2fee7216d59d6314a6fcae17cbc03dad344c68f3cf3ab2460e766204dbf6b8c0")
-    public override fun posixUser(posixUser: PosixUserProperty.Builder.() -> Unit): Unit =
+    override fun posixUser(posixUser: PosixUserProperty.Builder.() -> Unit): Unit =
         posixUser(PosixUserProperty(posixUser))
 
-    public override fun rootDirectory(rootDirectory: IResolvable) {
+    override fun rootDirectory(rootDirectory: IResolvable) {
       cdkBuilder.rootDirectory(rootDirectory.let(IResolvable::unwrap))
     }
 
-    public override fun rootDirectory(rootDirectory: RootDirectoryProperty) {
+    override fun rootDirectory(rootDirectory: RootDirectoryProperty) {
       cdkBuilder.rootDirectory(rootDirectory.let(RootDirectoryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("400b9ce47bd6ce7f9764d451902b3926a5c9c8a268421895da866638da931b79")
-    public override fun rootDirectory(rootDirectory: RootDirectoryProperty.Builder.() -> Unit): Unit
-        = rootDirectory(RootDirectoryProperty(rootDirectory))
+    override fun rootDirectory(rootDirectory: RootDirectoryProperty.Builder.() -> Unit): Unit =
+        rootDirectory(RootDirectoryProperty(rootDirectory))
 
     public fun build(): software.amazon.awscdk.services.efs.CfnAccessPoint = cdkBuilder.build()
   }
@@ -185,19 +176,15 @@ public open class CfnAccessPoint internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun creationInfo(creationInfo: IResolvable) {
-      }
+      public fun creationInfo(creationInfo: IResolvable)
 
-      public fun creationInfo(creationInfo: CreationInfoProperty) {
-      }
+      public fun creationInfo(creationInfo: CreationInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0f09715ddaf55a736c58a579888cb8e3718cb5e0640ebf826af3c9dbf3e3ff06")
-      public fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit) {
-      }
+      public fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -205,20 +192,20 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty.Builder =
           software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty.builder()
 
-      public override fun creationInfo(creationInfo: IResolvable) {
+      override fun creationInfo(creationInfo: IResolvable) {
         cdkBuilder.creationInfo(creationInfo.let(IResolvable::unwrap))
       }
 
-      public override fun creationInfo(creationInfo: CreationInfoProperty) {
+      override fun creationInfo(creationInfo: CreationInfoProperty) {
         cdkBuilder.creationInfo(creationInfo.let(CreationInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0f09715ddaf55a736c58a579888cb8e3718cb5e0640ebf826af3c9dbf3e3ff06")
-      public override fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit): Unit
-          = creationInfo(CreationInfoProperty(creationInfo))
+      override fun creationInfo(creationInfo: CreationInfoProperty.Builder.() -> Unit): Unit =
+          creationInfo(CreationInfoProperty(creationInfo))
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -230,9 +217,9 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnAccessPoint.RootDirectoryProperty,
     ) : RootDirectoryProperty {
-      public override fun creationInfo(): Any? = unwrap(this).getCreationInfo()
+      override fun creationInfo(): Any? = unwrap(this).getCreationInfo()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {
@@ -261,11 +248,9 @@ public open class CfnAccessPoint internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -273,11 +258,11 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty.Builder =
           software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -289,9 +274,9 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnAccessPoint.AccessPointTagProperty,
     ) : AccessPointTagProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -322,14 +307,11 @@ public open class CfnAccessPoint internal constructor(
     public fun permissions(): String
 
     public interface Builder {
-      public fun ownerGid(ownerGid: String) {
-      }
+      public fun ownerGid(ownerGid: String)
 
-      public fun ownerUid(ownerUid: String) {
-      }
+      public fun ownerUid(ownerUid: String)
 
-      public fun permissions(permissions: String) {
-      }
+      public fun permissions(permissions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,15 +319,15 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty.Builder =
           software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty.builder()
 
-      public override fun ownerGid(ownerGid: String) {
+      override fun ownerGid(ownerGid: String) {
         cdkBuilder.ownerGid(ownerGid)
       }
 
-      public override fun ownerUid(ownerUid: String) {
+      override fun ownerUid(ownerUid: String) {
         cdkBuilder.ownerUid(ownerUid)
       }
 
-      public override fun permissions(permissions: String) {
+      override fun permissions(permissions: String) {
         cdkBuilder.permissions(permissions)
       }
 
@@ -357,11 +339,11 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnAccessPoint.CreationInfoProperty,
     ) : CreationInfoProperty {
-      public override fun ownerGid(): String = unwrap(this).getOwnerGid()
+      override fun ownerGid(): String = unwrap(this).getOwnerGid()
 
-      public override fun ownerUid(): String = unwrap(this).getOwnerUid()
+      override fun ownerUid(): String = unwrap(this).getOwnerUid()
 
-      public override fun permissions(): String = unwrap(this).getPermissions()
+      override fun permissions(): String = unwrap(this).getPermissions()
     }
 
     public companion object {
@@ -392,14 +374,11 @@ public open class CfnAccessPoint internal constructor(
     public fun uid(): String
 
     public interface Builder {
-      public fun gid(gid: String) {
-      }
+      public fun gid(gid: String)
 
-      public fun secondaryGids(secondaryGids: List<String>) {
-      }
+      public fun secondaryGids(secondaryGids: List<String>)
 
-      public fun uid(uid: String) {
-      }
+      public fun uid(uid: String)
     }
 
     private class BuilderImpl : Builder {
@@ -407,15 +386,15 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty.Builder =
           software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty.builder()
 
-      public override fun gid(gid: String) {
+      override fun gid(gid: String) {
         cdkBuilder.gid(gid)
       }
 
-      public override fun secondaryGids(secondaryGids: List<String>) {
+      override fun secondaryGids(secondaryGids: List<String>) {
         cdkBuilder.secondaryGids(secondaryGids)
       }
 
-      public override fun uid(uid: String) {
+      override fun uid(uid: String) {
         cdkBuilder.uid(uid)
       }
 
@@ -426,12 +405,11 @@ public open class CfnAccessPoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.efs.CfnAccessPoint.PosixUserProperty,
     ) : PosixUserProperty {
-      public override fun gid(): String = unwrap(this).getGid()
+      override fun gid(): String = unwrap(this).getGid()
 
-      public override fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?:
-          emptyList()
+      override fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?: emptyList()
 
-      public override fun uid(): String = unwrap(this).getUid()
+      override fun uid(): String = unwrap(this).getUid()
     }
 
     public companion object {

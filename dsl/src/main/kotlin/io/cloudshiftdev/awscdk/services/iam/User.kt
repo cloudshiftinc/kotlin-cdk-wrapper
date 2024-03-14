@@ -60,26 +60,19 @@ public open class User internal constructor(
   public override fun userName(): String = unwrap(this).getUserName()
 
   public interface Builder {
-    public fun groups(groups: List<IGroup>) {
-    }
+    public fun groups(groups: List<IGroup>)
 
-    public fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-    }
+    public fun managedPolicies(managedPolicies: List<IManagedPolicy>)
 
-    public fun password(password: SecretValue) {
-    }
+    public fun password(password: SecretValue)
 
-    public fun passwordResetRequired(passwordResetRequired: Boolean) {
-    }
+    public fun passwordResetRequired(passwordResetRequired: Boolean)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: IManagedPolicy)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -89,31 +82,31 @@ public open class User internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.User.Builder =
         software.amazon.awscdk.services.iam.User.Builder.create(scope, id)
 
-    public override fun groups(groups: List<IGroup>) {
+    override fun groups(groups: List<IGroup>) {
       cdkBuilder.groups(groups.map(IGroup::unwrap))
     }
 
-    public override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
+    override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
       cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
     }
 
-    public override fun password(password: SecretValue) {
+    override fun password(password: SecretValue) {
       cdkBuilder.password(password.let(SecretValue::unwrap))
     }
 
-    public override fun passwordResetRequired(passwordResetRequired: Boolean) {
+    override fun passwordResetRequired(passwordResetRequired: Boolean) {
       cdkBuilder.passwordResetRequired(passwordResetRequired)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
+    override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 

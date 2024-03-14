@@ -19,23 +19,22 @@ public interface IFunctionUrl : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.IFunctionUrl,
   ) : IFunctionUrl {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-    public override fun grantInvokeUrl(arg0: IGrantable): Grant =
+    override fun grantInvokeUrl(arg0: IGrantable): Grant =
         unwrap(this).grantInvokeUrl(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun url(): String = unwrap(this).getUrl()
+    override fun url(): String = unwrap(this).getUrl()
   }
 
   public companion object {

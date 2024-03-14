@@ -16,17 +16,13 @@ public open class Succeed internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
   }
 
   private class BuilderImpl(
@@ -36,19 +32,19 @@ public open class Succeed internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Succeed.Builder =
         software.amazon.awscdk.services.stepfunctions.Succeed.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 

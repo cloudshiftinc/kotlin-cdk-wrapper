@@ -30,44 +30,33 @@ public interface NetworkLoadBalancedTaskImageProps {
 
   public fun logDriver(): LogDriver? = unwrap(this).getLogDriver()?.let(LogDriver::wrap)
 
-  public fun secrets(): Map<String, Secret> = unwrap(this).getSecrets()?.mapValues {
-      Secret.wrap(it.value)} ?: emptyMap()
+  public fun secrets(): Map<String, Secret> =
+      unwrap(this).getSecrets()?.mapValues{Secret.wrap(it.value)} ?: emptyMap()
 
   public fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun containerName(containerName: String) {
-    }
+    public fun containerName(containerName: String)
 
-    public fun containerPorts(containerPorts: List<Number>) {
-    }
+    public fun containerPorts(containerPorts: List<Number>)
 
-    public fun dockerLabels(dockerLabels: Map<String, String>) {
-    }
+    public fun dockerLabels(dockerLabels: Map<String, String>)
 
-    public fun enableLogging(enableLogging: Boolean) {
-    }
+    public fun enableLogging(enableLogging: Boolean)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun image(image: ContainerImage) {
-    }
+    public fun image(image: ContainerImage)
 
-    public fun logDriver(logDriver: LogDriver) {
-    }
+    public fun logDriver(logDriver: LogDriver)
 
-    public fun secrets(secrets: Map<String, Secret>) {
-    }
+    public fun secrets(secrets: Map<String, Secret>)
 
-    public fun taskRole(taskRole: IRole) {
-    }
+    public fun taskRole(taskRole: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -75,47 +64,47 @@ public interface NetworkLoadBalancedTaskImageProps {
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps.Builder =
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps.builder()
 
-    public override fun containerName(containerName: String) {
+    override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
     }
 
-    public override fun containerPorts(containerPorts: List<Number>) {
+    override fun containerPorts(containerPorts: List<Number>) {
       cdkBuilder.containerPorts(containerPorts)
     }
 
-    public override fun dockerLabels(dockerLabels: Map<String, String>) {
+    override fun dockerLabels(dockerLabels: Map<String, String>) {
       cdkBuilder.dockerLabels(dockerLabels)
     }
 
-    public override fun enableLogging(enableLogging: Boolean) {
+    override fun enableLogging(enableLogging: Boolean) {
       cdkBuilder.enableLogging(enableLogging)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun image(image: ContainerImage) {
+    override fun image(image: ContainerImage) {
       cdkBuilder.image(image.let(ContainerImage::unwrap))
     }
 
-    public override fun logDriver(logDriver: LogDriver) {
+    override fun logDriver(logDriver: LogDriver) {
       cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
     }
 
-    public override fun secrets(secrets: Map<String, Secret>) {
-      cdkBuilder.secrets(secrets.mapValues { Secret.unwrap(it.value)})
+    override fun secrets(secrets: Map<String, Secret>) {
+      cdkBuilder.secrets(secrets.mapValues{Secret.unwrap(it.value)})
     }
 
-    public override fun taskRole(taskRole: IRole) {
+    override fun taskRole(taskRole: IRole) {
       cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
     }
 
@@ -128,31 +117,28 @@ public interface NetworkLoadBalancedTaskImageProps {
     internal val cdkObject:
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps,
   ) : NetworkLoadBalancedTaskImageProps {
-    public override fun containerName(): String? = unwrap(this).getContainerName()
+    override fun containerName(): String? = unwrap(this).getContainerName()
 
-    public override fun containerPorts(): List<Number> = unwrap(this).getContainerPorts() ?:
-        emptyList()
+    override fun containerPorts(): List<Number> = unwrap(this).getContainerPorts() ?: emptyList()
 
-    public override fun dockerLabels(): Map<String, String> = unwrap(this).getDockerLabels() ?:
-        emptyMap()
+    override fun dockerLabels(): Map<String, String> = unwrap(this).getDockerLabels() ?: emptyMap()
 
-    public override fun enableLogging(): Boolean? = unwrap(this).getEnableLogging()
+    override fun enableLogging(): Boolean? = unwrap(this).getEnableLogging()
 
-    public override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?:
-        emptyMap()
+    override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?: emptyMap()
 
-    public override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+    override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
 
-    public override fun family(): String? = unwrap(this).getFamily()
+    override fun family(): String? = unwrap(this).getFamily()
 
-    public override fun image(): ContainerImage = unwrap(this).getImage().let(ContainerImage::wrap)
+    override fun image(): ContainerImage = unwrap(this).getImage().let(ContainerImage::wrap)
 
-    public override fun logDriver(): LogDriver? = unwrap(this).getLogDriver()?.let(LogDriver::wrap)
+    override fun logDriver(): LogDriver? = unwrap(this).getLogDriver()?.let(LogDriver::wrap)
 
-    public override fun secrets(): Map<String, Secret> = unwrap(this).getSecrets()?.mapValues {
-        Secret.wrap(it.value)} ?: emptyMap()
+    override fun secrets(): Map<String, Secret> =
+        unwrap(this).getSecrets()?.mapValues{Secret.wrap(it.value)} ?: emptyMap()
 
-    public override fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
+    override fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
   }
 
   public companion object {

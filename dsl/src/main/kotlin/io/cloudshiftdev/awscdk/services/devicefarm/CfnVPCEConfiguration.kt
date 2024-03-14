@@ -56,20 +56,15 @@ public open class CfnVPCEConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun serviceDnsName(serviceDnsName: String) {
-    }
+    public fun serviceDnsName(serviceDnsName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpceConfigurationDescription(vpceConfigurationDescription: String) {
-    }
+    public fun vpceConfigurationDescription(vpceConfigurationDescription: String)
 
-    public fun vpceConfigurationName(vpceConfigurationName: String) {
-    }
+    public fun vpceConfigurationName(vpceConfigurationName: String)
 
-    public fun vpceServiceName(vpceServiceName: String) {
-    }
+    public fun vpceServiceName(vpceServiceName: String)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnVPCEConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration.Builder
         = software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration.Builder.create(scope, id)
 
-    public override fun serviceDnsName(serviceDnsName: String) {
+    override fun serviceDnsName(serviceDnsName: String) {
       cdkBuilder.serviceDnsName(serviceDnsName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpceConfigurationDescription(vpceConfigurationDescription: String) {
+    override fun vpceConfigurationDescription(vpceConfigurationDescription: String) {
       cdkBuilder.vpceConfigurationDescription(vpceConfigurationDescription)
     }
 
-    public override fun vpceConfigurationName(vpceConfigurationName: String) {
+    override fun vpceConfigurationName(vpceConfigurationName: String) {
       cdkBuilder.vpceConfigurationName(vpceConfigurationName)
     }
 
-    public override fun vpceServiceName(vpceServiceName: String) {
+    override fun vpceServiceName(vpceServiceName: String) {
       cdkBuilder.vpceServiceName(vpceServiceName)
     }
 

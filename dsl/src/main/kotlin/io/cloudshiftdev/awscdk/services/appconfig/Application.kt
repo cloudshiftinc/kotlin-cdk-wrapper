@@ -199,11 +199,9 @@ public open class Application internal constructor(
       ExtensionOptions(options))
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
   }
 
   private class BuilderImpl(
@@ -213,11 +211,11 @@ public open class Application internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.Application.Builder =
         software.amazon.awscdk.services.appconfig.Application.Builder.create(scope, id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 

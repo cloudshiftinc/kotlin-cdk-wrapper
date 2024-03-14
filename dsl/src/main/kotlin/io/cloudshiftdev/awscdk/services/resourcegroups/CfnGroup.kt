@@ -78,34 +78,25 @@ public open class CfnGroup internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: List<Any>) {
-    }
+    public fun configuration(configuration: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resourceQuery(resourceQuery: IResolvable) {
-    }
+    public fun resourceQuery(resourceQuery: IResolvable)
 
-    public fun resourceQuery(resourceQuery: ResourceQueryProperty) {
-    }
+    public fun resourceQuery(resourceQuery: ResourceQueryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4732f3df54ba438975b7e4ed5106216fc121d4b1ec4be1eb1d1162caa68037ab")
-    public fun resourceQuery(resourceQuery: ResourceQueryProperty.Builder.() -> Unit) {
-    }
+    public fun resourceQuery(resourceQuery: ResourceQueryProperty.Builder.() -> Unit)
 
-    public fun resources(resources: List<String>) {
-    }
+    public fun resources(resources: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -115,40 +106,40 @@ public open class CfnGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.resourcegroups.CfnGroup.Builder =
         software.amazon.awscdk.services.resourcegroups.CfnGroup.Builder.create(scope, id)
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: List<Any>) {
+    override fun configuration(configuration: List<Any>) {
       cdkBuilder.configuration(configuration)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resourceQuery(resourceQuery: IResolvable) {
+    override fun resourceQuery(resourceQuery: IResolvable) {
       cdkBuilder.resourceQuery(resourceQuery.let(IResolvable::unwrap))
     }
 
-    public override fun resourceQuery(resourceQuery: ResourceQueryProperty) {
+    override fun resourceQuery(resourceQuery: ResourceQueryProperty) {
       cdkBuilder.resourceQuery(resourceQuery.let(ResourceQueryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4732f3df54ba438975b7e4ed5106216fc121d4b1ec4be1eb1d1162caa68037ab")
-    public override fun resourceQuery(resourceQuery: ResourceQueryProperty.Builder.() -> Unit): Unit
-        = resourceQuery(ResourceQueryProperty(resourceQuery))
+    override fun resourceQuery(resourceQuery: ResourceQueryProperty.Builder.() -> Unit): Unit =
+        resourceQuery(ResourceQueryProperty(resourceQuery))
 
-    public override fun resources(resources: List<String>) {
+    override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -182,19 +173,15 @@ public open class CfnGroup internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun query(query: IResolvable) {
-      }
+      public fun query(query: IResolvable)
 
-      public fun query(query: QueryProperty) {
-      }
+      public fun query(query: QueryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5f4652e493f93af8130a6eb2ac9332223eea6a60935ee3b8c65ab7fae91ec69")
-      public fun query(query: QueryProperty.Builder.() -> Unit) {
-      }
+      public fun query(query: QueryProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -202,20 +189,20 @@ public open class CfnGroup internal constructor(
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty.Builder =
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty.builder()
 
-      public override fun query(query: IResolvable) {
+      override fun query(query: IResolvable) {
         cdkBuilder.query(query.let(IResolvable::unwrap))
       }
 
-      public override fun query(query: QueryProperty) {
+      override fun query(query: QueryProperty) {
         cdkBuilder.query(query.let(QueryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5f4652e493f93af8130a6eb2ac9332223eea6a60935ee3b8c65ab7fae91ec69")
-      public override fun query(query: QueryProperty.Builder.() -> Unit): Unit =
+      override fun query(query: QueryProperty.Builder.() -> Unit): Unit =
           query(QueryProperty(query))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -228,9 +215,9 @@ public open class CfnGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ResourceQueryProperty,
     ) : ResourceQueryProperty {
-      public override fun query(): Any? = unwrap(this).getQuery()
+      override fun query(): Any? = unwrap(this).getQuery()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -262,17 +249,13 @@ public open class CfnGroup internal constructor(
     public fun tagFilters(): Any? = unwrap(this).getTagFilters()
 
     public interface Builder {
-      public fun resourceTypeFilters(resourceTypeFilters: List<String>) {
-      }
+      public fun resourceTypeFilters(resourceTypeFilters: List<String>)
 
-      public fun stackIdentifier(stackIdentifier: String) {
-      }
+      public fun stackIdentifier(stackIdentifier: String)
 
-      public fun tagFilters(tagFilters: IResolvable) {
-      }
+      public fun tagFilters(tagFilters: IResolvable)
 
-      public fun tagFilters(tagFilters: List<Any>) {
-      }
+      public fun tagFilters(tagFilters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -280,19 +263,19 @@ public open class CfnGroup internal constructor(
           software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty.Builder =
           software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty.builder()
 
-      public override fun resourceTypeFilters(resourceTypeFilters: List<String>) {
+      override fun resourceTypeFilters(resourceTypeFilters: List<String>) {
         cdkBuilder.resourceTypeFilters(resourceTypeFilters)
       }
 
-      public override fun stackIdentifier(stackIdentifier: String) {
+      override fun stackIdentifier(stackIdentifier: String) {
         cdkBuilder.stackIdentifier(stackIdentifier)
       }
 
-      public override fun tagFilters(tagFilters: IResolvable) {
+      override fun tagFilters(tagFilters: IResolvable) {
         cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
       }
 
-      public override fun tagFilters(tagFilters: List<Any>) {
+      override fun tagFilters(tagFilters: List<Any>) {
         cdkBuilder.tagFilters(tagFilters)
       }
 
@@ -303,12 +286,12 @@ public open class CfnGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty,
     ) : QueryProperty {
-      public override fun resourceTypeFilters(): List<String> =
-          unwrap(this).getResourceTypeFilters() ?: emptyList()
+      override fun resourceTypeFilters(): List<String> = unwrap(this).getResourceTypeFilters() ?:
+          emptyList()
 
-      public override fun stackIdentifier(): String? = unwrap(this).getStackIdentifier()
+      override fun stackIdentifier(): String? = unwrap(this).getStackIdentifier()
 
-      public override fun tagFilters(): Any? = unwrap(this).getTagFilters()
+      override fun tagFilters(): Any? = unwrap(this).getTagFilters()
     }
 
     public companion object {
@@ -337,11 +320,9 @@ public open class CfnGroup internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -349,11 +330,11 @@ public open class CfnGroup internal constructor(
           software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty.Builder =
           software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -365,9 +346,9 @@ public open class CfnGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty,
     ) : TagFilterProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -396,14 +377,11 @@ public open class CfnGroup internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: List<Any>) {
-      }
+      public fun parameters(parameters: List<Any>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -412,15 +390,15 @@ public open class CfnGroup internal constructor(
           =
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty.builder()
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: List<Any>) {
+      override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -433,9 +411,9 @@ public open class CfnGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationItemProperty,
     ) : ConfigurationItemProperty {
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -464,11 +442,9 @@ public open class CfnGroup internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -477,11 +453,11 @@ public open class CfnGroup internal constructor(
           =
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -494,9 +470,9 @@ public open class CfnGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty,
     ) : ConfigurationParameterProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {

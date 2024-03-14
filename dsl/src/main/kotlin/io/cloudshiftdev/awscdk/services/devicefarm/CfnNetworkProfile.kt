@@ -98,41 +98,29 @@ public open class CfnNetworkProfile internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun downlinkBandwidthBits(downlinkBandwidthBits: Number) {
-    }
+    public fun downlinkBandwidthBits(downlinkBandwidthBits: Number)
 
-    public fun downlinkDelayMs(downlinkDelayMs: Number) {
-    }
+    public fun downlinkDelayMs(downlinkDelayMs: Number)
 
-    public fun downlinkJitterMs(downlinkJitterMs: Number) {
-    }
+    public fun downlinkJitterMs(downlinkJitterMs: Number)
 
-    public fun downlinkLossPercent(downlinkLossPercent: Number) {
-    }
+    public fun downlinkLossPercent(downlinkLossPercent: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun projectArn(projectArn: String) {
-    }
+    public fun projectArn(projectArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun uplinkBandwidthBits(uplinkBandwidthBits: Number) {
-    }
+    public fun uplinkBandwidthBits(uplinkBandwidthBits: Number)
 
-    public fun uplinkDelayMs(uplinkDelayMs: Number) {
-    }
+    public fun uplinkDelayMs(uplinkDelayMs: Number)
 
-    public fun uplinkJitterMs(uplinkJitterMs: Number) {
-    }
+    public fun uplinkJitterMs(uplinkJitterMs: Number)
 
-    public fun uplinkLossPercent(uplinkLossPercent: Number) {
-    }
+    public fun uplinkLossPercent(uplinkLossPercent: Number)
   }
 
   private class BuilderImpl(
@@ -142,51 +130,51 @@ public open class CfnNetworkProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.devicefarm.CfnNetworkProfile.Builder =
         software.amazon.awscdk.services.devicefarm.CfnNetworkProfile.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun downlinkBandwidthBits(downlinkBandwidthBits: Number) {
+    override fun downlinkBandwidthBits(downlinkBandwidthBits: Number) {
       cdkBuilder.downlinkBandwidthBits(downlinkBandwidthBits)
     }
 
-    public override fun downlinkDelayMs(downlinkDelayMs: Number) {
+    override fun downlinkDelayMs(downlinkDelayMs: Number) {
       cdkBuilder.downlinkDelayMs(downlinkDelayMs)
     }
 
-    public override fun downlinkJitterMs(downlinkJitterMs: Number) {
+    override fun downlinkJitterMs(downlinkJitterMs: Number) {
       cdkBuilder.downlinkJitterMs(downlinkJitterMs)
     }
 
-    public override fun downlinkLossPercent(downlinkLossPercent: Number) {
+    override fun downlinkLossPercent(downlinkLossPercent: Number) {
       cdkBuilder.downlinkLossPercent(downlinkLossPercent)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun projectArn(projectArn: String) {
+    override fun projectArn(projectArn: String) {
       cdkBuilder.projectArn(projectArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun uplinkBandwidthBits(uplinkBandwidthBits: Number) {
+    override fun uplinkBandwidthBits(uplinkBandwidthBits: Number) {
       cdkBuilder.uplinkBandwidthBits(uplinkBandwidthBits)
     }
 
-    public override fun uplinkDelayMs(uplinkDelayMs: Number) {
+    override fun uplinkDelayMs(uplinkDelayMs: Number) {
       cdkBuilder.uplinkDelayMs(uplinkDelayMs)
     }
 
-    public override fun uplinkJitterMs(uplinkJitterMs: Number) {
+    override fun uplinkJitterMs(uplinkJitterMs: Number) {
       cdkBuilder.uplinkJitterMs(uplinkJitterMs)
     }
 
-    public override fun uplinkLossPercent(uplinkLossPercent: Number) {
+    override fun uplinkLossPercent(uplinkLossPercent: Number) {
       cdkBuilder.uplinkLossPercent(uplinkLossPercent)
     }
 

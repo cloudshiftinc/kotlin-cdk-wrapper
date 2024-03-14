@@ -20,50 +20,44 @@ public interface ContainerOverride {
   public fun memoryReservation(): Number? = unwrap(this).getMemoryReservation()
 
   public interface Builder {
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun containerName(containerName: String) {
-    }
+    public fun containerName(containerName: String)
 
-    public fun cpu(cpu: Number) {
-    }
+    public fun cpu(cpu: Number)
 
-    public fun environment(environment: List<TaskEnvironmentVariable>) {
-    }
+    public fun environment(environment: List<TaskEnvironmentVariable>)
 
-    public fun memoryLimit(memoryLimit: Number) {
-    }
+    public fun memoryLimit(memoryLimit: Number)
 
-    public fun memoryReservation(memoryReservation: Number) {
-    }
+    public fun memoryReservation(memoryReservation: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.targets.ContainerOverride.Builder
         = software.amazon.awscdk.services.events.targets.ContainerOverride.builder()
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun containerName(containerName: String) {
+    override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
     }
 
-    public override fun cpu(cpu: Number) {
+    override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun environment(environment: List<TaskEnvironmentVariable>) {
+    override fun environment(environment: List<TaskEnvironmentVariable>) {
       cdkBuilder.environment(environment.map(TaskEnvironmentVariable::unwrap))
     }
 
-    public override fun memoryLimit(memoryLimit: Number) {
+    override fun memoryLimit(memoryLimit: Number) {
       cdkBuilder.memoryLimit(memoryLimit)
     }
 
-    public override fun memoryReservation(memoryReservation: Number) {
+    override fun memoryReservation(memoryReservation: Number) {
       cdkBuilder.memoryReservation(memoryReservation)
     }
 
@@ -74,18 +68,18 @@ public interface ContainerOverride {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.targets.ContainerOverride,
   ) : ContainerOverride {
-    public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+    override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-    public override fun containerName(): String = unwrap(this).getContainerName()
+    override fun containerName(): String = unwrap(this).getContainerName()
 
-    public override fun cpu(): Number? = unwrap(this).getCpu()
+    override fun cpu(): Number? = unwrap(this).getCpu()
 
-    public override fun environment(): List<TaskEnvironmentVariable> =
+    override fun environment(): List<TaskEnvironmentVariable> =
         unwrap(this).getEnvironment()?.map(TaskEnvironmentVariable::wrap) ?: emptyList()
 
-    public override fun memoryLimit(): Number? = unwrap(this).getMemoryLimit()
+    override fun memoryLimit(): Number? = unwrap(this).getMemoryLimit()
 
-    public override fun memoryReservation(): Number? = unwrap(this).getMemoryReservation()
+    override fun memoryReservation(): Number? = unwrap(this).getMemoryReservation()
   }
 
   public companion object {

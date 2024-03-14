@@ -236,146 +236,108 @@ public open class CfnTable internal constructor(
       = timeToLiveSpecification(TimeToLiveSpecificationProperty(`value`))
 
   public interface Builder {
-    public fun attributeDefinitions(attributeDefinitions: IResolvable) {
-    }
+    public fun attributeDefinitions(attributeDefinitions: IResolvable)
 
-    public fun attributeDefinitions(attributeDefinitions: List<Any>) {
-    }
+    public fun attributeDefinitions(attributeDefinitions: List<Any>)
 
-    public fun billingMode(billingMode: String) {
-    }
+    public fun billingMode(billingMode: String)
 
-    public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
-    }
+    public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable)
 
     public
-        fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
-    }
+        fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("db6b0005fd6dda990da56422cb152b0eb236be848bd7d4e3c82aee5268f97b8b")
     public
-        fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit)
 
-    public fun deletionProtectionEnabled(deletionProtectionEnabled: Boolean) {
-    }
+    public fun deletionProtectionEnabled(deletionProtectionEnabled: Boolean)
 
-    public fun deletionProtectionEnabled(deletionProtectionEnabled: IResolvable) {
-    }
+    public fun deletionProtectionEnabled(deletionProtectionEnabled: IResolvable)
 
-    public fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable) {
-    }
+    public fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable)
 
-    public fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
-    }
+    public fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>)
 
-    public fun importSourceSpecification(importSourceSpecification: IResolvable) {
-    }
+    public fun importSourceSpecification(importSourceSpecification: IResolvable)
 
     public
-        fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty) {
-    }
+        fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7642cd516d9ff1a9255c21eb0837bc31f5a39045d847d7ce3d17a9c10a93b988")
     public
-        fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty.Builder.() -> Unit)
 
-    public fun keySchema(keySchema: IResolvable) {
-    }
+    public fun keySchema(keySchema: IResolvable)
 
-    public fun keySchema(keySchema: List<Any>) {
-    }
+    public fun keySchema(keySchema: List<Any>)
 
-    public fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable) {
-    }
+    public fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable)
 
     public
-        fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty) {
-    }
+        fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("257e3070174596433409b29ee0d4f850f9f23013a50963b7ae8954db93c5709c")
     public
-        fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty.Builder.() -> Unit)
 
-    public fun localSecondaryIndexes(localSecondaryIndexes: IResolvable) {
-    }
+    public fun localSecondaryIndexes(localSecondaryIndexes: IResolvable)
 
-    public fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
-    }
+    public fun localSecondaryIndexes(localSecondaryIndexes: List<Any>)
 
-    public fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable) {
-    }
+    public fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable)
 
     public
-        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty) {
-    }
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed9d3b3f1cfdd30b35983e8595334380b221841bf19737c9b2c6743908651417")
     public
-        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty.Builder.() -> Unit) {
-    }
+        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty.Builder.() -> Unit)
 
-    public fun provisionedThroughput(provisionedThroughput: IResolvable) {
-    }
+    public fun provisionedThroughput(provisionedThroughput: IResolvable)
 
-    public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-    }
+    public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2af10868690ca846d0ef0b377adf5d30a2d1e276444f5ccc298395c8896292d8")
     public
-        fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit) {
-    }
+        fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
 
-    public fun sseSpecification(sseSpecification: IResolvable) {
-    }
+    public fun sseSpecification(sseSpecification: IResolvable)
 
-    public fun sseSpecification(sseSpecification: SSESpecificationProperty) {
-    }
+    public fun sseSpecification(sseSpecification: SSESpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f25f660b107112377a3e4d81825a2bdd36c3cc8c272a6ee97340560ec4a5e61a")
-    public fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit) {
-    }
+    public fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit)
 
-    public fun streamSpecification(streamSpecification: IResolvable) {
-    }
+    public fun streamSpecification(streamSpecification: IResolvable)
 
-    public fun streamSpecification(streamSpecification: StreamSpecificationProperty) {
-    }
+    public fun streamSpecification(streamSpecification: StreamSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2c7f3227b4f41970244541632a7379086be8371e45664633a3b433c81badf83")
     public
-        fun streamSpecification(streamSpecification: StreamSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun streamSpecification(streamSpecification: StreamSpecificationProperty.Builder.() -> Unit)
 
-    public fun tableClass(tableClass: String) {
-    }
+    public fun tableClass(tableClass: String)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeToLiveSpecification(timeToLiveSpecification: IResolvable) {
-    }
+    public fun timeToLiveSpecification(timeToLiveSpecification: IResolvable)
 
-    public fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty) {
-    }
+    public fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b40800600d9946bf6a3b0916179f54c5a80b8ebcfda7b6263fda607a3883cb87")
     public
-        fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -385,183 +347,178 @@ public open class CfnTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.CfnTable.Builder =
         software.amazon.awscdk.services.dynamodb.CfnTable.Builder.create(scope, id)
 
-    public override fun attributeDefinitions(attributeDefinitions: IResolvable) {
+    override fun attributeDefinitions(attributeDefinitions: IResolvable) {
       cdkBuilder.attributeDefinitions(attributeDefinitions.let(IResolvable::unwrap))
     }
 
-    public override fun attributeDefinitions(attributeDefinitions: List<Any>) {
+    override fun attributeDefinitions(attributeDefinitions: List<Any>) {
       cdkBuilder.attributeDefinitions(attributeDefinitions)
     }
 
-    public override fun billingMode(billingMode: String) {
+    override fun billingMode(billingMode: String) {
       cdkBuilder.billingMode(billingMode)
     }
 
-    public override
-        fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
+    override fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
       cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
       cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("db6b0005fd6dda990da56422cb152b0eb236be848bd7d4e3c82aee5268f97b8b")
-    public override
+    override
         fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit):
         Unit =
         contributorInsightsSpecification(ContributorInsightsSpecificationProperty(contributorInsightsSpecification))
 
-    public override fun deletionProtectionEnabled(deletionProtectionEnabled: Boolean) {
+    override fun deletionProtectionEnabled(deletionProtectionEnabled: Boolean) {
       cdkBuilder.deletionProtectionEnabled(deletionProtectionEnabled)
     }
 
-    public override fun deletionProtectionEnabled(deletionProtectionEnabled: IResolvable) {
+    override fun deletionProtectionEnabled(deletionProtectionEnabled: IResolvable) {
       cdkBuilder.deletionProtectionEnabled(deletionProtectionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable) {
+    override fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable) {
       cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.let(IResolvable::unwrap))
     }
 
-    public override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
+    override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
       cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
     }
 
-    public override fun importSourceSpecification(importSourceSpecification: IResolvable) {
+    override fun importSourceSpecification(importSourceSpecification: IResolvable) {
       cdkBuilder.importSourceSpecification(importSourceSpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty) {
       cdkBuilder.importSourceSpecification(importSourceSpecification.let(ImportSourceSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7642cd516d9ff1a9255c21eb0837bc31f5a39045d847d7ce3d17a9c10a93b988")
-    public override
+    override
         fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty.Builder.() -> Unit):
         Unit =
         importSourceSpecification(ImportSourceSpecificationProperty(importSourceSpecification))
 
-    public override fun keySchema(keySchema: IResolvable) {
+    override fun keySchema(keySchema: IResolvable) {
       cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
     }
 
-    public override fun keySchema(keySchema: List<Any>) {
+    override fun keySchema(keySchema: List<Any>) {
       cdkBuilder.keySchema(keySchema)
     }
 
-    public override fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable) {
+    override fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable) {
       cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty) {
       cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(KinesisStreamSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("257e3070174596433409b29ee0d4f850f9f23013a50963b7ae8954db93c5709c")
-    public override
+    override
         fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty.Builder.() -> Unit):
         Unit =
         kinesisStreamSpecification(KinesisStreamSpecificationProperty(kinesisStreamSpecification))
 
-    public override fun localSecondaryIndexes(localSecondaryIndexes: IResolvable) {
+    override fun localSecondaryIndexes(localSecondaryIndexes: IResolvable) {
       cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.let(IResolvable::unwrap))
     }
 
-    public override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
+    override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
       cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
     }
 
-    public override
-        fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable) {
+    override fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable) {
       cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty) {
       cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed9d3b3f1cfdd30b35983e8595334380b221841bf19737c9b2c6743908651417")
-    public override
+    override
         fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty.Builder.() -> Unit):
         Unit =
         pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty(pointInTimeRecoverySpecification))
 
-    public override fun provisionedThroughput(provisionedThroughput: IResolvable) {
+    override fun provisionedThroughput(provisionedThroughput: IResolvable) {
       cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
     }
 
-    public override
-        fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
+    override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
       cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2af10868690ca846d0ef0b377adf5d30a2d1e276444f5ccc298395c8896292d8")
-    public override
+    override
         fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
         Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
 
-    public override fun sseSpecification(sseSpecification: IResolvable) {
+    override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
+    override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
       cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f25f660b107112377a3e4d81825a2bdd36c3cc8c272a6ee97340560ec4a5e61a")
-    public override
-        fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit): Unit =
-        sseSpecification(SSESpecificationProperty(sseSpecification))
+    override fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit):
+        Unit = sseSpecification(SSESpecificationProperty(sseSpecification))
 
-    public override fun streamSpecification(streamSpecification: IResolvable) {
+    override fun streamSpecification(streamSpecification: IResolvable) {
       cdkBuilder.streamSpecification(streamSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun streamSpecification(streamSpecification: StreamSpecificationProperty) {
+    override fun streamSpecification(streamSpecification: StreamSpecificationProperty) {
       cdkBuilder.streamSpecification(streamSpecification.let(StreamSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2c7f3227b4f41970244541632a7379086be8371e45664633a3b433c81badf83")
-    public override
+    override
         fun streamSpecification(streamSpecification: StreamSpecificationProperty.Builder.() -> Unit):
         Unit = streamSpecification(StreamSpecificationProperty(streamSpecification))
 
-    public override fun tableClass(tableClass: String) {
+    override fun tableClass(tableClass: String) {
       cdkBuilder.tableClass(tableClass)
     }
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeToLiveSpecification(timeToLiveSpecification: IResolvable) {
+    override fun timeToLiveSpecification(timeToLiveSpecification: IResolvable) {
       cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(IResolvable::unwrap))
     }
 
-    public override
-        fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty) {
+    override fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty) {
       cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(TimeToLiveSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b40800600d9946bf6a3b0916179f54c5a80b8ebcfda7b6263fda607a3883cb87")
-    public override
+    override
         fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit):
         Unit = timeToLiveSpecification(TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
@@ -595,11 +552,9 @@ public open class CfnTable internal constructor(
     public fun attributeType(): String
 
     public interface Builder {
-      public fun attributeName(attributeName: String) {
-      }
+      public fun attributeName(attributeName: String)
 
-      public fun attributeType(attributeType: String) {
-      }
+      public fun attributeType(attributeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -607,11 +562,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty.builder()
 
-      public override fun attributeName(attributeName: String) {
+      override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
-      public override fun attributeType(attributeType: String) {
+      override fun attributeType(attributeType: String) {
         cdkBuilder.attributeType(attributeType)
       }
 
@@ -624,9 +579,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.AttributeDefinitionProperty,
     ) : AttributeDefinitionProperty {
-      public override fun attributeName(): String = unwrap(this).getAttributeName()
+      override fun attributeName(): String = unwrap(this).getAttributeName()
 
-      public override fun attributeType(): String = unwrap(this).getAttributeType()
+      override fun attributeType(): String = unwrap(this).getAttributeType()
     }
 
     public companion object {
@@ -655,11 +610,9 @@ public open class CfnTable internal constructor(
     public fun keyType(): String
 
     public interface Builder {
-      public fun attributeName(attributeName: String) {
-      }
+      public fun attributeName(attributeName: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -667,11 +620,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty.builder()
 
-      public override fun attributeName(attributeName: String) {
+      override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
@@ -682,9 +635,9 @@ public open class CfnTable internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.KeySchemaProperty,
     ) : KeySchemaProperty {
-      public override fun attributeName(): String = unwrap(this).getAttributeName()
+      override fun attributeName(): String = unwrap(this).getAttributeName()
 
-      public override fun keyType(): String = unwrap(this).getKeyType()
+      override fun keyType(): String = unwrap(this).getKeyType()
     }
 
     public companion object {
@@ -711,11 +664,9 @@ public open class CfnTable internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -724,11 +675,11 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.dynamodb.CfnTable.ContributorInsightsSpecificationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -741,7 +692,7 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.ContributorInsightsSpecificationProperty,
     ) : ContributorInsightsSpecificationProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -773,17 +724,13 @@ public open class CfnTable internal constructor(
     public fun sseType(): String? = unwrap(this).getSseType()
 
     public interface Builder {
-      public fun kmsMasterKeyId(kmsMasterKeyId: String) {
-      }
+      public fun kmsMasterKeyId(kmsMasterKeyId: String)
 
-      public fun sseEnabled(sseEnabled: Boolean) {
-      }
+      public fun sseEnabled(sseEnabled: Boolean)
 
-      public fun sseEnabled(sseEnabled: IResolvable) {
-      }
+      public fun sseEnabled(sseEnabled: IResolvable)
 
-      public fun sseType(sseType: String) {
-      }
+      public fun sseType(sseType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -791,19 +738,19 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty.builder()
 
-      public override fun kmsMasterKeyId(kmsMasterKeyId: String) {
+      override fun kmsMasterKeyId(kmsMasterKeyId: String) {
         cdkBuilder.kmsMasterKeyId(kmsMasterKeyId)
       }
 
-      public override fun sseEnabled(sseEnabled: Boolean) {
+      override fun sseEnabled(sseEnabled: Boolean) {
         cdkBuilder.sseEnabled(sseEnabled)
       }
 
-      public override fun sseEnabled(sseEnabled: IResolvable) {
+      override fun sseEnabled(sseEnabled: IResolvable) {
         cdkBuilder.sseEnabled(sseEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun sseType(sseType: String) {
+      override fun sseType(sseType: String) {
         cdkBuilder.sseType(sseType)
       }
 
@@ -815,11 +762,11 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.SSESpecificationProperty,
     ) : SSESpecificationProperty {
-      public override fun kmsMasterKeyId(): String? = unwrap(this).getKmsMasterKeyId()
+      override fun kmsMasterKeyId(): String? = unwrap(this).getKmsMasterKeyId()
 
-      public override fun sseEnabled(): Any = unwrap(this).getSseEnabled()
+      override fun sseEnabled(): Any = unwrap(this).getSseEnabled()
 
-      public override fun sseType(): String? = unwrap(this).getSseType()
+      override fun sseType(): String? = unwrap(this).getSseType()
     }
 
     public companion object {
@@ -848,22 +795,20 @@ public open class CfnTable internal constructor(
     public fun headerList(): List<String> = unwrap(this).getHeaderList() ?: emptyList()
 
     public interface Builder {
-      public fun delimiter(delimiter: String) {
-      }
+      public fun delimiter(delimiter: String)
 
-      public fun headerList(headerList: List<String>) {
-      }
+      public fun headerList(headerList: List<String>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty.Builder
           = software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty.builder()
 
-      public override fun delimiter(delimiter: String) {
+      override fun delimiter(delimiter: String) {
         cdkBuilder.delimiter(delimiter)
       }
 
-      public override fun headerList(headerList: List<String>) {
+      override fun headerList(headerList: List<String>) {
         cdkBuilder.headerList(headerList)
       }
 
@@ -874,9 +819,9 @@ public open class CfnTable internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty,
     ) : CsvProperty {
-      public override fun delimiter(): String? = unwrap(this).getDelimiter()
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
 
-      public override fun headerList(): List<String> = unwrap(this).getHeaderList() ?: emptyList()
+      override fun headerList(): List<String> = unwrap(this).getHeaderList() ?: emptyList()
     }
 
     public companion object {
@@ -906,25 +851,19 @@ public open class CfnTable internal constructor(
     public fun projection(): Any
 
     public interface Builder {
-      public fun indexName(indexName: String) {
-      }
+      public fun indexName(indexName: String)
 
-      public fun keySchema(keySchema: IResolvable) {
-      }
+      public fun keySchema(keySchema: IResolvable)
 
-      public fun keySchema(keySchema: List<Any>) {
-      }
+      public fun keySchema(keySchema: List<Any>)
 
-      public fun projection(projection: IResolvable) {
-      }
+      public fun projection(projection: IResolvable)
 
-      public fun projection(projection: ProjectionProperty) {
-      }
+      public fun projection(projection: ProjectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b85a812f7623bfeeb38995e51a834bd28e7c73b3a1102f3a8e803dd165a2872")
-      public fun projection(projection: ProjectionProperty.Builder.() -> Unit) {
-      }
+      public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -932,29 +871,29 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty.builder()
 
-      public override fun indexName(indexName: String) {
+      override fun indexName(indexName: String) {
         cdkBuilder.indexName(indexName)
       }
 
-      public override fun keySchema(keySchema: IResolvable) {
+      override fun keySchema(keySchema: IResolvable) {
         cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
       }
 
-      public override fun keySchema(keySchema: List<Any>) {
+      override fun keySchema(keySchema: List<Any>) {
         cdkBuilder.keySchema(keySchema)
       }
 
-      public override fun projection(projection: IResolvable) {
+      override fun projection(projection: IResolvable) {
         cdkBuilder.projection(projection.let(IResolvable::unwrap))
       }
 
-      public override fun projection(projection: ProjectionProperty) {
+      override fun projection(projection: ProjectionProperty) {
         cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b85a812f7623bfeeb38995e51a834bd28e7c73b3a1102f3a8e803dd165a2872")
-      public override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
+      override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
           projection(ProjectionProperty(projection))
 
       public fun build():
@@ -966,11 +905,11 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.LocalSecondaryIndexProperty,
     ) : LocalSecondaryIndexProperty {
-      public override fun indexName(): String = unwrap(this).getIndexName()
+      override fun indexName(): String = unwrap(this).getIndexName()
 
-      public override fun keySchema(): Any = unwrap(this).getKeySchema()
+      override fun keySchema(): Any = unwrap(this).getKeySchema()
 
-      public override fun projection(): Any = unwrap(this).getProjection()
+      override fun projection(): Any = unwrap(this).getProjection()
     }
 
     public companion object {
@@ -1003,34 +942,26 @@ public open class CfnTable internal constructor(
     public fun s3BucketSource(): Any
 
     public interface Builder {
-      public fun inputCompressionType(inputCompressionType: String) {
-      }
+      public fun inputCompressionType(inputCompressionType: String)
 
-      public fun inputFormat(inputFormat: String) {
-      }
+      public fun inputFormat(inputFormat: String)
 
-      public fun inputFormatOptions(inputFormatOptions: IResolvable) {
-      }
+      public fun inputFormatOptions(inputFormatOptions: IResolvable)
 
-      public fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty) {
-      }
+      public fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ecc38bd30337caf76434b9f40f26e805f90d4539959d977a544930de7283d782")
       public
-          fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty.Builder.() -> Unit) {
-      }
+          fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty.Builder.() -> Unit)
 
-      public fun s3BucketSource(s3BucketSource: IResolvable) {
-      }
+      public fun s3BucketSource(s3BucketSource: IResolvable)
 
-      public fun s3BucketSource(s3BucketSource: S3BucketSourceProperty) {
-      }
+      public fun s3BucketSource(s3BucketSource: S3BucketSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d94d435bd52f7706069f0d2179a5912e53195e97d44c42e855d5b7cd8f690bc1")
-      public fun s3BucketSource(s3BucketSource: S3BucketSourceProperty.Builder.() -> Unit) {
-      }
+      public fun s3BucketSource(s3BucketSource: S3BucketSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1039,40 +970,40 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.dynamodb.CfnTable.ImportSourceSpecificationProperty.builder()
 
-      public override fun inputCompressionType(inputCompressionType: String) {
+      override fun inputCompressionType(inputCompressionType: String) {
         cdkBuilder.inputCompressionType(inputCompressionType)
       }
 
-      public override fun inputFormat(inputFormat: String) {
+      override fun inputFormat(inputFormat: String) {
         cdkBuilder.inputFormat(inputFormat)
       }
 
-      public override fun inputFormatOptions(inputFormatOptions: IResolvable) {
+      override fun inputFormatOptions(inputFormatOptions: IResolvable) {
         cdkBuilder.inputFormatOptions(inputFormatOptions.let(IResolvable::unwrap))
       }
 
-      public override fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty) {
+      override fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty) {
         cdkBuilder.inputFormatOptions(inputFormatOptions.let(InputFormatOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ecc38bd30337caf76434b9f40f26e805f90d4539959d977a544930de7283d782")
-      public override
+      override
           fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty.Builder.() -> Unit):
           Unit = inputFormatOptions(InputFormatOptionsProperty(inputFormatOptions))
 
-      public override fun s3BucketSource(s3BucketSource: IResolvable) {
+      override fun s3BucketSource(s3BucketSource: IResolvable) {
         cdkBuilder.s3BucketSource(s3BucketSource.let(IResolvable::unwrap))
       }
 
-      public override fun s3BucketSource(s3BucketSource: S3BucketSourceProperty) {
+      override fun s3BucketSource(s3BucketSource: S3BucketSourceProperty) {
         cdkBuilder.s3BucketSource(s3BucketSource.let(S3BucketSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d94d435bd52f7706069f0d2179a5912e53195e97d44c42e855d5b7cd8f690bc1")
-      public override fun s3BucketSource(s3BucketSource: S3BucketSourceProperty.Builder.() -> Unit):
-          Unit = s3BucketSource(S3BucketSourceProperty(s3BucketSource))
+      override fun s3BucketSource(s3BucketSource: S3BucketSourceProperty.Builder.() -> Unit): Unit =
+          s3BucketSource(S3BucketSourceProperty(s3BucketSource))
 
       public fun build():
           software.amazon.awscdk.services.dynamodb.CfnTable.ImportSourceSpecificationProperty =
@@ -1083,13 +1014,13 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.ImportSourceSpecificationProperty,
     ) : ImportSourceSpecificationProperty {
-      public override fun inputCompressionType(): String? = unwrap(this).getInputCompressionType()
+      override fun inputCompressionType(): String? = unwrap(this).getInputCompressionType()
 
-      public override fun inputFormat(): String = unwrap(this).getInputFormat()
+      override fun inputFormat(): String = unwrap(this).getInputFormat()
 
-      public override fun inputFormatOptions(): Any? = unwrap(this).getInputFormatOptions()
+      override fun inputFormatOptions(): Any? = unwrap(this).getInputFormatOptions()
 
-      public override fun s3BucketSource(): Any = unwrap(this).getS3BucketSource()
+      override fun s3BucketSource(): Any = unwrap(this).getS3BucketSource()
     }
 
     public companion object {
@@ -1119,11 +1050,9 @@ public open class CfnTable internal constructor(
     public fun projectionType(): String? = unwrap(this).getProjectionType()
 
     public interface Builder {
-      public fun nonKeyAttributes(nonKeyAttributes: List<String>) {
-      }
+      public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
-      public fun projectionType(projectionType: String) {
-      }
+      public fun projectionType(projectionType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1131,11 +1060,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty.builder()
 
-      public override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
+      override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
         cdkBuilder.nonKeyAttributes(nonKeyAttributes)
       }
 
-      public override fun projectionType(projectionType: String) {
+      override fun projectionType(projectionType: String) {
         cdkBuilder.projectionType(projectionType)
       }
 
@@ -1146,10 +1075,10 @@ public open class CfnTable internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ProjectionProperty,
     ) : ProjectionProperty {
-      public override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
+      override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
           emptyList()
 
-      public override fun projectionType(): String? = unwrap(this).getProjectionType()
+      override fun projectionType(): String? = unwrap(this).getProjectionType()
     }
 
     public companion object {
@@ -1179,12 +1108,9 @@ public open class CfnTable internal constructor(
     public fun streamArn(): String
 
     public interface Builder {
-      public
-          fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String) {
-      }
+      public fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String)
 
-      public fun streamArn(streamArn: String) {
-      }
+      public fun streamArn(streamArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1193,12 +1119,12 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.dynamodb.CfnTable.KinesisStreamSpecificationProperty.builder()
 
-      public override
+      override
           fun approximateCreationDateTimePrecision(approximateCreationDateTimePrecision: String) {
         cdkBuilder.approximateCreationDateTimePrecision(approximateCreationDateTimePrecision)
       }
 
-      public override fun streamArn(streamArn: String) {
+      override fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
       }
 
@@ -1211,10 +1137,10 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.KinesisStreamSpecificationProperty,
     ) : KinesisStreamSpecificationProperty {
-      public override fun approximateCreationDateTimePrecision(): String? =
+      override fun approximateCreationDateTimePrecision(): String? =
           unwrap(this).getApproximateCreationDateTimePrecision()
 
-      public override fun streamArn(): String = unwrap(this).getStreamArn()
+      override fun streamArn(): String = unwrap(this).getStreamArn()
     }
 
     public companion object {
@@ -1242,8 +1168,7 @@ public open class CfnTable internal constructor(
     public fun streamViewType(): String
 
     public interface Builder {
-      public fun streamViewType(streamViewType: String) {
-      }
+      public fun streamViewType(streamViewType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1251,7 +1176,7 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty.builder()
 
-      public override fun streamViewType(streamViewType: String) {
+      override fun streamViewType(streamViewType: String) {
         cdkBuilder.streamViewType(streamViewType)
       }
 
@@ -1264,7 +1189,7 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty,
     ) : StreamSpecificationProperty {
-      public override fun streamViewType(): String = unwrap(this).getStreamViewType()
+      override fun streamViewType(): String = unwrap(this).getStreamViewType()
     }
 
     public companion object {
@@ -1291,16 +1216,13 @@ public open class CfnTable internal constructor(
     public fun csv(): Any? = unwrap(this).getCsv()
 
     public interface Builder {
-      public fun csv(csv: IResolvable) {
-      }
+      public fun csv(csv: IResolvable)
 
-      public fun csv(csv: CsvProperty) {
-      }
+      public fun csv(csv: CsvProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e4c5457956849bb4ae15c4c0406bea8f935360000062eb45e0c1cbcb96dd98f5")
-      public fun csv(csv: CsvProperty.Builder.() -> Unit) {
-      }
+      public fun csv(csv: CsvProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1308,17 +1230,17 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty.builder()
 
-      public override fun csv(csv: IResolvable) {
+      override fun csv(csv: IResolvable) {
         cdkBuilder.csv(csv.let(IResolvable::unwrap))
       }
 
-      public override fun csv(csv: CsvProperty) {
+      override fun csv(csv: CsvProperty) {
         cdkBuilder.csv(csv.let(CsvProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e4c5457956849bb4ae15c4c0406bea8f935360000062eb45e0c1cbcb96dd98f5")
-      public override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
+      override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
 
       public fun build():
           software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty =
@@ -1329,7 +1251,7 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.InputFormatOptionsProperty,
     ) : InputFormatOptionsProperty {
-      public override fun csv(): Any? = unwrap(this).getCsv()
+      override fun csv(): Any? = unwrap(this).getCsv()
     }
 
     public companion object {
@@ -1356,11 +1278,9 @@ public open class CfnTable internal constructor(
     public fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
 
     public interface Builder {
-      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
-      }
+      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean)
 
-      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-      }
+      public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1369,11 +1289,11 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty.builder()
 
-      public override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
+      override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
         cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
       }
 
-      public override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
+      override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
         cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
       }
 
@@ -1386,8 +1306,7 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.PointInTimeRecoverySpecificationProperty,
     ) : PointInTimeRecoverySpecificationProperty {
-      public override fun pointInTimeRecoveryEnabled(): Any? =
-          unwrap(this).getPointInTimeRecoveryEnabled()
+      override fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
     }
 
     public companion object {
@@ -1417,14 +1336,11 @@ public open class CfnTable internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun attributeName(attributeName: String) {
-      }
+      public fun attributeName(attributeName: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1433,15 +1349,15 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty.builder()
 
-      public override fun attributeName(attributeName: String) {
+      override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -1454,9 +1370,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty,
     ) : TimeToLiveSpecificationProperty {
-      public override fun attributeName(): String? = unwrap(this).getAttributeName()
+      override fun attributeName(): String? = unwrap(this).getAttributeName()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -1485,11 +1401,9 @@ public open class CfnTable internal constructor(
     public fun writeCapacityUnits(): Number
 
     public interface Builder {
-      public fun readCapacityUnits(readCapacityUnits: Number) {
-      }
+      public fun readCapacityUnits(readCapacityUnits: Number)
 
-      public fun writeCapacityUnits(writeCapacityUnits: Number) {
-      }
+      public fun writeCapacityUnits(writeCapacityUnits: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1497,11 +1411,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty.builder()
 
-      public override fun readCapacityUnits(readCapacityUnits: Number) {
+      override fun readCapacityUnits(readCapacityUnits: Number) {
         cdkBuilder.readCapacityUnits(readCapacityUnits)
       }
 
-      public override fun writeCapacityUnits(writeCapacityUnits: Number) {
+      override fun writeCapacityUnits(writeCapacityUnits: Number) {
         cdkBuilder.writeCapacityUnits(writeCapacityUnits)
       }
 
@@ -1514,9 +1428,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.ProvisionedThroughputProperty,
     ) : ProvisionedThroughputProperty {
-      public override fun readCapacityUnits(): Number = unwrap(this).getReadCapacityUnits()
+      override fun readCapacityUnits(): Number = unwrap(this).getReadCapacityUnits()
 
-      public override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
+      override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
     }
 
     public companion object {
@@ -1552,50 +1466,38 @@ public open class CfnTable internal constructor(
     public fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
 
     public interface Builder {
-      public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
-      }
+      public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable)
 
       public
-          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
-      }
+          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("96aaf0e53afdf2008e3bab5ed0472ff865f8718a9f091086a3c7d06569c838e5")
       public
-          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit)
 
-      public fun indexName(indexName: String) {
-      }
+      public fun indexName(indexName: String)
 
-      public fun keySchema(keySchema: IResolvable) {
-      }
+      public fun keySchema(keySchema: IResolvable)
 
-      public fun keySchema(keySchema: List<Any>) {
-      }
+      public fun keySchema(keySchema: List<Any>)
 
-      public fun projection(projection: IResolvable) {
-      }
+      public fun projection(projection: IResolvable)
 
-      public fun projection(projection: ProjectionProperty) {
-      }
+      public fun projection(projection: ProjectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a320a0d74803ebff018f88b81b33b1d49b807f9a0d83ae90e432deb42f1221d")
-      public fun projection(projection: ProjectionProperty.Builder.() -> Unit) {
-      }
+      public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
 
-      public fun provisionedThroughput(provisionedThroughput: IResolvable) {
-      }
+      public fun provisionedThroughput(provisionedThroughput: IResolvable)
 
-      public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-      }
+      public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c7b56ca1f0d8c0ead31155d94c0a7ac4c420ab8569c28acb313b53298c9d4a4")
       public
-          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit) {
-      }
+          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1603,60 +1505,58 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty.builder()
 
-      public override
-          fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
+      override fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
         cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
         cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("96aaf0e53afdf2008e3bab5ed0472ff865f8718a9f091086a3c7d06569c838e5")
-      public override
+      override
           fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty.Builder.() -> Unit):
           Unit =
           contributorInsightsSpecification(ContributorInsightsSpecificationProperty(contributorInsightsSpecification))
 
-      public override fun indexName(indexName: String) {
+      override fun indexName(indexName: String) {
         cdkBuilder.indexName(indexName)
       }
 
-      public override fun keySchema(keySchema: IResolvable) {
+      override fun keySchema(keySchema: IResolvable) {
         cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
       }
 
-      public override fun keySchema(keySchema: List<Any>) {
+      override fun keySchema(keySchema: List<Any>) {
         cdkBuilder.keySchema(keySchema)
       }
 
-      public override fun projection(projection: IResolvable) {
+      override fun projection(projection: IResolvable) {
         cdkBuilder.projection(projection.let(IResolvable::unwrap))
       }
 
-      public override fun projection(projection: ProjectionProperty) {
+      override fun projection(projection: ProjectionProperty) {
         cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a320a0d74803ebff018f88b81b33b1d49b807f9a0d83ae90e432deb42f1221d")
-      public override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
+      override fun projection(projection: ProjectionProperty.Builder.() -> Unit): Unit =
           projection(ProjectionProperty(projection))
 
-      public override fun provisionedThroughput(provisionedThroughput: IResolvable) {
+      override fun provisionedThroughput(provisionedThroughput: IResolvable) {
         cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
       }
 
-      public override
-          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
+      override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
         cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c7b56ca1f0d8c0ead31155d94c0a7ac4c420ab8569c28acb313b53298c9d4a4")
-      public override
+      override
           fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
           Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
 
@@ -1669,16 +1569,16 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty,
     ) : GlobalSecondaryIndexProperty {
-      public override fun contributorInsightsSpecification(): Any? =
+      override fun contributorInsightsSpecification(): Any? =
           unwrap(this).getContributorInsightsSpecification()
 
-      public override fun indexName(): String = unwrap(this).getIndexName()
+      override fun indexName(): String = unwrap(this).getIndexName()
 
-      public override fun keySchema(): Any = unwrap(this).getKeySchema()
+      override fun keySchema(): Any = unwrap(this).getKeySchema()
 
-      public override fun projection(): Any = unwrap(this).getProjection()
+      override fun projection(): Any = unwrap(this).getProjection()
 
-      public override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
+      override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
     }
 
     public companion object {
@@ -1709,14 +1609,11 @@ public open class CfnTable internal constructor(
     public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3BucketOwner(s3BucketOwner: String) {
-      }
+      public fun s3BucketOwner(s3BucketOwner: String)
 
-      public fun s3KeyPrefix(s3KeyPrefix: String) {
-      }
+      public fun s3KeyPrefix(s3KeyPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1724,15 +1621,15 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.dynamodb.CfnTable.S3BucketSourceProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.S3BucketSourceProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3BucketOwner(s3BucketOwner: String) {
+      override fun s3BucketOwner(s3BucketOwner: String) {
         cdkBuilder.s3BucketOwner(s3BucketOwner)
       }
 
-      public override fun s3KeyPrefix(s3KeyPrefix: String) {
+      override fun s3KeyPrefix(s3KeyPrefix: String) {
         cdkBuilder.s3KeyPrefix(s3KeyPrefix)
       }
 
@@ -1744,11 +1641,11 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dynamodb.CfnTable.S3BucketSourceProperty,
     ) : S3BucketSourceProperty {
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3BucketOwner(): String? = unwrap(this).getS3BucketOwner()
+      override fun s3BucketOwner(): String? = unwrap(this).getS3BucketOwner()
 
-      public override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
+      override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
     }
 
     public companion object {

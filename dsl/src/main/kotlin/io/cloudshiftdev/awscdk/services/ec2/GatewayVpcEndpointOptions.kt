@@ -10,22 +10,20 @@ public interface GatewayVpcEndpointOptions {
       unwrap(this).getSubnets()?.map(SubnetSelection::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun service(service: IGatewayVpcEndpointService) {
-    }
+    public fun service(service: IGatewayVpcEndpointService)
 
-    public fun subnets(subnets: List<SubnetSelection>) {
-    }
+    public fun subnets(subnets: List<SubnetSelection>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.GatewayVpcEndpointOptions.Builder =
         software.amazon.awscdk.services.ec2.GatewayVpcEndpointOptions.builder()
 
-    public override fun service(service: IGatewayVpcEndpointService) {
+    override fun service(service: IGatewayVpcEndpointService) {
       cdkBuilder.service(service.let(IGatewayVpcEndpointService::unwrap))
     }
 
-    public override fun subnets(subnets: List<SubnetSelection>) {
+    override fun subnets(subnets: List<SubnetSelection>) {
       cdkBuilder.subnets(subnets.map(SubnetSelection::unwrap))
     }
 
@@ -36,10 +34,10 @@ public interface GatewayVpcEndpointOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointOptions,
   ) : GatewayVpcEndpointOptions {
-    public override fun service(): IGatewayVpcEndpointService =
+    override fun service(): IGatewayVpcEndpointService =
         unwrap(this).getService().let(IGatewayVpcEndpointService::wrap)
 
-    public override fun subnets(): List<SubnetSelection> =
+    override fun subnets(): List<SubnetSelection> =
         unwrap(this).getSubnets()?.map(SubnetSelection::wrap) ?: emptyList()
   }
 

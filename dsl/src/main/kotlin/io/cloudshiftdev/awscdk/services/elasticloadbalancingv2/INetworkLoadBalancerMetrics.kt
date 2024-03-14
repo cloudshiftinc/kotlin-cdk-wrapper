@@ -76,87 +76,86 @@ public interface INetworkLoadBalancerMetrics {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerMetrics,
   ) : INetworkLoadBalancerMetrics {
-    public override fun activeFlowCount(): Metric = unwrap(this).activeFlowCount().let(Metric::wrap)
+    override fun activeFlowCount(): Metric = unwrap(this).activeFlowCount().let(Metric::wrap)
 
-    public override fun activeFlowCount(arg0: MetricOptions): Metric =
+    override fun activeFlowCount(arg0: MetricOptions): Metric =
         unwrap(this).activeFlowCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df365ed7bc5bb1494f98541bca9886f91f4b2f9cd495cbd4467cb842596d6dc9")
-    public override fun activeFlowCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun activeFlowCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
         activeFlowCount(MetricOptions(arg0))
 
-    public override fun consumedLcUs(): Metric = unwrap(this).consumedLCUs().let(Metric::wrap)
+    override fun consumedLcUs(): Metric = unwrap(this).consumedLCUs().let(Metric::wrap)
 
-    public override fun consumedLcUs(arg0: MetricOptions): Metric =
+    override fun consumedLcUs(arg0: MetricOptions): Metric =
         unwrap(this).consumedLCUs(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18e8e39bc441acca7c83d0b93ee82feb5719d75ccb2df798d695dbe35e061cf0")
-    public override fun consumedLcUs(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun consumedLcUs(arg0: MetricOptions.Builder.() -> Unit): Metric =
         consumedLcUs(MetricOptions(arg0))
 
-    public override fun custom(arg0: String): Metric = unwrap(this).custom(arg0).let(Metric::wrap)
+    override fun custom(arg0: String): Metric = unwrap(this).custom(arg0).let(Metric::wrap)
 
-    public override fun custom(arg0: String, arg1: MetricOptions): Metric =
-        unwrap(this).custom(arg0, arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
+    override fun custom(arg0: String, arg1: MetricOptions): Metric = unwrap(this).custom(arg0,
+        arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3a7bf310cfbfe77339a32a3f576ae6834193015bd367fe25d8280f53f24860b")
-    public override fun custom(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric =
-        custom(arg0, MetricOptions(arg1))
+    override fun custom(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric = custom(arg0,
+        MetricOptions(arg1))
 
-    public override fun newFlowCount(): Metric = unwrap(this).newFlowCount().let(Metric::wrap)
+    override fun newFlowCount(): Metric = unwrap(this).newFlowCount().let(Metric::wrap)
 
-    public override fun newFlowCount(arg0: MetricOptions): Metric =
+    override fun newFlowCount(arg0: MetricOptions): Metric =
         unwrap(this).newFlowCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ff04603e17644e75cf1646a7029b51c1fa41808e56215c629f056760e352bad")
-    public override fun newFlowCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun newFlowCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
         newFlowCount(MetricOptions(arg0))
 
-    public override fun processedBytes(): Metric = unwrap(this).processedBytes().let(Metric::wrap)
+    override fun processedBytes(): Metric = unwrap(this).processedBytes().let(Metric::wrap)
 
-    public override fun processedBytes(arg0: MetricOptions): Metric =
+    override fun processedBytes(arg0: MetricOptions): Metric =
         unwrap(this).processedBytes(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0834009453def8be68d52ce6251707f95f5284610a225d554c4471bca1f54d3b")
-    public override fun processedBytes(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun processedBytes(arg0: MetricOptions.Builder.() -> Unit): Metric =
         processedBytes(MetricOptions(arg0))
 
-    public override fun tcpClientResetCount(): Metric =
+    override fun tcpClientResetCount(): Metric =
         unwrap(this).tcpClientResetCount().let(Metric::wrap)
 
-    public override fun tcpClientResetCount(arg0: MetricOptions): Metric =
+    override fun tcpClientResetCount(arg0: MetricOptions): Metric =
         unwrap(this).tcpClientResetCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("45c8943b67a2585f45f923161100699260880bcd39738a9d5d24f6d8f24821e6")
-    public override fun tcpClientResetCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun tcpClientResetCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
         tcpClientResetCount(MetricOptions(arg0))
 
-    public override fun tcpElbResetCount(): Metric =
-        unwrap(this).tcpElbResetCount().let(Metric::wrap)
+    override fun tcpElbResetCount(): Metric = unwrap(this).tcpElbResetCount().let(Metric::wrap)
 
-    public override fun tcpElbResetCount(arg0: MetricOptions): Metric =
+    override fun tcpElbResetCount(arg0: MetricOptions): Metric =
         unwrap(this).tcpElbResetCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c5f8cbc5fd289799693a66e35c1763ed4e441e12f73d926e2dfe5e15ccb983b9")
-    public override fun tcpElbResetCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun tcpElbResetCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
         tcpElbResetCount(MetricOptions(arg0))
 
-    public override fun tcpTargetResetCount(): Metric =
+    override fun tcpTargetResetCount(): Metric =
         unwrap(this).tcpTargetResetCount().let(Metric::wrap)
 
-    public override fun tcpTargetResetCount(arg0: MetricOptions): Metric =
+    override fun tcpTargetResetCount(arg0: MetricOptions): Metric =
         unwrap(this).tcpTargetResetCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f54be02520e4435b9ab84a7d81541dc666e12059b56d7e98c38f8e427fc3c8e3")
-    public override fun tcpTargetResetCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun tcpTargetResetCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
         tcpTargetResetCount(MetricOptions(arg0))
   }
 

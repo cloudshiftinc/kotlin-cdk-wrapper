@@ -118,53 +118,37 @@ public open class CfnTopic internal constructor(
   }
 
   public interface Builder {
-    public fun archivePolicy(archivePolicy: Any) {
-    }
+    public fun archivePolicy(archivePolicy: Any)
 
-    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
-    }
+    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean)
 
-    public fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
-    }
+    public fun contentBasedDeduplication(contentBasedDeduplication: IResolvable)
 
-    public fun dataProtectionPolicy(dataProtectionPolicy: Any) {
-    }
+    public fun dataProtectionPolicy(dataProtectionPolicy: Any)
 
-    public fun deliveryStatusLogging(deliveryStatusLogging: IResolvable) {
-    }
+    public fun deliveryStatusLogging(deliveryStatusLogging: IResolvable)
 
-    public fun deliveryStatusLogging(deliveryStatusLogging: List<Any>) {
-    }
+    public fun deliveryStatusLogging(deliveryStatusLogging: List<Any>)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun fifoTopic(fifoTopic: Boolean) {
-    }
+    public fun fifoTopic(fifoTopic: Boolean)
 
-    public fun fifoTopic(fifoTopic: IResolvable) {
-    }
+    public fun fifoTopic(fifoTopic: IResolvable)
 
-    public fun kmsMasterKeyId(kmsMasterKeyId: String) {
-    }
+    public fun kmsMasterKeyId(kmsMasterKeyId: String)
 
-    public fun signatureVersion(signatureVersion: String) {
-    }
+    public fun signatureVersion(signatureVersion: String)
 
-    public fun subscription(subscription: IResolvable) {
-    }
+    public fun subscription(subscription: IResolvable)
 
-    public fun subscription(subscription: List<Any>) {
-    }
+    public fun subscription(subscription: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun topicName(topicName: String) {
-    }
+    public fun topicName(topicName: String)
 
-    public fun tracingConfig(tracingConfig: String) {
-    }
+    public fun tracingConfig(tracingConfig: String)
   }
 
   private class BuilderImpl(
@@ -174,67 +158,67 @@ public open class CfnTopic internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sns.CfnTopic.Builder =
         software.amazon.awscdk.services.sns.CfnTopic.Builder.create(scope, id)
 
-    public override fun archivePolicy(archivePolicy: Any) {
+    override fun archivePolicy(archivePolicy: Any) {
       cdkBuilder.archivePolicy(archivePolicy)
     }
 
-    public override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
+    override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication)
     }
 
-    public override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
+    override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable::unwrap))
     }
 
-    public override fun dataProtectionPolicy(dataProtectionPolicy: Any) {
+    override fun dataProtectionPolicy(dataProtectionPolicy: Any) {
       cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
     }
 
-    public override fun deliveryStatusLogging(deliveryStatusLogging: IResolvable) {
+    override fun deliveryStatusLogging(deliveryStatusLogging: IResolvable) {
       cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.let(IResolvable::unwrap))
     }
 
-    public override fun deliveryStatusLogging(deliveryStatusLogging: List<Any>) {
+    override fun deliveryStatusLogging(deliveryStatusLogging: List<Any>) {
       cdkBuilder.deliveryStatusLogging(deliveryStatusLogging)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun fifoTopic(fifoTopic: Boolean) {
+    override fun fifoTopic(fifoTopic: Boolean) {
       cdkBuilder.fifoTopic(fifoTopic)
     }
 
-    public override fun fifoTopic(fifoTopic: IResolvable) {
+    override fun fifoTopic(fifoTopic: IResolvable) {
       cdkBuilder.fifoTopic(fifoTopic.let(IResolvable::unwrap))
     }
 
-    public override fun kmsMasterKeyId(kmsMasterKeyId: String) {
+    override fun kmsMasterKeyId(kmsMasterKeyId: String) {
       cdkBuilder.kmsMasterKeyId(kmsMasterKeyId)
     }
 
-    public override fun signatureVersion(signatureVersion: String) {
+    override fun signatureVersion(signatureVersion: String) {
       cdkBuilder.signatureVersion(signatureVersion)
     }
 
-    public override fun subscription(subscription: IResolvable) {
+    override fun subscription(subscription: IResolvable) {
       cdkBuilder.subscription(subscription.let(IResolvable::unwrap))
     }
 
-    public override fun subscription(subscription: List<Any>) {
+    override fun subscription(subscription: List<Any>) {
       cdkBuilder.subscription(subscription)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun topicName(topicName: String) {
+    override fun topicName(topicName: String) {
       cdkBuilder.topicName(topicName)
     }
 
-    public override fun tracingConfig(tracingConfig: String) {
+    override fun tracingConfig(tracingConfig: String) {
       cdkBuilder.tracingConfig(tracingConfig)
     }
 
@@ -272,17 +256,13 @@ public open class CfnTopic internal constructor(
     public fun successFeedbackSampleRate(): String? = unwrap(this).getSuccessFeedbackSampleRate()
 
     public interface Builder {
-      public fun failureFeedbackRoleArn(failureFeedbackRoleArn: String) {
-      }
+      public fun failureFeedbackRoleArn(failureFeedbackRoleArn: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun successFeedbackRoleArn(successFeedbackRoleArn: String) {
-      }
+      public fun successFeedbackRoleArn(successFeedbackRoleArn: String)
 
-      public fun successFeedbackSampleRate(successFeedbackSampleRate: String) {
-      }
+      public fun successFeedbackSampleRate(successFeedbackSampleRate: String)
     }
 
     private class BuilderImpl : Builder {
@@ -290,19 +270,19 @@ public open class CfnTopic internal constructor(
           software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty.Builder =
           software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty.builder()
 
-      public override fun failureFeedbackRoleArn(failureFeedbackRoleArn: String) {
+      override fun failureFeedbackRoleArn(failureFeedbackRoleArn: String) {
         cdkBuilder.failureFeedbackRoleArn(failureFeedbackRoleArn)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun successFeedbackRoleArn(successFeedbackRoleArn: String) {
+      override fun successFeedbackRoleArn(successFeedbackRoleArn: String) {
         cdkBuilder.successFeedbackRoleArn(successFeedbackRoleArn)
       }
 
-      public override fun successFeedbackSampleRate(successFeedbackSampleRate: String) {
+      override fun successFeedbackSampleRate(successFeedbackSampleRate: String) {
         cdkBuilder.successFeedbackSampleRate(successFeedbackSampleRate)
       }
 
@@ -313,15 +293,13 @@ public open class CfnTopic internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sns.CfnTopic.LoggingConfigProperty,
     ) : LoggingConfigProperty {
-      public override fun failureFeedbackRoleArn(): String? =
-          unwrap(this).getFailureFeedbackRoleArn()
+      override fun failureFeedbackRoleArn(): String? = unwrap(this).getFailureFeedbackRoleArn()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun successFeedbackRoleArn(): String? =
-          unwrap(this).getSuccessFeedbackRoleArn()
+      override fun successFeedbackRoleArn(): String? = unwrap(this).getSuccessFeedbackRoleArn()
 
-      public override fun successFeedbackSampleRate(): String? =
+      override fun successFeedbackSampleRate(): String? =
           unwrap(this).getSuccessFeedbackSampleRate()
     }
 
@@ -351,11 +329,9 @@ public open class CfnTopic internal constructor(
     public fun protocol(): String
 
     public interface Builder {
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -363,11 +339,11 @@ public open class CfnTopic internal constructor(
           software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty.Builder =
           software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty.builder()
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -378,9 +354,9 @@ public open class CfnTopic internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sns.CfnTopic.SubscriptionProperty,
     ) : SubscriptionProperty {
-      public override fun endpoint(): String = unwrap(this).getEndpoint()
+      override fun endpoint(): String = unwrap(this).getEndpoint()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
     }
 
     public companion object {

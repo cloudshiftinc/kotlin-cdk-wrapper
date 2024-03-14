@@ -13,46 +13,41 @@ public open class Integration internal constructor(
       unwrap(this).bind(_method.let(Method::unwrap)).let(IntegrationConfig::wrap)
 
   public interface Builder {
-    public fun integrationHttpMethod(integrationHttpMethod: String) {
-    }
+    public fun integrationHttpMethod(integrationHttpMethod: String)
 
-    public fun options(options: IntegrationOptions) {
-    }
+    public fun options(options: IntegrationOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc199e2f86a9a6366f5ffe8ba92e0e2672d1e026c257ca1eaa91f561b6f2f16d")
-    public fun options(options: IntegrationOptions.Builder.() -> Unit) {
-    }
+    public fun options(options: IntegrationOptions.Builder.() -> Unit)
 
-    public fun type(type: IntegrationType) {
-    }
+    public fun type(type: IntegrationType)
 
-    public fun uri(uri: Any) {
-    }
+    public fun uri(uri: Any)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.Integration.Builder =
         software.amazon.awscdk.services.apigateway.Integration.Builder.create()
 
-    public override fun integrationHttpMethod(integrationHttpMethod: String) {
+    override fun integrationHttpMethod(integrationHttpMethod: String) {
       cdkBuilder.integrationHttpMethod(integrationHttpMethod)
     }
 
-    public override fun options(options: IntegrationOptions) {
+    override fun options(options: IntegrationOptions) {
       cdkBuilder.options(options.let(IntegrationOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc199e2f86a9a6366f5ffe8ba92e0e2672d1e026c257ca1eaa91f561b6f2f16d")
-    public override fun options(options: IntegrationOptions.Builder.() -> Unit): Unit =
+    override fun options(options: IntegrationOptions.Builder.() -> Unit): Unit =
         options(IntegrationOptions(options))
 
-    public override fun type(type: IntegrationType) {
+    override fun type(type: IntegrationType) {
       cdkBuilder.type(type.let(IntegrationType::unwrap))
     }
 
-    public override fun uri(uri: Any) {
+    override fun uri(uri: Any) {
       cdkBuilder.uri(uri)
     }
 

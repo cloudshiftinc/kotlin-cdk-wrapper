@@ -9,22 +9,20 @@ public interface AuthorizationConfig {
   public fun iam(): String? = unwrap(this).getIam()
 
   public interface Builder {
-    public fun accessPointId(accessPointId: String) {
-    }
+    public fun accessPointId(accessPointId: String)
 
-    public fun iam(iam: String) {
-    }
+    public fun iam(iam: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.AuthorizationConfig.Builder =
         software.amazon.awscdk.services.ecs.AuthorizationConfig.builder()
 
-    public override fun accessPointId(accessPointId: String) {
+    override fun accessPointId(accessPointId: String) {
       cdkBuilder.accessPointId(accessPointId)
     }
 
-    public override fun iam(iam: String) {
+    override fun iam(iam: String) {
       cdkBuilder.iam(iam)
     }
 
@@ -34,9 +32,9 @@ public interface AuthorizationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.AuthorizationConfig,
   ) : AuthorizationConfig {
-    public override fun accessPointId(): String? = unwrap(this).getAccessPointId()
+    override fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
-    public override fun iam(): String? = unwrap(this).getIam()
+    override fun iam(): String? = unwrap(this).getIam()
   }
 
   public companion object {

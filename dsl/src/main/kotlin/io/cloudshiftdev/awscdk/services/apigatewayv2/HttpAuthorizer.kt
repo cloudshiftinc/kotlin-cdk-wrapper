@@ -17,35 +17,25 @@ public open class HttpAuthorizer internal constructor(
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
   public interface Builder {
-    public fun authorizerName(authorizerName: String) {
-    }
+    public fun authorizerName(authorizerName: String)
 
-    public fun authorizerUri(authorizerUri: String) {
-    }
+    public fun authorizerUri(authorizerUri: String)
 
-    public fun enableSimpleResponses(enableSimpleResponses: Boolean) {
-    }
+    public fun enableSimpleResponses(enableSimpleResponses: Boolean)
 
-    public fun httpApi(httpApi: IHttpApi) {
-    }
+    public fun httpApi(httpApi: IHttpApi)
 
-    public fun identitySource(identitySource: List<String>) {
-    }
+    public fun identitySource(identitySource: List<String>)
 
-    public fun jwtAudience(jwtAudience: List<String>) {
-    }
+    public fun jwtAudience(jwtAudience: List<String>)
 
-    public fun jwtIssuer(jwtIssuer: String) {
-    }
+    public fun jwtIssuer(jwtIssuer: String)
 
-    public fun payloadFormatVersion(payloadFormatVersion: AuthorizerPayloadVersion) {
-    }
+    public fun payloadFormatVersion(payloadFormatVersion: AuthorizerPayloadVersion)
 
-    public fun resultsCacheTtl(resultsCacheTtl: Duration) {
-    }
+    public fun resultsCacheTtl(resultsCacheTtl: Duration)
 
-    public fun type(type: HttpAuthorizerType) {
-    }
+    public fun type(type: HttpAuthorizerType)
   }
 
   private class BuilderImpl(
@@ -55,43 +45,43 @@ public open class HttpAuthorizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer.Builder.create(scope, id)
 
-    public override fun authorizerName(authorizerName: String) {
+    override fun authorizerName(authorizerName: String) {
       cdkBuilder.authorizerName(authorizerName)
     }
 
-    public override fun authorizerUri(authorizerUri: String) {
+    override fun authorizerUri(authorizerUri: String) {
       cdkBuilder.authorizerUri(authorizerUri)
     }
 
-    public override fun enableSimpleResponses(enableSimpleResponses: Boolean) {
+    override fun enableSimpleResponses(enableSimpleResponses: Boolean) {
       cdkBuilder.enableSimpleResponses(enableSimpleResponses)
     }
 
-    public override fun httpApi(httpApi: IHttpApi) {
+    override fun httpApi(httpApi: IHttpApi) {
       cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
     }
 
-    public override fun identitySource(identitySource: List<String>) {
+    override fun identitySource(identitySource: List<String>) {
       cdkBuilder.identitySource(identitySource)
     }
 
-    public override fun jwtAudience(jwtAudience: List<String>) {
+    override fun jwtAudience(jwtAudience: List<String>) {
       cdkBuilder.jwtAudience(jwtAudience)
     }
 
-    public override fun jwtIssuer(jwtIssuer: String) {
+    override fun jwtIssuer(jwtIssuer: String) {
       cdkBuilder.jwtIssuer(jwtIssuer)
     }
 
-    public override fun payloadFormatVersion(payloadFormatVersion: AuthorizerPayloadVersion) {
+    override fun payloadFormatVersion(payloadFormatVersion: AuthorizerPayloadVersion) {
       cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(AuthorizerPayloadVersion::unwrap))
     }
 
-    public override fun resultsCacheTtl(resultsCacheTtl: Duration) {
+    override fun resultsCacheTtl(resultsCacheTtl: Duration) {
       cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
     }
 
-    public override fun type(type: HttpAuthorizerType) {
+    override fun type(type: HttpAuthorizerType) {
       cdkBuilder.type(type.let(HttpAuthorizerType::unwrap))
     }
 

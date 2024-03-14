@@ -39,34 +39,25 @@ public open class Rule internal constructor(
   public override fun ruleName(): String = unwrap(this).getRuleName()
 
   public interface Builder {
-    public fun crossStackScope(crossStackScope: CloudshiftdevConstructsConstruct) {
-    }
+    public fun crossStackScope(crossStackScope: CloudshiftdevConstructsConstruct)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun eventBus(eventBus: IEventBus) {
-    }
+    public fun eventBus(eventBus: IEventBus)
 
-    public fun eventPattern(eventPattern: EventPattern) {
-    }
+    public fun eventPattern(eventPattern: EventPattern)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("994ae001b9447828d08dd212be4705a3b78bdf5259daaf02800345a35fa9ad3d")
-    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit) {
-    }
+    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun schedule(schedule: Schedule) {
-    }
+    public fun schedule(schedule: Schedule)
 
-    public fun targets(targets: List<IRuleTarget>) {
-    }
+    public fun targets(targets: List<IRuleTarget>)
   }
 
   private class BuilderImpl(
@@ -76,40 +67,40 @@ public open class Rule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.Rule.Builder =
         software.amazon.awscdk.services.events.Rule.Builder.create(scope, id)
 
-    public override fun crossStackScope(crossStackScope: CloudshiftdevConstructsConstruct) {
+    override fun crossStackScope(crossStackScope: CloudshiftdevConstructsConstruct) {
       cdkBuilder.crossStackScope(crossStackScope.let(CloudshiftdevConstructsConstruct::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun eventBus(eventBus: IEventBus) {
+    override fun eventBus(eventBus: IEventBus) {
       cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
     }
 
-    public override fun eventPattern(eventPattern: EventPattern) {
+    override fun eventPattern(eventPattern: EventPattern) {
       cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("994ae001b9447828d08dd212be4705a3b78bdf5259daaf02800345a35fa9ad3d")
-    public override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
+    override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
         eventPattern(EventPattern(eventPattern))
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun schedule(schedule: Schedule) {
+    override fun schedule(schedule: Schedule) {
       cdkBuilder.schedule(schedule.let(Schedule::unwrap))
     }
 
-    public override fun targets(targets: List<IRuleTarget>) {
+    override fun targets(targets: List<IRuleTarget>) {
       cdkBuilder.targets(targets.map(IRuleTarget::unwrap))
     }
 

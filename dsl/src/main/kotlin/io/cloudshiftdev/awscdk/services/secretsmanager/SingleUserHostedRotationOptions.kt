@@ -23,25 +23,19 @@ public interface SingleUserHostedRotationOptions {
       unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
 
   public interface Builder {
-    public fun excludeCharacters(excludeCharacters: String) {
-    }
+    public fun excludeCharacters(excludeCharacters: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a8fc7793735ffad2acca3bfa30c4bf13619d228febd80f66d9d2a5c0c2b8232e")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -49,29 +43,29 @@ public interface SingleUserHostedRotationOptions {
         software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions.Builder =
         software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions.builder()
 
-    public override fun excludeCharacters(excludeCharacters: String) {
+    override fun excludeCharacters(excludeCharacters: String) {
       cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a8fc7793735ffad2acca3bfa30c4bf13619d228febd80f66d9d2a5c0c2b8232e")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build():
@@ -83,16 +77,16 @@ public interface SingleUserHostedRotationOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions,
   ) : SingleUserHostedRotationOptions {
-    public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-    public override fun functionName(): String? = unwrap(this).getFunctionName()
+    override fun functionName(): String? = unwrap(this).getFunctionName()
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    public override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
+    override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
-    public override fun vpcSubnets(): SubnetSelection? =
+    override fun vpcSubnets(): SubnetSelection? =
         unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
   }
 

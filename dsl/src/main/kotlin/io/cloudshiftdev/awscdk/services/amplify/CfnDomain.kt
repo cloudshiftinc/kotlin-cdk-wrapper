@@ -121,55 +121,40 @@ public open class CfnDomain internal constructor(
   }
 
   public interface Builder {
-    public fun appId(appId: String) {
-    }
+    public fun appId(appId: String)
 
-    public fun autoSubDomainCreationPatterns(autoSubDomainCreationPatterns: List<String>) {
-    }
+    public fun autoSubDomainCreationPatterns(autoSubDomainCreationPatterns: List<String>)
 
-    public fun autoSubDomainIamRole(autoSubDomainIamRole: String) {
-    }
+    public fun autoSubDomainIamRole(autoSubDomainIamRole: String)
 
-    public fun certificate(certificate: IResolvable) {
-    }
+    public fun certificate(certificate: IResolvable)
 
-    public fun certificate(certificate: CertificateProperty) {
-    }
+    public fun certificate(certificate: CertificateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dba241ba2559bec2214c0d05d5c597cbd5bc0702b76b33a82125935135728c64")
-    public fun certificate(certificate: CertificateProperty.Builder.() -> Unit) {
-    }
+    public fun certificate(certificate: CertificateProperty.Builder.() -> Unit)
 
-    public fun certificateSettings(certificateSettings: IResolvable) {
-    }
+    public fun certificateSettings(certificateSettings: IResolvable)
 
-    public fun certificateSettings(certificateSettings: CertificateSettingsProperty) {
-    }
+    public fun certificateSettings(certificateSettings: CertificateSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("24aef84ec6083e0cc92f1f4e75c3a6a1a183923d7a3b8111b5fd53349c26a456")
     public
-        fun certificateSettings(certificateSettings: CertificateSettingsProperty.Builder.() -> Unit) {
-    }
+        fun certificateSettings(certificateSettings: CertificateSettingsProperty.Builder.() -> Unit)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun enableAutoSubDomain(enableAutoSubDomain: Boolean) {
-    }
+    public fun enableAutoSubDomain(enableAutoSubDomain: Boolean)
 
-    public fun enableAutoSubDomain(enableAutoSubDomain: IResolvable) {
-    }
+    public fun enableAutoSubDomain(enableAutoSubDomain: IResolvable)
 
-    public fun subDomainSettings(subDomainSettings: IResolvable) {
-    }
+    public fun subDomainSettings(subDomainSettings: IResolvable)
 
-    public fun subDomainSettings(subDomainSettings: List<Any>) {
-    }
+    public fun subDomainSettings(subDomainSettings: List<Any>)
 
-    public fun updateStatus(updateStatus: String) {
-    }
+    public fun updateStatus(updateStatus: String)
   }
 
   private class BuilderImpl(
@@ -179,66 +164,66 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amplify.CfnDomain.Builder =
         software.amazon.awscdk.services.amplify.CfnDomain.Builder.create(scope, id)
 
-    public override fun appId(appId: String) {
+    override fun appId(appId: String) {
       cdkBuilder.appId(appId)
     }
 
-    public override fun autoSubDomainCreationPatterns(autoSubDomainCreationPatterns: List<String>) {
+    override fun autoSubDomainCreationPatterns(autoSubDomainCreationPatterns: List<String>) {
       cdkBuilder.autoSubDomainCreationPatterns(autoSubDomainCreationPatterns)
     }
 
-    public override fun autoSubDomainIamRole(autoSubDomainIamRole: String) {
+    override fun autoSubDomainIamRole(autoSubDomainIamRole: String) {
       cdkBuilder.autoSubDomainIamRole(autoSubDomainIamRole)
     }
 
-    public override fun certificate(certificate: IResolvable) {
+    override fun certificate(certificate: IResolvable) {
       cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
     }
 
-    public override fun certificate(certificate: CertificateProperty) {
+    override fun certificate(certificate: CertificateProperty) {
       cdkBuilder.certificate(certificate.let(CertificateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dba241ba2559bec2214c0d05d5c597cbd5bc0702b76b33a82125935135728c64")
-    public override fun certificate(certificate: CertificateProperty.Builder.() -> Unit): Unit =
+    override fun certificate(certificate: CertificateProperty.Builder.() -> Unit): Unit =
         certificate(CertificateProperty(certificate))
 
-    public override fun certificateSettings(certificateSettings: IResolvable) {
+    override fun certificateSettings(certificateSettings: IResolvable) {
       cdkBuilder.certificateSettings(certificateSettings.let(IResolvable::unwrap))
     }
 
-    public override fun certificateSettings(certificateSettings: CertificateSettingsProperty) {
+    override fun certificateSettings(certificateSettings: CertificateSettingsProperty) {
       cdkBuilder.certificateSettings(certificateSettings.let(CertificateSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("24aef84ec6083e0cc92f1f4e75c3a6a1a183923d7a3b8111b5fd53349c26a456")
-    public override
+    override
         fun certificateSettings(certificateSettings: CertificateSettingsProperty.Builder.() -> Unit):
         Unit = certificateSettings(CertificateSettingsProperty(certificateSettings))
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun enableAutoSubDomain(enableAutoSubDomain: Boolean) {
+    override fun enableAutoSubDomain(enableAutoSubDomain: Boolean) {
       cdkBuilder.enableAutoSubDomain(enableAutoSubDomain)
     }
 
-    public override fun enableAutoSubDomain(enableAutoSubDomain: IResolvable) {
+    override fun enableAutoSubDomain(enableAutoSubDomain: IResolvable) {
       cdkBuilder.enableAutoSubDomain(enableAutoSubDomain.let(IResolvable::unwrap))
     }
 
-    public override fun subDomainSettings(subDomainSettings: IResolvable) {
+    override fun subDomainSettings(subDomainSettings: IResolvable) {
       cdkBuilder.subDomainSettings(subDomainSettings.let(IResolvable::unwrap))
     }
 
-    public override fun subDomainSettings(subDomainSettings: List<Any>) {
+    override fun subDomainSettings(subDomainSettings: List<Any>) {
       cdkBuilder.subDomainSettings(subDomainSettings)
     }
 
-    public override fun updateStatus(updateStatus: String) {
+    override fun updateStatus(updateStatus: String) {
       cdkBuilder.updateStatus(updateStatus)
     }
 
@@ -272,11 +257,9 @@ public open class CfnDomain internal constructor(
     public fun prefix(): String
 
     public interface Builder {
-      public fun branchName(branchName: String) {
-      }
+      public fun branchName(branchName: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -284,11 +267,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty.Builder =
           software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty.builder()
 
-      public override fun branchName(branchName: String) {
+      override fun branchName(branchName: String) {
         cdkBuilder.branchName(branchName)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -300,9 +283,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplify.CfnDomain.SubDomainSettingProperty,
     ) : SubDomainSettingProperty {
-      public override fun branchName(): String = unwrap(this).getBranchName()
+      override fun branchName(): String = unwrap(this).getBranchName()
 
-      public override fun prefix(): String = unwrap(this).getPrefix()
+      override fun prefix(): String = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -334,14 +317,11 @@ public open class CfnDomain internal constructor(
         unwrap(this).getCertificateVerificationDnsRecord()
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun certificateType(certificateType: String) {
-      }
+      public fun certificateType(certificateType: String)
 
-      public fun certificateVerificationDnsRecord(certificateVerificationDnsRecord: String) {
-      }
+      public fun certificateVerificationDnsRecord(certificateVerificationDnsRecord: String)
     }
 
     private class BuilderImpl : Builder {
@@ -349,16 +329,15 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty.Builder =
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun certificateType(certificateType: String) {
+      override fun certificateType(certificateType: String) {
         cdkBuilder.certificateType(certificateType)
       }
 
-      public override
-          fun certificateVerificationDnsRecord(certificateVerificationDnsRecord: String) {
+      override fun certificateVerificationDnsRecord(certificateVerificationDnsRecord: String) {
         cdkBuilder.certificateVerificationDnsRecord(certificateVerificationDnsRecord)
       }
 
@@ -369,11 +348,11 @@ public open class CfnDomain internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.amplify.CfnDomain.CertificateProperty,
     ) : CertificateProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
-      public override fun certificateType(): String? = unwrap(this).getCertificateType()
+      override fun certificateType(): String? = unwrap(this).getCertificateType()
 
-      public override fun certificateVerificationDnsRecord(): String? =
+      override fun certificateVerificationDnsRecord(): String? =
           unwrap(this).getCertificateVerificationDnsRecord()
     }
 
@@ -403,11 +382,9 @@ public open class CfnDomain internal constructor(
     public fun customCertificateArn(): String? = unwrap(this).getCustomCertificateArn()
 
     public interface Builder {
-      public fun certificateType(certificateType: String) {
-      }
+      public fun certificateType(certificateType: String)
 
-      public fun customCertificateArn(customCertificateArn: String) {
-      }
+      public fun customCertificateArn(customCertificateArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -415,11 +392,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty.Builder =
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty.builder()
 
-      public override fun certificateType(certificateType: String) {
+      override fun certificateType(certificateType: String) {
         cdkBuilder.certificateType(certificateType)
       }
 
-      public override fun customCertificateArn(customCertificateArn: String) {
+      override fun customCertificateArn(customCertificateArn: String) {
         cdkBuilder.customCertificateArn(customCertificateArn)
       }
 
@@ -432,9 +409,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplify.CfnDomain.CertificateSettingsProperty,
     ) : CertificateSettingsProperty {
-      public override fun certificateType(): String? = unwrap(this).getCertificateType()
+      override fun certificateType(): String? = unwrap(this).getCertificateType()
 
-      public override fun customCertificateArn(): String? = unwrap(this).getCustomCertificateArn()
+      override fun customCertificateArn(): String? = unwrap(this).getCustomCertificateArn()
     }
 
     public companion object {

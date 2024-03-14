@@ -49,20 +49,15 @@ public open class CfnStackUserAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun authenticationType(authenticationType: String) {
-    }
+    public fun authenticationType(authenticationType: String)
 
-    public fun sendEmailNotification(sendEmailNotification: Boolean) {
-    }
+    public fun sendEmailNotification(sendEmailNotification: Boolean)
 
-    public fun sendEmailNotification(sendEmailNotification: IResolvable) {
-    }
+    public fun sendEmailNotification(sendEmailNotification: IResolvable)
 
-    public fun stackName(stackName: String) {
-    }
+    public fun stackName(stackName: String)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnStackUserAssociation internal constructor(
         software.amazon.awscdk.services.appstream.CfnStackUserAssociation.Builder =
         software.amazon.awscdk.services.appstream.CfnStackUserAssociation.Builder.create(scope, id)
 
-    public override fun authenticationType(authenticationType: String) {
+    override fun authenticationType(authenticationType: String) {
       cdkBuilder.authenticationType(authenticationType)
     }
 
-    public override fun sendEmailNotification(sendEmailNotification: Boolean) {
+    override fun sendEmailNotification(sendEmailNotification: Boolean) {
       cdkBuilder.sendEmailNotification(sendEmailNotification)
     }
 
-    public override fun sendEmailNotification(sendEmailNotification: IResolvable) {
+    override fun sendEmailNotification(sendEmailNotification: IResolvable) {
       cdkBuilder.sendEmailNotification(sendEmailNotification.let(IResolvable::unwrap))
     }
 
-    public override fun stackName(stackName: String) {
+    override fun stackName(stackName: String) {
       cdkBuilder.stackName(stackName)
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 

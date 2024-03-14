@@ -32,20 +32,15 @@ public open class JobQueue internal constructor(
       unwrap(this).getSchedulingPolicy()?.let(ISchedulingPolicy::wrap)
 
   public interface Builder {
-    public fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>) {
-    }
+    public fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun jobQueueName(jobQueueName: String) {
-    }
+    public fun jobQueueName(jobQueueName: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun schedulingPolicy(schedulingPolicy: ISchedulingPolicy) {
-    }
+    public fun schedulingPolicy(schedulingPolicy: ISchedulingPolicy)
   }
 
   private class BuilderImpl(
@@ -55,23 +50,23 @@ public open class JobQueue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.JobQueue.Builder =
         software.amazon.awscdk.services.batch.JobQueue.Builder.create(scope, id)
 
-    public override fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>) {
+    override fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>) {
       cdkBuilder.computeEnvironments(computeEnvironments.map(OrderedComputeEnvironment::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun jobQueueName(jobQueueName: String) {
+    override fun jobQueueName(jobQueueName: String) {
       cdkBuilder.jobQueueName(jobQueueName)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun schedulingPolicy(schedulingPolicy: ISchedulingPolicy) {
+    override fun schedulingPolicy(schedulingPolicy: ISchedulingPolicy) {
       cdkBuilder.schedulingPolicy(schedulingPolicy.let(ISchedulingPolicy::unwrap))
     }
 

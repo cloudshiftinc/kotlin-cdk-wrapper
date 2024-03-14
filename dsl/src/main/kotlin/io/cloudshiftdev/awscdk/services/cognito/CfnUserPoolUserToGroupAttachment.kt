@@ -34,14 +34,11 @@ public open class CfnUserPoolUserToGroupAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnUserPoolUserToGroupAttachment internal constructor(
         software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment.Builder.create(scope,
         id)
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 

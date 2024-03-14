@@ -55,20 +55,15 @@ public open class CfnPrompt internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun s3Uri(s3Uri: String) {
-    }
+    public fun s3Uri(s3Uri: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,23 +73,23 @@ public open class CfnPrompt internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnPrompt.Builder =
         software.amazon.awscdk.services.connect.CfnPrompt.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun s3Uri(s3Uri: String) {
+    override fun s3Uri(s3Uri: String) {
       cdkBuilder.s3Uri(s3Uri)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

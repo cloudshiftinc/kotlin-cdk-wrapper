@@ -53,20 +53,15 @@ public open class CfnContactList internal constructor(
   }
 
   public interface Builder {
-    public fun contactListName(contactListName: String) {
-    }
+    public fun contactListName(contactListName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun topics(topics: IResolvable) {
-    }
+    public fun topics(topics: IResolvable)
 
-    public fun topics(topics: List<Any>) {
-    }
+    public fun topics(topics: List<Any>)
   }
 
   private class BuilderImpl(
@@ -76,23 +71,23 @@ public open class CfnContactList internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnContactList.Builder =
         software.amazon.awscdk.services.ses.CfnContactList.Builder.create(scope, id)
 
-    public override fun contactListName(contactListName: String) {
+    override fun contactListName(contactListName: String) {
       cdkBuilder.contactListName(contactListName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun topics(topics: IResolvable) {
+    override fun topics(topics: IResolvable) {
       cdkBuilder.topics(topics.let(IResolvable::unwrap))
     }
 
-    public override fun topics(topics: List<Any>) {
+    override fun topics(topics: List<Any>) {
       cdkBuilder.topics(topics)
     }
 
@@ -130,17 +125,13 @@ public open class CfnContactList internal constructor(
     public fun topicName(): String
 
     public interface Builder {
-      public fun defaultSubscriptionStatus(defaultSubscriptionStatus: String) {
-      }
+      public fun defaultSubscriptionStatus(defaultSubscriptionStatus: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun displayName(displayName: String) {
-      }
+      public fun displayName(displayName: String)
 
-      public fun topicName(topicName: String) {
-      }
+      public fun topicName(topicName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -148,19 +139,19 @@ public open class CfnContactList internal constructor(
           software.amazon.awscdk.services.ses.CfnContactList.TopicProperty.Builder =
           software.amazon.awscdk.services.ses.CfnContactList.TopicProperty.builder()
 
-      public override fun defaultSubscriptionStatus(defaultSubscriptionStatus: String) {
+      override fun defaultSubscriptionStatus(defaultSubscriptionStatus: String) {
         cdkBuilder.defaultSubscriptionStatus(defaultSubscriptionStatus)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun displayName(displayName: String) {
+      override fun displayName(displayName: String) {
         cdkBuilder.displayName(displayName)
       }
 
-      public override fun topicName(topicName: String) {
+      override fun topicName(topicName: String) {
         cdkBuilder.topicName(topicName)
       }
 
@@ -171,14 +162,13 @@ public open class CfnContactList internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty,
     ) : TopicProperty {
-      public override fun defaultSubscriptionStatus(): String =
-          unwrap(this).getDefaultSubscriptionStatus()
+      override fun defaultSubscriptionStatus(): String = unwrap(this).getDefaultSubscriptionStatus()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun displayName(): String = unwrap(this).getDisplayName()
+      override fun displayName(): String = unwrap(this).getDisplayName()
 
-      public override fun topicName(): String = unwrap(this).getTopicName()
+      override fun topicName(): String = unwrap(this).getTopicName()
     }
 
     public companion object {

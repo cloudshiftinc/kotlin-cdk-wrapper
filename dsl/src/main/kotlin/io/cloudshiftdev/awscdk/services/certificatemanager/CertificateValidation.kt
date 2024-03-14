@@ -20,8 +20,7 @@ public open class CertificateValidation internal constructor(
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDns(hostedZone.let(IHostedZone::unwrap)).let(CertificateValidation::wrap)
 
     public open fun fromDnsMultiZone(hostedZones: Map<String, IHostedZone>): CertificateValidation =
-        software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDnsMultiZone(hostedZones.mapValues
-        { IHostedZone.unwrap(it.value)}).let(CertificateValidation::wrap)
+        software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDnsMultiZone(hostedZones.mapValues{IHostedZone.unwrap(it.value)}).let(CertificateValidation::wrap)
 
     public open fun fromEmail(): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromEmail().let(CertificateValidation::wrap)

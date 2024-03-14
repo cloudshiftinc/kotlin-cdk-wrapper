@@ -41,11 +41,9 @@ public open class CfnUserAccessLoggingSettings internal constructor(
   }
 
   public interface Builder {
-    public fun kinesisStreamArn(kinesisStreamArn: String) {
-    }
+    public fun kinesisStreamArn(kinesisStreamArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -57,11 +55,11 @@ public open class CfnUserAccessLoggingSettings internal constructor(
         software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings.Builder.create(scope,
         id)
 
-    public override fun kinesisStreamArn(kinesisStreamArn: String) {
+    override fun kinesisStreamArn(kinesisStreamArn: String) {
       cdkBuilder.kinesisStreamArn(kinesisStreamArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

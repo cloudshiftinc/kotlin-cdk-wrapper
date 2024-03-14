@@ -164,81 +164,57 @@ public open class CfnApi internal constructor(
   }
 
   public interface Builder {
-    public fun apiKeySelectionExpression(apiKeySelectionExpression: String) {
-    }
+    public fun apiKeySelectionExpression(apiKeySelectionExpression: String)
 
-    public fun basePath(basePath: String) {
-    }
+    public fun basePath(basePath: String)
 
-    public fun body(body: Any) {
-    }
+    public fun body(body: Any)
 
-    public fun bodyS3Location(bodyS3Location: IResolvable) {
-    }
+    public fun bodyS3Location(bodyS3Location: IResolvable)
 
-    public fun bodyS3Location(bodyS3Location: BodyS3LocationProperty) {
-    }
+    public fun bodyS3Location(bodyS3Location: BodyS3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a90237a320cf324f8dd5e9a6a50761ea24608581d85aecde0a7e6bc58d2a5eb")
-    public fun bodyS3Location(bodyS3Location: BodyS3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun bodyS3Location(bodyS3Location: BodyS3LocationProperty.Builder.() -> Unit)
 
-    public fun corsConfiguration(corsConfiguration: IResolvable) {
-    }
+    public fun corsConfiguration(corsConfiguration: IResolvable)
 
-    public fun corsConfiguration(corsConfiguration: CorsProperty) {
-    }
+    public fun corsConfiguration(corsConfiguration: CorsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f803d77858b6f8b040301865bed6b151f6f89b883c041b1bb83acae6a32dd00")
-    public fun corsConfiguration(corsConfiguration: CorsProperty.Builder.() -> Unit) {
-    }
+    public fun corsConfiguration(corsConfiguration: CorsProperty.Builder.() -> Unit)
 
-    public fun credentialsArn(credentialsArn: String) {
-    }
+    public fun credentialsArn(credentialsArn: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable)
 
-    public fun disableSchemaValidation(disableSchemaValidation: Boolean) {
-    }
+    public fun disableSchemaValidation(disableSchemaValidation: Boolean)
 
-    public fun disableSchemaValidation(disableSchemaValidation: IResolvable) {
-    }
+    public fun disableSchemaValidation(disableSchemaValidation: IResolvable)
 
-    public fun failOnWarnings(failOnWarnings: Boolean) {
-    }
+    public fun failOnWarnings(failOnWarnings: Boolean)
 
-    public fun failOnWarnings(failOnWarnings: IResolvable) {
-    }
+    public fun failOnWarnings(failOnWarnings: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun protocolType(protocolType: String) {
-    }
+    public fun protocolType(protocolType: String)
 
-    public fun routeKey(routeKey: String) {
-    }
+    public fun routeKey(routeKey: String)
 
-    public fun routeSelectionExpression(routeSelectionExpression: String) {
-    }
+    public fun routeSelectionExpression(routeSelectionExpression: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun target(target: String) {
-    }
+    public fun target(target: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -248,101 +224,101 @@ public open class CfnApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnApi.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnApi.Builder.create(scope, id)
 
-    public override fun apiKeySelectionExpression(apiKeySelectionExpression: String) {
+    override fun apiKeySelectionExpression(apiKeySelectionExpression: String) {
       cdkBuilder.apiKeySelectionExpression(apiKeySelectionExpression)
     }
 
-    public override fun basePath(basePath: String) {
+    override fun basePath(basePath: String) {
       cdkBuilder.basePath(basePath)
     }
 
-    public override fun body(body: Any) {
+    override fun body(body: Any) {
       cdkBuilder.body(body)
     }
 
-    public override fun bodyS3Location(bodyS3Location: IResolvable) {
+    override fun bodyS3Location(bodyS3Location: IResolvable) {
       cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun bodyS3Location(bodyS3Location: BodyS3LocationProperty) {
+    override fun bodyS3Location(bodyS3Location: BodyS3LocationProperty) {
       cdkBuilder.bodyS3Location(bodyS3Location.let(BodyS3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a90237a320cf324f8dd5e9a6a50761ea24608581d85aecde0a7e6bc58d2a5eb")
-    public override fun bodyS3Location(bodyS3Location: BodyS3LocationProperty.Builder.() -> Unit):
-        Unit = bodyS3Location(BodyS3LocationProperty(bodyS3Location))
+    override fun bodyS3Location(bodyS3Location: BodyS3LocationProperty.Builder.() -> Unit): Unit =
+        bodyS3Location(BodyS3LocationProperty(bodyS3Location))
 
-    public override fun corsConfiguration(corsConfiguration: IResolvable) {
+    override fun corsConfiguration(corsConfiguration: IResolvable) {
       cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun corsConfiguration(corsConfiguration: CorsProperty) {
+    override fun corsConfiguration(corsConfiguration: CorsProperty) {
       cdkBuilder.corsConfiguration(corsConfiguration.let(CorsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f803d77858b6f8b040301865bed6b151f6f89b883c041b1bb83acae6a32dd00")
-    public override fun corsConfiguration(corsConfiguration: CorsProperty.Builder.() -> Unit): Unit
-        = corsConfiguration(CorsProperty(corsConfiguration))
+    override fun corsConfiguration(corsConfiguration: CorsProperty.Builder.() -> Unit): Unit =
+        corsConfiguration(CorsProperty(corsConfiguration))
 
-    public override fun credentialsArn(credentialsArn: String) {
+    override fun credentialsArn(credentialsArn: String) {
       cdkBuilder.credentialsArn(credentialsArn)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun disableSchemaValidation(disableSchemaValidation: Boolean) {
+    override fun disableSchemaValidation(disableSchemaValidation: Boolean) {
       cdkBuilder.disableSchemaValidation(disableSchemaValidation)
     }
 
-    public override fun disableSchemaValidation(disableSchemaValidation: IResolvable) {
+    override fun disableSchemaValidation(disableSchemaValidation: IResolvable) {
       cdkBuilder.disableSchemaValidation(disableSchemaValidation.let(IResolvable::unwrap))
     }
 
-    public override fun failOnWarnings(failOnWarnings: Boolean) {
+    override fun failOnWarnings(failOnWarnings: Boolean) {
       cdkBuilder.failOnWarnings(failOnWarnings)
     }
 
-    public override fun failOnWarnings(failOnWarnings: IResolvable) {
+    override fun failOnWarnings(failOnWarnings: IResolvable) {
       cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun protocolType(protocolType: String) {
+    override fun protocolType(protocolType: String) {
       cdkBuilder.protocolType(protocolType)
     }
 
-    public override fun routeKey(routeKey: String) {
+    override fun routeKey(routeKey: String) {
       cdkBuilder.routeKey(routeKey)
     }
 
-    public override fun routeSelectionExpression(routeSelectionExpression: String) {
+    override fun routeSelectionExpression(routeSelectionExpression: String) {
       cdkBuilder.routeSelectionExpression(routeSelectionExpression)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun target(target: String) {
+    override fun target(target: String) {
       cdkBuilder.target(target)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -380,17 +356,13 @@ public open class CfnApi internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun etag(etag: String) {
-      }
+      public fun etag(etag: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -398,19 +370,19 @@ public open class CfnApi internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty.Builder =
           software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun etag(etag: String) {
+      override fun etag(etag: String) {
         cdkBuilder.etag(etag)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -422,13 +394,13 @@ public open class CfnApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty,
     ) : BodyS3LocationProperty {
-      public override fun bucket(): String? = unwrap(this).getBucket()
+      override fun bucket(): String? = unwrap(this).getBucket()
 
-      public override fun etag(): String? = unwrap(this).getEtag()
+      override fun etag(): String? = unwrap(this).getEtag()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -465,26 +437,19 @@ public open class CfnApi internal constructor(
     public fun maxAge(): Number? = unwrap(this).getMaxAge()
 
     public interface Builder {
-      public fun allowCredentials(allowCredentials: Boolean) {
-      }
+      public fun allowCredentials(allowCredentials: Boolean)
 
-      public fun allowCredentials(allowCredentials: IResolvable) {
-      }
+      public fun allowCredentials(allowCredentials: IResolvable)
 
-      public fun allowHeaders(allowHeaders: List<String>) {
-      }
+      public fun allowHeaders(allowHeaders: List<String>)
 
-      public fun allowMethods(allowMethods: List<String>) {
-      }
+      public fun allowMethods(allowMethods: List<String>)
 
-      public fun allowOrigins(allowOrigins: List<String>) {
-      }
+      public fun allowOrigins(allowOrigins: List<String>)
 
-      public fun exposeHeaders(exposeHeaders: List<String>) {
-      }
+      public fun exposeHeaders(exposeHeaders: List<String>)
 
-      public fun maxAge(maxAge: Number) {
-      }
+      public fun maxAge(maxAge: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -492,31 +457,31 @@ public open class CfnApi internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty.Builder =
           software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty.builder()
 
-      public override fun allowCredentials(allowCredentials: Boolean) {
+      override fun allowCredentials(allowCredentials: Boolean) {
         cdkBuilder.allowCredentials(allowCredentials)
       }
 
-      public override fun allowCredentials(allowCredentials: IResolvable) {
+      override fun allowCredentials(allowCredentials: IResolvable) {
         cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
       }
 
-      public override fun allowHeaders(allowHeaders: List<String>) {
+      override fun allowHeaders(allowHeaders: List<String>) {
         cdkBuilder.allowHeaders(allowHeaders)
       }
 
-      public override fun allowMethods(allowMethods: List<String>) {
+      override fun allowMethods(allowMethods: List<String>) {
         cdkBuilder.allowMethods(allowMethods)
       }
 
-      public override fun allowOrigins(allowOrigins: List<String>) {
+      override fun allowOrigins(allowOrigins: List<String>) {
         cdkBuilder.allowOrigins(allowOrigins)
       }
 
-      public override fun exposeHeaders(exposeHeaders: List<String>) {
+      override fun exposeHeaders(exposeHeaders: List<String>) {
         cdkBuilder.exposeHeaders(exposeHeaders)
       }
 
-      public override fun maxAge(maxAge: Number) {
+      override fun maxAge(maxAge: Number) {
         cdkBuilder.maxAge(maxAge)
       }
 
@@ -527,21 +492,17 @@ public open class CfnApi internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty,
     ) : CorsProperty {
-      public override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
+      override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
 
-      public override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?:
-          emptyList()
+      override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?: emptyList()
 
-      public override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?:
-          emptyList()
+      override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?: emptyList()
 
-      public override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?:
-          emptyList()
+      override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?: emptyList()
 
-      public override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?:
-          emptyList()
+      override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?: emptyList()
 
-      public override fun maxAge(): Number? = unwrap(this).getMaxAge()
+      override fun maxAge(): Number? = unwrap(this).getMaxAge()
     }
 
     public companion object {

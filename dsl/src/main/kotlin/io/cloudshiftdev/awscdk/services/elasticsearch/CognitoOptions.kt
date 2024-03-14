@@ -18,16 +18,13 @@ public interface CognitoOptions {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun identityPoolId(identityPoolId: String) {
-    }
+    public fun identityPoolId(identityPoolId: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -35,17 +32,17 @@ public interface CognitoOptions {
         software.amazon.awscdk.services.elasticsearch.CognitoOptions.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun identityPoolId(identityPoolId: String) {
+    override fun identityPoolId(identityPoolId: String) {
       cdkBuilder.identityPoolId(identityPoolId)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
@@ -57,13 +54,13 @@ public interface CognitoOptions {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.CognitoOptions,
   ) : CognitoOptions {
     @Deprecated(message = "deprecated in CDK")
-    public override fun identityPoolId(): String = unwrap(this).getIdentityPoolId()
+    override fun identityPoolId(): String = unwrap(this).getIdentityPoolId()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+    override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun userPoolId(): String = unwrap(this).getUserPoolId()
+    override fun userPoolId(): String = unwrap(this).getUserPoolId()
   }
 
   public companion object {

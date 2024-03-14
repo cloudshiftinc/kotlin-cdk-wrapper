@@ -61,23 +61,17 @@ public open class CfnProtectionGroup internal constructor(
   }
 
   public interface Builder {
-    public fun aggregation(aggregation: String) {
-    }
+    public fun aggregation(aggregation: String)
 
-    public fun members(members: List<String>) {
-    }
+    public fun members(members: List<String>)
 
-    public fun pattern(pattern: String) {
-    }
+    public fun pattern(pattern: String)
 
-    public fun protectionGroupId(protectionGroupId: String) {
-    }
+    public fun protectionGroupId(protectionGroupId: String)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,27 +81,27 @@ public open class CfnProtectionGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.shield.CfnProtectionGroup.Builder =
         software.amazon.awscdk.services.shield.CfnProtectionGroup.Builder.create(scope, id)
 
-    public override fun aggregation(aggregation: String) {
+    override fun aggregation(aggregation: String) {
       cdkBuilder.aggregation(aggregation)
     }
 
-    public override fun members(members: List<String>) {
+    override fun members(members: List<String>) {
       cdkBuilder.members(members)
     }
 
-    public override fun pattern(pattern: String) {
+    override fun pattern(pattern: String) {
       cdkBuilder.pattern(pattern)
     }
 
-    public override fun protectionGroupId(protectionGroupId: String) {
+    override fun protectionGroupId(protectionGroupId: String) {
       cdkBuilder.protectionGroupId(protectionGroupId)
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

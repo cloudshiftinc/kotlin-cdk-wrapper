@@ -37,78 +37,56 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
       unwrap(this).getTaskDefinition().let(FargateTaskDefinition::wrap)
 
   public interface Builder {
-    public fun assignPublicIp(assignPublicIp: Boolean) {
-    }
+    public fun assignPublicIp(assignPublicIp: Boolean)
 
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-    }
+    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("712be5f1e131c638ed95475dff64f13a48c29f44ae442a2119763bf883dd4a94")
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit) {
-    }
+    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun cpu(cpu: Number) {
-    }
+    public fun cpu(cpu: Number)
 
-    public fun desiredCount(desiredCount: Number) {
-    }
+    public fun desiredCount(desiredCount: Number)
 
-    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
-    }
+    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
-    public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
-    }
+    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
-    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
-    }
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number)
 
-    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-    }
+    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
 
-    public fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>) {
-    }
+    public fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>)
 
-    public fun memoryLimitMiB(memoryLimitMiB: Number) {
-    }
+    public fun memoryLimitMiB(memoryLimitMiB: Number)
 
-    public fun platformVersion(platformVersion: FargatePlatformVersion) {
-    }
+    public fun platformVersion(platformVersion: FargatePlatformVersion)
 
-    public fun propagateTags(propagateTags: PropagatedTagSource) {
-    }
+    public fun propagateTags(propagateTags: PropagatedTagSource)
 
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("69dcd7c4e3108bf2b069391264b2886743b8a22a489b1401fc95b72caa1bc77a")
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
 
-    public fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
-    }
+    public fun targetGroups(targetGroups: List<ApplicationTargetProps>)
 
-    public fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: FargateTaskDefinition)
 
-    public fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps) {
-    }
+    public fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("915c961f86b74e2e76719b9f4270829ced9adc70ea13a7152156d997b3bf6b03")
     public
-        fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps.Builder.() -> Unit) {
-    }
+        fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -121,95 +99,95 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
         software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService.Builder.create(scope,
         id)
 
-    public override fun assignPublicIp(assignPublicIp: Boolean) {
+    override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
     }
 
-    public override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
+    override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
       cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("712be5f1e131c638ed95475dff64f13a48c29f44ae442a2119763bf883dd4a94")
-    public override fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit): Unit =
+    override fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit): Unit =
         cloudMapOptions(CloudMapOptions(cloudMapOptions))
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun cpu(cpu: Number) {
+    override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun desiredCount(desiredCount: Number) {
+    override fun desiredCount(desiredCount: Number) {
       cdkBuilder.desiredCount(desiredCount)
     }
 
-    public override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
+    override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
       cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
     }
 
-    public override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
       cdkBuilder.enableExecuteCommand(enableExecuteCommand)
     }
 
-    public override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+    override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
       cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
     }
 
-    public override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
+    override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
       cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
     }
 
-    public override fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>) {
+    override fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>) {
       cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps::unwrap))
     }
 
-    public override fun memoryLimitMiB(memoryLimitMiB: Number) {
+    override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
     }
 
-    public override fun platformVersion(platformVersion: FargatePlatformVersion) {
+    override fun platformVersion(platformVersion: FargatePlatformVersion) {
       cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
     }
 
-    public override fun propagateTags(propagateTags: PropagatedTagSource) {
+    override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
     }
 
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
       cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("69dcd7c4e3108bf2b069391264b2886743b8a22a489b1401fc95b72caa1bc77a")
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
         runtimePlatform(RuntimePlatform(runtimePlatform))
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
-    public override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
+    override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
       cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps::unwrap))
     }
 
-    public override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
+    override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
     }
 
-    public override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps) {
+    override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps) {
       cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("915c961f86b74e2e76719b9f4270829ced9adc70ea13a7152156d997b3bf6b03")
-    public override
+    override
         fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps.Builder.() -> Unit):
         Unit = taskImageOptions(ApplicationLoadBalancedTaskImageProps(taskImageOptions))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

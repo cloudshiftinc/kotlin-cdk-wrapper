@@ -66,28 +66,21 @@ public open class CfnGateway internal constructor(
   }
 
   public interface Builder {
-    public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable) {
-    }
+    public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable)
 
-    public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>) {
-    }
+    public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>)
 
-    public fun gatewayName(gatewayName: String) {
-    }
+    public fun gatewayName(gatewayName: String)
 
-    public fun gatewayPlatform(gatewayPlatform: IResolvable) {
-    }
+    public fun gatewayPlatform(gatewayPlatform: IResolvable)
 
-    public fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty) {
-    }
+    public fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67a83972075c055807843f542cb36a800b44e870144de9ea23f8102a70a276ed")
-    public fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty.Builder.() -> Unit) {
-    }
+    public fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -97,33 +90,32 @@ public open class CfnGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnGateway.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnGateway.Builder.create(scope, id)
 
-    public override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable) {
+    override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable) {
       cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.let(IResolvable::unwrap))
     }
 
-    public override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>) {
+    override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>) {
       cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries)
     }
 
-    public override fun gatewayName(gatewayName: String) {
+    override fun gatewayName(gatewayName: String) {
       cdkBuilder.gatewayName(gatewayName)
     }
 
-    public override fun gatewayPlatform(gatewayPlatform: IResolvable) {
+    override fun gatewayPlatform(gatewayPlatform: IResolvable) {
       cdkBuilder.gatewayPlatform(gatewayPlatform.let(IResolvable::unwrap))
     }
 
-    public override fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty) {
+    override fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty) {
       cdkBuilder.gatewayPlatform(gatewayPlatform.let(GatewayPlatformProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67a83972075c055807843f542cb36a800b44e870144de9ea23f8102a70a276ed")
-    public override
-        fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty.Builder.() -> Unit): Unit =
-        gatewayPlatform(GatewayPlatformProperty(gatewayPlatform))
+    override fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty.Builder.() -> Unit): Unit
+        = gatewayPlatform(GatewayPlatformProperty(gatewayPlatform))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -155,8 +147,7 @@ public open class CfnGateway internal constructor(
     public fun coreDeviceThingName(): String
 
     public interface Builder {
-      public fun coreDeviceThingName(coreDeviceThingName: String) {
-      }
+      public fun coreDeviceThingName(coreDeviceThingName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -164,7 +155,7 @@ public open class CfnGateway internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property.builder()
 
-      public override fun coreDeviceThingName(coreDeviceThingName: String) {
+      override fun coreDeviceThingName(coreDeviceThingName: String) {
         cdkBuilder.coreDeviceThingName(coreDeviceThingName)
       }
 
@@ -177,7 +168,7 @@ public open class CfnGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property,
     ) : GreengrassV2Property {
-      public override fun coreDeviceThingName(): String = unwrap(this).getCoreDeviceThingName()
+      override fun coreDeviceThingName(): String = unwrap(this).getCoreDeviceThingName()
     }
 
     public companion object {
@@ -204,8 +195,7 @@ public open class CfnGateway internal constructor(
     public fun groupArn(): String
 
     public interface Builder {
-      public fun groupArn(groupArn: String) {
-      }
+      public fun groupArn(groupArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,7 +203,7 @@ public open class CfnGateway internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty.builder()
 
-      public override fun groupArn(groupArn: String) {
+      override fun groupArn(groupArn: String) {
         cdkBuilder.groupArn(groupArn)
       }
 
@@ -225,7 +215,7 @@ public open class CfnGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty,
     ) : GreengrassProperty {
-      public override fun groupArn(): String = unwrap(this).getGroupArn()
+      override fun groupArn(): String = unwrap(this).getGroupArn()
     }
 
     public companion object {
@@ -254,27 +244,21 @@ public open class CfnGateway internal constructor(
     public fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
 
     public interface Builder {
-      public fun greengrass(greengrass: IResolvable) {
-      }
+      public fun greengrass(greengrass: IResolvable)
 
-      public fun greengrass(greengrass: GreengrassProperty) {
-      }
+      public fun greengrass(greengrass: GreengrassProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("565ec39735a4f1c8211fba5c507ef3bd4c8f5c3104cbe93f8ca532f41baac3da")
-      public fun greengrass(greengrass: GreengrassProperty.Builder.() -> Unit) {
-      }
+      public fun greengrass(greengrass: GreengrassProperty.Builder.() -> Unit)
 
-      public fun greengrassV2(greengrassV2: IResolvable) {
-      }
+      public fun greengrassV2(greengrassV2: IResolvable)
 
-      public fun greengrassV2(greengrassV2: GreengrassV2Property) {
-      }
+      public fun greengrassV2(greengrassV2: GreengrassV2Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca43a8bd608afed1919b0aedc0623e92dc59ed76e4674f3fb5a2b3b3450fd463")
-      public fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit) {
-      }
+      public fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -282,31 +266,31 @@ public open class CfnGateway internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty.builder()
 
-      public override fun greengrass(greengrass: IResolvable) {
+      override fun greengrass(greengrass: IResolvable) {
         cdkBuilder.greengrass(greengrass.let(IResolvable::unwrap))
       }
 
-      public override fun greengrass(greengrass: GreengrassProperty) {
+      override fun greengrass(greengrass: GreengrassProperty) {
         cdkBuilder.greengrass(greengrass.let(GreengrassProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("565ec39735a4f1c8211fba5c507ef3bd4c8f5c3104cbe93f8ca532f41baac3da")
-      public override fun greengrass(greengrass: GreengrassProperty.Builder.() -> Unit): Unit =
+      override fun greengrass(greengrass: GreengrassProperty.Builder.() -> Unit): Unit =
           greengrass(GreengrassProperty(greengrass))
 
-      public override fun greengrassV2(greengrassV2: IResolvable) {
+      override fun greengrassV2(greengrassV2: IResolvable) {
         cdkBuilder.greengrassV2(greengrassV2.let(IResolvable::unwrap))
       }
 
-      public override fun greengrassV2(greengrassV2: GreengrassV2Property) {
+      override fun greengrassV2(greengrassV2: GreengrassV2Property) {
         cdkBuilder.greengrassV2(greengrassV2.let(GreengrassV2Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca43a8bd608afed1919b0aedc0623e92dc59ed76e4674f3fb5a2b3b3450fd463")
-      public override fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit): Unit
-          = greengrassV2(GreengrassV2Property(greengrassV2))
+      override fun greengrassV2(greengrassV2: GreengrassV2Property.Builder.() -> Unit): Unit =
+          greengrassV2(GreengrassV2Property(greengrassV2))
 
       public fun build():
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty =
@@ -317,9 +301,9 @@ public open class CfnGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty,
     ) : GatewayPlatformProperty {
-      public override fun greengrass(): Any? = unwrap(this).getGreengrass()
+      override fun greengrass(): Any? = unwrap(this).getGreengrass()
 
-      public override fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
+      override fun greengrassV2(): Any? = unwrap(this).getGreengrassV2()
     }
 
     public companion object {
@@ -348,11 +332,9 @@ public open class CfnGateway internal constructor(
     public fun capabilityNamespace(): String
 
     public interface Builder {
-      public fun capabilityConfiguration(capabilityConfiguration: String) {
-      }
+      public fun capabilityConfiguration(capabilityConfiguration: String)
 
-      public fun capabilityNamespace(capabilityNamespace: String) {
-      }
+      public fun capabilityNamespace(capabilityNamespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -361,11 +343,11 @@ public open class CfnGateway internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty.builder()
 
-      public override fun capabilityConfiguration(capabilityConfiguration: String) {
+      override fun capabilityConfiguration(capabilityConfiguration: String) {
         cdkBuilder.capabilityConfiguration(capabilityConfiguration)
       }
 
-      public override fun capabilityNamespace(capabilityNamespace: String) {
+      override fun capabilityNamespace(capabilityNamespace: String) {
         cdkBuilder.capabilityNamespace(capabilityNamespace)
       }
 
@@ -378,10 +360,9 @@ public open class CfnGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty,
     ) : GatewayCapabilitySummaryProperty {
-      public override fun capabilityConfiguration(): String? =
-          unwrap(this).getCapabilityConfiguration()
+      override fun capabilityConfiguration(): String? = unwrap(this).getCapabilityConfiguration()
 
-      public override fun capabilityNamespace(): String = unwrap(this).getCapabilityNamespace()
+      override fun capabilityNamespace(): String = unwrap(this).getCapabilityNamespace()
     }
 
     public companion object {

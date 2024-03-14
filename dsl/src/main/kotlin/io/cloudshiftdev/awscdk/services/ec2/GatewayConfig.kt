@@ -9,22 +9,20 @@ public interface GatewayConfig {
   public fun gatewayId(): String
 
   public interface Builder {
-    public fun az(az: String) {
-    }
+    public fun az(az: String)
 
-    public fun gatewayId(gatewayId: String) {
-    }
+    public fun gatewayId(gatewayId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.GatewayConfig.Builder =
         software.amazon.awscdk.services.ec2.GatewayConfig.builder()
 
-    public override fun az(az: String) {
+    override fun az(az: String) {
       cdkBuilder.az(az)
     }
 
-    public override fun gatewayId(gatewayId: String) {
+    override fun gatewayId(gatewayId: String) {
       cdkBuilder.gatewayId(gatewayId)
     }
 
@@ -34,9 +32,9 @@ public interface GatewayConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.GatewayConfig,
   ) : GatewayConfig {
-    public override fun az(): String = unwrap(this).getAz()
+    override fun az(): String = unwrap(this).getAz()
 
-    public override fun gatewayId(): String = unwrap(this).getGatewayId()
+    override fun gatewayId(): String = unwrap(this).getGatewayId()
   }
 
   public companion object {

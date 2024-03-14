@@ -19,37 +19,27 @@ public open class FargateTaskDefinition internal constructor(
       unwrap(this).getNetworkMode().let(NetworkMode::wrap)
 
   public interface Builder {
-    public fun cpu(cpu: Number) {
-    }
+    public fun cpu(cpu: Number)
 
-    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
-    }
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number)
 
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun memoryLimitMiB(memoryLimitMiB: Number) {
-    }
+    public fun memoryLimitMiB(memoryLimitMiB: Number)
 
-    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-    }
+    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration)
 
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("65289a49e102f663d0c73fa0f299525a30b82c6d93c702eb7f7a68a6aef2dbd7")
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit)
 
-    public fun taskRole(taskRole: IRole) {
-    }
+    public fun taskRole(taskRole: IRole)
 
-    public fun volumes(volumes: List<Volume>) {
-    }
+    public fun volumes(volumes: List<Volume>)
   }
 
   private class BuilderImpl(
@@ -59,44 +49,44 @@ public open class FargateTaskDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.FargateTaskDefinition.Builder =
         software.amazon.awscdk.services.ecs.FargateTaskDefinition.Builder.create(scope, id)
 
-    public override fun cpu(cpu: Number) {
+    override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+    override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
       cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
     }
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun memoryLimitMiB(memoryLimitMiB: Number) {
+    override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
     }
 
-    public override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
+    override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
       cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
     }
 
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
       cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("65289a49e102f663d0c73fa0f299525a30b82c6d93c702eb7f7a68a6aef2dbd7")
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
         runtimePlatform(RuntimePlatform(runtimePlatform))
 
-    public override fun taskRole(taskRole: IRole) {
+    override fun taskRole(taskRole: IRole) {
       cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
     }
 
-    public override fun volumes(volumes: List<Volume>) {
+    override fun volumes(volumes: List<Volume>) {
       cdkBuilder.volumes(volumes.map(Volume::unwrap))
     }
 

@@ -82,39 +82,29 @@ public open class CfnInstanceFleetConfig internal constructor(
   }
 
   public interface Builder {
-    public fun clusterId(clusterId: String) {
-    }
+    public fun clusterId(clusterId: String)
 
-    public fun instanceFleetType(instanceFleetType: String) {
-    }
+    public fun instanceFleetType(instanceFleetType: String)
 
-    public fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
-    }
+    public fun instanceTypeConfigs(instanceTypeConfigs: IResolvable)
 
-    public fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
-    }
+    public fun instanceTypeConfigs(instanceTypeConfigs: List<Any>)
 
-    public fun launchSpecifications(launchSpecifications: IResolvable) {
-    }
+    public fun launchSpecifications(launchSpecifications: IResolvable)
 
     public
-        fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
-    }
+        fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3f74ea9b1d554ae601b9ffdba85400e95b5dba44cb815f9838f8e9d46262fd9")
     public
-        fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit) {
-    }
+        fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
-    }
+    public fun targetOnDemandCapacity(targetOnDemandCapacity: Number)
 
-    public fun targetSpotCapacity(targetSpotCapacity: Number) {
-    }
+    public fun targetSpotCapacity(targetSpotCapacity: Number)
   }
 
   private class BuilderImpl(
@@ -124,47 +114,47 @@ public open class CfnInstanceFleetConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.Builder =
         software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.Builder.create(scope, id)
 
-    public override fun clusterId(clusterId: String) {
+    override fun clusterId(clusterId: String) {
       cdkBuilder.clusterId(clusterId)
     }
 
-    public override fun instanceFleetType(instanceFleetType: String) {
+    override fun instanceFleetType(instanceFleetType: String) {
       cdkBuilder.instanceFleetType(instanceFleetType)
     }
 
-    public override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
+    override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
       cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable::unwrap))
     }
 
-    public override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
+    override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
       cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
     }
 
-    public override fun launchSpecifications(launchSpecifications: IResolvable) {
+    override fun launchSpecifications(launchSpecifications: IResolvable) {
       cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
       cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3f74ea9b1d554ae601b9ffdba85400e95b5dba44cb815f9838f8e9d46262fd9")
-    public override
+    override
         fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty.Builder.() -> Unit):
         Unit =
         launchSpecifications(InstanceFleetProvisioningSpecificationsProperty(launchSpecifications))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
+    override fun targetOnDemandCapacity(targetOnDemandCapacity: Number) {
       cdkBuilder.targetOnDemandCapacity(targetOnDemandCapacity)
     }
 
-    public override fun targetSpotCapacity(targetSpotCapacity: Number) {
+    override fun targetSpotCapacity(targetSpotCapacity: Number) {
       cdkBuilder.targetSpotCapacity(targetSpotCapacity)
     }
 
@@ -199,17 +189,13 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
     public interface Builder {
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-      }
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable)
 
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-      }
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
 
-      public fun ebsOptimized(ebsOptimized: Boolean) {
-      }
+      public fun ebsOptimized(ebsOptimized: Boolean)
 
-      public fun ebsOptimized(ebsOptimized: IResolvable) {
-      }
+      public fun ebsOptimized(ebsOptimized: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -218,19 +204,19 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty.builder()
 
-      public override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
       }
 
-      public override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
       }
 
-      public override fun ebsOptimized(ebsOptimized: Boolean) {
+      override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
       }
 
-      public override fun ebsOptimized(ebsOptimized: IResolvable) {
+      override fun ebsOptimized(ebsOptimized: IResolvable) {
         cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
       }
 
@@ -243,9 +229,9 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty,
     ) : EbsConfigurationProperty {
-      public override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
+      override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
 
-      public override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
     }
 
     public companion object {
@@ -272,8 +258,7 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun allocationStrategy(): String
 
     public interface Builder {
-      public fun allocationStrategy(allocationStrategy: String) {
-      }
+      public fun allocationStrategy(allocationStrategy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -282,7 +267,7 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty.builder()
 
-      public override fun allocationStrategy(allocationStrategy: String) {
+      override fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)
       }
 
@@ -295,7 +280,7 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.OnDemandProvisioningSpecificationProperty,
     ) : OnDemandProvisioningSpecificationProperty {
-      public override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
+      override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
     }
 
     public companion object {
@@ -327,20 +312,15 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun configurations(): Any? = unwrap(this).getConfigurations()
 
     public interface Builder {
-      public fun classification(classification: String) {
-      }
+      public fun classification(classification: String)
 
-      public fun configurationProperties(configurationProperties: IResolvable) {
-      }
+      public fun configurationProperties(configurationProperties: IResolvable)
 
-      public fun configurationProperties(configurationProperties: Map<String, String>) {
-      }
+      public fun configurationProperties(configurationProperties: Map<String, String>)
 
-      public fun configurations(configurations: IResolvable) {
-      }
+      public fun configurations(configurations: IResolvable)
 
-      public fun configurations(configurations: List<Any>) {
-      }
+      public fun configurations(configurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -348,23 +328,23 @@ public open class CfnInstanceFleetConfig internal constructor(
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty.Builder =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty.builder()
 
-      public override fun classification(classification: String) {
+      override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
-      public override fun configurationProperties(configurationProperties: IResolvable) {
+      override fun configurationProperties(configurationProperties: IResolvable) {
         cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
       }
 
-      public override fun configurationProperties(configurationProperties: Map<String, String>) {
+      override fun configurationProperties(configurationProperties: Map<String, String>) {
         cdkBuilder.configurationProperties(configurationProperties)
       }
 
-      public override fun configurations(configurations: IResolvable) {
+      override fun configurations(configurations: IResolvable) {
         cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
       }
 
-      public override fun configurations(configurations: List<Any>) {
+      override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
 
@@ -377,12 +357,11 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty,
     ) : ConfigurationProperty {
-      public override fun classification(): String? = unwrap(this).getClassification()
+      override fun classification(): String? = unwrap(this).getClassification()
 
-      public override fun configurationProperties(): Any? =
-          unwrap(this).getConfigurationProperties()
+      override fun configurationProperties(): Any? = unwrap(this).getConfigurationProperties()
 
-      public override fun configurations(): Any? = unwrap(this).getConfigurations()
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
     }
 
     public companion object {
@@ -411,20 +390,16 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
 
     public interface Builder {
-      public fun volumeSpecification(volumeSpecification: IResolvable) {
-      }
+      public fun volumeSpecification(volumeSpecification: IResolvable)
 
-      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-      }
+      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("90f563601bc0cff8fe8978211b8b5efe67eccc0935bce406e80f312dbf2d6bc9")
       public
-          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit)
 
-      public fun volumesPerInstance(volumesPerInstance: Number) {
-      }
+      public fun volumesPerInstance(volumesPerInstance: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -433,21 +408,21 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty.builder()
 
-      public override fun volumeSpecification(volumeSpecification: IResolvable) {
+      override fun volumeSpecification(volumeSpecification: IResolvable) {
         cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
       }
 
-      public override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
+      override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
         cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("90f563601bc0cff8fe8978211b8b5efe67eccc0935bce406e80f312dbf2d6bc9")
-      public override
+      override
           fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit):
           Unit = volumeSpecification(VolumeSpecificationProperty(volumeSpecification))
 
-      public override fun volumesPerInstance(volumesPerInstance: Number) {
+      override fun volumesPerInstance(volumesPerInstance: Number) {
         cdkBuilder.volumesPerInstance(volumesPerInstance)
       }
 
@@ -460,9 +435,9 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty,
     ) : EbsBlockDeviceConfigProperty {
-      public override fun volumeSpecification(): Any = unwrap(this).getVolumeSpecification()
+      override fun volumeSpecification(): Any = unwrap(this).getVolumeSpecification()
 
-      public override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
+      override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
     }
 
     public companion object {
@@ -495,17 +470,13 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun timeoutDurationMinutes(): Number
 
     public interface Builder {
-      public fun allocationStrategy(allocationStrategy: String) {
-      }
+      public fun allocationStrategy(allocationStrategy: String)
 
-      public fun blockDurationMinutes(blockDurationMinutes: Number) {
-      }
+      public fun blockDurationMinutes(blockDurationMinutes: Number)
 
-      public fun timeoutAction(timeoutAction: String) {
-      }
+      public fun timeoutAction(timeoutAction: String)
 
-      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
-      }
+      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -514,19 +485,19 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.builder()
 
-      public override fun allocationStrategy(allocationStrategy: String) {
+      override fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)
       }
 
-      public override fun blockDurationMinutes(blockDurationMinutes: Number) {
+      override fun blockDurationMinutes(blockDurationMinutes: Number) {
         cdkBuilder.blockDurationMinutes(blockDurationMinutes)
       }
 
-      public override fun timeoutAction(timeoutAction: String) {
+      override fun timeoutAction(timeoutAction: String) {
         cdkBuilder.timeoutAction(timeoutAction)
       }
 
-      public override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
+      override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
         cdkBuilder.timeoutDurationMinutes(timeoutDurationMinutes)
       }
 
@@ -539,14 +510,13 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty,
     ) : SpotProvisioningSpecificationProperty {
-      public override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
 
-      public override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
 
-      public override fun timeoutAction(): String = unwrap(this).getTimeoutAction()
+      override fun timeoutAction(): String = unwrap(this).getTimeoutAction()
 
-      public override fun timeoutDurationMinutes(): Number =
-          unwrap(this).getTimeoutDurationMinutes()
+      override fun timeoutDurationMinutes(): Number = unwrap(this).getTimeoutDurationMinutes()
     }
 
     public companion object {
@@ -587,37 +557,27 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
 
     public interface Builder {
-      public fun bidPrice(bidPrice: String) {
-      }
+      public fun bidPrice(bidPrice: String)
 
-      public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
-      }
+      public fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number)
 
-      public fun configurations(configurations: IResolvable) {
-      }
+      public fun configurations(configurations: IResolvable)
 
-      public fun configurations(configurations: List<Any>) {
-      }
+      public fun configurations(configurations: List<Any>)
 
-      public fun customAmiId(customAmiId: String) {
-      }
+      public fun customAmiId(customAmiId: String)
 
-      public fun ebsConfiguration(ebsConfiguration: IResolvable) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: IResolvable)
 
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("999d0f487e09e440d0c0b84be779862db4ba6ef5f90ffde2250d398c6529e2bf")
-      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun weightedCapacity(weightedCapacity: Number) {
-      }
+      public fun weightedCapacity(weightedCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -626,46 +586,45 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty.builder()
 
-      public override fun bidPrice(bidPrice: String) {
+      override fun bidPrice(bidPrice: String) {
         cdkBuilder.bidPrice(bidPrice)
       }
 
-      public override
+      override
           fun bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice: Number) {
         cdkBuilder.bidPriceAsPercentageOfOnDemandPrice(bidPriceAsPercentageOfOnDemandPrice)
       }
 
-      public override fun configurations(configurations: IResolvable) {
+      override fun configurations(configurations: IResolvable) {
         cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
       }
 
-      public override fun configurations(configurations: List<Any>) {
+      override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
 
-      public override fun customAmiId(customAmiId: String) {
+      override fun customAmiId(customAmiId: String) {
         cdkBuilder.customAmiId(customAmiId)
       }
 
-      public override fun ebsConfiguration(ebsConfiguration: IResolvable) {
+      override fun ebsConfiguration(ebsConfiguration: IResolvable) {
         cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
         cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("999d0f487e09e440d0c0b84be779862db4ba6ef5f90ffde2250d398c6529e2bf")
-      public override
-          fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit): Unit
-          = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
+      override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
+          Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun weightedCapacity(weightedCapacity: Number) {
+      override fun weightedCapacity(weightedCapacity: Number) {
         cdkBuilder.weightedCapacity(weightedCapacity)
       }
 
@@ -678,20 +637,20 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty,
     ) : InstanceTypeConfigProperty {
-      public override fun bidPrice(): String? = unwrap(this).getBidPrice()
+      override fun bidPrice(): String? = unwrap(this).getBidPrice()
 
-      public override fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
+      override fun bidPriceAsPercentageOfOnDemandPrice(): Number? =
           unwrap(this).getBidPriceAsPercentageOfOnDemandPrice()
 
-      public override fun configurations(): Any? = unwrap(this).getConfigurations()
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
 
-      public override fun customAmiId(): String? = unwrap(this).getCustomAmiId()
+      override fun customAmiId(): String? = unwrap(this).getCustomAmiId()
 
-      public override fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
+      override fun ebsConfiguration(): Any? = unwrap(this).getEbsConfiguration()
 
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
 
-      public override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
+      override fun weightedCapacity(): Number? = unwrap(this).getWeightedCapacity()
     }
 
     public companion object {
@@ -724,17 +683,13 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun volumeType(): String
 
     public interface Builder {
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun sizeInGb(sizeInGb: Number) {
-      }
+      public fun sizeInGb(sizeInGb: Number)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -743,19 +698,19 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty.builder()
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun sizeInGb(sizeInGb: Number) {
+      override fun sizeInGb(sizeInGb: Number) {
         cdkBuilder.sizeInGb(sizeInGb)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -768,13 +723,13 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty,
     ) : VolumeSpecificationProperty {
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun sizeInGb(): Number = unwrap(this).getSizeInGb()
+      override fun sizeInGb(): Number = unwrap(this).getSizeInGb()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
 
-      public override fun volumeType(): String = unwrap(this).getVolumeType()
+      override fun volumeType(): String = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -803,30 +758,24 @@ public open class CfnInstanceFleetConfig internal constructor(
     public fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
 
     public interface Builder {
-      public fun onDemandSpecification(onDemandSpecification: IResolvable) {
-      }
+      public fun onDemandSpecification(onDemandSpecification: IResolvable)
 
       public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-      }
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab6e3f21606b4de7054e8b9b81faf0552c480fe77fd8cf07532502405e65bf1c")
       public
-          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit)
 
-      public fun spotSpecification(spotSpecification: IResolvable) {
-      }
+      public fun spotSpecification(spotSpecification: IResolvable)
 
-      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-      }
+      public fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
       public
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -835,34 +784,33 @@ public open class CfnInstanceFleetConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.builder()
 
-      public override fun onDemandSpecification(onDemandSpecification: IResolvable) {
+      override fun onDemandSpecification(onDemandSpecification: IResolvable) {
         cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
         cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab6e3f21606b4de7054e8b9b81faf0552c480fe77fd8cf07532502405e65bf1c")
-      public override
+      override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty.Builder.() -> Unit):
           Unit =
           onDemandSpecification(OnDemandProvisioningSpecificationProperty(onDemandSpecification))
 
-      public override fun spotSpecification(spotSpecification: IResolvable) {
+      override fun spotSpecification(spotSpecification: IResolvable) {
         cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
       }
 
-      public override
-          fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
+      override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
         cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("adf4fa6f990e98f7c46c7bfa05dc84b8118c0023a37aef58de9fc82d05931529")
-      public override
+      override
           fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty.Builder.() -> Unit):
           Unit = spotSpecification(SpotProvisioningSpecificationProperty(spotSpecification))
 
@@ -875,9 +823,9 @@ public open class CfnInstanceFleetConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty,
     ) : InstanceFleetProvisioningSpecificationsProperty {
-      public override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
+      override fun onDemandSpecification(): Any? = unwrap(this).getOnDemandSpecification()
 
-      public override fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
+      override fun spotSpecification(): Any? = unwrap(this).getSpotSpecification()
     }
 
     public companion object {

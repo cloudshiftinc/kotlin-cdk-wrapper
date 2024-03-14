@@ -33,66 +33,47 @@ public open class Queue internal constructor(
   public override fun queueUrl(): String = unwrap(this).getQueueUrl()
 
   public interface Builder {
-    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
-    }
+    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean)
 
-    public fun dataKeyReuse(dataKeyReuse: Duration) {
-    }
+    public fun dataKeyReuse(dataKeyReuse: Duration)
 
-    public fun deadLetterQueue(deadLetterQueue: DeadLetterQueue) {
-    }
+    public fun deadLetterQueue(deadLetterQueue: DeadLetterQueue)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97f5b14d7b02b73465dced58cc2d1f94d5c49dda8daae774bd8488adcfac5df2")
-    public fun deadLetterQueue(deadLetterQueue: DeadLetterQueue.Builder.() -> Unit) {
-    }
+    public fun deadLetterQueue(deadLetterQueue: DeadLetterQueue.Builder.() -> Unit)
 
-    public fun deduplicationScope(deduplicationScope: DeduplicationScope) {
-    }
+    public fun deduplicationScope(deduplicationScope: DeduplicationScope)
 
-    public fun deliveryDelay(deliveryDelay: Duration) {
-    }
+    public fun deliveryDelay(deliveryDelay: Duration)
 
-    public fun encryption(encryption: QueueEncryption) {
-    }
+    public fun encryption(encryption: QueueEncryption)
 
-    public fun encryptionMasterKey(encryptionMasterKey: IKey) {
-    }
+    public fun encryptionMasterKey(encryptionMasterKey: IKey)
 
-    public fun enforceSsl(enforceSsl: Boolean) {
-    }
+    public fun enforceSsl(enforceSsl: Boolean)
 
-    public fun fifo(fifo: Boolean) {
-    }
+    public fun fifo(fifo: Boolean)
 
-    public fun fifoThroughputLimit(fifoThroughputLimit: FifoThroughputLimit) {
-    }
+    public fun fifoThroughputLimit(fifoThroughputLimit: FifoThroughputLimit)
 
-    public fun maxMessageSizeBytes(maxMessageSizeBytes: Number) {
-    }
+    public fun maxMessageSizeBytes(maxMessageSizeBytes: Number)
 
-    public fun queueName(queueName: String) {
-    }
+    public fun queueName(queueName: String)
 
-    public fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
-    }
+    public fun receiveMessageWaitTime(receiveMessageWaitTime: Duration)
 
-    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
-    }
+    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5bda4096d045a478f2b31ab46f72925fb4078b6516e4a5c1eef3f25da474a121")
-    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy.Builder.() -> Unit) {
-    }
+    public fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy.Builder.() -> Unit)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun retentionPeriod(retentionPeriod: Duration) {
-    }
+    public fun retentionPeriod(retentionPeriod: Duration)
 
-    public fun visibilityTimeout(visibilityTimeout: Duration) {
-    }
+    public fun visibilityTimeout(visibilityTimeout: Duration)
   }
 
   private class BuilderImpl(
@@ -102,82 +83,81 @@ public open class Queue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sqs.Queue.Builder =
         software.amazon.awscdk.services.sqs.Queue.Builder.create(scope, id)
 
-    public override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
+    override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication)
     }
 
-    public override fun dataKeyReuse(dataKeyReuse: Duration) {
+    override fun dataKeyReuse(dataKeyReuse: Duration) {
       cdkBuilder.dataKeyReuse(dataKeyReuse.let(Duration::unwrap))
     }
 
-    public override fun deadLetterQueue(deadLetterQueue: DeadLetterQueue) {
+    override fun deadLetterQueue(deadLetterQueue: DeadLetterQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueue::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97f5b14d7b02b73465dced58cc2d1f94d5c49dda8daae774bd8488adcfac5df2")
-    public override fun deadLetterQueue(deadLetterQueue: DeadLetterQueue.Builder.() -> Unit): Unit =
+    override fun deadLetterQueue(deadLetterQueue: DeadLetterQueue.Builder.() -> Unit): Unit =
         deadLetterQueue(DeadLetterQueue(deadLetterQueue))
 
-    public override fun deduplicationScope(deduplicationScope: DeduplicationScope) {
+    override fun deduplicationScope(deduplicationScope: DeduplicationScope) {
       cdkBuilder.deduplicationScope(deduplicationScope.let(DeduplicationScope::unwrap))
     }
 
-    public override fun deliveryDelay(deliveryDelay: Duration) {
+    override fun deliveryDelay(deliveryDelay: Duration) {
       cdkBuilder.deliveryDelay(deliveryDelay.let(Duration::unwrap))
     }
 
-    public override fun encryption(encryption: QueueEncryption) {
+    override fun encryption(encryption: QueueEncryption) {
       cdkBuilder.encryption(encryption.let(QueueEncryption::unwrap))
     }
 
-    public override fun encryptionMasterKey(encryptionMasterKey: IKey) {
+    override fun encryptionMasterKey(encryptionMasterKey: IKey) {
       cdkBuilder.encryptionMasterKey(encryptionMasterKey.let(IKey::unwrap))
     }
 
-    public override fun enforceSsl(enforceSsl: Boolean) {
+    override fun enforceSsl(enforceSsl: Boolean) {
       cdkBuilder.enforceSsl(enforceSsl)
     }
 
-    public override fun fifo(fifo: Boolean) {
+    override fun fifo(fifo: Boolean) {
       cdkBuilder.fifo(fifo)
     }
 
-    public override fun fifoThroughputLimit(fifoThroughputLimit: FifoThroughputLimit) {
+    override fun fifoThroughputLimit(fifoThroughputLimit: FifoThroughputLimit) {
       cdkBuilder.fifoThroughputLimit(fifoThroughputLimit.let(FifoThroughputLimit::unwrap))
     }
 
-    public override fun maxMessageSizeBytes(maxMessageSizeBytes: Number) {
+    override fun maxMessageSizeBytes(maxMessageSizeBytes: Number) {
       cdkBuilder.maxMessageSizeBytes(maxMessageSizeBytes)
     }
 
-    public override fun queueName(queueName: String) {
+    override fun queueName(queueName: String) {
       cdkBuilder.queueName(queueName)
     }
 
-    public override fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
+    override fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
       cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime.let(Duration::unwrap))
     }
 
-    public override fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
+    override fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
       cdkBuilder.redriveAllowPolicy(redriveAllowPolicy.let(RedriveAllowPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5bda4096d045a478f2b31ab46f72925fb4078b6516e4a5c1eef3f25da474a121")
-    public override
-        fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy.Builder.() -> Unit): Unit =
-        redriveAllowPolicy(RedriveAllowPolicy(redriveAllowPolicy))
+    override fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy.Builder.() -> Unit): Unit
+        = redriveAllowPolicy(RedriveAllowPolicy(redriveAllowPolicy))
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun retentionPeriod(retentionPeriod: Duration) {
+    override fun retentionPeriod(retentionPeriod: Duration) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
     }
 
-    public override fun visibilityTimeout(visibilityTimeout: Duration) {
+    override fun visibilityTimeout(visibilityTimeout: Duration) {
       cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration::unwrap))
     }
 

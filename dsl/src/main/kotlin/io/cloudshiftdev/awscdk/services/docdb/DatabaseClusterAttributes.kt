@@ -25,57 +25,50 @@ public interface DatabaseClusterAttributes {
       unwrap(this).getSecurityGroup()?.let(ISecurityGroup::wrap)
 
   public interface Builder {
-    public fun clusterEndpointAddress(clusterEndpointAddress: String) {
-    }
+    public fun clusterEndpointAddress(clusterEndpointAddress: String)
 
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun instanceEndpointAddresses(instanceEndpointAddresses: List<String>) {
-    }
+    public fun instanceEndpointAddresses(instanceEndpointAddresses: List<String>)
 
-    public fun instanceIdentifiers(instanceIdentifiers: List<String>) {
-    }
+    public fun instanceIdentifiers(instanceIdentifiers: List<String>)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun readerEndpointAddress(readerEndpointAddress: String) {
-    }
+    public fun readerEndpointAddress(readerEndpointAddress: String)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.docdb.DatabaseClusterAttributes.Builder
         = software.amazon.awscdk.services.docdb.DatabaseClusterAttributes.builder()
 
-    public override fun clusterEndpointAddress(clusterEndpointAddress: String) {
+    override fun clusterEndpointAddress(clusterEndpointAddress: String) {
       cdkBuilder.clusterEndpointAddress(clusterEndpointAddress)
     }
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun instanceEndpointAddresses(instanceEndpointAddresses: List<String>) {
+    override fun instanceEndpointAddresses(instanceEndpointAddresses: List<String>) {
       cdkBuilder.instanceEndpointAddresses(instanceEndpointAddresses)
     }
 
-    public override fun instanceIdentifiers(instanceIdentifiers: List<String>) {
+    override fun instanceIdentifiers(instanceIdentifiers: List<String>) {
       cdkBuilder.instanceIdentifiers(instanceIdentifiers)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun readerEndpointAddress(readerEndpointAddress: String) {
+    override fun readerEndpointAddress(readerEndpointAddress: String) {
       cdkBuilder.readerEndpointAddress(readerEndpointAddress)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
@@ -86,21 +79,21 @@ public interface DatabaseClusterAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterAttributes,
   ) : DatabaseClusterAttributes {
-    public override fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
+    override fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
 
-    public override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+    override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
 
-    public override fun instanceEndpointAddresses(): List<String> =
+    override fun instanceEndpointAddresses(): List<String> =
         unwrap(this).getInstanceEndpointAddresses() ?: emptyList()
 
-    public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers()
-        ?: emptyList()
+    override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers() ?:
+        emptyList()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
+    override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
 
-    public override fun securityGroup(): ISecurityGroup? =
+    override fun securityGroup(): ISecurityGroup? =
         unwrap(this).getSecurityGroup()?.let(ISecurityGroup::wrap)
   }
 

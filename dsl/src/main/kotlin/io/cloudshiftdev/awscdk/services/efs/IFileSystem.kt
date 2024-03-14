@@ -35,46 +35,44 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.efs.IFileSystem,
   ) : IFileSystem {
-    public override fun addToResourcePolicy(arg0: PolicyStatement): AddToResourcePolicyResult =
+    override fun addToResourcePolicy(arg0: PolicyStatement): AddToResourcePolicyResult =
         unwrap(this).addToResourcePolicy(arg0.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
-    public override fun addToResourcePolicy(arg0: PolicyStatement.Builder.() -> Unit):
+    override fun addToResourcePolicy(arg0: PolicyStatement.Builder.() -> Unit):
         AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(arg0))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun fileSystemArn(): String = unwrap(this).getFileSystemArn()
+    override fun fileSystemArn(): String = unwrap(this).getFileSystemArn()
 
-    public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+    override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
-    public override fun grant(arg0: IGrantable, arg1: String): Grant =
+    override fun grant(arg0: IGrantable, arg1: String): Grant =
         unwrap(this).grant(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
 
-    public override fun grantRead(arg0: IGrantable): Grant =
+    override fun grantRead(arg0: IGrantable): Grant =
         unwrap(this).grantRead(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantReadWrite(arg0: IGrantable): Grant =
+    override fun grantReadWrite(arg0: IGrantable): Grant =
         unwrap(this).grantReadWrite(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantRootAccess(arg0: IGrantable): Grant =
+    override fun grantRootAccess(arg0: IGrantable): Grant =
         unwrap(this).grantRootAccess(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun mountTargetsAvailable(): IDependable =
+    override fun mountTargetsAvailable(): IDependable =
         unwrap(this).getMountTargetsAvailable().let(IDependable::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

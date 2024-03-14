@@ -9,22 +9,20 @@ public interface SNSActionConfig {
   public fun topicArn(): String? = unwrap(this).getTopicArn()
 
   public interface Builder {
-    public fun encoding(encoding: String) {
-    }
+    public fun encoding(encoding: String)
 
-    public fun topicArn(topicArn: String) {
-    }
+    public fun topicArn(topicArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.SNSActionConfig.Builder =
         software.amazon.awscdk.services.ses.SNSActionConfig.builder()
 
-    public override fun encoding(encoding: String) {
+    override fun encoding(encoding: String) {
       cdkBuilder.encoding(encoding)
     }
 
-    public override fun topicArn(topicArn: String) {
+    override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
 
@@ -34,9 +32,9 @@ public interface SNSActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.SNSActionConfig,
   ) : SNSActionConfig {
-    public override fun encoding(): String? = unwrap(this).getEncoding()
+    override fun encoding(): String? = unwrap(this).getEncoding()
 
-    public override fun topicArn(): String? = unwrap(this).getTopicArn()
+    override fun topicArn(): String? = unwrap(this).getTopicArn()
   }
 
   public companion object {

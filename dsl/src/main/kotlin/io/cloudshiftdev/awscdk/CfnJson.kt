@@ -20,8 +20,7 @@ public open class CfnJson internal constructor(
   public open fun `value`(): Reference = unwrap(this).getValue().let(Reference::wrap)
 
   public interface Builder {
-    public fun `value`(`value`: Any) {
-    }
+    public fun `value`(`value`: Any)
   }
 
   private class BuilderImpl(
@@ -31,7 +30,7 @@ public open class CfnJson internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnJson.Builder =
         software.amazon.awscdk.CfnJson.Builder.create(scope, id)
 
-    public override fun `value`(`value`: Any) {
+    override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
 

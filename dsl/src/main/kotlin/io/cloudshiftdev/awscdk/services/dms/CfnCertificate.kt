@@ -36,14 +36,11 @@ public open class CfnCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun certificateIdentifier(certificateIdentifier: String) {
-    }
+    public fun certificateIdentifier(certificateIdentifier: String)
 
-    public fun certificatePem(certificatePem: String) {
-    }
+    public fun certificatePem(certificatePem: String)
 
-    public fun certificateWallet(certificateWallet: String) {
-    }
+    public fun certificateWallet(certificateWallet: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnCertificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnCertificate.Builder =
         software.amazon.awscdk.services.dms.CfnCertificate.Builder.create(scope, id)
 
-    public override fun certificateIdentifier(certificateIdentifier: String) {
+    override fun certificateIdentifier(certificateIdentifier: String) {
       cdkBuilder.certificateIdentifier(certificateIdentifier)
     }
 
-    public override fun certificatePem(certificatePem: String) {
+    override fun certificatePem(certificatePem: String) {
       cdkBuilder.certificatePem(certificatePem)
     }
 
-    public override fun certificateWallet(certificateWallet: String) {
+    override fun certificateWallet(certificateWallet: String) {
       cdkBuilder.certificateWallet(certificateWallet)
     }
 

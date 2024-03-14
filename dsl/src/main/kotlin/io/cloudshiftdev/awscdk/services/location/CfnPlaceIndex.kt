@@ -81,32 +81,24 @@ public open class CfnPlaceIndex internal constructor(
   }
 
   public interface Builder {
-    public fun dataSource(dataSource: String) {
-    }
+    public fun dataSource(dataSource: String)
 
-    public fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-    }
+    public fun dataSourceConfiguration(dataSourceConfiguration: IResolvable)
 
-    public fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
-    }
+    public fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("57149601d9fc24ae78bce5d24217bbda8def65f5af894dade12f21080b171d51")
     public
-        fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun indexName(indexName: String) {
-    }
+    public fun indexName(indexName: String)
 
-    public fun pricingPlan(pricingPlan: String) {
-    }
+    public fun pricingPlan(pricingPlan: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -116,38 +108,37 @@ public open class CfnPlaceIndex internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnPlaceIndex.Builder =
         software.amazon.awscdk.services.location.CfnPlaceIndex.Builder.create(scope, id)
 
-    public override fun dataSource(dataSource: String) {
+    override fun dataSource(dataSource: String) {
       cdkBuilder.dataSource(dataSource)
     }
 
-    public override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
+    override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
       cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
+    override fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
       cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("57149601d9fc24ae78bce5d24217bbda8def65f5af894dade12f21080b171d51")
-    public override
+    override
         fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit):
         Unit = dataSourceConfiguration(DataSourceConfigurationProperty(dataSourceConfiguration))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun indexName(indexName: String) {
+    override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
     }
 
-    public override fun pricingPlan(pricingPlan: String) {
+    override fun pricingPlan(pricingPlan: String) {
       cdkBuilder.pricingPlan(pricingPlan)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -179,8 +170,7 @@ public open class CfnPlaceIndex internal constructor(
     public fun intendedUse(): String? = unwrap(this).getIntendedUse()
 
     public interface Builder {
-      public fun intendedUse(intendedUse: String) {
-      }
+      public fun intendedUse(intendedUse: String)
     }
 
     private class BuilderImpl : Builder {
@@ -189,7 +179,7 @@ public open class CfnPlaceIndex internal constructor(
           =
           software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty.builder()
 
-      public override fun intendedUse(intendedUse: String) {
+      override fun intendedUse(intendedUse: String) {
         cdkBuilder.intendedUse(intendedUse)
       }
 
@@ -202,7 +192,7 @@ public open class CfnPlaceIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.location.CfnPlaceIndex.DataSourceConfigurationProperty,
     ) : DataSourceConfigurationProperty {
-      public override fun intendedUse(): String? = unwrap(this).getIntendedUse()
+      override fun intendedUse(): String? = unwrap(this).getIntendedUse()
     }
 
     public companion object {

@@ -13,17 +13,13 @@ public open class RequestValidator internal constructor(
   public override fun requestValidatorId(): String = unwrap(this).getRequestValidatorId()
 
   public interface Builder {
-    public fun requestValidatorName(requestValidatorName: String) {
-    }
+    public fun requestValidatorName(requestValidatorName: String)
 
-    public fun restApi(restApi: IRestApi) {
-    }
+    public fun restApi(restApi: IRestApi)
 
-    public fun validateRequestBody(validateRequestBody: Boolean) {
-    }
+    public fun validateRequestBody(validateRequestBody: Boolean)
 
-    public fun validateRequestParameters(validateRequestParameters: Boolean) {
-    }
+    public fun validateRequestParameters(validateRequestParameters: Boolean)
   }
 
   private class BuilderImpl(
@@ -33,19 +29,19 @@ public open class RequestValidator internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.RequestValidator.Builder =
         software.amazon.awscdk.services.apigateway.RequestValidator.Builder.create(scope, id)
 
-    public override fun requestValidatorName(requestValidatorName: String) {
+    override fun requestValidatorName(requestValidatorName: String) {
       cdkBuilder.requestValidatorName(requestValidatorName)
     }
 
-    public override fun restApi(restApi: IRestApi) {
+    override fun restApi(restApi: IRestApi) {
       cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
     }
 
-    public override fun validateRequestBody(validateRequestBody: Boolean) {
+    override fun validateRequestBody(validateRequestBody: Boolean) {
       cdkBuilder.validateRequestBody(validateRequestBody)
     }
 
-    public override fun validateRequestParameters(validateRequestParameters: Boolean) {
+    override fun validateRequestParameters(validateRequestParameters: Boolean) {
       cdkBuilder.validateRequestParameters(validateRequestParameters)
     }
 

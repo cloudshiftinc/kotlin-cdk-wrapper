@@ -66,23 +66,17 @@ public open class CfnSoftwarePackageVersion internal constructor(
   }
 
   public interface Builder {
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: Map<String, String>) {
-    }
+    public fun attributes(attributes: Map<String, String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun packageName(packageName: String) {
-    }
+    public fun packageName(packageName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun versionName(versionName: String) {
-    }
+    public fun versionName(versionName: String)
   }
 
   private class BuilderImpl(
@@ -92,27 +86,27 @@ public open class CfnSoftwarePackageVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion.Builder =
         software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion.Builder.create(scope, id)
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: Map<String, String>) {
+    override fun attributes(attributes: Map<String, String>) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun packageName(packageName: String) {
+    override fun packageName(packageName: String) {
       cdkBuilder.packageName(packageName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun versionName(versionName: String) {
+    override fun versionName(versionName: String) {
       cdkBuilder.versionName(versionName)
     }
 

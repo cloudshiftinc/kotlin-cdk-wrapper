@@ -23,60 +23,43 @@ public open class SageMakerCreateEndpointConfig internal constructor(
       software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig,
 ) : TaskStateBase(cdkObject) {
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5140f2434130d3e78ec4fc51706b99adf539339bb5d8d30d189ceb2575d4a838")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
-    public fun endpointConfigName(endpointConfigName: String) {
-    }
+    public fun endpointConfigName(endpointConfigName: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun kmsKey(kmsKey: IKey) {
-    }
+    public fun kmsKey(kmsKey: IKey)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun productionVariants(productionVariants: List<ProductionVariant>) {
-    }
+    public fun productionVariants(productionVariants: List<ProductionVariant>)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun tags(tags: TaskInput) {
-    }
+    public fun tags(tags: TaskInput)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -88,74 +71,74 @@ public open class SageMakerCreateEndpointConfig internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig.Builder.create(scope,
         id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5140f2434130d3e78ec4fc51706b99adf539339bb5d8d30d189ceb2575d4a838")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
-    public override fun endpointConfigName(endpointConfigName: String) {
+    override fun endpointConfigName(endpointConfigName: String) {
       cdkBuilder.endpointConfigName(endpointConfigName)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun kmsKey(kmsKey: IKey) {
+    override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun productionVariants(productionVariants: List<ProductionVariant>) {
+    override fun productionVariants(productionVariants: List<ProductionVariant>) {
       cdkBuilder.productionVariants(productionVariants.map(ProductionVariant::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun tags(tags: TaskInput) {
+    override fun tags(tags: TaskInput) {
       cdkBuilder.tags(tags.let(TaskInput::unwrap))
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

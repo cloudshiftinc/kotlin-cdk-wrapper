@@ -91,43 +91,32 @@ public open class CfnAppMonitor internal constructor(
   }
 
   public interface Builder {
-    public fun appMonitorConfiguration(appMonitorConfiguration: IResolvable) {
-    }
+    public fun appMonitorConfiguration(appMonitorConfiguration: IResolvable)
 
-    public fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty) {
-    }
+    public fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b802a42d88c685bb109f03f88e6e416040dab8249fa0c83dd16278c4f09081ed")
     public
-        fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty.Builder.() -> Unit)
 
-    public fun customEvents(customEvents: IResolvable) {
-    }
+    public fun customEvents(customEvents: IResolvable)
 
-    public fun customEvents(customEvents: CustomEventsProperty) {
-    }
+    public fun customEvents(customEvents: CustomEventsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9e1603fae134115d4dc9eadf51f7d88629bbf2443d24bc3880c95bb84cc5e976")
-    public fun customEvents(customEvents: CustomEventsProperty.Builder.() -> Unit) {
-    }
+    public fun customEvents(customEvents: CustomEventsProperty.Builder.() -> Unit)
 
-    public fun cwLogEnabled(cwLogEnabled: Boolean) {
-    }
+    public fun cwLogEnabled(cwLogEnabled: Boolean)
 
-    public fun cwLogEnabled(cwLogEnabled: IResolvable) {
-    }
+    public fun cwLogEnabled(cwLogEnabled: IResolvable)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -137,51 +126,50 @@ public open class CfnAppMonitor internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rum.CfnAppMonitor.Builder =
         software.amazon.awscdk.services.rum.CfnAppMonitor.Builder.create(scope, id)
 
-    public override fun appMonitorConfiguration(appMonitorConfiguration: IResolvable) {
+    override fun appMonitorConfiguration(appMonitorConfiguration: IResolvable) {
       cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty) {
+    override fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty) {
       cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(AppMonitorConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b802a42d88c685bb109f03f88e6e416040dab8249fa0c83dd16278c4f09081ed")
-    public override
+    override
         fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty.Builder.() -> Unit):
         Unit = appMonitorConfiguration(AppMonitorConfigurationProperty(appMonitorConfiguration))
 
-    public override fun customEvents(customEvents: IResolvable) {
+    override fun customEvents(customEvents: IResolvable) {
       cdkBuilder.customEvents(customEvents.let(IResolvable::unwrap))
     }
 
-    public override fun customEvents(customEvents: CustomEventsProperty) {
+    override fun customEvents(customEvents: CustomEventsProperty) {
       cdkBuilder.customEvents(customEvents.let(CustomEventsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9e1603fae134115d4dc9eadf51f7d88629bbf2443d24bc3880c95bb84cc5e976")
-    public override fun customEvents(customEvents: CustomEventsProperty.Builder.() -> Unit): Unit =
+    override fun customEvents(customEvents: CustomEventsProperty.Builder.() -> Unit): Unit =
         customEvents(CustomEventsProperty(customEvents))
 
-    public override fun cwLogEnabled(cwLogEnabled: Boolean) {
+    override fun cwLogEnabled(cwLogEnabled: Boolean) {
       cdkBuilder.cwLogEnabled(cwLogEnabled)
     }
 
-    public override fun cwLogEnabled(cwLogEnabled: IResolvable) {
+    override fun cwLogEnabled(cwLogEnabled: IResolvable) {
       cdkBuilder.cwLogEnabled(cwLogEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -231,44 +219,31 @@ public open class CfnAppMonitor internal constructor(
     public fun telemetries(): List<String> = unwrap(this).getTelemetries() ?: emptyList()
 
     public interface Builder {
-      public fun allowCookies(allowCookies: Boolean) {
-      }
+      public fun allowCookies(allowCookies: Boolean)
 
-      public fun allowCookies(allowCookies: IResolvable) {
-      }
+      public fun allowCookies(allowCookies: IResolvable)
 
-      public fun enableXRay(enableXRay: Boolean) {
-      }
+      public fun enableXRay(enableXRay: Boolean)
 
-      public fun enableXRay(enableXRay: IResolvable) {
-      }
+      public fun enableXRay(enableXRay: IResolvable)
 
-      public fun excludedPages(excludedPages: List<String>) {
-      }
+      public fun excludedPages(excludedPages: List<String>)
 
-      public fun favoritePages(favoritePages: List<String>) {
-      }
+      public fun favoritePages(favoritePages: List<String>)
 
-      public fun guestRoleArn(guestRoleArn: String) {
-      }
+      public fun guestRoleArn(guestRoleArn: String)
 
-      public fun identityPoolId(identityPoolId: String) {
-      }
+      public fun identityPoolId(identityPoolId: String)
 
-      public fun includedPages(includedPages: List<String>) {
-      }
+      public fun includedPages(includedPages: List<String>)
 
-      public fun metricDestinations(metricDestinations: IResolvable) {
-      }
+      public fun metricDestinations(metricDestinations: IResolvable)
 
-      public fun metricDestinations(metricDestinations: List<Any>) {
-      }
+      public fun metricDestinations(metricDestinations: List<Any>)
 
-      public fun sessionSampleRate(sessionSampleRate: Number) {
-      }
+      public fun sessionSampleRate(sessionSampleRate: Number)
 
-      public fun telemetries(telemetries: List<String>) {
-      }
+      public fun telemetries(telemetries: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -277,55 +252,55 @@ public open class CfnAppMonitor internal constructor(
           =
           software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty.builder()
 
-      public override fun allowCookies(allowCookies: Boolean) {
+      override fun allowCookies(allowCookies: Boolean) {
         cdkBuilder.allowCookies(allowCookies)
       }
 
-      public override fun allowCookies(allowCookies: IResolvable) {
+      override fun allowCookies(allowCookies: IResolvable) {
         cdkBuilder.allowCookies(allowCookies.let(IResolvable::unwrap))
       }
 
-      public override fun enableXRay(enableXRay: Boolean) {
+      override fun enableXRay(enableXRay: Boolean) {
         cdkBuilder.enableXRay(enableXRay)
       }
 
-      public override fun enableXRay(enableXRay: IResolvable) {
+      override fun enableXRay(enableXRay: IResolvable) {
         cdkBuilder.enableXRay(enableXRay.let(IResolvable::unwrap))
       }
 
-      public override fun excludedPages(excludedPages: List<String>) {
+      override fun excludedPages(excludedPages: List<String>) {
         cdkBuilder.excludedPages(excludedPages)
       }
 
-      public override fun favoritePages(favoritePages: List<String>) {
+      override fun favoritePages(favoritePages: List<String>) {
         cdkBuilder.favoritePages(favoritePages)
       }
 
-      public override fun guestRoleArn(guestRoleArn: String) {
+      override fun guestRoleArn(guestRoleArn: String) {
         cdkBuilder.guestRoleArn(guestRoleArn)
       }
 
-      public override fun identityPoolId(identityPoolId: String) {
+      override fun identityPoolId(identityPoolId: String) {
         cdkBuilder.identityPoolId(identityPoolId)
       }
 
-      public override fun includedPages(includedPages: List<String>) {
+      override fun includedPages(includedPages: List<String>) {
         cdkBuilder.includedPages(includedPages)
       }
 
-      public override fun metricDestinations(metricDestinations: IResolvable) {
+      override fun metricDestinations(metricDestinations: IResolvable) {
         cdkBuilder.metricDestinations(metricDestinations.let(IResolvable::unwrap))
       }
 
-      public override fun metricDestinations(metricDestinations: List<Any>) {
+      override fun metricDestinations(metricDestinations: List<Any>) {
         cdkBuilder.metricDestinations(metricDestinations)
       }
 
-      public override fun sessionSampleRate(sessionSampleRate: Number) {
+      override fun sessionSampleRate(sessionSampleRate: Number) {
         cdkBuilder.sessionSampleRate(sessionSampleRate)
       }
 
-      public override fun telemetries(telemetries: List<String>) {
+      override fun telemetries(telemetries: List<String>) {
         cdkBuilder.telemetries(telemetries)
       }
 
@@ -338,28 +313,25 @@ public open class CfnAppMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty,
     ) : AppMonitorConfigurationProperty {
-      public override fun allowCookies(): Any? = unwrap(this).getAllowCookies()
+      override fun allowCookies(): Any? = unwrap(this).getAllowCookies()
 
-      public override fun enableXRay(): Any? = unwrap(this).getEnableXRay()
+      override fun enableXRay(): Any? = unwrap(this).getEnableXRay()
 
-      public override fun excludedPages(): List<String> = unwrap(this).getExcludedPages() ?:
-          emptyList()
+      override fun excludedPages(): List<String> = unwrap(this).getExcludedPages() ?: emptyList()
 
-      public override fun favoritePages(): List<String> = unwrap(this).getFavoritePages() ?:
-          emptyList()
+      override fun favoritePages(): List<String> = unwrap(this).getFavoritePages() ?: emptyList()
 
-      public override fun guestRoleArn(): String? = unwrap(this).getGuestRoleArn()
+      override fun guestRoleArn(): String? = unwrap(this).getGuestRoleArn()
 
-      public override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
+      override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
 
-      public override fun includedPages(): List<String> = unwrap(this).getIncludedPages() ?:
-          emptyList()
+      override fun includedPages(): List<String> = unwrap(this).getIncludedPages() ?: emptyList()
 
-      public override fun metricDestinations(): Any? = unwrap(this).getMetricDestinations()
+      override fun metricDestinations(): Any? = unwrap(this).getMetricDestinations()
 
-      public override fun sessionSampleRate(): Number? = unwrap(this).getSessionSampleRate()
+      override fun sessionSampleRate(): Number? = unwrap(this).getSessionSampleRate()
 
-      public override fun telemetries(): List<String> = unwrap(this).getTelemetries() ?: emptyList()
+      override fun telemetries(): List<String> = unwrap(this).getTelemetries() ?: emptyList()
     }
 
     public companion object {
@@ -392,20 +364,15 @@ public open class CfnAppMonitor internal constructor(
     public fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
 
     public interface Builder {
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
 
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
 
-      public fun iamRoleArn(iamRoleArn: String) {
-      }
+      public fun iamRoleArn(iamRoleArn: String)
 
-      public fun metricDefinitions(metricDefinitions: IResolvable) {
-      }
+      public fun metricDefinitions(metricDefinitions: IResolvable)
 
-      public fun metricDefinitions(metricDefinitions: List<Any>) {
-      }
+      public fun metricDefinitions(metricDefinitions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -413,23 +380,23 @@ public open class CfnAppMonitor internal constructor(
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty.Builder =
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty.builder()
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
-      public override fun iamRoleArn(iamRoleArn: String) {
+      override fun iamRoleArn(iamRoleArn: String) {
         cdkBuilder.iamRoleArn(iamRoleArn)
       }
 
-      public override fun metricDefinitions(metricDefinitions: IResolvable) {
+      override fun metricDefinitions(metricDefinitions: IResolvable) {
         cdkBuilder.metricDefinitions(metricDefinitions.let(IResolvable::unwrap))
       }
 
-      public override fun metricDefinitions(metricDefinitions: List<Any>) {
+      override fun metricDefinitions(metricDefinitions: List<Any>) {
         cdkBuilder.metricDefinitions(metricDefinitions)
       }
 
@@ -442,13 +409,13 @@ public open class CfnAppMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty,
     ) : MetricDestinationProperty {
-      public override fun destination(): String = unwrap(this).getDestination()
+      override fun destination(): String = unwrap(this).getDestination()
 
-      public override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
 
-      public override fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
+      override fun iamRoleArn(): String? = unwrap(this).getIamRoleArn()
 
-      public override fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
+      override fun metricDefinitions(): Any? = unwrap(this).getMetricDefinitions()
     }
 
     public companion object {
@@ -475,8 +442,7 @@ public open class CfnAppMonitor internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -484,7 +450,7 @@ public open class CfnAppMonitor internal constructor(
           software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty.Builder =
           software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty.builder()
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -496,7 +462,7 @@ public open class CfnAppMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty,
     ) : CustomEventsProperty {
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -533,26 +499,19 @@ public open class CfnAppMonitor internal constructor(
     public fun valueKey(): String? = unwrap(this).getValueKey()
 
     public interface Builder {
-      public fun dimensionKeys(dimensionKeys: IResolvable) {
-      }
+      public fun dimensionKeys(dimensionKeys: IResolvable)
 
-      public fun dimensionKeys(dimensionKeys: Map<String, String>) {
-      }
+      public fun dimensionKeys(dimensionKeys: Map<String, String>)
 
-      public fun eventPattern(eventPattern: String) {
-      }
+      public fun eventPattern(eventPattern: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun unitLabel(unitLabel: String) {
-      }
+      public fun unitLabel(unitLabel: String)
 
-      public fun valueKey(valueKey: String) {
-      }
+      public fun valueKey(valueKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -560,31 +519,31 @@ public open class CfnAppMonitor internal constructor(
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty.Builder =
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty.builder()
 
-      public override fun dimensionKeys(dimensionKeys: IResolvable) {
+      override fun dimensionKeys(dimensionKeys: IResolvable) {
         cdkBuilder.dimensionKeys(dimensionKeys.let(IResolvable::unwrap))
       }
 
-      public override fun dimensionKeys(dimensionKeys: Map<String, String>) {
+      override fun dimensionKeys(dimensionKeys: Map<String, String>) {
         cdkBuilder.dimensionKeys(dimensionKeys)
       }
 
-      public override fun eventPattern(eventPattern: String) {
+      override fun eventPattern(eventPattern: String) {
         cdkBuilder.eventPattern(eventPattern)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun unitLabel(unitLabel: String) {
+      override fun unitLabel(unitLabel: String) {
         cdkBuilder.unitLabel(unitLabel)
       }
 
-      public override fun valueKey(valueKey: String) {
+      override fun valueKey(valueKey: String) {
         cdkBuilder.valueKey(valueKey)
       }
 
@@ -596,17 +555,17 @@ public open class CfnAppMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty,
     ) : MetricDefinitionProperty {
-      public override fun dimensionKeys(): Any? = unwrap(this).getDimensionKeys()
+      override fun dimensionKeys(): Any? = unwrap(this).getDimensionKeys()
 
-      public override fun eventPattern(): String? = unwrap(this).getEventPattern()
+      override fun eventPattern(): String? = unwrap(this).getEventPattern()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun unitLabel(): String? = unwrap(this).getUnitLabel()
+      override fun unitLabel(): String? = unwrap(this).getUnitLabel()
 
-      public override fun valueKey(): String? = unwrap(this).getValueKey()
+      override fun valueKey(): String? = unwrap(this).getValueKey()
     }
 
     public companion object {

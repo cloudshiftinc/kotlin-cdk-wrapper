@@ -57,26 +57,19 @@ public open class CustomPolicy internal constructor(
       Rule = onReEvaluationStatus(id, OnEventOptions(options))
 
   public interface Builder {
-    public fun configRuleName(configRuleName: String) {
-    }
+    public fun configRuleName(configRuleName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enableDebugLog(enableDebugLog: Boolean) {
-    }
+    public fun enableDebugLog(enableDebugLog: Boolean)
 
-    public fun inputParameters(inputParameters: Map<String, Any>) {
-    }
+    public fun inputParameters(inputParameters: Map<String, Any>)
 
-    public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-    }
+    public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency)
 
-    public fun policyText(policyText: String) {
-    }
+    public fun policyText(policyText: String)
 
-    public fun ruleScope(ruleScope: RuleScope) {
-    }
+    public fun ruleScope(ruleScope: RuleScope)
   }
 
   private class BuilderImpl(
@@ -86,32 +79,31 @@ public open class CustomPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.config.CustomPolicy.Builder =
         software.amazon.awscdk.services.config.CustomPolicy.Builder.create(scope, id)
 
-    public override fun configRuleName(configRuleName: String) {
+    override fun configRuleName(configRuleName: String) {
       cdkBuilder.configRuleName(configRuleName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enableDebugLog(enableDebugLog: Boolean) {
+    override fun enableDebugLog(enableDebugLog: Boolean) {
       cdkBuilder.enableDebugLog(enableDebugLog)
     }
 
-    public override fun inputParameters(inputParameters: Map<String, Any>) {
+    override fun inputParameters(inputParameters: Map<String, Any>) {
       cdkBuilder.inputParameters(inputParameters)
     }
 
-    public override
-        fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
+    override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
       cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
     }
 
-    public override fun policyText(policyText: String) {
+    override fun policyText(policyText: String) {
       cdkBuilder.policyText(policyText)
     }
 
-    public override fun ruleScope(ruleScope: RuleScope) {
+    override fun ruleScope(ruleScope: RuleScope) {
       cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
     }
 

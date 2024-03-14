@@ -22,50 +22,44 @@ public interface ServerlessClusterAttributes {
       unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun clusterEndpointAddress(clusterEndpointAddress: String) {
-    }
+    public fun clusterEndpointAddress(clusterEndpointAddress: String)
 
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun readerEndpointAddress(readerEndpointAddress: String) {
-    }
+    public fun readerEndpointAddress(readerEndpointAddress: String)
 
-    public fun secret(secret: ISecret) {
-    }
+    public fun secret(secret: ISecret)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ServerlessClusterAttributes.Builder
         = software.amazon.awscdk.services.rds.ServerlessClusterAttributes.builder()
 
-    public override fun clusterEndpointAddress(clusterEndpointAddress: String) {
+    override fun clusterEndpointAddress(clusterEndpointAddress: String) {
       cdkBuilder.clusterEndpointAddress(clusterEndpointAddress)
     }
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun readerEndpointAddress(readerEndpointAddress: String) {
+    override fun readerEndpointAddress(readerEndpointAddress: String) {
       cdkBuilder.readerEndpointAddress(readerEndpointAddress)
     }
 
-    public override fun secret(secret: ISecret) {
+    override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
@@ -76,17 +70,17 @@ public interface ServerlessClusterAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes,
   ) : ServerlessClusterAttributes {
-    public override fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
+    override fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
 
-    public override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+    override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
+    override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
 
-    public override fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
+    override fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
   }
 

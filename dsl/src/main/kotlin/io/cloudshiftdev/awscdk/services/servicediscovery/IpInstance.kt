@@ -21,23 +21,17 @@ public open class IpInstance internal constructor(
   public override fun service(): IService = unwrap(this).getService().let(IService::wrap)
 
   public interface Builder {
-    public fun customAttributes(customAttributes: Map<String, String>) {
-    }
+    public fun customAttributes(customAttributes: Map<String, String>)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun ipv4(ipv4: String) {
-    }
+    public fun ipv4(ipv4: String)
 
-    public fun ipv6(ipv6: String) {
-    }
+    public fun ipv6(ipv6: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun service(service: IService) {
-    }
+    public fun service(service: IService)
   }
 
   private class BuilderImpl(
@@ -47,27 +41,27 @@ public open class IpInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicediscovery.IpInstance.Builder =
         software.amazon.awscdk.services.servicediscovery.IpInstance.Builder.create(scope, id)
 
-    public override fun customAttributes(customAttributes: Map<String, String>) {
+    override fun customAttributes(customAttributes: Map<String, String>) {
       cdkBuilder.customAttributes(customAttributes)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun ipv4(ipv4: String) {
+    override fun ipv4(ipv4: String) {
       cdkBuilder.ipv4(ipv4)
     }
 
-    public override fun ipv6(ipv6: String) {
+    override fun ipv6(ipv6: String) {
       cdkBuilder.ipv6(ipv6)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun service(service: IService) {
+    override fun service(service: IService) {
       cdkBuilder.service(service.let(IService::unwrap))
     }
 

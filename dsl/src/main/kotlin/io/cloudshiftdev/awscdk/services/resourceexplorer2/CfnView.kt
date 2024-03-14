@@ -71,31 +71,23 @@ public open class CfnView internal constructor(
   }
 
   public interface Builder {
-    public fun filters(filters: IResolvable) {
-    }
+    public fun filters(filters: IResolvable)
 
-    public fun filters(filters: FiltersProperty) {
-    }
+    public fun filters(filters: FiltersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c101ff1abd5d95a62efbece54fc4a6c86ed1d5bb82015518c12e97e76685c0a")
-    public fun filters(filters: FiltersProperty.Builder.() -> Unit) {
-    }
+    public fun filters(filters: FiltersProperty.Builder.() -> Unit)
 
-    public fun includedProperties(includedProperties: IResolvable) {
-    }
+    public fun includedProperties(includedProperties: IResolvable)
 
-    public fun includedProperties(includedProperties: List<Any>) {
-    }
+    public fun includedProperties(includedProperties: List<Any>)
 
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun viewName(viewName: String) {
-    }
+    public fun viewName(viewName: String)
   }
 
   private class BuilderImpl(
@@ -105,36 +97,36 @@ public open class CfnView internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.resourceexplorer2.CfnView.Builder =
         software.amazon.awscdk.services.resourceexplorer2.CfnView.Builder.create(scope, id)
 
-    public override fun filters(filters: IResolvable) {
+    override fun filters(filters: IResolvable) {
       cdkBuilder.filters(filters.let(IResolvable::unwrap))
     }
 
-    public override fun filters(filters: FiltersProperty) {
+    override fun filters(filters: FiltersProperty) {
       cdkBuilder.filters(filters.let(FiltersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c101ff1abd5d95a62efbece54fc4a6c86ed1d5bb82015518c12e97e76685c0a")
-    public override fun filters(filters: FiltersProperty.Builder.() -> Unit): Unit =
+    override fun filters(filters: FiltersProperty.Builder.() -> Unit): Unit =
         filters(FiltersProperty(filters))
 
-    public override fun includedProperties(includedProperties: IResolvable) {
+    override fun includedProperties(includedProperties: IResolvable) {
       cdkBuilder.includedProperties(includedProperties.let(IResolvable::unwrap))
     }
 
-    public override fun includedProperties(includedProperties: List<Any>) {
+    override fun includedProperties(includedProperties: List<Any>) {
       cdkBuilder.includedProperties(includedProperties)
     }
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun viewName(viewName: String) {
+    override fun viewName(viewName: String) {
       cdkBuilder.viewName(viewName)
     }
 
@@ -167,8 +159,7 @@ public open class CfnView internal constructor(
     public fun filterString(): String
 
     public interface Builder {
-      public fun filterString(filterString: String) {
-      }
+      public fun filterString(filterString: String)
     }
 
     private class BuilderImpl : Builder {
@@ -176,7 +167,7 @@ public open class CfnView internal constructor(
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty.Builder =
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty.builder()
 
-      public override fun filterString(filterString: String) {
+      override fun filterString(filterString: String) {
         cdkBuilder.filterString(filterString)
       }
 
@@ -189,7 +180,7 @@ public open class CfnView internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty,
     ) : SearchFilterProperty {
-      public override fun filterString(): String = unwrap(this).getFilterString()
+      override fun filterString(): String = unwrap(this).getFilterString()
     }
 
     public companion object {
@@ -216,8 +207,7 @@ public open class CfnView internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -226,7 +216,7 @@ public open class CfnView internal constructor(
           =
           software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -239,7 +229,7 @@ public open class CfnView internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
     ) : IncludedPropertyProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -266,8 +256,7 @@ public open class CfnView internal constructor(
     public fun filterString(): String
 
     public interface Builder {
-      public fun filterString(filterString: String) {
-      }
+      public fun filterString(filterString: String)
     }
 
     private class BuilderImpl : Builder {
@@ -275,7 +264,7 @@ public open class CfnView internal constructor(
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.Builder =
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.builder()
 
-      public override fun filterString(filterString: String) {
+      override fun filterString(filterString: String) {
         cdkBuilder.filterString(filterString)
       }
 
@@ -287,7 +276,7 @@ public open class CfnView internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
     ) : FiltersProperty {
-      public override fun filterString(): String = unwrap(this).getFilterString()
+      override fun filterString(): String = unwrap(this).getFilterString()
     }
 
     public companion object {

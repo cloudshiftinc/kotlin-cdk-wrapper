@@ -11,20 +11,15 @@ public open class OpenSearchDataSource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.OpenSearchDataSource,
 ) : BackedDataSource(cdkObject) {
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domain(domain: IDomain) {
-    }
+    public fun domain(domain: IDomain)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
   }
 
   private class BuilderImpl(
@@ -34,23 +29,23 @@ public open class OpenSearchDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.OpenSearchDataSource.Builder =
         software.amazon.awscdk.services.appsync.OpenSearchDataSource.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domain(domain: IDomain) {
+    override fun domain(domain: IDomain) {
       cdkBuilder.domain(domain.let(IDomain::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 

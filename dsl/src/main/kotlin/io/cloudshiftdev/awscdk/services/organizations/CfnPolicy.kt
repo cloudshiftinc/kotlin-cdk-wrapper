@@ -68,23 +68,17 @@ public open class CfnPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun content(content: Any) {
-    }
+    public fun content(content: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetIds(targetIds: List<String>) {
-    }
+    public fun targetIds(targetIds: List<String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -94,27 +88,27 @@ public open class CfnPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.organizations.CfnPolicy.Builder =
         software.amazon.awscdk.services.organizations.CfnPolicy.Builder.create(scope, id)
 
-    public override fun content(content: Any) {
+    override fun content(content: Any) {
       cdkBuilder.content(content)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetIds(targetIds: List<String>) {
+    override fun targetIds(targetIds: List<String>) {
       cdkBuilder.targetIds(targetIds)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

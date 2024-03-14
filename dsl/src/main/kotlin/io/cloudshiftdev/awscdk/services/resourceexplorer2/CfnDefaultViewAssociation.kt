@@ -26,8 +26,7 @@ public open class CfnDefaultViewAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun viewArn(viewArn: String) {
-    }
+    public fun viewArn(viewArn: String)
   }
 
   private class BuilderImpl(
@@ -39,7 +38,7 @@ public open class CfnDefaultViewAssociation internal constructor(
         software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation.Builder.create(scope,
         id)
 
-    public override fun viewArn(viewArn: String) {
+    override fun viewArn(viewArn: String) {
       cdkBuilder.viewArn(viewArn)
     }
 

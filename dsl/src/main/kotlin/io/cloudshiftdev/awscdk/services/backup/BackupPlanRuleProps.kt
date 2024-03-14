@@ -34,78 +34,68 @@ public interface BackupPlanRuleProps {
   public fun startWindow(): Duration? = unwrap(this).getStartWindow()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun backupVault(backupVault: IBackupVault) {
-    }
+    public fun backupVault(backupVault: IBackupVault)
 
-    public fun completionWindow(completionWindow: Duration) {
-    }
+    public fun completionWindow(completionWindow: Duration)
 
-    public fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
-    }
+    public fun copyActions(copyActions: List<BackupPlanCopyActionProps>)
 
-    public fun deleteAfter(deleteAfter: Duration) {
-    }
+    public fun deleteAfter(deleteAfter: Duration)
 
-    public fun enableContinuousBackup(enableContinuousBackup: Boolean) {
-    }
+    public fun enableContinuousBackup(enableContinuousBackup: Boolean)
 
-    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-    }
+    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration)
 
-    public fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
-    }
+    public fun recoveryPointTags(recoveryPointTags: Map<String, String>)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun scheduleExpression(scheduleExpression: Schedule) {
-    }
+    public fun scheduleExpression(scheduleExpression: Schedule)
 
-    public fun startWindow(startWindow: Duration) {
-    }
+    public fun startWindow(startWindow: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupPlanRuleProps.Builder =
         software.amazon.awscdk.services.backup.BackupPlanRuleProps.builder()
 
-    public override fun backupVault(backupVault: IBackupVault) {
+    override fun backupVault(backupVault: IBackupVault) {
       cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
     }
 
-    public override fun completionWindow(completionWindow: Duration) {
+    override fun completionWindow(completionWindow: Duration) {
       cdkBuilder.completionWindow(completionWindow.let(Duration::unwrap))
     }
 
-    public override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
+    override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
       cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps::unwrap))
     }
 
-    public override fun deleteAfter(deleteAfter: Duration) {
+    override fun deleteAfter(deleteAfter: Duration) {
       cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))
     }
 
-    public override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
+    override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
       cdkBuilder.enableContinuousBackup(enableContinuousBackup)
     }
 
-    public override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
+    override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
       cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration::unwrap))
     }
 
-    public override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
+    override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
       cdkBuilder.recoveryPointTags(recoveryPointTags)
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun scheduleExpression(scheduleExpression: Schedule) {
+    override fun scheduleExpression(scheduleExpression: Schedule) {
       cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule::unwrap))
     }
 
-    public override fun startWindow(startWindow: Duration) {
+    override fun startWindow(startWindow: Duration) {
       cdkBuilder.startWindow(startWindow.let(Duration::unwrap))
     }
 
@@ -116,34 +106,31 @@ public interface BackupPlanRuleProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.backup.BackupPlanRuleProps,
   ) : BackupPlanRuleProps {
-    public override fun backupVault(): IBackupVault? =
+    override fun backupVault(): IBackupVault? =
         unwrap(this).getBackupVault()?.let(IBackupVault::wrap)
 
-    public override fun completionWindow(): Duration? =
+    override fun completionWindow(): Duration? =
         unwrap(this).getCompletionWindow()?.let(Duration::wrap)
 
-    public override fun copyActions(): List<BackupPlanCopyActionProps> =
+    override fun copyActions(): List<BackupPlanCopyActionProps> =
         unwrap(this).getCopyActions()?.map(BackupPlanCopyActionProps::wrap) ?: emptyList()
 
-    public override fun deleteAfter(): Duration? =
-        unwrap(this).getDeleteAfter()?.let(Duration::wrap)
+    override fun deleteAfter(): Duration? = unwrap(this).getDeleteAfter()?.let(Duration::wrap)
 
-    public override fun enableContinuousBackup(): Boolean? =
-        unwrap(this).getEnableContinuousBackup()
+    override fun enableContinuousBackup(): Boolean? = unwrap(this).getEnableContinuousBackup()
 
-    public override fun moveToColdStorageAfter(): Duration? =
+    override fun moveToColdStorageAfter(): Duration? =
         unwrap(this).getMoveToColdStorageAfter()?.let(Duration::wrap)
 
-    public override fun recoveryPointTags(): Map<String, String> =
-        unwrap(this).getRecoveryPointTags() ?: emptyMap()
+    override fun recoveryPointTags(): Map<String, String> = unwrap(this).getRecoveryPointTags() ?:
+        emptyMap()
 
-    public override fun ruleName(): String? = unwrap(this).getRuleName()
+    override fun ruleName(): String? = unwrap(this).getRuleName()
 
-    public override fun scheduleExpression(): Schedule? =
+    override fun scheduleExpression(): Schedule? =
         unwrap(this).getScheduleExpression()?.let(Schedule::wrap)
 
-    public override fun startWindow(): Duration? =
-        unwrap(this).getStartWindow()?.let(Duration::wrap)
+    override fun startWindow(): Duration? = unwrap(this).getStartWindow()?.let(Duration::wrap)
   }
 
   public companion object {

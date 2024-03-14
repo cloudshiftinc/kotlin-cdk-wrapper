@@ -21,57 +21,50 @@ public interface BootstrapOptions {
   public fun useMaxPods(): Boolean? = unwrap(this).getUseMaxPods()
 
   public interface Builder {
-    public fun additionalArgs(additionalArgs: String) {
-    }
+    public fun additionalArgs(additionalArgs: String)
 
-    public fun awsApiRetryAttempts(awsApiRetryAttempts: Number) {
-    }
+    public fun awsApiRetryAttempts(awsApiRetryAttempts: Number)
 
-    public fun dnsClusterIp(dnsClusterIp: String) {
-    }
+    public fun dnsClusterIp(dnsClusterIp: String)
 
-    public fun dockerConfigJson(dockerConfigJson: String) {
-    }
+    public fun dockerConfigJson(dockerConfigJson: String)
 
-    public fun enableDockerBridge(enableDockerBridge: Boolean) {
-    }
+    public fun enableDockerBridge(enableDockerBridge: Boolean)
 
-    public fun kubeletExtraArgs(kubeletExtraArgs: String) {
-    }
+    public fun kubeletExtraArgs(kubeletExtraArgs: String)
 
-    public fun useMaxPods(useMaxPods: Boolean) {
-    }
+    public fun useMaxPods(useMaxPods: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.BootstrapOptions.Builder =
         software.amazon.awscdk.services.eks.BootstrapOptions.builder()
 
-    public override fun additionalArgs(additionalArgs: String) {
+    override fun additionalArgs(additionalArgs: String) {
       cdkBuilder.additionalArgs(additionalArgs)
     }
 
-    public override fun awsApiRetryAttempts(awsApiRetryAttempts: Number) {
+    override fun awsApiRetryAttempts(awsApiRetryAttempts: Number) {
       cdkBuilder.awsApiRetryAttempts(awsApiRetryAttempts)
     }
 
-    public override fun dnsClusterIp(dnsClusterIp: String) {
+    override fun dnsClusterIp(dnsClusterIp: String) {
       cdkBuilder.dnsClusterIp(dnsClusterIp)
     }
 
-    public override fun dockerConfigJson(dockerConfigJson: String) {
+    override fun dockerConfigJson(dockerConfigJson: String) {
       cdkBuilder.dockerConfigJson(dockerConfigJson)
     }
 
-    public override fun enableDockerBridge(enableDockerBridge: Boolean) {
+    override fun enableDockerBridge(enableDockerBridge: Boolean) {
       cdkBuilder.enableDockerBridge(enableDockerBridge)
     }
 
-    public override fun kubeletExtraArgs(kubeletExtraArgs: String) {
+    override fun kubeletExtraArgs(kubeletExtraArgs: String) {
       cdkBuilder.kubeletExtraArgs(kubeletExtraArgs)
     }
 
-    public override fun useMaxPods(useMaxPods: Boolean) {
+    override fun useMaxPods(useMaxPods: Boolean) {
       cdkBuilder.useMaxPods(useMaxPods)
     }
 
@@ -81,19 +74,19 @@ public interface BootstrapOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.BootstrapOptions,
   ) : BootstrapOptions {
-    public override fun additionalArgs(): String? = unwrap(this).getAdditionalArgs()
+    override fun additionalArgs(): String? = unwrap(this).getAdditionalArgs()
 
-    public override fun awsApiRetryAttempts(): Number? = unwrap(this).getAwsApiRetryAttempts()
+    override fun awsApiRetryAttempts(): Number? = unwrap(this).getAwsApiRetryAttempts()
 
-    public override fun dnsClusterIp(): String? = unwrap(this).getDnsClusterIp()
+    override fun dnsClusterIp(): String? = unwrap(this).getDnsClusterIp()
 
-    public override fun dockerConfigJson(): String? = unwrap(this).getDockerConfigJson()
+    override fun dockerConfigJson(): String? = unwrap(this).getDockerConfigJson()
 
-    public override fun enableDockerBridge(): Boolean? = unwrap(this).getEnableDockerBridge()
+    override fun enableDockerBridge(): Boolean? = unwrap(this).getEnableDockerBridge()
 
-    public override fun kubeletExtraArgs(): String? = unwrap(this).getKubeletExtraArgs()
+    override fun kubeletExtraArgs(): String? = unwrap(this).getKubeletExtraArgs()
 
-    public override fun useMaxPods(): Boolean? = unwrap(this).getUseMaxPods()
+    override fun useMaxPods(): Boolean? = unwrap(this).getUseMaxPods()
   }
 
   public companion object {

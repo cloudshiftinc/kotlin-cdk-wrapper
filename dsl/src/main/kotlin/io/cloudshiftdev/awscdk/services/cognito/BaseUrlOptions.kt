@@ -7,15 +7,14 @@ public interface BaseUrlOptions {
   public fun fips(): Boolean? = unwrap(this).getFips()
 
   public interface Builder {
-    public fun fips(fips: Boolean) {
-    }
+    public fun fips(fips: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.BaseUrlOptions.Builder =
         software.amazon.awscdk.services.cognito.BaseUrlOptions.builder()
 
-    public override fun fips(fips: Boolean) {
+    override fun fips(fips: Boolean) {
       cdkBuilder.fips(fips)
     }
 
@@ -25,7 +24,7 @@ public interface BaseUrlOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.BaseUrlOptions,
   ) : BaseUrlOptions {
-    public override fun fips(): Boolean? = unwrap(this).getFips()
+    override fun fips(): Boolean? = unwrap(this).getFips()
   }
 
   public companion object {

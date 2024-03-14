@@ -29,32 +29,23 @@ public interface BasicStepScalingPolicyProps {
   public fun scalingSteps(): List<ScalingInterval>
 
   public interface Builder {
-    public fun adjustmentType(adjustmentType: AdjustmentType) {
-    }
+    public fun adjustmentType(adjustmentType: AdjustmentType)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun datapointsToAlarm(datapointsToAlarm: Number) {
-    }
+    public fun datapointsToAlarm(datapointsToAlarm: Number)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration)
 
-    public fun evaluationPeriods(evaluationPeriods: Number) {
-    }
+    public fun evaluationPeriods(evaluationPeriods: Number)
 
-    public fun metric(metric: IMetric) {
-    }
+    public fun metric(metric: IMetric)
 
-    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    }
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType)
 
-    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    }
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
-    public fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-    }
+    public fun scalingSteps(scalingSteps: List<ScalingInterval>)
   }
 
   private class BuilderImpl : Builder {
@@ -62,39 +53,39 @@ public interface BasicStepScalingPolicyProps {
         software.amazon.awscdk.services.autoscaling.BasicStepScalingPolicyProps.Builder =
         software.amazon.awscdk.services.autoscaling.BasicStepScalingPolicyProps.builder()
 
-    public override fun adjustmentType(adjustmentType: AdjustmentType) {
+    override fun adjustmentType(adjustmentType: AdjustmentType) {
       cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun datapointsToAlarm(datapointsToAlarm: Number) {
+    override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun evaluationPeriods(evaluationPeriods: Number) {
+    override fun evaluationPeriods(evaluationPeriods: Number) {
       cdkBuilder.evaluationPeriods(evaluationPeriods)
     }
 
-    public override fun metric(metric: IMetric) {
+    override fun metric(metric: IMetric) {
       cdkBuilder.metric(metric.let(IMetric::unwrap))
     }
 
-    public override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+    override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
       cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
     }
 
-    public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+    override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
       cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
     }
 
-    public override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
+    override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
 
@@ -105,26 +96,26 @@ public interface BasicStepScalingPolicyProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.BasicStepScalingPolicyProps,
   ) : BasicStepScalingPolicyProps {
-    public override fun adjustmentType(): AdjustmentType? =
+    override fun adjustmentType(): AdjustmentType? =
         unwrap(this).getAdjustmentType()?.let(AdjustmentType::wrap)
 
-    public override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
+    override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
 
-    public override fun datapointsToAlarm(): Number? = unwrap(this).getDatapointsToAlarm()
+    override fun datapointsToAlarm(): Number? = unwrap(this).getDatapointsToAlarm()
 
-    public override fun estimatedInstanceWarmup(): Duration? =
+    override fun estimatedInstanceWarmup(): Duration? =
         unwrap(this).getEstimatedInstanceWarmup()?.let(Duration::wrap)
 
-    public override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
+    override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
 
-    public override fun metric(): IMetric = unwrap(this).getMetric().let(IMetric::wrap)
+    override fun metric(): IMetric = unwrap(this).getMetric().let(IMetric::wrap)
 
-    public override fun metricAggregationType(): MetricAggregationType? =
+    override fun metricAggregationType(): MetricAggregationType? =
         unwrap(this).getMetricAggregationType()?.let(MetricAggregationType::wrap)
 
-    public override fun minAdjustmentMagnitude(): Number? = unwrap(this).getMinAdjustmentMagnitude()
+    override fun minAdjustmentMagnitude(): Number? = unwrap(this).getMinAdjustmentMagnitude()
 
-    public override fun scalingSteps(): List<ScalingInterval> =
+    override fun scalingSteps(): List<ScalingInterval> =
         unwrap(this).getScalingSteps().map(ScalingInterval::wrap)
   }
 

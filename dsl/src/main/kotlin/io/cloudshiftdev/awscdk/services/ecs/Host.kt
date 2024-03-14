@@ -7,15 +7,14 @@ public interface Host {
   public fun sourcePath(): String? = unwrap(this).getSourcePath()
 
   public interface Builder {
-    public fun sourcePath(sourcePath: String) {
-    }
+    public fun sourcePath(sourcePath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.Host.Builder =
         software.amazon.awscdk.services.ecs.Host.builder()
 
-    public override fun sourcePath(sourcePath: String) {
+    override fun sourcePath(sourcePath: String) {
       cdkBuilder.sourcePath(sourcePath)
     }
 
@@ -25,7 +24,7 @@ public interface Host {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.Host,
   ) : Host {
-    public override fun sourcePath(): String? = unwrap(this).getSourcePath()
+    override fun sourcePath(): String? = unwrap(this).getSourcePath()
   }
 
   public companion object {

@@ -62,29 +62,21 @@ public open class CfnResource internal constructor(
   }
 
   public interface Builder {
-    public fun hybridAccessEnabled(hybridAccessEnabled: Boolean) {
-    }
+    public fun hybridAccessEnabled(hybridAccessEnabled: Boolean)
 
-    public fun hybridAccessEnabled(hybridAccessEnabled: IResolvable) {
-    }
+    public fun hybridAccessEnabled(hybridAccessEnabled: IResolvable)
 
-    public fun resourceArn(resourceArn: String) {
-    }
+    public fun resourceArn(resourceArn: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun useServiceLinkedRole(useServiceLinkedRole: Boolean) {
-    }
+    public fun useServiceLinkedRole(useServiceLinkedRole: Boolean)
 
-    public fun useServiceLinkedRole(useServiceLinkedRole: IResolvable) {
-    }
+    public fun useServiceLinkedRole(useServiceLinkedRole: IResolvable)
 
-    public fun withFederation(withFederation: Boolean) {
-    }
+    public fun withFederation(withFederation: Boolean)
 
-    public fun withFederation(withFederation: IResolvable) {
-    }
+    public fun withFederation(withFederation: IResolvable)
   }
 
   private class BuilderImpl(
@@ -94,35 +86,35 @@ public open class CfnResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lakeformation.CfnResource.Builder =
         software.amazon.awscdk.services.lakeformation.CfnResource.Builder.create(scope, id)
 
-    public override fun hybridAccessEnabled(hybridAccessEnabled: Boolean) {
+    override fun hybridAccessEnabled(hybridAccessEnabled: Boolean) {
       cdkBuilder.hybridAccessEnabled(hybridAccessEnabled)
     }
 
-    public override fun hybridAccessEnabled(hybridAccessEnabled: IResolvable) {
+    override fun hybridAccessEnabled(hybridAccessEnabled: IResolvable) {
       cdkBuilder.hybridAccessEnabled(hybridAccessEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun resourceArn(resourceArn: String) {
+    override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun useServiceLinkedRole(useServiceLinkedRole: Boolean) {
+    override fun useServiceLinkedRole(useServiceLinkedRole: Boolean) {
       cdkBuilder.useServiceLinkedRole(useServiceLinkedRole)
     }
 
-    public override fun useServiceLinkedRole(useServiceLinkedRole: IResolvable) {
+    override fun useServiceLinkedRole(useServiceLinkedRole: IResolvable) {
       cdkBuilder.useServiceLinkedRole(useServiceLinkedRole.let(IResolvable::unwrap))
     }
 
-    public override fun withFederation(withFederation: Boolean) {
+    override fun withFederation(withFederation: Boolean) {
       cdkBuilder.withFederation(withFederation)
     }
 
-    public override fun withFederation(withFederation: IResolvable) {
+    override fun withFederation(withFederation: IResolvable) {
       cdkBuilder.withFederation(withFederation.let(IResolvable::unwrap))
     }
 

@@ -63,20 +63,15 @@ public open class CfnTrustStore internal constructor(
   }
 
   public interface Builder {
-    public fun caCertificatesBundleS3Bucket(caCertificatesBundleS3Bucket: String) {
-    }
+    public fun caCertificatesBundleS3Bucket(caCertificatesBundleS3Bucket: String)
 
-    public fun caCertificatesBundleS3Key(caCertificatesBundleS3Key: String) {
-    }
+    public fun caCertificatesBundleS3Key(caCertificatesBundleS3Key: String)
 
-    public fun caCertificatesBundleS3ObjectVersion(caCertificatesBundleS3ObjectVersion: String) {
-    }
+    public fun caCertificatesBundleS3ObjectVersion(caCertificatesBundleS3ObjectVersion: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -88,24 +83,23 @@ public open class CfnTrustStore internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStore.Builder.create(scope,
         id)
 
-    public override fun caCertificatesBundleS3Bucket(caCertificatesBundleS3Bucket: String) {
+    override fun caCertificatesBundleS3Bucket(caCertificatesBundleS3Bucket: String) {
       cdkBuilder.caCertificatesBundleS3Bucket(caCertificatesBundleS3Bucket)
     }
 
-    public override fun caCertificatesBundleS3Key(caCertificatesBundleS3Key: String) {
+    override fun caCertificatesBundleS3Key(caCertificatesBundleS3Key: String) {
       cdkBuilder.caCertificatesBundleS3Key(caCertificatesBundleS3Key)
     }
 
-    public override
-        fun caCertificatesBundleS3ObjectVersion(caCertificatesBundleS3ObjectVersion: String) {
+    override fun caCertificatesBundleS3ObjectVersion(caCertificatesBundleS3ObjectVersion: String) {
       cdkBuilder.caCertificatesBundleS3ObjectVersion(caCertificatesBundleS3ObjectVersion)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

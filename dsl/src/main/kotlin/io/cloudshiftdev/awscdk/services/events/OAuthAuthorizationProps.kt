@@ -9,75 +9,66 @@ public interface OAuthAuthorizationProps {
   public fun authorizationEndpoint(): String
 
   public fun bodyParameters(): Map<String, HttpParameter> =
-      unwrap(this).getBodyParameters()?.mapValues { HttpParameter.wrap(it.value)} ?: emptyMap()
+      unwrap(this).getBodyParameters()?.mapValues{HttpParameter.wrap(it.value)} ?: emptyMap()
 
   public fun clientId(): String
 
   public fun clientSecret(): SecretValue
 
   public fun headerParameters(): Map<String, HttpParameter> =
-      unwrap(this).getHeaderParameters()?.mapValues { HttpParameter.wrap(it.value)} ?: emptyMap()
+      unwrap(this).getHeaderParameters()?.mapValues{HttpParameter.wrap(it.value)} ?: emptyMap()
 
   public fun httpMethod(): HttpMethod
 
   public fun queryStringParameters(): Map<String, HttpParameter> =
-      unwrap(this).getQueryStringParameters()?.mapValues { HttpParameter.wrap(it.value)} ?:
-      emptyMap()
+      unwrap(this).getQueryStringParameters()?.mapValues{HttpParameter.wrap(it.value)} ?: emptyMap()
 
   public interface Builder {
-    public fun authorizationEndpoint(authorizationEndpoint: String) {
-    }
+    public fun authorizationEndpoint(authorizationEndpoint: String)
 
-    public fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
-    }
+    public fun bodyParameters(bodyParameters: Map<String, HttpParameter>)
 
-    public fun clientId(clientId: String) {
-    }
+    public fun clientId(clientId: String)
 
-    public fun clientSecret(clientSecret: SecretValue) {
-    }
+    public fun clientSecret(clientSecret: SecretValue)
 
-    public fun headerParameters(headerParameters: Map<String, HttpParameter>) {
-    }
+    public fun headerParameters(headerParameters: Map<String, HttpParameter>)
 
-    public fun httpMethod(httpMethod: HttpMethod) {
-    }
+    public fun httpMethod(httpMethod: HttpMethod)
 
-    public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
-    }
+    public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.OAuthAuthorizationProps.Builder =
         software.amazon.awscdk.services.events.OAuthAuthorizationProps.builder()
 
-    public override fun authorizationEndpoint(authorizationEndpoint: String) {
+    override fun authorizationEndpoint(authorizationEndpoint: String) {
       cdkBuilder.authorizationEndpoint(authorizationEndpoint)
     }
 
-    public override fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
-      cdkBuilder.bodyParameters(bodyParameters.mapValues { HttpParameter.unwrap(it.value)})
+    override fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
+      cdkBuilder.bodyParameters(bodyParameters.mapValues{HttpParameter.unwrap(it.value)})
     }
 
-    public override fun clientId(clientId: String) {
+    override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
-    public override fun clientSecret(clientSecret: SecretValue) {
+    override fun clientSecret(clientSecret: SecretValue) {
       cdkBuilder.clientSecret(clientSecret.let(SecretValue::unwrap))
     }
 
-    public override fun headerParameters(headerParameters: Map<String, HttpParameter>) {
-      cdkBuilder.headerParameters(headerParameters.mapValues { HttpParameter.unwrap(it.value)})
+    override fun headerParameters(headerParameters: Map<String, HttpParameter>) {
+      cdkBuilder.headerParameters(headerParameters.mapValues{HttpParameter.unwrap(it.value)})
     }
 
-    public override fun httpMethod(httpMethod: HttpMethod) {
+    override fun httpMethod(httpMethod: HttpMethod) {
       cdkBuilder.httpMethod(httpMethod.let(HttpMethod::unwrap))
     }
 
-    public override fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
-      cdkBuilder.queryStringParameters(queryStringParameters.mapValues {
-          HttpParameter.unwrap(it.value)})
+    override fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
+      cdkBuilder.queryStringParameters(queryStringParameters.mapValues{HttpParameter.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.events.OAuthAuthorizationProps =
@@ -87,24 +78,22 @@ public interface OAuthAuthorizationProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.OAuthAuthorizationProps,
   ) : OAuthAuthorizationProps {
-    public override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
+    override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
 
-    public override fun bodyParameters(): Map<String, HttpParameter> =
-        unwrap(this).getBodyParameters()?.mapValues { HttpParameter.wrap(it.value)} ?: emptyMap()
+    override fun bodyParameters(): Map<String, HttpParameter> =
+        unwrap(this).getBodyParameters()?.mapValues{HttpParameter.wrap(it.value)} ?: emptyMap()
 
-    public override fun clientId(): String = unwrap(this).getClientId()
+    override fun clientId(): String = unwrap(this).getClientId()
 
-    public override fun clientSecret(): SecretValue =
-        unwrap(this).getClientSecret().let(SecretValue::wrap)
+    override fun clientSecret(): SecretValue = unwrap(this).getClientSecret().let(SecretValue::wrap)
 
-    public override fun headerParameters(): Map<String, HttpParameter> =
-        unwrap(this).getHeaderParameters()?.mapValues { HttpParameter.wrap(it.value)} ?: emptyMap()
+    override fun headerParameters(): Map<String, HttpParameter> =
+        unwrap(this).getHeaderParameters()?.mapValues{HttpParameter.wrap(it.value)} ?: emptyMap()
 
-    public override fun httpMethod(): HttpMethod =
-        unwrap(this).getHttpMethod().let(HttpMethod::wrap)
+    override fun httpMethod(): HttpMethod = unwrap(this).getHttpMethod().let(HttpMethod::wrap)
 
-    public override fun queryStringParameters(): Map<String, HttpParameter> =
-        unwrap(this).getQueryStringParameters()?.mapValues { HttpParameter.wrap(it.value)} ?:
+    override fun queryStringParameters(): Map<String, HttpParameter> =
+        unwrap(this).getQueryStringParameters()?.mapValues{HttpParameter.wrap(it.value)} ?:
         emptyMap()
   }
 

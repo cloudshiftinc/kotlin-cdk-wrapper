@@ -7,15 +7,14 @@ public interface SubnetIpamOptions {
   public fun allocatedSubnets(): List<AllocatedSubnet>
 
   public interface Builder {
-    public fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
-    }
+    public fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.SubnetIpamOptions.Builder =
         software.amazon.awscdk.services.ec2.SubnetIpamOptions.builder()
 
-    public override fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
+    override fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
       cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet::unwrap))
     }
 
@@ -25,7 +24,7 @@ public interface SubnetIpamOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.SubnetIpamOptions,
   ) : SubnetIpamOptions {
-    public override fun allocatedSubnets(): List<AllocatedSubnet> =
+    override fun allocatedSubnets(): List<AllocatedSubnet> =
         unwrap(this).getAllocatedSubnets().map(AllocatedSubnet::wrap)
   }
 

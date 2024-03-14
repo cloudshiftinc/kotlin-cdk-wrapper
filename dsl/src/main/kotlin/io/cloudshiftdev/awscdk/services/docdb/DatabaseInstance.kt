@@ -30,29 +30,21 @@ public open class DatabaseInstance internal constructor(
   public override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
 
   public interface Builder {
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun cluster(cluster: IDatabaseCluster) {
-    }
+    public fun cluster(cluster: IDatabaseCluster)
 
-    public fun dbInstanceName(dbInstanceName: String) {
-    }
+    public fun dbInstanceName(dbInstanceName: String)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -62,35 +54,35 @@ public open class DatabaseInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdb.DatabaseInstance.Builder =
         software.amazon.awscdk.services.docdb.DatabaseInstance.Builder.create(scope, id)
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun cluster(cluster: IDatabaseCluster) {
+    override fun cluster(cluster: IDatabaseCluster) {
       cdkBuilder.cluster(cluster.let(IDatabaseCluster::unwrap))
     }
 
-    public override fun dbInstanceName(dbInstanceName: String) {
+    override fun dbInstanceName(dbInstanceName: String) {
       cdkBuilder.dbInstanceName(dbInstanceName)
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

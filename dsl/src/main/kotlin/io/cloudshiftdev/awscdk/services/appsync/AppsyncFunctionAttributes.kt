@@ -7,8 +7,7 @@ public interface AppsyncFunctionAttributes {
   public fun functionArn(): String
 
   public interface Builder {
-    public fun functionArn(functionArn: String) {
-    }
+    public fun functionArn(functionArn: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface AppsyncFunctionAttributes {
         software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes.Builder =
         software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes.builder()
 
-    public override fun functionArn(functionArn: String) {
+    override fun functionArn(functionArn: String) {
       cdkBuilder.functionArn(functionArn)
     }
 
@@ -27,7 +26,7 @@ public interface AppsyncFunctionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes,
   ) : AppsyncFunctionAttributes {
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
   }
 
   public companion object {

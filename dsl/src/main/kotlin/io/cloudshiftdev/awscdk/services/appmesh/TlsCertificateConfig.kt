@@ -8,28 +8,25 @@ public interface TlsCertificateConfig {
   public fun tlsCertificate(): CfnVirtualNode.ListenerTlsCertificateProperty
 
   public interface Builder {
-    public fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
-    }
+    public fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02dbfb837280fdac52206b09a351538961e07b762c00eb82064d2ea26299024e")
     public
-        fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty.Builder.() -> Unit) {
-    }
+        fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TlsCertificateConfig.Builder =
         software.amazon.awscdk.services.appmesh.TlsCertificateConfig.builder()
 
-    public override
-        fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
+    override fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
       cdkBuilder.tlsCertificate(tlsCertificate.let(CfnVirtualNode.ListenerTlsCertificateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02dbfb837280fdac52206b09a351538961e07b762c00eb82064d2ea26299024e")
-    public override
+    override
         fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty.Builder.() -> Unit):
         Unit = tlsCertificate(CfnVirtualNode.ListenerTlsCertificateProperty(tlsCertificate))
 
@@ -40,7 +37,7 @@ public interface TlsCertificateConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificateConfig,
   ) : TlsCertificateConfig {
-    public override fun tlsCertificate(): CfnVirtualNode.ListenerTlsCertificateProperty =
+    override fun tlsCertificate(): CfnVirtualNode.ListenerTlsCertificateProperty =
         unwrap(this).getTlsCertificate().let(CfnVirtualNode.ListenerTlsCertificateProperty::wrap)
   }
 

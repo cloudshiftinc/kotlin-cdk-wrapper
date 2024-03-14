@@ -49,20 +49,15 @@ public open class CfnPortfolioShare internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun accountId(accountId: String) {
-    }
+    public fun accountId(accountId: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun shareTagOptions(shareTagOptions: Boolean) {
-    }
+    public fun shareTagOptions(shareTagOptions: Boolean)
 
-    public fun shareTagOptions(shareTagOptions: IResolvable) {
-    }
+    public fun shareTagOptions(shareTagOptions: IResolvable)
   }
 
   private class BuilderImpl(
@@ -72,23 +67,23 @@ public open class CfnPortfolioShare internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare.Builder
         = software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare.Builder.create(scope, id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun accountId(accountId: String) {
+    override fun accountId(accountId: String) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun shareTagOptions(shareTagOptions: Boolean) {
+    override fun shareTagOptions(shareTagOptions: Boolean) {
       cdkBuilder.shareTagOptions(shareTagOptions)
     }
 
-    public override fun shareTagOptions(shareTagOptions: IResolvable) {
+    override fun shareTagOptions(shareTagOptions: IResolvable) {
       cdkBuilder.shareTagOptions(shareTagOptions.let(IResolvable::unwrap))
     }
 

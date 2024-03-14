@@ -30,34 +30,33 @@ public interface IExtension : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.IExtension,
   ) : IExtension {
-    public override fun actions(): List<Action> = unwrap(this).getActions()?.map(Action::wrap) ?:
+    override fun actions(): List<Action> = unwrap(this).getActions()?.map(Action::wrap) ?:
         emptyList()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun extensionArn(): String = unwrap(this).getExtensionArn()
+    override fun extensionArn(): String = unwrap(this).getExtensionArn()
 
-    public override fun extensionId(): String = unwrap(this).getExtensionId()
+    override fun extensionId(): String = unwrap(this).getExtensionId()
 
-    public override fun extensionVersionNumber(): Number = unwrap(this).getExtensionVersionNumber()
+    override fun extensionVersionNumber(): Number = unwrap(this).getExtensionVersionNumber()
 
-    public override fun latestVersionNumber(): Number? = unwrap(this).getLatestVersionNumber()
+    override fun latestVersionNumber(): Number? = unwrap(this).getLatestVersionNumber()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun parameters(): List<Parameter> =
-        unwrap(this).getParameters()?.map(Parameter::wrap) ?: emptyList()
+    override fun parameters(): List<Parameter> = unwrap(this).getParameters()?.map(Parameter::wrap)
+        ?: emptyList()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

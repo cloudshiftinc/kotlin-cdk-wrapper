@@ -56,20 +56,15 @@ public open class CfnParameterGroup internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun parameterGroupName(parameterGroupName: String) {
-    }
+    public fun parameterGroupName(parameterGroupName: String)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnParameterGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.memorydb.CfnParameterGroup.Builder =
         software.amazon.awscdk.services.memorydb.CfnParameterGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun parameterGroupName(parameterGroupName: String) {
+    override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

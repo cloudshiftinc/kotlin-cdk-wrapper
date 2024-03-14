@@ -71,26 +71,19 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun domainIdentifier(domainIdentifier: String) {
-    }
+    public fun domainIdentifier(domainIdentifier: String)
 
-    public fun enabledRegions(enabledRegions: List<String>) {
-    }
+    public fun enabledRegions(enabledRegions: List<String>)
 
-    public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
-    }
+    public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String)
 
-    public fun manageAccessRoleArn(manageAccessRoleArn: String) {
-    }
+    public fun manageAccessRoleArn(manageAccessRoleArn: String)
 
-    public fun provisioningRoleArn(provisioningRoleArn: String) {
-    }
+    public fun provisioningRoleArn(provisioningRoleArn: String)
 
-    public fun regionalParameters(regionalParameters: IResolvable) {
-    }
+    public fun regionalParameters(regionalParameters: IResolvable)
 
-    public fun regionalParameters(regionalParameters: List<Any>) {
-    }
+    public fun regionalParameters(regionalParameters: List<Any>)
   }
 
   private class BuilderImpl(
@@ -102,31 +95,31 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
         software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.Builder.create(scope,
         id)
 
-    public override fun domainIdentifier(domainIdentifier: String) {
+    override fun domainIdentifier(domainIdentifier: String) {
       cdkBuilder.domainIdentifier(domainIdentifier)
     }
 
-    public override fun enabledRegions(enabledRegions: List<String>) {
+    override fun enabledRegions(enabledRegions: List<String>) {
       cdkBuilder.enabledRegions(enabledRegions)
     }
 
-    public override fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
+    override fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
       cdkBuilder.environmentBlueprintIdentifier(environmentBlueprintIdentifier)
     }
 
-    public override fun manageAccessRoleArn(manageAccessRoleArn: String) {
+    override fun manageAccessRoleArn(manageAccessRoleArn: String) {
       cdkBuilder.manageAccessRoleArn(manageAccessRoleArn)
     }
 
-    public override fun provisioningRoleArn(provisioningRoleArn: String) {
+    override fun provisioningRoleArn(provisioningRoleArn: String) {
       cdkBuilder.provisioningRoleArn(provisioningRoleArn)
     }
 
-    public override fun regionalParameters(regionalParameters: IResolvable) {
+    override fun regionalParameters(regionalParameters: IResolvable) {
       cdkBuilder.regionalParameters(regionalParameters.let(IResolvable::unwrap))
     }
 
-    public override fun regionalParameters(regionalParameters: List<Any>) {
+    override fun regionalParameters(regionalParameters: List<Any>) {
       cdkBuilder.regionalParameters(regionalParameters)
     }
 
@@ -164,14 +157,11 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     public fun region(): String? = unwrap(this).getRegion()
 
     public interface Builder {
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: Map<String, String>) {
-      }
+      public fun parameters(parameters: Map<String, String>)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -180,15 +170,15 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty.builder()
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: Map<String, String>) {
+      override fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -201,9 +191,9 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration.RegionalParameterProperty,
     ) : RegionalParameterProperty {
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
     }
 
     public companion object {

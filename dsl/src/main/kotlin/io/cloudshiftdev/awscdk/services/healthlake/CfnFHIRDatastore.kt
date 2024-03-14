@@ -109,49 +109,37 @@ public open class CfnFHIRDatastore internal constructor(
   }
 
   public interface Builder {
-    public fun datastoreName(datastoreName: String) {
-    }
+    public fun datastoreName(datastoreName: String)
 
-    public fun datastoreTypeVersion(datastoreTypeVersion: String) {
-    }
+    public fun datastoreTypeVersion(datastoreTypeVersion: String)
 
-    public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
-    }
+    public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable)
 
     public
-        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty) {
-    }
+        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dffc6d7ef11842eb6785afe9896bf02391868537b05102cc60c9d6e7bf910c86")
     public
-        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit)
 
-    public fun preloadDataConfig(preloadDataConfig: IResolvable) {
-    }
+    public fun preloadDataConfig(preloadDataConfig: IResolvable)
 
-    public fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty) {
-    }
+    public fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0f415c8ec6d6fb864b37abdb60559b8096a0e3743967f14948ddbdfb7cdebddb")
-    public fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty.Builder.() -> Unit) {
-    }
+    public fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty.Builder.() -> Unit)
 
-    public fun sseConfiguration(sseConfiguration: IResolvable) {
-    }
+    public fun sseConfiguration(sseConfiguration: IResolvable)
 
-    public fun sseConfiguration(sseConfiguration: SseConfigurationProperty) {
-    }
+    public fun sseConfiguration(sseConfiguration: SseConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ff80698f76fb67e7cc1beac160a04d19b55f627350ad6a5b041372099ff5944")
-    public fun sseConfiguration(sseConfiguration: SseConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun sseConfiguration(sseConfiguration: SseConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -161,59 +149,57 @@ public open class CfnFHIRDatastore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.Builder =
         software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.Builder.create(scope, id)
 
-    public override fun datastoreName(datastoreName: String) {
+    override fun datastoreName(datastoreName: String) {
       cdkBuilder.datastoreName(datastoreName)
     }
 
-    public override fun datastoreTypeVersion(datastoreTypeVersion: String) {
+    override fun datastoreTypeVersion(datastoreTypeVersion: String) {
       cdkBuilder.datastoreTypeVersion(datastoreTypeVersion)
     }
 
-    public override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
+    override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
       cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty) {
       cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IdentityProviderConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dffc6d7ef11842eb6785afe9896bf02391868537b05102cc60c9d6e7bf910c86")
-    public override
+    override
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit):
         Unit =
         identityProviderConfiguration(IdentityProviderConfigurationProperty(identityProviderConfiguration))
 
-    public override fun preloadDataConfig(preloadDataConfig: IResolvable) {
+    override fun preloadDataConfig(preloadDataConfig: IResolvable) {
       cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable::unwrap))
     }
 
-    public override fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty) {
+    override fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty) {
       cdkBuilder.preloadDataConfig(preloadDataConfig.let(PreloadDataConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0f415c8ec6d6fb864b37abdb60559b8096a0e3743967f14948ddbdfb7cdebddb")
-    public override
-        fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty.Builder.() -> Unit): Unit
-        = preloadDataConfig(PreloadDataConfigProperty(preloadDataConfig))
+    override fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty.Builder.() -> Unit):
+        Unit = preloadDataConfig(PreloadDataConfigProperty(preloadDataConfig))
 
-    public override fun sseConfiguration(sseConfiguration: IResolvable) {
+    override fun sseConfiguration(sseConfiguration: IResolvable) {
       cdkBuilder.sseConfiguration(sseConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun sseConfiguration(sseConfiguration: SseConfigurationProperty) {
+    override fun sseConfiguration(sseConfiguration: SseConfigurationProperty) {
       cdkBuilder.sseConfiguration(sseConfiguration.let(SseConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ff80698f76fb67e7cc1beac160a04d19b55f627350ad6a5b041372099ff5944")
-    public override
-        fun sseConfiguration(sseConfiguration: SseConfigurationProperty.Builder.() -> Unit): Unit =
-        sseConfiguration(SseConfigurationProperty(sseConfiguration))
+    override fun sseConfiguration(sseConfiguration: SseConfigurationProperty.Builder.() -> Unit):
+        Unit = sseConfiguration(SseConfigurationProperty(sseConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -246,8 +232,7 @@ public open class CfnFHIRDatastore internal constructor(
     public fun preloadDataType(): String
 
     public interface Builder {
-      public fun preloadDataType(preloadDataType: String) {
-      }
+      public fun preloadDataType(preloadDataType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -256,7 +241,7 @@ public open class CfnFHIRDatastore internal constructor(
           =
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty.builder()
 
-      public override fun preloadDataType(preloadDataType: String) {
+      override fun preloadDataType(preloadDataType: String) {
         cdkBuilder.preloadDataType(preloadDataType)
       }
 
@@ -269,7 +254,7 @@ public open class CfnFHIRDatastore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty,
     ) : PreloadDataConfigProperty {
-      public override fun preloadDataType(): String = unwrap(this).getPreloadDataType()
+      override fun preloadDataType(): String = unwrap(this).getPreloadDataType()
     }
 
     public companion object {
@@ -303,20 +288,15 @@ public open class CfnFHIRDatastore internal constructor(
     public fun metadata(): String? = unwrap(this).getMetadata()
 
     public interface Builder {
-      public fun authorizationStrategy(authorizationStrategy: String) {
-      }
+      public fun authorizationStrategy(authorizationStrategy: String)
 
-      public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean) {
-      }
+      public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean)
 
-      public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable) {
-      }
+      public fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable)
 
-      public fun idpLambdaArn(idpLambdaArn: String) {
-      }
+      public fun idpLambdaArn(idpLambdaArn: String)
 
-      public fun metadata(metadata: String) {
-      }
+      public fun metadata(metadata: String)
     }
 
     private class BuilderImpl : Builder {
@@ -325,25 +305,23 @@ public open class CfnFHIRDatastore internal constructor(
           =
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty.builder()
 
-      public override fun authorizationStrategy(authorizationStrategy: String) {
+      override fun authorizationStrategy(authorizationStrategy: String) {
         cdkBuilder.authorizationStrategy(authorizationStrategy)
       }
 
-      public override
-          fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean) {
+      override fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: Boolean) {
         cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled)
       }
 
-      public override
-          fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable) {
+      override fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable) {
         cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun idpLambdaArn(idpLambdaArn: String) {
+      override fun idpLambdaArn(idpLambdaArn: String) {
         cdkBuilder.idpLambdaArn(idpLambdaArn)
       }
 
-      public override fun metadata(metadata: String) {
+      override fun metadata(metadata: String) {
         cdkBuilder.metadata(metadata)
       }
 
@@ -356,14 +334,14 @@ public open class CfnFHIRDatastore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty,
     ) : IdentityProviderConfigurationProperty {
-      public override fun authorizationStrategy(): String = unwrap(this).getAuthorizationStrategy()
+      override fun authorizationStrategy(): String = unwrap(this).getAuthorizationStrategy()
 
-      public override fun fineGrainedAuthorizationEnabled(): Any? =
+      override fun fineGrainedAuthorizationEnabled(): Any? =
           unwrap(this).getFineGrainedAuthorizationEnabled()
 
-      public override fun idpLambdaArn(): String? = unwrap(this).getIdpLambdaArn()
+      override fun idpLambdaArn(): String? = unwrap(this).getIdpLambdaArn()
 
-      public override fun metadata(): String? = unwrap(this).getMetadata()
+      override fun metadata(): String? = unwrap(this).getMetadata()
     }
 
     public companion object {
@@ -391,17 +369,14 @@ public open class CfnFHIRDatastore internal constructor(
     public fun kmsEncryptionConfig(): Any
 
     public interface Builder {
-      public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
-      }
+      public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable)
 
-      public fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
-      }
+      public fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
       public
-          fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit) {
-      }
+          fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -410,17 +385,17 @@ public open class CfnFHIRDatastore internal constructor(
           =
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty.builder()
 
-      public override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
+      override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
         cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable::unwrap))
       }
 
-      public override fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
+      override fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
         cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KmsEncryptionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c721448173211696f2fe6251251770004484fa49a3e92d45027181a323d63ff")
-      public override
+      override
           fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty.Builder.() -> Unit):
           Unit = kmsEncryptionConfig(KmsEncryptionConfigProperty(kmsEncryptionConfig))
 
@@ -433,7 +408,7 @@ public open class CfnFHIRDatastore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty,
     ) : SseConfigurationProperty {
-      public override fun kmsEncryptionConfig(): Any = unwrap(this).getKmsEncryptionConfig()
+      override fun kmsEncryptionConfig(): Any = unwrap(this).getKmsEncryptionConfig()
     }
 
     public companion object {
@@ -462,11 +437,9 @@ public open class CfnFHIRDatastore internal constructor(
     public fun seconds(): String
 
     public interface Builder {
-      public fun nanos(nanos: Number) {
-      }
+      public fun nanos(nanos: Number)
 
-      public fun seconds(seconds: String) {
-      }
+      public fun seconds(seconds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -474,11 +447,11 @@ public open class CfnFHIRDatastore internal constructor(
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty.Builder =
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty.builder()
 
-      public override fun nanos(nanos: Number) {
+      override fun nanos(nanos: Number) {
         cdkBuilder.nanos(nanos)
       }
 
-      public override fun seconds(seconds: String) {
+      override fun seconds(seconds: String) {
         cdkBuilder.seconds(seconds)
       }
 
@@ -491,9 +464,9 @@ public open class CfnFHIRDatastore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty,
     ) : CreatedAtProperty {
-      public override fun nanos(): Number = unwrap(this).getNanos()
+      override fun nanos(): Number = unwrap(this).getNanos()
 
-      public override fun seconds(): String = unwrap(this).getSeconds()
+      override fun seconds(): String = unwrap(this).getSeconds()
     }
 
     public companion object {
@@ -522,11 +495,9 @@ public open class CfnFHIRDatastore internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun cmkType(cmkType: String) {
-      }
+      public fun cmkType(cmkType: String)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -535,11 +506,11 @@ public open class CfnFHIRDatastore internal constructor(
           =
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty.builder()
 
-      public override fun cmkType(cmkType: String) {
+      override fun cmkType(cmkType: String) {
         cdkBuilder.cmkType(cmkType)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -552,9 +523,9 @@ public open class CfnFHIRDatastore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty,
     ) : KmsEncryptionConfigProperty {
-      public override fun cmkType(): String = unwrap(this).getCmkType()
+      override fun cmkType(): String = unwrap(this).getCmkType()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {

@@ -131,40 +131,29 @@ public open class CfnTheme internal constructor(
   }
 
   public interface Builder {
-    public fun awsAccountId(awsAccountId: String) {
-    }
+    public fun awsAccountId(awsAccountId: String)
 
-    public fun baseThemeId(baseThemeId: String) {
-    }
+    public fun baseThemeId(baseThemeId: String)
 
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: ThemeConfigurationProperty) {
-    }
+    public fun configuration(configuration: ThemeConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53c0bc5706b85e02b209e15b4d625be3e2390a0c0e11e333d74887b55fa469ba")
-    public fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun permissions(permissions: IResolvable) {
-    }
+    public fun permissions(permissions: IResolvable)
 
-    public fun permissions(permissions: List<Any>) {
-    }
+    public fun permissions(permissions: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun themeId(themeId: String) {
-    }
+    public fun themeId(themeId: String)
 
-    public fun versionDescription(versionDescription: String) {
-    }
+    public fun versionDescription(versionDescription: String)
   }
 
   private class BuilderImpl(
@@ -174,48 +163,48 @@ public open class CfnTheme internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.quicksight.CfnTheme.Builder =
         software.amazon.awscdk.services.quicksight.CfnTheme.Builder.create(scope, id)
 
-    public override fun awsAccountId(awsAccountId: String) {
+    override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    public override fun baseThemeId(baseThemeId: String) {
+    override fun baseThemeId(baseThemeId: String) {
       cdkBuilder.baseThemeId(baseThemeId)
     }
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: ThemeConfigurationProperty) {
+    override fun configuration(configuration: ThemeConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(ThemeConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53c0bc5706b85e02b209e15b4d625be3e2390a0c0e11e333d74887b55fa469ba")
-    public override fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit):
-        Unit = configuration(ThemeConfigurationProperty(configuration))
+    override fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit): Unit =
+        configuration(ThemeConfigurationProperty(configuration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun permissions(permissions: IResolvable) {
+    override fun permissions(permissions: IResolvable) {
       cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
     }
 
-    public override fun permissions(permissions: List<Any>) {
+    override fun permissions(permissions: List<Any>) {
       cdkBuilder.permissions(permissions)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun themeId(themeId: String) {
+    override fun themeId(themeId: String) {
       cdkBuilder.themeId(themeId)
     }
 
-    public override fun versionDescription(versionDescription: String) {
+    override fun versionDescription(versionDescription: String) {
       cdkBuilder.versionDescription(versionDescription)
     }
 
@@ -253,49 +242,37 @@ public open class CfnTheme internal constructor(
     public fun uiColorPalette(): Any? = unwrap(this).getUiColorPalette()
 
     public interface Builder {
-      public fun dataColorPalette(dataColorPalette: IResolvable) {
-      }
+      public fun dataColorPalette(dataColorPalette: IResolvable)
 
-      public fun dataColorPalette(dataColorPalette: DataColorPaletteProperty) {
-      }
+      public fun dataColorPalette(dataColorPalette: DataColorPaletteProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a03c2e6b283ebceb911757e6e3791760b572f7a26486a08eab311844b39884ff")
-      public fun dataColorPalette(dataColorPalette: DataColorPaletteProperty.Builder.() -> Unit) {
-      }
+      public fun dataColorPalette(dataColorPalette: DataColorPaletteProperty.Builder.() -> Unit)
 
-      public fun sheet(sheet: IResolvable) {
-      }
+      public fun sheet(sheet: IResolvable)
 
-      public fun sheet(sheet: SheetStyleProperty) {
-      }
+      public fun sheet(sheet: SheetStyleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e24b9dbc0782235525b77a7c2c5435e8d0caf9e67687dbf50babeab803ea9422")
-      public fun sheet(sheet: SheetStyleProperty.Builder.() -> Unit) {
-      }
+      public fun sheet(sheet: SheetStyleProperty.Builder.() -> Unit)
 
-      public fun typography(typography: IResolvable) {
-      }
+      public fun typography(typography: IResolvable)
 
-      public fun typography(typography: TypographyProperty) {
-      }
+      public fun typography(typography: TypographyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d3fa9b0d5a5a433eb0dd0028cb9f5669c133201c3eb4ef5fcd2d22d9446447d")
-      public fun typography(typography: TypographyProperty.Builder.() -> Unit) {
-      }
+      public fun typography(typography: TypographyProperty.Builder.() -> Unit)
 
-      public fun uiColorPalette(uiColorPalette: IResolvable) {
-      }
+      public fun uiColorPalette(uiColorPalette: IResolvable)
 
-      public fun uiColorPalette(uiColorPalette: UIColorPaletteProperty) {
-      }
+      public fun uiColorPalette(uiColorPalette: UIColorPaletteProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("68d5d9bafc6026bd91fb21857236d4b5790fcb02ce11a16be45b02cb65e9c18a")
-      public fun uiColorPalette(uiColorPalette: UIColorPaletteProperty.Builder.() -> Unit) {
-      }
+      public fun uiColorPalette(uiColorPalette: UIColorPaletteProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -303,58 +280,57 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty.builder()
 
-      public override fun dataColorPalette(dataColorPalette: IResolvable) {
+      override fun dataColorPalette(dataColorPalette: IResolvable) {
         cdkBuilder.dataColorPalette(dataColorPalette.let(IResolvable::unwrap))
       }
 
-      public override fun dataColorPalette(dataColorPalette: DataColorPaletteProperty) {
+      override fun dataColorPalette(dataColorPalette: DataColorPaletteProperty) {
         cdkBuilder.dataColorPalette(dataColorPalette.let(DataColorPaletteProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a03c2e6b283ebceb911757e6e3791760b572f7a26486a08eab311844b39884ff")
-      public override
-          fun dataColorPalette(dataColorPalette: DataColorPaletteProperty.Builder.() -> Unit): Unit
-          = dataColorPalette(DataColorPaletteProperty(dataColorPalette))
+      override fun dataColorPalette(dataColorPalette: DataColorPaletteProperty.Builder.() -> Unit):
+          Unit = dataColorPalette(DataColorPaletteProperty(dataColorPalette))
 
-      public override fun sheet(sheet: IResolvable) {
+      override fun sheet(sheet: IResolvable) {
         cdkBuilder.sheet(sheet.let(IResolvable::unwrap))
       }
 
-      public override fun sheet(sheet: SheetStyleProperty) {
+      override fun sheet(sheet: SheetStyleProperty) {
         cdkBuilder.sheet(sheet.let(SheetStyleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e24b9dbc0782235525b77a7c2c5435e8d0caf9e67687dbf50babeab803ea9422")
-      public override fun sheet(sheet: SheetStyleProperty.Builder.() -> Unit): Unit =
+      override fun sheet(sheet: SheetStyleProperty.Builder.() -> Unit): Unit =
           sheet(SheetStyleProperty(sheet))
 
-      public override fun typography(typography: IResolvable) {
+      override fun typography(typography: IResolvable) {
         cdkBuilder.typography(typography.let(IResolvable::unwrap))
       }
 
-      public override fun typography(typography: TypographyProperty) {
+      override fun typography(typography: TypographyProperty) {
         cdkBuilder.typography(typography.let(TypographyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d3fa9b0d5a5a433eb0dd0028cb9f5669c133201c3eb4ef5fcd2d22d9446447d")
-      public override fun typography(typography: TypographyProperty.Builder.() -> Unit): Unit =
+      override fun typography(typography: TypographyProperty.Builder.() -> Unit): Unit =
           typography(TypographyProperty(typography))
 
-      public override fun uiColorPalette(uiColorPalette: IResolvable) {
+      override fun uiColorPalette(uiColorPalette: IResolvable) {
         cdkBuilder.uiColorPalette(uiColorPalette.let(IResolvable::unwrap))
       }
 
-      public override fun uiColorPalette(uiColorPalette: UIColorPaletteProperty) {
+      override fun uiColorPalette(uiColorPalette: UIColorPaletteProperty) {
         cdkBuilder.uiColorPalette(uiColorPalette.let(UIColorPaletteProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("68d5d9bafc6026bd91fb21857236d4b5790fcb02ce11a16be45b02cb65e9c18a")
-      public override fun uiColorPalette(uiColorPalette: UIColorPaletteProperty.Builder.() -> Unit):
-          Unit = uiColorPalette(UIColorPaletteProperty(uiColorPalette))
+      override fun uiColorPalette(uiColorPalette: UIColorPaletteProperty.Builder.() -> Unit): Unit =
+          uiColorPalette(UIColorPaletteProperty(uiColorPalette))
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty =
@@ -365,13 +341,13 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty,
     ) : ThemeConfigurationProperty {
-      public override fun dataColorPalette(): Any? = unwrap(this).getDataColorPalette()
+      override fun dataColorPalette(): Any? = unwrap(this).getDataColorPalette()
 
-      public override fun sheet(): Any? = unwrap(this).getSheet()
+      override fun sheet(): Any? = unwrap(this).getSheet()
 
-      public override fun typography(): Any? = unwrap(this).getTypography()
+      override fun typography(): Any? = unwrap(this).getTypography()
 
-      public override fun uiColorPalette(): Any? = unwrap(this).getUiColorPalette()
+      override fun uiColorPalette(): Any? = unwrap(this).getUiColorPalette()
     }
 
     public companion object {
@@ -398,16 +374,13 @@ public open class CfnTheme internal constructor(
     public fun border(): Any? = unwrap(this).getBorder()
 
     public interface Builder {
-      public fun border(border: IResolvable) {
-      }
+      public fun border(border: IResolvable)
 
-      public fun border(border: BorderStyleProperty) {
-      }
+      public fun border(border: BorderStyleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1722673fbc17d8b0361c6e0058383943839530f777e7832a416e7f1ae1175bb")
-      public fun border(border: BorderStyleProperty.Builder.() -> Unit) {
-      }
+      public fun border(border: BorderStyleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -415,17 +388,17 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty.builder()
 
-      public override fun border(border: IResolvable) {
+      override fun border(border: IResolvable) {
         cdkBuilder.border(border.let(IResolvable::unwrap))
       }
 
-      public override fun border(border: BorderStyleProperty) {
+      override fun border(border: BorderStyleProperty) {
         cdkBuilder.border(border.let(BorderStyleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1722673fbc17d8b0361c6e0058383943839530f777e7832a416e7f1ae1175bb")
-      public override fun border(border: BorderStyleProperty.Builder.() -> Unit): Unit =
+      override fun border(border: BorderStyleProperty.Builder.() -> Unit): Unit =
           border(BorderStyleProperty(border))
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty =
@@ -435,7 +408,7 @@ public open class CfnTheme internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty,
     ) : TileStyleProperty {
-      public override fun border(): Any? = unwrap(this).getBorder()
+      override fun border(): Any? = unwrap(this).getBorder()
     }
 
     public companion object {
@@ -462,11 +435,9 @@ public open class CfnTheme internal constructor(
     public fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
 
     public interface Builder {
-      public fun fontFamilies(fontFamilies: IResolvable) {
-      }
+      public fun fontFamilies(fontFamilies: IResolvable)
 
-      public fun fontFamilies(fontFamilies: List<Any>) {
-      }
+      public fun fontFamilies(fontFamilies: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -474,11 +445,11 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty.builder()
 
-      public override fun fontFamilies(fontFamilies: IResolvable) {
+      override fun fontFamilies(fontFamilies: IResolvable) {
         cdkBuilder.fontFamilies(fontFamilies.let(IResolvable::unwrap))
       }
 
-      public override fun fontFamilies(fontFamilies: List<Any>) {
+      override fun fontFamilies(fontFamilies: List<Any>) {
         cdkBuilder.fontFamilies(fontFamilies)
       }
 
@@ -490,7 +461,7 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty,
     ) : TypographyProperty {
-      public override fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
+      override fun fontFamilies(): Any? = unwrap(this).getFontFamilies()
     }
 
     public companion object {
@@ -519,27 +490,21 @@ public open class CfnTheme internal constructor(
     public fun margin(): Any? = unwrap(this).getMargin()
 
     public interface Builder {
-      public fun gutter(gutter: IResolvable) {
-      }
+      public fun gutter(gutter: IResolvable)
 
-      public fun gutter(gutter: GutterStyleProperty) {
-      }
+      public fun gutter(gutter: GutterStyleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6592f5ee4f7c7ed756ac83167bb44beca704ac45b89e5413fd57df4199b1ec6")
-      public fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit) {
-      }
+      public fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit)
 
-      public fun margin(margin: IResolvable) {
-      }
+      public fun margin(margin: IResolvable)
 
-      public fun margin(margin: MarginStyleProperty) {
-      }
+      public fun margin(margin: MarginStyleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bdb29804e6c9f2143eb8265f0912a5e52a49924606de54d00308c204e983fd3a")
-      public fun margin(margin: MarginStyleProperty.Builder.() -> Unit) {
-      }
+      public fun margin(margin: MarginStyleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -547,30 +512,30 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty.builder()
 
-      public override fun gutter(gutter: IResolvable) {
+      override fun gutter(gutter: IResolvable) {
         cdkBuilder.gutter(gutter.let(IResolvable::unwrap))
       }
 
-      public override fun gutter(gutter: GutterStyleProperty) {
+      override fun gutter(gutter: GutterStyleProperty) {
         cdkBuilder.gutter(gutter.let(GutterStyleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6592f5ee4f7c7ed756ac83167bb44beca704ac45b89e5413fd57df4199b1ec6")
-      public override fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit): Unit =
+      override fun gutter(gutter: GutterStyleProperty.Builder.() -> Unit): Unit =
           gutter(GutterStyleProperty(gutter))
 
-      public override fun margin(margin: IResolvable) {
+      override fun margin(margin: IResolvable) {
         cdkBuilder.margin(margin.let(IResolvable::unwrap))
       }
 
-      public override fun margin(margin: MarginStyleProperty) {
+      override fun margin(margin: MarginStyleProperty) {
         cdkBuilder.margin(margin.let(MarginStyleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bdb29804e6c9f2143eb8265f0912a5e52a49924606de54d00308c204e983fd3a")
-      public override fun margin(margin: MarginStyleProperty.Builder.() -> Unit): Unit =
+      override fun margin(margin: MarginStyleProperty.Builder.() -> Unit): Unit =
           margin(MarginStyleProperty(margin))
 
       public fun build():
@@ -582,9 +547,9 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty,
     ) : TileLayoutStyleProperty {
-      public override fun gutter(): Any? = unwrap(this).getGutter()
+      override fun gutter(): Any? = unwrap(this).getGutter()
 
-      public override fun margin(): Any? = unwrap(this).getMargin()
+      override fun margin(): Any? = unwrap(this).getMargin()
     }
 
     public companion object {
@@ -625,40 +590,29 @@ public open class CfnTheme internal constructor(
     public fun versionNumber(): Number? = unwrap(this).getVersionNumber()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun baseThemeId(baseThemeId: String) {
-      }
+      public fun baseThemeId(baseThemeId: String)
 
-      public fun configuration(configuration: IResolvable) {
-      }
+      public fun configuration(configuration: IResolvable)
 
-      public fun configuration(configuration: ThemeConfigurationProperty) {
-      }
+      public fun configuration(configuration: ThemeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ee58bf2057c056e3da9d8a081b123d3a55e63e9a0aa8d4f23066d4967006d8c")
-      public fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun errors(errors: IResolvable) {
-      }
+      public fun errors(errors: IResolvable)
 
-      public fun errors(errors: List<Any>) {
-      }
+      public fun errors(errors: List<Any>)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun versionNumber(versionNumber: Number) {
-      }
+      public fun versionNumber(versionNumber: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -666,49 +620,48 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun baseThemeId(baseThemeId: String) {
+      override fun baseThemeId(baseThemeId: String) {
         cdkBuilder.baseThemeId(baseThemeId)
       }
 
-      public override fun configuration(configuration: IResolvable) {
+      override fun configuration(configuration: IResolvable) {
         cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
       }
 
-      public override fun configuration(configuration: ThemeConfigurationProperty) {
+      override fun configuration(configuration: ThemeConfigurationProperty) {
         cdkBuilder.configuration(configuration.let(ThemeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ee58bf2057c056e3da9d8a081b123d3a55e63e9a0aa8d4f23066d4967006d8c")
-      public override
-          fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit): Unit =
-          configuration(ThemeConfigurationProperty(configuration))
+      override fun configuration(configuration: ThemeConfigurationProperty.Builder.() -> Unit): Unit
+          = configuration(ThemeConfigurationProperty(configuration))
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun errors(errors: IResolvable) {
+      override fun errors(errors: IResolvable) {
         cdkBuilder.errors(errors.let(IResolvable::unwrap))
       }
 
-      public override fun errors(errors: List<Any>) {
+      override fun errors(errors: List<Any>) {
         cdkBuilder.errors(errors)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun versionNumber(versionNumber: Number) {
+      override fun versionNumber(versionNumber: Number) {
         cdkBuilder.versionNumber(versionNumber)
       }
 
@@ -720,21 +673,21 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty,
     ) : ThemeVersionProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun baseThemeId(): String? = unwrap(this).getBaseThemeId()
+      override fun baseThemeId(): String? = unwrap(this).getBaseThemeId()
 
-      public override fun configuration(): Any? = unwrap(this).getConfiguration()
+      override fun configuration(): Any? = unwrap(this).getConfiguration()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun errors(): Any? = unwrap(this).getErrors()
+      override fun errors(): Any? = unwrap(this).getErrors()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun versionNumber(): Number? = unwrap(this).getVersionNumber()
+      override fun versionNumber(): Number? = unwrap(this).getVersionNumber()
     }
 
     public companion object {
@@ -761,11 +714,9 @@ public open class CfnTheme internal constructor(
     public fun show(): Any? = unwrap(this).getShow()
 
     public interface Builder {
-      public fun show(show: Boolean) {
-      }
+      public fun show(show: Boolean)
 
-      public fun show(show: IResolvable) {
-      }
+      public fun show(show: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -773,11 +724,11 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty.builder()
 
-      public override fun show(show: Boolean) {
+      override fun show(show: Boolean) {
         cdkBuilder.show(show)
       }
 
-      public override fun show(show: IResolvable) {
+      override fun show(show: IResolvable) {
         cdkBuilder.show(show.let(IResolvable::unwrap))
       }
 
@@ -789,7 +740,7 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty,
     ) : BorderStyleProperty {
-      public override fun show(): Any? = unwrap(this).getShow()
+      override fun show(): Any? = unwrap(this).getShow()
     }
 
     public companion object {
@@ -816,11 +767,9 @@ public open class CfnTheme internal constructor(
     public fun show(): Any? = unwrap(this).getShow()
 
     public interface Builder {
-      public fun show(show: Boolean) {
-      }
+      public fun show(show: Boolean)
 
-      public fun show(show: IResolvable) {
-      }
+      public fun show(show: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -828,11 +777,11 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty.builder()
 
-      public override fun show(show: Boolean) {
+      override fun show(show: Boolean) {
         cdkBuilder.show(show)
       }
 
-      public override fun show(show: IResolvable) {
+      override fun show(show: IResolvable) {
         cdkBuilder.show(show.let(IResolvable::unwrap))
       }
 
@@ -844,7 +793,7 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty,
     ) : MarginStyleProperty {
-      public override fun show(): Any? = unwrap(this).getShow()
+      override fun show(): Any? = unwrap(this).getShow()
     }
 
     public companion object {
@@ -901,53 +850,37 @@ public open class CfnTheme internal constructor(
     public fun warningForeground(): String? = unwrap(this).getWarningForeground()
 
     public interface Builder {
-      public fun accent(accent: String) {
-      }
+      public fun accent(accent: String)
 
-      public fun accentForeground(accentForeground: String) {
-      }
+      public fun accentForeground(accentForeground: String)
 
-      public fun danger(danger: String) {
-      }
+      public fun danger(danger: String)
 
-      public fun dangerForeground(dangerForeground: String) {
-      }
+      public fun dangerForeground(dangerForeground: String)
 
-      public fun dimension(dimension: String) {
-      }
+      public fun dimension(dimension: String)
 
-      public fun dimensionForeground(dimensionForeground: String) {
-      }
+      public fun dimensionForeground(dimensionForeground: String)
 
-      public fun measure(measure: String) {
-      }
+      public fun measure(measure: String)
 
-      public fun measureForeground(measureForeground: String) {
-      }
+      public fun measureForeground(measureForeground: String)
 
-      public fun primaryBackground(primaryBackground: String) {
-      }
+      public fun primaryBackground(primaryBackground: String)
 
-      public fun primaryForeground(primaryForeground: String) {
-      }
+      public fun primaryForeground(primaryForeground: String)
 
-      public fun secondaryBackground(secondaryBackground: String) {
-      }
+      public fun secondaryBackground(secondaryBackground: String)
 
-      public fun secondaryForeground(secondaryForeground: String) {
-      }
+      public fun secondaryForeground(secondaryForeground: String)
 
-      public fun success(success: String) {
-      }
+      public fun success(success: String)
 
-      public fun successForeground(successForeground: String) {
-      }
+      public fun successForeground(successForeground: String)
 
-      public fun warning(warning: String) {
-      }
+      public fun warning(warning: String)
 
-      public fun warningForeground(warningForeground: String) {
-      }
+      public fun warningForeground(warningForeground: String)
     }
 
     private class BuilderImpl : Builder {
@@ -955,67 +888,67 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty.builder()
 
-      public override fun accent(accent: String) {
+      override fun accent(accent: String) {
         cdkBuilder.accent(accent)
       }
 
-      public override fun accentForeground(accentForeground: String) {
+      override fun accentForeground(accentForeground: String) {
         cdkBuilder.accentForeground(accentForeground)
       }
 
-      public override fun danger(danger: String) {
+      override fun danger(danger: String) {
         cdkBuilder.danger(danger)
       }
 
-      public override fun dangerForeground(dangerForeground: String) {
+      override fun dangerForeground(dangerForeground: String) {
         cdkBuilder.dangerForeground(dangerForeground)
       }
 
-      public override fun dimension(dimension: String) {
+      override fun dimension(dimension: String) {
         cdkBuilder.dimension(dimension)
       }
 
-      public override fun dimensionForeground(dimensionForeground: String) {
+      override fun dimensionForeground(dimensionForeground: String) {
         cdkBuilder.dimensionForeground(dimensionForeground)
       }
 
-      public override fun measure(measure: String) {
+      override fun measure(measure: String) {
         cdkBuilder.measure(measure)
       }
 
-      public override fun measureForeground(measureForeground: String) {
+      override fun measureForeground(measureForeground: String) {
         cdkBuilder.measureForeground(measureForeground)
       }
 
-      public override fun primaryBackground(primaryBackground: String) {
+      override fun primaryBackground(primaryBackground: String) {
         cdkBuilder.primaryBackground(primaryBackground)
       }
 
-      public override fun primaryForeground(primaryForeground: String) {
+      override fun primaryForeground(primaryForeground: String) {
         cdkBuilder.primaryForeground(primaryForeground)
       }
 
-      public override fun secondaryBackground(secondaryBackground: String) {
+      override fun secondaryBackground(secondaryBackground: String) {
         cdkBuilder.secondaryBackground(secondaryBackground)
       }
 
-      public override fun secondaryForeground(secondaryForeground: String) {
+      override fun secondaryForeground(secondaryForeground: String) {
         cdkBuilder.secondaryForeground(secondaryForeground)
       }
 
-      public override fun success(success: String) {
+      override fun success(success: String) {
         cdkBuilder.success(success)
       }
 
-      public override fun successForeground(successForeground: String) {
+      override fun successForeground(successForeground: String) {
         cdkBuilder.successForeground(successForeground)
       }
 
-      public override fun warning(warning: String) {
+      override fun warning(warning: String) {
         cdkBuilder.warning(warning)
       }
 
-      public override fun warningForeground(warningForeground: String) {
+      override fun warningForeground(warningForeground: String) {
         cdkBuilder.warningForeground(warningForeground)
       }
 
@@ -1027,37 +960,37 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty,
     ) : UIColorPaletteProperty {
-      public override fun accent(): String? = unwrap(this).getAccent()
+      override fun accent(): String? = unwrap(this).getAccent()
 
-      public override fun accentForeground(): String? = unwrap(this).getAccentForeground()
+      override fun accentForeground(): String? = unwrap(this).getAccentForeground()
 
-      public override fun danger(): String? = unwrap(this).getDanger()
+      override fun danger(): String? = unwrap(this).getDanger()
 
-      public override fun dangerForeground(): String? = unwrap(this).getDangerForeground()
+      override fun dangerForeground(): String? = unwrap(this).getDangerForeground()
 
-      public override fun dimension(): String? = unwrap(this).getDimension()
+      override fun dimension(): String? = unwrap(this).getDimension()
 
-      public override fun dimensionForeground(): String? = unwrap(this).getDimensionForeground()
+      override fun dimensionForeground(): String? = unwrap(this).getDimensionForeground()
 
-      public override fun measure(): String? = unwrap(this).getMeasure()
+      override fun measure(): String? = unwrap(this).getMeasure()
 
-      public override fun measureForeground(): String? = unwrap(this).getMeasureForeground()
+      override fun measureForeground(): String? = unwrap(this).getMeasureForeground()
 
-      public override fun primaryBackground(): String? = unwrap(this).getPrimaryBackground()
+      override fun primaryBackground(): String? = unwrap(this).getPrimaryBackground()
 
-      public override fun primaryForeground(): String? = unwrap(this).getPrimaryForeground()
+      override fun primaryForeground(): String? = unwrap(this).getPrimaryForeground()
 
-      public override fun secondaryBackground(): String? = unwrap(this).getSecondaryBackground()
+      override fun secondaryBackground(): String? = unwrap(this).getSecondaryBackground()
 
-      public override fun secondaryForeground(): String? = unwrap(this).getSecondaryForeground()
+      override fun secondaryForeground(): String? = unwrap(this).getSecondaryForeground()
 
-      public override fun success(): String? = unwrap(this).getSuccess()
+      override fun success(): String? = unwrap(this).getSuccess()
 
-      public override fun successForeground(): String? = unwrap(this).getSuccessForeground()
+      override fun successForeground(): String? = unwrap(this).getSuccessForeground()
 
-      public override fun warning(): String? = unwrap(this).getWarning()
+      override fun warning(): String? = unwrap(this).getWarning()
 
-      public override fun warningForeground(): String? = unwrap(this).getWarningForeground()
+      override fun warningForeground(): String? = unwrap(this).getWarningForeground()
     }
 
     public companion object {
@@ -1086,11 +1019,9 @@ public open class CfnTheme internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun message(message: String) {
-      }
+      public fun message(message: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1098,11 +1029,11 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty.builder()
 
-      public override fun message(message: String) {
+      override fun message(message: String) {
         cdkBuilder.message(message)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1114,9 +1045,9 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty,
     ) : ThemeErrorProperty {
-      public override fun message(): String? = unwrap(this).getMessage()
+      override fun message(): String? = unwrap(this).getMessage()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -1147,14 +1078,11 @@ public open class CfnTheme internal constructor(
     public fun resource(): String? = unwrap(this).getResource()
 
     public interface Builder {
-      public fun actions(actions: List<String>) {
-      }
+      public fun actions(actions: List<String>)
 
-      public fun principal(principal: String) {
-      }
+      public fun principal(principal: String)
 
-      public fun resource(resource: String) {
-      }
+      public fun resource(resource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1162,15 +1090,15 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty.builder()
 
-      public override fun actions(actions: List<String>) {
+      override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
 
-      public override fun principal(principal: String) {
+      override fun principal(principal: String) {
         cdkBuilder.principal(principal)
       }
 
-      public override fun resource(resource: String) {
+      override fun resource(resource: String) {
         cdkBuilder.resource(resource)
       }
 
@@ -1183,11 +1111,11 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty,
     ) : ResourcePermissionProperty {
-      public override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
 
-      public override fun principal(): String = unwrap(this).getPrincipal()
+      override fun principal(): String = unwrap(this).getPrincipal()
 
-      public override fun resource(): String? = unwrap(this).getResource()
+      override fun resource(): String? = unwrap(this).getResource()
     }
 
     public companion object {
@@ -1214,8 +1142,7 @@ public open class CfnTheme internal constructor(
     public fun fontFamily(): String? = unwrap(this).getFontFamily()
 
     public interface Builder {
-      public fun fontFamily(fontFamily: String) {
-      }
+      public fun fontFamily(fontFamily: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1223,7 +1150,7 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty.builder()
 
-      public override fun fontFamily(fontFamily: String) {
+      override fun fontFamily(fontFamily: String) {
         cdkBuilder.fontFamily(fontFamily)
       }
 
@@ -1234,7 +1161,7 @@ public open class CfnTheme internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty,
     ) : FontProperty {
-      public override fun fontFamily(): String? = unwrap(this).getFontFamily()
+      override fun fontFamily(): String? = unwrap(this).getFontFamily()
     }
 
     public companion object {
@@ -1265,14 +1192,11 @@ public open class CfnTheme internal constructor(
     public fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?: emptyList()
 
     public interface Builder {
-      public fun colors(colors: List<String>) {
-      }
+      public fun colors(colors: List<String>)
 
-      public fun emptyFillColor(emptyFillColor: String) {
-      }
+      public fun emptyFillColor(emptyFillColor: String)
 
-      public fun minMaxGradient(minMaxGradient: List<String>) {
-      }
+      public fun minMaxGradient(minMaxGradient: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1280,15 +1204,15 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty.builder()
 
-      public override fun colors(colors: List<String>) {
+      override fun colors(colors: List<String>) {
         cdkBuilder.colors(colors)
       }
 
-      public override fun emptyFillColor(emptyFillColor: String) {
+      override fun emptyFillColor(emptyFillColor: String) {
         cdkBuilder.emptyFillColor(emptyFillColor)
       }
 
-      public override fun minMaxGradient(minMaxGradient: List<String>) {
+      override fun minMaxGradient(minMaxGradient: List<String>) {
         cdkBuilder.minMaxGradient(minMaxGradient)
       }
 
@@ -1301,12 +1225,11 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty,
     ) : DataColorPaletteProperty {
-      public override fun colors(): List<String> = unwrap(this).getColors() ?: emptyList()
+      override fun colors(): List<String> = unwrap(this).getColors() ?: emptyList()
 
-      public override fun emptyFillColor(): String? = unwrap(this).getEmptyFillColor()
+      override fun emptyFillColor(): String? = unwrap(this).getEmptyFillColor()
 
-      public override fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?:
-          emptyList()
+      override fun minMaxGradient(): List<String> = unwrap(this).getMinMaxGradient() ?: emptyList()
     }
 
     public companion object {
@@ -1333,11 +1256,9 @@ public open class CfnTheme internal constructor(
     public fun show(): Any? = unwrap(this).getShow()
 
     public interface Builder {
-      public fun show(show: Boolean) {
-      }
+      public fun show(show: Boolean)
 
-      public fun show(show: IResolvable) {
-      }
+      public fun show(show: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1345,11 +1266,11 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty.builder()
 
-      public override fun show(show: Boolean) {
+      override fun show(show: Boolean) {
         cdkBuilder.show(show)
       }
 
-      public override fun show(show: IResolvable) {
+      override fun show(show: IResolvable) {
         cdkBuilder.show(show.let(IResolvable::unwrap))
       }
 
@@ -1361,7 +1282,7 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty,
     ) : GutterStyleProperty {
-      public override fun show(): Any? = unwrap(this).getShow()
+      override fun show(): Any? = unwrap(this).getShow()
     }
 
     public companion object {
@@ -1390,27 +1311,21 @@ public open class CfnTheme internal constructor(
     public fun tileLayout(): Any? = unwrap(this).getTileLayout()
 
     public interface Builder {
-      public fun tile(tile: IResolvable) {
-      }
+      public fun tile(tile: IResolvable)
 
-      public fun tile(tile: TileStyleProperty) {
-      }
+      public fun tile(tile: TileStyleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a4d426add8180655d26cfbcd494288c4bc2d1c2ec4a5a21d91f12ac41e65e236")
-      public fun tile(tile: TileStyleProperty.Builder.() -> Unit) {
-      }
+      public fun tile(tile: TileStyleProperty.Builder.() -> Unit)
 
-      public fun tileLayout(tileLayout: IResolvable) {
-      }
+      public fun tileLayout(tileLayout: IResolvable)
 
-      public fun tileLayout(tileLayout: TileLayoutStyleProperty) {
-      }
+      public fun tileLayout(tileLayout: TileLayoutStyleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24ca86d677971db4f367b6c3b5da1bee1c9f5b15d0292fd98646eac9f0d53604")
-      public fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit) {
-      }
+      public fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1418,30 +1333,30 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty.builder()
 
-      public override fun tile(tile: IResolvable) {
+      override fun tile(tile: IResolvable) {
         cdkBuilder.tile(tile.let(IResolvable::unwrap))
       }
 
-      public override fun tile(tile: TileStyleProperty) {
+      override fun tile(tile: TileStyleProperty) {
         cdkBuilder.tile(tile.let(TileStyleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a4d426add8180655d26cfbcd494288c4bc2d1c2ec4a5a21d91f12ac41e65e236")
-      public override fun tile(tile: TileStyleProperty.Builder.() -> Unit): Unit =
+      override fun tile(tile: TileStyleProperty.Builder.() -> Unit): Unit =
           tile(TileStyleProperty(tile))
 
-      public override fun tileLayout(tileLayout: IResolvable) {
+      override fun tileLayout(tileLayout: IResolvable) {
         cdkBuilder.tileLayout(tileLayout.let(IResolvable::unwrap))
       }
 
-      public override fun tileLayout(tileLayout: TileLayoutStyleProperty) {
+      override fun tileLayout(tileLayout: TileLayoutStyleProperty) {
         cdkBuilder.tileLayout(tileLayout.let(TileLayoutStyleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24ca86d677971db4f367b6c3b5da1bee1c9f5b15d0292fd98646eac9f0d53604")
-      public override fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit): Unit =
+      override fun tileLayout(tileLayout: TileLayoutStyleProperty.Builder.() -> Unit): Unit =
           tileLayout(TileLayoutStyleProperty(tileLayout))
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty =
@@ -1452,9 +1367,9 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty,
     ) : SheetStyleProperty {
-      public override fun tile(): Any? = unwrap(this).getTile()
+      override fun tile(): Any? = unwrap(this).getTile()
 
-      public override fun tileLayout(): Any? = unwrap(this).getTileLayout()
+      override fun tileLayout(): Any? = unwrap(this).getTileLayout()
     }
 
     public companion object {

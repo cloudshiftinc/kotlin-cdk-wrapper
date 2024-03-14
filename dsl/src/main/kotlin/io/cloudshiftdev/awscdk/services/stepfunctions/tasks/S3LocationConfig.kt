@@ -7,8 +7,7 @@ public interface S3LocationConfig {
   public fun uri(): String
 
   public interface Builder {
-    public fun uri(uri: String) {
-    }
+    public fun uri(uri: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface S3LocationConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.builder()
 
-    public override fun uri(uri: String) {
+    override fun uri(uri: String) {
       cdkBuilder.uri(uri)
     }
 
@@ -27,7 +26,7 @@ public interface S3LocationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig,
   ) : S3LocationConfig {
-    public override fun uri(): String = unwrap(this).getUri()
+    override fun uri(): String = unwrap(this).getUri()
   }
 
   public companion object {

@@ -11,20 +11,15 @@ public open class BasePathMapping internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.BasePathMapping,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun attachToStage(attachToStage: Boolean) {
-    }
+    public fun attachToStage(attachToStage: Boolean)
 
-    public fun basePath(basePath: String) {
-    }
+    public fun basePath(basePath: String)
 
-    public fun domainName(domainName: IDomainName) {
-    }
+    public fun domainName(domainName: IDomainName)
 
-    public fun restApi(restApi: IRestApi) {
-    }
+    public fun restApi(restApi: IRestApi)
 
-    public fun stage(stage: Stage) {
-    }
+    public fun stage(stage: Stage)
   }
 
   private class BuilderImpl(
@@ -34,23 +29,23 @@ public open class BasePathMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.BasePathMapping.Builder =
         software.amazon.awscdk.services.apigateway.BasePathMapping.Builder.create(scope, id)
 
-    public override fun attachToStage(attachToStage: Boolean) {
+    override fun attachToStage(attachToStage: Boolean) {
       cdkBuilder.attachToStage(attachToStage)
     }
 
-    public override fun basePath(basePath: String) {
+    override fun basePath(basePath: String) {
       cdkBuilder.basePath(basePath)
     }
 
-    public override fun domainName(domainName: IDomainName) {
+    override fun domainName(domainName: IDomainName) {
       cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
     }
 
-    public override fun restApi(restApi: IRestApi) {
+    override fun restApi(restApi: IRestApi) {
       cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
     }
 
-    public override fun stage(stage: Stage) {
+    override fun stage(stage: Stage) {
       cdkBuilder.stage(stage.let(Stage::unwrap))
     }
 

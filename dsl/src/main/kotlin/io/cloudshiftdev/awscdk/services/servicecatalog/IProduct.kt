@@ -21,27 +21,25 @@ public interface IProduct : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicecatalog.IProduct,
   ) : IProduct {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun assetBuckets(): List<IBucket> =
-        unwrap(this).getAssetBuckets().map(IBucket::wrap)
+    override fun assetBuckets(): List<IBucket> = unwrap(this).getAssetBuckets().map(IBucket::wrap)
 
-    public override fun associateTagOptions(arg0: TagOptions) {
+    override fun associateTagOptions(arg0: TagOptions) {
       unwrap(this).associateTagOptions(arg0.let(TagOptions::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun productArn(): String = unwrap(this).getProductArn()
+    override fun productArn(): String = unwrap(this).getProductArn()
 
-    public override fun productId(): String = unwrap(this).getProductId()
+    override fun productId(): String = unwrap(this).getProductId()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

@@ -45,17 +45,13 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
   }
 
   public interface Builder {
-    public fun connectionEvents(connectionEvents: List<String>) {
-    }
+    public fun connectionEvents(connectionEvents: List<String>)
 
-    public fun connectionNotificationArn(connectionNotificationArn: String) {
-    }
+    public fun connectionNotificationArn(connectionNotificationArn: String)
 
-    public fun serviceId(serviceId: String) {
-    }
+    public fun serviceId(serviceId: String)
 
-    public fun vpcEndpointId(vpcEndpointId: String) {
-    }
+    public fun vpcEndpointId(vpcEndpointId: String)
   }
 
   private class BuilderImpl(
@@ -67,19 +63,19 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
         software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification.Builder.create(scope,
         id)
 
-    public override fun connectionEvents(connectionEvents: List<String>) {
+    override fun connectionEvents(connectionEvents: List<String>) {
       cdkBuilder.connectionEvents(connectionEvents)
     }
 
-    public override fun connectionNotificationArn(connectionNotificationArn: String) {
+    override fun connectionNotificationArn(connectionNotificationArn: String) {
       cdkBuilder.connectionNotificationArn(connectionNotificationArn)
     }
 
-    public override fun serviceId(serviceId: String) {
+    override fun serviceId(serviceId: String) {
       cdkBuilder.serviceId(serviceId)
     }
 
-    public override fun vpcEndpointId(vpcEndpointId: String) {
+    override fun vpcEndpointId(vpcEndpointId: String) {
       cdkBuilder.vpcEndpointId(vpcEndpointId)
     }
 

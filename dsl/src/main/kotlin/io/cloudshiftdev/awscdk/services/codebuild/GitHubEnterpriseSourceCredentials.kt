@@ -12,8 +12,7 @@ public open class GitHubEnterpriseSourceCredentials internal constructor(
       software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun accessToken(accessToken: SecretValue) {
-    }
+    public fun accessToken(accessToken: SecretValue)
   }
 
   private class BuilderImpl(
@@ -25,7 +24,7 @@ public open class GitHubEnterpriseSourceCredentials internal constructor(
         software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials.Builder.create(scope,
         id)
 
-    public override fun accessToken(accessToken: SecretValue) {
+    override fun accessToken(accessToken: SecretValue) {
       cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
     }
 

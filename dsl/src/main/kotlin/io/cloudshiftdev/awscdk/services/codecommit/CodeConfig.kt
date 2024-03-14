@@ -8,26 +8,24 @@ public interface CodeConfig {
   public fun code(): CfnRepository.CodeProperty
 
   public interface Builder {
-    public fun code(code: CfnRepository.CodeProperty) {
-    }
+    public fun code(code: CfnRepository.CodeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e320a191f788d17c4e1cbebe454745d4d9c634022f63c5d114285817aaf6830")
-    public fun code(code: CfnRepository.CodeProperty.Builder.() -> Unit) {
-    }
+    public fun code(code: CfnRepository.CodeProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codecommit.CodeConfig.Builder =
         software.amazon.awscdk.services.codecommit.CodeConfig.builder()
 
-    public override fun code(code: CfnRepository.CodeProperty) {
+    override fun code(code: CfnRepository.CodeProperty) {
       cdkBuilder.code(code.let(CfnRepository.CodeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e320a191f788d17c4e1cbebe454745d4d9c634022f63c5d114285817aaf6830")
-    public override fun code(code: CfnRepository.CodeProperty.Builder.() -> Unit): Unit =
+    override fun code(code: CfnRepository.CodeProperty.Builder.() -> Unit): Unit =
         code(CfnRepository.CodeProperty(code))
 
     public fun build(): software.amazon.awscdk.services.codecommit.CodeConfig = cdkBuilder.build()
@@ -36,7 +34,7 @@ public interface CodeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codecommit.CodeConfig,
   ) : CodeConfig {
-    public override fun code(): CfnRepository.CodeProperty =
+    override fun code(): CfnRepository.CodeProperty =
         unwrap(this).getCode().let(CfnRepository.CodeProperty::wrap)
   }
 

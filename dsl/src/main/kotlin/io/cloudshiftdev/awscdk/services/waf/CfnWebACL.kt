@@ -61,28 +61,21 @@ public open class CfnWebACL internal constructor(
   }
 
   public interface Builder {
-    public fun defaultAction(defaultAction: IResolvable) {
-    }
+    public fun defaultAction(defaultAction: IResolvable)
 
-    public fun defaultAction(defaultAction: WafActionProperty) {
-    }
+    public fun defaultAction(defaultAction: WafActionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f896ef269b8e39c5f47fdfba351903d562854031eb70b233406eb744fac9736")
-    public fun defaultAction(defaultAction: WafActionProperty.Builder.() -> Unit) {
-    }
+    public fun defaultAction(defaultAction: WafActionProperty.Builder.() -> Unit)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rules(rules: IResolvable) {
-    }
+    public fun rules(rules: IResolvable)
 
-    public fun rules(rules: List<Any>) {
-    }
+    public fun rules(rules: List<Any>)
   }
 
   private class BuilderImpl(
@@ -92,32 +85,32 @@ public open class CfnWebACL internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.CfnWebACL.Builder =
         software.amazon.awscdk.services.waf.CfnWebACL.Builder.create(scope, id)
 
-    public override fun defaultAction(defaultAction: IResolvable) {
+    override fun defaultAction(defaultAction: IResolvable) {
       cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
     }
 
-    public override fun defaultAction(defaultAction: WafActionProperty) {
+    override fun defaultAction(defaultAction: WafActionProperty) {
       cdkBuilder.defaultAction(defaultAction.let(WafActionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f896ef269b8e39c5f47fdfba351903d562854031eb70b233406eb744fac9736")
-    public override fun defaultAction(defaultAction: WafActionProperty.Builder.() -> Unit): Unit =
+    override fun defaultAction(defaultAction: WafActionProperty.Builder.() -> Unit): Unit =
         defaultAction(WafActionProperty(defaultAction))
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rules(rules: IResolvable) {
+    override fun rules(rules: IResolvable) {
       cdkBuilder.rules(rules.let(IResolvable::unwrap))
     }
 
-    public override fun rules(rules: List<Any>) {
+    override fun rules(rules: List<Any>) {
       cdkBuilder.rules(rules)
     }
 
@@ -153,22 +146,17 @@ public open class CfnWebACL internal constructor(
     public fun ruleId(): String
 
     public interface Builder {
-      public fun action(action: IResolvable) {
-      }
+      public fun action(action: IResolvable)
 
-      public fun action(action: WafActionProperty) {
-      }
+      public fun action(action: WafActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1f42e12f782edd9b7e90a0dad395911c5b19e0fce76436c5ad2f12be7320d600")
-      public fun action(action: WafActionProperty.Builder.() -> Unit) {
-      }
+      public fun action(action: WafActionProperty.Builder.() -> Unit)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun ruleId(ruleId: String) {
-      }
+      public fun ruleId(ruleId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -176,24 +164,24 @@ public open class CfnWebACL internal constructor(
           software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty.Builder =
           software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty.builder()
 
-      public override fun action(action: IResolvable) {
+      override fun action(action: IResolvable) {
         cdkBuilder.action(action.let(IResolvable::unwrap))
       }
 
-      public override fun action(action: WafActionProperty) {
+      override fun action(action: WafActionProperty) {
         cdkBuilder.action(action.let(WafActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1f42e12f782edd9b7e90a0dad395911c5b19e0fce76436c5ad2f12be7320d600")
-      public override fun action(action: WafActionProperty.Builder.() -> Unit): Unit =
+      override fun action(action: WafActionProperty.Builder.() -> Unit): Unit =
           action(WafActionProperty(action))
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun ruleId(ruleId: String) {
+      override fun ruleId(ruleId: String) {
         cdkBuilder.ruleId(ruleId)
       }
 
@@ -204,11 +192,11 @@ public open class CfnWebACL internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.ActivatedRuleProperty,
     ) : ActivatedRuleProperty {
-      public override fun action(): Any? = unwrap(this).getAction()
+      override fun action(): Any? = unwrap(this).getAction()
 
-      public override fun priority(): Number = unwrap(this).getPriority()
+      override fun priority(): Number = unwrap(this).getPriority()
 
-      public override fun ruleId(): String = unwrap(this).getRuleId()
+      override fun ruleId(): String = unwrap(this).getRuleId()
     }
 
     public companion object {
@@ -235,8 +223,7 @@ public open class CfnWebACL internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -244,7 +231,7 @@ public open class CfnWebACL internal constructor(
           software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty.Builder =
           software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -255,7 +242,7 @@ public open class CfnWebACL internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.waf.CfnWebACL.WafActionProperty,
     ) : WafActionProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

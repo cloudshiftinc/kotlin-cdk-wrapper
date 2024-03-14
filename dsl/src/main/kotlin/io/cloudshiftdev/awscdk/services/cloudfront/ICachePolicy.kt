@@ -8,7 +8,7 @@ public interface ICachePolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.ICachePolicy,
   ) : ICachePolicy {
-    public override fun cachePolicyId(): String = unwrap(this).getCachePolicyId()
+    override fun cachePolicyId(): String = unwrap(this).getCachePolicyId()
   }
 
   public companion object {

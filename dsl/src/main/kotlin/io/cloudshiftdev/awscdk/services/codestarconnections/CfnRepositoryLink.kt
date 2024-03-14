@@ -59,20 +59,15 @@ public open class CfnRepositoryLink internal constructor(
   }
 
   public interface Builder {
-    public fun connectionArn(connectionArn: String) {
-    }
+    public fun connectionArn(connectionArn: String)
 
-    public fun encryptionKeyArn(encryptionKeyArn: String) {
-    }
+    public fun encryptionKeyArn(encryptionKeyArn: String)
 
-    public fun ownerId(ownerId: String) {
-    }
+    public fun ownerId(ownerId: String)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -84,23 +79,23 @@ public open class CfnRepositoryLink internal constructor(
         software.amazon.awscdk.services.codestarconnections.CfnRepositoryLink.Builder.create(scope,
         id)
 
-    public override fun connectionArn(connectionArn: String) {
+    override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
     }
 
-    public override fun encryptionKeyArn(encryptionKeyArn: String) {
+    override fun encryptionKeyArn(encryptionKeyArn: String) {
       cdkBuilder.encryptionKeyArn(encryptionKeyArn)
     }
 
-    public override fun ownerId(ownerId: String) {
+    override fun ownerId(ownerId: String) {
       cdkBuilder.ownerId(ownerId)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

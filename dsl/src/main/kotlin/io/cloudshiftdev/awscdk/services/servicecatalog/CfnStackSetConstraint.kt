@@ -73,32 +73,23 @@ public open class CfnStackSetConstraint internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun accountList(accountList: List<String>) {
-    }
+    public fun accountList(accountList: List<String>)
 
-    public fun adminRole(adminRole: String) {
-    }
+    public fun adminRole(adminRole: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun executionRole(executionRole: String) {
-    }
+    public fun executionRole(executionRole: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
 
-    public fun regionList(regionList: List<String>) {
-    }
+    public fun regionList(regionList: List<String>)
 
-    public fun stackInstanceControl(stackInstanceControl: String) {
-    }
+    public fun stackInstanceControl(stackInstanceControl: String)
   }
 
   private class BuilderImpl(
@@ -110,39 +101,39 @@ public open class CfnStackSetConstraint internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun accountList(accountList: List<String>) {
+    override fun accountList(accountList: List<String>) {
       cdkBuilder.accountList(accountList)
     }
 
-    public override fun adminRole(adminRole: String) {
+    override fun adminRole(adminRole: String) {
       cdkBuilder.adminRole(adminRole)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun executionRole(executionRole: String) {
+    override fun executionRole(executionRole: String) {
       cdkBuilder.executionRole(executionRole)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
-    public override fun regionList(regionList: List<String>) {
+    override fun regionList(regionList: List<String>) {
       cdkBuilder.regionList(regionList)
     }
 
-    public override fun stackInstanceControl(stackInstanceControl: String) {
+    override fun stackInstanceControl(stackInstanceControl: String) {
       cdkBuilder.stackInstanceControl(stackInstanceControl)
     }
 

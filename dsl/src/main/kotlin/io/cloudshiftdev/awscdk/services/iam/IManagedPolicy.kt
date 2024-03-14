@@ -8,7 +8,7 @@ public interface IManagedPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.IManagedPolicy,
   ) : IManagedPolicy {
-    public override fun managedPolicyArn(): String = unwrap(this).getManagedPolicyArn()
+    override fun managedPolicyArn(): String = unwrap(this).getManagedPolicyArn()
   }
 
   public companion object {

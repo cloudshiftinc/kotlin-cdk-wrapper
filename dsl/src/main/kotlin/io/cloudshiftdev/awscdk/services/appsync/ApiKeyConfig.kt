@@ -12,29 +12,26 @@ public interface ApiKeyConfig {
   public fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun expires(expires: Expiration) {
-    }
+    public fun expires(expires: Expiration)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.ApiKeyConfig.Builder =
         software.amazon.awscdk.services.appsync.ApiKeyConfig.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun expires(expires: Expiration) {
+    override fun expires(expires: Expiration) {
       cdkBuilder.expires(expires.let(Expiration::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -44,11 +41,11 @@ public interface ApiKeyConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.ApiKeyConfig,
   ) : ApiKeyConfig {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun expires(): Expiration? = unwrap(this).getExpires()?.let(Expiration::wrap)
+    override fun expires(): Expiration? = unwrap(this).getExpires()?.let(Expiration::wrap)
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

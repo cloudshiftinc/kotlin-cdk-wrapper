@@ -23,26 +23,19 @@ public interface BasicLifecycleHookProps {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun defaultResult(defaultResult: DefaultResult) {
-    }
+    public fun defaultResult(defaultResult: DefaultResult)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Duration) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Duration)
 
-    public fun lifecycleHookName(lifecycleHookName: String) {
-    }
+    public fun lifecycleHookName(lifecycleHookName: String)
 
-    public fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
-    }
+    public fun lifecycleTransition(lifecycleTransition: LifecycleTransition)
 
-    public fun notificationMetadata(notificationMetadata: String) {
-    }
+    public fun notificationMetadata(notificationMetadata: String)
 
-    public fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
-    }
+    public fun notificationTarget(notificationTarget: ILifecycleHookTarget)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -50,31 +43,31 @@ public interface BasicLifecycleHookProps {
         software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps.Builder =
         software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps.builder()
 
-    public override fun defaultResult(defaultResult: DefaultResult) {
+    override fun defaultResult(defaultResult: DefaultResult) {
       cdkBuilder.defaultResult(defaultResult.let(DefaultResult::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Duration) {
+    override fun heartbeatTimeout(heartbeatTimeout: Duration) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Duration::unwrap))
     }
 
-    public override fun lifecycleHookName(lifecycleHookName: String) {
+    override fun lifecycleHookName(lifecycleHookName: String) {
       cdkBuilder.lifecycleHookName(lifecycleHookName)
     }
 
-    public override fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
+    override fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
       cdkBuilder.lifecycleTransition(lifecycleTransition.let(LifecycleTransition::unwrap))
     }
 
-    public override fun notificationMetadata(notificationMetadata: String) {
+    override fun notificationMetadata(notificationMetadata: String) {
       cdkBuilder.notificationMetadata(notificationMetadata)
     }
 
-    public override fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
+    override fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
       cdkBuilder.notificationTarget(notificationTarget.let(ILifecycleHookTarget::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -85,23 +78,23 @@ public interface BasicLifecycleHookProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps,
   ) : BasicLifecycleHookProps {
-    public override fun defaultResult(): DefaultResult? =
+    override fun defaultResult(): DefaultResult? =
         unwrap(this).getDefaultResult()?.let(DefaultResult::wrap)
 
-    public override fun heartbeatTimeout(): Duration? =
+    override fun heartbeatTimeout(): Duration? =
         unwrap(this).getHeartbeatTimeout()?.let(Duration::wrap)
 
-    public override fun lifecycleHookName(): String? = unwrap(this).getLifecycleHookName()
+    override fun lifecycleHookName(): String? = unwrap(this).getLifecycleHookName()
 
-    public override fun lifecycleTransition(): LifecycleTransition =
+    override fun lifecycleTransition(): LifecycleTransition =
         unwrap(this).getLifecycleTransition().let(LifecycleTransition::wrap)
 
-    public override fun notificationMetadata(): String? = unwrap(this).getNotificationMetadata()
+    override fun notificationMetadata(): String? = unwrap(this).getNotificationMetadata()
 
-    public override fun notificationTarget(): ILifecycleHookTarget? =
+    override fun notificationTarget(): ILifecycleHookTarget? =
         unwrap(this).getNotificationTarget()?.let(ILifecycleHookTarget::wrap)
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 
   public companion object {

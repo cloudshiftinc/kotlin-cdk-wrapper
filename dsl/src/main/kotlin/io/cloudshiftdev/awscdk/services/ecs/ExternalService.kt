@@ -69,88 +69,64 @@ public open class ExternalService internal constructor(
 
   public interface Builder {
     public
-        fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-    }
+        fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-    }
+    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e00f0c2be59f79f24a63fa2cecbd3f84adbf5a8773e5e1ef11183e2ef35802c")
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit) {
-    }
+    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit)
 
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-    }
+    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1bc3f4abf94a6c9ea5baf49213d4948feac1118cae7022f621965a879e7d36a")
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit) {
-    }
+    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
-    }
+    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9e7cbde8b2f51bf4837bd89ab7ce60476410d7c5b1f596ed1553c33bd546156")
-    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit) {
-    }
+    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit)
 
-    public fun deploymentController(deploymentController: DeploymentController) {
-    }
+    public fun deploymentController(deploymentController: DeploymentController)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("132283714c7dbffdd9b210c5eaa509f1a7e5dbce833291b4af8ace91975b6ecb")
-    public fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit) {
-    }
+    public fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit)
 
-    public fun desiredCount(desiredCount: Number) {
-    }
+    public fun desiredCount(desiredCount: Number)
 
-    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
-    }
+    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
-    public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
-    }
+    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
-    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-    }
+    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
 
-    public fun maxHealthyPercent(maxHealthyPercent: Number) {
-    }
+    public fun maxHealthyPercent(maxHealthyPercent: Number)
 
-    public fun minHealthyPercent(minHealthyPercent: Number) {
-    }
+    public fun minHealthyPercent(minHealthyPercent: Number)
 
-    public fun propagateTags(propagateTags: PropagatedTagSource) {
-    }
+    public fun propagateTags(propagateTags: PropagatedTagSource)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
-    }
+    public fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a34fbb39ed4eb18a677fea97b1604d0dd5c8962f8ce8117ae1165531a572f345")
     public
-        fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps.Builder.() -> Unit) {
-    }
+        fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps.Builder.() -> Unit)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
 
-    public fun taskDefinition(taskDefinition: TaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: TaskDefinition)
 
-    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
-    }
+    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision)
 
-    public fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
-    }
+    public fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>)
   }
 
   private class BuilderImpl(
@@ -160,109 +136,107 @@ public open class ExternalService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ExternalService.Builder =
         software.amazon.awscdk.services.ecs.ExternalService.Builder.create(scope, id)
 
-    public override
+    override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
 
-    public override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
+    override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e00f0c2be59f79f24a63fa2cecbd3f84adbf5a8773e5e1ef11183e2ef35802c")
-    public override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit):
-        Unit = circuitBreaker(DeploymentCircuitBreaker(circuitBreaker))
+    override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit): Unit =
+        circuitBreaker(DeploymentCircuitBreaker(circuitBreaker))
 
-    public override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
+    override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
       cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1bc3f4abf94a6c9ea5baf49213d4948feac1118cae7022f621965a879e7d36a")
-    public override fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit): Unit =
+    override fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit): Unit =
         cloudMapOptions(CloudMapOptions(cloudMapOptions))
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
+    override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
       cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9e7cbde8b2f51bf4837bd89ab7ce60476410d7c5b1f596ed1553c33bd546156")
-    public override
-        fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit): Unit =
-        deploymentAlarms(DeploymentAlarmConfig(deploymentAlarms))
+    override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit): Unit
+        = deploymentAlarms(DeploymentAlarmConfig(deploymentAlarms))
 
-    public override fun deploymentController(deploymentController: DeploymentController) {
+    override fun deploymentController(deploymentController: DeploymentController) {
       cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("132283714c7dbffdd9b210c5eaa509f1a7e5dbce833291b4af8ace91975b6ecb")
-    public override
+    override
         fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit):
         Unit = deploymentController(DeploymentController(deploymentController))
 
-    public override fun desiredCount(desiredCount: Number) {
+    override fun desiredCount(desiredCount: Number) {
       cdkBuilder.desiredCount(desiredCount)
     }
 
-    public override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
+    override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
       cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
     }
 
-    public override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
       cdkBuilder.enableExecuteCommand(enableExecuteCommand)
     }
 
-    public override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
+    override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
       cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
     }
 
-    public override fun maxHealthyPercent(maxHealthyPercent: Number) {
+    override fun maxHealthyPercent(maxHealthyPercent: Number) {
       cdkBuilder.maxHealthyPercent(maxHealthyPercent)
     }
 
-    public override fun minHealthyPercent(minHealthyPercent: Number) {
+    override fun minHealthyPercent(minHealthyPercent: Number) {
       cdkBuilder.minHealthyPercent(minHealthyPercent)
     }
 
-    public override fun propagateTags(propagateTags: PropagatedTagSource) {
+    override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override
-        fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
+    override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
       cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a34fbb39ed4eb18a677fea97b1604d0dd5c8962f8ce8117ae1165531a572f345")
-    public override
+    override
         fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps.Builder.() -> Unit):
         Unit = serviceConnectConfiguration(ServiceConnectProps(serviceConnectConfiguration))
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
-    public override fun taskDefinition(taskDefinition: TaskDefinition) {
+    override fun taskDefinition(taskDefinition: TaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
     }
 
-    public override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
+    override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
       cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision::unwrap))
     }
 
-    public override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
+    override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
     }
 

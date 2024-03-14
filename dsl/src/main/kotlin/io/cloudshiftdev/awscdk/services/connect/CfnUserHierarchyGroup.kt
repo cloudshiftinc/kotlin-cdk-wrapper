@@ -49,17 +49,13 @@ public open class CfnUserHierarchyGroup internal constructor(
   }
 
   public interface Builder {
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun parentGroupArn(parentGroupArn: String) {
-    }
+    public fun parentGroupArn(parentGroupArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnUserHierarchyGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnUserHierarchyGroup.Builder =
         software.amazon.awscdk.services.connect.CfnUserHierarchyGroup.Builder.create(scope, id)
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun parentGroupArn(parentGroupArn: String) {
+    override fun parentGroupArn(parentGroupArn: String) {
       cdkBuilder.parentGroupArn(parentGroupArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

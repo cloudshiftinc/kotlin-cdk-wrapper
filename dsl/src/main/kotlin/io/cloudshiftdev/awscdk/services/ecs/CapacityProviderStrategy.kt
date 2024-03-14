@@ -12,29 +12,26 @@ public interface CapacityProviderStrategy {
   public fun weight(): Number? = unwrap(this).getWeight()
 
   public interface Builder {
-    public fun base(base: Number) {
-    }
+    public fun base(base: Number)
 
-    public fun capacityProvider(capacityProvider: String) {
-    }
+    public fun capacityProvider(capacityProvider: String)
 
-    public fun weight(weight: Number) {
-    }
+    public fun weight(weight: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CapacityProviderStrategy.Builder =
         software.amazon.awscdk.services.ecs.CapacityProviderStrategy.builder()
 
-    public override fun base(base: Number) {
+    override fun base(base: Number) {
       cdkBuilder.base(base)
     }
 
-    public override fun capacityProvider(capacityProvider: String) {
+    override fun capacityProvider(capacityProvider: String) {
       cdkBuilder.capacityProvider(capacityProvider)
     }
 
-    public override fun weight(weight: Number) {
+    override fun weight(weight: Number) {
       cdkBuilder.weight(weight)
     }
 
@@ -45,11 +42,11 @@ public interface CapacityProviderStrategy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.CapacityProviderStrategy,
   ) : CapacityProviderStrategy {
-    public override fun base(): Number? = unwrap(this).getBase()
+    override fun base(): Number? = unwrap(this).getBase()
 
-    public override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
+    override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
 
-    public override fun weight(): Number? = unwrap(this).getWeight()
+    override fun weight(): Number? = unwrap(this).getWeight()
   }
 
   public companion object {

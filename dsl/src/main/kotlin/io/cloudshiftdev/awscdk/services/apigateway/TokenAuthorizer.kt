@@ -16,23 +16,17 @@ public open class TokenAuthorizer internal constructor(
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
   public interface Builder {
-    public fun assumeRole(assumeRole: IRole) {
-    }
+    public fun assumeRole(assumeRole: IRole)
 
-    public fun authorizerName(authorizerName: String) {
-    }
+    public fun authorizerName(authorizerName: String)
 
-    public fun handler(handler: IFunction) {
-    }
+    public fun handler(handler: IFunction)
 
-    public fun identitySource(identitySource: String) {
-    }
+    public fun identitySource(identitySource: String)
 
-    public fun resultsCacheTtl(resultsCacheTtl: Duration) {
-    }
+    public fun resultsCacheTtl(resultsCacheTtl: Duration)
 
-    public fun validationRegex(validationRegex: String) {
-    }
+    public fun validationRegex(validationRegex: String)
   }
 
   private class BuilderImpl(
@@ -42,27 +36,27 @@ public open class TokenAuthorizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.TokenAuthorizer.Builder =
         software.amazon.awscdk.services.apigateway.TokenAuthorizer.Builder.create(scope, id)
 
-    public override fun assumeRole(assumeRole: IRole) {
+    override fun assumeRole(assumeRole: IRole) {
       cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
     }
 
-    public override fun authorizerName(authorizerName: String) {
+    override fun authorizerName(authorizerName: String) {
       cdkBuilder.authorizerName(authorizerName)
     }
 
-    public override fun handler(handler: IFunction) {
+    override fun handler(handler: IFunction) {
       cdkBuilder.handler(handler.let(IFunction::unwrap))
     }
 
-    public override fun identitySource(identitySource: String) {
+    override fun identitySource(identitySource: String) {
       cdkBuilder.identitySource(identitySource)
     }
 
-    public override fun resultsCacheTtl(resultsCacheTtl: Duration) {
+    override fun resultsCacheTtl(resultsCacheTtl: Duration) {
       cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
     }
 
-    public override fun validationRegex(validationRegex: String) {
+    override fun validationRegex(validationRegex: String) {
       cdkBuilder.validationRegex(validationRegex)
     }
 

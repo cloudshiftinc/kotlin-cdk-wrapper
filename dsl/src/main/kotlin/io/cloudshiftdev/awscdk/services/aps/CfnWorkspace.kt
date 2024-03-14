@@ -72,29 +72,22 @@ public open class CfnWorkspace internal constructor(
   }
 
   public interface Builder {
-    public fun alertManagerDefinition(alertManagerDefinition: String) {
-    }
+    public fun alertManagerDefinition(alertManagerDefinition: String)
 
-    public fun alias(alias: String) {
-    }
+    public fun alias(alias: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun loggingConfiguration(loggingConfiguration: IResolvable) {
-    }
+    public fun loggingConfiguration(loggingConfiguration: IResolvable)
 
-    public fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-    }
+    public fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97c4a45ee9be8e4123c77e913c4dfa7afd640aac94bd113c210c15cd523e8489")
     public
-        fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -104,33 +97,33 @@ public open class CfnWorkspace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.aps.CfnWorkspace.Builder =
         software.amazon.awscdk.services.aps.CfnWorkspace.Builder.create(scope, id)
 
-    public override fun alertManagerDefinition(alertManagerDefinition: String) {
+    override fun alertManagerDefinition(alertManagerDefinition: String) {
       cdkBuilder.alertManagerDefinition(alertManagerDefinition)
     }
 
-    public override fun alias(alias: String) {
+    override fun alias(alias: String) {
       cdkBuilder.alias(alias)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun loggingConfiguration(loggingConfiguration: IResolvable) {
+    override fun loggingConfiguration(loggingConfiguration: IResolvable) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
+    override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97c4a45ee9be8e4123c77e913c4dfa7afd640aac94bd113c210c15cd523e8489")
-    public override
+    override
         fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit):
         Unit = loggingConfiguration(LoggingConfigurationProperty(loggingConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -162,8 +155,7 @@ public open class CfnWorkspace internal constructor(
     public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
 
     public interface Builder {
-      public fun logGroupArn(logGroupArn: String) {
-      }
+      public fun logGroupArn(logGroupArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -171,7 +163,7 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty.Builder =
           software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty.builder()
 
-      public override fun logGroupArn(logGroupArn: String) {
+      override fun logGroupArn(logGroupArn: String) {
         cdkBuilder.logGroupArn(logGroupArn)
       }
 
@@ -184,7 +176,7 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.aps.CfnWorkspace.LoggingConfigurationProperty,
     ) : LoggingConfigurationProperty {
-      public override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
+      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
     }
 
     public companion object {

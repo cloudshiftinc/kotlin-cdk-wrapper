@@ -12,29 +12,26 @@ public interface MTLSConfig {
   public fun version(): String? = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.MTLSConfig.Builder =
         software.amazon.awscdk.services.apigatewayv2.MTLSConfig.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -44,11 +41,11 @@ public interface MTLSConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.MTLSConfig,
   ) : MTLSConfig {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun key(): String = unwrap(this).getKey()
+    override fun key(): String = unwrap(this).getKey()
 
-    public override fun version(): String? = unwrap(this).getVersion()
+    override fun version(): String? = unwrap(this).getVersion()
   }
 
   public companion object {

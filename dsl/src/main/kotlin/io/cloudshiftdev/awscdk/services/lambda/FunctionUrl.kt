@@ -21,22 +21,17 @@ public open class FunctionUrl internal constructor(
   public override fun url(): String = unwrap(this).getUrl()
 
   public interface Builder {
-    public fun authType(authType: FunctionUrlAuthType) {
-    }
+    public fun authType(authType: FunctionUrlAuthType)
 
-    public fun cors(cors: FunctionUrlCorsOptions) {
-    }
+    public fun cors(cors: FunctionUrlCorsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1275251e5ca38e8a5c47388fd0491e845d1fee149206164025cf21e3d7bc17a6")
-    public fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit) {
-    }
+    public fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit)
 
-    public fun function(function: IFunction) {
-    }
+    public fun function(function: IFunction)
 
-    public fun invokeMode(invokeMode: InvokeMode) {
-    }
+    public fun invokeMode(invokeMode: InvokeMode)
   }
 
   private class BuilderImpl(
@@ -46,24 +41,24 @@ public open class FunctionUrl internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.FunctionUrl.Builder =
         software.amazon.awscdk.services.lambda.FunctionUrl.Builder.create(scope, id)
 
-    public override fun authType(authType: FunctionUrlAuthType) {
+    override fun authType(authType: FunctionUrlAuthType) {
       cdkBuilder.authType(authType.let(FunctionUrlAuthType::unwrap))
     }
 
-    public override fun cors(cors: FunctionUrlCorsOptions) {
+    override fun cors(cors: FunctionUrlCorsOptions) {
       cdkBuilder.cors(cors.let(FunctionUrlCorsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1275251e5ca38e8a5c47388fd0491e845d1fee149206164025cf21e3d7bc17a6")
-    public override fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit): Unit =
+    override fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit): Unit =
         cors(FunctionUrlCorsOptions(cors))
 
-    public override fun function(function: IFunction) {
+    override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
 
-    public override fun invokeMode(invokeMode: InvokeMode) {
+    override fun invokeMode(invokeMode: InvokeMode) {
       cdkBuilder.invokeMode(invokeMode.let(InvokeMode::unwrap))
     }
 

@@ -74,32 +74,24 @@ public open class CfnAnalyzer internal constructor(
   }
 
   public interface Builder {
-    public fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
-    }
+    public fun analyzerConfiguration(analyzerConfiguration: IResolvable)
 
-    public fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty) {
-    }
+    public fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08181d83c131043275ab65dc780b8019da1eaca230ceb165db05ef754008c5a8")
     public
-        fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty.Builder.() -> Unit)
 
-    public fun analyzerName(analyzerName: String) {
-    }
+    public fun analyzerName(analyzerName: String)
 
-    public fun archiveRules(archiveRules: IResolvable) {
-    }
+    public fun archiveRules(archiveRules: IResolvable)
 
-    public fun archiveRules(archiveRules: List<Any>) {
-    }
+    public fun archiveRules(archiveRules: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -109,38 +101,37 @@ public open class CfnAnalyzer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.Builder =
         software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.Builder.create(scope, id)
 
-    public override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
+    override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty) {
+    override fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(AnalyzerConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08181d83c131043275ab65dc780b8019da1eaca230ceb165db05ef754008c5a8")
-    public override
+    override
         fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty.Builder.() -> Unit):
         Unit = analyzerConfiguration(AnalyzerConfigurationProperty(analyzerConfiguration))
 
-    public override fun analyzerName(analyzerName: String) {
+    override fun analyzerName(analyzerName: String) {
       cdkBuilder.analyzerName(analyzerName)
     }
 
-    public override fun archiveRules(archiveRules: IResolvable) {
+    override fun archiveRules(archiveRules: IResolvable) {
       cdkBuilder.archiveRules(archiveRules.let(IResolvable::unwrap))
     }
 
-    public override fun archiveRules(archiveRules: List<Any>) {
+    override fun archiveRules(archiveRules: List<Any>) {
       cdkBuilder.archiveRules(archiveRules)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -181,23 +172,17 @@ public open class CfnAnalyzer internal constructor(
     public fun `property`(): String
 
     public interface Builder {
-      public fun contains(contains: List<String>) {
-      }
+      public fun contains(contains: List<String>)
 
-      public fun eq(eq: List<String>) {
-      }
+      public fun eq(eq: List<String>)
 
-      public fun exists(exists: Boolean) {
-      }
+      public fun exists(exists: Boolean)
 
-      public fun exists(exists: IResolvable) {
-      }
+      public fun exists(exists: IResolvable)
 
-      public fun neq(neq: List<String>) {
-      }
+      public fun neq(neq: List<String>)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -205,27 +190,27 @@ public open class CfnAnalyzer internal constructor(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty.Builder =
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty.builder()
 
-      public override fun contains(contains: List<String>) {
+      override fun contains(contains: List<String>) {
         cdkBuilder.contains(contains)
       }
 
-      public override fun eq(eq: List<String>) {
+      override fun eq(eq: List<String>) {
         cdkBuilder.eq(eq)
       }
 
-      public override fun exists(exists: Boolean) {
+      override fun exists(exists: Boolean) {
         cdkBuilder.exists(exists)
       }
 
-      public override fun exists(exists: IResolvable) {
+      override fun exists(exists: IResolvable) {
         cdkBuilder.exists(exists.let(IResolvable::unwrap))
       }
 
-      public override fun neq(neq: List<String>) {
+      override fun neq(neq: List<String>) {
         cdkBuilder.neq(neq)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
@@ -237,15 +222,15 @@ public open class CfnAnalyzer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.FilterProperty,
     ) : FilterProperty {
-      public override fun contains(): List<String> = unwrap(this).getContains() ?: emptyList()
+      override fun contains(): List<String> = unwrap(this).getContains() ?: emptyList()
 
-      public override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
+      override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
 
-      public override fun exists(): Any? = unwrap(this).getExists()
+      override fun exists(): Any? = unwrap(this).getExists()
 
-      public override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
+      override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
 
-      public override fun `property`(): String = unwrap(this).getProperty()
+      override fun `property`(): String = unwrap(this).getProperty()
     }
 
     public companion object {
@@ -272,18 +257,15 @@ public open class CfnAnalyzer internal constructor(
     public fun unusedAccessConfiguration(): Any? = unwrap(this).getUnusedAccessConfiguration()
 
     public interface Builder {
-      public fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
-      }
+      public fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable)
 
       public
-          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty) {
-      }
+          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
       public
-          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -292,18 +274,18 @@ public open class CfnAnalyzer internal constructor(
           =
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty.builder()
 
-      public override fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
+      override fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
         cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty) {
         cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(UnusedAccessConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
-      public override
+      override
           fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty.Builder.() -> Unit):
           Unit =
           unusedAccessConfiguration(UnusedAccessConfigurationProperty(unusedAccessConfiguration))
@@ -317,8 +299,7 @@ public open class CfnAnalyzer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalyzerConfigurationProperty,
     ) : AnalyzerConfigurationProperty {
-      public override fun unusedAccessConfiguration(): Any? =
-          unwrap(this).getUnusedAccessConfiguration()
+      override fun unusedAccessConfiguration(): Any? = unwrap(this).getUnusedAccessConfiguration()
     }
 
     public companion object {
@@ -347,14 +328,11 @@ public open class CfnAnalyzer internal constructor(
     public fun ruleName(): String
 
     public interface Builder {
-      public fun filter(filter: IResolvable) {
-      }
+      public fun filter(filter: IResolvable)
 
-      public fun filter(filter: List<Any>) {
-      }
+      public fun filter(filter: List<Any>)
 
-      public fun ruleName(ruleName: String) {
-      }
+      public fun ruleName(ruleName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -362,15 +340,15 @@ public open class CfnAnalyzer internal constructor(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty.Builder =
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty.builder()
 
-      public override fun filter(filter: IResolvable) {
+      override fun filter(filter: IResolvable) {
         cdkBuilder.filter(filter.let(IResolvable::unwrap))
       }
 
-      public override fun filter(filter: List<Any>) {
+      override fun filter(filter: List<Any>) {
         cdkBuilder.filter(filter)
       }
 
-      public override fun ruleName(ruleName: String) {
+      override fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)
       }
 
@@ -383,9 +361,9 @@ public open class CfnAnalyzer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.ArchiveRuleProperty,
     ) : ArchiveRuleProperty {
-      public override fun filter(): Any = unwrap(this).getFilter()
+      override fun filter(): Any = unwrap(this).getFilter()
 
-      public override fun ruleName(): String = unwrap(this).getRuleName()
+      override fun ruleName(): String = unwrap(this).getRuleName()
     }
 
     public companion object {
@@ -412,8 +390,7 @@ public open class CfnAnalyzer internal constructor(
     public fun unusedAccessAge(): Number? = unwrap(this).getUnusedAccessAge()
 
     public interface Builder {
-      public fun unusedAccessAge(unusedAccessAge: Number) {
-      }
+      public fun unusedAccessAge(unusedAccessAge: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -422,7 +399,7 @@ public open class CfnAnalyzer internal constructor(
           =
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty.builder()
 
-      public override fun unusedAccessAge(unusedAccessAge: Number) {
+      override fun unusedAccessAge(unusedAccessAge: Number) {
         cdkBuilder.unusedAccessAge(unusedAccessAge)
       }
 
@@ -435,7 +412,7 @@ public open class CfnAnalyzer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty,
     ) : UnusedAccessConfigurationProperty {
-      public override fun unusedAccessAge(): Number? = unwrap(this).getUnusedAccessAge()
+      override fun unusedAccessAge(): Number? = unwrap(this).getUnusedAccessAge()
     }
 
     public companion object {

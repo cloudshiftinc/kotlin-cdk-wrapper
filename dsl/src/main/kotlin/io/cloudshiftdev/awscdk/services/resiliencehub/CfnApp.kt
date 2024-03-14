@@ -101,46 +101,33 @@ public open class CfnApp internal constructor(
   }
 
   public interface Builder {
-    public fun appAssessmentSchedule(appAssessmentSchedule: String) {
-    }
+    public fun appAssessmentSchedule(appAssessmentSchedule: String)
 
-    public fun appTemplateBody(appTemplateBody: String) {
-    }
+    public fun appTemplateBody(appTemplateBody: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventSubscriptions(eventSubscriptions: IResolvable) {
-    }
+    public fun eventSubscriptions(eventSubscriptions: IResolvable)
 
-    public fun eventSubscriptions(eventSubscriptions: List<Any>) {
-    }
+    public fun eventSubscriptions(eventSubscriptions: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun permissionModel(permissionModel: IResolvable) {
-    }
+    public fun permissionModel(permissionModel: IResolvable)
 
-    public fun permissionModel(permissionModel: PermissionModelProperty) {
-    }
+    public fun permissionModel(permissionModel: PermissionModelProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e918c216fb8f3bf92d254812b276851f7aa4316f4e196983dece2146130f3aca")
-    public fun permissionModel(permissionModel: PermissionModelProperty.Builder.() -> Unit) {
-    }
+    public fun permissionModel(permissionModel: PermissionModelProperty.Builder.() -> Unit)
 
-    public fun resiliencyPolicyArn(resiliencyPolicyArn: String) {
-    }
+    public fun resiliencyPolicyArn(resiliencyPolicyArn: String)
 
-    public fun resourceMappings(resourceMappings: IResolvable) {
-    }
+    public fun resourceMappings(resourceMappings: IResolvable)
 
-    public fun resourceMappings(resourceMappings: List<Any>) {
-    }
+    public fun resourceMappings(resourceMappings: List<Any>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -150,57 +137,56 @@ public open class CfnApp internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.resiliencehub.CfnApp.Builder =
         software.amazon.awscdk.services.resiliencehub.CfnApp.Builder.create(scope, id)
 
-    public override fun appAssessmentSchedule(appAssessmentSchedule: String) {
+    override fun appAssessmentSchedule(appAssessmentSchedule: String) {
       cdkBuilder.appAssessmentSchedule(appAssessmentSchedule)
     }
 
-    public override fun appTemplateBody(appTemplateBody: String) {
+    override fun appTemplateBody(appTemplateBody: String) {
       cdkBuilder.appTemplateBody(appTemplateBody)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventSubscriptions(eventSubscriptions: IResolvable) {
+    override fun eventSubscriptions(eventSubscriptions: IResolvable) {
       cdkBuilder.eventSubscriptions(eventSubscriptions.let(IResolvable::unwrap))
     }
 
-    public override fun eventSubscriptions(eventSubscriptions: List<Any>) {
+    override fun eventSubscriptions(eventSubscriptions: List<Any>) {
       cdkBuilder.eventSubscriptions(eventSubscriptions)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun permissionModel(permissionModel: IResolvable) {
+    override fun permissionModel(permissionModel: IResolvable) {
       cdkBuilder.permissionModel(permissionModel.let(IResolvable::unwrap))
     }
 
-    public override fun permissionModel(permissionModel: PermissionModelProperty) {
+    override fun permissionModel(permissionModel: PermissionModelProperty) {
       cdkBuilder.permissionModel(permissionModel.let(PermissionModelProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e918c216fb8f3bf92d254812b276851f7aa4316f4e196983dece2146130f3aca")
-    public override
-        fun permissionModel(permissionModel: PermissionModelProperty.Builder.() -> Unit): Unit =
-        permissionModel(PermissionModelProperty(permissionModel))
+    override fun permissionModel(permissionModel: PermissionModelProperty.Builder.() -> Unit): Unit
+        = permissionModel(PermissionModelProperty(permissionModel))
 
-    public override fun resiliencyPolicyArn(resiliencyPolicyArn: String) {
+    override fun resiliencyPolicyArn(resiliencyPolicyArn: String) {
       cdkBuilder.resiliencyPolicyArn(resiliencyPolicyArn)
     }
 
-    public override fun resourceMappings(resourceMappings: IResolvable) {
+    override fun resourceMappings(resourceMappings: IResolvable) {
       cdkBuilder.resourceMappings(resourceMappings.let(IResolvable::unwrap))
     }
 
-    public override fun resourceMappings(resourceMappings: List<Any>) {
+    override fun resourceMappings(resourceMappings: List<Any>) {
       cdkBuilder.resourceMappings(resourceMappings)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -238,17 +224,13 @@ public open class CfnApp internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun awsAccountId(awsAccountId: String) {
-      }
+      public fun awsAccountId(awsAccountId: String)
 
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun identifier(identifier: String) {
-      }
+      public fun identifier(identifier: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -256,19 +238,19 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty.Builder =
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty.builder()
 
-      public override fun awsAccountId(awsAccountId: String) {
+      override fun awsAccountId(awsAccountId: String) {
         cdkBuilder.awsAccountId(awsAccountId)
       }
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun identifier(identifier: String) {
+      override fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -281,13 +263,13 @@ public open class CfnApp internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty,
     ) : PhysicalResourceIdProperty {
-      public override fun awsAccountId(): String? = unwrap(this).getAwsAccountId()
+      override fun awsAccountId(): String? = unwrap(this).getAwsAccountId()
 
-      public override fun awsRegion(): String? = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
 
-      public override fun identifier(): String = unwrap(this).getIdentifier()
+      override fun identifier(): String = unwrap(this).getIdentifier()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -319,14 +301,11 @@ public open class CfnApp internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun crossAccountRoleArns(crossAccountRoleArns: List<String>) {
-      }
+      public fun crossAccountRoleArns(crossAccountRoleArns: List<String>)
 
-      public fun invokerRoleName(invokerRoleName: String) {
-      }
+      public fun invokerRoleName(invokerRoleName: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -334,15 +313,15 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty.Builder =
           software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty.builder()
 
-      public override fun crossAccountRoleArns(crossAccountRoleArns: List<String>) {
+      override fun crossAccountRoleArns(crossAccountRoleArns: List<String>) {
         cdkBuilder.crossAccountRoleArns(crossAccountRoleArns)
       }
 
-      public override fun invokerRoleName(invokerRoleName: String) {
+      override fun invokerRoleName(invokerRoleName: String) {
         cdkBuilder.invokerRoleName(invokerRoleName)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -355,12 +334,12 @@ public open class CfnApp internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty,
     ) : PermissionModelProperty {
-      public override fun crossAccountRoleArns(): List<String> =
-          unwrap(this).getCrossAccountRoleArns() ?: emptyList()
+      override fun crossAccountRoleArns(): List<String> = unwrap(this).getCrossAccountRoleArns() ?:
+          emptyList()
 
-      public override fun invokerRoleName(): String? = unwrap(this).getInvokerRoleName()
+      override fun invokerRoleName(): String? = unwrap(this).getInvokerRoleName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -397,32 +376,24 @@ public open class CfnApp internal constructor(
     public fun terraformSourceName(): String? = unwrap(this).getTerraformSourceName()
 
     public interface Builder {
-      public fun eksSourceName(eksSourceName: String) {
-      }
+      public fun eksSourceName(eksSourceName: String)
 
-      public fun logicalStackName(logicalStackName: String) {
-      }
+      public fun logicalStackName(logicalStackName: String)
 
-      public fun mappingType(mappingType: String) {
-      }
+      public fun mappingType(mappingType: String)
 
-      public fun physicalResourceId(physicalResourceId: IResolvable) {
-      }
+      public fun physicalResourceId(physicalResourceId: IResolvable)
 
-      public fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty) {
-      }
+      public fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c64aca1583c97db6bc67cb6995d70235bf84d03b55a6e55a3704aaba9f51f705")
       public
-          fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty.Builder.() -> Unit) {
-      }
+          fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty.Builder.() -> Unit)
 
-      public fun resourceName(resourceName: String) {
-      }
+      public fun resourceName(resourceName: String)
 
-      public fun terraformSourceName(terraformSourceName: String) {
-      }
+      public fun terraformSourceName(terraformSourceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -430,37 +401,37 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty.Builder =
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty.builder()
 
-      public override fun eksSourceName(eksSourceName: String) {
+      override fun eksSourceName(eksSourceName: String) {
         cdkBuilder.eksSourceName(eksSourceName)
       }
 
-      public override fun logicalStackName(logicalStackName: String) {
+      override fun logicalStackName(logicalStackName: String) {
         cdkBuilder.logicalStackName(logicalStackName)
       }
 
-      public override fun mappingType(mappingType: String) {
+      override fun mappingType(mappingType: String) {
         cdkBuilder.mappingType(mappingType)
       }
 
-      public override fun physicalResourceId(physicalResourceId: IResolvable) {
+      override fun physicalResourceId(physicalResourceId: IResolvable) {
         cdkBuilder.physicalResourceId(physicalResourceId.let(IResolvable::unwrap))
       }
 
-      public override fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty) {
+      override fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty) {
         cdkBuilder.physicalResourceId(physicalResourceId.let(PhysicalResourceIdProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c64aca1583c97db6bc67cb6995d70235bf84d03b55a6e55a3704aaba9f51f705")
-      public override
+      override
           fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty.Builder.() -> Unit):
           Unit = physicalResourceId(PhysicalResourceIdProperty(physicalResourceId))
 
-      public override fun resourceName(resourceName: String) {
+      override fun resourceName(resourceName: String) {
         cdkBuilder.resourceName(resourceName)
       }
 
-      public override fun terraformSourceName(terraformSourceName: String) {
+      override fun terraformSourceName(terraformSourceName: String) {
         cdkBuilder.terraformSourceName(terraformSourceName)
       }
 
@@ -473,17 +444,17 @@ public open class CfnApp internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty,
     ) : ResourceMappingProperty {
-      public override fun eksSourceName(): String? = unwrap(this).getEksSourceName()
+      override fun eksSourceName(): String? = unwrap(this).getEksSourceName()
 
-      public override fun logicalStackName(): String? = unwrap(this).getLogicalStackName()
+      override fun logicalStackName(): String? = unwrap(this).getLogicalStackName()
 
-      public override fun mappingType(): String = unwrap(this).getMappingType()
+      override fun mappingType(): String = unwrap(this).getMappingType()
 
-      public override fun physicalResourceId(): Any = unwrap(this).getPhysicalResourceId()
+      override fun physicalResourceId(): Any = unwrap(this).getPhysicalResourceId()
 
-      public override fun resourceName(): String? = unwrap(this).getResourceName()
+      override fun resourceName(): String? = unwrap(this).getResourceName()
 
-      public override fun terraformSourceName(): String? = unwrap(this).getTerraformSourceName()
+      override fun terraformSourceName(): String? = unwrap(this).getTerraformSourceName()
     }
 
     public companion object {
@@ -514,14 +485,11 @@ public open class CfnApp internal constructor(
     public fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
 
     public interface Builder {
-      public fun eventType(eventType: String) {
-      }
+      public fun eventType(eventType: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun snsTopicArn(snsTopicArn: String) {
-      }
+      public fun snsTopicArn(snsTopicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -529,15 +497,15 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty.Builder =
           software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty.builder()
 
-      public override fun eventType(eventType: String) {
+      override fun eventType(eventType: String) {
         cdkBuilder.eventType(eventType)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun snsTopicArn(snsTopicArn: String) {
+      override fun snsTopicArn(snsTopicArn: String) {
         cdkBuilder.snsTopicArn(snsTopicArn)
       }
 
@@ -550,11 +518,11 @@ public open class CfnApp internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty,
     ) : EventSubscriptionProperty {
-      public override fun eventType(): String = unwrap(this).getEventType()
+      override fun eventType(): String = unwrap(this).getEventType()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
+      override fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
     }
 
     public companion object {

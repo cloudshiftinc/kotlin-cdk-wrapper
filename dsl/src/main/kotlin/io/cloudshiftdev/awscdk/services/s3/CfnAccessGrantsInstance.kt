@@ -41,11 +41,9 @@ public open class CfnAccessGrantsInstance internal constructor(
   }
 
   public interface Builder {
-    public fun identityCenterArn(identityCenterArn: String) {
-    }
+    public fun identityCenterArn(identityCenterArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -55,11 +53,11 @@ public open class CfnAccessGrantsInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.CfnAccessGrantsInstance.Builder =
         software.amazon.awscdk.services.s3.CfnAccessGrantsInstance.Builder.create(scope, id)
 
-    public override fun identityCenterArn(identityCenterArn: String) {
+    override fun identityCenterArn(identityCenterArn: String) {
       cdkBuilder.identityCenterArn(identityCenterArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

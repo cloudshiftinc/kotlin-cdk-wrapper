@@ -48,6 +48,7 @@ internal class MethodGenerator(
 
         if (spec.isOverride) {
             implementationBuilder.addModifiers(KModifier.OVERRIDE)
+            interfaceBuilder.addModifiers(KModifier.OVERRIDE)
         }
 
         if (spec.isOpen && !spec.isOverride) {
@@ -132,8 +133,8 @@ internal data class MethodSpec(
                 Parameter(it.name, it.type)
             }
             val isOverride = model.isOverrideMethod(enclosingClass.className, method)
-            if(enclosingClass.className.simpleName == "EbsDeviceProps") {
-                println("EbsDeviceProps: ${method.name} ${method.signature} ${isOverride}")
+            if(enclosingClass.className.simpleName == "EbsDeviceProps" && method.name.contains("deleteOnTermination")) {
+                println("MethodSpec: EbsDeviceProps: ${method.name} ${method.signature} ${isOverride}")
             }
             return MethodSpec(
                 signature = method.signature,

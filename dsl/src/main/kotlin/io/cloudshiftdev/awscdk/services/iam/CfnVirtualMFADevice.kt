@@ -49,17 +49,13 @@ public open class CfnVirtualMFADevice internal constructor(
   }
 
   public interface Builder {
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun users(users: List<String>) {
-    }
+    public fun users(users: List<String>)
 
-    public fun virtualMfaDeviceName(virtualMfaDeviceName: String) {
-    }
+    public fun virtualMfaDeviceName(virtualMfaDeviceName: String)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnVirtualMFADevice internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnVirtualMFADevice.Builder =
         software.amazon.awscdk.services.iam.CfnVirtualMFADevice.Builder.create(scope, id)
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun users(users: List<String>) {
+    override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
 
-    public override fun virtualMfaDeviceName(virtualMfaDeviceName: String) {
+    override fun virtualMfaDeviceName(virtualMfaDeviceName: String) {
       cdkBuilder.virtualMfaDeviceName(virtualMfaDeviceName)
     }
 

@@ -10,11 +10,9 @@ public interface EncryptionAtRestOptions {
   public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
   public interface Builder {
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun kmsKey(kmsKey: IKey) {
-    }
+    public fun kmsKey(kmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface EncryptionAtRestOptions {
         software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions.Builder =
         software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions.builder()
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun kmsKey(kmsKey: IKey) {
+    override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
     }
 
@@ -38,9 +36,9 @@ public interface EncryptionAtRestOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions,
   ) : EncryptionAtRestOptions {
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
+    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
   }
 
   public companion object {

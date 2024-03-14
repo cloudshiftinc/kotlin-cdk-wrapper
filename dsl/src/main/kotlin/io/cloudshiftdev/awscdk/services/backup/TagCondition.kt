@@ -11,29 +11,26 @@ public interface TagCondition {
   public fun `value`(): String
 
   public interface Builder {
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun operation(operation: TagOperation) {
-    }
+    public fun operation(operation: TagOperation)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.backup.TagCondition.Builder =
         software.amazon.awscdk.services.backup.TagCondition.builder()
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun operation(operation: TagOperation) {
+    override fun operation(operation: TagOperation) {
       cdkBuilder.operation(operation.let(TagOperation::unwrap))
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -43,12 +40,11 @@ public interface TagCondition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.backup.TagCondition,
   ) : TagCondition {
-    public override fun key(): String = unwrap(this).getKey()
+    override fun key(): String = unwrap(this).getKey()
 
-    public override fun operation(): TagOperation? =
-        unwrap(this).getOperation()?.let(TagOperation::wrap)
+    override fun operation(): TagOperation? = unwrap(this).getOperation()?.let(TagOperation::wrap)
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

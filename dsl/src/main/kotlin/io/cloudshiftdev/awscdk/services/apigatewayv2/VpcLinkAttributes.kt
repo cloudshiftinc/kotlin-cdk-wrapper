@@ -10,22 +10,20 @@ public interface VpcLinkAttributes {
   public fun vpcLinkId(): String
 
   public interface Builder {
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcLinkId(vpcLinkId: String) {
-    }
+    public fun vpcLinkId(vpcLinkId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes.builder()
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcLinkId(vpcLinkId: String) {
+    override fun vpcLinkId(vpcLinkId: String) {
       cdkBuilder.vpcLinkId(vpcLinkId)
     }
 
@@ -36,9 +34,9 @@ public interface VpcLinkAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes,
   ) : VpcLinkAttributes {
-    public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+    override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
 
-    public override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
+    override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
   }
 
   public companion object {

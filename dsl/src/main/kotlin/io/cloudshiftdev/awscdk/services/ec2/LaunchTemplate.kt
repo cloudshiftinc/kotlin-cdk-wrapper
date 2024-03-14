@@ -52,87 +52,61 @@ public open class LaunchTemplate internal constructor(
   public override fun versionNumber(): String = unwrap(this).getVersionNumber()
 
   public interface Builder {
-    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
-    public fun blockDevices(blockDevices: List<BlockDevice>) {
-    }
+    public fun blockDevices(blockDevices: List<BlockDevice>)
 
-    public fun cpuCredits(cpuCredits: CpuCredits) {
-    }
+    public fun cpuCredits(cpuCredits: CpuCredits)
 
-    public fun detailedMonitoring(detailedMonitoring: Boolean) {
-    }
+    public fun detailedMonitoring(detailedMonitoring: Boolean)
 
-    public fun disableApiTermination(disableApiTermination: Boolean) {
-    }
+    public fun disableApiTermination(disableApiTermination: Boolean)
 
-    public fun ebsOptimized(ebsOptimized: Boolean) {
-    }
+    public fun ebsOptimized(ebsOptimized: Boolean)
 
-    public fun hibernationConfigured(hibernationConfigured: Boolean) {
-    }
+    public fun hibernationConfigured(hibernationConfigured: Boolean)
 
-    public fun httpEndpoint(httpEndpoint: Boolean) {
-    }
+    public fun httpEndpoint(httpEndpoint: Boolean)
 
-    public fun httpProtocolIpv6(httpProtocolIpv6: Boolean) {
-    }
+    public fun httpProtocolIpv6(httpProtocolIpv6: Boolean)
 
-    public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
-    }
+    public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
 
-    public fun httpTokens(httpTokens: LaunchTemplateHttpTokens) {
-    }
+    public fun httpTokens(httpTokens: LaunchTemplateHttpTokens)
 
     public
-        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior) {
-    }
+        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior)
 
-    public fun instanceMetadataTags(instanceMetadataTags: Boolean) {
-    }
+    public fun instanceMetadataTags(instanceMetadataTags: Boolean)
 
-    public fun instanceProfile(instanceProfile: IInstanceProfile) {
-    }
+    public fun instanceProfile(instanceProfile: IInstanceProfile)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun keyPair(keyPair: IKeyPair) {
-    }
+    public fun keyPair(keyPair: IKeyPair)
 
-    public fun launchTemplateName(launchTemplateName: String) {
-    }
+    public fun launchTemplateName(launchTemplateName: String)
 
-    public fun machineImage(machineImage: IMachineImage) {
-    }
+    public fun machineImage(machineImage: IMachineImage)
 
-    public fun nitroEnclaveEnabled(nitroEnclaveEnabled: Boolean) {
-    }
+    public fun nitroEnclaveEnabled(nitroEnclaveEnabled: Boolean)
 
-    public fun requireImdsv2(requireImdsv2: Boolean) {
-    }
+    public fun requireImdsv2(requireImdsv2: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun spotOptions(spotOptions: LaunchTemplateSpotOptions) {
-    }
+    public fun spotOptions(spotOptions: LaunchTemplateSpotOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5ce905ff67a4ffc05d319d73c1977f1338e37b312b69e262901226d015543042")
-    public fun spotOptions(spotOptions: LaunchTemplateSpotOptions.Builder.() -> Unit) {
-    }
+    public fun spotOptions(spotOptions: LaunchTemplateSpotOptions.Builder.() -> Unit)
 
-    public fun userData(userData: UserData) {
-    }
+    public fun userData(userData: UserData)
   }
 
   private class BuilderImpl(
@@ -142,110 +116,110 @@ public open class LaunchTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LaunchTemplate.Builder =
         software.amazon.awscdk.services.ec2.LaunchTemplate.Builder.create(scope, id)
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
     }
 
-    public override fun blockDevices(blockDevices: List<BlockDevice>) {
+    override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
 
-    public override fun cpuCredits(cpuCredits: CpuCredits) {
+    override fun cpuCredits(cpuCredits: CpuCredits) {
       cdkBuilder.cpuCredits(cpuCredits.let(CpuCredits::unwrap))
     }
 
-    public override fun detailedMonitoring(detailedMonitoring: Boolean) {
+    override fun detailedMonitoring(detailedMonitoring: Boolean) {
       cdkBuilder.detailedMonitoring(detailedMonitoring)
     }
 
-    public override fun disableApiTermination(disableApiTermination: Boolean) {
+    override fun disableApiTermination(disableApiTermination: Boolean) {
       cdkBuilder.disableApiTermination(disableApiTermination)
     }
 
-    public override fun ebsOptimized(ebsOptimized: Boolean) {
+    override fun ebsOptimized(ebsOptimized: Boolean) {
       cdkBuilder.ebsOptimized(ebsOptimized)
     }
 
-    public override fun hibernationConfigured(hibernationConfigured: Boolean) {
+    override fun hibernationConfigured(hibernationConfigured: Boolean) {
       cdkBuilder.hibernationConfigured(hibernationConfigured)
     }
 
-    public override fun httpEndpoint(httpEndpoint: Boolean) {
+    override fun httpEndpoint(httpEndpoint: Boolean) {
       cdkBuilder.httpEndpoint(httpEndpoint)
     }
 
-    public override fun httpProtocolIpv6(httpProtocolIpv6: Boolean) {
+    override fun httpProtocolIpv6(httpProtocolIpv6: Boolean) {
       cdkBuilder.httpProtocolIpv6(httpProtocolIpv6)
     }
 
-    public override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
+    override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
       cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
     }
 
-    public override fun httpTokens(httpTokens: LaunchTemplateHttpTokens) {
+    override fun httpTokens(httpTokens: LaunchTemplateHttpTokens) {
       cdkBuilder.httpTokens(httpTokens.let(LaunchTemplateHttpTokens::unwrap))
     }
 
-    public override
+    override
         fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior) {
       cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior.let(InstanceInitiatedShutdownBehavior::unwrap))
     }
 
-    public override fun instanceMetadataTags(instanceMetadataTags: Boolean) {
+    override fun instanceMetadataTags(instanceMetadataTags: Boolean) {
       cdkBuilder.instanceMetadataTags(instanceMetadataTags)
     }
 
-    public override fun instanceProfile(instanceProfile: IInstanceProfile) {
+    override fun instanceProfile(instanceProfile: IInstanceProfile) {
       cdkBuilder.instanceProfile(instanceProfile.let(IInstanceProfile::unwrap))
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun keyPair(keyPair: IKeyPair) {
+    override fun keyPair(keyPair: IKeyPair) {
       cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
     }
 
-    public override fun launchTemplateName(launchTemplateName: String) {
+    override fun launchTemplateName(launchTemplateName: String) {
       cdkBuilder.launchTemplateName(launchTemplateName)
     }
 
-    public override fun machineImage(machineImage: IMachineImage) {
+    override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
     }
 
-    public override fun nitroEnclaveEnabled(nitroEnclaveEnabled: Boolean) {
+    override fun nitroEnclaveEnabled(nitroEnclaveEnabled: Boolean) {
       cdkBuilder.nitroEnclaveEnabled(nitroEnclaveEnabled)
     }
 
-    public override fun requireImdsv2(requireImdsv2: Boolean) {
+    override fun requireImdsv2(requireImdsv2: Boolean) {
       cdkBuilder.requireImdsv2(requireImdsv2)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun spotOptions(spotOptions: LaunchTemplateSpotOptions) {
+    override fun spotOptions(spotOptions: LaunchTemplateSpotOptions) {
       cdkBuilder.spotOptions(spotOptions.let(LaunchTemplateSpotOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5ce905ff67a4ffc05d319d73c1977f1338e37b312b69e262901226d015543042")
-    public override fun spotOptions(spotOptions: LaunchTemplateSpotOptions.Builder.() -> Unit): Unit
-        = spotOptions(LaunchTemplateSpotOptions(spotOptions))
+    override fun spotOptions(spotOptions: LaunchTemplateSpotOptions.Builder.() -> Unit): Unit =
+        spotOptions(LaunchTemplateSpotOptions(spotOptions))
 
-    public override fun userData(userData: UserData) {
+    override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }
 

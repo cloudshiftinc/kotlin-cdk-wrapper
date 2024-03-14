@@ -24,35 +24,25 @@ public open class Alarm internal constructor(
       unwrap(this).toAnnotation().let(HorizontalAnnotation::wrap)
 
   public interface Builder {
-    public fun actionsEnabled(actionsEnabled: Boolean) {
-    }
+    public fun actionsEnabled(actionsEnabled: Boolean)
 
-    public fun alarmDescription(alarmDescription: String) {
-    }
+    public fun alarmDescription(alarmDescription: String)
 
-    public fun alarmName(alarmName: String) {
-    }
+    public fun alarmName(alarmName: String)
 
-    public fun comparisonOperator(comparisonOperator: ComparisonOperator) {
-    }
+    public fun comparisonOperator(comparisonOperator: ComparisonOperator)
 
-    public fun datapointsToAlarm(datapointsToAlarm: Number) {
-    }
+    public fun datapointsToAlarm(datapointsToAlarm: Number)
 
-    public fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
-    }
+    public fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String)
 
-    public fun evaluationPeriods(evaluationPeriods: Number) {
-    }
+    public fun evaluationPeriods(evaluationPeriods: Number)
 
-    public fun metric(metric: IMetric) {
-    }
+    public fun metric(metric: IMetric)
 
-    public fun threshold(threshold: Number) {
-    }
+    public fun threshold(threshold: Number)
 
-    public fun treatMissingData(treatMissingData: TreatMissingData) {
-    }
+    public fun treatMissingData(treatMissingData: TreatMissingData)
   }
 
   private class BuilderImpl(
@@ -62,43 +52,43 @@ public open class Alarm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.Alarm.Builder =
         software.amazon.awscdk.services.cloudwatch.Alarm.Builder.create(scope, id)
 
-    public override fun actionsEnabled(actionsEnabled: Boolean) {
+    override fun actionsEnabled(actionsEnabled: Boolean) {
       cdkBuilder.actionsEnabled(actionsEnabled)
     }
 
-    public override fun alarmDescription(alarmDescription: String) {
+    override fun alarmDescription(alarmDescription: String) {
       cdkBuilder.alarmDescription(alarmDescription)
     }
 
-    public override fun alarmName(alarmName: String) {
+    override fun alarmName(alarmName: String) {
       cdkBuilder.alarmName(alarmName)
     }
 
-    public override fun comparisonOperator(comparisonOperator: ComparisonOperator) {
+    override fun comparisonOperator(comparisonOperator: ComparisonOperator) {
       cdkBuilder.comparisonOperator(comparisonOperator.let(ComparisonOperator::unwrap))
     }
 
-    public override fun datapointsToAlarm(datapointsToAlarm: Number) {
+    override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
     }
 
-    public override fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
+    override fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
       cdkBuilder.evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile)
     }
 
-    public override fun evaluationPeriods(evaluationPeriods: Number) {
+    override fun evaluationPeriods(evaluationPeriods: Number) {
       cdkBuilder.evaluationPeriods(evaluationPeriods)
     }
 
-    public override fun metric(metric: IMetric) {
+    override fun metric(metric: IMetric) {
       cdkBuilder.metric(metric.let(IMetric::unwrap))
     }
 
-    public override fun threshold(threshold: Number) {
+    override fun threshold(threshold: Number) {
       cdkBuilder.threshold(threshold)
     }
 
-    public override fun treatMissingData(treatMissingData: TreatMissingData) {
+    override fun treatMissingData(treatMissingData: TreatMissingData) {
       cdkBuilder.treatMissingData(treatMissingData.let(TreatMissingData::unwrap))
     }
 

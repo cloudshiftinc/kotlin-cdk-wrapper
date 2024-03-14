@@ -12,8 +12,7 @@ public open class TagOptions internal constructor(
   private val cdkObject: software.amazon.awscdk.services.servicecatalog.TagOptions,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
-    }
+    public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>)
   }
 
   private class BuilderImpl(
@@ -23,7 +22,7 @@ public open class TagOptions internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicecatalog.TagOptions.Builder =
         software.amazon.awscdk.services.servicecatalog.TagOptions.Builder.create(scope, id)
 
-    public override fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
+    override fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
       cdkBuilder.allowedValuesForTags(allowedValuesForTags)
     }
 

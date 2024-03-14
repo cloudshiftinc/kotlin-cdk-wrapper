@@ -19,65 +19,45 @@ public open class Stage internal constructor(
   public override fun stageName(): String = unwrap(this).getStageName()
 
   public interface Builder {
-    public fun accessLogDestination(accessLogDestination: IAccessLogDestination) {
-    }
+    public fun accessLogDestination(accessLogDestination: IAccessLogDestination)
 
-    public fun accessLogFormat(accessLogFormat: AccessLogFormat) {
-    }
+    public fun accessLogFormat(accessLogFormat: AccessLogFormat)
 
-    public fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
-    }
+    public fun cacheClusterEnabled(cacheClusterEnabled: Boolean)
 
-    public fun cacheClusterSize(cacheClusterSize: String) {
-    }
+    public fun cacheClusterSize(cacheClusterSize: String)
 
-    public fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
-    }
+    public fun cacheDataEncrypted(cacheDataEncrypted: Boolean)
 
-    public fun cacheTtl(cacheTtl: Duration) {
-    }
+    public fun cacheTtl(cacheTtl: Duration)
 
-    public fun cachingEnabled(cachingEnabled: Boolean) {
-    }
+    public fun cachingEnabled(cachingEnabled: Boolean)
 
-    public fun clientCertificateId(clientCertificateId: String) {
-    }
+    public fun clientCertificateId(clientCertificateId: String)
 
-    public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-    }
+    public fun dataTraceEnabled(dataTraceEnabled: Boolean)
 
-    public fun deployment(deployment: Deployment) {
-    }
+    public fun deployment(deployment: Deployment)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun documentationVersion(documentationVersion: String) {
-    }
+    public fun documentationVersion(documentationVersion: String)
 
-    public fun loggingLevel(loggingLevel: MethodLoggingLevel) {
-    }
+    public fun loggingLevel(loggingLevel: MethodLoggingLevel)
 
-    public fun methodOptions(methodOptions: Map<String, MethodDeploymentOptions>) {
-    }
+    public fun methodOptions(methodOptions: Map<String, MethodDeploymentOptions>)
 
-    public fun metricsEnabled(metricsEnabled: Boolean) {
-    }
+    public fun metricsEnabled(metricsEnabled: Boolean)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-    }
+    public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
-    public fun throttlingRateLimit(throttlingRateLimit: Number) {
-    }
+    public fun throttlingRateLimit(throttlingRateLimit: Number)
 
-    public fun tracingEnabled(tracingEnabled: Boolean) {
-    }
+    public fun tracingEnabled(tracingEnabled: Boolean)
 
-    public fun variables(variables: Map<String, String>) {
-    }
+    public fun variables(variables: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -87,83 +67,83 @@ public open class Stage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.Stage.Builder =
         software.amazon.awscdk.services.apigateway.Stage.Builder.create(scope, id)
 
-    public override fun accessLogDestination(accessLogDestination: IAccessLogDestination) {
+    override fun accessLogDestination(accessLogDestination: IAccessLogDestination) {
       cdkBuilder.accessLogDestination(accessLogDestination.let(IAccessLogDestination::unwrap))
     }
 
-    public override fun accessLogFormat(accessLogFormat: AccessLogFormat) {
+    override fun accessLogFormat(accessLogFormat: AccessLogFormat) {
       cdkBuilder.accessLogFormat(accessLogFormat.let(AccessLogFormat::unwrap))
     }
 
-    public override fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
+    override fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
       cdkBuilder.cacheClusterEnabled(cacheClusterEnabled)
     }
 
-    public override fun cacheClusterSize(cacheClusterSize: String) {
+    override fun cacheClusterSize(cacheClusterSize: String) {
       cdkBuilder.cacheClusterSize(cacheClusterSize)
     }
 
-    public override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
+    override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
       cdkBuilder.cacheDataEncrypted(cacheDataEncrypted)
     }
 
-    public override fun cacheTtl(cacheTtl: Duration) {
+    override fun cacheTtl(cacheTtl: Duration) {
       cdkBuilder.cacheTtl(cacheTtl.let(Duration::unwrap))
     }
 
-    public override fun cachingEnabled(cachingEnabled: Boolean) {
+    override fun cachingEnabled(cachingEnabled: Boolean) {
       cdkBuilder.cachingEnabled(cachingEnabled)
     }
 
-    public override fun clientCertificateId(clientCertificateId: String) {
+    override fun clientCertificateId(clientCertificateId: String) {
       cdkBuilder.clientCertificateId(clientCertificateId)
     }
 
-    public override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+    override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
       cdkBuilder.dataTraceEnabled(dataTraceEnabled)
     }
 
-    public override fun deployment(deployment: Deployment) {
+    override fun deployment(deployment: Deployment) {
       cdkBuilder.deployment(deployment.let(Deployment::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun documentationVersion(documentationVersion: String) {
+    override fun documentationVersion(documentationVersion: String) {
       cdkBuilder.documentationVersion(documentationVersion)
     }
 
-    public override fun loggingLevel(loggingLevel: MethodLoggingLevel) {
+    override fun loggingLevel(loggingLevel: MethodLoggingLevel) {
       cdkBuilder.loggingLevel(loggingLevel.let(MethodLoggingLevel::unwrap))
     }
 
-    public override fun methodOptions(methodOptions: Map<String, MethodDeploymentOptions>) {
-      cdkBuilder.methodOptions(methodOptions.mapValues { MethodDeploymentOptions.unwrap(it.value)})
+    override fun methodOptions(methodOptions: Map<String, MethodDeploymentOptions>) {
+      cdkBuilder.methodOptions(methodOptions.mapValues{MethodDeploymentOptions.unwrap(it.value)})
     }
 
-    public override fun metricsEnabled(metricsEnabled: Boolean) {
+    override fun metricsEnabled(metricsEnabled: Boolean) {
       cdkBuilder.metricsEnabled(metricsEnabled)
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+    override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
       cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
     }
 
-    public override fun throttlingRateLimit(throttlingRateLimit: Number) {
+    override fun throttlingRateLimit(throttlingRateLimit: Number) {
       cdkBuilder.throttlingRateLimit(throttlingRateLimit)
     }
 
-    public override fun tracingEnabled(tracingEnabled: Boolean) {
+    override fun tracingEnabled(tracingEnabled: Boolean) {
       cdkBuilder.tracingEnabled(tracingEnabled)
     }
 
-    public override fun variables(variables: Map<String, String>) {
+    override fun variables(variables: Map<String, String>) {
       cdkBuilder.variables(variables)
     }
 

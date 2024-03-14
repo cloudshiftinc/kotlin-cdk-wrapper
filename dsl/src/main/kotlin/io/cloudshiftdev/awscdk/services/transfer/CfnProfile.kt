@@ -51,17 +51,13 @@ public open class CfnProfile internal constructor(
   }
 
   public interface Builder {
-    public fun as2Id(as2Id: String) {
-    }
+    public fun as2Id(as2Id: String)
 
-    public fun certificateIds(certificateIds: List<String>) {
-    }
+    public fun certificateIds(certificateIds: List<String>)
 
-    public fun profileType(profileType: String) {
-    }
+    public fun profileType(profileType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -71,19 +67,19 @@ public open class CfnProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnProfile.Builder =
         software.amazon.awscdk.services.transfer.CfnProfile.Builder.create(scope, id)
 
-    public override fun as2Id(as2Id: String) {
+    override fun as2Id(as2Id: String) {
       cdkBuilder.as2Id(as2Id)
     }
 
-    public override fun certificateIds(certificateIds: List<String>) {
+    override fun certificateIds(certificateIds: List<String>) {
       cdkBuilder.certificateIds(certificateIds)
     }
 
-    public override fun profileType(profileType: String) {
+    override fun profileType(profileType: String) {
       cdkBuilder.profileType(profileType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

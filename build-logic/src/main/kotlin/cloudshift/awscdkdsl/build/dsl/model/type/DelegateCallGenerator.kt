@@ -133,7 +133,7 @@ private class DelegatedCall(
                     val listType =
                         (type as ParameterizedTypeName).typeArguments[1] as ParameterizedTypeName
                     CallSegment(
-                        "$nullable.mapValues { it.value.map(%T::wrap) } ?: emptyMap()",
+                        "$nullable.mapValues{it.value.map(%T::wrap)} ?: emptyMap()",
                         listOf(listType.typeArguments[0].mapClassName().copy(nullable = false)),
                     )
                 }
@@ -144,7 +144,7 @@ private class DelegatedCall(
                 )
 
                 type.isMapWithCdkValue() -> CallSegment(
-                    "$nullable.mapValues { %T.wrap(it.value)} ?: emptyMap()",
+                    "$nullable.mapValues{%T.wrap(it.value)} ?: emptyMap()",
                     listOf(type.typeArguments[1].mapClassName().copy(nullable = false)),
                 )
 
@@ -187,7 +187,7 @@ private class DelegatedCall(
         return when {
             type is ParameterizedTypeName -> when {
                 type.isMapWithCdkValue() -> CallSegment(
-                    "%N$nullable.mapValues { %T.unwrap(it.value)}",
+                    "%N$nullable.mapValues{%T.unwrap(it.value)}",
                     listOf(
                         name,
                         type.typeArguments[1].mapClassName()
@@ -199,7 +199,7 @@ private class DelegatedCall(
                     val listType =
                         type.typeArguments[1] as ParameterizedTypeName
                     CallSegment(
-                        "%N$nullable.mapValues { it.value.map(%T::unwrap) }$nullableListSuffix",
+                        "%N$nullable.mapValues{it.value.map(%T::unwrap) }$nullableListSuffix",
                         listOf(
                             name,
                             listType.typeArguments[0].mapClassName().copy(nullable = false),
@@ -211,7 +211,7 @@ private class DelegatedCall(
                     val listType =
                         type.typeArguments[0] as ParameterizedTypeName
                     CallSegment(
-                        "%N$nullable.map { it.map(%T::unwrap) }$nullableListSuffix",
+                        "%N$nullable.map{ it.map(%T::unwrap) }$nullableListSuffix",
                         listOf(
                             name,
                             listType.typeArguments[0].mapClassName().copy(nullable = false),

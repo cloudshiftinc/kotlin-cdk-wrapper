@@ -86,37 +86,27 @@ public open class CfnEvaluationForm internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun items(items: IResolvable) {
-    }
+    public fun items(items: IResolvable)
 
-    public fun items(items: List<Any>) {
-    }
+    public fun items(items: List<Any>)
 
-    public fun scoringStrategy(scoringStrategy: IResolvable) {
-    }
+    public fun scoringStrategy(scoringStrategy: IResolvable)
 
-    public fun scoringStrategy(scoringStrategy: ScoringStrategyProperty) {
-    }
+    public fun scoringStrategy(scoringStrategy: ScoringStrategyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efe2e93373ae65f145c25729292d629486d4800bb33842ff36705d4eb3a6cc13")
-    public fun scoringStrategy(scoringStrategy: ScoringStrategyProperty.Builder.() -> Unit) {
-    }
+    public fun scoringStrategy(scoringStrategy: ScoringStrategyProperty.Builder.() -> Unit)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun title(title: String) {
-    }
+    public fun title(title: String)
   }
 
   private class BuilderImpl(
@@ -126,45 +116,44 @@ public open class CfnEvaluationForm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnEvaluationForm.Builder =
         software.amazon.awscdk.services.connect.CfnEvaluationForm.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun items(items: IResolvable) {
+    override fun items(items: IResolvable) {
       cdkBuilder.items(items.let(IResolvable::unwrap))
     }
 
-    public override fun items(items: List<Any>) {
+    override fun items(items: List<Any>) {
       cdkBuilder.items(items)
     }
 
-    public override fun scoringStrategy(scoringStrategy: IResolvable) {
+    override fun scoringStrategy(scoringStrategy: IResolvable) {
       cdkBuilder.scoringStrategy(scoringStrategy.let(IResolvable::unwrap))
     }
 
-    public override fun scoringStrategy(scoringStrategy: ScoringStrategyProperty) {
+    override fun scoringStrategy(scoringStrategy: ScoringStrategyProperty) {
       cdkBuilder.scoringStrategy(scoringStrategy.let(ScoringStrategyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efe2e93373ae65f145c25729292d629486d4800bb33842ff36705d4eb3a6cc13")
-    public override
-        fun scoringStrategy(scoringStrategy: ScoringStrategyProperty.Builder.() -> Unit): Unit =
-        scoringStrategy(ScoringStrategyProperty(scoringStrategy))
+    override fun scoringStrategy(scoringStrategy: ScoringStrategyProperty.Builder.() -> Unit): Unit
+        = scoringStrategy(ScoringStrategyProperty(scoringStrategy))
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun title(title: String) {
+    override fun title(title: String) {
       cdkBuilder.title(title)
     }
 
@@ -209,39 +198,29 @@ public open class CfnEvaluationForm internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun instructions(instructions: String) {
-      }
+      public fun instructions(instructions: String)
 
-      public fun notApplicableEnabled(notApplicableEnabled: Boolean) {
-      }
+      public fun notApplicableEnabled(notApplicableEnabled: Boolean)
 
-      public fun notApplicableEnabled(notApplicableEnabled: IResolvable) {
-      }
+      public fun notApplicableEnabled(notApplicableEnabled: IResolvable)
 
-      public fun questionType(questionType: String) {
-      }
+      public fun questionType(questionType: String)
 
-      public fun questionTypeProperties(questionTypeProperties: IResolvable) {
-      }
+      public fun questionTypeProperties(questionTypeProperties: IResolvable)
 
       public
-          fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty) {
-      }
+          fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("60e92d415a6763084f160d2a7bdb9e754997ad72b78e7b47b63ad5416ac3a029")
       public
-          fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty.Builder.() -> Unit) {
-      }
+          fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty.Builder.() -> Unit)
 
-      public fun refId(refId: String) {
-      }
+      public fun refId(refId: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -250,47 +229,47 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionProperty.builder()
 
-      public override fun instructions(instructions: String) {
+      override fun instructions(instructions: String) {
         cdkBuilder.instructions(instructions)
       }
 
-      public override fun notApplicableEnabled(notApplicableEnabled: Boolean) {
+      override fun notApplicableEnabled(notApplicableEnabled: Boolean) {
         cdkBuilder.notApplicableEnabled(notApplicableEnabled)
       }
 
-      public override fun notApplicableEnabled(notApplicableEnabled: IResolvable) {
+      override fun notApplicableEnabled(notApplicableEnabled: IResolvable) {
         cdkBuilder.notApplicableEnabled(notApplicableEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun questionType(questionType: String) {
+      override fun questionType(questionType: String) {
         cdkBuilder.questionType(questionType)
       }
 
-      public override fun questionTypeProperties(questionTypeProperties: IResolvable) {
+      override fun questionTypeProperties(questionTypeProperties: IResolvable) {
         cdkBuilder.questionTypeProperties(questionTypeProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty) {
         cdkBuilder.questionTypeProperties(questionTypeProperties.let(EvaluationFormQuestionTypePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("60e92d415a6763084f160d2a7bdb9e754997ad72b78e7b47b63ad5416ac3a029")
-      public override
+      override
           fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty.Builder.() -> Unit):
           Unit =
           questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty(questionTypeProperties))
 
-      public override fun refId(refId: String) {
+      override fun refId(refId: String) {
         cdkBuilder.refId(refId)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -303,19 +282,19 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionProperty,
     ) : EvaluationFormQuestionProperty {
-      public override fun instructions(): String? = unwrap(this).getInstructions()
+      override fun instructions(): String? = unwrap(this).getInstructions()
 
-      public override fun notApplicableEnabled(): Any? = unwrap(this).getNotApplicableEnabled()
+      override fun notApplicableEnabled(): Any? = unwrap(this).getNotApplicableEnabled()
 
-      public override fun questionType(): String = unwrap(this).getQuestionType()
+      override fun questionType(): String = unwrap(this).getQuestionType()
 
-      public override fun questionTypeProperties(): Any? = unwrap(this).getQuestionTypeProperties()
+      override fun questionTypeProperties(): Any? = unwrap(this).getQuestionTypeProperties()
 
-      public override fun refId(): String = unwrap(this).getRefId()
+      override fun refId(): String = unwrap(this).getRefId()
 
-      public override fun title(): String = unwrap(this).getTitle()
+      override fun title(): String = unwrap(this).getTitle()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {
@@ -344,29 +323,23 @@ public open class CfnEvaluationForm internal constructor(
     public fun singleSelect(): Any? = unwrap(this).getSingleSelect()
 
     public interface Builder {
-      public fun numeric(numeric: IResolvable) {
-      }
+      public fun numeric(numeric: IResolvable)
 
-      public fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty) {
-      }
+      public fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07d1e363c9b8df691d140e50a5f9b351fafd49a1adab6f4336e3b8339c48f95")
       public
-          fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty.Builder.() -> Unit)
 
-      public fun singleSelect(singleSelect: IResolvable) {
-      }
+      public fun singleSelect(singleSelect: IResolvable)
 
-      public fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty) {
-      }
+      public fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4ac30d99389af3124e39fc297e281cc6b48e711a4dbcb0a04077587c66eb38b1")
       public
-          fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -375,32 +348,32 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty.builder()
 
-      public override fun numeric(numeric: IResolvable) {
+      override fun numeric(numeric: IResolvable) {
         cdkBuilder.numeric(numeric.let(IResolvable::unwrap))
       }
 
-      public override fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty) {
+      override fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty) {
         cdkBuilder.numeric(numeric.let(EvaluationFormNumericQuestionPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07d1e363c9b8df691d140e50a5f9b351fafd49a1adab6f4336e3b8339c48f95")
-      public override
+      override
           fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty.Builder.() -> Unit):
           Unit = numeric(EvaluationFormNumericQuestionPropertiesProperty(numeric))
 
-      public override fun singleSelect(singleSelect: IResolvable) {
+      override fun singleSelect(singleSelect: IResolvable) {
         cdkBuilder.singleSelect(singleSelect.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty) {
         cdkBuilder.singleSelect(singleSelect.let(EvaluationFormSingleSelectQuestionPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4ac30d99389af3124e39fc297e281cc6b48e711a4dbcb0a04077587c66eb38b1")
-      public override
+      override
           fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty.Builder.() -> Unit):
           Unit = singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty(singleSelect))
 
@@ -413,9 +386,9 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty,
     ) : EvaluationFormQuestionTypePropertiesProperty {
-      public override fun numeric(): Any? = unwrap(this).getNumeric()
+      override fun numeric(): Any? = unwrap(this).getNumeric()
 
-      public override fun singleSelect(): Any? = unwrap(this).getSingleSelect()
+      override fun singleSelect(): Any? = unwrap(this).getSingleSelect()
     }
 
     public companion object {
@@ -445,27 +418,21 @@ public open class CfnEvaluationForm internal constructor(
     public fun section(): Any? = unwrap(this).getSection()
 
     public interface Builder {
-      public fun question(question: IResolvable) {
-      }
+      public fun question(question: IResolvable)
 
-      public fun question(question: EvaluationFormQuestionProperty) {
-      }
+      public fun question(question: EvaluationFormQuestionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e5318a14fa17ffb27f54d09ae3d4e6adfe1d0a87d6d836ba0e4d31e90e5d44fa")
-      public fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit) {
-      }
+      public fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit)
 
-      public fun section(section: IResolvable) {
-      }
+      public fun section(section: IResolvable)
 
-      public fun section(section: EvaluationFormSectionProperty) {
-      }
+      public fun section(section: EvaluationFormSectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("515bf2263e1945779436dc77ef1a3a822c8481e6e43e0878bb8e3dc2b5a85496")
-      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit) {
-      }
+      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -474,30 +441,30 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty.builder()
 
-      public override fun question(question: IResolvable) {
+      override fun question(question: IResolvable) {
         cdkBuilder.question(question.let(IResolvable::unwrap))
       }
 
-      public override fun question(question: EvaluationFormQuestionProperty) {
+      override fun question(question: EvaluationFormQuestionProperty) {
         cdkBuilder.question(question.let(EvaluationFormQuestionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e5318a14fa17ffb27f54d09ae3d4e6adfe1d0a87d6d836ba0e4d31e90e5d44fa")
-      public override fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit):
-          Unit = question(EvaluationFormQuestionProperty(question))
+      override fun question(question: EvaluationFormQuestionProperty.Builder.() -> Unit): Unit =
+          question(EvaluationFormQuestionProperty(question))
 
-      public override fun section(section: IResolvable) {
+      override fun section(section: IResolvable) {
         cdkBuilder.section(section.let(IResolvable::unwrap))
       }
 
-      public override fun section(section: EvaluationFormSectionProperty) {
+      override fun section(section: EvaluationFormSectionProperty) {
         cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("515bf2263e1945779436dc77ef1a3a822c8481e6e43e0878bb8e3dc2b5a85496")
-      public override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
+      override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
           section(EvaluationFormSectionProperty(section))
 
       public fun build():
@@ -509,9 +476,9 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty,
     ) : EvaluationFormItemProperty {
-      public override fun question(): Any? = unwrap(this).getQuestion()
+      override fun question(): Any? = unwrap(this).getQuestion()
 
-      public override fun section(): Any? = unwrap(this).getSection()
+      override fun section(): Any? = unwrap(this).getSection()
     }
 
     public companion object {
@@ -540,14 +507,11 @@ public open class CfnEvaluationForm internal constructor(
     public fun options(): Any
 
     public interface Builder {
-      public fun defaultOptionRefId(defaultOptionRefId: String) {
-      }
+      public fun defaultOptionRefId(defaultOptionRefId: String)
 
-      public fun options(options: IResolvable) {
-      }
+      public fun options(options: IResolvable)
 
-      public fun options(options: List<Any>) {
-      }
+      public fun options(options: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -556,15 +520,15 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty.builder()
 
-      public override fun defaultOptionRefId(defaultOptionRefId: String) {
+      override fun defaultOptionRefId(defaultOptionRefId: String) {
         cdkBuilder.defaultOptionRefId(defaultOptionRefId)
       }
 
-      public override fun options(options: IResolvable) {
+      override fun options(options: IResolvable) {
         cdkBuilder.options(options.let(IResolvable::unwrap))
       }
 
-      public override fun options(options: List<Any>) {
+      override fun options(options: List<Any>) {
         cdkBuilder.options(options)
       }
 
@@ -577,9 +541,9 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty,
     ) : EvaluationFormSingleSelectQuestionAutomationProperty {
-      public override fun defaultOptionRefId(): String? = unwrap(this).getDefaultOptionRefId()
+      override fun defaultOptionRefId(): String? = unwrap(this).getDefaultOptionRefId()
 
-      public override fun options(): Any = unwrap(this).getOptions()
+      override fun options(): Any = unwrap(this).getOptions()
     }
 
     public companion object {
@@ -613,29 +577,22 @@ public open class CfnEvaluationForm internal constructor(
     public fun options(): Any? = unwrap(this).getOptions()
 
     public interface Builder {
-      public fun automation(automation: IResolvable) {
-      }
+      public fun automation(automation: IResolvable)
 
-      public fun automation(automation: EvaluationFormNumericQuestionAutomationProperty) {
-      }
+      public fun automation(automation: EvaluationFormNumericQuestionAutomationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c698dd5314d7b0a87b42190cf4aeb546028b5d817bd9c0f9b274e1ca785890af")
       public
-          fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit) {
-      }
+          fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit)
 
-      public fun maxValue(maxValue: Number) {
-      }
+      public fun maxValue(maxValue: Number)
 
-      public fun minValue(minValue: Number) {
-      }
+      public fun minValue(minValue: Number)
 
-      public fun options(options: IResolvable) {
-      }
+      public fun options(options: IResolvable)
 
-      public fun options(options: List<Any>) {
-      }
+      public fun options(options: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -644,33 +601,33 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty.builder()
 
-      public override fun automation(automation: IResolvable) {
+      override fun automation(automation: IResolvable) {
         cdkBuilder.automation(automation.let(IResolvable::unwrap))
       }
 
-      public override fun automation(automation: EvaluationFormNumericQuestionAutomationProperty) {
+      override fun automation(automation: EvaluationFormNumericQuestionAutomationProperty) {
         cdkBuilder.automation(automation.let(EvaluationFormNumericQuestionAutomationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c698dd5314d7b0a87b42190cf4aeb546028b5d817bd9c0f9b274e1ca785890af")
-      public override
+      override
           fun automation(automation: EvaluationFormNumericQuestionAutomationProperty.Builder.() -> Unit):
           Unit = automation(EvaluationFormNumericQuestionAutomationProperty(automation))
 
-      public override fun maxValue(maxValue: Number) {
+      override fun maxValue(maxValue: Number) {
         cdkBuilder.maxValue(maxValue)
       }
 
-      public override fun minValue(minValue: Number) {
+      override fun minValue(minValue: Number) {
         cdkBuilder.minValue(minValue)
       }
 
-      public override fun options(options: IResolvable) {
+      override fun options(options: IResolvable) {
         cdkBuilder.options(options.let(IResolvable::unwrap))
       }
 
-      public override fun options(options: List<Any>) {
+      override fun options(options: List<Any>) {
         cdkBuilder.options(options)
       }
 
@@ -683,13 +640,13 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty,
     ) : EvaluationFormNumericQuestionPropertiesProperty {
-      public override fun automation(): Any? = unwrap(this).getAutomation()
+      override fun automation(): Any? = unwrap(this).getAutomation()
 
-      public override fun maxValue(): Number = unwrap(this).getMaxValue()
+      override fun maxValue(): Number = unwrap(this).getMaxValue()
 
-      public override fun minValue(): Number = unwrap(this).getMinValue()
+      override fun minValue(): Number = unwrap(this).getMinValue()
 
-      public override fun options(): Any? = unwrap(this).getOptions()
+      override fun options(): Any? = unwrap(this).getOptions()
     }
 
     public companion object {
@@ -721,14 +678,11 @@ public open class CfnEvaluationForm internal constructor(
     public fun optionRefId(): String
 
     public interface Builder {
-      public fun category(category: String) {
-      }
+      public fun category(category: String)
 
-      public fun condition(condition: String) {
-      }
+      public fun condition(condition: String)
 
-      public fun optionRefId(optionRefId: String) {
-      }
+      public fun optionRefId(optionRefId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -737,15 +691,15 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty.builder()
 
-      public override fun category(category: String) {
+      override fun category(category: String) {
         cdkBuilder.category(category)
       }
 
-      public override fun condition(condition: String) {
+      override fun condition(condition: String) {
         cdkBuilder.condition(condition)
       }
 
-      public override fun optionRefId(optionRefId: String) {
+      override fun optionRefId(optionRefId: String) {
         cdkBuilder.optionRefId(optionRefId)
       }
 
@@ -758,11 +712,11 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty,
     ) : SingleSelectQuestionRuleCategoryAutomationProperty {
-      public override fun category(): String = unwrap(this).getCategory()
+      override fun category(): String = unwrap(this).getCategory()
 
-      public override fun condition(): String = unwrap(this).getCondition()
+      override fun condition(): String = unwrap(this).getCondition()
 
-      public override fun optionRefId(): String = unwrap(this).getOptionRefId()
+      override fun optionRefId(): String = unwrap(this).getOptionRefId()
     }
 
     public companion object {
@@ -794,26 +748,20 @@ public open class CfnEvaluationForm internal constructor(
     public fun options(): Any
 
     public interface Builder {
-      public fun automation(automation: IResolvable) {
-      }
+      public fun automation(automation: IResolvable)
 
-      public fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty) {
-      }
+      public fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e9894990d64228a53c80be65a65f4e5421d5e66c52b694c5709d0bd3219bff93")
       public
-          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit) {
-      }
+          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit)
 
-      public fun displayAs(displayAs: String) {
-      }
+      public fun displayAs(displayAs: String)
 
-      public fun options(options: IResolvable) {
-      }
+      public fun options(options: IResolvable)
 
-      public fun options(options: List<Any>) {
-      }
+      public fun options(options: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -822,30 +770,29 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
 
-      public override fun automation(automation: IResolvable) {
+      override fun automation(automation: IResolvable) {
         cdkBuilder.automation(automation.let(IResolvable::unwrap))
       }
 
-      public override
-          fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty) {
+      override fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty) {
         cdkBuilder.automation(automation.let(EvaluationFormSingleSelectQuestionAutomationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e9894990d64228a53c80be65a65f4e5421d5e66c52b694c5709d0bd3219bff93")
-      public override
+      override
           fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty.Builder.() -> Unit):
           Unit = automation(EvaluationFormSingleSelectQuestionAutomationProperty(automation))
 
-      public override fun displayAs(displayAs: String) {
+      override fun displayAs(displayAs: String) {
         cdkBuilder.displayAs(displayAs)
       }
 
-      public override fun options(options: IResolvable) {
+      override fun options(options: IResolvable) {
         cdkBuilder.options(options.let(IResolvable::unwrap))
       }
 
-      public override fun options(options: List<Any>) {
+      override fun options(options: List<Any>) {
         cdkBuilder.options(options)
       }
 
@@ -858,11 +805,11 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty,
     ) : EvaluationFormSingleSelectQuestionPropertiesProperty {
-      public override fun automation(): Any? = unwrap(this).getAutomation()
+      override fun automation(): Any? = unwrap(this).getAutomation()
 
-      public override fun displayAs(): String? = unwrap(this).getDisplayAs()
+      override fun displayAs(): String? = unwrap(this).getDisplayAs()
 
-      public override fun options(): Any = unwrap(this).getOptions()
+      override fun options(): Any = unwrap(this).getOptions()
     }
 
     public companion object {
@@ -896,20 +843,15 @@ public open class CfnEvaluationForm internal constructor(
     public fun text(): String
 
     public interface Builder {
-      public fun automaticFail(automaticFail: Boolean) {
-      }
+      public fun automaticFail(automaticFail: Boolean)
 
-      public fun automaticFail(automaticFail: IResolvable) {
-      }
+      public fun automaticFail(automaticFail: IResolvable)
 
-      public fun refId(refId: String) {
-      }
+      public fun refId(refId: String)
 
-      public fun score(score: Number) {
-      }
+      public fun score(score: Number)
 
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
     }
 
     private class BuilderImpl : Builder {
@@ -918,23 +860,23 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty.builder()
 
-      public override fun automaticFail(automaticFail: Boolean) {
+      override fun automaticFail(automaticFail: Boolean) {
         cdkBuilder.automaticFail(automaticFail)
       }
 
-      public override fun automaticFail(automaticFail: IResolvable) {
+      override fun automaticFail(automaticFail: IResolvable) {
         cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
       }
 
-      public override fun refId(refId: String) {
+      override fun refId(refId: String) {
         cdkBuilder.refId(refId)
       }
 
-      public override fun score(score: Number) {
+      override fun score(score: Number) {
         cdkBuilder.score(score)
       }
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
@@ -947,13 +889,13 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty,
     ) : EvaluationFormSingleSelectQuestionOptionProperty {
-      public override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
+      override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
 
-      public override fun refId(): String = unwrap(this).getRefId()
+      override fun refId(): String = unwrap(this).getRefId()
 
-      public override fun score(): Number? = unwrap(this).getScore()
+      override fun score(): Number? = unwrap(this).getScore()
 
-      public override fun text(): String = unwrap(this).getText()
+      override fun text(): String = unwrap(this).getText()
     }
 
     public companion object {
@@ -983,11 +925,9 @@ public open class CfnEvaluationForm internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -996,11 +936,11 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -1013,9 +953,9 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty,
     ) : ScoringStrategyProperty {
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -1042,16 +982,13 @@ public open class CfnEvaluationForm internal constructor(
     public fun section(): Any
 
     public interface Builder {
-      public fun section(section: IResolvable) {
-      }
+      public fun section(section: IResolvable)
 
-      public fun section(section: EvaluationFormSectionProperty) {
-      }
+      public fun section(section: EvaluationFormSectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("75f7b8dd462ca67cd3a8ed539fc8fad8338912c53c9442851afc351f9dc203fe")
-      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit) {
-      }
+      public fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1060,17 +997,17 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty.builder()
 
-      public override fun section(section: IResolvable) {
+      override fun section(section: IResolvable) {
         cdkBuilder.section(section.let(IResolvable::unwrap))
       }
 
-      public override fun section(section: EvaluationFormSectionProperty) {
+      override fun section(section: EvaluationFormSectionProperty) {
         cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("75f7b8dd462ca67cd3a8ed539fc8fad8338912c53c9442851afc351f9dc203fe")
-      public override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
+      override fun section(section: EvaluationFormSectionProperty.Builder.() -> Unit): Unit =
           section(EvaluationFormSectionProperty(section))
 
       public fun build():
@@ -1082,7 +1019,7 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty,
     ) : EvaluationFormBaseItemProperty {
-      public override fun section(): Any = unwrap(this).getSection()
+      override fun section(): Any = unwrap(this).getSection()
     }
 
     public companion object {
@@ -1115,20 +1052,15 @@ public open class CfnEvaluationForm internal constructor(
     public fun score(): Number? = unwrap(this).getScore()
 
     public interface Builder {
-      public fun automaticFail(automaticFail: Boolean) {
-      }
+      public fun automaticFail(automaticFail: Boolean)
 
-      public fun automaticFail(automaticFail: IResolvable) {
-      }
+      public fun automaticFail(automaticFail: IResolvable)
 
-      public fun maxValue(maxValue: Number) {
-      }
+      public fun maxValue(maxValue: Number)
 
-      public fun minValue(minValue: Number) {
-      }
+      public fun minValue(minValue: Number)
 
-      public fun score(score: Number) {
-      }
+      public fun score(score: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1137,23 +1069,23 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty.builder()
 
-      public override fun automaticFail(automaticFail: Boolean) {
+      override fun automaticFail(automaticFail: Boolean) {
         cdkBuilder.automaticFail(automaticFail)
       }
 
-      public override fun automaticFail(automaticFail: IResolvable) {
+      override fun automaticFail(automaticFail: IResolvable) {
         cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
       }
 
-      public override fun maxValue(maxValue: Number) {
+      override fun maxValue(maxValue: Number) {
         cdkBuilder.maxValue(maxValue)
       }
 
-      public override fun minValue(minValue: Number) {
+      override fun minValue(minValue: Number) {
         cdkBuilder.minValue(minValue)
       }
 
-      public override fun score(score: Number) {
+      override fun score(score: Number) {
         cdkBuilder.score(score)
       }
 
@@ -1166,13 +1098,13 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty,
     ) : EvaluationFormNumericQuestionOptionProperty {
-      public override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
+      override fun automaticFail(): Any? = unwrap(this).getAutomaticFail()
 
-      public override fun maxValue(): Number = unwrap(this).getMaxValue()
+      override fun maxValue(): Number = unwrap(this).getMaxValue()
 
-      public override fun minValue(): Number = unwrap(this).getMinValue()
+      override fun minValue(): Number = unwrap(this).getMinValue()
 
-      public override fun score(): Number? = unwrap(this).getScore()
+      override fun score(): Number? = unwrap(this).getScore()
     }
 
     public companion object {
@@ -1200,8 +1132,7 @@ public open class CfnEvaluationForm internal constructor(
     public fun label(): String
 
     public interface Builder {
-      public fun label(label: String) {
-      }
+      public fun label(label: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1210,7 +1141,7 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty.builder()
 
-      public override fun label(label: String) {
+      override fun label(label: String) {
         cdkBuilder.label(label)
       }
 
@@ -1223,7 +1154,7 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty,
     ) : NumericQuestionPropertyValueAutomationProperty {
-      public override fun label(): String = unwrap(this).getLabel()
+      override fun label(): String = unwrap(this).getLabel()
     }
 
     public companion object {
@@ -1251,17 +1182,14 @@ public open class CfnEvaluationForm internal constructor(
     public fun propertyValue(): Any
 
     public interface Builder {
-      public fun propertyValue(propertyValue: IResolvable) {
-      }
+      public fun propertyValue(propertyValue: IResolvable)
 
-      public fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
-      }
+      public fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
       public
-          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit) {
-      }
+          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1270,18 +1198,17 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty.builder()
 
-      public override fun propertyValue(propertyValue: IResolvable) {
+      override fun propertyValue(propertyValue: IResolvable) {
         cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
       }
 
-      public override
-          fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
+      override fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
         cdkBuilder.propertyValue(propertyValue.let(NumericQuestionPropertyValueAutomationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1b7fb14f46a5514785021373b865ef90fc264cc00a77fd4e30965d5c7f300a6")
-      public override
+      override
           fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty.Builder.() -> Unit):
           Unit = propertyValue(NumericQuestionPropertyValueAutomationProperty(propertyValue))
 
@@ -1294,7 +1221,7 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty,
     ) : EvaluationFormNumericQuestionAutomationProperty {
-      public override fun propertyValue(): Any = unwrap(this).getPropertyValue()
+      override fun propertyValue(): Any = unwrap(this).getPropertyValue()
     }
 
     public companion object {
@@ -1322,17 +1249,14 @@ public open class CfnEvaluationForm internal constructor(
     public fun ruleCategory(): Any
 
     public interface Builder {
-      public fun ruleCategory(ruleCategory: IResolvable) {
-      }
+      public fun ruleCategory(ruleCategory: IResolvable)
 
-      public fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty) {
-      }
+      public fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5e2ff25c6d03de1cc3b1528c68ff95d0a888f949e0c19b008f08358a9feb587")
       public
-          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit) {
-      }
+          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1341,18 +1265,17 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
 
-      public override fun ruleCategory(ruleCategory: IResolvable) {
+      override fun ruleCategory(ruleCategory: IResolvable) {
         cdkBuilder.ruleCategory(ruleCategory.let(IResolvable::unwrap))
       }
 
-      public override
-          fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty) {
+      override fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty) {
         cdkBuilder.ruleCategory(ruleCategory.let(SingleSelectQuestionRuleCategoryAutomationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5e2ff25c6d03de1cc3b1528c68ff95d0a888f949e0c19b008f08358a9feb587")
-      public override
+      override
           fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty.Builder.() -> Unit):
           Unit = ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty(ruleCategory))
 
@@ -1365,7 +1288,7 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty,
     ) : EvaluationFormSingleSelectQuestionAutomationOptionProperty {
-      public override fun ruleCategory(): Any = unwrap(this).getRuleCategory()
+      override fun ruleCategory(): Any = unwrap(this).getRuleCategory()
     }
 
     public companion object {
@@ -1401,23 +1324,17 @@ public open class CfnEvaluationForm internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun instructions(instructions: String) {
-      }
+      public fun instructions(instructions: String)
 
-      public fun items(items: IResolvable) {
-      }
+      public fun items(items: IResolvable)
 
-      public fun items(items: List<Any>) {
-      }
+      public fun items(items: List<Any>)
 
-      public fun refId(refId: String) {
-      }
+      public fun refId(refId: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1426,27 +1343,27 @@ public open class CfnEvaluationForm internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty.builder()
 
-      public override fun instructions(instructions: String) {
+      override fun instructions(instructions: String) {
         cdkBuilder.instructions(instructions)
       }
 
-      public override fun items(items: IResolvable) {
+      override fun items(items: IResolvable) {
         cdkBuilder.items(items.let(IResolvable::unwrap))
       }
 
-      public override fun items(items: List<Any>) {
+      override fun items(items: List<Any>) {
         cdkBuilder.items(items)
       }
 
-      public override fun refId(refId: String) {
+      override fun refId(refId: String) {
         cdkBuilder.refId(refId)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -1459,15 +1376,15 @@ public open class CfnEvaluationForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty,
     ) : EvaluationFormSectionProperty {
-      public override fun instructions(): String? = unwrap(this).getInstructions()
+      override fun instructions(): String? = unwrap(this).getInstructions()
 
-      public override fun items(): Any? = unwrap(this).getItems()
+      override fun items(): Any? = unwrap(this).getItems()
 
-      public override fun refId(): String = unwrap(this).getRefId()
+      override fun refId(): String = unwrap(this).getRefId()
 
-      public override fun title(): String = unwrap(this).getTitle()
+      override fun title(): String = unwrap(this).getTitle()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {

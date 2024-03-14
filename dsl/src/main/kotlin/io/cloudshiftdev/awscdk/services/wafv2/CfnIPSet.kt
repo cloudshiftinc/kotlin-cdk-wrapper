@@ -63,23 +63,17 @@ public open class CfnIPSet internal constructor(
   }
 
   public interface Builder {
-    public fun addresses(addresses: List<String>) {
-    }
+    public fun addresses(addresses: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun ipAddressVersion(ipAddressVersion: String) {
-    }
+    public fun ipAddressVersion(ipAddressVersion: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnIPSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wafv2.CfnIPSet.Builder =
         software.amazon.awscdk.services.wafv2.CfnIPSet.Builder.create(scope, id)
 
-    public override fun addresses(addresses: List<String>) {
+    override fun addresses(addresses: List<String>) {
       cdkBuilder.addresses(addresses)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun ipAddressVersion(ipAddressVersion: String) {
+    override fun ipAddressVersion(ipAddressVersion: String) {
       cdkBuilder.ipAddressVersion(ipAddressVersion)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

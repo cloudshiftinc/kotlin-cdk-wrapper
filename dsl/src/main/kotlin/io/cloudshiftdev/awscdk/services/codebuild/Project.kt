@@ -259,95 +259,67 @@ public open class Project internal constructor(
   public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun allowAllOutbound(allowAllOutbound: Boolean) {
-    }
+    public fun allowAllOutbound(allowAllOutbound: Boolean)
 
-    public fun artifacts(artifacts: IArtifacts) {
-    }
+    public fun artifacts(artifacts: IArtifacts)
 
-    public fun badge(badge: Boolean) {
-    }
+    public fun badge(badge: Boolean)
 
-    public fun buildSpec(buildSpec: BuildSpec) {
-    }
+    public fun buildSpec(buildSpec: BuildSpec)
 
-    public fun cache(cache: Cache) {
-    }
+    public fun cache(cache: Cache)
 
-    public fun checkSecretsInPlainTextEnvVariables(checkSecretsInPlainTextEnvVariables: Boolean) {
-    }
+    public fun checkSecretsInPlainTextEnvVariables(checkSecretsInPlainTextEnvVariables: Boolean)
 
-    public fun concurrentBuildLimit(concurrentBuildLimit: Number) {
-    }
+    public fun concurrentBuildLimit(concurrentBuildLimit: Number)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun environment(environment: BuildEnvironment) {
-    }
+    public fun environment(environment: BuildEnvironment)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d9b405189ec8125da6332d2039023ae77581631d7780135850918fe14ba39083")
-    public fun environment(environment: BuildEnvironment.Builder.() -> Unit) {
-    }
+    public fun environment(environment: BuildEnvironment.Builder.() -> Unit)
 
-    public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
-    }
+    public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>)
 
-    public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-    }
+    public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>)
 
-    public fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean) {
-    }
+    public fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean)
 
-    public fun logging(logging: LoggingOptions) {
-    }
+    public fun logging(logging: LoggingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9d4c534b71f459106a14d2c226f188418e8bcb0f93ce405197b833ae3054d73a")
-    public fun logging(logging: LoggingOptions.Builder.() -> Unit) {
-    }
+    public fun logging(logging: LoggingOptions.Builder.() -> Unit)
 
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
 
-    public fun queuedTimeout(queuedTimeout: Duration) {
-    }
+    public fun queuedTimeout(queuedTimeout: Duration)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun secondaryArtifacts(secondaryArtifacts: List<IArtifacts>) {
-    }
+    public fun secondaryArtifacts(secondaryArtifacts: List<IArtifacts>)
 
-    public fun secondarySources(secondarySources: List<ISource>) {
-    }
+    public fun secondarySources(secondarySources: List<ISource>)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun source(source: ISource) {
-    }
+    public fun source(source: ISource)
 
-    public fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
-    }
+    public fun ssmSessionPermissions(ssmSessionPermissions: Boolean)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b4e46fcbb0d7a00029efbc5ef0f181ab09261a0805bbb68f317cae823c120996")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -357,121 +329,118 @@ public open class Project internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.Project.Builder =
         software.amazon.awscdk.services.codebuild.Project.Builder.create(scope, id)
 
-    public override fun allowAllOutbound(allowAllOutbound: Boolean) {
+    override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
     }
 
-    public override fun artifacts(artifacts: IArtifacts) {
+    override fun artifacts(artifacts: IArtifacts) {
       cdkBuilder.artifacts(artifacts.let(IArtifacts::unwrap))
     }
 
-    public override fun badge(badge: Boolean) {
+    override fun badge(badge: Boolean) {
       cdkBuilder.badge(badge)
     }
 
-    public override fun buildSpec(buildSpec: BuildSpec) {
+    override fun buildSpec(buildSpec: BuildSpec) {
       cdkBuilder.buildSpec(buildSpec.let(BuildSpec::unwrap))
     }
 
-    public override fun cache(cache: Cache) {
+    override fun cache(cache: Cache) {
       cdkBuilder.cache(cache.let(Cache::unwrap))
     }
 
-    public override
-        fun checkSecretsInPlainTextEnvVariables(checkSecretsInPlainTextEnvVariables: Boolean) {
+    override fun checkSecretsInPlainTextEnvVariables(checkSecretsInPlainTextEnvVariables: Boolean) {
       cdkBuilder.checkSecretsInPlainTextEnvVariables(checkSecretsInPlainTextEnvVariables)
     }
 
-    public override fun concurrentBuildLimit(concurrentBuildLimit: Number) {
+    override fun concurrentBuildLimit(concurrentBuildLimit: Number) {
       cdkBuilder.concurrentBuildLimit(concurrentBuildLimit)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun environment(environment: BuildEnvironment) {
+    override fun environment(environment: BuildEnvironment) {
       cdkBuilder.environment(environment.let(BuildEnvironment::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d9b405189ec8125da6332d2039023ae77581631d7780135850918fe14ba39083")
-    public override fun environment(environment: BuildEnvironment.Builder.() -> Unit): Unit =
+    override fun environment(environment: BuildEnvironment.Builder.() -> Unit): Unit =
         environment(BuildEnvironment(environment))
 
-    public override
-        fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
-      cdkBuilder.environmentVariables(environmentVariables.mapValues {
-          BuildEnvironmentVariable.unwrap(it.value)})
+    override fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
+      cdkBuilder.environmentVariables(environmentVariables.mapValues{BuildEnvironmentVariable.unwrap(it.value)})
     }
 
-    public override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
+    override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
       cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
     }
 
-    public override fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean) {
+    override fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean) {
       cdkBuilder.grantReportGroupPermissions(grantReportGroupPermissions)
     }
 
-    public override fun logging(logging: LoggingOptions) {
+    override fun logging(logging: LoggingOptions) {
       cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9d4c534b71f459106a14d2c226f188418e8bcb0f93ce405197b833ae3054d73a")
-    public override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
+    override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
         logging(LoggingOptions(logging))
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 
-    public override fun queuedTimeout(queuedTimeout: Duration) {
+    override fun queuedTimeout(queuedTimeout: Duration) {
       cdkBuilder.queuedTimeout(queuedTimeout.let(Duration::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun secondaryArtifacts(secondaryArtifacts: List<IArtifacts>) {
+    override fun secondaryArtifacts(secondaryArtifacts: List<IArtifacts>) {
       cdkBuilder.secondaryArtifacts(secondaryArtifacts.map(IArtifacts::unwrap))
     }
 
-    public override fun secondarySources(secondarySources: List<ISource>) {
+    override fun secondarySources(secondarySources: List<ISource>) {
       cdkBuilder.secondarySources(secondarySources.map(ISource::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun source(source: ISource) {
+    override fun source(source: ISource) {
       cdkBuilder.source(source.let(ISource::unwrap))
     }
 
-    public override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
+    override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
       cdkBuilder.ssmSessionPermissions(ssmSessionPermissions)
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b4e46fcbb0d7a00029efbc5ef0f181ab09261a0805bbb68f317cae823c120996")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
@@ -498,15 +467,12 @@ public open class Project internal constructor(
     public open
         fun serializeEnvVariables(environmentVariables: Map<String, BuildEnvironmentVariable>):
         List<CfnProject.EnvironmentVariableProperty> =
-        software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues
-        {
-        BuildEnvironmentVariable.unwrap(it.value)}).map(CfnProject.EnvironmentVariableProperty::wrap)
+        software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues{BuildEnvironmentVariable.unwrap(it.value)}).map(CfnProject.EnvironmentVariableProperty::wrap)
 
     public open
         fun serializeEnvVariables(environmentVariables: Map<String, BuildEnvironmentVariable>,
         validateNoPlainTextSecrets: Boolean): List<CfnProject.EnvironmentVariableProperty> =
-        software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues
-        { BuildEnvironmentVariable.unwrap(it.value)},
+        software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues{BuildEnvironmentVariable.unwrap(it.value)},
         validateNoPlainTextSecrets).map(CfnProject.EnvironmentVariableProperty::wrap)
 
     public open fun serializeEnvVariables(
@@ -514,8 +480,8 @@ public open class Project internal constructor(
       validateNoPlainTextSecrets: Boolean,
       principal: IGrantable,
     ): List<CfnProject.EnvironmentVariableProperty> =
-        software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues
-        { BuildEnvironmentVariable.unwrap(it.value)}, validateNoPlainTextSecrets,
+        software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues{BuildEnvironmentVariable.unwrap(it.value)},
+        validateNoPlainTextSecrets,
         principal.let(IGrantable::unwrap)).map(CfnProject.EnvironmentVariableProperty::wrap)
 
     public operator fun invoke(

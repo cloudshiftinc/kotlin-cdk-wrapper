@@ -36,14 +36,11 @@ public open class CfnStateMachineVersion internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun stateMachineArn(stateMachineArn: String) {
-    }
+    public fun stateMachineArn(stateMachineArn: String)
 
-    public fun stateMachineRevisionId(stateMachineRevisionId: String) {
-    }
+    public fun stateMachineRevisionId(stateMachineRevisionId: String)
   }
 
   private class BuilderImpl(
@@ -55,15 +52,15 @@ public open class CfnStateMachineVersion internal constructor(
         software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersion.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun stateMachineArn(stateMachineArn: String) {
+    override fun stateMachineArn(stateMachineArn: String) {
       cdkBuilder.stateMachineArn(stateMachineArn)
     }
 
-    public override fun stateMachineRevisionId(stateMachineRevisionId: String) {
+    override fun stateMachineRevisionId(stateMachineRevisionId: String) {
       cdkBuilder.stateMachineRevisionId(stateMachineRevisionId)
     }
 

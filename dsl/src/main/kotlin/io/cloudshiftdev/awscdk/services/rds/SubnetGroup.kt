@@ -17,25 +17,19 @@ public open class SubnetGroup internal constructor(
   public override fun subnetGroupName(): String = unwrap(this).getSubnetGroupName()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun subnetGroupName(subnetGroupName: String) {
-    }
+    public fun subnetGroupName(subnetGroupName: String)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc43ba71fcd5d7da42950c84c82c8e9a17faeac7b43457e594c395c8ef038fd9")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -45,29 +39,29 @@ public open class SubnetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.SubnetGroup.Builder =
         software.amazon.awscdk.services.rds.SubnetGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun subnetGroupName(subnetGroupName: String) {
+    override fun subnetGroupName(subnetGroupName: String) {
       cdkBuilder.subnetGroupName(subnetGroupName)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc43ba71fcd5d7da42950c84c82c8e9a17faeac7b43457e594c395c8ef038fd9")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.rds.SubnetGroup = cdkBuilder.build()

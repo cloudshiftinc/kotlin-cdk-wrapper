@@ -44,19 +44,15 @@ public open class CfnConfigurationAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun broker(broker: String) {
-    }
+    public fun broker(broker: String)
 
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: ConfigurationIdProperty) {
-    }
+    public fun configuration(configuration: ConfigurationIdProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d88bd8f261d9e2e83f9a1e32baef40dc865fef95b496c50d1c0ae9d0c9d10379")
-    public fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -68,22 +64,22 @@ public open class CfnConfigurationAssociation internal constructor(
         software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.Builder.create(scope,
         id)
 
-    public override fun broker(broker: String) {
+    override fun broker(broker: String) {
       cdkBuilder.broker(broker)
     }
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: ConfigurationIdProperty) {
+    override fun configuration(configuration: ConfigurationIdProperty) {
       cdkBuilder.configuration(configuration.let(ConfigurationIdProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d88bd8f261d9e2e83f9a1e32baef40dc865fef95b496c50d1c0ae9d0c9d10379")
-    public override fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit):
-        Unit = configuration(ConfigurationIdProperty(configuration))
+    override fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit): Unit =
+        configuration(ConfigurationIdProperty(configuration))
 
     public fun build(): software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation =
         cdkBuilder.build()
@@ -117,11 +113,9 @@ public open class CfnConfigurationAssociation internal constructor(
     public fun revision(): Number
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun revision(revision: Number) {
-      }
+      public fun revision(revision: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -130,11 +124,11 @@ public open class CfnConfigurationAssociation internal constructor(
           =
           software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun revision(revision: Number) {
+      override fun revision(revision: Number) {
         cdkBuilder.revision(revision)
       }
 
@@ -147,9 +141,9 @@ public open class CfnConfigurationAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty,
     ) : ConfigurationIdProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun revision(): Number = unwrap(this).getRevision()
+      override fun revision(): Number = unwrap(this).getRevision()
     }
 
     public companion object {

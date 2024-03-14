@@ -33,14 +33,11 @@ public open class CfnHookDefaultVersion internal constructor(
   }
 
   public interface Builder {
-    public fun typeName(typeName: String) {
-    }
+    public fun typeName(typeName: String)
 
-    public fun typeVersionArn(typeVersionArn: String) {
-    }
+    public fun typeVersionArn(typeVersionArn: String)
 
-    public fun versionId(versionId: String) {
-    }
+    public fun versionId(versionId: String)
   }
 
   private class BuilderImpl(
@@ -50,15 +47,15 @@ public open class CfnHookDefaultVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnHookDefaultVersion.Builder =
         software.amazon.awscdk.CfnHookDefaultVersion.Builder.create(scope, id)
 
-    public override fun typeName(typeName: String) {
+    override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 
-    public override fun typeVersionArn(typeVersionArn: String) {
+    override fun typeVersionArn(typeVersionArn: String) {
       cdkBuilder.typeVersionArn(typeVersionArn)
     }
 
-    public override fun versionId(versionId: String) {
+    override fun versionId(versionId: String) {
       cdkBuilder.versionId(versionId)
     }
 

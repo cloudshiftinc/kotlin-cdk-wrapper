@@ -50,20 +50,15 @@ public open class CfnPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun groups(groups: List<String>) {
-    }
+    public fun groups(groups: List<String>)
 
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun roles(roles: List<String>) {
-    }
+    public fun roles(roles: List<String>)
 
-    public fun users(users: List<String>) {
-    }
+    public fun users(users: List<String>)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnPolicy.Builder =
         software.amazon.awscdk.services.iam.CfnPolicy.Builder.create(scope, id)
 
-    public override fun groups(groups: List<String>) {
+    override fun groups(groups: List<String>) {
       cdkBuilder.groups(groups)
     }
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun roles(roles: List<String>) {
+    override fun roles(roles: List<String>) {
       cdkBuilder.roles(roles)
     }
 
-    public override fun users(users: List<String>) {
+    override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
 

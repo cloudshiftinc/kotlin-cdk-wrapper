@@ -53,17 +53,13 @@ public open class CfnInsightRule internal constructor(
   }
 
   public interface Builder {
-    public fun ruleBody(ruleBody: String) {
-    }
+    public fun ruleBody(ruleBody: String)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun ruleState(ruleState: String) {
-    }
+    public fun ruleState(ruleState: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -73,19 +69,19 @@ public open class CfnInsightRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnInsightRule.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnInsightRule.Builder.create(scope, id)
 
-    public override fun ruleBody(ruleBody: String) {
+    override fun ruleBody(ruleBody: String) {
       cdkBuilder.ruleBody(ruleBody)
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun ruleState(ruleState: String) {
+    override fun ruleState(ruleState: String) {
       cdkBuilder.ruleState(ruleState)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

@@ -82,39 +82,28 @@ public open class Secret internal constructor(
       unwrap(this).secretValueFromJson(jsonField).let(SecretValue::wrap)
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun generateSecretString(generateSecretString: SecretStringGenerator) {
-    }
+    public fun generateSecretString(generateSecretString: SecretStringGenerator)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("432bf523ce3cefc0354228b8978c1c1b0db664de7ca5a31b7c101f2cd30dc646")
-    public
-        fun generateSecretString(generateSecretString: SecretStringGenerator.Builder.() -> Unit) {
-    }
+    public fun generateSecretString(generateSecretString: SecretStringGenerator.Builder.() -> Unit)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-    }
+    public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
 
-    public fun secretName(secretName: String) {
-    }
+    public fun secretName(secretName: String)
 
-    public fun secretObjectValue(secretObjectValue: Map<String, SecretValue>) {
-    }
+    public fun secretObjectValue(secretObjectValue: Map<String, SecretValue>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
-    }
+    public fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1)
 
-    public fun secretStringValue(secretStringValue: SecretValue) {
-    }
+    public fun secretStringValue(secretStringValue: SecretValue)
   }
 
   private class BuilderImpl(
@@ -124,46 +113,46 @@ public open class Secret internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.Secret.Builder =
         software.amazon.awscdk.services.secretsmanager.Secret.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun generateSecretString(generateSecretString: SecretStringGenerator) {
+    override fun generateSecretString(generateSecretString: SecretStringGenerator) {
       cdkBuilder.generateSecretString(generateSecretString.let(SecretStringGenerator::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("432bf523ce3cefc0354228b8978c1c1b0db664de7ca5a31b7c101f2cd30dc646")
-    public override
+    override
         fun generateSecretString(generateSecretString: SecretStringGenerator.Builder.() -> Unit):
         Unit = generateSecretString(SecretStringGenerator(generateSecretString))
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
+    override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
       cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
     }
 
-    public override fun secretName(secretName: String) {
+    override fun secretName(secretName: String) {
       cdkBuilder.secretName(secretName)
     }
 
-    public override fun secretObjectValue(secretObjectValue: Map<String, SecretValue>) {
-      cdkBuilder.secretObjectValue(secretObjectValue.mapValues { SecretValue.unwrap(it.value)})
+    override fun secretObjectValue(secretObjectValue: Map<String, SecretValue>) {
+      cdkBuilder.secretObjectValue(secretObjectValue.mapValues{SecretValue.unwrap(it.value)})
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
+    override fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
       cdkBuilder.secretStringBeta1(secretStringBeta1.let(SecretStringValueBeta1::unwrap))
     }
 
-    public override fun secretStringValue(secretStringValue: SecretValue) {
+    override fun secretStringValue(secretStringValue: SecretValue) {
       cdkBuilder.secretStringValue(secretStringValue.let(SecretValue::unwrap))
     }
 

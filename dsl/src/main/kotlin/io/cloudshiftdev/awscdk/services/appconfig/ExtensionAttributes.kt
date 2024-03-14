@@ -19,50 +19,44 @@ public interface ExtensionAttributes {
   public fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun actions(actions: List<Action>) {
-    }
+    public fun actions(actions: List<Action>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun extensionArn(extensionArn: String) {
-    }
+    public fun extensionArn(extensionArn: String)
 
-    public fun extensionId(extensionId: String) {
-    }
+    public fun extensionId(extensionId: String)
 
-    public fun extensionVersionNumber(extensionVersionNumber: Number) {
-    }
+    public fun extensionVersionNumber(extensionVersionNumber: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.ExtensionAttributes.Builder =
         software.amazon.awscdk.services.appconfig.ExtensionAttributes.builder()
 
-    public override fun actions(actions: List<Action>) {
+    override fun actions(actions: List<Action>) {
       cdkBuilder.actions(actions.map(Action::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun extensionArn(extensionArn: String) {
+    override fun extensionArn(extensionArn: String) {
       cdkBuilder.extensionArn(extensionArn)
     }
 
-    public override fun extensionId(extensionId: String) {
+    override fun extensionId(extensionId: String) {
       cdkBuilder.extensionId(extensionId)
     }
 
-    public override fun extensionVersionNumber(extensionVersionNumber: Number) {
+    override fun extensionVersionNumber(extensionVersionNumber: Number) {
       cdkBuilder.extensionVersionNumber(extensionVersionNumber)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -73,18 +67,18 @@ public interface ExtensionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.ExtensionAttributes,
   ) : ExtensionAttributes {
-    public override fun actions(): List<Action> = unwrap(this).getActions()?.map(Action::wrap) ?:
+    override fun actions(): List<Action> = unwrap(this).getActions()?.map(Action::wrap) ?:
         emptyList()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun extensionArn(): String? = unwrap(this).getExtensionArn()
+    override fun extensionArn(): String? = unwrap(this).getExtensionArn()
 
-    public override fun extensionId(): String = unwrap(this).getExtensionId()
+    override fun extensionId(): String = unwrap(this).getExtensionId()
 
-    public override fun extensionVersionNumber(): Number = unwrap(this).getExtensionVersionNumber()
+    override fun extensionVersionNumber(): Number = unwrap(this).getExtensionVersionNumber()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

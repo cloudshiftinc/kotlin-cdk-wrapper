@@ -49,20 +49,15 @@ public open class CfnSMSChannel internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun senderId(senderId: String) {
-    }
+    public fun senderId(senderId: String)
 
-    public fun shortCode(shortCode: String) {
-    }
+    public fun shortCode(shortCode: String)
   }
 
   private class BuilderImpl(
@@ -72,23 +67,23 @@ public open class CfnSMSChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnSMSChannel.Builder =
         software.amazon.awscdk.services.pinpoint.CfnSMSChannel.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun senderId(senderId: String) {
+    override fun senderId(senderId: String) {
       cdkBuilder.senderId(senderId)
     }
 
-    public override fun shortCode(shortCode: String) {
+    override fun shortCode(shortCode: String) {
       cdkBuilder.shortCode(shortCode)
     }
 

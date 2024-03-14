@@ -25,28 +25,21 @@ public open class FargateProfile internal constructor(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public interface Builder {
-    public fun cluster(cluster: Cluster) {
-    }
+    public fun cluster(cluster: Cluster)
 
-    public fun fargateProfileName(fargateProfileName: String) {
-    }
+    public fun fargateProfileName(fargateProfileName: String)
 
-    public fun podExecutionRole(podExecutionRole: IRole) {
-    }
+    public fun podExecutionRole(podExecutionRole: IRole)
 
-    public fun selectors(selectors: List<Selector>) {
-    }
+    public fun selectors(selectors: List<Selector>)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("964b86d8391ae05d92196e9d2077e0c2bc9560ddb541e530f5cf186af05d4cae")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -56,32 +49,32 @@ public open class FargateProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.FargateProfile.Builder =
         software.amazon.awscdk.services.eks.FargateProfile.Builder.create(scope, id)
 
-    public override fun cluster(cluster: Cluster) {
+    override fun cluster(cluster: Cluster) {
       cdkBuilder.cluster(cluster.let(Cluster::unwrap))
     }
 
-    public override fun fargateProfileName(fargateProfileName: String) {
+    override fun fargateProfileName(fargateProfileName: String) {
       cdkBuilder.fargateProfileName(fargateProfileName)
     }
 
-    public override fun podExecutionRole(podExecutionRole: IRole) {
+    override fun podExecutionRole(podExecutionRole: IRole) {
       cdkBuilder.podExecutionRole(podExecutionRole.let(IRole::unwrap))
     }
 
-    public override fun selectors(selectors: List<Selector>) {
+    override fun selectors(selectors: List<Selector>) {
       cdkBuilder.selectors(selectors.map(Selector::unwrap))
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("964b86d8391ae05d92196e9d2077e0c2bc9560ddb541e530f5cf186af05d4cae")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

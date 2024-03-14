@@ -78,36 +78,27 @@ public open class CfnSegment internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun dimensions(dimensions: IResolvable) {
-    }
+    public fun dimensions(dimensions: IResolvable)
 
-    public fun dimensions(dimensions: SegmentDimensionsProperty) {
-    }
+    public fun dimensions(dimensions: SegmentDimensionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dd231d0070f91e7a6132a26cb52126283d7f2eb07aaf9f5926fdad4e20799623")
-    public fun dimensions(dimensions: SegmentDimensionsProperty.Builder.() -> Unit) {
-    }
+    public fun dimensions(dimensions: SegmentDimensionsProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun segmentGroups(segmentGroups: IResolvable) {
-    }
+    public fun segmentGroups(segmentGroups: IResolvable)
 
-    public fun segmentGroups(segmentGroups: SegmentGroupsProperty) {
-    }
+    public fun segmentGroups(segmentGroups: SegmentGroupsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2fc3a1035c47b59302a0ca42c5b71efb23a05c4c0cb18c0f4f87f402dab8c26")
-    public fun segmentGroups(segmentGroups: SegmentGroupsProperty.Builder.() -> Unit) {
-    }
+    public fun segmentGroups(segmentGroups: SegmentGroupsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -117,41 +108,41 @@ public open class CfnSegment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnSegment.Builder =
         software.amazon.awscdk.services.pinpoint.CfnSegment.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun dimensions(dimensions: IResolvable) {
+    override fun dimensions(dimensions: IResolvable) {
       cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
     }
 
-    public override fun dimensions(dimensions: SegmentDimensionsProperty) {
+    override fun dimensions(dimensions: SegmentDimensionsProperty) {
       cdkBuilder.dimensions(dimensions.let(SegmentDimensionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dd231d0070f91e7a6132a26cb52126283d7f2eb07aaf9f5926fdad4e20799623")
-    public override fun dimensions(dimensions: SegmentDimensionsProperty.Builder.() -> Unit): Unit =
+    override fun dimensions(dimensions: SegmentDimensionsProperty.Builder.() -> Unit): Unit =
         dimensions(SegmentDimensionsProperty(dimensions))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun segmentGroups(segmentGroups: IResolvable) {
+    override fun segmentGroups(segmentGroups: IResolvable) {
       cdkBuilder.segmentGroups(segmentGroups.let(IResolvable::unwrap))
     }
 
-    public override fun segmentGroups(segmentGroups: SegmentGroupsProperty) {
+    override fun segmentGroups(segmentGroups: SegmentGroupsProperty) {
       cdkBuilder.segmentGroups(segmentGroups.let(SegmentGroupsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2fc3a1035c47b59302a0ca42c5b71efb23a05c4c0cb18c0f4f87f402dab8c26")
-    public override fun segmentGroups(segmentGroups: SegmentGroupsProperty.Builder.() -> Unit): Unit
-        = segmentGroups(SegmentGroupsProperty(segmentGroups))
+    override fun segmentGroups(segmentGroups: SegmentGroupsProperty.Builder.() -> Unit): Unit =
+        segmentGroups(SegmentGroupsProperty(segmentGroups))
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -189,23 +180,17 @@ public open class CfnSegment internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun sourceSegments(sourceSegments: IResolvable) {
-      }
+      public fun sourceSegments(sourceSegments: IResolvable)
 
-      public fun sourceSegments(sourceSegments: List<Any>) {
-      }
+      public fun sourceSegments(sourceSegments: List<Any>)
 
-      public fun sourceType(sourceType: String) {
-      }
+      public fun sourceType(sourceType: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,27 +198,27 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun sourceSegments(sourceSegments: IResolvable) {
+      override fun sourceSegments(sourceSegments: IResolvable) {
         cdkBuilder.sourceSegments(sourceSegments.let(IResolvable::unwrap))
       }
 
-      public override fun sourceSegments(sourceSegments: List<Any>) {
+      override fun sourceSegments(sourceSegments: List<Any>) {
         cdkBuilder.sourceSegments(sourceSegments)
       }
 
-      public override fun sourceType(sourceType: String) {
+      override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -244,13 +229,13 @@ public open class CfnSegment internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GroupsProperty,
     ) : GroupsProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun sourceSegments(): Any? = unwrap(this).getSourceSegments()
+      override fun sourceSegments(): Any? = unwrap(this).getSourceSegments()
 
-      public override fun sourceType(): String? = unwrap(this).getSourceType()
+      override fun sourceType(): String? = unwrap(this).getSourceType()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -279,11 +264,9 @@ public open class CfnSegment internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun attributeType(attributeType: String) {
-      }
+      public fun attributeType(attributeType: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -291,11 +274,11 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty.builder()
 
-      public override fun attributeType(attributeType: String) {
+      override fun attributeType(attributeType: String) {
         cdkBuilder.attributeType(attributeType)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -308,9 +291,9 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty,
     ) : AttributeDimensionProperty {
-      public override fun attributeType(): String? = unwrap(this).getAttributeType()
+      override fun attributeType(): String? = unwrap(this).getAttributeType()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -347,47 +330,35 @@ public open class CfnSegment internal constructor(
     public fun userAttributes(): Any? = unwrap(this).getUserAttributes()
 
     public interface Builder {
-      public fun attributes(attributes: Any) {
-      }
+      public fun attributes(attributes: Any)
 
-      public fun behavior(behavior: IResolvable) {
-      }
+      public fun behavior(behavior: IResolvable)
 
-      public fun behavior(behavior: BehaviorProperty) {
-      }
+      public fun behavior(behavior: BehaviorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ae95bd65406a2e5e09a7c29b613743d86d3e37dc044d0d9cc2febffcd005ad68")
-      public fun behavior(behavior: BehaviorProperty.Builder.() -> Unit) {
-      }
+      public fun behavior(behavior: BehaviorProperty.Builder.() -> Unit)
 
-      public fun demographic(demographic: IResolvable) {
-      }
+      public fun demographic(demographic: IResolvable)
 
-      public fun demographic(demographic: DemographicProperty) {
-      }
+      public fun demographic(demographic: DemographicProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69b2bab0965b363672304e7d1297fcf2f35c9a92e95ff9c1b3994510c9684037")
-      public fun demographic(demographic: DemographicProperty.Builder.() -> Unit) {
-      }
+      public fun demographic(demographic: DemographicProperty.Builder.() -> Unit)
 
-      public fun location(location: IResolvable) {
-      }
+      public fun location(location: IResolvable)
 
-      public fun location(location: LocationProperty) {
-      }
+      public fun location(location: LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0b209f7947f4e1b6e5a9f30d13e1cce22c3583e79da6055dfc8cc4b3ec3aedc")
-      public fun location(location: LocationProperty.Builder.() -> Unit) {
-      }
+      public fun location(location: LocationProperty.Builder.() -> Unit)
 
-      public fun metrics(metrics: Any) {
-      }
+      public fun metrics(metrics: Any)
 
-      public fun userAttributes(userAttributes: Any) {
-      }
+      public fun userAttributes(userAttributes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -395,54 +366,54 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty.builder()
 
-      public override fun attributes(attributes: Any) {
+      override fun attributes(attributes: Any) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun behavior(behavior: IResolvable) {
+      override fun behavior(behavior: IResolvable) {
         cdkBuilder.behavior(behavior.let(IResolvable::unwrap))
       }
 
-      public override fun behavior(behavior: BehaviorProperty) {
+      override fun behavior(behavior: BehaviorProperty) {
         cdkBuilder.behavior(behavior.let(BehaviorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ae95bd65406a2e5e09a7c29b613743d86d3e37dc044d0d9cc2febffcd005ad68")
-      public override fun behavior(behavior: BehaviorProperty.Builder.() -> Unit): Unit =
+      override fun behavior(behavior: BehaviorProperty.Builder.() -> Unit): Unit =
           behavior(BehaviorProperty(behavior))
 
-      public override fun demographic(demographic: IResolvable) {
+      override fun demographic(demographic: IResolvable) {
         cdkBuilder.demographic(demographic.let(IResolvable::unwrap))
       }
 
-      public override fun demographic(demographic: DemographicProperty) {
+      override fun demographic(demographic: DemographicProperty) {
         cdkBuilder.demographic(demographic.let(DemographicProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69b2bab0965b363672304e7d1297fcf2f35c9a92e95ff9c1b3994510c9684037")
-      public override fun demographic(demographic: DemographicProperty.Builder.() -> Unit): Unit =
+      override fun demographic(demographic: DemographicProperty.Builder.() -> Unit): Unit =
           demographic(DemographicProperty(demographic))
 
-      public override fun location(location: IResolvable) {
+      override fun location(location: IResolvable) {
         cdkBuilder.location(location.let(IResolvable::unwrap))
       }
 
-      public override fun location(location: LocationProperty) {
+      override fun location(location: LocationProperty) {
         cdkBuilder.location(location.let(LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0b209f7947f4e1b6e5a9f30d13e1cce22c3583e79da6055dfc8cc4b3ec3aedc")
-      public override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+      override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
           location(LocationProperty(location))
 
-      public override fun metrics(metrics: Any) {
+      override fun metrics(metrics: Any) {
         cdkBuilder.metrics(metrics)
       }
 
-      public override fun userAttributes(userAttributes: Any) {
+      override fun userAttributes(userAttributes: Any) {
         cdkBuilder.userAttributes(userAttributes)
       }
 
@@ -455,17 +426,17 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentDimensionsProperty,
     ) : SegmentDimensionsProperty {
-      public override fun attributes(): Any? = unwrap(this).getAttributes()
+      override fun attributes(): Any? = unwrap(this).getAttributes()
 
-      public override fun behavior(): Any? = unwrap(this).getBehavior()
+      override fun behavior(): Any? = unwrap(this).getBehavior()
 
-      public override fun demographic(): Any? = unwrap(this).getDemographic()
+      override fun demographic(): Any? = unwrap(this).getDemographic()
 
-      public override fun location(): Any? = unwrap(this).getLocation()
+      override fun location(): Any? = unwrap(this).getLocation()
 
-      public override fun metrics(): Any? = unwrap(this).getMetrics()
+      override fun metrics(): Any? = unwrap(this).getMetrics()
 
-      public override fun userAttributes(): Any? = unwrap(this).getUserAttributes()
+      override fun userAttributes(): Any? = unwrap(this).getUserAttributes()
     }
 
     public companion object {
@@ -494,14 +465,11 @@ public open class CfnSegment internal constructor(
     public fun include(): String? = unwrap(this).getInclude()
 
     public interface Builder {
-      public fun groups(groups: IResolvable) {
-      }
+      public fun groups(groups: IResolvable)
 
-      public fun groups(groups: List<Any>) {
-      }
+      public fun groups(groups: List<Any>)
 
-      public fun include(include: String) {
-      }
+      public fun include(include: String)
     }
 
     private class BuilderImpl : Builder {
@@ -509,15 +477,15 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty.builder()
 
-      public override fun groups(groups: IResolvable) {
+      override fun groups(groups: IResolvable) {
         cdkBuilder.groups(groups.let(IResolvable::unwrap))
       }
 
-      public override fun groups(groups: List<Any>) {
+      override fun groups(groups: List<Any>) {
         cdkBuilder.groups(groups)
       }
 
-      public override fun include(include: String) {
+      override fun include(include: String) {
         cdkBuilder.include(include)
       }
 
@@ -529,9 +497,9 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.SegmentGroupsProperty,
     ) : SegmentGroupsProperty {
-      public override fun groups(): Any? = unwrap(this).getGroups()
+      override fun groups(): Any? = unwrap(this).getGroups()
 
-      public override fun include(): String? = unwrap(this).getInclude()
+      override fun include(): String? = unwrap(this).getInclude()
     }
 
     public companion object {
@@ -560,27 +528,21 @@ public open class CfnSegment internal constructor(
     public fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
 
     public interface Builder {
-      public fun country(country: IResolvable) {
-      }
+      public fun country(country: IResolvable)
 
-      public fun country(country: SetDimensionProperty) {
-      }
+      public fun country(country: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16f2c23a3efd8caa63761821f79f5e5ac9855184b3fa61f098d320d5d80b9ff9")
-      public fun country(country: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun country(country: SetDimensionProperty.Builder.() -> Unit)
 
-      public fun gpsPoint(gpsPoint: IResolvable) {
-      }
+      public fun gpsPoint(gpsPoint: IResolvable)
 
-      public fun gpsPoint(gpsPoint: GPSPointProperty) {
-      }
+      public fun gpsPoint(gpsPoint: GPSPointProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("823d386aae3d6722b4591e67f72c640b6d7c7077d4e566b2e7aeba751ec04aea")
-      public fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit) {
-      }
+      public fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -588,30 +550,30 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty.builder()
 
-      public override fun country(country: IResolvable) {
+      override fun country(country: IResolvable) {
         cdkBuilder.country(country.let(IResolvable::unwrap))
       }
 
-      public override fun country(country: SetDimensionProperty) {
+      override fun country(country: SetDimensionProperty) {
         cdkBuilder.country(country.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16f2c23a3efd8caa63761821f79f5e5ac9855184b3fa61f098d320d5d80b9ff9")
-      public override fun country(country: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun country(country: SetDimensionProperty.Builder.() -> Unit): Unit =
           country(SetDimensionProperty(country))
 
-      public override fun gpsPoint(gpsPoint: IResolvable) {
+      override fun gpsPoint(gpsPoint: IResolvable) {
         cdkBuilder.gpsPoint(gpsPoint.let(IResolvable::unwrap))
       }
 
-      public override fun gpsPoint(gpsPoint: GPSPointProperty) {
+      override fun gpsPoint(gpsPoint: GPSPointProperty) {
         cdkBuilder.gpsPoint(gpsPoint.let(GPSPointProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("823d386aae3d6722b4591e67f72c640b6d7c7077d4e566b2e7aeba751ec04aea")
-      public override fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit): Unit =
+      override fun gpsPoint(gpsPoint: GPSPointProperty.Builder.() -> Unit): Unit =
           gpsPoint(GPSPointProperty(gpsPoint))
 
       public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty =
@@ -621,9 +583,9 @@ public open class CfnSegment internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.LocationProperty,
     ) : LocationProperty {
-      public override fun country(): Any? = unwrap(this).getCountry()
+      override fun country(): Any? = unwrap(this).getCountry()
 
-      public override fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
+      override fun gpsPoint(): Any? = unwrap(this).getGpsPoint()
     }
 
     public companion object {
@@ -652,19 +614,15 @@ public open class CfnSegment internal constructor(
     public fun rangeInKilometers(): Number
 
     public interface Builder {
-      public fun coordinates(coordinates: IResolvable) {
-      }
+      public fun coordinates(coordinates: IResolvable)
 
-      public fun coordinates(coordinates: CoordinatesProperty) {
-      }
+      public fun coordinates(coordinates: CoordinatesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7d7d71717832380717e0035b56e17867d611051035eed7ca06df7d996d74b22")
-      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit) {
-      }
+      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit)
 
-      public fun rangeInKilometers(rangeInKilometers: Number) {
-      }
+      public fun rangeInKilometers(rangeInKilometers: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -672,20 +630,20 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty.builder()
 
-      public override fun coordinates(coordinates: IResolvable) {
+      override fun coordinates(coordinates: IResolvable) {
         cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
       }
 
-      public override fun coordinates(coordinates: CoordinatesProperty) {
+      override fun coordinates(coordinates: CoordinatesProperty) {
         cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7d7d71717832380717e0035b56e17867d611051035eed7ca06df7d996d74b22")
-      public override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
+      override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
           coordinates(CoordinatesProperty(coordinates))
 
-      public override fun rangeInKilometers(rangeInKilometers: Number) {
+      override fun rangeInKilometers(rangeInKilometers: Number) {
         cdkBuilder.rangeInKilometers(rangeInKilometers)
       }
 
@@ -696,9 +654,9 @@ public open class CfnSegment internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.GPSPointProperty,
     ) : GPSPointProperty {
-      public override fun coordinates(): Any = unwrap(this).getCoordinates()
+      override fun coordinates(): Any = unwrap(this).getCoordinates()
 
-      public override fun rangeInKilometers(): Number = unwrap(this).getRangeInKilometers()
+      override fun rangeInKilometers(): Number = unwrap(this).getRangeInKilometers()
     }
 
     public companion object {
@@ -727,11 +685,9 @@ public open class CfnSegment internal constructor(
     public fun version(): Number? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun version(version: Number) {
-      }
+      public fun version(version: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -739,11 +695,11 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun version(version: Number) {
+      override fun version(version: Number) {
         cdkBuilder.version(version)
       }
 
@@ -755,9 +711,9 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.SourceSegmentsProperty,
     ) : SourceSegmentsProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun version(): Number? = unwrap(this).getVersion()
+      override fun version(): Number? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -794,71 +750,53 @@ public open class CfnSegment internal constructor(
     public fun platform(): Any? = unwrap(this).getPlatform()
 
     public interface Builder {
-      public fun appVersion(appVersion: IResolvable) {
-      }
+      public fun appVersion(appVersion: IResolvable)
 
-      public fun appVersion(appVersion: SetDimensionProperty) {
-      }
+      public fun appVersion(appVersion: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3cdbe321b533a2244e7cfb7b2dc41a4d1ec18b37de4450c57ee36b2362d74407")
-      public fun appVersion(appVersion: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun appVersion(appVersion: SetDimensionProperty.Builder.() -> Unit)
 
-      public fun channel(channel: IResolvable) {
-      }
+      public fun channel(channel: IResolvable)
 
-      public fun channel(channel: SetDimensionProperty) {
-      }
+      public fun channel(channel: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4ae95fd8f8f0a81e2699d160383ebd1b5666aed92847710237c8885ecfbc6f0")
-      public fun channel(channel: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun channel(channel: SetDimensionProperty.Builder.() -> Unit)
 
-      public fun deviceType(deviceType: IResolvable) {
-      }
+      public fun deviceType(deviceType: IResolvable)
 
-      public fun deviceType(deviceType: SetDimensionProperty) {
-      }
+      public fun deviceType(deviceType: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0becdead57f17835365d8b71d99bee111ee48fa40fb463f780d03fce80f351e1")
-      public fun deviceType(deviceType: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun deviceType(deviceType: SetDimensionProperty.Builder.() -> Unit)
 
-      public fun make(make: IResolvable) {
-      }
+      public fun make(make: IResolvable)
 
-      public fun make(make: SetDimensionProperty) {
-      }
+      public fun make(make: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("56e8b3ed5f07e23f3a5bfe14b907430eb6400e88a6fae67171fb39d214231cb4")
-      public fun make(make: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun make(make: SetDimensionProperty.Builder.() -> Unit)
 
-      public fun model(model: IResolvable) {
-      }
+      public fun model(model: IResolvable)
 
-      public fun model(model: SetDimensionProperty) {
-      }
+      public fun model(model: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44c0acbfc9cc551ae612d254946305d0a93a9983fec0b33c4370a0a2b00df946")
-      public fun model(model: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun model(model: SetDimensionProperty.Builder.() -> Unit)
 
-      public fun platform(platform: IResolvable) {
-      }
+      public fun platform(platform: IResolvable)
 
-      public fun platform(platform: SetDimensionProperty) {
-      }
+      public fun platform(platform: SetDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("759701803e587f7cc2fdf4f7f1bf1723587e07c00f62e28b6af77b867f681988")
-      public fun platform(platform: SetDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun platform(platform: SetDimensionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -866,82 +804,82 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty.builder()
 
-      public override fun appVersion(appVersion: IResolvable) {
+      override fun appVersion(appVersion: IResolvable) {
         cdkBuilder.appVersion(appVersion.let(IResolvable::unwrap))
       }
 
-      public override fun appVersion(appVersion: SetDimensionProperty) {
+      override fun appVersion(appVersion: SetDimensionProperty) {
         cdkBuilder.appVersion(appVersion.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3cdbe321b533a2244e7cfb7b2dc41a4d1ec18b37de4450c57ee36b2362d74407")
-      public override fun appVersion(appVersion: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun appVersion(appVersion: SetDimensionProperty.Builder.() -> Unit): Unit =
           appVersion(SetDimensionProperty(appVersion))
 
-      public override fun channel(channel: IResolvable) {
+      override fun channel(channel: IResolvable) {
         cdkBuilder.channel(channel.let(IResolvable::unwrap))
       }
 
-      public override fun channel(channel: SetDimensionProperty) {
+      override fun channel(channel: SetDimensionProperty) {
         cdkBuilder.channel(channel.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4ae95fd8f8f0a81e2699d160383ebd1b5666aed92847710237c8885ecfbc6f0")
-      public override fun channel(channel: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun channel(channel: SetDimensionProperty.Builder.() -> Unit): Unit =
           channel(SetDimensionProperty(channel))
 
-      public override fun deviceType(deviceType: IResolvable) {
+      override fun deviceType(deviceType: IResolvable) {
         cdkBuilder.deviceType(deviceType.let(IResolvable::unwrap))
       }
 
-      public override fun deviceType(deviceType: SetDimensionProperty) {
+      override fun deviceType(deviceType: SetDimensionProperty) {
         cdkBuilder.deviceType(deviceType.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0becdead57f17835365d8b71d99bee111ee48fa40fb463f780d03fce80f351e1")
-      public override fun deviceType(deviceType: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun deviceType(deviceType: SetDimensionProperty.Builder.() -> Unit): Unit =
           deviceType(SetDimensionProperty(deviceType))
 
-      public override fun make(make: IResolvable) {
+      override fun make(make: IResolvable) {
         cdkBuilder.make(make.let(IResolvable::unwrap))
       }
 
-      public override fun make(make: SetDimensionProperty) {
+      override fun make(make: SetDimensionProperty) {
         cdkBuilder.make(make.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("56e8b3ed5f07e23f3a5bfe14b907430eb6400e88a6fae67171fb39d214231cb4")
-      public override fun make(make: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun make(make: SetDimensionProperty.Builder.() -> Unit): Unit =
           make(SetDimensionProperty(make))
 
-      public override fun model(model: IResolvable) {
+      override fun model(model: IResolvable) {
         cdkBuilder.model(model.let(IResolvable::unwrap))
       }
 
-      public override fun model(model: SetDimensionProperty) {
+      override fun model(model: SetDimensionProperty) {
         cdkBuilder.model(model.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44c0acbfc9cc551ae612d254946305d0a93a9983fec0b33c4370a0a2b00df946")
-      public override fun model(model: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun model(model: SetDimensionProperty.Builder.() -> Unit): Unit =
           model(SetDimensionProperty(model))
 
-      public override fun platform(platform: IResolvable) {
+      override fun platform(platform: IResolvable) {
         cdkBuilder.platform(platform.let(IResolvable::unwrap))
       }
 
-      public override fun platform(platform: SetDimensionProperty) {
+      override fun platform(platform: SetDimensionProperty) {
         cdkBuilder.platform(platform.let(SetDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("759701803e587f7cc2fdf4f7f1bf1723587e07c00f62e28b6af77b867f681988")
-      public override fun platform(platform: SetDimensionProperty.Builder.() -> Unit): Unit =
+      override fun platform(platform: SetDimensionProperty.Builder.() -> Unit): Unit =
           platform(SetDimensionProperty(platform))
 
       public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty =
@@ -952,17 +890,17 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.DemographicProperty,
     ) : DemographicProperty {
-      public override fun appVersion(): Any? = unwrap(this).getAppVersion()
+      override fun appVersion(): Any? = unwrap(this).getAppVersion()
 
-      public override fun channel(): Any? = unwrap(this).getChannel()
+      override fun channel(): Any? = unwrap(this).getChannel()
 
-      public override fun deviceType(): Any? = unwrap(this).getDeviceType()
+      override fun deviceType(): Any? = unwrap(this).getDeviceType()
 
-      public override fun make(): Any? = unwrap(this).getMake()
+      override fun make(): Any? = unwrap(this).getMake()
 
-      public override fun model(): Any? = unwrap(this).getModel()
+      override fun model(): Any? = unwrap(this).getModel()
 
-      public override fun platform(): Any? = unwrap(this).getPlatform()
+      override fun platform(): Any? = unwrap(this).getPlatform()
     }
 
     public companion object {
@@ -989,16 +927,13 @@ public open class CfnSegment internal constructor(
     public fun recency(): Any? = unwrap(this).getRecency()
 
     public interface Builder {
-      public fun recency(recency: IResolvable) {
-      }
+      public fun recency(recency: IResolvable)
 
-      public fun recency(recency: RecencyProperty) {
-      }
+      public fun recency(recency: RecencyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a02e7a3b0b05f0794aedf261afe400f20852aa041843a293b845a54c5c749d4")
-      public fun recency(recency: RecencyProperty.Builder.() -> Unit) {
-      }
+      public fun recency(recency: RecencyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1006,17 +941,17 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty.builder()
 
-      public override fun recency(recency: IResolvable) {
+      override fun recency(recency: IResolvable) {
         cdkBuilder.recency(recency.let(IResolvable::unwrap))
       }
 
-      public override fun recency(recency: RecencyProperty) {
+      override fun recency(recency: RecencyProperty) {
         cdkBuilder.recency(recency.let(RecencyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a02e7a3b0b05f0794aedf261afe400f20852aa041843a293b845a54c5c749d4")
-      public override fun recency(recency: RecencyProperty.Builder.() -> Unit): Unit =
+      override fun recency(recency: RecencyProperty.Builder.() -> Unit): Unit =
           recency(RecencyProperty(recency))
 
       public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty =
@@ -1026,7 +961,7 @@ public open class CfnSegment internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.BehaviorProperty,
     ) : BehaviorProperty {
-      public override fun recency(): Any? = unwrap(this).getRecency()
+      override fun recency(): Any? = unwrap(this).getRecency()
     }
 
     public companion object {
@@ -1055,11 +990,9 @@ public open class CfnSegment internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun dimensionType(dimensionType: String) {
-      }
+      public fun dimensionType(dimensionType: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1067,11 +1000,11 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty.builder()
 
-      public override fun dimensionType(dimensionType: String) {
+      override fun dimensionType(dimensionType: String) {
         cdkBuilder.dimensionType(dimensionType)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -1083,9 +1016,9 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty,
     ) : SetDimensionProperty {
-      public override fun dimensionType(): String? = unwrap(this).getDimensionType()
+      override fun dimensionType(): String? = unwrap(this).getDimensionType()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -1114,11 +1047,9 @@ public open class CfnSegment internal constructor(
     public fun longitude(): Number
 
     public interface Builder {
-      public fun latitude(latitude: Number) {
-      }
+      public fun latitude(latitude: Number)
 
-      public fun longitude(longitude: Number) {
-      }
+      public fun longitude(longitude: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1126,11 +1057,11 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty.builder()
 
-      public override fun latitude(latitude: Number) {
+      override fun latitude(latitude: Number) {
         cdkBuilder.latitude(latitude)
       }
 
-      public override fun longitude(longitude: Number) {
+      override fun longitude(longitude: Number) {
         cdkBuilder.longitude(longitude)
       }
 
@@ -1142,9 +1073,9 @@ public open class CfnSegment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnSegment.CoordinatesProperty,
     ) : CoordinatesProperty {
-      public override fun latitude(): Number = unwrap(this).getLatitude()
+      override fun latitude(): Number = unwrap(this).getLatitude()
 
-      public override fun longitude(): Number = unwrap(this).getLongitude()
+      override fun longitude(): Number = unwrap(this).getLongitude()
     }
 
     public companion object {
@@ -1173,11 +1104,9 @@ public open class CfnSegment internal constructor(
     public fun recencyType(): String
 
     public interface Builder {
-      public fun duration(duration: String) {
-      }
+      public fun duration(duration: String)
 
-      public fun recencyType(recencyType: String) {
-      }
+      public fun recencyType(recencyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1185,11 +1114,11 @@ public open class CfnSegment internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty.builder()
 
-      public override fun duration(duration: String) {
+      override fun duration(duration: String) {
         cdkBuilder.duration(duration)
       }
 
-      public override fun recencyType(recencyType: String) {
+      override fun recencyType(recencyType: String) {
         cdkBuilder.recencyType(recencyType)
       }
 
@@ -1200,9 +1129,9 @@ public open class CfnSegment internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.pinpoint.CfnSegment.RecencyProperty,
     ) : RecencyProperty {
-      public override fun duration(): String = unwrap(this).getDuration()
+      override fun duration(): String = unwrap(this).getDuration()
 
-      public override fun recencyType(): String = unwrap(this).getRecencyType()
+      override fun recencyType(): String = unwrap(this).getRecencyType()
     }
 
     public companion object {

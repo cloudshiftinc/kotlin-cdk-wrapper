@@ -43,17 +43,13 @@ public open class CfnCertificateAuthorityActivation internal constructor(
   }
 
   public interface Builder {
-    public fun certificate(certificate: String) {
-    }
+    public fun certificate(certificate: String)
 
-    public fun certificateAuthorityArn(certificateAuthorityArn: String) {
-    }
+    public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
-    public fun certificateChain(certificateChain: String) {
-    }
+    public fun certificateChain(certificateChain: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
   }
 
   private class BuilderImpl(
@@ -65,19 +61,19 @@ public open class CfnCertificateAuthorityActivation internal constructor(
         software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityActivation.Builder.create(scope,
         id)
 
-    public override fun certificate(certificate: String) {
+    override fun certificate(certificate: String) {
       cdkBuilder.certificate(certificate)
     }
 
-    public override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+    override fun certificateAuthorityArn(certificateAuthorityArn: String) {
       cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
     }
 
-    public override fun certificateChain(certificateChain: String) {
+    override fun certificateChain(certificateChain: String) {
       cdkBuilder.certificateChain(certificateChain)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 

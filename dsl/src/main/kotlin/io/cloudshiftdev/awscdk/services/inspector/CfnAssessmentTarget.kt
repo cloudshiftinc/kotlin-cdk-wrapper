@@ -30,11 +30,9 @@ public open class CfnAssessmentTarget internal constructor(
   }
 
   public interface Builder {
-    public fun assessmentTargetName(assessmentTargetName: String) {
-    }
+    public fun assessmentTargetName(assessmentTargetName: String)
 
-    public fun resourceGroupArn(resourceGroupArn: String) {
-    }
+    public fun resourceGroupArn(resourceGroupArn: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnAssessmentTarget internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.inspector.CfnAssessmentTarget.Builder =
         software.amazon.awscdk.services.inspector.CfnAssessmentTarget.Builder.create(scope, id)
 
-    public override fun assessmentTargetName(assessmentTargetName: String) {
+    override fun assessmentTargetName(assessmentTargetName: String) {
       cdkBuilder.assessmentTargetName(assessmentTargetName)
     }
 
-    public override fun resourceGroupArn(resourceGroupArn: String) {
+    override fun resourceGroupArn(resourceGroupArn: String) {
       cdkBuilder.resourceGroupArn(resourceGroupArn)
     }
 

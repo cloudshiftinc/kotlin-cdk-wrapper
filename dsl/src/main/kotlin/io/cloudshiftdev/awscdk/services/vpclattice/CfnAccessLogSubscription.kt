@@ -49,14 +49,11 @@ public open class CfnAccessLogSubscription internal constructor(
   }
 
   public interface Builder {
-    public fun destinationArn(destinationArn: String) {
-    }
+    public fun destinationArn(destinationArn: String)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -68,15 +65,15 @@ public open class CfnAccessLogSubscription internal constructor(
         software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription.Builder.create(scope,
         id)
 
-    public override fun destinationArn(destinationArn: String) {
+    override fun destinationArn(destinationArn: String) {
       cdkBuilder.destinationArn(destinationArn)
     }
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

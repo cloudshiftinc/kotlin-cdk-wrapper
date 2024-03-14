@@ -102,62 +102,46 @@ public open class CfnInstanceStorageConfig internal constructor(
   }
 
   public interface Builder {
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun kinesisFirehoseConfig(kinesisFirehoseConfig: IResolvable) {
-    }
+    public fun kinesisFirehoseConfig(kinesisFirehoseConfig: IResolvable)
 
-    public fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty) {
-    }
+    public fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("837242d5661f3787c2b251575e565ac16b1cc8ddceaa3e928aba36258457650d")
     public
-        fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty.Builder.() -> Unit) {
-    }
+        fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty.Builder.() -> Unit)
 
-    public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
-    }
+    public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable)
 
-    public fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
-    }
+    public fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e0974cfd229ccc4f27fe13b7d0d51afc36bdd3fe5e372817ba019ba82b8bcd0")
     public
-        fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty.Builder.() -> Unit) {
-    }
+        fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty.Builder.() -> Unit)
 
-    public fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: IResolvable) {
-    }
+    public fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: IResolvable)
 
-    public
-        fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty) {
-    }
+    public fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8797446b9b75f207d018820b7ee612f83c154f89380c02505464e74e9c664e66")
     public
-        fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty.Builder.() -> Unit) {
-    }
+        fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty.Builder.() -> Unit)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun s3Config(s3Config: IResolvable) {
-    }
+    public fun s3Config(s3Config: IResolvable)
 
-    public fun s3Config(s3Config: S3ConfigProperty) {
-    }
+    public fun s3Config(s3Config: S3ConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ebe316cdedce46a0df936d4f551a4a4e9e688aa09135bdd653b61fde43513318")
-    public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit) {
-    }
+    public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
 
-    public fun storageType(storageType: String) {
-    }
+    public fun storageType(storageType: String)
   }
 
   private class BuilderImpl(
@@ -167,72 +151,71 @@ public open class CfnInstanceStorageConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.Builder
         = software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.Builder.create(scope, id)
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun kinesisFirehoseConfig(kinesisFirehoseConfig: IResolvable) {
+    override fun kinesisFirehoseConfig(kinesisFirehoseConfig: IResolvable) {
       cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty) {
+    override fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty) {
       cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(KinesisFirehoseConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("837242d5661f3787c2b251575e565ac16b1cc8ddceaa3e928aba36258457650d")
-    public override
+    override
         fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty.Builder.() -> Unit):
         Unit = kinesisFirehoseConfig(KinesisFirehoseConfigProperty(kinesisFirehoseConfig))
 
-    public override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
+    override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
       cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable::unwrap))
     }
 
-    public override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
+    override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
       cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e0974cfd229ccc4f27fe13b7d0d51afc36bdd3fe5e372817ba019ba82b8bcd0")
-    public override
+    override
         fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty.Builder.() -> Unit):
         Unit = kinesisStreamConfig(KinesisStreamConfigProperty(kinesisStreamConfig))
 
-    public override fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: IResolvable) {
+    override fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: IResolvable) {
       cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty) {
       cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(KinesisVideoStreamConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8797446b9b75f207d018820b7ee612f83c154f89380c02505464e74e9c664e66")
-    public override
+    override
         fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty.Builder.() -> Unit):
         Unit = kinesisVideoStreamConfig(KinesisVideoStreamConfigProperty(kinesisVideoStreamConfig))
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun s3Config(s3Config: IResolvable) {
+    override fun s3Config(s3Config: IResolvable) {
       cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
     }
 
-    public override fun s3Config(s3Config: S3ConfigProperty) {
+    override fun s3Config(s3Config: S3ConfigProperty) {
       cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ebe316cdedce46a0df936d4f551a4a4e9e688aa09135bdd653b61fde43513318")
-    public override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
+    override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
         s3Config(S3ConfigProperty(s3Config))
 
-    public override fun storageType(storageType: String) {
+    override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
 
@@ -265,8 +248,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     public fun streamArn(): String
 
     public interface Builder {
-      public fun streamArn(streamArn: String) {
-      }
+      public fun streamArn(streamArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -275,7 +257,7 @@ public open class CfnInstanceStorageConfig internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty.builder()
 
-      public override fun streamArn(streamArn: String) {
+      override fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
       }
 
@@ -288,7 +270,7 @@ public open class CfnInstanceStorageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisStreamConfigProperty,
     ) : KinesisStreamConfigProperty {
-      public override fun streamArn(): String = unwrap(this).getStreamArn()
+      override fun streamArn(): String = unwrap(this).getStreamArn()
     }
 
     public companion object {
@@ -315,8 +297,7 @@ public open class CfnInstanceStorageConfig internal constructor(
     public fun firehoseArn(): String
 
     public interface Builder {
-      public fun firehoseArn(firehoseArn: String) {
-      }
+      public fun firehoseArn(firehoseArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -325,7 +306,7 @@ public open class CfnInstanceStorageConfig internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty.builder()
 
-      public override fun firehoseArn(firehoseArn: String) {
+      override fun firehoseArn(firehoseArn: String) {
         cdkBuilder.firehoseArn(firehoseArn)
       }
 
@@ -338,7 +319,7 @@ public open class CfnInstanceStorageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisFirehoseConfigProperty,
     ) : KinesisFirehoseConfigProperty {
-      public override fun firehoseArn(): String = unwrap(this).getFirehoseArn()
+      override fun firehoseArn(): String = unwrap(this).getFirehoseArn()
     }
 
     public companion object {
@@ -369,22 +350,17 @@ public open class CfnInstanceStorageConfig internal constructor(
     public fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun encryptionConfig(encryptionConfig: IResolvable) {
-      }
+      public fun encryptionConfig(encryptionConfig: IResolvable)
 
-      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
-      }
+      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6b587ea16dac97f9b6a3f7d9059384e699de7c3a22d9d30a3631948349c4dbec")
-      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit) {
-      }
+      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -393,27 +369,26 @@ public open class CfnInstanceStorageConfig internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun encryptionConfig(encryptionConfig: IResolvable) {
+      override fun encryptionConfig(encryptionConfig: IResolvable) {
         cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
+      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
         cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6b587ea16dac97f9b6a3f7d9059384e699de7c3a22d9d30a3631948349c4dbec")
-      public override
-          fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit): Unit
-          = encryptionConfig(EncryptionConfigProperty(encryptionConfig))
+      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit):
+          Unit = encryptionConfig(EncryptionConfigProperty(encryptionConfig))
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty =
@@ -424,11 +399,11 @@ public open class CfnInstanceStorageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.S3ConfigProperty,
     ) : S3ConfigProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
 
-      public override fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
+      override fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
     }
 
     public companion object {
@@ -459,22 +434,17 @@ public open class CfnInstanceStorageConfig internal constructor(
     public fun retentionPeriodHours(): Number
 
     public interface Builder {
-      public fun encryptionConfig(encryptionConfig: IResolvable) {
-      }
+      public fun encryptionConfig(encryptionConfig: IResolvable)
 
-      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
-      }
+      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03ae3056e2f0c36164b8c11bc25a478da4c222920ea05c9641948476c5ef590f")
-      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit) {
-      }
+      public fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
 
-      public fun retentionPeriodHours(retentionPeriodHours: Number) {
-      }
+      public fun retentionPeriodHours(retentionPeriodHours: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -483,25 +453,24 @@ public open class CfnInstanceStorageConfig internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty.builder()
 
-      public override fun encryptionConfig(encryptionConfig: IResolvable) {
+      override fun encryptionConfig(encryptionConfig: IResolvable) {
         cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
+      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
         cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03ae3056e2f0c36164b8c11bc25a478da4c222920ea05c9641948476c5ef590f")
-      public override
-          fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit): Unit
-          = encryptionConfig(EncryptionConfigProperty(encryptionConfig))
+      override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty.Builder.() -> Unit):
+          Unit = encryptionConfig(EncryptionConfigProperty(encryptionConfig))
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
-      public override fun retentionPeriodHours(retentionPeriodHours: Number) {
+      override fun retentionPeriodHours(retentionPeriodHours: Number) {
         cdkBuilder.retentionPeriodHours(retentionPeriodHours)
       }
 
@@ -514,11 +483,11 @@ public open class CfnInstanceStorageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty,
     ) : KinesisVideoStreamConfigProperty {
-      public override fun encryptionConfig(): Any = unwrap(this).getEncryptionConfig()
+      override fun encryptionConfig(): Any = unwrap(this).getEncryptionConfig()
 
-      public override fun prefix(): String = unwrap(this).getPrefix()
+      override fun prefix(): String = unwrap(this).getPrefix()
 
-      public override fun retentionPeriodHours(): Number = unwrap(this).getRetentionPeriodHours()
+      override fun retentionPeriodHours(): Number = unwrap(this).getRetentionPeriodHours()
     }
 
     public companion object {
@@ -547,11 +516,9 @@ public open class CfnInstanceStorageConfig internal constructor(
     public fun keyId(): String
 
     public interface Builder {
-      public fun encryptionType(encryptionType: String) {
-      }
+      public fun encryptionType(encryptionType: String)
 
-      public fun keyId(keyId: String) {
-      }
+      public fun keyId(keyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -560,11 +527,11 @@ public open class CfnInstanceStorageConfig internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty.builder()
 
-      public override fun encryptionType(encryptionType: String) {
+      override fun encryptionType(encryptionType: String) {
         cdkBuilder.encryptionType(encryptionType)
       }
 
-      public override fun keyId(keyId: String) {
+      override fun keyId(keyId: String) {
         cdkBuilder.keyId(keyId)
       }
 
@@ -577,9 +544,9 @@ public open class CfnInstanceStorageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnInstanceStorageConfig.EncryptionConfigProperty,
     ) : EncryptionConfigProperty {
-      public override fun encryptionType(): String = unwrap(this).getEncryptionType()
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
 
-      public override fun keyId(): String = unwrap(this).getKeyId()
+      override fun keyId(): String = unwrap(this).getKeyId()
     }
 
     public companion object {

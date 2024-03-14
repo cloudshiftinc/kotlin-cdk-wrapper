@@ -9,22 +9,20 @@ public interface AliasAttributes {
   public fun aliasTargetKey(): IKey
 
   public interface Builder {
-    public fun aliasName(aliasName: String) {
-    }
+    public fun aliasName(aliasName: String)
 
-    public fun aliasTargetKey(aliasTargetKey: IKey) {
-    }
+    public fun aliasTargetKey(aliasTargetKey: IKey)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.kms.AliasAttributes.Builder =
         software.amazon.awscdk.services.kms.AliasAttributes.builder()
 
-    public override fun aliasName(aliasName: String) {
+    override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
 
-    public override fun aliasTargetKey(aliasTargetKey: IKey) {
+    override fun aliasTargetKey(aliasTargetKey: IKey) {
       cdkBuilder.aliasTargetKey(aliasTargetKey.let(IKey::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface AliasAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.kms.AliasAttributes,
   ) : AliasAttributes {
-    public override fun aliasName(): String = unwrap(this).getAliasName()
+    override fun aliasName(): String = unwrap(this).getAliasName()
 
-    public override fun aliasTargetKey(): IKey = unwrap(this).getAliasTargetKey().let(IKey::wrap)
+    override fun aliasTargetKey(): IKey = unwrap(this).getAliasTargetKey().let(IKey::wrap)
   }
 
   public companion object {

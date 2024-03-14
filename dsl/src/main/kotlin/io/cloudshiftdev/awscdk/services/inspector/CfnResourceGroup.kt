@@ -31,11 +31,9 @@ public open class CfnResourceGroup internal constructor(
   }
 
   public interface Builder {
-    public fun resourceGroupTags(resourceGroupTags: IResolvable) {
-    }
+    public fun resourceGroupTags(resourceGroupTags: IResolvable)
 
-    public fun resourceGroupTags(resourceGroupTags: List<Any>) {
-    }
+    public fun resourceGroupTags(resourceGroupTags: List<Any>)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnResourceGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.inspector.CfnResourceGroup.Builder =
         software.amazon.awscdk.services.inspector.CfnResourceGroup.Builder.create(scope, id)
 
-    public override fun resourceGroupTags(resourceGroupTags: IResolvable) {
+    override fun resourceGroupTags(resourceGroupTags: IResolvable) {
       cdkBuilder.resourceGroupTags(resourceGroupTags.let(IResolvable::unwrap))
     }
 
-    public override fun resourceGroupTags(resourceGroupTags: List<Any>) {
+    override fun resourceGroupTags(resourceGroupTags: List<Any>) {
       cdkBuilder.resourceGroupTags(resourceGroupTags)
     }
 

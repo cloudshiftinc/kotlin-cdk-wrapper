@@ -12,29 +12,26 @@ public interface NoncurrentVersionTransition {
   public fun transitionAfter(): Duration
 
   public interface Builder {
-    public fun noncurrentVersionsToRetain(noncurrentVersionsToRetain: Number) {
-    }
+    public fun noncurrentVersionsToRetain(noncurrentVersionsToRetain: Number)
 
-    public fun storageClass(storageClass: StorageClass) {
-    }
+    public fun storageClass(storageClass: StorageClass)
 
-    public fun transitionAfter(transitionAfter: Duration) {
-    }
+    public fun transitionAfter(transitionAfter: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.NoncurrentVersionTransition.Builder =
         software.amazon.awscdk.services.s3.NoncurrentVersionTransition.builder()
 
-    public override fun noncurrentVersionsToRetain(noncurrentVersionsToRetain: Number) {
+    override fun noncurrentVersionsToRetain(noncurrentVersionsToRetain: Number) {
       cdkBuilder.noncurrentVersionsToRetain(noncurrentVersionsToRetain)
     }
 
-    public override fun storageClass(storageClass: StorageClass) {
+    override fun storageClass(storageClass: StorageClass) {
       cdkBuilder.storageClass(storageClass.let(StorageClass::unwrap))
     }
 
-    public override fun transitionAfter(transitionAfter: Duration) {
+    override fun transitionAfter(transitionAfter: Duration) {
       cdkBuilder.transitionAfter(transitionAfter.let(Duration::unwrap))
     }
 
@@ -45,14 +42,13 @@ public interface NoncurrentVersionTransition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.NoncurrentVersionTransition,
   ) : NoncurrentVersionTransition {
-    public override fun noncurrentVersionsToRetain(): Number? =
+    override fun noncurrentVersionsToRetain(): Number? =
         unwrap(this).getNoncurrentVersionsToRetain()
 
-    public override fun storageClass(): StorageClass =
+    override fun storageClass(): StorageClass =
         unwrap(this).getStorageClass().let(StorageClass::wrap)
 
-    public override fun transitionAfter(): Duration =
-        unwrap(this).getTransitionAfter().let(Duration::wrap)
+    override fun transitionAfter(): Duration = unwrap(this).getTransitionAfter().let(Duration::wrap)
   }
 
   public companion object {

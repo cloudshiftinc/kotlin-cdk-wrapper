@@ -51,21 +51,16 @@ public open class CfnEIPAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun allocationId(allocationId: String) {
-    }
+    public fun allocationId(allocationId: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun eip(eip: String) {
-    }
+    public fun eip(eip: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
 
-    public fun privateIpAddress(privateIpAddress: String) {
-    }
+    public fun privateIpAddress(privateIpAddress: String)
   }
 
   private class BuilderImpl(
@@ -75,24 +70,24 @@ public open class CfnEIPAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnEIPAssociation.Builder =
         software.amazon.awscdk.services.ec2.CfnEIPAssociation.Builder.create(scope, id)
 
-    public override fun allocationId(allocationId: String) {
+    override fun allocationId(allocationId: String) {
       cdkBuilder.allocationId(allocationId)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun eip(eip: String) {
+    override fun eip(eip: String) {
       cdkBuilder.eip(eip)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
-    public override fun privateIpAddress(privateIpAddress: String) {
+    override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
 

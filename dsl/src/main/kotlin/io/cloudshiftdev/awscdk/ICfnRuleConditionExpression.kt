@@ -11,17 +11,16 @@ public interface ICfnRuleConditionExpression : ICfnConditionExpression {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ICfnRuleConditionExpression,
   ) : ICfnRuleConditionExpression {
-    public override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?:
-        emptyList()
+    override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
 
-    public override fun disambiguator(): Boolean = unwrap(this).getDisambiguator()
+    override fun disambiguator(): Boolean = unwrap(this).getDisambiguator()
 
-    public override fun resolve(arg0: IResolveContext): Any =
+    override fun resolve(arg0: IResolveContext): Any =
         unwrap(this).resolve(arg0.let(IResolveContext::unwrap))
 
-    public override fun toString(): String = unwrap(this).toString()
+    override fun toString(): String = unwrap(this).toString()
 
-    public override fun typeHint(): ResolutionTypeHint? =
+    override fun typeHint(): ResolutionTypeHint? =
         unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
   }
 

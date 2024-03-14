@@ -34,14 +34,11 @@ public open class CfnServiceActionAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
 
-    public fun provisioningArtifactId(provisioningArtifactId: String) {
-    }
+    public fun provisioningArtifactId(provisioningArtifactId: String)
 
-    public fun serviceActionId(serviceActionId: String) {
-    }
+    public fun serviceActionId(serviceActionId: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnServiceActionAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation.Builder.create(scope,
         id)
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
-    public override fun provisioningArtifactId(provisioningArtifactId: String) {
+    override fun provisioningArtifactId(provisioningArtifactId: String) {
       cdkBuilder.provisioningArtifactId(provisioningArtifactId)
     }
 
-    public override fun serviceActionId(serviceActionId: String) {
+    override fun serviceActionId(serviceActionId: String) {
       cdkBuilder.serviceActionId(serviceActionId)
     }
 

@@ -8,7 +8,7 @@ public interface IAsset {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IAsset,
   ) : IAsset {
-    public override fun assetHash(): String = unwrap(this).getAssetHash()
+    override fun assetHash(): String = unwrap(this).getAssetHash()
   }
 
   public companion object {

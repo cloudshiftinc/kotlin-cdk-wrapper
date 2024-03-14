@@ -55,23 +55,17 @@ public open class CfnClientVpnAuthorizationRule internal constructor(
   }
 
   public interface Builder {
-    public fun accessGroupId(accessGroupId: String) {
-    }
+    public fun accessGroupId(accessGroupId: String)
 
-    public fun authorizeAllGroups(authorizeAllGroups: Boolean) {
-    }
+    public fun authorizeAllGroups(authorizeAllGroups: Boolean)
 
-    public fun authorizeAllGroups(authorizeAllGroups: IResolvable) {
-    }
+    public fun authorizeAllGroups(authorizeAllGroups: IResolvable)
 
-    public fun clientVpnEndpointId(clientVpnEndpointId: String) {
-    }
+    public fun clientVpnEndpointId(clientVpnEndpointId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun targetNetworkCidr(targetNetworkCidr: String) {
-    }
+    public fun targetNetworkCidr(targetNetworkCidr: String)
   }
 
   private class BuilderImpl(
@@ -82,27 +76,27 @@ public open class CfnClientVpnAuthorizationRule internal constructor(
         software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule.Builder =
         software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule.Builder.create(scope, id)
 
-    public override fun accessGroupId(accessGroupId: String) {
+    override fun accessGroupId(accessGroupId: String) {
       cdkBuilder.accessGroupId(accessGroupId)
     }
 
-    public override fun authorizeAllGroups(authorizeAllGroups: Boolean) {
+    override fun authorizeAllGroups(authorizeAllGroups: Boolean) {
       cdkBuilder.authorizeAllGroups(authorizeAllGroups)
     }
 
-    public override fun authorizeAllGroups(authorizeAllGroups: IResolvable) {
+    override fun authorizeAllGroups(authorizeAllGroups: IResolvable) {
       cdkBuilder.authorizeAllGroups(authorizeAllGroups.let(IResolvable::unwrap))
     }
 
-    public override fun clientVpnEndpointId(clientVpnEndpointId: String) {
+    override fun clientVpnEndpointId(clientVpnEndpointId: String) {
       cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun targetNetworkCidr(targetNetworkCidr: String) {
+    override fun targetNetworkCidr(targetNetworkCidr: String) {
       cdkBuilder.targetNetworkCidr(targetNetworkCidr)
     }
 

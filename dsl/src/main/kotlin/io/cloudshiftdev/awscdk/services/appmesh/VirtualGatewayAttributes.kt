@@ -9,22 +9,20 @@ public interface VirtualGatewayAttributes {
   public fun virtualGatewayName(): String
 
   public interface Builder {
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun virtualGatewayName(virtualGatewayName: String) {
-    }
+    public fun virtualGatewayName(virtualGatewayName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes.Builder
         = software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes.builder()
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun virtualGatewayName(virtualGatewayName: String) {
+    override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)
     }
 
@@ -35,9 +33,9 @@ public interface VirtualGatewayAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes,
   ) : VirtualGatewayAttributes {
-    public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
+    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-    public override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
+    override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
   }
 
   public companion object {

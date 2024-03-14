@@ -14,51 +14,46 @@ public interface CfnTrafficRouting {
   public fun testTrafficRoute(): CfnTrafficRoute
 
   public interface Builder {
-    public fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute) {
-    }
+    public fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b94fd5f03bfb4e60a7cbf6031b69823f75ec8d393f5fa6565c0d87afe2cd8500")
-    public fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute.Builder.() -> Unit) {
-    }
+    public fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute.Builder.() -> Unit)
 
-    public fun targetGroups(targetGroups: List<String>) {
-    }
+    public fun targetGroups(targetGroups: List<String>)
 
-    public fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute) {
-    }
+    public fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a362eb59dc5393738e0a537467bb3b34edd3167fe80250bba4a5aa5e5a75007")
-    public fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute.Builder.() -> Unit) {
-    }
+    public fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnTrafficRouting.Builder =
         software.amazon.awscdk.CfnTrafficRouting.builder()
 
-    public override fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute) {
+    override fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute) {
       cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(CfnTrafficRoute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b94fd5f03bfb4e60a7cbf6031b69823f75ec8d393f5fa6565c0d87afe2cd8500")
-    public override fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute.Builder.() -> Unit): Unit
-        = prodTrafficRoute(CfnTrafficRoute(prodTrafficRoute))
+    override fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute.Builder.() -> Unit): Unit =
+        prodTrafficRoute(CfnTrafficRoute(prodTrafficRoute))
 
-    public override fun targetGroups(targetGroups: List<String>) {
+    override fun targetGroups(targetGroups: List<String>) {
       cdkBuilder.targetGroups(targetGroups)
     }
 
-    public override fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute) {
+    override fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute) {
       cdkBuilder.testTrafficRoute(testTrafficRoute.let(CfnTrafficRoute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a362eb59dc5393738e0a537467bb3b34edd3167fe80250bba4a5aa5e5a75007")
-    public override fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute.Builder.() -> Unit): Unit
-        = testTrafficRoute(CfnTrafficRoute(testTrafficRoute))
+    override fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute.Builder.() -> Unit): Unit =
+        testTrafficRoute(CfnTrafficRoute(testTrafficRoute))
 
     public fun build(): software.amazon.awscdk.CfnTrafficRouting = cdkBuilder.build()
   }
@@ -66,12 +61,12 @@ public interface CfnTrafficRouting {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnTrafficRouting,
   ) : CfnTrafficRouting {
-    public override fun prodTrafficRoute(): CfnTrafficRoute =
+    override fun prodTrafficRoute(): CfnTrafficRoute =
         unwrap(this).getProdTrafficRoute().let(CfnTrafficRoute::wrap)
 
-    public override fun targetGroups(): List<String> = unwrap(this).getTargetGroups() ?: emptyList()
+    override fun targetGroups(): List<String> = unwrap(this).getTargetGroups() ?: emptyList()
 
-    public override fun testTrafficRoute(): CfnTrafficRoute =
+    override fun testTrafficRoute(): CfnTrafficRoute =
         unwrap(this).getTestTrafficRoute().let(CfnTrafficRoute::wrap)
   }
 

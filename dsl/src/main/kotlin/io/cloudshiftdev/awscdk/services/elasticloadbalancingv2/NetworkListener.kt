@@ -42,29 +42,21 @@ public open class NetworkListener internal constructor(
       unwrap(this).getLoadBalancer().let(INetworkLoadBalancer::wrap)
 
   public interface Builder {
-    public fun alpnPolicy(alpnPolicy: AlpnPolicy) {
-    }
+    public fun alpnPolicy(alpnPolicy: AlpnPolicy)
 
-    public fun certificates(certificates: List<IListenerCertificate>) {
-    }
+    public fun certificates(certificates: List<IListenerCertificate>)
 
-    public fun defaultAction(defaultAction: NetworkListenerAction) {
-    }
+    public fun defaultAction(defaultAction: NetworkListenerAction)
 
-    public fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
-    }
+    public fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>)
 
-    public fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
-    }
+    public fun loadBalancer(loadBalancer: INetworkLoadBalancer)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
 
-    public fun sslPolicy(sslPolicy: SslPolicy) {
-    }
+    public fun sslPolicy(sslPolicy: SslPolicy)
   }
 
   private class BuilderImpl(
@@ -76,35 +68,35 @@ public open class NetworkListener internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener.Builder.create(scope,
         id)
 
-    public override fun alpnPolicy(alpnPolicy: AlpnPolicy) {
+    override fun alpnPolicy(alpnPolicy: AlpnPolicy) {
       cdkBuilder.alpnPolicy(alpnPolicy.let(AlpnPolicy::unwrap))
     }
 
-    public override fun certificates(certificates: List<IListenerCertificate>) {
+    override fun certificates(certificates: List<IListenerCertificate>) {
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
-    public override fun defaultAction(defaultAction: NetworkListenerAction) {
+    override fun defaultAction(defaultAction: NetworkListenerAction) {
       cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction::unwrap))
     }
 
-    public override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
+    override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
       cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup::unwrap))
     }
 
-    public override fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
+    override fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
       cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
-    public override fun sslPolicy(sslPolicy: SslPolicy) {
+    override fun sslPolicy(sslPolicy: SslPolicy) {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
     }
 

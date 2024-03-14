@@ -7,15 +7,14 @@ public interface AddApiKeyOptions {
   public fun overrideLogicalId(): String? = unwrap(this).getOverrideLogicalId()
 
   public interface Builder {
-    public fun overrideLogicalId(overrideLogicalId: String) {
-    }
+    public fun overrideLogicalId(overrideLogicalId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.AddApiKeyOptions.Builder =
         software.amazon.awscdk.services.apigateway.AddApiKeyOptions.builder()
 
-    public override fun overrideLogicalId(overrideLogicalId: String) {
+    override fun overrideLogicalId(overrideLogicalId: String) {
       cdkBuilder.overrideLogicalId(overrideLogicalId)
     }
 
@@ -26,7 +25,7 @@ public interface AddApiKeyOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.AddApiKeyOptions,
   ) : AddApiKeyOptions {
-    public override fun overrideLogicalId(): String? = unwrap(this).getOverrideLogicalId()
+    override fun overrideLogicalId(): String? = unwrap(this).getOverrideLogicalId()
   }
 
   public companion object {

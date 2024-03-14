@@ -87,34 +87,25 @@ public open class CfnLink internal constructor(
   }
 
   public interface Builder {
-    public fun bandwidth(bandwidth: IResolvable) {
-    }
+    public fun bandwidth(bandwidth: IResolvable)
 
-    public fun bandwidth(bandwidth: BandwidthProperty) {
-    }
+    public fun bandwidth(bandwidth: BandwidthProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a49e9c4c1283b201998580fa4db416940d6c8c8bf89fd651530692bffdd36454")
-    public fun bandwidth(bandwidth: BandwidthProperty.Builder.() -> Unit) {
-    }
+    public fun bandwidth(bandwidth: BandwidthProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun globalNetworkId(globalNetworkId: String) {
-    }
+    public fun globalNetworkId(globalNetworkId: String)
 
-    public fun provider(provider: String) {
-    }
+    public fun provider(provider: String)
 
-    public fun siteId(siteId: String) {
-    }
+    public fun siteId(siteId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -124,40 +115,40 @@ public open class CfnLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnLink.Builder =
         software.amazon.awscdk.services.networkmanager.CfnLink.Builder.create(scope, id)
 
-    public override fun bandwidth(bandwidth: IResolvable) {
+    override fun bandwidth(bandwidth: IResolvable) {
       cdkBuilder.bandwidth(bandwidth.let(IResolvable::unwrap))
     }
 
-    public override fun bandwidth(bandwidth: BandwidthProperty) {
+    override fun bandwidth(bandwidth: BandwidthProperty) {
       cdkBuilder.bandwidth(bandwidth.let(BandwidthProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a49e9c4c1283b201998580fa4db416940d6c8c8bf89fd651530692bffdd36454")
-    public override fun bandwidth(bandwidth: BandwidthProperty.Builder.() -> Unit): Unit =
+    override fun bandwidth(bandwidth: BandwidthProperty.Builder.() -> Unit): Unit =
         bandwidth(BandwidthProperty(bandwidth))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun globalNetworkId(globalNetworkId: String) {
+    override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
-    public override fun provider(provider: String) {
+    override fun provider(provider: String) {
       cdkBuilder.provider(provider)
     }
 
-    public override fun siteId(siteId: String) {
+    override fun siteId(siteId: String) {
       cdkBuilder.siteId(siteId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -191,11 +182,9 @@ public open class CfnLink internal constructor(
     public fun uploadSpeed(): Number? = unwrap(this).getUploadSpeed()
 
     public interface Builder {
-      public fun downloadSpeed(downloadSpeed: Number) {
-      }
+      public fun downloadSpeed(downloadSpeed: Number)
 
-      public fun uploadSpeed(uploadSpeed: Number) {
-      }
+      public fun uploadSpeed(uploadSpeed: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -203,11 +192,11 @@ public open class CfnLink internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnLink.BandwidthProperty.Builder =
           software.amazon.awscdk.services.networkmanager.CfnLink.BandwidthProperty.builder()
 
-      public override fun downloadSpeed(downloadSpeed: Number) {
+      override fun downloadSpeed(downloadSpeed: Number) {
         cdkBuilder.downloadSpeed(downloadSpeed)
       }
 
-      public override fun uploadSpeed(uploadSpeed: Number) {
+      override fun uploadSpeed(uploadSpeed: Number) {
         cdkBuilder.uploadSpeed(uploadSpeed)
       }
 
@@ -219,9 +208,9 @@ public open class CfnLink internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnLink.BandwidthProperty,
     ) : BandwidthProperty {
-      public override fun downloadSpeed(): Number? = unwrap(this).getDownloadSpeed()
+      override fun downloadSpeed(): Number? = unwrap(this).getDownloadSpeed()
 
-      public override fun uploadSpeed(): Number? = unwrap(this).getUploadSpeed()
+      override fun uploadSpeed(): Number? = unwrap(this).getUploadSpeed()
     }
 
     public companion object {

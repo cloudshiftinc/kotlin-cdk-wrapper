@@ -10,32 +10,29 @@ public open class Trigger internal constructor(
   public open fun sourceAction(): IAction? = unwrap(this).getSourceAction()?.let(IAction::wrap)
 
   public interface Builder {
-    public fun gitConfiguration(gitConfiguration: GitConfiguration) {
-    }
+    public fun gitConfiguration(gitConfiguration: GitConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43bdb8c0f6051746f3f200fd74a269256b6b989d220404453f8b254e5c48c062")
-    public fun gitConfiguration(gitConfiguration: GitConfiguration.Builder.() -> Unit) {
-    }
+    public fun gitConfiguration(gitConfiguration: GitConfiguration.Builder.() -> Unit)
 
-    public fun providerType(providerType: ProviderType) {
-    }
+    public fun providerType(providerType: ProviderType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.Trigger.Builder =
         software.amazon.awscdk.services.codepipeline.Trigger.Builder.create()
 
-    public override fun gitConfiguration(gitConfiguration: GitConfiguration) {
+    override fun gitConfiguration(gitConfiguration: GitConfiguration) {
       cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43bdb8c0f6051746f3f200fd74a269256b6b989d220404453f8b254e5c48c062")
-    public override fun gitConfiguration(gitConfiguration: GitConfiguration.Builder.() -> Unit):
-        Unit = gitConfiguration(GitConfiguration(gitConfiguration))
+    override fun gitConfiguration(gitConfiguration: GitConfiguration.Builder.() -> Unit): Unit =
+        gitConfiguration(GitConfiguration(gitConfiguration))
 
-    public override fun providerType(providerType: ProviderType) {
+    override fun providerType(providerType: ProviderType) {
       cdkBuilder.providerType(providerType.let(ProviderType::unwrap))
     }
 

@@ -208,108 +208,78 @@ public open class CfnGraphQLApi internal constructor(
   }
 
   public interface Builder {
-    public fun additionalAuthenticationProviders(additionalAuthenticationProviders: IResolvable) {
-    }
+    public fun additionalAuthenticationProviders(additionalAuthenticationProviders: IResolvable)
 
-    public fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>) {
-    }
+    public fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>)
 
-    public fun apiType(apiType: String) {
-    }
+    public fun apiType(apiType: String)
 
-    public fun authenticationType(authenticationType: String) {
-    }
+    public fun authenticationType(authenticationType: String)
 
-    public fun enhancedMetricsConfig(enhancedMetricsConfig: IResolvable) {
-    }
+    public fun enhancedMetricsConfig(enhancedMetricsConfig: IResolvable)
 
-    public fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty) {
-    }
+    public fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("32a3cbe12d2f9c1e1a862aab95ce5d1ed65deac5e1e157ce800b5bd5fb9660b0")
     public
-        fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty.Builder.() -> Unit) {
-    }
+        fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty.Builder.() -> Unit)
 
-    public fun environmentVariables(environmentVariables: Any) {
-    }
+    public fun environmentVariables(environmentVariables: Any)
 
-    public fun introspectionConfig(introspectionConfig: String) {
-    }
+    public fun introspectionConfig(introspectionConfig: String)
 
-    public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
-    }
+    public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable)
 
-    public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
-    }
+    public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da0488f40eaf1552ec2288dda6c9768e72ad743ce7745489d6072e08448f082f")
     public
-        fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty.Builder.() -> Unit) {
-    }
+        fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty.Builder.() -> Unit)
 
-    public fun logConfig(logConfig: IResolvable) {
-    }
+    public fun logConfig(logConfig: IResolvable)
 
-    public fun logConfig(logConfig: LogConfigProperty) {
-    }
+    public fun logConfig(logConfig: LogConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2c348d48fad955cda15b42b518ffcbb90f81c47fad3596459e8ddc515e4cf07")
-    public fun logConfig(logConfig: LogConfigProperty.Builder.() -> Unit) {
-    }
+    public fun logConfig(logConfig: LogConfigProperty.Builder.() -> Unit)
 
-    public fun mergedApiExecutionRoleArn(mergedApiExecutionRoleArn: String) {
-    }
+    public fun mergedApiExecutionRoleArn(mergedApiExecutionRoleArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
-    }
+    public fun openIdConnectConfig(openIdConnectConfig: IResolvable)
 
-    public fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
-    }
+    public fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fe4a9b46f44d59c47b3c13cb4b1549218bdb0f63f34a8a03263e81ca1c843d27")
     public
-        fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty.Builder.() -> Unit) {
-    }
+        fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty.Builder.() -> Unit)
 
-    public fun ownerContact(ownerContact: String) {
-    }
+    public fun ownerContact(ownerContact: String)
 
-    public fun queryDepthLimit(queryDepthLimit: Number) {
-    }
+    public fun queryDepthLimit(queryDepthLimit: Number)
 
-    public fun resolverCountLimit(resolverCountLimit: Number) {
-    }
+    public fun resolverCountLimit(resolverCountLimit: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userPoolConfig(userPoolConfig: IResolvable) {
-    }
+    public fun userPoolConfig(userPoolConfig: IResolvable)
 
-    public fun userPoolConfig(userPoolConfig: UserPoolConfigProperty) {
-    }
+    public fun userPoolConfig(userPoolConfig: UserPoolConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a451ad14d60acde1fe3c55adbbc11e432d8495048e155210873a9d30f0d2b986")
-    public fun userPoolConfig(userPoolConfig: UserPoolConfigProperty.Builder.() -> Unit) {
-    }
+    public fun userPoolConfig(userPoolConfig: UserPoolConfigProperty.Builder.() -> Unit)
 
-    public fun visibility(visibility: String) {
-    }
+    public fun visibility(visibility: String)
 
-    public fun xrayEnabled(xrayEnabled: Boolean) {
-    }
+    public fun xrayEnabled(xrayEnabled: Boolean)
 
-    public fun xrayEnabled(xrayEnabled: IResolvable) {
-    }
+    public fun xrayEnabled(xrayEnabled: IResolvable)
   }
 
   private class BuilderImpl(
@@ -319,135 +289,131 @@ public open class CfnGraphQLApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnGraphQLApi.Builder =
         software.amazon.awscdk.services.appsync.CfnGraphQLApi.Builder.create(scope, id)
 
-    public override
-        fun additionalAuthenticationProviders(additionalAuthenticationProviders: IResolvable) {
+    override fun additionalAuthenticationProviders(additionalAuthenticationProviders: IResolvable) {
       cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders.let(IResolvable::unwrap))
     }
 
-    public override
-        fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>) {
+    override fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>) {
       cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders)
     }
 
-    public override fun apiType(apiType: String) {
+    override fun apiType(apiType: String) {
       cdkBuilder.apiType(apiType)
     }
 
-    public override fun authenticationType(authenticationType: String) {
+    override fun authenticationType(authenticationType: String) {
       cdkBuilder.authenticationType(authenticationType)
     }
 
-    public override fun enhancedMetricsConfig(enhancedMetricsConfig: IResolvable) {
+    override fun enhancedMetricsConfig(enhancedMetricsConfig: IResolvable) {
       cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty) {
+    override fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty) {
       cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig.let(EnhancedMetricsConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("32a3cbe12d2f9c1e1a862aab95ce5d1ed65deac5e1e157ce800b5bd5fb9660b0")
-    public override
+    override
         fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty.Builder.() -> Unit):
         Unit = enhancedMetricsConfig(EnhancedMetricsConfigProperty(enhancedMetricsConfig))
 
-    public override fun environmentVariables(environmentVariables: Any) {
+    override fun environmentVariables(environmentVariables: Any) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 
-    public override fun introspectionConfig(introspectionConfig: String) {
+    override fun introspectionConfig(introspectionConfig: String) {
       cdkBuilder.introspectionConfig(introspectionConfig)
     }
 
-    public override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
+    override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
       cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
+    override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
       cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da0488f40eaf1552ec2288dda6c9768e72ad743ce7745489d6072e08448f082f")
-    public override
+    override
         fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty.Builder.() -> Unit):
         Unit = lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty(lambdaAuthorizerConfig))
 
-    public override fun logConfig(logConfig: IResolvable) {
+    override fun logConfig(logConfig: IResolvable) {
       cdkBuilder.logConfig(logConfig.let(IResolvable::unwrap))
     }
 
-    public override fun logConfig(logConfig: LogConfigProperty) {
+    override fun logConfig(logConfig: LogConfigProperty) {
       cdkBuilder.logConfig(logConfig.let(LogConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2c348d48fad955cda15b42b518ffcbb90f81c47fad3596459e8ddc515e4cf07")
-    public override fun logConfig(logConfig: LogConfigProperty.Builder.() -> Unit): Unit =
+    override fun logConfig(logConfig: LogConfigProperty.Builder.() -> Unit): Unit =
         logConfig(LogConfigProperty(logConfig))
 
-    public override fun mergedApiExecutionRoleArn(mergedApiExecutionRoleArn: String) {
+    override fun mergedApiExecutionRoleArn(mergedApiExecutionRoleArn: String) {
       cdkBuilder.mergedApiExecutionRoleArn(mergedApiExecutionRoleArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
+    override fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
       cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(IResolvable::unwrap))
     }
 
-    public override fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
+    override fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
       cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIDConnectConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fe4a9b46f44d59c47b3c13cb4b1549218bdb0f63f34a8a03263e81ca1c843d27")
-    public override
+    override
         fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty.Builder.() -> Unit):
         Unit = openIdConnectConfig(OpenIDConnectConfigProperty(openIdConnectConfig))
 
-    public override fun ownerContact(ownerContact: String) {
+    override fun ownerContact(ownerContact: String) {
       cdkBuilder.ownerContact(ownerContact)
     }
 
-    public override fun queryDepthLimit(queryDepthLimit: Number) {
+    override fun queryDepthLimit(queryDepthLimit: Number) {
       cdkBuilder.queryDepthLimit(queryDepthLimit)
     }
 
-    public override fun resolverCountLimit(resolverCountLimit: Number) {
+    override fun resolverCountLimit(resolverCountLimit: Number) {
       cdkBuilder.resolverCountLimit(resolverCountLimit)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userPoolConfig(userPoolConfig: IResolvable) {
+    override fun userPoolConfig(userPoolConfig: IResolvable) {
       cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable::unwrap))
     }
 
-    public override fun userPoolConfig(userPoolConfig: UserPoolConfigProperty) {
+    override fun userPoolConfig(userPoolConfig: UserPoolConfigProperty) {
       cdkBuilder.userPoolConfig(userPoolConfig.let(UserPoolConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a451ad14d60acde1fe3c55adbbc11e432d8495048e155210873a9d30f0d2b986")
-    public override fun userPoolConfig(userPoolConfig: UserPoolConfigProperty.Builder.() -> Unit):
-        Unit = userPoolConfig(UserPoolConfigProperty(userPoolConfig))
+    override fun userPoolConfig(userPoolConfig: UserPoolConfigProperty.Builder.() -> Unit): Unit =
+        userPoolConfig(UserPoolConfigProperty(userPoolConfig))
 
-    public override fun visibility(visibility: String) {
+    override fun visibility(visibility: String) {
       cdkBuilder.visibility(visibility)
     }
 
-    public override fun xrayEnabled(xrayEnabled: Boolean) {
+    override fun xrayEnabled(xrayEnabled: Boolean) {
       cdkBuilder.xrayEnabled(xrayEnabled)
     }
 
-    public override fun xrayEnabled(xrayEnabled: IResolvable) {
+    override fun xrayEnabled(xrayEnabled: IResolvable) {
       cdkBuilder.xrayEnabled(xrayEnabled.let(IResolvable::unwrap))
     }
 
@@ -483,17 +449,13 @@ public open class CfnGraphQLApi internal constructor(
     public fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
 
     public interface Builder {
-      public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
-      }
+      public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String)
 
-      public fun excludeVerboseContent(excludeVerboseContent: Boolean) {
-      }
+      public fun excludeVerboseContent(excludeVerboseContent: Boolean)
 
-      public fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
-      }
+      public fun excludeVerboseContent(excludeVerboseContent: IResolvable)
 
-      public fun fieldLogLevel(fieldLogLevel: String) {
-      }
+      public fun fieldLogLevel(fieldLogLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -501,19 +463,19 @@ public open class CfnGraphQLApi internal constructor(
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty.builder()
 
-      public override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
+      override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
         cdkBuilder.cloudWatchLogsRoleArn(cloudWatchLogsRoleArn)
       }
 
-      public override fun excludeVerboseContent(excludeVerboseContent: Boolean) {
+      override fun excludeVerboseContent(excludeVerboseContent: Boolean) {
         cdkBuilder.excludeVerboseContent(excludeVerboseContent)
       }
 
-      public override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
+      override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
         cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable::unwrap))
       }
 
-      public override fun fieldLogLevel(fieldLogLevel: String) {
+      override fun fieldLogLevel(fieldLogLevel: String) {
         cdkBuilder.fieldLogLevel(fieldLogLevel)
       }
 
@@ -525,11 +487,11 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LogConfigProperty,
     ) : LogConfigProperty {
-      public override fun cloudWatchLogsRoleArn(): String? = unwrap(this).getCloudWatchLogsRoleArn()
+      override fun cloudWatchLogsRoleArn(): String? = unwrap(this).getCloudWatchLogsRoleArn()
 
-      public override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
+      override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
 
-      public override fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
+      override fun fieldLogLevel(): String? = unwrap(this).getFieldLogLevel()
     }
 
     public companion object {
@@ -562,43 +524,33 @@ public open class CfnGraphQLApi internal constructor(
     public fun userPoolConfig(): Any? = unwrap(this).getUserPoolConfig()
 
     public interface Builder {
-      public fun authenticationType(authenticationType: String) {
-      }
+      public fun authenticationType(authenticationType: String)
 
-      public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
-      }
+      public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable)
 
-      public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
-      }
+      public fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c725c71f314c4bd56eb2b17f58b70b2d257681b61ea70bc4693e8c8a18bfd3e")
       public
-          fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty.Builder.() -> Unit) {
-      }
+          fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty.Builder.() -> Unit)
 
-      public fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
-      }
+      public fun openIdConnectConfig(openIdConnectConfig: IResolvable)
 
-      public fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
-      }
+      public fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e9498b6b157ad96b3b0958064168aed6238968a8c43d4575f26c6084b6c2f039")
       public
-          fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty.Builder.() -> Unit) {
-      }
+          fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty.Builder.() -> Unit)
 
-      public fun userPoolConfig(userPoolConfig: IResolvable) {
-      }
+      public fun userPoolConfig(userPoolConfig: IResolvable)
 
-      public fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty) {
-      }
+      public fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b11fb0086d77979f441505f9978f2cde9cb032a3d2b086df92ff5a5070e180d0")
-      public fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty.Builder.() -> Unit) {
-      }
+      public fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -607,52 +559,50 @@ public open class CfnGraphQLApi internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty.builder()
 
-      public override fun authenticationType(authenticationType: String) {
+      override fun authenticationType(authenticationType: String) {
         cdkBuilder.authenticationType(authenticationType)
       }
 
-      public override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
+      override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
         cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
+      override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
         cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c725c71f314c4bd56eb2b17f58b70b2d257681b61ea70bc4693e8c8a18bfd3e")
-      public override
+      override
           fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty.Builder.() -> Unit):
           Unit = lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty(lambdaAuthorizerConfig))
 
-      public override fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
+      override fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
         cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(IResolvable::unwrap))
       }
 
-      public override fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
+      override fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
         cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIDConnectConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e9498b6b157ad96b3b0958064168aed6238968a8c43d4575f26c6084b6c2f039")
-      public override
+      override
           fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty.Builder.() -> Unit):
           Unit = openIdConnectConfig(OpenIDConnectConfigProperty(openIdConnectConfig))
 
-      public override fun userPoolConfig(userPoolConfig: IResolvable) {
+      override fun userPoolConfig(userPoolConfig: IResolvable) {
         cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable::unwrap))
       }
 
-      public override fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty) {
+      override fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty) {
         cdkBuilder.userPoolConfig(userPoolConfig.let(CognitoUserPoolConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b11fb0086d77979f441505f9978f2cde9cb032a3d2b086df92ff5a5070e180d0")
-      public override
-          fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty.Builder.() -> Unit): Unit
-          = userPoolConfig(CognitoUserPoolConfigProperty(userPoolConfig))
+      override fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty.Builder.() -> Unit):
+          Unit = userPoolConfig(CognitoUserPoolConfigProperty(userPoolConfig))
 
       public fun build():
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty
@@ -663,13 +613,13 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.AdditionalAuthenticationProviderProperty,
     ) : AdditionalAuthenticationProviderProperty {
-      public override fun authenticationType(): String = unwrap(this).getAuthenticationType()
+      override fun authenticationType(): String = unwrap(this).getAuthenticationType()
 
-      public override fun lambdaAuthorizerConfig(): Any? = unwrap(this).getLambdaAuthorizerConfig()
+      override fun lambdaAuthorizerConfig(): Any? = unwrap(this).getLambdaAuthorizerConfig()
 
-      public override fun openIdConnectConfig(): Any? = unwrap(this).getOpenIdConnectConfig()
+      override fun openIdConnectConfig(): Any? = unwrap(this).getOpenIdConnectConfig()
 
-      public override fun userPoolConfig(): Any? = unwrap(this).getUserPoolConfig()
+      override fun userPoolConfig(): Any? = unwrap(this).getUserPoolConfig()
     }
 
     public companion object {
@@ -703,14 +653,11 @@ public open class CfnGraphQLApi internal constructor(
         unwrap(this).getIdentityValidationExpression()
 
     public interface Builder {
-      public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
-      }
+      public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number)
 
-      public fun authorizerUri(authorizerUri: String) {
-      }
+      public fun authorizerUri(authorizerUri: String)
 
-      public fun identityValidationExpression(identityValidationExpression: String) {
-      }
+      public fun identityValidationExpression(identityValidationExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -719,15 +666,15 @@ public open class CfnGraphQLApi internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty.builder()
 
-      public override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
+      override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
         cdkBuilder.authorizerResultTtlInSeconds(authorizerResultTtlInSeconds)
       }
 
-      public override fun authorizerUri(authorizerUri: String) {
+      override fun authorizerUri(authorizerUri: String) {
         cdkBuilder.authorizerUri(authorizerUri)
       }
 
-      public override fun identityValidationExpression(identityValidationExpression: String) {
+      override fun identityValidationExpression(identityValidationExpression: String) {
         cdkBuilder.identityValidationExpression(identityValidationExpression)
       }
 
@@ -740,12 +687,12 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.LambdaAuthorizerConfigProperty,
     ) : LambdaAuthorizerConfigProperty {
-      public override fun authorizerResultTtlInSeconds(): Number? =
+      override fun authorizerResultTtlInSeconds(): Number? =
           unwrap(this).getAuthorizerResultTtlInSeconds()
 
-      public override fun authorizerUri(): String? = unwrap(this).getAuthorizerUri()
+      override fun authorizerUri(): String? = unwrap(this).getAuthorizerUri()
 
-      public override fun identityValidationExpression(): String? =
+      override fun identityValidationExpression(): String? =
           unwrap(this).getIdentityValidationExpression()
     }
 
@@ -779,17 +726,13 @@ public open class CfnGraphQLApi internal constructor(
     public fun issuer(): String? = unwrap(this).getIssuer()
 
     public interface Builder {
-      public fun authTtl(authTtl: Number) {
-      }
+      public fun authTtl(authTtl: Number)
 
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun iatTtl(iatTtl: Number) {
-      }
+      public fun iatTtl(iatTtl: Number)
 
-      public fun issuer(issuer: String) {
-      }
+      public fun issuer(issuer: String)
     }
 
     private class BuilderImpl : Builder {
@@ -798,19 +741,19 @@ public open class CfnGraphQLApi internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty.builder()
 
-      public override fun authTtl(authTtl: Number) {
+      override fun authTtl(authTtl: Number) {
         cdkBuilder.authTtl(authTtl)
       }
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun iatTtl(iatTtl: Number) {
+      override fun iatTtl(iatTtl: Number) {
         cdkBuilder.iatTtl(iatTtl)
       }
 
-      public override fun issuer(issuer: String) {
+      override fun issuer(issuer: String) {
         cdkBuilder.issuer(issuer)
       }
 
@@ -823,13 +766,13 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.OpenIDConnectConfigProperty,
     ) : OpenIDConnectConfigProperty {
-      public override fun authTtl(): Number? = unwrap(this).getAuthTtl()
+      override fun authTtl(): Number? = unwrap(this).getAuthTtl()
 
-      public override fun clientId(): String? = unwrap(this).getClientId()
+      override fun clientId(): String? = unwrap(this).getClientId()
 
-      public override fun iatTtl(): Number? = unwrap(this).getIatTtl()
+      override fun iatTtl(): Number? = unwrap(this).getIatTtl()
 
-      public override fun issuer(): String? = unwrap(this).getIssuer()
+      override fun issuer(): String? = unwrap(this).getIssuer()
     }
 
     public companion object {
@@ -860,14 +803,11 @@ public open class CfnGraphQLApi internal constructor(
     public fun userPoolId(): String? = unwrap(this).getUserPoolId()
 
     public interface Builder {
-      public fun appIdClientRegex(appIdClientRegex: String) {
-      }
+      public fun appIdClientRegex(appIdClientRegex: String)
 
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun userPoolId(userPoolId: String) {
-      }
+      public fun userPoolId(userPoolId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -876,15 +816,15 @@ public open class CfnGraphQLApi internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty.builder()
 
-      public override fun appIdClientRegex(appIdClientRegex: String) {
+      override fun appIdClientRegex(appIdClientRegex: String) {
         cdkBuilder.appIdClientRegex(appIdClientRegex)
       }
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun userPoolId(userPoolId: String) {
+      override fun userPoolId(userPoolId: String) {
         cdkBuilder.userPoolId(userPoolId)
       }
 
@@ -897,11 +837,11 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.CognitoUserPoolConfigProperty,
     ) : CognitoUserPoolConfigProperty {
-      public override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
+      override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
 
-      public override fun awsRegion(): String? = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
 
-      public override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
     }
 
     public companion object {
@@ -934,17 +874,13 @@ public open class CfnGraphQLApi internal constructor(
     public fun userPoolId(): String? = unwrap(this).getUserPoolId()
 
     public interface Builder {
-      public fun appIdClientRegex(appIdClientRegex: String) {
-      }
+      public fun appIdClientRegex(appIdClientRegex: String)
 
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun defaultAction(defaultAction: String) {
-      }
+      public fun defaultAction(defaultAction: String)
 
-      public fun userPoolId(userPoolId: String) {
-      }
+      public fun userPoolId(userPoolId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -952,19 +888,19 @@ public open class CfnGraphQLApi internal constructor(
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty.builder()
 
-      public override fun appIdClientRegex(appIdClientRegex: String) {
+      override fun appIdClientRegex(appIdClientRegex: String) {
         cdkBuilder.appIdClientRegex(appIdClientRegex)
       }
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun defaultAction(defaultAction: String) {
+      override fun defaultAction(defaultAction: String) {
         cdkBuilder.defaultAction(defaultAction)
       }
 
-      public override fun userPoolId(userPoolId: String) {
+      override fun userPoolId(userPoolId: String) {
         cdkBuilder.userPoolId(userPoolId)
       }
 
@@ -977,13 +913,13 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.UserPoolConfigProperty,
     ) : UserPoolConfigProperty {
-      public override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
+      override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
 
-      public override fun awsRegion(): String? = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
 
-      public override fun defaultAction(): String? = unwrap(this).getDefaultAction()
+      override fun defaultAction(): String? = unwrap(this).getDefaultAction()
 
-      public override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
     }
 
     public companion object {
@@ -1014,14 +950,11 @@ public open class CfnGraphQLApi internal constructor(
     public fun resolverLevelMetricsBehavior(): String
 
     public interface Builder {
-      public fun dataSourceLevelMetricsBehavior(dataSourceLevelMetricsBehavior: String) {
-      }
+      public fun dataSourceLevelMetricsBehavior(dataSourceLevelMetricsBehavior: String)
 
-      public fun operationLevelMetricsConfig(operationLevelMetricsConfig: String) {
-      }
+      public fun operationLevelMetricsConfig(operationLevelMetricsConfig: String)
 
-      public fun resolverLevelMetricsBehavior(resolverLevelMetricsBehavior: String) {
-      }
+      public fun resolverLevelMetricsBehavior(resolverLevelMetricsBehavior: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1030,15 +963,15 @@ public open class CfnGraphQLApi internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty.builder()
 
-      public override fun dataSourceLevelMetricsBehavior(dataSourceLevelMetricsBehavior: String) {
+      override fun dataSourceLevelMetricsBehavior(dataSourceLevelMetricsBehavior: String) {
         cdkBuilder.dataSourceLevelMetricsBehavior(dataSourceLevelMetricsBehavior)
       }
 
-      public override fun operationLevelMetricsConfig(operationLevelMetricsConfig: String) {
+      override fun operationLevelMetricsConfig(operationLevelMetricsConfig: String) {
         cdkBuilder.operationLevelMetricsConfig(operationLevelMetricsConfig)
       }
 
-      public override fun resolverLevelMetricsBehavior(resolverLevelMetricsBehavior: String) {
+      override fun resolverLevelMetricsBehavior(resolverLevelMetricsBehavior: String) {
         cdkBuilder.resolverLevelMetricsBehavior(resolverLevelMetricsBehavior)
       }
 
@@ -1051,13 +984,13 @@ public open class CfnGraphQLApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnGraphQLApi.EnhancedMetricsConfigProperty,
     ) : EnhancedMetricsConfigProperty {
-      public override fun dataSourceLevelMetricsBehavior(): String =
+      override fun dataSourceLevelMetricsBehavior(): String =
           unwrap(this).getDataSourceLevelMetricsBehavior()
 
-      public override fun operationLevelMetricsConfig(): String =
+      override fun operationLevelMetricsConfig(): String =
           unwrap(this).getOperationLevelMetricsConfig()
 
-      public override fun resolverLevelMetricsBehavior(): String =
+      override fun resolverLevelMetricsBehavior(): String =
           unwrap(this).getResolverLevelMetricsBehavior()
     }
 

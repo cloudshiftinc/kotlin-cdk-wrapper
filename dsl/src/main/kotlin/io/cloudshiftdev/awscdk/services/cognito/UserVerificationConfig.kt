@@ -14,36 +14,32 @@ public interface UserVerificationConfig {
   public fun smsMessage(): String? = unwrap(this).getSmsMessage()
 
   public interface Builder {
-    public fun emailBody(emailBody: String) {
-    }
+    public fun emailBody(emailBody: String)
 
-    public fun emailStyle(emailStyle: VerificationEmailStyle) {
-    }
+    public fun emailStyle(emailStyle: VerificationEmailStyle)
 
-    public fun emailSubject(emailSubject: String) {
-    }
+    public fun emailSubject(emailSubject: String)
 
-    public fun smsMessage(smsMessage: String) {
-    }
+    public fun smsMessage(smsMessage: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.UserVerificationConfig.Builder =
         software.amazon.awscdk.services.cognito.UserVerificationConfig.builder()
 
-    public override fun emailBody(emailBody: String) {
+    override fun emailBody(emailBody: String) {
       cdkBuilder.emailBody(emailBody)
     }
 
-    public override fun emailStyle(emailStyle: VerificationEmailStyle) {
+    override fun emailStyle(emailStyle: VerificationEmailStyle) {
       cdkBuilder.emailStyle(emailStyle.let(VerificationEmailStyle::unwrap))
     }
 
-    public override fun emailSubject(emailSubject: String) {
+    override fun emailSubject(emailSubject: String) {
       cdkBuilder.emailSubject(emailSubject)
     }
 
-    public override fun smsMessage(smsMessage: String) {
+    override fun smsMessage(smsMessage: String) {
       cdkBuilder.smsMessage(smsMessage)
     }
 
@@ -54,14 +50,14 @@ public interface UserVerificationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.UserVerificationConfig,
   ) : UserVerificationConfig {
-    public override fun emailBody(): String? = unwrap(this).getEmailBody()
+    override fun emailBody(): String? = unwrap(this).getEmailBody()
 
-    public override fun emailStyle(): VerificationEmailStyle? =
+    override fun emailStyle(): VerificationEmailStyle? =
         unwrap(this).getEmailStyle()?.let(VerificationEmailStyle::wrap)
 
-    public override fun emailSubject(): String? = unwrap(this).getEmailSubject()
+    override fun emailSubject(): String? = unwrap(this).getEmailSubject()
 
-    public override fun smsMessage(): String? = unwrap(this).getSmsMessage()
+    override fun smsMessage(): String? = unwrap(this).getSmsMessage()
   }
 
   public companion object {

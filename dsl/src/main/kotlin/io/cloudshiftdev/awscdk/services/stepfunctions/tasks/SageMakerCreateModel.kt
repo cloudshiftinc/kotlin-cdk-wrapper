@@ -42,77 +42,55 @@ public open class SageMakerCreateModel internal constructor(
   public open fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun containers(containers: List<IContainerDefinition>) {
-    }
+    public fun containers(containers: List<IContainerDefinition>)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d67268899f25eaf065c4a5e6389fa26809a812a52c07457d2befb6b858ff8f3c")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
-    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
-    }
+    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun modelName(modelName: String) {
-    }
+    public fun modelName(modelName: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun primaryContainer(primaryContainer: IContainerDefinition) {
-    }
+    public fun primaryContainer(primaryContainer: IContainerDefinition)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67e5dfda72939e998d3a70c474e672759c4137aa680a47bcf097c78126229078")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun tags(tags: TaskInput) {
-    }
+    public fun tags(tags: TaskInput)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -124,95 +102,95 @@ public open class SageMakerCreateModel internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel.Builder.create(scope,
         id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun containers(containers: List<IContainerDefinition>) {
+    override fun containers(containers: List<IContainerDefinition>) {
       cdkBuilder.containers(containers.map(IContainerDefinition::unwrap))
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d67268899f25eaf065c4a5e6389fa26809a812a52c07457d2befb6b858ff8f3c")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
-    public override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+    override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
       cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun modelName(modelName: String) {
+    override fun modelName(modelName: String) {
       cdkBuilder.modelName(modelName)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun primaryContainer(primaryContainer: IContainerDefinition) {
+    override fun primaryContainer(primaryContainer: IContainerDefinition) {
       cdkBuilder.primaryContainer(primaryContainer.let(IContainerDefinition::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67e5dfda72939e998d3a70c474e672759c4137aa680a47bcf097c78126229078")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun tags(tags: TaskInput) {
+    override fun tags(tags: TaskInput) {
       cdkBuilder.tags(tags.let(TaskInput::unwrap))
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

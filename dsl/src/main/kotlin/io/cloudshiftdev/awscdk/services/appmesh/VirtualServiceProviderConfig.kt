@@ -14,28 +14,23 @@ public interface VirtualServiceProviderConfig {
       unwrap(this).getVirtualRouterProvider()?.let(CfnVirtualService.VirtualRouterServiceProviderProperty::wrap)
 
   public interface Builder {
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
     public
-        fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty) {
-    }
+        fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c00b53dec9177cbcf9f1ba1697485c0fce397296747f40401077874542aa5b85")
     public
-        fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty.Builder.() -> Unit) {
-    }
+        fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty.Builder.() -> Unit)
 
     public
-        fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty) {
-    }
+        fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c1d67054138560b169cf3e498777aeee7451e48ab598dd33aef6b116d6b66df")
     public
-        fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty.Builder.() -> Unit) {
-    }
+        fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -43,30 +38,30 @@ public interface VirtualServiceProviderConfig {
         software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig.Builder =
         software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig.builder()
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override
+    override
         fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty) {
       cdkBuilder.virtualNodeProvider(virtualNodeProvider.let(CfnVirtualService.VirtualNodeServiceProviderProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c00b53dec9177cbcf9f1ba1697485c0fce397296747f40401077874542aa5b85")
-    public override
+    override
         fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty.Builder.() -> Unit):
         Unit =
         virtualNodeProvider(CfnVirtualService.VirtualNodeServiceProviderProperty(virtualNodeProvider))
 
-    public override
+    override
         fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty) {
       cdkBuilder.virtualRouterProvider(virtualRouterProvider.let(CfnVirtualService.VirtualRouterServiceProviderProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c1d67054138560b169cf3e498777aeee7451e48ab598dd33aef6b116d6b66df")
-    public override
+    override
         fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty.Builder.() -> Unit):
         Unit =
         virtualRouterProvider(CfnVirtualService.VirtualRouterServiceProviderProperty(virtualRouterProvider))
@@ -78,14 +73,12 @@ public interface VirtualServiceProviderConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig,
   ) : VirtualServiceProviderConfig {
-    public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
+    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-    public override fun virtualNodeProvider(): CfnVirtualService.VirtualNodeServiceProviderProperty?
-        =
+    override fun virtualNodeProvider(): CfnVirtualService.VirtualNodeServiceProviderProperty? =
         unwrap(this).getVirtualNodeProvider()?.let(CfnVirtualService.VirtualNodeServiceProviderProperty::wrap)
 
-    public override fun virtualRouterProvider():
-        CfnVirtualService.VirtualRouterServiceProviderProperty? =
+    override fun virtualRouterProvider(): CfnVirtualService.VirtualRouterServiceProviderProperty? =
         unwrap(this).getVirtualRouterProvider()?.let(CfnVirtualService.VirtualRouterServiceProviderProperty::wrap)
   }
 

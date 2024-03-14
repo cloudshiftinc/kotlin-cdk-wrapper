@@ -12,29 +12,26 @@ public interface EdgeLambda {
   public fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
 
   public interface Builder {
-    public fun eventType(eventType: LambdaEdgeEventType) {
-    }
+    public fun eventType(eventType: LambdaEdgeEventType)
 
-    public fun functionVersion(functionVersion: IVersion) {
-    }
+    public fun functionVersion(functionVersion: IVersion)
 
-    public fun includeBody(includeBody: Boolean) {
-    }
+    public fun includeBody(includeBody: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.EdgeLambda.Builder =
         software.amazon.awscdk.services.cloudfront.EdgeLambda.builder()
 
-    public override fun eventType(eventType: LambdaEdgeEventType) {
+    override fun eventType(eventType: LambdaEdgeEventType) {
       cdkBuilder.eventType(eventType.let(LambdaEdgeEventType::unwrap))
     }
 
-    public override fun functionVersion(functionVersion: IVersion) {
+    override fun functionVersion(functionVersion: IVersion) {
       cdkBuilder.functionVersion(functionVersion.let(IVersion::unwrap))
     }
 
-    public override fun includeBody(includeBody: Boolean) {
+    override fun includeBody(includeBody: Boolean) {
       cdkBuilder.includeBody(includeBody)
     }
 
@@ -44,13 +41,12 @@ public interface EdgeLambda {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.EdgeLambda,
   ) : EdgeLambda {
-    public override fun eventType(): LambdaEdgeEventType =
+    override fun eventType(): LambdaEdgeEventType =
         unwrap(this).getEventType().let(LambdaEdgeEventType::wrap)
 
-    public override fun functionVersion(): IVersion =
-        unwrap(this).getFunctionVersion().let(IVersion::wrap)
+    override fun functionVersion(): IVersion = unwrap(this).getFunctionVersion().let(IVersion::wrap)
 
-    public override fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
+    override fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
   }
 
   public companion object {

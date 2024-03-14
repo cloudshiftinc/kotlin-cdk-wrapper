@@ -46,14 +46,11 @@ public open class CfnCell internal constructor(
   }
 
   public interface Builder {
-    public fun cellName(cellName: String) {
-    }
+    public fun cellName(cellName: String)
 
-    public fun cells(cells: List<String>) {
-    }
+    public fun cells(cells: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -63,15 +60,15 @@ public open class CfnCell internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53recoveryreadiness.CfnCell.Builder
         = software.amazon.awscdk.services.route53recoveryreadiness.CfnCell.Builder.create(scope, id)
 
-    public override fun cellName(cellName: String) {
+    override fun cellName(cellName: String) {
       cdkBuilder.cellName(cellName)
     }
 
-    public override fun cells(cells: List<String>) {
+    override fun cells(cells: List<String>) {
       cdkBuilder.cells(cells)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

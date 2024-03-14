@@ -25,50 +25,44 @@ public open class Action internal constructor(
   public open fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun actionPoints(actionPoints: List<ActionPoint>) {
-    }
+    public fun actionPoints(actionPoints: List<ActionPoint>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventDestination(eventDestination: IEventDestination) {
-    }
+    public fun eventDestination(eventDestination: IEventDestination)
 
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean) {
-    }
+    public fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.Action.Builder =
         software.amazon.awscdk.services.appconfig.Action.Builder.create()
 
-    public override fun actionPoints(actionPoints: List<ActionPoint>) {
+    override fun actionPoints(actionPoints: List<ActionPoint>) {
       cdkBuilder.actionPoints(actionPoints.map(ActionPoint::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventDestination(eventDestination: IEventDestination) {
+    override fun eventDestination(eventDestination: IEventDestination) {
       cdkBuilder.eventDestination(eventDestination.let(IEventDestination::unwrap))
     }
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean) {
+    override fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean) {
       cdkBuilder.invokeWithoutExecutionRole(invokeWithoutExecutionRole)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

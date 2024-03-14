@@ -20,71 +20,62 @@ public interface EfsVolumeOptions : EcsVolumeOptions {
   public fun useJobRole(): Boolean? = unwrap(this).getUseJobRole()
 
   public interface Builder {
-    public fun accessPointId(accessPointId: String) {
-    }
+    public fun accessPointId(accessPointId: String)
 
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun enableTransitEncryption(enableTransitEncryption: Boolean) {
-    }
+    public fun enableTransitEncryption(enableTransitEncryption: Boolean)
 
-    public fun fileSystem(fileSystem: IFileSystem) {
-    }
+    public fun fileSystem(fileSystem: IFileSystem)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readonly(readonly: Boolean) {
-    }
+    public fun readonly(readonly: Boolean)
 
-    public fun rootDirectory(rootDirectory: String) {
-    }
+    public fun rootDirectory(rootDirectory: String)
 
-    public fun transitEncryptionPort(transitEncryptionPort: Number) {
-    }
+    public fun transitEncryptionPort(transitEncryptionPort: Number)
 
-    public fun useJobRole(useJobRole: Boolean) {
-    }
+    public fun useJobRole(useJobRole: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.EfsVolumeOptions.Builder =
         software.amazon.awscdk.services.batch.EfsVolumeOptions.builder()
 
-    public override fun accessPointId(accessPointId: String) {
+    override fun accessPointId(accessPointId: String) {
       cdkBuilder.accessPointId(accessPointId)
     }
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun enableTransitEncryption(enableTransitEncryption: Boolean) {
+    override fun enableTransitEncryption(enableTransitEncryption: Boolean) {
       cdkBuilder.enableTransitEncryption(enableTransitEncryption)
     }
 
-    public override fun fileSystem(fileSystem: IFileSystem) {
+    override fun fileSystem(fileSystem: IFileSystem) {
       cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readonly(readonly: Boolean) {
+    override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
 
-    public override fun rootDirectory(rootDirectory: String) {
+    override fun rootDirectory(rootDirectory: String) {
       cdkBuilder.rootDirectory(rootDirectory)
     }
 
-    public override fun transitEncryptionPort(transitEncryptionPort: Number) {
+    override fun transitEncryptionPort(transitEncryptionPort: Number) {
       cdkBuilder.transitEncryptionPort(transitEncryptionPort)
     }
 
-    public override fun useJobRole(useJobRole: Boolean) {
+    override fun useJobRole(useJobRole: Boolean) {
       cdkBuilder.useJobRole(useJobRole)
     }
 
@@ -94,25 +85,23 @@ public interface EfsVolumeOptions : EcsVolumeOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.EfsVolumeOptions,
   ) : EfsVolumeOptions {
-    public override fun accessPointId(): String? = unwrap(this).getAccessPointId()
+    override fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun enableTransitEncryption(): Boolean? =
-        unwrap(this).getEnableTransitEncryption()
+    override fun enableTransitEncryption(): Boolean? = unwrap(this).getEnableTransitEncryption()
 
-    public override fun fileSystem(): IFileSystem =
-        unwrap(this).getFileSystem().let(IFileSystem::wrap)
+    override fun fileSystem(): IFileSystem = unwrap(this).getFileSystem().let(IFileSystem::wrap)
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun readonly(): Boolean? = unwrap(this).getReadonly()
+    override fun readonly(): Boolean? = unwrap(this).getReadonly()
 
-    public override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
+    override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
 
-    public override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
+    override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
 
-    public override fun useJobRole(): Boolean? = unwrap(this).getUseJobRole()
+    override fun useJobRole(): Boolean? = unwrap(this).getUseJobRole()
   }
 
   public companion object {

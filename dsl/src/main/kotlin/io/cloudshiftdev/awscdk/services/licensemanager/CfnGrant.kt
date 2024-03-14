@@ -58,23 +58,17 @@ public open class CfnGrant internal constructor(
   }
 
   public interface Builder {
-    public fun allowedOperations(allowedOperations: List<String>) {
-    }
+    public fun allowedOperations(allowedOperations: List<String>)
 
-    public fun grantName(grantName: String) {
-    }
+    public fun grantName(grantName: String)
 
-    public fun homeRegion(homeRegion: String) {
-    }
+    public fun homeRegion(homeRegion: String)
 
-    public fun licenseArn(licenseArn: String) {
-    }
+    public fun licenseArn(licenseArn: String)
 
-    public fun principals(principals: List<String>) {
-    }
+    public fun principals(principals: List<String>)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
   }
 
   private class BuilderImpl(
@@ -84,27 +78,27 @@ public open class CfnGrant internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.licensemanager.CfnGrant.Builder =
         software.amazon.awscdk.services.licensemanager.CfnGrant.Builder.create(scope, id)
 
-    public override fun allowedOperations(allowedOperations: List<String>) {
+    override fun allowedOperations(allowedOperations: List<String>) {
       cdkBuilder.allowedOperations(allowedOperations)
     }
 
-    public override fun grantName(grantName: String) {
+    override fun grantName(grantName: String) {
       cdkBuilder.grantName(grantName)
     }
 
-    public override fun homeRegion(homeRegion: String) {
+    override fun homeRegion(homeRegion: String) {
       cdkBuilder.homeRegion(homeRegion)
     }
 
-    public override fun licenseArn(licenseArn: String) {
+    override fun licenseArn(licenseArn: String) {
       cdkBuilder.licenseArn(licenseArn)
     }
 
-    public override fun principals(principals: List<String>) {
+    override fun principals(principals: List<String>) {
       cdkBuilder.principals(principals)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 

@@ -65,25 +65,19 @@ public open class CfnMitigationAction internal constructor(
   }
 
   public interface Builder {
-    public fun actionName(actionName: String) {
-    }
+    public fun actionName(actionName: String)
 
-    public fun actionParams(actionParams: IResolvable) {
-    }
+    public fun actionParams(actionParams: IResolvable)
 
-    public fun actionParams(actionParams: ActionParamsProperty) {
-    }
+    public fun actionParams(actionParams: ActionParamsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94827d7ae4954a5b85a0e5f58a8b7663a47cd9b53b03e99ef47ab8d0ffdb6d45")
-    public fun actionParams(actionParams: ActionParamsProperty.Builder.() -> Unit) {
-    }
+    public fun actionParams(actionParams: ActionParamsProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -93,28 +87,28 @@ public open class CfnMitigationAction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnMitigationAction.Builder =
         software.amazon.awscdk.services.iot.CfnMitigationAction.Builder.create(scope, id)
 
-    public override fun actionName(actionName: String) {
+    override fun actionName(actionName: String) {
       cdkBuilder.actionName(actionName)
     }
 
-    public override fun actionParams(actionParams: IResolvable) {
+    override fun actionParams(actionParams: IResolvable) {
       cdkBuilder.actionParams(actionParams.let(IResolvable::unwrap))
     }
 
-    public override fun actionParams(actionParams: ActionParamsProperty) {
+    override fun actionParams(actionParams: ActionParamsProperty) {
       cdkBuilder.actionParams(actionParams.let(ActionParamsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94827d7ae4954a5b85a0e5f58a8b7663a47cd9b53b03e99ef47ab8d0ffdb6d45")
-    public override fun actionParams(actionParams: ActionParamsProperty.Builder.() -> Unit): Unit =
+    override fun actionParams(actionParams: ActionParamsProperty.Builder.() -> Unit): Unit =
         actionParams(ActionParamsProperty(actionParams))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -146,8 +140,7 @@ public open class CfnMitigationAction internal constructor(
     public fun templateName(): String
 
     public interface Builder {
-      public fun templateName(templateName: String) {
-      }
+      public fun templateName(templateName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -156,7 +149,7 @@ public open class CfnMitigationAction internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty.builder()
 
-      public override fun templateName(templateName: String) {
+      override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
       }
 
@@ -169,7 +162,7 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.ReplaceDefaultPolicyVersionParamsProperty,
     ) : ReplaceDefaultPolicyVersionParamsProperty {
-      public override fun templateName(): String = unwrap(this).getTemplateName()
+      override fun templateName(): String = unwrap(this).getTemplateName()
     }
 
     public companion object {
@@ -197,8 +190,7 @@ public open class CfnMitigationAction internal constructor(
     public fun topicArn(): String
 
     public interface Builder {
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -207,7 +199,7 @@ public open class CfnMitigationAction internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty.builder()
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -220,7 +212,7 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.PublishFindingToSnsParamsProperty,
     ) : PublishFindingToSnsParamsProperty {
-      public override fun topicArn(): String = unwrap(this).getTopicArn()
+      override fun topicArn(): String = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -248,8 +240,7 @@ public open class CfnMitigationAction internal constructor(
     public fun action(): String
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
     }
 
     private class BuilderImpl : Builder {
@@ -258,7 +249,7 @@ public open class CfnMitigationAction internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
@@ -271,7 +262,7 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateDeviceCertificateParamsProperty,
     ) : UpdateDeviceCertificateParamsProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
     }
 
     public companion object {
@@ -311,82 +302,64 @@ public open class CfnMitigationAction internal constructor(
         unwrap(this).getUpdateDeviceCertificateParams()
 
     public interface Builder {
-      public fun addThingsToThingGroupParams(addThingsToThingGroupParams: IResolvable) {
-      }
+      public fun addThingsToThingGroupParams(addThingsToThingGroupParams: IResolvable)
 
       public
-          fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty) {
-      }
+          fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("576250c58660aa14398d2e7acc9859fef027ac9e73834d8419d993fc670253b5")
       public
-          fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty.Builder.() -> Unit) {
-      }
+          fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty.Builder.() -> Unit)
 
-      public fun enableIoTLoggingParams(enableIoTLoggingParams: IResolvable) {
-      }
+      public fun enableIoTLoggingParams(enableIoTLoggingParams: IResolvable)
 
-      public fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty) {
-      }
+      public fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d11768dcffb11d427f4990380f183d8345e55cf5c7353d2b0500009afbe4946")
       public
-          fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty.Builder.() -> Unit) {
-      }
+          fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty.Builder.() -> Unit)
 
-      public fun publishFindingToSnsParams(publishFindingToSnsParams: IResolvable) {
-      }
+      public fun publishFindingToSnsParams(publishFindingToSnsParams: IResolvable)
 
       public
-          fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty) {
-      }
+          fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ac44a0c3360a8ba7c389aba05f1cd5cb9c5ff079e4c46ee7986c31c45a1d57d")
       public
-          fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty.Builder.() -> Unit) {
-      }
+          fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty.Builder.() -> Unit)
 
-      public fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: IResolvable) {
-      }
+      public fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: IResolvable)
 
       public
-          fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty) {
-      }
+          fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da35d38e5876bb2eb3314310693a2a32262316b91a8d7b7ff5d930b155bbcde2")
       public
-          fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty.Builder.() -> Unit) {
-      }
+          fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty.Builder.() -> Unit)
 
-      public fun updateCaCertificateParams(updateCaCertificateParams: IResolvable) {
-      }
+      public fun updateCaCertificateParams(updateCaCertificateParams: IResolvable)
 
       public
-          fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty) {
-      }
+          fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("922182c578eddfa5af1ac576b5a0fa17b7422973060aed72c1fd2559e3249ff1")
       public
-          fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty.Builder.() -> Unit) {
-      }
+          fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty.Builder.() -> Unit)
 
-      public fun updateDeviceCertificateParams(updateDeviceCertificateParams: IResolvable) {
-      }
+      public fun updateDeviceCertificateParams(updateDeviceCertificateParams: IResolvable)
 
       public
-          fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty) {
-      }
+          fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ef7506e8ba0ea83eeec6aa8cc9c18671ff5b693261e3f928b436dd47d01ba5d6")
       public
-          fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty.Builder.() -> Unit) {
-      }
+          fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -394,99 +367,97 @@ public open class CfnMitigationAction internal constructor(
           software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty.Builder =
           software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty.builder()
 
-      public override fun addThingsToThingGroupParams(addThingsToThingGroupParams: IResolvable) {
+      override fun addThingsToThingGroupParams(addThingsToThingGroupParams: IResolvable) {
         cdkBuilder.addThingsToThingGroupParams(addThingsToThingGroupParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty) {
         cdkBuilder.addThingsToThingGroupParams(addThingsToThingGroupParams.let(AddThingsToThingGroupParamsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("576250c58660aa14398d2e7acc9859fef027ac9e73834d8419d993fc670253b5")
-      public override
+      override
           fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty.Builder.() -> Unit):
           Unit =
           addThingsToThingGroupParams(AddThingsToThingGroupParamsProperty(addThingsToThingGroupParams))
 
-      public override fun enableIoTLoggingParams(enableIoTLoggingParams: IResolvable) {
+      override fun enableIoTLoggingParams(enableIoTLoggingParams: IResolvable) {
         cdkBuilder.enableIoTLoggingParams(enableIoTLoggingParams.let(IResolvable::unwrap))
       }
 
-      public override
-          fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty) {
+      override fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty) {
         cdkBuilder.enableIoTLoggingParams(enableIoTLoggingParams.let(EnableIoTLoggingParamsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d11768dcffb11d427f4990380f183d8345e55cf5c7353d2b0500009afbe4946")
-      public override
+      override
           fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty.Builder.() -> Unit):
           Unit = enableIoTLoggingParams(EnableIoTLoggingParamsProperty(enableIoTLoggingParams))
 
-      public override fun publishFindingToSnsParams(publishFindingToSnsParams: IResolvable) {
+      override fun publishFindingToSnsParams(publishFindingToSnsParams: IResolvable) {
         cdkBuilder.publishFindingToSnsParams(publishFindingToSnsParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty) {
         cdkBuilder.publishFindingToSnsParams(publishFindingToSnsParams.let(PublishFindingToSnsParamsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ac44a0c3360a8ba7c389aba05f1cd5cb9c5ff079e4c46ee7986c31c45a1d57d")
-      public override
+      override
           fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty.Builder.() -> Unit):
           Unit =
           publishFindingToSnsParams(PublishFindingToSnsParamsProperty(publishFindingToSnsParams))
 
-      public override
+      override
           fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: IResolvable) {
         cdkBuilder.replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty) {
         cdkBuilder.replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams.let(ReplaceDefaultPolicyVersionParamsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da35d38e5876bb2eb3314310693a2a32262316b91a8d7b7ff5d930b155bbcde2")
-      public override
+      override
           fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty.Builder.() -> Unit):
           Unit =
           replaceDefaultPolicyVersionParams(ReplaceDefaultPolicyVersionParamsProperty(replaceDefaultPolicyVersionParams))
 
-      public override fun updateCaCertificateParams(updateCaCertificateParams: IResolvable) {
+      override fun updateCaCertificateParams(updateCaCertificateParams: IResolvable) {
         cdkBuilder.updateCaCertificateParams(updateCaCertificateParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty) {
         cdkBuilder.updateCaCertificateParams(updateCaCertificateParams.let(UpdateCACertificateParamsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("922182c578eddfa5af1ac576b5a0fa17b7422973060aed72c1fd2559e3249ff1")
-      public override
+      override
           fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty.Builder.() -> Unit):
           Unit =
           updateCaCertificateParams(UpdateCACertificateParamsProperty(updateCaCertificateParams))
 
-      public override
-          fun updateDeviceCertificateParams(updateDeviceCertificateParams: IResolvable) {
+      override fun updateDeviceCertificateParams(updateDeviceCertificateParams: IResolvable) {
         cdkBuilder.updateDeviceCertificateParams(updateDeviceCertificateParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty) {
         cdkBuilder.updateDeviceCertificateParams(updateDeviceCertificateParams.let(UpdateDeviceCertificateParamsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ef7506e8ba0ea83eeec6aa8cc9c18671ff5b693261e3f928b436dd47d01ba5d6")
-      public override
+      override
           fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty.Builder.() -> Unit):
           Unit =
           updateDeviceCertificateParams(UpdateDeviceCertificateParamsProperty(updateDeviceCertificateParams))
@@ -500,21 +471,19 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.ActionParamsProperty,
     ) : ActionParamsProperty {
-      public override fun addThingsToThingGroupParams(): Any? =
+      override fun addThingsToThingGroupParams(): Any? =
           unwrap(this).getAddThingsToThingGroupParams()
 
-      public override fun enableIoTLoggingParams(): Any? = unwrap(this).getEnableIoTLoggingParams()
+      override fun enableIoTLoggingParams(): Any? = unwrap(this).getEnableIoTLoggingParams()
 
-      public override fun publishFindingToSnsParams(): Any? =
-          unwrap(this).getPublishFindingToSnsParams()
+      override fun publishFindingToSnsParams(): Any? = unwrap(this).getPublishFindingToSnsParams()
 
-      public override fun replaceDefaultPolicyVersionParams(): Any? =
+      override fun replaceDefaultPolicyVersionParams(): Any? =
           unwrap(this).getReplaceDefaultPolicyVersionParams()
 
-      public override fun updateCaCertificateParams(): Any? =
-          unwrap(this).getUpdateCaCertificateParams()
+      override fun updateCaCertificateParams(): Any? = unwrap(this).getUpdateCaCertificateParams()
 
-      public override fun updateDeviceCertificateParams(): Any? =
+      override fun updateDeviceCertificateParams(): Any? =
           unwrap(this).getUpdateDeviceCertificateParams()
     }
 
@@ -542,8 +511,7 @@ public open class CfnMitigationAction internal constructor(
     public fun action(): String
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
     }
 
     private class BuilderImpl : Builder {
@@ -552,7 +520,7 @@ public open class CfnMitigationAction internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
@@ -565,7 +533,7 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.UpdateCACertificateParamsProperty,
     ) : UpdateCACertificateParamsProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
     }
 
     public companion object {
@@ -595,14 +563,11 @@ public open class CfnMitigationAction internal constructor(
     public fun thingGroupNames(): List<String>
 
     public interface Builder {
-      public fun overrideDynamicGroups(overrideDynamicGroups: Boolean) {
-      }
+      public fun overrideDynamicGroups(overrideDynamicGroups: Boolean)
 
-      public fun overrideDynamicGroups(overrideDynamicGroups: IResolvable) {
-      }
+      public fun overrideDynamicGroups(overrideDynamicGroups: IResolvable)
 
-      public fun thingGroupNames(thingGroupNames: List<String>) {
-      }
+      public fun thingGroupNames(thingGroupNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -611,15 +576,15 @@ public open class CfnMitigationAction internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty.builder()
 
-      public override fun overrideDynamicGroups(overrideDynamicGroups: Boolean) {
+      override fun overrideDynamicGroups(overrideDynamicGroups: Boolean) {
         cdkBuilder.overrideDynamicGroups(overrideDynamicGroups)
       }
 
-      public override fun overrideDynamicGroups(overrideDynamicGroups: IResolvable) {
+      override fun overrideDynamicGroups(overrideDynamicGroups: IResolvable) {
         cdkBuilder.overrideDynamicGroups(overrideDynamicGroups.let(IResolvable::unwrap))
       }
 
-      public override fun thingGroupNames(thingGroupNames: List<String>) {
+      override fun thingGroupNames(thingGroupNames: List<String>) {
         cdkBuilder.thingGroupNames(thingGroupNames)
       }
 
@@ -632,9 +597,9 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty,
     ) : AddThingsToThingGroupParamsProperty {
-      public override fun overrideDynamicGroups(): Any? = unwrap(this).getOverrideDynamicGroups()
+      override fun overrideDynamicGroups(): Any? = unwrap(this).getOverrideDynamicGroups()
 
-      public override fun thingGroupNames(): List<String> = unwrap(this).getThingGroupNames() ?:
+      override fun thingGroupNames(): List<String> = unwrap(this).getThingGroupNames() ?:
           emptyList()
     }
 
@@ -665,11 +630,9 @@ public open class CfnMitigationAction internal constructor(
     public fun roleArnForLogging(): String
 
     public interface Builder {
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
 
-      public fun roleArnForLogging(roleArnForLogging: String) {
-      }
+      public fun roleArnForLogging(roleArnForLogging: String)
     }
 
     private class BuilderImpl : Builder {
@@ -678,11 +641,11 @@ public open class CfnMitigationAction internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty.builder()
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
-      public override fun roleArnForLogging(roleArnForLogging: String) {
+      override fun roleArnForLogging(roleArnForLogging: String) {
         cdkBuilder.roleArnForLogging(roleArnForLogging)
       }
 
@@ -695,9 +658,9 @@ public open class CfnMitigationAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnMitigationAction.EnableIoTLoggingParamsProperty,
     ) : EnableIoTLoggingParamsProperty {
-      public override fun logLevel(): String = unwrap(this).getLogLevel()
+      override fun logLevel(): String = unwrap(this).getLogLevel()
 
-      public override fun roleArnForLogging(): String = unwrap(this).getRoleArnForLogging()
+      override fun roleArnForLogging(): String = unwrap(this).getRoleArnForLogging()
     }
 
     public companion object {

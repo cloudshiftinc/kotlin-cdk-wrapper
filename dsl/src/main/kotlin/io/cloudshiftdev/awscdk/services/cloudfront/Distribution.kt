@@ -209,70 +209,49 @@ public open class Distribution internal constructor(
       metricTotalErrorRate(MetricOptions(props))
 
   public interface Builder {
-    public fun additionalBehaviors(additionalBehaviors: Map<String, BehaviorOptions>) {
-    }
+    public fun additionalBehaviors(additionalBehaviors: Map<String, BehaviorOptions>)
 
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun defaultBehavior(defaultBehavior: BehaviorOptions) {
-    }
+    public fun defaultBehavior(defaultBehavior: BehaviorOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("559439186f697f3ce0af7d9f62015dec74e259d41adf7c790d264a317fa0d040")
-    public fun defaultBehavior(defaultBehavior: BehaviorOptions.Builder.() -> Unit) {
-    }
+    public fun defaultBehavior(defaultBehavior: BehaviorOptions.Builder.() -> Unit)
 
-    public fun defaultRootObject(defaultRootObject: String) {
-    }
+    public fun defaultRootObject(defaultRootObject: String)
 
-    public fun domainNames(domainNames: List<String>) {
-    }
+    public fun domainNames(domainNames: List<String>)
 
-    public fun enableIpv6(enableIpv6: Boolean) {
-    }
+    public fun enableIpv6(enableIpv6: Boolean)
 
-    public fun enableLogging(enableLogging: Boolean) {
-    }
+    public fun enableLogging(enableLogging: Boolean)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun errorResponses(errorResponses: List<ErrorResponse>) {
-    }
+    public fun errorResponses(errorResponses: List<ErrorResponse>)
 
-    public fun geoRestriction(geoRestriction: GeoRestriction) {
-    }
+    public fun geoRestriction(geoRestriction: GeoRestriction)
 
-    public fun httpVersion(httpVersion: HttpVersion) {
-    }
+    public fun httpVersion(httpVersion: HttpVersion)
 
-    public fun logBucket(logBucket: IBucket) {
-    }
+    public fun logBucket(logBucket: IBucket)
 
-    public fun logFilePrefix(logFilePrefix: String) {
-    }
+    public fun logFilePrefix(logFilePrefix: String)
 
-    public fun logIncludesCookies(logIncludesCookies: Boolean) {
-    }
+    public fun logIncludesCookies(logIncludesCookies: Boolean)
 
-    public fun minimumProtocolVersion(minimumProtocolVersion: SecurityPolicyProtocol) {
-    }
+    public fun minimumProtocolVersion(minimumProtocolVersion: SecurityPolicyProtocol)
 
-    public fun priceClass(priceClass: PriceClass) {
-    }
+    public fun priceClass(priceClass: PriceClass)
 
-    public fun publishAdditionalMetrics(publishAdditionalMetrics: Boolean) {
-    }
+    public fun publishAdditionalMetrics(publishAdditionalMetrics: Boolean)
 
-    public fun sslSupportMethod(sslSupportMethod: SSLMethod) {
-    }
+    public fun sslSupportMethod(sslSupportMethod: SSLMethod)
 
-    public fun webAclId(webAclId: String) {
-    }
+    public fun webAclId(webAclId: String)
   }
 
   private class BuilderImpl(
@@ -282,89 +261,88 @@ public open class Distribution internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.Distribution.Builder =
         software.amazon.awscdk.services.cloudfront.Distribution.Builder.create(scope, id)
 
-    public override fun additionalBehaviors(additionalBehaviors: Map<String, BehaviorOptions>) {
-      cdkBuilder.additionalBehaviors(additionalBehaviors.mapValues {
-          BehaviorOptions.unwrap(it.value)})
+    override fun additionalBehaviors(additionalBehaviors: Map<String, BehaviorOptions>) {
+      cdkBuilder.additionalBehaviors(additionalBehaviors.mapValues{BehaviorOptions.unwrap(it.value)})
     }
 
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun defaultBehavior(defaultBehavior: BehaviorOptions) {
+    override fun defaultBehavior(defaultBehavior: BehaviorOptions) {
       cdkBuilder.defaultBehavior(defaultBehavior.let(BehaviorOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("559439186f697f3ce0af7d9f62015dec74e259d41adf7c790d264a317fa0d040")
-    public override fun defaultBehavior(defaultBehavior: BehaviorOptions.Builder.() -> Unit): Unit =
+    override fun defaultBehavior(defaultBehavior: BehaviorOptions.Builder.() -> Unit): Unit =
         defaultBehavior(BehaviorOptions(defaultBehavior))
 
-    public override fun defaultRootObject(defaultRootObject: String) {
+    override fun defaultRootObject(defaultRootObject: String) {
       cdkBuilder.defaultRootObject(defaultRootObject)
     }
 
-    public override fun domainNames(domainNames: List<String>) {
+    override fun domainNames(domainNames: List<String>) {
       cdkBuilder.domainNames(domainNames)
     }
 
-    public override fun enableIpv6(enableIpv6: Boolean) {
+    override fun enableIpv6(enableIpv6: Boolean) {
       cdkBuilder.enableIpv6(enableIpv6)
     }
 
-    public override fun enableLogging(enableLogging: Boolean) {
+    override fun enableLogging(enableLogging: Boolean) {
       cdkBuilder.enableLogging(enableLogging)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun errorResponses(errorResponses: List<ErrorResponse>) {
+    override fun errorResponses(errorResponses: List<ErrorResponse>) {
       cdkBuilder.errorResponses(errorResponses.map(ErrorResponse::unwrap))
     }
 
-    public override fun geoRestriction(geoRestriction: GeoRestriction) {
+    override fun geoRestriction(geoRestriction: GeoRestriction) {
       cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
     }
 
-    public override fun httpVersion(httpVersion: HttpVersion) {
+    override fun httpVersion(httpVersion: HttpVersion) {
       cdkBuilder.httpVersion(httpVersion.let(HttpVersion::unwrap))
     }
 
-    public override fun logBucket(logBucket: IBucket) {
+    override fun logBucket(logBucket: IBucket) {
       cdkBuilder.logBucket(logBucket.let(IBucket::unwrap))
     }
 
-    public override fun logFilePrefix(logFilePrefix: String) {
+    override fun logFilePrefix(logFilePrefix: String) {
       cdkBuilder.logFilePrefix(logFilePrefix)
     }
 
-    public override fun logIncludesCookies(logIncludesCookies: Boolean) {
+    override fun logIncludesCookies(logIncludesCookies: Boolean) {
       cdkBuilder.logIncludesCookies(logIncludesCookies)
     }
 
-    public override fun minimumProtocolVersion(minimumProtocolVersion: SecurityPolicyProtocol) {
+    override fun minimumProtocolVersion(minimumProtocolVersion: SecurityPolicyProtocol) {
       cdkBuilder.minimumProtocolVersion(minimumProtocolVersion.let(SecurityPolicyProtocol::unwrap))
     }
 
-    public override fun priceClass(priceClass: PriceClass) {
+    override fun priceClass(priceClass: PriceClass) {
       cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))
     }
 
-    public override fun publishAdditionalMetrics(publishAdditionalMetrics: Boolean) {
+    override fun publishAdditionalMetrics(publishAdditionalMetrics: Boolean) {
       cdkBuilder.publishAdditionalMetrics(publishAdditionalMetrics)
     }
 
-    public override fun sslSupportMethod(sslSupportMethod: SSLMethod) {
+    override fun sslSupportMethod(sslSupportMethod: SSLMethod) {
       cdkBuilder.sslSupportMethod(sslSupportMethod.let(SSLMethod::unwrap))
     }
 
-    public override fun webAclId(webAclId: String) {
+    override fun webAclId(webAclId: String) {
       cdkBuilder.webAclId(webAclId)
     }
 

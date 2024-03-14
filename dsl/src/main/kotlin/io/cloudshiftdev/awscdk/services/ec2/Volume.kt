@@ -64,41 +64,29 @@ public open class Volume internal constructor(
   public override fun volumeId(): String = unwrap(this).getVolumeId()
 
   public interface Builder {
-    public fun autoEnableIo(autoEnableIo: Boolean) {
-    }
+    public fun autoEnableIo(autoEnableIo: Boolean)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun enableMultiAttach(enableMultiAttach: Boolean) {
-    }
+    public fun enableMultiAttach(enableMultiAttach: Boolean)
 
-    public fun encrypted(encrypted: Boolean) {
-    }
+    public fun encrypted(encrypted: Boolean)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun size(size: Size) {
-    }
+    public fun size(size: Size)
 
-    public fun snapshotId(snapshotId: String) {
-    }
+    public fun snapshotId(snapshotId: String)
 
-    public fun throughput(throughput: Number) {
-    }
+    public fun throughput(throughput: Number)
 
-    public fun volumeName(volumeName: String) {
-    }
+    public fun volumeName(volumeName: String)
 
-    public fun volumeType(volumeType: EbsDeviceVolumeType) {
-    }
+    public fun volumeType(volumeType: EbsDeviceVolumeType)
   }
 
   private class BuilderImpl(
@@ -108,51 +96,51 @@ public open class Volume internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.Volume.Builder =
         software.amazon.awscdk.services.ec2.Volume.Builder.create(scope, id)
 
-    public override fun autoEnableIo(autoEnableIo: Boolean) {
+    override fun autoEnableIo(autoEnableIo: Boolean) {
       cdkBuilder.autoEnableIo(autoEnableIo)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun enableMultiAttach(enableMultiAttach: Boolean) {
+    override fun enableMultiAttach(enableMultiAttach: Boolean) {
       cdkBuilder.enableMultiAttach(enableMultiAttach)
     }
 
-    public override fun encrypted(encrypted: Boolean) {
+    override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun size(size: Size) {
+    override fun size(size: Size) {
       cdkBuilder.size(size.let(Size::unwrap))
     }
 
-    public override fun snapshotId(snapshotId: String) {
+    override fun snapshotId(snapshotId: String) {
       cdkBuilder.snapshotId(snapshotId)
     }
 
-    public override fun throughput(throughput: Number) {
+    override fun throughput(throughput: Number) {
       cdkBuilder.throughput(throughput)
     }
 
-    public override fun volumeName(volumeName: String) {
+    override fun volumeName(volumeName: String) {
       cdkBuilder.volumeName(volumeName)
     }
 
-    public override fun volumeType(volumeType: EbsDeviceVolumeType) {
+    override fun volumeType(volumeType: EbsDeviceVolumeType) {
       cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
     }
 

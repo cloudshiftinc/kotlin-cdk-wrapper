@@ -12,11 +12,9 @@ public open class SamlProvider internal constructor(
   public override fun samlProviderArn(): String = unwrap(this).getSamlProviderArn()
 
   public interface Builder {
-    public fun metadataDocument(metadataDocument: SamlMetadataDocument) {
-    }
+    public fun metadataDocument(metadataDocument: SamlMetadataDocument)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -26,11 +24,11 @@ public open class SamlProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.SamlProvider.Builder =
         software.amazon.awscdk.services.iam.SamlProvider.Builder.create(scope, id)
 
-    public override fun metadataDocument(metadataDocument: SamlMetadataDocument) {
+    override fun metadataDocument(metadataDocument: SamlMetadataDocument) {
       cdkBuilder.metadataDocument(metadataDocument.let(SamlMetadataDocument::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

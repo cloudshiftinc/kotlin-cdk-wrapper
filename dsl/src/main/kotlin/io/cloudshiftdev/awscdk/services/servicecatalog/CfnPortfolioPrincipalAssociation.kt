@@ -43,17 +43,13 @@ public open class CfnPortfolioPrincipalAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun principalArn(principalArn: String) {
-    }
+    public fun principalArn(principalArn: String)
 
-    public fun principalType(principalType: String) {
-    }
+    public fun principalType(principalType: String)
   }
 
   private class BuilderImpl(
@@ -65,19 +61,19 @@ public open class CfnPortfolioPrincipalAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun principalArn(principalArn: String) {
+    override fun principalArn(principalArn: String) {
       cdkBuilder.principalArn(principalArn)
     }
 
-    public override fun principalType(principalType: String) {
+    override fun principalType(principalType: String) {
       cdkBuilder.principalType(principalType)
     }
 

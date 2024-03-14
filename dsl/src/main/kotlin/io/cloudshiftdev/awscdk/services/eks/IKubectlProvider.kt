@@ -15,13 +15,13 @@ public interface IKubectlProvider : IConstruct {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.IKubectlProvider,
   ) : IKubectlProvider {
-    public override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
+    override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun roleArn(): String = unwrap(this).getRoleArn()
+    override fun roleArn(): String = unwrap(this).getRoleArn()
 
-    public override fun serviceToken(): String = unwrap(this).getServiceToken()
+    override fun serviceToken(): String = unwrap(this).getServiceToken()
   }
 
   public companion object {

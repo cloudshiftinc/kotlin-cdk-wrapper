@@ -9,11 +9,9 @@ public interface SecretAttachmentTargetProps {
   public fun targetType(): AttachmentTargetType
 
   public interface Builder {
-    public fun targetId(targetId: String) {
-    }
+    public fun targetId(targetId: String)
 
-    public fun targetType(targetType: AttachmentTargetType) {
-    }
+    public fun targetType(targetType: AttachmentTargetType)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface SecretAttachmentTargetProps {
         software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps.Builder =
         software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps.builder()
 
-    public override fun targetId(targetId: String) {
+    override fun targetId(targetId: String) {
       cdkBuilder.targetId(targetId)
     }
 
-    public override fun targetType(targetType: AttachmentTargetType) {
+    override fun targetType(targetType: AttachmentTargetType) {
       cdkBuilder.targetType(targetType.let(AttachmentTargetType::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface SecretAttachmentTargetProps {
     internal val cdkObject:
         software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps,
   ) : SecretAttachmentTargetProps {
-    public override fun targetId(): String = unwrap(this).getTargetId()
+    override fun targetId(): String = unwrap(this).getTargetId()
 
-    public override fun targetType(): AttachmentTargetType =
+    override fun targetType(): AttachmentTargetType =
         unwrap(this).getTargetType().let(AttachmentTargetType::wrap)
   }
 

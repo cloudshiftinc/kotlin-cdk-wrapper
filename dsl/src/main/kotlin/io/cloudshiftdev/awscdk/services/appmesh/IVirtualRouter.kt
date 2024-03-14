@@ -26,30 +26,29 @@ public interface IVirtualRouter : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.IVirtualRouter,
   ) : IVirtualRouter {
-    public override fun addRoute(arg0: String, arg1: RouteBaseProps): Route =
-        unwrap(this).addRoute(arg0, arg1.let(RouteBaseProps::unwrap)).let(Route::wrap)
+    override fun addRoute(arg0: String, arg1: RouteBaseProps): Route = unwrap(this).addRoute(arg0,
+        arg1.let(RouteBaseProps::unwrap)).let(Route::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("26d15a55ebceab0f13f1422d758ccb5af6cd5a843b834697e7f3e7e5194e110e")
-    public override fun addRoute(arg0: String, arg1: RouteBaseProps.Builder.() -> Unit): Route =
+    override fun addRoute(arg0: String, arg1: RouteBaseProps.Builder.() -> Unit): Route =
         addRoute(arg0, RouteBaseProps(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
+    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun virtualRouterArn(): String = unwrap(this).getVirtualRouterArn()
+    override fun virtualRouterArn(): String = unwrap(this).getVirtualRouterArn()
 
-    public override fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
+    override fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
   }
 
   public companion object {

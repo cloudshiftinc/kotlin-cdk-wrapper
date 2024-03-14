@@ -47,34 +47,25 @@ public open class ManagedPolicy internal constructor(
   public open fun path(): String = unwrap(this).getPath()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun document(document: PolicyDocument) {
-    }
+    public fun document(document: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf0415bb056af93e8ba2db8804e6c461983ea2f49e71a35facaee559f4a9c03e")
-    public fun document(document: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun document(document: PolicyDocument.Builder.() -> Unit)
 
-    public fun groups(groups: List<IGroup>) {
-    }
+    public fun groups(groups: List<IGroup>)
 
-    public fun managedPolicyName(managedPolicyName: String) {
-    }
+    public fun managedPolicyName(managedPolicyName: String)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun roles(roles: List<IRole>) {
-    }
+    public fun roles(roles: List<IRole>)
 
-    public fun statements(statements: List<PolicyStatement>) {
-    }
+    public fun statements(statements: List<PolicyStatement>)
 
-    public fun users(users: List<IUser>) {
-    }
+    public fun users(users: List<IUser>)
   }
 
   private class BuilderImpl(
@@ -84,40 +75,40 @@ public open class ManagedPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.ManagedPolicy.Builder =
         software.amazon.awscdk.services.iam.ManagedPolicy.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun document(document: PolicyDocument) {
+    override fun document(document: PolicyDocument) {
       cdkBuilder.document(document.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf0415bb056af93e8ba2db8804e6c461983ea2f49e71a35facaee559f4a9c03e")
-    public override fun document(document: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun document(document: PolicyDocument.Builder.() -> Unit): Unit =
         document(PolicyDocument(document))
 
-    public override fun groups(groups: List<IGroup>) {
+    override fun groups(groups: List<IGroup>) {
       cdkBuilder.groups(groups.map(IGroup::unwrap))
     }
 
-    public override fun managedPolicyName(managedPolicyName: String) {
+    override fun managedPolicyName(managedPolicyName: String) {
       cdkBuilder.managedPolicyName(managedPolicyName)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun roles(roles: List<IRole>) {
+    override fun roles(roles: List<IRole>) {
       cdkBuilder.roles(roles.map(IRole::unwrap))
     }
 
-    public override fun statements(statements: List<PolicyStatement>) {
+    override fun statements(statements: List<PolicyStatement>) {
       cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
     }
 
-    public override fun users(users: List<IUser>) {
+    override fun users(users: List<IUser>) {
       cdkBuilder.users(users.map(IUser::unwrap))
     }
 

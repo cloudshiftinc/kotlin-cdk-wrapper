@@ -12,50 +12,44 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
   public fun resourceSelfArns(): List<String> = unwrap(this).getResourceSelfArns() ?: emptyList()
 
   public interface Builder {
-    public fun actions(actions: List<String>) {
-    }
+    public fun actions(actions: List<String>)
 
-    public fun conditions(conditions: Map<String, Map<String, Any>>) {
-    }
+    public fun conditions(conditions: Map<String, Map<String, Any>>)
 
-    public fun grantee(grantee: IGrantable) {
-    }
+    public fun grantee(grantee: IGrantable)
 
-    public fun resource(resource: IResourceWithPolicy) {
-    }
+    public fun resource(resource: IResourceWithPolicy)
 
-    public fun resourceArns(resourceArns: List<String>) {
-    }
+    public fun resourceArns(resourceArns: List<String>)
 
-    public fun resourceSelfArns(resourceSelfArns: List<String>) {
-    }
+    public fun resourceSelfArns(resourceSelfArns: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.GrantWithResourceOptions.Builder =
         software.amazon.awscdk.services.iam.GrantWithResourceOptions.builder()
 
-    public override fun actions(actions: List<String>) {
+    override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun conditions(conditions: Map<String, Map<String, Any>>) {
+    override fun conditions(conditions: Map<String, Map<String, Any>>) {
       cdkBuilder.conditions(conditions)
     }
 
-    public override fun grantee(grantee: IGrantable) {
+    override fun grantee(grantee: IGrantable) {
       cdkBuilder.grantee(grantee.let(IGrantable::unwrap))
     }
 
-    public override fun resource(resource: IResourceWithPolicy) {
+    override fun resource(resource: IResourceWithPolicy) {
       cdkBuilder.resource(resource.let(IResourceWithPolicy::unwrap))
     }
 
-    public override fun resourceArns(resourceArns: List<String>) {
+    override fun resourceArns(resourceArns: List<String>) {
       cdkBuilder.resourceArns(resourceArns)
     }
 
-    public override fun resourceSelfArns(resourceSelfArns: List<String>) {
+    override fun resourceSelfArns(resourceSelfArns: List<String>) {
       cdkBuilder.resourceSelfArns(resourceSelfArns)
     }
 
@@ -66,19 +60,19 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.GrantWithResourceOptions,
   ) : GrantWithResourceOptions {
-    public override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+    override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
 
-    public override fun conditions(): Map<String, Map<String, Any>> = unwrap(this).getConditions()
-        ?: emptyMap()
+    override fun conditions(): Map<String, Map<String, Any>> = unwrap(this).getConditions() ?:
+        emptyMap()
 
-    public override fun grantee(): IGrantable = unwrap(this).getGrantee().let(IGrantable::wrap)
+    override fun grantee(): IGrantable = unwrap(this).getGrantee().let(IGrantable::wrap)
 
-    public override fun resource(): IResourceWithPolicy =
+    override fun resource(): IResourceWithPolicy =
         unwrap(this).getResource().let(IResourceWithPolicy::wrap)
 
-    public override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
+    override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
 
-    public override fun resourceSelfArns(): List<String> = unwrap(this).getResourceSelfArns() ?:
+    override fun resourceSelfArns(): List<String> = unwrap(this).getResourceSelfArns() ?:
         emptyList()
   }
 

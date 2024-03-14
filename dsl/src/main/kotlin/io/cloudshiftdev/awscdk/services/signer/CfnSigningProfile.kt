@@ -64,23 +64,18 @@ public open class CfnSigningProfile internal constructor(
   }
 
   public interface Builder {
-    public fun platformId(platformId: String) {
-    }
+    public fun platformId(platformId: String)
 
-    public fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
-    }
+    public fun signatureValidityPeriod(signatureValidityPeriod: IResolvable)
 
-    public fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty) {
-    }
+    public fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("217bf12acd10a17e8fca01118986e25b33b7d553a303676eb001019a69f8b954")
     public
-        fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty.Builder.() -> Unit) {
-    }
+        fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -90,26 +85,25 @@ public open class CfnSigningProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.signer.CfnSigningProfile.Builder =
         software.amazon.awscdk.services.signer.CfnSigningProfile.Builder.create(scope, id)
 
-    public override fun platformId(platformId: String) {
+    override fun platformId(platformId: String) {
       cdkBuilder.platformId(platformId)
     }
 
-    public override fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
+    override fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
       cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(IResolvable::unwrap))
     }
 
-    public override
-        fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty) {
+    override fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty) {
       cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(SignatureValidityPeriodProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("217bf12acd10a17e8fca01118986e25b33b7d553a303676eb001019a69f8b954")
-    public override
+    override
         fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty.Builder.() -> Unit):
         Unit = signatureValidityPeriod(SignatureValidityPeriodProperty(signatureValidityPeriod))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -144,11 +138,9 @@ public open class CfnSigningProfile internal constructor(
     public fun `value`(): Number? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -157,11 +149,11 @@ public open class CfnSigningProfile internal constructor(
           =
           software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -174,9 +166,9 @@ public open class CfnSigningProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty,
     ) : SignatureValidityPeriodProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun `value`(): Number? = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {

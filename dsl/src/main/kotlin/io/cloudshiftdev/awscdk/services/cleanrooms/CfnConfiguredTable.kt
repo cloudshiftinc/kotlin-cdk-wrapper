@@ -88,37 +88,27 @@ public open class CfnConfiguredTable internal constructor(
   }
 
   public interface Builder {
-    public fun allowedColumns(allowedColumns: List<String>) {
-    }
+    public fun allowedColumns(allowedColumns: List<String>)
 
-    public fun analysisMethod(analysisMethod: String) {
-    }
+    public fun analysisMethod(analysisMethod: String)
 
-    public fun analysisRules(analysisRules: IResolvable) {
-    }
+    public fun analysisRules(analysisRules: IResolvable)
 
-    public fun analysisRules(analysisRules: List<Any>) {
-    }
+    public fun analysisRules(analysisRules: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tableReference(tableReference: IResolvable) {
-    }
+    public fun tableReference(tableReference: IResolvable)
 
-    public fun tableReference(tableReference: TableReferenceProperty) {
-    }
+    public fun tableReference(tableReference: TableReferenceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecc93edf43a16f86dba9d1e61f5caca0faf208cf696a67f7a196a38ef52bb4ff")
-    public fun tableReference(tableReference: TableReferenceProperty.Builder.() -> Unit) {
-    }
+    public fun tableReference(tableReference: TableReferenceProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -128,44 +118,44 @@ public open class CfnConfiguredTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.Builder =
         software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.Builder.create(scope, id)
 
-    public override fun allowedColumns(allowedColumns: List<String>) {
+    override fun allowedColumns(allowedColumns: List<String>) {
       cdkBuilder.allowedColumns(allowedColumns)
     }
 
-    public override fun analysisMethod(analysisMethod: String) {
+    override fun analysisMethod(analysisMethod: String) {
       cdkBuilder.analysisMethod(analysisMethod)
     }
 
-    public override fun analysisRules(analysisRules: IResolvable) {
+    override fun analysisRules(analysisRules: IResolvable) {
       cdkBuilder.analysisRules(analysisRules.let(IResolvable::unwrap))
     }
 
-    public override fun analysisRules(analysisRules: List<Any>) {
+    override fun analysisRules(analysisRules: List<Any>) {
       cdkBuilder.analysisRules(analysisRules)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tableReference(tableReference: IResolvable) {
+    override fun tableReference(tableReference: IResolvable) {
       cdkBuilder.tableReference(tableReference.let(IResolvable::unwrap))
     }
 
-    public override fun tableReference(tableReference: TableReferenceProperty) {
+    override fun tableReference(tableReference: TableReferenceProperty) {
       cdkBuilder.tableReference(tableReference.let(TableReferenceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecc93edf43a16f86dba9d1e61f5caca0faf208cf696a67f7a196a38ef52bb4ff")
-    public override fun tableReference(tableReference: TableReferenceProperty.Builder.() -> Unit):
-        Unit = tableReference(TableReferenceProperty(tableReference))
+    override fun tableReference(tableReference: TableReferenceProperty.Builder.() -> Unit): Unit =
+        tableReference(TableReferenceProperty(tableReference))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -198,16 +188,13 @@ public open class CfnConfiguredTable internal constructor(
     public fun glue(): Any
 
     public interface Builder {
-      public fun glue(glue: IResolvable) {
-      }
+      public fun glue(glue: IResolvable)
 
-      public fun glue(glue: GlueTableReferenceProperty) {
-      }
+      public fun glue(glue: GlueTableReferenceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
-      public fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit) {
-      }
+      public fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -216,17 +203,17 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty.builder()
 
-      public override fun glue(glue: IResolvable) {
+      override fun glue(glue: IResolvable) {
         cdkBuilder.glue(glue.let(IResolvable::unwrap))
       }
 
-      public override fun glue(glue: GlueTableReferenceProperty) {
+      override fun glue(glue: GlueTableReferenceProperty) {
         cdkBuilder.glue(glue.let(GlueTableReferenceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db4f6a5ba6d28531ae58587a3a8dd814bc5df20896049b36a90d989f5dfa0f07")
-      public override fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit): Unit =
+      override fun glue(glue: GlueTableReferenceProperty.Builder.() -> Unit): Unit =
           glue(GlueTableReferenceProperty(glue))
 
       public fun build():
@@ -238,7 +225,7 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty,
     ) : TableReferenceProperty {
-      public override fun glue(): Any = unwrap(this).getGlue()
+      override fun glue(): Any = unwrap(this).getGlue()
     }
 
     public companion object {
@@ -269,14 +256,11 @@ public open class CfnConfiguredTable internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun minimum(minimum: Number) {
-      }
+      public fun minimum(minimum: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -285,15 +269,15 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun minimum(minimum: Number) {
+      override fun minimum(minimum: Number) {
         cdkBuilder.minimum(minimum)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -306,11 +290,11 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty,
     ) : AggregationConstraintProperty {
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun minimum(): Number = unwrap(this).getMinimum()
+      override fun minimum(): Number = unwrap(this).getMinimum()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -350,32 +334,23 @@ public open class CfnConfiguredTable internal constructor(
     public fun scalarFunctions(): List<String>
 
     public interface Builder {
-      public fun aggregateColumns(aggregateColumns: IResolvable) {
-      }
+      public fun aggregateColumns(aggregateColumns: IResolvable)
 
-      public fun aggregateColumns(aggregateColumns: List<Any>) {
-      }
+      public fun aggregateColumns(aggregateColumns: List<Any>)
 
-      public fun allowedJoinOperators(allowedJoinOperators: List<String>) {
-      }
+      public fun allowedJoinOperators(allowedJoinOperators: List<String>)
 
-      public fun dimensionColumns(dimensionColumns: List<String>) {
-      }
+      public fun dimensionColumns(dimensionColumns: List<String>)
 
-      public fun joinColumns(joinColumns: List<String>) {
-      }
+      public fun joinColumns(joinColumns: List<String>)
 
-      public fun joinRequired(joinRequired: String) {
-      }
+      public fun joinRequired(joinRequired: String)
 
-      public fun outputConstraints(outputConstraints: IResolvable) {
-      }
+      public fun outputConstraints(outputConstraints: IResolvable)
 
-      public fun outputConstraints(outputConstraints: List<Any>) {
-      }
+      public fun outputConstraints(outputConstraints: List<Any>)
 
-      public fun scalarFunctions(scalarFunctions: List<String>) {
-      }
+      public fun scalarFunctions(scalarFunctions: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -384,39 +359,39 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty.builder()
 
-      public override fun aggregateColumns(aggregateColumns: IResolvable) {
+      override fun aggregateColumns(aggregateColumns: IResolvable) {
         cdkBuilder.aggregateColumns(aggregateColumns.let(IResolvable::unwrap))
       }
 
-      public override fun aggregateColumns(aggregateColumns: List<Any>) {
+      override fun aggregateColumns(aggregateColumns: List<Any>) {
         cdkBuilder.aggregateColumns(aggregateColumns)
       }
 
-      public override fun allowedJoinOperators(allowedJoinOperators: List<String>) {
+      override fun allowedJoinOperators(allowedJoinOperators: List<String>) {
         cdkBuilder.allowedJoinOperators(allowedJoinOperators)
       }
 
-      public override fun dimensionColumns(dimensionColumns: List<String>) {
+      override fun dimensionColumns(dimensionColumns: List<String>) {
         cdkBuilder.dimensionColumns(dimensionColumns)
       }
 
-      public override fun joinColumns(joinColumns: List<String>) {
+      override fun joinColumns(joinColumns: List<String>) {
         cdkBuilder.joinColumns(joinColumns)
       }
 
-      public override fun joinRequired(joinRequired: String) {
+      override fun joinRequired(joinRequired: String) {
         cdkBuilder.joinRequired(joinRequired)
       }
 
-      public override fun outputConstraints(outputConstraints: IResolvable) {
+      override fun outputConstraints(outputConstraints: IResolvable) {
         cdkBuilder.outputConstraints(outputConstraints.let(IResolvable::unwrap))
       }
 
-      public override fun outputConstraints(outputConstraints: List<Any>) {
+      override fun outputConstraints(outputConstraints: List<Any>) {
         cdkBuilder.outputConstraints(outputConstraints)
       }
 
-      public override fun scalarFunctions(scalarFunctions: List<String>) {
+      override fun scalarFunctions(scalarFunctions: List<String>) {
         cdkBuilder.scalarFunctions(scalarFunctions)
       }
 
@@ -429,21 +404,21 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty,
     ) : AnalysisRuleAggregationProperty {
-      public override fun aggregateColumns(): Any = unwrap(this).getAggregateColumns()
+      override fun aggregateColumns(): Any = unwrap(this).getAggregateColumns()
 
-      public override fun allowedJoinOperators(): List<String> =
-          unwrap(this).getAllowedJoinOperators() ?: emptyList()
-
-      public override fun dimensionColumns(): List<String> = unwrap(this).getDimensionColumns() ?:
+      override fun allowedJoinOperators(): List<String> = unwrap(this).getAllowedJoinOperators() ?:
           emptyList()
 
-      public override fun joinColumns(): List<String> = unwrap(this).getJoinColumns() ?: emptyList()
+      override fun dimensionColumns(): List<String> = unwrap(this).getDimensionColumns() ?:
+          emptyList()
 
-      public override fun joinRequired(): String? = unwrap(this).getJoinRequired()
+      override fun joinColumns(): List<String> = unwrap(this).getJoinColumns() ?: emptyList()
 
-      public override fun outputConstraints(): Any = unwrap(this).getOutputConstraints()
+      override fun joinRequired(): String? = unwrap(this).getJoinRequired()
 
-      public override fun scalarFunctions(): List<String> = unwrap(this).getScalarFunctions() ?:
+      override fun outputConstraints(): Any = unwrap(this).getOutputConstraints()
+
+      override fun scalarFunctions(): List<String> = unwrap(this).getScalarFunctions() ?:
           emptyList()
     }
 
@@ -474,11 +449,9 @@ public open class CfnConfiguredTable internal constructor(
         ?: emptyList()
 
     public interface Builder {
-      public fun allowedAnalyses(allowedAnalyses: List<String>) {
-      }
+      public fun allowedAnalyses(allowedAnalyses: List<String>)
 
-      public fun allowedAnalysisProviders(allowedAnalysisProviders: List<String>) {
-      }
+      public fun allowedAnalysisProviders(allowedAnalysisProviders: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -487,11 +460,11 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty.builder()
 
-      public override fun allowedAnalyses(allowedAnalyses: List<String>) {
+      override fun allowedAnalyses(allowedAnalyses: List<String>) {
         cdkBuilder.allowedAnalyses(allowedAnalyses)
       }
 
-      public override fun allowedAnalysisProviders(allowedAnalysisProviders: List<String>) {
+      override fun allowedAnalysisProviders(allowedAnalysisProviders: List<String>) {
         cdkBuilder.allowedAnalysisProviders(allowedAnalysisProviders)
       }
 
@@ -504,10 +477,10 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty,
     ) : AnalysisRuleCustomProperty {
-      public override fun allowedAnalyses(): List<String> = unwrap(this).getAllowedAnalyses() ?:
+      override fun allowedAnalyses(): List<String> = unwrap(this).getAllowedAnalyses() ?:
           emptyList()
 
-      public override fun allowedAnalysisProviders(): List<String> =
+      override fun allowedAnalysisProviders(): List<String> =
           unwrap(this).getAllowedAnalysisProviders() ?: emptyList()
     }
 
@@ -537,11 +510,9 @@ public open class CfnConfiguredTable internal constructor(
     public fun function(): String
 
     public interface Builder {
-      public fun columnNames(columnNames: List<String>) {
-      }
+      public fun columnNames(columnNames: List<String>)
 
-      public fun function(function: String) {
-      }
+      public fun function(function: String)
     }
 
     private class BuilderImpl : Builder {
@@ -550,11 +521,11 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty.builder()
 
-      public override fun columnNames(columnNames: List<String>) {
+      override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
 
-      public override fun function(function: String) {
+      override fun function(function: String) {
         cdkBuilder.function(function)
       }
 
@@ -567,9 +538,9 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
     ) : AggregateColumnProperty {
-      public override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
 
-      public override fun function(): String = unwrap(this).getFunction()
+      override fun function(): String = unwrap(this).getFunction()
     }
 
     public companion object {
@@ -596,16 +567,13 @@ public open class CfnConfiguredTable internal constructor(
     public fun v1(): Any
 
     public interface Builder {
-      public fun v1(v1: IResolvable) {
-      }
+      public fun v1(v1: IResolvable)
 
-      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property) {
-      }
+      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e94b83562724b240a08adee0ffd72a564528ea2c203a921ff233196cdddd8d6")
-      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit) {
-      }
+      public fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -614,18 +582,18 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty.builder()
 
-      public override fun v1(v1: IResolvable) {
+      override fun v1(v1: IResolvable) {
         cdkBuilder.v1(v1.let(IResolvable::unwrap))
       }
 
-      public override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property) {
+      override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property) {
         cdkBuilder.v1(v1.let(ConfiguredTableAnalysisRulePolicyV1Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e94b83562724b240a08adee0ffd72a564528ea2c203a921ff233196cdddd8d6")
-      public override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit):
-          Unit = v1(ConfiguredTableAnalysisRulePolicyV1Property(v1))
+      override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property.Builder.() -> Unit): Unit =
+          v1(ConfiguredTableAnalysisRulePolicyV1Property(v1))
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
@@ -636,7 +604,7 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty,
     ) : ConfiguredTableAnalysisRulePolicyProperty {
-      public override fun v1(): Any = unwrap(this).getV1()
+      override fun v1(): Any = unwrap(this).getV1()
     }
 
     public companion object {
@@ -666,11 +634,9 @@ public open class CfnConfiguredTable internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -679,11 +645,11 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty.builder()
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -696,9 +662,9 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty,
     ) : GlueTableReferenceProperty {
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -730,14 +696,11 @@ public open class CfnConfiguredTable internal constructor(
     public fun listColumns(): List<String>
 
     public interface Builder {
-      public fun allowedJoinOperators(allowedJoinOperators: List<String>) {
-      }
+      public fun allowedJoinOperators(allowedJoinOperators: List<String>)
 
-      public fun joinColumns(joinColumns: List<String>) {
-      }
+      public fun joinColumns(joinColumns: List<String>)
 
-      public fun listColumns(listColumns: List<String>) {
-      }
+      public fun listColumns(listColumns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -746,15 +709,15 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty.builder()
 
-      public override fun allowedJoinOperators(allowedJoinOperators: List<String>) {
+      override fun allowedJoinOperators(allowedJoinOperators: List<String>) {
         cdkBuilder.allowedJoinOperators(allowedJoinOperators)
       }
 
-      public override fun joinColumns(joinColumns: List<String>) {
+      override fun joinColumns(joinColumns: List<String>) {
         cdkBuilder.joinColumns(joinColumns)
       }
 
-      public override fun listColumns(listColumns: List<String>) {
+      override fun listColumns(listColumns: List<String>) {
         cdkBuilder.listColumns(listColumns)
       }
 
@@ -767,12 +730,12 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty,
     ) : AnalysisRuleListProperty {
-      public override fun allowedJoinOperators(): List<String> =
-          unwrap(this).getAllowedJoinOperators() ?: emptyList()
+      override fun allowedJoinOperators(): List<String> = unwrap(this).getAllowedJoinOperators() ?:
+          emptyList()
 
-      public override fun joinColumns(): List<String> = unwrap(this).getJoinColumns() ?: emptyList()
+      override fun joinColumns(): List<String> = unwrap(this).getJoinColumns() ?: emptyList()
 
-      public override fun listColumns(): List<String> = unwrap(this).getListColumns() ?: emptyList()
+      override fun listColumns(): List<String> = unwrap(this).getListColumns() ?: emptyList()
     }
 
     public companion object {
@@ -801,19 +764,15 @@ public open class CfnConfiguredTable internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun policy(policy: IResolvable) {
-      }
+      public fun policy(policy: IResolvable)
 
-      public fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty) {
-      }
+      public fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e21ec50cfa5d777cdb4939ff81a5ad2e67ac32d06971c6437a8690e1a5ca72c")
-      public fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty.Builder.() -> Unit) {
-      }
+      public fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -822,21 +781,20 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty.builder()
 
-      public override fun policy(policy: IResolvable) {
+      override fun policy(policy: IResolvable) {
         cdkBuilder.policy(policy.let(IResolvable::unwrap))
       }
 
-      public override fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty) {
+      override fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty) {
         cdkBuilder.policy(policy.let(ConfiguredTableAnalysisRulePolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e21ec50cfa5d777cdb4939ff81a5ad2e67ac32d06971c6437a8690e1a5ca72c")
-      public override
-          fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty.Builder.() -> Unit): Unit =
-          policy(ConfiguredTableAnalysisRulePolicyProperty(policy))
+      override fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty.Builder.() -> Unit):
+          Unit = policy(ConfiguredTableAnalysisRulePolicyProperty(policy))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -849,9 +807,9 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty,
     ) : AnalysisRuleProperty {
-      public override fun policy(): Any = unwrap(this).getPolicy()
+      override fun policy(): Any = unwrap(this).getPolicy()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -882,38 +840,29 @@ public open class CfnConfiguredTable internal constructor(
     public fun list(): Any? = unwrap(this).getList()
 
     public interface Builder {
-      public fun aggregation(aggregation: IResolvable) {
-      }
+      public fun aggregation(aggregation: IResolvable)
 
-      public fun aggregation(aggregation: AnalysisRuleAggregationProperty) {
-      }
+      public fun aggregation(aggregation: AnalysisRuleAggregationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("71df3457cfbad5482336d956bec1132cb725114f18aa1d54295766d90ebaf374")
-      public fun aggregation(aggregation: AnalysisRuleAggregationProperty.Builder.() -> Unit) {
-      }
+      public fun aggregation(aggregation: AnalysisRuleAggregationProperty.Builder.() -> Unit)
 
-      public fun custom(custom: IResolvable) {
-      }
+      public fun custom(custom: IResolvable)
 
-      public fun custom(custom: AnalysisRuleCustomProperty) {
-      }
+      public fun custom(custom: AnalysisRuleCustomProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("77a08e90fa87700b479f28119cb3c92f924c18b384ef191db8b53323e50405c2")
-      public fun custom(custom: AnalysisRuleCustomProperty.Builder.() -> Unit) {
-      }
+      public fun custom(custom: AnalysisRuleCustomProperty.Builder.() -> Unit)
 
-      public fun list(list: IResolvable) {
-      }
+      public fun list(list: IResolvable)
 
-      public fun list(list: AnalysisRuleListProperty) {
-      }
+      public fun list(list: AnalysisRuleListProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("207750a3f78c8b1bf272a370e868e6b9098a56878a4eaddee147ed2a72ac0a63")
-      public fun list(list: AnalysisRuleListProperty.Builder.() -> Unit) {
-      }
+      public fun list(list: AnalysisRuleListProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -922,44 +871,43 @@ public open class CfnConfiguredTable internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property.builder()
 
-      public override fun aggregation(aggregation: IResolvable) {
+      override fun aggregation(aggregation: IResolvable) {
         cdkBuilder.aggregation(aggregation.let(IResolvable::unwrap))
       }
 
-      public override fun aggregation(aggregation: AnalysisRuleAggregationProperty) {
+      override fun aggregation(aggregation: AnalysisRuleAggregationProperty) {
         cdkBuilder.aggregation(aggregation.let(AnalysisRuleAggregationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("71df3457cfbad5482336d956bec1132cb725114f18aa1d54295766d90ebaf374")
-      public override
-          fun aggregation(aggregation: AnalysisRuleAggregationProperty.Builder.() -> Unit): Unit =
-          aggregation(AnalysisRuleAggregationProperty(aggregation))
+      override fun aggregation(aggregation: AnalysisRuleAggregationProperty.Builder.() -> Unit):
+          Unit = aggregation(AnalysisRuleAggregationProperty(aggregation))
 
-      public override fun custom(custom: IResolvable) {
+      override fun custom(custom: IResolvable) {
         cdkBuilder.custom(custom.let(IResolvable::unwrap))
       }
 
-      public override fun custom(custom: AnalysisRuleCustomProperty) {
+      override fun custom(custom: AnalysisRuleCustomProperty) {
         cdkBuilder.custom(custom.let(AnalysisRuleCustomProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("77a08e90fa87700b479f28119cb3c92f924c18b384ef191db8b53323e50405c2")
-      public override fun custom(custom: AnalysisRuleCustomProperty.Builder.() -> Unit): Unit =
+      override fun custom(custom: AnalysisRuleCustomProperty.Builder.() -> Unit): Unit =
           custom(AnalysisRuleCustomProperty(custom))
 
-      public override fun list(list: IResolvable) {
+      override fun list(list: IResolvable) {
         cdkBuilder.list(list.let(IResolvable::unwrap))
       }
 
-      public override fun list(list: AnalysisRuleListProperty) {
+      override fun list(list: AnalysisRuleListProperty) {
         cdkBuilder.list(list.let(AnalysisRuleListProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("207750a3f78c8b1bf272a370e868e6b9098a56878a4eaddee147ed2a72ac0a63")
-      public override fun list(list: AnalysisRuleListProperty.Builder.() -> Unit): Unit =
+      override fun list(list: AnalysisRuleListProperty.Builder.() -> Unit): Unit =
           list(AnalysisRuleListProperty(list))
 
       public fun build():
@@ -971,11 +919,11 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property,
     ) : ConfiguredTableAnalysisRulePolicyV1Property {
-      public override fun aggregation(): Any? = unwrap(this).getAggregation()
+      override fun aggregation(): Any? = unwrap(this).getAggregation()
 
-      public override fun custom(): Any? = unwrap(this).getCustom()
+      override fun custom(): Any? = unwrap(this).getCustom()
 
-      public override fun list(): Any? = unwrap(this).getList()
+      override fun list(): Any? = unwrap(this).getList()
     }
 
     public companion object {

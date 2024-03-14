@@ -89,42 +89,31 @@ public open class CfnEndpoint internal constructor(
       routingConfig(RoutingConfigProperty(`value`))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventBuses(eventBuses: IResolvable) {
-    }
+    public fun eventBuses(eventBuses: IResolvable)
 
-    public fun eventBuses(eventBuses: List<Any>) {
-    }
+    public fun eventBuses(eventBuses: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun replicationConfig(replicationConfig: IResolvable) {
-    }
+    public fun replicationConfig(replicationConfig: IResolvable)
 
-    public fun replicationConfig(replicationConfig: ReplicationConfigProperty) {
-    }
+    public fun replicationConfig(replicationConfig: ReplicationConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9fbd3c3749022dff789ce44ab31bef0639788cee39515b62e26328cf9cca128")
-    public fun replicationConfig(replicationConfig: ReplicationConfigProperty.Builder.() -> Unit) {
-    }
+    public fun replicationConfig(replicationConfig: ReplicationConfigProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun routingConfig(routingConfig: IResolvable) {
-    }
+    public fun routingConfig(routingConfig: IResolvable)
 
-    public fun routingConfig(routingConfig: RoutingConfigProperty) {
-    }
+    public fun routingConfig(routingConfig: RoutingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("34380cb8c43c8004bcf1af22bf8bc416de468b6de50c36decd7bd5cf34e72171")
-    public fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit) {
-    }
+    public fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -134,52 +123,51 @@ public open class CfnEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.CfnEndpoint.Builder =
         software.amazon.awscdk.services.events.CfnEndpoint.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventBuses(eventBuses: IResolvable) {
+    override fun eventBuses(eventBuses: IResolvable) {
       cdkBuilder.eventBuses(eventBuses.let(IResolvable::unwrap))
     }
 
-    public override fun eventBuses(eventBuses: List<Any>) {
+    override fun eventBuses(eventBuses: List<Any>) {
       cdkBuilder.eventBuses(eventBuses)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun replicationConfig(replicationConfig: IResolvable) {
+    override fun replicationConfig(replicationConfig: IResolvable) {
       cdkBuilder.replicationConfig(replicationConfig.let(IResolvable::unwrap))
     }
 
-    public override fun replicationConfig(replicationConfig: ReplicationConfigProperty) {
+    override fun replicationConfig(replicationConfig: ReplicationConfigProperty) {
       cdkBuilder.replicationConfig(replicationConfig.let(ReplicationConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9fbd3c3749022dff789ce44ab31bef0639788cee39515b62e26328cf9cca128")
-    public override
-        fun replicationConfig(replicationConfig: ReplicationConfigProperty.Builder.() -> Unit): Unit
-        = replicationConfig(ReplicationConfigProperty(replicationConfig))
+    override fun replicationConfig(replicationConfig: ReplicationConfigProperty.Builder.() -> Unit):
+        Unit = replicationConfig(ReplicationConfigProperty(replicationConfig))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun routingConfig(routingConfig: IResolvable) {
+    override fun routingConfig(routingConfig: IResolvable) {
       cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun routingConfig(routingConfig: RoutingConfigProperty) {
+    override fun routingConfig(routingConfig: RoutingConfigProperty) {
       cdkBuilder.routingConfig(routingConfig.let(RoutingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("34380cb8c43c8004bcf1af22bf8bc416de468b6de50c36decd7bd5cf34e72171")
-    public override fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit): Unit
-        = routingConfig(RoutingConfigProperty(routingConfig))
+    override fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit): Unit =
+        routingConfig(RoutingConfigProperty(routingConfig))
 
     public fun build(): software.amazon.awscdk.services.events.CfnEndpoint = cdkBuilder.build()
   }
@@ -209,8 +197,7 @@ public open class CfnEndpoint internal constructor(
     public fun route(): String
 
     public interface Builder {
-      public fun route(route: String) {
-      }
+      public fun route(route: String)
     }
 
     private class BuilderImpl : Builder {
@@ -218,7 +205,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty.Builder =
           software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty.builder()
 
-      public override fun route(route: String) {
+      override fun route(route: String) {
         cdkBuilder.route(route)
       }
 
@@ -229,7 +216,7 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty,
     ) : SecondaryProperty {
-      public override fun route(): String = unwrap(this).getRoute()
+      override fun route(): String = unwrap(this).getRoute()
     }
 
     public companion object {
@@ -256,16 +243,13 @@ public open class CfnEndpoint internal constructor(
     public fun failoverConfig(): Any
 
     public interface Builder {
-      public fun failoverConfig(failoverConfig: IResolvable) {
-      }
+      public fun failoverConfig(failoverConfig: IResolvable)
 
-      public fun failoverConfig(failoverConfig: FailoverConfigProperty) {
-      }
+      public fun failoverConfig(failoverConfig: FailoverConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39c201bc9a8b40ad793a154eff923fe9e833d8422279f2fa895ef34d06ea5b98")
-      public fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit) {
-      }
+      public fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -273,18 +257,18 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty.Builder =
           software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty.builder()
 
-      public override fun failoverConfig(failoverConfig: IResolvable) {
+      override fun failoverConfig(failoverConfig: IResolvable) {
         cdkBuilder.failoverConfig(failoverConfig.let(IResolvable::unwrap))
       }
 
-      public override fun failoverConfig(failoverConfig: FailoverConfigProperty) {
+      override fun failoverConfig(failoverConfig: FailoverConfigProperty) {
         cdkBuilder.failoverConfig(failoverConfig.let(FailoverConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39c201bc9a8b40ad793a154eff923fe9e833d8422279f2fa895ef34d06ea5b98")
-      public override fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit):
-          Unit = failoverConfig(FailoverConfigProperty(failoverConfig))
+      override fun failoverConfig(failoverConfig: FailoverConfigProperty.Builder.() -> Unit): Unit =
+          failoverConfig(FailoverConfigProperty(failoverConfig))
 
       public fun build(): software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty =
           cdkBuilder.build()
@@ -294,7 +278,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty,
     ) : RoutingConfigProperty {
-      public override fun failoverConfig(): Any = unwrap(this).getFailoverConfig()
+      override fun failoverConfig(): Any = unwrap(this).getFailoverConfig()
     }
 
     public companion object {
@@ -323,27 +307,21 @@ public open class CfnEndpoint internal constructor(
     public fun secondary(): Any
 
     public interface Builder {
-      public fun primary(primary: IResolvable) {
-      }
+      public fun primary(primary: IResolvable)
 
-      public fun primary(primary: PrimaryProperty) {
-      }
+      public fun primary(primary: PrimaryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a62d771df973cb5a72c7e270f89dc23414aeb08f5fc9e9937444f26f565b90c")
-      public fun primary(primary: PrimaryProperty.Builder.() -> Unit) {
-      }
+      public fun primary(primary: PrimaryProperty.Builder.() -> Unit)
 
-      public fun secondary(secondary: IResolvable) {
-      }
+      public fun secondary(secondary: IResolvable)
 
-      public fun secondary(secondary: SecondaryProperty) {
-      }
+      public fun secondary(secondary: SecondaryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fff17fb41c63512ded3ee3d510421c5944b3c4000dda52c8ec07e507182c8de1")
-      public fun secondary(secondary: SecondaryProperty.Builder.() -> Unit) {
-      }
+      public fun secondary(secondary: SecondaryProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -351,30 +329,30 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty.Builder =
           software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty.builder()
 
-      public override fun primary(primary: IResolvable) {
+      override fun primary(primary: IResolvable) {
         cdkBuilder.primary(primary.let(IResolvable::unwrap))
       }
 
-      public override fun primary(primary: PrimaryProperty) {
+      override fun primary(primary: PrimaryProperty) {
         cdkBuilder.primary(primary.let(PrimaryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a62d771df973cb5a72c7e270f89dc23414aeb08f5fc9e9937444f26f565b90c")
-      public override fun primary(primary: PrimaryProperty.Builder.() -> Unit): Unit =
+      override fun primary(primary: PrimaryProperty.Builder.() -> Unit): Unit =
           primary(PrimaryProperty(primary))
 
-      public override fun secondary(secondary: IResolvable) {
+      override fun secondary(secondary: IResolvable) {
         cdkBuilder.secondary(secondary.let(IResolvable::unwrap))
       }
 
-      public override fun secondary(secondary: SecondaryProperty) {
+      override fun secondary(secondary: SecondaryProperty) {
         cdkBuilder.secondary(secondary.let(SecondaryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fff17fb41c63512ded3ee3d510421c5944b3c4000dda52c8ec07e507182c8de1")
-      public override fun secondary(secondary: SecondaryProperty.Builder.() -> Unit): Unit =
+      override fun secondary(secondary: SecondaryProperty.Builder.() -> Unit): Unit =
           secondary(SecondaryProperty(secondary))
 
       public fun build(): software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty
@@ -385,9 +363,9 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty,
     ) : FailoverConfigProperty {
-      public override fun primary(): Any = unwrap(this).getPrimary()
+      override fun primary(): Any = unwrap(this).getPrimary()
 
-      public override fun secondary(): Any = unwrap(this).getSecondary()
+      override fun secondary(): Any = unwrap(this).getSecondary()
     }
 
     public companion object {
@@ -414,8 +392,7 @@ public open class CfnEndpoint internal constructor(
     public fun state(): String
 
     public interface Builder {
-      public fun state(state: String) {
-      }
+      public fun state(state: String)
     }
 
     private class BuilderImpl : Builder {
@@ -423,7 +400,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty.Builder =
           software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty.builder()
 
-      public override fun state(state: String) {
+      override fun state(state: String) {
         cdkBuilder.state(state)
       }
 
@@ -436,7 +413,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty,
     ) : ReplicationConfigProperty {
-      public override fun state(): String = unwrap(this).getState()
+      override fun state(): String = unwrap(this).getState()
     }
 
     public companion object {
@@ -463,8 +440,7 @@ public open class CfnEndpoint internal constructor(
     public fun eventBusArn(): String
 
     public interface Builder {
-      public fun eventBusArn(eventBusArn: String) {
-      }
+      public fun eventBusArn(eventBusArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -472,7 +448,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty.Builder =
           software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty.builder()
 
-      public override fun eventBusArn(eventBusArn: String) {
+      override fun eventBusArn(eventBusArn: String) {
         cdkBuilder.eventBusArn(eventBusArn)
       }
 
@@ -485,7 +461,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty,
     ) : EndpointEventBusProperty {
-      public override fun eventBusArn(): String = unwrap(this).getEventBusArn()
+      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
     }
 
     public companion object {
@@ -512,8 +488,7 @@ public open class CfnEndpoint internal constructor(
     public fun healthCheck(): String
 
     public interface Builder {
-      public fun healthCheck(healthCheck: String) {
-      }
+      public fun healthCheck(healthCheck: String)
     }
 
     private class BuilderImpl : Builder {
@@ -521,7 +496,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty.Builder =
           software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty.builder()
 
-      public override fun healthCheck(healthCheck: String) {
+      override fun healthCheck(healthCheck: String) {
         cdkBuilder.healthCheck(healthCheck)
       }
 
@@ -532,7 +507,7 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty,
     ) : PrimaryProperty {
-      public override fun healthCheck(): String = unwrap(this).getHealthCheck()
+      override fun healthCheck(): String = unwrap(this).getHealthCheck()
     }
 
     public companion object {

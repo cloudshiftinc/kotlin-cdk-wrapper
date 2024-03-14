@@ -52,72 +52,51 @@ public open class DistributedMap internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun itemBatcher(itemBatcher: ItemBatcher) {
-    }
+    public fun itemBatcher(itemBatcher: ItemBatcher)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8aeab7f37a832a31bb89e715fbeb99a51fb9a2dd36e09f574eeec72eac44f70c")
-    public fun itemBatcher(itemBatcher: ItemBatcher.Builder.() -> Unit) {
-    }
+    public fun itemBatcher(itemBatcher: ItemBatcher.Builder.() -> Unit)
 
-    public fun itemReader(itemReader: IItemReader) {
-    }
+    public fun itemReader(itemReader: IItemReader)
 
-    public fun itemSelector(itemSelector: Map<String, Any>) {
-    }
+    public fun itemSelector(itemSelector: Map<String, Any>)
 
-    public fun itemsPath(itemsPath: String) {
-    }
+    public fun itemsPath(itemsPath: String)
 
-    public fun label(label: String) {
-    }
+    public fun label(label: String)
 
-    public fun mapExecutionType(mapExecutionType: StateMachineType) {
-    }
+    public fun mapExecutionType(mapExecutionType: StateMachineType)
 
-    public fun maxConcurrency(maxConcurrency: Number) {
-    }
+    public fun maxConcurrency(maxConcurrency: Number)
 
-    public fun maxConcurrencyPath(maxConcurrencyPath: String) {
-    }
+    public fun maxConcurrencyPath(maxConcurrencyPath: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun resultWriter(resultWriter: ResultWriter) {
-    }
+    public fun resultWriter(resultWriter: ResultWriter)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("16ba6ed0c805133e4b1d136a01333f5d91a2ddba1b0a40565a0fd7525711bc3c")
-    public fun resultWriter(resultWriter: ResultWriter.Builder.() -> Unit) {
-    }
+    public fun resultWriter(resultWriter: ResultWriter.Builder.() -> Unit)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun toleratedFailureCount(toleratedFailureCount: Number) {
-    }
+    public fun toleratedFailureCount(toleratedFailureCount: Number)
 
-    public fun toleratedFailureCountPath(toleratedFailureCountPath: String) {
-    }
+    public fun toleratedFailureCountPath(toleratedFailureCountPath: String)
 
-    public fun toleratedFailurePercentage(toleratedFailurePercentage: Number) {
-    }
+    public fun toleratedFailurePercentage(toleratedFailurePercentage: Number)
 
-    public fun toleratedFailurePercentagePath(toleratedFailurePercentagePath: String) {
-    }
+    public fun toleratedFailurePercentagePath(toleratedFailurePercentagePath: String)
   }
 
   private class BuilderImpl(
@@ -127,89 +106,89 @@ public open class DistributedMap internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.DistributedMap.Builder =
         software.amazon.awscdk.services.stepfunctions.DistributedMap.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun itemBatcher(itemBatcher: ItemBatcher) {
+    override fun itemBatcher(itemBatcher: ItemBatcher) {
       cdkBuilder.itemBatcher(itemBatcher.let(ItemBatcher::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8aeab7f37a832a31bb89e715fbeb99a51fb9a2dd36e09f574eeec72eac44f70c")
-    public override fun itemBatcher(itemBatcher: ItemBatcher.Builder.() -> Unit): Unit =
+    override fun itemBatcher(itemBatcher: ItemBatcher.Builder.() -> Unit): Unit =
         itemBatcher(ItemBatcher(itemBatcher))
 
-    public override fun itemReader(itemReader: IItemReader) {
+    override fun itemReader(itemReader: IItemReader) {
       cdkBuilder.itemReader(itemReader.let(IItemReader::unwrap))
     }
 
-    public override fun itemSelector(itemSelector: Map<String, Any>) {
+    override fun itemSelector(itemSelector: Map<String, Any>) {
       cdkBuilder.itemSelector(itemSelector)
     }
 
-    public override fun itemsPath(itemsPath: String) {
+    override fun itemsPath(itemsPath: String) {
       cdkBuilder.itemsPath(itemsPath)
     }
 
-    public override fun label(label: String) {
+    override fun label(label: String) {
       cdkBuilder.label(label)
     }
 
-    public override fun mapExecutionType(mapExecutionType: StateMachineType) {
+    override fun mapExecutionType(mapExecutionType: StateMachineType) {
       cdkBuilder.mapExecutionType(mapExecutionType.let(StateMachineType::unwrap))
     }
 
-    public override fun maxConcurrency(maxConcurrency: Number) {
+    override fun maxConcurrency(maxConcurrency: Number) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
 
-    public override fun maxConcurrencyPath(maxConcurrencyPath: String) {
+    override fun maxConcurrencyPath(maxConcurrencyPath: String) {
       cdkBuilder.maxConcurrencyPath(maxConcurrencyPath)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun resultWriter(resultWriter: ResultWriter) {
+    override fun resultWriter(resultWriter: ResultWriter) {
       cdkBuilder.resultWriter(resultWriter.let(ResultWriter::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("16ba6ed0c805133e4b1d136a01333f5d91a2ddba1b0a40565a0fd7525711bc3c")
-    public override fun resultWriter(resultWriter: ResultWriter.Builder.() -> Unit): Unit =
+    override fun resultWriter(resultWriter: ResultWriter.Builder.() -> Unit): Unit =
         resultWriter(ResultWriter(resultWriter))
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun toleratedFailureCount(toleratedFailureCount: Number) {
+    override fun toleratedFailureCount(toleratedFailureCount: Number) {
       cdkBuilder.toleratedFailureCount(toleratedFailureCount)
     }
 
-    public override fun toleratedFailureCountPath(toleratedFailureCountPath: String) {
+    override fun toleratedFailureCountPath(toleratedFailureCountPath: String) {
       cdkBuilder.toleratedFailureCountPath(toleratedFailureCountPath)
     }
 
-    public override fun toleratedFailurePercentage(toleratedFailurePercentage: Number) {
+    override fun toleratedFailurePercentage(toleratedFailurePercentage: Number) {
       cdkBuilder.toleratedFailurePercentage(toleratedFailurePercentage)
     }
 
-    public override fun toleratedFailurePercentagePath(toleratedFailurePercentagePath: String) {
+    override fun toleratedFailurePercentagePath(toleratedFailurePercentagePath: String) {
       cdkBuilder.toleratedFailurePercentagePath(toleratedFailurePercentagePath)
     }
 

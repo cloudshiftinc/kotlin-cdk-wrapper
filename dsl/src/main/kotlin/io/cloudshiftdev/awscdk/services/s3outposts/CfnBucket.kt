@@ -64,26 +64,20 @@ public open class CfnBucket internal constructor(
   }
 
   public interface Builder {
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
-    }
+    public fun lifecycleConfiguration(lifecycleConfiguration: IResolvable)
 
-    public fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty) {
-    }
+    public fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b30418c71d54521c0248fb6c87d8bcba24bb269e4541a7230ed5a2c7c9aaba1b")
     public
-        fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty.Builder.() -> Unit)
 
-    public fun outpostId(outpostId: String) {
-    }
+    public fun outpostId(outpostId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -93,30 +87,29 @@ public open class CfnBucket internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3outposts.CfnBucket.Builder =
         software.amazon.awscdk.services.s3outposts.CfnBucket.Builder.create(scope, id)
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
+    override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
       cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty) {
+    override fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty) {
       cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b30418c71d54521c0248fb6c87d8bcba24bb269e4541a7230ed5a2c7c9aaba1b")
-    public override
+    override
         fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty.Builder.() -> Unit):
         Unit = lifecycleConfiguration(LifecycleConfigurationProperty(lifecycleConfiguration))
 
-    public override fun outpostId(outpostId: String) {
+    override fun outpostId(outpostId: String) {
       cdkBuilder.outpostId(outpostId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -148,11 +141,9 @@ public open class CfnBucket internal constructor(
     public fun rules(): Any
 
     public interface Builder {
-      public fun rules(rules: IResolvable) {
-      }
+      public fun rules(rules: IResolvable)
 
-      public fun rules(rules: List<Any>) {
-      }
+      public fun rules(rules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -161,11 +152,11 @@ public open class CfnBucket internal constructor(
           =
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty.builder()
 
-      public override fun rules(rules: IResolvable) {
+      override fun rules(rules: IResolvable) {
         cdkBuilder.rules(rules.let(IResolvable::unwrap))
       }
 
-      public override fun rules(rules: List<Any>) {
+      override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
 
@@ -178,7 +169,7 @@ public open class CfnBucket internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty,
     ) : LifecycleConfigurationProperty {
-      public override fun rules(): Any = unwrap(this).getRules()
+      override fun rules(): Any = unwrap(this).getRules()
     }
 
     public companion object {
@@ -207,11 +198,9 @@ public open class CfnBucket internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -219,11 +208,11 @@ public open class CfnBucket internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty.Builder =
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -235,9 +224,9 @@ public open class CfnBucket internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterTagProperty,
     ) : FilterTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -275,33 +264,25 @@ public open class CfnBucket internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: IResolvable) {
-      }
+      public fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: IResolvable)
 
       public
-          fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty) {
-      }
+          fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("96181f958b31bd6a63d4a8ee15081defdbe84d97c678af7c257080b87eaa305b")
       public
-          fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty.Builder.() -> Unit) {
-      }
+          fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty.Builder.() -> Unit)
 
-      public fun expirationDate(expirationDate: String) {
-      }
+      public fun expirationDate(expirationDate: String)
 
-      public fun expirationInDays(expirationInDays: Number) {
-      }
+      public fun expirationInDays(expirationInDays: Number)
 
-      public fun filter(filter: Any) {
-      }
+      public fun filter(filter: Any)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -309,40 +290,39 @@ public open class CfnBucket internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty.Builder =
           software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty.builder()
 
-      public override
-          fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: IResolvable) {
+      override fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: IResolvable) {
         cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty) {
         cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(AbortIncompleteMultipartUploadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("96181f958b31bd6a63d4a8ee15081defdbe84d97c678af7c257080b87eaa305b")
-      public override
+      override
           fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty.Builder.() -> Unit):
           Unit =
           abortIncompleteMultipartUpload(AbortIncompleteMultipartUploadProperty(abortIncompleteMultipartUpload))
 
-      public override fun expirationDate(expirationDate: String) {
+      override fun expirationDate(expirationDate: String) {
         cdkBuilder.expirationDate(expirationDate)
       }
 
-      public override fun expirationInDays(expirationInDays: Number) {
+      override fun expirationInDays(expirationInDays: Number) {
         cdkBuilder.expirationInDays(expirationInDays)
       }
 
-      public override fun filter(filter: Any) {
+      override fun filter(filter: Any) {
         cdkBuilder.filter(filter)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -353,18 +333,18 @@ public open class CfnBucket internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.RuleProperty,
     ) : RuleProperty {
-      public override fun abortIncompleteMultipartUpload(): Any? =
+      override fun abortIncompleteMultipartUpload(): Any? =
           unwrap(this).getAbortIncompleteMultipartUpload()
 
-      public override fun expirationDate(): String? = unwrap(this).getExpirationDate()
+      override fun expirationDate(): String? = unwrap(this).getExpirationDate()
 
-      public override fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
+      override fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
 
-      public override fun filter(): Any? = unwrap(this).getFilter()
+      override fun filter(): Any? = unwrap(this).getFilter()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -391,8 +371,7 @@ public open class CfnBucket internal constructor(
     public fun daysAfterInitiation(): Number
 
     public interface Builder {
-      public fun daysAfterInitiation(daysAfterInitiation: Number) {
-      }
+      public fun daysAfterInitiation(daysAfterInitiation: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -401,7 +380,7 @@ public open class CfnBucket internal constructor(
           =
           software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty.builder()
 
-      public override fun daysAfterInitiation(daysAfterInitiation: Number) {
+      override fun daysAfterInitiation(daysAfterInitiation: Number) {
         cdkBuilder.daysAfterInitiation(daysAfterInitiation)
       }
 
@@ -414,7 +393,7 @@ public open class CfnBucket internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnBucket.AbortIncompleteMultipartUploadProperty,
     ) : AbortIncompleteMultipartUploadProperty {
-      public override fun daysAfterInitiation(): Number = unwrap(this).getDaysAfterInitiation()
+      override fun daysAfterInitiation(): Number = unwrap(this).getDaysAfterInitiation()
     }
 
     public companion object {
@@ -446,30 +425,23 @@ public open class CfnBucket internal constructor(
     public fun tag(): Any? = unwrap(this).getTag()
 
     public interface Builder {
-      public fun andOperator(andOperator: IResolvable) {
-      }
+      public fun andOperator(andOperator: IResolvable)
 
-      public fun andOperator(andOperator: FilterAndOperatorProperty) {
-      }
+      public fun andOperator(andOperator: FilterAndOperatorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b71659ddade6f7c3414d18dcbd9690daaab2e4c9245360663712d1c20f60dd17")
-      public fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit) {
-      }
+      public fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
 
-      public fun tag(tag: IResolvable) {
-      }
+      public fun tag(tag: IResolvable)
 
-      public fun tag(tag: FilterTagProperty) {
-      }
+      public fun tag(tag: FilterTagProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
-      public fun tag(tag: FilterTagProperty.Builder.() -> Unit) {
-      }
+      public fun tag(tag: FilterTagProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -477,34 +449,34 @@ public open class CfnBucket internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty.Builder =
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty.builder()
 
-      public override fun andOperator(andOperator: IResolvable) {
+      override fun andOperator(andOperator: IResolvable) {
         cdkBuilder.andOperator(andOperator.let(IResolvable::unwrap))
       }
 
-      public override fun andOperator(andOperator: FilterAndOperatorProperty) {
+      override fun andOperator(andOperator: FilterAndOperatorProperty) {
         cdkBuilder.andOperator(andOperator.let(FilterAndOperatorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b71659ddade6f7c3414d18dcbd9690daaab2e4c9245360663712d1c20f60dd17")
-      public override fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit):
-          Unit = andOperator(FilterAndOperatorProperty(andOperator))
+      override fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit): Unit =
+          andOperator(FilterAndOperatorProperty(andOperator))
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
-      public override fun tag(tag: IResolvable) {
+      override fun tag(tag: IResolvable) {
         cdkBuilder.tag(tag.let(IResolvable::unwrap))
       }
 
-      public override fun tag(tag: FilterTagProperty) {
+      override fun tag(tag: FilterTagProperty) {
         cdkBuilder.tag(tag.let(FilterTagProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
-      public override fun tag(tag: FilterTagProperty.Builder.() -> Unit): Unit =
+      override fun tag(tag: FilterTagProperty.Builder.() -> Unit): Unit =
           tag(FilterTagProperty(tag))
 
       public fun build(): software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty =
@@ -514,11 +486,11 @@ public open class CfnBucket internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucket.FilterProperty,
     ) : FilterProperty {
-      public override fun andOperator(): Any? = unwrap(this).getAndOperator()
+      override fun andOperator(): Any? = unwrap(this).getAndOperator()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
 
-      public override fun tag(): Any? = unwrap(this).getTag()
+      override fun tag(): Any? = unwrap(this).getTag()
     }
 
     public companion object {
@@ -547,11 +519,9 @@ public open class CfnBucket internal constructor(
     public fun tags(): List<FilterTagProperty>
 
     public interface Builder {
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
 
-      public fun tags(tags: List<FilterTagProperty>) {
-      }
+      public fun tags(tags: List<FilterTagProperty>)
     }
 
     private class BuilderImpl : Builder {
@@ -559,11 +529,11 @@ public open class CfnBucket internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.Builder =
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.builder()
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
-      public override fun tags(tags: List<FilterTagProperty>) {
+      override fun tags(tags: List<FilterTagProperty>) {
         cdkBuilder.tags(tags.map(FilterTagProperty::unwrap))
       }
 
@@ -576,9 +546,9 @@ public open class CfnBucket internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty,
     ) : FilterAndOperatorProperty {
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
 
-      public override fun tags(): List<FilterTagProperty> =
+      override fun tags(): List<FilterTagProperty> =
           unwrap(this).getTags().map(FilterTagProperty::wrap)
     }
 

@@ -74,37 +74,27 @@ public open class CfnAppImageConfig internal constructor(
   }
 
   public interface Builder {
-    public fun appImageConfigName(appImageConfigName: String) {
-    }
+    public fun appImageConfigName(appImageConfigName: String)
 
-    public fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
-    }
+    public fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable)
 
-    public
-        fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty) {
-    }
+    public fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3182dfdc5debf396862f1319a1415f1e0a69eba5d42993b83a608bd841e71a6")
     public
-        fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty.Builder.() -> Unit) {
-    }
+        fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty.Builder.() -> Unit)
 
-    public fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
-    }
+    public fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable)
 
-    public
-        fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty) {
-    }
+    public fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48dd6586d112ce707aa713b8ce6dc56a8bffb85dc1e0d37e9f79481f6533f76b")
     public
-        fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty.Builder.() -> Unit) {
-    }
+        fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -114,41 +104,41 @@ public open class CfnAppImageConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.Builder =
         software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.Builder.create(scope, id)
 
-    public override fun appImageConfigName(appImageConfigName: String) {
+    override fun appImageConfigName(appImageConfigName: String) {
       cdkBuilder.appImageConfigName(appImageConfigName)
     }
 
-    public override fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
+    override fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
       cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty) {
       cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(JupyterLabAppImageConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3182dfdc5debf396862f1319a1415f1e0a69eba5d42993b83a608bd841e71a6")
-    public override
+    override
         fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty.Builder.() -> Unit):
         Unit = jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty(jupyterLabAppImageConfig))
 
-    public override fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
+    override fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
       cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty) {
       cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(KernelGatewayImageConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48dd6586d112ce707aa713b8ce6dc56a8bffb85dc1e0d37e9f79481f6533f76b")
-    public override
+    override
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty.Builder.() -> Unit):
         Unit = kernelGatewayImageConfig(KernelGatewayImageConfigProperty(kernelGatewayImageConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -181,16 +171,13 @@ public open class CfnAppImageConfig internal constructor(
     public fun containerConfig(): Any? = unwrap(this).getContainerConfig()
 
     public interface Builder {
-      public fun containerConfig(containerConfig: IResolvable) {
-      }
+      public fun containerConfig(containerConfig: IResolvable)
 
-      public fun containerConfig(containerConfig: ContainerConfigProperty) {
-      }
+      public fun containerConfig(containerConfig: ContainerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e1aebf9fe4a21aa96b51896243d92e93f2bcd5d3a552db1c9e582002bc4cd71a")
-      public fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit) {
-      }
+      public fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -199,19 +186,18 @@ public open class CfnAppImageConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty.builder()
 
-      public override fun containerConfig(containerConfig: IResolvable) {
+      override fun containerConfig(containerConfig: IResolvable) {
         cdkBuilder.containerConfig(containerConfig.let(IResolvable::unwrap))
       }
 
-      public override fun containerConfig(containerConfig: ContainerConfigProperty) {
+      override fun containerConfig(containerConfig: ContainerConfigProperty) {
         cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e1aebf9fe4a21aa96b51896243d92e93f2bcd5d3a552db1c9e582002bc4cd71a")
-      public override
-          fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit): Unit =
-          containerConfig(ContainerConfigProperty(containerConfig))
+      override fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit):
+          Unit = containerConfig(ContainerConfigProperty(containerConfig))
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
@@ -222,7 +208,7 @@ public open class CfnAppImageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty,
     ) : JupyterLabAppImageConfigProperty {
-      public override fun containerConfig(): Any? = unwrap(this).getContainerConfig()
+      override fun containerConfig(): Any? = unwrap(this).getContainerConfig()
     }
 
     public companion object {
@@ -251,11 +237,9 @@ public open class CfnAppImageConfig internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun displayName(displayName: String) {
-      }
+      public fun displayName(displayName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -263,11 +247,11 @@ public open class CfnAppImageConfig internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty.builder()
 
-      public override fun displayName(displayName: String) {
+      override fun displayName(displayName: String) {
         cdkBuilder.displayName(displayName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -280,9 +264,9 @@ public open class CfnAppImageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty,
     ) : KernelSpecProperty {
-      public override fun displayName(): String? = unwrap(this).getDisplayName()
+      override fun displayName(): String? = unwrap(this).getDisplayName()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -316,17 +300,13 @@ public open class CfnAppImageConfig internal constructor(
         unwrap(this).getContainerEnvironmentVariables()
 
     public interface Builder {
-      public fun containerArguments(containerArguments: List<String>) {
-      }
+      public fun containerArguments(containerArguments: List<String>)
 
-      public fun containerEntrypoint(containerEntrypoint: List<String>) {
-      }
+      public fun containerEntrypoint(containerEntrypoint: List<String>)
 
-      public fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable) {
-      }
+      public fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable)
 
-      public fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>) {
-      }
+      public fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -335,20 +315,19 @@ public open class CfnAppImageConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty.builder()
 
-      public override fun containerArguments(containerArguments: List<String>) {
+      override fun containerArguments(containerArguments: List<String>) {
         cdkBuilder.containerArguments(containerArguments)
       }
 
-      public override fun containerEntrypoint(containerEntrypoint: List<String>) {
+      override fun containerEntrypoint(containerEntrypoint: List<String>) {
         cdkBuilder.containerEntrypoint(containerEntrypoint)
       }
 
-      public override
-          fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable) {
+      override fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable) {
         cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables.let(IResolvable::unwrap))
       }
 
-      public override fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>) {
+      override fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>) {
         cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables)
       }
 
@@ -361,13 +340,13 @@ public open class CfnAppImageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty,
     ) : ContainerConfigProperty {
-      public override fun containerArguments(): List<String> = unwrap(this).getContainerArguments()
-          ?: emptyList()
+      override fun containerArguments(): List<String> = unwrap(this).getContainerArguments() ?:
+          emptyList()
 
-      public override fun containerEntrypoint(): List<String> =
-          unwrap(this).getContainerEntrypoint() ?: emptyList()
+      override fun containerEntrypoint(): List<String> = unwrap(this).getContainerEntrypoint() ?:
+          emptyList()
 
-      public override fun containerEnvironmentVariables(): Any? =
+      override fun containerEnvironmentVariables(): Any? =
           unwrap(this).getContainerEnvironmentVariables()
     }
 
@@ -397,22 +376,17 @@ public open class CfnAppImageConfig internal constructor(
     public fun kernelSpecs(): Any
 
     public interface Builder {
-      public fun fileSystemConfig(fileSystemConfig: IResolvable) {
-      }
+      public fun fileSystemConfig(fileSystemConfig: IResolvable)
 
-      public fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty) {
-      }
+      public fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28df5b17febe71ee76595a70da8e1da758c6b9bcb73a6c4dd93f394d942cb261")
-      public fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty.Builder.() -> Unit) {
-      }
+      public fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty.Builder.() -> Unit)
 
-      public fun kernelSpecs(kernelSpecs: IResolvable) {
-      }
+      public fun kernelSpecs(kernelSpecs: IResolvable)
 
-      public fun kernelSpecs(kernelSpecs: List<Any>) {
-      }
+      public fun kernelSpecs(kernelSpecs: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -421,25 +395,24 @@ public open class CfnAppImageConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty.builder()
 
-      public override fun fileSystemConfig(fileSystemConfig: IResolvable) {
+      override fun fileSystemConfig(fileSystemConfig: IResolvable) {
         cdkBuilder.fileSystemConfig(fileSystemConfig.let(IResolvable::unwrap))
       }
 
-      public override fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty) {
+      override fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty) {
         cdkBuilder.fileSystemConfig(fileSystemConfig.let(FileSystemConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28df5b17febe71ee76595a70da8e1da758c6b9bcb73a6c4dd93f394d942cb261")
-      public override
-          fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty.Builder.() -> Unit): Unit
-          = fileSystemConfig(FileSystemConfigProperty(fileSystemConfig))
+      override fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty.Builder.() -> Unit):
+          Unit = fileSystemConfig(FileSystemConfigProperty(fileSystemConfig))
 
-      public override fun kernelSpecs(kernelSpecs: IResolvable) {
+      override fun kernelSpecs(kernelSpecs: IResolvable) {
         cdkBuilder.kernelSpecs(kernelSpecs.let(IResolvable::unwrap))
       }
 
-      public override fun kernelSpecs(kernelSpecs: List<Any>) {
+      override fun kernelSpecs(kernelSpecs: List<Any>) {
         cdkBuilder.kernelSpecs(kernelSpecs)
       }
 
@@ -452,9 +425,9 @@ public open class CfnAppImageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty,
     ) : KernelGatewayImageConfigProperty {
-      public override fun fileSystemConfig(): Any? = unwrap(this).getFileSystemConfig()
+      override fun fileSystemConfig(): Any? = unwrap(this).getFileSystemConfig()
 
-      public override fun kernelSpecs(): Any = unwrap(this).getKernelSpecs()
+      override fun kernelSpecs(): Any = unwrap(this).getKernelSpecs()
     }
 
     public companion object {
@@ -485,14 +458,11 @@ public open class CfnAppImageConfig internal constructor(
     public fun mountPath(): String? = unwrap(this).getMountPath()
 
     public interface Builder {
-      public fun defaultGid(defaultGid: Number) {
-      }
+      public fun defaultGid(defaultGid: Number)
 
-      public fun defaultUid(defaultUid: Number) {
-      }
+      public fun defaultUid(defaultUid: Number)
 
-      public fun mountPath(mountPath: String) {
-      }
+      public fun mountPath(mountPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -501,15 +471,15 @@ public open class CfnAppImageConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty.builder()
 
-      public override fun defaultGid(defaultGid: Number) {
+      override fun defaultGid(defaultGid: Number) {
         cdkBuilder.defaultGid(defaultGid)
       }
 
-      public override fun defaultUid(defaultUid: Number) {
+      override fun defaultUid(defaultUid: Number) {
         cdkBuilder.defaultUid(defaultUid)
       }
 
-      public override fun mountPath(mountPath: String) {
+      override fun mountPath(mountPath: String) {
         cdkBuilder.mountPath(mountPath)
       }
 
@@ -522,11 +492,11 @@ public open class CfnAppImageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty,
     ) : FileSystemConfigProperty {
-      public override fun defaultGid(): Number? = unwrap(this).getDefaultGid()
+      override fun defaultGid(): Number? = unwrap(this).getDefaultGid()
 
-      public override fun defaultUid(): Number? = unwrap(this).getDefaultUid()
+      override fun defaultUid(): Number? = unwrap(this).getDefaultUid()
 
-      public override fun mountPath(): String? = unwrap(this).getMountPath()
+      override fun mountPath(): String? = unwrap(this).getMountPath()
     }
 
     public companion object {
@@ -555,11 +525,9 @@ public open class CfnAppImageConfig internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -568,11 +536,11 @@ public open class CfnAppImageConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -585,9 +553,9 @@ public open class CfnAppImageConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty,
     ) : CustomImageContainerEnvironmentVariableProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

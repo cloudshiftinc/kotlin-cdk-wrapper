@@ -22,22 +22,22 @@ public interface ISynthesisSession {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ISynthesisSession,
   ) : ISynthesisSession {
-    public override fun assembly(): CloudAssemblyBuilder =
+    override fun assembly(): CloudAssemblyBuilder =
         unwrap(this).getAssembly().let(CloudAssemblyBuilder::wrap)
 
-    public override fun assembly(arg0: CloudAssemblyBuilder) {
+    override fun assembly(arg0: CloudAssemblyBuilder) {
       unwrap(this).setAssembly(arg0.let(CloudAssemblyBuilder::unwrap))
     }
 
-    public override fun outdir(): String = unwrap(this).getOutdir()
+    override fun outdir(): String = unwrap(this).getOutdir()
 
-    public override fun outdir(arg0: String) {
+    override fun outdir(arg0: String) {
       unwrap(this).setOutdir(arg0)
     }
 
-    public override fun validateOnSynth(): Boolean? = unwrap(this).getValidateOnSynth()
+    override fun validateOnSynth(): Boolean? = unwrap(this).getValidateOnSynth()
 
-    public override fun validateOnSynth(`value`: Boolean) {
+    override fun validateOnSynth(`value`: Boolean) {
       unwrap(this).setValidateOnSynth(`value`)
     }
   }

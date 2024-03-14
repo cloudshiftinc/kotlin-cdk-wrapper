@@ -67,26 +67,19 @@ public open class CfnContactFlow internal constructor(
   }
 
   public interface Builder {
-    public fun content(content: String) {
-    }
+    public fun content(content: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun state(state: String) {
-    }
+    public fun state(state: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnContactFlow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnContactFlow.Builder =
         software.amazon.awscdk.services.connect.CfnContactFlow.Builder.create(scope, id)
 
-    public override fun content(content: String) {
+    override fun content(content: String) {
       cdkBuilder.content(content)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun state(state: String) {
+    override fun state(state: String) {
       cdkBuilder.state(state)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

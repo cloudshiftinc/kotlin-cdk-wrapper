@@ -84,26 +84,20 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun coreNetworkId(coreNetworkId: String) {
-    }
+    public fun coreNetworkId(coreNetworkId: String)
 
-    public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-    }
+    public fun proposedSegmentChange(proposedSegmentChange: IResolvable)
 
-    public fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
-    }
+    public fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ede075052f137cb415454c0085f7edd151418adae72edc0456ce3bd825c957d")
     public
-        fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit) {
-    }
+        fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpnConnectionArn(vpnConnectionArn: String) {
-    }
+    public fun vpnConnectionArn(vpnConnectionArn: String)
   }
 
   private class BuilderImpl(
@@ -115,30 +109,29 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
         software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.Builder.create(scope,
         id)
 
-    public override fun coreNetworkId(coreNetworkId: String) {
+    override fun coreNetworkId(coreNetworkId: String) {
       cdkBuilder.coreNetworkId(coreNetworkId)
     }
 
-    public override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
+    override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
       cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
     }
 
-    public override
-        fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
+    override fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
       cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ede075052f137cb415454c0085f7edd151418adae72edc0456ce3bd825c957d")
-    public override
+    override
         fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit):
         Unit = proposedSegmentChange(ProposedSegmentChangeProperty(proposedSegmentChange))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpnConnectionArn(vpnConnectionArn: String) {
+    override fun vpnConnectionArn(vpnConnectionArn: String) {
       cdkBuilder.vpnConnectionArn(vpnConnectionArn)
     }
 
@@ -177,14 +170,11 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
-      }
+      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
 
-      public fun segmentName(segmentName: String) {
-      }
+      public fun segmentName(segmentName: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -193,15 +183,15 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty.builder()
 
-      public override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
         cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
       }
 
-      public override fun segmentName(segmentName: String) {
+      override fun segmentName(segmentName: String) {
         cdkBuilder.segmentName(segmentName)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -214,13 +204,12 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty,
     ) : ProposedSegmentChangeProperty {
-      public override fun attachmentPolicyRuleNumber(): Number? =
+      override fun attachmentPolicyRuleNumber(): Number? =
           unwrap(this).getAttachmentPolicyRuleNumber()
 
-      public override fun segmentName(): String? = unwrap(this).getSegmentName()
+      override fun segmentName(): String? = unwrap(this).getSegmentName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {

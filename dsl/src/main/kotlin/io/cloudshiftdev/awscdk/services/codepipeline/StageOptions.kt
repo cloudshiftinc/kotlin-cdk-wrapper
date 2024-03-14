@@ -11,53 +11,47 @@ public interface StageOptions : StageProps {
   public fun placement(): StagePlacement? = unwrap(this).getPlacement()?.let(StagePlacement::wrap)
 
   public interface Builder {
-    public fun actions(actions: List<IAction>) {
-    }
+    public fun actions(actions: List<IAction>)
 
-    public fun placement(placement: StagePlacement) {
-    }
+    public fun placement(placement: StagePlacement)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dbfa55939a1e1215b81310c4d76f262977c07392436dcfc408d54a435de571d8")
-    public fun placement(placement: StagePlacement.Builder.() -> Unit) {
-    }
+    public fun placement(placement: StagePlacement.Builder.() -> Unit)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun transitionDisabledReason(transitionDisabledReason: String) {
-    }
+    public fun transitionDisabledReason(transitionDisabledReason: String)
 
-    public fun transitionToEnabled(transitionToEnabled: Boolean) {
-    }
+    public fun transitionToEnabled(transitionToEnabled: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.StageOptions.Builder =
         software.amazon.awscdk.services.codepipeline.StageOptions.builder()
 
-    public override fun actions(actions: List<IAction>) {
+    override fun actions(actions: List<IAction>) {
       cdkBuilder.actions(actions.map(IAction::unwrap))
     }
 
-    public override fun placement(placement: StagePlacement) {
+    override fun placement(placement: StagePlacement) {
       cdkBuilder.placement(placement.let(StagePlacement::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dbfa55939a1e1215b81310c4d76f262977c07392436dcfc408d54a435de571d8")
-    public override fun placement(placement: StagePlacement.Builder.() -> Unit): Unit =
+    override fun placement(placement: StagePlacement.Builder.() -> Unit): Unit =
         placement(StagePlacement(placement))
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun transitionDisabledReason(transitionDisabledReason: String) {
+    override fun transitionDisabledReason(transitionDisabledReason: String) {
       cdkBuilder.transitionDisabledReason(transitionDisabledReason)
     }
 
-    public override fun transitionToEnabled(transitionToEnabled: Boolean) {
+    override fun transitionToEnabled(transitionToEnabled: Boolean) {
       cdkBuilder.transitionToEnabled(transitionToEnabled)
     }
 
@@ -68,18 +62,17 @@ public interface StageOptions : StageProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.StageOptions,
   ) : StageOptions {
-    public override fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?:
+    override fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?:
         emptyList()
 
-    public override fun placement(): StagePlacement? =
+    override fun placement(): StagePlacement? =
         unwrap(this).getPlacement()?.let(StagePlacement::wrap)
 
-    public override fun stageName(): String = unwrap(this).getStageName()
+    override fun stageName(): String = unwrap(this).getStageName()
 
-    public override fun transitionDisabledReason(): String? =
-        unwrap(this).getTransitionDisabledReason()
+    override fun transitionDisabledReason(): String? = unwrap(this).getTransitionDisabledReason()
 
-    public override fun transitionToEnabled(): Boolean? = unwrap(this).getTransitionToEnabled()
+    override fun transitionToEnabled(): Boolean? = unwrap(this).getTransitionToEnabled()
   }
 
   public companion object {

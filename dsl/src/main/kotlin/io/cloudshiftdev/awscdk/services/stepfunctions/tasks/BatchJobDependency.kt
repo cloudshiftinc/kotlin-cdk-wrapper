@@ -9,11 +9,9 @@ public interface BatchJobDependency {
   public fun type(): String? = unwrap(this).getType()
 
   public interface Builder {
-    public fun jobId(jobId: String) {
-    }
+    public fun jobId(jobId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface BatchJobDependency {
         software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency.builder()
 
-    public override fun jobId(jobId: String) {
+    override fun jobId(jobId: String) {
       cdkBuilder.jobId(jobId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -36,9 +34,9 @@ public interface BatchJobDependency {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency,
   ) : BatchJobDependency {
-    public override fun jobId(): String? = unwrap(this).getJobId()
+    override fun jobId(): String? = unwrap(this).getJobId()
 
-    public override fun type(): String? = unwrap(this).getType()
+    override fun type(): String? = unwrap(this).getType()
   }
 
   public companion object {

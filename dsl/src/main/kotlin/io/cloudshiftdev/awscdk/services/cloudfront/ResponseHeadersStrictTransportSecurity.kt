@@ -14,17 +14,13 @@ public interface ResponseHeadersStrictTransportSecurity {
   public fun preload(): Boolean? = unwrap(this).getPreload()
 
   public interface Builder {
-    public fun accessControlMaxAge(accessControlMaxAge: Duration) {
-    }
+    public fun accessControlMaxAge(accessControlMaxAge: Duration)
 
-    public fun includeSubdomains(includeSubdomains: Boolean) {
-    }
+    public fun includeSubdomains(includeSubdomains: Boolean)
 
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
 
-    public fun preload(preload: Boolean) {
-    }
+    public fun preload(preload: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -32,19 +28,19 @@ public interface ResponseHeadersStrictTransportSecurity {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity.builder()
 
-    public override fun accessControlMaxAge(accessControlMaxAge: Duration) {
+    override fun accessControlMaxAge(accessControlMaxAge: Duration) {
       cdkBuilder.accessControlMaxAge(accessControlMaxAge.let(Duration::unwrap))
     }
 
-    public override fun includeSubdomains(includeSubdomains: Boolean) {
+    override fun includeSubdomains(includeSubdomains: Boolean) {
       cdkBuilder.includeSubdomains(includeSubdomains)
     }
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
-    public override fun preload(preload: Boolean) {
+    override fun preload(preload: Boolean) {
       cdkBuilder.preload(preload)
     }
 
@@ -57,14 +53,14 @@ public interface ResponseHeadersStrictTransportSecurity {
     internal val cdkObject:
         software.amazon.awscdk.services.cloudfront.ResponseHeadersStrictTransportSecurity,
   ) : ResponseHeadersStrictTransportSecurity {
-    public override fun accessControlMaxAge(): Duration =
+    override fun accessControlMaxAge(): Duration =
         unwrap(this).getAccessControlMaxAge().let(Duration::wrap)
 
-    public override fun includeSubdomains(): Boolean? = unwrap(this).getIncludeSubdomains()
+    override fun includeSubdomains(): Boolean? = unwrap(this).getIncludeSubdomains()
 
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
 
-    public override fun preload(): Boolean? = unwrap(this).getPreload()
+    override fun preload(): Boolean? = unwrap(this).getPreload()
   }
 
   public companion object {

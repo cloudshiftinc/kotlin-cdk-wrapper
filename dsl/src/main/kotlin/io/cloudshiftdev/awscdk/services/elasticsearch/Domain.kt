@@ -334,141 +334,111 @@ public open class Domain internal constructor(
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun accessPolicies(accessPolicies: List<PolicyStatement>) {
-    }
+    public fun accessPolicies(accessPolicies: List<PolicyStatement>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun advancedOptions(advancedOptions: Map<String, String>) {
-    }
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
-    }
+    public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun capacity(capacity: CapacityConfig) {
-    }
+    public fun capacity(capacity: CapacityConfig)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("59e14073a9006bd9aeaad8d2850cb89744b0e955f399e88ba1685cdabccaeb27")
-    public fun capacity(capacity: CapacityConfig.Builder.() -> Unit) {
-    }
+    public fun capacity(capacity: CapacityConfig.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions) {
-    }
+    public fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e77ba00188f502ac0b1fec3045bd60bb5eaab1729f7f472ad993b3931ae38621")
-    public fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions.Builder.() -> Unit) {
-    }
+    public fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun customEndpoint(customEndpoint: CustomEndpointOptions) {
-    }
+    public fun customEndpoint(customEndpoint: CustomEndpointOptions)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af3ea43edd5d3febe54a5bf205984de0f18909bbb989205ddb8fb384748a2113")
-    public fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit) {
-    }
+    public fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun ebs(ebs: EbsOptions) {
-    }
+    public fun ebs(ebs: EbsOptions)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11bec5fa51edd86c9862938613dd971392f6f600b8a5c2a986e7cb5d23e72ffb")
-    public fun ebs(ebs: EbsOptions.Builder.() -> Unit) {
-    }
+    public fun ebs(ebs: EbsOptions.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
-    }
+    public fun enableVersionUpgrade(enableVersionUpgrade: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
-    }
+    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("39c79da56d51b0b0f8496ec80f422777fedcd43ef0d858a7d96a93e534e39d07")
-    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit) {
-    }
+    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun enforceHttps(enforceHttps: Boolean) {
-    }
+    public fun enforceHttps(enforceHttps: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
-    }
+    public fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec0fdf74bda530bf2ff94955382fba11c1d03ef9a750aa65318408b998fb9a1e")
     public
-        fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions.Builder.() -> Unit) {
-    }
+        fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun logging(logging: LoggingOptions) {
-    }
+    public fun logging(logging: LoggingOptions)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec98f1e9b529d8be1920cc8aa6cbbf7f15a8f26cf1c85a68ab20898f4afe5300")
-    public fun logging(logging: LoggingOptions.Builder.() -> Unit) {
-    }
+    public fun logging(logging: LoggingOptions.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
-    }
+    public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
-    }
+    public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
-    }
+    public fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun version(version: ElasticsearchVersion) {
-    }
+    public fun version(version: ElasticsearchVersion)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-    }
+    public fun vpcSubnets(vpcSubnets: List<SubnetSelection>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
-    }
+    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac677fe381a681aa5cd4535a2ea000f9190ed75f54cb01c96f494d03ae426568")
-    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit) {
-    }
+    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -479,163 +449,161 @@ public open class Domain internal constructor(
         software.amazon.awscdk.services.elasticsearch.Domain.Builder.create(scope, id)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
+    override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
       cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun advancedOptions(advancedOptions: Map<String, String>) {
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
       cdkBuilder.advancedOptions(advancedOptions)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
+    override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
       cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun capacity(capacity: CapacityConfig) {
+    override fun capacity(capacity: CapacityConfig) {
       cdkBuilder.capacity(capacity.let(CapacityConfig::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("59e14073a9006bd9aeaad8d2850cb89744b0e955f399e88ba1685cdabccaeb27")
-    public override fun capacity(capacity: CapacityConfig.Builder.() -> Unit): Unit =
+    override fun capacity(capacity: CapacityConfig.Builder.() -> Unit): Unit =
         capacity(CapacityConfig(capacity))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions) {
+    override fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions) {
       cdkBuilder.cognitoKibanaAuth(cognitoKibanaAuth.let(CognitoOptions::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e77ba00188f502ac0b1fec3045bd60bb5eaab1729f7f472ad993b3931ae38621")
-    public override fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions.Builder.() -> Unit):
-        Unit = cognitoKibanaAuth(CognitoOptions(cognitoKibanaAuth))
+    override fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions.Builder.() -> Unit): Unit =
+        cognitoKibanaAuth(CognitoOptions(cognitoKibanaAuth))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
+    override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
       cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af3ea43edd5d3febe54a5bf205984de0f18909bbb989205ddb8fb384748a2113")
-    public override fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit):
-        Unit = customEndpoint(CustomEndpointOptions(customEndpoint))
+    override fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit): Unit =
+        customEndpoint(CustomEndpointOptions(customEndpoint))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun ebs(ebs: EbsOptions) {
+    override fun ebs(ebs: EbsOptions) {
       cdkBuilder.ebs(ebs.let(EbsOptions::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11bec5fa51edd86c9862938613dd971392f6f600b8a5c2a986e7cb5d23e72ffb")
-    public override fun ebs(ebs: EbsOptions.Builder.() -> Unit): Unit = ebs(EbsOptions(ebs))
+    override fun ebs(ebs: EbsOptions.Builder.() -> Unit): Unit = ebs(EbsOptions(ebs))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
+    override fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
       cdkBuilder.enableVersionUpgrade(enableVersionUpgrade)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
+    override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
       cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("39c79da56d51b0b0f8496ec80f422777fedcd43ef0d858a7d96a93e534e39d07")
-    public override
-        fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit): Unit =
-        encryptionAtRest(EncryptionAtRestOptions(encryptionAtRest))
+    override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit):
+        Unit = encryptionAtRest(EncryptionAtRestOptions(encryptionAtRest))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun enforceHttps(enforceHttps: Boolean) {
+    override fun enforceHttps(enforceHttps: Boolean) {
       cdkBuilder.enforceHttps(enforceHttps)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override
-        fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
+    override fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
       cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec0fdf74bda530bf2ff94955382fba11c1d03ef9a750aa65318408b998fb9a1e")
-    public override
+    override
         fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions.Builder.() -> Unit):
         Unit = fineGrainedAccessControl(AdvancedSecurityOptions(fineGrainedAccessControl))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun logging(logging: LoggingOptions) {
+    override fun logging(logging: LoggingOptions) {
       cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec98f1e9b529d8be1920cc8aa6cbbf7f15a8f26cf1c85a68ab20898f4afe5300")
-    public override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
+    override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
         logging(LoggingOptions(logging))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
+    override fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
       cdkBuilder.nodeToNodeEncryption(nodeToNodeEncryption)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
+    override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
       cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
+    override fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
       cdkBuilder.useUnsignedBasicAuth(useUnsignedBasicAuth)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun version(version: ElasticsearchVersion) {
+    override fun version(version: ElasticsearchVersion) {
       cdkBuilder.version(version.let(ElasticsearchVersion::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
+    override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
       cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
+    override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
       cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac677fe381a681aa5cd4535a2ea000f9190ed75f54cb01c96f494d03ae426568")
-    public override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit): Unit =
+    override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit): Unit =
         zoneAwareness(ZoneAwarenessConfig(zoneAwareness))
 
     public fun build(): software.amazon.awscdk.services.elasticsearch.Domain = cdkBuilder.build()

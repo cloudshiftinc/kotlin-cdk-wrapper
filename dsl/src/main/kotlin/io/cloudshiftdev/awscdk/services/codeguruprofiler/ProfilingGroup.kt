@@ -22,11 +22,9 @@ public open class ProfilingGroup internal constructor(
   public override fun profilingGroupName(): String = unwrap(this).getProfilingGroupName()
 
   public interface Builder {
-    public fun computePlatform(computePlatform: ComputePlatform) {
-    }
+    public fun computePlatform(computePlatform: ComputePlatform)
 
-    public fun profilingGroupName(profilingGroupName: String) {
-    }
+    public fun profilingGroupName(profilingGroupName: String)
   }
 
   private class BuilderImpl(
@@ -36,11 +34,11 @@ public open class ProfilingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup.Builder
         = software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup.Builder.create(scope, id)
 
-    public override fun computePlatform(computePlatform: ComputePlatform) {
+    override fun computePlatform(computePlatform: ComputePlatform) {
       cdkBuilder.computePlatform(computePlatform.let(ComputePlatform::unwrap))
     }
 
-    public override fun profilingGroupName(profilingGroupName: String) {
+    override fun profilingGroupName(profilingGroupName: String) {
       cdkBuilder.profilingGroupName(profilingGroupName)
     }
 

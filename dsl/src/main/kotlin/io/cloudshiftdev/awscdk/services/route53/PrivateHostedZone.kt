@@ -11,20 +11,15 @@ public open class PrivateHostedZone internal constructor(
   private val cdkObject: software.amazon.awscdk.services.route53.PrivateHostedZone,
 ) : HostedZone(cdkObject), IPrivateHostedZone {
   public interface Builder {
-    public fun addTrailingDot(addTrailingDot: Boolean) {
-    }
+    public fun addTrailingDot(addTrailingDot: Boolean)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
-    }
+    public fun queryLogsLogGroupArn(queryLogsLogGroupArn: String)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun zoneName(zoneName: String) {
-    }
+    public fun zoneName(zoneName: String)
   }
 
   private class BuilderImpl(
@@ -34,23 +29,23 @@ public open class PrivateHostedZone internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.PrivateHostedZone.Builder =
         software.amazon.awscdk.services.route53.PrivateHostedZone.Builder.create(scope, id)
 
-    public override fun addTrailingDot(addTrailingDot: Boolean) {
+    override fun addTrailingDot(addTrailingDot: Boolean) {
       cdkBuilder.addTrailingDot(addTrailingDot)
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
+    override fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
       cdkBuilder.queryLogsLogGroupArn(queryLogsLogGroupArn)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun zoneName(zoneName: String) {
+    override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)
     }
 

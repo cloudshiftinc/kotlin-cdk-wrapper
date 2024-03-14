@@ -88,37 +88,27 @@ public open class CfnDataRepositoryAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: Boolean) {
-    }
+    public fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: Boolean)
 
-    public fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: IResolvable) {
-    }
+    public fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: IResolvable)
 
-    public fun dataRepositoryPath(dataRepositoryPath: String) {
-    }
+    public fun dataRepositoryPath(dataRepositoryPath: String)
 
-    public fun fileSystemId(fileSystemId: String) {
-    }
+    public fun fileSystemId(fileSystemId: String)
 
-    public fun fileSystemPath(fileSystemPath: String) {
-    }
+    public fun fileSystemPath(fileSystemPath: String)
 
-    public fun importedFileChunkSize(importedFileChunkSize: Number) {
-    }
+    public fun importedFileChunkSize(importedFileChunkSize: Number)
 
-    public fun s3(s3: IResolvable) {
-    }
+    public fun s3(s3: IResolvable)
 
-    public fun s3(s3: S3Property) {
-    }
+    public fun s3(s3: S3Property)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d155d31be96a96ecab728e3679af95e4339d6701004028ec9b5e310c7bafa495")
-    public fun s3(s3: S3Property.Builder.() -> Unit) {
-    }
+    public fun s3(s3: S3Property.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -128,43 +118,43 @@ public open class CfnDataRepositoryAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.Builder
         = software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.Builder.create(scope, id)
 
-    public override fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: Boolean) {
+    override fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: Boolean) {
       cdkBuilder.batchImportMetaDataOnCreate(batchImportMetaDataOnCreate)
     }
 
-    public override fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: IResolvable) {
+    override fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: IResolvable) {
       cdkBuilder.batchImportMetaDataOnCreate(batchImportMetaDataOnCreate.let(IResolvable::unwrap))
     }
 
-    public override fun dataRepositoryPath(dataRepositoryPath: String) {
+    override fun dataRepositoryPath(dataRepositoryPath: String) {
       cdkBuilder.dataRepositoryPath(dataRepositoryPath)
     }
 
-    public override fun fileSystemId(fileSystemId: String) {
+    override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
-    public override fun fileSystemPath(fileSystemPath: String) {
+    override fun fileSystemPath(fileSystemPath: String) {
       cdkBuilder.fileSystemPath(fileSystemPath)
     }
 
-    public override fun importedFileChunkSize(importedFileChunkSize: Number) {
+    override fun importedFileChunkSize(importedFileChunkSize: Number) {
       cdkBuilder.importedFileChunkSize(importedFileChunkSize)
     }
 
-    public override fun s3(s3: IResolvable) {
+    override fun s3(s3: IResolvable) {
       cdkBuilder.s3(s3.let(IResolvable::unwrap))
     }
 
-    public override fun s3(s3: S3Property) {
+    override fun s3(s3: S3Property) {
       cdkBuilder.s3(s3.let(S3Property::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d155d31be96a96ecab728e3679af95e4339d6701004028ec9b5e310c7bafa495")
-    public override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
+    override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -199,27 +189,21 @@ public open class CfnDataRepositoryAssociation internal constructor(
     public fun autoImportPolicy(): Any? = unwrap(this).getAutoImportPolicy()
 
     public interface Builder {
-      public fun autoExportPolicy(autoExportPolicy: IResolvable) {
-      }
+      public fun autoExportPolicy(autoExportPolicy: IResolvable)
 
-      public fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty) {
-      }
+      public fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b9826f5d10b18cf60f54bde89d04930731d9424654a56ed546a396e95f7425a")
-      public fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty.Builder.() -> Unit)
 
-      public fun autoImportPolicy(autoImportPolicy: IResolvable) {
-      }
+      public fun autoImportPolicy(autoImportPolicy: IResolvable)
 
-      public fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty) {
-      }
+      public fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a4e991b05f37673588ed1ea38a16225162101dc2acdb79159dffcf913a5171f")
-      public fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -227,33 +211,31 @@ public open class CfnDataRepositoryAssociation internal constructor(
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property.Builder =
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property.builder()
 
-      public override fun autoExportPolicy(autoExportPolicy: IResolvable) {
+      override fun autoExportPolicy(autoExportPolicy: IResolvable) {
         cdkBuilder.autoExportPolicy(autoExportPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty) {
+      override fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty) {
         cdkBuilder.autoExportPolicy(autoExportPolicy.let(AutoExportPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b9826f5d10b18cf60f54bde89d04930731d9424654a56ed546a396e95f7425a")
-      public override
-          fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty.Builder.() -> Unit): Unit
-          = autoExportPolicy(AutoExportPolicyProperty(autoExportPolicy))
+      override fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty.Builder.() -> Unit):
+          Unit = autoExportPolicy(AutoExportPolicyProperty(autoExportPolicy))
 
-      public override fun autoImportPolicy(autoImportPolicy: IResolvable) {
+      override fun autoImportPolicy(autoImportPolicy: IResolvable) {
         cdkBuilder.autoImportPolicy(autoImportPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty) {
+      override fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty) {
         cdkBuilder.autoImportPolicy(autoImportPolicy.let(AutoImportPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a4e991b05f37673588ed1ea38a16225162101dc2acdb79159dffcf913a5171f")
-      public override
-          fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty.Builder.() -> Unit): Unit
-          = autoImportPolicy(AutoImportPolicyProperty(autoImportPolicy))
+      override fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty.Builder.() -> Unit):
+          Unit = autoImportPolicy(AutoImportPolicyProperty(autoImportPolicy))
 
       public fun build():
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property =
@@ -264,9 +246,9 @@ public open class CfnDataRepositoryAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.S3Property,
     ) : S3Property {
-      public override fun autoExportPolicy(): Any? = unwrap(this).getAutoExportPolicy()
+      override fun autoExportPolicy(): Any? = unwrap(this).getAutoExportPolicy()
 
-      public override fun autoImportPolicy(): Any? = unwrap(this).getAutoImportPolicy()
+      override fun autoImportPolicy(): Any? = unwrap(this).getAutoImportPolicy()
     }
 
     public companion object {
@@ -293,8 +275,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
     public fun events(): List<String>
 
     public interface Builder {
-      public fun events(events: List<String>) {
-      }
+      public fun events(events: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -303,7 +284,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
           =
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty.builder()
 
-      public override fun events(events: List<String>) {
+      override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
 
@@ -316,7 +297,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
     ) : AutoImportPolicyProperty {
-      public override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
     }
 
     public companion object {
@@ -343,8 +324,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
     public fun events(): List<String>
 
     public interface Builder {
-      public fun events(events: List<String>) {
-      }
+      public fun events(events: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -353,7 +333,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
           =
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty.builder()
 
-      public override fun events(events: List<String>) {
+      override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
 
@@ -366,7 +346,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
     ) : AutoExportPolicyProperty {
-      public override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
     }
 
     public companion object {

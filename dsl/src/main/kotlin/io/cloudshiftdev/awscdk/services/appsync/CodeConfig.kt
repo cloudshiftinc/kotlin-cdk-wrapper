@@ -9,22 +9,20 @@ public interface CodeConfig {
   public fun s3Location(): String? = unwrap(this).getS3Location()
 
   public interface Builder {
-    public fun inlineCode(inlineCode: String) {
-    }
+    public fun inlineCode(inlineCode: String)
 
-    public fun s3Location(s3Location: String) {
-    }
+    public fun s3Location(s3Location: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CodeConfig.Builder =
         software.amazon.awscdk.services.appsync.CodeConfig.builder()
 
-    public override fun inlineCode(inlineCode: String) {
+    override fun inlineCode(inlineCode: String) {
       cdkBuilder.inlineCode(inlineCode)
     }
 
-    public override fun s3Location(s3Location: String) {
+    override fun s3Location(s3Location: String) {
       cdkBuilder.s3Location(s3Location)
     }
 
@@ -34,9 +32,9 @@ public interface CodeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.CodeConfig,
   ) : CodeConfig {
-    public override fun inlineCode(): String? = unwrap(this).getInlineCode()
+    override fun inlineCode(): String? = unwrap(this).getInlineCode()
 
-    public override fun s3Location(): String? = unwrap(this).getS3Location()
+    override fun s3Location(): String? = unwrap(this).getS3Location()
   }
 
   public companion object {

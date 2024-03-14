@@ -7,8 +7,7 @@ public interface ShuffleConfig {
   public fun seed(): Number
 
   public interface Builder {
-    public fun seed(seed: Number) {
-    }
+    public fun seed(seed: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ShuffleConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.builder()
 
-    public override fun seed(seed: Number) {
+    override fun seed(seed: Number) {
       cdkBuilder.seed(seed)
     }
 
@@ -27,7 +26,7 @@ public interface ShuffleConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
   ) : ShuffleConfig {
-    public override fun seed(): Number = unwrap(this).getSeed()
+    override fun seed(): Number = unwrap(this).getSeed()
   }
 
   public companion object {

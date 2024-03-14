@@ -101,34 +101,25 @@ public open class CfnDisk internal constructor(
   }
 
   public interface Builder {
-    public fun addOns(addOns: IResolvable) {
-    }
+    public fun addOns(addOns: IResolvable)
 
-    public fun addOns(addOns: List<Any>) {
-    }
+    public fun addOns(addOns: List<Any>)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun diskName(diskName: String) {
-    }
+    public fun diskName(diskName: String)
 
-    public fun location(location: IResolvable) {
-    }
+    public fun location(location: IResolvable)
 
-    public fun location(location: LocationProperty) {
-    }
+    public fun location(location: LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd31cd3aff101e415dd437d50ed0c47b200615363e5321b85bb126ab37e00fa9")
-    public fun location(location: LocationProperty.Builder.() -> Unit) {
-    }
+    public fun location(location: LocationProperty.Builder.() -> Unit)
 
-    public fun sizeInGb(sizeInGb: Number) {
-    }
+    public fun sizeInGb(sizeInGb: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -138,40 +129,40 @@ public open class CfnDisk internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnDisk.Builder =
         software.amazon.awscdk.services.lightsail.CfnDisk.Builder.create(scope, id)
 
-    public override fun addOns(addOns: IResolvable) {
+    override fun addOns(addOns: IResolvable) {
       cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
     }
 
-    public override fun addOns(addOns: List<Any>) {
+    override fun addOns(addOns: List<Any>) {
       cdkBuilder.addOns(addOns)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun diskName(diskName: String) {
+    override fun diskName(diskName: String) {
       cdkBuilder.diskName(diskName)
     }
 
-    public override fun location(location: IResolvable) {
+    override fun location(location: IResolvable) {
       cdkBuilder.location(location.let(IResolvable::unwrap))
     }
 
-    public override fun location(location: LocationProperty) {
+    override fun location(location: LocationProperty) {
       cdkBuilder.location(location.let(LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd31cd3aff101e415dd437d50ed0c47b200615363e5321b85bb126ab37e00fa9")
-    public override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+    override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
         location(LocationProperty(location))
 
-    public override fun sizeInGb(sizeInGb: Number) {
+    override fun sizeInGb(sizeInGb: Number) {
       cdkBuilder.sizeInGb(sizeInGb)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -203,8 +194,7 @@ public open class CfnDisk internal constructor(
     public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
 
     public interface Builder {
-      public fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
-      }
+      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
     }
 
     private class BuilderImpl : Builder {
@@ -212,7 +202,7 @@ public open class CfnDisk internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.builder()
 
-      public override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
+      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
         cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
       }
 
@@ -225,7 +215,7 @@ public open class CfnDisk internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
     ) : AutoSnapshotAddOnProperty {
-      public override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
     }
 
     public companion object {
@@ -256,23 +246,18 @@ public open class CfnDisk internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun addOnType(addOnType: String) {
-      }
+      public fun addOnType(addOnType: String)
 
-      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
-      }
+      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable)
 
-      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
-      }
+      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6bfdcb74b866e98c57c2409486794c297fdaab9d014d1c05279a425875c2d9e3")
       public
-          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit) {
-      }
+          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -280,26 +265,25 @@ public open class CfnDisk internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty.builder()
 
-      public override fun addOnType(addOnType: String) {
+      override fun addOnType(addOnType: String) {
         cdkBuilder.addOnType(addOnType)
       }
 
-      public override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
+      override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
         cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable::unwrap))
       }
 
-      public override
-          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
+      override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
         cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6bfdcb74b866e98c57c2409486794c297fdaab9d014d1c05279a425875c2d9e3")
-      public override
+      override
           fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit):
           Unit = autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty(autoSnapshotAddOnRequest))
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -310,12 +294,11 @@ public open class CfnDisk internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
     ) : AddOnProperty {
-      public override fun addOnType(): String = unwrap(this).getAddOnType()
+      override fun addOnType(): String = unwrap(this).getAddOnType()
 
-      public override fun autoSnapshotAddOnRequest(): Any? =
-          unwrap(this).getAutoSnapshotAddOnRequest()
+      override fun autoSnapshotAddOnRequest(): Any? = unwrap(this).getAutoSnapshotAddOnRequest()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -343,11 +326,9 @@ public open class CfnDisk internal constructor(
     public fun regionName(): String? = unwrap(this).getRegionName()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun regionName(regionName: String) {
-      }
+      public fun regionName(regionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -355,11 +336,11 @@ public open class CfnDisk internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun regionName(regionName: String) {
+      override fun regionName(regionName: String) {
         cdkBuilder.regionName(regionName)
       }
 
@@ -370,9 +351,9 @@ public open class CfnDisk internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
     ) : LocationProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun regionName(): String? = unwrap(this).getRegionName()
+      override fun regionName(): String? = unwrap(this).getRegionName()
     }
 
     public companion object {

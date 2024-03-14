@@ -7,15 +7,14 @@ public interface FindStateOptions {
   public fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
 
   public interface Builder {
-    public fun includeErrorHandlers(includeErrorHandlers: Boolean) {
-    }
+    public fun includeErrorHandlers(includeErrorHandlers: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.FindStateOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.FindStateOptions.builder()
 
-    public override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
+    override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
       cdkBuilder.includeErrorHandlers(includeErrorHandlers)
     }
 
@@ -26,7 +25,7 @@ public interface FindStateOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions,
   ) : FindStateOptions {
-    public override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
+    override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
   }
 
   public companion object {

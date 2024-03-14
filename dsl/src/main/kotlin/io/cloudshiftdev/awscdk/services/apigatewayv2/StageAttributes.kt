@@ -7,15 +7,14 @@ public interface StageAttributes {
   public fun stageName(): String
 
   public interface Builder {
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.StageAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.StageAttributes.builder()
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
@@ -26,7 +25,7 @@ public interface StageAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.StageAttributes,
   ) : StageAttributes {
-    public override fun stageName(): String = unwrap(this).getStageName()
+    override fun stageName(): String = unwrap(this).getStageName()
   }
 
   public companion object {

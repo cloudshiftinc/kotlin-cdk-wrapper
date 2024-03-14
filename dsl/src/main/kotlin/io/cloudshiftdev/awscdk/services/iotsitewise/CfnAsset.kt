@@ -79,32 +79,23 @@ public open class CfnAsset internal constructor(
   }
 
   public interface Builder {
-    public fun assetDescription(assetDescription: String) {
-    }
+    public fun assetDescription(assetDescription: String)
 
-    public fun assetExternalId(assetExternalId: String) {
-    }
+    public fun assetExternalId(assetExternalId: String)
 
-    public fun assetHierarchies(assetHierarchies: IResolvable) {
-    }
+    public fun assetHierarchies(assetHierarchies: IResolvable)
 
-    public fun assetHierarchies(assetHierarchies: List<Any>) {
-    }
+    public fun assetHierarchies(assetHierarchies: List<Any>)
 
-    public fun assetModelId(assetModelId: String) {
-    }
+    public fun assetModelId(assetModelId: String)
 
-    public fun assetName(assetName: String) {
-    }
+    public fun assetName(assetName: String)
 
-    public fun assetProperties(assetProperties: IResolvable) {
-    }
+    public fun assetProperties(assetProperties: IResolvable)
 
-    public fun assetProperties(assetProperties: List<Any>) {
-    }
+    public fun assetProperties(assetProperties: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -114,39 +105,39 @@ public open class CfnAsset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnAsset.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnAsset.Builder.create(scope, id)
 
-    public override fun assetDescription(assetDescription: String) {
+    override fun assetDescription(assetDescription: String) {
       cdkBuilder.assetDescription(assetDescription)
     }
 
-    public override fun assetExternalId(assetExternalId: String) {
+    override fun assetExternalId(assetExternalId: String) {
       cdkBuilder.assetExternalId(assetExternalId)
     }
 
-    public override fun assetHierarchies(assetHierarchies: IResolvable) {
+    override fun assetHierarchies(assetHierarchies: IResolvable) {
       cdkBuilder.assetHierarchies(assetHierarchies.let(IResolvable::unwrap))
     }
 
-    public override fun assetHierarchies(assetHierarchies: List<Any>) {
+    override fun assetHierarchies(assetHierarchies: List<Any>) {
       cdkBuilder.assetHierarchies(assetHierarchies)
     }
 
-    public override fun assetModelId(assetModelId: String) {
+    override fun assetModelId(assetModelId: String) {
       cdkBuilder.assetModelId(assetModelId)
     }
 
-    public override fun assetName(assetName: String) {
+    override fun assetName(assetName: String) {
       cdkBuilder.assetName(assetName)
     }
 
-    public override fun assetProperties(assetProperties: IResolvable) {
+    override fun assetProperties(assetProperties: IResolvable) {
       cdkBuilder.assetProperties(assetProperties.let(IResolvable::unwrap))
     }
 
-    public override fun assetProperties(assetProperties: List<Any>) {
+    override fun assetProperties(assetProperties: List<Any>) {
       cdkBuilder.assetProperties(assetProperties)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -184,17 +175,13 @@ public open class CfnAsset internal constructor(
     public fun logicalId(): String? = unwrap(this).getLogicalId()
 
     public interface Builder {
-      public fun childAssetId(childAssetId: String) {
-      }
+      public fun childAssetId(childAssetId: String)
 
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun logicalId(logicalId: String) {
-      }
+      public fun logicalId(logicalId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -202,19 +189,19 @@ public open class CfnAsset internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty.builder()
 
-      public override fun childAssetId(childAssetId: String) {
+      override fun childAssetId(childAssetId: String) {
         cdkBuilder.childAssetId(childAssetId)
       }
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun logicalId(logicalId: String) {
+      override fun logicalId(logicalId: String) {
         cdkBuilder.logicalId(logicalId)
       }
 
@@ -227,13 +214,13 @@ public open class CfnAsset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetHierarchyProperty,
     ) : AssetHierarchyProperty {
-      public override fun childAssetId(): String = unwrap(this).getChildAssetId()
+      override fun childAssetId(): String = unwrap(this).getChildAssetId()
 
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun logicalId(): String? = unwrap(this).getLogicalId()
+      override fun logicalId(): String? = unwrap(this).getLogicalId()
     }
 
     public companion object {
@@ -270,23 +257,17 @@ public open class CfnAsset internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun alias(alias: String) {
-      }
+      public fun alias(alias: String)
 
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun logicalId(logicalId: String) {
-      }
+      public fun logicalId(logicalId: String)
 
-      public fun notificationState(notificationState: String) {
-      }
+      public fun notificationState(notificationState: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -294,27 +275,27 @@ public open class CfnAsset internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty.builder()
 
-      public override fun alias(alias: String) {
+      override fun alias(alias: String) {
         cdkBuilder.alias(alias)
       }
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun logicalId(logicalId: String) {
+      override fun logicalId(logicalId: String) {
         cdkBuilder.logicalId(logicalId)
       }
 
-      public override fun notificationState(notificationState: String) {
+      override fun notificationState(notificationState: String) {
         cdkBuilder.notificationState(notificationState)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -326,17 +307,17 @@ public open class CfnAsset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAsset.AssetPropertyProperty,
     ) : AssetPropertyProperty {
-      public override fun alias(): String? = unwrap(this).getAlias()
+      override fun alias(): String? = unwrap(this).getAlias()
 
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun logicalId(): String? = unwrap(this).getLogicalId()
+      override fun logicalId(): String? = unwrap(this).getLogicalId()
 
-      public override fun notificationState(): String? = unwrap(this).getNotificationState()
+      override fun notificationState(): String? = unwrap(this).getNotificationState()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {

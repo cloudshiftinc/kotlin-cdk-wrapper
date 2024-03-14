@@ -10,22 +10,20 @@ public interface GitPushFilter {
   public fun tagsIncludes(): List<String> = unwrap(this).getTagsIncludes() ?: emptyList()
 
   public interface Builder {
-    public fun tagsExcludes(tagsExcludes: List<String>) {
-    }
+    public fun tagsExcludes(tagsExcludes: List<String>)
 
-    public fun tagsIncludes(tagsIncludes: List<String>) {
-    }
+    public fun tagsIncludes(tagsIncludes: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.GitPushFilter.Builder =
         software.amazon.awscdk.services.codepipeline.GitPushFilter.builder()
 
-    public override fun tagsExcludes(tagsExcludes: List<String>) {
+    override fun tagsExcludes(tagsExcludes: List<String>) {
       cdkBuilder.tagsExcludes(tagsExcludes)
     }
 
-    public override fun tagsIncludes(tagsIncludes: List<String>) {
+    override fun tagsIncludes(tagsIncludes: List<String>) {
       cdkBuilder.tagsIncludes(tagsIncludes)
     }
 
@@ -36,9 +34,9 @@ public interface GitPushFilter {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.GitPushFilter,
   ) : GitPushFilter {
-    public override fun tagsExcludes(): List<String> = unwrap(this).getTagsExcludes() ?: emptyList()
+    override fun tagsExcludes(): List<String> = unwrap(this).getTagsExcludes() ?: emptyList()
 
-    public override fun tagsIncludes(): List<String> = unwrap(this).getTagsIncludes() ?: emptyList()
+    override fun tagsIncludes(): List<String> = unwrap(this).getTagsIncludes() ?: emptyList()
   }
 
   public companion object {

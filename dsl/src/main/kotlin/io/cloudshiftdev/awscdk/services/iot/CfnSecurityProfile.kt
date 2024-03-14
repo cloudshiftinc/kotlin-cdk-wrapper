@@ -103,47 +103,34 @@ public open class CfnSecurityProfile internal constructor(
   }
 
   public interface Builder {
-    public fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable) {
-    }
+    public fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable)
 
-    public fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>) {
-    }
+    public fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>)
 
-    public fun alertTargets(alertTargets: IResolvable) {
-    }
+    public fun alertTargets(alertTargets: IResolvable)
 
-    public fun alertTargets(alertTargets: Map<String, Any>) {
-    }
+    public fun alertTargets(alertTargets: Map<String, Any>)
 
-    public fun behaviors(behaviors: IResolvable) {
-    }
+    public fun behaviors(behaviors: IResolvable)
 
-    public fun behaviors(behaviors: List<Any>) {
-    }
+    public fun behaviors(behaviors: List<Any>)
 
-    public fun metricsExportConfig(metricsExportConfig: IResolvable) {
-    }
+    public fun metricsExportConfig(metricsExportConfig: IResolvable)
 
-    public fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty) {
-    }
+    public fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1cbc29ffb850f6001e77db0596c11a4d7ad56587a1ae37ee40a9e2345b81d962")
     public
-        fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty.Builder.() -> Unit) {
-    }
+        fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty.Builder.() -> Unit)
 
-    public fun securityProfileDescription(securityProfileDescription: String) {
-    }
+    public fun securityProfileDescription(securityProfileDescription: String)
 
-    public fun securityProfileName(securityProfileName: String) {
-    }
+    public fun securityProfileName(securityProfileName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetArns(targetArns: List<String>) {
-    }
+    public fun targetArns(targetArns: List<String>)
   }
 
   private class BuilderImpl(
@@ -153,57 +140,57 @@ public open class CfnSecurityProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnSecurityProfile.Builder =
         software.amazon.awscdk.services.iot.CfnSecurityProfile.Builder.create(scope, id)
 
-    public override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable) {
+    override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable) {
       cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.let(IResolvable::unwrap))
     }
 
-    public override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>) {
+    override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>) {
       cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2)
     }
 
-    public override fun alertTargets(alertTargets: IResolvable) {
+    override fun alertTargets(alertTargets: IResolvable) {
       cdkBuilder.alertTargets(alertTargets.let(IResolvable::unwrap))
     }
 
-    public override fun alertTargets(alertTargets: Map<String, Any>) {
+    override fun alertTargets(alertTargets: Map<String, Any>) {
       cdkBuilder.alertTargets(alertTargets)
     }
 
-    public override fun behaviors(behaviors: IResolvable) {
+    override fun behaviors(behaviors: IResolvable) {
       cdkBuilder.behaviors(behaviors.let(IResolvable::unwrap))
     }
 
-    public override fun behaviors(behaviors: List<Any>) {
+    override fun behaviors(behaviors: List<Any>) {
       cdkBuilder.behaviors(behaviors)
     }
 
-    public override fun metricsExportConfig(metricsExportConfig: IResolvable) {
+    override fun metricsExportConfig(metricsExportConfig: IResolvable) {
       cdkBuilder.metricsExportConfig(metricsExportConfig.let(IResolvable::unwrap))
     }
 
-    public override fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty) {
+    override fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty) {
       cdkBuilder.metricsExportConfig(metricsExportConfig.let(MetricsExportConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1cbc29ffb850f6001e77db0596c11a4d7ad56587a1ae37ee40a9e2345b81d962")
-    public override
+    override
         fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty.Builder.() -> Unit):
         Unit = metricsExportConfig(MetricsExportConfigProperty(metricsExportConfig))
 
-    public override fun securityProfileDescription(securityProfileDescription: String) {
+    override fun securityProfileDescription(securityProfileDescription: String) {
       cdkBuilder.securityProfileDescription(securityProfileDescription)
     }
 
-    public override fun securityProfileName(securityProfileName: String) {
+    override fun securityProfileName(securityProfileName: String) {
       cdkBuilder.securityProfileName(securityProfileName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetArns(targetArns: List<String>) {
+    override fun targetArns(targetArns: List<String>) {
       cdkBuilder.targetArns(targetArns)
     }
 
@@ -239,25 +226,19 @@ public open class CfnSecurityProfile internal constructor(
     public fun metricDimension(): Any? = unwrap(this).getMetricDimension()
 
     public interface Builder {
-      public fun exportMetric(exportMetric: Boolean) {
-      }
+      public fun exportMetric(exportMetric: Boolean)
 
-      public fun exportMetric(exportMetric: IResolvable) {
-      }
+      public fun exportMetric(exportMetric: IResolvable)
 
-      public fun metric(metric: String) {
-      }
+      public fun metric(metric: String)
 
-      public fun metricDimension(metricDimension: IResolvable) {
-      }
+      public fun metricDimension(metricDimension: IResolvable)
 
-      public fun metricDimension(metricDimension: MetricDimensionProperty) {
-      }
+      public fun metricDimension(metricDimension: MetricDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f42fbcc014135a946c198cee5e55192f746f1dab620d0f495364fd034d5a9fee")
-      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -265,31 +246,30 @@ public open class CfnSecurityProfile internal constructor(
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty.Builder =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty.builder()
 
-      public override fun exportMetric(exportMetric: Boolean) {
+      override fun exportMetric(exportMetric: Boolean) {
         cdkBuilder.exportMetric(exportMetric)
       }
 
-      public override fun exportMetric(exportMetric: IResolvable) {
+      override fun exportMetric(exportMetric: IResolvable) {
         cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: String) {
+      override fun metric(metric: String) {
         cdkBuilder.metric(metric)
       }
 
-      public override fun metricDimension(metricDimension: IResolvable) {
+      override fun metricDimension(metricDimension: IResolvable) {
         cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
       }
 
-      public override fun metricDimension(metricDimension: MetricDimensionProperty) {
+      override fun metricDimension(metricDimension: MetricDimensionProperty) {
         cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f42fbcc014135a946c198cee5e55192f746f1dab620d0f495364fd034d5a9fee")
-      public override
-          fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit): Unit =
-          metricDimension(MetricDimensionProperty(metricDimension))
+      override fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit):
+          Unit = metricDimension(MetricDimensionProperty(metricDimension))
 
       public fun build():
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty =
@@ -300,11 +280,11 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricToRetainProperty,
     ) : MetricToRetainProperty {
-      public override fun exportMetric(): Any? = unwrap(this).getExportMetric()
+      override fun exportMetric(): Any? = unwrap(this).getExportMetric()
 
-      public override fun metric(): String = unwrap(this).getMetric()
+      override fun metric(): String = unwrap(this).getMetric()
 
-      public override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
+      override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
     }
 
     public companion object {
@@ -333,11 +313,9 @@ public open class CfnSecurityProfile internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun mqttTopic(mqttTopic: String) {
-      }
+      public fun mqttTopic(mqttTopic: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -346,11 +324,11 @@ public open class CfnSecurityProfile internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty.builder()
 
-      public override fun mqttTopic(mqttTopic: String) {
+      override fun mqttTopic(mqttTopic: String) {
         cdkBuilder.mqttTopic(mqttTopic)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -363,9 +341,9 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricsExportConfigProperty,
     ) : MetricsExportConfigProperty {
-      public override fun mqttTopic(): String = unwrap(this).getMqttTopic()
+      override fun mqttTopic(): String = unwrap(this).getMqttTopic()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -392,8 +370,7 @@ public open class CfnSecurityProfile internal constructor(
     public fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
 
     public interface Builder {
-      public fun confidenceLevel(confidenceLevel: String) {
-      }
+      public fun confidenceLevel(confidenceLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -402,7 +379,7 @@ public open class CfnSecurityProfile internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty.builder()
 
-      public override fun confidenceLevel(confidenceLevel: String) {
+      override fun confidenceLevel(confidenceLevel: String) {
         cdkBuilder.confidenceLevel(confidenceLevel)
       }
 
@@ -415,7 +392,7 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MachineLearningDetectionConfigProperty,
     ) : MachineLearningDetectionConfigProperty {
-      public override fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
+      override fun confidenceLevel(): String? = unwrap(this).getConfidenceLevel()
     }
 
     public companion object {
@@ -443,8 +420,7 @@ public open class CfnSecurityProfile internal constructor(
     public fun statistic(): String? = unwrap(this).getStatistic()
 
     public interface Builder {
-      public fun statistic(statistic: String) {
-      }
+      public fun statistic(statistic: String)
     }
 
     private class BuilderImpl : Builder {
@@ -453,7 +429,7 @@ public open class CfnSecurityProfile internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty.builder()
 
-      public override fun statistic(statistic: String) {
+      override fun statistic(statistic: String) {
         cdkBuilder.statistic(statistic)
       }
 
@@ -466,7 +442,7 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.StatisticalThresholdProperty,
     ) : StatisticalThresholdProperty {
-      public override fun statistic(): String? = unwrap(this).getStatistic()
+      override fun statistic(): String? = unwrap(this).getStatistic()
     }
 
     public companion object {
@@ -503,45 +479,33 @@ public open class CfnSecurityProfile internal constructor(
     public fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
 
     public interface Builder {
-      public fun criteria(criteria: IResolvable) {
-      }
+      public fun criteria(criteria: IResolvable)
 
-      public fun criteria(criteria: BehaviorCriteriaProperty) {
-      }
+      public fun criteria(criteria: BehaviorCriteriaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("923295a66c6b757449cc7bbeccf2bc2b5809f43996a2f210cfa2621272a0a723")
-      public fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit) {
-      }
+      public fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit)
 
-      public fun exportMetric(exportMetric: Boolean) {
-      }
+      public fun exportMetric(exportMetric: Boolean)
 
-      public fun exportMetric(exportMetric: IResolvable) {
-      }
+      public fun exportMetric(exportMetric: IResolvable)
 
-      public fun metric(metric: String) {
-      }
+      public fun metric(metric: String)
 
-      public fun metricDimension(metricDimension: IResolvable) {
-      }
+      public fun metricDimension(metricDimension: IResolvable)
 
-      public fun metricDimension(metricDimension: MetricDimensionProperty) {
-      }
+      public fun metricDimension(metricDimension: MetricDimensionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("868af0845e1172ec28d523bceb97a29abc045a639a9b0846a7e8318b271c74e2")
-      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit) {
-      }
+      public fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun suppressAlerts(suppressAlerts: Boolean) {
-      }
+      public fun suppressAlerts(suppressAlerts: Boolean)
 
-      public fun suppressAlerts(suppressAlerts: IResolvable) {
-      }
+      public fun suppressAlerts(suppressAlerts: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -549,54 +513,53 @@ public open class CfnSecurityProfile internal constructor(
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty.Builder =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty.builder()
 
-      public override fun criteria(criteria: IResolvable) {
+      override fun criteria(criteria: IResolvable) {
         cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
       }
 
-      public override fun criteria(criteria: BehaviorCriteriaProperty) {
+      override fun criteria(criteria: BehaviorCriteriaProperty) {
         cdkBuilder.criteria(criteria.let(BehaviorCriteriaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("923295a66c6b757449cc7bbeccf2bc2b5809f43996a2f210cfa2621272a0a723")
-      public override fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit): Unit =
+      override fun criteria(criteria: BehaviorCriteriaProperty.Builder.() -> Unit): Unit =
           criteria(BehaviorCriteriaProperty(criteria))
 
-      public override fun exportMetric(exportMetric: Boolean) {
+      override fun exportMetric(exportMetric: Boolean) {
         cdkBuilder.exportMetric(exportMetric)
       }
 
-      public override fun exportMetric(exportMetric: IResolvable) {
+      override fun exportMetric(exportMetric: IResolvable) {
         cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: String) {
+      override fun metric(metric: String) {
         cdkBuilder.metric(metric)
       }
 
-      public override fun metricDimension(metricDimension: IResolvable) {
+      override fun metricDimension(metricDimension: IResolvable) {
         cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
       }
 
-      public override fun metricDimension(metricDimension: MetricDimensionProperty) {
+      override fun metricDimension(metricDimension: MetricDimensionProperty) {
         cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("868af0845e1172ec28d523bceb97a29abc045a639a9b0846a7e8318b271c74e2")
-      public override
-          fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit): Unit =
-          metricDimension(MetricDimensionProperty(metricDimension))
+      override fun metricDimension(metricDimension: MetricDimensionProperty.Builder.() -> Unit):
+          Unit = metricDimension(MetricDimensionProperty(metricDimension))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun suppressAlerts(suppressAlerts: Boolean) {
+      override fun suppressAlerts(suppressAlerts: Boolean) {
         cdkBuilder.suppressAlerts(suppressAlerts)
       }
 
-      public override fun suppressAlerts(suppressAlerts: IResolvable) {
+      override fun suppressAlerts(suppressAlerts: IResolvable) {
         cdkBuilder.suppressAlerts(suppressAlerts.let(IResolvable::unwrap))
       }
 
@@ -608,17 +571,17 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty,
     ) : BehaviorProperty {
-      public override fun criteria(): Any? = unwrap(this).getCriteria()
+      override fun criteria(): Any? = unwrap(this).getCriteria()
 
-      public override fun exportMetric(): Any? = unwrap(this).getExportMetric()
+      override fun exportMetric(): Any? = unwrap(this).getExportMetric()
 
-      public override fun metric(): String? = unwrap(this).getMetric()
+      override fun metric(): String? = unwrap(this).getMetric()
 
-      public override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
+      override fun metricDimension(): Any? = unwrap(this).getMetricDimension()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
+      override fun suppressAlerts(): Any? = unwrap(this).getSuppressAlerts()
     }
 
     public companion object {
@@ -647,11 +610,9 @@ public open class CfnSecurityProfile internal constructor(
     public fun `operator`(): String? = unwrap(this).getOperator()
 
     public interface Builder {
-      public fun dimensionName(dimensionName: String) {
-      }
+      public fun dimensionName(dimensionName: String)
 
-      public fun `operator`(`operator`: String) {
-      }
+      public fun `operator`(`operator`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -659,11 +620,11 @@ public open class CfnSecurityProfile internal constructor(
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty.Builder =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty.builder()
 
-      public override fun dimensionName(dimensionName: String) {
+      override fun dimensionName(dimensionName: String) {
         cdkBuilder.dimensionName(dimensionName)
       }
 
-      public override fun `operator`(`operator`: String) {
+      override fun `operator`(`operator`: String) {
         cdkBuilder.`operator`(`operator`)
       }
 
@@ -676,9 +637,9 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricDimensionProperty,
     ) : MetricDimensionProperty {
-      public override fun dimensionName(): String = unwrap(this).getDimensionName()
+      override fun dimensionName(): String = unwrap(this).getDimensionName()
 
-      public override fun `operator`(): String? = unwrap(this).getOperator()
+      override fun `operator`(): String? = unwrap(this).getOperator()
     }
 
     public companion object {
@@ -715,29 +676,21 @@ public open class CfnSecurityProfile internal constructor(
     public fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
 
     public interface Builder {
-      public fun cidrs(cidrs: List<String>) {
-      }
+      public fun cidrs(cidrs: List<String>)
 
-      public fun count(count: String) {
-      }
+      public fun count(count: String)
 
-      public fun number(number: Number) {
-      }
+      public fun number(number: Number)
 
-      public fun numbers(numbers: IResolvable) {
-      }
+      public fun numbers(numbers: IResolvable)
 
-      public fun numbers(numbers: List<Number>) {
-      }
+      public fun numbers(numbers: List<Number>)
 
-      public fun ports(ports: IResolvable) {
-      }
+      public fun ports(ports: IResolvable)
 
-      public fun ports(ports: List<Number>) {
-      }
+      public fun ports(ports: List<Number>)
 
-      public fun strings(strings: List<String>) {
-      }
+      public fun strings(strings: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -745,35 +698,35 @@ public open class CfnSecurityProfile internal constructor(
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty.Builder =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty.builder()
 
-      public override fun cidrs(cidrs: List<String>) {
+      override fun cidrs(cidrs: List<String>) {
         cdkBuilder.cidrs(cidrs)
       }
 
-      public override fun count(count: String) {
+      override fun count(count: String) {
         cdkBuilder.count(count)
       }
 
-      public override fun number(number: Number) {
+      override fun number(number: Number) {
         cdkBuilder.number(number)
       }
 
-      public override fun numbers(numbers: IResolvable) {
+      override fun numbers(numbers: IResolvable) {
         cdkBuilder.numbers(numbers.let(IResolvable::unwrap))
       }
 
-      public override fun numbers(numbers: List<Number>) {
+      override fun numbers(numbers: List<Number>) {
         cdkBuilder.numbers(numbers)
       }
 
-      public override fun ports(ports: IResolvable) {
+      override fun ports(ports: IResolvable) {
         cdkBuilder.ports(ports.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: List<Number>) {
+      override fun ports(ports: List<Number>) {
         cdkBuilder.ports(ports)
       }
 
-      public override fun strings(strings: List<String>) {
+      override fun strings(strings: List<String>) {
         cdkBuilder.strings(strings)
       }
 
@@ -785,17 +738,17 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty,
     ) : MetricValueProperty {
-      public override fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
+      override fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
 
-      public override fun count(): String? = unwrap(this).getCount()
+      override fun count(): String? = unwrap(this).getCount()
 
-      public override fun number(): Number? = unwrap(this).getNumber()
+      override fun number(): Number? = unwrap(this).getNumber()
 
-      public override fun numbers(): Any? = unwrap(this).getNumbers()
+      override fun numbers(): Any? = unwrap(this).getNumbers()
 
-      public override fun ports(): Any? = unwrap(this).getPorts()
+      override fun ports(): Any? = unwrap(this).getPorts()
 
-      public override fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
+      override fun strings(): List<String> = unwrap(this).getStrings() ?: emptyList()
     }
 
     public companion object {
@@ -836,52 +789,39 @@ public open class CfnSecurityProfile internal constructor(
     public fun `value`(): Any? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: String) {
-      }
+      public fun comparisonOperator(comparisonOperator: String)
 
-      public fun consecutiveDatapointsToAlarm(consecutiveDatapointsToAlarm: Number) {
-      }
+      public fun consecutiveDatapointsToAlarm(consecutiveDatapointsToAlarm: Number)
 
-      public fun consecutiveDatapointsToClear(consecutiveDatapointsToClear: Number) {
-      }
+      public fun consecutiveDatapointsToClear(consecutiveDatapointsToClear: Number)
 
-      public fun durationSeconds(durationSeconds: Number) {
-      }
+      public fun durationSeconds(durationSeconds: Number)
 
-      public fun mlDetectionConfig(mlDetectionConfig: IResolvable) {
-      }
+      public fun mlDetectionConfig(mlDetectionConfig: IResolvable)
 
-      public fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty) {
-      }
+      public fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0cd2d5111c19a294521ca6163251ee244151a8a4140303c76b7200049648cc8e")
       public
-          fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty.Builder.() -> Unit) {
-      }
+          fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty.Builder.() -> Unit)
 
-      public fun statisticalThreshold(statisticalThreshold: IResolvable) {
-      }
+      public fun statisticalThreshold(statisticalThreshold: IResolvable)
 
-      public fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty) {
-      }
+      public fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("48bd43ae4d94c9effa2f5e601060c3ae79f58c795c643f724d9d70185de348f2")
       public
-          fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty.Builder.() -> Unit) {
-      }
+          fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty.Builder.() -> Unit)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: MetricValueProperty) {
-      }
+      public fun `value`(`value`: MetricValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16cdb95a8068773e469f1bd6dddbcef70a331a68cb980a342cb7ee6d137f5cf3")
-      public fun `value`(`value`: MetricValueProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: MetricValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -889,62 +829,61 @@ public open class CfnSecurityProfile internal constructor(
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty.Builder =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty.builder()
 
-      public override fun comparisonOperator(comparisonOperator: String) {
+      override fun comparisonOperator(comparisonOperator: String) {
         cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
-      public override fun consecutiveDatapointsToAlarm(consecutiveDatapointsToAlarm: Number) {
+      override fun consecutiveDatapointsToAlarm(consecutiveDatapointsToAlarm: Number) {
         cdkBuilder.consecutiveDatapointsToAlarm(consecutiveDatapointsToAlarm)
       }
 
-      public override fun consecutiveDatapointsToClear(consecutiveDatapointsToClear: Number) {
+      override fun consecutiveDatapointsToClear(consecutiveDatapointsToClear: Number) {
         cdkBuilder.consecutiveDatapointsToClear(consecutiveDatapointsToClear)
       }
 
-      public override fun durationSeconds(durationSeconds: Number) {
+      override fun durationSeconds(durationSeconds: Number) {
         cdkBuilder.durationSeconds(durationSeconds)
       }
 
-      public override fun mlDetectionConfig(mlDetectionConfig: IResolvable) {
+      override fun mlDetectionConfig(mlDetectionConfig: IResolvable) {
         cdkBuilder.mlDetectionConfig(mlDetectionConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty) {
+      override fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty) {
         cdkBuilder.mlDetectionConfig(mlDetectionConfig.let(MachineLearningDetectionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0cd2d5111c19a294521ca6163251ee244151a8a4140303c76b7200049648cc8e")
-      public override
+      override
           fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty.Builder.() -> Unit):
           Unit = mlDetectionConfig(MachineLearningDetectionConfigProperty(mlDetectionConfig))
 
-      public override fun statisticalThreshold(statisticalThreshold: IResolvable) {
+      override fun statisticalThreshold(statisticalThreshold: IResolvable) {
         cdkBuilder.statisticalThreshold(statisticalThreshold.let(IResolvable::unwrap))
       }
 
-      public override fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty) {
+      override fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty) {
         cdkBuilder.statisticalThreshold(statisticalThreshold.let(StatisticalThresholdProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("48bd43ae4d94c9effa2f5e601060c3ae79f58c795c643f724d9d70185de348f2")
-      public override
+      override
           fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty.Builder.() -> Unit):
           Unit = statisticalThreshold(StatisticalThresholdProperty(statisticalThreshold))
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: MetricValueProperty) {
+      override fun `value`(`value`: MetricValueProperty) {
         cdkBuilder.`value`(`value`.let(MetricValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16cdb95a8068773e469f1bd6dddbcef70a331a68cb980a342cb7ee6d137f5cf3")
-      public override fun `value`(`value`: MetricValueProperty.Builder.() -> Unit): Unit =
+      override fun `value`(`value`: MetricValueProperty.Builder.() -> Unit): Unit =
           `value`(MetricValueProperty(`value`))
 
       public fun build():
@@ -956,21 +895,21 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorCriteriaProperty,
     ) : BehaviorCriteriaProperty {
-      public override fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
+      override fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
 
-      public override fun consecutiveDatapointsToAlarm(): Number? =
+      override fun consecutiveDatapointsToAlarm(): Number? =
           unwrap(this).getConsecutiveDatapointsToAlarm()
 
-      public override fun consecutiveDatapointsToClear(): Number? =
+      override fun consecutiveDatapointsToClear(): Number? =
           unwrap(this).getConsecutiveDatapointsToClear()
 
-      public override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
+      override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
 
-      public override fun mlDetectionConfig(): Any? = unwrap(this).getMlDetectionConfig()
+      override fun mlDetectionConfig(): Any? = unwrap(this).getMlDetectionConfig()
 
-      public override fun statisticalThreshold(): Any? = unwrap(this).getStatisticalThreshold()
+      override fun statisticalThreshold(): Any? = unwrap(this).getStatisticalThreshold()
 
-      public override fun `value`(): Any? = unwrap(this).getValue()
+      override fun `value`(): Any? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -999,11 +938,9 @@ public open class CfnSecurityProfile internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun alertTargetArn(alertTargetArn: String) {
-      }
+      public fun alertTargetArn(alertTargetArn: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1011,11 +948,11 @@ public open class CfnSecurityProfile internal constructor(
           software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty.Builder =
           software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty.builder()
 
-      public override fun alertTargetArn(alertTargetArn: String) {
+      override fun alertTargetArn(alertTargetArn: String) {
         cdkBuilder.alertTargetArn(alertTargetArn)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -1027,9 +964,9 @@ public open class CfnSecurityProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnSecurityProfile.AlertTargetProperty,
     ) : AlertTargetProperty {
-      public override fun alertTargetArn(): String = unwrap(this).getAlertTargetArn()
+      override fun alertTargetArn(): String = unwrap(this).getAlertTargetArn()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {

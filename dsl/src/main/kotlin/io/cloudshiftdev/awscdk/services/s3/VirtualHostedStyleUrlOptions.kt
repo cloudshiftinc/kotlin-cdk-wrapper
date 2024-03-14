@@ -7,15 +7,14 @@ public interface VirtualHostedStyleUrlOptions {
   public fun regional(): Boolean? = unwrap(this).getRegional()
 
   public interface Builder {
-    public fun regional(regional: Boolean) {
-    }
+    public fun regional(regional: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions.Builder
         = software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions.builder()
 
-    public override fun regional(regional: Boolean) {
+    override fun regional(regional: Boolean) {
       cdkBuilder.regional(regional)
     }
 
@@ -26,7 +25,7 @@ public interface VirtualHostedStyleUrlOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions,
   ) : VirtualHostedStyleUrlOptions {
-    public override fun regional(): Boolean? = unwrap(this).getRegional()
+    override fun regional(): Boolean? = unwrap(this).getRegional()
   }
 
   public companion object {

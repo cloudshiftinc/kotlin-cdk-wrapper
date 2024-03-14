@@ -25,28 +25,21 @@ public interface FargateServiceBaseProps {
       unwrap(this).getTaskDefinition()?.let(FargateTaskDefinition::wrap)
 
   public interface Builder {
-    public fun cpu(cpu: Number) {
-    }
+    public fun cpu(cpu: Number)
 
-    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
-    }
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number)
 
-    public fun memoryLimitMiB(memoryLimitMiB: Number) {
-    }
+    public fun memoryLimitMiB(memoryLimitMiB: Number)
 
-    public fun platformVersion(platformVersion: FargatePlatformVersion) {
-    }
+    public fun platformVersion(platformVersion: FargatePlatformVersion)
 
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad701131b10c34d9874ce28883035bf3ff7fc97460c81564c99f9214b961441c")
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit)
 
-    public fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: FargateTaskDefinition)
   }
 
   private class BuilderImpl : Builder {
@@ -54,32 +47,32 @@ public interface FargateServiceBaseProps {
         software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps.Builder =
         software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps.builder()
 
-    public override fun cpu(cpu: Number) {
+    override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+    override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
       cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
     }
 
-    public override fun memoryLimitMiB(memoryLimitMiB: Number) {
+    override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
     }
 
-    public override fun platformVersion(platformVersion: FargatePlatformVersion) {
+    override fun platformVersion(platformVersion: FargatePlatformVersion) {
       cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
     }
 
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
       cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad701131b10c34d9874ce28883035bf3ff7fc97460c81564c99f9214b961441c")
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
         runtimePlatform(RuntimePlatform(runtimePlatform))
 
-    public override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
+    override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
     }
 
@@ -90,19 +83,19 @@ public interface FargateServiceBaseProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps,
   ) : FargateServiceBaseProps {
-    public override fun cpu(): Number? = unwrap(this).getCpu()
+    override fun cpu(): Number? = unwrap(this).getCpu()
 
-    public override fun ephemeralStorageGiB(): Number? = unwrap(this).getEphemeralStorageGiB()
+    override fun ephemeralStorageGiB(): Number? = unwrap(this).getEphemeralStorageGiB()
 
-    public override fun memoryLimitMiB(): Number? = unwrap(this).getMemoryLimitMiB()
+    override fun memoryLimitMiB(): Number? = unwrap(this).getMemoryLimitMiB()
 
-    public override fun platformVersion(): FargatePlatformVersion? =
+    override fun platformVersion(): FargatePlatformVersion? =
         unwrap(this).getPlatformVersion()?.let(FargatePlatformVersion::wrap)
 
-    public override fun runtimePlatform(): RuntimePlatform? =
+    override fun runtimePlatform(): RuntimePlatform? =
         unwrap(this).getRuntimePlatform()?.let(RuntimePlatform::wrap)
 
-    public override fun taskDefinition(): FargateTaskDefinition? =
+    override fun taskDefinition(): FargateTaskDefinition? =
         unwrap(this).getTaskDefinition()?.let(FargateTaskDefinition::wrap)
   }
 

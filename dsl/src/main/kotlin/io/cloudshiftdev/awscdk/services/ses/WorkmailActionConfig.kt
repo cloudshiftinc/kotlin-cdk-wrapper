@@ -9,22 +9,20 @@ public interface WorkmailActionConfig {
   public fun topicArn(): String? = unwrap(this).getTopicArn()
 
   public interface Builder {
-    public fun organizationArn(organizationArn: String) {
-    }
+    public fun organizationArn(organizationArn: String)
 
-    public fun topicArn(topicArn: String) {
-    }
+    public fun topicArn(topicArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.WorkmailActionConfig.Builder =
         software.amazon.awscdk.services.ses.WorkmailActionConfig.builder()
 
-    public override fun organizationArn(organizationArn: String) {
+    override fun organizationArn(organizationArn: String) {
       cdkBuilder.organizationArn(organizationArn)
     }
 
-    public override fun topicArn(topicArn: String) {
+    override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
 
@@ -35,9 +33,9 @@ public interface WorkmailActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.WorkmailActionConfig,
   ) : WorkmailActionConfig {
-    public override fun organizationArn(): String = unwrap(this).getOrganizationArn()
+    override fun organizationArn(): String = unwrap(this).getOrganizationArn()
 
-    public override fun topicArn(): String? = unwrap(this).getTopicArn()
+    override fun topicArn(): String? = unwrap(this).getTopicArn()
   }
 
   public companion object {

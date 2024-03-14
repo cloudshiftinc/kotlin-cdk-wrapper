@@ -92,31 +92,23 @@ public open class CfnSignalCatalog internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun nodeCounts(nodeCounts: IResolvable) {
-    }
+    public fun nodeCounts(nodeCounts: IResolvable)
 
-    public fun nodeCounts(nodeCounts: NodeCountsProperty) {
-    }
+    public fun nodeCounts(nodeCounts: NodeCountsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c2c036ef5820857fbc4d7fe0319e34db43831f2e7b29d3257ec25b0e0ae6ac7")
-    public fun nodeCounts(nodeCounts: NodeCountsProperty.Builder.() -> Unit) {
-    }
+    public fun nodeCounts(nodeCounts: NodeCountsProperty.Builder.() -> Unit)
 
-    public fun nodes(nodes: IResolvable) {
-    }
+    public fun nodes(nodes: IResolvable)
 
-    public fun nodes(nodes: List<Any>) {
-    }
+    public fun nodes(nodes: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -126,36 +118,36 @@ public open class CfnSignalCatalog internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.Builder =
         software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun nodeCounts(nodeCounts: IResolvable) {
+    override fun nodeCounts(nodeCounts: IResolvable) {
       cdkBuilder.nodeCounts(nodeCounts.let(IResolvable::unwrap))
     }
 
-    public override fun nodeCounts(nodeCounts: NodeCountsProperty) {
+    override fun nodeCounts(nodeCounts: NodeCountsProperty) {
       cdkBuilder.nodeCounts(nodeCounts.let(NodeCountsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c2c036ef5820857fbc4d7fe0319e34db43831f2e7b29d3257ec25b0e0ae6ac7")
-    public override fun nodeCounts(nodeCounts: NodeCountsProperty.Builder.() -> Unit): Unit =
+    override fun nodeCounts(nodeCounts: NodeCountsProperty.Builder.() -> Unit): Unit =
         nodeCounts(NodeCountsProperty(nodeCounts))
 
-    public override fun nodes(nodes: IResolvable) {
+    override fun nodes(nodes: IResolvable) {
       cdkBuilder.nodes(nodes.let(IResolvable::unwrap))
     }
 
-    public override fun nodes(nodes: List<Any>) {
+    override fun nodes(nodes: List<Any>) {
       cdkBuilder.nodes(nodes)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -202,29 +194,21 @@ public open class CfnSignalCatalog internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun allowedValues(allowedValues: List<String>) {
-      }
+      public fun allowedValues(allowedValues: List<String>)
 
-      public fun assignedValue(assignedValue: String) {
-      }
+      public fun assignedValue(assignedValue: String)
 
-      public fun dataType(dataType: String) {
-      }
+      public fun dataType(dataType: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
 
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -232,35 +216,35 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty.Builder =
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty.builder()
 
-      public override fun allowedValues(allowedValues: List<String>) {
+      override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
-      public override fun assignedValue(assignedValue: String) {
+      override fun assignedValue(assignedValue: String) {
         cdkBuilder.assignedValue(assignedValue)
       }
 
-      public override fun dataType(dataType: String) {
+      override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -273,22 +257,21 @@ public open class CfnSignalCatalog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty,
     ) : ActuatorProperty {
-      public override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?:
-          emptyList()
+      override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
-      public override fun assignedValue(): String? = unwrap(this).getAssignedValue()
+      override fun assignedValue(): String? = unwrap(this).getAssignedValue()
 
-      public override fun dataType(): String = unwrap(this).getDataType()
+      override fun dataType(): String = unwrap(this).getDataType()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -321,49 +304,37 @@ public open class CfnSignalCatalog internal constructor(
     public fun sensor(): Any? = unwrap(this).getSensor()
 
     public interface Builder {
-      public fun actuator(actuator: IResolvable) {
-      }
+      public fun actuator(actuator: IResolvable)
 
-      public fun actuator(actuator: ActuatorProperty) {
-      }
+      public fun actuator(actuator: ActuatorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2acf8afe2fe7e7b7dd7b7f6bc1739a5e29ddb7cb8a7082f0e9d79366d2264668")
-      public fun actuator(actuator: ActuatorProperty.Builder.() -> Unit) {
-      }
+      public fun actuator(actuator: ActuatorProperty.Builder.() -> Unit)
 
-      public fun attribute(attribute: IResolvable) {
-      }
+      public fun attribute(attribute: IResolvable)
 
-      public fun attribute(attribute: AttributeProperty) {
-      }
+      public fun attribute(attribute: AttributeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("29464a7cdb5eddb73849eecbd689fe3011416a4777dbcb1a3106c134dc2295e2")
-      public fun attribute(attribute: AttributeProperty.Builder.() -> Unit) {
-      }
+      public fun attribute(attribute: AttributeProperty.Builder.() -> Unit)
 
-      public fun branch(branch: IResolvable) {
-      }
+      public fun branch(branch: IResolvable)
 
-      public fun branch(branch: BranchProperty) {
-      }
+      public fun branch(branch: BranchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bf3d34cb6af7ed15d1121a1bb70eb3056ab9662f4d5039f094b088c0e1e766bc")
-      public fun branch(branch: BranchProperty.Builder.() -> Unit) {
-      }
+      public fun branch(branch: BranchProperty.Builder.() -> Unit)
 
-      public fun sensor(sensor: IResolvable) {
-      }
+      public fun sensor(sensor: IResolvable)
 
-      public fun sensor(sensor: SensorProperty) {
-      }
+      public fun sensor(sensor: SensorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("892b1e5183f2ea8fd2e210150071f4141fe41b08fb290e79140a246965e4aaad")
-      public fun sensor(sensor: SensorProperty.Builder.() -> Unit) {
-      }
+      public fun sensor(sensor: SensorProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -371,56 +342,56 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty.Builder =
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty.builder()
 
-      public override fun actuator(actuator: IResolvable) {
+      override fun actuator(actuator: IResolvable) {
         cdkBuilder.actuator(actuator.let(IResolvable::unwrap))
       }
 
-      public override fun actuator(actuator: ActuatorProperty) {
+      override fun actuator(actuator: ActuatorProperty) {
         cdkBuilder.actuator(actuator.let(ActuatorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2acf8afe2fe7e7b7dd7b7f6bc1739a5e29ddb7cb8a7082f0e9d79366d2264668")
-      public override fun actuator(actuator: ActuatorProperty.Builder.() -> Unit): Unit =
+      override fun actuator(actuator: ActuatorProperty.Builder.() -> Unit): Unit =
           actuator(ActuatorProperty(actuator))
 
-      public override fun attribute(attribute: IResolvable) {
+      override fun attribute(attribute: IResolvable) {
         cdkBuilder.attribute(attribute.let(IResolvable::unwrap))
       }
 
-      public override fun attribute(attribute: AttributeProperty) {
+      override fun attribute(attribute: AttributeProperty) {
         cdkBuilder.attribute(attribute.let(AttributeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("29464a7cdb5eddb73849eecbd689fe3011416a4777dbcb1a3106c134dc2295e2")
-      public override fun attribute(attribute: AttributeProperty.Builder.() -> Unit): Unit =
+      override fun attribute(attribute: AttributeProperty.Builder.() -> Unit): Unit =
           attribute(AttributeProperty(attribute))
 
-      public override fun branch(branch: IResolvable) {
+      override fun branch(branch: IResolvable) {
         cdkBuilder.branch(branch.let(IResolvable::unwrap))
       }
 
-      public override fun branch(branch: BranchProperty) {
+      override fun branch(branch: BranchProperty) {
         cdkBuilder.branch(branch.let(BranchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bf3d34cb6af7ed15d1121a1bb70eb3056ab9662f4d5039f094b088c0e1e766bc")
-      public override fun branch(branch: BranchProperty.Builder.() -> Unit): Unit =
+      override fun branch(branch: BranchProperty.Builder.() -> Unit): Unit =
           branch(BranchProperty(branch))
 
-      public override fun sensor(sensor: IResolvable) {
+      override fun sensor(sensor: IResolvable) {
         cdkBuilder.sensor(sensor.let(IResolvable::unwrap))
       }
 
-      public override fun sensor(sensor: SensorProperty) {
+      override fun sensor(sensor: SensorProperty) {
         cdkBuilder.sensor(sensor.let(SensorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("892b1e5183f2ea8fd2e210150071f4141fe41b08fb290e79140a246965e4aaad")
-      public override fun sensor(sensor: SensorProperty.Builder.() -> Unit): Unit =
+      override fun sensor(sensor: SensorProperty.Builder.() -> Unit): Unit =
           sensor(SensorProperty(sensor))
 
       public fun build(): software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty
@@ -431,13 +402,13 @@ public open class CfnSignalCatalog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty,
     ) : NodeProperty {
-      public override fun actuator(): Any? = unwrap(this).getActuator()
+      override fun actuator(): Any? = unwrap(this).getActuator()
 
-      public override fun attribute(): Any? = unwrap(this).getAttribute()
+      override fun attribute(): Any? = unwrap(this).getAttribute()
 
-      public override fun branch(): Any? = unwrap(this).getBranch()
+      override fun branch(): Any? = unwrap(this).getBranch()
 
-      public override fun sensor(): Any? = unwrap(this).getSensor()
+      override fun sensor(): Any? = unwrap(this).getSensor()
     }
 
     public companion object {
@@ -476,26 +447,19 @@ public open class CfnSignalCatalog internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun allowedValues(allowedValues: List<String>) {
-      }
+      public fun allowedValues(allowedValues: List<String>)
 
-      public fun dataType(dataType: String) {
-      }
+      public fun dataType(dataType: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
 
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -503,31 +467,31 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty.Builder =
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty.builder()
 
-      public override fun allowedValues(allowedValues: List<String>) {
+      override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
-      public override fun dataType(dataType: String) {
+      override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -540,20 +504,19 @@ public open class CfnSignalCatalog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty,
     ) : SensorProperty {
-      public override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?:
-          emptyList()
+      override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
-      public override fun dataType(): String = unwrap(this).getDataType()
+      override fun dataType(): String = unwrap(this).getDataType()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -596,32 +559,23 @@ public open class CfnSignalCatalog internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun allowedValues(allowedValues: List<String>) {
-      }
+      public fun allowedValues(allowedValues: List<String>)
 
-      public fun assignedValue(assignedValue: String) {
-      }
+      public fun assignedValue(assignedValue: String)
 
-      public fun dataType(dataType: String) {
-      }
+      public fun dataType(dataType: String)
 
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
 
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -629,39 +583,39 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.Builder =
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.builder()
 
-      public override fun allowedValues(allowedValues: List<String>) {
+      override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
-      public override fun assignedValue(assignedValue: String) {
+      override fun assignedValue(assignedValue: String) {
         cdkBuilder.assignedValue(assignedValue)
       }
 
-      public override fun dataType(dataType: String) {
+      override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
       }
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -674,24 +628,23 @@ public open class CfnSignalCatalog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty,
     ) : AttributeProperty {
-      public override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?:
-          emptyList()
+      override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
-      public override fun assignedValue(): String? = unwrap(this).getAssignedValue()
+      override fun assignedValue(): String? = unwrap(this).getAssignedValue()
 
-      public override fun dataType(): String = unwrap(this).getDataType()
+      override fun dataType(): String = unwrap(this).getDataType()
 
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -720,11 +673,9 @@ public open class CfnSignalCatalog internal constructor(
     public fun fullyQualifiedName(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun fullyQualifiedName(fullyQualifiedName: String) {
-      }
+      public fun fullyQualifiedName(fullyQualifiedName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -732,11 +683,11 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.Builder =
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun fullyQualifiedName(fullyQualifiedName: String) {
+      override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
@@ -749,9 +700,9 @@ public open class CfnSignalCatalog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty,
     ) : BranchProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
+      override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
     }
 
     public companion object {
@@ -786,20 +737,15 @@ public open class CfnSignalCatalog internal constructor(
     public fun totalSensors(): Number? = unwrap(this).getTotalSensors()
 
     public interface Builder {
-      public fun totalActuators(totalActuators: Number) {
-      }
+      public fun totalActuators(totalActuators: Number)
 
-      public fun totalAttributes(totalAttributes: Number) {
-      }
+      public fun totalAttributes(totalAttributes: Number)
 
-      public fun totalBranches(totalBranches: Number) {
-      }
+      public fun totalBranches(totalBranches: Number)
 
-      public fun totalNodes(totalNodes: Number) {
-      }
+      public fun totalNodes(totalNodes: Number)
 
-      public fun totalSensors(totalSensors: Number) {
-      }
+      public fun totalSensors(totalSensors: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -807,23 +753,23 @@ public open class CfnSignalCatalog internal constructor(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.Builder =
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.builder()
 
-      public override fun totalActuators(totalActuators: Number) {
+      override fun totalActuators(totalActuators: Number) {
         cdkBuilder.totalActuators(totalActuators)
       }
 
-      public override fun totalAttributes(totalAttributes: Number) {
+      override fun totalAttributes(totalAttributes: Number) {
         cdkBuilder.totalAttributes(totalAttributes)
       }
 
-      public override fun totalBranches(totalBranches: Number) {
+      override fun totalBranches(totalBranches: Number) {
         cdkBuilder.totalBranches(totalBranches)
       }
 
-      public override fun totalNodes(totalNodes: Number) {
+      override fun totalNodes(totalNodes: Number) {
         cdkBuilder.totalNodes(totalNodes)
       }
 
-      public override fun totalSensors(totalSensors: Number) {
+      override fun totalSensors(totalSensors: Number) {
         cdkBuilder.totalSensors(totalSensors)
       }
 
@@ -836,15 +782,15 @@ public open class CfnSignalCatalog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty,
     ) : NodeCountsProperty {
-      public override fun totalActuators(): Number? = unwrap(this).getTotalActuators()
+      override fun totalActuators(): Number? = unwrap(this).getTotalActuators()
 
-      public override fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
+      override fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
 
-      public override fun totalBranches(): Number? = unwrap(this).getTotalBranches()
+      override fun totalBranches(): Number? = unwrap(this).getTotalBranches()
 
-      public override fun totalNodes(): Number? = unwrap(this).getTotalNodes()
+      override fun totalNodes(): Number? = unwrap(this).getTotalNodes()
 
-      public override fun totalSensors(): Number? = unwrap(this).getTotalSensors()
+      override fun totalSensors(): Number? = unwrap(this).getTotalSensors()
     }
 
     public companion object {

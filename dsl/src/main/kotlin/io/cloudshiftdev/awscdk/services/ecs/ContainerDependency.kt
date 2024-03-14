@@ -9,22 +9,20 @@ public interface ContainerDependency {
   public fun container(): ContainerDefinition
 
   public interface Builder {
-    public fun condition(condition: ContainerDependencyCondition) {
-    }
+    public fun condition(condition: ContainerDependencyCondition)
 
-    public fun container(container: ContainerDefinition) {
-    }
+    public fun container(container: ContainerDefinition)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ContainerDependency.Builder =
         software.amazon.awscdk.services.ecs.ContainerDependency.builder()
 
-    public override fun condition(condition: ContainerDependencyCondition) {
+    override fun condition(condition: ContainerDependencyCondition) {
       cdkBuilder.condition(condition.let(ContainerDependencyCondition::unwrap))
     }
 
-    public override fun container(container: ContainerDefinition) {
+    override fun container(container: ContainerDefinition) {
       cdkBuilder.container(container.let(ContainerDefinition::unwrap))
     }
 
@@ -34,10 +32,10 @@ public interface ContainerDependency {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ContainerDependency,
   ) : ContainerDependency {
-    public override fun condition(): ContainerDependencyCondition? =
+    override fun condition(): ContainerDependencyCondition? =
         unwrap(this).getCondition()?.let(ContainerDependencyCondition::wrap)
 
-    public override fun container(): ContainerDefinition =
+    override fun container(): ContainerDefinition =
         unwrap(this).getContainer().let(ContainerDefinition::wrap)
   }
 

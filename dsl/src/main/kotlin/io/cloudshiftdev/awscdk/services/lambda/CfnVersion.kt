@@ -76,38 +76,29 @@ public open class CfnVersion internal constructor(
       runtimePolicy(RuntimePolicyProperty(`value`))
 
   public interface Builder {
-    public fun codeSha256(codeSha256: String) {
-    }
+    public fun codeSha256(codeSha256: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-    }
+    public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable)
 
     public
-        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty) {
-    }
+        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("432d513b1b189cd2d3072b81cb79413843ea783d3ab9da260500e42fd1f195a5")
     public
-        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty.Builder.() -> Unit)
 
-    public fun runtimePolicy(runtimePolicy: IResolvable) {
-    }
+    public fun runtimePolicy(runtimePolicy: IResolvable)
 
-    public fun runtimePolicy(runtimePolicy: RuntimePolicyProperty) {
-    }
+    public fun runtimePolicy(runtimePolicy: RuntimePolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b0ab2f030fc478fd5d60453eabf7b2bd12e0ba9a0baf099951259bc38c6da412")
-    public fun runtimePolicy(runtimePolicy: RuntimePolicyProperty.Builder.() -> Unit) {
-    }
+    public fun runtimePolicy(runtimePolicy: RuntimePolicyProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -117,46 +108,46 @@ public open class CfnVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnVersion.Builder =
         software.amazon.awscdk.services.lambda.CfnVersion.Builder.create(scope, id)
 
-    public override fun codeSha256(codeSha256: String) {
+    override fun codeSha256(codeSha256: String) {
       cdkBuilder.codeSha256(codeSha256)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
+    override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
       cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty) {
       cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(ProvisionedConcurrencyConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("432d513b1b189cd2d3072b81cb79413843ea783d3ab9da260500e42fd1f195a5")
-    public override
+    override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty.Builder.() -> Unit):
         Unit =
         provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty(provisionedConcurrencyConfig))
 
-    public override fun runtimePolicy(runtimePolicy: IResolvable) {
+    override fun runtimePolicy(runtimePolicy: IResolvable) {
       cdkBuilder.runtimePolicy(runtimePolicy.let(IResolvable::unwrap))
     }
 
-    public override fun runtimePolicy(runtimePolicy: RuntimePolicyProperty) {
+    override fun runtimePolicy(runtimePolicy: RuntimePolicyProperty) {
       cdkBuilder.runtimePolicy(runtimePolicy.let(RuntimePolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b0ab2f030fc478fd5d60453eabf7b2bd12e0ba9a0baf099951259bc38c6da412")
-    public override fun runtimePolicy(runtimePolicy: RuntimePolicyProperty.Builder.() -> Unit): Unit
-        = runtimePolicy(RuntimePolicyProperty(runtimePolicy))
+    override fun runtimePolicy(runtimePolicy: RuntimePolicyProperty.Builder.() -> Unit): Unit =
+        runtimePolicy(RuntimePolicyProperty(runtimePolicy))
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnVersion = cdkBuilder.build()
   }
@@ -186,8 +177,7 @@ public open class CfnVersion internal constructor(
     public fun provisionedConcurrentExecutions(): Number
 
     public interface Builder {
-      public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
-      }
+      public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -196,7 +186,7 @@ public open class CfnVersion internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty.builder()
 
-      public override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
+      override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
         cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
       }
 
@@ -209,7 +199,7 @@ public open class CfnVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty,
     ) : ProvisionedConcurrencyConfigurationProperty {
-      public override fun provisionedConcurrentExecutions(): Number =
+      override fun provisionedConcurrentExecutions(): Number =
           unwrap(this).getProvisionedConcurrentExecutions()
     }
 
@@ -240,11 +230,9 @@ public open class CfnVersion internal constructor(
     public fun updateRuntimeOn(): String
 
     public interface Builder {
-      public fun runtimeVersionArn(runtimeVersionArn: String) {
-      }
+      public fun runtimeVersionArn(runtimeVersionArn: String)
 
-      public fun updateRuntimeOn(updateRuntimeOn: String) {
-      }
+      public fun updateRuntimeOn(updateRuntimeOn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -252,11 +240,11 @@ public open class CfnVersion internal constructor(
           software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty.builder()
 
-      public override fun runtimeVersionArn(runtimeVersionArn: String) {
+      override fun runtimeVersionArn(runtimeVersionArn: String) {
         cdkBuilder.runtimeVersionArn(runtimeVersionArn)
       }
 
-      public override fun updateRuntimeOn(updateRuntimeOn: String) {
+      override fun updateRuntimeOn(updateRuntimeOn: String) {
         cdkBuilder.updateRuntimeOn(updateRuntimeOn)
       }
 
@@ -268,9 +256,9 @@ public open class CfnVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty,
     ) : RuntimePolicyProperty {
-      public override fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
+      override fun runtimeVersionArn(): String? = unwrap(this).getRuntimeVersionArn()
 
-      public override fun updateRuntimeOn(): String = unwrap(this).getUpdateRuntimeOn()
+      override fun updateRuntimeOn(): String = unwrap(this).getUpdateRuntimeOn()
     }
 
     public companion object {

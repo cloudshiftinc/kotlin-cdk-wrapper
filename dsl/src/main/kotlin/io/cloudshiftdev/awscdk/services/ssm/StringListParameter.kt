@@ -35,23 +35,17 @@ public open class StringListParameter internal constructor(
       emptyList()
 
   public interface Builder {
-    public fun allowedPattern(allowedPattern: String) {
-    }
+    public fun allowedPattern(allowedPattern: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun parameterName(parameterName: String) {
-    }
+    public fun parameterName(parameterName: String)
 
-    public fun simpleName(simpleName: Boolean) {
-    }
+    public fun simpleName(simpleName: Boolean)
 
-    public fun stringListValue(stringListValue: List<String>) {
-    }
+    public fun stringListValue(stringListValue: List<String>)
 
-    public fun tier(tier: ParameterTier) {
-    }
+    public fun tier(tier: ParameterTier)
   }
 
   private class BuilderImpl(
@@ -61,27 +55,27 @@ public open class StringListParameter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.StringListParameter.Builder =
         software.amazon.awscdk.services.ssm.StringListParameter.Builder.create(scope, id)
 
-    public override fun allowedPattern(allowedPattern: String) {
+    override fun allowedPattern(allowedPattern: String) {
       cdkBuilder.allowedPattern(allowedPattern)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun parameterName(parameterName: String) {
+    override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
-    public override fun simpleName(simpleName: Boolean) {
+    override fun simpleName(simpleName: Boolean) {
       cdkBuilder.simpleName(simpleName)
     }
 
-    public override fun stringListValue(stringListValue: List<String>) {
+    override fun stringListValue(stringListValue: List<String>) {
       cdkBuilder.stringListValue(stringListValue)
     }
 
-    public override fun tier(tier: ParameterTier) {
+    override fun tier(tier: ParameterTier) {
       cdkBuilder.tier(tier.let(ParameterTier::unwrap))
     }
 

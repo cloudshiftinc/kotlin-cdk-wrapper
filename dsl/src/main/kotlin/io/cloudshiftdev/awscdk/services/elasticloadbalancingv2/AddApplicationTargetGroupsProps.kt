@@ -8,14 +8,11 @@ public interface AddApplicationTargetGroupsProps : AddRuleProps {
   public fun targetGroups(): List<IApplicationTargetGroup>
 
   public interface Builder {
-    public fun conditions(conditions: List<ListenerCondition>) {
-    }
+    public fun conditions(conditions: List<ListenerCondition>)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
-    }
+    public fun targetGroups(targetGroups: List<IApplicationTargetGroup>)
   }
 
   private class BuilderImpl : Builder {
@@ -24,15 +21,15 @@ public interface AddApplicationTargetGroupsProps : AddRuleProps {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetGroupsProps.builder()
 
-    public override fun conditions(conditions: List<ListenerCondition>) {
+    override fun conditions(conditions: List<ListenerCondition>) {
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
+    override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
       cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup::unwrap))
     }
 
@@ -45,12 +42,12 @@ public interface AddApplicationTargetGroupsProps : AddRuleProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetGroupsProps,
   ) : AddApplicationTargetGroupsProps {
-    public override fun conditions(): List<ListenerCondition> =
+    override fun conditions(): List<ListenerCondition> =
         unwrap(this).getConditions()?.map(ListenerCondition::wrap) ?: emptyList()
 
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
 
-    public override fun targetGroups(): List<IApplicationTargetGroup> =
+    override fun targetGroups(): List<IApplicationTargetGroup> =
         unwrap(this).getTargetGroups().map(IApplicationTargetGroup::wrap)
   }
 

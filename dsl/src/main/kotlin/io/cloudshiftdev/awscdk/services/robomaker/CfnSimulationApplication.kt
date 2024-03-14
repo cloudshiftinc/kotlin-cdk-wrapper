@@ -110,58 +110,42 @@ public open class CfnSimulationApplication internal constructor(
   }
 
   public interface Builder {
-    public fun currentRevisionId(currentRevisionId: String) {
-    }
+    public fun currentRevisionId(currentRevisionId: String)
 
-    public fun environment(environment: String) {
-    }
+    public fun environment(environment: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun renderingEngine(renderingEngine: IResolvable) {
-    }
+    public fun renderingEngine(renderingEngine: IResolvable)
 
-    public fun renderingEngine(renderingEngine: RenderingEngineProperty) {
-    }
+    public fun renderingEngine(renderingEngine: RenderingEngineProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5cf0c427601194a1cf47914b769b5337a7b8505c0a0d7d203f1e0daa16beabe")
-    public fun renderingEngine(renderingEngine: RenderingEngineProperty.Builder.() -> Unit) {
-    }
+    public fun renderingEngine(renderingEngine: RenderingEngineProperty.Builder.() -> Unit)
 
-    public fun robotSoftwareSuite(robotSoftwareSuite: IResolvable) {
-    }
+    public fun robotSoftwareSuite(robotSoftwareSuite: IResolvable)
 
-    public fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty) {
-    }
+    public fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0174d698c624015b15a267fb705bee6eed258cda097efe8d9742789a5ed91a4a")
-    public
-        fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty.Builder.() -> Unit) {
-    }
+    public fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty.Builder.() -> Unit)
 
-    public fun simulationSoftwareSuite(simulationSoftwareSuite: IResolvable) {
-    }
+    public fun simulationSoftwareSuite(simulationSoftwareSuite: IResolvable)
 
-    public fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty) {
-    }
+    public fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96b5d089d3ea0c69a258645056fa3668552a75f0eea04b27f426832ffca68fcd")
     public
-        fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty.Builder.() -> Unit) {
-    }
+        fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty.Builder.() -> Unit)
 
-    public fun sources(sources: IResolvable) {
-    }
+    public fun sources(sources: IResolvable)
 
-    public fun sources(sources: List<Any>) {
-    }
+    public fun sources(sources: List<Any>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -172,70 +156,68 @@ public open class CfnSimulationApplication internal constructor(
         software.amazon.awscdk.services.robomaker.CfnSimulationApplication.Builder =
         software.amazon.awscdk.services.robomaker.CfnSimulationApplication.Builder.create(scope, id)
 
-    public override fun currentRevisionId(currentRevisionId: String) {
+    override fun currentRevisionId(currentRevisionId: String) {
       cdkBuilder.currentRevisionId(currentRevisionId)
     }
 
-    public override fun environment(environment: String) {
+    override fun environment(environment: String) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun renderingEngine(renderingEngine: IResolvable) {
+    override fun renderingEngine(renderingEngine: IResolvable) {
       cdkBuilder.renderingEngine(renderingEngine.let(IResolvable::unwrap))
     }
 
-    public override fun renderingEngine(renderingEngine: RenderingEngineProperty) {
+    override fun renderingEngine(renderingEngine: RenderingEngineProperty) {
       cdkBuilder.renderingEngine(renderingEngine.let(RenderingEngineProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5cf0c427601194a1cf47914b769b5337a7b8505c0a0d7d203f1e0daa16beabe")
-    public override
-        fun renderingEngine(renderingEngine: RenderingEngineProperty.Builder.() -> Unit): Unit =
-        renderingEngine(RenderingEngineProperty(renderingEngine))
+    override fun renderingEngine(renderingEngine: RenderingEngineProperty.Builder.() -> Unit): Unit
+        = renderingEngine(RenderingEngineProperty(renderingEngine))
 
-    public override fun robotSoftwareSuite(robotSoftwareSuite: IResolvable) {
+    override fun robotSoftwareSuite(robotSoftwareSuite: IResolvable) {
       cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable::unwrap))
     }
 
-    public override fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty) {
+    override fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty) {
       cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(RobotSoftwareSuiteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0174d698c624015b15a267fb705bee6eed258cda097efe8d9742789a5ed91a4a")
-    public override
+    override
         fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty.Builder.() -> Unit):
         Unit = robotSoftwareSuite(RobotSoftwareSuiteProperty(robotSoftwareSuite))
 
-    public override fun simulationSoftwareSuite(simulationSoftwareSuite: IResolvable) {
+    override fun simulationSoftwareSuite(simulationSoftwareSuite: IResolvable) {
       cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(IResolvable::unwrap))
     }
 
-    public override
-        fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty) {
+    override fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty) {
       cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(SimulationSoftwareSuiteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96b5d089d3ea0c69a258645056fa3668552a75f0eea04b27f426832ffca68fcd")
-    public override
+    override
         fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty.Builder.() -> Unit):
         Unit = simulationSoftwareSuite(SimulationSoftwareSuiteProperty(simulationSoftwareSuite))
 
-    public override fun sources(sources: IResolvable) {
+    override fun sources(sources: IResolvable) {
       cdkBuilder.sources(sources.let(IResolvable::unwrap))
     }
 
-    public override fun sources(sources: List<Any>) {
+    override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -271,11 +253,9 @@ public open class CfnSimulationApplication internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -284,11 +264,11 @@ public open class CfnSimulationApplication internal constructor(
           =
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -301,9 +281,9 @@ public open class CfnSimulationApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SimulationSoftwareSuiteProperty,
     ) : SimulationSoftwareSuiteProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -332,11 +312,9 @@ public open class CfnSimulationApplication internal constructor(
     public fun version(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -345,11 +323,11 @@ public open class CfnSimulationApplication internal constructor(
           =
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -362,9 +340,9 @@ public open class CfnSimulationApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RenderingEngineProperty,
     ) : RenderingEngineProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun version(): String = unwrap(this).getVersion()
+      override fun version(): String = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -395,14 +373,11 @@ public open class CfnSimulationApplication internal constructor(
     public fun s3Key(): String
 
     public interface Builder {
-      public fun architecture(architecture: String) {
-      }
+      public fun architecture(architecture: String)
 
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -411,15 +386,15 @@ public open class CfnSimulationApplication internal constructor(
           =
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty.builder()
 
-      public override fun architecture(architecture: String) {
+      override fun architecture(architecture: String) {
         cdkBuilder.architecture(architecture)
       }
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
@@ -432,11 +407,11 @@ public open class CfnSimulationApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.SourceConfigProperty,
     ) : SourceConfigProperty {
-      public override fun architecture(): String = unwrap(this).getArchitecture()
+      override fun architecture(): String = unwrap(this).getArchitecture()
 
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String = unwrap(this).getS3Key()
+      override fun s3Key(): String = unwrap(this).getS3Key()
     }
 
     public companion object {
@@ -465,11 +440,9 @@ public open class CfnSimulationApplication internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -478,11 +451,11 @@ public open class CfnSimulationApplication internal constructor(
           =
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -495,9 +468,9 @@ public open class CfnSimulationApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.robomaker.CfnSimulationApplication.RobotSoftwareSuiteProperty,
     ) : RobotSoftwareSuiteProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {

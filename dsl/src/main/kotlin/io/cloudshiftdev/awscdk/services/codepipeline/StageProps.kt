@@ -15,36 +15,32 @@ public interface StageProps {
   public fun transitionToEnabled(): Boolean? = unwrap(this).getTransitionToEnabled()
 
   public interface Builder {
-    public fun actions(actions: List<IAction>) {
-    }
+    public fun actions(actions: List<IAction>)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun transitionDisabledReason(transitionDisabledReason: String) {
-    }
+    public fun transitionDisabledReason(transitionDisabledReason: String)
 
-    public fun transitionToEnabled(transitionToEnabled: Boolean) {
-    }
+    public fun transitionToEnabled(transitionToEnabled: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.StageProps.Builder =
         software.amazon.awscdk.services.codepipeline.StageProps.builder()
 
-    public override fun actions(actions: List<IAction>) {
+    override fun actions(actions: List<IAction>) {
       cdkBuilder.actions(actions.map(IAction::unwrap))
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun transitionDisabledReason(transitionDisabledReason: String) {
+    override fun transitionDisabledReason(transitionDisabledReason: String) {
       cdkBuilder.transitionDisabledReason(transitionDisabledReason)
     }
 
-    public override fun transitionToEnabled(transitionToEnabled: Boolean) {
+    override fun transitionToEnabled(transitionToEnabled: Boolean) {
       cdkBuilder.transitionToEnabled(transitionToEnabled)
     }
 
@@ -54,15 +50,14 @@ public interface StageProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.StageProps,
   ) : StageProps {
-    public override fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?:
+    override fun actions(): List<IAction> = unwrap(this).getActions()?.map(IAction::wrap) ?:
         emptyList()
 
-    public override fun stageName(): String = unwrap(this).getStageName()
+    override fun stageName(): String = unwrap(this).getStageName()
 
-    public override fun transitionDisabledReason(): String? =
-        unwrap(this).getTransitionDisabledReason()
+    override fun transitionDisabledReason(): String? = unwrap(this).getTransitionDisabledReason()
 
-    public override fun transitionToEnabled(): Boolean? = unwrap(this).getTransitionToEnabled()
+    override fun transitionToEnabled(): Boolean? = unwrap(this).getTransitionToEnabled()
   }
 
   public companion object {

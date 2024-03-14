@@ -13,14 +13,11 @@ public open class LogStream internal constructor(
   public override fun logStreamName(): String = unwrap(this).getLogStreamName()
 
   public interface Builder {
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun logStreamName(logStreamName: String) {
-    }
+    public fun logStreamName(logStreamName: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -30,15 +27,15 @@ public open class LogStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.LogStream.Builder =
         software.amazon.awscdk.services.logs.LogStream.Builder.create(scope, id)
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun logStreamName(logStreamName: String) {
+    override fun logStreamName(logStreamName: String) {
       cdkBuilder.logStreamName(logStreamName)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

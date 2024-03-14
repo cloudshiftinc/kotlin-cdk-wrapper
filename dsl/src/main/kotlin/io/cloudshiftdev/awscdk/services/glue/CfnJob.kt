@@ -184,98 +184,70 @@ public open class CfnJob internal constructor(
   }
 
   public interface Builder {
-    public fun allocatedCapacity(allocatedCapacity: Number) {
-    }
+    public fun allocatedCapacity(allocatedCapacity: Number)
 
-    public fun command(command: IResolvable) {
-    }
+    public fun command(command: IResolvable)
 
-    public fun command(command: JobCommandProperty) {
-    }
+    public fun command(command: JobCommandProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3678fc0b0b2ff7ca4b7a27cb9d2c4abb2f9ab703df21a2aa4b93849930e9b6dc")
-    public fun command(command: JobCommandProperty.Builder.() -> Unit) {
-    }
+    public fun command(command: JobCommandProperty.Builder.() -> Unit)
 
-    public fun connections(connections: IResolvable) {
-    }
+    public fun connections(connections: IResolvable)
 
-    public fun connections(connections: ConnectionsListProperty) {
-    }
+    public fun connections(connections: ConnectionsListProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d47c635c872c9a0a3cb04b547de56e3034016eb0a24eaf876dc00d1ef06bd6c")
-    public fun connections(connections: ConnectionsListProperty.Builder.() -> Unit) {
-    }
+    public fun connections(connections: ConnectionsListProperty.Builder.() -> Unit)
 
-    public fun defaultArguments(defaultArguments: Any) {
-    }
+    public fun defaultArguments(defaultArguments: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun executionClass(executionClass: String) {
-    }
+    public fun executionClass(executionClass: String)
 
-    public fun executionProperty(executionProperty: IResolvable) {
-    }
+    public fun executionProperty(executionProperty: IResolvable)
 
-    public fun executionProperty(executionProperty: ExecutionPropertyProperty) {
-    }
+    public fun executionProperty(executionProperty: ExecutionPropertyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e22c4a94debded832b280e207ccfc3ce7e6b7f0459e606245076f3a7f950172f")
-    public fun executionProperty(executionProperty: ExecutionPropertyProperty.Builder.() -> Unit) {
-    }
+    public fun executionProperty(executionProperty: ExecutionPropertyProperty.Builder.() -> Unit)
 
-    public fun glueVersion(glueVersion: String) {
-    }
+    public fun glueVersion(glueVersion: String)
 
-    public fun logUri(logUri: String) {
-    }
+    public fun logUri(logUri: String)
 
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun maxRetries(maxRetries: Number) {
-    }
+    public fun maxRetries(maxRetries: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun nonOverridableArguments(nonOverridableArguments: Any) {
-    }
+    public fun nonOverridableArguments(nonOverridableArguments: Any)
 
-    public fun notificationProperty(notificationProperty: IResolvable) {
-    }
+    public fun notificationProperty(notificationProperty: IResolvable)
 
-    public fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
-    }
+    public fun notificationProperty(notificationProperty: NotificationPropertyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0569ffc070d3bb79ae05f6c91224faed3b0be3d4a2867dccefea5eac85dd1c96")
     public
-        fun notificationProperty(notificationProperty: NotificationPropertyProperty.Builder.() -> Unit) {
-    }
+        fun notificationProperty(notificationProperty: NotificationPropertyProperty.Builder.() -> Unit)
 
-    public fun numberOfWorkers(numberOfWorkers: Number) {
-    }
+    public fun numberOfWorkers(numberOfWorkers: Number)
 
-    public fun role(role: String) {
-    }
+    public fun role(role: String)
 
-    public fun securityConfiguration(securityConfiguration: String) {
-    }
+    public fun securityConfiguration(securityConfiguration: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun timeout(timeout: Number) {
-    }
+    public fun timeout(timeout: Number)
 
-    public fun workerType(workerType: String) {
-    }
+    public fun workerType(workerType: String)
   }
 
   private class BuilderImpl(
@@ -285,121 +257,120 @@ public open class CfnJob internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnJob.Builder =
         software.amazon.awscdk.services.glue.CfnJob.Builder.create(scope, id)
 
-    public override fun allocatedCapacity(allocatedCapacity: Number) {
+    override fun allocatedCapacity(allocatedCapacity: Number) {
       cdkBuilder.allocatedCapacity(allocatedCapacity)
     }
 
-    public override fun command(command: IResolvable) {
+    override fun command(command: IResolvable) {
       cdkBuilder.command(command.let(IResolvable::unwrap))
     }
 
-    public override fun command(command: JobCommandProperty) {
+    override fun command(command: JobCommandProperty) {
       cdkBuilder.command(command.let(JobCommandProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3678fc0b0b2ff7ca4b7a27cb9d2c4abb2f9ab703df21a2aa4b93849930e9b6dc")
-    public override fun command(command: JobCommandProperty.Builder.() -> Unit): Unit =
+    override fun command(command: JobCommandProperty.Builder.() -> Unit): Unit =
         command(JobCommandProperty(command))
 
-    public override fun connections(connections: IResolvable) {
+    override fun connections(connections: IResolvable) {
       cdkBuilder.connections(connections.let(IResolvable::unwrap))
     }
 
-    public override fun connections(connections: ConnectionsListProperty) {
+    override fun connections(connections: ConnectionsListProperty) {
       cdkBuilder.connections(connections.let(ConnectionsListProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d47c635c872c9a0a3cb04b547de56e3034016eb0a24eaf876dc00d1ef06bd6c")
-    public override fun connections(connections: ConnectionsListProperty.Builder.() -> Unit): Unit =
+    override fun connections(connections: ConnectionsListProperty.Builder.() -> Unit): Unit =
         connections(ConnectionsListProperty(connections))
 
-    public override fun defaultArguments(defaultArguments: Any) {
+    override fun defaultArguments(defaultArguments: Any) {
       cdkBuilder.defaultArguments(defaultArguments)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun executionClass(executionClass: String) {
+    override fun executionClass(executionClass: String) {
       cdkBuilder.executionClass(executionClass)
     }
 
-    public override fun executionProperty(executionProperty: IResolvable) {
+    override fun executionProperty(executionProperty: IResolvable) {
       cdkBuilder.executionProperty(executionProperty.let(IResolvable::unwrap))
     }
 
-    public override fun executionProperty(executionProperty: ExecutionPropertyProperty) {
+    override fun executionProperty(executionProperty: ExecutionPropertyProperty) {
       cdkBuilder.executionProperty(executionProperty.let(ExecutionPropertyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e22c4a94debded832b280e207ccfc3ce7e6b7f0459e606245076f3a7f950172f")
-    public override
-        fun executionProperty(executionProperty: ExecutionPropertyProperty.Builder.() -> Unit): Unit
-        = executionProperty(ExecutionPropertyProperty(executionProperty))
+    override fun executionProperty(executionProperty: ExecutionPropertyProperty.Builder.() -> Unit):
+        Unit = executionProperty(ExecutionPropertyProperty(executionProperty))
 
-    public override fun glueVersion(glueVersion: String) {
+    override fun glueVersion(glueVersion: String) {
       cdkBuilder.glueVersion(glueVersion)
     }
 
-    public override fun logUri(logUri: String) {
+    override fun logUri(logUri: String) {
       cdkBuilder.logUri(logUri)
     }
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun maxRetries(maxRetries: Number) {
+    override fun maxRetries(maxRetries: Number) {
       cdkBuilder.maxRetries(maxRetries)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun nonOverridableArguments(nonOverridableArguments: Any) {
+    override fun nonOverridableArguments(nonOverridableArguments: Any) {
       cdkBuilder.nonOverridableArguments(nonOverridableArguments)
     }
 
-    public override fun notificationProperty(notificationProperty: IResolvable) {
+    override fun notificationProperty(notificationProperty: IResolvable) {
       cdkBuilder.notificationProperty(notificationProperty.let(IResolvable::unwrap))
     }
 
-    public override fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
+    override fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
       cdkBuilder.notificationProperty(notificationProperty.let(NotificationPropertyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0569ffc070d3bb79ae05f6c91224faed3b0be3d4a2867dccefea5eac85dd1c96")
-    public override
+    override
         fun notificationProperty(notificationProperty: NotificationPropertyProperty.Builder.() -> Unit):
         Unit = notificationProperty(NotificationPropertyProperty(notificationProperty))
 
-    public override fun numberOfWorkers(numberOfWorkers: Number) {
+    override fun numberOfWorkers(numberOfWorkers: Number) {
       cdkBuilder.numberOfWorkers(numberOfWorkers)
     }
 
-    public override fun role(role: String) {
+    override fun role(role: String) {
       cdkBuilder.role(role)
     }
 
-    public override fun securityConfiguration(securityConfiguration: String) {
+    override fun securityConfiguration(securityConfiguration: String) {
       cdkBuilder.securityConfiguration(securityConfiguration)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun timeout(timeout: Number) {
+    override fun timeout(timeout: Number) {
       cdkBuilder.timeout(timeout)
     }
 
-    public override fun workerType(workerType: String) {
+    override fun workerType(workerType: String) {
       cdkBuilder.workerType(workerType)
     }
 
@@ -431,8 +402,7 @@ public open class CfnJob internal constructor(
     public fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
 
     public interface Builder {
-      public fun notifyDelayAfter(notifyDelayAfter: Number) {
-      }
+      public fun notifyDelayAfter(notifyDelayAfter: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -440,7 +410,7 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty.Builder =
           software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty.builder()
 
-      public override fun notifyDelayAfter(notifyDelayAfter: Number) {
+      override fun notifyDelayAfter(notifyDelayAfter: Number) {
         cdkBuilder.notifyDelayAfter(notifyDelayAfter)
       }
 
@@ -452,7 +422,7 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnJob.NotificationPropertyProperty,
     ) : NotificationPropertyProperty {
-      public override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
+      override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
     }
 
     public companion object {
@@ -485,36 +455,32 @@ public open class CfnJob internal constructor(
     public fun scriptLocation(): String? = unwrap(this).getScriptLocation()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun pythonVersion(pythonVersion: String) {
-      }
+      public fun pythonVersion(pythonVersion: String)
 
-      public fun runtime(runtime: String) {
-      }
+      public fun runtime(runtime: String)
 
-      public fun scriptLocation(scriptLocation: String) {
-      }
+      public fun scriptLocation(scriptLocation: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty.Builder
           = software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun pythonVersion(pythonVersion: String) {
+      override fun pythonVersion(pythonVersion: String) {
         cdkBuilder.pythonVersion(pythonVersion)
       }
 
-      public override fun runtime(runtime: String) {
+      override fun runtime(runtime: String) {
         cdkBuilder.runtime(runtime)
       }
 
-      public override fun scriptLocation(scriptLocation: String) {
+      override fun scriptLocation(scriptLocation: String) {
         cdkBuilder.scriptLocation(scriptLocation)
       }
 
@@ -525,13 +491,13 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnJob.JobCommandProperty,
     ) : JobCommandProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun pythonVersion(): String? = unwrap(this).getPythonVersion()
+      override fun pythonVersion(): String? = unwrap(this).getPythonVersion()
 
-      public override fun runtime(): String? = unwrap(this).getRuntime()
+      override fun runtime(): String? = unwrap(this).getRuntime()
 
-      public override fun scriptLocation(): String? = unwrap(this).getScriptLocation()
+      override fun scriptLocation(): String? = unwrap(this).getScriptLocation()
     }
 
     public companion object {
@@ -557,8 +523,7 @@ public open class CfnJob internal constructor(
     public fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
 
     public interface Builder {
-      public fun connections(connections: List<String>) {
-      }
+      public fun connections(connections: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -566,7 +531,7 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty.Builder =
           software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty.builder()
 
-      public override fun connections(connections: List<String>) {
+      override fun connections(connections: List<String>) {
         cdkBuilder.connections(connections)
       }
 
@@ -577,7 +542,7 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty,
     ) : ConnectionsListProperty {
-      public override fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
+      override fun connections(): List<String> = unwrap(this).getConnections() ?: emptyList()
     }
 
     public companion object {
@@ -604,8 +569,7 @@ public open class CfnJob internal constructor(
     public fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
 
     public interface Builder {
-      public fun maxConcurrentRuns(maxConcurrentRuns: Number) {
-      }
+      public fun maxConcurrentRuns(maxConcurrentRuns: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -613,7 +577,7 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty.Builder =
           software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty.builder()
 
-      public override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
+      override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
         cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
       }
 
@@ -624,7 +588,7 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnJob.ExecutionPropertyProperty,
     ) : ExecutionPropertyProperty {
-      public override fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
+      override fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
     }
 
     public companion object {

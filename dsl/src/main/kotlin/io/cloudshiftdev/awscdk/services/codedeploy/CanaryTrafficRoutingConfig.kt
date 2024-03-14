@@ -9,11 +9,9 @@ public interface CanaryTrafficRoutingConfig {
   public fun canaryPercentage(): Number
 
   public interface Builder {
-    public fun canaryInterval(canaryInterval: Number) {
-    }
+    public fun canaryInterval(canaryInterval: Number)
 
-    public fun canaryPercentage(canaryPercentage: Number) {
-    }
+    public fun canaryPercentage(canaryPercentage: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface CanaryTrafficRoutingConfig {
         software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.Builder =
         software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.builder()
 
-    public override fun canaryInterval(canaryInterval: Number) {
+    override fun canaryInterval(canaryInterval: Number) {
       cdkBuilder.canaryInterval(canaryInterval)
     }
 
-    public override fun canaryPercentage(canaryPercentage: Number) {
+    override fun canaryPercentage(canaryPercentage: Number) {
       cdkBuilder.canaryPercentage(canaryPercentage)
     }
 
@@ -36,9 +34,9 @@ public interface CanaryTrafficRoutingConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig,
   ) : CanaryTrafficRoutingConfig {
-    public override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
+    override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
 
-    public override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
+    override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
   }
 
   public companion object {

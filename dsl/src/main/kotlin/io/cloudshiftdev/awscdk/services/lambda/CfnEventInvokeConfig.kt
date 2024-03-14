@@ -60,28 +60,21 @@ public open class CfnEventInvokeConfig internal constructor(
   }
 
   public interface Builder {
-    public fun destinationConfig(destinationConfig: IResolvable) {
-    }
+    public fun destinationConfig(destinationConfig: IResolvable)
 
-    public fun destinationConfig(destinationConfig: DestinationConfigProperty) {
-    }
+    public fun destinationConfig(destinationConfig: DestinationConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca885fb89db3d06474f73cc9783d10f31ac516380983e476d8f99f36065cb22b")
-    public fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit) {
-    }
+    public fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
-    }
+    public fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number)
 
-    public fun maximumRetryAttempts(maximumRetryAttempts: Number) {
-    }
+    public fun maximumRetryAttempts(maximumRetryAttempts: Number)
 
-    public fun qualifier(qualifier: String) {
-    }
+    public fun qualifier(qualifier: String)
   }
 
   private class BuilderImpl(
@@ -91,33 +84,32 @@ public open class CfnEventInvokeConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.Builder =
         software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.Builder.create(scope, id)
 
-    public override fun destinationConfig(destinationConfig: IResolvable) {
+    override fun destinationConfig(destinationConfig: IResolvable) {
       cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
     }
 
-    public override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
+    override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
       cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca885fb89db3d06474f73cc9783d10f31ac516380983e476d8f99f36065cb22b")
-    public override
-        fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit): Unit
-        = destinationConfig(DestinationConfigProperty(destinationConfig))
+    override fun destinationConfig(destinationConfig: DestinationConfigProperty.Builder.() -> Unit):
+        Unit = destinationConfig(DestinationConfigProperty(destinationConfig))
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
+    override fun maximumEventAgeInSeconds(maximumEventAgeInSeconds: Number) {
       cdkBuilder.maximumEventAgeInSeconds(maximumEventAgeInSeconds)
     }
 
-    public override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
+    override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
       cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
     }
 
-    public override fun qualifier(qualifier: String) {
+    override fun qualifier(qualifier: String) {
       cdkBuilder.qualifier(qualifier)
     }
 
@@ -150,8 +142,7 @@ public open class CfnEventInvokeConfig internal constructor(
     public fun destination(): String
 
     public interface Builder {
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
     }
 
     private class BuilderImpl : Builder {
@@ -159,7 +150,7 @@ public open class CfnEventInvokeConfig internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty.builder()
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
@@ -172,7 +163,7 @@ public open class CfnEventInvokeConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnFailureProperty,
     ) : OnFailureProperty {
-      public override fun destination(): String = unwrap(this).getDestination()
+      override fun destination(): String = unwrap(this).getDestination()
     }
 
     public companion object {
@@ -201,27 +192,21 @@ public open class CfnEventInvokeConfig internal constructor(
     public fun onSuccess(): Any? = unwrap(this).getOnSuccess()
 
     public interface Builder {
-      public fun onFailure(onFailure: IResolvable) {
-      }
+      public fun onFailure(onFailure: IResolvable)
 
-      public fun onFailure(onFailure: OnFailureProperty) {
-      }
+      public fun onFailure(onFailure: OnFailureProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3dbdff09ea3f6ad25eed2fd3d1089285979e928fe6db4b712232e789e38d983e")
-      public fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit) {
-      }
+      public fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit)
 
-      public fun onSuccess(onSuccess: IResolvable) {
-      }
+      public fun onSuccess(onSuccess: IResolvable)
 
-      public fun onSuccess(onSuccess: OnSuccessProperty) {
-      }
+      public fun onSuccess(onSuccess: OnSuccessProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28faf1b795b060a72e364409fac9a5a0f08d96ec620d72677131ccf7b582231f")
-      public fun onSuccess(onSuccess: OnSuccessProperty.Builder.() -> Unit) {
-      }
+      public fun onSuccess(onSuccess: OnSuccessProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -230,30 +215,30 @@ public open class CfnEventInvokeConfig internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty.builder()
 
-      public override fun onFailure(onFailure: IResolvable) {
+      override fun onFailure(onFailure: IResolvable) {
         cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
       }
 
-      public override fun onFailure(onFailure: OnFailureProperty) {
+      override fun onFailure(onFailure: OnFailureProperty) {
         cdkBuilder.onFailure(onFailure.let(OnFailureProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3dbdff09ea3f6ad25eed2fd3d1089285979e928fe6db4b712232e789e38d983e")
-      public override fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit): Unit =
+      override fun onFailure(onFailure: OnFailureProperty.Builder.() -> Unit): Unit =
           onFailure(OnFailureProperty(onFailure))
 
-      public override fun onSuccess(onSuccess: IResolvable) {
+      override fun onSuccess(onSuccess: IResolvable) {
         cdkBuilder.onSuccess(onSuccess.let(IResolvable::unwrap))
       }
 
-      public override fun onSuccess(onSuccess: OnSuccessProperty) {
+      override fun onSuccess(onSuccess: OnSuccessProperty) {
         cdkBuilder.onSuccess(onSuccess.let(OnSuccessProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28faf1b795b060a72e364409fac9a5a0f08d96ec620d72677131ccf7b582231f")
-      public override fun onSuccess(onSuccess: OnSuccessProperty.Builder.() -> Unit): Unit =
+      override fun onSuccess(onSuccess: OnSuccessProperty.Builder.() -> Unit): Unit =
           onSuccess(OnSuccessProperty(onSuccess))
 
       public fun build():
@@ -265,9 +250,9 @@ public open class CfnEventInvokeConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.DestinationConfigProperty,
     ) : DestinationConfigProperty {
-      public override fun onFailure(): Any? = unwrap(this).getOnFailure()
+      override fun onFailure(): Any? = unwrap(this).getOnFailure()
 
-      public override fun onSuccess(): Any? = unwrap(this).getOnSuccess()
+      override fun onSuccess(): Any? = unwrap(this).getOnSuccess()
     }
 
     public companion object {
@@ -294,8 +279,7 @@ public open class CfnEventInvokeConfig internal constructor(
     public fun destination(): String
 
     public interface Builder {
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
     }
 
     private class BuilderImpl : Builder {
@@ -303,7 +287,7 @@ public open class CfnEventInvokeConfig internal constructor(
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty.builder()
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
@@ -316,7 +300,7 @@ public open class CfnEventInvokeConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnEventInvokeConfig.OnSuccessProperty,
     ) : OnSuccessProperty {
-      public override fun destination(): String = unwrap(this).getDestination()
+      override fun destination(): String = unwrap(this).getDestination()
     }
 
     public companion object {

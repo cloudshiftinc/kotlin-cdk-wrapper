@@ -174,20 +174,15 @@ public open class Portfolio internal constructor(
       PortfolioShareOptions(options))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun messageLanguage(messageLanguage: MessageLanguage) {
-    }
+    public fun messageLanguage(messageLanguage: MessageLanguage)
 
-    public fun providerName(providerName: String) {
-    }
+    public fun providerName(providerName: String)
 
-    public fun tagOptions(tagOptions: TagOptions) {
-    }
+    public fun tagOptions(tagOptions: TagOptions)
   }
 
   private class BuilderImpl(
@@ -197,23 +192,23 @@ public open class Portfolio internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicecatalog.Portfolio.Builder =
         software.amazon.awscdk.services.servicecatalog.Portfolio.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun messageLanguage(messageLanguage: MessageLanguage) {
+    override fun messageLanguage(messageLanguage: MessageLanguage) {
       cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
     }
 
-    public override fun providerName(providerName: String) {
+    override fun providerName(providerName: String) {
       cdkBuilder.providerName(providerName)
     }
 
-    public override fun tagOptions(tagOptions: TagOptions) {
+    override fun tagOptions(tagOptions: TagOptions) {
       cdkBuilder.tagOptions(tagOptions.let(TagOptions::unwrap))
     }
 

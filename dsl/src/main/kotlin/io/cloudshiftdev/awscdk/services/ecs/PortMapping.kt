@@ -18,50 +18,44 @@ public interface PortMapping {
   public fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
 
   public interface Builder {
-    public fun appProtocol(appProtocol: AppProtocol) {
-    }
+    public fun appProtocol(appProtocol: AppProtocol)
 
-    public fun containerPort(containerPort: Number) {
-    }
+    public fun containerPort(containerPort: Number)
 
-    public fun containerPortRange(containerPortRange: String) {
-    }
+    public fun containerPortRange(containerPortRange: String)
 
-    public fun hostPort(hostPort: Number) {
-    }
+    public fun hostPort(hostPort: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.PortMapping.Builder =
         software.amazon.awscdk.services.ecs.PortMapping.builder()
 
-    public override fun appProtocol(appProtocol: AppProtocol) {
+    override fun appProtocol(appProtocol: AppProtocol) {
       cdkBuilder.appProtocol(appProtocol.let(AppProtocol::unwrap))
     }
 
-    public override fun containerPort(containerPort: Number) {
+    override fun containerPort(containerPort: Number) {
       cdkBuilder.containerPort(containerPort)
     }
 
-    public override fun containerPortRange(containerPortRange: String) {
+    override fun containerPortRange(containerPortRange: String) {
       cdkBuilder.containerPortRange(containerPortRange)
     }
 
-    public override fun hostPort(hostPort: Number) {
+    override fun hostPort(hostPort: Number) {
       cdkBuilder.hostPort(hostPort)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
@@ -71,18 +65,17 @@ public interface PortMapping {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.PortMapping,
   ) : PortMapping {
-    public override fun appProtocol(): AppProtocol? =
-        unwrap(this).getAppProtocol()?.let(AppProtocol::wrap)
+    override fun appProtocol(): AppProtocol? = unwrap(this).getAppProtocol()?.let(AppProtocol::wrap)
 
-    public override fun containerPort(): Number = unwrap(this).getContainerPort()
+    override fun containerPort(): Number = unwrap(this).getContainerPort()
 
-    public override fun containerPortRange(): String? = unwrap(this).getContainerPortRange()
+    override fun containerPortRange(): String? = unwrap(this).getContainerPortRange()
 
-    public override fun hostPort(): Number? = unwrap(this).getHostPort()
+    override fun hostPort(): Number? = unwrap(this).getHostPort()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
+    override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
   }
 
   public companion object {

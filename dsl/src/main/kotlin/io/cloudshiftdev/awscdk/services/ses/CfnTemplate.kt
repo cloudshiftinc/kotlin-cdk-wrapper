@@ -37,16 +37,13 @@ public open class CfnTemplate internal constructor(
       template(TemplateProperty(`value`))
 
   public interface Builder {
-    public fun template(template: IResolvable) {
-    }
+    public fun template(template: IResolvable)
 
-    public fun template(template: TemplateProperty) {
-    }
+    public fun template(template: TemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cddd8ef62379e20dc50fd9f980b0aed4918a48b7c1a2aa51a0ff288116c8f0ff")
-    public fun template(template: TemplateProperty.Builder.() -> Unit) {
-    }
+    public fun template(template: TemplateProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -56,17 +53,17 @@ public open class CfnTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnTemplate.Builder =
         software.amazon.awscdk.services.ses.CfnTemplate.Builder.create(scope, id)
 
-    public override fun template(template: IResolvable) {
+    override fun template(template: IResolvable) {
       cdkBuilder.template(template.let(IResolvable::unwrap))
     }
 
-    public override fun template(template: TemplateProperty) {
+    override fun template(template: TemplateProperty) {
       cdkBuilder.template(template.let(TemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cddd8ef62379e20dc50fd9f980b0aed4918a48b7c1a2aa51a0ff288116c8f0ff")
-    public override fun template(template: TemplateProperty.Builder.() -> Unit): Unit =
+    override fun template(template: TemplateProperty.Builder.() -> Unit): Unit =
         template(TemplateProperty(template))
 
     public fun build(): software.amazon.awscdk.services.ses.CfnTemplate = cdkBuilder.build()
@@ -103,17 +100,13 @@ public open class CfnTemplate internal constructor(
     public fun textPart(): String? = unwrap(this).getTextPart()
 
     public interface Builder {
-      public fun htmlPart(htmlPart: String) {
-      }
+      public fun htmlPart(htmlPart: String)
 
-      public fun subjectPart(subjectPart: String) {
-      }
+      public fun subjectPart(subjectPart: String)
 
-      public fun templateName(templateName: String) {
-      }
+      public fun templateName(templateName: String)
 
-      public fun textPart(textPart: String) {
-      }
+      public fun textPart(textPart: String)
     }
 
     private class BuilderImpl : Builder {
@@ -121,19 +114,19 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty.Builder =
           software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty.builder()
 
-      public override fun htmlPart(htmlPart: String) {
+      override fun htmlPart(htmlPart: String) {
         cdkBuilder.htmlPart(htmlPart)
       }
 
-      public override fun subjectPart(subjectPart: String) {
+      override fun subjectPart(subjectPart: String) {
         cdkBuilder.subjectPart(subjectPart)
       }
 
-      public override fun templateName(templateName: String) {
+      override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
       }
 
-      public override fun textPart(textPart: String) {
+      override fun textPart(textPart: String) {
         cdkBuilder.textPart(textPart)
       }
 
@@ -144,13 +137,13 @@ public open class CfnTemplate internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty,
     ) : TemplateProperty {
-      public override fun htmlPart(): String? = unwrap(this).getHtmlPart()
+      override fun htmlPart(): String? = unwrap(this).getHtmlPart()
 
-      public override fun subjectPart(): String = unwrap(this).getSubjectPart()
+      override fun subjectPart(): String = unwrap(this).getSubjectPart()
 
-      public override fun templateName(): String? = unwrap(this).getTemplateName()
+      override fun templateName(): String? = unwrap(this).getTemplateName()
 
-      public override fun textPart(): String? = unwrap(this).getTextPart()
+      override fun textPart(): String? = unwrap(this).getTextPart()
     }
 
     public companion object {

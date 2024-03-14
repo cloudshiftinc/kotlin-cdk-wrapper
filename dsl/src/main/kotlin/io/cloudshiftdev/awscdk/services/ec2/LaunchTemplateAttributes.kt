@@ -11,29 +11,26 @@ public interface LaunchTemplateAttributes {
   public fun versionNumber(): String? = unwrap(this).getVersionNumber()
 
   public interface Builder {
-    public fun launchTemplateId(launchTemplateId: String) {
-    }
+    public fun launchTemplateId(launchTemplateId: String)
 
-    public fun launchTemplateName(launchTemplateName: String) {
-    }
+    public fun launchTemplateName(launchTemplateName: String)
 
-    public fun versionNumber(versionNumber: String) {
-    }
+    public fun versionNumber(versionNumber: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LaunchTemplateAttributes.Builder =
         software.amazon.awscdk.services.ec2.LaunchTemplateAttributes.builder()
 
-    public override fun launchTemplateId(launchTemplateId: String) {
+    override fun launchTemplateId(launchTemplateId: String) {
       cdkBuilder.launchTemplateId(launchTemplateId)
     }
 
-    public override fun launchTemplateName(launchTemplateName: String) {
+    override fun launchTemplateName(launchTemplateName: String) {
       cdkBuilder.launchTemplateName(launchTemplateName)
     }
 
-    public override fun versionNumber(versionNumber: String) {
+    override fun versionNumber(versionNumber: String) {
       cdkBuilder.versionNumber(versionNumber)
     }
 
@@ -44,11 +41,11 @@ public interface LaunchTemplateAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateAttributes,
   ) : LaunchTemplateAttributes {
-    public override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+    override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
-    public override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+    override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
-    public override fun versionNumber(): String? = unwrap(this).getVersionNumber()
+    override fun versionNumber(): String? = unwrap(this).getVersionNumber()
   }
 
   public companion object {

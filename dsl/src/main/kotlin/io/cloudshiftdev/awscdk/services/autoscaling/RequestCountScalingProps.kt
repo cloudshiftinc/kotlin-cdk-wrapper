@@ -9,17 +9,13 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
   public fun targetRequestsPerMinute(): Number? = unwrap(this).getTargetRequestsPerMinute()
 
   public interface Builder {
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-    }
+    public fun disableScaleIn(disableScaleIn: Boolean)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration)
 
-    public fun targetRequestsPerMinute(targetRequestsPerMinute: Number) {
-    }
+    public fun targetRequestsPerMinute(targetRequestsPerMinute: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -27,19 +23,19 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
         software.amazon.awscdk.services.autoscaling.RequestCountScalingProps.Builder =
         software.amazon.awscdk.services.autoscaling.RequestCountScalingProps.builder()
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun disableScaleIn(disableScaleIn: Boolean) {
+    override fun disableScaleIn(disableScaleIn: Boolean) {
       cdkBuilder.disableScaleIn(disableScaleIn)
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun targetRequestsPerMinute(targetRequestsPerMinute: Number) {
+    override fun targetRequestsPerMinute(targetRequestsPerMinute: Number) {
       cdkBuilder.targetRequestsPerMinute(targetRequestsPerMinute)
     }
 
@@ -50,15 +46,14 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.RequestCountScalingProps,
   ) : RequestCountScalingProps {
-    public override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
+    override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
 
-    public override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
+    override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
 
-    public override fun estimatedInstanceWarmup(): Duration? =
+    override fun estimatedInstanceWarmup(): Duration? =
         unwrap(this).getEstimatedInstanceWarmup()?.let(Duration::wrap)
 
-    public override fun targetRequestsPerMinute(): Number? =
-        unwrap(this).getTargetRequestsPerMinute()
+    override fun targetRequestsPerMinute(): Number? = unwrap(this).getTargetRequestsPerMinute()
   }
 
   public companion object {

@@ -24,8 +24,7 @@ public open class OriginAccessIdentity internal constructor(
       unwrap(this).getOriginAccessIdentityName()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class OriginAccessIdentity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.Builder
         = software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 

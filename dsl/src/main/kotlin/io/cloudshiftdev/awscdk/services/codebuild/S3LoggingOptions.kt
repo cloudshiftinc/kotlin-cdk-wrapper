@@ -15,36 +15,32 @@ public interface S3LoggingOptions {
   public fun prefix(): String? = unwrap(this).getPrefix()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun encrypted(encrypted: Boolean) {
-    }
+    public fun encrypted(encrypted: Boolean)
 
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.S3LoggingOptions.Builder =
         software.amazon.awscdk.services.codebuild.S3LoggingOptions.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun encrypted(encrypted: Boolean) {
+    override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
     }
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
@@ -55,13 +51,13 @@ public interface S3LoggingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.S3LoggingOptions,
   ) : S3LoggingOptions {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun encrypted(): Boolean? = unwrap(this).getEncrypted()
+    override fun encrypted(): Boolean? = unwrap(this).getEncrypted()
 
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
   }
 
   public companion object {

@@ -147,72 +147,51 @@ public open class CfnPatchBaseline internal constructor(
   }
 
   public interface Builder {
-    public fun approvalRules(approvalRules: IResolvable) {
-    }
+    public fun approvalRules(approvalRules: IResolvable)
 
-    public fun approvalRules(approvalRules: RuleGroupProperty) {
-    }
+    public fun approvalRules(approvalRules: RuleGroupProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46d415bca7b2dc9279fc09df5ef34a8a536b7eaa5785903c7480e88fc90a2b3b")
-    public fun approvalRules(approvalRules: RuleGroupProperty.Builder.() -> Unit) {
-    }
+    public fun approvalRules(approvalRules: RuleGroupProperty.Builder.() -> Unit)
 
-    public fun approvedPatches(approvedPatches: List<String>) {
-    }
+    public fun approvedPatches(approvedPatches: List<String>)
 
-    public fun approvedPatchesComplianceLevel(approvedPatchesComplianceLevel: String) {
-    }
+    public fun approvedPatchesComplianceLevel(approvedPatchesComplianceLevel: String)
 
-    public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: Boolean) {
-    }
+    public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: Boolean)
 
-    public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
-    }
+    public fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable)
 
-    public fun defaultBaseline(defaultBaseline: Boolean) {
-    }
+    public fun defaultBaseline(defaultBaseline: Boolean)
 
-    public fun defaultBaseline(defaultBaseline: IResolvable) {
-    }
+    public fun defaultBaseline(defaultBaseline: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun globalFilters(globalFilters: IResolvable) {
-    }
+    public fun globalFilters(globalFilters: IResolvable)
 
-    public fun globalFilters(globalFilters: PatchFilterGroupProperty) {
-    }
+    public fun globalFilters(globalFilters: PatchFilterGroupProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51b3a6dc20ee5e4012e3f5957be3a49d8591696eb8a2e2f57c566319b32bea10")
-    public fun globalFilters(globalFilters: PatchFilterGroupProperty.Builder.() -> Unit) {
-    }
+    public fun globalFilters(globalFilters: PatchFilterGroupProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun operatingSystem(operatingSystem: String) {
-    }
+    public fun operatingSystem(operatingSystem: String)
 
-    public fun patchGroups(patchGroups: List<String>) {
-    }
+    public fun patchGroups(patchGroups: List<String>)
 
-    public fun rejectedPatches(rejectedPatches: List<String>) {
-    }
+    public fun rejectedPatches(rejectedPatches: List<String>)
 
-    public fun rejectedPatchesAction(rejectedPatchesAction: String) {
-    }
+    public fun rejectedPatchesAction(rejectedPatchesAction: String)
 
-    public fun sources(sources: IResolvable) {
-    }
+    public fun sources(sources: IResolvable)
 
-    public fun sources(sources: List<Any>) {
-    }
+    public fun sources(sources: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -222,91 +201,89 @@ public open class CfnPatchBaseline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnPatchBaseline.Builder =
         software.amazon.awscdk.services.ssm.CfnPatchBaseline.Builder.create(scope, id)
 
-    public override fun approvalRules(approvalRules: IResolvable) {
+    override fun approvalRules(approvalRules: IResolvable) {
       cdkBuilder.approvalRules(approvalRules.let(IResolvable::unwrap))
     }
 
-    public override fun approvalRules(approvalRules: RuleGroupProperty) {
+    override fun approvalRules(approvalRules: RuleGroupProperty) {
       cdkBuilder.approvalRules(approvalRules.let(RuleGroupProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46d415bca7b2dc9279fc09df5ef34a8a536b7eaa5785903c7480e88fc90a2b3b")
-    public override fun approvalRules(approvalRules: RuleGroupProperty.Builder.() -> Unit): Unit =
+    override fun approvalRules(approvalRules: RuleGroupProperty.Builder.() -> Unit): Unit =
         approvalRules(RuleGroupProperty(approvalRules))
 
-    public override fun approvedPatches(approvedPatches: List<String>) {
+    override fun approvedPatches(approvedPatches: List<String>) {
       cdkBuilder.approvedPatches(approvedPatches)
     }
 
-    public override fun approvedPatchesComplianceLevel(approvedPatchesComplianceLevel: String) {
+    override fun approvedPatchesComplianceLevel(approvedPatchesComplianceLevel: String) {
       cdkBuilder.approvedPatchesComplianceLevel(approvedPatchesComplianceLevel)
     }
 
-    public override
-        fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: Boolean) {
+    override fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: Boolean) {
       cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity)
     }
 
-    public override
-        fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
+    override fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
       cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity.let(IResolvable::unwrap))
     }
 
-    public override fun defaultBaseline(defaultBaseline: Boolean) {
+    override fun defaultBaseline(defaultBaseline: Boolean) {
       cdkBuilder.defaultBaseline(defaultBaseline)
     }
 
-    public override fun defaultBaseline(defaultBaseline: IResolvable) {
+    override fun defaultBaseline(defaultBaseline: IResolvable) {
       cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun globalFilters(globalFilters: IResolvable) {
+    override fun globalFilters(globalFilters: IResolvable) {
       cdkBuilder.globalFilters(globalFilters.let(IResolvable::unwrap))
     }
 
-    public override fun globalFilters(globalFilters: PatchFilterGroupProperty) {
+    override fun globalFilters(globalFilters: PatchFilterGroupProperty) {
       cdkBuilder.globalFilters(globalFilters.let(PatchFilterGroupProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51b3a6dc20ee5e4012e3f5957be3a49d8591696eb8a2e2f57c566319b32bea10")
-    public override fun globalFilters(globalFilters: PatchFilterGroupProperty.Builder.() -> Unit):
-        Unit = globalFilters(PatchFilterGroupProperty(globalFilters))
+    override fun globalFilters(globalFilters: PatchFilterGroupProperty.Builder.() -> Unit): Unit =
+        globalFilters(PatchFilterGroupProperty(globalFilters))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun operatingSystem(operatingSystem: String) {
+    override fun operatingSystem(operatingSystem: String) {
       cdkBuilder.operatingSystem(operatingSystem)
     }
 
-    public override fun patchGroups(patchGroups: List<String>) {
+    override fun patchGroups(patchGroups: List<String>) {
       cdkBuilder.patchGroups(patchGroups)
     }
 
-    public override fun rejectedPatches(rejectedPatches: List<String>) {
+    override fun rejectedPatches(rejectedPatches: List<String>) {
       cdkBuilder.rejectedPatches(rejectedPatches)
     }
 
-    public override fun rejectedPatchesAction(rejectedPatchesAction: String) {
+    override fun rejectedPatchesAction(rejectedPatchesAction: String) {
       cdkBuilder.rejectedPatchesAction(rejectedPatchesAction)
     }
 
-    public override fun sources(sources: IResolvable) {
+    override fun sources(sources: IResolvable) {
       cdkBuilder.sources(sources.let(IResolvable::unwrap))
     }
 
-    public override fun sources(sources: List<Any>) {
+    override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -340,11 +317,9 @@ public open class CfnPatchBaseline internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -352,11 +327,11 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -368,9 +343,9 @@ public open class CfnPatchBaseline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty,
     ) : PatchFilterProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -397,11 +372,9 @@ public open class CfnPatchBaseline internal constructor(
     public fun patchFilters(): Any? = unwrap(this).getPatchFilters()
 
     public interface Builder {
-      public fun patchFilters(patchFilters: IResolvable) {
-      }
+      public fun patchFilters(patchFilters: IResolvable)
 
-      public fun patchFilters(patchFilters: List<Any>) {
-      }
+      public fun patchFilters(patchFilters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -409,11 +382,11 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty.builder()
 
-      public override fun patchFilters(patchFilters: IResolvable) {
+      override fun patchFilters(patchFilters: IResolvable) {
         cdkBuilder.patchFilters(patchFilters.let(IResolvable::unwrap))
       }
 
-      public override fun patchFilters(patchFilters: List<Any>) {
+      override fun patchFilters(patchFilters: List<Any>) {
         cdkBuilder.patchFilters(patchFilters)
       }
 
@@ -426,7 +399,7 @@ public open class CfnPatchBaseline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty,
     ) : PatchFilterGroupProperty {
-      public override fun patchFilters(): Any? = unwrap(this).getPatchFilters()
+      override fun patchFilters(): Any? = unwrap(this).getPatchFilters()
     }
 
     public companion object {
@@ -457,14 +430,11 @@ public open class CfnPatchBaseline internal constructor(
     public fun products(): List<String> = unwrap(this).getProducts() ?: emptyList()
 
     public interface Builder {
-      public fun configuration(configuration: String) {
-      }
+      public fun configuration(configuration: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun products(products: List<String>) {
-      }
+      public fun products(products: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -472,15 +442,15 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty.builder()
 
-      public override fun configuration(configuration: String) {
+      override fun configuration(configuration: String) {
         cdkBuilder.configuration(configuration)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun products(products: List<String>) {
+      override fun products(products: List<String>) {
         cdkBuilder.products(products)
       }
 
@@ -492,11 +462,11 @@ public open class CfnPatchBaseline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty,
     ) : PatchSourceProperty {
-      public override fun configuration(): String? = unwrap(this).getConfiguration()
+      override fun configuration(): String? = unwrap(this).getConfiguration()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun products(): List<String> = unwrap(this).getProducts() ?: emptyList()
+      override fun products(): List<String> = unwrap(this).getProducts() ?: emptyList()
     }
 
     public companion object {
@@ -531,31 +501,23 @@ public open class CfnPatchBaseline internal constructor(
     public fun patchFilterGroup(): Any? = unwrap(this).getPatchFilterGroup()
 
     public interface Builder {
-      public fun approveAfterDays(approveAfterDays: Number) {
-      }
+      public fun approveAfterDays(approveAfterDays: Number)
 
-      public fun approveUntilDate(approveUntilDate: String) {
-      }
+      public fun approveUntilDate(approveUntilDate: String)
 
-      public fun complianceLevel(complianceLevel: String) {
-      }
+      public fun complianceLevel(complianceLevel: String)
 
-      public fun enableNonSecurity(enableNonSecurity: Boolean) {
-      }
+      public fun enableNonSecurity(enableNonSecurity: Boolean)
 
-      public fun enableNonSecurity(enableNonSecurity: IResolvable) {
-      }
+      public fun enableNonSecurity(enableNonSecurity: IResolvable)
 
-      public fun patchFilterGroup(patchFilterGroup: IResolvable) {
-      }
+      public fun patchFilterGroup(patchFilterGroup: IResolvable)
 
-      public fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty) {
-      }
+      public fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("188a3d6eaef2727403d5cd8b35fdb8fc1f8b3f82392cf3919cbf36289fa431d8")
-      public fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty.Builder.() -> Unit) {
-      }
+      public fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -563,39 +525,38 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty.builder()
 
-      public override fun approveAfterDays(approveAfterDays: Number) {
+      override fun approveAfterDays(approveAfterDays: Number) {
         cdkBuilder.approveAfterDays(approveAfterDays)
       }
 
-      public override fun approveUntilDate(approveUntilDate: String) {
+      override fun approveUntilDate(approveUntilDate: String) {
         cdkBuilder.approveUntilDate(approveUntilDate)
       }
 
-      public override fun complianceLevel(complianceLevel: String) {
+      override fun complianceLevel(complianceLevel: String) {
         cdkBuilder.complianceLevel(complianceLevel)
       }
 
-      public override fun enableNonSecurity(enableNonSecurity: Boolean) {
+      override fun enableNonSecurity(enableNonSecurity: Boolean) {
         cdkBuilder.enableNonSecurity(enableNonSecurity)
       }
 
-      public override fun enableNonSecurity(enableNonSecurity: IResolvable) {
+      override fun enableNonSecurity(enableNonSecurity: IResolvable) {
         cdkBuilder.enableNonSecurity(enableNonSecurity.let(IResolvable::unwrap))
       }
 
-      public override fun patchFilterGroup(patchFilterGroup: IResolvable) {
+      override fun patchFilterGroup(patchFilterGroup: IResolvable) {
         cdkBuilder.patchFilterGroup(patchFilterGroup.let(IResolvable::unwrap))
       }
 
-      public override fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty) {
+      override fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty) {
         cdkBuilder.patchFilterGroup(patchFilterGroup.let(PatchFilterGroupProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("188a3d6eaef2727403d5cd8b35fdb8fc1f8b3f82392cf3919cbf36289fa431d8")
-      public override
-          fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty.Builder.() -> Unit): Unit
-          = patchFilterGroup(PatchFilterGroupProperty(patchFilterGroup))
+      override fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty.Builder.() -> Unit):
+          Unit = patchFilterGroup(PatchFilterGroupProperty(patchFilterGroup))
 
       public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty =
           cdkBuilder.build()
@@ -604,15 +565,15 @@ public open class CfnPatchBaseline internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty,
     ) : RuleProperty {
-      public override fun approveAfterDays(): Number? = unwrap(this).getApproveAfterDays()
+      override fun approveAfterDays(): Number? = unwrap(this).getApproveAfterDays()
 
-      public override fun approveUntilDate(): String? = unwrap(this).getApproveUntilDate()
+      override fun approveUntilDate(): String? = unwrap(this).getApproveUntilDate()
 
-      public override fun complianceLevel(): String? = unwrap(this).getComplianceLevel()
+      override fun complianceLevel(): String? = unwrap(this).getComplianceLevel()
 
-      public override fun enableNonSecurity(): Any? = unwrap(this).getEnableNonSecurity()
+      override fun enableNonSecurity(): Any? = unwrap(this).getEnableNonSecurity()
 
-      public override fun patchFilterGroup(): Any? = unwrap(this).getPatchFilterGroup()
+      override fun patchFilterGroup(): Any? = unwrap(this).getPatchFilterGroup()
     }
 
     public companion object {
@@ -639,11 +600,9 @@ public open class CfnPatchBaseline internal constructor(
     public fun patchRules(): Any? = unwrap(this).getPatchRules()
 
     public interface Builder {
-      public fun patchRules(patchRules: IResolvable) {
-      }
+      public fun patchRules(patchRules: IResolvable)
 
-      public fun patchRules(patchRules: List<Any>) {
-      }
+      public fun patchRules(patchRules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -651,11 +610,11 @@ public open class CfnPatchBaseline internal constructor(
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty.builder()
 
-      public override fun patchRules(patchRules: IResolvable) {
+      override fun patchRules(patchRules: IResolvable) {
         cdkBuilder.patchRules(patchRules.let(IResolvable::unwrap))
       }
 
-      public override fun patchRules(patchRules: List<Any>) {
+      override fun patchRules(patchRules: List<Any>) {
         cdkBuilder.patchRules(patchRules)
       }
 
@@ -667,7 +626,7 @@ public open class CfnPatchBaseline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty,
     ) : RuleGroupProperty {
-      public override fun patchRules(): Any? = unwrap(this).getPatchRules()
+      override fun patchRules(): Any? = unwrap(this).getPatchRules()
     }
 
     public companion object {

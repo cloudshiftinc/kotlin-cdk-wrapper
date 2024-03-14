@@ -22,75 +22,53 @@ public open class CallApiGatewayHttpApiEndpoint internal constructor(
       software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpoint,
 ) : TaskStateBase(cdkObject) {
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun apiPath(apiPath: String) {
-    }
+    public fun apiPath(apiPath: String)
 
-    public fun apiStack(apiStack: Stack) {
-    }
+    public fun apiStack(apiStack: Stack)
 
-    public fun authType(authType: AuthType) {
-    }
+    public fun authType(authType: AuthType)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19622ff46455df35bf42a23f0d828c2b86348f619fe439936cb4e08e3eea4844")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
-    public fun headers(headers: TaskInput) {
-    }
+    public fun headers(headers: TaskInput)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun method(method: HttpMethod) {
-    }
+    public fun method(method: HttpMethod)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun queryParameters(queryParameters: TaskInput) {
-    }
+    public fun queryParameters(queryParameters: TaskInput)
 
-    public fun requestBody(requestBody: TaskInput) {
-    }
+    public fun requestBody(requestBody: TaskInput)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -102,94 +80,94 @@ public open class CallApiGatewayHttpApiEndpoint internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpoint.Builder.create(scope,
         id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun apiPath(apiPath: String) {
+    override fun apiPath(apiPath: String) {
       cdkBuilder.apiPath(apiPath)
     }
 
-    public override fun apiStack(apiStack: Stack) {
+    override fun apiStack(apiStack: Stack) {
       cdkBuilder.apiStack(apiStack.let(Stack::unwrap))
     }
 
-    public override fun authType(authType: AuthType) {
+    override fun authType(authType: AuthType) {
       cdkBuilder.authType(authType.let(AuthType::unwrap))
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19622ff46455df35bf42a23f0d828c2b86348f619fe439936cb4e08e3eea4844")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
-    public override fun headers(headers: TaskInput) {
+    override fun headers(headers: TaskInput) {
       cdkBuilder.headers(headers.let(TaskInput::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun method(method: HttpMethod) {
+    override fun method(method: HttpMethod) {
       cdkBuilder.method(method.let(HttpMethod::unwrap))
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun queryParameters(queryParameters: TaskInput) {
+    override fun queryParameters(queryParameters: TaskInput) {
       cdkBuilder.queryParameters(queryParameters.let(TaskInput::unwrap))
     }
 
-    public override fun requestBody(requestBody: TaskInput) {
+    override fun requestBody(requestBody: TaskInput) {
       cdkBuilder.requestBody(requestBody.let(TaskInput::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

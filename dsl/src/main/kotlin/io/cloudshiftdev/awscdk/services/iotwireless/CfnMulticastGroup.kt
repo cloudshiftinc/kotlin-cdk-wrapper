@@ -86,31 +86,23 @@ public open class CfnMulticastGroup internal constructor(
   }
 
   public interface Builder {
-    public fun associateWirelessDevice(associateWirelessDevice: String) {
-    }
+    public fun associateWirelessDevice(associateWirelessDevice: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
-    }
+    public fun disassociateWirelessDevice(disassociateWirelessDevice: String)
 
-    public fun loRaWan(loRaWan: IResolvable) {
-    }
+    public fun loRaWan(loRaWan: IResolvable)
 
-    public fun loRaWan(loRaWan: LoRaWANProperty) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28e81466f9f53e95dc3ea306e87391160bd8fd845ac2861cffba3f0c6e021678")
-    public fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -120,36 +112,36 @@ public open class CfnMulticastGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnMulticastGroup.Builder =
         software.amazon.awscdk.services.iotwireless.CfnMulticastGroup.Builder.create(scope, id)
 
-    public override fun associateWirelessDevice(associateWirelessDevice: String) {
+    override fun associateWirelessDevice(associateWirelessDevice: String) {
       cdkBuilder.associateWirelessDevice(associateWirelessDevice)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
+    override fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
       cdkBuilder.disassociateWirelessDevice(disassociateWirelessDevice)
     }
 
-    public override fun loRaWan(loRaWan: IResolvable) {
+    override fun loRaWan(loRaWan: IResolvable) {
       cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWan(loRaWan: LoRaWANProperty) {
+    override fun loRaWan(loRaWan: LoRaWANProperty) {
       cdkBuilder.loRaWan(loRaWan.let(LoRaWANProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28e81466f9f53e95dc3ea306e87391160bd8fd845ac2861cffba3f0c6e021678")
-    public override fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit): Unit =
+    override fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit): Unit =
         loRaWan(LoRaWANProperty(loRaWan))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -188,17 +180,13 @@ public open class CfnMulticastGroup internal constructor(
     public fun rfRegion(): String
 
     public interface Builder {
-      public fun dlClass(dlClass: String) {
-      }
+      public fun dlClass(dlClass: String)
 
-      public fun numberOfDevicesInGroup(numberOfDevicesInGroup: Number) {
-      }
+      public fun numberOfDevicesInGroup(numberOfDevicesInGroup: Number)
 
-      public fun numberOfDevicesRequested(numberOfDevicesRequested: Number) {
-      }
+      public fun numberOfDevicesRequested(numberOfDevicesRequested: Number)
 
-      public fun rfRegion(rfRegion: String) {
-      }
+      public fun rfRegion(rfRegion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -206,19 +194,19 @@ public open class CfnMulticastGroup internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnMulticastGroup.LoRaWANProperty.Builder =
           software.amazon.awscdk.services.iotwireless.CfnMulticastGroup.LoRaWANProperty.builder()
 
-      public override fun dlClass(dlClass: String) {
+      override fun dlClass(dlClass: String) {
         cdkBuilder.dlClass(dlClass)
       }
 
-      public override fun numberOfDevicesInGroup(numberOfDevicesInGroup: Number) {
+      override fun numberOfDevicesInGroup(numberOfDevicesInGroup: Number) {
         cdkBuilder.numberOfDevicesInGroup(numberOfDevicesInGroup)
       }
 
-      public override fun numberOfDevicesRequested(numberOfDevicesRequested: Number) {
+      override fun numberOfDevicesRequested(numberOfDevicesRequested: Number) {
         cdkBuilder.numberOfDevicesRequested(numberOfDevicesRequested)
       }
 
-      public override fun rfRegion(rfRegion: String) {
+      override fun rfRegion(rfRegion: String) {
         cdkBuilder.rfRegion(rfRegion)
       }
 
@@ -231,15 +219,13 @@ public open class CfnMulticastGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnMulticastGroup.LoRaWANProperty,
     ) : LoRaWANProperty {
-      public override fun dlClass(): String = unwrap(this).getDlClass()
+      override fun dlClass(): String = unwrap(this).getDlClass()
 
-      public override fun numberOfDevicesInGroup(): Number? =
-          unwrap(this).getNumberOfDevicesInGroup()
+      override fun numberOfDevicesInGroup(): Number? = unwrap(this).getNumberOfDevicesInGroup()
 
-      public override fun numberOfDevicesRequested(): Number? =
-          unwrap(this).getNumberOfDevicesRequested()
+      override fun numberOfDevicesRequested(): Number? = unwrap(this).getNumberOfDevicesRequested()
 
-      public override fun rfRegion(): String = unwrap(this).getRfRegion()
+      override fun rfRegion(): String = unwrap(this).getRfRegion()
     }
 
     public companion object {

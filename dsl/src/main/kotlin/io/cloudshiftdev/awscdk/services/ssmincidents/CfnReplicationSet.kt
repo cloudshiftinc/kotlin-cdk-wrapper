@@ -56,20 +56,15 @@ public open class CfnReplicationSet internal constructor(
   }
 
   public interface Builder {
-    public fun deletionProtected(deletionProtected: Boolean) {
-    }
+    public fun deletionProtected(deletionProtected: Boolean)
 
-    public fun deletionProtected(deletionProtected: IResolvable) {
-    }
+    public fun deletionProtected(deletionProtected: IResolvable)
 
-    public fun regions(regions: IResolvable) {
-    }
+    public fun regions(regions: IResolvable)
 
-    public fun regions(regions: List<Any>) {
-    }
+    public fun regions(regions: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnReplicationSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.Builder =
         software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.Builder.create(scope, id)
 
-    public override fun deletionProtected(deletionProtected: Boolean) {
+    override fun deletionProtected(deletionProtected: Boolean) {
       cdkBuilder.deletionProtected(deletionProtected)
     }
 
-    public override fun deletionProtected(deletionProtected: IResolvable) {
+    override fun deletionProtected(deletionProtected: IResolvable) {
       cdkBuilder.deletionProtected(deletionProtected.let(IResolvable::unwrap))
     }
 
-    public override fun regions(regions: IResolvable) {
+    override fun regions(regions: IResolvable) {
       cdkBuilder.regions(regions.let(IResolvable::unwrap))
     }
 
-    public override fun regions(regions: List<Any>) {
+    override fun regions(regions: List<Any>) {
       cdkBuilder.regions(regions)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -128,8 +123,7 @@ public open class CfnReplicationSet internal constructor(
     public fun sseKmsKeyId(): String
 
     public interface Builder {
-      public fun sseKmsKeyId(sseKmsKeyId: String) {
-      }
+      public fun sseKmsKeyId(sseKmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -138,7 +132,7 @@ public open class CfnReplicationSet internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty.builder()
 
-      public override fun sseKmsKeyId(sseKmsKeyId: String) {
+      override fun sseKmsKeyId(sseKmsKeyId: String) {
         cdkBuilder.sseKmsKeyId(sseKmsKeyId)
       }
 
@@ -151,7 +145,7 @@ public open class CfnReplicationSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.RegionConfigurationProperty,
     ) : RegionConfigurationProperty {
-      public override fun sseKmsKeyId(): String = unwrap(this).getSseKmsKeyId()
+      override fun sseKmsKeyId(): String = unwrap(this).getSseKmsKeyId()
     }
 
     public companion object {
@@ -180,20 +174,16 @@ public open class CfnReplicationSet internal constructor(
     public fun regionName(): String? = unwrap(this).getRegionName()
 
     public interface Builder {
-      public fun regionConfiguration(regionConfiguration: IResolvable) {
-      }
+      public fun regionConfiguration(regionConfiguration: IResolvable)
 
-      public fun regionConfiguration(regionConfiguration: RegionConfigurationProperty) {
-      }
+      public fun regionConfiguration(regionConfiguration: RegionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1f73e959c6950a8afb5ef01a749a688d89fcd4b3088e8851c81c560a2121efd")
       public
-          fun regionConfiguration(regionConfiguration: RegionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun regionConfiguration(regionConfiguration: RegionConfigurationProperty.Builder.() -> Unit)
 
-      public fun regionName(regionName: String) {
-      }
+      public fun regionName(regionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -202,21 +192,21 @@ public open class CfnReplicationSet internal constructor(
           =
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty.builder()
 
-      public override fun regionConfiguration(regionConfiguration: IResolvable) {
+      override fun regionConfiguration(regionConfiguration: IResolvable) {
         cdkBuilder.regionConfiguration(regionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun regionConfiguration(regionConfiguration: RegionConfigurationProperty) {
+      override fun regionConfiguration(regionConfiguration: RegionConfigurationProperty) {
         cdkBuilder.regionConfiguration(regionConfiguration.let(RegionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1f73e959c6950a8afb5ef01a749a688d89fcd4b3088e8851c81c560a2121efd")
-      public override
+      override
           fun regionConfiguration(regionConfiguration: RegionConfigurationProperty.Builder.() -> Unit):
           Unit = regionConfiguration(RegionConfigurationProperty(regionConfiguration))
 
-      public override fun regionName(regionName: String) {
+      override fun regionName(regionName: String) {
         cdkBuilder.regionName(regionName)
       }
 
@@ -229,9 +219,9 @@ public open class CfnReplicationSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmincidents.CfnReplicationSet.ReplicationRegionProperty,
     ) : ReplicationRegionProperty {
-      public override fun regionConfiguration(): Any? = unwrap(this).getRegionConfiguration()
+      override fun regionConfiguration(): Any? = unwrap(this).getRegionConfiguration()
 
-      public override fun regionName(): String? = unwrap(this).getRegionName()
+      override fun regionName(): String? = unwrap(this).getRegionName()
     }
 
     public companion object {

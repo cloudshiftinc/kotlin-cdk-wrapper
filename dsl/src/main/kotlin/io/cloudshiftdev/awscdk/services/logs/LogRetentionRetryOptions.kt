@@ -13,11 +13,9 @@ public interface LogRetentionRetryOptions {
 
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun base(base: Duration) {
-    }
+    public fun base(base: Duration)
 
-    public fun maxRetries(maxRetries: Number) {
-    }
+    public fun maxRetries(maxRetries: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -25,11 +23,11 @@ public interface LogRetentionRetryOptions {
         software.amazon.awscdk.services.logs.LogRetentionRetryOptions.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun base(base: Duration) {
+    override fun base(base: Duration) {
       cdkBuilder.base(base.let(Duration::unwrap))
     }
 
-    public override fun maxRetries(maxRetries: Number) {
+    override fun maxRetries(maxRetries: Number) {
       cdkBuilder.maxRetries(maxRetries)
     }
 
@@ -41,9 +39,9 @@ public interface LogRetentionRetryOptions {
     internal val cdkObject: software.amazon.awscdk.services.logs.LogRetentionRetryOptions,
   ) : LogRetentionRetryOptions {
     @Deprecated(message = "deprecated in CDK")
-    public override fun base(): Duration? = unwrap(this).getBase()?.let(Duration::wrap)
+    override fun base(): Duration? = unwrap(this).getBase()?.let(Duration::wrap)
 
-    public override fun maxRetries(): Number? = unwrap(this).getMaxRetries()
+    override fun maxRetries(): Number? = unwrap(this).getMaxRetries()
   }
 
   public companion object {

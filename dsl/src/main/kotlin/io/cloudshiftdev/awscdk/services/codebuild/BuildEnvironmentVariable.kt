@@ -10,11 +10,9 @@ public interface BuildEnvironmentVariable {
   public fun `value`(): Any
 
   public interface Builder {
-    public fun type(type: BuildEnvironmentVariableType) {
-    }
+    public fun type(type: BuildEnvironmentVariableType)
 
-    public fun `value`(`value`: Any) {
-    }
+    public fun `value`(`value`: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface BuildEnvironmentVariable {
         software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable.Builder =
         software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable.builder()
 
-    public override fun type(type: BuildEnvironmentVariableType) {
+    override fun type(type: BuildEnvironmentVariableType) {
       cdkBuilder.type(type.let(BuildEnvironmentVariableType::unwrap))
     }
 
-    public override fun `value`(`value`: Any) {
+    override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -37,10 +35,10 @@ public interface BuildEnvironmentVariable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable,
   ) : BuildEnvironmentVariable {
-    public override fun type(): BuildEnvironmentVariableType? =
+    override fun type(): BuildEnvironmentVariableType? =
         unwrap(this).getType()?.let(BuildEnvironmentVariableType::wrap)
 
-    public override fun `value`(): Any = unwrap(this).getValue()
+    override fun `value`(): Any = unwrap(this).getValue()
   }
 
   public companion object {

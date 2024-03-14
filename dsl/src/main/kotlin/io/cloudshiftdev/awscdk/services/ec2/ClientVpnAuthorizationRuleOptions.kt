@@ -11,14 +11,11 @@ public interface ClientVpnAuthorizationRuleOptions {
   public fun groupId(): String? = unwrap(this).getGroupId()
 
   public interface Builder {
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun groupId(groupId: String) {
-    }
+    public fun groupId(groupId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface ClientVpnAuthorizationRuleOptions {
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions.Builder =
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions.builder()
 
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun groupId(groupId: String) {
+    override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
     }
 
@@ -45,11 +42,11 @@ public interface ClientVpnAuthorizationRuleOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions,
   ) : ClientVpnAuthorizationRuleOptions {
-    public override fun cidr(): String = unwrap(this).getCidr()
+    override fun cidr(): String = unwrap(this).getCidr()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun groupId(): String? = unwrap(this).getGroupId()
+    override fun groupId(): String? = unwrap(this).getGroupId()
   }
 
   public companion object {

@@ -11,23 +11,17 @@ public open class KubernetesPatch internal constructor(
   private val cdkObject: software.amazon.awscdk.services.eks.KubernetesPatch,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun applyPatch(applyPatch: Map<String, Any>) {
-    }
+    public fun applyPatch(applyPatch: Map<String, Any>)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun patchType(patchType: PatchType) {
-    }
+    public fun patchType(patchType: PatchType)
 
-    public fun resourceName(resourceName: String) {
-    }
+    public fun resourceName(resourceName: String)
 
-    public fun resourceNamespace(resourceNamespace: String) {
-    }
+    public fun resourceNamespace(resourceNamespace: String)
 
-    public fun restorePatch(restorePatch: Map<String, Any>) {
-    }
+    public fun restorePatch(restorePatch: Map<String, Any>)
   }
 
   private class BuilderImpl(
@@ -37,27 +31,27 @@ public open class KubernetesPatch internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubernetesPatch.Builder =
         software.amazon.awscdk.services.eks.KubernetesPatch.Builder.create(scope, id)
 
-    public override fun applyPatch(applyPatch: Map<String, Any>) {
+    override fun applyPatch(applyPatch: Map<String, Any>) {
       cdkBuilder.applyPatch(applyPatch)
     }
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun patchType(patchType: PatchType) {
+    override fun patchType(patchType: PatchType) {
       cdkBuilder.patchType(patchType.let(PatchType::unwrap))
     }
 
-    public override fun resourceName(resourceName: String) {
+    override fun resourceName(resourceName: String) {
       cdkBuilder.resourceName(resourceName)
     }
 
-    public override fun resourceNamespace(resourceNamespace: String) {
+    override fun resourceNamespace(resourceNamespace: String) {
       cdkBuilder.resourceNamespace(resourceNamespace)
     }
 
-    public override fun restorePatch(restorePatch: Map<String, Any>) {
+    override fun restorePatch(restorePatch: Map<String, Any>) {
       cdkBuilder.restorePatch(restorePatch)
     }
 

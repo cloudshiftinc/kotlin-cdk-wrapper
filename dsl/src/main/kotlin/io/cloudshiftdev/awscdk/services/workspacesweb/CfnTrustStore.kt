@@ -40,11 +40,9 @@ public open class CfnTrustStore internal constructor(
   }
 
   public interface Builder {
-    public fun certificateList(certificateList: List<String>) {
-    }
+    public fun certificateList(certificateList: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -54,11 +52,11 @@ public open class CfnTrustStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.workspacesweb.CfnTrustStore.Builder =
         software.amazon.awscdk.services.workspacesweb.CfnTrustStore.Builder.create(scope, id)
 
-    public override fun certificateList(certificateList: List<String>) {
+    override fun certificateList(certificateList: List<String>) {
       cdkBuilder.certificateList(certificateList)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

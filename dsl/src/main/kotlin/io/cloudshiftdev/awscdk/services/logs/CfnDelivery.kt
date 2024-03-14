@@ -48,14 +48,11 @@ public open class CfnDelivery internal constructor(
   }
 
   public interface Builder {
-    public fun deliveryDestinationArn(deliveryDestinationArn: String) {
-    }
+    public fun deliveryDestinationArn(deliveryDestinationArn: String)
 
-    public fun deliverySourceName(deliverySourceName: String) {
-    }
+    public fun deliverySourceName(deliverySourceName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -65,15 +62,15 @@ public open class CfnDelivery internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnDelivery.Builder =
         software.amazon.awscdk.services.logs.CfnDelivery.Builder.create(scope, id)
 
-    public override fun deliveryDestinationArn(deliveryDestinationArn: String) {
+    override fun deliveryDestinationArn(deliveryDestinationArn: String) {
       cdkBuilder.deliveryDestinationArn(deliveryDestinationArn)
     }
 
-    public override fun deliverySourceName(deliverySourceName: String) {
+    override fun deliverySourceName(deliverySourceName: String) {
       cdkBuilder.deliverySourceName(deliverySourceName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

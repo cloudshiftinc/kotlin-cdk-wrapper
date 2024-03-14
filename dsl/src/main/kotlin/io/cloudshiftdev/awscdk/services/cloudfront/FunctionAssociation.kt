@@ -8,22 +8,20 @@ public interface FunctionAssociation {
   public fun function(): IFunction
 
   public interface Builder {
-    public fun eventType(eventType: FunctionEventType) {
-    }
+    public fun eventType(eventType: FunctionEventType)
 
-    public fun function(function: IFunction) {
-    }
+    public fun function(function: IFunction)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FunctionAssociation.Builder =
         software.amazon.awscdk.services.cloudfront.FunctionAssociation.builder()
 
-    public override fun eventType(eventType: FunctionEventType) {
+    override fun eventType(eventType: FunctionEventType) {
       cdkBuilder.eventType(eventType.let(FunctionEventType::unwrap))
     }
 
-    public override fun function(function: IFunction) {
+    override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
 
@@ -34,10 +32,10 @@ public interface FunctionAssociation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
   ) : FunctionAssociation {
-    public override fun eventType(): FunctionEventType =
+    override fun eventType(): FunctionEventType =
         unwrap(this).getEventType().let(FunctionEventType::wrap)
 
-    public override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
+    override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
   }
 
   public companion object {

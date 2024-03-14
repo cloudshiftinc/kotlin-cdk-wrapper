@@ -18,11 +18,9 @@ public open class VirtualService internal constructor(
   public override fun virtualServiceName(): String = unwrap(this).getVirtualServiceName()
 
   public interface Builder {
-    public fun virtualServiceName(virtualServiceName: String) {
-    }
+    public fun virtualServiceName(virtualServiceName: String)
 
-    public fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider) {
-    }
+    public fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider)
   }
 
   private class BuilderImpl(
@@ -32,11 +30,11 @@ public open class VirtualService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualService.Builder =
         software.amazon.awscdk.services.appmesh.VirtualService.Builder.create(scope, id)
 
-    public override fun virtualServiceName(virtualServiceName: String) {
+    override fun virtualServiceName(virtualServiceName: String) {
       cdkBuilder.virtualServiceName(virtualServiceName)
     }
 
-    public override fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider) {
+    override fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider) {
       cdkBuilder.virtualServiceProvider(virtualServiceProvider.let(VirtualServiceProvider::unwrap))
     }
 

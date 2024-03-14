@@ -14,36 +14,32 @@ public interface WarmPoolOptions {
   public fun reuseOnScaleIn(): Boolean? = unwrap(this).getReuseOnScaleIn()
 
   public interface Builder {
-    public fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
-    }
+    public fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun poolState(poolState: PoolState) {
-    }
+    public fun poolState(poolState: PoolState)
 
-    public fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
-    }
+    public fun reuseOnScaleIn(reuseOnScaleIn: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.WarmPoolOptions.Builder =
         software.amazon.awscdk.services.autoscaling.WarmPoolOptions.builder()
 
-    public override fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
+    override fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
       cdkBuilder.maxGroupPreparedCapacity(maxGroupPreparedCapacity)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun poolState(poolState: PoolState) {
+    override fun poolState(poolState: PoolState) {
       cdkBuilder.poolState(poolState.let(PoolState::unwrap))
     }
 
-    public override fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
+    override fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
       cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
     }
 
@@ -54,14 +50,13 @@ public interface WarmPoolOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.WarmPoolOptions,
   ) : WarmPoolOptions {
-    public override fun maxGroupPreparedCapacity(): Number? =
-        unwrap(this).getMaxGroupPreparedCapacity()
+    override fun maxGroupPreparedCapacity(): Number? = unwrap(this).getMaxGroupPreparedCapacity()
 
-    public override fun minSize(): Number? = unwrap(this).getMinSize()
+    override fun minSize(): Number? = unwrap(this).getMinSize()
 
-    public override fun poolState(): PoolState? = unwrap(this).getPoolState()?.let(PoolState::wrap)
+    override fun poolState(): PoolState? = unwrap(this).getPoolState()?.let(PoolState::wrap)
 
-    public override fun reuseOnScaleIn(): Boolean? = unwrap(this).getReuseOnScaleIn()
+    override fun reuseOnScaleIn(): Boolean? = unwrap(this).getReuseOnScaleIn()
   }
 
   public companion object {

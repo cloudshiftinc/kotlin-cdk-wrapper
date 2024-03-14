@@ -10,22 +10,20 @@ public interface AllocateCidrRequest {
   public fun vpcCidr(): String
 
   public interface Builder {
-    public fun requestedSubnets(requestedSubnets: List<RequestedSubnet>) {
-    }
+    public fun requestedSubnets(requestedSubnets: List<RequestedSubnet>)
 
-    public fun vpcCidr(vpcCidr: String) {
-    }
+    public fun vpcCidr(vpcCidr: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AllocateCidrRequest.Builder =
         software.amazon.awscdk.services.ec2.AllocateCidrRequest.builder()
 
-    public override fun requestedSubnets(requestedSubnets: List<RequestedSubnet>) {
+    override fun requestedSubnets(requestedSubnets: List<RequestedSubnet>) {
       cdkBuilder.requestedSubnets(requestedSubnets.map(RequestedSubnet::unwrap))
     }
 
-    public override fun vpcCidr(vpcCidr: String) {
+    override fun vpcCidr(vpcCidr: String) {
       cdkBuilder.vpcCidr(vpcCidr)
     }
 
@@ -35,10 +33,10 @@ public interface AllocateCidrRequest {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AllocateCidrRequest,
   ) : AllocateCidrRequest {
-    public override fun requestedSubnets(): List<RequestedSubnet> =
+    override fun requestedSubnets(): List<RequestedSubnet> =
         unwrap(this).getRequestedSubnets().map(RequestedSubnet::wrap)
 
-    public override fun vpcCidr(): String = unwrap(this).getVpcCidr()
+    override fun vpcCidr(): String = unwrap(this).getVpcCidr()
   }
 
   public companion object {

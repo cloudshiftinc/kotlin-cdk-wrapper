@@ -113,50 +113,35 @@ public open class CfnVolume internal constructor(
   }
 
   public interface Builder {
-    public fun autoEnableIo(autoEnableIo: Boolean) {
-    }
+    public fun autoEnableIo(autoEnableIo: Boolean)
 
-    public fun autoEnableIo(autoEnableIo: IResolvable) {
-    }
+    public fun autoEnableIo(autoEnableIo: IResolvable)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun encrypted(encrypted: Boolean) {
-    }
+    public fun encrypted(encrypted: Boolean)
 
-    public fun encrypted(encrypted: IResolvable) {
-    }
+    public fun encrypted(encrypted: IResolvable)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun multiAttachEnabled(multiAttachEnabled: Boolean) {
-    }
+    public fun multiAttachEnabled(multiAttachEnabled: Boolean)
 
-    public fun multiAttachEnabled(multiAttachEnabled: IResolvable) {
-    }
+    public fun multiAttachEnabled(multiAttachEnabled: IResolvable)
 
-    public fun outpostArn(outpostArn: String) {
-    }
+    public fun outpostArn(outpostArn: String)
 
-    public fun size(size: Number) {
-    }
+    public fun size(size: Number)
 
-    public fun snapshotId(snapshotId: String) {
-    }
+    public fun snapshotId(snapshotId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun throughput(throughput: Number) {
-    }
+    public fun throughput(throughput: Number)
 
-    public fun volumeType(volumeType: String) {
-    }
+    public fun volumeType(volumeType: String)
   }
 
   private class BuilderImpl(
@@ -166,63 +151,63 @@ public open class CfnVolume internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVolume.Builder =
         software.amazon.awscdk.services.ec2.CfnVolume.Builder.create(scope, id)
 
-    public override fun autoEnableIo(autoEnableIo: Boolean) {
+    override fun autoEnableIo(autoEnableIo: Boolean) {
       cdkBuilder.autoEnableIo(autoEnableIo)
     }
 
-    public override fun autoEnableIo(autoEnableIo: IResolvable) {
+    override fun autoEnableIo(autoEnableIo: IResolvable) {
       cdkBuilder.autoEnableIo(autoEnableIo.let(IResolvable::unwrap))
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun encrypted(encrypted: Boolean) {
+    override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
     }
 
-    public override fun encrypted(encrypted: IResolvable) {
+    override fun encrypted(encrypted: IResolvable) {
       cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun multiAttachEnabled(multiAttachEnabled: Boolean) {
+    override fun multiAttachEnabled(multiAttachEnabled: Boolean) {
       cdkBuilder.multiAttachEnabled(multiAttachEnabled)
     }
 
-    public override fun multiAttachEnabled(multiAttachEnabled: IResolvable) {
+    override fun multiAttachEnabled(multiAttachEnabled: IResolvable) {
       cdkBuilder.multiAttachEnabled(multiAttachEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun outpostArn(outpostArn: String) {
+    override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
 
-    public override fun size(size: Number) {
+    override fun size(size: Number) {
       cdkBuilder.size(size)
     }
 
-    public override fun snapshotId(snapshotId: String) {
+    override fun snapshotId(snapshotId: String) {
       cdkBuilder.snapshotId(snapshotId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun throughput(throughput: Number) {
+    override fun throughput(throughput: Number) {
       cdkBuilder.throughput(throughput)
     }
 
-    public override fun volumeType(volumeType: String) {
+    override fun volumeType(volumeType: String) {
       cdkBuilder.volumeType(volumeType)
     }
 

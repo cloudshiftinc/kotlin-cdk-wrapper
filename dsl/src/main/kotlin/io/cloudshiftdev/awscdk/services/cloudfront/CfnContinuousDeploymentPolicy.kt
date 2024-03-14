@@ -45,18 +45,15 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
-    }
+    public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable)
 
     public
-        fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty) {
-    }
+        fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02aec362a43d44818e6bc8847a1309a63040670369a0299060c34fe44c82b1fa")
     public
-        fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty.Builder.() -> Unit) {
-    }
+        fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -68,19 +65,18 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
         software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.Builder.create(scope,
         id)
 
-    public override
-        fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
+    override fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
       cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty) {
       cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(ContinuousDeploymentPolicyConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02aec362a43d44818e6bc8847a1309a63040670369a0299060c34fe44c82b1fa")
-    public override
+    override
         fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty.Builder.() -> Unit):
         Unit =
         continuousDeploymentPolicyConfig(ContinuousDeploymentPolicyConfigProperty(continuousDeploymentPolicyConfig))
@@ -119,32 +115,25 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun singleHeaderConfig(singleHeaderConfig: IResolvable) {
-      }
+      public fun singleHeaderConfig(singleHeaderConfig: IResolvable)
 
-      public fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty) {
-      }
+      public fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3d493f05136abb55d2ad8f7caeb155f0a8fa4dd8ab52c0a79406cb90c57e29fa")
       public
-          fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit) {
-      }
+          fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit)
 
-      public fun singleWeightConfig(singleWeightConfig: IResolvable) {
-      }
+      public fun singleWeightConfig(singleWeightConfig: IResolvable)
 
-      public fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty) {
-      }
+      public fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc84ae95061411aac39bf13982bcd477f4ed3f1c68cb141ee06b3ad449628f94")
       public
-          fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit) {
-      }
+          fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -153,35 +142,35 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty.builder()
 
-      public override fun singleHeaderConfig(singleHeaderConfig: IResolvable) {
+      override fun singleHeaderConfig(singleHeaderConfig: IResolvable) {
         cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(IResolvable::unwrap))
       }
 
-      public override fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty) {
+      override fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty) {
         cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(SingleHeaderConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3d493f05136abb55d2ad8f7caeb155f0a8fa4dd8ab52c0a79406cb90c57e29fa")
-      public override
+      override
           fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty.Builder.() -> Unit):
           Unit = singleHeaderConfig(SingleHeaderConfigProperty(singleHeaderConfig))
 
-      public override fun singleWeightConfig(singleWeightConfig: IResolvable) {
+      override fun singleWeightConfig(singleWeightConfig: IResolvable) {
         cdkBuilder.singleWeightConfig(singleWeightConfig.let(IResolvable::unwrap))
       }
 
-      public override fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty) {
+      override fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty) {
         cdkBuilder.singleWeightConfig(singleWeightConfig.let(SingleWeightConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc84ae95061411aac39bf13982bcd477f4ed3f1c68cb141ee06b3ad449628f94")
-      public override
+      override
           fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty.Builder.() -> Unit):
           Unit = singleWeightConfig(SingleWeightConfigProperty(singleWeightConfig))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -194,11 +183,11 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.TrafficConfigProperty,
     ) : TrafficConfigProperty {
-      public override fun singleHeaderConfig(): Any? = unwrap(this).getSingleHeaderConfig()
+      override fun singleHeaderConfig(): Any? = unwrap(this).getSingleHeaderConfig()
 
-      public override fun singleWeightConfig(): Any? = unwrap(this).getSingleWeightConfig()
+      override fun singleWeightConfig(): Any? = unwrap(this).getSingleWeightConfig()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -227,20 +216,16 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun weight(): Number
 
     public interface Builder {
-      public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
-      }
+      public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable)
 
-      public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
-      }
+      public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
       public
-          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit) {
-      }
+          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -249,22 +234,22 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty.builder()
 
-      public override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
+      override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
         cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
         cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84a16445b31759c204e527d9438144fd1c2e1960ae5d2a6dc3696de87e89688d")
-      public override
+      override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit):
           Unit = sessionStickinessConfig(SessionStickinessConfigProperty(sessionStickinessConfig))
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -277,10 +262,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightPolicyConfigProperty,
     ) : SingleWeightPolicyConfigProperty {
-      public override fun sessionStickinessConfig(): Any? =
-          unwrap(this).getSessionStickinessConfig()
+      override fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
 
-      public override fun weight(): Number = unwrap(this).getWeight()
+      override fun weight(): Number = unwrap(this).getWeight()
     }
 
     public companion object {
@@ -317,54 +301,41 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: IResolvable) {
-      }
+      public fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: IResolvable)
 
       public
-          fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty) {
-      }
+          fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3726686afad905a9ae332c59666b4e79992e2ef6b09a46c71eae50b0f2b1baba")
       public
-          fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty.Builder.() -> Unit) {
-      }
+          fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty.Builder.() -> Unit)
 
-      public fun singleWeightPolicyConfig(singleWeightPolicyConfig: IResolvable) {
-      }
+      public fun singleWeightPolicyConfig(singleWeightPolicyConfig: IResolvable)
 
       public
-          fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty) {
-      }
+          fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b409a905c8af0d9da494ea94eba46db86e04d8aa819d02c56fff7a470b36020b")
       public
-          fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty.Builder.() -> Unit) {
-      }
+          fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty.Builder.() -> Unit)
 
-      public fun stagingDistributionDnsNames(stagingDistributionDnsNames: List<String>) {
-      }
+      public fun stagingDistributionDnsNames(stagingDistributionDnsNames: List<String>)
 
-      public fun trafficConfig(trafficConfig: IResolvable) {
-      }
+      public fun trafficConfig(trafficConfig: IResolvable)
 
-      public fun trafficConfig(trafficConfig: TrafficConfigProperty) {
-      }
+      public fun trafficConfig(trafficConfig: TrafficConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1f18d10221ae381cfb3f3c1e0759c5ead3f14d94b734e082cce12fa39f182e9")
-      public fun trafficConfig(trafficConfig: TrafficConfigProperty.Builder.() -> Unit) {
-      }
+      public fun trafficConfig(trafficConfig: TrafficConfigProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -373,64 +344,64 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: IResolvable) {
+      override fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: IResolvable) {
         cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty) {
         cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig.let(SingleHeaderPolicyConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3726686afad905a9ae332c59666b4e79992e2ef6b09a46c71eae50b0f2b1baba")
-      public override
+      override
           fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty.Builder.() -> Unit):
           Unit =
           singleHeaderPolicyConfig(SingleHeaderPolicyConfigProperty(singleHeaderPolicyConfig))
 
-      public override fun singleWeightPolicyConfig(singleWeightPolicyConfig: IResolvable) {
+      override fun singleWeightPolicyConfig(singleWeightPolicyConfig: IResolvable) {
         cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty) {
         cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig.let(SingleWeightPolicyConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b409a905c8af0d9da494ea94eba46db86e04d8aa819d02c56fff7a470b36020b")
-      public override
+      override
           fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty.Builder.() -> Unit):
           Unit =
           singleWeightPolicyConfig(SingleWeightPolicyConfigProperty(singleWeightPolicyConfig))
 
-      public override fun stagingDistributionDnsNames(stagingDistributionDnsNames: List<String>) {
+      override fun stagingDistributionDnsNames(stagingDistributionDnsNames: List<String>) {
         cdkBuilder.stagingDistributionDnsNames(stagingDistributionDnsNames)
       }
 
-      public override fun trafficConfig(trafficConfig: IResolvable) {
+      override fun trafficConfig(trafficConfig: IResolvable) {
         cdkBuilder.trafficConfig(trafficConfig.let(IResolvable::unwrap))
       }
 
-      public override fun trafficConfig(trafficConfig: TrafficConfigProperty) {
+      override fun trafficConfig(trafficConfig: TrafficConfigProperty) {
         cdkBuilder.trafficConfig(trafficConfig.let(TrafficConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1f18d10221ae381cfb3f3c1e0759c5ead3f14d94b734e082cce12fa39f182e9")
-      public override fun trafficConfig(trafficConfig: TrafficConfigProperty.Builder.() -> Unit):
-          Unit = trafficConfig(TrafficConfigProperty(trafficConfig))
+      override fun trafficConfig(trafficConfig: TrafficConfigProperty.Builder.() -> Unit): Unit =
+          trafficConfig(TrafficConfigProperty(trafficConfig))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -443,20 +414,18 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty,
     ) : ContinuousDeploymentPolicyConfigProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun singleHeaderPolicyConfig(): Any? =
-          unwrap(this).getSingleHeaderPolicyConfig()
+      override fun singleHeaderPolicyConfig(): Any? = unwrap(this).getSingleHeaderPolicyConfig()
 
-      public override fun singleWeightPolicyConfig(): Any? =
-          unwrap(this).getSingleWeightPolicyConfig()
+      override fun singleWeightPolicyConfig(): Any? = unwrap(this).getSingleWeightPolicyConfig()
 
-      public override fun stagingDistributionDnsNames(): List<String> =
+      override fun stagingDistributionDnsNames(): List<String> =
           unwrap(this).getStagingDistributionDnsNames() ?: emptyList()
 
-      public override fun trafficConfig(): Any? = unwrap(this).getTrafficConfig()
+      override fun trafficConfig(): Any? = unwrap(this).getTrafficConfig()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -486,11 +455,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun `header`(`header`: String) {
-      }
+      public fun `header`(`header`: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -499,11 +466,11 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty.builder()
 
-      public override fun `header`(`header`: String) {
+      override fun `header`(`header`: String) {
         cdkBuilder.`header`(`header`)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -516,9 +483,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderConfigProperty,
     ) : SingleHeaderConfigProperty {
-      public override fun `header`(): String = unwrap(this).getHeader()
+      override fun `header`(): String = unwrap(this).getHeader()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -547,11 +514,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun maximumTtl(): Number
 
     public interface Builder {
-      public fun idleTtl(idleTtl: Number) {
-      }
+      public fun idleTtl(idleTtl: Number)
 
-      public fun maximumTtl(maximumTtl: Number) {
-      }
+      public fun maximumTtl(maximumTtl: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -560,11 +525,11 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty.builder()
 
-      public override fun idleTtl(idleTtl: Number) {
+      override fun idleTtl(idleTtl: Number) {
         cdkBuilder.idleTtl(idleTtl)
       }
 
-      public override fun maximumTtl(maximumTtl: Number) {
+      override fun maximumTtl(maximumTtl: Number) {
         cdkBuilder.maximumTtl(maximumTtl)
       }
 
@@ -577,9 +542,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SessionStickinessConfigProperty,
     ) : SessionStickinessConfigProperty {
-      public override fun idleTtl(): Number = unwrap(this).getIdleTtl()
+      override fun idleTtl(): Number = unwrap(this).getIdleTtl()
 
-      public override fun maximumTtl(): Number = unwrap(this).getMaximumTtl()
+      override fun maximumTtl(): Number = unwrap(this).getMaximumTtl()
     }
 
     public companion object {
@@ -608,11 +573,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun `header`(`header`: String) {
-      }
+      public fun `header`(`header`: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -621,11 +584,11 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty.builder()
 
-      public override fun `header`(`header`: String) {
+      override fun `header`(`header`: String) {
         cdkBuilder.`header`(`header`)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -638,9 +601,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleHeaderPolicyConfigProperty,
     ) : SingleHeaderPolicyConfigProperty {
-      public override fun `header`(): String = unwrap(this).getHeader()
+      override fun `header`(): String = unwrap(this).getHeader()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -669,20 +632,16 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
     public fun weight(): Number
 
     public interface Builder {
-      public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
-      }
+      public fun sessionStickinessConfig(sessionStickinessConfig: IResolvable)
 
-      public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
-      }
+      public fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("115c2e3d2be2a6141618d5281ac3254846c109b072920033bb4c3a6d8305f28e")
       public
-          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit) {
-      }
+          fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -691,22 +650,22 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty.builder()
 
-      public override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
+      override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
         cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
         cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("115c2e3d2be2a6141618d5281ac3254846c109b072920033bb4c3a6d8305f28e")
-      public override
+      override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty.Builder.() -> Unit):
           Unit = sessionStickinessConfig(SessionStickinessConfigProperty(sessionStickinessConfig))
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -719,10 +678,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy.SingleWeightConfigProperty,
     ) : SingleWeightConfigProperty {
-      public override fun sessionStickinessConfig(): Any? =
-          unwrap(this).getSessionStickinessConfig()
+      override fun sessionStickinessConfig(): Any? = unwrap(this).getSessionStickinessConfig()
 
-      public override fun weight(): Number = unwrap(this).getWeight()
+      override fun weight(): Number = unwrap(this).getWeight()
     }
 
     public companion object {

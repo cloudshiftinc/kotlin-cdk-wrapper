@@ -36,14 +36,11 @@ public open class CfnDirectoryBucket internal constructor(
   }
 
   public interface Builder {
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun dataRedundancy(dataRedundancy: String) {
-    }
+    public fun dataRedundancy(dataRedundancy: String)
 
-    public fun locationName(locationName: String) {
-    }
+    public fun locationName(locationName: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnDirectoryBucket internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3express.CfnDirectoryBucket.Builder =
         software.amazon.awscdk.services.s3express.CfnDirectoryBucket.Builder.create(scope, id)
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun dataRedundancy(dataRedundancy: String) {
+    override fun dataRedundancy(dataRedundancy: String) {
       cdkBuilder.dataRedundancy(dataRedundancy)
     }
 
-    public override fun locationName(locationName: String) {
+    override fun locationName(locationName: String) {
       cdkBuilder.locationName(locationName)
     }
 

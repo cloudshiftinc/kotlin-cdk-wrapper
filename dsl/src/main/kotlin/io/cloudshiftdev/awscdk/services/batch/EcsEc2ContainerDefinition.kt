@@ -59,8 +59,8 @@ public open class EcsEc2ContainerDefinition internal constructor(
 
   public override fun readonlyRootFilesystem(): Boolean? = unwrap(this).getReadonlyRootFilesystem()
 
-  public override fun secrets(): Map<String, Secret> = unwrap(this).getSecrets()?.mapValues {
-      Secret.wrap(it.value)} ?: emptyMap()
+  public override fun secrets(): Map<String, Secret> =
+      unwrap(this).getSecrets()?.mapValues{Secret.wrap(it.value)} ?: emptyMap()
 
   public override fun ulimits(): List<Ulimit> = unwrap(this).getUlimits().map(Ulimit::wrap)
 
@@ -69,53 +69,37 @@ public open class EcsEc2ContainerDefinition internal constructor(
   public override fun volumes(): List<EcsVolume> = unwrap(this).getVolumes().map(EcsVolume::wrap)
 
   public interface Builder {
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun cpu(cpu: Number) {
-    }
+    public fun cpu(cpu: Number)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun gpu(gpu: Number) {
-    }
+    public fun gpu(gpu: Number)
 
-    public fun image(image: ContainerImage) {
-    }
+    public fun image(image: ContainerImage)
 
-    public fun jobRole(jobRole: IRole) {
-    }
+    public fun jobRole(jobRole: IRole)
 
-    public fun linuxParameters(linuxParameters: LinuxParameters) {
-    }
+    public fun linuxParameters(linuxParameters: LinuxParameters)
 
-    public fun logging(logging: LogDriver) {
-    }
+    public fun logging(logging: LogDriver)
 
-    public fun memory(memory: Size) {
-    }
+    public fun memory(memory: Size)
 
-    public fun privileged(privileged: Boolean) {
-    }
+    public fun privileged(privileged: Boolean)
 
-    public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
-    }
+    public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean)
 
-    public fun secrets(secrets: Map<String, Secret>) {
-    }
+    public fun secrets(secrets: Map<String, Secret>)
 
-    public fun ulimits(ulimits: List<Ulimit>) {
-    }
+    public fun ulimits(ulimits: List<Ulimit>)
 
-    public fun user(user: String) {
-    }
+    public fun user(user: String)
 
-    public fun volumes(volumes: List<EcsVolume>) {
-    }
+    public fun volumes(volumes: List<EcsVolume>)
   }
 
   private class BuilderImpl(
@@ -125,67 +109,67 @@ public open class EcsEc2ContainerDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition.Builder
         = software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition.Builder.create(scope, id)
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun cpu(cpu: Number) {
+    override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun gpu(gpu: Number) {
+    override fun gpu(gpu: Number) {
       cdkBuilder.gpu(gpu)
     }
 
-    public override fun image(image: ContainerImage) {
+    override fun image(image: ContainerImage) {
       cdkBuilder.image(image.let(ContainerImage::unwrap))
     }
 
-    public override fun jobRole(jobRole: IRole) {
+    override fun jobRole(jobRole: IRole) {
       cdkBuilder.jobRole(jobRole.let(IRole::unwrap))
     }
 
-    public override fun linuxParameters(linuxParameters: LinuxParameters) {
+    override fun linuxParameters(linuxParameters: LinuxParameters) {
       cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
     }
 
-    public override fun logging(logging: LogDriver) {
+    override fun logging(logging: LogDriver) {
       cdkBuilder.logging(logging.let(LogDriver::unwrap))
     }
 
-    public override fun memory(memory: Size) {
+    override fun memory(memory: Size) {
       cdkBuilder.memory(memory.let(Size::unwrap))
     }
 
-    public override fun privileged(privileged: Boolean) {
+    override fun privileged(privileged: Boolean) {
       cdkBuilder.privileged(privileged)
     }
 
-    public override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
+    override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
       cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
     }
 
-    public override fun secrets(secrets: Map<String, Secret>) {
-      cdkBuilder.secrets(secrets.mapValues { Secret.unwrap(it.value)})
+    override fun secrets(secrets: Map<String, Secret>) {
+      cdkBuilder.secrets(secrets.mapValues{Secret.unwrap(it.value)})
     }
 
-    public override fun ulimits(ulimits: List<Ulimit>) {
+    override fun ulimits(ulimits: List<Ulimit>) {
       cdkBuilder.ulimits(ulimits.map(Ulimit::unwrap))
     }
 
-    public override fun user(user: String) {
+    override fun user(user: String) {
       cdkBuilder.user(user)
     }
 
-    public override fun volumes(volumes: List<EcsVolume>) {
+    override fun volumes(volumes: List<EcsVolume>) {
       cdkBuilder.volumes(volumes.map(EcsVolume::unwrap))
     }
 

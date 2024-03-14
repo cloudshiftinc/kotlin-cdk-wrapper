@@ -75,31 +75,23 @@ public open class CfnRotation internal constructor(
   }
 
   public interface Builder {
-    public fun contactIds(contactIds: List<String>) {
-    }
+    public fun contactIds(contactIds: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun recurrence(recurrence: IResolvable) {
-    }
+    public fun recurrence(recurrence: IResolvable)
 
-    public fun recurrence(recurrence: RecurrenceSettingsProperty) {
-    }
+    public fun recurrence(recurrence: RecurrenceSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a473203a88f63c44ef343838ca601eec3316185ba1b92295a7163e73dab0fed3")
-    public fun recurrence(recurrence: RecurrenceSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun recurrence(recurrence: RecurrenceSettingsProperty.Builder.() -> Unit)
 
-    public fun startTime(startTime: String) {
-    }
+    public fun startTime(startTime: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeZoneId(timeZoneId: String) {
-    }
+    public fun timeZoneId(timeZoneId: String)
   }
 
   private class BuilderImpl(
@@ -109,36 +101,36 @@ public open class CfnRotation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssmcontacts.CfnRotation.Builder =
         software.amazon.awscdk.services.ssmcontacts.CfnRotation.Builder.create(scope, id)
 
-    public override fun contactIds(contactIds: List<String>) {
+    override fun contactIds(contactIds: List<String>) {
       cdkBuilder.contactIds(contactIds)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun recurrence(recurrence: IResolvable) {
+    override fun recurrence(recurrence: IResolvable) {
       cdkBuilder.recurrence(recurrence.let(IResolvable::unwrap))
     }
 
-    public override fun recurrence(recurrence: RecurrenceSettingsProperty) {
+    override fun recurrence(recurrence: RecurrenceSettingsProperty) {
       cdkBuilder.recurrence(recurrence.let(RecurrenceSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a473203a88f63c44ef343838ca601eec3316185ba1b92295a7163e73dab0fed3")
-    public override fun recurrence(recurrence: RecurrenceSettingsProperty.Builder.() -> Unit): Unit
-        = recurrence(RecurrenceSettingsProperty(recurrence))
+    override fun recurrence(recurrence: RecurrenceSettingsProperty.Builder.() -> Unit): Unit =
+        recurrence(RecurrenceSettingsProperty(recurrence))
 
-    public override fun startTime(startTime: String) {
+    override fun startTime(startTime: String) {
       cdkBuilder.startTime(startTime)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeZoneId(timeZoneId: String) {
+    override fun timeZoneId(timeZoneId: String) {
       cdkBuilder.timeZoneId(timeZoneId)
     }
 
@@ -172,11 +164,9 @@ public open class CfnRotation internal constructor(
     public fun handOffTime(): String
 
     public interface Builder {
-      public fun dayOfMonth(dayOfMonth: Number) {
-      }
+      public fun dayOfMonth(dayOfMonth: Number)
 
-      public fun handOffTime(handOffTime: String) {
-      }
+      public fun handOffTime(handOffTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -184,11 +174,11 @@ public open class CfnRotation internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty.builder()
 
-      public override fun dayOfMonth(dayOfMonth: Number) {
+      override fun dayOfMonth(dayOfMonth: Number) {
         cdkBuilder.dayOfMonth(dayOfMonth)
       }
 
-      public override fun handOffTime(handOffTime: String) {
+      override fun handOffTime(handOffTime: String) {
         cdkBuilder.handOffTime(handOffTime)
       }
 
@@ -201,9 +191,9 @@ public open class CfnRotation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.MonthlySettingProperty,
     ) : MonthlySettingProperty {
-      public override fun dayOfMonth(): Number = unwrap(this).getDayOfMonth()
+      override fun dayOfMonth(): Number = unwrap(this).getDayOfMonth()
 
-      public override fun handOffTime(): String = unwrap(this).getHandOffTime()
+      override fun handOffTime(): String = unwrap(this).getHandOffTime()
     }
 
     public companion object {
@@ -232,11 +222,9 @@ public open class CfnRotation internal constructor(
     public fun startTime(): String
 
     public interface Builder {
-      public fun endTime(endTime: String) {
-      }
+      public fun endTime(endTime: String)
 
-      public fun startTime(startTime: String) {
-      }
+      public fun startTime(startTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -244,11 +232,11 @@ public open class CfnRotation internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.CoverageTimeProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.CoverageTimeProperty.builder()
 
-      public override fun endTime(endTime: String) {
+      override fun endTime(endTime: String) {
         cdkBuilder.endTime(endTime)
       }
 
-      public override fun startTime(startTime: String) {
+      override fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)
       }
 
@@ -261,9 +249,9 @@ public open class CfnRotation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.CoverageTimeProperty,
     ) : CoverageTimeProperty {
-      public override fun endTime(): String = unwrap(this).getEndTime()
+      override fun endTime(): String = unwrap(this).getEndTime()
 
-      public override fun startTime(): String = unwrap(this).getStartTime()
+      override fun startTime(): String = unwrap(this).getStartTime()
     }
 
     public companion object {
@@ -292,11 +280,9 @@ public open class CfnRotation internal constructor(
     public fun handOffTime(): String
 
     public interface Builder {
-      public fun dayOfWeek(dayOfWeek: String) {
-      }
+      public fun dayOfWeek(dayOfWeek: String)
 
-      public fun handOffTime(handOffTime: String) {
-      }
+      public fun handOffTime(handOffTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -304,11 +290,11 @@ public open class CfnRotation internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty.builder()
 
-      public override fun dayOfWeek(dayOfWeek: String) {
+      override fun dayOfWeek(dayOfWeek: String) {
         cdkBuilder.dayOfWeek(dayOfWeek)
       }
 
-      public override fun handOffTime(handOffTime: String) {
+      override fun handOffTime(handOffTime: String) {
         cdkBuilder.handOffTime(handOffTime)
       }
 
@@ -321,9 +307,9 @@ public open class CfnRotation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.WeeklySettingProperty,
     ) : WeeklySettingProperty {
-      public override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
+      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
 
-      public override fun handOffTime(): String = unwrap(this).getHandOffTime()
+      override fun handOffTime(): String = unwrap(this).getHandOffTime()
     }
 
     public companion object {
@@ -360,32 +346,23 @@ public open class CfnRotation internal constructor(
     public fun weeklySettings(): Any? = unwrap(this).getWeeklySettings()
 
     public interface Builder {
-      public fun dailySettings(dailySettings: List<String>) {
-      }
+      public fun dailySettings(dailySettings: List<String>)
 
-      public fun monthlySettings(monthlySettings: IResolvable) {
-      }
+      public fun monthlySettings(monthlySettings: IResolvable)
 
-      public fun monthlySettings(monthlySettings: List<Any>) {
-      }
+      public fun monthlySettings(monthlySettings: List<Any>)
 
-      public fun numberOfOnCalls(numberOfOnCalls: Number) {
-      }
+      public fun numberOfOnCalls(numberOfOnCalls: Number)
 
-      public fun recurrenceMultiplier(recurrenceMultiplier: Number) {
-      }
+      public fun recurrenceMultiplier(recurrenceMultiplier: Number)
 
-      public fun shiftCoverages(shiftCoverages: IResolvable) {
-      }
+      public fun shiftCoverages(shiftCoverages: IResolvable)
 
-      public fun shiftCoverages(shiftCoverages: List<Any>) {
-      }
+      public fun shiftCoverages(shiftCoverages: List<Any>)
 
-      public fun weeklySettings(weeklySettings: IResolvable) {
-      }
+      public fun weeklySettings(weeklySettings: IResolvable)
 
-      public fun weeklySettings(weeklySettings: List<Any>) {
-      }
+      public fun weeklySettings(weeklySettings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -394,39 +371,39 @@ public open class CfnRotation internal constructor(
           =
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.RecurrenceSettingsProperty.builder()
 
-      public override fun dailySettings(dailySettings: List<String>) {
+      override fun dailySettings(dailySettings: List<String>) {
         cdkBuilder.dailySettings(dailySettings)
       }
 
-      public override fun monthlySettings(monthlySettings: IResolvable) {
+      override fun monthlySettings(monthlySettings: IResolvable) {
         cdkBuilder.monthlySettings(monthlySettings.let(IResolvable::unwrap))
       }
 
-      public override fun monthlySettings(monthlySettings: List<Any>) {
+      override fun monthlySettings(monthlySettings: List<Any>) {
         cdkBuilder.monthlySettings(monthlySettings)
       }
 
-      public override fun numberOfOnCalls(numberOfOnCalls: Number) {
+      override fun numberOfOnCalls(numberOfOnCalls: Number) {
         cdkBuilder.numberOfOnCalls(numberOfOnCalls)
       }
 
-      public override fun recurrenceMultiplier(recurrenceMultiplier: Number) {
+      override fun recurrenceMultiplier(recurrenceMultiplier: Number) {
         cdkBuilder.recurrenceMultiplier(recurrenceMultiplier)
       }
 
-      public override fun shiftCoverages(shiftCoverages: IResolvable) {
+      override fun shiftCoverages(shiftCoverages: IResolvable) {
         cdkBuilder.shiftCoverages(shiftCoverages.let(IResolvable::unwrap))
       }
 
-      public override fun shiftCoverages(shiftCoverages: List<Any>) {
+      override fun shiftCoverages(shiftCoverages: List<Any>) {
         cdkBuilder.shiftCoverages(shiftCoverages)
       }
 
-      public override fun weeklySettings(weeklySettings: IResolvable) {
+      override fun weeklySettings(weeklySettings: IResolvable) {
         cdkBuilder.weeklySettings(weeklySettings.let(IResolvable::unwrap))
       }
 
-      public override fun weeklySettings(weeklySettings: List<Any>) {
+      override fun weeklySettings(weeklySettings: List<Any>) {
         cdkBuilder.weeklySettings(weeklySettings)
       }
 
@@ -439,18 +416,17 @@ public open class CfnRotation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.RecurrenceSettingsProperty,
     ) : RecurrenceSettingsProperty {
-      public override fun dailySettings(): List<String> = unwrap(this).getDailySettings() ?:
-          emptyList()
+      override fun dailySettings(): List<String> = unwrap(this).getDailySettings() ?: emptyList()
 
-      public override fun monthlySettings(): Any? = unwrap(this).getMonthlySettings()
+      override fun monthlySettings(): Any? = unwrap(this).getMonthlySettings()
 
-      public override fun numberOfOnCalls(): Number = unwrap(this).getNumberOfOnCalls()
+      override fun numberOfOnCalls(): Number = unwrap(this).getNumberOfOnCalls()
 
-      public override fun recurrenceMultiplier(): Number = unwrap(this).getRecurrenceMultiplier()
+      override fun recurrenceMultiplier(): Number = unwrap(this).getRecurrenceMultiplier()
 
-      public override fun shiftCoverages(): Any? = unwrap(this).getShiftCoverages()
+      override fun shiftCoverages(): Any? = unwrap(this).getShiftCoverages()
 
-      public override fun weeklySettings(): Any? = unwrap(this).getWeeklySettings()
+      override fun weeklySettings(): Any? = unwrap(this).getWeeklySettings()
     }
 
     public companion object {
@@ -479,14 +455,11 @@ public open class CfnRotation internal constructor(
     public fun dayOfWeek(): String
 
     public interface Builder {
-      public fun coverageTimes(coverageTimes: IResolvable) {
-      }
+      public fun coverageTimes(coverageTimes: IResolvable)
 
-      public fun coverageTimes(coverageTimes: List<Any>) {
-      }
+      public fun coverageTimes(coverageTimes: List<Any>)
 
-      public fun dayOfWeek(dayOfWeek: String) {
-      }
+      public fun dayOfWeek(dayOfWeek: String)
     }
 
     private class BuilderImpl : Builder {
@@ -494,15 +467,15 @@ public open class CfnRotation internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty.builder()
 
-      public override fun coverageTimes(coverageTimes: IResolvable) {
+      override fun coverageTimes(coverageTimes: IResolvable) {
         cdkBuilder.coverageTimes(coverageTimes.let(IResolvable::unwrap))
       }
 
-      public override fun coverageTimes(coverageTimes: List<Any>) {
+      override fun coverageTimes(coverageTimes: List<Any>) {
         cdkBuilder.coverageTimes(coverageTimes)
       }
 
-      public override fun dayOfWeek(dayOfWeek: String) {
+      override fun dayOfWeek(dayOfWeek: String) {
         cdkBuilder.dayOfWeek(dayOfWeek)
       }
 
@@ -515,9 +488,9 @@ public open class CfnRotation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.ShiftCoverageProperty,
     ) : ShiftCoverageProperty {
-      public override fun coverageTimes(): Any = unwrap(this).getCoverageTimes()
+      override fun coverageTimes(): Any = unwrap(this).getCoverageTimes()
 
-      public override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
+      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
     }
 
     public companion object {

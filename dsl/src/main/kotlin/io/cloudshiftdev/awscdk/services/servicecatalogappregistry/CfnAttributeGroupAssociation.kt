@@ -35,11 +35,9 @@ public open class CfnAttributeGroupAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun application(application: String) {
-    }
+    public fun application(application: String)
 
-    public fun attributeGroup(attributeGroup: String) {
-    }
+    public fun attributeGroup(attributeGroup: String)
   }
 
   private class BuilderImpl(
@@ -52,11 +50,11 @@ public open class CfnAttributeGroupAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociation.Builder.create(scope,
         id)
 
-    public override fun application(application: String) {
+    override fun application(application: String) {
       cdkBuilder.application(application)
     }
 
-    public override fun attributeGroup(attributeGroup: String) {
+    override fun attributeGroup(attributeGroup: String) {
       cdkBuilder.attributeGroup(attributeGroup)
     }
 

@@ -124,60 +124,44 @@ public open class CfnDomainConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun authorizerConfig(authorizerConfig: IResolvable) {
-    }
+    public fun authorizerConfig(authorizerConfig: IResolvable)
 
-    public fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty) {
-    }
+    public fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce4759ae749a4e31a1c4dd04b7986e8d3ab600f3d189c96aff7f6df92ee08972")
-    public fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty.Builder.() -> Unit) {
-    }
+    public fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty.Builder.() -> Unit)
 
-    public fun domainConfigurationName(domainConfigurationName: String) {
-    }
+    public fun domainConfigurationName(domainConfigurationName: String)
 
-    public fun domainConfigurationStatus(domainConfigurationStatus: String) {
-    }
+    public fun domainConfigurationStatus(domainConfigurationStatus: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun serverCertificateArns(serverCertificateArns: List<String>) {
-    }
+    public fun serverCertificateArns(serverCertificateArns: List<String>)
 
-    public fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
-    }
+    public fun serverCertificateConfig(serverCertificateConfig: IResolvable)
 
-    public fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty) {
-    }
+    public fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ae58e8262218ab639eeb7233475520481bad2558d197cb3703e0b35133e4ce6")
     public
-        fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty.Builder.() -> Unit) {
-    }
+        fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty.Builder.() -> Unit)
 
-    public fun serviceType(serviceType: String) {
-    }
+    public fun serviceType(serviceType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tlsConfig(tlsConfig: IResolvable) {
-    }
+    public fun tlsConfig(tlsConfig: IResolvable)
 
-    public fun tlsConfig(tlsConfig: TlsConfigProperty) {
-    }
+    public fun tlsConfig(tlsConfig: TlsConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4abac1239c8747cf17cc073364f15141980d897e685d7f16e484f886c1b66d5d")
-    public fun tlsConfig(tlsConfig: TlsConfigProperty.Builder.() -> Unit) {
-    }
+    public fun tlsConfig(tlsConfig: TlsConfigProperty.Builder.() -> Unit)
 
-    public fun validationCertificateArn(validationCertificateArn: String) {
-    }
+    public fun validationCertificateArn(validationCertificateArn: String)
   }
 
   private class BuilderImpl(
@@ -187,73 +171,71 @@ public open class CfnDomainConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnDomainConfiguration.Builder =
         software.amazon.awscdk.services.iot.CfnDomainConfiguration.Builder.create(scope, id)
 
-    public override fun authorizerConfig(authorizerConfig: IResolvable) {
+    override fun authorizerConfig(authorizerConfig: IResolvable) {
       cdkBuilder.authorizerConfig(authorizerConfig.let(IResolvable::unwrap))
     }
 
-    public override fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty) {
+    override fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty) {
       cdkBuilder.authorizerConfig(authorizerConfig.let(AuthorizerConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce4759ae749a4e31a1c4dd04b7986e8d3ab600f3d189c96aff7f6df92ee08972")
-    public override
-        fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty.Builder.() -> Unit): Unit =
-        authorizerConfig(AuthorizerConfigProperty(authorizerConfig))
+    override fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty.Builder.() -> Unit):
+        Unit = authorizerConfig(AuthorizerConfigProperty(authorizerConfig))
 
-    public override fun domainConfigurationName(domainConfigurationName: String) {
+    override fun domainConfigurationName(domainConfigurationName: String) {
       cdkBuilder.domainConfigurationName(domainConfigurationName)
     }
 
-    public override fun domainConfigurationStatus(domainConfigurationStatus: String) {
+    override fun domainConfigurationStatus(domainConfigurationStatus: String) {
       cdkBuilder.domainConfigurationStatus(domainConfigurationStatus)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun serverCertificateArns(serverCertificateArns: List<String>) {
+    override fun serverCertificateArns(serverCertificateArns: List<String>) {
       cdkBuilder.serverCertificateArns(serverCertificateArns)
     }
 
-    public override fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
+    override fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
       cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty) {
+    override fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty) {
       cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(ServerCertificateConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ae58e8262218ab639eeb7233475520481bad2558d197cb3703e0b35133e4ce6")
-    public override
+    override
         fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty.Builder.() -> Unit):
         Unit = serverCertificateConfig(ServerCertificateConfigProperty(serverCertificateConfig))
 
-    public override fun serviceType(serviceType: String) {
+    override fun serviceType(serviceType: String) {
       cdkBuilder.serviceType(serviceType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tlsConfig(tlsConfig: IResolvable) {
+    override fun tlsConfig(tlsConfig: IResolvable) {
       cdkBuilder.tlsConfig(tlsConfig.let(IResolvable::unwrap))
     }
 
-    public override fun tlsConfig(tlsConfig: TlsConfigProperty) {
+    override fun tlsConfig(tlsConfig: TlsConfigProperty) {
       cdkBuilder.tlsConfig(tlsConfig.let(TlsConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4abac1239c8747cf17cc073364f15141980d897e685d7f16e484f886c1b66d5d")
-    public override fun tlsConfig(tlsConfig: TlsConfigProperty.Builder.() -> Unit): Unit =
+    override fun tlsConfig(tlsConfig: TlsConfigProperty.Builder.() -> Unit): Unit =
         tlsConfig(TlsConfigProperty(tlsConfig))
 
-    public override fun validationCertificateArn(validationCertificateArn: String) {
+    override fun validationCertificateArn(validationCertificateArn: String) {
       cdkBuilder.validationCertificateArn(validationCertificateArn)
     }
 
@@ -286,11 +268,9 @@ public open class CfnDomainConfiguration internal constructor(
     public fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
 
     public interface Builder {
-      public fun enableOcspCheck(enableOcspCheck: Boolean) {
-      }
+      public fun enableOcspCheck(enableOcspCheck: Boolean)
 
-      public fun enableOcspCheck(enableOcspCheck: IResolvable) {
-      }
+      public fun enableOcspCheck(enableOcspCheck: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -299,11 +279,11 @@ public open class CfnDomainConfiguration internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty.builder()
 
-      public override fun enableOcspCheck(enableOcspCheck: Boolean) {
+      override fun enableOcspCheck(enableOcspCheck: Boolean) {
         cdkBuilder.enableOcspCheck(enableOcspCheck)
       }
 
-      public override fun enableOcspCheck(enableOcspCheck: IResolvable) {
+      override fun enableOcspCheck(enableOcspCheck: IResolvable) {
         cdkBuilder.enableOcspCheck(enableOcspCheck.let(IResolvable::unwrap))
       }
 
@@ -316,7 +296,7 @@ public open class CfnDomainConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty,
     ) : ServerCertificateConfigProperty {
-      public override fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
+      override fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
     }
 
     public companion object {
@@ -345,14 +325,11 @@ public open class CfnDomainConfiguration internal constructor(
     public fun defaultAuthorizerName(): String? = unwrap(this).getDefaultAuthorizerName()
 
     public interface Builder {
-      public fun allowAuthorizerOverride(allowAuthorizerOverride: Boolean) {
-      }
+      public fun allowAuthorizerOverride(allowAuthorizerOverride: Boolean)
 
-      public fun allowAuthorizerOverride(allowAuthorizerOverride: IResolvable) {
-      }
+      public fun allowAuthorizerOverride(allowAuthorizerOverride: IResolvable)
 
-      public fun defaultAuthorizerName(defaultAuthorizerName: String) {
-      }
+      public fun defaultAuthorizerName(defaultAuthorizerName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -361,15 +338,15 @@ public open class CfnDomainConfiguration internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty.builder()
 
-      public override fun allowAuthorizerOverride(allowAuthorizerOverride: Boolean) {
+      override fun allowAuthorizerOverride(allowAuthorizerOverride: Boolean) {
         cdkBuilder.allowAuthorizerOverride(allowAuthorizerOverride)
       }
 
-      public override fun allowAuthorizerOverride(allowAuthorizerOverride: IResolvable) {
+      override fun allowAuthorizerOverride(allowAuthorizerOverride: IResolvable) {
         cdkBuilder.allowAuthorizerOverride(allowAuthorizerOverride.let(IResolvable::unwrap))
       }
 
-      public override fun defaultAuthorizerName(defaultAuthorizerName: String) {
+      override fun defaultAuthorizerName(defaultAuthorizerName: String) {
         cdkBuilder.defaultAuthorizerName(defaultAuthorizerName)
       }
 
@@ -382,10 +359,9 @@ public open class CfnDomainConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty,
     ) : AuthorizerConfigProperty {
-      public override fun allowAuthorizerOverride(): Any? =
-          unwrap(this).getAllowAuthorizerOverride()
+      override fun allowAuthorizerOverride(): Any? = unwrap(this).getAllowAuthorizerOverride()
 
-      public override fun defaultAuthorizerName(): String? = unwrap(this).getDefaultAuthorizerName()
+      override fun defaultAuthorizerName(): String? = unwrap(this).getDefaultAuthorizerName()
     }
 
     public companion object {
@@ -412,8 +388,7 @@ public open class CfnDomainConfiguration internal constructor(
     public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
 
     public interface Builder {
-      public fun securityPolicy(securityPolicy: String) {
-      }
+      public fun securityPolicy(securityPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -421,7 +396,7 @@ public open class CfnDomainConfiguration internal constructor(
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty.Builder =
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty.builder()
 
-      public override fun securityPolicy(securityPolicy: String) {
+      override fun securityPolicy(securityPolicy: String) {
         cdkBuilder.securityPolicy(securityPolicy)
       }
 
@@ -434,7 +409,7 @@ public open class CfnDomainConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty,
     ) : TlsConfigProperty {
-      public override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
     }
 
     public companion object {
@@ -466,14 +441,11 @@ public open class CfnDomainConfiguration internal constructor(
         unwrap(this).getServerCertificateStatusDetail()
 
     public interface Builder {
-      public fun serverCertificateArn(serverCertificateArn: String) {
-      }
+      public fun serverCertificateArn(serverCertificateArn: String)
 
-      public fun serverCertificateStatus(serverCertificateStatus: String) {
-      }
+      public fun serverCertificateStatus(serverCertificateStatus: String)
 
-      public fun serverCertificateStatusDetail(serverCertificateStatusDetail: String) {
-      }
+      public fun serverCertificateStatusDetail(serverCertificateStatusDetail: String)
     }
 
     private class BuilderImpl : Builder {
@@ -482,15 +454,15 @@ public open class CfnDomainConfiguration internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty.builder()
 
-      public override fun serverCertificateArn(serverCertificateArn: String) {
+      override fun serverCertificateArn(serverCertificateArn: String) {
         cdkBuilder.serverCertificateArn(serverCertificateArn)
       }
 
-      public override fun serverCertificateStatus(serverCertificateStatus: String) {
+      override fun serverCertificateStatus(serverCertificateStatus: String) {
         cdkBuilder.serverCertificateStatus(serverCertificateStatus)
       }
 
-      public override fun serverCertificateStatusDetail(serverCertificateStatusDetail: String) {
+      override fun serverCertificateStatusDetail(serverCertificateStatusDetail: String) {
         cdkBuilder.serverCertificateStatusDetail(serverCertificateStatusDetail)
       }
 
@@ -503,12 +475,11 @@ public open class CfnDomainConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty,
     ) : ServerCertificateSummaryProperty {
-      public override fun serverCertificateArn(): String? = unwrap(this).getServerCertificateArn()
+      override fun serverCertificateArn(): String? = unwrap(this).getServerCertificateArn()
 
-      public override fun serverCertificateStatus(): String? =
-          unwrap(this).getServerCertificateStatus()
+      override fun serverCertificateStatus(): String? = unwrap(this).getServerCertificateStatus()
 
-      public override fun serverCertificateStatusDetail(): String? =
+      override fun serverCertificateStatusDetail(): String? =
           unwrap(this).getServerCertificateStatusDetail()
     }
 

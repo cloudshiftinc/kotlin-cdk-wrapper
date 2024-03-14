@@ -30,11 +30,9 @@ public open class CfnStackFleetAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun fleetName(fleetName: String) {
-    }
+    public fun fleetName(fleetName: String)
 
-    public fun stackName(stackName: String) {
-    }
+    public fun stackName(stackName: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnStackFleetAssociation internal constructor(
         software.amazon.awscdk.services.appstream.CfnStackFleetAssociation.Builder =
         software.amazon.awscdk.services.appstream.CfnStackFleetAssociation.Builder.create(scope, id)
 
-    public override fun fleetName(fleetName: String) {
+    override fun fleetName(fleetName: String) {
       cdkBuilder.fleetName(fleetName)
     }
 
-    public override fun stackName(stackName: String) {
+    override fun stackName(stackName: String) {
       cdkBuilder.stackName(stackName)
     }
 

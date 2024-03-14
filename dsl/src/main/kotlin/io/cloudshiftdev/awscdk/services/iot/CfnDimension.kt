@@ -49,17 +49,13 @@ public open class CfnDimension internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun stringValues(stringValues: List<String>) {
-    }
+    public fun stringValues(stringValues: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnDimension internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnDimension.Builder =
         software.amazon.awscdk.services.iot.CfnDimension.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun stringValues(stringValues: List<String>) {
+    override fun stringValues(stringValues: List<String>) {
       cdkBuilder.stringValues(stringValues)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

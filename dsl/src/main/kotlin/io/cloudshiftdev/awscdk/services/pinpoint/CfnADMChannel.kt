@@ -49,20 +49,15 @@ public open class CfnADMChannel internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun clientId(clientId: String) {
-    }
+    public fun clientId(clientId: String)
 
-    public fun clientSecret(clientSecret: String) {
-    }
+    public fun clientSecret(clientSecret: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
   }
 
   private class BuilderImpl(
@@ -72,23 +67,23 @@ public open class CfnADMChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnADMChannel.Builder =
         software.amazon.awscdk.services.pinpoint.CfnADMChannel.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun clientId(clientId: String) {
+    override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
-    public override fun clientSecret(clientSecret: String) {
+    override fun clientSecret(clientSecret: String) {
       cdkBuilder.clientSecret(clientSecret)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 

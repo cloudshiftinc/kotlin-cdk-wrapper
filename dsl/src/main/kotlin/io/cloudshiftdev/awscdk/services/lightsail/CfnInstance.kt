@@ -174,76 +174,55 @@ public open class CfnInstance internal constructor(
   }
 
   public interface Builder {
-    public fun addOns(addOns: IResolvable) {
-    }
+    public fun addOns(addOns: IResolvable)
 
-    public fun addOns(addOns: List<Any>) {
-    }
+    public fun addOns(addOns: List<Any>)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun blueprintId(blueprintId: String) {
-    }
+    public fun blueprintId(blueprintId: String)
 
-    public fun bundleId(bundleId: String) {
-    }
+    public fun bundleId(bundleId: String)
 
-    public fun hardware(hardware: IResolvable) {
-    }
+    public fun hardware(hardware: IResolvable)
 
-    public fun hardware(hardware: HardwareProperty) {
-    }
+    public fun hardware(hardware: HardwareProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("318e4e2265b5093756cd521587cb41ea42228588cc249c960bf5b1098ffb432b")
-    public fun hardware(hardware: HardwareProperty.Builder.() -> Unit) {
-    }
+    public fun hardware(hardware: HardwareProperty.Builder.() -> Unit)
 
-    public fun instanceName(instanceName: String) {
-    }
+    public fun instanceName(instanceName: String)
 
-    public fun keyPairName(keyPairName: String) {
-    }
+    public fun keyPairName(keyPairName: String)
 
-    public fun location(location: IResolvable) {
-    }
+    public fun location(location: IResolvable)
 
-    public fun location(location: LocationProperty) {
-    }
+    public fun location(location: LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("36af3fb44c3c13294964cfc4ce38b5c7e11856725f33f26fa2ad1413babf5556")
-    public fun location(location: LocationProperty.Builder.() -> Unit) {
-    }
+    public fun location(location: LocationProperty.Builder.() -> Unit)
 
-    public fun networking(networking: IResolvable) {
-    }
+    public fun networking(networking: IResolvable)
 
-    public fun networking(networking: NetworkingProperty) {
-    }
+    public fun networking(networking: NetworkingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80288eca0fcbbedd7b250e3f3f9a35cc5f5a324b591884dc14afe6c9ab68fca8")
-    public fun networking(networking: NetworkingProperty.Builder.() -> Unit) {
-    }
+    public fun networking(networking: NetworkingProperty.Builder.() -> Unit)
 
-    public fun state(state: IResolvable) {
-    }
+    public fun state(state: IResolvable)
 
-    public fun state(state: StateProperty) {
-    }
+    public fun state(state: StateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4a829a3ed327c56b1a17ef977c991c5be342ad5f069a80fc12be3e2cb4a07a9")
-    public fun state(state: StateProperty.Builder.() -> Unit) {
-    }
+    public fun state(state: StateProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userData(userData: String) {
-    }
+    public fun userData(userData: String)
   }
 
   private class BuilderImpl(
@@ -253,91 +232,90 @@ public open class CfnInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnInstance.Builder =
         software.amazon.awscdk.services.lightsail.CfnInstance.Builder.create(scope, id)
 
-    public override fun addOns(addOns: IResolvable) {
+    override fun addOns(addOns: IResolvable) {
       cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
     }
 
-    public override fun addOns(addOns: List<Any>) {
+    override fun addOns(addOns: List<Any>) {
       cdkBuilder.addOns(addOns)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun blueprintId(blueprintId: String) {
+    override fun blueprintId(blueprintId: String) {
       cdkBuilder.blueprintId(blueprintId)
     }
 
-    public override fun bundleId(bundleId: String) {
+    override fun bundleId(bundleId: String) {
       cdkBuilder.bundleId(bundleId)
     }
 
-    public override fun hardware(hardware: IResolvable) {
+    override fun hardware(hardware: IResolvable) {
       cdkBuilder.hardware(hardware.let(IResolvable::unwrap))
     }
 
-    public override fun hardware(hardware: HardwareProperty) {
+    override fun hardware(hardware: HardwareProperty) {
       cdkBuilder.hardware(hardware.let(HardwareProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("318e4e2265b5093756cd521587cb41ea42228588cc249c960bf5b1098ffb432b")
-    public override fun hardware(hardware: HardwareProperty.Builder.() -> Unit): Unit =
+    override fun hardware(hardware: HardwareProperty.Builder.() -> Unit): Unit =
         hardware(HardwareProperty(hardware))
 
-    public override fun instanceName(instanceName: String) {
+    override fun instanceName(instanceName: String) {
       cdkBuilder.instanceName(instanceName)
     }
 
-    public override fun keyPairName(keyPairName: String) {
+    override fun keyPairName(keyPairName: String) {
       cdkBuilder.keyPairName(keyPairName)
     }
 
-    public override fun location(location: IResolvable) {
+    override fun location(location: IResolvable) {
       cdkBuilder.location(location.let(IResolvable::unwrap))
     }
 
-    public override fun location(location: LocationProperty) {
+    override fun location(location: LocationProperty) {
       cdkBuilder.location(location.let(LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("36af3fb44c3c13294964cfc4ce38b5c7e11856725f33f26fa2ad1413babf5556")
-    public override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+    override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
         location(LocationProperty(location))
 
-    public override fun networking(networking: IResolvable) {
+    override fun networking(networking: IResolvable) {
       cdkBuilder.networking(networking.let(IResolvable::unwrap))
     }
 
-    public override fun networking(networking: NetworkingProperty) {
+    override fun networking(networking: NetworkingProperty) {
       cdkBuilder.networking(networking.let(NetworkingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80288eca0fcbbedd7b250e3f3f9a35cc5f5a324b591884dc14afe6c9ab68fca8")
-    public override fun networking(networking: NetworkingProperty.Builder.() -> Unit): Unit =
+    override fun networking(networking: NetworkingProperty.Builder.() -> Unit): Unit =
         networking(NetworkingProperty(networking))
 
-    public override fun state(state: IResolvable) {
+    override fun state(state: IResolvable) {
       cdkBuilder.state(state.let(IResolvable::unwrap))
     }
 
-    public override fun state(state: StateProperty) {
+    override fun state(state: StateProperty) {
       cdkBuilder.state(state.let(StateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4a829a3ed327c56b1a17ef977c991c5be342ad5f069a80fc12be3e2cb4a07a9")
-    public override fun state(state: StateProperty.Builder.() -> Unit): Unit =
-        state(StateProperty(state))
+    override fun state(state: StateProperty.Builder.() -> Unit): Unit = state(StateProperty(state))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userData(userData: String) {
+    override fun userData(userData: String) {
       cdkBuilder.userData(userData)
     }
 
@@ -369,8 +347,7 @@ public open class CfnInstance internal constructor(
     public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
 
     public interface Builder {
-      public fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
-      }
+      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
     }
 
     private class BuilderImpl : Builder {
@@ -378,7 +355,7 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty.builder()
 
-      public override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
+      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
         cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
       }
 
@@ -391,7 +368,7 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty,
     ) : AutoSnapshotAddOnProperty {
-      public override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
     }
 
     public companion object {
@@ -422,23 +399,18 @@ public open class CfnInstance internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun addOnType(addOnType: String) {
-      }
+      public fun addOnType(addOnType: String)
 
-      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
-      }
+      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable)
 
-      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
-      }
+      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("201312319c3956aadfaafdbc0e0e4e69b6f794a4ae1756e93487eb9d190035f0")
       public
-          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit) {
-      }
+          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -446,26 +418,25 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty.builder()
 
-      public override fun addOnType(addOnType: String) {
+      override fun addOnType(addOnType: String) {
         cdkBuilder.addOnType(addOnType)
       }
 
-      public override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
+      override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
         cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable::unwrap))
       }
 
-      public override
-          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
+      override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
         cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("201312319c3956aadfaafdbc0e0e4e69b6f794a4ae1756e93487eb9d190035f0")
-      public override
+      override
           fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit):
           Unit = autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty(autoSnapshotAddOnRequest))
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -476,12 +447,11 @@ public open class CfnInstance internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty,
     ) : AddOnProperty {
-      public override fun addOnType(): String = unwrap(this).getAddOnType()
+      override fun addOnType(): String = unwrap(this).getAddOnType()
 
-      public override fun autoSnapshotAddOnRequest(): Any? =
-          unwrap(this).getAutoSnapshotAddOnRequest()
+      override fun autoSnapshotAddOnRequest(): Any? = unwrap(this).getAutoSnapshotAddOnRequest()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -510,11 +480,9 @@ public open class CfnInstance internal constructor(
     public fun regionName(): String? = unwrap(this).getRegionName()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun regionName(regionName: String) {
-      }
+      public fun regionName(regionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -522,11 +490,11 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun regionName(regionName: String) {
+      override fun regionName(regionName: String) {
         cdkBuilder.regionName(regionName)
       }
 
@@ -538,9 +506,9 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty,
     ) : LocationProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun regionName(): String? = unwrap(this).getRegionName()
+      override fun regionName(): String? = unwrap(this).getRegionName()
     }
 
     public companion object {
@@ -567,8 +535,7 @@ public open class CfnInstance internal constructor(
     public fun gbPerMonthAllocated(): String? = unwrap(this).getGbPerMonthAllocated()
 
     public interface Builder {
-      public fun gbPerMonthAllocated(gbPerMonthAllocated: String) {
-      }
+      public fun gbPerMonthAllocated(gbPerMonthAllocated: String)
     }
 
     private class BuilderImpl : Builder {
@@ -576,7 +543,7 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty.builder()
 
-      public override fun gbPerMonthAllocated(gbPerMonthAllocated: String) {
+      override fun gbPerMonthAllocated(gbPerMonthAllocated: String) {
         cdkBuilder.gbPerMonthAllocated(gbPerMonthAllocated)
       }
 
@@ -589,7 +556,7 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty,
     ) : MonthlyTransferProperty {
-      public override fun gbPerMonthAllocated(): String? = unwrap(this).getGbPerMonthAllocated()
+      override fun gbPerMonthAllocated(): String? = unwrap(this).getGbPerMonthAllocated()
     }
 
     public companion object {
@@ -634,35 +601,25 @@ public open class CfnInstance internal constructor(
     public fun toPort(): Number? = unwrap(this).getToPort()
 
     public interface Builder {
-      public fun accessDirection(accessDirection: String) {
-      }
+      public fun accessDirection(accessDirection: String)
 
-      public fun accessFrom(accessFrom: String) {
-      }
+      public fun accessFrom(accessFrom: String)
 
-      public fun accessType(accessType: String) {
-      }
+      public fun accessType(accessType: String)
 
-      public fun cidrListAliases(cidrListAliases: List<String>) {
-      }
+      public fun cidrListAliases(cidrListAliases: List<String>)
 
-      public fun cidrs(cidrs: List<String>) {
-      }
+      public fun cidrs(cidrs: List<String>)
 
-      public fun commonName(commonName: String) {
-      }
+      public fun commonName(commonName: String)
 
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun ipv6Cidrs(ipv6Cidrs: List<String>) {
-      }
+      public fun ipv6Cidrs(ipv6Cidrs: List<String>)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -670,43 +627,43 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty.builder()
 
-      public override fun accessDirection(accessDirection: String) {
+      override fun accessDirection(accessDirection: String) {
         cdkBuilder.accessDirection(accessDirection)
       }
 
-      public override fun accessFrom(accessFrom: String) {
+      override fun accessFrom(accessFrom: String) {
         cdkBuilder.accessFrom(accessFrom)
       }
 
-      public override fun accessType(accessType: String) {
+      override fun accessType(accessType: String) {
         cdkBuilder.accessType(accessType)
       }
 
-      public override fun cidrListAliases(cidrListAliases: List<String>) {
+      override fun cidrListAliases(cidrListAliases: List<String>) {
         cdkBuilder.cidrListAliases(cidrListAliases)
       }
 
-      public override fun cidrs(cidrs: List<String>) {
+      override fun cidrs(cidrs: List<String>) {
         cdkBuilder.cidrs(cidrs)
       }
 
-      public override fun commonName(commonName: String) {
+      override fun commonName(commonName: String) {
         cdkBuilder.commonName(commonName)
       }
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun ipv6Cidrs(ipv6Cidrs: List<String>) {
+      override fun ipv6Cidrs(ipv6Cidrs: List<String>) {
         cdkBuilder.ipv6Cidrs(ipv6Cidrs)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -717,26 +674,26 @@ public open class CfnInstance internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty,
     ) : PortProperty {
-      public override fun accessDirection(): String? = unwrap(this).getAccessDirection()
+      override fun accessDirection(): String? = unwrap(this).getAccessDirection()
 
-      public override fun accessFrom(): String? = unwrap(this).getAccessFrom()
+      override fun accessFrom(): String? = unwrap(this).getAccessFrom()
 
-      public override fun accessType(): String? = unwrap(this).getAccessType()
+      override fun accessType(): String? = unwrap(this).getAccessType()
 
-      public override fun cidrListAliases(): List<String> = unwrap(this).getCidrListAliases() ?:
+      override fun cidrListAliases(): List<String> = unwrap(this).getCidrListAliases() ?:
           emptyList()
 
-      public override fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
+      override fun cidrs(): List<String> = unwrap(this).getCidrs() ?: emptyList()
 
-      public override fun commonName(): String? = unwrap(this).getCommonName()
+      override fun commonName(): String? = unwrap(this).getCommonName()
 
-      public override fun fromPort(): Number? = unwrap(this).getFromPort()
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
 
-      public override fun ipv6Cidrs(): List<String> = unwrap(this).getIpv6Cidrs() ?: emptyList()
+      override fun ipv6Cidrs(): List<String> = unwrap(this).getIpv6Cidrs() ?: emptyList()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
 
-      public override fun toPort(): Number? = unwrap(this).getToPort()
+      override fun toPort(): Number? = unwrap(this).getToPort()
     }
 
     public companion object {
@@ -767,17 +724,13 @@ public open class CfnInstance internal constructor(
     public fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
 
     public interface Builder {
-      public fun cpuCount(cpuCount: Number) {
-      }
+      public fun cpuCount(cpuCount: Number)
 
-      public fun disks(disks: IResolvable) {
-      }
+      public fun disks(disks: IResolvable)
 
-      public fun disks(disks: List<Any>) {
-      }
+      public fun disks(disks: List<Any>)
 
-      public fun ramSizeInGb(ramSizeInGb: Number) {
-      }
+      public fun ramSizeInGb(ramSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -785,19 +738,19 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty.builder()
 
-      public override fun cpuCount(cpuCount: Number) {
+      override fun cpuCount(cpuCount: Number) {
         cdkBuilder.cpuCount(cpuCount)
       }
 
-      public override fun disks(disks: IResolvable) {
+      override fun disks(disks: IResolvable) {
         cdkBuilder.disks(disks.let(IResolvable::unwrap))
       }
 
-      public override fun disks(disks: List<Any>) {
+      override fun disks(disks: List<Any>) {
         cdkBuilder.disks(disks)
       }
 
-      public override fun ramSizeInGb(ramSizeInGb: Number) {
+      override fun ramSizeInGb(ramSizeInGb: Number) {
         cdkBuilder.ramSizeInGb(ramSizeInGb)
       }
 
@@ -809,11 +762,11 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty,
     ) : HardwareProperty {
-      public override fun cpuCount(): Number? = unwrap(this).getCpuCount()
+      override fun cpuCount(): Number? = unwrap(this).getCpuCount()
 
-      public override fun disks(): Any? = unwrap(this).getDisks()
+      override fun disks(): Any? = unwrap(this).getDisks()
 
-      public override fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
+      override fun ramSizeInGb(): Number? = unwrap(this).getRamSizeInGb()
     }
 
     public companion object {
@@ -842,22 +795,17 @@ public open class CfnInstance internal constructor(
     public fun ports(): Any
 
     public interface Builder {
-      public fun monthlyTransfer(monthlyTransfer: IResolvable) {
-      }
+      public fun monthlyTransfer(monthlyTransfer: IResolvable)
 
-      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty) {
-      }
+      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ff4d0c710cbbf74a4e44ae395636ac31094b5f37aa90b66fd7e1eff401f62a7a")
-      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit) {
-      }
+      public fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit)
 
-      public fun ports(ports: IResolvable) {
-      }
+      public fun ports(ports: IResolvable)
 
-      public fun ports(ports: List<Any>) {
-      }
+      public fun ports(ports: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -865,25 +813,24 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty.builder()
 
-      public override fun monthlyTransfer(monthlyTransfer: IResolvable) {
+      override fun monthlyTransfer(monthlyTransfer: IResolvable) {
         cdkBuilder.monthlyTransfer(monthlyTransfer.let(IResolvable::unwrap))
       }
 
-      public override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty) {
+      override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty) {
         cdkBuilder.monthlyTransfer(monthlyTransfer.let(MonthlyTransferProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ff4d0c710cbbf74a4e44ae395636ac31094b5f37aa90b66fd7e1eff401f62a7a")
-      public override
-          fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit): Unit =
-          monthlyTransfer(MonthlyTransferProperty(monthlyTransfer))
+      override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty.Builder.() -> Unit):
+          Unit = monthlyTransfer(MonthlyTransferProperty(monthlyTransfer))
 
-      public override fun ports(ports: IResolvable) {
+      override fun ports(ports: IResolvable) {
         cdkBuilder.ports(ports.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: List<Any>) {
+      override fun ports(ports: List<Any>) {
         cdkBuilder.ports(ports)
       }
 
@@ -895,9 +842,9 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty,
     ) : NetworkingProperty {
-      public override fun monthlyTransfer(): Any? = unwrap(this).getMonthlyTransfer()
+      override fun monthlyTransfer(): Any? = unwrap(this).getMonthlyTransfer()
 
-      public override fun ports(): Any = unwrap(this).getPorts()
+      override fun ports(): Any = unwrap(this).getPorts()
     }
 
     public companion object {
@@ -926,11 +873,9 @@ public open class CfnInstance internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun code(code: Number) {
-      }
+      public fun code(code: Number)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -938,11 +883,11 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty.builder()
 
-      public override fun code(code: Number) {
+      override fun code(code: Number) {
         cdkBuilder.code(code)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -953,9 +898,9 @@ public open class CfnInstance internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty,
     ) : StateProperty {
-      public override fun code(): Number? = unwrap(this).getCode()
+      override fun code(): Number? = unwrap(this).getCode()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -994,29 +939,21 @@ public open class CfnInstance internal constructor(
     public fun sizeInGb(): String? = unwrap(this).getSizeInGb()
 
     public interface Builder {
-      public fun attachedTo(attachedTo: String) {
-      }
+      public fun attachedTo(attachedTo: String)
 
-      public fun attachmentState(attachmentState: String) {
-      }
+      public fun attachmentState(attachmentState: String)
 
-      public fun diskName(diskName: String) {
-      }
+      public fun diskName(diskName: String)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun isSystemDisk(isSystemDisk: Boolean) {
-      }
+      public fun isSystemDisk(isSystemDisk: Boolean)
 
-      public fun isSystemDisk(isSystemDisk: IResolvable) {
-      }
+      public fun isSystemDisk(isSystemDisk: IResolvable)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun sizeInGb(sizeInGb: String) {
-      }
+      public fun sizeInGb(sizeInGb: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1024,35 +961,35 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty.builder()
 
-      public override fun attachedTo(attachedTo: String) {
+      override fun attachedTo(attachedTo: String) {
         cdkBuilder.attachedTo(attachedTo)
       }
 
-      public override fun attachmentState(attachmentState: String) {
+      override fun attachmentState(attachmentState: String) {
         cdkBuilder.attachmentState(attachmentState)
       }
 
-      public override fun diskName(diskName: String) {
+      override fun diskName(diskName: String) {
         cdkBuilder.diskName(diskName)
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun isSystemDisk(isSystemDisk: Boolean) {
+      override fun isSystemDisk(isSystemDisk: Boolean) {
         cdkBuilder.isSystemDisk(isSystemDisk)
       }
 
-      public override fun isSystemDisk(isSystemDisk: IResolvable) {
+      override fun isSystemDisk(isSystemDisk: IResolvable) {
         cdkBuilder.isSystemDisk(isSystemDisk.let(IResolvable::unwrap))
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun sizeInGb(sizeInGb: String) {
+      override fun sizeInGb(sizeInGb: String) {
         cdkBuilder.sizeInGb(sizeInGb)
       }
 
@@ -1063,19 +1000,19 @@ public open class CfnInstance internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty,
     ) : DiskProperty {
-      public override fun attachedTo(): String? = unwrap(this).getAttachedTo()
+      override fun attachedTo(): String? = unwrap(this).getAttachedTo()
 
-      public override fun attachmentState(): String? = unwrap(this).getAttachmentState()
+      override fun attachmentState(): String? = unwrap(this).getAttachmentState()
 
-      public override fun diskName(): String = unwrap(this).getDiskName()
+      override fun diskName(): String = unwrap(this).getDiskName()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun isSystemDisk(): Any? = unwrap(this).getIsSystemDisk()
+      override fun isSystemDisk(): Any? = unwrap(this).getIsSystemDisk()
 
-      public override fun path(): String = unwrap(this).getPath()
+      override fun path(): String = unwrap(this).getPath()
 
-      public override fun sizeInGb(): String? = unwrap(this).getSizeInGb()
+      override fun sizeInGb(): String? = unwrap(this).getSizeInGb()
     }
 
     public companion object {

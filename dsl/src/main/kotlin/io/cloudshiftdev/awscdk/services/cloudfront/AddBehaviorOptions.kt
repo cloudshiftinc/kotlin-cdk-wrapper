@@ -39,92 +39,80 @@ public interface AddBehaviorOptions {
       unwrap(this).getViewerProtocolPolicy()?.let(ViewerProtocolPolicy::wrap)
 
   public interface Builder {
-    public fun allowedMethods(allowedMethods: AllowedMethods) {
-    }
+    public fun allowedMethods(allowedMethods: AllowedMethods)
 
-    public fun cachePolicy(cachePolicy: ICachePolicy) {
-    }
+    public fun cachePolicy(cachePolicy: ICachePolicy)
 
-    public fun cachedMethods(cachedMethods: CachedMethods) {
-    }
+    public fun cachedMethods(cachedMethods: CachedMethods)
 
-    public fun compress(compress: Boolean) {
-    }
+    public fun compress(compress: Boolean)
 
-    public fun edgeLambdas(edgeLambdas: List<EdgeLambda>) {
-    }
+    public fun edgeLambdas(edgeLambdas: List<EdgeLambda>)
 
-    public fun functionAssociations(functionAssociations: List<FunctionAssociation>) {
-    }
+    public fun functionAssociations(functionAssociations: List<FunctionAssociation>)
 
-    public fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy) {
-    }
+    public fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy)
 
-    public fun realtimeLogConfig(realtimeLogConfig: IRealtimeLogConfig) {
-    }
+    public fun realtimeLogConfig(realtimeLogConfig: IRealtimeLogConfig)
 
-    public fun responseHeadersPolicy(responseHeadersPolicy: IResponseHeadersPolicy) {
-    }
+    public fun responseHeadersPolicy(responseHeadersPolicy: IResponseHeadersPolicy)
 
-    public fun smoothStreaming(smoothStreaming: Boolean) {
-    }
+    public fun smoothStreaming(smoothStreaming: Boolean)
 
-    public fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>) {
-    }
+    public fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>)
 
-    public fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
-    }
+    public fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.AddBehaviorOptions.Builder =
         software.amazon.awscdk.services.cloudfront.AddBehaviorOptions.builder()
 
-    public override fun allowedMethods(allowedMethods: AllowedMethods) {
+    override fun allowedMethods(allowedMethods: AllowedMethods) {
       cdkBuilder.allowedMethods(allowedMethods.let(AllowedMethods::unwrap))
     }
 
-    public override fun cachePolicy(cachePolicy: ICachePolicy) {
+    override fun cachePolicy(cachePolicy: ICachePolicy) {
       cdkBuilder.cachePolicy(cachePolicy.let(ICachePolicy::unwrap))
     }
 
-    public override fun cachedMethods(cachedMethods: CachedMethods) {
+    override fun cachedMethods(cachedMethods: CachedMethods) {
       cdkBuilder.cachedMethods(cachedMethods.let(CachedMethods::unwrap))
     }
 
-    public override fun compress(compress: Boolean) {
+    override fun compress(compress: Boolean) {
       cdkBuilder.compress(compress)
     }
 
-    public override fun edgeLambdas(edgeLambdas: List<EdgeLambda>) {
+    override fun edgeLambdas(edgeLambdas: List<EdgeLambda>) {
       cdkBuilder.edgeLambdas(edgeLambdas.map(EdgeLambda::unwrap))
     }
 
-    public override fun functionAssociations(functionAssociations: List<FunctionAssociation>) {
+    override fun functionAssociations(functionAssociations: List<FunctionAssociation>) {
       cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation::unwrap))
     }
 
-    public override fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy) {
+    override fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy) {
       cdkBuilder.originRequestPolicy(originRequestPolicy.let(IOriginRequestPolicy::unwrap))
     }
 
-    public override fun realtimeLogConfig(realtimeLogConfig: IRealtimeLogConfig) {
+    override fun realtimeLogConfig(realtimeLogConfig: IRealtimeLogConfig) {
       cdkBuilder.realtimeLogConfig(realtimeLogConfig.let(IRealtimeLogConfig::unwrap))
     }
 
-    public override fun responseHeadersPolicy(responseHeadersPolicy: IResponseHeadersPolicy) {
+    override fun responseHeadersPolicy(responseHeadersPolicy: IResponseHeadersPolicy) {
       cdkBuilder.responseHeadersPolicy(responseHeadersPolicy.let(IResponseHeadersPolicy::unwrap))
     }
 
-    public override fun smoothStreaming(smoothStreaming: Boolean) {
+    override fun smoothStreaming(smoothStreaming: Boolean) {
       cdkBuilder.smoothStreaming(smoothStreaming)
     }
 
-    public override fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>) {
+    override fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>) {
       cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup::unwrap))
     }
 
-    public override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
+    override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
       cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))
     }
 
@@ -135,38 +123,38 @@ public interface AddBehaviorOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.AddBehaviorOptions,
   ) : AddBehaviorOptions {
-    public override fun allowedMethods(): AllowedMethods? =
+    override fun allowedMethods(): AllowedMethods? =
         unwrap(this).getAllowedMethods()?.let(AllowedMethods::wrap)
 
-    public override fun cachePolicy(): ICachePolicy? =
+    override fun cachePolicy(): ICachePolicy? =
         unwrap(this).getCachePolicy()?.let(ICachePolicy::wrap)
 
-    public override fun cachedMethods(): CachedMethods? =
+    override fun cachedMethods(): CachedMethods? =
         unwrap(this).getCachedMethods()?.let(CachedMethods::wrap)
 
-    public override fun compress(): Boolean? = unwrap(this).getCompress()
+    override fun compress(): Boolean? = unwrap(this).getCompress()
 
-    public override fun edgeLambdas(): List<EdgeLambda> =
+    override fun edgeLambdas(): List<EdgeLambda> =
         unwrap(this).getEdgeLambdas()?.map(EdgeLambda::wrap) ?: emptyList()
 
-    public override fun functionAssociations(): List<FunctionAssociation> =
+    override fun functionAssociations(): List<FunctionAssociation> =
         unwrap(this).getFunctionAssociations()?.map(FunctionAssociation::wrap) ?: emptyList()
 
-    public override fun originRequestPolicy(): IOriginRequestPolicy? =
+    override fun originRequestPolicy(): IOriginRequestPolicy? =
         unwrap(this).getOriginRequestPolicy()?.let(IOriginRequestPolicy::wrap)
 
-    public override fun realtimeLogConfig(): IRealtimeLogConfig? =
+    override fun realtimeLogConfig(): IRealtimeLogConfig? =
         unwrap(this).getRealtimeLogConfig()?.let(IRealtimeLogConfig::wrap)
 
-    public override fun responseHeadersPolicy(): IResponseHeadersPolicy? =
+    override fun responseHeadersPolicy(): IResponseHeadersPolicy? =
         unwrap(this).getResponseHeadersPolicy()?.let(IResponseHeadersPolicy::wrap)
 
-    public override fun smoothStreaming(): Boolean? = unwrap(this).getSmoothStreaming()
+    override fun smoothStreaming(): Boolean? = unwrap(this).getSmoothStreaming()
 
-    public override fun trustedKeyGroups(): List<IKeyGroup> =
+    override fun trustedKeyGroups(): List<IKeyGroup> =
         unwrap(this).getTrustedKeyGroups()?.map(IKeyGroup::wrap) ?: emptyList()
 
-    public override fun viewerProtocolPolicy(): ViewerProtocolPolicy? =
+    override fun viewerProtocolPolicy(): ViewerProtocolPolicy? =
         unwrap(this).getViewerProtocolPolicy()?.let(ViewerProtocolPolicy::wrap)
   }
 

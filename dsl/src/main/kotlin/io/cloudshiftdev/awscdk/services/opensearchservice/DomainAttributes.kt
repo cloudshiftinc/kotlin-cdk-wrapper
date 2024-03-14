@@ -9,11 +9,9 @@ public interface DomainAttributes {
   public fun domainEndpoint(): String
 
   public interface Builder {
-    public fun domainArn(domainArn: String) {
-    }
+    public fun domainArn(domainArn: String)
 
-    public fun domainEndpoint(domainEndpoint: String) {
-    }
+    public fun domainEndpoint(domainEndpoint: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface DomainAttributes {
         software.amazon.awscdk.services.opensearchservice.DomainAttributes.Builder =
         software.amazon.awscdk.services.opensearchservice.DomainAttributes.builder()
 
-    public override fun domainArn(domainArn: String) {
+    override fun domainArn(domainArn: String) {
       cdkBuilder.domainArn(domainArn)
     }
 
-    public override fun domainEndpoint(domainEndpoint: String) {
+    override fun domainEndpoint(domainEndpoint: String) {
       cdkBuilder.domainEndpoint(domainEndpoint)
     }
 
@@ -36,9 +34,9 @@ public interface DomainAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.DomainAttributes,
   ) : DomainAttributes {
-    public override fun domainArn(): String = unwrap(this).getDomainArn()
+    override fun domainArn(): String = unwrap(this).getDomainArn()
 
-    public override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
+    override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
   }
 
   public companion object {

@@ -20,14 +20,11 @@ public open class OpenIdConnectProvider internal constructor(
       unwrap(this).getOpenIdConnectProviderthumbprints()
 
   public interface Builder {
-    public fun clientIds(clientIds: List<String>) {
-    }
+    public fun clientIds(clientIds: List<String>)
 
-    public fun thumbprints(thumbprints: List<String>) {
-    }
+    public fun thumbprints(thumbprints: List<String>)
 
-    public fun url(url: String) {
-    }
+    public fun url(url: String)
   }
 
   private class BuilderImpl(
@@ -37,15 +34,15 @@ public open class OpenIdConnectProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.OpenIdConnectProvider.Builder =
         software.amazon.awscdk.services.iam.OpenIdConnectProvider.Builder.create(scope, id)
 
-    public override fun clientIds(clientIds: List<String>) {
+    override fun clientIds(clientIds: List<String>) {
       cdkBuilder.clientIds(clientIds)
     }
 
-    public override fun thumbprints(thumbprints: List<String>) {
+    override fun thumbprints(thumbprints: List<String>) {
       cdkBuilder.thumbprints(thumbprints)
     }
 
-    public override fun url(url: String) {
+    override fun url(url: String) {
       cdkBuilder.url(url)
     }
 

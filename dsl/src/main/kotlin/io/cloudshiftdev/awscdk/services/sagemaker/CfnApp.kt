@@ -74,31 +74,23 @@ public open class CfnApp internal constructor(
   }
 
   public interface Builder {
-    public fun appName(appName: String) {
-    }
+    public fun appName(appName: String)
 
-    public fun appType(appType: String) {
-    }
+    public fun appType(appType: String)
 
-    public fun domainId(domainId: String) {
-    }
+    public fun domainId(domainId: String)
 
-    public fun resourceSpec(resourceSpec: IResolvable) {
-    }
+    public fun resourceSpec(resourceSpec: IResolvable)
 
-    public fun resourceSpec(resourceSpec: ResourceSpecProperty) {
-    }
+    public fun resourceSpec(resourceSpec: ResourceSpecProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00a18d0d61a4fd4339ee80ec6475c78192cc13cedd2ffb51653e34e42b651554")
-    public fun resourceSpec(resourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-    }
+    public fun resourceSpec(resourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userProfileName(userProfileName: String) {
-    }
+    public fun userProfileName(userProfileName: String)
   }
 
   private class BuilderImpl(
@@ -108,36 +100,36 @@ public open class CfnApp internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnApp.Builder =
         software.amazon.awscdk.services.sagemaker.CfnApp.Builder.create(scope, id)
 
-    public override fun appName(appName: String) {
+    override fun appName(appName: String) {
       cdkBuilder.appName(appName)
     }
 
-    public override fun appType(appType: String) {
+    override fun appType(appType: String) {
       cdkBuilder.appType(appType)
     }
 
-    public override fun domainId(domainId: String) {
+    override fun domainId(domainId: String) {
       cdkBuilder.domainId(domainId)
     }
 
-    public override fun resourceSpec(resourceSpec: IResolvable) {
+    override fun resourceSpec(resourceSpec: IResolvable) {
       cdkBuilder.resourceSpec(resourceSpec.let(IResolvable::unwrap))
     }
 
-    public override fun resourceSpec(resourceSpec: ResourceSpecProperty) {
+    override fun resourceSpec(resourceSpec: ResourceSpecProperty) {
       cdkBuilder.resourceSpec(resourceSpec.let(ResourceSpecProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00a18d0d61a4fd4339ee80ec6475c78192cc13cedd2ffb51653e34e42b651554")
-    public override fun resourceSpec(resourceSpec: ResourceSpecProperty.Builder.() -> Unit): Unit =
+    override fun resourceSpec(resourceSpec: ResourceSpecProperty.Builder.() -> Unit): Unit =
         resourceSpec(ResourceSpecProperty(resourceSpec))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userProfileName(userProfileName: String) {
+    override fun userProfileName(userProfileName: String) {
       cdkBuilder.userProfileName(userProfileName)
     }
 
@@ -173,14 +165,11 @@ public open class CfnApp internal constructor(
     public fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
 
     public interface Builder {
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun sageMakerImageArn(sageMakerImageArn: String) {
-      }
+      public fun sageMakerImageArn(sageMakerImageArn: String)
 
-      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
-      }
+      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -188,15 +177,15 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty.builder()
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun sageMakerImageArn(sageMakerImageArn: String) {
+      override fun sageMakerImageArn(sageMakerImageArn: String) {
         cdkBuilder.sageMakerImageArn(sageMakerImageArn)
       }
 
-      public override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
+      override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
         cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
       }
 
@@ -207,12 +196,11 @@ public open class CfnApp internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sagemaker.CfnApp.ResourceSpecProperty,
     ) : ResourceSpecProperty {
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
+      override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
 
-      public override fun sageMakerImageVersionArn(): String? =
-          unwrap(this).getSageMakerImageVersionArn()
+      override fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
     }
 
     public companion object {

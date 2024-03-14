@@ -25,67 +25,59 @@ public interface DockerBuildOptions {
   public fun targetStage(): String? = unwrap(this).getTargetStage()
 
   public interface Builder {
-    public fun buildArgs(buildArgs: Map<String, String>) {
-    }
+    public fun buildArgs(buildArgs: Map<String, String>)
 
-    public fun cacheDisabled(cacheDisabled: Boolean) {
-    }
+    public fun cacheDisabled(cacheDisabled: Boolean)
 
-    public fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
-    }
+    public fun cacheFrom(cacheFrom: List<DockerCacheOption>)
 
-    public fun cacheTo(cacheTo: DockerCacheOption) {
-    }
+    public fun cacheTo(cacheTo: DockerCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0e894d0ab4286c09671433d4dc386c5887268852ccb2711b0a569e9989ce401")
-    public fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit) {
-    }
+    public fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit)
 
-    public fun `file`(`file`: String) {
-    }
+    public fun `file`(`file`: String)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun targetStage(targetStage: String) {
-    }
+    public fun targetStage(targetStage: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.DockerBuildOptions.Builder =
         software.amazon.awscdk.DockerBuildOptions.builder()
 
-    public override fun buildArgs(buildArgs: Map<String, String>) {
+    override fun buildArgs(buildArgs: Map<String, String>) {
       cdkBuilder.buildArgs(buildArgs)
     }
 
-    public override fun cacheDisabled(cacheDisabled: Boolean) {
+    override fun cacheDisabled(cacheDisabled: Boolean) {
       cdkBuilder.cacheDisabled(cacheDisabled)
     }
 
-    public override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
+    override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
       cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
     }
 
-    public override fun cacheTo(cacheTo: DockerCacheOption) {
+    override fun cacheTo(cacheTo: DockerCacheOption) {
       cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0e894d0ab4286c09671433d4dc386c5887268852ccb2711b0a569e9989ce401")
-    public override fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit): Unit =
+    override fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit): Unit =
         cacheTo(DockerCacheOption(cacheTo))
 
-    public override fun `file`(`file`: String) {
+    override fun `file`(`file`: String) {
       cdkBuilder.`file`(`file`)
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun targetStage(targetStage: String) {
+    override fun targetStage(targetStage: String) {
       cdkBuilder.targetStage(targetStage)
     }
 
@@ -95,21 +87,21 @@ public interface DockerBuildOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.DockerBuildOptions,
   ) : DockerBuildOptions {
-    public override fun buildArgs(): Map<String, String> = unwrap(this).getBuildArgs() ?: emptyMap()
+    override fun buildArgs(): Map<String, String> = unwrap(this).getBuildArgs() ?: emptyMap()
 
-    public override fun cacheDisabled(): Boolean? = unwrap(this).getCacheDisabled()
+    override fun cacheDisabled(): Boolean? = unwrap(this).getCacheDisabled()
 
-    public override fun cacheFrom(): List<DockerCacheOption> =
+    override fun cacheFrom(): List<DockerCacheOption> =
         unwrap(this).getCacheFrom()?.map(DockerCacheOption::wrap) ?: emptyList()
 
-    public override fun cacheTo(): DockerCacheOption? =
+    override fun cacheTo(): DockerCacheOption? =
         unwrap(this).getCacheTo()?.let(DockerCacheOption::wrap)
 
-    public override fun `file`(): String? = unwrap(this).getFile()
+    override fun `file`(): String? = unwrap(this).getFile()
 
-    public override fun platform(): String? = unwrap(this).getPlatform()
+    override fun platform(): String? = unwrap(this).getPlatform()
 
-    public override fun targetStage(): String? = unwrap(this).getTargetStage()
+    override fun targetStage(): String? = unwrap(this).getTargetStage()
   }
 
   public companion object {

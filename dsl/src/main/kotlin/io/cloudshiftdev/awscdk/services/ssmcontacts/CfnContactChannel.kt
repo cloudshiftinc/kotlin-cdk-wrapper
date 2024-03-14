@@ -55,23 +55,17 @@ public open class CfnContactChannel internal constructor(
   }
 
   public interface Builder {
-    public fun channelAddress(channelAddress: String) {
-    }
+    public fun channelAddress(channelAddress: String)
 
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun channelType(channelType: String) {
-    }
+    public fun channelType(channelType: String)
 
-    public fun contactId(contactId: String) {
-    }
+    public fun contactId(contactId: String)
 
-    public fun deferActivation(deferActivation: Boolean) {
-    }
+    public fun deferActivation(deferActivation: Boolean)
 
-    public fun deferActivation(deferActivation: IResolvable) {
-    }
+    public fun deferActivation(deferActivation: IResolvable)
   }
 
   private class BuilderImpl(
@@ -81,27 +75,27 @@ public open class CfnContactChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssmcontacts.CfnContactChannel.Builder =
         software.amazon.awscdk.services.ssmcontacts.CfnContactChannel.Builder.create(scope, id)
 
-    public override fun channelAddress(channelAddress: String) {
+    override fun channelAddress(channelAddress: String) {
       cdkBuilder.channelAddress(channelAddress)
     }
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun channelType(channelType: String) {
+    override fun channelType(channelType: String) {
       cdkBuilder.channelType(channelType)
     }
 
-    public override fun contactId(contactId: String) {
+    override fun contactId(contactId: String) {
       cdkBuilder.contactId(contactId)
     }
 
-    public override fun deferActivation(deferActivation: Boolean) {
+    override fun deferActivation(deferActivation: Boolean) {
       cdkBuilder.deferActivation(deferActivation)
     }
 
-    public override fun deferActivation(deferActivation: IResolvable) {
+    override fun deferActivation(deferActivation: IResolvable) {
       cdkBuilder.deferActivation(deferActivation.let(IResolvable::unwrap))
     }
 

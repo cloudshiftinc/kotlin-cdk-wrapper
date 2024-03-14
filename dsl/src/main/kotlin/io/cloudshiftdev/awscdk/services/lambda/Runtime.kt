@@ -27,20 +27,15 @@ public open class Runtime internal constructor(
   public open fun supportsSnapStart(): Boolean = unwrap(this).getSupportsSnapStart()
 
   public interface Builder {
-    public fun bundlingDockerImage(bundlingDockerImage: String) {
-    }
+    public fun bundlingDockerImage(bundlingDockerImage: String)
 
-    public fun isVariable(isVariable: Boolean) {
-    }
+    public fun isVariable(isVariable: Boolean)
 
-    public fun supportsCodeGuruProfiling(supportsCodeGuruProfiling: Boolean) {
-    }
+    public fun supportsCodeGuruProfiling(supportsCodeGuruProfiling: Boolean)
 
-    public fun supportsInlineCode(supportsInlineCode: Boolean) {
-    }
+    public fun supportsInlineCode(supportsInlineCode: Boolean)
 
-    public fun supportsSnapStart(supportsSnapStart: Boolean) {
-    }
+    public fun supportsSnapStart(supportsSnapStart: Boolean)
   }
 
   private class BuilderImpl(
@@ -50,23 +45,23 @@ public open class Runtime internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.Runtime.Builder =
         software.amazon.awscdk.services.lambda.Runtime.Builder.create(name, family)
 
-    public override fun bundlingDockerImage(bundlingDockerImage: String) {
+    override fun bundlingDockerImage(bundlingDockerImage: String) {
       cdkBuilder.bundlingDockerImage(bundlingDockerImage)
     }
 
-    public override fun isVariable(isVariable: Boolean) {
+    override fun isVariable(isVariable: Boolean) {
       cdkBuilder.isVariable(isVariable)
     }
 
-    public override fun supportsCodeGuruProfiling(supportsCodeGuruProfiling: Boolean) {
+    override fun supportsCodeGuruProfiling(supportsCodeGuruProfiling: Boolean) {
       cdkBuilder.supportsCodeGuruProfiling(supportsCodeGuruProfiling)
     }
 
-    public override fun supportsInlineCode(supportsInlineCode: Boolean) {
+    override fun supportsInlineCode(supportsInlineCode: Boolean) {
       cdkBuilder.supportsInlineCode(supportsInlineCode)
     }
 
-    public override fun supportsSnapStart(supportsSnapStart: Boolean) {
+    override fun supportsSnapStart(supportsSnapStart: Boolean) {
       cdkBuilder.supportsSnapStart(supportsSnapStart)
     }
 

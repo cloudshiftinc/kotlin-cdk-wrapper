@@ -112,56 +112,41 @@ public open class CfnGameSessionQueue internal constructor(
   }
 
   public interface Builder {
-    public fun customEventData(customEventData: String) {
-    }
+    public fun customEventData(customEventData: String)
 
-    public fun destinations(destinations: IResolvable) {
-    }
+    public fun destinations(destinations: IResolvable)
 
-    public fun destinations(destinations: List<Any>) {
-    }
+    public fun destinations(destinations: List<Any>)
 
-    public fun filterConfiguration(filterConfiguration: IResolvable) {
-    }
+    public fun filterConfiguration(filterConfiguration: IResolvable)
 
-    public fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
-    }
+    public fun filterConfiguration(filterConfiguration: FilterConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4717dd2c850e96d586fa6e1e0676b2e373d9cb31137318484e8a75790af3a5aa")
     public
-        fun filterConfiguration(filterConfiguration: FilterConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun filterConfiguration(filterConfiguration: FilterConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun notificationTarget(notificationTarget: String) {
-    }
+    public fun notificationTarget(notificationTarget: String)
 
-    public fun playerLatencyPolicies(playerLatencyPolicies: IResolvable) {
-    }
+    public fun playerLatencyPolicies(playerLatencyPolicies: IResolvable)
 
-    public fun playerLatencyPolicies(playerLatencyPolicies: List<Any>) {
-    }
+    public fun playerLatencyPolicies(playerLatencyPolicies: List<Any>)
 
-    public fun priorityConfiguration(priorityConfiguration: IResolvable) {
-    }
+    public fun priorityConfiguration(priorityConfiguration: IResolvable)
 
-    public fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty) {
-    }
+    public fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c59baed8336d52c5e8b8ad2a6ba6539415b0e2244a21170289c872eadd1474fd")
     public
-        fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeoutInSeconds(timeoutInSeconds: Number) {
-    }
+    public fun timeoutInSeconds(timeoutInSeconds: Number)
   }
 
   private class BuilderImpl(
@@ -171,68 +156,67 @@ public open class CfnGameSessionQueue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.Builder =
         software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.Builder.create(scope, id)
 
-    public override fun customEventData(customEventData: String) {
+    override fun customEventData(customEventData: String) {
       cdkBuilder.customEventData(customEventData)
     }
 
-    public override fun destinations(destinations: IResolvable) {
+    override fun destinations(destinations: IResolvable) {
       cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
     }
 
-    public override fun destinations(destinations: List<Any>) {
+    override fun destinations(destinations: List<Any>) {
       cdkBuilder.destinations(destinations)
     }
 
-    public override fun filterConfiguration(filterConfiguration: IResolvable) {
+    override fun filterConfiguration(filterConfiguration: IResolvable) {
       cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
+    override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
       cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4717dd2c850e96d586fa6e1e0676b2e373d9cb31137318484e8a75790af3a5aa")
-    public override
+    override
         fun filterConfiguration(filterConfiguration: FilterConfigurationProperty.Builder.() -> Unit):
         Unit = filterConfiguration(FilterConfigurationProperty(filterConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun notificationTarget(notificationTarget: String) {
+    override fun notificationTarget(notificationTarget: String) {
       cdkBuilder.notificationTarget(notificationTarget)
     }
 
-    public override fun playerLatencyPolicies(playerLatencyPolicies: IResolvable) {
+    override fun playerLatencyPolicies(playerLatencyPolicies: IResolvable) {
       cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.let(IResolvable::unwrap))
     }
 
-    public override fun playerLatencyPolicies(playerLatencyPolicies: List<Any>) {
+    override fun playerLatencyPolicies(playerLatencyPolicies: List<Any>) {
       cdkBuilder.playerLatencyPolicies(playerLatencyPolicies)
     }
 
-    public override fun priorityConfiguration(priorityConfiguration: IResolvable) {
+    override fun priorityConfiguration(priorityConfiguration: IResolvable) {
       cdkBuilder.priorityConfiguration(priorityConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty) {
+    override fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty) {
       cdkBuilder.priorityConfiguration(priorityConfiguration.let(PriorityConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c59baed8336d52c5e8b8ad2a6ba6539415b0e2244a21170289c872eadd1474fd")
-    public override
+    override
         fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty.Builder.() -> Unit):
         Unit = priorityConfiguration(PriorityConfigurationProperty(priorityConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeoutInSeconds(timeoutInSeconds: Number) {
+    override fun timeoutInSeconds(timeoutInSeconds: Number) {
       cdkBuilder.timeoutInSeconds(timeoutInSeconds)
     }
 
@@ -267,11 +251,9 @@ public open class CfnGameSessionQueue internal constructor(
     public fun priorityOrder(): List<String> = unwrap(this).getPriorityOrder() ?: emptyList()
 
     public interface Builder {
-      public fun locationOrder(locationOrder: List<String>) {
-      }
+      public fun locationOrder(locationOrder: List<String>)
 
-      public fun priorityOrder(priorityOrder: List<String>) {
-      }
+      public fun priorityOrder(priorityOrder: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -280,11 +262,11 @@ public open class CfnGameSessionQueue internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty.builder()
 
-      public override fun locationOrder(locationOrder: List<String>) {
+      override fun locationOrder(locationOrder: List<String>) {
         cdkBuilder.locationOrder(locationOrder)
       }
 
-      public override fun priorityOrder(priorityOrder: List<String>) {
+      override fun priorityOrder(priorityOrder: List<String>) {
         cdkBuilder.priorityOrder(priorityOrder)
       }
 
@@ -297,11 +279,9 @@ public open class CfnGameSessionQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty,
     ) : PriorityConfigurationProperty {
-      public override fun locationOrder(): List<String> = unwrap(this).getLocationOrder() ?:
-          emptyList()
+      override fun locationOrder(): List<String> = unwrap(this).getLocationOrder() ?: emptyList()
 
-      public override fun priorityOrder(): List<String> = unwrap(this).getPriorityOrder() ?:
-          emptyList()
+      override fun priorityOrder(): List<String> = unwrap(this).getPriorityOrder() ?: emptyList()
     }
 
     public companion object {
@@ -328,8 +308,7 @@ public open class CfnGameSessionQueue internal constructor(
     public fun destinationArn(): String? = unwrap(this).getDestinationArn()
 
     public interface Builder {
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,7 +316,7 @@ public open class CfnGameSessionQueue internal constructor(
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty.builder()
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
@@ -350,7 +329,7 @@ public open class CfnGameSessionQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty,
     ) : DestinationProperty {
-      public override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
     }
 
     public companion object {
@@ -381,11 +360,9 @@ public open class CfnGameSessionQueue internal constructor(
 
     public interface Builder {
       public
-          fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number) {
-      }
+          fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number)
 
-      public fun policyDurationSeconds(policyDurationSeconds: Number) {
-      }
+      public fun policyDurationSeconds(policyDurationSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -394,12 +371,12 @@ public open class CfnGameSessionQueue internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty.builder()
 
-      public override
+      override
           fun maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds: Number) {
         cdkBuilder.maximumIndividualPlayerLatencyMilliseconds(maximumIndividualPlayerLatencyMilliseconds)
       }
 
-      public override fun policyDurationSeconds(policyDurationSeconds: Number) {
+      override fun policyDurationSeconds(policyDurationSeconds: Number) {
         cdkBuilder.policyDurationSeconds(policyDurationSeconds)
       }
 
@@ -412,10 +389,10 @@ public open class CfnGameSessionQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty,
     ) : PlayerLatencyPolicyProperty {
-      public override fun maximumIndividualPlayerLatencyMilliseconds(): Number? =
+      override fun maximumIndividualPlayerLatencyMilliseconds(): Number? =
           unwrap(this).getMaximumIndividualPlayerLatencyMilliseconds()
 
-      public override fun policyDurationSeconds(): Number? = unwrap(this).getPolicyDurationSeconds()
+      override fun policyDurationSeconds(): Number? = unwrap(this).getPolicyDurationSeconds()
     }
 
     public companion object {
@@ -442,8 +419,7 @@ public open class CfnGameSessionQueue internal constructor(
     public fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?: emptyList()
 
     public interface Builder {
-      public fun allowedLocations(allowedLocations: List<String>) {
-      }
+      public fun allowedLocations(allowedLocations: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -452,7 +428,7 @@ public open class CfnGameSessionQueue internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty.builder()
 
-      public override fun allowedLocations(allowedLocations: List<String>) {
+      override fun allowedLocations(allowedLocations: List<String>) {
         cdkBuilder.allowedLocations(allowedLocations)
       }
 
@@ -465,7 +441,7 @@ public open class CfnGameSessionQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty,
     ) : FilterConfigurationProperty {
-      public override fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?:
+      override fun allowedLocations(): List<String> = unwrap(this).getAllowedLocations() ?:
           emptyList()
     }
 
@@ -493,8 +469,7 @@ public open class CfnGameSessionQueue internal constructor(
     public fun destinationArn(): String? = unwrap(this).getDestinationArn()
 
     public interface Builder {
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -503,7 +478,7 @@ public open class CfnGameSessionQueue internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty.builder()
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
@@ -516,7 +491,7 @@ public open class CfnGameSessionQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty,
     ) : GameSessionQueueDestinationProperty {
-      public override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
     }
 
     public companion object {

@@ -60,23 +60,18 @@ public open class CfnSubscriptionDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun initialVersion(initialVersion: IResolvable) {
-    }
+    public fun initialVersion(initialVersion: IResolvable)
 
-    public fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty) {
-    }
+    public fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("021af35f0f0d44f88db7cae98553a0b2efb9d2f31c4c512a04f55a0db15e3104")
     public
-        fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty.Builder.() -> Unit) {
-    }
+        fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -88,25 +83,25 @@ public open class CfnSubscriptionDefinition internal constructor(
         software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.Builder.create(scope,
         id)
 
-    public override fun initialVersion(initialVersion: IResolvable) {
+    override fun initialVersion(initialVersion: IResolvable) {
       cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
     }
 
-    public override fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty) {
+    override fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty) {
       cdkBuilder.initialVersion(initialVersion.let(SubscriptionDefinitionVersionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("021af35f0f0d44f88db7cae98553a0b2efb9d2f31c4c512a04f55a0db15e3104")
-    public override
+    override
         fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty.Builder.() -> Unit):
         Unit = initialVersion(SubscriptionDefinitionVersionProperty(initialVersion))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -140,11 +135,9 @@ public open class CfnSubscriptionDefinition internal constructor(
     public fun subscriptions(): Any
 
     public interface Builder {
-      public fun subscriptions(subscriptions: IResolvable) {
-      }
+      public fun subscriptions(subscriptions: IResolvable)
 
-      public fun subscriptions(subscriptions: List<Any>) {
-      }
+      public fun subscriptions(subscriptions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -153,11 +146,11 @@ public open class CfnSubscriptionDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty.builder()
 
-      public override fun subscriptions(subscriptions: IResolvable) {
+      override fun subscriptions(subscriptions: IResolvable) {
         cdkBuilder.subscriptions(subscriptions.let(IResolvable::unwrap))
       }
 
-      public override fun subscriptions(subscriptions: List<Any>) {
+      override fun subscriptions(subscriptions: List<Any>) {
         cdkBuilder.subscriptions(subscriptions)
       }
 
@@ -170,7 +163,7 @@ public open class CfnSubscriptionDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty,
     ) : SubscriptionDefinitionVersionProperty {
-      public override fun subscriptions(): Any = unwrap(this).getSubscriptions()
+      override fun subscriptions(): Any = unwrap(this).getSubscriptions()
     }
 
     public companion object {
@@ -204,17 +197,13 @@ public open class CfnSubscriptionDefinition internal constructor(
     public fun target(): String
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun source(source: String) {
-      }
+      public fun source(source: String)
 
-      public fun subject(subject: String) {
-      }
+      public fun subject(subject: String)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
     }
 
     private class BuilderImpl : Builder {
@@ -223,19 +212,19 @@ public open class CfnSubscriptionDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun source(source: String) {
+      override fun source(source: String) {
         cdkBuilder.source(source)
       }
 
-      public override fun subject(subject: String) {
+      override fun subject(subject: String) {
         cdkBuilder.subject(subject)
       }
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
@@ -248,13 +237,13 @@ public open class CfnSubscriptionDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionProperty,
     ) : SubscriptionProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun source(): String = unwrap(this).getSource()
+      override fun source(): String = unwrap(this).getSource()
 
-      public override fun subject(): String = unwrap(this).getSubject()
+      override fun subject(): String = unwrap(this).getSubject()
 
-      public override fun target(): String = unwrap(this).getTarget()
+      override fun target(): String = unwrap(this).getTarget()
     }
 
     public companion object {

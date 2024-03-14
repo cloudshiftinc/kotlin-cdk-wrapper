@@ -62,20 +62,15 @@ public open class CfnFramework internal constructor(
   }
 
   public interface Builder {
-    public fun frameworkControls(frameworkControls: IResolvable) {
-    }
+    public fun frameworkControls(frameworkControls: IResolvable)
 
-    public fun frameworkControls(frameworkControls: List<Any>) {
-    }
+    public fun frameworkControls(frameworkControls: List<Any>)
 
-    public fun frameworkDescription(frameworkDescription: String) {
-    }
+    public fun frameworkDescription(frameworkDescription: String)
 
-    public fun frameworkName(frameworkName: String) {
-    }
+    public fun frameworkName(frameworkName: String)
 
-    public fun frameworkTags(frameworkTags: List<CfnTag>) {
-    }
+    public fun frameworkTags(frameworkTags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -85,23 +80,23 @@ public open class CfnFramework internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnFramework.Builder =
         software.amazon.awscdk.services.backup.CfnFramework.Builder.create(scope, id)
 
-    public override fun frameworkControls(frameworkControls: IResolvable) {
+    override fun frameworkControls(frameworkControls: IResolvable) {
       cdkBuilder.frameworkControls(frameworkControls.let(IResolvable::unwrap))
     }
 
-    public override fun frameworkControls(frameworkControls: List<Any>) {
+    override fun frameworkControls(frameworkControls: List<Any>) {
       cdkBuilder.frameworkControls(frameworkControls)
     }
 
-    public override fun frameworkDescription(frameworkDescription: String) {
+    override fun frameworkDescription(frameworkDescription: String) {
       cdkBuilder.frameworkDescription(frameworkDescription)
     }
 
-    public override fun frameworkName(frameworkName: String) {
+    override fun frameworkName(frameworkName: String) {
       cdkBuilder.frameworkName(frameworkName)
     }
 
-    public override fun frameworkTags(frameworkTags: List<CfnTag>) {
+    override fun frameworkTags(frameworkTags: List<CfnTag>) {
       cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
     }
 
@@ -137,17 +132,13 @@ public open class CfnFramework internal constructor(
     public fun controlScope(): Any? = unwrap(this).getControlScope()
 
     public interface Builder {
-      public fun controlInputParameters(controlInputParameters: IResolvable) {
-      }
+      public fun controlInputParameters(controlInputParameters: IResolvable)
 
-      public fun controlInputParameters(controlInputParameters: List<Any>) {
-      }
+      public fun controlInputParameters(controlInputParameters: List<Any>)
 
-      public fun controlName(controlName: String) {
-      }
+      public fun controlName(controlName: String)
 
-      public fun controlScope(controlScope: Any) {
-      }
+      public fun controlScope(controlScope: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -155,19 +146,19 @@ public open class CfnFramework internal constructor(
           software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.Builder =
           software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.builder()
 
-      public override fun controlInputParameters(controlInputParameters: IResolvable) {
+      override fun controlInputParameters(controlInputParameters: IResolvable) {
         cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
       }
 
-      public override fun controlInputParameters(controlInputParameters: List<Any>) {
+      override fun controlInputParameters(controlInputParameters: List<Any>) {
         cdkBuilder.controlInputParameters(controlInputParameters)
       }
 
-      public override fun controlName(controlName: String) {
+      override fun controlName(controlName: String) {
         cdkBuilder.controlName(controlName)
       }
 
-      public override fun controlScope(controlScope: Any) {
+      override fun controlScope(controlScope: Any) {
         cdkBuilder.controlScope(controlScope)
       }
 
@@ -180,11 +171,11 @@ public open class CfnFramework internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
     ) : FrameworkControlProperty {
-      public override fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
+      override fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
 
-      public override fun controlName(): String = unwrap(this).getControlName()
+      override fun controlName(): String = unwrap(this).getControlName()
 
-      public override fun controlScope(): Any? = unwrap(this).getControlScope()
+      override fun controlScope(): Any? = unwrap(this).getControlScope()
     }
 
     public companion object {
@@ -217,14 +208,11 @@ public open class CfnFramework internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun complianceResourceIds(complianceResourceIds: List<String>) {
-      }
+      public fun complianceResourceIds(complianceResourceIds: List<String>)
 
-      public fun complianceResourceTypes(complianceResourceTypes: List<String>) {
-      }
+      public fun complianceResourceTypes(complianceResourceTypes: List<String>)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -232,15 +220,15 @@ public open class CfnFramework internal constructor(
           software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty.Builder =
           software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty.builder()
 
-      public override fun complianceResourceIds(complianceResourceIds: List<String>) {
+      override fun complianceResourceIds(complianceResourceIds: List<String>) {
         cdkBuilder.complianceResourceIds(complianceResourceIds)
       }
 
-      public override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
+      override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
         cdkBuilder.complianceResourceTypes(complianceResourceTypes)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -252,14 +240,13 @@ public open class CfnFramework internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty,
     ) : ControlScopeProperty {
-      public override fun complianceResourceIds(): List<String> =
-          unwrap(this).getComplianceResourceIds() ?: emptyList()
+      override fun complianceResourceIds(): List<String> = unwrap(this).getComplianceResourceIds()
+          ?: emptyList()
 
-      public override fun complianceResourceTypes(): List<String> =
+      override fun complianceResourceTypes(): List<String> =
           unwrap(this).getComplianceResourceTypes() ?: emptyList()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -288,11 +275,9 @@ public open class CfnFramework internal constructor(
     public fun parameterValue(): String
 
     public interface Builder {
-      public fun parameterName(parameterName: String) {
-      }
+      public fun parameterName(parameterName: String)
 
-      public fun parameterValue(parameterValue: String) {
-      }
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -301,11 +286,11 @@ public open class CfnFramework internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.builder()
 
-      public override fun parameterName(parameterName: String) {
+      override fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
       }
 
-      public override fun parameterValue(parameterValue: String) {
+      override fun parameterValue(parameterValue: String) {
         cdkBuilder.parameterValue(parameterValue)
       }
 
@@ -318,9 +303,9 @@ public open class CfnFramework internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
     ) : ControlInputParameterProperty {
-      public override fun parameterName(): String = unwrap(this).getParameterName()
+      override fun parameterName(): String = unwrap(this).getParameterName()
 
-      public override fun parameterValue(): String = unwrap(this).getParameterValue()
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
     }
 
     public companion object {

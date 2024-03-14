@@ -127,60 +127,43 @@ public open class CfnGameServerGroup internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-    }
+    public fun autoScalingPolicy(autoScalingPolicy: IResolvable)
 
-    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-    }
+    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("260b1af760b6009f2926f0ab103dda31affdd9a53f535ca8a3e9e09e0d373604")
-    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit) {
-    }
+    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit)
 
-    public fun balancingStrategy(balancingStrategy: String) {
-    }
+    public fun balancingStrategy(balancingStrategy: String)
 
-    public fun deleteOption(deleteOption: String) {
-    }
+    public fun deleteOption(deleteOption: String)
 
-    public fun gameServerGroupName(gameServerGroupName: String) {
-    }
+    public fun gameServerGroupName(gameServerGroupName: String)
 
-    public fun gameServerProtectionPolicy(gameServerProtectionPolicy: String) {
-    }
+    public fun gameServerProtectionPolicy(gameServerProtectionPolicy: String)
 
-    public fun instanceDefinitions(instanceDefinitions: IResolvable) {
-    }
+    public fun instanceDefinitions(instanceDefinitions: IResolvable)
 
-    public fun instanceDefinitions(instanceDefinitions: List<Any>) {
-    }
+    public fun instanceDefinitions(instanceDefinitions: List<Any>)
 
-    public fun launchTemplate(launchTemplate: IResolvable) {
-    }
+    public fun launchTemplate(launchTemplate: IResolvable)
 
-    public fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
-    }
+    public fun launchTemplate(launchTemplate: LaunchTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a0c6f4186d7a0bb0682a46568f56d9ab96c36e270752b16591b78b3cbf5f45ad")
-    public fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit)
 
-    public fun maxSize(maxSize: Number) {
-    }
+    public fun maxSize(maxSize: Number)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcSubnets(vpcSubnets: List<String>) {
-    }
+    public fun vpcSubnets(vpcSubnets: List<String>)
   }
 
   private class BuilderImpl(
@@ -190,74 +173,73 @@ public open class CfnGameServerGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.Builder =
         software.amazon.awscdk.services.gamelift.CfnGameServerGroup.Builder.create(scope, id)
 
-    public override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
+    override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
       cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
+    override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
       cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("260b1af760b6009f2926f0ab103dda31affdd9a53f535ca8a3e9e09e0d373604")
-    public override
-        fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit): Unit
-        = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
+    override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit):
+        Unit = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
 
-    public override fun balancingStrategy(balancingStrategy: String) {
+    override fun balancingStrategy(balancingStrategy: String) {
       cdkBuilder.balancingStrategy(balancingStrategy)
     }
 
-    public override fun deleteOption(deleteOption: String) {
+    override fun deleteOption(deleteOption: String) {
       cdkBuilder.deleteOption(deleteOption)
     }
 
-    public override fun gameServerGroupName(gameServerGroupName: String) {
+    override fun gameServerGroupName(gameServerGroupName: String) {
       cdkBuilder.gameServerGroupName(gameServerGroupName)
     }
 
-    public override fun gameServerProtectionPolicy(gameServerProtectionPolicy: String) {
+    override fun gameServerProtectionPolicy(gameServerProtectionPolicy: String) {
       cdkBuilder.gameServerProtectionPolicy(gameServerProtectionPolicy)
     }
 
-    public override fun instanceDefinitions(instanceDefinitions: IResolvable) {
+    override fun instanceDefinitions(instanceDefinitions: IResolvable) {
       cdkBuilder.instanceDefinitions(instanceDefinitions.let(IResolvable::unwrap))
     }
 
-    public override fun instanceDefinitions(instanceDefinitions: List<Any>) {
+    override fun instanceDefinitions(instanceDefinitions: List<Any>) {
       cdkBuilder.instanceDefinitions(instanceDefinitions)
     }
 
-    public override fun launchTemplate(launchTemplate: IResolvable) {
+    override fun launchTemplate(launchTemplate: IResolvable) {
       cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
     }
 
-    public override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
+    override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
       cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a0c6f4186d7a0bb0682a46568f56d9ab96c36e270752b16591b78b3cbf5f45ad")
-    public override fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit):
-        Unit = launchTemplate(LaunchTemplateProperty(launchTemplate))
+    override fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit): Unit =
+        launchTemplate(LaunchTemplateProperty(launchTemplate))
 
-    public override fun maxSize(maxSize: Number) {
+    override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: List<String>) {
+    override fun vpcSubnets(vpcSubnets: List<String>) {
       cdkBuilder.vpcSubnets(vpcSubnets)
     }
 
@@ -294,14 +276,11 @@ public open class CfnGameServerGroup internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun launchTemplateId(launchTemplateId: String) {
-      }
+      public fun launchTemplateId(launchTemplateId: String)
 
-      public fun launchTemplateName(launchTemplateName: String) {
-      }
+      public fun launchTemplateName(launchTemplateName: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -310,15 +289,15 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty.builder()
 
-      public override fun launchTemplateId(launchTemplateId: String) {
+      override fun launchTemplateId(launchTemplateId: String) {
         cdkBuilder.launchTemplateId(launchTemplateId)
       }
 
-      public override fun launchTemplateName(launchTemplateName: String) {
+      override fun launchTemplateName(launchTemplateName: String) {
         cdkBuilder.launchTemplateName(launchTemplateName)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -331,11 +310,11 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty,
     ) : LaunchTemplateProperty {
-      public override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
-      public override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -362,8 +341,7 @@ public open class CfnGameServerGroup internal constructor(
     public fun targetValue(): Number
 
     public interface Builder {
-      public fun targetValue(targetValue: Number) {
-      }
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -372,7 +350,7 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty.builder()
 
-      public override fun targetValue(targetValue: Number) {
+      override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
 
@@ -385,7 +363,7 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty,
     ) : TargetTrackingConfigurationProperty {
-      public override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
@@ -415,21 +393,17 @@ public open class CfnGameServerGroup internal constructor(
     public fun targetTrackingConfiguration(): Any
 
     public interface Builder {
-      public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
-      }
+      public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number)
 
-      public fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
-      }
+      public fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable)
 
       public
-          fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty) {
-      }
+          fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ea4e8fc6fbae60f62cc711e3cf2d8fd6d3e515c00aeeb96e8d56967a991c260")
       public
-          fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -438,22 +412,22 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty.builder()
 
-      public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
+      override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
         cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
       }
 
-      public override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
+      override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
         cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty) {
         cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(TargetTrackingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ea4e8fc6fbae60f62cc711e3cf2d8fd6d3e515c00aeeb96e8d56967a991c260")
-      public override
+      override
           fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty.Builder.() -> Unit):
           Unit =
           targetTrackingConfiguration(TargetTrackingConfigurationProperty(targetTrackingConfiguration))
@@ -467,10 +441,9 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty,
     ) : AutoScalingPolicyProperty {
-      public override fun estimatedInstanceWarmup(): Number? =
-          unwrap(this).getEstimatedInstanceWarmup()
+      override fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
 
-      public override fun targetTrackingConfiguration(): Any =
+      override fun targetTrackingConfiguration(): Any =
           unwrap(this).getTargetTrackingConfiguration()
     }
 
@@ -500,11 +473,9 @@ public open class CfnGameServerGroup internal constructor(
     public fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
 
     public interface Builder {
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun weightedCapacity(weightedCapacity: String) {
-      }
+      public fun weightedCapacity(weightedCapacity: String)
     }
 
     private class BuilderImpl : Builder {
@@ -513,11 +484,11 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty.builder()
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun weightedCapacity(weightedCapacity: String) {
+      override fun weightedCapacity(weightedCapacity: String) {
         cdkBuilder.weightedCapacity(weightedCapacity)
       }
 
@@ -530,9 +501,9 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty,
     ) : InstanceDefinitionProperty {
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
 
-      public override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
+      override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
     }
 
     public companion object {

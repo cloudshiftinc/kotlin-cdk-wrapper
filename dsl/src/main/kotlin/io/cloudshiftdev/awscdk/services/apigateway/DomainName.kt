@@ -48,31 +48,23 @@ public open class DomainName internal constructor(
       unwrap(this).getDomainNameAliasHostedZoneId()
 
   public interface Builder {
-    public fun basePath(basePath: String) {
-    }
+    public fun basePath(basePath: String)
 
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun endpointType(endpointType: EndpointType) {
-    }
+    public fun endpointType(endpointType: EndpointType)
 
-    public fun mapping(mapping: IRestApi) {
-    }
+    public fun mapping(mapping: IRestApi)
 
-    public fun mtls(mtls: MTLSConfig) {
-    }
+    public fun mtls(mtls: MTLSConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1efdd2c46f62bd00c654559d6be40f950f52dcfa1bb6d8fea6edff7bb17e7279")
-    public fun mtls(mtls: MTLSConfig.Builder.() -> Unit) {
-    }
+    public fun mtls(mtls: MTLSConfig.Builder.() -> Unit)
 
-    public fun securityPolicy(securityPolicy: SecurityPolicy) {
-    }
+    public fun securityPolicy(securityPolicy: SecurityPolicy)
   }
 
   private class BuilderImpl(
@@ -82,35 +74,35 @@ public open class DomainName internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.DomainName.Builder =
         software.amazon.awscdk.services.apigateway.DomainName.Builder.create(scope, id)
 
-    public override fun basePath(basePath: String) {
+    override fun basePath(basePath: String) {
       cdkBuilder.basePath(basePath)
     }
 
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun endpointType(endpointType: EndpointType) {
+    override fun endpointType(endpointType: EndpointType) {
       cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
     }
 
-    public override fun mapping(mapping: IRestApi) {
+    override fun mapping(mapping: IRestApi) {
       cdkBuilder.mapping(mapping.let(IRestApi::unwrap))
     }
 
-    public override fun mtls(mtls: MTLSConfig) {
+    override fun mtls(mtls: MTLSConfig) {
       cdkBuilder.mtls(mtls.let(MTLSConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1efdd2c46f62bd00c654559d6be40f950f52dcfa1bb6d8fea6edff7bb17e7279")
-    public override fun mtls(mtls: MTLSConfig.Builder.() -> Unit): Unit = mtls(MTLSConfig(mtls))
+    override fun mtls(mtls: MTLSConfig.Builder.() -> Unit): Unit = mtls(MTLSConfig(mtls))
 
-    public override fun securityPolicy(securityPolicy: SecurityPolicy) {
+    override fun securityPolicy(securityPolicy: SecurityPolicy) {
       cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
     }
 

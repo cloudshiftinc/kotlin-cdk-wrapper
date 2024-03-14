@@ -13,13 +13,13 @@ public interface ICommandHooks {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
   ) : ICommandHooks {
-    public override fun afterBundling(arg0: String, arg1: String): List<String> =
+    override fun afterBundling(arg0: String, arg1: String): List<String> =
         unwrap(this).afterBundling(arg0, arg1) ?: emptyList()
 
-    public override fun beforeBundling(arg0: String, arg1: String): List<String> =
+    override fun beforeBundling(arg0: String, arg1: String): List<String> =
         unwrap(this).beforeBundling(arg0, arg1) ?: emptyList()
 
-    public override fun beforeInstall(arg0: String, arg1: String): List<String> =
+    override fun beforeInstall(arg0: String, arg1: String): List<String> =
         unwrap(this).beforeInstall(arg0, arg1) ?: emptyList()
   }
 

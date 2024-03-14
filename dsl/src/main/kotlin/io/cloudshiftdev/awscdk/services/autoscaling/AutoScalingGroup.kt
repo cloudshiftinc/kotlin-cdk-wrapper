@@ -202,135 +202,94 @@ public open class AutoScalingGroup internal constructor(
   public open fun userData(): UserData = unwrap(this).getUserData().let(UserData::wrap)
 
   public interface Builder {
-    public fun allowAllOutbound(allowAllOutbound: Boolean) {
-    }
+    public fun allowAllOutbound(allowAllOutbound: Boolean)
 
-    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
-    public fun autoScalingGroupName(autoScalingGroupName: String) {
-    }
+    public fun autoScalingGroupName(autoScalingGroupName: String)
 
-    public fun blockDevices(blockDevices: List<BlockDevice>) {
-    }
+    public fun blockDevices(blockDevices: List<BlockDevice>)
 
-    public fun capacityRebalance(capacityRebalance: Boolean) {
-    }
+    public fun capacityRebalance(capacityRebalance: Boolean)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun defaultInstanceWarmup(defaultInstanceWarmup: Duration) {
-    }
+    public fun defaultInstanceWarmup(defaultInstanceWarmup: Duration)
 
-    public fun desiredCapacity(desiredCapacity: Number) {
-    }
+    public fun desiredCapacity(desiredCapacity: Number)
 
-    public fun groupMetrics(groupMetrics: List<GroupMetrics>) {
-    }
+    public fun groupMetrics(groupMetrics: List<GroupMetrics>)
 
-    public fun healthCheck(healthCheck: HealthCheck) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck)
 
-    public fun ignoreUnmodifiedSizeProperties(ignoreUnmodifiedSizeProperties: Boolean) {
-    }
+    public fun ignoreUnmodifiedSizeProperties(ignoreUnmodifiedSizeProperties: Boolean)
 
-    public fun `init`(`init`: CloudFormationInit) {
-    }
+    public fun `init`(`init`: CloudFormationInit)
 
-    public fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-    }
+    public fun initOptions(initOptions: ApplyCloudFormationInitOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f4bf8238a4f4c4faec42b8663e3be1b2df8430c4fac4f2d1eb8794526897f48")
-    public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit) {
-    }
+    public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit)
 
-    public fun instanceMonitoring(instanceMonitoring: Monitoring) {
-    }
+    public fun instanceMonitoring(instanceMonitoring: Monitoring)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun launchTemplate(launchTemplate: ILaunchTemplate) {
-    }
+    public fun launchTemplate(launchTemplate: ILaunchTemplate)
 
-    public fun machineImage(machineImage: IMachineImage) {
-    }
+    public fun machineImage(machineImage: IMachineImage)
 
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun maxHealthyPercentage(maxHealthyPercentage: Number) {
-    }
+    public fun maxHealthyPercentage(maxHealthyPercentage: Number)
 
-    public fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
-    }
+    public fun maxInstanceLifetime(maxInstanceLifetime: Duration)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
 
-    public fun minHealthyPercentage(minHealthyPercentage: Number) {
-    }
+    public fun minHealthyPercentage(minHealthyPercentage: Number)
 
-    public fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy) {
-    }
+    public fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e75eeafa05f053c8321fcc263549b07d9d8419b59fe65f3ef663d5d17dccf491")
-    public fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy.Builder.() -> Unit) {
-    }
+    public fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy.Builder.() -> Unit)
 
-    public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean) {
-    }
+    public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean)
 
-    public fun notifications(notifications: List<NotificationConfiguration>) {
-    }
+    public fun notifications(notifications: List<NotificationConfiguration>)
 
-    public fun requireImdsv2(requireImdsv2: Boolean) {
-    }
+    public fun requireImdsv2(requireImdsv2: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun signals(signals: Signals) {
-    }
+    public fun signals(signals: Signals)
 
-    public fun spotPrice(spotPrice: String) {
-    }
+    public fun spotPrice(spotPrice: String)
 
-    public fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
-    }
+    public fun ssmSessionPermissions(ssmSessionPermissions: Boolean)
 
-    public fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
-    }
+    public fun terminationPolicies(terminationPolicies: List<TerminationPolicy>)
 
     public
-        fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String) {
-    }
+        fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String)
 
-    public fun updatePolicy(updatePolicy: UpdatePolicy) {
-    }
+    public fun updatePolicy(updatePolicy: UpdatePolicy)
 
-    public fun userData(userData: UserData) {
-    }
+    public fun userData(userData: UserData)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7158f9fd519eeb71de0bee62c8fdf925738ab58e57b8c6f3cc89d34317d40bd2")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -340,174 +299,173 @@ public open class AutoScalingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.AutoScalingGroup.Builder =
         software.amazon.awscdk.services.autoscaling.AutoScalingGroup.Builder.create(scope, id)
 
-    public override fun allowAllOutbound(allowAllOutbound: Boolean) {
+    override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
     }
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
     }
 
-    public override fun autoScalingGroupName(autoScalingGroupName: String) {
+    override fun autoScalingGroupName(autoScalingGroupName: String) {
       cdkBuilder.autoScalingGroupName(autoScalingGroupName)
     }
 
-    public override fun blockDevices(blockDevices: List<BlockDevice>) {
+    override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
 
-    public override fun capacityRebalance(capacityRebalance: Boolean) {
+    override fun capacityRebalance(capacityRebalance: Boolean) {
       cdkBuilder.capacityRebalance(capacityRebalance)
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun defaultInstanceWarmup(defaultInstanceWarmup: Duration) {
+    override fun defaultInstanceWarmup(defaultInstanceWarmup: Duration) {
       cdkBuilder.defaultInstanceWarmup(defaultInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun desiredCapacity(desiredCapacity: Number) {
+    override fun desiredCapacity(desiredCapacity: Number) {
       cdkBuilder.desiredCapacity(desiredCapacity)
     }
 
-    public override fun groupMetrics(groupMetrics: List<GroupMetrics>) {
+    override fun groupMetrics(groupMetrics: List<GroupMetrics>) {
       cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheck) {
+    override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
     }
 
-    public override fun ignoreUnmodifiedSizeProperties(ignoreUnmodifiedSizeProperties: Boolean) {
+    override fun ignoreUnmodifiedSizeProperties(ignoreUnmodifiedSizeProperties: Boolean) {
       cdkBuilder.ignoreUnmodifiedSizeProperties(ignoreUnmodifiedSizeProperties)
     }
 
-    public override fun `init`(`init`: CloudFormationInit) {
+    override fun `init`(`init`: CloudFormationInit) {
       cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
     }
 
-    public override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
+    override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
       cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f4bf8238a4f4c4faec42b8663e3be1b2df8430c4fac4f2d1eb8794526897f48")
-    public override fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit):
-        Unit = initOptions(ApplyCloudFormationInitOptions(initOptions))
+    override fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit): Unit =
+        initOptions(ApplyCloudFormationInitOptions(initOptions))
 
-    public override fun instanceMonitoring(instanceMonitoring: Monitoring) {
+    override fun instanceMonitoring(instanceMonitoring: Monitoring) {
       cdkBuilder.instanceMonitoring(instanceMonitoring.let(Monitoring::unwrap))
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun launchTemplate(launchTemplate: ILaunchTemplate) {
+    override fun launchTemplate(launchTemplate: ILaunchTemplate) {
       cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
     }
 
-    public override fun machineImage(machineImage: IMachineImage) {
+    override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
     }
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun maxHealthyPercentage(maxHealthyPercentage: Number) {
+    override fun maxHealthyPercentage(maxHealthyPercentage: Number) {
       cdkBuilder.maxHealthyPercentage(maxHealthyPercentage)
     }
 
-    public override fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
+    override fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
       cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration::unwrap))
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
-    public override fun minHealthyPercentage(minHealthyPercentage: Number) {
+    override fun minHealthyPercentage(minHealthyPercentage: Number) {
       cdkBuilder.minHealthyPercentage(minHealthyPercentage)
     }
 
-    public override fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy) {
+    override fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy) {
       cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(MixedInstancesPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e75eeafa05f053c8321fcc263549b07d9d8419b59fe65f3ef663d5d17dccf491")
-    public override
+    override
         fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy.Builder.() -> Unit):
         Unit = mixedInstancesPolicy(MixedInstancesPolicy(mixedInstancesPolicy))
 
-    public override
-        fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean) {
+    override fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean) {
       cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn)
     }
 
-    public override fun notifications(notifications: List<NotificationConfiguration>) {
+    override fun notifications(notifications: List<NotificationConfiguration>) {
       cdkBuilder.notifications(notifications.map(NotificationConfiguration::unwrap))
     }
 
-    public override fun requireImdsv2(requireImdsv2: Boolean) {
+    override fun requireImdsv2(requireImdsv2: Boolean) {
       cdkBuilder.requireImdsv2(requireImdsv2)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun signals(signals: Signals) {
+    override fun signals(signals: Signals) {
       cdkBuilder.signals(signals.let(Signals::unwrap))
     }
 
-    public override fun spotPrice(spotPrice: String) {
+    override fun spotPrice(spotPrice: String) {
       cdkBuilder.spotPrice(spotPrice)
     }
 
-    public override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
+    override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
       cdkBuilder.ssmSessionPermissions(ssmSessionPermissions)
     }
 
-    public override fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
+    override fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
       cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy::unwrap))
     }
 
-    public override
+    override
         fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String) {
       cdkBuilder.terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn)
     }
 
-    public override fun updatePolicy(updatePolicy: UpdatePolicy) {
+    override fun updatePolicy(updatePolicy: UpdatePolicy) {
       cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicy::unwrap))
     }
 
-    public override fun userData(userData: UserData) {
+    override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7158f9fd519eeb71de0bee62c8fdf925738ab58e57b8c6f3cc89d34317d40bd2")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.autoscaling.AutoScalingGroup =

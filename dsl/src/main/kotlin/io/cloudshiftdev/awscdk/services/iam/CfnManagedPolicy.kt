@@ -80,26 +80,19 @@ public open class CfnManagedPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun groups(groups: List<String>) {
-    }
+    public fun groups(groups: List<String>)
 
-    public fun managedPolicyName(managedPolicyName: String) {
-    }
+    public fun managedPolicyName(managedPolicyName: String)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun roles(roles: List<String>) {
-    }
+    public fun roles(roles: List<String>)
 
-    public fun users(users: List<String>) {
-    }
+    public fun users(users: List<String>)
   }
 
   private class BuilderImpl(
@@ -109,31 +102,31 @@ public open class CfnManagedPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnManagedPolicy.Builder =
         software.amazon.awscdk.services.iam.CfnManagedPolicy.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun groups(groups: List<String>) {
+    override fun groups(groups: List<String>) {
       cdkBuilder.groups(groups)
     }
 
-    public override fun managedPolicyName(managedPolicyName: String) {
+    override fun managedPolicyName(managedPolicyName: String) {
       cdkBuilder.managedPolicyName(managedPolicyName)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun roles(roles: List<String>) {
+    override fun roles(roles: List<String>) {
       cdkBuilder.roles(roles)
     }
 
-    public override fun users(users: List<String>) {
+    override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
 

@@ -9,22 +9,20 @@ public interface Attribute {
   public fun type(): AttributeType
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun type(type: AttributeType) {
-    }
+    public fun type(type: AttributeType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.Attribute.Builder =
         software.amazon.awscdk.services.dynamodb.Attribute.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun type(type: AttributeType) {
+    override fun type(type: AttributeType) {
       cdkBuilder.type(type.let(AttributeType::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface Attribute {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.Attribute,
   ) : Attribute {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun type(): AttributeType = unwrap(this).getType().let(AttributeType::wrap)
+    override fun type(): AttributeType = unwrap(this).getType().let(AttributeType::wrap)
   }
 
   public companion object {

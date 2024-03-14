@@ -16,36 +16,32 @@ public interface GrpcRouteMatch {
   public fun serviceName(): String? = unwrap(this).getServiceName()
 
   public interface Builder {
-    public fun metadata(metadata: List<HeaderMatch>) {
-    }
+    public fun metadata(metadata: List<HeaderMatch>)
 
-    public fun methodName(methodName: String) {
-    }
+    public fun methodName(methodName: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GrpcRouteMatch.Builder =
         software.amazon.awscdk.services.appmesh.GrpcRouteMatch.builder()
 
-    public override fun metadata(metadata: List<HeaderMatch>) {
+    override fun metadata(metadata: List<HeaderMatch>) {
       cdkBuilder.metadata(metadata.map(HeaderMatch::unwrap))
     }
 
-    public override fun methodName(methodName: String) {
+    override fun methodName(methodName: String) {
       cdkBuilder.methodName(methodName)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
@@ -55,14 +51,14 @@ public interface GrpcRouteMatch {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteMatch,
   ) : GrpcRouteMatch {
-    public override fun metadata(): List<HeaderMatch> =
-        unwrap(this).getMetadata()?.map(HeaderMatch::wrap) ?: emptyList()
+    override fun metadata(): List<HeaderMatch> = unwrap(this).getMetadata()?.map(HeaderMatch::wrap)
+        ?: emptyList()
 
-    public override fun methodName(): String? = unwrap(this).getMethodName()
+    override fun methodName(): String? = unwrap(this).getMethodName()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun serviceName(): String? = unwrap(this).getServiceName()
+    override fun serviceName(): String? = unwrap(this).getServiceName()
   }
 
   public companion object {

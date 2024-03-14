@@ -11,22 +11,20 @@ public interface RedriveAllowPolicy {
       emptyList()
 
   public interface Builder {
-    public fun redrivePermission(redrivePermission: RedrivePermission) {
-    }
+    public fun redrivePermission(redrivePermission: RedrivePermission)
 
-    public fun sourceQueues(sourceQueues: List<IQueue>) {
-    }
+    public fun sourceQueues(sourceQueues: List<IQueue>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.sqs.RedriveAllowPolicy.Builder =
         software.amazon.awscdk.services.sqs.RedriveAllowPolicy.builder()
 
-    public override fun redrivePermission(redrivePermission: RedrivePermission) {
+    override fun redrivePermission(redrivePermission: RedrivePermission) {
       cdkBuilder.redrivePermission(redrivePermission.let(RedrivePermission::unwrap))
     }
 
-    public override fun sourceQueues(sourceQueues: List<IQueue>) {
+    override fun sourceQueues(sourceQueues: List<IQueue>) {
       cdkBuilder.sourceQueues(sourceQueues.map(IQueue::unwrap))
     }
 
@@ -36,11 +34,11 @@ public interface RedriveAllowPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sqs.RedriveAllowPolicy,
   ) : RedriveAllowPolicy {
-    public override fun redrivePermission(): RedrivePermission? =
+    override fun redrivePermission(): RedrivePermission? =
         unwrap(this).getRedrivePermission()?.let(RedrivePermission::wrap)
 
-    public override fun sourceQueues(): List<IQueue> =
-        unwrap(this).getSourceQueues()?.map(IQueue::wrap) ?: emptyList()
+    override fun sourceQueues(): List<IQueue> = unwrap(this).getSourceQueues()?.map(IQueue::wrap) ?:
+        emptyList()
   }
 
   public companion object {

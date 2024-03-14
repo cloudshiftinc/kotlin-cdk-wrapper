@@ -62,32 +62,23 @@ public open class Version internal constructor(
   public override fun version(): String = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun codeSha256(codeSha256: String) {
-    }
+    public fun codeSha256(codeSha256: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun lambda(lambda: IFunction) {
-    }
+    public fun lambda(lambda: IFunction)
 
-    public fun maxEventAge(maxEventAge: Duration) {
-    }
+    public fun maxEventAge(maxEventAge: Duration)
 
-    public fun onFailure(onFailure: IDestination) {
-    }
+    public fun onFailure(onFailure: IDestination)
 
-    public fun onSuccess(onSuccess: IDestination) {
-    }
+    public fun onSuccess(onSuccess: IDestination)
 
-    public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
-    }
+    public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
   }
 
   private class BuilderImpl(
@@ -97,39 +88,39 @@ public open class Version internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.Version.Builder =
         software.amazon.awscdk.services.lambda.Version.Builder.create(scope, id)
 
-    public override fun codeSha256(codeSha256: String) {
+    override fun codeSha256(codeSha256: String) {
       cdkBuilder.codeSha256(codeSha256)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun lambda(lambda: IFunction) {
+    override fun lambda(lambda: IFunction) {
       cdkBuilder.lambda(lambda.let(IFunction::unwrap))
     }
 
-    public override fun maxEventAge(maxEventAge: Duration) {
+    override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
     }
 
-    public override fun onFailure(onFailure: IDestination) {
+    override fun onFailure(onFailure: IDestination) {
       cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
     }
 
-    public override fun onSuccess(onSuccess: IDestination) {
+    override fun onSuccess(onSuccess: IDestination) {
       cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
     }
 
-    public override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
+    override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
       cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 

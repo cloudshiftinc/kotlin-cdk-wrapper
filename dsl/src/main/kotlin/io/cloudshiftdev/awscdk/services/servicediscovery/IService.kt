@@ -25,33 +25,32 @@ public interface IService : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.IService,
   ) : IService {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun discoveryType(): DiscoveryType =
+    override fun discoveryType(): DiscoveryType =
         unwrap(this).getDiscoveryType().let(DiscoveryType::wrap)
 
-    public override fun dnsRecordType(): DnsRecordType =
+    override fun dnsRecordType(): DnsRecordType =
         unwrap(this).getDnsRecordType().let(DnsRecordType::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun namespace(): INamespace = unwrap(this).getNamespace().let(INamespace::wrap)
+    override fun namespace(): INamespace = unwrap(this).getNamespace().let(INamespace::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun routingPolicy(): RoutingPolicy =
+    override fun routingPolicy(): RoutingPolicy =
         unwrap(this).getRoutingPolicy().let(RoutingPolicy::wrap)
 
-    public override fun serviceArn(): String = unwrap(this).getServiceArn()
+    override fun serviceArn(): String = unwrap(this).getServiceArn()
 
-    public override fun serviceId(): String = unwrap(this).getServiceId()
+    override fun serviceId(): String = unwrap(this).getServiceId()
 
-    public override fun serviceName(): String = unwrap(this).getServiceName()
+    override fun serviceName(): String = unwrap(this).getServiceName()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

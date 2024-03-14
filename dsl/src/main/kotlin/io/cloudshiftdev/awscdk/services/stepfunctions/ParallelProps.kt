@@ -19,50 +19,44 @@ public interface ParallelProps {
   public fun stateName(): String? = unwrap(this).getStateName()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.ParallelProps.Builder =
         software.amazon.awscdk.services.stepfunctions.ParallelProps.builder()
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
@@ -73,18 +67,17 @@ public interface ParallelProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.ParallelProps,
   ) : ParallelProps {
-    public override fun comment(): String? = unwrap(this).getComment()
+    override fun comment(): String? = unwrap(this).getComment()
 
-    public override fun inputPath(): String? = unwrap(this).getInputPath()
+    override fun inputPath(): String? = unwrap(this).getInputPath()
 
-    public override fun outputPath(): String? = unwrap(this).getOutputPath()
+    override fun outputPath(): String? = unwrap(this).getOutputPath()
 
-    public override fun resultPath(): String? = unwrap(this).getResultPath()
+    override fun resultPath(): String? = unwrap(this).getResultPath()
 
-    public override fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?:
-        emptyMap()
+    override fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?: emptyMap()
 
-    public override fun stateName(): String? = unwrap(this).getStateName()
+    override fun stateName(): String? = unwrap(this).getStateName()
   }
 
   public companion object {

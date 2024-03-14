@@ -35,19 +35,15 @@ public open class NetworkAcl internal constructor(
   public open fun networkAclVpcId(): String = unwrap(this).getNetworkAclVpcId()
 
   public interface Builder {
-    public fun networkAclName(networkAclName: String) {
-    }
+    public fun networkAclName(networkAclName: String)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("affa603912ddd5a21e35e10d48f164a621395d13f19b3892d23cd279360d51b5")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -57,20 +53,20 @@ public open class NetworkAcl internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NetworkAcl.Builder =
         software.amazon.awscdk.services.ec2.NetworkAcl.Builder.create(scope, id)
 
-    public override fun networkAclName(networkAclName: String) {
+    override fun networkAclName(networkAclName: String) {
       cdkBuilder.networkAclName(networkAclName)
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("affa603912ddd5a21e35e10d48f164a621395d13f19b3892d23cd279360d51b5")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

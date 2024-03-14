@@ -28,11 +28,9 @@ public open class CfnSlackWorkspaceConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun teamId(teamId: String) {
-    }
+    public fun teamId(teamId: String)
 
-    public fun versionId(versionId: String) {
-    }
+    public fun versionId(versionId: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnSlackWorkspaceConfiguration internal constructor(
         software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfiguration.Builder.create(scope,
         id)
 
-    public override fun teamId(teamId: String) {
+    override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)
     }
 
-    public override fun versionId(versionId: String) {
+    override fun versionId(versionId: String) {
       cdkBuilder.versionId(versionId)
     }
 

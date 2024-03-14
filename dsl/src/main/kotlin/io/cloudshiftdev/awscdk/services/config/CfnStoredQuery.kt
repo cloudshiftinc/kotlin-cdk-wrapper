@@ -51,17 +51,13 @@ public open class CfnStoredQuery internal constructor(
   }
 
   public interface Builder {
-    public fun queryDescription(queryDescription: String) {
-    }
+    public fun queryDescription(queryDescription: String)
 
-    public fun queryExpression(queryExpression: String) {
-    }
+    public fun queryExpression(queryExpression: String)
 
-    public fun queryName(queryName: String) {
-    }
+    public fun queryName(queryName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -71,19 +67,19 @@ public open class CfnStoredQuery internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.config.CfnStoredQuery.Builder =
         software.amazon.awscdk.services.config.CfnStoredQuery.Builder.create(scope, id)
 
-    public override fun queryDescription(queryDescription: String) {
+    override fun queryDescription(queryDescription: String) {
       cdkBuilder.queryDescription(queryDescription)
     }
 
-    public override fun queryExpression(queryExpression: String) {
+    override fun queryExpression(queryExpression: String) {
       cdkBuilder.queryExpression(queryExpression)
     }
 
-    public override fun queryName(queryName: String) {
+    override fun queryName(queryName: String) {
       cdkBuilder.queryName(queryName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

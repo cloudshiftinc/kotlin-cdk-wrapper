@@ -53,20 +53,15 @@ public open class CfnRobot internal constructor(
   }
 
   public interface Builder {
-    public fun architecture(architecture: String) {
-    }
+    public fun architecture(architecture: String)
 
-    public fun fleet(fleet: String) {
-    }
+    public fun fleet(fleet: String)
 
-    public fun greengrassGroupId(greengrassGroupId: String) {
-    }
+    public fun greengrassGroupId(greengrassGroupId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -76,23 +71,23 @@ public open class CfnRobot internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.robomaker.CfnRobot.Builder =
         software.amazon.awscdk.services.robomaker.CfnRobot.Builder.create(scope, id)
 
-    public override fun architecture(architecture: String) {
+    override fun architecture(architecture: String) {
       cdkBuilder.architecture(architecture)
     }
 
-    public override fun fleet(fleet: String) {
+    override fun fleet(fleet: String) {
       cdkBuilder.fleet(fleet)
     }
 
-    public override fun greengrassGroupId(greengrassGroupId: String) {
+    override fun greengrassGroupId(greengrassGroupId: String) {
       cdkBuilder.greengrassGroupId(greengrassGroupId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

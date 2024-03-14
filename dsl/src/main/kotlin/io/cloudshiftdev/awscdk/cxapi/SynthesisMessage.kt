@@ -14,39 +14,34 @@ public interface SynthesisMessage {
   public fun level(): SynthesisMessageLevel
 
   public interface Builder {
-    public fun entry(entry: MetadataEntry) {
-    }
+    public fun entry(entry: MetadataEntry)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9632d9a77fd16530e6e62a4bc87651a80c1d90b0739b16bdf07edfbaf8de3dc8")
-    public fun entry(entry: MetadataEntry.Builder.() -> Unit) {
-    }
+    public fun entry(entry: MetadataEntry.Builder.() -> Unit)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun level(level: SynthesisMessageLevel) {
-    }
+    public fun level(level: SynthesisMessageLevel)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cxapi.SynthesisMessage.Builder =
         software.amazon.awscdk.cxapi.SynthesisMessage.builder()
 
-    public override fun entry(entry: MetadataEntry) {
+    override fun entry(entry: MetadataEntry) {
       cdkBuilder.entry(entry.let(MetadataEntry::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9632d9a77fd16530e6e62a4bc87651a80c1d90b0739b16bdf07edfbaf8de3dc8")
-    public override fun entry(entry: MetadataEntry.Builder.() -> Unit): Unit =
-        entry(MetadataEntry(entry))
+    override fun entry(entry: MetadataEntry.Builder.() -> Unit): Unit = entry(MetadataEntry(entry))
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun level(level: SynthesisMessageLevel) {
+    override fun level(level: SynthesisMessageLevel) {
       cdkBuilder.level(level.let(SynthesisMessageLevel::unwrap))
     }
 
@@ -56,11 +51,11 @@ public interface SynthesisMessage {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cxapi.SynthesisMessage,
   ) : SynthesisMessage {
-    public override fun entry(): MetadataEntry = unwrap(this).getEntry().let(MetadataEntry::wrap)
+    override fun entry(): MetadataEntry = unwrap(this).getEntry().let(MetadataEntry::wrap)
 
-    public override fun id(): String = unwrap(this).getId()
+    override fun id(): String = unwrap(this).getId()
 
-    public override fun level(): SynthesisMessageLevel =
+    override fun level(): SynthesisMessageLevel =
         unwrap(this).getLevel().let(SynthesisMessageLevel::wrap)
   }
 

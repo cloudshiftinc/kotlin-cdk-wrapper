@@ -18,14 +18,11 @@ public open class VpcLink internal constructor(
   public override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun targets(targets: List<INetworkLoadBalancer>) {
-    }
+    public fun targets(targets: List<INetworkLoadBalancer>)
 
-    public fun vpcLinkName(vpcLinkName: String) {
-    }
+    public fun vpcLinkName(vpcLinkName: String)
   }
 
   private class BuilderImpl(
@@ -35,15 +32,15 @@ public open class VpcLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.VpcLink.Builder =
         software.amazon.awscdk.services.apigateway.VpcLink.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun targets(targets: List<INetworkLoadBalancer>) {
+    override fun targets(targets: List<INetworkLoadBalancer>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancer::unwrap))
     }
 
-    public override fun vpcLinkName(vpcLinkName: String) {
+    override fun vpcLinkName(vpcLinkName: String) {
       cdkBuilder.vpcLinkName(vpcLinkName)
     }
 

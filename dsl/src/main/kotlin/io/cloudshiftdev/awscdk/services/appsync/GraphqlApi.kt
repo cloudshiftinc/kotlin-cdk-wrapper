@@ -43,51 +43,38 @@ public open class GraphqlApi internal constructor(
   public open fun schema(): ISchema = unwrap(this).getSchema().let(ISchema::wrap)
 
   public interface Builder {
-    public fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
-    }
+    public fun authorizationConfig(authorizationConfig: AuthorizationConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("728b038769468eb7522cd46a6c98c1ca465e3f1d400434787ca2e7d4f1a703d1")
-    public fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit) {
-    }
+    public fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit)
 
-    public fun definition(definition: Definition) {
-    }
+    public fun definition(definition: Definition)
 
-    public fun domainName(domainName: DomainOptions) {
-    }
+    public fun domainName(domainName: DomainOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("112f24ca464657005f209da77eb7883a8b92773093491c66f7058148699dbf5a")
-    public fun domainName(domainName: DomainOptions.Builder.() -> Unit) {
-    }
+    public fun domainName(domainName: DomainOptions.Builder.() -> Unit)
 
-    public fun environmentVariables(environmentVariables: Map<String, String>) {
-    }
+    public fun environmentVariables(environmentVariables: Map<String, String>)
 
-    public fun introspectionConfig(introspectionConfig: IntrospectionConfig) {
-    }
+    public fun introspectionConfig(introspectionConfig: IntrospectionConfig)
 
-    public fun logConfig(logConfig: LogConfig) {
-    }
+    public fun logConfig(logConfig: LogConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1b86a872e41c66530612eeb5cacdb6aba12033e3d9dfc0fd86115b1e0246658b")
-    public fun logConfig(logConfig: LogConfig.Builder.() -> Unit) {
-    }
+    public fun logConfig(logConfig: LogConfig.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun schema(schema: ISchema) {
-    }
+    public fun schema(schema: ISchema)
 
-    public fun visibility(visibility: Visibility) {
-    }
+    public fun visibility(visibility: Visibility)
 
-    public fun xrayEnabled(xrayEnabled: Boolean) {
-    }
+    public fun xrayEnabled(xrayEnabled: Boolean)
   }
 
   private class BuilderImpl(
@@ -97,60 +84,59 @@ public open class GraphqlApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.GraphqlApi.Builder =
         software.amazon.awscdk.services.appsync.GraphqlApi.Builder.create(scope, id)
 
-    public override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
+    override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
       cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("728b038769468eb7522cd46a6c98c1ca465e3f1d400434787ca2e7d4f1a703d1")
-    public override
-        fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit): Unit =
-        authorizationConfig(AuthorizationConfig(authorizationConfig))
+    override fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit):
+        Unit = authorizationConfig(AuthorizationConfig(authorizationConfig))
 
-    public override fun definition(definition: Definition) {
+    override fun definition(definition: Definition) {
       cdkBuilder.definition(definition.let(Definition::unwrap))
     }
 
-    public override fun domainName(domainName: DomainOptions) {
+    override fun domainName(domainName: DomainOptions) {
       cdkBuilder.domainName(domainName.let(DomainOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("112f24ca464657005f209da77eb7883a8b92773093491c66f7058148699dbf5a")
-    public override fun domainName(domainName: DomainOptions.Builder.() -> Unit): Unit =
+    override fun domainName(domainName: DomainOptions.Builder.() -> Unit): Unit =
         domainName(DomainOptions(domainName))
 
-    public override fun environmentVariables(environmentVariables: Map<String, String>) {
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 
-    public override fun introspectionConfig(introspectionConfig: IntrospectionConfig) {
+    override fun introspectionConfig(introspectionConfig: IntrospectionConfig) {
       cdkBuilder.introspectionConfig(introspectionConfig.let(IntrospectionConfig::unwrap))
     }
 
-    public override fun logConfig(logConfig: LogConfig) {
+    override fun logConfig(logConfig: LogConfig) {
       cdkBuilder.logConfig(logConfig.let(LogConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1b86a872e41c66530612eeb5cacdb6aba12033e3d9dfc0fd86115b1e0246658b")
-    public override fun logConfig(logConfig: LogConfig.Builder.() -> Unit): Unit =
+    override fun logConfig(logConfig: LogConfig.Builder.() -> Unit): Unit =
         logConfig(LogConfig(logConfig))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun schema(schema: ISchema) {
+    override fun schema(schema: ISchema) {
       cdkBuilder.schema(schema.let(ISchema::unwrap))
     }
 
-    public override fun visibility(visibility: Visibility) {
+    override fun visibility(visibility: Visibility) {
       cdkBuilder.visibility(visibility.let(Visibility::unwrap))
     }
 
-    public override fun xrayEnabled(xrayEnabled: Boolean) {
+    override fun xrayEnabled(xrayEnabled: Boolean) {
       cdkBuilder.xrayEnabled(xrayEnabled)
     }
 

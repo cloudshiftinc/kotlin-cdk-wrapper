@@ -6,7 +6,7 @@ public interface IGrantable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.IGrantable,
   ) : IGrantable {
-    public override fun grantPrincipal(): IPrincipal =
+    override fun grantPrincipal(): IPrincipal =
         unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
   }
 

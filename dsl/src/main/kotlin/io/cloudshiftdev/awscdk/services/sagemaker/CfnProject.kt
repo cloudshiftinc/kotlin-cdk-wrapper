@@ -79,31 +79,24 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun projectDescription(projectDescription: String) {
-    }
+    public fun projectDescription(projectDescription: String)
 
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
 
     public
-        fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: IResolvable) {
-    }
+        fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: IResolvable)
 
     public
-        fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty) {
-    }
+        fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40b490351078a78befe44c205e665063d2437f322bd6907d96cdab41adbcf267")
     public
-        fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty.Builder.() -> Unit) {
-    }
+        fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty.Builder.() -> Unit)
 
-    public fun serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails: Any) {
-    }
+    public fun serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -113,36 +106,36 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnProject.Builder =
         software.amazon.awscdk.services.sagemaker.CfnProject.Builder.create(scope, id)
 
-    public override fun projectDescription(projectDescription: String) {
+    override fun projectDescription(projectDescription: String) {
       cdkBuilder.projectDescription(projectDescription)
     }
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 
-    public override
+    override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: IResolvable) {
       cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty) {
       cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(ServiceCatalogProvisionedProductDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40b490351078a78befe44c205e665063d2437f322bd6907d96cdab41adbcf267")
-    public override
+    override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty.Builder.() -> Unit):
         Unit =
         serviceCatalogProvisionedProductDetails(ServiceCatalogProvisionedProductDetailsProperty(serviceCatalogProvisionedProductDetails))
 
-    public override fun serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails: Any) {
+    override fun serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails: Any) {
       cdkBuilder.serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -180,20 +173,15 @@ public open class CfnProject internal constructor(
     public fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
 
     public interface Builder {
-      public fun pathId(pathId: String) {
-      }
+      public fun pathId(pathId: String)
 
-      public fun productId(productId: String) {
-      }
+      public fun productId(productId: String)
 
-      public fun provisioningArtifactId(provisioningArtifactId: String) {
-      }
+      public fun provisioningArtifactId(provisioningArtifactId: String)
 
-      public fun provisioningParameters(provisioningParameters: IResolvable) {
-      }
+      public fun provisioningParameters(provisioningParameters: IResolvable)
 
-      public fun provisioningParameters(provisioningParameters: List<Any>) {
-      }
+      public fun provisioningParameters(provisioningParameters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -202,23 +190,23 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty.builder()
 
-      public override fun pathId(pathId: String) {
+      override fun pathId(pathId: String) {
         cdkBuilder.pathId(pathId)
       }
 
-      public override fun productId(productId: String) {
+      override fun productId(productId: String) {
         cdkBuilder.productId(productId)
       }
 
-      public override fun provisioningArtifactId(provisioningArtifactId: String) {
+      override fun provisioningArtifactId(provisioningArtifactId: String) {
         cdkBuilder.provisioningArtifactId(provisioningArtifactId)
       }
 
-      public override fun provisioningParameters(provisioningParameters: IResolvable) {
+      override fun provisioningParameters(provisioningParameters: IResolvable) {
         cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
       }
 
-      public override fun provisioningParameters(provisioningParameters: List<Any>) {
+      override fun provisioningParameters(provisioningParameters: List<Any>) {
         cdkBuilder.provisioningParameters(provisioningParameters)
       }
 
@@ -231,14 +219,13 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty,
     ) : ServiceCatalogProvisioningDetailsProperty {
-      public override fun pathId(): String? = unwrap(this).getPathId()
+      override fun pathId(): String? = unwrap(this).getPathId()
 
-      public override fun productId(): String = unwrap(this).getProductId()
+      override fun productId(): String = unwrap(this).getProductId()
 
-      public override fun provisioningArtifactId(): String? =
-          unwrap(this).getProvisioningArtifactId()
+      override fun provisioningArtifactId(): String? = unwrap(this).getProvisioningArtifactId()
 
-      public override fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
+      override fun provisioningParameters(): Any? = unwrap(this).getProvisioningParameters()
     }
 
     public companion object {
@@ -268,11 +255,9 @@ public open class CfnProject internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -281,11 +266,11 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -298,9 +283,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty,
     ) : ProvisioningParameterProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -330,11 +315,9 @@ public open class CfnProject internal constructor(
         unwrap(this).getProvisionedProductStatusMessage()
 
     public interface Builder {
-      public fun provisionedProductId(provisionedProductId: String) {
-      }
+      public fun provisionedProductId(provisionedProductId: String)
 
-      public fun provisionedProductStatusMessage(provisionedProductStatusMessage: String) {
-      }
+      public fun provisionedProductStatusMessage(provisionedProductStatusMessage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -343,11 +326,11 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty.builder()
 
-      public override fun provisionedProductId(provisionedProductId: String) {
+      override fun provisionedProductId(provisionedProductId: String) {
         cdkBuilder.provisionedProductId(provisionedProductId)
       }
 
-      public override fun provisionedProductStatusMessage(provisionedProductStatusMessage: String) {
+      override fun provisionedProductStatusMessage(provisionedProductStatusMessage: String) {
         cdkBuilder.provisionedProductStatusMessage(provisionedProductStatusMessage)
       }
 
@@ -360,9 +343,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty,
     ) : ServiceCatalogProvisionedProductDetailsProperty {
-      public override fun provisionedProductId(): String? = unwrap(this).getProvisionedProductId()
+      override fun provisionedProductId(): String? = unwrap(this).getProvisionedProductId()
 
-      public override fun provisionedProductStatusMessage(): String? =
+      override fun provisionedProductStatusMessage(): String? =
           unwrap(this).getProvisionedProductStatusMessage()
     }
 

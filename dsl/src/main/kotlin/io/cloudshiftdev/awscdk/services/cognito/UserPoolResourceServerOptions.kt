@@ -13,14 +13,11 @@ public interface UserPoolResourceServerOptions {
   public fun userPoolResourceServerName(): String? = unwrap(this).getUserPoolResourceServerName()
 
   public interface Builder {
-    public fun identifier(identifier: String) {
-    }
+    public fun identifier(identifier: String)
 
-    public fun scopes(scopes: List<ResourceServerScope>) {
-    }
+    public fun scopes(scopes: List<ResourceServerScope>)
 
-    public fun userPoolResourceServerName(userPoolResourceServerName: String) {
-    }
+    public fun userPoolResourceServerName(userPoolResourceServerName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface UserPoolResourceServerOptions {
         software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions.Builder =
         software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions.builder()
 
-    public override fun identifier(identifier: String) {
+    override fun identifier(identifier: String) {
       cdkBuilder.identifier(identifier)
     }
 
-    public override fun scopes(scopes: List<ResourceServerScope>) {
+    override fun scopes(scopes: List<ResourceServerScope>) {
       cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
     }
 
-    public override fun userPoolResourceServerName(userPoolResourceServerName: String) {
+    override fun userPoolResourceServerName(userPoolResourceServerName: String) {
       cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
     }
 
@@ -47,12 +44,12 @@ public interface UserPoolResourceServerOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions,
   ) : UserPoolResourceServerOptions {
-    public override fun identifier(): String = unwrap(this).getIdentifier()
+    override fun identifier(): String = unwrap(this).getIdentifier()
 
-    public override fun scopes(): List<ResourceServerScope> =
+    override fun scopes(): List<ResourceServerScope> =
         unwrap(this).getScopes()?.map(ResourceServerScope::wrap) ?: emptyList()
 
-    public override fun userPoolResourceServerName(): String? =
+    override fun userPoolResourceServerName(): String? =
         unwrap(this).getUserPoolResourceServerName()
   }
 

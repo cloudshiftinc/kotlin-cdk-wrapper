@@ -8,8 +8,8 @@ import kotlin.collections.Map
 public interface CertificationValidationProps {
   public fun hostedZone(): IHostedZone? = unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
 
-  public fun hostedZones(): Map<String, IHostedZone> = unwrap(this).getHostedZones()?.mapValues {
-      IHostedZone.wrap(it.value)} ?: emptyMap()
+  public fun hostedZones(): Map<String, IHostedZone> =
+      unwrap(this).getHostedZones()?.mapValues{IHostedZone.wrap(it.value)} ?: emptyMap()
 
   public fun method(): ValidationMethod? = unwrap(this).getMethod()?.let(ValidationMethod::wrap)
 
@@ -17,17 +17,13 @@ public interface CertificationValidationProps {
       emptyMap()
 
   public interface Builder {
-    public fun hostedZone(hostedZone: IHostedZone) {
-    }
+    public fun hostedZone(hostedZone: IHostedZone)
 
-    public fun hostedZones(hostedZones: Map<String, IHostedZone>) {
-    }
+    public fun hostedZones(hostedZones: Map<String, IHostedZone>)
 
-    public fun method(method: ValidationMethod) {
-    }
+    public fun method(method: ValidationMethod)
 
-    public fun validationDomains(validationDomains: Map<String, String>) {
-    }
+    public fun validationDomains(validationDomains: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -35,19 +31,19 @@ public interface CertificationValidationProps {
         software.amazon.awscdk.services.certificatemanager.CertificationValidationProps.Builder =
         software.amazon.awscdk.services.certificatemanager.CertificationValidationProps.builder()
 
-    public override fun hostedZone(hostedZone: IHostedZone) {
+    override fun hostedZone(hostedZone: IHostedZone) {
       cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
     }
 
-    public override fun hostedZones(hostedZones: Map<String, IHostedZone>) {
-      cdkBuilder.hostedZones(hostedZones.mapValues { IHostedZone.unwrap(it.value)})
+    override fun hostedZones(hostedZones: Map<String, IHostedZone>) {
+      cdkBuilder.hostedZones(hostedZones.mapValues{IHostedZone.unwrap(it.value)})
     }
 
-    public override fun method(method: ValidationMethod) {
+    override fun method(method: ValidationMethod) {
       cdkBuilder.method(method.let(ValidationMethod::unwrap))
     }
 
-    public override fun validationDomains(validationDomains: Map<String, String>) {
+    override fun validationDomains(validationDomains: Map<String, String>) {
       cdkBuilder.validationDomains(validationDomains)
     }
 
@@ -60,17 +56,15 @@ public interface CertificationValidationProps {
     internal val cdkObject:
         software.amazon.awscdk.services.certificatemanager.CertificationValidationProps,
   ) : CertificationValidationProps {
-    public override fun hostedZone(): IHostedZone? =
-        unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
+    override fun hostedZone(): IHostedZone? = unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
 
-    public override fun hostedZones(): Map<String, IHostedZone> =
-        unwrap(this).getHostedZones()?.mapValues { IHostedZone.wrap(it.value)} ?: emptyMap()
+    override fun hostedZones(): Map<String, IHostedZone> =
+        unwrap(this).getHostedZones()?.mapValues{IHostedZone.wrap(it.value)} ?: emptyMap()
 
-    public override fun method(): ValidationMethod? =
-        unwrap(this).getMethod()?.let(ValidationMethod::wrap)
+    override fun method(): ValidationMethod? = unwrap(this).getMethod()?.let(ValidationMethod::wrap)
 
-    public override fun validationDomains(): Map<String, String> =
-        unwrap(this).getValidationDomains() ?: emptyMap()
+    override fun validationDomains(): Map<String, String> = unwrap(this).getValidationDomains() ?:
+        emptyMap()
   }
 
   public companion object {

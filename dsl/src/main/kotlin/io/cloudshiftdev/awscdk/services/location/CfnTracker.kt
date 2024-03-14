@@ -102,40 +102,29 @@ public open class CfnTracker internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
-    }
+    public fun eventBridgeEnabled(eventBridgeEnabled: Boolean)
 
-    public fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
-    }
+    public fun eventBridgeEnabled(eventBridgeEnabled: IResolvable)
 
-    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: Boolean) {
-    }
+    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: Boolean)
 
-    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
-    }
+    public fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun positionFiltering(positionFiltering: String) {
-    }
+    public fun positionFiltering(positionFiltering: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun pricingPlan(pricingPlan: String) {
-    }
+    public fun pricingPlan(pricingPlan: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun pricingPlanDataSource(pricingPlanDataSource: String) {
-    }
+    public fun pricingPlanDataSource(pricingPlanDataSource: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trackerName(trackerName: String) {
-    }
+    public fun trackerName(trackerName: String)
   }
 
   private class BuilderImpl(
@@ -145,49 +134,49 @@ public open class CfnTracker internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnTracker.Builder =
         software.amazon.awscdk.services.location.CfnTracker.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
+    override fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
       cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
     }
 
-    public override fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
+    override fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
       cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: Boolean) {
+    override fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: Boolean) {
       cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries)
     }
 
-    public override fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
+    override fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
       cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries.let(IResolvable::unwrap))
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun positionFiltering(positionFiltering: String) {
+    override fun positionFiltering(positionFiltering: String) {
       cdkBuilder.positionFiltering(positionFiltering)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun pricingPlan(pricingPlan: String) {
+    override fun pricingPlan(pricingPlan: String) {
       cdkBuilder.pricingPlan(pricingPlan)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun pricingPlanDataSource(pricingPlanDataSource: String) {
+    override fun pricingPlanDataSource(pricingPlanDataSource: String) {
       cdkBuilder.pricingPlanDataSource(pricingPlanDataSource)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trackerName(trackerName: String) {
+    override fun trackerName(trackerName: String) {
       cdkBuilder.trackerName(trackerName)
     }
 

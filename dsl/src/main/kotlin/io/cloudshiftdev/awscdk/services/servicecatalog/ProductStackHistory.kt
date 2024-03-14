@@ -16,23 +16,17 @@ public open class ProductStackHistory internal constructor(
       unwrap(this).versionFromSnapshot(productVersionName).let(CloudFormationProductVersion::wrap)
 
   public interface Builder {
-    public fun currentVersionLocked(currentVersionLocked: Boolean) {
-    }
+    public fun currentVersionLocked(currentVersionLocked: Boolean)
 
-    public fun currentVersionName(currentVersionName: String) {
-    }
+    public fun currentVersionName(currentVersionName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun directory(directory: String) {
-    }
+    public fun directory(directory: String)
 
-    public fun productStack(productStack: ProductStack) {
-    }
+    public fun productStack(productStack: ProductStack)
 
-    public fun validateTemplate(validateTemplate: Boolean) {
-    }
+    public fun validateTemplate(validateTemplate: Boolean)
   }
 
   private class BuilderImpl(
@@ -43,27 +37,27 @@ public open class ProductStackHistory internal constructor(
         software.amazon.awscdk.services.servicecatalog.ProductStackHistory.Builder =
         software.amazon.awscdk.services.servicecatalog.ProductStackHistory.Builder.create(scope, id)
 
-    public override fun currentVersionLocked(currentVersionLocked: Boolean) {
+    override fun currentVersionLocked(currentVersionLocked: Boolean) {
       cdkBuilder.currentVersionLocked(currentVersionLocked)
     }
 
-    public override fun currentVersionName(currentVersionName: String) {
+    override fun currentVersionName(currentVersionName: String) {
       cdkBuilder.currentVersionName(currentVersionName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun directory(directory: String) {
+    override fun directory(directory: String) {
       cdkBuilder.directory(directory)
     }
 
-    public override fun productStack(productStack: ProductStack) {
+    override fun productStack(productStack: ProductStack) {
       cdkBuilder.productStack(productStack.let(ProductStack::unwrap))
     }
 
-    public override fun validateTemplate(validateTemplate: Boolean) {
+    override fun validateTemplate(validateTemplate: Boolean) {
       cdkBuilder.validateTemplate(validateTemplate)
     }
 

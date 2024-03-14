@@ -13,29 +13,26 @@ public interface Device {
       unwrap(this).getPermissions()?.map(DevicePermission::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun hostPath(hostPath: String) {
-    }
+    public fun hostPath(hostPath: String)
 
-    public fun permissions(permissions: List<DevicePermission>) {
-    }
+    public fun permissions(permissions: List<DevicePermission>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.Device.Builder =
         software.amazon.awscdk.services.batch.Device.builder()
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun hostPath(hostPath: String) {
+    override fun hostPath(hostPath: String) {
       cdkBuilder.hostPath(hostPath)
     }
 
-    public override fun permissions(permissions: List<DevicePermission>) {
+    override fun permissions(permissions: List<DevicePermission>) {
       cdkBuilder.permissions(permissions.map(DevicePermission::unwrap))
     }
 
@@ -45,11 +42,11 @@ public interface Device {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.Device,
   ) : Device {
-    public override fun containerPath(): String? = unwrap(this).getContainerPath()
+    override fun containerPath(): String? = unwrap(this).getContainerPath()
 
-    public override fun hostPath(): String = unwrap(this).getHostPath()
+    override fun hostPath(): String = unwrap(this).getHostPath()
 
-    public override fun permissions(): List<DevicePermission> =
+    override fun permissions(): List<DevicePermission> =
         unwrap(this).getPermissions()?.map(DevicePermission::wrap) ?: emptyList()
   }
 

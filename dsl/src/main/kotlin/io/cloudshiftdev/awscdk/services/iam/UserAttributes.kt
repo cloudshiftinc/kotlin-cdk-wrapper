@@ -7,15 +7,14 @@ public interface UserAttributes {
   public fun userArn(): String
 
   public interface Builder {
-    public fun userArn(userArn: String) {
-    }
+    public fun userArn(userArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.UserAttributes.Builder =
         software.amazon.awscdk.services.iam.UserAttributes.builder()
 
-    public override fun userArn(userArn: String) {
+    override fun userArn(userArn: String) {
       cdkBuilder.userArn(userArn)
     }
 
@@ -25,7 +24,7 @@ public interface UserAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.UserAttributes,
   ) : UserAttributes {
-    public override fun userArn(): String = unwrap(this).getUserArn()
+    override fun userArn(): String = unwrap(this).getUserArn()
   }
 
   public companion object {

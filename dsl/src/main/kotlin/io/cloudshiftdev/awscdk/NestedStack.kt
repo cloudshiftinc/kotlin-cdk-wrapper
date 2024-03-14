@@ -26,20 +26,15 @@ public open class NestedStack internal constructor(
   public override fun templateFile(): String = unwrap(this).getTemplateFile()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun notificationArns(notificationArns: List<String>) {
-    }
+    public fun notificationArns(notificationArns: List<String>)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -49,23 +44,23 @@ public open class NestedStack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.NestedStack.Builder =
         software.amazon.awscdk.NestedStack.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun notificationArns(notificationArns: List<String>) {
+    override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

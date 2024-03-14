@@ -9,22 +9,20 @@ public interface CfnCodeDeployBlueGreenApplicationTarget {
   public fun type(): String
 
   public interface Builder {
-    public fun logicalId(logicalId: String) {
-    }
+    public fun logicalId(logicalId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget.builder()
 
-    public override fun logicalId(logicalId: String) {
+    override fun logicalId(logicalId: String) {
       cdkBuilder.logicalId(logicalId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -35,9 +33,9 @@ public interface CfnCodeDeployBlueGreenApplicationTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget,
   ) : CfnCodeDeployBlueGreenApplicationTarget {
-    public override fun logicalId(): String = unwrap(this).getLogicalId()
+    override fun logicalId(): String = unwrap(this).getLogicalId()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

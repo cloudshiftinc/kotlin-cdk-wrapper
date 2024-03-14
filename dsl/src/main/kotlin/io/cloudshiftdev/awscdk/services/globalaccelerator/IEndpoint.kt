@@ -11,10 +11,9 @@ public interface IEndpoint {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint,
   ) : IEndpoint {
-    public override fun region(): String? = unwrap(this).getRegion()
+    override fun region(): String? = unwrap(this).getRegion()
 
-    public override fun renderEndpointConfiguration(): Any =
-        unwrap(this).renderEndpointConfiguration()
+    override fun renderEndpointConfiguration(): Any = unwrap(this).renderEndpointConfiguration()
   }
 
   public companion object {

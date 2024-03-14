@@ -19,50 +19,44 @@ public interface SubnetConfiguration {
   public fun subnetType(): SubnetType
 
   public interface Builder {
-    public fun cidrMask(cidrMask: Number) {
-    }
+    public fun cidrMask(cidrMask: Number)
 
-    public fun ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation: Boolean) {
-    }
+    public fun ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation: Boolean)
 
-    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
-    }
+    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun reserved(reserved: Boolean) {
-    }
+    public fun reserved(reserved: Boolean)
 
-    public fun subnetType(subnetType: SubnetType) {
-    }
+    public fun subnetType(subnetType: SubnetType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.SubnetConfiguration.Builder =
         software.amazon.awscdk.services.ec2.SubnetConfiguration.builder()
 
-    public override fun cidrMask(cidrMask: Number) {
+    override fun cidrMask(cidrMask: Number) {
       cdkBuilder.cidrMask(cidrMask)
     }
 
-    public override fun ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation: Boolean) {
+    override fun ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation: Boolean) {
       cdkBuilder.ipv6AssignAddressOnCreation(ipv6AssignAddressOnCreation)
     }
 
-    public override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
+    override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
       cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun reserved(reserved: Boolean) {
+    override fun reserved(reserved: Boolean) {
       cdkBuilder.reserved(reserved)
     }
 
-    public override fun subnetType(subnetType: SubnetType) {
+    override fun subnetType(subnetType: SubnetType) {
       cdkBuilder.subnetType(subnetType.let(SubnetType::unwrap))
     }
 
@@ -72,19 +66,18 @@ public interface SubnetConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.SubnetConfiguration,
   ) : SubnetConfiguration {
-    public override fun cidrMask(): Number? = unwrap(this).getCidrMask()
+    override fun cidrMask(): Number? = unwrap(this).getCidrMask()
 
-    public override fun ipv6AssignAddressOnCreation(): Boolean? =
+    override fun ipv6AssignAddressOnCreation(): Boolean? =
         unwrap(this).getIpv6AssignAddressOnCreation()
 
-    public override fun mapPublicIpOnLaunch(): Boolean? = unwrap(this).getMapPublicIpOnLaunch()
+    override fun mapPublicIpOnLaunch(): Boolean? = unwrap(this).getMapPublicIpOnLaunch()
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun reserved(): Boolean? = unwrap(this).getReserved()
+    override fun reserved(): Boolean? = unwrap(this).getReserved()
 
-    public override fun subnetType(): SubnetType =
-        unwrap(this).getSubnetType().let(SubnetType::wrap)
+    override fun subnetType(): SubnetType = unwrap(this).getSubnetType().let(SubnetType::wrap)
   }
 
   public companion object {

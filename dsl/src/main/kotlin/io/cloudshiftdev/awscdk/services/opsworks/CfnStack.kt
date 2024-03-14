@@ -233,123 +233,86 @@ public open class CfnStack internal constructor(
   }
 
   public interface Builder {
-    public fun agentVersion(agentVersion: String) {
-    }
+    public fun agentVersion(agentVersion: String)
 
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: Map<String, String>) {
-    }
+    public fun attributes(attributes: Map<String, String>)
 
-    public fun chefConfiguration(chefConfiguration: IResolvable) {
-    }
+    public fun chefConfiguration(chefConfiguration: IResolvable)
 
-    public fun chefConfiguration(chefConfiguration: ChefConfigurationProperty) {
-    }
+    public fun chefConfiguration(chefConfiguration: ChefConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c52845227911481080e46e0f18dd87dd85091e61f37801c276c5b0d79512091")
-    public fun chefConfiguration(chefConfiguration: ChefConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun chefConfiguration(chefConfiguration: ChefConfigurationProperty.Builder.() -> Unit)
 
-    public fun cloneAppIds(cloneAppIds: List<String>) {
-    }
+    public fun cloneAppIds(cloneAppIds: List<String>)
 
-    public fun clonePermissions(clonePermissions: Boolean) {
-    }
+    public fun clonePermissions(clonePermissions: Boolean)
 
-    public fun clonePermissions(clonePermissions: IResolvable) {
-    }
+    public fun clonePermissions(clonePermissions: IResolvable)
 
-    public fun configurationManager(configurationManager: IResolvable) {
-    }
+    public fun configurationManager(configurationManager: IResolvable)
 
-    public fun configurationManager(configurationManager: StackConfigurationManagerProperty) {
-    }
+    public fun configurationManager(configurationManager: StackConfigurationManagerProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63882aab79a73f1c4aeceacb3cf4156ba0b410ca519a816e8dfd0bb7802282b0")
     public
-        fun configurationManager(configurationManager: StackConfigurationManagerProperty.Builder.() -> Unit) {
-    }
+        fun configurationManager(configurationManager: StackConfigurationManagerProperty.Builder.() -> Unit)
 
-    public fun customCookbooksSource(customCookbooksSource: IResolvable) {
-    }
+    public fun customCookbooksSource(customCookbooksSource: IResolvable)
 
-    public fun customCookbooksSource(customCookbooksSource: SourceProperty) {
-    }
+    public fun customCookbooksSource(customCookbooksSource: SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02814ce37b712fafba48ed90650097bc884bff764f2d799c44da9700d64e12bc")
-    public fun customCookbooksSource(customCookbooksSource: SourceProperty.Builder.() -> Unit) {
-    }
+    public fun customCookbooksSource(customCookbooksSource: SourceProperty.Builder.() -> Unit)
 
-    public fun customJson(customJson: Any) {
-    }
+    public fun customJson(customJson: Any)
 
-    public fun defaultAvailabilityZone(defaultAvailabilityZone: String) {
-    }
+    public fun defaultAvailabilityZone(defaultAvailabilityZone: String)
 
-    public fun defaultInstanceProfileArn(defaultInstanceProfileArn: String) {
-    }
+    public fun defaultInstanceProfileArn(defaultInstanceProfileArn: String)
 
-    public fun defaultOs(defaultOs: String) {
-    }
+    public fun defaultOs(defaultOs: String)
 
-    public fun defaultRootDeviceType(defaultRootDeviceType: String) {
-    }
+    public fun defaultRootDeviceType(defaultRootDeviceType: String)
 
-    public fun defaultSshKeyName(defaultSshKeyName: String) {
-    }
+    public fun defaultSshKeyName(defaultSshKeyName: String)
 
-    public fun defaultSubnetId(defaultSubnetId: String) {
-    }
+    public fun defaultSubnetId(defaultSubnetId: String)
 
-    public fun ecsClusterArn(ecsClusterArn: String) {
-    }
+    public fun ecsClusterArn(ecsClusterArn: String)
 
-    public fun elasticIps(elasticIps: IResolvable) {
-    }
+    public fun elasticIps(elasticIps: IResolvable)
 
-    public fun elasticIps(elasticIps: List<Any>) {
-    }
+    public fun elasticIps(elasticIps: List<Any>)
 
-    public fun hostnameTheme(hostnameTheme: String) {
-    }
+    public fun hostnameTheme(hostnameTheme: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rdsDbInstances(rdsDbInstances: IResolvable) {
-    }
+    public fun rdsDbInstances(rdsDbInstances: IResolvable)
 
-    public fun rdsDbInstances(rdsDbInstances: List<Any>) {
-    }
+    public fun rdsDbInstances(rdsDbInstances: List<Any>)
 
-    public fun serviceRoleArn(serviceRoleArn: String) {
-    }
+    public fun serviceRoleArn(serviceRoleArn: String)
 
-    public fun sourceStackId(sourceStackId: String) {
-    }
+    public fun sourceStackId(sourceStackId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun useCustomCookbooks(useCustomCookbooks: Boolean) {
-    }
+    public fun useCustomCookbooks(useCustomCookbooks: Boolean)
 
-    public fun useCustomCookbooks(useCustomCookbooks: IResolvable) {
-    }
+    public fun useCustomCookbooks(useCustomCookbooks: IResolvable)
 
-    public fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: Boolean) {
-    }
+    public fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: Boolean)
 
-    public fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: IResolvable) {
-    }
+    public fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: IResolvable)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -359,158 +322,155 @@ public open class CfnStack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnStack.Builder =
         software.amazon.awscdk.services.opsworks.CfnStack.Builder.create(scope, id)
 
-    public override fun agentVersion(agentVersion: String) {
+    override fun agentVersion(agentVersion: String) {
       cdkBuilder.agentVersion(agentVersion)
     }
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: Map<String, String>) {
+    override fun attributes(attributes: Map<String, String>) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun chefConfiguration(chefConfiguration: IResolvable) {
+    override fun chefConfiguration(chefConfiguration: IResolvable) {
       cdkBuilder.chefConfiguration(chefConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun chefConfiguration(chefConfiguration: ChefConfigurationProperty) {
+    override fun chefConfiguration(chefConfiguration: ChefConfigurationProperty) {
       cdkBuilder.chefConfiguration(chefConfiguration.let(ChefConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c52845227911481080e46e0f18dd87dd85091e61f37801c276c5b0d79512091")
-    public override
-        fun chefConfiguration(chefConfiguration: ChefConfigurationProperty.Builder.() -> Unit): Unit
-        = chefConfiguration(ChefConfigurationProperty(chefConfiguration))
+    override fun chefConfiguration(chefConfiguration: ChefConfigurationProperty.Builder.() -> Unit):
+        Unit = chefConfiguration(ChefConfigurationProperty(chefConfiguration))
 
-    public override fun cloneAppIds(cloneAppIds: List<String>) {
+    override fun cloneAppIds(cloneAppIds: List<String>) {
       cdkBuilder.cloneAppIds(cloneAppIds)
     }
 
-    public override fun clonePermissions(clonePermissions: Boolean) {
+    override fun clonePermissions(clonePermissions: Boolean) {
       cdkBuilder.clonePermissions(clonePermissions)
     }
 
-    public override fun clonePermissions(clonePermissions: IResolvable) {
+    override fun clonePermissions(clonePermissions: IResolvable) {
       cdkBuilder.clonePermissions(clonePermissions.let(IResolvable::unwrap))
     }
 
-    public override fun configurationManager(configurationManager: IResolvable) {
+    override fun configurationManager(configurationManager: IResolvable) {
       cdkBuilder.configurationManager(configurationManager.let(IResolvable::unwrap))
     }
 
-    public override
-        fun configurationManager(configurationManager: StackConfigurationManagerProperty) {
+    override fun configurationManager(configurationManager: StackConfigurationManagerProperty) {
       cdkBuilder.configurationManager(configurationManager.let(StackConfigurationManagerProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63882aab79a73f1c4aeceacb3cf4156ba0b410ca519a816e8dfd0bb7802282b0")
-    public override
+    override
         fun configurationManager(configurationManager: StackConfigurationManagerProperty.Builder.() -> Unit):
         Unit = configurationManager(StackConfigurationManagerProperty(configurationManager))
 
-    public override fun customCookbooksSource(customCookbooksSource: IResolvable) {
+    override fun customCookbooksSource(customCookbooksSource: IResolvable) {
       cdkBuilder.customCookbooksSource(customCookbooksSource.let(IResolvable::unwrap))
     }
 
-    public override fun customCookbooksSource(customCookbooksSource: SourceProperty) {
+    override fun customCookbooksSource(customCookbooksSource: SourceProperty) {
       cdkBuilder.customCookbooksSource(customCookbooksSource.let(SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02814ce37b712fafba48ed90650097bc884bff764f2d799c44da9700d64e12bc")
-    public override
-        fun customCookbooksSource(customCookbooksSource: SourceProperty.Builder.() -> Unit): Unit =
-        customCookbooksSource(SourceProperty(customCookbooksSource))
+    override fun customCookbooksSource(customCookbooksSource: SourceProperty.Builder.() -> Unit):
+        Unit = customCookbooksSource(SourceProperty(customCookbooksSource))
 
-    public override fun customJson(customJson: Any) {
+    override fun customJson(customJson: Any) {
       cdkBuilder.customJson(customJson)
     }
 
-    public override fun defaultAvailabilityZone(defaultAvailabilityZone: String) {
+    override fun defaultAvailabilityZone(defaultAvailabilityZone: String) {
       cdkBuilder.defaultAvailabilityZone(defaultAvailabilityZone)
     }
 
-    public override fun defaultInstanceProfileArn(defaultInstanceProfileArn: String) {
+    override fun defaultInstanceProfileArn(defaultInstanceProfileArn: String) {
       cdkBuilder.defaultInstanceProfileArn(defaultInstanceProfileArn)
     }
 
-    public override fun defaultOs(defaultOs: String) {
+    override fun defaultOs(defaultOs: String) {
       cdkBuilder.defaultOs(defaultOs)
     }
 
-    public override fun defaultRootDeviceType(defaultRootDeviceType: String) {
+    override fun defaultRootDeviceType(defaultRootDeviceType: String) {
       cdkBuilder.defaultRootDeviceType(defaultRootDeviceType)
     }
 
-    public override fun defaultSshKeyName(defaultSshKeyName: String) {
+    override fun defaultSshKeyName(defaultSshKeyName: String) {
       cdkBuilder.defaultSshKeyName(defaultSshKeyName)
     }
 
-    public override fun defaultSubnetId(defaultSubnetId: String) {
+    override fun defaultSubnetId(defaultSubnetId: String) {
       cdkBuilder.defaultSubnetId(defaultSubnetId)
     }
 
-    public override fun ecsClusterArn(ecsClusterArn: String) {
+    override fun ecsClusterArn(ecsClusterArn: String) {
       cdkBuilder.ecsClusterArn(ecsClusterArn)
     }
 
-    public override fun elasticIps(elasticIps: IResolvable) {
+    override fun elasticIps(elasticIps: IResolvable) {
       cdkBuilder.elasticIps(elasticIps.let(IResolvable::unwrap))
     }
 
-    public override fun elasticIps(elasticIps: List<Any>) {
+    override fun elasticIps(elasticIps: List<Any>) {
       cdkBuilder.elasticIps(elasticIps)
     }
 
-    public override fun hostnameTheme(hostnameTheme: String) {
+    override fun hostnameTheme(hostnameTheme: String) {
       cdkBuilder.hostnameTheme(hostnameTheme)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rdsDbInstances(rdsDbInstances: IResolvable) {
+    override fun rdsDbInstances(rdsDbInstances: IResolvable) {
       cdkBuilder.rdsDbInstances(rdsDbInstances.let(IResolvable::unwrap))
     }
 
-    public override fun rdsDbInstances(rdsDbInstances: List<Any>) {
+    override fun rdsDbInstances(rdsDbInstances: List<Any>) {
       cdkBuilder.rdsDbInstances(rdsDbInstances)
     }
 
-    public override fun serviceRoleArn(serviceRoleArn: String) {
+    override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
 
-    public override fun sourceStackId(sourceStackId: String) {
+    override fun sourceStackId(sourceStackId: String) {
       cdkBuilder.sourceStackId(sourceStackId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun useCustomCookbooks(useCustomCookbooks: Boolean) {
+    override fun useCustomCookbooks(useCustomCookbooks: Boolean) {
       cdkBuilder.useCustomCookbooks(useCustomCookbooks)
     }
 
-    public override fun useCustomCookbooks(useCustomCookbooks: IResolvable) {
+    override fun useCustomCookbooks(useCustomCookbooks: IResolvable) {
       cdkBuilder.useCustomCookbooks(useCustomCookbooks.let(IResolvable::unwrap))
     }
 
-    public override fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: Boolean) {
+    override fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: Boolean) {
       cdkBuilder.useOpsworksSecurityGroups(useOpsworksSecurityGroups)
     }
 
-    public override fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: IResolvable) {
+    override fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: IResolvable) {
       cdkBuilder.useOpsworksSecurityGroups(useOpsworksSecurityGroups.let(IResolvable::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -544,11 +504,9 @@ public open class CfnStack internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun ip(ip: String) {
-      }
+      public fun ip(ip: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -556,11 +514,11 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty.builder()
 
-      public override fun ip(ip: String) {
+      override fun ip(ip: String) {
         cdkBuilder.ip(ip)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -571,9 +529,9 @@ public open class CfnStack internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty,
     ) : ElasticIpProperty {
-      public override fun ip(): String = unwrap(this).getIp()
+      override fun ip(): String = unwrap(this).getIp()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -602,14 +560,11 @@ public open class CfnStack internal constructor(
     public fun manageBerkshelf(): Any? = unwrap(this).getManageBerkshelf()
 
     public interface Builder {
-      public fun berkshelfVersion(berkshelfVersion: String) {
-      }
+      public fun berkshelfVersion(berkshelfVersion: String)
 
-      public fun manageBerkshelf(manageBerkshelf: Boolean) {
-      }
+      public fun manageBerkshelf(manageBerkshelf: Boolean)
 
-      public fun manageBerkshelf(manageBerkshelf: IResolvable) {
-      }
+      public fun manageBerkshelf(manageBerkshelf: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -617,15 +572,15 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty.builder()
 
-      public override fun berkshelfVersion(berkshelfVersion: String) {
+      override fun berkshelfVersion(berkshelfVersion: String) {
         cdkBuilder.berkshelfVersion(berkshelfVersion)
       }
 
-      public override fun manageBerkshelf(manageBerkshelf: Boolean) {
+      override fun manageBerkshelf(manageBerkshelf: Boolean) {
         cdkBuilder.manageBerkshelf(manageBerkshelf)
       }
 
-      public override fun manageBerkshelf(manageBerkshelf: IResolvable) {
+      override fun manageBerkshelf(manageBerkshelf: IResolvable) {
         cdkBuilder.manageBerkshelf(manageBerkshelf.let(IResolvable::unwrap))
       }
 
@@ -638,9 +593,9 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty,
     ) : ChefConfigurationProperty {
-      public override fun berkshelfVersion(): String? = unwrap(this).getBerkshelfVersion()
+      override fun berkshelfVersion(): String? = unwrap(this).getBerkshelfVersion()
 
-      public override fun manageBerkshelf(): Any? = unwrap(this).getManageBerkshelf()
+      override fun manageBerkshelf(): Any? = unwrap(this).getManageBerkshelf()
     }
 
     public companion object {
@@ -669,11 +624,9 @@ public open class CfnStack internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -682,11 +635,11 @@ public open class CfnStack internal constructor(
           =
           software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -699,9 +652,9 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty,
     ) : StackConfigurationManagerProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -739,23 +692,17 @@ public open class CfnStack internal constructor(
     public fun username(): String? = unwrap(this).getUsername()
 
     public interface Builder {
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun revision(revision: String) {
-      }
+      public fun revision(revision: String)
 
-      public fun sshKey(sshKey: String) {
-      }
+      public fun sshKey(sshKey: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -763,27 +710,27 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty.builder()
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun revision(revision: String) {
+      override fun revision(revision: String) {
         cdkBuilder.revision(revision)
       }
 
-      public override fun sshKey(sshKey: String) {
+      override fun sshKey(sshKey: String) {
         cdkBuilder.sshKey(sshKey)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -794,17 +741,17 @@ public open class CfnStack internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty,
     ) : SourceProperty {
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun revision(): String? = unwrap(this).getRevision()
+      override fun revision(): String? = unwrap(this).getRevision()
 
-      public override fun sshKey(): String? = unwrap(this).getSshKey()
+      override fun sshKey(): String? = unwrap(this).getSshKey()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
 
-      public override fun username(): String? = unwrap(this).getUsername()
+      override fun username(): String? = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -835,14 +782,11 @@ public open class CfnStack internal constructor(
     public fun rdsDbInstanceArn(): String
 
     public interface Builder {
-      public fun dbPassword(dbPassword: String) {
-      }
+      public fun dbPassword(dbPassword: String)
 
-      public fun dbUser(dbUser: String) {
-      }
+      public fun dbUser(dbUser: String)
 
-      public fun rdsDbInstanceArn(rdsDbInstanceArn: String) {
-      }
+      public fun rdsDbInstanceArn(rdsDbInstanceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -850,15 +794,15 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty.builder()
 
-      public override fun dbPassword(dbPassword: String) {
+      override fun dbPassword(dbPassword: String) {
         cdkBuilder.dbPassword(dbPassword)
       }
 
-      public override fun dbUser(dbUser: String) {
+      override fun dbUser(dbUser: String) {
         cdkBuilder.dbUser(dbUser)
       }
 
-      public override fun rdsDbInstanceArn(rdsDbInstanceArn: String) {
+      override fun rdsDbInstanceArn(rdsDbInstanceArn: String) {
         cdkBuilder.rdsDbInstanceArn(rdsDbInstanceArn)
       }
 
@@ -870,11 +814,11 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty,
     ) : RdsDbInstanceProperty {
-      public override fun dbPassword(): String = unwrap(this).getDbPassword()
+      override fun dbPassword(): String = unwrap(this).getDbPassword()
 
-      public override fun dbUser(): String = unwrap(this).getDbUser()
+      override fun dbUser(): String = unwrap(this).getDbUser()
 
-      public override fun rdsDbInstanceArn(): String = unwrap(this).getRdsDbInstanceArn()
+      override fun rdsDbInstanceArn(): String = unwrap(this).getRdsDbInstanceArn()
     }
 
     public companion object {

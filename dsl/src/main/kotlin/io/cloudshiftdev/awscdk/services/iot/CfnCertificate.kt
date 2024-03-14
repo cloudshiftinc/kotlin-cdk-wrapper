@@ -50,20 +50,15 @@ public open class CfnCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun caCertificatePem(caCertificatePem: String) {
-    }
+    public fun caCertificatePem(caCertificatePem: String)
 
-    public fun certificateMode(certificateMode: String) {
-    }
+    public fun certificateMode(certificateMode: String)
 
-    public fun certificatePem(certificatePem: String) {
-    }
+    public fun certificatePem(certificatePem: String)
 
-    public fun certificateSigningRequest(certificateSigningRequest: String) {
-    }
+    public fun certificateSigningRequest(certificateSigningRequest: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnCertificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnCertificate.Builder =
         software.amazon.awscdk.services.iot.CfnCertificate.Builder.create(scope, id)
 
-    public override fun caCertificatePem(caCertificatePem: String) {
+    override fun caCertificatePem(caCertificatePem: String) {
       cdkBuilder.caCertificatePem(caCertificatePem)
     }
 
-    public override fun certificateMode(certificateMode: String) {
+    override fun certificateMode(certificateMode: String) {
       cdkBuilder.certificateMode(certificateMode)
     }
 
-    public override fun certificatePem(certificatePem: String) {
+    override fun certificatePem(certificatePem: String) {
       cdkBuilder.certificatePem(certificatePem)
     }
 
-    public override fun certificateSigningRequest(certificateSigningRequest: String) {
+    override fun certificateSigningRequest(certificateSigningRequest: String) {
       cdkBuilder.certificateSigningRequest(certificateSigningRequest)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 

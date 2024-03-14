@@ -14,38 +14,27 @@ public open class HttpIntegration internal constructor(
   public override fun integrationId(): String = unwrap(this).getIntegrationId()
 
   public interface Builder {
-    public fun connectionId(connectionId: String) {
-    }
+    public fun connectionId(connectionId: String)
 
-    public fun connectionType(connectionType: HttpConnectionType) {
-    }
+    public fun connectionType(connectionType: HttpConnectionType)
 
-    public fun credentials(credentials: IntegrationCredentials) {
-    }
+    public fun credentials(credentials: IntegrationCredentials)
 
-    public fun httpApi(httpApi: IHttpApi) {
-    }
+    public fun httpApi(httpApi: IHttpApi)
 
-    public fun integrationSubtype(integrationSubtype: HttpIntegrationSubtype) {
-    }
+    public fun integrationSubtype(integrationSubtype: HttpIntegrationSubtype)
 
-    public fun integrationType(integrationType: HttpIntegrationType) {
-    }
+    public fun integrationType(integrationType: HttpIntegrationType)
 
-    public fun integrationUri(integrationUri: String) {
-    }
+    public fun integrationUri(integrationUri: String)
 
-    public fun method(method: HttpMethod) {
-    }
+    public fun method(method: HttpMethod)
 
-    public fun parameterMapping(parameterMapping: ParameterMapping) {
-    }
+    public fun parameterMapping(parameterMapping: ParameterMapping)
 
-    public fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
-    }
+    public fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion)
 
-    public fun secureServerName(secureServerName: String) {
-    }
+    public fun secureServerName(secureServerName: String)
   }
 
   private class BuilderImpl(
@@ -55,47 +44,47 @@ public open class HttpIntegration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpIntegration.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpIntegration.Builder.create(scope, id)
 
-    public override fun connectionId(connectionId: String) {
+    override fun connectionId(connectionId: String) {
       cdkBuilder.connectionId(connectionId)
     }
 
-    public override fun connectionType(connectionType: HttpConnectionType) {
+    override fun connectionType(connectionType: HttpConnectionType) {
       cdkBuilder.connectionType(connectionType.let(HttpConnectionType::unwrap))
     }
 
-    public override fun credentials(credentials: IntegrationCredentials) {
+    override fun credentials(credentials: IntegrationCredentials) {
       cdkBuilder.credentials(credentials.let(IntegrationCredentials::unwrap))
     }
 
-    public override fun httpApi(httpApi: IHttpApi) {
+    override fun httpApi(httpApi: IHttpApi) {
       cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
     }
 
-    public override fun integrationSubtype(integrationSubtype: HttpIntegrationSubtype) {
+    override fun integrationSubtype(integrationSubtype: HttpIntegrationSubtype) {
       cdkBuilder.integrationSubtype(integrationSubtype.let(HttpIntegrationSubtype::unwrap))
     }
 
-    public override fun integrationType(integrationType: HttpIntegrationType) {
+    override fun integrationType(integrationType: HttpIntegrationType) {
       cdkBuilder.integrationType(integrationType.let(HttpIntegrationType::unwrap))
     }
 
-    public override fun integrationUri(integrationUri: String) {
+    override fun integrationUri(integrationUri: String) {
       cdkBuilder.integrationUri(integrationUri)
     }
 
-    public override fun method(method: HttpMethod) {
+    override fun method(method: HttpMethod) {
       cdkBuilder.method(method.let(HttpMethod::unwrap))
     }
 
-    public override fun parameterMapping(parameterMapping: ParameterMapping) {
+    override fun parameterMapping(parameterMapping: ParameterMapping) {
       cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
     }
 
-    public override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
+    override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
       cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
     }
 
-    public override fun secureServerName(secureServerName: String) {
+    override fun secureServerName(secureServerName: String) {
       cdkBuilder.secureServerName(secureServerName)
     }
 

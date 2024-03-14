@@ -43,8 +43,7 @@ public open class AwsAuth internal constructor(
       addUserMapping(user, AwsAuthMapping(mapping))
 
   public interface Builder {
-    public fun cluster(cluster: Cluster) {
-    }
+    public fun cluster(cluster: Cluster)
   }
 
   private class BuilderImpl(
@@ -54,7 +53,7 @@ public open class AwsAuth internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.AwsAuth.Builder =
         software.amazon.awscdk.services.eks.AwsAuth.Builder.create(scope, id)
 
-    public override fun cluster(cluster: Cluster) {
+    override fun cluster(cluster: Cluster) {
       cdkBuilder.cluster(cluster.let(Cluster::unwrap))
     }
 

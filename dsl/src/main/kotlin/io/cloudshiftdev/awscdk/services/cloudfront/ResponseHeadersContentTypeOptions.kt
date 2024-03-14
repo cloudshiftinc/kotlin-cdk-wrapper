@@ -7,8 +7,7 @@ public interface ResponseHeadersContentTypeOptions {
   public fun `override`(): Boolean
 
   public interface Builder {
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ResponseHeadersContentTypeOptions {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions.builder()
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
@@ -28,7 +27,7 @@ public interface ResponseHeadersContentTypeOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentTypeOptions,
   ) : ResponseHeadersContentTypeOptions {
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
   }
 
   public companion object {

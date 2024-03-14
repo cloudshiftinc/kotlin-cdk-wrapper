@@ -11,29 +11,26 @@ public interface LockConfiguration {
   public fun minRetention(): Duration
 
   public interface Builder {
-    public fun changeableFor(changeableFor: Duration) {
-    }
+    public fun changeableFor(changeableFor: Duration)
 
-    public fun maxRetention(maxRetention: Duration) {
-    }
+    public fun maxRetention(maxRetention: Duration)
 
-    public fun minRetention(minRetention: Duration) {
-    }
+    public fun minRetention(minRetention: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.backup.LockConfiguration.Builder =
         software.amazon.awscdk.services.backup.LockConfiguration.builder()
 
-    public override fun changeableFor(changeableFor: Duration) {
+    override fun changeableFor(changeableFor: Duration) {
       cdkBuilder.changeableFor(changeableFor.let(Duration::unwrap))
     }
 
-    public override fun maxRetention(maxRetention: Duration) {
+    override fun maxRetention(maxRetention: Duration) {
       cdkBuilder.maxRetention(maxRetention.let(Duration::unwrap))
     }
 
-    public override fun minRetention(minRetention: Duration) {
+    override fun minRetention(minRetention: Duration) {
       cdkBuilder.minRetention(minRetention.let(Duration::unwrap))
     }
 
@@ -44,14 +41,11 @@ public interface LockConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.backup.LockConfiguration,
   ) : LockConfiguration {
-    public override fun changeableFor(): Duration? =
-        unwrap(this).getChangeableFor()?.let(Duration::wrap)
+    override fun changeableFor(): Duration? = unwrap(this).getChangeableFor()?.let(Duration::wrap)
 
-    public override fun maxRetention(): Duration? =
-        unwrap(this).getMaxRetention()?.let(Duration::wrap)
+    override fun maxRetention(): Duration? = unwrap(this).getMaxRetention()?.let(Duration::wrap)
 
-    public override fun minRetention(): Duration =
-        unwrap(this).getMinRetention().let(Duration::wrap)
+    override fun minRetention(): Duration = unwrap(this).getMinRetention().let(Duration::wrap)
   }
 
   public companion object {

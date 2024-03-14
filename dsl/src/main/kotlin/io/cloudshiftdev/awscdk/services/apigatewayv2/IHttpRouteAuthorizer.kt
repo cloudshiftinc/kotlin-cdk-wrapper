@@ -15,12 +15,12 @@ public interface IHttpRouteAuthorizer {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.IHttpRouteAuthorizer,
   ) : IHttpRouteAuthorizer {
-    public override fun bind(arg0: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
+    override fun bind(arg0: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
         unwrap(this).bind(arg0.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7264f1d1173f23e66027e915fda55df480ab8eab246316ad2f01f98a1f9a28cc")
-    public override fun bind(arg0: HttpRouteAuthorizerBindOptions.Builder.() -> Unit):
+    override fun bind(arg0: HttpRouteAuthorizerBindOptions.Builder.() -> Unit):
         HttpRouteAuthorizerConfig = bind(HttpRouteAuthorizerBindOptions(arg0))
   }
 

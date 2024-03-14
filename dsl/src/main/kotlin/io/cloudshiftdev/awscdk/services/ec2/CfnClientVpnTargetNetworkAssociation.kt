@@ -30,11 +30,9 @@ public open class CfnClientVpnTargetNetworkAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun clientVpnEndpointId(clientVpnEndpointId: String) {
-    }
+    public fun clientVpnEndpointId(clientVpnEndpointId: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnClientVpnTargetNetworkAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation.Builder.create(scope,
         id)
 
-    public override fun clientVpnEndpointId(clientVpnEndpointId: String) {
+    override fun clientVpnEndpointId(clientVpnEndpointId: String) {
       cdkBuilder.clientVpnEndpointId(clientVpnEndpointId)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 

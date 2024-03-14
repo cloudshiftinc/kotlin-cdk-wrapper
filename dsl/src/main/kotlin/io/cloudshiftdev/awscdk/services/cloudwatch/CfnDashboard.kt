@@ -30,11 +30,9 @@ public open class CfnDashboard internal constructor(
   }
 
   public interface Builder {
-    public fun dashboardBody(dashboardBody: String) {
-    }
+    public fun dashboardBody(dashboardBody: String)
 
-    public fun dashboardName(dashboardName: String) {
-    }
+    public fun dashboardName(dashboardName: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnDashboard internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnDashboard.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnDashboard.Builder.create(scope, id)
 
-    public override fun dashboardBody(dashboardBody: String) {
+    override fun dashboardBody(dashboardBody: String) {
       cdkBuilder.dashboardBody(dashboardBody)
     }
 
-    public override fun dashboardName(dashboardName: String) {
+    override fun dashboardName(dashboardName: String) {
       cdkBuilder.dashboardName(dashboardName)
     }
 

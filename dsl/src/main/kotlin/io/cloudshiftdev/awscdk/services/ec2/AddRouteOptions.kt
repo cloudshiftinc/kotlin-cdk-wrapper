@@ -16,43 +16,38 @@ public interface AddRouteOptions {
   public fun routerType(): RouterType
 
   public interface Builder {
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
-    }
+    public fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String)
 
-    public fun enablesInternetConnectivity(enablesInternetConnectivity: Boolean) {
-    }
+    public fun enablesInternetConnectivity(enablesInternetConnectivity: Boolean)
 
-    public fun routerId(routerId: String) {
-    }
+    public fun routerId(routerId: String)
 
-    public fun routerType(routerType: RouterType) {
-    }
+    public fun routerType(routerType: RouterType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AddRouteOptions.Builder =
         software.amazon.awscdk.services.ec2.AddRouteOptions.builder()
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
+    override fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
       cdkBuilder.destinationIpv6CidrBlock(destinationIpv6CidrBlock)
     }
 
-    public override fun enablesInternetConnectivity(enablesInternetConnectivity: Boolean) {
+    override fun enablesInternetConnectivity(enablesInternetConnectivity: Boolean) {
       cdkBuilder.enablesInternetConnectivity(enablesInternetConnectivity)
     }
 
-    public override fun routerId(routerId: String) {
+    override fun routerId(routerId: String) {
       cdkBuilder.routerId(routerId)
     }
 
-    public override fun routerType(routerType: RouterType) {
+    override fun routerType(routerType: RouterType) {
       cdkBuilder.routerType(routerType.let(RouterType::unwrap))
     }
 
@@ -62,18 +57,16 @@ public interface AddRouteOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AddRouteOptions,
   ) : AddRouteOptions {
-    public override fun destinationCidrBlock(): String? = unwrap(this).getDestinationCidrBlock()
+    override fun destinationCidrBlock(): String? = unwrap(this).getDestinationCidrBlock()
 
-    public override fun destinationIpv6CidrBlock(): String? =
-        unwrap(this).getDestinationIpv6CidrBlock()
+    override fun destinationIpv6CidrBlock(): String? = unwrap(this).getDestinationIpv6CidrBlock()
 
-    public override fun enablesInternetConnectivity(): Boolean? =
+    override fun enablesInternetConnectivity(): Boolean? =
         unwrap(this).getEnablesInternetConnectivity()
 
-    public override fun routerId(): String = unwrap(this).getRouterId()
+    override fun routerId(): String = unwrap(this).getRouterId()
 
-    public override fun routerType(): RouterType =
-        unwrap(this).getRouterType().let(RouterType::wrap)
+    override fun routerType(): RouterType = unwrap(this).getRouterType().let(RouterType::wrap)
   }
 
   public companion object {

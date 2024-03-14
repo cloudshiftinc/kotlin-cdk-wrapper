@@ -78,38 +78,28 @@ public open class CfnConfigurationTemplate internal constructor(
       = sourceConfiguration(SourceConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environmentId(environmentId: String) {
-    }
+    public fun environmentId(environmentId: String)
 
-    public fun optionSettings(optionSettings: IResolvable) {
-    }
+    public fun optionSettings(optionSettings: IResolvable)
 
-    public fun optionSettings(optionSettings: List<Any>) {
-    }
+    public fun optionSettings(optionSettings: List<Any>)
 
-    public fun platformArn(platformArn: String) {
-    }
+    public fun platformArn(platformArn: String)
 
-    public fun solutionStackName(solutionStackName: String) {
-    }
+    public fun solutionStackName(solutionStackName: String)
 
-    public fun sourceConfiguration(sourceConfiguration: IResolvable) {
-    }
+    public fun sourceConfiguration(sourceConfiguration: IResolvable)
 
-    public fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
-    }
+    public fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("129bcec5738d69f094bfb48aba3e262cad19c3693cd134a8fededc23223e3f43")
     public
-        fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -121,45 +111,45 @@ public open class CfnConfigurationTemplate internal constructor(
         software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.Builder.create(scope,
         id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environmentId(environmentId: String) {
+    override fun environmentId(environmentId: String) {
       cdkBuilder.environmentId(environmentId)
     }
 
-    public override fun optionSettings(optionSettings: IResolvable) {
+    override fun optionSettings(optionSettings: IResolvable) {
       cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
     }
 
-    public override fun optionSettings(optionSettings: List<Any>) {
+    override fun optionSettings(optionSettings: List<Any>) {
       cdkBuilder.optionSettings(optionSettings)
     }
 
-    public override fun platformArn(platformArn: String) {
+    override fun platformArn(platformArn: String) {
       cdkBuilder.platformArn(platformArn)
     }
 
-    public override fun solutionStackName(solutionStackName: String) {
+    override fun solutionStackName(solutionStackName: String) {
       cdkBuilder.solutionStackName(solutionStackName)
     }
 
-    public override fun sourceConfiguration(sourceConfiguration: IResolvable) {
+    override fun sourceConfiguration(sourceConfiguration: IResolvable) {
       cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
+    override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
       cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("129bcec5738d69f094bfb48aba3e262cad19c3693cd134a8fededc23223e3f43")
-    public override
+    override
         fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit):
         Unit = sourceConfiguration(SourceConfigurationProperty(sourceConfiguration))
 
@@ -196,11 +186,9 @@ public open class CfnConfigurationTemplate internal constructor(
     public fun templateName(): String
 
     public interface Builder {
-      public fun applicationName(applicationName: String) {
-      }
+      public fun applicationName(applicationName: String)
 
-      public fun templateName(templateName: String) {
-      }
+      public fun templateName(templateName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -209,11 +197,11 @@ public open class CfnConfigurationTemplate internal constructor(
           =
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty.builder()
 
-      public override fun applicationName(applicationName: String) {
+      override fun applicationName(applicationName: String) {
         cdkBuilder.applicationName(applicationName)
       }
 
-      public override fun templateName(templateName: String) {
+      override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
       }
 
@@ -226,9 +214,9 @@ public open class CfnConfigurationTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.SourceConfigurationProperty,
     ) : SourceConfigurationProperty {
-      public override fun applicationName(): String = unwrap(this).getApplicationName()
+      override fun applicationName(): String = unwrap(this).getApplicationName()
 
-      public override fun templateName(): String = unwrap(this).getTemplateName()
+      override fun templateName(): String = unwrap(this).getTemplateName()
     }
 
     public companion object {
@@ -261,17 +249,13 @@ public open class CfnConfigurationTemplate internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun optionName(optionName: String) {
-      }
+      public fun optionName(optionName: String)
 
-      public fun resourceName(resourceName: String) {
-      }
+      public fun resourceName(resourceName: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -280,19 +264,19 @@ public open class CfnConfigurationTemplate internal constructor(
           =
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty.builder()
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun optionName(optionName: String) {
+      override fun optionName(optionName: String) {
         cdkBuilder.optionName(optionName)
       }
 
-      public override fun resourceName(resourceName: String) {
+      override fun resourceName(resourceName: String) {
         cdkBuilder.resourceName(resourceName)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -305,13 +289,13 @@ public open class CfnConfigurationTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate.ConfigurationOptionSettingProperty,
     ) : ConfigurationOptionSettingProperty {
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
 
-      public override fun optionName(): String = unwrap(this).getOptionName()
+      override fun optionName(): String = unwrap(this).getOptionName()
 
-      public override fun resourceName(): String? = unwrap(this).getResourceName()
+      override fun resourceName(): String? = unwrap(this).getResourceName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

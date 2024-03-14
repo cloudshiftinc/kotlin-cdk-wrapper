@@ -16,23 +16,17 @@ public open class Fail internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun cause(cause: String) {
-    }
+    public fun cause(cause: String)
 
-    public fun causePath(causePath: String) {
-    }
+    public fun causePath(causePath: String)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun error(error: String) {
-    }
+    public fun error(error: String)
 
-    public fun errorPath(errorPath: String) {
-    }
+    public fun errorPath(errorPath: String)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
   }
 
   private class BuilderImpl(
@@ -42,27 +36,27 @@ public open class Fail internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Fail.Builder =
         software.amazon.awscdk.services.stepfunctions.Fail.Builder.create(scope, id)
 
-    public override fun cause(cause: String) {
+    override fun cause(cause: String) {
       cdkBuilder.cause(cause)
     }
 
-    public override fun causePath(causePath: String) {
+    override fun causePath(causePath: String) {
       cdkBuilder.causePath(causePath)
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun error(error: String) {
+    override fun error(error: String) {
       cdkBuilder.error(error)
     }
 
-    public override fun errorPath(errorPath: String) {
+    override fun errorPath(errorPath: String) {
       cdkBuilder.errorPath(errorPath)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 

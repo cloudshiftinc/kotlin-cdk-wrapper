@@ -12,29 +12,26 @@ public interface HostedZoneProviderProps {
   public fun vpcId(): String? = unwrap(this).getVpcId()
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun privateZone(privateZone: Boolean) {
-    }
+    public fun privateZone(privateZone: Boolean)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.HostedZoneProviderProps.Builder
         = software.amazon.awscdk.services.route53.HostedZoneProviderProps.builder()
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun privateZone(privateZone: Boolean) {
+    override fun privateZone(privateZone: Boolean) {
       cdkBuilder.privateZone(privateZone)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -45,11 +42,11 @@ public interface HostedZoneProviderProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.HostedZoneProviderProps,
   ) : HostedZoneProviderProps {
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
 
-    public override fun privateZone(): Boolean? = unwrap(this).getPrivateZone()
+    override fun privateZone(): Boolean? = unwrap(this).getPrivateZone()
 
-    public override fun vpcId(): String? = unwrap(this).getVpcId()
+    override fun vpcId(): String? = unwrap(this).getVpcId()
   }
 
   public companion object {

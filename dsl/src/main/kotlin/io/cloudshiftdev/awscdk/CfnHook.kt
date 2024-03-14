@@ -13,11 +13,9 @@ public open class CfnHook internal constructor(
   public open fun type(): String = unwrap(this).getType()
 
   public interface Builder {
-    public fun properties(properties: Map<String, Any>) {
-    }
+    public fun properties(properties: Map<String, Any>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -27,11 +25,11 @@ public open class CfnHook internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnHook.Builder =
         software.amazon.awscdk.CfnHook.Builder.create(scope, id)
 
-    public override fun properties(properties: Map<String, Any>) {
+    override fun properties(properties: Map<String, Any>) {
       cdkBuilder.properties(properties)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

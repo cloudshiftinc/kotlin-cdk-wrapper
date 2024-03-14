@@ -15,36 +15,32 @@ public interface StageDeploymentProps {
   public fun stageName(): String? = unwrap(this).getStageName()
 
   public interface Builder {
-    public fun post(post: List<Step>) {
-    }
+    public fun post(post: List<Step>)
 
-    public fun pre(pre: List<Step>) {
-    }
+    public fun pre(pre: List<Step>)
 
-    public fun stackSteps(stackSteps: List<StackSteps>) {
-    }
+    public fun stackSteps(stackSteps: List<StackSteps>)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.StageDeploymentProps.Builder =
         software.amazon.awscdk.pipelines.StageDeploymentProps.builder()
 
-    public override fun post(post: List<Step>) {
+    override fun post(post: List<Step>) {
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
-    public override fun pre(pre: List<Step>) {
+    override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
 
-    public override fun stackSteps(stackSteps: List<StackSteps>) {
+    override fun stackSteps(stackSteps: List<StackSteps>) {
       cdkBuilder.stackSteps(stackSteps.map(StackSteps::unwrap))
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
@@ -54,14 +50,14 @@ public interface StageDeploymentProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.StageDeploymentProps,
   ) : StageDeploymentProps {
-    public override fun post(): List<Step> = unwrap(this).getPost()?.map(Step::wrap) ?: emptyList()
+    override fun post(): List<Step> = unwrap(this).getPost()?.map(Step::wrap) ?: emptyList()
 
-    public override fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
+    override fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
 
-    public override fun stackSteps(): List<StackSteps> =
+    override fun stackSteps(): List<StackSteps> =
         unwrap(this).getStackSteps()?.map(StackSteps::wrap) ?: emptyList()
 
-    public override fun stageName(): String? = unwrap(this).getStageName()
+    override fun stageName(): String? = unwrap(this).getStageName()
   }
 
   public companion object {

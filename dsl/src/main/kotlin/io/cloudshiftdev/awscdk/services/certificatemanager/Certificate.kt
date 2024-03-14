@@ -29,23 +29,17 @@ public open class Certificate internal constructor(
       metricDaysToExpiry(MetricOptions(props))
 
   public interface Builder {
-    public fun certificateName(certificateName: String) {
-    }
+    public fun certificateName(certificateName: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-    }
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm)
 
-    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
-    }
+    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
 
-    public fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
-    }
+    public fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean)
 
-    public fun validation(validation: CertificateValidation) {
-    }
+    public fun validation(validation: CertificateValidation)
   }
 
   private class BuilderImpl(
@@ -55,27 +49,27 @@ public open class Certificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.certificatemanager.Certificate.Builder =
         software.amazon.awscdk.services.certificatemanager.Certificate.Builder.create(scope, id)
 
-    public override fun certificateName(certificateName: String) {
+    override fun certificateName(certificateName: String) {
       cdkBuilder.certificateName(certificateName)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+    override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
       cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
     }
 
-    public override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
+    override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
 
-    public override fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
+    override fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
       cdkBuilder.transparencyLoggingEnabled(transparencyLoggingEnabled)
     }
 
-    public override fun validation(validation: CertificateValidation) {
+    override fun validation(validation: CertificateValidation) {
       cdkBuilder.validation(validation.let(CertificateValidation::unwrap))
     }
 

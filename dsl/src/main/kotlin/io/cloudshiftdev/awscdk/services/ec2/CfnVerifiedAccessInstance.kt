@@ -90,38 +90,28 @@ public open class CfnVerifiedAccessInstance internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun fipsEnabled(fipsEnabled: Boolean) {
-    }
+    public fun fipsEnabled(fipsEnabled: Boolean)
 
-    public fun fipsEnabled(fipsEnabled: IResolvable) {
-    }
+    public fun fipsEnabled(fipsEnabled: IResolvable)
 
-    public fun loggingConfigurations(loggingConfigurations: IResolvable) {
-    }
+    public fun loggingConfigurations(loggingConfigurations: IResolvable)
 
-    public fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty) {
-    }
+    public fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("99df720468d1e979b85ec3ee08dff0ce186fbc0bbf564c059bf72d92494764a8")
     public
-        fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty.Builder.() -> Unit) {
-    }
+        fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: List<String>) {
-    }
+    public fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: List<String>)
 
-    public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
-    }
+    public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable)
 
-    public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>) {
-    }
+    public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>)
   }
 
   private class BuilderImpl(
@@ -131,46 +121,45 @@ public open class CfnVerifiedAccessInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.Builder =
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun fipsEnabled(fipsEnabled: Boolean) {
+    override fun fipsEnabled(fipsEnabled: Boolean) {
       cdkBuilder.fipsEnabled(fipsEnabled)
     }
 
-    public override fun fipsEnabled(fipsEnabled: IResolvable) {
+    override fun fipsEnabled(fipsEnabled: IResolvable) {
       cdkBuilder.fipsEnabled(fipsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfigurations(loggingConfigurations: IResolvable) {
+    override fun loggingConfigurations(loggingConfigurations: IResolvable) {
       cdkBuilder.loggingConfigurations(loggingConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty) {
+    override fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty) {
       cdkBuilder.loggingConfigurations(loggingConfigurations.let(VerifiedAccessLogsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("99df720468d1e979b85ec3ee08dff0ce186fbc0bbf564c059bf72d92494764a8")
-    public override
+    override
         fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty.Builder.() -> Unit):
         Unit = loggingConfigurations(VerifiedAccessLogsProperty(loggingConfigurations))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override
-        fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: List<String>) {
+    override fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: List<String>) {
       cdkBuilder.verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds)
     }
 
-    public override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
+    override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
       cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.let(IResolvable::unwrap))
     }
 
-    public override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>) {
+    override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>) {
       cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders)
     }
 
@@ -211,48 +200,36 @@ public open class CfnVerifiedAccessInstance internal constructor(
     public fun s3(): Any? = unwrap(this).getS3()
 
     public interface Builder {
-      public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: IResolvable)
 
-      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39b540269ddc0fae51ac097e3797d65413d3ae85ee6b5395fa380bbb12a67c60")
-      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty.Builder.() -> Unit) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty.Builder.() -> Unit)
 
-      public fun includeTrustContext(includeTrustContext: Boolean) {
-      }
+      public fun includeTrustContext(includeTrustContext: Boolean)
 
-      public fun includeTrustContext(includeTrustContext: IResolvable) {
-      }
+      public fun includeTrustContext(includeTrustContext: IResolvable)
 
-      public fun kinesisDataFirehose(kinesisDataFirehose: IResolvable) {
-      }
+      public fun kinesisDataFirehose(kinesisDataFirehose: IResolvable)
 
-      public fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty) {
-      }
+      public fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1a0f2a2fe07149a1be9a246f07526a0fd870e0759fa81bd7393a2180b8a15013")
       public
-          fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty.Builder.() -> Unit) {
-      }
+          fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty.Builder.() -> Unit)
 
-      public fun logVersion(logVersion: String) {
-      }
+      public fun logVersion(logVersion: String)
 
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3Property) {
-      }
+      public fun s3(s3: S3Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c69bfd4264fe92e2ffb6015e86765982d8efc263627ca8eb32bc2adaeb15d2e")
-      public fun s3(s3: S3Property.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -261,56 +238,56 @@ public open class CfnVerifiedAccessInstance internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty.builder()
 
-      public override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
+      override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
       }
 
-      public override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty) {
+      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39b540269ddc0fae51ac097e3797d65413d3ae85ee6b5395fa380bbb12a67c60")
-      public override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty.Builder.() -> Unit):
-          Unit = cloudWatchLogs(CloudWatchLogsProperty(cloudWatchLogs))
+      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty.Builder.() -> Unit): Unit =
+          cloudWatchLogs(CloudWatchLogsProperty(cloudWatchLogs))
 
-      public override fun includeTrustContext(includeTrustContext: Boolean) {
+      override fun includeTrustContext(includeTrustContext: Boolean) {
         cdkBuilder.includeTrustContext(includeTrustContext)
       }
 
-      public override fun includeTrustContext(includeTrustContext: IResolvable) {
+      override fun includeTrustContext(includeTrustContext: IResolvable) {
         cdkBuilder.includeTrustContext(includeTrustContext.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisDataFirehose(kinesisDataFirehose: IResolvable) {
+      override fun kinesisDataFirehose(kinesisDataFirehose: IResolvable) {
         cdkBuilder.kinesisDataFirehose(kinesisDataFirehose.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty) {
+      override fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty) {
         cdkBuilder.kinesisDataFirehose(kinesisDataFirehose.let(KinesisDataFirehoseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1a0f2a2fe07149a1be9a246f07526a0fd870e0759fa81bd7393a2180b8a15013")
-      public override
+      override
           fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty.Builder.() -> Unit):
           Unit = kinesisDataFirehose(KinesisDataFirehoseProperty(kinesisDataFirehose))
 
-      public override fun logVersion(logVersion: String) {
+      override fun logVersion(logVersion: String) {
         cdkBuilder.logVersion(logVersion)
       }
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3Property) {
+      override fun s3(s3: S3Property) {
         cdkBuilder.s3(s3.let(S3Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c69bfd4264fe92e2ffb6015e86765982d8efc263627ca8eb32bc2adaeb15d2e")
-      public override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
+      override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty =
@@ -321,15 +298,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessLogsProperty,
     ) : VerifiedAccessLogsProperty {
-      public override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
+      override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
 
-      public override fun includeTrustContext(): Any? = unwrap(this).getIncludeTrustContext()
+      override fun includeTrustContext(): Any? = unwrap(this).getIncludeTrustContext()
 
-      public override fun kinesisDataFirehose(): Any? = unwrap(this).getKinesisDataFirehose()
+      override fun kinesisDataFirehose(): Any? = unwrap(this).getKinesisDataFirehose()
 
-      public override fun logVersion(): String? = unwrap(this).getLogVersion()
+      override fun logVersion(): String? = unwrap(this).getLogVersion()
 
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
     }
 
     public companion object {
@@ -362,20 +339,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketOwner(bucketOwner: String) {
-      }
+      public fun bucketOwner(bucketOwner: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -383,23 +355,23 @@ public open class CfnVerifiedAccessInstance internal constructor(
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property.Builder =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketOwner(bucketOwner: String) {
+      override fun bucketOwner(bucketOwner: String) {
         cdkBuilder.bucketOwner(bucketOwner)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -411,13 +383,13 @@ public open class CfnVerifiedAccessInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.S3Property,
     ) : S3Property {
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -446,14 +418,11 @@ public open class CfnVerifiedAccessInstance internal constructor(
     public fun logGroup(): String? = unwrap(this).getLogGroup()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun logGroup(logGroup: String) {
-      }
+      public fun logGroup(logGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -462,15 +431,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun logGroup(logGroup: String) {
+      override fun logGroup(logGroup: String) {
         cdkBuilder.logGroup(logGroup)
       }
 
@@ -483,9 +452,9 @@ public open class CfnVerifiedAccessInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.CloudWatchLogsProperty,
     ) : CloudWatchLogsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun logGroup(): String? = unwrap(this).getLogGroup()
+      override fun logGroup(): String? = unwrap(this).getLogGroup()
     }
 
     public companion object {
@@ -514,14 +483,11 @@ public open class CfnVerifiedAccessInstance internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun deliveryStream(deliveryStream: String) {
-      }
+      public fun deliveryStream(deliveryStream: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -530,15 +496,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.builder()
 
-      public override fun deliveryStream(deliveryStream: String) {
+      override fun deliveryStream(deliveryStream: String) {
         cdkBuilder.deliveryStream(deliveryStream)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -551,9 +517,9 @@ public open class CfnVerifiedAccessInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.KinesisDataFirehoseProperty,
     ) : KinesisDataFirehoseProperty {
-      public override fun deliveryStream(): String? = unwrap(this).getDeliveryStream()
+      override fun deliveryStream(): String? = unwrap(this).getDeliveryStream()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -589,20 +555,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
         unwrap(this).getVerifiedAccessTrustProviderId()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun deviceTrustProviderType(deviceTrustProviderType: String) {
-      }
+      public fun deviceTrustProviderType(deviceTrustProviderType: String)
 
-      public fun trustProviderType(trustProviderType: String) {
-      }
+      public fun trustProviderType(trustProviderType: String)
 
-      public fun userTrustProviderType(userTrustProviderType: String) {
-      }
+      public fun userTrustProviderType(userTrustProviderType: String)
 
-      public fun verifiedAccessTrustProviderId(verifiedAccessTrustProviderId: String) {
-      }
+      public fun verifiedAccessTrustProviderId(verifiedAccessTrustProviderId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -611,23 +572,23 @@ public open class CfnVerifiedAccessInstance internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun deviceTrustProviderType(deviceTrustProviderType: String) {
+      override fun deviceTrustProviderType(deviceTrustProviderType: String) {
         cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
       }
 
-      public override fun trustProviderType(trustProviderType: String) {
+      override fun trustProviderType(trustProviderType: String) {
         cdkBuilder.trustProviderType(trustProviderType)
       }
 
-      public override fun userTrustProviderType(userTrustProviderType: String) {
+      override fun userTrustProviderType(userTrustProviderType: String) {
         cdkBuilder.userTrustProviderType(userTrustProviderType)
       }
 
-      public override fun verifiedAccessTrustProviderId(verifiedAccessTrustProviderId: String) {
+      override fun verifiedAccessTrustProviderId(verifiedAccessTrustProviderId: String) {
         cdkBuilder.verifiedAccessTrustProviderId(verifiedAccessTrustProviderId)
       }
 
@@ -640,16 +601,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty,
     ) : VerifiedAccessTrustProviderProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun deviceTrustProviderType(): String? =
-          unwrap(this).getDeviceTrustProviderType()
+      override fun deviceTrustProviderType(): String? = unwrap(this).getDeviceTrustProviderType()
 
-      public override fun trustProviderType(): String? = unwrap(this).getTrustProviderType()
+      override fun trustProviderType(): String? = unwrap(this).getTrustProviderType()
 
-      public override fun userTrustProviderType(): String? = unwrap(this).getUserTrustProviderType()
+      override fun userTrustProviderType(): String? = unwrap(this).getUserTrustProviderType()
 
-      public override fun verifiedAccessTrustProviderId(): String? =
+      override fun verifiedAccessTrustProviderId(): String? =
           unwrap(this).getVerifiedAccessTrustProviderId()
     }
 

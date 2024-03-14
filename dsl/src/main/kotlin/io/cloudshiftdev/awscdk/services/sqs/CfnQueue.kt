@@ -143,62 +143,43 @@ public open class CfnQueue internal constructor(
   }
 
   public interface Builder {
-    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
-    }
+    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean)
 
-    public fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
-    }
+    public fun contentBasedDeduplication(contentBasedDeduplication: IResolvable)
 
-    public fun deduplicationScope(deduplicationScope: String) {
-    }
+    public fun deduplicationScope(deduplicationScope: String)
 
-    public fun delaySeconds(delaySeconds: Number) {
-    }
+    public fun delaySeconds(delaySeconds: Number)
 
-    public fun fifoQueue(fifoQueue: Boolean) {
-    }
+    public fun fifoQueue(fifoQueue: Boolean)
 
-    public fun fifoQueue(fifoQueue: IResolvable) {
-    }
+    public fun fifoQueue(fifoQueue: IResolvable)
 
-    public fun fifoThroughputLimit(fifoThroughputLimit: String) {
-    }
+    public fun fifoThroughputLimit(fifoThroughputLimit: String)
 
-    public fun kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds: Number) {
-    }
+    public fun kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds: Number)
 
-    public fun kmsMasterKeyId(kmsMasterKeyId: String) {
-    }
+    public fun kmsMasterKeyId(kmsMasterKeyId: String)
 
-    public fun maximumMessageSize(maximumMessageSize: Number) {
-    }
+    public fun maximumMessageSize(maximumMessageSize: Number)
 
-    public fun messageRetentionPeriod(messageRetentionPeriod: Number) {
-    }
+    public fun messageRetentionPeriod(messageRetentionPeriod: Number)
 
-    public fun queueName(queueName: String) {
-    }
+    public fun queueName(queueName: String)
 
-    public fun receiveMessageWaitTimeSeconds(receiveMessageWaitTimeSeconds: Number) {
-    }
+    public fun receiveMessageWaitTimeSeconds(receiveMessageWaitTimeSeconds: Number)
 
-    public fun redriveAllowPolicy(redriveAllowPolicy: Any) {
-    }
+    public fun redriveAllowPolicy(redriveAllowPolicy: Any)
 
-    public fun redrivePolicy(redrivePolicy: Any) {
-    }
+    public fun redrivePolicy(redrivePolicy: Any)
 
-    public fun sqsManagedSseEnabled(sqsManagedSseEnabled: Boolean) {
-    }
+    public fun sqsManagedSseEnabled(sqsManagedSseEnabled: Boolean)
 
-    public fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable) {
-    }
+    public fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun visibilityTimeout(visibilityTimeout: Number) {
-    }
+    public fun visibilityTimeout(visibilityTimeout: Number)
   }
 
   private class BuilderImpl(
@@ -208,79 +189,79 @@ public open class CfnQueue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sqs.CfnQueue.Builder =
         software.amazon.awscdk.services.sqs.CfnQueue.Builder.create(scope, id)
 
-    public override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
+    override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication)
     }
 
-    public override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
+    override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable::unwrap))
     }
 
-    public override fun deduplicationScope(deduplicationScope: String) {
+    override fun deduplicationScope(deduplicationScope: String) {
       cdkBuilder.deduplicationScope(deduplicationScope)
     }
 
-    public override fun delaySeconds(delaySeconds: Number) {
+    override fun delaySeconds(delaySeconds: Number) {
       cdkBuilder.delaySeconds(delaySeconds)
     }
 
-    public override fun fifoQueue(fifoQueue: Boolean) {
+    override fun fifoQueue(fifoQueue: Boolean) {
       cdkBuilder.fifoQueue(fifoQueue)
     }
 
-    public override fun fifoQueue(fifoQueue: IResolvable) {
+    override fun fifoQueue(fifoQueue: IResolvable) {
       cdkBuilder.fifoQueue(fifoQueue.let(IResolvable::unwrap))
     }
 
-    public override fun fifoThroughputLimit(fifoThroughputLimit: String) {
+    override fun fifoThroughputLimit(fifoThroughputLimit: String) {
       cdkBuilder.fifoThroughputLimit(fifoThroughputLimit)
     }
 
-    public override fun kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds: Number) {
+    override fun kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds: Number) {
       cdkBuilder.kmsDataKeyReusePeriodSeconds(kmsDataKeyReusePeriodSeconds)
     }
 
-    public override fun kmsMasterKeyId(kmsMasterKeyId: String) {
+    override fun kmsMasterKeyId(kmsMasterKeyId: String) {
       cdkBuilder.kmsMasterKeyId(kmsMasterKeyId)
     }
 
-    public override fun maximumMessageSize(maximumMessageSize: Number) {
+    override fun maximumMessageSize(maximumMessageSize: Number) {
       cdkBuilder.maximumMessageSize(maximumMessageSize)
     }
 
-    public override fun messageRetentionPeriod(messageRetentionPeriod: Number) {
+    override fun messageRetentionPeriod(messageRetentionPeriod: Number) {
       cdkBuilder.messageRetentionPeriod(messageRetentionPeriod)
     }
 
-    public override fun queueName(queueName: String) {
+    override fun queueName(queueName: String) {
       cdkBuilder.queueName(queueName)
     }
 
-    public override fun receiveMessageWaitTimeSeconds(receiveMessageWaitTimeSeconds: Number) {
+    override fun receiveMessageWaitTimeSeconds(receiveMessageWaitTimeSeconds: Number) {
       cdkBuilder.receiveMessageWaitTimeSeconds(receiveMessageWaitTimeSeconds)
     }
 
-    public override fun redriveAllowPolicy(redriveAllowPolicy: Any) {
+    override fun redriveAllowPolicy(redriveAllowPolicy: Any) {
       cdkBuilder.redriveAllowPolicy(redriveAllowPolicy)
     }
 
-    public override fun redrivePolicy(redrivePolicy: Any) {
+    override fun redrivePolicy(redrivePolicy: Any) {
       cdkBuilder.redrivePolicy(redrivePolicy)
     }
 
-    public override fun sqsManagedSseEnabled(sqsManagedSseEnabled: Boolean) {
+    override fun sqsManagedSseEnabled(sqsManagedSseEnabled: Boolean) {
       cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled)
     }
 
-    public override fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable) {
+    override fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable) {
       cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun visibilityTimeout(visibilityTimeout: Number) {
+    override fun visibilityTimeout(visibilityTimeout: Number) {
       cdkBuilder.visibilityTimeout(visibilityTimeout)
     }
 

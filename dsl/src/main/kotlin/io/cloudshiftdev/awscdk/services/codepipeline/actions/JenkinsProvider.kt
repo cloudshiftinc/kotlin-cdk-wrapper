@@ -16,20 +16,15 @@ public open class JenkinsProvider internal constructor(
   public override fun serverUrl(): String = unwrap(this).getServerUrl()
 
   public interface Builder {
-    public fun forBuild(forBuild: Boolean) {
-    }
+    public fun forBuild(forBuild: Boolean)
 
-    public fun forTest(forTest: Boolean) {
-    }
+    public fun forTest(forTest: Boolean)
 
-    public fun providerName(providerName: String) {
-    }
+    public fun providerName(providerName: String)
 
-    public fun serverUrl(serverUrl: String) {
-    }
+    public fun serverUrl(serverUrl: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -41,23 +36,23 @@ public open class JenkinsProvider internal constructor(
         software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider.Builder.create(scope,
         id)
 
-    public override fun forBuild(forBuild: Boolean) {
+    override fun forBuild(forBuild: Boolean) {
       cdkBuilder.forBuild(forBuild)
     }
 
-    public override fun forTest(forTest: Boolean) {
+    override fun forTest(forTest: Boolean) {
       cdkBuilder.forTest(forTest)
     }
 
-    public override fun providerName(providerName: String) {
+    override fun providerName(providerName: String) {
       cdkBuilder.providerName(providerName)
     }
 
-    public override fun serverUrl(serverUrl: String) {
+    override fun serverUrl(serverUrl: String) {
       cdkBuilder.serverUrl(serverUrl)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 

@@ -22,25 +22,24 @@ public interface IPlacementGroup : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IPlacementGroup,
   ) : IPlacementGroup {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun partitions(): Number? = unwrap(this).getPartitions()
+    override fun partitions(): Number? = unwrap(this).getPartitions()
 
-    public override fun placementGroupName(): String = unwrap(this).getPlacementGroupName()
+    override fun placementGroupName(): String = unwrap(this).getPlacementGroupName()
 
-    public override fun spreadLevel(): PlacementGroupSpreadLevel? =
+    override fun spreadLevel(): PlacementGroupSpreadLevel? =
         unwrap(this).getSpreadLevel()?.let(PlacementGroupSpreadLevel::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun strategy(): PlacementGroupStrategy? =
+    override fun strategy(): PlacementGroupStrategy? =
         unwrap(this).getStrategy()?.let(PlacementGroupStrategy::wrap)
   }
 

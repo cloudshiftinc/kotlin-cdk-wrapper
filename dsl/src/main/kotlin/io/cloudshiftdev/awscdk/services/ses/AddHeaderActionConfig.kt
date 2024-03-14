@@ -9,22 +9,20 @@ public interface AddHeaderActionConfig {
   public fun headerValue(): String
 
   public interface Builder {
-    public fun headerName(headerName: String) {
-    }
+    public fun headerName(headerName: String)
 
-    public fun headerValue(headerValue: String) {
-    }
+    public fun headerValue(headerValue: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.AddHeaderActionConfig.Builder =
         software.amazon.awscdk.services.ses.AddHeaderActionConfig.builder()
 
-    public override fun headerName(headerName: String) {
+    override fun headerName(headerName: String) {
       cdkBuilder.headerName(headerName)
     }
 
-    public override fun headerValue(headerValue: String) {
+    override fun headerValue(headerValue: String) {
       cdkBuilder.headerValue(headerValue)
     }
 
@@ -35,9 +33,9 @@ public interface AddHeaderActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.AddHeaderActionConfig,
   ) : AddHeaderActionConfig {
-    public override fun headerName(): String = unwrap(this).getHeaderName()
+    override fun headerName(): String = unwrap(this).getHeaderName()
 
-    public override fun headerValue(): String = unwrap(this).getHeaderValue()
+    override fun headerValue(): String = unwrap(this).getHeaderValue()
   }
 
   public companion object {

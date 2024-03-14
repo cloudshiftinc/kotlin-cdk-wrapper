@@ -9,11 +9,9 @@ public interface QueryExecutionContext {
   public fun databaseName(): String? = unwrap(this).getDatabaseName()
 
   public interface Builder {
-    public fun catalogName(catalogName: String) {
-    }
+    public fun catalogName(catalogName: String)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface QueryExecutionContext {
         software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext.builder()
 
-    public override fun catalogName(catalogName: String) {
+    override fun catalogName(catalogName: String) {
       cdkBuilder.catalogName(catalogName)
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
@@ -37,9 +35,9 @@ public interface QueryExecutionContext {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext,
   ) : QueryExecutionContext {
-    public override fun catalogName(): String? = unwrap(this).getCatalogName()
+    override fun catalogName(): String? = unwrap(this).getCatalogName()
 
-    public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+    override fun databaseName(): String? = unwrap(this).getDatabaseName()
   }
 
   public companion object {

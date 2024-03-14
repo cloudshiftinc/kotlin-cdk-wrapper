@@ -36,47 +36,44 @@ public interface IApplicationLoadBalancer : ILoadBalancerV2, IConnectable {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer,
   ) : IApplicationLoadBalancer {
-    public override fun addListener(arg0: String, arg1: BaseApplicationListenerProps):
-        ApplicationListener = unwrap(this).addListener(arg0,
+    override fun addListener(arg0: String, arg1: BaseApplicationListenerProps): ApplicationListener
+        = unwrap(this).addListener(arg0,
         arg1.let(BaseApplicationListenerProps::unwrap)).let(ApplicationListener::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4214bb0ef19ba7cc886c0c0c590fdb239a96d82b7e5e0b4b1bbe44fe0af6df0")
-    public override fun addListener(arg0: String,
-        arg1: BaseApplicationListenerProps.Builder.() -> Unit): ApplicationListener =
-        addListener(arg0, BaseApplicationListenerProps(arg1))
+    override fun addListener(arg0: String, arg1: BaseApplicationListenerProps.Builder.() -> Unit):
+        ApplicationListener = addListener(arg0, BaseApplicationListenerProps(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun ipAddressType(): IpAddressType? =
+    override fun ipAddressType(): IpAddressType? =
         unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
-    public override fun listeners(): List<ApplicationListener> =
+    override fun listeners(): List<ApplicationListener> =
         unwrap(this).getListeners().map(ApplicationListener::wrap)
 
-    public override fun loadBalancerArn(): String = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerCanonicalHostedZoneId(): String =
+    override fun loadBalancerCanonicalHostedZoneId(): String =
         unwrap(this).getLoadBalancerCanonicalHostedZoneId()
 
-    public override fun loadBalancerDnsName(): String = unwrap(this).getLoadBalancerDnsName()
+    override fun loadBalancerDnsName(): String = unwrap(this).getLoadBalancerDnsName()
 
-    public override fun metrics(): IApplicationLoadBalancerMetrics =
+    override fun metrics(): IApplicationLoadBalancerMetrics =
         unwrap(this).getMetrics().let(IApplicationLoadBalancerMetrics::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
+    override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
   }
 
   public companion object {

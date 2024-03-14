@@ -73,29 +73,21 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun applicationType(applicationType: String) {
-    }
+    public fun applicationType(applicationType: String)
 
-    public fun credentials(credentials: IResolvable) {
-    }
+    public fun credentials(credentials: IResolvable)
 
-    public fun credentials(credentials: List<Any>) {
-    }
+    public fun credentials(credentials: List<Any>)
 
-    public fun instances(instances: List<String>) {
-    }
+    public fun instances(instances: List<String>)
 
-    public fun sapInstanceNumber(sapInstanceNumber: String) {
-    }
+    public fun sapInstanceNumber(sapInstanceNumber: String)
 
-    public fun sid(sid: String) {
-    }
+    public fun sid(sid: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -105,35 +97,35 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.systemsmanagersap.CfnApplication.Builder
         = software.amazon.awscdk.services.systemsmanagersap.CfnApplication.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun applicationType(applicationType: String) {
+    override fun applicationType(applicationType: String) {
       cdkBuilder.applicationType(applicationType)
     }
 
-    public override fun credentials(credentials: IResolvable) {
+    override fun credentials(credentials: IResolvable) {
       cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
     }
 
-    public override fun credentials(credentials: List<Any>) {
+    override fun credentials(credentials: List<Any>) {
       cdkBuilder.credentials(credentials)
     }
 
-    public override fun instances(instances: List<String>) {
+    override fun instances(instances: List<String>) {
       cdkBuilder.instances(instances)
     }
 
-    public override fun sapInstanceNumber(sapInstanceNumber: String) {
+    override fun sapInstanceNumber(sapInstanceNumber: String) {
       cdkBuilder.sapInstanceNumber(sapInstanceNumber)
     }
 
-    public override fun sid(sid: String) {
+    override fun sid(sid: String) {
       cdkBuilder.sid(sid)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -170,14 +162,11 @@ public open class CfnApplication internal constructor(
     public fun secretId(): String? = unwrap(this).getSecretId()
 
     public interface Builder {
-      public fun credentialType(credentialType: String) {
-      }
+      public fun credentialType(credentialType: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun secretId(secretId: String) {
-      }
+      public fun secretId(secretId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -186,15 +175,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty.builder()
 
-      public override fun credentialType(credentialType: String) {
+      override fun credentialType(credentialType: String) {
         cdkBuilder.credentialType(credentialType)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun secretId(secretId: String) {
+      override fun secretId(secretId: String) {
         cdkBuilder.secretId(secretId)
       }
 
@@ -207,11 +196,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.systemsmanagersap.CfnApplication.CredentialProperty,
     ) : CredentialProperty {
-      public override fun credentialType(): String? = unwrap(this).getCredentialType()
+      override fun credentialType(): String? = unwrap(this).getCredentialType()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun secretId(): String? = unwrap(this).getSecretId()
+      override fun secretId(): String? = unwrap(this).getSecretId()
     }
 
     public companion object {

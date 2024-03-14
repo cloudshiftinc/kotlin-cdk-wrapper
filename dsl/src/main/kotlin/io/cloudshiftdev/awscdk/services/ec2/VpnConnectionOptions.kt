@@ -16,36 +16,32 @@ public interface VpnConnectionOptions {
       unwrap(this).getTunnelOptions()?.map(VpnTunnelOption::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun asn(asn: Number) {
-    }
+    public fun asn(asn: Number)
 
-    public fun ip(ip: String) {
-    }
+    public fun ip(ip: String)
 
-    public fun staticRoutes(staticRoutes: List<String>) {
-    }
+    public fun staticRoutes(staticRoutes: List<String>)
 
-    public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
-    }
+    public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnConnectionOptions.Builder =
         software.amazon.awscdk.services.ec2.VpnConnectionOptions.builder()
 
-    public override fun asn(asn: Number) {
+    override fun asn(asn: Number) {
       cdkBuilder.asn(asn)
     }
 
-    public override fun ip(ip: String) {
+    override fun ip(ip: String) {
       cdkBuilder.ip(ip)
     }
 
-    public override fun staticRoutes(staticRoutes: List<String>) {
+    override fun staticRoutes(staticRoutes: List<String>) {
       cdkBuilder.staticRoutes(staticRoutes)
     }
 
-    public override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
+    override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
       cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
     }
 
@@ -56,13 +52,13 @@ public interface VpnConnectionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionOptions,
   ) : VpnConnectionOptions {
-    public override fun asn(): Number? = unwrap(this).getAsn()
+    override fun asn(): Number? = unwrap(this).getAsn()
 
-    public override fun ip(): String = unwrap(this).getIp()
+    override fun ip(): String = unwrap(this).getIp()
 
-    public override fun staticRoutes(): List<String> = unwrap(this).getStaticRoutes() ?: emptyList()
+    override fun staticRoutes(): List<String> = unwrap(this).getStaticRoutes() ?: emptyList()
 
-    public override fun tunnelOptions(): List<VpnTunnelOption> =
+    override fun tunnelOptions(): List<VpnTunnelOption> =
         unwrap(this).getTunnelOptions()?.map(VpnTunnelOption::wrap) ?: emptyList()
   }
 

@@ -9,11 +9,9 @@ public interface LoadBalancerTargetProps {
   public fun targetType(): TargetType
 
   public interface Builder {
-    public fun targetJson(targetJson: Any) {
-    }
+    public fun targetJson(targetJson: Any)
 
-    public fun targetType(targetType: TargetType) {
-    }
+    public fun targetType(targetType: TargetType)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface LoadBalancerTargetProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps.builder()
 
-    public override fun targetJson(targetJson: Any) {
+    override fun targetJson(targetJson: Any) {
       cdkBuilder.targetJson(targetJson)
     }
 
-    public override fun targetType(targetType: TargetType) {
+    override fun targetType(targetType: TargetType) {
       cdkBuilder.targetType(targetType.let(TargetType::unwrap))
     }
 
@@ -38,10 +36,9 @@ public interface LoadBalancerTargetProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps,
   ) : LoadBalancerTargetProps {
-    public override fun targetJson(): Any? = unwrap(this).getTargetJson()
+    override fun targetJson(): Any? = unwrap(this).getTargetJson()
 
-    public override fun targetType(): TargetType =
-        unwrap(this).getTargetType().let(TargetType::wrap)
+    override fun targetType(): TargetType = unwrap(this).getTargetType().let(TargetType::wrap)
   }
 
   public companion object {

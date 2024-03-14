@@ -91,38 +91,27 @@ public open class CfnAssetModel internal constructor(
   }
 
   public interface Builder {
-    public fun assetModelCompositeModels(assetModelCompositeModels: IResolvable) {
-    }
+    public fun assetModelCompositeModels(assetModelCompositeModels: IResolvable)
 
-    public fun assetModelCompositeModels(assetModelCompositeModels: List<Any>) {
-    }
+    public fun assetModelCompositeModels(assetModelCompositeModels: List<Any>)
 
-    public fun assetModelDescription(assetModelDescription: String) {
-    }
+    public fun assetModelDescription(assetModelDescription: String)
 
-    public fun assetModelExternalId(assetModelExternalId: String) {
-    }
+    public fun assetModelExternalId(assetModelExternalId: String)
 
-    public fun assetModelHierarchies(assetModelHierarchies: IResolvable) {
-    }
+    public fun assetModelHierarchies(assetModelHierarchies: IResolvable)
 
-    public fun assetModelHierarchies(assetModelHierarchies: List<Any>) {
-    }
+    public fun assetModelHierarchies(assetModelHierarchies: List<Any>)
 
-    public fun assetModelName(assetModelName: String) {
-    }
+    public fun assetModelName(assetModelName: String)
 
-    public fun assetModelProperties(assetModelProperties: IResolvable) {
-    }
+    public fun assetModelProperties(assetModelProperties: IResolvable)
 
-    public fun assetModelProperties(assetModelProperties: List<Any>) {
-    }
+    public fun assetModelProperties(assetModelProperties: List<Any>)
 
-    public fun assetModelType(assetModelType: String) {
-    }
+    public fun assetModelType(assetModelType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -132,47 +121,47 @@ public open class CfnAssetModel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnAssetModel.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnAssetModel.Builder.create(scope, id)
 
-    public override fun assetModelCompositeModels(assetModelCompositeModels: IResolvable) {
+    override fun assetModelCompositeModels(assetModelCompositeModels: IResolvable) {
       cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.let(IResolvable::unwrap))
     }
 
-    public override fun assetModelCompositeModels(assetModelCompositeModels: List<Any>) {
+    override fun assetModelCompositeModels(assetModelCompositeModels: List<Any>) {
       cdkBuilder.assetModelCompositeModels(assetModelCompositeModels)
     }
 
-    public override fun assetModelDescription(assetModelDescription: String) {
+    override fun assetModelDescription(assetModelDescription: String) {
       cdkBuilder.assetModelDescription(assetModelDescription)
     }
 
-    public override fun assetModelExternalId(assetModelExternalId: String) {
+    override fun assetModelExternalId(assetModelExternalId: String) {
       cdkBuilder.assetModelExternalId(assetModelExternalId)
     }
 
-    public override fun assetModelHierarchies(assetModelHierarchies: IResolvable) {
+    override fun assetModelHierarchies(assetModelHierarchies: IResolvable) {
       cdkBuilder.assetModelHierarchies(assetModelHierarchies.let(IResolvable::unwrap))
     }
 
-    public override fun assetModelHierarchies(assetModelHierarchies: List<Any>) {
+    override fun assetModelHierarchies(assetModelHierarchies: List<Any>) {
       cdkBuilder.assetModelHierarchies(assetModelHierarchies)
     }
 
-    public override fun assetModelName(assetModelName: String) {
+    override fun assetModelName(assetModelName: String) {
       cdkBuilder.assetModelName(assetModelName)
     }
 
-    public override fun assetModelProperties(assetModelProperties: IResolvable) {
+    override fun assetModelProperties(assetModelProperties: IResolvable) {
       cdkBuilder.assetModelProperties(assetModelProperties.let(IResolvable::unwrap))
     }
 
-    public override fun assetModelProperties(assetModelProperties: List<Any>) {
+    override fun assetModelProperties(assetModelProperties: List<Any>) {
       cdkBuilder.assetModelProperties(assetModelProperties)
     }
 
-    public override fun assetModelType(assetModelType: String) {
+    override fun assetModelType(assetModelType: String) {
       cdkBuilder.assetModelType(assetModelType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -207,11 +196,9 @@ public open class CfnAssetModel internal constructor(
     public fun offset(): String? = unwrap(this).getOffset()
 
     public interface Builder {
-      public fun interval(interval: String) {
-      }
+      public fun interval(interval: String)
 
-      public fun offset(offset: String) {
-      }
+      public fun offset(offset: String)
     }
 
     private class BuilderImpl : Builder {
@@ -219,11 +206,11 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty.builder()
 
-      public override fun interval(interval: String) {
+      override fun interval(interval: String) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun offset(offset: String) {
+      override fun offset(offset: String) {
         cdkBuilder.offset(offset)
       }
 
@@ -236,9 +223,9 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TumblingWindowProperty,
     ) : TumblingWindowProperty {
-      public override fun interval(): String = unwrap(this).getInterval()
+      override fun interval(): String = unwrap(this).getInterval()
 
-      public override fun offset(): String? = unwrap(this).getOffset()
+      override fun offset(): String? = unwrap(this).getOffset()
     }
 
     public companion object {
@@ -279,37 +266,27 @@ public open class CfnAssetModel internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun dataType(dataType: String) {
-      }
+      public fun dataType(dataType: String)
 
-      public fun dataTypeSpec(dataTypeSpec: String) {
-      }
+      public fun dataTypeSpec(dataTypeSpec: String)
 
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun logicalId(logicalId: String) {
-      }
+      public fun logicalId(logicalId: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: IResolvable) {
-      }
+      public fun type(type: IResolvable)
 
-      public fun type(type: PropertyTypeProperty) {
-      }
+      public fun type(type: PropertyTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b02bf400fd48dbd96fc4dc77d6dbf6839b0ec880462bf2bab2a6626dd1ae860")
-      public fun type(type: PropertyTypeProperty.Builder.() -> Unit) {
-      }
+      public fun type(type: PropertyTypeProperty.Builder.() -> Unit)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -318,44 +295,44 @@ public open class CfnAssetModel internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty.builder()
 
-      public override fun dataType(dataType: String) {
+      override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
       }
 
-      public override fun dataTypeSpec(dataTypeSpec: String) {
+      override fun dataTypeSpec(dataTypeSpec: String) {
         cdkBuilder.dataTypeSpec(dataTypeSpec)
       }
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun logicalId(logicalId: String) {
+      override fun logicalId(logicalId: String) {
         cdkBuilder.logicalId(logicalId)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: IResolvable) {
+      override fun type(type: IResolvable) {
         cdkBuilder.type(type.let(IResolvable::unwrap))
       }
 
-      public override fun type(type: PropertyTypeProperty) {
+      override fun type(type: PropertyTypeProperty) {
         cdkBuilder.type(type.let(PropertyTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b02bf400fd48dbd96fc4dc77d6dbf6839b0ec880462bf2bab2a6626dd1ae860")
-      public override fun type(type: PropertyTypeProperty.Builder.() -> Unit): Unit =
+      override fun type(type: PropertyTypeProperty.Builder.() -> Unit): Unit =
           type(PropertyTypeProperty(type))
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -368,21 +345,21 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelPropertyProperty,
     ) : AssetModelPropertyProperty {
-      public override fun dataType(): String = unwrap(this).getDataType()
+      override fun dataType(): String = unwrap(this).getDataType()
 
-      public override fun dataTypeSpec(): String? = unwrap(this).getDataTypeSpec()
+      override fun dataTypeSpec(): String? = unwrap(this).getDataTypeSpec()
 
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun logicalId(): String? = unwrap(this).getLogicalId()
+      override fun logicalId(): String? = unwrap(this).getLogicalId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): Any = unwrap(this).getType()
+      override fun type(): Any = unwrap(this).getType()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -426,36 +403,26 @@ public open class CfnAssetModel internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun composedAssetModelId(composedAssetModelId: String) {
-      }
+      public fun composedAssetModelId(composedAssetModelId: String)
 
-      public fun compositeModelProperties(compositeModelProperties: IResolvable) {
-      }
+      public fun compositeModelProperties(compositeModelProperties: IResolvable)
 
-      public fun compositeModelProperties(compositeModelProperties: List<Any>) {
-      }
+      public fun compositeModelProperties(compositeModelProperties: List<Any>)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
       public
-          fun parentAssetModelCompositeModelExternalId(parentAssetModelCompositeModelExternalId: String) {
-      }
+          fun parentAssetModelCompositeModelExternalId(parentAssetModelCompositeModelExternalId: String)
 
-      public fun path(path: List<String>) {
-      }
+      public fun path(path: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -464,44 +431,44 @@ public open class CfnAssetModel internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelCompositeModelProperty.builder()
 
-      public override fun composedAssetModelId(composedAssetModelId: String) {
+      override fun composedAssetModelId(composedAssetModelId: String) {
         cdkBuilder.composedAssetModelId(composedAssetModelId)
       }
 
-      public override fun compositeModelProperties(compositeModelProperties: IResolvable) {
+      override fun compositeModelProperties(compositeModelProperties: IResolvable) {
         cdkBuilder.compositeModelProperties(compositeModelProperties.let(IResolvable::unwrap))
       }
 
-      public override fun compositeModelProperties(compositeModelProperties: List<Any>) {
+      override fun compositeModelProperties(compositeModelProperties: List<Any>) {
         cdkBuilder.compositeModelProperties(compositeModelProperties)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override
+      override
           fun parentAssetModelCompositeModelExternalId(parentAssetModelCompositeModelExternalId: String) {
         cdkBuilder.parentAssetModelCompositeModelExternalId(parentAssetModelCompositeModelExternalId)
       }
 
-      public override fun path(path: List<String>) {
+      override fun path(path: List<String>) {
         cdkBuilder.path(path)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -514,25 +481,24 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelCompositeModelProperty,
     ) : AssetModelCompositeModelProperty {
-      public override fun composedAssetModelId(): String? = unwrap(this).getComposedAssetModelId()
+      override fun composedAssetModelId(): String? = unwrap(this).getComposedAssetModelId()
 
-      public override fun compositeModelProperties(): Any? =
-          unwrap(this).getCompositeModelProperties()
+      override fun compositeModelProperties(): Any? = unwrap(this).getCompositeModelProperties()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun parentAssetModelCompositeModelExternalId(): String? =
+      override fun parentAssetModelCompositeModelExternalId(): String? =
           unwrap(this).getParentAssetModelCompositeModelExternalId()
 
-      public override fun path(): List<String> = unwrap(this).getPath() ?: emptyList()
+      override fun path(): List<String> = unwrap(this).getPath() ?: emptyList()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -561,19 +527,15 @@ public open class CfnAssetModel internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: VariableValueProperty) {
-      }
+      public fun `value`(`value`: VariableValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1fe68506a7e1507283e6722d8984a214e5a03a14cbb29005f0a2a6361c396d13")
-      public fun `value`(`value`: VariableValueProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: VariableValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -582,21 +544,21 @@ public open class CfnAssetModel internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.ExpressionVariableProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: VariableValueProperty) {
+      override fun `value`(`value`: VariableValueProperty) {
         cdkBuilder.`value`(`value`.let(VariableValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1fe68506a7e1507283e6722d8984a214e5a03a14cbb29005f0a2a6361c396d13")
-      public override fun `value`(`value`: VariableValueProperty.Builder.() -> Unit): Unit =
+      override fun `value`(`value`: VariableValueProperty.Builder.() -> Unit): Unit =
           `value`(VariableValueProperty(`value`))
 
       public fun build():
@@ -608,9 +570,9 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.ExpressionVariableProperty,
     ) : ExpressionVariableProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {
@@ -641,25 +603,19 @@ public open class CfnAssetModel internal constructor(
     public fun window(): Any
 
     public interface Builder {
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun variables(variables: IResolvable) {
-      }
+      public fun variables(variables: IResolvable)
 
-      public fun variables(variables: List<Any>) {
-      }
+      public fun variables(variables: List<Any>)
 
-      public fun window(window: IResolvable) {
-      }
+      public fun window(window: IResolvable)
 
-      public fun window(window: MetricWindowProperty) {
-      }
+      public fun window(window: MetricWindowProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7fbeef7edee53ffe8864dcbc4ac9425520874cfd6a923039e871babf1bfb90c2")
-      public fun window(window: MetricWindowProperty.Builder.() -> Unit) {
-      }
+      public fun window(window: MetricWindowProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -667,29 +623,29 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty.builder()
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun variables(variables: IResolvable) {
+      override fun variables(variables: IResolvable) {
         cdkBuilder.variables(variables.let(IResolvable::unwrap))
       }
 
-      public override fun variables(variables: List<Any>) {
+      override fun variables(variables: List<Any>) {
         cdkBuilder.variables(variables)
       }
 
-      public override fun window(window: IResolvable) {
+      override fun window(window: IResolvable) {
         cdkBuilder.window(window.let(IResolvable::unwrap))
       }
 
-      public override fun window(window: MetricWindowProperty) {
+      override fun window(window: MetricWindowProperty) {
         cdkBuilder.window(window.let(MetricWindowProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7fbeef7edee53ffe8864dcbc4ac9425520874cfd6a923039e871babf1bfb90c2")
-      public override fun window(window: MetricWindowProperty.Builder.() -> Unit): Unit =
+      override fun window(window: MetricWindowProperty.Builder.() -> Unit): Unit =
           window(MetricWindowProperty(window))
 
       public fun build(): software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty =
@@ -700,11 +656,11 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricProperty,
     ) : MetricProperty {
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
 
-      public override fun variables(): Any = unwrap(this).getVariables()
+      override fun variables(): Any = unwrap(this).getVariables()
 
-      public override fun window(): Any = unwrap(this).getWindow()
+      override fun window(): Any = unwrap(this).getWindow()
     }
 
     public companion object {
@@ -731,8 +687,7 @@ public open class CfnAssetModel internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -741,7 +696,7 @@ public open class CfnAssetModel internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyPathDefinitionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -754,7 +709,7 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyPathDefinitionProperty,
     ) : PropertyPathDefinitionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -787,41 +742,31 @@ public open class CfnAssetModel internal constructor(
     public fun typeName(): String
 
     public interface Builder {
-      public fun attribute(attribute: IResolvable) {
-      }
+      public fun attribute(attribute: IResolvable)
 
-      public fun attribute(attribute: AttributeProperty) {
-      }
+      public fun attribute(attribute: AttributeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("837dcafc53122be3e760e748d4174916478f69f7a41d6a3abb2c31aeabb4ecf5")
-      public fun attribute(attribute: AttributeProperty.Builder.() -> Unit) {
-      }
+      public fun attribute(attribute: AttributeProperty.Builder.() -> Unit)
 
-      public fun metric(metric: IResolvable) {
-      }
+      public fun metric(metric: IResolvable)
 
-      public fun metric(metric: MetricProperty) {
-      }
+      public fun metric(metric: MetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0aa67042088e7c648ef91ace7754b97fb0bb6625a0d4f0acadb45dc76cc8619f")
-      public fun metric(metric: MetricProperty.Builder.() -> Unit) {
-      }
+      public fun metric(metric: MetricProperty.Builder.() -> Unit)
 
-      public fun transform(transform: IResolvable) {
-      }
+      public fun transform(transform: IResolvable)
 
-      public fun transform(transform: TransformProperty) {
-      }
+      public fun transform(transform: TransformProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("14787231582a963e96e4e44653f5cc21200d553f60fa1bf28dc98ad2ded77f58")
-      public fun transform(transform: TransformProperty.Builder.() -> Unit) {
-      }
+      public fun transform(transform: TransformProperty.Builder.() -> Unit)
 
-      public fun typeName(typeName: String) {
-      }
+      public fun typeName(typeName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -829,46 +774,46 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyTypeProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyTypeProperty.builder()
 
-      public override fun attribute(attribute: IResolvable) {
+      override fun attribute(attribute: IResolvable) {
         cdkBuilder.attribute(attribute.let(IResolvable::unwrap))
       }
 
-      public override fun attribute(attribute: AttributeProperty) {
+      override fun attribute(attribute: AttributeProperty) {
         cdkBuilder.attribute(attribute.let(AttributeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("837dcafc53122be3e760e748d4174916478f69f7a41d6a3abb2c31aeabb4ecf5")
-      public override fun attribute(attribute: AttributeProperty.Builder.() -> Unit): Unit =
+      override fun attribute(attribute: AttributeProperty.Builder.() -> Unit): Unit =
           attribute(AttributeProperty(attribute))
 
-      public override fun metric(metric: IResolvable) {
+      override fun metric(metric: IResolvable) {
         cdkBuilder.metric(metric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: MetricProperty) {
+      override fun metric(metric: MetricProperty) {
         cdkBuilder.metric(metric.let(MetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0aa67042088e7c648ef91ace7754b97fb0bb6625a0d4f0acadb45dc76cc8619f")
-      public override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
+      override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
           metric(MetricProperty(metric))
 
-      public override fun transform(transform: IResolvable) {
+      override fun transform(transform: IResolvable) {
         cdkBuilder.transform(transform.let(IResolvable::unwrap))
       }
 
-      public override fun transform(transform: TransformProperty) {
+      override fun transform(transform: TransformProperty) {
         cdkBuilder.transform(transform.let(TransformProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("14787231582a963e96e4e44653f5cc21200d553f60fa1bf28dc98ad2ded77f58")
-      public override fun transform(transform: TransformProperty.Builder.() -> Unit): Unit =
+      override fun transform(transform: TransformProperty.Builder.() -> Unit): Unit =
           transform(TransformProperty(transform))
 
-      public override fun typeName(typeName: String) {
+      override fun typeName(typeName: String) {
         cdkBuilder.typeName(typeName)
       }
 
@@ -881,13 +826,13 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.PropertyTypeProperty,
     ) : PropertyTypeProperty {
-      public override fun attribute(): Any? = unwrap(this).getAttribute()
+      override fun attribute(): Any? = unwrap(this).getAttribute()
 
-      public override fun metric(): Any? = unwrap(this).getMetric()
+      override fun metric(): Any? = unwrap(this).getMetric()
 
-      public override fun transform(): Any? = unwrap(this).getTransform()
+      override fun transform(): Any? = unwrap(this).getTransform()
 
-      public override fun typeName(): String = unwrap(this).getTypeName()
+      override fun typeName(): String = unwrap(this).getTypeName()
     }
 
     public companion object {
@@ -914,16 +859,13 @@ public open class CfnAssetModel internal constructor(
     public fun tumbling(): Any? = unwrap(this).getTumbling()
 
     public interface Builder {
-      public fun tumbling(tumbling: IResolvable) {
-      }
+      public fun tumbling(tumbling: IResolvable)
 
-      public fun tumbling(tumbling: TumblingWindowProperty) {
-      }
+      public fun tumbling(tumbling: TumblingWindowProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab07695551b582b00f816c66a7f2576b947182c36f6a83dfe16e32b8ea5ebfa2")
-      public fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit) {
-      }
+      public fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -931,17 +873,17 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty.builder()
 
-      public override fun tumbling(tumbling: IResolvable) {
+      override fun tumbling(tumbling: IResolvable) {
         cdkBuilder.tumbling(tumbling.let(IResolvable::unwrap))
       }
 
-      public override fun tumbling(tumbling: TumblingWindowProperty) {
+      override fun tumbling(tumbling: TumblingWindowProperty) {
         cdkBuilder.tumbling(tumbling.let(TumblingWindowProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab07695551b582b00f816c66a7f2576b947182c36f6a83dfe16e32b8ea5ebfa2")
-      public override fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit): Unit =
+      override fun tumbling(tumbling: TumblingWindowProperty.Builder.() -> Unit): Unit =
           tumbling(TumblingWindowProperty(tumbling))
 
       public fun build():
@@ -953,7 +895,7 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.MetricWindowProperty,
     ) : MetricWindowProperty {
-      public override fun tumbling(): Any? = unwrap(this).getTumbling()
+      override fun tumbling(): Any? = unwrap(this).getTumbling()
     }
 
     public companion object {
@@ -982,14 +924,11 @@ public open class CfnAssetModel internal constructor(
     public fun variables(): Any
 
     public interface Builder {
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun variables(variables: IResolvable) {
-      }
+      public fun variables(variables: IResolvable)
 
-      public fun variables(variables: List<Any>) {
-      }
+      public fun variables(variables: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -997,15 +936,15 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty.builder()
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun variables(variables: IResolvable) {
+      override fun variables(variables: IResolvable) {
         cdkBuilder.variables(variables.let(IResolvable::unwrap))
       }
 
-      public override fun variables(variables: List<Any>) {
+      override fun variables(variables: List<Any>) {
         cdkBuilder.variables(variables)
       }
 
@@ -1018,9 +957,9 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty,
     ) : TransformProperty {
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
 
-      public override fun variables(): Any = unwrap(this).getVariables()
+      override fun variables(): Any = unwrap(this).getVariables()
     }
 
     public companion object {
@@ -1047,8 +986,7 @@ public open class CfnAssetModel internal constructor(
     public fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
     public interface Builder {
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1056,7 +994,7 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty.builder()
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
@@ -1069,7 +1007,7 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AttributeProperty,
     ) : AttributeProperty {
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
     }
 
     public companion object {
@@ -1104,20 +1042,15 @@ public open class CfnAssetModel internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun childAssetModelId(childAssetModelId: String) {
-      }
+      public fun childAssetModelId(childAssetModelId: String)
 
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun logicalId(logicalId: String) {
-      }
+      public fun logicalId(logicalId: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1126,23 +1059,23 @@ public open class CfnAssetModel internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty.builder()
 
-      public override fun childAssetModelId(childAssetModelId: String) {
+      override fun childAssetModelId(childAssetModelId: String) {
         cdkBuilder.childAssetModelId(childAssetModelId)
       }
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun logicalId(logicalId: String) {
+      override fun logicalId(logicalId: String) {
         cdkBuilder.logicalId(logicalId)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1155,15 +1088,15 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.AssetModelHierarchyProperty,
     ) : AssetModelHierarchyProperty {
-      public override fun childAssetModelId(): String = unwrap(this).getChildAssetModelId()
+      override fun childAssetModelId(): String = unwrap(this).getChildAssetModelId()
 
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun logicalId(): String? = unwrap(this).getLogicalId()
+      override fun logicalId(): String? = unwrap(this).getLogicalId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -1202,29 +1135,21 @@ public open class CfnAssetModel internal constructor(
     public fun propertyPath(): Any? = unwrap(this).getPropertyPath()
 
     public interface Builder {
-      public fun hierarchyExternalId(hierarchyExternalId: String) {
-      }
+      public fun hierarchyExternalId(hierarchyExternalId: String)
 
-      public fun hierarchyId(hierarchyId: String) {
-      }
+      public fun hierarchyId(hierarchyId: String)
 
-      public fun hierarchyLogicalId(hierarchyLogicalId: String) {
-      }
+      public fun hierarchyLogicalId(hierarchyLogicalId: String)
 
-      public fun propertyExternalId(propertyExternalId: String) {
-      }
+      public fun propertyExternalId(propertyExternalId: String)
 
-      public fun propertyId(propertyId: String) {
-      }
+      public fun propertyId(propertyId: String)
 
-      public fun propertyLogicalId(propertyLogicalId: String) {
-      }
+      public fun propertyLogicalId(propertyLogicalId: String)
 
-      public fun propertyPath(propertyPath: IResolvable) {
-      }
+      public fun propertyPath(propertyPath: IResolvable)
 
-      public fun propertyPath(propertyPath: List<Any>) {
-      }
+      public fun propertyPath(propertyPath: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1232,35 +1157,35 @@ public open class CfnAssetModel internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty.builder()
 
-      public override fun hierarchyExternalId(hierarchyExternalId: String) {
+      override fun hierarchyExternalId(hierarchyExternalId: String) {
         cdkBuilder.hierarchyExternalId(hierarchyExternalId)
       }
 
-      public override fun hierarchyId(hierarchyId: String) {
+      override fun hierarchyId(hierarchyId: String) {
         cdkBuilder.hierarchyId(hierarchyId)
       }
 
-      public override fun hierarchyLogicalId(hierarchyLogicalId: String) {
+      override fun hierarchyLogicalId(hierarchyLogicalId: String) {
         cdkBuilder.hierarchyLogicalId(hierarchyLogicalId)
       }
 
-      public override fun propertyExternalId(propertyExternalId: String) {
+      override fun propertyExternalId(propertyExternalId: String) {
         cdkBuilder.propertyExternalId(propertyExternalId)
       }
 
-      public override fun propertyId(propertyId: String) {
+      override fun propertyId(propertyId: String) {
         cdkBuilder.propertyId(propertyId)
       }
 
-      public override fun propertyLogicalId(propertyLogicalId: String) {
+      override fun propertyLogicalId(propertyLogicalId: String) {
         cdkBuilder.propertyLogicalId(propertyLogicalId)
       }
 
-      public override fun propertyPath(propertyPath: IResolvable) {
+      override fun propertyPath(propertyPath: IResolvable) {
         cdkBuilder.propertyPath(propertyPath.let(IResolvable::unwrap))
       }
 
-      public override fun propertyPath(propertyPath: List<Any>) {
+      override fun propertyPath(propertyPath: List<Any>) {
         cdkBuilder.propertyPath(propertyPath)
       }
 
@@ -1273,19 +1198,19 @@ public open class CfnAssetModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty,
     ) : VariableValueProperty {
-      public override fun hierarchyExternalId(): String? = unwrap(this).getHierarchyExternalId()
+      override fun hierarchyExternalId(): String? = unwrap(this).getHierarchyExternalId()
 
-      public override fun hierarchyId(): String? = unwrap(this).getHierarchyId()
+      override fun hierarchyId(): String? = unwrap(this).getHierarchyId()
 
-      public override fun hierarchyLogicalId(): String? = unwrap(this).getHierarchyLogicalId()
+      override fun hierarchyLogicalId(): String? = unwrap(this).getHierarchyLogicalId()
 
-      public override fun propertyExternalId(): String? = unwrap(this).getPropertyExternalId()
+      override fun propertyExternalId(): String? = unwrap(this).getPropertyExternalId()
 
-      public override fun propertyId(): String? = unwrap(this).getPropertyId()
+      override fun propertyId(): String? = unwrap(this).getPropertyId()
 
-      public override fun propertyLogicalId(): String? = unwrap(this).getPropertyLogicalId()
+      override fun propertyLogicalId(): String? = unwrap(this).getPropertyLogicalId()
 
-      public override fun propertyPath(): Any? = unwrap(this).getPropertyPath()
+      override fun propertyPath(): Any? = unwrap(this).getPropertyPath()
     }
 
     public companion object {

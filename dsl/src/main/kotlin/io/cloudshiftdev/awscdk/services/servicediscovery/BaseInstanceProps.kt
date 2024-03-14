@@ -11,11 +11,9 @@ public interface BaseInstanceProps {
   public fun instanceId(): String? = unwrap(this).getInstanceId()
 
   public interface Builder {
-    public fun customAttributes(customAttributes: Map<String, String>) {
-    }
+    public fun customAttributes(customAttributes: Map<String, String>)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -23,11 +21,11 @@ public interface BaseInstanceProps {
         software.amazon.awscdk.services.servicediscovery.BaseInstanceProps.Builder =
         software.amazon.awscdk.services.servicediscovery.BaseInstanceProps.builder()
 
-    public override fun customAttributes(customAttributes: Map<String, String>) {
+    override fun customAttributes(customAttributes: Map<String, String>) {
       cdkBuilder.customAttributes(customAttributes)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
@@ -38,10 +36,10 @@ public interface BaseInstanceProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.BaseInstanceProps,
   ) : BaseInstanceProps {
-    public override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes()
-        ?: emptyMap()
+    override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes() ?:
+        emptyMap()
 
-    public override fun instanceId(): String? = unwrap(this).getInstanceId()
+    override fun instanceId(): String? = unwrap(this).getInstanceId()
   }
 
   public companion object {

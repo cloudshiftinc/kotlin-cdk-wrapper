@@ -71,23 +71,17 @@ public open class CfnStack internal constructor(
   }
 
   public interface Builder {
-    public fun notificationArns(notificationArns: List<String>) {
-    }
+    public fun notificationArns(notificationArns: List<String>)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun templateUrl(templateUrl: String) {
-    }
+    public fun templateUrl(templateUrl: String)
 
-    public fun timeoutInMinutes(timeoutInMinutes: Number) {
-    }
+    public fun timeoutInMinutes(timeoutInMinutes: Number)
   }
 
   private class BuilderImpl(
@@ -97,27 +91,27 @@ public open class CfnStack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnStack.Builder =
         software.amazon.awscdk.CfnStack.Builder.create(scope, id)
 
-    public override fun notificationArns(notificationArns: List<String>) {
+    override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun templateUrl(templateUrl: String) {
+    override fun templateUrl(templateUrl: String) {
       cdkBuilder.templateUrl(templateUrl)
     }
 
-    public override fun timeoutInMinutes(timeoutInMinutes: Number) {
+    override fun timeoutInMinutes(timeoutInMinutes: Number) {
       cdkBuilder.timeoutInMinutes(timeoutInMinutes)
     }
 
@@ -153,36 +147,32 @@ public open class CfnStack internal constructor(
     public fun outputValue(): String? = unwrap(this).getOutputValue()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun exportName(exportName: String) {
-      }
+      public fun exportName(exportName: String)
 
-      public fun outputKey(outputKey: String) {
-      }
+      public fun outputKey(outputKey: String)
 
-      public fun outputValue(outputValue: String) {
-      }
+      public fun outputValue(outputValue: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.CfnStack.OutputProperty.Builder =
           software.amazon.awscdk.CfnStack.OutputProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun exportName(exportName: String) {
+      override fun exportName(exportName: String) {
         cdkBuilder.exportName(exportName)
       }
 
-      public override fun outputKey(outputKey: String) {
+      override fun outputKey(outputKey: String) {
         cdkBuilder.outputKey(outputKey)
       }
 
-      public override fun outputValue(outputValue: String) {
+      override fun outputValue(outputValue: String) {
         cdkBuilder.outputValue(outputValue)
       }
 
@@ -192,13 +182,13 @@ public open class CfnStack internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.CfnStack.OutputProperty,
     ) : OutputProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun exportName(): String? = unwrap(this).getExportName()
+      override fun exportName(): String? = unwrap(this).getExportName()
 
-      public override fun outputKey(): String? = unwrap(this).getOutputKey()
+      override fun outputKey(): String? = unwrap(this).getOutputKey()
 
-      public override fun outputValue(): String? = unwrap(this).getOutputValue()
+      override fun outputValue(): String? = unwrap(this).getOutputValue()
     }
 
     public companion object {

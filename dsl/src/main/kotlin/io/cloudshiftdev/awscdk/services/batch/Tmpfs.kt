@@ -14,29 +14,26 @@ public interface Tmpfs {
   public fun size(): Size
 
   public interface Builder {
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun mountOptions(mountOptions: List<TmpfsMountOption>) {
-    }
+    public fun mountOptions(mountOptions: List<TmpfsMountOption>)
 
-    public fun size(size: Size) {
-    }
+    public fun size(size: Size)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.Tmpfs.Builder =
         software.amazon.awscdk.services.batch.Tmpfs.builder()
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun mountOptions(mountOptions: List<TmpfsMountOption>) {
+    override fun mountOptions(mountOptions: List<TmpfsMountOption>) {
       cdkBuilder.mountOptions(mountOptions.map(TmpfsMountOption::unwrap))
     }
 
-    public override fun size(size: Size) {
+    override fun size(size: Size) {
       cdkBuilder.size(size.let(Size::unwrap))
     }
 
@@ -46,12 +43,12 @@ public interface Tmpfs {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.Tmpfs,
   ) : Tmpfs {
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun mountOptions(): List<TmpfsMountOption> =
+    override fun mountOptions(): List<TmpfsMountOption> =
         unwrap(this).getMountOptions()?.map(TmpfsMountOption::wrap) ?: emptyList()
 
-    public override fun size(): Size = unwrap(this).getSize().let(Size::wrap)
+    override fun size(): Size = unwrap(this).getSize().let(Size::wrap)
   }
 
   public companion object {

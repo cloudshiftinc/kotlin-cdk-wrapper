@@ -26,38 +26,27 @@ public open class EndpointGroup internal constructor(
   public open fun endpointGroupName(): String = unwrap(this).getEndpointGroupName()
 
   public interface Builder {
-    public fun endpointGroupName(endpointGroupName: String) {
-    }
+    public fun endpointGroupName(endpointGroupName: String)
 
-    public fun endpoints(endpoints: List<IEndpoint>) {
-    }
+    public fun endpoints(endpoints: List<IEndpoint>)
 
-    public fun healthCheckInterval(healthCheckInterval: Duration) {
-    }
+    public fun healthCheckInterval(healthCheckInterval: Duration)
 
-    public fun healthCheckPath(healthCheckPath: String) {
-    }
+    public fun healthCheckPath(healthCheckPath: String)
 
-    public fun healthCheckPort(healthCheckPort: Number) {
-    }
+    public fun healthCheckPort(healthCheckPort: Number)
 
-    public fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
-    }
+    public fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol)
 
-    public fun healthCheckThreshold(healthCheckThreshold: Number) {
-    }
+    public fun healthCheckThreshold(healthCheckThreshold: Number)
 
-    public fun listener(listener: IListener) {
-    }
+    public fun listener(listener: IListener)
 
-    public fun portOverrides(portOverrides: List<PortOverride>) {
-    }
+    public fun portOverrides(portOverrides: List<PortOverride>)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun trafficDialPercentage(trafficDialPercentage: Number) {
-    }
+    public fun trafficDialPercentage(trafficDialPercentage: Number)
   }
 
   private class BuilderImpl(
@@ -67,47 +56,47 @@ public open class EndpointGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.EndpointGroup.Builder
         = software.amazon.awscdk.services.globalaccelerator.EndpointGroup.Builder.create(scope, id)
 
-    public override fun endpointGroupName(endpointGroupName: String) {
+    override fun endpointGroupName(endpointGroupName: String) {
       cdkBuilder.endpointGroupName(endpointGroupName)
     }
 
-    public override fun endpoints(endpoints: List<IEndpoint>) {
+    override fun endpoints(endpoints: List<IEndpoint>) {
       cdkBuilder.endpoints(endpoints.map(IEndpoint::unwrap))
     }
 
-    public override fun healthCheckInterval(healthCheckInterval: Duration) {
+    override fun healthCheckInterval(healthCheckInterval: Duration) {
       cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration::unwrap))
     }
 
-    public override fun healthCheckPath(healthCheckPath: String) {
+    override fun healthCheckPath(healthCheckPath: String) {
       cdkBuilder.healthCheckPath(healthCheckPath)
     }
 
-    public override fun healthCheckPort(healthCheckPort: Number) {
+    override fun healthCheckPort(healthCheckPort: Number) {
       cdkBuilder.healthCheckPort(healthCheckPort)
     }
 
-    public override fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
+    override fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
       cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol::unwrap))
     }
 
-    public override fun healthCheckThreshold(healthCheckThreshold: Number) {
+    override fun healthCheckThreshold(healthCheckThreshold: Number) {
       cdkBuilder.healthCheckThreshold(healthCheckThreshold)
     }
 
-    public override fun listener(listener: IListener) {
+    override fun listener(listener: IListener) {
       cdkBuilder.listener(listener.let(IListener::unwrap))
     }
 
-    public override fun portOverrides(portOverrides: List<PortOverride>) {
+    override fun portOverrides(portOverrides: List<PortOverride>) {
       cdkBuilder.portOverrides(portOverrides.map(PortOverride::unwrap))
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun trafficDialPercentage(trafficDialPercentage: Number) {
+    override fun trafficDialPercentage(trafficDialPercentage: Number) {
       cdkBuilder.trafficDialPercentage(trafficDialPercentage)
     }
 

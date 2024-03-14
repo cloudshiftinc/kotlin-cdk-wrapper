@@ -20,50 +20,44 @@ public interface PasswordPolicy {
       unwrap(this).getTempPasswordValidity()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun minLength(minLength: Number) {
-    }
+    public fun minLength(minLength: Number)
 
-    public fun requireDigits(requireDigits: Boolean) {
-    }
+    public fun requireDigits(requireDigits: Boolean)
 
-    public fun requireLowercase(requireLowercase: Boolean) {
-    }
+    public fun requireLowercase(requireLowercase: Boolean)
 
-    public fun requireSymbols(requireSymbols: Boolean) {
-    }
+    public fun requireSymbols(requireSymbols: Boolean)
 
-    public fun requireUppercase(requireUppercase: Boolean) {
-    }
+    public fun requireUppercase(requireUppercase: Boolean)
 
-    public fun tempPasswordValidity(tempPasswordValidity: Duration) {
-    }
+    public fun tempPasswordValidity(tempPasswordValidity: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.PasswordPolicy.Builder =
         software.amazon.awscdk.services.cognito.PasswordPolicy.builder()
 
-    public override fun minLength(minLength: Number) {
+    override fun minLength(minLength: Number) {
       cdkBuilder.minLength(minLength)
     }
 
-    public override fun requireDigits(requireDigits: Boolean) {
+    override fun requireDigits(requireDigits: Boolean) {
       cdkBuilder.requireDigits(requireDigits)
     }
 
-    public override fun requireLowercase(requireLowercase: Boolean) {
+    override fun requireLowercase(requireLowercase: Boolean) {
       cdkBuilder.requireLowercase(requireLowercase)
     }
 
-    public override fun requireSymbols(requireSymbols: Boolean) {
+    override fun requireSymbols(requireSymbols: Boolean) {
       cdkBuilder.requireSymbols(requireSymbols)
     }
 
-    public override fun requireUppercase(requireUppercase: Boolean) {
+    override fun requireUppercase(requireUppercase: Boolean) {
       cdkBuilder.requireUppercase(requireUppercase)
     }
 
-    public override fun tempPasswordValidity(tempPasswordValidity: Duration) {
+    override fun tempPasswordValidity(tempPasswordValidity: Duration) {
       cdkBuilder.tempPasswordValidity(tempPasswordValidity.let(Duration::unwrap))
     }
 
@@ -73,17 +67,17 @@ public interface PasswordPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.PasswordPolicy,
   ) : PasswordPolicy {
-    public override fun minLength(): Number? = unwrap(this).getMinLength()
+    override fun minLength(): Number? = unwrap(this).getMinLength()
 
-    public override fun requireDigits(): Boolean? = unwrap(this).getRequireDigits()
+    override fun requireDigits(): Boolean? = unwrap(this).getRequireDigits()
 
-    public override fun requireLowercase(): Boolean? = unwrap(this).getRequireLowercase()
+    override fun requireLowercase(): Boolean? = unwrap(this).getRequireLowercase()
 
-    public override fun requireSymbols(): Boolean? = unwrap(this).getRequireSymbols()
+    override fun requireSymbols(): Boolean? = unwrap(this).getRequireSymbols()
 
-    public override fun requireUppercase(): Boolean? = unwrap(this).getRequireUppercase()
+    override fun requireUppercase(): Boolean? = unwrap(this).getRequireUppercase()
 
-    public override fun tempPasswordValidity(): Duration? =
+    override fun tempPasswordValidity(): Duration? =
         unwrap(this).getTempPasswordValidity()?.let(Duration::wrap)
   }
 

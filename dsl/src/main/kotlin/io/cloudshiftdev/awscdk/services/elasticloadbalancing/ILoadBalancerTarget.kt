@@ -10,12 +10,11 @@ public interface ILoadBalancerTarget : IConnectable {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget,
   ) : ILoadBalancerTarget {
-    public override fun attachToClassicLb(arg0: LoadBalancer) {
+    override fun attachToClassicLb(arg0: LoadBalancer) {
       unwrap(this).attachToClassicLB(arg0.let(LoadBalancer::unwrap))
     }
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
   }
 
   public companion object {

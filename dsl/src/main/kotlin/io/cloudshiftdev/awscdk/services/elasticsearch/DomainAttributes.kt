@@ -14,12 +14,10 @@ public interface DomainAttributes {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun domainArn(domainArn: String) {
-    }
+    public fun domainArn(domainArn: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun domainEndpoint(domainEndpoint: String) {
-    }
+    public fun domainEndpoint(domainEndpoint: String)
   }
 
   private class BuilderImpl : Builder {
@@ -27,12 +25,12 @@ public interface DomainAttributes {
         software.amazon.awscdk.services.elasticsearch.DomainAttributes.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainArn(domainArn: String) {
+    override fun domainArn(domainArn: String) {
       cdkBuilder.domainArn(domainArn)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainEndpoint(domainEndpoint: String) {
+    override fun domainEndpoint(domainEndpoint: String) {
       cdkBuilder.domainEndpoint(domainEndpoint)
     }
 
@@ -44,10 +42,10 @@ public interface DomainAttributes {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes,
   ) : DomainAttributes {
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainArn(): String = unwrap(this).getDomainArn()
+    override fun domainArn(): String = unwrap(this).getDomainArn()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
+    override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
   }
 
   public companion object {

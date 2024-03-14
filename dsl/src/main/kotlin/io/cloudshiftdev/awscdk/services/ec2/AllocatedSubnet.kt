@@ -9,22 +9,20 @@ public interface AllocatedSubnet {
   public fun ipv6Cidr(): String? = unwrap(this).getIpv6Cidr()
 
   public interface Builder {
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun ipv6Cidr(ipv6Cidr: String) {
-    }
+    public fun ipv6Cidr(ipv6Cidr: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AllocatedSubnet.Builder =
         software.amazon.awscdk.services.ec2.AllocatedSubnet.builder()
 
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun ipv6Cidr(ipv6Cidr: String) {
+    override fun ipv6Cidr(ipv6Cidr: String) {
       cdkBuilder.ipv6Cidr(ipv6Cidr)
     }
 
@@ -34,9 +32,9 @@ public interface AllocatedSubnet {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AllocatedSubnet,
   ) : AllocatedSubnet {
-    public override fun cidr(): String = unwrap(this).getCidr()
+    override fun cidr(): String = unwrap(this).getCidr()
 
-    public override fun ipv6Cidr(): String? = unwrap(this).getIpv6Cidr()
+    override fun ipv6Cidr(): String? = unwrap(this).getIpv6Cidr()
   }
 
   public companion object {

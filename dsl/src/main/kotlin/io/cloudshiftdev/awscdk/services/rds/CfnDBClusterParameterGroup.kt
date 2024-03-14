@@ -55,20 +55,15 @@ public open class CfnDBClusterParameterGroup internal constructor(
   }
 
   public interface Builder {
-    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
-    }
+    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,23 +73,23 @@ public open class CfnDBClusterParameterGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup.Builder =
         software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup.Builder.create(scope, id)
 
-    public override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
+    override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
       cdkBuilder.dbClusterParameterGroupName(dbClusterParameterGroupName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

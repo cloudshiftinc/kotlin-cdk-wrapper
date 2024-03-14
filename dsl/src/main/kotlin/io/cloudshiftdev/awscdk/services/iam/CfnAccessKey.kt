@@ -39,14 +39,11 @@ public open class CfnAccessKey internal constructor(
   }
 
   public interface Builder {
-    public fun serial(serial: Number) {
-    }
+    public fun serial(serial: Number)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnAccessKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnAccessKey.Builder =
         software.amazon.awscdk.services.iam.CfnAccessKey.Builder.create(scope, id)
 
-    public override fun serial(serial: Number) {
+    override fun serial(serial: Number) {
       cdkBuilder.serial(serial)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 

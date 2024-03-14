@@ -43,11 +43,9 @@ public open class CfnCluster internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -58,11 +56,11 @@ public open class CfnCluster internal constructor(
         software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.Builder =
         software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -97,11 +95,9 @@ public open class CfnCluster internal constructor(
     public fun region(): String? = unwrap(this).getRegion()
 
     public interface Builder {
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -110,11 +106,11 @@ public open class CfnCluster internal constructor(
           =
           software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty.builder()
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -127,9 +123,9 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty,
     ) : ClusterEndpointProperty {
-      public override fun endpoint(): String? = unwrap(this).getEndpoint()
+      override fun endpoint(): String? = unwrap(this).getEndpoint()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
     }
 
     public companion object {

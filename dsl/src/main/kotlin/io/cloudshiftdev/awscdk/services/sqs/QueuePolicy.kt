@@ -16,8 +16,7 @@ public open class QueuePolicy internal constructor(
   public open fun queuePolicyId(): String = unwrap(this).getQueuePolicyId()
 
   public interface Builder {
-    public fun queues(queues: List<IQueue>) {
-    }
+    public fun queues(queues: List<IQueue>)
   }
 
   private class BuilderImpl(
@@ -27,7 +26,7 @@ public open class QueuePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sqs.QueuePolicy.Builder =
         software.amazon.awscdk.services.sqs.QueuePolicy.Builder.create(scope, id)
 
-    public override fun queues(queues: List<IQueue>) {
+    override fun queues(queues: List<IQueue>) {
       cdkBuilder.queues(queues.map(IQueue::unwrap))
     }
 

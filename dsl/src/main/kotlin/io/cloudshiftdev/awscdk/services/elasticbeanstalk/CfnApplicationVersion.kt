@@ -49,22 +49,17 @@ public open class CfnApplicationVersion internal constructor(
       sourceBundle(SourceBundleProperty(`value`))
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun sourceBundle(sourceBundle: IResolvable) {
-    }
+    public fun sourceBundle(sourceBundle: IResolvable)
 
-    public fun sourceBundle(sourceBundle: SourceBundleProperty) {
-    }
+    public fun sourceBundle(sourceBundle: SourceBundleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f795ae77678e6d15ed6b87c69dba1d60f35d044bf88ac97674c8556ff79d25a8")
-    public fun sourceBundle(sourceBundle: SourceBundleProperty.Builder.() -> Unit) {
-    }
+    public fun sourceBundle(sourceBundle: SourceBundleProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -76,25 +71,25 @@ public open class CfnApplicationVersion internal constructor(
         software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.Builder.create(scope,
         id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun sourceBundle(sourceBundle: IResolvable) {
+    override fun sourceBundle(sourceBundle: IResolvable) {
       cdkBuilder.sourceBundle(sourceBundle.let(IResolvable::unwrap))
     }
 
-    public override fun sourceBundle(sourceBundle: SourceBundleProperty) {
+    override fun sourceBundle(sourceBundle: SourceBundleProperty) {
       cdkBuilder.sourceBundle(sourceBundle.let(SourceBundleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f795ae77678e6d15ed6b87c69dba1d60f35d044bf88ac97674c8556ff79d25a8")
-    public override fun sourceBundle(sourceBundle: SourceBundleProperty.Builder.() -> Unit): Unit =
+    override fun sourceBundle(sourceBundle: SourceBundleProperty.Builder.() -> Unit): Unit =
         sourceBundle(SourceBundleProperty(sourceBundle))
 
     public fun build(): software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion =
@@ -129,11 +124,9 @@ public open class CfnApplicationVersion internal constructor(
     public fun s3Key(): String
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -142,11 +135,11 @@ public open class CfnApplicationVersion internal constructor(
           =
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
@@ -159,9 +152,9 @@ public open class CfnApplicationVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion.SourceBundleProperty,
     ) : SourceBundleProperty {
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String = unwrap(this).getS3Key()
+      override fun s3Key(): String = unwrap(this).getS3Key()
     }
 
     public companion object {

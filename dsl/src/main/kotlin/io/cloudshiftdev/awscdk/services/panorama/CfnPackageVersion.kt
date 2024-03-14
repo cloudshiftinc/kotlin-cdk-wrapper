@@ -73,26 +73,19 @@ public open class CfnPackageVersion internal constructor(
   }
 
   public interface Builder {
-    public fun markLatest(markLatest: Boolean) {
-    }
+    public fun markLatest(markLatest: Boolean)
 
-    public fun markLatest(markLatest: IResolvable) {
-    }
+    public fun markLatest(markLatest: IResolvable)
 
-    public fun ownerAccount(ownerAccount: String) {
-    }
+    public fun ownerAccount(ownerAccount: String)
 
-    public fun packageId(packageId: String) {
-    }
+    public fun packageId(packageId: String)
 
-    public fun packageVersion(packageVersion: String) {
-    }
+    public fun packageVersion(packageVersion: String)
 
-    public fun patchVersion(patchVersion: String) {
-    }
+    public fun patchVersion(patchVersion: String)
 
-    public fun updatedLatestPatchVersion(updatedLatestPatchVersion: String) {
-    }
+    public fun updatedLatestPatchVersion(updatedLatestPatchVersion: String)
   }
 
   private class BuilderImpl(
@@ -102,31 +95,31 @@ public open class CfnPackageVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.panorama.CfnPackageVersion.Builder =
         software.amazon.awscdk.services.panorama.CfnPackageVersion.Builder.create(scope, id)
 
-    public override fun markLatest(markLatest: Boolean) {
+    override fun markLatest(markLatest: Boolean) {
       cdkBuilder.markLatest(markLatest)
     }
 
-    public override fun markLatest(markLatest: IResolvable) {
+    override fun markLatest(markLatest: IResolvable) {
       cdkBuilder.markLatest(markLatest.let(IResolvable::unwrap))
     }
 
-    public override fun ownerAccount(ownerAccount: String) {
+    override fun ownerAccount(ownerAccount: String) {
       cdkBuilder.ownerAccount(ownerAccount)
     }
 
-    public override fun packageId(packageId: String) {
+    override fun packageId(packageId: String) {
       cdkBuilder.packageId(packageId)
     }
 
-    public override fun packageVersion(packageVersion: String) {
+    override fun packageVersion(packageVersion: String) {
       cdkBuilder.packageVersion(packageVersion)
     }
 
-    public override fun patchVersion(patchVersion: String) {
+    override fun patchVersion(patchVersion: String) {
       cdkBuilder.patchVersion(patchVersion)
     }
 
-    public override fun updatedLatestPatchVersion(updatedLatestPatchVersion: String) {
+    override fun updatedLatestPatchVersion(updatedLatestPatchVersion: String) {
       cdkBuilder.updatedLatestPatchVersion(updatedLatestPatchVersion)
     }
 

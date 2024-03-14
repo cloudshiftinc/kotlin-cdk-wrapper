@@ -41,17 +41,13 @@ public open class CfnCustomerGatewayAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun customerGatewayArn(customerGatewayArn: String) {
-    }
+    public fun customerGatewayArn(customerGatewayArn: String)
 
-    public fun deviceId(deviceId: String) {
-    }
+    public fun deviceId(deviceId: String)
 
-    public fun globalNetworkId(globalNetworkId: String) {
-    }
+    public fun globalNetworkId(globalNetworkId: String)
 
-    public fun linkId(linkId: String) {
-    }
+    public fun linkId(linkId: String)
   }
 
   private class BuilderImpl(
@@ -63,19 +59,19 @@ public open class CfnCustomerGatewayAssociation internal constructor(
         software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation.Builder.create(scope,
         id)
 
-    public override fun customerGatewayArn(customerGatewayArn: String) {
+    override fun customerGatewayArn(customerGatewayArn: String) {
       cdkBuilder.customerGatewayArn(customerGatewayArn)
     }
 
-    public override fun deviceId(deviceId: String) {
+    override fun deviceId(deviceId: String) {
       cdkBuilder.deviceId(deviceId)
     }
 
-    public override fun globalNetworkId(globalNetworkId: String) {
+    override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
-    public override fun linkId(linkId: String) {
+    override fun linkId(linkId: String) {
       cdkBuilder.linkId(linkId)
     }
 

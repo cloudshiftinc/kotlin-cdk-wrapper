@@ -70,64 +70,46 @@ public open class Canary internal constructor(
   public open fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>) {
-    }
+    public fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>)
 
-    public fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation) {
-    }
+    public fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cba359b9320a239876b8e1a47380fa5d3221f2548b13aaa4c6ee90331bf90fa7")
     public
-        fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation.Builder.() -> Unit) {
-    }
+        fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation.Builder.() -> Unit)
 
-    public fun canaryName(canaryName: String) {
-    }
+    public fun canaryName(canaryName: String)
 
-    public fun cleanup(cleanup: Cleanup) {
-    }
+    public fun cleanup(cleanup: Cleanup)
 
-    public fun environmentVariables(environmentVariables: Map<String, String>) {
-    }
+    public fun environmentVariables(environmentVariables: Map<String, String>)
 
-    public fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
-    }
+    public fun failureRetentionPeriod(failureRetentionPeriod: Duration)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun runtime(runtime: Runtime) {
-    }
+    public fun runtime(runtime: Runtime)
 
-    public fun schedule(schedule: Schedule) {
-    }
+    public fun schedule(schedule: Schedule)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun startAfterCreation(startAfterCreation: Boolean) {
-    }
+    public fun startAfterCreation(startAfterCreation: Boolean)
 
-    public fun successRetentionPeriod(successRetentionPeriod: Duration) {
-    }
+    public fun successRetentionPeriod(successRetentionPeriod: Duration)
 
-    public fun test(test: Test) {
-    }
+    public fun test(test: Test)
 
-    public fun timeToLive(timeToLive: Duration) {
-    }
+    public fun timeToLive(timeToLive: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea7816fdc9d36fdb22296f345cc70fac642d963ca5449962c72b1b2ad55c7100")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -137,80 +119,79 @@ public open class Canary internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.Canary.Builder =
         software.amazon.awscdk.services.synthetics.Canary.Builder.create(scope, id)
 
-    public override
-        fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>) {
+    override fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>) {
       cdkBuilder.artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.map(LifecycleRule::unwrap))
     }
 
-    public override fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation) {
+    override fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation) {
       cdkBuilder.artifactsBucketLocation(artifactsBucketLocation.let(ArtifactsBucketLocation::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cba359b9320a239876b8e1a47380fa5d3221f2548b13aaa4c6ee90331bf90fa7")
-    public override
+    override
         fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation.Builder.() -> Unit):
         Unit = artifactsBucketLocation(ArtifactsBucketLocation(artifactsBucketLocation))
 
-    public override fun canaryName(canaryName: String) {
+    override fun canaryName(canaryName: String) {
       cdkBuilder.canaryName(canaryName)
     }
 
-    public override fun cleanup(cleanup: Cleanup) {
+    override fun cleanup(cleanup: Cleanup) {
       cdkBuilder.cleanup(cleanup.let(Cleanup::unwrap))
     }
 
-    public override fun environmentVariables(environmentVariables: Map<String, String>) {
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 
-    public override fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
+    override fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
       cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun runtime(runtime: Runtime) {
+    override fun runtime(runtime: Runtime) {
       cdkBuilder.runtime(runtime.let(Runtime::unwrap))
     }
 
-    public override fun schedule(schedule: Schedule) {
+    override fun schedule(schedule: Schedule) {
       cdkBuilder.schedule(schedule.let(Schedule::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun startAfterCreation(startAfterCreation: Boolean) {
+    override fun startAfterCreation(startAfterCreation: Boolean) {
       cdkBuilder.startAfterCreation(startAfterCreation)
     }
 
-    public override fun successRetentionPeriod(successRetentionPeriod: Duration) {
+    override fun successRetentionPeriod(successRetentionPeriod: Duration) {
       cdkBuilder.successRetentionPeriod(successRetentionPeriod.let(Duration::unwrap))
     }
 
-    public override fun test(test: Test) {
+    override fun test(test: Test) {
       cdkBuilder.test(test.let(Test::unwrap))
     }
 
-    public override fun timeToLive(timeToLive: Duration) {
+    override fun timeToLive(timeToLive: Duration) {
       cdkBuilder.timeToLive(timeToLive.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea7816fdc9d36fdb22296f345cc70fac642d963ca5449962c72b1b2ad55c7100")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.synthetics.Canary = cdkBuilder.build()

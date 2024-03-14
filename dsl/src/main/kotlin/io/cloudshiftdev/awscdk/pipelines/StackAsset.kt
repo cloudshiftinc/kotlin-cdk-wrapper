@@ -18,50 +18,44 @@ public interface StackAsset {
   public fun isTemplate(): Boolean
 
   public interface Builder {
-    public fun assetId(assetId: String) {
-    }
+    public fun assetId(assetId: String)
 
-    public fun assetManifestPath(assetManifestPath: String) {
-    }
+    public fun assetManifestPath(assetManifestPath: String)
 
-    public fun assetPublishingRoleArn(assetPublishingRoleArn: String) {
-    }
+    public fun assetPublishingRoleArn(assetPublishingRoleArn: String)
 
-    public fun assetSelector(assetSelector: String) {
-    }
+    public fun assetSelector(assetSelector: String)
 
-    public fun assetType(assetType: AssetType) {
-    }
+    public fun assetType(assetType: AssetType)
 
-    public fun isTemplate(isTemplate: Boolean) {
-    }
+    public fun isTemplate(isTemplate: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.StackAsset.Builder =
         software.amazon.awscdk.pipelines.StackAsset.builder()
 
-    public override fun assetId(assetId: String) {
+    override fun assetId(assetId: String) {
       cdkBuilder.assetId(assetId)
     }
 
-    public override fun assetManifestPath(assetManifestPath: String) {
+    override fun assetManifestPath(assetManifestPath: String) {
       cdkBuilder.assetManifestPath(assetManifestPath)
     }
 
-    public override fun assetPublishingRoleArn(assetPublishingRoleArn: String) {
+    override fun assetPublishingRoleArn(assetPublishingRoleArn: String) {
       cdkBuilder.assetPublishingRoleArn(assetPublishingRoleArn)
     }
 
-    public override fun assetSelector(assetSelector: String) {
+    override fun assetSelector(assetSelector: String) {
       cdkBuilder.assetSelector(assetSelector)
     }
 
-    public override fun assetType(assetType: AssetType) {
+    override fun assetType(assetType: AssetType) {
       cdkBuilder.assetType(assetType.let(AssetType::unwrap))
     }
 
-    public override fun isTemplate(isTemplate: Boolean) {
+    override fun isTemplate(isTemplate: Boolean) {
       cdkBuilder.isTemplate(isTemplate)
     }
 
@@ -71,17 +65,17 @@ public interface StackAsset {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.StackAsset,
   ) : StackAsset {
-    public override fun assetId(): String = unwrap(this).getAssetId()
+    override fun assetId(): String = unwrap(this).getAssetId()
 
-    public override fun assetManifestPath(): String = unwrap(this).getAssetManifestPath()
+    override fun assetManifestPath(): String = unwrap(this).getAssetManifestPath()
 
-    public override fun assetPublishingRoleArn(): String? = unwrap(this).getAssetPublishingRoleArn()
+    override fun assetPublishingRoleArn(): String? = unwrap(this).getAssetPublishingRoleArn()
 
-    public override fun assetSelector(): String = unwrap(this).getAssetSelector()
+    override fun assetSelector(): String = unwrap(this).getAssetSelector()
 
-    public override fun assetType(): AssetType = unwrap(this).getAssetType().let(AssetType::wrap)
+    override fun assetType(): AssetType = unwrap(this).getAssetType().let(AssetType::wrap)
 
-    public override fun isTemplate(): Boolean = unwrap(this).getIsTemplate()
+    override fun isTemplate(): Boolean = unwrap(this).getIsTemplate()
   }
 
   public companion object {

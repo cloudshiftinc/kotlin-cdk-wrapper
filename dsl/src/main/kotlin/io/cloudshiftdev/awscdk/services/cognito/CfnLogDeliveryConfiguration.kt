@@ -39,14 +39,11 @@ public open class CfnLogDeliveryConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun logConfigurations(logConfigurations: IResolvable) {
-    }
+    public fun logConfigurations(logConfigurations: IResolvable)
 
-    public fun logConfigurations(logConfigurations: List<Any>) {
-    }
+    public fun logConfigurations(logConfigurations: List<Any>)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl(
@@ -58,15 +55,15 @@ public open class CfnLogDeliveryConfiguration internal constructor(
         software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.Builder.create(scope,
         id)
 
-    public override fun logConfigurations(logConfigurations: IResolvable) {
+    override fun logConfigurations(logConfigurations: IResolvable) {
       cdkBuilder.logConfigurations(logConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun logConfigurations(logConfigurations: List<Any>) {
+    override fun logConfigurations(logConfigurations: List<Any>) {
       cdkBuilder.logConfigurations(logConfigurations)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
@@ -104,24 +101,19 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     public fun logLevel(): String? = unwrap(this).getLogLevel()
 
     public interface Builder {
-      public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable) {
-      }
+      public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable)
 
       public
-          fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty) {
-      }
+          fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c72dbd13231f18ec304bbe35965e946d533d687a2d96901fa93fa1a35c6cc0d")
       public
-          fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty.Builder.() -> Unit)
 
-      public fun eventSource(eventSource: String) {
-      }
+      public fun eventSource(eventSource: String)
 
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -130,27 +122,27 @@ public open class CfnLogDeliveryConfiguration internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty.builder()
 
-      public override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable) {
+      override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable) {
         cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty) {
         cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(CloudWatchLogsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c72dbd13231f18ec304bbe35965e946d533d687a2d96901fa93fa1a35c6cc0d")
-      public override
+      override
           fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLogsConfiguration(CloudWatchLogsConfigurationProperty(cloudWatchLogsConfiguration))
 
-      public override fun eventSource(eventSource: String) {
+      override fun eventSource(eventSource: String) {
         cdkBuilder.eventSource(eventSource)
       }
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
@@ -163,12 +155,12 @@ public open class CfnLogDeliveryConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty,
     ) : LogConfigurationProperty {
-      public override fun cloudWatchLogsConfiguration(): Any? =
+      override fun cloudWatchLogsConfiguration(): Any? =
           unwrap(this).getCloudWatchLogsConfiguration()
 
-      public override fun eventSource(): String? = unwrap(this).getEventSource()
+      override fun eventSource(): String? = unwrap(this).getEventSource()
 
-      public override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
     }
 
     public companion object {
@@ -195,8 +187,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     public fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
 
     public interface Builder {
-      public fun logGroupArn(logGroupArn: String) {
-      }
+      public fun logGroupArn(logGroupArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -205,7 +196,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty.builder()
 
-      public override fun logGroupArn(logGroupArn: String) {
+      override fun logGroupArn(logGroupArn: String) {
         cdkBuilder.logGroupArn(logGroupArn)
       }
 
@@ -218,7 +209,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty,
     ) : CloudWatchLogsConfigurationProperty {
-      public override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
+      override fun logGroupArn(): String? = unwrap(this).getLogGroupArn()
     }
 
     public companion object {

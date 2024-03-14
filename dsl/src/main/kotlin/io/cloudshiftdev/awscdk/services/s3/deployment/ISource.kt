@@ -17,16 +17,16 @@ public interface ISource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.deployment.ISource,
   ) : ISource {
-    public override fun bind(arg0: Construct): SourceConfig =
+    override fun bind(arg0: Construct): SourceConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap)).let(SourceConfig::wrap)
 
-    public override fun bind(arg0: Construct, arg1: DeploymentSourceContext): SourceConfig =
+    override fun bind(arg0: Construct, arg1: DeploymentSourceContext): SourceConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(DeploymentSourceContext::unwrap)).let(SourceConfig::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c74ab7b3dbc4afb550f71f4c55a9031c91cd50dd6eb18151c81c70e8d6e8f10f")
-    public override fun bind(arg0: Construct, arg1: DeploymentSourceContext.Builder.() -> Unit):
+    override fun bind(arg0: Construct, arg1: DeploymentSourceContext.Builder.() -> Unit):
         SourceConfig = bind(arg0, DeploymentSourceContext(arg1))
   }
 

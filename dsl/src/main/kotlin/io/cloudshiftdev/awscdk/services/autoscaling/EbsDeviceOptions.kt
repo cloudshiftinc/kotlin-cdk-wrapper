@@ -8,43 +8,38 @@ public interface EbsDeviceOptions : EbsDeviceOptionsBase {
   public fun encrypted(): Boolean? = unwrap(this).getEncrypted()
 
   public interface Builder {
-    public fun deleteOnTermination(deleteOnTermination: Boolean) {
-    }
+    public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-    public fun encrypted(encrypted: Boolean) {
-    }
+    public fun encrypted(encrypted: Boolean)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun throughput(throughput: Number) {
-    }
+    public fun throughput(throughput: Number)
 
-    public fun volumeType(volumeType: EbsDeviceVolumeType) {
-    }
+    public fun volumeType(volumeType: EbsDeviceVolumeType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.EbsDeviceOptions.Builder =
         software.amazon.awscdk.services.autoscaling.EbsDeviceOptions.builder()
 
-    public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+    override fun deleteOnTermination(deleteOnTermination: Boolean) {
       cdkBuilder.deleteOnTermination(deleteOnTermination)
     }
 
-    public override fun encrypted(encrypted: Boolean) {
+    override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun throughput(throughput: Number) {
+    override fun throughput(throughput: Number) {
       cdkBuilder.throughput(throughput)
     }
 
-    public override fun volumeType(volumeType: EbsDeviceVolumeType) {
+    override fun volumeType(volumeType: EbsDeviceVolumeType) {
       cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
     }
 
@@ -55,15 +50,15 @@ public interface EbsDeviceOptions : EbsDeviceOptionsBase {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.EbsDeviceOptions,
   ) : EbsDeviceOptions {
-    public override fun deleteOnTermination(): Boolean? = unwrap(this).getDeleteOnTermination()
+    override fun deleteOnTermination(): Boolean? = unwrap(this).getDeleteOnTermination()
 
-    public override fun encrypted(): Boolean? = unwrap(this).getEncrypted()
+    override fun encrypted(): Boolean? = unwrap(this).getEncrypted()
 
-    public override fun iops(): Number? = unwrap(this).getIops()
+    override fun iops(): Number? = unwrap(this).getIops()
 
-    public override fun throughput(): Number? = unwrap(this).getThroughput()
+    override fun throughput(): Number? = unwrap(this).getThroughput()
 
-    public override fun volumeType(): EbsDeviceVolumeType? =
+    override fun volumeType(): EbsDeviceVolumeType? =
         unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
   }
 

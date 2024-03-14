@@ -11,43 +11,38 @@ public interface GrantOnPrincipalOptions : CommonGrantOptions {
   public fun scope(): IConstruct? = unwrap(this).getScope()?.let(IConstruct::wrap)
 
   public interface Builder {
-    public fun actions(actions: List<String>) {
-    }
+    public fun actions(actions: List<String>)
 
-    public fun conditions(conditions: Map<String, Map<String, Any>>) {
-    }
+    public fun conditions(conditions: Map<String, Map<String, Any>>)
 
-    public fun grantee(grantee: IGrantable) {
-    }
+    public fun grantee(grantee: IGrantable)
 
-    public fun resourceArns(resourceArns: List<String>) {
-    }
+    public fun resourceArns(resourceArns: List<String>)
 
-    public fun scope(scope: IConstruct) {
-    }
+    public fun scope(scope: IConstruct)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.GrantOnPrincipalOptions.Builder =
         software.amazon.awscdk.services.iam.GrantOnPrincipalOptions.builder()
 
-    public override fun actions(actions: List<String>) {
+    override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun conditions(conditions: Map<String, Map<String, Any>>) {
+    override fun conditions(conditions: Map<String, Map<String, Any>>) {
       cdkBuilder.conditions(conditions)
     }
 
-    public override fun grantee(grantee: IGrantable) {
+    override fun grantee(grantee: IGrantable) {
       cdkBuilder.grantee(grantee.let(IGrantable::unwrap))
     }
 
-    public override fun resourceArns(resourceArns: List<String>) {
+    override fun resourceArns(resourceArns: List<String>) {
       cdkBuilder.resourceArns(resourceArns)
     }
 
-    public override fun scope(scope: IConstruct) {
+    override fun scope(scope: IConstruct) {
       cdkBuilder.scope(scope.let(IConstruct::unwrap))
     }
 
@@ -58,16 +53,16 @@ public interface GrantOnPrincipalOptions : CommonGrantOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.GrantOnPrincipalOptions,
   ) : GrantOnPrincipalOptions {
-    public override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+    override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
 
-    public override fun conditions(): Map<String, Map<String, Any>> = unwrap(this).getConditions()
-        ?: emptyMap()
+    override fun conditions(): Map<String, Map<String, Any>> = unwrap(this).getConditions() ?:
+        emptyMap()
 
-    public override fun grantee(): IGrantable = unwrap(this).getGrantee().let(IGrantable::wrap)
+    override fun grantee(): IGrantable = unwrap(this).getGrantee().let(IGrantable::wrap)
 
-    public override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
+    override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
 
-    public override fun scope(): IConstruct? = unwrap(this).getScope()?.let(IConstruct::wrap)
+    override fun scope(): IConstruct? = unwrap(this).getScope()?.let(IConstruct::wrap)
   }
 
   public companion object {

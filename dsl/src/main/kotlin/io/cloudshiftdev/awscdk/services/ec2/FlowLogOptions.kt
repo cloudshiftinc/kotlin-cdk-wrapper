@@ -17,37 +17,32 @@ public interface FlowLogOptions {
       unwrap(this).getTrafficType()?.let(FlowLogTrafficType::wrap)
 
   public interface Builder {
-    public fun destination(destination: FlowLogDestination) {
-    }
+    public fun destination(destination: FlowLogDestination)
 
-    public fun logFormat(logFormat: List<LogFormat>) {
-    }
+    public fun logFormat(logFormat: List<LogFormat>)
 
-    public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
-    }
+    public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval)
 
-    public fun trafficType(trafficType: FlowLogTrafficType) {
-    }
+    public fun trafficType(trafficType: FlowLogTrafficType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.FlowLogOptions.Builder =
         software.amazon.awscdk.services.ec2.FlowLogOptions.builder()
 
-    public override fun destination(destination: FlowLogDestination) {
+    override fun destination(destination: FlowLogDestination) {
       cdkBuilder.destination(destination.let(FlowLogDestination::unwrap))
     }
 
-    public override fun logFormat(logFormat: List<LogFormat>) {
+    override fun logFormat(logFormat: List<LogFormat>) {
       cdkBuilder.logFormat(logFormat.map(LogFormat::unwrap))
     }
 
-    public override
-        fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
+    override fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
       cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval::unwrap))
     }
 
-    public override fun trafficType(trafficType: FlowLogTrafficType) {
+    override fun trafficType(trafficType: FlowLogTrafficType) {
       cdkBuilder.trafficType(trafficType.let(FlowLogTrafficType::unwrap))
     }
 
@@ -57,16 +52,16 @@ public interface FlowLogOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.FlowLogOptions,
   ) : FlowLogOptions {
-    public override fun destination(): FlowLogDestination? =
+    override fun destination(): FlowLogDestination? =
         unwrap(this).getDestination()?.let(FlowLogDestination::wrap)
 
-    public override fun logFormat(): List<LogFormat> =
-        unwrap(this).getLogFormat()?.map(LogFormat::wrap) ?: emptyList()
+    override fun logFormat(): List<LogFormat> = unwrap(this).getLogFormat()?.map(LogFormat::wrap) ?:
+        emptyList()
 
-    public override fun maxAggregationInterval(): FlowLogMaxAggregationInterval? =
+    override fun maxAggregationInterval(): FlowLogMaxAggregationInterval? =
         unwrap(this).getMaxAggregationInterval()?.let(FlowLogMaxAggregationInterval::wrap)
 
-    public override fun trafficType(): FlowLogTrafficType? =
+    override fun trafficType(): FlowLogTrafficType? =
         unwrap(this).getTrafficType()?.let(FlowLogTrafficType::wrap)
   }
 

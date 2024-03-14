@@ -29,11 +29,9 @@ public open class CfnAccessPointPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun objectLambdaAccessPoint(objectLambdaAccessPoint: String) {
-    }
+    public fun objectLambdaAccessPoint(objectLambdaAccessPoint: String)
 
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnAccessPointPolicy internal constructor(
         software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy.Builder.create(scope,
         id)
 
-    public override fun objectLambdaAccessPoint(objectLambdaAccessPoint: String) {
+    override fun objectLambdaAccessPoint(objectLambdaAccessPoint: String) {
       cdkBuilder.objectLambdaAccessPoint(objectLambdaAccessPoint)
     }
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 

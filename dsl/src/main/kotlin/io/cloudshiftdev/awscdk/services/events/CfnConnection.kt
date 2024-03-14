@@ -59,25 +59,19 @@ public open class CfnConnection internal constructor(
   }
 
   public interface Builder {
-    public fun authParameters(authParameters: IResolvable) {
-    }
+    public fun authParameters(authParameters: IResolvable)
 
-    public fun authParameters(authParameters: AuthParametersProperty) {
-    }
+    public fun authParameters(authParameters: AuthParametersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94678fbe23b8920d06561e2226c4cfaf721f1b3ec79ed52a301a0ffc478061ed")
-    public fun authParameters(authParameters: AuthParametersProperty.Builder.() -> Unit) {
-    }
+    public fun authParameters(authParameters: AuthParametersProperty.Builder.() -> Unit)
 
-    public fun authorizationType(authorizationType: String) {
-    }
+    public fun authorizationType(authorizationType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -87,28 +81,28 @@ public open class CfnConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.CfnConnection.Builder =
         software.amazon.awscdk.services.events.CfnConnection.Builder.create(scope, id)
 
-    public override fun authParameters(authParameters: IResolvable) {
+    override fun authParameters(authParameters: IResolvable) {
       cdkBuilder.authParameters(authParameters.let(IResolvable::unwrap))
     }
 
-    public override fun authParameters(authParameters: AuthParametersProperty) {
+    override fun authParameters(authParameters: AuthParametersProperty) {
       cdkBuilder.authParameters(authParameters.let(AuthParametersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94678fbe23b8920d06561e2226c4cfaf721f1b3ec79ed52a301a0ffc478061ed")
-    public override fun authParameters(authParameters: AuthParametersProperty.Builder.() -> Unit):
-        Unit = authParameters(AuthParametersProperty(authParameters))
+    override fun authParameters(authParameters: AuthParametersProperty.Builder.() -> Unit): Unit =
+        authParameters(AuthParametersProperty(authParameters))
 
-    public override fun authorizationType(authorizationType: String) {
+    override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -142,11 +136,9 @@ public open class CfnConnection internal constructor(
     public fun username(): String
 
     public interface Builder {
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -154,11 +146,11 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty.Builder =
           software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty.builder()
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -171,9 +163,9 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.BasicAuthParametersProperty,
     ) : BasicAuthParametersProperty {
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun username(): String = unwrap(this).getUsername()
+      override fun username(): String = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -202,11 +194,9 @@ public open class CfnConnection internal constructor(
     public fun clientSecret(): String
 
     public interface Builder {
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun clientSecret(clientSecret: String) {
-      }
+      public fun clientSecret(clientSecret: String)
     }
 
     private class BuilderImpl : Builder {
@@ -214,11 +204,11 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty.Builder =
           software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty.builder()
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun clientSecret(clientSecret: String) {
+      override fun clientSecret(clientSecret: String) {
         cdkBuilder.clientSecret(clientSecret)
       }
 
@@ -231,9 +221,9 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.ClientParametersProperty,
     ) : ClientParametersProperty {
-      public override fun clientId(): String = unwrap(this).getClientId()
+      override fun clientId(): String = unwrap(this).getClientId()
 
-      public override fun clientSecret(): String = unwrap(this).getClientSecret()
+      override fun clientSecret(): String = unwrap(this).getClientSecret()
     }
 
     public companion object {
@@ -262,11 +252,9 @@ public open class CfnConnection internal constructor(
     public fun apiKeyValue(): String
 
     public interface Builder {
-      public fun apiKeyName(apiKeyName: String) {
-      }
+      public fun apiKeyName(apiKeyName: String)
 
-      public fun apiKeyValue(apiKeyValue: String) {
-      }
+      public fun apiKeyValue(apiKeyValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -275,11 +263,11 @@ public open class CfnConnection internal constructor(
           =
           software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty.builder()
 
-      public override fun apiKeyName(apiKeyName: String) {
+      override fun apiKeyName(apiKeyName: String) {
         cdkBuilder.apiKeyName(apiKeyName)
       }
 
-      public override fun apiKeyValue(apiKeyValue: String) {
+      override fun apiKeyValue(apiKeyValue: String) {
         cdkBuilder.apiKeyValue(apiKeyValue)
       }
 
@@ -292,9 +280,9 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.ApiKeyAuthParametersProperty,
     ) : ApiKeyAuthParametersProperty {
-      public override fun apiKeyName(): String = unwrap(this).getApiKeyName()
+      override fun apiKeyName(): String = unwrap(this).getApiKeyName()
 
-      public override fun apiKeyValue(): String = unwrap(this).getApiKeyValue()
+      override fun apiKeyValue(): String = unwrap(this).getApiKeyValue()
     }
 
     public companion object {
@@ -325,17 +313,13 @@ public open class CfnConnection internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun isValueSecret(isValueSecret: Boolean) {
-      }
+      public fun isValueSecret(isValueSecret: Boolean)
 
-      public fun isValueSecret(isValueSecret: IResolvable) {
-      }
+      public fun isValueSecret(isValueSecret: IResolvable)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -343,19 +327,19 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.ParameterProperty.Builder =
           software.amazon.awscdk.services.events.CfnConnection.ParameterProperty.builder()
 
-      public override fun isValueSecret(isValueSecret: Boolean) {
+      override fun isValueSecret(isValueSecret: Boolean) {
         cdkBuilder.isValueSecret(isValueSecret)
       }
 
-      public override fun isValueSecret(isValueSecret: IResolvable) {
+      override fun isValueSecret(isValueSecret: IResolvable) {
         cdkBuilder.isValueSecret(isValueSecret.let(IResolvable::unwrap))
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -367,11 +351,11 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.ParameterProperty,
     ) : ParameterProperty {
-      public override fun isValueSecret(): Any? = unwrap(this).getIsValueSecret()
+      override fun isValueSecret(): Any? = unwrap(this).getIsValueSecret()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -402,23 +386,17 @@ public open class CfnConnection internal constructor(
     public fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
 
     public interface Builder {
-      public fun bodyParameters(bodyParameters: IResolvable) {
-      }
+      public fun bodyParameters(bodyParameters: IResolvable)
 
-      public fun bodyParameters(bodyParameters: List<Any>) {
-      }
+      public fun bodyParameters(bodyParameters: List<Any>)
 
-      public fun headerParameters(headerParameters: IResolvable) {
-      }
+      public fun headerParameters(headerParameters: IResolvable)
 
-      public fun headerParameters(headerParameters: List<Any>) {
-      }
+      public fun headerParameters(headerParameters: List<Any>)
 
-      public fun queryStringParameters(queryStringParameters: IResolvable) {
-      }
+      public fun queryStringParameters(queryStringParameters: IResolvable)
 
-      public fun queryStringParameters(queryStringParameters: List<Any>) {
-      }
+      public fun queryStringParameters(queryStringParameters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -427,27 +405,27 @@ public open class CfnConnection internal constructor(
           =
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty.builder()
 
-      public override fun bodyParameters(bodyParameters: IResolvable) {
+      override fun bodyParameters(bodyParameters: IResolvable) {
         cdkBuilder.bodyParameters(bodyParameters.let(IResolvable::unwrap))
       }
 
-      public override fun bodyParameters(bodyParameters: List<Any>) {
+      override fun bodyParameters(bodyParameters: List<Any>) {
         cdkBuilder.bodyParameters(bodyParameters)
       }
 
-      public override fun headerParameters(headerParameters: IResolvable) {
+      override fun headerParameters(headerParameters: IResolvable) {
         cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
       }
 
-      public override fun headerParameters(headerParameters: List<Any>) {
+      override fun headerParameters(headerParameters: List<Any>) {
         cdkBuilder.headerParameters(headerParameters)
       }
 
-      public override fun queryStringParameters(queryStringParameters: IResolvable) {
+      override fun queryStringParameters(queryStringParameters: IResolvable) {
         cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
       }
 
-      public override fun queryStringParameters(queryStringParameters: List<Any>) {
+      override fun queryStringParameters(queryStringParameters: List<Any>) {
         cdkBuilder.queryStringParameters(queryStringParameters)
       }
 
@@ -460,11 +438,11 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty,
     ) : ConnectionHttpParametersProperty {
-      public override fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
+      override fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
 
-      public override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
+      override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
 
-      public override fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
+      override fun queryStringParameters(): Any? = unwrap(this).getQueryStringParameters()
     }
 
     public companion object {
@@ -497,53 +475,41 @@ public open class CfnConnection internal constructor(
     public fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
 
     public interface Builder {
-      public fun apiKeyAuthParameters(apiKeyAuthParameters: IResolvable) {
-      }
+      public fun apiKeyAuthParameters(apiKeyAuthParameters: IResolvable)
 
-      public fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty) {
-      }
+      public fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("723a82afcbbfa2ecd48766393c12b31448f0fac2c63f0643fcc5587494b8dccf")
       public
-          fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty.Builder.() -> Unit) {
-      }
+          fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty.Builder.() -> Unit)
 
-      public fun basicAuthParameters(basicAuthParameters: IResolvable) {
-      }
+      public fun basicAuthParameters(basicAuthParameters: IResolvable)
 
-      public fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty) {
-      }
+      public fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8391c04181ee307d13f27c4c07e9b7cb8da421d5c7083f0daa00b60cb0c742c")
       public
-          fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty.Builder.() -> Unit) {
-      }
+          fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty.Builder.() -> Unit)
 
-      public fun invocationHttpParameters(invocationHttpParameters: IResolvable) {
-      }
+      public fun invocationHttpParameters(invocationHttpParameters: IResolvable)
 
       public
-          fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty) {
-      }
+          fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a0f4a8ec205c8ce9c11affdb1ec143bf824588bd19130a147201673fc31b12db")
       public
-          fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty.Builder.() -> Unit) {
-      }
+          fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty.Builder.() -> Unit)
 
-      public fun oAuthParameters(oAuthParameters: IResolvable) {
-      }
+      public fun oAuthParameters(oAuthParameters: IResolvable)
 
-      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty) {
-      }
+      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1971362123bfe5682d0da49ac80108ae47f27a7beb3908b1961a0c1574b9db2e")
-      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit) {
-      }
+      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -551,63 +517,62 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty.Builder =
           software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty.builder()
 
-      public override fun apiKeyAuthParameters(apiKeyAuthParameters: IResolvable) {
+      override fun apiKeyAuthParameters(apiKeyAuthParameters: IResolvable) {
         cdkBuilder.apiKeyAuthParameters(apiKeyAuthParameters.let(IResolvable::unwrap))
       }
 
-      public override fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty) {
+      override fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty) {
         cdkBuilder.apiKeyAuthParameters(apiKeyAuthParameters.let(ApiKeyAuthParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("723a82afcbbfa2ecd48766393c12b31448f0fac2c63f0643fcc5587494b8dccf")
-      public override
+      override
           fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty.Builder.() -> Unit):
           Unit = apiKeyAuthParameters(ApiKeyAuthParametersProperty(apiKeyAuthParameters))
 
-      public override fun basicAuthParameters(basicAuthParameters: IResolvable) {
+      override fun basicAuthParameters(basicAuthParameters: IResolvable) {
         cdkBuilder.basicAuthParameters(basicAuthParameters.let(IResolvable::unwrap))
       }
 
-      public override fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty) {
+      override fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty) {
         cdkBuilder.basicAuthParameters(basicAuthParameters.let(BasicAuthParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8391c04181ee307d13f27c4c07e9b7cb8da421d5c7083f0daa00b60cb0c742c")
-      public override
+      override
           fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty.Builder.() -> Unit):
           Unit = basicAuthParameters(BasicAuthParametersProperty(basicAuthParameters))
 
-      public override fun invocationHttpParameters(invocationHttpParameters: IResolvable) {
+      override fun invocationHttpParameters(invocationHttpParameters: IResolvable) {
         cdkBuilder.invocationHttpParameters(invocationHttpParameters.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty) {
         cdkBuilder.invocationHttpParameters(invocationHttpParameters.let(ConnectionHttpParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a0f4a8ec205c8ce9c11affdb1ec143bf824588bd19130a147201673fc31b12db")
-      public override
+      override
           fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty.Builder.() -> Unit):
           Unit =
           invocationHttpParameters(ConnectionHttpParametersProperty(invocationHttpParameters))
 
-      public override fun oAuthParameters(oAuthParameters: IResolvable) {
+      override fun oAuthParameters(oAuthParameters: IResolvable) {
         cdkBuilder.oAuthParameters(oAuthParameters.let(IResolvable::unwrap))
       }
 
-      public override fun oAuthParameters(oAuthParameters: OAuthParametersProperty) {
+      override fun oAuthParameters(oAuthParameters: OAuthParametersProperty) {
         cdkBuilder.oAuthParameters(oAuthParameters.let(OAuthParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1971362123bfe5682d0da49ac80108ae47f27a7beb3908b1961a0c1574b9db2e")
-      public override
-          fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit): Unit =
-          oAuthParameters(OAuthParametersProperty(oAuthParameters))
+      override fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit):
+          Unit = oAuthParameters(OAuthParametersProperty(oAuthParameters))
 
       public fun build():
           software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty =
@@ -618,14 +583,13 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.AuthParametersProperty,
     ) : AuthParametersProperty {
-      public override fun apiKeyAuthParameters(): Any? = unwrap(this).getApiKeyAuthParameters()
+      override fun apiKeyAuthParameters(): Any? = unwrap(this).getApiKeyAuthParameters()
 
-      public override fun basicAuthParameters(): Any? = unwrap(this).getBasicAuthParameters()
+      override fun basicAuthParameters(): Any? = unwrap(this).getBasicAuthParameters()
 
-      public override fun invocationHttpParameters(): Any? =
-          unwrap(this).getInvocationHttpParameters()
+      override fun invocationHttpParameters(): Any? = unwrap(this).getInvocationHttpParameters()
 
-      public override fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
+      override fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
     }
 
     public companion object {
@@ -658,34 +622,26 @@ public open class CfnConnection internal constructor(
     public fun oAuthHttpParameters(): Any? = unwrap(this).getOAuthHttpParameters()
 
     public interface Builder {
-      public fun authorizationEndpoint(authorizationEndpoint: String) {
-      }
+      public fun authorizationEndpoint(authorizationEndpoint: String)
 
-      public fun clientParameters(clientParameters: IResolvable) {
-      }
+      public fun clientParameters(clientParameters: IResolvable)
 
-      public fun clientParameters(clientParameters: ClientParametersProperty) {
-      }
+      public fun clientParameters(clientParameters: ClientParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69449c8ef7149b345eee5d7a1b69718c7908ca77a8c2da1131b583a13753e758")
-      public fun clientParameters(clientParameters: ClientParametersProperty.Builder.() -> Unit) {
-      }
+      public fun clientParameters(clientParameters: ClientParametersProperty.Builder.() -> Unit)
 
-      public fun httpMethod(httpMethod: String) {
-      }
+      public fun httpMethod(httpMethod: String)
 
-      public fun oAuthHttpParameters(oAuthHttpParameters: IResolvable) {
-      }
+      public fun oAuthHttpParameters(oAuthHttpParameters: IResolvable)
 
-      public fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty) {
-      }
+      public fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e35f666f3d23291168480c694ab8d9cc79dd9dbbce39449a8b35b7755a6e1fb")
       public
-          fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty.Builder.() -> Unit) {
-      }
+          fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -693,40 +649,38 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty.Builder =
           software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty.builder()
 
-      public override fun authorizationEndpoint(authorizationEndpoint: String) {
+      override fun authorizationEndpoint(authorizationEndpoint: String) {
         cdkBuilder.authorizationEndpoint(authorizationEndpoint)
       }
 
-      public override fun clientParameters(clientParameters: IResolvable) {
+      override fun clientParameters(clientParameters: IResolvable) {
         cdkBuilder.clientParameters(clientParameters.let(IResolvable::unwrap))
       }
 
-      public override fun clientParameters(clientParameters: ClientParametersProperty) {
+      override fun clientParameters(clientParameters: ClientParametersProperty) {
         cdkBuilder.clientParameters(clientParameters.let(ClientParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69449c8ef7149b345eee5d7a1b69718c7908ca77a8c2da1131b583a13753e758")
-      public override
-          fun clientParameters(clientParameters: ClientParametersProperty.Builder.() -> Unit): Unit
-          = clientParameters(ClientParametersProperty(clientParameters))
+      override fun clientParameters(clientParameters: ClientParametersProperty.Builder.() -> Unit):
+          Unit = clientParameters(ClientParametersProperty(clientParameters))
 
-      public override fun httpMethod(httpMethod: String) {
+      override fun httpMethod(httpMethod: String) {
         cdkBuilder.httpMethod(httpMethod)
       }
 
-      public override fun oAuthHttpParameters(oAuthHttpParameters: IResolvable) {
+      override fun oAuthHttpParameters(oAuthHttpParameters: IResolvable) {
         cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(IResolvable::unwrap))
       }
 
-      public override
-          fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty) {
+      override fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty) {
         cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(ConnectionHttpParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e35f666f3d23291168480c694ab8d9cc79dd9dbbce39449a8b35b7755a6e1fb")
-      public override
+      override
           fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty.Builder.() -> Unit):
           Unit = oAuthHttpParameters(ConnectionHttpParametersProperty(oAuthHttpParameters))
 
@@ -739,13 +693,13 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnConnection.OAuthParametersProperty,
     ) : OAuthParametersProperty {
-      public override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
+      override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
 
-      public override fun clientParameters(): Any = unwrap(this).getClientParameters()
+      override fun clientParameters(): Any = unwrap(this).getClientParameters()
 
-      public override fun httpMethod(): String = unwrap(this).getHttpMethod()
+      override fun httpMethod(): String = unwrap(this).getHttpMethod()
 
-      public override fun oAuthHttpParameters(): Any? = unwrap(this).getOAuthHttpParameters()
+      override fun oAuthHttpParameters(): Any? = unwrap(this).getOAuthHttpParameters()
     }
 
     public companion object {

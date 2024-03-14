@@ -85,35 +85,25 @@ public open class CfnFeature internal constructor(
   }
 
   public interface Builder {
-    public fun defaultVariation(defaultVariation: String) {
-    }
+    public fun defaultVariation(defaultVariation: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun entityOverrides(entityOverrides: IResolvable) {
-    }
+    public fun entityOverrides(entityOverrides: IResolvable)
 
-    public fun entityOverrides(entityOverrides: List<Any>) {
-    }
+    public fun entityOverrides(entityOverrides: List<Any>)
 
-    public fun evaluationStrategy(evaluationStrategy: String) {
-    }
+    public fun evaluationStrategy(evaluationStrategy: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun project(project: String) {
-    }
+    public fun project(project: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun variations(variations: IResolvable) {
-    }
+    public fun variations(variations: IResolvable)
 
-    public fun variations(variations: List<Any>) {
-    }
+    public fun variations(variations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -123,43 +113,43 @@ public open class CfnFeature internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.evidently.CfnFeature.Builder =
         software.amazon.awscdk.services.evidently.CfnFeature.Builder.create(scope, id)
 
-    public override fun defaultVariation(defaultVariation: String) {
+    override fun defaultVariation(defaultVariation: String) {
       cdkBuilder.defaultVariation(defaultVariation)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun entityOverrides(entityOverrides: IResolvable) {
+    override fun entityOverrides(entityOverrides: IResolvable) {
       cdkBuilder.entityOverrides(entityOverrides.let(IResolvable::unwrap))
     }
 
-    public override fun entityOverrides(entityOverrides: List<Any>) {
+    override fun entityOverrides(entityOverrides: List<Any>) {
       cdkBuilder.entityOverrides(entityOverrides)
     }
 
-    public override fun evaluationStrategy(evaluationStrategy: String) {
+    override fun evaluationStrategy(evaluationStrategy: String) {
       cdkBuilder.evaluationStrategy(evaluationStrategy)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun project(project: String) {
+    override fun project(project: String) {
       cdkBuilder.project(project)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun variations(variations: IResolvable) {
+    override fun variations(variations: IResolvable) {
       cdkBuilder.variations(variations.let(IResolvable::unwrap))
     }
 
-    public override fun variations(variations: List<Any>) {
+    override fun variations(variations: List<Any>) {
       cdkBuilder.variations(variations)
     }
 
@@ -193,11 +183,9 @@ public open class CfnFeature internal constructor(
     public fun variation(): String? = unwrap(this).getVariation()
 
     public interface Builder {
-      public fun entityId(entityId: String) {
-      }
+      public fun entityId(entityId: String)
 
-      public fun variation(variation: String) {
-      }
+      public fun variation(variation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -205,11 +193,11 @@ public open class CfnFeature internal constructor(
           software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty.builder()
 
-      public override fun entityId(entityId: String) {
+      override fun entityId(entityId: String) {
         cdkBuilder.entityId(entityId)
       }
 
-      public override fun variation(variation: String) {
+      override fun variation(variation: String) {
         cdkBuilder.variation(variation)
       }
 
@@ -222,9 +210,9 @@ public open class CfnFeature internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnFeature.EntityOverrideProperty,
     ) : EntityOverrideProperty {
-      public override fun entityId(): String? = unwrap(this).getEntityId()
+      override fun entityId(): String? = unwrap(this).getEntityId()
 
-      public override fun variation(): String? = unwrap(this).getVariation()
+      override fun variation(): String? = unwrap(this).getVariation()
     }
 
     public companion object {
@@ -259,23 +247,17 @@ public open class CfnFeature internal constructor(
     public fun variationName(): String
 
     public interface Builder {
-      public fun booleanValue(booleanValue: Boolean) {
-      }
+      public fun booleanValue(booleanValue: Boolean)
 
-      public fun booleanValue(booleanValue: IResolvable) {
-      }
+      public fun booleanValue(booleanValue: IResolvable)
 
-      public fun doubleValue(doubleValue: Number) {
-      }
+      public fun doubleValue(doubleValue: Number)
 
-      public fun longValue(longValue: Number) {
-      }
+      public fun longValue(longValue: Number)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
 
-      public fun variationName(variationName: String) {
-      }
+      public fun variationName(variationName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -283,27 +265,27 @@ public open class CfnFeature internal constructor(
           software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty.builder()
 
-      public override fun booleanValue(booleanValue: Boolean) {
+      override fun booleanValue(booleanValue: Boolean) {
         cdkBuilder.booleanValue(booleanValue)
       }
 
-      public override fun booleanValue(booleanValue: IResolvable) {
+      override fun booleanValue(booleanValue: IResolvable) {
         cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
       }
 
-      public override fun doubleValue(doubleValue: Number) {
+      override fun doubleValue(doubleValue: Number) {
         cdkBuilder.doubleValue(doubleValue)
       }
 
-      public override fun longValue(longValue: Number) {
+      override fun longValue(longValue: Number) {
         cdkBuilder.longValue(longValue)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
-      public override fun variationName(variationName: String) {
+      override fun variationName(variationName: String) {
         cdkBuilder.variationName(variationName)
       }
 
@@ -316,15 +298,15 @@ public open class CfnFeature internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnFeature.VariationObjectProperty,
     ) : VariationObjectProperty {
-      public override fun booleanValue(): Any? = unwrap(this).getBooleanValue()
+      override fun booleanValue(): Any? = unwrap(this).getBooleanValue()
 
-      public override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
+      override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
 
-      public override fun longValue(): Number? = unwrap(this).getLongValue()
+      override fun longValue(): Number? = unwrap(this).getLongValue()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
 
-      public override fun variationName(): String = unwrap(this).getVariationName()
+      override fun variationName(): String = unwrap(this).getVariationName()
     }
 
     public companion object {

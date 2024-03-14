@@ -155,76 +155,54 @@ public open class CfnRestApi internal constructor(
   }
 
   public interface Builder {
-    public fun apiKeySourceType(apiKeySourceType: String) {
-    }
+    public fun apiKeySourceType(apiKeySourceType: String)
 
-    public fun binaryMediaTypes(binaryMediaTypes: List<String>) {
-    }
+    public fun binaryMediaTypes(binaryMediaTypes: List<String>)
 
-    public fun body(body: Any) {
-    }
+    public fun body(body: Any)
 
-    public fun bodyS3Location(bodyS3Location: IResolvable) {
-    }
+    public fun bodyS3Location(bodyS3Location: IResolvable)
 
-    public fun bodyS3Location(bodyS3Location: S3LocationProperty) {
-    }
+    public fun bodyS3Location(bodyS3Location: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d35ffb3ff0b84ebe66af9cf1925819130283ff8be57b7629af7c56d91932bd31")
-    public fun bodyS3Location(bodyS3Location: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun bodyS3Location(bodyS3Location: S3LocationProperty.Builder.() -> Unit)
 
-    public fun cloneFrom(cloneFrom: String) {
-    }
+    public fun cloneFrom(cloneFrom: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable)
 
-    public fun endpointConfiguration(endpointConfiguration: IResolvable) {
-    }
+    public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
-    public fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
-    }
+    public fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("111e703782ee9ff24896853eb6d31839e80c2f1b678f7a83c77fc256a7b2d65a")
     public
-        fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty.Builder.() -> Unit)
 
-    public fun failOnWarnings(failOnWarnings: Boolean) {
-    }
+    public fun failOnWarnings(failOnWarnings: Boolean)
 
-    public fun failOnWarnings(failOnWarnings: IResolvable) {
-    }
+    public fun failOnWarnings(failOnWarnings: IResolvable)
 
-    public fun minimumCompressionSize(minimumCompressionSize: Number) {
-    }
+    public fun minimumCompressionSize(minimumCompressionSize: Number)
 
-    public fun mode(mode: String) {
-    }
+    public fun mode(mode: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -234,95 +212,94 @@ public open class CfnRestApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnRestApi.Builder =
         software.amazon.awscdk.services.apigateway.CfnRestApi.Builder.create(scope, id)
 
-    public override fun apiKeySourceType(apiKeySourceType: String) {
+    override fun apiKeySourceType(apiKeySourceType: String) {
       cdkBuilder.apiKeySourceType(apiKeySourceType)
     }
 
-    public override fun binaryMediaTypes(binaryMediaTypes: List<String>) {
+    override fun binaryMediaTypes(binaryMediaTypes: List<String>) {
       cdkBuilder.binaryMediaTypes(binaryMediaTypes)
     }
 
-    public override fun body(body: Any) {
+    override fun body(body: Any) {
       cdkBuilder.body(body)
     }
 
-    public override fun bodyS3Location(bodyS3Location: IResolvable) {
+    override fun bodyS3Location(bodyS3Location: IResolvable) {
       cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun bodyS3Location(bodyS3Location: S3LocationProperty) {
+    override fun bodyS3Location(bodyS3Location: S3LocationProperty) {
       cdkBuilder.bodyS3Location(bodyS3Location.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d35ffb3ff0b84ebe66af9cf1925819130283ff8be57b7629af7c56d91932bd31")
-    public override fun bodyS3Location(bodyS3Location: S3LocationProperty.Builder.() -> Unit): Unit
-        = bodyS3Location(S3LocationProperty(bodyS3Location))
+    override fun bodyS3Location(bodyS3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+        bodyS3Location(S3LocationProperty(bodyS3Location))
 
-    public override fun cloneFrom(cloneFrom: String) {
+    override fun cloneFrom(cloneFrom: String) {
       cdkBuilder.cloneFrom(cloneFrom)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun endpointConfiguration(endpointConfiguration: IResolvable) {
+    override fun endpointConfiguration(endpointConfiguration: IResolvable) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
+    override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
       cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("111e703782ee9ff24896853eb6d31839e80c2f1b678f7a83c77fc256a7b2d65a")
-    public override
+    override
         fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty.Builder.() -> Unit):
         Unit = endpointConfiguration(EndpointConfigurationProperty(endpointConfiguration))
 
-    public override fun failOnWarnings(failOnWarnings: Boolean) {
+    override fun failOnWarnings(failOnWarnings: Boolean) {
       cdkBuilder.failOnWarnings(failOnWarnings)
     }
 
-    public override fun failOnWarnings(failOnWarnings: IResolvable) {
+    override fun failOnWarnings(failOnWarnings: IResolvable) {
       cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
     }
 
-    public override fun minimumCompressionSize(minimumCompressionSize: Number) {
+    override fun minimumCompressionSize(minimumCompressionSize: Number) {
       cdkBuilder.minimumCompressionSize(minimumCompressionSize)
     }
 
-    public override fun mode(mode: String) {
+    override fun mode(mode: String) {
       cdkBuilder.mode(mode)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -360,17 +337,13 @@ public open class CfnRestApi internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun eTag(eTag: String) {
-      }
+      public fun eTag(eTag: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -378,19 +351,19 @@ public open class CfnRestApi internal constructor(
           software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun eTag(eTag: String) {
+      override fun eTag(eTag: String) {
         cdkBuilder.eTag(eTag)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -402,13 +375,13 @@ public open class CfnRestApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnRestApi.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String? = unwrap(this).getBucket()
+      override fun bucket(): String? = unwrap(this).getBucket()
 
-      public override fun eTag(): String? = unwrap(this).getETag()
+      override fun eTag(): String? = unwrap(this).getETag()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -437,11 +410,9 @@ public open class CfnRestApi internal constructor(
     public fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
 
     public interface Builder {
-      public fun types(types: List<String>) {
-      }
+      public fun types(types: List<String>)
 
-      public fun vpcEndpointIds(vpcEndpointIds: List<String>) {
-      }
+      public fun vpcEndpointIds(vpcEndpointIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -450,11 +421,11 @@ public open class CfnRestApi internal constructor(
           =
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty.builder()
 
-      public override fun types(types: List<String>) {
+      override fun types(types: List<String>) {
         cdkBuilder.types(types)
       }
 
-      public override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
+      override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
         cdkBuilder.vpcEndpointIds(vpcEndpointIds)
       }
 
@@ -467,10 +438,9 @@ public open class CfnRestApi internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty,
     ) : EndpointConfigurationProperty {
-      public override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
+      override fun types(): List<String> = unwrap(this).getTypes() ?: emptyList()
 
-      public override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?:
-          emptyList()
+      override fun vpcEndpointIds(): List<String> = unwrap(this).getVpcEndpointIds() ?: emptyList()
     }
 
     public companion object {

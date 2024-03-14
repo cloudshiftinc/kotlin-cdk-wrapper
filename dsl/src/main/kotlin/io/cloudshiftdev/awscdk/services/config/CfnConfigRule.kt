@@ -107,56 +107,41 @@ public open class CfnConfigRule internal constructor(
       source(SourceProperty(`value`))
 
   public interface Builder {
-    public fun compliance(compliance: IResolvable) {
-    }
+    public fun compliance(compliance: IResolvable)
 
-    public fun compliance(compliance: ComplianceProperty) {
-    }
+    public fun compliance(compliance: ComplianceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40cc0eb811f463942ccfc092ba362c59856e246850c65154b5dc32ba08aeca1c")
-    public fun compliance(compliance: ComplianceProperty.Builder.() -> Unit) {
-    }
+    public fun compliance(compliance: ComplianceProperty.Builder.() -> Unit)
 
-    public fun configRuleName(configRuleName: String) {
-    }
+    public fun configRuleName(configRuleName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun evaluationModes(evaluationModes: IResolvable) {
-    }
+    public fun evaluationModes(evaluationModes: IResolvable)
 
-    public fun evaluationModes(evaluationModes: List<Any>) {
-    }
+    public fun evaluationModes(evaluationModes: List<Any>)
 
-    public fun inputParameters(inputParameters: Any) {
-    }
+    public fun inputParameters(inputParameters: Any)
 
-    public fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
-    }
+    public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
 
-    public fun scope(scope: IResolvable) {
-    }
+    public fun scope(scope: IResolvable)
 
-    public fun scope(scope: ScopeProperty) {
-    }
+    public fun scope(scope: ScopeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b5832333865e867e7a16d84ff1e2319b57320efc981e6e843d70a2da4bdc5721")
-    public fun scope(scope: ScopeProperty.Builder.() -> Unit) {
-    }
+    public fun scope(scope: ScopeProperty.Builder.() -> Unit)
 
-    public fun source(source: IResolvable) {
-    }
+    public fun source(source: IResolvable)
 
-    public fun source(source: SourceProperty) {
-    }
+    public fun source(source: SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("196e11ddbe92fd8fdfdd311a27085f5e054dc375ddd2f07731f8984c9ea7c449")
-    public fun source(source: SourceProperty.Builder.() -> Unit) {
-    }
+    public fun source(source: SourceProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -166,67 +151,66 @@ public open class CfnConfigRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.config.CfnConfigRule.Builder =
         software.amazon.awscdk.services.config.CfnConfigRule.Builder.create(scope, id)
 
-    public override fun compliance(compliance: IResolvable) {
+    override fun compliance(compliance: IResolvable) {
       cdkBuilder.compliance(compliance.let(IResolvable::unwrap))
     }
 
-    public override fun compliance(compliance: ComplianceProperty) {
+    override fun compliance(compliance: ComplianceProperty) {
       cdkBuilder.compliance(compliance.let(ComplianceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40cc0eb811f463942ccfc092ba362c59856e246850c65154b5dc32ba08aeca1c")
-    public override fun compliance(compliance: ComplianceProperty.Builder.() -> Unit): Unit =
+    override fun compliance(compliance: ComplianceProperty.Builder.() -> Unit): Unit =
         compliance(ComplianceProperty(compliance))
 
-    public override fun configRuleName(configRuleName: String) {
+    override fun configRuleName(configRuleName: String) {
       cdkBuilder.configRuleName(configRuleName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun evaluationModes(evaluationModes: IResolvable) {
+    override fun evaluationModes(evaluationModes: IResolvable) {
       cdkBuilder.evaluationModes(evaluationModes.let(IResolvable::unwrap))
     }
 
-    public override fun evaluationModes(evaluationModes: List<Any>) {
+    override fun evaluationModes(evaluationModes: List<Any>) {
       cdkBuilder.evaluationModes(evaluationModes)
     }
 
-    public override fun inputParameters(inputParameters: Any) {
+    override fun inputParameters(inputParameters: Any) {
       cdkBuilder.inputParameters(inputParameters)
     }
 
-    public override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
+    override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
       cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
     }
 
-    public override fun scope(scope: IResolvable) {
+    override fun scope(scope: IResolvable) {
       cdkBuilder.scope(scope.let(IResolvable::unwrap))
     }
 
-    public override fun scope(scope: ScopeProperty) {
+    override fun scope(scope: ScopeProperty) {
       cdkBuilder.scope(scope.let(ScopeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b5832333865e867e7a16d84ff1e2319b57320efc981e6e843d70a2da4bdc5721")
-    public override fun scope(scope: ScopeProperty.Builder.() -> Unit): Unit =
-        scope(ScopeProperty(scope))
+    override fun scope(scope: ScopeProperty.Builder.() -> Unit): Unit = scope(ScopeProperty(scope))
 
-    public override fun source(source: IResolvable) {
+    override fun source(source: IResolvable) {
       cdkBuilder.source(source.let(IResolvable::unwrap))
     }
 
-    public override fun source(source: SourceProperty) {
+    override fun source(source: SourceProperty) {
       cdkBuilder.source(source.let(SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("196e11ddbe92fd8fdfdd311a27085f5e054dc375ddd2f07731f8984c9ea7c449")
-    public override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
+    override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
         source(SourceProperty(source))
 
     public fun build(): software.amazon.awscdk.services.config.CfnConfigRule = cdkBuilder.build()
@@ -264,17 +248,13 @@ public open class CfnConfigRule internal constructor(
     public fun tagValue(): String? = unwrap(this).getTagValue()
 
     public interface Builder {
-      public fun complianceResourceId(complianceResourceId: String) {
-      }
+      public fun complianceResourceId(complianceResourceId: String)
 
-      public fun complianceResourceTypes(complianceResourceTypes: List<String>) {
-      }
+      public fun complianceResourceTypes(complianceResourceTypes: List<String>)
 
-      public fun tagKey(tagKey: String) {
-      }
+      public fun tagKey(tagKey: String)
 
-      public fun tagValue(tagValue: String) {
-      }
+      public fun tagValue(tagValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -282,19 +262,19 @@ public open class CfnConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty.Builder =
           software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty.builder()
 
-      public override fun complianceResourceId(complianceResourceId: String) {
+      override fun complianceResourceId(complianceResourceId: String) {
         cdkBuilder.complianceResourceId(complianceResourceId)
       }
 
-      public override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
+      override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
         cdkBuilder.complianceResourceTypes(complianceResourceTypes)
       }
 
-      public override fun tagKey(tagKey: String) {
+      override fun tagKey(tagKey: String) {
         cdkBuilder.tagKey(tagKey)
       }
 
-      public override fun tagValue(tagValue: String) {
+      override fun tagValue(tagValue: String) {
         cdkBuilder.tagValue(tagValue)
       }
 
@@ -305,14 +285,14 @@ public open class CfnConfigRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.ScopeProperty,
     ) : ScopeProperty {
-      public override fun complianceResourceId(): String? = unwrap(this).getComplianceResourceId()
+      override fun complianceResourceId(): String? = unwrap(this).getComplianceResourceId()
 
-      public override fun complianceResourceTypes(): List<String> =
+      override fun complianceResourceTypes(): List<String> =
           unwrap(this).getComplianceResourceTypes() ?: emptyList()
 
-      public override fun tagKey(): String? = unwrap(this).getTagKey()
+      override fun tagKey(): String? = unwrap(this).getTagKey()
 
-      public override fun tagValue(): String? = unwrap(this).getTagValue()
+      override fun tagValue(): String? = unwrap(this).getTagValue()
     }
 
     public companion object {
@@ -339,8 +319,7 @@ public open class CfnConfigRule internal constructor(
     public fun mode(): String? = unwrap(this).getMode()
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -349,7 +328,7 @@ public open class CfnConfigRule internal constructor(
           =
           software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
@@ -362,7 +341,7 @@ public open class CfnConfigRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigRule.EvaluationModeConfigurationProperty,
     ) : EvaluationModeConfigurationProperty {
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
     }
 
     public companion object {
@@ -396,29 +375,22 @@ public open class CfnConfigRule internal constructor(
     public fun sourceIdentifier(): String? = unwrap(this).getSourceIdentifier()
 
     public interface Builder {
-      public fun customPolicyDetails(customPolicyDetails: IResolvable) {
-      }
+      public fun customPolicyDetails(customPolicyDetails: IResolvable)
 
-      public fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty) {
-      }
+      public fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("196cd2034ed6c9f8d93d514180a07bb627d9af41ecd9db175ead0b5f36cdcbc0")
       public
-          fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty.Builder.() -> Unit) {
-      }
+          fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty.Builder.() -> Unit)
 
-      public fun owner(owner: String) {
-      }
+      public fun owner(owner: String)
 
-      public fun sourceDetails(sourceDetails: IResolvable) {
-      }
+      public fun sourceDetails(sourceDetails: IResolvable)
 
-      public fun sourceDetails(sourceDetails: List<Any>) {
-      }
+      public fun sourceDetails(sourceDetails: List<Any>)
 
-      public fun sourceIdentifier(sourceIdentifier: String) {
-      }
+      public fun sourceIdentifier(sourceIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -426,33 +398,33 @@ public open class CfnConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty.Builder =
           software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty.builder()
 
-      public override fun customPolicyDetails(customPolicyDetails: IResolvable) {
+      override fun customPolicyDetails(customPolicyDetails: IResolvable) {
         cdkBuilder.customPolicyDetails(customPolicyDetails.let(IResolvable::unwrap))
       }
 
-      public override fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty) {
+      override fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty) {
         cdkBuilder.customPolicyDetails(customPolicyDetails.let(CustomPolicyDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("196cd2034ed6c9f8d93d514180a07bb627d9af41ecd9db175ead0b5f36cdcbc0")
-      public override
+      override
           fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty.Builder.() -> Unit):
           Unit = customPolicyDetails(CustomPolicyDetailsProperty(customPolicyDetails))
 
-      public override fun owner(owner: String) {
+      override fun owner(owner: String) {
         cdkBuilder.owner(owner)
       }
 
-      public override fun sourceDetails(sourceDetails: IResolvable) {
+      override fun sourceDetails(sourceDetails: IResolvable) {
         cdkBuilder.sourceDetails(sourceDetails.let(IResolvable::unwrap))
       }
 
-      public override fun sourceDetails(sourceDetails: List<Any>) {
+      override fun sourceDetails(sourceDetails: List<Any>) {
         cdkBuilder.sourceDetails(sourceDetails)
       }
 
-      public override fun sourceIdentifier(sourceIdentifier: String) {
+      override fun sourceIdentifier(sourceIdentifier: String) {
         cdkBuilder.sourceIdentifier(sourceIdentifier)
       }
 
@@ -463,13 +435,13 @@ public open class CfnConfigRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.config.CfnConfigRule.SourceProperty,
     ) : SourceProperty {
-      public override fun customPolicyDetails(): Any? = unwrap(this).getCustomPolicyDetails()
+      override fun customPolicyDetails(): Any? = unwrap(this).getCustomPolicyDetails()
 
-      public override fun owner(): String = unwrap(this).getOwner()
+      override fun owner(): String = unwrap(this).getOwner()
 
-      public override fun sourceDetails(): Any? = unwrap(this).getSourceDetails()
+      override fun sourceDetails(): Any? = unwrap(this).getSourceDetails()
 
-      public override fun sourceIdentifier(): String? = unwrap(this).getSourceIdentifier()
+      override fun sourceIdentifier(): String? = unwrap(this).getSourceIdentifier()
     }
 
     public companion object {
@@ -500,14 +472,11 @@ public open class CfnConfigRule internal constructor(
     public fun messageType(): String
 
     public interface Builder {
-      public fun eventSource(eventSource: String) {
-      }
+      public fun eventSource(eventSource: String)
 
-      public fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
-      }
+      public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
 
-      public fun messageType(messageType: String) {
-      }
+      public fun messageType(messageType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -515,15 +484,15 @@ public open class CfnConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty.Builder =
           software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty.builder()
 
-      public override fun eventSource(eventSource: String) {
+      override fun eventSource(eventSource: String) {
         cdkBuilder.eventSource(eventSource)
       }
 
-      public override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
+      override fun maximumExecutionFrequency(maximumExecutionFrequency: String) {
         cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency)
       }
 
-      public override fun messageType(messageType: String) {
+      override fun messageType(messageType: String) {
         cdkBuilder.messageType(messageType)
       }
 
@@ -535,12 +504,12 @@ public open class CfnConfigRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigRule.SourceDetailProperty,
     ) : SourceDetailProperty {
-      public override fun eventSource(): String = unwrap(this).getEventSource()
+      override fun eventSource(): String = unwrap(this).getEventSource()
 
-      public override fun maximumExecutionFrequency(): String? =
+      override fun maximumExecutionFrequency(): String? =
           unwrap(this).getMaximumExecutionFrequency()
 
-      public override fun messageType(): String = unwrap(this).getMessageType()
+      override fun messageType(): String = unwrap(this).getMessageType()
     }
 
     public companion object {
@@ -571,17 +540,13 @@ public open class CfnConfigRule internal constructor(
     public fun policyText(): String? = unwrap(this).getPolicyText()
 
     public interface Builder {
-      public fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean) {
-      }
+      public fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean)
 
-      public fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable) {
-      }
+      public fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable)
 
-      public fun policyRuntime(policyRuntime: String) {
-      }
+      public fun policyRuntime(policyRuntime: String)
 
-      public fun policyText(policyText: String) {
-      }
+      public fun policyText(policyText: String)
     }
 
     private class BuilderImpl : Builder {
@@ -589,19 +554,19 @@ public open class CfnConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty.Builder =
           software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty.builder()
 
-      public override fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean) {
+      override fun enableDebugLogDelivery(enableDebugLogDelivery: Boolean) {
         cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery)
       }
 
-      public override fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable) {
+      override fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable) {
         cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery.let(IResolvable::unwrap))
       }
 
-      public override fun policyRuntime(policyRuntime: String) {
+      override fun policyRuntime(policyRuntime: String) {
         cdkBuilder.policyRuntime(policyRuntime)
       }
 
-      public override fun policyText(policyText: String) {
+      override fun policyText(policyText: String) {
         cdkBuilder.policyText(policyText)
       }
 
@@ -614,11 +579,11 @@ public open class CfnConfigRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigRule.CustomPolicyDetailsProperty,
     ) : CustomPolicyDetailsProperty {
-      public override fun enableDebugLogDelivery(): Any? = unwrap(this).getEnableDebugLogDelivery()
+      override fun enableDebugLogDelivery(): Any? = unwrap(this).getEnableDebugLogDelivery()
 
-      public override fun policyRuntime(): String? = unwrap(this).getPolicyRuntime()
+      override fun policyRuntime(): String? = unwrap(this).getPolicyRuntime()
 
-      public override fun policyText(): String? = unwrap(this).getPolicyText()
+      override fun policyText(): String? = unwrap(this).getPolicyText()
     }
 
     public companion object {
@@ -645,8 +610,7 @@ public open class CfnConfigRule internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -654,7 +618,7 @@ public open class CfnConfigRule internal constructor(
           software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty.Builder =
           software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -666,7 +630,7 @@ public open class CfnConfigRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigRule.ComplianceProperty,
     ) : ComplianceProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

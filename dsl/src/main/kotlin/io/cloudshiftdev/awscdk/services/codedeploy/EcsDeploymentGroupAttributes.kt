@@ -12,14 +12,11 @@ public interface EcsDeploymentGroupAttributes {
   public fun deploymentGroupName(): String
 
   public interface Builder {
-    public fun application(application: IEcsApplication) {
-    }
+    public fun application(application: IEcsApplication)
 
-    public fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
-    }
+    public fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -27,15 +24,15 @@ public interface EcsDeploymentGroupAttributes {
         software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes.Builder =
         software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes.builder()
 
-    public override fun application(application: IEcsApplication) {
+    override fun application(application: IEcsApplication) {
       cdkBuilder.application(application.let(IEcsApplication::unwrap))
     }
 
-    public override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
+    override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig::unwrap))
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
@@ -46,13 +43,13 @@ public interface EcsDeploymentGroupAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes,
   ) : EcsDeploymentGroupAttributes {
-    public override fun application(): IEcsApplication =
+    override fun application(): IEcsApplication =
         unwrap(this).getApplication().let(IEcsApplication::wrap)
 
-    public override fun deploymentConfig(): IEcsDeploymentConfig? =
+    override fun deploymentConfig(): IEcsDeploymentConfig? =
         unwrap(this).getDeploymentConfig()?.let(IEcsDeploymentConfig::wrap)
 
-    public override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
+    override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
   }
 
   public companion object {

@@ -37,11 +37,9 @@ public open class CfnCollection internal constructor(
   }
 
   public interface Builder {
-    public fun collectionId(collectionId: String) {
-    }
+    public fun collectionId(collectionId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -51,11 +49,11 @@ public open class CfnCollection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rekognition.CfnCollection.Builder =
         software.amazon.awscdk.services.rekognition.CfnCollection.Builder.create(scope, id)
 
-    public override fun collectionId(collectionId: String) {
+    override fun collectionId(collectionId: String) {
       cdkBuilder.collectionId(collectionId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

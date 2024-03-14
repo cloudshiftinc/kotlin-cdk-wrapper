@@ -58,25 +58,19 @@ public open class CfnPartition internal constructor(
   }
 
   public interface Builder {
-    public fun catalogId(catalogId: String) {
-    }
+    public fun catalogId(catalogId: String)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun partitionInput(partitionInput: IResolvable) {
-    }
+    public fun partitionInput(partitionInput: IResolvable)
 
-    public fun partitionInput(partitionInput: PartitionInputProperty) {
-    }
+    public fun partitionInput(partitionInput: PartitionInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13310d4b97ab5623df3f0de1f1e4731127a740a13dc005d8ef2bae156d6b2973")
-    public fun partitionInput(partitionInput: PartitionInputProperty.Builder.() -> Unit) {
-    }
+    public fun partitionInput(partitionInput: PartitionInputProperty.Builder.() -> Unit)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
   }
 
   private class BuilderImpl(
@@ -86,28 +80,28 @@ public open class CfnPartition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnPartition.Builder =
         software.amazon.awscdk.services.glue.CfnPartition.Builder.create(scope, id)
 
-    public override fun catalogId(catalogId: String) {
+    override fun catalogId(catalogId: String) {
       cdkBuilder.catalogId(catalogId)
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun partitionInput(partitionInput: IResolvable) {
+    override fun partitionInput(partitionInput: IResolvable) {
       cdkBuilder.partitionInput(partitionInput.let(IResolvable::unwrap))
     }
 
-    public override fun partitionInput(partitionInput: PartitionInputProperty) {
+    override fun partitionInput(partitionInput: PartitionInputProperty) {
       cdkBuilder.partitionInput(partitionInput.let(PartitionInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13310d4b97ab5623df3f0de1f1e4731127a740a13dc005d8ef2bae156d6b2973")
-    public override fun partitionInput(partitionInput: PartitionInputProperty.Builder.() -> Unit):
-        Unit = partitionInput(PartitionInputProperty(partitionInput))
+    override fun partitionInput(partitionInput: PartitionInputProperty.Builder.() -> Unit): Unit =
+        partitionInput(PartitionInputProperty(partitionInput))
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
@@ -163,80 +157,57 @@ public open class CfnPartition internal constructor(
     public fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
 
     public interface Builder {
-      public fun bucketColumns(bucketColumns: List<String>) {
-      }
+      public fun bucketColumns(bucketColumns: List<String>)
 
-      public fun columns(columns: IResolvable) {
-      }
+      public fun columns(columns: IResolvable)
 
-      public fun columns(columns: List<Any>) {
-      }
+      public fun columns(columns: List<Any>)
 
-      public fun compressed(compressed: Boolean) {
-      }
+      public fun compressed(compressed: Boolean)
 
-      public fun compressed(compressed: IResolvable) {
-      }
+      public fun compressed(compressed: IResolvable)
 
-      public fun inputFormat(inputFormat: String) {
-      }
+      public fun inputFormat(inputFormat: String)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun numberOfBuckets(numberOfBuckets: Number) {
-      }
+      public fun numberOfBuckets(numberOfBuckets: Number)
 
-      public fun outputFormat(outputFormat: String) {
-      }
+      public fun outputFormat(outputFormat: String)
 
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
 
-      public fun schemaReference(schemaReference: IResolvable) {
-      }
+      public fun schemaReference(schemaReference: IResolvable)
 
-      public fun schemaReference(schemaReference: SchemaReferenceProperty) {
-      }
+      public fun schemaReference(schemaReference: SchemaReferenceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e9c3efe0adf91e48ecefaa9660eab15f934953dd0f18001f7d18c407fddf154b")
-      public fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit) {
-      }
+      public fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit)
 
-      public fun serdeInfo(serdeInfo: IResolvable) {
-      }
+      public fun serdeInfo(serdeInfo: IResolvable)
 
-      public fun serdeInfo(serdeInfo: SerdeInfoProperty) {
-      }
+      public fun serdeInfo(serdeInfo: SerdeInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("85c29376465bc74bcec0b7af8368bb60b1c26650f328b4ec2ec02f9246c9802c")
-      public fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit) {
-      }
+      public fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit)
 
-      public fun skewedInfo(skewedInfo: IResolvable) {
-      }
+      public fun skewedInfo(skewedInfo: IResolvable)
 
-      public fun skewedInfo(skewedInfo: SkewedInfoProperty) {
-      }
+      public fun skewedInfo(skewedInfo: SkewedInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ec641bc1fd863bb5524801e42a8d83f6d4af25f62d31ac79f4aae85a2b277a89")
-      public fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit) {
-      }
+      public fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit)
 
-      public fun sortColumns(sortColumns: IResolvable) {
-      }
+      public fun sortColumns(sortColumns: IResolvable)
 
-      public fun sortColumns(sortColumns: List<Any>) {
-      }
+      public fun sortColumns(sortColumns: List<Any>)
 
-      public fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
-      }
+      public fun storedAsSubDirectories(storedAsSubDirectories: Boolean)
 
-      public fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
-      }
+      public fun storedAsSubDirectories(storedAsSubDirectories: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -244,99 +215,98 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty.builder()
 
-      public override fun bucketColumns(bucketColumns: List<String>) {
+      override fun bucketColumns(bucketColumns: List<String>) {
         cdkBuilder.bucketColumns(bucketColumns)
       }
 
-      public override fun columns(columns: IResolvable) {
+      override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable::unwrap))
       }
 
-      public override fun columns(columns: List<Any>) {
+      override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
 
-      public override fun compressed(compressed: Boolean) {
+      override fun compressed(compressed: Boolean) {
         cdkBuilder.compressed(compressed)
       }
 
-      public override fun compressed(compressed: IResolvable) {
+      override fun compressed(compressed: IResolvable) {
         cdkBuilder.compressed(compressed.let(IResolvable::unwrap))
       }
 
-      public override fun inputFormat(inputFormat: String) {
+      override fun inputFormat(inputFormat: String) {
         cdkBuilder.inputFormat(inputFormat)
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun numberOfBuckets(numberOfBuckets: Number) {
+      override fun numberOfBuckets(numberOfBuckets: Number) {
         cdkBuilder.numberOfBuckets(numberOfBuckets)
       }
 
-      public override fun outputFormat(outputFormat: String) {
+      override fun outputFormat(outputFormat: String) {
         cdkBuilder.outputFormat(outputFormat)
       }
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun schemaReference(schemaReference: IResolvable) {
+      override fun schemaReference(schemaReference: IResolvable) {
         cdkBuilder.schemaReference(schemaReference.let(IResolvable::unwrap))
       }
 
-      public override fun schemaReference(schemaReference: SchemaReferenceProperty) {
+      override fun schemaReference(schemaReference: SchemaReferenceProperty) {
         cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e9c3efe0adf91e48ecefaa9660eab15f934953dd0f18001f7d18c407fddf154b")
-      public override
-          fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit): Unit =
-          schemaReference(SchemaReferenceProperty(schemaReference))
+      override fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit):
+          Unit = schemaReference(SchemaReferenceProperty(schemaReference))
 
-      public override fun serdeInfo(serdeInfo: IResolvable) {
+      override fun serdeInfo(serdeInfo: IResolvable) {
         cdkBuilder.serdeInfo(serdeInfo.let(IResolvable::unwrap))
       }
 
-      public override fun serdeInfo(serdeInfo: SerdeInfoProperty) {
+      override fun serdeInfo(serdeInfo: SerdeInfoProperty) {
         cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("85c29376465bc74bcec0b7af8368bb60b1c26650f328b4ec2ec02f9246c9802c")
-      public override fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit): Unit =
+      override fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit): Unit =
           serdeInfo(SerdeInfoProperty(serdeInfo))
 
-      public override fun skewedInfo(skewedInfo: IResolvable) {
+      override fun skewedInfo(skewedInfo: IResolvable) {
         cdkBuilder.skewedInfo(skewedInfo.let(IResolvable::unwrap))
       }
 
-      public override fun skewedInfo(skewedInfo: SkewedInfoProperty) {
+      override fun skewedInfo(skewedInfo: SkewedInfoProperty) {
         cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ec641bc1fd863bb5524801e42a8d83f6d4af25f62d31ac79f4aae85a2b277a89")
-      public override fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit): Unit =
+      override fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit): Unit =
           skewedInfo(SkewedInfoProperty(skewedInfo))
 
-      public override fun sortColumns(sortColumns: IResolvable) {
+      override fun sortColumns(sortColumns: IResolvable) {
         cdkBuilder.sortColumns(sortColumns.let(IResolvable::unwrap))
       }
 
-      public override fun sortColumns(sortColumns: List<Any>) {
+      override fun sortColumns(sortColumns: List<Any>) {
         cdkBuilder.sortColumns(sortColumns)
       }
 
-      public override fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
+      override fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
         cdkBuilder.storedAsSubDirectories(storedAsSubDirectories)
       }
 
-      public override fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
+      override fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
         cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable::unwrap))
       }
 
@@ -349,32 +319,31 @@ public open class CfnPartition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnPartition.StorageDescriptorProperty,
     ) : StorageDescriptorProperty {
-      public override fun bucketColumns(): List<String> = unwrap(this).getBucketColumns() ?:
-          emptyList()
+      override fun bucketColumns(): List<String> = unwrap(this).getBucketColumns() ?: emptyList()
 
-      public override fun columns(): Any? = unwrap(this).getColumns()
+      override fun columns(): Any? = unwrap(this).getColumns()
 
-      public override fun compressed(): Any? = unwrap(this).getCompressed()
+      override fun compressed(): Any? = unwrap(this).getCompressed()
 
-      public override fun inputFormat(): String? = unwrap(this).getInputFormat()
+      override fun inputFormat(): String? = unwrap(this).getInputFormat()
 
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun numberOfBuckets(): Number? = unwrap(this).getNumberOfBuckets()
+      override fun numberOfBuckets(): Number? = unwrap(this).getNumberOfBuckets()
 
-      public override fun outputFormat(): String? = unwrap(this).getOutputFormat()
+      override fun outputFormat(): String? = unwrap(this).getOutputFormat()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun schemaReference(): Any? = unwrap(this).getSchemaReference()
+      override fun schemaReference(): Any? = unwrap(this).getSchemaReference()
 
-      public override fun serdeInfo(): Any? = unwrap(this).getSerdeInfo()
+      override fun serdeInfo(): Any? = unwrap(this).getSerdeInfo()
 
-      public override fun skewedInfo(): Any? = unwrap(this).getSkewedInfo()
+      override fun skewedInfo(): Any? = unwrap(this).getSkewedInfo()
 
-      public override fun sortColumns(): Any? = unwrap(this).getSortColumns()
+      override fun sortColumns(): Any? = unwrap(this).getSortColumns()
 
-      public override fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
+      override fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
     }
 
     public companion object {
@@ -405,14 +374,11 @@ public open class CfnPartition internal constructor(
     public fun schemaName(): String? = unwrap(this).getSchemaName()
 
     public interface Builder {
-      public fun registryName(registryName: String) {
-      }
+      public fun registryName(registryName: String)
 
-      public fun schemaArn(schemaArn: String) {
-      }
+      public fun schemaArn(schemaArn: String)
 
-      public fun schemaName(schemaName: String) {
-      }
+      public fun schemaName(schemaName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -420,15 +386,15 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty.builder()
 
-      public override fun registryName(registryName: String) {
+      override fun registryName(registryName: String) {
         cdkBuilder.registryName(registryName)
       }
 
-      public override fun schemaArn(schemaArn: String) {
+      override fun schemaArn(schemaArn: String) {
         cdkBuilder.schemaArn(schemaArn)
       }
 
-      public override fun schemaName(schemaName: String) {
+      override fun schemaName(schemaName: String) {
         cdkBuilder.schemaName(schemaName)
       }
 
@@ -439,11 +405,11 @@ public open class CfnPartition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SchemaIdProperty,
     ) : SchemaIdProperty {
-      public override fun registryName(): String? = unwrap(this).getRegistryName()
+      override fun registryName(): String? = unwrap(this).getRegistryName()
 
-      public override fun schemaArn(): String? = unwrap(this).getSchemaArn()
+      override fun schemaArn(): String? = unwrap(this).getSchemaArn()
 
-      public override fun schemaName(): String? = unwrap(this).getSchemaName()
+      override fun schemaName(): String? = unwrap(this).getSchemaName()
     }
 
     public companion object {
@@ -474,14 +440,11 @@ public open class CfnPartition internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -489,15 +452,15 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -508,11 +471,11 @@ public open class CfnPartition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.ColumnProperty,
     ) : ColumnProperty {
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -543,22 +506,17 @@ public open class CfnPartition internal constructor(
     public fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
 
     public interface Builder {
-      public fun schemaId(schemaId: IResolvable) {
-      }
+      public fun schemaId(schemaId: IResolvable)
 
-      public fun schemaId(schemaId: SchemaIdProperty) {
-      }
+      public fun schemaId(schemaId: SchemaIdProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03ff2e1c9acdac33995fc8caefb6c46f55c96b6dc41840e421c805500d5d7e12")
-      public fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit) {
-      }
+      public fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit)
 
-      public fun schemaVersionId(schemaVersionId: String) {
-      }
+      public fun schemaVersionId(schemaVersionId: String)
 
-      public fun schemaVersionNumber(schemaVersionNumber: Number) {
-      }
+      public fun schemaVersionNumber(schemaVersionNumber: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -566,24 +524,24 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty.builder()
 
-      public override fun schemaId(schemaId: IResolvable) {
+      override fun schemaId(schemaId: IResolvable) {
         cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
       }
 
-      public override fun schemaId(schemaId: SchemaIdProperty) {
+      override fun schemaId(schemaId: SchemaIdProperty) {
         cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03ff2e1c9acdac33995fc8caefb6c46f55c96b6dc41840e421c805500d5d7e12")
-      public override fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit): Unit =
+      override fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit): Unit =
           schemaId(SchemaIdProperty(schemaId))
 
-      public override fun schemaVersionId(schemaVersionId: String) {
+      override fun schemaVersionId(schemaVersionId: String) {
         cdkBuilder.schemaVersionId(schemaVersionId)
       }
 
-      public override fun schemaVersionNumber(schemaVersionNumber: Number) {
+      override fun schemaVersionNumber(schemaVersionNumber: Number) {
         cdkBuilder.schemaVersionNumber(schemaVersionNumber)
       }
 
@@ -595,11 +553,11 @@ public open class CfnPartition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnPartition.SchemaReferenceProperty,
     ) : SchemaReferenceProperty {
-      public override fun schemaId(): Any? = unwrap(this).getSchemaId()
+      override fun schemaId(): Any? = unwrap(this).getSchemaId()
 
-      public override fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
+      override fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
 
-      public override fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
+      override fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
     }
 
     public companion object {
@@ -630,23 +588,17 @@ public open class CfnPartition internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
 
-      public fun storageDescriptor(storageDescriptor: IResolvable) {
-      }
+      public fun storageDescriptor(storageDescriptor: IResolvable)
 
-      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
-      }
+      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("949cf435c9353952c473055192374a4c38ddaf89d8f8a3a99d4aab181a8518a1")
-      public
-          fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit) {
-      }
+      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -654,25 +606,25 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty.builder()
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun storageDescriptor(storageDescriptor: IResolvable) {
+      override fun storageDescriptor(storageDescriptor: IResolvable) {
         cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
       }
 
-      public override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
+      override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
         cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("949cf435c9353952c473055192374a4c38ddaf89d8f8a3a99d4aab181a8518a1")
-      public override
+      override
           fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit):
           Unit = storageDescriptor(StorageDescriptorProperty(storageDescriptor))
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -684,11 +636,11 @@ public open class CfnPartition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty,
     ) : PartitionInputProperty {
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
+      override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -722,14 +674,11 @@ public open class CfnPartition internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun skewedColumnNames(skewedColumnNames: List<String>) {
-      }
+      public fun skewedColumnNames(skewedColumnNames: List<String>)
 
-      public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
-      }
+      public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
 
-      public fun skewedColumnValues(skewedColumnValues: List<String>) {
-      }
+      public fun skewedColumnValues(skewedColumnValues: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -737,15 +686,15 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty.builder()
 
-      public override fun skewedColumnNames(skewedColumnNames: List<String>) {
+      override fun skewedColumnNames(skewedColumnNames: List<String>) {
         cdkBuilder.skewedColumnNames(skewedColumnNames)
       }
 
-      public override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
+      override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
         cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
       }
 
-      public override fun skewedColumnValues(skewedColumnValues: List<String>) {
+      override fun skewedColumnValues(skewedColumnValues: List<String>) {
         cdkBuilder.skewedColumnValues(skewedColumnValues)
       }
 
@@ -756,14 +705,14 @@ public open class CfnPartition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty,
     ) : SkewedInfoProperty {
-      public override fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
+      override fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
           emptyList()
 
-      public override fun skewedColumnValueLocationMaps(): Any? =
+      override fun skewedColumnValueLocationMaps(): Any? =
           unwrap(this).getSkewedColumnValueLocationMaps()
 
-      public override fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues()
-          ?: emptyList()
+      override fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
+          emptyList()
     }
 
     public companion object {
@@ -794,14 +743,11 @@ public open class CfnPartition internal constructor(
     public fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
 
-      public fun serializationLibrary(serializationLibrary: String) {
-      }
+      public fun serializationLibrary(serializationLibrary: String)
     }
 
     private class BuilderImpl : Builder {
@@ -809,15 +755,15 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun serializationLibrary(serializationLibrary: String) {
+      override fun serializationLibrary(serializationLibrary: String) {
         cdkBuilder.serializationLibrary(serializationLibrary)
       }
 
@@ -828,11 +774,11 @@ public open class CfnPartition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.SerdeInfoProperty,
     ) : SerdeInfoProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
+      override fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
     }
 
     public companion object {
@@ -861,11 +807,9 @@ public open class CfnPartition internal constructor(
     public fun sortOrder(): Number? = unwrap(this).getSortOrder()
 
     public interface Builder {
-      public fun column(column: String) {
-      }
+      public fun column(column: String)
 
-      public fun sortOrder(sortOrder: Number) {
-      }
+      public fun sortOrder(sortOrder: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -873,11 +817,11 @@ public open class CfnPartition internal constructor(
           software.amazon.awscdk.services.glue.CfnPartition.OrderProperty.Builder =
           software.amazon.awscdk.services.glue.CfnPartition.OrderProperty.builder()
 
-      public override fun column(column: String) {
+      override fun column(column: String) {
         cdkBuilder.column(column)
       }
 
-      public override fun sortOrder(sortOrder: Number) {
+      override fun sortOrder(sortOrder: Number) {
         cdkBuilder.sortOrder(sortOrder)
       }
 
@@ -888,9 +832,9 @@ public open class CfnPartition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnPartition.OrderProperty,
     ) : OrderProperty {
-      public override fun column(): String = unwrap(this).getColumn()
+      override fun column(): String = unwrap(this).getColumn()
 
-      public override fun sortOrder(): Number? = unwrap(this).getSortOrder()
+      override fun sortOrder(): Number? = unwrap(this).getSortOrder()
     }
 
     public companion object {

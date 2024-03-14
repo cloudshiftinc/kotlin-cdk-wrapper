@@ -39,11 +39,9 @@ public open class CfnStage internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -53,11 +51,11 @@ public open class CfnStage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivs.CfnStage.Builder =
         software.amazon.awscdk.services.ivs.CfnStage.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

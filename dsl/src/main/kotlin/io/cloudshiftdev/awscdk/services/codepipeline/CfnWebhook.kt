@@ -93,45 +93,33 @@ public open class CfnWebhook internal constructor(
   }
 
   public interface Builder {
-    public fun authentication(authentication: String) {
-    }
+    public fun authentication(authentication: String)
 
-    public fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-    }
+    public fun authenticationConfiguration(authenticationConfiguration: IResolvable)
 
     public
-        fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty) {
-    }
+        fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fab646e614c021815fbcc2e077fc03ead501f79f293f303855a27d9f2a24795")
     public
-        fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty.Builder.() -> Unit)
 
-    public fun filters(filters: IResolvable) {
-    }
+    public fun filters(filters: IResolvable)
 
-    public fun filters(filters: List<Any>) {
-    }
+    public fun filters(filters: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun registerWithThirdParty(registerWithThirdParty: Boolean) {
-    }
+    public fun registerWithThirdParty(registerWithThirdParty: Boolean)
 
-    public fun registerWithThirdParty(registerWithThirdParty: IResolvable) {
-    }
+    public fun registerWithThirdParty(registerWithThirdParty: IResolvable)
 
-    public fun targetAction(targetAction: String) {
-    }
+    public fun targetAction(targetAction: String)
 
-    public fun targetPipeline(targetPipeline: String) {
-    }
+    public fun targetPipeline(targetPipeline: String)
 
-    public fun targetPipelineVersion(targetPipelineVersion: Number) {
-    }
+    public fun targetPipelineVersion(targetPipelineVersion: Number)
   }
 
   private class BuilderImpl(
@@ -141,55 +129,55 @@ public open class CfnWebhook internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.CfnWebhook.Builder =
         software.amazon.awscdk.services.codepipeline.CfnWebhook.Builder.create(scope, id)
 
-    public override fun authentication(authentication: String) {
+    override fun authentication(authentication: String) {
       cdkBuilder.authentication(authentication)
     }
 
-    public override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
+    override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
       cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty) {
       cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(WebhookAuthConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fab646e614c021815fbcc2e077fc03ead501f79f293f303855a27d9f2a24795")
-    public override
+    override
         fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty.Builder.() -> Unit):
         Unit =
         authenticationConfiguration(WebhookAuthConfigurationProperty(authenticationConfiguration))
 
-    public override fun filters(filters: IResolvable) {
+    override fun filters(filters: IResolvable) {
       cdkBuilder.filters(filters.let(IResolvable::unwrap))
     }
 
-    public override fun filters(filters: List<Any>) {
+    override fun filters(filters: List<Any>) {
       cdkBuilder.filters(filters)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun registerWithThirdParty(registerWithThirdParty: Boolean) {
+    override fun registerWithThirdParty(registerWithThirdParty: Boolean) {
       cdkBuilder.registerWithThirdParty(registerWithThirdParty)
     }
 
-    public override fun registerWithThirdParty(registerWithThirdParty: IResolvable) {
+    override fun registerWithThirdParty(registerWithThirdParty: IResolvable) {
       cdkBuilder.registerWithThirdParty(registerWithThirdParty.let(IResolvable::unwrap))
     }
 
-    public override fun targetAction(targetAction: String) {
+    override fun targetAction(targetAction: String) {
       cdkBuilder.targetAction(targetAction)
     }
 
-    public override fun targetPipeline(targetPipeline: String) {
+    override fun targetPipeline(targetPipeline: String) {
       cdkBuilder.targetPipeline(targetPipeline)
     }
 
-    public override fun targetPipelineVersion(targetPipelineVersion: Number) {
+    override fun targetPipelineVersion(targetPipelineVersion: Number) {
       cdkBuilder.targetPipelineVersion(targetPipelineVersion)
     }
 
@@ -223,11 +211,9 @@ public open class CfnWebhook internal constructor(
     public fun matchEquals(): String? = unwrap(this).getMatchEquals()
 
     public interface Builder {
-      public fun jsonPath(jsonPath: String) {
-      }
+      public fun jsonPath(jsonPath: String)
 
-      public fun matchEquals(matchEquals: String) {
-      }
+      public fun matchEquals(matchEquals: String)
     }
 
     private class BuilderImpl : Builder {
@@ -236,11 +222,11 @@ public open class CfnWebhook internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty.builder()
 
-      public override fun jsonPath(jsonPath: String) {
+      override fun jsonPath(jsonPath: String) {
         cdkBuilder.jsonPath(jsonPath)
       }
 
-      public override fun matchEquals(matchEquals: String) {
+      override fun matchEquals(matchEquals: String) {
         cdkBuilder.matchEquals(matchEquals)
       }
 
@@ -253,9 +239,9 @@ public open class CfnWebhook internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty,
     ) : WebhookFilterRuleProperty {
-      public override fun jsonPath(): String = unwrap(this).getJsonPath()
+      override fun jsonPath(): String = unwrap(this).getJsonPath()
 
-      public override fun matchEquals(): String? = unwrap(this).getMatchEquals()
+      override fun matchEquals(): String? = unwrap(this).getMatchEquals()
     }
 
     public companion object {
@@ -284,11 +270,9 @@ public open class CfnWebhook internal constructor(
     public fun secretToken(): String? = unwrap(this).getSecretToken()
 
     public interface Builder {
-      public fun allowedIpRange(allowedIpRange: String) {
-      }
+      public fun allowedIpRange(allowedIpRange: String)
 
-      public fun secretToken(secretToken: String) {
-      }
+      public fun secretToken(secretToken: String)
     }
 
     private class BuilderImpl : Builder {
@@ -297,11 +281,11 @@ public open class CfnWebhook internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty.builder()
 
-      public override fun allowedIpRange(allowedIpRange: String) {
+      override fun allowedIpRange(allowedIpRange: String) {
         cdkBuilder.allowedIpRange(allowedIpRange)
       }
 
-      public override fun secretToken(secretToken: String) {
+      override fun secretToken(secretToken: String) {
         cdkBuilder.secretToken(secretToken)
       }
 
@@ -314,9 +298,9 @@ public open class CfnWebhook internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty,
     ) : WebhookAuthConfigurationProperty {
-      public override fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
+      override fun allowedIpRange(): String? = unwrap(this).getAllowedIpRange()
 
-      public override fun secretToken(): String? = unwrap(this).getSecretToken()
+      override fun secretToken(): String? = unwrap(this).getSecretToken()
     }
 
     public companion object {

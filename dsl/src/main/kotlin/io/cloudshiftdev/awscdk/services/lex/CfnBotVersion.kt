@@ -46,17 +46,13 @@ public open class CfnBotVersion internal constructor(
   }
 
   public interface Builder {
-    public fun botId(botId: String) {
-    }
+    public fun botId(botId: String)
 
-    public fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable) {
-    }
+    public fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable)
 
-    public fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>) {
-    }
+    public fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
   }
 
   private class BuilderImpl(
@@ -66,19 +62,19 @@ public open class CfnBotVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lex.CfnBotVersion.Builder =
         software.amazon.awscdk.services.lex.CfnBotVersion.Builder.create(scope, id)
 
-    public override fun botId(botId: String) {
+    override fun botId(botId: String) {
       cdkBuilder.botId(botId)
     }
 
-    public override fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable) {
+    override fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable) {
       cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>) {
+    override fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>) {
       cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
@@ -112,20 +108,16 @@ public open class CfnBotVersion internal constructor(
     public fun localeId(): String
 
     public interface Builder {
-      public fun botVersionLocaleDetails(botVersionLocaleDetails: IResolvable) {
-      }
+      public fun botVersionLocaleDetails(botVersionLocaleDetails: IResolvable)
 
-      public fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty) {
-      }
+      public fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("86d58c78ffe488c4ee3550cb7a85c66edcf765197baeb36ebbc9f8ac86dfee63")
       public
-          fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty.Builder.() -> Unit) {
-      }
+          fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty.Builder.() -> Unit)
 
-      public fun localeId(localeId: String) {
-      }
+      public fun localeId(localeId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -134,22 +126,22 @@ public open class CfnBotVersion internal constructor(
           =
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty.builder()
 
-      public override fun botVersionLocaleDetails(botVersionLocaleDetails: IResolvable) {
+      override fun botVersionLocaleDetails(botVersionLocaleDetails: IResolvable) {
         cdkBuilder.botVersionLocaleDetails(botVersionLocaleDetails.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty) {
         cdkBuilder.botVersionLocaleDetails(botVersionLocaleDetails.let(BotVersionLocaleDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("86d58c78ffe488c4ee3550cb7a85c66edcf765197baeb36ebbc9f8ac86dfee63")
-      public override
+      override
           fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty.Builder.() -> Unit):
           Unit = botVersionLocaleDetails(BotVersionLocaleDetailsProperty(botVersionLocaleDetails))
 
-      public override fun localeId(localeId: String) {
+      override fun localeId(localeId: String) {
         cdkBuilder.localeId(localeId)
       }
 
@@ -162,9 +154,9 @@ public open class CfnBotVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty,
     ) : BotVersionLocaleSpecificationProperty {
-      public override fun botVersionLocaleDetails(): Any = unwrap(this).getBotVersionLocaleDetails()
+      override fun botVersionLocaleDetails(): Any = unwrap(this).getBotVersionLocaleDetails()
 
-      public override fun localeId(): String = unwrap(this).getLocaleId()
+      override fun localeId(): String = unwrap(this).getLocaleId()
     }
 
     public companion object {
@@ -192,8 +184,7 @@ public open class CfnBotVersion internal constructor(
     public fun sourceBotVersion(): String
 
     public interface Builder {
-      public fun sourceBotVersion(sourceBotVersion: String) {
-      }
+      public fun sourceBotVersion(sourceBotVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -202,7 +193,7 @@ public open class CfnBotVersion internal constructor(
           =
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty.builder()
 
-      public override fun sourceBotVersion(sourceBotVersion: String) {
+      override fun sourceBotVersion(sourceBotVersion: String) {
         cdkBuilder.sourceBotVersion(sourceBotVersion)
       }
 
@@ -215,7 +206,7 @@ public open class CfnBotVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty,
     ) : BotVersionLocaleDetailsProperty {
-      public override fun sourceBotVersion(): String = unwrap(this).getSourceBotVersion()
+      override fun sourceBotVersion(): String = unwrap(this).getSourceBotVersion()
     }
 
     public companion object {

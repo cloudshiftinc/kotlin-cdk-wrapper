@@ -13,17 +13,13 @@ public interface EndpointServiceAvailabilityZonesContextQuery {
   public fun serviceName(): String
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -32,19 +28,19 @@ public interface EndpointServiceAvailabilityZonesContextQuery {
         =
         software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
@@ -57,13 +53,13 @@ public interface EndpointServiceAvailabilityZonesContextQuery {
     internal val cdkObject:
         software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery,
   ) : EndpointServiceAvailabilityZonesContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
 
-    public override fun serviceName(): String = unwrap(this).getServiceName()
+    override fun serviceName(): String = unwrap(this).getServiceName()
   }
 
   public companion object {

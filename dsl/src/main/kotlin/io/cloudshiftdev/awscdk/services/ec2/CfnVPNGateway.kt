@@ -44,14 +44,11 @@ public open class CfnVPNGateway internal constructor(
   }
 
   public interface Builder {
-    public fun amazonSideAsn(amazonSideAsn: Number) {
-    }
+    public fun amazonSideAsn(amazonSideAsn: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -61,15 +58,15 @@ public open class CfnVPNGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPNGateway.Builder =
         software.amazon.awscdk.services.ec2.CfnVPNGateway.Builder.create(scope, id)
 
-    public override fun amazonSideAsn(amazonSideAsn: Number) {
+    override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

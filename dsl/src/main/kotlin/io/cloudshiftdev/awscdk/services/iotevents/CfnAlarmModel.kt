@@ -110,56 +110,41 @@ public open class CfnAlarmModel internal constructor(
   }
 
   public interface Builder {
-    public fun alarmCapabilities(alarmCapabilities: IResolvable) {
-    }
+    public fun alarmCapabilities(alarmCapabilities: IResolvable)
 
-    public fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty) {
-    }
+    public fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28dade2c5a535f2b0837588b6fcb591e268f5ef44dfc6e23313751c738c75d71")
-    public fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty.Builder.() -> Unit) {
-    }
+    public fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty.Builder.() -> Unit)
 
-    public fun alarmEventActions(alarmEventActions: IResolvable) {
-    }
+    public fun alarmEventActions(alarmEventActions: IResolvable)
 
-    public fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty) {
-    }
+    public fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f17992d3d7cb1606f8e1af18815b53e1fff29da3e14a0eae4875754ca4b305b")
-    public fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty.Builder.() -> Unit) {
-    }
+    public fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty.Builder.() -> Unit)
 
-    public fun alarmModelDescription(alarmModelDescription: String) {
-    }
+    public fun alarmModelDescription(alarmModelDescription: String)
 
-    public fun alarmModelName(alarmModelName: String) {
-    }
+    public fun alarmModelName(alarmModelName: String)
 
-    public fun alarmRule(alarmRule: IResolvable) {
-    }
+    public fun alarmRule(alarmRule: IResolvable)
 
-    public fun alarmRule(alarmRule: AlarmRuleProperty) {
-    }
+    public fun alarmRule(alarmRule: AlarmRuleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a85073d3ac9e10ee8e6551c1e38e91853eed1bf9fe7f23c79712d0296a202c71")
-    public fun alarmRule(alarmRule: AlarmRuleProperty.Builder.() -> Unit) {
-    }
+    public fun alarmRule(alarmRule: AlarmRuleProperty.Builder.() -> Unit)
 
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun severity(severity: Number) {
-    }
+    public fun severity(severity: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -169,68 +154,66 @@ public open class CfnAlarmModel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotevents.CfnAlarmModel.Builder =
         software.amazon.awscdk.services.iotevents.CfnAlarmModel.Builder.create(scope, id)
 
-    public override fun alarmCapabilities(alarmCapabilities: IResolvable) {
+    override fun alarmCapabilities(alarmCapabilities: IResolvable) {
       cdkBuilder.alarmCapabilities(alarmCapabilities.let(IResolvable::unwrap))
     }
 
-    public override fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty) {
+    override fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty) {
       cdkBuilder.alarmCapabilities(alarmCapabilities.let(AlarmCapabilitiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28dade2c5a535f2b0837588b6fcb591e268f5ef44dfc6e23313751c738c75d71")
-    public override
-        fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty.Builder.() -> Unit): Unit
-        = alarmCapabilities(AlarmCapabilitiesProperty(alarmCapabilities))
+    override fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty.Builder.() -> Unit):
+        Unit = alarmCapabilities(AlarmCapabilitiesProperty(alarmCapabilities))
 
-    public override fun alarmEventActions(alarmEventActions: IResolvable) {
+    override fun alarmEventActions(alarmEventActions: IResolvable) {
       cdkBuilder.alarmEventActions(alarmEventActions.let(IResolvable::unwrap))
     }
 
-    public override fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty) {
+    override fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty) {
       cdkBuilder.alarmEventActions(alarmEventActions.let(AlarmEventActionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f17992d3d7cb1606f8e1af18815b53e1fff29da3e14a0eae4875754ca4b305b")
-    public override
-        fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty.Builder.() -> Unit): Unit
-        = alarmEventActions(AlarmEventActionsProperty(alarmEventActions))
+    override fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty.Builder.() -> Unit):
+        Unit = alarmEventActions(AlarmEventActionsProperty(alarmEventActions))
 
-    public override fun alarmModelDescription(alarmModelDescription: String) {
+    override fun alarmModelDescription(alarmModelDescription: String) {
       cdkBuilder.alarmModelDescription(alarmModelDescription)
     }
 
-    public override fun alarmModelName(alarmModelName: String) {
+    override fun alarmModelName(alarmModelName: String) {
       cdkBuilder.alarmModelName(alarmModelName)
     }
 
-    public override fun alarmRule(alarmRule: IResolvable) {
+    override fun alarmRule(alarmRule: IResolvable) {
       cdkBuilder.alarmRule(alarmRule.let(IResolvable::unwrap))
     }
 
-    public override fun alarmRule(alarmRule: AlarmRuleProperty) {
+    override fun alarmRule(alarmRule: AlarmRuleProperty) {
       cdkBuilder.alarmRule(alarmRule.let(AlarmRuleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a85073d3ac9e10ee8e6551c1e38e91853eed1bf9fe7f23c79712d0296a202c71")
-    public override fun alarmRule(alarmRule: AlarmRuleProperty.Builder.() -> Unit): Unit =
+    override fun alarmRule(alarmRule: AlarmRuleProperty.Builder.() -> Unit): Unit =
         alarmRule(AlarmRuleProperty(alarmRule))
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun severity(severity: Number) {
+    override fun severity(severity: Number) {
       cdkBuilder.severity(severity)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -264,19 +247,15 @@ public open class CfnAlarmModel internal constructor(
     public fun payload(): Any? = unwrap(this).getPayload()
 
     public interface Builder {
-      public fun mqttTopic(mqttTopic: String) {
-      }
+      public fun mqttTopic(mqttTopic: String)
 
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("09a8a1ff7169e3c1479b8bc646cacc37c60f2b4669f76f34a144bc80ce570150")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -284,21 +263,21 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotTopicPublishProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotTopicPublishProperty.builder()
 
-      public override fun mqttTopic(mqttTopic: String) {
+      override fun mqttTopic(mqttTopic: String) {
         cdkBuilder.mqttTopic(mqttTopic)
       }
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("09a8a1ff7169e3c1479b8bc646cacc37c60f2b4669f76f34a144bc80ce570150")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
       public fun build():
@@ -310,9 +289,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotTopicPublishProperty,
     ) : IotTopicPublishProperty {
-      public override fun mqttTopic(): String = unwrap(this).getMqttTopic()
+      override fun mqttTopic(): String = unwrap(this).getMqttTopic()
 
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
     }
 
     public companion object {
@@ -345,17 +324,13 @@ public open class CfnAlarmModel internal constructor(
     public fun stringValue(): String? = unwrap(this).getStringValue()
 
     public interface Builder {
-      public fun booleanValue(booleanValue: String) {
-      }
+      public fun booleanValue(booleanValue: String)
 
-      public fun doubleValue(doubleValue: String) {
-      }
+      public fun doubleValue(doubleValue: String)
 
-      public fun integerValue(integerValue: String) {
-      }
+      public fun integerValue(integerValue: String)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -364,19 +339,19 @@ public open class CfnAlarmModel internal constructor(
           =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyVariantProperty.builder()
 
-      public override fun booleanValue(booleanValue: String) {
+      override fun booleanValue(booleanValue: String) {
         cdkBuilder.booleanValue(booleanValue)
       }
 
-      public override fun doubleValue(doubleValue: String) {
+      override fun doubleValue(doubleValue: String) {
         cdkBuilder.doubleValue(doubleValue)
       }
 
-      public override fun integerValue(integerValue: String) {
+      override fun integerValue(integerValue: String) {
         cdkBuilder.integerValue(integerValue)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -389,13 +364,13 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyVariantProperty,
     ) : AssetPropertyVariantProperty {
-      public override fun booleanValue(): String? = unwrap(this).getBooleanValue()
+      override fun booleanValue(): String? = unwrap(this).getBooleanValue()
 
-      public override fun doubleValue(): String? = unwrap(this).getDoubleValue()
+      override fun doubleValue(): String? = unwrap(this).getDoubleValue()
 
-      public override fun integerValue(): String? = unwrap(this).getIntegerValue()
+      override fun integerValue(): String? = unwrap(this).getIntegerValue()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
     }
 
     public companion object {
@@ -426,14 +401,11 @@ public open class CfnAlarmModel internal constructor(
     public fun threshold(): String
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: String) {
-      }
+      public fun comparisonOperator(comparisonOperator: String)
 
-      public fun inputProperty(inputProperty: String) {
-      }
+      public fun inputProperty(inputProperty: String)
 
-      public fun threshold(threshold: String) {
-      }
+      public fun threshold(threshold: String)
     }
 
     private class BuilderImpl : Builder {
@@ -441,15 +413,15 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SimpleRuleProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SimpleRuleProperty.builder()
 
-      public override fun comparisonOperator(comparisonOperator: String) {
+      override fun comparisonOperator(comparisonOperator: String) {
         cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
-      public override fun inputProperty(inputProperty: String) {
+      override fun inputProperty(inputProperty: String) {
         cdkBuilder.inputProperty(inputProperty)
       }
 
-      public override fun threshold(threshold: String) {
+      override fun threshold(threshold: String) {
         cdkBuilder.threshold(threshold)
       }
 
@@ -461,11 +433,11 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SimpleRuleProperty,
     ) : SimpleRuleProperty {
-      public override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
+      override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
 
-      public override fun inputProperty(): String = unwrap(this).getInputProperty()
+      override fun inputProperty(): String = unwrap(this).getInputProperty()
 
-      public override fun threshold(): String = unwrap(this).getThreshold()
+      override fun threshold(): String = unwrap(this).getThreshold()
     }
 
     public companion object {
@@ -492,16 +464,13 @@ public open class CfnAlarmModel internal constructor(
     public fun simpleRule(): Any? = unwrap(this).getSimpleRule()
 
     public interface Builder {
-      public fun simpleRule(simpleRule: IResolvable) {
-      }
+      public fun simpleRule(simpleRule: IResolvable)
 
-      public fun simpleRule(simpleRule: SimpleRuleProperty) {
-      }
+      public fun simpleRule(simpleRule: SimpleRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("de36c93fe2de0a3000fae2c93cec62a0f5c9cb2fae0ba5c11ce2486fcbfa1b37")
-      public fun simpleRule(simpleRule: SimpleRuleProperty.Builder.() -> Unit) {
-      }
+      public fun simpleRule(simpleRule: SimpleRuleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -509,17 +478,17 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmRuleProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmRuleProperty.builder()
 
-      public override fun simpleRule(simpleRule: IResolvable) {
+      override fun simpleRule(simpleRule: IResolvable) {
         cdkBuilder.simpleRule(simpleRule.let(IResolvable::unwrap))
       }
 
-      public override fun simpleRule(simpleRule: SimpleRuleProperty) {
+      override fun simpleRule(simpleRule: SimpleRuleProperty) {
         cdkBuilder.simpleRule(simpleRule.let(SimpleRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("de36c93fe2de0a3000fae2c93cec62a0f5c9cb2fae0ba5c11ce2486fcbfa1b37")
-      public override fun simpleRule(simpleRule: SimpleRuleProperty.Builder.() -> Unit): Unit =
+      override fun simpleRule(simpleRule: SimpleRuleProperty.Builder.() -> Unit): Unit =
           simpleRule(SimpleRuleProperty(simpleRule))
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmRuleProperty
@@ -530,7 +499,7 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmRuleProperty,
     ) : AlarmRuleProperty {
-      public override fun simpleRule(): Any? = unwrap(this).getSimpleRule()
+      override fun simpleRule(): Any? = unwrap(this).getSimpleRule()
     }
 
     public companion object {
@@ -559,11 +528,9 @@ public open class CfnAlarmModel internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun contentExpression(contentExpression: String) {
-      }
+      public fun contentExpression(contentExpression: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -571,11 +538,11 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.PayloadProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.PayloadProperty.builder()
 
-      public override fun contentExpression(contentExpression: String) {
+      override fun contentExpression(contentExpression: String) {
         cdkBuilder.contentExpression(contentExpression)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -587,9 +554,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.PayloadProperty,
     ) : PayloadProperty {
-      public override fun contentExpression(): String = unwrap(this).getContentExpression()
+      override fun contentExpression(): String = unwrap(this).getContentExpression()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -618,19 +585,15 @@ public open class CfnAlarmModel internal constructor(
     public fun payload(): Any? = unwrap(this).getPayload()
 
     public interface Builder {
-      public fun inputName(inputName: String) {
-      }
+      public fun inputName(inputName: String)
 
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a906aff9bfed17a9996ebc2534cfc0b5419c3478d888ba8ae7d86b4fa20e339e")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -638,21 +601,21 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotEventsProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotEventsProperty.builder()
 
-      public override fun inputName(inputName: String) {
+      override fun inputName(inputName: String) {
         cdkBuilder.inputName(inputName)
       }
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a906aff9bfed17a9996ebc2534cfc0b5419c3478d888ba8ae7d86b4fa20e339e")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotEventsProperty
@@ -663,9 +626,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotEventsProperty,
     ) : IotEventsProperty {
-      public override fun inputName(): String = unwrap(this).getInputName()
+      override fun inputName(): String = unwrap(this).getInputName()
 
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
     }
 
     public companion object {
@@ -694,19 +657,15 @@ public open class CfnAlarmModel internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("189d1432ed7e21cc4c695b6568e65a4972db7a288296442c88e3c0403a7a8a0d")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -714,20 +673,20 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBv2Property.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBv2Property.builder()
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("189d1432ed7e21cc4c695b6568e65a4972db7a288296442c88e3c0403a7a8a0d")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -739,9 +698,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBv2Property,
     ) : DynamoDBv2Property {
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -772,25 +731,19 @@ public open class CfnAlarmModel internal constructor(
     public fun useBase64(): Any? = unwrap(this).getUseBase64()
 
     public interface Builder {
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb380390b28918407d9c43bca759f2f834e6b8173ee883656d7c1864bdf6bbd1")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
 
-      public fun queueUrl(queueUrl: String) {
-      }
+      public fun queueUrl(queueUrl: String)
 
-      public fun useBase64(useBase64: Boolean) {
-      }
+      public fun useBase64(useBase64: Boolean)
 
-      public fun useBase64(useBase64: IResolvable) {
-      }
+      public fun useBase64(useBase64: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -798,28 +751,28 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SqsProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SqsProperty.builder()
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb380390b28918407d9c43bca759f2f834e6b8173ee883656d7c1864bdf6bbd1")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
-      public override fun queueUrl(queueUrl: String) {
+      override fun queueUrl(queueUrl: String) {
         cdkBuilder.queueUrl(queueUrl)
       }
 
-      public override fun useBase64(useBase64: Boolean) {
+      override fun useBase64(useBase64: Boolean) {
         cdkBuilder.useBase64(useBase64)
       }
 
-      public override fun useBase64(useBase64: IResolvable) {
+      override fun useBase64(useBase64: IResolvable) {
         cdkBuilder.useBase64(useBase64.let(IResolvable::unwrap))
       }
 
@@ -830,11 +783,11 @@ public open class CfnAlarmModel internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.SqsProperty,
     ) : SqsProperty {
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
 
-      public override fun queueUrl(): String = unwrap(this).getQueueUrl()
+      override fun queueUrl(): String = unwrap(this).getQueueUrl()
 
-      public override fun useBase64(): Any? = unwrap(this).getUseBase64()
+      override fun useBase64(): Any? = unwrap(this).getUseBase64()
     }
 
     public companion object {
@@ -877,104 +830,77 @@ public open class CfnAlarmModel internal constructor(
     public fun sqs(): Any? = unwrap(this).getSqs()
 
     public interface Builder {
-      public fun dynamoDBv2(dynamoDBv2: IResolvable) {
-      }
+      public fun dynamoDBv2(dynamoDBv2: IResolvable)
 
-      public fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property) {
-      }
+      public fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6d188816317dc2bba3407a999b47df7b7d18f6dde1f044d746d59ad2929c6146")
-      public fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property.Builder.() -> Unit) {
-      }
+      public fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property.Builder.() -> Unit)
 
-      public fun dynamoDb(dynamoDb: IResolvable) {
-      }
+      public fun dynamoDb(dynamoDb: IResolvable)
 
-      public fun dynamoDb(dynamoDb: DynamoDBProperty) {
-      }
+      public fun dynamoDb(dynamoDb: DynamoDBProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e78f99f854660adca9866689f88c4f478977630c74e0778ebd321dd8c61e61c")
-      public fun dynamoDb(dynamoDb: DynamoDBProperty.Builder.() -> Unit) {
-      }
+      public fun dynamoDb(dynamoDb: DynamoDBProperty.Builder.() -> Unit)
 
-      public fun firehose(firehose: IResolvable) {
-      }
+      public fun firehose(firehose: IResolvable)
 
-      public fun firehose(firehose: FirehoseProperty) {
-      }
+      public fun firehose(firehose: FirehoseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("829773b971a8bf944d36ee1bf480aea8bb67d937013f1cd4dea2a3dfbdbff12f")
-      public fun firehose(firehose: FirehoseProperty.Builder.() -> Unit) {
-      }
+      public fun firehose(firehose: FirehoseProperty.Builder.() -> Unit)
 
-      public fun iotEvents(iotEvents: IResolvable) {
-      }
+      public fun iotEvents(iotEvents: IResolvable)
 
-      public fun iotEvents(iotEvents: IotEventsProperty) {
-      }
+      public fun iotEvents(iotEvents: IotEventsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("58f8a68f00e5e88e84857886e566e33911847d03ca8a5b44d8b4b1a51775dcee")
-      public fun iotEvents(iotEvents: IotEventsProperty.Builder.() -> Unit) {
-      }
+      public fun iotEvents(iotEvents: IotEventsProperty.Builder.() -> Unit)
 
-      public fun iotSiteWise(iotSiteWise: IResolvable) {
-      }
+      public fun iotSiteWise(iotSiteWise: IResolvable)
 
-      public fun iotSiteWise(iotSiteWise: IotSiteWiseProperty) {
-      }
+      public fun iotSiteWise(iotSiteWise: IotSiteWiseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eba33acab845cb824153697c8ded76a604d7c7941288e5b9027205162ae7beb7")
-      public fun iotSiteWise(iotSiteWise: IotSiteWiseProperty.Builder.() -> Unit) {
-      }
+      public fun iotSiteWise(iotSiteWise: IotSiteWiseProperty.Builder.() -> Unit)
 
-      public fun iotTopicPublish(iotTopicPublish: IResolvable) {
-      }
+      public fun iotTopicPublish(iotTopicPublish: IResolvable)
 
-      public fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty) {
-      }
+      public fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eb9bf5bd4cedcb9d89548b63ccbc6a98e99671d994e3f06088431680b1f6b965")
-      public fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty.Builder.() -> Unit) {
-      }
+      public fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty.Builder.() -> Unit)
 
-      public fun lambda(lambda: IResolvable) {
-      }
+      public fun lambda(lambda: IResolvable)
 
-      public fun lambda(lambda: LambdaProperty) {
-      }
+      public fun lambda(lambda: LambdaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5adf283344549e7ebcdbcbaf5dd26d7b6562feae7110819f076a607e873162bd")
-      public fun lambda(lambda: LambdaProperty.Builder.() -> Unit) {
-      }
+      public fun lambda(lambda: LambdaProperty.Builder.() -> Unit)
 
-      public fun sns(sns: IResolvable) {
-      }
+      public fun sns(sns: IResolvable)
 
-      public fun sns(sns: SnsProperty) {
-      }
+      public fun sns(sns: SnsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8f522bb88cc761157565415502439d4395c223e6c9654cf0f6ada3c919fdf97e")
-      public fun sns(sns: SnsProperty.Builder.() -> Unit) {
-      }
+      public fun sns(sns: SnsProperty.Builder.() -> Unit)
 
-      public fun sqs(sqs: IResolvable) {
-      }
+      public fun sqs(sqs: IResolvable)
 
-      public fun sqs(sqs: SqsProperty) {
-      }
+      public fun sqs(sqs: SqsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95c0b3dab9e6522270f5f8c293f53035c523144c63e76e6cad208a6f093220bd")
-      public fun sqs(sqs: SqsProperty.Builder.() -> Unit) {
-      }
+      public fun sqs(sqs: SqsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -982,121 +908,120 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmActionProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmActionProperty.builder()
 
-      public override fun dynamoDBv2(dynamoDBv2: IResolvable) {
+      override fun dynamoDBv2(dynamoDBv2: IResolvable) {
         cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable::unwrap))
       }
 
-      public override fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property) {
+      override fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property) {
         cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6d188816317dc2bba3407a999b47df7b7d18f6dde1f044d746d59ad2929c6146")
-      public override fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property.Builder.() -> Unit): Unit =
+      override fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property.Builder.() -> Unit): Unit =
           dynamoDBv2(DynamoDBv2Property(dynamoDBv2))
 
-      public override fun dynamoDb(dynamoDb: IResolvable) {
+      override fun dynamoDb(dynamoDb: IResolvable) {
         cdkBuilder.dynamoDb(dynamoDb.let(IResolvable::unwrap))
       }
 
-      public override fun dynamoDb(dynamoDb: DynamoDBProperty) {
+      override fun dynamoDb(dynamoDb: DynamoDBProperty) {
         cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e78f99f854660adca9866689f88c4f478977630c74e0778ebd321dd8c61e61c")
-      public override fun dynamoDb(dynamoDb: DynamoDBProperty.Builder.() -> Unit): Unit =
+      override fun dynamoDb(dynamoDb: DynamoDBProperty.Builder.() -> Unit): Unit =
           dynamoDb(DynamoDBProperty(dynamoDb))
 
-      public override fun firehose(firehose: IResolvable) {
+      override fun firehose(firehose: IResolvable) {
         cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
       }
 
-      public override fun firehose(firehose: FirehoseProperty) {
+      override fun firehose(firehose: FirehoseProperty) {
         cdkBuilder.firehose(firehose.let(FirehoseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("829773b971a8bf944d36ee1bf480aea8bb67d937013f1cd4dea2a3dfbdbff12f")
-      public override fun firehose(firehose: FirehoseProperty.Builder.() -> Unit): Unit =
+      override fun firehose(firehose: FirehoseProperty.Builder.() -> Unit): Unit =
           firehose(FirehoseProperty(firehose))
 
-      public override fun iotEvents(iotEvents: IResolvable) {
+      override fun iotEvents(iotEvents: IResolvable) {
         cdkBuilder.iotEvents(iotEvents.let(IResolvable::unwrap))
       }
 
-      public override fun iotEvents(iotEvents: IotEventsProperty) {
+      override fun iotEvents(iotEvents: IotEventsProperty) {
         cdkBuilder.iotEvents(iotEvents.let(IotEventsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("58f8a68f00e5e88e84857886e566e33911847d03ca8a5b44d8b4b1a51775dcee")
-      public override fun iotEvents(iotEvents: IotEventsProperty.Builder.() -> Unit): Unit =
+      override fun iotEvents(iotEvents: IotEventsProperty.Builder.() -> Unit): Unit =
           iotEvents(IotEventsProperty(iotEvents))
 
-      public override fun iotSiteWise(iotSiteWise: IResolvable) {
+      override fun iotSiteWise(iotSiteWise: IResolvable) {
         cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable::unwrap))
       }
 
-      public override fun iotSiteWise(iotSiteWise: IotSiteWiseProperty) {
+      override fun iotSiteWise(iotSiteWise: IotSiteWiseProperty) {
         cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eba33acab845cb824153697c8ded76a604d7c7941288e5b9027205162ae7beb7")
-      public override fun iotSiteWise(iotSiteWise: IotSiteWiseProperty.Builder.() -> Unit): Unit =
+      override fun iotSiteWise(iotSiteWise: IotSiteWiseProperty.Builder.() -> Unit): Unit =
           iotSiteWise(IotSiteWiseProperty(iotSiteWise))
 
-      public override fun iotTopicPublish(iotTopicPublish: IResolvable) {
+      override fun iotTopicPublish(iotTopicPublish: IResolvable) {
         cdkBuilder.iotTopicPublish(iotTopicPublish.let(IResolvable::unwrap))
       }
 
-      public override fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty) {
+      override fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty) {
         cdkBuilder.iotTopicPublish(iotTopicPublish.let(IotTopicPublishProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eb9bf5bd4cedcb9d89548b63ccbc6a98e99671d994e3f06088431680b1f6b965")
-      public override
-          fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty.Builder.() -> Unit): Unit =
-          iotTopicPublish(IotTopicPublishProperty(iotTopicPublish))
+      override fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty.Builder.() -> Unit):
+          Unit = iotTopicPublish(IotTopicPublishProperty(iotTopicPublish))
 
-      public override fun lambda(lambda: IResolvable) {
+      override fun lambda(lambda: IResolvable) {
         cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
       }
 
-      public override fun lambda(lambda: LambdaProperty) {
+      override fun lambda(lambda: LambdaProperty) {
         cdkBuilder.lambda(lambda.let(LambdaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5adf283344549e7ebcdbcbaf5dd26d7b6562feae7110819f076a607e873162bd")
-      public override fun lambda(lambda: LambdaProperty.Builder.() -> Unit): Unit =
+      override fun lambda(lambda: LambdaProperty.Builder.() -> Unit): Unit =
           lambda(LambdaProperty(lambda))
 
-      public override fun sns(sns: IResolvable) {
+      override fun sns(sns: IResolvable) {
         cdkBuilder.sns(sns.let(IResolvable::unwrap))
       }
 
-      public override fun sns(sns: SnsProperty) {
+      override fun sns(sns: SnsProperty) {
         cdkBuilder.sns(sns.let(SnsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8f522bb88cc761157565415502439d4395c223e6c9654cf0f6ada3c919fdf97e")
-      public override fun sns(sns: SnsProperty.Builder.() -> Unit): Unit = sns(SnsProperty(sns))
+      override fun sns(sns: SnsProperty.Builder.() -> Unit): Unit = sns(SnsProperty(sns))
 
-      public override fun sqs(sqs: IResolvable) {
+      override fun sqs(sqs: IResolvable) {
         cdkBuilder.sqs(sqs.let(IResolvable::unwrap))
       }
 
-      public override fun sqs(sqs: SqsProperty) {
+      override fun sqs(sqs: SqsProperty) {
         cdkBuilder.sqs(sqs.let(SqsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95c0b3dab9e6522270f5f8c293f53035c523144c63e76e6cad208a6f093220bd")
-      public override fun sqs(sqs: SqsProperty.Builder.() -> Unit): Unit = sqs(SqsProperty(sqs))
+      override fun sqs(sqs: SqsProperty.Builder.() -> Unit): Unit = sqs(SqsProperty(sqs))
 
       public fun build():
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmActionProperty =
@@ -1107,23 +1032,23 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmActionProperty,
     ) : AlarmActionProperty {
-      public override fun dynamoDBv2(): Any? = unwrap(this).getDynamoDBv2()
+      override fun dynamoDBv2(): Any? = unwrap(this).getDynamoDBv2()
 
-      public override fun dynamoDb(): Any? = unwrap(this).getDynamoDb()
+      override fun dynamoDb(): Any? = unwrap(this).getDynamoDb()
 
-      public override fun firehose(): Any? = unwrap(this).getFirehose()
+      override fun firehose(): Any? = unwrap(this).getFirehose()
 
-      public override fun iotEvents(): Any? = unwrap(this).getIotEvents()
+      override fun iotEvents(): Any? = unwrap(this).getIotEvents()
 
-      public override fun iotSiteWise(): Any? = unwrap(this).getIotSiteWise()
+      override fun iotSiteWise(): Any? = unwrap(this).getIotSiteWise()
 
-      public override fun iotTopicPublish(): Any? = unwrap(this).getIotTopicPublish()
+      override fun iotTopicPublish(): Any? = unwrap(this).getIotTopicPublish()
 
-      public override fun lambda(): Any? = unwrap(this).getLambda()
+      override fun lambda(): Any? = unwrap(this).getLambda()
 
-      public override fun sns(): Any? = unwrap(this).getSns()
+      override fun sns(): Any? = unwrap(this).getSns()
 
-      public override fun sqs(): Any? = unwrap(this).getSqs()
+      override fun sqs(): Any? = unwrap(this).getSqs()
     }
 
     public companion object {
@@ -1158,28 +1083,21 @@ public open class CfnAlarmModel internal constructor(
     public fun propertyValue(): Any? = unwrap(this).getPropertyValue()
 
     public interface Builder {
-      public fun assetId(assetId: String) {
-      }
+      public fun assetId(assetId: String)
 
-      public fun entryId(entryId: String) {
-      }
+      public fun entryId(entryId: String)
 
-      public fun propertyAlias(propertyAlias: String) {
-      }
+      public fun propertyAlias(propertyAlias: String)
 
-      public fun propertyId(propertyId: String) {
-      }
+      public fun propertyId(propertyId: String)
 
-      public fun propertyValue(propertyValue: IResolvable) {
-      }
+      public fun propertyValue(propertyValue: IResolvable)
 
-      public fun propertyValue(propertyValue: AssetPropertyValueProperty) {
-      }
+      public fun propertyValue(propertyValue: AssetPropertyValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47b0e44681950e9c0630a17a035b5170e8152a7dfefc8df1c97b2699e6f33d06")
-      public fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit) {
-      }
+      public fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1187,35 +1105,34 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotSiteWiseProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotSiteWiseProperty.builder()
 
-      public override fun assetId(assetId: String) {
+      override fun assetId(assetId: String) {
         cdkBuilder.assetId(assetId)
       }
 
-      public override fun entryId(entryId: String) {
+      override fun entryId(entryId: String) {
         cdkBuilder.entryId(entryId)
       }
 
-      public override fun propertyAlias(propertyAlias: String) {
+      override fun propertyAlias(propertyAlias: String) {
         cdkBuilder.propertyAlias(propertyAlias)
       }
 
-      public override fun propertyId(propertyId: String) {
+      override fun propertyId(propertyId: String) {
         cdkBuilder.propertyId(propertyId)
       }
 
-      public override fun propertyValue(propertyValue: IResolvable) {
+      override fun propertyValue(propertyValue: IResolvable) {
         cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
       }
 
-      public override fun propertyValue(propertyValue: AssetPropertyValueProperty) {
+      override fun propertyValue(propertyValue: AssetPropertyValueProperty) {
         cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47b0e44681950e9c0630a17a035b5170e8152a7dfefc8df1c97b2699e6f33d06")
-      public override
-          fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit): Unit =
-          propertyValue(AssetPropertyValueProperty(propertyValue))
+      override fun propertyValue(propertyValue: AssetPropertyValueProperty.Builder.() -> Unit): Unit
+          = propertyValue(AssetPropertyValueProperty(propertyValue))
 
       public fun build():
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotSiteWiseProperty =
@@ -1226,15 +1143,15 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.IotSiteWiseProperty,
     ) : IotSiteWiseProperty {
-      public override fun assetId(): String? = unwrap(this).getAssetId()
+      override fun assetId(): String? = unwrap(this).getAssetId()
 
-      public override fun entryId(): String? = unwrap(this).getEntryId()
+      override fun entryId(): String? = unwrap(this).getEntryId()
 
-      public override fun propertyAlias(): String? = unwrap(this).getPropertyAlias()
+      override fun propertyAlias(): String? = unwrap(this).getPropertyAlias()
 
-      public override fun propertyId(): String? = unwrap(this).getPropertyId()
+      override fun propertyId(): String? = unwrap(this).getPropertyId()
 
-      public override fun propertyValue(): Any? = unwrap(this).getPropertyValue()
+      override fun propertyValue(): Any? = unwrap(this).getPropertyValue()
     }
 
     public companion object {
@@ -1263,19 +1180,15 @@ public open class CfnAlarmModel internal constructor(
     public fun payload(): Any? = unwrap(this).getPayload()
 
     public interface Builder {
-      public fun functionArn(functionArn: String) {
-      }
+      public fun functionArn(functionArn: String)
 
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0aafc5896db3657ca3d677b4554976515fdf55eb8a17a120f94b3de437abf2a7")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1283,21 +1196,21 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.LambdaProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.LambdaProperty.builder()
 
-      public override fun functionArn(functionArn: String) {
+      override fun functionArn(functionArn: String) {
         cdkBuilder.functionArn(functionArn)
       }
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0aafc5896db3657ca3d677b4554976515fdf55eb8a17a120f94b3de437abf2a7")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnAlarmModel.LambdaProperty =
@@ -1308,9 +1221,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.LambdaProperty,
     ) : LambdaProperty {
-      public override fun functionArn(): String = unwrap(this).getFunctionArn()
+      override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
     }
 
     public companion object {
@@ -1339,11 +1252,9 @@ public open class CfnAlarmModel internal constructor(
     public fun timeInSeconds(): String
 
     public interface Builder {
-      public fun offsetInNanos(offsetInNanos: String) {
-      }
+      public fun offsetInNanos(offsetInNanos: String)
 
-      public fun timeInSeconds(timeInSeconds: String) {
-      }
+      public fun timeInSeconds(timeInSeconds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1352,11 +1263,11 @@ public open class CfnAlarmModel internal constructor(
           =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyTimestampProperty.builder()
 
-      public override fun offsetInNanos(offsetInNanos: String) {
+      override fun offsetInNanos(offsetInNanos: String) {
         cdkBuilder.offsetInNanos(offsetInNanos)
       }
 
-      public override fun timeInSeconds(timeInSeconds: String) {
+      override fun timeInSeconds(timeInSeconds: String) {
         cdkBuilder.timeInSeconds(timeInSeconds)
       }
 
@@ -1369,9 +1280,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyTimestampProperty,
     ) : AssetPropertyTimestampProperty {
-      public override fun offsetInNanos(): String? = unwrap(this).getOffsetInNanos()
+      override fun offsetInNanos(): String? = unwrap(this).getOffsetInNanos()
 
-      public override fun timeInSeconds(): String = unwrap(this).getTimeInSeconds()
+      override fun timeInSeconds(): String = unwrap(this).getTimeInSeconds()
     }
 
     public companion object {
@@ -1398,11 +1309,9 @@ public open class CfnAlarmModel internal constructor(
     public fun alarmActions(): Any? = unwrap(this).getAlarmActions()
 
     public interface Builder {
-      public fun alarmActions(alarmActions: IResolvable) {
-      }
+      public fun alarmActions(alarmActions: IResolvable)
 
-      public fun alarmActions(alarmActions: List<Any>) {
-      }
+      public fun alarmActions(alarmActions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1411,11 +1320,11 @@ public open class CfnAlarmModel internal constructor(
           =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmEventActionsProperty.builder()
 
-      public override fun alarmActions(alarmActions: IResolvable) {
+      override fun alarmActions(alarmActions: IResolvable) {
         cdkBuilder.alarmActions(alarmActions.let(IResolvable::unwrap))
       }
 
-      public override fun alarmActions(alarmActions: List<Any>) {
+      override fun alarmActions(alarmActions: List<Any>) {
         cdkBuilder.alarmActions(alarmActions)
       }
 
@@ -1428,7 +1337,7 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmEventActionsProperty,
     ) : AlarmEventActionsProperty {
-      public override fun alarmActions(): Any? = unwrap(this).getAlarmActions()
+      override fun alarmActions(): Any? = unwrap(this).getAlarmActions()
     }
 
     public companion object {
@@ -1459,30 +1368,23 @@ public open class CfnAlarmModel internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun quality(quality: String) {
-      }
+      public fun quality(quality: String)
 
-      public fun timestamp(timestamp: IResolvable) {
-      }
+      public fun timestamp(timestamp: IResolvable)
 
-      public fun timestamp(timestamp: AssetPropertyTimestampProperty) {
-      }
+      public fun timestamp(timestamp: AssetPropertyTimestampProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("df2f5e64893fb161017d38a6e681afa0e6e7cfc70be3ce67ecee2b116fc52626")
-      public fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit) {
-      }
+      public fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: AssetPropertyVariantProperty) {
-      }
+      public fun `value`(`value`: AssetPropertyVariantProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cbea76610d5420e612fb890cc7ec42e476b80403773daff5c2473bc525c98c77")
-      public fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1491,34 +1393,34 @@ public open class CfnAlarmModel internal constructor(
           =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyValueProperty.builder()
 
-      public override fun quality(quality: String) {
+      override fun quality(quality: String) {
         cdkBuilder.quality(quality)
       }
 
-      public override fun timestamp(timestamp: IResolvable) {
+      override fun timestamp(timestamp: IResolvable) {
         cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
       }
 
-      public override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
+      override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
         cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("df2f5e64893fb161017d38a6e681afa0e6e7cfc70be3ce67ecee2b116fc52626")
-      public override fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit):
-          Unit = timestamp(AssetPropertyTimestampProperty(timestamp))
+      override fun timestamp(timestamp: AssetPropertyTimestampProperty.Builder.() -> Unit): Unit =
+          timestamp(AssetPropertyTimestampProperty(timestamp))
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: AssetPropertyVariantProperty) {
+      override fun `value`(`value`: AssetPropertyVariantProperty) {
         cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cbea76610d5420e612fb890cc7ec42e476b80403773daff5c2473bc525c98c77")
-      public override fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit): Unit =
+      override fun `value`(`value`: AssetPropertyVariantProperty.Builder.() -> Unit): Unit =
           `value`(AssetPropertyVariantProperty(`value`))
 
       public fun build():
@@ -1530,11 +1432,11 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AssetPropertyValueProperty,
     ) : AssetPropertyValueProperty {
-      public override fun quality(): String? = unwrap(this).getQuality()
+      override fun quality(): String? = unwrap(this).getQuality()
 
-      public override fun timestamp(): Any? = unwrap(this).getTimestamp()
+      override fun timestamp(): Any? = unwrap(this).getTimestamp()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1563,19 +1465,15 @@ public open class CfnAlarmModel internal constructor(
     public fun targetArn(): String
 
     public interface Builder {
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6c028e5e6ef49dc9a532dccd28461e6ca6ef718968ffaf554d5be8a0f10580c9")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
 
-      public fun targetArn(targetArn: String) {
-      }
+      public fun targetArn(targetArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1583,20 +1481,20 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SnsProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.SnsProperty.builder()
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6c028e5e6ef49dc9a532dccd28461e6ca6ef718968ffaf554d5be8a0f10580c9")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
-      public override fun targetArn(targetArn: String) {
+      override fun targetArn(targetArn: String) {
         cdkBuilder.targetArn(targetArn)
       }
 
@@ -1607,9 +1505,9 @@ public open class CfnAlarmModel internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModel.SnsProperty,
     ) : SnsProperty {
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
 
-      public override fun targetArn(): String = unwrap(this).getTargetArn()
+      override fun targetArn(): String = unwrap(this).getTargetArn()
     }
 
     public companion object {
@@ -1638,29 +1536,23 @@ public open class CfnAlarmModel internal constructor(
     public fun initializationConfiguration(): Any? = unwrap(this).getInitializationConfiguration()
 
     public interface Builder {
-      public fun acknowledgeFlow(acknowledgeFlow: IResolvable) {
-      }
+      public fun acknowledgeFlow(acknowledgeFlow: IResolvable)
 
-      public fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty) {
-      }
+      public fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bab2c9254d6a985d303ef2f39b186823a487f99df2e54f3ab959b7587ec44bce")
-      public fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty.Builder.() -> Unit) {
-      }
+      public fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty.Builder.() -> Unit)
 
-      public fun initializationConfiguration(initializationConfiguration: IResolvable) {
-      }
+      public fun initializationConfiguration(initializationConfiguration: IResolvable)
 
       public
-          fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty) {
-      }
+          fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32cf13c41f3c306a15d07256aec14aee334d44e7a5bf38a6b3ea805ee7770777")
       public
-          fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1669,32 +1561,31 @@ public open class CfnAlarmModel internal constructor(
           =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmCapabilitiesProperty.builder()
 
-      public override fun acknowledgeFlow(acknowledgeFlow: IResolvable) {
+      override fun acknowledgeFlow(acknowledgeFlow: IResolvable) {
         cdkBuilder.acknowledgeFlow(acknowledgeFlow.let(IResolvable::unwrap))
       }
 
-      public override fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty) {
+      override fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty) {
         cdkBuilder.acknowledgeFlow(acknowledgeFlow.let(AcknowledgeFlowProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bab2c9254d6a985d303ef2f39b186823a487f99df2e54f3ab959b7587ec44bce")
-      public override
-          fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty.Builder.() -> Unit): Unit =
-          acknowledgeFlow(AcknowledgeFlowProperty(acknowledgeFlow))
+      override fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty.Builder.() -> Unit):
+          Unit = acknowledgeFlow(AcknowledgeFlowProperty(acknowledgeFlow))
 
-      public override fun initializationConfiguration(initializationConfiguration: IResolvable) {
+      override fun initializationConfiguration(initializationConfiguration: IResolvable) {
         cdkBuilder.initializationConfiguration(initializationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty) {
         cdkBuilder.initializationConfiguration(initializationConfiguration.let(InitializationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32cf13c41f3c306a15d07256aec14aee334d44e7a5bf38a6b3ea805ee7770777")
-      public override
+      override
           fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty.Builder.() -> Unit):
           Unit =
           initializationConfiguration(InitializationConfigurationProperty(initializationConfiguration))
@@ -1708,9 +1599,9 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmCapabilitiesProperty,
     ) : AlarmCapabilitiesProperty {
-      public override fun acknowledgeFlow(): Any? = unwrap(this).getAcknowledgeFlow()
+      override fun acknowledgeFlow(): Any? = unwrap(this).getAcknowledgeFlow()
 
-      public override fun initializationConfiguration(): Any? =
+      override fun initializationConfiguration(): Any? =
           unwrap(this).getInitializationConfiguration()
     }
 
@@ -1742,22 +1633,17 @@ public open class CfnAlarmModel internal constructor(
     public fun separator(): String? = unwrap(this).getSeparator()
 
     public interface Builder {
-      public fun deliveryStreamName(deliveryStreamName: String) {
-      }
+      public fun deliveryStreamName(deliveryStreamName: String)
 
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5ed37dd3ac41489ee6fcc52b73c04f615773e187f6fda0f36151c9939ed489a")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
 
-      public fun separator(separator: String) {
-      }
+      public fun separator(separator: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1765,24 +1651,24 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.FirehoseProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.FirehoseProperty.builder()
 
-      public override fun deliveryStreamName(deliveryStreamName: String) {
+      override fun deliveryStreamName(deliveryStreamName: String) {
         cdkBuilder.deliveryStreamName(deliveryStreamName)
       }
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5ed37dd3ac41489ee6fcc52b73c04f615773e187f6fda0f36151c9939ed489a")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
-      public override fun separator(separator: String) {
+      override fun separator(separator: String) {
         cdkBuilder.separator(separator)
       }
 
@@ -1794,11 +1680,11 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.FirehoseProperty,
     ) : FirehoseProperty {
-      public override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
+      override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
 
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
 
-      public override fun separator(): String? = unwrap(this).getSeparator()
+      override fun separator(): String? = unwrap(this).getSeparator()
     }
 
     public companion object {
@@ -1843,43 +1729,31 @@ public open class CfnAlarmModel internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun hashKeyField(hashKeyField: String) {
-      }
+      public fun hashKeyField(hashKeyField: String)
 
-      public fun hashKeyType(hashKeyType: String) {
-      }
+      public fun hashKeyType(hashKeyType: String)
 
-      public fun hashKeyValue(hashKeyValue: String) {
-      }
+      public fun hashKeyValue(hashKeyValue: String)
 
-      public fun operation(operation: String) {
-      }
+      public fun operation(operation: String)
 
-      public fun payload(payload: IResolvable) {
-      }
+      public fun payload(payload: IResolvable)
 
-      public fun payload(payload: PayloadProperty) {
-      }
+      public fun payload(payload: PayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a2ae3d762e15b2b323f83870caa364b4b49f1c19071d1fc282fe8299e80f0bc")
-      public fun payload(payload: PayloadProperty.Builder.() -> Unit) {
-      }
+      public fun payload(payload: PayloadProperty.Builder.() -> Unit)
 
-      public fun payloadField(payloadField: String) {
-      }
+      public fun payloadField(payloadField: String)
 
-      public fun rangeKeyField(rangeKeyField: String) {
-      }
+      public fun rangeKeyField(rangeKeyField: String)
 
-      public fun rangeKeyType(rangeKeyType: String) {
-      }
+      public fun rangeKeyType(rangeKeyType: String)
 
-      public fun rangeKeyValue(rangeKeyValue: String) {
-      }
+      public fun rangeKeyValue(rangeKeyValue: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1887,52 +1761,52 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBProperty.builder()
 
-      public override fun hashKeyField(hashKeyField: String) {
+      override fun hashKeyField(hashKeyField: String) {
         cdkBuilder.hashKeyField(hashKeyField)
       }
 
-      public override fun hashKeyType(hashKeyType: String) {
+      override fun hashKeyType(hashKeyType: String) {
         cdkBuilder.hashKeyType(hashKeyType)
       }
 
-      public override fun hashKeyValue(hashKeyValue: String) {
+      override fun hashKeyValue(hashKeyValue: String) {
         cdkBuilder.hashKeyValue(hashKeyValue)
       }
 
-      public override fun operation(operation: String) {
+      override fun operation(operation: String) {
         cdkBuilder.operation(operation)
       }
 
-      public override fun payload(payload: IResolvable) {
+      override fun payload(payload: IResolvable) {
         cdkBuilder.payload(payload.let(IResolvable::unwrap))
       }
 
-      public override fun payload(payload: PayloadProperty) {
+      override fun payload(payload: PayloadProperty) {
         cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a2ae3d762e15b2b323f83870caa364b4b49f1c19071d1fc282fe8299e80f0bc")
-      public override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
+      override fun payload(payload: PayloadProperty.Builder.() -> Unit): Unit =
           payload(PayloadProperty(payload))
 
-      public override fun payloadField(payloadField: String) {
+      override fun payloadField(payloadField: String) {
         cdkBuilder.payloadField(payloadField)
       }
 
-      public override fun rangeKeyField(rangeKeyField: String) {
+      override fun rangeKeyField(rangeKeyField: String) {
         cdkBuilder.rangeKeyField(rangeKeyField)
       }
 
-      public override fun rangeKeyType(rangeKeyType: String) {
+      override fun rangeKeyType(rangeKeyType: String) {
         cdkBuilder.rangeKeyType(rangeKeyType)
       }
 
-      public override fun rangeKeyValue(rangeKeyValue: String) {
+      override fun rangeKeyValue(rangeKeyValue: String) {
         cdkBuilder.rangeKeyValue(rangeKeyValue)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -1944,25 +1818,25 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.DynamoDBProperty,
     ) : DynamoDBProperty {
-      public override fun hashKeyField(): String = unwrap(this).getHashKeyField()
+      override fun hashKeyField(): String = unwrap(this).getHashKeyField()
 
-      public override fun hashKeyType(): String? = unwrap(this).getHashKeyType()
+      override fun hashKeyType(): String? = unwrap(this).getHashKeyType()
 
-      public override fun hashKeyValue(): String = unwrap(this).getHashKeyValue()
+      override fun hashKeyValue(): String = unwrap(this).getHashKeyValue()
 
-      public override fun operation(): String? = unwrap(this).getOperation()
+      override fun operation(): String? = unwrap(this).getOperation()
 
-      public override fun payload(): Any? = unwrap(this).getPayload()
+      override fun payload(): Any? = unwrap(this).getPayload()
 
-      public override fun payloadField(): String? = unwrap(this).getPayloadField()
+      override fun payloadField(): String? = unwrap(this).getPayloadField()
 
-      public override fun rangeKeyField(): String? = unwrap(this).getRangeKeyField()
+      override fun rangeKeyField(): String? = unwrap(this).getRangeKeyField()
 
-      public override fun rangeKeyType(): String? = unwrap(this).getRangeKeyType()
+      override fun rangeKeyType(): String? = unwrap(this).getRangeKeyType()
 
-      public override fun rangeKeyValue(): String? = unwrap(this).getRangeKeyValue()
+      override fun rangeKeyValue(): String? = unwrap(this).getRangeKeyValue()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -1989,11 +1863,9 @@ public open class CfnAlarmModel internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2001,11 +1873,11 @@ public open class CfnAlarmModel internal constructor(
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AcknowledgeFlowProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AcknowledgeFlowProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -2018,7 +1890,7 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AcknowledgeFlowProperty,
     ) : AcknowledgeFlowProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -2045,11 +1917,9 @@ public open class CfnAlarmModel internal constructor(
     public fun disabledOnInitialization(): Any
 
     public interface Builder {
-      public fun disabledOnInitialization(disabledOnInitialization: Boolean) {
-      }
+      public fun disabledOnInitialization(disabledOnInitialization: Boolean)
 
-      public fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
-      }
+      public fun disabledOnInitialization(disabledOnInitialization: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2058,11 +1928,11 @@ public open class CfnAlarmModel internal constructor(
           =
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.InitializationConfigurationProperty.builder()
 
-      public override fun disabledOnInitialization(disabledOnInitialization: Boolean) {
+      override fun disabledOnInitialization(disabledOnInitialization: Boolean) {
         cdkBuilder.disabledOnInitialization(disabledOnInitialization)
       }
 
-      public override fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
+      override fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
         cdkBuilder.disabledOnInitialization(disabledOnInitialization.let(IResolvable::unwrap))
       }
 
@@ -2075,8 +1945,7 @@ public open class CfnAlarmModel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.InitializationConfigurationProperty,
     ) : InitializationConfigurationProperty {
-      public override fun disabledOnInitialization(): Any =
-          unwrap(this).getDisabledOnInitialization()
+      override fun disabledOnInitialization(): Any = unwrap(this).getDisabledOnInitialization()
     }
 
     public companion object {

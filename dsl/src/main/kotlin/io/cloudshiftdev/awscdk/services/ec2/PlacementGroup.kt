@@ -21,17 +21,13 @@ public open class PlacementGroup internal constructor(
       unwrap(this).getStrategy()?.let(PlacementGroupStrategy::wrap)
 
   public interface Builder {
-    public fun partitions(partitions: Number) {
-    }
+    public fun partitions(partitions: Number)
 
-    public fun placementGroupName(placementGroupName: String) {
-    }
+    public fun placementGroupName(placementGroupName: String)
 
-    public fun spreadLevel(spreadLevel: PlacementGroupSpreadLevel) {
-    }
+    public fun spreadLevel(spreadLevel: PlacementGroupSpreadLevel)
 
-    public fun strategy(strategy: PlacementGroupStrategy) {
-    }
+    public fun strategy(strategy: PlacementGroupStrategy)
   }
 
   private class BuilderImpl(
@@ -41,19 +37,19 @@ public open class PlacementGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.PlacementGroup.Builder =
         software.amazon.awscdk.services.ec2.PlacementGroup.Builder.create(scope, id)
 
-    public override fun partitions(partitions: Number) {
+    override fun partitions(partitions: Number) {
       cdkBuilder.partitions(partitions)
     }
 
-    public override fun placementGroupName(placementGroupName: String) {
+    override fun placementGroupName(placementGroupName: String) {
       cdkBuilder.placementGroupName(placementGroupName)
     }
 
-    public override fun spreadLevel(spreadLevel: PlacementGroupSpreadLevel) {
+    override fun spreadLevel(spreadLevel: PlacementGroupSpreadLevel) {
       cdkBuilder.spreadLevel(spreadLevel.let(PlacementGroupSpreadLevel::unwrap))
     }
 
-    public override fun strategy(strategy: PlacementGroupStrategy) {
+    override fun strategy(strategy: PlacementGroupStrategy) {
       cdkBuilder.strategy(strategy.let(PlacementGroupStrategy::unwrap))
     }
 

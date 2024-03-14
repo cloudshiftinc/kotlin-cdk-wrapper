@@ -13,29 +13,26 @@ public interface EbsDeviceOptionsBase {
       unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
 
   public interface Builder {
-    public fun deleteOnTermination(deleteOnTermination: Boolean) {
-    }
+    public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun volumeType(volumeType: EbsDeviceVolumeType) {
-    }
+    public fun volumeType(volumeType: EbsDeviceVolumeType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase.Builder =
         software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase.builder()
 
-    public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+    override fun deleteOnTermination(deleteOnTermination: Boolean) {
       cdkBuilder.deleteOnTermination(deleteOnTermination)
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun volumeType(volumeType: EbsDeviceVolumeType) {
+    override fun volumeType(volumeType: EbsDeviceVolumeType) {
       cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
     }
 
@@ -46,11 +43,11 @@ public interface EbsDeviceOptionsBase {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase,
   ) : EbsDeviceOptionsBase {
-    public override fun deleteOnTermination(): Boolean? = unwrap(this).getDeleteOnTermination()
+    override fun deleteOnTermination(): Boolean? = unwrap(this).getDeleteOnTermination()
 
-    public override fun iops(): Number? = unwrap(this).getIops()
+    override fun iops(): Number? = unwrap(this).getIops()
 
-    public override fun volumeType(): EbsDeviceVolumeType? =
+    override fun volumeType(): EbsDeviceVolumeType? =
         unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
   }
 

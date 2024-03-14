@@ -70,26 +70,19 @@ public open class CfnHoursOfOperation internal constructor(
   }
 
   public interface Builder {
-    public fun config(config: IResolvable) {
-    }
+    public fun config(config: IResolvable)
 
-    public fun config(config: List<Any>) {
-    }
+    public fun config(config: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeZone(timeZone: String) {
-    }
+    public fun timeZone(timeZone: String)
   }
 
   private class BuilderImpl(
@@ -99,31 +92,31 @@ public open class CfnHoursOfOperation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnHoursOfOperation.Builder =
         software.amazon.awscdk.services.connect.CfnHoursOfOperation.Builder.create(scope, id)
 
-    public override fun config(config: IResolvable) {
+    override fun config(config: IResolvable) {
       cdkBuilder.config(config.let(IResolvable::unwrap))
     }
 
-    public override fun config(config: List<Any>) {
+    override fun config(config: List<Any>) {
       cdkBuilder.config(config)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeZone(timeZone: String) {
+    override fun timeZone(timeZone: String) {
       cdkBuilder.timeZone(timeZone)
     }
 
@@ -160,30 +153,23 @@ public open class CfnHoursOfOperation internal constructor(
     public fun startTime(): Any
 
     public interface Builder {
-      public fun day(day: String) {
-      }
+      public fun day(day: String)
 
-      public fun endTime(endTime: IResolvable) {
-      }
+      public fun endTime(endTime: IResolvable)
 
-      public fun endTime(endTime: HoursOfOperationTimeSliceProperty) {
-      }
+      public fun endTime(endTime: HoursOfOperationTimeSliceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b50e3243710ac7cd6e8858424d416e55fc4756b443deec1dccadd3c93e4e2ab3")
-      public fun endTime(endTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit) {
-      }
+      public fun endTime(endTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit)
 
-      public fun startTime(startTime: IResolvable) {
-      }
+      public fun startTime(startTime: IResolvable)
 
-      public fun startTime(startTime: HoursOfOperationTimeSliceProperty) {
-      }
+      public fun startTime(startTime: HoursOfOperationTimeSliceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4a29920f575c0d8cfb256bcf19483713c3a030a2684921b9da9e57c536e25fb6")
-      public fun startTime(startTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit) {
-      }
+      public fun startTime(startTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -192,36 +178,35 @@ public open class CfnHoursOfOperation internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty.builder()
 
-      public override fun day(day: String) {
+      override fun day(day: String) {
         cdkBuilder.day(day)
       }
 
-      public override fun endTime(endTime: IResolvable) {
+      override fun endTime(endTime: IResolvable) {
         cdkBuilder.endTime(endTime.let(IResolvable::unwrap))
       }
 
-      public override fun endTime(endTime: HoursOfOperationTimeSliceProperty) {
+      override fun endTime(endTime: HoursOfOperationTimeSliceProperty) {
         cdkBuilder.endTime(endTime.let(HoursOfOperationTimeSliceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b50e3243710ac7cd6e8858424d416e55fc4756b443deec1dccadd3c93e4e2ab3")
-      public override fun endTime(endTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit):
-          Unit = endTime(HoursOfOperationTimeSliceProperty(endTime))
+      override fun endTime(endTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit): Unit =
+          endTime(HoursOfOperationTimeSliceProperty(endTime))
 
-      public override fun startTime(startTime: IResolvable) {
+      override fun startTime(startTime: IResolvable) {
         cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
       }
 
-      public override fun startTime(startTime: HoursOfOperationTimeSliceProperty) {
+      override fun startTime(startTime: HoursOfOperationTimeSliceProperty) {
         cdkBuilder.startTime(startTime.let(HoursOfOperationTimeSliceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4a29920f575c0d8cfb256bcf19483713c3a030a2684921b9da9e57c536e25fb6")
-      public override
-          fun startTime(startTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit): Unit =
-          startTime(HoursOfOperationTimeSliceProperty(startTime))
+      override fun startTime(startTime: HoursOfOperationTimeSliceProperty.Builder.() -> Unit): Unit
+          = startTime(HoursOfOperationTimeSliceProperty(startTime))
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty
@@ -232,11 +217,11 @@ public open class CfnHoursOfOperation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationConfigProperty,
     ) : HoursOfOperationConfigProperty {
-      public override fun day(): String = unwrap(this).getDay()
+      override fun day(): String = unwrap(this).getDay()
 
-      public override fun endTime(): Any = unwrap(this).getEndTime()
+      override fun endTime(): Any = unwrap(this).getEndTime()
 
-      public override fun startTime(): Any = unwrap(this).getStartTime()
+      override fun startTime(): Any = unwrap(this).getStartTime()
     }
 
     public companion object {
@@ -265,11 +250,9 @@ public open class CfnHoursOfOperation internal constructor(
     public fun minutes(): Number
 
     public interface Builder {
-      public fun hours(hours: Number) {
-      }
+      public fun hours(hours: Number)
 
-      public fun minutes(minutes: Number) {
-      }
+      public fun minutes(minutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -278,11 +261,11 @@ public open class CfnHoursOfOperation internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty.builder()
 
-      public override fun hours(hours: Number) {
+      override fun hours(hours: Number) {
         cdkBuilder.hours(hours)
       }
 
-      public override fun minutes(minutes: Number) {
+      override fun minutes(minutes: Number) {
         cdkBuilder.minutes(minutes)
       }
 
@@ -295,9 +278,9 @@ public open class CfnHoursOfOperation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty,
     ) : HoursOfOperationTimeSliceProperty {
-      public override fun hours(): Number = unwrap(this).getHours()
+      override fun hours(): Number = unwrap(this).getHours()
 
-      public override fun minutes(): Number = unwrap(this).getMinutes()
+      override fun minutes(): Number = unwrap(this).getMinutes()
     }
 
     public companion object {

@@ -11,20 +11,15 @@ public open class GatewayResponse internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponse,
 ) : Resource(cdkObject), IGatewayResponse {
   public interface Builder {
-    public fun responseHeaders(responseHeaders: Map<String, String>) {
-    }
+    public fun responseHeaders(responseHeaders: Map<String, String>)
 
-    public fun restApi(restApi: IRestApi) {
-    }
+    public fun restApi(restApi: IRestApi)
 
-    public fun statusCode(statusCode: String) {
-    }
+    public fun statusCode(statusCode: String)
 
-    public fun templates(templates: Map<String, String>) {
-    }
+    public fun templates(templates: Map<String, String>)
 
-    public fun type(type: ResponseType) {
-    }
+    public fun type(type: ResponseType)
   }
 
   private class BuilderImpl(
@@ -34,23 +29,23 @@ public open class GatewayResponse internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.GatewayResponse.Builder =
         software.amazon.awscdk.services.apigateway.GatewayResponse.Builder.create(scope, id)
 
-    public override fun responseHeaders(responseHeaders: Map<String, String>) {
+    override fun responseHeaders(responseHeaders: Map<String, String>) {
       cdkBuilder.responseHeaders(responseHeaders)
     }
 
-    public override fun restApi(restApi: IRestApi) {
+    override fun restApi(restApi: IRestApi) {
       cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
     }
 
-    public override fun statusCode(statusCode: String) {
+    override fun statusCode(statusCode: String) {
       cdkBuilder.statusCode(statusCode)
     }
 
-    public override fun templates(templates: Map<String, String>) {
+    override fun templates(templates: Map<String, String>) {
       cdkBuilder.templates(templates)
     }
 
-    public override fun type(type: ResponseType) {
+    override fun type(type: ResponseType) {
       cdkBuilder.type(type.let(ResponseType::unwrap))
     }
 

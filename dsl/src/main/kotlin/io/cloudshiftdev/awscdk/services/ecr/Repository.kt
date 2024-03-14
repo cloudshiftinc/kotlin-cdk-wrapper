@@ -41,35 +41,25 @@ public open class Repository internal constructor(
 
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun autoDeleteImages(autoDeleteImages: Boolean) {
-    }
+    public fun autoDeleteImages(autoDeleteImages: Boolean)
 
-    public fun emptyOnDelete(emptyOnDelete: Boolean) {
-    }
+    public fun emptyOnDelete(emptyOnDelete: Boolean)
 
-    public fun encryption(encryption: RepositoryEncryption) {
-    }
+    public fun encryption(encryption: RepositoryEncryption)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun imageScanOnPush(imageScanOnPush: Boolean) {
-    }
+    public fun imageScanOnPush(imageScanOnPush: Boolean)
 
-    public fun imageTagMutability(imageTagMutability: TagMutability) {
-    }
+    public fun imageTagMutability(imageTagMutability: TagMutability)
 
-    public fun lifecycleRegistryId(lifecycleRegistryId: String) {
-    }
+    public fun lifecycleRegistryId(lifecycleRegistryId: String)
 
-    public fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
-    }
+    public fun lifecycleRules(lifecycleRules: List<LifecycleRule>)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
   }
 
   private class BuilderImpl(
@@ -80,43 +70,43 @@ public open class Repository internal constructor(
         software.amazon.awscdk.services.ecr.Repository.Builder.create(scope, id)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun autoDeleteImages(autoDeleteImages: Boolean) {
+    override fun autoDeleteImages(autoDeleteImages: Boolean) {
       cdkBuilder.autoDeleteImages(autoDeleteImages)
     }
 
-    public override fun emptyOnDelete(emptyOnDelete: Boolean) {
+    override fun emptyOnDelete(emptyOnDelete: Boolean) {
       cdkBuilder.emptyOnDelete(emptyOnDelete)
     }
 
-    public override fun encryption(encryption: RepositoryEncryption) {
+    override fun encryption(encryption: RepositoryEncryption) {
       cdkBuilder.encryption(encryption.let(RepositoryEncryption::unwrap))
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun imageScanOnPush(imageScanOnPush: Boolean) {
+    override fun imageScanOnPush(imageScanOnPush: Boolean) {
       cdkBuilder.imageScanOnPush(imageScanOnPush)
     }
 
-    public override fun imageTagMutability(imageTagMutability: TagMutability) {
+    override fun imageTagMutability(imageTagMutability: TagMutability) {
       cdkBuilder.imageTagMutability(imageTagMutability.let(TagMutability::unwrap))
     }
 
-    public override fun lifecycleRegistryId(lifecycleRegistryId: String) {
+    override fun lifecycleRegistryId(lifecycleRegistryId: String) {
       cdkBuilder.lifecycleRegistryId(lifecycleRegistryId)
     }
 
-    public override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
+    override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
       cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 

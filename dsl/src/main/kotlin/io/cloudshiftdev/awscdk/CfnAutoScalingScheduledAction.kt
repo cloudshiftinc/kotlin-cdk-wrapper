@@ -8,16 +8,14 @@ public interface CfnAutoScalingScheduledAction {
       unwrap(this).getIgnoreUnmodifiedGroupSizeProperties()
 
   public interface Builder {
-    public fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean) {
-    }
+    public fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnAutoScalingScheduledAction.Builder =
         software.amazon.awscdk.CfnAutoScalingScheduledAction.builder()
 
-    public override
-        fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean) {
+    override fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean) {
       cdkBuilder.ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties)
     }
 
@@ -27,7 +25,7 @@ public interface CfnAutoScalingScheduledAction {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnAutoScalingScheduledAction,
   ) : CfnAutoScalingScheduledAction {
-    public override fun ignoreUnmodifiedGroupSizeProperties(): Boolean? =
+    override fun ignoreUnmodifiedGroupSizeProperties(): Boolean? =
         unwrap(this).getIgnoreUnmodifiedGroupSizeProperties()
   }
 

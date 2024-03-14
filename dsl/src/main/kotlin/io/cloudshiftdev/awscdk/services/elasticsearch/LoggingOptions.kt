@@ -35,36 +35,28 @@ public interface LoggingOptions {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun appLogEnabled(appLogEnabled: Boolean) {
-    }
+    public fun appLogEnabled(appLogEnabled: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun appLogGroup(appLogGroup: ILogGroup) {
-    }
+    public fun appLogGroup(appLogGroup: ILogGroup)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun auditLogEnabled(auditLogEnabled: Boolean) {
-    }
+    public fun auditLogEnabled(auditLogEnabled: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun auditLogGroup(auditLogGroup: ILogGroup) {
-    }
+    public fun auditLogGroup(auditLogGroup: ILogGroup)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
-    }
+    public fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
-    }
+    public fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
-    }
+    public fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
-    }
+    public fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup)
   }
 
   private class BuilderImpl : Builder {
@@ -72,42 +64,42 @@ public interface LoggingOptions {
         software.amazon.awscdk.services.elasticsearch.LoggingOptions.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun appLogEnabled(appLogEnabled: Boolean) {
+    override fun appLogEnabled(appLogEnabled: Boolean) {
       cdkBuilder.appLogEnabled(appLogEnabled)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun appLogGroup(appLogGroup: ILogGroup) {
+    override fun appLogGroup(appLogGroup: ILogGroup) {
       cdkBuilder.appLogGroup(appLogGroup.let(ILogGroup::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun auditLogEnabled(auditLogEnabled: Boolean) {
+    override fun auditLogEnabled(auditLogEnabled: Boolean) {
       cdkBuilder.auditLogEnabled(auditLogEnabled)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun auditLogGroup(auditLogGroup: ILogGroup) {
+    override fun auditLogGroup(auditLogGroup: ILogGroup) {
       cdkBuilder.auditLogGroup(auditLogGroup.let(ILogGroup::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
+    override fun slowIndexLogEnabled(slowIndexLogEnabled: Boolean) {
       cdkBuilder.slowIndexLogEnabled(slowIndexLogEnabled)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
+    override fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
       cdkBuilder.slowIndexLogGroup(slowIndexLogGroup.let(ILogGroup::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
+    override fun slowSearchLogEnabled(slowSearchLogEnabled: Boolean) {
       cdkBuilder.slowSearchLogEnabled(slowSearchLogEnabled)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
+    override fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
       cdkBuilder.slowSearchLogGroup(slowSearchLogGroup.let(ILogGroup::unwrap))
     }
 
@@ -119,31 +111,29 @@ public interface LoggingOptions {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.LoggingOptions,
   ) : LoggingOptions {
     @Deprecated(message = "deprecated in CDK")
-    public override fun appLogEnabled(): Boolean? = unwrap(this).getAppLogEnabled()
+    override fun appLogEnabled(): Boolean? = unwrap(this).getAppLogEnabled()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun appLogGroup(): ILogGroup? =
-        unwrap(this).getAppLogGroup()?.let(ILogGroup::wrap)
+    override fun appLogGroup(): ILogGroup? = unwrap(this).getAppLogGroup()?.let(ILogGroup::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun auditLogEnabled(): Boolean? = unwrap(this).getAuditLogEnabled()
+    override fun auditLogEnabled(): Boolean? = unwrap(this).getAuditLogEnabled()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun auditLogGroup(): ILogGroup? =
-        unwrap(this).getAuditLogGroup()?.let(ILogGroup::wrap)
+    override fun auditLogGroup(): ILogGroup? = unwrap(this).getAuditLogGroup()?.let(ILogGroup::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowIndexLogEnabled(): Boolean? = unwrap(this).getSlowIndexLogEnabled()
+    override fun slowIndexLogEnabled(): Boolean? = unwrap(this).getSlowIndexLogEnabled()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowIndexLogGroup(): ILogGroup? =
+    override fun slowIndexLogGroup(): ILogGroup? =
         unwrap(this).getSlowIndexLogGroup()?.let(ILogGroup::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowSearchLogEnabled(): Boolean? = unwrap(this).getSlowSearchLogEnabled()
+    override fun slowSearchLogEnabled(): Boolean? = unwrap(this).getSlowSearchLogEnabled()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun slowSearchLogGroup(): ILogGroup? =
+    override fun slowSearchLogGroup(): ILogGroup? =
         unwrap(this).getSlowSearchLogGroup()?.let(ILogGroup::wrap)
   }
 

@@ -147,80 +147,58 @@ public open class CfnEndpointConfig internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun asyncInferenceConfig(asyncInferenceConfig: IResolvable) {
-    }
+    public fun asyncInferenceConfig(asyncInferenceConfig: IResolvable)
 
-    public fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty) {
-    }
+    public fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5b161f3d4c9c90e2a50a1acb77024e6445bdc5c90081a5331e349cfdd02a5eff")
     public
-        fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty.Builder.() -> Unit) {
-    }
+        fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty.Builder.() -> Unit)
 
-    public fun dataCaptureConfig(dataCaptureConfig: IResolvable) {
-    }
+    public fun dataCaptureConfig(dataCaptureConfig: IResolvable)
 
-    public fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty) {
-    }
+    public fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c77feac906306e2d425d19ecb2dbb536e58a1389beb090dad924c75955f10ecf")
-    public fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty.Builder.() -> Unit)
 
-    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
-    }
+    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
 
-    public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-    }
+    public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable)
 
-    public fun endpointConfigName(endpointConfigName: String) {
-    }
+    public fun endpointConfigName(endpointConfigName: String)
 
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun explainerConfig(explainerConfig: IResolvable) {
-    }
+    public fun explainerConfig(explainerConfig: IResolvable)
 
-    public fun explainerConfig(explainerConfig: ExplainerConfigProperty) {
-    }
+    public fun explainerConfig(explainerConfig: ExplainerConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4cb18e4f82559478eb0db3989658df1207cb2f2ba889ad6285241ee2b2bf5795")
-    public fun explainerConfig(explainerConfig: ExplainerConfigProperty.Builder.() -> Unit) {
-    }
+    public fun explainerConfig(explainerConfig: ExplainerConfigProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun productionVariants(productionVariants: IResolvable) {
-    }
+    public fun productionVariants(productionVariants: IResolvable)
 
-    public fun productionVariants(productionVariants: List<Any>) {
-    }
+    public fun productionVariants(productionVariants: List<Any>)
 
-    public fun shadowProductionVariants(shadowProductionVariants: IResolvable) {
-    }
+    public fun shadowProductionVariants(shadowProductionVariants: IResolvable)
 
-    public fun shadowProductionVariants(shadowProductionVariants: List<Any>) {
-    }
+    public fun shadowProductionVariants(shadowProductionVariants: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0e487acd79cd44c96b3bacebbc3966f4d25697c1f1702f0beb4b09f533242be")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -230,99 +208,97 @@ public open class CfnEndpointConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.Builder =
         software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.Builder.create(scope, id)
 
-    public override fun asyncInferenceConfig(asyncInferenceConfig: IResolvable) {
+    override fun asyncInferenceConfig(asyncInferenceConfig: IResolvable) {
       cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(IResolvable::unwrap))
     }
 
-    public override fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty) {
+    override fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty) {
       cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(AsyncInferenceConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5b161f3d4c9c90e2a50a1acb77024e6445bdc5c90081a5331e349cfdd02a5eff")
-    public override
+    override
         fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty.Builder.() -> Unit):
         Unit = asyncInferenceConfig(AsyncInferenceConfigProperty(asyncInferenceConfig))
 
-    public override fun dataCaptureConfig(dataCaptureConfig: IResolvable) {
+    override fun dataCaptureConfig(dataCaptureConfig: IResolvable) {
       cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(IResolvable::unwrap))
     }
 
-    public override fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty) {
+    override fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty) {
       cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(DataCaptureConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c77feac906306e2d425d19ecb2dbb536e58a1389beb090dad924c75955f10ecf")
-    public override
-        fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty.Builder.() -> Unit): Unit
-        = dataCaptureConfig(DataCaptureConfigProperty(dataCaptureConfig))
+    override fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty.Builder.() -> Unit):
+        Unit = dataCaptureConfig(DataCaptureConfigProperty(dataCaptureConfig))
 
-    public override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+    override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
       cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
     }
 
-    public override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
+    override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
       cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
     }
 
-    public override fun endpointConfigName(endpointConfigName: String) {
+    override fun endpointConfigName(endpointConfigName: String) {
       cdkBuilder.endpointConfigName(endpointConfigName)
     }
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun explainerConfig(explainerConfig: IResolvable) {
+    override fun explainerConfig(explainerConfig: IResolvable) {
       cdkBuilder.explainerConfig(explainerConfig.let(IResolvable::unwrap))
     }
 
-    public override fun explainerConfig(explainerConfig: ExplainerConfigProperty) {
+    override fun explainerConfig(explainerConfig: ExplainerConfigProperty) {
       cdkBuilder.explainerConfig(explainerConfig.let(ExplainerConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4cb18e4f82559478eb0db3989658df1207cb2f2ba889ad6285241ee2b2bf5795")
-    public override
-        fun explainerConfig(explainerConfig: ExplainerConfigProperty.Builder.() -> Unit): Unit =
-        explainerConfig(ExplainerConfigProperty(explainerConfig))
+    override fun explainerConfig(explainerConfig: ExplainerConfigProperty.Builder.() -> Unit): Unit
+        = explainerConfig(ExplainerConfigProperty(explainerConfig))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun productionVariants(productionVariants: IResolvable) {
+    override fun productionVariants(productionVariants: IResolvable) {
       cdkBuilder.productionVariants(productionVariants.let(IResolvable::unwrap))
     }
 
-    public override fun productionVariants(productionVariants: List<Any>) {
+    override fun productionVariants(productionVariants: List<Any>) {
       cdkBuilder.productionVariants(productionVariants)
     }
 
-    public override fun shadowProductionVariants(shadowProductionVariants: IResolvable) {
+    override fun shadowProductionVariants(shadowProductionVariants: IResolvable) {
       cdkBuilder.shadowProductionVariants(shadowProductionVariants.let(IResolvable::unwrap))
     }
 
-    public override fun shadowProductionVariants(shadowProductionVariants: List<Any>) {
+    override fun shadowProductionVariants(shadowProductionVariants: List<Any>) {
       cdkBuilder.shadowProductionVariants(shadowProductionVariants)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0e487acd79cd44c96b3bacebbc3966f4d25697c1f1702f0beb4b09f533242be")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnEndpointConfig =
@@ -358,14 +334,11 @@ public open class CfnEndpointConfig internal constructor(
     public fun provisionedConcurrency(): Number? = unwrap(this).getProvisionedConcurrency()
 
     public interface Builder {
-      public fun maxConcurrency(maxConcurrency: Number) {
-      }
+      public fun maxConcurrency(maxConcurrency: Number)
 
-      public fun memorySizeInMb(memorySizeInMb: Number) {
-      }
+      public fun memorySizeInMb(memorySizeInMb: Number)
 
-      public fun provisionedConcurrency(provisionedConcurrency: Number) {
-      }
+      public fun provisionedConcurrency(provisionedConcurrency: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -374,15 +347,15 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty.builder()
 
-      public override fun maxConcurrency(maxConcurrency: Number) {
+      override fun maxConcurrency(maxConcurrency: Number) {
         cdkBuilder.maxConcurrency(maxConcurrency)
       }
 
-      public override fun memorySizeInMb(memorySizeInMb: Number) {
+      override fun memorySizeInMb(memorySizeInMb: Number) {
         cdkBuilder.memorySizeInMb(memorySizeInMb)
       }
 
-      public override fun provisionedConcurrency(provisionedConcurrency: Number) {
+      override fun provisionedConcurrency(provisionedConcurrency: Number) {
         cdkBuilder.provisionedConcurrency(provisionedConcurrency)
       }
 
@@ -395,12 +368,11 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ServerlessConfigProperty,
     ) : ServerlessConfigProperty {
-      public override fun maxConcurrency(): Number = unwrap(this).getMaxConcurrency()
+      override fun maxConcurrency(): Number = unwrap(this).getMaxConcurrency()
 
-      public override fun memorySizeInMb(): Number = unwrap(this).getMemorySizeInMb()
+      override fun memorySizeInMb(): Number = unwrap(this).getMemorySizeInMb()
 
-      public override fun provisionedConcurrency(): Number? =
-          unwrap(this).getProvisionedConcurrency()
+      override fun provisionedConcurrency(): Number? = unwrap(this).getProvisionedConcurrency()
     }
 
     public companion object {
@@ -432,14 +404,11 @@ public open class CfnEndpointConfig internal constructor(
     public fun successTopic(): String? = unwrap(this).getSuccessTopic()
 
     public interface Builder {
-      public fun errorTopic(errorTopic: String) {
-      }
+      public fun errorTopic(errorTopic: String)
 
-      public fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>) {
-      }
+      public fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>)
 
-      public fun successTopic(successTopic: String) {
-      }
+      public fun successTopic(successTopic: String)
     }
 
     private class BuilderImpl : Builder {
@@ -448,15 +417,15 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty.builder()
 
-      public override fun errorTopic(errorTopic: String) {
+      override fun errorTopic(errorTopic: String) {
         cdkBuilder.errorTopic(errorTopic)
       }
 
-      public override fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>) {
+      override fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>) {
         cdkBuilder.includeInferenceResponseIn(includeInferenceResponseIn)
       }
 
-      public override fun successTopic(successTopic: String) {
+      override fun successTopic(successTopic: String) {
         cdkBuilder.successTopic(successTopic)
       }
 
@@ -469,12 +438,12 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceNotificationConfigProperty,
     ) : AsyncInferenceNotificationConfigProperty {
-      public override fun errorTopic(): String? = unwrap(this).getErrorTopic()
+      override fun errorTopic(): String? = unwrap(this).getErrorTopic()
 
-      public override fun includeInferenceResponseIn(): List<String> =
+      override fun includeInferenceResponseIn(): List<String> =
           unwrap(this).getIncludeInferenceResponseIn() ?: emptyList()
 
-      public override fun successTopic(): String? = unwrap(this).getSuccessTopic()
+      override fun successTopic(): String? = unwrap(this).getSuccessTopic()
     }
 
     public companion object {
@@ -504,27 +473,21 @@ public open class CfnEndpointConfig internal constructor(
     public fun outputConfig(): Any
 
     public interface Builder {
-      public fun clientConfig(clientConfig: IResolvable) {
-      }
+      public fun clientConfig(clientConfig: IResolvable)
 
-      public fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty) {
-      }
+      public fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1451d55f7c6dcc93f208c9544ff16035452f4f231f52fafb3c53a316a2c1cce2")
-      public fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty.Builder.() -> Unit) {
-      }
+      public fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty.Builder.() -> Unit)
 
-      public fun outputConfig(outputConfig: IResolvable) {
-      }
+      public fun outputConfig(outputConfig: IResolvable)
 
-      public fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty) {
-      }
+      public fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("330ef4c48ff9947d6c2c196a853e54d1c8fc468d35a6ff22ea2b66f9b4f42287")
-      public fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty.Builder.() -> Unit) {
-      }
+      public fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -533,31 +496,31 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceConfigProperty.builder()
 
-      public override fun clientConfig(clientConfig: IResolvable) {
+      override fun clientConfig(clientConfig: IResolvable) {
         cdkBuilder.clientConfig(clientConfig.let(IResolvable::unwrap))
       }
 
-      public override fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty) {
+      override fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty) {
         cdkBuilder.clientConfig(clientConfig.let(AsyncInferenceClientConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1451d55f7c6dcc93f208c9544ff16035452f4f231f52fafb3c53a316a2c1cce2")
-      public override
+      override
           fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty.Builder.() -> Unit):
           Unit = clientConfig(AsyncInferenceClientConfigProperty(clientConfig))
 
-      public override fun outputConfig(outputConfig: IResolvable) {
+      override fun outputConfig(outputConfig: IResolvable) {
         cdkBuilder.outputConfig(outputConfig.let(IResolvable::unwrap))
       }
 
-      public override fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty) {
+      override fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty) {
         cdkBuilder.outputConfig(outputConfig.let(AsyncInferenceOutputConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("330ef4c48ff9947d6c2c196a853e54d1c8fc468d35a6ff22ea2b66f9b4f42287")
-      public override
+      override
           fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty.Builder.() -> Unit):
           Unit = outputConfig(AsyncInferenceOutputConfigProperty(outputConfig))
 
@@ -570,9 +533,9 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceConfigProperty,
     ) : AsyncInferenceConfigProperty {
-      public override fun clientConfig(): Any? = unwrap(this).getClientConfig()
+      override fun clientConfig(): Any? = unwrap(this).getClientConfig()
 
-      public override fun outputConfig(): Any = unwrap(this).getOutputConfig()
+      override fun outputConfig(): Any = unwrap(this).getOutputConfig()
     }
 
     public companion object {
@@ -601,11 +564,9 @@ public open class CfnEndpointConfig internal constructor(
     public fun language(): String
 
     public interface Builder {
-      public fun granularity(granularity: String) {
-      }
+      public fun granularity(granularity: String)
 
-      public fun language(language: String) {
-      }
+      public fun language(language: String)
     }
 
     private class BuilderImpl : Builder {
@@ -614,11 +575,11 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty.builder()
 
-      public override fun granularity(granularity: String) {
+      override fun granularity(granularity: String) {
         cdkBuilder.granularity(granularity)
       }
 
-      public override fun language(language: String) {
+      override fun language(language: String) {
         cdkBuilder.language(language)
       }
 
@@ -631,9 +592,9 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyTextConfigProperty,
     ) : ClarifyTextConfigProperty {
-      public override fun granularity(): String = unwrap(this).getGranularity()
+      override fun granularity(): String = unwrap(this).getGranularity()
 
-      public override fun language(): String = unwrap(this).getLanguage()
+      override fun language(): String = unwrap(this).getLanguage()
     }
 
     public companion object {
@@ -661,8 +622,7 @@ public open class CfnEndpointConfig internal constructor(
         unwrap(this).getMaxConcurrentInvocationsPerInstance()
 
     public interface Builder {
-      public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
-      }
+      public fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -671,7 +631,7 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty.builder()
 
-      public override
+      override
           fun maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance: Number) {
         cdkBuilder.maxConcurrentInvocationsPerInstance(maxConcurrentInvocationsPerInstance)
       }
@@ -685,7 +645,7 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceClientConfigProperty,
     ) : AsyncInferenceClientConfigProperty {
-      public override fun maxConcurrentInvocationsPerInstance(): Number? =
+      override fun maxConcurrentInvocationsPerInstance(): Number? =
           unwrap(this).getMaxConcurrentInvocationsPerInstance()
     }
 
@@ -716,11 +676,9 @@ public open class CfnEndpointConfig internal constructor(
     public fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?: emptyList()
 
     public interface Builder {
-      public fun csvContentTypes(csvContentTypes: List<String>) {
-      }
+      public fun csvContentTypes(csvContentTypes: List<String>)
 
-      public fun jsonContentTypes(jsonContentTypes: List<String>) {
-      }
+      public fun jsonContentTypes(jsonContentTypes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -729,11 +687,11 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty.builder()
 
-      public override fun csvContentTypes(csvContentTypes: List<String>) {
+      override fun csvContentTypes(csvContentTypes: List<String>) {
         cdkBuilder.csvContentTypes(csvContentTypes)
       }
 
-      public override fun jsonContentTypes(jsonContentTypes: List<String>) {
+      override fun jsonContentTypes(jsonContentTypes: List<String>) {
         cdkBuilder.jsonContentTypes(jsonContentTypes)
       }
 
@@ -746,10 +704,10 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty,
     ) : CaptureContentTypeHeaderProperty {
-      public override fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?:
+      override fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?:
           emptyList()
 
-      public override fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?:
+      override fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?:
           emptyList()
     }
 
@@ -797,38 +755,27 @@ public open class CfnEndpointConfig internal constructor(
     public fun probabilityIndex(): Number? = unwrap(this).getProbabilityIndex()
 
     public interface Builder {
-      public fun contentTemplate(contentTemplate: String) {
-      }
+      public fun contentTemplate(contentTemplate: String)
 
-      public fun featureHeaders(featureHeaders: List<String>) {
-      }
+      public fun featureHeaders(featureHeaders: List<String>)
 
-      public fun featureTypes(featureTypes: List<String>) {
-      }
+      public fun featureTypes(featureTypes: List<String>)
 
-      public fun featuresAttribute(featuresAttribute: String) {
-      }
+      public fun featuresAttribute(featuresAttribute: String)
 
-      public fun labelAttribute(labelAttribute: String) {
-      }
+      public fun labelAttribute(labelAttribute: String)
 
-      public fun labelHeaders(labelHeaders: List<String>) {
-      }
+      public fun labelHeaders(labelHeaders: List<String>)
 
-      public fun labelIndex(labelIndex: Number) {
-      }
+      public fun labelIndex(labelIndex: Number)
 
-      public fun maxPayloadInMb(maxPayloadInMb: Number) {
-      }
+      public fun maxPayloadInMb(maxPayloadInMb: Number)
 
-      public fun maxRecordCount(maxRecordCount: Number) {
-      }
+      public fun maxRecordCount(maxRecordCount: Number)
 
-      public fun probabilityAttribute(probabilityAttribute: String) {
-      }
+      public fun probabilityAttribute(probabilityAttribute: String)
 
-      public fun probabilityIndex(probabilityIndex: Number) {
-      }
+      public fun probabilityIndex(probabilityIndex: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -837,47 +784,47 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyInferenceConfigProperty.builder()
 
-      public override fun contentTemplate(contentTemplate: String) {
+      override fun contentTemplate(contentTemplate: String) {
         cdkBuilder.contentTemplate(contentTemplate)
       }
 
-      public override fun featureHeaders(featureHeaders: List<String>) {
+      override fun featureHeaders(featureHeaders: List<String>) {
         cdkBuilder.featureHeaders(featureHeaders)
       }
 
-      public override fun featureTypes(featureTypes: List<String>) {
+      override fun featureTypes(featureTypes: List<String>) {
         cdkBuilder.featureTypes(featureTypes)
       }
 
-      public override fun featuresAttribute(featuresAttribute: String) {
+      override fun featuresAttribute(featuresAttribute: String) {
         cdkBuilder.featuresAttribute(featuresAttribute)
       }
 
-      public override fun labelAttribute(labelAttribute: String) {
+      override fun labelAttribute(labelAttribute: String) {
         cdkBuilder.labelAttribute(labelAttribute)
       }
 
-      public override fun labelHeaders(labelHeaders: List<String>) {
+      override fun labelHeaders(labelHeaders: List<String>) {
         cdkBuilder.labelHeaders(labelHeaders)
       }
 
-      public override fun labelIndex(labelIndex: Number) {
+      override fun labelIndex(labelIndex: Number) {
         cdkBuilder.labelIndex(labelIndex)
       }
 
-      public override fun maxPayloadInMb(maxPayloadInMb: Number) {
+      override fun maxPayloadInMb(maxPayloadInMb: Number) {
         cdkBuilder.maxPayloadInMb(maxPayloadInMb)
       }
 
-      public override fun maxRecordCount(maxRecordCount: Number) {
+      override fun maxRecordCount(maxRecordCount: Number) {
         cdkBuilder.maxRecordCount(maxRecordCount)
       }
 
-      public override fun probabilityAttribute(probabilityAttribute: String) {
+      override fun probabilityAttribute(probabilityAttribute: String) {
         cdkBuilder.probabilityAttribute(probabilityAttribute)
       }
 
-      public override fun probabilityIndex(probabilityIndex: Number) {
+      override fun probabilityIndex(probabilityIndex: Number) {
         cdkBuilder.probabilityIndex(probabilityIndex)
       }
 
@@ -890,30 +837,27 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyInferenceConfigProperty,
     ) : ClarifyInferenceConfigProperty {
-      public override fun contentTemplate(): String? = unwrap(this).getContentTemplate()
+      override fun contentTemplate(): String? = unwrap(this).getContentTemplate()
 
-      public override fun featureHeaders(): List<String> = unwrap(this).getFeatureHeaders() ?:
-          emptyList()
+      override fun featureHeaders(): List<String> = unwrap(this).getFeatureHeaders() ?: emptyList()
 
-      public override fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?:
-          emptyList()
+      override fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
 
-      public override fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
+      override fun featuresAttribute(): String? = unwrap(this).getFeaturesAttribute()
 
-      public override fun labelAttribute(): String? = unwrap(this).getLabelAttribute()
+      override fun labelAttribute(): String? = unwrap(this).getLabelAttribute()
 
-      public override fun labelHeaders(): List<String> = unwrap(this).getLabelHeaders() ?:
-          emptyList()
+      override fun labelHeaders(): List<String> = unwrap(this).getLabelHeaders() ?: emptyList()
 
-      public override fun labelIndex(): Number? = unwrap(this).getLabelIndex()
+      override fun labelIndex(): Number? = unwrap(this).getLabelIndex()
 
-      public override fun maxPayloadInMb(): Number? = unwrap(this).getMaxPayloadInMb()
+      override fun maxPayloadInMb(): Number? = unwrap(this).getMaxPayloadInMb()
 
-      public override fun maxRecordCount(): Number? = unwrap(this).getMaxRecordCount()
+      override fun maxRecordCount(): Number? = unwrap(this).getMaxRecordCount()
 
-      public override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
 
-      public override fun probabilityIndex(): Number? = unwrap(this).getProbabilityIndex()
+      override fun probabilityIndex(): Number? = unwrap(this).getProbabilityIndex()
     }
 
     public companion object {
@@ -942,11 +886,9 @@ public open class CfnEndpointConfig internal constructor(
     public fun subnets(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnets(subnets: List<String>) {
-      }
+      public fun subnets(subnets: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -954,11 +896,11 @@ public open class CfnEndpointConfig internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnets(subnets: List<String>) {
+      override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
 
@@ -971,10 +913,10 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
     }
 
     public companion object {
@@ -1027,73 +969,53 @@ public open class CfnEndpointConfig internal constructor(
     public fun volumeSizeInGb(): Number? = unwrap(this).getVolumeSizeInGb()
 
     public interface Builder {
-      public fun acceleratorType(acceleratorType: String) {
-      }
+      public fun acceleratorType(acceleratorType: String)
 
       public
-          fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number) {
-      }
+          fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number)
 
-      public fun enableSsmAccess(enableSsmAccess: Boolean) {
-      }
+      public fun enableSsmAccess(enableSsmAccess: Boolean)
 
-      public fun enableSsmAccess(enableSsmAccess: IResolvable) {
-      }
+      public fun enableSsmAccess(enableSsmAccess: IResolvable)
 
-      public fun initialInstanceCount(initialInstanceCount: Number) {
-      }
+      public fun initialInstanceCount(initialInstanceCount: Number)
 
-      public fun initialVariantWeight(initialVariantWeight: Number) {
-      }
+      public fun initialVariantWeight(initialVariantWeight: Number)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun managedInstanceScaling(managedInstanceScaling: IResolvable) {
-      }
+      public fun managedInstanceScaling(managedInstanceScaling: IResolvable)
 
-      public fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty) {
-      }
+      public fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e16d9dac6a790bb283d273d4e7065bfc001dcde6903dd4c168a3e781ca8f8f37")
       public
-          fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty.Builder.() -> Unit) {
-      }
+          fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty.Builder.() -> Unit)
 
-      public fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number) {
-      }
+      public fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number)
 
-      public fun modelName(modelName: String) {
-      }
+      public fun modelName(modelName: String)
 
-      public fun routingConfig(routingConfig: IResolvable) {
-      }
+      public fun routingConfig(routingConfig: IResolvable)
 
-      public fun routingConfig(routingConfig: RoutingConfigProperty) {
-      }
+      public fun routingConfig(routingConfig: RoutingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2507a2cd03e4f8e17a6d899f02b51fb4fbbd89145598c29b99e68027686dc3ae")
-      public fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit) {
-      }
+      public fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit)
 
-      public fun serverlessConfig(serverlessConfig: IResolvable) {
-      }
+      public fun serverlessConfig(serverlessConfig: IResolvable)
 
-      public fun serverlessConfig(serverlessConfig: ServerlessConfigProperty) {
-      }
+      public fun serverlessConfig(serverlessConfig: ServerlessConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8518f8619a032369fb0d6b65bdcd28bf38289354fc8fd8a25a1d2a36ef3cd14d")
-      public fun serverlessConfig(serverlessConfig: ServerlessConfigProperty.Builder.() -> Unit) {
-      }
+      public fun serverlessConfig(serverlessConfig: ServerlessConfigProperty.Builder.() -> Unit)
 
-      public fun variantName(variantName: String) {
-      }
+      public fun variantName(variantName: String)
 
-      public fun volumeSizeInGb(volumeSizeInGb: Number) {
-      }
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1102,91 +1024,88 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ProductionVariantProperty.builder()
 
-      public override fun acceleratorType(acceleratorType: String) {
+      override fun acceleratorType(acceleratorType: String) {
         cdkBuilder.acceleratorType(acceleratorType)
       }
 
-      public override
+      override
           fun containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds: Number) {
         cdkBuilder.containerStartupHealthCheckTimeoutInSeconds(containerStartupHealthCheckTimeoutInSeconds)
       }
 
-      public override fun enableSsmAccess(enableSsmAccess: Boolean) {
+      override fun enableSsmAccess(enableSsmAccess: Boolean) {
         cdkBuilder.enableSsmAccess(enableSsmAccess)
       }
 
-      public override fun enableSsmAccess(enableSsmAccess: IResolvable) {
+      override fun enableSsmAccess(enableSsmAccess: IResolvable) {
         cdkBuilder.enableSsmAccess(enableSsmAccess.let(IResolvable::unwrap))
       }
 
-      public override fun initialInstanceCount(initialInstanceCount: Number) {
+      override fun initialInstanceCount(initialInstanceCount: Number) {
         cdkBuilder.initialInstanceCount(initialInstanceCount)
       }
 
-      public override fun initialVariantWeight(initialVariantWeight: Number) {
+      override fun initialVariantWeight(initialVariantWeight: Number) {
         cdkBuilder.initialVariantWeight(initialVariantWeight)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun managedInstanceScaling(managedInstanceScaling: IResolvable) {
+      override fun managedInstanceScaling(managedInstanceScaling: IResolvable) {
         cdkBuilder.managedInstanceScaling(managedInstanceScaling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty) {
+      override fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty) {
         cdkBuilder.managedInstanceScaling(managedInstanceScaling.let(ManagedInstanceScalingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e16d9dac6a790bb283d273d4e7065bfc001dcde6903dd4c168a3e781ca8f8f37")
-      public override
+      override
           fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty.Builder.() -> Unit):
           Unit = managedInstanceScaling(ManagedInstanceScalingProperty(managedInstanceScaling))
 
-      public override
-          fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number) {
+      override fun modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds: Number) {
         cdkBuilder.modelDataDownloadTimeoutInSeconds(modelDataDownloadTimeoutInSeconds)
       }
 
-      public override fun modelName(modelName: String) {
+      override fun modelName(modelName: String) {
         cdkBuilder.modelName(modelName)
       }
 
-      public override fun routingConfig(routingConfig: IResolvable) {
+      override fun routingConfig(routingConfig: IResolvable) {
         cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun routingConfig(routingConfig: RoutingConfigProperty) {
+      override fun routingConfig(routingConfig: RoutingConfigProperty) {
         cdkBuilder.routingConfig(routingConfig.let(RoutingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2507a2cd03e4f8e17a6d899f02b51fb4fbbd89145598c29b99e68027686dc3ae")
-      public override fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit):
-          Unit = routingConfig(RoutingConfigProperty(routingConfig))
+      override fun routingConfig(routingConfig: RoutingConfigProperty.Builder.() -> Unit): Unit =
+          routingConfig(RoutingConfigProperty(routingConfig))
 
-      public override fun serverlessConfig(serverlessConfig: IResolvable) {
+      override fun serverlessConfig(serverlessConfig: IResolvable) {
         cdkBuilder.serverlessConfig(serverlessConfig.let(IResolvable::unwrap))
       }
 
-      public override fun serverlessConfig(serverlessConfig: ServerlessConfigProperty) {
+      override fun serverlessConfig(serverlessConfig: ServerlessConfigProperty) {
         cdkBuilder.serverlessConfig(serverlessConfig.let(ServerlessConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8518f8619a032369fb0d6b65bdcd28bf38289354fc8fd8a25a1d2a36ef3cd14d")
-      public override
-          fun serverlessConfig(serverlessConfig: ServerlessConfigProperty.Builder.() -> Unit): Unit
-          = serverlessConfig(ServerlessConfigProperty(serverlessConfig))
+      override fun serverlessConfig(serverlessConfig: ServerlessConfigProperty.Builder.() -> Unit):
+          Unit = serverlessConfig(ServerlessConfigProperty(serverlessConfig))
 
-      public override fun variantName(variantName: String) {
+      override fun variantName(variantName: String) {
         cdkBuilder.variantName(variantName)
       }
 
-      public override fun volumeSizeInGb(volumeSizeInGb: Number) {
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
         cdkBuilder.volumeSizeInGb(volumeSizeInGb)
       }
 
@@ -1199,33 +1118,33 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ProductionVariantProperty,
     ) : ProductionVariantProperty {
-      public override fun acceleratorType(): String? = unwrap(this).getAcceleratorType()
+      override fun acceleratorType(): String? = unwrap(this).getAcceleratorType()
 
-      public override fun containerStartupHealthCheckTimeoutInSeconds(): Number? =
+      override fun containerStartupHealthCheckTimeoutInSeconds(): Number? =
           unwrap(this).getContainerStartupHealthCheckTimeoutInSeconds()
 
-      public override fun enableSsmAccess(): Any? = unwrap(this).getEnableSsmAccess()
+      override fun enableSsmAccess(): Any? = unwrap(this).getEnableSsmAccess()
 
-      public override fun initialInstanceCount(): Number? = unwrap(this).getInitialInstanceCount()
+      override fun initialInstanceCount(): Number? = unwrap(this).getInitialInstanceCount()
 
-      public override fun initialVariantWeight(): Number? = unwrap(this).getInitialVariantWeight()
+      override fun initialVariantWeight(): Number? = unwrap(this).getInitialVariantWeight()
 
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun managedInstanceScaling(): Any? = unwrap(this).getManagedInstanceScaling()
+      override fun managedInstanceScaling(): Any? = unwrap(this).getManagedInstanceScaling()
 
-      public override fun modelDataDownloadTimeoutInSeconds(): Number? =
+      override fun modelDataDownloadTimeoutInSeconds(): Number? =
           unwrap(this).getModelDataDownloadTimeoutInSeconds()
 
-      public override fun modelName(): String? = unwrap(this).getModelName()
+      override fun modelName(): String? = unwrap(this).getModelName()
 
-      public override fun routingConfig(): Any? = unwrap(this).getRoutingConfig()
+      override fun routingConfig(): Any? = unwrap(this).getRoutingConfig()
 
-      public override fun serverlessConfig(): Any? = unwrap(this).getServerlessConfig()
+      override fun serverlessConfig(): Any? = unwrap(this).getServerlessConfig()
 
-      public override fun variantName(): String = unwrap(this).getVariantName()
+      override fun variantName(): String = unwrap(this).getVariantName()
 
-      public override fun volumeSizeInGb(): Number? = unwrap(this).getVolumeSizeInGb()
+      override fun volumeSizeInGb(): Number? = unwrap(this).getVolumeSizeInGb()
     }
 
     public companion object {
@@ -1252,8 +1171,7 @@ public open class CfnEndpointConfig internal constructor(
     public fun routingStrategy(): String? = unwrap(this).getRoutingStrategy()
 
     public interface Builder {
-      public fun routingStrategy(routingStrategy: String) {
-      }
+      public fun routingStrategy(routingStrategy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1262,7 +1180,7 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.RoutingConfigProperty.builder()
 
-      public override fun routingStrategy(routingStrategy: String) {
+      override fun routingStrategy(routingStrategy: String) {
         cdkBuilder.routingStrategy(routingStrategy)
       }
 
@@ -1275,7 +1193,7 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.RoutingConfigProperty,
     ) : RoutingConfigProperty {
-      public override fun routingStrategy(): String? = unwrap(this).getRoutingStrategy()
+      override fun routingStrategy(): String? = unwrap(this).getRoutingStrategy()
     }
 
     public companion object {
@@ -1306,14 +1224,11 @@ public open class CfnEndpointConfig internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun maxInstanceCount(maxInstanceCount: Number) {
-      }
+      public fun maxInstanceCount(maxInstanceCount: Number)
 
-      public fun minInstanceCount(minInstanceCount: Number) {
-      }
+      public fun minInstanceCount(minInstanceCount: Number)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1322,15 +1237,15 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty.builder()
 
-      public override fun maxInstanceCount(maxInstanceCount: Number) {
+      override fun maxInstanceCount(maxInstanceCount: Number) {
         cdkBuilder.maxInstanceCount(maxInstanceCount)
       }
 
-      public override fun minInstanceCount(minInstanceCount: Number) {
+      override fun minInstanceCount(minInstanceCount: Number) {
         cdkBuilder.minInstanceCount(minInstanceCount)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -1343,11 +1258,11 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ManagedInstanceScalingProperty,
     ) : ManagedInstanceScalingProperty {
-      public override fun maxInstanceCount(): Number? = unwrap(this).getMaxInstanceCount()
+      override fun maxInstanceCount(): Number? = unwrap(this).getMaxInstanceCount()
 
-      public override fun minInstanceCount(): Number? = unwrap(this).getMinInstanceCount()
+      override fun minInstanceCount(): Number? = unwrap(this).getMinInstanceCount()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -1382,40 +1297,30 @@ public open class CfnEndpointConfig internal constructor(
     public fun useLogit(): Any? = unwrap(this).getUseLogit()
 
     public interface Builder {
-      public fun numberOfSamples(numberOfSamples: Number) {
-      }
+      public fun numberOfSamples(numberOfSamples: Number)
 
-      public fun seed(seed: Number) {
-      }
+      public fun seed(seed: Number)
 
-      public fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
-      }
+      public fun shapBaselineConfig(shapBaselineConfig: IResolvable)
 
-      public fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty) {
-      }
+      public fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44aefe325dc16ac11efdebc723e4ef1555d693949ab2ed27cb854537e5ad5c16")
       public
-          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit) {
-      }
+          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit)
 
-      public fun textConfig(textConfig: IResolvable) {
-      }
+      public fun textConfig(textConfig: IResolvable)
 
-      public fun textConfig(textConfig: ClarifyTextConfigProperty) {
-      }
+      public fun textConfig(textConfig: ClarifyTextConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b91c22d36031d535f6f206b20d3bc0e1f205b2edf557d1a5e89ad765b0363479")
-      public fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit) {
-      }
+      public fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit)
 
-      public fun useLogit(useLogit: Boolean) {
-      }
+      public fun useLogit(useLogit: Boolean)
 
-      public fun useLogit(useLogit: IResolvable) {
-      }
+      public fun useLogit(useLogit: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1424,47 +1329,46 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty.builder()
 
-      public override fun numberOfSamples(numberOfSamples: Number) {
+      override fun numberOfSamples(numberOfSamples: Number) {
         cdkBuilder.numberOfSamples(numberOfSamples)
       }
 
-      public override fun seed(seed: Number) {
+      override fun seed(seed: Number) {
         cdkBuilder.seed(seed)
       }
 
-      public override fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
+      override fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
         cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty) {
+      override fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty) {
         cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(ClarifyShapBaselineConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44aefe325dc16ac11efdebc723e4ef1555d693949ab2ed27cb854537e5ad5c16")
-      public override
+      override
           fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty.Builder.() -> Unit):
           Unit = shapBaselineConfig(ClarifyShapBaselineConfigProperty(shapBaselineConfig))
 
-      public override fun textConfig(textConfig: IResolvable) {
+      override fun textConfig(textConfig: IResolvable) {
         cdkBuilder.textConfig(textConfig.let(IResolvable::unwrap))
       }
 
-      public override fun textConfig(textConfig: ClarifyTextConfigProperty) {
+      override fun textConfig(textConfig: ClarifyTextConfigProperty) {
         cdkBuilder.textConfig(textConfig.let(ClarifyTextConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b91c22d36031d535f6f206b20d3bc0e1f205b2edf557d1a5e89ad765b0363479")
-      public override fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit): Unit
-          = textConfig(ClarifyTextConfigProperty(textConfig))
+      override fun textConfig(textConfig: ClarifyTextConfigProperty.Builder.() -> Unit): Unit =
+          textConfig(ClarifyTextConfigProperty(textConfig))
 
-      public override fun useLogit(useLogit: Boolean) {
+      override fun useLogit(useLogit: Boolean) {
         cdkBuilder.useLogit(useLogit)
       }
 
-      public override fun useLogit(useLogit: IResolvable) {
+      override fun useLogit(useLogit: IResolvable) {
         cdkBuilder.useLogit(useLogit.let(IResolvable::unwrap))
       }
 
@@ -1477,15 +1381,15 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapConfigProperty,
     ) : ClarifyShapConfigProperty {
-      public override fun numberOfSamples(): Number? = unwrap(this).getNumberOfSamples()
+      override fun numberOfSamples(): Number? = unwrap(this).getNumberOfSamples()
 
-      public override fun seed(): Number? = unwrap(this).getSeed()
+      override fun seed(): Number? = unwrap(this).getSeed()
 
-      public override fun shapBaselineConfig(): Any = unwrap(this).getShapBaselineConfig()
+      override fun shapBaselineConfig(): Any = unwrap(this).getShapBaselineConfig()
 
-      public override fun textConfig(): Any? = unwrap(this).getTextConfig()
+      override fun textConfig(): Any? = unwrap(this).getTextConfig()
 
-      public override fun useLogit(): Any? = unwrap(this).getUseLogit()
+      override fun useLogit(): Any? = unwrap(this).getUseLogit()
     }
 
     public companion object {
@@ -1522,39 +1426,29 @@ public open class CfnEndpointConfig internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun captureContentTypeHeader(captureContentTypeHeader: IResolvable) {
-      }
+      public fun captureContentTypeHeader(captureContentTypeHeader: IResolvable)
 
       public
-          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty) {
-      }
+          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("31a3df691231e3741b21575ed4957e82fdb752b2995392ce72f37435a3fbfd17")
       public
-          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit) {
-      }
+          fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit)
 
-      public fun captureOptions(captureOptions: IResolvable) {
-      }
+      public fun captureOptions(captureOptions: IResolvable)
 
-      public fun captureOptions(captureOptions: List<Any>) {
-      }
+      public fun captureOptions(captureOptions: List<Any>)
 
-      public fun destinationS3Uri(destinationS3Uri: String) {
-      }
+      public fun destinationS3Uri(destinationS3Uri: String)
 
-      public fun enableCapture(enableCapture: Boolean) {
-      }
+      public fun enableCapture(enableCapture: Boolean)
 
-      public fun enableCapture(enableCapture: IResolvable) {
-      }
+      public fun enableCapture(enableCapture: IResolvable)
 
-      public fun initialSamplingPercentage(initialSamplingPercentage: Number) {
-      }
+      public fun initialSamplingPercentage(initialSamplingPercentage: Number)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1563,47 +1457,47 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty.builder()
 
-      public override fun captureContentTypeHeader(captureContentTypeHeader: IResolvable) {
+      override fun captureContentTypeHeader(captureContentTypeHeader: IResolvable) {
         cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty) {
         cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(CaptureContentTypeHeaderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("31a3df691231e3741b21575ed4957e82fdb752b2995392ce72f37435a3fbfd17")
-      public override
+      override
           fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty.Builder.() -> Unit):
           Unit =
           captureContentTypeHeader(CaptureContentTypeHeaderProperty(captureContentTypeHeader))
 
-      public override fun captureOptions(captureOptions: IResolvable) {
+      override fun captureOptions(captureOptions: IResolvable) {
         cdkBuilder.captureOptions(captureOptions.let(IResolvable::unwrap))
       }
 
-      public override fun captureOptions(captureOptions: List<Any>) {
+      override fun captureOptions(captureOptions: List<Any>) {
         cdkBuilder.captureOptions(captureOptions)
       }
 
-      public override fun destinationS3Uri(destinationS3Uri: String) {
+      override fun destinationS3Uri(destinationS3Uri: String) {
         cdkBuilder.destinationS3Uri(destinationS3Uri)
       }
 
-      public override fun enableCapture(enableCapture: Boolean) {
+      override fun enableCapture(enableCapture: Boolean) {
         cdkBuilder.enableCapture(enableCapture)
       }
 
-      public override fun enableCapture(enableCapture: IResolvable) {
+      override fun enableCapture(enableCapture: IResolvable) {
         cdkBuilder.enableCapture(enableCapture.let(IResolvable::unwrap))
       }
 
-      public override fun initialSamplingPercentage(initialSamplingPercentage: Number) {
+      override fun initialSamplingPercentage(initialSamplingPercentage: Number) {
         cdkBuilder.initialSamplingPercentage(initialSamplingPercentage)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -1616,19 +1510,17 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.DataCaptureConfigProperty,
     ) : DataCaptureConfigProperty {
-      public override fun captureContentTypeHeader(): Any? =
-          unwrap(this).getCaptureContentTypeHeader()
+      override fun captureContentTypeHeader(): Any? = unwrap(this).getCaptureContentTypeHeader()
 
-      public override fun captureOptions(): Any = unwrap(this).getCaptureOptions()
+      override fun captureOptions(): Any = unwrap(this).getCaptureOptions()
 
-      public override fun destinationS3Uri(): String = unwrap(this).getDestinationS3Uri()
+      override fun destinationS3Uri(): String = unwrap(this).getDestinationS3Uri()
 
-      public override fun enableCapture(): Any? = unwrap(this).getEnableCapture()
+      override fun enableCapture(): Any? = unwrap(this).getEnableCapture()
 
-      public override fun initialSamplingPercentage(): Number =
-          unwrap(this).getInitialSamplingPercentage()
+      override fun initialSamplingPercentage(): Number = unwrap(this).getInitialSamplingPercentage()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {
@@ -1659,31 +1551,23 @@ public open class CfnEndpointConfig internal constructor(
     public fun shapConfig(): Any
 
     public interface Builder {
-      public fun enableExplanations(enableExplanations: String) {
-      }
+      public fun enableExplanations(enableExplanations: String)
 
-      public fun inferenceConfig(inferenceConfig: IResolvable) {
-      }
+      public fun inferenceConfig(inferenceConfig: IResolvable)
 
-      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty) {
-      }
+      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d3847dc1e89bbccd4521b78d7f69dfe3103728da680575e496f455e90b0ba64")
-      public
-          fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit) {
-      }
+      public fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit)
 
-      public fun shapConfig(shapConfig: IResolvable) {
-      }
+      public fun shapConfig(shapConfig: IResolvable)
 
-      public fun shapConfig(shapConfig: ClarifyShapConfigProperty) {
-      }
+      public fun shapConfig(shapConfig: ClarifyShapConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6e18830621d5bb7e43df94655ffbe11f05a35ea31fe7a0d8210a2f1b7d359d47")
-      public fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit) {
-      }
+      public fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1692,36 +1576,36 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty.builder()
 
-      public override fun enableExplanations(enableExplanations: String) {
+      override fun enableExplanations(enableExplanations: String) {
         cdkBuilder.enableExplanations(enableExplanations)
       }
 
-      public override fun inferenceConfig(inferenceConfig: IResolvable) {
+      override fun inferenceConfig(inferenceConfig: IResolvable) {
         cdkBuilder.inferenceConfig(inferenceConfig.let(IResolvable::unwrap))
       }
 
-      public override fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty) {
+      override fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty) {
         cdkBuilder.inferenceConfig(inferenceConfig.let(ClarifyInferenceConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d3847dc1e89bbccd4521b78d7f69dfe3103728da680575e496f455e90b0ba64")
-      public override
+      override
           fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty.Builder.() -> Unit):
           Unit = inferenceConfig(ClarifyInferenceConfigProperty(inferenceConfig))
 
-      public override fun shapConfig(shapConfig: IResolvable) {
+      override fun shapConfig(shapConfig: IResolvable) {
         cdkBuilder.shapConfig(shapConfig.let(IResolvable::unwrap))
       }
 
-      public override fun shapConfig(shapConfig: ClarifyShapConfigProperty) {
+      override fun shapConfig(shapConfig: ClarifyShapConfigProperty) {
         cdkBuilder.shapConfig(shapConfig.let(ClarifyShapConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6e18830621d5bb7e43df94655ffbe11f05a35ea31fe7a0d8210a2f1b7d359d47")
-      public override fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit): Unit
-          = shapConfig(ClarifyShapConfigProperty(shapConfig))
+      override fun shapConfig(shapConfig: ClarifyShapConfigProperty.Builder.() -> Unit): Unit =
+          shapConfig(ClarifyShapConfigProperty(shapConfig))
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty
@@ -1732,11 +1616,11 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyExplainerConfigProperty,
     ) : ClarifyExplainerConfigProperty {
-      public override fun enableExplanations(): String? = unwrap(this).getEnableExplanations()
+      override fun enableExplanations(): String? = unwrap(this).getEnableExplanations()
 
-      public override fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
+      override fun inferenceConfig(): Any? = unwrap(this).getInferenceConfig()
 
-      public override fun shapConfig(): Any = unwrap(this).getShapConfig()
+      override fun shapConfig(): Any = unwrap(this).getShapConfig()
     }
 
     public companion object {
@@ -1763,17 +1647,14 @@ public open class CfnEndpointConfig internal constructor(
     public fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
 
     public interface Builder {
-      public fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
-      }
+      public fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable)
 
-      public fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty) {
-      }
+      public fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61e075251fd9dec5d2e4d8a12c1f17e34e37cb8efce9a075355d11388bc99d53")
       public
-          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit) {
-      }
+          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1782,18 +1663,17 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty.builder()
 
-      public override fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
+      override fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
         cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty) {
+      override fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty) {
         cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(ClarifyExplainerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61e075251fd9dec5d2e4d8a12c1f17e34e37cb8efce9a075355d11388bc99d53")
-      public override
+      override
           fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty.Builder.() -> Unit):
           Unit = clarifyExplainerConfig(ClarifyExplainerConfigProperty(clarifyExplainerConfig))
 
@@ -1806,7 +1686,7 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ExplainerConfigProperty,
     ) : ExplainerConfigProperty {
-      public override fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
+      override fun clarifyExplainerConfig(): Any? = unwrap(this).getClarifyExplainerConfig()
     }
 
     public companion object {
@@ -1833,8 +1713,7 @@ public open class CfnEndpointConfig internal constructor(
     public fun captureMode(): String
 
     public interface Builder {
-      public fun captureMode(captureMode: String) {
-      }
+      public fun captureMode(captureMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1843,7 +1722,7 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty.builder()
 
-      public override fun captureMode(captureMode: String) {
+      override fun captureMode(captureMode: String) {
         cdkBuilder.captureMode(captureMode)
       }
 
@@ -1856,7 +1735,7 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureOptionProperty,
     ) : CaptureOptionProperty {
-      public override fun captureMode(): String = unwrap(this).getCaptureMode()
+      override fun captureMode(): String = unwrap(this).getCaptureMode()
     }
 
     public companion object {
@@ -1887,14 +1766,11 @@ public open class CfnEndpointConfig internal constructor(
     public fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
 
     public interface Builder {
-      public fun mimeType(mimeType: String) {
-      }
+      public fun mimeType(mimeType: String)
 
-      public fun shapBaseline(shapBaseline: String) {
-      }
+      public fun shapBaseline(shapBaseline: String)
 
-      public fun shapBaselineUri(shapBaselineUri: String) {
-      }
+      public fun shapBaselineUri(shapBaselineUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1903,15 +1779,15 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty.builder()
 
-      public override fun mimeType(mimeType: String) {
+      override fun mimeType(mimeType: String) {
         cdkBuilder.mimeType(mimeType)
       }
 
-      public override fun shapBaseline(shapBaseline: String) {
+      override fun shapBaseline(shapBaseline: String) {
         cdkBuilder.shapBaseline(shapBaseline)
       }
 
-      public override fun shapBaselineUri(shapBaselineUri: String) {
+      override fun shapBaselineUri(shapBaselineUri: String) {
         cdkBuilder.shapBaselineUri(shapBaselineUri)
       }
 
@@ -1924,11 +1800,11 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.ClarifyShapBaselineConfigProperty,
     ) : ClarifyShapBaselineConfigProperty {
-      public override fun mimeType(): String? = unwrap(this).getMimeType()
+      override fun mimeType(): String? = unwrap(this).getMimeType()
 
-      public override fun shapBaseline(): String? = unwrap(this).getShapBaseline()
+      override fun shapBaseline(): String? = unwrap(this).getShapBaseline()
 
-      public override fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
+      override fun shapBaselineUri(): String? = unwrap(this).getShapBaselineUri()
     }
 
     public companion object {
@@ -1962,26 +1838,20 @@ public open class CfnEndpointConfig internal constructor(
     public fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun notificationConfig(notificationConfig: IResolvable) {
-      }
+      public fun notificationConfig(notificationConfig: IResolvable)
 
-      public fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty) {
-      }
+      public fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3338c4e7a789e490c929ebb44cd454a0619e9b7a124dc2800175ea742e577929")
       public
-          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit) {
-      }
+          fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit)
 
-      public fun s3FailurePath(s3FailurePath: String) {
-      }
+      public fun s3FailurePath(s3FailurePath: String)
 
-      public fun s3OutputPath(s3OutputPath: String) {
-      }
+      public fun s3OutputPath(s3OutputPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1990,30 +1860,30 @@ public open class CfnEndpointConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun notificationConfig(notificationConfig: IResolvable) {
+      override fun notificationConfig(notificationConfig: IResolvable) {
         cdkBuilder.notificationConfig(notificationConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty) {
         cdkBuilder.notificationConfig(notificationConfig.let(AsyncInferenceNotificationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3338c4e7a789e490c929ebb44cd454a0619e9b7a124dc2800175ea742e577929")
-      public override
+      override
           fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty.Builder.() -> Unit):
           Unit = notificationConfig(AsyncInferenceNotificationConfigProperty(notificationConfig))
 
-      public override fun s3FailurePath(s3FailurePath: String) {
+      override fun s3FailurePath(s3FailurePath: String) {
         cdkBuilder.s3FailurePath(s3FailurePath)
       }
 
-      public override fun s3OutputPath(s3OutputPath: String) {
+      override fun s3OutputPath(s3OutputPath: String) {
         cdkBuilder.s3OutputPath(s3OutputPath)
       }
 
@@ -2026,13 +1896,13 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.AsyncInferenceOutputConfigProperty,
     ) : AsyncInferenceOutputConfigProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
+      override fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
 
-      public override fun s3FailurePath(): String? = unwrap(this).getS3FailurePath()
+      override fun s3FailurePath(): String? = unwrap(this).getS3FailurePath()
 
-      public override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
+      override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
     }
 
     public companion object {

@@ -7,8 +7,7 @@ public interface DeploymentSourceContext {
   public fun handlerRole(): IRole
 
   public interface Builder {
-    public fun handlerRole(handlerRole: IRole) {
-    }
+    public fun handlerRole(handlerRole: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface DeploymentSourceContext {
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext.Builder =
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext.builder()
 
-    public override fun handlerRole(handlerRole: IRole) {
+    override fun handlerRole(handlerRole: IRole) {
       cdkBuilder.handlerRole(handlerRole.let(IRole::unwrap))
     }
 
@@ -27,7 +26,7 @@ public interface DeploymentSourceContext {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext,
   ) : DeploymentSourceContext {
-    public override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
+    override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
   }
 
   public companion object {

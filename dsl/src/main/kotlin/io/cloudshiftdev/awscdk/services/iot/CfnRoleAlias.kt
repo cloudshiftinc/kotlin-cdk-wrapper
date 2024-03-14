@@ -50,17 +50,13 @@ public open class CfnRoleAlias internal constructor(
   }
 
   public interface Builder {
-    public fun credentialDurationSeconds(credentialDurationSeconds: Number) {
-    }
+    public fun credentialDurationSeconds(credentialDurationSeconds: Number)
 
-    public fun roleAlias(roleAlias: String) {
-    }
+    public fun roleAlias(roleAlias: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -70,19 +66,19 @@ public open class CfnRoleAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnRoleAlias.Builder =
         software.amazon.awscdk.services.iot.CfnRoleAlias.Builder.create(scope, id)
 
-    public override fun credentialDurationSeconds(credentialDurationSeconds: Number) {
+    override fun credentialDurationSeconds(credentialDurationSeconds: Number) {
       cdkBuilder.credentialDurationSeconds(credentialDurationSeconds)
     }
 
-    public override fun roleAlias(roleAlias: String) {
+    override fun roleAlias(roleAlias: String) {
       cdkBuilder.roleAlias(roleAlias)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

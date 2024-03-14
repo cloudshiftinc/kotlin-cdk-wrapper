@@ -49,22 +49,17 @@ public open class CfnGroupMembership internal constructor(
       memberId(MemberIdProperty(`value`))
 
   public interface Builder {
-    public fun groupId(groupId: String) {
-    }
+    public fun groupId(groupId: String)
 
-    public fun identityStoreId(identityStoreId: String) {
-    }
+    public fun identityStoreId(identityStoreId: String)
 
-    public fun memberId(memberId: IResolvable) {
-    }
+    public fun memberId(memberId: IResolvable)
 
-    public fun memberId(memberId: MemberIdProperty) {
-    }
+    public fun memberId(memberId: MemberIdProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a29122fdd8b767b4763624504215576f8c19359375d7c72b5b0b8a8eab753572")
-    public fun memberId(memberId: MemberIdProperty.Builder.() -> Unit) {
-    }
+    public fun memberId(memberId: MemberIdProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -74,25 +69,25 @@ public open class CfnGroupMembership internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.identitystore.CfnGroupMembership.Builder
         = software.amazon.awscdk.services.identitystore.CfnGroupMembership.Builder.create(scope, id)
 
-    public override fun groupId(groupId: String) {
+    override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
     }
 
-    public override fun identityStoreId(identityStoreId: String) {
+    override fun identityStoreId(identityStoreId: String) {
       cdkBuilder.identityStoreId(identityStoreId)
     }
 
-    public override fun memberId(memberId: IResolvable) {
+    override fun memberId(memberId: IResolvable) {
       cdkBuilder.memberId(memberId.let(IResolvable::unwrap))
     }
 
-    public override fun memberId(memberId: MemberIdProperty) {
+    override fun memberId(memberId: MemberIdProperty) {
       cdkBuilder.memberId(memberId.let(MemberIdProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a29122fdd8b767b4763624504215576f8c19359375d7c72b5b0b8a8eab753572")
-    public override fun memberId(memberId: MemberIdProperty.Builder.() -> Unit): Unit =
+    override fun memberId(memberId: MemberIdProperty.Builder.() -> Unit): Unit =
         memberId(MemberIdProperty(memberId))
 
     public fun build(): software.amazon.awscdk.services.identitystore.CfnGroupMembership =
@@ -124,8 +119,7 @@ public open class CfnGroupMembership internal constructor(
     public fun userId(): String
 
     public interface Builder {
-      public fun userId(userId: String) {
-      }
+      public fun userId(userId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -134,7 +128,7 @@ public open class CfnGroupMembership internal constructor(
           =
           software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty.builder()
 
-      public override fun userId(userId: String) {
+      override fun userId(userId: String) {
         cdkBuilder.userId(userId)
       }
 
@@ -147,7 +141,7 @@ public open class CfnGroupMembership internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty,
     ) : MemberIdProperty {
-      public override fun userId(): String = unwrap(this).getUserId()
+      override fun userId(): String = unwrap(this).getUserId()
     }
 
     public companion object {

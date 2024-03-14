@@ -65,28 +65,21 @@ public open class CfnUrl internal constructor(
   }
 
   public interface Builder {
-    public fun authType(authType: String) {
-    }
+    public fun authType(authType: String)
 
-    public fun cors(cors: IResolvable) {
-    }
+    public fun cors(cors: IResolvable)
 
-    public fun cors(cors: CorsProperty) {
-    }
+    public fun cors(cors: CorsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4cb00e11b11a16df477e0773c2b9462c72137d14c0e7628a27c63bbe1cbe0c1a")
-    public fun cors(cors: CorsProperty.Builder.() -> Unit) {
-    }
+    public fun cors(cors: CorsProperty.Builder.() -> Unit)
 
-    public fun invokeMode(invokeMode: String) {
-    }
+    public fun invokeMode(invokeMode: String)
 
-    public fun qualifier(qualifier: String) {
-    }
+    public fun qualifier(qualifier: String)
 
-    public fun targetFunctionArn(targetFunctionArn: String) {
-    }
+    public fun targetFunctionArn(targetFunctionArn: String)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnUrl internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnUrl.Builder =
         software.amazon.awscdk.services.lambda.CfnUrl.Builder.create(scope, id)
 
-    public override fun authType(authType: String) {
+    override fun authType(authType: String) {
       cdkBuilder.authType(authType)
     }
 
-    public override fun cors(cors: IResolvable) {
+    override fun cors(cors: IResolvable) {
       cdkBuilder.cors(cors.let(IResolvable::unwrap))
     }
 
-    public override fun cors(cors: CorsProperty) {
+    override fun cors(cors: CorsProperty) {
       cdkBuilder.cors(cors.let(CorsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4cb00e11b11a16df477e0773c2b9462c72137d14c0e7628a27c63bbe1cbe0c1a")
-    public override fun cors(cors: CorsProperty.Builder.() -> Unit): Unit = cors(CorsProperty(cors))
+    override fun cors(cors: CorsProperty.Builder.() -> Unit): Unit = cors(CorsProperty(cors))
 
-    public override fun invokeMode(invokeMode: String) {
+    override fun invokeMode(invokeMode: String) {
       cdkBuilder.invokeMode(invokeMode)
     }
 
-    public override fun qualifier(qualifier: String) {
+    override fun qualifier(qualifier: String) {
       cdkBuilder.qualifier(qualifier)
     }
 
-    public override fun targetFunctionArn(targetFunctionArn: String) {
+    override fun targetFunctionArn(targetFunctionArn: String) {
       cdkBuilder.targetFunctionArn(targetFunctionArn)
     }
 
@@ -162,57 +155,50 @@ public open class CfnUrl internal constructor(
     public fun maxAge(): Number? = unwrap(this).getMaxAge()
 
     public interface Builder {
-      public fun allowCredentials(allowCredentials: Boolean) {
-      }
+      public fun allowCredentials(allowCredentials: Boolean)
 
-      public fun allowCredentials(allowCredentials: IResolvable) {
-      }
+      public fun allowCredentials(allowCredentials: IResolvable)
 
-      public fun allowHeaders(allowHeaders: List<String>) {
-      }
+      public fun allowHeaders(allowHeaders: List<String>)
 
-      public fun allowMethods(allowMethods: List<String>) {
-      }
+      public fun allowMethods(allowMethods: List<String>)
 
-      public fun allowOrigins(allowOrigins: List<String>) {
-      }
+      public fun allowOrigins(allowOrigins: List<String>)
 
-      public fun exposeHeaders(exposeHeaders: List<String>) {
-      }
+      public fun exposeHeaders(exposeHeaders: List<String>)
 
-      public fun maxAge(maxAge: Number) {
-      }
+      public fun maxAge(maxAge: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty.builder()
 
-      public override fun allowCredentials(allowCredentials: Boolean) {
+      override fun allowCredentials(allowCredentials: Boolean) {
         cdkBuilder.allowCredentials(allowCredentials)
       }
 
-      public override fun allowCredentials(allowCredentials: IResolvable) {
+      override fun allowCredentials(allowCredentials: IResolvable) {
         cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
       }
 
-      public override fun allowHeaders(allowHeaders: List<String>) {
+      override fun allowHeaders(allowHeaders: List<String>) {
         cdkBuilder.allowHeaders(allowHeaders)
       }
 
-      public override fun allowMethods(allowMethods: List<String>) {
+      override fun allowMethods(allowMethods: List<String>) {
         cdkBuilder.allowMethods(allowMethods)
       }
 
-      public override fun allowOrigins(allowOrigins: List<String>) {
+      override fun allowOrigins(allowOrigins: List<String>) {
         cdkBuilder.allowOrigins(allowOrigins)
       }
 
-      public override fun exposeHeaders(exposeHeaders: List<String>) {
+      override fun exposeHeaders(exposeHeaders: List<String>) {
         cdkBuilder.exposeHeaders(exposeHeaders)
       }
 
-      public override fun maxAge(maxAge: Number) {
+      override fun maxAge(maxAge: Number) {
         cdkBuilder.maxAge(maxAge)
       }
 
@@ -223,21 +209,17 @@ public open class CfnUrl internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty,
     ) : CorsProperty {
-      public override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
+      override fun allowCredentials(): Any? = unwrap(this).getAllowCredentials()
 
-      public override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?:
-          emptyList()
+      override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?: emptyList()
 
-      public override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?:
-          emptyList()
+      override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?: emptyList()
 
-      public override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?:
-          emptyList()
+      override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?: emptyList()
 
-      public override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?:
-          emptyList()
+      override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?: emptyList()
 
-      public override fun maxAge(): Number? = unwrap(this).getMaxAge()
+      override fun maxAge(): Number? = unwrap(this).getMaxAge()
     }
 
     public companion object {

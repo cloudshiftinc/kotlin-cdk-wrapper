@@ -7,7 +7,7 @@ public interface IContainerDefinition {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition,
   ) : IContainerDefinition {
-    public override fun bind(arg0: ISageMakerTask): ContainerDefinitionConfig =
+    override fun bind(arg0: ISageMakerTask): ContainerDefinitionConfig =
         unwrap(this).bind(arg0.let(ISageMakerTask::unwrap)).let(ContainerDefinitionConfig::wrap)
   }
 

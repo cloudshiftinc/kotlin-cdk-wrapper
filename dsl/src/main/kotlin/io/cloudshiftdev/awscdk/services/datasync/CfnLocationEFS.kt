@@ -82,34 +82,25 @@ public open class CfnLocationEFS internal constructor(
   }
 
   public interface Builder {
-    public fun accessPointArn(accessPointArn: String) {
-    }
+    public fun accessPointArn(accessPointArn: String)
 
-    public fun ec2Config(ec2Config: IResolvable) {
-    }
+    public fun ec2Config(ec2Config: IResolvable)
 
-    public fun ec2Config(ec2Config: Ec2ConfigProperty) {
-    }
+    public fun ec2Config(ec2Config: Ec2ConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b44d49eae9989a9a3a64e1bfb64a4bc4841f8daef030b2d3dd43278f1e25d57a")
-    public fun ec2Config(ec2Config: Ec2ConfigProperty.Builder.() -> Unit) {
-    }
+    public fun ec2Config(ec2Config: Ec2ConfigProperty.Builder.() -> Unit)
 
-    public fun efsFilesystemArn(efsFilesystemArn: String) {
-    }
+    public fun efsFilesystemArn(efsFilesystemArn: String)
 
-    public fun fileSystemAccessRoleArn(fileSystemAccessRoleArn: String) {
-    }
+    public fun fileSystemAccessRoleArn(fileSystemAccessRoleArn: String)
 
-    public fun inTransitEncryption(inTransitEncryption: String) {
-    }
+    public fun inTransitEncryption(inTransitEncryption: String)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -119,40 +110,40 @@ public open class CfnLocationEFS internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationEFS.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationEFS.Builder.create(scope, id)
 
-    public override fun accessPointArn(accessPointArn: String) {
+    override fun accessPointArn(accessPointArn: String) {
       cdkBuilder.accessPointArn(accessPointArn)
     }
 
-    public override fun ec2Config(ec2Config: IResolvable) {
+    override fun ec2Config(ec2Config: IResolvable) {
       cdkBuilder.ec2Config(ec2Config.let(IResolvable::unwrap))
     }
 
-    public override fun ec2Config(ec2Config: Ec2ConfigProperty) {
+    override fun ec2Config(ec2Config: Ec2ConfigProperty) {
       cdkBuilder.ec2Config(ec2Config.let(Ec2ConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b44d49eae9989a9a3a64e1bfb64a4bc4841f8daef030b2d3dd43278f1e25d57a")
-    public override fun ec2Config(ec2Config: Ec2ConfigProperty.Builder.() -> Unit): Unit =
+    override fun ec2Config(ec2Config: Ec2ConfigProperty.Builder.() -> Unit): Unit =
         ec2Config(Ec2ConfigProperty(ec2Config))
 
-    public override fun efsFilesystemArn(efsFilesystemArn: String) {
+    override fun efsFilesystemArn(efsFilesystemArn: String) {
       cdkBuilder.efsFilesystemArn(efsFilesystemArn)
     }
 
-    public override fun fileSystemAccessRoleArn(fileSystemAccessRoleArn: String) {
+    override fun fileSystemAccessRoleArn(fileSystemAccessRoleArn: String) {
       cdkBuilder.fileSystemAccessRoleArn(fileSystemAccessRoleArn)
     }
 
-    public override fun inTransitEncryption(inTransitEncryption: String) {
+    override fun inTransitEncryption(inTransitEncryption: String) {
       cdkBuilder.inTransitEncryption(inTransitEncryption)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -186,11 +177,9 @@ public open class CfnLocationEFS internal constructor(
     public fun subnetArn(): String
 
     public interface Builder {
-      public fun securityGroupArns(securityGroupArns: List<String>) {
-      }
+      public fun securityGroupArns(securityGroupArns: List<String>)
 
-      public fun subnetArn(subnetArn: String) {
-      }
+      public fun subnetArn(subnetArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -198,11 +187,11 @@ public open class CfnLocationEFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty.builder()
 
-      public override fun securityGroupArns(securityGroupArns: List<String>) {
+      override fun securityGroupArns(securityGroupArns: List<String>) {
         cdkBuilder.securityGroupArns(securityGroupArns)
       }
 
-      public override fun subnetArn(subnetArn: String) {
+      override fun subnetArn(subnetArn: String) {
         cdkBuilder.subnetArn(subnetArn)
       }
 
@@ -214,10 +203,10 @@ public open class CfnLocationEFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty,
     ) : Ec2ConfigProperty {
-      public override fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns() ?:
+      override fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns() ?:
           emptyList()
 
-      public override fun subnetArn(): String = unwrap(this).getSubnetArn()
+      override fun subnetArn(): String = unwrap(this).getSubnetArn()
     }
 
     public companion object {

@@ -47,14 +47,11 @@ public open class CfnAccessGrantsLocation internal constructor(
   }
 
   public interface Builder {
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun locationScope(locationScope: String) {
-    }
+    public fun locationScope(locationScope: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -64,15 +61,15 @@ public open class CfnAccessGrantsLocation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.CfnAccessGrantsLocation.Builder =
         software.amazon.awscdk.services.s3.CfnAccessGrantsLocation.Builder.create(scope, id)
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun locationScope(locationScope: String) {
+    override fun locationScope(locationScope: String) {
       cdkBuilder.locationScope(locationScope)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

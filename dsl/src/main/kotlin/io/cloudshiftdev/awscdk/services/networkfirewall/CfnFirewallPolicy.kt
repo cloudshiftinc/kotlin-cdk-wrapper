@@ -66,25 +66,19 @@ public open class CfnFirewallPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun firewallPolicy(firewallPolicy: IResolvable) {
-    }
+    public fun firewallPolicy(firewallPolicy: IResolvable)
 
-    public fun firewallPolicy(firewallPolicy: FirewallPolicyProperty) {
-    }
+    public fun firewallPolicy(firewallPolicy: FirewallPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3fee919add41f58ca28ef0fb97d6fecde780687581df81b1424651353d73dd1c")
-    public fun firewallPolicy(firewallPolicy: FirewallPolicyProperty.Builder.() -> Unit) {
-    }
+    public fun firewallPolicy(firewallPolicy: FirewallPolicyProperty.Builder.() -> Unit)
 
-    public fun firewallPolicyName(firewallPolicyName: String) {
-    }
+    public fun firewallPolicyName(firewallPolicyName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -95,28 +89,28 @@ public open class CfnFirewallPolicy internal constructor(
         software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.Builder =
         software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun firewallPolicy(firewallPolicy: IResolvable) {
+    override fun firewallPolicy(firewallPolicy: IResolvable) {
       cdkBuilder.firewallPolicy(firewallPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun firewallPolicy(firewallPolicy: FirewallPolicyProperty) {
+    override fun firewallPolicy(firewallPolicy: FirewallPolicyProperty) {
       cdkBuilder.firewallPolicy(firewallPolicy.let(FirewallPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3fee919add41f58ca28ef0fb97d6fecde780687581df81b1424651353d73dd1c")
-    public override fun firewallPolicy(firewallPolicy: FirewallPolicyProperty.Builder.() -> Unit):
-        Unit = firewallPolicy(FirewallPolicyProperty(firewallPolicy))
+    override fun firewallPolicy(firewallPolicy: FirewallPolicyProperty.Builder.() -> Unit): Unit =
+        firewallPolicy(FirewallPolicyProperty(firewallPolicy))
 
-    public override fun firewallPolicyName(firewallPolicyName: String) {
+    override fun firewallPolicyName(firewallPolicyName: String) {
       cdkBuilder.firewallPolicyName(firewallPolicyName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -149,11 +143,9 @@ public open class CfnFirewallPolicy internal constructor(
     public fun dimensions(): Any
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -162,11 +154,11 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
@@ -179,7 +171,7 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty,
     ) : PublishMetricActionProperty {
-      public override fun dimensions(): Any = unwrap(this).getDimensions()
+      override fun dimensions(): Any = unwrap(this).getDimensions()
     }
 
     public companion object {
@@ -208,11 +200,9 @@ public open class CfnFirewallPolicy internal constructor(
     public fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
 
     public interface Builder {
-      public fun ruleOrder(ruleOrder: String) {
-      }
+      public fun ruleOrder(ruleOrder: String)
 
-      public fun streamExceptionPolicy(streamExceptionPolicy: String) {
-      }
+      public fun streamExceptionPolicy(streamExceptionPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -221,11 +211,11 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.builder()
 
-      public override fun ruleOrder(ruleOrder: String) {
+      override fun ruleOrder(ruleOrder: String) {
         cdkBuilder.ruleOrder(ruleOrder)
       }
 
-      public override fun streamExceptionPolicy(streamExceptionPolicy: String) {
+      override fun streamExceptionPolicy(streamExceptionPolicy: String) {
         cdkBuilder.streamExceptionPolicy(streamExceptionPolicy)
       }
 
@@ -238,9 +228,9 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty,
     ) : StatefulEngineOptionsProperty {
-      public override fun ruleOrder(): String? = unwrap(this).getRuleOrder()
+      override fun ruleOrder(): String? = unwrap(this).getRuleOrder()
 
-      public override fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
+      override fun streamExceptionPolicy(): String? = unwrap(this).getStreamExceptionPolicy()
     }
 
     public companion object {
@@ -267,17 +257,14 @@ public open class CfnFirewallPolicy internal constructor(
     public fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
 
     public interface Builder {
-      public fun publishMetricAction(publishMetricAction: IResolvable) {
-      }
+      public fun publishMetricAction(publishMetricAction: IResolvable)
 
-      public fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
-      }
+      public fun publishMetricAction(publishMetricAction: PublishMetricActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e772170dc06f618e19273f007b7bc90f71cf467c4d9bcee90ac01ff1a1ea81ba")
       public
-          fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit) {
-      }
+          fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -286,17 +273,17 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.ActionDefinitionProperty.builder()
 
-      public override fun publishMetricAction(publishMetricAction: IResolvable) {
+      override fun publishMetricAction(publishMetricAction: IResolvable) {
         cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable::unwrap))
       }
 
-      public override fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
+      override fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
         cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e772170dc06f618e19273f007b7bc90f71cf467c4d9bcee90ac01ff1a1ea81ba")
-      public override
+      override
           fun publishMetricAction(publishMetricAction: PublishMetricActionProperty.Builder.() -> Unit):
           Unit = publishMetricAction(PublishMetricActionProperty(publishMetricAction))
 
@@ -309,7 +296,7 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.ActionDefinitionProperty,
     ) : ActionDefinitionProperty {
-      public override fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
+      override fun publishMetricAction(): Any? = unwrap(this).getPublishMetricAction()
     }
 
     public companion object {
@@ -338,11 +325,9 @@ public open class CfnFirewallPolicy internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -351,11 +336,11 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty.builder()
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -368,9 +353,9 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty,
     ) : StatelessRuleGroupReferenceProperty {
-      public override fun priority(): Number = unwrap(this).getPriority()
+      override fun priority(): Number = unwrap(this).getPriority()
 
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -402,22 +387,17 @@ public open class CfnFirewallPolicy internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun `override`(`override`: IResolvable) {
-      }
+      public fun `override`(`override`: IResolvable)
 
-      public fun `override`(`override`: StatefulRuleGroupOverrideProperty) {
-      }
+      public fun `override`(`override`: StatefulRuleGroupOverrideProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("063e3edbf8a3a4bb75a758da399ab9da795146a21d0554e262127c3bacfb8fff")
-      public fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit) {
-      }
+      public fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -426,25 +406,24 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.builder()
 
-      public override fun `override`(`override`: IResolvable) {
+      override fun `override`(`override`: IResolvable) {
         cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
       }
 
-      public override fun `override`(`override`: StatefulRuleGroupOverrideProperty) {
+      override fun `override`(`override`: StatefulRuleGroupOverrideProperty) {
         cdkBuilder.`override`(`override`.let(StatefulRuleGroupOverrideProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("063e3edbf8a3a4bb75a758da399ab9da795146a21d0554e262127c3bacfb8fff")
-      public override
-          fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit): Unit =
-          `override`(StatefulRuleGroupOverrideProperty(`override`))
+      override fun `override`(`override`: StatefulRuleGroupOverrideProperty.Builder.() -> Unit):
+          Unit = `override`(StatefulRuleGroupOverrideProperty(`override`))
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -457,11 +436,11 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty,
     ) : StatefulRuleGroupReferenceProperty {
-      public override fun `override`(): Any? = unwrap(this).getOverride()
+      override fun `override`(): Any? = unwrap(this).getOverride()
 
-      public override fun priority(): Number? = unwrap(this).getPriority()
+      override fun priority(): Number? = unwrap(this).getPriority()
 
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -489,8 +468,7 @@ public open class CfnFirewallPolicy internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -499,7 +477,7 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty.builder()
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -512,7 +490,7 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty,
     ) : DimensionProperty {
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -539,11 +517,9 @@ public open class CfnFirewallPolicy internal constructor(
     public fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
 
     public interface Builder {
-      public fun ruleVariables(ruleVariables: IResolvable) {
-      }
+      public fun ruleVariables(ruleVariables: IResolvable)
 
-      public fun ruleVariables(ruleVariables: Map<String, Any>) {
-      }
+      public fun ruleVariables(ruleVariables: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -552,11 +528,11 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty.builder()
 
-      public override fun ruleVariables(ruleVariables: IResolvable) {
+      override fun ruleVariables(ruleVariables: IResolvable) {
         cdkBuilder.ruleVariables(ruleVariables.let(IResolvable::unwrap))
       }
 
-      public override fun ruleVariables(ruleVariables: Map<String, Any>) {
+      override fun ruleVariables(ruleVariables: Map<String, Any>) {
         cdkBuilder.ruleVariables(ruleVariables)
       }
 
@@ -569,7 +545,7 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty,
     ) : PolicyVariablesProperty {
-      public override fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
+      override fun ruleVariables(): Any? = unwrap(this).getRuleVariables()
     }
 
     public companion object {
@@ -598,19 +574,15 @@ public open class CfnFirewallPolicy internal constructor(
     public fun actionName(): String
 
     public interface Builder {
-      public fun actionDefinition(actionDefinition: IResolvable) {
-      }
+      public fun actionDefinition(actionDefinition: IResolvable)
 
-      public fun actionDefinition(actionDefinition: ActionDefinitionProperty) {
-      }
+      public fun actionDefinition(actionDefinition: ActionDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dd0a8d1a1cd7ed7b03b5bbc399ff186bb6dc0dce1de8ba5f266af5eb1769d035")
-      public fun actionDefinition(actionDefinition: ActionDefinitionProperty.Builder.() -> Unit) {
-      }
+      public fun actionDefinition(actionDefinition: ActionDefinitionProperty.Builder.() -> Unit)
 
-      public fun actionName(actionName: String) {
-      }
+      public fun actionName(actionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -619,21 +591,20 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty.builder()
 
-      public override fun actionDefinition(actionDefinition: IResolvable) {
+      override fun actionDefinition(actionDefinition: IResolvable) {
         cdkBuilder.actionDefinition(actionDefinition.let(IResolvable::unwrap))
       }
 
-      public override fun actionDefinition(actionDefinition: ActionDefinitionProperty) {
+      override fun actionDefinition(actionDefinition: ActionDefinitionProperty) {
         cdkBuilder.actionDefinition(actionDefinition.let(ActionDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dd0a8d1a1cd7ed7b03b5bbc399ff186bb6dc0dce1de8ba5f266af5eb1769d035")
-      public override
-          fun actionDefinition(actionDefinition: ActionDefinitionProperty.Builder.() -> Unit): Unit
-          = actionDefinition(ActionDefinitionProperty(actionDefinition))
+      override fun actionDefinition(actionDefinition: ActionDefinitionProperty.Builder.() -> Unit):
+          Unit = actionDefinition(ActionDefinitionProperty(actionDefinition))
 
-      public override fun actionName(actionName: String) {
+      override fun actionName(actionName: String) {
         cdkBuilder.actionName(actionName)
       }
 
@@ -646,9 +617,9 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty,
     ) : CustomActionProperty {
-      public override fun actionDefinition(): Any = unwrap(this).getActionDefinition()
+      override fun actionDefinition(): Any = unwrap(this).getActionDefinition()
 
-      public override fun actionName(): String = unwrap(this).getActionName()
+      override fun actionName(): String = unwrap(this).getActionName()
     }
 
     public companion object {
@@ -693,58 +664,42 @@ public open class CfnFirewallPolicy internal constructor(
         unwrap(this).getTlsInspectionConfigurationArn()
 
     public interface Builder {
-      public fun policyVariables(policyVariables: IResolvable) {
-      }
+      public fun policyVariables(policyVariables: IResolvable)
 
-      public fun policyVariables(policyVariables: PolicyVariablesProperty) {
-      }
+      public fun policyVariables(policyVariables: PolicyVariablesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c1e79b0909d69ac9f8ec9ad77f008dfbf4f5d3aeef304c8d026900b1495d164")
-      public fun policyVariables(policyVariables: PolicyVariablesProperty.Builder.() -> Unit) {
-      }
+      public fun policyVariables(policyVariables: PolicyVariablesProperty.Builder.() -> Unit)
 
-      public fun statefulDefaultActions(statefulDefaultActions: List<String>) {
-      }
+      public fun statefulDefaultActions(statefulDefaultActions: List<String>)
 
-      public fun statefulEngineOptions(statefulEngineOptions: IResolvable) {
-      }
+      public fun statefulEngineOptions(statefulEngineOptions: IResolvable)
 
-      public fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty) {
-      }
+      public fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("580a3f4be7cfc54fabddc9cd8e0c9ff85d8c1dc2130ff4016fa3b8750d9ca735")
       public
-          fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty.Builder.() -> Unit) {
-      }
+          fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty.Builder.() -> Unit)
 
-      public fun statefulRuleGroupReferences(statefulRuleGroupReferences: IResolvable) {
-      }
+      public fun statefulRuleGroupReferences(statefulRuleGroupReferences: IResolvable)
 
-      public fun statefulRuleGroupReferences(statefulRuleGroupReferences: List<Any>) {
-      }
+      public fun statefulRuleGroupReferences(statefulRuleGroupReferences: List<Any>)
 
-      public fun statelessCustomActions(statelessCustomActions: IResolvable) {
-      }
+      public fun statelessCustomActions(statelessCustomActions: IResolvable)
 
-      public fun statelessCustomActions(statelessCustomActions: List<Any>) {
-      }
+      public fun statelessCustomActions(statelessCustomActions: List<Any>)
 
-      public fun statelessDefaultActions(statelessDefaultActions: List<String>) {
-      }
+      public fun statelessDefaultActions(statelessDefaultActions: List<String>)
 
-      public fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: List<String>) {
-      }
+      public fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: List<String>)
 
-      public fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
-      }
+      public fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable)
 
-      public fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>) {
-      }
+      public fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>)
 
-      public fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String) {
-      }
+      public fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -753,73 +708,70 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FirewallPolicyProperty.builder()
 
-      public override fun policyVariables(policyVariables: IResolvable) {
+      override fun policyVariables(policyVariables: IResolvable) {
         cdkBuilder.policyVariables(policyVariables.let(IResolvable::unwrap))
       }
 
-      public override fun policyVariables(policyVariables: PolicyVariablesProperty) {
+      override fun policyVariables(policyVariables: PolicyVariablesProperty) {
         cdkBuilder.policyVariables(policyVariables.let(PolicyVariablesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c1e79b0909d69ac9f8ec9ad77f008dfbf4f5d3aeef304c8d026900b1495d164")
-      public override
-          fun policyVariables(policyVariables: PolicyVariablesProperty.Builder.() -> Unit): Unit =
-          policyVariables(PolicyVariablesProperty(policyVariables))
+      override fun policyVariables(policyVariables: PolicyVariablesProperty.Builder.() -> Unit):
+          Unit = policyVariables(PolicyVariablesProperty(policyVariables))
 
-      public override fun statefulDefaultActions(statefulDefaultActions: List<String>) {
+      override fun statefulDefaultActions(statefulDefaultActions: List<String>) {
         cdkBuilder.statefulDefaultActions(statefulDefaultActions)
       }
 
-      public override fun statefulEngineOptions(statefulEngineOptions: IResolvable) {
+      override fun statefulEngineOptions(statefulEngineOptions: IResolvable) {
         cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(IResolvable::unwrap))
       }
 
-      public override
-          fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty) {
+      override fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty) {
         cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(StatefulEngineOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("580a3f4be7cfc54fabddc9cd8e0c9ff85d8c1dc2130ff4016fa3b8750d9ca735")
-      public override
+      override
           fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty.Builder.() -> Unit):
           Unit = statefulEngineOptions(StatefulEngineOptionsProperty(statefulEngineOptions))
 
-      public override fun statefulRuleGroupReferences(statefulRuleGroupReferences: IResolvable) {
+      override fun statefulRuleGroupReferences(statefulRuleGroupReferences: IResolvable) {
         cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences.let(IResolvable::unwrap))
       }
 
-      public override fun statefulRuleGroupReferences(statefulRuleGroupReferences: List<Any>) {
+      override fun statefulRuleGroupReferences(statefulRuleGroupReferences: List<Any>) {
         cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences)
       }
 
-      public override fun statelessCustomActions(statelessCustomActions: IResolvable) {
+      override fun statelessCustomActions(statelessCustomActions: IResolvable) {
         cdkBuilder.statelessCustomActions(statelessCustomActions.let(IResolvable::unwrap))
       }
 
-      public override fun statelessCustomActions(statelessCustomActions: List<Any>) {
+      override fun statelessCustomActions(statelessCustomActions: List<Any>) {
         cdkBuilder.statelessCustomActions(statelessCustomActions)
       }
 
-      public override fun statelessDefaultActions(statelessDefaultActions: List<String>) {
+      override fun statelessDefaultActions(statelessDefaultActions: List<String>) {
         cdkBuilder.statelessDefaultActions(statelessDefaultActions)
       }
 
-      public override
-          fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: List<String>) {
+      override fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: List<String>) {
         cdkBuilder.statelessFragmentDefaultActions(statelessFragmentDefaultActions)
       }
 
-      public override fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
+      override fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
         cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences.let(IResolvable::unwrap))
       }
 
-      public override fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>) {
+      override fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>) {
         cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences)
       }
 
-      public override fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String) {
+      override fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String) {
         cdkBuilder.tlsInspectionConfigurationArn(tlsInspectionConfigurationArn)
       }
 
@@ -832,28 +784,28 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FirewallPolicyProperty,
     ) : FirewallPolicyProperty {
-      public override fun policyVariables(): Any? = unwrap(this).getPolicyVariables()
+      override fun policyVariables(): Any? = unwrap(this).getPolicyVariables()
 
-      public override fun statefulDefaultActions(): List<String> =
-          unwrap(this).getStatefulDefaultActions() ?: emptyList()
+      override fun statefulDefaultActions(): List<String> = unwrap(this).getStatefulDefaultActions()
+          ?: emptyList()
 
-      public override fun statefulEngineOptions(): Any? = unwrap(this).getStatefulEngineOptions()
+      override fun statefulEngineOptions(): Any? = unwrap(this).getStatefulEngineOptions()
 
-      public override fun statefulRuleGroupReferences(): Any? =
+      override fun statefulRuleGroupReferences(): Any? =
           unwrap(this).getStatefulRuleGroupReferences()
 
-      public override fun statelessCustomActions(): Any? = unwrap(this).getStatelessCustomActions()
+      override fun statelessCustomActions(): Any? = unwrap(this).getStatelessCustomActions()
 
-      public override fun statelessDefaultActions(): List<String> =
+      override fun statelessDefaultActions(): List<String> =
           unwrap(this).getStatelessDefaultActions() ?: emptyList()
 
-      public override fun statelessFragmentDefaultActions(): List<String> =
+      override fun statelessFragmentDefaultActions(): List<String> =
           unwrap(this).getStatelessFragmentDefaultActions() ?: emptyList()
 
-      public override fun statelessRuleGroupReferences(): Any? =
+      override fun statelessRuleGroupReferences(): Any? =
           unwrap(this).getStatelessRuleGroupReferences()
 
-      public override fun tlsInspectionConfigurationArn(): String? =
+      override fun tlsInspectionConfigurationArn(): String? =
           unwrap(this).getTlsInspectionConfigurationArn()
     }
 
@@ -881,8 +833,7 @@ public open class CfnFirewallPolicy internal constructor(
     public fun action(): String? = unwrap(this).getAction()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
     }
 
     private class BuilderImpl : Builder {
@@ -891,7 +842,7 @@ public open class CfnFirewallPolicy internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupOverrideProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
@@ -904,7 +855,7 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupOverrideProperty,
     ) : StatefulRuleGroupOverrideProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
     }
 
     public companion object {
@@ -932,8 +883,7 @@ public open class CfnFirewallPolicy internal constructor(
     public fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
 
     public interface Builder {
-      public fun definition(definition: List<String>) {
-      }
+      public fun definition(definition: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -941,7 +891,7 @@ public open class CfnFirewallPolicy internal constructor(
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty.Builder =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty.builder()
 
-      public override fun definition(definition: List<String>) {
+      override fun definition(definition: List<String>) {
         cdkBuilder.definition(definition)
       }
 
@@ -954,7 +904,7 @@ public open class CfnFirewallPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty,
     ) : IPSetProperty {
-      public override fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
+      override fun definition(): List<String> = unwrap(this).getDefinition() ?: emptyList()
     }
 
     public companion object {

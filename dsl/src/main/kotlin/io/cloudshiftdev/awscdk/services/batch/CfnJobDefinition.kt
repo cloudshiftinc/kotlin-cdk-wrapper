@@ -151,85 +151,62 @@ public open class CfnJobDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun containerProperties(containerProperties: IResolvable) {
-    }
+    public fun containerProperties(containerProperties: IResolvable)
 
-    public fun containerProperties(containerProperties: ContainerPropertiesProperty) {
-    }
+    public fun containerProperties(containerProperties: ContainerPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a4cf19641d5566ae14a63dfceec2d34db0f790bc7d23f120f624afcdf4d912eb")
     public
-        fun containerProperties(containerProperties: ContainerPropertiesProperty.Builder.() -> Unit) {
-    }
+        fun containerProperties(containerProperties: ContainerPropertiesProperty.Builder.() -> Unit)
 
-    public fun eksProperties(eksProperties: IResolvable) {
-    }
+    public fun eksProperties(eksProperties: IResolvable)
 
-    public fun eksProperties(eksProperties: EksPropertiesProperty) {
-    }
+    public fun eksProperties(eksProperties: EksPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43c1980ac80b3ad25079e08d8a06b74092d3abe1ea8288a17f3daef7bb2c3071")
-    public fun eksProperties(eksProperties: EksPropertiesProperty.Builder.() -> Unit) {
-    }
+    public fun eksProperties(eksProperties: EksPropertiesProperty.Builder.() -> Unit)
 
-    public fun jobDefinitionName(jobDefinitionName: String) {
-    }
+    public fun jobDefinitionName(jobDefinitionName: String)
 
-    public fun nodeProperties(nodeProperties: IResolvable) {
-    }
+    public fun nodeProperties(nodeProperties: IResolvable)
 
-    public fun nodeProperties(nodeProperties: NodePropertiesProperty) {
-    }
+    public fun nodeProperties(nodeProperties: NodePropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bde92f0b9ddcf3791dc7f0235f8fd0f91ffb9d87442b55922414a7a4c0ec9cf")
-    public fun nodeProperties(nodeProperties: NodePropertiesProperty.Builder.() -> Unit) {
-    }
+    public fun nodeProperties(nodeProperties: NodePropertiesProperty.Builder.() -> Unit)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun platformCapabilities(platformCapabilities: List<String>) {
-    }
+    public fun platformCapabilities(platformCapabilities: List<String>)
 
-    public fun propagateTags(propagateTags: Boolean) {
-    }
+    public fun propagateTags(propagateTags: Boolean)
 
-    public fun propagateTags(propagateTags: IResolvable) {
-    }
+    public fun propagateTags(propagateTags: IResolvable)
 
-    public fun retryStrategy(retryStrategy: IResolvable) {
-    }
+    public fun retryStrategy(retryStrategy: IResolvable)
 
-    public fun retryStrategy(retryStrategy: RetryStrategyProperty) {
-    }
+    public fun retryStrategy(retryStrategy: RetryStrategyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8da92ab106676a30c7021e50aec7579220a6dfb3f5ec608a37a8c69959c47409")
-    public fun retryStrategy(retryStrategy: RetryStrategyProperty.Builder.() -> Unit) {
-    }
+    public fun retryStrategy(retryStrategy: RetryStrategyProperty.Builder.() -> Unit)
 
-    public fun schedulingPriority(schedulingPriority: Number) {
-    }
+    public fun schedulingPriority(schedulingPriority: Number)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun timeout(timeout: IResolvable) {
-    }
+    public fun timeout(timeout: IResolvable)
 
-    public fun timeout(timeout: TimeoutProperty) {
-    }
+    public fun timeout(timeout: TimeoutProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7768b6ac80ab858102acc185f6a6f5c5f5387a7a9198410d26fcb8e328050932")
-    public fun timeout(timeout: TimeoutProperty.Builder.() -> Unit) {
-    }
+    public fun timeout(timeout: TimeoutProperty.Builder.() -> Unit)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -239,101 +216,101 @@ public open class CfnJobDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.CfnJobDefinition.Builder =
         software.amazon.awscdk.services.batch.CfnJobDefinition.Builder.create(scope, id)
 
-    public override fun containerProperties(containerProperties: IResolvable) {
+    override fun containerProperties(containerProperties: IResolvable) {
       cdkBuilder.containerProperties(containerProperties.let(IResolvable::unwrap))
     }
 
-    public override fun containerProperties(containerProperties: ContainerPropertiesProperty) {
+    override fun containerProperties(containerProperties: ContainerPropertiesProperty) {
       cdkBuilder.containerProperties(containerProperties.let(ContainerPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a4cf19641d5566ae14a63dfceec2d34db0f790bc7d23f120f624afcdf4d912eb")
-    public override
+    override
         fun containerProperties(containerProperties: ContainerPropertiesProperty.Builder.() -> Unit):
         Unit = containerProperties(ContainerPropertiesProperty(containerProperties))
 
-    public override fun eksProperties(eksProperties: IResolvable) {
+    override fun eksProperties(eksProperties: IResolvable) {
       cdkBuilder.eksProperties(eksProperties.let(IResolvable::unwrap))
     }
 
-    public override fun eksProperties(eksProperties: EksPropertiesProperty) {
+    override fun eksProperties(eksProperties: EksPropertiesProperty) {
       cdkBuilder.eksProperties(eksProperties.let(EksPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43c1980ac80b3ad25079e08d8a06b74092d3abe1ea8288a17f3daef7bb2c3071")
-    public override fun eksProperties(eksProperties: EksPropertiesProperty.Builder.() -> Unit): Unit
-        = eksProperties(EksPropertiesProperty(eksProperties))
+    override fun eksProperties(eksProperties: EksPropertiesProperty.Builder.() -> Unit): Unit =
+        eksProperties(EksPropertiesProperty(eksProperties))
 
-    public override fun jobDefinitionName(jobDefinitionName: String) {
+    override fun jobDefinitionName(jobDefinitionName: String) {
       cdkBuilder.jobDefinitionName(jobDefinitionName)
     }
 
-    public override fun nodeProperties(nodeProperties: IResolvable) {
+    override fun nodeProperties(nodeProperties: IResolvable) {
       cdkBuilder.nodeProperties(nodeProperties.let(IResolvable::unwrap))
     }
 
-    public override fun nodeProperties(nodeProperties: NodePropertiesProperty) {
+    override fun nodeProperties(nodeProperties: NodePropertiesProperty) {
       cdkBuilder.nodeProperties(nodeProperties.let(NodePropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bde92f0b9ddcf3791dc7f0235f8fd0f91ffb9d87442b55922414a7a4c0ec9cf")
-    public override fun nodeProperties(nodeProperties: NodePropertiesProperty.Builder.() -> Unit):
-        Unit = nodeProperties(NodePropertiesProperty(nodeProperties))
+    override fun nodeProperties(nodeProperties: NodePropertiesProperty.Builder.() -> Unit): Unit =
+        nodeProperties(NodePropertiesProperty(nodeProperties))
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun platformCapabilities(platformCapabilities: List<String>) {
+    override fun platformCapabilities(platformCapabilities: List<String>) {
       cdkBuilder.platformCapabilities(platformCapabilities)
     }
 
-    public override fun propagateTags(propagateTags: Boolean) {
+    override fun propagateTags(propagateTags: Boolean) {
       cdkBuilder.propagateTags(propagateTags)
     }
 
-    public override fun propagateTags(propagateTags: IResolvable) {
+    override fun propagateTags(propagateTags: IResolvable) {
       cdkBuilder.propagateTags(propagateTags.let(IResolvable::unwrap))
     }
 
-    public override fun retryStrategy(retryStrategy: IResolvable) {
+    override fun retryStrategy(retryStrategy: IResolvable) {
       cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
     }
 
-    public override fun retryStrategy(retryStrategy: RetryStrategyProperty) {
+    override fun retryStrategy(retryStrategy: RetryStrategyProperty) {
       cdkBuilder.retryStrategy(retryStrategy.let(RetryStrategyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8da92ab106676a30c7021e50aec7579220a6dfb3f5ec608a37a8c69959c47409")
-    public override fun retryStrategy(retryStrategy: RetryStrategyProperty.Builder.() -> Unit): Unit
-        = retryStrategy(RetryStrategyProperty(retryStrategy))
+    override fun retryStrategy(retryStrategy: RetryStrategyProperty.Builder.() -> Unit): Unit =
+        retryStrategy(RetryStrategyProperty(retryStrategy))
 
-    public override fun schedulingPriority(schedulingPriority: Number) {
+    override fun schedulingPriority(schedulingPriority: Number) {
       cdkBuilder.schedulingPriority(schedulingPriority)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun timeout(timeout: IResolvable) {
+    override fun timeout(timeout: IResolvable) {
       cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
     }
 
-    public override fun timeout(timeout: TimeoutProperty) {
+    override fun timeout(timeout: TimeoutProperty) {
       cdkBuilder.timeout(timeout.let(TimeoutProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7768b6ac80ab858102acc185f6a6f5c5f5387a7a9198410d26fcb8e328050932")
-    public override fun timeout(timeout: TimeoutProperty.Builder.() -> Unit): Unit =
+    override fun timeout(timeout: TimeoutProperty.Builder.() -> Unit): Unit =
         timeout(TimeoutProperty(timeout))
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -365,8 +342,7 @@ public open class CfnJobDefinition internal constructor(
     public fun credentialsParameter(): String
 
     public interface Builder {
-      public fun credentialsParameter(credentialsParameter: String) {
-      }
+      public fun credentialsParameter(credentialsParameter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -375,7 +351,7 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.RepositoryCredentialsProperty.builder()
 
-      public override fun credentialsParameter(credentialsParameter: String) {
+      override fun credentialsParameter(credentialsParameter: String) {
         cdkBuilder.credentialsParameter(credentialsParameter)
       }
 
@@ -388,7 +364,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.RepositoryCredentialsProperty,
     ) : RepositoryCredentialsProperty {
-      public override fun credentialsParameter(): String = unwrap(this).getCredentialsParameter()
+      override fun credentialsParameter(): String = unwrap(this).getCredentialsParameter()
     }
 
     public companion object {
@@ -425,32 +401,23 @@ public open class CfnJobDefinition internal constructor(
     public fun tmpfs(): Any? = unwrap(this).getTmpfs()
 
     public interface Builder {
-      public fun devices(devices: IResolvable) {
-      }
+      public fun devices(devices: IResolvable)
 
-      public fun devices(devices: List<Any>) {
-      }
+      public fun devices(devices: List<Any>)
 
-      public fun initProcessEnabled(initProcessEnabled: Boolean) {
-      }
+      public fun initProcessEnabled(initProcessEnabled: Boolean)
 
-      public fun initProcessEnabled(initProcessEnabled: IResolvable) {
-      }
+      public fun initProcessEnabled(initProcessEnabled: IResolvable)
 
-      public fun maxSwap(maxSwap: Number) {
-      }
+      public fun maxSwap(maxSwap: Number)
 
-      public fun sharedMemorySize(sharedMemorySize: Number) {
-      }
+      public fun sharedMemorySize(sharedMemorySize: Number)
 
-      public fun swappiness(swappiness: Number) {
-      }
+      public fun swappiness(swappiness: Number)
 
-      public fun tmpfs(tmpfs: IResolvable) {
-      }
+      public fun tmpfs(tmpfs: IResolvable)
 
-      public fun tmpfs(tmpfs: List<Any>) {
-      }
+      public fun tmpfs(tmpfs: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -458,39 +425,39 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty.builder()
 
-      public override fun devices(devices: IResolvable) {
+      override fun devices(devices: IResolvable) {
         cdkBuilder.devices(devices.let(IResolvable::unwrap))
       }
 
-      public override fun devices(devices: List<Any>) {
+      override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
 
-      public override fun initProcessEnabled(initProcessEnabled: Boolean) {
+      override fun initProcessEnabled(initProcessEnabled: Boolean) {
         cdkBuilder.initProcessEnabled(initProcessEnabled)
       }
 
-      public override fun initProcessEnabled(initProcessEnabled: IResolvable) {
+      override fun initProcessEnabled(initProcessEnabled: IResolvable) {
         cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun maxSwap(maxSwap: Number) {
+      override fun maxSwap(maxSwap: Number) {
         cdkBuilder.maxSwap(maxSwap)
       }
 
-      public override fun sharedMemorySize(sharedMemorySize: Number) {
+      override fun sharedMemorySize(sharedMemorySize: Number) {
         cdkBuilder.sharedMemorySize(sharedMemorySize)
       }
 
-      public override fun swappiness(swappiness: Number) {
+      override fun swappiness(swappiness: Number) {
         cdkBuilder.swappiness(swappiness)
       }
 
-      public override fun tmpfs(tmpfs: IResolvable) {
+      override fun tmpfs(tmpfs: IResolvable) {
         cdkBuilder.tmpfs(tmpfs.let(IResolvable::unwrap))
       }
 
-      public override fun tmpfs(tmpfs: List<Any>) {
+      override fun tmpfs(tmpfs: List<Any>) {
         cdkBuilder.tmpfs(tmpfs)
       }
 
@@ -503,17 +470,17 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty,
     ) : LinuxParametersProperty {
-      public override fun devices(): Any? = unwrap(this).getDevices()
+      override fun devices(): Any? = unwrap(this).getDevices()
 
-      public override fun initProcessEnabled(): Any? = unwrap(this).getInitProcessEnabled()
+      override fun initProcessEnabled(): Any? = unwrap(this).getInitProcessEnabled()
 
-      public override fun maxSwap(): Number? = unwrap(this).getMaxSwap()
+      override fun maxSwap(): Number? = unwrap(this).getMaxSwap()
 
-      public override fun sharedMemorySize(): Number? = unwrap(this).getSharedMemorySize()
+      override fun sharedMemorySize(): Number? = unwrap(this).getSharedMemorySize()
 
-      public override fun swappiness(): Number? = unwrap(this).getSwappiness()
+      override fun swappiness(): Number? = unwrap(this).getSwappiness()
 
-      public override fun tmpfs(): Any? = unwrap(this).getTmpfs()
+      override fun tmpfs(): Any? = unwrap(this).getTmpfs()
     }
 
     public companion object {
@@ -542,11 +509,9 @@ public open class CfnJobDefinition internal constructor(
     public fun requests(): Any? = unwrap(this).getRequests()
 
     public interface Builder {
-      public fun limits(limits: Any) {
-      }
+      public fun limits(limits: Any)
 
-      public fun requests(requests: Any) {
-      }
+      public fun requests(requests: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -554,11 +519,11 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourcesProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourcesProperty.builder()
 
-      public override fun limits(limits: Any) {
+      override fun limits(limits: Any) {
         cdkBuilder.limits(limits)
       }
 
-      public override fun requests(requests: Any) {
+      override fun requests(requests: Any) {
         cdkBuilder.requests(requests)
       }
 
@@ -570,9 +535,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourcesProperty,
     ) : ResourcesProperty {
-      public override fun limits(): Any? = unwrap(this).getLimits()
+      override fun limits(): Any? = unwrap(this).getLimits()
 
-      public override fun requests(): Any? = unwrap(this).getRequests()
+      override fun requests(): Any? = unwrap(this).getRequests()
     }
 
     public companion object {
@@ -601,11 +566,9 @@ public open class CfnJobDefinition internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -614,11 +577,11 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourceRequirementProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -631,9 +594,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourceRequirementProperty,
     ) : ResourceRequirementProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -660,8 +623,7 @@ public open class CfnJobDefinition internal constructor(
     public fun attemptDurationSeconds(): Number? = unwrap(this).getAttemptDurationSeconds()
 
     public interface Builder {
-      public fun attemptDurationSeconds(attemptDurationSeconds: Number) {
-      }
+      public fun attemptDurationSeconds(attemptDurationSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -669,7 +631,7 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty.builder()
 
-      public override fun attemptDurationSeconds(attemptDurationSeconds: Number) {
+      override fun attemptDurationSeconds(attemptDurationSeconds: Number) {
         cdkBuilder.attemptDurationSeconds(attemptDurationSeconds)
       }
 
@@ -681,8 +643,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty,
     ) : TimeoutProperty {
-      public override fun attemptDurationSeconds(): Number? =
-          unwrap(this).getAttemptDurationSeconds()
+      override fun attemptDurationSeconds(): Number? = unwrap(this).getAttemptDurationSeconds()
     }
 
     public companion object {
@@ -711,11 +672,9 @@ public open class CfnJobDefinition internal constructor(
     public fun valueFrom(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun valueFrom(valueFrom: String) {
-      }
+      public fun valueFrom(valueFrom: String)
     }
 
     private class BuilderImpl : Builder {
@@ -723,11 +682,11 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecretProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecretProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun valueFrom(valueFrom: String) {
+      override fun valueFrom(valueFrom: String) {
         cdkBuilder.valueFrom(valueFrom)
       }
 
@@ -738,9 +697,9 @@ public open class CfnJobDefinition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.SecretProperty,
     ) : SecretProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun valueFrom(): String = unwrap(this).getValueFrom()
+      override fun valueFrom(): String = unwrap(this).getValueFrom()
     }
 
     public companion object {
@@ -767,8 +726,7 @@ public open class CfnJobDefinition internal constructor(
     public fun sourcePath(): String? = unwrap(this).getSourcePath()
 
     public interface Builder {
-      public fun sourcePath(sourcePath: String) {
-      }
+      public fun sourcePath(sourcePath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -776,7 +734,7 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty.builder()
 
-      public override fun sourcePath(sourcePath: String) {
+      override fun sourcePath(sourcePath: String) {
         cdkBuilder.sourcePath(sourcePath)
       }
 
@@ -788,7 +746,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty,
     ) : VolumesHostProperty {
-      public override fun sourcePath(): String? = unwrap(this).getSourcePath()
+      override fun sourcePath(): String? = unwrap(this).getSourcePath()
     }
 
     public companion object {
@@ -817,11 +775,9 @@ public open class CfnJobDefinition internal constructor(
     public fun iam(): String? = unwrap(this).getIam()
 
     public interface Builder {
-      public fun accessPointId(accessPointId: String) {
-      }
+      public fun accessPointId(accessPointId: String)
 
-      public fun iam(iam: String) {
-      }
+      public fun iam(iam: String)
     }
 
     private class BuilderImpl : Builder {
@@ -830,11 +786,11 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.AuthorizationConfigProperty.builder()
 
-      public override fun accessPointId(accessPointId: String) {
+      override fun accessPointId(accessPointId: String) {
         cdkBuilder.accessPointId(accessPointId)
       }
 
-      public override fun iam(iam: String) {
+      override fun iam(iam: String) {
         cdkBuilder.iam(iam)
       }
 
@@ -847,9 +803,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.AuthorizationConfigProperty,
     ) : AuthorizationConfigProperty {
-      public override fun accessPointId(): String? = unwrap(this).getAccessPointId()
+      override fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
-      public override fun iam(): String? = unwrap(this).getIam()
+      override fun iam(): String? = unwrap(this).getIam()
     }
 
     public companion object {
@@ -884,29 +840,22 @@ public open class CfnJobDefinition internal constructor(
     public fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
 
     public interface Builder {
-      public fun authorizationConfig(authorizationConfig: IResolvable) {
-      }
+      public fun authorizationConfig(authorizationConfig: IResolvable)
 
-      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-      }
+      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7470c3e9883cb1e0e2e062dc1bd64cd1081ea458e11357768aaf3f5322d39814")
       public
-          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit) {
-      }
+          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
 
-      public fun fileSystemId(fileSystemId: String) {
-      }
+      public fun fileSystemId(fileSystemId: String)
 
-      public fun rootDirectory(rootDirectory: String) {
-      }
+      public fun rootDirectory(rootDirectory: String)
 
-      public fun transitEncryption(transitEncryption: String) {
-      }
+      public fun transitEncryption(transitEncryption: String)
 
-      public fun transitEncryptionPort(transitEncryptionPort: Number) {
-      }
+      public fun transitEncryptionPort(transitEncryptionPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -915,33 +864,33 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EfsVolumeConfigurationProperty.builder()
 
-      public override fun authorizationConfig(authorizationConfig: IResolvable) {
+      override fun authorizationConfig(authorizationConfig: IResolvable) {
         cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
+      override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
         cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7470c3e9883cb1e0e2e062dc1bd64cd1081ea458e11357768aaf3f5322d39814")
-      public override
+      override
           fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit):
           Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
 
-      public override fun fileSystemId(fileSystemId: String) {
+      override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
-      public override fun rootDirectory(rootDirectory: String) {
+      override fun rootDirectory(rootDirectory: String) {
         cdkBuilder.rootDirectory(rootDirectory)
       }
 
-      public override fun transitEncryption(transitEncryption: String) {
+      override fun transitEncryption(transitEncryption: String) {
         cdkBuilder.transitEncryption(transitEncryption)
       }
 
-      public override fun transitEncryptionPort(transitEncryptionPort: Number) {
+      override fun transitEncryptionPort(transitEncryptionPort: Number) {
         cdkBuilder.transitEncryptionPort(transitEncryptionPort)
       }
 
@@ -954,15 +903,15 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EfsVolumeConfigurationProperty,
     ) : EfsVolumeConfigurationProperty {
-      public override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
 
-      public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
-      public override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
+      override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
 
-      public override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
+      override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
 
-      public override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
+      override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
     }
 
     public companion object {
@@ -993,17 +942,13 @@ public open class CfnJobDefinition internal constructor(
     public fun sourceVolume(): String? = unwrap(this).getSourceVolume()
 
     public interface Builder {
-      public fun containerPath(containerPath: String) {
-      }
+      public fun containerPath(containerPath: String)
 
-      public fun readOnly(readOnly: Boolean) {
-      }
+      public fun readOnly(readOnly: Boolean)
 
-      public fun readOnly(readOnly: IResolvable) {
-      }
+      public fun readOnly(readOnly: IResolvable)
 
-      public fun sourceVolume(sourceVolume: String) {
-      }
+      public fun sourceVolume(sourceVolume: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1011,19 +956,19 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty.builder()
 
-      public override fun containerPath(containerPath: String) {
+      override fun containerPath(containerPath: String) {
         cdkBuilder.containerPath(containerPath)
       }
 
-      public override fun readOnly(readOnly: Boolean) {
+      override fun readOnly(readOnly: Boolean) {
         cdkBuilder.readOnly(readOnly)
       }
 
-      public override fun readOnly(readOnly: IResolvable) {
+      override fun readOnly(readOnly: IResolvable) {
         cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
       }
 
-      public override fun sourceVolume(sourceVolume: String) {
+      override fun sourceVolume(sourceVolume: String) {
         cdkBuilder.sourceVolume(sourceVolume)
       }
 
@@ -1035,11 +980,11 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty,
     ) : MountPointsProperty {
-      public override fun containerPath(): String? = unwrap(this).getContainerPath()
+      override fun containerPath(): String? = unwrap(this).getContainerPath()
 
-      public override fun readOnly(): Any? = unwrap(this).getReadOnly()
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
 
-      public override fun sourceVolume(): String? = unwrap(this).getSourceVolume()
+      override fun sourceVolume(): String? = unwrap(this).getSourceVolume()
     }
 
     public companion object {
@@ -1068,14 +1013,11 @@ public open class CfnJobDefinition internal constructor(
     public fun secretName(): String
 
     public interface Builder {
-      public fun optional(optional: Boolean) {
-      }
+      public fun optional(optional: Boolean)
 
-      public fun optional(optional: IResolvable) {
-      }
+      public fun optional(optional: IResolvable)
 
-      public fun secretName(secretName: String) {
-      }
+      public fun secretName(secretName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1083,15 +1025,15 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksSecretProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksSecretProperty.builder()
 
-      public override fun optional(optional: Boolean) {
+      override fun optional(optional: Boolean) {
         cdkBuilder.optional(optional)
       }
 
-      public override fun optional(optional: IResolvable) {
+      override fun optional(optional: IResolvable) {
         cdkBuilder.optional(optional.let(IResolvable::unwrap))
       }
 
-      public override fun secretName(secretName: String) {
+      override fun secretName(secretName: String) {
         cdkBuilder.secretName(secretName)
       }
 
@@ -1103,9 +1045,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksSecretProperty,
     ) : EksSecretProperty {
-      public override fun optional(): Any? = unwrap(this).getOptional()
+      override fun optional(): Any? = unwrap(this).getOptional()
 
-      public override fun secretName(): String = unwrap(this).getSecretName()
+      override fun secretName(): String = unwrap(this).getSecretName()
     }
 
     public companion object {
@@ -1132,16 +1074,13 @@ public open class CfnJobDefinition internal constructor(
     public fun podProperties(): Any? = unwrap(this).getPodProperties()
 
     public interface Builder {
-      public fun podProperties(podProperties: IResolvable) {
-      }
+      public fun podProperties(podProperties: IResolvable)
 
-      public fun podProperties(podProperties: PodPropertiesProperty) {
-      }
+      public fun podProperties(podProperties: PodPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("736253c4cd1efc18e8b136980a99629cc7b68d3ead8e7f8bf14257b5e627ee7c")
-      public fun podProperties(podProperties: PodPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun podProperties(podProperties: PodPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1149,18 +1088,18 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty.builder()
 
-      public override fun podProperties(podProperties: IResolvable) {
+      override fun podProperties(podProperties: IResolvable) {
         cdkBuilder.podProperties(podProperties.let(IResolvable::unwrap))
       }
 
-      public override fun podProperties(podProperties: PodPropertiesProperty) {
+      override fun podProperties(podProperties: PodPropertiesProperty) {
         cdkBuilder.podProperties(podProperties.let(PodPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("736253c4cd1efc18e8b136980a99629cc7b68d3ead8e7f8bf14257b5e627ee7c")
-      public override fun podProperties(podProperties: PodPropertiesProperty.Builder.() -> Unit):
-          Unit = podProperties(PodPropertiesProperty(podProperties))
+      override fun podProperties(podProperties: PodPropertiesProperty.Builder.() -> Unit): Unit =
+          podProperties(PodPropertiesProperty(podProperties))
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty =
@@ -1171,7 +1110,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty,
     ) : EksPropertiesProperty {
-      public override fun podProperties(): Any? = unwrap(this).getPodProperties()
+      override fun podProperties(): Any? = unwrap(this).getPodProperties()
     }
 
     public companion object {
@@ -1202,17 +1141,13 @@ public open class CfnJobDefinition internal constructor(
     public fun numNodes(): Number
 
     public interface Builder {
-      public fun mainNode(mainNode: Number) {
-      }
+      public fun mainNode(mainNode: Number)
 
-      public fun nodeRangeProperties(nodeRangeProperties: IResolvable) {
-      }
+      public fun nodeRangeProperties(nodeRangeProperties: IResolvable)
 
-      public fun nodeRangeProperties(nodeRangeProperties: List<Any>) {
-      }
+      public fun nodeRangeProperties(nodeRangeProperties: List<Any>)
 
-      public fun numNodes(numNodes: Number) {
-      }
+      public fun numNodes(numNodes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1220,19 +1155,19 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty.builder()
 
-      public override fun mainNode(mainNode: Number) {
+      override fun mainNode(mainNode: Number) {
         cdkBuilder.mainNode(mainNode)
       }
 
-      public override fun nodeRangeProperties(nodeRangeProperties: IResolvable) {
+      override fun nodeRangeProperties(nodeRangeProperties: IResolvable) {
         cdkBuilder.nodeRangeProperties(nodeRangeProperties.let(IResolvable::unwrap))
       }
 
-      public override fun nodeRangeProperties(nodeRangeProperties: List<Any>) {
+      override fun nodeRangeProperties(nodeRangeProperties: List<Any>) {
         cdkBuilder.nodeRangeProperties(nodeRangeProperties)
       }
 
-      public override fun numNodes(numNodes: Number) {
+      override fun numNodes(numNodes: Number) {
         cdkBuilder.numNodes(numNodes)
       }
 
@@ -1245,11 +1180,11 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty,
     ) : NodePropertiesProperty {
-      public override fun mainNode(): Number = unwrap(this).getMainNode()
+      override fun mainNode(): Number = unwrap(this).getMainNode()
 
-      public override fun nodeRangeProperties(): Any = unwrap(this).getNodeRangeProperties()
+      override fun nodeRangeProperties(): Any = unwrap(this).getNodeRangeProperties()
 
-      public override fun numNodes(): Number = unwrap(this).getNumNodes()
+      override fun numNodes(): Number = unwrap(this).getNumNodes()
     }
 
     public companion object {
@@ -1280,17 +1215,13 @@ public open class CfnJobDefinition internal constructor(
     public fun secretOptions(): Any? = unwrap(this).getSecretOptions()
 
     public interface Builder {
-      public fun logDriver(logDriver: String) {
-      }
+      public fun logDriver(logDriver: String)
 
-      public fun options(options: Any) {
-      }
+      public fun options(options: Any)
 
-      public fun secretOptions(secretOptions: IResolvable) {
-      }
+      public fun secretOptions(secretOptions: IResolvable)
 
-      public fun secretOptions(secretOptions: List<Any>) {
-      }
+      public fun secretOptions(secretOptions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1298,19 +1229,19 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty.builder()
 
-      public override fun logDriver(logDriver: String) {
+      override fun logDriver(logDriver: String) {
         cdkBuilder.logDriver(logDriver)
       }
 
-      public override fun options(options: Any) {
+      override fun options(options: Any) {
         cdkBuilder.options(options)
       }
 
-      public override fun secretOptions(secretOptions: IResolvable) {
+      override fun secretOptions(secretOptions: IResolvable) {
         cdkBuilder.secretOptions(secretOptions.let(IResolvable::unwrap))
       }
 
-      public override fun secretOptions(secretOptions: List<Any>) {
+      override fun secretOptions(secretOptions: List<Any>) {
         cdkBuilder.secretOptions(secretOptions)
       }
 
@@ -1323,11 +1254,11 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty,
     ) : LogConfigurationProperty {
-      public override fun logDriver(): String = unwrap(this).getLogDriver()
+      override fun logDriver(): String = unwrap(this).getLogDriver()
 
-      public override fun options(): Any? = unwrap(this).getOptions()
+      override fun options(): Any? = unwrap(this).getOptions()
 
-      public override fun secretOptions(): Any? = unwrap(this).getSecretOptions()
+      override fun secretOptions(): Any? = unwrap(this).getSecretOptions()
     }
 
     public companion object {
@@ -1354,8 +1285,7 @@ public open class CfnJobDefinition internal constructor(
     public fun platformVersion(): String? = unwrap(this).getPlatformVersion()
 
     public interface Builder {
-      public fun platformVersion(platformVersion: String) {
-      }
+      public fun platformVersion(platformVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1364,7 +1294,7 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.FargatePlatformConfigurationProperty.builder()
 
-      public override fun platformVersion(platformVersion: String) {
+      override fun platformVersion(platformVersion: String) {
         cdkBuilder.platformVersion(platformVersion)
       }
 
@@ -1377,7 +1307,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.FargatePlatformConfigurationProperty,
     ) : FargatePlatformConfigurationProperty {
-      public override fun platformVersion(): String? = unwrap(this).getPlatformVersion()
+      override fun platformVersion(): String? = unwrap(this).getPlatformVersion()
     }
 
     public companion object {
@@ -1405,8 +1335,7 @@ public open class CfnJobDefinition internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1414,7 +1343,7 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty.builder()
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -1426,7 +1355,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty,
     ) : HostPathProperty {
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {
@@ -1459,17 +1388,13 @@ public open class CfnJobDefinition internal constructor(
     public fun onStatusReason(): String? = unwrap(this).getOnStatusReason()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun onExitCode(onExitCode: String) {
-      }
+      public fun onExitCode(onExitCode: String)
 
-      public fun onReason(onReason: String) {
-      }
+      public fun onReason(onReason: String)
 
-      public fun onStatusReason(onStatusReason: String) {
-      }
+      public fun onStatusReason(onStatusReason: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1477,19 +1402,19 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EvaluateOnExitProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EvaluateOnExitProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun onExitCode(onExitCode: String) {
+      override fun onExitCode(onExitCode: String) {
         cdkBuilder.onExitCode(onExitCode)
       }
 
-      public override fun onReason(onReason: String) {
+      override fun onReason(onReason: String) {
         cdkBuilder.onReason(onReason)
       }
 
-      public override fun onStatusReason(onStatusReason: String) {
+      override fun onStatusReason(onStatusReason: String) {
         cdkBuilder.onStatusReason(onStatusReason)
       }
 
@@ -1502,13 +1427,13 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EvaluateOnExitProperty,
     ) : EvaluateOnExitProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
 
-      public override fun onExitCode(): String? = unwrap(this).getOnExitCode()
+      override fun onExitCode(): String? = unwrap(this).getOnExitCode()
 
-      public override fun onReason(): String? = unwrap(this).getOnReason()
+      override fun onReason(): String? = unwrap(this).getOnReason()
 
-      public override fun onStatusReason(): String? = unwrap(this).getOnStatusReason()
+      override fun onStatusReason(): String? = unwrap(this).getOnStatusReason()
     }
 
     public companion object {
@@ -1539,14 +1464,11 @@ public open class CfnJobDefinition internal constructor(
     public fun size(): Number
 
     public interface Builder {
-      public fun containerPath(containerPath: String) {
-      }
+      public fun containerPath(containerPath: String)
 
-      public fun mountOptions(mountOptions: List<String>) {
-      }
+      public fun mountOptions(mountOptions: List<String>)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1554,15 +1476,15 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.TmpfsProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.TmpfsProperty.builder()
 
-      public override fun containerPath(containerPath: String) {
+      override fun containerPath(containerPath: String) {
         cdkBuilder.containerPath(containerPath)
       }
 
-      public override fun mountOptions(mountOptions: List<String>) {
+      override fun mountOptions(mountOptions: List<String>) {
         cdkBuilder.mountOptions(mountOptions)
       }
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
@@ -1573,12 +1495,11 @@ public open class CfnJobDefinition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TmpfsProperty,
     ) : TmpfsProperty {
-      public override fun containerPath(): String = unwrap(this).getContainerPath()
+      override fun containerPath(): String = unwrap(this).getContainerPath()
 
-      public override fun mountOptions(): List<String> = unwrap(this).getMountOptions() ?:
-          emptyList()
+      override fun mountOptions(): List<String> = unwrap(this).getMountOptions() ?: emptyList()
 
-      public override fun size(): Number = unwrap(this).getSize()
+      override fun size(): Number = unwrap(this).getSize()
     }
 
     public companion object {
@@ -1607,11 +1528,9 @@ public open class CfnJobDefinition internal constructor(
     public fun sizeLimit(): String? = unwrap(this).getSizeLimit()
 
     public interface Builder {
-      public fun medium(medium: String) {
-      }
+      public fun medium(medium: String)
 
-      public fun sizeLimit(sizeLimit: String) {
-      }
+      public fun sizeLimit(sizeLimit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1619,11 +1538,11 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EmptyDirProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EmptyDirProperty.builder()
 
-      public override fun medium(medium: String) {
+      override fun medium(medium: String) {
         cdkBuilder.medium(medium)
       }
 
-      public override fun sizeLimit(sizeLimit: String) {
+      override fun sizeLimit(sizeLimit: String) {
         cdkBuilder.sizeLimit(sizeLimit)
       }
 
@@ -1635,9 +1554,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EmptyDirProperty,
     ) : EmptyDirProperty {
-      public override fun medium(): String? = unwrap(this).getMedium()
+      override fun medium(): String? = unwrap(this).getMedium()
 
-      public override fun sizeLimit(): String? = unwrap(this).getSizeLimit()
+      override fun sizeLimit(): String? = unwrap(this).getSizeLimit()
     }
 
     public companion object {
@@ -1666,19 +1585,15 @@ public open class CfnJobDefinition internal constructor(
     public fun targetNodes(): String
 
     public interface Builder {
-      public fun container(container: IResolvable) {
-      }
+      public fun container(container: IResolvable)
 
-      public fun container(container: ContainerPropertiesProperty) {
-      }
+      public fun container(container: ContainerPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("beb00cb70cdb4bab988f0a25a32c1d8f94755a029fbe4437334920bf4c93357f")
-      public fun container(container: ContainerPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun container(container: ContainerPropertiesProperty.Builder.() -> Unit)
 
-      public fun targetNodes(targetNodes: String) {
-      }
+      public fun targetNodes(targetNodes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1686,20 +1601,20 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty.builder()
 
-      public override fun container(container: IResolvable) {
+      override fun container(container: IResolvable) {
         cdkBuilder.container(container.let(IResolvable::unwrap))
       }
 
-      public override fun container(container: ContainerPropertiesProperty) {
+      override fun container(container: ContainerPropertiesProperty) {
         cdkBuilder.container(container.let(ContainerPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("beb00cb70cdb4bab988f0a25a32c1d8f94755a029fbe4437334920bf4c93357f")
-      public override fun container(container: ContainerPropertiesProperty.Builder.() -> Unit): Unit
-          = container(ContainerPropertiesProperty(container))
+      override fun container(container: ContainerPropertiesProperty.Builder.() -> Unit): Unit =
+          container(ContainerPropertiesProperty(container))
 
-      public override fun targetNodes(targetNodes: String) {
+      override fun targetNodes(targetNodes: String) {
         cdkBuilder.targetNodes(targetNodes)
       }
 
@@ -1712,9 +1627,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty,
     ) : NodeRangePropertyProperty {
-      public override fun container(): Any? = unwrap(this).getContainer()
+      override fun container(): Any? = unwrap(this).getContainer()
 
-      public override fun targetNodes(): String = unwrap(this).getTargetNodes()
+      override fun targetNodes(): String = unwrap(this).getTargetNodes()
     }
 
     public companion object {
@@ -1747,41 +1662,31 @@ public open class CfnJobDefinition internal constructor(
     public fun secret(): Any? = unwrap(this).getSecret()
 
     public interface Builder {
-      public fun emptyDir(emptyDir: IResolvable) {
-      }
+      public fun emptyDir(emptyDir: IResolvable)
 
-      public fun emptyDir(emptyDir: EmptyDirProperty) {
-      }
+      public fun emptyDir(emptyDir: EmptyDirProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64cab76735c658ec67ac65517c202eefb6137d8eee9951122cfebcdd48045f53")
-      public fun emptyDir(emptyDir: EmptyDirProperty.Builder.() -> Unit) {
-      }
+      public fun emptyDir(emptyDir: EmptyDirProperty.Builder.() -> Unit)
 
-      public fun hostPath(hostPath: IResolvable) {
-      }
+      public fun hostPath(hostPath: IResolvable)
 
-      public fun hostPath(hostPath: HostPathProperty) {
-      }
+      public fun hostPath(hostPath: HostPathProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8d360658cd48b7781285f3855793f22f6f3abd4bf05b19c4e530bf084e5b94fe")
-      public fun hostPath(hostPath: HostPathProperty.Builder.() -> Unit) {
-      }
+      public fun hostPath(hostPath: HostPathProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun secret(secret: IResolvable) {
-      }
+      public fun secret(secret: IResolvable)
 
-      public fun secret(secret: EksSecretProperty) {
-      }
+      public fun secret(secret: EksSecretProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c77c654dd46a76748a6e3c3effa6bc364c3a500a99e98f1ee4495ba5a5ed8ec1")
-      public fun secret(secret: EksSecretProperty.Builder.() -> Unit) {
-      }
+      public fun secret(secret: EksSecretProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1789,47 +1694,47 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty.builder()
 
-      public override fun emptyDir(emptyDir: IResolvable) {
+      override fun emptyDir(emptyDir: IResolvable) {
         cdkBuilder.emptyDir(emptyDir.let(IResolvable::unwrap))
       }
 
-      public override fun emptyDir(emptyDir: EmptyDirProperty) {
+      override fun emptyDir(emptyDir: EmptyDirProperty) {
         cdkBuilder.emptyDir(emptyDir.let(EmptyDirProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64cab76735c658ec67ac65517c202eefb6137d8eee9951122cfebcdd48045f53")
-      public override fun emptyDir(emptyDir: EmptyDirProperty.Builder.() -> Unit): Unit =
+      override fun emptyDir(emptyDir: EmptyDirProperty.Builder.() -> Unit): Unit =
           emptyDir(EmptyDirProperty(emptyDir))
 
-      public override fun hostPath(hostPath: IResolvable) {
+      override fun hostPath(hostPath: IResolvable) {
         cdkBuilder.hostPath(hostPath.let(IResolvable::unwrap))
       }
 
-      public override fun hostPath(hostPath: HostPathProperty) {
+      override fun hostPath(hostPath: HostPathProperty) {
         cdkBuilder.hostPath(hostPath.let(HostPathProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8d360658cd48b7781285f3855793f22f6f3abd4bf05b19c4e530bf084e5b94fe")
-      public override fun hostPath(hostPath: HostPathProperty.Builder.() -> Unit): Unit =
+      override fun hostPath(hostPath: HostPathProperty.Builder.() -> Unit): Unit =
           hostPath(HostPathProperty(hostPath))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun secret(secret: IResolvable) {
+      override fun secret(secret: IResolvable) {
         cdkBuilder.secret(secret.let(IResolvable::unwrap))
       }
 
-      public override fun secret(secret: EksSecretProperty) {
+      override fun secret(secret: EksSecretProperty) {
         cdkBuilder.secret(secret.let(EksSecretProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c77c654dd46a76748a6e3c3effa6bc364c3a500a99e98f1ee4495ba5a5ed8ec1")
-      public override fun secret(secret: EksSecretProperty.Builder.() -> Unit): Unit =
+      override fun secret(secret: EksSecretProperty.Builder.() -> Unit): Unit =
           secret(EksSecretProperty(secret))
 
       public fun build(): software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty =
@@ -1840,13 +1745,13 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty,
     ) : EksVolumeProperty {
-      public override fun emptyDir(): Any? = unwrap(this).getEmptyDir()
+      override fun emptyDir(): Any? = unwrap(this).getEmptyDir()
 
-      public override fun hostPath(): Any? = unwrap(this).getHostPath()
+      override fun hostPath(): Any? = unwrap(this).getHostPath()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun secret(): Any? = unwrap(this).getSecret()
+      override fun secret(): Any? = unwrap(this).getSecret()
     }
 
     public companion object {
@@ -1873,8 +1778,7 @@ public open class CfnJobDefinition internal constructor(
     public fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
 
     public interface Builder {
-      public fun assignPublicIp(assignPublicIp: String) {
-      }
+      public fun assignPublicIp(assignPublicIp: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1883,7 +1787,7 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.NetworkConfigurationProperty.builder()
 
-      public override fun assignPublicIp(assignPublicIp: String) {
+      override fun assignPublicIp(assignPublicIp: String) {
         cdkBuilder.assignPublicIp(assignPublicIp)
       }
 
@@ -1896,7 +1800,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.NetworkConfigurationProperty,
     ) : NetworkConfigurationProperty {
-      public override fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
+      override fun assignPublicIp(): String? = unwrap(this).getAssignPublicIp()
     }
 
     public companion object {
@@ -1927,14 +1831,11 @@ public open class CfnJobDefinition internal constructor(
     public fun softLimit(): Number
 
     public interface Builder {
-      public fun hardLimit(hardLimit: Number) {
-      }
+      public fun hardLimit(hardLimit: Number)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun softLimit(softLimit: Number) {
-      }
+      public fun softLimit(softLimit: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1942,15 +1843,15 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty.builder()
 
-      public override fun hardLimit(hardLimit: Number) {
+      override fun hardLimit(hardLimit: Number) {
         cdkBuilder.hardLimit(hardLimit)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun softLimit(softLimit: Number) {
+      override fun softLimit(softLimit: Number) {
         cdkBuilder.softLimit(softLimit)
       }
 
@@ -1961,11 +1862,11 @@ public open class CfnJobDefinition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty,
     ) : UlimitProperty {
-      public override fun hardLimit(): Number = unwrap(this).getHardLimit()
+      override fun hardLimit(): Number = unwrap(this).getHardLimit()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun softLimit(): Number = unwrap(this).getSoftLimit()
+      override fun softLimit(): Number = unwrap(this).getSoftLimit()
     }
 
     public companion object {
@@ -2008,54 +1909,39 @@ public open class CfnJobDefinition internal constructor(
     public fun volumeMounts(): Any? = unwrap(this).getVolumeMounts()
 
     public interface Builder {
-      public fun args(args: List<String>) {
-      }
+      public fun args(args: List<String>)
 
-      public fun command(command: List<String>) {
-      }
+      public fun command(command: List<String>)
 
-      public fun env(env: IResolvable) {
-      }
+      public fun env(env: IResolvable)
 
-      public fun env(env: List<Any>) {
-      }
+      public fun env(env: List<Any>)
 
-      public fun image(image: String) {
-      }
+      public fun image(image: String)
 
-      public fun imagePullPolicy(imagePullPolicy: String) {
-      }
+      public fun imagePullPolicy(imagePullPolicy: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun resources(resources: IResolvable) {
-      }
+      public fun resources(resources: IResolvable)
 
-      public fun resources(resources: ResourcesProperty) {
-      }
+      public fun resources(resources: ResourcesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b89941c1ac68cbe28dafe670b2382cb982458533ae9752c48e46ddfce3e62863")
-      public fun resources(resources: ResourcesProperty.Builder.() -> Unit) {
-      }
+      public fun resources(resources: ResourcesProperty.Builder.() -> Unit)
 
-      public fun securityContext(securityContext: IResolvable) {
-      }
+      public fun securityContext(securityContext: IResolvable)
 
-      public fun securityContext(securityContext: SecurityContextProperty) {
-      }
+      public fun securityContext(securityContext: SecurityContextProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("630ea6b519c7e542aaed3622e1835518d66bad7f20d399381064a7aa911e4af9")
-      public fun securityContext(securityContext: SecurityContextProperty.Builder.() -> Unit) {
-      }
+      public fun securityContext(securityContext: SecurityContextProperty.Builder.() -> Unit)
 
-      public fun volumeMounts(volumeMounts: IResolvable) {
-      }
+      public fun volumeMounts(volumeMounts: IResolvable)
 
-      public fun volumeMounts(volumeMounts: List<Any>) {
-      }
+      public fun volumeMounts(volumeMounts: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2063,66 +1949,65 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty.builder()
 
-      public override fun args(args: List<String>) {
+      override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
 
-      public override fun command(command: List<String>) {
+      override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
 
-      public override fun env(env: IResolvable) {
+      override fun env(env: IResolvable) {
         cdkBuilder.env(env.let(IResolvable::unwrap))
       }
 
-      public override fun env(env: List<Any>) {
+      override fun env(env: List<Any>) {
         cdkBuilder.env(env)
       }
 
-      public override fun image(image: String) {
+      override fun image(image: String) {
         cdkBuilder.image(image)
       }
 
-      public override fun imagePullPolicy(imagePullPolicy: String) {
+      override fun imagePullPolicy(imagePullPolicy: String) {
         cdkBuilder.imagePullPolicy(imagePullPolicy)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun resources(resources: IResolvable) {
+      override fun resources(resources: IResolvable) {
         cdkBuilder.resources(resources.let(IResolvable::unwrap))
       }
 
-      public override fun resources(resources: ResourcesProperty) {
+      override fun resources(resources: ResourcesProperty) {
         cdkBuilder.resources(resources.let(ResourcesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b89941c1ac68cbe28dafe670b2382cb982458533ae9752c48e46ddfce3e62863")
-      public override fun resources(resources: ResourcesProperty.Builder.() -> Unit): Unit =
+      override fun resources(resources: ResourcesProperty.Builder.() -> Unit): Unit =
           resources(ResourcesProperty(resources))
 
-      public override fun securityContext(securityContext: IResolvable) {
+      override fun securityContext(securityContext: IResolvable) {
         cdkBuilder.securityContext(securityContext.let(IResolvable::unwrap))
       }
 
-      public override fun securityContext(securityContext: SecurityContextProperty) {
+      override fun securityContext(securityContext: SecurityContextProperty) {
         cdkBuilder.securityContext(securityContext.let(SecurityContextProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("630ea6b519c7e542aaed3622e1835518d66bad7f20d399381064a7aa911e4af9")
-      public override
-          fun securityContext(securityContext: SecurityContextProperty.Builder.() -> Unit): Unit =
-          securityContext(SecurityContextProperty(securityContext))
+      override fun securityContext(securityContext: SecurityContextProperty.Builder.() -> Unit):
+          Unit = securityContext(SecurityContextProperty(securityContext))
 
-      public override fun volumeMounts(volumeMounts: IResolvable) {
+      override fun volumeMounts(volumeMounts: IResolvable) {
         cdkBuilder.volumeMounts(volumeMounts.let(IResolvable::unwrap))
       }
 
-      public override fun volumeMounts(volumeMounts: List<Any>) {
+      override fun volumeMounts(volumeMounts: List<Any>) {
         cdkBuilder.volumeMounts(volumeMounts)
       }
 
@@ -2135,23 +2020,23 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty,
     ) : EksContainerProperty {
-      public override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
 
-      public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-      public override fun env(): Any? = unwrap(this).getEnv()
+      override fun env(): Any? = unwrap(this).getEnv()
 
-      public override fun image(): String = unwrap(this).getImage()
+      override fun image(): String = unwrap(this).getImage()
 
-      public override fun imagePullPolicy(): String? = unwrap(this).getImagePullPolicy()
+      override fun imagePullPolicy(): String? = unwrap(this).getImagePullPolicy()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun resources(): Any? = unwrap(this).getResources()
+      override fun resources(): Any? = unwrap(this).getResources()
 
-      public override fun securityContext(): Any? = unwrap(this).getSecurityContext()
+      override fun securityContext(): Any? = unwrap(this).getSecurityContext()
 
-      public override fun volumeMounts(): Any? = unwrap(this).getVolumeMounts()
+      override fun volumeMounts(): Any? = unwrap(this).getVolumeMounts()
     }
 
     public companion object {
@@ -2182,31 +2067,24 @@ public open class CfnJobDefinition internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable) {
-      }
+      public fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable)
 
-      public fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty) {
-      }
+      public fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39e3c0c777d8054e49cf8a6374ec7913736c25549290310919297432a3e67e03")
       public
-          fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty.Builder.() -> Unit)
 
-      public fun host(host: IResolvable) {
-      }
+      public fun host(host: IResolvable)
 
-      public fun host(host: VolumesHostProperty) {
-      }
+      public fun host(host: VolumesHostProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9f307de4c2cf22a50de68540c5f0e5ecb133e07393df0da68a313d24480803f")
-      public fun host(host: VolumesHostProperty.Builder.() -> Unit) {
-      }
+      public fun host(host: VolumesHostProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2214,35 +2092,34 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty.builder()
 
-      public override fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable) {
+      override fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable) {
         cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty) {
+      override fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty) {
         cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EfsVolumeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39e3c0c777d8054e49cf8a6374ec7913736c25549290310919297432a3e67e03")
-      public override
+      override
           fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty.Builder.() -> Unit):
           Unit = efsVolumeConfiguration(EfsVolumeConfigurationProperty(efsVolumeConfiguration))
 
-      public override fun host(host: IResolvable) {
+      override fun host(host: IResolvable) {
         cdkBuilder.host(host.let(IResolvable::unwrap))
       }
 
-      public override fun host(host: VolumesHostProperty) {
+      override fun host(host: VolumesHostProperty) {
         cdkBuilder.host(host.let(VolumesHostProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9f307de4c2cf22a50de68540c5f0e5ecb133e07393df0da68a313d24480803f")
-      public override fun host(host: VolumesHostProperty.Builder.() -> Unit): Unit =
+      override fun host(host: VolumesHostProperty.Builder.() -> Unit): Unit =
           host(VolumesHostProperty(host))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -2254,11 +2131,11 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty,
     ) : VolumesProperty {
-      public override fun efsVolumeConfiguration(): Any? = unwrap(this).getEfsVolumeConfiguration()
+      override fun efsVolumeConfiguration(): Any? = unwrap(this).getEfsVolumeConfiguration()
 
-      public override fun host(): Any? = unwrap(this).getHost()
+      override fun host(): Any? = unwrap(this).getHost()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -2293,29 +2170,21 @@ public open class CfnJobDefinition internal constructor(
     public fun runAsUser(): Number? = unwrap(this).getRunAsUser()
 
     public interface Builder {
-      public fun privileged(privileged: Boolean) {
-      }
+      public fun privileged(privileged: Boolean)
 
-      public fun privileged(privileged: IResolvable) {
-      }
+      public fun privileged(privileged: IResolvable)
 
-      public fun readOnlyRootFilesystem(readOnlyRootFilesystem: Boolean) {
-      }
+      public fun readOnlyRootFilesystem(readOnlyRootFilesystem: Boolean)
 
-      public fun readOnlyRootFilesystem(readOnlyRootFilesystem: IResolvable) {
-      }
+      public fun readOnlyRootFilesystem(readOnlyRootFilesystem: IResolvable)
 
-      public fun runAsGroup(runAsGroup: Number) {
-      }
+      public fun runAsGroup(runAsGroup: Number)
 
-      public fun runAsNonRoot(runAsNonRoot: Boolean) {
-      }
+      public fun runAsNonRoot(runAsNonRoot: Boolean)
 
-      public fun runAsNonRoot(runAsNonRoot: IResolvable) {
-      }
+      public fun runAsNonRoot(runAsNonRoot: IResolvable)
 
-      public fun runAsUser(runAsUser: Number) {
-      }
+      public fun runAsUser(runAsUser: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2323,35 +2192,35 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty.builder()
 
-      public override fun privileged(privileged: Boolean) {
+      override fun privileged(privileged: Boolean) {
         cdkBuilder.privileged(privileged)
       }
 
-      public override fun privileged(privileged: IResolvable) {
+      override fun privileged(privileged: IResolvable) {
         cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
       }
 
-      public override fun readOnlyRootFilesystem(readOnlyRootFilesystem: Boolean) {
+      override fun readOnlyRootFilesystem(readOnlyRootFilesystem: Boolean) {
         cdkBuilder.readOnlyRootFilesystem(readOnlyRootFilesystem)
       }
 
-      public override fun readOnlyRootFilesystem(readOnlyRootFilesystem: IResolvable) {
+      override fun readOnlyRootFilesystem(readOnlyRootFilesystem: IResolvable) {
         cdkBuilder.readOnlyRootFilesystem(readOnlyRootFilesystem.let(IResolvable::unwrap))
       }
 
-      public override fun runAsGroup(runAsGroup: Number) {
+      override fun runAsGroup(runAsGroup: Number) {
         cdkBuilder.runAsGroup(runAsGroup)
       }
 
-      public override fun runAsNonRoot(runAsNonRoot: Boolean) {
+      override fun runAsNonRoot(runAsNonRoot: Boolean) {
         cdkBuilder.runAsNonRoot(runAsNonRoot)
       }
 
-      public override fun runAsNonRoot(runAsNonRoot: IResolvable) {
+      override fun runAsNonRoot(runAsNonRoot: IResolvable) {
         cdkBuilder.runAsNonRoot(runAsNonRoot.let(IResolvable::unwrap))
       }
 
-      public override fun runAsUser(runAsUser: Number) {
+      override fun runAsUser(runAsUser: Number) {
         cdkBuilder.runAsUser(runAsUser)
       }
 
@@ -2364,15 +2233,15 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty,
     ) : SecurityContextProperty {
-      public override fun privileged(): Any? = unwrap(this).getPrivileged()
+      override fun privileged(): Any? = unwrap(this).getPrivileged()
 
-      public override fun readOnlyRootFilesystem(): Any? = unwrap(this).getReadOnlyRootFilesystem()
+      override fun readOnlyRootFilesystem(): Any? = unwrap(this).getReadOnlyRootFilesystem()
 
-      public override fun runAsGroup(): Number? = unwrap(this).getRunAsGroup()
+      override fun runAsGroup(): Number? = unwrap(this).getRunAsGroup()
 
-      public override fun runAsNonRoot(): Any? = unwrap(this).getRunAsNonRoot()
+      override fun runAsNonRoot(): Any? = unwrap(this).getRunAsNonRoot()
 
-      public override fun runAsUser(): Number? = unwrap(this).getRunAsUser()
+      override fun runAsUser(): Number? = unwrap(this).getRunAsUser()
     }
 
     public companion object {
@@ -2401,11 +2270,9 @@ public open class CfnJobDefinition internal constructor(
     public fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
 
     public interface Builder {
-      public fun cpuArchitecture(cpuArchitecture: String) {
-      }
+      public fun cpuArchitecture(cpuArchitecture: String)
 
-      public fun operatingSystemFamily(operatingSystemFamily: String) {
-      }
+      public fun operatingSystemFamily(operatingSystemFamily: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2413,11 +2280,11 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.RuntimePlatformProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.RuntimePlatformProperty.builder()
 
-      public override fun cpuArchitecture(cpuArchitecture: String) {
+      override fun cpuArchitecture(cpuArchitecture: String) {
         cdkBuilder.cpuArchitecture(cpuArchitecture)
       }
 
-      public override fun operatingSystemFamily(operatingSystemFamily: String) {
+      override fun operatingSystemFamily(operatingSystemFamily: String) {
         cdkBuilder.operatingSystemFamily(operatingSystemFamily)
       }
 
@@ -2430,9 +2297,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.RuntimePlatformProperty,
     ) : RuntimePlatformProperty {
-      public override fun cpuArchitecture(): String? = unwrap(this).getCpuArchitecture()
+      override fun cpuArchitecture(): String? = unwrap(this).getCpuArchitecture()
 
-      public override fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
+      override fun operatingSystemFamily(): String? = unwrap(this).getOperatingSystemFamily()
     }
 
     public companion object {
@@ -2469,40 +2336,29 @@ public open class CfnJobDefinition internal constructor(
     public fun volumes(): Any? = unwrap(this).getVolumes()
 
     public interface Builder {
-      public fun containers(containers: IResolvable) {
-      }
+      public fun containers(containers: IResolvable)
 
-      public fun containers(containers: List<Any>) {
-      }
+      public fun containers(containers: List<Any>)
 
-      public fun dnsPolicy(dnsPolicy: String) {
-      }
+      public fun dnsPolicy(dnsPolicy: String)
 
-      public fun hostNetwork(hostNetwork: Boolean) {
-      }
+      public fun hostNetwork(hostNetwork: Boolean)
 
-      public fun hostNetwork(hostNetwork: IResolvable) {
-      }
+      public fun hostNetwork(hostNetwork: IResolvable)
 
-      public fun metadata(metadata: IResolvable) {
-      }
+      public fun metadata(metadata: IResolvable)
 
-      public fun metadata(metadata: MetadataProperty) {
-      }
+      public fun metadata(metadata: MetadataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4b08aa845521711bde52771185c3919a7e074569382fc63bb622ded44148f2b")
-      public fun metadata(metadata: MetadataProperty.Builder.() -> Unit) {
-      }
+      public fun metadata(metadata: MetadataProperty.Builder.() -> Unit)
 
-      public fun serviceAccountName(serviceAccountName: String) {
-      }
+      public fun serviceAccountName(serviceAccountName: String)
 
-      public fun volumes(volumes: IResolvable) {
-      }
+      public fun volumes(volumes: IResolvable)
 
-      public fun volumes(volumes: List<Any>) {
-      }
+      public fun volumes(volumes: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2510,48 +2366,48 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty.builder()
 
-      public override fun containers(containers: IResolvable) {
+      override fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers.let(IResolvable::unwrap))
       }
 
-      public override fun containers(containers: List<Any>) {
+      override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers)
       }
 
-      public override fun dnsPolicy(dnsPolicy: String) {
+      override fun dnsPolicy(dnsPolicy: String) {
         cdkBuilder.dnsPolicy(dnsPolicy)
       }
 
-      public override fun hostNetwork(hostNetwork: Boolean) {
+      override fun hostNetwork(hostNetwork: Boolean) {
         cdkBuilder.hostNetwork(hostNetwork)
       }
 
-      public override fun hostNetwork(hostNetwork: IResolvable) {
+      override fun hostNetwork(hostNetwork: IResolvable) {
         cdkBuilder.hostNetwork(hostNetwork.let(IResolvable::unwrap))
       }
 
-      public override fun metadata(metadata: IResolvable) {
+      override fun metadata(metadata: IResolvable) {
         cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
       }
 
-      public override fun metadata(metadata: MetadataProperty) {
+      override fun metadata(metadata: MetadataProperty) {
         cdkBuilder.metadata(metadata.let(MetadataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4b08aa845521711bde52771185c3919a7e074569382fc63bb622ded44148f2b")
-      public override fun metadata(metadata: MetadataProperty.Builder.() -> Unit): Unit =
+      override fun metadata(metadata: MetadataProperty.Builder.() -> Unit): Unit =
           metadata(MetadataProperty(metadata))
 
-      public override fun serviceAccountName(serviceAccountName: String) {
+      override fun serviceAccountName(serviceAccountName: String) {
         cdkBuilder.serviceAccountName(serviceAccountName)
       }
 
-      public override fun volumes(volumes: IResolvable) {
+      override fun volumes(volumes: IResolvable) {
         cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
       }
 
-      public override fun volumes(volumes: List<Any>) {
+      override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes)
       }
 
@@ -2564,17 +2420,17 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty,
     ) : PodPropertiesProperty {
-      public override fun containers(): Any? = unwrap(this).getContainers()
+      override fun containers(): Any? = unwrap(this).getContainers()
 
-      public override fun dnsPolicy(): String? = unwrap(this).getDnsPolicy()
+      override fun dnsPolicy(): String? = unwrap(this).getDnsPolicy()
 
-      public override fun hostNetwork(): Any? = unwrap(this).getHostNetwork()
+      override fun hostNetwork(): Any? = unwrap(this).getHostNetwork()
 
-      public override fun metadata(): Any? = unwrap(this).getMetadata()
+      override fun metadata(): Any? = unwrap(this).getMetadata()
 
-      public override fun serviceAccountName(): String? = unwrap(this).getServiceAccountName()
+      override fun serviceAccountName(): String? = unwrap(this).getServiceAccountName()
 
-      public override fun volumes(): Any? = unwrap(this).getVolumes()
+      override fun volumes(): Any? = unwrap(this).getVolumes()
     }
 
     public companion object {
@@ -2601,8 +2457,7 @@ public open class CfnJobDefinition internal constructor(
     public fun labels(): Any? = unwrap(this).getLabels()
 
     public interface Builder {
-      public fun labels(labels: Any) {
-      }
+      public fun labels(labels: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2610,7 +2465,7 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty.builder()
 
-      public override fun labels(labels: Any) {
+      override fun labels(labels: Any) {
         cdkBuilder.labels(labels)
       }
 
@@ -2622,7 +2477,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty,
     ) : MetadataProperty {
-      public override fun labels(): Any? = unwrap(this).getLabels()
+      override fun labels(): Any? = unwrap(this).getLabels()
     }
 
     public companion object {
@@ -2651,11 +2506,9 @@ public open class CfnJobDefinition internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2663,11 +2516,11 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -2679,9 +2532,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty,
     ) : EnvironmentProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -2710,11 +2563,9 @@ public open class CfnJobDefinition internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2723,11 +2574,11 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerEnvironmentVariableProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -2740,9 +2591,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerEnvironmentVariableProperty,
     ) : EksContainerEnvironmentVariableProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -2770,8 +2621,7 @@ public open class CfnJobDefinition internal constructor(
     public fun sizeInGiB(): Number
 
     public interface Builder {
-      public fun sizeInGiB(sizeInGiB: Number) {
-      }
+      public fun sizeInGiB(sizeInGiB: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2779,7 +2629,7 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EphemeralStorageProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EphemeralStorageProperty.builder()
 
-      public override fun sizeInGiB(sizeInGiB: Number) {
+      override fun sizeInGiB(sizeInGiB: Number) {
         cdkBuilder.sizeInGiB(sizeInGiB)
       }
 
@@ -2792,7 +2642,7 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EphemeralStorageProperty,
     ) : EphemeralStorageProperty {
-      public override fun sizeInGiB(): Number = unwrap(this).getSizeInGiB()
+      override fun sizeInGiB(): Number = unwrap(this).getSizeInGiB()
     }
 
     public companion object {
@@ -2863,158 +2713,113 @@ public open class CfnJobDefinition internal constructor(
     public fun volumes(): Any? = unwrap(this).getVolumes()
 
     public interface Builder {
-      public fun command(command: List<String>) {
-      }
+      public fun command(command: List<String>)
 
-      public fun environment(environment: IResolvable) {
-      }
+      public fun environment(environment: IResolvable)
 
-      public fun environment(environment: List<Any>) {
-      }
+      public fun environment(environment: List<Any>)
 
-      public fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      }
+      public fun ephemeralStorage(ephemeralStorage: IResolvable)
 
-      public fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
-      }
+      public fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("98e73378b595cc6c4fca0e6da600a4089f07dd3af9b2f35cdfc34ec6ec42961c")
-      public fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty.Builder.() -> Unit) {
-      }
+      public fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty.Builder.() -> Unit)
 
-      public fun executionRoleArn(executionRoleArn: String) {
-      }
+      public fun executionRoleArn(executionRoleArn: String)
 
-      public fun fargatePlatformConfiguration(fargatePlatformConfiguration: IResolvable) {
-      }
+      public fun fargatePlatformConfiguration(fargatePlatformConfiguration: IResolvable)
 
       public
-          fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty) {
-      }
+          fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f9b52813c7c400f8615b05a91517e932b2efc31357ada779b753a705e1f3a3f4")
       public
-          fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty.Builder.() -> Unit)
 
-      public fun image(image: String) {
-      }
+      public fun image(image: String)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun jobRoleArn(jobRoleArn: String) {
-      }
+      public fun jobRoleArn(jobRoleArn: String)
 
-      public fun linuxParameters(linuxParameters: IResolvable) {
-      }
+      public fun linuxParameters(linuxParameters: IResolvable)
 
-      public fun linuxParameters(linuxParameters: LinuxParametersProperty) {
-      }
+      public fun linuxParameters(linuxParameters: LinuxParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("905b256d03d629094b0c74f3b07a1e527b0a9c3cae07b007bbf275f17b10489c")
-      public fun linuxParameters(linuxParameters: LinuxParametersProperty.Builder.() -> Unit) {
-      }
+      public fun linuxParameters(linuxParameters: LinuxParametersProperty.Builder.() -> Unit)
 
-      public fun logConfiguration(logConfiguration: IResolvable) {
-      }
+      public fun logConfiguration(logConfiguration: IResolvable)
 
-      public fun logConfiguration(logConfiguration: LogConfigurationProperty) {
-      }
+      public fun logConfiguration(logConfiguration: LogConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cfa04ac24a26fb769b04d9a76d721780cf2939be5672d1c633390d17d911abdc")
-      public fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit)
 
-      public fun memory(memory: Number) {
-      }
+      public fun memory(memory: Number)
 
-      public fun mountPoints(mountPoints: IResolvable) {
-      }
+      public fun mountPoints(mountPoints: IResolvable)
 
-      public fun mountPoints(mountPoints: List<Any>) {
-      }
+      public fun mountPoints(mountPoints: List<Any>)
 
-      public fun networkConfiguration(networkConfiguration: IResolvable) {
-      }
+      public fun networkConfiguration(networkConfiguration: IResolvable)
 
-      public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-      }
+      public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84646023e3ec8692064dcfb9e9fad69fe2c3e7a874c2a70744d27f577b4c92e0")
       public
-          fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit)
 
-      public fun privileged(privileged: Boolean) {
-      }
+      public fun privileged(privileged: Boolean)
 
-      public fun privileged(privileged: IResolvable) {
-      }
+      public fun privileged(privileged: IResolvable)
 
-      public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
-      }
+      public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean)
 
-      public fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
-      }
+      public fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable)
 
-      public fun repositoryCredentials(repositoryCredentials: IResolvable) {
-      }
+      public fun repositoryCredentials(repositoryCredentials: IResolvable)
 
-      public fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
-      }
+      public fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5a5f329b8daae4793f12cdc8e64a0f0ae7ea09fdfb022c71f7da4fb30cd56225")
       public
-          fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty.Builder.() -> Unit) {
-      }
+          fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty.Builder.() -> Unit)
 
-      public fun resourceRequirements(resourceRequirements: IResolvable) {
-      }
+      public fun resourceRequirements(resourceRequirements: IResolvable)
 
-      public fun resourceRequirements(resourceRequirements: List<Any>) {
-      }
+      public fun resourceRequirements(resourceRequirements: List<Any>)
 
-      public fun runtimePlatform(runtimePlatform: IResolvable) {
-      }
+      public fun runtimePlatform(runtimePlatform: IResolvable)
 
-      public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
-      }
+      public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0f72a76832d0064469b7780c971fbcac43944532b65a5d2c80f44a35167058d")
-      public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty.Builder.() -> Unit) {
-      }
+      public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty.Builder.() -> Unit)
 
-      public fun secrets(secrets: IResolvable) {
-      }
+      public fun secrets(secrets: IResolvable)
 
-      public fun secrets(secrets: List<Any>) {
-      }
+      public fun secrets(secrets: List<Any>)
 
-      public fun ulimits(ulimits: IResolvable) {
-      }
+      public fun ulimits(ulimits: IResolvable)
 
-      public fun ulimits(ulimits: List<Any>) {
-      }
+      public fun ulimits(ulimits: List<Any>)
 
-      public fun user(user: String) {
-      }
+      public fun user(user: String)
 
-      public fun vcpus(vcpus: Number) {
-      }
+      public fun vcpus(vcpus: Number)
 
-      public fun volumes(volumes: IResolvable) {
-      }
+      public fun volumes(volumes: IResolvable)
 
-      public fun volumes(volumes: List<Any>) {
-      }
+      public fun volumes(volumes: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3023,200 +2828,195 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty.builder()
 
-      public override fun command(command: List<String>) {
+      override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
 
-      public override fun environment(environment: IResolvable) {
+      override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
       }
 
-      public override fun environment(environment: List<Any>) {
+      override fun environment(environment: List<Any>) {
         cdkBuilder.environment(environment)
       }
 
-      public override fun ephemeralStorage(ephemeralStorage: IResolvable) {
+      override fun ephemeralStorage(ephemeralStorage: IResolvable) {
         cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
       }
 
-      public override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
+      override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
         cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("98e73378b595cc6c4fca0e6da600a4089f07dd3af9b2f35cdfc34ec6ec42961c")
-      public override
-          fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty.Builder.() -> Unit): Unit
-          = ephemeralStorage(EphemeralStorageProperty(ephemeralStorage))
+      override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty.Builder.() -> Unit):
+          Unit = ephemeralStorage(EphemeralStorageProperty(ephemeralStorage))
 
-      public override fun executionRoleArn(executionRoleArn: String) {
+      override fun executionRoleArn(executionRoleArn: String) {
         cdkBuilder.executionRoleArn(executionRoleArn)
       }
 
-      public override fun fargatePlatformConfiguration(fargatePlatformConfiguration: IResolvable) {
+      override fun fargatePlatformConfiguration(fargatePlatformConfiguration: IResolvable) {
         cdkBuilder.fargatePlatformConfiguration(fargatePlatformConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty) {
         cdkBuilder.fargatePlatformConfiguration(fargatePlatformConfiguration.let(FargatePlatformConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f9b52813c7c400f8615b05a91517e932b2efc31357ada779b753a705e1f3a3f4")
-      public override
+      override
           fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty.Builder.() -> Unit):
           Unit =
           fargatePlatformConfiguration(FargatePlatformConfigurationProperty(fargatePlatformConfiguration))
 
-      public override fun image(image: String) {
+      override fun image(image: String) {
         cdkBuilder.image(image)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun jobRoleArn(jobRoleArn: String) {
+      override fun jobRoleArn(jobRoleArn: String) {
         cdkBuilder.jobRoleArn(jobRoleArn)
       }
 
-      public override fun linuxParameters(linuxParameters: IResolvable) {
+      override fun linuxParameters(linuxParameters: IResolvable) {
         cdkBuilder.linuxParameters(linuxParameters.let(IResolvable::unwrap))
       }
 
-      public override fun linuxParameters(linuxParameters: LinuxParametersProperty) {
+      override fun linuxParameters(linuxParameters: LinuxParametersProperty) {
         cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("905b256d03d629094b0c74f3b07a1e527b0a9c3cae07b007bbf275f17b10489c")
-      public override
-          fun linuxParameters(linuxParameters: LinuxParametersProperty.Builder.() -> Unit): Unit =
-          linuxParameters(LinuxParametersProperty(linuxParameters))
+      override fun linuxParameters(linuxParameters: LinuxParametersProperty.Builder.() -> Unit):
+          Unit = linuxParameters(LinuxParametersProperty(linuxParameters))
 
-      public override fun logConfiguration(logConfiguration: IResolvable) {
+      override fun logConfiguration(logConfiguration: IResolvable) {
         cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
+      override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
         cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cfa04ac24a26fb769b04d9a76d721780cf2939be5672d1c633390d17d911abdc")
-      public override
-          fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit): Unit
-          = logConfiguration(LogConfigurationProperty(logConfiguration))
+      override fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit):
+          Unit = logConfiguration(LogConfigurationProperty(logConfiguration))
 
-      public override fun memory(memory: Number) {
+      override fun memory(memory: Number) {
         cdkBuilder.memory(memory)
       }
 
-      public override fun mountPoints(mountPoints: IResolvable) {
+      override fun mountPoints(mountPoints: IResolvable) {
         cdkBuilder.mountPoints(mountPoints.let(IResolvable::unwrap))
       }
 
-      public override fun mountPoints(mountPoints: List<Any>) {
+      override fun mountPoints(mountPoints: List<Any>) {
         cdkBuilder.mountPoints(mountPoints)
       }
 
-      public override fun networkConfiguration(networkConfiguration: IResolvable) {
+      override fun networkConfiguration(networkConfiguration: IResolvable) {
         cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
+      override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
         cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84646023e3ec8692064dcfb9e9fad69fe2c3e7a874c2a70744d27f577b4c92e0")
-      public override
+      override
           fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit):
           Unit = networkConfiguration(NetworkConfigurationProperty(networkConfiguration))
 
-      public override fun privileged(privileged: Boolean) {
+      override fun privileged(privileged: Boolean) {
         cdkBuilder.privileged(privileged)
       }
 
-      public override fun privileged(privileged: IResolvable) {
+      override fun privileged(privileged: IResolvable) {
         cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
       }
 
-      public override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
+      override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
         cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
       }
 
-      public override fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
+      override fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
         cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable::unwrap))
       }
 
-      public override fun repositoryCredentials(repositoryCredentials: IResolvable) {
+      override fun repositoryCredentials(repositoryCredentials: IResolvable) {
         cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable::unwrap))
       }
 
-      public override
-          fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
+      override fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
         cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5a5f329b8daae4793f12cdc8e64a0f0ae7ea09fdfb022c71f7da4fb30cd56225")
-      public override
+      override
           fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty.Builder.() -> Unit):
           Unit = repositoryCredentials(RepositoryCredentialsProperty(repositoryCredentials))
 
-      public override fun resourceRequirements(resourceRequirements: IResolvable) {
+      override fun resourceRequirements(resourceRequirements: IResolvable) {
         cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
       }
 
-      public override fun resourceRequirements(resourceRequirements: List<Any>) {
+      override fun resourceRequirements(resourceRequirements: List<Any>) {
         cdkBuilder.resourceRequirements(resourceRequirements)
       }
 
-      public override fun runtimePlatform(runtimePlatform: IResolvable) {
+      override fun runtimePlatform(runtimePlatform: IResolvable) {
         cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
       }
 
-      public override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
+      override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
         cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0f72a76832d0064469b7780c971fbcac43944532b65a5d2c80f44a35167058d")
-      public override
-          fun runtimePlatform(runtimePlatform: RuntimePlatformProperty.Builder.() -> Unit): Unit =
-          runtimePlatform(RuntimePlatformProperty(runtimePlatform))
+      override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty.Builder.() -> Unit):
+          Unit = runtimePlatform(RuntimePlatformProperty(runtimePlatform))
 
-      public override fun secrets(secrets: IResolvable) {
+      override fun secrets(secrets: IResolvable) {
         cdkBuilder.secrets(secrets.let(IResolvable::unwrap))
       }
 
-      public override fun secrets(secrets: List<Any>) {
+      override fun secrets(secrets: List<Any>) {
         cdkBuilder.secrets(secrets)
       }
 
-      public override fun ulimits(ulimits: IResolvable) {
+      override fun ulimits(ulimits: IResolvable) {
         cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
       }
 
-      public override fun ulimits(ulimits: List<Any>) {
+      override fun ulimits(ulimits: List<Any>) {
         cdkBuilder.ulimits(ulimits)
       }
 
-      public override fun user(user: String) {
+      override fun user(user: String) {
         cdkBuilder.user(user)
       }
 
-      public override fun vcpus(vcpus: Number) {
+      override fun vcpus(vcpus: Number) {
         cdkBuilder.vcpus(vcpus)
       }
 
-      public override fun volumes(volumes: IResolvable) {
+      override fun volumes(volumes: IResolvable) {
         cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
       }
 
-      public override fun volumes(volumes: List<Any>) {
+      override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes)
       }
 
@@ -3229,52 +3029,52 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty,
     ) : ContainerPropertiesProperty {
-      public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-      public override fun environment(): Any? = unwrap(this).getEnvironment()
+      override fun environment(): Any? = unwrap(this).getEnvironment()
 
-      public override fun ephemeralStorage(): Any? = unwrap(this).getEphemeralStorage()
+      override fun ephemeralStorage(): Any? = unwrap(this).getEphemeralStorage()
 
-      public override fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
+      override fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
 
-      public override fun fargatePlatformConfiguration(): Any? =
+      override fun fargatePlatformConfiguration(): Any? =
           unwrap(this).getFargatePlatformConfiguration()
 
-      public override fun image(): String = unwrap(this).getImage()
+      override fun image(): String = unwrap(this).getImage()
 
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun jobRoleArn(): String? = unwrap(this).getJobRoleArn()
+      override fun jobRoleArn(): String? = unwrap(this).getJobRoleArn()
 
-      public override fun linuxParameters(): Any? = unwrap(this).getLinuxParameters()
+      override fun linuxParameters(): Any? = unwrap(this).getLinuxParameters()
 
-      public override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
+      override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
 
-      public override fun memory(): Number? = unwrap(this).getMemory()
+      override fun memory(): Number? = unwrap(this).getMemory()
 
-      public override fun mountPoints(): Any? = unwrap(this).getMountPoints()
+      override fun mountPoints(): Any? = unwrap(this).getMountPoints()
 
-      public override fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
+      override fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
-      public override fun privileged(): Any? = unwrap(this).getPrivileged()
+      override fun privileged(): Any? = unwrap(this).getPrivileged()
 
-      public override fun readonlyRootFilesystem(): Any? = unwrap(this).getReadonlyRootFilesystem()
+      override fun readonlyRootFilesystem(): Any? = unwrap(this).getReadonlyRootFilesystem()
 
-      public override fun repositoryCredentials(): Any? = unwrap(this).getRepositoryCredentials()
+      override fun repositoryCredentials(): Any? = unwrap(this).getRepositoryCredentials()
 
-      public override fun resourceRequirements(): Any? = unwrap(this).getResourceRequirements()
+      override fun resourceRequirements(): Any? = unwrap(this).getResourceRequirements()
 
-      public override fun runtimePlatform(): Any? = unwrap(this).getRuntimePlatform()
+      override fun runtimePlatform(): Any? = unwrap(this).getRuntimePlatform()
 
-      public override fun secrets(): Any? = unwrap(this).getSecrets()
+      override fun secrets(): Any? = unwrap(this).getSecrets()
 
-      public override fun ulimits(): Any? = unwrap(this).getUlimits()
+      override fun ulimits(): Any? = unwrap(this).getUlimits()
 
-      public override fun user(): String? = unwrap(this).getUser()
+      override fun user(): String? = unwrap(this).getUser()
 
-      public override fun vcpus(): Number? = unwrap(this).getVcpus()
+      override fun vcpus(): Number? = unwrap(this).getVcpus()
 
-      public override fun volumes(): Any? = unwrap(this).getVolumes()
+      override fun volumes(): Any? = unwrap(this).getVolumes()
     }
 
     public companion object {
@@ -3303,14 +3103,11 @@ public open class CfnJobDefinition internal constructor(
     public fun evaluateOnExit(): Any? = unwrap(this).getEvaluateOnExit()
 
     public interface Builder {
-      public fun attempts(attempts: Number) {
-      }
+      public fun attempts(attempts: Number)
 
-      public fun evaluateOnExit(evaluateOnExit: IResolvable) {
-      }
+      public fun evaluateOnExit(evaluateOnExit: IResolvable)
 
-      public fun evaluateOnExit(evaluateOnExit: List<Any>) {
-      }
+      public fun evaluateOnExit(evaluateOnExit: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3318,15 +3115,15 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty.builder()
 
-      public override fun attempts(attempts: Number) {
+      override fun attempts(attempts: Number) {
         cdkBuilder.attempts(attempts)
       }
 
-      public override fun evaluateOnExit(evaluateOnExit: IResolvable) {
+      override fun evaluateOnExit(evaluateOnExit: IResolvable) {
         cdkBuilder.evaluateOnExit(evaluateOnExit.let(IResolvable::unwrap))
       }
 
-      public override fun evaluateOnExit(evaluateOnExit: List<Any>) {
+      override fun evaluateOnExit(evaluateOnExit: List<Any>) {
         cdkBuilder.evaluateOnExit(evaluateOnExit)
       }
 
@@ -3339,9 +3136,9 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty,
     ) : RetryStrategyProperty {
-      public override fun attempts(): Number? = unwrap(this).getAttempts()
+      override fun attempts(): Number? = unwrap(this).getAttempts()
 
-      public override fun evaluateOnExit(): Any? = unwrap(this).getEvaluateOnExit()
+      override fun evaluateOnExit(): Any? = unwrap(this).getEvaluateOnExit()
     }
 
     public companion object {
@@ -3372,17 +3169,13 @@ public open class CfnJobDefinition internal constructor(
     public fun readOnly(): Any? = unwrap(this).getReadOnly()
 
     public interface Builder {
-      public fun mountPath(mountPath: String) {
-      }
+      public fun mountPath(mountPath: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun readOnly(readOnly: Boolean) {
-      }
+      public fun readOnly(readOnly: Boolean)
 
-      public fun readOnly(readOnly: IResolvable) {
-      }
+      public fun readOnly(readOnly: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3391,19 +3184,19 @@ public open class CfnJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty.builder()
 
-      public override fun mountPath(mountPath: String) {
+      override fun mountPath(mountPath: String) {
         cdkBuilder.mountPath(mountPath)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun readOnly(readOnly: Boolean) {
+      override fun readOnly(readOnly: Boolean) {
         cdkBuilder.readOnly(readOnly)
       }
 
-      public override fun readOnly(readOnly: IResolvable) {
+      override fun readOnly(readOnly: IResolvable) {
         cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
       }
 
@@ -3416,11 +3209,11 @@ public open class CfnJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty,
     ) : EksContainerVolumeMountProperty {
-      public override fun mountPath(): String? = unwrap(this).getMountPath()
+      override fun mountPath(): String? = unwrap(this).getMountPath()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun readOnly(): Any? = unwrap(this).getReadOnly()
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
     }
 
     public companion object {
@@ -3451,14 +3244,11 @@ public open class CfnJobDefinition internal constructor(
     public fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
 
     public interface Builder {
-      public fun containerPath(containerPath: String) {
-      }
+      public fun containerPath(containerPath: String)
 
-      public fun hostPath(hostPath: String) {
-      }
+      public fun hostPath(hostPath: String)
 
-      public fun permissions(permissions: List<String>) {
-      }
+      public fun permissions(permissions: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -3466,15 +3256,15 @@ public open class CfnJobDefinition internal constructor(
           software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty.builder()
 
-      public override fun containerPath(containerPath: String) {
+      override fun containerPath(containerPath: String) {
         cdkBuilder.containerPath(containerPath)
       }
 
-      public override fun hostPath(hostPath: String) {
+      override fun hostPath(hostPath: String) {
         cdkBuilder.hostPath(hostPath)
       }
 
-      public override fun permissions(permissions: List<String>) {
+      override fun permissions(permissions: List<String>) {
         cdkBuilder.permissions(permissions)
       }
 
@@ -3485,11 +3275,11 @@ public open class CfnJobDefinition internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty,
     ) : DeviceProperty {
-      public override fun containerPath(): String? = unwrap(this).getContainerPath()
+      override fun containerPath(): String? = unwrap(this).getContainerPath()
 
-      public override fun hostPath(): String? = unwrap(this).getHostPath()
+      override fun hostPath(): String? = unwrap(this).getHostPath()
 
-      public override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
+      override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
     }
 
     public companion object {

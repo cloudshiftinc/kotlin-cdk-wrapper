@@ -64,7 +64,7 @@ public open class Pipeline internal constructor(
       unwrap(this).bindAsNotificationRuleSource(_scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   public open fun crossRegionSupport(): Map<String, CrossRegionSupport> =
-      unwrap(this).getCrossRegionSupport().mapValues { CrossRegionSupport.wrap(it.value)} ?:
+      unwrap(this).getCrossRegionSupport().mapValues{CrossRegionSupport.wrap(it.value)} ?:
       emptyMap()
 
   public override fun notifyOn(
@@ -200,44 +200,31 @@ public open class Pipeline internal constructor(
   public open fun stages(): List<IStage> = unwrap(this).getStages().map(IStage::wrap)
 
   public interface Builder {
-    public fun artifactBucket(artifactBucket: IBucket) {
-    }
+    public fun artifactBucket(artifactBucket: IBucket)
 
-    public fun crossAccountKeys(crossAccountKeys: Boolean) {
-    }
+    public fun crossAccountKeys(crossAccountKeys: Boolean)
 
-    public fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>) {
-    }
+    public fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>)
 
-    public fun enableKeyRotation(enableKeyRotation: Boolean) {
-    }
+    public fun enableKeyRotation(enableKeyRotation: Boolean)
 
-    public fun executionMode(executionMode: ExecutionMode) {
-    }
+    public fun executionMode(executionMode: ExecutionMode)
 
-    public fun pipelineName(pipelineName: String) {
-    }
+    public fun pipelineName(pipelineName: String)
 
-    public fun pipelineType(pipelineType: PipelineType) {
-    }
+    public fun pipelineType(pipelineType: PipelineType)
 
-    public fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean) {
-    }
+    public fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean)
 
-    public fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
-    }
+    public fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun stages(stages: List<StageProps>) {
-    }
+    public fun stages(stages: List<StageProps>)
 
-    public fun triggers(triggers: List<TriggerProps>) {
-    }
+    public fun triggers(triggers: List<TriggerProps>)
 
-    public fun variables(variables: List<Variable>) {
-    }
+    public fun variables(variables: List<Variable>)
   }
 
   private class BuilderImpl(
@@ -247,57 +234,56 @@ public open class Pipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.Pipeline.Builder =
         software.amazon.awscdk.services.codepipeline.Pipeline.Builder.create(scope, id)
 
-    public override fun artifactBucket(artifactBucket: IBucket) {
+    override fun artifactBucket(artifactBucket: IBucket) {
       cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
     }
 
-    public override fun crossAccountKeys(crossAccountKeys: Boolean) {
+    override fun crossAccountKeys(crossAccountKeys: Boolean) {
       cdkBuilder.crossAccountKeys(crossAccountKeys)
     }
 
-    public override
+    override
         fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>) {
-      cdkBuilder.crossRegionReplicationBuckets(crossRegionReplicationBuckets.mapValues {
-          IBucket.unwrap(it.value)})
+      cdkBuilder.crossRegionReplicationBuckets(crossRegionReplicationBuckets.mapValues{IBucket.unwrap(it.value)})
     }
 
-    public override fun enableKeyRotation(enableKeyRotation: Boolean) {
+    override fun enableKeyRotation(enableKeyRotation: Boolean) {
       cdkBuilder.enableKeyRotation(enableKeyRotation)
     }
 
-    public override fun executionMode(executionMode: ExecutionMode) {
+    override fun executionMode(executionMode: ExecutionMode) {
       cdkBuilder.executionMode(executionMode.let(ExecutionMode::unwrap))
     }
 
-    public override fun pipelineName(pipelineName: String) {
+    override fun pipelineName(pipelineName: String) {
       cdkBuilder.pipelineName(pipelineName)
     }
 
-    public override fun pipelineType(pipelineType: PipelineType) {
+    override fun pipelineType(pipelineType: PipelineType) {
       cdkBuilder.pipelineType(pipelineType.let(PipelineType::unwrap))
     }
 
-    public override fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean) {
+    override fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean) {
       cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate)
     }
 
-    public override fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
+    override fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
       cdkBuilder.reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun stages(stages: List<StageProps>) {
+    override fun stages(stages: List<StageProps>) {
       cdkBuilder.stages(stages.map(StageProps::unwrap))
     }
 
-    public override fun triggers(triggers: List<TriggerProps>) {
+    override fun triggers(triggers: List<TriggerProps>) {
       cdkBuilder.triggers(triggers.map(TriggerProps::unwrap))
     }
 
-    public override fun variables(variables: List<Variable>) {
+    override fun variables(variables: List<Variable>) {
       cdkBuilder.variables(variables.map(Variable::unwrap))
     }
 

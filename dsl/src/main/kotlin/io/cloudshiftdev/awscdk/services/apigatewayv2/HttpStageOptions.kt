@@ -10,57 +10,51 @@ public interface HttpStageOptions : StageOptions {
   public fun stageName(): String? = unwrap(this).getStageName()
 
   public interface Builder {
-    public fun autoDeploy(autoDeploy: Boolean) {
-    }
+    public fun autoDeploy(autoDeploy: Boolean)
 
-    public fun domainMapping(domainMapping: DomainMappingOptions) {
-    }
+    public fun domainMapping(domainMapping: DomainMappingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e049956e85c6fd40c9350d27ab422c47bb1920fc6b62cb61a50c1cb3917f973")
-    public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit) {
-    }
+    public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun throttle(throttle: ThrottleSettings) {
-    }
+    public fun throttle(throttle: ThrottleSettings)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15c7212dfd2d64ea3217da10398f302c9d464d62b0b898c6bc3fa60e57e8a958")
-    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit) {
-    }
+    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpStageOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpStageOptions.builder()
 
-    public override fun autoDeploy(autoDeploy: Boolean) {
+    override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
     }
 
-    public override fun domainMapping(domainMapping: DomainMappingOptions) {
+    override fun domainMapping(domainMapping: DomainMappingOptions) {
       cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e049956e85c6fd40c9350d27ab422c47bb1920fc6b62cb61a50c1cb3917f973")
-    public override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit
-        = domainMapping(DomainMappingOptions(domainMapping))
+    override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit =
+        domainMapping(DomainMappingOptions(domainMapping))
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun throttle(throttle: ThrottleSettings) {
+    override fun throttle(throttle: ThrottleSettings) {
       cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15c7212dfd2d64ea3217da10398f302c9d464d62b0b898c6bc3fa60e57e8a958")
-    public override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
+    override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
         throttle(ThrottleSettings(throttle))
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpStageOptions =
@@ -70,14 +64,14 @@ public interface HttpStageOptions : StageOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageOptions,
   ) : HttpStageOptions {
-    public override fun autoDeploy(): Boolean? = unwrap(this).getAutoDeploy()
+    override fun autoDeploy(): Boolean? = unwrap(this).getAutoDeploy()
 
-    public override fun domainMapping(): DomainMappingOptions? =
+    override fun domainMapping(): DomainMappingOptions? =
         unwrap(this).getDomainMapping()?.let(DomainMappingOptions::wrap)
 
-    public override fun stageName(): String? = unwrap(this).getStageName()
+    override fun stageName(): String? = unwrap(this).getStageName()
 
-    public override fun throttle(): ThrottleSettings? =
+    override fun throttle(): ThrottleSettings? =
         unwrap(this).getThrottle()?.let(ThrottleSettings::wrap)
   }
 

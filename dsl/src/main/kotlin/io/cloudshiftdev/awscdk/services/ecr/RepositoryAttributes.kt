@@ -9,22 +9,20 @@ public interface RepositoryAttributes {
   public fun repositoryName(): String
 
   public interface Builder {
-    public fun repositoryArn(repositoryArn: String) {
-    }
+    public fun repositoryArn(repositoryArn: String)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecr.RepositoryAttributes.Builder =
         software.amazon.awscdk.services.ecr.RepositoryAttributes.builder()
 
-    public override fun repositoryArn(repositoryArn: String) {
+    override fun repositoryArn(repositoryArn: String) {
       cdkBuilder.repositoryArn(repositoryArn)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
@@ -35,9 +33,9 @@ public interface RepositoryAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecr.RepositoryAttributes,
   ) : RepositoryAttributes {
-    public override fun repositoryArn(): String = unwrap(this).getRepositoryArn()
+    override fun repositoryArn(): String = unwrap(this).getRepositoryArn()
 
-    public override fun repositoryName(): String = unwrap(this).getRepositoryName()
+    override fun repositoryName(): String = unwrap(this).getRepositoryName()
   }
 
   public companion object {

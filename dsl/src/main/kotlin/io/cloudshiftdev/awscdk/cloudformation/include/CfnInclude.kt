@@ -56,20 +56,15 @@ public open class CfnInclude internal constructor(
       unwrap(this).getRule(ruleName).let(CfnRule::wrap)
 
   public interface Builder {
-    public fun allowCyclicalReferences(allowCyclicalReferences: Boolean) {
-    }
+    public fun allowCyclicalReferences(allowCyclicalReferences: Boolean)
 
-    public fun loadNestedStacks(loadNestedStacks: Map<String, CfnIncludeProps>) {
-    }
+    public fun loadNestedStacks(loadNestedStacks: Map<String, CfnIncludeProps>)
 
-    public fun parameters(parameters: Map<String, Any>) {
-    }
+    public fun parameters(parameters: Map<String, Any>)
 
-    public fun preserveLogicalIds(preserveLogicalIds: Boolean) {
-    }
+    public fun preserveLogicalIds(preserveLogicalIds: Boolean)
 
-    public fun templateFile(templateFile: String) {
-    }
+    public fun templateFile(templateFile: String)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnInclude internal constructor(
     private val cdkBuilder: software.amazon.awscdk.cloudformation.include.CfnInclude.Builder =
         software.amazon.awscdk.cloudformation.include.CfnInclude.Builder.create(scope, id)
 
-    public override fun allowCyclicalReferences(allowCyclicalReferences: Boolean) {
+    override fun allowCyclicalReferences(allowCyclicalReferences: Boolean) {
       cdkBuilder.allowCyclicalReferences(allowCyclicalReferences)
     }
 
-    public override fun loadNestedStacks(loadNestedStacks: Map<String, CfnIncludeProps>) {
-      cdkBuilder.loadNestedStacks(loadNestedStacks.mapValues { CfnIncludeProps.unwrap(it.value)})
+    override fun loadNestedStacks(loadNestedStacks: Map<String, CfnIncludeProps>) {
+      cdkBuilder.loadNestedStacks(loadNestedStacks.mapValues{CfnIncludeProps.unwrap(it.value)})
     }
 
-    public override fun parameters(parameters: Map<String, Any>) {
+    override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun preserveLogicalIds(preserveLogicalIds: Boolean) {
+    override fun preserveLogicalIds(preserveLogicalIds: Boolean) {
       cdkBuilder.preserveLogicalIds(preserveLogicalIds)
     }
 
-    public override fun templateFile(templateFile: String) {
+    override fun templateFile(templateFile: String) {
       cdkBuilder.templateFile(templateFile)
     }
 

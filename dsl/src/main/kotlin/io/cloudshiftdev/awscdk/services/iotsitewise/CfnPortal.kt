@@ -80,29 +80,21 @@ public open class CfnPortal internal constructor(
   }
 
   public interface Builder {
-    public fun alarms(alarms: Any) {
-    }
+    public fun alarms(alarms: Any)
 
-    public fun notificationSenderEmail(notificationSenderEmail: String) {
-    }
+    public fun notificationSenderEmail(notificationSenderEmail: String)
 
-    public fun portalAuthMode(portalAuthMode: String) {
-    }
+    public fun portalAuthMode(portalAuthMode: String)
 
-    public fun portalContactEmail(portalContactEmail: String) {
-    }
+    public fun portalContactEmail(portalContactEmail: String)
 
-    public fun portalDescription(portalDescription: String) {
-    }
+    public fun portalDescription(portalDescription: String)
 
-    public fun portalName(portalName: String) {
-    }
+    public fun portalName(portalName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -112,35 +104,35 @@ public open class CfnPortal internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnPortal.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnPortal.Builder.create(scope, id)
 
-    public override fun alarms(alarms: Any) {
+    override fun alarms(alarms: Any) {
       cdkBuilder.alarms(alarms)
     }
 
-    public override fun notificationSenderEmail(notificationSenderEmail: String) {
+    override fun notificationSenderEmail(notificationSenderEmail: String) {
       cdkBuilder.notificationSenderEmail(notificationSenderEmail)
     }
 
-    public override fun portalAuthMode(portalAuthMode: String) {
+    override fun portalAuthMode(portalAuthMode: String) {
       cdkBuilder.portalAuthMode(portalAuthMode)
     }
 
-    public override fun portalContactEmail(portalContactEmail: String) {
+    override fun portalContactEmail(portalContactEmail: String) {
       cdkBuilder.portalContactEmail(portalContactEmail)
     }
 
-    public override fun portalDescription(portalDescription: String) {
+    override fun portalDescription(portalDescription: String) {
       cdkBuilder.portalDescription(portalDescription)
     }
 
-    public override fun portalName(portalName: String) {
+    override fun portalName(portalName: String) {
       cdkBuilder.portalName(portalName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -174,11 +166,9 @@ public open class CfnPortal internal constructor(
     public fun notificationLambdaArn(): String? = unwrap(this).getNotificationLambdaArn()
 
     public interface Builder {
-      public fun alarmRoleArn(alarmRoleArn: String) {
-      }
+      public fun alarmRoleArn(alarmRoleArn: String)
 
-      public fun notificationLambdaArn(notificationLambdaArn: String) {
-      }
+      public fun notificationLambdaArn(notificationLambdaArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -186,11 +176,11 @@ public open class CfnPortal internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty.builder()
 
-      public override fun alarmRoleArn(alarmRoleArn: String) {
+      override fun alarmRoleArn(alarmRoleArn: String) {
         cdkBuilder.alarmRoleArn(alarmRoleArn)
       }
 
-      public override fun notificationLambdaArn(notificationLambdaArn: String) {
+      override fun notificationLambdaArn(notificationLambdaArn: String) {
         cdkBuilder.notificationLambdaArn(notificationLambdaArn)
       }
 
@@ -201,9 +191,9 @@ public open class CfnPortal internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortal.AlarmsProperty,
     ) : AlarmsProperty {
-      public override fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
+      override fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
 
-      public override fun notificationLambdaArn(): String? = unwrap(this).getNotificationLambdaArn()
+      override fun notificationLambdaArn(): String? = unwrap(this).getNotificationLambdaArn()
     }
 
     public companion object {

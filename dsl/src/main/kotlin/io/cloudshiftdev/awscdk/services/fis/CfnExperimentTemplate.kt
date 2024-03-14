@@ -109,56 +109,41 @@ public open class CfnExperimentTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: IResolvable) {
-    }
+    public fun actions(actions: IResolvable)
 
-    public fun actions(actions: Map<String, Any>) {
-    }
+    public fun actions(actions: Map<String, Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun experimentOptions(experimentOptions: IResolvable) {
-    }
+    public fun experimentOptions(experimentOptions: IResolvable)
 
-    public fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty) {
-    }
+    public fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a8b2a656422787a97a708d2580eec4e1c60a9b5cc48903943948c7f8119b43d0")
     public
-        fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty.Builder.() -> Unit) {
-    }
+        fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty.Builder.() -> Unit)
 
-    public fun logConfiguration(logConfiguration: IResolvable) {
-    }
+    public fun logConfiguration(logConfiguration: IResolvable)
 
-    public fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty) {
-    }
+    public fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cfe63142c92764aa56294f606a6c0d291ce9297af2391022a95186c98cf92218")
     public
-        fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun stopConditions(stopConditions: IResolvable) {
-    }
+    public fun stopConditions(stopConditions: IResolvable)
 
-    public fun stopConditions(stopConditions: List<Any>) {
-    }
+    public fun stopConditions(stopConditions: List<Any>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun targets(targets: IResolvable) {
-    }
+    public fun targets(targets: IResolvable)
 
-    public fun targets(targets: Map<String, Any>) {
-    }
+    public fun targets(targets: Map<String, Any>)
   }
 
   private class BuilderImpl(
@@ -168,69 +153,67 @@ public open class CfnExperimentTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fis.CfnExperimentTemplate.Builder =
         software.amazon.awscdk.services.fis.CfnExperimentTemplate.Builder.create(scope, id)
 
-    public override fun actions(actions: IResolvable) {
+    override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable::unwrap))
     }
 
-    public override fun actions(actions: Map<String, Any>) {
+    override fun actions(actions: Map<String, Any>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun experimentOptions(experimentOptions: IResolvable) {
+    override fun experimentOptions(experimentOptions: IResolvable) {
       cdkBuilder.experimentOptions(experimentOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty) {
+    override fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty) {
       cdkBuilder.experimentOptions(experimentOptions.let(ExperimentTemplateExperimentOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a8b2a656422787a97a708d2580eec4e1c60a9b5cc48903943948c7f8119b43d0")
-    public override
+    override
         fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty.Builder.() -> Unit):
         Unit = experimentOptions(ExperimentTemplateExperimentOptionsProperty(experimentOptions))
 
-    public override fun logConfiguration(logConfiguration: IResolvable) {
+    override fun logConfiguration(logConfiguration: IResolvable) {
       cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty) {
+    override fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty) {
       cdkBuilder.logConfiguration(logConfiguration.let(ExperimentTemplateLogConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cfe63142c92764aa56294f606a6c0d291ce9297af2391022a95186c98cf92218")
-    public override
+    override
         fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty.Builder.() -> Unit):
         Unit = logConfiguration(ExperimentTemplateLogConfigurationProperty(logConfiguration))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun stopConditions(stopConditions: IResolvable) {
+    override fun stopConditions(stopConditions: IResolvable) {
       cdkBuilder.stopConditions(stopConditions.let(IResolvable::unwrap))
     }
 
-    public override fun stopConditions(stopConditions: List<Any>) {
+    override fun stopConditions(stopConditions: List<Any>) {
       cdkBuilder.stopConditions(stopConditions)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun targets(targets: IResolvable) {
+    override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
 
-    public override fun targets(targets: Map<String, Any>) {
+    override fun targets(targets: Map<String, Any>) {
       cdkBuilder.targets(targets)
     }
 
@@ -265,11 +248,9 @@ public open class CfnExperimentTemplate internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -278,11 +259,11 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty.builder()
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -295,9 +276,9 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty,
     ) : ExperimentTemplateTargetFilterProperty {
-      public override fun path(): String = unwrap(this).getPath()
+      override fun path(): String = unwrap(this).getPath()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -335,32 +316,23 @@ public open class CfnExperimentTemplate internal constructor(
     public fun selectionMode(): String
 
     public interface Builder {
-      public fun filters(filters: IResolvable) {
-      }
+      public fun filters(filters: IResolvable)
 
-      public fun filters(filters: List<Any>) {
-      }
+      public fun filters(filters: List<Any>)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: Map<String, String>) {
-      }
+      public fun parameters(parameters: Map<String, String>)
 
-      public fun resourceArns(resourceArns: List<String>) {
-      }
+      public fun resourceArns(resourceArns: List<String>)
 
-      public fun resourceTags(resourceTags: IResolvable) {
-      }
+      public fun resourceTags(resourceTags: IResolvable)
 
-      public fun resourceTags(resourceTags: Map<String, String>) {
-      }
+      public fun resourceTags(resourceTags: Map<String, String>)
 
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun selectionMode(selectionMode: String) {
-      }
+      public fun selectionMode(selectionMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -369,39 +341,39 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty.builder()
 
-      public override fun filters(filters: IResolvable) {
+      override fun filters(filters: IResolvable) {
         cdkBuilder.filters(filters.let(IResolvable::unwrap))
       }
 
-      public override fun filters(filters: List<Any>) {
+      override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: Map<String, String>) {
+      override fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun resourceArns(resourceArns: List<String>) {
+      override fun resourceArns(resourceArns: List<String>) {
         cdkBuilder.resourceArns(resourceArns)
       }
 
-      public override fun resourceTags(resourceTags: IResolvable) {
+      override fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
       }
 
-      public override fun resourceTags(resourceTags: Map<String, String>) {
+      override fun resourceTags(resourceTags: Map<String, String>) {
         cdkBuilder.resourceTags(resourceTags)
       }
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun selectionMode(selectionMode: String) {
+      override fun selectionMode(selectionMode: String) {
         cdkBuilder.selectionMode(selectionMode)
       }
 
@@ -414,18 +386,17 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty,
     ) : ExperimentTemplateTargetProperty {
-      public override fun filters(): Any? = unwrap(this).getFilters()
+      override fun filters(): Any? = unwrap(this).getFilters()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?:
-          emptyList()
+      override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
 
-      public override fun resourceTags(): Any? = unwrap(this).getResourceTags()
+      override fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
-      public override fun resourceType(): String = unwrap(this).getResourceType()
+      override fun resourceType(): String = unwrap(this).getResourceType()
 
-      public override fun selectionMode(): String = unwrap(this).getSelectionMode()
+      override fun selectionMode(): String = unwrap(this).getSelectionMode()
     }
 
     public companion object {
@@ -456,14 +427,11 @@ public open class CfnExperimentTemplate internal constructor(
     public fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
 
     public interface Builder {
-      public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any) {
-      }
+      public fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any)
 
-      public fun logSchemaVersion(logSchemaVersion: Number) {
-      }
+      public fun logSchemaVersion(logSchemaVersion: Number)
 
-      public fun s3Configuration(s3Configuration: Any) {
-      }
+      public fun s3Configuration(s3Configuration: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -472,15 +440,15 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.builder()
 
-      public override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any) {
+      override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: Any) {
         cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
       }
 
-      public override fun logSchemaVersion(logSchemaVersion: Number) {
+      override fun logSchemaVersion(logSchemaVersion: Number) {
         cdkBuilder.logSchemaVersion(logSchemaVersion)
       }
 
-      public override fun s3Configuration(s3Configuration: Any) {
+      override fun s3Configuration(s3Configuration: Any) {
         cdkBuilder.s3Configuration(s3Configuration)
       }
 
@@ -493,12 +461,12 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty,
     ) : ExperimentTemplateLogConfigurationProperty {
-      public override fun cloudWatchLogsConfiguration(): Any? =
+      override fun cloudWatchLogsConfiguration(): Any? =
           unwrap(this).getCloudWatchLogsConfiguration()
 
-      public override fun logSchemaVersion(): Number = unwrap(this).getLogSchemaVersion()
+      override fun logSchemaVersion(): Number = unwrap(this).getLogSchemaVersion()
 
-      public override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
     }
 
     public companion object {
@@ -528,11 +496,9 @@ public open class CfnExperimentTemplate internal constructor(
     public fun emptyTargetResolutionMode(): String? = unwrap(this).getEmptyTargetResolutionMode()
 
     public interface Builder {
-      public fun accountTargeting(accountTargeting: String) {
-      }
+      public fun accountTargeting(accountTargeting: String)
 
-      public fun emptyTargetResolutionMode(emptyTargetResolutionMode: String) {
-      }
+      public fun emptyTargetResolutionMode(emptyTargetResolutionMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -541,11 +507,11 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.builder()
 
-      public override fun accountTargeting(accountTargeting: String) {
+      override fun accountTargeting(accountTargeting: String) {
         cdkBuilder.accountTargeting(accountTargeting)
       }
 
-      public override fun emptyTargetResolutionMode(emptyTargetResolutionMode: String) {
+      override fun emptyTargetResolutionMode(emptyTargetResolutionMode: String) {
         cdkBuilder.emptyTargetResolutionMode(emptyTargetResolutionMode)
       }
 
@@ -558,9 +524,9 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty,
     ) : ExperimentTemplateExperimentOptionsProperty {
-      public override fun accountTargeting(): String? = unwrap(this).getAccountTargeting()
+      override fun accountTargeting(): String? = unwrap(this).getAccountTargeting()
 
-      public override fun emptyTargetResolutionMode(): String? =
+      override fun emptyTargetResolutionMode(): String? =
           unwrap(this).getEmptyTargetResolutionMode()
     }
 
@@ -591,11 +557,9 @@ public open class CfnExperimentTemplate internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -604,11 +568,11 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -621,9 +585,9 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty,
     ) : S3ConfigurationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -652,11 +616,9 @@ public open class CfnExperimentTemplate internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun source(source: String) {
-      }
+      public fun source(source: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -665,11 +627,11 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty.builder()
 
-      public override fun source(source: String) {
+      override fun source(source: String) {
         cdkBuilder.source(source)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -682,9 +644,9 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty,
     ) : ExperimentTemplateStopConditionProperty {
-      public override fun source(): String = unwrap(this).getSource()
+      override fun source(): String = unwrap(this).getSource()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -720,26 +682,19 @@ public open class CfnExperimentTemplate internal constructor(
     public fun targets(): Any? = unwrap(this).getTargets()
 
     public interface Builder {
-      public fun actionId(actionId: String) {
-      }
+      public fun actionId(actionId: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: Map<String, String>) {
-      }
+      public fun parameters(parameters: Map<String, String>)
 
-      public fun startAfter(startAfter: List<String>) {
-      }
+      public fun startAfter(startAfter: List<String>)
 
-      public fun targets(targets: IResolvable) {
-      }
+      public fun targets(targets: IResolvable)
 
-      public fun targets(targets: Map<String, String>) {
-      }
+      public fun targets(targets: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -748,31 +703,31 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty.builder()
 
-      public override fun actionId(actionId: String) {
+      override fun actionId(actionId: String) {
         cdkBuilder.actionId(actionId)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: Map<String, String>) {
+      override fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun startAfter(startAfter: List<String>) {
+      override fun startAfter(startAfter: List<String>) {
         cdkBuilder.startAfter(startAfter)
       }
 
-      public override fun targets(targets: IResolvable) {
+      override fun targets(targets: IResolvable) {
         cdkBuilder.targets(targets.let(IResolvable::unwrap))
       }
 
-      public override fun targets(targets: Map<String, String>) {
+      override fun targets(targets: Map<String, String>) {
         cdkBuilder.targets(targets)
       }
 
@@ -785,15 +740,15 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty,
     ) : ExperimentTemplateActionProperty {
-      public override fun actionId(): String = unwrap(this).getActionId()
+      override fun actionId(): String = unwrap(this).getActionId()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun startAfter(): List<String> = unwrap(this).getStartAfter() ?: emptyList()
+      override fun startAfter(): List<String> = unwrap(this).getStartAfter() ?: emptyList()
 
-      public override fun targets(): Any? = unwrap(this).getTargets()
+      override fun targets(): Any? = unwrap(this).getTargets()
     }
 
     public companion object {
@@ -820,8 +775,7 @@ public open class CfnExperimentTemplate internal constructor(
     public fun logGroupArn(): String
 
     public interface Builder {
-      public fun logGroupArn(logGroupArn: String) {
-      }
+      public fun logGroupArn(logGroupArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -830,7 +784,7 @@ public open class CfnExperimentTemplate internal constructor(
           =
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty.builder()
 
-      public override fun logGroupArn(logGroupArn: String) {
+      override fun logGroupArn(logGroupArn: String) {
         cdkBuilder.logGroupArn(logGroupArn)
       }
 
@@ -843,7 +797,7 @@ public open class CfnExperimentTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty,
     ) : CloudWatchLogsConfigurationProperty {
-      public override fun logGroupArn(): String = unwrap(this).getLogGroupArn()
+      override fun logGroupArn(): String = unwrap(this).getLogGroupArn()
     }
 
     public companion object {

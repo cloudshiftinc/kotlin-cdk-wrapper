@@ -9,11 +9,9 @@ public interface StringAttributeConstraints {
   public fun minLen(): Number? = unwrap(this).getMinLen()
 
   public interface Builder {
-    public fun maxLen(maxLen: Number) {
-    }
+    public fun maxLen(maxLen: Number)
 
-    public fun minLen(minLen: Number) {
-    }
+    public fun minLen(minLen: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface StringAttributeConstraints {
         software.amazon.awscdk.services.cognito.StringAttributeConstraints.Builder =
         software.amazon.awscdk.services.cognito.StringAttributeConstraints.builder()
 
-    public override fun maxLen(maxLen: Number) {
+    override fun maxLen(maxLen: Number) {
       cdkBuilder.maxLen(maxLen)
     }
 
-    public override fun minLen(minLen: Number) {
+    override fun minLen(minLen: Number) {
       cdkBuilder.minLen(minLen)
     }
 
@@ -36,9 +34,9 @@ public interface StringAttributeConstraints {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.StringAttributeConstraints,
   ) : StringAttributeConstraints {
-    public override fun maxLen(): Number? = unwrap(this).getMaxLen()
+    override fun maxLen(): Number? = unwrap(this).getMaxLen()
 
-    public override fun minLen(): Number? = unwrap(this).getMinLen()
+    override fun minLen(): Number? = unwrap(this).getMinLen()
   }
 
   public companion object {

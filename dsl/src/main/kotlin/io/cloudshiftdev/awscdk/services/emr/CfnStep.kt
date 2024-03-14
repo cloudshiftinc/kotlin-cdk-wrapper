@@ -56,25 +56,19 @@ public open class CfnStep internal constructor(
   }
 
   public interface Builder {
-    public fun actionOnFailure(actionOnFailure: String) {
-    }
+    public fun actionOnFailure(actionOnFailure: String)
 
-    public fun hadoopJarStep(hadoopJarStep: IResolvable) {
-    }
+    public fun hadoopJarStep(hadoopJarStep: IResolvable)
 
-    public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
-    }
+    public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d72595de5e5e291d59e6ffe4185f7b5fae105fab39fe862ae0898e1d644bb0f")
-    public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit) {
-    }
+    public fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit)
 
-    public fun jobFlowId(jobFlowId: String) {
-    }
+    public fun jobFlowId(jobFlowId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -84,29 +78,28 @@ public open class CfnStep internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emr.CfnStep.Builder =
         software.amazon.awscdk.services.emr.CfnStep.Builder.create(scope, id)
 
-    public override fun actionOnFailure(actionOnFailure: String) {
+    override fun actionOnFailure(actionOnFailure: String) {
       cdkBuilder.actionOnFailure(actionOnFailure)
     }
 
-    public override fun hadoopJarStep(hadoopJarStep: IResolvable) {
+    override fun hadoopJarStep(hadoopJarStep: IResolvable) {
       cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable::unwrap))
     }
 
-    public override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
+    override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
       cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d72595de5e5e291d59e6ffe4185f7b5fae105fab39fe862ae0898e1d644bb0f")
-    public override
-        fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit): Unit =
-        hadoopJarStep(HadoopJarStepConfigProperty(hadoopJarStep))
+    override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty.Builder.() -> Unit): Unit
+        = hadoopJarStep(HadoopJarStepConfigProperty(hadoopJarStep))
 
-    public override fun jobFlowId(jobFlowId: String) {
+    override fun jobFlowId(jobFlowId: String) {
       cdkBuilder.jobFlowId(jobFlowId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -144,20 +137,15 @@ public open class CfnStep internal constructor(
     public fun stepProperties(): Any? = unwrap(this).getStepProperties()
 
     public interface Builder {
-      public fun args(args: List<String>) {
-      }
+      public fun args(args: List<String>)
 
-      public fun jar(jar: String) {
-      }
+      public fun jar(jar: String)
 
-      public fun mainClass(mainClass: String) {
-      }
+      public fun mainClass(mainClass: String)
 
-      public fun stepProperties(stepProperties: IResolvable) {
-      }
+      public fun stepProperties(stepProperties: IResolvable)
 
-      public fun stepProperties(stepProperties: List<Any>) {
-      }
+      public fun stepProperties(stepProperties: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -165,23 +153,23 @@ public open class CfnStep internal constructor(
           software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty.Builder =
           software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty.builder()
 
-      public override fun args(args: List<String>) {
+      override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
 
-      public override fun jar(jar: String) {
+      override fun jar(jar: String) {
         cdkBuilder.jar(jar)
       }
 
-      public override fun mainClass(mainClass: String) {
+      override fun mainClass(mainClass: String) {
         cdkBuilder.mainClass(mainClass)
       }
 
-      public override fun stepProperties(stepProperties: IResolvable) {
+      override fun stepProperties(stepProperties: IResolvable) {
         cdkBuilder.stepProperties(stepProperties.let(IResolvable::unwrap))
       }
 
-      public override fun stepProperties(stepProperties: List<Any>) {
+      override fun stepProperties(stepProperties: List<Any>) {
         cdkBuilder.stepProperties(stepProperties)
       }
 
@@ -193,13 +181,13 @@ public open class CfnStep internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty,
     ) : HadoopJarStepConfigProperty {
-      public override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
+      override fun args(): List<String> = unwrap(this).getArgs() ?: emptyList()
 
-      public override fun jar(): String = unwrap(this).getJar()
+      override fun jar(): String = unwrap(this).getJar()
 
-      public override fun mainClass(): String? = unwrap(this).getMainClass()
+      override fun mainClass(): String? = unwrap(this).getMainClass()
 
-      public override fun stepProperties(): Any? = unwrap(this).getStepProperties()
+      override fun stepProperties(): Any? = unwrap(this).getStepProperties()
     }
 
     public companion object {
@@ -228,22 +216,20 @@ public open class CfnStep internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty.Builder =
           software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -254,9 +240,9 @@ public open class CfnStep internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty,
     ) : KeyValueProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

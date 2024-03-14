@@ -9,22 +9,20 @@ public interface LayerVersionPermission {
   public fun organizationId(): String? = unwrap(this).getOrganizationId()
 
   public interface Builder {
-    public fun accountId(accountId: String) {
-    }
+    public fun accountId(accountId: String)
 
-    public fun organizationId(organizationId: String) {
-    }
+    public fun organizationId(organizationId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.LayerVersionPermission.Builder =
         software.amazon.awscdk.services.lambda.LayerVersionPermission.builder()
 
-    public override fun accountId(accountId: String) {
+    override fun accountId(accountId: String) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun organizationId(organizationId: String) {
+    override fun organizationId(organizationId: String) {
       cdkBuilder.organizationId(organizationId)
     }
 
@@ -35,9 +33,9 @@ public interface LayerVersionPermission {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.LayerVersionPermission,
   ) : LayerVersionPermission {
-    public override fun accountId(): String = unwrap(this).getAccountId()
+    override fun accountId(): String = unwrap(this).getAccountId()
 
-    public override fun organizationId(): String? = unwrap(this).getOrganizationId()
+    override fun organizationId(): String? = unwrap(this).getOrganizationId()
   }
 
   public companion object {

@@ -28,78 +28,68 @@ public interface DockerRunOptions {
   public fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
 
   public interface Builder {
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun entrypoint(entrypoint: List<String>) {
-    }
+    public fun entrypoint(entrypoint: List<String>)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun network(network: String) {
-    }
+    public fun network(network: String)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun securityOpt(securityOpt: String) {
-    }
+    public fun securityOpt(securityOpt: String)
 
-    public fun user(user: String) {
-    }
+    public fun user(user: String)
 
-    public fun volumes(volumes: List<DockerVolume>) {
-    }
+    public fun volumes(volumes: List<DockerVolume>)
 
-    public fun volumesFrom(volumesFrom: List<String>) {
-    }
+    public fun volumesFrom(volumesFrom: List<String>)
 
-    public fun workingDirectory(workingDirectory: String) {
-    }
+    public fun workingDirectory(workingDirectory: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.DockerRunOptions.Builder =
         software.amazon.awscdk.DockerRunOptions.builder()
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun entrypoint(entrypoint: List<String>) {
+    override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun network(network: String) {
+    override fun network(network: String) {
       cdkBuilder.network(network)
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun securityOpt(securityOpt: String) {
+    override fun securityOpt(securityOpt: String) {
       cdkBuilder.securityOpt(securityOpt)
     }
 
-    public override fun user(user: String) {
+    override fun user(user: String) {
       cdkBuilder.user(user)
     }
 
-    public override fun volumes(volumes: List<DockerVolume>) {
+    override fun volumes(volumes: List<DockerVolume>) {
       cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
     }
 
-    public override fun volumesFrom(volumesFrom: List<String>) {
+    override fun volumesFrom(volumesFrom: List<String>) {
       cdkBuilder.volumesFrom(volumesFrom)
     }
 
-    public override fun workingDirectory(workingDirectory: String) {
+    override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)
     }
 
@@ -109,27 +99,26 @@ public interface DockerRunOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.DockerRunOptions,
   ) : DockerRunOptions {
-    public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+    override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-    public override fun entrypoint(): List<String> = unwrap(this).getEntrypoint() ?: emptyList()
+    override fun entrypoint(): List<String> = unwrap(this).getEntrypoint() ?: emptyList()
 
-    public override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?:
-        emptyMap()
+    override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?: emptyMap()
 
-    public override fun network(): String? = unwrap(this).getNetwork()
+    override fun network(): String? = unwrap(this).getNetwork()
 
-    public override fun platform(): String? = unwrap(this).getPlatform()
+    override fun platform(): String? = unwrap(this).getPlatform()
 
-    public override fun securityOpt(): String? = unwrap(this).getSecurityOpt()
+    override fun securityOpt(): String? = unwrap(this).getSecurityOpt()
 
-    public override fun user(): String? = unwrap(this).getUser()
+    override fun user(): String? = unwrap(this).getUser()
 
-    public override fun volumes(): List<DockerVolume> =
-        unwrap(this).getVolumes()?.map(DockerVolume::wrap) ?: emptyList()
+    override fun volumes(): List<DockerVolume> = unwrap(this).getVolumes()?.map(DockerVolume::wrap)
+        ?: emptyList()
 
-    public override fun volumesFrom(): List<String> = unwrap(this).getVolumesFrom() ?: emptyList()
+    override fun volumesFrom(): List<String> = unwrap(this).getVolumesFrom() ?: emptyList()
 
-    public override fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
+    override fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
   }
 
   public companion object {

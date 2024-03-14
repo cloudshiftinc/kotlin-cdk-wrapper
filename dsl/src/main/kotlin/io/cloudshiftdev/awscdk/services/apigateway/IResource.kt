@@ -78,26 +78,25 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.IResource,
   ) : IResource {
-    public override fun addCorsPreflight(arg0: CorsOptions): Method =
+    override fun addCorsPreflight(arg0: CorsOptions): Method =
         unwrap(this).addCorsPreflight(arg0.let(CorsOptions::unwrap)).let(Method::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c9e16d54d77b097f76148268956eb3dad5caf87139623f2131b4e7bdec2a2b0b")
-    public override fun addCorsPreflight(arg0: CorsOptions.Builder.() -> Unit): Method =
+    override fun addCorsPreflight(arg0: CorsOptions.Builder.() -> Unit): Method =
         addCorsPreflight(CorsOptions(arg0))
 
-    public override fun addMethod(arg0: String): Method =
-        unwrap(this).addMethod(arg0).let(Method::wrap)
+    override fun addMethod(arg0: String): Method = unwrap(this).addMethod(arg0).let(Method::wrap)
 
-    public override fun addMethod(arg0: String, arg1: Integration): Method =
-        unwrap(this).addMethod(arg0, arg1.let(Integration::unwrap)).let(Method::wrap)
+    override fun addMethod(arg0: String, arg1: Integration): Method = unwrap(this).addMethod(arg0,
+        arg1.let(Integration::unwrap)).let(Method::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8787b99e9c374ffaac05faacd3953f7d78c9a3fe47bc6f0e47650d9cfcd0b026")
-    public override fun addMethod(arg0: String, arg1: Integration.Builder.() -> Unit): Method =
+    override fun addMethod(arg0: String, arg1: Integration.Builder.() -> Unit): Method =
         addMethod(arg0, Integration(arg1))
 
-    public override fun addMethod(
+    override fun addMethod(
       arg0: String,
       arg1: Integration,
       arg2: MethodOptions,
@@ -106,67 +105,66 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("678224fda3a86593b90e20fc667cc6cc789d55db060db427dc585e28cd34194f")
-    public override fun addMethod(
+    override fun addMethod(
       arg0: String,
       arg1: Integration,
       arg2: MethodOptions.Builder.() -> Unit,
     ): Method = addMethod(arg0, arg1, MethodOptions(arg2))
 
-    public override fun addProxy(): ProxyResource = unwrap(this).addProxy().let(ProxyResource::wrap)
+    override fun addProxy(): ProxyResource = unwrap(this).addProxy().let(ProxyResource::wrap)
 
-    public override fun addProxy(arg0: ProxyResourceOptions): ProxyResource =
+    override fun addProxy(arg0: ProxyResourceOptions): ProxyResource =
         unwrap(this).addProxy(arg0.let(ProxyResourceOptions::unwrap)).let(ProxyResource::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e84ad41e5cb5588993b50d4f00b7ff5abf72997c3b967125daa364452463d902")
-    public override fun addProxy(arg0: ProxyResourceOptions.Builder.() -> Unit): ProxyResource =
+    override fun addProxy(arg0: ProxyResourceOptions.Builder.() -> Unit): ProxyResource =
         addProxy(ProxyResourceOptions(arg0))
 
-    public override fun addResource(arg0: String): Resource =
+    override fun addResource(arg0: String): Resource =
         unwrap(this).addResource(arg0).let(Resource::wrap)
 
-    public override fun addResource(arg0: String, arg1: ResourceOptions): Resource =
+    override fun addResource(arg0: String, arg1: ResourceOptions): Resource =
         unwrap(this).addResource(arg0, arg1.let(ResourceOptions::unwrap)).let(Resource::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eb83d81205a9facdb81a248cc63a5f2cfa36f56638d8e79cd6decf73a0c14b00")
-    public override fun addResource(arg0: String, arg1: ResourceOptions.Builder.() -> Unit):
-        Resource = addResource(arg0, ResourceOptions(arg1))
+    override fun addResource(arg0: String, arg1: ResourceOptions.Builder.() -> Unit): Resource =
+        addResource(arg0, ResourceOptions(arg1))
 
-    public override fun api(): IRestApi = unwrap(this).getApi().let(IRestApi::wrap)
+    override fun api(): IRestApi = unwrap(this).getApi().let(IRestApi::wrap)
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun defaultCorsPreflightOptions(): CorsOptions? =
+    override fun defaultCorsPreflightOptions(): CorsOptions? =
         unwrap(this).getDefaultCorsPreflightOptions()?.let(CorsOptions::wrap)
 
-    public override fun defaultIntegration(): Integration? =
+    override fun defaultIntegration(): Integration? =
         unwrap(this).getDefaultIntegration()?.let(Integration::wrap)
 
-    public override fun defaultMethodOptions(): MethodOptions? =
+    override fun defaultMethodOptions(): MethodOptions? =
         unwrap(this).getDefaultMethodOptions()?.let(MethodOptions::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun parentResource(): IResource? =
+    override fun parentResource(): IResource? =
         unwrap(this).getParentResource()?.let(IResource::wrap)
 
-    public override fun path(): String = unwrap(this).getPath()
+    override fun path(): String = unwrap(this).getPath()
 
-    public override fun resource(arg0: String): IResource? =
+    override fun resource(arg0: String): IResource? =
         unwrap(this).getResource(arg0)?.let(IResource::wrap)
 
-    public override fun resourceForPath(arg0: String): Resource =
+    override fun resourceForPath(arg0: String): Resource =
         unwrap(this).resourceForPath(arg0).let(Resource::wrap)
 
-    public override fun resourceId(): String = unwrap(this).getResourceId()
+    override fun resourceId(): String = unwrap(this).getResourceId()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

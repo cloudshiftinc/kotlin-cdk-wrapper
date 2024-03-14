@@ -16,43 +16,38 @@ public interface InstanceEngineBindOptions {
   public fun timezone(): String? = unwrap(this).getTimezone()
 
   public interface Builder {
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun optionGroup(optionGroup: IOptionGroup) {
-    }
+    public fun optionGroup(optionGroup: IOptionGroup)
 
-    public fun s3ExportRole(s3ExportRole: IRole) {
-    }
+    public fun s3ExportRole(s3ExportRole: IRole)
 
-    public fun s3ImportRole(s3ImportRole: IRole) {
-    }
+    public fun s3ImportRole(s3ImportRole: IRole)
 
-    public fun timezone(timezone: String) {
-    }
+    public fun timezone(timezone: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.InstanceEngineBindOptions.Builder =
         software.amazon.awscdk.services.rds.InstanceEngineBindOptions.builder()
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun optionGroup(optionGroup: IOptionGroup) {
+    override fun optionGroup(optionGroup: IOptionGroup) {
       cdkBuilder.optionGroup(optionGroup.let(IOptionGroup::unwrap))
     }
 
-    public override fun s3ExportRole(s3ExportRole: IRole) {
+    override fun s3ExportRole(s3ExportRole: IRole) {
       cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
     }
 
-    public override fun s3ImportRole(s3ImportRole: IRole) {
+    override fun s3ImportRole(s3ImportRole: IRole) {
       cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
     }
 
-    public override fun timezone(timezone: String) {
+    override fun timezone(timezone: String) {
       cdkBuilder.timezone(timezone)
     }
 
@@ -63,16 +58,16 @@ public interface InstanceEngineBindOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.InstanceEngineBindOptions,
   ) : InstanceEngineBindOptions {
-    public override fun domain(): String? = unwrap(this).getDomain()
+    override fun domain(): String? = unwrap(this).getDomain()
 
-    public override fun optionGroup(): IOptionGroup? =
+    override fun optionGroup(): IOptionGroup? =
         unwrap(this).getOptionGroup()?.let(IOptionGroup::wrap)
 
-    public override fun s3ExportRole(): IRole? = unwrap(this).getS3ExportRole()?.let(IRole::wrap)
+    override fun s3ExportRole(): IRole? = unwrap(this).getS3ExportRole()?.let(IRole::wrap)
 
-    public override fun s3ImportRole(): IRole? = unwrap(this).getS3ImportRole()?.let(IRole::wrap)
+    override fun s3ImportRole(): IRole? = unwrap(this).getS3ImportRole()?.let(IRole::wrap)
 
-    public override fun timezone(): String? = unwrap(this).getTimezone()
+    override fun timezone(): String? = unwrap(this).getTimezone()
   }
 
   public companion object {

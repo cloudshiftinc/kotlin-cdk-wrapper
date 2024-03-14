@@ -37,11 +37,9 @@ public open class CfnDedicatedIpPool internal constructor(
   }
 
   public interface Builder {
-    public fun poolName(poolName: String) {
-    }
+    public fun poolName(poolName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -51,11 +49,11 @@ public open class CfnDedicatedIpPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool.Builder
         = software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool.Builder.create(scope, id)
 
-    public override fun poolName(poolName: String) {
+    override fun poolName(poolName: String) {
       cdkBuilder.poolName(poolName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

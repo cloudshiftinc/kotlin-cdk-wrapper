@@ -9,22 +9,20 @@ public interface ResourceEnvironment {
   public fun region(): String
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.ResourceEnvironment.Builder =
         software.amazon.awscdk.ResourceEnvironment.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -34,9 +32,9 @@ public interface ResourceEnvironment {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ResourceEnvironment,
   ) : ResourceEnvironment {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
   }
 
   public companion object {

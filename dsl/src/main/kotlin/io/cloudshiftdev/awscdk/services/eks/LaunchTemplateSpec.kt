@@ -9,22 +9,20 @@ public interface LaunchTemplateSpec {
   public fun version(): String? = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.LaunchTemplateSpec.Builder =
         software.amazon.awscdk.services.eks.LaunchTemplateSpec.builder()
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -34,9 +32,9 @@ public interface LaunchTemplateSpec {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.LaunchTemplateSpec,
   ) : LaunchTemplateSpec {
-    public override fun id(): String = unwrap(this).getId()
+    override fun id(): String = unwrap(this).getId()
 
-    public override fun version(): String? = unwrap(this).getVersion()
+    override fun version(): String? = unwrap(this).getVersion()
   }
 
   public companion object {

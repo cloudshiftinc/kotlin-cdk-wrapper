@@ -87,40 +87,30 @@ public open class CfnBackupVault internal constructor(
       notifications(NotificationObjectTypeProperty(`value`))
 
   public interface Builder {
-    public fun accessPolicy(accessPolicy: Any) {
-    }
+    public fun accessPolicy(accessPolicy: Any)
 
-    public fun backupVaultName(backupVaultName: String) {
-    }
+    public fun backupVaultName(backupVaultName: String)
 
-    public fun backupVaultTags(backupVaultTags: Map<String, String>) {
-    }
+    public fun backupVaultTags(backupVaultTags: Map<String, String>)
 
-    public fun encryptionKeyArn(encryptionKeyArn: String) {
-    }
+    public fun encryptionKeyArn(encryptionKeyArn: String)
 
-    public fun lockConfiguration(lockConfiguration: IResolvable) {
-    }
+    public fun lockConfiguration(lockConfiguration: IResolvable)
 
-    public fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty) {
-    }
+    public fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4a71402da52619170c8b22fd24486cad861ae95c5fa738d771d76af2f598f4f1")
     public
-        fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty.Builder.() -> Unit) {
-    }
+        fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty.Builder.() -> Unit)
 
-    public fun notifications(notifications: IResolvable) {
-    }
+    public fun notifications(notifications: IResolvable)
 
-    public fun notifications(notifications: NotificationObjectTypeProperty) {
-    }
+    public fun notifications(notifications: NotificationObjectTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf094274cd7b72dd9667bbc2fa72561eb35043b71063a300537d895068062283")
-    public fun notifications(notifications: NotificationObjectTypeProperty.Builder.() -> Unit) {
-    }
+    public fun notifications(notifications: NotificationObjectTypeProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -130,49 +120,48 @@ public open class CfnBackupVault internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnBackupVault.Builder =
         software.amazon.awscdk.services.backup.CfnBackupVault.Builder.create(scope, id)
 
-    public override fun accessPolicy(accessPolicy: Any) {
+    override fun accessPolicy(accessPolicy: Any) {
       cdkBuilder.accessPolicy(accessPolicy)
     }
 
-    public override fun backupVaultName(backupVaultName: String) {
+    override fun backupVaultName(backupVaultName: String) {
       cdkBuilder.backupVaultName(backupVaultName)
     }
 
-    public override fun backupVaultTags(backupVaultTags: Map<String, String>) {
+    override fun backupVaultTags(backupVaultTags: Map<String, String>) {
       cdkBuilder.backupVaultTags(backupVaultTags)
     }
 
-    public override fun encryptionKeyArn(encryptionKeyArn: String) {
+    override fun encryptionKeyArn(encryptionKeyArn: String) {
       cdkBuilder.encryptionKeyArn(encryptionKeyArn)
     }
 
-    public override fun lockConfiguration(lockConfiguration: IResolvable) {
+    override fun lockConfiguration(lockConfiguration: IResolvable) {
       cdkBuilder.lockConfiguration(lockConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty) {
+    override fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty) {
       cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfigurationTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4a71402da52619170c8b22fd24486cad861ae95c5fa738d771d76af2f598f4f1")
-    public override
+    override
         fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty.Builder.() -> Unit):
         Unit = lockConfiguration(LockConfigurationTypeProperty(lockConfiguration))
 
-    public override fun notifications(notifications: IResolvable) {
+    override fun notifications(notifications: IResolvable) {
       cdkBuilder.notifications(notifications.let(IResolvable::unwrap))
     }
 
-    public override fun notifications(notifications: NotificationObjectTypeProperty) {
+    override fun notifications(notifications: NotificationObjectTypeProperty) {
       cdkBuilder.notifications(notifications.let(NotificationObjectTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf094274cd7b72dd9667bbc2fa72561eb35043b71063a300537d895068062283")
-    public override
-        fun notifications(notifications: NotificationObjectTypeProperty.Builder.() -> Unit): Unit =
-        notifications(NotificationObjectTypeProperty(notifications))
+    override fun notifications(notifications: NotificationObjectTypeProperty.Builder.() -> Unit):
+        Unit = notifications(NotificationObjectTypeProperty(notifications))
 
     public fun build(): software.amazon.awscdk.services.backup.CfnBackupVault = cdkBuilder.build()
   }
@@ -204,11 +193,9 @@ public open class CfnBackupVault internal constructor(
     public fun snsTopicArn(): String
 
     public interface Builder {
-      public fun backupVaultEvents(backupVaultEvents: List<String>) {
-      }
+      public fun backupVaultEvents(backupVaultEvents: List<String>)
 
-      public fun snsTopicArn(snsTopicArn: String) {
-      }
+      public fun snsTopicArn(snsTopicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -217,11 +204,11 @@ public open class CfnBackupVault internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty.builder()
 
-      public override fun backupVaultEvents(backupVaultEvents: List<String>) {
+      override fun backupVaultEvents(backupVaultEvents: List<String>) {
         cdkBuilder.backupVaultEvents(backupVaultEvents)
       }
 
-      public override fun snsTopicArn(snsTopicArn: String) {
+      override fun snsTopicArn(snsTopicArn: String) {
         cdkBuilder.snsTopicArn(snsTopicArn)
       }
 
@@ -234,10 +221,10 @@ public open class CfnBackupVault internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
     ) : NotificationObjectTypeProperty {
-      public override fun backupVaultEvents(): List<String> = unwrap(this).getBackupVaultEvents() ?:
+      override fun backupVaultEvents(): List<String> = unwrap(this).getBackupVaultEvents() ?:
           emptyList()
 
-      public override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
+      override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
     }
 
     public companion object {
@@ -268,14 +255,11 @@ public open class CfnBackupVault internal constructor(
     public fun minRetentionDays(): Number
 
     public interface Builder {
-      public fun changeableForDays(changeableForDays: Number) {
-      }
+      public fun changeableForDays(changeableForDays: Number)
 
-      public fun maxRetentionDays(maxRetentionDays: Number) {
-      }
+      public fun maxRetentionDays(maxRetentionDays: Number)
 
-      public fun minRetentionDays(minRetentionDays: Number) {
-      }
+      public fun minRetentionDays(minRetentionDays: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -284,15 +268,15 @@ public open class CfnBackupVault internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty.builder()
 
-      public override fun changeableForDays(changeableForDays: Number) {
+      override fun changeableForDays(changeableForDays: Number) {
         cdkBuilder.changeableForDays(changeableForDays)
       }
 
-      public override fun maxRetentionDays(maxRetentionDays: Number) {
+      override fun maxRetentionDays(maxRetentionDays: Number) {
         cdkBuilder.maxRetentionDays(maxRetentionDays)
       }
 
-      public override fun minRetentionDays(minRetentionDays: Number) {
+      override fun minRetentionDays(minRetentionDays: Number) {
         cdkBuilder.minRetentionDays(minRetentionDays)
       }
 
@@ -305,11 +289,11 @@ public open class CfnBackupVault internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupVault.LockConfigurationTypeProperty,
     ) : LockConfigurationTypeProperty {
-      public override fun changeableForDays(): Number? = unwrap(this).getChangeableForDays()
+      override fun changeableForDays(): Number? = unwrap(this).getChangeableForDays()
 
-      public override fun maxRetentionDays(): Number? = unwrap(this).getMaxRetentionDays()
+      override fun maxRetentionDays(): Number? = unwrap(this).getMaxRetentionDays()
 
-      public override fun minRetentionDays(): Number = unwrap(this).getMinRetentionDays()
+      override fun minRetentionDays(): Number = unwrap(this).getMinRetentionDays()
     }
 
     public companion object {

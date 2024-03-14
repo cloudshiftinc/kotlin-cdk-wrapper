@@ -12,26 +12,19 @@ public open class DynamoDbDataSource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.DynamoDbDataSource,
 ) : BackedDataSource(cdkObject) {
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readOnlyAccess(readOnlyAccess: Boolean) {
-    }
+    public fun readOnlyAccess(readOnlyAccess: Boolean)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
 
-    public fun table(table: ITable) {
-    }
+    public fun table(table: ITable)
 
-    public fun useCallerCredentials(useCallerCredentials: Boolean) {
-    }
+    public fun useCallerCredentials(useCallerCredentials: Boolean)
   }
 
   private class BuilderImpl(
@@ -41,31 +34,31 @@ public open class DynamoDbDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.DynamoDbDataSource.Builder =
         software.amazon.awscdk.services.appsync.DynamoDbDataSource.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readOnlyAccess(readOnlyAccess: Boolean) {
+    override fun readOnlyAccess(readOnlyAccess: Boolean) {
       cdkBuilder.readOnlyAccess(readOnlyAccess)
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 
-    public override fun table(table: ITable) {
+    override fun table(table: ITable) {
       cdkBuilder.table(table.let(ITable::unwrap))
     }
 
-    public override fun useCallerCredentials(useCallerCredentials: Boolean) {
+    override fun useCallerCredentials(useCallerCredentials: Boolean) {
       cdkBuilder.useCallerCredentials(useCallerCredentials)
     }
 

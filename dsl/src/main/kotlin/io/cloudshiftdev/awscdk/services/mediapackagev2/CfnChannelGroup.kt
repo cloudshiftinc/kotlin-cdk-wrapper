@@ -49,14 +49,11 @@ public open class CfnChannelGroup internal constructor(
   }
 
   public interface Builder {
-    public fun channelGroupName(channelGroupName: String) {
-    }
+    public fun channelGroupName(channelGroupName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -66,15 +63,15 @@ public open class CfnChannelGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup.Builder =
         software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup.Builder.create(scope, id)
 
-    public override fun channelGroupName(channelGroupName: String) {
+    override fun channelGroupName(channelGroupName: String) {
       cdkBuilder.channelGroupName(channelGroupName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

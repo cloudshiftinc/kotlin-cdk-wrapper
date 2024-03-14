@@ -16,17 +16,17 @@ public interface ISchema {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.ISchema,
   ) : ISchema {
-    public override fun bind(arg0: IGraphqlApi): ISchemaConfig =
+    override fun bind(arg0: IGraphqlApi): ISchemaConfig =
         unwrap(this).bind(arg0.let(IGraphqlApi::unwrap)).let(ISchemaConfig::wrap)
 
-    public override fun bind(arg0: IGraphqlApi, arg1: SchemaBindOptions): ISchemaConfig =
+    override fun bind(arg0: IGraphqlApi, arg1: SchemaBindOptions): ISchemaConfig =
         unwrap(this).bind(arg0.let(IGraphqlApi::unwrap),
         arg1.let(SchemaBindOptions::unwrap)).let(ISchemaConfig::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3253a33994cbabdedb099d3bff4a9072399bc8fd0da1ebf43f0cb17424e01216")
-    public override fun bind(arg0: IGraphqlApi, arg1: SchemaBindOptions.Builder.() -> Unit):
-        ISchemaConfig = bind(arg0, SchemaBindOptions(arg1))
+    override fun bind(arg0: IGraphqlApi, arg1: SchemaBindOptions.Builder.() -> Unit): ISchemaConfig
+        = bind(arg0, SchemaBindOptions(arg1))
   }
 
   public companion object {

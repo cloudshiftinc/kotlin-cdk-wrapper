@@ -12,29 +12,26 @@ public interface ResponseCustomHeader {
   public fun `value`(): String
 
   public interface Builder {
-    public fun `header`(`header`: String) {
-    }
+    public fun `header`(`header`: String)
 
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.ResponseCustomHeader.Builder
         = software.amazon.awscdk.services.cloudfront.ResponseCustomHeader.builder()
 
-    public override fun `header`(`header`: String) {
+    override fun `header`(`header`: String) {
       cdkBuilder.`header`(`header`)
     }
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -45,11 +42,11 @@ public interface ResponseCustomHeader {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseCustomHeader,
   ) : ResponseCustomHeader {
-    public override fun `header`(): String = unwrap(this).getHeader()
+    override fun `header`(): String = unwrap(this).getHeader()
 
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

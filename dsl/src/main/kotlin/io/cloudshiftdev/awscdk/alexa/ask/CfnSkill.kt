@@ -59,32 +59,25 @@ public open class CfnSkill internal constructor(
   }
 
   public interface Builder {
-    public fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-    }
+    public fun authenticationConfiguration(authenticationConfiguration: IResolvable)
 
     public
-        fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
-    }
+        fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37fcab36fae7d2b86f1f3810bf7474706e1cfd136bb24323f15e8c78bd597311")
     public
-        fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit)
 
-    public fun skillPackage(skillPackage: IResolvable) {
-    }
+    public fun skillPackage(skillPackage: IResolvable)
 
-    public fun skillPackage(skillPackage: SkillPackageProperty) {
-    }
+    public fun skillPackage(skillPackage: SkillPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27243d70f0bca05762c9ee33da5908e19d239fc2644517eff6d81ae2bca2f3e5")
-    public fun skillPackage(skillPackage: SkillPackageProperty.Builder.() -> Unit) {
-    }
+    public fun skillPackage(skillPackage: SkillPackageProperty.Builder.() -> Unit)
 
-    public fun vendorId(vendorId: String) {
-    }
+    public fun vendorId(vendorId: String)
   }
 
   private class BuilderImpl(
@@ -94,36 +87,36 @@ public open class CfnSkill internal constructor(
     private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.Builder =
         software.amazon.awscdk.alexa.ask.CfnSkill.Builder.create(scope, id)
 
-    public override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
+    override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
       cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
       cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37fcab36fae7d2b86f1f3810bf7474706e1cfd136bb24323f15e8c78bd597311")
-    public override
+    override
         fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit):
         Unit =
         authenticationConfiguration(AuthenticationConfigurationProperty(authenticationConfiguration))
 
-    public override fun skillPackage(skillPackage: IResolvable) {
+    override fun skillPackage(skillPackage: IResolvable) {
       cdkBuilder.skillPackage(skillPackage.let(IResolvable::unwrap))
     }
 
-    public override fun skillPackage(skillPackage: SkillPackageProperty) {
+    override fun skillPackage(skillPackage: SkillPackageProperty) {
       cdkBuilder.skillPackage(skillPackage.let(SkillPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27243d70f0bca05762c9ee33da5908e19d239fc2644517eff6d81ae2bca2f3e5")
-    public override fun skillPackage(skillPackage: SkillPackageProperty.Builder.() -> Unit): Unit =
+    override fun skillPackage(skillPackage: SkillPackageProperty.Builder.() -> Unit): Unit =
         skillPackage(SkillPackageProperty(skillPackage))
 
-    public override fun vendorId(vendorId: String) {
+    override fun vendorId(vendorId: String) {
       cdkBuilder.vendorId(vendorId)
     }
 
@@ -163,60 +156,53 @@ public open class CfnSkill internal constructor(
     public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
     public interface Builder {
-      public fun overrides(overrides: IResolvable) {
-      }
+      public fun overrides(overrides: IResolvable)
 
-      public fun overrides(overrides: OverridesProperty) {
-      }
+      public fun overrides(overrides: OverridesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d27def801a2afcb02efa20e1f4e48fe9a7fbf15c11da0ace5af7d3771bedbcc")
-      public fun overrides(overrides: OverridesProperty.Builder.() -> Unit) {
-      }
+      public fun overrides(overrides: OverridesProperty.Builder.() -> Unit)
 
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3BucketRole(s3BucketRole: String) {
-      }
+      public fun s3BucketRole(s3BucketRole: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
 
-      public fun s3ObjectVersion(s3ObjectVersion: String) {
-      }
+      public fun s3ObjectVersion(s3ObjectVersion: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty.Builder
           = software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty.builder()
 
-      public override fun overrides(overrides: IResolvable) {
+      override fun overrides(overrides: IResolvable) {
         cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
       }
 
-      public override fun overrides(overrides: OverridesProperty) {
+      override fun overrides(overrides: OverridesProperty) {
         cdkBuilder.overrides(overrides.let(OverridesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d27def801a2afcb02efa20e1f4e48fe9a7fbf15c11da0ace5af7d3771bedbcc")
-      public override fun overrides(overrides: OverridesProperty.Builder.() -> Unit): Unit =
+      override fun overrides(overrides: OverridesProperty.Builder.() -> Unit): Unit =
           overrides(OverridesProperty(overrides))
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3BucketRole(s3BucketRole: String) {
+      override fun s3BucketRole(s3BucketRole: String) {
         cdkBuilder.s3BucketRole(s3BucketRole)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
-      public override fun s3ObjectVersion(s3ObjectVersion: String) {
+      override fun s3ObjectVersion(s3ObjectVersion: String) {
         cdkBuilder.s3ObjectVersion(s3ObjectVersion)
       }
 
@@ -227,15 +213,15 @@ public open class CfnSkill internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
     ) : SkillPackageProperty {
-      public override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun overrides(): Any? = unwrap(this).getOverrides()
 
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3BucketRole(): String? = unwrap(this).getS3BucketRole()
+      override fun s3BucketRole(): String? = unwrap(this).getS3BucketRole()
 
-      public override fun s3Key(): String = unwrap(this).getS3Key()
+      override fun s3Key(): String = unwrap(this).getS3Key()
 
-      public override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
+      override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
     }
 
     public companion object {
@@ -261,15 +247,14 @@ public open class CfnSkill internal constructor(
     public fun manifest(): Any? = unwrap(this).getManifest()
 
     public interface Builder {
-      public fun manifest(manifest: Any) {
-      }
+      public fun manifest(manifest: Any)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.Builder =
           software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.builder()
 
-      public override fun manifest(manifest: Any) {
+      override fun manifest(manifest: Any) {
         cdkBuilder.manifest(manifest)
       }
 
@@ -280,7 +265,7 @@ public open class CfnSkill internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
     ) : OverridesProperty {
-      public override fun manifest(): Any? = unwrap(this).getManifest()
+      override fun manifest(): Any? = unwrap(this).getManifest()
     }
 
     public companion object {
@@ -310,14 +295,11 @@ public open class CfnSkill internal constructor(
     public fun refreshToken(): String
 
     public interface Builder {
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun clientSecret(clientSecret: String) {
-      }
+      public fun clientSecret(clientSecret: String)
 
-      public fun refreshToken(refreshToken: String) {
-      }
+      public fun refreshToken(refreshToken: String)
     }
 
     private class BuilderImpl : Builder {
@@ -325,15 +307,15 @@ public open class CfnSkill internal constructor(
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.Builder =
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.builder()
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun clientSecret(clientSecret: String) {
+      override fun clientSecret(clientSecret: String) {
         cdkBuilder.clientSecret(clientSecret)
       }
 
-      public override fun refreshToken(refreshToken: String) {
+      override fun refreshToken(refreshToken: String) {
         cdkBuilder.refreshToken(refreshToken)
       }
 
@@ -346,11 +328,11 @@ public open class CfnSkill internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
     ) : AuthenticationConfigurationProperty {
-      public override fun clientId(): String = unwrap(this).getClientId()
+      override fun clientId(): String = unwrap(this).getClientId()
 
-      public override fun clientSecret(): String = unwrap(this).getClientSecret()
+      override fun clientSecret(): String = unwrap(this).getClientSecret()
 
-      public override fun refreshToken(): String = unwrap(this).getRefreshToken()
+      override fun refreshToken(): String = unwrap(this).getRefreshToken()
     }
 
     public companion object {

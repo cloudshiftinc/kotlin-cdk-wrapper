@@ -34,30 +34,22 @@ public open class StringParameter internal constructor(
   public override fun stringValue(): String = unwrap(this).getStringValue()
 
   public interface Builder {
-    public fun allowedPattern(allowedPattern: String) {
-    }
+    public fun allowedPattern(allowedPattern: String)
 
-    public fun dataType(dataType: ParameterDataType) {
-    }
+    public fun dataType(dataType: ParameterDataType)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun parameterName(parameterName: String) {
-    }
+    public fun parameterName(parameterName: String)
 
-    public fun simpleName(simpleName: Boolean) {
-    }
+    public fun simpleName(simpleName: Boolean)
 
-    public fun stringValue(stringValue: String) {
-    }
+    public fun stringValue(stringValue: String)
 
-    public fun tier(tier: ParameterTier) {
-    }
+    public fun tier(tier: ParameterTier)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun type(type: ParameterType) {
-    }
+    public fun type(type: ParameterType)
   }
 
   private class BuilderImpl(
@@ -67,36 +59,36 @@ public open class StringParameter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.StringParameter.Builder =
         software.amazon.awscdk.services.ssm.StringParameter.Builder.create(scope, id)
 
-    public override fun allowedPattern(allowedPattern: String) {
+    override fun allowedPattern(allowedPattern: String) {
       cdkBuilder.allowedPattern(allowedPattern)
     }
 
-    public override fun dataType(dataType: ParameterDataType) {
+    override fun dataType(dataType: ParameterDataType) {
       cdkBuilder.dataType(dataType.let(ParameterDataType::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun parameterName(parameterName: String) {
+    override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
-    public override fun simpleName(simpleName: Boolean) {
+    override fun simpleName(simpleName: Boolean) {
       cdkBuilder.simpleName(simpleName)
     }
 
-    public override fun stringValue(stringValue: String) {
+    override fun stringValue(stringValue: String) {
       cdkBuilder.stringValue(stringValue)
     }
 
-    public override fun tier(tier: ParameterTier) {
+    override fun tier(tier: ParameterTier) {
       cdkBuilder.tier(tier.let(ParameterTier::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun type(type: ParameterType) {
+    override fun type(type: ParameterType) {
       cdkBuilder.type(type.let(ParameterType::unwrap))
     }
 

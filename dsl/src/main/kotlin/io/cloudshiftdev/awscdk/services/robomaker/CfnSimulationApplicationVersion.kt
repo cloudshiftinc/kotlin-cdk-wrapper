@@ -32,11 +32,9 @@ public open class CfnSimulationApplicationVersion internal constructor(
   }
 
   public interface Builder {
-    public fun application(application: String) {
-    }
+    public fun application(application: String)
 
-    public fun currentRevisionId(currentRevisionId: String) {
-    }
+    public fun currentRevisionId(currentRevisionId: String)
   }
 
   private class BuilderImpl(
@@ -48,11 +46,11 @@ public open class CfnSimulationApplicationVersion internal constructor(
         software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersion.Builder.create(scope,
         id)
 
-    public override fun application(application: String) {
+    override fun application(application: String) {
       cdkBuilder.application(application)
     }
 
-    public override fun currentRevisionId(currentRevisionId: String) {
+    override fun currentRevisionId(currentRevisionId: String) {
       cdkBuilder.currentRevisionId(currentRevisionId)
     }
 

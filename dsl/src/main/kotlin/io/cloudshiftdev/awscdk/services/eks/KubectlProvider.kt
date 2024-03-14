@@ -19,8 +19,7 @@ public open class KubectlProvider internal constructor(
   public override fun serviceToken(): String = unwrap(this).getServiceToken()
 
   public interface Builder {
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
   }
 
   private class BuilderImpl(
@@ -30,7 +29,7 @@ public open class KubectlProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubectlProvider.Builder =
         software.amazon.awscdk.services.eks.KubectlProvider.Builder.create(scope, id)
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 

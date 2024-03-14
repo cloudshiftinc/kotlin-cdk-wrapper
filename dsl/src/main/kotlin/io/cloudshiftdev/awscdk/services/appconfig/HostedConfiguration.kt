@@ -190,38 +190,27 @@ public open class HostedConfiguration internal constructor(
   public override fun versionNumber(): String? = unwrap(this).getVersionNumber()
 
   public interface Builder {
-    public fun application(application: IApplication) {
-    }
+    public fun application(application: IApplication)
 
-    public fun content(content: ConfigurationContent) {
-    }
+    public fun content(content: ConfigurationContent)
 
-    public fun deployTo(deployTo: List<IEnvironment>) {
-    }
+    public fun deployTo(deployTo: List<IEnvironment>)
 
-    public fun deploymentKey(deploymentKey: IKey) {
-    }
+    public fun deploymentKey(deploymentKey: IKey)
 
-    public fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
-    }
+    public fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun latestVersionNumber(latestVersionNumber: Number) {
-    }
+    public fun latestVersionNumber(latestVersionNumber: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun type(type: ConfigurationType) {
-    }
+    public fun type(type: ConfigurationType)
 
-    public fun validators(validators: List<IValidator>) {
-    }
+    public fun validators(validators: List<IValidator>)
 
-    public fun versionLabel(versionLabel: String) {
-    }
+    public fun versionLabel(versionLabel: String)
   }
 
   private class BuilderImpl(
@@ -231,47 +220,47 @@ public open class HostedConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.HostedConfiguration.Builder =
         software.amazon.awscdk.services.appconfig.HostedConfiguration.Builder.create(scope, id)
 
-    public override fun application(application: IApplication) {
+    override fun application(application: IApplication) {
       cdkBuilder.application(application.let(IApplication::unwrap))
     }
 
-    public override fun content(content: ConfigurationContent) {
+    override fun content(content: ConfigurationContent) {
       cdkBuilder.content(content.let(ConfigurationContent::unwrap))
     }
 
-    public override fun deployTo(deployTo: List<IEnvironment>) {
+    override fun deployTo(deployTo: List<IEnvironment>) {
       cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
     }
 
-    public override fun deploymentKey(deploymentKey: IKey) {
+    override fun deploymentKey(deploymentKey: IKey) {
       cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
     }
 
-    public override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
+    override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
       cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun latestVersionNumber(latestVersionNumber: Number) {
+    override fun latestVersionNumber(latestVersionNumber: Number) {
       cdkBuilder.latestVersionNumber(latestVersionNumber)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun type(type: ConfigurationType) {
+    override fun type(type: ConfigurationType) {
       cdkBuilder.type(type.let(ConfigurationType::unwrap))
     }
 
-    public override fun validators(validators: List<IValidator>) {
+    override fun validators(validators: List<IValidator>) {
       cdkBuilder.validators(validators.map(IValidator::unwrap))
     }
 
-    public override fun versionLabel(versionLabel: String) {
+    override fun versionLabel(versionLabel: String) {
       cdkBuilder.versionLabel(versionLabel)
     }
 

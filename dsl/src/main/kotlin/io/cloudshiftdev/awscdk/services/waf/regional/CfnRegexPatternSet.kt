@@ -32,11 +32,9 @@ public open class CfnRegexPatternSet internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun regexPatternStrings(regexPatternStrings: List<String>) {
-    }
+    public fun regexPatternStrings(regexPatternStrings: List<String>)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnRegexPatternSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet.Builder
         = software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun regexPatternStrings(regexPatternStrings: List<String>) {
+    override fun regexPatternStrings(regexPatternStrings: List<String>) {
       cdkBuilder.regexPatternStrings(regexPatternStrings)
     }
 

@@ -39,14 +39,11 @@ public open class CfnViewVersion internal constructor(
   }
 
   public interface Builder {
-    public fun versionDescription(versionDescription: String) {
-    }
+    public fun versionDescription(versionDescription: String)
 
-    public fun viewArn(viewArn: String) {
-    }
+    public fun viewArn(viewArn: String)
 
-    public fun viewContentSha256(viewContentSha256: String) {
-    }
+    public fun viewContentSha256(viewContentSha256: String)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnViewVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnViewVersion.Builder =
         software.amazon.awscdk.services.connect.CfnViewVersion.Builder.create(scope, id)
 
-    public override fun versionDescription(versionDescription: String) {
+    override fun versionDescription(versionDescription: String) {
       cdkBuilder.versionDescription(versionDescription)
     }
 
-    public override fun viewArn(viewArn: String) {
+    override fun viewArn(viewArn: String) {
       cdkBuilder.viewArn(viewArn)
     }
 
-    public override fun viewContentSha256(viewContentSha256: String) {
+    override fun viewContentSha256(viewContentSha256: String) {
       cdkBuilder.viewContentSha256(viewContentSha256)
     }
 

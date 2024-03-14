@@ -48,20 +48,15 @@ public open class CfnUser internal constructor(
   }
 
   public interface Builder {
-    public fun authenticationType(authenticationType: String) {
-    }
+    public fun authenticationType(authenticationType: String)
 
-    public fun firstName(firstName: String) {
-    }
+    public fun firstName(firstName: String)
 
-    public fun lastName(lastName: String) {
-    }
+    public fun lastName(lastName: String)
 
-    public fun messageAction(messageAction: String) {
-    }
+    public fun messageAction(messageAction: String)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -71,23 +66,23 @@ public open class CfnUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnUser.Builder =
         software.amazon.awscdk.services.appstream.CfnUser.Builder.create(scope, id)
 
-    public override fun authenticationType(authenticationType: String) {
+    override fun authenticationType(authenticationType: String) {
       cdkBuilder.authenticationType(authenticationType)
     }
 
-    public override fun firstName(firstName: String) {
+    override fun firstName(firstName: String) {
       cdkBuilder.firstName(firstName)
     }
 
-    public override fun lastName(lastName: String) {
+    override fun lastName(lastName: String) {
       cdkBuilder.lastName(lastName)
     }
 
-    public override fun messageAction(messageAction: String) {
+    override fun messageAction(messageAction: String) {
       cdkBuilder.messageAction(messageAction)
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 

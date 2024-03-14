@@ -28,11 +28,9 @@ public open class CfnWebACLAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun resourceArn(resourceArn: String) {
-    }
+    public fun resourceArn(resourceArn: String)
 
-    public fun webAclArn(webAclArn: String) {
-    }
+    public fun webAclArn(webAclArn: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnWebACLAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wafv2.CfnWebACLAssociation.Builder =
         software.amazon.awscdk.services.wafv2.CfnWebACLAssociation.Builder.create(scope, id)
 
-    public override fun resourceArn(resourceArn: String) {
+    override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
-    public override fun webAclArn(webAclArn: String) {
+    override fun webAclArn(webAclArn: String) {
       cdkBuilder.webAclArn(webAclArn)
     }
 

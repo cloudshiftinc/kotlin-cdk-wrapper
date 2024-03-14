@@ -24,23 +24,17 @@ public open class StepScalingAction internal constructor(
   public open fun scalingPolicyArn(): String = unwrap(this).getScalingPolicyArn()
 
   public interface Builder {
-    public fun adjustmentType(adjustmentType: AdjustmentType) {
-    }
+    public fun adjustmentType(adjustmentType: AdjustmentType)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    }
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType)
 
-    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    }
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun scalingTarget(scalingTarget: IScalableTarget) {
-    }
+    public fun scalingTarget(scalingTarget: IScalableTarget)
   }
 
   private class BuilderImpl(
@@ -52,27 +46,27 @@ public open class StepScalingAction internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.StepScalingAction.Builder.create(scope,
         id)
 
-    public override fun adjustmentType(adjustmentType: AdjustmentType) {
+    override fun adjustmentType(adjustmentType: AdjustmentType) {
       cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+    override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
       cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
     }
 
-    public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+    override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
       cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun scalingTarget(scalingTarget: IScalableTarget) {
+    override fun scalingTarget(scalingTarget: IScalableTarget) {
       cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
     }
 

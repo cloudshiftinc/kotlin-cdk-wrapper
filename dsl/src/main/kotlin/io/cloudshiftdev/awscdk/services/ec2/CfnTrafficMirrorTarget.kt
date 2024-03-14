@@ -56,20 +56,15 @@ public open class CfnTrafficMirrorTarget internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId: String) {
-    }
+    public fun gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
 
-    public fun networkLoadBalancerArn(networkLoadBalancerArn: String) {
-    }
+    public fun networkLoadBalancerArn(networkLoadBalancerArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnTrafficMirrorTarget internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTrafficMirrorTarget.Builder =
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorTarget.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId: String) {
+    override fun gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId: String) {
       cdkBuilder.gatewayLoadBalancerEndpointId(gatewayLoadBalancerEndpointId)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
-    public override fun networkLoadBalancerArn(networkLoadBalancerArn: String) {
+    override fun networkLoadBalancerArn(networkLoadBalancerArn: String) {
       cdkBuilder.networkLoadBalancerArn(networkLoadBalancerArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

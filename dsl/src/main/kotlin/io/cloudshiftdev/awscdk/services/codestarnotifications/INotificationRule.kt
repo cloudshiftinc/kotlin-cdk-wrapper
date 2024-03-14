@@ -16,21 +16,20 @@ public interface INotificationRule : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codestarnotifications.INotificationRule,
   ) : INotificationRule {
-    public override fun addTarget(arg0: INotificationRuleTarget): Boolean =
+    override fun addTarget(arg0: INotificationRuleTarget): Boolean =
         unwrap(this).addTarget(arg0.let(INotificationRuleTarget::unwrap))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun notificationRuleArn(): String = unwrap(this).getNotificationRuleArn()
+    override fun notificationRuleArn(): String = unwrap(this).getNotificationRuleArn()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

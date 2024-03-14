@@ -73,20 +73,15 @@ public open class CfnEndpointAccess internal constructor(
   }
 
   public interface Builder {
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun endpointName(endpointName: String) {
-    }
+    public fun endpointName(endpointName: String)
 
-    public fun resourceOwner(resourceOwner: String) {
-    }
+    public fun resourceOwner(resourceOwner: String)
 
-    public fun subnetGroupName(subnetGroupName: String) {
-    }
+    public fun subnetGroupName(subnetGroupName: String)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -96,23 +91,23 @@ public open class CfnEndpointAccess internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.redshift.CfnEndpointAccess.Builder =
         software.amazon.awscdk.services.redshift.CfnEndpointAccess.Builder.create(scope, id)
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun endpointName(endpointName: String) {
+    override fun endpointName(endpointName: String) {
       cdkBuilder.endpointName(endpointName)
     }
 
-    public override fun resourceOwner(resourceOwner: String) {
+    override fun resourceOwner(resourceOwner: String) {
       cdkBuilder.resourceOwner(resourceOwner)
     }
 
-    public override fun subnetGroupName(subnetGroupName: String) {
+    override fun subnetGroupName(subnetGroupName: String) {
       cdkBuilder.subnetGroupName(subnetGroupName)
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
@@ -147,11 +142,9 @@ public open class CfnEndpointAccess internal constructor(
     public fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
 
     public interface Builder {
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun vpcSecurityGroupId(vpcSecurityGroupId: String) {
-      }
+      public fun vpcSecurityGroupId(vpcSecurityGroupId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -160,11 +153,11 @@ public open class CfnEndpointAccess internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty.builder()
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun vpcSecurityGroupId(vpcSecurityGroupId: String) {
+      override fun vpcSecurityGroupId(vpcSecurityGroupId: String) {
         cdkBuilder.vpcSecurityGroupId(vpcSecurityGroupId)
       }
 
@@ -177,9 +170,9 @@ public open class CfnEndpointAccess internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcSecurityGroupProperty,
     ) : VpcSecurityGroupProperty {
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
+      override fun vpcSecurityGroupId(): String? = unwrap(this).getVpcSecurityGroupId()
     }
 
     public companion object {
@@ -210,17 +203,13 @@ public open class CfnEndpointAccess internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun networkInterfaces(networkInterfaces: IResolvable) {
-      }
+      public fun networkInterfaces(networkInterfaces: IResolvable)
 
-      public fun networkInterfaces(networkInterfaces: List<Any>) {
-      }
+      public fun networkInterfaces(networkInterfaces: List<Any>)
 
-      public fun vpcEndpointId(vpcEndpointId: String) {
-      }
+      public fun vpcEndpointId(vpcEndpointId: String)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -228,19 +217,19 @@ public open class CfnEndpointAccess internal constructor(
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty.Builder =
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty.builder()
 
-      public override fun networkInterfaces(networkInterfaces: IResolvable) {
+      override fun networkInterfaces(networkInterfaces: IResolvable) {
         cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
       }
 
-      public override fun networkInterfaces(networkInterfaces: List<Any>) {
+      override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
 
-      public override fun vpcEndpointId(vpcEndpointId: String) {
+      override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -253,11 +242,11 @@ public open class CfnEndpointAccess internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.VpcEndpointProperty,
     ) : VpcEndpointProperty {
-      public override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
+      override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
 
-      public override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {
@@ -290,17 +279,13 @@ public open class CfnEndpointAccess internal constructor(
     public fun subnetId(): String? = unwrap(this).getSubnetId()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun networkInterfaceId(networkInterfaceId: String) {
-      }
+      public fun networkInterfaceId(networkInterfaceId: String)
 
-      public fun privateIpAddress(privateIpAddress: String) {
-      }
+      public fun privateIpAddress(privateIpAddress: String)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -309,19 +294,19 @@ public open class CfnEndpointAccess internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun networkInterfaceId(networkInterfaceId: String) {
+      override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
 
-      public override fun privateIpAddress(privateIpAddress: String) {
+      override fun privateIpAddress(privateIpAddress: String) {
         cdkBuilder.privateIpAddress(privateIpAddress)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -334,13 +319,13 @@ public open class CfnEndpointAccess internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnEndpointAccess.NetworkInterfaceProperty,
     ) : NetworkInterfaceProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
 
-      public override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
-      public override fun subnetId(): String? = unwrap(this).getSubnetId()
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
     }
 
     public companion object {

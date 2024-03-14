@@ -12,32 +12,29 @@ public interface VpcConfig {
   public fun vpc(): IVpc
 
   public interface Builder {
-    public fun subnets(subnets: SubnetSelection) {
-    }
+    public fun subnets(subnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e50d9188ae71a4d38fd04c5df66494a22082ef9c80cc1796c4342205bc1bbcb9")
-    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig.builder()
 
-    public override fun subnets(subnets: SubnetSelection) {
+    override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e50d9188ae71a4d38fd04c5df66494a22082ef9c80cc1796c4342205bc1bbcb9")
-    public override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
         subnets(SubnetSelection(subnets))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
@@ -48,10 +45,9 @@ public interface VpcConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig,
   ) : VpcConfig {
-    public override fun subnets(): SubnetSelection? =
-        unwrap(this).getSubnets()?.let(SubnetSelection::wrap)
+    override fun subnets(): SubnetSelection? = unwrap(this).getSubnets()?.let(SubnetSelection::wrap)
 
-    public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+    override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
   }
 
   public companion object {

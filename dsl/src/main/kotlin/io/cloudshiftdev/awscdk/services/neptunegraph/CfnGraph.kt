@@ -95,42 +95,31 @@ public open class CfnGraph internal constructor(
       Unit = vectorSearchConfiguration(VectorSearchConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun deletionProtection(deletionProtection: IResolvable) {
-    }
+    public fun deletionProtection(deletionProtection: IResolvable)
 
-    public fun graphName(graphName: String) {
-    }
+    public fun graphName(graphName: String)
 
-    public fun provisionedMemory(provisionedMemory: Number) {
-    }
+    public fun provisionedMemory(provisionedMemory: Number)
 
-    public fun publicConnectivity(publicConnectivity: Boolean) {
-    }
+    public fun publicConnectivity(publicConnectivity: Boolean)
 
-    public fun publicConnectivity(publicConnectivity: IResolvable) {
-    }
+    public fun publicConnectivity(publicConnectivity: IResolvable)
 
-    public fun replicaCount(replicaCount: Number) {
-    }
+    public fun replicaCount(replicaCount: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable) {
-    }
+    public fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable)
 
     public
-        fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty) {
-    }
+        fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a50c47a0fd99d77a3af008b1f03bfbbc900276e2bb178564f91fb0b023d353b")
     public
-        fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -140,50 +129,50 @@ public open class CfnGraph internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.neptunegraph.CfnGraph.Builder =
         software.amazon.awscdk.services.neptunegraph.CfnGraph.Builder.create(scope, id)
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deletionProtection(deletionProtection: IResolvable) {
+    override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
     }
 
-    public override fun graphName(graphName: String) {
+    override fun graphName(graphName: String) {
       cdkBuilder.graphName(graphName)
     }
 
-    public override fun provisionedMemory(provisionedMemory: Number) {
+    override fun provisionedMemory(provisionedMemory: Number) {
       cdkBuilder.provisionedMemory(provisionedMemory)
     }
 
-    public override fun publicConnectivity(publicConnectivity: Boolean) {
+    override fun publicConnectivity(publicConnectivity: Boolean) {
       cdkBuilder.publicConnectivity(publicConnectivity)
     }
 
-    public override fun publicConnectivity(publicConnectivity: IResolvable) {
+    override fun publicConnectivity(publicConnectivity: IResolvable) {
       cdkBuilder.publicConnectivity(publicConnectivity.let(IResolvable::unwrap))
     }
 
-    public override fun replicaCount(replicaCount: Number) {
+    override fun replicaCount(replicaCount: Number) {
       cdkBuilder.replicaCount(replicaCount)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable) {
+    override fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable) {
       cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty) {
       cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(VectorSearchConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a50c47a0fd99d77a3af008b1f03bfbbc900276e2bb178564f91fb0b023d353b")
-    public override
+    override
         fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty.Builder.() -> Unit):
         Unit =
         vectorSearchConfiguration(VectorSearchConfigurationProperty(vectorSearchConfiguration))
@@ -216,8 +205,7 @@ public open class CfnGraph internal constructor(
     public fun vectorSearchDimension(): Number
 
     public interface Builder {
-      public fun vectorSearchDimension(vectorSearchDimension: Number) {
-      }
+      public fun vectorSearchDimension(vectorSearchDimension: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -226,7 +214,7 @@ public open class CfnGraph internal constructor(
           =
           software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty.builder()
 
-      public override fun vectorSearchDimension(vectorSearchDimension: Number) {
+      override fun vectorSearchDimension(vectorSearchDimension: Number) {
         cdkBuilder.vectorSearchDimension(vectorSearchDimension)
       }
 
@@ -239,7 +227,7 @@ public open class CfnGraph internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.neptunegraph.CfnGraph.VectorSearchConfigurationProperty,
     ) : VectorSearchConfigurationProperty {
-      public override fun vectorSearchDimension(): Number = unwrap(this).getVectorSearchDimension()
+      override fun vectorSearchDimension(): Number = unwrap(this).getVectorSearchDimension()
     }
 
     public companion object {

@@ -55,11 +55,9 @@ public open class CfnNetworkInsightsAccessScopeAnalysis internal constructor(
   }
 
   public interface Builder {
-    public fun networkInsightsAccessScopeId(networkInsightsAccessScopeId: String) {
-    }
+    public fun networkInsightsAccessScopeId(networkInsightsAccessScopeId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -71,11 +69,11 @@ public open class CfnNetworkInsightsAccessScopeAnalysis internal constructor(
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeAnalysis.Builder.create(scope,
         id)
 
-    public override fun networkInsightsAccessScopeId(networkInsightsAccessScopeId: String) {
+    override fun networkInsightsAccessScopeId(networkInsightsAccessScopeId: String) {
       cdkBuilder.networkInsightsAccessScopeId(networkInsightsAccessScopeId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

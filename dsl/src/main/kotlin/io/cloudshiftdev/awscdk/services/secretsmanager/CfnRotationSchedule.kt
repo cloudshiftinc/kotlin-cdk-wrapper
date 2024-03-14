@@ -76,40 +76,30 @@ public open class CfnRotationSchedule internal constructor(
   }
 
   public interface Builder {
-    public fun hostedRotationLambda(hostedRotationLambda: IResolvable) {
-    }
+    public fun hostedRotationLambda(hostedRotationLambda: IResolvable)
 
-    public fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty) {
-    }
+    public fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b06afb51ad3d8bac88363cde0f16d9b4bed6cf5832a421d68e17a00fd2a7087e")
     public
-        fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty.Builder.() -> Unit) {
-    }
+        fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty.Builder.() -> Unit)
 
-    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
-    }
+    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean)
 
-    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
-    }
+    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable)
 
-    public fun rotationLambdaArn(rotationLambdaArn: String) {
-    }
+    public fun rotationLambdaArn(rotationLambdaArn: String)
 
-    public fun rotationRules(rotationRules: IResolvable) {
-    }
+    public fun rotationRules(rotationRules: IResolvable)
 
-    public fun rotationRules(rotationRules: RotationRulesProperty) {
-    }
+    public fun rotationRules(rotationRules: RotationRulesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0cec0ec9407190091306425f081b8377f2ea12f89e11fbcad0fc6ea1075493b")
-    public fun rotationRules(rotationRules: RotationRulesProperty.Builder.() -> Unit) {
-    }
+    public fun rotationRules(rotationRules: RotationRulesProperty.Builder.() -> Unit)
 
-    public fun secretId(secretId: String) {
-    }
+    public fun secretId(secretId: String)
   }
 
   private class BuilderImpl(
@@ -120,46 +110,46 @@ public open class CfnRotationSchedule internal constructor(
         software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.Builder =
         software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.Builder.create(scope, id)
 
-    public override fun hostedRotationLambda(hostedRotationLambda: IResolvable) {
+    override fun hostedRotationLambda(hostedRotationLambda: IResolvable) {
       cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(IResolvable::unwrap))
     }
 
-    public override fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty) {
+    override fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty) {
       cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(HostedRotationLambdaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b06afb51ad3d8bac88363cde0f16d9b4bed6cf5832a421d68e17a00fd2a7087e")
-    public override
+    override
         fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty.Builder.() -> Unit):
         Unit = hostedRotationLambda(HostedRotationLambdaProperty(hostedRotationLambda))
 
-    public override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+    override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
     }
 
-    public override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
+    override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate.let(IResolvable::unwrap))
     }
 
-    public override fun rotationLambdaArn(rotationLambdaArn: String) {
+    override fun rotationLambdaArn(rotationLambdaArn: String) {
       cdkBuilder.rotationLambdaArn(rotationLambdaArn)
     }
 
-    public override fun rotationRules(rotationRules: IResolvable) {
+    override fun rotationRules(rotationRules: IResolvable) {
       cdkBuilder.rotationRules(rotationRules.let(IResolvable::unwrap))
     }
 
-    public override fun rotationRules(rotationRules: RotationRulesProperty) {
+    override fun rotationRules(rotationRules: RotationRulesProperty) {
       cdkBuilder.rotationRules(rotationRules.let(RotationRulesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0cec0ec9407190091306425f081b8377f2ea12f89e11fbcad0fc6ea1075493b")
-    public override fun rotationRules(rotationRules: RotationRulesProperty.Builder.() -> Unit): Unit
-        = rotationRules(RotationRulesProperty(rotationRules))
+    override fun rotationRules(rotationRules: RotationRulesProperty.Builder.() -> Unit): Unit =
+        rotationRules(RotationRulesProperty(rotationRules))
 
-    public override fun secretId(secretId: String) {
+    override fun secretId(secretId: String) {
       cdkBuilder.secretId(secretId)
     }
 
@@ -197,14 +187,11 @@ public open class CfnRotationSchedule internal constructor(
     public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
 
     public interface Builder {
-      public fun automaticallyAfterDays(automaticallyAfterDays: Number) {
-      }
+      public fun automaticallyAfterDays(automaticallyAfterDays: Number)
 
-      public fun duration(duration: String) {
-      }
+      public fun duration(duration: String)
 
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,15 +200,15 @@ public open class CfnRotationSchedule internal constructor(
           =
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty.builder()
 
-      public override fun automaticallyAfterDays(automaticallyAfterDays: Number) {
+      override fun automaticallyAfterDays(automaticallyAfterDays: Number) {
         cdkBuilder.automaticallyAfterDays(automaticallyAfterDays)
       }
 
-      public override fun duration(duration: String) {
+      override fun duration(duration: String) {
         cdkBuilder.duration(duration)
       }
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -234,12 +221,11 @@ public open class CfnRotationSchedule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.RotationRulesProperty,
     ) : RotationRulesProperty {
-      public override fun automaticallyAfterDays(): Number? =
-          unwrap(this).getAutomaticallyAfterDays()
+      override fun automaticallyAfterDays(): Number? = unwrap(this).getAutomaticallyAfterDays()
 
-      public override fun duration(): String? = unwrap(this).getDuration()
+      override fun duration(): String? = unwrap(this).getDuration()
 
-      public override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -286,38 +272,27 @@ public open class CfnRotationSchedule internal constructor(
     public fun vpcSubnetIds(): String? = unwrap(this).getVpcSubnetIds()
 
     public interface Builder {
-      public fun excludeCharacters(excludeCharacters: String) {
-      }
+      public fun excludeCharacters(excludeCharacters: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
 
-      public fun masterSecretArn(masterSecretArn: String) {
-      }
+      public fun masterSecretArn(masterSecretArn: String)
 
-      public fun masterSecretKmsKeyArn(masterSecretKmsKeyArn: String) {
-      }
+      public fun masterSecretKmsKeyArn(masterSecretKmsKeyArn: String)
 
-      public fun rotationLambdaName(rotationLambdaName: String) {
-      }
+      public fun rotationLambdaName(rotationLambdaName: String)
 
-      public fun rotationType(rotationType: String) {
-      }
+      public fun rotationType(rotationType: String)
 
-      public fun runtime(runtime: String) {
-      }
+      public fun runtime(runtime: String)
 
-      public fun superuserSecretArn(superuserSecretArn: String) {
-      }
+      public fun superuserSecretArn(superuserSecretArn: String)
 
-      public fun superuserSecretKmsKeyArn(superuserSecretKmsKeyArn: String) {
-      }
+      public fun superuserSecretKmsKeyArn(superuserSecretKmsKeyArn: String)
 
-      public fun vpcSecurityGroupIds(vpcSecurityGroupIds: String) {
-      }
+      public fun vpcSecurityGroupIds(vpcSecurityGroupIds: String)
 
-      public fun vpcSubnetIds(vpcSubnetIds: String) {
-      }
+      public fun vpcSubnetIds(vpcSubnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -326,47 +301,47 @@ public open class CfnRotationSchedule internal constructor(
           =
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty.builder()
 
-      public override fun excludeCharacters(excludeCharacters: String) {
+      override fun excludeCharacters(excludeCharacters: String) {
         cdkBuilder.excludeCharacters(excludeCharacters)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      public override fun masterSecretArn(masterSecretArn: String) {
+      override fun masterSecretArn(masterSecretArn: String) {
         cdkBuilder.masterSecretArn(masterSecretArn)
       }
 
-      public override fun masterSecretKmsKeyArn(masterSecretKmsKeyArn: String) {
+      override fun masterSecretKmsKeyArn(masterSecretKmsKeyArn: String) {
         cdkBuilder.masterSecretKmsKeyArn(masterSecretKmsKeyArn)
       }
 
-      public override fun rotationLambdaName(rotationLambdaName: String) {
+      override fun rotationLambdaName(rotationLambdaName: String) {
         cdkBuilder.rotationLambdaName(rotationLambdaName)
       }
 
-      public override fun rotationType(rotationType: String) {
+      override fun rotationType(rotationType: String) {
         cdkBuilder.rotationType(rotationType)
       }
 
-      public override fun runtime(runtime: String) {
+      override fun runtime(runtime: String) {
         cdkBuilder.runtime(runtime)
       }
 
-      public override fun superuserSecretArn(superuserSecretArn: String) {
+      override fun superuserSecretArn(superuserSecretArn: String) {
         cdkBuilder.superuserSecretArn(superuserSecretArn)
       }
 
-      public override fun superuserSecretKmsKeyArn(superuserSecretKmsKeyArn: String) {
+      override fun superuserSecretKmsKeyArn(superuserSecretKmsKeyArn: String) {
         cdkBuilder.superuserSecretKmsKeyArn(superuserSecretKmsKeyArn)
       }
 
-      public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: String) {
+      override fun vpcSecurityGroupIds(vpcSecurityGroupIds: String) {
         cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
       }
 
-      public override fun vpcSubnetIds(vpcSubnetIds: String) {
+      override fun vpcSubnetIds(vpcSubnetIds: String) {
         cdkBuilder.vpcSubnetIds(vpcSubnetIds)
       }
 
@@ -379,28 +354,27 @@ public open class CfnRotationSchedule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule.HostedRotationLambdaProperty,
     ) : HostedRotationLambdaProperty {
-      public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+      override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
-      public override fun masterSecretArn(): String? = unwrap(this).getMasterSecretArn()
+      override fun masterSecretArn(): String? = unwrap(this).getMasterSecretArn()
 
-      public override fun masterSecretKmsKeyArn(): String? = unwrap(this).getMasterSecretKmsKeyArn()
+      override fun masterSecretKmsKeyArn(): String? = unwrap(this).getMasterSecretKmsKeyArn()
 
-      public override fun rotationLambdaName(): String? = unwrap(this).getRotationLambdaName()
+      override fun rotationLambdaName(): String? = unwrap(this).getRotationLambdaName()
 
-      public override fun rotationType(): String = unwrap(this).getRotationType()
+      override fun rotationType(): String = unwrap(this).getRotationType()
 
-      public override fun runtime(): String? = unwrap(this).getRuntime()
+      override fun runtime(): String? = unwrap(this).getRuntime()
 
-      public override fun superuserSecretArn(): String? = unwrap(this).getSuperuserSecretArn()
+      override fun superuserSecretArn(): String? = unwrap(this).getSuperuserSecretArn()
 
-      public override fun superuserSecretKmsKeyArn(): String? =
-          unwrap(this).getSuperuserSecretKmsKeyArn()
+      override fun superuserSecretKmsKeyArn(): String? = unwrap(this).getSuperuserSecretKmsKeyArn()
 
-      public override fun vpcSecurityGroupIds(): String? = unwrap(this).getVpcSecurityGroupIds()
+      override fun vpcSecurityGroupIds(): String? = unwrap(this).getVpcSecurityGroupIds()
 
-      public override fun vpcSubnetIds(): String? = unwrap(this).getVpcSubnetIds()
+      override fun vpcSubnetIds(): String? = unwrap(this).getVpcSubnetIds()
     }
 
     public companion object {

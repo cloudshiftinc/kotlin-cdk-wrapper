@@ -61,26 +61,19 @@ public open class CfnEmailChannel internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun configurationSet(configurationSet: String) {
-    }
+    public fun configurationSet(configurationSet: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun fromAddress(fromAddress: String) {
-    }
+    public fun fromAddress(fromAddress: String)
 
-    public fun identity(identity: String) {
-    }
+    public fun identity(identity: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -90,31 +83,31 @@ public open class CfnEmailChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnEmailChannel.Builder =
         software.amazon.awscdk.services.pinpoint.CfnEmailChannel.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun configurationSet(configurationSet: String) {
+    override fun configurationSet(configurationSet: String) {
       cdkBuilder.configurationSet(configurationSet)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun fromAddress(fromAddress: String) {
+    override fun fromAddress(fromAddress: String) {
       cdkBuilder.fromAddress(fromAddress)
     }
 
-    public override fun identity(identity: String) {
+    override fun identity(identity: String) {
       cdkBuilder.identity(identity)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

@@ -51,20 +51,15 @@ public open class CfnFlowVpcInterface internal constructor(
   }
 
   public interface Builder {
-    public fun flowArn(flowArn: String) {
-    }
+    public fun flowArn(flowArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -74,23 +69,23 @@ public open class CfnFlowVpcInterface internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface.Builder
         = software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface.Builder.create(scope, id)
 
-    public override fun flowArn(flowArn: String) {
+    override fun flowArn(flowArn: String) {
       cdkBuilder.flowArn(flowArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 

@@ -11,22 +11,20 @@ public interface EndpointConfiguration {
       unwrap(this).getVpcEndpoints()?.map(IVpcEndpoint::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun types(types: List<EndpointType>) {
-    }
+    public fun types(types: List<EndpointType>)
 
-    public fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>) {
-    }
+    public fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.EndpointConfiguration.Builder
         = software.amazon.awscdk.services.apigateway.EndpointConfiguration.builder()
 
-    public override fun types(types: List<EndpointType>) {
+    override fun types(types: List<EndpointType>) {
       cdkBuilder.types(types.map(EndpointType::unwrap))
     }
 
-    public override fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>) {
+    override fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>) {
       cdkBuilder.vpcEndpoints(vpcEndpoints.map(IVpcEndpoint::unwrap))
     }
 
@@ -37,10 +35,9 @@ public interface EndpointConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.EndpointConfiguration,
   ) : EndpointConfiguration {
-    public override fun types(): List<EndpointType> =
-        unwrap(this).getTypes().map(EndpointType::wrap)
+    override fun types(): List<EndpointType> = unwrap(this).getTypes().map(EndpointType::wrap)
 
-    public override fun vpcEndpoints(): List<IVpcEndpoint> =
+    override fun vpcEndpoints(): List<IVpcEndpoint> =
         unwrap(this).getVpcEndpoints()?.map(IVpcEndpoint::wrap) ?: emptyList()
   }
 

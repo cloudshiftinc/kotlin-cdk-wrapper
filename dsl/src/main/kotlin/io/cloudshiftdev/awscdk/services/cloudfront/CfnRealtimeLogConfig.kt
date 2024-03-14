@@ -52,20 +52,15 @@ public open class CfnRealtimeLogConfig internal constructor(
   }
 
   public interface Builder {
-    public fun endPoints(endPoints: IResolvable) {
-    }
+    public fun endPoints(endPoints: IResolvable)
 
-    public fun endPoints(endPoints: List<Any>) {
-    }
+    public fun endPoints(endPoints: List<Any>)
 
-    public fun fields(fields: List<String>) {
-    }
+    public fun fields(fields: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun samplingRate(samplingRate: Number) {
-    }
+    public fun samplingRate(samplingRate: Number)
   }
 
   private class BuilderImpl(
@@ -75,23 +70,23 @@ public open class CfnRealtimeLogConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.Builder
         = software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.Builder.create(scope, id)
 
-    public override fun endPoints(endPoints: IResolvable) {
+    override fun endPoints(endPoints: IResolvable) {
       cdkBuilder.endPoints(endPoints.let(IResolvable::unwrap))
     }
 
-    public override fun endPoints(endPoints: List<Any>) {
+    override fun endPoints(endPoints: List<Any>) {
       cdkBuilder.endPoints(endPoints)
     }
 
-    public override fun fields(fields: List<String>) {
+    override fun fields(fields: List<String>) {
       cdkBuilder.fields(fields)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun samplingRate(samplingRate: Number) {
+    override fun samplingRate(samplingRate: Number) {
       cdkBuilder.samplingRate(samplingRate)
     }
 
@@ -126,11 +121,9 @@ public open class CfnRealtimeLogConfig internal constructor(
     public fun streamArn(): String
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun streamArn(streamArn: String) {
-      }
+      public fun streamArn(streamArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -139,11 +132,11 @@ public open class CfnRealtimeLogConfig internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun streamArn(streamArn: String) {
+      override fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
       }
 
@@ -156,9 +149,9 @@ public open class CfnRealtimeLogConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.KinesisStreamConfigProperty,
     ) : KinesisStreamConfigProperty {
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun streamArn(): String = unwrap(this).getStreamArn()
+      override fun streamArn(): String = unwrap(this).getStreamArn()
     }
 
     public companion object {
@@ -187,20 +180,16 @@ public open class CfnRealtimeLogConfig internal constructor(
     public fun streamType(): String
 
     public interface Builder {
-      public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
-      }
+      public fun kinesisStreamConfig(kinesisStreamConfig: IResolvable)
 
-      public fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
-      }
+      public fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21e06eb0d0db3e46cab2d6c2972df2baca66b17c976eb901ccf7465cf00c8344")
       public
-          fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty.Builder.() -> Unit) {
-      }
+          fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty.Builder.() -> Unit)
 
-      public fun streamType(streamType: String) {
-      }
+      public fun streamType(streamType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -208,21 +197,21 @@ public open class CfnRealtimeLogConfig internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty.builder()
 
-      public override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
+      override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
         cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
+      override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
         cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21e06eb0d0db3e46cab2d6c2972df2baca66b17c976eb901ccf7465cf00c8344")
-      public override
+      override
           fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty.Builder.() -> Unit):
           Unit = kinesisStreamConfig(KinesisStreamConfigProperty(kinesisStreamConfig))
 
-      public override fun streamType(streamType: String) {
+      override fun streamType(streamType: String) {
         cdkBuilder.streamType(streamType)
       }
 
@@ -235,9 +224,9 @@ public open class CfnRealtimeLogConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig.EndPointProperty,
     ) : EndPointProperty {
-      public override fun kinesisStreamConfig(): Any = unwrap(this).getKinesisStreamConfig()
+      override fun kinesisStreamConfig(): Any = unwrap(this).getKinesisStreamConfig()
 
-      public override fun streamType(): String = unwrap(this).getStreamType()
+      override fun streamType(): String = unwrap(this).getStreamType()
     }
 
     public companion object {

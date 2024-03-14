@@ -9,11 +9,9 @@ public interface WebSocketRouteAuthorizerBindOptions {
   public fun scope(): Construct
 
   public interface Builder {
-    public fun route(route: IWebSocketRoute) {
-    }
+    public fun route(route: IWebSocketRoute)
 
-    public fun scope(scope: Construct) {
-    }
+    public fun scope(scope: Construct)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface WebSocketRouteAuthorizerBindOptions {
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions.builder()
 
-    public override fun route(route: IWebSocketRoute) {
+    override fun route(route: IWebSocketRoute) {
       cdkBuilder.route(route.let(IWebSocketRoute::unwrap))
     }
 
-    public override fun scope(scope: Construct) {
+    override fun scope(scope: Construct) {
       cdkBuilder.scope(scope.let(Construct::unwrap))
     }
 
@@ -38,10 +36,9 @@ public interface WebSocketRouteAuthorizerBindOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions,
   ) : WebSocketRouteAuthorizerBindOptions {
-    public override fun route(): IWebSocketRoute =
-        unwrap(this).getRoute().let(IWebSocketRoute::wrap)
+    override fun route(): IWebSocketRoute = unwrap(this).getRoute().let(IWebSocketRoute::wrap)
 
-    public override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
+    override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
   }
 
   public companion object {

@@ -21,23 +21,17 @@ public interface CorsPreflightOptions {
   public fun maxAge(): Duration? = unwrap(this).getMaxAge()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun allowCredentials(allowCredentials: Boolean) {
-    }
+    public fun allowCredentials(allowCredentials: Boolean)
 
-    public fun allowHeaders(allowHeaders: List<String>) {
-    }
+    public fun allowHeaders(allowHeaders: List<String>)
 
-    public fun allowMethods(allowMethods: List<CorsHttpMethod>) {
-    }
+    public fun allowMethods(allowMethods: List<CorsHttpMethod>)
 
-    public fun allowOrigins(allowOrigins: List<String>) {
-    }
+    public fun allowOrigins(allowOrigins: List<String>)
 
-    public fun exposeHeaders(exposeHeaders: List<String>) {
-    }
+    public fun exposeHeaders(exposeHeaders: List<String>)
 
-    public fun maxAge(maxAge: Duration) {
-    }
+    public fun maxAge(maxAge: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -45,27 +39,27 @@ public interface CorsPreflightOptions {
         software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions.builder()
 
-    public override fun allowCredentials(allowCredentials: Boolean) {
+    override fun allowCredentials(allowCredentials: Boolean) {
       cdkBuilder.allowCredentials(allowCredentials)
     }
 
-    public override fun allowHeaders(allowHeaders: List<String>) {
+    override fun allowHeaders(allowHeaders: List<String>) {
       cdkBuilder.allowHeaders(allowHeaders)
     }
 
-    public override fun allowMethods(allowMethods: List<CorsHttpMethod>) {
+    override fun allowMethods(allowMethods: List<CorsHttpMethod>) {
       cdkBuilder.allowMethods(allowMethods.map(CorsHttpMethod::unwrap))
     }
 
-    public override fun allowOrigins(allowOrigins: List<String>) {
+    override fun allowOrigins(allowOrigins: List<String>) {
       cdkBuilder.allowOrigins(allowOrigins)
     }
 
-    public override fun exposeHeaders(exposeHeaders: List<String>) {
+    override fun exposeHeaders(exposeHeaders: List<String>) {
       cdkBuilder.exposeHeaders(exposeHeaders)
     }
 
-    public override fun maxAge(maxAge: Duration) {
+    override fun maxAge(maxAge: Duration) {
       cdkBuilder.maxAge(maxAge.let(Duration::unwrap))
     }
 
@@ -76,19 +70,18 @@ public interface CorsPreflightOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions,
   ) : CorsPreflightOptions {
-    public override fun allowCredentials(): Boolean? = unwrap(this).getAllowCredentials()
+    override fun allowCredentials(): Boolean? = unwrap(this).getAllowCredentials()
 
-    public override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?: emptyList()
+    override fun allowHeaders(): List<String> = unwrap(this).getAllowHeaders() ?: emptyList()
 
-    public override fun allowMethods(): List<CorsHttpMethod> =
+    override fun allowMethods(): List<CorsHttpMethod> =
         unwrap(this).getAllowMethods()?.map(CorsHttpMethod::wrap) ?: emptyList()
 
-    public override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?: emptyList()
+    override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?: emptyList()
 
-    public override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?:
-        emptyList()
+    override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?: emptyList()
 
-    public override fun maxAge(): Duration? = unwrap(this).getMaxAge()?.let(Duration::wrap)
+    override fun maxAge(): Duration? = unwrap(this).getMaxAge()?.let(Duration::wrap)
   }
 
   public companion object {

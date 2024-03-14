@@ -6,11 +6,9 @@ import kotlin.collections.Map
 
 public interface NetworkLoadBalancerLookupOptions : BaseLoadBalancerLookupOptions {
   public interface Builder {
-    public fun loadBalancerArn(loadBalancerArn: String) {
-    }
+    public fun loadBalancerArn(loadBalancerArn: String)
 
-    public fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
-    }
+    public fun loadBalancerTags(loadBalancerTags: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -19,11 +17,11 @@ public interface NetworkLoadBalancerLookupOptions : BaseLoadBalancerLookupOption
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerLookupOptions.builder()
 
-    public override fun loadBalancerArn(loadBalancerArn: String) {
+    override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
-    public override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
+    override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags)
     }
 
@@ -36,10 +34,10 @@ public interface NetworkLoadBalancerLookupOptions : BaseLoadBalancerLookupOption
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerLookupOptions,
   ) : NetworkLoadBalancerLookupOptions {
-    public override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags()
-        ?: emptyMap()
+    override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags() ?:
+        emptyMap()
   }
 
   public companion object {

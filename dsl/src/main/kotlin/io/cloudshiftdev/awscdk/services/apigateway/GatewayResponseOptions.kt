@@ -15,17 +15,13 @@ public interface GatewayResponseOptions {
   public fun type(): ResponseType
 
   public interface Builder {
-    public fun responseHeaders(responseHeaders: Map<String, String>) {
-    }
+    public fun responseHeaders(responseHeaders: Map<String, String>)
 
-    public fun statusCode(statusCode: String) {
-    }
+    public fun statusCode(statusCode: String)
 
-    public fun templates(templates: Map<String, String>) {
-    }
+    public fun templates(templates: Map<String, String>)
 
-    public fun type(type: ResponseType) {
-    }
+    public fun type(type: ResponseType)
   }
 
   private class BuilderImpl : Builder {
@@ -33,19 +29,19 @@ public interface GatewayResponseOptions {
         software.amazon.awscdk.services.apigateway.GatewayResponseOptions.Builder =
         software.amazon.awscdk.services.apigateway.GatewayResponseOptions.builder()
 
-    public override fun responseHeaders(responseHeaders: Map<String, String>) {
+    override fun responseHeaders(responseHeaders: Map<String, String>) {
       cdkBuilder.responseHeaders(responseHeaders)
     }
 
-    public override fun statusCode(statusCode: String) {
+    override fun statusCode(statusCode: String) {
       cdkBuilder.statusCode(statusCode)
     }
 
-    public override fun templates(templates: Map<String, String>) {
+    override fun templates(templates: Map<String, String>) {
       cdkBuilder.templates(templates)
     }
 
-    public override fun type(type: ResponseType) {
+    override fun type(type: ResponseType) {
       cdkBuilder.type(type.let(ResponseType::unwrap))
     }
 
@@ -56,14 +52,14 @@ public interface GatewayResponseOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponseOptions,
   ) : GatewayResponseOptions {
-    public override fun responseHeaders(): Map<String, String> = unwrap(this).getResponseHeaders()
-        ?: emptyMap()
+    override fun responseHeaders(): Map<String, String> = unwrap(this).getResponseHeaders() ?:
+        emptyMap()
 
-    public override fun statusCode(): String? = unwrap(this).getStatusCode()
+    override fun statusCode(): String? = unwrap(this).getStatusCode()
 
-    public override fun templates(): Map<String, String> = unwrap(this).getTemplates() ?: emptyMap()
+    override fun templates(): Map<String, String> = unwrap(this).getTemplates() ?: emptyMap()
 
-    public override fun type(): ResponseType = unwrap(this).getType().let(ResponseType::wrap)
+    override fun type(): ResponseType = unwrap(this).getType().let(ResponseType::wrap)
   }
 
   public companion object {

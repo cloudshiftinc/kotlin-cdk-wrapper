@@ -22,8 +22,7 @@ public abstract class FilterOrPolicy internal constructor(
         software.amazon.awscdk.services.sns.FilterOrPolicy.filter(filter.let(SubscriptionFilter::unwrap)).let(Filter::wrap)
 
     public open fun policy(policy: Map<String, FilterOrPolicy>): Policy =
-        software.amazon.awscdk.services.sns.FilterOrPolicy.policy(policy.mapValues {
-        FilterOrPolicy.unwrap(it.value)}).let(Policy::wrap)
+        software.amazon.awscdk.services.sns.FilterOrPolicy.policy(policy.mapValues{FilterOrPolicy.unwrap(it.value)}).let(Policy::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy): FilterOrPolicy
         = Wrapper(cdkObject)

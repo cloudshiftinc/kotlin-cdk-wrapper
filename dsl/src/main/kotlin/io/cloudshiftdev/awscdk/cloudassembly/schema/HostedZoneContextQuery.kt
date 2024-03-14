@@ -18,23 +18,17 @@ public interface HostedZoneContextQuery {
   public fun vpcId(): String? = unwrap(this).getVpcId()
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun privateZone(privateZone: Boolean) {
-    }
+    public fun privateZone(privateZone: Boolean)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -42,27 +36,27 @@ public interface HostedZoneContextQuery {
         software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun privateZone(privateZone: Boolean) {
+    override fun privateZone(privateZone: Boolean) {
       cdkBuilder.privateZone(privateZone)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -73,17 +67,17 @@ public interface HostedZoneContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery,
   ) : HostedZoneContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun privateZone(): Boolean? = unwrap(this).getPrivateZone()
+    override fun privateZone(): Boolean? = unwrap(this).getPrivateZone()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
 
-    public override fun vpcId(): String? = unwrap(this).getVpcId()
+    override fun vpcId(): String? = unwrap(this).getVpcId()
   }
 
   public companion object {

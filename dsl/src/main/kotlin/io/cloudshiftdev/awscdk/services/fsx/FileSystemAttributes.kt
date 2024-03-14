@@ -12,29 +12,26 @@ public interface FileSystemAttributes {
   public fun securityGroup(): ISecurityGroup
 
   public interface Builder {
-    public fun dnsName(dnsName: String) {
-    }
+    public fun dnsName(dnsName: String)
 
-    public fun fileSystemId(fileSystemId: String) {
-    }
+    public fun fileSystemId(fileSystemId: String)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.fsx.FileSystemAttributes.Builder =
         software.amazon.awscdk.services.fsx.FileSystemAttributes.builder()
 
-    public override fun dnsName(dnsName: String) {
+    override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
     }
 
-    public override fun fileSystemId(fileSystemId: String) {
+    override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
@@ -45,11 +42,11 @@ public interface FileSystemAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.fsx.FileSystemAttributes,
   ) : FileSystemAttributes {
-    public override fun dnsName(): String = unwrap(this).getDnsName()
+    override fun dnsName(): String = unwrap(this).getDnsName()
 
-    public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+    override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
-    public override fun securityGroup(): ISecurityGroup =
+    override fun securityGroup(): ISecurityGroup =
         unwrap(this).getSecurityGroup().let(ISecurityGroup::wrap)
   }
 

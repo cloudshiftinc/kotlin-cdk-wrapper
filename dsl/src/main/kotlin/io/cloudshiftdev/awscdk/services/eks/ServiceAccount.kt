@@ -39,20 +39,15 @@ public open class ServiceAccount internal constructor(
   public open fun serviceAccountNamespace(): String = unwrap(this).getServiceAccountNamespace()
 
   public interface Builder {
-    public fun annotations(annotations: Map<String, String>) {
-    }
+    public fun annotations(annotations: Map<String, String>)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun labels(labels: Map<String, String>) {
-    }
+    public fun labels(labels: Map<String, String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
   }
 
   private class BuilderImpl(
@@ -62,23 +57,23 @@ public open class ServiceAccount internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.ServiceAccount.Builder =
         software.amazon.awscdk.services.eks.ServiceAccount.Builder.create(scope, id)
 
-    public override fun annotations(annotations: Map<String, String>) {
+    override fun annotations(annotations: Map<String, String>) {
       cdkBuilder.annotations(annotations)
     }
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun labels(labels: Map<String, String>) {
+    override fun labels(labels: Map<String, String>) {
       cdkBuilder.labels(labels)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 

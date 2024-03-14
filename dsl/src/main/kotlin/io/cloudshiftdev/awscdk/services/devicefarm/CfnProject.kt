@@ -63,25 +63,19 @@ public open class CfnProject internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun defaultJobTimeoutMinutes(defaultJobTimeoutMinutes: Number) {
-    }
+    public fun defaultJobTimeoutMinutes(defaultJobTimeoutMinutes: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b286c38a5590437dc62b1c077d69224e8e28cd6e527b3cec99b1dc07a67499f3")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -91,29 +85,29 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.devicefarm.CfnProject.Builder =
         software.amazon.awscdk.services.devicefarm.CfnProject.Builder.create(scope, id)
 
-    public override fun defaultJobTimeoutMinutes(defaultJobTimeoutMinutes: Number) {
+    override fun defaultJobTimeoutMinutes(defaultJobTimeoutMinutes: Number) {
       cdkBuilder.defaultJobTimeoutMinutes(defaultJobTimeoutMinutes)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b286c38a5590437dc62b1c077d69224e8e28cd6e527b3cec99b1dc07a67499f3")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.devicefarm.CfnProject = cdkBuilder.build()
@@ -148,14 +142,11 @@ public open class CfnProject internal constructor(
     public fun vpcId(): String
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -163,15 +154,15 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.devicefarm.CfnProject.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.devicefarm.CfnProject.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -183,12 +174,12 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.devicefarm.CfnProject.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
-      public override fun vpcId(): String = unwrap(this).getVpcId()
+      override fun vpcId(): String = unwrap(this).getVpcId()
     }
 
     public companion object {

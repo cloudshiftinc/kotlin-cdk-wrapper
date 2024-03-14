@@ -207,89 +207,61 @@ public open class CfnCacheCluster internal constructor(
   }
 
   public interface Builder {
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun azMode(azMode: String) {
-    }
+    public fun azMode(azMode: String)
 
-    public fun cacheNodeType(cacheNodeType: String) {
-    }
+    public fun cacheNodeType(cacheNodeType: String)
 
-    public fun cacheParameterGroupName(cacheParameterGroupName: String) {
-    }
+    public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
-    public fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>) {
-    }
+    public fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>)
 
-    public fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
-    }
+    public fun cacheSubnetGroupName(cacheSubnetGroupName: String)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun ipDiscovery(ipDiscovery: String) {
-    }
+    public fun ipDiscovery(ipDiscovery: String)
 
-    public fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
-    }
+    public fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable)
 
-    public fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
-    }
+    public fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>)
 
-    public fun networkType(networkType: String) {
-    }
+    public fun networkType(networkType: String)
 
-    public fun notificationTopicArn(notificationTopicArn: String) {
-    }
+    public fun notificationTopicArn(notificationTopicArn: String)
 
-    public fun numCacheNodes(numCacheNodes: Number) {
-    }
+    public fun numCacheNodes(numCacheNodes: Number)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredAvailabilityZone(preferredAvailabilityZone: String) {
-    }
+    public fun preferredAvailabilityZone(preferredAvailabilityZone: String)
 
-    public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
-    }
+    public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun snapshotArns(snapshotArns: List<String>) {
-    }
+    public fun snapshotArns(snapshotArns: List<String>)
 
-    public fun snapshotName(snapshotName: String) {
-    }
+    public fun snapshotName(snapshotName: String)
 
-    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
-    }
+    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number)
 
-    public fun snapshotWindow(snapshotWindow: String) {
-    }
+    public fun snapshotWindow(snapshotWindow: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
-    }
+    public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean)
 
-    public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-    }
+    public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -299,115 +271,115 @@ public open class CfnCacheCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnCacheCluster.Builder =
         software.amazon.awscdk.services.elasticache.CfnCacheCluster.Builder.create(scope, id)
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun azMode(azMode: String) {
+    override fun azMode(azMode: String) {
       cdkBuilder.azMode(azMode)
     }
 
-    public override fun cacheNodeType(cacheNodeType: String) {
+    override fun cacheNodeType(cacheNodeType: String) {
       cdkBuilder.cacheNodeType(cacheNodeType)
     }
 
-    public override fun cacheParameterGroupName(cacheParameterGroupName: String) {
+    override fun cacheParameterGroupName(cacheParameterGroupName: String) {
       cdkBuilder.cacheParameterGroupName(cacheParameterGroupName)
     }
 
-    public override fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>) {
+    override fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>) {
       cdkBuilder.cacheSecurityGroupNames(cacheSecurityGroupNames)
     }
 
-    public override fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
+    override fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
       cdkBuilder.cacheSubnetGroupName(cacheSubnetGroupName)
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun ipDiscovery(ipDiscovery: String) {
+    override fun ipDiscovery(ipDiscovery: String) {
       cdkBuilder.ipDiscovery(ipDiscovery)
     }
 
-    public override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
+    override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
       cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
+    override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
       cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
     }
 
-    public override fun networkType(networkType: String) {
+    override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
 
-    public override fun notificationTopicArn(notificationTopicArn: String) {
+    override fun notificationTopicArn(notificationTopicArn: String) {
       cdkBuilder.notificationTopicArn(notificationTopicArn)
     }
 
-    public override fun numCacheNodes(numCacheNodes: Number) {
+    override fun numCacheNodes(numCacheNodes: Number) {
       cdkBuilder.numCacheNodes(numCacheNodes)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredAvailabilityZone(preferredAvailabilityZone: String) {
+    override fun preferredAvailabilityZone(preferredAvailabilityZone: String) {
       cdkBuilder.preferredAvailabilityZone(preferredAvailabilityZone)
     }
 
-    public override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
+    override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
       cdkBuilder.preferredAvailabilityZones(preferredAvailabilityZones)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun snapshotArns(snapshotArns: List<String>) {
+    override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
 
-    public override fun snapshotName(snapshotName: String) {
+    override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)
     }
 
-    public override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
+    override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
       cdkBuilder.snapshotRetentionLimit(snapshotRetentionLimit)
     }
 
-    public override fun snapshotWindow(snapshotWindow: String) {
+    override fun snapshotWindow(snapshotWindow: String) {
       cdkBuilder.snapshotWindow(snapshotWindow)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
+    override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled)
     }
 
-    public override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
+    override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
@@ -446,26 +418,20 @@ public open class CfnCacheCluster internal constructor(
     public fun logType(): String
 
     public interface Builder {
-      public fun destinationDetails(destinationDetails: IResolvable) {
-      }
+      public fun destinationDetails(destinationDetails: IResolvable)
 
-      public fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
-      }
+      public fun destinationDetails(destinationDetails: DestinationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e44261fa165e257bb303fce9896fc508c3a435e77b44009681d09f1efef725b")
       public
-          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit)
 
-      public fun destinationType(destinationType: String) {
-      }
+      public fun destinationType(destinationType: String)
 
-      public fun logFormat(logFormat: String) {
-      }
+      public fun logFormat(logFormat: String)
 
-      public fun logType(logType: String) {
-      }
+      public fun logType(logType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -474,29 +440,29 @@ public open class CfnCacheCluster internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty.builder()
 
-      public override fun destinationDetails(destinationDetails: IResolvable) {
+      override fun destinationDetails(destinationDetails: IResolvable) {
         cdkBuilder.destinationDetails(destinationDetails.let(IResolvable::unwrap))
       }
 
-      public override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
+      override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
         cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e44261fa165e257bb303fce9896fc508c3a435e77b44009681d09f1efef725b")
-      public override
+      override
           fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit):
           Unit = destinationDetails(DestinationDetailsProperty(destinationDetails))
 
-      public override fun destinationType(destinationType: String) {
+      override fun destinationType(destinationType: String) {
         cdkBuilder.destinationType(destinationType)
       }
 
-      public override fun logFormat(logFormat: String) {
+      override fun logFormat(logFormat: String) {
         cdkBuilder.logFormat(logFormat)
       }
 
-      public override fun logType(logType: String) {
+      override fun logType(logType: String) {
         cdkBuilder.logType(logType)
       }
 
@@ -509,13 +475,13 @@ public open class CfnCacheCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty,
     ) : LogDeliveryConfigurationRequestProperty {
-      public override fun destinationDetails(): Any = unwrap(this).getDestinationDetails()
+      override fun destinationDetails(): Any = unwrap(this).getDestinationDetails()
 
-      public override fun destinationType(): String = unwrap(this).getDestinationType()
+      override fun destinationType(): String = unwrap(this).getDestinationType()
 
-      public override fun logFormat(): String = unwrap(this).getLogFormat()
+      override fun logFormat(): String = unwrap(this).getLogFormat()
 
-      public override fun logType(): String = unwrap(this).getLogType()
+      override fun logType(): String = unwrap(this).getLogType()
     }
 
     public companion object {
@@ -543,8 +509,7 @@ public open class CfnCacheCluster internal constructor(
     public fun deliveryStream(): String
 
     public interface Builder {
-      public fun deliveryStream(deliveryStream: String) {
-      }
+      public fun deliveryStream(deliveryStream: String)
     }
 
     private class BuilderImpl : Builder {
@@ -553,7 +518,7 @@ public open class CfnCacheCluster internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty.builder()
 
-      public override fun deliveryStream(deliveryStream: String) {
+      override fun deliveryStream(deliveryStream: String) {
         cdkBuilder.deliveryStream(deliveryStream)
       }
 
@@ -566,7 +531,7 @@ public open class CfnCacheCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty,
     ) : KinesisFirehoseDestinationDetailsProperty {
-      public override fun deliveryStream(): String = unwrap(this).getDeliveryStream()
+      override fun deliveryStream(): String = unwrap(this).getDeliveryStream()
     }
 
     public companion object {
@@ -594,8 +559,7 @@ public open class CfnCacheCluster internal constructor(
     public fun logGroup(): String
 
     public interface Builder {
-      public fun logGroup(logGroup: String) {
-      }
+      public fun logGroup(logGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -604,7 +568,7 @@ public open class CfnCacheCluster internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty.builder()
 
-      public override fun logGroup(logGroup: String) {
+      override fun logGroup(logGroup: String) {
         cdkBuilder.logGroup(logGroup)
       }
 
@@ -617,7 +581,7 @@ public open class CfnCacheCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty,
     ) : CloudWatchLogsDestinationDetailsProperty {
-      public override fun logGroup(): String = unwrap(this).getLogGroup()
+      override fun logGroup(): String = unwrap(this).getLogGroup()
     }
 
     public companion object {
@@ -647,31 +611,25 @@ public open class CfnCacheCluster internal constructor(
     public fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
 
     public interface Builder {
-      public fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
-      }
+      public fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable)
 
       public
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
-      }
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1f88bd5e3396556e7095ec41d5b9595bb216092508a08a2e27fe30e13e1b061")
       public
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit)
 
-      public fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
-      }
+      public fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable)
 
       public
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
-      }
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e40b60a3f98ef9f2133846abea7bbfa7d345958b8dc9667f62706d40859df30c")
       public
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -680,34 +638,34 @@ public open class CfnCacheCluster internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty.builder()
 
-      public override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
+      override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
         cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
         cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1f88bd5e3396556e7095ec41d5b9595bb216092508a08a2e27fe30e13e1b061")
-      public override
+      override
           fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty(cloudWatchLogsDetails))
 
-      public override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
+      override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
         cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
         cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e40b60a3f98ef9f2133846abea7bbfa7d345958b8dc9667f62706d40859df30c")
-      public override
+      override
           fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit):
           Unit =
           kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty(kinesisFirehoseDetails))
@@ -721,9 +679,9 @@ public open class CfnCacheCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty,
     ) : DestinationDetailsProperty {
-      public override fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
+      override fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
 
-      public override fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
+      override fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
     }
 
     public companion object {

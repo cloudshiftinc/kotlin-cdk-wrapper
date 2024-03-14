@@ -68,26 +68,19 @@ public open class CfnInAppTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun content(content: IResolvable) {
-    }
+    public fun content(content: IResolvable)
 
-    public fun content(content: List<Any>) {
-    }
+    public fun content(content: List<Any>)
 
-    public fun customConfig(customConfig: Any) {
-    }
+    public fun customConfig(customConfig: Any)
 
-    public fun layout(layout: String) {
-    }
+    public fun layout(layout: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun templateDescription(templateDescription: String) {
-    }
+    public fun templateDescription(templateDescription: String)
 
-    public fun templateName(templateName: String) {
-    }
+    public fun templateName(templateName: String)
   }
 
   private class BuilderImpl(
@@ -97,31 +90,31 @@ public open class CfnInAppTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.Builder =
         software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.Builder.create(scope, id)
 
-    public override fun content(content: IResolvable) {
+    override fun content(content: IResolvable) {
       cdkBuilder.content(content.let(IResolvable::unwrap))
     }
 
-    public override fun content(content: List<Any>) {
+    override fun content(content: List<Any>) {
       cdkBuilder.content(content)
     }
 
-    public override fun customConfig(customConfig: Any) {
+    override fun customConfig(customConfig: Any) {
       cdkBuilder.customConfig(customConfig)
     }
 
-    public override fun layout(layout: String) {
+    override fun layout(layout: String) {
       cdkBuilder.layout(layout)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun templateDescription(templateDescription: String) {
+    override fun templateDescription(templateDescription: String) {
       cdkBuilder.templateDescription(templateDescription)
     }
 
-    public override fun templateName(templateName: String) {
+    override fun templateName(templateName: String) {
       cdkBuilder.templateName(templateName)
     }
 
@@ -164,55 +157,41 @@ public open class CfnInAppTemplate internal constructor(
     public fun secondaryBtn(): Any? = unwrap(this).getSecondaryBtn()
 
     public interface Builder {
-      public fun backgroundColor(backgroundColor: String) {
-      }
+      public fun backgroundColor(backgroundColor: String)
 
-      public fun bodyConfig(bodyConfig: IResolvable) {
-      }
+      public fun bodyConfig(bodyConfig: IResolvable)
 
-      public fun bodyConfig(bodyConfig: BodyConfigProperty) {
-      }
+      public fun bodyConfig(bodyConfig: BodyConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2479de21a04690559cc4670eb0c9d6482bde68d7f4a47b3efc0ae67e5488d597")
-      public fun bodyConfig(bodyConfig: BodyConfigProperty.Builder.() -> Unit) {
-      }
+      public fun bodyConfig(bodyConfig: BodyConfigProperty.Builder.() -> Unit)
 
-      public fun headerConfig(headerConfig: IResolvable) {
-      }
+      public fun headerConfig(headerConfig: IResolvable)
 
-      public fun headerConfig(headerConfig: HeaderConfigProperty) {
-      }
+      public fun headerConfig(headerConfig: HeaderConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("365e1110395eb940721a86faf9af727ac6d8d774c85cc42f0734c6396c8df06e")
-      public fun headerConfig(headerConfig: HeaderConfigProperty.Builder.() -> Unit) {
-      }
+      public fun headerConfig(headerConfig: HeaderConfigProperty.Builder.() -> Unit)
 
-      public fun imageUrl(imageUrl: String) {
-      }
+      public fun imageUrl(imageUrl: String)
 
-      public fun primaryBtn(primaryBtn: IResolvable) {
-      }
+      public fun primaryBtn(primaryBtn: IResolvable)
 
-      public fun primaryBtn(primaryBtn: ButtonConfigProperty) {
-      }
+      public fun primaryBtn(primaryBtn: ButtonConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e55e629d616959e6e36a18e1a6ad549e12fc5337eb4dbef59eda51ef08e1dd1d")
-      public fun primaryBtn(primaryBtn: ButtonConfigProperty.Builder.() -> Unit) {
-      }
+      public fun primaryBtn(primaryBtn: ButtonConfigProperty.Builder.() -> Unit)
 
-      public fun secondaryBtn(secondaryBtn: IResolvable) {
-      }
+      public fun secondaryBtn(secondaryBtn: IResolvable)
 
-      public fun secondaryBtn(secondaryBtn: ButtonConfigProperty) {
-      }
+      public fun secondaryBtn(secondaryBtn: ButtonConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("234b6b86f473b96be475830f85312730a4e7b77a6dab32954fbbbd839e24d313")
-      public fun secondaryBtn(secondaryBtn: ButtonConfigProperty.Builder.() -> Unit) {
-      }
+      public fun secondaryBtn(secondaryBtn: ButtonConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -221,65 +200,65 @@ public open class CfnInAppTemplate internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty.builder()
 
-      public override fun backgroundColor(backgroundColor: String) {
+      override fun backgroundColor(backgroundColor: String) {
         cdkBuilder.backgroundColor(backgroundColor)
       }
 
-      public override fun bodyConfig(bodyConfig: IResolvable) {
+      override fun bodyConfig(bodyConfig: IResolvable) {
         cdkBuilder.bodyConfig(bodyConfig.let(IResolvable::unwrap))
       }
 
-      public override fun bodyConfig(bodyConfig: BodyConfigProperty) {
+      override fun bodyConfig(bodyConfig: BodyConfigProperty) {
         cdkBuilder.bodyConfig(bodyConfig.let(BodyConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2479de21a04690559cc4670eb0c9d6482bde68d7f4a47b3efc0ae67e5488d597")
-      public override fun bodyConfig(bodyConfig: BodyConfigProperty.Builder.() -> Unit): Unit =
+      override fun bodyConfig(bodyConfig: BodyConfigProperty.Builder.() -> Unit): Unit =
           bodyConfig(BodyConfigProperty(bodyConfig))
 
-      public override fun headerConfig(headerConfig: IResolvable) {
+      override fun headerConfig(headerConfig: IResolvable) {
         cdkBuilder.headerConfig(headerConfig.let(IResolvable::unwrap))
       }
 
-      public override fun headerConfig(headerConfig: HeaderConfigProperty) {
+      override fun headerConfig(headerConfig: HeaderConfigProperty) {
         cdkBuilder.headerConfig(headerConfig.let(HeaderConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("365e1110395eb940721a86faf9af727ac6d8d774c85cc42f0734c6396c8df06e")
-      public override fun headerConfig(headerConfig: HeaderConfigProperty.Builder.() -> Unit): Unit
-          = headerConfig(HeaderConfigProperty(headerConfig))
+      override fun headerConfig(headerConfig: HeaderConfigProperty.Builder.() -> Unit): Unit =
+          headerConfig(HeaderConfigProperty(headerConfig))
 
-      public override fun imageUrl(imageUrl: String) {
+      override fun imageUrl(imageUrl: String) {
         cdkBuilder.imageUrl(imageUrl)
       }
 
-      public override fun primaryBtn(primaryBtn: IResolvable) {
+      override fun primaryBtn(primaryBtn: IResolvable) {
         cdkBuilder.primaryBtn(primaryBtn.let(IResolvable::unwrap))
       }
 
-      public override fun primaryBtn(primaryBtn: ButtonConfigProperty) {
+      override fun primaryBtn(primaryBtn: ButtonConfigProperty) {
         cdkBuilder.primaryBtn(primaryBtn.let(ButtonConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e55e629d616959e6e36a18e1a6ad549e12fc5337eb4dbef59eda51ef08e1dd1d")
-      public override fun primaryBtn(primaryBtn: ButtonConfigProperty.Builder.() -> Unit): Unit =
+      override fun primaryBtn(primaryBtn: ButtonConfigProperty.Builder.() -> Unit): Unit =
           primaryBtn(ButtonConfigProperty(primaryBtn))
 
-      public override fun secondaryBtn(secondaryBtn: IResolvable) {
+      override fun secondaryBtn(secondaryBtn: IResolvable) {
         cdkBuilder.secondaryBtn(secondaryBtn.let(IResolvable::unwrap))
       }
 
-      public override fun secondaryBtn(secondaryBtn: ButtonConfigProperty) {
+      override fun secondaryBtn(secondaryBtn: ButtonConfigProperty) {
         cdkBuilder.secondaryBtn(secondaryBtn.let(ButtonConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("234b6b86f473b96be475830f85312730a4e7b77a6dab32954fbbbd839e24d313")
-      public override fun secondaryBtn(secondaryBtn: ButtonConfigProperty.Builder.() -> Unit): Unit
-          = secondaryBtn(ButtonConfigProperty(secondaryBtn))
+      override fun secondaryBtn(secondaryBtn: ButtonConfigProperty.Builder.() -> Unit): Unit =
+          secondaryBtn(ButtonConfigProperty(secondaryBtn))
 
       public fun build():
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty =
@@ -290,17 +269,17 @@ public open class CfnInAppTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.InAppMessageContentProperty,
     ) : InAppMessageContentProperty {
-      public override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
+      override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
 
-      public override fun bodyConfig(): Any? = unwrap(this).getBodyConfig()
+      override fun bodyConfig(): Any? = unwrap(this).getBodyConfig()
 
-      public override fun headerConfig(): Any? = unwrap(this).getHeaderConfig()
+      override fun headerConfig(): Any? = unwrap(this).getHeaderConfig()
 
-      public override fun imageUrl(): String? = unwrap(this).getImageUrl()
+      override fun imageUrl(): String? = unwrap(this).getImageUrl()
 
-      public override fun primaryBtn(): Any? = unwrap(this).getPrimaryBtn()
+      override fun primaryBtn(): Any? = unwrap(this).getPrimaryBtn()
 
-      public override fun secondaryBtn(): Any? = unwrap(this).getSecondaryBtn()
+      override fun secondaryBtn(): Any? = unwrap(this).getSecondaryBtn()
     }
 
     public companion object {
@@ -331,14 +310,11 @@ public open class CfnInAppTemplate internal constructor(
     public fun textColor(): String? = unwrap(this).getTextColor()
 
     public interface Builder {
-      public fun alignment(alignment: String) {
-      }
+      public fun alignment(alignment: String)
 
-      public fun body(body: String) {
-      }
+      public fun body(body: String)
 
-      public fun textColor(textColor: String) {
-      }
+      public fun textColor(textColor: String)
     }
 
     private class BuilderImpl : Builder {
@@ -346,15 +322,15 @@ public open class CfnInAppTemplate internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty.builder()
 
-      public override fun alignment(alignment: String) {
+      override fun alignment(alignment: String) {
         cdkBuilder.alignment(alignment)
       }
 
-      public override fun body(body: String) {
+      override fun body(body: String) {
         cdkBuilder.body(body)
       }
 
-      public override fun textColor(textColor: String) {
+      override fun textColor(textColor: String) {
         cdkBuilder.textColor(textColor)
       }
 
@@ -367,11 +343,11 @@ public open class CfnInAppTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.BodyConfigProperty,
     ) : BodyConfigProperty {
-      public override fun alignment(): String? = unwrap(this).getAlignment()
+      override fun alignment(): String? = unwrap(this).getAlignment()
 
-      public override fun body(): String? = unwrap(this).getBody()
+      override fun body(): String? = unwrap(this).getBody()
 
-      public override fun textColor(): String? = unwrap(this).getTextColor()
+      override fun textColor(): String? = unwrap(this).getTextColor()
     }
 
     public companion object {
@@ -408,23 +384,17 @@ public open class CfnInAppTemplate internal constructor(
     public fun textColor(): String? = unwrap(this).getTextColor()
 
     public interface Builder {
-      public fun backgroundColor(backgroundColor: String) {
-      }
+      public fun backgroundColor(backgroundColor: String)
 
-      public fun borderRadius(borderRadius: Number) {
-      }
+      public fun borderRadius(borderRadius: Number)
 
-      public fun buttonAction(buttonAction: String) {
-      }
+      public fun buttonAction(buttonAction: String)
 
-      public fun link(link: String) {
-      }
+      public fun link(link: String)
 
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
 
-      public fun textColor(textColor: String) {
-      }
+      public fun textColor(textColor: String)
     }
 
     private class BuilderImpl : Builder {
@@ -433,27 +403,27 @@ public open class CfnInAppTemplate internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty.builder()
 
-      public override fun backgroundColor(backgroundColor: String) {
+      override fun backgroundColor(backgroundColor: String) {
         cdkBuilder.backgroundColor(backgroundColor)
       }
 
-      public override fun borderRadius(borderRadius: Number) {
+      override fun borderRadius(borderRadius: Number) {
         cdkBuilder.borderRadius(borderRadius)
       }
 
-      public override fun buttonAction(buttonAction: String) {
+      override fun buttonAction(buttonAction: String) {
         cdkBuilder.buttonAction(buttonAction)
       }
 
-      public override fun link(link: String) {
+      override fun link(link: String) {
         cdkBuilder.link(link)
       }
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
-      public override fun textColor(textColor: String) {
+      override fun textColor(textColor: String) {
         cdkBuilder.textColor(textColor)
       }
 
@@ -466,17 +436,17 @@ public open class CfnInAppTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.DefaultButtonConfigurationProperty,
     ) : DefaultButtonConfigurationProperty {
-      public override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
+      override fun backgroundColor(): String? = unwrap(this).getBackgroundColor()
 
-      public override fun borderRadius(): Number? = unwrap(this).getBorderRadius()
+      override fun borderRadius(): Number? = unwrap(this).getBorderRadius()
 
-      public override fun buttonAction(): String? = unwrap(this).getButtonAction()
+      override fun buttonAction(): String? = unwrap(this).getButtonAction()
 
-      public override fun link(): String? = unwrap(this).getLink()
+      override fun link(): String? = unwrap(this).getLink()
 
-      public override fun text(): String? = unwrap(this).getText()
+      override fun text(): String? = unwrap(this).getText()
 
-      public override fun textColor(): String? = unwrap(this).getTextColor()
+      override fun textColor(): String? = unwrap(this).getTextColor()
     }
 
     public companion object {
@@ -506,11 +476,9 @@ public open class CfnInAppTemplate internal constructor(
     public fun link(): String? = unwrap(this).getLink()
 
     public interface Builder {
-      public fun buttonAction(buttonAction: String) {
-      }
+      public fun buttonAction(buttonAction: String)
 
-      public fun link(link: String) {
-      }
+      public fun link(link: String)
     }
 
     private class BuilderImpl : Builder {
@@ -519,11 +487,11 @@ public open class CfnInAppTemplate internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty.builder()
 
-      public override fun buttonAction(buttonAction: String) {
+      override fun buttonAction(buttonAction: String) {
         cdkBuilder.buttonAction(buttonAction)
       }
 
-      public override fun link(link: String) {
+      override fun link(link: String) {
         cdkBuilder.link(link)
       }
 
@@ -536,9 +504,9 @@ public open class CfnInAppTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.OverrideButtonConfigurationProperty,
     ) : OverrideButtonConfigurationProperty {
-      public override fun buttonAction(): String? = unwrap(this).getButtonAction()
+      override fun buttonAction(): String? = unwrap(this).getButtonAction()
 
-      public override fun link(): String? = unwrap(this).getLink()
+      override fun link(): String? = unwrap(this).getLink()
     }
 
     public companion object {
@@ -570,14 +538,11 @@ public open class CfnInAppTemplate internal constructor(
     public fun textColor(): String? = unwrap(this).getTextColor()
 
     public interface Builder {
-      public fun alignment(alignment: String) {
-      }
+      public fun alignment(alignment: String)
 
-      public fun `header`(`header`: String) {
-      }
+      public fun `header`(`header`: String)
 
-      public fun textColor(textColor: String) {
-      }
+      public fun textColor(textColor: String)
     }
 
     private class BuilderImpl : Builder {
@@ -585,15 +550,15 @@ public open class CfnInAppTemplate internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty.builder()
 
-      public override fun alignment(alignment: String) {
+      override fun alignment(alignment: String) {
         cdkBuilder.alignment(alignment)
       }
 
-      public override fun `header`(`header`: String) {
+      override fun `header`(`header`: String) {
         cdkBuilder.`header`(`header`)
       }
 
-      public override fun textColor(textColor: String) {
+      override fun textColor(textColor: String) {
         cdkBuilder.textColor(textColor)
       }
 
@@ -606,11 +571,11 @@ public open class CfnInAppTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.HeaderConfigProperty,
     ) : HeaderConfigProperty {
-      public override fun alignment(): String? = unwrap(this).getAlignment()
+      override fun alignment(): String? = unwrap(this).getAlignment()
 
-      public override fun `header`(): String? = unwrap(this).getHeader()
+      override fun `header`(): String? = unwrap(this).getHeader()
 
-      public override fun textColor(): String? = unwrap(this).getTextColor()
+      override fun textColor(): String? = unwrap(this).getTextColor()
     }
 
     public companion object {
@@ -643,50 +608,37 @@ public open class CfnInAppTemplate internal constructor(
     public fun web(): Any? = unwrap(this).getWeb()
 
     public interface Builder {
-      public fun android(android: IResolvable) {
-      }
+      public fun android(android: IResolvable)
 
-      public fun android(android: OverrideButtonConfigurationProperty) {
-      }
+      public fun android(android: OverrideButtonConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88a38b25b4684566e7079a422699d84fd408979eb8cfb373aec91408a4e9bcd6")
-      public fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit)
 
-      public fun defaultConfig(defaultConfig: IResolvable) {
-      }
+      public fun defaultConfig(defaultConfig: IResolvable)
 
-      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
-      }
+      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("de7b26fb3703b3caf476965cf7702f104885ef6807115a346f49bace39d5bac9")
-      public
-          fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit)
 
-      public fun ios(ios: IResolvable) {
-      }
+      public fun ios(ios: IResolvable)
 
-      public fun ios(ios: OverrideButtonConfigurationProperty) {
-      }
+      public fun ios(ios: OverrideButtonConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b0aea58ea9a80bca6bf68327d5ce114eee486702e9606d34ca4290f7daa88296")
-      public fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit)
 
-      public fun web(web: IResolvable) {
-      }
+      public fun web(web: IResolvable)
 
-      public fun web(web: OverrideButtonConfigurationProperty) {
-      }
+      public fun web(web: OverrideButtonConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b1ad297153e0dea8130af040c61521e27aff5bf44f0addd08ce7d1876021523")
-      public fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -694,57 +646,57 @@ public open class CfnInAppTemplate internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty.builder()
 
-      public override fun android(android: IResolvable) {
+      override fun android(android: IResolvable) {
         cdkBuilder.android(android.let(IResolvable::unwrap))
       }
 
-      public override fun android(android: OverrideButtonConfigurationProperty) {
+      override fun android(android: OverrideButtonConfigurationProperty) {
         cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88a38b25b4684566e7079a422699d84fd408979eb8cfb373aec91408a4e9bcd6")
-      public override fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit):
-          Unit = android(OverrideButtonConfigurationProperty(android))
+      override fun android(android: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+          android(OverrideButtonConfigurationProperty(android))
 
-      public override fun defaultConfig(defaultConfig: IResolvable) {
+      override fun defaultConfig(defaultConfig: IResolvable) {
         cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
       }
 
-      public override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
+      override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
         cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("de7b26fb3703b3caf476965cf7702f104885ef6807115a346f49bace39d5bac9")
-      public override
+      override
           fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty.Builder.() -> Unit):
           Unit = defaultConfig(DefaultButtonConfigurationProperty(defaultConfig))
 
-      public override fun ios(ios: IResolvable) {
+      override fun ios(ios: IResolvable) {
         cdkBuilder.ios(ios.let(IResolvable::unwrap))
       }
 
-      public override fun ios(ios: OverrideButtonConfigurationProperty) {
+      override fun ios(ios: OverrideButtonConfigurationProperty) {
         cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b0aea58ea9a80bca6bf68327d5ce114eee486702e9606d34ca4290f7daa88296")
-      public override fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun ios(ios: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
           ios(OverrideButtonConfigurationProperty(ios))
 
-      public override fun web(web: IResolvable) {
+      override fun web(web: IResolvable) {
         cdkBuilder.web(web.let(IResolvable::unwrap))
       }
 
-      public override fun web(web: OverrideButtonConfigurationProperty) {
+      override fun web(web: OverrideButtonConfigurationProperty) {
         cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b1ad297153e0dea8130af040c61521e27aff5bf44f0addd08ce7d1876021523")
-      public override fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun web(web: OverrideButtonConfigurationProperty.Builder.() -> Unit): Unit =
           web(OverrideButtonConfigurationProperty(web))
 
       public fun build():
@@ -756,13 +708,13 @@ public open class CfnInAppTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnInAppTemplate.ButtonConfigProperty,
     ) : ButtonConfigProperty {
-      public override fun android(): Any? = unwrap(this).getAndroid()
+      override fun android(): Any? = unwrap(this).getAndroid()
 
-      public override fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
+      override fun defaultConfig(): Any? = unwrap(this).getDefaultConfig()
 
-      public override fun ios(): Any? = unwrap(this).getIos()
+      override fun ios(): Any? = unwrap(this).getIos()
 
-      public override fun web(): Any? = unwrap(this).getWeb()
+      override fun web(): Any? = unwrap(this).getWeb()
     }
 
     public companion object {

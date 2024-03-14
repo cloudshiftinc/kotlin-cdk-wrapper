@@ -39,14 +39,11 @@ public open class CfnPublisher internal constructor(
   }
 
   public interface Builder {
-    public fun acceptTermsAndConditions(acceptTermsAndConditions: Boolean) {
-    }
+    public fun acceptTermsAndConditions(acceptTermsAndConditions: Boolean)
 
-    public fun acceptTermsAndConditions(acceptTermsAndConditions: IResolvable) {
-    }
+    public fun acceptTermsAndConditions(acceptTermsAndConditions: IResolvable)
 
-    public fun connectionArn(connectionArn: String) {
-    }
+    public fun connectionArn(connectionArn: String)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnPublisher internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnPublisher.Builder =
         software.amazon.awscdk.CfnPublisher.Builder.create(scope, id)
 
-    public override fun acceptTermsAndConditions(acceptTermsAndConditions: Boolean) {
+    override fun acceptTermsAndConditions(acceptTermsAndConditions: Boolean) {
       cdkBuilder.acceptTermsAndConditions(acceptTermsAndConditions)
     }
 
-    public override fun acceptTermsAndConditions(acceptTermsAndConditions: IResolvable) {
+    override fun acceptTermsAndConditions(acceptTermsAndConditions: IResolvable) {
       cdkBuilder.acceptTermsAndConditions(acceptTermsAndConditions.let(IResolvable::unwrap))
     }
 
-    public override fun connectionArn(connectionArn: String) {
+    override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
     }
 

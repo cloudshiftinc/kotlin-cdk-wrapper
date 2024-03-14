@@ -145,62 +145,43 @@ public open class CfnReplicationInstance internal constructor(
   }
 
   public interface Builder {
-    public fun allocatedStorage(allocatedStorage: Number) {
-    }
+    public fun allocatedStorage(allocatedStorage: Number)
 
-    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
-    }
+    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
-    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-    }
+    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun multiAz(multiAz: Boolean) {
-    }
+    public fun multiAz(multiAz: Boolean)
 
-    public fun multiAz(multiAz: IResolvable) {
-    }
+    public fun multiAz(multiAz: IResolvable)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun replicationInstanceClass(replicationInstanceClass: String) {
-    }
+    public fun replicationInstanceClass(replicationInstanceClass: String)
 
-    public fun replicationInstanceIdentifier(replicationInstanceIdentifier: String) {
-    }
+    public fun replicationInstanceIdentifier(replicationInstanceIdentifier: String)
 
-    public fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
-    }
+    public fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -210,79 +191,79 @@ public open class CfnReplicationInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnReplicationInstance.Builder =
         software.amazon.awscdk.services.dms.CfnReplicationInstance.Builder.create(scope, id)
 
-    public override fun allocatedStorage(allocatedStorage: Number) {
+    override fun allocatedStorage(allocatedStorage: Number) {
       cdkBuilder.allocatedStorage(allocatedStorage)
     }
 
-    public override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
+    override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
       cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade)
     }
 
-    public override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
+    override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
       cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun multiAz(multiAz: Boolean) {
+    override fun multiAz(multiAz: Boolean) {
       cdkBuilder.multiAz(multiAz)
     }
 
-    public override fun multiAz(multiAz: IResolvable) {
+    override fun multiAz(multiAz: IResolvable) {
       cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun replicationInstanceClass(replicationInstanceClass: String) {
+    override fun replicationInstanceClass(replicationInstanceClass: String) {
       cdkBuilder.replicationInstanceClass(replicationInstanceClass)
     }
 
-    public override fun replicationInstanceIdentifier(replicationInstanceIdentifier: String) {
+    override fun replicationInstanceIdentifier(replicationInstanceIdentifier: String) {
       cdkBuilder.replicationInstanceIdentifier(replicationInstanceIdentifier)
     }
 
-    public override fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
+    override fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
       cdkBuilder.replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier)
     }
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 

@@ -10,22 +10,20 @@ public interface BaseMountPoint {
   public fun readOnly(): Boolean
 
   public interface Builder {
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun readOnly(readOnly: Boolean) {
-    }
+    public fun readOnly(readOnly: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.BaseMountPoint.Builder =
         software.amazon.awscdk.services.ecs.BaseMountPoint.builder()
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun readOnly(readOnly: Boolean) {
+    override fun readOnly(readOnly: Boolean) {
       cdkBuilder.readOnly(readOnly)
     }
 
@@ -35,9 +33,9 @@ public interface BaseMountPoint {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.BaseMountPoint,
   ) : BaseMountPoint {
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun readOnly(): Boolean = unwrap(this).getReadOnly()
+    override fun readOnly(): Boolean = unwrap(this).getReadOnly()
   }
 
   public companion object {

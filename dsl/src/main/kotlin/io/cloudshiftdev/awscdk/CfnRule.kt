@@ -14,11 +14,9 @@ public open class CfnRule internal constructor(
   }
 
   public interface Builder {
-    public fun assertions(assertions: List<CfnRuleAssertion>) {
-    }
+    public fun assertions(assertions: List<CfnRuleAssertion>)
 
-    public fun ruleCondition(ruleCondition: ICfnConditionExpression) {
-    }
+    public fun ruleCondition(ruleCondition: ICfnConditionExpression)
   }
 
   private class BuilderImpl(
@@ -28,11 +26,11 @@ public open class CfnRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnRule.Builder =
         software.amazon.awscdk.CfnRule.Builder.create(scope, id)
 
-    public override fun assertions(assertions: List<CfnRuleAssertion>) {
+    override fun assertions(assertions: List<CfnRuleAssertion>) {
       cdkBuilder.assertions(assertions.map(CfnRuleAssertion::unwrap))
     }
 
-    public override fun ruleCondition(ruleCondition: ICfnConditionExpression) {
+    override fun ruleCondition(ruleCondition: ICfnConditionExpression) {
       cdkBuilder.ruleCondition(ruleCondition.let(ICfnConditionExpression::unwrap))
     }
 

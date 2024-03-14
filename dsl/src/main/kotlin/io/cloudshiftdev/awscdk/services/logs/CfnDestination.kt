@@ -42,17 +42,13 @@ public open class CfnDestination internal constructor(
   }
 
   public interface Builder {
-    public fun destinationName(destinationName: String) {
-    }
+    public fun destinationName(destinationName: String)
 
-    public fun destinationPolicy(destinationPolicy: String) {
-    }
+    public fun destinationPolicy(destinationPolicy: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun targetArn(targetArn: String) {
-    }
+    public fun targetArn(targetArn: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnDestination.Builder =
         software.amazon.awscdk.services.logs.CfnDestination.Builder.create(scope, id)
 
-    public override fun destinationName(destinationName: String) {
+    override fun destinationName(destinationName: String) {
       cdkBuilder.destinationName(destinationName)
     }
 
-    public override fun destinationPolicy(destinationPolicy: String) {
+    override fun destinationPolicy(destinationPolicy: String) {
       cdkBuilder.destinationPolicy(destinationPolicy)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun targetArn(targetArn: String) {
+    override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
     }
 

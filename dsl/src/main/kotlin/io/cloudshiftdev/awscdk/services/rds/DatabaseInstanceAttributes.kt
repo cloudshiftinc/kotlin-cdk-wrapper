@@ -20,50 +20,44 @@ public interface DatabaseInstanceAttributes {
   public fun securityGroups(): List<ISecurityGroup>
 
   public interface Builder {
-    public fun engine(engine: IInstanceEngine) {
-    }
+    public fun engine(engine: IInstanceEngine)
 
-    public fun instanceEndpointAddress(instanceEndpointAddress: String) {
-    }
+    public fun instanceEndpointAddress(instanceEndpointAddress: String)
 
-    public fun instanceIdentifier(instanceIdentifier: String) {
-    }
+    public fun instanceIdentifier(instanceIdentifier: String)
 
-    public fun instanceResourceId(instanceResourceId: String) {
-    }
+    public fun instanceResourceId(instanceResourceId: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes.Builder =
         software.amazon.awscdk.services.rds.DatabaseInstanceAttributes.builder()
 
-    public override fun engine(engine: IInstanceEngine) {
+    override fun engine(engine: IInstanceEngine) {
       cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
     }
 
-    public override fun instanceEndpointAddress(instanceEndpointAddress: String) {
+    override fun instanceEndpointAddress(instanceEndpointAddress: String) {
       cdkBuilder.instanceEndpointAddress(instanceEndpointAddress)
     }
 
-    public override fun instanceIdentifier(instanceIdentifier: String) {
+    override fun instanceIdentifier(instanceIdentifier: String) {
       cdkBuilder.instanceIdentifier(instanceIdentifier)
     }
 
-    public override fun instanceResourceId(instanceResourceId: String) {
+    override fun instanceResourceId(instanceResourceId: String) {
       cdkBuilder.instanceResourceId(instanceResourceId)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
@@ -74,19 +68,17 @@ public interface DatabaseInstanceAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes,
   ) : DatabaseInstanceAttributes {
-    public override fun engine(): IInstanceEngine? =
-        unwrap(this).getEngine()?.let(IInstanceEngine::wrap)
+    override fun engine(): IInstanceEngine? = unwrap(this).getEngine()?.let(IInstanceEngine::wrap)
 
-    public override fun instanceEndpointAddress(): String =
-        unwrap(this).getInstanceEndpointAddress()
+    override fun instanceEndpointAddress(): String = unwrap(this).getInstanceEndpointAddress()
 
-    public override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
+    override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
 
-    public override fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
+    override fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups().map(ISecurityGroup::wrap)
   }
 

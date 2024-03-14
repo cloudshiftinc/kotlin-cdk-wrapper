@@ -58,20 +58,15 @@ public open class CfnRegexPatternSet internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun regularExpressionList(regularExpressionList: List<String>) {
-    }
+    public fun regularExpressionList(regularExpressionList: List<String>)
 
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -81,23 +76,23 @@ public open class CfnRegexPatternSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wafv2.CfnRegexPatternSet.Builder =
         software.amazon.awscdk.services.wafv2.CfnRegexPatternSet.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun regularExpressionList(regularExpressionList: List<String>) {
+    override fun regularExpressionList(regularExpressionList: List<String>) {
       cdkBuilder.regularExpressionList(regularExpressionList)
     }
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

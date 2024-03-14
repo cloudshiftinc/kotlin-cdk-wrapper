@@ -178,84 +178,59 @@ public open class CfnNetworkInterface internal constructor(
   }
 
   public interface Builder {
-    public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
-    }
+    public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable)
 
     public
-        fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty) {
-    }
+        fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("05fe79de5ad612a2c211835d2841f358c21d750bc4f66d3040711844d1fd1e55")
     public
-        fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enablePrimaryIpv6(enablePrimaryIpv6: Boolean) {
-    }
+    public fun enablePrimaryIpv6(enablePrimaryIpv6: Boolean)
 
-    public fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
-    }
+    public fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable)
 
-    public fun groupSet(groupSet: List<String>) {
-    }
+    public fun groupSet(groupSet: List<String>)
 
-    public fun interfaceType(interfaceType: String) {
-    }
+    public fun interfaceType(interfaceType: String)
 
-    public fun ipv4PrefixCount(ipv4PrefixCount: Number) {
-    }
+    public fun ipv4PrefixCount(ipv4PrefixCount: Number)
 
-    public fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
-    }
+    public fun ipv4Prefixes(ipv4Prefixes: IResolvable)
 
-    public fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
-    }
+    public fun ipv4Prefixes(ipv4Prefixes: List<Any>)
 
-    public fun ipv6AddressCount(ipv6AddressCount: Number) {
-    }
+    public fun ipv6AddressCount(ipv6AddressCount: Number)
 
-    public fun ipv6Addresses(ipv6Addresses: IResolvable) {
-    }
+    public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
-    public fun ipv6Addresses(ipv6Addresses: List<Any>) {
-    }
+    public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
-    public fun ipv6PrefixCount(ipv6PrefixCount: Number) {
-    }
+    public fun ipv6PrefixCount(ipv6PrefixCount: Number)
 
-    public fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
-    }
+    public fun ipv6Prefixes(ipv6Prefixes: IResolvable)
 
-    public fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
-    }
+    public fun ipv6Prefixes(ipv6Prefixes: List<Any>)
 
-    public fun privateIpAddress(privateIpAddress: String) {
-    }
+    public fun privateIpAddress(privateIpAddress: String)
 
-    public fun privateIpAddresses(privateIpAddresses: IResolvable) {
-    }
+    public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
-    public fun privateIpAddresses(privateIpAddresses: List<Any>) {
-    }
+    public fun privateIpAddresses(privateIpAddresses: List<Any>)
 
-    public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
-    }
+    public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
-    public fun sourceDestCheck(sourceDestCheck: Boolean) {
-    }
+    public fun sourceDestCheck(sourceDestCheck: Boolean)
 
-    public fun sourceDestCheck(sourceDestCheck: IResolvable) {
-    }
+    public fun sourceDestCheck(sourceDestCheck: IResolvable)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -265,108 +240,107 @@ public open class CfnNetworkInterface internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnNetworkInterface.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkInterface.Builder.create(scope, id)
 
-    public override
-        fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
+    override fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
       cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty) {
       cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(ConnectionTrackingSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("05fe79de5ad612a2c211835d2841f358c21d750bc4f66d3040711844d1fd1e55")
-    public override
+    override
         fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty.Builder.() -> Unit):
         Unit =
         connectionTrackingSpecification(ConnectionTrackingSpecificationProperty(connectionTrackingSpecification))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enablePrimaryIpv6(enablePrimaryIpv6: Boolean) {
+    override fun enablePrimaryIpv6(enablePrimaryIpv6: Boolean) {
       cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6)
     }
 
-    public override fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
+    override fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
       cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6.let(IResolvable::unwrap))
     }
 
-    public override fun groupSet(groupSet: List<String>) {
+    override fun groupSet(groupSet: List<String>) {
       cdkBuilder.groupSet(groupSet)
     }
 
-    public override fun interfaceType(interfaceType: String) {
+    override fun interfaceType(interfaceType: String) {
       cdkBuilder.interfaceType(interfaceType)
     }
 
-    public override fun ipv4PrefixCount(ipv4PrefixCount: Number) {
+    override fun ipv4PrefixCount(ipv4PrefixCount: Number) {
       cdkBuilder.ipv4PrefixCount(ipv4PrefixCount)
     }
 
-    public override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
+    override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
       cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable::unwrap))
     }
 
-    public override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
+    override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
       cdkBuilder.ipv4Prefixes(ipv4Prefixes)
     }
 
-    public override fun ipv6AddressCount(ipv6AddressCount: Number) {
+    override fun ipv6AddressCount(ipv6AddressCount: Number) {
       cdkBuilder.ipv6AddressCount(ipv6AddressCount)
     }
 
-    public override fun ipv6Addresses(ipv6Addresses: IResolvable) {
+    override fun ipv6Addresses(ipv6Addresses: IResolvable) {
       cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
     }
 
-    public override fun ipv6Addresses(ipv6Addresses: List<Any>) {
+    override fun ipv6Addresses(ipv6Addresses: List<Any>) {
       cdkBuilder.ipv6Addresses(ipv6Addresses)
     }
 
-    public override fun ipv6PrefixCount(ipv6PrefixCount: Number) {
+    override fun ipv6PrefixCount(ipv6PrefixCount: Number) {
       cdkBuilder.ipv6PrefixCount(ipv6PrefixCount)
     }
 
-    public override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
+    override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
       cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable::unwrap))
     }
 
-    public override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
+    override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
       cdkBuilder.ipv6Prefixes(ipv6Prefixes)
     }
 
-    public override fun privateIpAddress(privateIpAddress: String) {
+    override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
 
-    public override fun privateIpAddresses(privateIpAddresses: IResolvable) {
+    override fun privateIpAddresses(privateIpAddresses: IResolvable) {
       cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
     }
 
-    public override fun privateIpAddresses(privateIpAddresses: List<Any>) {
+    override fun privateIpAddresses(privateIpAddresses: List<Any>) {
       cdkBuilder.privateIpAddresses(privateIpAddresses)
     }
 
-    public override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
+    override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
       cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
     }
 
-    public override fun sourceDestCheck(sourceDestCheck: Boolean) {
+    override fun sourceDestCheck(sourceDestCheck: Boolean) {
       cdkBuilder.sourceDestCheck(sourceDestCheck)
     }
 
-    public override fun sourceDestCheck(sourceDestCheck: IResolvable) {
+    override fun sourceDestCheck(sourceDestCheck: IResolvable) {
       cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable::unwrap))
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -400,14 +374,11 @@ public open class CfnNetworkInterface internal constructor(
     public fun privateIpAddress(): String
 
     public interface Builder {
-      public fun primary(primary: Boolean) {
-      }
+      public fun primary(primary: Boolean)
 
-      public fun primary(primary: IResolvable) {
-      }
+      public fun primary(primary: IResolvable)
 
-      public fun privateIpAddress(privateIpAddress: String) {
-      }
+      public fun privateIpAddress(privateIpAddress: String)
     }
 
     private class BuilderImpl : Builder {
@@ -416,15 +387,15 @@ public open class CfnNetworkInterface internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty.builder()
 
-      public override fun primary(primary: Boolean) {
+      override fun primary(primary: Boolean) {
         cdkBuilder.primary(primary)
       }
 
-      public override fun primary(primary: IResolvable) {
+      override fun primary(primary: IResolvable) {
         cdkBuilder.primary(primary.let(IResolvable::unwrap))
       }
 
-      public override fun privateIpAddress(privateIpAddress: String) {
+      override fun privateIpAddress(privateIpAddress: String) {
         cdkBuilder.privateIpAddress(privateIpAddress)
       }
 
@@ -437,9 +408,9 @@ public open class CfnNetworkInterface internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.PrivateIpAddressSpecificationProperty,
     ) : PrivateIpAddressSpecificationProperty {
-      public override fun primary(): Any = unwrap(this).getPrimary()
+      override fun primary(): Any = unwrap(this).getPrimary()
 
-      public override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
+      override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
     }
 
     public companion object {
@@ -467,8 +438,7 @@ public open class CfnNetworkInterface internal constructor(
     public fun ipv6Prefix(): String
 
     public interface Builder {
-      public fun ipv6Prefix(ipv6Prefix: String) {
-      }
+      public fun ipv6Prefix(ipv6Prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -477,7 +447,7 @@ public open class CfnNetworkInterface internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty.builder()
 
-      public override fun ipv6Prefix(ipv6Prefix: String) {
+      override fun ipv6Prefix(ipv6Prefix: String) {
         cdkBuilder.ipv6Prefix(ipv6Prefix)
       }
 
@@ -490,7 +460,7 @@ public open class CfnNetworkInterface internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv6PrefixSpecificationProperty,
     ) : Ipv6PrefixSpecificationProperty {
-      public override fun ipv6Prefix(): String = unwrap(this).getIpv6Prefix()
+      override fun ipv6Prefix(): String = unwrap(this).getIpv6Prefix()
     }
 
     public companion object {
@@ -521,14 +491,11 @@ public open class CfnNetworkInterface internal constructor(
     public fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
 
     public interface Builder {
-      public fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
-      }
+      public fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number)
 
-      public fun udpStreamTimeout(udpStreamTimeout: Number) {
-      }
+      public fun udpStreamTimeout(udpStreamTimeout: Number)
 
-      public fun udpTimeout(udpTimeout: Number) {
-      }
+      public fun udpTimeout(udpTimeout: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -537,15 +504,15 @@ public open class CfnNetworkInterface internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty.builder()
 
-      public override fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
+      override fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
         cdkBuilder.tcpEstablishedTimeout(tcpEstablishedTimeout)
       }
 
-      public override fun udpStreamTimeout(udpStreamTimeout: Number) {
+      override fun udpStreamTimeout(udpStreamTimeout: Number) {
         cdkBuilder.udpStreamTimeout(udpStreamTimeout)
       }
 
-      public override fun udpTimeout(udpTimeout: Number) {
+      override fun udpTimeout(udpTimeout: Number) {
         cdkBuilder.udpTimeout(udpTimeout)
       }
 
@@ -558,11 +525,11 @@ public open class CfnNetworkInterface internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.ConnectionTrackingSpecificationProperty,
     ) : ConnectionTrackingSpecificationProperty {
-      public override fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
+      override fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
 
-      public override fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
+      override fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
 
-      public override fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
+      override fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
     }
 
     public companion object {
@@ -590,8 +557,7 @@ public open class CfnNetworkInterface internal constructor(
     public fun ipv6Address(): String
 
     public interface Builder {
-      public fun ipv6Address(ipv6Address: String) {
-      }
+      public fun ipv6Address(ipv6Address: String)
     }
 
     private class BuilderImpl : Builder {
@@ -600,7 +566,7 @@ public open class CfnNetworkInterface internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty.builder()
 
-      public override fun ipv6Address(ipv6Address: String) {
+      override fun ipv6Address(ipv6Address: String) {
         cdkBuilder.ipv6Address(ipv6Address)
       }
 
@@ -613,7 +579,7 @@ public open class CfnNetworkInterface internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.InstanceIpv6AddressProperty,
     ) : InstanceIpv6AddressProperty {
-      public override fun ipv6Address(): String = unwrap(this).getIpv6Address()
+      override fun ipv6Address(): String = unwrap(this).getIpv6Address()
     }
 
     public companion object {
@@ -640,8 +606,7 @@ public open class CfnNetworkInterface internal constructor(
     public fun ipv4Prefix(): String
 
     public interface Builder {
-      public fun ipv4Prefix(ipv4Prefix: String) {
-      }
+      public fun ipv4Prefix(ipv4Prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -650,7 +615,7 @@ public open class CfnNetworkInterface internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty.builder()
 
-      public override fun ipv4Prefix(ipv4Prefix: String) {
+      override fun ipv4Prefix(ipv4Prefix: String) {
         cdkBuilder.ipv4Prefix(ipv4Prefix)
       }
 
@@ -663,7 +628,7 @@ public open class CfnNetworkInterface internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterface.Ipv4PrefixSpecificationProperty,
     ) : Ipv4PrefixSpecificationProperty {
-      public override fun ipv4Prefix(): String = unwrap(this).getIpv4Prefix()
+      override fun ipv4Prefix(): String = unwrap(this).getIpv4Prefix()
     }
 
     public companion object {

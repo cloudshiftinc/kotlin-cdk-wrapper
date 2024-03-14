@@ -81,36 +81,27 @@ public open class CfnWorkteam internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun memberDefinitions(memberDefinitions: IResolvable) {
-    }
+    public fun memberDefinitions(memberDefinitions: IResolvable)
 
-    public fun memberDefinitions(memberDefinitions: List<Any>) {
-    }
+    public fun memberDefinitions(memberDefinitions: List<Any>)
 
-    public fun notificationConfiguration(notificationConfiguration: IResolvable) {
-    }
+    public fun notificationConfiguration(notificationConfiguration: IResolvable)
 
     public
-        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-    }
+        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("083cb38abe11109526f7d9c60158b98954de160d78691ac73dde5f8f23605ee2")
     public
-        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workforceName(workforceName: String) {
-    }
+    public fun workforceName(workforceName: String)
 
-    public fun workteamName(workteamName: String) {
-    }
+    public fun workteamName(workteamName: String)
   }
 
   private class BuilderImpl(
@@ -120,43 +111,43 @@ public open class CfnWorkteam internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnWorkteam.Builder =
         software.amazon.awscdk.services.sagemaker.CfnWorkteam.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun memberDefinitions(memberDefinitions: IResolvable) {
+    override fun memberDefinitions(memberDefinitions: IResolvable) {
       cdkBuilder.memberDefinitions(memberDefinitions.let(IResolvable::unwrap))
     }
 
-    public override fun memberDefinitions(memberDefinitions: List<Any>) {
+    override fun memberDefinitions(memberDefinitions: List<Any>) {
       cdkBuilder.memberDefinitions(memberDefinitions)
     }
 
-    public override fun notificationConfiguration(notificationConfiguration: IResolvable) {
+    override fun notificationConfiguration(notificationConfiguration: IResolvable) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("083cb38abe11109526f7d9c60158b98954de160d78691ac73dde5f8f23605ee2")
-    public override
+    override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit):
         Unit =
         notificationConfiguration(NotificationConfigurationProperty(notificationConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workforceName(workforceName: String) {
+    override fun workforceName(workforceName: String) {
       cdkBuilder.workforceName(workforceName)
     }
 
-    public override fun workteamName(workteamName: String) {
+    override fun workteamName(workteamName: String) {
       cdkBuilder.workteamName(workteamName)
     }
 
@@ -188,8 +179,7 @@ public open class CfnWorkteam internal constructor(
     public fun notificationTopicArn(): String
 
     public interface Builder {
-      public fun notificationTopicArn(notificationTopicArn: String) {
-      }
+      public fun notificationTopicArn(notificationTopicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -198,7 +188,7 @@ public open class CfnWorkteam internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty.builder()
 
-      public override fun notificationTopicArn(notificationTopicArn: String) {
+      override fun notificationTopicArn(notificationTopicArn: String) {
         cdkBuilder.notificationTopicArn(notificationTopicArn)
       }
 
@@ -211,7 +201,7 @@ public open class CfnWorkteam internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.NotificationConfigurationProperty,
     ) : NotificationConfigurationProperty {
-      public override fun notificationTopicArn(): String = unwrap(this).getNotificationTopicArn()
+      override fun notificationTopicArn(): String = unwrap(this).getNotificationTopicArn()
     }
 
     public companion object {
@@ -243,14 +233,11 @@ public open class CfnWorkteam internal constructor(
     public fun cognitoUserPool(): String
 
     public interface Builder {
-      public fun cognitoClientId(cognitoClientId: String) {
-      }
+      public fun cognitoClientId(cognitoClientId: String)
 
-      public fun cognitoUserGroup(cognitoUserGroup: String) {
-      }
+      public fun cognitoUserGroup(cognitoUserGroup: String)
 
-      public fun cognitoUserPool(cognitoUserPool: String) {
-      }
+      public fun cognitoUserPool(cognitoUserPool: String)
     }
 
     private class BuilderImpl : Builder {
@@ -259,15 +246,15 @@ public open class CfnWorkteam internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty.builder()
 
-      public override fun cognitoClientId(cognitoClientId: String) {
+      override fun cognitoClientId(cognitoClientId: String) {
         cdkBuilder.cognitoClientId(cognitoClientId)
       }
 
-      public override fun cognitoUserGroup(cognitoUserGroup: String) {
+      override fun cognitoUserGroup(cognitoUserGroup: String) {
         cdkBuilder.cognitoUserGroup(cognitoUserGroup)
       }
 
-      public override fun cognitoUserPool(cognitoUserPool: String) {
+      override fun cognitoUserPool(cognitoUserPool: String) {
         cdkBuilder.cognitoUserPool(cognitoUserPool)
       }
 
@@ -280,11 +267,11 @@ public open class CfnWorkteam internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.CognitoMemberDefinitionProperty,
     ) : CognitoMemberDefinitionProperty {
-      public override fun cognitoClientId(): String = unwrap(this).getCognitoClientId()
+      override fun cognitoClientId(): String = unwrap(this).getCognitoClientId()
 
-      public override fun cognitoUserGroup(): String = unwrap(this).getCognitoUserGroup()
+      override fun cognitoUserGroup(): String = unwrap(this).getCognitoUserGroup()
 
-      public override fun cognitoUserPool(): String = unwrap(this).getCognitoUserPool()
+      override fun cognitoUserPool(): String = unwrap(this).getCognitoUserPool()
     }
 
     public companion object {
@@ -311,8 +298,7 @@ public open class CfnWorkteam internal constructor(
     public fun oidcGroups(): List<String>
 
     public interface Builder {
-      public fun oidcGroups(oidcGroups: List<String>) {
-      }
+      public fun oidcGroups(oidcGroups: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -321,7 +307,7 @@ public open class CfnWorkteam internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty.builder()
 
-      public override fun oidcGroups(oidcGroups: List<String>) {
+      override fun oidcGroups(oidcGroups: List<String>) {
         cdkBuilder.oidcGroups(oidcGroups)
       }
 
@@ -334,7 +320,7 @@ public open class CfnWorkteam internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
     ) : OidcMemberDefinitionProperty {
-      public override fun oidcGroups(): List<String> = unwrap(this).getOidcGroups() ?: emptyList()
+      override fun oidcGroups(): List<String> = unwrap(this).getOidcGroups() ?: emptyList()
     }
 
     public companion object {
@@ -363,29 +349,23 @@ public open class CfnWorkteam internal constructor(
     public fun oidcMemberDefinition(): Any? = unwrap(this).getOidcMemberDefinition()
 
     public interface Builder {
-      public fun cognitoMemberDefinition(cognitoMemberDefinition: IResolvable) {
-      }
+      public fun cognitoMemberDefinition(cognitoMemberDefinition: IResolvable)
 
-      public fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty) {
-      }
+      public fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7d936a3be26a7dcfeba5b0b94a753e20bd47ca892ad5971d4635f88e6d8ac7cf")
       public
-          fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty.Builder.() -> Unit)
 
-      public fun oidcMemberDefinition(oidcMemberDefinition: IResolvable) {
-      }
+      public fun oidcMemberDefinition(oidcMemberDefinition: IResolvable)
 
-      public fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty) {
-      }
+      public fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8713a5a802d8145a000b18d1466ed8dc1e9bae556ce03ee06a10d3f28b790da9")
       public
-          fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -393,32 +373,32 @@ public open class CfnWorkteam internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty.builder()
 
-      public override fun cognitoMemberDefinition(cognitoMemberDefinition: IResolvable) {
+      override fun cognitoMemberDefinition(cognitoMemberDefinition: IResolvable) {
         cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty) {
         cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition.let(CognitoMemberDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7d936a3be26a7dcfeba5b0b94a753e20bd47ca892ad5971d4635f88e6d8ac7cf")
-      public override
+      override
           fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty.Builder.() -> Unit):
           Unit = cognitoMemberDefinition(CognitoMemberDefinitionProperty(cognitoMemberDefinition))
 
-      public override fun oidcMemberDefinition(oidcMemberDefinition: IResolvable) {
+      override fun oidcMemberDefinition(oidcMemberDefinition: IResolvable) {
         cdkBuilder.oidcMemberDefinition(oidcMemberDefinition.let(IResolvable::unwrap))
       }
 
-      public override fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty) {
+      override fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty) {
         cdkBuilder.oidcMemberDefinition(oidcMemberDefinition.let(OidcMemberDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8713a5a802d8145a000b18d1466ed8dc1e9bae556ce03ee06a10d3f28b790da9")
-      public override
+      override
           fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty.Builder.() -> Unit):
           Unit = oidcMemberDefinition(OidcMemberDefinitionProperty(oidcMemberDefinition))
 
@@ -431,10 +411,9 @@ public open class CfnWorkteam internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.MemberDefinitionProperty,
     ) : MemberDefinitionProperty {
-      public override fun cognitoMemberDefinition(): Any? =
-          unwrap(this).getCognitoMemberDefinition()
+      override fun cognitoMemberDefinition(): Any? = unwrap(this).getCognitoMemberDefinition()
 
-      public override fun oidcMemberDefinition(): Any? = unwrap(this).getOidcMemberDefinition()
+      override fun oidcMemberDefinition(): Any? = unwrap(this).getOidcMemberDefinition()
     }
 
     public companion object {

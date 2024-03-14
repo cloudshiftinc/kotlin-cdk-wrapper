@@ -50,24 +50,18 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun practiceRunConfiguration(practiceRunConfiguration: IResolvable) {
-    }
+    public fun practiceRunConfiguration(practiceRunConfiguration: IResolvable)
 
-    public
-        fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty) {
-    }
+    public fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44e23cd0c76947b4a98fd46ae201caf0ff99e65f2768fdc876aade01a8be9e92")
     public
-        fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty.Builder.() -> Unit)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun zonalAutoshiftStatus(zonalAutoshiftStatus: String) {
-    }
+    public fun zonalAutoshiftStatus(zonalAutoshiftStatus: String)
   }
 
   private class BuilderImpl(
@@ -79,26 +73,26 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
         software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.Builder.create(scope,
         id)
 
-    public override fun practiceRunConfiguration(practiceRunConfiguration: IResolvable) {
+    override fun practiceRunConfiguration(practiceRunConfiguration: IResolvable) {
       cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty) {
       cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(PracticeRunConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44e23cd0c76947b4a98fd46ae201caf0ff99e65f2768fdc876aade01a8be9e92")
-    public override
+    override
         fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty.Builder.() -> Unit):
         Unit = practiceRunConfiguration(PracticeRunConfigurationProperty(practiceRunConfiguration))
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun zonalAutoshiftStatus(zonalAutoshiftStatus: String) {
+    override fun zonalAutoshiftStatus(zonalAutoshiftStatus: String) {
       cdkBuilder.zonalAutoshiftStatus(zonalAutoshiftStatus)
     }
 
@@ -139,23 +133,17 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
     public fun outcomeAlarms(): Any
 
     public interface Builder {
-      public fun blockedDates(blockedDates: List<String>) {
-      }
+      public fun blockedDates(blockedDates: List<String>)
 
-      public fun blockedWindows(blockedWindows: List<String>) {
-      }
+      public fun blockedWindows(blockedWindows: List<String>)
 
-      public fun blockingAlarms(blockingAlarms: IResolvable) {
-      }
+      public fun blockingAlarms(blockingAlarms: IResolvable)
 
-      public fun blockingAlarms(blockingAlarms: List<Any>) {
-      }
+      public fun blockingAlarms(blockingAlarms: List<Any>)
 
-      public fun outcomeAlarms(outcomeAlarms: IResolvable) {
-      }
+      public fun outcomeAlarms(outcomeAlarms: IResolvable)
 
-      public fun outcomeAlarms(outcomeAlarms: List<Any>) {
-      }
+      public fun outcomeAlarms(outcomeAlarms: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -164,27 +152,27 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
           =
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty.builder()
 
-      public override fun blockedDates(blockedDates: List<String>) {
+      override fun blockedDates(blockedDates: List<String>) {
         cdkBuilder.blockedDates(blockedDates)
       }
 
-      public override fun blockedWindows(blockedWindows: List<String>) {
+      override fun blockedWindows(blockedWindows: List<String>) {
         cdkBuilder.blockedWindows(blockedWindows)
       }
 
-      public override fun blockingAlarms(blockingAlarms: IResolvable) {
+      override fun blockingAlarms(blockingAlarms: IResolvable) {
         cdkBuilder.blockingAlarms(blockingAlarms.let(IResolvable::unwrap))
       }
 
-      public override fun blockingAlarms(blockingAlarms: List<Any>) {
+      override fun blockingAlarms(blockingAlarms: List<Any>) {
         cdkBuilder.blockingAlarms(blockingAlarms)
       }
 
-      public override fun outcomeAlarms(outcomeAlarms: IResolvable) {
+      override fun outcomeAlarms(outcomeAlarms: IResolvable) {
         cdkBuilder.outcomeAlarms(outcomeAlarms.let(IResolvable::unwrap))
       }
 
-      public override fun outcomeAlarms(outcomeAlarms: List<Any>) {
+      override fun outcomeAlarms(outcomeAlarms: List<Any>) {
         cdkBuilder.outcomeAlarms(outcomeAlarms)
       }
 
@@ -197,15 +185,13 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty,
     ) : PracticeRunConfigurationProperty {
-      public override fun blockedDates(): List<String> = unwrap(this).getBlockedDates() ?:
-          emptyList()
+      override fun blockedDates(): List<String> = unwrap(this).getBlockedDates() ?: emptyList()
 
-      public override fun blockedWindows(): List<String> = unwrap(this).getBlockedWindows() ?:
-          emptyList()
+      override fun blockedWindows(): List<String> = unwrap(this).getBlockedWindows() ?: emptyList()
 
-      public override fun blockingAlarms(): Any? = unwrap(this).getBlockingAlarms()
+      override fun blockingAlarms(): Any? = unwrap(this).getBlockingAlarms()
 
-      public override fun outcomeAlarms(): Any = unwrap(this).getOutcomeAlarms()
+      override fun outcomeAlarms(): Any = unwrap(this).getOutcomeAlarms()
     }
 
     public companion object {
@@ -234,11 +220,9 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun alarmIdentifier(alarmIdentifier: String) {
-      }
+      public fun alarmIdentifier(alarmIdentifier: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -247,11 +231,11 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
           =
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty.builder()
 
-      public override fun alarmIdentifier(alarmIdentifier: String) {
+      override fun alarmIdentifier(alarmIdentifier: String) {
         cdkBuilder.alarmIdentifier(alarmIdentifier)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -264,9 +248,9 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.ControlConditionProperty,
     ) : ControlConditionProperty {
-      public override fun alarmIdentifier(): String = unwrap(this).getAlarmIdentifier()
+      override fun alarmIdentifier(): String = unwrap(this).getAlarmIdentifier()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

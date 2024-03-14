@@ -96,41 +96,30 @@ public open class CfnQueue internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun hoursOfOperationArn(hoursOfOperationArn: String) {
-    }
+    public fun hoursOfOperationArn(hoursOfOperationArn: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun maxContacts(maxContacts: Number) {
-    }
+    public fun maxContacts(maxContacts: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outboundCallerConfig(outboundCallerConfig: IResolvable) {
-    }
+    public fun outboundCallerConfig(outboundCallerConfig: IResolvable)
 
-    public fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty) {
-    }
+    public fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4fea0c6d4349f0a909729187b8314330b05c7d9bb80d6adb423178a0df302ce2")
     public
-        fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty.Builder.() -> Unit) {
-    }
+        fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty.Builder.() -> Unit)
 
-    public fun quickConnectArns(quickConnectArns: List<String>) {
-    }
+    public fun quickConnectArns(quickConnectArns: List<String>)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -140,49 +129,49 @@ public open class CfnQueue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnQueue.Builder =
         software.amazon.awscdk.services.connect.CfnQueue.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun hoursOfOperationArn(hoursOfOperationArn: String) {
+    override fun hoursOfOperationArn(hoursOfOperationArn: String) {
       cdkBuilder.hoursOfOperationArn(hoursOfOperationArn)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun maxContacts(maxContacts: Number) {
+    override fun maxContacts(maxContacts: Number) {
       cdkBuilder.maxContacts(maxContacts)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outboundCallerConfig(outboundCallerConfig: IResolvable) {
+    override fun outboundCallerConfig(outboundCallerConfig: IResolvable) {
       cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(IResolvable::unwrap))
     }
 
-    public override fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty) {
+    override fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty) {
       cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(OutboundCallerConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4fea0c6d4349f0a909729187b8314330b05c7d9bb80d6adb423178a0df302ce2")
-    public override
+    override
         fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty.Builder.() -> Unit):
         Unit = outboundCallerConfig(OutboundCallerConfigProperty(outboundCallerConfig))
 
-    public override fun quickConnectArns(quickConnectArns: List<String>) {
+    override fun quickConnectArns(quickConnectArns: List<String>) {
       cdkBuilder.quickConnectArns(quickConnectArns)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -218,14 +207,11 @@ public open class CfnQueue internal constructor(
     public fun outboundFlowArn(): String? = unwrap(this).getOutboundFlowArn()
 
     public interface Builder {
-      public fun outboundCallerIdName(outboundCallerIdName: String) {
-      }
+      public fun outboundCallerIdName(outboundCallerIdName: String)
 
-      public fun outboundCallerIdNumberArn(outboundCallerIdNumberArn: String) {
-      }
+      public fun outboundCallerIdNumberArn(outboundCallerIdNumberArn: String)
 
-      public fun outboundFlowArn(outboundFlowArn: String) {
-      }
+      public fun outboundFlowArn(outboundFlowArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -233,15 +219,15 @@ public open class CfnQueue internal constructor(
           software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty.Builder =
           software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty.builder()
 
-      public override fun outboundCallerIdName(outboundCallerIdName: String) {
+      override fun outboundCallerIdName(outboundCallerIdName: String) {
         cdkBuilder.outboundCallerIdName(outboundCallerIdName)
       }
 
-      public override fun outboundCallerIdNumberArn(outboundCallerIdNumberArn: String) {
+      override fun outboundCallerIdNumberArn(outboundCallerIdNumberArn: String) {
         cdkBuilder.outboundCallerIdNumberArn(outboundCallerIdNumberArn)
       }
 
-      public override fun outboundFlowArn(outboundFlowArn: String) {
+      override fun outboundFlowArn(outboundFlowArn: String) {
         cdkBuilder.outboundFlowArn(outboundFlowArn)
       }
 
@@ -254,12 +240,12 @@ public open class CfnQueue internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnQueue.OutboundCallerConfigProperty,
     ) : OutboundCallerConfigProperty {
-      public override fun outboundCallerIdName(): String? = unwrap(this).getOutboundCallerIdName()
+      override fun outboundCallerIdName(): String? = unwrap(this).getOutboundCallerIdName()
 
-      public override fun outboundCallerIdNumberArn(): String? =
+      override fun outboundCallerIdNumberArn(): String? =
           unwrap(this).getOutboundCallerIdNumberArn()
 
-      public override fun outboundFlowArn(): String? = unwrap(this).getOutboundFlowArn()
+      override fun outboundFlowArn(): String? = unwrap(this).getOutboundFlowArn()
     }
 
     public companion object {

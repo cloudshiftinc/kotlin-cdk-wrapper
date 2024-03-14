@@ -13,14 +13,11 @@ public interface CustomEndpointOptions {
   public fun hostedZone(): IHostedZone? = unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
 
   public interface Builder {
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun hostedZone(hostedZone: IHostedZone) {
-    }
+    public fun hostedZone(hostedZone: IHostedZone)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface CustomEndpointOptions {
         software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions.Builder =
         software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions.builder()
 
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun hostedZone(hostedZone: IHostedZone) {
+    override fun hostedZone(hostedZone: IHostedZone) {
       cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
     }
 
@@ -47,13 +44,12 @@ public interface CustomEndpointOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions,
   ) : CustomEndpointOptions {
-    public override fun certificate(): ICertificate? =
+    override fun certificate(): ICertificate? =
         unwrap(this).getCertificate()?.let(ICertificate::wrap)
 
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
 
-    public override fun hostedZone(): IHostedZone? =
-        unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
+    override fun hostedZone(): IHostedZone? = unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
   }
 
   public companion object {

@@ -25,8 +25,7 @@ public open class CfnAccountAlias internal constructor(
   }
 
   public interface Builder {
-    public fun accountAlias(accountAlias: String) {
-    }
+    public fun accountAlias(accountAlias: String)
   }
 
   private class BuilderImpl(
@@ -36,7 +35,7 @@ public open class CfnAccountAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.supportapp.CfnAccountAlias.Builder =
         software.amazon.awscdk.services.supportapp.CfnAccountAlias.Builder.create(scope, id)
 
-    public override fun accountAlias(accountAlias: String) {
+    override fun accountAlias(accountAlias: String) {
       cdkBuilder.accountAlias(accountAlias)
     }
 

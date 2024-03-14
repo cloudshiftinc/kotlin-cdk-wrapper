@@ -104,54 +104,41 @@ public open class CfnKnowledgeBase internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun knowledgeBaseType(knowledgeBaseType: String) {
-    }
+    public fun knowledgeBaseType(knowledgeBaseType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun renderingConfiguration(renderingConfiguration: IResolvable) {
-    }
+    public fun renderingConfiguration(renderingConfiguration: IResolvable)
 
-    public fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty) {
-    }
+    public fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b99b7c442864630a725d6c732c7dec3f1cb7334c007c5b95b44f47dc8c322fc2")
     public
-        fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty.Builder.() -> Unit)
 
-    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-    }
+    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable)
 
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a593150940889e7d085bf1701d88c0c61a1efe41f44ae6c05f4819ccbe3a2ff2")
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun sourceConfiguration(sourceConfiguration: IResolvable) {
-    }
+    public fun sourceConfiguration(sourceConfiguration: IResolvable)
 
-    public fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
-    }
+    public fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c9332db18c2e5fc8ef05f70b66f404acef2ce02aa1428319bfda4d40b132a7f")
     public
-        fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -161,65 +148,63 @@ public open class CfnKnowledgeBase internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.Builder =
         software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun knowledgeBaseType(knowledgeBaseType: String) {
+    override fun knowledgeBaseType(knowledgeBaseType: String) {
       cdkBuilder.knowledgeBaseType(knowledgeBaseType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun renderingConfiguration(renderingConfiguration: IResolvable) {
+    override fun renderingConfiguration(renderingConfiguration: IResolvable) {
       cdkBuilder.renderingConfiguration(renderingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty) {
+    override fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty) {
       cdkBuilder.renderingConfiguration(renderingConfiguration.let(RenderingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b99b7c442864630a725d6c732c7dec3f1cb7334c007c5b95b44f47dc8c322fc2")
-    public override
+    override
         fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty.Builder.() -> Unit):
         Unit = renderingConfiguration(RenderingConfigurationProperty(renderingConfiguration))
 
-    public override
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
+    override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a593150940889e7d085bf1701d88c0c61a1efe41f44ae6c05f4819ccbe3a2ff2")
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit):
         Unit =
         serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty(serverSideEncryptionConfiguration))
 
-    public override fun sourceConfiguration(sourceConfiguration: IResolvable) {
+    override fun sourceConfiguration(sourceConfiguration: IResolvable) {
       cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
+    override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
       cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c9332db18c2e5fc8ef05f70b66f404acef2ce02aa1428319bfda4d40b132a7f")
-    public override
+    override
         fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit):
         Unit = sourceConfiguration(SourceConfigurationProperty(sourceConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -251,8 +236,7 @@ public open class CfnKnowledgeBase internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,7 +245,7 @@ public open class CfnKnowledgeBase internal constructor(
           =
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -274,7 +258,7 @@ public open class CfnKnowledgeBase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty,
     ) : ServerSideEncryptionConfigurationProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {
@@ -302,17 +286,14 @@ public open class CfnKnowledgeBase internal constructor(
     public fun appIntegrations(): Any
 
     public interface Builder {
-      public fun appIntegrations(appIntegrations: IResolvable) {
-      }
+      public fun appIntegrations(appIntegrations: IResolvable)
 
-      public fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty) {
-      }
+      public fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a64442978d7f0855f604a39ce68c26daa35a99dd4d26d0c3bf9a2a7487a0988")
       public
-          fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -321,17 +302,17 @@ public open class CfnKnowledgeBase internal constructor(
           =
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty.builder()
 
-      public override fun appIntegrations(appIntegrations: IResolvable) {
+      override fun appIntegrations(appIntegrations: IResolvable) {
         cdkBuilder.appIntegrations(appIntegrations.let(IResolvable::unwrap))
       }
 
-      public override fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty) {
+      override fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty) {
         cdkBuilder.appIntegrations(appIntegrations.let(AppIntegrationsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a64442978d7f0855f604a39ce68c26daa35a99dd4d26d0c3bf9a2a7487a0988")
-      public override
+      override
           fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty.Builder.() -> Unit):
           Unit = appIntegrations(AppIntegrationsConfigurationProperty(appIntegrations))
 
@@ -344,7 +325,7 @@ public open class CfnKnowledgeBase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.SourceConfigurationProperty,
     ) : SourceConfigurationProperty {
-      public override fun appIntegrations(): Any = unwrap(this).getAppIntegrations()
+      override fun appIntegrations(): Any = unwrap(this).getAppIntegrations()
     }
 
     public companion object {
@@ -371,8 +352,7 @@ public open class CfnKnowledgeBase internal constructor(
     public fun templateUri(): String? = unwrap(this).getTemplateUri()
 
     public interface Builder {
-      public fun templateUri(templateUri: String) {
-      }
+      public fun templateUri(templateUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -381,7 +361,7 @@ public open class CfnKnowledgeBase internal constructor(
           =
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty.builder()
 
-      public override fun templateUri(templateUri: String) {
+      override fun templateUri(templateUri: String) {
         cdkBuilder.templateUri(templateUri)
       }
 
@@ -394,7 +374,7 @@ public open class CfnKnowledgeBase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.RenderingConfigurationProperty,
     ) : RenderingConfigurationProperty {
-      public override fun templateUri(): String? = unwrap(this).getTemplateUri()
+      override fun templateUri(): String? = unwrap(this).getTemplateUri()
     }
 
     public companion object {
@@ -423,11 +403,9 @@ public open class CfnKnowledgeBase internal constructor(
     public fun objectFields(): List<String> = unwrap(this).getObjectFields() ?: emptyList()
 
     public interface Builder {
-      public fun appIntegrationArn(appIntegrationArn: String) {
-      }
+      public fun appIntegrationArn(appIntegrationArn: String)
 
-      public fun objectFields(objectFields: List<String>) {
-      }
+      public fun objectFields(objectFields: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -436,11 +414,11 @@ public open class CfnKnowledgeBase internal constructor(
           =
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty.builder()
 
-      public override fun appIntegrationArn(appIntegrationArn: String) {
+      override fun appIntegrationArn(appIntegrationArn: String) {
         cdkBuilder.appIntegrationArn(appIntegrationArn)
       }
 
-      public override fun objectFields(objectFields: List<String>) {
+      override fun objectFields(objectFields: List<String>) {
         cdkBuilder.objectFields(objectFields)
       }
 
@@ -453,10 +431,9 @@ public open class CfnKnowledgeBase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty,
     ) : AppIntegrationsConfigurationProperty {
-      public override fun appIntegrationArn(): String = unwrap(this).getAppIntegrationArn()
+      override fun appIntegrationArn(): String = unwrap(this).getAppIntegrationArn()
 
-      public override fun objectFields(): List<String> = unwrap(this).getObjectFields() ?:
-          emptyList()
+      override fun objectFields(): List<String> = unwrap(this).getObjectFields() ?: emptyList()
     }
 
     public companion object {

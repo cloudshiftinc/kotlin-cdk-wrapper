@@ -70,28 +70,21 @@ public open class CfnLocationS3 internal constructor(
   }
 
   public interface Builder {
-    public fun s3BucketArn(s3BucketArn: String) {
-    }
+    public fun s3BucketArn(s3BucketArn: String)
 
-    public fun s3Config(s3Config: IResolvable) {
-    }
+    public fun s3Config(s3Config: IResolvable)
 
-    public fun s3Config(s3Config: S3ConfigProperty) {
-    }
+    public fun s3Config(s3Config: S3ConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2913a60c9b6a3ff55f01f98abaccc69c7b5f4891aa4a4f678f0b452c230c38f3")
-    public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit) {
-    }
+    public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
 
-    public fun s3StorageClass(s3StorageClass: String) {
-    }
+    public fun s3StorageClass(s3StorageClass: String)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -101,32 +94,32 @@ public open class CfnLocationS3 internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationS3.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationS3.Builder.create(scope, id)
 
-    public override fun s3BucketArn(s3BucketArn: String) {
+    override fun s3BucketArn(s3BucketArn: String) {
       cdkBuilder.s3BucketArn(s3BucketArn)
     }
 
-    public override fun s3Config(s3Config: IResolvable) {
+    override fun s3Config(s3Config: IResolvable) {
       cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
     }
 
-    public override fun s3Config(s3Config: S3ConfigProperty) {
+    override fun s3Config(s3Config: S3ConfigProperty) {
       cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2913a60c9b6a3ff55f01f98abaccc69c7b5f4891aa4a4f678f0b452c230c38f3")
-    public override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
+    override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
         s3Config(S3ConfigProperty(s3Config))
 
-    public override fun s3StorageClass(s3StorageClass: String) {
+    override fun s3StorageClass(s3StorageClass: String) {
       cdkBuilder.s3StorageClass(s3StorageClass)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -158,8 +151,7 @@ public open class CfnLocationS3 internal constructor(
     public fun bucketAccessRoleArn(): String
 
     public interface Builder {
-      public fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
-      }
+      public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -167,7 +159,7 @@ public open class CfnLocationS3 internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationS3.S3ConfigProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationS3.S3ConfigProperty.builder()
 
-      public override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
+      override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
         cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
       }
 
@@ -179,7 +171,7 @@ public open class CfnLocationS3 internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationS3.S3ConfigProperty,
     ) : S3ConfigProperty {
-      public override fun bucketAccessRoleArn(): String = unwrap(this).getBucketAccessRoleArn()
+      override fun bucketAccessRoleArn(): String = unwrap(this).getBucketAccessRoleArn()
     }
 
     public companion object {

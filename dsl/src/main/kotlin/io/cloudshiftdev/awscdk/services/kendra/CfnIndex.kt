@@ -123,59 +123,43 @@ public open class CfnIndex internal constructor(
   }
 
   public interface Builder {
-    public fun capacityUnits(capacityUnits: IResolvable) {
-    }
+    public fun capacityUnits(capacityUnits: IResolvable)
 
-    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
-    }
+    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d38515d81b65ad12a0112808e60b88658c07d2d9b54fb879362e1b26d9039cf")
-    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable) {
-    }
+    public fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable)
 
-    public fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>) {
-    }
+    public fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>)
 
-    public fun edition(edition: String) {
-    }
+    public fun edition(edition: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-    }
+    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable)
 
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66297df61c7f33a3e947db30b9a9e02024ca4e92755576ea3ff17f18cd2df80c")
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userContextPolicy(userContextPolicy: String) {
-    }
+    public fun userContextPolicy(userContextPolicy: String)
 
-    public fun userTokenConfigurations(userTokenConfigurations: IResolvable) {
-    }
+    public fun userTokenConfigurations(userTokenConfigurations: IResolvable)
 
-    public fun userTokenConfigurations(userTokenConfigurations: List<Any>) {
-    }
+    public fun userTokenConfigurations(userTokenConfigurations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -185,75 +169,73 @@ public open class CfnIndex internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kendra.CfnIndex.Builder =
         software.amazon.awscdk.services.kendra.CfnIndex.Builder.create(scope, id)
 
-    public override fun capacityUnits(capacityUnits: IResolvable) {
+    override fun capacityUnits(capacityUnits: IResolvable) {
       cdkBuilder.capacityUnits(capacityUnits.let(IResolvable::unwrap))
     }
 
-    public override fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
+    override fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
       cdkBuilder.capacityUnits(capacityUnits.let(CapacityUnitsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d38515d81b65ad12a0112808e60b88658c07d2d9b54fb879362e1b26d9039cf")
-    public override
+    override
         fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty.Builder.() -> Unit):
         Unit = capacityUnits(CapacityUnitsConfigurationProperty(capacityUnits))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override
-        fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable) {
+    override fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable) {
       cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>) {
+    override fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>) {
       cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations)
     }
 
-    public override fun edition(edition: String) {
+    override fun edition(edition: String) {
       cdkBuilder.edition(edition)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
+    override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66297df61c7f33a3e947db30b9a9e02024ca4e92755576ea3ff17f18cd2df80c")
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit):
         Unit =
         serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty(serverSideEncryptionConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userContextPolicy(userContextPolicy: String) {
+    override fun userContextPolicy(userContextPolicy: String) {
       cdkBuilder.userContextPolicy(userContextPolicy)
     }
 
-    public override fun userTokenConfigurations(userTokenConfigurations: IResolvable) {
+    override fun userTokenConfigurations(userTokenConfigurations: IResolvable) {
       cdkBuilder.userTokenConfigurations(userTokenConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun userTokenConfigurations(userTokenConfigurations: List<Any>) {
+    override fun userTokenConfigurations(userTokenConfigurations: List<Any>) {
       cdkBuilder.userTokenConfigurations(userTokenConfigurations)
     }
 
@@ -287,11 +269,9 @@ public open class CfnIndex internal constructor(
     public fun storageCapacityUnits(): Number
 
     public interface Builder {
-      public fun queryCapacityUnits(queryCapacityUnits: Number) {
-      }
+      public fun queryCapacityUnits(queryCapacityUnits: Number)
 
-      public fun storageCapacityUnits(storageCapacityUnits: Number) {
-      }
+      public fun storageCapacityUnits(storageCapacityUnits: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -300,11 +280,11 @@ public open class CfnIndex internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnIndex.CapacityUnitsConfigurationProperty.builder()
 
-      public override fun queryCapacityUnits(queryCapacityUnits: Number) {
+      override fun queryCapacityUnits(queryCapacityUnits: Number) {
         cdkBuilder.queryCapacityUnits(queryCapacityUnits)
       }
 
-      public override fun storageCapacityUnits(storageCapacityUnits: Number) {
+      override fun storageCapacityUnits(storageCapacityUnits: Number) {
         cdkBuilder.storageCapacityUnits(storageCapacityUnits)
       }
 
@@ -317,9 +297,9 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.CapacityUnitsConfigurationProperty,
     ) : CapacityUnitsConfigurationProperty {
-      public override fun queryCapacityUnits(): Number = unwrap(this).getQueryCapacityUnits()
+      override fun queryCapacityUnits(): Number = unwrap(this).getQueryCapacityUnits()
 
-      public override fun storageCapacityUnits(): Number = unwrap(this).getStorageCapacityUnits()
+      override fun storageCapacityUnits(): Number = unwrap(this).getStorageCapacityUnits()
     }
 
     public companion object {
@@ -355,26 +335,19 @@ public open class CfnIndex internal constructor(
     public fun valueImportanceItems(): Any? = unwrap(this).getValueImportanceItems()
 
     public interface Builder {
-      public fun duration(duration: String) {
-      }
+      public fun duration(duration: String)
 
-      public fun freshness(freshness: Boolean) {
-      }
+      public fun freshness(freshness: Boolean)
 
-      public fun freshness(freshness: IResolvable) {
-      }
+      public fun freshness(freshness: IResolvable)
 
-      public fun importance(importance: Number) {
-      }
+      public fun importance(importance: Number)
 
-      public fun rankOrder(rankOrder: String) {
-      }
+      public fun rankOrder(rankOrder: String)
 
-      public fun valueImportanceItems(valueImportanceItems: IResolvable) {
-      }
+      public fun valueImportanceItems(valueImportanceItems: IResolvable)
 
-      public fun valueImportanceItems(valueImportanceItems: List<Any>) {
-      }
+      public fun valueImportanceItems(valueImportanceItems: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -382,31 +355,31 @@ public open class CfnIndex internal constructor(
           software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty.builder()
 
-      public override fun duration(duration: String) {
+      override fun duration(duration: String) {
         cdkBuilder.duration(duration)
       }
 
-      public override fun freshness(freshness: Boolean) {
+      override fun freshness(freshness: Boolean) {
         cdkBuilder.freshness(freshness)
       }
 
-      public override fun freshness(freshness: IResolvable) {
+      override fun freshness(freshness: IResolvable) {
         cdkBuilder.freshness(freshness.let(IResolvable::unwrap))
       }
 
-      public override fun importance(importance: Number) {
+      override fun importance(importance: Number) {
         cdkBuilder.importance(importance)
       }
 
-      public override fun rankOrder(rankOrder: String) {
+      override fun rankOrder(rankOrder: String) {
         cdkBuilder.rankOrder(rankOrder)
       }
 
-      public override fun valueImportanceItems(valueImportanceItems: IResolvable) {
+      override fun valueImportanceItems(valueImportanceItems: IResolvable) {
         cdkBuilder.valueImportanceItems(valueImportanceItems.let(IResolvable::unwrap))
       }
 
-      public override fun valueImportanceItems(valueImportanceItems: List<Any>) {
+      override fun valueImportanceItems(valueImportanceItems: List<Any>) {
         cdkBuilder.valueImportanceItems(valueImportanceItems)
       }
 
@@ -417,15 +390,15 @@ public open class CfnIndex internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty,
     ) : RelevanceProperty {
-      public override fun duration(): String? = unwrap(this).getDuration()
+      override fun duration(): String? = unwrap(this).getDuration()
 
-      public override fun freshness(): Any? = unwrap(this).getFreshness()
+      override fun freshness(): Any? = unwrap(this).getFreshness()
 
-      public override fun importance(): Number? = unwrap(this).getImportance()
+      override fun importance(): Number? = unwrap(this).getImportance()
 
-      public override fun rankOrder(): String? = unwrap(this).getRankOrder()
+      override fun rankOrder(): String? = unwrap(this).getRankOrder()
 
-      public override fun valueImportanceItems(): Any? = unwrap(this).getValueImportanceItems()
+      override fun valueImportanceItems(): Any? = unwrap(this).getValueImportanceItems()
     }
 
     public companion object {
@@ -454,31 +427,25 @@ public open class CfnIndex internal constructor(
     public fun jwtTokenTypeConfiguration(): Any? = unwrap(this).getJwtTokenTypeConfiguration()
 
     public interface Builder {
-      public fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
-      }
+      public fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable)
 
       public
-          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty) {
-      }
+          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2b5657d56c6ffc4b2998617167f62e077c15729e83acbefe984863f124826d6")
       public
-          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit)
 
-      public fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
-      }
+      public fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable)
 
       public
-          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty) {
-      }
+          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d02dd01b0333bbec06cbc77d1731bd147a022d10a87639d37c63ae4aac7641f7")
       public
-          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -486,34 +453,34 @@ public open class CfnIndex internal constructor(
           software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty.builder()
 
-      public override fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
+      override fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
         cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty) {
         cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(JsonTokenTypeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2b5657d56c6ffc4b2998617167f62e077c15729e83acbefe984863f124826d6")
-      public override
+      override
           fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty.Builder.() -> Unit):
           Unit =
           jsonTokenTypeConfiguration(JsonTokenTypeConfigurationProperty(jsonTokenTypeConfiguration))
 
-      public override fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
+      override fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
         cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty) {
         cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(JwtTokenTypeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d02dd01b0333bbec06cbc77d1731bd147a022d10a87639d37c63ae4aac7641f7")
-      public override
+      override
           fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty.Builder.() -> Unit):
           Unit =
           jwtTokenTypeConfiguration(JwtTokenTypeConfigurationProperty(jwtTokenTypeConfiguration))
@@ -527,11 +494,9 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.UserTokenConfigurationProperty,
     ) : UserTokenConfigurationProperty {
-      public override fun jsonTokenTypeConfiguration(): Any? =
-          unwrap(this).getJsonTokenTypeConfiguration()
+      override fun jsonTokenTypeConfiguration(): Any? = unwrap(this).getJsonTokenTypeConfiguration()
 
-      public override fun jwtTokenTypeConfiguration(): Any? =
-          unwrap(this).getJwtTokenTypeConfiguration()
+      override fun jwtTokenTypeConfiguration(): Any? = unwrap(this).getJwtTokenTypeConfiguration()
     }
 
     public companion object {
@@ -570,26 +535,19 @@ public open class CfnIndex internal constructor(
     public fun userNameAttributeField(): String? = unwrap(this).getUserNameAttributeField()
 
     public interface Builder {
-      public fun claimRegex(claimRegex: String) {
-      }
+      public fun claimRegex(claimRegex: String)
 
-      public fun groupAttributeField(groupAttributeField: String) {
-      }
+      public fun groupAttributeField(groupAttributeField: String)
 
-      public fun issuer(issuer: String) {
-      }
+      public fun issuer(issuer: String)
 
-      public fun keyLocation(keyLocation: String) {
-      }
+      public fun keyLocation(keyLocation: String)
 
-      public fun secretManagerArn(secretManagerArn: String) {
-      }
+      public fun secretManagerArn(secretManagerArn: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
 
-      public fun userNameAttributeField(userNameAttributeField: String) {
-      }
+      public fun userNameAttributeField(userNameAttributeField: String)
     }
 
     private class BuilderImpl : Builder {
@@ -598,31 +556,31 @@ public open class CfnIndex internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty.builder()
 
-      public override fun claimRegex(claimRegex: String) {
+      override fun claimRegex(claimRegex: String) {
         cdkBuilder.claimRegex(claimRegex)
       }
 
-      public override fun groupAttributeField(groupAttributeField: String) {
+      override fun groupAttributeField(groupAttributeField: String) {
         cdkBuilder.groupAttributeField(groupAttributeField)
       }
 
-      public override fun issuer(issuer: String) {
+      override fun issuer(issuer: String) {
         cdkBuilder.issuer(issuer)
       }
 
-      public override fun keyLocation(keyLocation: String) {
+      override fun keyLocation(keyLocation: String) {
         cdkBuilder.keyLocation(keyLocation)
       }
 
-      public override fun secretManagerArn(secretManagerArn: String) {
+      override fun secretManagerArn(secretManagerArn: String) {
         cdkBuilder.secretManagerArn(secretManagerArn)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
-      public override fun userNameAttributeField(userNameAttributeField: String) {
+      override fun userNameAttributeField(userNameAttributeField: String) {
         cdkBuilder.userNameAttributeField(userNameAttributeField)
       }
 
@@ -635,20 +593,19 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.JwtTokenTypeConfigurationProperty,
     ) : JwtTokenTypeConfigurationProperty {
-      public override fun claimRegex(): String? = unwrap(this).getClaimRegex()
+      override fun claimRegex(): String? = unwrap(this).getClaimRegex()
 
-      public override fun groupAttributeField(): String? = unwrap(this).getGroupAttributeField()
+      override fun groupAttributeField(): String? = unwrap(this).getGroupAttributeField()
 
-      public override fun issuer(): String? = unwrap(this).getIssuer()
+      override fun issuer(): String? = unwrap(this).getIssuer()
 
-      public override fun keyLocation(): String = unwrap(this).getKeyLocation()
+      override fun keyLocation(): String = unwrap(this).getKeyLocation()
 
-      public override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
+      override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
 
-      public override fun userNameAttributeField(): String? =
-          unwrap(this).getUserNameAttributeField()
+      override fun userNameAttributeField(): String? = unwrap(this).getUserNameAttributeField()
     }
 
     public companion object {
@@ -682,33 +639,25 @@ public open class CfnIndex internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun relevance(relevance: IResolvable) {
-      }
+      public fun relevance(relevance: IResolvable)
 
-      public fun relevance(relevance: RelevanceProperty) {
-      }
+      public fun relevance(relevance: RelevanceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fd71cb346fd43a23cb27cd4336b913ab1ed1651c684ae7045c87fd3eea2236e8")
-      public fun relevance(relevance: RelevanceProperty.Builder.() -> Unit) {
-      }
+      public fun relevance(relevance: RelevanceProperty.Builder.() -> Unit)
 
-      public fun search(search: IResolvable) {
-      }
+      public fun search(search: IResolvable)
 
-      public fun search(search: SearchProperty) {
-      }
+      public fun search(search: SearchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("85095dde21447ef2f3d3bb8aed5edd9c3a66f25cf46dc38121e1038b29d27f81")
-      public fun search(search: SearchProperty.Builder.() -> Unit) {
-      }
+      public fun search(search: SearchProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -717,37 +666,37 @@ public open class CfnIndex internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun relevance(relevance: IResolvable) {
+      override fun relevance(relevance: IResolvable) {
         cdkBuilder.relevance(relevance.let(IResolvable::unwrap))
       }
 
-      public override fun relevance(relevance: RelevanceProperty) {
+      override fun relevance(relevance: RelevanceProperty) {
         cdkBuilder.relevance(relevance.let(RelevanceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fd71cb346fd43a23cb27cd4336b913ab1ed1651c684ae7045c87fd3eea2236e8")
-      public override fun relevance(relevance: RelevanceProperty.Builder.() -> Unit): Unit =
+      override fun relevance(relevance: RelevanceProperty.Builder.() -> Unit): Unit =
           relevance(RelevanceProperty(relevance))
 
-      public override fun search(search: IResolvable) {
+      override fun search(search: IResolvable) {
         cdkBuilder.search(search.let(IResolvable::unwrap))
       }
 
-      public override fun search(search: SearchProperty) {
+      override fun search(search: SearchProperty) {
         cdkBuilder.search(search.let(SearchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("85095dde21447ef2f3d3bb8aed5edd9c3a66f25cf46dc38121e1038b29d27f81")
-      public override fun search(search: SearchProperty.Builder.() -> Unit): Unit =
+      override fun search(search: SearchProperty.Builder.() -> Unit): Unit =
           search(SearchProperty(search))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -760,13 +709,13 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.DocumentMetadataConfigurationProperty,
     ) : DocumentMetadataConfigurationProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun relevance(): Any? = unwrap(this).getRelevance()
+      override fun relevance(): Any? = unwrap(this).getRelevance()
 
-      public override fun search(): Any? = unwrap(this).getSearch()
+      override fun search(): Any? = unwrap(this).getSearch()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -794,8 +743,7 @@ public open class CfnIndex internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -804,7 +752,7 @@ public open class CfnIndex internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -817,7 +765,7 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.ServerSideEncryptionConfigurationProperty,
     ) : ServerSideEncryptionConfigurationProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {
@@ -847,11 +795,9 @@ public open class CfnIndex internal constructor(
     public fun userNameAttributeField(): String
 
     public interface Builder {
-      public fun groupAttributeField(groupAttributeField: String) {
-      }
+      public fun groupAttributeField(groupAttributeField: String)
 
-      public fun userNameAttributeField(userNameAttributeField: String) {
-      }
+      public fun userNameAttributeField(userNameAttributeField: String)
     }
 
     private class BuilderImpl : Builder {
@@ -860,11 +806,11 @@ public open class CfnIndex internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty.builder()
 
-      public override fun groupAttributeField(groupAttributeField: String) {
+      override fun groupAttributeField(groupAttributeField: String) {
         cdkBuilder.groupAttributeField(groupAttributeField)
       }
 
-      public override fun userNameAttributeField(userNameAttributeField: String) {
+      override fun userNameAttributeField(userNameAttributeField: String) {
         cdkBuilder.userNameAttributeField(userNameAttributeField)
       }
 
@@ -877,10 +823,9 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.JsonTokenTypeConfigurationProperty,
     ) : JsonTokenTypeConfigurationProperty {
-      public override fun groupAttributeField(): String = unwrap(this).getGroupAttributeField()
+      override fun groupAttributeField(): String = unwrap(this).getGroupAttributeField()
 
-      public override fun userNameAttributeField(): String =
-          unwrap(this).getUserNameAttributeField()
+      override fun userNameAttributeField(): String = unwrap(this).getUserNameAttributeField()
     }
 
     public companion object {
@@ -914,64 +859,56 @@ public open class CfnIndex internal constructor(
     public fun sortable(): Any? = unwrap(this).getSortable()
 
     public interface Builder {
-      public fun displayable(displayable: Boolean) {
-      }
+      public fun displayable(displayable: Boolean)
 
-      public fun displayable(displayable: IResolvable) {
-      }
+      public fun displayable(displayable: IResolvable)
 
-      public fun facetable(facetable: Boolean) {
-      }
+      public fun facetable(facetable: Boolean)
 
-      public fun facetable(facetable: IResolvable) {
-      }
+      public fun facetable(facetable: IResolvable)
 
-      public fun searchable(searchable: Boolean) {
-      }
+      public fun searchable(searchable: Boolean)
 
-      public fun searchable(searchable: IResolvable) {
-      }
+      public fun searchable(searchable: IResolvable)
 
-      public fun sortable(sortable: Boolean) {
-      }
+      public fun sortable(sortable: Boolean)
 
-      public fun sortable(sortable: IResolvable) {
-      }
+      public fun sortable(sortable: IResolvable)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty.Builder
           = software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty.builder()
 
-      public override fun displayable(displayable: Boolean) {
+      override fun displayable(displayable: Boolean) {
         cdkBuilder.displayable(displayable)
       }
 
-      public override fun displayable(displayable: IResolvable) {
+      override fun displayable(displayable: IResolvable) {
         cdkBuilder.displayable(displayable.let(IResolvable::unwrap))
       }
 
-      public override fun facetable(facetable: Boolean) {
+      override fun facetable(facetable: Boolean) {
         cdkBuilder.facetable(facetable)
       }
 
-      public override fun facetable(facetable: IResolvable) {
+      override fun facetable(facetable: IResolvable) {
         cdkBuilder.facetable(facetable.let(IResolvable::unwrap))
       }
 
-      public override fun searchable(searchable: Boolean) {
+      override fun searchable(searchable: Boolean) {
         cdkBuilder.searchable(searchable)
       }
 
-      public override fun searchable(searchable: IResolvable) {
+      override fun searchable(searchable: IResolvable) {
         cdkBuilder.searchable(searchable.let(IResolvable::unwrap))
       }
 
-      public override fun sortable(sortable: Boolean) {
+      override fun sortable(sortable: Boolean) {
         cdkBuilder.sortable(sortable)
       }
 
-      public override fun sortable(sortable: IResolvable) {
+      override fun sortable(sortable: IResolvable) {
         cdkBuilder.sortable(sortable.let(IResolvable::unwrap))
       }
 
@@ -982,13 +919,13 @@ public open class CfnIndex internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty,
     ) : SearchProperty {
-      public override fun displayable(): Any? = unwrap(this).getDisplayable()
+      override fun displayable(): Any? = unwrap(this).getDisplayable()
 
-      public override fun facetable(): Any? = unwrap(this).getFacetable()
+      override fun facetable(): Any? = unwrap(this).getFacetable()
 
-      public override fun searchable(): Any? = unwrap(this).getSearchable()
+      override fun searchable(): Any? = unwrap(this).getSearchable()
 
-      public override fun sortable(): Any? = unwrap(this).getSortable()
+      override fun sortable(): Any? = unwrap(this).getSortable()
     }
 
     public companion object {
@@ -1016,11 +953,9 @@ public open class CfnIndex internal constructor(
     public fun `value`(): Number? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1028,11 +963,11 @@ public open class CfnIndex internal constructor(
           software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1045,9 +980,9 @@ public open class CfnIndex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnIndex.ValueImportanceItemProperty,
     ) : ValueImportanceItemProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): Number? = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {

@@ -7,8 +7,7 @@ public interface DockerImageConfig {
   public fun imageUri(): String
 
   public interface Builder {
-    public fun imageUri(imageUri: String) {
-    }
+    public fun imageUri(imageUri: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface DockerImageConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig.builder()
 
-    public override fun imageUri(imageUri: String) {
+    override fun imageUri(imageUri: String) {
       cdkBuilder.imageUri(imageUri)
     }
 
@@ -27,7 +26,7 @@ public interface DockerImageConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig,
   ) : DockerImageConfig {
-    public override fun imageUri(): String = unwrap(this).getImageUri()
+    override fun imageUri(): String = unwrap(this).getImageUri()
   }
 
   public companion object {

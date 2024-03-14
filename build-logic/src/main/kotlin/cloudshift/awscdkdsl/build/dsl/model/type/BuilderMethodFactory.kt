@@ -9,7 +9,7 @@ internal class BuilderMethodFactory(private val context: TypeGeneratorContext, )
 
     override fun create(enclosingClass : CdkClass, method: CdkClass.Method): List<MethodSpec> {
         val spec = MethodSpec.fromCdkMethod(method, enclosingClass, context.model)
-            .copy(isOverride = true, omitReturnType = true)
+            .copy(omitReturnType = true)
 
         val body = callGenerator.delegateMethodCall(spec)
 

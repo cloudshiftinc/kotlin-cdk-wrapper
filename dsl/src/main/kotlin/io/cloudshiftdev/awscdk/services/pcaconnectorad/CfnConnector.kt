@@ -62,25 +62,19 @@ public open class CfnConnector internal constructor(
       vpcInformation(VpcInformationProperty(`value`))
 
   public interface Builder {
-    public fun certificateAuthorityArn(certificateAuthorityArn: String) {
-    }
+    public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
-    public fun directoryId(directoryId: String) {
-    }
+    public fun directoryId(directoryId: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun vpcInformation(vpcInformation: IResolvable) {
-    }
+    public fun vpcInformation(vpcInformation: IResolvable)
 
-    public fun vpcInformation(vpcInformation: VpcInformationProperty) {
-    }
+    public fun vpcInformation(vpcInformation: VpcInformationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("32df71517c442273d53d51243ad04fe59b3bad74e4a946944099697bd91f110b")
-    public fun vpcInformation(vpcInformation: VpcInformationProperty.Builder.() -> Unit) {
-    }
+    public fun vpcInformation(vpcInformation: VpcInformationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -90,30 +84,30 @@ public open class CfnConnector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pcaconnectorad.CfnConnector.Builder =
         software.amazon.awscdk.services.pcaconnectorad.CfnConnector.Builder.create(scope, id)
 
-    public override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+    override fun certificateAuthorityArn(certificateAuthorityArn: String) {
       cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
     }
 
-    public override fun directoryId(directoryId: String) {
+    override fun directoryId(directoryId: String) {
       cdkBuilder.directoryId(directoryId)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun vpcInformation(vpcInformation: IResolvable) {
+    override fun vpcInformation(vpcInformation: IResolvable) {
       cdkBuilder.vpcInformation(vpcInformation.let(IResolvable::unwrap))
     }
 
-    public override fun vpcInformation(vpcInformation: VpcInformationProperty) {
+    override fun vpcInformation(vpcInformation: VpcInformationProperty) {
       cdkBuilder.vpcInformation(vpcInformation.let(VpcInformationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("32df71517c442273d53d51243ad04fe59b3bad74e4a946944099697bd91f110b")
-    public override fun vpcInformation(vpcInformation: VpcInformationProperty.Builder.() -> Unit):
-        Unit = vpcInformation(VpcInformationProperty(vpcInformation))
+    override fun vpcInformation(vpcInformation: VpcInformationProperty.Builder.() -> Unit): Unit =
+        vpcInformation(VpcInformationProperty(vpcInformation))
 
     public fun build(): software.amazon.awscdk.services.pcaconnectorad.CfnConnector =
         cdkBuilder.build()
@@ -144,8 +138,7 @@ public open class CfnConnector internal constructor(
     public fun securityGroupIds(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -154,7 +147,7 @@ public open class CfnConnector internal constructor(
           =
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
@@ -167,7 +160,7 @@ public open class CfnConnector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty,
     ) : VpcInformationProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
     }
 

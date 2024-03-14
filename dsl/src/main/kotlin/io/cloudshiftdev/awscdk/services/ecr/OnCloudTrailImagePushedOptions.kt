@@ -13,28 +13,21 @@ public interface OnCloudTrailImagePushedOptions : OnEventOptions {
   public fun imageTag(): String? = unwrap(this).getImageTag()
 
   public interface Builder {
-    public fun crossStackScope(crossStackScope: Construct) {
-    }
+    public fun crossStackScope(crossStackScope: Construct)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventPattern(eventPattern: EventPattern) {
-    }
+    public fun eventPattern(eventPattern: EventPattern)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abcd9f7a482e45c47c6b46cc04076fedb540034e00e06120b4126d9a9d2c1c6d")
-    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit) {
-    }
+    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
 
-    public fun imageTag(imageTag: String) {
-    }
+    public fun imageTag(imageTag: String)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun target(target: IRuleTarget) {
-    }
+    public fun target(target: IRuleTarget)
   }
 
   private class BuilderImpl : Builder {
@@ -42,32 +35,32 @@ public interface OnCloudTrailImagePushedOptions : OnEventOptions {
         software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions.Builder =
         software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions.builder()
 
-    public override fun crossStackScope(crossStackScope: Construct) {
+    override fun crossStackScope(crossStackScope: Construct) {
       cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventPattern(eventPattern: EventPattern) {
+    override fun eventPattern(eventPattern: EventPattern) {
       cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abcd9f7a482e45c47c6b46cc04076fedb540034e00e06120b4126d9a9d2c1c6d")
-    public override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
+    override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
         eventPattern(EventPattern(eventPattern))
 
-    public override fun imageTag(imageTag: String) {
+    override fun imageTag(imageTag: String) {
       cdkBuilder.imageTag(imageTag)
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun target(target: IRuleTarget) {
+    override fun target(target: IRuleTarget) {
       cdkBuilder.target(target.let(IRuleTarget::unwrap))
     }
 
@@ -78,19 +71,19 @@ public interface OnCloudTrailImagePushedOptions : OnEventOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecr.OnCloudTrailImagePushedOptions,
   ) : OnCloudTrailImagePushedOptions {
-    public override fun crossStackScope(): Construct? =
+    override fun crossStackScope(): Construct? =
         unwrap(this).getCrossStackScope()?.let(Construct::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun eventPattern(): EventPattern? =
+    override fun eventPattern(): EventPattern? =
         unwrap(this).getEventPattern()?.let(EventPattern::wrap)
 
-    public override fun imageTag(): String? = unwrap(this).getImageTag()
+    override fun imageTag(): String? = unwrap(this).getImageTag()
 
-    public override fun ruleName(): String? = unwrap(this).getRuleName()
+    override fun ruleName(): String? = unwrap(this).getRuleName()
 
-    public override fun target(): IRuleTarget? = unwrap(this).getTarget()?.let(IRuleTarget::wrap)
+    override fun target(): IRuleTarget? = unwrap(this).getTarget()?.let(IRuleTarget::wrap)
   }
 
   public companion object {

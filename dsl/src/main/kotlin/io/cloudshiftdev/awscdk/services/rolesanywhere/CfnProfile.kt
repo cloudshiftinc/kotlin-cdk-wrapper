@@ -88,35 +88,25 @@ public open class CfnProfile internal constructor(
   }
 
   public interface Builder {
-    public fun durationSeconds(durationSeconds: Number) {
-    }
+    public fun durationSeconds(durationSeconds: Number)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun managedPolicyArns(managedPolicyArns: List<String>) {
-    }
+    public fun managedPolicyArns(managedPolicyArns: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun requireInstanceProperties(requireInstanceProperties: Boolean) {
-    }
+    public fun requireInstanceProperties(requireInstanceProperties: Boolean)
 
-    public fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
-    }
+    public fun requireInstanceProperties(requireInstanceProperties: IResolvable)
 
-    public fun roleArns(roleArns: List<String>) {
-    }
+    public fun roleArns(roleArns: List<String>)
 
-    public fun sessionPolicy(sessionPolicy: String) {
-    }
+    public fun sessionPolicy(sessionPolicy: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -126,43 +116,43 @@ public open class CfnProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rolesanywhere.CfnProfile.Builder =
         software.amazon.awscdk.services.rolesanywhere.CfnProfile.Builder.create(scope, id)
 
-    public override fun durationSeconds(durationSeconds: Number) {
+    override fun durationSeconds(durationSeconds: Number) {
       cdkBuilder.durationSeconds(durationSeconds)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun managedPolicyArns(managedPolicyArns: List<String>) {
+    override fun managedPolicyArns(managedPolicyArns: List<String>) {
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun requireInstanceProperties(requireInstanceProperties: Boolean) {
+    override fun requireInstanceProperties(requireInstanceProperties: Boolean) {
       cdkBuilder.requireInstanceProperties(requireInstanceProperties)
     }
 
-    public override fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
+    override fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
       cdkBuilder.requireInstanceProperties(requireInstanceProperties.let(IResolvable::unwrap))
     }
 
-    public override fun roleArns(roleArns: List<String>) {
+    override fun roleArns(roleArns: List<String>) {
       cdkBuilder.roleArns(roleArns)
     }
 
-    public override fun sessionPolicy(sessionPolicy: String) {
+    override fun sessionPolicy(sessionPolicy: String) {
       cdkBuilder.sessionPolicy(sessionPolicy)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

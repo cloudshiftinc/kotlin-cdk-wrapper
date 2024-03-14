@@ -8,7 +8,7 @@ public interface IFileSystemLocation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.IFileSystemLocation,
   ) : IFileSystemLocation {
-    public override fun bind(arg0: Construct, arg1: IProject): FileSystemConfig =
+    override fun bind(arg0: Construct, arg1: IProject): FileSystemConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(IProject::unwrap)).let(FileSystemConfig::wrap)
   }

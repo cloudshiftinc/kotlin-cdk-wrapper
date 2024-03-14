@@ -61,23 +61,17 @@ public open class CfnIdentitySource internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: IdentitySourceConfigurationProperty) {
-    }
+    public fun configuration(configuration: IdentitySourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbfe0ed3878f6d1c30b37f35051aaaf5948f60ea00fa239fb3ec49a4c3cee4d")
-    public
-        fun configuration(configuration: IdentitySourceConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: IdentitySourceConfigurationProperty.Builder.() -> Unit)
 
-    public fun policyStoreId(policyStoreId: String) {
-    }
+    public fun policyStoreId(policyStoreId: String)
 
-    public fun principalEntityType(principalEntityType: String) {
-    }
+    public fun principalEntityType(principalEntityType: String)
   }
 
   private class BuilderImpl(
@@ -89,25 +83,25 @@ public open class CfnIdentitySource internal constructor(
         software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.Builder.create(scope,
         id)
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: IdentitySourceConfigurationProperty) {
+    override fun configuration(configuration: IdentitySourceConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(IdentitySourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbfe0ed3878f6d1c30b37f35051aaaf5948f60ea00fa239fb3ec49a4c3cee4d")
-    public override
+    override
         fun configuration(configuration: IdentitySourceConfigurationProperty.Builder.() -> Unit):
         Unit = configuration(IdentitySourceConfigurationProperty(configuration))
 
-    public override fun policyStoreId(policyStoreId: String) {
+    override fun policyStoreId(policyStoreId: String) {
       cdkBuilder.policyStoreId(policyStoreId)
     }
 
-    public override fun principalEntityType(principalEntityType: String) {
+    override fun principalEntityType(principalEntityType: String) {
       cdkBuilder.principalEntityType(principalEntityType)
     }
 
@@ -141,18 +135,15 @@ public open class CfnIdentitySource internal constructor(
     public fun cognitoUserPoolConfiguration(): Any
 
     public interface Builder {
-      public fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable) {
-      }
+      public fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable)
 
       public
-          fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty) {
-      }
+          fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51bdf9dd6707933905c3a015af20f3e511473a2a30ce40b46ee0e5fe6764b226")
       public
-          fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -161,18 +152,18 @@ public open class CfnIdentitySource internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty.builder()
 
-      public override fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable) {
+      override fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable) {
         cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty) {
         cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(CognitoUserPoolConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51bdf9dd6707933905c3a015af20f3e511473a2a30ce40b46ee0e5fe6764b226")
-      public override
+      override
           fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty.Builder.() -> Unit):
           Unit =
           cognitoUserPoolConfiguration(CognitoUserPoolConfigurationProperty(cognitoUserPoolConfiguration))
@@ -186,7 +177,7 @@ public open class CfnIdentitySource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceConfigurationProperty,
     ) : IdentitySourceConfigurationProperty {
-      public override fun cognitoUserPoolConfiguration(): Any =
+      override fun cognitoUserPoolConfiguration(): Any =
           unwrap(this).getCognitoUserPoolConfiguration()
     }
 
@@ -221,17 +212,13 @@ public open class CfnIdentitySource internal constructor(
     public fun userPoolArn(): String? = unwrap(this).getUserPoolArn()
 
     public interface Builder {
-      public fun clientIds(clientIds: List<String>) {
-      }
+      public fun clientIds(clientIds: List<String>)
 
-      public fun discoveryUrl(discoveryUrl: String) {
-      }
+      public fun discoveryUrl(discoveryUrl: String)
 
-      public fun openIdIssuer(openIdIssuer: String) {
-      }
+      public fun openIdIssuer(openIdIssuer: String)
 
-      public fun userPoolArn(userPoolArn: String) {
-      }
+      public fun userPoolArn(userPoolArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -240,19 +227,19 @@ public open class CfnIdentitySource internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty.builder()
 
-      public override fun clientIds(clientIds: List<String>) {
+      override fun clientIds(clientIds: List<String>) {
         cdkBuilder.clientIds(clientIds)
       }
 
-      public override fun discoveryUrl(discoveryUrl: String) {
+      override fun discoveryUrl(discoveryUrl: String) {
         cdkBuilder.discoveryUrl(discoveryUrl)
       }
 
-      public override fun openIdIssuer(openIdIssuer: String) {
+      override fun openIdIssuer(openIdIssuer: String) {
         cdkBuilder.openIdIssuer(openIdIssuer)
       }
 
-      public override fun userPoolArn(userPoolArn: String) {
+      override fun userPoolArn(userPoolArn: String) {
         cdkBuilder.userPoolArn(userPoolArn)
       }
 
@@ -265,13 +252,13 @@ public open class CfnIdentitySource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty,
     ) : IdentitySourceDetailsProperty {
-      public override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+      override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
 
-      public override fun discoveryUrl(): String? = unwrap(this).getDiscoveryUrl()
+      override fun discoveryUrl(): String? = unwrap(this).getDiscoveryUrl()
 
-      public override fun openIdIssuer(): String? = unwrap(this).getOpenIdIssuer()
+      override fun openIdIssuer(): String? = unwrap(this).getOpenIdIssuer()
 
-      public override fun userPoolArn(): String? = unwrap(this).getUserPoolArn()
+      override fun userPoolArn(): String? = unwrap(this).getUserPoolArn()
     }
 
     public companion object {
@@ -300,11 +287,9 @@ public open class CfnIdentitySource internal constructor(
     public fun userPoolArn(): String
 
     public interface Builder {
-      public fun clientIds(clientIds: List<String>) {
-      }
+      public fun clientIds(clientIds: List<String>)
 
-      public fun userPoolArn(userPoolArn: String) {
-      }
+      public fun userPoolArn(userPoolArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -313,11 +298,11 @@ public open class CfnIdentitySource internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty.builder()
 
-      public override fun clientIds(clientIds: List<String>) {
+      override fun clientIds(clientIds: List<String>) {
         cdkBuilder.clientIds(clientIds)
       }
 
-      public override fun userPoolArn(userPoolArn: String) {
+      override fun userPoolArn(userPoolArn: String) {
         cdkBuilder.userPoolArn(userPoolArn)
       }
 
@@ -330,9 +315,9 @@ public open class CfnIdentitySource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoUserPoolConfigurationProperty,
     ) : CognitoUserPoolConfigurationProperty {
-      public override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+      override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
 
-      public override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
+      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
     }
 
     public companion object {

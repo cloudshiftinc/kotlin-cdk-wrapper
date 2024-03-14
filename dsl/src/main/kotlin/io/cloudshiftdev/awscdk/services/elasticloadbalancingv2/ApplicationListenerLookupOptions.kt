@@ -12,20 +12,15 @@ public interface ApplicationListenerLookupOptions : BaseListenerLookupOptions {
       unwrap(this).getListenerProtocol()?.let(ApplicationProtocol::wrap)
 
   public interface Builder {
-    public fun listenerArn(listenerArn: String) {
-    }
+    public fun listenerArn(listenerArn: String)
 
-    public fun listenerPort(listenerPort: Number) {
-    }
+    public fun listenerPort(listenerPort: Number)
 
-    public fun listenerProtocol(listenerProtocol: ApplicationProtocol) {
-    }
+    public fun listenerProtocol(listenerProtocol: ApplicationProtocol)
 
-    public fun loadBalancerArn(loadBalancerArn: String) {
-    }
+    public fun loadBalancerArn(loadBalancerArn: String)
 
-    public fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
-    }
+    public fun loadBalancerTags(loadBalancerTags: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -34,23 +29,23 @@ public interface ApplicationListenerLookupOptions : BaseListenerLookupOptions {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerLookupOptions.builder()
 
-    public override fun listenerArn(listenerArn: String) {
+    override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
     }
 
-    public override fun listenerPort(listenerPort: Number) {
+    override fun listenerPort(listenerPort: Number) {
       cdkBuilder.listenerPort(listenerPort)
     }
 
-    public override fun listenerProtocol(listenerProtocol: ApplicationProtocol) {
+    override fun listenerProtocol(listenerProtocol: ApplicationProtocol) {
       cdkBuilder.listenerProtocol(listenerProtocol.let(ApplicationProtocol::unwrap))
     }
 
-    public override fun loadBalancerArn(loadBalancerArn: String) {
+    override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
-    public override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
+    override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags)
     }
 
@@ -63,17 +58,17 @@ public interface ApplicationListenerLookupOptions : BaseListenerLookupOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerLookupOptions,
   ) : ApplicationListenerLookupOptions {
-    public override fun listenerArn(): String? = unwrap(this).getListenerArn()
+    override fun listenerArn(): String? = unwrap(this).getListenerArn()
 
-    public override fun listenerPort(): Number? = unwrap(this).getListenerPort()
+    override fun listenerPort(): Number? = unwrap(this).getListenerPort()
 
-    public override fun listenerProtocol(): ApplicationProtocol? =
+    override fun listenerProtocol(): ApplicationProtocol? =
         unwrap(this).getListenerProtocol()?.let(ApplicationProtocol::wrap)
 
-    public override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags()
-        ?: emptyMap()
+    override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags() ?:
+        emptyMap()
   }
 
   public companion object {

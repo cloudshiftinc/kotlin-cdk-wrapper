@@ -18,21 +18,16 @@ public open class EcrImageCode internal constructor(
   public open fun isInline(): Boolean = unwrap(this).getIsInline()
 
   public interface Builder {
-    public fun cmd(cmd: List<String>) {
-    }
+    public fun cmd(cmd: List<String>)
 
-    public fun entrypoint(entrypoint: List<String>) {
-    }
+    public fun entrypoint(entrypoint: List<String>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun tag(tag: String) {
-    }
+    public fun tag(tag: String)
 
-    public fun tagOrDigest(tagOrDigest: String) {
-    }
+    public fun tagOrDigest(tagOrDigest: String)
 
-    public fun workingDirectory(workingDirectory: String) {
-    }
+    public fun workingDirectory(workingDirectory: String)
   }
 
   private class BuilderImpl(
@@ -41,24 +36,24 @@ public open class EcrImageCode internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.EcrImageCode.Builder =
         software.amazon.awscdk.services.lambda.EcrImageCode.Builder.create(repository)
 
-    public override fun cmd(cmd: List<String>) {
+    override fun cmd(cmd: List<String>) {
       cdkBuilder.cmd(cmd)
     }
 
-    public override fun entrypoint(entrypoint: List<String>) {
+    override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun tag(tag: String) {
+    override fun tag(tag: String) {
       cdkBuilder.tag(tag)
     }
 
-    public override fun tagOrDigest(tagOrDigest: String) {
+    override fun tagOrDigest(tagOrDigest: String) {
       cdkBuilder.tagOrDigest(tagOrDigest)
     }
 
-    public override fun workingDirectory(workingDirectory: String) {
+    override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)
     }
 

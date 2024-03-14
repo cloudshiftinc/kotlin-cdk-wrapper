@@ -154,80 +154,58 @@ public open class CfnFileSystem internal constructor(
       Unit = windowsConfiguration(WindowsConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun backupId(backupId: String) {
-    }
+    public fun backupId(backupId: String)
 
-    public fun fileSystemType(fileSystemType: String) {
-    }
+    public fun fileSystemType(fileSystemType: String)
 
-    public fun fileSystemTypeVersion(fileSystemTypeVersion: String) {
-    }
+    public fun fileSystemTypeVersion(fileSystemTypeVersion: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun lustreConfiguration(lustreConfiguration: IResolvable) {
-    }
+    public fun lustreConfiguration(lustreConfiguration: IResolvable)
 
-    public fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty) {
-    }
+    public fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ffb1848ab6306452bcbd16ffcb6ba2d5894d86e5251b5e929bf9e7aa0e10b9e")
     public
-        fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty.Builder.() -> Unit)
 
-    public fun ontapConfiguration(ontapConfiguration: IResolvable) {
-    }
+    public fun ontapConfiguration(ontapConfiguration: IResolvable)
 
-    public fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty) {
-    }
+    public fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf84fd5c58c0ed36bb428bdaaa93c4e6ffeeb9e94edd4d4f2a34c8b0124b7068")
-    public
-        fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty.Builder.() -> Unit)
 
-    public fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
-    }
+    public fun openZfsConfiguration(openZfsConfiguration: IResolvable)
 
-    public fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty) {
-    }
+    public fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d2a7f63461a36538cf88a3b8eaaacef125133a8bdbc5b8ac360598430d7a99b")
     public
-        fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty.Builder.() -> Unit)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun storageCapacity(storageCapacity: Number) {
-    }
+    public fun storageCapacity(storageCapacity: Number)
 
-    public fun storageType(storageType: String) {
-    }
+    public fun storageType(storageType: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun windowsConfiguration(windowsConfiguration: IResolvable) {
-    }
+    public fun windowsConfiguration(windowsConfiguration: IResolvable)
 
-    public fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty) {
-    }
+    public fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed77315dad931a284e8c8b5ebfa01303758a2f360f000b6381c2cf38716af285")
     public
-        fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -237,95 +215,95 @@ public open class CfnFileSystem internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fsx.CfnFileSystem.Builder =
         software.amazon.awscdk.services.fsx.CfnFileSystem.Builder.create(scope, id)
 
-    public override fun backupId(backupId: String) {
+    override fun backupId(backupId: String) {
       cdkBuilder.backupId(backupId)
     }
 
-    public override fun fileSystemType(fileSystemType: String) {
+    override fun fileSystemType(fileSystemType: String) {
       cdkBuilder.fileSystemType(fileSystemType)
     }
 
-    public override fun fileSystemTypeVersion(fileSystemTypeVersion: String) {
+    override fun fileSystemTypeVersion(fileSystemTypeVersion: String) {
       cdkBuilder.fileSystemTypeVersion(fileSystemTypeVersion)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun lustreConfiguration(lustreConfiguration: IResolvable) {
+    override fun lustreConfiguration(lustreConfiguration: IResolvable) {
       cdkBuilder.lustreConfiguration(lustreConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty) {
+    override fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty) {
       cdkBuilder.lustreConfiguration(lustreConfiguration.let(LustreConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ffb1848ab6306452bcbd16ffcb6ba2d5894d86e5251b5e929bf9e7aa0e10b9e")
-    public override
+    override
         fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty.Builder.() -> Unit):
         Unit = lustreConfiguration(LustreConfigurationProperty(lustreConfiguration))
 
-    public override fun ontapConfiguration(ontapConfiguration: IResolvable) {
+    override fun ontapConfiguration(ontapConfiguration: IResolvable) {
       cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty) {
+    override fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty) {
       cdkBuilder.ontapConfiguration(ontapConfiguration.let(OntapConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf84fd5c58c0ed36bb428bdaaa93c4e6ffeeb9e94edd4d4f2a34c8b0124b7068")
-    public override
+    override
         fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty.Builder.() -> Unit):
         Unit = ontapConfiguration(OntapConfigurationProperty(ontapConfiguration))
 
-    public override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
+    override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
       cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty) {
+    override fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty) {
       cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(OpenZFSConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d2a7f63461a36538cf88a3b8eaaacef125133a8bdbc5b8ac360598430d7a99b")
-    public override
+    override
         fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty.Builder.() -> Unit):
         Unit = openZfsConfiguration(OpenZFSConfigurationProperty(openZfsConfiguration))
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun storageCapacity(storageCapacity: Number) {
+    override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
     }
 
-    public override fun storageType(storageType: String) {
+    override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun windowsConfiguration(windowsConfiguration: IResolvable) {
+    override fun windowsConfiguration(windowsConfiguration: IResolvable) {
       cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty) {
+    override fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty) {
       cdkBuilder.windowsConfiguration(windowsConfiguration.let(WindowsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed77315dad931a284e8c8b5ebfa01303758a2f360f000b6381c2cf38716af285")
-    public override
+    override
         fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty.Builder.() -> Unit):
         Unit = windowsConfiguration(WindowsConfigurationProperty(windowsConfiguration))
 
@@ -382,73 +360,54 @@ public open class CfnFileSystem internal constructor(
     public fun weeklyMaintenanceStartTime(): String? = unwrap(this).getWeeklyMaintenanceStartTime()
 
     public interface Builder {
-      public fun activeDirectoryId(activeDirectoryId: String) {
-      }
+      public fun activeDirectoryId(activeDirectoryId: String)
 
-      public fun aliases(aliases: List<String>) {
-      }
+      public fun aliases(aliases: List<String>)
 
-      public fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
-      }
+      public fun auditLogConfiguration(auditLogConfiguration: IResolvable)
 
-      public fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty) {
-      }
+      public fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e3607c85da94b03db39fd8d5195dc2332a907b139d68ddcb6e4bfb47fe033a4f")
       public
-          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit)
 
-      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
-      }
+      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number)
 
-      public fun copyTagsToBackups(copyTagsToBackups: Boolean) {
-      }
+      public fun copyTagsToBackups(copyTagsToBackups: Boolean)
 
-      public fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-      }
+      public fun copyTagsToBackups(copyTagsToBackups: IResolvable)
 
-      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
-      }
+      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
 
-      public fun deploymentType(deploymentType: String) {
-      }
+      public fun deploymentType(deploymentType: String)
 
-      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-      }
+      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable)
 
-      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-      }
+      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("629a73cb1184c8d8e6e1aeee2e1a17222f7701a575244823c03d524616c7c576")
       public
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit)
 
-      public fun preferredSubnetId(preferredSubnetId: String) {
-      }
+      public fun preferredSubnetId(preferredSubnetId: String)
 
       public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
-      }
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable)
 
       public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
-      }
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfc424b18d560f4ccb1d00ec2edf493cf56bd33b079c038bcdeeb7e29a499969")
       public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit)
 
-      public fun throughputCapacity(throughputCapacity: Number) {
-      }
+      public fun throughputCapacity(throughputCapacity: Number)
 
-      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
-      }
+      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -456,90 +415,88 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty.builder()
 
-      public override fun activeDirectoryId(activeDirectoryId: String) {
+      override fun activeDirectoryId(activeDirectoryId: String) {
         cdkBuilder.activeDirectoryId(activeDirectoryId)
       }
 
-      public override fun aliases(aliases: List<String>) {
+      override fun aliases(aliases: List<String>) {
         cdkBuilder.aliases(aliases)
       }
 
-      public override fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
+      override fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
         cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty) {
+      override fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty) {
         cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(AuditLogConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e3607c85da94b03db39fd8d5195dc2332a907b139d68ddcb6e4bfb47fe033a4f")
-      public override
+      override
           fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty.Builder.() -> Unit):
           Unit = auditLogConfiguration(AuditLogConfigurationProperty(auditLogConfiguration))
 
-      public override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
+      override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
         cdkBuilder.automaticBackupRetentionDays(automaticBackupRetentionDays)
       }
 
-      public override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
+      override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups)
       }
 
-      public override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
+      override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
       }
 
-      public override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
+      override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
         cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime)
       }
 
-      public override fun deploymentType(deploymentType: String) {
+      override fun deploymentType(deploymentType: String) {
         cdkBuilder.deploymentType(deploymentType)
       }
 
-      public override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
+      override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
+      override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("629a73cb1184c8d8e6e1aeee2e1a17222f7701a575244823c03d524616c7c576")
-      public override
+      override
           fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit):
           Unit = diskIopsConfiguration(DiskIopsConfigurationProperty(diskIopsConfiguration))
 
-      public override fun preferredSubnetId(preferredSubnetId: String) {
+      override fun preferredSubnetId(preferredSubnetId: String) {
         cdkBuilder.preferredSubnetId(preferredSubnetId)
       }
 
-      public override
+      override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
         cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
         cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfc424b18d560f4ccb1d00ec2edf493cf56bd33b079c038bcdeeb7e29a499969")
-      public override
+      override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit):
           Unit =
           selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty(selfManagedActiveDirectoryConfiguration))
 
-      public override fun throughputCapacity(throughputCapacity: Number) {
+      override fun throughputCapacity(throughputCapacity: Number) {
         cdkBuilder.throughputCapacity(throughputCapacity)
       }
 
-      public override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
+      override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
         cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
       }
 
@@ -552,32 +509,32 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.WindowsConfigurationProperty,
     ) : WindowsConfigurationProperty {
-      public override fun activeDirectoryId(): String? = unwrap(this).getActiveDirectoryId()
+      override fun activeDirectoryId(): String? = unwrap(this).getActiveDirectoryId()
 
-      public override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+      override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
 
-      public override fun auditLogConfiguration(): Any? = unwrap(this).getAuditLogConfiguration()
+      override fun auditLogConfiguration(): Any? = unwrap(this).getAuditLogConfiguration()
 
-      public override fun automaticBackupRetentionDays(): Number? =
+      override fun automaticBackupRetentionDays(): Number? =
           unwrap(this).getAutomaticBackupRetentionDays()
 
-      public override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
+      override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
 
-      public override fun dailyAutomaticBackupStartTime(): String? =
+      override fun dailyAutomaticBackupStartTime(): String? =
           unwrap(this).getDailyAutomaticBackupStartTime()
 
-      public override fun deploymentType(): String? = unwrap(this).getDeploymentType()
+      override fun deploymentType(): String? = unwrap(this).getDeploymentType()
 
-      public override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
+      override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
 
-      public override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
+      override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
 
-      public override fun selfManagedActiveDirectoryConfiguration(): Any? =
+      override fun selfManagedActiveDirectoryConfiguration(): Any? =
           unwrap(this).getSelfManagedActiveDirectoryConfiguration()
 
-      public override fun throughputCapacity(): Number = unwrap(this).getThroughputCapacity()
+      override fun throughputCapacity(): Number = unwrap(this).getThroughputCapacity()
 
-      public override fun weeklyMaintenanceStartTime(): String? =
+      override fun weeklyMaintenanceStartTime(): String? =
           unwrap(this).getWeeklyMaintenanceStartTime()
     }
 
@@ -629,44 +586,31 @@ public open class CfnFileSystem internal constructor(
     public fun weeklyMaintenanceStartTime(): String? = unwrap(this).getWeeklyMaintenanceStartTime()
 
     public interface Builder {
-      public fun autoImportPolicy(autoImportPolicy: String) {
-      }
+      public fun autoImportPolicy(autoImportPolicy: String)
 
-      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
-      }
+      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number)
 
-      public fun copyTagsToBackups(copyTagsToBackups: Boolean) {
-      }
+      public fun copyTagsToBackups(copyTagsToBackups: Boolean)
 
-      public fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-      }
+      public fun copyTagsToBackups(copyTagsToBackups: IResolvable)
 
-      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
-      }
+      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
 
-      public fun dataCompressionType(dataCompressionType: String) {
-      }
+      public fun dataCompressionType(dataCompressionType: String)
 
-      public fun deploymentType(deploymentType: String) {
-      }
+      public fun deploymentType(deploymentType: String)
 
-      public fun driveCacheType(driveCacheType: String) {
-      }
+      public fun driveCacheType(driveCacheType: String)
 
-      public fun exportPath(exportPath: String) {
-      }
+      public fun exportPath(exportPath: String)
 
-      public fun importPath(importPath: String) {
-      }
+      public fun importPath(importPath: String)
 
-      public fun importedFileChunkSize(importedFileChunkSize: Number) {
-      }
+      public fun importedFileChunkSize(importedFileChunkSize: Number)
 
-      public fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
-      }
+      public fun perUnitStorageThroughput(perUnitStorageThroughput: Number)
 
-      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
-      }
+      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -674,55 +618,55 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty.builder()
 
-      public override fun autoImportPolicy(autoImportPolicy: String) {
+      override fun autoImportPolicy(autoImportPolicy: String) {
         cdkBuilder.autoImportPolicy(autoImportPolicy)
       }
 
-      public override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
+      override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
         cdkBuilder.automaticBackupRetentionDays(automaticBackupRetentionDays)
       }
 
-      public override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
+      override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups)
       }
 
-      public override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
+      override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
       }
 
-      public override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
+      override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
         cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime)
       }
 
-      public override fun dataCompressionType(dataCompressionType: String) {
+      override fun dataCompressionType(dataCompressionType: String) {
         cdkBuilder.dataCompressionType(dataCompressionType)
       }
 
-      public override fun deploymentType(deploymentType: String) {
+      override fun deploymentType(deploymentType: String) {
         cdkBuilder.deploymentType(deploymentType)
       }
 
-      public override fun driveCacheType(driveCacheType: String) {
+      override fun driveCacheType(driveCacheType: String) {
         cdkBuilder.driveCacheType(driveCacheType)
       }
 
-      public override fun exportPath(exportPath: String) {
+      override fun exportPath(exportPath: String) {
         cdkBuilder.exportPath(exportPath)
       }
 
-      public override fun importPath(importPath: String) {
+      override fun importPath(importPath: String) {
         cdkBuilder.importPath(importPath)
       }
 
-      public override fun importedFileChunkSize(importedFileChunkSize: Number) {
+      override fun importedFileChunkSize(importedFileChunkSize: Number) {
         cdkBuilder.importedFileChunkSize(importedFileChunkSize)
       }
 
-      public override fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
+      override fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
         cdkBuilder.perUnitStorageThroughput(perUnitStorageThroughput)
       }
 
-      public override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
+      override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
         cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
       }
 
@@ -735,32 +679,31 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.LustreConfigurationProperty,
     ) : LustreConfigurationProperty {
-      public override fun autoImportPolicy(): String? = unwrap(this).getAutoImportPolicy()
+      override fun autoImportPolicy(): String? = unwrap(this).getAutoImportPolicy()
 
-      public override fun automaticBackupRetentionDays(): Number? =
+      override fun automaticBackupRetentionDays(): Number? =
           unwrap(this).getAutomaticBackupRetentionDays()
 
-      public override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
+      override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
 
-      public override fun dailyAutomaticBackupStartTime(): String? =
+      override fun dailyAutomaticBackupStartTime(): String? =
           unwrap(this).getDailyAutomaticBackupStartTime()
 
-      public override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
+      override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
 
-      public override fun deploymentType(): String? = unwrap(this).getDeploymentType()
+      override fun deploymentType(): String? = unwrap(this).getDeploymentType()
 
-      public override fun driveCacheType(): String? = unwrap(this).getDriveCacheType()
+      override fun driveCacheType(): String? = unwrap(this).getDriveCacheType()
 
-      public override fun exportPath(): String? = unwrap(this).getExportPath()
+      override fun exportPath(): String? = unwrap(this).getExportPath()
 
-      public override fun importPath(): String? = unwrap(this).getImportPath()
+      override fun importPath(): String? = unwrap(this).getImportPath()
 
-      public override fun importedFileChunkSize(): Number? = unwrap(this).getImportedFileChunkSize()
+      override fun importedFileChunkSize(): Number? = unwrap(this).getImportedFileChunkSize()
 
-      public override fun perUnitStorageThroughput(): Number? =
-          unwrap(this).getPerUnitStorageThroughput()
+      override fun perUnitStorageThroughput(): Number? = unwrap(this).getPerUnitStorageThroughput()
 
-      public override fun weeklyMaintenanceStartTime(): String? =
+      override fun weeklyMaintenanceStartTime(): String? =
           unwrap(this).getWeeklyMaintenanceStartTime()
     }
 
@@ -792,14 +735,11 @@ public open class CfnFileSystem internal constructor(
     public fun fileShareAccessAuditLogLevel(): String
 
     public interface Builder {
-      public fun auditLogDestination(auditLogDestination: String) {
-      }
+      public fun auditLogDestination(auditLogDestination: String)
 
-      public fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String) {
-      }
+      public fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String)
 
-      public fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String) {
-      }
+      public fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -807,15 +747,15 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty.builder()
 
-      public override fun auditLogDestination(auditLogDestination: String) {
+      override fun auditLogDestination(auditLogDestination: String) {
         cdkBuilder.auditLogDestination(auditLogDestination)
       }
 
-      public override fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String) {
+      override fun fileAccessAuditLogLevel(fileAccessAuditLogLevel: String) {
         cdkBuilder.fileAccessAuditLogLevel(fileAccessAuditLogLevel)
       }
 
-      public override fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String) {
+      override fun fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel: String) {
         cdkBuilder.fileShareAccessAuditLogLevel(fileShareAccessAuditLogLevel)
       }
 
@@ -828,12 +768,11 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.AuditLogConfigurationProperty,
     ) : AuditLogConfigurationProperty {
-      public override fun auditLogDestination(): String? = unwrap(this).getAuditLogDestination()
+      override fun auditLogDestination(): String? = unwrap(this).getAuditLogDestination()
 
-      public override fun fileAccessAuditLogLevel(): String =
-          unwrap(this).getFileAccessAuditLogLevel()
+      override fun fileAccessAuditLogLevel(): String = unwrap(this).getFileAccessAuditLogLevel()
 
-      public override fun fileShareAccessAuditLogLevel(): String =
+      override fun fileShareAccessAuditLogLevel(): String =
           unwrap(this).getFileShareAccessAuditLogLevel()
     }
 
@@ -863,11 +802,9 @@ public open class CfnFileSystem internal constructor(
     public fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
 
     public interface Builder {
-      public fun clients(clients: String) {
-      }
+      public fun clients(clients: String)
 
-      public fun options(options: List<String>) {
-      }
+      public fun options(options: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -875,11 +812,11 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty.builder()
 
-      public override fun clients(clients: String) {
+      override fun clients(clients: String) {
         cdkBuilder.clients(clients)
       }
 
-      public override fun options(options: List<String>) {
+      override fun options(options: List<String>) {
         cdkBuilder.options(options)
       }
 
@@ -892,9 +829,9 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty,
     ) : ClientConfigurationsProperty {
-      public override fun clients(): String? = unwrap(this).getClients()
+      override fun clients(): String? = unwrap(this).getClients()
 
-      public override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
     }
 
     public companion object {
@@ -946,50 +883,36 @@ public open class CfnFileSystem internal constructor(
     public fun weeklyMaintenanceStartTime(): String? = unwrap(this).getWeeklyMaintenanceStartTime()
 
     public interface Builder {
-      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
-      }
+      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number)
 
-      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
-      }
+      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
 
-      public fun deploymentType(deploymentType: String) {
-      }
+      public fun deploymentType(deploymentType: String)
 
-      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-      }
+      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable)
 
-      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-      }
+      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fa848444d8fe815186bb9a42535c50f3de4891f0bb7fd7cc4082410a54d93baa")
       public
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit)
 
-      public fun endpointIpAddressRange(endpointIpAddressRange: String) {
-      }
+      public fun endpointIpAddressRange(endpointIpAddressRange: String)
 
-      public fun fsxAdminPassword(fsxAdminPassword: String) {
-      }
+      public fun fsxAdminPassword(fsxAdminPassword: String)
 
-      public fun haPairs(haPairs: Number) {
-      }
+      public fun haPairs(haPairs: Number)
 
-      public fun preferredSubnetId(preferredSubnetId: String) {
-      }
+      public fun preferredSubnetId(preferredSubnetId: String)
 
-      public fun routeTableIds(routeTableIds: List<String>) {
-      }
+      public fun routeTableIds(routeTableIds: List<String>)
 
-      public fun throughputCapacity(throughputCapacity: Number) {
-      }
+      public fun throughputCapacity(throughputCapacity: Number)
 
-      public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number) {
-      }
+      public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number)
 
-      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
-      }
+      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -997,62 +920,61 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty.builder()
 
-      public override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
+      override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
         cdkBuilder.automaticBackupRetentionDays(automaticBackupRetentionDays)
       }
 
-      public override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
+      override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
         cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime)
       }
 
-      public override fun deploymentType(deploymentType: String) {
+      override fun deploymentType(deploymentType: String) {
         cdkBuilder.deploymentType(deploymentType)
       }
 
-      public override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
+      override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
+      override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fa848444d8fe815186bb9a42535c50f3de4891f0bb7fd7cc4082410a54d93baa")
-      public override
+      override
           fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit):
           Unit = diskIopsConfiguration(DiskIopsConfigurationProperty(diskIopsConfiguration))
 
-      public override fun endpointIpAddressRange(endpointIpAddressRange: String) {
+      override fun endpointIpAddressRange(endpointIpAddressRange: String) {
         cdkBuilder.endpointIpAddressRange(endpointIpAddressRange)
       }
 
-      public override fun fsxAdminPassword(fsxAdminPassword: String) {
+      override fun fsxAdminPassword(fsxAdminPassword: String) {
         cdkBuilder.fsxAdminPassword(fsxAdminPassword)
       }
 
-      public override fun haPairs(haPairs: Number) {
+      override fun haPairs(haPairs: Number) {
         cdkBuilder.haPairs(haPairs)
       }
 
-      public override fun preferredSubnetId(preferredSubnetId: String) {
+      override fun preferredSubnetId(preferredSubnetId: String) {
         cdkBuilder.preferredSubnetId(preferredSubnetId)
       }
 
-      public override fun routeTableIds(routeTableIds: List<String>) {
+      override fun routeTableIds(routeTableIds: List<String>) {
         cdkBuilder.routeTableIds(routeTableIds)
       }
 
-      public override fun throughputCapacity(throughputCapacity: Number) {
+      override fun throughputCapacity(throughputCapacity: Number) {
         cdkBuilder.throughputCapacity(throughputCapacity)
       }
 
-      public override fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number) {
+      override fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number) {
         cdkBuilder.throughputCapacityPerHaPair(throughputCapacityPerHaPair)
       }
 
-      public override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
+      override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
         cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
       }
 
@@ -1065,34 +987,32 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.OntapConfigurationProperty,
     ) : OntapConfigurationProperty {
-      public override fun automaticBackupRetentionDays(): Number? =
+      override fun automaticBackupRetentionDays(): Number? =
           unwrap(this).getAutomaticBackupRetentionDays()
 
-      public override fun dailyAutomaticBackupStartTime(): String? =
+      override fun dailyAutomaticBackupStartTime(): String? =
           unwrap(this).getDailyAutomaticBackupStartTime()
 
-      public override fun deploymentType(): String = unwrap(this).getDeploymentType()
+      override fun deploymentType(): String = unwrap(this).getDeploymentType()
 
-      public override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
+      override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
 
-      public override fun endpointIpAddressRange(): String? =
-          unwrap(this).getEndpointIpAddressRange()
+      override fun endpointIpAddressRange(): String? = unwrap(this).getEndpointIpAddressRange()
 
-      public override fun fsxAdminPassword(): String? = unwrap(this).getFsxAdminPassword()
+      override fun fsxAdminPassword(): String? = unwrap(this).getFsxAdminPassword()
 
-      public override fun haPairs(): Number? = unwrap(this).getHaPairs()
+      override fun haPairs(): Number? = unwrap(this).getHaPairs()
 
-      public override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
+      override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
 
-      public override fun routeTableIds(): List<String> = unwrap(this).getRouteTableIds() ?:
-          emptyList()
+      override fun routeTableIds(): List<String> = unwrap(this).getRouteTableIds() ?: emptyList()
 
-      public override fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
+      override fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
 
-      public override fun throughputCapacityPerHaPair(): Number? =
+      override fun throughputCapacityPerHaPair(): Number? =
           unwrap(this).getThroughputCapacityPerHaPair()
 
-      public override fun weeklyMaintenanceStartTime(): String? =
+      override fun weeklyMaintenanceStartTime(): String? =
           unwrap(this).getWeeklyMaintenanceStartTime()
     }
 
@@ -1120,11 +1040,9 @@ public open class CfnFileSystem internal constructor(
     public fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
 
     public interface Builder {
-      public fun clientConfigurations(clientConfigurations: IResolvable) {
-      }
+      public fun clientConfigurations(clientConfigurations: IResolvable)
 
-      public fun clientConfigurations(clientConfigurations: List<Any>) {
-      }
+      public fun clientConfigurations(clientConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1132,11 +1050,11 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty.builder()
 
-      public override fun clientConfigurations(clientConfigurations: IResolvable) {
+      override fun clientConfigurations(clientConfigurations: IResolvable) {
         cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun clientConfigurations(clientConfigurations: List<Any>) {
+      override fun clientConfigurations(clientConfigurations: List<Any>) {
         cdkBuilder.clientConfigurations(clientConfigurations)
       }
 
@@ -1147,7 +1065,7 @@ public open class CfnFileSystem internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty,
     ) : NfsExportsProperty {
-      public override fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
+      override fun clientConfigurations(): Any? = unwrap(this).getClientConfigurations()
     }
 
     public companion object {
@@ -1200,68 +1118,49 @@ public open class CfnFileSystem internal constructor(
     public fun weeklyMaintenanceStartTime(): String? = unwrap(this).getWeeklyMaintenanceStartTime()
 
     public interface Builder {
-      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
-      }
+      public fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number)
 
-      public fun copyTagsToBackups(copyTagsToBackups: Boolean) {
-      }
+      public fun copyTagsToBackups(copyTagsToBackups: Boolean)
 
-      public fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-      }
+      public fun copyTagsToBackups(copyTagsToBackups: IResolvable)
 
-      public fun copyTagsToVolumes(copyTagsToVolumes: Boolean) {
-      }
+      public fun copyTagsToVolumes(copyTagsToVolumes: Boolean)
 
-      public fun copyTagsToVolumes(copyTagsToVolumes: IResolvable) {
-      }
+      public fun copyTagsToVolumes(copyTagsToVolumes: IResolvable)
 
-      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
-      }
+      public fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String)
 
-      public fun deploymentType(deploymentType: String) {
-      }
+      public fun deploymentType(deploymentType: String)
 
-      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-      }
+      public fun diskIopsConfiguration(diskIopsConfiguration: IResolvable)
 
-      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-      }
+      public fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6599b9fa97fd21cf4a69f3d1ffebe3a6f1a1656042284dec261c2076d2c3e0fe")
       public
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit)
 
-      public fun endpointIpAddressRange(endpointIpAddressRange: String) {
-      }
+      public fun endpointIpAddressRange(endpointIpAddressRange: String)
 
-      public fun options(options: List<String>) {
-      }
+      public fun options(options: List<String>)
 
-      public fun preferredSubnetId(preferredSubnetId: String) {
-      }
+      public fun preferredSubnetId(preferredSubnetId: String)
 
-      public fun rootVolumeConfiguration(rootVolumeConfiguration: IResolvable) {
-      }
+      public fun rootVolumeConfiguration(rootVolumeConfiguration: IResolvable)
 
-      public fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty) {
-      }
+      public fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2698595964bd241ea977ee8dbad20601300443dc3fe31b8a47932a577ea24b76")
       public
-          fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty.Builder.() -> Unit)
 
-      public fun routeTableIds(routeTableIds: List<String>) {
-      }
+      public fun routeTableIds(routeTableIds: List<String>)
 
-      public fun throughputCapacity(throughputCapacity: Number) {
-      }
+      public fun throughputCapacity(throughputCapacity: Number)
 
-      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
-      }
+      public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1269,85 +1168,84 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty.builder()
 
-      public override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
+      override fun automaticBackupRetentionDays(automaticBackupRetentionDays: Number) {
         cdkBuilder.automaticBackupRetentionDays(automaticBackupRetentionDays)
       }
 
-      public override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
+      override fun copyTagsToBackups(copyTagsToBackups: Boolean) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups)
       }
 
-      public override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
+      override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
         cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
       }
 
-      public override fun copyTagsToVolumes(copyTagsToVolumes: Boolean) {
+      override fun copyTagsToVolumes(copyTagsToVolumes: Boolean) {
         cdkBuilder.copyTagsToVolumes(copyTagsToVolumes)
       }
 
-      public override fun copyTagsToVolumes(copyTagsToVolumes: IResolvable) {
+      override fun copyTagsToVolumes(copyTagsToVolumes: IResolvable) {
         cdkBuilder.copyTagsToVolumes(copyTagsToVolumes.let(IResolvable::unwrap))
       }
 
-      public override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
+      override fun dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime: String) {
         cdkBuilder.dailyAutomaticBackupStartTime(dailyAutomaticBackupStartTime)
       }
 
-      public override fun deploymentType(deploymentType: String) {
+      override fun deploymentType(deploymentType: String) {
         cdkBuilder.deploymentType(deploymentType)
       }
 
-      public override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
+      override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
+      override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
         cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6599b9fa97fd21cf4a69f3d1ffebe3a6f1a1656042284dec261c2076d2c3e0fe")
-      public override
+      override
           fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty.Builder.() -> Unit):
           Unit = diskIopsConfiguration(DiskIopsConfigurationProperty(diskIopsConfiguration))
 
-      public override fun endpointIpAddressRange(endpointIpAddressRange: String) {
+      override fun endpointIpAddressRange(endpointIpAddressRange: String) {
         cdkBuilder.endpointIpAddressRange(endpointIpAddressRange)
       }
 
-      public override fun options(options: List<String>) {
+      override fun options(options: List<String>) {
         cdkBuilder.options(options)
       }
 
-      public override fun preferredSubnetId(preferredSubnetId: String) {
+      override fun preferredSubnetId(preferredSubnetId: String) {
         cdkBuilder.preferredSubnetId(preferredSubnetId)
       }
 
-      public override fun rootVolumeConfiguration(rootVolumeConfiguration: IResolvable) {
+      override fun rootVolumeConfiguration(rootVolumeConfiguration: IResolvable) {
         cdkBuilder.rootVolumeConfiguration(rootVolumeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty) {
         cdkBuilder.rootVolumeConfiguration(rootVolumeConfiguration.let(RootVolumeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2698595964bd241ea977ee8dbad20601300443dc3fe31b8a47932a577ea24b76")
-      public override
+      override
           fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty.Builder.() -> Unit):
           Unit = rootVolumeConfiguration(RootVolumeConfigurationProperty(rootVolumeConfiguration))
 
-      public override fun routeTableIds(routeTableIds: List<String>) {
+      override fun routeTableIds(routeTableIds: List<String>) {
         cdkBuilder.routeTableIds(routeTableIds)
       }
 
-      public override fun throughputCapacity(throughputCapacity: Number) {
+      override fun throughputCapacity(throughputCapacity: Number) {
         cdkBuilder.throughputCapacity(throughputCapacity)
       }
 
-      public override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
+      override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: String) {
         cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime)
       }
 
@@ -1360,36 +1258,33 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty,
     ) : OpenZFSConfigurationProperty {
-      public override fun automaticBackupRetentionDays(): Number? =
+      override fun automaticBackupRetentionDays(): Number? =
           unwrap(this).getAutomaticBackupRetentionDays()
 
-      public override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
+      override fun copyTagsToBackups(): Any? = unwrap(this).getCopyTagsToBackups()
 
-      public override fun copyTagsToVolumes(): Any? = unwrap(this).getCopyTagsToVolumes()
+      override fun copyTagsToVolumes(): Any? = unwrap(this).getCopyTagsToVolumes()
 
-      public override fun dailyAutomaticBackupStartTime(): String? =
+      override fun dailyAutomaticBackupStartTime(): String? =
           unwrap(this).getDailyAutomaticBackupStartTime()
 
-      public override fun deploymentType(): String = unwrap(this).getDeploymentType()
+      override fun deploymentType(): String = unwrap(this).getDeploymentType()
 
-      public override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
+      override fun diskIopsConfiguration(): Any? = unwrap(this).getDiskIopsConfiguration()
 
-      public override fun endpointIpAddressRange(): String? =
-          unwrap(this).getEndpointIpAddressRange()
+      override fun endpointIpAddressRange(): String? = unwrap(this).getEndpointIpAddressRange()
 
-      public override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
 
-      public override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
+      override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
 
-      public override fun rootVolumeConfiguration(): Any? =
-          unwrap(this).getRootVolumeConfiguration()
+      override fun rootVolumeConfiguration(): Any? = unwrap(this).getRootVolumeConfiguration()
 
-      public override fun routeTableIds(): List<String> = unwrap(this).getRouteTableIds() ?:
-          emptyList()
+      override fun routeTableIds(): List<String> = unwrap(this).getRouteTableIds() ?: emptyList()
 
-      public override fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
+      override fun throughputCapacity(): Number? = unwrap(this).getThroughputCapacity()
 
-      public override fun weeklyMaintenanceStartTime(): String? =
+      override fun weeklyMaintenanceStartTime(): String? =
           unwrap(this).getWeeklyMaintenanceStartTime()
     }
 
@@ -1427,35 +1322,25 @@ public open class CfnFileSystem internal constructor(
     public fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
 
     public interface Builder {
-      public fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean) {
-      }
+      public fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean)
 
-      public fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
-      }
+      public fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable)
 
-      public fun dataCompressionType(dataCompressionType: String) {
-      }
+      public fun dataCompressionType(dataCompressionType: String)
 
-      public fun nfsExports(nfsExports: IResolvable) {
-      }
+      public fun nfsExports(nfsExports: IResolvable)
 
-      public fun nfsExports(nfsExports: List<Any>) {
-      }
+      public fun nfsExports(nfsExports: List<Any>)
 
-      public fun readOnly(readOnly: Boolean) {
-      }
+      public fun readOnly(readOnly: Boolean)
 
-      public fun readOnly(readOnly: IResolvable) {
-      }
+      public fun readOnly(readOnly: IResolvable)
 
-      public fun recordSizeKiB(recordSizeKiB: Number) {
-      }
+      public fun recordSizeKiB(recordSizeKiB: Number)
 
-      public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
-      }
+      public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable)
 
-      public fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
-      }
+      public fun userAndGroupQuotas(userAndGroupQuotas: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1464,43 +1349,43 @@ public open class CfnFileSystem internal constructor(
           =
           software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty.builder()
 
-      public override fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean) {
+      override fun copyTagsToSnapshots(copyTagsToSnapshots: Boolean) {
         cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots)
       }
 
-      public override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
+      override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
         cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable::unwrap))
       }
 
-      public override fun dataCompressionType(dataCompressionType: String) {
+      override fun dataCompressionType(dataCompressionType: String) {
         cdkBuilder.dataCompressionType(dataCompressionType)
       }
 
-      public override fun nfsExports(nfsExports: IResolvable) {
+      override fun nfsExports(nfsExports: IResolvable) {
         cdkBuilder.nfsExports(nfsExports.let(IResolvable::unwrap))
       }
 
-      public override fun nfsExports(nfsExports: List<Any>) {
+      override fun nfsExports(nfsExports: List<Any>) {
         cdkBuilder.nfsExports(nfsExports)
       }
 
-      public override fun readOnly(readOnly: Boolean) {
+      override fun readOnly(readOnly: Boolean) {
         cdkBuilder.readOnly(readOnly)
       }
 
-      public override fun readOnly(readOnly: IResolvable) {
+      override fun readOnly(readOnly: IResolvable) {
         cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
       }
 
-      public override fun recordSizeKiB(recordSizeKiB: Number) {
+      override fun recordSizeKiB(recordSizeKiB: Number) {
         cdkBuilder.recordSizeKiB(recordSizeKiB)
       }
 
-      public override fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
+      override fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
         cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable::unwrap))
       }
 
-      public override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
+      override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
         cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)
       }
 
@@ -1513,17 +1398,17 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty,
     ) : RootVolumeConfigurationProperty {
-      public override fun copyTagsToSnapshots(): Any? = unwrap(this).getCopyTagsToSnapshots()
+      override fun copyTagsToSnapshots(): Any? = unwrap(this).getCopyTagsToSnapshots()
 
-      public override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
+      override fun dataCompressionType(): String? = unwrap(this).getDataCompressionType()
 
-      public override fun nfsExports(): Any? = unwrap(this).getNfsExports()
+      override fun nfsExports(): Any? = unwrap(this).getNfsExports()
 
-      public override fun readOnly(): Any? = unwrap(this).getReadOnly()
+      override fun readOnly(): Any? = unwrap(this).getReadOnly()
 
-      public override fun recordSizeKiB(): Number? = unwrap(this).getRecordSizeKiB()
+      override fun recordSizeKiB(): Number? = unwrap(this).getRecordSizeKiB()
 
-      public override fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
+      override fun userAndGroupQuotas(): Any? = unwrap(this).getUserAndGroupQuotas()
     }
 
     public companion object {
@@ -1552,11 +1437,9 @@ public open class CfnFileSystem internal constructor(
     public fun mode(): String? = unwrap(this).getMode()
 
     public interface Builder {
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1564,11 +1447,11 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty.builder()
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
@@ -1581,9 +1464,9 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.DiskIopsConfigurationProperty,
     ) : DiskIopsConfigurationProperty {
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
     }
 
     public companion object {
@@ -1614,14 +1497,11 @@ public open class CfnFileSystem internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun id(id: Number) {
-      }
+      public fun id(id: Number)
 
-      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
-      }
+      public fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1629,15 +1509,15 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty.Builder =
           software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty.builder()
 
-      public override fun id(id: Number) {
+      override fun id(id: Number) {
         cdkBuilder.id(id)
       }
 
-      public override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
+      override fun storageCapacityQuotaGiB(storageCapacityQuotaGiB: Number) {
         cdkBuilder.storageCapacityQuotaGiB(storageCapacityQuotaGiB)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1650,12 +1530,11 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.UserAndGroupQuotasProperty,
     ) : UserAndGroupQuotasProperty {
-      public override fun id(): Number? = unwrap(this).getId()
+      override fun id(): Number? = unwrap(this).getId()
 
-      public override fun storageCapacityQuotaGiB(): Number? =
-          unwrap(this).getStorageCapacityQuotaGiB()
+      override fun storageCapacityQuotaGiB(): Number? = unwrap(this).getStorageCapacityQuotaGiB()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -1694,23 +1573,17 @@ public open class CfnFileSystem internal constructor(
     public fun userName(): String? = unwrap(this).getUserName()
 
     public interface Builder {
-      public fun dnsIps(dnsIps: List<String>) {
-      }
+      public fun dnsIps(dnsIps: List<String>)
 
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String) {
-      }
+      public fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String)
 
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-      }
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun userName(userName: String) {
-      }
+      public fun userName(userName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1719,28 +1592,28 @@ public open class CfnFileSystem internal constructor(
           =
           software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty.builder()
 
-      public override fun dnsIps(dnsIps: List<String>) {
+      override fun dnsIps(dnsIps: List<String>) {
         cdkBuilder.dnsIps(dnsIps)
       }
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String) {
+      override fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String) {
         cdkBuilder.fileSystemAdministratorsGroup(fileSystemAdministratorsGroup)
       }
 
-      public override
+      override
           fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
         cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun userName(userName: String) {
+      override fun userName(userName: String) {
         cdkBuilder.userName(userName)
       }
 
@@ -1753,19 +1626,19 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty,
     ) : SelfManagedActiveDirectoryConfigurationProperty {
-      public override fun dnsIps(): List<String> = unwrap(this).getDnsIps() ?: emptyList()
+      override fun dnsIps(): List<String> = unwrap(this).getDnsIps() ?: emptyList()
 
-      public override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
-      public override fun fileSystemAdministratorsGroup(): String? =
+      override fun fileSystemAdministratorsGroup(): String? =
           unwrap(this).getFileSystemAdministratorsGroup()
 
-      public override fun organizationalUnitDistinguishedName(): String? =
+      override fun organizationalUnitDistinguishedName(): String? =
           unwrap(this).getOrganizationalUnitDistinguishedName()
 
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun userName(): String? = unwrap(this).getUserName()
+      override fun userName(): String? = unwrap(this).getUserName()
     }
 
     public companion object {

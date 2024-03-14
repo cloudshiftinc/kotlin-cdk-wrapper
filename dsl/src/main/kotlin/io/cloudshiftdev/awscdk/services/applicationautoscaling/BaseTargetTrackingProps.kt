@@ -15,17 +15,13 @@ public interface BaseTargetTrackingProps {
   public fun scaleOutCooldown(): Duration? = unwrap(this).getScaleOutCooldown()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-    }
+    public fun disableScaleIn(disableScaleIn: Boolean)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun scaleInCooldown(scaleInCooldown: Duration) {
-    }
+    public fun scaleInCooldown(scaleInCooldown: Duration)
 
-    public fun scaleOutCooldown(scaleOutCooldown: Duration) {
-    }
+    public fun scaleOutCooldown(scaleOutCooldown: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -33,19 +29,19 @@ public interface BaseTargetTrackingProps {
         software.amazon.awscdk.services.applicationautoscaling.BaseTargetTrackingProps.Builder =
         software.amazon.awscdk.services.applicationautoscaling.BaseTargetTrackingProps.builder()
 
-    public override fun disableScaleIn(disableScaleIn: Boolean) {
+    override fun disableScaleIn(disableScaleIn: Boolean) {
       cdkBuilder.disableScaleIn(disableScaleIn)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun scaleInCooldown(scaleInCooldown: Duration) {
+    override fun scaleInCooldown(scaleInCooldown: Duration) {
       cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
     }
 
-    public override fun scaleOutCooldown(scaleOutCooldown: Duration) {
+    override fun scaleOutCooldown(scaleOutCooldown: Duration) {
       cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
     }
 
@@ -58,14 +54,14 @@ public interface BaseTargetTrackingProps {
     internal val cdkObject:
         software.amazon.awscdk.services.applicationautoscaling.BaseTargetTrackingProps,
   ) : BaseTargetTrackingProps {
-    public override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
+    override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
 
-    public override fun policyName(): String? = unwrap(this).getPolicyName()
+    override fun policyName(): String? = unwrap(this).getPolicyName()
 
-    public override fun scaleInCooldown(): Duration? =
+    override fun scaleInCooldown(): Duration? =
         unwrap(this).getScaleInCooldown()?.let(Duration::wrap)
 
-    public override fun scaleOutCooldown(): Duration? =
+    override fun scaleOutCooldown(): Duration? =
         unwrap(this).getScaleOutCooldown()?.let(Duration::wrap)
   }
 

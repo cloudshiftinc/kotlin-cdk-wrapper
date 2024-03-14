@@ -128,66 +128,49 @@ public open class CfnPipeline internal constructor(
       vpcOptions(VpcOptionsProperty(`value`))
 
   public interface Builder {
-    public fun bufferOptions(bufferOptions: IResolvable) {
-    }
+    public fun bufferOptions(bufferOptions: IResolvable)
 
-    public fun bufferOptions(bufferOptions: BufferOptionsProperty) {
-    }
+    public fun bufferOptions(bufferOptions: BufferOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("521a6f5455e187f1cb3cae2d62862342904aaecc39219120de7f96054dc111f6")
-    public fun bufferOptions(bufferOptions: BufferOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun bufferOptions(bufferOptions: BufferOptionsProperty.Builder.() -> Unit)
 
-    public fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
-    }
+    public fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable)
 
-    public fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
-    }
+    public fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0240d8c5b5549905909b79de6e5be06b178608e62cf3ccb2d1b13259fccffd5")
     public
-        fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty.Builder.() -> Unit) {
-    }
+        fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty.Builder.() -> Unit)
 
-    public fun logPublishingOptions(logPublishingOptions: IResolvable) {
-    }
+    public fun logPublishingOptions(logPublishingOptions: IResolvable)
 
-    public fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty) {
-    }
+    public fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c08b220362234c4cc0e216143ac2603e48f9251daf1947aeb3a3ce258c859b03")
     public
-        fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty.Builder.() -> Unit) {
-    }
+        fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty.Builder.() -> Unit)
 
-    public fun maxUnits(maxUnits: Number) {
-    }
+    public fun maxUnits(maxUnits: Number)
 
-    public fun minUnits(minUnits: Number) {
-    }
+    public fun minUnits(minUnits: Number)
 
-    public fun pipelineConfigurationBody(pipelineConfigurationBody: String) {
-    }
+    public fun pipelineConfigurationBody(pipelineConfigurationBody: String)
 
-    public fun pipelineName(pipelineName: String) {
-    }
+    public fun pipelineName(pipelineName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcOptions(vpcOptions: IResolvable) {
-    }
+    public fun vpcOptions(vpcOptions: IResolvable)
 
-    public fun vpcOptions(vpcOptions: VpcOptionsProperty) {
-    }
+    public fun vpcOptions(vpcOptions: VpcOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c5c8165a7472a670581694263ef16a917ca8417fe109d0ed9d7c63fb0e00823")
-    public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -197,79 +180,78 @@ public open class CfnPipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.osis.CfnPipeline.Builder =
         software.amazon.awscdk.services.osis.CfnPipeline.Builder.create(scope, id)
 
-    public override fun bufferOptions(bufferOptions: IResolvable) {
+    override fun bufferOptions(bufferOptions: IResolvable) {
       cdkBuilder.bufferOptions(bufferOptions.let(IResolvable::unwrap))
     }
 
-    public override fun bufferOptions(bufferOptions: BufferOptionsProperty) {
+    override fun bufferOptions(bufferOptions: BufferOptionsProperty) {
       cdkBuilder.bufferOptions(bufferOptions.let(BufferOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("521a6f5455e187f1cb3cae2d62862342904aaecc39219120de7f96054dc111f6")
-    public override fun bufferOptions(bufferOptions: BufferOptionsProperty.Builder.() -> Unit): Unit
-        = bufferOptions(BufferOptionsProperty(bufferOptions))
+    override fun bufferOptions(bufferOptions: BufferOptionsProperty.Builder.() -> Unit): Unit =
+        bufferOptions(BufferOptionsProperty(bufferOptions))
 
-    public override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
+    override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
       cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
+    override fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
       cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(EncryptionAtRestOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0240d8c5b5549905909b79de6e5be06b178608e62cf3ccb2d1b13259fccffd5")
-    public override
+    override
         fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty.Builder.() -> Unit):
         Unit = encryptionAtRestOptions(EncryptionAtRestOptionsProperty(encryptionAtRestOptions))
 
-    public override fun logPublishingOptions(logPublishingOptions: IResolvable) {
+    override fun logPublishingOptions(logPublishingOptions: IResolvable) {
       cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable::unwrap))
     }
 
-    public override fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty) {
+    override fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty) {
       cdkBuilder.logPublishingOptions(logPublishingOptions.let(LogPublishingOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c08b220362234c4cc0e216143ac2603e48f9251daf1947aeb3a3ce258c859b03")
-    public override
+    override
         fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty.Builder.() -> Unit):
         Unit = logPublishingOptions(LogPublishingOptionsProperty(logPublishingOptions))
 
-    public override fun maxUnits(maxUnits: Number) {
+    override fun maxUnits(maxUnits: Number) {
       cdkBuilder.maxUnits(maxUnits)
     }
 
-    public override fun minUnits(minUnits: Number) {
+    override fun minUnits(minUnits: Number) {
       cdkBuilder.minUnits(minUnits)
     }
 
-    public override fun pipelineConfigurationBody(pipelineConfigurationBody: String) {
+    override fun pipelineConfigurationBody(pipelineConfigurationBody: String) {
       cdkBuilder.pipelineConfigurationBody(pipelineConfigurationBody)
     }
 
-    public override fun pipelineName(pipelineName: String) {
+    override fun pipelineName(pipelineName: String) {
       cdkBuilder.pipelineName(pipelineName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcOptions(vpcOptions: IResolvable) {
+    override fun vpcOptions(vpcOptions: IResolvable) {
       cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
     }
 
-    public override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
+    override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
       cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c5c8165a7472a670581694263ef16a917ca8417fe109d0ed9d7c63fb0e00823")
-    public override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
+    override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
         vpcOptions(VpcOptionsProperty(vpcOptions))
 
     public fun build(): software.amazon.awscdk.services.osis.CfnPipeline = cdkBuilder.build()
@@ -304,22 +286,17 @@ public open class CfnPipeline internal constructor(
     public fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
 
     public interface Builder {
-      public fun vpcEndpointId(vpcEndpointId: String) {
-      }
+      public fun vpcEndpointId(vpcEndpointId: String)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
 
-      public fun vpcOptions(vpcOptions: IResolvable) {
-      }
+      public fun vpcOptions(vpcOptions: IResolvable)
 
-      public fun vpcOptions(vpcOptions: VpcOptionsProperty) {
-      }
+      public fun vpcOptions(vpcOptions: VpcOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
-      public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -327,25 +304,25 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.Builder =
           software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty.builder()
 
-      public override fun vpcEndpointId(vpcEndpointId: String) {
+      override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
-      public override fun vpcOptions(vpcOptions: IResolvable) {
+      override fun vpcOptions(vpcOptions: IResolvable) {
         cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
       }
 
-      public override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
+      override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
         cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b0a2165aaf343d4811e4e25e9ba8d41cb49e837d7f30f2c7b5b764ef380e3c74")
-      public override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
+      override fun vpcOptions(vpcOptions: VpcOptionsProperty.Builder.() -> Unit): Unit =
           vpcOptions(VpcOptionsProperty(vpcOptions))
 
       public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty =
@@ -355,11 +332,11 @@ public open class CfnPipeline internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcEndpointProperty,
     ) : VpcEndpointProperty {
-      public override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
 
-      public override fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
+      override fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
     }
 
     public companion object {
@@ -386,8 +363,7 @@ public open class CfnPipeline internal constructor(
     public fun logGroup(): String
 
     public interface Builder {
-      public fun logGroup(logGroup: String) {
-      }
+      public fun logGroup(logGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -396,7 +372,7 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty.builder()
 
-      public override fun logGroup(logGroup: String) {
+      override fun logGroup(logGroup: String) {
         cdkBuilder.logGroup(logGroup)
       }
 
@@ -409,7 +385,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.osis.CfnPipeline.CloudWatchLogDestinationProperty,
     ) : CloudWatchLogDestinationProperty {
-      public override fun logGroup(): String = unwrap(this).getLogGroup()
+      override fun logGroup(): String = unwrap(this).getLogGroup()
     }
 
     public companion object {
@@ -436,11 +412,9 @@ public open class CfnPipeline internal constructor(
     public fun persistentBufferEnabled(): Any
 
     public interface Builder {
-      public fun persistentBufferEnabled(persistentBufferEnabled: Boolean) {
-      }
+      public fun persistentBufferEnabled(persistentBufferEnabled: Boolean)
 
-      public fun persistentBufferEnabled(persistentBufferEnabled: IResolvable) {
-      }
+      public fun persistentBufferEnabled(persistentBufferEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -448,11 +422,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty.Builder =
           software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty.builder()
 
-      public override fun persistentBufferEnabled(persistentBufferEnabled: Boolean) {
+      override fun persistentBufferEnabled(persistentBufferEnabled: Boolean) {
         cdkBuilder.persistentBufferEnabled(persistentBufferEnabled)
       }
 
-      public override fun persistentBufferEnabled(persistentBufferEnabled: IResolvable) {
+      override fun persistentBufferEnabled(persistentBufferEnabled: IResolvable) {
         cdkBuilder.persistentBufferEnabled(persistentBufferEnabled.let(IResolvable::unwrap))
       }
 
@@ -464,7 +438,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty,
     ) : BufferOptionsProperty {
-      public override fun persistentBufferEnabled(): Any = unwrap(this).getPersistentBufferEnabled()
+      override fun persistentBufferEnabled(): Any = unwrap(this).getPersistentBufferEnabled()
     }
 
     public companion object {
@@ -493,24 +467,19 @@ public open class CfnPipeline internal constructor(
     public fun isLoggingEnabled(): Any? = unwrap(this).getIsLoggingEnabled()
 
     public interface Builder {
-      public fun cloudWatchLogDestination(cloudWatchLogDestination: IResolvable) {
-      }
+      public fun cloudWatchLogDestination(cloudWatchLogDestination: IResolvable)
 
       public
-          fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty) {
-      }
+          fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b9483073fa5903db0fd5376daeba740fd76ef4814aaeb929e2c3eca7fbca7a4")
       public
-          fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty.Builder.() -> Unit)
 
-      public fun isLoggingEnabled(isLoggingEnabled: Boolean) {
-      }
+      public fun isLoggingEnabled(isLoggingEnabled: Boolean)
 
-      public fun isLoggingEnabled(isLoggingEnabled: IResolvable) {
-      }
+      public fun isLoggingEnabled(isLoggingEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -518,27 +487,27 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty.Builder =
           software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty.builder()
 
-      public override fun cloudWatchLogDestination(cloudWatchLogDestination: IResolvable) {
+      override fun cloudWatchLogDestination(cloudWatchLogDestination: IResolvable) {
         cdkBuilder.cloudWatchLogDestination(cloudWatchLogDestination.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty) {
         cdkBuilder.cloudWatchLogDestination(cloudWatchLogDestination.let(CloudWatchLogDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b9483073fa5903db0fd5376daeba740fd76ef4814aaeb929e2c3eca7fbca7a4")
-      public override
+      override
           fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLogDestination(CloudWatchLogDestinationProperty(cloudWatchLogDestination))
 
-      public override fun isLoggingEnabled(isLoggingEnabled: Boolean) {
+      override fun isLoggingEnabled(isLoggingEnabled: Boolean) {
         cdkBuilder.isLoggingEnabled(isLoggingEnabled)
       }
 
-      public override fun isLoggingEnabled(isLoggingEnabled: IResolvable) {
+      override fun isLoggingEnabled(isLoggingEnabled: IResolvable) {
         cdkBuilder.isLoggingEnabled(isLoggingEnabled.let(IResolvable::unwrap))
       }
 
@@ -551,10 +520,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.osis.CfnPipeline.LogPublishingOptionsProperty,
     ) : LogPublishingOptionsProperty {
-      public override fun cloudWatchLogDestination(): Any? =
-          unwrap(this).getCloudWatchLogDestination()
+      override fun cloudWatchLogDestination(): Any? = unwrap(this).getCloudWatchLogDestination()
 
-      public override fun isLoggingEnabled(): Any? = unwrap(this).getIsLoggingEnabled()
+      override fun isLoggingEnabled(): Any? = unwrap(this).getIsLoggingEnabled()
     }
 
     public companion object {
@@ -581,8 +549,7 @@ public open class CfnPipeline internal constructor(
     public fun kmsKeyArn(): String
 
     public interface Builder {
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -590,7 +557,7 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.Builder =
           software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty.builder()
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -603,7 +570,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.osis.CfnPipeline.EncryptionAtRestOptionsProperty,
     ) : EncryptionAtRestOptionsProperty {
-      public override fun kmsKeyArn(): String = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
@@ -632,11 +599,9 @@ public open class CfnPipeline internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -644,11 +609,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty.Builder =
           software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -659,10 +624,10 @@ public open class CfnPipeline internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.osis.CfnPipeline.VpcOptionsProperty,
     ) : VpcOptionsProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {

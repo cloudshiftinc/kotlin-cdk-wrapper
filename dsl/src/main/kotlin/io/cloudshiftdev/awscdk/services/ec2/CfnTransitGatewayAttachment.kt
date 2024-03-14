@@ -56,20 +56,15 @@ public open class CfnTransitGatewayAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun options(options: Any) {
-    }
+    public fun options(options: Any)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitGatewayId(transitGatewayId: String) {
-    }
+    public fun transitGatewayId(transitGatewayId: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnTransitGatewayAttachment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.Builder
         = software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.Builder.create(scope, id)
 
-    public override fun options(options: Any) {
+    override fun options(options: Any) {
       cdkBuilder.options(options)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitGatewayId(transitGatewayId: String) {
+    override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -135,17 +130,13 @@ public open class CfnTransitGatewayAttachment internal constructor(
         unwrap(this).getSecurityGroupReferencingSupport()
 
     public interface Builder {
-      public fun applianceModeSupport(applianceModeSupport: String) {
-      }
+      public fun applianceModeSupport(applianceModeSupport: String)
 
-      public fun dnsSupport(dnsSupport: String) {
-      }
+      public fun dnsSupport(dnsSupport: String)
 
-      public fun ipv6Support(ipv6Support: String) {
-      }
+      public fun ipv6Support(ipv6Support: String)
 
-      public fun securityGroupReferencingSupport(securityGroupReferencingSupport: String) {
-      }
+      public fun securityGroupReferencingSupport(securityGroupReferencingSupport: String)
     }
 
     private class BuilderImpl : Builder {
@@ -153,19 +144,19 @@ public open class CfnTransitGatewayAttachment internal constructor(
           software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.OptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.OptionsProperty.builder()
 
-      public override fun applianceModeSupport(applianceModeSupport: String) {
+      override fun applianceModeSupport(applianceModeSupport: String) {
         cdkBuilder.applianceModeSupport(applianceModeSupport)
       }
 
-      public override fun dnsSupport(dnsSupport: String) {
+      override fun dnsSupport(dnsSupport: String) {
         cdkBuilder.dnsSupport(dnsSupport)
       }
 
-      public override fun ipv6Support(ipv6Support: String) {
+      override fun ipv6Support(ipv6Support: String) {
         cdkBuilder.ipv6Support(ipv6Support)
       }
 
-      public override fun securityGroupReferencingSupport(securityGroupReferencingSupport: String) {
+      override fun securityGroupReferencingSupport(securityGroupReferencingSupport: String) {
         cdkBuilder.securityGroupReferencingSupport(securityGroupReferencingSupport)
       }
 
@@ -178,13 +169,13 @@ public open class CfnTransitGatewayAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment.OptionsProperty,
     ) : OptionsProperty {
-      public override fun applianceModeSupport(): String? = unwrap(this).getApplianceModeSupport()
+      override fun applianceModeSupport(): String? = unwrap(this).getApplianceModeSupport()
 
-      public override fun dnsSupport(): String? = unwrap(this).getDnsSupport()
+      override fun dnsSupport(): String? = unwrap(this).getDnsSupport()
 
-      public override fun ipv6Support(): String? = unwrap(this).getIpv6Support()
+      override fun ipv6Support(): String? = unwrap(this).getIpv6Support()
 
-      public override fun securityGroupReferencingSupport(): String? =
+      override fun securityGroupReferencingSupport(): String? =
           unwrap(this).getSecurityGroupReferencingSupport()
     }
 

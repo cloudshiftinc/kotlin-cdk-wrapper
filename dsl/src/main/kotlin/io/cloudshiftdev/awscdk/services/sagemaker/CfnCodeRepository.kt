@@ -58,22 +58,17 @@ public open class CfnCodeRepository internal constructor(
   }
 
   public interface Builder {
-    public fun codeRepositoryName(codeRepositoryName: String) {
-    }
+    public fun codeRepositoryName(codeRepositoryName: String)
 
-    public fun gitConfig(gitConfig: IResolvable) {
-    }
+    public fun gitConfig(gitConfig: IResolvable)
 
-    public fun gitConfig(gitConfig: GitConfigProperty) {
-    }
+    public fun gitConfig(gitConfig: GitConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("22d74d66512f00a6582b1f3c146a255dc8da1bfce432fd5d3afada04d6847919")
-    public fun gitConfig(gitConfig: GitConfigProperty.Builder.() -> Unit) {
-    }
+    public fun gitConfig(gitConfig: GitConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -83,24 +78,24 @@ public open class CfnCodeRepository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnCodeRepository.Builder =
         software.amazon.awscdk.services.sagemaker.CfnCodeRepository.Builder.create(scope, id)
 
-    public override fun codeRepositoryName(codeRepositoryName: String) {
+    override fun codeRepositoryName(codeRepositoryName: String) {
       cdkBuilder.codeRepositoryName(codeRepositoryName)
     }
 
-    public override fun gitConfig(gitConfig: IResolvable) {
+    override fun gitConfig(gitConfig: IResolvable) {
       cdkBuilder.gitConfig(gitConfig.let(IResolvable::unwrap))
     }
 
-    public override fun gitConfig(gitConfig: GitConfigProperty) {
+    override fun gitConfig(gitConfig: GitConfigProperty) {
       cdkBuilder.gitConfig(gitConfig.let(GitConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("22d74d66512f00a6582b1f3c146a255dc8da1bfce432fd5d3afada04d6847919")
-    public override fun gitConfig(gitConfig: GitConfigProperty.Builder.() -> Unit): Unit =
+    override fun gitConfig(gitConfig: GitConfigProperty.Builder.() -> Unit): Unit =
         gitConfig(GitConfigProperty(gitConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -137,14 +132,11 @@ public open class CfnCodeRepository internal constructor(
     public fun secretArn(): String? = unwrap(this).getSecretArn()
 
     public interface Builder {
-      public fun branch(branch: String) {
-      }
+      public fun branch(branch: String)
 
-      public fun repositoryUrl(repositoryUrl: String) {
-      }
+      public fun repositoryUrl(repositoryUrl: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -152,15 +144,15 @@ public open class CfnCodeRepository internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty.builder()
 
-      public override fun branch(branch: String) {
+      override fun branch(branch: String) {
         cdkBuilder.branch(branch)
       }
 
-      public override fun repositoryUrl(repositoryUrl: String) {
+      override fun repositoryUrl(repositoryUrl: String) {
         cdkBuilder.repositoryUrl(repositoryUrl)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
@@ -173,11 +165,11 @@ public open class CfnCodeRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty,
     ) : GitConfigProperty {
-      public override fun branch(): String? = unwrap(this).getBranch()
+      override fun branch(): String? = unwrap(this).getBranch()
 
-      public override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
+      override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
     }
 
     public companion object {

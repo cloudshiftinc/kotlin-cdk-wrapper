@@ -11,29 +11,26 @@ public interface TaintSpec {
   public fun `value`(): String? = unwrap(this).getValue()
 
   public interface Builder {
-    public fun effect(effect: TaintEffect) {
-    }
+    public fun effect(effect: TaintEffect)
 
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.TaintSpec.Builder =
         software.amazon.awscdk.services.eks.TaintSpec.builder()
 
-    public override fun effect(effect: TaintEffect) {
+    override fun effect(effect: TaintEffect) {
       cdkBuilder.effect(effect.let(TaintEffect::unwrap))
     }
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -43,11 +40,11 @@ public interface TaintSpec {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.TaintSpec,
   ) : TaintSpec {
-    public override fun effect(): TaintEffect? = unwrap(this).getEffect()?.let(TaintEffect::wrap)
+    override fun effect(): TaintEffect? = unwrap(this).getEffect()?.let(TaintEffect::wrap)
 
-    public override fun key(): String? = unwrap(this).getKey()
+    override fun key(): String? = unwrap(this).getKey()
 
-    public override fun `value`(): String? = unwrap(this).getValue()
+    override fun `value`(): String? = unwrap(this).getValue()
   }
 
   public companion object {

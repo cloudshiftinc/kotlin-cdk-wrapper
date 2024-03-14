@@ -47,17 +47,13 @@ public open class CfnPlacement internal constructor(
   }
 
   public interface Builder {
-    public fun associatedDevices(associatedDevices: Any) {
-    }
+    public fun associatedDevices(associatedDevices: Any)
 
-    public fun attributes(attributes: Any) {
-    }
+    public fun attributes(attributes: Any)
 
-    public fun placementName(placementName: String) {
-    }
+    public fun placementName(placementName: String)
 
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
   }
 
   private class BuilderImpl(
@@ -67,19 +63,19 @@ public open class CfnPlacement internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot1click.CfnPlacement.Builder =
         software.amazon.awscdk.services.iot1click.CfnPlacement.Builder.create(scope, id)
 
-    public override fun associatedDevices(associatedDevices: Any) {
+    override fun associatedDevices(associatedDevices: Any) {
       cdkBuilder.associatedDevices(associatedDevices)
     }
 
-    public override fun attributes(attributes: Any) {
+    override fun attributes(attributes: Any) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun placementName(placementName: String) {
+    override fun placementName(placementName: String) {
       cdkBuilder.placementName(placementName)
     }
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 

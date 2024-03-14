@@ -31,8 +31,7 @@ public open class CfnInternetGateway internal constructor(
   }
 
   public interface Builder {
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -42,7 +41,7 @@ public open class CfnInternetGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInternetGateway.Builder =
         software.amazon.awscdk.services.ec2.CfnInternetGateway.Builder.create(scope, id)
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

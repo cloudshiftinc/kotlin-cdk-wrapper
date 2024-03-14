@@ -78,26 +78,19 @@ public open class CfnResolverRule internal constructor(
   }
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resolverEndpointId(resolverEndpointId: String) {
-    }
+    public fun resolverEndpointId(resolverEndpointId: String)
 
-    public fun ruleType(ruleType: String) {
-    }
+    public fun ruleType(ruleType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetIps(targetIps: IResolvable) {
-    }
+    public fun targetIps(targetIps: IResolvable)
 
-    public fun targetIps(targetIps: List<Any>) {
-    }
+    public fun targetIps(targetIps: List<Any>)
   }
 
   private class BuilderImpl(
@@ -107,31 +100,31 @@ public open class CfnResolverRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53resolver.CfnResolverRule.Builder
         = software.amazon.awscdk.services.route53resolver.CfnResolverRule.Builder.create(scope, id)
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resolverEndpointId(resolverEndpointId: String) {
+    override fun resolverEndpointId(resolverEndpointId: String) {
       cdkBuilder.resolverEndpointId(resolverEndpointId)
     }
 
-    public override fun ruleType(ruleType: String) {
+    override fun ruleType(ruleType: String) {
       cdkBuilder.ruleType(ruleType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetIps(targetIps: IResolvable) {
+    override fun targetIps(targetIps: IResolvable) {
       cdkBuilder.targetIps(targetIps.let(IResolvable::unwrap))
     }
 
-    public override fun targetIps(targetIps: List<Any>) {
+    override fun targetIps(targetIps: List<Any>) {
       cdkBuilder.targetIps(targetIps)
     }
 
@@ -170,17 +163,13 @@ public open class CfnResolverRule internal constructor(
     public fun protocol(): String? = unwrap(this).getProtocol()
 
     public interface Builder {
-      public fun ip(ip: String) {
-      }
+      public fun ip(ip: String)
 
-      public fun ipv6(ipv6: String) {
-      }
+      public fun ipv6(ipv6: String)
 
-      public fun port(port: String) {
-      }
+      public fun port(port: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -189,19 +178,19 @@ public open class CfnResolverRule internal constructor(
           =
           software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty.builder()
 
-      public override fun ip(ip: String) {
+      override fun ip(ip: String) {
         cdkBuilder.ip(ip)
       }
 
-      public override fun ipv6(ipv6: String) {
+      override fun ipv6(ipv6: String) {
         cdkBuilder.ipv6(ipv6)
       }
 
-      public override fun port(port: String) {
+      override fun port(port: String) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -214,13 +203,13 @@ public open class CfnResolverRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53resolver.CfnResolverRule.TargetAddressProperty,
     ) : TargetAddressProperty {
-      public override fun ip(): String? = unwrap(this).getIp()
+      override fun ip(): String? = unwrap(this).getIp()
 
-      public override fun ipv6(): String? = unwrap(this).getIpv6()
+      override fun ipv6(): String? = unwrap(this).getIpv6()
 
-      public override fun port(): String? = unwrap(this).getPort()
+      override fun port(): String? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
     }
 
     public companion object {

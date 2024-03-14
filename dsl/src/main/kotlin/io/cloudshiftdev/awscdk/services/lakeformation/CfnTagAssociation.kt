@@ -50,22 +50,17 @@ public open class CfnTagAssociation internal constructor(
       resource(ResourceProperty(`value`))
 
   public interface Builder {
-    public fun lfTags(lfTags: IResolvable) {
-    }
+    public fun lfTags(lfTags: IResolvable)
 
-    public fun lfTags(lfTags: List<Any>) {
-    }
+    public fun lfTags(lfTags: List<Any>)
 
-    public fun resource(resource: IResolvable) {
-    }
+    public fun resource(resource: IResolvable)
 
-    public fun resource(resource: ResourceProperty) {
-    }
+    public fun resource(resource: ResourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94892b7ca3d7baf8fb6d41c4ebbb0d927fa34d8552a92ec08081dc4c04bd9cde")
-    public fun resource(resource: ResourceProperty.Builder.() -> Unit) {
-    }
+    public fun resource(resource: ResourceProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -75,25 +70,25 @@ public open class CfnTagAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lakeformation.CfnTagAssociation.Builder
         = software.amazon.awscdk.services.lakeformation.CfnTagAssociation.Builder.create(scope, id)
 
-    public override fun lfTags(lfTags: IResolvable) {
+    override fun lfTags(lfTags: IResolvable) {
       cdkBuilder.lfTags(lfTags.let(IResolvable::unwrap))
     }
 
-    public override fun lfTags(lfTags: List<Any>) {
+    override fun lfTags(lfTags: List<Any>) {
       cdkBuilder.lfTags(lfTags)
     }
 
-    public override fun resource(resource: IResolvable) {
+    override fun resource(resource: IResolvable) {
       cdkBuilder.resource(resource.let(IResolvable::unwrap))
     }
 
-    public override fun resource(resource: ResourceProperty) {
+    override fun resource(resource: ResourceProperty) {
       cdkBuilder.resource(resource.let(ResourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94892b7ca3d7baf8fb6d41c4ebbb0d927fa34d8552a92ec08081dc4c04bd9cde")
-    public override fun resource(resource: ResourceProperty.Builder.() -> Unit): Unit =
+    override fun resource(resource: ResourceProperty.Builder.() -> Unit): Unit =
         resource(ResourceProperty(resource))
 
     public fun build(): software.amazon.awscdk.services.lakeformation.CfnTagAssociation =
@@ -131,42 +126,32 @@ public open class CfnTagAssociation internal constructor(
     public fun tableWithColumns(): Any? = unwrap(this).getTableWithColumns()
 
     public interface Builder {
-      public fun catalog(catalog: Any) {
-      }
+      public fun catalog(catalog: Any)
 
-      public fun database(database: IResolvable) {
-      }
+      public fun database(database: IResolvable)
 
-      public fun database(database: DatabaseResourceProperty) {
-      }
+      public fun database(database: DatabaseResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("97176c28c0e94cb42304507c85985874dcaebccbb3157e601c84f47a1b83b608")
-      public fun database(database: DatabaseResourceProperty.Builder.() -> Unit) {
-      }
+      public fun database(database: DatabaseResourceProperty.Builder.() -> Unit)
 
-      public fun table(table: IResolvable) {
-      }
+      public fun table(table: IResolvable)
 
-      public fun table(table: TableResourceProperty) {
-      }
+      public fun table(table: TableResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("222f937de1b3ea7ce39f737cd3d76c9d79c51727be76d73727495101f8d808d4")
-      public fun table(table: TableResourceProperty.Builder.() -> Unit) {
-      }
+      public fun table(table: TableResourceProperty.Builder.() -> Unit)
 
-      public fun tableWithColumns(tableWithColumns: IResolvable) {
-      }
+      public fun tableWithColumns(tableWithColumns: IResolvable)
 
-      public fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty) {
-      }
+      public fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4db238db16749c277996565207f773ff92a79866045d6c0b2cb4ecb6d5008c3f")
       public
-          fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty.Builder.() -> Unit) {
-      }
+          fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -174,47 +159,47 @@ public open class CfnTagAssociation internal constructor(
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty.Builder =
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty.builder()
 
-      public override fun catalog(catalog: Any) {
+      override fun catalog(catalog: Any) {
         cdkBuilder.catalog(catalog)
       }
 
-      public override fun database(database: IResolvable) {
+      override fun database(database: IResolvable) {
         cdkBuilder.database(database.let(IResolvable::unwrap))
       }
 
-      public override fun database(database: DatabaseResourceProperty) {
+      override fun database(database: DatabaseResourceProperty) {
         cdkBuilder.database(database.let(DatabaseResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("97176c28c0e94cb42304507c85985874dcaebccbb3157e601c84f47a1b83b608")
-      public override fun database(database: DatabaseResourceProperty.Builder.() -> Unit): Unit =
+      override fun database(database: DatabaseResourceProperty.Builder.() -> Unit): Unit =
           database(DatabaseResourceProperty(database))
 
-      public override fun table(table: IResolvable) {
+      override fun table(table: IResolvable) {
         cdkBuilder.table(table.let(IResolvable::unwrap))
       }
 
-      public override fun table(table: TableResourceProperty) {
+      override fun table(table: TableResourceProperty) {
         cdkBuilder.table(table.let(TableResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("222f937de1b3ea7ce39f737cd3d76c9d79c51727be76d73727495101f8d808d4")
-      public override fun table(table: TableResourceProperty.Builder.() -> Unit): Unit =
+      override fun table(table: TableResourceProperty.Builder.() -> Unit): Unit =
           table(TableResourceProperty(table))
 
-      public override fun tableWithColumns(tableWithColumns: IResolvable) {
+      override fun tableWithColumns(tableWithColumns: IResolvable) {
         cdkBuilder.tableWithColumns(tableWithColumns.let(IResolvable::unwrap))
       }
 
-      public override fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty) {
+      override fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty) {
         cdkBuilder.tableWithColumns(tableWithColumns.let(TableWithColumnsResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4db238db16749c277996565207f773ff92a79866045d6c0b2cb4ecb6d5008c3f")
-      public override
+      override
           fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty.Builder.() -> Unit):
           Unit = tableWithColumns(TableWithColumnsResourceProperty(tableWithColumns))
 
@@ -227,13 +212,13 @@ public open class CfnTagAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.ResourceProperty,
     ) : ResourceProperty {
-      public override fun catalog(): Any? = unwrap(this).getCatalog()
+      override fun catalog(): Any? = unwrap(this).getCatalog()
 
-      public override fun database(): Any? = unwrap(this).getDatabase()
+      override fun database(): Any? = unwrap(this).getDatabase()
 
-      public override fun table(): Any? = unwrap(this).getTable()
+      override fun table(): Any? = unwrap(this).getTable()
 
-      public override fun tableWithColumns(): Any? = unwrap(this).getTableWithColumns()
+      override fun tableWithColumns(): Any? = unwrap(this).getTableWithColumns()
     }
 
     public companion object {
@@ -262,11 +247,9 @@ public open class CfnTagAssociation internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -275,11 +258,11 @@ public open class CfnTagAssociation internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -292,9 +275,9 @@ public open class CfnTagAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.DatabaseResourceProperty,
     ) : DatabaseResourceProperty {
-      public override fun catalogId(): String = unwrap(this).getCatalogId()
+      override fun catalogId(): String = unwrap(this).getCatalogId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -327,17 +310,13 @@ public open class CfnTagAssociation internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun columnNames(columnNames: List<String>) {
-      }
+      public fun columnNames(columnNames: List<String>)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -346,19 +325,19 @@ public open class CfnTagAssociation internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun columnNames(columnNames: List<String>) {
+      override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -371,13 +350,13 @@ public open class CfnTagAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableWithColumnsResourceProperty,
     ) : TableWithColumnsResourceProperty {
-      public override fun catalogId(): String = unwrap(this).getCatalogId()
+      override fun catalogId(): String = unwrap(this).getCatalogId()
 
-      public override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
 
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -408,14 +387,11 @@ public open class CfnTagAssociation internal constructor(
     public fun tagValues(): List<String>
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun tagKey(tagKey: String) {
-      }
+      public fun tagKey(tagKey: String)
 
-      public fun tagValues(tagValues: List<String>) {
-      }
+      public fun tagValues(tagValues: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -424,15 +400,15 @@ public open class CfnTagAssociation internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun tagKey(tagKey: String) {
+      override fun tagKey(tagKey: String) {
         cdkBuilder.tagKey(tagKey)
       }
 
-      public override fun tagValues(tagValues: List<String>) {
+      override fun tagValues(tagValues: List<String>) {
         cdkBuilder.tagValues(tagValues)
       }
 
@@ -445,11 +421,11 @@ public open class CfnTagAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty,
     ) : LFTagPairProperty {
-      public override fun catalogId(): String = unwrap(this).getCatalogId()
+      override fun catalogId(): String = unwrap(this).getCatalogId()
 
-      public override fun tagKey(): String = unwrap(this).getTagKey()
+      override fun tagKey(): String = unwrap(this).getTagKey()
 
-      public override fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
+      override fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
     }
 
     public companion object {
@@ -482,17 +458,13 @@ public open class CfnTagAssociation internal constructor(
     public fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tableWildcard(tableWildcard: Any) {
-      }
+      public fun tableWildcard(tableWildcard: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -501,19 +473,19 @@ public open class CfnTagAssociation internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tableWildcard(tableWildcard: Any) {
+      override fun tableWildcard(tableWildcard: Any) {
         cdkBuilder.tableWildcard(tableWildcard)
       }
 
@@ -526,13 +498,13 @@ public open class CfnTagAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.TableResourceProperty,
     ) : TableResourceProperty {
-      public override fun catalogId(): String = unwrap(this).getCatalogId()
+      override fun catalogId(): String = unwrap(this).getCatalogId()
 
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
+      override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
     }
 
     public companion object {

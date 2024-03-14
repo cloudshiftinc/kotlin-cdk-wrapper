@@ -24,31 +24,30 @@ public interface IUsagePlan : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.IUsagePlan,
   ) : IUsagePlan {
-    public override fun addApiKey(arg0: IApiKey) {
+    override fun addApiKey(arg0: IApiKey) {
       unwrap(this).addApiKey(arg0.let(IApiKey::unwrap))
     }
 
-    public override fun addApiKey(arg0: IApiKey, arg1: AddApiKeyOptions) {
+    override fun addApiKey(arg0: IApiKey, arg1: AddApiKeyOptions) {
       unwrap(this).addApiKey(arg0.let(IApiKey::unwrap), arg1.let(AddApiKeyOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4f5ef86a87be3209ae0cbdb48ee812520d7927d679407f259483e5c3856b59ac")
-    public override fun addApiKey(arg0: IApiKey, arg1: AddApiKeyOptions.Builder.() -> Unit): Unit =
+    override fun addApiKey(arg0: IApiKey, arg1: AddApiKeyOptions.Builder.() -> Unit): Unit =
         addApiKey(arg0, AddApiKeyOptions(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun usagePlanId(): String = unwrap(this).getUsagePlanId()
+    override fun usagePlanId(): String = unwrap(this).getUsagePlanId()
   }
 
   public companion object {

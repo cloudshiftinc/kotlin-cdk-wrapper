@@ -117,57 +117,42 @@ public open class CfnCertificateAuthority internal constructor(
   }
 
   public interface Builder {
-    public fun csrExtensions(csrExtensions: IResolvable) {
-    }
+    public fun csrExtensions(csrExtensions: IResolvable)
 
-    public fun csrExtensions(csrExtensions: CsrExtensionsProperty) {
-    }
+    public fun csrExtensions(csrExtensions: CsrExtensionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3588d79ec2a4bbbfd46f35946af39067613e03a5bfac28f5bb29032a8c13e2cf")
-    public fun csrExtensions(csrExtensions: CsrExtensionsProperty.Builder.() -> Unit) {
-    }
+    public fun csrExtensions(csrExtensions: CsrExtensionsProperty.Builder.() -> Unit)
 
-    public fun keyAlgorithm(keyAlgorithm: String) {
-    }
+    public fun keyAlgorithm(keyAlgorithm: String)
 
-    public fun keyStorageSecurityStandard(keyStorageSecurityStandard: String) {
-    }
+    public fun keyStorageSecurityStandard(keyStorageSecurityStandard: String)
 
-    public fun revocationConfiguration(revocationConfiguration: IResolvable) {
-    }
+    public fun revocationConfiguration(revocationConfiguration: IResolvable)
 
-    public fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty) {
-    }
+    public fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b3e444ce362ba61faaa26b8350cddfed08d805dca8f5b73a4b307724c9fed74")
     public
-        fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty.Builder.() -> Unit)
 
-    public fun signingAlgorithm(signingAlgorithm: String) {
-    }
+    public fun signingAlgorithm(signingAlgorithm: String)
 
-    public fun subject(subject: IResolvable) {
-    }
+    public fun subject(subject: IResolvable)
 
-    public fun subject(subject: SubjectProperty) {
-    }
+    public fun subject(subject: SubjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("627b67d75d0d706282cd5f2d373217b36fe336f138ddb77c4e08238b89bbb54c")
-    public fun subject(subject: SubjectProperty.Builder.() -> Unit) {
-    }
+    public fun subject(subject: SubjectProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun usageMode(usageMode: String) {
-    }
+    public fun usageMode(usageMode: String)
   }
 
   private class BuilderImpl(
@@ -177,68 +162,67 @@ public open class CfnCertificateAuthority internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.Builder =
         software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.Builder.create(scope, id)
 
-    public override fun csrExtensions(csrExtensions: IResolvable) {
+    override fun csrExtensions(csrExtensions: IResolvable) {
       cdkBuilder.csrExtensions(csrExtensions.let(IResolvable::unwrap))
     }
 
-    public override fun csrExtensions(csrExtensions: CsrExtensionsProperty) {
+    override fun csrExtensions(csrExtensions: CsrExtensionsProperty) {
       cdkBuilder.csrExtensions(csrExtensions.let(CsrExtensionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3588d79ec2a4bbbfd46f35946af39067613e03a5bfac28f5bb29032a8c13e2cf")
-    public override fun csrExtensions(csrExtensions: CsrExtensionsProperty.Builder.() -> Unit): Unit
-        = csrExtensions(CsrExtensionsProperty(csrExtensions))
+    override fun csrExtensions(csrExtensions: CsrExtensionsProperty.Builder.() -> Unit): Unit =
+        csrExtensions(CsrExtensionsProperty(csrExtensions))
 
-    public override fun keyAlgorithm(keyAlgorithm: String) {
+    override fun keyAlgorithm(keyAlgorithm: String) {
       cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
-    public override fun keyStorageSecurityStandard(keyStorageSecurityStandard: String) {
+    override fun keyStorageSecurityStandard(keyStorageSecurityStandard: String) {
       cdkBuilder.keyStorageSecurityStandard(keyStorageSecurityStandard)
     }
 
-    public override fun revocationConfiguration(revocationConfiguration: IResolvable) {
+    override fun revocationConfiguration(revocationConfiguration: IResolvable) {
       cdkBuilder.revocationConfiguration(revocationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty) {
+    override fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty) {
       cdkBuilder.revocationConfiguration(revocationConfiguration.let(RevocationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b3e444ce362ba61faaa26b8350cddfed08d805dca8f5b73a4b307724c9fed74")
-    public override
+    override
         fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty.Builder.() -> Unit):
         Unit = revocationConfiguration(RevocationConfigurationProperty(revocationConfiguration))
 
-    public override fun signingAlgorithm(signingAlgorithm: String) {
+    override fun signingAlgorithm(signingAlgorithm: String) {
       cdkBuilder.signingAlgorithm(signingAlgorithm)
     }
 
-    public override fun subject(subject: IResolvable) {
+    override fun subject(subject: IResolvable) {
       cdkBuilder.subject(subject.let(IResolvable::unwrap))
     }
 
-    public override fun subject(subject: SubjectProperty) {
+    override fun subject(subject: SubjectProperty) {
       cdkBuilder.subject(subject.let(SubjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("627b67d75d0d706282cd5f2d373217b36fe336f138ddb77c4e08238b89bbb54c")
-    public override fun subject(subject: SubjectProperty.Builder.() -> Unit): Unit =
+    override fun subject(subject: SubjectProperty.Builder.() -> Unit): Unit =
         subject(SubjectProperty(subject))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun usageMode(usageMode: String) {
+    override fun usageMode(usageMode: String) {
       cdkBuilder.usageMode(usageMode)
     }
 
@@ -273,11 +257,9 @@ public open class CfnCertificateAuthority internal constructor(
     public fun partyName(): String
 
     public interface Builder {
-      public fun nameAssigner(nameAssigner: String) {
-      }
+      public fun nameAssigner(nameAssigner: String)
 
-      public fun partyName(partyName: String) {
-      }
+      public fun partyName(partyName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -286,11 +268,11 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty.builder()
 
-      public override fun nameAssigner(nameAssigner: String) {
+      override fun nameAssigner(nameAssigner: String) {
         cdkBuilder.nameAssigner(nameAssigner)
       }
 
-      public override fun partyName(partyName: String) {
+      override fun partyName(partyName: String) {
         cdkBuilder.partyName(partyName)
       }
 
@@ -303,9 +285,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty,
     ) : EdiPartyNameProperty {
-      public override fun nameAssigner(): String = unwrap(this).getNameAssigner()
+      override fun nameAssigner(): String = unwrap(this).getNameAssigner()
 
-      public override fun partyName(): String = unwrap(this).getPartyName()
+      override fun partyName(): String = unwrap(this).getPartyName()
     }
 
     public companion object {
@@ -334,11 +316,9 @@ public open class CfnCertificateAuthority internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun typeId(typeId: String) {
-      }
+      public fun typeId(typeId: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -346,11 +326,11 @@ public open class CfnCertificateAuthority internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty.Builder =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty.builder()
 
-      public override fun typeId(typeId: String) {
+      override fun typeId(typeId: String) {
         cdkBuilder.typeId(typeId)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -363,9 +343,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OtherNameProperty,
     ) : OtherNameProperty {
-      public override fun typeId(): String = unwrap(this).getTypeId()
+      override fun typeId(): String = unwrap(this).getTypeId()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -394,27 +374,21 @@ public open class CfnCertificateAuthority internal constructor(
     public fun accessMethod(): Any
 
     public interface Builder {
-      public fun accessLocation(accessLocation: IResolvable) {
-      }
+      public fun accessLocation(accessLocation: IResolvable)
 
-      public fun accessLocation(accessLocation: GeneralNameProperty) {
-      }
+      public fun accessLocation(accessLocation: GeneralNameProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb5a597013ed07b1773f4061cf6b689bdab60e580241398175d0e17b064edaa9")
-      public fun accessLocation(accessLocation: GeneralNameProperty.Builder.() -> Unit) {
-      }
+      public fun accessLocation(accessLocation: GeneralNameProperty.Builder.() -> Unit)
 
-      public fun accessMethod(accessMethod: IResolvable) {
-      }
+      public fun accessMethod(accessMethod: IResolvable)
 
-      public fun accessMethod(accessMethod: AccessMethodProperty) {
-      }
+      public fun accessMethod(accessMethod: AccessMethodProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("20b75f916b502e4fd62642433190cfbf1527eebbacdd86547ac494a10c71f682")
-      public fun accessMethod(accessMethod: AccessMethodProperty.Builder.() -> Unit) {
-      }
+      public fun accessMethod(accessMethod: AccessMethodProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -423,31 +397,31 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty.builder()
 
-      public override fun accessLocation(accessLocation: IResolvable) {
+      override fun accessLocation(accessLocation: IResolvable) {
         cdkBuilder.accessLocation(accessLocation.let(IResolvable::unwrap))
       }
 
-      public override fun accessLocation(accessLocation: GeneralNameProperty) {
+      override fun accessLocation(accessLocation: GeneralNameProperty) {
         cdkBuilder.accessLocation(accessLocation.let(GeneralNameProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb5a597013ed07b1773f4061cf6b689bdab60e580241398175d0e17b064edaa9")
-      public override fun accessLocation(accessLocation: GeneralNameProperty.Builder.() -> Unit):
-          Unit = accessLocation(GeneralNameProperty(accessLocation))
+      override fun accessLocation(accessLocation: GeneralNameProperty.Builder.() -> Unit): Unit =
+          accessLocation(GeneralNameProperty(accessLocation))
 
-      public override fun accessMethod(accessMethod: IResolvable) {
+      override fun accessMethod(accessMethod: IResolvable) {
         cdkBuilder.accessMethod(accessMethod.let(IResolvable::unwrap))
       }
 
-      public override fun accessMethod(accessMethod: AccessMethodProperty) {
+      override fun accessMethod(accessMethod: AccessMethodProperty) {
         cdkBuilder.accessMethod(accessMethod.let(AccessMethodProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("20b75f916b502e4fd62642433190cfbf1527eebbacdd86547ac494a10c71f682")
-      public override fun accessMethod(accessMethod: AccessMethodProperty.Builder.() -> Unit): Unit
-          = accessMethod(AccessMethodProperty(accessMethod))
+      override fun accessMethod(accessMethod: AccessMethodProperty.Builder.() -> Unit): Unit =
+          accessMethod(AccessMethodProperty(accessMethod))
 
       public fun build():
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty =
@@ -458,9 +432,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessDescriptionProperty,
     ) : AccessDescriptionProperty {
-      public override fun accessLocation(): Any = unwrap(this).getAccessLocation()
+      override fun accessLocation(): Any = unwrap(this).getAccessLocation()
 
-      public override fun accessMethod(): Any = unwrap(this).getAccessMethod()
+      override fun accessMethod(): Any = unwrap(this).getAccessMethod()
     }
 
     public companion object {
@@ -503,59 +477,41 @@ public open class CfnCertificateAuthority internal constructor(
     public fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
 
     public interface Builder {
-      public fun crlSign(crlSign: Boolean) {
-      }
+      public fun crlSign(crlSign: Boolean)
 
-      public fun crlSign(crlSign: IResolvable) {
-      }
+      public fun crlSign(crlSign: IResolvable)
 
-      public fun dataEncipherment(dataEncipherment: Boolean) {
-      }
+      public fun dataEncipherment(dataEncipherment: Boolean)
 
-      public fun dataEncipherment(dataEncipherment: IResolvable) {
-      }
+      public fun dataEncipherment(dataEncipherment: IResolvable)
 
-      public fun decipherOnly(decipherOnly: Boolean) {
-      }
+      public fun decipherOnly(decipherOnly: Boolean)
 
-      public fun decipherOnly(decipherOnly: IResolvable) {
-      }
+      public fun decipherOnly(decipherOnly: IResolvable)
 
-      public fun digitalSignature(digitalSignature: Boolean) {
-      }
+      public fun digitalSignature(digitalSignature: Boolean)
 
-      public fun digitalSignature(digitalSignature: IResolvable) {
-      }
+      public fun digitalSignature(digitalSignature: IResolvable)
 
-      public fun encipherOnly(encipherOnly: Boolean) {
-      }
+      public fun encipherOnly(encipherOnly: Boolean)
 
-      public fun encipherOnly(encipherOnly: IResolvable) {
-      }
+      public fun encipherOnly(encipherOnly: IResolvable)
 
-      public fun keyAgreement(keyAgreement: Boolean) {
-      }
+      public fun keyAgreement(keyAgreement: Boolean)
 
-      public fun keyAgreement(keyAgreement: IResolvable) {
-      }
+      public fun keyAgreement(keyAgreement: IResolvable)
 
-      public fun keyCertSign(keyCertSign: Boolean) {
-      }
+      public fun keyCertSign(keyCertSign: Boolean)
 
-      public fun keyCertSign(keyCertSign: IResolvable) {
-      }
+      public fun keyCertSign(keyCertSign: IResolvable)
 
-      public fun keyEncipherment(keyEncipherment: Boolean) {
-      }
+      public fun keyEncipherment(keyEncipherment: Boolean)
 
-      public fun keyEncipherment(keyEncipherment: IResolvable) {
-      }
+      public fun keyEncipherment(keyEncipherment: IResolvable)
 
-      public fun nonRepudiation(nonRepudiation: Boolean) {
-      }
+      public fun nonRepudiation(nonRepudiation: Boolean)
 
-      public fun nonRepudiation(nonRepudiation: IResolvable) {
-      }
+      public fun nonRepudiation(nonRepudiation: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -563,75 +519,75 @@ public open class CfnCertificateAuthority internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty.Builder =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty.builder()
 
-      public override fun crlSign(crlSign: Boolean) {
+      override fun crlSign(crlSign: Boolean) {
         cdkBuilder.crlSign(crlSign)
       }
 
-      public override fun crlSign(crlSign: IResolvable) {
+      override fun crlSign(crlSign: IResolvable) {
         cdkBuilder.crlSign(crlSign.let(IResolvable::unwrap))
       }
 
-      public override fun dataEncipherment(dataEncipherment: Boolean) {
+      override fun dataEncipherment(dataEncipherment: Boolean) {
         cdkBuilder.dataEncipherment(dataEncipherment)
       }
 
-      public override fun dataEncipherment(dataEncipherment: IResolvable) {
+      override fun dataEncipherment(dataEncipherment: IResolvable) {
         cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable::unwrap))
       }
 
-      public override fun decipherOnly(decipherOnly: Boolean) {
+      override fun decipherOnly(decipherOnly: Boolean) {
         cdkBuilder.decipherOnly(decipherOnly)
       }
 
-      public override fun decipherOnly(decipherOnly: IResolvable) {
+      override fun decipherOnly(decipherOnly: IResolvable) {
         cdkBuilder.decipherOnly(decipherOnly.let(IResolvable::unwrap))
       }
 
-      public override fun digitalSignature(digitalSignature: Boolean) {
+      override fun digitalSignature(digitalSignature: Boolean) {
         cdkBuilder.digitalSignature(digitalSignature)
       }
 
-      public override fun digitalSignature(digitalSignature: IResolvable) {
+      override fun digitalSignature(digitalSignature: IResolvable) {
         cdkBuilder.digitalSignature(digitalSignature.let(IResolvable::unwrap))
       }
 
-      public override fun encipherOnly(encipherOnly: Boolean) {
+      override fun encipherOnly(encipherOnly: Boolean) {
         cdkBuilder.encipherOnly(encipherOnly)
       }
 
-      public override fun encipherOnly(encipherOnly: IResolvable) {
+      override fun encipherOnly(encipherOnly: IResolvable) {
         cdkBuilder.encipherOnly(encipherOnly.let(IResolvable::unwrap))
       }
 
-      public override fun keyAgreement(keyAgreement: Boolean) {
+      override fun keyAgreement(keyAgreement: Boolean) {
         cdkBuilder.keyAgreement(keyAgreement)
       }
 
-      public override fun keyAgreement(keyAgreement: IResolvable) {
+      override fun keyAgreement(keyAgreement: IResolvable) {
         cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
       }
 
-      public override fun keyCertSign(keyCertSign: Boolean) {
+      override fun keyCertSign(keyCertSign: Boolean) {
         cdkBuilder.keyCertSign(keyCertSign)
       }
 
-      public override fun keyCertSign(keyCertSign: IResolvable) {
+      override fun keyCertSign(keyCertSign: IResolvable) {
         cdkBuilder.keyCertSign(keyCertSign.let(IResolvable::unwrap))
       }
 
-      public override fun keyEncipherment(keyEncipherment: Boolean) {
+      override fun keyEncipherment(keyEncipherment: Boolean) {
         cdkBuilder.keyEncipherment(keyEncipherment)
       }
 
-      public override fun keyEncipherment(keyEncipherment: IResolvable) {
+      override fun keyEncipherment(keyEncipherment: IResolvable) {
         cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable::unwrap))
       }
 
-      public override fun nonRepudiation(nonRepudiation: Boolean) {
+      override fun nonRepudiation(nonRepudiation: Boolean) {
         cdkBuilder.nonRepudiation(nonRepudiation)
       }
 
-      public override fun nonRepudiation(nonRepudiation: IResolvable) {
+      override fun nonRepudiation(nonRepudiation: IResolvable) {
         cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable::unwrap))
       }
 
@@ -644,23 +600,23 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.KeyUsageProperty,
     ) : KeyUsageProperty {
-      public override fun crlSign(): Any? = unwrap(this).getCrlSign()
+      override fun crlSign(): Any? = unwrap(this).getCrlSign()
 
-      public override fun dataEncipherment(): Any? = unwrap(this).getDataEncipherment()
+      override fun dataEncipherment(): Any? = unwrap(this).getDataEncipherment()
 
-      public override fun decipherOnly(): Any? = unwrap(this).getDecipherOnly()
+      override fun decipherOnly(): Any? = unwrap(this).getDecipherOnly()
 
-      public override fun digitalSignature(): Any? = unwrap(this).getDigitalSignature()
+      override fun digitalSignature(): Any? = unwrap(this).getDigitalSignature()
 
-      public override fun encipherOnly(): Any? = unwrap(this).getEncipherOnly()
+      override fun encipherOnly(): Any? = unwrap(this).getEncipherOnly()
 
-      public override fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
+      override fun keyAgreement(): Any? = unwrap(this).getKeyAgreement()
 
-      public override fun keyCertSign(): Any? = unwrap(this).getKeyCertSign()
+      override fun keyCertSign(): Any? = unwrap(this).getKeyCertSign()
 
-      public override fun keyEncipherment(): Any? = unwrap(this).getKeyEncipherment()
+      override fun keyEncipherment(): Any? = unwrap(this).getKeyEncipherment()
 
-      public override fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
+      override fun nonRepudiation(): Any? = unwrap(this).getNonRepudiation()
     }
 
     public companion object {
@@ -689,22 +645,17 @@ public open class CfnCertificateAuthority internal constructor(
     public fun subjectInformationAccess(): Any? = unwrap(this).getSubjectInformationAccess()
 
     public interface Builder {
-      public fun keyUsage(keyUsage: IResolvable) {
-      }
+      public fun keyUsage(keyUsage: IResolvable)
 
-      public fun keyUsage(keyUsage: KeyUsageProperty) {
-      }
+      public fun keyUsage(keyUsage: KeyUsageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2eec907f4ab3f8f3fe73d3fa8e50c0be7a1ced4cf16db0702e97fb00670a2812")
-      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit) {
-      }
+      public fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit)
 
-      public fun subjectInformationAccess(subjectInformationAccess: IResolvable) {
-      }
+      public fun subjectInformationAccess(subjectInformationAccess: IResolvable)
 
-      public fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
-      }
+      public fun subjectInformationAccess(subjectInformationAccess: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -713,24 +664,24 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty.builder()
 
-      public override fun keyUsage(keyUsage: IResolvable) {
+      override fun keyUsage(keyUsage: IResolvable) {
         cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
       }
 
-      public override fun keyUsage(keyUsage: KeyUsageProperty) {
+      override fun keyUsage(keyUsage: KeyUsageProperty) {
         cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2eec907f4ab3f8f3fe73d3fa8e50c0be7a1ced4cf16db0702e97fb00670a2812")
-      public override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
+      override fun keyUsage(keyUsage: KeyUsageProperty.Builder.() -> Unit): Unit =
           keyUsage(KeyUsageProperty(keyUsage))
 
-      public override fun subjectInformationAccess(subjectInformationAccess: IResolvable) {
+      override fun subjectInformationAccess(subjectInformationAccess: IResolvable) {
         cdkBuilder.subjectInformationAccess(subjectInformationAccess.let(IResolvable::unwrap))
       }
 
-      public override fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
+      override fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
         cdkBuilder.subjectInformationAccess(subjectInformationAccess)
       }
 
@@ -743,10 +694,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty,
     ) : CsrExtensionsProperty {
-      public override fun keyUsage(): Any? = unwrap(this).getKeyUsage()
+      override fun keyUsage(): Any? = unwrap(this).getKeyUsage()
 
-      public override fun subjectInformationAccess(): Any? =
-          unwrap(this).getSubjectInformationAccess()
+      override fun subjectInformationAccess(): Any? = unwrap(this).getSubjectInformationAccess()
     }
 
     public companion object {
@@ -775,28 +725,21 @@ public open class CfnCertificateAuthority internal constructor(
     public fun ocspConfiguration(): Any? = unwrap(this).getOcspConfiguration()
 
     public interface Builder {
-      public fun crlConfiguration(crlConfiguration: IResolvable) {
-      }
+      public fun crlConfiguration(crlConfiguration: IResolvable)
 
-      public fun crlConfiguration(crlConfiguration: CrlConfigurationProperty) {
-      }
+      public fun crlConfiguration(crlConfiguration: CrlConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5e08ccbba1511e80806605dced01835b990496478d99ab49fcf289028aa4592")
-      public fun crlConfiguration(crlConfiguration: CrlConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun crlConfiguration(crlConfiguration: CrlConfigurationProperty.Builder.() -> Unit)
 
-      public fun ocspConfiguration(ocspConfiguration: IResolvable) {
-      }
+      public fun ocspConfiguration(ocspConfiguration: IResolvable)
 
-      public fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty) {
-      }
+      public fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9cc9b7b1bbd7af3bd90deea00d53454783d53fa73e507b733560d62cdc208a0")
-      public
-          fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -805,31 +748,30 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty.builder()
 
-      public override fun crlConfiguration(crlConfiguration: IResolvable) {
+      override fun crlConfiguration(crlConfiguration: IResolvable) {
         cdkBuilder.crlConfiguration(crlConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun crlConfiguration(crlConfiguration: CrlConfigurationProperty) {
+      override fun crlConfiguration(crlConfiguration: CrlConfigurationProperty) {
         cdkBuilder.crlConfiguration(crlConfiguration.let(CrlConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5e08ccbba1511e80806605dced01835b990496478d99ab49fcf289028aa4592")
-      public override
-          fun crlConfiguration(crlConfiguration: CrlConfigurationProperty.Builder.() -> Unit): Unit
-          = crlConfiguration(CrlConfigurationProperty(crlConfiguration))
+      override fun crlConfiguration(crlConfiguration: CrlConfigurationProperty.Builder.() -> Unit):
+          Unit = crlConfiguration(CrlConfigurationProperty(crlConfiguration))
 
-      public override fun ocspConfiguration(ocspConfiguration: IResolvable) {
+      override fun ocspConfiguration(ocspConfiguration: IResolvable) {
         cdkBuilder.ocspConfiguration(ocspConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty) {
+      override fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty) {
         cdkBuilder.ocspConfiguration(ocspConfiguration.let(OcspConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9cc9b7b1bbd7af3bd90deea00d53454783d53fa73e507b733560d62cdc208a0")
-      public override
+      override
           fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty.Builder.() -> Unit):
           Unit = ocspConfiguration(OcspConfigurationProperty(ocspConfiguration))
 
@@ -842,9 +784,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.RevocationConfigurationProperty,
     ) : RevocationConfigurationProperty {
-      public override fun crlConfiguration(): Any? = unwrap(this).getCrlConfiguration()
+      override fun crlConfiguration(): Any? = unwrap(this).getCrlConfiguration()
 
-      public override fun ocspConfiguration(): Any? = unwrap(this).getOcspConfiguration()
+      override fun ocspConfiguration(): Any? = unwrap(this).getOcspConfiguration()
     }
 
     public companion object {
@@ -899,53 +841,37 @@ public open class CfnCertificateAuthority internal constructor(
     public fun title(): String? = unwrap(this).getTitle()
 
     public interface Builder {
-      public fun commonName(commonName: String) {
-      }
+      public fun commonName(commonName: String)
 
-      public fun country(country: String) {
-      }
+      public fun country(country: String)
 
-      public fun customAttributes(customAttributes: IResolvable) {
-      }
+      public fun customAttributes(customAttributes: IResolvable)
 
-      public fun customAttributes(customAttributes: List<Any>) {
-      }
+      public fun customAttributes(customAttributes: List<Any>)
 
-      public fun distinguishedNameQualifier(distinguishedNameQualifier: String) {
-      }
+      public fun distinguishedNameQualifier(distinguishedNameQualifier: String)
 
-      public fun generationQualifier(generationQualifier: String) {
-      }
+      public fun generationQualifier(generationQualifier: String)
 
-      public fun givenName(givenName: String) {
-      }
+      public fun givenName(givenName: String)
 
-      public fun initials(initials: String) {
-      }
+      public fun initials(initials: String)
 
-      public fun locality(locality: String) {
-      }
+      public fun locality(locality: String)
 
-      public fun organization(organization: String) {
-      }
+      public fun organization(organization: String)
 
-      public fun organizationalUnit(organizationalUnit: String) {
-      }
+      public fun organizationalUnit(organizationalUnit: String)
 
-      public fun pseudonym(pseudonym: String) {
-      }
+      public fun pseudonym(pseudonym: String)
 
-      public fun serialNumber(serialNumber: String) {
-      }
+      public fun serialNumber(serialNumber: String)
 
-      public fun state(state: String) {
-      }
+      public fun state(state: String)
 
-      public fun surname(surname: String) {
-      }
+      public fun surname(surname: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
     }
 
     private class BuilderImpl : Builder {
@@ -953,67 +879,67 @@ public open class CfnCertificateAuthority internal constructor(
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty.Builder =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty.builder()
 
-      public override fun commonName(commonName: String) {
+      override fun commonName(commonName: String) {
         cdkBuilder.commonName(commonName)
       }
 
-      public override fun country(country: String) {
+      override fun country(country: String) {
         cdkBuilder.country(country)
       }
 
-      public override fun customAttributes(customAttributes: IResolvable) {
+      override fun customAttributes(customAttributes: IResolvable) {
         cdkBuilder.customAttributes(customAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun customAttributes(customAttributes: List<Any>) {
+      override fun customAttributes(customAttributes: List<Any>) {
         cdkBuilder.customAttributes(customAttributes)
       }
 
-      public override fun distinguishedNameQualifier(distinguishedNameQualifier: String) {
+      override fun distinguishedNameQualifier(distinguishedNameQualifier: String) {
         cdkBuilder.distinguishedNameQualifier(distinguishedNameQualifier)
       }
 
-      public override fun generationQualifier(generationQualifier: String) {
+      override fun generationQualifier(generationQualifier: String) {
         cdkBuilder.generationQualifier(generationQualifier)
       }
 
-      public override fun givenName(givenName: String) {
+      override fun givenName(givenName: String) {
         cdkBuilder.givenName(givenName)
       }
 
-      public override fun initials(initials: String) {
+      override fun initials(initials: String) {
         cdkBuilder.initials(initials)
       }
 
-      public override fun locality(locality: String) {
+      override fun locality(locality: String) {
         cdkBuilder.locality(locality)
       }
 
-      public override fun organization(organization: String) {
+      override fun organization(organization: String) {
         cdkBuilder.organization(organization)
       }
 
-      public override fun organizationalUnit(organizationalUnit: String) {
+      override fun organizationalUnit(organizationalUnit: String) {
         cdkBuilder.organizationalUnit(organizationalUnit)
       }
 
-      public override fun pseudonym(pseudonym: String) {
+      override fun pseudonym(pseudonym: String) {
         cdkBuilder.pseudonym(pseudonym)
       }
 
-      public override fun serialNumber(serialNumber: String) {
+      override fun serialNumber(serialNumber: String) {
         cdkBuilder.serialNumber(serialNumber)
       }
 
-      public override fun state(state: String) {
+      override fun state(state: String) {
         cdkBuilder.state(state)
       }
 
-      public override fun surname(surname: String) {
+      override fun surname(surname: String) {
         cdkBuilder.surname(surname)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
@@ -1026,36 +952,36 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.SubjectProperty,
     ) : SubjectProperty {
-      public override fun commonName(): String? = unwrap(this).getCommonName()
+      override fun commonName(): String? = unwrap(this).getCommonName()
 
-      public override fun country(): String? = unwrap(this).getCountry()
+      override fun country(): String? = unwrap(this).getCountry()
 
-      public override fun customAttributes(): Any? = unwrap(this).getCustomAttributes()
+      override fun customAttributes(): Any? = unwrap(this).getCustomAttributes()
 
-      public override fun distinguishedNameQualifier(): String? =
+      override fun distinguishedNameQualifier(): String? =
           unwrap(this).getDistinguishedNameQualifier()
 
-      public override fun generationQualifier(): String? = unwrap(this).getGenerationQualifier()
+      override fun generationQualifier(): String? = unwrap(this).getGenerationQualifier()
 
-      public override fun givenName(): String? = unwrap(this).getGivenName()
+      override fun givenName(): String? = unwrap(this).getGivenName()
 
-      public override fun initials(): String? = unwrap(this).getInitials()
+      override fun initials(): String? = unwrap(this).getInitials()
 
-      public override fun locality(): String? = unwrap(this).getLocality()
+      override fun locality(): String? = unwrap(this).getLocality()
 
-      public override fun organization(): String? = unwrap(this).getOrganization()
+      override fun organization(): String? = unwrap(this).getOrganization()
 
-      public override fun organizationalUnit(): String? = unwrap(this).getOrganizationalUnit()
+      override fun organizationalUnit(): String? = unwrap(this).getOrganizationalUnit()
 
-      public override fun pseudonym(): String? = unwrap(this).getPseudonym()
+      override fun pseudonym(): String? = unwrap(this).getPseudonym()
 
-      public override fun serialNumber(): String? = unwrap(this).getSerialNumber()
+      override fun serialNumber(): String? = unwrap(this).getSerialNumber()
 
-      public override fun state(): String? = unwrap(this).getState()
+      override fun state(): String? = unwrap(this).getState()
 
-      public override fun surname(): String? = unwrap(this).getSurname()
+      override fun surname(): String? = unwrap(this).getSurname()
 
-      public override fun title(): String? = unwrap(this).getTitle()
+      override fun title(): String? = unwrap(this).getTitle()
     }
 
     public companion object {
@@ -1084,11 +1010,9 @@ public open class CfnCertificateAuthority internal constructor(
     public fun customObjectIdentifier(): String? = unwrap(this).getCustomObjectIdentifier()
 
     public interface Builder {
-      public fun accessMethodType(accessMethodType: String) {
-      }
+      public fun accessMethodType(accessMethodType: String)
 
-      public fun customObjectIdentifier(customObjectIdentifier: String) {
-      }
+      public fun customObjectIdentifier(customObjectIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1097,11 +1021,11 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty.builder()
 
-      public override fun accessMethodType(accessMethodType: String) {
+      override fun accessMethodType(accessMethodType: String) {
         cdkBuilder.accessMethodType(accessMethodType)
       }
 
-      public override fun customObjectIdentifier(customObjectIdentifier: String) {
+      override fun customObjectIdentifier(customObjectIdentifier: String) {
         cdkBuilder.customObjectIdentifier(customObjectIdentifier)
       }
 
@@ -1114,10 +1038,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.AccessMethodProperty,
     ) : AccessMethodProperty {
-      public override fun accessMethodType(): String? = unwrap(this).getAccessMethodType()
+      override fun accessMethodType(): String? = unwrap(this).getAccessMethodType()
 
-      public override fun customObjectIdentifier(): String? =
-          unwrap(this).getCustomObjectIdentifier()
+      override fun customObjectIdentifier(): String? = unwrap(this).getCustomObjectIdentifier()
     }
 
     public companion object {
@@ -1156,36 +1079,27 @@ public open class CfnCertificateAuthority internal constructor(
 
     public interface Builder {
       public
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable) {
-      }
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable)
 
       public
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty) {
-      }
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("791b3eddadee92703cdbb0776ac5a510f3d85f553de3e80da8cb9947358a4eea")
       public
-          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit)
 
-      public fun customCname(customCname: String) {
-      }
+      public fun customCname(customCname: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun expirationInDays(expirationInDays: Number) {
-      }
+      public fun expirationInDays(expirationInDays: Number)
 
-      public fun s3BucketName(s3BucketName: String) {
-      }
+      public fun s3BucketName(s3BucketName: String)
 
-      public fun s3ObjectAcl(s3ObjectAcl: String) {
-      }
+      public fun s3ObjectAcl(s3ObjectAcl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1194,44 +1108,44 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty.builder()
 
-      public override
+      override
           fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable) {
         cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty) {
         cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(CrlDistributionPointExtensionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("791b3eddadee92703cdbb0776ac5a510f3d85f553de3e80da8cb9947358a4eea")
-      public override
+      override
           fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty.Builder.() -> Unit):
           Unit =
           crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty(crlDistributionPointExtensionConfiguration))
 
-      public override fun customCname(customCname: String) {
+      override fun customCname(customCname: String) {
         cdkBuilder.customCname(customCname)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun expirationInDays(expirationInDays: Number) {
+      override fun expirationInDays(expirationInDays: Number) {
         cdkBuilder.expirationInDays(expirationInDays)
       }
 
-      public override fun s3BucketName(s3BucketName: String) {
+      override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
       }
 
-      public override fun s3ObjectAcl(s3ObjectAcl: String) {
+      override fun s3ObjectAcl(s3ObjectAcl: String) {
         cdkBuilder.s3ObjectAcl(s3ObjectAcl)
       }
 
@@ -1244,18 +1158,18 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlConfigurationProperty,
     ) : CrlConfigurationProperty {
-      public override fun crlDistributionPointExtensionConfiguration(): Any? =
+      override fun crlDistributionPointExtensionConfiguration(): Any? =
           unwrap(this).getCrlDistributionPointExtensionConfiguration()
 
-      public override fun customCname(): String? = unwrap(this).getCustomCname()
+      override fun customCname(): String? = unwrap(this).getCustomCname()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
+      override fun expirationInDays(): Number? = unwrap(this).getExpirationInDays()
 
-      public override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
 
-      public override fun s3ObjectAcl(): String? = unwrap(this).getS3ObjectAcl()
+      override fun s3ObjectAcl(): String? = unwrap(this).getS3ObjectAcl()
     }
 
     public companion object {
@@ -1282,11 +1196,9 @@ public open class CfnCertificateAuthority internal constructor(
     public fun omitExtension(): Any
 
     public interface Builder {
-      public fun omitExtension(omitExtension: Boolean) {
-      }
+      public fun omitExtension(omitExtension: Boolean)
 
-      public fun omitExtension(omitExtension: IResolvable) {
-      }
+      public fun omitExtension(omitExtension: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1295,11 +1207,11 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty.builder()
 
-      public override fun omitExtension(omitExtension: Boolean) {
+      override fun omitExtension(omitExtension: Boolean) {
         cdkBuilder.omitExtension(omitExtension)
       }
 
-      public override fun omitExtension(omitExtension: IResolvable) {
+      override fun omitExtension(omitExtension: IResolvable) {
         cdkBuilder.omitExtension(omitExtension.let(IResolvable::unwrap))
       }
 
@@ -1312,7 +1224,7 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CrlDistributionPointExtensionConfigurationProperty,
     ) : CrlDistributionPointExtensionConfigurationProperty {
-      public override fun omitExtension(): Any = unwrap(this).getOmitExtension()
+      override fun omitExtension(): Any = unwrap(this).getOmitExtension()
     }
 
     public companion object {
@@ -1342,14 +1254,11 @@ public open class CfnCertificateAuthority internal constructor(
     public fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun ocspCustomCname(ocspCustomCname: String) {
-      }
+      public fun ocspCustomCname(ocspCustomCname: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1358,15 +1267,15 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun ocspCustomCname(ocspCustomCname: String) {
+      override fun ocspCustomCname(ocspCustomCname: String) {
         cdkBuilder.ocspCustomCname(ocspCustomCname)
       }
 
@@ -1379,9 +1288,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.OcspConfigurationProperty,
     ) : OcspConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
+      override fun ocspCustomCname(): String? = unwrap(this).getOcspCustomCname()
     }
 
     public companion object {
@@ -1422,53 +1331,39 @@ public open class CfnCertificateAuthority internal constructor(
     public fun uniformResourceIdentifier(): String? = unwrap(this).getUniformResourceIdentifier()
 
     public interface Builder {
-      public fun directoryName(directoryName: IResolvable) {
-      }
+      public fun directoryName(directoryName: IResolvable)
 
-      public fun directoryName(directoryName: SubjectProperty) {
-      }
+      public fun directoryName(directoryName: SubjectProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61005aaa2bf810d7111074131f5352858d75a129bb0188bf7efc61268a97422f")
-      public fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit) {
-      }
+      public fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit)
 
-      public fun dnsName(dnsName: String) {
-      }
+      public fun dnsName(dnsName: String)
 
-      public fun ediPartyName(ediPartyName: IResolvable) {
-      }
+      public fun ediPartyName(ediPartyName: IResolvable)
 
-      public fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
-      }
+      public fun ediPartyName(ediPartyName: EdiPartyNameProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("606f0642ac76285ab8808b7d7ee57f3ef364d63570bb212e71923cf7da7835c7")
-      public fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit) {
-      }
+      public fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit)
 
-      public fun ipAddress(ipAddress: String) {
-      }
+      public fun ipAddress(ipAddress: String)
 
-      public fun otherName(otherName: IResolvable) {
-      }
+      public fun otherName(otherName: IResolvable)
 
-      public fun otherName(otherName: OtherNameProperty) {
-      }
+      public fun otherName(otherName: OtherNameProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8cf63f0806fe92adb04a674f7b59871bd20f023fd0d1f22ca3aaf221887d7206")
-      public fun otherName(otherName: OtherNameProperty.Builder.() -> Unit) {
-      }
+      public fun otherName(otherName: OtherNameProperty.Builder.() -> Unit)
 
-      public fun registeredId(registeredId: String) {
-      }
+      public fun registeredId(registeredId: String)
 
-      public fun rfc822Name(rfc822Name: String) {
-      }
+      public fun rfc822Name(rfc822Name: String)
 
-      public fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
-      }
+      public fun uniformResourceIdentifier(uniformResourceIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1477,62 +1372,62 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty.builder()
 
-      public override fun directoryName(directoryName: IResolvable) {
+      override fun directoryName(directoryName: IResolvable) {
         cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
       }
 
-      public override fun directoryName(directoryName: SubjectProperty) {
+      override fun directoryName(directoryName: SubjectProperty) {
         cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61005aaa2bf810d7111074131f5352858d75a129bb0188bf7efc61268a97422f")
-      public override fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit): Unit =
+      override fun directoryName(directoryName: SubjectProperty.Builder.() -> Unit): Unit =
           directoryName(SubjectProperty(directoryName))
 
-      public override fun dnsName(dnsName: String) {
+      override fun dnsName(dnsName: String) {
         cdkBuilder.dnsName(dnsName)
       }
 
-      public override fun ediPartyName(ediPartyName: IResolvable) {
+      override fun ediPartyName(ediPartyName: IResolvable) {
         cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
       }
 
-      public override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
+      override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
         cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("606f0642ac76285ab8808b7d7ee57f3ef364d63570bb212e71923cf7da7835c7")
-      public override fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit): Unit
-          = ediPartyName(EdiPartyNameProperty(ediPartyName))
+      override fun ediPartyName(ediPartyName: EdiPartyNameProperty.Builder.() -> Unit): Unit =
+          ediPartyName(EdiPartyNameProperty(ediPartyName))
 
-      public override fun ipAddress(ipAddress: String) {
+      override fun ipAddress(ipAddress: String) {
         cdkBuilder.ipAddress(ipAddress)
       }
 
-      public override fun otherName(otherName: IResolvable) {
+      override fun otherName(otherName: IResolvable) {
         cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
       }
 
-      public override fun otherName(otherName: OtherNameProperty) {
+      override fun otherName(otherName: OtherNameProperty) {
         cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8cf63f0806fe92adb04a674f7b59871bd20f023fd0d1f22ca3aaf221887d7206")
-      public override fun otherName(otherName: OtherNameProperty.Builder.() -> Unit): Unit =
+      override fun otherName(otherName: OtherNameProperty.Builder.() -> Unit): Unit =
           otherName(OtherNameProperty(otherName))
 
-      public override fun registeredId(registeredId: String) {
+      override fun registeredId(registeredId: String) {
         cdkBuilder.registeredId(registeredId)
       }
 
-      public override fun rfc822Name(rfc822Name: String) {
+      override fun rfc822Name(rfc822Name: String) {
         cdkBuilder.rfc822Name(rfc822Name)
       }
 
-      public override fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
+      override fun uniformResourceIdentifier(uniformResourceIdentifier: String) {
         cdkBuilder.uniformResourceIdentifier(uniformResourceIdentifier)
       }
 
@@ -1545,21 +1440,21 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.GeneralNameProperty,
     ) : GeneralNameProperty {
-      public override fun directoryName(): Any? = unwrap(this).getDirectoryName()
+      override fun directoryName(): Any? = unwrap(this).getDirectoryName()
 
-      public override fun dnsName(): String? = unwrap(this).getDnsName()
+      override fun dnsName(): String? = unwrap(this).getDnsName()
 
-      public override fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
+      override fun ediPartyName(): Any? = unwrap(this).getEdiPartyName()
 
-      public override fun ipAddress(): String? = unwrap(this).getIpAddress()
+      override fun ipAddress(): String? = unwrap(this).getIpAddress()
 
-      public override fun otherName(): Any? = unwrap(this).getOtherName()
+      override fun otherName(): Any? = unwrap(this).getOtherName()
 
-      public override fun registeredId(): String? = unwrap(this).getRegisteredId()
+      override fun registeredId(): String? = unwrap(this).getRegisteredId()
 
-      public override fun rfc822Name(): String? = unwrap(this).getRfc822Name()
+      override fun rfc822Name(): String? = unwrap(this).getRfc822Name()
 
-      public override fun uniformResourceIdentifier(): String? =
+      override fun uniformResourceIdentifier(): String? =
           unwrap(this).getUniformResourceIdentifier()
     }
 
@@ -1589,11 +1484,9 @@ public open class CfnCertificateAuthority internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun objectIdentifier(objectIdentifier: String) {
-      }
+      public fun objectIdentifier(objectIdentifier: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1602,11 +1495,11 @@ public open class CfnCertificateAuthority internal constructor(
           =
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty.builder()
 
-      public override fun objectIdentifier(objectIdentifier: String) {
+      override fun objectIdentifier(objectIdentifier: String) {
         cdkBuilder.objectIdentifier(objectIdentifier)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1619,9 +1512,9 @@ public open class CfnCertificateAuthority internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CustomAttributeProperty,
     ) : CustomAttributeProperty {
-      public override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
+      override fun objectIdentifier(): String = unwrap(this).getObjectIdentifier()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

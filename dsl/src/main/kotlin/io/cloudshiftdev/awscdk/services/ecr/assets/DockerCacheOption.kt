@@ -10,22 +10,20 @@ public interface DockerCacheOption {
   public fun type(): String
 
   public interface Builder {
-    public fun params(params: Map<String, String>) {
-    }
+    public fun params(params: Map<String, String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecr.assets.DockerCacheOption.Builder =
         software.amazon.awscdk.services.ecr.assets.DockerCacheOption.builder()
 
-    public override fun params(params: Map<String, String>) {
+    override fun params(params: Map<String, String>) {
       cdkBuilder.params(params)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -36,9 +34,9 @@ public interface DockerCacheOption {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecr.assets.DockerCacheOption,
   ) : DockerCacheOption {
-    public override fun params(): Map<String, String> = unwrap(this).getParams() ?: emptyMap()
+    override fun params(): Map<String, String> = unwrap(this).getParams() ?: emptyMap()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

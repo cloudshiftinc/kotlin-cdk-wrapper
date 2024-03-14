@@ -9,8 +9,7 @@ public interface IPolicyValidationContextBeta1 {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IPolicyValidationContextBeta1,
   ) : IPolicyValidationContextBeta1 {
-    public override fun templatePaths(): List<String> = unwrap(this).getTemplatePaths() ?:
-        emptyList()
+    override fun templatePaths(): List<String> = unwrap(this).getTemplatePaths() ?: emptyList()
   }
 
   public companion object {

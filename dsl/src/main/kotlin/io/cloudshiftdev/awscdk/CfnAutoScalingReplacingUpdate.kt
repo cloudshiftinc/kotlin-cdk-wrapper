@@ -7,15 +7,14 @@ public interface CfnAutoScalingReplacingUpdate {
   public fun willReplace(): Boolean? = unwrap(this).getWillReplace()
 
   public interface Builder {
-    public fun willReplace(willReplace: Boolean) {
-    }
+    public fun willReplace(willReplace: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnAutoScalingReplacingUpdate.Builder =
         software.amazon.awscdk.CfnAutoScalingReplacingUpdate.builder()
 
-    public override fun willReplace(willReplace: Boolean) {
+    override fun willReplace(willReplace: Boolean) {
       cdkBuilder.willReplace(willReplace)
     }
 
@@ -25,7 +24,7 @@ public interface CfnAutoScalingReplacingUpdate {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnAutoScalingReplacingUpdate,
   ) : CfnAutoScalingReplacingUpdate {
-    public override fun willReplace(): Boolean? = unwrap(this).getWillReplace()
+    override fun willReplace(): Boolean? = unwrap(this).getWillReplace()
   }
 
   public companion object {

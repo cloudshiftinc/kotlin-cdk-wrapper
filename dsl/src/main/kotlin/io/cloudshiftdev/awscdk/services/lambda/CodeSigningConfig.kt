@@ -16,15 +16,12 @@ public open class CodeSigningConfig internal constructor(
   public override fun codeSigningConfigId(): String = unwrap(this).getCodeSigningConfigId()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun signingProfiles(signingProfiles: List<ISigningProfile>) {
-    }
+    public fun signingProfiles(signingProfiles: List<ISigningProfile>)
 
     public
-        fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {
-    }
+        fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment)
   }
 
   private class BuilderImpl(
@@ -34,15 +31,15 @@ public open class CodeSigningConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CodeSigningConfig.Builder =
         software.amazon.awscdk.services.lambda.CodeSigningConfig.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun signingProfiles(signingProfiles: List<ISigningProfile>) {
+    override fun signingProfiles(signingProfiles: List<ISigningProfile>) {
       cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile::unwrap))
     }
 
-    public override
+    override
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {
       cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment.let(UntrustedArtifactOnDeployment::unwrap))
     }

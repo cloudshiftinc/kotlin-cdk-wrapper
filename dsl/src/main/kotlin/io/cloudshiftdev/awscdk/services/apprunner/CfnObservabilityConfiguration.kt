@@ -64,23 +64,17 @@ public open class CfnObservabilityConfiguration internal constructor(
       traceConfiguration(TraceConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun observabilityConfigurationName(observabilityConfigurationName: String) {
-    }
+    public fun observabilityConfigurationName(observabilityConfigurationName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun traceConfiguration(traceConfiguration: IResolvable) {
-    }
+    public fun traceConfiguration(traceConfiguration: IResolvable)
 
-    public fun traceConfiguration(traceConfiguration: TraceConfigurationProperty) {
-    }
+    public fun traceConfiguration(traceConfiguration: TraceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7028513f5636ee1f40f285706d70135ba1109f4834c25920aef1e17a17fd7638")
-    public
-        fun traceConfiguration(traceConfiguration: TraceConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun traceConfiguration(traceConfiguration: TraceConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -92,25 +86,25 @@ public open class CfnObservabilityConfiguration internal constructor(
         software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.Builder.create(scope,
         id)
 
-    public override fun observabilityConfigurationName(observabilityConfigurationName: String) {
+    override fun observabilityConfigurationName(observabilityConfigurationName: String) {
       cdkBuilder.observabilityConfigurationName(observabilityConfigurationName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun traceConfiguration(traceConfiguration: IResolvable) {
+    override fun traceConfiguration(traceConfiguration: IResolvable) {
       cdkBuilder.traceConfiguration(traceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun traceConfiguration(traceConfiguration: TraceConfigurationProperty) {
+    override fun traceConfiguration(traceConfiguration: TraceConfigurationProperty) {
       cdkBuilder.traceConfiguration(traceConfiguration.let(TraceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7028513f5636ee1f40f285706d70135ba1109f4834c25920aef1e17a17fd7638")
-    public override
+    override
         fun traceConfiguration(traceConfiguration: TraceConfigurationProperty.Builder.() -> Unit):
         Unit = traceConfiguration(TraceConfigurationProperty(traceConfiguration))
 
@@ -144,8 +138,7 @@ public open class CfnObservabilityConfiguration internal constructor(
     public fun vendor(): String
 
     public interface Builder {
-      public fun vendor(vendor: String) {
-      }
+      public fun vendor(vendor: String)
     }
 
     private class BuilderImpl : Builder {
@@ -154,7 +147,7 @@ public open class CfnObservabilityConfiguration internal constructor(
           =
           software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty.builder()
 
-      public override fun vendor(vendor: String) {
+      override fun vendor(vendor: String) {
         cdkBuilder.vendor(vendor)
       }
 
@@ -167,7 +160,7 @@ public open class CfnObservabilityConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration.TraceConfigurationProperty,
     ) : TraceConfigurationProperty {
-      public override fun vendor(): String = unwrap(this).getVendor()
+      override fun vendor(): String = unwrap(this).getVendor()
     }
 
     public companion object {

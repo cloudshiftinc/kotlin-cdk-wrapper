@@ -70,36 +70,27 @@ public open class CfnSimulation internal constructor(
       snapshotS3Location(S3LocationProperty(`value`))
 
   public interface Builder {
-    public fun maximumDuration(maximumDuration: String) {
-    }
+    public fun maximumDuration(maximumDuration: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun schemaS3Location(schemaS3Location: IResolvable) {
-    }
+    public fun schemaS3Location(schemaS3Location: IResolvable)
 
-    public fun schemaS3Location(schemaS3Location: S3LocationProperty) {
-    }
+    public fun schemaS3Location(schemaS3Location: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7db59c9ce544d7dbd83199772c30b881d0db8e078f4412fed47b70f35151b91b")
-    public fun schemaS3Location(schemaS3Location: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun schemaS3Location(schemaS3Location: S3LocationProperty.Builder.() -> Unit)
 
-    public fun snapshotS3Location(snapshotS3Location: IResolvable) {
-    }
+    public fun snapshotS3Location(snapshotS3Location: IResolvable)
 
-    public fun snapshotS3Location(snapshotS3Location: S3LocationProperty) {
-    }
+    public fun snapshotS3Location(snapshotS3Location: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e4644105d4bea75c7ef018f662e2ff5c31f9fc7fd491292f07a7540bf866cf5")
-    public fun snapshotS3Location(snapshotS3Location: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun snapshotS3Location(snapshotS3Location: S3LocationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -109,44 +100,43 @@ public open class CfnSimulation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.simspaceweaver.CfnSimulation.Builder =
         software.amazon.awscdk.services.simspaceweaver.CfnSimulation.Builder.create(scope, id)
 
-    public override fun maximumDuration(maximumDuration: String) {
+    override fun maximumDuration(maximumDuration: String) {
       cdkBuilder.maximumDuration(maximumDuration)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun schemaS3Location(schemaS3Location: IResolvable) {
+    override fun schemaS3Location(schemaS3Location: IResolvable) {
       cdkBuilder.schemaS3Location(schemaS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun schemaS3Location(schemaS3Location: S3LocationProperty) {
+    override fun schemaS3Location(schemaS3Location: S3LocationProperty) {
       cdkBuilder.schemaS3Location(schemaS3Location.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7db59c9ce544d7dbd83199772c30b881d0db8e078f4412fed47b70f35151b91b")
-    public override fun schemaS3Location(schemaS3Location: S3LocationProperty.Builder.() -> Unit):
-        Unit = schemaS3Location(S3LocationProperty(schemaS3Location))
+    override fun schemaS3Location(schemaS3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+        schemaS3Location(S3LocationProperty(schemaS3Location))
 
-    public override fun snapshotS3Location(snapshotS3Location: IResolvable) {
+    override fun snapshotS3Location(snapshotS3Location: IResolvable) {
       cdkBuilder.snapshotS3Location(snapshotS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun snapshotS3Location(snapshotS3Location: S3LocationProperty) {
+    override fun snapshotS3Location(snapshotS3Location: S3LocationProperty) {
       cdkBuilder.snapshotS3Location(snapshotS3Location.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e4644105d4bea75c7ef018f662e2ff5c31f9fc7fd491292f07a7540bf866cf5")
-    public override
-        fun snapshotS3Location(snapshotS3Location: S3LocationProperty.Builder.() -> Unit): Unit =
-        snapshotS3Location(S3LocationProperty(snapshotS3Location))
+    override fun snapshotS3Location(snapshotS3Location: S3LocationProperty.Builder.() -> Unit): Unit
+        = snapshotS3Location(S3LocationProperty(snapshotS3Location))
 
     public fun build(): software.amazon.awscdk.services.simspaceweaver.CfnSimulation =
         cdkBuilder.build()
@@ -179,11 +169,9 @@ public open class CfnSimulation internal constructor(
     public fun objectKey(): String
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun objectKey(objectKey: String) {
-      }
+      public fun objectKey(objectKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -191,11 +179,11 @@ public open class CfnSimulation internal constructor(
           software.amazon.awscdk.services.simspaceweaver.CfnSimulation.S3LocationProperty.Builder =
           software.amazon.awscdk.services.simspaceweaver.CfnSimulation.S3LocationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun objectKey(objectKey: String) {
+      override fun objectKey(objectKey: String) {
         cdkBuilder.objectKey(objectKey)
       }
 
@@ -208,9 +196,9 @@ public open class CfnSimulation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.simspaceweaver.CfnSimulation.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun objectKey(): String = unwrap(this).getObjectKey()
+      override fun objectKey(): String = unwrap(this).getObjectKey()
     }
 
     public companion object {

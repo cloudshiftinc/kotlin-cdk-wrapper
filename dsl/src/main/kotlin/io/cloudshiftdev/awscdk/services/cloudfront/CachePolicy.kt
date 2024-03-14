@@ -14,35 +14,25 @@ public open class CachePolicy internal constructor(
   public override fun cachePolicyId(): String = unwrap(this).getCachePolicyId()
 
   public interface Builder {
-    public fun cachePolicyName(cachePolicyName: String) {
-    }
+    public fun cachePolicyName(cachePolicyName: String)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun cookieBehavior(cookieBehavior: CacheCookieBehavior) {
-    }
+    public fun cookieBehavior(cookieBehavior: CacheCookieBehavior)
 
-    public fun defaultTtl(defaultTtl: Duration) {
-    }
+    public fun defaultTtl(defaultTtl: Duration)
 
-    public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
-    }
+    public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean)
 
-    public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
-    }
+    public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean)
 
-    public fun headerBehavior(headerBehavior: CacheHeaderBehavior) {
-    }
+    public fun headerBehavior(headerBehavior: CacheHeaderBehavior)
 
-    public fun maxTtl(maxTtl: Duration) {
-    }
+    public fun maxTtl(maxTtl: Duration)
 
-    public fun minTtl(minTtl: Duration) {
-    }
+    public fun minTtl(minTtl: Duration)
 
-    public fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior) {
-    }
+    public fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior)
   }
 
   private class BuilderImpl(
@@ -52,43 +42,43 @@ public open class CachePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CachePolicy.Builder =
         software.amazon.awscdk.services.cloudfront.CachePolicy.Builder.create(scope, id)
 
-    public override fun cachePolicyName(cachePolicyName: String) {
+    override fun cachePolicyName(cachePolicyName: String) {
       cdkBuilder.cachePolicyName(cachePolicyName)
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun cookieBehavior(cookieBehavior: CacheCookieBehavior) {
+    override fun cookieBehavior(cookieBehavior: CacheCookieBehavior) {
       cdkBuilder.cookieBehavior(cookieBehavior.let(CacheCookieBehavior::unwrap))
     }
 
-    public override fun defaultTtl(defaultTtl: Duration) {
+    override fun defaultTtl(defaultTtl: Duration) {
       cdkBuilder.defaultTtl(defaultTtl.let(Duration::unwrap))
     }
 
-    public override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
+    override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
       cdkBuilder.enableAcceptEncodingBrotli(enableAcceptEncodingBrotli)
     }
 
-    public override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
+    override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
       cdkBuilder.enableAcceptEncodingGzip(enableAcceptEncodingGzip)
     }
 
-    public override fun headerBehavior(headerBehavior: CacheHeaderBehavior) {
+    override fun headerBehavior(headerBehavior: CacheHeaderBehavior) {
       cdkBuilder.headerBehavior(headerBehavior.let(CacheHeaderBehavior::unwrap))
     }
 
-    public override fun maxTtl(maxTtl: Duration) {
+    override fun maxTtl(maxTtl: Duration) {
       cdkBuilder.maxTtl(maxTtl.let(Duration::unwrap))
     }
 
-    public override fun minTtl(minTtl: Duration) {
+    override fun minTtl(minTtl: Duration) {
       cdkBuilder.minTtl(minTtl.let(Duration::unwrap))
     }
 
-    public override fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior) {
+    override fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior) {
       cdkBuilder.queryStringBehavior(queryStringBehavior.let(CacheQueryStringBehavior::unwrap))
     }
 

@@ -37,30 +37,23 @@ public open class UsagePlan internal constructor(
   public override fun usagePlanId(): String = unwrap(this).getUsagePlanId()
 
   public interface Builder {
-    public fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
-    }
+    public fun apiStages(apiStages: List<UsagePlanPerApiStage>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun quota(quota: QuotaSettings) {
-    }
+    public fun quota(quota: QuotaSettings)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be3dddaab8cb54bd4f648fc607743b3d7ac24dbbdb19d14d809341832e821313")
-    public fun quota(quota: QuotaSettings.Builder.() -> Unit) {
-    }
+    public fun quota(quota: QuotaSettings.Builder.() -> Unit)
 
-    public fun throttle(throttle: ThrottleSettings) {
-    }
+    public fun throttle(throttle: ThrottleSettings)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c1b8b5c0eb07927357fc4949f0c320f751c1e9d5ee18a74234d2530f2c6758ea")
-    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit) {
-    }
+    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -70,34 +63,33 @@ public open class UsagePlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.UsagePlan.Builder =
         software.amazon.awscdk.services.apigateway.UsagePlan.Builder.create(scope, id)
 
-    public override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
+    override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
       cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun quota(quota: QuotaSettings) {
+    override fun quota(quota: QuotaSettings) {
       cdkBuilder.quota(quota.let(QuotaSettings::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be3dddaab8cb54bd4f648fc607743b3d7ac24dbbdb19d14d809341832e821313")
-    public override fun quota(quota: QuotaSettings.Builder.() -> Unit): Unit =
-        quota(QuotaSettings(quota))
+    override fun quota(quota: QuotaSettings.Builder.() -> Unit): Unit = quota(QuotaSettings(quota))
 
-    public override fun throttle(throttle: ThrottleSettings) {
+    override fun throttle(throttle: ThrottleSettings) {
       cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c1b8b5c0eb07927357fc4949f0c320f751c1e9d5ee18a74234d2530f2c6758ea")
-    public override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
+    override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
         throttle(ThrottleSettings(throttle))
 
     public fun build(): software.amazon.awscdk.services.apigateway.UsagePlan = cdkBuilder.build()

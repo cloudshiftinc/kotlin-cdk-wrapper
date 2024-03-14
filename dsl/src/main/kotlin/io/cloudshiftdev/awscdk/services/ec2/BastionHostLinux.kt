@@ -46,48 +46,35 @@ public open class BastionHostLinux internal constructor(
   public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun blockDevices(blockDevices: List<BlockDevice>) {
-    }
+    public fun blockDevices(blockDevices: List<BlockDevice>)
 
-    public fun `init`(`init`: CloudFormationInit) {
-    }
+    public fun `init`(`init`: CloudFormationInit)
 
-    public fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-    }
+    public fun initOptions(initOptions: ApplyCloudFormationInitOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfaa4840168db92b778ecaf120f203401115dc4ca25675e0793d5ff81c02d457")
-    public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit) {
-    }
+    public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit)
 
-    public fun instanceName(instanceName: String) {
-    }
+    public fun instanceName(instanceName: String)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun machineImage(machineImage: IMachineImage) {
-    }
+    public fun machineImage(machineImage: IMachineImage)
 
-    public fun requireImdsv2(requireImdsv2: Boolean) {
-    }
+    public fun requireImdsv2(requireImdsv2: Boolean)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("de651b213989ca3417ce5fee09a5e0ac582b2776767ef5cf9eb1f14f8e6656df")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -97,57 +84,57 @@ public open class BastionHostLinux internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.BastionHostLinux.Builder =
         software.amazon.awscdk.services.ec2.BastionHostLinux.Builder.create(scope, id)
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun blockDevices(blockDevices: List<BlockDevice>) {
+    override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
 
-    public override fun `init`(`init`: CloudFormationInit) {
+    override fun `init`(`init`: CloudFormationInit) {
       cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
     }
 
-    public override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
+    override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
       cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfaa4840168db92b778ecaf120f203401115dc4ca25675e0793d5ff81c02d457")
-    public override fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit):
-        Unit = initOptions(ApplyCloudFormationInitOptions(initOptions))
+    override fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit): Unit =
+        initOptions(ApplyCloudFormationInitOptions(initOptions))
 
-    public override fun instanceName(instanceName: String) {
+    override fun instanceName(instanceName: String) {
       cdkBuilder.instanceName(instanceName)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun machineImage(machineImage: IMachineImage) {
+    override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
     }
 
-    public override fun requireImdsv2(requireImdsv2: Boolean) {
+    override fun requireImdsv2(requireImdsv2: Boolean) {
       cdkBuilder.requireImdsv2(requireImdsv2)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("de651b213989ca3417ce5fee09a5e0ac582b2776767ef5cf9eb1f14f8e6656df")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

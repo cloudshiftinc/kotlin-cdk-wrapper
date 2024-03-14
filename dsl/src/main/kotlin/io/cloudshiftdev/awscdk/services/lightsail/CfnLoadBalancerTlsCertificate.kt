@@ -70,29 +70,21 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun certificateAlternativeNames(certificateAlternativeNames: List<String>) {
-    }
+    public fun certificateAlternativeNames(certificateAlternativeNames: List<String>)
 
-    public fun certificateDomainName(certificateDomainName: String) {
-    }
+    public fun certificateDomainName(certificateDomainName: String)
 
-    public fun certificateName(certificateName: String) {
-    }
+    public fun certificateName(certificateName: String)
 
-    public fun httpsRedirectionEnabled(httpsRedirectionEnabled: Boolean) {
-    }
+    public fun httpsRedirectionEnabled(httpsRedirectionEnabled: Boolean)
 
-    public fun httpsRedirectionEnabled(httpsRedirectionEnabled: IResolvable) {
-    }
+    public fun httpsRedirectionEnabled(httpsRedirectionEnabled: IResolvable)
 
-    public fun isAttached(isAttached: Boolean) {
-    }
+    public fun isAttached(isAttached: Boolean)
 
-    public fun isAttached(isAttached: IResolvable) {
-    }
+    public fun isAttached(isAttached: IResolvable)
 
-    public fun loadBalancerName(loadBalancerName: String) {
-    }
+    public fun loadBalancerName(loadBalancerName: String)
   }
 
   private class BuilderImpl(
@@ -104,35 +96,35 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
         software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate.Builder.create(scope,
         id)
 
-    public override fun certificateAlternativeNames(certificateAlternativeNames: List<String>) {
+    override fun certificateAlternativeNames(certificateAlternativeNames: List<String>) {
       cdkBuilder.certificateAlternativeNames(certificateAlternativeNames)
     }
 
-    public override fun certificateDomainName(certificateDomainName: String) {
+    override fun certificateDomainName(certificateDomainName: String) {
       cdkBuilder.certificateDomainName(certificateDomainName)
     }
 
-    public override fun certificateName(certificateName: String) {
+    override fun certificateName(certificateName: String) {
       cdkBuilder.certificateName(certificateName)
     }
 
-    public override fun httpsRedirectionEnabled(httpsRedirectionEnabled: Boolean) {
+    override fun httpsRedirectionEnabled(httpsRedirectionEnabled: Boolean) {
       cdkBuilder.httpsRedirectionEnabled(httpsRedirectionEnabled)
     }
 
-    public override fun httpsRedirectionEnabled(httpsRedirectionEnabled: IResolvable) {
+    override fun httpsRedirectionEnabled(httpsRedirectionEnabled: IResolvable) {
       cdkBuilder.httpsRedirectionEnabled(httpsRedirectionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun isAttached(isAttached: Boolean) {
+    override fun isAttached(isAttached: Boolean) {
       cdkBuilder.isAttached(isAttached)
     }
 
-    public override fun isAttached(isAttached: IResolvable) {
+    override fun isAttached(isAttached: IResolvable) {
       cdkBuilder.isAttached(isAttached.let(IResolvable::unwrap))
     }
 
-    public override fun loadBalancerName(loadBalancerName: String) {
+    override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
     }
 

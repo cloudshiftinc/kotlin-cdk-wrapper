@@ -9,22 +9,20 @@ public interface EngineVersion {
   public fun majorVersion(): String
 
   public interface Builder {
-    public fun fullVersion(fullVersion: String) {
-    }
+    public fun fullVersion(fullVersion: String)
 
-    public fun majorVersion(majorVersion: String) {
-    }
+    public fun majorVersion(majorVersion: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.EngineVersion.Builder =
         software.amazon.awscdk.services.rds.EngineVersion.builder()
 
-    public override fun fullVersion(fullVersion: String) {
+    override fun fullVersion(fullVersion: String) {
       cdkBuilder.fullVersion(fullVersion)
     }
 
-    public override fun majorVersion(majorVersion: String) {
+    override fun majorVersion(majorVersion: String) {
       cdkBuilder.majorVersion(majorVersion)
     }
 
@@ -34,9 +32,9 @@ public interface EngineVersion {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.EngineVersion,
   ) : EngineVersion {
-    public override fun fullVersion(): String? = unwrap(this).getFullVersion()
+    override fun fullVersion(): String? = unwrap(this).getFullVersion()
 
-    public override fun majorVersion(): String = unwrap(this).getMajorVersion()
+    override fun majorVersion(): String = unwrap(this).getMajorVersion()
   }
 
   public companion object {

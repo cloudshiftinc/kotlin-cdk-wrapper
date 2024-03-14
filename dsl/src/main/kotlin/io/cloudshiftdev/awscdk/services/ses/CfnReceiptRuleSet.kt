@@ -24,8 +24,7 @@ public open class CfnReceiptRuleSet internal constructor(
   }
 
   public interface Builder {
-    public fun ruleSetName(ruleSetName: String) {
-    }
+    public fun ruleSetName(ruleSetName: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnReceiptRuleSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnReceiptRuleSet.Builder =
         software.amazon.awscdk.services.ses.CfnReceiptRuleSet.Builder.create(scope, id)
 
-    public override fun ruleSetName(ruleSetName: String) {
+    override fun ruleSetName(ruleSetName: String) {
       cdkBuilder.ruleSetName(ruleSetName)
     }
 

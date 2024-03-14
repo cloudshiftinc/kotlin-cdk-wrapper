@@ -72,34 +72,25 @@ public open class CfnLayerVersion internal constructor(
   }
 
   public interface Builder {
-    public fun compatibleRuntimes(compatibleRuntimes: List<String>) {
-    }
+    public fun compatibleRuntimes(compatibleRuntimes: List<String>)
 
-    public fun contentUri(contentUri: String) {
-    }
+    public fun contentUri(contentUri: String)
 
-    public fun contentUri(contentUri: IResolvable) {
-    }
+    public fun contentUri(contentUri: IResolvable)
 
-    public fun contentUri(contentUri: S3LocationProperty) {
-    }
+    public fun contentUri(contentUri: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d63fff5b9dd1b6c0c48d29201034a530a992a3fc058d59ebc3b9811473f077de")
-    public fun contentUri(contentUri: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun contentUri(contentUri: S3LocationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun layerName(layerName: String) {
-    }
+    public fun layerName(layerName: String)
 
-    public fun licenseInfo(licenseInfo: String) {
-    }
+    public fun licenseInfo(licenseInfo: String)
 
-    public fun retentionPolicy(retentionPolicy: String) {
-    }
+    public fun retentionPolicy(retentionPolicy: String)
   }
 
   private class BuilderImpl(
@@ -109,40 +100,40 @@ public open class CfnLayerVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sam.CfnLayerVersion.Builder =
         software.amazon.awscdk.services.sam.CfnLayerVersion.Builder.create(scope, id)
 
-    public override fun compatibleRuntimes(compatibleRuntimes: List<String>) {
+    override fun compatibleRuntimes(compatibleRuntimes: List<String>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes)
     }
 
-    public override fun contentUri(contentUri: String) {
+    override fun contentUri(contentUri: String) {
       cdkBuilder.contentUri(contentUri)
     }
 
-    public override fun contentUri(contentUri: IResolvable) {
+    override fun contentUri(contentUri: IResolvable) {
       cdkBuilder.contentUri(contentUri.let(IResolvable::unwrap))
     }
 
-    public override fun contentUri(contentUri: S3LocationProperty) {
+    override fun contentUri(contentUri: S3LocationProperty) {
       cdkBuilder.contentUri(contentUri.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d63fff5b9dd1b6c0c48d29201034a530a992a3fc058d59ebc3b9811473f077de")
-    public override fun contentUri(contentUri: S3LocationProperty.Builder.() -> Unit): Unit =
+    override fun contentUri(contentUri: S3LocationProperty.Builder.() -> Unit): Unit =
         contentUri(S3LocationProperty(contentUri))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun layerName(layerName: String) {
+    override fun layerName(layerName: String) {
       cdkBuilder.layerName(layerName)
     }
 
-    public override fun licenseInfo(licenseInfo: String) {
+    override fun licenseInfo(licenseInfo: String) {
       cdkBuilder.licenseInfo(licenseInfo)
     }
 
-    public override fun retentionPolicy(retentionPolicy: String) {
+    override fun retentionPolicy(retentionPolicy: String) {
       cdkBuilder.retentionPolicy(retentionPolicy)
     }
 
@@ -178,14 +169,11 @@ public open class CfnLayerVersion internal constructor(
     public fun version(): Number? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun version(version: Number) {
-      }
+      public fun version(version: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -193,15 +181,15 @@ public open class CfnLayerVersion internal constructor(
           software.amazon.awscdk.services.sam.CfnLayerVersion.S3LocationProperty.Builder =
           software.amazon.awscdk.services.sam.CfnLayerVersion.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun version(version: Number) {
+      override fun version(version: Number) {
         cdkBuilder.version(version)
       }
 
@@ -213,11 +201,11 @@ public open class CfnLayerVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnLayerVersion.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun version(): Number? = unwrap(this).getVersion()
+      override fun version(): Number? = unwrap(this).getVersion()
     }
 
     public companion object {

@@ -73,29 +73,21 @@ public open class CfnInstanceProfile internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun excludeAppPackagesFromCleanup(excludeAppPackagesFromCleanup: List<String>) {
-    }
+    public fun excludeAppPackagesFromCleanup(excludeAppPackagesFromCleanup: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun packageCleanup(packageCleanup: Boolean) {
-    }
+    public fun packageCleanup(packageCleanup: Boolean)
 
-    public fun packageCleanup(packageCleanup: IResolvable) {
-    }
+    public fun packageCleanup(packageCleanup: IResolvable)
 
-    public fun rebootAfterUse(rebootAfterUse: Boolean) {
-    }
+    public fun rebootAfterUse(rebootAfterUse: Boolean)
 
-    public fun rebootAfterUse(rebootAfterUse: IResolvable) {
-    }
+    public fun rebootAfterUse(rebootAfterUse: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -105,35 +97,35 @@ public open class CfnInstanceProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.devicefarm.CfnInstanceProfile.Builder =
         software.amazon.awscdk.services.devicefarm.CfnInstanceProfile.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun excludeAppPackagesFromCleanup(excludeAppPackagesFromCleanup: List<String>) {
+    override fun excludeAppPackagesFromCleanup(excludeAppPackagesFromCleanup: List<String>) {
       cdkBuilder.excludeAppPackagesFromCleanup(excludeAppPackagesFromCleanup)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun packageCleanup(packageCleanup: Boolean) {
+    override fun packageCleanup(packageCleanup: Boolean) {
       cdkBuilder.packageCleanup(packageCleanup)
     }
 
-    public override fun packageCleanup(packageCleanup: IResolvable) {
+    override fun packageCleanup(packageCleanup: IResolvable) {
       cdkBuilder.packageCleanup(packageCleanup.let(IResolvable::unwrap))
     }
 
-    public override fun rebootAfterUse(rebootAfterUse: Boolean) {
+    override fun rebootAfterUse(rebootAfterUse: Boolean) {
       cdkBuilder.rebootAfterUse(rebootAfterUse)
     }
 
-    public override fun rebootAfterUse(rebootAfterUse: IResolvable) {
+    override fun rebootAfterUse(rebootAfterUse: IResolvable) {
       cdkBuilder.rebootAfterUse(rebootAfterUse.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

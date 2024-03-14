@@ -78,31 +78,23 @@ public open class CfnEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun accessType(accessType: String) {
-    }
+    public fun accessType(accessType: String)
 
-    public fun customerOwnedIpv4Pool(customerOwnedIpv4Pool: String) {
-    }
+    public fun customerOwnedIpv4Pool(customerOwnedIpv4Pool: String)
 
-    public fun failedReason(failedReason: IResolvable) {
-    }
+    public fun failedReason(failedReason: IResolvable)
 
-    public fun failedReason(failedReason: FailedReasonProperty) {
-    }
+    public fun failedReason(failedReason: FailedReasonProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2bf573711bed046c73a2b08df717f4c5cb82e06bd041f2269347a95c18c91d2")
-    public fun failedReason(failedReason: FailedReasonProperty.Builder.() -> Unit) {
-    }
+    public fun failedReason(failedReason: FailedReasonProperty.Builder.() -> Unit)
 
-    public fun outpostId(outpostId: String) {
-    }
+    public fun outpostId(outpostId: String)
 
-    public fun securityGroupId(securityGroupId: String) {
-    }
+    public fun securityGroupId(securityGroupId: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -112,36 +104,36 @@ public open class CfnEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3outposts.CfnEndpoint.Builder =
         software.amazon.awscdk.services.s3outposts.CfnEndpoint.Builder.create(scope, id)
 
-    public override fun accessType(accessType: String) {
+    override fun accessType(accessType: String) {
       cdkBuilder.accessType(accessType)
     }
 
-    public override fun customerOwnedIpv4Pool(customerOwnedIpv4Pool: String) {
+    override fun customerOwnedIpv4Pool(customerOwnedIpv4Pool: String) {
       cdkBuilder.customerOwnedIpv4Pool(customerOwnedIpv4Pool)
     }
 
-    public override fun failedReason(failedReason: IResolvable) {
+    override fun failedReason(failedReason: IResolvable) {
       cdkBuilder.failedReason(failedReason.let(IResolvable::unwrap))
     }
 
-    public override fun failedReason(failedReason: FailedReasonProperty) {
+    override fun failedReason(failedReason: FailedReasonProperty) {
       cdkBuilder.failedReason(failedReason.let(FailedReasonProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2bf573711bed046c73a2b08df717f4c5cb82e06bd041f2269347a95c18c91d2")
-    public override fun failedReason(failedReason: FailedReasonProperty.Builder.() -> Unit): Unit =
+    override fun failedReason(failedReason: FailedReasonProperty.Builder.() -> Unit): Unit =
         failedReason(FailedReasonProperty(failedReason))
 
-    public override fun outpostId(outpostId: String) {
+    override fun outpostId(outpostId: String) {
       cdkBuilder.outpostId(outpostId)
     }
 
-    public override fun securityGroupId(securityGroupId: String) {
+    override fun securityGroupId(securityGroupId: String) {
       cdkBuilder.securityGroupId(securityGroupId)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
@@ -175,11 +167,9 @@ public open class CfnEndpoint internal constructor(
     public fun message(): String? = unwrap(this).getMessage()
 
     public interface Builder {
-      public fun errorCode(errorCode: String) {
-      }
+      public fun errorCode(errorCode: String)
 
-      public fun message(message: String) {
-      }
+      public fun message(message: String)
     }
 
     private class BuilderImpl : Builder {
@@ -187,11 +177,11 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty.Builder =
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty.builder()
 
-      public override fun errorCode(errorCode: String) {
+      override fun errorCode(errorCode: String) {
         cdkBuilder.errorCode(errorCode)
       }
 
-      public override fun message(message: String) {
+      override fun message(message: String) {
         cdkBuilder.message(message)
       }
 
@@ -204,9 +194,9 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty,
     ) : FailedReasonProperty {
-      public override fun errorCode(): String? = unwrap(this).getErrorCode()
+      override fun errorCode(): String? = unwrap(this).getErrorCode()
 
-      public override fun message(): String? = unwrap(this).getMessage()
+      override fun message(): String? = unwrap(this).getMessage()
     }
 
     public companion object {
@@ -233,8 +223,7 @@ public open class CfnEndpoint internal constructor(
     public fun networkInterfaceId(): String
 
     public interface Builder {
-      public fun networkInterfaceId(networkInterfaceId: String) {
-      }
+      public fun networkInterfaceId(networkInterfaceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -242,7 +231,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty.Builder =
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty.builder()
 
-      public override fun networkInterfaceId(networkInterfaceId: String) {
+      override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
 
@@ -255,7 +244,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty,
     ) : NetworkInterfaceProperty {
-      public override fun networkInterfaceId(): String = unwrap(this).getNetworkInterfaceId()
+      override fun networkInterfaceId(): String = unwrap(this).getNetworkInterfaceId()
     }
 
     public companion object {

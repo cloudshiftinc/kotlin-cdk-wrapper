@@ -33,27 +33,27 @@ public interface ITemplateOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ITemplateOptions,
   ) : ITemplateOptions {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun description(`value`: String) {
+    override fun description(`value`: String) {
       unwrap(this).setDescription(`value`)
     }
 
-    public override fun metadata(): Map<String, Any> = unwrap(this).getMetadata() ?: emptyMap()
+    override fun metadata(): Map<String, Any> = unwrap(this).getMetadata() ?: emptyMap()
 
-    public override fun metadata(`value`: Map<String, Any>) {
+    override fun metadata(`value`: Map<String, Any>) {
       unwrap(this).setMetadata(`value`)
     }
 
-    public override fun templateFormatVersion(): String? = unwrap(this).getTemplateFormatVersion()
+    override fun templateFormatVersion(): String? = unwrap(this).getTemplateFormatVersion()
 
-    public override fun templateFormatVersion(`value`: String) {
+    override fun templateFormatVersion(`value`: String) {
       unwrap(this).setTemplateFormatVersion(`value`)
     }
 
-    public override fun transforms(): List<String> = unwrap(this).getTransforms() ?: emptyList()
+    override fun transforms(): List<String> = unwrap(this).getTransforms() ?: emptyList()
 
-    public override fun transforms(`value`: List<String>) {
+    override fun transforms(`value`: List<String>) {
       unwrap(this).setTransforms(`value`)
     }
   }

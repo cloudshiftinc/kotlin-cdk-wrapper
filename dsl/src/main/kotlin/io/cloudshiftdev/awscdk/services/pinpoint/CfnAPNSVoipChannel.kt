@@ -80,35 +80,25 @@ public open class CfnAPNSVoipChannel internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun bundleId(bundleId: String) {
-    }
+    public fun bundleId(bundleId: String)
 
-    public fun certificate(certificate: String) {
-    }
+    public fun certificate(certificate: String)
 
-    public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
-    }
+    public fun defaultAuthenticationMethod(defaultAuthenticationMethod: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun privateKey(privateKey: String) {
-    }
+    public fun privateKey(privateKey: String)
 
-    public fun teamId(teamId: String) {
-    }
+    public fun teamId(teamId: String)
 
-    public fun tokenKey(tokenKey: String) {
-    }
+    public fun tokenKey(tokenKey: String)
 
-    public fun tokenKeyId(tokenKeyId: String) {
-    }
+    public fun tokenKeyId(tokenKeyId: String)
   }
 
   private class BuilderImpl(
@@ -118,43 +108,43 @@ public open class CfnAPNSVoipChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnAPNSVoipChannel.Builder =
         software.amazon.awscdk.services.pinpoint.CfnAPNSVoipChannel.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun bundleId(bundleId: String) {
+    override fun bundleId(bundleId: String) {
       cdkBuilder.bundleId(bundleId)
     }
 
-    public override fun certificate(certificate: String) {
+    override fun certificate(certificate: String) {
       cdkBuilder.certificate(certificate)
     }
 
-    public override fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
+    override fun defaultAuthenticationMethod(defaultAuthenticationMethod: String) {
       cdkBuilder.defaultAuthenticationMethod(defaultAuthenticationMethod)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun privateKey(privateKey: String) {
+    override fun privateKey(privateKey: String) {
       cdkBuilder.privateKey(privateKey)
     }
 
-    public override fun teamId(teamId: String) {
+    override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)
     }
 
-    public override fun tokenKey(tokenKey: String) {
+    override fun tokenKey(tokenKey: String) {
       cdkBuilder.tokenKey(tokenKey)
     }
 
-    public override fun tokenKeyId(tokenKeyId: String) {
+    override fun tokenKeyId(tokenKeyId: String) {
       cdkBuilder.tokenKeyId(tokenKeyId)
     }
 

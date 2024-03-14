@@ -14,17 +14,13 @@ public interface CloudFormationProductVersion {
   public fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
 
   public interface Builder {
-    public fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
-    }
+    public fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun productVersionName(productVersionName: String) {
-    }
+    public fun productVersionName(productVersionName: String)
 
-    public fun validateTemplate(validateTemplate: Boolean) {
-    }
+    public fun validateTemplate(validateTemplate: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -32,19 +28,19 @@ public interface CloudFormationProductVersion {
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion.Builder =
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion.builder()
 
-    public override fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
+    override fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
       cdkBuilder.cloudFormationTemplate(cloudFormationTemplate.let(CloudFormationTemplate::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun productVersionName(productVersionName: String) {
+    override fun productVersionName(productVersionName: String) {
       cdkBuilder.productVersionName(productVersionName)
     }
 
-    public override fun validateTemplate(validateTemplate: Boolean) {
+    override fun validateTemplate(validateTemplate: Boolean) {
       cdkBuilder.validateTemplate(validateTemplate)
     }
 
@@ -56,14 +52,14 @@ public interface CloudFormationProductVersion {
     internal val cdkObject:
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion,
   ) : CloudFormationProductVersion {
-    public override fun cloudFormationTemplate(): CloudFormationTemplate =
+    override fun cloudFormationTemplate(): CloudFormationTemplate =
         unwrap(this).getCloudFormationTemplate().let(CloudFormationTemplate::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun productVersionName(): String? = unwrap(this).getProductVersionName()
+    override fun productVersionName(): String? = unwrap(this).getProductVersionName()
 
-    public override fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
+    override fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
   }
 
   public companion object {

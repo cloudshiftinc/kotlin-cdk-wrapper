@@ -18,72 +18,65 @@ public interface GatewayRouteSpecConfig {
   public fun priority(): Number? = unwrap(this).getPriority()
 
   public interface Builder {
-    public fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty) {
-    }
+    public fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a48e768578c81af5adabfab72a86facf38a3e71857773f94214b95f54d6e9a78")
     public
-        fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty.Builder.() -> Unit) {
-    }
+        fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty.Builder.() -> Unit)
 
-    public fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
-    }
+    public fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00eac5ae02075cfdca2760cfb0ef55ef0da125778059d13571c31ac32ec68b0c")
     public
-        fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty.Builder.() -> Unit) {
-    }
+        fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty.Builder.() -> Unit)
 
-    public fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
-    }
+    public fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00897ac40e45cf896dcb1fd16d121a288e413fe3e1bc4e38e8d580fdbebc6225")
     public
-        fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty.Builder.() -> Unit) {
-    }
+        fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty.Builder.() -> Unit)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig.builder()
 
-    public override fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty) {
+    override fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty) {
       cdkBuilder.grpcSpecConfig(grpcSpecConfig.let(CfnGatewayRoute.GrpcGatewayRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a48e768578c81af5adabfab72a86facf38a3e71857773f94214b95f54d6e9a78")
-    public override
+    override
         fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty.Builder.() -> Unit):
         Unit = grpcSpecConfig(CfnGatewayRoute.GrpcGatewayRouteProperty(grpcSpecConfig))
 
-    public override fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
+    override fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
       cdkBuilder.http2SpecConfig(http2SpecConfig.let(CfnGatewayRoute.HttpGatewayRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00eac5ae02075cfdca2760cfb0ef55ef0da125778059d13571c31ac32ec68b0c")
-    public override
+    override
         fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty.Builder.() -> Unit):
         Unit = http2SpecConfig(CfnGatewayRoute.HttpGatewayRouteProperty(http2SpecConfig))
 
-    public override fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
+    override fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
       cdkBuilder.httpSpecConfig(httpSpecConfig.let(CfnGatewayRoute.HttpGatewayRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00897ac40e45cf896dcb1fd16d121a288e413fe3e1bc4e38e8d580fdbebc6225")
-    public override
+    override
         fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty.Builder.() -> Unit):
         Unit = httpSpecConfig(CfnGatewayRoute.HttpGatewayRouteProperty(httpSpecConfig))
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
@@ -94,16 +87,16 @@ public interface GatewayRouteSpecConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpecConfig,
   ) : GatewayRouteSpecConfig {
-    public override fun grpcSpecConfig(): CfnGatewayRoute.GrpcGatewayRouteProperty? =
+    override fun grpcSpecConfig(): CfnGatewayRoute.GrpcGatewayRouteProperty? =
         unwrap(this).getGrpcSpecConfig()?.let(CfnGatewayRoute.GrpcGatewayRouteProperty::wrap)
 
-    public override fun http2SpecConfig(): CfnGatewayRoute.HttpGatewayRouteProperty? =
+    override fun http2SpecConfig(): CfnGatewayRoute.HttpGatewayRouteProperty? =
         unwrap(this).getHttp2SpecConfig()?.let(CfnGatewayRoute.HttpGatewayRouteProperty::wrap)
 
-    public override fun httpSpecConfig(): CfnGatewayRoute.HttpGatewayRouteProperty? =
+    override fun httpSpecConfig(): CfnGatewayRoute.HttpGatewayRouteProperty? =
         unwrap(this).getHttpSpecConfig()?.let(CfnGatewayRoute.HttpGatewayRouteProperty::wrap)
 
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
   }
 
   public companion object {

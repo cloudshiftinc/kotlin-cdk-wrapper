@@ -11,29 +11,26 @@ public interface DomainNameAttributes {
   public fun domainNameAliasTarget(): String
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainNameAliasHostedZoneId(domainNameAliasHostedZoneId: String) {
-    }
+    public fun domainNameAliasHostedZoneId(domainNameAliasHostedZoneId: String)
 
-    public fun domainNameAliasTarget(domainNameAliasTarget: String) {
-    }
+    public fun domainNameAliasTarget(domainNameAliasTarget: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.DomainNameAttributes.Builder
         = software.amazon.awscdk.services.apigateway.DomainNameAttributes.builder()
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainNameAliasHostedZoneId(domainNameAliasHostedZoneId: String) {
+    override fun domainNameAliasHostedZoneId(domainNameAliasHostedZoneId: String) {
       cdkBuilder.domainNameAliasHostedZoneId(domainNameAliasHostedZoneId)
     }
 
-    public override fun domainNameAliasTarget(domainNameAliasTarget: String) {
+    override fun domainNameAliasTarget(domainNameAliasTarget: String) {
       cdkBuilder.domainNameAliasTarget(domainNameAliasTarget)
     }
 
@@ -44,12 +41,12 @@ public interface DomainNameAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.DomainNameAttributes,
   ) : DomainNameAttributes {
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
 
-    public override fun domainNameAliasHostedZoneId(): String =
+    override fun domainNameAliasHostedZoneId(): String =
         unwrap(this).getDomainNameAliasHostedZoneId()
 
-    public override fun domainNameAliasTarget(): String = unwrap(this).getDomainNameAliasTarget()
+    override fun domainNameAliasTarget(): String = unwrap(this).getDomainNameAliasTarget()
   }
 
   public companion object {

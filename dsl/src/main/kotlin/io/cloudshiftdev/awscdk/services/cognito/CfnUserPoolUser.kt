@@ -86,41 +86,29 @@ public open class CfnUserPoolUser internal constructor(
   }
 
   public interface Builder {
-    public fun clientMetadata(clientMetadata: IResolvable) {
-    }
+    public fun clientMetadata(clientMetadata: IResolvable)
 
-    public fun clientMetadata(clientMetadata: Map<String, String>) {
-    }
+    public fun clientMetadata(clientMetadata: Map<String, String>)
 
-    public fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>) {
-    }
+    public fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>)
 
-    public fun forceAliasCreation(forceAliasCreation: Boolean) {
-    }
+    public fun forceAliasCreation(forceAliasCreation: Boolean)
 
-    public fun forceAliasCreation(forceAliasCreation: IResolvable) {
-    }
+    public fun forceAliasCreation(forceAliasCreation: IResolvable)
 
-    public fun messageAction(messageAction: String) {
-    }
+    public fun messageAction(messageAction: String)
 
-    public fun userAttributes(userAttributes: IResolvable) {
-    }
+    public fun userAttributes(userAttributes: IResolvable)
 
-    public fun userAttributes(userAttributes: List<Any>) {
-    }
+    public fun userAttributes(userAttributes: List<Any>)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
 
-    public fun validationData(validationData: IResolvable) {
-    }
+    public fun validationData(validationData: IResolvable)
 
-    public fun validationData(validationData: List<Any>) {
-    }
+    public fun validationData(validationData: List<Any>)
   }
 
   private class BuilderImpl(
@@ -130,51 +118,51 @@ public open class CfnUserPoolUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CfnUserPoolUser.Builder =
         software.amazon.awscdk.services.cognito.CfnUserPoolUser.Builder.create(scope, id)
 
-    public override fun clientMetadata(clientMetadata: IResolvable) {
+    override fun clientMetadata(clientMetadata: IResolvable) {
       cdkBuilder.clientMetadata(clientMetadata.let(IResolvable::unwrap))
     }
 
-    public override fun clientMetadata(clientMetadata: Map<String, String>) {
+    override fun clientMetadata(clientMetadata: Map<String, String>) {
       cdkBuilder.clientMetadata(clientMetadata)
     }
 
-    public override fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>) {
+    override fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>) {
       cdkBuilder.desiredDeliveryMediums(desiredDeliveryMediums)
     }
 
-    public override fun forceAliasCreation(forceAliasCreation: Boolean) {
+    override fun forceAliasCreation(forceAliasCreation: Boolean) {
       cdkBuilder.forceAliasCreation(forceAliasCreation)
     }
 
-    public override fun forceAliasCreation(forceAliasCreation: IResolvable) {
+    override fun forceAliasCreation(forceAliasCreation: IResolvable) {
       cdkBuilder.forceAliasCreation(forceAliasCreation.let(IResolvable::unwrap))
     }
 
-    public override fun messageAction(messageAction: String) {
+    override fun messageAction(messageAction: String) {
       cdkBuilder.messageAction(messageAction)
     }
 
-    public override fun userAttributes(userAttributes: IResolvable) {
+    override fun userAttributes(userAttributes: IResolvable) {
       cdkBuilder.userAttributes(userAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun userAttributes(userAttributes: List<Any>) {
+    override fun userAttributes(userAttributes: List<Any>) {
       cdkBuilder.userAttributes(userAttributes)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 
-    public override fun validationData(validationData: IResolvable) {
+    override fun validationData(validationData: IResolvable) {
       cdkBuilder.validationData(validationData.let(IResolvable::unwrap))
     }
 
-    public override fun validationData(validationData: List<Any>) {
+    override fun validationData(validationData: List<Any>) {
       cdkBuilder.validationData(validationData)
     }
 
@@ -208,11 +196,9 @@ public open class CfnUserPoolUser internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -220,11 +206,11 @@ public open class CfnUserPoolUser internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -237,9 +223,9 @@ public open class CfnUserPoolUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty,
     ) : AttributeTypeProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

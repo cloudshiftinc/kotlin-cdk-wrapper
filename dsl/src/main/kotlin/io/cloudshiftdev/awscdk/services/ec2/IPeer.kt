@@ -16,16 +16,15 @@ public interface IPeer : IConnectable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IPeer,
   ) : IPeer {
-    public override fun canInlineRule(): Boolean = unwrap(this).getCanInlineRule()
+    override fun canInlineRule(): Boolean = unwrap(this).getCanInlineRule()
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun toEgressRuleConfig(): Any = unwrap(this).toEgressRuleConfig()
+    override fun toEgressRuleConfig(): Any = unwrap(this).toEgressRuleConfig()
 
-    public override fun toIngressRuleConfig(): Any = unwrap(this).toIngressRuleConfig()
+    override fun toIngressRuleConfig(): Any = unwrap(this).toIngressRuleConfig()
 
-    public override fun uniqueId(): String = unwrap(this).getUniqueId()
+    override fun uniqueId(): String = unwrap(this).getUniqueId()
   }
 
   public companion object {

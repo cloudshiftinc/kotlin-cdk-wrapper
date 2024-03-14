@@ -75,27 +75,21 @@ public open class CfnSourceApiAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun mergedApiIdentifier(mergedApiIdentifier: String) {
-    }
+    public fun mergedApiIdentifier(mergedApiIdentifier: String)
 
-    public fun sourceApiAssociationConfig(sourceApiAssociationConfig: IResolvable) {
-    }
+    public fun sourceApiAssociationConfig(sourceApiAssociationConfig: IResolvable)
 
     public
-        fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty) {
-    }
+        fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b83545ef86d3cef4902a53c5fc8e79af6c7e41f53f252afb692d4e978d0745c2")
     public
-        fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty.Builder.() -> Unit) {
-    }
+        fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty.Builder.() -> Unit)
 
-    public fun sourceApiIdentifier(sourceApiIdentifier: String) {
-    }
+    public fun sourceApiIdentifier(sourceApiIdentifier: String)
   }
 
   private class BuilderImpl(
@@ -105,31 +99,31 @@ public open class CfnSourceApiAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.Builder
         = software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun mergedApiIdentifier(mergedApiIdentifier: String) {
+    override fun mergedApiIdentifier(mergedApiIdentifier: String) {
       cdkBuilder.mergedApiIdentifier(mergedApiIdentifier)
     }
 
-    public override fun sourceApiAssociationConfig(sourceApiAssociationConfig: IResolvable) {
+    override fun sourceApiAssociationConfig(sourceApiAssociationConfig: IResolvable) {
       cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty) {
       cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(SourceApiAssociationConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b83545ef86d3cef4902a53c5fc8e79af6c7e41f53f252afb692d4e978d0745c2")
-    public override
+    override
         fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty.Builder.() -> Unit):
         Unit =
         sourceApiAssociationConfig(SourceApiAssociationConfigProperty(sourceApiAssociationConfig))
 
-    public override fun sourceApiIdentifier(sourceApiIdentifier: String) {
+    override fun sourceApiIdentifier(sourceApiIdentifier: String) {
       cdkBuilder.sourceApiIdentifier(sourceApiIdentifier)
     }
 
@@ -162,8 +156,7 @@ public open class CfnSourceApiAssociation internal constructor(
     public fun mergeType(): String? = unwrap(this).getMergeType()
 
     public interface Builder {
-      public fun mergeType(mergeType: String) {
-      }
+      public fun mergeType(mergeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -172,7 +165,7 @@ public open class CfnSourceApiAssociation internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty.builder()
 
-      public override fun mergeType(mergeType: String) {
+      override fun mergeType(mergeType: String) {
         cdkBuilder.mergeType(mergeType)
       }
 
@@ -185,7 +178,7 @@ public open class CfnSourceApiAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnSourceApiAssociation.SourceApiAssociationConfigProperty,
     ) : SourceApiAssociationConfigProperty {
-      public override fun mergeType(): String? = unwrap(this).getMergeType()
+      override fun mergeType(): String? = unwrap(this).getMergeType()
     }
 
     public companion object {

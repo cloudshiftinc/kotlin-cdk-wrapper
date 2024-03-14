@@ -89,42 +89,31 @@ public open class CfnUsagePlan internal constructor(
   }
 
   public interface Builder {
-    public fun apiStages(apiStages: IResolvable) {
-    }
+    public fun apiStages(apiStages: IResolvable)
 
-    public fun apiStages(apiStages: List<Any>) {
-    }
+    public fun apiStages(apiStages: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun quota(quota: IResolvable) {
-    }
+    public fun quota(quota: IResolvable)
 
-    public fun quota(quota: QuotaSettingsProperty) {
-    }
+    public fun quota(quota: QuotaSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0183b02f64044bdf04ca00b27cc24e485809a67d79639146ce7dcb23f42d1edc")
-    public fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun throttle(throttle: IResolvable) {
-    }
+    public fun throttle(throttle: IResolvable)
 
-    public fun throttle(throttle: ThrottleSettingsProperty) {
-    }
+    public fun throttle(throttle: ThrottleSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee354e813e0a512cded8fda38274ee50c28a68c3b2cdc4b5daff523545d7b71d")
-    public fun throttle(throttle: ThrottleSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun throttle(throttle: ThrottleSettingsProperty.Builder.() -> Unit)
 
-    public fun usagePlanName(usagePlanName: String) {
-    }
+    public fun usagePlanName(usagePlanName: String)
   }
 
   private class BuilderImpl(
@@ -134,49 +123,49 @@ public open class CfnUsagePlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnUsagePlan.Builder =
         software.amazon.awscdk.services.apigateway.CfnUsagePlan.Builder.create(scope, id)
 
-    public override fun apiStages(apiStages: IResolvable) {
+    override fun apiStages(apiStages: IResolvable) {
       cdkBuilder.apiStages(apiStages.let(IResolvable::unwrap))
     }
 
-    public override fun apiStages(apiStages: List<Any>) {
+    override fun apiStages(apiStages: List<Any>) {
       cdkBuilder.apiStages(apiStages)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun quota(quota: IResolvable) {
+    override fun quota(quota: IResolvable) {
       cdkBuilder.quota(quota.let(IResolvable::unwrap))
     }
 
-    public override fun quota(quota: QuotaSettingsProperty) {
+    override fun quota(quota: QuotaSettingsProperty) {
       cdkBuilder.quota(quota.let(QuotaSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0183b02f64044bdf04ca00b27cc24e485809a67d79639146ce7dcb23f42d1edc")
-    public override fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit): Unit =
+    override fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit): Unit =
         quota(QuotaSettingsProperty(quota))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun throttle(throttle: IResolvable) {
+    override fun throttle(throttle: IResolvable) {
       cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
     }
 
-    public override fun throttle(throttle: ThrottleSettingsProperty) {
+    override fun throttle(throttle: ThrottleSettingsProperty) {
       cdkBuilder.throttle(throttle.let(ThrottleSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee354e813e0a512cded8fda38274ee50c28a68c3b2cdc4b5daff523545d7b71d")
-    public override fun throttle(throttle: ThrottleSettingsProperty.Builder.() -> Unit): Unit =
+    override fun throttle(throttle: ThrottleSettingsProperty.Builder.() -> Unit): Unit =
         throttle(ThrottleSettingsProperty(throttle))
 
-    public override fun usagePlanName(usagePlanName: String) {
+    override fun usagePlanName(usagePlanName: String) {
       cdkBuilder.usagePlanName(usagePlanName)
     }
 
@@ -210,11 +199,9 @@ public open class CfnUsagePlan internal constructor(
     public fun rateLimit(): Number? = unwrap(this).getRateLimit()
 
     public interface Builder {
-      public fun burstLimit(burstLimit: Number) {
-      }
+      public fun burstLimit(burstLimit: Number)
 
-      public fun rateLimit(rateLimit: Number) {
-      }
+      public fun rateLimit(rateLimit: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -222,11 +209,11 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.builder()
 
-      public override fun burstLimit(burstLimit: Number) {
+      override fun burstLimit(burstLimit: Number) {
         cdkBuilder.burstLimit(burstLimit)
       }
 
-      public override fun rateLimit(rateLimit: Number) {
+      override fun rateLimit(rateLimit: Number) {
         cdkBuilder.rateLimit(rateLimit)
       }
 
@@ -239,9 +226,9 @@ public open class CfnUsagePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
     ) : ThrottleSettingsProperty {
-      public override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
+      override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
-      public override fun rateLimit(): Number? = unwrap(this).getRateLimit()
+      override fun rateLimit(): Number? = unwrap(this).getRateLimit()
     }
 
     public companion object {
@@ -272,14 +259,11 @@ public open class CfnUsagePlan internal constructor(
     public fun period(): String? = unwrap(this).getPeriod()
 
     public interface Builder {
-      public fun limit(limit: Number) {
-      }
+      public fun limit(limit: Number)
 
-      public fun offset(offset: Number) {
-      }
+      public fun offset(offset: Number)
 
-      public fun period(period: String) {
-      }
+      public fun period(period: String)
     }
 
     private class BuilderImpl : Builder {
@@ -287,15 +271,15 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.builder()
 
-      public override fun limit(limit: Number) {
+      override fun limit(limit: Number) {
         cdkBuilder.limit(limit)
       }
 
-      public override fun offset(offset: Number) {
+      override fun offset(offset: Number) {
         cdkBuilder.offset(offset)
       }
 
-      public override fun period(period: String) {
+      override fun period(period: String) {
         cdkBuilder.period(period)
       }
 
@@ -308,11 +292,11 @@ public open class CfnUsagePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
     ) : QuotaSettingsProperty {
-      public override fun limit(): Number? = unwrap(this).getLimit()
+      override fun limit(): Number? = unwrap(this).getLimit()
 
-      public override fun offset(): Number? = unwrap(this).getOffset()
+      override fun offset(): Number? = unwrap(this).getOffset()
 
-      public override fun period(): String? = unwrap(this).getPeriod()
+      override fun period(): String? = unwrap(this).getPeriod()
     }
 
     public companion object {
@@ -343,17 +327,13 @@ public open class CfnUsagePlan internal constructor(
     public fun throttle(): Any? = unwrap(this).getThrottle()
 
     public interface Builder {
-      public fun apiId(apiId: String) {
-      }
+      public fun apiId(apiId: String)
 
-      public fun stage(stage: String) {
-      }
+      public fun stage(stage: String)
 
-      public fun throttle(throttle: IResolvable) {
-      }
+      public fun throttle(throttle: IResolvable)
 
-      public fun throttle(throttle: Map<String, Any>) {
-      }
+      public fun throttle(throttle: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -361,19 +341,19 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.builder()
 
-      public override fun apiId(apiId: String) {
+      override fun apiId(apiId: String) {
         cdkBuilder.apiId(apiId)
       }
 
-      public override fun stage(stage: String) {
+      override fun stage(stage: String) {
         cdkBuilder.stage(stage)
       }
 
-      public override fun throttle(throttle: IResolvable) {
+      override fun throttle(throttle: IResolvable) {
         cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
       }
 
-      public override fun throttle(throttle: Map<String, Any>) {
+      override fun throttle(throttle: Map<String, Any>) {
         cdkBuilder.throttle(throttle)
       }
 
@@ -385,11 +365,11 @@ public open class CfnUsagePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
     ) : ApiStageProperty {
-      public override fun apiId(): String? = unwrap(this).getApiId()
+      override fun apiId(): String? = unwrap(this).getApiId()
 
-      public override fun stage(): String? = unwrap(this).getStage()
+      override fun stage(): String? = unwrap(this).getStage()
 
-      public override fun throttle(): Any? = unwrap(this).getThrottle()
+      override fun throttle(): Any? = unwrap(this).getThrottle()
     }
 
     public companion object {

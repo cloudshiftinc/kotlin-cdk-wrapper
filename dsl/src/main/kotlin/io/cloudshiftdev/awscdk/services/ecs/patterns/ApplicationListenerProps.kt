@@ -20,20 +20,15 @@ public interface ApplicationListenerProps {
   public fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
 
   public interface Builder {
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: ApplicationProtocol) {
-    }
+    public fun protocol(protocol: ApplicationProtocol)
 
-    public fun sslPolicy(sslPolicy: SslPolicy) {
-    }
+    public fun sslPolicy(sslPolicy: SslPolicy)
   }
 
   private class BuilderImpl : Builder {
@@ -41,23 +36,23 @@ public interface ApplicationListenerProps {
         software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps.Builder =
         software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps.builder()
 
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: ApplicationProtocol) {
+    override fun protocol(protocol: ApplicationProtocol) {
       cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
     }
 
-    public override fun sslPolicy(sslPolicy: SslPolicy) {
+    override fun sslPolicy(sslPolicy: SslPolicy) {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
     }
 
@@ -68,17 +63,17 @@ public interface ApplicationListenerProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps,
   ) : ApplicationListenerProps {
-    public override fun certificate(): ICertificate? =
+    override fun certificate(): ICertificate? =
         unwrap(this).getCertificate()?.let(ICertificate::wrap)
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun protocol(): ApplicationProtocol? =
+    override fun protocol(): ApplicationProtocol? =
         unwrap(this).getProtocol()?.let(ApplicationProtocol::wrap)
 
-    public override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
+    override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
   }
 
   public companion object {

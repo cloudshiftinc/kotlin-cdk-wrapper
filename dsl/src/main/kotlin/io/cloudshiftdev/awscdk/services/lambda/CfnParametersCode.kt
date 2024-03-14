@@ -32,22 +32,20 @@ public open class CfnParametersCode internal constructor(
   public open fun objectKeyParam(): String = unwrap(this).getObjectKeyParam()
 
   public interface Builder {
-    public fun bucketNameParam(bucketNameParam: CfnParameter) {
-    }
+    public fun bucketNameParam(bucketNameParam: CfnParameter)
 
-    public fun objectKeyParam(objectKeyParam: CfnParameter) {
-    }
+    public fun objectKeyParam(objectKeyParam: CfnParameter)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnParametersCode.Builder =
         software.amazon.awscdk.services.lambda.CfnParametersCode.Builder.create()
 
-    public override fun bucketNameParam(bucketNameParam: CfnParameter) {
+    override fun bucketNameParam(bucketNameParam: CfnParameter) {
       cdkBuilder.bucketNameParam(bucketNameParam.let(CfnParameter::unwrap))
     }
 
-    public override fun objectKeyParam(objectKeyParam: CfnParameter) {
+    override fun objectKeyParam(objectKeyParam: CfnParameter) {
       cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter::unwrap))
     }
 

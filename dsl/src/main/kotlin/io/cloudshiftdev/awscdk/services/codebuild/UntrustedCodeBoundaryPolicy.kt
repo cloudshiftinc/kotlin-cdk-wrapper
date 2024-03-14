@@ -12,11 +12,9 @@ public open class UntrustedCodeBoundaryPolicy internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy,
 ) : ManagedPolicy(cdkObject) {
   public interface Builder {
-    public fun additionalStatements(additionalStatements: List<PolicyStatement>) {
-    }
+    public fun additionalStatements(additionalStatements: List<PolicyStatement>)
 
-    public fun managedPolicyName(managedPolicyName: String) {
-    }
+    public fun managedPolicyName(managedPolicyName: String)
   }
 
   private class BuilderImpl(
@@ -28,11 +26,11 @@ public open class UntrustedCodeBoundaryPolicy internal constructor(
         software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy.Builder.create(scope,
         id)
 
-    public override fun additionalStatements(additionalStatements: List<PolicyStatement>) {
+    override fun additionalStatements(additionalStatements: List<PolicyStatement>) {
       cdkBuilder.additionalStatements(additionalStatements.map(PolicyStatement::unwrap))
     }
 
-    public override fun managedPolicyName(managedPolicyName: String) {
+    override fun managedPolicyName(managedPolicyName: String) {
       cdkBuilder.managedPolicyName(managedPolicyName)
     }
 

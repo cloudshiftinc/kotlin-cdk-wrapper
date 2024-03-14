@@ -24,26 +24,19 @@ public open class Dashboard internal constructor(
   public open fun dashboardName(): String = unwrap(this).getDashboardName()
 
   public interface Builder {
-    public fun dashboardName(dashboardName: String) {
-    }
+    public fun dashboardName(dashboardName: String)
 
-    public fun defaultInterval(defaultInterval: Duration) {
-    }
+    public fun defaultInterval(defaultInterval: Duration)
 
-    public fun end(end: String) {
-    }
+    public fun end(end: String)
 
-    public fun periodOverride(periodOverride: PeriodOverride) {
-    }
+    public fun periodOverride(periodOverride: PeriodOverride)
 
-    public fun start(start: String) {
-    }
+    public fun start(start: String)
 
-    public fun variables(variables: List<IVariable>) {
-    }
+    public fun variables(variables: List<IVariable>)
 
-    public fun widgets(widgets: List<List<IWidget>>) {
-    }
+    public fun widgets(widgets: List<List<IWidget>>)
   }
 
   private class BuilderImpl(
@@ -53,32 +46,32 @@ public open class Dashboard internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.Dashboard.Builder =
         software.amazon.awscdk.services.cloudwatch.Dashboard.Builder.create(scope, id)
 
-    public override fun dashboardName(dashboardName: String) {
+    override fun dashboardName(dashboardName: String) {
       cdkBuilder.dashboardName(dashboardName)
     }
 
-    public override fun defaultInterval(defaultInterval: Duration) {
+    override fun defaultInterval(defaultInterval: Duration) {
       cdkBuilder.defaultInterval(defaultInterval.let(Duration::unwrap))
     }
 
-    public override fun end(end: String) {
+    override fun end(end: String) {
       cdkBuilder.end(end)
     }
 
-    public override fun periodOverride(periodOverride: PeriodOverride) {
+    override fun periodOverride(periodOverride: PeriodOverride) {
       cdkBuilder.periodOverride(periodOverride.let(PeriodOverride::unwrap))
     }
 
-    public override fun start(start: String) {
+    override fun start(start: String) {
       cdkBuilder.start(start)
     }
 
-    public override fun variables(variables: List<IVariable>) {
+    override fun variables(variables: List<IVariable>) {
       cdkBuilder.variables(variables.map(IVariable::unwrap))
     }
 
-    public override fun widgets(widgets: List<List<IWidget>>) {
-      cdkBuilder.widgets(widgets.map { it.map(IWidget::unwrap) })
+    override fun widgets(widgets: List<List<IWidget>>) {
+      cdkBuilder.widgets(widgets.map{ it.map(IWidget::unwrap) })
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.Dashboard = cdkBuilder.build()

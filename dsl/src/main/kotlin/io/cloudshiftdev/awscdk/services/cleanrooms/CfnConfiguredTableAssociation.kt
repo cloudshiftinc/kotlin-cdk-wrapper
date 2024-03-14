@@ -64,23 +64,17 @@ public open class CfnConfiguredTableAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun configuredTableIdentifier(configuredTableIdentifier: String) {
-    }
+    public fun configuredTableIdentifier(configuredTableIdentifier: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun membershipIdentifier(membershipIdentifier: String) {
-    }
+    public fun membershipIdentifier(membershipIdentifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -92,27 +86,27 @@ public open class CfnConfiguredTableAssociation internal constructor(
         software.amazon.awscdk.services.cleanrooms.CfnConfiguredTableAssociation.Builder.create(scope,
         id)
 
-    public override fun configuredTableIdentifier(configuredTableIdentifier: String) {
+    override fun configuredTableIdentifier(configuredTableIdentifier: String) {
       cdkBuilder.configuredTableIdentifier(configuredTableIdentifier)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun membershipIdentifier(membershipIdentifier: String) {
+    override fun membershipIdentifier(membershipIdentifier: String) {
       cdkBuilder.membershipIdentifier(membershipIdentifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

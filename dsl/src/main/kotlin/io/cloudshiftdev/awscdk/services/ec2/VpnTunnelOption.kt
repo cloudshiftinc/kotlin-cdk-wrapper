@@ -16,14 +16,11 @@ public interface VpnTunnelOption {
 
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun preSharedKey(preSharedKey: String) {
-    }
+    public fun preSharedKey(preSharedKey: String)
 
-    public fun preSharedKeySecret(preSharedKeySecret: SecretValue) {
-    }
+    public fun preSharedKeySecret(preSharedKeySecret: SecretValue)
 
-    public fun tunnelInsideCidr(tunnelInsideCidr: String) {
-    }
+    public fun tunnelInsideCidr(tunnelInsideCidr: String)
   }
 
   private class BuilderImpl : Builder {
@@ -31,15 +28,15 @@ public interface VpnTunnelOption {
         software.amazon.awscdk.services.ec2.VpnTunnelOption.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun preSharedKey(preSharedKey: String) {
+    override fun preSharedKey(preSharedKey: String) {
       cdkBuilder.preSharedKey(preSharedKey)
     }
 
-    public override fun preSharedKeySecret(preSharedKeySecret: SecretValue) {
+    override fun preSharedKeySecret(preSharedKeySecret: SecretValue) {
       cdkBuilder.preSharedKeySecret(preSharedKeySecret.let(SecretValue::unwrap))
     }
 
-    public override fun tunnelInsideCidr(tunnelInsideCidr: String) {
+    override fun tunnelInsideCidr(tunnelInsideCidr: String) {
       cdkBuilder.tunnelInsideCidr(tunnelInsideCidr)
     }
 
@@ -50,12 +47,12 @@ public interface VpnTunnelOption {
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpnTunnelOption,
   ) : VpnTunnelOption {
     @Deprecated(message = "deprecated in CDK")
-    public override fun preSharedKey(): String? = unwrap(this).getPreSharedKey()
+    override fun preSharedKey(): String? = unwrap(this).getPreSharedKey()
 
-    public override fun preSharedKeySecret(): SecretValue? =
+    override fun preSharedKeySecret(): SecretValue? =
         unwrap(this).getPreSharedKeySecret()?.let(SecretValue::wrap)
 
-    public override fun tunnelInsideCidr(): String? = unwrap(this).getTunnelInsideCidr()
+    override fun tunnelInsideCidr(): String? = unwrap(this).getTunnelInsideCidr()
   }
 
   public companion object {

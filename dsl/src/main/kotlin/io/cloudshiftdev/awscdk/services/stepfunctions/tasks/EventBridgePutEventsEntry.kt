@@ -15,17 +15,13 @@ public interface EventBridgePutEventsEntry {
   public fun source(): String
 
   public interface Builder {
-    public fun detail(detail: TaskInput) {
-    }
+    public fun detail(detail: TaskInput)
 
-    public fun detailType(detailType: String) {
-    }
+    public fun detailType(detailType: String)
 
-    public fun eventBus(eventBus: IEventBus) {
-    }
+    public fun eventBus(eventBus: IEventBus)
 
-    public fun source(source: String) {
-    }
+    public fun source(source: String)
   }
 
   private class BuilderImpl : Builder {
@@ -33,19 +29,19 @@ public interface EventBridgePutEventsEntry {
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry.builder()
 
-    public override fun detail(detail: TaskInput) {
+    override fun detail(detail: TaskInput) {
       cdkBuilder.detail(detail.let(TaskInput::unwrap))
     }
 
-    public override fun detailType(detailType: String) {
+    override fun detailType(detailType: String) {
       cdkBuilder.detailType(detailType)
     }
 
-    public override fun eventBus(eventBus: IEventBus) {
+    override fun eventBus(eventBus: IEventBus) {
       cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
     }
 
-    public override fun source(source: String) {
+    override fun source(source: String) {
       cdkBuilder.source(source)
     }
 
@@ -58,13 +54,13 @@ public interface EventBridgePutEventsEntry {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry,
   ) : EventBridgePutEventsEntry {
-    public override fun detail(): TaskInput = unwrap(this).getDetail().let(TaskInput::wrap)
+    override fun detail(): TaskInput = unwrap(this).getDetail().let(TaskInput::wrap)
 
-    public override fun detailType(): String = unwrap(this).getDetailType()
+    override fun detailType(): String = unwrap(this).getDetailType()
 
-    public override fun eventBus(): IEventBus? = unwrap(this).getEventBus()?.let(IEventBus::wrap)
+    override fun eventBus(): IEventBus? = unwrap(this).getEventBus()?.let(IEventBus::wrap)
 
-    public override fun source(): String = unwrap(this).getSource()
+    override fun source(): String = unwrap(this).getSource()
   }
 
   public companion object {

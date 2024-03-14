@@ -173,77 +173,53 @@ public open class CfnServer internal constructor(
   }
 
   public interface Builder {
-    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
-    public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable)
 
-    public fun backupId(backupId: String) {
-    }
+    public fun backupId(backupId: String)
 
-    public fun backupRetentionCount(backupRetentionCount: Number) {
-    }
+    public fun backupRetentionCount(backupRetentionCount: Number)
 
-    public fun customCertificate(customCertificate: String) {
-    }
+    public fun customCertificate(customCertificate: String)
 
-    public fun customDomain(customDomain: String) {
-    }
+    public fun customDomain(customDomain: String)
 
-    public fun customPrivateKey(customPrivateKey: String) {
-    }
+    public fun customPrivateKey(customPrivateKey: String)
 
-    public fun disableAutomatedBackup(disableAutomatedBackup: Boolean) {
-    }
+    public fun disableAutomatedBackup(disableAutomatedBackup: Boolean)
 
-    public fun disableAutomatedBackup(disableAutomatedBackup: IResolvable) {
-    }
+    public fun disableAutomatedBackup(disableAutomatedBackup: IResolvable)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineAttributes(engineAttributes: IResolvable) {
-    }
+    public fun engineAttributes(engineAttributes: IResolvable)
 
-    public fun engineAttributes(engineAttributes: List<Any>) {
-    }
+    public fun engineAttributes(engineAttributes: List<Any>)
 
-    public fun engineModel(engineModel: String) {
-    }
+    public fun engineModel(engineModel: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun instanceProfileArn(instanceProfileArn: String) {
-    }
+    public fun instanceProfileArn(instanceProfileArn: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun keyPair(keyPair: String) {
-    }
+    public fun keyPair(keyPair: String)
 
-    public fun preferredBackupWindow(preferredBackupWindow: String) {
-    }
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun serverName(serverName: String) {
-    }
+    public fun serverName(serverName: String)
 
-    public fun serviceRoleArn(serviceRoleArn: String) {
-    }
+    public fun serviceRoleArn(serviceRoleArn: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -253,99 +229,99 @@ public open class CfnServer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworkscm.CfnServer.Builder =
         software.amazon.awscdk.services.opsworkscm.CfnServer.Builder.create(scope, id)
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
     }
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
     }
 
-    public override fun backupId(backupId: String) {
+    override fun backupId(backupId: String) {
       cdkBuilder.backupId(backupId)
     }
 
-    public override fun backupRetentionCount(backupRetentionCount: Number) {
+    override fun backupRetentionCount(backupRetentionCount: Number) {
       cdkBuilder.backupRetentionCount(backupRetentionCount)
     }
 
-    public override fun customCertificate(customCertificate: String) {
+    override fun customCertificate(customCertificate: String) {
       cdkBuilder.customCertificate(customCertificate)
     }
 
-    public override fun customDomain(customDomain: String) {
+    override fun customDomain(customDomain: String) {
       cdkBuilder.customDomain(customDomain)
     }
 
-    public override fun customPrivateKey(customPrivateKey: String) {
+    override fun customPrivateKey(customPrivateKey: String) {
       cdkBuilder.customPrivateKey(customPrivateKey)
     }
 
-    public override fun disableAutomatedBackup(disableAutomatedBackup: Boolean) {
+    override fun disableAutomatedBackup(disableAutomatedBackup: Boolean) {
       cdkBuilder.disableAutomatedBackup(disableAutomatedBackup)
     }
 
-    public override fun disableAutomatedBackup(disableAutomatedBackup: IResolvable) {
+    override fun disableAutomatedBackup(disableAutomatedBackup: IResolvable) {
       cdkBuilder.disableAutomatedBackup(disableAutomatedBackup.let(IResolvable::unwrap))
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineAttributes(engineAttributes: IResolvable) {
+    override fun engineAttributes(engineAttributes: IResolvable) {
       cdkBuilder.engineAttributes(engineAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun engineAttributes(engineAttributes: List<Any>) {
+    override fun engineAttributes(engineAttributes: List<Any>) {
       cdkBuilder.engineAttributes(engineAttributes)
     }
 
-    public override fun engineModel(engineModel: String) {
+    override fun engineModel(engineModel: String) {
       cdkBuilder.engineModel(engineModel)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun instanceProfileArn(instanceProfileArn: String) {
+    override fun instanceProfileArn(instanceProfileArn: String) {
       cdkBuilder.instanceProfileArn(instanceProfileArn)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun keyPair(keyPair: String) {
+    override fun keyPair(keyPair: String) {
       cdkBuilder.keyPair(keyPair)
     }
 
-    public override fun preferredBackupWindow(preferredBackupWindow: String) {
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
       cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun serverName(serverName: String) {
+    override fun serverName(serverName: String) {
       cdkBuilder.serverName(serverName)
     }
 
-    public override fun serviceRoleArn(serviceRoleArn: String) {
+    override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -379,11 +355,9 @@ public open class CfnServer internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -391,11 +365,11 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty.Builder =
           software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -408,9 +382,9 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworkscm.CfnServer.EngineAttributeProperty,
     ) : EngineAttributeProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

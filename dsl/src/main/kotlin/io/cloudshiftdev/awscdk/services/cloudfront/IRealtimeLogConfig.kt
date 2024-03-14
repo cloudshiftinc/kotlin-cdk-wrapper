@@ -15,20 +15,19 @@ public interface IRealtimeLogConfig : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.IRealtimeLogConfig,
   ) : IRealtimeLogConfig {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun realtimeLogConfigArn(): String = unwrap(this).getRealtimeLogConfigArn()
+    override fun realtimeLogConfigArn(): String = unwrap(this).getRealtimeLogConfigArn()
 
-    public override fun realtimeLogConfigName(): String = unwrap(this).getRealtimeLogConfigName()
+    override fun realtimeLogConfigName(): String = unwrap(this).getRealtimeLogConfigName()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

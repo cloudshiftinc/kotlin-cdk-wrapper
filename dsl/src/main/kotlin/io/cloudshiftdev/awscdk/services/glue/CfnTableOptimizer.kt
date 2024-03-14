@@ -63,30 +63,23 @@ public open class CfnTableOptimizer internal constructor(
   }
 
   public interface Builder {
-    public fun catalogId(catalogId: String) {
-    }
+    public fun catalogId(catalogId: String)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
 
-    public fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
-    }
+    public fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable)
 
     public
-        fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty) {
-    }
+        fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a2c8297cdf6212a0fbaf3da179bd2b62e493c16bf68663d123d3d098e086c04")
     public
-        fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty.Builder.() -> Unit)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -96,35 +89,35 @@ public open class CfnTableOptimizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTableOptimizer.Builder =
         software.amazon.awscdk.services.glue.CfnTableOptimizer.Builder.create(scope, id)
 
-    public override fun catalogId(catalogId: String) {
+    override fun catalogId(catalogId: String) {
       cdkBuilder.catalogId(catalogId)
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
-    public override fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
+    override fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
       cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty) {
       cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(TableOptimizerConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a2c8297cdf6212a0fbaf3da179bd2b62e493c16bf68663d123d3d098e086c04")
-    public override
+    override
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty.Builder.() -> Unit):
         Unit =
         tableOptimizerConfiguration(TableOptimizerConfigurationProperty(tableOptimizerConfiguration))
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -158,14 +151,11 @@ public open class CfnTableOptimizer internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -174,15 +164,15 @@ public open class CfnTableOptimizer internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -195,9 +185,9 @@ public open class CfnTableOptimizer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnTableOptimizer.TableOptimizerConfigurationProperty,
     ) : TableOptimizerConfigurationProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {

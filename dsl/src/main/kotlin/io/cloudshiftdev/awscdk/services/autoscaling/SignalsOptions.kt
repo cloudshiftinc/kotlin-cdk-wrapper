@@ -10,22 +10,20 @@ public interface SignalsOptions {
   public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun minSuccessPercentage(minSuccessPercentage: Number) {
-    }
+    public fun minSuccessPercentage(minSuccessPercentage: Number)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.SignalsOptions.Builder =
         software.amazon.awscdk.services.autoscaling.SignalsOptions.builder()
 
-    public override fun minSuccessPercentage(minSuccessPercentage: Number) {
+    override fun minSuccessPercentage(minSuccessPercentage: Number) {
       cdkBuilder.minSuccessPercentage(minSuccessPercentage)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
@@ -36,9 +34,9 @@ public interface SignalsOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.SignalsOptions,
   ) : SignalsOptions {
-    public override fun minSuccessPercentage(): Number? = unwrap(this).getMinSuccessPercentage()
+    override fun minSuccessPercentage(): Number? = unwrap(this).getMinSuccessPercentage()
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

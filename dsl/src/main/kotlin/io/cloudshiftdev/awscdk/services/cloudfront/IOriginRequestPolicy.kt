@@ -8,7 +8,7 @@ public interface IOriginRequestPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy,
   ) : IOriginRequestPolicy {
-    public override fun originRequestPolicyId(): String = unwrap(this).getOriginRequestPolicyId()
+    override fun originRequestPolicyId(): String = unwrap(this).getOriginRequestPolicyId()
   }
 
   public companion object {

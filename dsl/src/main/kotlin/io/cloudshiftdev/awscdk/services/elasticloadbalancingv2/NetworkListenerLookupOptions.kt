@@ -9,17 +9,13 @@ public interface NetworkListenerLookupOptions : BaseListenerLookupOptions {
   public fun listenerProtocol(): Protocol? = unwrap(this).getListenerProtocol()?.let(Protocol::wrap)
 
   public interface Builder {
-    public fun listenerPort(listenerPort: Number) {
-    }
+    public fun listenerPort(listenerPort: Number)
 
-    public fun listenerProtocol(listenerProtocol: Protocol) {
-    }
+    public fun listenerProtocol(listenerProtocol: Protocol)
 
-    public fun loadBalancerArn(loadBalancerArn: String) {
-    }
+    public fun loadBalancerArn(loadBalancerArn: String)
 
-    public fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
-    }
+    public fun loadBalancerTags(loadBalancerTags: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -28,19 +24,19 @@ public interface NetworkListenerLookupOptions : BaseListenerLookupOptions {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerLookupOptions.builder()
 
-    public override fun listenerPort(listenerPort: Number) {
+    override fun listenerPort(listenerPort: Number) {
       cdkBuilder.listenerPort(listenerPort)
     }
 
-    public override fun listenerProtocol(listenerProtocol: Protocol) {
+    override fun listenerProtocol(listenerProtocol: Protocol) {
       cdkBuilder.listenerProtocol(listenerProtocol.let(Protocol::unwrap))
     }
 
-    public override fun loadBalancerArn(loadBalancerArn: String) {
+    override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
-    public override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
+    override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags)
     }
 
@@ -53,15 +49,15 @@ public interface NetworkListenerLookupOptions : BaseListenerLookupOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerLookupOptions,
   ) : NetworkListenerLookupOptions {
-    public override fun listenerPort(): Number? = unwrap(this).getListenerPort()
+    override fun listenerPort(): Number? = unwrap(this).getListenerPort()
 
-    public override fun listenerProtocol(): Protocol? =
+    override fun listenerProtocol(): Protocol? =
         unwrap(this).getListenerProtocol()?.let(Protocol::wrap)
 
-    public override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags()
-        ?: emptyMap()
+    override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags() ?:
+        emptyMap()
   }
 
   public companion object {

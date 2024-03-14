@@ -34,14 +34,11 @@ public open class CfnSchemaVersionMetadata internal constructor(
   }
 
   public interface Builder {
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun schemaVersionId(schemaVersionId: String) {
-    }
+    public fun schemaVersionId(schemaVersionId: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl(
@@ -51,15 +48,15 @@ public open class CfnSchemaVersionMetadata internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata.Builder =
         software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata.Builder.create(scope, id)
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun schemaVersionId(schemaVersionId: String) {
+    override fun schemaVersionId(schemaVersionId: String) {
       cdkBuilder.schemaVersionId(schemaVersionId)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 

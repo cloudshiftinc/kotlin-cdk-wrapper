@@ -81,28 +81,21 @@ public open class CfnVirtualRouter internal constructor(
   }
 
   public interface Builder {
-    public fun meshName(meshName: String) {
-    }
+    public fun meshName(meshName: String)
 
-    public fun meshOwner(meshOwner: String) {
-    }
+    public fun meshOwner(meshOwner: String)
 
-    public fun spec(spec: IResolvable) {
-    }
+    public fun spec(spec: IResolvable)
 
-    public fun spec(spec: VirtualRouterSpecProperty) {
-    }
+    public fun spec(spec: VirtualRouterSpecProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4adab77e464f114a3a2b32d80657205875f60e4232a06251eff7019e7d50b4ea")
-    public fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit) {
-    }
+    public fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun virtualRouterName(virtualRouterName: String) {
-    }
+    public fun virtualRouterName(virtualRouterName: String)
   }
 
   private class BuilderImpl(
@@ -112,32 +105,32 @@ public open class CfnVirtualRouter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.Builder =
         software.amazon.awscdk.services.appmesh.CfnVirtualRouter.Builder.create(scope, id)
 
-    public override fun meshName(meshName: String) {
+    override fun meshName(meshName: String) {
       cdkBuilder.meshName(meshName)
     }
 
-    public override fun meshOwner(meshOwner: String) {
+    override fun meshOwner(meshOwner: String) {
       cdkBuilder.meshOwner(meshOwner)
     }
 
-    public override fun spec(spec: IResolvable) {
+    override fun spec(spec: IResolvable) {
       cdkBuilder.spec(spec.let(IResolvable::unwrap))
     }
 
-    public override fun spec(spec: VirtualRouterSpecProperty) {
+    override fun spec(spec: VirtualRouterSpecProperty) {
       cdkBuilder.spec(spec.let(VirtualRouterSpecProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4adab77e464f114a3a2b32d80657205875f60e4232a06251eff7019e7d50b4ea")
-    public override fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit): Unit =
+    override fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit): Unit =
         spec(VirtualRouterSpecProperty(spec))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun virtualRouterName(virtualRouterName: String) {
+    override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)
     }
 
@@ -170,11 +163,9 @@ public open class CfnVirtualRouter internal constructor(
     public fun listeners(): Any
 
     public interface Builder {
-      public fun listeners(listeners: IResolvable) {
-      }
+      public fun listeners(listeners: IResolvable)
 
-      public fun listeners(listeners: List<Any>) {
-      }
+      public fun listeners(listeners: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -183,11 +174,11 @@ public open class CfnVirtualRouter internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.builder()
 
-      public override fun listeners(listeners: IResolvable) {
+      override fun listeners(listeners: IResolvable) {
         cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
       }
 
-      public override fun listeners(listeners: List<Any>) {
+      override fun listeners(listeners: List<Any>) {
         cdkBuilder.listeners(listeners)
       }
 
@@ -200,7 +191,7 @@ public open class CfnVirtualRouter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
     ) : VirtualRouterSpecProperty {
-      public override fun listeners(): Any = unwrap(this).getListeners()
+      override fun listeners(): Any = unwrap(this).getListeners()
     }
 
     public companion object {
@@ -229,11 +220,9 @@ public open class CfnVirtualRouter internal constructor(
     public fun protocol(): String
 
     public interface Builder {
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -241,11 +230,11 @@ public open class CfnVirtualRouter internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty.builder()
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -258,9 +247,9 @@ public open class CfnVirtualRouter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty,
     ) : PortMappingProperty {
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
     }
 
     public companion object {
@@ -287,16 +276,13 @@ public open class CfnVirtualRouter internal constructor(
     public fun portMapping(): Any
 
     public interface Builder {
-      public fun portMapping(portMapping: IResolvable) {
-      }
+      public fun portMapping(portMapping: IResolvable)
 
-      public fun portMapping(portMapping: PortMappingProperty) {
-      }
+      public fun portMapping(portMapping: PortMappingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("259fa42bf718471f6642c0dbaf6dbebf61498fe145bb69ea893b2762040d3d80")
-      public fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit) {
-      }
+      public fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -305,17 +291,17 @@ public open class CfnVirtualRouter internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty.builder()
 
-      public override fun portMapping(portMapping: IResolvable) {
+      override fun portMapping(portMapping: IResolvable) {
         cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
       }
 
-      public override fun portMapping(portMapping: PortMappingProperty) {
+      override fun portMapping(portMapping: PortMappingProperty) {
         cdkBuilder.portMapping(portMapping.let(PortMappingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("259fa42bf718471f6642c0dbaf6dbebf61498fe145bb69ea893b2762040d3d80")
-      public override fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit): Unit =
+      override fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit): Unit =
           portMapping(PortMappingProperty(portMapping))
 
       public fun build():
@@ -327,7 +313,7 @@ public open class CfnVirtualRouter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty,
     ) : VirtualRouterListenerProperty {
-      public override fun portMapping(): Any = unwrap(this).getPortMapping()
+      override fun portMapping(): Any = unwrap(this).getPortMapping()
     }
 
     public companion object {

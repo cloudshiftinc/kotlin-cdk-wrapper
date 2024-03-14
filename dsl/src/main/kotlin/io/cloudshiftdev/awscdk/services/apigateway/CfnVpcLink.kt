@@ -49,17 +49,13 @@ public open class CfnVpcLink internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetArns(targetArns: List<String>) {
-    }
+    public fun targetArns(targetArns: List<String>)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnVpcLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnVpcLink.Builder =
         software.amazon.awscdk.services.apigateway.CfnVpcLink.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetArns(targetArns: List<String>) {
+    override fun targetArns(targetArns: List<String>) {
       cdkBuilder.targetArns(targetArns)
     }
 

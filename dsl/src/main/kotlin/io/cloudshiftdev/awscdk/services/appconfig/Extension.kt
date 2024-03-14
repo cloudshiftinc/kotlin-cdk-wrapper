@@ -32,20 +32,15 @@ public open class Extension internal constructor(
       unwrap(this).getParameters()?.map(Parameter::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun actions(actions: List<Action>) {
-    }
+    public fun actions(actions: List<Action>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun extensionName(extensionName: String) {
-    }
+    public fun extensionName(extensionName: String)
 
-    public fun latestVersionNumber(latestVersionNumber: Number) {
-    }
+    public fun latestVersionNumber(latestVersionNumber: Number)
 
-    public fun parameters(parameters: List<Parameter>) {
-    }
+    public fun parameters(parameters: List<Parameter>)
   }
 
   private class BuilderImpl(
@@ -55,23 +50,23 @@ public open class Extension internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.Extension.Builder =
         software.amazon.awscdk.services.appconfig.Extension.Builder.create(scope, id)
 
-    public override fun actions(actions: List<Action>) {
+    override fun actions(actions: List<Action>) {
       cdkBuilder.actions(actions.map(Action::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun extensionName(extensionName: String) {
+    override fun extensionName(extensionName: String) {
       cdkBuilder.extensionName(extensionName)
     }
 
-    public override fun latestVersionNumber(latestVersionNumber: Number) {
+    override fun latestVersionNumber(latestVersionNumber: Number) {
       cdkBuilder.latestVersionNumber(latestVersionNumber)
     }
 
-    public override fun parameters(parameters: List<Parameter>) {
+    override fun parameters(parameters: List<Parameter>) {
       cdkBuilder.parameters(parameters.map(Parameter::unwrap))
     }
 

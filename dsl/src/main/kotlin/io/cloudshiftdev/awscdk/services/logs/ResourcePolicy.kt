@@ -15,11 +15,9 @@ public open class ResourcePolicy internal constructor(
   public open fun document(): PolicyDocument = unwrap(this).getDocument().let(PolicyDocument::wrap)
 
   public interface Builder {
-    public fun policyStatements(policyStatements: List<PolicyStatement>) {
-    }
+    public fun policyStatements(policyStatements: List<PolicyStatement>)
 
-    public fun resourcePolicyName(resourcePolicyName: String) {
-    }
+    public fun resourcePolicyName(resourcePolicyName: String)
   }
 
   private class BuilderImpl(
@@ -29,11 +27,11 @@ public open class ResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.ResourcePolicy.Builder =
         software.amazon.awscdk.services.logs.ResourcePolicy.Builder.create(scope, id)
 
-    public override fun policyStatements(policyStatements: List<PolicyStatement>) {
+    override fun policyStatements(policyStatements: List<PolicyStatement>) {
       cdkBuilder.policyStatements(policyStatements.map(PolicyStatement::unwrap))
     }
 
-    public override fun resourcePolicyName(resourcePolicyName: String) {
+    override fun resourcePolicyName(resourcePolicyName: String) {
       cdkBuilder.resourcePolicyName(resourcePolicyName)
     }
 

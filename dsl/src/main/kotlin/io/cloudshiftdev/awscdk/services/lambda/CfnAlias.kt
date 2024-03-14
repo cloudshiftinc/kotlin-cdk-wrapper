@@ -81,41 +81,31 @@ public open class CfnAlias internal constructor(
       = routingConfig(AliasRoutingConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun functionVersion(functionVersion: String) {
-    }
+    public fun functionVersion(functionVersion: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-    }
+    public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable)
 
     public
-        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty) {
-    }
+        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da7ae274a617e7e7981478d5147e65d07a97ce375e8f41da28dabb437d23a30e")
     public
-        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty.Builder.() -> Unit)
 
-    public fun routingConfig(routingConfig: IResolvable) {
-    }
+    public fun routingConfig(routingConfig: IResolvable)
 
-    public fun routingConfig(routingConfig: AliasRoutingConfigurationProperty) {
-    }
+    public fun routingConfig(routingConfig: AliasRoutingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("817345b2ea650b8bd76d585e4f3a58e86ece9f79b45e385598defd773387870e")
-    public fun routingConfig(routingConfig: AliasRoutingConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun routingConfig(routingConfig: AliasRoutingConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -125,51 +115,50 @@ public open class CfnAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnAlias.Builder =
         software.amazon.awscdk.services.lambda.CfnAlias.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun functionVersion(functionVersion: String) {
+    override fun functionVersion(functionVersion: String) {
       cdkBuilder.functionVersion(functionVersion)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
+    override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
       cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty) {
       cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(ProvisionedConcurrencyConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da7ae274a617e7e7981478d5147e65d07a97ce375e8f41da28dabb437d23a30e")
-    public override
+    override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty.Builder.() -> Unit):
         Unit =
         provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty(provisionedConcurrencyConfig))
 
-    public override fun routingConfig(routingConfig: IResolvable) {
+    override fun routingConfig(routingConfig: IResolvable) {
       cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun routingConfig(routingConfig: AliasRoutingConfigurationProperty) {
+    override fun routingConfig(routingConfig: AliasRoutingConfigurationProperty) {
       cdkBuilder.routingConfig(routingConfig.let(AliasRoutingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("817345b2ea650b8bd76d585e4f3a58e86ece9f79b45e385598defd773387870e")
-    public override
-        fun routingConfig(routingConfig: AliasRoutingConfigurationProperty.Builder.() -> Unit): Unit
-        = routingConfig(AliasRoutingConfigurationProperty(routingConfig))
+    override fun routingConfig(routingConfig: AliasRoutingConfigurationProperty.Builder.() -> Unit):
+        Unit = routingConfig(AliasRoutingConfigurationProperty(routingConfig))
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnAlias = cdkBuilder.build()
   }
@@ -199,11 +188,9 @@ public open class CfnAlias internal constructor(
     public fun additionalVersionWeights(): Any
 
     public interface Builder {
-      public fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
-      }
+      public fun additionalVersionWeights(additionalVersionWeights: IResolvable)
 
-      public fun additionalVersionWeights(additionalVersionWeights: List<Any>) {
-      }
+      public fun additionalVersionWeights(additionalVersionWeights: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -212,11 +199,11 @@ public open class CfnAlias internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty.builder()
 
-      public override fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
+      override fun additionalVersionWeights(additionalVersionWeights: IResolvable) {
         cdkBuilder.additionalVersionWeights(additionalVersionWeights.let(IResolvable::unwrap))
       }
 
-      public override fun additionalVersionWeights(additionalVersionWeights: List<Any>) {
+      override fun additionalVersionWeights(additionalVersionWeights: List<Any>) {
         cdkBuilder.additionalVersionWeights(additionalVersionWeights)
       }
 
@@ -229,8 +216,7 @@ public open class CfnAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty,
     ) : AliasRoutingConfigurationProperty {
-      public override fun additionalVersionWeights(): Any =
-          unwrap(this).getAdditionalVersionWeights()
+      override fun additionalVersionWeights(): Any = unwrap(this).getAdditionalVersionWeights()
     }
 
     public companion object {
@@ -258,8 +244,7 @@ public open class CfnAlias internal constructor(
     public fun provisionedConcurrentExecutions(): Number
 
     public interface Builder {
-      public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
-      }
+      public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -268,7 +253,7 @@ public open class CfnAlias internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty.builder()
 
-      public override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
+      override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
         cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
       }
 
@@ -281,7 +266,7 @@ public open class CfnAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnAlias.ProvisionedConcurrencyConfigurationProperty,
     ) : ProvisionedConcurrencyConfigurationProperty {
-      public override fun provisionedConcurrentExecutions(): Number =
+      override fun provisionedConcurrentExecutions(): Number =
           unwrap(this).getProvisionedConcurrentExecutions()
     }
 
@@ -312,11 +297,9 @@ public open class CfnAlias internal constructor(
     public fun functionWeight(): Number
 
     public interface Builder {
-      public fun functionVersion(functionVersion: String) {
-      }
+      public fun functionVersion(functionVersion: String)
 
-      public fun functionWeight(functionWeight: Number) {
-      }
+      public fun functionWeight(functionWeight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -324,11 +307,11 @@ public open class CfnAlias internal constructor(
           software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty.builder()
 
-      public override fun functionVersion(functionVersion: String) {
+      override fun functionVersion(functionVersion: String) {
         cdkBuilder.functionVersion(functionVersion)
       }
 
-      public override fun functionWeight(functionWeight: Number) {
+      override fun functionWeight(functionWeight: Number) {
         cdkBuilder.functionWeight(functionWeight)
       }
 
@@ -339,9 +322,9 @@ public open class CfnAlias internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.lambda.CfnAlias.VersionWeightProperty,
     ) : VersionWeightProperty {
-      public override fun functionVersion(): String = unwrap(this).getFunctionVersion()
+      override fun functionVersion(): String = unwrap(this).getFunctionVersion()
 
-      public override fun functionWeight(): Number = unwrap(this).getFunctionWeight()
+      override fun functionWeight(): Number = unwrap(this).getFunctionWeight()
     }
 
     public companion object {

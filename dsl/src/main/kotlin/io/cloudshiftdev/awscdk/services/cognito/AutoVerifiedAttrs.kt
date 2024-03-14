@@ -9,22 +9,20 @@ public interface AutoVerifiedAttrs {
   public fun phone(): Boolean? = unwrap(this).getPhone()
 
   public interface Builder {
-    public fun email(email: Boolean) {
-    }
+    public fun email(email: Boolean)
 
-    public fun phone(phone: Boolean) {
-    }
+    public fun phone(phone: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs.Builder =
         software.amazon.awscdk.services.cognito.AutoVerifiedAttrs.builder()
 
-    public override fun email(email: Boolean) {
+    override fun email(email: Boolean) {
       cdkBuilder.email(email)
     }
 
-    public override fun phone(phone: Boolean) {
+    override fun phone(phone: Boolean) {
       cdkBuilder.phone(phone)
     }
 
@@ -35,9 +33,9 @@ public interface AutoVerifiedAttrs {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs,
   ) : AutoVerifiedAttrs {
-    public override fun email(): Boolean? = unwrap(this).getEmail()
+    override fun email(): Boolean? = unwrap(this).getEmail()
 
-    public override fun phone(): Boolean? = unwrap(this).getPhone()
+    override fun phone(): Boolean? = unwrap(this).getPhone()
   }
 
   public companion object {

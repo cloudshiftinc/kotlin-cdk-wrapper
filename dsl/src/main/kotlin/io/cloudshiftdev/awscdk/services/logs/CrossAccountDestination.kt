@@ -36,14 +36,11 @@ public open class CrossAccountDestination internal constructor(
       unwrap(this).getPolicyDocument().let(PolicyDocument::wrap)
 
   public interface Builder {
-    public fun destinationName(destinationName: String) {
-    }
+    public fun destinationName(destinationName: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun targetArn(targetArn: String) {
-    }
+    public fun targetArn(targetArn: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CrossAccountDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CrossAccountDestination.Builder =
         software.amazon.awscdk.services.logs.CrossAccountDestination.Builder.create(scope, id)
 
-    public override fun destinationName(destinationName: String) {
+    override fun destinationName(destinationName: String) {
       cdkBuilder.destinationName(destinationName)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun targetArn(targetArn: String) {
+    override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
     }
 

@@ -17,14 +17,11 @@ public open class SubnetNetworkAclAssociation internal constructor(
       unwrap(this).getSubnetNetworkAclAssociationAssociationId()
 
   public interface Builder {
-    public fun networkAcl(networkAcl: INetworkAcl) {
-    }
+    public fun networkAcl(networkAcl: INetworkAcl)
 
-    public fun subnet(subnet: ISubnet) {
-    }
+    public fun subnet(subnet: ISubnet)
 
-    public fun subnetNetworkAclAssociationName(subnetNetworkAclAssociationName: String) {
-    }
+    public fun subnetNetworkAclAssociationName(subnetNetworkAclAssociationName: String)
   }
 
   private class BuilderImpl(
@@ -34,15 +31,15 @@ public open class SubnetNetworkAclAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation.Builder
         = software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation.Builder.create(scope, id)
 
-    public override fun networkAcl(networkAcl: INetworkAcl) {
+    override fun networkAcl(networkAcl: INetworkAcl) {
       cdkBuilder.networkAcl(networkAcl.let(INetworkAcl::unwrap))
     }
 
-    public override fun subnet(subnet: ISubnet) {
+    override fun subnet(subnet: ISubnet) {
       cdkBuilder.subnet(subnet.let(ISubnet::unwrap))
     }
 
-    public override fun subnetNetworkAclAssociationName(subnetNetworkAclAssociationName: String) {
+    override fun subnetNetworkAclAssociationName(subnetNetworkAclAssociationName: String) {
       cdkBuilder.subnetNetworkAclAssociationName(subnetNetworkAclAssociationName)
     }
 

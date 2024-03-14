@@ -45,19 +45,15 @@ public open class CfnFlowTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
-    }
+    public fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number)
 
-    public fun definition(definition: IResolvable) {
-    }
+    public fun definition(definition: IResolvable)
 
-    public fun definition(definition: DefinitionDocumentProperty) {
-    }
+    public fun definition(definition: DefinitionDocumentProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c331c8943b5b6668ac1676353f38fa58f716cbc4897b8c585183210d19ddbbc")
-    public fun definition(definition: DefinitionDocumentProperty.Builder.() -> Unit) {
-    }
+    public fun definition(definition: DefinitionDocumentProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -67,22 +63,22 @@ public open class CfnFlowTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.Builder =
         software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.Builder.create(scope, id)
 
-    public override fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
+    override fun compatibleNamespaceVersion(compatibleNamespaceVersion: Number) {
       cdkBuilder.compatibleNamespaceVersion(compatibleNamespaceVersion)
     }
 
-    public override fun definition(definition: IResolvable) {
+    override fun definition(definition: IResolvable) {
       cdkBuilder.definition(definition.let(IResolvable::unwrap))
     }
 
-    public override fun definition(definition: DefinitionDocumentProperty) {
+    override fun definition(definition: DefinitionDocumentProperty) {
       cdkBuilder.definition(definition.let(DefinitionDocumentProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c331c8943b5b6668ac1676353f38fa58f716cbc4897b8c585183210d19ddbbc")
-    public override fun definition(definition: DefinitionDocumentProperty.Builder.() -> Unit): Unit
-        = definition(DefinitionDocumentProperty(definition))
+    override fun definition(definition: DefinitionDocumentProperty.Builder.() -> Unit): Unit =
+        definition(DefinitionDocumentProperty(definition))
 
     public fun build(): software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate =
         cdkBuilder.build()
@@ -115,11 +111,9 @@ public open class CfnFlowTemplate internal constructor(
     public fun text(): String
 
     public interface Builder {
-      public fun language(language: String) {
-      }
+      public fun language(language: String)
 
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
     }
 
     private class BuilderImpl : Builder {
@@ -128,11 +122,11 @@ public open class CfnFlowTemplate internal constructor(
           =
           software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty.builder()
 
-      public override fun language(language: String) {
+      override fun language(language: String) {
         cdkBuilder.language(language)
       }
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
@@ -145,9 +139,9 @@ public open class CfnFlowTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate.DefinitionDocumentProperty,
     ) : DefinitionDocumentProperty {
-      public override fun language(): String = unwrap(this).getLanguage()
+      override fun language(): String = unwrap(this).getLanguage()
 
-      public override fun text(): String = unwrap(this).getText()
+      override fun text(): String = unwrap(this).getText()
     }
 
     public companion object {

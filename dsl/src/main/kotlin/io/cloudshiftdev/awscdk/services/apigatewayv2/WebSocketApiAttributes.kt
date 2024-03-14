@@ -9,11 +9,9 @@ public interface WebSocketApiAttributes {
   public fun webSocketId(): String
 
   public interface Builder {
-    public fun apiEndpoint(apiEndpoint: String) {
-    }
+    public fun apiEndpoint(apiEndpoint: String)
 
-    public fun webSocketId(webSocketId: String) {
-    }
+    public fun webSocketId(webSocketId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface WebSocketApiAttributes {
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes.builder()
 
-    public override fun apiEndpoint(apiEndpoint: String) {
+    override fun apiEndpoint(apiEndpoint: String) {
       cdkBuilder.apiEndpoint(apiEndpoint)
     }
 
-    public override fun webSocketId(webSocketId: String) {
+    override fun webSocketId(webSocketId: String) {
       cdkBuilder.webSocketId(webSocketId)
     }
 
@@ -36,9 +34,9 @@ public interface WebSocketApiAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes,
   ) : WebSocketApiAttributes {
-    public override fun apiEndpoint(): String? = unwrap(this).getApiEndpoint()
+    override fun apiEndpoint(): String? = unwrap(this).getApiEndpoint()
 
-    public override fun webSocketId(): String = unwrap(this).getWebSocketId()
+    override fun webSocketId(): String = unwrap(this).getWebSocketId()
   }
 
   public companion object {

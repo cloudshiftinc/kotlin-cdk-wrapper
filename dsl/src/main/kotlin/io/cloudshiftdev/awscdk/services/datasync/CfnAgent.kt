@@ -64,23 +64,17 @@ public open class CfnAgent internal constructor(
   }
 
   public interface Builder {
-    public fun activationKey(activationKey: String) {
-    }
+    public fun activationKey(activationKey: String)
 
-    public fun agentName(agentName: String) {
-    }
+    public fun agentName(agentName: String)
 
-    public fun securityGroupArns(securityGroupArns: List<String>) {
-    }
+    public fun securityGroupArns(securityGroupArns: List<String>)
 
-    public fun subnetArns(subnetArns: List<String>) {
-    }
+    public fun subnetArns(subnetArns: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcEndpointId(vpcEndpointId: String) {
-    }
+    public fun vpcEndpointId(vpcEndpointId: String)
   }
 
   private class BuilderImpl(
@@ -90,27 +84,27 @@ public open class CfnAgent internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnAgent.Builder =
         software.amazon.awscdk.services.datasync.CfnAgent.Builder.create(scope, id)
 
-    public override fun activationKey(activationKey: String) {
+    override fun activationKey(activationKey: String) {
       cdkBuilder.activationKey(activationKey)
     }
 
-    public override fun agentName(agentName: String) {
+    override fun agentName(agentName: String) {
       cdkBuilder.agentName(agentName)
     }
 
-    public override fun securityGroupArns(securityGroupArns: List<String>) {
+    override fun securityGroupArns(securityGroupArns: List<String>) {
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
-    public override fun subnetArns(subnetArns: List<String>) {
+    override fun subnetArns(subnetArns: List<String>) {
       cdkBuilder.subnetArns(subnetArns)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcEndpointId(vpcEndpointId: String) {
+    override fun vpcEndpointId(vpcEndpointId: String) {
       cdkBuilder.vpcEndpointId(vpcEndpointId)
     }
 

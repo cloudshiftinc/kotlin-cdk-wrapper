@@ -9,22 +9,20 @@ public interface VersionAttributes {
   public fun version(): String
 
   public interface Builder {
-    public fun lambda(lambda: IFunction) {
-    }
+    public fun lambda(lambda: IFunction)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.VersionAttributes.Builder =
         software.amazon.awscdk.services.lambda.VersionAttributes.builder()
 
-    public override fun lambda(lambda: IFunction) {
+    override fun lambda(lambda: IFunction) {
       cdkBuilder.lambda(lambda.let(IFunction::unwrap))
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -35,9 +33,9 @@ public interface VersionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.VersionAttributes,
   ) : VersionAttributes {
-    public override fun lambda(): IFunction = unwrap(this).getLambda().let(IFunction::wrap)
+    override fun lambda(): IFunction = unwrap(this).getLambda().let(IFunction::wrap)
 
-    public override fun version(): String = unwrap(this).getVersion()
+    override fun version(): String = unwrap(this).getVersion()
   }
 
   public companion object {

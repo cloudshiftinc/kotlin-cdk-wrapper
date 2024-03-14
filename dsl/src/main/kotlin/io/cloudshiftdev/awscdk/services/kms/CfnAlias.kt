@@ -28,11 +28,9 @@ public open class CfnAlias internal constructor(
   }
 
   public interface Builder {
-    public fun aliasName(aliasName: String) {
-    }
+    public fun aliasName(aliasName: String)
 
-    public fun targetKeyId(targetKeyId: String) {
-    }
+    public fun targetKeyId(targetKeyId: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kms.CfnAlias.Builder =
         software.amazon.awscdk.services.kms.CfnAlias.Builder.create(scope, id)
 
-    public override fun aliasName(aliasName: String) {
+    override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
 
-    public override fun targetKeyId(targetKeyId: String) {
+    override fun targetKeyId(targetKeyId: String) {
       cdkBuilder.targetKeyId(targetKeyId)
     }
 

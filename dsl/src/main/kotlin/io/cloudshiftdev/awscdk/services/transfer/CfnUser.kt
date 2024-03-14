@@ -109,46 +109,33 @@ public open class CfnUser internal constructor(
   }
 
   public interface Builder {
-    public fun homeDirectory(homeDirectory: String) {
-    }
+    public fun homeDirectory(homeDirectory: String)
 
-    public fun homeDirectoryMappings(homeDirectoryMappings: IResolvable) {
-    }
+    public fun homeDirectoryMappings(homeDirectoryMappings: IResolvable)
 
-    public fun homeDirectoryMappings(homeDirectoryMappings: List<Any>) {
-    }
+    public fun homeDirectoryMappings(homeDirectoryMappings: List<Any>)
 
-    public fun homeDirectoryType(homeDirectoryType: String) {
-    }
+    public fun homeDirectoryType(homeDirectoryType: String)
 
-    public fun policy(policy: String) {
-    }
+    public fun policy(policy: String)
 
-    public fun posixProfile(posixProfile: IResolvable) {
-    }
+    public fun posixProfile(posixProfile: IResolvable)
 
-    public fun posixProfile(posixProfile: PosixProfileProperty) {
-    }
+    public fun posixProfile(posixProfile: PosixProfileProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5007726d81f440483919b487ad7f5f371e433e8973771f56d69ef691dc88b486")
-    public fun posixProfile(posixProfile: PosixProfileProperty.Builder.() -> Unit) {
-    }
+    public fun posixProfile(posixProfile: PosixProfileProperty.Builder.() -> Unit)
 
-    public fun role(role: String) {
-    }
+    public fun role(role: String)
 
-    public fun serverId(serverId: String) {
-    }
+    public fun serverId(serverId: String)
 
-    public fun sshPublicKeys(sshPublicKeys: List<String>) {
-    }
+    public fun sshPublicKeys(sshPublicKeys: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -158,56 +145,56 @@ public open class CfnUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnUser.Builder =
         software.amazon.awscdk.services.transfer.CfnUser.Builder.create(scope, id)
 
-    public override fun homeDirectory(homeDirectory: String) {
+    override fun homeDirectory(homeDirectory: String) {
       cdkBuilder.homeDirectory(homeDirectory)
     }
 
-    public override fun homeDirectoryMappings(homeDirectoryMappings: IResolvable) {
+    override fun homeDirectoryMappings(homeDirectoryMappings: IResolvable) {
       cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.let(IResolvable::unwrap))
     }
 
-    public override fun homeDirectoryMappings(homeDirectoryMappings: List<Any>) {
+    override fun homeDirectoryMappings(homeDirectoryMappings: List<Any>) {
       cdkBuilder.homeDirectoryMappings(homeDirectoryMappings)
     }
 
-    public override fun homeDirectoryType(homeDirectoryType: String) {
+    override fun homeDirectoryType(homeDirectoryType: String) {
       cdkBuilder.homeDirectoryType(homeDirectoryType)
     }
 
-    public override fun policy(policy: String) {
+    override fun policy(policy: String) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun posixProfile(posixProfile: IResolvable) {
+    override fun posixProfile(posixProfile: IResolvable) {
       cdkBuilder.posixProfile(posixProfile.let(IResolvable::unwrap))
     }
 
-    public override fun posixProfile(posixProfile: PosixProfileProperty) {
+    override fun posixProfile(posixProfile: PosixProfileProperty) {
       cdkBuilder.posixProfile(posixProfile.let(PosixProfileProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5007726d81f440483919b487ad7f5f371e433e8973771f56d69ef691dc88b486")
-    public override fun posixProfile(posixProfile: PosixProfileProperty.Builder.() -> Unit): Unit =
+    override fun posixProfile(posixProfile: PosixProfileProperty.Builder.() -> Unit): Unit =
         posixProfile(PosixProfileProperty(posixProfile))
 
-    public override fun role(role: String) {
+    override fun role(role: String) {
       cdkBuilder.role(role)
     }
 
-    public override fun serverId(serverId: String) {
+    override fun serverId(serverId: String) {
       cdkBuilder.serverId(serverId)
     }
 
-    public override fun sshPublicKeys(sshPublicKeys: List<String>) {
+    override fun sshPublicKeys(sshPublicKeys: List<String>) {
       cdkBuilder.sshPublicKeys(sshPublicKeys)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 
@@ -243,17 +230,13 @@ public open class CfnUser internal constructor(
     public fun uid(): Number
 
     public interface Builder {
-      public fun gid(gid: Number) {
-      }
+      public fun gid(gid: Number)
 
-      public fun secondaryGids(secondaryGids: IResolvable) {
-      }
+      public fun secondaryGids(secondaryGids: IResolvable)
 
-      public fun secondaryGids(secondaryGids: List<Number>) {
-      }
+      public fun secondaryGids(secondaryGids: List<Number>)
 
-      public fun uid(uid: Number) {
-      }
+      public fun uid(uid: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -261,19 +244,19 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty.builder()
 
-      public override fun gid(gid: Number) {
+      override fun gid(gid: Number) {
         cdkBuilder.gid(gid)
       }
 
-      public override fun secondaryGids(secondaryGids: IResolvable) {
+      override fun secondaryGids(secondaryGids: IResolvable) {
         cdkBuilder.secondaryGids(secondaryGids.let(IResolvable::unwrap))
       }
 
-      public override fun secondaryGids(secondaryGids: List<Number>) {
+      override fun secondaryGids(secondaryGids: List<Number>) {
         cdkBuilder.secondaryGids(secondaryGids)
       }
 
-      public override fun uid(uid: Number) {
+      override fun uid(uid: Number) {
         cdkBuilder.uid(uid)
       }
 
@@ -284,11 +267,11 @@ public open class CfnUser internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty,
     ) : PosixProfileProperty {
-      public override fun gid(): Number = unwrap(this).getGid()
+      override fun gid(): Number = unwrap(this).getGid()
 
-      public override fun secondaryGids(): Any? = unwrap(this).getSecondaryGids()
+      override fun secondaryGids(): Any? = unwrap(this).getSecondaryGids()
 
-      public override fun uid(): Number = unwrap(this).getUid()
+      override fun uid(): Number = unwrap(this).getUid()
     }
 
     public companion object {
@@ -319,14 +302,11 @@ public open class CfnUser internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun entry(entry: String) {
-      }
+      public fun entry(entry: String)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -334,15 +314,15 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty.builder()
 
-      public override fun entry(entry: String) {
+      override fun entry(entry: String) {
         cdkBuilder.entry(entry)
       }
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -355,11 +335,11 @@ public open class CfnUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty,
     ) : HomeDirectoryMapEntryProperty {
-      public override fun entry(): String = unwrap(this).getEntry()
+      override fun entry(): String = unwrap(this).getEntry()
 
-      public override fun target(): String = unwrap(this).getTarget()
+      override fun target(): String = unwrap(this).getTarget()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

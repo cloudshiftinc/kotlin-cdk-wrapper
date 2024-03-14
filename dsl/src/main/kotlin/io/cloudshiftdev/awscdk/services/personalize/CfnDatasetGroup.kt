@@ -42,17 +42,13 @@ public open class CfnDatasetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnDatasetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.personalize.CfnDatasetGroup.Builder =
         software.amazon.awscdk.services.personalize.CfnDatasetGroup.Builder.create(scope, id)
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

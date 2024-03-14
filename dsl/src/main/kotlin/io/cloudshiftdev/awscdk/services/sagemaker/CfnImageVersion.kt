@@ -99,41 +99,29 @@ public open class CfnImageVersion internal constructor(
   }
 
   public interface Builder {
-    public fun alias(alias: String) {
-    }
+    public fun alias(alias: String)
 
-    public fun aliases(aliases: List<String>) {
-    }
+    public fun aliases(aliases: List<String>)
 
-    public fun baseImage(baseImage: String) {
-    }
+    public fun baseImage(baseImage: String)
 
-    public fun horovod(horovod: Boolean) {
-    }
+    public fun horovod(horovod: Boolean)
 
-    public fun horovod(horovod: IResolvable) {
-    }
+    public fun horovod(horovod: IResolvable)
 
-    public fun imageName(imageName: String) {
-    }
+    public fun imageName(imageName: String)
 
-    public fun jobType(jobType: String) {
-    }
+    public fun jobType(jobType: String)
 
-    public fun mlFramework(mlFramework: String) {
-    }
+    public fun mlFramework(mlFramework: String)
 
-    public fun processor(processor: String) {
-    }
+    public fun processor(processor: String)
 
-    public fun programmingLang(programmingLang: String) {
-    }
+    public fun programmingLang(programmingLang: String)
 
-    public fun releaseNotes(releaseNotes: String) {
-    }
+    public fun releaseNotes(releaseNotes: String)
 
-    public fun vendorGuidance(vendorGuidance: String) {
-    }
+    public fun vendorGuidance(vendorGuidance: String)
   }
 
   private class BuilderImpl(
@@ -143,51 +131,51 @@ public open class CfnImageVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnImageVersion.Builder =
         software.amazon.awscdk.services.sagemaker.CfnImageVersion.Builder.create(scope, id)
 
-    public override fun alias(alias: String) {
+    override fun alias(alias: String) {
       cdkBuilder.alias(alias)
     }
 
-    public override fun aliases(aliases: List<String>) {
+    override fun aliases(aliases: List<String>) {
       cdkBuilder.aliases(aliases)
     }
 
-    public override fun baseImage(baseImage: String) {
+    override fun baseImage(baseImage: String) {
       cdkBuilder.baseImage(baseImage)
     }
 
-    public override fun horovod(horovod: Boolean) {
+    override fun horovod(horovod: Boolean) {
       cdkBuilder.horovod(horovod)
     }
 
-    public override fun horovod(horovod: IResolvable) {
+    override fun horovod(horovod: IResolvable) {
       cdkBuilder.horovod(horovod.let(IResolvable::unwrap))
     }
 
-    public override fun imageName(imageName: String) {
+    override fun imageName(imageName: String) {
       cdkBuilder.imageName(imageName)
     }
 
-    public override fun jobType(jobType: String) {
+    override fun jobType(jobType: String) {
       cdkBuilder.jobType(jobType)
     }
 
-    public override fun mlFramework(mlFramework: String) {
+    override fun mlFramework(mlFramework: String) {
       cdkBuilder.mlFramework(mlFramework)
     }
 
-    public override fun processor(processor: String) {
+    override fun processor(processor: String) {
       cdkBuilder.processor(processor)
     }
 
-    public override fun programmingLang(programmingLang: String) {
+    override fun programmingLang(programmingLang: String) {
       cdkBuilder.programmingLang(programmingLang)
     }
 
-    public override fun releaseNotes(releaseNotes: String) {
+    override fun releaseNotes(releaseNotes: String) {
       cdkBuilder.releaseNotes(releaseNotes)
     }
 
-    public override fun vendorGuidance(vendorGuidance: String) {
+    override fun vendorGuidance(vendorGuidance: String) {
       cdkBuilder.vendorGuidance(vendorGuidance)
     }
 

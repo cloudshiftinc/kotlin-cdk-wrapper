@@ -52,23 +52,17 @@ public open class CfnAssignment internal constructor(
   }
 
   public interface Builder {
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun permissionSetArn(permissionSetArn: String) {
-    }
+    public fun permissionSetArn(permissionSetArn: String)
 
-    public fun principalId(principalId: String) {
-    }
+    public fun principalId(principalId: String)
 
-    public fun principalType(principalType: String) {
-    }
+    public fun principalType(principalType: String)
 
-    public fun targetId(targetId: String) {
-    }
+    public fun targetId(targetId: String)
 
-    public fun targetType(targetType: String) {
-    }
+    public fun targetType(targetType: String)
   }
 
   private class BuilderImpl(
@@ -78,27 +72,27 @@ public open class CfnAssignment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sso.CfnAssignment.Builder =
         software.amazon.awscdk.services.sso.CfnAssignment.Builder.create(scope, id)
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun permissionSetArn(permissionSetArn: String) {
+    override fun permissionSetArn(permissionSetArn: String) {
       cdkBuilder.permissionSetArn(permissionSetArn)
     }
 
-    public override fun principalId(principalId: String) {
+    override fun principalId(principalId: String) {
       cdkBuilder.principalId(principalId)
     }
 
-    public override fun principalType(principalType: String) {
+    override fun principalType(principalType: String) {
       cdkBuilder.principalType(principalType)
     }
 
-    public override fun targetId(targetId: String) {
+    override fun targetId(targetId: String) {
       cdkBuilder.targetId(targetId)
     }
 
-    public override fun targetType(targetType: String) {
+    override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
 

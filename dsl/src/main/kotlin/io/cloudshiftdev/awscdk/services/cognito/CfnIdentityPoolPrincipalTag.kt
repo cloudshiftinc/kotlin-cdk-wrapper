@@ -47,20 +47,15 @@ public open class CfnIdentityPoolPrincipalTag internal constructor(
   }
 
   public interface Builder {
-    public fun identityPoolId(identityPoolId: String) {
-    }
+    public fun identityPoolId(identityPoolId: String)
 
-    public fun identityProviderName(identityProviderName: String) {
-    }
+    public fun identityProviderName(identityProviderName: String)
 
-    public fun principalTags(principalTags: Any) {
-    }
+    public fun principalTags(principalTags: Any)
 
-    public fun useDefaults(useDefaults: Boolean) {
-    }
+    public fun useDefaults(useDefaults: Boolean)
 
-    public fun useDefaults(useDefaults: IResolvable) {
-    }
+    public fun useDefaults(useDefaults: IResolvable)
   }
 
   private class BuilderImpl(
@@ -72,23 +67,23 @@ public open class CfnIdentityPoolPrincipalTag internal constructor(
         software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag.Builder.create(scope,
         id)
 
-    public override fun identityPoolId(identityPoolId: String) {
+    override fun identityPoolId(identityPoolId: String) {
       cdkBuilder.identityPoolId(identityPoolId)
     }
 
-    public override fun identityProviderName(identityProviderName: String) {
+    override fun identityProviderName(identityProviderName: String) {
       cdkBuilder.identityProviderName(identityProviderName)
     }
 
-    public override fun principalTags(principalTags: Any) {
+    override fun principalTags(principalTags: Any) {
       cdkBuilder.principalTags(principalTags)
     }
 
-    public override fun useDefaults(useDefaults: Boolean) {
+    override fun useDefaults(useDefaults: Boolean) {
       cdkBuilder.useDefaults(useDefaults)
     }
 
-    public override fun useDefaults(useDefaults: IResolvable) {
+    override fun useDefaults(useDefaults: IResolvable) {
       cdkBuilder.useDefaults(useDefaults.let(IResolvable::unwrap))
     }
 

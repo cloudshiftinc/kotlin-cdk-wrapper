@@ -71,29 +71,22 @@ public open class CfnThingGroup internal constructor(
       Unit = thingGroupProperties(ThingGroupPropertiesProperty(`value`))
 
   public interface Builder {
-    public fun parentGroupName(parentGroupName: String) {
-    }
+    public fun parentGroupName(parentGroupName: String)
 
-    public fun queryString(queryString: String) {
-    }
+    public fun queryString(queryString: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun thingGroupName(thingGroupName: String) {
-    }
+    public fun thingGroupName(thingGroupName: String)
 
-    public fun thingGroupProperties(thingGroupProperties: IResolvable) {
-    }
+    public fun thingGroupProperties(thingGroupProperties: IResolvable)
 
-    public fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty) {
-    }
+    public fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e32515e9f7939b92fbc09f334077a7c5cb6e042e9bed7abc63b3308772223433")
     public
-        fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty.Builder.() -> Unit) {
-    }
+        fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -103,33 +96,33 @@ public open class CfnThingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnThingGroup.Builder =
         software.amazon.awscdk.services.iot.CfnThingGroup.Builder.create(scope, id)
 
-    public override fun parentGroupName(parentGroupName: String) {
+    override fun parentGroupName(parentGroupName: String) {
       cdkBuilder.parentGroupName(parentGroupName)
     }
 
-    public override fun queryString(queryString: String) {
+    override fun queryString(queryString: String) {
       cdkBuilder.queryString(queryString)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun thingGroupName(thingGroupName: String) {
+    override fun thingGroupName(thingGroupName: String) {
       cdkBuilder.thingGroupName(thingGroupName)
     }
 
-    public override fun thingGroupProperties(thingGroupProperties: IResolvable) {
+    override fun thingGroupProperties(thingGroupProperties: IResolvable) {
       cdkBuilder.thingGroupProperties(thingGroupProperties.let(IResolvable::unwrap))
     }
 
-    public override fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty) {
+    override fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty) {
       cdkBuilder.thingGroupProperties(thingGroupProperties.let(ThingGroupPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e32515e9f7939b92fbc09f334077a7c5cb6e042e9bed7abc63b3308772223433")
-    public override
+    override
         fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty.Builder.() -> Unit):
         Unit = thingGroupProperties(ThingGroupPropertiesProperty(thingGroupProperties))
 
@@ -161,11 +154,9 @@ public open class CfnThingGroup internal constructor(
     public fun attributes(): Any? = unwrap(this).getAttributes()
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: Map<String, String>) {
-      }
+      public fun attributes(attributes: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -173,11 +164,11 @@ public open class CfnThingGroup internal constructor(
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty.Builder =
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: Map<String, String>) {
+      override fun attributes(attributes: Map<String, String>) {
         cdkBuilder.attributes(attributes)
       }
 
@@ -189,7 +180,7 @@ public open class CfnThingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty,
     ) : AttributePayloadProperty {
-      public override fun attributes(): Any? = unwrap(this).getAttributes()
+      override fun attributes(): Any? = unwrap(this).getAttributes()
     }
 
     public companion object {
@@ -218,19 +209,15 @@ public open class CfnThingGroup internal constructor(
     public fun thingGroupDescription(): String? = unwrap(this).getThingGroupDescription()
 
     public interface Builder {
-      public fun attributePayload(attributePayload: IResolvable) {
-      }
+      public fun attributePayload(attributePayload: IResolvable)
 
-      public fun attributePayload(attributePayload: AttributePayloadProperty) {
-      }
+      public fun attributePayload(attributePayload: AttributePayloadProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fd1cdfbf0332bdbd7edf5ca85729520fc70da7127260b89c3f1c470af0bac58")
-      public fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit) {
-      }
+      public fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit)
 
-      public fun thingGroupDescription(thingGroupDescription: String) {
-      }
+      public fun thingGroupDescription(thingGroupDescription: String)
     }
 
     private class BuilderImpl : Builder {
@@ -238,21 +225,20 @@ public open class CfnThingGroup internal constructor(
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty.Builder =
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty.builder()
 
-      public override fun attributePayload(attributePayload: IResolvable) {
+      override fun attributePayload(attributePayload: IResolvable) {
         cdkBuilder.attributePayload(attributePayload.let(IResolvable::unwrap))
       }
 
-      public override fun attributePayload(attributePayload: AttributePayloadProperty) {
+      override fun attributePayload(attributePayload: AttributePayloadProperty) {
         cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fd1cdfbf0332bdbd7edf5ca85729520fc70da7127260b89c3f1c470af0bac58")
-      public override
-          fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit): Unit
-          = attributePayload(AttributePayloadProperty(attributePayload))
+      override fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit):
+          Unit = attributePayload(AttributePayloadProperty(attributePayload))
 
-      public override fun thingGroupDescription(thingGroupDescription: String) {
+      override fun thingGroupDescription(thingGroupDescription: String) {
         cdkBuilder.thingGroupDescription(thingGroupDescription)
       }
 
@@ -265,9 +251,9 @@ public open class CfnThingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty,
     ) : ThingGroupPropertiesProperty {
-      public override fun attributePayload(): Any? = unwrap(this).getAttributePayload()
+      override fun attributePayload(): Any? = unwrap(this).getAttributePayload()
 
-      public override fun thingGroupDescription(): String? = unwrap(this).getThingGroupDescription()
+      override fun thingGroupDescription(): String? = unwrap(this).getThingGroupDescription()
     }
 
     public companion object {

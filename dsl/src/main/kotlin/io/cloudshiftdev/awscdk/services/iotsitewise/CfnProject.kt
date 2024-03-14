@@ -57,20 +57,15 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun assetIds(assetIds: List<String>) {
-    }
+    public fun assetIds(assetIds: List<String>)
 
-    public fun portalId(portalId: String) {
-    }
+    public fun portalId(portalId: String)
 
-    public fun projectDescription(projectDescription: String) {
-    }
+    public fun projectDescription(projectDescription: String)
 
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnProject.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnProject.Builder.create(scope, id)
 
-    public override fun assetIds(assetIds: List<String>) {
+    override fun assetIds(assetIds: List<String>) {
       cdkBuilder.assetIds(assetIds)
     }
 
-    public override fun portalId(portalId: String) {
+    override fun portalId(portalId: String) {
       cdkBuilder.portalId(portalId)
     }
 
-    public override fun projectDescription(projectDescription: String) {
+    override fun projectDescription(projectDescription: String) {
       cdkBuilder.projectDescription(projectDescription)
     }
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

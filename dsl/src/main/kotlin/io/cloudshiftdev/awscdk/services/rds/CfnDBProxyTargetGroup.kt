@@ -68,30 +68,23 @@ public open class CfnDBProxyTargetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
-    }
+    public fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable)
 
     public
-        fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty) {
-    }
+        fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b82b793ddcdd39d423ca86d9874701672489a79685d22d7c87246e2dcc494f2")
     public
-        fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty.Builder.() -> Unit) {
-    }
+        fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty.Builder.() -> Unit)
 
-    public fun dbClusterIdentifiers(dbClusterIdentifiers: List<String>) {
-    }
+    public fun dbClusterIdentifiers(dbClusterIdentifiers: List<String>)
 
-    public fun dbInstanceIdentifiers(dbInstanceIdentifiers: List<String>) {
-    }
+    public fun dbInstanceIdentifiers(dbInstanceIdentifiers: List<String>)
 
-    public fun dbProxyName(dbProxyName: String) {
-    }
+    public fun dbProxyName(dbProxyName: String)
 
-    public fun targetGroupName(targetGroupName: String) {
-    }
+    public fun targetGroupName(targetGroupName: String)
   }
 
   private class BuilderImpl(
@@ -101,36 +94,35 @@ public open class CfnDBProxyTargetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.Builder =
         software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.Builder.create(scope, id)
 
-    public override
-        fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
+    override fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
       cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty) {
       cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(ConnectionPoolConfigurationInfoFormatProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b82b793ddcdd39d423ca86d9874701672489a79685d22d7c87246e2dcc494f2")
-    public override
+    override
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty.Builder.() -> Unit):
         Unit =
         connectionPoolConfigurationInfo(ConnectionPoolConfigurationInfoFormatProperty(connectionPoolConfigurationInfo))
 
-    public override fun dbClusterIdentifiers(dbClusterIdentifiers: List<String>) {
+    override fun dbClusterIdentifiers(dbClusterIdentifiers: List<String>) {
       cdkBuilder.dbClusterIdentifiers(dbClusterIdentifiers)
     }
 
-    public override fun dbInstanceIdentifiers(dbInstanceIdentifiers: List<String>) {
+    override fun dbInstanceIdentifiers(dbInstanceIdentifiers: List<String>) {
       cdkBuilder.dbInstanceIdentifiers(dbInstanceIdentifiers)
     }
 
-    public override fun dbProxyName(dbProxyName: String) {
+    override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
     }
 
-    public override fun targetGroupName(targetGroupName: String) {
+    override fun targetGroupName(targetGroupName: String) {
       cdkBuilder.targetGroupName(targetGroupName)
     }
 
@@ -172,20 +164,15 @@ public open class CfnDBProxyTargetGroup internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun connectionBorrowTimeout(connectionBorrowTimeout: Number) {
-      }
+      public fun connectionBorrowTimeout(connectionBorrowTimeout: Number)
 
-      public fun initQuery(initQuery: String) {
-      }
+      public fun initQuery(initQuery: String)
 
-      public fun maxConnectionsPercent(maxConnectionsPercent: Number) {
-      }
+      public fun maxConnectionsPercent(maxConnectionsPercent: Number)
 
-      public fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number) {
-      }
+      public fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number)
 
-      public fun sessionPinningFilters(sessionPinningFilters: List<String>) {
-      }
+      public fun sessionPinningFilters(sessionPinningFilters: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -194,23 +181,23 @@ public open class CfnDBProxyTargetGroup internal constructor(
           =
           software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty.builder()
 
-      public override fun connectionBorrowTimeout(connectionBorrowTimeout: Number) {
+      override fun connectionBorrowTimeout(connectionBorrowTimeout: Number) {
         cdkBuilder.connectionBorrowTimeout(connectionBorrowTimeout)
       }
 
-      public override fun initQuery(initQuery: String) {
+      override fun initQuery(initQuery: String) {
         cdkBuilder.initQuery(initQuery)
       }
 
-      public override fun maxConnectionsPercent(maxConnectionsPercent: Number) {
+      override fun maxConnectionsPercent(maxConnectionsPercent: Number) {
         cdkBuilder.maxConnectionsPercent(maxConnectionsPercent)
       }
 
-      public override fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number) {
+      override fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number) {
         cdkBuilder.maxIdleConnectionsPercent(maxIdleConnectionsPercent)
       }
 
-      public override fun sessionPinningFilters(sessionPinningFilters: List<String>) {
+      override fun sessionPinningFilters(sessionPinningFilters: List<String>) {
         cdkBuilder.sessionPinningFilters(sessionPinningFilters)
       }
 
@@ -223,18 +210,17 @@ public open class CfnDBProxyTargetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty,
     ) : ConnectionPoolConfigurationInfoFormatProperty {
-      public override fun connectionBorrowTimeout(): Number? =
-          unwrap(this).getConnectionBorrowTimeout()
+      override fun connectionBorrowTimeout(): Number? = unwrap(this).getConnectionBorrowTimeout()
 
-      public override fun initQuery(): String? = unwrap(this).getInitQuery()
+      override fun initQuery(): String? = unwrap(this).getInitQuery()
 
-      public override fun maxConnectionsPercent(): Number? = unwrap(this).getMaxConnectionsPercent()
+      override fun maxConnectionsPercent(): Number? = unwrap(this).getMaxConnectionsPercent()
 
-      public override fun maxIdleConnectionsPercent(): Number? =
+      override fun maxIdleConnectionsPercent(): Number? =
           unwrap(this).getMaxIdleConnectionsPercent()
 
-      public override fun sessionPinningFilters(): List<String> =
-          unwrap(this).getSessionPinningFilters() ?: emptyList()
+      override fun sessionPinningFilters(): List<String> = unwrap(this).getSessionPinningFilters()
+          ?: emptyList()
     }
 
     public companion object {

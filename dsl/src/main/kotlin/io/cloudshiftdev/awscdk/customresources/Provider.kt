@@ -29,46 +29,33 @@ public open class Provider internal constructor(
   public open fun serviceToken(): String = unwrap(this).getServiceToken()
 
   public interface Builder {
-    public fun isCompleteHandler(isCompleteHandler: IFunction) {
-    }
+    public fun isCompleteHandler(isCompleteHandler: IFunction)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun logRetention(logRetention: RetentionDays) {
-    }
+    public fun logRetention(logRetention: RetentionDays)
 
-    public fun onEventHandler(onEventHandler: IFunction) {
-    }
+    public fun onEventHandler(onEventHandler: IFunction)
 
-    public fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey) {
-    }
+    public fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey)
 
-    public fun providerFunctionName(providerFunctionName: String) {
-    }
+    public fun providerFunctionName(providerFunctionName: String)
 
-    public fun queryInterval(queryInterval: Duration) {
-    }
+    public fun queryInterval(queryInterval: Duration)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun totalTimeout(totalTimeout: Duration) {
-    }
+    public fun totalTimeout(totalTimeout: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("84e3de72b4de6337b5fc519d0175efa34e4a5db977bc917b683cf8312d37469b")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -78,57 +65,57 @@ public open class Provider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.customresources.Provider.Builder =
         software.amazon.awscdk.customresources.Provider.Builder.create(scope, id)
 
-    public override fun isCompleteHandler(isCompleteHandler: IFunction) {
+    override fun isCompleteHandler(isCompleteHandler: IFunction) {
       cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction::unwrap))
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun logRetention(logRetention: RetentionDays) {
+    override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun onEventHandler(onEventHandler: IFunction) {
+    override fun onEventHandler(onEventHandler: IFunction) {
       cdkBuilder.onEventHandler(onEventHandler.let(IFunction::unwrap))
     }
 
-    public override fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey) {
+    override fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey) {
       cdkBuilder.providerFunctionEnvEncryption(providerFunctionEnvEncryption.let(IKey::unwrap))
     }
 
-    public override fun providerFunctionName(providerFunctionName: String) {
+    override fun providerFunctionName(providerFunctionName: String) {
       cdkBuilder.providerFunctionName(providerFunctionName)
     }
 
-    public override fun queryInterval(queryInterval: Duration) {
+    override fun queryInterval(queryInterval: Duration) {
       cdkBuilder.queryInterval(queryInterval.let(Duration::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun totalTimeout(totalTimeout: Duration) {
+    override fun totalTimeout(totalTimeout: Duration) {
       cdkBuilder.totalTimeout(totalTimeout.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("84e3de72b4de6337b5fc519d0175efa34e4a5db977bc917b683cf8312d37469b")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.customresources.Provider = cdkBuilder.build()

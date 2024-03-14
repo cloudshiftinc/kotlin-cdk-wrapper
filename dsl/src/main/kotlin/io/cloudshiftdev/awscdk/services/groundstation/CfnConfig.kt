@@ -62,22 +62,17 @@ public open class CfnConfig internal constructor(
   }
 
   public interface Builder {
-    public fun configData(configData: IResolvable) {
-    }
+    public fun configData(configData: IResolvable)
 
-    public fun configData(configData: ConfigDataProperty) {
-    }
+    public fun configData(configData: ConfigDataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bdf5af7de0ff43d0573dd7103ea00c681cadc3f9f100193f8727c8b62912646")
-    public fun configData(configData: ConfigDataProperty.Builder.() -> Unit) {
-    }
+    public fun configData(configData: ConfigDataProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,24 +82,24 @@ public open class CfnConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.groundstation.CfnConfig.Builder =
         software.amazon.awscdk.services.groundstation.CfnConfig.Builder.create(scope, id)
 
-    public override fun configData(configData: IResolvable) {
+    override fun configData(configData: IResolvable) {
       cdkBuilder.configData(configData.let(IResolvable::unwrap))
     }
 
-    public override fun configData(configData: ConfigDataProperty) {
+    override fun configData(configData: ConfigDataProperty) {
       cdkBuilder.configData(configData.let(ConfigDataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bdf5af7de0ff43d0573dd7103ea00c681cadc3f9f100193f8727c8b62912646")
-    public override fun configData(configData: ConfigDataProperty.Builder.() -> Unit): Unit =
+    override fun configData(configData: ConfigDataProperty.Builder.() -> Unit): Unit =
         configData(ConfigDataProperty(configData))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -138,11 +133,9 @@ public open class CfnConfig internal constructor(
     public fun dataflowEndpointRegion(): String? = unwrap(this).getDataflowEndpointRegion()
 
     public interface Builder {
-      public fun dataflowEndpointName(dataflowEndpointName: String) {
-      }
+      public fun dataflowEndpointName(dataflowEndpointName: String)
 
-      public fun dataflowEndpointRegion(dataflowEndpointRegion: String) {
-      }
+      public fun dataflowEndpointRegion(dataflowEndpointRegion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -151,11 +144,11 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty.builder()
 
-      public override fun dataflowEndpointName(dataflowEndpointName: String) {
+      override fun dataflowEndpointName(dataflowEndpointName: String) {
         cdkBuilder.dataflowEndpointName(dataflowEndpointName)
       }
 
-      public override fun dataflowEndpointRegion(dataflowEndpointRegion: String) {
+      override fun dataflowEndpointRegion(dataflowEndpointRegion: String) {
         cdkBuilder.dataflowEndpointRegion(dataflowEndpointRegion)
       }
 
@@ -168,10 +161,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty,
     ) : DataflowEndpointConfigProperty {
-      public override fun dataflowEndpointName(): String? = unwrap(this).getDataflowEndpointName()
+      override fun dataflowEndpointName(): String? = unwrap(this).getDataflowEndpointName()
 
-      public override fun dataflowEndpointRegion(): String? =
-          unwrap(this).getDataflowEndpointRegion()
+      override fun dataflowEndpointRegion(): String? = unwrap(this).getDataflowEndpointRegion()
     }
 
     public companion object {
@@ -200,19 +192,15 @@ public open class CfnConfig internal constructor(
     public fun polarization(): String? = unwrap(this).getPolarization()
 
     public interface Builder {
-      public fun centerFrequency(centerFrequency: IResolvable) {
-      }
+      public fun centerFrequency(centerFrequency: IResolvable)
 
-      public fun centerFrequency(centerFrequency: FrequencyProperty) {
-      }
+      public fun centerFrequency(centerFrequency: FrequencyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce5ef5bdc5a0cc681dbba37350877f9524c0fb76096c96eb150111dddad9694d")
-      public fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit) {
-      }
+      public fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit)
 
-      public fun polarization(polarization: String) {
-      }
+      public fun polarization(polarization: String)
     }
 
     private class BuilderImpl : Builder {
@@ -221,20 +209,20 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty.builder()
 
-      public override fun centerFrequency(centerFrequency: IResolvable) {
+      override fun centerFrequency(centerFrequency: IResolvable) {
         cdkBuilder.centerFrequency(centerFrequency.let(IResolvable::unwrap))
       }
 
-      public override fun centerFrequency(centerFrequency: FrequencyProperty) {
+      override fun centerFrequency(centerFrequency: FrequencyProperty) {
         cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce5ef5bdc5a0cc681dbba37350877f9524c0fb76096c96eb150111dddad9694d")
-      public override fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit):
-          Unit = centerFrequency(FrequencyProperty(centerFrequency))
+      override fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit): Unit =
+          centerFrequency(FrequencyProperty(centerFrequency))
 
-      public override fun polarization(polarization: String) {
+      override fun polarization(polarization: String) {
         cdkBuilder.polarization(polarization)
       }
 
@@ -247,9 +235,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty,
     ) : UplinkSpectrumConfigProperty {
-      public override fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
+      override fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
 
-      public override fun polarization(): String? = unwrap(this).getPolarization()
+      override fun polarization(): String? = unwrap(this).getPolarization()
     }
 
     public companion object {
@@ -276,8 +264,7 @@ public open class CfnConfig internal constructor(
     public fun autotrack(): String? = unwrap(this).getAutotrack()
 
     public interface Builder {
-      public fun autotrack(autotrack: String) {
-      }
+      public fun autotrack(autotrack: String)
     }
 
     private class BuilderImpl : Builder {
@@ -285,7 +272,7 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty.builder()
 
-      public override fun autotrack(autotrack: String) {
+      override fun autotrack(autotrack: String) {
         cdkBuilder.autotrack(autotrack)
       }
 
@@ -298,7 +285,7 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty,
     ) : TrackingConfigProperty {
-      public override fun autotrack(): String? = unwrap(this).getAutotrack()
+      override fun autotrack(): String? = unwrap(this).getAutotrack()
     }
 
     public companion object {
@@ -327,11 +314,9 @@ public open class CfnConfig internal constructor(
     public fun `value`(): Number? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun units(units: String) {
-      }
+      public fun units(units: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -339,11 +324,11 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty.builder()
 
-      public override fun units(units: String) {
+      override fun units(units: String) {
         cdkBuilder.units(units)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -355,9 +340,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty,
     ) : FrequencyProperty {
-      public override fun units(): String? = unwrap(this).getUnits()
+      override fun units(): String? = unwrap(this).getUnits()
 
-      public override fun `value`(): Number? = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -397,88 +382,66 @@ public open class CfnConfig internal constructor(
     public fun uplinkEchoConfig(): Any? = unwrap(this).getUplinkEchoConfig()
 
     public interface Builder {
-      public fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable) {
-      }
+      public fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable)
 
-      public fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty) {
-      }
+      public fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7a2cb2e2de5da61ba05fee08241c3e250ac1c4ae9b09b4c778b8b7fa82f7764")
       public
-          fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty.Builder.() -> Unit) {
-      }
+          fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty.Builder.() -> Unit)
 
-      public fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable) {
-      }
+      public fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable)
 
       public
-          fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty) {
-      }
+          fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17d0baf1af43e1879e4081b34471973f4d932da70bfc6a9a450e0ea950877607")
       public
-          fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty.Builder.() -> Unit) {
-      }
+          fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty.Builder.() -> Unit)
 
-      public fun antennaUplinkConfig(antennaUplinkConfig: IResolvable) {
-      }
+      public fun antennaUplinkConfig(antennaUplinkConfig: IResolvable)
 
-      public fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty) {
-      }
+      public fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e683d9dbb2881828c7f91e7acf80e85b64ac1a993fe3920e567b26f5ab4bb3e")
       public
-          fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty.Builder.() -> Unit) {
-      }
+          fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty.Builder.() -> Unit)
 
-      public fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable) {
-      }
+      public fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable)
 
-      public fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty) {
-      }
+      public fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ecd5f3e83583f469ac597f4908c851e4e743ba415170780e3b6ec1b0b32a07f")
       public
-          fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty.Builder.() -> Unit) {
-      }
+          fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty.Builder.() -> Unit)
 
-      public fun s3RecordingConfig(s3RecordingConfig: IResolvable) {
-      }
+      public fun s3RecordingConfig(s3RecordingConfig: IResolvable)
 
-      public fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty) {
-      }
+      public fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30b810d472a639602948402c858f31c95b7f7e2c83183883330e5db314bbe364")
-      public
-          fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty.Builder.() -> Unit) {
-      }
+      public fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty.Builder.() -> Unit)
 
-      public fun trackingConfig(trackingConfig: IResolvable) {
-      }
+      public fun trackingConfig(trackingConfig: IResolvable)
 
-      public fun trackingConfig(trackingConfig: TrackingConfigProperty) {
-      }
+      public fun trackingConfig(trackingConfig: TrackingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc026be17cdda923100e7e206217b7badfcc1d5b4b8787c6fff3048146a53ece")
-      public fun trackingConfig(trackingConfig: TrackingConfigProperty.Builder.() -> Unit) {
-      }
+      public fun trackingConfig(trackingConfig: TrackingConfigProperty.Builder.() -> Unit)
 
-      public fun uplinkEchoConfig(uplinkEchoConfig: IResolvable) {
-      }
+      public fun uplinkEchoConfig(uplinkEchoConfig: IResolvable)
 
-      public fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty) {
-      }
+      public fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f2dd7c421827f5ef12e5f61f27d89e3cb3a7df37bfde8d3f36d1365ac5be1962")
-      public fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty.Builder.() -> Unit) {
-      }
+      public fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -486,107 +449,103 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty.builder()
 
-      public override fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable) {
+      override fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable) {
         cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty) {
+      override fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty) {
         cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(AntennaDownlinkConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7a2cb2e2de5da61ba05fee08241c3e250ac1c4ae9b09b4c778b8b7fa82f7764")
-      public override
+      override
           fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty.Builder.() -> Unit):
           Unit = antennaDownlinkConfig(AntennaDownlinkConfigProperty(antennaDownlinkConfig))
 
-      public override
-          fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable) {
+      override fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable) {
         cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty) {
         cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(AntennaDownlinkDemodDecodeConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17d0baf1af43e1879e4081b34471973f4d932da70bfc6a9a450e0ea950877607")
-      public override
+      override
           fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty.Builder.() -> Unit):
           Unit =
           antennaDownlinkDemodDecodeConfig(AntennaDownlinkDemodDecodeConfigProperty(antennaDownlinkDemodDecodeConfig))
 
-      public override fun antennaUplinkConfig(antennaUplinkConfig: IResolvable) {
+      override fun antennaUplinkConfig(antennaUplinkConfig: IResolvable) {
         cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(IResolvable::unwrap))
       }
 
-      public override fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty) {
+      override fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty) {
         cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(AntennaUplinkConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e683d9dbb2881828c7f91e7acf80e85b64ac1a993fe3920e567b26f5ab4bb3e")
-      public override
+      override
           fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty.Builder.() -> Unit):
           Unit = antennaUplinkConfig(AntennaUplinkConfigProperty(antennaUplinkConfig))
 
-      public override fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable) {
+      override fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable) {
         cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty) {
+      override fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty) {
         cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(DataflowEndpointConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ecd5f3e83583f469ac597f4908c851e4e743ba415170780e3b6ec1b0b32a07f")
-      public override
+      override
           fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty.Builder.() -> Unit):
           Unit = dataflowEndpointConfig(DataflowEndpointConfigProperty(dataflowEndpointConfig))
 
-      public override fun s3RecordingConfig(s3RecordingConfig: IResolvable) {
+      override fun s3RecordingConfig(s3RecordingConfig: IResolvable) {
         cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty) {
+      override fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty) {
         cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(S3RecordingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30b810d472a639602948402c858f31c95b7f7e2c83183883330e5db314bbe364")
-      public override
+      override
           fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty.Builder.() -> Unit):
           Unit = s3RecordingConfig(S3RecordingConfigProperty(s3RecordingConfig))
 
-      public override fun trackingConfig(trackingConfig: IResolvable) {
+      override fun trackingConfig(trackingConfig: IResolvable) {
         cdkBuilder.trackingConfig(trackingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun trackingConfig(trackingConfig: TrackingConfigProperty) {
+      override fun trackingConfig(trackingConfig: TrackingConfigProperty) {
         cdkBuilder.trackingConfig(trackingConfig.let(TrackingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc026be17cdda923100e7e206217b7badfcc1d5b4b8787c6fff3048146a53ece")
-      public override fun trackingConfig(trackingConfig: TrackingConfigProperty.Builder.() -> Unit):
-          Unit = trackingConfig(TrackingConfigProperty(trackingConfig))
+      override fun trackingConfig(trackingConfig: TrackingConfigProperty.Builder.() -> Unit): Unit =
+          trackingConfig(TrackingConfigProperty(trackingConfig))
 
-      public override fun uplinkEchoConfig(uplinkEchoConfig: IResolvable) {
+      override fun uplinkEchoConfig(uplinkEchoConfig: IResolvable) {
         cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(IResolvable::unwrap))
       }
 
-      public override fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty) {
+      override fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty) {
         cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(UplinkEchoConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f2dd7c421827f5ef12e5f61f27d89e3cb3a7df37bfde8d3f36d1365ac5be1962")
-      public override
-          fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty.Builder.() -> Unit): Unit
-          = uplinkEchoConfig(UplinkEchoConfigProperty(uplinkEchoConfig))
+      override fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty.Builder.() -> Unit):
+          Unit = uplinkEchoConfig(UplinkEchoConfigProperty(uplinkEchoConfig))
 
       public fun build(): software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty
           = cdkBuilder.build()
@@ -596,20 +555,20 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty,
     ) : ConfigDataProperty {
-      public override fun antennaDownlinkConfig(): Any? = unwrap(this).getAntennaDownlinkConfig()
+      override fun antennaDownlinkConfig(): Any? = unwrap(this).getAntennaDownlinkConfig()
 
-      public override fun antennaDownlinkDemodDecodeConfig(): Any? =
+      override fun antennaDownlinkDemodDecodeConfig(): Any? =
           unwrap(this).getAntennaDownlinkDemodDecodeConfig()
 
-      public override fun antennaUplinkConfig(): Any? = unwrap(this).getAntennaUplinkConfig()
+      override fun antennaUplinkConfig(): Any? = unwrap(this).getAntennaUplinkConfig()
 
-      public override fun dataflowEndpointConfig(): Any? = unwrap(this).getDataflowEndpointConfig()
+      override fun dataflowEndpointConfig(): Any? = unwrap(this).getDataflowEndpointConfig()
 
-      public override fun s3RecordingConfig(): Any? = unwrap(this).getS3RecordingConfig()
+      override fun s3RecordingConfig(): Any? = unwrap(this).getS3RecordingConfig()
 
-      public override fun trackingConfig(): Any? = unwrap(this).getTrackingConfig()
+      override fun trackingConfig(): Any? = unwrap(this).getTrackingConfig()
 
-      public override fun uplinkEchoConfig(): Any? = unwrap(this).getUplinkEchoConfig()
+      override fun uplinkEchoConfig(): Any? = unwrap(this).getUplinkEchoConfig()
     }
 
     public companion object {
@@ -638,11 +597,9 @@ public open class CfnConfig internal constructor(
     public fun `value`(): Number? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun units(units: String) {
-      }
+      public fun units(units: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -651,11 +608,11 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty.builder()
 
-      public override fun units(units: String) {
+      override fun units(units: String) {
         cdkBuilder.units(units)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -668,9 +625,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty,
     ) : FrequencyBandwidthProperty {
-      public override fun units(): String? = unwrap(this).getUnits()
+      override fun units(): String? = unwrap(this).getUnits()
 
-      public override fun `value`(): Number? = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -697,8 +654,7 @@ public open class CfnConfig internal constructor(
     public fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
 
     public interface Builder {
-      public fun unvalidatedJson(unvalidatedJson: String) {
-      }
+      public fun unvalidatedJson(unvalidatedJson: String)
     }
 
     private class BuilderImpl : Builder {
@@ -706,7 +662,7 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty.builder()
 
-      public override fun unvalidatedJson(unvalidatedJson: String) {
+      override fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
       }
 
@@ -719,7 +675,7 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty,
     ) : DecodeConfigProperty {
-      public override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
+      override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
     }
 
     public companion object {
@@ -748,11 +704,9 @@ public open class CfnConfig internal constructor(
     public fun `value`(): Number? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun units(units: String) {
-      }
+      public fun units(units: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -760,11 +714,11 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty.builder()
 
-      public override fun units(units: String) {
+      override fun units(units: String) {
         cdkBuilder.units(units)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -775,9 +729,9 @@ public open class CfnConfig internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty,
     ) : EirpProperty {
-      public override fun units(): String? = unwrap(this).getUnits()
+      override fun units(): String? = unwrap(this).getUnits()
 
-      public override fun `value`(): Number? = unwrap(this).getValue()
+      override fun `value`(): Number? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -808,39 +762,30 @@ public open class CfnConfig internal constructor(
     public fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
     public interface Builder {
-      public fun decodeConfig(decodeConfig: IResolvable) {
-      }
+      public fun decodeConfig(decodeConfig: IResolvable)
 
-      public fun decodeConfig(decodeConfig: DecodeConfigProperty) {
-      }
+      public fun decodeConfig(decodeConfig: DecodeConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0f6fe2a6a288dc6d33fb2eed29827a3837936477d02861ab99cad291d7cde72")
-      public fun decodeConfig(decodeConfig: DecodeConfigProperty.Builder.() -> Unit) {
-      }
+      public fun decodeConfig(decodeConfig: DecodeConfigProperty.Builder.() -> Unit)
 
-      public fun demodulationConfig(demodulationConfig: IResolvable) {
-      }
+      public fun demodulationConfig(demodulationConfig: IResolvable)
 
-      public fun demodulationConfig(demodulationConfig: DemodulationConfigProperty) {
-      }
+      public fun demodulationConfig(demodulationConfig: DemodulationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0a9f2fe13c3bd64c02bcd06addc44c8e1290399ec3a59a50da1a9d5af7c78e0")
       public
-          fun demodulationConfig(demodulationConfig: DemodulationConfigProperty.Builder.() -> Unit) {
-      }
+          fun demodulationConfig(demodulationConfig: DemodulationConfigProperty.Builder.() -> Unit)
 
-      public fun spectrumConfig(spectrumConfig: IResolvable) {
-      }
+      public fun spectrumConfig(spectrumConfig: IResolvable)
 
-      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
-      }
+      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e396683af6258796a463bfcfe4e947b18814e7a7223d1dfbbf3f2a08d326e96")
-      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit) {
-      }
+      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -849,45 +794,45 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty.builder()
 
-      public override fun decodeConfig(decodeConfig: IResolvable) {
+      override fun decodeConfig(decodeConfig: IResolvable) {
         cdkBuilder.decodeConfig(decodeConfig.let(IResolvable::unwrap))
       }
 
-      public override fun decodeConfig(decodeConfig: DecodeConfigProperty) {
+      override fun decodeConfig(decodeConfig: DecodeConfigProperty) {
         cdkBuilder.decodeConfig(decodeConfig.let(DecodeConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0f6fe2a6a288dc6d33fb2eed29827a3837936477d02861ab99cad291d7cde72")
-      public override fun decodeConfig(decodeConfig: DecodeConfigProperty.Builder.() -> Unit): Unit
-          = decodeConfig(DecodeConfigProperty(decodeConfig))
+      override fun decodeConfig(decodeConfig: DecodeConfigProperty.Builder.() -> Unit): Unit =
+          decodeConfig(DecodeConfigProperty(decodeConfig))
 
-      public override fun demodulationConfig(demodulationConfig: IResolvable) {
+      override fun demodulationConfig(demodulationConfig: IResolvable) {
         cdkBuilder.demodulationConfig(demodulationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun demodulationConfig(demodulationConfig: DemodulationConfigProperty) {
+      override fun demodulationConfig(demodulationConfig: DemodulationConfigProperty) {
         cdkBuilder.demodulationConfig(demodulationConfig.let(DemodulationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0a9f2fe13c3bd64c02bcd06addc44c8e1290399ec3a59a50da1a9d5af7c78e0")
-      public override
+      override
           fun demodulationConfig(demodulationConfig: DemodulationConfigProperty.Builder.() -> Unit):
           Unit = demodulationConfig(DemodulationConfigProperty(demodulationConfig))
 
-      public override fun spectrumConfig(spectrumConfig: IResolvable) {
+      override fun spectrumConfig(spectrumConfig: IResolvable) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
       }
 
-      public override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
+      override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e396683af6258796a463bfcfe4e947b18814e7a7223d1dfbbf3f2a08d326e96")
-      public override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit):
-          Unit = spectrumConfig(SpectrumConfigProperty(spectrumConfig))
+      override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit): Unit =
+          spectrumConfig(SpectrumConfigProperty(spectrumConfig))
 
       public fun build():
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty
@@ -898,11 +843,11 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty,
     ) : AntennaDownlinkDemodDecodeConfigProperty {
-      public override fun decodeConfig(): Any? = unwrap(this).getDecodeConfig()
+      override fun decodeConfig(): Any? = unwrap(this).getDecodeConfig()
 
-      public override fun demodulationConfig(): Any? = unwrap(this).getDemodulationConfig()
+      override fun demodulationConfig(): Any? = unwrap(this).getDemodulationConfig()
 
-      public override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
+      override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
     }
 
     public companion object {
@@ -930,8 +875,7 @@ public open class CfnConfig internal constructor(
     public fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
 
     public interface Builder {
-      public fun unvalidatedJson(unvalidatedJson: String) {
-      }
+      public fun unvalidatedJson(unvalidatedJson: String)
     }
 
     private class BuilderImpl : Builder {
@@ -940,7 +884,7 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty.builder()
 
-      public override fun unvalidatedJson(unvalidatedJson: String) {
+      override fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
       }
 
@@ -953,7 +897,7 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty,
     ) : DemodulationConfigProperty {
-      public override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
+      override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
     }
 
     public companion object {
@@ -980,16 +924,13 @@ public open class CfnConfig internal constructor(
     public fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
     public interface Builder {
-      public fun spectrumConfig(spectrumConfig: IResolvable) {
-      }
+      public fun spectrumConfig(spectrumConfig: IResolvable)
 
-      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
-      }
+      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6b5683f44729ff20d9fefa85e712c39f52d7130711aadca8f83422b35d01ae3")
-      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit) {
-      }
+      public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -998,18 +939,18 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty.builder()
 
-      public override fun spectrumConfig(spectrumConfig: IResolvable) {
+      override fun spectrumConfig(spectrumConfig: IResolvable) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
       }
 
-      public override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
+      override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6b5683f44729ff20d9fefa85e712c39f52d7130711aadca8f83422b35d01ae3")
-      public override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit):
-          Unit = spectrumConfig(SpectrumConfigProperty(spectrumConfig))
+      override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit): Unit =
+          spectrumConfig(SpectrumConfigProperty(spectrumConfig))
 
       public fun build():
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty =
@@ -1020,7 +961,7 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty,
     ) : AntennaDownlinkConfigProperty {
-      public override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
+      override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
     }
 
     public companion object {
@@ -1051,14 +992,11 @@ public open class CfnConfig internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun bucketArn(bucketArn: String) {
-      }
+      public fun bucketArn(bucketArn: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1067,15 +1005,15 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty.builder()
 
-      public override fun bucketArn(bucketArn: String) {
+      override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -1088,11 +1026,11 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty,
     ) : S3RecordingConfigProperty {
-      public override fun bucketArn(): String? = unwrap(this).getBucketArn()
+      override fun bucketArn(): String? = unwrap(this).getBucketArn()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -1121,14 +1059,11 @@ public open class CfnConfig internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun antennaUplinkConfigArn(antennaUplinkConfigArn: String) {
-      }
+      public fun antennaUplinkConfigArn(antennaUplinkConfigArn: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1136,15 +1071,15 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty.builder()
 
-      public override fun antennaUplinkConfigArn(antennaUplinkConfigArn: String) {
+      override fun antennaUplinkConfigArn(antennaUplinkConfigArn: String) {
         cdkBuilder.antennaUplinkConfigArn(antennaUplinkConfigArn)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -1157,10 +1092,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty,
     ) : UplinkEchoConfigProperty {
-      public override fun antennaUplinkConfigArn(): String? =
-          unwrap(this).getAntennaUplinkConfigArn()
+      override fun antennaUplinkConfigArn(): String? = unwrap(this).getAntennaUplinkConfigArn()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -1191,30 +1125,23 @@ public open class CfnConfig internal constructor(
     public fun polarization(): String? = unwrap(this).getPolarization()
 
     public interface Builder {
-      public fun bandwidth(bandwidth: IResolvable) {
-      }
+      public fun bandwidth(bandwidth: IResolvable)
 
-      public fun bandwidth(bandwidth: FrequencyBandwidthProperty) {
-      }
+      public fun bandwidth(bandwidth: FrequencyBandwidthProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f86b6a696ee407f4e18ed6b8fa7d088c5cba74464613b1c99c83cb55ecc5e3b4")
-      public fun bandwidth(bandwidth: FrequencyBandwidthProperty.Builder.() -> Unit) {
-      }
+      public fun bandwidth(bandwidth: FrequencyBandwidthProperty.Builder.() -> Unit)
 
-      public fun centerFrequency(centerFrequency: IResolvable) {
-      }
+      public fun centerFrequency(centerFrequency: IResolvable)
 
-      public fun centerFrequency(centerFrequency: FrequencyProperty) {
-      }
+      public fun centerFrequency(centerFrequency: FrequencyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fe26014ac8993be2915449f92c808ec5143605d29c7a43e98e914df410af126")
-      public fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit) {
-      }
+      public fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit)
 
-      public fun polarization(polarization: String) {
-      }
+      public fun polarization(polarization: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1222,33 +1149,33 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty.builder()
 
-      public override fun bandwidth(bandwidth: IResolvable) {
+      override fun bandwidth(bandwidth: IResolvable) {
         cdkBuilder.bandwidth(bandwidth.let(IResolvable::unwrap))
       }
 
-      public override fun bandwidth(bandwidth: FrequencyBandwidthProperty) {
+      override fun bandwidth(bandwidth: FrequencyBandwidthProperty) {
         cdkBuilder.bandwidth(bandwidth.let(FrequencyBandwidthProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f86b6a696ee407f4e18ed6b8fa7d088c5cba74464613b1c99c83cb55ecc5e3b4")
-      public override fun bandwidth(bandwidth: FrequencyBandwidthProperty.Builder.() -> Unit): Unit
-          = bandwidth(FrequencyBandwidthProperty(bandwidth))
+      override fun bandwidth(bandwidth: FrequencyBandwidthProperty.Builder.() -> Unit): Unit =
+          bandwidth(FrequencyBandwidthProperty(bandwidth))
 
-      public override fun centerFrequency(centerFrequency: IResolvable) {
+      override fun centerFrequency(centerFrequency: IResolvable) {
         cdkBuilder.centerFrequency(centerFrequency.let(IResolvable::unwrap))
       }
 
-      public override fun centerFrequency(centerFrequency: FrequencyProperty) {
+      override fun centerFrequency(centerFrequency: FrequencyProperty) {
         cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fe26014ac8993be2915449f92c808ec5143605d29c7a43e98e914df410af126")
-      public override fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit):
-          Unit = centerFrequency(FrequencyProperty(centerFrequency))
+      override fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit): Unit =
+          centerFrequency(FrequencyProperty(centerFrequency))
 
-      public override fun polarization(polarization: String) {
+      override fun polarization(polarization: String) {
         cdkBuilder.polarization(polarization)
       }
 
@@ -1261,11 +1188,11 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty,
     ) : SpectrumConfigProperty {
-      public override fun bandwidth(): Any? = unwrap(this).getBandwidth()
+      override fun bandwidth(): Any? = unwrap(this).getBandwidth()
 
-      public override fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
+      override fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
 
-      public override fun polarization(): String? = unwrap(this).getPolarization()
+      override fun polarization(): String? = unwrap(this).getPolarization()
     }
 
     public companion object {
@@ -1296,33 +1223,25 @@ public open class CfnConfig internal constructor(
     public fun transmitDisabled(): Any? = unwrap(this).getTransmitDisabled()
 
     public interface Builder {
-      public fun spectrumConfig(spectrumConfig: IResolvable) {
-      }
+      public fun spectrumConfig(spectrumConfig: IResolvable)
 
-      public fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty) {
-      }
+      public fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dea05ab978fd04ba084abfba00bf59ebfbef118fee29ca1b9ff8785385774e84")
-      public fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty.Builder.() -> Unit) {
-      }
+      public fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty.Builder.() -> Unit)
 
-      public fun targetEirp(targetEirp: IResolvable) {
-      }
+      public fun targetEirp(targetEirp: IResolvable)
 
-      public fun targetEirp(targetEirp: EirpProperty) {
-      }
+      public fun targetEirp(targetEirp: EirpProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feefa4f5b0ff7258c3c5a4c739c2e1924d755d513639600e6a72ac97c904e03e")
-      public fun targetEirp(targetEirp: EirpProperty.Builder.() -> Unit) {
-      }
+      public fun targetEirp(targetEirp: EirpProperty.Builder.() -> Unit)
 
-      public fun transmitDisabled(transmitDisabled: Boolean) {
-      }
+      public fun transmitDisabled(transmitDisabled: Boolean)
 
-      public fun transmitDisabled(transmitDisabled: IResolvable) {
-      }
+      public fun transmitDisabled(transmitDisabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1331,38 +1250,37 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty.builder()
 
-      public override fun spectrumConfig(spectrumConfig: IResolvable) {
+      override fun spectrumConfig(spectrumConfig: IResolvable) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
       }
 
-      public override fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty) {
+      override fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(UplinkSpectrumConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dea05ab978fd04ba084abfba00bf59ebfbef118fee29ca1b9ff8785385774e84")
-      public override
-          fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty.Builder.() -> Unit): Unit
-          = spectrumConfig(UplinkSpectrumConfigProperty(spectrumConfig))
+      override fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty.Builder.() -> Unit):
+          Unit = spectrumConfig(UplinkSpectrumConfigProperty(spectrumConfig))
 
-      public override fun targetEirp(targetEirp: IResolvable) {
+      override fun targetEirp(targetEirp: IResolvable) {
         cdkBuilder.targetEirp(targetEirp.let(IResolvable::unwrap))
       }
 
-      public override fun targetEirp(targetEirp: EirpProperty) {
+      override fun targetEirp(targetEirp: EirpProperty) {
         cdkBuilder.targetEirp(targetEirp.let(EirpProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feefa4f5b0ff7258c3c5a4c739c2e1924d755d513639600e6a72ac97c904e03e")
-      public override fun targetEirp(targetEirp: EirpProperty.Builder.() -> Unit): Unit =
+      override fun targetEirp(targetEirp: EirpProperty.Builder.() -> Unit): Unit =
           targetEirp(EirpProperty(targetEirp))
 
-      public override fun transmitDisabled(transmitDisabled: Boolean) {
+      override fun transmitDisabled(transmitDisabled: Boolean) {
         cdkBuilder.transmitDisabled(transmitDisabled)
       }
 
-      public override fun transmitDisabled(transmitDisabled: IResolvable) {
+      override fun transmitDisabled(transmitDisabled: IResolvable) {
         cdkBuilder.transmitDisabled(transmitDisabled.let(IResolvable::unwrap))
       }
 
@@ -1375,11 +1293,11 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty,
     ) : AntennaUplinkConfigProperty {
-      public override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
+      override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
-      public override fun targetEirp(): Any? = unwrap(this).getTargetEirp()
+      override fun targetEirp(): Any? = unwrap(this).getTargetEirp()
 
-      public override fun transmitDisabled(): Any? = unwrap(this).getTransmitDisabled()
+      override fun transmitDisabled(): Any? = unwrap(this).getTransmitDisabled()
     }
 
     public companion object {

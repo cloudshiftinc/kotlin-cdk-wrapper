@@ -45,20 +45,16 @@ public open class CfnApplicationCloudWatchLoggingOptionV2 internal constructor(
   }
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
-    }
+    public fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable)
 
-    public fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty) {
-    }
+    public fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cceefcbc4f18947a4a912638e5b148ebafa6ffc046b692d4af604efad5c68be8")
     public
-        fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty.Builder.() -> Unit) {
-    }
+        fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -71,22 +67,21 @@ public open class CfnApplicationCloudWatchLoggingOptionV2 internal constructor(
         software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2.Builder.create(scope,
         id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
+    override fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
       cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(IResolvable::unwrap))
     }
 
-    public override
-        fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty) {
+    override fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty) {
       cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(CloudWatchLoggingOptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cceefcbc4f18947a4a912638e5b148ebafa6ffc046b692d4af604efad5c68be8")
-    public override
+    override
         fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty.Builder.() -> Unit):
         Unit = cloudWatchLoggingOption(CloudWatchLoggingOptionProperty(cloudWatchLoggingOption))
 
@@ -122,8 +117,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2 internal constructor(
     public fun logStreamArn(): String
 
     public interface Builder {
-      public fun logStreamArn(logStreamArn: String) {
-      }
+      public fun logStreamArn(logStreamArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -132,7 +126,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2 internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty.builder()
 
-      public override fun logStreamArn(logStreamArn: String) {
+      override fun logStreamArn(logStreamArn: String) {
         cdkBuilder.logStreamArn(logStreamArn)
       }
 
@@ -145,7 +139,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2 internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2.CloudWatchLoggingOptionProperty,
     ) : CloudWatchLoggingOptionProperty {
-      public override fun logStreamArn(): String = unwrap(this).getLogStreamArn()
+      override fun logStreamArn(): String = unwrap(this).getLogStreamArn()
     }
 
     public companion object {

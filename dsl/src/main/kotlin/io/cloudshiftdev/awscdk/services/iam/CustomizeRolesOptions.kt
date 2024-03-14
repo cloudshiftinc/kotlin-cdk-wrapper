@@ -12,22 +12,20 @@ public interface CustomizeRolesOptions {
       emptyMap()
 
   public interface Builder {
-    public fun preventSynthesis(preventSynthesis: Boolean) {
-    }
+    public fun preventSynthesis(preventSynthesis: Boolean)
 
-    public fun usePrecreatedRoles(usePrecreatedRoles: Map<String, String>) {
-    }
+    public fun usePrecreatedRoles(usePrecreatedRoles: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.CustomizeRolesOptions.Builder =
         software.amazon.awscdk.services.iam.CustomizeRolesOptions.builder()
 
-    public override fun preventSynthesis(preventSynthesis: Boolean) {
+    override fun preventSynthesis(preventSynthesis: Boolean) {
       cdkBuilder.preventSynthesis(preventSynthesis)
     }
 
-    public override fun usePrecreatedRoles(usePrecreatedRoles: Map<String, String>) {
+    override fun usePrecreatedRoles(usePrecreatedRoles: Map<String, String>) {
       cdkBuilder.usePrecreatedRoles(usePrecreatedRoles)
     }
 
@@ -38,10 +36,10 @@ public interface CustomizeRolesOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.CustomizeRolesOptions,
   ) : CustomizeRolesOptions {
-    public override fun preventSynthesis(): Boolean? = unwrap(this).getPreventSynthesis()
+    override fun preventSynthesis(): Boolean? = unwrap(this).getPreventSynthesis()
 
-    public override fun usePrecreatedRoles(): Map<String, String> =
-        unwrap(this).getUsePrecreatedRoles() ?: emptyMap()
+    override fun usePrecreatedRoles(): Map<String, String> = unwrap(this).getUsePrecreatedRoles() ?:
+        emptyMap()
   }
 
   public companion object {

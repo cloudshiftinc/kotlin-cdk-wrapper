@@ -101,43 +101,31 @@ public open class CfnReplicationConfig internal constructor(
   }
 
   public interface Builder {
-    public fun computeConfig(computeConfig: IResolvable) {
-    }
+    public fun computeConfig(computeConfig: IResolvable)
 
-    public fun computeConfig(computeConfig: ComputeConfigProperty) {
-    }
+    public fun computeConfig(computeConfig: ComputeConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b8b204c7b9e5ebf2801fdcf758bcf72e12064ffee5778d3aba0c041c9d675c95")
-    public fun computeConfig(computeConfig: ComputeConfigProperty.Builder.() -> Unit) {
-    }
+    public fun computeConfig(computeConfig: ComputeConfigProperty.Builder.() -> Unit)
 
-    public fun replicationConfigIdentifier(replicationConfigIdentifier: String) {
-    }
+    public fun replicationConfigIdentifier(replicationConfigIdentifier: String)
 
-    public fun replicationSettings(replicationSettings: Any) {
-    }
+    public fun replicationSettings(replicationSettings: Any)
 
-    public fun replicationType(replicationType: String) {
-    }
+    public fun replicationType(replicationType: String)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun sourceEndpointArn(sourceEndpointArn: String) {
-    }
+    public fun sourceEndpointArn(sourceEndpointArn: String)
 
-    public fun supplementalSettings(supplementalSettings: Any) {
-    }
+    public fun supplementalSettings(supplementalSettings: Any)
 
-    public fun tableMappings(tableMappings: Any) {
-    }
+    public fun tableMappings(tableMappings: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetEndpointArn(targetEndpointArn: String) {
-    }
+    public fun targetEndpointArn(targetEndpointArn: String)
   }
 
   private class BuilderImpl(
@@ -147,52 +135,52 @@ public open class CfnReplicationConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnReplicationConfig.Builder =
         software.amazon.awscdk.services.dms.CfnReplicationConfig.Builder.create(scope, id)
 
-    public override fun computeConfig(computeConfig: IResolvable) {
+    override fun computeConfig(computeConfig: IResolvable) {
       cdkBuilder.computeConfig(computeConfig.let(IResolvable::unwrap))
     }
 
-    public override fun computeConfig(computeConfig: ComputeConfigProperty) {
+    override fun computeConfig(computeConfig: ComputeConfigProperty) {
       cdkBuilder.computeConfig(computeConfig.let(ComputeConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b8b204c7b9e5ebf2801fdcf758bcf72e12064ffee5778d3aba0c041c9d675c95")
-    public override fun computeConfig(computeConfig: ComputeConfigProperty.Builder.() -> Unit): Unit
-        = computeConfig(ComputeConfigProperty(computeConfig))
+    override fun computeConfig(computeConfig: ComputeConfigProperty.Builder.() -> Unit): Unit =
+        computeConfig(ComputeConfigProperty(computeConfig))
 
-    public override fun replicationConfigIdentifier(replicationConfigIdentifier: String) {
+    override fun replicationConfigIdentifier(replicationConfigIdentifier: String) {
       cdkBuilder.replicationConfigIdentifier(replicationConfigIdentifier)
     }
 
-    public override fun replicationSettings(replicationSettings: Any) {
+    override fun replicationSettings(replicationSettings: Any) {
       cdkBuilder.replicationSettings(replicationSettings)
     }
 
-    public override fun replicationType(replicationType: String) {
+    override fun replicationType(replicationType: String) {
       cdkBuilder.replicationType(replicationType)
     }
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun sourceEndpointArn(sourceEndpointArn: String) {
+    override fun sourceEndpointArn(sourceEndpointArn: String) {
       cdkBuilder.sourceEndpointArn(sourceEndpointArn)
     }
 
-    public override fun supplementalSettings(supplementalSettings: Any) {
+    override fun supplementalSettings(supplementalSettings: Any) {
       cdkBuilder.supplementalSettings(supplementalSettings)
     }
 
-    public override fun tableMappings(tableMappings: Any) {
+    override fun tableMappings(tableMappings: Any) {
       cdkBuilder.tableMappings(tableMappings)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetEndpointArn(targetEndpointArn: String) {
+    override fun targetEndpointArn(targetEndpointArn: String) {
       cdkBuilder.targetEndpointArn(targetEndpointArn)
     }
 
@@ -242,35 +230,25 @@ public open class CfnReplicationConfig internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun dnsNameServers(dnsNameServers: String) {
-      }
+      public fun dnsNameServers(dnsNameServers: String)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun maxCapacityUnits(maxCapacityUnits: Number) {
-      }
+      public fun maxCapacityUnits(maxCapacityUnits: Number)
 
-      public fun minCapacityUnits(minCapacityUnits: Number) {
-      }
+      public fun minCapacityUnits(minCapacityUnits: Number)
 
-      public fun multiAz(multiAz: Boolean) {
-      }
+      public fun multiAz(multiAz: Boolean)
 
-      public fun multiAz(multiAz: IResolvable) {
-      }
+      public fun multiAz(multiAz: IResolvable)
 
-      public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-      }
+      public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-      public fun replicationSubnetGroupId(replicationSubnetGroupId: String) {
-      }
+      public fun replicationSubnetGroupId(replicationSubnetGroupId: String)
 
-      public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-      }
+      public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -278,43 +256,43 @@ public open class CfnReplicationConfig internal constructor(
           software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty.Builder =
           software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun dnsNameServers(dnsNameServers: String) {
+      override fun dnsNameServers(dnsNameServers: String) {
         cdkBuilder.dnsNameServers(dnsNameServers)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun maxCapacityUnits(maxCapacityUnits: Number) {
+      override fun maxCapacityUnits(maxCapacityUnits: Number) {
         cdkBuilder.maxCapacityUnits(maxCapacityUnits)
       }
 
-      public override fun minCapacityUnits(minCapacityUnits: Number) {
+      override fun minCapacityUnits(minCapacityUnits: Number) {
         cdkBuilder.minCapacityUnits(minCapacityUnits)
       }
 
-      public override fun multiAz(multiAz: Boolean) {
+      override fun multiAz(multiAz: Boolean) {
         cdkBuilder.multiAz(multiAz)
       }
 
-      public override fun multiAz(multiAz: IResolvable) {
+      override fun multiAz(multiAz: IResolvable) {
         cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
       }
 
-      public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+      override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
         cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
       }
 
-      public override fun replicationSubnetGroupId(replicationSubnetGroupId: String) {
+      override fun replicationSubnetGroupId(replicationSubnetGroupId: String) {
         cdkBuilder.replicationSubnetGroupId(replicationSubnetGroupId)
       }
 
-      public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+      override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
         cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
       }
 
@@ -327,26 +305,25 @@ public open class CfnReplicationConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty,
     ) : ComputeConfigProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun dnsNameServers(): String? = unwrap(this).getDnsNameServers()
+      override fun dnsNameServers(): String? = unwrap(this).getDnsNameServers()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun maxCapacityUnits(): Number = unwrap(this).getMaxCapacityUnits()
+      override fun maxCapacityUnits(): Number = unwrap(this).getMaxCapacityUnits()
 
-      public override fun minCapacityUnits(): Number? = unwrap(this).getMinCapacityUnits()
+      override fun minCapacityUnits(): Number? = unwrap(this).getMinCapacityUnits()
 
-      public override fun multiAz(): Any? = unwrap(this).getMultiAz()
+      override fun multiAz(): Any? = unwrap(this).getMultiAz()
 
-      public override fun preferredMaintenanceWindow(): String? =
+      override fun preferredMaintenanceWindow(): String? =
           unwrap(this).getPreferredMaintenanceWindow()
 
-      public override fun replicationSubnetGroupId(): String? =
-          unwrap(this).getReplicationSubnetGroupId()
+      override fun replicationSubnetGroupId(): String? = unwrap(this).getReplicationSubnetGroupId()
 
-      public override fun vpcSecurityGroupIds(): List<String> =
-          unwrap(this).getVpcSecurityGroupIds() ?: emptyList()
+      override fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds() ?:
+          emptyList()
     }
 
     public companion object {

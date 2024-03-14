@@ -105,49 +105,35 @@ public open class CfnLaunch internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun executionStatus(executionStatus: IResolvable) {
-    }
+    public fun executionStatus(executionStatus: IResolvable)
 
-    public fun executionStatus(executionStatus: ExecutionStatusObjectProperty) {
-    }
+    public fun executionStatus(executionStatus: ExecutionStatusObjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d344654ec827a3b4bc87d8750cac4d2f48b3f11158d00d01bfd16475e040555")
-    public fun executionStatus(executionStatus: ExecutionStatusObjectProperty.Builder.() -> Unit) {
-    }
+    public fun executionStatus(executionStatus: ExecutionStatusObjectProperty.Builder.() -> Unit)
 
-    public fun groups(groups: IResolvable) {
-    }
+    public fun groups(groups: IResolvable)
 
-    public fun groups(groups: List<Any>) {
-    }
+    public fun groups(groups: List<Any>)
 
-    public fun metricMonitors(metricMonitors: IResolvable) {
-    }
+    public fun metricMonitors(metricMonitors: IResolvable)
 
-    public fun metricMonitors(metricMonitors: List<Any>) {
-    }
+    public fun metricMonitors(metricMonitors: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun project(project: String) {
-    }
+    public fun project(project: String)
 
-    public fun randomizationSalt(randomizationSalt: String) {
-    }
+    public fun randomizationSalt(randomizationSalt: String)
 
-    public fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable) {
-    }
+    public fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable)
 
-    public fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>) {
-    }
+    public fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -157,61 +143,60 @@ public open class CfnLaunch internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.evidently.CfnLaunch.Builder =
         software.amazon.awscdk.services.evidently.CfnLaunch.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun executionStatus(executionStatus: IResolvable) {
+    override fun executionStatus(executionStatus: IResolvable) {
       cdkBuilder.executionStatus(executionStatus.let(IResolvable::unwrap))
     }
 
-    public override fun executionStatus(executionStatus: ExecutionStatusObjectProperty) {
+    override fun executionStatus(executionStatus: ExecutionStatusObjectProperty) {
       cdkBuilder.executionStatus(executionStatus.let(ExecutionStatusObjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d344654ec827a3b4bc87d8750cac4d2f48b3f11158d00d01bfd16475e040555")
-    public override
-        fun executionStatus(executionStatus: ExecutionStatusObjectProperty.Builder.() -> Unit): Unit
-        = executionStatus(ExecutionStatusObjectProperty(executionStatus))
+    override fun executionStatus(executionStatus: ExecutionStatusObjectProperty.Builder.() -> Unit):
+        Unit = executionStatus(ExecutionStatusObjectProperty(executionStatus))
 
-    public override fun groups(groups: IResolvable) {
+    override fun groups(groups: IResolvable) {
       cdkBuilder.groups(groups.let(IResolvable::unwrap))
     }
 
-    public override fun groups(groups: List<Any>) {
+    override fun groups(groups: List<Any>) {
       cdkBuilder.groups(groups)
     }
 
-    public override fun metricMonitors(metricMonitors: IResolvable) {
+    override fun metricMonitors(metricMonitors: IResolvable) {
       cdkBuilder.metricMonitors(metricMonitors.let(IResolvable::unwrap))
     }
 
-    public override fun metricMonitors(metricMonitors: List<Any>) {
+    override fun metricMonitors(metricMonitors: List<Any>) {
       cdkBuilder.metricMonitors(metricMonitors)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun project(project: String) {
+    override fun project(project: String) {
       cdkBuilder.project(project)
     }
 
-    public override fun randomizationSalt(randomizationSalt: String) {
+    override fun randomizationSalt(randomizationSalt: String) {
       cdkBuilder.randomizationSalt(randomizationSalt)
     }
 
-    public override fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable) {
+    override fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable) {
       cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.let(IResolvable::unwrap))
     }
 
-    public override fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>) {
+    override fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>) {
       cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -249,17 +234,13 @@ public open class CfnLaunch internal constructor(
     public fun variation(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun feature(feature: String) {
-      }
+      public fun feature(feature: String)
 
-      public fun groupName(groupName: String) {
-      }
+      public fun groupName(groupName: String)
 
-      public fun variation(variation: String) {
-      }
+      public fun variation(variation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -267,19 +248,19 @@ public open class CfnLaunch internal constructor(
           software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun feature(feature: String) {
+      override fun feature(feature: String) {
         cdkBuilder.feature(feature)
       }
 
-      public override fun groupName(groupName: String) {
+      override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
       }
 
-      public override fun variation(variation: String) {
+      override fun variation(variation: String) {
         cdkBuilder.variation(variation)
       }
 
@@ -292,13 +273,13 @@ public open class CfnLaunch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty,
     ) : LaunchGroupObjectProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun feature(): String = unwrap(this).getFeature()
+      override fun feature(): String = unwrap(this).getFeature()
 
-      public override fun groupName(): String = unwrap(this).getGroupName()
+      override fun groupName(): String = unwrap(this).getGroupName()
 
-      public override fun variation(): String = unwrap(this).getVariation()
+      override fun variation(): String = unwrap(this).getVariation()
     }
 
     public companion object {
@@ -329,14 +310,11 @@ public open class CfnLaunch internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun desiredState(desiredState: String) {
-      }
+      public fun desiredState(desiredState: String)
 
-      public fun reason(reason: String) {
-      }
+      public fun reason(reason: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -345,15 +323,15 @@ public open class CfnLaunch internal constructor(
           =
           software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty.builder()
 
-      public override fun desiredState(desiredState: String) {
+      override fun desiredState(desiredState: String) {
         cdkBuilder.desiredState(desiredState)
       }
 
-      public override fun reason(reason: String) {
+      override fun reason(reason: String) {
         cdkBuilder.reason(reason)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -366,11 +344,11 @@ public open class CfnLaunch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty,
     ) : ExecutionStatusObjectProperty {
-      public override fun desiredState(): String? = unwrap(this).getDesiredState()
+      override fun desiredState(): String? = unwrap(this).getDesiredState()
 
-      public override fun reason(): String? = unwrap(this).getReason()
+      override fun reason(): String? = unwrap(this).getReason()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -399,11 +377,9 @@ public open class CfnLaunch internal constructor(
     public fun splitWeight(): Number
 
     public interface Builder {
-      public fun groupName(groupName: String) {
-      }
+      public fun groupName(groupName: String)
 
-      public fun splitWeight(splitWeight: Number) {
-      }
+      public fun splitWeight(splitWeight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -411,11 +387,11 @@ public open class CfnLaunch internal constructor(
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty.builder()
 
-      public override fun groupName(groupName: String) {
+      override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
       }
 
-      public override fun splitWeight(splitWeight: Number) {
+      override fun splitWeight(splitWeight: Number) {
         cdkBuilder.splitWeight(splitWeight)
       }
 
@@ -427,9 +403,9 @@ public open class CfnLaunch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty,
     ) : GroupToWeightProperty {
-      public override fun groupName(): String = unwrap(this).getGroupName()
+      override fun groupName(): String = unwrap(this).getGroupName()
 
-      public override fun splitWeight(): Number = unwrap(this).getSplitWeight()
+      override fun splitWeight(): Number = unwrap(this).getSplitWeight()
     }
 
     public companion object {
@@ -464,20 +440,15 @@ public open class CfnLaunch internal constructor(
     public fun valueKey(): String
 
     public interface Builder {
-      public fun entityIdKey(entityIdKey: String) {
-      }
+      public fun entityIdKey(entityIdKey: String)
 
-      public fun eventPattern(eventPattern: String) {
-      }
+      public fun eventPattern(eventPattern: String)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun unitLabel(unitLabel: String) {
-      }
+      public fun unitLabel(unitLabel: String)
 
-      public fun valueKey(valueKey: String) {
-      }
+      public fun valueKey(valueKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -486,23 +457,23 @@ public open class CfnLaunch internal constructor(
           =
           software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty.builder()
 
-      public override fun entityIdKey(entityIdKey: String) {
+      override fun entityIdKey(entityIdKey: String) {
         cdkBuilder.entityIdKey(entityIdKey)
       }
 
-      public override fun eventPattern(eventPattern: String) {
+      override fun eventPattern(eventPattern: String) {
         cdkBuilder.eventPattern(eventPattern)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun unitLabel(unitLabel: String) {
+      override fun unitLabel(unitLabel: String) {
         cdkBuilder.unitLabel(unitLabel)
       }
 
-      public override fun valueKey(valueKey: String) {
+      override fun valueKey(valueKey: String) {
         cdkBuilder.valueKey(valueKey)
       }
 
@@ -515,15 +486,15 @@ public open class CfnLaunch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty,
     ) : MetricDefinitionObjectProperty {
-      public override fun entityIdKey(): String = unwrap(this).getEntityIdKey()
+      override fun entityIdKey(): String = unwrap(this).getEntityIdKey()
 
-      public override fun eventPattern(): String? = unwrap(this).getEventPattern()
+      override fun eventPattern(): String? = unwrap(this).getEventPattern()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun unitLabel(): String? = unwrap(this).getUnitLabel()
+      override fun unitLabel(): String? = unwrap(this).getUnitLabel()
 
-      public override fun valueKey(): String = unwrap(this).getValueKey()
+      override fun valueKey(): String = unwrap(this).getValueKey()
     }
 
     public companion object {
@@ -554,17 +525,13 @@ public open class CfnLaunch internal constructor(
     public fun weights(): Any
 
     public interface Builder {
-      public fun evaluationOrder(evaluationOrder: Number) {
-      }
+      public fun evaluationOrder(evaluationOrder: Number)
 
-      public fun segment(segment: String) {
-      }
+      public fun segment(segment: String)
 
-      public fun weights(weights: IResolvable) {
-      }
+      public fun weights(weights: IResolvable)
 
-      public fun weights(weights: List<Any>) {
-      }
+      public fun weights(weights: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -572,19 +539,19 @@ public open class CfnLaunch internal constructor(
           software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty.builder()
 
-      public override fun evaluationOrder(evaluationOrder: Number) {
+      override fun evaluationOrder(evaluationOrder: Number) {
         cdkBuilder.evaluationOrder(evaluationOrder)
       }
 
-      public override fun segment(segment: String) {
+      override fun segment(segment: String) {
         cdkBuilder.segment(segment)
       }
 
-      public override fun weights(weights: IResolvable) {
+      override fun weights(weights: IResolvable) {
         cdkBuilder.weights(weights.let(IResolvable::unwrap))
       }
 
-      public override fun weights(weights: List<Any>) {
+      override fun weights(weights: List<Any>) {
         cdkBuilder.weights(weights)
       }
 
@@ -597,11 +564,11 @@ public open class CfnLaunch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty,
     ) : SegmentOverrideProperty {
-      public override fun evaluationOrder(): Number = unwrap(this).getEvaluationOrder()
+      override fun evaluationOrder(): Number = unwrap(this).getEvaluationOrder()
 
-      public override fun segment(): String = unwrap(this).getSegment()
+      override fun segment(): String = unwrap(this).getSegment()
 
-      public override fun weights(): Any = unwrap(this).getWeights()
+      override fun weights(): Any = unwrap(this).getWeights()
     }
 
     public companion object {
@@ -632,20 +599,15 @@ public open class CfnLaunch internal constructor(
     public fun startTime(): String
 
     public interface Builder {
-      public fun groupWeights(groupWeights: IResolvable) {
-      }
+      public fun groupWeights(groupWeights: IResolvable)
 
-      public fun groupWeights(groupWeights: List<Any>) {
-      }
+      public fun groupWeights(groupWeights: List<Any>)
 
-      public fun segmentOverrides(segmentOverrides: IResolvable) {
-      }
+      public fun segmentOverrides(segmentOverrides: IResolvable)
 
-      public fun segmentOverrides(segmentOverrides: List<Any>) {
-      }
+      public fun segmentOverrides(segmentOverrides: List<Any>)
 
-      public fun startTime(startTime: String) {
-      }
+      public fun startTime(startTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -653,23 +615,23 @@ public open class CfnLaunch internal constructor(
           software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty.builder()
 
-      public override fun groupWeights(groupWeights: IResolvable) {
+      override fun groupWeights(groupWeights: IResolvable) {
         cdkBuilder.groupWeights(groupWeights.let(IResolvable::unwrap))
       }
 
-      public override fun groupWeights(groupWeights: List<Any>) {
+      override fun groupWeights(groupWeights: List<Any>) {
         cdkBuilder.groupWeights(groupWeights)
       }
 
-      public override fun segmentOverrides(segmentOverrides: IResolvable) {
+      override fun segmentOverrides(segmentOverrides: IResolvable) {
         cdkBuilder.segmentOverrides(segmentOverrides.let(IResolvable::unwrap))
       }
 
-      public override fun segmentOverrides(segmentOverrides: List<Any>) {
+      override fun segmentOverrides(segmentOverrides: List<Any>) {
         cdkBuilder.segmentOverrides(segmentOverrides)
       }
 
-      public override fun startTime(startTime: String) {
+      override fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)
       }
 
@@ -681,11 +643,11 @@ public open class CfnLaunch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty,
     ) : StepConfigProperty {
-      public override fun groupWeights(): Any = unwrap(this).getGroupWeights()
+      override fun groupWeights(): Any = unwrap(this).getGroupWeights()
 
-      public override fun segmentOverrides(): Any? = unwrap(this).getSegmentOverrides()
+      override fun segmentOverrides(): Any? = unwrap(this).getSegmentOverrides()
 
-      public override fun startTime(): String = unwrap(this).getStartTime()
+      override fun startTime(): String = unwrap(this).getStartTime()
     }
 
     public companion object {

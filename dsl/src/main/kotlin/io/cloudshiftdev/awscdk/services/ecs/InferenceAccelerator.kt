@@ -9,22 +9,20 @@ public interface InferenceAccelerator {
   public fun deviceType(): String? = unwrap(this).getDeviceType()
 
   public interface Builder {
-    public fun deviceName(deviceName: String) {
-    }
+    public fun deviceName(deviceName: String)
 
-    public fun deviceType(deviceType: String) {
-    }
+    public fun deviceType(deviceType: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.InferenceAccelerator.Builder =
         software.amazon.awscdk.services.ecs.InferenceAccelerator.builder()
 
-    public override fun deviceName(deviceName: String) {
+    override fun deviceName(deviceName: String) {
       cdkBuilder.deviceName(deviceName)
     }
 
-    public override fun deviceType(deviceType: String) {
+    override fun deviceType(deviceType: String) {
       cdkBuilder.deviceType(deviceType)
     }
 
@@ -35,9 +33,9 @@ public interface InferenceAccelerator {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.InferenceAccelerator,
   ) : InferenceAccelerator {
-    public override fun deviceName(): String? = unwrap(this).getDeviceName()
+    override fun deviceName(): String? = unwrap(this).getDeviceName()
 
-    public override fun deviceType(): String? = unwrap(this).getDeviceType()
+    override fun deviceType(): String? = unwrap(this).getDeviceType()
   }
 
   public companion object {

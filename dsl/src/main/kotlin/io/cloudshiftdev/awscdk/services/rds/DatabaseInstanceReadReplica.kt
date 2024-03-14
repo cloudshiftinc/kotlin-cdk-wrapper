@@ -27,7 +27,7 @@ public open class DatabaseInstanceReadReplica internal constructor(
   private val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica,
 ) : DatabaseInstanceBase(cdkObject), IDatabaseInstance {
   public open fun cloudwatchLogGroups(): Map<String, ILogGroup> =
-      unwrap(this).getCloudwatchLogGroups().mapValues { ILogGroup.wrap(it.value)} ?: emptyMap()
+      unwrap(this).getCloudwatchLogGroups().mapValues{ILogGroup.wrap(it.value)} ?: emptyMap()
 
   public override fun connections(): Connections =
       unwrap(this).getConnections().let(Connections::wrap)
@@ -50,154 +50,105 @@ public open class DatabaseInstanceReadReplica internal constructor(
   public open fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
 
   public interface Builder {
-    public fun allocatedStorage(allocatedStorage: Number) {
-    }
+    public fun allocatedStorage(allocatedStorage: Number)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun backupRetention(backupRetention: Duration) {
-    }
+    public fun backupRetention(backupRetention: Duration)
 
-    public fun caCertificate(caCertificate: CaCertificate) {
-    }
+    public fun caCertificate(caCertificate: CaCertificate)
 
-    public fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
-    }
+    public fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>)
 
-    public fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
-    }
+    public fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays)
 
-    public fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
-    }
+    public fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
-    public fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
-    }
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun domainRole(domainRole: IRole) {
-    }
+    public fun domainRole(domainRole: IRole)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
 
-    public fun iamAuthentication(iamAuthentication: Boolean) {
-    }
+    public fun iamAuthentication(iamAuthentication: Boolean)
 
-    public fun instanceIdentifier(instanceIdentifier: String) {
-    }
+    public fun instanceIdentifier(instanceIdentifier: String)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun maxAllocatedStorage(maxAllocatedStorage: Number) {
-    }
+    public fun maxAllocatedStorage(maxAllocatedStorage: Number)
 
-    public fun monitoringInterval(monitoringInterval: Duration) {
-    }
+    public fun monitoringInterval(monitoringInterval: Duration)
 
-    public fun monitoringRole(monitoringRole: IRole) {
-    }
+    public fun monitoringRole(monitoringRole: IRole)
 
-    public fun multiAz(multiAz: Boolean) {
-    }
+    public fun multiAz(multiAz: Boolean)
 
-    public fun networkType(networkType: NetworkType) {
-    }
+    public fun networkType(networkType: NetworkType)
 
-    public fun optionGroup(optionGroup: IOptionGroup) {
-    }
+    public fun optionGroup(optionGroup: IOptionGroup)
 
-    public fun parameterGroup(parameterGroup: IParameterGroup) {
-    }
+    public fun parameterGroup(parameterGroup: IParameterGroup)
 
-    public fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
-    }
+    public fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey)
 
-    public
-        fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
-    }
+    public fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredBackupWindow(preferredBackupWindow: String) {
-    }
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun processorFeatures(processorFeatures: ProcessorFeatures) {
-    }
+    public fun processorFeatures(processorFeatures: ProcessorFeatures)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("756a719433bbb707bf4095bbf12c196b3dae50d9ab94a903cf993ac027efb1aa")
-    public fun processorFeatures(processorFeatures: ProcessorFeatures.Builder.() -> Unit) {
-    }
+    public fun processorFeatures(processorFeatures: ProcessorFeatures.Builder.() -> Unit)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
-    }
+    public fun s3ExportBuckets(s3ExportBuckets: List<IBucket>)
 
-    public fun s3ExportRole(s3ExportRole: IRole) {
-    }
+    public fun s3ExportRole(s3ExportRole: IRole)
 
-    public fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
-    }
+    public fun s3ImportBuckets(s3ImportBuckets: List<IBucket>)
 
-    public fun s3ImportRole(s3ImportRole: IRole) {
-    }
+    public fun s3ImportRole(s3ImportRole: IRole)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun sourceDatabaseInstance(sourceDatabaseInstance: IDatabaseInstance) {
-    }
+    public fun sourceDatabaseInstance(sourceDatabaseInstance: IDatabaseInstance)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun storageEncryptionKey(storageEncryptionKey: IKey) {
-    }
+    public fun storageEncryptionKey(storageEncryptionKey: IKey)
 
-    public fun storageThroughput(storageThroughput: Number) {
-    }
+    public fun storageThroughput(storageThroughput: Number)
 
-    public fun storageType(storageType: StorageType) {
-    }
+    public fun storageType(storageType: StorageType)
 
-    public fun subnetGroup(subnetGroup: ISubnetGroup) {
-    }
+    public fun subnetGroup(subnetGroup: ISubnetGroup)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0bb50b1db573671285c6e80e9e254395e40e50cb265aa8955d1d29496c5388c6")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -207,199 +158,199 @@ public open class DatabaseInstanceReadReplica internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica.Builder
         = software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica.Builder.create(scope, id)
 
-    public override fun allocatedStorage(allocatedStorage: Number) {
+    override fun allocatedStorage(allocatedStorage: Number) {
       cdkBuilder.allocatedStorage(allocatedStorage)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun backupRetention(backupRetention: Duration) {
+    override fun backupRetention(backupRetention: Duration) {
       cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
     }
 
-    public override fun caCertificate(caCertificate: CaCertificate) {
+    override fun caCertificate(caCertificate: CaCertificate) {
       cdkBuilder.caCertificate(caCertificate.let(CaCertificate::unwrap))
     }
 
-    public override fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
+    override fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
       cdkBuilder.cloudwatchLogsExports(cloudwatchLogsExports)
     }
 
-    public override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
+    override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
       cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
+    override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
       cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole::unwrap))
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
-    public override fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
       cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun domainRole(domainRole: IRole) {
+    override fun domainRole(domainRole: IRole) {
       cdkBuilder.domainRole(domainRole.let(IRole::unwrap))
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
-    public override fun iamAuthentication(iamAuthentication: Boolean) {
+    override fun iamAuthentication(iamAuthentication: Boolean) {
       cdkBuilder.iamAuthentication(iamAuthentication)
     }
 
-    public override fun instanceIdentifier(instanceIdentifier: String) {
+    override fun instanceIdentifier(instanceIdentifier: String) {
       cdkBuilder.instanceIdentifier(instanceIdentifier)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun maxAllocatedStorage(maxAllocatedStorage: Number) {
+    override fun maxAllocatedStorage(maxAllocatedStorage: Number) {
       cdkBuilder.maxAllocatedStorage(maxAllocatedStorage)
     }
 
-    public override fun monitoringInterval(monitoringInterval: Duration) {
+    override fun monitoringInterval(monitoringInterval: Duration) {
       cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
     }
 
-    public override fun monitoringRole(monitoringRole: IRole) {
+    override fun monitoringRole(monitoringRole: IRole) {
       cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
     }
 
-    public override fun multiAz(multiAz: Boolean) {
+    override fun multiAz(multiAz: Boolean) {
       cdkBuilder.multiAz(multiAz)
     }
 
-    public override fun networkType(networkType: NetworkType) {
+    override fun networkType(networkType: NetworkType) {
       cdkBuilder.networkType(networkType.let(NetworkType::unwrap))
     }
 
-    public override fun optionGroup(optionGroup: IOptionGroup) {
+    override fun optionGroup(optionGroup: IOptionGroup) {
       cdkBuilder.optionGroup(optionGroup.let(IOptionGroup::unwrap))
     }
 
-    public override fun parameterGroup(parameterGroup: IParameterGroup) {
+    override fun parameterGroup(parameterGroup: IParameterGroup) {
       cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
     }
 
-    public override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
+    override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
       cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey::unwrap))
     }
 
-    public override
+    override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
       cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredBackupWindow(preferredBackupWindow: String) {
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
       cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun processorFeatures(processorFeatures: ProcessorFeatures) {
+    override fun processorFeatures(processorFeatures: ProcessorFeatures) {
       cdkBuilder.processorFeatures(processorFeatures.let(ProcessorFeatures::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("756a719433bbb707bf4095bbf12c196b3dae50d9ab94a903cf993ac027efb1aa")
-    public override fun processorFeatures(processorFeatures: ProcessorFeatures.Builder.() -> Unit):
-        Unit = processorFeatures(ProcessorFeatures(processorFeatures))
+    override fun processorFeatures(processorFeatures: ProcessorFeatures.Builder.() -> Unit): Unit =
+        processorFeatures(ProcessorFeatures(processorFeatures))
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
+    override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
       cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
     }
 
-    public override fun s3ExportRole(s3ExportRole: IRole) {
+    override fun s3ExportRole(s3ExportRole: IRole) {
       cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
     }
 
-    public override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
+    override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
       cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
     }
 
-    public override fun s3ImportRole(s3ImportRole: IRole) {
+    override fun s3ImportRole(s3ImportRole: IRole) {
       cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun sourceDatabaseInstance(sourceDatabaseInstance: IDatabaseInstance) {
+    override fun sourceDatabaseInstance(sourceDatabaseInstance: IDatabaseInstance) {
       cdkBuilder.sourceDatabaseInstance(sourceDatabaseInstance.let(IDatabaseInstance::unwrap))
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun storageEncryptionKey(storageEncryptionKey: IKey) {
+    override fun storageEncryptionKey(storageEncryptionKey: IKey) {
       cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey::unwrap))
     }
 
-    public override fun storageThroughput(storageThroughput: Number) {
+    override fun storageThroughput(storageThroughput: Number) {
       cdkBuilder.storageThroughput(storageThroughput)
     }
 
-    public override fun storageType(storageType: StorageType) {
+    override fun storageType(storageType: StorageType) {
       cdkBuilder.storageType(storageType.let(StorageType::unwrap))
     }
 
-    public override fun subnetGroup(subnetGroup: ISubnetGroup) {
+    override fun subnetGroup(subnetGroup: ISubnetGroup) {
       cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0bb50b1db573671285c6e80e9e254395e40e50cb265aa8955d1d29496c5388c6")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.rds.DatabaseInstanceReadReplica =

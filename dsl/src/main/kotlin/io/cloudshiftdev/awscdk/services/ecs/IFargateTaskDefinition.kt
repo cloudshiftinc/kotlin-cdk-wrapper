@@ -12,34 +12,32 @@ public interface IFargateTaskDefinition : ITaskDefinition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.IFargateTaskDefinition,
   ) : IFargateTaskDefinition {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun compatibility(): Compatibility =
+    override fun compatibility(): Compatibility =
         unwrap(this).getCompatibility().let(Compatibility::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+    override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
 
-    public override fun isEc2Compatible(): Boolean = unwrap(this).getIsEc2Compatible()
+    override fun isEc2Compatible(): Boolean = unwrap(this).getIsEc2Compatible()
 
-    public override fun isExternalCompatible(): Boolean = unwrap(this).getIsExternalCompatible()
+    override fun isExternalCompatible(): Boolean = unwrap(this).getIsExternalCompatible()
 
-    public override fun isFargateCompatible(): Boolean = unwrap(this).getIsFargateCompatible()
+    override fun isFargateCompatible(): Boolean = unwrap(this).getIsFargateCompatible()
 
-    public override fun networkMode(): NetworkMode =
-        unwrap(this).getNetworkMode().let(NetworkMode::wrap)
+    override fun networkMode(): NetworkMode = unwrap(this).getNetworkMode().let(NetworkMode::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun taskDefinitionArn(): String = unwrap(this).getTaskDefinitionArn()
+    override fun taskDefinitionArn(): String = unwrap(this).getTaskDefinitionArn()
 
-    public override fun taskRole(): IRole = unwrap(this).getTaskRole().let(IRole::wrap)
+    override fun taskRole(): IRole = unwrap(this).getTaskRole().let(IRole::wrap)
   }
 
   public companion object {

@@ -157,71 +157,51 @@ public open class CfnInferenceExperiment internal constructor(
   }
 
   public interface Builder {
-    public fun dataStorageConfig(dataStorageConfig: IResolvable) {
-    }
+    public fun dataStorageConfig(dataStorageConfig: IResolvable)
 
-    public fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty) {
-    }
+    public fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e51e3d075653daa5174b2be450830b085f8bebfaa6b2d62d2a20fe1a6bec95a5")
-    public fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun desiredState(desiredState: String) {
-    }
+    public fun desiredState(desiredState: String)
 
-    public fun endpointName(endpointName: String) {
-    }
+    public fun endpointName(endpointName: String)
 
-    public fun kmsKey(kmsKey: String) {
-    }
+    public fun kmsKey(kmsKey: String)
 
-    public fun modelVariants(modelVariants: IResolvable) {
-    }
+    public fun modelVariants(modelVariants: IResolvable)
 
-    public fun modelVariants(modelVariants: List<Any>) {
-    }
+    public fun modelVariants(modelVariants: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: InferenceExperimentScheduleProperty) {
-    }
+    public fun schedule(schedule: InferenceExperimentScheduleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b244a9c073c83fcd951950f537fee6a7d3d8ec01411a1f6d5ead347bd57d29ac")
-    public fun schedule(schedule: InferenceExperimentScheduleProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: InferenceExperimentScheduleProperty.Builder.() -> Unit)
 
-    public fun shadowModeConfig(shadowModeConfig: IResolvable) {
-    }
+    public fun shadowModeConfig(shadowModeConfig: IResolvable)
 
-    public fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty) {
-    }
+    public fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2243bb2097ea95ae6f2f4fe27c807f8fc42844d4f75293db606946ba663d6b13")
-    public fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty.Builder.() -> Unit) {
-    }
+    public fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty.Builder.() -> Unit)
 
-    public fun statusReason(statusReason: String) {
-    }
+    public fun statusReason(statusReason: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -231,88 +211,86 @@ public open class CfnInferenceExperiment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.Builder
         = software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.Builder.create(scope, id)
 
-    public override fun dataStorageConfig(dataStorageConfig: IResolvable) {
+    override fun dataStorageConfig(dataStorageConfig: IResolvable) {
       cdkBuilder.dataStorageConfig(dataStorageConfig.let(IResolvable::unwrap))
     }
 
-    public override fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty) {
+    override fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty) {
       cdkBuilder.dataStorageConfig(dataStorageConfig.let(DataStorageConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e51e3d075653daa5174b2be450830b085f8bebfaa6b2d62d2a20fe1a6bec95a5")
-    public override
-        fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty.Builder.() -> Unit): Unit
-        = dataStorageConfig(DataStorageConfigProperty(dataStorageConfig))
+    override fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty.Builder.() -> Unit):
+        Unit = dataStorageConfig(DataStorageConfigProperty(dataStorageConfig))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun desiredState(desiredState: String) {
+    override fun desiredState(desiredState: String) {
       cdkBuilder.desiredState(desiredState)
     }
 
-    public override fun endpointName(endpointName: String) {
+    override fun endpointName(endpointName: String) {
       cdkBuilder.endpointName(endpointName)
     }
 
-    public override fun kmsKey(kmsKey: String) {
+    override fun kmsKey(kmsKey: String) {
       cdkBuilder.kmsKey(kmsKey)
     }
 
-    public override fun modelVariants(modelVariants: IResolvable) {
+    override fun modelVariants(modelVariants: IResolvable) {
       cdkBuilder.modelVariants(modelVariants.let(IResolvable::unwrap))
     }
 
-    public override fun modelVariants(modelVariants: List<Any>) {
+    override fun modelVariants(modelVariants: List<Any>) {
       cdkBuilder.modelVariants(modelVariants)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: InferenceExperimentScheduleProperty) {
+    override fun schedule(schedule: InferenceExperimentScheduleProperty) {
       cdkBuilder.schedule(schedule.let(InferenceExperimentScheduleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b244a9c073c83fcd951950f537fee6a7d3d8ec01411a1f6d5ead347bd57d29ac")
-    public override fun schedule(schedule: InferenceExperimentScheduleProperty.Builder.() -> Unit):
-        Unit = schedule(InferenceExperimentScheduleProperty(schedule))
+    override fun schedule(schedule: InferenceExperimentScheduleProperty.Builder.() -> Unit): Unit =
+        schedule(InferenceExperimentScheduleProperty(schedule))
 
-    public override fun shadowModeConfig(shadowModeConfig: IResolvable) {
+    override fun shadowModeConfig(shadowModeConfig: IResolvable) {
       cdkBuilder.shadowModeConfig(shadowModeConfig.let(IResolvable::unwrap))
     }
 
-    public override fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty) {
+    override fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty) {
       cdkBuilder.shadowModeConfig(shadowModeConfig.let(ShadowModeConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2243bb2097ea95ae6f2f4fe27c807f8fc42844d4f75293db606946ba663d6b13")
-    public override
-        fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty.Builder.() -> Unit): Unit =
-        shadowModeConfig(ShadowModeConfigProperty(shadowModeConfig))
+    override fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty.Builder.() -> Unit):
+        Unit = shadowModeConfig(ShadowModeConfigProperty(shadowModeConfig))
 
-    public override fun statusReason(statusReason: String) {
+    override fun statusReason(statusReason: String) {
       cdkBuilder.statusReason(statusReason)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -349,22 +327,17 @@ public open class CfnInferenceExperiment internal constructor(
     public fun kmsKey(): String? = unwrap(this).getKmsKey()
 
     public interface Builder {
-      public fun contentType(contentType: IResolvable) {
-      }
+      public fun contentType(contentType: IResolvable)
 
-      public fun contentType(contentType: CaptureContentTypeHeaderProperty) {
-      }
+      public fun contentType(contentType: CaptureContentTypeHeaderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73064d70e8f53d7e2ea89d687f25104ccbdebcde028549ea11f97ef5cf9f12ab")
-      public fun contentType(contentType: CaptureContentTypeHeaderProperty.Builder.() -> Unit) {
-      }
+      public fun contentType(contentType: CaptureContentTypeHeaderProperty.Builder.() -> Unit)
 
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
 
-      public fun kmsKey(kmsKey: String) {
-      }
+      public fun kmsKey(kmsKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -373,25 +346,24 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty.builder()
 
-      public override fun contentType(contentType: IResolvable) {
+      override fun contentType(contentType: IResolvable) {
         cdkBuilder.contentType(contentType.let(IResolvable::unwrap))
       }
 
-      public override fun contentType(contentType: CaptureContentTypeHeaderProperty) {
+      override fun contentType(contentType: CaptureContentTypeHeaderProperty) {
         cdkBuilder.contentType(contentType.let(CaptureContentTypeHeaderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73064d70e8f53d7e2ea89d687f25104ccbdebcde028549ea11f97ef5cf9f12ab")
-      public override
-          fun contentType(contentType: CaptureContentTypeHeaderProperty.Builder.() -> Unit): Unit =
-          contentType(CaptureContentTypeHeaderProperty(contentType))
+      override fun contentType(contentType: CaptureContentTypeHeaderProperty.Builder.() -> Unit):
+          Unit = contentType(CaptureContentTypeHeaderProperty(contentType))
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
-      public override fun kmsKey(kmsKey: String) {
+      override fun kmsKey(kmsKey: String) {
         cdkBuilder.kmsKey(kmsKey)
       }
 
@@ -404,11 +376,11 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.DataStorageConfigProperty,
     ) : DataStorageConfigProperty {
-      public override fun contentType(): Any? = unwrap(this).getContentType()
+      override fun contentType(): Any? = unwrap(this).getContentType()
 
-      public override fun destination(): String = unwrap(this).getDestination()
+      override fun destination(): String = unwrap(this).getDestination()
 
-      public override fun kmsKey(): String? = unwrap(this).getKmsKey()
+      override fun kmsKey(): String? = unwrap(this).getKmsKey()
     }
 
     public companion object {
@@ -437,20 +409,16 @@ public open class CfnInferenceExperiment internal constructor(
     public fun realTimeInferenceConfig(): Any
 
     public interface Builder {
-      public fun infrastructureType(infrastructureType: String) {
-      }
+      public fun infrastructureType(infrastructureType: String)
 
-      public fun realTimeInferenceConfig(realTimeInferenceConfig: IResolvable) {
-      }
+      public fun realTimeInferenceConfig(realTimeInferenceConfig: IResolvable)
 
-      public fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty) {
-      }
+      public fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0f3dffa871b10f2225becc151d1c6d7eb2481c0952003198a4adbd9833aa3b6c")
       public
-          fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty.Builder.() -> Unit) {
-      }
+          fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -459,22 +427,22 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty.builder()
 
-      public override fun infrastructureType(infrastructureType: String) {
+      override fun infrastructureType(infrastructureType: String) {
         cdkBuilder.infrastructureType(infrastructureType)
       }
 
-      public override fun realTimeInferenceConfig(realTimeInferenceConfig: IResolvable) {
+      override fun realTimeInferenceConfig(realTimeInferenceConfig: IResolvable) {
         cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty) {
         cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig.let(RealTimeInferenceConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0f3dffa871b10f2225becc151d1c6d7eb2481c0952003198a4adbd9833aa3b6c")
-      public override
+      override
           fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty.Builder.() -> Unit):
           Unit = realTimeInferenceConfig(RealTimeInferenceConfigProperty(realTimeInferenceConfig))
 
@@ -487,9 +455,9 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelInfrastructureConfigProperty,
     ) : ModelInfrastructureConfigProperty {
-      public override fun infrastructureType(): String = unwrap(this).getInfrastructureType()
+      override fun infrastructureType(): String = unwrap(this).getInfrastructureType()
 
-      public override fun realTimeInferenceConfig(): Any = unwrap(this).getRealTimeInferenceConfig()
+      override fun realTimeInferenceConfig(): Any = unwrap(this).getRealTimeInferenceConfig()
     }
 
     public companion object {
@@ -519,11 +487,9 @@ public open class CfnInferenceExperiment internal constructor(
     public fun shadowModelVariantName(): String
 
     public interface Builder {
-      public fun samplingPercentage(samplingPercentage: Number) {
-      }
+      public fun samplingPercentage(samplingPercentage: Number)
 
-      public fun shadowModelVariantName(shadowModelVariantName: String) {
-      }
+      public fun shadowModelVariantName(shadowModelVariantName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -532,11 +498,11 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty.builder()
 
-      public override fun samplingPercentage(samplingPercentage: Number) {
+      override fun samplingPercentage(samplingPercentage: Number) {
         cdkBuilder.samplingPercentage(samplingPercentage)
       }
 
-      public override fun shadowModelVariantName(shadowModelVariantName: String) {
+      override fun shadowModelVariantName(shadowModelVariantName: String) {
         cdkBuilder.shadowModelVariantName(shadowModelVariantName)
       }
 
@@ -549,10 +515,9 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModelVariantConfigProperty,
     ) : ShadowModelVariantConfigProperty {
-      public override fun samplingPercentage(): Number = unwrap(this).getSamplingPercentage()
+      override fun samplingPercentage(): Number = unwrap(this).getSamplingPercentage()
 
-      public override fun shadowModelVariantName(): String =
-          unwrap(this).getShadowModelVariantName()
+      override fun shadowModelVariantName(): String = unwrap(this).getShadowModelVariantName()
     }
 
     public companion object {
@@ -581,14 +546,11 @@ public open class CfnInferenceExperiment internal constructor(
     public fun sourceModelVariantName(): String
 
     public interface Builder {
-      public fun shadowModelVariants(shadowModelVariants: IResolvable) {
-      }
+      public fun shadowModelVariants(shadowModelVariants: IResolvable)
 
-      public fun shadowModelVariants(shadowModelVariants: List<Any>) {
-      }
+      public fun shadowModelVariants(shadowModelVariants: List<Any>)
 
-      public fun sourceModelVariantName(sourceModelVariantName: String) {
-      }
+      public fun sourceModelVariantName(sourceModelVariantName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -597,15 +559,15 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty.builder()
 
-      public override fun shadowModelVariants(shadowModelVariants: IResolvable) {
+      override fun shadowModelVariants(shadowModelVariants: IResolvable) {
         cdkBuilder.shadowModelVariants(shadowModelVariants.let(IResolvable::unwrap))
       }
 
-      public override fun shadowModelVariants(shadowModelVariants: List<Any>) {
+      override fun shadowModelVariants(shadowModelVariants: List<Any>) {
         cdkBuilder.shadowModelVariants(shadowModelVariants)
       }
 
-      public override fun sourceModelVariantName(sourceModelVariantName: String) {
+      override fun sourceModelVariantName(sourceModelVariantName: String) {
         cdkBuilder.sourceModelVariantName(sourceModelVariantName)
       }
 
@@ -618,10 +580,9 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ShadowModeConfigProperty,
     ) : ShadowModeConfigProperty {
-      public override fun shadowModelVariants(): Any = unwrap(this).getShadowModelVariants()
+      override fun shadowModelVariants(): Any = unwrap(this).getShadowModelVariants()
 
-      public override fun sourceModelVariantName(): String =
-          unwrap(this).getSourceModelVariantName()
+      override fun sourceModelVariantName(): String = unwrap(this).getSourceModelVariantName()
     }
 
     public companion object {
@@ -650,11 +611,9 @@ public open class CfnInferenceExperiment internal constructor(
     public fun instanceType(): String
 
     public interface Builder {
-      public fun instanceCount(instanceCount: Number) {
-      }
+      public fun instanceCount(instanceCount: Number)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -663,11 +622,11 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty.builder()
 
-      public override fun instanceCount(instanceCount: Number) {
+      override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
@@ -680,9 +639,9 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.RealTimeInferenceConfigProperty,
     ) : RealTimeInferenceConfigProperty {
-      public override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
 
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
     }
 
     public companion object {
@@ -713,23 +672,18 @@ public open class CfnInferenceExperiment internal constructor(
     public fun variantName(): String
 
     public interface Builder {
-      public fun infrastructureConfig(infrastructureConfig: IResolvable) {
-      }
+      public fun infrastructureConfig(infrastructureConfig: IResolvable)
 
-      public fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty) {
-      }
+      public fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ed0abd901e636aeddd8f2b2728a28d8b56e3079fb1dedc6567ee87784b2dcdc")
       public
-          fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty.Builder.() -> Unit) {
-      }
+          fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty.Builder.() -> Unit)
 
-      public fun modelName(modelName: String) {
-      }
+      public fun modelName(modelName: String)
 
-      public fun variantName(variantName: String) {
-      }
+      public fun variantName(variantName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -738,26 +692,25 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty.builder()
 
-      public override fun infrastructureConfig(infrastructureConfig: IResolvable) {
+      override fun infrastructureConfig(infrastructureConfig: IResolvable) {
         cdkBuilder.infrastructureConfig(infrastructureConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty) {
+      override fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty) {
         cdkBuilder.infrastructureConfig(infrastructureConfig.let(ModelInfrastructureConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ed0abd901e636aeddd8f2b2728a28d8b56e3079fb1dedc6567ee87784b2dcdc")
-      public override
+      override
           fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty.Builder.() -> Unit):
           Unit = infrastructureConfig(ModelInfrastructureConfigProperty(infrastructureConfig))
 
-      public override fun modelName(modelName: String) {
+      override fun modelName(modelName: String) {
         cdkBuilder.modelName(modelName)
       }
 
-      public override fun variantName(variantName: String) {
+      override fun variantName(variantName: String) {
         cdkBuilder.variantName(variantName)
       }
 
@@ -770,11 +723,11 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.ModelVariantConfigProperty,
     ) : ModelVariantConfigProperty {
-      public override fun infrastructureConfig(): Any = unwrap(this).getInfrastructureConfig()
+      override fun infrastructureConfig(): Any = unwrap(this).getInfrastructureConfig()
 
-      public override fun modelName(): String = unwrap(this).getModelName()
+      override fun modelName(): String = unwrap(this).getModelName()
 
-      public override fun variantName(): String = unwrap(this).getVariantName()
+      override fun variantName(): String = unwrap(this).getVariantName()
     }
 
     public companion object {
@@ -803,11 +756,9 @@ public open class CfnInferenceExperiment internal constructor(
     public fun startTime(): String? = unwrap(this).getStartTime()
 
     public interface Builder {
-      public fun endTime(endTime: String) {
-      }
+      public fun endTime(endTime: String)
 
-      public fun startTime(startTime: String) {
-      }
+      public fun startTime(startTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -816,11 +767,11 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty.builder()
 
-      public override fun endTime(endTime: String) {
+      override fun endTime(endTime: String) {
         cdkBuilder.endTime(endTime)
       }
 
-      public override fun startTime(startTime: String) {
+      override fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)
       }
 
@@ -833,9 +784,9 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.InferenceExperimentScheduleProperty,
     ) : InferenceExperimentScheduleProperty {
-      public override fun endTime(): String? = unwrap(this).getEndTime()
+      override fun endTime(): String? = unwrap(this).getEndTime()
 
-      public override fun startTime(): String? = unwrap(this).getStartTime()
+      override fun startTime(): String? = unwrap(this).getStartTime()
     }
 
     public companion object {
@@ -865,11 +816,9 @@ public open class CfnInferenceExperiment internal constructor(
     public fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?: emptyList()
 
     public interface Builder {
-      public fun csvContentTypes(csvContentTypes: List<String>) {
-      }
+      public fun csvContentTypes(csvContentTypes: List<String>)
 
-      public fun jsonContentTypes(jsonContentTypes: List<String>) {
-      }
+      public fun jsonContentTypes(jsonContentTypes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -878,11 +827,11 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty.builder()
 
-      public override fun csvContentTypes(csvContentTypes: List<String>) {
+      override fun csvContentTypes(csvContentTypes: List<String>) {
         cdkBuilder.csvContentTypes(csvContentTypes)
       }
 
-      public override fun jsonContentTypes(jsonContentTypes: List<String>) {
+      override fun jsonContentTypes(jsonContentTypes: List<String>) {
         cdkBuilder.jsonContentTypes(jsonContentTypes)
       }
 
@@ -895,10 +844,10 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty,
     ) : CaptureContentTypeHeaderProperty {
-      public override fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?:
+      override fun csvContentTypes(): List<String> = unwrap(this).getCsvContentTypes() ?:
           emptyList()
 
-      public override fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?:
+      override fun jsonContentTypes(): List<String> = unwrap(this).getJsonContentTypes() ?:
           emptyList()
     }
 
@@ -930,14 +879,11 @@ public open class CfnInferenceExperiment internal constructor(
     public fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
 
     public interface Builder {
-      public fun endpointConfigName(endpointConfigName: String) {
-      }
+      public fun endpointConfigName(endpointConfigName: String)
 
-      public fun endpointName(endpointName: String) {
-      }
+      public fun endpointName(endpointName: String)
 
-      public fun endpointStatus(endpointStatus: String) {
-      }
+      public fun endpointStatus(endpointStatus: String)
     }
 
     private class BuilderImpl : Builder {
@@ -946,15 +892,15 @@ public open class CfnInferenceExperiment internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty.builder()
 
-      public override fun endpointConfigName(endpointConfigName: String) {
+      override fun endpointConfigName(endpointConfigName: String) {
         cdkBuilder.endpointConfigName(endpointConfigName)
       }
 
-      public override fun endpointName(endpointName: String) {
+      override fun endpointName(endpointName: String) {
         cdkBuilder.endpointName(endpointName)
       }
 
-      public override fun endpointStatus(endpointStatus: String) {
+      override fun endpointStatus(endpointStatus: String) {
         cdkBuilder.endpointStatus(endpointStatus)
       }
 
@@ -967,11 +913,11 @@ public open class CfnInferenceExperiment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.EndpointMetadataProperty,
     ) : EndpointMetadataProperty {
-      public override fun endpointConfigName(): String? = unwrap(this).getEndpointConfigName()
+      override fun endpointConfigName(): String? = unwrap(this).getEndpointConfigName()
 
-      public override fun endpointName(): String = unwrap(this).getEndpointName()
+      override fun endpointName(): String = unwrap(this).getEndpointName()
 
-      public override fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
+      override fun endpointStatus(): String? = unwrap(this).getEndpointStatus()
     }
 
     public companion object {

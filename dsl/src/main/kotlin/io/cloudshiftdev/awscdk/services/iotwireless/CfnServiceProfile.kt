@@ -100,22 +100,17 @@ public open class CfnServiceProfile internal constructor(
   }
 
   public interface Builder {
-    public fun loRaWan(loRaWan: IResolvable) {
-    }
+    public fun loRaWan(loRaWan: IResolvable)
 
-    public fun loRaWan(loRaWan: LoRaWANServiceProfileProperty) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANServiceProfileProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4982f9e5497357dc9cc9cb2cf985bb6a1f014c6ac8fb5fe941b4bc0ee586ce8f")
-    public fun loRaWan(loRaWan: LoRaWANServiceProfileProperty.Builder.() -> Unit) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANServiceProfileProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -125,24 +120,24 @@ public open class CfnServiceProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnServiceProfile.Builder =
         software.amazon.awscdk.services.iotwireless.CfnServiceProfile.Builder.create(scope, id)
 
-    public override fun loRaWan(loRaWan: IResolvable) {
+    override fun loRaWan(loRaWan: IResolvable) {
       cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWan(loRaWan: LoRaWANServiceProfileProperty) {
+    override fun loRaWan(loRaWan: LoRaWANServiceProfileProperty) {
       cdkBuilder.loRaWan(loRaWan.let(LoRaWANServiceProfileProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4982f9e5497357dc9cc9cb2cf985bb6a1f014c6ac8fb5fe941b4bc0ee586ce8f")
-    public override fun loRaWan(loRaWan: LoRaWANServiceProfileProperty.Builder.() -> Unit): Unit =
+    override fun loRaWan(loRaWan: LoRaWANServiceProfileProperty.Builder.() -> Unit): Unit =
         loRaWan(LoRaWANServiceProfileProperty(loRaWan))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -211,83 +206,57 @@ public open class CfnServiceProfile internal constructor(
     public fun ulRatePolicy(): String? = unwrap(this).getUlRatePolicy()
 
     public interface Builder {
-      public fun addGwMetadata(addGwMetadata: Boolean) {
-      }
+      public fun addGwMetadata(addGwMetadata: Boolean)
 
-      public fun addGwMetadata(addGwMetadata: IResolvable) {
-      }
+      public fun addGwMetadata(addGwMetadata: IResolvable)
 
-      public fun channelMask(channelMask: String) {
-      }
+      public fun channelMask(channelMask: String)
 
-      public fun devStatusReqFreq(devStatusReqFreq: Number) {
-      }
+      public fun devStatusReqFreq(devStatusReqFreq: Number)
 
-      public fun dlBucketSize(dlBucketSize: Number) {
-      }
+      public fun dlBucketSize(dlBucketSize: Number)
 
-      public fun dlRate(dlRate: Number) {
-      }
+      public fun dlRate(dlRate: Number)
 
-      public fun dlRatePolicy(dlRatePolicy: String) {
-      }
+      public fun dlRatePolicy(dlRatePolicy: String)
 
-      public fun drMax(drMax: Number) {
-      }
+      public fun drMax(drMax: Number)
 
-      public fun drMin(drMin: Number) {
-      }
+      public fun drMin(drMin: Number)
 
-      public fun hrAllowed(hrAllowed: Boolean) {
-      }
+      public fun hrAllowed(hrAllowed: Boolean)
 
-      public fun hrAllowed(hrAllowed: IResolvable) {
-      }
+      public fun hrAllowed(hrAllowed: IResolvable)
 
-      public fun minGwDiversity(minGwDiversity: Number) {
-      }
+      public fun minGwDiversity(minGwDiversity: Number)
 
-      public fun nwkGeoLoc(nwkGeoLoc: Boolean) {
-      }
+      public fun nwkGeoLoc(nwkGeoLoc: Boolean)
 
-      public fun nwkGeoLoc(nwkGeoLoc: IResolvable) {
-      }
+      public fun nwkGeoLoc(nwkGeoLoc: IResolvable)
 
-      public fun prAllowed(prAllowed: Boolean) {
-      }
+      public fun prAllowed(prAllowed: Boolean)
 
-      public fun prAllowed(prAllowed: IResolvable) {
-      }
+      public fun prAllowed(prAllowed: IResolvable)
 
-      public fun raAllowed(raAllowed: Boolean) {
-      }
+      public fun raAllowed(raAllowed: Boolean)
 
-      public fun raAllowed(raAllowed: IResolvable) {
-      }
+      public fun raAllowed(raAllowed: IResolvable)
 
-      public fun reportDevStatusBattery(reportDevStatusBattery: Boolean) {
-      }
+      public fun reportDevStatusBattery(reportDevStatusBattery: Boolean)
 
-      public fun reportDevStatusBattery(reportDevStatusBattery: IResolvable) {
-      }
+      public fun reportDevStatusBattery(reportDevStatusBattery: IResolvable)
 
-      public fun reportDevStatusMargin(reportDevStatusMargin: Boolean) {
-      }
+      public fun reportDevStatusMargin(reportDevStatusMargin: Boolean)
 
-      public fun reportDevStatusMargin(reportDevStatusMargin: IResolvable) {
-      }
+      public fun reportDevStatusMargin(reportDevStatusMargin: IResolvable)
 
-      public fun targetPer(targetPer: Number) {
-      }
+      public fun targetPer(targetPer: Number)
 
-      public fun ulBucketSize(ulBucketSize: Number) {
-      }
+      public fun ulBucketSize(ulBucketSize: Number)
 
-      public fun ulRate(ulRate: Number) {
-      }
+      public fun ulRate(ulRate: Number)
 
-      public fun ulRatePolicy(ulRatePolicy: String) {
-      }
+      public fun ulRatePolicy(ulRatePolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -296,107 +265,107 @@ public open class CfnServiceProfile internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnServiceProfile.LoRaWANServiceProfileProperty.builder()
 
-      public override fun addGwMetadata(addGwMetadata: Boolean) {
+      override fun addGwMetadata(addGwMetadata: Boolean) {
         cdkBuilder.addGwMetadata(addGwMetadata)
       }
 
-      public override fun addGwMetadata(addGwMetadata: IResolvable) {
+      override fun addGwMetadata(addGwMetadata: IResolvable) {
         cdkBuilder.addGwMetadata(addGwMetadata.let(IResolvable::unwrap))
       }
 
-      public override fun channelMask(channelMask: String) {
+      override fun channelMask(channelMask: String) {
         cdkBuilder.channelMask(channelMask)
       }
 
-      public override fun devStatusReqFreq(devStatusReqFreq: Number) {
+      override fun devStatusReqFreq(devStatusReqFreq: Number) {
         cdkBuilder.devStatusReqFreq(devStatusReqFreq)
       }
 
-      public override fun dlBucketSize(dlBucketSize: Number) {
+      override fun dlBucketSize(dlBucketSize: Number) {
         cdkBuilder.dlBucketSize(dlBucketSize)
       }
 
-      public override fun dlRate(dlRate: Number) {
+      override fun dlRate(dlRate: Number) {
         cdkBuilder.dlRate(dlRate)
       }
 
-      public override fun dlRatePolicy(dlRatePolicy: String) {
+      override fun dlRatePolicy(dlRatePolicy: String) {
         cdkBuilder.dlRatePolicy(dlRatePolicy)
       }
 
-      public override fun drMax(drMax: Number) {
+      override fun drMax(drMax: Number) {
         cdkBuilder.drMax(drMax)
       }
 
-      public override fun drMin(drMin: Number) {
+      override fun drMin(drMin: Number) {
         cdkBuilder.drMin(drMin)
       }
 
-      public override fun hrAllowed(hrAllowed: Boolean) {
+      override fun hrAllowed(hrAllowed: Boolean) {
         cdkBuilder.hrAllowed(hrAllowed)
       }
 
-      public override fun hrAllowed(hrAllowed: IResolvable) {
+      override fun hrAllowed(hrAllowed: IResolvable) {
         cdkBuilder.hrAllowed(hrAllowed.let(IResolvable::unwrap))
       }
 
-      public override fun minGwDiversity(minGwDiversity: Number) {
+      override fun minGwDiversity(minGwDiversity: Number) {
         cdkBuilder.minGwDiversity(minGwDiversity)
       }
 
-      public override fun nwkGeoLoc(nwkGeoLoc: Boolean) {
+      override fun nwkGeoLoc(nwkGeoLoc: Boolean) {
         cdkBuilder.nwkGeoLoc(nwkGeoLoc)
       }
 
-      public override fun nwkGeoLoc(nwkGeoLoc: IResolvable) {
+      override fun nwkGeoLoc(nwkGeoLoc: IResolvable) {
         cdkBuilder.nwkGeoLoc(nwkGeoLoc.let(IResolvable::unwrap))
       }
 
-      public override fun prAllowed(prAllowed: Boolean) {
+      override fun prAllowed(prAllowed: Boolean) {
         cdkBuilder.prAllowed(prAllowed)
       }
 
-      public override fun prAllowed(prAllowed: IResolvable) {
+      override fun prAllowed(prAllowed: IResolvable) {
         cdkBuilder.prAllowed(prAllowed.let(IResolvable::unwrap))
       }
 
-      public override fun raAllowed(raAllowed: Boolean) {
+      override fun raAllowed(raAllowed: Boolean) {
         cdkBuilder.raAllowed(raAllowed)
       }
 
-      public override fun raAllowed(raAllowed: IResolvable) {
+      override fun raAllowed(raAllowed: IResolvable) {
         cdkBuilder.raAllowed(raAllowed.let(IResolvable::unwrap))
       }
 
-      public override fun reportDevStatusBattery(reportDevStatusBattery: Boolean) {
+      override fun reportDevStatusBattery(reportDevStatusBattery: Boolean) {
         cdkBuilder.reportDevStatusBattery(reportDevStatusBattery)
       }
 
-      public override fun reportDevStatusBattery(reportDevStatusBattery: IResolvable) {
+      override fun reportDevStatusBattery(reportDevStatusBattery: IResolvable) {
         cdkBuilder.reportDevStatusBattery(reportDevStatusBattery.let(IResolvable::unwrap))
       }
 
-      public override fun reportDevStatusMargin(reportDevStatusMargin: Boolean) {
+      override fun reportDevStatusMargin(reportDevStatusMargin: Boolean) {
         cdkBuilder.reportDevStatusMargin(reportDevStatusMargin)
       }
 
-      public override fun reportDevStatusMargin(reportDevStatusMargin: IResolvable) {
+      override fun reportDevStatusMargin(reportDevStatusMargin: IResolvable) {
         cdkBuilder.reportDevStatusMargin(reportDevStatusMargin.let(IResolvable::unwrap))
       }
 
-      public override fun targetPer(targetPer: Number) {
+      override fun targetPer(targetPer: Number) {
         cdkBuilder.targetPer(targetPer)
       }
 
-      public override fun ulBucketSize(ulBucketSize: Number) {
+      override fun ulBucketSize(ulBucketSize: Number) {
         cdkBuilder.ulBucketSize(ulBucketSize)
       }
 
-      public override fun ulRate(ulRate: Number) {
+      override fun ulRate(ulRate: Number) {
         cdkBuilder.ulRate(ulRate)
       }
 
-      public override fun ulRatePolicy(ulRatePolicy: String) {
+      override fun ulRatePolicy(ulRatePolicy: String) {
         cdkBuilder.ulRatePolicy(ulRatePolicy)
       }
 
@@ -409,43 +378,43 @@ public open class CfnServiceProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnServiceProfile.LoRaWANServiceProfileProperty,
     ) : LoRaWANServiceProfileProperty {
-      public override fun addGwMetadata(): Any? = unwrap(this).getAddGwMetadata()
+      override fun addGwMetadata(): Any? = unwrap(this).getAddGwMetadata()
 
-      public override fun channelMask(): String? = unwrap(this).getChannelMask()
+      override fun channelMask(): String? = unwrap(this).getChannelMask()
 
-      public override fun devStatusReqFreq(): Number? = unwrap(this).getDevStatusReqFreq()
+      override fun devStatusReqFreq(): Number? = unwrap(this).getDevStatusReqFreq()
 
-      public override fun dlBucketSize(): Number? = unwrap(this).getDlBucketSize()
+      override fun dlBucketSize(): Number? = unwrap(this).getDlBucketSize()
 
-      public override fun dlRate(): Number? = unwrap(this).getDlRate()
+      override fun dlRate(): Number? = unwrap(this).getDlRate()
 
-      public override fun dlRatePolicy(): String? = unwrap(this).getDlRatePolicy()
+      override fun dlRatePolicy(): String? = unwrap(this).getDlRatePolicy()
 
-      public override fun drMax(): Number? = unwrap(this).getDrMax()
+      override fun drMax(): Number? = unwrap(this).getDrMax()
 
-      public override fun drMin(): Number? = unwrap(this).getDrMin()
+      override fun drMin(): Number? = unwrap(this).getDrMin()
 
-      public override fun hrAllowed(): Any? = unwrap(this).getHrAllowed()
+      override fun hrAllowed(): Any? = unwrap(this).getHrAllowed()
 
-      public override fun minGwDiversity(): Number? = unwrap(this).getMinGwDiversity()
+      override fun minGwDiversity(): Number? = unwrap(this).getMinGwDiversity()
 
-      public override fun nwkGeoLoc(): Any? = unwrap(this).getNwkGeoLoc()
+      override fun nwkGeoLoc(): Any? = unwrap(this).getNwkGeoLoc()
 
-      public override fun prAllowed(): Any? = unwrap(this).getPrAllowed()
+      override fun prAllowed(): Any? = unwrap(this).getPrAllowed()
 
-      public override fun raAllowed(): Any? = unwrap(this).getRaAllowed()
+      override fun raAllowed(): Any? = unwrap(this).getRaAllowed()
 
-      public override fun reportDevStatusBattery(): Any? = unwrap(this).getReportDevStatusBattery()
+      override fun reportDevStatusBattery(): Any? = unwrap(this).getReportDevStatusBattery()
 
-      public override fun reportDevStatusMargin(): Any? = unwrap(this).getReportDevStatusMargin()
+      override fun reportDevStatusMargin(): Any? = unwrap(this).getReportDevStatusMargin()
 
-      public override fun targetPer(): Number? = unwrap(this).getTargetPer()
+      override fun targetPer(): Number? = unwrap(this).getTargetPer()
 
-      public override fun ulBucketSize(): Number? = unwrap(this).getUlBucketSize()
+      override fun ulBucketSize(): Number? = unwrap(this).getUlBucketSize()
 
-      public override fun ulRate(): Number? = unwrap(this).getUlRate()
+      override fun ulRate(): Number? = unwrap(this).getUlRate()
 
-      public override fun ulRatePolicy(): String? = unwrap(this).getUlRatePolicy()
+      override fun ulRatePolicy(): String? = unwrap(this).getUlRatePolicy()
     }
 
     public companion object {

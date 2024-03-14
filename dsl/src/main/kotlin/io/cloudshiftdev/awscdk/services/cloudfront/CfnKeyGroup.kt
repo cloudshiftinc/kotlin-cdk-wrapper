@@ -40,16 +40,13 @@ public open class CfnKeyGroup internal constructor(
       keyGroupConfig(KeyGroupConfigProperty(`value`))
 
   public interface Builder {
-    public fun keyGroupConfig(keyGroupConfig: IResolvable) {
-    }
+    public fun keyGroupConfig(keyGroupConfig: IResolvable)
 
-    public fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty) {
-    }
+    public fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d9a4a4f05b6de8381284aad156431b9b88f598f84600d29913cf7a91f781bf4a")
-    public fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty.Builder.() -> Unit) {
-    }
+    public fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -59,18 +56,18 @@ public open class CfnKeyGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnKeyGroup.Builder =
         software.amazon.awscdk.services.cloudfront.CfnKeyGroup.Builder.create(scope, id)
 
-    public override fun keyGroupConfig(keyGroupConfig: IResolvable) {
+    override fun keyGroupConfig(keyGroupConfig: IResolvable) {
       cdkBuilder.keyGroupConfig(keyGroupConfig.let(IResolvable::unwrap))
     }
 
-    public override fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty) {
+    override fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty) {
       cdkBuilder.keyGroupConfig(keyGroupConfig.let(KeyGroupConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d9a4a4f05b6de8381284aad156431b9b88f598f84600d29913cf7a91f781bf4a")
-    public override fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty.Builder.() -> Unit):
-        Unit = keyGroupConfig(KeyGroupConfigProperty(keyGroupConfig))
+    override fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty.Builder.() -> Unit): Unit =
+        keyGroupConfig(KeyGroupConfigProperty(keyGroupConfig))
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CfnKeyGroup = cdkBuilder.build()
   }
@@ -104,14 +101,11 @@ public open class CfnKeyGroup internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun items(items: List<String>) {
-      }
+      public fun items(items: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -119,15 +113,15 @@ public open class CfnKeyGroup internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun items(items: List<String>) {
+      override fun items(items: List<String>) {
         cdkBuilder.items(items)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -140,11 +134,11 @@ public open class CfnKeyGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnKeyGroup.KeyGroupConfigProperty,
     ) : KeyGroupConfigProperty {
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
+      override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {

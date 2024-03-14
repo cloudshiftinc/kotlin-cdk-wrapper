@@ -30,11 +30,9 @@ public open class CfnGatewayRouteTableAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun gatewayId(gatewayId: String) {
-    }
+    public fun gatewayId(gatewayId: String)
 
-    public fun routeTableId(routeTableId: String) {
-    }
+    public fun routeTableId(routeTableId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnGatewayRouteTableAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociation.Builder.create(scope,
         id)
 
-    public override fun gatewayId(gatewayId: String) {
+    override fun gatewayId(gatewayId: String) {
       cdkBuilder.gatewayId(gatewayId)
     }
 
-    public override fun routeTableId(routeTableId: String) {
+    override fun routeTableId(routeTableId: String) {
       cdkBuilder.routeTableId(routeTableId)
     }
 

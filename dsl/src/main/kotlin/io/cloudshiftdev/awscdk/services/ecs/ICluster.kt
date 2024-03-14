@@ -35,36 +35,34 @@ public interface ICluster : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ICluster,
   ) : ICluster {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun autoscalingGroup(): IAutoScalingGroup? =
+    override fun autoscalingGroup(): IAutoScalingGroup? =
         unwrap(this).getAutoscalingGroup()?.let(IAutoScalingGroup::wrap)
 
-    public override fun clusterArn(): String = unwrap(this).getClusterArn()
+    override fun clusterArn(): String = unwrap(this).getClusterArn()
 
-    public override fun clusterName(): String = unwrap(this).getClusterName()
+    override fun clusterName(): String = unwrap(this).getClusterName()
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun defaultCloudMapNamespace(): INamespace? =
+    override fun defaultCloudMapNamespace(): INamespace? =
         unwrap(this).getDefaultCloudMapNamespace()?.let(INamespace::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun executeCommandConfiguration(): ExecuteCommandConfiguration? =
+    override fun executeCommandConfiguration(): ExecuteCommandConfiguration? =
         unwrap(this).getExecuteCommandConfiguration()?.let(ExecuteCommandConfiguration::wrap)
 
-    public override fun hasEc2Capacity(): Boolean = unwrap(this).getHasEc2Capacity()
+    override fun hasEc2Capacity(): Boolean = unwrap(this).getHasEc2Capacity()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+    override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
   }
 
   public companion object {

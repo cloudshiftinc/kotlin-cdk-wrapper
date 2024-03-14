@@ -9,11 +9,9 @@ public open class ServerDeploymentConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), IServerDeploymentConfig {
   public interface Builder {
-    public fun deploymentConfigName(deploymentConfigName: String) {
-    }
+    public fun deploymentConfigName(deploymentConfigName: String)
 
-    public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
-    }
+    public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts)
   }
 
   private class BuilderImpl(
@@ -24,11 +22,11 @@ public open class ServerDeploymentConfig internal constructor(
         software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.Builder =
         software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.Builder.create(scope, id)
 
-    public override fun deploymentConfigName(deploymentConfigName: String) {
+    override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
-    public override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
+    override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
       cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts::unwrap))
     }
 

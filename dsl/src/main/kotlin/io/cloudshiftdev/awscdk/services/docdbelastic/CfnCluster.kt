@@ -96,38 +96,27 @@ public open class CfnCluster internal constructor(
   }
 
   public interface Builder {
-    public fun adminUserName(adminUserName: String) {
-    }
+    public fun adminUserName(adminUserName: String)
 
-    public fun adminUserPassword(adminUserPassword: String) {
-    }
+    public fun adminUserPassword(adminUserPassword: String)
 
-    public fun authType(authType: String) {
-    }
+    public fun authType(authType: String)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun shardCapacity(shardCapacity: Number) {
-    }
+    public fun shardCapacity(shardCapacity: Number)
 
-    public fun shardCount(shardCount: Number) {
-    }
+    public fun shardCount(shardCount: Number)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -137,47 +126,47 @@ public open class CfnCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdbelastic.CfnCluster.Builder =
         software.amazon.awscdk.services.docdbelastic.CfnCluster.Builder.create(scope, id)
 
-    public override fun adminUserName(adminUserName: String) {
+    override fun adminUserName(adminUserName: String) {
       cdkBuilder.adminUserName(adminUserName)
     }
 
-    public override fun adminUserPassword(adminUserPassword: String) {
+    override fun adminUserPassword(adminUserPassword: String) {
       cdkBuilder.adminUserPassword(adminUserPassword)
     }
 
-    public override fun authType(authType: String) {
+    override fun authType(authType: String) {
       cdkBuilder.authType(authType)
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun shardCapacity(shardCapacity: Number) {
+    override fun shardCapacity(shardCapacity: Number) {
       cdkBuilder.shardCapacity(shardCapacity)
     }
 
-    public override fun shardCount(shardCount: Number) {
+    override fun shardCount(shardCount: Number) {
       cdkBuilder.shardCount(shardCount)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 

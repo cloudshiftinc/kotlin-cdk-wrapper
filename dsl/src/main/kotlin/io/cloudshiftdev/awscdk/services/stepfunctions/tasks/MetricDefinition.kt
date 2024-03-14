@@ -9,11 +9,9 @@ public interface MetricDefinition {
   public fun regex(): String
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun regex(regex: String) {
-    }
+    public fun regex(regex: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface MetricDefinition {
         software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun regex(regex: String) {
+    override fun regex(regex: String) {
       cdkBuilder.regex(regex)
     }
 
@@ -36,9 +34,9 @@ public interface MetricDefinition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition,
   ) : MetricDefinition {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun regex(): String = unwrap(this).getRegex()
+    override fun regex(): String = unwrap(this).getRegex()
   }
 
   public companion object {

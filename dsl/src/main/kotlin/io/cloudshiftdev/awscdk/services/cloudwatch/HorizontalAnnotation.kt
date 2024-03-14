@@ -17,43 +17,38 @@ public interface HorizontalAnnotation {
   public fun visible(): Boolean? = unwrap(this).getVisible()
 
   public interface Builder {
-    public fun color(color: String) {
-    }
+    public fun color(color: String)
 
-    public fun fill(fill: Shading) {
-    }
+    public fun fill(fill: Shading)
 
-    public fun label(label: String) {
-    }
+    public fun label(label: String)
 
-    public fun `value`(`value`: Number) {
-    }
+    public fun `value`(`value`: Number)
 
-    public fun visible(visible: Boolean) {
-    }
+    public fun visible(visible: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation.Builder
         = software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation.builder()
 
-    public override fun color(color: String) {
+    override fun color(color: String) {
       cdkBuilder.color(color)
     }
 
-    public override fun fill(fill: Shading) {
+    override fun fill(fill: Shading) {
       cdkBuilder.fill(fill.let(Shading::unwrap))
     }
 
-    public override fun label(label: String) {
+    override fun label(label: String) {
       cdkBuilder.label(label)
     }
 
-    public override fun `value`(`value`: Number) {
+    override fun `value`(`value`: Number) {
       cdkBuilder.`value`(`value`)
     }
 
-    public override fun visible(visible: Boolean) {
+    override fun visible(visible: Boolean) {
       cdkBuilder.visible(visible)
     }
 
@@ -64,15 +59,15 @@ public interface HorizontalAnnotation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation,
   ) : HorizontalAnnotation {
-    public override fun color(): String? = unwrap(this).getColor()
+    override fun color(): String? = unwrap(this).getColor()
 
-    public override fun fill(): Shading? = unwrap(this).getFill()?.let(Shading::wrap)
+    override fun fill(): Shading? = unwrap(this).getFill()?.let(Shading::wrap)
 
-    public override fun label(): String? = unwrap(this).getLabel()
+    override fun label(): String? = unwrap(this).getLabel()
 
-    public override fun `value`(): Number = unwrap(this).getValue()
+    override fun `value`(): Number = unwrap(this).getValue()
 
-    public override fun visible(): Boolean? = unwrap(this).getVisible()
+    override fun visible(): Boolean? = unwrap(this).getVisible()
   }
 
   public companion object {

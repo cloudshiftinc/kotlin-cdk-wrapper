@@ -11,22 +11,20 @@ public open class ResourceServerScope internal constructor(
   public open fun scopeName(): String = unwrap(this).getScopeName()
 
   public interface Builder {
-    public fun scopeDescription(scopeDescription: String) {
-    }
+    public fun scopeDescription(scopeDescription: String)
 
-    public fun scopeName(scopeName: String) {
-    }
+    public fun scopeName(scopeName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.ResourceServerScope.Builder =
         software.amazon.awscdk.services.cognito.ResourceServerScope.Builder.create()
 
-    public override fun scopeDescription(scopeDescription: String) {
+    override fun scopeDescription(scopeDescription: String) {
       cdkBuilder.scopeDescription(scopeDescription)
     }
 
-    public override fun scopeName(scopeName: String) {
+    override fun scopeName(scopeName: String) {
       cdkBuilder.scopeName(scopeName)
     }
 

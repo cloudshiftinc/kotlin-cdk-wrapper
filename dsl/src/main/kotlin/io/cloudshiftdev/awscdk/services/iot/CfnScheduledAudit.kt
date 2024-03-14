@@ -62,23 +62,17 @@ public open class CfnScheduledAudit internal constructor(
   }
 
   public interface Builder {
-    public fun dayOfMonth(dayOfMonth: String) {
-    }
+    public fun dayOfMonth(dayOfMonth: String)
 
-    public fun dayOfWeek(dayOfWeek: String) {
-    }
+    public fun dayOfWeek(dayOfWeek: String)
 
-    public fun frequency(frequency: String) {
-    }
+    public fun frequency(frequency: String)
 
-    public fun scheduledAuditName(scheduledAuditName: String) {
-    }
+    public fun scheduledAuditName(scheduledAuditName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetCheckNames(targetCheckNames: List<String>) {
-    }
+    public fun targetCheckNames(targetCheckNames: List<String>)
   }
 
   private class BuilderImpl(
@@ -88,27 +82,27 @@ public open class CfnScheduledAudit internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnScheduledAudit.Builder =
         software.amazon.awscdk.services.iot.CfnScheduledAudit.Builder.create(scope, id)
 
-    public override fun dayOfMonth(dayOfMonth: String) {
+    override fun dayOfMonth(dayOfMonth: String) {
       cdkBuilder.dayOfMonth(dayOfMonth)
     }
 
-    public override fun dayOfWeek(dayOfWeek: String) {
+    override fun dayOfWeek(dayOfWeek: String) {
       cdkBuilder.dayOfWeek(dayOfWeek)
     }
 
-    public override fun frequency(frequency: String) {
+    override fun frequency(frequency: String) {
       cdkBuilder.frequency(frequency)
     }
 
-    public override fun scheduledAuditName(scheduledAuditName: String) {
+    override fun scheduledAuditName(scheduledAuditName: String) {
       cdkBuilder.scheduledAuditName(scheduledAuditName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetCheckNames(targetCheckNames: List<String>) {
+    override fun targetCheckNames(targetCheckNames: List<String>) {
       cdkBuilder.targetCheckNames(targetCheckNames)
     }
 

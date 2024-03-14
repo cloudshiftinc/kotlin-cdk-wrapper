@@ -35,11 +35,9 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun mrapName(mrapName: String) {
-    }
+    public fun mrapName(mrapName: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
   }
 
   private class BuilderImpl(
@@ -50,11 +48,11 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
         software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.Builder =
         software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.Builder.create(scope, id)
 
-    public override fun mrapName(mrapName: String) {
+    override fun mrapName(mrapName: String) {
       cdkBuilder.mrapName(mrapName)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
@@ -88,8 +86,7 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
     public fun isPublic(): String
 
     public interface Builder {
-      public fun isPublic(isPublic: String) {
-      }
+      public fun isPublic(isPublic: String)
     }
 
     private class BuilderImpl : Builder {
@@ -98,7 +95,7 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
           =
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty.builder()
 
-      public override fun isPublic(isPublic: String) {
+      override fun isPublic(isPublic: String) {
         cdkBuilder.isPublic(isPublic)
       }
 
@@ -111,7 +108,7 @@ public open class CfnMultiRegionAccessPointPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy.PolicyStatusProperty,
     ) : PolicyStatusProperty {
-      public override fun isPublic(): String = unwrap(this).getIsPublic()
+      override fun isPublic(): String = unwrap(this).getIsPublic()
     }
 
     public companion object {

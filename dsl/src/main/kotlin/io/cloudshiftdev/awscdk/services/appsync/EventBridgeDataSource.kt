@@ -11,20 +11,15 @@ public open class EventBridgeDataSource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.EventBridgeDataSource,
 ) : BackedDataSource(cdkObject) {
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventBus(eventBus: IEventBus) {
-    }
+    public fun eventBus(eventBus: IEventBus)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
   }
 
   private class BuilderImpl(
@@ -34,23 +29,23 @@ public open class EventBridgeDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.EventBridgeDataSource.Builder =
         software.amazon.awscdk.services.appsync.EventBridgeDataSource.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventBus(eventBus: IEventBus) {
+    override fun eventBus(eventBus: IEventBus) {
       cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 

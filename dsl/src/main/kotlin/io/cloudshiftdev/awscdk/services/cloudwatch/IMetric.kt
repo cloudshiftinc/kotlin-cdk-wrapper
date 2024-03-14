@@ -16,14 +16,13 @@ public interface IMetric {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IMetric,
   ) : IMetric {
-    public override fun toMetricConfig(): MetricConfig =
+    override fun toMetricConfig(): MetricConfig =
         unwrap(this).toMetricConfig().let(MetricConfig::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()
+    override fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()
 
-    public override fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?:
-        emptyMap()
+    override fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?: emptyMap()
   }
 
   public companion object {

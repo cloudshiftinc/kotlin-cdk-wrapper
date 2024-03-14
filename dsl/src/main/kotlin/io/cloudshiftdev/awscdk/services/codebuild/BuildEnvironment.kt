@@ -16,61 +16,53 @@ public interface BuildEnvironment {
   public fun computeType(): ComputeType? = unwrap(this).getComputeType()?.let(ComputeType::wrap)
 
   public fun environmentVariables(): Map<String, BuildEnvironmentVariable> =
-      unwrap(this).getEnvironmentVariables()?.mapValues { BuildEnvironmentVariable.wrap(it.value)}
-      ?: emptyMap()
+      unwrap(this).getEnvironmentVariables()?.mapValues{BuildEnvironmentVariable.wrap(it.value)} ?:
+      emptyMap()
 
   public fun privileged(): Boolean? = unwrap(this).getPrivileged()
 
   public interface Builder {
-    public fun buildImage(buildImage: IBuildImage) {
-    }
+    public fun buildImage(buildImage: IBuildImage)
 
-    public fun certificate(certificate: BuildEnvironmentCertificate) {
-    }
+    public fun certificate(certificate: BuildEnvironmentCertificate)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("09017eab37f62dfd6f983cd063f7b91ffaaed137d75b90a84954e0ca86761e58")
-    public fun certificate(certificate: BuildEnvironmentCertificate.Builder.() -> Unit) {
-    }
+    public fun certificate(certificate: BuildEnvironmentCertificate.Builder.() -> Unit)
 
-    public fun computeType(computeType: ComputeType) {
-    }
+    public fun computeType(computeType: ComputeType)
 
-    public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
-    }
+    public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>)
 
-    public fun privileged(privileged: Boolean) {
-    }
+    public fun privileged(privileged: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.BuildEnvironment.Builder =
         software.amazon.awscdk.services.codebuild.BuildEnvironment.builder()
 
-    public override fun buildImage(buildImage: IBuildImage) {
+    override fun buildImage(buildImage: IBuildImage) {
       cdkBuilder.buildImage(buildImage.let(IBuildImage::unwrap))
     }
 
-    public override fun certificate(certificate: BuildEnvironmentCertificate) {
+    override fun certificate(certificate: BuildEnvironmentCertificate) {
       cdkBuilder.certificate(certificate.let(BuildEnvironmentCertificate::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("09017eab37f62dfd6f983cd063f7b91ffaaed137d75b90a84954e0ca86761e58")
-    public override fun certificate(certificate: BuildEnvironmentCertificate.Builder.() -> Unit):
-        Unit = certificate(BuildEnvironmentCertificate(certificate))
+    override fun certificate(certificate: BuildEnvironmentCertificate.Builder.() -> Unit): Unit =
+        certificate(BuildEnvironmentCertificate(certificate))
 
-    public override fun computeType(computeType: ComputeType) {
+    override fun computeType(computeType: ComputeType) {
       cdkBuilder.computeType(computeType.let(ComputeType::unwrap))
     }
 
-    public override
-        fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
-      cdkBuilder.environmentVariables(environmentVariables.mapValues {
-          BuildEnvironmentVariable.unwrap(it.value)})
+    override fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
+      cdkBuilder.environmentVariables(environmentVariables.mapValues{BuildEnvironmentVariable.unwrap(it.value)})
     }
 
-    public override fun privileged(privileged: Boolean) {
+    override fun privileged(privileged: Boolean) {
       cdkBuilder.privileged(privileged)
     }
 
@@ -81,20 +73,18 @@ public interface BuildEnvironment {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironment,
   ) : BuildEnvironment {
-    public override fun buildImage(): IBuildImage? =
-        unwrap(this).getBuildImage()?.let(IBuildImage::wrap)
+    override fun buildImage(): IBuildImage? = unwrap(this).getBuildImage()?.let(IBuildImage::wrap)
 
-    public override fun certificate(): BuildEnvironmentCertificate? =
+    override fun certificate(): BuildEnvironmentCertificate? =
         unwrap(this).getCertificate()?.let(BuildEnvironmentCertificate::wrap)
 
-    public override fun computeType(): ComputeType? =
-        unwrap(this).getComputeType()?.let(ComputeType::wrap)
+    override fun computeType(): ComputeType? = unwrap(this).getComputeType()?.let(ComputeType::wrap)
 
-    public override fun environmentVariables(): Map<String, BuildEnvironmentVariable> =
-        unwrap(this).getEnvironmentVariables()?.mapValues { BuildEnvironmentVariable.wrap(it.value)}
+    override fun environmentVariables(): Map<String, BuildEnvironmentVariable> =
+        unwrap(this).getEnvironmentVariables()?.mapValues{BuildEnvironmentVariable.wrap(it.value)}
         ?: emptyMap()
 
-    public override fun privileged(): Boolean? = unwrap(this).getPrivileged()
+    override fun privileged(): Boolean? = unwrap(this).getPrivileged()
   }
 
   public companion object {

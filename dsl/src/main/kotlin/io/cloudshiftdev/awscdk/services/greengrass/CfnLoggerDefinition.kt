@@ -61,22 +61,17 @@ public open class CfnLoggerDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun initialVersion(initialVersion: IResolvable) {
-    }
+    public fun initialVersion(initialVersion: IResolvable)
 
-    public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty) {
-    }
+    public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff51c6a522dd0e33bb35210369ae1aabab9f410e36ef84e09d2939d7cfd3b367")
-    public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit) {
-    }
+    public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -86,25 +81,24 @@ public open class CfnLoggerDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.Builder =
         software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.Builder.create(scope, id)
 
-    public override fun initialVersion(initialVersion: IResolvable) {
+    override fun initialVersion(initialVersion: IResolvable) {
       cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
     }
 
-    public override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty) {
+    override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty) {
       cdkBuilder.initialVersion(initialVersion.let(LoggerDefinitionVersionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff51c6a522dd0e33bb35210369ae1aabab9f410e36ef84e09d2939d7cfd3b367")
-    public override
-        fun initialVersion(initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit): Unit
-        = initialVersion(LoggerDefinitionVersionProperty(initialVersion))
+    override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit):
+        Unit = initialVersion(LoggerDefinitionVersionProperty(initialVersion))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -137,11 +131,9 @@ public open class CfnLoggerDefinition internal constructor(
     public fun loggers(): Any
 
     public interface Builder {
-      public fun loggers(loggers: IResolvable) {
-      }
+      public fun loggers(loggers: IResolvable)
 
-      public fun loggers(loggers: List<Any>) {
-      }
+      public fun loggers(loggers: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -150,11 +142,11 @@ public open class CfnLoggerDefinition internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty.builder()
 
-      public override fun loggers(loggers: IResolvable) {
+      override fun loggers(loggers: IResolvable) {
         cdkBuilder.loggers(loggers.let(IResolvable::unwrap))
       }
 
-      public override fun loggers(loggers: List<Any>) {
+      override fun loggers(loggers: List<Any>) {
         cdkBuilder.loggers(loggers)
       }
 
@@ -167,7 +159,7 @@ public open class CfnLoggerDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty,
     ) : LoggerDefinitionVersionProperty {
-      public override fun loggers(): Any = unwrap(this).getLoggers()
+      override fun loggers(): Any = unwrap(this).getLoggers()
     }
 
     public companion object {
@@ -202,20 +194,15 @@ public open class CfnLoggerDefinition internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun component(component: String) {
-      }
+      public fun component(component: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun level(level: String) {
-      }
+      public fun level(level: String)
 
-      public fun space(space: Number) {
-      }
+      public fun space(space: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -223,23 +210,23 @@ public open class CfnLoggerDefinition internal constructor(
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty.Builder =
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty.builder()
 
-      public override fun component(component: String) {
+      override fun component(component: String) {
         cdkBuilder.component(component)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun level(level: String) {
+      override fun level(level: String) {
         cdkBuilder.level(level)
       }
 
-      public override fun space(space: Number) {
+      override fun space(space: Number) {
         cdkBuilder.space(space)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -252,15 +239,15 @@ public open class CfnLoggerDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty,
     ) : LoggerProperty {
-      public override fun component(): String = unwrap(this).getComponent()
+      override fun component(): String = unwrap(this).getComponent()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun level(): String = unwrap(this).getLevel()
+      override fun level(): String = unwrap(this).getLevel()
 
-      public override fun space(): Number? = unwrap(this).getSpace()
+      override fun space(): Number? = unwrap(this).getSpace()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

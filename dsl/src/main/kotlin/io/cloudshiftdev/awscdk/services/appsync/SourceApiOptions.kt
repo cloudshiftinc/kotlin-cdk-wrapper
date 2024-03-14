@@ -11,22 +11,20 @@ public interface SourceApiOptions {
   public fun sourceApis(): List<SourceApi>
 
   public interface Builder {
-    public fun mergedApiExecutionRole(mergedApiExecutionRole: Role) {
-    }
+    public fun mergedApiExecutionRole(mergedApiExecutionRole: Role)
 
-    public fun sourceApis(sourceApis: List<SourceApi>) {
-    }
+    public fun sourceApis(sourceApis: List<SourceApi>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.SourceApiOptions.Builder =
         software.amazon.awscdk.services.appsync.SourceApiOptions.builder()
 
-    public override fun mergedApiExecutionRole(mergedApiExecutionRole: Role) {
+    override fun mergedApiExecutionRole(mergedApiExecutionRole: Role) {
       cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(Role::unwrap))
     }
 
-    public override fun sourceApis(sourceApis: List<SourceApi>) {
+    override fun sourceApis(sourceApis: List<SourceApi>) {
       cdkBuilder.sourceApis(sourceApis.map(SourceApi::unwrap))
     }
 
@@ -37,11 +35,10 @@ public interface SourceApiOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.SourceApiOptions,
   ) : SourceApiOptions {
-    public override fun mergedApiExecutionRole(): Role? =
+    override fun mergedApiExecutionRole(): Role? =
         unwrap(this).getMergedApiExecutionRole()?.let(Role::wrap)
 
-    public override fun sourceApis(): List<SourceApi> =
-        unwrap(this).getSourceApis().map(SourceApi::wrap)
+    override fun sourceApis(): List<SourceApi> = unwrap(this).getSourceApis().map(SourceApi::wrap)
   }
 
   public companion object {

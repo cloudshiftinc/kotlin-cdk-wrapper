@@ -9,22 +9,20 @@ public interface AliasRecordTargetConfig {
   public fun hostedZoneId(): String
 
   public interface Builder {
-    public fun dnsName(dnsName: String) {
-    }
+    public fun dnsName(dnsName: String)
 
-    public fun hostedZoneId(hostedZoneId: String) {
-    }
+    public fun hostedZoneId(hostedZoneId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.AliasRecordTargetConfig.Builder
         = software.amazon.awscdk.services.route53.AliasRecordTargetConfig.builder()
 
-    public override fun dnsName(dnsName: String) {
+    override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
     }
 
-    public override fun hostedZoneId(hostedZoneId: String) {
+    override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 
@@ -35,9 +33,9 @@ public interface AliasRecordTargetConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.AliasRecordTargetConfig,
   ) : AliasRecordTargetConfig {
-    public override fun dnsName(): String = unwrap(this).getDnsName()
+    override fun dnsName(): String = unwrap(this).getDnsName()
 
-    public override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
+    override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
   }
 
   public companion object {

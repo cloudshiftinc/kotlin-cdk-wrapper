@@ -73,33 +73,25 @@ public open class CfnChannel internal constructor(
   }
 
   public interface Builder {
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun channelStorage(channelStorage: IResolvable) {
-    }
+    public fun channelStorage(channelStorage: IResolvable)
 
-    public fun channelStorage(channelStorage: ChannelStorageProperty) {
-    }
+    public fun channelStorage(channelStorage: ChannelStorageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("20cf75877cfe6cc88719ec577e83cc2a0a1d9433b5031e19782230121bec86c3")
-    public fun channelStorage(channelStorage: ChannelStorageProperty.Builder.() -> Unit) {
-    }
+    public fun channelStorage(channelStorage: ChannelStorageProperty.Builder.() -> Unit)
 
-    public fun retentionPeriod(retentionPeriod: IResolvable) {
-    }
+    public fun retentionPeriod(retentionPeriod: IResolvable)
 
-    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
-    }
+    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("afd016681a3e2f10369d872bcfb1bb4acde1bd130d387ad2c3ef17a619c0176c")
-    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit) {
-    }
+    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -109,38 +101,37 @@ public open class CfnChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotanalytics.CfnChannel.Builder =
         software.amazon.awscdk.services.iotanalytics.CfnChannel.Builder.create(scope, id)
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun channelStorage(channelStorage: IResolvable) {
+    override fun channelStorage(channelStorage: IResolvable) {
       cdkBuilder.channelStorage(channelStorage.let(IResolvable::unwrap))
     }
 
-    public override fun channelStorage(channelStorage: ChannelStorageProperty) {
+    override fun channelStorage(channelStorage: ChannelStorageProperty) {
       cdkBuilder.channelStorage(channelStorage.let(ChannelStorageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("20cf75877cfe6cc88719ec577e83cc2a0a1d9433b5031e19782230121bec86c3")
-    public override fun channelStorage(channelStorage: ChannelStorageProperty.Builder.() -> Unit):
-        Unit = channelStorage(ChannelStorageProperty(channelStorage))
+    override fun channelStorage(channelStorage: ChannelStorageProperty.Builder.() -> Unit): Unit =
+        channelStorage(ChannelStorageProperty(channelStorage))
 
-    public override fun retentionPeriod(retentionPeriod: IResolvable) {
+    override fun retentionPeriod(retentionPeriod: IResolvable) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
     }
 
-    public override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
+    override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("afd016681a3e2f10369d872bcfb1bb4acde1bd130d387ad2c3ef17a619c0176c")
-    public override
-        fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit): Unit =
-        retentionPeriod(RetentionPeriodProperty(retentionPeriod))
+    override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit): Unit
+        = retentionPeriod(RetentionPeriodProperty(retentionPeriod))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -176,14 +167,11 @@ public open class CfnChannel internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun keyPrefix(keyPrefix: String) {
-      }
+      public fun keyPrefix(keyPrefix: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -192,15 +180,15 @@ public open class CfnChannel internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun keyPrefix(keyPrefix: String) {
+      override fun keyPrefix(keyPrefix: String) {
         cdkBuilder.keyPrefix(keyPrefix)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -213,11 +201,11 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property,
     ) : CustomerManagedS3Property {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -246,20 +234,15 @@ public open class CfnChannel internal constructor(
     public fun serviceManagedS3(): Any? = unwrap(this).getServiceManagedS3()
 
     public interface Builder {
-      public fun customerManagedS3(customerManagedS3: IResolvable) {
-      }
+      public fun customerManagedS3(customerManagedS3: IResolvable)
 
-      public fun customerManagedS3(customerManagedS3: CustomerManagedS3Property) {
-      }
+      public fun customerManagedS3(customerManagedS3: CustomerManagedS3Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7eb6cf71b02dbb0e5cf3fe556179354d70e550ee3cdb0ffeff0dce7e4e3dc22d")
-      public
-          fun customerManagedS3(customerManagedS3: CustomerManagedS3Property.Builder.() -> Unit) {
-      }
+      public fun customerManagedS3(customerManagedS3: CustomerManagedS3Property.Builder.() -> Unit)
 
-      public fun serviceManagedS3(serviceManagedS3: Any) {
-      }
+      public fun serviceManagedS3(serviceManagedS3: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -267,21 +250,21 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty.builder()
 
-      public override fun customerManagedS3(customerManagedS3: IResolvable) {
+      override fun customerManagedS3(customerManagedS3: IResolvable) {
         cdkBuilder.customerManagedS3(customerManagedS3.let(IResolvable::unwrap))
       }
 
-      public override fun customerManagedS3(customerManagedS3: CustomerManagedS3Property) {
+      override fun customerManagedS3(customerManagedS3: CustomerManagedS3Property) {
         cdkBuilder.customerManagedS3(customerManagedS3.let(CustomerManagedS3Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7eb6cf71b02dbb0e5cf3fe556179354d70e550ee3cdb0ffeff0dce7e4e3dc22d")
-      public override
+      override
           fun customerManagedS3(customerManagedS3: CustomerManagedS3Property.Builder.() -> Unit):
           Unit = customerManagedS3(CustomerManagedS3Property(customerManagedS3))
 
-      public override fun serviceManagedS3(serviceManagedS3: Any) {
+      override fun serviceManagedS3(serviceManagedS3: Any) {
         cdkBuilder.serviceManagedS3(serviceManagedS3)
       }
 
@@ -294,9 +277,9 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty,
     ) : ChannelStorageProperty {
-      public override fun customerManagedS3(): Any? = unwrap(this).getCustomerManagedS3()
+      override fun customerManagedS3(): Any? = unwrap(this).getCustomerManagedS3()
 
-      public override fun serviceManagedS3(): Any? = unwrap(this).getServiceManagedS3()
+      override fun serviceManagedS3(): Any? = unwrap(this).getServiceManagedS3()
     }
 
     public companion object {
@@ -325,14 +308,11 @@ public open class CfnChannel internal constructor(
     public fun unlimited(): Any? = unwrap(this).getUnlimited()
 
     public interface Builder {
-      public fun numberOfDays(numberOfDays: Number) {
-      }
+      public fun numberOfDays(numberOfDays: Number)
 
-      public fun unlimited(unlimited: Boolean) {
-      }
+      public fun unlimited(unlimited: Boolean)
 
-      public fun unlimited(unlimited: IResolvable) {
-      }
+      public fun unlimited(unlimited: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -340,15 +320,15 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty.builder()
 
-      public override fun numberOfDays(numberOfDays: Number) {
+      override fun numberOfDays(numberOfDays: Number) {
         cdkBuilder.numberOfDays(numberOfDays)
       }
 
-      public override fun unlimited(unlimited: Boolean) {
+      override fun unlimited(unlimited: Boolean) {
         cdkBuilder.unlimited(unlimited)
       }
 
-      public override fun unlimited(unlimited: IResolvable) {
+      override fun unlimited(unlimited: IResolvable) {
         cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
       }
 
@@ -361,9 +341,9 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty,
     ) : RetentionPeriodProperty {
-      public override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
+      override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
 
-      public override fun unlimited(): Any? = unwrap(this).getUnlimited()
+      override fun unlimited(): Any? = unwrap(this).getUnlimited()
     }
 
     public companion object {

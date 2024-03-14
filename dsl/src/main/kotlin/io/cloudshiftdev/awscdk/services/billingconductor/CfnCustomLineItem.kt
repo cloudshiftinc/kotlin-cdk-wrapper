@@ -102,45 +102,33 @@ public open class CfnCustomLineItem internal constructor(
   }
 
   public interface Builder {
-    public fun accountId(accountId: String) {
-    }
+    public fun accountId(accountId: String)
 
-    public fun billingGroupArn(billingGroupArn: String) {
-    }
+    public fun billingGroupArn(billingGroupArn: String)
 
-    public fun billingPeriodRange(billingPeriodRange: IResolvable) {
-    }
+    public fun billingPeriodRange(billingPeriodRange: IResolvable)
 
-    public fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty) {
-    }
+    public fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19ace5344de6c360a357deb5fda8b02710864d6b1e70ccd7557683e7c24529f7")
-    public
-        fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty.Builder.() -> Unit) {
-    }
+    public fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty.Builder.() -> Unit)
 
-    public fun customLineItemChargeDetails(customLineItemChargeDetails: IResolvable) {
-    }
+    public fun customLineItemChargeDetails(customLineItemChargeDetails: IResolvable)
 
     public
-        fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty) {
-    }
+        fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f8de4dc9dc0e408c08a38c210e0f8ea2c1d0a726c5d14b84fd1c438e995c31e6")
     public
-        fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty.Builder.() -> Unit) {
-    }
+        fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -151,53 +139,53 @@ public open class CfnCustomLineItem internal constructor(
         software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.Builder =
         software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.Builder.create(scope, id)
 
-    public override fun accountId(accountId: String) {
+    override fun accountId(accountId: String) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun billingGroupArn(billingGroupArn: String) {
+    override fun billingGroupArn(billingGroupArn: String) {
       cdkBuilder.billingGroupArn(billingGroupArn)
     }
 
-    public override fun billingPeriodRange(billingPeriodRange: IResolvable) {
+    override fun billingPeriodRange(billingPeriodRange: IResolvable) {
       cdkBuilder.billingPeriodRange(billingPeriodRange.let(IResolvable::unwrap))
     }
 
-    public override fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty) {
+    override fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty) {
       cdkBuilder.billingPeriodRange(billingPeriodRange.let(BillingPeriodRangeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19ace5344de6c360a357deb5fda8b02710864d6b1e70ccd7557683e7c24529f7")
-    public override
+    override
         fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty.Builder.() -> Unit):
         Unit = billingPeriodRange(BillingPeriodRangeProperty(billingPeriodRange))
 
-    public override fun customLineItemChargeDetails(customLineItemChargeDetails: IResolvable) {
+    override fun customLineItemChargeDetails(customLineItemChargeDetails: IResolvable) {
       cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty) {
       cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(CustomLineItemChargeDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f8de4dc9dc0e408c08a38c210e0f8ea2c1d0a726c5d14b84fd1c438e995c31e6")
-    public override
+    override
         fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty.Builder.() -> Unit):
         Unit =
         customLineItemChargeDetails(CustomLineItemChargeDetailsProperty(customLineItemChargeDetails))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -235,14 +223,11 @@ public open class CfnCustomLineItem internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun attribute(attribute: String) {
-      }
+      public fun attribute(attribute: String)
 
-      public fun matchOption(matchOption: String) {
-      }
+      public fun matchOption(matchOption: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -251,15 +236,15 @@ public open class CfnCustomLineItem internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty.builder()
 
-      public override fun attribute(attribute: String) {
+      override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
       }
 
-      public override fun matchOption(matchOption: String) {
+      override fun matchOption(matchOption: String) {
         cdkBuilder.matchOption(matchOption)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -272,11 +257,11 @@ public open class CfnCustomLineItem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty,
     ) : LineItemFilterProperty {
-      public override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String = unwrap(this).getAttribute()
 
-      public override fun matchOption(): String = unwrap(this).getMatchOption()
+      override fun matchOption(): String = unwrap(this).getMatchOption()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -303,8 +288,7 @@ public open class CfnCustomLineItem internal constructor(
     public fun chargeValue(): Number
 
     public interface Builder {
-      public fun chargeValue(chargeValue: Number) {
-      }
+      public fun chargeValue(chargeValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -313,7 +297,7 @@ public open class CfnCustomLineItem internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.builder()
 
-      public override fun chargeValue(chargeValue: Number) {
+      override fun chargeValue(chargeValue: Number) {
         cdkBuilder.chargeValue(chargeValue)
       }
 
@@ -326,7 +310,7 @@ public open class CfnCustomLineItem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty,
     ) : CustomLineItemFlatChargeDetailsProperty {
-      public override fun chargeValue(): Number = unwrap(this).getChargeValue()
+      override fun chargeValue(): Number = unwrap(this).getChargeValue()
     }
 
     public companion object {
@@ -360,37 +344,28 @@ public open class CfnCustomLineItem internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun flat(flat: IResolvable) {
-      }
+      public fun flat(flat: IResolvable)
 
-      public fun flat(flat: CustomLineItemFlatChargeDetailsProperty) {
-      }
+      public fun flat(flat: CustomLineItemFlatChargeDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b3694dda8f7a271affa2fd567c61d74095c408451b6c1953385f3186d3e086a4")
-      public fun flat(flat: CustomLineItemFlatChargeDetailsProperty.Builder.() -> Unit) {
-      }
+      public fun flat(flat: CustomLineItemFlatChargeDetailsProperty.Builder.() -> Unit)
 
-      public fun lineItemFilters(lineItemFilters: IResolvable) {
-      }
+      public fun lineItemFilters(lineItemFilters: IResolvable)
 
-      public fun lineItemFilters(lineItemFilters: List<Any>) {
-      }
+      public fun lineItemFilters(lineItemFilters: List<Any>)
 
-      public fun percentage(percentage: IResolvable) {
-      }
+      public fun percentage(percentage: IResolvable)
 
-      public fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty) {
-      }
+      public fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("81db3b88c31327860e6ced945ee7fd10385d0cdca0ad38a477ace43a545f2010")
       public
-          fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty.Builder.() -> Unit) {
-      }
+          fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -399,42 +374,42 @@ public open class CfnCustomLineItem internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty.builder()
 
-      public override fun flat(flat: IResolvable) {
+      override fun flat(flat: IResolvable) {
         cdkBuilder.flat(flat.let(IResolvable::unwrap))
       }
 
-      public override fun flat(flat: CustomLineItemFlatChargeDetailsProperty) {
+      override fun flat(flat: CustomLineItemFlatChargeDetailsProperty) {
         cdkBuilder.flat(flat.let(CustomLineItemFlatChargeDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b3694dda8f7a271affa2fd567c61d74095c408451b6c1953385f3186d3e086a4")
-      public override fun flat(flat: CustomLineItemFlatChargeDetailsProperty.Builder.() -> Unit):
-          Unit = flat(CustomLineItemFlatChargeDetailsProperty(flat))
+      override fun flat(flat: CustomLineItemFlatChargeDetailsProperty.Builder.() -> Unit): Unit =
+          flat(CustomLineItemFlatChargeDetailsProperty(flat))
 
-      public override fun lineItemFilters(lineItemFilters: IResolvable) {
+      override fun lineItemFilters(lineItemFilters: IResolvable) {
         cdkBuilder.lineItemFilters(lineItemFilters.let(IResolvable::unwrap))
       }
 
-      public override fun lineItemFilters(lineItemFilters: List<Any>) {
+      override fun lineItemFilters(lineItemFilters: List<Any>) {
         cdkBuilder.lineItemFilters(lineItemFilters)
       }
 
-      public override fun percentage(percentage: IResolvable) {
+      override fun percentage(percentage: IResolvable) {
         cdkBuilder.percentage(percentage.let(IResolvable::unwrap))
       }
 
-      public override fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty) {
+      override fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty) {
         cdkBuilder.percentage(percentage.let(CustomLineItemPercentageChargeDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("81db3b88c31327860e6ced945ee7fd10385d0cdca0ad38a477ace43a545f2010")
-      public override
+      override
           fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty.Builder.() -> Unit):
           Unit = percentage(CustomLineItemPercentageChargeDetailsProperty(percentage))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -447,13 +422,13 @@ public open class CfnCustomLineItem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty,
     ) : CustomLineItemChargeDetailsProperty {
-      public override fun flat(): Any? = unwrap(this).getFlat()
+      override fun flat(): Any? = unwrap(this).getFlat()
 
-      public override fun lineItemFilters(): Any? = unwrap(this).getLineItemFilters()
+      override fun lineItemFilters(): Any? = unwrap(this).getLineItemFilters()
 
-      public override fun percentage(): Any? = unwrap(this).getPercentage()
+      override fun percentage(): Any? = unwrap(this).getPercentage()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -484,11 +459,9 @@ public open class CfnCustomLineItem internal constructor(
         unwrap(this).getInclusiveStartBillingPeriod()
 
     public interface Builder {
-      public fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String) {
-      }
+      public fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String)
 
-      public fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String) {
-      }
+      public fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String)
     }
 
     private class BuilderImpl : Builder {
@@ -497,11 +470,11 @@ public open class CfnCustomLineItem internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty.builder()
 
-      public override fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String) {
+      override fun exclusiveEndBillingPeriod(exclusiveEndBillingPeriod: String) {
         cdkBuilder.exclusiveEndBillingPeriod(exclusiveEndBillingPeriod)
       }
 
-      public override fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String) {
+      override fun inclusiveStartBillingPeriod(inclusiveStartBillingPeriod: String) {
         cdkBuilder.inclusiveStartBillingPeriod(inclusiveStartBillingPeriod)
       }
 
@@ -514,10 +487,10 @@ public open class CfnCustomLineItem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty,
     ) : BillingPeriodRangeProperty {
-      public override fun exclusiveEndBillingPeriod(): String? =
+      override fun exclusiveEndBillingPeriod(): String? =
           unwrap(this).getExclusiveEndBillingPeriod()
 
-      public override fun inclusiveStartBillingPeriod(): String? =
+      override fun inclusiveStartBillingPeriod(): String? =
           unwrap(this).getInclusiveStartBillingPeriod()
     }
 
@@ -548,11 +521,9 @@ public open class CfnCustomLineItem internal constructor(
     public fun percentageValue(): Number
 
     public interface Builder {
-      public fun childAssociatedResources(childAssociatedResources: List<String>) {
-      }
+      public fun childAssociatedResources(childAssociatedResources: List<String>)
 
-      public fun percentageValue(percentageValue: Number) {
-      }
+      public fun percentageValue(percentageValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -561,11 +532,11 @@ public open class CfnCustomLineItem internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty.builder()
 
-      public override fun childAssociatedResources(childAssociatedResources: List<String>) {
+      override fun childAssociatedResources(childAssociatedResources: List<String>) {
         cdkBuilder.childAssociatedResources(childAssociatedResources)
       }
 
-      public override fun percentageValue(percentageValue: Number) {
+      override fun percentageValue(percentageValue: Number) {
         cdkBuilder.percentageValue(percentageValue)
       }
 
@@ -578,10 +549,10 @@ public open class CfnCustomLineItem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty,
     ) : CustomLineItemPercentageChargeDetailsProperty {
-      public override fun childAssociatedResources(): List<String> =
+      override fun childAssociatedResources(): List<String> =
           unwrap(this).getChildAssociatedResources() ?: emptyList()
 
-      public override fun percentageValue(): Number = unwrap(this).getPercentageValue()
+      override fun percentageValue(): Number = unwrap(this).getPercentageValue()
     }
 
     public companion object {

@@ -11,23 +11,21 @@ public interface ConfigSetProps {
   public fun configs(): Map<String, InitConfig>
 
   public interface Builder {
-    public fun configSets(configSets: Map<String, List<String>>) {
-    }
+    public fun configSets(configSets: Map<String, List<String>>)
 
-    public fun configs(configs: Map<String, InitConfig>) {
-    }
+    public fun configs(configs: Map<String, InitConfig>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ConfigSetProps.Builder =
         software.amazon.awscdk.services.ec2.ConfigSetProps.builder()
 
-    public override fun configSets(configSets: Map<String, List<String>>) {
+    override fun configSets(configSets: Map<String, List<String>>) {
       cdkBuilder.configSets(configSets)
     }
 
-    public override fun configs(configs: Map<String, InitConfig>) {
-      cdkBuilder.configs(configs.mapValues { InitConfig.unwrap(it.value)})
+    override fun configs(configs: Map<String, InitConfig>) {
+      cdkBuilder.configs(configs.mapValues{InitConfig.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.ConfigSetProps = cdkBuilder.build()
@@ -36,11 +34,11 @@ public interface ConfigSetProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ConfigSetProps,
   ) : ConfigSetProps {
-    public override fun configSets(): Map<String, List<String>> = unwrap(this).getConfigSets() ?:
+    override fun configSets(): Map<String, List<String>> = unwrap(this).getConfigSets() ?:
         emptyMap()
 
-    public override fun configs(): Map<String, InitConfig> = unwrap(this).getConfigs().mapValues {
-        InitConfig.wrap(it.value)} ?: emptyMap()
+    override fun configs(): Map<String, InitConfig> =
+        unwrap(this).getConfigs().mapValues{InitConfig.wrap(it.value)} ?: emptyMap()
   }
 
   public companion object {

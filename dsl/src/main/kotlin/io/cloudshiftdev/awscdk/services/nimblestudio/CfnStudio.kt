@@ -80,33 +80,25 @@ public open class CfnStudio internal constructor(
   }
 
   public interface Builder {
-    public fun adminRoleArn(adminRoleArn: String) {
-    }
+    public fun adminRoleArn(adminRoleArn: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable) {
-    }
+    public fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable)
 
     public
-        fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty) {
-    }
+        fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b39d51f74ed1bc0402515f97fa20ac5d1f08014ef753f0669fa829fbbdfc4e5e")
     public
-        fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun studioName(studioName: String) {
-    }
+    public fun studioName(studioName: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun userRoleArn(userRoleArn: String) {
-    }
+    public fun userRoleArn(userRoleArn: String)
   }
 
   private class BuilderImpl(
@@ -116,39 +108,39 @@ public open class CfnStudio internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.nimblestudio.CfnStudio.Builder =
         software.amazon.awscdk.services.nimblestudio.CfnStudio.Builder.create(scope, id)
 
-    public override fun adminRoleArn(adminRoleArn: String) {
+    override fun adminRoleArn(adminRoleArn: String) {
       cdkBuilder.adminRoleArn(adminRoleArn)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable) {
+    override fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable) {
       cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty) {
       cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(StudioEncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b39d51f74ed1bc0402515f97fa20ac5d1f08014ef753f0669fa829fbbdfc4e5e")
-    public override
+    override
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty.Builder.() -> Unit):
         Unit =
         studioEncryptionConfiguration(StudioEncryptionConfigurationProperty(studioEncryptionConfiguration))
 
-    public override fun studioName(studioName: String) {
+    override fun studioName(studioName: String) {
       cdkBuilder.studioName(studioName)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun userRoleArn(userRoleArn: String) {
+    override fun userRoleArn(userRoleArn: String) {
       cdkBuilder.userRoleArn(userRoleArn)
     }
 
@@ -182,11 +174,9 @@ public open class CfnStudio internal constructor(
     public fun keyType(): String
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -195,11 +185,11 @@ public open class CfnStudio internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudio.StudioEncryptionConfigurationProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
@@ -212,9 +202,9 @@ public open class CfnStudio internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudio.StudioEncryptionConfigurationProperty,
     ) : StudioEncryptionConfigurationProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-      public override fun keyType(): String = unwrap(this).getKeyType()
+      override fun keyType(): String = unwrap(this).getKeyType()
     }
 
     public companion object {

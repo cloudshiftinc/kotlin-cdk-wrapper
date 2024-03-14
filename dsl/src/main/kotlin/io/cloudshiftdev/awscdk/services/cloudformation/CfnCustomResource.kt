@@ -24,8 +24,7 @@ public open class CfnCustomResource internal constructor(
   }
 
   public interface Builder {
-    public fun serviceToken(serviceToken: String) {
-    }
+    public fun serviceToken(serviceToken: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnCustomResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudformation.CfnCustomResource.Builder
         = software.amazon.awscdk.services.cloudformation.CfnCustomResource.Builder.create(scope, id)
 
-    public override fun serviceToken(serviceToken: String) {
+    override fun serviceToken(serviceToken: String) {
       cdkBuilder.serviceToken(serviceToken)
     }
 

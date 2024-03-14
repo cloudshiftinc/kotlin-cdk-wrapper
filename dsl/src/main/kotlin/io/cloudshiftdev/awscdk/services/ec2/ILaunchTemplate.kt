@@ -17,22 +17,21 @@ public interface ILaunchTemplate : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ILaunchTemplate,
   ) : ILaunchTemplate {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+    override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
-    public override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+    override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun versionNumber(): String = unwrap(this).getVersionNumber()
+    override fun versionNumber(): String = unwrap(this).getVersionNumber()
   }
 
   public companion object {

@@ -68,26 +68,20 @@ public open class CfnVpcIngressConnection internal constructor(
   }
 
   public interface Builder {
-    public fun ingressVpcConfiguration(ingressVpcConfiguration: IResolvable) {
-    }
+    public fun ingressVpcConfiguration(ingressVpcConfiguration: IResolvable)
 
-    public fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty) {
-    }
+    public fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80b0ca5f0097ddac8852115093d814ff5b98399275ebb4b5a669f001d5066de5")
     public
-        fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty.Builder.() -> Unit)
 
-    public fun serviceArn(serviceArn: String) {
-    }
+    public fun serviceArn(serviceArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcIngressConnectionName(vpcIngressConnectionName: String) {
-    }
+    public fun vpcIngressConnectionName(vpcIngressConnectionName: String)
   }
 
   private class BuilderImpl(
@@ -98,30 +92,29 @@ public open class CfnVpcIngressConnection internal constructor(
         software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.Builder =
         software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.Builder.create(scope, id)
 
-    public override fun ingressVpcConfiguration(ingressVpcConfiguration: IResolvable) {
+    override fun ingressVpcConfiguration(ingressVpcConfiguration: IResolvable) {
       cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty) {
+    override fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty) {
       cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IngressVpcConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80b0ca5f0097ddac8852115093d814ff5b98399275ebb4b5a669f001d5066de5")
-    public override
+    override
         fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty.Builder.() -> Unit):
         Unit = ingressVpcConfiguration(IngressVpcConfigurationProperty(ingressVpcConfiguration))
 
-    public override fun serviceArn(serviceArn: String) {
+    override fun serviceArn(serviceArn: String) {
       cdkBuilder.serviceArn(serviceArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcIngressConnectionName(vpcIngressConnectionName: String) {
+    override fun vpcIngressConnectionName(vpcIngressConnectionName: String) {
       cdkBuilder.vpcIngressConnectionName(vpcIngressConnectionName)
     }
 
@@ -156,11 +149,9 @@ public open class CfnVpcIngressConnection internal constructor(
     public fun vpcId(): String
 
     public interface Builder {
-      public fun vpcEndpointId(vpcEndpointId: String) {
-      }
+      public fun vpcEndpointId(vpcEndpointId: String)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -169,11 +160,11 @@ public open class CfnVpcIngressConnection internal constructor(
           =
           software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.IngressVpcConfigurationProperty.builder()
 
-      public override fun vpcEndpointId(vpcEndpointId: String) {
+      override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -186,9 +177,9 @@ public open class CfnVpcIngressConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection.IngressVpcConfigurationProperty,
     ) : IngressVpcConfigurationProperty {
-      public override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
+      override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
 
-      public override fun vpcId(): String = unwrap(this).getVpcId()
+      override fun vpcId(): String = unwrap(this).getVpcId()
     }
 
     public companion object {

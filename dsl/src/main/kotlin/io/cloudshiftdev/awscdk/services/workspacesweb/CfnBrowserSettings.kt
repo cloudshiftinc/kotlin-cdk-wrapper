@@ -60,20 +60,15 @@ public open class CfnBrowserSettings internal constructor(
   }
 
   public interface Builder {
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
-    public fun browserPolicy(browserPolicy: String) {
-    }
+    public fun browserPolicy(browserPolicy: String)
 
-    public fun customerManagedKey(customerManagedKey: String) {
-    }
+    public fun customerManagedKey(customerManagedKey: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -83,24 +78,23 @@ public open class CfnBrowserSettings internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings.Builder
         = software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings.Builder.create(scope, id)
 
-    public override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
     }
 
-    public override
-        fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
-    public override fun browserPolicy(browserPolicy: String) {
+    override fun browserPolicy(browserPolicy: String) {
       cdkBuilder.browserPolicy(browserPolicy)
     }
 
-    public override fun customerManagedKey(customerManagedKey: String) {
+    override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

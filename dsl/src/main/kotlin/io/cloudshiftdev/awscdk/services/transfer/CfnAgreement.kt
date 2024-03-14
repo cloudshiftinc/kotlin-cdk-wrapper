@@ -75,29 +75,21 @@ public open class CfnAgreement internal constructor(
   }
 
   public interface Builder {
-    public fun accessRole(accessRole: String) {
-    }
+    public fun accessRole(accessRole: String)
 
-    public fun baseDirectory(baseDirectory: String) {
-    }
+    public fun baseDirectory(baseDirectory: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun localProfileId(localProfileId: String) {
-    }
+    public fun localProfileId(localProfileId: String)
 
-    public fun partnerProfileId(partnerProfileId: String) {
-    }
+    public fun partnerProfileId(partnerProfileId: String)
 
-    public fun serverId(serverId: String) {
-    }
+    public fun serverId(serverId: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -107,35 +99,35 @@ public open class CfnAgreement internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnAgreement.Builder =
         software.amazon.awscdk.services.transfer.CfnAgreement.Builder.create(scope, id)
 
-    public override fun accessRole(accessRole: String) {
+    override fun accessRole(accessRole: String) {
       cdkBuilder.accessRole(accessRole)
     }
 
-    public override fun baseDirectory(baseDirectory: String) {
+    override fun baseDirectory(baseDirectory: String) {
       cdkBuilder.baseDirectory(baseDirectory)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun localProfileId(localProfileId: String) {
+    override fun localProfileId(localProfileId: String) {
       cdkBuilder.localProfileId(localProfileId)
     }
 
-    public override fun partnerProfileId(partnerProfileId: String) {
+    override fun partnerProfileId(partnerProfileId: String) {
       cdkBuilder.partnerProfileId(partnerProfileId)
     }
 
-    public override fun serverId(serverId: String) {
+    override fun serverId(serverId: String) {
       cdkBuilder.serverId(serverId)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

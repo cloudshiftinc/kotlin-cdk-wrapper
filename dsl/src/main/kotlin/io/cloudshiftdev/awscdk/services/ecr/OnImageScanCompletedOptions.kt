@@ -14,60 +14,53 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
   public fun imageTags(): List<String> = unwrap(this).getImageTags() ?: emptyList()
 
   public interface Builder {
-    public fun crossStackScope(crossStackScope: Construct) {
-    }
+    public fun crossStackScope(crossStackScope: Construct)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventPattern(eventPattern: EventPattern) {
-    }
+    public fun eventPattern(eventPattern: EventPattern)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf45c2c16e38272d1b5548976659dc1c0e2c1bf198af7c1978500dedc86da8d8")
-    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit) {
-    }
+    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
 
-    public fun imageTags(imageTags: List<String>) {
-    }
+    public fun imageTags(imageTags: List<String>)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun target(target: IRuleTarget) {
-    }
+    public fun target(target: IRuleTarget)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions.Builder
         = software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions.builder()
 
-    public override fun crossStackScope(crossStackScope: Construct) {
+    override fun crossStackScope(crossStackScope: Construct) {
       cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventPattern(eventPattern: EventPattern) {
+    override fun eventPattern(eventPattern: EventPattern) {
       cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf45c2c16e38272d1b5548976659dc1c0e2c1bf198af7c1978500dedc86da8d8")
-    public override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
+    override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
         eventPattern(EventPattern(eventPattern))
 
-    public override fun imageTags(imageTags: List<String>) {
+    override fun imageTags(imageTags: List<String>) {
       cdkBuilder.imageTags(imageTags)
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun target(target: IRuleTarget) {
+    override fun target(target: IRuleTarget) {
       cdkBuilder.target(target.let(IRuleTarget::unwrap))
     }
 
@@ -78,19 +71,19 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecr.OnImageScanCompletedOptions,
   ) : OnImageScanCompletedOptions {
-    public override fun crossStackScope(): Construct? =
+    override fun crossStackScope(): Construct? =
         unwrap(this).getCrossStackScope()?.let(Construct::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun eventPattern(): EventPattern? =
+    override fun eventPattern(): EventPattern? =
         unwrap(this).getEventPattern()?.let(EventPattern::wrap)
 
-    public override fun imageTags(): List<String> = unwrap(this).getImageTags() ?: emptyList()
+    override fun imageTags(): List<String> = unwrap(this).getImageTags() ?: emptyList()
 
-    public override fun ruleName(): String? = unwrap(this).getRuleName()
+    override fun ruleName(): String? = unwrap(this).getRuleName()
 
-    public override fun target(): IRuleTarget? = unwrap(this).getTarget()?.let(IRuleTarget::wrap)
+    override fun target(): IRuleTarget? = unwrap(this).getTarget()?.let(IRuleTarget::wrap)
   }
 
   public companion object {

@@ -25,26 +25,19 @@ public interface BaseApplicationListenerProps {
   public fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
 
   public interface Builder {
-    public fun certificates(certificates: List<IListenerCertificate>) {
-    }
+    public fun certificates(certificates: List<IListenerCertificate>)
 
-    public fun defaultAction(defaultAction: ListenerAction) {
-    }
+    public fun defaultAction(defaultAction: ListenerAction)
 
-    public fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
-    }
+    public fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>)
 
-    public fun `open`(`open`: Boolean) {
-    }
+    public fun `open`(`open`: Boolean)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: ApplicationProtocol) {
-    }
+    public fun protocol(protocol: ApplicationProtocol)
 
-    public fun sslPolicy(sslPolicy: SslPolicy) {
-    }
+    public fun sslPolicy(sslPolicy: SslPolicy)
   }
 
   private class BuilderImpl : Builder {
@@ -53,31 +46,31 @@ public interface BaseApplicationListenerProps {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseApplicationListenerProps.builder()
 
-    public override fun certificates(certificates: List<IListenerCertificate>) {
+    override fun certificates(certificates: List<IListenerCertificate>) {
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
-    public override fun defaultAction(defaultAction: ListenerAction) {
+    override fun defaultAction(defaultAction: ListenerAction) {
       cdkBuilder.defaultAction(defaultAction.let(ListenerAction::unwrap))
     }
 
-    public override fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
+    override fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
       cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup::unwrap))
     }
 
-    public override fun `open`(`open`: Boolean) {
+    override fun `open`(`open`: Boolean) {
       cdkBuilder.`open`(`open`)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: ApplicationProtocol) {
+    override fun protocol(protocol: ApplicationProtocol) {
       cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
     }
 
-    public override fun sslPolicy(sslPolicy: SslPolicy) {
+    override fun sslPolicy(sslPolicy: SslPolicy) {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
     }
 
@@ -90,23 +83,23 @@ public interface BaseApplicationListenerProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseApplicationListenerProps,
   ) : BaseApplicationListenerProps {
-    public override fun certificates(): List<IListenerCertificate> =
+    override fun certificates(): List<IListenerCertificate> =
         unwrap(this).getCertificates()?.map(IListenerCertificate::wrap) ?: emptyList()
 
-    public override fun defaultAction(): ListenerAction? =
+    override fun defaultAction(): ListenerAction? =
         unwrap(this).getDefaultAction()?.let(ListenerAction::wrap)
 
-    public override fun defaultTargetGroups(): List<IApplicationTargetGroup> =
+    override fun defaultTargetGroups(): List<IApplicationTargetGroup> =
         unwrap(this).getDefaultTargetGroups()?.map(IApplicationTargetGroup::wrap) ?: emptyList()
 
-    public override fun `open`(): Boolean? = unwrap(this).getOpen()
+    override fun `open`(): Boolean? = unwrap(this).getOpen()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun protocol(): ApplicationProtocol? =
+    override fun protocol(): ApplicationProtocol? =
         unwrap(this).getProtocol()?.let(ApplicationProtocol::wrap)
 
-    public override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
+    override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
   }
 
   public companion object {

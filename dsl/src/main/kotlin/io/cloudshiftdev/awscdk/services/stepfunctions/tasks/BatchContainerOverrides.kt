@@ -22,23 +22,17 @@ public interface BatchContainerOverrides {
   public fun vcpus(): Number? = unwrap(this).getVcpus()
 
   public interface Builder {
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun gpuCount(gpuCount: Number) {
-    }
+    public fun gpuCount(gpuCount: Number)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun memory(memory: Size) {
-    }
+    public fun memory(memory: Size)
 
-    public fun vcpus(vcpus: Number) {
-    }
+    public fun vcpus(vcpus: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -46,27 +40,27 @@ public interface BatchContainerOverrides {
         software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides.builder()
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun gpuCount(gpuCount: Number) {
+    override fun gpuCount(gpuCount: Number) {
       cdkBuilder.gpuCount(gpuCount)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun memory(memory: Size) {
+    override fun memory(memory: Size) {
       cdkBuilder.memory(memory.let(Size::unwrap))
     }
 
-    public override fun vcpus(vcpus: Number) {
+    override fun vcpus(vcpus: Number) {
       cdkBuilder.vcpus(vcpus)
     }
 
@@ -78,19 +72,18 @@ public interface BatchContainerOverrides {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides,
   ) : BatchContainerOverrides {
-    public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+    override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-    public override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?:
-        emptyMap()
+    override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?: emptyMap()
 
-    public override fun gpuCount(): Number? = unwrap(this).getGpuCount()
+    override fun gpuCount(): Number? = unwrap(this).getGpuCount()
 
-    public override fun instanceType(): InstanceType? =
+    override fun instanceType(): InstanceType? =
         unwrap(this).getInstanceType()?.let(InstanceType::wrap)
 
-    public override fun memory(): Size? = unwrap(this).getMemory()?.let(Size::wrap)
+    override fun memory(): Size? = unwrap(this).getMemory()?.let(Size::wrap)
 
-    public override fun vcpus(): Number? = unwrap(this).getVcpus()
+    override fun vcpus(): Number? = unwrap(this).getVcpus()
   }
 
   public companion object {

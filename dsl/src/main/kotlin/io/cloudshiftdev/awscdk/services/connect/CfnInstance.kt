@@ -77,28 +77,21 @@ public open class CfnInstance internal constructor(
   }
 
   public interface Builder {
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: AttributesProperty) {
-    }
+    public fun attributes(attributes: AttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("400110a7d8d59f03f56537f5d326d22abaeb5d6e402b20b389ae4815102f63c6")
-    public fun attributes(attributes: AttributesProperty.Builder.() -> Unit) {
-    }
+    public fun attributes(attributes: AttributesProperty.Builder.() -> Unit)
 
-    public fun directoryId(directoryId: String) {
-    }
+    public fun directoryId(directoryId: String)
 
-    public fun identityManagementType(identityManagementType: String) {
-    }
+    public fun identityManagementType(identityManagementType: String)
 
-    public fun instanceAlias(instanceAlias: String) {
-    }
+    public fun instanceAlias(instanceAlias: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -108,32 +101,32 @@ public open class CfnInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnInstance.Builder =
         software.amazon.awscdk.services.connect.CfnInstance.Builder.create(scope, id)
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: AttributesProperty) {
+    override fun attributes(attributes: AttributesProperty) {
       cdkBuilder.attributes(attributes.let(AttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("400110a7d8d59f03f56537f5d326d22abaeb5d6e402b20b389ae4815102f63c6")
-    public override fun attributes(attributes: AttributesProperty.Builder.() -> Unit): Unit =
+    override fun attributes(attributes: AttributesProperty.Builder.() -> Unit): Unit =
         attributes(AttributesProperty(attributes))
 
-    public override fun directoryId(directoryId: String) {
+    override fun directoryId(directoryId: String) {
       cdkBuilder.directoryId(directoryId)
     }
 
-    public override fun identityManagementType(identityManagementType: String) {
+    override fun identityManagementType(identityManagementType: String) {
       cdkBuilder.identityManagementType(identityManagementType)
     }
 
-    public override fun instanceAlias(instanceAlias: String) {
+    override fun instanceAlias(instanceAlias: String) {
       cdkBuilder.instanceAlias(instanceAlias)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -177,47 +170,33 @@ public open class CfnInstance internal constructor(
     public fun useCustomTtsVoices(): Any? = unwrap(this).getUseCustomTtsVoices()
 
     public interface Builder {
-      public fun autoResolveBestVoices(autoResolveBestVoices: Boolean) {
-      }
+      public fun autoResolveBestVoices(autoResolveBestVoices: Boolean)
 
-      public fun autoResolveBestVoices(autoResolveBestVoices: IResolvable) {
-      }
+      public fun autoResolveBestVoices(autoResolveBestVoices: IResolvable)
 
-      public fun contactLens(contactLens: Boolean) {
-      }
+      public fun contactLens(contactLens: Boolean)
 
-      public fun contactLens(contactLens: IResolvable) {
-      }
+      public fun contactLens(contactLens: IResolvable)
 
-      public fun contactflowLogs(contactflowLogs: Boolean) {
-      }
+      public fun contactflowLogs(contactflowLogs: Boolean)
 
-      public fun contactflowLogs(contactflowLogs: IResolvable) {
-      }
+      public fun contactflowLogs(contactflowLogs: IResolvable)
 
-      public fun earlyMedia(earlyMedia: Boolean) {
-      }
+      public fun earlyMedia(earlyMedia: Boolean)
 
-      public fun earlyMedia(earlyMedia: IResolvable) {
-      }
+      public fun earlyMedia(earlyMedia: IResolvable)
 
-      public fun inboundCalls(inboundCalls: Boolean) {
-      }
+      public fun inboundCalls(inboundCalls: Boolean)
 
-      public fun inboundCalls(inboundCalls: IResolvable) {
-      }
+      public fun inboundCalls(inboundCalls: IResolvable)
 
-      public fun outboundCalls(outboundCalls: Boolean) {
-      }
+      public fun outboundCalls(outboundCalls: Boolean)
 
-      public fun outboundCalls(outboundCalls: IResolvable) {
-      }
+      public fun outboundCalls(outboundCalls: IResolvable)
 
-      public fun useCustomTtsVoices(useCustomTtsVoices: Boolean) {
-      }
+      public fun useCustomTtsVoices(useCustomTtsVoices: Boolean)
 
-      public fun useCustomTtsVoices(useCustomTtsVoices: IResolvable) {
-      }
+      public fun useCustomTtsVoices(useCustomTtsVoices: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -225,59 +204,59 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty.Builder =
           software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty.builder()
 
-      public override fun autoResolveBestVoices(autoResolveBestVoices: Boolean) {
+      override fun autoResolveBestVoices(autoResolveBestVoices: Boolean) {
         cdkBuilder.autoResolveBestVoices(autoResolveBestVoices)
       }
 
-      public override fun autoResolveBestVoices(autoResolveBestVoices: IResolvable) {
+      override fun autoResolveBestVoices(autoResolveBestVoices: IResolvable) {
         cdkBuilder.autoResolveBestVoices(autoResolveBestVoices.let(IResolvable::unwrap))
       }
 
-      public override fun contactLens(contactLens: Boolean) {
+      override fun contactLens(contactLens: Boolean) {
         cdkBuilder.contactLens(contactLens)
       }
 
-      public override fun contactLens(contactLens: IResolvable) {
+      override fun contactLens(contactLens: IResolvable) {
         cdkBuilder.contactLens(contactLens.let(IResolvable::unwrap))
       }
 
-      public override fun contactflowLogs(contactflowLogs: Boolean) {
+      override fun contactflowLogs(contactflowLogs: Boolean) {
         cdkBuilder.contactflowLogs(contactflowLogs)
       }
 
-      public override fun contactflowLogs(contactflowLogs: IResolvable) {
+      override fun contactflowLogs(contactflowLogs: IResolvable) {
         cdkBuilder.contactflowLogs(contactflowLogs.let(IResolvable::unwrap))
       }
 
-      public override fun earlyMedia(earlyMedia: Boolean) {
+      override fun earlyMedia(earlyMedia: Boolean) {
         cdkBuilder.earlyMedia(earlyMedia)
       }
 
-      public override fun earlyMedia(earlyMedia: IResolvable) {
+      override fun earlyMedia(earlyMedia: IResolvable) {
         cdkBuilder.earlyMedia(earlyMedia.let(IResolvable::unwrap))
       }
 
-      public override fun inboundCalls(inboundCalls: Boolean) {
+      override fun inboundCalls(inboundCalls: Boolean) {
         cdkBuilder.inboundCalls(inboundCalls)
       }
 
-      public override fun inboundCalls(inboundCalls: IResolvable) {
+      override fun inboundCalls(inboundCalls: IResolvable) {
         cdkBuilder.inboundCalls(inboundCalls.let(IResolvable::unwrap))
       }
 
-      public override fun outboundCalls(outboundCalls: Boolean) {
+      override fun outboundCalls(outboundCalls: Boolean) {
         cdkBuilder.outboundCalls(outboundCalls)
       }
 
-      public override fun outboundCalls(outboundCalls: IResolvable) {
+      override fun outboundCalls(outboundCalls: IResolvable) {
         cdkBuilder.outboundCalls(outboundCalls.let(IResolvable::unwrap))
       }
 
-      public override fun useCustomTtsVoices(useCustomTtsVoices: Boolean) {
+      override fun useCustomTtsVoices(useCustomTtsVoices: Boolean) {
         cdkBuilder.useCustomTtsVoices(useCustomTtsVoices)
       }
 
-      public override fun useCustomTtsVoices(useCustomTtsVoices: IResolvable) {
+      override fun useCustomTtsVoices(useCustomTtsVoices: IResolvable) {
         cdkBuilder.useCustomTtsVoices(useCustomTtsVoices.let(IResolvable::unwrap))
       }
 
@@ -289,19 +268,19 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty,
     ) : AttributesProperty {
-      public override fun autoResolveBestVoices(): Any? = unwrap(this).getAutoResolveBestVoices()
+      override fun autoResolveBestVoices(): Any? = unwrap(this).getAutoResolveBestVoices()
 
-      public override fun contactLens(): Any? = unwrap(this).getContactLens()
+      override fun contactLens(): Any? = unwrap(this).getContactLens()
 
-      public override fun contactflowLogs(): Any? = unwrap(this).getContactflowLogs()
+      override fun contactflowLogs(): Any? = unwrap(this).getContactflowLogs()
 
-      public override fun earlyMedia(): Any? = unwrap(this).getEarlyMedia()
+      override fun earlyMedia(): Any? = unwrap(this).getEarlyMedia()
 
-      public override fun inboundCalls(): Any = unwrap(this).getInboundCalls()
+      override fun inboundCalls(): Any = unwrap(this).getInboundCalls()
 
-      public override fun outboundCalls(): Any = unwrap(this).getOutboundCalls()
+      override fun outboundCalls(): Any = unwrap(this).getOutboundCalls()
 
-      public override fun useCustomTtsVoices(): Any? = unwrap(this).getUseCustomTtsVoices()
+      override fun useCustomTtsVoices(): Any? = unwrap(this).getUseCustomTtsVoices()
     }
 
     public companion object {

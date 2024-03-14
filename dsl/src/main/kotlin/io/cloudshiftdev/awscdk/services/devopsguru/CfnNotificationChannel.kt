@@ -38,16 +38,13 @@ public open class CfnNotificationChannel internal constructor(
   }
 
   public interface Builder {
-    public fun config(config: IResolvable) {
-    }
+    public fun config(config: IResolvable)
 
-    public fun config(config: NotificationChannelConfigProperty) {
-    }
+    public fun config(config: NotificationChannelConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ee7a5ab933661560d32f0bc4b1ecb8c9e8ddfa70c3abb985c8669ed42dcb7e5")
-    public fun config(config: NotificationChannelConfigProperty.Builder.() -> Unit) {
-    }
+    public fun config(config: NotificationChannelConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -58,17 +55,17 @@ public open class CfnNotificationChannel internal constructor(
         software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.Builder =
         software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.Builder.create(scope, id)
 
-    public override fun config(config: IResolvable) {
+    override fun config(config: IResolvable) {
       cdkBuilder.config(config.let(IResolvable::unwrap))
     }
 
-    public override fun config(config: NotificationChannelConfigProperty) {
+    override fun config(config: NotificationChannelConfigProperty) {
       cdkBuilder.config(config.let(NotificationChannelConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ee7a5ab933661560d32f0bc4b1ecb8c9e8ddfa70c3abb985c8669ed42dcb7e5")
-    public override fun config(config: NotificationChannelConfigProperty.Builder.() -> Unit): Unit =
+    override fun config(config: NotificationChannelConfigProperty.Builder.() -> Unit): Unit =
         config(NotificationChannelConfigProperty(config))
 
     public fun build(): software.amazon.awscdk.services.devopsguru.CfnNotificationChannel =
@@ -102,11 +99,9 @@ public open class CfnNotificationChannel internal constructor(
     public fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
 
     public interface Builder {
-      public fun messageTypes(messageTypes: List<String>) {
-      }
+      public fun messageTypes(messageTypes: List<String>)
 
-      public fun severities(severities: List<String>) {
-      }
+      public fun severities(severities: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -115,11 +110,11 @@ public open class CfnNotificationChannel internal constructor(
           =
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty.builder()
 
-      public override fun messageTypes(messageTypes: List<String>) {
+      override fun messageTypes(messageTypes: List<String>) {
         cdkBuilder.messageTypes(messageTypes)
       }
 
-      public override fun severities(severities: List<String>) {
+      override fun severities(severities: List<String>) {
         cdkBuilder.severities(severities)
       }
 
@@ -132,10 +127,9 @@ public open class CfnNotificationChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty,
     ) : NotificationFilterConfigProperty {
-      public override fun messageTypes(): List<String> = unwrap(this).getMessageTypes() ?:
-          emptyList()
+      override fun messageTypes(): List<String> = unwrap(this).getMessageTypes() ?: emptyList()
 
-      public override fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
+      override fun severities(): List<String> = unwrap(this).getSeverities() ?: emptyList()
     }
 
     public companion object {
@@ -164,27 +158,21 @@ public open class CfnNotificationChannel internal constructor(
     public fun sns(): Any? = unwrap(this).getSns()
 
     public interface Builder {
-      public fun filters(filters: IResolvable) {
-      }
+      public fun filters(filters: IResolvable)
 
-      public fun filters(filters: NotificationFilterConfigProperty) {
-      }
+      public fun filters(filters: NotificationFilterConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45a6598eb4c4f3b86436cc52c7dbd55fb7b4a5abcfe8733b7290f45f2f3227dd")
-      public fun filters(filters: NotificationFilterConfigProperty.Builder.() -> Unit) {
-      }
+      public fun filters(filters: NotificationFilterConfigProperty.Builder.() -> Unit)
 
-      public fun sns(sns: IResolvable) {
-      }
+      public fun sns(sns: IResolvable)
 
-      public fun sns(sns: SnsChannelConfigProperty) {
-      }
+      public fun sns(sns: SnsChannelConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("58a795a7aae4312066872a05c81d7e16e31913fd0387c72972646cc2d13f2418")
-      public fun sns(sns: SnsChannelConfigProperty.Builder.() -> Unit) {
-      }
+      public fun sns(sns: SnsChannelConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -193,30 +181,30 @@ public open class CfnNotificationChannel internal constructor(
           =
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty.builder()
 
-      public override fun filters(filters: IResolvable) {
+      override fun filters(filters: IResolvable) {
         cdkBuilder.filters(filters.let(IResolvable::unwrap))
       }
 
-      public override fun filters(filters: NotificationFilterConfigProperty) {
+      override fun filters(filters: NotificationFilterConfigProperty) {
         cdkBuilder.filters(filters.let(NotificationFilterConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45a6598eb4c4f3b86436cc52c7dbd55fb7b4a5abcfe8733b7290f45f2f3227dd")
-      public override fun filters(filters: NotificationFilterConfigProperty.Builder.() -> Unit):
-          Unit = filters(NotificationFilterConfigProperty(filters))
+      override fun filters(filters: NotificationFilterConfigProperty.Builder.() -> Unit): Unit =
+          filters(NotificationFilterConfigProperty(filters))
 
-      public override fun sns(sns: IResolvable) {
+      override fun sns(sns: IResolvable) {
         cdkBuilder.sns(sns.let(IResolvable::unwrap))
       }
 
-      public override fun sns(sns: SnsChannelConfigProperty) {
+      override fun sns(sns: SnsChannelConfigProperty) {
         cdkBuilder.sns(sns.let(SnsChannelConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("58a795a7aae4312066872a05c81d7e16e31913fd0387c72972646cc2d13f2418")
-      public override fun sns(sns: SnsChannelConfigProperty.Builder.() -> Unit): Unit =
+      override fun sns(sns: SnsChannelConfigProperty.Builder.() -> Unit): Unit =
           sns(SnsChannelConfigProperty(sns))
 
       public fun build():
@@ -228,9 +216,9 @@ public open class CfnNotificationChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationChannelConfigProperty,
     ) : NotificationChannelConfigProperty {
-      public override fun filters(): Any? = unwrap(this).getFilters()
+      override fun filters(): Any? = unwrap(this).getFilters()
 
-      public override fun sns(): Any? = unwrap(this).getSns()
+      override fun sns(): Any? = unwrap(this).getSns()
     }
 
     public companion object {
@@ -258,8 +246,7 @@ public open class CfnNotificationChannel internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -268,7 +255,7 @@ public open class CfnNotificationChannel internal constructor(
           =
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty.builder()
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -281,7 +268,7 @@ public open class CfnNotificationChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.SnsChannelConfigProperty,
     ) : SnsChannelConfigProperty {
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {

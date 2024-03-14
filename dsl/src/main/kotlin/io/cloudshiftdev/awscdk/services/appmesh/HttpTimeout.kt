@@ -9,22 +9,20 @@ public interface HttpTimeout {
   public fun perRequest(): Duration? = unwrap(this).getPerRequest()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun idle(idle: Duration) {
-    }
+    public fun idle(idle: Duration)
 
-    public fun perRequest(perRequest: Duration) {
-    }
+    public fun perRequest(perRequest: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.HttpTimeout.Builder =
         software.amazon.awscdk.services.appmesh.HttpTimeout.builder()
 
-    public override fun idle(idle: Duration) {
+    override fun idle(idle: Duration) {
       cdkBuilder.idle(idle.let(Duration::unwrap))
     }
 
-    public override fun perRequest(perRequest: Duration) {
+    override fun perRequest(perRequest: Duration) {
       cdkBuilder.perRequest(perRequest.let(Duration::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface HttpTimeout {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.HttpTimeout,
   ) : HttpTimeout {
-    public override fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
+    override fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
 
-    public override fun perRequest(): Duration? = unwrap(this).getPerRequest()?.let(Duration::wrap)
+    override fun perRequest(): Duration? = unwrap(this).getPerRequest()?.let(Duration::wrap)
   }
 
   public companion object {

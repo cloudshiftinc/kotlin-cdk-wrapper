@@ -37,11 +37,9 @@ public open class CfnEnclaveCertificateIamRoleAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun certificateArn(certificateArn: String) {
-    }
+    public fun certificateArn(certificateArn: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -53,11 +51,11 @@ public open class CfnEnclaveCertificateIamRoleAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociation.Builder.create(scope,
         id)
 
-    public override fun certificateArn(certificateArn: String) {
+    override fun certificateArn(certificateArn: String) {
       cdkBuilder.certificateArn(certificateArn)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

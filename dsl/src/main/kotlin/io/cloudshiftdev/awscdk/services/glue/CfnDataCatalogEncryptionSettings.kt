@@ -46,21 +46,17 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
   }
 
   public interface Builder {
-    public fun catalogId(catalogId: String) {
-    }
+    public fun catalogId(catalogId: String)
 
-    public fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
-    }
+    public fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable)
 
     public
-        fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty) {
-    }
+        fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75569b14742d1e1d1b732100581f6ec8f9e4012838a4e68540f214adce64afcb")
     public
-        fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty.Builder.() -> Unit) {
-    }
+        fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -72,22 +68,22 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
         software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.Builder.create(scope,
         id)
 
-    public override fun catalogId(catalogId: String) {
+    override fun catalogId(catalogId: String) {
       cdkBuilder.catalogId(catalogId)
     }
 
-    public override fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
+    override fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
       cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty) {
       cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(DataCatalogEncryptionSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75569b14742d1e1d1b732100581f6ec8f9e4012838a4e68540f214adce64afcb")
-    public override
+    override
         fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty.Builder.() -> Unit):
         Unit =
         dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsProperty(dataCatalogEncryptionSettings))
@@ -127,14 +123,11 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
     public fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
 
     public interface Builder {
-      public fun catalogEncryptionMode(catalogEncryptionMode: String) {
-      }
+      public fun catalogEncryptionMode(catalogEncryptionMode: String)
 
-      public fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String) {
-      }
+      public fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String)
 
-      public fun sseAwsKmsKeyId(sseAwsKmsKeyId: String) {
-      }
+      public fun sseAwsKmsKeyId(sseAwsKmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -143,15 +136,15 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty.builder()
 
-      public override fun catalogEncryptionMode(catalogEncryptionMode: String) {
+      override fun catalogEncryptionMode(catalogEncryptionMode: String) {
         cdkBuilder.catalogEncryptionMode(catalogEncryptionMode)
       }
 
-      public override fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String) {
+      override fun catalogEncryptionServiceRole(catalogEncryptionServiceRole: String) {
         cdkBuilder.catalogEncryptionServiceRole(catalogEncryptionServiceRole)
       }
 
-      public override fun sseAwsKmsKeyId(sseAwsKmsKeyId: String) {
+      override fun sseAwsKmsKeyId(sseAwsKmsKeyId: String) {
         cdkBuilder.sseAwsKmsKeyId(sseAwsKmsKeyId)
       }
 
@@ -164,12 +157,12 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty,
     ) : EncryptionAtRestProperty {
-      public override fun catalogEncryptionMode(): String? = unwrap(this).getCatalogEncryptionMode()
+      override fun catalogEncryptionMode(): String? = unwrap(this).getCatalogEncryptionMode()
 
-      public override fun catalogEncryptionServiceRole(): String? =
+      override fun catalogEncryptionServiceRole(): String? =
           unwrap(this).getCatalogEncryptionServiceRole()
 
-      public override fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
+      override fun sseAwsKmsKeyId(): String? = unwrap(this).getSseAwsKmsKeyId()
     }
 
     public companion object {
@@ -198,29 +191,23 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
     public fun encryptionAtRest(): Any? = unwrap(this).getEncryptionAtRest()
 
     public interface Builder {
-      public fun connectionPasswordEncryption(connectionPasswordEncryption: IResolvable) {
-      }
+      public fun connectionPasswordEncryption(connectionPasswordEncryption: IResolvable)
 
       public
-          fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty) {
-      }
+          fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("535a09664a45134d196d3b8cba6b76e0a3757801bcfba8d545727477b5a1c078")
       public
-          fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty.Builder.() -> Unit) {
-      }
+          fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty.Builder.() -> Unit)
 
-      public fun encryptionAtRest(encryptionAtRest: IResolvable) {
-      }
+      public fun encryptionAtRest(encryptionAtRest: IResolvable)
 
-      public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty) {
-      }
+      public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfa85bce49148dde4e4efc40ffa3cc4e75ade4f3ca43e59141b5771fa98d3644")
-      public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty.Builder.() -> Unit) {
-      }
+      public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -229,35 +216,34 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty.builder()
 
-      public override fun connectionPasswordEncryption(connectionPasswordEncryption: IResolvable) {
+      override fun connectionPasswordEncryption(connectionPasswordEncryption: IResolvable) {
         cdkBuilder.connectionPasswordEncryption(connectionPasswordEncryption.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty) {
         cdkBuilder.connectionPasswordEncryption(connectionPasswordEncryption.let(ConnectionPasswordEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("535a09664a45134d196d3b8cba6b76e0a3757801bcfba8d545727477b5a1c078")
-      public override
+      override
           fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty.Builder.() -> Unit):
           Unit =
           connectionPasswordEncryption(ConnectionPasswordEncryptionProperty(connectionPasswordEncryption))
 
-      public override fun encryptionAtRest(encryptionAtRest: IResolvable) {
+      override fun encryptionAtRest(encryptionAtRest: IResolvable) {
         cdkBuilder.encryptionAtRest(encryptionAtRest.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty) {
+      override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty) {
         cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfa85bce49148dde4e4efc40ffa3cc4e75ade4f3ca43e59141b5771fa98d3644")
-      public override
-          fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty.Builder.() -> Unit): Unit
-          = encryptionAtRest(EncryptionAtRestProperty(encryptionAtRest))
+      override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty.Builder.() -> Unit):
+          Unit = encryptionAtRest(EncryptionAtRestProperty(encryptionAtRest))
 
       public fun build():
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty
@@ -268,10 +254,10 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty,
     ) : DataCatalogEncryptionSettingsProperty {
-      public override fun connectionPasswordEncryption(): Any? =
+      override fun connectionPasswordEncryption(): Any? =
           unwrap(this).getConnectionPasswordEncryption()
 
-      public override fun encryptionAtRest(): Any? = unwrap(this).getEncryptionAtRest()
+      override fun encryptionAtRest(): Any? = unwrap(this).getEncryptionAtRest()
     }
 
     public companion object {
@@ -302,14 +288,11 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
         unwrap(this).getReturnConnectionPasswordEncrypted()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean) {
-      }
+      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean)
 
-      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable) {
-      }
+      public fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -318,16 +301,15 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override
-          fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean) {
+      override fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: Boolean) {
         cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted)
       }
 
-      public override
+      override
           fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable) {
         cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted.let(IResolvable::unwrap))
       }
@@ -341,9 +323,9 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty,
     ) : ConnectionPasswordEncryptionProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun returnConnectionPasswordEncrypted(): Any? =
+      override fun returnConnectionPasswordEncrypted(): Any? =
           unwrap(this).getReturnConnectionPasswordEncrypted()
     }
 

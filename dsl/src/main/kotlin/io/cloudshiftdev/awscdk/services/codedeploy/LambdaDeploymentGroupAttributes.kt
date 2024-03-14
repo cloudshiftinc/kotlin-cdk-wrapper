@@ -12,14 +12,11 @@ public interface LambdaDeploymentGroupAttributes {
   public fun deploymentGroupName(): String
 
   public interface Builder {
-    public fun application(application: ILambdaApplication) {
-    }
+    public fun application(application: ILambdaApplication)
 
-    public fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
-    }
+    public fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -27,15 +24,15 @@ public interface LambdaDeploymentGroupAttributes {
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes.builder()
 
-    public override fun application(application: ILambdaApplication) {
+    override fun application(application: ILambdaApplication) {
       cdkBuilder.application(application.let(ILambdaApplication::unwrap))
     }
 
-    public override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
+    override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig::unwrap))
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
@@ -47,13 +44,13 @@ public interface LambdaDeploymentGroupAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes,
   ) : LambdaDeploymentGroupAttributes {
-    public override fun application(): ILambdaApplication =
+    override fun application(): ILambdaApplication =
         unwrap(this).getApplication().let(ILambdaApplication::wrap)
 
-    public override fun deploymentConfig(): ILambdaDeploymentConfig? =
+    override fun deploymentConfig(): ILambdaDeploymentConfig? =
         unwrap(this).getDeploymentConfig()?.let(ILambdaDeploymentConfig::wrap)
 
-    public override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
+    override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
   }
 
   public companion object {

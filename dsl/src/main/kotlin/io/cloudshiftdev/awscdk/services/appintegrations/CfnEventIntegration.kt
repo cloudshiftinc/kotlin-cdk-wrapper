@@ -68,28 +68,21 @@ public open class CfnEventIntegration internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventBridgeBus(eventBridgeBus: String) {
-    }
+    public fun eventBridgeBus(eventBridgeBus: String)
 
-    public fun eventFilter(eventFilter: IResolvable) {
-    }
+    public fun eventFilter(eventFilter: IResolvable)
 
-    public fun eventFilter(eventFilter: EventFilterProperty) {
-    }
+    public fun eventFilter(eventFilter: EventFilterProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6cb1d4f55e176a54a6afd4cd01263922ef7c9a98ace6d5a4a98f7345ff7ea2dd")
-    public fun eventFilter(eventFilter: EventFilterProperty.Builder.() -> Unit) {
-    }
+    public fun eventFilter(eventFilter: EventFilterProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -101,32 +94,32 @@ public open class CfnEventIntegration internal constructor(
         software.amazon.awscdk.services.appintegrations.CfnEventIntegration.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventBridgeBus(eventBridgeBus: String) {
+    override fun eventBridgeBus(eventBridgeBus: String) {
       cdkBuilder.eventBridgeBus(eventBridgeBus)
     }
 
-    public override fun eventFilter(eventFilter: IResolvable) {
+    override fun eventFilter(eventFilter: IResolvable) {
       cdkBuilder.eventFilter(eventFilter.let(IResolvable::unwrap))
     }
 
-    public override fun eventFilter(eventFilter: EventFilterProperty) {
+    override fun eventFilter(eventFilter: EventFilterProperty) {
       cdkBuilder.eventFilter(eventFilter.let(EventFilterProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6cb1d4f55e176a54a6afd4cd01263922ef7c9a98ace6d5a4a98f7345ff7ea2dd")
-    public override fun eventFilter(eventFilter: EventFilterProperty.Builder.() -> Unit): Unit =
+    override fun eventFilter(eventFilter: EventFilterProperty.Builder.() -> Unit): Unit =
         eventFilter(EventFilterProperty(eventFilter))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -160,8 +153,7 @@ public open class CfnEventIntegration internal constructor(
     public fun source(): String
 
     public interface Builder {
-      public fun source(source: String) {
-      }
+      public fun source(source: String)
     }
 
     private class BuilderImpl : Builder {
@@ -170,7 +162,7 @@ public open class CfnEventIntegration internal constructor(
           =
           software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty.builder()
 
-      public override fun source(source: String) {
+      override fun source(source: String) {
         cdkBuilder.source(source)
       }
 
@@ -183,7 +175,7 @@ public open class CfnEventIntegration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty,
     ) : EventFilterProperty {
-      public override fun source(): String = unwrap(this).getSource()
+      override fun source(): String = unwrap(this).getSource()
     }
 
     public companion object {

@@ -31,36 +31,32 @@ public open class BlockPublicAccess internal constructor(
   }
 
   public interface Builder {
-    public fun blockPublicAcls(blockPublicAcls: Boolean) {
-    }
+    public fun blockPublicAcls(blockPublicAcls: Boolean)
 
-    public fun blockPublicPolicy(blockPublicPolicy: Boolean) {
-    }
+    public fun blockPublicPolicy(blockPublicPolicy: Boolean)
 
-    public fun ignorePublicAcls(ignorePublicAcls: Boolean) {
-    }
+    public fun ignorePublicAcls(ignorePublicAcls: Boolean)
 
-    public fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
-    }
+    public fun restrictPublicBuckets(restrictPublicBuckets: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.BlockPublicAccess.Builder =
         software.amazon.awscdk.services.s3.BlockPublicAccess.Builder.create()
 
-    public override fun blockPublicAcls(blockPublicAcls: Boolean) {
+    override fun blockPublicAcls(blockPublicAcls: Boolean) {
       cdkBuilder.blockPublicAcls(blockPublicAcls)
     }
 
-    public override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
+    override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
       cdkBuilder.blockPublicPolicy(blockPublicPolicy)
     }
 
-    public override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
+    override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
       cdkBuilder.ignorePublicAcls(ignorePublicAcls)
     }
 
-    public override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
+    override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
       cdkBuilder.restrictPublicBuckets(restrictPublicBuckets)
     }
 

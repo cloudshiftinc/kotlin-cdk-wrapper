@@ -106,54 +106,40 @@ public open class CfnPartnerAccount internal constructor(
   }
 
   public interface Builder {
-    public fun accountLinked(accountLinked: Boolean) {
-    }
+    public fun accountLinked(accountLinked: Boolean)
 
-    public fun accountLinked(accountLinked: IResolvable) {
-    }
+    public fun accountLinked(accountLinked: IResolvable)
 
-    public fun partnerAccountId(partnerAccountId: String) {
-    }
+    public fun partnerAccountId(partnerAccountId: String)
 
-    public fun partnerType(partnerType: String) {
-    }
+    public fun partnerType(partnerType: String)
 
-    public fun sidewalk(sidewalk: IResolvable) {
-    }
+    public fun sidewalk(sidewalk: IResolvable)
 
-    public fun sidewalk(sidewalk: SidewalkAccountInfoProperty) {
-    }
+    public fun sidewalk(sidewalk: SidewalkAccountInfoProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c23f4ce3b6b1acdf5366e8266b214b62e3340aa21c8789029acd609d73249c5")
-    public fun sidewalk(sidewalk: SidewalkAccountInfoProperty.Builder.() -> Unit) {
-    }
+    public fun sidewalk(sidewalk: SidewalkAccountInfoProperty.Builder.() -> Unit)
 
-    public fun sidewalkResponse(sidewalkResponse: IResolvable) {
-    }
+    public fun sidewalkResponse(sidewalkResponse: IResolvable)
 
-    public fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty) {
-    }
+    public fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf9853e743f05d34e8bf54bfc19754dcd8c261695e6dc792a26f569208b2a40b")
     public
-        fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty.Builder.() -> Unit) {
-    }
+        fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty.Builder.() -> Unit)
 
-    public fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
-    }
+    public fun sidewalkUpdate(sidewalkUpdate: IResolvable)
 
-    public fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty) {
-    }
+    public fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50b2293303e851fca1e139168d0d98b54e0595482e874cc4b549b2872c17248f")
-    public fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty.Builder.() -> Unit) {
-    }
+    public fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -163,65 +149,63 @@ public open class CfnPartnerAccount internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.Builder =
         software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.Builder.create(scope, id)
 
-    public override fun accountLinked(accountLinked: Boolean) {
+    override fun accountLinked(accountLinked: Boolean) {
       cdkBuilder.accountLinked(accountLinked)
     }
 
-    public override fun accountLinked(accountLinked: IResolvable) {
+    override fun accountLinked(accountLinked: IResolvable) {
       cdkBuilder.accountLinked(accountLinked.let(IResolvable::unwrap))
     }
 
-    public override fun partnerAccountId(partnerAccountId: String) {
+    override fun partnerAccountId(partnerAccountId: String) {
       cdkBuilder.partnerAccountId(partnerAccountId)
     }
 
-    public override fun partnerType(partnerType: String) {
+    override fun partnerType(partnerType: String) {
       cdkBuilder.partnerType(partnerType)
     }
 
-    public override fun sidewalk(sidewalk: IResolvable) {
+    override fun sidewalk(sidewalk: IResolvable) {
       cdkBuilder.sidewalk(sidewalk.let(IResolvable::unwrap))
     }
 
-    public override fun sidewalk(sidewalk: SidewalkAccountInfoProperty) {
+    override fun sidewalk(sidewalk: SidewalkAccountInfoProperty) {
       cdkBuilder.sidewalk(sidewalk.let(SidewalkAccountInfoProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c23f4ce3b6b1acdf5366e8266b214b62e3340aa21c8789029acd609d73249c5")
-    public override fun sidewalk(sidewalk: SidewalkAccountInfoProperty.Builder.() -> Unit): Unit =
+    override fun sidewalk(sidewalk: SidewalkAccountInfoProperty.Builder.() -> Unit): Unit =
         sidewalk(SidewalkAccountInfoProperty(sidewalk))
 
-    public override fun sidewalkResponse(sidewalkResponse: IResolvable) {
+    override fun sidewalkResponse(sidewalkResponse: IResolvable) {
       cdkBuilder.sidewalkResponse(sidewalkResponse.let(IResolvable::unwrap))
     }
 
-    public override
-        fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty) {
+    override fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty) {
       cdkBuilder.sidewalkResponse(sidewalkResponse.let(SidewalkAccountInfoWithFingerprintProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf9853e743f05d34e8bf54bfc19754dcd8c261695e6dc792a26f569208b2a40b")
-    public override
+    override
         fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty.Builder.() -> Unit):
         Unit = sidewalkResponse(SidewalkAccountInfoWithFingerprintProperty(sidewalkResponse))
 
-    public override fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
+    override fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
       cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(IResolvable::unwrap))
     }
 
-    public override fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty) {
+    override fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty) {
       cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(SidewalkUpdateAccountProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50b2293303e851fca1e139168d0d98b54e0595482e874cc4b549b2872c17248f")
-    public override
-        fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty.Builder.() -> Unit): Unit =
-        sidewalkUpdate(SidewalkUpdateAccountProperty(sidewalkUpdate))
+    override fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty.Builder.() -> Unit):
+        Unit = sidewalkUpdate(SidewalkUpdateAccountProperty(sidewalkUpdate))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -254,8 +238,7 @@ public open class CfnPartnerAccount internal constructor(
     public fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
 
     public interface Builder {
-      public fun appServerPrivateKey(appServerPrivateKey: String) {
-      }
+      public fun appServerPrivateKey(appServerPrivateKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -264,7 +247,7 @@ public open class CfnPartnerAccount internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty.builder()
 
-      public override fun appServerPrivateKey(appServerPrivateKey: String) {
+      override fun appServerPrivateKey(appServerPrivateKey: String) {
         cdkBuilder.appServerPrivateKey(appServerPrivateKey)
       }
 
@@ -277,7 +260,7 @@ public open class CfnPartnerAccount internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty,
     ) : SidewalkUpdateAccountProperty {
-      public override fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
+      override fun appServerPrivateKey(): String? = unwrap(this).getAppServerPrivateKey()
     }
 
     public companion object {
@@ -308,14 +291,11 @@ public open class CfnPartnerAccount internal constructor(
     public fun fingerprint(): String? = unwrap(this).getFingerprint()
 
     public interface Builder {
-      public fun amazonId(amazonId: String) {
-      }
+      public fun amazonId(amazonId: String)
 
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun fingerprint(fingerprint: String) {
-      }
+      public fun fingerprint(fingerprint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -324,15 +304,15 @@ public open class CfnPartnerAccount internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty.builder()
 
-      public override fun amazonId(amazonId: String) {
+      override fun amazonId(amazonId: String) {
         cdkBuilder.amazonId(amazonId)
       }
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun fingerprint(fingerprint: String) {
+      override fun fingerprint(fingerprint: String) {
         cdkBuilder.fingerprint(fingerprint)
       }
 
@@ -345,11 +325,11 @@ public open class CfnPartnerAccount internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty,
     ) : SidewalkAccountInfoWithFingerprintProperty {
-      public override fun amazonId(): String? = unwrap(this).getAmazonId()
+      override fun amazonId(): String? = unwrap(this).getAmazonId()
 
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun fingerprint(): String? = unwrap(this).getFingerprint()
+      override fun fingerprint(): String? = unwrap(this).getFingerprint()
     }
 
     public companion object {
@@ -377,8 +357,7 @@ public open class CfnPartnerAccount internal constructor(
     public fun appServerPrivateKey(): String
 
     public interface Builder {
-      public fun appServerPrivateKey(appServerPrivateKey: String) {
-      }
+      public fun appServerPrivateKey(appServerPrivateKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -387,7 +366,7 @@ public open class CfnPartnerAccount internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty.builder()
 
-      public override fun appServerPrivateKey(appServerPrivateKey: String) {
+      override fun appServerPrivateKey(appServerPrivateKey: String) {
         cdkBuilder.appServerPrivateKey(appServerPrivateKey)
       }
 
@@ -400,7 +379,7 @@ public open class CfnPartnerAccount internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty,
     ) : SidewalkAccountInfoProperty {
-      public override fun appServerPrivateKey(): String = unwrap(this).getAppServerPrivateKey()
+      override fun appServerPrivateKey(): String = unwrap(this).getAppServerPrivateKey()
     }
 
     public companion object {

@@ -167,17 +167,13 @@ public open class Environment internal constructor(
       ExtensionOptions(options))
 
   public interface Builder {
-    public fun application(application: IApplication) {
-    }
+    public fun application(application: IApplication)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun monitors(monitors: List<Monitor>) {
-    }
+    public fun monitors(monitors: List<Monitor>)
   }
 
   private class BuilderImpl(
@@ -187,19 +183,19 @@ public open class Environment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.Environment.Builder =
         software.amazon.awscdk.services.appconfig.Environment.Builder.create(scope, id)
 
-    public override fun application(application: IApplication) {
+    override fun application(application: IApplication) {
       cdkBuilder.application(application.let(IApplication::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun monitors(monitors: List<Monitor>) {
+    override fun monitors(monitors: List<Monitor>) {
       cdkBuilder.monitors(monitors.map(Monitor::unwrap))
     }
 

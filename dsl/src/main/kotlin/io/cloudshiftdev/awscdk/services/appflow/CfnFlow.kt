@@ -127,66 +127,48 @@ public open class CfnFlow internal constructor(
       triggerConfig(TriggerConfigProperty(`value`))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun destinationFlowConfigList(destinationFlowConfigList: IResolvable) {
-    }
+    public fun destinationFlowConfigList(destinationFlowConfigList: IResolvable)
 
-    public fun destinationFlowConfigList(destinationFlowConfigList: List<Any>) {
-    }
+    public fun destinationFlowConfigList(destinationFlowConfigList: List<Any>)
 
-    public fun flowName(flowName: String) {
-    }
+    public fun flowName(flowName: String)
 
-    public fun flowStatus(flowStatus: String) {
-    }
+    public fun flowStatus(flowStatus: String)
 
-    public fun kmsArn(kmsArn: String) {
-    }
+    public fun kmsArn(kmsArn: String)
 
-    public fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
-    }
+    public fun metadataCatalogConfig(metadataCatalogConfig: IResolvable)
 
-    public fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty) {
-    }
+    public fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e720d9b9cc18741b25ccf2fd1461e54daea95b322bba21d71f7f0465ed70c5a")
     public
-        fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty.Builder.() -> Unit) {
-    }
+        fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty.Builder.() -> Unit)
 
-    public fun sourceFlowConfig(sourceFlowConfig: IResolvable) {
-    }
+    public fun sourceFlowConfig(sourceFlowConfig: IResolvable)
 
-    public fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty) {
-    }
+    public fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ce8f9686103aed30f45bf4fabc3a9f02ab3fb16971b7e673b19195615c083fd")
-    public fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tasks(tasks: IResolvable) {
-    }
+    public fun tasks(tasks: IResolvable)
 
-    public fun tasks(tasks: List<Any>) {
-    }
+    public fun tasks(tasks: List<Any>)
 
-    public fun triggerConfig(triggerConfig: IResolvable) {
-    }
+    public fun triggerConfig(triggerConfig: IResolvable)
 
-    public fun triggerConfig(triggerConfig: TriggerConfigProperty) {
-    }
+    public fun triggerConfig(triggerConfig: TriggerConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ab5c67ee89287b77802dc81859788a31a2bfc74a7e56c61dc4e14f6089b4abdf")
-    public fun triggerConfig(triggerConfig: TriggerConfigProperty.Builder.() -> Unit) {
-    }
+    public fun triggerConfig(triggerConfig: TriggerConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -196,83 +178,81 @@ public open class CfnFlow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appflow.CfnFlow.Builder =
         software.amazon.awscdk.services.appflow.CfnFlow.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun destinationFlowConfigList(destinationFlowConfigList: IResolvable) {
+    override fun destinationFlowConfigList(destinationFlowConfigList: IResolvable) {
       cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.let(IResolvable::unwrap))
     }
 
-    public override fun destinationFlowConfigList(destinationFlowConfigList: List<Any>) {
+    override fun destinationFlowConfigList(destinationFlowConfigList: List<Any>) {
       cdkBuilder.destinationFlowConfigList(destinationFlowConfigList)
     }
 
-    public override fun flowName(flowName: String) {
+    override fun flowName(flowName: String) {
       cdkBuilder.flowName(flowName)
     }
 
-    public override fun flowStatus(flowStatus: String) {
+    override fun flowStatus(flowStatus: String) {
       cdkBuilder.flowStatus(flowStatus)
     }
 
-    public override fun kmsArn(kmsArn: String) {
+    override fun kmsArn(kmsArn: String) {
       cdkBuilder.kmsArn(kmsArn)
     }
 
-    public override fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
+    override fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
       cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty) {
+    override fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty) {
       cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(MetadataCatalogConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e720d9b9cc18741b25ccf2fd1461e54daea95b322bba21d71f7f0465ed70c5a")
-    public override
+    override
         fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty.Builder.() -> Unit):
         Unit = metadataCatalogConfig(MetadataCatalogConfigProperty(metadataCatalogConfig))
 
-    public override fun sourceFlowConfig(sourceFlowConfig: IResolvable) {
+    override fun sourceFlowConfig(sourceFlowConfig: IResolvable) {
       cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty) {
+    override fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty) {
       cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(SourceFlowConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ce8f9686103aed30f45bf4fabc3a9f02ab3fb16971b7e673b19195615c083fd")
-    public override
-        fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty.Builder.() -> Unit): Unit =
-        sourceFlowConfig(SourceFlowConfigProperty(sourceFlowConfig))
+    override fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty.Builder.() -> Unit):
+        Unit = sourceFlowConfig(SourceFlowConfigProperty(sourceFlowConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tasks(tasks: IResolvable) {
+    override fun tasks(tasks: IResolvable) {
       cdkBuilder.tasks(tasks.let(IResolvable::unwrap))
     }
 
-    public override fun tasks(tasks: List<Any>) {
+    override fun tasks(tasks: List<Any>) {
       cdkBuilder.tasks(tasks)
     }
 
-    public override fun triggerConfig(triggerConfig: IResolvable) {
+    override fun triggerConfig(triggerConfig: IResolvable) {
       cdkBuilder.triggerConfig(triggerConfig.let(IResolvable::unwrap))
     }
 
-    public override fun triggerConfig(triggerConfig: TriggerConfigProperty) {
+    override fun triggerConfig(triggerConfig: TriggerConfigProperty) {
       cdkBuilder.triggerConfig(triggerConfig.let(TriggerConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ab5c67ee89287b77802dc81859788a31a2bfc74a7e56c61dc4e14f6089b4abdf")
-    public override fun triggerConfig(triggerConfig: TriggerConfigProperty.Builder.() -> Unit): Unit
-        = triggerConfig(TriggerConfigProperty(triggerConfig))
+    override fun triggerConfig(triggerConfig: TriggerConfigProperty.Builder.() -> Unit): Unit =
+        triggerConfig(TriggerConfigProperty(triggerConfig))
 
     public fun build(): software.amazon.awscdk.services.appflow.CfnFlow = cdkBuilder.build()
   }
@@ -302,8 +282,7 @@ public open class CfnFlow internal constructor(
     public fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
 
     public interface Builder {
-      public fun datetimeTypeFieldName(datetimeTypeFieldName: String) {
-      }
+      public fun datetimeTypeFieldName(datetimeTypeFieldName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -311,7 +290,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty.builder()
 
-      public override fun datetimeTypeFieldName(datetimeTypeFieldName: String) {
+      override fun datetimeTypeFieldName(datetimeTypeFieldName: String) {
         cdkBuilder.datetimeTypeFieldName(datetimeTypeFieldName)
       }
 
@@ -324,7 +303,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.IncrementalPullConfigProperty,
     ) : IncrementalPullConfigProperty {
-      public override fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
+      override fun datetimeTypeFieldName(): String? = unwrap(this).getDatetimeTypeFieldName()
     }
 
     public companion object {
@@ -351,8 +330,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String? = unwrap(this).getObject()
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -361,7 +339,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -374,7 +352,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.LookoutMetricsDestinationPropertiesProperty,
     ) : LookoutMetricsDestinationPropertiesProperty {
-      public override fun `object`(): String? = unwrap(this).getObject()
+      override fun `object`(): String? = unwrap(this).getObject()
     }
 
     public companion object {
@@ -406,32 +384,25 @@ public open class CfnFlow internal constructor(
     public fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
 
     public interface Builder {
-      public fun objectPath(objectPath: String) {
-      }
+      public fun objectPath(objectPath: String)
 
-      public fun paginationConfig(paginationConfig: IResolvable) {
-      }
+      public fun paginationConfig(paginationConfig: IResolvable)
 
-      public fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
-      }
+      public fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
       public
-          fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit) {
-      }
+          fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit)
 
-      public fun parallelismConfig(parallelismConfig: IResolvable) {
-      }
+      public fun parallelismConfig(parallelismConfig: IResolvable)
 
-      public fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
-      }
+      public fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
       public
-          fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit) {
-      }
+          fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -439,35 +410,35 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty.builder()
 
-      public override fun objectPath(objectPath: String) {
+      override fun objectPath(objectPath: String) {
         cdkBuilder.objectPath(objectPath)
       }
 
-      public override fun paginationConfig(paginationConfig: IResolvable) {
+      override fun paginationConfig(paginationConfig: IResolvable) {
         cdkBuilder.paginationConfig(paginationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
+      override fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
         cdkBuilder.paginationConfig(paginationConfig.let(SAPODataPaginationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
-      public override
+      override
           fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit):
           Unit = paginationConfig(SAPODataPaginationConfigProperty(paginationConfig))
 
-      public override fun parallelismConfig(parallelismConfig: IResolvable) {
+      override fun parallelismConfig(parallelismConfig: IResolvable) {
         cdkBuilder.parallelismConfig(parallelismConfig.let(IResolvable::unwrap))
       }
 
-      public override fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
+      override fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
         cdkBuilder.parallelismConfig(parallelismConfig.let(SAPODataParallelismConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
-      public override
+      override
           fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty.Builder.() -> Unit):
           Unit = parallelismConfig(SAPODataParallelismConfigProperty(parallelismConfig))
 
@@ -480,11 +451,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataSourcePropertiesProperty,
     ) : SAPODataSourcePropertiesProperty {
-      public override fun objectPath(): String = unwrap(this).getObjectPath()
+      override fun objectPath(): String = unwrap(this).getObjectPath()
 
-      public override fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
+      override fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
 
-      public override fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
+      override fun parallelismConfig(): Any? = unwrap(this).getParallelismConfig()
     }
 
     public companion object {
@@ -511,8 +482,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -521,7 +491,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -534,7 +504,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.TrendmicroSourcePropertiesProperty,
     ) : TrendmicroSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -562,8 +532,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -572,7 +541,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -585,7 +554,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.ServiceNowSourcePropertiesProperty,
     ) : ServiceNowSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -621,69 +590,60 @@ public open class CfnFlow internal constructor(
     public fun taskType(): String
 
     public interface Builder {
-      public fun connectorOperator(connectorOperator: IResolvable) {
-      }
+      public fun connectorOperator(connectorOperator: IResolvable)
 
-      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
-      }
+      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9eee05d1d2ad0e27526018cda419a9577c90e2716d3d3dbf25a6f2deacb3c813")
-      public
-          fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit) {
-      }
+      public fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit)
 
-      public fun destinationField(destinationField: String) {
-      }
+      public fun destinationField(destinationField: String)
 
-      public fun sourceFields(sourceFields: List<String>) {
-      }
+      public fun sourceFields(sourceFields: List<String>)
 
-      public fun taskProperties(taskProperties: IResolvable) {
-      }
+      public fun taskProperties(taskProperties: IResolvable)
 
-      public fun taskProperties(taskProperties: List<Any>) {
-      }
+      public fun taskProperties(taskProperties: List<Any>)
 
-      public fun taskType(taskType: String) {
-      }
+      public fun taskType(taskType: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty.builder()
 
-      public override fun connectorOperator(connectorOperator: IResolvable) {
+      override fun connectorOperator(connectorOperator: IResolvable) {
         cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
       }
 
-      public override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
+      override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
         cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9eee05d1d2ad0e27526018cda419a9577c90e2716d3d3dbf25a6f2deacb3c813")
-      public override
+      override
           fun connectorOperator(connectorOperator: ConnectorOperatorProperty.Builder.() -> Unit):
           Unit = connectorOperator(ConnectorOperatorProperty(connectorOperator))
 
-      public override fun destinationField(destinationField: String) {
+      override fun destinationField(destinationField: String) {
         cdkBuilder.destinationField(destinationField)
       }
 
-      public override fun sourceFields(sourceFields: List<String>) {
+      override fun sourceFields(sourceFields: List<String>) {
         cdkBuilder.sourceFields(sourceFields)
       }
 
-      public override fun taskProperties(taskProperties: IResolvable) {
+      override fun taskProperties(taskProperties: IResolvable) {
         cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
       }
 
-      public override fun taskProperties(taskProperties: List<Any>) {
+      override fun taskProperties(taskProperties: List<Any>) {
         cdkBuilder.taskProperties(taskProperties)
       }
 
-      public override fun taskType(taskType: String) {
+      override fun taskType(taskType: String) {
         cdkBuilder.taskType(taskType)
       }
 
@@ -694,16 +654,15 @@ public open class CfnFlow internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TaskProperty,
     ) : TaskProperty {
-      public override fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
+      override fun connectorOperator(): Any? = unwrap(this).getConnectorOperator()
 
-      public override fun destinationField(): String? = unwrap(this).getDestinationField()
+      override fun destinationField(): String? = unwrap(this).getDestinationField()
 
-      public override fun sourceFields(): List<String> = unwrap(this).getSourceFields() ?:
-          emptyList()
+      override fun sourceFields(): List<String> = unwrap(this).getSourceFields() ?: emptyList()
 
-      public override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
+      override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
 
-      public override fun taskType(): String = unwrap(this).getTaskType()
+      override fun taskType(): String = unwrap(this).getTaskType()
     }
 
     public companion object {
@@ -737,29 +696,21 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun documentType(documentType: String) {
-      }
+      public fun documentType(documentType: String)
 
-      public fun includeAllVersions(includeAllVersions: Boolean) {
-      }
+      public fun includeAllVersions(includeAllVersions: Boolean)
 
-      public fun includeAllVersions(includeAllVersions: IResolvable) {
-      }
+      public fun includeAllVersions(includeAllVersions: IResolvable)
 
-      public fun includeRenditions(includeRenditions: Boolean) {
-      }
+      public fun includeRenditions(includeRenditions: Boolean)
 
-      public fun includeRenditions(includeRenditions: IResolvable) {
-      }
+      public fun includeRenditions(includeRenditions: IResolvable)
 
-      public fun includeSourceFiles(includeSourceFiles: Boolean) {
-      }
+      public fun includeSourceFiles(includeSourceFiles: Boolean)
 
-      public fun includeSourceFiles(includeSourceFiles: IResolvable) {
-      }
+      public fun includeSourceFiles(includeSourceFiles: IResolvable)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -767,35 +718,35 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty.builder()
 
-      public override fun documentType(documentType: String) {
+      override fun documentType(documentType: String) {
         cdkBuilder.documentType(documentType)
       }
 
-      public override fun includeAllVersions(includeAllVersions: Boolean) {
+      override fun includeAllVersions(includeAllVersions: Boolean) {
         cdkBuilder.includeAllVersions(includeAllVersions)
       }
 
-      public override fun includeAllVersions(includeAllVersions: IResolvable) {
+      override fun includeAllVersions(includeAllVersions: IResolvable) {
         cdkBuilder.includeAllVersions(includeAllVersions.let(IResolvable::unwrap))
       }
 
-      public override fun includeRenditions(includeRenditions: Boolean) {
+      override fun includeRenditions(includeRenditions: Boolean) {
         cdkBuilder.includeRenditions(includeRenditions)
       }
 
-      public override fun includeRenditions(includeRenditions: IResolvable) {
+      override fun includeRenditions(includeRenditions: IResolvable) {
         cdkBuilder.includeRenditions(includeRenditions.let(IResolvable::unwrap))
       }
 
-      public override fun includeSourceFiles(includeSourceFiles: Boolean) {
+      override fun includeSourceFiles(includeSourceFiles: Boolean) {
         cdkBuilder.includeSourceFiles(includeSourceFiles)
       }
 
-      public override fun includeSourceFiles(includeSourceFiles: IResolvable) {
+      override fun includeSourceFiles(includeSourceFiles: IResolvable) {
         cdkBuilder.includeSourceFiles(includeSourceFiles.let(IResolvable::unwrap))
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -808,15 +759,15 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.VeevaSourcePropertiesProperty,
     ) : VeevaSourcePropertiesProperty {
-      public override fun documentType(): String? = unwrap(this).getDocumentType()
+      override fun documentType(): String? = unwrap(this).getDocumentType()
 
-      public override fun includeAllVersions(): Any? = unwrap(this).getIncludeAllVersions()
+      override fun includeAllVersions(): Any? = unwrap(this).getIncludeAllVersions()
 
-      public override fun includeRenditions(): Any? = unwrap(this).getIncludeRenditions()
+      override fun includeRenditions(): Any? = unwrap(this).getIncludeRenditions()
 
-      public override fun includeSourceFiles(): Any? = unwrap(this).getIncludeSourceFiles()
+      override fun includeSourceFiles(): Any? = unwrap(this).getIncludeSourceFiles()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -843,8 +794,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -852,7 +802,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -865,7 +815,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoSourcePropertiesProperty,
     ) : MarketoSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -892,8 +842,7 @@ public open class CfnFlow internal constructor(
     public fun maxParallelism(): Number
 
     public interface Builder {
-      public fun maxParallelism(maxParallelism: Number) {
-      }
+      public fun maxParallelism(maxParallelism: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -902,7 +851,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty.builder()
 
-      public override fun maxParallelism(maxParallelism: Number) {
+      override fun maxParallelism(maxParallelism: Number) {
         cdkBuilder.maxParallelism(maxParallelism)
       }
 
@@ -915,7 +864,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty,
     ) : SAPODataParallelismConfigProperty {
-      public override fun maxParallelism(): Number = unwrap(this).getMaxParallelism()
+      override fun maxParallelism(): Number = unwrap(this).getMaxParallelism()
     }
 
     public companion object {
@@ -943,8 +892,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -953,7 +901,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -966,7 +914,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.AmplitudeSourcePropertiesProperty,
     ) : AmplitudeSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -999,14 +947,11 @@ public open class CfnFlow internal constructor(
     public fun prefixType(): String? = unwrap(this).getPrefixType()
 
     public interface Builder {
-      public fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>) {
-      }
+      public fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>)
 
-      public fun prefixFormat(prefixFormat: String) {
-      }
+      public fun prefixFormat(prefixFormat: String)
 
-      public fun prefixType(prefixType: String) {
-      }
+      public fun prefixType(prefixType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1014,15 +959,15 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty.builder()
 
-      public override fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>) {
+      override fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>) {
         cdkBuilder.pathPrefixHierarchy(pathPrefixHierarchy)
       }
 
-      public override fun prefixFormat(prefixFormat: String) {
+      override fun prefixFormat(prefixFormat: String) {
         cdkBuilder.prefixFormat(prefixFormat)
       }
 
-      public override fun prefixType(prefixType: String) {
+      override fun prefixType(prefixType: String) {
         cdkBuilder.prefixType(prefixType)
       }
 
@@ -1033,12 +978,12 @@ public open class CfnFlow internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.PrefixConfigProperty,
     ) : PrefixConfigProperty {
-      public override fun pathPrefixHierarchy(): List<String> =
-          unwrap(this).getPathPrefixHierarchy() ?: emptyList()
+      override fun pathPrefixHierarchy(): List<String> = unwrap(this).getPathPrefixHierarchy() ?:
+          emptyList()
 
-      public override fun prefixFormat(): String? = unwrap(this).getPrefixFormat()
+      override fun prefixFormat(): String? = unwrap(this).getPrefixFormat()
 
-      public override fun prefixType(): String? = unwrap(this).getPrefixType()
+      override fun prefixType(): String? = unwrap(this).getPrefixType()
     }
 
     public companion object {
@@ -1065,8 +1010,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1074,7 +1018,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1087,7 +1031,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskSourcePropertiesProperty,
     ) : ZendeskSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1120,26 +1064,20 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("646ce6c201ad615973cb0fb40476ff65e117a9cce859f39a0a75ffc640ead1e2")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun intermediateBucketName(intermediateBucketName: String) {
-      }
+      public fun intermediateBucketName(intermediateBucketName: String)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1148,29 +1086,29 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty.builder()
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("646ce6c201ad615973cb0fb40476ff65e117a9cce859f39a0a75ffc640ead1e2")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun intermediateBucketName(intermediateBucketName: String) {
+      override fun intermediateBucketName(intermediateBucketName: String) {
         cdkBuilder.intermediateBucketName(intermediateBucketName)
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1183,14 +1121,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SnowflakeDestinationPropertiesProperty,
     ) : SnowflakeDestinationPropertiesProperty {
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun intermediateBucketName(): String =
-          unwrap(this).getIntermediateBucketName()
+      override fun intermediateBucketName(): String = unwrap(this).getIntermediateBucketName()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1220,20 +1157,16 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c980cf0619d47543c453f74a7025f668f5960b470348d6a863e07c13d827a6a")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1242,21 +1175,21 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty.builder()
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c980cf0619d47543c453f74a7025f668f5960b470348d6a863e07c13d827a6a")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1269,9 +1202,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.EventBridgeDestinationPropertiesProperty,
     ) : EventBridgeDestinationPropertiesProperty {
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1299,8 +1232,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1309,7 +1241,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1322,7 +1254,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.DynatraceSourcePropertiesProperty,
     ) : DynatraceSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1354,25 +1286,19 @@ public open class CfnFlow internal constructor(
     public fun entityName(): String
 
     public interface Builder {
-      public fun customProperties(customProperties: IResolvable) {
-      }
+      public fun customProperties(customProperties: IResolvable)
 
-      public fun customProperties(customProperties: Map<String, String>) {
-      }
+      public fun customProperties(customProperties: Map<String, String>)
 
-      public fun dataTransferApi(dataTransferApi: IResolvable) {
-      }
+      public fun dataTransferApi(dataTransferApi: IResolvable)
 
-      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty) {
-      }
+      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ac4e51b048b3a753fce4e0cbfa032f54fa15f574236c63e35c626ad5c4dbc97")
-      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit) {
-      }
+      public fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit)
 
-      public fun entityName(entityName: String) {
-      }
+      public fun entityName(entityName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1381,29 +1307,28 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty.builder()
 
-      public override fun customProperties(customProperties: IResolvable) {
+      override fun customProperties(customProperties: IResolvable) {
         cdkBuilder.customProperties(customProperties.let(IResolvable::unwrap))
       }
 
-      public override fun customProperties(customProperties: Map<String, String>) {
+      override fun customProperties(customProperties: Map<String, String>) {
         cdkBuilder.customProperties(customProperties)
       }
 
-      public override fun dataTransferApi(dataTransferApi: IResolvable) {
+      override fun dataTransferApi(dataTransferApi: IResolvable) {
         cdkBuilder.dataTransferApi(dataTransferApi.let(IResolvable::unwrap))
       }
 
-      public override fun dataTransferApi(dataTransferApi: DataTransferApiProperty) {
+      override fun dataTransferApi(dataTransferApi: DataTransferApiProperty) {
         cdkBuilder.dataTransferApi(dataTransferApi.let(DataTransferApiProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ac4e51b048b3a753fce4e0cbfa032f54fa15f574236c63e35c626ad5c4dbc97")
-      public override
-          fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit): Unit =
-          dataTransferApi(DataTransferApiProperty(dataTransferApi))
+      override fun dataTransferApi(dataTransferApi: DataTransferApiProperty.Builder.() -> Unit):
+          Unit = dataTransferApi(DataTransferApiProperty(dataTransferApi))
 
-      public override fun entityName(entityName: String) {
+      override fun entityName(entityName: String) {
         cdkBuilder.entityName(entityName)
       }
 
@@ -1416,11 +1341,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorSourcePropertiesProperty,
     ) : CustomConnectorSourcePropertiesProperty {
-      public override fun customProperties(): Any? = unwrap(this).getCustomProperties()
+      override fun customProperties(): Any? = unwrap(this).getCustomProperties()
 
-      public override fun dataTransferApi(): Any? = unwrap(this).getDataTransferApi()
+      override fun dataTransferApi(): Any? = unwrap(this).getDataTransferApi()
 
-      public override fun entityName(): String = unwrap(this).getEntityName()
+      override fun entityName(): String = unwrap(this).getEntityName()
     }
 
     public companion object {
@@ -1456,32 +1381,24 @@ public open class CfnFlow internal constructor(
     public fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
 
     public interface Builder {
-      public fun customProperties(customProperties: IResolvable) {
-      }
+      public fun customProperties(customProperties: IResolvable)
 
-      public fun customProperties(customProperties: Map<String, String>) {
-      }
+      public fun customProperties(customProperties: Map<String, String>)
 
-      public fun entityName(entityName: String) {
-      }
+      public fun entityName(entityName: String)
 
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1987b9fda54644ce31894cf27282a859746ec5079d56bf57d51404c701df3f3")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun idFieldNames(idFieldNames: List<String>) {
-      }
+      public fun idFieldNames(idFieldNames: List<String>)
 
-      public fun writeOperationType(writeOperationType: String) {
-      }
+      public fun writeOperationType(writeOperationType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1490,37 +1407,37 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty.builder()
 
-      public override fun customProperties(customProperties: IResolvable) {
+      override fun customProperties(customProperties: IResolvable) {
         cdkBuilder.customProperties(customProperties.let(IResolvable::unwrap))
       }
 
-      public override fun customProperties(customProperties: Map<String, String>) {
+      override fun customProperties(customProperties: Map<String, String>) {
         cdkBuilder.customProperties(customProperties)
       }
 
-      public override fun entityName(entityName: String) {
+      override fun entityName(entityName: String) {
         cdkBuilder.entityName(entityName)
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1987b9fda54644ce31894cf27282a859746ec5079d56bf57d51404c701df3f3")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun idFieldNames(idFieldNames: List<String>) {
+      override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
 
-      public override fun writeOperationType(writeOperationType: String) {
+      override fun writeOperationType(writeOperationType: String) {
         cdkBuilder.writeOperationType(writeOperationType)
       }
 
@@ -1533,16 +1450,15 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.CustomConnectorDestinationPropertiesProperty,
     ) : CustomConnectorDestinationPropertiesProperty {
-      public override fun customProperties(): Any? = unwrap(this).getCustomProperties()
+      override fun customProperties(): Any? = unwrap(this).getCustomProperties()
 
-      public override fun entityName(): String = unwrap(this).getEntityName()
+      override fun entityName(): String = unwrap(this).getEntityName()
 
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?:
-          emptyList()
+      override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
 
-      public override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
+      override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
     }
 
     public companion object {
@@ -1572,20 +1488,16 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a6696ce19e484c0477313a9b62162fd31f77a19eb504cba2440a196a77f3a0c")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1594,21 +1506,21 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty.builder()
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a6696ce19e484c0477313a9b62162fd31f77a19eb504cba2440a196a77f3a0c")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1621,9 +1533,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.MarketoDestinationPropertiesProperty,
     ) : MarketoDestinationPropertiesProperty {
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1666,29 +1578,21 @@ public open class CfnFlow internal constructor(
     public fun timeZone(): String? = unwrap(this).getTimeZone()
 
     public interface Builder {
-      public fun dataPullMode(dataPullMode: String) {
-      }
+      public fun dataPullMode(dataPullMode: String)
 
-      public fun firstExecutionFrom(firstExecutionFrom: Number) {
-      }
+      public fun firstExecutionFrom(firstExecutionFrom: Number)
 
-      public fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number) {
-      }
+      public fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number)
 
-      public fun scheduleEndTime(scheduleEndTime: Number) {
-      }
+      public fun scheduleEndTime(scheduleEndTime: Number)
 
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
 
-      public fun scheduleOffset(scheduleOffset: Number) {
-      }
+      public fun scheduleOffset(scheduleOffset: Number)
 
-      public fun scheduleStartTime(scheduleStartTime: Number) {
-      }
+      public fun scheduleStartTime(scheduleStartTime: Number)
 
-      public fun timeZone(timeZone: String) {
-      }
+      public fun timeZone(timeZone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1697,35 +1601,35 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty.builder()
 
-      public override fun dataPullMode(dataPullMode: String) {
+      override fun dataPullMode(dataPullMode: String) {
         cdkBuilder.dataPullMode(dataPullMode)
       }
 
-      public override fun firstExecutionFrom(firstExecutionFrom: Number) {
+      override fun firstExecutionFrom(firstExecutionFrom: Number) {
         cdkBuilder.firstExecutionFrom(firstExecutionFrom)
       }
 
-      public override fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number) {
+      override fun flowErrorDeactivationThreshold(flowErrorDeactivationThreshold: Number) {
         cdkBuilder.flowErrorDeactivationThreshold(flowErrorDeactivationThreshold)
       }
 
-      public override fun scheduleEndTime(scheduleEndTime: Number) {
+      override fun scheduleEndTime(scheduleEndTime: Number) {
         cdkBuilder.scheduleEndTime(scheduleEndTime)
       }
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
-      public override fun scheduleOffset(scheduleOffset: Number) {
+      override fun scheduleOffset(scheduleOffset: Number) {
         cdkBuilder.scheduleOffset(scheduleOffset)
       }
 
-      public override fun scheduleStartTime(scheduleStartTime: Number) {
+      override fun scheduleStartTime(scheduleStartTime: Number) {
         cdkBuilder.scheduleStartTime(scheduleStartTime)
       }
 
-      public override fun timeZone(timeZone: String) {
+      override fun timeZone(timeZone: String) {
         cdkBuilder.timeZone(timeZone)
       }
 
@@ -1738,22 +1642,22 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.ScheduledTriggerPropertiesProperty,
     ) : ScheduledTriggerPropertiesProperty {
-      public override fun dataPullMode(): String? = unwrap(this).getDataPullMode()
+      override fun dataPullMode(): String? = unwrap(this).getDataPullMode()
 
-      public override fun firstExecutionFrom(): Number? = unwrap(this).getFirstExecutionFrom()
+      override fun firstExecutionFrom(): Number? = unwrap(this).getFirstExecutionFrom()
 
-      public override fun flowErrorDeactivationThreshold(): Number? =
+      override fun flowErrorDeactivationThreshold(): Number? =
           unwrap(this).getFlowErrorDeactivationThreshold()
 
-      public override fun scheduleEndTime(): Number? = unwrap(this).getScheduleEndTime()
+      override fun scheduleEndTime(): Number? = unwrap(this).getScheduleEndTime()
 
-      public override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
 
-      public override fun scheduleOffset(): Number? = unwrap(this).getScheduleOffset()
+      override fun scheduleOffset(): Number? = unwrap(this).getScheduleOffset()
 
-      public override fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
+      override fun scheduleStartTime(): Number? = unwrap(this).getScheduleStartTime()
 
-      public override fun timeZone(): String? = unwrap(this).getTimeZone()
+      override fun timeZone(): String? = unwrap(this).getTimeZone()
     }
 
     public companion object {
@@ -1781,8 +1685,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1790,7 +1693,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1803,7 +1706,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.PardotSourcePropertiesProperty,
     ) : PardotSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1836,26 +1739,20 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69c476c8ac7606907a7e8c037410c0a13397d78d8bce9464038e21cadffab4aa")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun intermediateBucketName(intermediateBucketName: String) {
-      }
+      public fun intermediateBucketName(intermediateBucketName: String)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1864,29 +1761,29 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty.builder()
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69c476c8ac7606907a7e8c037410c0a13397d78d8bce9464038e21cadffab4aa")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun intermediateBucketName(intermediateBucketName: String) {
+      override fun intermediateBucketName(intermediateBucketName: String) {
         cdkBuilder.intermediateBucketName(intermediateBucketName)
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -1899,14 +1796,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.RedshiftDestinationPropertiesProperty,
     ) : RedshiftDestinationPropertiesProperty {
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun intermediateBucketName(): String =
-          unwrap(this).getIntermediateBucketName()
+      override fun intermediateBucketName(): String = unwrap(this).getIntermediateBucketName()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -1936,11 +1832,9 @@ public open class CfnFlow internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1948,11 +1842,11 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1964,9 +1858,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.DataTransferApiProperty,
     ) : DataTransferApiProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1995,11 +1889,9 @@ public open class CfnFlow internal constructor(
     public fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
 
     public interface Builder {
-      public fun aggregationType(aggregationType: String) {
-      }
+      public fun aggregationType(aggregationType: String)
 
-      public fun targetFileSize(targetFileSize: Number) {
-      }
+      public fun targetFileSize(targetFileSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2007,11 +1899,11 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty.builder()
 
-      public override fun aggregationType(aggregationType: String) {
+      override fun aggregationType(aggregationType: String) {
         cdkBuilder.aggregationType(aggregationType)
       }
 
-      public override fun targetFileSize(targetFileSize: Number) {
+      override fun targetFileSize(targetFileSize: Number) {
         cdkBuilder.targetFileSize(targetFileSize)
       }
 
@@ -2023,9 +1915,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.AggregationConfigProperty,
     ) : AggregationConfigProperty {
-      public override fun aggregationType(): String? = unwrap(this).getAggregationType()
+      override fun aggregationType(): String? = unwrap(this).getAggregationType()
 
-      public override fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
+      override fun targetFileSize(): Number? = unwrap(this).getTargetFileSize()
     }
 
     public companion object {
@@ -2072,130 +1964,96 @@ public open class CfnFlow internal constructor(
     public fun zendesk(): Any? = unwrap(this).getZendesk()
 
     public interface Builder {
-      public fun customConnector(customConnector: IResolvable) {
-      }
+      public fun customConnector(customConnector: IResolvable)
 
-      public fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty) {
-      }
+      public fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9d8312d795c92509bd1aa700111bbbeeb817244ec892c1d02ed54ea1abfb5d1")
       public
-          fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun eventBridge(eventBridge: IResolvable) {
-      }
+      public fun eventBridge(eventBridge: IResolvable)
 
-      public fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty) {
-      }
+      public fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b34e938e94893dfb40c4c1efd0446115a8a121034e79d9f7a9d2a16122bd7fe5")
       public
-          fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun lookoutMetrics(lookoutMetrics: IResolvable) {
-      }
+      public fun lookoutMetrics(lookoutMetrics: IResolvable)
 
-      public fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty) {
-      }
+      public fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("232479932c4bd48b25f9e02510c369f574ed498e3257e8d35de6675d5b72c546")
       public
-          fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun marketo(marketo: IResolvable) {
-      }
+      public fun marketo(marketo: IResolvable)
 
-      public fun marketo(marketo: MarketoDestinationPropertiesProperty) {
-      }
+      public fun marketo(marketo: MarketoDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ddb7f960e42c6343202933471ed9ab5339c32b041122e0dfbc29fe225a7e6749")
-      public fun marketo(marketo: MarketoDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun marketo(marketo: MarketoDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun redshift(redshift: IResolvable) {
-      }
+      public fun redshift(redshift: IResolvable)
 
-      public fun redshift(redshift: RedshiftDestinationPropertiesProperty) {
-      }
+      public fun redshift(redshift: RedshiftDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("33d66fe5ccb9f40788193c3a72e5c940bb03a9acb942bd6be1b0d2bcc2441cff")
-      public fun redshift(redshift: RedshiftDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun redshift(redshift: RedshiftDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3DestinationPropertiesProperty) {
-      }
+      public fun s3(s3: S3DestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d3461c5843a7280522435f9b17300a23f84c436a8d1455b25515501481d7477")
-      public fun s3(s3: S3DestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3DestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun salesforce(salesforce: IResolvable) {
-      }
+      public fun salesforce(salesforce: IResolvable)
 
-      public fun salesforce(salesforce: SalesforceDestinationPropertiesProperty) {
-      }
+      public fun salesforce(salesforce: SalesforceDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1efffefbef04c5cbf8b7d5443f2372bbec023053961bc222210a30364e79b376")
-      public
-          fun salesforce(salesforce: SalesforceDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun salesforce(salesforce: SalesforceDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun sapoData(sapoData: IResolvable) {
-      }
+      public fun sapoData(sapoData: IResolvable)
 
-      public fun sapoData(sapoData: SAPODataDestinationPropertiesProperty) {
-      }
+      public fun sapoData(sapoData: SAPODataDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("de7b5f9dbccba5f14b09ab028d85497fcd4ecf9714f59b00b55f144158a3b128")
-      public fun sapoData(sapoData: SAPODataDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun sapoData(sapoData: SAPODataDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun snowflake(snowflake: IResolvable) {
-      }
+      public fun snowflake(snowflake: IResolvable)
 
-      public fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty) {
-      }
+      public fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3f42c1df62dbcd8eb347b0039213a7db9f4d264e01510c15ed58b993e90b2687")
-      public fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun upsolver(upsolver: IResolvable) {
-      }
+      public fun upsolver(upsolver: IResolvable)
 
-      public fun upsolver(upsolver: UpsolverDestinationPropertiesProperty) {
-      }
+      public fun upsolver(upsolver: UpsolverDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fcca6f0fd0c4540433e2a7534845fc07f1c5285b6dcc8c3082832b40867bc5f2")
-      public fun upsolver(upsolver: UpsolverDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun upsolver(upsolver: UpsolverDestinationPropertiesProperty.Builder.() -> Unit)
 
-      public fun zendesk(zendesk: IResolvable) {
-      }
+      public fun zendesk(zendesk: IResolvable)
 
-      public fun zendesk(zendesk: ZendeskDestinationPropertiesProperty) {
-      }
+      public fun zendesk(zendesk: ZendeskDestinationPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61a864d1bce6c80745238d1669d34ee7acc33e4e2e833641ee44aed229a9d6fd")
-      public fun zendesk(zendesk: ZendeskDestinationPropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun zendesk(zendesk: ZendeskDestinationPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2204,158 +2062,152 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty.builder()
 
-      public override fun customConnector(customConnector: IResolvable) {
+      override fun customConnector(customConnector: IResolvable) {
         cdkBuilder.customConnector(customConnector.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty) {
+      override fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty) {
         cdkBuilder.customConnector(customConnector.let(CustomConnectorDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9d8312d795c92509bd1aa700111bbbeeb817244ec892c1d02ed54ea1abfb5d1")
-      public override
+      override
           fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty.Builder.() -> Unit):
           Unit = customConnector(CustomConnectorDestinationPropertiesProperty(customConnector))
 
-      public override fun eventBridge(eventBridge: IResolvable) {
+      override fun eventBridge(eventBridge: IResolvable) {
         cdkBuilder.eventBridge(eventBridge.let(IResolvable::unwrap))
       }
 
-      public override fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty) {
+      override fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty) {
         cdkBuilder.eventBridge(eventBridge.let(EventBridgeDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b34e938e94893dfb40c4c1efd0446115a8a121034e79d9f7a9d2a16122bd7fe5")
-      public override
+      override
           fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty.Builder.() -> Unit):
           Unit = eventBridge(EventBridgeDestinationPropertiesProperty(eventBridge))
 
-      public override fun lookoutMetrics(lookoutMetrics: IResolvable) {
+      override fun lookoutMetrics(lookoutMetrics: IResolvable) {
         cdkBuilder.lookoutMetrics(lookoutMetrics.let(IResolvable::unwrap))
       }
 
-      public override
-          fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty) {
+      override fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty) {
         cdkBuilder.lookoutMetrics(lookoutMetrics.let(LookoutMetricsDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("232479932c4bd48b25f9e02510c369f574ed498e3257e8d35de6675d5b72c546")
-      public override
+      override
           fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty.Builder.() -> Unit):
           Unit = lookoutMetrics(LookoutMetricsDestinationPropertiesProperty(lookoutMetrics))
 
-      public override fun marketo(marketo: IResolvable) {
+      override fun marketo(marketo: IResolvable) {
         cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
       }
 
-      public override fun marketo(marketo: MarketoDestinationPropertiesProperty) {
+      override fun marketo(marketo: MarketoDestinationPropertiesProperty) {
         cdkBuilder.marketo(marketo.let(MarketoDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ddb7f960e42c6343202933471ed9ab5339c32b041122e0dfbc29fe225a7e6749")
-      public override fun marketo(marketo: MarketoDestinationPropertiesProperty.Builder.() -> Unit):
-          Unit = marketo(MarketoDestinationPropertiesProperty(marketo))
+      override fun marketo(marketo: MarketoDestinationPropertiesProperty.Builder.() -> Unit): Unit =
+          marketo(MarketoDestinationPropertiesProperty(marketo))
 
-      public override fun redshift(redshift: IResolvable) {
+      override fun redshift(redshift: IResolvable) {
         cdkBuilder.redshift(redshift.let(IResolvable::unwrap))
       }
 
-      public override fun redshift(redshift: RedshiftDestinationPropertiesProperty) {
+      override fun redshift(redshift: RedshiftDestinationPropertiesProperty) {
         cdkBuilder.redshift(redshift.let(RedshiftDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("33d66fe5ccb9f40788193c3a72e5c940bb03a9acb942bd6be1b0d2bcc2441cff")
-      public override
-          fun redshift(redshift: RedshiftDestinationPropertiesProperty.Builder.() -> Unit): Unit =
-          redshift(RedshiftDestinationPropertiesProperty(redshift))
+      override fun redshift(redshift: RedshiftDestinationPropertiesProperty.Builder.() -> Unit):
+          Unit = redshift(RedshiftDestinationPropertiesProperty(redshift))
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3DestinationPropertiesProperty) {
+      override fun s3(s3: S3DestinationPropertiesProperty) {
         cdkBuilder.s3(s3.let(S3DestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d3461c5843a7280522435f9b17300a23f84c436a8d1455b25515501481d7477")
-      public override fun s3(s3: S3DestinationPropertiesProperty.Builder.() -> Unit): Unit =
+      override fun s3(s3: S3DestinationPropertiesProperty.Builder.() -> Unit): Unit =
           s3(S3DestinationPropertiesProperty(s3))
 
-      public override fun salesforce(salesforce: IResolvable) {
+      override fun salesforce(salesforce: IResolvable) {
         cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
       }
 
-      public override fun salesforce(salesforce: SalesforceDestinationPropertiesProperty) {
+      override fun salesforce(salesforce: SalesforceDestinationPropertiesProperty) {
         cdkBuilder.salesforce(salesforce.let(SalesforceDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1efffefbef04c5cbf8b7d5443f2372bbec023053961bc222210a30364e79b376")
-      public override
+      override
           fun salesforce(salesforce: SalesforceDestinationPropertiesProperty.Builder.() -> Unit):
           Unit = salesforce(SalesforceDestinationPropertiesProperty(salesforce))
 
-      public override fun sapoData(sapoData: IResolvable) {
+      override fun sapoData(sapoData: IResolvable) {
         cdkBuilder.sapoData(sapoData.let(IResolvable::unwrap))
       }
 
-      public override fun sapoData(sapoData: SAPODataDestinationPropertiesProperty) {
+      override fun sapoData(sapoData: SAPODataDestinationPropertiesProperty) {
         cdkBuilder.sapoData(sapoData.let(SAPODataDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("de7b5f9dbccba5f14b09ab028d85497fcd4ecf9714f59b00b55f144158a3b128")
-      public override
-          fun sapoData(sapoData: SAPODataDestinationPropertiesProperty.Builder.() -> Unit): Unit =
-          sapoData(SAPODataDestinationPropertiesProperty(sapoData))
+      override fun sapoData(sapoData: SAPODataDestinationPropertiesProperty.Builder.() -> Unit):
+          Unit = sapoData(SAPODataDestinationPropertiesProperty(sapoData))
 
-      public override fun snowflake(snowflake: IResolvable) {
+      override fun snowflake(snowflake: IResolvable) {
         cdkBuilder.snowflake(snowflake.let(IResolvable::unwrap))
       }
 
-      public override fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty) {
+      override fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty) {
         cdkBuilder.snowflake(snowflake.let(SnowflakeDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3f42c1df62dbcd8eb347b0039213a7db9f4d264e01510c15ed58b993e90b2687")
-      public override
-          fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty.Builder.() -> Unit): Unit
-          = snowflake(SnowflakeDestinationPropertiesProperty(snowflake))
+      override fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty.Builder.() -> Unit):
+          Unit = snowflake(SnowflakeDestinationPropertiesProperty(snowflake))
 
-      public override fun upsolver(upsolver: IResolvable) {
+      override fun upsolver(upsolver: IResolvable) {
         cdkBuilder.upsolver(upsolver.let(IResolvable::unwrap))
       }
 
-      public override fun upsolver(upsolver: UpsolverDestinationPropertiesProperty) {
+      override fun upsolver(upsolver: UpsolverDestinationPropertiesProperty) {
         cdkBuilder.upsolver(upsolver.let(UpsolverDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fcca6f0fd0c4540433e2a7534845fc07f1c5285b6dcc8c3082832b40867bc5f2")
-      public override
-          fun upsolver(upsolver: UpsolverDestinationPropertiesProperty.Builder.() -> Unit): Unit =
-          upsolver(UpsolverDestinationPropertiesProperty(upsolver))
+      override fun upsolver(upsolver: UpsolverDestinationPropertiesProperty.Builder.() -> Unit):
+          Unit = upsolver(UpsolverDestinationPropertiesProperty(upsolver))
 
-      public override fun zendesk(zendesk: IResolvable) {
+      override fun zendesk(zendesk: IResolvable) {
         cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
       }
 
-      public override fun zendesk(zendesk: ZendeskDestinationPropertiesProperty) {
+      override fun zendesk(zendesk: ZendeskDestinationPropertiesProperty) {
         cdkBuilder.zendesk(zendesk.let(ZendeskDestinationPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61a864d1bce6c80745238d1669d34ee7acc33e4e2e833641ee44aed229a9d6fd")
-      public override fun zendesk(zendesk: ZendeskDestinationPropertiesProperty.Builder.() -> Unit):
-          Unit = zendesk(ZendeskDestinationPropertiesProperty(zendesk))
+      override fun zendesk(zendesk: ZendeskDestinationPropertiesProperty.Builder.() -> Unit): Unit =
+          zendesk(ZendeskDestinationPropertiesProperty(zendesk))
 
       public fun build():
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty =
@@ -2366,27 +2218,27 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationConnectorPropertiesProperty,
     ) : DestinationConnectorPropertiesProperty {
-      public override fun customConnector(): Any? = unwrap(this).getCustomConnector()
+      override fun customConnector(): Any? = unwrap(this).getCustomConnector()
 
-      public override fun eventBridge(): Any? = unwrap(this).getEventBridge()
+      override fun eventBridge(): Any? = unwrap(this).getEventBridge()
 
-      public override fun lookoutMetrics(): Any? = unwrap(this).getLookoutMetrics()
+      override fun lookoutMetrics(): Any? = unwrap(this).getLookoutMetrics()
 
-      public override fun marketo(): Any? = unwrap(this).getMarketo()
+      override fun marketo(): Any? = unwrap(this).getMarketo()
 
-      public override fun redshift(): Any? = unwrap(this).getRedshift()
+      override fun redshift(): Any? = unwrap(this).getRedshift()
 
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
 
-      public override fun salesforce(): Any? = unwrap(this).getSalesforce()
+      override fun salesforce(): Any? = unwrap(this).getSalesforce()
 
-      public override fun sapoData(): Any? = unwrap(this).getSapoData()
+      override fun sapoData(): Any? = unwrap(this).getSapoData()
 
-      public override fun snowflake(): Any? = unwrap(this).getSnowflake()
+      override fun snowflake(): Any? = unwrap(this).getSnowflake()
 
-      public override fun upsolver(): Any? = unwrap(this).getUpsolver()
+      override fun upsolver(): Any? = unwrap(this).getUpsolver()
 
-      public override fun zendesk(): Any? = unwrap(this).getZendesk()
+      override fun zendesk(): Any? = unwrap(this).getZendesk()
     }
 
     public companion object {
@@ -2422,29 +2274,22 @@ public open class CfnFlow internal constructor(
     public fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
 
     public interface Builder {
-      public fun dataTransferApi(dataTransferApi: String) {
-      }
+      public fun dataTransferApi(dataTransferApi: String)
 
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b7263d88d867b8b622c56e4577709b678489a18eaa640833a1d434943b3e542")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun idFieldNames(idFieldNames: List<String>) {
-      }
+      public fun idFieldNames(idFieldNames: List<String>)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
 
-      public fun writeOperationType(writeOperationType: String) {
-      }
+      public fun writeOperationType(writeOperationType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2453,33 +2298,33 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty.builder()
 
-      public override fun dataTransferApi(dataTransferApi: String) {
+      override fun dataTransferApi(dataTransferApi: String) {
         cdkBuilder.dataTransferApi(dataTransferApi)
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b7263d88d867b8b622c56e4577709b678489a18eaa640833a1d434943b3e542")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun idFieldNames(idFieldNames: List<String>) {
+      override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
-      public override fun writeOperationType(writeOperationType: String) {
+      override fun writeOperationType(writeOperationType: String) {
         cdkBuilder.writeOperationType(writeOperationType)
       }
 
@@ -2492,16 +2337,15 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceDestinationPropertiesProperty,
     ) : SalesforceDestinationPropertiesProperty {
-      public override fun dataTransferApi(): String? = unwrap(this).getDataTransferApi()
+      override fun dataTransferApi(): String? = unwrap(this).getDataTransferApi()
 
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?:
-          emptyList()
+      override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
 
-      public override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
+      override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
     }
 
     public companion object {
@@ -2529,8 +2373,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2539,7 +2382,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -2552,7 +2395,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.GoogleAnalyticsSourcePropertiesProperty,
     ) : GoogleAnalyticsSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -2588,39 +2431,30 @@ public open class CfnFlow internal constructor(
     public fun sourceConnectorProperties(): Any
 
     public interface Builder {
-      public fun apiVersion(apiVersion: String) {
-      }
+      public fun apiVersion(apiVersion: String)
 
-      public fun connectorProfileName(connectorProfileName: String) {
-      }
+      public fun connectorProfileName(connectorProfileName: String)
 
-      public fun connectorType(connectorType: String) {
-      }
+      public fun connectorType(connectorType: String)
 
-      public fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
-      }
+      public fun incrementalPullConfig(incrementalPullConfig: IResolvable)
 
-      public fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
-      }
+      public fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7425cac1d5558f115d9fc3eeeacd87f8d513adb94f5094b221205eaae961401d")
       public
-          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit) {
-      }
+          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit)
 
-      public fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
-      }
+      public fun sourceConnectorProperties(sourceConnectorProperties: IResolvable)
 
       public
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
-      }
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9cbcc2ec69f36b65cb3ccc5bd0e8539fc977a4da0de1424d3bc85aad98ab7589")
       public
-          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2628,45 +2462,44 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty.builder()
 
-      public override fun apiVersion(apiVersion: String) {
+      override fun apiVersion(apiVersion: String) {
         cdkBuilder.apiVersion(apiVersion)
       }
 
-      public override fun connectorProfileName(connectorProfileName: String) {
+      override fun connectorProfileName(connectorProfileName: String) {
         cdkBuilder.connectorProfileName(connectorProfileName)
       }
 
-      public override fun connectorType(connectorType: String) {
+      override fun connectorType(connectorType: String) {
         cdkBuilder.connectorType(connectorType)
       }
 
-      public override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
+      override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
         cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
+      override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
         cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7425cac1d5558f115d9fc3eeeacd87f8d513adb94f5094b221205eaae961401d")
-      public override
+      override
           fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty.Builder.() -> Unit):
           Unit = incrementalPullConfig(IncrementalPullConfigProperty(incrementalPullConfig))
 
-      public override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
+      override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
         cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
         cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9cbcc2ec69f36b65cb3ccc5bd0e8539fc977a4da0de1424d3bc85aad98ab7589")
-      public override
+      override
           fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty.Builder.() -> Unit):
           Unit =
           sourceConnectorProperties(SourceConnectorPropertiesProperty(sourceConnectorProperties))
@@ -2679,16 +2512,15 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SourceFlowConfigProperty,
     ) : SourceFlowConfigProperty {
-      public override fun apiVersion(): String? = unwrap(this).getApiVersion()
+      override fun apiVersion(): String? = unwrap(this).getApiVersion()
 
-      public override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
 
-      public override fun connectorType(): String = unwrap(this).getConnectorType()
+      override fun connectorType(): String = unwrap(this).getConnectorType()
 
-      public override fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
+      override fun incrementalPullConfig(): Any? = unwrap(this).getIncrementalPullConfig()
 
-      public override fun sourceConnectorProperties(): Any =
-          unwrap(this).getSourceConnectorProperties()
+      override fun sourceConnectorProperties(): Any = unwrap(this).getSourceConnectorProperties()
     }
 
     public companion object {
@@ -2721,23 +2553,17 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun dataTransferApi(dataTransferApi: String) {
-      }
+      public fun dataTransferApi(dataTransferApi: String)
 
-      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean) {
-      }
+      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean)
 
-      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
-      }
+      public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable)
 
-      public fun includeDeletedRecords(includeDeletedRecords: Boolean) {
-      }
+      public fun includeDeletedRecords(includeDeletedRecords: Boolean)
 
-      public fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
-      }
+      public fun includeDeletedRecords(includeDeletedRecords: IResolvable)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2746,27 +2572,27 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty.builder()
 
-      public override fun dataTransferApi(dataTransferApi: String) {
+      override fun dataTransferApi(dataTransferApi: String) {
         cdkBuilder.dataTransferApi(dataTransferApi)
       }
 
-      public override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean) {
+      override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean) {
         cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate)
       }
 
-      public override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
+      override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
         cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable::unwrap))
       }
 
-      public override fun includeDeletedRecords(includeDeletedRecords: Boolean) {
+      override fun includeDeletedRecords(includeDeletedRecords: Boolean) {
         cdkBuilder.includeDeletedRecords(includeDeletedRecords)
       }
 
-      public override fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
+      override fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
         cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable::unwrap))
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -2779,14 +2605,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SalesforceSourcePropertiesProperty,
     ) : SalesforceSourcePropertiesProperty {
-      public override fun dataTransferApi(): String? = unwrap(this).getDataTransferApi()
+      override fun dataTransferApi(): String? = unwrap(this).getDataTransferApi()
 
-      public override fun enableDynamicFieldUpdate(): Any? =
-          unwrap(this).getEnableDynamicFieldUpdate()
+      override fun enableDynamicFieldUpdate(): Any? = unwrap(this).getEnableDynamicFieldUpdate()
 
-      public override fun includeDeletedRecords(): Any? = unwrap(this).getIncludeDeletedRecords()
+      override fun includeDeletedRecords(): Any? = unwrap(this).getIncludeDeletedRecords()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -2816,20 +2641,16 @@ public open class CfnFlow internal constructor(
     public fun triggerType(): String
 
     public interface Builder {
-      public fun triggerProperties(triggerProperties: IResolvable) {
-      }
+      public fun triggerProperties(triggerProperties: IResolvable)
 
-      public fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty) {
-      }
+      public fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c76fa0bed44d3944999469fd8cd418aabb485e72ca02b7e619160a121612d55c")
       public
-          fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit)
 
-      public fun triggerType(triggerType: String) {
-      }
+      public fun triggerType(triggerType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2837,21 +2658,21 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty.builder()
 
-      public override fun triggerProperties(triggerProperties: IResolvable) {
+      override fun triggerProperties(triggerProperties: IResolvable) {
         cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
       }
 
-      public override fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty) {
+      override fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty) {
         cdkBuilder.triggerProperties(triggerProperties.let(ScheduledTriggerPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c76fa0bed44d3944999469fd8cd418aabb485e72ca02b7e619160a121612d55c")
-      public override
+      override
           fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty.Builder.() -> Unit):
           Unit = triggerProperties(ScheduledTriggerPropertiesProperty(triggerProperties))
 
-      public override fun triggerType(triggerType: String) {
+      override fun triggerType(triggerType: String) {
         cdkBuilder.triggerType(triggerType)
       }
 
@@ -2862,9 +2683,9 @@ public open class CfnFlow internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appflow.CfnFlow.TriggerConfigProperty,
     ) : TriggerConfigProperty {
-      public override fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
+      override fun triggerProperties(): Any? = unwrap(this).getTriggerProperties()
 
-      public override fun triggerType(): String = unwrap(this).getTriggerType()
+      override fun triggerType(): String = unwrap(this).getTriggerType()
     }
 
     public companion object {
@@ -2893,11 +2714,9 @@ public open class CfnFlow internal constructor(
     public fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2906,11 +2725,11 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
@@ -2923,9 +2742,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SuccessResponseHandlingConfigProperty,
     ) : SuccessResponseHandlingConfigProperty {
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
     }
 
     public companion object {
@@ -2985,56 +2804,39 @@ public open class CfnFlow internal constructor(
     public fun zendesk(): String? = unwrap(this).getZendesk()
 
     public interface Builder {
-      public fun amplitude(amplitude: String) {
-      }
+      public fun amplitude(amplitude: String)
 
-      public fun customConnector(customConnector: String) {
-      }
+      public fun customConnector(customConnector: String)
 
-      public fun datadog(datadog: String) {
-      }
+      public fun datadog(datadog: String)
 
-      public fun dynatrace(dynatrace: String) {
-      }
+      public fun dynatrace(dynatrace: String)
 
-      public fun googleAnalytics(googleAnalytics: String) {
-      }
+      public fun googleAnalytics(googleAnalytics: String)
 
-      public fun inforNexus(inforNexus: String) {
-      }
+      public fun inforNexus(inforNexus: String)
 
-      public fun marketo(marketo: String) {
-      }
+      public fun marketo(marketo: String)
 
-      public fun pardot(pardot: String) {
-      }
+      public fun pardot(pardot: String)
 
-      public fun s3(s3: String) {
-      }
+      public fun s3(s3: String)
 
-      public fun salesforce(salesforce: String) {
-      }
+      public fun salesforce(salesforce: String)
 
-      public fun sapoData(sapoData: String) {
-      }
+      public fun sapoData(sapoData: String)
 
-      public fun serviceNow(serviceNow: String) {
-      }
+      public fun serviceNow(serviceNow: String)
 
-      public fun singular(singular: String) {
-      }
+      public fun singular(singular: String)
 
-      public fun slack(slack: String) {
-      }
+      public fun slack(slack: String)
 
-      public fun trendmicro(trendmicro: String) {
-      }
+      public fun trendmicro(trendmicro: String)
 
-      public fun veeva(veeva: String) {
-      }
+      public fun veeva(veeva: String)
 
-      public fun zendesk(zendesk: String) {
-      }
+      public fun zendesk(zendesk: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3042,71 +2844,71 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty.builder()
 
-      public override fun amplitude(amplitude: String) {
+      override fun amplitude(amplitude: String) {
         cdkBuilder.amplitude(amplitude)
       }
 
-      public override fun customConnector(customConnector: String) {
+      override fun customConnector(customConnector: String) {
         cdkBuilder.customConnector(customConnector)
       }
 
-      public override fun datadog(datadog: String) {
+      override fun datadog(datadog: String) {
         cdkBuilder.datadog(datadog)
       }
 
-      public override fun dynatrace(dynatrace: String) {
+      override fun dynatrace(dynatrace: String) {
         cdkBuilder.dynatrace(dynatrace)
       }
 
-      public override fun googleAnalytics(googleAnalytics: String) {
+      override fun googleAnalytics(googleAnalytics: String) {
         cdkBuilder.googleAnalytics(googleAnalytics)
       }
 
-      public override fun inforNexus(inforNexus: String) {
+      override fun inforNexus(inforNexus: String) {
         cdkBuilder.inforNexus(inforNexus)
       }
 
-      public override fun marketo(marketo: String) {
+      override fun marketo(marketo: String) {
         cdkBuilder.marketo(marketo)
       }
 
-      public override fun pardot(pardot: String) {
+      override fun pardot(pardot: String) {
         cdkBuilder.pardot(pardot)
       }
 
-      public override fun s3(s3: String) {
+      override fun s3(s3: String) {
         cdkBuilder.s3(s3)
       }
 
-      public override fun salesforce(salesforce: String) {
+      override fun salesforce(salesforce: String) {
         cdkBuilder.salesforce(salesforce)
       }
 
-      public override fun sapoData(sapoData: String) {
+      override fun sapoData(sapoData: String) {
         cdkBuilder.sapoData(sapoData)
       }
 
-      public override fun serviceNow(serviceNow: String) {
+      override fun serviceNow(serviceNow: String) {
         cdkBuilder.serviceNow(serviceNow)
       }
 
-      public override fun singular(singular: String) {
+      override fun singular(singular: String) {
         cdkBuilder.singular(singular)
       }
 
-      public override fun slack(slack: String) {
+      override fun slack(slack: String) {
         cdkBuilder.slack(slack)
       }
 
-      public override fun trendmicro(trendmicro: String) {
+      override fun trendmicro(trendmicro: String) {
         cdkBuilder.trendmicro(trendmicro)
       }
 
-      public override fun veeva(veeva: String) {
+      override fun veeva(veeva: String) {
         cdkBuilder.veeva(veeva)
       }
 
-      public override fun zendesk(zendesk: String) {
+      override fun zendesk(zendesk: String) {
         cdkBuilder.zendesk(zendesk)
       }
 
@@ -3118,39 +2920,39 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.ConnectorOperatorProperty,
     ) : ConnectorOperatorProperty {
-      public override fun amplitude(): String? = unwrap(this).getAmplitude()
+      override fun amplitude(): String? = unwrap(this).getAmplitude()
 
-      public override fun customConnector(): String? = unwrap(this).getCustomConnector()
+      override fun customConnector(): String? = unwrap(this).getCustomConnector()
 
-      public override fun datadog(): String? = unwrap(this).getDatadog()
+      override fun datadog(): String? = unwrap(this).getDatadog()
 
-      public override fun dynatrace(): String? = unwrap(this).getDynatrace()
+      override fun dynatrace(): String? = unwrap(this).getDynatrace()
 
-      public override fun googleAnalytics(): String? = unwrap(this).getGoogleAnalytics()
+      override fun googleAnalytics(): String? = unwrap(this).getGoogleAnalytics()
 
-      public override fun inforNexus(): String? = unwrap(this).getInforNexus()
+      override fun inforNexus(): String? = unwrap(this).getInforNexus()
 
-      public override fun marketo(): String? = unwrap(this).getMarketo()
+      override fun marketo(): String? = unwrap(this).getMarketo()
 
-      public override fun pardot(): String? = unwrap(this).getPardot()
+      override fun pardot(): String? = unwrap(this).getPardot()
 
-      public override fun s3(): String? = unwrap(this).getS3()
+      override fun s3(): String? = unwrap(this).getS3()
 
-      public override fun salesforce(): String? = unwrap(this).getSalesforce()
+      override fun salesforce(): String? = unwrap(this).getSalesforce()
 
-      public override fun sapoData(): String? = unwrap(this).getSapoData()
+      override fun sapoData(): String? = unwrap(this).getSapoData()
 
-      public override fun serviceNow(): String? = unwrap(this).getServiceNow()
+      override fun serviceNow(): String? = unwrap(this).getServiceNow()
 
-      public override fun singular(): String? = unwrap(this).getSingular()
+      override fun singular(): String? = unwrap(this).getSingular()
 
-      public override fun slack(): String? = unwrap(this).getSlack()
+      override fun slack(): String? = unwrap(this).getSlack()
 
-      public override fun trendmicro(): String? = unwrap(this).getTrendmicro()
+      override fun trendmicro(): String? = unwrap(this).getTrendmicro()
 
-      public override fun veeva(): String? = unwrap(this).getVeeva()
+      override fun veeva(): String? = unwrap(this).getVeeva()
 
-      public override fun zendesk(): String? = unwrap(this).getZendesk()
+      override fun zendesk(): String? = unwrap(this).getZendesk()
     }
 
     public companion object {
@@ -3209,194 +3011,143 @@ public open class CfnFlow internal constructor(
     public fun zendesk(): Any? = unwrap(this).getZendesk()
 
     public interface Builder {
-      public fun amplitude(amplitude: IResolvable) {
-      }
+      public fun amplitude(amplitude: IResolvable)
 
-      public fun amplitude(amplitude: AmplitudeSourcePropertiesProperty) {
-      }
+      public fun amplitude(amplitude: AmplitudeSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb35f6b9258846219cd95dafd31c938237d36e4ce3a1556c95a1d6aecd0e685d")
-      public fun amplitude(amplitude: AmplitudeSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun amplitude(amplitude: AmplitudeSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun customConnector(customConnector: IResolvable) {
-      }
+      public fun customConnector(customConnector: IResolvable)
 
-      public fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty) {
-      }
+      public fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("892af92fbdf6bc58ec0347a2a82efb97c7554f89ec0313e8decd22eeca6a8347")
       public
-          fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+          fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun datadog(datadog: IResolvable) {
-      }
+      public fun datadog(datadog: IResolvable)
 
-      public fun datadog(datadog: DatadogSourcePropertiesProperty) {
-      }
+      public fun datadog(datadog: DatadogSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76208df19bab6e17a6e8a02e32038b136a2a9b7a69c47685c80a73e5c6425241")
-      public fun datadog(datadog: DatadogSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun datadog(datadog: DatadogSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun dynatrace(dynatrace: IResolvable) {
-      }
+      public fun dynatrace(dynatrace: IResolvable)
 
-      public fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty) {
-      }
+      public fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b1445c43826d94c7ef49bb243f14573a49dcff09184d1efdeda0b496c44189aa")
-      public fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun googleAnalytics(googleAnalytics: IResolvable) {
-      }
+      public fun googleAnalytics(googleAnalytics: IResolvable)
 
-      public fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty) {
-      }
+      public fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5188ec0577ffd946c7ef76fbbe4f2e23ad8a539bc7a32ecfc9b4e91bcfbba003")
       public
-          fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+          fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun inforNexus(inforNexus: IResolvable) {
-      }
+      public fun inforNexus(inforNexus: IResolvable)
 
-      public fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty) {
-      }
+      public fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84905cc9ed238b015f19c3f2d8cfa80479df95f8d3c59443545e1ab0361bc716")
-      public fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun marketo(marketo: IResolvable) {
-      }
+      public fun marketo(marketo: IResolvable)
 
-      public fun marketo(marketo: MarketoSourcePropertiesProperty) {
-      }
+      public fun marketo(marketo: MarketoSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eac2e3a380aeb37be1d0995732bab83aa975dc082f8bc73343b5b65fd09261d0")
-      public fun marketo(marketo: MarketoSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun marketo(marketo: MarketoSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun pardot(pardot: IResolvable) {
-      }
+      public fun pardot(pardot: IResolvable)
 
-      public fun pardot(pardot: PardotSourcePropertiesProperty) {
-      }
+      public fun pardot(pardot: PardotSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24ab87924ab88f72615053e95eb607abb84ac3c261242a3f125f529982e3dd5b")
-      public fun pardot(pardot: PardotSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun pardot(pardot: PardotSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3SourcePropertiesProperty) {
-      }
+      public fun s3(s3: S3SourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16b7a1f4c984c583213c54000d598d8f8380fc3c6d89a43bdb8c55b6b2ffc76f")
-      public fun s3(s3: S3SourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3SourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun salesforce(salesforce: IResolvable) {
-      }
+      public fun salesforce(salesforce: IResolvable)
 
-      public fun salesforce(salesforce: SalesforceSourcePropertiesProperty) {
-      }
+      public fun salesforce(salesforce: SalesforceSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84e751dbcc66ddddff42ae7200a0ed44711f742d4dfe05bf70c561b8114859ad")
-      public fun salesforce(salesforce: SalesforceSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun salesforce(salesforce: SalesforceSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun sapoData(sapoData: IResolvable) {
-      }
+      public fun sapoData(sapoData: IResolvable)
 
-      public fun sapoData(sapoData: SAPODataSourcePropertiesProperty) {
-      }
+      public fun sapoData(sapoData: SAPODataSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a91720667417ba79f50c8a6a05f832fc8455bdcf61489a13ee475a30fde1898b")
-      public fun sapoData(sapoData: SAPODataSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun sapoData(sapoData: SAPODataSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun serviceNow(serviceNow: IResolvable) {
-      }
+      public fun serviceNow(serviceNow: IResolvable)
 
-      public fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty) {
-      }
+      public fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("12b7a21810002ad5992a3ab65c20388543a23a79848ae6db912cb4035142695f")
-      public fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun singular(singular: IResolvable) {
-      }
+      public fun singular(singular: IResolvable)
 
-      public fun singular(singular: SingularSourcePropertiesProperty) {
-      }
+      public fun singular(singular: SingularSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64c9d9db11035899e00f8dfeb0ccd08f8dc0169446816393aef91944bb0ca885")
-      public fun singular(singular: SingularSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun singular(singular: SingularSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun slack(slack: IResolvable) {
-      }
+      public fun slack(slack: IResolvable)
 
-      public fun slack(slack: SlackSourcePropertiesProperty) {
-      }
+      public fun slack(slack: SlackSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("076829098515df6edb64e0f5c9236f65e86ee4970592d3b082bf5e2197cfbbbc")
-      public fun slack(slack: SlackSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun slack(slack: SlackSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun trendmicro(trendmicro: IResolvable) {
-      }
+      public fun trendmicro(trendmicro: IResolvable)
 
-      public fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty) {
-      }
+      public fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1af1b3f8977ca1403cdaea86cbe2044fdc85d748515000d7070bb0dc50d878da")
-      public fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun veeva(veeva: IResolvable) {
-      }
+      public fun veeva(veeva: IResolvable)
 
-      public fun veeva(veeva: VeevaSourcePropertiesProperty) {
-      }
+      public fun veeva(veeva: VeevaSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("646d9699b47c49c070682ffdb3e12c7342a1999f206204935b8cd2d430eb854b")
-      public fun veeva(veeva: VeevaSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun veeva(veeva: VeevaSourcePropertiesProperty.Builder.() -> Unit)
 
-      public fun zendesk(zendesk: IResolvable) {
-      }
+      public fun zendesk(zendesk: IResolvable)
 
-      public fun zendesk(zendesk: ZendeskSourcePropertiesProperty) {
-      }
+      public fun zendesk(zendesk: ZendeskSourcePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95326e224b4f1217bf7962e047c13e31d49b9488908b39bd4918c5743554e103")
-      public fun zendesk(zendesk: ZendeskSourcePropertiesProperty.Builder.() -> Unit) {
-      }
+      public fun zendesk(zendesk: ZendeskSourcePropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3405,236 +3156,228 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty.builder()
 
-      public override fun amplitude(amplitude: IResolvable) {
+      override fun amplitude(amplitude: IResolvable) {
         cdkBuilder.amplitude(amplitude.let(IResolvable::unwrap))
       }
 
-      public override fun amplitude(amplitude: AmplitudeSourcePropertiesProperty) {
+      override fun amplitude(amplitude: AmplitudeSourcePropertiesProperty) {
         cdkBuilder.amplitude(amplitude.let(AmplitudeSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb35f6b9258846219cd95dafd31c938237d36e4ce3a1556c95a1d6aecd0e685d")
-      public override
-          fun amplitude(amplitude: AmplitudeSourcePropertiesProperty.Builder.() -> Unit): Unit =
-          amplitude(AmplitudeSourcePropertiesProperty(amplitude))
+      override fun amplitude(amplitude: AmplitudeSourcePropertiesProperty.Builder.() -> Unit): Unit
+          = amplitude(AmplitudeSourcePropertiesProperty(amplitude))
 
-      public override fun customConnector(customConnector: IResolvable) {
+      override fun customConnector(customConnector: IResolvable) {
         cdkBuilder.customConnector(customConnector.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty) {
+      override fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty) {
         cdkBuilder.customConnector(customConnector.let(CustomConnectorSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("892af92fbdf6bc58ec0347a2a82efb97c7554f89ec0313e8decd22eeca6a8347")
-      public override
+      override
           fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty.Builder.() -> Unit):
           Unit = customConnector(CustomConnectorSourcePropertiesProperty(customConnector))
 
-      public override fun datadog(datadog: IResolvable) {
+      override fun datadog(datadog: IResolvable) {
         cdkBuilder.datadog(datadog.let(IResolvable::unwrap))
       }
 
-      public override fun datadog(datadog: DatadogSourcePropertiesProperty) {
+      override fun datadog(datadog: DatadogSourcePropertiesProperty) {
         cdkBuilder.datadog(datadog.let(DatadogSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76208df19bab6e17a6e8a02e32038b136a2a9b7a69c47685c80a73e5c6425241")
-      public override fun datadog(datadog: DatadogSourcePropertiesProperty.Builder.() -> Unit): Unit
-          = datadog(DatadogSourcePropertiesProperty(datadog))
+      override fun datadog(datadog: DatadogSourcePropertiesProperty.Builder.() -> Unit): Unit =
+          datadog(DatadogSourcePropertiesProperty(datadog))
 
-      public override fun dynatrace(dynatrace: IResolvable) {
+      override fun dynatrace(dynatrace: IResolvable) {
         cdkBuilder.dynatrace(dynatrace.let(IResolvable::unwrap))
       }
 
-      public override fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty) {
+      override fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty) {
         cdkBuilder.dynatrace(dynatrace.let(DynatraceSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b1445c43826d94c7ef49bb243f14573a49dcff09184d1efdeda0b496c44189aa")
-      public override
-          fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty.Builder.() -> Unit): Unit =
-          dynatrace(DynatraceSourcePropertiesProperty(dynatrace))
+      override fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty.Builder.() -> Unit): Unit
+          = dynatrace(DynatraceSourcePropertiesProperty(dynatrace))
 
-      public override fun googleAnalytics(googleAnalytics: IResolvable) {
+      override fun googleAnalytics(googleAnalytics: IResolvable) {
         cdkBuilder.googleAnalytics(googleAnalytics.let(IResolvable::unwrap))
       }
 
-      public override
-          fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty) {
+      override fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty) {
         cdkBuilder.googleAnalytics(googleAnalytics.let(GoogleAnalyticsSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5188ec0577ffd946c7ef76fbbe4f2e23ad8a539bc7a32ecfc9b4e91bcfbba003")
-      public override
+      override
           fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty.Builder.() -> Unit):
           Unit = googleAnalytics(GoogleAnalyticsSourcePropertiesProperty(googleAnalytics))
 
-      public override fun inforNexus(inforNexus: IResolvable) {
+      override fun inforNexus(inforNexus: IResolvable) {
         cdkBuilder.inforNexus(inforNexus.let(IResolvable::unwrap))
       }
 
-      public override fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty) {
+      override fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty) {
         cdkBuilder.inforNexus(inforNexus.let(InforNexusSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84905cc9ed238b015f19c3f2d8cfa80479df95f8d3c59443545e1ab0361bc716")
-      public override
-          fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty.Builder.() -> Unit): Unit =
-          inforNexus(InforNexusSourcePropertiesProperty(inforNexus))
+      override fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty.Builder.() -> Unit):
+          Unit = inforNexus(InforNexusSourcePropertiesProperty(inforNexus))
 
-      public override fun marketo(marketo: IResolvable) {
+      override fun marketo(marketo: IResolvable) {
         cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
       }
 
-      public override fun marketo(marketo: MarketoSourcePropertiesProperty) {
+      override fun marketo(marketo: MarketoSourcePropertiesProperty) {
         cdkBuilder.marketo(marketo.let(MarketoSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eac2e3a380aeb37be1d0995732bab83aa975dc082f8bc73343b5b65fd09261d0")
-      public override fun marketo(marketo: MarketoSourcePropertiesProperty.Builder.() -> Unit): Unit
-          = marketo(MarketoSourcePropertiesProperty(marketo))
+      override fun marketo(marketo: MarketoSourcePropertiesProperty.Builder.() -> Unit): Unit =
+          marketo(MarketoSourcePropertiesProperty(marketo))
 
-      public override fun pardot(pardot: IResolvable) {
+      override fun pardot(pardot: IResolvable) {
         cdkBuilder.pardot(pardot.let(IResolvable::unwrap))
       }
 
-      public override fun pardot(pardot: PardotSourcePropertiesProperty) {
+      override fun pardot(pardot: PardotSourcePropertiesProperty) {
         cdkBuilder.pardot(pardot.let(PardotSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24ab87924ab88f72615053e95eb607abb84ac3c261242a3f125f529982e3dd5b")
-      public override fun pardot(pardot: PardotSourcePropertiesProperty.Builder.() -> Unit): Unit =
+      override fun pardot(pardot: PardotSourcePropertiesProperty.Builder.() -> Unit): Unit =
           pardot(PardotSourcePropertiesProperty(pardot))
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3SourcePropertiesProperty) {
+      override fun s3(s3: S3SourcePropertiesProperty) {
         cdkBuilder.s3(s3.let(S3SourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16b7a1f4c984c583213c54000d598d8f8380fc3c6d89a43bdb8c55b6b2ffc76f")
-      public override fun s3(s3: S3SourcePropertiesProperty.Builder.() -> Unit): Unit =
+      override fun s3(s3: S3SourcePropertiesProperty.Builder.() -> Unit): Unit =
           s3(S3SourcePropertiesProperty(s3))
 
-      public override fun salesforce(salesforce: IResolvable) {
+      override fun salesforce(salesforce: IResolvable) {
         cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
       }
 
-      public override fun salesforce(salesforce: SalesforceSourcePropertiesProperty) {
+      override fun salesforce(salesforce: SalesforceSourcePropertiesProperty) {
         cdkBuilder.salesforce(salesforce.let(SalesforceSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("84e751dbcc66ddddff42ae7200a0ed44711f742d4dfe05bf70c561b8114859ad")
-      public override
-          fun salesforce(salesforce: SalesforceSourcePropertiesProperty.Builder.() -> Unit): Unit =
-          salesforce(SalesforceSourcePropertiesProperty(salesforce))
+      override fun salesforce(salesforce: SalesforceSourcePropertiesProperty.Builder.() -> Unit):
+          Unit = salesforce(SalesforceSourcePropertiesProperty(salesforce))
 
-      public override fun sapoData(sapoData: IResolvable) {
+      override fun sapoData(sapoData: IResolvable) {
         cdkBuilder.sapoData(sapoData.let(IResolvable::unwrap))
       }
 
-      public override fun sapoData(sapoData: SAPODataSourcePropertiesProperty) {
+      override fun sapoData(sapoData: SAPODataSourcePropertiesProperty) {
         cdkBuilder.sapoData(sapoData.let(SAPODataSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a91720667417ba79f50c8a6a05f832fc8455bdcf61489a13ee475a30fde1898b")
-      public override fun sapoData(sapoData: SAPODataSourcePropertiesProperty.Builder.() -> Unit):
-          Unit = sapoData(SAPODataSourcePropertiesProperty(sapoData))
+      override fun sapoData(sapoData: SAPODataSourcePropertiesProperty.Builder.() -> Unit): Unit =
+          sapoData(SAPODataSourcePropertiesProperty(sapoData))
 
-      public override fun serviceNow(serviceNow: IResolvable) {
+      override fun serviceNow(serviceNow: IResolvable) {
         cdkBuilder.serviceNow(serviceNow.let(IResolvable::unwrap))
       }
 
-      public override fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty) {
+      override fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty) {
         cdkBuilder.serviceNow(serviceNow.let(ServiceNowSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("12b7a21810002ad5992a3ab65c20388543a23a79848ae6db912cb4035142695f")
-      public override
-          fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty.Builder.() -> Unit): Unit =
-          serviceNow(ServiceNowSourcePropertiesProperty(serviceNow))
+      override fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty.Builder.() -> Unit):
+          Unit = serviceNow(ServiceNowSourcePropertiesProperty(serviceNow))
 
-      public override fun singular(singular: IResolvable) {
+      override fun singular(singular: IResolvable) {
         cdkBuilder.singular(singular.let(IResolvable::unwrap))
       }
 
-      public override fun singular(singular: SingularSourcePropertiesProperty) {
+      override fun singular(singular: SingularSourcePropertiesProperty) {
         cdkBuilder.singular(singular.let(SingularSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64c9d9db11035899e00f8dfeb0ccd08f8dc0169446816393aef91944bb0ca885")
-      public override fun singular(singular: SingularSourcePropertiesProperty.Builder.() -> Unit):
-          Unit = singular(SingularSourcePropertiesProperty(singular))
+      override fun singular(singular: SingularSourcePropertiesProperty.Builder.() -> Unit): Unit =
+          singular(SingularSourcePropertiesProperty(singular))
 
-      public override fun slack(slack: IResolvable) {
+      override fun slack(slack: IResolvable) {
         cdkBuilder.slack(slack.let(IResolvable::unwrap))
       }
 
-      public override fun slack(slack: SlackSourcePropertiesProperty) {
+      override fun slack(slack: SlackSourcePropertiesProperty) {
         cdkBuilder.slack(slack.let(SlackSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("076829098515df6edb64e0f5c9236f65e86ee4970592d3b082bf5e2197cfbbbc")
-      public override fun slack(slack: SlackSourcePropertiesProperty.Builder.() -> Unit): Unit =
+      override fun slack(slack: SlackSourcePropertiesProperty.Builder.() -> Unit): Unit =
           slack(SlackSourcePropertiesProperty(slack))
 
-      public override fun trendmicro(trendmicro: IResolvable) {
+      override fun trendmicro(trendmicro: IResolvable) {
         cdkBuilder.trendmicro(trendmicro.let(IResolvable::unwrap))
       }
 
-      public override fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty) {
+      override fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty) {
         cdkBuilder.trendmicro(trendmicro.let(TrendmicroSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1af1b3f8977ca1403cdaea86cbe2044fdc85d748515000d7070bb0dc50d878da")
-      public override
-          fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty.Builder.() -> Unit): Unit =
-          trendmicro(TrendmicroSourcePropertiesProperty(trendmicro))
+      override fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty.Builder.() -> Unit):
+          Unit = trendmicro(TrendmicroSourcePropertiesProperty(trendmicro))
 
-      public override fun veeva(veeva: IResolvable) {
+      override fun veeva(veeva: IResolvable) {
         cdkBuilder.veeva(veeva.let(IResolvable::unwrap))
       }
 
-      public override fun veeva(veeva: VeevaSourcePropertiesProperty) {
+      override fun veeva(veeva: VeevaSourcePropertiesProperty) {
         cdkBuilder.veeva(veeva.let(VeevaSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("646d9699b47c49c070682ffdb3e12c7342a1999f206204935b8cd2d430eb854b")
-      public override fun veeva(veeva: VeevaSourcePropertiesProperty.Builder.() -> Unit): Unit =
+      override fun veeva(veeva: VeevaSourcePropertiesProperty.Builder.() -> Unit): Unit =
           veeva(VeevaSourcePropertiesProperty(veeva))
 
-      public override fun zendesk(zendesk: IResolvable) {
+      override fun zendesk(zendesk: IResolvable) {
         cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
       }
 
-      public override fun zendesk(zendesk: ZendeskSourcePropertiesProperty) {
+      override fun zendesk(zendesk: ZendeskSourcePropertiesProperty) {
         cdkBuilder.zendesk(zendesk.let(ZendeskSourcePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95326e224b4f1217bf7962e047c13e31d49b9488908b39bd4918c5743554e103")
-      public override fun zendesk(zendesk: ZendeskSourcePropertiesProperty.Builder.() -> Unit): Unit
-          = zendesk(ZendeskSourcePropertiesProperty(zendesk))
+      override fun zendesk(zendesk: ZendeskSourcePropertiesProperty.Builder.() -> Unit): Unit =
+          zendesk(ZendeskSourcePropertiesProperty(zendesk))
 
       public fun build():
           software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty =
@@ -3645,39 +3388,39 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SourceConnectorPropertiesProperty,
     ) : SourceConnectorPropertiesProperty {
-      public override fun amplitude(): Any? = unwrap(this).getAmplitude()
+      override fun amplitude(): Any? = unwrap(this).getAmplitude()
 
-      public override fun customConnector(): Any? = unwrap(this).getCustomConnector()
+      override fun customConnector(): Any? = unwrap(this).getCustomConnector()
 
-      public override fun datadog(): Any? = unwrap(this).getDatadog()
+      override fun datadog(): Any? = unwrap(this).getDatadog()
 
-      public override fun dynatrace(): Any? = unwrap(this).getDynatrace()
+      override fun dynatrace(): Any? = unwrap(this).getDynatrace()
 
-      public override fun googleAnalytics(): Any? = unwrap(this).getGoogleAnalytics()
+      override fun googleAnalytics(): Any? = unwrap(this).getGoogleAnalytics()
 
-      public override fun inforNexus(): Any? = unwrap(this).getInforNexus()
+      override fun inforNexus(): Any? = unwrap(this).getInforNexus()
 
-      public override fun marketo(): Any? = unwrap(this).getMarketo()
+      override fun marketo(): Any? = unwrap(this).getMarketo()
 
-      public override fun pardot(): Any? = unwrap(this).getPardot()
+      override fun pardot(): Any? = unwrap(this).getPardot()
 
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
 
-      public override fun salesforce(): Any? = unwrap(this).getSalesforce()
+      override fun salesforce(): Any? = unwrap(this).getSalesforce()
 
-      public override fun sapoData(): Any? = unwrap(this).getSapoData()
+      override fun sapoData(): Any? = unwrap(this).getSapoData()
 
-      public override fun serviceNow(): Any? = unwrap(this).getServiceNow()
+      override fun serviceNow(): Any? = unwrap(this).getServiceNow()
 
-      public override fun singular(): Any? = unwrap(this).getSingular()
+      override fun singular(): Any? = unwrap(this).getSingular()
 
-      public override fun slack(): Any? = unwrap(this).getSlack()
+      override fun slack(): Any? = unwrap(this).getSlack()
 
-      public override fun trendmicro(): Any? = unwrap(this).getTrendmicro()
+      override fun trendmicro(): Any? = unwrap(this).getTrendmicro()
 
-      public override fun veeva(): Any? = unwrap(this).getVeeva()
+      override fun veeva(): Any? = unwrap(this).getVeeva()
 
-      public override fun zendesk(): Any? = unwrap(this).getZendesk()
+      override fun zendesk(): Any? = unwrap(this).getZendesk()
     }
 
     public companion object {
@@ -3709,23 +3452,18 @@ public open class CfnFlow internal constructor(
     public fun s3OutputFormatConfig(): Any
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
-      }
+      public fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable)
 
-      public fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty) {
-      }
+      public fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78dc8df17f3259b10b67973a50f45ac02be70e3fe12a4b021c6f6142acad43fb")
       public
-          fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty.Builder.() -> Unit) {
-      }
+          fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3734,26 +3472,26 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
+      override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
         cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty) {
         cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(UpsolverS3OutputFormatConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78dc8df17f3259b10b67973a50f45ac02be70e3fe12a4b021c6f6142acad43fb")
-      public override
+      override
           fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty.Builder.() -> Unit):
           Unit = s3OutputFormatConfig(UpsolverS3OutputFormatConfigProperty(s3OutputFormatConfig))
 
@@ -3766,11 +3504,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverDestinationPropertiesProperty,
     ) : UpsolverDestinationPropertiesProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun s3OutputFormatConfig(): Any = unwrap(this).getS3OutputFormatConfig()
+      override fun s3OutputFormatConfig(): Any = unwrap(this).getS3OutputFormatConfig()
     }
 
     public companion object {
@@ -3798,8 +3536,7 @@ public open class CfnFlow internal constructor(
     public fun maxPageSize(): Number
 
     public interface Builder {
-      public fun maxPageSize(maxPageSize: Number) {
-      }
+      public fun maxPageSize(maxPageSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3807,7 +3544,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.builder()
 
-      public override fun maxPageSize(maxPageSize: Number) {
+      override fun maxPageSize(maxPageSize: Number) {
         cdkBuilder.maxPageSize(maxPageSize)
       }
 
@@ -3820,7 +3557,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty,
     ) : SAPODataPaginationConfigProperty {
-      public override fun maxPageSize(): Number = unwrap(this).getMaxPageSize()
+      override fun maxPageSize(): Number = unwrap(this).getMaxPageSize()
     }
 
     public companion object {
@@ -3847,16 +3584,13 @@ public open class CfnFlow internal constructor(
     public fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
 
     public interface Builder {
-      public fun glueDataCatalog(glueDataCatalog: IResolvable) {
-      }
+      public fun glueDataCatalog(glueDataCatalog: IResolvable)
 
-      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty) {
-      }
+      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3d03272fda4f639d1966ee835a77c0951c3b8ecd7142f46054faa44cc8f1f5ee")
-      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit) {
-      }
+      public fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3864,19 +3598,18 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty.builder()
 
-      public override fun glueDataCatalog(glueDataCatalog: IResolvable) {
+      override fun glueDataCatalog(glueDataCatalog: IResolvable) {
         cdkBuilder.glueDataCatalog(glueDataCatalog.let(IResolvable::unwrap))
       }
 
-      public override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty) {
+      override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty) {
         cdkBuilder.glueDataCatalog(glueDataCatalog.let(GlueDataCatalogProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3d03272fda4f639d1966ee835a77c0951c3b8ecd7142f46054faa44cc8f1f5ee")
-      public override
-          fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit): Unit =
-          glueDataCatalog(GlueDataCatalogProperty(glueDataCatalog))
+      override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty.Builder.() -> Unit):
+          Unit = glueDataCatalog(GlueDataCatalogProperty(glueDataCatalog))
 
       public fun build():
           software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty =
@@ -3887,7 +3620,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.MetadataCatalogConfigProperty,
     ) : MetadataCatalogConfigProperty {
-      public override fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
+      override fun glueDataCatalog(): Any? = unwrap(this).getGlueDataCatalog()
     }
 
     public companion object {
@@ -3920,26 +3653,20 @@ public open class CfnFlow internal constructor(
     public fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
 
     public interface Builder {
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("19658d5aec2c4972f43d129840676abb1a24cc44fe7dcf88f439dedd406604a6")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun idFieldNames(idFieldNames: List<String>) {
-      }
+      public fun idFieldNames(idFieldNames: List<String>)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
 
-      public fun writeOperationType(writeOperationType: String) {
-      }
+      public fun writeOperationType(writeOperationType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3948,29 +3675,29 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty.builder()
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("19658d5aec2c4972f43d129840676abb1a24cc44fe7dcf88f439dedd406604a6")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun idFieldNames(idFieldNames: List<String>) {
+      override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
-      public override fun writeOperationType(writeOperationType: String) {
+      override fun writeOperationType(writeOperationType: String) {
         cdkBuilder.writeOperationType(writeOperationType)
       }
 
@@ -3983,14 +3710,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.ZendeskDestinationPropertiesProperty,
     ) : ZendeskDestinationPropertiesProperty {
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?:
-          emptyList()
+      override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
 
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
 
-      public override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
+      override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
     }
 
     public companion object {
@@ -4022,23 +3748,18 @@ public open class CfnFlow internal constructor(
     public fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun s3InputFormatConfig(s3InputFormatConfig: IResolvable) {
-      }
+      public fun s3InputFormatConfig(s3InputFormatConfig: IResolvable)
 
-      public fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty) {
-      }
+      public fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb960761c4562e4c834f462f61e54872b320143be2d33df8bdfde92e5f0a21e4")
       public
-          fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit) {
-      }
+          fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4046,25 +3767,25 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun s3InputFormatConfig(s3InputFormatConfig: IResolvable) {
+      override fun s3InputFormatConfig(s3InputFormatConfig: IResolvable) {
         cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(IResolvable::unwrap))
       }
 
-      public override fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty) {
+      override fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty) {
         cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(S3InputFormatConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb960761c4562e4c834f462f61e54872b320143be2d33df8bdfde92e5f0a21e4")
-      public override
+      override
           fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty.Builder.() -> Unit):
           Unit = s3InputFormatConfig(S3InputFormatConfigProperty(s3InputFormatConfig))
 
@@ -4076,11 +3797,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.S3SourcePropertiesProperty,
     ) : S3SourcePropertiesProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String = unwrap(this).getBucketPrefix()
 
-      public override fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
+      override fun s3InputFormatConfig(): Any? = unwrap(this).getS3InputFormatConfig()
     }
 
     public companion object {
@@ -4116,39 +3837,30 @@ public open class CfnFlow internal constructor(
     public fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
 
     public interface Builder {
-      public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: IResolvable)
 
-      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-      }
+      public fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b1ebf97a8755f2bbd6a3b4610cbd0742c3888da56891f8c467483acb9af9d93")
       public
-          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun idFieldNames(idFieldNames: List<String>) {
-      }
+      public fun idFieldNames(idFieldNames: List<String>)
 
-      public fun objectPath(objectPath: String) {
-      }
+      public fun objectPath(objectPath: String)
 
-      public fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable) {
-      }
+      public fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable)
 
       public
-          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty) {
-      }
+          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c586ef71d6492fd06ce2f139e53052625bdb41f61e404731befee55737bf4c9")
       public
-          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit) {
-      }
+          fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit)
 
-      public fun writeOperationType(writeOperationType: String) {
-      }
+      public fun writeOperationType(writeOperationType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4157,46 +3869,45 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty.builder()
 
-      public override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
+      override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
+      override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
         cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b1ebf97a8755f2bbd6a3b4610cbd0742c3888da56891f8c467483acb9af9d93")
-      public override
+      override
           fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty.Builder.() -> Unit):
           Unit = errorHandlingConfig(ErrorHandlingConfigProperty(errorHandlingConfig))
 
-      public override fun idFieldNames(idFieldNames: List<String>) {
+      override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
 
-      public override fun objectPath(objectPath: String) {
+      override fun objectPath(objectPath: String) {
         cdkBuilder.objectPath(objectPath)
       }
 
-      public override
-          fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable) {
+      override fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable) {
         cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty) {
         cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(SuccessResponseHandlingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c586ef71d6492fd06ce2f139e53052625bdb41f61e404731befee55737bf4c9")
-      public override
+      override
           fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty.Builder.() -> Unit):
           Unit =
           successResponseHandlingConfig(SuccessResponseHandlingConfigProperty(successResponseHandlingConfig))
 
-      public override fun writeOperationType(writeOperationType: String) {
+      override fun writeOperationType(writeOperationType: String) {
         cdkBuilder.writeOperationType(writeOperationType)
       }
 
@@ -4209,17 +3920,16 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataDestinationPropertiesProperty,
     ) : SAPODataDestinationPropertiesProperty {
-      public override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
+      override fun errorHandlingConfig(): Any? = unwrap(this).getErrorHandlingConfig()
 
-      public override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?:
-          emptyList()
+      override fun idFieldNames(): List<String> = unwrap(this).getIdFieldNames() ?: emptyList()
 
-      public override fun objectPath(): String = unwrap(this).getObjectPath()
+      override fun objectPath(): String = unwrap(this).getObjectPath()
 
-      public override fun successResponseHandlingConfig(): Any? =
+      override fun successResponseHandlingConfig(): Any? =
           unwrap(this).getSuccessResponseHandlingConfig()
 
-      public override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
+      override fun writeOperationType(): String? = unwrap(this).getWriteOperationType()
     }
 
     public companion object {
@@ -4251,17 +3961,13 @@ public open class CfnFlow internal constructor(
     public fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun failOnFirstError(failOnFirstError: Boolean) {
-      }
+      public fun failOnFirstError(failOnFirstError: Boolean)
 
-      public fun failOnFirstError(failOnFirstError: IResolvable) {
-      }
+      public fun failOnFirstError(failOnFirstError: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -4269,19 +3975,19 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun failOnFirstError(failOnFirstError: Boolean) {
+      override fun failOnFirstError(failOnFirstError: Boolean) {
         cdkBuilder.failOnFirstError(failOnFirstError)
       }
 
-      public override fun failOnFirstError(failOnFirstError: IResolvable) {
+      override fun failOnFirstError(failOnFirstError: IResolvable) {
         cdkBuilder.failOnFirstError(failOnFirstError.let(IResolvable::unwrap))
       }
 
@@ -4294,11 +4000,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.ErrorHandlingConfigProperty,
     ) : ErrorHandlingConfigProperty {
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
+      override fun failOnFirstError(): Any? = unwrap(this).getFailOnFirstError()
     }
 
     public companion object {
@@ -4325,8 +4031,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4334,7 +4039,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -4347,7 +4052,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SlackSourcePropertiesProperty,
     ) : SlackSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -4374,8 +4079,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4384,7 +4088,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -4397,7 +4101,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.InforNexusSourcePropertiesProperty,
     ) : InforNexusSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -4431,37 +4135,27 @@ public open class CfnFlow internal constructor(
     public fun preserveSourceDataTyping(): Any? = unwrap(this).getPreserveSourceDataTyping()
 
     public interface Builder {
-      public fun aggregationConfig(aggregationConfig: IResolvable) {
-      }
+      public fun aggregationConfig(aggregationConfig: IResolvable)
 
-      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
-      }
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0564152b3d063bbba319273050c642c0f297b19c27a6cb573d3880d14d33aae5")
-      public
-          fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit) {
-      }
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit)
 
-      public fun fileType(fileType: String) {
-      }
+      public fun fileType(fileType: String)
 
-      public fun prefixConfig(prefixConfig: IResolvable) {
-      }
+      public fun prefixConfig(prefixConfig: IResolvable)
 
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty) {
-      }
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f347e5ed4eeadb54c204588b312704de5a215c7508d94fd4ce909a24a303385")
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit) {
-      }
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit)
 
-      public fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean) {
-      }
+      public fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean)
 
-      public fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable) {
-      }
+      public fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -4469,42 +4163,42 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty.builder()
 
-      public override fun aggregationConfig(aggregationConfig: IResolvable) {
+      override fun aggregationConfig(aggregationConfig: IResolvable) {
         cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
+      override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
         cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0564152b3d063bbba319273050c642c0f297b19c27a6cb573d3880d14d33aae5")
-      public override
+      override
           fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit):
           Unit = aggregationConfig(AggregationConfigProperty(aggregationConfig))
 
-      public override fun fileType(fileType: String) {
+      override fun fileType(fileType: String) {
         cdkBuilder.fileType(fileType)
       }
 
-      public override fun prefixConfig(prefixConfig: IResolvable) {
+      override fun prefixConfig(prefixConfig: IResolvable) {
         cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
       }
 
-      public override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
         cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f347e5ed4eeadb54c204588b312704de5a215c7508d94fd4ce909a24a303385")
-      public override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit
-          = prefixConfig(PrefixConfigProperty(prefixConfig))
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit =
+          prefixConfig(PrefixConfigProperty(prefixConfig))
 
-      public override fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean) {
+      override fun preserveSourceDataTyping(preserveSourceDataTyping: Boolean) {
         cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping)
       }
 
-      public override fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable) {
+      override fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable) {
         cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping.let(IResolvable::unwrap))
       }
 
@@ -4517,14 +4211,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.S3OutputFormatConfigProperty,
     ) : S3OutputFormatConfigProperty {
-      public override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
+      override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
 
-      public override fun fileType(): String? = unwrap(this).getFileType()
+      override fun fileType(): String? = unwrap(this).getFileType()
 
-      public override fun prefixConfig(): Any? = unwrap(this).getPrefixConfig()
+      override fun prefixConfig(): Any? = unwrap(this).getPrefixConfig()
 
-      public override fun preserveSourceDataTyping(): Any? =
-          unwrap(this).getPreserveSourceDataTyping()
+      override fun preserveSourceDataTyping(): Any? = unwrap(this).getPreserveSourceDataTyping()
     }
 
     public companion object {
@@ -4555,31 +4248,23 @@ public open class CfnFlow internal constructor(
     public fun prefixConfig(): Any
 
     public interface Builder {
-      public fun aggregationConfig(aggregationConfig: IResolvable) {
-      }
+      public fun aggregationConfig(aggregationConfig: IResolvable)
 
-      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
-      }
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("23d5a936b77c2c68051ee0245817734701542e0e5e64b93a04f589c69eab692b")
-      public
-          fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit) {
-      }
+      public fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit)
 
-      public fun fileType(fileType: String) {
-      }
+      public fun fileType(fileType: String)
 
-      public fun prefixConfig(prefixConfig: IResolvable) {
-      }
+      public fun prefixConfig(prefixConfig: IResolvable)
 
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty) {
-      }
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01c56c14d42601c94f7643e795d8d09183f78e8f1f186683dff7f884a89d7dc7")
-      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit) {
-      }
+      public fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4588,36 +4273,36 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty.builder()
 
-      public override fun aggregationConfig(aggregationConfig: IResolvable) {
+      override fun aggregationConfig(aggregationConfig: IResolvable) {
         cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
+      override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
         cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("23d5a936b77c2c68051ee0245817734701542e0e5e64b93a04f589c69eab692b")
-      public override
+      override
           fun aggregationConfig(aggregationConfig: AggregationConfigProperty.Builder.() -> Unit):
           Unit = aggregationConfig(AggregationConfigProperty(aggregationConfig))
 
-      public override fun fileType(fileType: String) {
+      override fun fileType(fileType: String) {
         cdkBuilder.fileType(fileType)
       }
 
-      public override fun prefixConfig(prefixConfig: IResolvable) {
+      override fun prefixConfig(prefixConfig: IResolvable) {
         cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
       }
 
-      public override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
         cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01c56c14d42601c94f7643e795d8d09183f78e8f1f186683dff7f884a89d7dc7")
-      public override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit
-          = prefixConfig(PrefixConfigProperty(prefixConfig))
+      override fun prefixConfig(prefixConfig: PrefixConfigProperty.Builder.() -> Unit): Unit =
+          prefixConfig(PrefixConfigProperty(prefixConfig))
 
       public fun build():
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty =
@@ -4628,11 +4313,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.UpsolverS3OutputFormatConfigProperty,
     ) : UpsolverS3OutputFormatConfigProperty {
-      public override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
+      override fun aggregationConfig(): Any? = unwrap(this).getAggregationConfig()
 
-      public override fun fileType(): String? = unwrap(this).getFileType()
+      override fun fileType(): String? = unwrap(this).getFileType()
 
-      public override fun prefixConfig(): Any = unwrap(this).getPrefixConfig()
+      override fun prefixConfig(): Any = unwrap(this).getPrefixConfig()
     }
 
     public companion object {
@@ -4660,8 +4345,7 @@ public open class CfnFlow internal constructor(
     public fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
 
     public interface Builder {
-      public fun s3InputFileType(s3InputFileType: String) {
-      }
+      public fun s3InputFileType(s3InputFileType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4669,7 +4353,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty.builder()
 
-      public override fun s3InputFileType(s3InputFileType: String) {
+      override fun s3InputFileType(s3InputFileType: String) {
         cdkBuilder.s3InputFileType(s3InputFileType)
       }
 
@@ -4682,7 +4366,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.S3InputFormatConfigProperty,
     ) : S3InputFormatConfigProperty {
-      public override fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
+      override fun s3InputFileType(): String? = unwrap(this).getS3InputFileType()
     }
 
     public companion object {
@@ -4709,8 +4393,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4718,7 +4401,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -4731,7 +4414,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.DatadogSourcePropertiesProperty,
     ) : DatadogSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -4758,8 +4441,7 @@ public open class CfnFlow internal constructor(
     public fun `object`(): String
 
     public interface Builder {
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4767,7 +4449,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty.builder()
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
@@ -4780,7 +4462,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.SingularSourcePropertiesProperty,
     ) : SingularSourcePropertiesProperty {
-      public override fun `object`(): String = unwrap(this).getObject()
+      override fun `object`(): String = unwrap(this).getObject()
     }
 
     public companion object {
@@ -4813,27 +4495,21 @@ public open class CfnFlow internal constructor(
     public fun destinationConnectorProperties(): Any
 
     public interface Builder {
-      public fun apiVersion(apiVersion: String) {
-      }
+      public fun apiVersion(apiVersion: String)
 
-      public fun connectorProfileName(connectorProfileName: String) {
-      }
+      public fun connectorProfileName(connectorProfileName: String)
 
-      public fun connectorType(connectorType: String) {
-      }
+      public fun connectorType(connectorType: String)
 
-      public fun destinationConnectorProperties(destinationConnectorProperties: IResolvable) {
-      }
+      public fun destinationConnectorProperties(destinationConnectorProperties: IResolvable)
 
       public
-          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty) {
-      }
+          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd4b52ab5ab53c73295d9dd2339d2db7f38f4f5ac3a1a8fe9d1bda08a63962d7")
       public
-          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4841,31 +4517,30 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty.builder()
 
-      public override fun apiVersion(apiVersion: String) {
+      override fun apiVersion(apiVersion: String) {
         cdkBuilder.apiVersion(apiVersion)
       }
 
-      public override fun connectorProfileName(connectorProfileName: String) {
+      override fun connectorProfileName(connectorProfileName: String) {
         cdkBuilder.connectorProfileName(connectorProfileName)
       }
 
-      public override fun connectorType(connectorType: String) {
+      override fun connectorType(connectorType: String) {
         cdkBuilder.connectorType(connectorType)
       }
 
-      public override
-          fun destinationConnectorProperties(destinationConnectorProperties: IResolvable) {
+      override fun destinationConnectorProperties(destinationConnectorProperties: IResolvable) {
         cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty) {
         cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(DestinationConnectorPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd4b52ab5ab53c73295d9dd2339d2db7f38f4f5ac3a1a8fe9d1bda08a63962d7")
-      public override
+      override
           fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty.Builder.() -> Unit):
           Unit =
           destinationConnectorProperties(DestinationConnectorPropertiesProperty(destinationConnectorProperties))
@@ -4879,13 +4554,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.DestinationFlowConfigProperty,
     ) : DestinationFlowConfigProperty {
-      public override fun apiVersion(): String? = unwrap(this).getApiVersion()
+      override fun apiVersion(): String? = unwrap(this).getApiVersion()
 
-      public override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
+      override fun connectorProfileName(): String? = unwrap(this).getConnectorProfileName()
 
-      public override fun connectorType(): String = unwrap(this).getConnectorType()
+      override fun connectorType(): String = unwrap(this).getConnectorType()
 
-      public override fun destinationConnectorProperties(): Any =
+      override fun destinationConnectorProperties(): Any =
           unwrap(this).getDestinationConnectorProperties()
     }
 
@@ -4917,14 +4592,11 @@ public open class CfnFlow internal constructor(
     public fun tablePrefix(): String
 
     public interface Builder {
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun tablePrefix(tablePrefix: String) {
-      }
+      public fun tablePrefix(tablePrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4932,15 +4604,15 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty.builder()
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun tablePrefix(tablePrefix: String) {
+      override fun tablePrefix(tablePrefix: String) {
         cdkBuilder.tablePrefix(tablePrefix)
       }
 
@@ -4952,11 +4624,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.GlueDataCatalogProperty,
     ) : GlueDataCatalogProperty {
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun tablePrefix(): String = unwrap(this).getTablePrefix()
+      override fun tablePrefix(): String = unwrap(this).getTablePrefix()
     }
 
     public companion object {
@@ -4987,23 +4659,18 @@ public open class CfnFlow internal constructor(
     public fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
-      }
+      public fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable)
 
-      public fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty) {
-      }
+      public fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c5cc17b820b49eb5ffb2e6c56a3bcf1dc7de87f453496dc2344fa326b8e50800")
       public
-          fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit) {
-      }
+          fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -5011,25 +4678,25 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
+      override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
         cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable::unwrap))
       }
 
-      public override fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty) {
+      override fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty) {
         cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(S3OutputFormatConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c5cc17b820b49eb5ffb2e6c56a3bcf1dc7de87f453496dc2344fa326b8e50800")
-      public override
+      override
           fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty.Builder.() -> Unit):
           Unit = s3OutputFormatConfig(S3OutputFormatConfigProperty(s3OutputFormatConfig))
 
@@ -5042,11 +4709,11 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.S3DestinationPropertiesProperty,
     ) : S3DestinationPropertiesProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
+      override fun s3OutputFormatConfig(): Any? = unwrap(this).getS3OutputFormatConfig()
     }
 
     public companion object {
@@ -5075,11 +4742,9 @@ public open class CfnFlow internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5087,11 +4752,11 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty.Builder =
           software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -5104,9 +4769,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnFlow.TaskPropertiesObjectProperty,
     ) : TaskPropertiesObjectProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

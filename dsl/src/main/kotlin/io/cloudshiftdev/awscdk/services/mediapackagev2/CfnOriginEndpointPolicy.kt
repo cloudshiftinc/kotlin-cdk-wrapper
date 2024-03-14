@@ -41,17 +41,13 @@ public open class CfnOriginEndpointPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun channelGroupName(channelGroupName: String) {
-    }
+    public fun channelGroupName(channelGroupName: String)
 
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun originEndpointName(originEndpointName: String) {
-    }
+    public fun originEndpointName(originEndpointName: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
   }
 
   private class BuilderImpl(
@@ -63,19 +59,19 @@ public open class CfnOriginEndpointPolicy internal constructor(
         software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy.Builder.create(scope,
         id)
 
-    public override fun channelGroupName(channelGroupName: String) {
+    override fun channelGroupName(channelGroupName: String) {
       cdkBuilder.channelGroupName(channelGroupName)
     }
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun originEndpointName(originEndpointName: String) {
+    override fun originEndpointName(originEndpointName: String) {
       cdkBuilder.originEndpointName(originEndpointName)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 

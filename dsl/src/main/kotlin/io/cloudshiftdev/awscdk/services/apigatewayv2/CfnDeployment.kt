@@ -36,14 +36,11 @@ public open class CfnDeployment internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnDeployment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnDeployment.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnDeployment.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 

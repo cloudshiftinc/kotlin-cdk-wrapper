@@ -24,8 +24,7 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lookoutvision.CfnProject.Builder =
         software.amazon.awscdk.services.lookoutvision.CfnProject.Builder.create(scope, id)
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 

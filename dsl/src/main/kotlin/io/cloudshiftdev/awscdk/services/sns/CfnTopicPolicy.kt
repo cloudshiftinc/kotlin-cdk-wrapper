@@ -32,11 +32,9 @@ public open class CfnTopicPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun topics(topics: List<String>) {
-    }
+    public fun topics(topics: List<String>)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnTopicPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sns.CfnTopicPolicy.Builder =
         software.amazon.awscdk.services.sns.CfnTopicPolicy.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun topics(topics: List<String>) {
+    override fun topics(topics: List<String>) {
       cdkBuilder.topics(topics)
     }
 

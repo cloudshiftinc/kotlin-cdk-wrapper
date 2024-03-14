@@ -21,14 +21,11 @@ public open class GatewayVpcEndpoint internal constructor(
       unwrap(this).getVpcEndpointNetworkInterfaceIds() ?: emptyList()
 
   public interface Builder {
-    public fun service(service: IGatewayVpcEndpointService) {
-    }
+    public fun service(service: IGatewayVpcEndpointService)
 
-    public fun subnets(subnets: List<SubnetSelection>) {
-    }
+    public fun subnets(subnets: List<SubnetSelection>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -38,15 +35,15 @@ public open class GatewayVpcEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.GatewayVpcEndpoint.Builder =
         software.amazon.awscdk.services.ec2.GatewayVpcEndpoint.Builder.create(scope, id)
 
-    public override fun service(service: IGatewayVpcEndpointService) {
+    override fun service(service: IGatewayVpcEndpointService) {
       cdkBuilder.service(service.let(IGatewayVpcEndpointService::unwrap))
     }
 
-    public override fun subnets(subnets: List<SubnetSelection>) {
+    override fun subnets(subnets: List<SubnetSelection>) {
       cdkBuilder.subnets(subnets.map(SubnetSelection::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

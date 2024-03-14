@@ -48,20 +48,16 @@ public open class CfnBackupSelection internal constructor(
   }
 
   public interface Builder {
-    public fun backupPlanId(backupPlanId: String) {
-    }
+    public fun backupPlanId(backupPlanId: String)
 
-    public fun backupSelection(backupSelection: IResolvable) {
-    }
+    public fun backupSelection(backupSelection: IResolvable)
 
-    public fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty) {
-    }
+    public fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f95bef2eeb59814b6a3c419d1cdcd6d56ec8116ab4586441942419bbd4e9612b")
     public
-        fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty.Builder.() -> Unit) {
-    }
+        fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -71,21 +67,21 @@ public open class CfnBackupSelection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnBackupSelection.Builder =
         software.amazon.awscdk.services.backup.CfnBackupSelection.Builder.create(scope, id)
 
-    public override fun backupPlanId(backupPlanId: String) {
+    override fun backupPlanId(backupPlanId: String) {
       cdkBuilder.backupPlanId(backupPlanId)
     }
 
-    public override fun backupSelection(backupSelection: IResolvable) {
+    override fun backupSelection(backupSelection: IResolvable) {
       cdkBuilder.backupSelection(backupSelection.let(IResolvable::unwrap))
     }
 
-    public override fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty) {
+    override fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty) {
       cdkBuilder.backupSelection(backupSelection.let(BackupSelectionResourceTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f95bef2eeb59814b6a3c419d1cdcd6d56ec8116ab4586441942419bbd4e9612b")
-    public override
+    override
         fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty.Builder.() -> Unit):
         Unit = backupSelection(BackupSelectionResourceTypeProperty(backupSelection))
 
@@ -120,11 +116,9 @@ public open class CfnBackupSelection internal constructor(
     public fun conditionValue(): String? = unwrap(this).getConditionValue()
 
     public interface Builder {
-      public fun conditionKey(conditionKey: String) {
-      }
+      public fun conditionKey(conditionKey: String)
 
-      public fun conditionValue(conditionValue: String) {
-      }
+      public fun conditionValue(conditionValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -133,11 +127,11 @@ public open class CfnBackupSelection internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty.builder()
 
-      public override fun conditionKey(conditionKey: String) {
+      override fun conditionKey(conditionKey: String) {
         cdkBuilder.conditionKey(conditionKey)
       }
 
-      public override fun conditionValue(conditionValue: String) {
+      override fun conditionValue(conditionValue: String) {
         cdkBuilder.conditionValue(conditionValue)
       }
 
@@ -150,9 +144,9 @@ public open class CfnBackupSelection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionParameterProperty,
     ) : ConditionParameterProperty {
-      public override fun conditionKey(): String? = unwrap(this).getConditionKey()
+      override fun conditionKey(): String? = unwrap(this).getConditionKey()
 
-      public override fun conditionValue(): String? = unwrap(this).getConditionValue()
+      override fun conditionValue(): String? = unwrap(this).getConditionValue()
     }
 
     public companion object {
@@ -189,26 +183,19 @@ public open class CfnBackupSelection internal constructor(
     public fun selectionName(): String
 
     public interface Builder {
-      public fun conditions(conditions: Any) {
-      }
+      public fun conditions(conditions: Any)
 
-      public fun iamRoleArn(iamRoleArn: String) {
-      }
+      public fun iamRoleArn(iamRoleArn: String)
 
-      public fun listOfTags(listOfTags: IResolvable) {
-      }
+      public fun listOfTags(listOfTags: IResolvable)
 
-      public fun listOfTags(listOfTags: List<Any>) {
-      }
+      public fun listOfTags(listOfTags: List<Any>)
 
-      public fun notResources(notResources: List<String>) {
-      }
+      public fun notResources(notResources: List<String>)
 
-      public fun resources(resources: List<String>) {
-      }
+      public fun resources(resources: List<String>)
 
-      public fun selectionName(selectionName: String) {
-      }
+      public fun selectionName(selectionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -217,31 +204,31 @@ public open class CfnBackupSelection internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty.builder()
 
-      public override fun conditions(conditions: Any) {
+      override fun conditions(conditions: Any) {
         cdkBuilder.conditions(conditions)
       }
 
-      public override fun iamRoleArn(iamRoleArn: String) {
+      override fun iamRoleArn(iamRoleArn: String) {
         cdkBuilder.iamRoleArn(iamRoleArn)
       }
 
-      public override fun listOfTags(listOfTags: IResolvable) {
+      override fun listOfTags(listOfTags: IResolvable) {
         cdkBuilder.listOfTags(listOfTags.let(IResolvable::unwrap))
       }
 
-      public override fun listOfTags(listOfTags: List<Any>) {
+      override fun listOfTags(listOfTags: List<Any>) {
         cdkBuilder.listOfTags(listOfTags)
       }
 
-      public override fun notResources(notResources: List<String>) {
+      override fun notResources(notResources: List<String>) {
         cdkBuilder.notResources(notResources)
       }
 
-      public override fun resources(resources: List<String>) {
+      override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
 
-      public override fun selectionName(selectionName: String) {
+      override fun selectionName(selectionName: String) {
         cdkBuilder.selectionName(selectionName)
       }
 
@@ -254,18 +241,17 @@ public open class CfnBackupSelection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupSelection.BackupSelectionResourceTypeProperty,
     ) : BackupSelectionResourceTypeProperty {
-      public override fun conditions(): Any? = unwrap(this).getConditions()
+      override fun conditions(): Any? = unwrap(this).getConditions()
 
-      public override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
 
-      public override fun listOfTags(): Any? = unwrap(this).getListOfTags()
+      override fun listOfTags(): Any? = unwrap(this).getListOfTags()
 
-      public override fun notResources(): List<String> = unwrap(this).getNotResources() ?:
-          emptyList()
+      override fun notResources(): List<String> = unwrap(this).getNotResources() ?: emptyList()
 
-      public override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+      override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
-      public override fun selectionName(): String = unwrap(this).getSelectionName()
+      override fun selectionName(): String = unwrap(this).getSelectionName()
     }
 
     public companion object {
@@ -297,14 +283,11 @@ public open class CfnBackupSelection internal constructor(
     public fun conditionValue(): String
 
     public interface Builder {
-      public fun conditionKey(conditionKey: String) {
-      }
+      public fun conditionKey(conditionKey: String)
 
-      public fun conditionType(conditionType: String) {
-      }
+      public fun conditionType(conditionType: String)
 
-      public fun conditionValue(conditionValue: String) {
-      }
+      public fun conditionValue(conditionValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -313,15 +296,15 @@ public open class CfnBackupSelection internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty.builder()
 
-      public override fun conditionKey(conditionKey: String) {
+      override fun conditionKey(conditionKey: String) {
         cdkBuilder.conditionKey(conditionKey)
       }
 
-      public override fun conditionType(conditionType: String) {
+      override fun conditionType(conditionType: String) {
         cdkBuilder.conditionType(conditionType)
       }
 
-      public override fun conditionValue(conditionValue: String) {
+      override fun conditionValue(conditionValue: String) {
         cdkBuilder.conditionValue(conditionValue)
       }
 
@@ -334,11 +317,11 @@ public open class CfnBackupSelection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionResourceTypeProperty,
     ) : ConditionResourceTypeProperty {
-      public override fun conditionKey(): String = unwrap(this).getConditionKey()
+      override fun conditionKey(): String = unwrap(this).getConditionKey()
 
-      public override fun conditionType(): String = unwrap(this).getConditionType()
+      override fun conditionType(): String = unwrap(this).getConditionType()
 
-      public override fun conditionValue(): String = unwrap(this).getConditionValue()
+      override fun conditionValue(): String = unwrap(this).getConditionValue()
     }
 
     public companion object {
@@ -371,29 +354,21 @@ public open class CfnBackupSelection internal constructor(
     public fun stringNotLike(): Any? = unwrap(this).getStringNotLike()
 
     public interface Builder {
-      public fun stringEquals(stringEquals: IResolvable) {
-      }
+      public fun stringEquals(stringEquals: IResolvable)
 
-      public fun stringEquals(stringEquals: List<Any>) {
-      }
+      public fun stringEquals(stringEquals: List<Any>)
 
-      public fun stringLike(stringLike: IResolvable) {
-      }
+      public fun stringLike(stringLike: IResolvable)
 
-      public fun stringLike(stringLike: List<Any>) {
-      }
+      public fun stringLike(stringLike: List<Any>)
 
-      public fun stringNotEquals(stringNotEquals: IResolvable) {
-      }
+      public fun stringNotEquals(stringNotEquals: IResolvable)
 
-      public fun stringNotEquals(stringNotEquals: List<Any>) {
-      }
+      public fun stringNotEquals(stringNotEquals: List<Any>)
 
-      public fun stringNotLike(stringNotLike: IResolvable) {
-      }
+      public fun stringNotLike(stringNotLike: IResolvable)
 
-      public fun stringNotLike(stringNotLike: List<Any>) {
-      }
+      public fun stringNotLike(stringNotLike: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -401,35 +376,35 @@ public open class CfnBackupSelection internal constructor(
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty.Builder =
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty.builder()
 
-      public override fun stringEquals(stringEquals: IResolvable) {
+      override fun stringEquals(stringEquals: IResolvable) {
         cdkBuilder.stringEquals(stringEquals.let(IResolvable::unwrap))
       }
 
-      public override fun stringEquals(stringEquals: List<Any>) {
+      override fun stringEquals(stringEquals: List<Any>) {
         cdkBuilder.stringEquals(stringEquals)
       }
 
-      public override fun stringLike(stringLike: IResolvable) {
+      override fun stringLike(stringLike: IResolvable) {
         cdkBuilder.stringLike(stringLike.let(IResolvable::unwrap))
       }
 
-      public override fun stringLike(stringLike: List<Any>) {
+      override fun stringLike(stringLike: List<Any>) {
         cdkBuilder.stringLike(stringLike)
       }
 
-      public override fun stringNotEquals(stringNotEquals: IResolvable) {
+      override fun stringNotEquals(stringNotEquals: IResolvable) {
         cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable::unwrap))
       }
 
-      public override fun stringNotEquals(stringNotEquals: List<Any>) {
+      override fun stringNotEquals(stringNotEquals: List<Any>) {
         cdkBuilder.stringNotEquals(stringNotEquals)
       }
 
-      public override fun stringNotLike(stringNotLike: IResolvable) {
+      override fun stringNotLike(stringNotLike: IResolvable) {
         cdkBuilder.stringNotLike(stringNotLike.let(IResolvable::unwrap))
       }
 
-      public override fun stringNotLike(stringNotLike: List<Any>) {
+      override fun stringNotLike(stringNotLike: List<Any>) {
         cdkBuilder.stringNotLike(stringNotLike)
       }
 
@@ -442,13 +417,13 @@ public open class CfnBackupSelection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty,
     ) : ConditionsProperty {
-      public override fun stringEquals(): Any? = unwrap(this).getStringEquals()
+      override fun stringEquals(): Any? = unwrap(this).getStringEquals()
 
-      public override fun stringLike(): Any? = unwrap(this).getStringLike()
+      override fun stringLike(): Any? = unwrap(this).getStringLike()
 
-      public override fun stringNotEquals(): Any? = unwrap(this).getStringNotEquals()
+      override fun stringNotEquals(): Any? = unwrap(this).getStringNotEquals()
 
-      public override fun stringNotLike(): Any? = unwrap(this).getStringNotLike()
+      override fun stringNotLike(): Any? = unwrap(this).getStringNotLike()
     }
 
     public companion object {

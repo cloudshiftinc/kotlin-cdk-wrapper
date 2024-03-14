@@ -231,116 +231,82 @@ public open class CfnBroker internal constructor(
   }
 
   public interface Builder {
-    public fun authenticationStrategy(authenticationStrategy: String) {
-    }
+    public fun authenticationStrategy(authenticationStrategy: String)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun brokerName(brokerName: String) {
-    }
+    public fun brokerName(brokerName: String)
 
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: ConfigurationIdProperty) {
-    }
+    public fun configuration(configuration: ConfigurationIdProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9934c043a276b6709f5df61ad8956b4a997d673a5084d85433779600a5e4360")
-    public fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit)
 
-    public fun dataReplicationMode(dataReplicationMode: String) {
-    }
+    public fun dataReplicationMode(dataReplicationMode: String)
 
-    public fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String) {
-    }
+    public fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String)
 
-    public fun deploymentMode(deploymentMode: String) {
-    }
+    public fun deploymentMode(deploymentMode: String)
 
-    public fun encryptionOptions(encryptionOptions: IResolvable) {
-    }
+    public fun encryptionOptions(encryptionOptions: IResolvable)
 
-    public fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty) {
-    }
+    public fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27fe168ca245b68292bfdf48ec00a367af07255b6f406ed3296fa43c1a3547da")
-    public fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty.Builder.() -> Unit)
 
-    public fun engineType(engineType: String) {
-    }
+    public fun engineType(engineType: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun hostInstanceType(hostInstanceType: String) {
-    }
+    public fun hostInstanceType(hostInstanceType: String)
 
-    public fun ldapServerMetadata(ldapServerMetadata: IResolvable) {
-    }
+    public fun ldapServerMetadata(ldapServerMetadata: IResolvable)
 
-    public fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty) {
-    }
+    public fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d49dc3540c98e0160a80f08fb28165514a9e96f98b851cadb657f7d784c7ecfd")
-    public
-        fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty.Builder.() -> Unit) {
-    }
+    public fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty.Builder.() -> Unit)
 
-    public fun logs(logs: IResolvable) {
-    }
+    public fun logs(logs: IResolvable)
 
-    public fun logs(logs: LogListProperty) {
-    }
+    public fun logs(logs: LogListProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c46ecfc3b2482edc22ff6cd2af903a75fe8815c2089bb6ed4e59dd3de838727")
-    public fun logs(logs: LogListProperty.Builder.() -> Unit) {
-    }
+    public fun logs(logs: LogListProperty.Builder.() -> Unit)
 
-    public fun maintenanceWindowStartTime(maintenanceWindowStartTime: IResolvable) {
-    }
+    public fun maintenanceWindowStartTime(maintenanceWindowStartTime: IResolvable)
 
-    public fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty) {
-    }
+    public fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9d9e364ba9d656fb70437fef551cc2a021ac7724c333fae215ce78db727d7215")
     public
-        fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty.Builder.() -> Unit) {
-    }
+        fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty.Builder.() -> Unit)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun storageType(storageType: String) {
-    }
+    public fun storageType(storageType: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<TagsEntryProperty>) {
-    }
+    public fun tags(tags: List<TagsEntryProperty>)
 
-    public fun users(users: IResolvable) {
-    }
+    public fun users(users: IResolvable)
 
-    public fun users(users: List<Any>) {
-    }
+    public fun users(users: List<Any>)
   }
 
   private class BuilderImpl(
@@ -350,144 +316,141 @@ public open class CfnBroker internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amazonmq.CfnBroker.Builder =
         software.amazon.awscdk.services.amazonmq.CfnBroker.Builder.create(scope, id)
 
-    public override fun authenticationStrategy(authenticationStrategy: String) {
+    override fun authenticationStrategy(authenticationStrategy: String) {
       cdkBuilder.authenticationStrategy(authenticationStrategy)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun brokerName(brokerName: String) {
+    override fun brokerName(brokerName: String) {
       cdkBuilder.brokerName(brokerName)
     }
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: ConfigurationIdProperty) {
+    override fun configuration(configuration: ConfigurationIdProperty) {
       cdkBuilder.configuration(configuration.let(ConfigurationIdProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9934c043a276b6709f5df61ad8956b4a997d673a5084d85433779600a5e4360")
-    public override fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit):
-        Unit = configuration(ConfigurationIdProperty(configuration))
+    override fun configuration(configuration: ConfigurationIdProperty.Builder.() -> Unit): Unit =
+        configuration(ConfigurationIdProperty(configuration))
 
-    public override fun dataReplicationMode(dataReplicationMode: String) {
+    override fun dataReplicationMode(dataReplicationMode: String) {
       cdkBuilder.dataReplicationMode(dataReplicationMode)
     }
 
-    public override fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String) {
+    override fun dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn: String) {
       cdkBuilder.dataReplicationPrimaryBrokerArn(dataReplicationPrimaryBrokerArn)
     }
 
-    public override fun deploymentMode(deploymentMode: String) {
+    override fun deploymentMode(deploymentMode: String) {
       cdkBuilder.deploymentMode(deploymentMode)
     }
 
-    public override fun encryptionOptions(encryptionOptions: IResolvable) {
+    override fun encryptionOptions(encryptionOptions: IResolvable) {
       cdkBuilder.encryptionOptions(encryptionOptions.let(IResolvable::unwrap))
     }
 
-    public override fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty) {
+    override fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty) {
       cdkBuilder.encryptionOptions(encryptionOptions.let(EncryptionOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27fe168ca245b68292bfdf48ec00a367af07255b6f406ed3296fa43c1a3547da")
-    public override
-        fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty.Builder.() -> Unit): Unit
-        = encryptionOptions(EncryptionOptionsProperty(encryptionOptions))
+    override fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty.Builder.() -> Unit):
+        Unit = encryptionOptions(EncryptionOptionsProperty(encryptionOptions))
 
-    public override fun engineType(engineType: String) {
+    override fun engineType(engineType: String) {
       cdkBuilder.engineType(engineType)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun hostInstanceType(hostInstanceType: String) {
+    override fun hostInstanceType(hostInstanceType: String) {
       cdkBuilder.hostInstanceType(hostInstanceType)
     }
 
-    public override fun ldapServerMetadata(ldapServerMetadata: IResolvable) {
+    override fun ldapServerMetadata(ldapServerMetadata: IResolvable) {
       cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(IResolvable::unwrap))
     }
 
-    public override fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty) {
+    override fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty) {
       cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(LdapServerMetadataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d49dc3540c98e0160a80f08fb28165514a9e96f98b851cadb657f7d784c7ecfd")
-    public override
+    override
         fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty.Builder.() -> Unit):
         Unit = ldapServerMetadata(LdapServerMetadataProperty(ldapServerMetadata))
 
-    public override fun logs(logs: IResolvable) {
+    override fun logs(logs: IResolvable) {
       cdkBuilder.logs(logs.let(IResolvable::unwrap))
     }
 
-    public override fun logs(logs: LogListProperty) {
+    override fun logs(logs: LogListProperty) {
       cdkBuilder.logs(logs.let(LogListProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c46ecfc3b2482edc22ff6cd2af903a75fe8815c2089bb6ed4e59dd3de838727")
-    public override fun logs(logs: LogListProperty.Builder.() -> Unit): Unit =
-        logs(LogListProperty(logs))
+    override fun logs(logs: LogListProperty.Builder.() -> Unit): Unit = logs(LogListProperty(logs))
 
-    public override fun maintenanceWindowStartTime(maintenanceWindowStartTime: IResolvable) {
+    override fun maintenanceWindowStartTime(maintenanceWindowStartTime: IResolvable) {
       cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(IResolvable::unwrap))
     }
 
-    public override
-        fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty) {
+    override fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty) {
       cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(MaintenanceWindowProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9d9e364ba9d656fb70437fef551cc2a021ac7724c333fae215ce78db727d7215")
-    public override
+    override
         fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty.Builder.() -> Unit):
         Unit = maintenanceWindowStartTime(MaintenanceWindowProperty(maintenanceWindowStartTime))
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun storageType(storageType: String) {
+    override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<TagsEntryProperty>) {
+    override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
-    public override fun users(users: IResolvable) {
+    override fun users(users: IResolvable) {
       cdkBuilder.users(users.let(IResolvable::unwrap))
     }
 
-    public override fun users(users: List<Any>) {
+    override fun users(users: List<Any>) {
       cdkBuilder.users(users)
     }
 
@@ -539,44 +502,31 @@ public open class CfnBroker internal constructor(
     public fun userSearchSubtree(): Any? = unwrap(this).getUserSearchSubtree()
 
     public interface Builder {
-      public fun hosts(hosts: List<String>) {
-      }
+      public fun hosts(hosts: List<String>)
 
-      public fun roleBase(roleBase: String) {
-      }
+      public fun roleBase(roleBase: String)
 
-      public fun roleName(roleName: String) {
-      }
+      public fun roleName(roleName: String)
 
-      public fun roleSearchMatching(roleSearchMatching: String) {
-      }
+      public fun roleSearchMatching(roleSearchMatching: String)
 
-      public fun roleSearchSubtree(roleSearchSubtree: Boolean) {
-      }
+      public fun roleSearchSubtree(roleSearchSubtree: Boolean)
 
-      public fun roleSearchSubtree(roleSearchSubtree: IResolvable) {
-      }
+      public fun roleSearchSubtree(roleSearchSubtree: IResolvable)
 
-      public fun serviceAccountPassword(serviceAccountPassword: String) {
-      }
+      public fun serviceAccountPassword(serviceAccountPassword: String)
 
-      public fun serviceAccountUsername(serviceAccountUsername: String) {
-      }
+      public fun serviceAccountUsername(serviceAccountUsername: String)
 
-      public fun userBase(userBase: String) {
-      }
+      public fun userBase(userBase: String)
 
-      public fun userRoleName(userRoleName: String) {
-      }
+      public fun userRoleName(userRoleName: String)
 
-      public fun userSearchMatching(userSearchMatching: String) {
-      }
+      public fun userSearchMatching(userSearchMatching: String)
 
-      public fun userSearchSubtree(userSearchSubtree: Boolean) {
-      }
+      public fun userSearchSubtree(userSearchSubtree: Boolean)
 
-      public fun userSearchSubtree(userSearchSubtree: IResolvable) {
-      }
+      public fun userSearchSubtree(userSearchSubtree: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -584,55 +534,55 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty.builder()
 
-      public override fun hosts(hosts: List<String>) {
+      override fun hosts(hosts: List<String>) {
         cdkBuilder.hosts(hosts)
       }
 
-      public override fun roleBase(roleBase: String) {
+      override fun roleBase(roleBase: String) {
         cdkBuilder.roleBase(roleBase)
       }
 
-      public override fun roleName(roleName: String) {
+      override fun roleName(roleName: String) {
         cdkBuilder.roleName(roleName)
       }
 
-      public override fun roleSearchMatching(roleSearchMatching: String) {
+      override fun roleSearchMatching(roleSearchMatching: String) {
         cdkBuilder.roleSearchMatching(roleSearchMatching)
       }
 
-      public override fun roleSearchSubtree(roleSearchSubtree: Boolean) {
+      override fun roleSearchSubtree(roleSearchSubtree: Boolean) {
         cdkBuilder.roleSearchSubtree(roleSearchSubtree)
       }
 
-      public override fun roleSearchSubtree(roleSearchSubtree: IResolvable) {
+      override fun roleSearchSubtree(roleSearchSubtree: IResolvable) {
         cdkBuilder.roleSearchSubtree(roleSearchSubtree.let(IResolvable::unwrap))
       }
 
-      public override fun serviceAccountPassword(serviceAccountPassword: String) {
+      override fun serviceAccountPassword(serviceAccountPassword: String) {
         cdkBuilder.serviceAccountPassword(serviceAccountPassword)
       }
 
-      public override fun serviceAccountUsername(serviceAccountUsername: String) {
+      override fun serviceAccountUsername(serviceAccountUsername: String) {
         cdkBuilder.serviceAccountUsername(serviceAccountUsername)
       }
 
-      public override fun userBase(userBase: String) {
+      override fun userBase(userBase: String) {
         cdkBuilder.userBase(userBase)
       }
 
-      public override fun userRoleName(userRoleName: String) {
+      override fun userRoleName(userRoleName: String) {
         cdkBuilder.userRoleName(userRoleName)
       }
 
-      public override fun userSearchMatching(userSearchMatching: String) {
+      override fun userSearchMatching(userSearchMatching: String) {
         cdkBuilder.userSearchMatching(userSearchMatching)
       }
 
-      public override fun userSearchSubtree(userSearchSubtree: Boolean) {
+      override fun userSearchSubtree(userSearchSubtree: Boolean) {
         cdkBuilder.userSearchSubtree(userSearchSubtree)
       }
 
-      public override fun userSearchSubtree(userSearchSubtree: IResolvable) {
+      override fun userSearchSubtree(userSearchSubtree: IResolvable) {
         cdkBuilder.userSearchSubtree(userSearchSubtree.let(IResolvable::unwrap))
       }
 
@@ -645,29 +595,27 @@ public open class CfnBroker internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty,
     ) : LdapServerMetadataProperty {
-      public override fun hosts(): List<String> = unwrap(this).getHosts() ?: emptyList()
+      override fun hosts(): List<String> = unwrap(this).getHosts() ?: emptyList()
 
-      public override fun roleBase(): String = unwrap(this).getRoleBase()
+      override fun roleBase(): String = unwrap(this).getRoleBase()
 
-      public override fun roleName(): String? = unwrap(this).getRoleName()
+      override fun roleName(): String? = unwrap(this).getRoleName()
 
-      public override fun roleSearchMatching(): String = unwrap(this).getRoleSearchMatching()
+      override fun roleSearchMatching(): String = unwrap(this).getRoleSearchMatching()
 
-      public override fun roleSearchSubtree(): Any? = unwrap(this).getRoleSearchSubtree()
+      override fun roleSearchSubtree(): Any? = unwrap(this).getRoleSearchSubtree()
 
-      public override fun serviceAccountPassword(): String =
-          unwrap(this).getServiceAccountPassword()
+      override fun serviceAccountPassword(): String = unwrap(this).getServiceAccountPassword()
 
-      public override fun serviceAccountUsername(): String =
-          unwrap(this).getServiceAccountUsername()
+      override fun serviceAccountUsername(): String = unwrap(this).getServiceAccountUsername()
 
-      public override fun userBase(): String = unwrap(this).getUserBase()
+      override fun userBase(): String = unwrap(this).getUserBase()
 
-      public override fun userRoleName(): String? = unwrap(this).getUserRoleName()
+      override fun userRoleName(): String? = unwrap(this).getUserRoleName()
 
-      public override fun userSearchMatching(): String = unwrap(this).getUserSearchMatching()
+      override fun userSearchMatching(): String = unwrap(this).getUserSearchMatching()
 
-      public override fun userSearchSubtree(): Any? = unwrap(this).getUserSearchSubtree()
+      override fun userSearchSubtree(): Any? = unwrap(this).getUserSearchSubtree()
     }
 
     public companion object {
@@ -696,11 +644,9 @@ public open class CfnBroker internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -708,11 +654,11 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -723,9 +669,9 @@ public open class CfnBroker internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty,
     ) : TagsEntryProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -760,26 +706,19 @@ public open class CfnBroker internal constructor(
     public fun username(): String
 
     public interface Builder {
-      public fun consoleAccess(consoleAccess: Boolean) {
-      }
+      public fun consoleAccess(consoleAccess: Boolean)
 
-      public fun consoleAccess(consoleAccess: IResolvable) {
-      }
+      public fun consoleAccess(consoleAccess: IResolvable)
 
-      public fun groups(groups: List<String>) {
-      }
+      public fun groups(groups: List<String>)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun replicationUser(replicationUser: Boolean) {
-      }
+      public fun replicationUser(replicationUser: Boolean)
 
-      public fun replicationUser(replicationUser: IResolvable) {
-      }
+      public fun replicationUser(replicationUser: IResolvable)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -787,31 +726,31 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty.builder()
 
-      public override fun consoleAccess(consoleAccess: Boolean) {
+      override fun consoleAccess(consoleAccess: Boolean) {
         cdkBuilder.consoleAccess(consoleAccess)
       }
 
-      public override fun consoleAccess(consoleAccess: IResolvable) {
+      override fun consoleAccess(consoleAccess: IResolvable) {
         cdkBuilder.consoleAccess(consoleAccess.let(IResolvable::unwrap))
       }
 
-      public override fun groups(groups: List<String>) {
+      override fun groups(groups: List<String>) {
         cdkBuilder.groups(groups)
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun replicationUser(replicationUser: Boolean) {
+      override fun replicationUser(replicationUser: Boolean) {
         cdkBuilder.replicationUser(replicationUser)
       }
 
-      public override fun replicationUser(replicationUser: IResolvable) {
+      override fun replicationUser(replicationUser: IResolvable) {
         cdkBuilder.replicationUser(replicationUser.let(IResolvable::unwrap))
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -822,15 +761,15 @@ public open class CfnBroker internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty,
     ) : UserProperty {
-      public override fun consoleAccess(): Any? = unwrap(this).getConsoleAccess()
+      override fun consoleAccess(): Any? = unwrap(this).getConsoleAccess()
 
-      public override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
+      override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
 
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun replicationUser(): Any? = unwrap(this).getReplicationUser()
+      override fun replicationUser(): Any? = unwrap(this).getReplicationUser()
 
-      public override fun username(): String = unwrap(this).getUsername()
+      override fun username(): String = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -858,14 +797,11 @@ public open class CfnBroker internal constructor(
     public fun useAwsOwnedKey(): Any
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun useAwsOwnedKey(useAwsOwnedKey: Boolean) {
-      }
+      public fun useAwsOwnedKey(useAwsOwnedKey: Boolean)
 
-      public fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
-      }
+      public fun useAwsOwnedKey(useAwsOwnedKey: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -873,15 +809,15 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun useAwsOwnedKey(useAwsOwnedKey: Boolean) {
+      override fun useAwsOwnedKey(useAwsOwnedKey: Boolean) {
         cdkBuilder.useAwsOwnedKey(useAwsOwnedKey)
       }
 
-      public override fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
+      override fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
         cdkBuilder.useAwsOwnedKey(useAwsOwnedKey.let(IResolvable::unwrap))
       }
 
@@ -894,9 +830,9 @@ public open class CfnBroker internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnBroker.EncryptionOptionsProperty,
     ) : EncryptionOptionsProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun useAwsOwnedKey(): Any = unwrap(this).getUseAwsOwnedKey()
+      override fun useAwsOwnedKey(): Any = unwrap(this).getUseAwsOwnedKey()
     }
 
     public companion object {
@@ -925,17 +861,13 @@ public open class CfnBroker internal constructor(
     public fun general(): Any? = unwrap(this).getGeneral()
 
     public interface Builder {
-      public fun audit(audit: Boolean) {
-      }
+      public fun audit(audit: Boolean)
 
-      public fun audit(audit: IResolvable) {
-      }
+      public fun audit(audit: IResolvable)
 
-      public fun general(general: Boolean) {
-      }
+      public fun general(general: Boolean)
 
-      public fun general(general: IResolvable) {
-      }
+      public fun general(general: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -943,19 +875,19 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty.builder()
 
-      public override fun audit(audit: Boolean) {
+      override fun audit(audit: Boolean) {
         cdkBuilder.audit(audit)
       }
 
-      public override fun audit(audit: IResolvable) {
+      override fun audit(audit: IResolvable) {
         cdkBuilder.audit(audit.let(IResolvable::unwrap))
       }
 
-      public override fun general(general: Boolean) {
+      override fun general(general: Boolean) {
         cdkBuilder.general(general)
       }
 
-      public override fun general(general: IResolvable) {
+      override fun general(general: IResolvable) {
         cdkBuilder.general(general.let(IResolvable::unwrap))
       }
 
@@ -966,9 +898,9 @@ public open class CfnBroker internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty,
     ) : LogListProperty {
-      public override fun audit(): Any? = unwrap(this).getAudit()
+      override fun audit(): Any? = unwrap(this).getAudit()
 
-      public override fun general(): Any? = unwrap(this).getGeneral()
+      override fun general(): Any? = unwrap(this).getGeneral()
     }
 
     public companion object {
@@ -999,14 +931,11 @@ public open class CfnBroker internal constructor(
     public fun timeZone(): String
 
     public interface Builder {
-      public fun dayOfWeek(dayOfWeek: String) {
-      }
+      public fun dayOfWeek(dayOfWeek: String)
 
-      public fun timeOfDay(timeOfDay: String) {
-      }
+      public fun timeOfDay(timeOfDay: String)
 
-      public fun timeZone(timeZone: String) {
-      }
+      public fun timeZone(timeZone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1014,15 +943,15 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty.builder()
 
-      public override fun dayOfWeek(dayOfWeek: String) {
+      override fun dayOfWeek(dayOfWeek: String) {
         cdkBuilder.dayOfWeek(dayOfWeek)
       }
 
-      public override fun timeOfDay(timeOfDay: String) {
+      override fun timeOfDay(timeOfDay: String) {
         cdkBuilder.timeOfDay(timeOfDay)
       }
 
-      public override fun timeZone(timeZone: String) {
+      override fun timeZone(timeZone: String) {
         cdkBuilder.timeZone(timeZone)
       }
 
@@ -1035,11 +964,11 @@ public open class CfnBroker internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty,
     ) : MaintenanceWindowProperty {
-      public override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
+      override fun dayOfWeek(): String = unwrap(this).getDayOfWeek()
 
-      public override fun timeOfDay(): String = unwrap(this).getTimeOfDay()
+      override fun timeOfDay(): String = unwrap(this).getTimeOfDay()
 
-      public override fun timeZone(): String = unwrap(this).getTimeZone()
+      override fun timeZone(): String = unwrap(this).getTimeZone()
     }
 
     public companion object {
@@ -1068,11 +997,9 @@ public open class CfnBroker internal constructor(
     public fun revision(): Number
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun revision(revision: Number) {
-      }
+      public fun revision(revision: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1080,11 +1007,11 @@ public open class CfnBroker internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun revision(revision: Number) {
+      override fun revision(revision: Number) {
         cdkBuilder.revision(revision)
       }
 
@@ -1096,9 +1023,9 @@ public open class CfnBroker internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty,
     ) : ConfigurationIdProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun revision(): Number = unwrap(this).getRevision()
+      override fun revision(): Number = unwrap(this).getRevision()
     }
 
     public companion object {

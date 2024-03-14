@@ -43,17 +43,13 @@ public open class CfnResourcePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun blockPublicPolicy(blockPublicPolicy: Boolean) {
-    }
+    public fun blockPublicPolicy(blockPublicPolicy: Boolean)
 
-    public fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-    }
+    public fun blockPublicPolicy(blockPublicPolicy: IResolvable)
 
-    public fun resourcePolicy(resourcePolicy: Any) {
-    }
+    public fun resourcePolicy(resourcePolicy: Any)
 
-    public fun secretId(secretId: String) {
-    }
+    public fun secretId(secretId: String)
   }
 
   private class BuilderImpl(
@@ -63,19 +59,19 @@ public open class CfnResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.CfnResourcePolicy.Builder
         = software.amazon.awscdk.services.secretsmanager.CfnResourcePolicy.Builder.create(scope, id)
 
-    public override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
+    override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
       cdkBuilder.blockPublicPolicy(blockPublicPolicy)
     }
 
-    public override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
+    override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
       cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun resourcePolicy(resourcePolicy: Any) {
+    override fun resourcePolicy(resourcePolicy: Any) {
       cdkBuilder.resourcePolicy(resourcePolicy)
     }
 
-    public override fun secretId(secretId: String) {
+    override fun secretId(secretId: String) {
       cdkBuilder.secretId(secretId)
     }
 

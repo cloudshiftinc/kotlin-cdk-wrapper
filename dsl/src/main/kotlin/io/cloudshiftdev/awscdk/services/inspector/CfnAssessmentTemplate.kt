@@ -57,23 +57,17 @@ public open class CfnAssessmentTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun assessmentTargetArn(assessmentTargetArn: String) {
-    }
+    public fun assessmentTargetArn(assessmentTargetArn: String)
 
-    public fun assessmentTemplateName(assessmentTemplateName: String) {
-    }
+    public fun assessmentTemplateName(assessmentTemplateName: String)
 
-    public fun durationInSeconds(durationInSeconds: Number) {
-    }
+    public fun durationInSeconds(durationInSeconds: Number)
 
-    public fun rulesPackageArns(rulesPackageArns: List<String>) {
-    }
+    public fun rulesPackageArns(rulesPackageArns: List<String>)
 
-    public fun userAttributesForFindings(userAttributesForFindings: IResolvable) {
-    }
+    public fun userAttributesForFindings(userAttributesForFindings: IResolvable)
 
-    public fun userAttributesForFindings(userAttributesForFindings: List<Any>) {
-    }
+    public fun userAttributesForFindings(userAttributesForFindings: List<Any>)
   }
 
   private class BuilderImpl(
@@ -83,27 +77,27 @@ public open class CfnAssessmentTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.inspector.CfnAssessmentTemplate.Builder
         = software.amazon.awscdk.services.inspector.CfnAssessmentTemplate.Builder.create(scope, id)
 
-    public override fun assessmentTargetArn(assessmentTargetArn: String) {
+    override fun assessmentTargetArn(assessmentTargetArn: String) {
       cdkBuilder.assessmentTargetArn(assessmentTargetArn)
     }
 
-    public override fun assessmentTemplateName(assessmentTemplateName: String) {
+    override fun assessmentTemplateName(assessmentTemplateName: String) {
       cdkBuilder.assessmentTemplateName(assessmentTemplateName)
     }
 
-    public override fun durationInSeconds(durationInSeconds: Number) {
+    override fun durationInSeconds(durationInSeconds: Number) {
       cdkBuilder.durationInSeconds(durationInSeconds)
     }
 
-    public override fun rulesPackageArns(rulesPackageArns: List<String>) {
+    override fun rulesPackageArns(rulesPackageArns: List<String>) {
       cdkBuilder.rulesPackageArns(rulesPackageArns)
     }
 
-    public override fun userAttributesForFindings(userAttributesForFindings: IResolvable) {
+    override fun userAttributesForFindings(userAttributesForFindings: IResolvable) {
       cdkBuilder.userAttributesForFindings(userAttributesForFindings.let(IResolvable::unwrap))
     }
 
-    public override fun userAttributesForFindings(userAttributesForFindings: List<Any>) {
+    override fun userAttributesForFindings(userAttributesForFindings: List<Any>) {
       cdkBuilder.userAttributesForFindings(userAttributesForFindings)
     }
 

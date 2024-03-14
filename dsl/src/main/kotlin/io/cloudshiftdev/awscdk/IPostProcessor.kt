@@ -8,8 +8,8 @@ public interface IPostProcessor {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IPostProcessor,
   ) : IPostProcessor {
-    public override fun postProcess(arg0: Any, arg1: IResolveContext): Any =
-        unwrap(this).postProcess(arg0, arg1.let(IResolveContext::unwrap))
+    override fun postProcess(arg0: Any, arg1: IResolveContext): Any = unwrap(this).postProcess(arg0,
+        arg1.let(IResolveContext::unwrap))
   }
 
   public companion object {

@@ -95,35 +95,25 @@ public open class CfnSubscriptionTarget internal constructor(
   }
 
   public interface Builder {
-    public fun applicableAssetTypes(applicableAssetTypes: List<String>) {
-    }
+    public fun applicableAssetTypes(applicableAssetTypes: List<String>)
 
-    public fun authorizedPrincipals(authorizedPrincipals: List<String>) {
-    }
+    public fun authorizedPrincipals(authorizedPrincipals: List<String>)
 
-    public fun domainIdentifier(domainIdentifier: String) {
-    }
+    public fun domainIdentifier(domainIdentifier: String)
 
-    public fun environmentIdentifier(environmentIdentifier: String) {
-    }
+    public fun environmentIdentifier(environmentIdentifier: String)
 
-    public fun manageAccessRole(manageAccessRole: String) {
-    }
+    public fun manageAccessRole(manageAccessRole: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun provider(provider: String) {
-    }
+    public fun provider(provider: String)
 
-    public fun subscriptionTargetConfig(subscriptionTargetConfig: IResolvable) {
-    }
+    public fun subscriptionTargetConfig(subscriptionTargetConfig: IResolvable)
 
-    public fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>) {
-    }
+    public fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -133,43 +123,43 @@ public open class CfnSubscriptionTarget internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.Builder =
         software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.Builder.create(scope, id)
 
-    public override fun applicableAssetTypes(applicableAssetTypes: List<String>) {
+    override fun applicableAssetTypes(applicableAssetTypes: List<String>) {
       cdkBuilder.applicableAssetTypes(applicableAssetTypes)
     }
 
-    public override fun authorizedPrincipals(authorizedPrincipals: List<String>) {
+    override fun authorizedPrincipals(authorizedPrincipals: List<String>) {
       cdkBuilder.authorizedPrincipals(authorizedPrincipals)
     }
 
-    public override fun domainIdentifier(domainIdentifier: String) {
+    override fun domainIdentifier(domainIdentifier: String) {
       cdkBuilder.domainIdentifier(domainIdentifier)
     }
 
-    public override fun environmentIdentifier(environmentIdentifier: String) {
+    override fun environmentIdentifier(environmentIdentifier: String) {
       cdkBuilder.environmentIdentifier(environmentIdentifier)
     }
 
-    public override fun manageAccessRole(manageAccessRole: String) {
+    override fun manageAccessRole(manageAccessRole: String) {
       cdkBuilder.manageAccessRole(manageAccessRole)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun provider(provider: String) {
+    override fun provider(provider: String) {
       cdkBuilder.provider(provider)
     }
 
-    public override fun subscriptionTargetConfig(subscriptionTargetConfig: IResolvable) {
+    override fun subscriptionTargetConfig(subscriptionTargetConfig: IResolvable) {
       cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.let(IResolvable::unwrap))
     }
 
-    public override fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>) {
+    override fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>) {
       cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -204,11 +194,9 @@ public open class CfnSubscriptionTarget internal constructor(
     public fun formName(): String
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
 
-      public fun formName(formName: String) {
-      }
+      public fun formName(formName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -217,11 +205,11 @@ public open class CfnSubscriptionTarget internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
-      public override fun formName(formName: String) {
+      override fun formName(formName: String) {
         cdkBuilder.formName(formName)
       }
 
@@ -234,9 +222,9 @@ public open class CfnSubscriptionTarget internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnSubscriptionTarget.SubscriptionTargetFormProperty,
     ) : SubscriptionTargetFormProperty {
-      public override fun content(): String = unwrap(this).getContent()
+      override fun content(): String = unwrap(this).getContent()
 
-      public override fun formName(): String = unwrap(this).getFormName()
+      override fun formName(): String = unwrap(this).getFormName()
     }
 
     public companion object {

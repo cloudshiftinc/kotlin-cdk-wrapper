@@ -67,29 +67,21 @@ public open class CfnScheduledAction internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingGroupName(autoScalingGroupName: String) {
-    }
+    public fun autoScalingGroupName(autoScalingGroupName: String)
 
-    public fun desiredCapacity(desiredCapacity: Number) {
-    }
+    public fun desiredCapacity(desiredCapacity: Number)
 
-    public fun endTime(endTime: String) {
-    }
+    public fun endTime(endTime: String)
 
-    public fun maxSize(maxSize: Number) {
-    }
+    public fun maxSize(maxSize: Number)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun recurrence(recurrence: String) {
-    }
+    public fun recurrence(recurrence: String)
 
-    public fun startTime(startTime: String) {
-    }
+    public fun startTime(startTime: String)
 
-    public fun timeZone(timeZone: String) {
-    }
+    public fun timeZone(timeZone: String)
   }
 
   private class BuilderImpl(
@@ -99,35 +91,35 @@ public open class CfnScheduledAction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.CfnScheduledAction.Builder =
         software.amazon.awscdk.services.autoscaling.CfnScheduledAction.Builder.create(scope, id)
 
-    public override fun autoScalingGroupName(autoScalingGroupName: String) {
+    override fun autoScalingGroupName(autoScalingGroupName: String) {
       cdkBuilder.autoScalingGroupName(autoScalingGroupName)
     }
 
-    public override fun desiredCapacity(desiredCapacity: Number) {
+    override fun desiredCapacity(desiredCapacity: Number) {
       cdkBuilder.desiredCapacity(desiredCapacity)
     }
 
-    public override fun endTime(endTime: String) {
+    override fun endTime(endTime: String) {
       cdkBuilder.endTime(endTime)
     }
 
-    public override fun maxSize(maxSize: Number) {
+    override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun recurrence(recurrence: String) {
+    override fun recurrence(recurrence: String) {
       cdkBuilder.recurrence(recurrence)
     }
 
-    public override fun startTime(startTime: String) {
+    override fun startTime(startTime: String) {
       cdkBuilder.startTime(startTime)
     }
 
-    public override fun timeZone(timeZone: String) {
+    override fun timeZone(timeZone: String) {
       cdkBuilder.timeZone(timeZone)
     }
 

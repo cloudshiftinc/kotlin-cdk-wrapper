@@ -68,25 +68,19 @@ public open class CfnAssistantAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun assistantId(assistantId: String) {
-    }
+    public fun assistantId(assistantId: String)
 
-    public fun association(association: IResolvable) {
-    }
+    public fun association(association: IResolvable)
 
-    public fun association(association: AssociationDataProperty) {
-    }
+    public fun association(association: AssociationDataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0dfc74a83d0b1068a26927ba9482deb1f2fc08e5a670593a0d2aa3219048d27c")
-    public fun association(association: AssociationDataProperty.Builder.() -> Unit) {
-    }
+    public fun association(association: AssociationDataProperty.Builder.() -> Unit)
 
-    public fun associationType(associationType: String) {
-    }
+    public fun associationType(associationType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -96,28 +90,28 @@ public open class CfnAssistantAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.Builder =
         software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.Builder.create(scope, id)
 
-    public override fun assistantId(assistantId: String) {
+    override fun assistantId(assistantId: String) {
       cdkBuilder.assistantId(assistantId)
     }
 
-    public override fun association(association: IResolvable) {
+    override fun association(association: IResolvable) {
       cdkBuilder.association(association.let(IResolvable::unwrap))
     }
 
-    public override fun association(association: AssociationDataProperty) {
+    override fun association(association: AssociationDataProperty) {
       cdkBuilder.association(association.let(AssociationDataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0dfc74a83d0b1068a26927ba9482deb1f2fc08e5a670593a0d2aa3219048d27c")
-    public override fun association(association: AssociationDataProperty.Builder.() -> Unit): Unit =
+    override fun association(association: AssociationDataProperty.Builder.() -> Unit): Unit =
         association(AssociationDataProperty(association))
 
-    public override fun associationType(associationType: String) {
+    override fun associationType(associationType: String) {
       cdkBuilder.associationType(associationType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -150,8 +144,7 @@ public open class CfnAssistantAssociation internal constructor(
     public fun knowledgeBaseId(): String
 
     public interface Builder {
-      public fun knowledgeBaseId(knowledgeBaseId: String) {
-      }
+      public fun knowledgeBaseId(knowledgeBaseId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -160,7 +153,7 @@ public open class CfnAssistantAssociation internal constructor(
           =
           software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty.builder()
 
-      public override fun knowledgeBaseId(knowledgeBaseId: String) {
+      override fun knowledgeBaseId(knowledgeBaseId: String) {
         cdkBuilder.knowledgeBaseId(knowledgeBaseId)
       }
 
@@ -173,7 +166,7 @@ public open class CfnAssistantAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wisdom.CfnAssistantAssociation.AssociationDataProperty,
     ) : AssociationDataProperty {
-      public override fun knowledgeBaseId(): String = unwrap(this).getKnowledgeBaseId()
+      override fun knowledgeBaseId(): String = unwrap(this).getKnowledgeBaseId()
     }
 
     public companion object {

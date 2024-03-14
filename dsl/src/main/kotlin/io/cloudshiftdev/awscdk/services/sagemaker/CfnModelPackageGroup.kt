@@ -56,17 +56,13 @@ public open class CfnModelPackageGroup internal constructor(
   }
 
   public interface Builder {
-    public fun modelPackageGroupDescription(modelPackageGroupDescription: String) {
-    }
+    public fun modelPackageGroupDescription(modelPackageGroupDescription: String)
 
-    public fun modelPackageGroupName(modelPackageGroupName: String) {
-    }
+    public fun modelPackageGroupName(modelPackageGroupName: String)
 
-    public fun modelPackageGroupPolicy(modelPackageGroupPolicy: Any) {
-    }
+    public fun modelPackageGroupPolicy(modelPackageGroupPolicy: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -76,19 +72,19 @@ public open class CfnModelPackageGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup.Builder =
         software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup.Builder.create(scope, id)
 
-    public override fun modelPackageGroupDescription(modelPackageGroupDescription: String) {
+    override fun modelPackageGroupDescription(modelPackageGroupDescription: String) {
       cdkBuilder.modelPackageGroupDescription(modelPackageGroupDescription)
     }
 
-    public override fun modelPackageGroupName(modelPackageGroupName: String) {
+    override fun modelPackageGroupName(modelPackageGroupName: String) {
       cdkBuilder.modelPackageGroupName(modelPackageGroupName)
     }
 
-    public override fun modelPackageGroupPolicy(modelPackageGroupPolicy: Any) {
+    override fun modelPackageGroupPolicy(modelPackageGroupPolicy: Any) {
       cdkBuilder.modelPackageGroupPolicy(modelPackageGroupPolicy)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

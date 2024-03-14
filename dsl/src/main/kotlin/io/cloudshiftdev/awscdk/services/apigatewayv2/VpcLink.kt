@@ -29,22 +29,17 @@ public open class VpcLink internal constructor(
   public override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
 
   public interface Builder {
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun subnets(subnets: SubnetSelection) {
-    }
+    public fun subnets(subnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e9a30b66ec339f577be96e7497ab4fa16491a572bfd3f02c33f8af0ec3021eb")
-    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcLinkName(vpcLinkName: String) {
-    }
+    public fun vpcLinkName(vpcLinkName: String)
   }
 
   private class BuilderImpl(
@@ -54,24 +49,24 @@ public open class VpcLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.VpcLink.Builder =
         software.amazon.awscdk.services.apigatewayv2.VpcLink.Builder.create(scope, id)
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun subnets(subnets: SubnetSelection) {
+    override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e9a30b66ec339f577be96e7497ab4fa16491a572bfd3f02c33f8af0ec3021eb")
-    public override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
         subnets(SubnetSelection(subnets))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcLinkName(vpcLinkName: String) {
+    override fun vpcLinkName(vpcLinkName: String) {
       cdkBuilder.vpcLinkName(vpcLinkName)
     }
 

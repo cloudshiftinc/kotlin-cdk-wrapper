@@ -43,11 +43,9 @@ public open class EventBus internal constructor(
       unwrap(this).grantPutEventsTo(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
 
   public interface Builder {
-    public fun eventBusName(eventBusName: String) {
-    }
+    public fun eventBusName(eventBusName: String)
 
-    public fun eventSourceName(eventSourceName: String) {
-    }
+    public fun eventSourceName(eventSourceName: String)
   }
 
   private class BuilderImpl(
@@ -57,11 +55,11 @@ public open class EventBus internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.EventBus.Builder =
         software.amazon.awscdk.services.events.EventBus.Builder.create(scope, id)
 
-    public override fun eventBusName(eventBusName: String) {
+    override fun eventBusName(eventBusName: String) {
       cdkBuilder.eventBusName(eventBusName)
     }
 
-    public override fun eventSourceName(eventSourceName: String) {
+    override fun eventSourceName(eventSourceName: String) {
       cdkBuilder.eventSourceName(eventSourceName)
     }
 

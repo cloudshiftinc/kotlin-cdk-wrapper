@@ -9,8 +9,7 @@ public interface EcsLaunchTargetConfig {
   public fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
 
   public interface Builder {
-    public fun parameters(parameters: Map<String, Any>) {
-    }
+    public fun parameters(parameters: Map<String, Any>)
   }
 
   private class BuilderImpl : Builder {
@@ -18,7 +17,7 @@ public interface EcsLaunchTargetConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig.builder()
 
-    public override fun parameters(parameters: Map<String, Any>) {
+    override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
@@ -30,7 +29,7 @@ public interface EcsLaunchTargetConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig,
   ) : EcsLaunchTargetConfig {
-    public override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
+    override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
   }
 
   public companion object {

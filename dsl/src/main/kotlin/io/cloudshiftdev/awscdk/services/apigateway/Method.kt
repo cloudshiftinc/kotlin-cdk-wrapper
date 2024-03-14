@@ -142,27 +142,21 @@ public open class Method internal constructor(
   public open fun testMethodArn(): String = unwrap(this).getTestMethodArn()
 
   public interface Builder {
-    public fun httpMethod(httpMethod: String) {
-    }
+    public fun httpMethod(httpMethod: String)
 
-    public fun integration(integration: Integration) {
-    }
+    public fun integration(integration: Integration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f66080773ba678f249462c9094aab0db209f70d689a9476bcac67e649a2ba1c")
-    public fun integration(integration: Integration.Builder.() -> Unit) {
-    }
+    public fun integration(integration: Integration.Builder.() -> Unit)
 
-    public fun options(options: MethodOptions) {
-    }
+    public fun options(options: MethodOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7743eba1717d042d0367b30e30b6f9ed36a8bb70142e740ad3641358301f2100")
-    public fun options(options: MethodOptions.Builder.() -> Unit) {
-    }
+    public fun options(options: MethodOptions.Builder.() -> Unit)
 
-    public fun resource(resource: IResource) {
-    }
+    public fun resource(resource: IResource)
   }
 
   private class BuilderImpl(
@@ -172,29 +166,29 @@ public open class Method internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.Method.Builder =
         software.amazon.awscdk.services.apigateway.Method.Builder.create(scope, id)
 
-    public override fun httpMethod(httpMethod: String) {
+    override fun httpMethod(httpMethod: String) {
       cdkBuilder.httpMethod(httpMethod)
     }
 
-    public override fun integration(integration: Integration) {
+    override fun integration(integration: Integration) {
       cdkBuilder.integration(integration.let(Integration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f66080773ba678f249462c9094aab0db209f70d689a9476bcac67e649a2ba1c")
-    public override fun integration(integration: Integration.Builder.() -> Unit): Unit =
+    override fun integration(integration: Integration.Builder.() -> Unit): Unit =
         integration(Integration(integration))
 
-    public override fun options(options: MethodOptions) {
+    override fun options(options: MethodOptions) {
       cdkBuilder.options(options.let(MethodOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7743eba1717d042d0367b30e30b6f9ed36a8bb70142e740ad3641358301f2100")
-    public override fun options(options: MethodOptions.Builder.() -> Unit): Unit =
+    override fun options(options: MethodOptions.Builder.() -> Unit): Unit =
         options(MethodOptions(options))
 
-    public override fun resource(resource: IResource) {
+    override fun resource(resource: IResource) {
       cdkBuilder.resource(resource.let(IResource::unwrap))
     }
 

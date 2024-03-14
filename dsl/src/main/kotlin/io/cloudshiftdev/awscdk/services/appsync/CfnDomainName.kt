@@ -40,14 +40,11 @@ public open class CfnDomainName internal constructor(
   }
 
   public interface Builder {
-    public fun certificateArn(certificateArn: String) {
-    }
+    public fun certificateArn(certificateArn: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
   }
 
   private class BuilderImpl(
@@ -57,15 +54,15 @@ public open class CfnDomainName internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnDomainName.Builder =
         software.amazon.awscdk.services.appsync.CfnDomainName.Builder.create(scope, id)
 
-    public override fun certificateArn(certificateArn: String) {
+    override fun certificateArn(certificateArn: String) {
       cdkBuilder.certificateArn(certificateArn)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 

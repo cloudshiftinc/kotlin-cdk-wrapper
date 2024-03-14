@@ -61,31 +61,24 @@ public open class CfnTopicRuleDestination internal constructor(
       = vpcProperties(VpcDestinationPropertiesProperty(`value`))
 
   public interface Builder {
-    public fun httpUrlProperties(httpUrlProperties: IResolvable) {
-    }
+    public fun httpUrlProperties(httpUrlProperties: IResolvable)
 
-    public fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty) {
-    }
+    public fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc2b764e69a29233aceaba10ec8762b290abc980f6fe1766601f883b8dda6925")
     public
-        fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty.Builder.() -> Unit) {
-    }
+        fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty.Builder.() -> Unit)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun vpcProperties(vpcProperties: IResolvable) {
-    }
+    public fun vpcProperties(vpcProperties: IResolvable)
 
-    public fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty) {
-    }
+    public fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4395235da5e0270bdf3f463e7b94b4cc592f5dbd0b60c86f1d2ce41030f65ec0")
-    public fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty.Builder.() -> Unit) {
-    }
+    public fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -95,37 +88,36 @@ public open class CfnTopicRuleDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.Builder =
         software.amazon.awscdk.services.iot.CfnTopicRuleDestination.Builder.create(scope, id)
 
-    public override fun httpUrlProperties(httpUrlProperties: IResolvable) {
+    override fun httpUrlProperties(httpUrlProperties: IResolvable) {
       cdkBuilder.httpUrlProperties(httpUrlProperties.let(IResolvable::unwrap))
     }
 
-    public override fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty) {
+    override fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty) {
       cdkBuilder.httpUrlProperties(httpUrlProperties.let(HttpUrlDestinationSummaryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc2b764e69a29233aceaba10ec8762b290abc980f6fe1766601f883b8dda6925")
-    public override
+    override
         fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty.Builder.() -> Unit):
         Unit = httpUrlProperties(HttpUrlDestinationSummaryProperty(httpUrlProperties))
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun vpcProperties(vpcProperties: IResolvable) {
+    override fun vpcProperties(vpcProperties: IResolvable) {
       cdkBuilder.vpcProperties(vpcProperties.let(IResolvable::unwrap))
     }
 
-    public override fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty) {
+    override fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty) {
       cdkBuilder.vpcProperties(vpcProperties.let(VpcDestinationPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4395235da5e0270bdf3f463e7b94b4cc592f5dbd0b60c86f1d2ce41030f65ec0")
-    public override
-        fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty.Builder.() -> Unit): Unit
-        = vpcProperties(VpcDestinationPropertiesProperty(vpcProperties))
+    override fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty.Builder.() -> Unit):
+        Unit = vpcProperties(VpcDestinationPropertiesProperty(vpcProperties))
 
     public fun build(): software.amazon.awscdk.services.iot.CfnTopicRuleDestination =
         cdkBuilder.build()
@@ -162,17 +154,13 @@ public open class CfnTopicRuleDestination internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun securityGroups(securityGroups: List<String>) {
-      }
+      public fun securityGroups(securityGroups: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -181,19 +169,19 @@ public open class CfnTopicRuleDestination internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun securityGroups(securityGroups: List<String>) {
+      override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -206,14 +194,13 @@ public open class CfnTopicRuleDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty,
     ) : VpcDestinationPropertiesProperty {
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?:
-          emptyList()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {
@@ -240,8 +227,7 @@ public open class CfnTopicRuleDestination internal constructor(
     public fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
 
     public interface Builder {
-      public fun confirmationUrl(confirmationUrl: String) {
-      }
+      public fun confirmationUrl(confirmationUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -250,7 +236,7 @@ public open class CfnTopicRuleDestination internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.builder()
 
-      public override fun confirmationUrl(confirmationUrl: String) {
+      override fun confirmationUrl(confirmationUrl: String) {
         cdkBuilder.confirmationUrl(confirmationUrl)
       }
 
@@ -263,7 +249,7 @@ public open class CfnTopicRuleDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty,
     ) : HttpUrlDestinationSummaryProperty {
-      public override fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
+      override fun confirmationUrl(): String? = unwrap(this).getConfirmationUrl()
     }
 
     public companion object {

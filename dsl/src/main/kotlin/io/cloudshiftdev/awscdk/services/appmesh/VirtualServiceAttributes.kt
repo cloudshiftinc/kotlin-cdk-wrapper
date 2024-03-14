@@ -9,22 +9,20 @@ public interface VirtualServiceAttributes {
   public fun virtualServiceName(): String
 
   public interface Builder {
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun virtualServiceName(virtualServiceName: String) {
-    }
+    public fun virtualServiceName(virtualServiceName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualServiceAttributes.Builder
         = software.amazon.awscdk.services.appmesh.VirtualServiceAttributes.builder()
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun virtualServiceName(virtualServiceName: String) {
+    override fun virtualServiceName(virtualServiceName: String) {
       cdkBuilder.virtualServiceName(virtualServiceName)
     }
 
@@ -35,9 +33,9 @@ public interface VirtualServiceAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceAttributes,
   ) : VirtualServiceAttributes {
-    public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
+    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-    public override fun virtualServiceName(): String = unwrap(this).getVirtualServiceName()
+    override fun virtualServiceName(): String = unwrap(this).getVirtualServiceName()
   }
 
   public companion object {

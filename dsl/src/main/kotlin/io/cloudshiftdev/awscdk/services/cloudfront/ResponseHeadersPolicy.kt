@@ -16,43 +16,33 @@ public open class ResponseHeadersPolicy internal constructor(
   public override fun responseHeadersPolicyId(): String = unwrap(this).getResponseHeadersPolicyId()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior) {
-    }
+    public fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad2af5fbd83f040932aa29ddbb986fde55e2d148fa3edb5d4b1eff454b8a8505")
-    public fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior.Builder.() -> Unit) {
-    }
+    public fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior.Builder.() -> Unit)
 
-    public fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior) {
-    }
+    public fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ab2f2333b49f38c2836f76f275cc00c10028065625276a721d6053832074377b")
     public
-        fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior.Builder.() -> Unit) {
-    }
+        fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior.Builder.() -> Unit)
 
-    public fun removeHeaders(removeHeaders: List<String>) {
-    }
+    public fun removeHeaders(removeHeaders: List<String>)
 
-    public fun responseHeadersPolicyName(responseHeadersPolicyName: String) {
-    }
+    public fun responseHeadersPolicyName(responseHeadersPolicyName: String)
 
-    public fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior) {
-    }
+    public fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("850766b95b6b44bdd5235525c7ce0800dd9a6a339e245395151303df303cefcc")
     public
-        fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior.Builder.() -> Unit) {
-    }
+        fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior.Builder.() -> Unit)
 
-    public fun serverTimingSamplingRate(serverTimingSamplingRate: Number) {
-    }
+    public fun serverTimingSamplingRate(serverTimingSamplingRate: Number)
   }
 
   private class BuilderImpl(
@@ -62,50 +52,48 @@ public open class ResponseHeadersPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.Builder
         = software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior) {
+    override fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior) {
       cdkBuilder.corsBehavior(corsBehavior.let(ResponseHeadersCorsBehavior::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad2af5fbd83f040932aa29ddbb986fde55e2d148fa3edb5d4b1eff454b8a8505")
-    public override fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior.Builder.() -> Unit):
-        Unit = corsBehavior(ResponseHeadersCorsBehavior(corsBehavior))
+    override fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior.Builder.() -> Unit): Unit =
+        corsBehavior(ResponseHeadersCorsBehavior(corsBehavior))
 
-    public override
-        fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior) {
+    override fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior) {
       cdkBuilder.customHeadersBehavior(customHeadersBehavior.let(ResponseCustomHeadersBehavior::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ab2f2333b49f38c2836f76f275cc00c10028065625276a721d6053832074377b")
-    public override
+    override
         fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior.Builder.() -> Unit):
         Unit = customHeadersBehavior(ResponseCustomHeadersBehavior(customHeadersBehavior))
 
-    public override fun removeHeaders(removeHeaders: List<String>) {
+    override fun removeHeaders(removeHeaders: List<String>) {
       cdkBuilder.removeHeaders(removeHeaders)
     }
 
-    public override fun responseHeadersPolicyName(responseHeadersPolicyName: String) {
+    override fun responseHeadersPolicyName(responseHeadersPolicyName: String) {
       cdkBuilder.responseHeadersPolicyName(responseHeadersPolicyName)
     }
 
-    public override
-        fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior) {
+    override fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior) {
       cdkBuilder.securityHeadersBehavior(securityHeadersBehavior.let(ResponseSecurityHeadersBehavior::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("850766b95b6b44bdd5235525c7ce0800dd9a6a339e245395151303df303cefcc")
-    public override
+    override
         fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior.Builder.() -> Unit):
         Unit = securityHeadersBehavior(ResponseSecurityHeadersBehavior(securityHeadersBehavior))
 
-    public override fun serverTimingSamplingRate(serverTimingSamplingRate: Number) {
+    override fun serverTimingSamplingRate(serverTimingSamplingRate: Number) {
       cdkBuilder.serverTimingSamplingRate(serverTimingSamplingRate)
     }
 

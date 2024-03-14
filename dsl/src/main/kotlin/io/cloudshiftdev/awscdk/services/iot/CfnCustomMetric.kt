@@ -49,17 +49,13 @@ public open class CfnCustomMetric internal constructor(
   }
 
   public interface Builder {
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun metricType(metricType: String) {
-    }
+    public fun metricType(metricType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnCustomMetric internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnCustomMetric.Builder =
         software.amazon.awscdk.services.iot.CfnCustomMetric.Builder.create(scope, id)
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun metricType(metricType: String) {
+    override fun metricType(metricType: String) {
       cdkBuilder.metricType(metricType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

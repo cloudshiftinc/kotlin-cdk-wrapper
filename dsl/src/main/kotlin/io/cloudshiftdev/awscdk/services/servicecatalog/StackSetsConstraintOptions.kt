@@ -19,26 +19,19 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
   public fun regions(): List<String>
 
   public interface Builder {
-    public fun accounts(accounts: List<String>) {
-    }
+    public fun accounts(accounts: List<String>)
 
-    public fun adminRole(adminRole: IRole) {
-    }
+    public fun adminRole(adminRole: IRole)
 
-    public fun allowStackSetInstanceOperations(allowStackSetInstanceOperations: Boolean) {
-    }
+    public fun allowStackSetInstanceOperations(allowStackSetInstanceOperations: Boolean)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun executionRoleName(executionRoleName: String) {
-    }
+    public fun executionRoleName(executionRoleName: String)
 
-    public fun messageLanguage(messageLanguage: MessageLanguage) {
-    }
+    public fun messageLanguage(messageLanguage: MessageLanguage)
 
-    public fun regions(regions: List<String>) {
-    }
+    public fun regions(regions: List<String>)
   }
 
   private class BuilderImpl : Builder {
@@ -46,31 +39,31 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
         software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions.Builder =
         software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions.builder()
 
-    public override fun accounts(accounts: List<String>) {
+    override fun accounts(accounts: List<String>) {
       cdkBuilder.accounts(accounts)
     }
 
-    public override fun adminRole(adminRole: IRole) {
+    override fun adminRole(adminRole: IRole) {
       cdkBuilder.adminRole(adminRole.let(IRole::unwrap))
     }
 
-    public override fun allowStackSetInstanceOperations(allowStackSetInstanceOperations: Boolean) {
+    override fun allowStackSetInstanceOperations(allowStackSetInstanceOperations: Boolean) {
       cdkBuilder.allowStackSetInstanceOperations(allowStackSetInstanceOperations)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun executionRoleName(executionRoleName: String) {
+    override fun executionRoleName(executionRoleName: String) {
       cdkBuilder.executionRoleName(executionRoleName)
     }
 
-    public override fun messageLanguage(messageLanguage: MessageLanguage) {
+    override fun messageLanguage(messageLanguage: MessageLanguage) {
       cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
     }
 
-    public override fun regions(regions: List<String>) {
+    override fun regions(regions: List<String>) {
       cdkBuilder.regions(regions)
     }
 
@@ -82,21 +75,21 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions,
   ) : StackSetsConstraintOptions {
-    public override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
+    override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
 
-    public override fun adminRole(): IRole = unwrap(this).getAdminRole().let(IRole::wrap)
+    override fun adminRole(): IRole = unwrap(this).getAdminRole().let(IRole::wrap)
 
-    public override fun allowStackSetInstanceOperations(): Boolean? =
+    override fun allowStackSetInstanceOperations(): Boolean? =
         unwrap(this).getAllowStackSetInstanceOperations()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun executionRoleName(): String = unwrap(this).getExecutionRoleName()
+    override fun executionRoleName(): String = unwrap(this).getExecutionRoleName()
 
-    public override fun messageLanguage(): MessageLanguage? =
+    override fun messageLanguage(): MessageLanguage? =
         unwrap(this).getMessageLanguage()?.let(MessageLanguage::wrap)
 
-    public override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+    override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
   }
 
   public companion object {

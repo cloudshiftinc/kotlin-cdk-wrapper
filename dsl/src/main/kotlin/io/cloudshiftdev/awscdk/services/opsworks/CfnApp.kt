@@ -131,69 +131,49 @@ public open class CfnApp internal constructor(
   }
 
   public interface Builder {
-    public fun appSource(appSource: IResolvable) {
-    }
+    public fun appSource(appSource: IResolvable)
 
-    public fun appSource(appSource: SourceProperty) {
-    }
+    public fun appSource(appSource: SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3aa2577ee769ad1a0f9c3388fd6b946bca74dfd69b01736579901e5eae2a99b")
-    public fun appSource(appSource: SourceProperty.Builder.() -> Unit) {
-    }
+    public fun appSource(appSource: SourceProperty.Builder.() -> Unit)
 
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: Map<String, String>) {
-    }
+    public fun attributes(attributes: Map<String, String>)
 
-    public fun dataSources(dataSources: IResolvable) {
-    }
+    public fun dataSources(dataSources: IResolvable)
 
-    public fun dataSources(dataSources: List<Any>) {
-    }
+    public fun dataSources(dataSources: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domains(domains: List<String>) {
-    }
+    public fun domains(domains: List<String>)
 
-    public fun enableSsl(enableSsl: Boolean) {
-    }
+    public fun enableSsl(enableSsl: Boolean)
 
-    public fun enableSsl(enableSsl: IResolvable) {
-    }
+    public fun enableSsl(enableSsl: IResolvable)
 
-    public fun environment(environment: IResolvable) {
-    }
+    public fun environment(environment: IResolvable)
 
-    public fun environment(environment: List<Any>) {
-    }
+    public fun environment(environment: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun shortname(shortname: String) {
-    }
+    public fun shortname(shortname: String)
 
-    public fun sslConfiguration(sslConfiguration: IResolvable) {
-    }
+    public fun sslConfiguration(sslConfiguration: IResolvable)
 
-    public fun sslConfiguration(sslConfiguration: SslConfigurationProperty) {
-    }
+    public fun sslConfiguration(sslConfiguration: SslConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ffc0fd356cd925c8e7bd667c7d7ca5e03fe9f9a58800068d030efba3d77fa39")
-    public fun sslConfiguration(sslConfiguration: SslConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun sslConfiguration(sslConfiguration: SslConfigurationProperty.Builder.() -> Unit)
 
-    public fun stackId(stackId: String) {
-    }
+    public fun stackId(stackId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -203,86 +183,85 @@ public open class CfnApp internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnApp.Builder =
         software.amazon.awscdk.services.opsworks.CfnApp.Builder.create(scope, id)
 
-    public override fun appSource(appSource: IResolvable) {
+    override fun appSource(appSource: IResolvable) {
       cdkBuilder.appSource(appSource.let(IResolvable::unwrap))
     }
 
-    public override fun appSource(appSource: SourceProperty) {
+    override fun appSource(appSource: SourceProperty) {
       cdkBuilder.appSource(appSource.let(SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3aa2577ee769ad1a0f9c3388fd6b946bca74dfd69b01736579901e5eae2a99b")
-    public override fun appSource(appSource: SourceProperty.Builder.() -> Unit): Unit =
+    override fun appSource(appSource: SourceProperty.Builder.() -> Unit): Unit =
         appSource(SourceProperty(appSource))
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: Map<String, String>) {
+    override fun attributes(attributes: Map<String, String>) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun dataSources(dataSources: IResolvable) {
+    override fun dataSources(dataSources: IResolvable) {
       cdkBuilder.dataSources(dataSources.let(IResolvable::unwrap))
     }
 
-    public override fun dataSources(dataSources: List<Any>) {
+    override fun dataSources(dataSources: List<Any>) {
       cdkBuilder.dataSources(dataSources)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domains(domains: List<String>) {
+    override fun domains(domains: List<String>) {
       cdkBuilder.domains(domains)
     }
 
-    public override fun enableSsl(enableSsl: Boolean) {
+    override fun enableSsl(enableSsl: Boolean) {
       cdkBuilder.enableSsl(enableSsl)
     }
 
-    public override fun enableSsl(enableSsl: IResolvable) {
+    override fun enableSsl(enableSsl: IResolvable) {
       cdkBuilder.enableSsl(enableSsl.let(IResolvable::unwrap))
     }
 
-    public override fun environment(environment: IResolvable) {
+    override fun environment(environment: IResolvable) {
       cdkBuilder.environment(environment.let(IResolvable::unwrap))
     }
 
-    public override fun environment(environment: List<Any>) {
+    override fun environment(environment: List<Any>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun shortname(shortname: String) {
+    override fun shortname(shortname: String) {
       cdkBuilder.shortname(shortname)
     }
 
-    public override fun sslConfiguration(sslConfiguration: IResolvable) {
+    override fun sslConfiguration(sslConfiguration: IResolvable) {
       cdkBuilder.sslConfiguration(sslConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun sslConfiguration(sslConfiguration: SslConfigurationProperty) {
+    override fun sslConfiguration(sslConfiguration: SslConfigurationProperty) {
       cdkBuilder.sslConfiguration(sslConfiguration.let(SslConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ffc0fd356cd925c8e7bd667c7d7ca5e03fe9f9a58800068d030efba3d77fa39")
-    public override
-        fun sslConfiguration(sslConfiguration: SslConfigurationProperty.Builder.() -> Unit): Unit =
-        sslConfiguration(SslConfigurationProperty(sslConfiguration))
+    override fun sslConfiguration(sslConfiguration: SslConfigurationProperty.Builder.() -> Unit):
+        Unit = sslConfiguration(SslConfigurationProperty(sslConfiguration))
 
-    public override fun stackId(stackId: String) {
+    override fun stackId(stackId: String) {
       cdkBuilder.stackId(stackId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -318,17 +297,13 @@ public open class CfnApp internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun secure(secure: Boolean) {
-      }
+      public fun secure(secure: Boolean)
 
-      public fun secure(secure: IResolvable) {
-      }
+      public fun secure(secure: IResolvable)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -336,19 +311,19 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun secure(secure: Boolean) {
+      override fun secure(secure: Boolean) {
         cdkBuilder.secure(secure)
       }
 
-      public override fun secure(secure: IResolvable) {
+      override fun secure(secure: IResolvable) {
         cdkBuilder.secure(secure.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -361,11 +336,11 @@ public open class CfnApp internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnApp.EnvironmentVariableProperty,
     ) : EnvironmentVariableProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun secure(): Any? = unwrap(this).getSecure()
+      override fun secure(): Any? = unwrap(this).getSecure()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -396,14 +371,11 @@ public open class CfnApp internal constructor(
     public fun privateKey(): String? = unwrap(this).getPrivateKey()
 
     public interface Builder {
-      public fun certificate(certificate: String) {
-      }
+      public fun certificate(certificate: String)
 
-      public fun chain(chain: String) {
-      }
+      public fun chain(chain: String)
 
-      public fun privateKey(privateKey: String) {
-      }
+      public fun privateKey(privateKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -411,15 +383,15 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty.builder()
 
-      public override fun certificate(certificate: String) {
+      override fun certificate(certificate: String) {
         cdkBuilder.certificate(certificate)
       }
 
-      public override fun chain(chain: String) {
+      override fun chain(chain: String) {
         cdkBuilder.chain(chain)
       }
 
-      public override fun privateKey(privateKey: String) {
+      override fun privateKey(privateKey: String) {
         cdkBuilder.privateKey(privateKey)
       }
 
@@ -431,11 +403,11 @@ public open class CfnApp internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnApp.SslConfigurationProperty,
     ) : SslConfigurationProperty {
-      public override fun certificate(): String? = unwrap(this).getCertificate()
+      override fun certificate(): String? = unwrap(this).getCertificate()
 
-      public override fun chain(): String? = unwrap(this).getChain()
+      override fun chain(): String? = unwrap(this).getChain()
 
-      public override fun privateKey(): String? = unwrap(this).getPrivateKey()
+      override fun privateKey(): String? = unwrap(this).getPrivateKey()
     }
 
     public companion object {
@@ -472,50 +444,44 @@ public open class CfnApp internal constructor(
     public fun username(): String? = unwrap(this).getUsername()
 
     public interface Builder {
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun revision(revision: String) {
-      }
+      public fun revision(revision: String)
 
-      public fun sshKey(sshKey: String) {
-      }
+      public fun sshKey(sshKey: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty.Builder
           = software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty.builder()
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun revision(revision: String) {
+      override fun revision(revision: String) {
         cdkBuilder.revision(revision)
       }
 
-      public override fun sshKey(sshKey: String) {
+      override fun sshKey(sshKey: String) {
         cdkBuilder.sshKey(sshKey)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -526,17 +492,17 @@ public open class CfnApp internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.SourceProperty,
     ) : SourceProperty {
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun revision(): String? = unwrap(this).getRevision()
+      override fun revision(): String? = unwrap(this).getRevision()
 
-      public override fun sshKey(): String? = unwrap(this).getSshKey()
+      override fun sshKey(): String? = unwrap(this).getSshKey()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
 
-      public override fun username(): String? = unwrap(this).getUsername()
+      override fun username(): String? = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -566,14 +532,11 @@ public open class CfnApp internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -581,15 +544,15 @@ public open class CfnApp internal constructor(
           software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -600,11 +563,11 @@ public open class CfnApp internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.opsworks.CfnApp.DataSourceProperty,
     ) : DataSourceProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

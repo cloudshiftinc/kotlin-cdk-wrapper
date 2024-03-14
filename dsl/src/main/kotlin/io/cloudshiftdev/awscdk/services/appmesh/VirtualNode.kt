@@ -32,31 +32,23 @@ public open class VirtualNode internal constructor(
   public override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
 
   public interface Builder {
-    public fun accessLog(accessLog: AccessLog) {
-    }
+    public fun accessLog(accessLog: AccessLog)
 
-    public fun backendDefaults(backendDefaults: BackendDefaults) {
-    }
+    public fun backendDefaults(backendDefaults: BackendDefaults)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("611c7d1b6de43cbe9646eb36c8cc8eef6c7be5d834d01954f4dd347a95c5c67a")
-    public fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit) {
-    }
+    public fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit)
 
-    public fun backends(backends: List<Backend>) {
-    }
+    public fun backends(backends: List<Backend>)
 
-    public fun listeners(listeners: List<VirtualNodeListener>) {
-    }
+    public fun listeners(listeners: List<VirtualNodeListener>)
 
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
-    }
+    public fun serviceDiscovery(serviceDiscovery: ServiceDiscovery)
 
-    public fun virtualNodeName(virtualNodeName: String) {
-    }
+    public fun virtualNodeName(virtualNodeName: String)
   }
 
   private class BuilderImpl(
@@ -66,36 +58,36 @@ public open class VirtualNode internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualNode.Builder =
         software.amazon.awscdk.services.appmesh.VirtualNode.Builder.create(scope, id)
 
-    public override fun accessLog(accessLog: AccessLog) {
+    override fun accessLog(accessLog: AccessLog) {
       cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
     }
 
-    public override fun backendDefaults(backendDefaults: BackendDefaults) {
+    override fun backendDefaults(backendDefaults: BackendDefaults) {
       cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("611c7d1b6de43cbe9646eb36c8cc8eef6c7be5d834d01954f4dd347a95c5c67a")
-    public override fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit): Unit =
+    override fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit): Unit =
         backendDefaults(BackendDefaults(backendDefaults))
 
-    public override fun backends(backends: List<Backend>) {
+    override fun backends(backends: List<Backend>) {
       cdkBuilder.backends(backends.map(Backend::unwrap))
     }
 
-    public override fun listeners(listeners: List<VirtualNodeListener>) {
+    override fun listeners(listeners: List<VirtualNodeListener>) {
       cdkBuilder.listeners(listeners.map(VirtualNodeListener::unwrap))
     }
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
+    override fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
       cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscovery::unwrap))
     }
 
-    public override fun virtualNodeName(virtualNodeName: String) {
+    override fun virtualNodeName(virtualNodeName: String) {
       cdkBuilder.virtualNodeName(virtualNodeName)
     }
 

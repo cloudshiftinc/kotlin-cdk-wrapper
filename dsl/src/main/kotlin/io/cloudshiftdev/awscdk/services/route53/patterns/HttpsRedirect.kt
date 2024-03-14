@@ -12,17 +12,13 @@ public open class HttpsRedirect internal constructor(
   private val cdkObject: software.amazon.awscdk.services.route53.patterns.HttpsRedirect,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
-    public fun recordNames(recordNames: List<String>) {
-    }
+    public fun recordNames(recordNames: List<String>)
 
-    public fun targetDomain(targetDomain: String) {
-    }
+    public fun targetDomain(targetDomain: String)
 
-    public fun zone(zone: IHostedZone) {
-    }
+    public fun zone(zone: IHostedZone)
   }
 
   private class BuilderImpl(
@@ -32,19 +28,19 @@ public open class HttpsRedirect internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.patterns.HttpsRedirect.Builder =
         software.amazon.awscdk.services.route53.patterns.HttpsRedirect.Builder.create(scope, id)
 
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
-    public override fun recordNames(recordNames: List<String>) {
+    override fun recordNames(recordNames: List<String>) {
       cdkBuilder.recordNames(recordNames)
     }
 
-    public override fun targetDomain(targetDomain: String) {
+    override fun targetDomain(targetDomain: String) {
       cdkBuilder.targetDomain(targetDomain)
     }
 
-    public override fun zone(zone: IHostedZone) {
+    override fun zone(zone: IHostedZone) {
       cdkBuilder.zone(zone.let(IHostedZone::unwrap))
     }
 

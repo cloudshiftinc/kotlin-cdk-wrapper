@@ -17,17 +17,13 @@ public interface ConfigurationSetEventDestinationOptions {
       unwrap(this).getEvents()?.map(EmailSendingEvent::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
-    }
+    public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String)
 
-    public fun destination(destination: EventDestination) {
-    }
+    public fun destination(destination: EventDestination)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun events(events: List<EmailSendingEvent>) {
-    }
+    public fun events(events: List<EmailSendingEvent>)
   }
 
   private class BuilderImpl : Builder {
@@ -35,20 +31,20 @@ public interface ConfigurationSetEventDestinationOptions {
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions.Builder =
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions.builder()
 
-    public override
+    override
         fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
       cdkBuilder.configurationSetEventDestinationName(configurationSetEventDestinationName)
     }
 
-    public override fun destination(destination: EventDestination) {
+    override fun destination(destination: EventDestination) {
       cdkBuilder.destination(destination.let(EventDestination::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun events(events: List<EmailSendingEvent>) {
+    override fun events(events: List<EmailSendingEvent>) {
       cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
     }
 
@@ -60,15 +56,15 @@ public interface ConfigurationSetEventDestinationOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions,
   ) : ConfigurationSetEventDestinationOptions {
-    public override fun configurationSetEventDestinationName(): String? =
+    override fun configurationSetEventDestinationName(): String? =
         unwrap(this).getConfigurationSetEventDestinationName()
 
-    public override fun destination(): EventDestination =
+    override fun destination(): EventDestination =
         unwrap(this).getDestination().let(EventDestination::wrap)
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun events(): List<EmailSendingEvent> =
+    override fun events(): List<EmailSendingEvent> =
         unwrap(this).getEvents()?.map(EmailSendingEvent::wrap) ?: emptyList()
   }
 

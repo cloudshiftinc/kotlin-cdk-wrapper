@@ -37,11 +37,9 @@ public open class CfnLocation internal constructor(
   }
 
   public interface Builder {
-    public fun locationName(locationName: String) {
-    }
+    public fun locationName(locationName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -51,11 +49,11 @@ public open class CfnLocation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnLocation.Builder =
         software.amazon.awscdk.services.gamelift.CfnLocation.Builder.create(scope, id)
 
-    public override fun locationName(locationName: String) {
+    override fun locationName(locationName: String) {
       cdkBuilder.locationName(locationName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

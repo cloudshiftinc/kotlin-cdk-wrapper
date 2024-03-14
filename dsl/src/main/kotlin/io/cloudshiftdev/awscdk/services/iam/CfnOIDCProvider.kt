@@ -49,17 +49,13 @@ public open class CfnOIDCProvider internal constructor(
   }
 
   public interface Builder {
-    public fun clientIdList(clientIdList: List<String>) {
-    }
+    public fun clientIdList(clientIdList: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun thumbprintList(thumbprintList: List<String>) {
-    }
+    public fun thumbprintList(thumbprintList: List<String>)
 
-    public fun url(url: String) {
-    }
+    public fun url(url: String)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnOIDCProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnOIDCProvider.Builder =
         software.amazon.awscdk.services.iam.CfnOIDCProvider.Builder.create(scope, id)
 
-    public override fun clientIdList(clientIdList: List<String>) {
+    override fun clientIdList(clientIdList: List<String>) {
       cdkBuilder.clientIdList(clientIdList)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun thumbprintList(thumbprintList: List<String>) {
+    override fun thumbprintList(thumbprintList: List<String>) {
       cdkBuilder.thumbprintList(thumbprintList)
     }
 
-    public override fun url(url: String) {
+    override fun url(url: String) {
       cdkBuilder.url(url)
     }
 

@@ -27,32 +27,23 @@ public open class MetricFilter internal constructor(
       metric(MetricOptions(props))
 
   public interface Builder {
-    public fun defaultValue(defaultValue: Number) {
-    }
+    public fun defaultValue(defaultValue: Number)
 
-    public fun dimensions(dimensions: Map<String, String>) {
-    }
+    public fun dimensions(dimensions: Map<String, String>)
 
-    public fun filterName(filterName: String) {
-    }
+    public fun filterName(filterName: String)
 
-    public fun filterPattern(filterPattern: IFilterPattern) {
-    }
+    public fun filterPattern(filterPattern: IFilterPattern)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun metricNamespace(metricNamespace: String) {
-    }
+    public fun metricNamespace(metricNamespace: String)
 
-    public fun metricValue(metricValue: String) {
-    }
+    public fun metricValue(metricValue: String)
 
-    public fun unit(unit: CloudwatchUnit) {
-    }
+    public fun unit(unit: CloudwatchUnit)
   }
 
   private class BuilderImpl(
@@ -62,39 +53,39 @@ public open class MetricFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.MetricFilter.Builder =
         software.amazon.awscdk.services.logs.MetricFilter.Builder.create(scope, id)
 
-    public override fun defaultValue(defaultValue: Number) {
+    override fun defaultValue(defaultValue: Number) {
       cdkBuilder.defaultValue(defaultValue)
     }
 
-    public override fun dimensions(dimensions: Map<String, String>) {
+    override fun dimensions(dimensions: Map<String, String>) {
       cdkBuilder.dimensions(dimensions)
     }
 
-    public override fun filterName(filterName: String) {
+    override fun filterName(filterName: String) {
       cdkBuilder.filterName(filterName)
     }
 
-    public override fun filterPattern(filterPattern: IFilterPattern) {
+    override fun filterPattern(filterPattern: IFilterPattern) {
       cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun metricNamespace(metricNamespace: String) {
+    override fun metricNamespace(metricNamespace: String) {
       cdkBuilder.metricNamespace(metricNamespace)
     }
 
-    public override fun metricValue(metricValue: String) {
+    override fun metricValue(metricValue: String) {
       cdkBuilder.metricValue(metricValue)
     }
 
-    public override fun unit(unit: CloudwatchUnit) {
+    override fun unit(unit: CloudwatchUnit) {
       cdkBuilder.unit(unit.let(CloudwatchUnit::unwrap))
     }
 

@@ -66,23 +66,17 @@ public open class CfnView internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: List<String>) {
-    }
+    public fun actions(actions: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun template(template: Any) {
-    }
+    public fun template(template: Any)
   }
 
   private class BuilderImpl(
@@ -92,27 +86,27 @@ public open class CfnView internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnView.Builder =
         software.amazon.awscdk.services.connect.CfnView.Builder.create(scope, id)
 
-    public override fun actions(actions: List<String>) {
+    override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun template(template: Any) {
+    override fun template(template: Any) {
       cdkBuilder.template(template)
     }
 

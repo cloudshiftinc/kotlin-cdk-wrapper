@@ -16,20 +16,15 @@ public open class DeployTimeSubstitutedFile internal constructor(
   public open fun objectKey(): String = unwrap(this).getObjectKey()
 
   public interface Builder {
-    public fun destinationBucket(destinationBucket: IBucket) {
-    }
+    public fun destinationBucket(destinationBucket: IBucket)
 
-    public fun destinationKey(destinationKey: String) {
-    }
+    public fun destinationKey(destinationKey: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun source(source: String) {
-    }
+    public fun source(source: String)
 
-    public fun substitutions(substitutions: Map<String, String>) {
-    }
+    public fun substitutions(substitutions: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -41,23 +36,23 @@ public open class DeployTimeSubstitutedFile internal constructor(
         software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile.Builder.create(scope,
         id)
 
-    public override fun destinationBucket(destinationBucket: IBucket) {
+    override fun destinationBucket(destinationBucket: IBucket) {
       cdkBuilder.destinationBucket(destinationBucket.let(IBucket::unwrap))
     }
 
-    public override fun destinationKey(destinationKey: String) {
+    override fun destinationKey(destinationKey: String) {
       cdkBuilder.destinationKey(destinationKey)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun source(source: String) {
+    override fun source(source: String) {
       cdkBuilder.source(source)
     }
 
-    public override fun substitutions(substitutions: Map<String, String>) {
+    override fun substitutions(substitutions: Map<String, String>) {
       cdkBuilder.substitutions(substitutions)
     }
 

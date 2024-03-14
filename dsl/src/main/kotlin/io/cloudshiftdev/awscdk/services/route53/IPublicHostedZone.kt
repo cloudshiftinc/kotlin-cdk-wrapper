@@ -13,28 +13,27 @@ public interface IPublicHostedZone : IHostedZone {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.IPublicHostedZone,
   ) : IPublicHostedZone {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantDelegation(arg0: IGrantable): Grant =
+    override fun grantDelegation(arg0: IGrantable): Grant =
         unwrap(this).grantDelegation(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun hostedZoneArn(): String = unwrap(this).getHostedZoneArn()
+    override fun hostedZoneArn(): String = unwrap(this).getHostedZoneArn()
 
-    public override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
+    override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
 
-    public override fun hostedZoneNameServers(): List<String> =
-        unwrap(this).getHostedZoneNameServers() ?: emptyList()
+    override fun hostedZoneNameServers(): List<String> = unwrap(this).getHostedZoneNameServers() ?:
+        emptyList()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun zoneName(): String = unwrap(this).getZoneName()
+    override fun zoneName(): String = unwrap(this).getZoneName()
   }
 
   public companion object {

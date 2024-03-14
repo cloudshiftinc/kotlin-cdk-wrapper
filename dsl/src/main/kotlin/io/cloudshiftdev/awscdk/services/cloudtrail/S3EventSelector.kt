@@ -10,22 +10,20 @@ public interface S3EventSelector {
   public fun objectPrefix(): String? = unwrap(this).getObjectPrefix()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun objectPrefix(objectPrefix: String) {
-    }
+    public fun objectPrefix(objectPrefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudtrail.S3EventSelector.Builder =
         software.amazon.awscdk.services.cloudtrail.S3EventSelector.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun objectPrefix(objectPrefix: String) {
+    override fun objectPrefix(objectPrefix: String) {
       cdkBuilder.objectPrefix(objectPrefix)
     }
 
@@ -36,9 +34,9 @@ public interface S3EventSelector {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudtrail.S3EventSelector,
   ) : S3EventSelector {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun objectPrefix(): String? = unwrap(this).getObjectPrefix()
+    override fun objectPrefix(): String? = unwrap(this).getObjectPrefix()
   }
 
   public companion object {

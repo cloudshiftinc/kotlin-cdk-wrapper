@@ -30,11 +30,9 @@ public open class CfnSubnetNetworkAclAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun networkAclId(networkAclId: String) {
-    }
+    public fun networkAclId(networkAclId: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnSubnetNetworkAclAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociation.Builder =
         software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociation.Builder.create(scope, id)
 
-    public override fun networkAclId(networkAclId: String) {
+    override fun networkAclId(networkAclId: String) {
       cdkBuilder.networkAclId(networkAclId)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 

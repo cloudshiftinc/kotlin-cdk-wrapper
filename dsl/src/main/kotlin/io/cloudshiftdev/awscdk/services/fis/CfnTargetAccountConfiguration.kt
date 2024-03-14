@@ -40,17 +40,13 @@ public open class CfnTargetAccountConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun accountId(accountId: String) {
-    }
+    public fun accountId(accountId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun experimentTemplateId(experimentTemplateId: String) {
-    }
+    public fun experimentTemplateId(experimentTemplateId: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -61,19 +57,19 @@ public open class CfnTargetAccountConfiguration internal constructor(
         software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration.Builder =
         software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration.Builder.create(scope, id)
 
-    public override fun accountId(accountId: String) {
+    override fun accountId(accountId: String) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun experimentTemplateId(experimentTemplateId: String) {
+    override fun experimentTemplateId(experimentTemplateId: String) {
       cdkBuilder.experimentTemplateId(experimentTemplateId)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

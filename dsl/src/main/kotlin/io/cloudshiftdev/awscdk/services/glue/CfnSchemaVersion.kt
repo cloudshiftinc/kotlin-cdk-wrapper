@@ -43,19 +43,15 @@ public open class CfnSchemaVersion internal constructor(
   }
 
   public interface Builder {
-    public fun schema(schema: IResolvable) {
-    }
+    public fun schema(schema: IResolvable)
 
-    public fun schema(schema: SchemaProperty) {
-    }
+    public fun schema(schema: SchemaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d485f89f5bda293c194cdfaf6fafbb513920af62464e4baeddce765acc7b571a")
-    public fun schema(schema: SchemaProperty.Builder.() -> Unit) {
-    }
+    public fun schema(schema: SchemaProperty.Builder.() -> Unit)
 
-    public fun schemaDefinition(schemaDefinition: String) {
-    }
+    public fun schemaDefinition(schemaDefinition: String)
   }
 
   private class BuilderImpl(
@@ -65,20 +61,20 @@ public open class CfnSchemaVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnSchemaVersion.Builder =
         software.amazon.awscdk.services.glue.CfnSchemaVersion.Builder.create(scope, id)
 
-    public override fun schema(schema: IResolvable) {
+    override fun schema(schema: IResolvable) {
       cdkBuilder.schema(schema.let(IResolvable::unwrap))
     }
 
-    public override fun schema(schema: SchemaProperty) {
+    override fun schema(schema: SchemaProperty) {
       cdkBuilder.schema(schema.let(SchemaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d485f89f5bda293c194cdfaf6fafbb513920af62464e4baeddce765acc7b571a")
-    public override fun schema(schema: SchemaProperty.Builder.() -> Unit): Unit =
+    override fun schema(schema: SchemaProperty.Builder.() -> Unit): Unit =
         schema(SchemaProperty(schema))
 
-    public override fun schemaDefinition(schemaDefinition: String) {
+    override fun schemaDefinition(schemaDefinition: String) {
       cdkBuilder.schemaDefinition(schemaDefinition)
     }
 
@@ -114,14 +110,11 @@ public open class CfnSchemaVersion internal constructor(
     public fun schemaName(): String? = unwrap(this).getSchemaName()
 
     public interface Builder {
-      public fun registryName(registryName: String) {
-      }
+      public fun registryName(registryName: String)
 
-      public fun schemaArn(schemaArn: String) {
-      }
+      public fun schemaArn(schemaArn: String)
 
-      public fun schemaName(schemaName: String) {
-      }
+      public fun schemaName(schemaName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -129,15 +122,15 @@ public open class CfnSchemaVersion internal constructor(
           software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty.Builder =
           software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty.builder()
 
-      public override fun registryName(registryName: String) {
+      override fun registryName(registryName: String) {
         cdkBuilder.registryName(registryName)
       }
 
-      public override fun schemaArn(schemaArn: String) {
+      override fun schemaArn(schemaArn: String) {
         cdkBuilder.schemaArn(schemaArn)
       }
 
-      public override fun schemaName(schemaName: String) {
+      override fun schemaName(schemaName: String) {
         cdkBuilder.schemaName(schemaName)
       }
 
@@ -148,11 +141,11 @@ public open class CfnSchemaVersion internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersion.SchemaProperty,
     ) : SchemaProperty {
-      public override fun registryName(): String? = unwrap(this).getRegistryName()
+      override fun registryName(): String? = unwrap(this).getRegistryName()
 
-      public override fun schemaArn(): String? = unwrap(this).getSchemaArn()
+      override fun schemaArn(): String? = unwrap(this).getSchemaArn()
 
-      public override fun schemaName(): String? = unwrap(this).getSchemaName()
+      override fun schemaName(): String? = unwrap(this).getSchemaName()
     }
 
     public companion object {

@@ -16,22 +16,17 @@ public interface TransformInput {
   public fun transformDataSource(): TransformDataSource
 
   public interface Builder {
-    public fun compressionType(compressionType: CompressionType) {
-    }
+    public fun compressionType(compressionType: CompressionType)
 
-    public fun contentType(contentType: String) {
-    }
+    public fun contentType(contentType: String)
 
-    public fun splitType(splitType: SplitType) {
-    }
+    public fun splitType(splitType: SplitType)
 
-    public fun transformDataSource(transformDataSource: TransformDataSource) {
-    }
+    public fun transformDataSource(transformDataSource: TransformDataSource)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f551870120542c8db26a2b12caf7813593a48287a8bf352a51c8dc7371a7c04")
-    public fun transformDataSource(transformDataSource: TransformDataSource.Builder.() -> Unit) {
-    }
+    public fun transformDataSource(transformDataSource: TransformDataSource.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -39,27 +34,26 @@ public interface TransformInput {
         software.amazon.awscdk.services.stepfunctions.tasks.TransformInput.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TransformInput.builder()
 
-    public override fun compressionType(compressionType: CompressionType) {
+    override fun compressionType(compressionType: CompressionType) {
       cdkBuilder.compressionType(compressionType.let(CompressionType::unwrap))
     }
 
-    public override fun contentType(contentType: String) {
+    override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
 
-    public override fun splitType(splitType: SplitType) {
+    override fun splitType(splitType: SplitType) {
       cdkBuilder.splitType(splitType.let(SplitType::unwrap))
     }
 
-    public override fun transformDataSource(transformDataSource: TransformDataSource) {
+    override fun transformDataSource(transformDataSource: TransformDataSource) {
       cdkBuilder.transformDataSource(transformDataSource.let(TransformDataSource::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f551870120542c8db26a2b12caf7813593a48287a8bf352a51c8dc7371a7c04")
-    public override
-        fun transformDataSource(transformDataSource: TransformDataSource.Builder.() -> Unit): Unit =
-        transformDataSource(TransformDataSource(transformDataSource))
+    override fun transformDataSource(transformDataSource: TransformDataSource.Builder.() -> Unit):
+        Unit = transformDataSource(TransformDataSource(transformDataSource))
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.TransformInput =
         cdkBuilder.build()
@@ -68,14 +62,14 @@ public interface TransformInput {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformInput,
   ) : TransformInput {
-    public override fun compressionType(): CompressionType? =
+    override fun compressionType(): CompressionType? =
         unwrap(this).getCompressionType()?.let(CompressionType::wrap)
 
-    public override fun contentType(): String? = unwrap(this).getContentType()
+    override fun contentType(): String? = unwrap(this).getContentType()
 
-    public override fun splitType(): SplitType? = unwrap(this).getSplitType()?.let(SplitType::wrap)
+    override fun splitType(): SplitType? = unwrap(this).getSplitType()?.let(SplitType::wrap)
 
-    public override fun transformDataSource(): TransformDataSource =
+    override fun transformDataSource(): TransformDataSource =
         unwrap(this).getTransformDataSource().let(TransformDataSource::wrap)
   }
 

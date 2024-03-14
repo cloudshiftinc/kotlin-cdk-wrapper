@@ -48,20 +48,15 @@ public open class CfnDBSecurityGroupIngress internal constructor(
   }
 
   public interface Builder {
-    public fun cidrip(cidrip: String) {
-    }
+    public fun cidrip(cidrip: String)
 
-    public fun dbSecurityGroupName(dbSecurityGroupName: String) {
-    }
+    public fun dbSecurityGroupName(dbSecurityGroupName: String)
 
-    public fun ec2SecurityGroupId(ec2SecurityGroupId: String) {
-    }
+    public fun ec2SecurityGroupId(ec2SecurityGroupId: String)
 
-    public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
-    }
+    public fun ec2SecurityGroupName(ec2SecurityGroupName: String)
 
-    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
-    }
+    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String)
   }
 
   private class BuilderImpl(
@@ -71,23 +66,23 @@ public open class CfnDBSecurityGroupIngress internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngress.Builder =
         software.amazon.awscdk.services.rds.CfnDBSecurityGroupIngress.Builder.create(scope, id)
 
-    public override fun cidrip(cidrip: String) {
+    override fun cidrip(cidrip: String) {
       cdkBuilder.cidrip(cidrip)
     }
 
-    public override fun dbSecurityGroupName(dbSecurityGroupName: String) {
+    override fun dbSecurityGroupName(dbSecurityGroupName: String) {
       cdkBuilder.dbSecurityGroupName(dbSecurityGroupName)
     }
 
-    public override fun ec2SecurityGroupId(ec2SecurityGroupId: String) {
+    override fun ec2SecurityGroupId(ec2SecurityGroupId: String) {
       cdkBuilder.ec2SecurityGroupId(ec2SecurityGroupId)
     }
 
-    public override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
+    override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
       cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
     }
 
-    public override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
+    override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
       cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
     }
 

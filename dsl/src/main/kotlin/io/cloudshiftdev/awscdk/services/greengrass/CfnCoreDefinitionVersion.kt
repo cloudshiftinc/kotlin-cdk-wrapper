@@ -38,14 +38,11 @@ public open class CfnCoreDefinitionVersion internal constructor(
   }
 
   public interface Builder {
-    public fun coreDefinitionId(coreDefinitionId: String) {
-    }
+    public fun coreDefinitionId(coreDefinitionId: String)
 
-    public fun cores(cores: IResolvable) {
-    }
+    public fun cores(cores: IResolvable)
 
-    public fun cores(cores: List<Any>) {
-    }
+    public fun cores(cores: List<Any>)
   }
 
   private class BuilderImpl(
@@ -57,15 +54,15 @@ public open class CfnCoreDefinitionVersion internal constructor(
         software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion.Builder.create(scope,
         id)
 
-    public override fun coreDefinitionId(coreDefinitionId: String) {
+    override fun coreDefinitionId(coreDefinitionId: String) {
       cdkBuilder.coreDefinitionId(coreDefinitionId)
     }
 
-    public override fun cores(cores: IResolvable) {
+    override fun cores(cores: IResolvable) {
       cdkBuilder.cores(cores.let(IResolvable::unwrap))
     }
 
-    public override fun cores(cores: List<Any>) {
+    override fun cores(cores: List<Any>) {
       cdkBuilder.cores(cores)
     }
 
@@ -105,20 +102,15 @@ public open class CfnCoreDefinitionVersion internal constructor(
     public fun thingArn(): String
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun syncShadow(syncShadow: Boolean) {
-      }
+      public fun syncShadow(syncShadow: Boolean)
 
-      public fun syncShadow(syncShadow: IResolvable) {
-      }
+      public fun syncShadow(syncShadow: IResolvable)
 
-      public fun thingArn(thingArn: String) {
-      }
+      public fun thingArn(thingArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -126,23 +118,23 @@ public open class CfnCoreDefinitionVersion internal constructor(
           software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion.CoreProperty.Builder =
           software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion.CoreProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun syncShadow(syncShadow: Boolean) {
+      override fun syncShadow(syncShadow: Boolean) {
         cdkBuilder.syncShadow(syncShadow)
       }
 
-      public override fun syncShadow(syncShadow: IResolvable) {
+      override fun syncShadow(syncShadow: IResolvable) {
         cdkBuilder.syncShadow(syncShadow.let(IResolvable::unwrap))
       }
 
-      public override fun thingArn(thingArn: String) {
+      override fun thingArn(thingArn: String) {
         cdkBuilder.thingArn(thingArn)
       }
 
@@ -155,13 +147,13 @@ public open class CfnCoreDefinitionVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion.CoreProperty,
     ) : CoreProperty {
-      public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun syncShadow(): Any? = unwrap(this).getSyncShadow()
+      override fun syncShadow(): Any? = unwrap(this).getSyncShadow()
 
-      public override fun thingArn(): String = unwrap(this).getThingArn()
+      override fun thingArn(): String = unwrap(this).getThingArn()
     }
 
     public companion object {

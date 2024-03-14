@@ -65,25 +65,19 @@ public open class CfnExecutionPlan internal constructor(
   }
 
   public interface Builder {
-    public fun capacityUnits(capacityUnits: IResolvable) {
-    }
+    public fun capacityUnits(capacityUnits: IResolvable)
 
-    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
-    }
+    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f0487232fc9542eb49e50bc9ac7b57ac3f877147a4709a33d881524d6dd2607")
-    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -93,29 +87,29 @@ public open class CfnExecutionPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.Builder =
         software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.Builder.create(scope, id)
 
-    public override fun capacityUnits(capacityUnits: IResolvable) {
+    override fun capacityUnits(capacityUnits: IResolvable) {
       cdkBuilder.capacityUnits(capacityUnits.let(IResolvable::unwrap))
     }
 
-    public override fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
+    override fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
       cdkBuilder.capacityUnits(capacityUnits.let(CapacityUnitsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f0487232fc9542eb49e50bc9ac7b57ac3f877147a4709a33d881524d6dd2607")
-    public override
+    override
         fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty.Builder.() -> Unit):
         Unit = capacityUnits(CapacityUnitsConfigurationProperty(capacityUnits))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -148,8 +142,7 @@ public open class CfnExecutionPlan internal constructor(
     public fun rescoreCapacityUnits(): Number
 
     public interface Builder {
-      public fun rescoreCapacityUnits(rescoreCapacityUnits: Number) {
-      }
+      public fun rescoreCapacityUnits(rescoreCapacityUnits: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -158,7 +151,7 @@ public open class CfnExecutionPlan internal constructor(
           =
           software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.CapacityUnitsConfigurationProperty.builder()
 
-      public override fun rescoreCapacityUnits(rescoreCapacityUnits: Number) {
+      override fun rescoreCapacityUnits(rescoreCapacityUnits: Number) {
         cdkBuilder.rescoreCapacityUnits(rescoreCapacityUnits)
       }
 
@@ -171,7 +164,7 @@ public open class CfnExecutionPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendraranking.CfnExecutionPlan.CapacityUnitsConfigurationProperty,
     ) : CapacityUnitsConfigurationProperty {
-      public override fun rescoreCapacityUnits(): Number = unwrap(this).getRescoreCapacityUnits()
+      override fun rescoreCapacityUnits(): Number = unwrap(this).getRescoreCapacityUnits()
     }
 
     public companion object {

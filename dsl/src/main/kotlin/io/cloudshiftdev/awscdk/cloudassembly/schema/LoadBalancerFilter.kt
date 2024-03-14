@@ -13,29 +13,26 @@ public interface LoadBalancerFilter {
   public fun loadBalancerType(): LoadBalancerType
 
   public interface Builder {
-    public fun loadBalancerArn(loadBalancerArn: String) {
-    }
+    public fun loadBalancerArn(loadBalancerArn: String)
 
-    public fun loadBalancerTags(loadBalancerTags: List<Tag>) {
-    }
+    public fun loadBalancerTags(loadBalancerTags: List<Tag>)
 
-    public fun loadBalancerType(loadBalancerType: LoadBalancerType) {
-    }
+    public fun loadBalancerType(loadBalancerType: LoadBalancerType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter.Builder =
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter.builder()
 
-    public override fun loadBalancerArn(loadBalancerArn: String) {
+    override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
-    public override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
+    override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag::unwrap))
     }
 
-    public override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
+    override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
       cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType::unwrap))
     }
 
@@ -46,12 +43,12 @@ public interface LoadBalancerFilter {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter,
   ) : LoadBalancerFilter {
-    public override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerTags(): List<Tag> =
-        unwrap(this).getLoadBalancerTags()?.map(Tag::wrap) ?: emptyList()
+    override fun loadBalancerTags(): List<Tag> = unwrap(this).getLoadBalancerTags()?.map(Tag::wrap)
+        ?: emptyList()
 
-    public override fun loadBalancerType(): LoadBalancerType =
+    override fun loadBalancerType(): LoadBalancerType =
         unwrap(this).getLoadBalancerType().let(LoadBalancerType::wrap)
   }
 

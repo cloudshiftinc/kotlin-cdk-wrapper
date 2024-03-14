@@ -13,14 +13,11 @@ public interface TransformResources {
   public fun volumeEncryptionKey(): IKey? = unwrap(this).getVolumeEncryptionKey()?.let(IKey::wrap)
 
   public interface Builder {
-    public fun instanceCount(instanceCount: Number) {
-    }
+    public fun instanceCount(instanceCount: Number)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
-    }
+    public fun volumeEncryptionKey(volumeEncryptionKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface TransformResources {
         software.amazon.awscdk.services.stepfunctions.tasks.TransformResources.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TransformResources.builder()
 
-    public override fun instanceCount(instanceCount: Number) {
+    override fun instanceCount(instanceCount: Number) {
       cdkBuilder.instanceCount(instanceCount)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
+    override fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
       cdkBuilder.volumeEncryptionKey(volumeEncryptionKey.let(IKey::unwrap))
     }
 
@@ -47,12 +44,12 @@ public interface TransformResources {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformResources,
   ) : TransformResources {
-    public override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+    override fun instanceCount(): Number = unwrap(this).getInstanceCount()
 
-    public override fun instanceType(): InstanceType =
+    override fun instanceType(): InstanceType =
         unwrap(this).getInstanceType().let(InstanceType::wrap)
 
-    public override fun volumeEncryptionKey(): IKey? =
+    override fun volumeEncryptionKey(): IKey? =
         unwrap(this).getVolumeEncryptionKey()?.let(IKey::wrap)
   }
 

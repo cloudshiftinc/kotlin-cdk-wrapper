@@ -26,57 +26,50 @@ public interface CloudMapOptions {
   public fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun cloudMapNamespace(cloudMapNamespace: INamespace) {
-    }
+    public fun cloudMapNamespace(cloudMapNamespace: INamespace)
 
-    public fun container(container: ContainerDefinition) {
-    }
+    public fun container(container: ContainerDefinition)
 
-    public fun containerPort(containerPort: Number) {
-    }
+    public fun containerPort(containerPort: Number)
 
-    public fun dnsRecordType(dnsRecordType: DnsRecordType) {
-    }
+    public fun dnsRecordType(dnsRecordType: DnsRecordType)
 
-    public fun dnsTtl(dnsTtl: Duration) {
-    }
+    public fun dnsTtl(dnsTtl: Duration)
 
-    public fun failureThreshold(failureThreshold: Number) {
-    }
+    public fun failureThreshold(failureThreshold: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CloudMapOptions.Builder =
         software.amazon.awscdk.services.ecs.CloudMapOptions.builder()
 
-    public override fun cloudMapNamespace(cloudMapNamespace: INamespace) {
+    override fun cloudMapNamespace(cloudMapNamespace: INamespace) {
       cdkBuilder.cloudMapNamespace(cloudMapNamespace.let(INamespace::unwrap))
     }
 
-    public override fun container(container: ContainerDefinition) {
+    override fun container(container: ContainerDefinition) {
       cdkBuilder.container(container.let(ContainerDefinition::unwrap))
     }
 
-    public override fun containerPort(containerPort: Number) {
+    override fun containerPort(containerPort: Number) {
       cdkBuilder.containerPort(containerPort)
     }
 
-    public override fun dnsRecordType(dnsRecordType: DnsRecordType) {
+    override fun dnsRecordType(dnsRecordType: DnsRecordType) {
       cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
     }
 
-    public override fun dnsTtl(dnsTtl: Duration) {
+    override fun dnsTtl(dnsTtl: Duration) {
       cdkBuilder.dnsTtl(dnsTtl.let(Duration::unwrap))
     }
 
-    public override fun failureThreshold(failureThreshold: Number) {
+    override fun failureThreshold(failureThreshold: Number) {
       cdkBuilder.failureThreshold(failureThreshold)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -86,22 +79,22 @@ public interface CloudMapOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.CloudMapOptions,
   ) : CloudMapOptions {
-    public override fun cloudMapNamespace(): INamespace? =
+    override fun cloudMapNamespace(): INamespace? =
         unwrap(this).getCloudMapNamespace()?.let(INamespace::wrap)
 
-    public override fun container(): ContainerDefinition? =
+    override fun container(): ContainerDefinition? =
         unwrap(this).getContainer()?.let(ContainerDefinition::wrap)
 
-    public override fun containerPort(): Number? = unwrap(this).getContainerPort()
+    override fun containerPort(): Number? = unwrap(this).getContainerPort()
 
-    public override fun dnsRecordType(): DnsRecordType? =
+    override fun dnsRecordType(): DnsRecordType? =
         unwrap(this).getDnsRecordType()?.let(DnsRecordType::wrap)
 
-    public override fun dnsTtl(): Duration? = unwrap(this).getDnsTtl()?.let(Duration::wrap)
+    override fun dnsTtl(): Duration? = unwrap(this).getDnsTtl()?.let(Duration::wrap)
 
-    public override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+    override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

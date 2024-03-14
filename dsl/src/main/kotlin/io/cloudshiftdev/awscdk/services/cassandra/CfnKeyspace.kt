@@ -55,24 +55,18 @@ public open class CfnKeyspace internal constructor(
   }
 
   public interface Builder {
-    public fun keyspaceName(keyspaceName: String) {
-    }
+    public fun keyspaceName(keyspaceName: String)
 
-    public fun replicationSpecification(replicationSpecification: IResolvable) {
-    }
+    public fun replicationSpecification(replicationSpecification: IResolvable)
 
-    public
-        fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty) {
-    }
+    public fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("76f12a1a314629c5ff4d1adb2520615cc22de7ac912ee07a76a8a78bcdb405d0")
     public
-        fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -82,26 +76,26 @@ public open class CfnKeyspace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cassandra.CfnKeyspace.Builder =
         software.amazon.awscdk.services.cassandra.CfnKeyspace.Builder.create(scope, id)
 
-    public override fun keyspaceName(keyspaceName: String) {
+    override fun keyspaceName(keyspaceName: String) {
       cdkBuilder.keyspaceName(keyspaceName)
     }
 
-    public override fun replicationSpecification(replicationSpecification: IResolvable) {
+    override fun replicationSpecification(replicationSpecification: IResolvable) {
       cdkBuilder.replicationSpecification(replicationSpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty) {
       cdkBuilder.replicationSpecification(replicationSpecification.let(ReplicationSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("76f12a1a314629c5ff4d1adb2520615cc22de7ac912ee07a76a8a78bcdb405d0")
-    public override
+    override
         fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty.Builder.() -> Unit):
         Unit = replicationSpecification(ReplicationSpecificationProperty(replicationSpecification))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -135,11 +129,9 @@ public open class CfnKeyspace internal constructor(
     public fun replicationStrategy(): String? = unwrap(this).getReplicationStrategy()
 
     public interface Builder {
-      public fun regionList(regionList: List<String>) {
-      }
+      public fun regionList(regionList: List<String>)
 
-      public fun replicationStrategy(replicationStrategy: String) {
-      }
+      public fun replicationStrategy(replicationStrategy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -148,11 +140,11 @@ public open class CfnKeyspace internal constructor(
           =
           software.amazon.awscdk.services.cassandra.CfnKeyspace.ReplicationSpecificationProperty.builder()
 
-      public override fun regionList(regionList: List<String>) {
+      override fun regionList(regionList: List<String>) {
         cdkBuilder.regionList(regionList)
       }
 
-      public override fun replicationStrategy(replicationStrategy: String) {
+      override fun replicationStrategy(replicationStrategy: String) {
         cdkBuilder.replicationStrategy(replicationStrategy)
       }
 
@@ -165,9 +157,9 @@ public open class CfnKeyspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnKeyspace.ReplicationSpecificationProperty,
     ) : ReplicationSpecificationProperty {
-      public override fun regionList(): List<String> = unwrap(this).getRegionList() ?: emptyList()
+      override fun regionList(): List<String> = unwrap(this).getRegionList() ?: emptyList()
 
-      public override fun replicationStrategy(): String? = unwrap(this).getReplicationStrategy()
+      override fun replicationStrategy(): String? = unwrap(this).getReplicationStrategy()
     }
 
     public companion object {

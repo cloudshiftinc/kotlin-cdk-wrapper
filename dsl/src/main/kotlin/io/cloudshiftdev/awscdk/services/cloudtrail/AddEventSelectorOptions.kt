@@ -16,14 +16,11 @@ public interface AddEventSelectorOptions {
 
   public interface Builder {
     public
-        fun excludeManagementEventSources(excludeManagementEventSources: List<ManagementEventSources>) {
-    }
+        fun excludeManagementEventSources(excludeManagementEventSources: List<ManagementEventSources>)
 
-    public fun includeManagementEvents(includeManagementEvents: Boolean) {
-    }
+    public fun includeManagementEvents(includeManagementEvents: Boolean)
 
-    public fun readWriteType(readWriteType: ReadWriteType) {
-    }
+    public fun readWriteType(readWriteType: ReadWriteType)
   }
 
   private class BuilderImpl : Builder {
@@ -31,16 +28,16 @@ public interface AddEventSelectorOptions {
         software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions.Builder =
         software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions.builder()
 
-    public override
+    override
         fun excludeManagementEventSources(excludeManagementEventSources: List<ManagementEventSources>) {
       cdkBuilder.excludeManagementEventSources(excludeManagementEventSources.map(ManagementEventSources::unwrap))
     }
 
-    public override fun includeManagementEvents(includeManagementEvents: Boolean) {
+    override fun includeManagementEvents(includeManagementEvents: Boolean) {
       cdkBuilder.includeManagementEvents(includeManagementEvents)
     }
 
-    public override fun readWriteType(readWriteType: ReadWriteType) {
+    override fun readWriteType(readWriteType: ReadWriteType) {
       cdkBuilder.readWriteType(readWriteType.let(ReadWriteType::unwrap))
     }
 
@@ -51,14 +48,13 @@ public interface AddEventSelectorOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions,
   ) : AddEventSelectorOptions {
-    public override fun excludeManagementEventSources(): List<ManagementEventSources> =
+    override fun excludeManagementEventSources(): List<ManagementEventSources> =
         unwrap(this).getExcludeManagementEventSources()?.map(ManagementEventSources::wrap) ?:
         emptyList()
 
-    public override fun includeManagementEvents(): Boolean? =
-        unwrap(this).getIncludeManagementEvents()
+    override fun includeManagementEvents(): Boolean? = unwrap(this).getIncludeManagementEvents()
 
-    public override fun readWriteType(): ReadWriteType? =
+    override fun readWriteType(): ReadWriteType? =
         unwrap(this).getReadWriteType()?.let(ReadWriteType::wrap)
   }
 

@@ -14,36 +14,32 @@ public interface KubernetesManifestOptions {
   public fun skipValidation(): Boolean? = unwrap(this).getSkipValidation()
 
   public interface Builder {
-    public fun ingressAlb(ingressAlb: Boolean) {
-    }
+    public fun ingressAlb(ingressAlb: Boolean)
 
-    public fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
-    }
+    public fun ingressAlbScheme(ingressAlbScheme: AlbScheme)
 
-    public fun prune(prune: Boolean) {
-    }
+    public fun prune(prune: Boolean)
 
-    public fun skipValidation(skipValidation: Boolean) {
-    }
+    public fun skipValidation(skipValidation: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubernetesManifestOptions.Builder =
         software.amazon.awscdk.services.eks.KubernetesManifestOptions.builder()
 
-    public override fun ingressAlb(ingressAlb: Boolean) {
+    override fun ingressAlb(ingressAlb: Boolean) {
       cdkBuilder.ingressAlb(ingressAlb)
     }
 
-    public override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
+    override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
       cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme::unwrap))
     }
 
-    public override fun prune(prune: Boolean) {
+    override fun prune(prune: Boolean) {
       cdkBuilder.prune(prune)
     }
 
-    public override fun skipValidation(skipValidation: Boolean) {
+    override fun skipValidation(skipValidation: Boolean) {
       cdkBuilder.skipValidation(skipValidation)
     }
 
@@ -54,14 +50,14 @@ public interface KubernetesManifestOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.KubernetesManifestOptions,
   ) : KubernetesManifestOptions {
-    public override fun ingressAlb(): Boolean? = unwrap(this).getIngressAlb()
+    override fun ingressAlb(): Boolean? = unwrap(this).getIngressAlb()
 
-    public override fun ingressAlbScheme(): AlbScheme? =
+    override fun ingressAlbScheme(): AlbScheme? =
         unwrap(this).getIngressAlbScheme()?.let(AlbScheme::wrap)
 
-    public override fun prune(): Boolean? = unwrap(this).getPrune()
+    override fun prune(): Boolean? = unwrap(this).getPrune()
 
-    public override fun skipValidation(): Boolean? = unwrap(this).getSkipValidation()
+    override fun skipValidation(): Boolean? = unwrap(this).getSkipValidation()
   }
 
   public companion object {

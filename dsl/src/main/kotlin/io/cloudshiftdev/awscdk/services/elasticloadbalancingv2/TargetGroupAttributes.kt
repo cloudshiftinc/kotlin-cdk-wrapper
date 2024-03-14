@@ -9,11 +9,9 @@ public interface TargetGroupAttributes {
   public fun targetGroupArn(): String
 
   public interface Builder {
-    public fun loadBalancerArns(loadBalancerArns: String) {
-    }
+    public fun loadBalancerArns(loadBalancerArns: String)
 
-    public fun targetGroupArn(targetGroupArn: String) {
-    }
+    public fun targetGroupArn(targetGroupArn: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface TargetGroupAttributes {
         software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes.builder()
 
-    public override fun loadBalancerArns(loadBalancerArns: String) {
+    override fun loadBalancerArns(loadBalancerArns: String) {
       cdkBuilder.loadBalancerArns(loadBalancerArns)
     }
 
-    public override fun targetGroupArn(targetGroupArn: String) {
+    override fun targetGroupArn(targetGroupArn: String) {
       cdkBuilder.targetGroupArn(targetGroupArn)
     }
 
@@ -37,9 +35,9 @@ public interface TargetGroupAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes,
   ) : TargetGroupAttributes {
-    public override fun loadBalancerArns(): String? = unwrap(this).getLoadBalancerArns()
+    override fun loadBalancerArns(): String? = unwrap(this).getLoadBalancerArns()
 
-    public override fun targetGroupArn(): String = unwrap(this).getTargetGroupArn()
+    override fun targetGroupArn(): String = unwrap(this).getTargetGroupArn()
   }
 
   public companion object {

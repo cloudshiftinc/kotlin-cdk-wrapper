@@ -50,20 +50,15 @@ public open class CfnListener internal constructor(
   }
 
   public interface Builder {
-    public fun acceleratorArn(acceleratorArn: String) {
-    }
+    public fun acceleratorArn(acceleratorArn: String)
 
-    public fun clientAffinity(clientAffinity: String) {
-    }
+    public fun clientAffinity(clientAffinity: String)
 
-    public fun portRanges(portRanges: IResolvable) {
-    }
+    public fun portRanges(portRanges: IResolvable)
 
-    public fun portRanges(portRanges: List<Any>) {
-    }
+    public fun portRanges(portRanges: List<Any>)
 
-    public fun protocol(protocol: String) {
-    }
+    public fun protocol(protocol: String)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnListener internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.CfnListener.Builder =
         software.amazon.awscdk.services.globalaccelerator.CfnListener.Builder.create(scope, id)
 
-    public override fun acceleratorArn(acceleratorArn: String) {
+    override fun acceleratorArn(acceleratorArn: String) {
       cdkBuilder.acceleratorArn(acceleratorArn)
     }
 
-    public override fun clientAffinity(clientAffinity: String) {
+    override fun clientAffinity(clientAffinity: String) {
       cdkBuilder.clientAffinity(clientAffinity)
     }
 
-    public override fun portRanges(portRanges: IResolvable) {
+    override fun portRanges(portRanges: IResolvable) {
       cdkBuilder.portRanges(portRanges.let(IResolvable::unwrap))
     }
 
-    public override fun portRanges(portRanges: List<Any>) {
+    override fun portRanges(portRanges: List<Any>) {
       cdkBuilder.portRanges(portRanges)
     }
 
-    public override fun protocol(protocol: String) {
+    override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
     }
 
@@ -124,11 +119,9 @@ public open class CfnListener internal constructor(
     public fun toPort(): Number
 
     public interface Builder {
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -136,11 +129,11 @@ public open class CfnListener internal constructor(
           software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty.Builder =
           software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty.builder()
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -153,9 +146,9 @@ public open class CfnListener internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty,
     ) : PortRangeProperty {
-      public override fun fromPort(): Number = unwrap(this).getFromPort()
+      override fun fromPort(): Number = unwrap(this).getFromPort()
 
-      public override fun toPort(): Number = unwrap(this).getToPort()
+      override fun toPort(): Number = unwrap(this).getToPort()
     }
 
     public companion object {

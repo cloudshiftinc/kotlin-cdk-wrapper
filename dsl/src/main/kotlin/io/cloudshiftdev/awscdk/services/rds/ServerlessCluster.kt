@@ -68,63 +68,45 @@ public open class ServerlessCluster internal constructor(
   public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
   public interface Builder {
-    public fun backupRetention(backupRetention: Duration) {
-    }
+    public fun backupRetention(backupRetention: Duration)
 
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
-    public fun defaultDatabaseName(defaultDatabaseName: String) {
-    }
+    public fun defaultDatabaseName(defaultDatabaseName: String)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun enableDataApi(enableDataApi: Boolean) {
-    }
+    public fun enableDataApi(enableDataApi: Boolean)
 
-    public fun engine(engine: IClusterEngine) {
-    }
+    public fun engine(engine: IClusterEngine)
 
-    public fun parameterGroup(parameterGroup: IParameterGroup) {
-    }
+    public fun parameterGroup(parameterGroup: IParameterGroup)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun scaling(scaling: ServerlessScalingOptions) {
-    }
+    public fun scaling(scaling: ServerlessScalingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a66ab5fc033d6677cef9a477412efff77d3611251692c8175fd34d74994a3deb")
-    public fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit) {
-    }
+    public fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun storageEncryptionKey(storageEncryptionKey: IKey) {
-    }
+    public fun storageEncryptionKey(storageEncryptionKey: IKey)
 
-    public fun subnetGroup(subnetGroup: ISubnetGroup) {
-    }
+    public fun subnetGroup(subnetGroup: ISubnetGroup)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19fcc17e7f52f281daf909cf4668087718b2ad26f91bed9271ca5de1cbc15679")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -134,78 +116,78 @@ public open class ServerlessCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.ServerlessCluster.Builder =
         software.amazon.awscdk.services.rds.ServerlessCluster.Builder.create(scope, id)
 
-    public override fun backupRetention(backupRetention: Duration) {
+    override fun backupRetention(backupRetention: Duration) {
       cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
     }
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
-    public override fun defaultDatabaseName(defaultDatabaseName: String) {
+    override fun defaultDatabaseName(defaultDatabaseName: String) {
       cdkBuilder.defaultDatabaseName(defaultDatabaseName)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun enableDataApi(enableDataApi: Boolean) {
+    override fun enableDataApi(enableDataApi: Boolean) {
       cdkBuilder.enableDataApi(enableDataApi)
     }
 
-    public override fun engine(engine: IClusterEngine) {
+    override fun engine(engine: IClusterEngine) {
       cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
     }
 
-    public override fun parameterGroup(parameterGroup: IParameterGroup) {
+    override fun parameterGroup(parameterGroup: IParameterGroup) {
       cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun scaling(scaling: ServerlessScalingOptions) {
+    override fun scaling(scaling: ServerlessScalingOptions) {
       cdkBuilder.scaling(scaling.let(ServerlessScalingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a66ab5fc033d6677cef9a477412efff77d3611251692c8175fd34d74994a3deb")
-    public override fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit): Unit =
+    override fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit): Unit =
         scaling(ServerlessScalingOptions(scaling))
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun storageEncryptionKey(storageEncryptionKey: IKey) {
+    override fun storageEncryptionKey(storageEncryptionKey: IKey) {
       cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey::unwrap))
     }
 
-    public override fun subnetGroup(subnetGroup: ISubnetGroup) {
+    override fun subnetGroup(subnetGroup: ISubnetGroup) {
       cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19fcc17e7f52f281daf909cf4668087718b2ad26f91bed9271ca5de1cbc15679")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.rds.ServerlessCluster = cdkBuilder.build()

@@ -8,15 +8,14 @@ public interface CfnResourceAutoScalingCreationPolicy {
       unwrap(this).getMinSuccessfulInstancesPercent()
 
   public interface Builder {
-    public fun minSuccessfulInstancesPercent(minSuccessfulInstancesPercent: Number) {
-    }
+    public fun minSuccessfulInstancesPercent(minSuccessfulInstancesPercent: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy.Builder =
         software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy.builder()
 
-    public override fun minSuccessfulInstancesPercent(minSuccessfulInstancesPercent: Number) {
+    override fun minSuccessfulInstancesPercent(minSuccessfulInstancesPercent: Number) {
       cdkBuilder.minSuccessfulInstancesPercent(minSuccessfulInstancesPercent)
     }
 
@@ -27,7 +26,7 @@ public interface CfnResourceAutoScalingCreationPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy,
   ) : CfnResourceAutoScalingCreationPolicy {
-    public override fun minSuccessfulInstancesPercent(): Number? =
+    override fun minSuccessfulInstancesPercent(): Number? =
         unwrap(this).getMinSuccessfulInstancesPercent()
   }
 

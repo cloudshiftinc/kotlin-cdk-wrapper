@@ -113,47 +113,35 @@ public open class CfnEnvironment internal constructor(
 
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun dataBundles(dataBundles: List<String>) {
-    }
+    public fun dataBundles(dataBundles: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun federationMode(federationMode: String) {
-    }
+    public fun federationMode(federationMode: String)
 
-    public fun federationParameters(federationParameters: IResolvable) {
-    }
+    public fun federationParameters(federationParameters: IResolvable)
 
-    public fun federationParameters(federationParameters: FederationParametersProperty) {
-    }
+    public fun federationParameters(federationParameters: FederationParametersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9df12da2f0c697b85c338698db8006b519ebdbe211ca2f952127f7ceff4496d0")
     public
-        fun federationParameters(federationParameters: FederationParametersProperty.Builder.() -> Unit) {
-    }
+        fun federationParameters(federationParameters: FederationParametersProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun superuserParameters(superuserParameters: IResolvable) {
-    }
+    public fun superuserParameters(superuserParameters: IResolvable)
 
-    public fun superuserParameters(superuserParameters: SuperuserParametersProperty) {
-    }
+    public fun superuserParameters(superuserParameters: SuperuserParametersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8539c50c6b8910ceea4521f816dc281fc996c5bab7195e03c37e5ef08360a309")
     public
-        fun superuserParameters(superuserParameters: SuperuserParametersProperty.Builder.() -> Unit) {
-    }
+        fun superuserParameters(superuserParameters: SuperuserParametersProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -164,55 +152,55 @@ public open class CfnEnvironment internal constructor(
         software.amazon.awscdk.services.finspace.CfnEnvironment.Builder.create(scope, id)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun dataBundles(dataBundles: List<String>) {
+    override fun dataBundles(dataBundles: List<String>) {
       cdkBuilder.dataBundles(dataBundles)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun federationMode(federationMode: String) {
+    override fun federationMode(federationMode: String) {
       cdkBuilder.federationMode(federationMode)
     }
 
-    public override fun federationParameters(federationParameters: IResolvable) {
+    override fun federationParameters(federationParameters: IResolvable) {
       cdkBuilder.federationParameters(federationParameters.let(IResolvable::unwrap))
     }
 
-    public override fun federationParameters(federationParameters: FederationParametersProperty) {
+    override fun federationParameters(federationParameters: FederationParametersProperty) {
       cdkBuilder.federationParameters(federationParameters.let(FederationParametersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9df12da2f0c697b85c338698db8006b519ebdbe211ca2f952127f7ceff4496d0")
-    public override
+    override
         fun federationParameters(federationParameters: FederationParametersProperty.Builder.() -> Unit):
         Unit = federationParameters(FederationParametersProperty(federationParameters))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun superuserParameters(superuserParameters: IResolvable) {
+    override fun superuserParameters(superuserParameters: IResolvable) {
       cdkBuilder.superuserParameters(superuserParameters.let(IResolvable::unwrap))
     }
 
-    public override fun superuserParameters(superuserParameters: SuperuserParametersProperty) {
+    override fun superuserParameters(superuserParameters: SuperuserParametersProperty) {
       cdkBuilder.superuserParameters(superuserParameters.let(SuperuserParametersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8539c50c6b8910ceea4521f816dc281fc996c5bab7195e03c37e5ef08360a309")
-    public override
+    override
         fun superuserParameters(superuserParameters: SuperuserParametersProperty.Builder.() -> Unit):
         Unit = superuserParameters(SuperuserParametersProperty(superuserParameters))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -254,26 +242,19 @@ public open class CfnEnvironment internal constructor(
     public fun samlMetadataUrl(): String? = unwrap(this).getSamlMetadataUrl()
 
     public interface Builder {
-      public fun applicationCallBackUrl(applicationCallBackUrl: String) {
-      }
+      public fun applicationCallBackUrl(applicationCallBackUrl: String)
 
-      public fun attributeMap(attributeMap: IResolvable) {
-      }
+      public fun attributeMap(attributeMap: IResolvable)
 
-      public fun attributeMap(attributeMap: List<Any>) {
-      }
+      public fun attributeMap(attributeMap: List<Any>)
 
-      public fun federationProviderName(federationProviderName: String) {
-      }
+      public fun federationProviderName(federationProviderName: String)
 
-      public fun federationUrn(federationUrn: String) {
-      }
+      public fun federationUrn(federationUrn: String)
 
-      public fun samlMetadataDocument(samlMetadataDocument: String) {
-      }
+      public fun samlMetadataDocument(samlMetadataDocument: String)
 
-      public fun samlMetadataUrl(samlMetadataUrl: String) {
-      }
+      public fun samlMetadataUrl(samlMetadataUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -282,31 +263,31 @@ public open class CfnEnvironment internal constructor(
           =
           software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty.builder()
 
-      public override fun applicationCallBackUrl(applicationCallBackUrl: String) {
+      override fun applicationCallBackUrl(applicationCallBackUrl: String) {
         cdkBuilder.applicationCallBackUrl(applicationCallBackUrl)
       }
 
-      public override fun attributeMap(attributeMap: IResolvable) {
+      override fun attributeMap(attributeMap: IResolvable) {
         cdkBuilder.attributeMap(attributeMap.let(IResolvable::unwrap))
       }
 
-      public override fun attributeMap(attributeMap: List<Any>) {
+      override fun attributeMap(attributeMap: List<Any>) {
         cdkBuilder.attributeMap(attributeMap)
       }
 
-      public override fun federationProviderName(federationProviderName: String) {
+      override fun federationProviderName(federationProviderName: String) {
         cdkBuilder.federationProviderName(federationProviderName)
       }
 
-      public override fun federationUrn(federationUrn: String) {
+      override fun federationUrn(federationUrn: String) {
         cdkBuilder.federationUrn(federationUrn)
       }
 
-      public override fun samlMetadataDocument(samlMetadataDocument: String) {
+      override fun samlMetadataDocument(samlMetadataDocument: String) {
         cdkBuilder.samlMetadataDocument(samlMetadataDocument)
       }
 
-      public override fun samlMetadataUrl(samlMetadataUrl: String) {
+      override fun samlMetadataUrl(samlMetadataUrl: String) {
         cdkBuilder.samlMetadataUrl(samlMetadataUrl)
       }
 
@@ -319,19 +300,17 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.finspace.CfnEnvironment.FederationParametersProperty,
     ) : FederationParametersProperty {
-      public override fun applicationCallBackUrl(): String? =
-          unwrap(this).getApplicationCallBackUrl()
+      override fun applicationCallBackUrl(): String? = unwrap(this).getApplicationCallBackUrl()
 
-      public override fun attributeMap(): Any? = unwrap(this).getAttributeMap()
+      override fun attributeMap(): Any? = unwrap(this).getAttributeMap()
 
-      public override fun federationProviderName(): String? =
-          unwrap(this).getFederationProviderName()
+      override fun federationProviderName(): String? = unwrap(this).getFederationProviderName()
 
-      public override fun federationUrn(): String? = unwrap(this).getFederationUrn()
+      override fun federationUrn(): String? = unwrap(this).getFederationUrn()
 
-      public override fun samlMetadataDocument(): String? = unwrap(this).getSamlMetadataDocument()
+      override fun samlMetadataDocument(): String? = unwrap(this).getSamlMetadataDocument()
 
-      public override fun samlMetadataUrl(): String? = unwrap(this).getSamlMetadataUrl()
+      override fun samlMetadataUrl(): String? = unwrap(this).getSamlMetadataUrl()
     }
 
     public companion object {
@@ -360,11 +339,9 @@ public open class CfnEnvironment internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -373,11 +350,11 @@ public open class CfnEnvironment internal constructor(
           =
           software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -390,9 +367,9 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.finspace.CfnEnvironment.AttributeMapItemsProperty,
     ) : AttributeMapItemsProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -423,14 +400,11 @@ public open class CfnEnvironment internal constructor(
     public fun lastName(): String? = unwrap(this).getLastName()
 
     public interface Builder {
-      public fun emailAddress(emailAddress: String) {
-      }
+      public fun emailAddress(emailAddress: String)
 
-      public fun firstName(firstName: String) {
-      }
+      public fun firstName(firstName: String)
 
-      public fun lastName(lastName: String) {
-      }
+      public fun lastName(lastName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -439,15 +413,15 @@ public open class CfnEnvironment internal constructor(
           =
           software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty.builder()
 
-      public override fun emailAddress(emailAddress: String) {
+      override fun emailAddress(emailAddress: String) {
         cdkBuilder.emailAddress(emailAddress)
       }
 
-      public override fun firstName(firstName: String) {
+      override fun firstName(firstName: String) {
         cdkBuilder.firstName(firstName)
       }
 
-      public override fun lastName(lastName: String) {
+      override fun lastName(lastName: String) {
         cdkBuilder.lastName(lastName)
       }
 
@@ -460,11 +434,11 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.finspace.CfnEnvironment.SuperuserParametersProperty,
     ) : SuperuserParametersProperty {
-      public override fun emailAddress(): String? = unwrap(this).getEmailAddress()
+      override fun emailAddress(): String? = unwrap(this).getEmailAddress()
 
-      public override fun firstName(): String? = unwrap(this).getFirstName()
+      override fun firstName(): String? = unwrap(this).getFirstName()
 
-      public override fun lastName(): String? = unwrap(this).getLastName()
+      override fun lastName(): String? = unwrap(this).getLastName()
     }
 
     public companion object {

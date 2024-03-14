@@ -67,31 +67,23 @@ public open class CfnEventBusPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun condition(condition: IResolvable) {
-    }
+    public fun condition(condition: IResolvable)
 
-    public fun condition(condition: ConditionProperty) {
-    }
+    public fun condition(condition: ConditionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d7c81da9166694ec5e5051df6657e0f460416690db276f5df54c6b0454046fc8")
-    public fun condition(condition: ConditionProperty.Builder.() -> Unit) {
-    }
+    public fun condition(condition: ConditionProperty.Builder.() -> Unit)
 
-    public fun eventBusName(eventBusName: String) {
-    }
+    public fun eventBusName(eventBusName: String)
 
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
 
-    public fun statement(statement: Any) {
-    }
+    public fun statement(statement: Any)
 
-    public fun statementId(statementId: String) {
-    }
+    public fun statementId(statementId: String)
   }
 
   private class BuilderImpl(
@@ -101,36 +93,36 @@ public open class CfnEventBusPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.CfnEventBusPolicy.Builder =
         software.amazon.awscdk.services.events.CfnEventBusPolicy.Builder.create(scope, id)
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun condition(condition: IResolvable) {
+    override fun condition(condition: IResolvable) {
       cdkBuilder.condition(condition.let(IResolvable::unwrap))
     }
 
-    public override fun condition(condition: ConditionProperty) {
+    override fun condition(condition: ConditionProperty) {
       cdkBuilder.condition(condition.let(ConditionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d7c81da9166694ec5e5051df6657e0f460416690db276f5df54c6b0454046fc8")
-    public override fun condition(condition: ConditionProperty.Builder.() -> Unit): Unit =
+    override fun condition(condition: ConditionProperty.Builder.() -> Unit): Unit =
         condition(ConditionProperty(condition))
 
-    public override fun eventBusName(eventBusName: String) {
+    override fun eventBusName(eventBusName: String) {
       cdkBuilder.eventBusName(eventBusName)
     }
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 
-    public override fun statement(statement: Any) {
+    override fun statement(statement: Any) {
       cdkBuilder.statement(statement)
     }
 
-    public override fun statementId(statementId: String) {
+    override fun statementId(statementId: String) {
       cdkBuilder.statementId(statementId)
     }
 
@@ -167,14 +159,11 @@ public open class CfnEventBusPolicy internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -182,15 +171,15 @@ public open class CfnEventBusPolicy internal constructor(
           software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty.Builder =
           software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -202,11 +191,11 @@ public open class CfnEventBusPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.events.CfnEventBusPolicy.ConditionProperty,
     ) : ConditionProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

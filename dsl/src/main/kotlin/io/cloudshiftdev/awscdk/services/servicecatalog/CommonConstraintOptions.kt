@@ -10,11 +10,9 @@ public interface CommonConstraintOptions {
       unwrap(this).getMessageLanguage()?.let(MessageLanguage::wrap)
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun messageLanguage(messageLanguage: MessageLanguage) {
-    }
+    public fun messageLanguage(messageLanguage: MessageLanguage)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface CommonConstraintOptions {
         software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions.Builder =
         software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun messageLanguage(messageLanguage: MessageLanguage) {
+    override fun messageLanguage(messageLanguage: MessageLanguage) {
       cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface CommonConstraintOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions,
   ) : CommonConstraintOptions {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun messageLanguage(): MessageLanguage? =
+    override fun messageLanguage(): MessageLanguage? =
         unwrap(this).getMessageLanguage()?.let(MessageLanguage::wrap)
   }
 

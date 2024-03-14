@@ -55,154 +55,133 @@ public interface ClientVpnEndpointOptions {
       unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
 
   public interface Builder {
-    public fun authorizeAllUsersToVpcCidr(authorizeAllUsersToVpcCidr: Boolean) {
-    }
+    public fun authorizeAllUsersToVpcCidr(authorizeAllUsersToVpcCidr: Boolean)
 
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun clientCertificateArn(clientCertificateArn: String) {
-    }
+    public fun clientCertificateArn(clientCertificateArn: String)
 
-    public fun clientConnectionHandler(clientConnectionHandler: IClientVpnConnectionHandler) {
-    }
+    public fun clientConnectionHandler(clientConnectionHandler: IClientVpnConnectionHandler)
 
-    public fun clientLoginBanner(clientLoginBanner: String) {
-    }
+    public fun clientLoginBanner(clientLoginBanner: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun dnsServers(dnsServers: List<String>) {
-    }
+    public fun dnsServers(dnsServers: List<String>)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun logStream(logStream: ILogStream) {
-    }
+    public fun logStream(logStream: ILogStream)
 
-    public fun logging(logging: Boolean) {
-    }
+    public fun logging(logging: Boolean)
 
-    public fun port(port: VpnPort) {
-    }
+    public fun port(port: VpnPort)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun selfServicePortal(selfServicePortal: Boolean) {
-    }
+    public fun selfServicePortal(selfServicePortal: Boolean)
 
-    public fun serverCertificateArn(serverCertificateArn: String) {
-    }
+    public fun serverCertificateArn(serverCertificateArn: String)
 
-    public fun sessionTimeout(sessionTimeout: ClientVpnSessionTimeout) {
-    }
+    public fun sessionTimeout(sessionTimeout: ClientVpnSessionTimeout)
 
-    public fun splitTunnel(splitTunnel: Boolean) {
-    }
+    public fun splitTunnel(splitTunnel: Boolean)
 
-    public fun transportProtocol(transportProtocol: TransportProtocol) {
-    }
+    public fun transportProtocol(transportProtocol: TransportProtocol)
 
-    public fun userBasedAuthentication(userBasedAuthentication: ClientVpnUserBasedAuthentication) {
-    }
+    public fun userBasedAuthentication(userBasedAuthentication: ClientVpnUserBasedAuthentication)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec49a3a6b4c8c16c4ce0aa42047c4a39643ccb50b5d491c7cff2e49629e77e40")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions.Builder =
         software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions.builder()
 
-    public override fun authorizeAllUsersToVpcCidr(authorizeAllUsersToVpcCidr: Boolean) {
+    override fun authorizeAllUsersToVpcCidr(authorizeAllUsersToVpcCidr: Boolean) {
       cdkBuilder.authorizeAllUsersToVpcCidr(authorizeAllUsersToVpcCidr)
     }
 
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun clientCertificateArn(clientCertificateArn: String) {
+    override fun clientCertificateArn(clientCertificateArn: String) {
       cdkBuilder.clientCertificateArn(clientCertificateArn)
     }
 
-    public override
-        fun clientConnectionHandler(clientConnectionHandler: IClientVpnConnectionHandler) {
+    override fun clientConnectionHandler(clientConnectionHandler: IClientVpnConnectionHandler) {
       cdkBuilder.clientConnectionHandler(clientConnectionHandler.let(IClientVpnConnectionHandler::unwrap))
     }
 
-    public override fun clientLoginBanner(clientLoginBanner: String) {
+    override fun clientLoginBanner(clientLoginBanner: String) {
       cdkBuilder.clientLoginBanner(clientLoginBanner)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun dnsServers(dnsServers: List<String>) {
+    override fun dnsServers(dnsServers: List<String>) {
       cdkBuilder.dnsServers(dnsServers)
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun logStream(logStream: ILogStream) {
+    override fun logStream(logStream: ILogStream) {
       cdkBuilder.logStream(logStream.let(ILogStream::unwrap))
     }
 
-    public override fun logging(logging: Boolean) {
+    override fun logging(logging: Boolean) {
       cdkBuilder.logging(logging)
     }
 
-    public override fun port(port: VpnPort) {
+    override fun port(port: VpnPort) {
       cdkBuilder.port(port.let(VpnPort::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun selfServicePortal(selfServicePortal: Boolean) {
+    override fun selfServicePortal(selfServicePortal: Boolean) {
       cdkBuilder.selfServicePortal(selfServicePortal)
     }
 
-    public override fun serverCertificateArn(serverCertificateArn: String) {
+    override fun serverCertificateArn(serverCertificateArn: String) {
       cdkBuilder.serverCertificateArn(serverCertificateArn)
     }
 
-    public override fun sessionTimeout(sessionTimeout: ClientVpnSessionTimeout) {
+    override fun sessionTimeout(sessionTimeout: ClientVpnSessionTimeout) {
       cdkBuilder.sessionTimeout(sessionTimeout.let(ClientVpnSessionTimeout::unwrap))
     }
 
-    public override fun splitTunnel(splitTunnel: Boolean) {
+    override fun splitTunnel(splitTunnel: Boolean) {
       cdkBuilder.splitTunnel(splitTunnel)
     }
 
-    public override fun transportProtocol(transportProtocol: TransportProtocol) {
+    override fun transportProtocol(transportProtocol: TransportProtocol) {
       cdkBuilder.transportProtocol(transportProtocol.let(TransportProtocol::unwrap))
     }
 
-    public override
+    override
         fun userBasedAuthentication(userBasedAuthentication: ClientVpnUserBasedAuthentication) {
       cdkBuilder.userBasedAuthentication(userBasedAuthentication.let(ClientVpnUserBasedAuthentication::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec49a3a6b4c8c16c4ce0aa42047c4a39643ccb50b5d491c7cff2e49629e77e40")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions =
@@ -212,50 +191,49 @@ public interface ClientVpnEndpointOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointOptions,
   ) : ClientVpnEndpointOptions {
-    public override fun authorizeAllUsersToVpcCidr(): Boolean? =
+    override fun authorizeAllUsersToVpcCidr(): Boolean? =
         unwrap(this).getAuthorizeAllUsersToVpcCidr()
 
-    public override fun cidr(): String = unwrap(this).getCidr()
+    override fun cidr(): String = unwrap(this).getCidr()
 
-    public override fun clientCertificateArn(): String? = unwrap(this).getClientCertificateArn()
+    override fun clientCertificateArn(): String? = unwrap(this).getClientCertificateArn()
 
-    public override fun clientConnectionHandler(): IClientVpnConnectionHandler? =
+    override fun clientConnectionHandler(): IClientVpnConnectionHandler? =
         unwrap(this).getClientConnectionHandler()?.let(IClientVpnConnectionHandler::wrap)
 
-    public override fun clientLoginBanner(): String? = unwrap(this).getClientLoginBanner()
+    override fun clientLoginBanner(): String? = unwrap(this).getClientLoginBanner()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun dnsServers(): List<String> = unwrap(this).getDnsServers() ?: emptyList()
+    override fun dnsServers(): List<String> = unwrap(this).getDnsServers() ?: emptyList()
 
-    public override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
+    override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun logStream(): ILogStream? =
-        unwrap(this).getLogStream()?.let(ILogStream::wrap)
+    override fun logStream(): ILogStream? = unwrap(this).getLogStream()?.let(ILogStream::wrap)
 
-    public override fun logging(): Boolean? = unwrap(this).getLogging()
+    override fun logging(): Boolean? = unwrap(this).getLogging()
 
-    public override fun port(): VpnPort? = unwrap(this).getPort()?.let(VpnPort::wrap)
+    override fun port(): VpnPort? = unwrap(this).getPort()?.let(VpnPort::wrap)
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    public override fun selfServicePortal(): Boolean? = unwrap(this).getSelfServicePortal()
+    override fun selfServicePortal(): Boolean? = unwrap(this).getSelfServicePortal()
 
-    public override fun serverCertificateArn(): String = unwrap(this).getServerCertificateArn()
+    override fun serverCertificateArn(): String = unwrap(this).getServerCertificateArn()
 
-    public override fun sessionTimeout(): ClientVpnSessionTimeout? =
+    override fun sessionTimeout(): ClientVpnSessionTimeout? =
         unwrap(this).getSessionTimeout()?.let(ClientVpnSessionTimeout::wrap)
 
-    public override fun splitTunnel(): Boolean? = unwrap(this).getSplitTunnel()
+    override fun splitTunnel(): Boolean? = unwrap(this).getSplitTunnel()
 
-    public override fun transportProtocol(): TransportProtocol? =
+    override fun transportProtocol(): TransportProtocol? =
         unwrap(this).getTransportProtocol()?.let(TransportProtocol::wrap)
 
-    public override fun userBasedAuthentication(): ClientVpnUserBasedAuthentication? =
+    override fun userBasedAuthentication(): ClientVpnUserBasedAuthentication? =
         unwrap(this).getUserBasedAuthentication()?.let(ClientVpnUserBasedAuthentication::wrap)
 
-    public override fun vpcSubnets(): SubnetSelection? =
+    override fun vpcSubnets(): SubnetSelection? =
         unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
   }
 

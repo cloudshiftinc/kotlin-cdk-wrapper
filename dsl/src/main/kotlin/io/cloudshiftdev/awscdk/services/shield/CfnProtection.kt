@@ -75,30 +75,23 @@ public open class CfnProtection internal constructor(
 
   public interface Builder {
     public
-        fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: IResolvable) {
-    }
+        fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: IResolvable)
 
     public
-        fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty) {
-    }
+        fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ad69ea36018550e2d034dd48646a5d76908c61d6c21a95ea72805d7596bf673")
     public
-        fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty.Builder.() -> Unit)
 
-    public fun healthCheckArns(healthCheckArns: List<String>) {
-    }
+    public fun healthCheckArns(healthCheckArns: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resourceArn(resourceArn: String) {
-    }
+    public fun resourceArn(resourceArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -108,36 +101,36 @@ public open class CfnProtection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.shield.CfnProtection.Builder =
         software.amazon.awscdk.services.shield.CfnProtection.Builder.create(scope, id)
 
-    public override
+    override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: IResolvable) {
       cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty) {
       cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(ApplicationLayerAutomaticResponseConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ad69ea36018550e2d034dd48646a5d76908c61d6c21a95ea72805d7596bf673")
-    public override
+    override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty.Builder.() -> Unit):
         Unit =
         applicationLayerAutomaticResponseConfiguration(ApplicationLayerAutomaticResponseConfigurationProperty(applicationLayerAutomaticResponseConfiguration))
 
-    public override fun healthCheckArns(healthCheckArns: List<String>) {
+    override fun healthCheckArns(healthCheckArns: List<String>) {
       cdkBuilder.healthCheckArns(healthCheckArns)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resourceArn(resourceArn: String) {
+    override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -171,19 +164,15 @@ public open class CfnProtection internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun action(action: IResolvable) {
-      }
+      public fun action(action: IResolvable)
 
-      public fun action(action: ActionProperty) {
-      }
+      public fun action(action: ActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eacdaaffff023b14a9cce4f48634923c2822f0a133865877fdb6951c765f722f")
-      public fun action(action: ActionProperty.Builder.() -> Unit) {
-      }
+      public fun action(action: ActionProperty.Builder.() -> Unit)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -192,20 +181,20 @@ public open class CfnProtection internal constructor(
           =
           software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty.builder()
 
-      public override fun action(action: IResolvable) {
+      override fun action(action: IResolvable) {
         cdkBuilder.action(action.let(IResolvable::unwrap))
       }
 
-      public override fun action(action: ActionProperty) {
+      override fun action(action: ActionProperty) {
         cdkBuilder.action(action.let(ActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eacdaaffff023b14a9cce4f48634923c2822f0a133865877fdb6951c765f722f")
-      public override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
+      override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
           action(ActionProperty(action))
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -218,9 +207,9 @@ public open class CfnProtection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.shield.CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty,
     ) : ApplicationLayerAutomaticResponseConfigurationProperty {
-      public override fun action(): Any = unwrap(this).getAction()
+      override fun action(): Any = unwrap(this).getAction()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -250,11 +239,9 @@ public open class CfnProtection internal constructor(
     public fun count(): Any? = unwrap(this).getCount()
 
     public interface Builder {
-      public fun block(block: Any) {
-      }
+      public fun block(block: Any)
 
-      public fun count(count: Any) {
-      }
+      public fun count(count: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -262,11 +249,11 @@ public open class CfnProtection internal constructor(
           software.amazon.awscdk.services.shield.CfnProtection.ActionProperty.Builder =
           software.amazon.awscdk.services.shield.CfnProtection.ActionProperty.builder()
 
-      public override fun block(block: Any) {
+      override fun block(block: Any) {
         cdkBuilder.block(block)
       }
 
-      public override fun count(count: Any) {
+      override fun count(count: Any) {
         cdkBuilder.count(count)
       }
 
@@ -277,9 +264,9 @@ public open class CfnProtection internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.shield.CfnProtection.ActionProperty,
     ) : ActionProperty {
-      public override fun block(): Any? = unwrap(this).getBlock()
+      override fun block(): Any? = unwrap(this).getBlock()
 
-      public override fun count(): Any? = unwrap(this).getCount()
+      override fun count(): Any? = unwrap(this).getCount()
     }
 
     public companion object {

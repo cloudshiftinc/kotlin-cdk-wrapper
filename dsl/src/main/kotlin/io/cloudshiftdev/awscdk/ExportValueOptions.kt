@@ -9,22 +9,20 @@ public interface ExportValueOptions {
   public fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.ExportValueOptions.Builder =
         software.amazon.awscdk.ExportValueOptions.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -34,9 +32,9 @@ public interface ExportValueOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ExportValueOptions,
   ) : ExportValueOptions {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

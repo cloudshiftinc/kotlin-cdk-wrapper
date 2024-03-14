@@ -66,17 +66,13 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun applicationDescription(applicationDescription: String) {
-    }
+    public fun applicationDescription(applicationDescription: String)
 
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -86,19 +82,19 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotfleethub.CfnApplication.Builder =
         software.amazon.awscdk.services.iotfleethub.CfnApplication.Builder.create(scope, id)
 
-    public override fun applicationDescription(applicationDescription: String) {
+    override fun applicationDescription(applicationDescription: String) {
       cdkBuilder.applicationDescription(applicationDescription)
     }
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

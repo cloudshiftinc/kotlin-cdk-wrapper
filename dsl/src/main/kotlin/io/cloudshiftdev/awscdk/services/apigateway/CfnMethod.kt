@@ -128,64 +128,45 @@ public open class CfnMethod internal constructor(
   }
 
   public interface Builder {
-    public fun apiKeyRequired(apiKeyRequired: Boolean) {
-    }
+    public fun apiKeyRequired(apiKeyRequired: Boolean)
 
-    public fun apiKeyRequired(apiKeyRequired: IResolvable) {
-    }
+    public fun apiKeyRequired(apiKeyRequired: IResolvable)
 
-    public fun authorizationScopes(authorizationScopes: List<String>) {
-    }
+    public fun authorizationScopes(authorizationScopes: List<String>)
 
-    public fun authorizationType(authorizationType: String) {
-    }
+    public fun authorizationType(authorizationType: String)
 
-    public fun authorizerId(authorizerId: String) {
-    }
+    public fun authorizerId(authorizerId: String)
 
-    public fun httpMethod(httpMethod: String) {
-    }
+    public fun httpMethod(httpMethod: String)
 
-    public fun integration(integration: IResolvable) {
-    }
+    public fun integration(integration: IResolvable)
 
-    public fun integration(integration: IntegrationProperty) {
-    }
+    public fun integration(integration: IntegrationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f56da9b626b21a48f48534fdb62818e4eb7da26a97678b9a9f5446258bd8e74c")
-    public fun integration(integration: IntegrationProperty.Builder.() -> Unit) {
-    }
+    public fun integration(integration: IntegrationProperty.Builder.() -> Unit)
 
-    public fun methodResponses(methodResponses: IResolvable) {
-    }
+    public fun methodResponses(methodResponses: IResolvable)
 
-    public fun methodResponses(methodResponses: List<Any>) {
-    }
+    public fun methodResponses(methodResponses: List<Any>)
 
-    public fun operationName(operationName: String) {
-    }
+    public fun operationName(operationName: String)
 
-    public fun requestModels(requestModels: IResolvable) {
-    }
+    public fun requestModels(requestModels: IResolvable)
 
-    public fun requestModels(requestModels: Map<String, String>) {
-    }
+    public fun requestModels(requestModels: Map<String, String>)
 
-    public fun requestParameters(requestParameters: IResolvable) {
-    }
+    public fun requestParameters(requestParameters: IResolvable)
 
-    public fun requestParameters(requestParameters: Map<String, Any>) {
-    }
+    public fun requestParameters(requestParameters: Map<String, Any>)
 
-    public fun requestValidatorId(requestValidatorId: String) {
-    }
+    public fun requestValidatorId(requestValidatorId: String)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
   }
 
   private class BuilderImpl(
@@ -195,80 +176,80 @@ public open class CfnMethod internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnMethod.Builder =
         software.amazon.awscdk.services.apigateway.CfnMethod.Builder.create(scope, id)
 
-    public override fun apiKeyRequired(apiKeyRequired: Boolean) {
+    override fun apiKeyRequired(apiKeyRequired: Boolean) {
       cdkBuilder.apiKeyRequired(apiKeyRequired)
     }
 
-    public override fun apiKeyRequired(apiKeyRequired: IResolvable) {
+    override fun apiKeyRequired(apiKeyRequired: IResolvable) {
       cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable::unwrap))
     }
 
-    public override fun authorizationScopes(authorizationScopes: List<String>) {
+    override fun authorizationScopes(authorizationScopes: List<String>) {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
-    public override fun authorizationType(authorizationType: String) {
+    override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)
     }
 
-    public override fun authorizerId(authorizerId: String) {
+    override fun authorizerId(authorizerId: String) {
       cdkBuilder.authorizerId(authorizerId)
     }
 
-    public override fun httpMethod(httpMethod: String) {
+    override fun httpMethod(httpMethod: String) {
       cdkBuilder.httpMethod(httpMethod)
     }
 
-    public override fun integration(integration: IResolvable) {
+    override fun integration(integration: IResolvable) {
       cdkBuilder.integration(integration.let(IResolvable::unwrap))
     }
 
-    public override fun integration(integration: IntegrationProperty) {
+    override fun integration(integration: IntegrationProperty) {
       cdkBuilder.integration(integration.let(IntegrationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f56da9b626b21a48f48534fdb62818e4eb7da26a97678b9a9f5446258bd8e74c")
-    public override fun integration(integration: IntegrationProperty.Builder.() -> Unit): Unit =
+    override fun integration(integration: IntegrationProperty.Builder.() -> Unit): Unit =
         integration(IntegrationProperty(integration))
 
-    public override fun methodResponses(methodResponses: IResolvable) {
+    override fun methodResponses(methodResponses: IResolvable) {
       cdkBuilder.methodResponses(methodResponses.let(IResolvable::unwrap))
     }
 
-    public override fun methodResponses(methodResponses: List<Any>) {
+    override fun methodResponses(methodResponses: List<Any>) {
       cdkBuilder.methodResponses(methodResponses)
     }
 
-    public override fun operationName(operationName: String) {
+    override fun operationName(operationName: String) {
       cdkBuilder.operationName(operationName)
     }
 
-    public override fun requestModels(requestModels: IResolvable) {
+    override fun requestModels(requestModels: IResolvable) {
       cdkBuilder.requestModels(requestModels.let(IResolvable::unwrap))
     }
 
-    public override fun requestModels(requestModels: Map<String, String>) {
+    override fun requestModels(requestModels: Map<String, String>) {
       cdkBuilder.requestModels(requestModels)
     }
 
-    public override fun requestParameters(requestParameters: IResolvable) {
+    override fun requestParameters(requestParameters: IResolvable) {
       cdkBuilder.requestParameters(requestParameters.let(IResolvable::unwrap))
     }
 
-    public override fun requestParameters(requestParameters: Map<String, Any>) {
+    override fun requestParameters(requestParameters: Map<String, Any>) {
       cdkBuilder.requestParameters(requestParameters)
     }
 
-    public override fun requestValidatorId(requestValidatorId: String) {
+    override fun requestValidatorId(requestValidatorId: String) {
       cdkBuilder.requestValidatorId(requestValidatorId)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
@@ -304,20 +285,15 @@ public open class CfnMethod internal constructor(
     public fun statusCode(): String
 
     public interface Builder {
-      public fun responseModels(responseModels: IResolvable) {
-      }
+      public fun responseModels(responseModels: IResolvable)
 
-      public fun responseModels(responseModels: Map<String, String>) {
-      }
+      public fun responseModels(responseModels: Map<String, String>)
 
-      public fun responseParameters(responseParameters: IResolvable) {
-      }
+      public fun responseParameters(responseParameters: IResolvable)
 
-      public fun responseParameters(responseParameters: Map<String, Any>) {
-      }
+      public fun responseParameters(responseParameters: Map<String, Any>)
 
-      public fun statusCode(statusCode: String) {
-      }
+      public fun statusCode(statusCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -325,23 +301,23 @@ public open class CfnMethod internal constructor(
           software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty.builder()
 
-      public override fun responseModels(responseModels: IResolvable) {
+      override fun responseModels(responseModels: IResolvable) {
         cdkBuilder.responseModels(responseModels.let(IResolvable::unwrap))
       }
 
-      public override fun responseModels(responseModels: Map<String, String>) {
+      override fun responseModels(responseModels: Map<String, String>) {
         cdkBuilder.responseModels(responseModels)
       }
 
-      public override fun responseParameters(responseParameters: IResolvable) {
+      override fun responseParameters(responseParameters: IResolvable) {
         cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
       }
 
-      public override fun responseParameters(responseParameters: Map<String, Any>) {
+      override fun responseParameters(responseParameters: Map<String, Any>) {
         cdkBuilder.responseParameters(responseParameters)
       }
 
-      public override fun statusCode(statusCode: String) {
+      override fun statusCode(statusCode: String) {
         cdkBuilder.statusCode(statusCode)
       }
 
@@ -354,11 +330,11 @@ public open class CfnMethod internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty,
     ) : MethodResponseProperty {
-      public override fun responseModels(): Any? = unwrap(this).getResponseModels()
+      override fun responseModels(): Any? = unwrap(this).getResponseModels()
 
-      public override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
+      override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
 
-      public override fun statusCode(): String = unwrap(this).getStatusCode()
+      override fun statusCode(): String = unwrap(this).getStatusCode()
     }
 
     public companion object {
@@ -412,56 +388,39 @@ public open class CfnMethod internal constructor(
     public fun uri(): String? = unwrap(this).getUri()
 
     public interface Builder {
-      public fun cacheKeyParameters(cacheKeyParameters: List<String>) {
-      }
+      public fun cacheKeyParameters(cacheKeyParameters: List<String>)
 
-      public fun cacheNamespace(cacheNamespace: String) {
-      }
+      public fun cacheNamespace(cacheNamespace: String)
 
-      public fun connectionId(connectionId: String) {
-      }
+      public fun connectionId(connectionId: String)
 
-      public fun connectionType(connectionType: String) {
-      }
+      public fun connectionType(connectionType: String)
 
-      public fun contentHandling(contentHandling: String) {
-      }
+      public fun contentHandling(contentHandling: String)
 
-      public fun credentials(credentials: String) {
-      }
+      public fun credentials(credentials: String)
 
-      public fun integrationHttpMethod(integrationHttpMethod: String) {
-      }
+      public fun integrationHttpMethod(integrationHttpMethod: String)
 
-      public fun integrationResponses(integrationResponses: IResolvable) {
-      }
+      public fun integrationResponses(integrationResponses: IResolvable)
 
-      public fun integrationResponses(integrationResponses: List<Any>) {
-      }
+      public fun integrationResponses(integrationResponses: List<Any>)
 
-      public fun passthroughBehavior(passthroughBehavior: String) {
-      }
+      public fun passthroughBehavior(passthroughBehavior: String)
 
-      public fun requestParameters(requestParameters: IResolvable) {
-      }
+      public fun requestParameters(requestParameters: IResolvable)
 
-      public fun requestParameters(requestParameters: Map<String, String>) {
-      }
+      public fun requestParameters(requestParameters: Map<String, String>)
 
-      public fun requestTemplates(requestTemplates: IResolvable) {
-      }
+      public fun requestTemplates(requestTemplates: IResolvable)
 
-      public fun requestTemplates(requestTemplates: Map<String, String>) {
-      }
+      public fun requestTemplates(requestTemplates: Map<String, String>)
 
-      public fun timeoutInMillis(timeoutInMillis: Number) {
-      }
+      public fun timeoutInMillis(timeoutInMillis: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun uri(uri: String) {
-      }
+      public fun uri(uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -469,71 +428,71 @@ public open class CfnMethod internal constructor(
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty.builder()
 
-      public override fun cacheKeyParameters(cacheKeyParameters: List<String>) {
+      override fun cacheKeyParameters(cacheKeyParameters: List<String>) {
         cdkBuilder.cacheKeyParameters(cacheKeyParameters)
       }
 
-      public override fun cacheNamespace(cacheNamespace: String) {
+      override fun cacheNamespace(cacheNamespace: String) {
         cdkBuilder.cacheNamespace(cacheNamespace)
       }
 
-      public override fun connectionId(connectionId: String) {
+      override fun connectionId(connectionId: String) {
         cdkBuilder.connectionId(connectionId)
       }
 
-      public override fun connectionType(connectionType: String) {
+      override fun connectionType(connectionType: String) {
         cdkBuilder.connectionType(connectionType)
       }
 
-      public override fun contentHandling(contentHandling: String) {
+      override fun contentHandling(contentHandling: String) {
         cdkBuilder.contentHandling(contentHandling)
       }
 
-      public override fun credentials(credentials: String) {
+      override fun credentials(credentials: String) {
         cdkBuilder.credentials(credentials)
       }
 
-      public override fun integrationHttpMethod(integrationHttpMethod: String) {
+      override fun integrationHttpMethod(integrationHttpMethod: String) {
         cdkBuilder.integrationHttpMethod(integrationHttpMethod)
       }
 
-      public override fun integrationResponses(integrationResponses: IResolvable) {
+      override fun integrationResponses(integrationResponses: IResolvable) {
         cdkBuilder.integrationResponses(integrationResponses.let(IResolvable::unwrap))
       }
 
-      public override fun integrationResponses(integrationResponses: List<Any>) {
+      override fun integrationResponses(integrationResponses: List<Any>) {
         cdkBuilder.integrationResponses(integrationResponses)
       }
 
-      public override fun passthroughBehavior(passthroughBehavior: String) {
+      override fun passthroughBehavior(passthroughBehavior: String) {
         cdkBuilder.passthroughBehavior(passthroughBehavior)
       }
 
-      public override fun requestParameters(requestParameters: IResolvable) {
+      override fun requestParameters(requestParameters: IResolvable) {
         cdkBuilder.requestParameters(requestParameters.let(IResolvable::unwrap))
       }
 
-      public override fun requestParameters(requestParameters: Map<String, String>) {
+      override fun requestParameters(requestParameters: Map<String, String>) {
         cdkBuilder.requestParameters(requestParameters)
       }
 
-      public override fun requestTemplates(requestTemplates: IResolvable) {
+      override fun requestTemplates(requestTemplates: IResolvable) {
         cdkBuilder.requestTemplates(requestTemplates.let(IResolvable::unwrap))
       }
 
-      public override fun requestTemplates(requestTemplates: Map<String, String>) {
+      override fun requestTemplates(requestTemplates: Map<String, String>) {
         cdkBuilder.requestTemplates(requestTemplates)
       }
 
-      public override fun timeoutInMillis(timeoutInMillis: Number) {
+      override fun timeoutInMillis(timeoutInMillis: Number) {
         cdkBuilder.timeoutInMillis(timeoutInMillis)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun uri(uri: String) {
+      override fun uri(uri: String) {
         cdkBuilder.uri(uri)
       }
 
@@ -545,34 +504,34 @@ public open class CfnMethod internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty,
     ) : IntegrationProperty {
-      public override fun cacheKeyParameters(): List<String> = unwrap(this).getCacheKeyParameters()
-          ?: emptyList()
+      override fun cacheKeyParameters(): List<String> = unwrap(this).getCacheKeyParameters() ?:
+          emptyList()
 
-      public override fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
+      override fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
 
-      public override fun connectionId(): String? = unwrap(this).getConnectionId()
+      override fun connectionId(): String? = unwrap(this).getConnectionId()
 
-      public override fun connectionType(): String? = unwrap(this).getConnectionType()
+      override fun connectionType(): String? = unwrap(this).getConnectionType()
 
-      public override fun contentHandling(): String? = unwrap(this).getContentHandling()
+      override fun contentHandling(): String? = unwrap(this).getContentHandling()
 
-      public override fun credentials(): String? = unwrap(this).getCredentials()
+      override fun credentials(): String? = unwrap(this).getCredentials()
 
-      public override fun integrationHttpMethod(): String? = unwrap(this).getIntegrationHttpMethod()
+      override fun integrationHttpMethod(): String? = unwrap(this).getIntegrationHttpMethod()
 
-      public override fun integrationResponses(): Any? = unwrap(this).getIntegrationResponses()
+      override fun integrationResponses(): Any? = unwrap(this).getIntegrationResponses()
 
-      public override fun passthroughBehavior(): String? = unwrap(this).getPassthroughBehavior()
+      override fun passthroughBehavior(): String? = unwrap(this).getPassthroughBehavior()
 
-      public override fun requestParameters(): Any? = unwrap(this).getRequestParameters()
+      override fun requestParameters(): Any? = unwrap(this).getRequestParameters()
 
-      public override fun requestTemplates(): Any? = unwrap(this).getRequestTemplates()
+      override fun requestTemplates(): Any? = unwrap(this).getRequestTemplates()
 
-      public override fun timeoutInMillis(): Number? = unwrap(this).getTimeoutInMillis()
+      override fun timeoutInMillis(): Number? = unwrap(this).getTimeoutInMillis()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun uri(): String? = unwrap(this).getUri()
+      override fun uri(): String? = unwrap(this).getUri()
     }
 
     public companion object {
@@ -607,26 +566,19 @@ public open class CfnMethod internal constructor(
     public fun statusCode(): String
 
     public interface Builder {
-      public fun contentHandling(contentHandling: String) {
-      }
+      public fun contentHandling(contentHandling: String)
 
-      public fun responseParameters(responseParameters: IResolvable) {
-      }
+      public fun responseParameters(responseParameters: IResolvable)
 
-      public fun responseParameters(responseParameters: Map<String, String>) {
-      }
+      public fun responseParameters(responseParameters: Map<String, String>)
 
-      public fun responseTemplates(responseTemplates: IResolvable) {
-      }
+      public fun responseTemplates(responseTemplates: IResolvable)
 
-      public fun responseTemplates(responseTemplates: Map<String, String>) {
-      }
+      public fun responseTemplates(responseTemplates: Map<String, String>)
 
-      public fun selectionPattern(selectionPattern: String) {
-      }
+      public fun selectionPattern(selectionPattern: String)
 
-      public fun statusCode(statusCode: String) {
-      }
+      public fun statusCode(statusCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -634,31 +586,31 @@ public open class CfnMethod internal constructor(
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty.builder()
 
-      public override fun contentHandling(contentHandling: String) {
+      override fun contentHandling(contentHandling: String) {
         cdkBuilder.contentHandling(contentHandling)
       }
 
-      public override fun responseParameters(responseParameters: IResolvable) {
+      override fun responseParameters(responseParameters: IResolvable) {
         cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
       }
 
-      public override fun responseParameters(responseParameters: Map<String, String>) {
+      override fun responseParameters(responseParameters: Map<String, String>) {
         cdkBuilder.responseParameters(responseParameters)
       }
 
-      public override fun responseTemplates(responseTemplates: IResolvable) {
+      override fun responseTemplates(responseTemplates: IResolvable) {
         cdkBuilder.responseTemplates(responseTemplates.let(IResolvable::unwrap))
       }
 
-      public override fun responseTemplates(responseTemplates: Map<String, String>) {
+      override fun responseTemplates(responseTemplates: Map<String, String>) {
         cdkBuilder.responseTemplates(responseTemplates)
       }
 
-      public override fun selectionPattern(selectionPattern: String) {
+      override fun selectionPattern(selectionPattern: String) {
         cdkBuilder.selectionPattern(selectionPattern)
       }
 
-      public override fun statusCode(statusCode: String) {
+      override fun statusCode(statusCode: String) {
         cdkBuilder.statusCode(statusCode)
       }
 
@@ -671,15 +623,15 @@ public open class CfnMethod internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty,
     ) : IntegrationResponseProperty {
-      public override fun contentHandling(): String? = unwrap(this).getContentHandling()
+      override fun contentHandling(): String? = unwrap(this).getContentHandling()
 
-      public override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
+      override fun responseParameters(): Any? = unwrap(this).getResponseParameters()
 
-      public override fun responseTemplates(): Any? = unwrap(this).getResponseTemplates()
+      override fun responseTemplates(): Any? = unwrap(this).getResponseTemplates()
 
-      public override fun selectionPattern(): String? = unwrap(this).getSelectionPattern()
+      override fun selectionPattern(): String? = unwrap(this).getSelectionPattern()
 
-      public override fun statusCode(): String = unwrap(this).getStatusCode()
+      override fun statusCode(): String = unwrap(this).getStatusCode()
     }
 
     public companion object {

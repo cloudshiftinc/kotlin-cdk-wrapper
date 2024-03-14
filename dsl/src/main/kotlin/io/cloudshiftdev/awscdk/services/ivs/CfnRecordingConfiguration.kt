@@ -99,51 +99,38 @@ public open class CfnRecordingConfiguration internal constructor(
       thumbnailConfiguration(ThumbnailConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun destinationConfiguration(destinationConfiguration: IResolvable) {
-    }
+    public fun destinationConfiguration(destinationConfiguration: IResolvable)
 
-    public
-        fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty) {
-    }
+    public fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("60d407aa52af6315fb1a25da2154bbca3bc18a842da6c107df7f70a70267d611")
     public
-        fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun recordingReconnectWindowSeconds(recordingReconnectWindowSeconds: Number) {
-    }
+    public fun recordingReconnectWindowSeconds(recordingReconnectWindowSeconds: Number)
 
-    public fun renditionConfiguration(renditionConfiguration: IResolvable) {
-    }
+    public fun renditionConfiguration(renditionConfiguration: IResolvable)
 
-    public fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty) {
-    }
+    public fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4293250e20969ee1d8871f0ac5697aea6481c930d08da9419416730803c5c5e1")
     public
-        fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
-    }
+    public fun thumbnailConfiguration(thumbnailConfiguration: IResolvable)
 
-    public fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty) {
-    }
+    public fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b4057fa8d0b9a6fb3c9537c51e3b0b34b433634c0beaa0966bd68e04cdf83fe")
     public
-        fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -153,60 +140,58 @@ public open class CfnRecordingConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.Builder =
         software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.Builder.create(scope, id)
 
-    public override fun destinationConfiguration(destinationConfiguration: IResolvable) {
+    override fun destinationConfiguration(destinationConfiguration: IResolvable) {
       cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty) {
       cdkBuilder.destinationConfiguration(destinationConfiguration.let(DestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("60d407aa52af6315fb1a25da2154bbca3bc18a842da6c107df7f70a70267d611")
-    public override
+    override
         fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty.Builder.() -> Unit):
         Unit = destinationConfiguration(DestinationConfigurationProperty(destinationConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun recordingReconnectWindowSeconds(recordingReconnectWindowSeconds: Number) {
+    override fun recordingReconnectWindowSeconds(recordingReconnectWindowSeconds: Number) {
       cdkBuilder.recordingReconnectWindowSeconds(recordingReconnectWindowSeconds)
     }
 
-    public override fun renditionConfiguration(renditionConfiguration: IResolvable) {
+    override fun renditionConfiguration(renditionConfiguration: IResolvable) {
       cdkBuilder.renditionConfiguration(renditionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty) {
+    override fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty) {
       cdkBuilder.renditionConfiguration(renditionConfiguration.let(RenditionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4293250e20969ee1d8871f0ac5697aea6481c930d08da9419416730803c5c5e1")
-    public override
+    override
         fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty.Builder.() -> Unit):
         Unit = renditionConfiguration(RenditionConfigurationProperty(renditionConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
+    override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
       cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty) {
+    override fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty) {
       cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(ThumbnailConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b4057fa8d0b9a6fb3c9537c51e3b0b34b433634c0beaa0966bd68e04cdf83fe")
-    public override
+    override
         fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty.Builder.() -> Unit):
         Unit = thumbnailConfiguration(ThumbnailConfigurationProperty(thumbnailConfiguration))
 
@@ -245,17 +230,13 @@ public open class CfnRecordingConfiguration internal constructor(
     public fun targetIntervalSeconds(): Number? = unwrap(this).getTargetIntervalSeconds()
 
     public interface Builder {
-      public fun recordingMode(recordingMode: String) {
-      }
+      public fun recordingMode(recordingMode: String)
 
-      public fun resolution(resolution: String) {
-      }
+      public fun resolution(resolution: String)
 
-      public fun storage(storage: List<String>) {
-      }
+      public fun storage(storage: List<String>)
 
-      public fun targetIntervalSeconds(targetIntervalSeconds: Number) {
-      }
+      public fun targetIntervalSeconds(targetIntervalSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -264,19 +245,19 @@ public open class CfnRecordingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty.builder()
 
-      public override fun recordingMode(recordingMode: String) {
+      override fun recordingMode(recordingMode: String) {
         cdkBuilder.recordingMode(recordingMode)
       }
 
-      public override fun resolution(resolution: String) {
+      override fun resolution(resolution: String) {
         cdkBuilder.resolution(resolution)
       }
 
-      public override fun storage(storage: List<String>) {
+      override fun storage(storage: List<String>) {
         cdkBuilder.storage(storage)
       }
 
-      public override fun targetIntervalSeconds(targetIntervalSeconds: Number) {
+      override fun targetIntervalSeconds(targetIntervalSeconds: Number) {
         cdkBuilder.targetIntervalSeconds(targetIntervalSeconds)
       }
 
@@ -289,13 +270,13 @@ public open class CfnRecordingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty,
     ) : ThumbnailConfigurationProperty {
-      public override fun recordingMode(): String? = unwrap(this).getRecordingMode()
+      override fun recordingMode(): String? = unwrap(this).getRecordingMode()
 
-      public override fun resolution(): String? = unwrap(this).getResolution()
+      override fun resolution(): String? = unwrap(this).getResolution()
 
-      public override fun storage(): List<String> = unwrap(this).getStorage() ?: emptyList()
+      override fun storage(): List<String> = unwrap(this).getStorage() ?: emptyList()
 
-      public override fun targetIntervalSeconds(): Number? = unwrap(this).getTargetIntervalSeconds()
+      override fun targetIntervalSeconds(): Number? = unwrap(this).getTargetIntervalSeconds()
     }
 
     public companion object {
@@ -324,11 +305,9 @@ public open class CfnRecordingConfiguration internal constructor(
     public fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
 
     public interface Builder {
-      public fun renditionSelection(renditionSelection: String) {
-      }
+      public fun renditionSelection(renditionSelection: String)
 
-      public fun renditions(renditions: List<String>) {
-      }
+      public fun renditions(renditions: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -337,11 +316,11 @@ public open class CfnRecordingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty.builder()
 
-      public override fun renditionSelection(renditionSelection: String) {
+      override fun renditionSelection(renditionSelection: String) {
         cdkBuilder.renditionSelection(renditionSelection)
       }
 
-      public override fun renditions(renditions: List<String>) {
+      override fun renditions(renditions: List<String>) {
         cdkBuilder.renditions(renditions)
       }
 
@@ -354,9 +333,9 @@ public open class CfnRecordingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty,
     ) : RenditionConfigurationProperty {
-      public override fun renditionSelection(): String? = unwrap(this).getRenditionSelection()
+      override fun renditionSelection(): String? = unwrap(this).getRenditionSelection()
 
-      public override fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
+      override fun renditions(): List<String> = unwrap(this).getRenditions() ?: emptyList()
     }
 
     public companion object {
@@ -383,8 +362,7 @@ public open class CfnRecordingConfiguration internal constructor(
     public fun bucketName(): String
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -393,7 +371,7 @@ public open class CfnRecordingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
@@ -406,7 +384,7 @@ public open class CfnRecordingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty,
     ) : S3DestinationConfigurationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
     }
 
     public companion object {
@@ -434,16 +412,13 @@ public open class CfnRecordingConfiguration internal constructor(
     public fun s3(): Any? = unwrap(this).getS3()
 
     public interface Builder {
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3DestinationConfigurationProperty) {
-      }
+      public fun s3(s3: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a6ad42ab79105fc24c2341e6d6a65a26eefa911bae8021e12fd5343174471510")
-      public fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -452,17 +427,17 @@ public open class CfnRecordingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty.builder()
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3DestinationConfigurationProperty) {
+      override fun s3(s3: S3DestinationConfigurationProperty) {
         cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a6ad42ab79105fc24c2341e6d6a65a26eefa911bae8021e12fd5343174471510")
-      public override fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit): Unit =
           s3(S3DestinationConfigurationProperty(s3))
 
       public fun build():
@@ -474,7 +449,7 @@ public open class CfnRecordingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty,
     ) : DestinationConfigurationProperty {
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
     }
 
     public companion object {

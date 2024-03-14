@@ -19,23 +19,17 @@ public interface ApplyCloudFormationInitOptions {
   public fun printLog(): Boolean? = unwrap(this).getPrintLog()
 
   public interface Builder {
-    public fun configSets(configSets: List<String>) {
-    }
+    public fun configSets(configSets: List<String>)
 
-    public fun embedFingerprint(embedFingerprint: Boolean) {
-    }
+    public fun embedFingerprint(embedFingerprint: Boolean)
 
-    public fun ignoreFailures(ignoreFailures: Boolean) {
-    }
+    public fun ignoreFailures(ignoreFailures: Boolean)
 
-    public fun includeRole(includeRole: Boolean) {
-    }
+    public fun includeRole(includeRole: Boolean)
 
-    public fun includeUrl(includeUrl: Boolean) {
-    }
+    public fun includeUrl(includeUrl: Boolean)
 
-    public fun printLog(printLog: Boolean) {
-    }
+    public fun printLog(printLog: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -43,27 +37,27 @@ public interface ApplyCloudFormationInitOptions {
         software.amazon.awscdk.services.autoscaling.ApplyCloudFormationInitOptions.Builder =
         software.amazon.awscdk.services.autoscaling.ApplyCloudFormationInitOptions.builder()
 
-    public override fun configSets(configSets: List<String>) {
+    override fun configSets(configSets: List<String>) {
       cdkBuilder.configSets(configSets)
     }
 
-    public override fun embedFingerprint(embedFingerprint: Boolean) {
+    override fun embedFingerprint(embedFingerprint: Boolean) {
       cdkBuilder.embedFingerprint(embedFingerprint)
     }
 
-    public override fun ignoreFailures(ignoreFailures: Boolean) {
+    override fun ignoreFailures(ignoreFailures: Boolean) {
       cdkBuilder.ignoreFailures(ignoreFailures)
     }
 
-    public override fun includeRole(includeRole: Boolean) {
+    override fun includeRole(includeRole: Boolean) {
       cdkBuilder.includeRole(includeRole)
     }
 
-    public override fun includeUrl(includeUrl: Boolean) {
+    override fun includeUrl(includeUrl: Boolean) {
       cdkBuilder.includeUrl(includeUrl)
     }
 
-    public override fun printLog(printLog: Boolean) {
+    override fun printLog(printLog: Boolean) {
       cdkBuilder.printLog(printLog)
     }
 
@@ -75,17 +69,17 @@ public interface ApplyCloudFormationInitOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.autoscaling.ApplyCloudFormationInitOptions,
   ) : ApplyCloudFormationInitOptions {
-    public override fun configSets(): List<String> = unwrap(this).getConfigSets() ?: emptyList()
+    override fun configSets(): List<String> = unwrap(this).getConfigSets() ?: emptyList()
 
-    public override fun embedFingerprint(): Boolean? = unwrap(this).getEmbedFingerprint()
+    override fun embedFingerprint(): Boolean? = unwrap(this).getEmbedFingerprint()
 
-    public override fun ignoreFailures(): Boolean? = unwrap(this).getIgnoreFailures()
+    override fun ignoreFailures(): Boolean? = unwrap(this).getIgnoreFailures()
 
-    public override fun includeRole(): Boolean? = unwrap(this).getIncludeRole()
+    override fun includeRole(): Boolean? = unwrap(this).getIncludeRole()
 
-    public override fun includeUrl(): Boolean? = unwrap(this).getIncludeUrl()
+    override fun includeUrl(): Boolean? = unwrap(this).getIncludeUrl()
 
-    public override fun printLog(): Boolean? = unwrap(this).getPrintLog()
+    override fun printLog(): Boolean? = unwrap(this).getPrintLog()
   }
 
   public companion object {

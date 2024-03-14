@@ -14,50 +14,44 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
   public fun targetGroup(): ApplicationTargetGroup
 
   public interface Builder {
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-    }
+    public fun disableScaleIn(disableScaleIn: Boolean)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun requestsPerTarget(requestsPerTarget: Number) {
-    }
+    public fun requestsPerTarget(requestsPerTarget: Number)
 
-    public fun scaleInCooldown(scaleInCooldown: Duration) {
-    }
+    public fun scaleInCooldown(scaleInCooldown: Duration)
 
-    public fun scaleOutCooldown(scaleOutCooldown: Duration) {
-    }
+    public fun scaleOutCooldown(scaleOutCooldown: Duration)
 
-    public fun targetGroup(targetGroup: ApplicationTargetGroup) {
-    }
+    public fun targetGroup(targetGroup: ApplicationTargetGroup)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.RequestCountScalingProps.Builder =
         software.amazon.awscdk.services.ecs.RequestCountScalingProps.builder()
 
-    public override fun disableScaleIn(disableScaleIn: Boolean) {
+    override fun disableScaleIn(disableScaleIn: Boolean) {
       cdkBuilder.disableScaleIn(disableScaleIn)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun requestsPerTarget(requestsPerTarget: Number) {
+    override fun requestsPerTarget(requestsPerTarget: Number) {
       cdkBuilder.requestsPerTarget(requestsPerTarget)
     }
 
-    public override fun scaleInCooldown(scaleInCooldown: Duration) {
+    override fun scaleInCooldown(scaleInCooldown: Duration) {
       cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
     }
 
-    public override fun scaleOutCooldown(scaleOutCooldown: Duration) {
+    override fun scaleOutCooldown(scaleOutCooldown: Duration) {
       cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
     }
 
-    public override fun targetGroup(targetGroup: ApplicationTargetGroup) {
+    override fun targetGroup(targetGroup: ApplicationTargetGroup) {
       cdkBuilder.targetGroup(targetGroup.let(ApplicationTargetGroup::unwrap))
     }
 
@@ -68,19 +62,19 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.RequestCountScalingProps,
   ) : RequestCountScalingProps {
-    public override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
+    override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
 
-    public override fun policyName(): String? = unwrap(this).getPolicyName()
+    override fun policyName(): String? = unwrap(this).getPolicyName()
 
-    public override fun requestsPerTarget(): Number = unwrap(this).getRequestsPerTarget()
+    override fun requestsPerTarget(): Number = unwrap(this).getRequestsPerTarget()
 
-    public override fun scaleInCooldown(): Duration? =
+    override fun scaleInCooldown(): Duration? =
         unwrap(this).getScaleInCooldown()?.let(Duration::wrap)
 
-    public override fun scaleOutCooldown(): Duration? =
+    override fun scaleOutCooldown(): Duration? =
         unwrap(this).getScaleOutCooldown()?.let(Duration::wrap)
 
-    public override fun targetGroup(): ApplicationTargetGroup =
+    override fun targetGroup(): ApplicationTargetGroup =
         unwrap(this).getTargetGroup().let(ApplicationTargetGroup::wrap)
   }
 

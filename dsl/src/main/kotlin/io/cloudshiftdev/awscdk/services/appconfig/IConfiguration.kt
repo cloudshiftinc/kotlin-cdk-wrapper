@@ -33,32 +33,30 @@ public interface IConfiguration : IConstruct {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.IConfiguration,
   ) : IConfiguration {
-    public override fun application(): IApplication =
-        unwrap(this).getApplication().let(IApplication::wrap)
+    override fun application(): IApplication = unwrap(this).getApplication().let(IApplication::wrap)
 
-    public override fun configurationProfileId(): String = unwrap(this).getConfigurationProfileId()
+    override fun configurationProfileId(): String = unwrap(this).getConfigurationProfileId()
 
-    public override fun deployTo(): List<IEnvironment> =
+    override fun deployTo(): List<IEnvironment> =
         unwrap(this).getDeployTo()?.map(IEnvironment::wrap) ?: emptyList()
 
-    public override fun deploymentKey(): IKey? = unwrap(this).getDeploymentKey()?.let(IKey::wrap)
+    override fun deploymentKey(): IKey? = unwrap(this).getDeploymentKey()?.let(IKey::wrap)
 
-    public override fun deploymentStrategy(): IDeploymentStrategy? =
+    override fun deploymentStrategy(): IDeploymentStrategy? =
         unwrap(this).getDeploymentStrategy()?.let(IDeploymentStrategy::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun type(): ConfigurationType? =
-        unwrap(this).getType()?.let(ConfigurationType::wrap)
+    override fun type(): ConfigurationType? = unwrap(this).getType()?.let(ConfigurationType::wrap)
 
-    public override fun validators(): List<IValidator> =
+    override fun validators(): List<IValidator> =
         unwrap(this).getValidators()?.map(IValidator::wrap) ?: emptyList()
 
-    public override fun versionNumber(): String? = unwrap(this).getVersionNumber()
+    override fun versionNumber(): String? = unwrap(this).getVersionNumber()
   }
 
   public companion object {

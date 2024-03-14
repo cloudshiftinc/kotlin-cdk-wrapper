@@ -105,44 +105,31 @@ public open class CfnDBInstance internal constructor(
   }
 
   public interface Builder {
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun caCertificateIdentifier(caCertificateIdentifier: String) {
-    }
+    public fun caCertificateIdentifier(caCertificateIdentifier: String)
 
-    public fun certificateRotationRestart(certificateRotationRestart: Boolean) {
-    }
+    public fun certificateRotationRestart(certificateRotationRestart: Boolean)
 
-    public fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
-    }
+    public fun certificateRotationRestart(certificateRotationRestart: IResolvable)
 
-    public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-    }
+    public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
-    public fun dbInstanceClass(dbInstanceClass: String) {
-    }
+    public fun dbInstanceClass(dbInstanceClass: String)
 
-    public fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
-    }
+    public fun dbInstanceIdentifier(dbInstanceIdentifier: String)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -152,55 +139,55 @@ public open class CfnDBInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdb.CfnDBInstance.Builder =
         software.amazon.awscdk.services.docdb.CfnDBInstance.Builder.create(scope, id)
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun caCertificateIdentifier(caCertificateIdentifier: String) {
+    override fun caCertificateIdentifier(caCertificateIdentifier: String) {
       cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
     }
 
-    public override fun certificateRotationRestart(certificateRotationRestart: Boolean) {
+    override fun certificateRotationRestart(certificateRotationRestart: Boolean) {
       cdkBuilder.certificateRotationRestart(certificateRotationRestart)
     }
 
-    public override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
+    override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
       cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable::unwrap))
     }
 
-    public override fun dbClusterIdentifier(dbClusterIdentifier: String) {
+    override fun dbClusterIdentifier(dbClusterIdentifier: String) {
       cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
     }
 
-    public override fun dbInstanceClass(dbInstanceClass: String) {
+    override fun dbInstanceClass(dbInstanceClass: String) {
       cdkBuilder.dbInstanceClass(dbInstanceClass)
     }
 
-    public override fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
+    override fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
       cdkBuilder.dbInstanceIdentifier(dbInstanceIdentifier)
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable::unwrap))
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

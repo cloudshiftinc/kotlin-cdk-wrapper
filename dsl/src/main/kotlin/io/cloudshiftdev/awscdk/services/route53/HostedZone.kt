@@ -33,20 +33,15 @@ public open class HostedZone internal constructor(
   public override fun zoneName(): String = unwrap(this).getZoneName()
 
   public interface Builder {
-    public fun addTrailingDot(addTrailingDot: Boolean) {
-    }
+    public fun addTrailingDot(addTrailingDot: Boolean)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
-    }
+    public fun queryLogsLogGroupArn(queryLogsLogGroupArn: String)
 
-    public fun vpcs(vpcs: List<IVpc>) {
-    }
+    public fun vpcs(vpcs: List<IVpc>)
 
-    public fun zoneName(zoneName: String) {
-    }
+    public fun zoneName(zoneName: String)
   }
 
   private class BuilderImpl(
@@ -56,23 +51,23 @@ public open class HostedZone internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.HostedZone.Builder =
         software.amazon.awscdk.services.route53.HostedZone.Builder.create(scope, id)
 
-    public override fun addTrailingDot(addTrailingDot: Boolean) {
+    override fun addTrailingDot(addTrailingDot: Boolean) {
       cdkBuilder.addTrailingDot(addTrailingDot)
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
+    override fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
       cdkBuilder.queryLogsLogGroupArn(queryLogsLogGroupArn)
     }
 
-    public override fun vpcs(vpcs: List<IVpc>) {
+    override fun vpcs(vpcs: List<IVpc>) {
       cdkBuilder.vpcs(vpcs.map(IVpc::unwrap))
     }
 
-    public override fun zoneName(zoneName: String) {
+    override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)
     }
 

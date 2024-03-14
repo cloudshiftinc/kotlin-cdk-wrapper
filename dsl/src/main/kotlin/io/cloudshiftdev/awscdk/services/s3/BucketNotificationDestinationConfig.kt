@@ -14,14 +14,11 @@ public interface BucketNotificationDestinationConfig {
   public fun type(): BucketNotificationDestinationType
 
   public interface Builder {
-    public fun arn(arn: String) {
-    }
+    public fun arn(arn: String)
 
-    public fun dependencies(dependencies: List<IDependable>) {
-    }
+    public fun dependencies(dependencies: List<IDependable>)
 
-    public fun type(type: BucketNotificationDestinationType) {
-    }
+    public fun type(type: BucketNotificationDestinationType)
   }
 
   private class BuilderImpl : Builder {
@@ -29,15 +26,15 @@ public interface BucketNotificationDestinationConfig {
         software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig.Builder =
         software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig.builder()
 
-    public override fun arn(arn: String) {
+    override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
-    public override fun dependencies(dependencies: List<IDependable>) {
+    override fun dependencies(dependencies: List<IDependable>) {
       cdkBuilder.dependencies(dependencies.map(IDependable::unwrap))
     }
 
-    public override fun type(type: BucketNotificationDestinationType) {
+    override fun type(type: BucketNotificationDestinationType) {
       cdkBuilder.type(type.let(BucketNotificationDestinationType::unwrap))
     }
 
@@ -48,12 +45,12 @@ public interface BucketNotificationDestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig,
   ) : BucketNotificationDestinationConfig {
-    public override fun arn(): String = unwrap(this).getArn()
+    override fun arn(): String = unwrap(this).getArn()
 
-    public override fun dependencies(): List<IDependable> =
+    override fun dependencies(): List<IDependable> =
         unwrap(this).getDependencies()?.map(IDependable::wrap) ?: emptyList()
 
-    public override fun type(): BucketNotificationDestinationType =
+    override fun type(): BucketNotificationDestinationType =
         unwrap(this).getType().let(BucketNotificationDestinationType::wrap)
   }
 

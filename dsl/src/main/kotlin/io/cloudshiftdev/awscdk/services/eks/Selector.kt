@@ -10,22 +10,20 @@ public interface Selector {
   public fun namespace(): String
 
   public interface Builder {
-    public fun labels(labels: Map<String, String>) {
-    }
+    public fun labels(labels: Map<String, String>)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.Selector.Builder =
         software.amazon.awscdk.services.eks.Selector.builder()
 
-    public override fun labels(labels: Map<String, String>) {
+    override fun labels(labels: Map<String, String>) {
       cdkBuilder.labels(labels)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
@@ -35,9 +33,9 @@ public interface Selector {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.Selector,
   ) : Selector {
-    public override fun labels(): Map<String, String> = unwrap(this).getLabels() ?: emptyMap()
+    override fun labels(): Map<String, String> = unwrap(this).getLabels() ?: emptyMap()
 
-    public override fun namespace(): String = unwrap(this).getNamespace()
+    override fun namespace(): String = unwrap(this).getNamespace()
   }
 
   public companion object {

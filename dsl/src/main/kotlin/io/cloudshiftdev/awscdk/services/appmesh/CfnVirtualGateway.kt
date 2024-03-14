@@ -82,28 +82,21 @@ public open class CfnVirtualGateway internal constructor(
   }
 
   public interface Builder {
-    public fun meshName(meshName: String) {
-    }
+    public fun meshName(meshName: String)
 
-    public fun meshOwner(meshOwner: String) {
-    }
+    public fun meshOwner(meshOwner: String)
 
-    public fun spec(spec: IResolvable) {
-    }
+    public fun spec(spec: IResolvable)
 
-    public fun spec(spec: VirtualGatewaySpecProperty) {
-    }
+    public fun spec(spec: VirtualGatewaySpecProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("094bb9fb45cd48eb4c6e5ae3a26fad70117ef541162b6d88b9be58fdb278c487")
-    public fun spec(spec: VirtualGatewaySpecProperty.Builder.() -> Unit) {
-    }
+    public fun spec(spec: VirtualGatewaySpecProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun virtualGatewayName(virtualGatewayName: String) {
-    }
+    public fun virtualGatewayName(virtualGatewayName: String)
   }
 
   private class BuilderImpl(
@@ -113,32 +106,32 @@ public open class CfnVirtualGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.Builder =
         software.amazon.awscdk.services.appmesh.CfnVirtualGateway.Builder.create(scope, id)
 
-    public override fun meshName(meshName: String) {
+    override fun meshName(meshName: String) {
       cdkBuilder.meshName(meshName)
     }
 
-    public override fun meshOwner(meshOwner: String) {
+    override fun meshOwner(meshOwner: String) {
       cdkBuilder.meshOwner(meshOwner)
     }
 
-    public override fun spec(spec: IResolvable) {
+    override fun spec(spec: IResolvable) {
       cdkBuilder.spec(spec.let(IResolvable::unwrap))
     }
 
-    public override fun spec(spec: VirtualGatewaySpecProperty) {
+    override fun spec(spec: VirtualGatewaySpecProperty) {
       cdkBuilder.spec(spec.let(VirtualGatewaySpecProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("094bb9fb45cd48eb4c6e5ae3a26fad70117ef541162b6d88b9be58fdb278c487")
-    public override fun spec(spec: VirtualGatewaySpecProperty.Builder.() -> Unit): Unit =
+    override fun spec(spec: VirtualGatewaySpecProperty.Builder.() -> Unit): Unit =
         spec(VirtualGatewaySpecProperty(spec))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun virtualGatewayName(virtualGatewayName: String) {
+    override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)
     }
 
@@ -175,39 +168,29 @@ public open class CfnVirtualGateway internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun acm(acm: IResolvable) {
-      }
+      public fun acm(acm: IResolvable)
 
-      public fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty) {
-      }
+      public fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("955a2e7dfe97a7d269bf8d0bf307c405bfd93e80de5e9caa5da1a7d3fef06a12")
-      public fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty.Builder.() -> Unit)
 
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
-      }
+      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a7010dda9b3079e64cbb1104220ae67bcedc7ce4636d07acaf75cf2fe68f6e17")
-      public
-          fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
-      }
+      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b402b96a37c49380628f6ab0adc6c798705b3149f11690616a0c7a373ba825d4")
-      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -216,47 +199,45 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty.builder()
 
-      public override fun acm(acm: IResolvable) {
+      override fun acm(acm: IResolvable) {
         cdkBuilder.acm(acm.let(IResolvable::unwrap))
       }
 
-      public override fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty) {
+      override fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty) {
         cdkBuilder.acm(acm.let(VirtualGatewayListenerTlsAcmCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("955a2e7dfe97a7d269bf8d0bf307c405bfd93e80de5e9caa5da1a7d3fef06a12")
-      public override
-          fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty.Builder.() -> Unit): Unit =
-          acm(VirtualGatewayListenerTlsAcmCertificateProperty(acm))
+      override fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty.Builder.() -> Unit):
+          Unit = acm(VirtualGatewayListenerTlsAcmCertificateProperty(acm))
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
+      override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
         cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a7010dda9b3079e64cbb1104220ae67bcedc7ce4636d07acaf75cf2fe68f6e17")
-      public override
+      override
           fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit):
           Unit = `file`(VirtualGatewayListenerTlsFileCertificateProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
+      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
         cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b402b96a37c49380628f6ab0adc6c798705b3149f11690616a0c7a373ba825d4")
-      public override
-          fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit): Unit =
-          sds(VirtualGatewayListenerTlsSdsCertificateProperty(sds))
+      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit):
+          Unit = sds(VirtualGatewayListenerTlsSdsCertificateProperty(sds))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty
@@ -267,11 +248,11 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty,
     ) : VirtualGatewayListenerTlsCertificateProperty {
-      public override fun acm(): Any? = unwrap(this).getAcm()
+      override fun acm(): Any? = unwrap(this).getAcm()
 
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -303,34 +284,26 @@ public open class CfnVirtualGateway internal constructor(
     public fun logging(): Any? = unwrap(this).getLogging()
 
     public interface Builder {
-      public fun backendDefaults(backendDefaults: IResolvable) {
-      }
+      public fun backendDefaults(backendDefaults: IResolvable)
 
-      public fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty) {
-      }
+      public fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ee3d22885b2d139341c2aeba121cacb7ebe803c4c40f7a4a8da7c7eadf1c84a")
       public
-          fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty.Builder.() -> Unit) {
-      }
+          fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty.Builder.() -> Unit)
 
-      public fun listeners(listeners: IResolvable) {
-      }
+      public fun listeners(listeners: IResolvable)
 
-      public fun listeners(listeners: List<Any>) {
-      }
+      public fun listeners(listeners: List<Any>)
 
-      public fun logging(logging: IResolvable) {
-      }
+      public fun logging(logging: IResolvable)
 
-      public fun logging(logging: VirtualGatewayLoggingProperty) {
-      }
+      public fun logging(logging: VirtualGatewayLoggingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc43ec4ecdc5774b6458f4680f421067e260b060788cd997e0907a7ebe8c7d39")
-      public fun logging(logging: VirtualGatewayLoggingProperty.Builder.() -> Unit) {
-      }
+      public fun logging(logging: VirtualGatewayLoggingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -339,39 +312,39 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewaySpecProperty.builder()
 
-      public override fun backendDefaults(backendDefaults: IResolvable) {
+      override fun backendDefaults(backendDefaults: IResolvable) {
         cdkBuilder.backendDefaults(backendDefaults.let(IResolvable::unwrap))
       }
 
-      public override fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty) {
+      override fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty) {
         cdkBuilder.backendDefaults(backendDefaults.let(VirtualGatewayBackendDefaultsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ee3d22885b2d139341c2aeba121cacb7ebe803c4c40f7a4a8da7c7eadf1c84a")
-      public override
+      override
           fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty.Builder.() -> Unit):
           Unit = backendDefaults(VirtualGatewayBackendDefaultsProperty(backendDefaults))
 
-      public override fun listeners(listeners: IResolvable) {
+      override fun listeners(listeners: IResolvable) {
         cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
       }
 
-      public override fun listeners(listeners: List<Any>) {
+      override fun listeners(listeners: List<Any>) {
         cdkBuilder.listeners(listeners)
       }
 
-      public override fun logging(logging: IResolvable) {
+      override fun logging(logging: IResolvable) {
         cdkBuilder.logging(logging.let(IResolvable::unwrap))
       }
 
-      public override fun logging(logging: VirtualGatewayLoggingProperty) {
+      override fun logging(logging: VirtualGatewayLoggingProperty) {
         cdkBuilder.logging(logging.let(VirtualGatewayLoggingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc43ec4ecdc5774b6458f4680f421067e260b060788cd997e0907a7ebe8c7d39")
-      public override fun logging(logging: VirtualGatewayLoggingProperty.Builder.() -> Unit): Unit =
+      override fun logging(logging: VirtualGatewayLoggingProperty.Builder.() -> Unit): Unit =
           logging(VirtualGatewayLoggingProperty(logging))
 
       public fun build():
@@ -383,11 +356,11 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewaySpecProperty,
     ) : VirtualGatewaySpecProperty {
-      public override fun backendDefaults(): Any? = unwrap(this).getBackendDefaults()
+      override fun backendDefaults(): Any? = unwrap(this).getBackendDefaults()
 
-      public override fun listeners(): Any = unwrap(this).getListeners()
+      override fun listeners(): Any = unwrap(this).getListeners()
 
-      public override fun logging(): Any? = unwrap(this).getLogging()
+      override fun logging(): Any? = unwrap(this).getLogging()
     }
 
     public companion object {
@@ -416,14 +389,11 @@ public open class CfnVirtualGateway internal constructor(
     public fun text(): String? = unwrap(this).getText()
 
     public interface Builder {
-      public fun json(json: IResolvable) {
-      }
+      public fun json(json: IResolvable)
 
-      public fun json(json: List<Any>) {
-      }
+      public fun json(json: List<Any>)
 
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
     }
 
     private class BuilderImpl : Builder {
@@ -431,15 +401,15 @@ public open class CfnVirtualGateway internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty.builder()
 
-      public override fun json(json: IResolvable) {
+      override fun json(json: IResolvable) {
         cdkBuilder.json(json.let(IResolvable::unwrap))
       }
 
-      public override fun json(json: List<Any>) {
+      override fun json(json: List<Any>) {
         cdkBuilder.json(json)
       }
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
@@ -452,9 +422,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty,
     ) : LoggingFormatProperty {
-      public override fun json(): Any? = unwrap(this).getJson()
+      override fun json(): Any? = unwrap(this).getJson()
 
-      public override fun text(): String? = unwrap(this).getText()
+      override fun text(): String? = unwrap(this).getText()
     }
 
     public companion object {
@@ -483,11 +453,9 @@ public open class CfnVirtualGateway internal constructor(
     public fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
 
     public interface Builder {
-      public fun maxConnections(maxConnections: Number) {
-      }
+      public fun maxConnections(maxConnections: Number)
 
-      public fun maxPendingRequests(maxPendingRequests: Number) {
-      }
+      public fun maxPendingRequests(maxPendingRequests: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -496,11 +464,11 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty.builder()
 
-      public override fun maxConnections(maxConnections: Number) {
+      override fun maxConnections(maxConnections: Number) {
         cdkBuilder.maxConnections(maxConnections)
       }
 
-      public override fun maxPendingRequests(maxPendingRequests: Number) {
+      override fun maxPendingRequests(maxPendingRequests: Number) {
         cdkBuilder.maxPendingRequests(maxPendingRequests)
       }
 
@@ -513,9 +481,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty,
     ) : VirtualGatewayHttpConnectionPoolProperty {
-      public override fun maxConnections(): Number = unwrap(this).getMaxConnections()
+      override fun maxConnections(): Number = unwrap(this).getMaxConnections()
 
-      public override fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
+      override fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
     }
 
     public companion object {
@@ -547,39 +515,30 @@ public open class CfnVirtualGateway internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun acm(acm: IResolvable) {
-      }
+      public fun acm(acm: IResolvable)
 
-      public fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty) {
-      }
+      public fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5314e2221182f554e3066ad56d4734be3c0295254df3514e126a70adb977d6ab")
-      public fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty.Builder.() -> Unit) {
-      }
+      public fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty.Builder.() -> Unit)
 
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
-      }
+      public fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("acca65be2158b86d96fa276a3c6b39ef56598f53394d7c3d311ed0f5c14444f5")
       public
-          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit) {
-      }
+          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
-      }
+      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c854926e0fedfde0952e64ef90808f02cabe4f11b6b60801674473fd28c2cfe4")
-      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -588,47 +547,45 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty.builder()
 
-      public override fun acm(acm: IResolvable) {
+      override fun acm(acm: IResolvable) {
         cdkBuilder.acm(acm.let(IResolvable::unwrap))
       }
 
-      public override fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty) {
+      override fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty) {
         cdkBuilder.acm(acm.let(VirtualGatewayTlsValidationContextAcmTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5314e2221182f554e3066ad56d4734be3c0295254df3514e126a70adb977d6ab")
-      public override
-          fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty.Builder.() -> Unit): Unit
-          = acm(VirtualGatewayTlsValidationContextAcmTrustProperty(acm))
+      override fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty.Builder.() -> Unit):
+          Unit = acm(VirtualGatewayTlsValidationContextAcmTrustProperty(acm))
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
+      override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
         cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("acca65be2158b86d96fa276a3c6b39ef56598f53394d7c3d311ed0f5c14444f5")
-      public override
+      override
           fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit):
           Unit = `file`(VirtualGatewayTlsValidationContextFileTrustProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
+      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
         cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c854926e0fedfde0952e64ef90808f02cabe4f11b6b60801674473fd28c2cfe4")
-      public override
-          fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit): Unit
-          = sds(VirtualGatewayTlsValidationContextSdsTrustProperty(sds))
+      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit):
+          Unit = sds(VirtualGatewayTlsValidationContextSdsTrustProperty(sds))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty
@@ -639,11 +596,11 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty,
     ) : VirtualGatewayTlsValidationContextTrustProperty {
-      public override fun acm(): Any? = unwrap(this).getAcm()
+      override fun acm(): Any? = unwrap(this).getAcm()
 
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -671,8 +628,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun secretName(): String
 
     public interface Builder {
-      public fun secretName(secretName: String) {
-      }
+      public fun secretName(secretName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -681,7 +637,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
 
-      public override fun secretName(secretName: String) {
+      override fun secretName(secretName: String) {
         cdkBuilder.secretName(secretName)
       }
 
@@ -694,7 +650,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty,
     ) : VirtualGatewayTlsValidationContextSdsTrustProperty {
-      public override fun secretName(): String = unwrap(this).getSecretName()
+      override fun secretName(): String = unwrap(this).getSecretName()
     }
 
     public companion object {
@@ -722,16 +678,13 @@ public open class CfnVirtualGateway internal constructor(
     public fun `file`(): Any? = unwrap(this).getFile()
 
     public interface Builder {
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty) {
-      }
+      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f3121bb369a8d15cefa43e3b6240a991fbdfa32882bb1e89c72730747fbbe49")
-      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -740,18 +693,18 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty.builder()
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: VirtualGatewayFileAccessLogProperty) {
+      override fun `file`(`file`: VirtualGatewayFileAccessLogProperty) {
         cdkBuilder.`file`(`file`.let(VirtualGatewayFileAccessLogProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f3121bb369a8d15cefa43e3b6240a991fbdfa32882bb1e89c72730747fbbe49")
-      public override fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit):
-          Unit = `file`(VirtualGatewayFileAccessLogProperty(`file`))
+      override fun `file`(`file`: VirtualGatewayFileAccessLogProperty.Builder.() -> Unit): Unit =
+          `file`(VirtualGatewayFileAccessLogProperty(`file`))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
@@ -762,7 +715,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty,
     ) : VirtualGatewayAccessLogProperty {
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
     }
 
     public companion object {
@@ -801,26 +754,19 @@ public open class CfnVirtualGateway internal constructor(
     public fun unhealthyThreshold(): Number
 
     public interface Builder {
-      public fun healthyThreshold(healthyThreshold: Number) {
-      }
+      public fun healthyThreshold(healthyThreshold: Number)
 
-      public fun intervalMillis(intervalMillis: Number) {
-      }
+      public fun intervalMillis(intervalMillis: Number)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun timeoutMillis(timeoutMillis: Number) {
-      }
+      public fun timeoutMillis(timeoutMillis: Number)
 
-      public fun unhealthyThreshold(unhealthyThreshold: Number) {
-      }
+      public fun unhealthyThreshold(unhealthyThreshold: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -829,31 +775,31 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.builder()
 
-      public override fun healthyThreshold(healthyThreshold: Number) {
+      override fun healthyThreshold(healthyThreshold: Number) {
         cdkBuilder.healthyThreshold(healthyThreshold)
       }
 
-      public override fun intervalMillis(intervalMillis: Number) {
+      override fun intervalMillis(intervalMillis: Number) {
         cdkBuilder.intervalMillis(intervalMillis)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun timeoutMillis(timeoutMillis: Number) {
+      override fun timeoutMillis(timeoutMillis: Number) {
         cdkBuilder.timeoutMillis(timeoutMillis)
       }
 
-      public override fun unhealthyThreshold(unhealthyThreshold: Number) {
+      override fun unhealthyThreshold(unhealthyThreshold: Number) {
         cdkBuilder.unhealthyThreshold(unhealthyThreshold)
       }
 
@@ -866,19 +812,19 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty,
     ) : VirtualGatewayHealthCheckPolicyProperty {
-      public override fun healthyThreshold(): Number = unwrap(this).getHealthyThreshold()
+      override fun healthyThreshold(): Number = unwrap(this).getHealthyThreshold()
 
-      public override fun intervalMillis(): Number = unwrap(this).getIntervalMillis()
+      override fun intervalMillis(): Number = unwrap(this).getIntervalMillis()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun timeoutMillis(): Number = unwrap(this).getTimeoutMillis()
+      override fun timeoutMillis(): Number = unwrap(this).getTimeoutMillis()
 
-      public override fun unhealthyThreshold(): Number = unwrap(this).getUnhealthyThreshold()
+      override fun unhealthyThreshold(): Number = unwrap(this).getUnhealthyThreshold()
     }
 
     public companion object {
@@ -906,16 +852,13 @@ public open class CfnVirtualGateway internal constructor(
     public fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
 
     public interface Builder {
-      public fun clientPolicy(clientPolicy: IResolvable) {
-      }
+      public fun clientPolicy(clientPolicy: IResolvable)
 
-      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty) {
-      }
+      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a690241443363f80e1ed79e901ce310d93493a7b7f0c7575c6724a892480cf7")
-      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -924,17 +867,17 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty.builder()
 
-      public override fun clientPolicy(clientPolicy: IResolvable) {
+      override fun clientPolicy(clientPolicy: IResolvable) {
         cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty) {
+      override fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty) {
         cdkBuilder.clientPolicy(clientPolicy.let(VirtualGatewayClientPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a690241443363f80e1ed79e901ce310d93493a7b7f0c7575c6724a892480cf7")
-      public override
+      override
           fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty.Builder.() -> Unit):
           Unit = clientPolicy(VirtualGatewayClientPolicyProperty(clientPolicy))
 
@@ -947,7 +890,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty,
     ) : VirtualGatewayBackendDefaultsProperty {
-      public override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
+      override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
     }
 
     public companion object {
@@ -977,29 +920,23 @@ public open class CfnVirtualGateway internal constructor(
     public fun trust(): Any
 
     public interface Builder {
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
 
-      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d86a964ec948a76a692ee81b044ffab0a1f298dc0cf139e8ff41cea0d5c6e56b")
       public
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit) {
-      }
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
 
-      public fun trust(trust: IResolvable) {
-      }
+      public fun trust(trust: IResolvable)
 
-      public fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty) {
-      }
+      public fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c148b9e3778a689288c963548b5350d16829a1dacc1b95ccc54a944f2dbde3db")
       public
-          fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit) {
-      }
+          fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1008,32 +945,32 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty.builder()
 
-      public override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d86a964ec948a76a692ee81b044ffab0a1f298dc0cf139e8ff41cea0d5c6e56b")
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
           Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
 
-      public override fun trust(trust: IResolvable) {
+      override fun trust(trust: IResolvable) {
         cdkBuilder.trust(trust.let(IResolvable::unwrap))
       }
 
-      public override fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty) {
+      override fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty) {
         cdkBuilder.trust(trust.let(VirtualGatewayListenerTlsValidationContextTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c148b9e3778a689288c963548b5350d16829a1dacc1b95ccc54a944f2dbde3db")
-      public override
+      override
           fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty.Builder.() -> Unit):
           Unit = trust(VirtualGatewayListenerTlsValidationContextTrustProperty(trust))
 
@@ -1046,10 +983,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty,
     ) : VirtualGatewayListenerTlsValidationContextProperty {
-      public override fun subjectAlternativeNames(): Any? =
-          unwrap(this).getSubjectAlternativeNames()
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
 
-      public override fun trust(): Any = unwrap(this).getTrust()
+      override fun trust(): Any = unwrap(this).getTrust()
     }
 
     public companion object {
@@ -1079,19 +1015,15 @@ public open class CfnVirtualGateway internal constructor(
     public fun path(): String
 
     public interface Builder {
-      public fun format(format: IResolvable) {
-      }
+      public fun format(format: IResolvable)
 
-      public fun format(format: LoggingFormatProperty) {
-      }
+      public fun format(format: LoggingFormatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0af80698308ec03c64f1fe49c0b1bf8419e8c41c1f1ca3588c2e5ef6b79f803")
-      public fun format(format: LoggingFormatProperty.Builder.() -> Unit) {
-      }
+      public fun format(format: LoggingFormatProperty.Builder.() -> Unit)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1100,20 +1032,20 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty.builder()
 
-      public override fun format(format: IResolvable) {
+      override fun format(format: IResolvable) {
         cdkBuilder.format(format.let(IResolvable::unwrap))
       }
 
-      public override fun format(format: LoggingFormatProperty) {
+      override fun format(format: LoggingFormatProperty) {
         cdkBuilder.format(format.let(LoggingFormatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0af80698308ec03c64f1fe49c0b1bf8419e8c41c1f1ca3588c2e5ef6b79f803")
-      public override fun format(format: LoggingFormatProperty.Builder.() -> Unit): Unit =
+      override fun format(format: LoggingFormatProperty.Builder.() -> Unit): Unit =
           format(LoggingFormatProperty(format))
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -1126,9 +1058,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty,
     ) : VirtualGatewayFileAccessLogProperty {
-      public override fun format(): Any? = unwrap(this).getFormat()
+      override fun format(): Any? = unwrap(this).getFormat()
 
-      public override fun path(): String = unwrap(this).getPath()
+      override fun path(): String = unwrap(this).getPath()
     }
 
     public companion object {
@@ -1162,51 +1094,39 @@ public open class CfnVirtualGateway internal constructor(
     public fun tls(): Any? = unwrap(this).getTls()
 
     public interface Builder {
-      public fun connectionPool(connectionPool: IResolvable) {
-      }
+      public fun connectionPool(connectionPool: IResolvable)
 
-      public fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty) {
-      }
+      public fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c5cada049a248eeb43391db32e3ebef2974b4bea2bbca850ab09fd507f39aa1d")
       public
-          fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit) {
-      }
+          fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun healthCheck(healthCheck: IResolvable) {
-      }
+      public fun healthCheck(healthCheck: IResolvable)
 
-      public fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty) {
-      }
+      public fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b2c7143fe6682175577fe24f6600fd4ed58d4b409e5ae64d20cb47851922c6a")
       public
-          fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit) {
-      }
+          fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit)
 
-      public fun portMapping(portMapping: IResolvable) {
-      }
+      public fun portMapping(portMapping: IResolvable)
 
-      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty) {
-      }
+      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("657e1415a121679f54184b01da35c8125c99f3fe79fe4c2ca31228f05c022c2f")
-      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit) {
-      }
+      public fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit)
 
-      public fun tls(tls: IResolvable) {
-      }
+      public fun tls(tls: IResolvable)
 
-      public fun tls(tls: VirtualGatewayListenerTlsProperty) {
-      }
+      public fun tls(tls: VirtualGatewayListenerTlsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d474295a8d3ce631a448df4daacc876d7efbbc32b6a303fcdf045c661c58ad0b")
-      public fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit) {
-      }
+      public fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1215,59 +1135,58 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty.builder()
 
-      public override fun connectionPool(connectionPool: IResolvable) {
+      override fun connectionPool(connectionPool: IResolvable) {
         cdkBuilder.connectionPool(connectionPool.let(IResolvable::unwrap))
       }
 
-      public override fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty) {
+      override fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty) {
         cdkBuilder.connectionPool(connectionPool.let(VirtualGatewayConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c5cada049a248eeb43391db32e3ebef2974b4bea2bbca850ab09fd507f39aa1d")
-      public override
+      override
           fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty.Builder.() -> Unit):
           Unit = connectionPool(VirtualGatewayConnectionPoolProperty(connectionPool))
 
-      public override fun healthCheck(healthCheck: IResolvable) {
+      override fun healthCheck(healthCheck: IResolvable) {
         cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
       }
 
-      public override fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty) {
+      override fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty) {
         cdkBuilder.healthCheck(healthCheck.let(VirtualGatewayHealthCheckPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b2c7143fe6682175577fe24f6600fd4ed58d4b409e5ae64d20cb47851922c6a")
-      public override
+      override
           fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit):
           Unit = healthCheck(VirtualGatewayHealthCheckPolicyProperty(healthCheck))
 
-      public override fun portMapping(portMapping: IResolvable) {
+      override fun portMapping(portMapping: IResolvable) {
         cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
       }
 
-      public override fun portMapping(portMapping: VirtualGatewayPortMappingProperty) {
+      override fun portMapping(portMapping: VirtualGatewayPortMappingProperty) {
         cdkBuilder.portMapping(portMapping.let(VirtualGatewayPortMappingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("657e1415a121679f54184b01da35c8125c99f3fe79fe4c2ca31228f05c022c2f")
-      public override
-          fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit): Unit =
-          portMapping(VirtualGatewayPortMappingProperty(portMapping))
+      override fun portMapping(portMapping: VirtualGatewayPortMappingProperty.Builder.() -> Unit):
+          Unit = portMapping(VirtualGatewayPortMappingProperty(portMapping))
 
-      public override fun tls(tls: IResolvable) {
+      override fun tls(tls: IResolvable) {
         cdkBuilder.tls(tls.let(IResolvable::unwrap))
       }
 
-      public override fun tls(tls: VirtualGatewayListenerTlsProperty) {
+      override fun tls(tls: VirtualGatewayListenerTlsProperty) {
         cdkBuilder.tls(tls.let(VirtualGatewayListenerTlsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d474295a8d3ce631a448df4daacc876d7efbbc32b6a303fcdf045c661c58ad0b")
-      public override fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit): Unit =
+      override fun tls(tls: VirtualGatewayListenerTlsProperty.Builder.() -> Unit): Unit =
           tls(VirtualGatewayListenerTlsProperty(tls))
 
       public fun build():
@@ -1279,13 +1198,13 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty,
     ) : VirtualGatewayListenerProperty {
-      public override fun connectionPool(): Any? = unwrap(this).getConnectionPool()
+      override fun connectionPool(): Any? = unwrap(this).getConnectionPool()
 
-      public override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
+      override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
 
-      public override fun portMapping(): Any = unwrap(this).getPortMapping()
+      override fun portMapping(): Any = unwrap(this).getPortMapping()
 
-      public override fun tls(): Any? = unwrap(this).getTls()
+      override fun tls(): Any? = unwrap(this).getTls()
     }
 
     public companion object {
@@ -1312,8 +1231,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun secretName(): String
 
     public interface Builder {
-      public fun secretName(secretName: String) {
-      }
+      public fun secretName(secretName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1322,7 +1240,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty.builder()
 
-      public override fun secretName(secretName: String) {
+      override fun secretName(secretName: String) {
         cdkBuilder.secretName(secretName)
       }
 
@@ -1335,7 +1253,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty,
     ) : VirtualGatewayListenerTlsSdsCertificateProperty {
-      public override fun secretName(): String = unwrap(this).getSecretName()
+      override fun secretName(): String = unwrap(this).getSecretName()
     }
 
     public companion object {
@@ -1363,8 +1281,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun certificateAuthorityArns(): List<String>
 
     public interface Builder {
-      public fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
-      }
+      public fun certificateAuthorityArns(certificateAuthorityArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1373,7 +1290,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
 
-      public override fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
+      override fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
         cdkBuilder.certificateAuthorityArns(certificateAuthorityArns)
       }
 
@@ -1386,7 +1303,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty,
     ) : VirtualGatewayTlsValidationContextAcmTrustProperty {
-      public override fun certificateAuthorityArns(): List<String> =
+      override fun certificateAuthorityArns(): List<String> =
           unwrap(this).getCertificateAuthorityArns() ?: emptyList()
     }
 
@@ -1417,11 +1334,9 @@ public open class CfnVirtualGateway internal constructor(
     public fun protocol(): String
 
     public interface Builder {
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1430,11 +1345,11 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty.builder()
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -1447,9 +1362,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty,
     ) : VirtualGatewayPortMappingProperty {
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
     }
 
     public companion object {
@@ -1477,8 +1392,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun maxRequests(): Number
 
     public interface Builder {
-      public fun maxRequests(maxRequests: Number) {
-      }
+      public fun maxRequests(maxRequests: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1487,7 +1401,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty.builder()
 
-      public override fun maxRequests(maxRequests: Number) {
+      override fun maxRequests(maxRequests: Number) {
         cdkBuilder.maxRequests(maxRequests)
       }
 
@@ -1500,7 +1414,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty,
     ) : VirtualGatewayGrpcConnectionPoolProperty {
-      public override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
     }
 
     public companion object {
@@ -1534,41 +1448,31 @@ public open class CfnVirtualGateway internal constructor(
     public fun validation(): Any
 
     public interface Builder {
-      public fun certificate(certificate: IResolvable) {
-      }
+      public fun certificate(certificate: IResolvable)
 
-      public fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty) {
-      }
+      public fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d120604ee5d384b9e8738c9093a173c24626571e32d3c7dc3b55eb74631d86e")
       public
-          fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit) {
-      }
+          fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit)
 
-      public fun enforce(enforce: Boolean) {
-      }
+      public fun enforce(enforce: Boolean)
 
-      public fun enforce(enforce: IResolvable) {
-      }
+      public fun enforce(enforce: IResolvable)
 
-      public fun ports(ports: IResolvable) {
-      }
+      public fun ports(ports: IResolvable)
 
-      public fun ports(ports: List<Number>) {
-      }
+      public fun ports(ports: List<Number>)
 
-      public fun validation(validation: IResolvable) {
-      }
+      public fun validation(validation: IResolvable)
 
-      public fun validation(validation: VirtualGatewayTlsValidationContextProperty) {
-      }
+      public fun validation(validation: VirtualGatewayTlsValidationContextProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1eb2e0a02d82d061ee3111c6eb4c399e8eae838b0aef535fa010973ed97daacc")
       public
-          fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit) {
-      }
+          fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1577,47 +1481,47 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty.builder()
 
-      public override fun certificate(certificate: IResolvable) {
+      override fun certificate(certificate: IResolvable) {
         cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
       }
 
-      public override fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty) {
+      override fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty) {
         cdkBuilder.certificate(certificate.let(VirtualGatewayClientTlsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d120604ee5d384b9e8738c9093a173c24626571e32d3c7dc3b55eb74631d86e")
-      public override
+      override
           fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty.Builder.() -> Unit):
           Unit = certificate(VirtualGatewayClientTlsCertificateProperty(certificate))
 
-      public override fun enforce(enforce: Boolean) {
+      override fun enforce(enforce: Boolean) {
         cdkBuilder.enforce(enforce)
       }
 
-      public override fun enforce(enforce: IResolvable) {
+      override fun enforce(enforce: IResolvable) {
         cdkBuilder.enforce(enforce.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: IResolvable) {
+      override fun ports(ports: IResolvable) {
         cdkBuilder.ports(ports.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: List<Number>) {
+      override fun ports(ports: List<Number>) {
         cdkBuilder.ports(ports)
       }
 
-      public override fun validation(validation: IResolvable) {
+      override fun validation(validation: IResolvable) {
         cdkBuilder.validation(validation.let(IResolvable::unwrap))
       }
 
-      public override fun validation(validation: VirtualGatewayTlsValidationContextProperty) {
+      override fun validation(validation: VirtualGatewayTlsValidationContextProperty) {
         cdkBuilder.validation(validation.let(VirtualGatewayTlsValidationContextProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1eb2e0a02d82d061ee3111c6eb4c399e8eae838b0aef535fa010973ed97daacc")
-      public override
+      override
           fun validation(validation: VirtualGatewayTlsValidationContextProperty.Builder.() -> Unit):
           Unit = validation(VirtualGatewayTlsValidationContextProperty(validation))
 
@@ -1630,13 +1534,13 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty,
     ) : VirtualGatewayClientPolicyTlsProperty {
-      public override fun certificate(): Any? = unwrap(this).getCertificate()
+      override fun certificate(): Any? = unwrap(this).getCertificate()
 
-      public override fun enforce(): Any? = unwrap(this).getEnforce()
+      override fun enforce(): Any? = unwrap(this).getEnforce()
 
-      public override fun ports(): Any? = unwrap(this).getPorts()
+      override fun ports(): Any? = unwrap(this).getPorts()
 
-      public override fun validation(): Any = unwrap(this).getValidation()
+      override fun validation(): Any = unwrap(this).getValidation()
     }
 
     public companion object {
@@ -1664,16 +1568,13 @@ public open class CfnVirtualGateway internal constructor(
     public fun accessLog(): Any? = unwrap(this).getAccessLog()
 
     public interface Builder {
-      public fun accessLog(accessLog: IResolvable) {
-      }
+      public fun accessLog(accessLog: IResolvable)
 
-      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty) {
-      }
+      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d556fd726fd3953f33b7516a900555f84c031a98b200a68c6567b23bcc5e8a2b")
-      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit) {
-      }
+      public fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1682,18 +1583,18 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty.builder()
 
-      public override fun accessLog(accessLog: IResolvable) {
+      override fun accessLog(accessLog: IResolvable) {
         cdkBuilder.accessLog(accessLog.let(IResolvable::unwrap))
       }
 
-      public override fun accessLog(accessLog: VirtualGatewayAccessLogProperty) {
+      override fun accessLog(accessLog: VirtualGatewayAccessLogProperty) {
         cdkBuilder.accessLog(accessLog.let(VirtualGatewayAccessLogProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d556fd726fd3953f33b7516a900555f84c031a98b200a68c6567b23bcc5e8a2b")
-      public override fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit):
-          Unit = accessLog(VirtualGatewayAccessLogProperty(accessLog))
+      override fun accessLog(accessLog: VirtualGatewayAccessLogProperty.Builder.() -> Unit): Unit =
+          accessLog(VirtualGatewayAccessLogProperty(accessLog))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty =
@@ -1704,7 +1605,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty,
     ) : VirtualGatewayLoggingProperty {
-      public override fun accessLog(): Any? = unwrap(this).getAccessLog()
+      override fun accessLog(): Any? = unwrap(this).getAccessLog()
     }
 
     public companion object {
@@ -1733,11 +1634,9 @@ public open class CfnVirtualGateway internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1745,11 +1644,11 @@ public open class CfnVirtualGateway internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1762,9 +1661,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty,
     ) : JsonFormatRefProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1791,8 +1690,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun maxRequests(): Number
 
     public interface Builder {
-      public fun maxRequests(maxRequests: Number) {
-      }
+      public fun maxRequests(maxRequests: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1801,7 +1699,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty.builder()
 
-      public override fun maxRequests(maxRequests: Number) {
+      override fun maxRequests(maxRequests: Number) {
         cdkBuilder.maxRequests(maxRequests)
       }
 
@@ -1814,7 +1712,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty,
     ) : VirtualGatewayHttp2ConnectionPoolProperty {
-      public override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
     }
 
     public companion object {
@@ -1842,16 +1740,13 @@ public open class CfnVirtualGateway internal constructor(
     public fun tls(): Any? = unwrap(this).getTls()
 
     public interface Builder {
-      public fun tls(tls: IResolvable) {
-      }
+      public fun tls(tls: IResolvable)
 
-      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty) {
-      }
+      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a90df689980811315d993811a1c8a499a4caddedf7d36096cf2b83ab791594d2")
-      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit) {
-      }
+      public fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1860,17 +1755,17 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty.builder()
 
-      public override fun tls(tls: IResolvable) {
+      override fun tls(tls: IResolvable) {
         cdkBuilder.tls(tls.let(IResolvable::unwrap))
       }
 
-      public override fun tls(tls: VirtualGatewayClientPolicyTlsProperty) {
+      override fun tls(tls: VirtualGatewayClientPolicyTlsProperty) {
         cdkBuilder.tls(tls.let(VirtualGatewayClientPolicyTlsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a90df689980811315d993811a1c8a499a4caddedf7d36096cf2b83ab791594d2")
-      public override fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit): Unit =
+      override fun tls(tls: VirtualGatewayClientPolicyTlsProperty.Builder.() -> Unit): Unit =
           tls(VirtualGatewayClientPolicyTlsProperty(tls))
 
       public fun build():
@@ -1882,7 +1777,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty,
     ) : VirtualGatewayClientPolicyProperty {
-      public override fun tls(): Any? = unwrap(this).getTls()
+      override fun tls(): Any? = unwrap(this).getTls()
     }
 
     public companion object {
@@ -1910,8 +1805,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
 
     public interface Builder {
-      public fun exact(exact: List<String>) {
-      }
+      public fun exact(exact: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1920,7 +1814,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty.builder()
 
-      public override fun exact(exact: List<String>) {
+      override fun exact(exact: List<String>) {
         cdkBuilder.exact(exact)
       }
 
@@ -1933,7 +1827,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty,
     ) : SubjectAlternativeNameMatchersProperty {
-      public override fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
+      override fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
     }
 
     public companion object {
@@ -1965,38 +1859,29 @@ public open class CfnVirtualGateway internal constructor(
     public fun http2(): Any? = unwrap(this).getHttp2()
 
     public interface Builder {
-      public fun grpc(grpc: IResolvable) {
-      }
+      public fun grpc(grpc: IResolvable)
 
-      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty) {
-      }
+      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a25f48a5ee10f30339abbee65b6c6e07b9f1f003e8da5e78cb6c4c6d327a91b5")
-      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun http(http: IResolvable) {
-      }
+      public fun http(http: IResolvable)
 
-      public fun http(http: VirtualGatewayHttpConnectionPoolProperty) {
-      }
+      public fun http(http: VirtualGatewayHttpConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c70cd067c2e83ae385dfcd845e6cb49427e9df5d911a20d6365bad3f5341667")
-      public fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun http2(http2: IResolvable) {
-      }
+      public fun http2(http2: IResolvable)
 
-      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty) {
-      }
+      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f65d3e5bc347b419e2c7219eb4760135c7cee1a447515c55cf6d2fec7e51724d")
-      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2005,45 +1890,44 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty.builder()
 
-      public override fun grpc(grpc: IResolvable) {
+      override fun grpc(grpc: IResolvable) {
         cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
       }
 
-      public override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty) {
+      override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty) {
         cdkBuilder.grpc(grpc.let(VirtualGatewayGrpcConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a25f48a5ee10f30339abbee65b6c6e07b9f1f003e8da5e78cb6c4c6d327a91b5")
-      public override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit):
-          Unit = grpc(VirtualGatewayGrpcConnectionPoolProperty(grpc))
+      override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty.Builder.() -> Unit): Unit =
+          grpc(VirtualGatewayGrpcConnectionPoolProperty(grpc))
 
-      public override fun http(http: IResolvable) {
+      override fun http(http: IResolvable) {
         cdkBuilder.http(http.let(IResolvable::unwrap))
       }
 
-      public override fun http(http: VirtualGatewayHttpConnectionPoolProperty) {
+      override fun http(http: VirtualGatewayHttpConnectionPoolProperty) {
         cdkBuilder.http(http.let(VirtualGatewayHttpConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c70cd067c2e83ae385dfcd845e6cb49427e9df5d911a20d6365bad3f5341667")
-      public override fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit):
-          Unit = http(VirtualGatewayHttpConnectionPoolProperty(http))
+      override fun http(http: VirtualGatewayHttpConnectionPoolProperty.Builder.() -> Unit): Unit =
+          http(VirtualGatewayHttpConnectionPoolProperty(http))
 
-      public override fun http2(http2: IResolvable) {
+      override fun http2(http2: IResolvable) {
         cdkBuilder.http2(http2.let(IResolvable::unwrap))
       }
 
-      public override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty) {
+      override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty) {
         cdkBuilder.http2(http2.let(VirtualGatewayHttp2ConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f65d3e5bc347b419e2c7219eb4760135c7cee1a447515c55cf6d2fec7e51724d")
-      public override
-          fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit): Unit =
-          http2(VirtualGatewayHttp2ConnectionPoolProperty(http2))
+      override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty.Builder.() -> Unit): Unit
+          = http2(VirtualGatewayHttp2ConnectionPoolProperty(http2))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
@@ -2054,11 +1938,11 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty,
     ) : VirtualGatewayConnectionPoolProperty {
-      public override fun grpc(): Any? = unwrap(this).getGrpc()
+      override fun grpc(): Any? = unwrap(this).getGrpc()
 
-      public override fun http(): Any? = unwrap(this).getHttp()
+      override fun http(): Any? = unwrap(this).getHttp()
 
-      public override fun http2(): Any? = unwrap(this).getHttp2()
+      override fun http2(): Any? = unwrap(this).getHttp2()
     }
 
     public companion object {
@@ -2086,8 +1970,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun certificateChain(): String
 
     public interface Builder {
-      public fun certificateChain(certificateChain: String) {
-      }
+      public fun certificateChain(certificateChain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2096,7 +1979,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty.builder()
 
-      public override fun certificateChain(certificateChain: String) {
+      override fun certificateChain(certificateChain: String) {
         cdkBuilder.certificateChain(certificateChain)
       }
 
@@ -2109,7 +1992,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty,
     ) : VirtualGatewayTlsValidationContextFileTrustProperty {
-      public override fun certificateChain(): String = unwrap(this).getCertificateChain()
+      override fun certificateChain(): String = unwrap(this).getCertificateChain()
     }
 
     public companion object {
@@ -2139,28 +2022,22 @@ public open class CfnVirtualGateway internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
-      }
+      public fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b4de2ecb488740d08277bc1fa4e871749734532dcb1227e56489e327a130b12a")
       public
-          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit) {
-      }
+          fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
-      }
+      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f1cfe943aebbb2e614f42b76e13c96552308637e185c7db165b6bb01900f2a4")
-      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2169,33 +2046,32 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
+      override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
         cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b4de2ecb488740d08277bc1fa4e871749734532dcb1227e56489e327a130b12a")
-      public override
+      override
           fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty.Builder.() -> Unit):
           Unit = `file`(VirtualGatewayTlsValidationContextFileTrustProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
+      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
         cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f1cfe943aebbb2e614f42b76e13c96552308637e185c7db165b6bb01900f2a4")
-      public override
-          fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit): Unit
-          = sds(VirtualGatewayTlsValidationContextSdsTrustProperty(sds))
+      override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty.Builder.() -> Unit):
+          Unit = sds(VirtualGatewayTlsValidationContextSdsTrustProperty(sds))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
@@ -2206,9 +2082,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty,
     ) : VirtualGatewayListenerTlsValidationContextTrustProperty {
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -2236,16 +2112,13 @@ public open class CfnVirtualGateway internal constructor(
     public fun match(): Any
 
     public interface Builder {
-      public fun match(match: IResolvable) {
-      }
+      public fun match(match: IResolvable)
 
-      public fun match(match: SubjectAlternativeNameMatchersProperty) {
-      }
+      public fun match(match: SubjectAlternativeNameMatchersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2c5ca1739420154623a0d64dc8ce13e81856585fdf6194b0f04e7299c9efc05")
-      public fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit) {
-      }
+      public fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2254,18 +2127,18 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty.builder()
 
-      public override fun match(match: IResolvable) {
+      override fun match(match: IResolvable) {
         cdkBuilder.match(match.let(IResolvable::unwrap))
       }
 
-      public override fun match(match: SubjectAlternativeNameMatchersProperty) {
+      override fun match(match: SubjectAlternativeNameMatchersProperty) {
         cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2c5ca1739420154623a0d64dc8ce13e81856585fdf6194b0f04e7299c9efc05")
-      public override fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit):
-          Unit = match(SubjectAlternativeNameMatchersProperty(match))
+      override fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit): Unit =
+          match(SubjectAlternativeNameMatchersProperty(match))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
@@ -2276,7 +2149,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty,
     ) : SubjectAlternativeNamesProperty {
-      public override fun match(): Any = unwrap(this).getMatch()
+      override fun match(): Any = unwrap(this).getMatch()
     }
 
     public companion object {
@@ -2307,32 +2180,25 @@ public open class CfnVirtualGateway internal constructor(
     public fun validation(): Any? = unwrap(this).getValidation()
 
     public interface Builder {
-      public fun certificate(certificate: IResolvable) {
-      }
+      public fun certificate(certificate: IResolvable)
 
-      public fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty) {
-      }
+      public fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f22287334a0f1622f27c197f3d7fc9f6db3366876f9d04e39a24753b4a9c965c")
       public
-          fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit) {
-      }
+          fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun validation(validation: IResolvable) {
-      }
+      public fun validation(validation: IResolvable)
 
-      public fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty) {
-      }
+      public fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49804e56c344e5028b80553eeac2c64d3adb322daa597e1e029053463ab8bef4")
       public
-          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit) {
-      }
+          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2341,36 +2207,35 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty.builder()
 
-      public override fun certificate(certificate: IResolvable) {
+      override fun certificate(certificate: IResolvable) {
         cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
       }
 
-      public override fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty) {
+      override fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty) {
         cdkBuilder.certificate(certificate.let(VirtualGatewayListenerTlsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f22287334a0f1622f27c197f3d7fc9f6db3366876f9d04e39a24753b4a9c965c")
-      public override
+      override
           fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty.Builder.() -> Unit):
           Unit = certificate(VirtualGatewayListenerTlsCertificateProperty(certificate))
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun validation(validation: IResolvable) {
+      override fun validation(validation: IResolvable) {
         cdkBuilder.validation(validation.let(IResolvable::unwrap))
       }
 
-      public override
-          fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty) {
+      override fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty) {
         cdkBuilder.validation(validation.let(VirtualGatewayListenerTlsValidationContextProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49804e56c344e5028b80553eeac2c64d3adb322daa597e1e029053463ab8bef4")
-      public override
+      override
           fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty.Builder.() -> Unit):
           Unit = validation(VirtualGatewayListenerTlsValidationContextProperty(validation))
 
@@ -2383,11 +2248,11 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty,
     ) : VirtualGatewayListenerTlsProperty {
-      public override fun certificate(): Any = unwrap(this).getCertificate()
+      override fun certificate(): Any = unwrap(this).getCertificate()
 
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
 
-      public override fun validation(): Any? = unwrap(this).getValidation()
+      override fun validation(): Any? = unwrap(this).getValidation()
     }
 
     public companion object {
@@ -2417,28 +2282,21 @@ public open class CfnVirtualGateway internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
-      }
+      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ca69fac264b48ac447be901cf3db1123d068a277af2769cd36232d3b1f2cf70")
-      public
-          fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
-      }
+      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("003675a5f0d1468a62b543a888053eef80c314e2965bdebad6ba4731b1e844fa")
-      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2447,33 +2305,32 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty.builder()
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
+      override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
         cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ca69fac264b48ac447be901cf3db1123d068a277af2769cd36232d3b1f2cf70")
-      public override
+      override
           fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty.Builder.() -> Unit):
           Unit = `file`(VirtualGatewayListenerTlsFileCertificateProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
+      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
         cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("003675a5f0d1468a62b543a888053eef80c314e2965bdebad6ba4731b1e844fa")
-      public override
-          fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit): Unit =
-          sds(VirtualGatewayListenerTlsSdsCertificateProperty(sds))
+      override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty.Builder.() -> Unit):
+          Unit = sds(VirtualGatewayListenerTlsSdsCertificateProperty(sds))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
@@ -2484,9 +2341,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty,
     ) : VirtualGatewayClientTlsCertificateProperty {
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -2516,28 +2373,22 @@ public open class CfnVirtualGateway internal constructor(
     public fun trust(): Any
 
     public interface Builder {
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
 
-      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edaf23f43617162815f82a930a2a301f6c99b891800fb28eaa8887babfe2ccba")
       public
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit) {
-      }
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
 
-      public fun trust(trust: IResolvable) {
-      }
+      public fun trust(trust: IResolvable)
 
-      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty) {
-      }
+      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cbcc999aee919483ce3fa632feef20067653951c342ca9eff59c026f4655f5dc")
-      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit) {
-      }
+      public fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2546,34 +2397,33 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty.builder()
 
-      public override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edaf23f43617162815f82a930a2a301f6c99b891800fb28eaa8887babfe2ccba")
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
           Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
 
-      public override fun trust(trust: IResolvable) {
+      override fun trust(trust: IResolvable) {
         cdkBuilder.trust(trust.let(IResolvable::unwrap))
       }
 
-      public override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty) {
+      override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty) {
         cdkBuilder.trust(trust.let(VirtualGatewayTlsValidationContextTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cbcc999aee919483ce3fa632feef20067653951c342ca9eff59c026f4655f5dc")
-      public override
-          fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit): Unit
-          = trust(VirtualGatewayTlsValidationContextTrustProperty(trust))
+      override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty.Builder.() -> Unit):
+          Unit = trust(VirtualGatewayTlsValidationContextTrustProperty(trust))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
@@ -2584,10 +2434,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty,
     ) : VirtualGatewayTlsValidationContextProperty {
-      public override fun subjectAlternativeNames(): Any? =
-          unwrap(this).getSubjectAlternativeNames()
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
 
-      public override fun trust(): Any = unwrap(this).getTrust()
+      override fun trust(): Any = unwrap(this).getTrust()
     }
 
     public companion object {
@@ -2615,8 +2464,7 @@ public open class CfnVirtualGateway internal constructor(
     public fun certificateArn(): String
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2625,7 +2473,7 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
@@ -2638,7 +2486,7 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty,
     ) : VirtualGatewayListenerTlsAcmCertificateProperty {
-      public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
     }
 
     public companion object {
@@ -2668,11 +2516,9 @@ public open class CfnVirtualGateway internal constructor(
     public fun privateKey(): String
 
     public interface Builder {
-      public fun certificateChain(certificateChain: String) {
-      }
+      public fun certificateChain(certificateChain: String)
 
-      public fun privateKey(privateKey: String) {
-      }
+      public fun privateKey(privateKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2681,11 +2527,11 @@ public open class CfnVirtualGateway internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty.builder()
 
-      public override fun certificateChain(certificateChain: String) {
+      override fun certificateChain(certificateChain: String) {
         cdkBuilder.certificateChain(certificateChain)
       }
 
-      public override fun privateKey(privateKey: String) {
+      override fun privateKey(privateKey: String) {
         cdkBuilder.privateKey(privateKey)
       }
 
@@ -2698,9 +2544,9 @@ public open class CfnVirtualGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty,
     ) : VirtualGatewayListenerTlsFileCertificateProperty {
-      public override fun certificateChain(): String = unwrap(this).getCertificateChain()
+      override fun certificateChain(): String = unwrap(this).getCertificateChain()
 
-      public override fun privateKey(): String = unwrap(this).getPrivateKey()
+      override fun privateKey(): String = unwrap(this).getPrivateKey()
     }
 
     public companion object {

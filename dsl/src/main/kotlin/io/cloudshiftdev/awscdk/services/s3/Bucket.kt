@@ -78,106 +78,74 @@ public open class Bucket internal constructor(
   }
 
   public interface Builder {
-    public fun accessControl(accessControl: BucketAccessControl) {
-    }
+    public fun accessControl(accessControl: BucketAccessControl)
 
-    public fun autoDeleteObjects(autoDeleteObjects: Boolean) {
-    }
+    public fun autoDeleteObjects(autoDeleteObjects: Boolean)
 
-    public fun blockPublicAccess(blockPublicAccess: BlockPublicAccess) {
-    }
+    public fun blockPublicAccess(blockPublicAccess: BlockPublicAccess)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ae01d0ba0bb2c5f41b4b7400230c6ab9304113667d092e5c1ca903318f6b380")
-    public fun blockPublicAccess(blockPublicAccess: BlockPublicAccess.Builder.() -> Unit) {
-    }
+    public fun blockPublicAccess(blockPublicAccess: BlockPublicAccess.Builder.() -> Unit)
 
-    public fun bucketKeyEnabled(bucketKeyEnabled: Boolean) {
-    }
+    public fun bucketKeyEnabled(bucketKeyEnabled: Boolean)
 
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun cors(cors: List<CorsRule>) {
-    }
+    public fun cors(cors: List<CorsRule>)
 
-    public fun encryption(encryption: BucketEncryption) {
-    }
+    public fun encryption(encryption: BucketEncryption)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun enforceSsl(enforceSsl: Boolean) {
-    }
+    public fun enforceSsl(enforceSsl: Boolean)
 
-    public fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
-    }
+    public fun eventBridgeEnabled(eventBridgeEnabled: Boolean)
 
     public
-        fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>) {
-    }
+        fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>)
 
-    public fun inventories(inventories: List<Inventory>) {
-    }
+    public fun inventories(inventories: List<Inventory>)
 
-    public fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
-    }
+    public fun lifecycleRules(lifecycleRules: List<LifecycleRule>)
 
-    public fun metrics(metrics: List<BucketMetrics>) {
-    }
+    public fun metrics(metrics: List<BucketMetrics>)
 
-    public fun minimumTlsVersion(minimumTlsVersion: Number) {
-    }
+    public fun minimumTlsVersion(minimumTlsVersion: Number)
 
-    public fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
-    }
+    public fun notificationsHandlerRole(notificationsHandlerRole: IRole)
 
-    public fun objectLockDefaultRetention(objectLockDefaultRetention: ObjectLockRetention) {
-    }
+    public fun objectLockDefaultRetention(objectLockDefaultRetention: ObjectLockRetention)
 
-    public fun objectLockEnabled(objectLockEnabled: Boolean) {
-    }
+    public fun objectLockEnabled(objectLockEnabled: Boolean)
 
-    public fun objectOwnership(objectOwnership: ObjectOwnership) {
-    }
+    public fun objectOwnership(objectOwnership: ObjectOwnership)
 
-    public fun publicReadAccess(publicReadAccess: Boolean) {
-    }
+    public fun publicReadAccess(publicReadAccess: Boolean)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun serverAccessLogsBucket(serverAccessLogsBucket: IBucket) {
-    }
+    public fun serverAccessLogsBucket(serverAccessLogsBucket: IBucket)
 
-    public fun serverAccessLogsPrefix(serverAccessLogsPrefix: String) {
-    }
+    public fun serverAccessLogsPrefix(serverAccessLogsPrefix: String)
 
-    public fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat) {
-    }
+    public fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat)
 
-    public fun transferAcceleration(transferAcceleration: Boolean) {
-    }
+    public fun transferAcceleration(transferAcceleration: Boolean)
 
-    public fun versioned(versioned: Boolean) {
-    }
+    public fun versioned(versioned: Boolean)
 
-    public fun websiteErrorDocument(websiteErrorDocument: String) {
-    }
+    public fun websiteErrorDocument(websiteErrorDocument: String)
 
-    public fun websiteIndexDocument(websiteIndexDocument: String) {
-    }
+    public fun websiteIndexDocument(websiteIndexDocument: String)
 
-    public fun websiteRedirect(websiteRedirect: RedirectTarget) {
-    }
+    public fun websiteRedirect(websiteRedirect: RedirectTarget)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75654fb117b3f72fb4efe559681713ee385de3941b95db8b75d27341a1e36ecd")
-    public fun websiteRedirect(websiteRedirect: RedirectTarget.Builder.() -> Unit) {
-    }
+    public fun websiteRedirect(websiteRedirect: RedirectTarget.Builder.() -> Unit)
 
-    public fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>) {
-    }
+    public fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>)
   }
 
   private class BuilderImpl(
@@ -187,135 +155,134 @@ public open class Bucket internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.Bucket.Builder =
         software.amazon.awscdk.services.s3.Bucket.Builder.create(scope, id)
 
-    public override fun accessControl(accessControl: BucketAccessControl) {
+    override fun accessControl(accessControl: BucketAccessControl) {
       cdkBuilder.accessControl(accessControl.let(BucketAccessControl::unwrap))
     }
 
-    public override fun autoDeleteObjects(autoDeleteObjects: Boolean) {
+    override fun autoDeleteObjects(autoDeleteObjects: Boolean) {
       cdkBuilder.autoDeleteObjects(autoDeleteObjects)
     }
 
-    public override fun blockPublicAccess(blockPublicAccess: BlockPublicAccess) {
+    override fun blockPublicAccess(blockPublicAccess: BlockPublicAccess) {
       cdkBuilder.blockPublicAccess(blockPublicAccess.let(BlockPublicAccess::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ae01d0ba0bb2c5f41b4b7400230c6ab9304113667d092e5c1ca903318f6b380")
-    public override fun blockPublicAccess(blockPublicAccess: BlockPublicAccess.Builder.() -> Unit):
-        Unit = blockPublicAccess(BlockPublicAccess(blockPublicAccess))
+    override fun blockPublicAccess(blockPublicAccess: BlockPublicAccess.Builder.() -> Unit): Unit =
+        blockPublicAccess(BlockPublicAccess(blockPublicAccess))
 
-    public override fun bucketKeyEnabled(bucketKeyEnabled: Boolean) {
+    override fun bucketKeyEnabled(bucketKeyEnabled: Boolean) {
       cdkBuilder.bucketKeyEnabled(bucketKeyEnabled)
     }
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun cors(cors: List<CorsRule>) {
+    override fun cors(cors: List<CorsRule>) {
       cdkBuilder.cors(cors.map(CorsRule::unwrap))
     }
 
-    public override fun encryption(encryption: BucketEncryption) {
+    override fun encryption(encryption: BucketEncryption) {
       cdkBuilder.encryption(encryption.let(BucketEncryption::unwrap))
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun enforceSsl(enforceSsl: Boolean) {
+    override fun enforceSsl(enforceSsl: Boolean) {
       cdkBuilder.enforceSsl(enforceSsl)
     }
 
-    public override fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
+    override fun eventBridgeEnabled(eventBridgeEnabled: Boolean) {
       cdkBuilder.eventBridgeEnabled(eventBridgeEnabled)
     }
 
-    public override
+    override
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>) {
       cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.map(IntelligentTieringConfiguration::unwrap))
     }
 
-    public override fun inventories(inventories: List<Inventory>) {
+    override fun inventories(inventories: List<Inventory>) {
       cdkBuilder.inventories(inventories.map(Inventory::unwrap))
     }
 
-    public override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
+    override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
       cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
     }
 
-    public override fun metrics(metrics: List<BucketMetrics>) {
+    override fun metrics(metrics: List<BucketMetrics>) {
       cdkBuilder.metrics(metrics.map(BucketMetrics::unwrap))
     }
 
-    public override fun minimumTlsVersion(minimumTlsVersion: Number) {
+    override fun minimumTlsVersion(minimumTlsVersion: Number) {
       cdkBuilder.minimumTlsVersion(minimumTlsVersion)
     }
 
-    public override fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
+    override fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
       cdkBuilder.notificationsHandlerRole(notificationsHandlerRole.let(IRole::unwrap))
     }
 
-    public override
-        fun objectLockDefaultRetention(objectLockDefaultRetention: ObjectLockRetention) {
+    override fun objectLockDefaultRetention(objectLockDefaultRetention: ObjectLockRetention) {
       cdkBuilder.objectLockDefaultRetention(objectLockDefaultRetention.let(ObjectLockRetention::unwrap))
     }
 
-    public override fun objectLockEnabled(objectLockEnabled: Boolean) {
+    override fun objectLockEnabled(objectLockEnabled: Boolean) {
       cdkBuilder.objectLockEnabled(objectLockEnabled)
     }
 
-    public override fun objectOwnership(objectOwnership: ObjectOwnership) {
+    override fun objectOwnership(objectOwnership: ObjectOwnership) {
       cdkBuilder.objectOwnership(objectOwnership.let(ObjectOwnership::unwrap))
     }
 
-    public override fun publicReadAccess(publicReadAccess: Boolean) {
+    override fun publicReadAccess(publicReadAccess: Boolean) {
       cdkBuilder.publicReadAccess(publicReadAccess)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun serverAccessLogsBucket(serverAccessLogsBucket: IBucket) {
+    override fun serverAccessLogsBucket(serverAccessLogsBucket: IBucket) {
       cdkBuilder.serverAccessLogsBucket(serverAccessLogsBucket.let(IBucket::unwrap))
     }
 
-    public override fun serverAccessLogsPrefix(serverAccessLogsPrefix: String) {
+    override fun serverAccessLogsPrefix(serverAccessLogsPrefix: String) {
       cdkBuilder.serverAccessLogsPrefix(serverAccessLogsPrefix)
     }
 
-    public override fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat) {
+    override fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat) {
       cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(TargetObjectKeyFormat::unwrap))
     }
 
-    public override fun transferAcceleration(transferAcceleration: Boolean) {
+    override fun transferAcceleration(transferAcceleration: Boolean) {
       cdkBuilder.transferAcceleration(transferAcceleration)
     }
 
-    public override fun versioned(versioned: Boolean) {
+    override fun versioned(versioned: Boolean) {
       cdkBuilder.versioned(versioned)
     }
 
-    public override fun websiteErrorDocument(websiteErrorDocument: String) {
+    override fun websiteErrorDocument(websiteErrorDocument: String) {
       cdkBuilder.websiteErrorDocument(websiteErrorDocument)
     }
 
-    public override fun websiteIndexDocument(websiteIndexDocument: String) {
+    override fun websiteIndexDocument(websiteIndexDocument: String) {
       cdkBuilder.websiteIndexDocument(websiteIndexDocument)
     }
 
-    public override fun websiteRedirect(websiteRedirect: RedirectTarget) {
+    override fun websiteRedirect(websiteRedirect: RedirectTarget) {
       cdkBuilder.websiteRedirect(websiteRedirect.let(RedirectTarget::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75654fb117b3f72fb4efe559681713ee385de3941b95db8b75d27341a1e36ecd")
-    public override fun websiteRedirect(websiteRedirect: RedirectTarget.Builder.() -> Unit): Unit =
+    override fun websiteRedirect(websiteRedirect: RedirectTarget.Builder.() -> Unit): Unit =
         websiteRedirect(RedirectTarget(websiteRedirect))
 
-    public override fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>) {
+    override fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>) {
       cdkBuilder.websiteRoutingRules(websiteRoutingRules.map(RoutingRule::unwrap))
     }
 

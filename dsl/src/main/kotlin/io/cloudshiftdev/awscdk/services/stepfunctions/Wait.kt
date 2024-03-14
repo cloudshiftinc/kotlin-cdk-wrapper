@@ -19,14 +19,11 @@ public open class Wait internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun time(time: WaitTime) {
-    }
+    public fun time(time: WaitTime)
   }
 
   private class BuilderImpl(
@@ -36,15 +33,15 @@ public open class Wait internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Wait.Builder =
         software.amazon.awscdk.services.stepfunctions.Wait.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun time(time: WaitTime) {
+    override fun time(time: WaitTime) {
       cdkBuilder.time(time.let(WaitTime::unwrap))
     }
 

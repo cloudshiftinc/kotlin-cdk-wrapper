@@ -44,123 +44,107 @@ public interface DockerImageAssetSource {
   public fun sourceHash(): String
 
   public interface Builder {
-    public fun assetName(assetName: String) {
-    }
+    public fun assetName(assetName: String)
 
-    public fun directoryName(directoryName: String) {
-    }
+    public fun directoryName(directoryName: String)
 
-    public fun dockerBuildArgs(dockerBuildArgs: Map<String, String>) {
-    }
+    public fun dockerBuildArgs(dockerBuildArgs: Map<String, String>)
 
-    public fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>) {
-    }
+    public fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>)
 
-    public fun dockerBuildSsh(dockerBuildSsh: String) {
-    }
+    public fun dockerBuildSsh(dockerBuildSsh: String)
 
-    public fun dockerBuildTarget(dockerBuildTarget: String) {
-    }
+    public fun dockerBuildTarget(dockerBuildTarget: String)
 
-    public fun dockerCacheDisabled(dockerCacheDisabled: Boolean) {
-    }
+    public fun dockerCacheDisabled(dockerCacheDisabled: Boolean)
 
-    public fun dockerCacheFrom(dockerCacheFrom: List<DockerCacheOption>) {
-    }
+    public fun dockerCacheFrom(dockerCacheFrom: List<DockerCacheOption>)
 
-    public fun dockerCacheTo(dockerCacheTo: DockerCacheOption) {
-    }
+    public fun dockerCacheTo(dockerCacheTo: DockerCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("100251e0b74a679199279257fb70f8e28f5fa8cd3e3691ebfda3c891efc2a6dc")
-    public fun dockerCacheTo(dockerCacheTo: DockerCacheOption.Builder.() -> Unit) {
-    }
+    public fun dockerCacheTo(dockerCacheTo: DockerCacheOption.Builder.() -> Unit)
 
-    public fun dockerFile(dockerFile: String) {
-    }
+    public fun dockerFile(dockerFile: String)
 
-    public fun dockerOutputs(dockerOutputs: List<String>) {
-    }
+    public fun dockerOutputs(dockerOutputs: List<String>)
 
-    public fun executable(executable: List<String>) {
-    }
+    public fun executable(executable: List<String>)
 
-    public fun networkMode(networkMode: String) {
-    }
+    public fun networkMode(networkMode: String)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun sourceHash(sourceHash: String) {
-    }
+    public fun sourceHash(sourceHash: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.DockerImageAssetSource.Builder =
         software.amazon.awscdk.DockerImageAssetSource.builder()
 
-    public override fun assetName(assetName: String) {
+    override fun assetName(assetName: String) {
       cdkBuilder.assetName(assetName)
     }
 
-    public override fun directoryName(directoryName: String) {
+    override fun directoryName(directoryName: String) {
       cdkBuilder.directoryName(directoryName)
     }
 
-    public override fun dockerBuildArgs(dockerBuildArgs: Map<String, String>) {
+    override fun dockerBuildArgs(dockerBuildArgs: Map<String, String>) {
       cdkBuilder.dockerBuildArgs(dockerBuildArgs)
     }
 
-    public override fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>) {
+    override fun dockerBuildSecrets(dockerBuildSecrets: Map<String, String>) {
       cdkBuilder.dockerBuildSecrets(dockerBuildSecrets)
     }
 
-    public override fun dockerBuildSsh(dockerBuildSsh: String) {
+    override fun dockerBuildSsh(dockerBuildSsh: String) {
       cdkBuilder.dockerBuildSsh(dockerBuildSsh)
     }
 
-    public override fun dockerBuildTarget(dockerBuildTarget: String) {
+    override fun dockerBuildTarget(dockerBuildTarget: String) {
       cdkBuilder.dockerBuildTarget(dockerBuildTarget)
     }
 
-    public override fun dockerCacheDisabled(dockerCacheDisabled: Boolean) {
+    override fun dockerCacheDisabled(dockerCacheDisabled: Boolean) {
       cdkBuilder.dockerCacheDisabled(dockerCacheDisabled)
     }
 
-    public override fun dockerCacheFrom(dockerCacheFrom: List<DockerCacheOption>) {
+    override fun dockerCacheFrom(dockerCacheFrom: List<DockerCacheOption>) {
       cdkBuilder.dockerCacheFrom(dockerCacheFrom.map(DockerCacheOption::unwrap))
     }
 
-    public override fun dockerCacheTo(dockerCacheTo: DockerCacheOption) {
+    override fun dockerCacheTo(dockerCacheTo: DockerCacheOption) {
       cdkBuilder.dockerCacheTo(dockerCacheTo.let(DockerCacheOption::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("100251e0b74a679199279257fb70f8e28f5fa8cd3e3691ebfda3c891efc2a6dc")
-    public override fun dockerCacheTo(dockerCacheTo: DockerCacheOption.Builder.() -> Unit): Unit =
+    override fun dockerCacheTo(dockerCacheTo: DockerCacheOption.Builder.() -> Unit): Unit =
         dockerCacheTo(DockerCacheOption(dockerCacheTo))
 
-    public override fun dockerFile(dockerFile: String) {
+    override fun dockerFile(dockerFile: String) {
       cdkBuilder.dockerFile(dockerFile)
     }
 
-    public override fun dockerOutputs(dockerOutputs: List<String>) {
+    override fun dockerOutputs(dockerOutputs: List<String>) {
       cdkBuilder.dockerOutputs(dockerOutputs)
     }
 
-    public override fun executable(executable: List<String>) {
+    override fun executable(executable: List<String>) {
       cdkBuilder.executable(executable)
     }
 
-    public override fun networkMode(networkMode: String) {
+    override fun networkMode(networkMode: String) {
       cdkBuilder.networkMode(networkMode)
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun sourceHash(sourceHash: String) {
+    override fun sourceHash(sourceHash: String) {
       cdkBuilder.sourceHash(sourceHash)
     }
 
@@ -170,40 +154,39 @@ public interface DockerImageAssetSource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.DockerImageAssetSource,
   ) : DockerImageAssetSource {
-    public override fun assetName(): String? = unwrap(this).getAssetName()
+    override fun assetName(): String? = unwrap(this).getAssetName()
 
-    public override fun directoryName(): String? = unwrap(this).getDirectoryName()
+    override fun directoryName(): String? = unwrap(this).getDirectoryName()
 
-    public override fun dockerBuildArgs(): Map<String, String> = unwrap(this).getDockerBuildArgs()
-        ?: emptyMap()
+    override fun dockerBuildArgs(): Map<String, String> = unwrap(this).getDockerBuildArgs() ?:
+        emptyMap()
 
-    public override fun dockerBuildSecrets(): Map<String, String> =
-        unwrap(this).getDockerBuildSecrets() ?: emptyMap()
+    override fun dockerBuildSecrets(): Map<String, String> = unwrap(this).getDockerBuildSecrets() ?:
+        emptyMap()
 
-    public override fun dockerBuildSsh(): String? = unwrap(this).getDockerBuildSsh()
+    override fun dockerBuildSsh(): String? = unwrap(this).getDockerBuildSsh()
 
-    public override fun dockerBuildTarget(): String? = unwrap(this).getDockerBuildTarget()
+    override fun dockerBuildTarget(): String? = unwrap(this).getDockerBuildTarget()
 
-    public override fun dockerCacheDisabled(): Boolean? = unwrap(this).getDockerCacheDisabled()
+    override fun dockerCacheDisabled(): Boolean? = unwrap(this).getDockerCacheDisabled()
 
-    public override fun dockerCacheFrom(): List<DockerCacheOption> =
+    override fun dockerCacheFrom(): List<DockerCacheOption> =
         unwrap(this).getDockerCacheFrom()?.map(DockerCacheOption::wrap) ?: emptyList()
 
-    public override fun dockerCacheTo(): DockerCacheOption? =
+    override fun dockerCacheTo(): DockerCacheOption? =
         unwrap(this).getDockerCacheTo()?.let(DockerCacheOption::wrap)
 
-    public override fun dockerFile(): String? = unwrap(this).getDockerFile()
+    override fun dockerFile(): String? = unwrap(this).getDockerFile()
 
-    public override fun dockerOutputs(): List<String> = unwrap(this).getDockerOutputs() ?:
-        emptyList()
+    override fun dockerOutputs(): List<String> = unwrap(this).getDockerOutputs() ?: emptyList()
 
-    public override fun executable(): List<String> = unwrap(this).getExecutable() ?: emptyList()
+    override fun executable(): List<String> = unwrap(this).getExecutable() ?: emptyList()
 
-    public override fun networkMode(): String? = unwrap(this).getNetworkMode()
+    override fun networkMode(): String? = unwrap(this).getNetworkMode()
 
-    public override fun platform(): String? = unwrap(this).getPlatform()
+    override fun platform(): String? = unwrap(this).getPlatform()
 
-    public override fun sourceHash(): String = unwrap(this).getSourceHash()
+    override fun sourceHash(): String = unwrap(this).getSourceHash()
   }
 
   public companion object {

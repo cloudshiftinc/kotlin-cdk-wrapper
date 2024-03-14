@@ -60,32 +60,25 @@ public open class CfnAccessPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun accessPolicyIdentity(accessPolicyIdentity: IResolvable) {
-    }
+    public fun accessPolicyIdentity(accessPolicyIdentity: IResolvable)
 
-    public fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty) {
-    }
+    public fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ba0b6288f8d7a538847ec33b15c817454bd77798ebea103e3a02993db166e141")
     public
-        fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty.Builder.() -> Unit) {
-    }
+        fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty.Builder.() -> Unit)
 
-    public fun accessPolicyPermission(accessPolicyPermission: String) {
-    }
+    public fun accessPolicyPermission(accessPolicyPermission: String)
 
-    public fun accessPolicyResource(accessPolicyResource: IResolvable) {
-    }
+    public fun accessPolicyResource(accessPolicyResource: IResolvable)
 
-    public fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty) {
-    }
+    public fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5cea6ccf0d9b11d8e3c96d08f69a5f41cfc124716f241c04562834fed75f4f2d")
     public
-        fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty.Builder.() -> Unit) {
-    }
+        fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -95,35 +88,35 @@ public open class CfnAccessPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.Builder.create(scope, id)
 
-    public override fun accessPolicyIdentity(accessPolicyIdentity: IResolvable) {
+    override fun accessPolicyIdentity(accessPolicyIdentity: IResolvable) {
       cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(IResolvable::unwrap))
     }
 
-    public override fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty) {
+    override fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty) {
       cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(AccessPolicyIdentityProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ba0b6288f8d7a538847ec33b15c817454bd77798ebea103e3a02993db166e141")
-    public override
+    override
         fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty.Builder.() -> Unit):
         Unit = accessPolicyIdentity(AccessPolicyIdentityProperty(accessPolicyIdentity))
 
-    public override fun accessPolicyPermission(accessPolicyPermission: String) {
+    override fun accessPolicyPermission(accessPolicyPermission: String) {
       cdkBuilder.accessPolicyPermission(accessPolicyPermission)
     }
 
-    public override fun accessPolicyResource(accessPolicyResource: IResolvable) {
+    override fun accessPolicyResource(accessPolicyResource: IResolvable) {
       cdkBuilder.accessPolicyResource(accessPolicyResource.let(IResolvable::unwrap))
     }
 
-    public override fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty) {
+    override fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty) {
       cdkBuilder.accessPolicyResource(accessPolicyResource.let(AccessPolicyResourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5cea6ccf0d9b11d8e3c96d08f69a5f41cfc124716f241c04562834fed75f4f2d")
-    public override
+    override
         fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty.Builder.() -> Unit):
         Unit = accessPolicyResource(AccessPolicyResourceProperty(accessPolicyResource))
 
@@ -156,8 +149,7 @@ public open class CfnAccessPolicy internal constructor(
     public fun arn(): String? = unwrap(this).getArn()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -165,7 +157,7 @@ public open class CfnAccessPolicy internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -178,7 +170,7 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty,
     ) : IamRoleProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
     }
 
     public companion object {
@@ -205,8 +197,7 @@ public open class CfnAccessPolicy internal constructor(
     public fun arn(): String? = unwrap(this).getArn()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -214,7 +205,7 @@ public open class CfnAccessPolicy internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -227,7 +218,7 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty,
     ) : IamUserProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
     }
 
     public companion object {
@@ -256,27 +247,21 @@ public open class CfnAccessPolicy internal constructor(
     public fun project(): Any? = unwrap(this).getProject()
 
     public interface Builder {
-      public fun portal(portal: IResolvable) {
-      }
+      public fun portal(portal: IResolvable)
 
-      public fun portal(portal: PortalProperty) {
-      }
+      public fun portal(portal: PortalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e04ce2ff0f5f1fcb91a8a5320cbf19c81ae4c2319745f777cb2cf3acda573f5a")
-      public fun portal(portal: PortalProperty.Builder.() -> Unit) {
-      }
+      public fun portal(portal: PortalProperty.Builder.() -> Unit)
 
-      public fun project(project: IResolvable) {
-      }
+      public fun project(project: IResolvable)
 
-      public fun project(project: ProjectProperty) {
-      }
+      public fun project(project: ProjectProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f3815225218a2895b45b4c213a61eaa5f7af0abcab4676b89a02eb8016b256d5")
-      public fun project(project: ProjectProperty.Builder.() -> Unit) {
-      }
+      public fun project(project: ProjectProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -285,30 +270,30 @@ public open class CfnAccessPolicy internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty.builder()
 
-      public override fun portal(portal: IResolvable) {
+      override fun portal(portal: IResolvable) {
         cdkBuilder.portal(portal.let(IResolvable::unwrap))
       }
 
-      public override fun portal(portal: PortalProperty) {
+      override fun portal(portal: PortalProperty) {
         cdkBuilder.portal(portal.let(PortalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e04ce2ff0f5f1fcb91a8a5320cbf19c81ae4c2319745f777cb2cf3acda573f5a")
-      public override fun portal(portal: PortalProperty.Builder.() -> Unit): Unit =
+      override fun portal(portal: PortalProperty.Builder.() -> Unit): Unit =
           portal(PortalProperty(portal))
 
-      public override fun project(project: IResolvable) {
+      override fun project(project: IResolvable) {
         cdkBuilder.project(project.let(IResolvable::unwrap))
       }
 
-      public override fun project(project: ProjectProperty) {
+      override fun project(project: ProjectProperty) {
         cdkBuilder.project(project.let(ProjectProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f3815225218a2895b45b4c213a61eaa5f7af0abcab4676b89a02eb8016b256d5")
-      public override fun project(project: ProjectProperty.Builder.() -> Unit): Unit =
+      override fun project(project: ProjectProperty.Builder.() -> Unit): Unit =
           project(ProjectProperty(project))
 
       public fun build():
@@ -320,9 +305,9 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty,
     ) : AccessPolicyResourceProperty {
-      public override fun portal(): Any? = unwrap(this).getPortal()
+      override fun portal(): Any? = unwrap(this).getPortal()
 
-      public override fun project(): Any? = unwrap(this).getProject()
+      override fun project(): Any? = unwrap(this).getProject()
     }
 
     public companion object {
@@ -349,8 +334,7 @@ public open class CfnAccessPolicy internal constructor(
     public fun id(): String? = unwrap(this).getId()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
@@ -358,7 +342,7 @@ public open class CfnAccessPolicy internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
@@ -370,7 +354,7 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty,
     ) : UserProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
     }
 
     public companion object {
@@ -401,38 +385,29 @@ public open class CfnAccessPolicy internal constructor(
     public fun user(): Any? = unwrap(this).getUser()
 
     public interface Builder {
-      public fun iamRole(iamRole: IResolvable) {
-      }
+      public fun iamRole(iamRole: IResolvable)
 
-      public fun iamRole(iamRole: IamRoleProperty) {
-      }
+      public fun iamRole(iamRole: IamRoleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("328197fd2e04f80290b7704d49b6bacf39ab3ea71c7e565e48b746b7d171b412")
-      public fun iamRole(iamRole: IamRoleProperty.Builder.() -> Unit) {
-      }
+      public fun iamRole(iamRole: IamRoleProperty.Builder.() -> Unit)
 
-      public fun iamUser(iamUser: IResolvable) {
-      }
+      public fun iamUser(iamUser: IResolvable)
 
-      public fun iamUser(iamUser: IamUserProperty) {
-      }
+      public fun iamUser(iamUser: IamUserProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("116b3c3ca5fae3d54b7546b5361d08260e9d2694cfbc683de9db9411a01a9807")
-      public fun iamUser(iamUser: IamUserProperty.Builder.() -> Unit) {
-      }
+      public fun iamUser(iamUser: IamUserProperty.Builder.() -> Unit)
 
-      public fun user(user: IResolvable) {
-      }
+      public fun user(user: IResolvable)
 
-      public fun user(user: UserProperty) {
-      }
+      public fun user(user: UserProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("746495a1927bed50c37c06e856341df13539bbd48ade5a8d68215886f6a3f9ec")
-      public fun user(user: UserProperty.Builder.() -> Unit) {
-      }
+      public fun user(user: UserProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -441,44 +416,43 @@ public open class CfnAccessPolicy internal constructor(
           =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyIdentityProperty.builder()
 
-      public override fun iamRole(iamRole: IResolvable) {
+      override fun iamRole(iamRole: IResolvable) {
         cdkBuilder.iamRole(iamRole.let(IResolvable::unwrap))
       }
 
-      public override fun iamRole(iamRole: IamRoleProperty) {
+      override fun iamRole(iamRole: IamRoleProperty) {
         cdkBuilder.iamRole(iamRole.let(IamRoleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("328197fd2e04f80290b7704d49b6bacf39ab3ea71c7e565e48b746b7d171b412")
-      public override fun iamRole(iamRole: IamRoleProperty.Builder.() -> Unit): Unit =
+      override fun iamRole(iamRole: IamRoleProperty.Builder.() -> Unit): Unit =
           iamRole(IamRoleProperty(iamRole))
 
-      public override fun iamUser(iamUser: IResolvable) {
+      override fun iamUser(iamUser: IResolvable) {
         cdkBuilder.iamUser(iamUser.let(IResolvable::unwrap))
       }
 
-      public override fun iamUser(iamUser: IamUserProperty) {
+      override fun iamUser(iamUser: IamUserProperty) {
         cdkBuilder.iamUser(iamUser.let(IamUserProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("116b3c3ca5fae3d54b7546b5361d08260e9d2694cfbc683de9db9411a01a9807")
-      public override fun iamUser(iamUser: IamUserProperty.Builder.() -> Unit): Unit =
+      override fun iamUser(iamUser: IamUserProperty.Builder.() -> Unit): Unit =
           iamUser(IamUserProperty(iamUser))
 
-      public override fun user(user: IResolvable) {
+      override fun user(user: IResolvable) {
         cdkBuilder.user(user.let(IResolvable::unwrap))
       }
 
-      public override fun user(user: UserProperty) {
+      override fun user(user: UserProperty) {
         cdkBuilder.user(user.let(UserProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("746495a1927bed50c37c06e856341df13539bbd48ade5a8d68215886f6a3f9ec")
-      public override fun user(user: UserProperty.Builder.() -> Unit): Unit =
-          user(UserProperty(user))
+      override fun user(user: UserProperty.Builder.() -> Unit): Unit = user(UserProperty(user))
 
       public fun build():
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyIdentityProperty =
@@ -489,11 +463,11 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyIdentityProperty,
     ) : AccessPolicyIdentityProperty {
-      public override fun iamRole(): Any? = unwrap(this).getIamRole()
+      override fun iamRole(): Any? = unwrap(this).getIamRole()
 
-      public override fun iamUser(): Any? = unwrap(this).getIamUser()
+      override fun iamUser(): Any? = unwrap(this).getIamUser()
 
-      public override fun user(): Any? = unwrap(this).getUser()
+      override fun user(): Any? = unwrap(this).getUser()
     }
 
     public companion object {
@@ -520,8 +494,7 @@ public open class CfnAccessPolicy internal constructor(
     public fun id(): String? = unwrap(this).getId()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
@@ -529,7 +502,7 @@ public open class CfnAccessPolicy internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.PortalProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.PortalProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
@@ -541,7 +514,7 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.PortalProperty,
     ) : PortalProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
     }
 
     public companion object {
@@ -568,8 +541,7 @@ public open class CfnAccessPolicy internal constructor(
     public fun id(): String? = unwrap(this).getId()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
@@ -577,7 +549,7 @@ public open class CfnAccessPolicy internal constructor(
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty.Builder =
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
@@ -590,7 +562,7 @@ public open class CfnAccessPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty,
     ) : ProjectProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
     }
 
     public companion object {

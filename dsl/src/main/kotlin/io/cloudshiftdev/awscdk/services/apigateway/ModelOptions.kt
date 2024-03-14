@@ -15,48 +15,42 @@ public interface ModelOptions {
   public fun schema(): JsonSchema
 
   public interface Builder {
-    public fun contentType(contentType: String) {
-    }
+    public fun contentType(contentType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun modelName(modelName: String) {
-    }
+    public fun modelName(modelName: String)
 
-    public fun schema(schema: JsonSchema) {
-    }
+    public fun schema(schema: JsonSchema)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8760257accfc19a5acda72d2c39a537519b7ef6011dbfa11664518fb9c7b5aa5")
-    public fun schema(schema: JsonSchema.Builder.() -> Unit) {
-    }
+    public fun schema(schema: JsonSchema.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ModelOptions.Builder =
         software.amazon.awscdk.services.apigateway.ModelOptions.builder()
 
-    public override fun contentType(contentType: String) {
+    override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun modelName(modelName: String) {
+    override fun modelName(modelName: String) {
       cdkBuilder.modelName(modelName)
     }
 
-    public override fun schema(schema: JsonSchema) {
+    override fun schema(schema: JsonSchema) {
       cdkBuilder.schema(schema.let(JsonSchema::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8760257accfc19a5acda72d2c39a537519b7ef6011dbfa11664518fb9c7b5aa5")
-    public override fun schema(schema: JsonSchema.Builder.() -> Unit): Unit =
-        schema(JsonSchema(schema))
+    override fun schema(schema: JsonSchema.Builder.() -> Unit): Unit = schema(JsonSchema(schema))
 
     public fun build(): software.amazon.awscdk.services.apigateway.ModelOptions = cdkBuilder.build()
   }
@@ -64,13 +58,13 @@ public interface ModelOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ModelOptions,
   ) : ModelOptions {
-    public override fun contentType(): String? = unwrap(this).getContentType()
+    override fun contentType(): String? = unwrap(this).getContentType()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun modelName(): String? = unwrap(this).getModelName()
+    override fun modelName(): String? = unwrap(this).getModelName()
 
-    public override fun schema(): JsonSchema = unwrap(this).getSchema().let(JsonSchema::wrap)
+    override fun schema(): JsonSchema = unwrap(this).getSchema().let(JsonSchema::wrap)
   }
 
   public companion object {

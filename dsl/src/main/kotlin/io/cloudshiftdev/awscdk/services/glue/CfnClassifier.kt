@@ -84,49 +84,37 @@ public open class CfnClassifier internal constructor(
       xmlClassifier(XMLClassifierProperty(`value`))
 
   public interface Builder {
-    public fun csvClassifier(csvClassifier: IResolvable) {
-    }
+    public fun csvClassifier(csvClassifier: IResolvable)
 
-    public fun csvClassifier(csvClassifier: CsvClassifierProperty) {
-    }
+    public fun csvClassifier(csvClassifier: CsvClassifierProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("60a6f760c1629132bf7a085003785fc36dc516fed7fc6bcd3e6d075ac4994736")
-    public fun csvClassifier(csvClassifier: CsvClassifierProperty.Builder.() -> Unit) {
-    }
+    public fun csvClassifier(csvClassifier: CsvClassifierProperty.Builder.() -> Unit)
 
-    public fun grokClassifier(grokClassifier: IResolvable) {
-    }
+    public fun grokClassifier(grokClassifier: IResolvable)
 
-    public fun grokClassifier(grokClassifier: GrokClassifierProperty) {
-    }
+    public fun grokClassifier(grokClassifier: GrokClassifierProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5a8cd8b96e073bdb847bc460ed59f4f7357908441cfcd779bb731890445b35b2")
-    public fun grokClassifier(grokClassifier: GrokClassifierProperty.Builder.() -> Unit) {
-    }
+    public fun grokClassifier(grokClassifier: GrokClassifierProperty.Builder.() -> Unit)
 
-    public fun jsonClassifier(jsonClassifier: IResolvable) {
-    }
+    public fun jsonClassifier(jsonClassifier: IResolvable)
 
-    public fun jsonClassifier(jsonClassifier: JsonClassifierProperty) {
-    }
+    public fun jsonClassifier(jsonClassifier: JsonClassifierProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f5deea49f8ca1c3de74ecacde35e74f6854219187c2773523245488e79e45a4")
-    public fun jsonClassifier(jsonClassifier: JsonClassifierProperty.Builder.() -> Unit) {
-    }
+    public fun jsonClassifier(jsonClassifier: JsonClassifierProperty.Builder.() -> Unit)
 
-    public fun xmlClassifier(xmlClassifier: IResolvable) {
-    }
+    public fun xmlClassifier(xmlClassifier: IResolvable)
 
-    public fun xmlClassifier(xmlClassifier: XMLClassifierProperty) {
-    }
+    public fun xmlClassifier(xmlClassifier: XMLClassifierProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b23edc8214c9ed72c2206a65bc69461e3cbe1492253dd565ee3fd78fc1c82b19")
-    public fun xmlClassifier(xmlClassifier: XMLClassifierProperty.Builder.() -> Unit) {
-    }
+    public fun xmlClassifier(xmlClassifier: XMLClassifierProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -136,57 +124,57 @@ public open class CfnClassifier internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnClassifier.Builder =
         software.amazon.awscdk.services.glue.CfnClassifier.Builder.create(scope, id)
 
-    public override fun csvClassifier(csvClassifier: IResolvable) {
+    override fun csvClassifier(csvClassifier: IResolvable) {
       cdkBuilder.csvClassifier(csvClassifier.let(IResolvable::unwrap))
     }
 
-    public override fun csvClassifier(csvClassifier: CsvClassifierProperty) {
+    override fun csvClassifier(csvClassifier: CsvClassifierProperty) {
       cdkBuilder.csvClassifier(csvClassifier.let(CsvClassifierProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("60a6f760c1629132bf7a085003785fc36dc516fed7fc6bcd3e6d075ac4994736")
-    public override fun csvClassifier(csvClassifier: CsvClassifierProperty.Builder.() -> Unit): Unit
-        = csvClassifier(CsvClassifierProperty(csvClassifier))
+    override fun csvClassifier(csvClassifier: CsvClassifierProperty.Builder.() -> Unit): Unit =
+        csvClassifier(CsvClassifierProperty(csvClassifier))
 
-    public override fun grokClassifier(grokClassifier: IResolvable) {
+    override fun grokClassifier(grokClassifier: IResolvable) {
       cdkBuilder.grokClassifier(grokClassifier.let(IResolvable::unwrap))
     }
 
-    public override fun grokClassifier(grokClassifier: GrokClassifierProperty) {
+    override fun grokClassifier(grokClassifier: GrokClassifierProperty) {
       cdkBuilder.grokClassifier(grokClassifier.let(GrokClassifierProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5a8cd8b96e073bdb847bc460ed59f4f7357908441cfcd779bb731890445b35b2")
-    public override fun grokClassifier(grokClassifier: GrokClassifierProperty.Builder.() -> Unit):
-        Unit = grokClassifier(GrokClassifierProperty(grokClassifier))
+    override fun grokClassifier(grokClassifier: GrokClassifierProperty.Builder.() -> Unit): Unit =
+        grokClassifier(GrokClassifierProperty(grokClassifier))
 
-    public override fun jsonClassifier(jsonClassifier: IResolvable) {
+    override fun jsonClassifier(jsonClassifier: IResolvable) {
       cdkBuilder.jsonClassifier(jsonClassifier.let(IResolvable::unwrap))
     }
 
-    public override fun jsonClassifier(jsonClassifier: JsonClassifierProperty) {
+    override fun jsonClassifier(jsonClassifier: JsonClassifierProperty) {
       cdkBuilder.jsonClassifier(jsonClassifier.let(JsonClassifierProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f5deea49f8ca1c3de74ecacde35e74f6854219187c2773523245488e79e45a4")
-    public override fun jsonClassifier(jsonClassifier: JsonClassifierProperty.Builder.() -> Unit):
-        Unit = jsonClassifier(JsonClassifierProperty(jsonClassifier))
+    override fun jsonClassifier(jsonClassifier: JsonClassifierProperty.Builder.() -> Unit): Unit =
+        jsonClassifier(JsonClassifierProperty(jsonClassifier))
 
-    public override fun xmlClassifier(xmlClassifier: IResolvable) {
+    override fun xmlClassifier(xmlClassifier: IResolvable) {
       cdkBuilder.xmlClassifier(xmlClassifier.let(IResolvable::unwrap))
     }
 
-    public override fun xmlClassifier(xmlClassifier: XMLClassifierProperty) {
+    override fun xmlClassifier(xmlClassifier: XMLClassifierProperty) {
       cdkBuilder.xmlClassifier(xmlClassifier.let(XMLClassifierProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b23edc8214c9ed72c2206a65bc69461e3cbe1492253dd565ee3fd78fc1c82b19")
-    public override fun xmlClassifier(xmlClassifier: XMLClassifierProperty.Builder.() -> Unit): Unit
-        = xmlClassifier(XMLClassifierProperty(xmlClassifier))
+    override fun xmlClassifier(xmlClassifier: XMLClassifierProperty.Builder.() -> Unit): Unit =
+        xmlClassifier(XMLClassifierProperty(xmlClassifier))
 
     public fun build(): software.amazon.awscdk.services.glue.CfnClassifier = cdkBuilder.build()
   }
@@ -218,11 +206,9 @@ public open class CfnClassifier internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun jsonPath(jsonPath: String) {
-      }
+      public fun jsonPath(jsonPath: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -230,11 +216,11 @@ public open class CfnClassifier internal constructor(
           software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty.Builder =
           software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty.builder()
 
-      public override fun jsonPath(jsonPath: String) {
+      override fun jsonPath(jsonPath: String) {
         cdkBuilder.jsonPath(jsonPath)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -246,9 +232,9 @@ public open class CfnClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnClassifier.JsonClassifierProperty,
     ) : JsonClassifierProperty {
-      public override fun jsonPath(): String = unwrap(this).getJsonPath()
+      override fun jsonPath(): String = unwrap(this).getJsonPath()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -281,17 +267,13 @@ public open class CfnClassifier internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun classification(classification: String) {
-      }
+      public fun classification(classification: String)
 
-      public fun customPatterns(customPatterns: String) {
-      }
+      public fun customPatterns(customPatterns: String)
 
-      public fun grokPattern(grokPattern: String) {
-      }
+      public fun grokPattern(grokPattern: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -299,19 +281,19 @@ public open class CfnClassifier internal constructor(
           software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty.Builder =
           software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty.builder()
 
-      public override fun classification(classification: String) {
+      override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
-      public override fun customPatterns(customPatterns: String) {
+      override fun customPatterns(customPatterns: String) {
         cdkBuilder.customPatterns(customPatterns)
       }
 
-      public override fun grokPattern(grokPattern: String) {
+      override fun grokPattern(grokPattern: String) {
         cdkBuilder.grokPattern(grokPattern)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -323,13 +305,13 @@ public open class CfnClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnClassifier.GrokClassifierProperty,
     ) : GrokClassifierProperty {
-      public override fun classification(): String = unwrap(this).getClassification()
+      override fun classification(): String = unwrap(this).getClassification()
 
-      public override fun customPatterns(): String? = unwrap(this).getCustomPatterns()
+      override fun customPatterns(): String? = unwrap(this).getCustomPatterns()
 
-      public override fun grokPattern(): String = unwrap(this).getGrokPattern()
+      override fun grokPattern(): String = unwrap(this).getGrokPattern()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -373,41 +355,29 @@ public open class CfnClassifier internal constructor(
     public fun quoteSymbol(): String? = unwrap(this).getQuoteSymbol()
 
     public interface Builder {
-      public fun allowSingleColumn(allowSingleColumn: Boolean) {
-      }
+      public fun allowSingleColumn(allowSingleColumn: Boolean)
 
-      public fun allowSingleColumn(allowSingleColumn: IResolvable) {
-      }
+      public fun allowSingleColumn(allowSingleColumn: IResolvable)
 
-      public fun containsCustomDatatype(containsCustomDatatype: List<String>) {
-      }
+      public fun containsCustomDatatype(containsCustomDatatype: List<String>)
 
-      public fun containsHeader(containsHeader: String) {
-      }
+      public fun containsHeader(containsHeader: String)
 
-      public fun customDatatypeConfigured(customDatatypeConfigured: Boolean) {
-      }
+      public fun customDatatypeConfigured(customDatatypeConfigured: Boolean)
 
-      public fun customDatatypeConfigured(customDatatypeConfigured: IResolvable) {
-      }
+      public fun customDatatypeConfigured(customDatatypeConfigured: IResolvable)
 
-      public fun delimiter(delimiter: String) {
-      }
+      public fun delimiter(delimiter: String)
 
-      public fun disableValueTrimming(disableValueTrimming: Boolean) {
-      }
+      public fun disableValueTrimming(disableValueTrimming: Boolean)
 
-      public fun disableValueTrimming(disableValueTrimming: IResolvable) {
-      }
+      public fun disableValueTrimming(disableValueTrimming: IResolvable)
 
-      public fun `header`(`header`: List<String>) {
-      }
+      public fun `header`(`header`: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun quoteSymbol(quoteSymbol: String) {
-      }
+      public fun quoteSymbol(quoteSymbol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -415,51 +385,51 @@ public open class CfnClassifier internal constructor(
           software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty.Builder =
           software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty.builder()
 
-      public override fun allowSingleColumn(allowSingleColumn: Boolean) {
+      override fun allowSingleColumn(allowSingleColumn: Boolean) {
         cdkBuilder.allowSingleColumn(allowSingleColumn)
       }
 
-      public override fun allowSingleColumn(allowSingleColumn: IResolvable) {
+      override fun allowSingleColumn(allowSingleColumn: IResolvable) {
         cdkBuilder.allowSingleColumn(allowSingleColumn.let(IResolvable::unwrap))
       }
 
-      public override fun containsCustomDatatype(containsCustomDatatype: List<String>) {
+      override fun containsCustomDatatype(containsCustomDatatype: List<String>) {
         cdkBuilder.containsCustomDatatype(containsCustomDatatype)
       }
 
-      public override fun containsHeader(containsHeader: String) {
+      override fun containsHeader(containsHeader: String) {
         cdkBuilder.containsHeader(containsHeader)
       }
 
-      public override fun customDatatypeConfigured(customDatatypeConfigured: Boolean) {
+      override fun customDatatypeConfigured(customDatatypeConfigured: Boolean) {
         cdkBuilder.customDatatypeConfigured(customDatatypeConfigured)
       }
 
-      public override fun customDatatypeConfigured(customDatatypeConfigured: IResolvable) {
+      override fun customDatatypeConfigured(customDatatypeConfigured: IResolvable) {
         cdkBuilder.customDatatypeConfigured(customDatatypeConfigured.let(IResolvable::unwrap))
       }
 
-      public override fun delimiter(delimiter: String) {
+      override fun delimiter(delimiter: String) {
         cdkBuilder.delimiter(delimiter)
       }
 
-      public override fun disableValueTrimming(disableValueTrimming: Boolean) {
+      override fun disableValueTrimming(disableValueTrimming: Boolean) {
         cdkBuilder.disableValueTrimming(disableValueTrimming)
       }
 
-      public override fun disableValueTrimming(disableValueTrimming: IResolvable) {
+      override fun disableValueTrimming(disableValueTrimming: IResolvable) {
         cdkBuilder.disableValueTrimming(disableValueTrimming.let(IResolvable::unwrap))
       }
 
-      public override fun `header`(`header`: List<String>) {
+      override fun `header`(`header`: List<String>) {
         cdkBuilder.`header`(`header`)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun quoteSymbol(quoteSymbol: String) {
+      override fun quoteSymbol(quoteSymbol: String) {
         cdkBuilder.quoteSymbol(quoteSymbol)
       }
 
@@ -471,25 +441,24 @@ public open class CfnClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnClassifier.CsvClassifierProperty,
     ) : CsvClassifierProperty {
-      public override fun allowSingleColumn(): Any? = unwrap(this).getAllowSingleColumn()
+      override fun allowSingleColumn(): Any? = unwrap(this).getAllowSingleColumn()
 
-      public override fun containsCustomDatatype(): List<String> =
-          unwrap(this).getContainsCustomDatatype() ?: emptyList()
+      override fun containsCustomDatatype(): List<String> = unwrap(this).getContainsCustomDatatype()
+          ?: emptyList()
 
-      public override fun containsHeader(): String? = unwrap(this).getContainsHeader()
+      override fun containsHeader(): String? = unwrap(this).getContainsHeader()
 
-      public override fun customDatatypeConfigured(): Any? =
-          unwrap(this).getCustomDatatypeConfigured()
+      override fun customDatatypeConfigured(): Any? = unwrap(this).getCustomDatatypeConfigured()
 
-      public override fun delimiter(): String? = unwrap(this).getDelimiter()
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
 
-      public override fun disableValueTrimming(): Any? = unwrap(this).getDisableValueTrimming()
+      override fun disableValueTrimming(): Any? = unwrap(this).getDisableValueTrimming()
 
-      public override fun `header`(): List<String> = unwrap(this).getHeader() ?: emptyList()
+      override fun `header`(): List<String> = unwrap(this).getHeader() ?: emptyList()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun quoteSymbol(): String? = unwrap(this).getQuoteSymbol()
+      override fun quoteSymbol(): String? = unwrap(this).getQuoteSymbol()
     }
 
     public companion object {
@@ -520,14 +489,11 @@ public open class CfnClassifier internal constructor(
     public fun rowTag(): String
 
     public interface Builder {
-      public fun classification(classification: String) {
-      }
+      public fun classification(classification: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun rowTag(rowTag: String) {
-      }
+      public fun rowTag(rowTag: String)
     }
 
     private class BuilderImpl : Builder {
@@ -535,15 +501,15 @@ public open class CfnClassifier internal constructor(
           software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty.Builder =
           software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty.builder()
 
-      public override fun classification(classification: String) {
+      override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun rowTag(rowTag: String) {
+      override fun rowTag(rowTag: String) {
         cdkBuilder.rowTag(rowTag)
       }
 
@@ -555,11 +521,11 @@ public open class CfnClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnClassifier.XMLClassifierProperty,
     ) : XMLClassifierProperty {
-      public override fun classification(): String = unwrap(this).getClassification()
+      override fun classification(): String = unwrap(this).getClassification()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun rowTag(): String = unwrap(this).getRowTag()
+      override fun rowTag(): String = unwrap(this).getRowTag()
     }
 
     public companion object {

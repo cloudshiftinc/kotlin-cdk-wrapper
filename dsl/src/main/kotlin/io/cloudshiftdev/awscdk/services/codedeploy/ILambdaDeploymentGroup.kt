@@ -19,26 +19,25 @@ public interface ILambdaDeploymentGroup : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup,
   ) : ILambdaDeploymentGroup {
-    public override fun application(): ILambdaApplication =
+    override fun application(): ILambdaApplication =
         unwrap(this).getApplication().let(ILambdaApplication::wrap)
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun deploymentConfig(): ILambdaDeploymentConfig =
+    override fun deploymentConfig(): ILambdaDeploymentConfig =
         unwrap(this).getDeploymentConfig().let(ILambdaDeploymentConfig::wrap)
 
-    public override fun deploymentGroupArn(): String = unwrap(this).getDeploymentGroupArn()
+    override fun deploymentGroupArn(): String = unwrap(this).getDeploymentGroupArn()
 
-    public override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
+    override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

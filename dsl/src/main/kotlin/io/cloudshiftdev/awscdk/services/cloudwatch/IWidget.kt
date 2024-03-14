@@ -24,21 +24,20 @@ public interface IWidget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IWidget,
   ) : IWidget {
-    public override fun height(): Number = unwrap(this).getHeight()
+    override fun height(): Number = unwrap(this).getHeight()
 
-    public override fun position(arg0: Number, arg1: Number) {
+    override fun position(arg0: Number, arg1: Number) {
       unwrap(this).position(arg0, arg1)
     }
 
-    public override fun toJson(): List<Any> = unwrap(this).toJson() ?: emptyList()
+    override fun toJson(): List<Any> = unwrap(this).toJson() ?: emptyList()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()
+    override fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()
 
-    public override fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?:
-        emptyMap()
+    override fun warningsV2(): Map<String, String> = unwrap(this).getWarningsV2() ?: emptyMap()
 
-    public override fun width(): Number = unwrap(this).getWidth()
+    override fun width(): Number = unwrap(this).getWidth()
   }
 
   public companion object {

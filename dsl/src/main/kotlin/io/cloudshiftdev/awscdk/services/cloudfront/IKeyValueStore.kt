@@ -17,22 +17,21 @@ public interface IKeyValueStore : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.IKeyValueStore,
   ) : IKeyValueStore {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun keyValueStoreArn(): String = unwrap(this).getKeyValueStoreArn()
+    override fun keyValueStoreArn(): String = unwrap(this).getKeyValueStoreArn()
 
-    public override fun keyValueStoreId(): String = unwrap(this).getKeyValueStoreId()
+    override fun keyValueStoreId(): String = unwrap(this).getKeyValueStoreId()
 
-    public override fun keyValueStoreStatus(): String = unwrap(this).getKeyValueStoreStatus()
+    override fun keyValueStoreStatus(): String = unwrap(this).getKeyValueStoreStatus()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

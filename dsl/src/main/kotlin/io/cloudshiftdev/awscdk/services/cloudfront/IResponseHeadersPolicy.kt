@@ -8,8 +8,7 @@ public interface IResponseHeadersPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy,
   ) : IResponseHeadersPolicy {
-    public override fun responseHeadersPolicyId(): String =
-        unwrap(this).getResponseHeadersPolicyId()
+    override fun responseHeadersPolicyId(): String = unwrap(this).getResponseHeadersPolicyId()
   }
 
   public companion object {

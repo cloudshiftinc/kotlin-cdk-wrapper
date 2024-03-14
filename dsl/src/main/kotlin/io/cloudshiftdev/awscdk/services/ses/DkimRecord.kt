@@ -9,22 +9,20 @@ public interface DkimRecord {
   public fun `value`(): String
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.DkimRecord.Builder =
         software.amazon.awscdk.services.ses.DkimRecord.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -34,9 +32,9 @@ public interface DkimRecord {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.DkimRecord,
   ) : DkimRecord {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

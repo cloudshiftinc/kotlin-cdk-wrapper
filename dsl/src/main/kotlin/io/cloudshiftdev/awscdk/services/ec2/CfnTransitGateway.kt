@@ -106,41 +106,29 @@ public open class CfnTransitGateway internal constructor(
   }
 
   public interface Builder {
-    public fun amazonSideAsn(amazonSideAsn: Number) {
-    }
+    public fun amazonSideAsn(amazonSideAsn: Number)
 
-    public fun associationDefaultRouteTableId(associationDefaultRouteTableId: String) {
-    }
+    public fun associationDefaultRouteTableId(associationDefaultRouteTableId: String)
 
-    public fun autoAcceptSharedAttachments(autoAcceptSharedAttachments: String) {
-    }
+    public fun autoAcceptSharedAttachments(autoAcceptSharedAttachments: String)
 
-    public fun defaultRouteTableAssociation(defaultRouteTableAssociation: String) {
-    }
+    public fun defaultRouteTableAssociation(defaultRouteTableAssociation: String)
 
-    public fun defaultRouteTablePropagation(defaultRouteTablePropagation: String) {
-    }
+    public fun defaultRouteTablePropagation(defaultRouteTablePropagation: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun dnsSupport(dnsSupport: String) {
-    }
+    public fun dnsSupport(dnsSupport: String)
 
-    public fun multicastSupport(multicastSupport: String) {
-    }
+    public fun multicastSupport(multicastSupport: String)
 
-    public fun propagationDefaultRouteTableId(propagationDefaultRouteTableId: String) {
-    }
+    public fun propagationDefaultRouteTableId(propagationDefaultRouteTableId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitGatewayCidrBlocks(transitGatewayCidrBlocks: List<String>) {
-    }
+    public fun transitGatewayCidrBlocks(transitGatewayCidrBlocks: List<String>)
 
-    public fun vpnEcmpSupport(vpnEcmpSupport: String) {
-    }
+    public fun vpnEcmpSupport(vpnEcmpSupport: String)
   }
 
   private class BuilderImpl(
@@ -150,51 +138,51 @@ public open class CfnTransitGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTransitGateway.Builder =
         software.amazon.awscdk.services.ec2.CfnTransitGateway.Builder.create(scope, id)
 
-    public override fun amazonSideAsn(amazonSideAsn: Number) {
+    override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
-    public override fun associationDefaultRouteTableId(associationDefaultRouteTableId: String) {
+    override fun associationDefaultRouteTableId(associationDefaultRouteTableId: String) {
       cdkBuilder.associationDefaultRouteTableId(associationDefaultRouteTableId)
     }
 
-    public override fun autoAcceptSharedAttachments(autoAcceptSharedAttachments: String) {
+    override fun autoAcceptSharedAttachments(autoAcceptSharedAttachments: String) {
       cdkBuilder.autoAcceptSharedAttachments(autoAcceptSharedAttachments)
     }
 
-    public override fun defaultRouteTableAssociation(defaultRouteTableAssociation: String) {
+    override fun defaultRouteTableAssociation(defaultRouteTableAssociation: String) {
       cdkBuilder.defaultRouteTableAssociation(defaultRouteTableAssociation)
     }
 
-    public override fun defaultRouteTablePropagation(defaultRouteTablePropagation: String) {
+    override fun defaultRouteTablePropagation(defaultRouteTablePropagation: String) {
       cdkBuilder.defaultRouteTablePropagation(defaultRouteTablePropagation)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun dnsSupport(dnsSupport: String) {
+    override fun dnsSupport(dnsSupport: String) {
       cdkBuilder.dnsSupport(dnsSupport)
     }
 
-    public override fun multicastSupport(multicastSupport: String) {
+    override fun multicastSupport(multicastSupport: String) {
       cdkBuilder.multicastSupport(multicastSupport)
     }
 
-    public override fun propagationDefaultRouteTableId(propagationDefaultRouteTableId: String) {
+    override fun propagationDefaultRouteTableId(propagationDefaultRouteTableId: String) {
       cdkBuilder.propagationDefaultRouteTableId(propagationDefaultRouteTableId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitGatewayCidrBlocks(transitGatewayCidrBlocks: List<String>) {
+    override fun transitGatewayCidrBlocks(transitGatewayCidrBlocks: List<String>) {
       cdkBuilder.transitGatewayCidrBlocks(transitGatewayCidrBlocks)
     }
 
-    public override fun vpnEcmpSupport(vpnEcmpSupport: String) {
+    override fun vpnEcmpSupport(vpnEcmpSupport: String) {
       cdkBuilder.vpnEcmpSupport(vpnEcmpSupport)
     }
 

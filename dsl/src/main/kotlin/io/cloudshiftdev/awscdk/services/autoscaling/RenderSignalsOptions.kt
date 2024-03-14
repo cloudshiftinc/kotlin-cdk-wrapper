@@ -9,22 +9,20 @@ public interface RenderSignalsOptions {
   public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
   public interface Builder {
-    public fun desiredCapacity(desiredCapacity: Number) {
-    }
+    public fun desiredCapacity(desiredCapacity: Number)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.RenderSignalsOptions.Builder
         = software.amazon.awscdk.services.autoscaling.RenderSignalsOptions.builder()
 
-    public override fun desiredCapacity(desiredCapacity: Number) {
+    override fun desiredCapacity(desiredCapacity: Number) {
       cdkBuilder.desiredCapacity(desiredCapacity)
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
@@ -35,9 +33,9 @@ public interface RenderSignalsOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.RenderSignalsOptions,
   ) : RenderSignalsOptions {
-    public override fun desiredCapacity(): Number? = unwrap(this).getDesiredCapacity()
+    override fun desiredCapacity(): Number? = unwrap(this).getDesiredCapacity()
 
-    public override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+    override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
   }
 
   public companion object {

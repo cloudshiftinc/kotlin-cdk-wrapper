@@ -9,22 +9,20 @@ public interface PortRange {
   public fun toPort(): Number? = unwrap(this).getToPort()
 
   public interface Builder {
-    public fun fromPort(fromPort: Number) {
-    }
+    public fun fromPort(fromPort: Number)
 
-    public fun toPort(toPort: Number) {
-    }
+    public fun toPort(toPort: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.PortRange.Builder =
         software.amazon.awscdk.services.globalaccelerator.PortRange.builder()
 
-    public override fun fromPort(fromPort: Number) {
+    override fun fromPort(fromPort: Number) {
       cdkBuilder.fromPort(fromPort)
     }
 
-    public override fun toPort(toPort: Number) {
+    override fun toPort(toPort: Number) {
       cdkBuilder.toPort(toPort)
     }
 
@@ -35,9 +33,9 @@ public interface PortRange {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.PortRange,
   ) : PortRange {
-    public override fun fromPort(): Number = unwrap(this).getFromPort()
+    override fun fromPort(): Number = unwrap(this).getFromPort()
 
-    public override fun toPort(): Number? = unwrap(this).getToPort()
+    override fun toPort(): Number? = unwrap(this).getToPort()
   }
 
   public companion object {

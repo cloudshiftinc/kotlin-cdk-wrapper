@@ -31,11 +31,9 @@ public open class CfnDRTAccess internal constructor(
   }
 
   public interface Builder {
-    public fun logBucketList(logBucketList: List<String>) {
-    }
+    public fun logBucketList(logBucketList: List<String>)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnDRTAccess internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.shield.CfnDRTAccess.Builder =
         software.amazon.awscdk.services.shield.CfnDRTAccess.Builder.create(scope, id)
 
-    public override fun logBucketList(logBucketList: List<String>) {
+    override fun logBucketList(logBucketList: List<String>) {
       cdkBuilder.logBucketList(logBucketList)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

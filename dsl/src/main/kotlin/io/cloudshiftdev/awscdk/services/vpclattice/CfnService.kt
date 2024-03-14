@@ -86,31 +86,23 @@ public open class CfnService internal constructor(
   }
 
   public interface Builder {
-    public fun authType(authType: String) {
-    }
+    public fun authType(authType: String)
 
-    public fun certificateArn(certificateArn: String) {
-    }
+    public fun certificateArn(certificateArn: String)
 
-    public fun customDomainName(customDomainName: String) {
-    }
+    public fun customDomainName(customDomainName: String)
 
-    public fun dnsEntry(dnsEntry: IResolvable) {
-    }
+    public fun dnsEntry(dnsEntry: IResolvable)
 
-    public fun dnsEntry(dnsEntry: DnsEntryProperty) {
-    }
+    public fun dnsEntry(dnsEntry: DnsEntryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5d85bee0e0b2a595414b10b92d2c2c90c4f1f8724a69c1c2639f996dee89289")
-    public fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit) {
-    }
+    public fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -120,36 +112,36 @@ public open class CfnService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.vpclattice.CfnService.Builder =
         software.amazon.awscdk.services.vpclattice.CfnService.Builder.create(scope, id)
 
-    public override fun authType(authType: String) {
+    override fun authType(authType: String) {
       cdkBuilder.authType(authType)
     }
 
-    public override fun certificateArn(certificateArn: String) {
+    override fun certificateArn(certificateArn: String) {
       cdkBuilder.certificateArn(certificateArn)
     }
 
-    public override fun customDomainName(customDomainName: String) {
+    override fun customDomainName(customDomainName: String) {
       cdkBuilder.customDomainName(customDomainName)
     }
 
-    public override fun dnsEntry(dnsEntry: IResolvable) {
+    override fun dnsEntry(dnsEntry: IResolvable) {
       cdkBuilder.dnsEntry(dnsEntry.let(IResolvable::unwrap))
     }
 
-    public override fun dnsEntry(dnsEntry: DnsEntryProperty) {
+    override fun dnsEntry(dnsEntry: DnsEntryProperty) {
       cdkBuilder.dnsEntry(dnsEntry.let(DnsEntryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a5d85bee0e0b2a595414b10b92d2c2c90c4f1f8724a69c1c2639f996dee89289")
-    public override fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit): Unit =
+    override fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit): Unit =
         dnsEntry(DnsEntryProperty(dnsEntry))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -183,11 +175,9 @@ public open class CfnService internal constructor(
     public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
 
     public interface Builder {
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -195,11 +185,11 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnService.DnsEntryProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnService.DnsEntryProperty.builder()
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
@@ -211,9 +201,9 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnService.DnsEntryProperty,
     ) : DnsEntryProperty {
-      public override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
-      public override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
     }
 
     public companion object {

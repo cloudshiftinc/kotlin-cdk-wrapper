@@ -33,25 +33,19 @@ public open class VirtualGateway internal constructor(
   public override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
 
   public interface Builder {
-    public fun accessLog(accessLog: AccessLog) {
-    }
+    public fun accessLog(accessLog: AccessLog)
 
-    public fun backendDefaults(backendDefaults: BackendDefaults) {
-    }
+    public fun backendDefaults(backendDefaults: BackendDefaults)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("380b63411b3329491321af5555bf8e3f9d8052786eea8a267f4b867656d3666d")
-    public fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit) {
-    }
+    public fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit)
 
-    public fun listeners(listeners: List<VirtualGatewayListener>) {
-    }
+    public fun listeners(listeners: List<VirtualGatewayListener>)
 
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun virtualGatewayName(virtualGatewayName: String) {
-    }
+    public fun virtualGatewayName(virtualGatewayName: String)
   }
 
   private class BuilderImpl(
@@ -61,28 +55,28 @@ public open class VirtualGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualGateway.Builder =
         software.amazon.awscdk.services.appmesh.VirtualGateway.Builder.create(scope, id)
 
-    public override fun accessLog(accessLog: AccessLog) {
+    override fun accessLog(accessLog: AccessLog) {
       cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
     }
 
-    public override fun backendDefaults(backendDefaults: BackendDefaults) {
+    override fun backendDefaults(backendDefaults: BackendDefaults) {
       cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("380b63411b3329491321af5555bf8e3f9d8052786eea8a267f4b867656d3666d")
-    public override fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit): Unit =
+    override fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit): Unit =
         backendDefaults(BackendDefaults(backendDefaults))
 
-    public override fun listeners(listeners: List<VirtualGatewayListener>) {
+    override fun listeners(listeners: List<VirtualGatewayListener>) {
       cdkBuilder.listeners(listeners.map(VirtualGatewayListener::unwrap))
     }
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun virtualGatewayName(virtualGatewayName: String) {
+    override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)
     }
 

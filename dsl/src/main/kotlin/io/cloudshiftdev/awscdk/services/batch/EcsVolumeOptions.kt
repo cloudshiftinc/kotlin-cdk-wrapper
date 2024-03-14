@@ -12,29 +12,26 @@ public interface EcsVolumeOptions {
   public fun readonly(): Boolean? = unwrap(this).getReadonly()
 
   public interface Builder {
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readonly(readonly: Boolean) {
-    }
+    public fun readonly(readonly: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.EcsVolumeOptions.Builder =
         software.amazon.awscdk.services.batch.EcsVolumeOptions.builder()
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readonly(readonly: Boolean) {
+    override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
 
@@ -44,11 +41,11 @@ public interface EcsVolumeOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.EcsVolumeOptions,
   ) : EcsVolumeOptions {
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun readonly(): Boolean? = unwrap(this).getReadonly()
+    override fun readonly(): Boolean? = unwrap(this).getReadonly()
   }
 
   public companion object {

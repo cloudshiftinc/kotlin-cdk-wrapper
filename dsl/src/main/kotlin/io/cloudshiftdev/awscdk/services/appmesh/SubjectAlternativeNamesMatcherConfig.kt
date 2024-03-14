@@ -9,14 +9,12 @@ public interface SubjectAlternativeNamesMatcherConfig {
 
   public interface Builder {
     public
-        fun subjectAlternativeNamesMatch(subjectAlternativeNamesMatch: CfnVirtualNode.SubjectAlternativeNameMatchersProperty) {
-    }
+        fun subjectAlternativeNamesMatch(subjectAlternativeNamesMatch: CfnVirtualNode.SubjectAlternativeNameMatchersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef79e7626fd70c1ee5ab7487235d5b5dfd0a789a9ce0b16d39c3bb164a47bef4")
     public
-        fun subjectAlternativeNamesMatch(subjectAlternativeNamesMatch: CfnVirtualNode.SubjectAlternativeNameMatchersProperty.Builder.() -> Unit) {
-    }
+        fun subjectAlternativeNamesMatch(subjectAlternativeNamesMatch: CfnVirtualNode.SubjectAlternativeNameMatchersProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -24,14 +22,14 @@ public interface SubjectAlternativeNamesMatcherConfig {
         software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig.Builder =
         software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig.builder()
 
-    public override
+    override
         fun subjectAlternativeNamesMatch(subjectAlternativeNamesMatch: CfnVirtualNode.SubjectAlternativeNameMatchersProperty) {
       cdkBuilder.subjectAlternativeNamesMatch(subjectAlternativeNamesMatch.let(CfnVirtualNode.SubjectAlternativeNameMatchersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef79e7626fd70c1ee5ab7487235d5b5dfd0a789a9ce0b16d39c3bb164a47bef4")
-    public override
+    override
         fun subjectAlternativeNamesMatch(subjectAlternativeNamesMatch: CfnVirtualNode.SubjectAlternativeNameMatchersProperty.Builder.() -> Unit):
         Unit =
         subjectAlternativeNamesMatch(CfnVirtualNode.SubjectAlternativeNameMatchersProperty(subjectAlternativeNamesMatch))
@@ -44,7 +42,7 @@ public interface SubjectAlternativeNamesMatcherConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig,
   ) : SubjectAlternativeNamesMatcherConfig {
-    public override fun subjectAlternativeNamesMatch():
+    override fun subjectAlternativeNamesMatch():
         CfnVirtualNode.SubjectAlternativeNameMatchersProperty =
         unwrap(this).getSubjectAlternativeNamesMatch().let(CfnVirtualNode.SubjectAlternativeNameMatchersProperty::wrap)
   }

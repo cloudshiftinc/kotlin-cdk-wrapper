@@ -37,11 +37,9 @@ public open class CfnIndex internal constructor(
   }
 
   public interface Builder {
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -51,11 +49,11 @@ public open class CfnIndex internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.resourceexplorer2.CfnIndex.Builder =
         software.amazon.awscdk.services.resourceexplorer2.CfnIndex.Builder.create(scope, id)
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

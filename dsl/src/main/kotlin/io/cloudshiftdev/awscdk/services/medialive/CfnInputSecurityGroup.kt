@@ -43,14 +43,11 @@ public open class CfnInputSecurityGroup internal constructor(
   }
 
   public interface Builder {
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun whitelistRules(whitelistRules: IResolvable) {
-    }
+    public fun whitelistRules(whitelistRules: IResolvable)
 
-    public fun whitelistRules(whitelistRules: List<Any>) {
-    }
+    public fun whitelistRules(whitelistRules: List<Any>)
   }
 
   private class BuilderImpl(
@@ -60,15 +57,15 @@ public open class CfnInputSecurityGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.Builder
         = software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.Builder.create(scope, id)
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun whitelistRules(whitelistRules: IResolvable) {
+    override fun whitelistRules(whitelistRules: IResolvable) {
       cdkBuilder.whitelistRules(whitelistRules.let(IResolvable::unwrap))
     }
 
-    public override fun whitelistRules(whitelistRules: List<Any>) {
+    override fun whitelistRules(whitelistRules: List<Any>) {
       cdkBuilder.whitelistRules(whitelistRules)
     }
 
@@ -101,8 +98,7 @@ public open class CfnInputSecurityGroup internal constructor(
     public fun cidr(): String? = unwrap(this).getCidr()
 
     public interface Builder {
-      public fun cidr(cidr: String) {
-      }
+      public fun cidr(cidr: String)
     }
 
     private class BuilderImpl : Builder {
@@ -111,7 +107,7 @@ public open class CfnInputSecurityGroup internal constructor(
           =
           software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty.builder()
 
-      public override fun cidr(cidr: String) {
+      override fun cidr(cidr: String) {
         cdkBuilder.cidr(cidr)
       }
 
@@ -124,7 +120,7 @@ public open class CfnInputSecurityGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty,
     ) : InputWhitelistRuleCidrProperty {
-      public override fun cidr(): String? = unwrap(this).getCidr()
+      override fun cidr(): String? = unwrap(this).getCidr()
     }
 
     public companion object {

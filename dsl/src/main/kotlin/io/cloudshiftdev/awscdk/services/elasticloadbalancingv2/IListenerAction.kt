@@ -10,10 +10,10 @@ public interface IListenerAction {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction,
   ) : IListenerAction {
-    public override fun renderActions(): List<CfnListener.ActionProperty> =
+    override fun renderActions(): List<CfnListener.ActionProperty> =
         unwrap(this).renderActions().map(CfnListener.ActionProperty::wrap)
 
-    public override fun renderRuleActions(): List<CfnListenerRule.ActionProperty> =
+    override fun renderRuleActions(): List<CfnListenerRule.ActionProperty> =
         unwrap(this).renderRuleActions().map(CfnListenerRule.ActionProperty::wrap)
   }
 

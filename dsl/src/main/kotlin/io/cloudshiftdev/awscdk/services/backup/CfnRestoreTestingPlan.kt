@@ -77,33 +77,25 @@ public open class CfnRestoreTestingPlan internal constructor(
   }
 
   public interface Builder {
-    public fun recoveryPointSelection(recoveryPointSelection: IResolvable) {
-    }
+    public fun recoveryPointSelection(recoveryPointSelection: IResolvable)
 
     public
-        fun recoveryPointSelection(recoveryPointSelection: RestoreTestingRecoveryPointSelectionProperty) {
-    }
+        fun recoveryPointSelection(recoveryPointSelection: RestoreTestingRecoveryPointSelectionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3b3a9ca86c017a53bbee13ce70f37f2e2547d5a9fb6145fbf9c282648c52d32")
     public
-        fun recoveryPointSelection(recoveryPointSelection: RestoreTestingRecoveryPointSelectionProperty.Builder.() -> Unit) {
-    }
+        fun recoveryPointSelection(recoveryPointSelection: RestoreTestingRecoveryPointSelectionProperty.Builder.() -> Unit)
 
-    public fun restoreTestingPlanName(restoreTestingPlanName: String) {
-    }
+    public fun restoreTestingPlanName(restoreTestingPlanName: String)
 
-    public fun scheduleExpression(scheduleExpression: String) {
-    }
+    public fun scheduleExpression(scheduleExpression: String)
 
-    public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
-    }
+    public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
 
-    public fun startWindowHours(startWindowHours: Number) {
-    }
+    public fun startWindowHours(startWindowHours: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -113,39 +105,39 @@ public open class CfnRestoreTestingPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.Builder =
         software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.Builder.create(scope, id)
 
-    public override fun recoveryPointSelection(recoveryPointSelection: IResolvable) {
+    override fun recoveryPointSelection(recoveryPointSelection: IResolvable) {
       cdkBuilder.recoveryPointSelection(recoveryPointSelection.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun recoveryPointSelection(recoveryPointSelection: RestoreTestingRecoveryPointSelectionProperty) {
       cdkBuilder.recoveryPointSelection(recoveryPointSelection.let(RestoreTestingRecoveryPointSelectionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3b3a9ca86c017a53bbee13ce70f37f2e2547d5a9fb6145fbf9c282648c52d32")
-    public override
+    override
         fun recoveryPointSelection(recoveryPointSelection: RestoreTestingRecoveryPointSelectionProperty.Builder.() -> Unit):
         Unit =
         recoveryPointSelection(RestoreTestingRecoveryPointSelectionProperty(recoveryPointSelection))
 
-    public override fun restoreTestingPlanName(restoreTestingPlanName: String) {
+    override fun restoreTestingPlanName(restoreTestingPlanName: String) {
       cdkBuilder.restoreTestingPlanName(restoreTestingPlanName)
     }
 
-    public override fun scheduleExpression(scheduleExpression: String) {
+    override fun scheduleExpression(scheduleExpression: String) {
       cdkBuilder.scheduleExpression(scheduleExpression)
     }
 
-    public override fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
+    override fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
       cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone)
     }
 
-    public override fun startWindowHours(startWindowHours: Number) {
+    override fun startWindowHours(startWindowHours: Number) {
       cdkBuilder.startWindowHours(startWindowHours)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -186,20 +178,15 @@ public open class CfnRestoreTestingPlan internal constructor(
     public fun selectionWindowDays(): Number? = unwrap(this).getSelectionWindowDays()
 
     public interface Builder {
-      public fun algorithm(algorithm: String) {
-      }
+      public fun algorithm(algorithm: String)
 
-      public fun excludeVaults(excludeVaults: List<String>) {
-      }
+      public fun excludeVaults(excludeVaults: List<String>)
 
-      public fun includeVaults(includeVaults: List<String>) {
-      }
+      public fun includeVaults(includeVaults: List<String>)
 
-      public fun recoveryPointTypes(recoveryPointTypes: List<String>) {
-      }
+      public fun recoveryPointTypes(recoveryPointTypes: List<String>)
 
-      public fun selectionWindowDays(selectionWindowDays: Number) {
-      }
+      public fun selectionWindowDays(selectionWindowDays: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -208,23 +195,23 @@ public open class CfnRestoreTestingPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty.builder()
 
-      public override fun algorithm(algorithm: String) {
+      override fun algorithm(algorithm: String) {
         cdkBuilder.algorithm(algorithm)
       }
 
-      public override fun excludeVaults(excludeVaults: List<String>) {
+      override fun excludeVaults(excludeVaults: List<String>) {
         cdkBuilder.excludeVaults(excludeVaults)
       }
 
-      public override fun includeVaults(includeVaults: List<String>) {
+      override fun includeVaults(includeVaults: List<String>) {
         cdkBuilder.includeVaults(includeVaults)
       }
 
-      public override fun recoveryPointTypes(recoveryPointTypes: List<String>) {
+      override fun recoveryPointTypes(recoveryPointTypes: List<String>) {
         cdkBuilder.recoveryPointTypes(recoveryPointTypes)
       }
 
-      public override fun selectionWindowDays(selectionWindowDays: Number) {
+      override fun selectionWindowDays(selectionWindowDays: Number) {
         cdkBuilder.selectionWindowDays(selectionWindowDays)
       }
 
@@ -237,18 +224,16 @@ public open class CfnRestoreTestingPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty,
     ) : RestoreTestingRecoveryPointSelectionProperty {
-      public override fun algorithm(): String = unwrap(this).getAlgorithm()
+      override fun algorithm(): String = unwrap(this).getAlgorithm()
 
-      public override fun excludeVaults(): List<String> = unwrap(this).getExcludeVaults() ?:
+      override fun excludeVaults(): List<String> = unwrap(this).getExcludeVaults() ?: emptyList()
+
+      override fun includeVaults(): List<String> = unwrap(this).getIncludeVaults() ?: emptyList()
+
+      override fun recoveryPointTypes(): List<String> = unwrap(this).getRecoveryPointTypes() ?:
           emptyList()
 
-      public override fun includeVaults(): List<String> = unwrap(this).getIncludeVaults() ?:
-          emptyList()
-
-      public override fun recoveryPointTypes(): List<String> = unwrap(this).getRecoveryPointTypes()
-          ?: emptyList()
-
-      public override fun selectionWindowDays(): Number? = unwrap(this).getSelectionWindowDays()
+      override fun selectionWindowDays(): Number? = unwrap(this).getSelectionWindowDays()
     }
 
     public companion object {

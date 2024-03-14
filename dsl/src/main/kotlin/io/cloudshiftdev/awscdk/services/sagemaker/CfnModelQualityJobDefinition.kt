@@ -167,101 +167,76 @@ public open class CfnModelQualityJobDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun endpointName(endpointName: String) {
-    }
+    public fun endpointName(endpointName: String)
 
-    public fun jobDefinitionName(jobDefinitionName: String) {
-    }
+    public fun jobDefinitionName(jobDefinitionName: String)
 
-    public fun jobResources(jobResources: IResolvable) {
-    }
+    public fun jobResources(jobResources: IResolvable)
 
-    public fun jobResources(jobResources: MonitoringResourcesProperty) {
-    }
+    public fun jobResources(jobResources: MonitoringResourcesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17d4558e04d008184853dbf26eba288cb406cc08b677c61828bb398018a1ef85")
-    public fun jobResources(jobResources: MonitoringResourcesProperty.Builder.() -> Unit) {
-    }
+    public fun jobResources(jobResources: MonitoringResourcesProperty.Builder.() -> Unit)
 
-    public fun modelQualityAppSpecification(modelQualityAppSpecification: IResolvable) {
-    }
+    public fun modelQualityAppSpecification(modelQualityAppSpecification: IResolvable)
 
     public
-        fun modelQualityAppSpecification(modelQualityAppSpecification: ModelQualityAppSpecificationProperty) {
-    }
+        fun modelQualityAppSpecification(modelQualityAppSpecification: ModelQualityAppSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d73f31546d43f21775bf2254d7d1ffabd0be5070d6460b79106404b13bc6362")
     public
-        fun modelQualityAppSpecification(modelQualityAppSpecification: ModelQualityAppSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun modelQualityAppSpecification(modelQualityAppSpecification: ModelQualityAppSpecificationProperty.Builder.() -> Unit)
 
-    public fun modelQualityBaselineConfig(modelQualityBaselineConfig: IResolvable) {
-    }
+    public fun modelQualityBaselineConfig(modelQualityBaselineConfig: IResolvable)
 
     public
-        fun modelQualityBaselineConfig(modelQualityBaselineConfig: ModelQualityBaselineConfigProperty) {
-    }
+        fun modelQualityBaselineConfig(modelQualityBaselineConfig: ModelQualityBaselineConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c67bfd822f34cefb8d14eb096fcf4acab791e9005d75231d7dea0413435d61a")
     public
-        fun modelQualityBaselineConfig(modelQualityBaselineConfig: ModelQualityBaselineConfigProperty.Builder.() -> Unit) {
-    }
+        fun modelQualityBaselineConfig(modelQualityBaselineConfig: ModelQualityBaselineConfigProperty.Builder.() -> Unit)
 
-    public fun modelQualityJobInput(modelQualityJobInput: IResolvable) {
-    }
+    public fun modelQualityJobInput(modelQualityJobInput: IResolvable)
 
-    public fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty) {
-    }
+    public fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a75fc308bff9dc0645d582b5c98d508de23f1bfb3e137d33357cca5d0d55a1a6")
     public
-        fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty.Builder.() -> Unit) {
-    }
+        fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty.Builder.() -> Unit)
 
-    public fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: IResolvable) {
-    }
+    public fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: IResolvable)
 
     public
-        fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: MonitoringOutputConfigProperty) {
-    }
+        fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: MonitoringOutputConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0745cc72873b2935e44f42771ed7c24b7276a502cfd9044a8bd494dd465faaa5")
     public
-        fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: MonitoringOutputConfigProperty.Builder.() -> Unit) {
-    }
+        fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: MonitoringOutputConfigProperty.Builder.() -> Unit)
 
-    public fun networkConfig(networkConfig: IResolvable) {
-    }
+    public fun networkConfig(networkConfig: IResolvable)
 
-    public fun networkConfig(networkConfig: NetworkConfigProperty) {
-    }
+    public fun networkConfig(networkConfig: NetworkConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5bc3bfe6fdda3e81e3cd68d4c50b29e2804c7d422c039fae94304aee9556a046")
-    public fun networkConfig(networkConfig: NetworkConfigProperty.Builder.() -> Unit) {
-    }
+    public fun networkConfig(networkConfig: NetworkConfigProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun stoppingCondition(stoppingCondition: IResolvable) {
-    }
+    public fun stoppingCondition(stoppingCondition: IResolvable)
 
-    public fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
-    }
+    public fun stoppingCondition(stoppingCondition: StoppingConditionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("492ffcf2378a1da21aa8145bc7b7fb0294482684660e93fb5341b4e6d34e8264")
-    public fun stoppingCondition(stoppingCondition: StoppingConditionProperty.Builder.() -> Unit) {
-    }
+    public fun stoppingCondition(stoppingCondition: StoppingConditionProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -273,121 +248,120 @@ public open class CfnModelQualityJobDefinition internal constructor(
         software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.Builder.create(scope,
         id)
 
-    public override fun endpointName(endpointName: String) {
+    override fun endpointName(endpointName: String) {
       cdkBuilder.endpointName(endpointName)
     }
 
-    public override fun jobDefinitionName(jobDefinitionName: String) {
+    override fun jobDefinitionName(jobDefinitionName: String) {
       cdkBuilder.jobDefinitionName(jobDefinitionName)
     }
 
-    public override fun jobResources(jobResources: IResolvable) {
+    override fun jobResources(jobResources: IResolvable) {
       cdkBuilder.jobResources(jobResources.let(IResolvable::unwrap))
     }
 
-    public override fun jobResources(jobResources: MonitoringResourcesProperty) {
+    override fun jobResources(jobResources: MonitoringResourcesProperty) {
       cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17d4558e04d008184853dbf26eba288cb406cc08b677c61828bb398018a1ef85")
-    public override fun jobResources(jobResources: MonitoringResourcesProperty.Builder.() -> Unit):
-        Unit = jobResources(MonitoringResourcesProperty(jobResources))
+    override fun jobResources(jobResources: MonitoringResourcesProperty.Builder.() -> Unit): Unit =
+        jobResources(MonitoringResourcesProperty(jobResources))
 
-    public override fun modelQualityAppSpecification(modelQualityAppSpecification: IResolvable) {
+    override fun modelQualityAppSpecification(modelQualityAppSpecification: IResolvable) {
       cdkBuilder.modelQualityAppSpecification(modelQualityAppSpecification.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun modelQualityAppSpecification(modelQualityAppSpecification: ModelQualityAppSpecificationProperty) {
       cdkBuilder.modelQualityAppSpecification(modelQualityAppSpecification.let(ModelQualityAppSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d73f31546d43f21775bf2254d7d1ffabd0be5070d6460b79106404b13bc6362")
-    public override
+    override
         fun modelQualityAppSpecification(modelQualityAppSpecification: ModelQualityAppSpecificationProperty.Builder.() -> Unit):
         Unit =
         modelQualityAppSpecification(ModelQualityAppSpecificationProperty(modelQualityAppSpecification))
 
-    public override fun modelQualityBaselineConfig(modelQualityBaselineConfig: IResolvable) {
+    override fun modelQualityBaselineConfig(modelQualityBaselineConfig: IResolvable) {
       cdkBuilder.modelQualityBaselineConfig(modelQualityBaselineConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun modelQualityBaselineConfig(modelQualityBaselineConfig: ModelQualityBaselineConfigProperty) {
       cdkBuilder.modelQualityBaselineConfig(modelQualityBaselineConfig.let(ModelQualityBaselineConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c67bfd822f34cefb8d14eb096fcf4acab791e9005d75231d7dea0413435d61a")
-    public override
+    override
         fun modelQualityBaselineConfig(modelQualityBaselineConfig: ModelQualityBaselineConfigProperty.Builder.() -> Unit):
         Unit =
         modelQualityBaselineConfig(ModelQualityBaselineConfigProperty(modelQualityBaselineConfig))
 
-    public override fun modelQualityJobInput(modelQualityJobInput: IResolvable) {
+    override fun modelQualityJobInput(modelQualityJobInput: IResolvable) {
       cdkBuilder.modelQualityJobInput(modelQualityJobInput.let(IResolvable::unwrap))
     }
 
-    public override fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty) {
+    override fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty) {
       cdkBuilder.modelQualityJobInput(modelQualityJobInput.let(ModelQualityJobInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a75fc308bff9dc0645d582b5c98d508de23f1bfb3e137d33357cca5d0d55a1a6")
-    public override
+    override
         fun modelQualityJobInput(modelQualityJobInput: ModelQualityJobInputProperty.Builder.() -> Unit):
         Unit = modelQualityJobInput(ModelQualityJobInputProperty(modelQualityJobInput))
 
-    public override fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: IResolvable) {
+    override fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: IResolvable) {
       cdkBuilder.modelQualityJobOutputConfig(modelQualityJobOutputConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: MonitoringOutputConfigProperty) {
       cdkBuilder.modelQualityJobOutputConfig(modelQualityJobOutputConfig.let(MonitoringOutputConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0745cc72873b2935e44f42771ed7c24b7276a502cfd9044a8bd494dd465faaa5")
-    public override
+    override
         fun modelQualityJobOutputConfig(modelQualityJobOutputConfig: MonitoringOutputConfigProperty.Builder.() -> Unit):
         Unit =
         modelQualityJobOutputConfig(MonitoringOutputConfigProperty(modelQualityJobOutputConfig))
 
-    public override fun networkConfig(networkConfig: IResolvable) {
+    override fun networkConfig(networkConfig: IResolvable) {
       cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
     }
 
-    public override fun networkConfig(networkConfig: NetworkConfigProperty) {
+    override fun networkConfig(networkConfig: NetworkConfigProperty) {
       cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5bc3bfe6fdda3e81e3cd68d4c50b29e2804c7d422c039fae94304aee9556a046")
-    public override fun networkConfig(networkConfig: NetworkConfigProperty.Builder.() -> Unit): Unit
-        = networkConfig(NetworkConfigProperty(networkConfig))
+    override fun networkConfig(networkConfig: NetworkConfigProperty.Builder.() -> Unit): Unit =
+        networkConfig(NetworkConfigProperty(networkConfig))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun stoppingCondition(stoppingCondition: IResolvable) {
+    override fun stoppingCondition(stoppingCondition: IResolvable) {
       cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
     }
 
-    public override fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
+    override fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
       cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("492ffcf2378a1da21aa8145bc7b7fb0294482684660e93fb5341b4e6d34e8264")
-    public override
-        fun stoppingCondition(stoppingCondition: StoppingConditionProperty.Builder.() -> Unit): Unit
-        = stoppingCondition(StoppingConditionProperty(stoppingCondition))
+    override fun stoppingCondition(stoppingCondition: StoppingConditionProperty.Builder.() -> Unit):
+        Unit = stoppingCondition(StoppingConditionProperty(stoppingCondition))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -438,32 +412,23 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
 
     public interface Builder {
-      public fun endTimeOffset(endTimeOffset: String) {
-      }
+      public fun endTimeOffset(endTimeOffset: String)
 
-      public fun endpointName(endpointName: String) {
-      }
+      public fun endpointName(endpointName: String)
 
-      public fun inferenceAttribute(inferenceAttribute: String) {
-      }
+      public fun inferenceAttribute(inferenceAttribute: String)
 
-      public fun localPath(localPath: String) {
-      }
+      public fun localPath(localPath: String)
 
-      public fun probabilityAttribute(probabilityAttribute: String) {
-      }
+      public fun probabilityAttribute(probabilityAttribute: String)
 
-      public fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
-      }
+      public fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number)
 
-      public fun s3DataDistributionType(s3DataDistributionType: String) {
-      }
+      public fun s3DataDistributionType(s3DataDistributionType: String)
 
-      public fun s3InputMode(s3InputMode: String) {
-      }
+      public fun s3InputMode(s3InputMode: String)
 
-      public fun startTimeOffset(startTimeOffset: String) {
-      }
+      public fun startTimeOffset(startTimeOffset: String)
     }
 
     private class BuilderImpl : Builder {
@@ -472,39 +437,39 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty.builder()
 
-      public override fun endTimeOffset(endTimeOffset: String) {
+      override fun endTimeOffset(endTimeOffset: String) {
         cdkBuilder.endTimeOffset(endTimeOffset)
       }
 
-      public override fun endpointName(endpointName: String) {
+      override fun endpointName(endpointName: String) {
         cdkBuilder.endpointName(endpointName)
       }
 
-      public override fun inferenceAttribute(inferenceAttribute: String) {
+      override fun inferenceAttribute(inferenceAttribute: String) {
         cdkBuilder.inferenceAttribute(inferenceAttribute)
       }
 
-      public override fun localPath(localPath: String) {
+      override fun localPath(localPath: String) {
         cdkBuilder.localPath(localPath)
       }
 
-      public override fun probabilityAttribute(probabilityAttribute: String) {
+      override fun probabilityAttribute(probabilityAttribute: String) {
         cdkBuilder.probabilityAttribute(probabilityAttribute)
       }
 
-      public override fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
+      override fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
         cdkBuilder.probabilityThresholdAttribute(probabilityThresholdAttribute)
       }
 
-      public override fun s3DataDistributionType(s3DataDistributionType: String) {
+      override fun s3DataDistributionType(s3DataDistributionType: String) {
         cdkBuilder.s3DataDistributionType(s3DataDistributionType)
       }
 
-      public override fun s3InputMode(s3InputMode: String) {
+      override fun s3InputMode(s3InputMode: String) {
         cdkBuilder.s3InputMode(s3InputMode)
       }
 
-      public override fun startTimeOffset(startTimeOffset: String) {
+      override fun startTimeOffset(startTimeOffset: String) {
         cdkBuilder.startTimeOffset(startTimeOffset)
       }
 
@@ -517,25 +482,24 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.EndpointInputProperty,
     ) : EndpointInputProperty {
-      public override fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
+      override fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
 
-      public override fun endpointName(): String = unwrap(this).getEndpointName()
+      override fun endpointName(): String = unwrap(this).getEndpointName()
 
-      public override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
 
-      public override fun localPath(): String = unwrap(this).getLocalPath()
+      override fun localPath(): String = unwrap(this).getLocalPath()
 
-      public override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
 
-      public override fun probabilityThresholdAttribute(): Number? =
+      override fun probabilityThresholdAttribute(): Number? =
           unwrap(this).getProbabilityThresholdAttribute()
 
-      public override fun s3DataDistributionType(): String? =
-          unwrap(this).getS3DataDistributionType()
+      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
 
-      public override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
 
-      public override fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
+      override fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
     }
 
     public companion object {
@@ -578,29 +542,21 @@ public open class CfnModelQualityJobDefinition internal constructor(
         unwrap(this).getRecordPreprocessorSourceUri()
 
     public interface Builder {
-      public fun containerArguments(containerArguments: List<String>) {
-      }
+      public fun containerArguments(containerArguments: List<String>)
 
-      public fun containerEntrypoint(containerEntrypoint: List<String>) {
-      }
+      public fun containerEntrypoint(containerEntrypoint: List<String>)
 
-      public fun environment(environment: IResolvable) {
-      }
+      public fun environment(environment: IResolvable)
 
-      public fun environment(environment: Map<String, String>) {
-      }
+      public fun environment(environment: Map<String, String>)
 
-      public fun imageUri(imageUri: String) {
-      }
+      public fun imageUri(imageUri: String)
 
-      public fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String) {
-      }
+      public fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String)
 
-      public fun problemType(problemType: String) {
-      }
+      public fun problemType(problemType: String)
 
-      public fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String) {
-      }
+      public fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -609,35 +565,35 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty.builder()
 
-      public override fun containerArguments(containerArguments: List<String>) {
+      override fun containerArguments(containerArguments: List<String>) {
         cdkBuilder.containerArguments(containerArguments)
       }
 
-      public override fun containerEntrypoint(containerEntrypoint: List<String>) {
+      override fun containerEntrypoint(containerEntrypoint: List<String>) {
         cdkBuilder.containerEntrypoint(containerEntrypoint)
       }
 
-      public override fun environment(environment: IResolvable) {
+      override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
       }
 
-      public override fun environment(environment: Map<String, String>) {
+      override fun environment(environment: Map<String, String>) {
         cdkBuilder.environment(environment)
       }
 
-      public override fun imageUri(imageUri: String) {
+      override fun imageUri(imageUri: String) {
         cdkBuilder.imageUri(imageUri)
       }
 
-      public override fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String) {
+      override fun postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri: String) {
         cdkBuilder.postAnalyticsProcessorSourceUri(postAnalyticsProcessorSourceUri)
       }
 
-      public override fun problemType(problemType: String) {
+      override fun problemType(problemType: String) {
         cdkBuilder.problemType(problemType)
       }
 
-      public override fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String) {
+      override fun recordPreprocessorSourceUri(recordPreprocessorSourceUri: String) {
         cdkBuilder.recordPreprocessorSourceUri(recordPreprocessorSourceUri)
       }
 
@@ -650,22 +606,22 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty,
     ) : ModelQualityAppSpecificationProperty {
-      public override fun containerArguments(): List<String> = unwrap(this).getContainerArguments()
-          ?: emptyList()
+      override fun containerArguments(): List<String> = unwrap(this).getContainerArguments() ?:
+          emptyList()
 
-      public override fun containerEntrypoint(): List<String> =
-          unwrap(this).getContainerEntrypoint() ?: emptyList()
+      override fun containerEntrypoint(): List<String> = unwrap(this).getContainerEntrypoint() ?:
+          emptyList()
 
-      public override fun environment(): Any? = unwrap(this).getEnvironment()
+      override fun environment(): Any? = unwrap(this).getEnvironment()
 
-      public override fun imageUri(): String = unwrap(this).getImageUri()
+      override fun imageUri(): String = unwrap(this).getImageUri()
 
-      public override fun postAnalyticsProcessorSourceUri(): String? =
+      override fun postAnalyticsProcessorSourceUri(): String? =
           unwrap(this).getPostAnalyticsProcessorSourceUri()
 
-      public override fun problemType(): String = unwrap(this).getProblemType()
+      override fun problemType(): String = unwrap(this).getProblemType()
 
-      public override fun recordPreprocessorSourceUri(): String? =
+      override fun recordPreprocessorSourceUri(): String? =
           unwrap(this).getRecordPreprocessorSourceUri()
     }
 
@@ -700,17 +656,13 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun volumeSizeInGb(): Number
 
     public interface Builder {
-      public fun instanceCount(instanceCount: Number) {
-      }
+      public fun instanceCount(instanceCount: Number)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun volumeKmsKeyId(volumeKmsKeyId: String) {
-      }
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
 
-      public fun volumeSizeInGb(volumeSizeInGb: Number) {
-      }
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -719,19 +671,19 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty.builder()
 
-      public override fun instanceCount(instanceCount: Number) {
+      override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
         cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
       }
 
-      public override fun volumeSizeInGb(volumeSizeInGb: Number) {
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
         cdkBuilder.volumeSizeInGb(volumeSizeInGb)
       }
 
@@ -744,13 +696,13 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ClusterConfigProperty,
     ) : ClusterConfigProperty {
-      public override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+      override fun instanceCount(): Number = unwrap(this).getInstanceCount()
 
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
 
-      public override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
 
-      public override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
+      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
     }
 
     public companion object {
@@ -779,20 +731,16 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
 
     public interface Builder {
-      public fun baseliningJobName(baseliningJobName: String) {
-      }
+      public fun baseliningJobName(baseliningJobName: String)
 
-      public fun constraintsResource(constraintsResource: IResolvable) {
-      }
+      public fun constraintsResource(constraintsResource: IResolvable)
 
-      public fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-      }
+      public fun constraintsResource(constraintsResource: ConstraintsResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("945a966ddf16d5853bdc6ec099011802c4023515328fefceefe815ef1fa1c110")
       public
-          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit) {
-      }
+          fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -801,21 +749,21 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty.builder()
 
-      public override fun baseliningJobName(baseliningJobName: String) {
+      override fun baseliningJobName(baseliningJobName: String) {
         cdkBuilder.baseliningJobName(baseliningJobName)
       }
 
-      public override fun constraintsResource(constraintsResource: IResolvable) {
+      override fun constraintsResource(constraintsResource: IResolvable) {
         cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
       }
 
-      public override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
+      override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
         cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("945a966ddf16d5853bdc6ec099011802c4023515328fefceefe815ef1fa1c110")
-      public override
+      override
           fun constraintsResource(constraintsResource: ConstraintsResourceProperty.Builder.() -> Unit):
           Unit = constraintsResource(ConstraintsResourceProperty(constraintsResource))
 
@@ -828,9 +776,9 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityBaselineConfigProperty,
     ) : ModelQualityBaselineConfigProperty {
-      public override fun baseliningJobName(): String? = unwrap(this).getBaseliningJobName()
+      override fun baseliningJobName(): String? = unwrap(this).getBaseliningJobName()
 
-      public override fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
+      override fun constraintsResource(): Any? = unwrap(this).getConstraintsResource()
     }
 
     public companion object {
@@ -858,8 +806,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun s3Uri(): String
 
     public interface Builder {
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -868,7 +815,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty.builder()
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
@@ -881,7 +828,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringGroundTruthS3InputProperty,
     ) : MonitoringGroundTruthS3InputProperty {
-      public override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
     }
 
     public companion object {
@@ -928,43 +875,31 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
 
     public interface Builder {
-      public fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String) {
-      }
+      public fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String)
 
-      public fun datasetFormat(datasetFormat: IResolvable) {
-      }
+      public fun datasetFormat(datasetFormat: IResolvable)
 
-      public fun datasetFormat(datasetFormat: DatasetFormatProperty) {
-      }
+      public fun datasetFormat(datasetFormat: DatasetFormatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27387335d2a360eb7f2594f4d92ab11a62154e63c2687e102772fc6b98dbf674")
-      public fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit) {
-      }
+      public fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit)
 
-      public fun endTimeOffset(endTimeOffset: String) {
-      }
+      public fun endTimeOffset(endTimeOffset: String)
 
-      public fun inferenceAttribute(inferenceAttribute: String) {
-      }
+      public fun inferenceAttribute(inferenceAttribute: String)
 
-      public fun localPath(localPath: String) {
-      }
+      public fun localPath(localPath: String)
 
-      public fun probabilityAttribute(probabilityAttribute: String) {
-      }
+      public fun probabilityAttribute(probabilityAttribute: String)
 
-      public fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
-      }
+      public fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number)
 
-      public fun s3DataDistributionType(s3DataDistributionType: String) {
-      }
+      public fun s3DataDistributionType(s3DataDistributionType: String)
 
-      public fun s3InputMode(s3InputMode: String) {
-      }
+      public fun s3InputMode(s3InputMode: String)
 
-      public fun startTimeOffset(startTimeOffset: String) {
-      }
+      public fun startTimeOffset(startTimeOffset: String)
     }
 
     private class BuilderImpl : Builder {
@@ -973,52 +908,52 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.BatchTransformInputProperty.builder()
 
-      public override fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String) {
+      override fun dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri: String) {
         cdkBuilder.dataCapturedDestinationS3Uri(dataCapturedDestinationS3Uri)
       }
 
-      public override fun datasetFormat(datasetFormat: IResolvable) {
+      override fun datasetFormat(datasetFormat: IResolvable) {
         cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
       }
 
-      public override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
+      override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
         cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27387335d2a360eb7f2594f4d92ab11a62154e63c2687e102772fc6b98dbf674")
-      public override fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit):
-          Unit = datasetFormat(DatasetFormatProperty(datasetFormat))
+      override fun datasetFormat(datasetFormat: DatasetFormatProperty.Builder.() -> Unit): Unit =
+          datasetFormat(DatasetFormatProperty(datasetFormat))
 
-      public override fun endTimeOffset(endTimeOffset: String) {
+      override fun endTimeOffset(endTimeOffset: String) {
         cdkBuilder.endTimeOffset(endTimeOffset)
       }
 
-      public override fun inferenceAttribute(inferenceAttribute: String) {
+      override fun inferenceAttribute(inferenceAttribute: String) {
         cdkBuilder.inferenceAttribute(inferenceAttribute)
       }
 
-      public override fun localPath(localPath: String) {
+      override fun localPath(localPath: String) {
         cdkBuilder.localPath(localPath)
       }
 
-      public override fun probabilityAttribute(probabilityAttribute: String) {
+      override fun probabilityAttribute(probabilityAttribute: String) {
         cdkBuilder.probabilityAttribute(probabilityAttribute)
       }
 
-      public override fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
+      override fun probabilityThresholdAttribute(probabilityThresholdAttribute: Number) {
         cdkBuilder.probabilityThresholdAttribute(probabilityThresholdAttribute)
       }
 
-      public override fun s3DataDistributionType(s3DataDistributionType: String) {
+      override fun s3DataDistributionType(s3DataDistributionType: String) {
         cdkBuilder.s3DataDistributionType(s3DataDistributionType)
       }
 
-      public override fun s3InputMode(s3InputMode: String) {
+      override fun s3InputMode(s3InputMode: String) {
         cdkBuilder.s3InputMode(s3InputMode)
       }
 
-      public override fun startTimeOffset(startTimeOffset: String) {
+      override fun startTimeOffset(startTimeOffset: String) {
         cdkBuilder.startTimeOffset(startTimeOffset)
       }
 
@@ -1031,28 +966,27 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.BatchTransformInputProperty,
     ) : BatchTransformInputProperty {
-      public override fun dataCapturedDestinationS3Uri(): String =
+      override fun dataCapturedDestinationS3Uri(): String =
           unwrap(this).getDataCapturedDestinationS3Uri()
 
-      public override fun datasetFormat(): Any = unwrap(this).getDatasetFormat()
+      override fun datasetFormat(): Any = unwrap(this).getDatasetFormat()
 
-      public override fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
+      override fun endTimeOffset(): String? = unwrap(this).getEndTimeOffset()
 
-      public override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
+      override fun inferenceAttribute(): String? = unwrap(this).getInferenceAttribute()
 
-      public override fun localPath(): String = unwrap(this).getLocalPath()
+      override fun localPath(): String = unwrap(this).getLocalPath()
 
-      public override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
+      override fun probabilityAttribute(): String? = unwrap(this).getProbabilityAttribute()
 
-      public override fun probabilityThresholdAttribute(): Number? =
+      override fun probabilityThresholdAttribute(): Number? =
           unwrap(this).getProbabilityThresholdAttribute()
 
-      public override fun s3DataDistributionType(): String? =
-          unwrap(this).getS3DataDistributionType()
+      override fun s3DataDistributionType(): String? = unwrap(this).getS3DataDistributionType()
 
-      public override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
+      override fun s3InputMode(): String? = unwrap(this).getS3InputMode()
 
-      public override fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
+      override fun startTimeOffset(): String? = unwrap(this).getStartTimeOffset()
     }
 
     public companion object {
@@ -1079,11 +1013,9 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun line(): Any? = unwrap(this).getLine()
 
     public interface Builder {
-      public fun line(line: Boolean) {
-      }
+      public fun line(line: Boolean)
 
-      public fun line(line: IResolvable) {
-      }
+      public fun line(line: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1092,11 +1024,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty.builder()
 
-      public override fun line(line: Boolean) {
+      override fun line(line: Boolean) {
         cdkBuilder.line(line)
       }
 
-      public override fun line(line: IResolvable) {
+      override fun line(line: IResolvable) {
         cdkBuilder.line(line.let(IResolvable::unwrap))
       }
 
@@ -1109,7 +1041,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.JsonProperty,
     ) : JsonProperty {
-      public override fun line(): Any? = unwrap(this).getLine()
+      override fun line(): Any? = unwrap(this).getLine()
     }
 
     public companion object {
@@ -1136,16 +1068,13 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun clusterConfig(): Any
 
     public interface Builder {
-      public fun clusterConfig(clusterConfig: IResolvable) {
-      }
+      public fun clusterConfig(clusterConfig: IResolvable)
 
-      public fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-      }
+      public fun clusterConfig(clusterConfig: ClusterConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("86a650a67c137f45478cebc14363efd0d878d4dab3ff569186e1a3a8abecc98a")
-      public fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit) {
-      }
+      public fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1154,18 +1083,18 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty.builder()
 
-      public override fun clusterConfig(clusterConfig: IResolvable) {
+      override fun clusterConfig(clusterConfig: IResolvable) {
         cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
       }
 
-      public override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
+      override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
         cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("86a650a67c137f45478cebc14363efd0d878d4dab3ff569186e1a3a8abecc98a")
-      public override fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit):
-          Unit = clusterConfig(ClusterConfigProperty(clusterConfig))
+      override fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit): Unit =
+          clusterConfig(ClusterConfigProperty(clusterConfig))
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty
@@ -1176,7 +1105,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringResourcesProperty,
     ) : MonitoringResourcesProperty {
-      public override fun clusterConfig(): Any = unwrap(this).getClusterConfig()
+      override fun clusterConfig(): Any = unwrap(this).getClusterConfig()
     }
 
     public companion object {
@@ -1207,14 +1136,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun s3Uri(): String
 
     public interface Builder {
-      public fun localPath(localPath: String) {
-      }
+      public fun localPath(localPath: String)
 
-      public fun s3UploadMode(s3UploadMode: String) {
-      }
+      public fun s3UploadMode(s3UploadMode: String)
 
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1223,15 +1149,15 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.S3OutputProperty.builder()
 
-      public override fun localPath(localPath: String) {
+      override fun localPath(localPath: String) {
         cdkBuilder.localPath(localPath)
       }
 
-      public override fun s3UploadMode(s3UploadMode: String) {
+      override fun s3UploadMode(s3UploadMode: String) {
         cdkBuilder.s3UploadMode(s3UploadMode)
       }
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
@@ -1244,11 +1170,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.S3OutputProperty,
     ) : S3OutputProperty {
-      public override fun localPath(): String = unwrap(this).getLocalPath()
+      override fun localPath(): String = unwrap(this).getLocalPath()
 
-      public override fun s3UploadMode(): String? = unwrap(this).getS3UploadMode()
+      override fun s3UploadMode(): String? = unwrap(this).getS3UploadMode()
 
-      public override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
     }
 
     public companion object {
@@ -1275,8 +1201,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun maxRuntimeInSeconds(): Number
 
     public interface Builder {
-      public fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
-      }
+      public fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1285,7 +1210,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.StoppingConditionProperty.builder()
 
-      public override fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
+      override fun maxRuntimeInSeconds(maxRuntimeInSeconds: Number) {
         cdkBuilder.maxRuntimeInSeconds(maxRuntimeInSeconds)
       }
 
@@ -1298,7 +1223,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.StoppingConditionProperty,
     ) : StoppingConditionProperty {
-      public override fun maxRuntimeInSeconds(): Number = unwrap(this).getMaxRuntimeInSeconds()
+      override fun maxRuntimeInSeconds(): Number = unwrap(this).getMaxRuntimeInSeconds()
     }
 
     public companion object {
@@ -1327,14 +1252,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun monitoringOutputs(): Any
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun monitoringOutputs(monitoringOutputs: IResolvable) {
-      }
+      public fun monitoringOutputs(monitoringOutputs: IResolvable)
 
-      public fun monitoringOutputs(monitoringOutputs: List<Any>) {
-      }
+      public fun monitoringOutputs(monitoringOutputs: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1343,15 +1265,15 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun monitoringOutputs(monitoringOutputs: IResolvable) {
+      override fun monitoringOutputs(monitoringOutputs: IResolvable) {
         cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
       }
 
-      public override fun monitoringOutputs(monitoringOutputs: List<Any>) {
+      override fun monitoringOutputs(monitoringOutputs: List<Any>) {
         cdkBuilder.monitoringOutputs(monitoringOutputs)
       }
 
@@ -1364,9 +1286,9 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputConfigProperty,
     ) : MonitoringOutputConfigProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
+      override fun monitoringOutputs(): Any = unwrap(this).getMonitoringOutputs()
     }
 
     public companion object {
@@ -1399,29 +1321,22 @@ public open class CfnModelQualityJobDefinition internal constructor(
 
     public interface Builder {
       public
-          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean) {
-      }
+          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean)
 
       public
-          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
-      }
+          fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable)
 
-      public fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
-      }
+      public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
 
-      public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-      }
+      public fun enableNetworkIsolation(enableNetworkIsolation: IResolvable)
 
-      public fun vpcConfig(vpcConfig: IResolvable) {
-      }
+      public fun vpcConfig(vpcConfig: IResolvable)
 
-      public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      }
+      public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("156c44cc55e4ab74f58e06f442ad8d9e3727e4582c4f748362220851fe3cd55e")
-      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-      }
+      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1430,35 +1345,35 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty.builder()
 
-      public override
+      override
           fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: Boolean) {
         cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption)
       }
 
-      public override
+      override
           fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
         cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
       }
 
-      public override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+      override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
         cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
       }
 
-      public override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
+      override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
         cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfig(vpcConfig: IResolvable) {
+      override fun vpcConfig(vpcConfig: IResolvable) {
         cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+      override fun vpcConfig(vpcConfig: VpcConfigProperty) {
         cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("156c44cc55e4ab74f58e06f442ad8d9e3727e4582c4f748362220851fe3cd55e")
-      public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+      override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
           vpcConfig(VpcConfigProperty(vpcConfig))
 
       public fun build():
@@ -1470,12 +1385,12 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.NetworkConfigProperty,
     ) : NetworkConfigProperty {
-      public override fun enableInterContainerTrafficEncryption(): Any? =
+      override fun enableInterContainerTrafficEncryption(): Any? =
           unwrap(this).getEnableInterContainerTrafficEncryption()
 
-      public override fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
+      override fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
 
-      public override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
+      override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
     }
 
     public companion object {
@@ -1502,11 +1417,9 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun `header`(): Any? = unwrap(this).getHeader()
 
     public interface Builder {
-      public fun `header`(`header`: Boolean) {
-      }
+      public fun `header`(`header`: Boolean)
 
-      public fun `header`(`header`: IResolvable) {
-      }
+      public fun `header`(`header`: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1515,11 +1428,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty.builder()
 
-      public override fun `header`(`header`: Boolean) {
+      override fun `header`(`header`: Boolean) {
         cdkBuilder.`header`(`header`)
       }
 
-      public override fun `header`(`header`: IResolvable) {
+      override fun `header`(`header`: IResolvable) {
         cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
       }
 
@@ -1532,7 +1445,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.CsvProperty,
     ) : CsvProperty {
-      public override fun `header`(): Any? = unwrap(this).getHeader()
+      override fun `header`(): Any? = unwrap(this).getHeader()
     }
 
     public companion object {
@@ -1561,11 +1474,9 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun subnets(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnets(subnets: List<String>) {
-      }
+      public fun subnets(subnets: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1574,11 +1485,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnets(subnets: List<String>) {
+      override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
 
@@ -1591,10 +1502,10 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
     }
 
     public companion object {
@@ -1625,33 +1536,25 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun parquet(): Any? = unwrap(this).getParquet()
 
     public interface Builder {
-      public fun csv(csv: IResolvable) {
-      }
+      public fun csv(csv: IResolvable)
 
-      public fun csv(csv: CsvProperty) {
-      }
+      public fun csv(csv: CsvProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2610a4a45f311cd86c74dd1598067d2928e7010119e393ae4b16e3c1b121edde")
-      public fun csv(csv: CsvProperty.Builder.() -> Unit) {
-      }
+      public fun csv(csv: CsvProperty.Builder.() -> Unit)
 
-      public fun json(json: IResolvable) {
-      }
+      public fun json(json: IResolvable)
 
-      public fun json(json: JsonProperty) {
-      }
+      public fun json(json: JsonProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0efa400048db4040dccefc62b9defa3adede02e5be2a2604a021eb6e03a99e2a")
-      public fun json(json: JsonProperty.Builder.() -> Unit) {
-      }
+      public fun json(json: JsonProperty.Builder.() -> Unit)
 
-      public fun parquet(parquet: Boolean) {
-      }
+      public fun parquet(parquet: Boolean)
 
-      public fun parquet(parquet: IResolvable) {
-      }
+      public fun parquet(parquet: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1660,36 +1563,35 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty.builder()
 
-      public override fun csv(csv: IResolvable) {
+      override fun csv(csv: IResolvable) {
         cdkBuilder.csv(csv.let(IResolvable::unwrap))
       }
 
-      public override fun csv(csv: CsvProperty) {
+      override fun csv(csv: CsvProperty) {
         cdkBuilder.csv(csv.let(CsvProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2610a4a45f311cd86c74dd1598067d2928e7010119e393ae4b16e3c1b121edde")
-      public override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
+      override fun csv(csv: CsvProperty.Builder.() -> Unit): Unit = csv(CsvProperty(csv))
 
-      public override fun json(json: IResolvable) {
+      override fun json(json: IResolvable) {
         cdkBuilder.json(json.let(IResolvable::unwrap))
       }
 
-      public override fun json(json: JsonProperty) {
+      override fun json(json: JsonProperty) {
         cdkBuilder.json(json.let(JsonProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0efa400048db4040dccefc62b9defa3adede02e5be2a2604a021eb6e03a99e2a")
-      public override fun json(json: JsonProperty.Builder.() -> Unit): Unit =
-          json(JsonProperty(json))
+      override fun json(json: JsonProperty.Builder.() -> Unit): Unit = json(JsonProperty(json))
 
-      public override fun parquet(parquet: Boolean) {
+      override fun parquet(parquet: Boolean) {
         cdkBuilder.parquet(parquet)
       }
 
-      public override fun parquet(parquet: IResolvable) {
+      override fun parquet(parquet: IResolvable) {
         cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
       }
 
@@ -1702,11 +1604,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.DatasetFormatProperty,
     ) : DatasetFormatProperty {
-      public override fun csv(): Any? = unwrap(this).getCsv()
+      override fun csv(): Any? = unwrap(this).getCsv()
 
-      public override fun json(): Any? = unwrap(this).getJson()
+      override fun json(): Any? = unwrap(this).getJson()
 
-      public override fun parquet(): Any? = unwrap(this).getParquet()
+      override fun parquet(): Any? = unwrap(this).getParquet()
     }
 
     public companion object {
@@ -1733,8 +1635,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun s3Uri(): String? = unwrap(this).getS3Uri()
 
     public interface Builder {
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1743,7 +1644,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty.builder()
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
@@ -1756,7 +1657,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ConstraintsResourceProperty,
     ) : ConstraintsResourceProperty {
-      public override fun s3Uri(): String? = unwrap(this).getS3Uri()
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
     }
 
     public companion object {
@@ -1783,16 +1684,13 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun s3Output(): Any
 
     public interface Builder {
-      public fun s3Output(s3Output: IResolvable) {
-      }
+      public fun s3Output(s3Output: IResolvable)
 
-      public fun s3Output(s3Output: S3OutputProperty) {
-      }
+      public fun s3Output(s3Output: S3OutputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f719a3c56ef446f5138f7833a61d999571362d1049fad9b0ca7e5022cd11c6e9")
-      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit) {
-      }
+      public fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1801,17 +1699,17 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty.builder()
 
-      public override fun s3Output(s3Output: IResolvable) {
+      override fun s3Output(s3Output: IResolvable) {
         cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
       }
 
-      public override fun s3Output(s3Output: S3OutputProperty) {
+      override fun s3Output(s3Output: S3OutputProperty) {
         cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f719a3c56ef446f5138f7833a61d999571362d1049fad9b0ca7e5022cd11c6e9")
-      public override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
+      override fun s3Output(s3Output: S3OutputProperty.Builder.() -> Unit): Unit =
           s3Output(S3OutputProperty(s3Output))
 
       public fun build():
@@ -1823,7 +1721,7 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.MonitoringOutputProperty,
     ) : MonitoringOutputProperty {
-      public override fun s3Output(): Any = unwrap(this).getS3Output()
+      override fun s3Output(): Any = unwrap(this).getS3Output()
     }
 
     public companion object {
@@ -1854,40 +1752,31 @@ public open class CfnModelQualityJobDefinition internal constructor(
     public fun groundTruthS3Input(): Any
 
     public interface Builder {
-      public fun batchTransformInput(batchTransformInput: IResolvable) {
-      }
+      public fun batchTransformInput(batchTransformInput: IResolvable)
 
-      public fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-      }
+      public fun batchTransformInput(batchTransformInput: BatchTransformInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7fc15f7cd34c8b4775b1e9592f1892fc7bfb1853d2b3eefce3631c5df341e4f3")
       public
-          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit) {
-      }
+          fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit)
 
-      public fun endpointInput(endpointInput: IResolvable) {
-      }
+      public fun endpointInput(endpointInput: IResolvable)
 
-      public fun endpointInput(endpointInput: EndpointInputProperty) {
-      }
+      public fun endpointInput(endpointInput: EndpointInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95fa11a76deeccfc69f1de14b4f53dc6220ff8de6b230af13af411602f50d92e")
-      public fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit) {
-      }
+      public fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit)
 
-      public fun groundTruthS3Input(groundTruthS3Input: IResolvable) {
-      }
+      public fun groundTruthS3Input(groundTruthS3Input: IResolvable)
 
-      public fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty) {
-      }
+      public fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27209216e1724eaca068d3545875342c36d0dd2e2e10734cc5142ba4c7616f0d")
       public
-          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit) {
-      }
+          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1896,45 +1785,44 @@ public open class CfnModelQualityJobDefinition internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty.builder()
 
-      public override fun batchTransformInput(batchTransformInput: IResolvable) {
+      override fun batchTransformInput(batchTransformInput: IResolvable) {
         cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
       }
 
-      public override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
+      override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
         cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7fc15f7cd34c8b4775b1e9592f1892fc7bfb1853d2b3eefce3631c5df341e4f3")
-      public override
+      override
           fun batchTransformInput(batchTransformInput: BatchTransformInputProperty.Builder.() -> Unit):
           Unit = batchTransformInput(BatchTransformInputProperty(batchTransformInput))
 
-      public override fun endpointInput(endpointInput: IResolvable) {
+      override fun endpointInput(endpointInput: IResolvable) {
         cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
       }
 
-      public override fun endpointInput(endpointInput: EndpointInputProperty) {
+      override fun endpointInput(endpointInput: EndpointInputProperty) {
         cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95fa11a76deeccfc69f1de14b4f53dc6220ff8de6b230af13af411602f50d92e")
-      public override fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit):
-          Unit = endpointInput(EndpointInputProperty(endpointInput))
+      override fun endpointInput(endpointInput: EndpointInputProperty.Builder.() -> Unit): Unit =
+          endpointInput(EndpointInputProperty(endpointInput))
 
-      public override fun groundTruthS3Input(groundTruthS3Input: IResolvable) {
+      override fun groundTruthS3Input(groundTruthS3Input: IResolvable) {
         cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(IResolvable::unwrap))
       }
 
-      public override
-          fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty) {
+      override fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty) {
         cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(MonitoringGroundTruthS3InputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27209216e1724eaca068d3545875342c36d0dd2e2e10734cc5142ba4c7616f0d")
-      public override
+      override
           fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty.Builder.() -> Unit):
           Unit = groundTruthS3Input(MonitoringGroundTruthS3InputProperty(groundTruthS3Input))
 
@@ -1947,11 +1835,11 @@ public open class CfnModelQualityJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition.ModelQualityJobInputProperty,
     ) : ModelQualityJobInputProperty {
-      public override fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
+      override fun batchTransformInput(): Any? = unwrap(this).getBatchTransformInput()
 
-      public override fun endpointInput(): Any? = unwrap(this).getEndpointInput()
+      override fun endpointInput(): Any? = unwrap(this).getEndpointInput()
 
-      public override fun groundTruthS3Input(): Any = unwrap(this).getGroundTruthS3Input()
+      override fun groundTruthS3Input(): Any = unwrap(this).getGroundTruthS3Input()
     }
 
     public companion object {

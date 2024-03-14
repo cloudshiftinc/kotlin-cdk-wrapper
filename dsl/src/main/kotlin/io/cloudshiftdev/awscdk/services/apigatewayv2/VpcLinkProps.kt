@@ -20,46 +20,41 @@ public interface VpcLinkProps {
   public fun vpcLinkName(): String? = unwrap(this).getVpcLinkName()
 
   public interface Builder {
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun subnets(subnets: SubnetSelection) {
-    }
+    public fun subnets(subnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e860511c74b7bbc023d3141652ef1a77b25092644e6854afbf2c6f6f6b4a6a9b")
-    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcLinkName(vpcLinkName: String) {
-    }
+    public fun vpcLinkName(vpcLinkName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.VpcLinkProps.Builder =
         software.amazon.awscdk.services.apigatewayv2.VpcLinkProps.builder()
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun subnets(subnets: SubnetSelection) {
+    override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e860511c74b7bbc023d3141652ef1a77b25092644e6854afbf2c6f6f6b4a6a9b")
-    public override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
         subnets(SubnetSelection(subnets))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcLinkName(vpcLinkName: String) {
+    override fun vpcLinkName(vpcLinkName: String) {
       cdkBuilder.vpcLinkName(vpcLinkName)
     }
 
@@ -70,15 +65,14 @@ public interface VpcLinkProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkProps,
   ) : VpcLinkProps {
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    public override fun subnets(): SubnetSelection? =
-        unwrap(this).getSubnets()?.let(SubnetSelection::wrap)
+    override fun subnets(): SubnetSelection? = unwrap(this).getSubnets()?.let(SubnetSelection::wrap)
 
-    public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+    override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
 
-    public override fun vpcLinkName(): String? = unwrap(this).getVpcLinkName()
+    override fun vpcLinkName(): String? = unwrap(this).getVpcLinkName()
   }
 
   public companion object {

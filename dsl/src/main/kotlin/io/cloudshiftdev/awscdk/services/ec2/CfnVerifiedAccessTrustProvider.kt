@@ -116,56 +116,41 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun deviceOptions(deviceOptions: IResolvable) {
-    }
+    public fun deviceOptions(deviceOptions: IResolvable)
 
-    public fun deviceOptions(deviceOptions: DeviceOptionsProperty) {
-    }
+    public fun deviceOptions(deviceOptions: DeviceOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08a9ad74d3605c06b9cdbb2e0624a533cd24b679a276d476a7a0f874b7dc5684")
-    public fun deviceOptions(deviceOptions: DeviceOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun deviceOptions(deviceOptions: DeviceOptionsProperty.Builder.() -> Unit)
 
-    public fun deviceTrustProviderType(deviceTrustProviderType: String) {
-    }
+    public fun deviceTrustProviderType(deviceTrustProviderType: String)
 
-    public fun oidcOptions(oidcOptions: IResolvable) {
-    }
+    public fun oidcOptions(oidcOptions: IResolvable)
 
-    public fun oidcOptions(oidcOptions: OidcOptionsProperty) {
-    }
+    public fun oidcOptions(oidcOptions: OidcOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c8ad0a357520e21184534f0d8df7b60b276f4df0f4a8a682b46665ba9da7b84b")
-    public fun oidcOptions(oidcOptions: OidcOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun oidcOptions(oidcOptions: OidcOptionsProperty.Builder.() -> Unit)
 
-    public fun policyReferenceName(policyReferenceName: String) {
-    }
+    public fun policyReferenceName(policyReferenceName: String)
 
-    public fun sseSpecification(sseSpecification: IResolvable) {
-    }
+    public fun sseSpecification(sseSpecification: IResolvable)
 
-    public fun sseSpecification(sseSpecification: SseSpecificationProperty) {
-    }
+    public fun sseSpecification(sseSpecification: SseSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e96c674ba42238511c7f6afb732a4dbfa0d034067272e0f212d83a6740cf2d04")
-    public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit) {
-    }
+    public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trustProviderType(trustProviderType: String) {
-    }
+    public fun trustProviderType(trustProviderType: String)
 
-    public fun userTrustProviderType(userTrustProviderType: String) {
-    }
+    public fun userTrustProviderType(userTrustProviderType: String)
   }
 
   private class BuilderImpl(
@@ -176,67 +161,66 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.Builder =
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun deviceOptions(deviceOptions: IResolvable) {
+    override fun deviceOptions(deviceOptions: IResolvable) {
       cdkBuilder.deviceOptions(deviceOptions.let(IResolvable::unwrap))
     }
 
-    public override fun deviceOptions(deviceOptions: DeviceOptionsProperty) {
+    override fun deviceOptions(deviceOptions: DeviceOptionsProperty) {
       cdkBuilder.deviceOptions(deviceOptions.let(DeviceOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08a9ad74d3605c06b9cdbb2e0624a533cd24b679a276d476a7a0f874b7dc5684")
-    public override fun deviceOptions(deviceOptions: DeviceOptionsProperty.Builder.() -> Unit): Unit
-        = deviceOptions(DeviceOptionsProperty(deviceOptions))
+    override fun deviceOptions(deviceOptions: DeviceOptionsProperty.Builder.() -> Unit): Unit =
+        deviceOptions(DeviceOptionsProperty(deviceOptions))
 
-    public override fun deviceTrustProviderType(deviceTrustProviderType: String) {
+    override fun deviceTrustProviderType(deviceTrustProviderType: String) {
       cdkBuilder.deviceTrustProviderType(deviceTrustProviderType)
     }
 
-    public override fun oidcOptions(oidcOptions: IResolvable) {
+    override fun oidcOptions(oidcOptions: IResolvable) {
       cdkBuilder.oidcOptions(oidcOptions.let(IResolvable::unwrap))
     }
 
-    public override fun oidcOptions(oidcOptions: OidcOptionsProperty) {
+    override fun oidcOptions(oidcOptions: OidcOptionsProperty) {
       cdkBuilder.oidcOptions(oidcOptions.let(OidcOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c8ad0a357520e21184534f0d8df7b60b276f4df0f4a8a682b46665ba9da7b84b")
-    public override fun oidcOptions(oidcOptions: OidcOptionsProperty.Builder.() -> Unit): Unit =
+    override fun oidcOptions(oidcOptions: OidcOptionsProperty.Builder.() -> Unit): Unit =
         oidcOptions(OidcOptionsProperty(oidcOptions))
 
-    public override fun policyReferenceName(policyReferenceName: String) {
+    override fun policyReferenceName(policyReferenceName: String) {
       cdkBuilder.policyReferenceName(policyReferenceName)
     }
 
-    public override fun sseSpecification(sseSpecification: IResolvable) {
+    override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
+    override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
       cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e96c674ba42238511c7f6afb732a4dbfa0d034067272e0f212d83a6740cf2d04")
-    public override
-        fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit): Unit =
-        sseSpecification(SseSpecificationProperty(sseSpecification))
+    override fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit):
+        Unit = sseSpecification(SseSpecificationProperty(sseSpecification))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trustProviderType(trustProviderType: String) {
+    override fun trustProviderType(trustProviderType: String) {
       cdkBuilder.trustProviderType(trustProviderType)
     }
 
-    public override fun userTrustProviderType(userTrustProviderType: String) {
+    override fun userTrustProviderType(userTrustProviderType: String) {
       cdkBuilder.userTrustProviderType(userTrustProviderType)
     }
 
@@ -282,26 +266,19 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     public fun userInfoEndpoint(): String? = unwrap(this).getUserInfoEndpoint()
 
     public interface Builder {
-      public fun authorizationEndpoint(authorizationEndpoint: String) {
-      }
+      public fun authorizationEndpoint(authorizationEndpoint: String)
 
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun clientSecret(clientSecret: String) {
-      }
+      public fun clientSecret(clientSecret: String)
 
-      public fun issuer(issuer: String) {
-      }
+      public fun issuer(issuer: String)
 
-      public fun scope(scope: String) {
-      }
+      public fun scope(scope: String)
 
-      public fun tokenEndpoint(tokenEndpoint: String) {
-      }
+      public fun tokenEndpoint(tokenEndpoint: String)
 
-      public fun userInfoEndpoint(userInfoEndpoint: String) {
-      }
+      public fun userInfoEndpoint(userInfoEndpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -310,31 +287,31 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty.builder()
 
-      public override fun authorizationEndpoint(authorizationEndpoint: String) {
+      override fun authorizationEndpoint(authorizationEndpoint: String) {
         cdkBuilder.authorizationEndpoint(authorizationEndpoint)
       }
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun clientSecret(clientSecret: String) {
+      override fun clientSecret(clientSecret: String) {
         cdkBuilder.clientSecret(clientSecret)
       }
 
-      public override fun issuer(issuer: String) {
+      override fun issuer(issuer: String) {
         cdkBuilder.issuer(issuer)
       }
 
-      public override fun scope(scope: String) {
+      override fun scope(scope: String) {
         cdkBuilder.scope(scope)
       }
 
-      public override fun tokenEndpoint(tokenEndpoint: String) {
+      override fun tokenEndpoint(tokenEndpoint: String) {
         cdkBuilder.tokenEndpoint(tokenEndpoint)
       }
 
-      public override fun userInfoEndpoint(userInfoEndpoint: String) {
+      override fun userInfoEndpoint(userInfoEndpoint: String) {
         cdkBuilder.userInfoEndpoint(userInfoEndpoint)
       }
 
@@ -347,19 +324,19 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty,
     ) : OidcOptionsProperty {
-      public override fun authorizationEndpoint(): String? = unwrap(this).getAuthorizationEndpoint()
+      override fun authorizationEndpoint(): String? = unwrap(this).getAuthorizationEndpoint()
 
-      public override fun clientId(): String? = unwrap(this).getClientId()
+      override fun clientId(): String? = unwrap(this).getClientId()
 
-      public override fun clientSecret(): String? = unwrap(this).getClientSecret()
+      override fun clientSecret(): String? = unwrap(this).getClientSecret()
 
-      public override fun issuer(): String? = unwrap(this).getIssuer()
+      override fun issuer(): String? = unwrap(this).getIssuer()
 
-      public override fun scope(): String? = unwrap(this).getScope()
+      override fun scope(): String? = unwrap(this).getScope()
 
-      public override fun tokenEndpoint(): String? = unwrap(this).getTokenEndpoint()
+      override fun tokenEndpoint(): String? = unwrap(this).getTokenEndpoint()
 
-      public override fun userInfoEndpoint(): String? = unwrap(this).getUserInfoEndpoint()
+      override fun userInfoEndpoint(): String? = unwrap(this).getUserInfoEndpoint()
     }
 
     public companion object {
@@ -388,11 +365,9 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     public fun tenantId(): String? = unwrap(this).getTenantId()
 
     public interface Builder {
-      public fun publicSigningKeyUrl(publicSigningKeyUrl: String) {
-      }
+      public fun publicSigningKeyUrl(publicSigningKeyUrl: String)
 
-      public fun tenantId(tenantId: String) {
-      }
+      public fun tenantId(tenantId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -401,11 +376,11 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.builder()
 
-      public override fun publicSigningKeyUrl(publicSigningKeyUrl: String) {
+      override fun publicSigningKeyUrl(publicSigningKeyUrl: String) {
         cdkBuilder.publicSigningKeyUrl(publicSigningKeyUrl)
       }
 
-      public override fun tenantId(tenantId: String) {
+      override fun tenantId(tenantId: String) {
         cdkBuilder.tenantId(tenantId)
       }
 
@@ -418,9 +393,9 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty,
     ) : DeviceOptionsProperty {
-      public override fun publicSigningKeyUrl(): String? = unwrap(this).getPublicSigningKeyUrl()
+      override fun publicSigningKeyUrl(): String? = unwrap(this).getPublicSigningKeyUrl()
 
-      public override fun tenantId(): String? = unwrap(this).getTenantId()
+      override fun tenantId(): String? = unwrap(this).getTenantId()
     }
 
     public companion object {
@@ -449,14 +424,11 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
-      }
+      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean)
 
-      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
-      }
+      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -465,15 +437,15 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty.builder()
 
-      public override fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
+      override fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
         cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled)
       }
 
-      public override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
+      override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
         cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -486,10 +458,9 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty,
     ) : SseSpecificationProperty {
-      public override fun customerManagedKeyEnabled(): Any? =
-          unwrap(this).getCustomerManagedKeyEnabled()
+      override fun customerManagedKeyEnabled(): Any? = unwrap(this).getCustomerManagedKeyEnabled()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {

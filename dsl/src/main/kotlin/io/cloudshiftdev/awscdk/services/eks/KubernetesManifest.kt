@@ -13,26 +13,19 @@ public open class KubernetesManifest internal constructor(
   private val cdkObject: software.amazon.awscdk.services.eks.KubernetesManifest,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun ingressAlb(ingressAlb: Boolean) {
-    }
+    public fun ingressAlb(ingressAlb: Boolean)
 
-    public fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
-    }
+    public fun ingressAlbScheme(ingressAlbScheme: AlbScheme)
 
-    public fun manifest(manifest: List<Map<String, Any>>) {
-    }
+    public fun manifest(manifest: List<Map<String, Any>>)
 
-    public fun overwrite(overwrite: Boolean) {
-    }
+    public fun overwrite(overwrite: Boolean)
 
-    public fun prune(prune: Boolean) {
-    }
+    public fun prune(prune: Boolean)
 
-    public fun skipValidation(skipValidation: Boolean) {
-    }
+    public fun skipValidation(skipValidation: Boolean)
   }
 
   private class BuilderImpl(
@@ -42,31 +35,31 @@ public open class KubernetesManifest internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubernetesManifest.Builder =
         software.amazon.awscdk.services.eks.KubernetesManifest.Builder.create(scope, id)
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun ingressAlb(ingressAlb: Boolean) {
+    override fun ingressAlb(ingressAlb: Boolean) {
       cdkBuilder.ingressAlb(ingressAlb)
     }
 
-    public override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
+    override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
       cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme::unwrap))
     }
 
-    public override fun manifest(manifest: List<Map<String, Any>>) {
+    override fun manifest(manifest: List<Map<String, Any>>) {
       cdkBuilder.manifest(manifest)
     }
 
-    public override fun overwrite(overwrite: Boolean) {
+    override fun overwrite(overwrite: Boolean) {
       cdkBuilder.overwrite(overwrite)
     }
 
-    public override fun prune(prune: Boolean) {
+    override fun prune(prune: Boolean) {
       cdkBuilder.prune(prune)
     }
 
-    public override fun skipValidation(skipValidation: Boolean) {
+    override fun skipValidation(skipValidation: Boolean) {
       cdkBuilder.skipValidation(skipValidation)
     }
 

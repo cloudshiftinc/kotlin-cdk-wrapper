@@ -15,29 +15,21 @@ public open class TargetTrackingScalingPolicy internal constructor(
   public open fun scalingPolicyArn(): String = unwrap(this).getScalingPolicyArn()
 
   public interface Builder {
-    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    }
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun customMetric(customMetric: IMetric) {
-    }
+    public fun customMetric(customMetric: IMetric)
 
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-    }
+    public fun disableScaleIn(disableScaleIn: Boolean)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration)
 
-    public fun predefinedMetric(predefinedMetric: PredefinedMetric) {
-    }
+    public fun predefinedMetric(predefinedMetric: PredefinedMetric)
 
-    public fun resourceLabel(resourceLabel: String) {
-    }
+    public fun resourceLabel(resourceLabel: String)
 
-    public fun targetValue(targetValue: Number) {
-    }
+    public fun targetValue(targetValue: Number)
   }
 
   private class BuilderImpl(
@@ -49,35 +41,35 @@ public open class TargetTrackingScalingPolicy internal constructor(
         software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicy.Builder.create(scope,
         id)
 
-    public override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+    override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun customMetric(customMetric: IMetric) {
+    override fun customMetric(customMetric: IMetric) {
       cdkBuilder.customMetric(customMetric.let(IMetric::unwrap))
     }
 
-    public override fun disableScaleIn(disableScaleIn: Boolean) {
+    override fun disableScaleIn(disableScaleIn: Boolean) {
       cdkBuilder.disableScaleIn(disableScaleIn)
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
+    override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
       cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric::unwrap))
     }
 
-    public override fun resourceLabel(resourceLabel: String) {
+    override fun resourceLabel(resourceLabel: String) {
       cdkBuilder.resourceLabel(resourceLabel)
     }
 
-    public override fun targetValue(targetValue: Number) {
+    override fun targetValue(targetValue: Number) {
       cdkBuilder.targetValue(targetValue)
     }
 

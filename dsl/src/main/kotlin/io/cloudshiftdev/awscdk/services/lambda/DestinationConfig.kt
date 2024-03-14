@@ -7,15 +7,14 @@ public interface DestinationConfig {
   public fun destination(): String
 
   public interface Builder {
-    public fun destination(destination: String) {
-    }
+    public fun destination(destination: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.DestinationConfig.Builder =
         software.amazon.awscdk.services.lambda.DestinationConfig.builder()
 
-    public override fun destination(destination: String) {
+    override fun destination(destination: String) {
       cdkBuilder.destination(destination)
     }
 
@@ -26,7 +25,7 @@ public interface DestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.DestinationConfig,
   ) : DestinationConfig {
-    public override fun destination(): String = unwrap(this).getDestination()
+    override fun destination(): String = unwrap(this).getDestination()
   }
 
   public companion object {

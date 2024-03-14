@@ -9,11 +9,9 @@ public interface TaskEnvironmentVariable {
   public fun `value`(): String
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface TaskEnvironmentVariable {
         software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -37,9 +35,9 @@ public interface TaskEnvironmentVariable {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable,
   ) : TaskEnvironmentVariable {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

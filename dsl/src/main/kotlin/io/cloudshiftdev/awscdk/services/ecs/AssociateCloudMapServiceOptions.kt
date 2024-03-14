@@ -13,14 +13,11 @@ public interface AssociateCloudMapServiceOptions {
   public fun service(): IService
 
   public interface Builder {
-    public fun container(container: ContainerDefinition) {
-    }
+    public fun container(container: ContainerDefinition)
 
-    public fun containerPort(containerPort: Number) {
-    }
+    public fun containerPort(containerPort: Number)
 
-    public fun service(service: IService) {
-    }
+    public fun service(service: IService)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface AssociateCloudMapServiceOptions {
         software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions.Builder =
         software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions.builder()
 
-    public override fun container(container: ContainerDefinition) {
+    override fun container(container: ContainerDefinition) {
       cdkBuilder.container(container.let(ContainerDefinition::unwrap))
     }
 
-    public override fun containerPort(containerPort: Number) {
+    override fun containerPort(containerPort: Number) {
       cdkBuilder.containerPort(containerPort)
     }
 
-    public override fun service(service: IService) {
+    override fun service(service: IService) {
       cdkBuilder.service(service.let(IService::unwrap))
     }
 
@@ -47,12 +44,12 @@ public interface AssociateCloudMapServiceOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions,
   ) : AssociateCloudMapServiceOptions {
-    public override fun container(): ContainerDefinition? =
+    override fun container(): ContainerDefinition? =
         unwrap(this).getContainer()?.let(ContainerDefinition::wrap)
 
-    public override fun containerPort(): Number? = unwrap(this).getContainerPort()
+    override fun containerPort(): Number? = unwrap(this).getContainerPort()
 
-    public override fun service(): IService = unwrap(this).getService().let(IService::wrap)
+    override fun service(): IService = unwrap(this).getService().let(IService::wrap)
   }
 
   public companion object {

@@ -128,71 +128,70 @@ public interface IApplication : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.IApplication,
   ) : IApplication {
-    public override fun addEnvironment(arg0: String): IEnvironment =
+    override fun addEnvironment(arg0: String): IEnvironment =
         unwrap(this).addEnvironment(arg0).let(IEnvironment::wrap)
 
-    public override fun addEnvironment(arg0: String, arg1: EnvironmentOptions): IEnvironment =
+    override fun addEnvironment(arg0: String, arg1: EnvironmentOptions): IEnvironment =
         unwrap(this).addEnvironment(arg0,
         arg1.let(EnvironmentOptions::unwrap)).let(IEnvironment::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c104632a3d0a4e3f999a6f63baa5b43afe61918d2af83102e45915a66f0ec0b")
-    public override fun addEnvironment(arg0: String, arg1: EnvironmentOptions.Builder.() -> Unit):
+    override fun addEnvironment(arg0: String, arg1: EnvironmentOptions.Builder.() -> Unit):
         IEnvironment = addEnvironment(arg0, EnvironmentOptions(arg1))
 
-    public override fun addExistingEnvironment(arg0: IEnvironment) {
+    override fun addExistingEnvironment(arg0: IEnvironment) {
       unwrap(this).addExistingEnvironment(arg0.let(IEnvironment::unwrap))
     }
 
-    public override fun addExtension(arg0: IExtension) {
+    override fun addExtension(arg0: IExtension) {
       unwrap(this).addExtension(arg0.let(IExtension::unwrap))
     }
 
-    public override fun addHostedConfiguration(arg0: String, arg1: HostedConfigurationOptions):
+    override fun addHostedConfiguration(arg0: String, arg1: HostedConfigurationOptions):
         HostedConfiguration = unwrap(this).addHostedConfiguration(arg0,
         arg1.let(HostedConfigurationOptions::unwrap)).let(HostedConfiguration::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a4c56e358d895d1df2b4a4dfd88bd752cef6f44f4f4132eb52adb3024fc6e82")
-    public override fun addHostedConfiguration(arg0: String,
+    override fun addHostedConfiguration(arg0: String,
         arg1: HostedConfigurationOptions.Builder.() -> Unit): HostedConfiguration =
         addHostedConfiguration(arg0, HostedConfigurationOptions(arg1))
 
-    public override fun addSourcedConfiguration(arg0: String, arg1: SourcedConfigurationOptions):
+    override fun addSourcedConfiguration(arg0: String, arg1: SourcedConfigurationOptions):
         SourcedConfiguration = unwrap(this).addSourcedConfiguration(arg0,
         arg1.let(SourcedConfigurationOptions::unwrap)).let(SourcedConfiguration::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f164adb048ad3f7b09ca183a13b663a31673b97620c35cd63fc05114572ed704")
-    public override fun addSourcedConfiguration(arg0: String,
+    override fun addSourcedConfiguration(arg0: String,
         arg1: SourcedConfigurationOptions.Builder.() -> Unit): SourcedConfiguration =
         addSourcedConfiguration(arg0, SourcedConfigurationOptions(arg1))
 
-    public override fun applicationArn(): String = unwrap(this).getApplicationArn()
+    override fun applicationArn(): String = unwrap(this).getApplicationArn()
 
-    public override fun applicationId(): String = unwrap(this).getApplicationId()
+    override fun applicationId(): String = unwrap(this).getApplicationId()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun environments(): List<IEnvironment> =
+    override fun environments(): List<IEnvironment> =
         unwrap(this).environments().map(IEnvironment::wrap)
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun on(arg0: ActionPoint, arg1: IEventDestination) {
+    override fun on(arg0: ActionPoint, arg1: IEventDestination) {
       unwrap(this).on(arg0.let(ActionPoint::unwrap), arg1.let(IEventDestination::unwrap))
     }
 
-    public override fun on(
+    override fun on(
       arg0: ActionPoint,
       arg1: IEventDestination,
       arg2: ExtensionOptions,
@@ -203,92 +202,92 @@ public interface IApplication : IResource {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0194001758d182c355eb63683c585f40699f2a8a5aa9624c1b81e4b64b8fee31")
-    public override fun on(
+    override fun on(
       arg0: ActionPoint,
       arg1: IEventDestination,
       arg2: ExtensionOptions.Builder.() -> Unit,
     ): Unit = on(arg0, arg1, ExtensionOptions(arg2))
 
-    public override fun onDeploymentBaking(arg0: IEventDestination) {
+    override fun onDeploymentBaking(arg0: IEventDestination) {
       unwrap(this).onDeploymentBaking(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun onDeploymentBaking(arg0: IEventDestination, arg1: ExtensionOptions) {
+    override fun onDeploymentBaking(arg0: IEventDestination, arg1: ExtensionOptions) {
       unwrap(this).onDeploymentBaking(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51413e14b67e6e3e78f3e45bf6cab9b9cba8e950d5fac88ca48f8e3e2023c82c")
-    public override fun onDeploymentBaking(arg0: IEventDestination,
+    override fun onDeploymentBaking(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = onDeploymentBaking(arg0,
         ExtensionOptions(arg1))
 
-    public override fun onDeploymentComplete(arg0: IEventDestination) {
+    override fun onDeploymentComplete(arg0: IEventDestination) {
       unwrap(this).onDeploymentComplete(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun onDeploymentComplete(arg0: IEventDestination, arg1: ExtensionOptions) {
+    override fun onDeploymentComplete(arg0: IEventDestination, arg1: ExtensionOptions) {
       unwrap(this).onDeploymentComplete(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c3e400dd20332bd0d2c232c5fc5ae8aba3a4e07c8bbd57bb17c41e6f624ded89")
-    public override fun onDeploymentComplete(arg0: IEventDestination,
+    override fun onDeploymentComplete(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = onDeploymentComplete(arg0,
         ExtensionOptions(arg1))
 
-    public override fun onDeploymentRolledBack(arg0: IEventDestination) {
+    override fun onDeploymentRolledBack(arg0: IEventDestination) {
       unwrap(this).onDeploymentRolledBack(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun onDeploymentRolledBack(arg0: IEventDestination, arg1: ExtensionOptions) {
+    override fun onDeploymentRolledBack(arg0: IEventDestination, arg1: ExtensionOptions) {
       unwrap(this).onDeploymentRolledBack(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63bb6d64a26c6accd5567eb325ec58f0c47ae68f0a1bb9384009e199a550f9c8")
-    public override fun onDeploymentRolledBack(arg0: IEventDestination,
+    override fun onDeploymentRolledBack(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = onDeploymentRolledBack(arg0,
         ExtensionOptions(arg1))
 
-    public override fun onDeploymentStart(arg0: IEventDestination) {
+    override fun onDeploymentStart(arg0: IEventDestination) {
       unwrap(this).onDeploymentStart(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun onDeploymentStart(arg0: IEventDestination, arg1: ExtensionOptions) {
+    override fun onDeploymentStart(arg0: IEventDestination, arg1: ExtensionOptions) {
       unwrap(this).onDeploymentStart(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0131929b795a0129d9ba80efb4ca2e3a18629b79884e7818930b531df0c4d332")
-    public override fun onDeploymentStart(arg0: IEventDestination,
+    override fun onDeploymentStart(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = onDeploymentStart(arg0,
         ExtensionOptions(arg1))
 
-    public override fun onDeploymentStep(arg0: IEventDestination) {
+    override fun onDeploymentStep(arg0: IEventDestination) {
       unwrap(this).onDeploymentStep(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun onDeploymentStep(arg0: IEventDestination, arg1: ExtensionOptions) {
+    override fun onDeploymentStep(arg0: IEventDestination, arg1: ExtensionOptions) {
       unwrap(this).onDeploymentStep(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fbc04022333094d4a1a9362f893671a1ace386fa2c11455572f1812c43cf137")
-    public override fun onDeploymentStep(arg0: IEventDestination,
+    override fun onDeploymentStep(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = onDeploymentStep(arg0,
         ExtensionOptions(arg1))
 
-    public override fun preCreateHostedConfigurationVersion(arg0: IEventDestination) {
+    override fun preCreateHostedConfigurationVersion(arg0: IEventDestination) {
       unwrap(this).preCreateHostedConfigurationVersion(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun preCreateHostedConfigurationVersion(arg0: IEventDestination,
+    override fun preCreateHostedConfigurationVersion(arg0: IEventDestination,
         arg1: ExtensionOptions) {
       unwrap(this).preCreateHostedConfigurationVersion(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
@@ -296,26 +295,26 @@ public interface IApplication : IResource {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21cb7629406f579965cdf52846e7b2288b00565b4a6c6ec26df770e81fc6f51c")
-    public override fun preCreateHostedConfigurationVersion(arg0: IEventDestination,
+    override fun preCreateHostedConfigurationVersion(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = preCreateHostedConfigurationVersion(arg0,
         ExtensionOptions(arg1))
 
-    public override fun preStartDeployment(arg0: IEventDestination) {
+    override fun preStartDeployment(arg0: IEventDestination) {
       unwrap(this).preStartDeployment(arg0.let(IEventDestination::unwrap))
     }
 
-    public override fun preStartDeployment(arg0: IEventDestination, arg1: ExtensionOptions) {
+    override fun preStartDeployment(arg0: IEventDestination, arg1: ExtensionOptions) {
       unwrap(this).preStartDeployment(arg0.let(IEventDestination::unwrap),
           arg1.let(ExtensionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("859757079ee9049748a8b4aacb28276cae62030733e470054562efc4518aa8ff")
-    public override fun preStartDeployment(arg0: IEventDestination,
+    override fun preStartDeployment(arg0: IEventDestination,
         arg1: ExtensionOptions.Builder.() -> Unit): Unit = preStartDeployment(arg0,
         ExtensionOptions(arg1))
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

@@ -10,22 +10,20 @@ public interface GitConfiguration {
   public fun sourceAction(): IAction
 
   public interface Builder {
-    public fun pushFilter(pushFilter: List<GitPushFilter>) {
-    }
+    public fun pushFilter(pushFilter: List<GitPushFilter>)
 
-    public fun sourceAction(sourceAction: IAction) {
-    }
+    public fun sourceAction(sourceAction: IAction)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.GitConfiguration.Builder =
         software.amazon.awscdk.services.codepipeline.GitConfiguration.builder()
 
-    public override fun pushFilter(pushFilter: List<GitPushFilter>) {
+    override fun pushFilter(pushFilter: List<GitPushFilter>) {
       cdkBuilder.pushFilter(pushFilter.map(GitPushFilter::unwrap))
     }
 
-    public override fun sourceAction(sourceAction: IAction) {
+    override fun sourceAction(sourceAction: IAction) {
       cdkBuilder.sourceAction(sourceAction.let(IAction::unwrap))
     }
 
@@ -36,10 +34,10 @@ public interface GitConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration,
   ) : GitConfiguration {
-    public override fun pushFilter(): List<GitPushFilter> =
+    override fun pushFilter(): List<GitPushFilter> =
         unwrap(this).getPushFilter()?.map(GitPushFilter::wrap) ?: emptyList()
 
-    public override fun sourceAction(): IAction = unwrap(this).getSourceAction().let(IAction::wrap)
+    override fun sourceAction(): IAction = unwrap(this).getSourceAction().let(IAction::wrap)
   }
 
   public companion object {

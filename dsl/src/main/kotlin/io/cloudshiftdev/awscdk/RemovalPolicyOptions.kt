@@ -10,22 +10,20 @@ public interface RemovalPolicyOptions {
       unwrap(this).getDefaultValue()?.let(RemovalPolicy::wrap)
 
   public interface Builder {
-    public fun applyToUpdateReplacePolicy(applyToUpdateReplacePolicy: Boolean) {
-    }
+    public fun applyToUpdateReplacePolicy(applyToUpdateReplacePolicy: Boolean)
 
-    public fun defaultValue(defaultValue: RemovalPolicy) {
-    }
+    public fun defaultValue(defaultValue: RemovalPolicy)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.RemovalPolicyOptions.Builder =
         software.amazon.awscdk.RemovalPolicyOptions.builder()
 
-    public override fun applyToUpdateReplacePolicy(applyToUpdateReplacePolicy: Boolean) {
+    override fun applyToUpdateReplacePolicy(applyToUpdateReplacePolicy: Boolean) {
       cdkBuilder.applyToUpdateReplacePolicy(applyToUpdateReplacePolicy)
     }
 
-    public override fun defaultValue(defaultValue: RemovalPolicy) {
+    override fun defaultValue(defaultValue: RemovalPolicy) {
       cdkBuilder.defaultValue(defaultValue.let(RemovalPolicy::unwrap))
     }
 
@@ -35,10 +33,10 @@ public interface RemovalPolicyOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.RemovalPolicyOptions,
   ) : RemovalPolicyOptions {
-    public override fun applyToUpdateReplacePolicy(): Boolean? =
+    override fun applyToUpdateReplacePolicy(): Boolean? =
         unwrap(this).getApplyToUpdateReplacePolicy()
 
-    public override fun defaultValue(): RemovalPolicy? =
+    override fun defaultValue(): RemovalPolicy? =
         unwrap(this).getDefaultValue()?.let(RemovalPolicy::wrap)
   }
 

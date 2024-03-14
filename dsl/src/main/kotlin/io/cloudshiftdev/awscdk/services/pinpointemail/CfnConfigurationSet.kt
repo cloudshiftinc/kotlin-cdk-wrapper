@@ -102,55 +102,41 @@ public open class CfnConfigurationSet internal constructor(
       trackingOptions(TrackingOptionsProperty(`value`))
 
   public interface Builder {
-    public fun deliveryOptions(deliveryOptions: IResolvable) {
-    }
+    public fun deliveryOptions(deliveryOptions: IResolvable)
 
-    public fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty) {
-    }
+    public fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a07871b3acc4af8f790d4a826c2cacd3a072660b2c5dd6e40348c3602776c251")
-    public fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun reputationOptions(reputationOptions: IResolvable) {
-    }
+    public fun reputationOptions(reputationOptions: IResolvable)
 
-    public fun reputationOptions(reputationOptions: ReputationOptionsProperty) {
-    }
+    public fun reputationOptions(reputationOptions: ReputationOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c87f58ba9ab7d77bf51962c018f0732efc87ba85fd3f97271fe17bec0169749b")
-    public fun reputationOptions(reputationOptions: ReputationOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun reputationOptions(reputationOptions: ReputationOptionsProperty.Builder.() -> Unit)
 
-    public fun sendingOptions(sendingOptions: IResolvable) {
-    }
+    public fun sendingOptions(sendingOptions: IResolvable)
 
-    public fun sendingOptions(sendingOptions: SendingOptionsProperty) {
-    }
+    public fun sendingOptions(sendingOptions: SendingOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9bf94ab737b0c4433e761b89676a3a65789808e2fb25788d73e5f789825af2df")
-    public fun sendingOptions(sendingOptions: SendingOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun sendingOptions(sendingOptions: SendingOptionsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trackingOptions(trackingOptions: IResolvable) {
-    }
+    public fun trackingOptions(trackingOptions: IResolvable)
 
-    public fun trackingOptions(trackingOptions: TrackingOptionsProperty) {
-    }
+    public fun trackingOptions(trackingOptions: TrackingOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("952610ede443fa8b88b6802bf9c4d9d2d717839104b58c7c328e1f4be9aeb7c8")
-    public fun trackingOptions(trackingOptions: TrackingOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun trackingOptions(trackingOptions: TrackingOptionsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -161,68 +147,65 @@ public open class CfnConfigurationSet internal constructor(
         software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.Builder =
         software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.Builder.create(scope, id)
 
-    public override fun deliveryOptions(deliveryOptions: IResolvable) {
+    override fun deliveryOptions(deliveryOptions: IResolvable) {
       cdkBuilder.deliveryOptions(deliveryOptions.let(IResolvable::unwrap))
     }
 
-    public override fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty) {
+    override fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty) {
       cdkBuilder.deliveryOptions(deliveryOptions.let(DeliveryOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a07871b3acc4af8f790d4a826c2cacd3a072660b2c5dd6e40348c3602776c251")
-    public override
-        fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty.Builder.() -> Unit): Unit =
-        deliveryOptions(DeliveryOptionsProperty(deliveryOptions))
+    override fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty.Builder.() -> Unit): Unit
+        = deliveryOptions(DeliveryOptionsProperty(deliveryOptions))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun reputationOptions(reputationOptions: IResolvable) {
+    override fun reputationOptions(reputationOptions: IResolvable) {
       cdkBuilder.reputationOptions(reputationOptions.let(IResolvable::unwrap))
     }
 
-    public override fun reputationOptions(reputationOptions: ReputationOptionsProperty) {
+    override fun reputationOptions(reputationOptions: ReputationOptionsProperty) {
       cdkBuilder.reputationOptions(reputationOptions.let(ReputationOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c87f58ba9ab7d77bf51962c018f0732efc87ba85fd3f97271fe17bec0169749b")
-    public override
-        fun reputationOptions(reputationOptions: ReputationOptionsProperty.Builder.() -> Unit): Unit
-        = reputationOptions(ReputationOptionsProperty(reputationOptions))
+    override fun reputationOptions(reputationOptions: ReputationOptionsProperty.Builder.() -> Unit):
+        Unit = reputationOptions(ReputationOptionsProperty(reputationOptions))
 
-    public override fun sendingOptions(sendingOptions: IResolvable) {
+    override fun sendingOptions(sendingOptions: IResolvable) {
       cdkBuilder.sendingOptions(sendingOptions.let(IResolvable::unwrap))
     }
 
-    public override fun sendingOptions(sendingOptions: SendingOptionsProperty) {
+    override fun sendingOptions(sendingOptions: SendingOptionsProperty) {
       cdkBuilder.sendingOptions(sendingOptions.let(SendingOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9bf94ab737b0c4433e761b89676a3a65789808e2fb25788d73e5f789825af2df")
-    public override fun sendingOptions(sendingOptions: SendingOptionsProperty.Builder.() -> Unit):
-        Unit = sendingOptions(SendingOptionsProperty(sendingOptions))
+    override fun sendingOptions(sendingOptions: SendingOptionsProperty.Builder.() -> Unit): Unit =
+        sendingOptions(SendingOptionsProperty(sendingOptions))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trackingOptions(trackingOptions: IResolvable) {
+    override fun trackingOptions(trackingOptions: IResolvable) {
       cdkBuilder.trackingOptions(trackingOptions.let(IResolvable::unwrap))
     }
 
-    public override fun trackingOptions(trackingOptions: TrackingOptionsProperty) {
+    override fun trackingOptions(trackingOptions: TrackingOptionsProperty) {
       cdkBuilder.trackingOptions(trackingOptions.let(TrackingOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("952610ede443fa8b88b6802bf9c4d9d2d717839104b58c7c328e1f4be9aeb7c8")
-    public override
-        fun trackingOptions(trackingOptions: TrackingOptionsProperty.Builder.() -> Unit): Unit =
-        trackingOptions(TrackingOptionsProperty(trackingOptions))
+    override fun trackingOptions(trackingOptions: TrackingOptionsProperty.Builder.() -> Unit): Unit
+        = trackingOptions(TrackingOptionsProperty(trackingOptions))
 
     public fun build(): software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet =
         cdkBuilder.build()
@@ -253,8 +236,7 @@ public open class CfnConfigurationSet internal constructor(
     public fun sendingPoolName(): String? = unwrap(this).getSendingPoolName()
 
     public interface Builder {
-      public fun sendingPoolName(sendingPoolName: String) {
-      }
+      public fun sendingPoolName(sendingPoolName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -263,7 +245,7 @@ public open class CfnConfigurationSet internal constructor(
           =
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty.builder()
 
-      public override fun sendingPoolName(sendingPoolName: String) {
+      override fun sendingPoolName(sendingPoolName: String) {
         cdkBuilder.sendingPoolName(sendingPoolName)
       }
 
@@ -276,7 +258,7 @@ public open class CfnConfigurationSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.DeliveryOptionsProperty,
     ) : DeliveryOptionsProperty {
-      public override fun sendingPoolName(): String? = unwrap(this).getSendingPoolName()
+      override fun sendingPoolName(): String? = unwrap(this).getSendingPoolName()
     }
 
     public companion object {
@@ -303,11 +285,9 @@ public open class CfnConfigurationSet internal constructor(
     public fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
 
     public interface Builder {
-      public fun sendingEnabled(sendingEnabled: Boolean) {
-      }
+      public fun sendingEnabled(sendingEnabled: Boolean)
 
-      public fun sendingEnabled(sendingEnabled: IResolvable) {
-      }
+      public fun sendingEnabled(sendingEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -316,11 +296,11 @@ public open class CfnConfigurationSet internal constructor(
           =
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty.builder()
 
-      public override fun sendingEnabled(sendingEnabled: Boolean) {
+      override fun sendingEnabled(sendingEnabled: Boolean) {
         cdkBuilder.sendingEnabled(sendingEnabled)
       }
 
-      public override fun sendingEnabled(sendingEnabled: IResolvable) {
+      override fun sendingEnabled(sendingEnabled: IResolvable) {
         cdkBuilder.sendingEnabled(sendingEnabled.let(IResolvable::unwrap))
       }
 
@@ -333,7 +313,7 @@ public open class CfnConfigurationSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.SendingOptionsProperty,
     ) : SendingOptionsProperty {
-      public override fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
+      override fun sendingEnabled(): Any? = unwrap(this).getSendingEnabled()
     }
 
     public companion object {
@@ -360,8 +340,7 @@ public open class CfnConfigurationSet internal constructor(
     public fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
 
     public interface Builder {
-      public fun customRedirectDomain(customRedirectDomain: String) {
-      }
+      public fun customRedirectDomain(customRedirectDomain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -370,7 +349,7 @@ public open class CfnConfigurationSet internal constructor(
           =
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty.builder()
 
-      public override fun customRedirectDomain(customRedirectDomain: String) {
+      override fun customRedirectDomain(customRedirectDomain: String) {
         cdkBuilder.customRedirectDomain(customRedirectDomain)
       }
 
@@ -383,7 +362,7 @@ public open class CfnConfigurationSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.TrackingOptionsProperty,
     ) : TrackingOptionsProperty {
-      public override fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
+      override fun customRedirectDomain(): String? = unwrap(this).getCustomRedirectDomain()
     }
 
     public companion object {
@@ -410,11 +389,9 @@ public open class CfnConfigurationSet internal constructor(
     public fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
 
     public interface Builder {
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
-      }
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean)
 
-      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
-      }
+      public fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -423,11 +400,11 @@ public open class CfnConfigurationSet internal constructor(
           =
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty.builder()
 
-      public override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: Boolean) {
         cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled)
       }
 
-      public override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
+      override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
         cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
       }
 
@@ -440,8 +417,7 @@ public open class CfnConfigurationSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet.ReputationOptionsProperty,
     ) : ReputationOptionsProperty {
-      public override fun reputationMetricsEnabled(): Any? =
-          unwrap(this).getReputationMetricsEnabled()
+      override fun reputationMetricsEnabled(): Any? = unwrap(this).getReputationMetricsEnabled()
     }
 
     public companion object {

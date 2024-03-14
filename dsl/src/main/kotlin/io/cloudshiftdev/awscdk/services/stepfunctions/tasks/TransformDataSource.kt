@@ -8,13 +8,11 @@ public interface TransformDataSource {
   public fun s3DataSource(): TransformS3DataSource
 
   public interface Builder {
-    public fun s3DataSource(s3DataSource: TransformS3DataSource) {
-    }
+    public fun s3DataSource(s3DataSource: TransformS3DataSource)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cef63f9015e5860a7abe9681e3daedec5a393ef9abc69e1937f27214de3e2f8")
-    public fun s3DataSource(s3DataSource: TransformS3DataSource.Builder.() -> Unit) {
-    }
+    public fun s3DataSource(s3DataSource: TransformS3DataSource.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -22,13 +20,13 @@ public interface TransformDataSource {
         software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource.builder()
 
-    public override fun s3DataSource(s3DataSource: TransformS3DataSource) {
+    override fun s3DataSource(s3DataSource: TransformS3DataSource) {
       cdkBuilder.s3DataSource(s3DataSource.let(TransformS3DataSource::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9cef63f9015e5860a7abe9681e3daedec5a393ef9abc69e1937f27214de3e2f8")
-    public override fun s3DataSource(s3DataSource: TransformS3DataSource.Builder.() -> Unit): Unit =
+    override fun s3DataSource(s3DataSource: TransformS3DataSource.Builder.() -> Unit): Unit =
         s3DataSource(TransformS3DataSource(s3DataSource))
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource =
@@ -38,7 +36,7 @@ public interface TransformDataSource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformDataSource,
   ) : TransformDataSource {
-    public override fun s3DataSource(): TransformS3DataSource =
+    override fun s3DataSource(): TransformS3DataSource =
         unwrap(this).getS3DataSource().let(TransformS3DataSource::wrap)
   }
 

@@ -12,29 +12,26 @@ public interface VpcIpamOptions {
   public fun ipv4NetmaskLength(): Number? = unwrap(this).getIpv4NetmaskLength()
 
   public interface Builder {
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
-    }
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String)
 
-    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
-    }
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpcIpamOptions.Builder =
         software.amazon.awscdk.services.ec2.VpcIpamOptions.builder()
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+    override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
       cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
     }
 
-    public override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+    override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
       cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
     }
 
@@ -44,11 +41,11 @@ public interface VpcIpamOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpcIpamOptions,
   ) : VpcIpamOptions {
-    public override fun cidrBlock(): String? = unwrap(this).getCidrBlock()
+    override fun cidrBlock(): String? = unwrap(this).getCidrBlock()
 
-    public override fun ipv4IpamPoolId(): String? = unwrap(this).getIpv4IpamPoolId()
+    override fun ipv4IpamPoolId(): String? = unwrap(this).getIpv4IpamPoolId()
 
-    public override fun ipv4NetmaskLength(): Number? = unwrap(this).getIpv4NetmaskLength()
+    override fun ipv4NetmaskLength(): Number? = unwrap(this).getIpv4NetmaskLength()
   }
 
   public companion object {

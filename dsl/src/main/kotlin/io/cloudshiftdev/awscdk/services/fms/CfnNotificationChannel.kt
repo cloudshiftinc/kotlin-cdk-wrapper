@@ -28,11 +28,9 @@ public open class CfnNotificationChannel internal constructor(
   }
 
   public interface Builder {
-    public fun snsRoleName(snsRoleName: String) {
-    }
+    public fun snsRoleName(snsRoleName: String)
 
-    public fun snsTopicArn(snsTopicArn: String) {
-    }
+    public fun snsTopicArn(snsTopicArn: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnNotificationChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fms.CfnNotificationChannel.Builder =
         software.amazon.awscdk.services.fms.CfnNotificationChannel.Builder.create(scope, id)
 
-    public override fun snsRoleName(snsRoleName: String) {
+    override fun snsRoleName(snsRoleName: String) {
       cdkBuilder.snsRoleName(snsRoleName)
     }
 
-    public override fun snsTopicArn(snsTopicArn: String) {
+    override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
 

@@ -9,22 +9,20 @@ public interface CredentialSpecConfig {
   public fun typePrefix(): String
 
   public interface Builder {
-    public fun location(location: String) {
-    }
+    public fun location(location: String)
 
-    public fun typePrefix(typePrefix: String) {
-    }
+    public fun typePrefix(typePrefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CredentialSpecConfig.Builder =
         software.amazon.awscdk.services.ecs.CredentialSpecConfig.builder()
 
-    public override fun location(location: String) {
+    override fun location(location: String) {
       cdkBuilder.location(location)
     }
 
-    public override fun typePrefix(typePrefix: String) {
+    override fun typePrefix(typePrefix: String) {
       cdkBuilder.typePrefix(typePrefix)
     }
 
@@ -35,9 +33,9 @@ public interface CredentialSpecConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.CredentialSpecConfig,
   ) : CredentialSpecConfig {
-    public override fun location(): String = unwrap(this).getLocation()
+    override fun location(): String = unwrap(this).getLocation()
 
-    public override fun typePrefix(): String = unwrap(this).getTypePrefix()
+    override fun typePrefix(): String = unwrap(this).getTypePrefix()
   }
 
   public companion object {

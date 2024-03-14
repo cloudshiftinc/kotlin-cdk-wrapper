@@ -34,14 +34,11 @@ public open class CfnDocumentationVersion internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun documentationVersion(documentationVersion: String) {
-    }
+    public fun documentationVersion(documentationVersion: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
   }
 
   private class BuilderImpl(
@@ -52,15 +49,15 @@ public open class CfnDocumentationVersion internal constructor(
         software.amazon.awscdk.services.apigateway.CfnDocumentationVersion.Builder =
         software.amazon.awscdk.services.apigateway.CfnDocumentationVersion.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun documentationVersion(documentationVersion: String) {
+    override fun documentationVersion(documentationVersion: String) {
       cdkBuilder.documentationVersion(documentationVersion)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 

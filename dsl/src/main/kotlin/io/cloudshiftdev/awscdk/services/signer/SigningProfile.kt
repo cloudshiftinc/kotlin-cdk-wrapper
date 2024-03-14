@@ -22,14 +22,11 @@ public open class SigningProfile internal constructor(
       unwrap(this).getSigningProfileVersionArn()
 
   public interface Builder {
-    public fun platform(platform: Platform) {
-    }
+    public fun platform(platform: Platform)
 
-    public fun signatureValidity(signatureValidity: Duration) {
-    }
+    public fun signatureValidity(signatureValidity: Duration)
 
-    public fun signingProfileName(signingProfileName: String) {
-    }
+    public fun signingProfileName(signingProfileName: String)
   }
 
   private class BuilderImpl(
@@ -39,15 +36,15 @@ public open class SigningProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.signer.SigningProfile.Builder =
         software.amazon.awscdk.services.signer.SigningProfile.Builder.create(scope, id)
 
-    public override fun platform(platform: Platform) {
+    override fun platform(platform: Platform) {
       cdkBuilder.platform(platform.let(Platform::unwrap))
     }
 
-    public override fun signatureValidity(signatureValidity: Duration) {
+    override fun signatureValidity(signatureValidity: Duration) {
       cdkBuilder.signatureValidity(signatureValidity.let(Duration::unwrap))
     }
 
-    public override fun signingProfileName(signingProfileName: String) {
+    override fun signingProfileName(signingProfileName: String) {
       cdkBuilder.signingProfileName(signingProfileName)
     }
 

@@ -9,22 +9,20 @@ public interface VersionWeight {
   public fun weight(): Number
 
   public interface Builder {
-    public fun version(version: IVersion) {
-    }
+    public fun version(version: IVersion)
 
-    public fun weight(weight: Number) {
-    }
+    public fun weight(weight: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.VersionWeight.Builder =
         software.amazon.awscdk.services.lambda.VersionWeight.builder()
 
-    public override fun version(version: IVersion) {
+    override fun version(version: IVersion) {
       cdkBuilder.version(version.let(IVersion::unwrap))
     }
 
-    public override fun weight(weight: Number) {
+    override fun weight(weight: Number) {
       cdkBuilder.weight(weight)
     }
 
@@ -34,9 +32,9 @@ public interface VersionWeight {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.VersionWeight,
   ) : VersionWeight {
-    public override fun version(): IVersion = unwrap(this).getVersion().let(IVersion::wrap)
+    override fun version(): IVersion = unwrap(this).getVersion().let(IVersion::wrap)
 
-    public override fun weight(): Number = unwrap(this).getWeight()
+    override fun weight(): Number = unwrap(this).getWeight()
   }
 
   public companion object {

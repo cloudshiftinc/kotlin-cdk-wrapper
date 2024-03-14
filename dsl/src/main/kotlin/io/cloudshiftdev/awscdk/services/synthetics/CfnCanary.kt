@@ -192,108 +192,78 @@ public open class CfnCanary internal constructor(
       vpcConfig(VPCConfigProperty(`value`))
 
   public interface Builder {
-    public fun artifactConfig(artifactConfig: IResolvable) {
-    }
+    public fun artifactConfig(artifactConfig: IResolvable)
 
-    public fun artifactConfig(artifactConfig: ArtifactConfigProperty) {
-    }
+    public fun artifactConfig(artifactConfig: ArtifactConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b23f001e2dd8a6cfb00b3131af1425ae09f30fc4cbc4fc44e8f860e9febcc135")
-    public fun artifactConfig(artifactConfig: ArtifactConfigProperty.Builder.() -> Unit) {
-    }
+    public fun artifactConfig(artifactConfig: ArtifactConfigProperty.Builder.() -> Unit)
 
-    public fun artifactS3Location(artifactS3Location: String) {
-    }
+    public fun artifactS3Location(artifactS3Location: String)
 
-    public fun code(code: IResolvable) {
-    }
+    public fun code(code: IResolvable)
 
-    public fun code(code: CodeProperty) {
-    }
+    public fun code(code: CodeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c812154cd31e9058f9a59ba258f53c8ba550d96607d8ec454c71346200d4796")
-    public fun code(code: CodeProperty.Builder.() -> Unit) {
-    }
+    public fun code(code: CodeProperty.Builder.() -> Unit)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
     public
-        fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: Boolean) {
-    }
+        fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable)
 
-    @Deprecated(message = "deprecated in CDK")
-    public
-        fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun failureRetentionPeriod(failureRetentionPeriod: Number)
 
-    public fun failureRetentionPeriod(failureRetentionPeriod: Number) {
-    }
+    public fun name(name: String)
 
-    public fun name(name: String) {
-    }
+    public fun runConfig(runConfig: IResolvable)
 
-    public fun runConfig(runConfig: IResolvable) {
-    }
-
-    public fun runConfig(runConfig: RunConfigProperty) {
-    }
+    public fun runConfig(runConfig: RunConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("593ad653374326f03b8fffc50aebd3f75a0ebf23cee869b1d32c4fbc0ab76399")
-    public fun runConfig(runConfig: RunConfigProperty.Builder.() -> Unit) {
-    }
+    public fun runConfig(runConfig: RunConfigProperty.Builder.() -> Unit)
 
-    public fun runtimeVersion(runtimeVersion: String) {
-    }
+    public fun runtimeVersion(runtimeVersion: String)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: ScheduleProperty) {
-    }
+    public fun schedule(schedule: ScheduleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fd52bf09f0ec9f283e051ca56ffb048645d905bc4e602bd1a3c9395b5b79ddb")
-    public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit)
 
-    public fun startCanaryAfterCreation(startCanaryAfterCreation: Boolean) {
-    }
+    public fun startCanaryAfterCreation(startCanaryAfterCreation: Boolean)
 
-    public fun startCanaryAfterCreation(startCanaryAfterCreation: IResolvable) {
-    }
+    public fun startCanaryAfterCreation(startCanaryAfterCreation: IResolvable)
 
-    public fun successRetentionPeriod(successRetentionPeriod: Number) {
-    }
+    public fun successRetentionPeriod(successRetentionPeriod: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun visualReference(visualReference: IResolvable) {
-    }
+    public fun visualReference(visualReference: IResolvable)
 
-    public fun visualReference(visualReference: VisualReferenceProperty) {
-    }
+    public fun visualReference(visualReference: VisualReferenceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0bbb4cbb9894123c40e44079dc0cc74d2f61a18097234b42c75576546fef8718")
-    public fun visualReference(visualReference: VisualReferenceProperty.Builder.() -> Unit) {
-    }
+    public fun visualReference(visualReference: VisualReferenceProperty.Builder.() -> Unit)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VPCConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VPCConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("42466e6db317ff4a78574c685c398063fd03f17ed16764eba50d382eca61f3d6")
-    public fun vpcConfig(vpcConfig: VPCConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VPCConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -303,130 +273,129 @@ public open class CfnCanary internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.CfnCanary.Builder =
         software.amazon.awscdk.services.synthetics.CfnCanary.Builder.create(scope, id)
 
-    public override fun artifactConfig(artifactConfig: IResolvable) {
+    override fun artifactConfig(artifactConfig: IResolvable) {
       cdkBuilder.artifactConfig(artifactConfig.let(IResolvable::unwrap))
     }
 
-    public override fun artifactConfig(artifactConfig: ArtifactConfigProperty) {
+    override fun artifactConfig(artifactConfig: ArtifactConfigProperty) {
       cdkBuilder.artifactConfig(artifactConfig.let(ArtifactConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b23f001e2dd8a6cfb00b3131af1425ae09f30fc4cbc4fc44e8f860e9febcc135")
-    public override fun artifactConfig(artifactConfig: ArtifactConfigProperty.Builder.() -> Unit):
-        Unit = artifactConfig(ArtifactConfigProperty(artifactConfig))
+    override fun artifactConfig(artifactConfig: ArtifactConfigProperty.Builder.() -> Unit): Unit =
+        artifactConfig(ArtifactConfigProperty(artifactConfig))
 
-    public override fun artifactS3Location(artifactS3Location: String) {
+    override fun artifactS3Location(artifactS3Location: String) {
       cdkBuilder.artifactS3Location(artifactS3Location)
     }
 
-    public override fun code(code: IResolvable) {
+    override fun code(code: IResolvable) {
       cdkBuilder.code(code.let(IResolvable::unwrap))
     }
 
-    public override fun code(code: CodeProperty) {
+    override fun code(code: CodeProperty) {
       cdkBuilder.code(code.let(CodeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c812154cd31e9058f9a59ba258f53c8ba550d96607d8ec454c71346200d4796")
-    public override fun code(code: CodeProperty.Builder.() -> Unit): Unit = code(CodeProperty(code))
+    override fun code(code: CodeProperty.Builder.() -> Unit): Unit = code(CodeProperty(code))
 
     @Deprecated(message = "deprecated in CDK")
-    public override
+    override
         fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: Boolean) {
       cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override
+    override
         fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable) {
       cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion.let(IResolvable::unwrap))
     }
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun failureRetentionPeriod(failureRetentionPeriod: Number) {
+    override fun failureRetentionPeriod(failureRetentionPeriod: Number) {
       cdkBuilder.failureRetentionPeriod(failureRetentionPeriod)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun runConfig(runConfig: IResolvable) {
+    override fun runConfig(runConfig: IResolvable) {
       cdkBuilder.runConfig(runConfig.let(IResolvable::unwrap))
     }
 
-    public override fun runConfig(runConfig: RunConfigProperty) {
+    override fun runConfig(runConfig: RunConfigProperty) {
       cdkBuilder.runConfig(runConfig.let(RunConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("593ad653374326f03b8fffc50aebd3f75a0ebf23cee869b1d32c4fbc0ab76399")
-    public override fun runConfig(runConfig: RunConfigProperty.Builder.() -> Unit): Unit =
+    override fun runConfig(runConfig: RunConfigProperty.Builder.() -> Unit): Unit =
         runConfig(RunConfigProperty(runConfig))
 
-    public override fun runtimeVersion(runtimeVersion: String) {
+    override fun runtimeVersion(runtimeVersion: String) {
       cdkBuilder.runtimeVersion(runtimeVersion)
     }
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: ScheduleProperty) {
+    override fun schedule(schedule: ScheduleProperty) {
       cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fd52bf09f0ec9f283e051ca56ffb048645d905bc4e602bd1a3c9395b5b79ddb")
-    public override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
+    override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
         schedule(ScheduleProperty(schedule))
 
-    public override fun startCanaryAfterCreation(startCanaryAfterCreation: Boolean) {
+    override fun startCanaryAfterCreation(startCanaryAfterCreation: Boolean) {
       cdkBuilder.startCanaryAfterCreation(startCanaryAfterCreation)
     }
 
-    public override fun startCanaryAfterCreation(startCanaryAfterCreation: IResolvable) {
+    override fun startCanaryAfterCreation(startCanaryAfterCreation: IResolvable) {
       cdkBuilder.startCanaryAfterCreation(startCanaryAfterCreation.let(IResolvable::unwrap))
     }
 
-    public override fun successRetentionPeriod(successRetentionPeriod: Number) {
+    override fun successRetentionPeriod(successRetentionPeriod: Number) {
       cdkBuilder.successRetentionPeriod(successRetentionPeriod)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun visualReference(visualReference: IResolvable) {
+    override fun visualReference(visualReference: IResolvable) {
       cdkBuilder.visualReference(visualReference.let(IResolvable::unwrap))
     }
 
-    public override fun visualReference(visualReference: VisualReferenceProperty) {
+    override fun visualReference(visualReference: VisualReferenceProperty) {
       cdkBuilder.visualReference(visualReference.let(VisualReferenceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0bbb4cbb9894123c40e44079dc0cc74d2f61a18097234b42c75576546fef8718")
-    public override
-        fun visualReference(visualReference: VisualReferenceProperty.Builder.() -> Unit): Unit =
-        visualReference(VisualReferenceProperty(visualReference))
+    override fun visualReference(visualReference: VisualReferenceProperty.Builder.() -> Unit): Unit
+        = visualReference(VisualReferenceProperty(visualReference))
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VPCConfigProperty) {
+    override fun vpcConfig(vpcConfig: VPCConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VPCConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("42466e6db317ff4a78574c685c398063fd03f17ed16764eba50d382eca61f3d6")
-    public override fun vpcConfig(vpcConfig: VPCConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VPCConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VPCConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.synthetics.CfnCanary = cdkBuilder.build()
@@ -459,11 +428,9 @@ public open class CfnCanary internal constructor(
     public fun expression(): String
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: String) {
-      }
+      public fun durationInSeconds(durationInSeconds: String)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -471,11 +438,11 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: String) {
+      override fun durationInSeconds(durationInSeconds: String) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
@@ -486,9 +453,9 @@ public open class CfnCanary internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.ScheduleProperty,
     ) : ScheduleProperty {
-      public override fun durationInSeconds(): String? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): String? = unwrap(this).getDurationInSeconds()
 
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
     }
 
     public companion object {
@@ -517,11 +484,9 @@ public open class CfnCanary internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun encryptionMode(encryptionMode: String) {
-      }
+      public fun encryptionMode(encryptionMode: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -529,11 +494,11 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty.builder()
 
-      public override fun encryptionMode(encryptionMode: String) {
+      override fun encryptionMode(encryptionMode: String) {
         cdkBuilder.encryptionMode(encryptionMode)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -545,9 +510,9 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.S3EncryptionProperty,
     ) : S3EncryptionProperty {
-      public override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
@@ -576,14 +541,11 @@ public open class CfnCanary internal constructor(
     public fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
 
     public interface Builder {
-      public fun baseCanaryRunId(baseCanaryRunId: String) {
-      }
+      public fun baseCanaryRunId(baseCanaryRunId: String)
 
-      public fun baseScreenshots(baseScreenshots: IResolvable) {
-      }
+      public fun baseScreenshots(baseScreenshots: IResolvable)
 
-      public fun baseScreenshots(baseScreenshots: List<Any>) {
-      }
+      public fun baseScreenshots(baseScreenshots: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -591,15 +553,15 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty.builder()
 
-      public override fun baseCanaryRunId(baseCanaryRunId: String) {
+      override fun baseCanaryRunId(baseCanaryRunId: String) {
         cdkBuilder.baseCanaryRunId(baseCanaryRunId)
       }
 
-      public override fun baseScreenshots(baseScreenshots: IResolvable) {
+      override fun baseScreenshots(baseScreenshots: IResolvable) {
         cdkBuilder.baseScreenshots(baseScreenshots.let(IResolvable::unwrap))
       }
 
-      public override fun baseScreenshots(baseScreenshots: List<Any>) {
+      override fun baseScreenshots(baseScreenshots: List<Any>) {
         cdkBuilder.baseScreenshots(baseScreenshots)
       }
 
@@ -612,9 +574,9 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty,
     ) : VisualReferenceProperty {
-      public override fun baseCanaryRunId(): String = unwrap(this).getBaseCanaryRunId()
+      override fun baseCanaryRunId(): String = unwrap(this).getBaseCanaryRunId()
 
-      public override fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
+      override fun baseScreenshots(): Any? = unwrap(this).getBaseScreenshots()
     }
 
     public companion object {
@@ -644,11 +606,9 @@ public open class CfnCanary internal constructor(
     public fun screenshotName(): String
 
     public interface Builder {
-      public fun ignoreCoordinates(ignoreCoordinates: List<String>) {
-      }
+      public fun ignoreCoordinates(ignoreCoordinates: List<String>)
 
-      public fun screenshotName(screenshotName: String) {
-      }
+      public fun screenshotName(screenshotName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -656,11 +616,11 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty.builder()
 
-      public override fun ignoreCoordinates(ignoreCoordinates: List<String>) {
+      override fun ignoreCoordinates(ignoreCoordinates: List<String>) {
         cdkBuilder.ignoreCoordinates(ignoreCoordinates)
       }
 
-      public override fun screenshotName(screenshotName: String) {
+      override fun screenshotName(screenshotName: String) {
         cdkBuilder.screenshotName(screenshotName)
       }
 
@@ -673,10 +633,10 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.BaseScreenshotProperty,
     ) : BaseScreenshotProperty {
-      public override fun ignoreCoordinates(): List<String> = unwrap(this).getIgnoreCoordinates() ?:
+      override fun ignoreCoordinates(): List<String> = unwrap(this).getIgnoreCoordinates() ?:
           emptyList()
 
-      public override fun screenshotName(): String = unwrap(this).getScreenshotName()
+      override fun screenshotName(): String = unwrap(this).getScreenshotName()
     }
 
     public companion object {
@@ -709,23 +669,17 @@ public open class CfnCanary internal constructor(
     public fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
 
     public interface Builder {
-      public fun activeTracing(activeTracing: Boolean) {
-      }
+      public fun activeTracing(activeTracing: Boolean)
 
-      public fun activeTracing(activeTracing: IResolvable) {
-      }
+      public fun activeTracing(activeTracing: IResolvable)
 
-      public fun environmentVariables(environmentVariables: IResolvable) {
-      }
+      public fun environmentVariables(environmentVariables: IResolvable)
 
-      public fun environmentVariables(environmentVariables: Map<String, String>) {
-      }
+      public fun environmentVariables(environmentVariables: Map<String, String>)
 
-      public fun memoryInMb(memoryInMb: Number) {
-      }
+      public fun memoryInMb(memoryInMb: Number)
 
-      public fun timeoutInSeconds(timeoutInSeconds: Number) {
-      }
+      public fun timeoutInSeconds(timeoutInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -733,27 +687,27 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty.builder()
 
-      public override fun activeTracing(activeTracing: Boolean) {
+      override fun activeTracing(activeTracing: Boolean) {
         cdkBuilder.activeTracing(activeTracing)
       }
 
-      public override fun activeTracing(activeTracing: IResolvable) {
+      override fun activeTracing(activeTracing: IResolvable) {
         cdkBuilder.activeTracing(activeTracing.let(IResolvable::unwrap))
       }
 
-      public override fun environmentVariables(environmentVariables: IResolvable) {
+      override fun environmentVariables(environmentVariables: IResolvable) {
         cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
       }
 
-      public override fun environmentVariables(environmentVariables: Map<String, String>) {
+      override fun environmentVariables(environmentVariables: Map<String, String>) {
         cdkBuilder.environmentVariables(environmentVariables)
       }
 
-      public override fun memoryInMb(memoryInMb: Number) {
+      override fun memoryInMb(memoryInMb: Number) {
         cdkBuilder.memoryInMb(memoryInMb)
       }
 
-      public override fun timeoutInSeconds(timeoutInSeconds: Number) {
+      override fun timeoutInSeconds(timeoutInSeconds: Number) {
         cdkBuilder.timeoutInSeconds(timeoutInSeconds)
       }
 
@@ -765,13 +719,13 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.RunConfigProperty,
     ) : RunConfigProperty {
-      public override fun activeTracing(): Any? = unwrap(this).getActiveTracing()
+      override fun activeTracing(): Any? = unwrap(this).getActiveTracing()
 
-      public override fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
+      override fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
 
-      public override fun memoryInMb(): Number? = unwrap(this).getMemoryInMb()
+      override fun memoryInMb(): Number? = unwrap(this).getMemoryInMb()
 
-      public override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
+      override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
     }
 
     public companion object {
@@ -798,16 +752,13 @@ public open class CfnCanary internal constructor(
     public fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
 
     public interface Builder {
-      public fun s3Encryption(s3Encryption: IResolvable) {
-      }
+      public fun s3Encryption(s3Encryption: IResolvable)
 
-      public fun s3Encryption(s3Encryption: S3EncryptionProperty) {
-      }
+      public fun s3Encryption(s3Encryption: S3EncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c139218594ab3ddb52cd25fe29117d299d2b333cbade9bb9b71aa26d9e27fa73")
-      public fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -815,18 +766,18 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty.builder()
 
-      public override fun s3Encryption(s3Encryption: IResolvable) {
+      override fun s3Encryption(s3Encryption: IResolvable) {
         cdkBuilder.s3Encryption(s3Encryption.let(IResolvable::unwrap))
       }
 
-      public override fun s3Encryption(s3Encryption: S3EncryptionProperty) {
+      override fun s3Encryption(s3Encryption: S3EncryptionProperty) {
         cdkBuilder.s3Encryption(s3Encryption.let(S3EncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c139218594ab3ddb52cd25fe29117d299d2b333cbade9bb9b71aa26d9e27fa73")
-      public override fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit): Unit
-          = s3Encryption(S3EncryptionProperty(s3Encryption))
+      override fun s3Encryption(s3Encryption: S3EncryptionProperty.Builder.() -> Unit): Unit =
+          s3Encryption(S3EncryptionProperty(s3Encryption))
 
       public fun build():
           software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty =
@@ -837,7 +788,7 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.ArtifactConfigProperty,
     ) : ArtifactConfigProperty {
-      public override fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
+      override fun s3Encryption(): Any? = unwrap(this).getS3Encryption()
     }
 
     public companion object {
@@ -868,14 +819,11 @@ public open class CfnCanary internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -883,15 +831,15 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -903,12 +851,12 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty,
     ) : VPCConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {
@@ -945,23 +893,17 @@ public open class CfnCanary internal constructor(
     public fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
 
     public interface Builder {
-      public fun handler(handler: String) {
-      }
+      public fun handler(handler: String)
 
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
 
-      public fun s3ObjectVersion(s3ObjectVersion: String) {
-      }
+      public fun s3ObjectVersion(s3ObjectVersion: String)
 
-      public fun script(script: String) {
-      }
+      public fun script(script: String)
 
-      public fun sourceLocationArn(sourceLocationArn: String) {
-      }
+      public fun sourceLocationArn(sourceLocationArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -969,27 +911,27 @@ public open class CfnCanary internal constructor(
           software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty.Builder =
           software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty.builder()
 
-      public override fun handler(handler: String) {
+      override fun handler(handler: String) {
         cdkBuilder.handler(handler)
       }
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
-      public override fun s3ObjectVersion(s3ObjectVersion: String) {
+      override fun s3ObjectVersion(s3ObjectVersion: String) {
         cdkBuilder.s3ObjectVersion(s3ObjectVersion)
       }
 
-      public override fun script(script: String) {
+      override fun script(script: String) {
         cdkBuilder.script(script)
       }
 
-      public override fun sourceLocationArn(sourceLocationArn: String) {
+      override fun sourceLocationArn(sourceLocationArn: String) {
         cdkBuilder.sourceLocationArn(sourceLocationArn)
       }
 
@@ -1000,17 +942,17 @@ public open class CfnCanary internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.synthetics.CfnCanary.CodeProperty,
     ) : CodeProperty {
-      public override fun handler(): String = unwrap(this).getHandler()
+      override fun handler(): String = unwrap(this).getHandler()
 
-      public override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String? = unwrap(this).getS3Key()
+      override fun s3Key(): String? = unwrap(this).getS3Key()
 
-      public override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
+      override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
-      public override fun script(): String? = unwrap(this).getScript()
+      override fun script(): String? = unwrap(this).getScript()
 
-      public override fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
+      override fun sourceLocationArn(): String? = unwrap(this).getSourceLocationArn()
     }
 
     public companion object {

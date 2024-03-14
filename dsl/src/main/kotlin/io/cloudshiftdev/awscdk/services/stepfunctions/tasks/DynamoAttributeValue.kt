@@ -31,8 +31,7 @@ public open class DynamoAttributeValue internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromList(`value`.map(DynamoAttributeValue::unwrap)).let(DynamoAttributeValue::wrap)
 
     public open fun fromMap(`value`: Map<String, DynamoAttributeValue>): DynamoAttributeValue =
-        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromMap(`value`.mapValues
-        { DynamoAttributeValue.unwrap(it.value)}).let(DynamoAttributeValue::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromMap(`value`.mapValues{DynamoAttributeValue.unwrap(it.value)}).let(DynamoAttributeValue::wrap)
 
     public open fun fromNull(`value`: Boolean): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromNull(`value`).let(DynamoAttributeValue::wrap)

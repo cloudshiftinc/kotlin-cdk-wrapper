@@ -64,94 +64,66 @@ public open class Instance internal constructor(
   public open fun userData(): UserData = unwrap(this).getUserData().let(UserData::wrap)
 
   public interface Builder {
-    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
-    }
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
 
-    public fun allowAllOutbound(allowAllOutbound: Boolean) {
-    }
+    public fun allowAllOutbound(allowAllOutbound: Boolean)
 
-    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun blockDevices(blockDevices: List<BlockDevice>) {
-    }
+    public fun blockDevices(blockDevices: List<BlockDevice>)
 
-    public fun creditSpecification(creditSpecification: CpuCredits) {
-    }
+    public fun creditSpecification(creditSpecification: CpuCredits)
 
-    public fun detailedMonitoring(detailedMonitoring: Boolean) {
-    }
+    public fun detailedMonitoring(detailedMonitoring: Boolean)
 
-    public fun `init`(`init`: CloudFormationInit) {
-    }
+    public fun `init`(`init`: CloudFormationInit)
 
-    public fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-    }
+    public fun initOptions(initOptions: ApplyCloudFormationInitOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1255c73a191e21ad38f2985417965411599e1b4b9be46e0f44bce9e8798ce1a1")
-    public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit) {
-    }
+    public fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit)
 
-    public fun instanceName(instanceName: String) {
-    }
+    public fun instanceName(instanceName: String)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun keyPair(keyPair: IKeyPair) {
-    }
+    public fun keyPair(keyPair: IKeyPair)
 
-    public fun machineImage(machineImage: IMachineImage) {
-    }
+    public fun machineImage(machineImage: IMachineImage)
 
-    public fun privateIpAddress(privateIpAddress: String) {
-    }
+    public fun privateIpAddress(privateIpAddress: String)
 
-    public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
-    }
+    public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean)
 
-    public fun requireImdsv2(requireImdsv2: Boolean) {
-    }
+    public fun requireImdsv2(requireImdsv2: Boolean)
 
-    public fun resourceSignalTimeout(resourceSignalTimeout: Duration) {
-    }
+    public fun resourceSignalTimeout(resourceSignalTimeout: Duration)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun sourceDestCheck(sourceDestCheck: Boolean) {
-    }
+    public fun sourceDestCheck(sourceDestCheck: Boolean)
 
-    public fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
-    }
+    public fun ssmSessionPermissions(ssmSessionPermissions: Boolean)
 
-    public fun userData(userData: UserData) {
-    }
+    public fun userData(userData: UserData)
 
-    public fun userDataCausesReplacement(userDataCausesReplacement: Boolean) {
-    }
+    public fun userDataCausesReplacement(userDataCausesReplacement: Boolean)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f8ebf73c6a85a04ee97a84a646dbed1afef0b5d139bc3ae031c9518f7941be4e")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -161,119 +133,119 @@ public open class Instance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.Instance.Builder =
         software.amazon.awscdk.services.ec2.Instance.Builder.create(scope, id)
 
-    public override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
       cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
     }
 
-    public override fun allowAllOutbound(allowAllOutbound: Boolean) {
+    override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
     }
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun blockDevices(blockDevices: List<BlockDevice>) {
+    override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
 
-    public override fun creditSpecification(creditSpecification: CpuCredits) {
+    override fun creditSpecification(creditSpecification: CpuCredits) {
       cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits::unwrap))
     }
 
-    public override fun detailedMonitoring(detailedMonitoring: Boolean) {
+    override fun detailedMonitoring(detailedMonitoring: Boolean) {
       cdkBuilder.detailedMonitoring(detailedMonitoring)
     }
 
-    public override fun `init`(`init`: CloudFormationInit) {
+    override fun `init`(`init`: CloudFormationInit) {
       cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
     }
 
-    public override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
+    override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
       cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1255c73a191e21ad38f2985417965411599e1b4b9be46e0f44bce9e8798ce1a1")
-    public override fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit):
-        Unit = initOptions(ApplyCloudFormationInitOptions(initOptions))
+    override fun initOptions(initOptions: ApplyCloudFormationInitOptions.Builder.() -> Unit): Unit =
+        initOptions(ApplyCloudFormationInitOptions(initOptions))
 
-    public override fun instanceName(instanceName: String) {
+    override fun instanceName(instanceName: String) {
       cdkBuilder.instanceName(instanceName)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun keyPair(keyPair: IKeyPair) {
+    override fun keyPair(keyPair: IKeyPair) {
       cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
     }
 
-    public override fun machineImage(machineImage: IMachineImage) {
+    override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
     }
 
-    public override fun privateIpAddress(privateIpAddress: String) {
+    override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
 
-    public override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
+    override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
       cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation)
     }
 
-    public override fun requireImdsv2(requireImdsv2: Boolean) {
+    override fun requireImdsv2(requireImdsv2: Boolean) {
       cdkBuilder.requireImdsv2(requireImdsv2)
     }
 
-    public override fun resourceSignalTimeout(resourceSignalTimeout: Duration) {
+    override fun resourceSignalTimeout(resourceSignalTimeout: Duration) {
       cdkBuilder.resourceSignalTimeout(resourceSignalTimeout.let(Duration::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun sourceDestCheck(sourceDestCheck: Boolean) {
+    override fun sourceDestCheck(sourceDestCheck: Boolean) {
       cdkBuilder.sourceDestCheck(sourceDestCheck)
     }
 
-    public override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
+    override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
       cdkBuilder.ssmSessionPermissions(ssmSessionPermissions)
     }
 
-    public override fun userData(userData: UserData) {
+    override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }
 
-    public override fun userDataCausesReplacement(userDataCausesReplacement: Boolean) {
+    override fun userDataCausesReplacement(userDataCausesReplacement: Boolean) {
       cdkBuilder.userDataCausesReplacement(userDataCausesReplacement)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f8ebf73c6a85a04ee97a84a646dbed1afef0b5d139bc3ae031c9518f7941be4e")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.ec2.Instance = cdkBuilder.build()

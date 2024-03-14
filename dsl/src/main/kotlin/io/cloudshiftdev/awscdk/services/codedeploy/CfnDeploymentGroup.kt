@@ -249,149 +249,107 @@ public open class CfnDeploymentGroup internal constructor(
   }
 
   public interface Builder {
-    public fun alarmConfiguration(alarmConfiguration: IResolvable) {
-    }
+    public fun alarmConfiguration(alarmConfiguration: IResolvable)
 
-    public fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty) {
-    }
+    public fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aaabeeab4581656bbebb3208c6cdea0aae45a6bf07c78a71fb729a258f91c91a")
-    public
-        fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty.Builder.() -> Unit)
 
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
-    }
+    public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable)
 
     public
-        fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty) {
-    }
+        fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2ee94cf3cecb07799ec4e642605041d5dd6cb1590775b976fcad565e8926e7cf")
     public
-        fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty.Builder.() -> Unit)
 
-    public fun autoScalingGroups(autoScalingGroups: List<String>) {
-    }
+    public fun autoScalingGroups(autoScalingGroups: List<String>)
 
-    public fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable) {
-    }
+    public fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable)
 
     public
-        fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty) {
-    }
+        fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea1d137387c5573eb1a2270e14f836edf3840e9a2e2536a4ca881d1536cf4f6d")
     public
-        fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty.Builder.() -> Unit)
 
-    public fun deployment(deployment: IResolvable) {
-    }
+    public fun deployment(deployment: IResolvable)
 
-    public fun deployment(deployment: DeploymentProperty) {
-    }
+    public fun deployment(deployment: DeploymentProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ddc69a696c62199b4a8b77f2e5b7e40c6d9e85f2d1ad8574cbb5189ae0cd408d")
-    public fun deployment(deployment: DeploymentProperty.Builder.() -> Unit) {
-    }
+    public fun deployment(deployment: DeploymentProperty.Builder.() -> Unit)
 
-    public fun deploymentConfigName(deploymentConfigName: String) {
-    }
+    public fun deploymentConfigName(deploymentConfigName: String)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
 
-    public fun deploymentStyle(deploymentStyle: IResolvable) {
-    }
+    public fun deploymentStyle(deploymentStyle: IResolvable)
 
-    public fun deploymentStyle(deploymentStyle: DeploymentStyleProperty) {
-    }
+    public fun deploymentStyle(deploymentStyle: DeploymentStyleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82d29e4efa135c378ca780a21a52f1ba7ea5f1da54cdc238ff026427ece0c8c8")
-    public fun deploymentStyle(deploymentStyle: DeploymentStyleProperty.Builder.() -> Unit) {
-    }
+    public fun deploymentStyle(deploymentStyle: DeploymentStyleProperty.Builder.() -> Unit)
 
-    public fun ec2TagFilters(ec2TagFilters: IResolvable) {
-    }
+    public fun ec2TagFilters(ec2TagFilters: IResolvable)
 
-    public fun ec2TagFilters(ec2TagFilters: List<Any>) {
-    }
+    public fun ec2TagFilters(ec2TagFilters: List<Any>)
 
-    public fun ec2TagSet(ec2TagSet: IResolvable) {
-    }
+    public fun ec2TagSet(ec2TagSet: IResolvable)
 
-    public fun ec2TagSet(ec2TagSet: EC2TagSetProperty) {
-    }
+    public fun ec2TagSet(ec2TagSet: EC2TagSetProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c9cb0f0ac28a72197332b33fb3086c02ca7060e3054dd113da761ba1cc806cf")
-    public fun ec2TagSet(ec2TagSet: EC2TagSetProperty.Builder.() -> Unit) {
-    }
+    public fun ec2TagSet(ec2TagSet: EC2TagSetProperty.Builder.() -> Unit)
 
-    public fun ecsServices(ecsServices: IResolvable) {
-    }
+    public fun ecsServices(ecsServices: IResolvable)
 
-    public fun ecsServices(ecsServices: List<Any>) {
-    }
+    public fun ecsServices(ecsServices: List<Any>)
 
-    public fun loadBalancerInfo(loadBalancerInfo: IResolvable) {
-    }
+    public fun loadBalancerInfo(loadBalancerInfo: IResolvable)
 
-    public fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty) {
-    }
+    public fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63ea21af9e88672f0b3f438512b6a6822f34dcad7b1d768041196d4793cb77c2")
-    public fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty.Builder.() -> Unit) {
-    }
+    public fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty.Builder.() -> Unit)
 
-    public fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable) {
-    }
+    public fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable)
 
-    public fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>) {
-    }
+    public fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>)
 
-    public fun onPremisesTagSet(onPremisesTagSet: IResolvable) {
-    }
+    public fun onPremisesTagSet(onPremisesTagSet: IResolvable)
 
-    public fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty) {
-    }
+    public fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46ec1715e6a5b2ceb83f042d6b64ce3eaa0be7b5d73543e2c05f1e81bfc056b1")
-    public fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty.Builder.() -> Unit) {
-    }
+    public fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty.Builder.() -> Unit)
 
-    public fun outdatedInstancesStrategy(outdatedInstancesStrategy: String) {
-    }
+    public fun outdatedInstancesStrategy(outdatedInstancesStrategy: String)
 
-    public fun serviceRoleArn(serviceRoleArn: String) {
-    }
+    public fun serviceRoleArn(serviceRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun terminationHookEnabled(terminationHookEnabled: Boolean) {
-    }
+    public fun terminationHookEnabled(terminationHookEnabled: Boolean)
 
-    public fun terminationHookEnabled(terminationHookEnabled: IResolvable) {
-    }
+    public fun terminationHookEnabled(terminationHookEnabled: IResolvable)
 
-    public fun triggerConfigurations(triggerConfigurations: IResolvable) {
-    }
+    public fun triggerConfigurations(triggerConfigurations: IResolvable)
 
-    public fun triggerConfigurations(triggerConfigurations: List<Any>) {
-    }
+    public fun triggerConfigurations(triggerConfigurations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -401,186 +359,182 @@ public open class CfnDeploymentGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.Builder =
         software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.Builder.create(scope, id)
 
-    public override fun alarmConfiguration(alarmConfiguration: IResolvable) {
+    override fun alarmConfiguration(alarmConfiguration: IResolvable) {
       cdkBuilder.alarmConfiguration(alarmConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty) {
+    override fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty) {
       cdkBuilder.alarmConfiguration(alarmConfiguration.let(AlarmConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aaabeeab4581656bbebb3208c6cdea0aae45a6bf07c78a71fb729a258f91c91a")
-    public override
+    override
         fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty.Builder.() -> Unit):
         Unit = alarmConfiguration(AlarmConfigurationProperty(alarmConfiguration))
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
+    override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
       cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty) {
       cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2ee94cf3cecb07799ec4e642605041d5dd6cb1590775b976fcad565e8926e7cf")
-    public override
+    override
         fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty.Builder.() -> Unit):
         Unit =
         autoRollbackConfiguration(AutoRollbackConfigurationProperty(autoRollbackConfiguration))
 
-    public override fun autoScalingGroups(autoScalingGroups: List<String>) {
+    override fun autoScalingGroups(autoScalingGroups: List<String>) {
       cdkBuilder.autoScalingGroups(autoScalingGroups)
     }
 
-    public override
-        fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable) {
+    override fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable) {
       cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty) {
       cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(BlueGreenDeploymentConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea1d137387c5573eb1a2270e14f836edf3840e9a2e2536a4ca881d1536cf4f6d")
-    public override
+    override
         fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty.Builder.() -> Unit):
         Unit =
         blueGreenDeploymentConfiguration(BlueGreenDeploymentConfigurationProperty(blueGreenDeploymentConfiguration))
 
-    public override fun deployment(deployment: IResolvable) {
+    override fun deployment(deployment: IResolvable) {
       cdkBuilder.deployment(deployment.let(IResolvable::unwrap))
     }
 
-    public override fun deployment(deployment: DeploymentProperty) {
+    override fun deployment(deployment: DeploymentProperty) {
       cdkBuilder.deployment(deployment.let(DeploymentProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ddc69a696c62199b4a8b77f2e5b7e40c6d9e85f2d1ad8574cbb5189ae0cd408d")
-    public override fun deployment(deployment: DeploymentProperty.Builder.() -> Unit): Unit =
+    override fun deployment(deployment: DeploymentProperty.Builder.() -> Unit): Unit =
         deployment(DeploymentProperty(deployment))
 
-    public override fun deploymentConfigName(deploymentConfigName: String) {
+    override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
-    public override fun deploymentStyle(deploymentStyle: IResolvable) {
+    override fun deploymentStyle(deploymentStyle: IResolvable) {
       cdkBuilder.deploymentStyle(deploymentStyle.let(IResolvable::unwrap))
     }
 
-    public override fun deploymentStyle(deploymentStyle: DeploymentStyleProperty) {
+    override fun deploymentStyle(deploymentStyle: DeploymentStyleProperty) {
       cdkBuilder.deploymentStyle(deploymentStyle.let(DeploymentStyleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82d29e4efa135c378ca780a21a52f1ba7ea5f1da54cdc238ff026427ece0c8c8")
-    public override
-        fun deploymentStyle(deploymentStyle: DeploymentStyleProperty.Builder.() -> Unit): Unit =
-        deploymentStyle(DeploymentStyleProperty(deploymentStyle))
+    override fun deploymentStyle(deploymentStyle: DeploymentStyleProperty.Builder.() -> Unit): Unit
+        = deploymentStyle(DeploymentStyleProperty(deploymentStyle))
 
-    public override fun ec2TagFilters(ec2TagFilters: IResolvable) {
+    override fun ec2TagFilters(ec2TagFilters: IResolvable) {
       cdkBuilder.ec2TagFilters(ec2TagFilters.let(IResolvable::unwrap))
     }
 
-    public override fun ec2TagFilters(ec2TagFilters: List<Any>) {
+    override fun ec2TagFilters(ec2TagFilters: List<Any>) {
       cdkBuilder.ec2TagFilters(ec2TagFilters)
     }
 
-    public override fun ec2TagSet(ec2TagSet: IResolvable) {
+    override fun ec2TagSet(ec2TagSet: IResolvable) {
       cdkBuilder.ec2TagSet(ec2TagSet.let(IResolvable::unwrap))
     }
 
-    public override fun ec2TagSet(ec2TagSet: EC2TagSetProperty) {
+    override fun ec2TagSet(ec2TagSet: EC2TagSetProperty) {
       cdkBuilder.ec2TagSet(ec2TagSet.let(EC2TagSetProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c9cb0f0ac28a72197332b33fb3086c02ca7060e3054dd113da761ba1cc806cf")
-    public override fun ec2TagSet(ec2TagSet: EC2TagSetProperty.Builder.() -> Unit): Unit =
+    override fun ec2TagSet(ec2TagSet: EC2TagSetProperty.Builder.() -> Unit): Unit =
         ec2TagSet(EC2TagSetProperty(ec2TagSet))
 
-    public override fun ecsServices(ecsServices: IResolvable) {
+    override fun ecsServices(ecsServices: IResolvable) {
       cdkBuilder.ecsServices(ecsServices.let(IResolvable::unwrap))
     }
 
-    public override fun ecsServices(ecsServices: List<Any>) {
+    override fun ecsServices(ecsServices: List<Any>) {
       cdkBuilder.ecsServices(ecsServices)
     }
 
-    public override fun loadBalancerInfo(loadBalancerInfo: IResolvable) {
+    override fun loadBalancerInfo(loadBalancerInfo: IResolvable) {
       cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(IResolvable::unwrap))
     }
 
-    public override fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty) {
+    override fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty) {
       cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(LoadBalancerInfoProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63ea21af9e88672f0b3f438512b6a6822f34dcad7b1d768041196d4793cb77c2")
-    public override
-        fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty.Builder.() -> Unit): Unit =
-        loadBalancerInfo(LoadBalancerInfoProperty(loadBalancerInfo))
+    override fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty.Builder.() -> Unit):
+        Unit = loadBalancerInfo(LoadBalancerInfoProperty(loadBalancerInfo))
 
-    public override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable) {
+    override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable) {
       cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.let(IResolvable::unwrap))
     }
 
-    public override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>) {
+    override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>) {
       cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters)
     }
 
-    public override fun onPremisesTagSet(onPremisesTagSet: IResolvable) {
+    override fun onPremisesTagSet(onPremisesTagSet: IResolvable) {
       cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(IResolvable::unwrap))
     }
 
-    public override fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty) {
+    override fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty) {
       cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(OnPremisesTagSetProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46ec1715e6a5b2ceb83f042d6b64ce3eaa0be7b5d73543e2c05f1e81bfc056b1")
-    public override
-        fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty.Builder.() -> Unit): Unit =
-        onPremisesTagSet(OnPremisesTagSetProperty(onPremisesTagSet))
+    override fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty.Builder.() -> Unit):
+        Unit = onPremisesTagSet(OnPremisesTagSetProperty(onPremisesTagSet))
 
-    public override fun outdatedInstancesStrategy(outdatedInstancesStrategy: String) {
+    override fun outdatedInstancesStrategy(outdatedInstancesStrategy: String) {
       cdkBuilder.outdatedInstancesStrategy(outdatedInstancesStrategy)
     }
 
-    public override fun serviceRoleArn(serviceRoleArn: String) {
+    override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun terminationHookEnabled(terminationHookEnabled: Boolean) {
+    override fun terminationHookEnabled(terminationHookEnabled: Boolean) {
       cdkBuilder.terminationHookEnabled(terminationHookEnabled)
     }
 
-    public override fun terminationHookEnabled(terminationHookEnabled: IResolvable) {
+    override fun terminationHookEnabled(terminationHookEnabled: IResolvable) {
       cdkBuilder.terminationHookEnabled(terminationHookEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun triggerConfigurations(triggerConfigurations: IResolvable) {
+    override fun triggerConfigurations(triggerConfigurations: IResolvable) {
       cdkBuilder.triggerConfigurations(triggerConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun triggerConfigurations(triggerConfigurations: List<Any>) {
+    override fun triggerConfigurations(triggerConfigurations: List<Any>) {
       cdkBuilder.triggerConfigurations(triggerConfigurations)
     }
 
@@ -617,30 +571,23 @@ public open class CfnDeploymentGroup internal constructor(
     public fun s3Location(): Any? = unwrap(this).getS3Location()
 
     public interface Builder {
-      public fun gitHubLocation(gitHubLocation: IResolvable) {
-      }
+      public fun gitHubLocation(gitHubLocation: IResolvable)
 
-      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty) {
-      }
+      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("295eb37669b09d2143e3b47e57f08cf96ceacbc38a9c4a6d7cd170c4e70caa75")
-      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit) {
-      }
+      public fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit)
 
-      public fun revisionType(revisionType: String) {
-      }
+      public fun revisionType(revisionType: String)
 
-      public fun s3Location(s3Location: IResolvable) {
-      }
+      public fun s3Location(s3Location: IResolvable)
 
-      public fun s3Location(s3Location: S3LocationProperty) {
-      }
+      public fun s3Location(s3Location: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f52dea54f74f2c9aac70e89971d068f11ce7ec4828568e99b1bc940266412956")
-      public fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -649,34 +596,34 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty.builder()
 
-      public override fun gitHubLocation(gitHubLocation: IResolvable) {
+      override fun gitHubLocation(gitHubLocation: IResolvable) {
         cdkBuilder.gitHubLocation(gitHubLocation.let(IResolvable::unwrap))
       }
 
-      public override fun gitHubLocation(gitHubLocation: GitHubLocationProperty) {
+      override fun gitHubLocation(gitHubLocation: GitHubLocationProperty) {
         cdkBuilder.gitHubLocation(gitHubLocation.let(GitHubLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("295eb37669b09d2143e3b47e57f08cf96ceacbc38a9c4a6d7cd170c4e70caa75")
-      public override fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit):
-          Unit = gitHubLocation(GitHubLocationProperty(gitHubLocation))
+      override fun gitHubLocation(gitHubLocation: GitHubLocationProperty.Builder.() -> Unit): Unit =
+          gitHubLocation(GitHubLocationProperty(gitHubLocation))
 
-      public override fun revisionType(revisionType: String) {
+      override fun revisionType(revisionType: String) {
         cdkBuilder.revisionType(revisionType)
       }
 
-      public override fun s3Location(s3Location: IResolvable) {
+      override fun s3Location(s3Location: IResolvable) {
         cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
       }
 
-      public override fun s3Location(s3Location: S3LocationProperty) {
+      override fun s3Location(s3Location: S3LocationProperty) {
         cdkBuilder.s3Location(s3Location.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f52dea54f74f2c9aac70e89971d068f11ce7ec4828568e99b1bc940266412956")
-      public override fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+      override fun s3Location(s3Location: S3LocationProperty.Builder.() -> Unit): Unit =
           s3Location(S3LocationProperty(s3Location))
 
       public fun build():
@@ -688,11 +635,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty,
     ) : RevisionLocationProperty {
-      public override fun gitHubLocation(): Any? = unwrap(this).getGitHubLocation()
+      override fun gitHubLocation(): Any? = unwrap(this).getGitHubLocation()
 
-      public override fun revisionType(): String? = unwrap(this).getRevisionType()
+      override fun revisionType(): String? = unwrap(this).getRevisionType()
 
-      public override fun s3Location(): Any? = unwrap(this).getS3Location()
+      override fun s3Location(): Any? = unwrap(this).getS3Location()
     }
 
     public companion object {
@@ -721,14 +668,11 @@ public open class CfnDeploymentGroup internal constructor(
     public fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun events(events: List<String>) {
-      }
+      public fun events(events: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -737,15 +681,15 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun events(events: List<String>) {
+      override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
 
@@ -758,9 +702,9 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty,
     ) : AutoRollbackConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
     }
 
     public companion object {
@@ -790,11 +734,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun deploymentType(): String? = unwrap(this).getDeploymentType()
 
     public interface Builder {
-      public fun deploymentOption(deploymentOption: String) {
-      }
+      public fun deploymentOption(deploymentOption: String)
 
-      public fun deploymentType(deploymentType: String) {
-      }
+      public fun deploymentType(deploymentType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -803,11 +745,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty.builder()
 
-      public override fun deploymentOption(deploymentOption: String) {
+      override fun deploymentOption(deploymentOption: String) {
         cdkBuilder.deploymentOption(deploymentOption)
       }
 
-      public override fun deploymentType(deploymentType: String) {
+      override fun deploymentType(deploymentType: String) {
         cdkBuilder.deploymentType(deploymentType)
       }
 
@@ -820,9 +762,9 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty,
     ) : DeploymentStyleProperty {
-      public override fun deploymentOption(): String? = unwrap(this).getDeploymentOption()
+      override fun deploymentOption(): String? = unwrap(this).getDeploymentOption()
 
-      public override fun deploymentType(): String? = unwrap(this).getDeploymentType()
+      override fun deploymentType(): String? = unwrap(this).getDeploymentType()
     }
 
     public companion object {
@@ -853,23 +795,17 @@ public open class CfnDeploymentGroup internal constructor(
     public fun targetGroupPairInfoList(): Any? = unwrap(this).getTargetGroupPairInfoList()
 
     public interface Builder {
-      public fun elbInfoList(elbInfoList: IResolvable) {
-      }
+      public fun elbInfoList(elbInfoList: IResolvable)
 
-      public fun elbInfoList(elbInfoList: List<Any>) {
-      }
+      public fun elbInfoList(elbInfoList: List<Any>)
 
-      public fun targetGroupInfoList(targetGroupInfoList: IResolvable) {
-      }
+      public fun targetGroupInfoList(targetGroupInfoList: IResolvable)
 
-      public fun targetGroupInfoList(targetGroupInfoList: List<Any>) {
-      }
+      public fun targetGroupInfoList(targetGroupInfoList: List<Any>)
 
-      public fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable) {
-      }
+      public fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable)
 
-      public fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>) {
-      }
+      public fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -878,27 +814,27 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty.builder()
 
-      public override fun elbInfoList(elbInfoList: IResolvable) {
+      override fun elbInfoList(elbInfoList: IResolvable) {
         cdkBuilder.elbInfoList(elbInfoList.let(IResolvable::unwrap))
       }
 
-      public override fun elbInfoList(elbInfoList: List<Any>) {
+      override fun elbInfoList(elbInfoList: List<Any>) {
         cdkBuilder.elbInfoList(elbInfoList)
       }
 
-      public override fun targetGroupInfoList(targetGroupInfoList: IResolvable) {
+      override fun targetGroupInfoList(targetGroupInfoList: IResolvable) {
         cdkBuilder.targetGroupInfoList(targetGroupInfoList.let(IResolvable::unwrap))
       }
 
-      public override fun targetGroupInfoList(targetGroupInfoList: List<Any>) {
+      override fun targetGroupInfoList(targetGroupInfoList: List<Any>) {
         cdkBuilder.targetGroupInfoList(targetGroupInfoList)
       }
 
-      public override fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable) {
+      override fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable) {
         cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList.let(IResolvable::unwrap))
       }
 
-      public override fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>) {
+      override fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>) {
         cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList)
       }
 
@@ -911,12 +847,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty,
     ) : LoadBalancerInfoProperty {
-      public override fun elbInfoList(): Any? = unwrap(this).getElbInfoList()
+      override fun elbInfoList(): Any? = unwrap(this).getElbInfoList()
 
-      public override fun targetGroupInfoList(): Any? = unwrap(this).getTargetGroupInfoList()
+      override fun targetGroupInfoList(): Any? = unwrap(this).getTargetGroupInfoList()
 
-      public override fun targetGroupPairInfoList(): Any? =
-          unwrap(this).getTargetGroupPairInfoList()
+      override fun targetGroupPairInfoList(): Any? = unwrap(this).getTargetGroupPairInfoList()
     }
 
     public companion object {
@@ -948,25 +883,19 @@ public open class CfnDeploymentGroup internal constructor(
     public fun revision(): Any
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean) {
-      }
+      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean)
 
-      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable) {
-      }
+      public fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable)
 
-      public fun revision(revision: IResolvable) {
-      }
+      public fun revision(revision: IResolvable)
 
-      public fun revision(revision: RevisionLocationProperty) {
-      }
+      public fun revision(revision: RevisionLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("42d0c4385c21c785d3bb3c83d15d69dd0221a2a61b2cbfbf3fe8ff4afe3c4eaa")
-      public fun revision(revision: RevisionLocationProperty.Builder.() -> Unit) {
-      }
+      public fun revision(revision: RevisionLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -974,30 +903,29 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean) {
+      override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: Boolean) {
         cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures)
       }
 
-      public override
-          fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable) {
+      override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable) {
         cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures.let(IResolvable::unwrap))
       }
 
-      public override fun revision(revision: IResolvable) {
+      override fun revision(revision: IResolvable) {
         cdkBuilder.revision(revision.let(IResolvable::unwrap))
       }
 
-      public override fun revision(revision: RevisionLocationProperty) {
+      override fun revision(revision: RevisionLocationProperty) {
         cdkBuilder.revision(revision.let(RevisionLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("42d0c4385c21c785d3bb3c83d15d69dd0221a2a61b2cbfbf3fe8ff4afe3c4eaa")
-      public override fun revision(revision: RevisionLocationProperty.Builder.() -> Unit): Unit =
+      override fun revision(revision: RevisionLocationProperty.Builder.() -> Unit): Unit =
           revision(RevisionLocationProperty(revision))
 
       public fun build():
@@ -1009,12 +937,12 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty,
     ) : DeploymentProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun ignoreApplicationStopFailures(): Any? =
+      override fun ignoreApplicationStopFailures(): Any? =
           unwrap(this).getIgnoreApplicationStopFailures()
 
-      public override fun revision(): Any = unwrap(this).getRevision()
+      override fun revision(): Any = unwrap(this).getRevision()
     }
 
     public companion object {
@@ -1043,11 +971,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
 
     public interface Builder {
-      public fun actionOnTimeout(actionOnTimeout: String) {
-      }
+      public fun actionOnTimeout(actionOnTimeout: String)
 
-      public fun waitTimeInMinutes(waitTimeInMinutes: Number) {
-      }
+      public fun waitTimeInMinutes(waitTimeInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1056,11 +982,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty.builder()
 
-      public override fun actionOnTimeout(actionOnTimeout: String) {
+      override fun actionOnTimeout(actionOnTimeout: String) {
         cdkBuilder.actionOnTimeout(actionOnTimeout)
       }
 
-      public override fun waitTimeInMinutes(waitTimeInMinutes: Number) {
+      override fun waitTimeInMinutes(waitTimeInMinutes: Number) {
         cdkBuilder.waitTimeInMinutes(waitTimeInMinutes)
       }
 
@@ -1073,9 +999,9 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentReadyOptionProperty,
     ) : DeploymentReadyOptionProperty {
-      public override fun actionOnTimeout(): String? = unwrap(this).getActionOnTimeout()
+      override fun actionOnTimeout(): String? = unwrap(this).getActionOnTimeout()
 
-      public override fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
+      override fun waitTimeInMinutes(): Number? = unwrap(this).getWaitTimeInMinutes()
     }
 
     public companion object {
@@ -1107,44 +1033,35 @@ public open class CfnDeploymentGroup internal constructor(
         unwrap(this).getTerminateBlueInstancesOnDeploymentSuccess()
 
     public interface Builder {
-      public fun deploymentReadyOption(deploymentReadyOption: IResolvable) {
-      }
+      public fun deploymentReadyOption(deploymentReadyOption: IResolvable)
 
-      public fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty) {
-      }
+      public fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94fd38533a579b18b2932fd6cd2473c7f0f5503d4af57771ec94b7e3eb523df9")
       public
-          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit) {
-      }
+          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit)
 
-      public fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable) {
-      }
+      public fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable)
 
       public
-          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty) {
-      }
+          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aa08960f311ab9873f554622000e02a9e86129169233ab7e11b3d1b3dd25f300")
       public
-          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit) {
-      }
+          fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit)
 
       public
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable) {
-      }
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable)
 
       public
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty) {
-      }
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d837d5a1865736ccd468047f8eae8902590024efc7b5ae8866c2d4a91ddae40a")
       public
-          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit) {
-      }
+          fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1153,50 +1070,49 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.builder()
 
-      public override fun deploymentReadyOption(deploymentReadyOption: IResolvable) {
+      override fun deploymentReadyOption(deploymentReadyOption: IResolvable) {
         cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(IResolvable::unwrap))
       }
 
-      public override
-          fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty) {
+      override fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty) {
         cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(DeploymentReadyOptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94fd38533a579b18b2932fd6cd2473c7f0f5503d4af57771ec94b7e3eb523df9")
-      public override
+      override
           fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty.Builder.() -> Unit):
           Unit = deploymentReadyOption(DeploymentReadyOptionProperty(deploymentReadyOption))
 
-      public override fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable) {
+      override fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable) {
         cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty) {
         cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(GreenFleetProvisioningOptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aa08960f311ab9873f554622000e02a9e86129169233ab7e11b3d1b3dd25f300")
-      public override
+      override
           fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty.Builder.() -> Unit):
           Unit =
           greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty(greenFleetProvisioningOption))
 
-      public override
+      override
           fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable) {
         cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty) {
         cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(BlueInstanceTerminationOptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d837d5a1865736ccd468047f8eae8902590024efc7b5ae8866c2d4a91ddae40a")
-      public override
+      override
           fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty.Builder.() -> Unit):
           Unit =
           terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty(terminateBlueInstancesOnDeploymentSuccess))
@@ -1210,12 +1126,12 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty,
     ) : BlueGreenDeploymentConfigurationProperty {
-      public override fun deploymentReadyOption(): Any? = unwrap(this).getDeploymentReadyOption()
+      override fun deploymentReadyOption(): Any? = unwrap(this).getDeploymentReadyOption()
 
-      public override fun greenFleetProvisioningOption(): Any? =
+      override fun greenFleetProvisioningOption(): Any? =
           unwrap(this).getGreenFleetProvisioningOption()
 
-      public override fun terminateBlueInstancesOnDeploymentSuccess(): Any? =
+      override fun terminateBlueInstancesOnDeploymentSuccess(): Any? =
           unwrap(this).getTerminateBlueInstancesOnDeploymentSuccess()
     }
 
@@ -1248,23 +1164,17 @@ public open class CfnDeploymentGroup internal constructor(
     public fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
 
     public interface Builder {
-      public fun alarms(alarms: IResolvable) {
-      }
+      public fun alarms(alarms: IResolvable)
 
-      public fun alarms(alarms: List<Any>) {
-      }
+      public fun alarms(alarms: List<Any>)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean) {
-      }
+      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean)
 
-      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable) {
-      }
+      public fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1273,27 +1183,27 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty.builder()
 
-      public override fun alarms(alarms: IResolvable) {
+      override fun alarms(alarms: IResolvable) {
         cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
       }
 
-      public override fun alarms(alarms: List<Any>) {
+      override fun alarms(alarms: List<Any>) {
         cdkBuilder.alarms(alarms)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean) {
+      override fun ignorePollAlarmFailure(ignorePollAlarmFailure: Boolean) {
         cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure)
       }
 
-      public override fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable) {
+      override fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable) {
         cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure.let(IResolvable::unwrap))
       }
 
@@ -1306,11 +1216,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty,
     ) : AlarmConfigurationProperty {
-      public override fun alarms(): Any? = unwrap(this).getAlarms()
+      override fun alarms(): Any? = unwrap(this).getAlarms()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
+      override fun ignorePollAlarmFailure(): Any? = unwrap(this).getIgnorePollAlarmFailure()
     }
 
     public companion object {
@@ -1337,8 +1247,7 @@ public open class CfnDeploymentGroup internal constructor(
     public fun action(): String? = unwrap(this).getAction()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1347,7 +1256,7 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
@@ -1360,7 +1269,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GreenFleetProvisioningOptionProperty,
     ) : GreenFleetProvisioningOptionProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
     }
 
     public companion object {
@@ -1388,8 +1297,7 @@ public open class CfnDeploymentGroup internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1398,7 +1306,7 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1411,7 +1319,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty,
     ) : TargetGroupInfoProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -1440,11 +1348,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun serviceName(): String
 
     public interface Builder {
-      public fun clusterName(clusterName: String) {
-      }
+      public fun clusterName(clusterName: String)
 
-      public fun serviceName(serviceName: String) {
-      }
+      public fun serviceName(serviceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1452,11 +1358,11 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty.builder()
 
-      public override fun clusterName(clusterName: String) {
+      override fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
       }
 
-      public override fun serviceName(serviceName: String) {
+      override fun serviceName(serviceName: String) {
         cdkBuilder.serviceName(serviceName)
       }
 
@@ -1469,9 +1375,9 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ECSServiceProperty,
     ) : ECSServiceProperty {
-      public override fun clusterName(): String = unwrap(this).getClusterName()
+      override fun clusterName(): String = unwrap(this).getClusterName()
 
-      public override fun serviceName(): String = unwrap(this).getServiceName()
+      override fun serviceName(): String = unwrap(this).getServiceName()
     }
 
     public companion object {
@@ -1498,11 +1404,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun onPremisesTagSetList(): Any? = unwrap(this).getOnPremisesTagSetList()
 
     public interface Builder {
-      public fun onPremisesTagSetList(onPremisesTagSetList: IResolvable) {
-      }
+      public fun onPremisesTagSetList(onPremisesTagSetList: IResolvable)
 
-      public fun onPremisesTagSetList(onPremisesTagSetList: List<Any>) {
-      }
+      public fun onPremisesTagSetList(onPremisesTagSetList: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1511,11 +1415,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty.builder()
 
-      public override fun onPremisesTagSetList(onPremisesTagSetList: IResolvable) {
+      override fun onPremisesTagSetList(onPremisesTagSetList: IResolvable) {
         cdkBuilder.onPremisesTagSetList(onPremisesTagSetList.let(IResolvable::unwrap))
       }
 
-      public override fun onPremisesTagSetList(onPremisesTagSetList: List<Any>) {
+      override fun onPremisesTagSetList(onPremisesTagSetList: List<Any>) {
         cdkBuilder.onPremisesTagSetList(onPremisesTagSetList)
       }
 
@@ -1528,7 +1432,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty,
     ) : OnPremisesTagSetProperty {
-      public override fun onPremisesTagSetList(): Any? = unwrap(this).getOnPremisesTagSetList()
+      override fun onPremisesTagSetList(): Any? = unwrap(this).getOnPremisesTagSetList()
     }
 
     public companion object {
@@ -1555,8 +1459,7 @@ public open class CfnDeploymentGroup internal constructor(
     public fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?: emptyList()
 
     public interface Builder {
-      public fun listenerArns(listenerArns: List<String>) {
-      }
+      public fun listenerArns(listenerArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1565,7 +1468,7 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty.builder()
 
-      public override fun listenerArns(listenerArns: List<String>) {
+      override fun listenerArns(listenerArns: List<String>) {
         cdkBuilder.listenerArns(listenerArns)
       }
 
@@ -1578,8 +1481,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty,
     ) : TrafficRouteProperty {
-      public override fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?:
-          emptyList()
+      override fun listenerArns(): List<String> = unwrap(this).getListenerArns() ?: emptyList()
     }
 
     public companion object {
@@ -1608,11 +1510,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun repository(): String
 
     public interface Builder {
-      public fun commitId(commitId: String) {
-      }
+      public fun commitId(commitId: String)
 
-      public fun repository(repository: String) {
-      }
+      public fun repository(repository: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1621,11 +1521,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty.builder()
 
-      public override fun commitId(commitId: String) {
+      override fun commitId(commitId: String) {
         cdkBuilder.commitId(commitId)
       }
 
-      public override fun repository(repository: String) {
+      override fun repository(repository: String) {
         cdkBuilder.repository(repository)
       }
 
@@ -1638,9 +1538,9 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty,
     ) : GitHubLocationProperty {
-      public override fun commitId(): String = unwrap(this).getCommitId()
+      override fun commitId(): String = unwrap(this).getCommitId()
 
-      public override fun repository(): String = unwrap(this).getRepository()
+      override fun repository(): String = unwrap(this).getRepository()
     }
 
     public companion object {
@@ -1671,14 +1571,11 @@ public open class CfnDeploymentGroup internal constructor(
     public fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
 
     public interface Builder {
-      public fun triggerEvents(triggerEvents: List<String>) {
-      }
+      public fun triggerEvents(triggerEvents: List<String>)
 
-      public fun triggerName(triggerName: String) {
-      }
+      public fun triggerName(triggerName: String)
 
-      public fun triggerTargetArn(triggerTargetArn: String) {
-      }
+      public fun triggerTargetArn(triggerTargetArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1687,15 +1584,15 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty.builder()
 
-      public override fun triggerEvents(triggerEvents: List<String>) {
+      override fun triggerEvents(triggerEvents: List<String>) {
         cdkBuilder.triggerEvents(triggerEvents)
       }
 
-      public override fun triggerName(triggerName: String) {
+      override fun triggerName(triggerName: String) {
         cdkBuilder.triggerName(triggerName)
       }
 
-      public override fun triggerTargetArn(triggerTargetArn: String) {
+      override fun triggerTargetArn(triggerTargetArn: String) {
         cdkBuilder.triggerTargetArn(triggerTargetArn)
       }
 
@@ -1708,12 +1605,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty,
     ) : TriggerConfigProperty {
-      public override fun triggerEvents(): List<String> = unwrap(this).getTriggerEvents() ?:
-          emptyList()
+      override fun triggerEvents(): List<String> = unwrap(this).getTriggerEvents() ?: emptyList()
 
-      public override fun triggerName(): String? = unwrap(this).getTriggerName()
+      override fun triggerName(): String? = unwrap(this).getTriggerName()
 
-      public override fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
+      override fun triggerTargetArn(): String? = unwrap(this).getTriggerTargetArn()
     }
 
     public companion object {
@@ -1744,33 +1640,25 @@ public open class CfnDeploymentGroup internal constructor(
     public fun testTrafficRoute(): Any? = unwrap(this).getTestTrafficRoute()
 
     public interface Builder {
-      public fun prodTrafficRoute(prodTrafficRoute: IResolvable) {
-      }
+      public fun prodTrafficRoute(prodTrafficRoute: IResolvable)
 
-      public fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty) {
-      }
+      public fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d860ab0ec4001f9a04db6a01e0514e8d2ef1c4757237aa30465847c65eb9c71")
-      public fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty.Builder.() -> Unit) {
-      }
+      public fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty.Builder.() -> Unit)
 
-      public fun targetGroups(targetGroups: IResolvable) {
-      }
+      public fun targetGroups(targetGroups: IResolvable)
 
-      public fun targetGroups(targetGroups: List<Any>) {
-      }
+      public fun targetGroups(targetGroups: List<Any>)
 
-      public fun testTrafficRoute(testTrafficRoute: IResolvable) {
-      }
+      public fun testTrafficRoute(testTrafficRoute: IResolvable)
 
-      public fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty) {
-      }
+      public fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e60564982dd88f61bb8d6311e4be46b6ff8dae6389c71852a67066fa8840ed05")
-      public fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty.Builder.() -> Unit) {
-      }
+      public fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1779,41 +1667,39 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty.builder()
 
-      public override fun prodTrafficRoute(prodTrafficRoute: IResolvable) {
+      override fun prodTrafficRoute(prodTrafficRoute: IResolvable) {
         cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(IResolvable::unwrap))
       }
 
-      public override fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty) {
+      override fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty) {
         cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(TrafficRouteProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d860ab0ec4001f9a04db6a01e0514e8d2ef1c4757237aa30465847c65eb9c71")
-      public override
-          fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty.Builder.() -> Unit): Unit =
-          prodTrafficRoute(TrafficRouteProperty(prodTrafficRoute))
+      override fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty.Builder.() -> Unit): Unit
+          = prodTrafficRoute(TrafficRouteProperty(prodTrafficRoute))
 
-      public override fun targetGroups(targetGroups: IResolvable) {
+      override fun targetGroups(targetGroups: IResolvable) {
         cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
       }
 
-      public override fun targetGroups(targetGroups: List<Any>) {
+      override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
 
-      public override fun testTrafficRoute(testTrafficRoute: IResolvable) {
+      override fun testTrafficRoute(testTrafficRoute: IResolvable) {
         cdkBuilder.testTrafficRoute(testTrafficRoute.let(IResolvable::unwrap))
       }
 
-      public override fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty) {
+      override fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty) {
         cdkBuilder.testTrafficRoute(testTrafficRoute.let(TrafficRouteProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e60564982dd88f61bb8d6311e4be46b6ff8dae6389c71852a67066fa8840ed05")
-      public override
-          fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty.Builder.() -> Unit): Unit =
-          testTrafficRoute(TrafficRouteProperty(testTrafficRoute))
+      override fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty.Builder.() -> Unit): Unit
+          = testTrafficRoute(TrafficRouteProperty(testTrafficRoute))
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty
@@ -1824,11 +1710,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupPairInfoProperty,
     ) : TargetGroupPairInfoProperty {
-      public override fun prodTrafficRoute(): Any? = unwrap(this).getProdTrafficRoute()
+      override fun prodTrafficRoute(): Any? = unwrap(this).getProdTrafficRoute()
 
-      public override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
+      override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
 
-      public override fun testTrafficRoute(): Any? = unwrap(this).getTestTrafficRoute()
+      override fun testTrafficRoute(): Any? = unwrap(this).getTestTrafficRoute()
     }
 
     public companion object {
@@ -1858,11 +1744,9 @@ public open class CfnDeploymentGroup internal constructor(
         unwrap(this).getTerminationWaitTimeInMinutes()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
-      }
+      public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1871,11 +1755,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
+      override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
         cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
       }
 
@@ -1888,9 +1772,9 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.BlueInstanceTerminationOptionProperty,
     ) : BlueInstanceTerminationOptionProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
 
-      public override fun terminationWaitTimeInMinutes(): Number? =
+      override fun terminationWaitTimeInMinutes(): Number? =
           unwrap(this).getTerminationWaitTimeInMinutes()
     }
 
@@ -1919,8 +1803,7 @@ public open class CfnDeploymentGroup internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1928,7 +1811,7 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1941,7 +1824,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty,
     ) : AlarmProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -1976,20 +1859,15 @@ public open class CfnDeploymentGroup internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun bundleType(bundleType: String) {
-      }
+      public fun bundleType(bundleType: String)
 
-      public fun eTag(eTag: String) {
-      }
+      public fun eTag(eTag: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1997,23 +1875,23 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun bundleType(bundleType: String) {
+      override fun bundleType(bundleType: String) {
         cdkBuilder.bundleType(bundleType)
       }
 
-      public override fun eTag(eTag: String) {
+      override fun eTag(eTag: String) {
         cdkBuilder.eTag(eTag)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -2026,15 +1904,15 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun bundleType(): String? = unwrap(this).getBundleType()
+      override fun bundleType(): String? = unwrap(this).getBundleType()
 
-      public override fun eTag(): String? = unwrap(this).getETag()
+      override fun eTag(): String? = unwrap(this).getETag()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -2061,11 +1939,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
 
     public interface Builder {
-      public fun ec2TagSetList(ec2TagSetList: IResolvable) {
-      }
+      public fun ec2TagSetList(ec2TagSetList: IResolvable)
 
-      public fun ec2TagSetList(ec2TagSetList: List<Any>) {
-      }
+      public fun ec2TagSetList(ec2TagSetList: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2073,11 +1949,11 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty.builder()
 
-      public override fun ec2TagSetList(ec2TagSetList: IResolvable) {
+      override fun ec2TagSetList(ec2TagSetList: IResolvable) {
         cdkBuilder.ec2TagSetList(ec2TagSetList.let(IResolvable::unwrap))
       }
 
-      public override fun ec2TagSetList(ec2TagSetList: List<Any>) {
+      override fun ec2TagSetList(ec2TagSetList: List<Any>) {
         cdkBuilder.ec2TagSetList(ec2TagSetList)
       }
 
@@ -2090,7 +1966,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty,
     ) : EC2TagSetProperty {
-      public override fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
+      override fun ec2TagSetList(): Any? = unwrap(this).getEc2TagSetList()
     }
 
     public companion object {
@@ -2121,14 +1997,11 @@ public open class CfnDeploymentGroup internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2137,15 +2010,15 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -2158,11 +2031,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty,
     ) : EC2TagFilterProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -2193,14 +2066,11 @@ public open class CfnDeploymentGroup internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2208,15 +2078,15 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -2229,11 +2099,11 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty,
     ) : TagFilterProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -2260,8 +2130,7 @@ public open class CfnDeploymentGroup internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2269,7 +2138,7 @@ public open class CfnDeploymentGroup internal constructor(
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty.Builder =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -2282,7 +2151,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty,
     ) : ELBInfoProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -2309,11 +2178,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
 
     public interface Builder {
-      public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
-      }
+      public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable)
 
-      public fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
-      }
+      public fun onPremisesTagGroup(onPremisesTagGroup: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2322,11 +2189,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.builder()
 
-      public override fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
+      override fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
         cdkBuilder.onPremisesTagGroup(onPremisesTagGroup.let(IResolvable::unwrap))
       }
 
-      public override fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
+      override fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
         cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
       }
 
@@ -2339,7 +2206,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty,
     ) : OnPremisesTagSetListObjectProperty {
-      public override fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
+      override fun onPremisesTagGroup(): Any? = unwrap(this).getOnPremisesTagGroup()
     }
 
     public companion object {
@@ -2367,11 +2234,9 @@ public open class CfnDeploymentGroup internal constructor(
     public fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
 
     public interface Builder {
-      public fun ec2TagGroup(ec2TagGroup: IResolvable) {
-      }
+      public fun ec2TagGroup(ec2TagGroup: IResolvable)
 
-      public fun ec2TagGroup(ec2TagGroup: List<Any>) {
-      }
+      public fun ec2TagGroup(ec2TagGroup: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2380,11 +2245,11 @@ public open class CfnDeploymentGroup internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty.builder()
 
-      public override fun ec2TagGroup(ec2TagGroup: IResolvable) {
+      override fun ec2TagGroup(ec2TagGroup: IResolvable) {
         cdkBuilder.ec2TagGroup(ec2TagGroup.let(IResolvable::unwrap))
       }
 
-      public override fun ec2TagGroup(ec2TagGroup: List<Any>) {
+      override fun ec2TagGroup(ec2TagGroup: List<Any>) {
         cdkBuilder.ec2TagGroup(ec2TagGroup)
       }
 
@@ -2397,7 +2262,7 @@ public open class CfnDeploymentGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty,
     ) : EC2TagSetListObjectProperty {
-      public override fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
+      override fun ec2TagGroup(): Any? = unwrap(this).getEc2TagGroup()
     }
 
     public companion object {

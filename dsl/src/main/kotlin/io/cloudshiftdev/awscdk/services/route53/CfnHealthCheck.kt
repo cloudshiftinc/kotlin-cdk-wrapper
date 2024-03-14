@@ -50,22 +50,17 @@ public open class CfnHealthCheck internal constructor(
   }
 
   public interface Builder {
-    public fun healthCheckConfig(healthCheckConfig: IResolvable) {
-    }
+    public fun healthCheckConfig(healthCheckConfig: IResolvable)
 
-    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-    }
+    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10eb564e26de9025530513c4b2ab1399372b7f9d1c8936dcaa5908f181227922")
-    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit) {
-    }
+    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit)
 
-    public fun healthCheckTags(healthCheckTags: IResolvable) {
-    }
+    public fun healthCheckTags(healthCheckTags: IResolvable)
 
-    public fun healthCheckTags(healthCheckTags: List<Any>) {
-    }
+    public fun healthCheckTags(healthCheckTags: List<Any>)
   }
 
   private class BuilderImpl(
@@ -75,25 +70,24 @@ public open class CfnHealthCheck internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnHealthCheck.Builder =
         software.amazon.awscdk.services.route53.CfnHealthCheck.Builder.create(scope, id)
 
-    public override fun healthCheckConfig(healthCheckConfig: IResolvable) {
+    override fun healthCheckConfig(healthCheckConfig: IResolvable) {
       cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
     }
 
-    public override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
+    override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
       cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10eb564e26de9025530513c4b2ab1399372b7f9d1c8936dcaa5908f181227922")
-    public override
-        fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit): Unit
-        = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
+    override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit):
+        Unit = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
 
-    public override fun healthCheckTags(healthCheckTags: IResolvable) {
+    override fun healthCheckTags(healthCheckTags: IResolvable) {
       cdkBuilder.healthCheckTags(healthCheckTags.let(IResolvable::unwrap))
     }
 
-    public override fun healthCheckTags(healthCheckTags: List<Any>) {
+    override fun healthCheckTags(healthCheckTags: List<Any>) {
       cdkBuilder.healthCheckTags(healthCheckTags)
     }
 
@@ -127,11 +121,9 @@ public open class CfnHealthCheck internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -139,11 +131,11 @@ public open class CfnHealthCheck internal constructor(
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -156,9 +148,9 @@ public open class CfnHealthCheck internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty,
     ) : HealthCheckTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -187,11 +179,9 @@ public open class CfnHealthCheck internal constructor(
     public fun region(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -199,11 +189,11 @@ public open class CfnHealthCheck internal constructor(
           software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -216,9 +206,9 @@ public open class CfnHealthCheck internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty,
     ) : AlarmIdentifierProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
     }
 
     public companion object {
@@ -279,73 +269,51 @@ public open class CfnHealthCheck internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun alarmIdentifier(alarmIdentifier: IResolvable) {
-      }
+      public fun alarmIdentifier(alarmIdentifier: IResolvable)
 
-      public fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty) {
-      }
+      public fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac412132c89e73ae908b1ecb7239f3b46dc7142b3ec016100beea46011eddae9")
-      public fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty.Builder.() -> Unit)
 
-      public fun childHealthChecks(childHealthChecks: List<String>) {
-      }
+      public fun childHealthChecks(childHealthChecks: List<String>)
 
-      public fun enableSni(enableSni: Boolean) {
-      }
+      public fun enableSni(enableSni: Boolean)
 
-      public fun enableSni(enableSni: IResolvable) {
-      }
+      public fun enableSni(enableSni: IResolvable)
 
-      public fun failureThreshold(failureThreshold: Number) {
-      }
+      public fun failureThreshold(failureThreshold: Number)
 
-      public fun fullyQualifiedDomainName(fullyQualifiedDomainName: String) {
-      }
+      public fun fullyQualifiedDomainName(fullyQualifiedDomainName: String)
 
-      public fun healthThreshold(healthThreshold: Number) {
-      }
+      public fun healthThreshold(healthThreshold: Number)
 
-      public fun insufficientDataHealthStatus(insufficientDataHealthStatus: String) {
-      }
+      public fun insufficientDataHealthStatus(insufficientDataHealthStatus: String)
 
-      public fun inverted(inverted: Boolean) {
-      }
+      public fun inverted(inverted: Boolean)
 
-      public fun inverted(inverted: IResolvable) {
-      }
+      public fun inverted(inverted: IResolvable)
 
-      public fun ipAddress(ipAddress: String) {
-      }
+      public fun ipAddress(ipAddress: String)
 
-      public fun measureLatency(measureLatency: Boolean) {
-      }
+      public fun measureLatency(measureLatency: Boolean)
 
-      public fun measureLatency(measureLatency: IResolvable) {
-      }
+      public fun measureLatency(measureLatency: IResolvable)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun regions(regions: List<String>) {
-      }
+      public fun regions(regions: List<String>)
 
-      public fun requestInterval(requestInterval: Number) {
-      }
+      public fun requestInterval(requestInterval: Number)
 
-      public fun resourcePath(resourcePath: String) {
-      }
+      public fun resourcePath(resourcePath: String)
 
-      public fun routingControlArn(routingControlArn: String) {
-      }
+      public fun routingControlArn(routingControlArn: String)
 
-      public fun searchString(searchString: String) {
-      }
+      public fun searchString(searchString: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -353,93 +321,92 @@ public open class CfnHealthCheck internal constructor(
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty.builder()
 
-      public override fun alarmIdentifier(alarmIdentifier: IResolvable) {
+      override fun alarmIdentifier(alarmIdentifier: IResolvable) {
         cdkBuilder.alarmIdentifier(alarmIdentifier.let(IResolvable::unwrap))
       }
 
-      public override fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty) {
+      override fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty) {
         cdkBuilder.alarmIdentifier(alarmIdentifier.let(AlarmIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac412132c89e73ae908b1ecb7239f3b46dc7142b3ec016100beea46011eddae9")
-      public override
-          fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty.Builder.() -> Unit): Unit =
-          alarmIdentifier(AlarmIdentifierProperty(alarmIdentifier))
+      override fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty.Builder.() -> Unit):
+          Unit = alarmIdentifier(AlarmIdentifierProperty(alarmIdentifier))
 
-      public override fun childHealthChecks(childHealthChecks: List<String>) {
+      override fun childHealthChecks(childHealthChecks: List<String>) {
         cdkBuilder.childHealthChecks(childHealthChecks)
       }
 
-      public override fun enableSni(enableSni: Boolean) {
+      override fun enableSni(enableSni: Boolean) {
         cdkBuilder.enableSni(enableSni)
       }
 
-      public override fun enableSni(enableSni: IResolvable) {
+      override fun enableSni(enableSni: IResolvable) {
         cdkBuilder.enableSni(enableSni.let(IResolvable::unwrap))
       }
 
-      public override fun failureThreshold(failureThreshold: Number) {
+      override fun failureThreshold(failureThreshold: Number) {
         cdkBuilder.failureThreshold(failureThreshold)
       }
 
-      public override fun fullyQualifiedDomainName(fullyQualifiedDomainName: String) {
+      override fun fullyQualifiedDomainName(fullyQualifiedDomainName: String) {
         cdkBuilder.fullyQualifiedDomainName(fullyQualifiedDomainName)
       }
 
-      public override fun healthThreshold(healthThreshold: Number) {
+      override fun healthThreshold(healthThreshold: Number) {
         cdkBuilder.healthThreshold(healthThreshold)
       }
 
-      public override fun insufficientDataHealthStatus(insufficientDataHealthStatus: String) {
+      override fun insufficientDataHealthStatus(insufficientDataHealthStatus: String) {
         cdkBuilder.insufficientDataHealthStatus(insufficientDataHealthStatus)
       }
 
-      public override fun inverted(inverted: Boolean) {
+      override fun inverted(inverted: Boolean) {
         cdkBuilder.inverted(inverted)
       }
 
-      public override fun inverted(inverted: IResolvable) {
+      override fun inverted(inverted: IResolvable) {
         cdkBuilder.inverted(inverted.let(IResolvable::unwrap))
       }
 
-      public override fun ipAddress(ipAddress: String) {
+      override fun ipAddress(ipAddress: String) {
         cdkBuilder.ipAddress(ipAddress)
       }
 
-      public override fun measureLatency(measureLatency: Boolean) {
+      override fun measureLatency(measureLatency: Boolean) {
         cdkBuilder.measureLatency(measureLatency)
       }
 
-      public override fun measureLatency(measureLatency: IResolvable) {
+      override fun measureLatency(measureLatency: IResolvable) {
         cdkBuilder.measureLatency(measureLatency.let(IResolvable::unwrap))
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun regions(regions: List<String>) {
+      override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
 
-      public override fun requestInterval(requestInterval: Number) {
+      override fun requestInterval(requestInterval: Number) {
         cdkBuilder.requestInterval(requestInterval)
       }
 
-      public override fun resourcePath(resourcePath: String) {
+      override fun resourcePath(resourcePath: String) {
         cdkBuilder.resourcePath(resourcePath)
       }
 
-      public override fun routingControlArn(routingControlArn: String) {
+      override fun routingControlArn(routingControlArn: String) {
         cdkBuilder.routingControlArn(routingControlArn)
       }
 
-      public override fun searchString(searchString: String) {
+      override fun searchString(searchString: String) {
         cdkBuilder.searchString(searchString)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -452,42 +419,41 @@ public open class CfnHealthCheck internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty,
     ) : HealthCheckConfigProperty {
-      public override fun alarmIdentifier(): Any? = unwrap(this).getAlarmIdentifier()
+      override fun alarmIdentifier(): Any? = unwrap(this).getAlarmIdentifier()
 
-      public override fun childHealthChecks(): List<String> = unwrap(this).getChildHealthChecks() ?:
+      override fun childHealthChecks(): List<String> = unwrap(this).getChildHealthChecks() ?:
           emptyList()
 
-      public override fun enableSni(): Any? = unwrap(this).getEnableSni()
+      override fun enableSni(): Any? = unwrap(this).getEnableSni()
 
-      public override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
 
-      public override fun fullyQualifiedDomainName(): String? =
-          unwrap(this).getFullyQualifiedDomainName()
+      override fun fullyQualifiedDomainName(): String? = unwrap(this).getFullyQualifiedDomainName()
 
-      public override fun healthThreshold(): Number? = unwrap(this).getHealthThreshold()
+      override fun healthThreshold(): Number? = unwrap(this).getHealthThreshold()
 
-      public override fun insufficientDataHealthStatus(): String? =
+      override fun insufficientDataHealthStatus(): String? =
           unwrap(this).getInsufficientDataHealthStatus()
 
-      public override fun inverted(): Any? = unwrap(this).getInverted()
+      override fun inverted(): Any? = unwrap(this).getInverted()
 
-      public override fun ipAddress(): String? = unwrap(this).getIpAddress()
+      override fun ipAddress(): String? = unwrap(this).getIpAddress()
 
-      public override fun measureLatency(): Any? = unwrap(this).getMeasureLatency()
+      override fun measureLatency(): Any? = unwrap(this).getMeasureLatency()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+      override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
 
-      public override fun requestInterval(): Number? = unwrap(this).getRequestInterval()
+      override fun requestInterval(): Number? = unwrap(this).getRequestInterval()
 
-      public override fun resourcePath(): String? = unwrap(this).getResourcePath()
+      override fun resourcePath(): String? = unwrap(this).getResourcePath()
 
-      public override fun routingControlArn(): String? = unwrap(this).getRoutingControlArn()
+      override fun routingControlArn(): String? = unwrap(this).getRoutingControlArn()
 
-      public override fun searchString(): String? = unwrap(this).getSearchString()
+      override fun searchString(): String? = unwrap(this).getSearchString()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

@@ -107,43 +107,31 @@ public open class CfnFleetMetric internal constructor(
   }
 
   public interface Builder {
-    public fun aggregationField(aggregationField: String) {
-    }
+    public fun aggregationField(aggregationField: String)
 
-    public fun aggregationType(aggregationType: IResolvable) {
-    }
+    public fun aggregationType(aggregationType: IResolvable)
 
-    public fun aggregationType(aggregationType: AggregationTypeProperty) {
-    }
+    public fun aggregationType(aggregationType: AggregationTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f51ec62b9adb29ec5d37216a170c5a16418a243c8980b64bc4f237fdf705d3b")
-    public fun aggregationType(aggregationType: AggregationTypeProperty.Builder.() -> Unit) {
-    }
+    public fun aggregationType(aggregationType: AggregationTypeProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun indexName(indexName: String) {
-    }
+    public fun indexName(indexName: String)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun period(period: Number) {
-    }
+    public fun period(period: Number)
 
-    public fun queryString(queryString: String) {
-    }
+    public fun queryString(queryString: String)
 
-    public fun queryVersion(queryVersion: String) {
-    }
+    public fun queryVersion(queryVersion: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun unit(unit: String) {
-    }
+    public fun unit(unit: String)
   }
 
   private class BuilderImpl(
@@ -153,53 +141,52 @@ public open class CfnFleetMetric internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnFleetMetric.Builder =
         software.amazon.awscdk.services.iot.CfnFleetMetric.Builder.create(scope, id)
 
-    public override fun aggregationField(aggregationField: String) {
+    override fun aggregationField(aggregationField: String) {
       cdkBuilder.aggregationField(aggregationField)
     }
 
-    public override fun aggregationType(aggregationType: IResolvable) {
+    override fun aggregationType(aggregationType: IResolvable) {
       cdkBuilder.aggregationType(aggregationType.let(IResolvable::unwrap))
     }
 
-    public override fun aggregationType(aggregationType: AggregationTypeProperty) {
+    override fun aggregationType(aggregationType: AggregationTypeProperty) {
       cdkBuilder.aggregationType(aggregationType.let(AggregationTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f51ec62b9adb29ec5d37216a170c5a16418a243c8980b64bc4f237fdf705d3b")
-    public override
-        fun aggregationType(aggregationType: AggregationTypeProperty.Builder.() -> Unit): Unit =
-        aggregationType(AggregationTypeProperty(aggregationType))
+    override fun aggregationType(aggregationType: AggregationTypeProperty.Builder.() -> Unit): Unit
+        = aggregationType(AggregationTypeProperty(aggregationType))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun indexName(indexName: String) {
+    override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun period(period: Number) {
+    override fun period(period: Number) {
       cdkBuilder.period(period)
     }
 
-    public override fun queryString(queryString: String) {
+    override fun queryString(queryString: String) {
       cdkBuilder.queryString(queryString)
     }
 
-    public override fun queryVersion(queryVersion: String) {
+    override fun queryVersion(queryVersion: String) {
       cdkBuilder.queryVersion(queryVersion)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun unit(unit: String) {
+    override fun unit(unit: String) {
       cdkBuilder.unit(unit)
     }
 
@@ -233,11 +220,9 @@ public open class CfnFleetMetric internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -245,11 +230,11 @@ public open class CfnFleetMetric internal constructor(
           software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty.Builder =
           software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -261,9 +246,9 @@ public open class CfnFleetMetric internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty,
     ) : AggregationTypeProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {

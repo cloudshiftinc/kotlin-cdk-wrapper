@@ -68,20 +68,15 @@ public open class CfnOutpostResolver internal constructor(
   }
 
   public interface Builder {
-    public fun instanceCount(instanceCount: Number) {
-    }
+    public fun instanceCount(instanceCount: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outpostArn(outpostArn: String) {
-    }
+    public fun outpostArn(outpostArn: String)
 
-    public fun preferredInstanceType(preferredInstanceType: String) {
-    }
+    public fun preferredInstanceType(preferredInstanceType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -92,23 +87,23 @@ public open class CfnOutpostResolver internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnOutpostResolver.Builder =
         software.amazon.awscdk.services.route53resolver.CfnOutpostResolver.Builder.create(scope, id)
 
-    public override fun instanceCount(instanceCount: Number) {
+    override fun instanceCount(instanceCount: Number) {
       cdkBuilder.instanceCount(instanceCount)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outpostArn(outpostArn: String) {
+    override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
 
-    public override fun preferredInstanceType(preferredInstanceType: String) {
+    override fun preferredInstanceType(preferredInstanceType: String) {
       cdkBuilder.preferredInstanceType(preferredInstanceType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

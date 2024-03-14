@@ -76,31 +76,23 @@ public open class CfnConnector internal constructor(
   }
 
   public interface Builder {
-    public fun accessRole(accessRole: String) {
-    }
+    public fun accessRole(accessRole: String)
 
-    public fun as2Config(as2Config: Any) {
-    }
+    public fun as2Config(as2Config: Any)
 
-    public fun loggingRole(loggingRole: String) {
-    }
+    public fun loggingRole(loggingRole: String)
 
-    public fun sftpConfig(sftpConfig: IResolvable) {
-    }
+    public fun sftpConfig(sftpConfig: IResolvable)
 
-    public fun sftpConfig(sftpConfig: SftpConfigProperty) {
-    }
+    public fun sftpConfig(sftpConfig: SftpConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("551491faf5309b95d20254db285f3de1430e0c6d356bcef2291e1b6349cbf9d5")
-    public fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun url(url: String) {
-    }
+    public fun url(url: String)
   }
 
   private class BuilderImpl(
@@ -110,36 +102,36 @@ public open class CfnConnector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnConnector.Builder =
         software.amazon.awscdk.services.transfer.CfnConnector.Builder.create(scope, id)
 
-    public override fun accessRole(accessRole: String) {
+    override fun accessRole(accessRole: String) {
       cdkBuilder.accessRole(accessRole)
     }
 
-    public override fun as2Config(as2Config: Any) {
+    override fun as2Config(as2Config: Any) {
       cdkBuilder.as2Config(as2Config)
     }
 
-    public override fun loggingRole(loggingRole: String) {
+    override fun loggingRole(loggingRole: String) {
       cdkBuilder.loggingRole(loggingRole)
     }
 
-    public override fun sftpConfig(sftpConfig: IResolvable) {
+    override fun sftpConfig(sftpConfig: IResolvable) {
       cdkBuilder.sftpConfig(sftpConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sftpConfig(sftpConfig: SftpConfigProperty) {
+    override fun sftpConfig(sftpConfig: SftpConfigProperty) {
       cdkBuilder.sftpConfig(sftpConfig.let(SftpConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("551491faf5309b95d20254db285f3de1430e0c6d356bcef2291e1b6349cbf9d5")
-    public override fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit): Unit =
+    override fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit): Unit =
         sftpConfig(SftpConfigProperty(sftpConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun url(url: String) {
+    override fun url(url: String) {
       cdkBuilder.url(url)
     }
 
@@ -173,11 +165,9 @@ public open class CfnConnector internal constructor(
     public fun userSecretId(): String? = unwrap(this).getUserSecretId()
 
     public interface Builder {
-      public fun trustedHostKeys(trustedHostKeys: List<String>) {
-      }
+      public fun trustedHostKeys(trustedHostKeys: List<String>)
 
-      public fun userSecretId(userSecretId: String) {
-      }
+      public fun userSecretId(userSecretId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -185,11 +175,11 @@ public open class CfnConnector internal constructor(
           software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.builder()
 
-      public override fun trustedHostKeys(trustedHostKeys: List<String>) {
+      override fun trustedHostKeys(trustedHostKeys: List<String>) {
         cdkBuilder.trustedHostKeys(trustedHostKeys)
       }
 
-      public override fun userSecretId(userSecretId: String) {
+      override fun userSecretId(userSecretId: String) {
         cdkBuilder.userSecretId(userSecretId)
       }
 
@@ -201,10 +191,10 @@ public open class CfnConnector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
     ) : SftpConfigProperty {
-      public override fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?:
+      override fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?:
           emptyList()
 
-      public override fun userSecretId(): String? = unwrap(this).getUserSecretId()
+      override fun userSecretId(): String? = unwrap(this).getUserSecretId()
     }
 
     public companion object {
@@ -247,32 +237,23 @@ public open class CfnConnector internal constructor(
     public fun signingAlgorithm(): String? = unwrap(this).getSigningAlgorithm()
 
     public interface Builder {
-      public fun basicAuthSecretId(basicAuthSecretId: String) {
-      }
+      public fun basicAuthSecretId(basicAuthSecretId: String)
 
-      public fun compression(compression: String) {
-      }
+      public fun compression(compression: String)
 
-      public fun encryptionAlgorithm(encryptionAlgorithm: String) {
-      }
+      public fun encryptionAlgorithm(encryptionAlgorithm: String)
 
-      public fun localProfileId(localProfileId: String) {
-      }
+      public fun localProfileId(localProfileId: String)
 
-      public fun mdnResponse(mdnResponse: String) {
-      }
+      public fun mdnResponse(mdnResponse: String)
 
-      public fun mdnSigningAlgorithm(mdnSigningAlgorithm: String) {
-      }
+      public fun mdnSigningAlgorithm(mdnSigningAlgorithm: String)
 
-      public fun messageSubject(messageSubject: String) {
-      }
+      public fun messageSubject(messageSubject: String)
 
-      public fun partnerProfileId(partnerProfileId: String) {
-      }
+      public fun partnerProfileId(partnerProfileId: String)
 
-      public fun signingAlgorithm(signingAlgorithm: String) {
-      }
+      public fun signingAlgorithm(signingAlgorithm: String)
     }
 
     private class BuilderImpl : Builder {
@@ -280,39 +261,39 @@ public open class CfnConnector internal constructor(
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty.builder()
 
-      public override fun basicAuthSecretId(basicAuthSecretId: String) {
+      override fun basicAuthSecretId(basicAuthSecretId: String) {
         cdkBuilder.basicAuthSecretId(basicAuthSecretId)
       }
 
-      public override fun compression(compression: String) {
+      override fun compression(compression: String) {
         cdkBuilder.compression(compression)
       }
 
-      public override fun encryptionAlgorithm(encryptionAlgorithm: String) {
+      override fun encryptionAlgorithm(encryptionAlgorithm: String) {
         cdkBuilder.encryptionAlgorithm(encryptionAlgorithm)
       }
 
-      public override fun localProfileId(localProfileId: String) {
+      override fun localProfileId(localProfileId: String) {
         cdkBuilder.localProfileId(localProfileId)
       }
 
-      public override fun mdnResponse(mdnResponse: String) {
+      override fun mdnResponse(mdnResponse: String) {
         cdkBuilder.mdnResponse(mdnResponse)
       }
 
-      public override fun mdnSigningAlgorithm(mdnSigningAlgorithm: String) {
+      override fun mdnSigningAlgorithm(mdnSigningAlgorithm: String) {
         cdkBuilder.mdnSigningAlgorithm(mdnSigningAlgorithm)
       }
 
-      public override fun messageSubject(messageSubject: String) {
+      override fun messageSubject(messageSubject: String) {
         cdkBuilder.messageSubject(messageSubject)
       }
 
-      public override fun partnerProfileId(partnerProfileId: String) {
+      override fun partnerProfileId(partnerProfileId: String) {
         cdkBuilder.partnerProfileId(partnerProfileId)
       }
 
-      public override fun signingAlgorithm(signingAlgorithm: String) {
+      override fun signingAlgorithm(signingAlgorithm: String) {
         cdkBuilder.signingAlgorithm(signingAlgorithm)
       }
 
@@ -324,23 +305,23 @@ public open class CfnConnector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
     ) : As2ConfigProperty {
-      public override fun basicAuthSecretId(): String? = unwrap(this).getBasicAuthSecretId()
+      override fun basicAuthSecretId(): String? = unwrap(this).getBasicAuthSecretId()
 
-      public override fun compression(): String? = unwrap(this).getCompression()
+      override fun compression(): String? = unwrap(this).getCompression()
 
-      public override fun encryptionAlgorithm(): String? = unwrap(this).getEncryptionAlgorithm()
+      override fun encryptionAlgorithm(): String? = unwrap(this).getEncryptionAlgorithm()
 
-      public override fun localProfileId(): String? = unwrap(this).getLocalProfileId()
+      override fun localProfileId(): String? = unwrap(this).getLocalProfileId()
 
-      public override fun mdnResponse(): String? = unwrap(this).getMdnResponse()
+      override fun mdnResponse(): String? = unwrap(this).getMdnResponse()
 
-      public override fun mdnSigningAlgorithm(): String? = unwrap(this).getMdnSigningAlgorithm()
+      override fun mdnSigningAlgorithm(): String? = unwrap(this).getMdnSigningAlgorithm()
 
-      public override fun messageSubject(): String? = unwrap(this).getMessageSubject()
+      override fun messageSubject(): String? = unwrap(this).getMessageSubject()
 
-      public override fun partnerProfileId(): String? = unwrap(this).getPartnerProfileId()
+      override fun partnerProfileId(): String? = unwrap(this).getPartnerProfileId()
 
-      public override fun signingAlgorithm(): String? = unwrap(this).getSigningAlgorithm()
+      override fun signingAlgorithm(): String? = unwrap(this).getSigningAlgorithm()
     }
 
     public companion object {

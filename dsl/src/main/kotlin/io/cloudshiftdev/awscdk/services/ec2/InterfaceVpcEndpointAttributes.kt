@@ -14,14 +14,11 @@ public interface InterfaceVpcEndpointAttributes {
   public fun vpcEndpointId(): String
 
   public interface Builder {
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun vpcEndpointId(vpcEndpointId: String) {
-    }
+    public fun vpcEndpointId(vpcEndpointId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -29,15 +26,15 @@ public interface InterfaceVpcEndpointAttributes {
         software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes.Builder =
         software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes.builder()
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun vpcEndpointId(vpcEndpointId: String) {
+    override fun vpcEndpointId(vpcEndpointId: String) {
       cdkBuilder.vpcEndpointId(vpcEndpointId)
     }
 
@@ -48,12 +45,12 @@ public interface InterfaceVpcEndpointAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes,
   ) : InterfaceVpcEndpointAttributes {
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    public override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
+    override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
   }
 
   public companion object {

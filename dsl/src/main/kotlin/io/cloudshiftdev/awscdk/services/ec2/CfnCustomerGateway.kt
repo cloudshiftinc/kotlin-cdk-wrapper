@@ -56,20 +56,15 @@ public open class CfnCustomerGateway internal constructor(
   }
 
   public interface Builder {
-    public fun bgpAsn(bgpAsn: Number) {
-    }
+    public fun bgpAsn(bgpAsn: Number)
 
-    public fun deviceName(deviceName: String) {
-    }
+    public fun deviceName(deviceName: String)
 
-    public fun ipAddress(ipAddress: String) {
-    }
+    public fun ipAddress(ipAddress: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnCustomerGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnCustomerGateway.Builder =
         software.amazon.awscdk.services.ec2.CfnCustomerGateway.Builder.create(scope, id)
 
-    public override fun bgpAsn(bgpAsn: Number) {
+    override fun bgpAsn(bgpAsn: Number) {
       cdkBuilder.bgpAsn(bgpAsn)
     }
 
-    public override fun deviceName(deviceName: String) {
+    override fun deviceName(deviceName: String) {
       cdkBuilder.deviceName(deviceName)
     }
 
-    public override fun ipAddress(ipAddress: String) {
+    override fun ipAddress(ipAddress: String) {
       cdkBuilder.ipAddress(ipAddress)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

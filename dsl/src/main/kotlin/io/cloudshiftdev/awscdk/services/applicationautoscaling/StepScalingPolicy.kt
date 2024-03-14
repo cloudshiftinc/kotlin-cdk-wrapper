@@ -24,32 +24,23 @@ public open class StepScalingPolicy internal constructor(
   public open fun upperAlarm(): Alarm? = unwrap(this).getUpperAlarm()?.let(Alarm::wrap)
 
   public interface Builder {
-    public fun adjustmentType(adjustmentType: AdjustmentType) {
-    }
+    public fun adjustmentType(adjustmentType: AdjustmentType)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun datapointsToAlarm(datapointsToAlarm: Number) {
-    }
+    public fun datapointsToAlarm(datapointsToAlarm: Number)
 
-    public fun evaluationPeriods(evaluationPeriods: Number) {
-    }
+    public fun evaluationPeriods(evaluationPeriods: Number)
 
-    public fun metric(metric: IMetric) {
-    }
+    public fun metric(metric: IMetric)
 
-    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    }
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType)
 
-    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    }
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
-    public fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-    }
+    public fun scalingSteps(scalingSteps: List<ScalingInterval>)
 
-    public fun scalingTarget(scalingTarget: IScalableTarget) {
-    }
+    public fun scalingTarget(scalingTarget: IScalableTarget)
   }
 
   private class BuilderImpl(
@@ -61,39 +52,39 @@ public open class StepScalingPolicy internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy.Builder.create(scope,
         id)
 
-    public override fun adjustmentType(adjustmentType: AdjustmentType) {
+    override fun adjustmentType(adjustmentType: AdjustmentType) {
       cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun datapointsToAlarm(datapointsToAlarm: Number) {
+    override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
     }
 
-    public override fun evaluationPeriods(evaluationPeriods: Number) {
+    override fun evaluationPeriods(evaluationPeriods: Number) {
       cdkBuilder.evaluationPeriods(evaluationPeriods)
     }
 
-    public override fun metric(metric: IMetric) {
+    override fun metric(metric: IMetric) {
       cdkBuilder.metric(metric.let(IMetric::unwrap))
     }
 
-    public override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+    override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
       cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
     }
 
-    public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+    override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
       cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
     }
 
-    public override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
+    override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
 
-    public override fun scalingTarget(scalingTarget: IScalableTarget) {
+    override fun scalingTarget(scalingTarget: IScalableTarget) {
       cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
     }
 

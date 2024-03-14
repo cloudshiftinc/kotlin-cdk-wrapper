@@ -9,22 +9,20 @@ public interface CfnTrafficRoute {
   public fun type(): String
 
   public interface Builder {
-    public fun logicalId(logicalId: String) {
-    }
+    public fun logicalId(logicalId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnTrafficRoute.Builder =
         software.amazon.awscdk.CfnTrafficRoute.builder()
 
-    public override fun logicalId(logicalId: String) {
+    override fun logicalId(logicalId: String) {
       cdkBuilder.logicalId(logicalId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -34,9 +32,9 @@ public interface CfnTrafficRoute {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnTrafficRoute,
   ) : CfnTrafficRoute {
-    public override fun logicalId(): String = unwrap(this).getLogicalId()
+    override fun logicalId(): String = unwrap(this).getLogicalId()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

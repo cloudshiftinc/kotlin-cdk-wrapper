@@ -81,33 +81,25 @@ public open class CfnStorageVirtualMachine internal constructor(
   }
 
   public interface Builder {
-    public fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
-    }
+    public fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable)
 
     public
-        fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty) {
-    }
+        fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3777fa4b33efd2030c60cd94751de6b23d72c20d6e39ab9e701f492a1b0b42ee")
     public
-        fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty.Builder.() -> Unit)
 
-    public fun fileSystemId(fileSystemId: String) {
-    }
+    public fun fileSystemId(fileSystemId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rootVolumeSecurityStyle(rootVolumeSecurityStyle: String) {
-    }
+    public fun rootVolumeSecurityStyle(rootVolumeSecurityStyle: String)
 
-    public fun svmAdminPassword(svmAdminPassword: String) {
-    }
+    public fun svmAdminPassword(svmAdminPassword: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -117,39 +109,39 @@ public open class CfnStorageVirtualMachine internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.Builder =
         software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.Builder.create(scope, id)
 
-    public override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
+    override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
       cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty) {
       cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(ActiveDirectoryConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3777fa4b33efd2030c60cd94751de6b23d72c20d6e39ab9e701f492a1b0b42ee")
-    public override
+    override
         fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty.Builder.() -> Unit):
         Unit =
         activeDirectoryConfiguration(ActiveDirectoryConfigurationProperty(activeDirectoryConfiguration))
 
-    public override fun fileSystemId(fileSystemId: String) {
+    override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rootVolumeSecurityStyle(rootVolumeSecurityStyle: String) {
+    override fun rootVolumeSecurityStyle(rootVolumeSecurityStyle: String) {
       cdkBuilder.rootVolumeSecurityStyle(rootVolumeSecurityStyle)
     }
 
-    public override fun svmAdminPassword(svmAdminPassword: String) {
+    override fun svmAdminPassword(svmAdminPassword: String) {
       cdkBuilder.svmAdminPassword(svmAdminPassword)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -194,23 +186,17 @@ public open class CfnStorageVirtualMachine internal constructor(
     public fun userName(): String? = unwrap(this).getUserName()
 
     public interface Builder {
-      public fun dnsIps(dnsIps: List<String>) {
-      }
+      public fun dnsIps(dnsIps: List<String>)
 
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String) {
-      }
+      public fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String)
 
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-      }
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun userName(userName: String) {
-      }
+      public fun userName(userName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -219,28 +205,28 @@ public open class CfnStorageVirtualMachine internal constructor(
           =
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty.builder()
 
-      public override fun dnsIps(dnsIps: List<String>) {
+      override fun dnsIps(dnsIps: List<String>) {
         cdkBuilder.dnsIps(dnsIps)
       }
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String) {
+      override fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String) {
         cdkBuilder.fileSystemAdministratorsGroup(fileSystemAdministratorsGroup)
       }
 
-      public override
+      override
           fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
         cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun userName(userName: String) {
+      override fun userName(userName: String) {
         cdkBuilder.userName(userName)
       }
 
@@ -253,19 +239,19 @@ public open class CfnStorageVirtualMachine internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.SelfManagedActiveDirectoryConfigurationProperty,
     ) : SelfManagedActiveDirectoryConfigurationProperty {
-      public override fun dnsIps(): List<String> = unwrap(this).getDnsIps() ?: emptyList()
+      override fun dnsIps(): List<String> = unwrap(this).getDnsIps() ?: emptyList()
 
-      public override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
-      public override fun fileSystemAdministratorsGroup(): String? =
+      override fun fileSystemAdministratorsGroup(): String? =
           unwrap(this).getFileSystemAdministratorsGroup()
 
-      public override fun organizationalUnitDistinguishedName(): String? =
+      override fun organizationalUnitDistinguishedName(): String? =
           unwrap(this).getOrganizationalUnitDistinguishedName()
 
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun userName(): String? = unwrap(this).getUserName()
+      override fun userName(): String? = unwrap(this).getUserName()
     }
 
     public companion object {
@@ -296,22 +282,18 @@ public open class CfnStorageVirtualMachine internal constructor(
         unwrap(this).getSelfManagedActiveDirectoryConfiguration()
 
     public interface Builder {
-      public fun netBiosName(netBiosName: String) {
-      }
+      public fun netBiosName(netBiosName: String)
 
       public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
-      }
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable)
 
       public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
-      }
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("53a4f8685f10a7d60d886f79d56103df35a2c2d5e8958ac5a7ffa5d607a746a1")
       public
-          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -320,23 +302,23 @@ public open class CfnStorageVirtualMachine internal constructor(
           =
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.builder()
 
-      public override fun netBiosName(netBiosName: String) {
+      override fun netBiosName(netBiosName: String) {
         cdkBuilder.netBiosName(netBiosName)
       }
 
-      public override
+      override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
         cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
         cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("53a4f8685f10a7d60d886f79d56103df35a2c2d5e8958ac5a7ffa5d607a746a1")
-      public override
+      override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty.Builder.() -> Unit):
           Unit =
           selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty(selfManagedActiveDirectoryConfiguration))
@@ -350,9 +332,9 @@ public open class CfnStorageVirtualMachine internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty,
     ) : ActiveDirectoryConfigurationProperty {
-      public override fun netBiosName(): String? = unwrap(this).getNetBiosName()
+      override fun netBiosName(): String? = unwrap(this).getNetBiosName()
 
-      public override fun selfManagedActiveDirectoryConfiguration(): Any? =
+      override fun selfManagedActiveDirectoryConfiguration(): Any? =
           unwrap(this).getSelfManagedActiveDirectoryConfiguration()
     }
 

@@ -15,29 +15,22 @@ public open class LogRetention internal constructor(
   public open fun logGroupArn(): String = unwrap(this).getLogGroupArn()
 
   public interface Builder {
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun logGroupRegion(logGroupRegion: String) {
-    }
+    public fun logGroupRegion(logGroupRegion: String)
 
-    public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-    }
+    public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efcdd4942bd022962255054dc2ff87e9319e87002c3990d10f0cac097f804d6b")
     public
-        fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions.Builder.() -> Unit) {
-    }
+        fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions.Builder.() -> Unit)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun retention(retention: RetentionDays) {
-    }
+    public fun retention(retention: RetentionDays)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -47,34 +40,33 @@ public open class LogRetention internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.LogRetention.Builder =
         software.amazon.awscdk.services.logs.LogRetention.Builder.create(scope, id)
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun logGroupRegion(logGroupRegion: String) {
+    override fun logGroupRegion(logGroupRegion: String) {
       cdkBuilder.logGroupRegion(logGroupRegion)
     }
 
-    public override
-        fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
+    override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
       cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efcdd4942bd022962255054dc2ff87e9319e87002c3990d10f0cac097f804d6b")
-    public override
+    override
         fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions.Builder.() -> Unit):
         Unit = logRetentionRetryOptions(LogRetentionRetryOptions(logRetentionRetryOptions))
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun retention(retention: RetentionDays) {
+    override fun retention(retention: RetentionDays) {
       cdkBuilder.retention(retention.let(RetentionDays::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 

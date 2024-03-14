@@ -12,11 +12,9 @@ public open class DedicatedIpPool internal constructor(
   public override fun dedicatedIpPoolName(): String = unwrap(this).getDedicatedIpPoolName()
 
   public interface Builder {
-    public fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
-    }
+    public fun dedicatedIpPoolName(dedicatedIpPoolName: String)
 
-    public fun scalingMode(scalingMode: ScalingMode) {
-    }
+    public fun scalingMode(scalingMode: ScalingMode)
   }
 
   private class BuilderImpl(
@@ -26,11 +24,11 @@ public open class DedicatedIpPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.DedicatedIpPool.Builder =
         software.amazon.awscdk.services.ses.DedicatedIpPool.Builder.create(scope, id)
 
-    public override fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
+    override fun dedicatedIpPoolName(dedicatedIpPoolName: String) {
       cdkBuilder.dedicatedIpPoolName(dedicatedIpPoolName)
     }
 
-    public override fun scalingMode(scalingMode: ScalingMode) {
+    override fun scalingMode(scalingMode: ScalingMode) {
       cdkBuilder.scalingMode(scalingMode.let(ScalingMode::unwrap))
     }
 

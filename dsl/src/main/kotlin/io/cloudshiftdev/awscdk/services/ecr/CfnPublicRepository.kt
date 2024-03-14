@@ -50,17 +50,13 @@ public open class CfnPublicRepository internal constructor(
   }
 
   public interface Builder {
-    public fun repositoryCatalogData(repositoryCatalogData: Any) {
-    }
+    public fun repositoryCatalogData(repositoryCatalogData: Any)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
 
-    public fun repositoryPolicyText(repositoryPolicyText: Any) {
-    }
+    public fun repositoryPolicyText(repositoryPolicyText: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -70,19 +66,19 @@ public open class CfnPublicRepository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecr.CfnPublicRepository.Builder =
         software.amazon.awscdk.services.ecr.CfnPublicRepository.Builder.create(scope, id)
 
-    public override fun repositoryCatalogData(repositoryCatalogData: Any) {
+    override fun repositoryCatalogData(repositoryCatalogData: Any) {
       cdkBuilder.repositoryCatalogData(repositoryCatalogData)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun repositoryPolicyText(repositoryPolicyText: Any) {
+    override fun repositoryPolicyText(repositoryPolicyText: Any) {
       cdkBuilder.repositoryPolicyText(repositoryPolicyText)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -122,20 +118,15 @@ public open class CfnPublicRepository internal constructor(
     public fun usageText(): String? = unwrap(this).getUsageText()
 
     public interface Builder {
-      public fun aboutText(aboutText: String) {
-      }
+      public fun aboutText(aboutText: String)
 
-      public fun architectures(architectures: List<String>) {
-      }
+      public fun architectures(architectures: List<String>)
 
-      public fun operatingSystems(operatingSystems: List<String>) {
-      }
+      public fun operatingSystems(operatingSystems: List<String>)
 
-      public fun repositoryDescription(repositoryDescription: String) {
-      }
+      public fun repositoryDescription(repositoryDescription: String)
 
-      public fun usageText(usageText: String) {
-      }
+      public fun usageText(usageText: String)
     }
 
     private class BuilderImpl : Builder {
@@ -144,23 +135,23 @@ public open class CfnPublicRepository internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty.builder()
 
-      public override fun aboutText(aboutText: String) {
+      override fun aboutText(aboutText: String) {
         cdkBuilder.aboutText(aboutText)
       }
 
-      public override fun architectures(architectures: List<String>) {
+      override fun architectures(architectures: List<String>) {
         cdkBuilder.architectures(architectures)
       }
 
-      public override fun operatingSystems(operatingSystems: List<String>) {
+      override fun operatingSystems(operatingSystems: List<String>) {
         cdkBuilder.operatingSystems(operatingSystems)
       }
 
-      public override fun repositoryDescription(repositoryDescription: String) {
+      override fun repositoryDescription(repositoryDescription: String) {
         cdkBuilder.repositoryDescription(repositoryDescription)
       }
 
-      public override fun usageText(usageText: String) {
+      override fun usageText(usageText: String) {
         cdkBuilder.usageText(usageText)
       }
 
@@ -173,17 +164,16 @@ public open class CfnPublicRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnPublicRepository.RepositoryCatalogDataProperty,
     ) : RepositoryCatalogDataProperty {
-      public override fun aboutText(): String? = unwrap(this).getAboutText()
+      override fun aboutText(): String? = unwrap(this).getAboutText()
 
-      public override fun architectures(): List<String> = unwrap(this).getArchitectures() ?:
+      override fun architectures(): List<String> = unwrap(this).getArchitectures() ?: emptyList()
+
+      override fun operatingSystems(): List<String> = unwrap(this).getOperatingSystems() ?:
           emptyList()
 
-      public override fun operatingSystems(): List<String> = unwrap(this).getOperatingSystems() ?:
-          emptyList()
+      override fun repositoryDescription(): String? = unwrap(this).getRepositoryDescription()
 
-      public override fun repositoryDescription(): String? = unwrap(this).getRepositoryDescription()
-
-      public override fun usageText(): String? = unwrap(this).getUsageText()
+      override fun usageText(): String? = unwrap(this).getUsageText()
     }
 
     public companion object {

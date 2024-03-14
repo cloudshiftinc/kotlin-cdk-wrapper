@@ -9,22 +9,20 @@ public interface SystemControl {
   public fun `value`(): String
 
   public interface Builder {
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.SystemControl.Builder =
         software.amazon.awscdk.services.ecs.SystemControl.builder()
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -34,9 +32,9 @@ public interface SystemControl {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.SystemControl,
   ) : SystemControl {
-    public override fun namespace(): String = unwrap(this).getNamespace()
+    override fun namespace(): String = unwrap(this).getNamespace()
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

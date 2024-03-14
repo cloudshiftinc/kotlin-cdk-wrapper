@@ -44,17 +44,13 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
   }
 
   public interface Builder {
-    public fun capacityProviders(capacityProviders: List<String>) {
-    }
+    public fun capacityProviders(capacityProviders: List<String>)
 
-    public fun cluster(cluster: String) {
-    }
+    public fun cluster(cluster: String)
 
-    public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable) {
-    }
+    public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable)
 
-    public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
-    }
+    public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>)
   }
 
   private class BuilderImpl(
@@ -66,21 +62,19 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
         software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.Builder.create(scope,
         id)
 
-    public override fun capacityProviders(capacityProviders: List<String>) {
+    override fun capacityProviders(capacityProviders: List<String>) {
       cdkBuilder.capacityProviders(capacityProviders)
     }
 
-    public override fun cluster(cluster: String) {
+    override fun cluster(cluster: String) {
       cdkBuilder.cluster(cluster)
     }
 
-    public override
-        fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable) {
+    override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable) {
       cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable::unwrap))
     }
 
-    public override
-        fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
+    override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
       cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
     }
 
@@ -119,14 +113,11 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun base(base: Number) {
-      }
+      public fun base(base: Number)
 
-      public fun capacityProvider(capacityProvider: String) {
-      }
+      public fun capacityProvider(capacityProvider: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -135,15 +126,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
           =
           software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty.builder()
 
-      public override fun base(base: Number) {
+      override fun base(base: Number) {
         cdkBuilder.base(base)
       }
 
-      public override fun capacityProvider(capacityProvider: String) {
+      override fun capacityProvider(capacityProvider: String) {
         cdkBuilder.capacityProvider(capacityProvider)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -156,11 +147,11 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations.CapacityProviderStrategyProperty,
     ) : CapacityProviderStrategyProperty {
-      public override fun base(): Number? = unwrap(this).getBase()
+      override fun base(): Number? = unwrap(this).getBase()
 
-      public override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
+      override fun capacityProvider(): String = unwrap(this).getCapacityProvider()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {

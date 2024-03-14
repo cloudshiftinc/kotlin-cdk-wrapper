@@ -57,20 +57,15 @@ public open class CfnResourceSet internal constructor(
   }
 
   public interface Builder {
-    public fun resourceSetName(resourceSetName: String) {
-    }
+    public fun resourceSetName(resourceSetName: String)
 
-    public fun resourceSetType(resourceSetType: String) {
-    }
+    public fun resourceSetType(resourceSetType: String)
 
-    public fun resources(resources: IResolvable) {
-    }
+    public fun resources(resources: IResolvable)
 
-    public fun resources(resources: List<Any>) {
-    }
+    public fun resources(resources: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -82,23 +77,23 @@ public open class CfnResourceSet internal constructor(
         software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.Builder.create(scope,
         id)
 
-    public override fun resourceSetName(resourceSetName: String) {
+    override fun resourceSetName(resourceSetName: String) {
       cdkBuilder.resourceSetName(resourceSetName)
     }
 
-    public override fun resourceSetType(resourceSetType: String) {
+    override fun resourceSetType(resourceSetType: String) {
       cdkBuilder.resourceSetType(resourceSetType)
     }
 
-    public override fun resources(resources: IResolvable) {
+    override fun resources(resources: IResolvable) {
       cdkBuilder.resources(resources.let(IResolvable::unwrap))
     }
 
-    public override fun resources(resources: List<Any>) {
+    override fun resources(resources: List<Any>) {
       cdkBuilder.resources(resources)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -134,27 +129,21 @@ public open class CfnResourceSet internal constructor(
     public fun r53Resource(): Any? = unwrap(this).getR53Resource()
 
     public interface Builder {
-      public fun nlbResource(nlbResource: IResolvable) {
-      }
+      public fun nlbResource(nlbResource: IResolvable)
 
-      public fun nlbResource(nlbResource: NLBResourceProperty) {
-      }
+      public fun nlbResource(nlbResource: NLBResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("001848c7e336aaea9381dbaf6bca573a846b4eeff24e5df9008313c8fc40c4e4")
-      public fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit) {
-      }
+      public fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit)
 
-      public fun r53Resource(r53Resource: IResolvable) {
-      }
+      public fun r53Resource(r53Resource: IResolvable)
 
-      public fun r53Resource(r53Resource: R53ResourceRecordProperty) {
-      }
+      public fun r53Resource(r53Resource: R53ResourceRecordProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("12521b6ef63fdb393ae03d277f774d30d5112e6c8ff55fb1186767ea126bc8a3")
-      public fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit) {
-      }
+      public fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -163,31 +152,31 @@ public open class CfnResourceSet internal constructor(
           =
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty.builder()
 
-      public override fun nlbResource(nlbResource: IResolvable) {
+      override fun nlbResource(nlbResource: IResolvable) {
         cdkBuilder.nlbResource(nlbResource.let(IResolvable::unwrap))
       }
 
-      public override fun nlbResource(nlbResource: NLBResourceProperty) {
+      override fun nlbResource(nlbResource: NLBResourceProperty) {
         cdkBuilder.nlbResource(nlbResource.let(NLBResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("001848c7e336aaea9381dbaf6bca573a846b4eeff24e5df9008313c8fc40c4e4")
-      public override fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit): Unit =
+      override fun nlbResource(nlbResource: NLBResourceProperty.Builder.() -> Unit): Unit =
           nlbResource(NLBResourceProperty(nlbResource))
 
-      public override fun r53Resource(r53Resource: IResolvable) {
+      override fun r53Resource(r53Resource: IResolvable) {
         cdkBuilder.r53Resource(r53Resource.let(IResolvable::unwrap))
       }
 
-      public override fun r53Resource(r53Resource: R53ResourceRecordProperty) {
+      override fun r53Resource(r53Resource: R53ResourceRecordProperty) {
         cdkBuilder.r53Resource(r53Resource.let(R53ResourceRecordProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("12521b6ef63fdb393ae03d277f774d30d5112e6c8ff55fb1186767ea126bc8a3")
-      public override fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit):
-          Unit = r53Resource(R53ResourceRecordProperty(r53Resource))
+      override fun r53Resource(r53Resource: R53ResourceRecordProperty.Builder.() -> Unit): Unit =
+          r53Resource(R53ResourceRecordProperty(r53Resource))
 
       public fun build():
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
@@ -198,9 +187,9 @@ public open class CfnResourceSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty,
     ) : TargetResourceProperty {
-      public override fun nlbResource(): Any? = unwrap(this).getNlbResource()
+      override fun nlbResource(): Any? = unwrap(this).getNlbResource()
 
-      public override fun r53Resource(): Any? = unwrap(this).getR53Resource()
+      override fun r53Resource(): Any? = unwrap(this).getR53Resource()
     }
 
     public companion object {
@@ -227,8 +216,7 @@ public open class CfnResourceSet internal constructor(
     public fun arn(): String? = unwrap(this).getArn()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -237,7 +225,7 @@ public open class CfnResourceSet internal constructor(
           =
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -250,7 +238,7 @@ public open class CfnResourceSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty,
     ) : NLBResourceProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
     }
 
     public companion object {
@@ -279,11 +267,9 @@ public open class CfnResourceSet internal constructor(
     public fun recordSetId(): String? = unwrap(this).getRecordSetId()
 
     public interface Builder {
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun recordSetId(recordSetId: String) {
-      }
+      public fun recordSetId(recordSetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -292,11 +278,11 @@ public open class CfnResourceSet internal constructor(
           =
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty.builder()
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun recordSetId(recordSetId: String) {
+      override fun recordSetId(recordSetId: String) {
         cdkBuilder.recordSetId(recordSetId)
       }
 
@@ -309,9 +295,9 @@ public open class CfnResourceSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty,
     ) : R53ResourceRecordProperty {
-      public override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
-      public override fun recordSetId(): String? = unwrap(this).getRecordSetId()
+      override fun recordSetId(): String? = unwrap(this).getRecordSetId()
     }
 
     public companion object {
@@ -344,26 +330,19 @@ public open class CfnResourceSet internal constructor(
     public fun resourceArn(): String? = unwrap(this).getResourceArn()
 
     public interface Builder {
-      public fun componentId(componentId: String) {
-      }
+      public fun componentId(componentId: String)
 
-      public fun dnsTargetResource(dnsTargetResource: IResolvable) {
-      }
+      public fun dnsTargetResource(dnsTargetResource: IResolvable)
 
-      public fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty) {
-      }
+      public fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83baffb106efe707b424ff93ce00925d442bb572f3758234141759a3330018c1")
-      public
-          fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty.Builder.() -> Unit) {
-      }
+      public fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty.Builder.() -> Unit)
 
-      public fun readinessScopes(readinessScopes: List<String>) {
-      }
+      public fun readinessScopes(readinessScopes: List<String>)
 
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -372,29 +351,29 @@ public open class CfnResourceSet internal constructor(
           =
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty.builder()
 
-      public override fun componentId(componentId: String) {
+      override fun componentId(componentId: String) {
         cdkBuilder.componentId(componentId)
       }
 
-      public override fun dnsTargetResource(dnsTargetResource: IResolvable) {
+      override fun dnsTargetResource(dnsTargetResource: IResolvable) {
         cdkBuilder.dnsTargetResource(dnsTargetResource.let(IResolvable::unwrap))
       }
 
-      public override fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty) {
+      override fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty) {
         cdkBuilder.dnsTargetResource(dnsTargetResource.let(DNSTargetResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83baffb106efe707b424ff93ce00925d442bb572f3758234141759a3330018c1")
-      public override
+      override
           fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty.Builder.() -> Unit):
           Unit = dnsTargetResource(DNSTargetResourceProperty(dnsTargetResource))
 
-      public override fun readinessScopes(readinessScopes: List<String>) {
+      override fun readinessScopes(readinessScopes: List<String>) {
         cdkBuilder.readinessScopes(readinessScopes)
       }
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -407,14 +386,14 @@ public open class CfnResourceSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty,
     ) : ResourceProperty {
-      public override fun componentId(): String? = unwrap(this).getComponentId()
+      override fun componentId(): String? = unwrap(this).getComponentId()
 
-      public override fun dnsTargetResource(): Any? = unwrap(this).getDnsTargetResource()
+      override fun dnsTargetResource(): Any? = unwrap(this).getDnsTargetResource()
 
-      public override fun readinessScopes(): List<String> = unwrap(this).getReadinessScopes() ?:
+      override fun readinessScopes(): List<String> = unwrap(this).getReadinessScopes() ?:
           emptyList()
 
-      public override fun resourceArn(): String? = unwrap(this).getResourceArn()
+      override fun resourceArn(): String? = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -449,28 +428,21 @@ public open class CfnResourceSet internal constructor(
     public fun targetResource(): Any? = unwrap(this).getTargetResource()
 
     public interface Builder {
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun hostedZoneArn(hostedZoneArn: String) {
-      }
+      public fun hostedZoneArn(hostedZoneArn: String)
 
-      public fun recordSetId(recordSetId: String) {
-      }
+      public fun recordSetId(recordSetId: String)
 
-      public fun recordType(recordType: String) {
-      }
+      public fun recordType(recordType: String)
 
-      public fun targetResource(targetResource: IResolvable) {
-      }
+      public fun targetResource(targetResource: IResolvable)
 
-      public fun targetResource(targetResource: TargetResourceProperty) {
-      }
+      public fun targetResource(targetResource: TargetResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fbe4c3c3501872a36e8971e95e7186cfe0741261c4a3201f6c88516a9b257376")
-      public fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit) {
-      }
+      public fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -479,34 +451,34 @@ public open class CfnResourceSet internal constructor(
           =
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty.builder()
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun hostedZoneArn(hostedZoneArn: String) {
+      override fun hostedZoneArn(hostedZoneArn: String) {
         cdkBuilder.hostedZoneArn(hostedZoneArn)
       }
 
-      public override fun recordSetId(recordSetId: String) {
+      override fun recordSetId(recordSetId: String) {
         cdkBuilder.recordSetId(recordSetId)
       }
 
-      public override fun recordType(recordType: String) {
+      override fun recordType(recordType: String) {
         cdkBuilder.recordType(recordType)
       }
 
-      public override fun targetResource(targetResource: IResolvable) {
+      override fun targetResource(targetResource: IResolvable) {
         cdkBuilder.targetResource(targetResource.let(IResolvable::unwrap))
       }
 
-      public override fun targetResource(targetResource: TargetResourceProperty) {
+      override fun targetResource(targetResource: TargetResourceProperty) {
         cdkBuilder.targetResource(targetResource.let(TargetResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fbe4c3c3501872a36e8971e95e7186cfe0741261c4a3201f6c88516a9b257376")
-      public override fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit):
-          Unit = targetResource(TargetResourceProperty(targetResource))
+      override fun targetResource(targetResource: TargetResourceProperty.Builder.() -> Unit): Unit =
+          targetResource(TargetResourceProperty(targetResource))
 
       public fun build():
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty
@@ -517,15 +489,15 @@ public open class CfnResourceSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty,
     ) : DNSTargetResourceProperty {
-      public override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
-      public override fun hostedZoneArn(): String? = unwrap(this).getHostedZoneArn()
+      override fun hostedZoneArn(): String? = unwrap(this).getHostedZoneArn()
 
-      public override fun recordSetId(): String? = unwrap(this).getRecordSetId()
+      override fun recordSetId(): String? = unwrap(this).getRecordSetId()
 
-      public override fun recordType(): String? = unwrap(this).getRecordType()
+      override fun recordType(): String? = unwrap(this).getRecordType()
 
-      public override fun targetResource(): Any? = unwrap(this).getTargetResource()
+      override fun targetResource(): Any? = unwrap(this).getTargetResource()
     }
 
     public companion object {

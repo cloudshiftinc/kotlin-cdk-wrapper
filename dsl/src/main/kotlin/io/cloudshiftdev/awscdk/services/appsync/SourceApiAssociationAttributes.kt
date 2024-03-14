@@ -11,14 +11,11 @@ public interface SourceApiAssociationAttributes {
   public fun sourceApi(): IGraphqlApi
 
   public interface Builder {
-    public fun associationArn(associationArn: String) {
-    }
+    public fun associationArn(associationArn: String)
 
-    public fun mergedApi(mergedApi: IGraphqlApi) {
-    }
+    public fun mergedApi(mergedApi: IGraphqlApi)
 
-    public fun sourceApi(sourceApi: IGraphqlApi) {
-    }
+    public fun sourceApi(sourceApi: IGraphqlApi)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface SourceApiAssociationAttributes {
         software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes.Builder =
         software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes.builder()
 
-    public override fun associationArn(associationArn: String) {
+    override fun associationArn(associationArn: String) {
       cdkBuilder.associationArn(associationArn)
     }
 
-    public override fun mergedApi(mergedApi: IGraphqlApi) {
+    override fun mergedApi(mergedApi: IGraphqlApi) {
       cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi::unwrap))
     }
 
-    public override fun sourceApi(sourceApi: IGraphqlApi) {
+    override fun sourceApi(sourceApi: IGraphqlApi) {
       cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi::unwrap))
     }
 
@@ -45,13 +42,11 @@ public interface SourceApiAssociationAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes,
   ) : SourceApiAssociationAttributes {
-    public override fun associationArn(): String = unwrap(this).getAssociationArn()
+    override fun associationArn(): String = unwrap(this).getAssociationArn()
 
-    public override fun mergedApi(): IGraphqlApi =
-        unwrap(this).getMergedApi().let(IGraphqlApi::wrap)
+    override fun mergedApi(): IGraphqlApi = unwrap(this).getMergedApi().let(IGraphqlApi::wrap)
 
-    public override fun sourceApi(): IGraphqlApi =
-        unwrap(this).getSourceApi().let(IGraphqlApi::wrap)
+    override fun sourceApi(): IGraphqlApi = unwrap(this).getSourceApi().let(IGraphqlApi::wrap)
   }
 
   public companion object {

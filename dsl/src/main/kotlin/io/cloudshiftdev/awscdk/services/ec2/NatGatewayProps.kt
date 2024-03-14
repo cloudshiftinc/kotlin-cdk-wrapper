@@ -8,15 +8,14 @@ public interface NatGatewayProps {
   public fun eipAllocationIds(): List<String> = unwrap(this).getEipAllocationIds() ?: emptyList()
 
   public interface Builder {
-    public fun eipAllocationIds(eipAllocationIds: List<String>) {
-    }
+    public fun eipAllocationIds(eipAllocationIds: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NatGatewayProps.Builder =
         software.amazon.awscdk.services.ec2.NatGatewayProps.builder()
 
-    public override fun eipAllocationIds(eipAllocationIds: List<String>) {
+    override fun eipAllocationIds(eipAllocationIds: List<String>) {
       cdkBuilder.eipAllocationIds(eipAllocationIds)
     }
 
@@ -26,7 +25,7 @@ public interface NatGatewayProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.NatGatewayProps,
   ) : NatGatewayProps {
-    public override fun eipAllocationIds(): List<String> = unwrap(this).getEipAllocationIds() ?:
+    override fun eipAllocationIds(): List<String> = unwrap(this).getEipAllocationIds() ?:
         emptyList()
   }
 

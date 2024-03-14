@@ -24,35 +24,25 @@ public open class StepScalingPolicy internal constructor(
   public open fun upperAlarm(): Alarm? = unwrap(this).getUpperAlarm()?.let(Alarm::wrap)
 
   public interface Builder {
-    public fun adjustmentType(adjustmentType: AdjustmentType) {
-    }
+    public fun adjustmentType(adjustmentType: AdjustmentType)
 
-    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    }
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun datapointsToAlarm(datapointsToAlarm: Number) {
-    }
+    public fun datapointsToAlarm(datapointsToAlarm: Number)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration)
 
-    public fun evaluationPeriods(evaluationPeriods: Number) {
-    }
+    public fun evaluationPeriods(evaluationPeriods: Number)
 
-    public fun metric(metric: IMetric) {
-    }
+    public fun metric(metric: IMetric)
 
-    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    }
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType)
 
-    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    }
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
-    public fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-    }
+    public fun scalingSteps(scalingSteps: List<ScalingInterval>)
   }
 
   private class BuilderImpl(
@@ -62,43 +52,43 @@ public open class StepScalingPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.StepScalingPolicy.Builder =
         software.amazon.awscdk.services.autoscaling.StepScalingPolicy.Builder.create(scope, id)
 
-    public override fun adjustmentType(adjustmentType: AdjustmentType) {
+    override fun adjustmentType(adjustmentType: AdjustmentType) {
       cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
     }
 
-    public override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+    override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun datapointsToAlarm(datapointsToAlarm: Number) {
+    override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun evaluationPeriods(evaluationPeriods: Number) {
+    override fun evaluationPeriods(evaluationPeriods: Number) {
       cdkBuilder.evaluationPeriods(evaluationPeriods)
     }
 
-    public override fun metric(metric: IMetric) {
+    override fun metric(metric: IMetric) {
       cdkBuilder.metric(metric.let(IMetric::unwrap))
     }
 
-    public override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+    override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
       cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
     }
 
-    public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+    override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
       cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
     }
 
-    public override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
+    override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
 

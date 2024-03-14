@@ -39,14 +39,11 @@ public open class CfnIPAMPoolCidr internal constructor(
   }
 
   public interface Builder {
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun ipamPoolId(ipamPoolId: String) {
-    }
+    public fun ipamPoolId(ipamPoolId: String)
 
-    public fun netmaskLength(netmaskLength: Number) {
-    }
+    public fun netmaskLength(netmaskLength: Number)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnIPAMPoolCidr internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr.Builder =
         software.amazon.awscdk.services.ec2.CfnIPAMPoolCidr.Builder.create(scope, id)
 
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun ipamPoolId(ipamPoolId: String) {
+    override fun ipamPoolId(ipamPoolId: String) {
       cdkBuilder.ipamPoolId(ipamPoolId)
     }
 
-    public override fun netmaskLength(netmaskLength: Number) {
+    override fun netmaskLength(netmaskLength: Number) {
       cdkBuilder.netmaskLength(netmaskLength)
     }
 

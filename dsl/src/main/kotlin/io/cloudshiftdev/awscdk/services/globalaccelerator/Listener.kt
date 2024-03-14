@@ -29,20 +29,15 @@ public open class Listener internal constructor(
   public open fun listenerName(): String = unwrap(this).getListenerName()
 
   public interface Builder {
-    public fun accelerator(accelerator: IAccelerator) {
-    }
+    public fun accelerator(accelerator: IAccelerator)
 
-    public fun clientAffinity(clientAffinity: ClientAffinity) {
-    }
+    public fun clientAffinity(clientAffinity: ClientAffinity)
 
-    public fun listenerName(listenerName: String) {
-    }
+    public fun listenerName(listenerName: String)
 
-    public fun portRanges(portRanges: List<PortRange>) {
-    }
+    public fun portRanges(portRanges: List<PortRange>)
 
-    public fun protocol(protocol: ConnectionProtocol) {
-    }
+    public fun protocol(protocol: ConnectionProtocol)
   }
 
   private class BuilderImpl(
@@ -52,23 +47,23 @@ public open class Listener internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.Listener.Builder =
         software.amazon.awscdk.services.globalaccelerator.Listener.Builder.create(scope, id)
 
-    public override fun accelerator(accelerator: IAccelerator) {
+    override fun accelerator(accelerator: IAccelerator) {
       cdkBuilder.accelerator(accelerator.let(IAccelerator::unwrap))
     }
 
-    public override fun clientAffinity(clientAffinity: ClientAffinity) {
+    override fun clientAffinity(clientAffinity: ClientAffinity) {
       cdkBuilder.clientAffinity(clientAffinity.let(ClientAffinity::unwrap))
     }
 
-    public override fun listenerName(listenerName: String) {
+    override fun listenerName(listenerName: String) {
       cdkBuilder.listenerName(listenerName)
     }
 
-    public override fun portRanges(portRanges: List<PortRange>) {
+    override fun portRanges(portRanges: List<PortRange>) {
       cdkBuilder.portRanges(portRanges.map(PortRange::unwrap))
     }
 
-    public override fun protocol(protocol: ConnectionProtocol) {
+    override fun protocol(protocol: ConnectionProtocol) {
       cdkBuilder.protocol(protocol.let(ConnectionProtocol::unwrap))
     }
 

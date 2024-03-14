@@ -56,14 +56,11 @@ public open class Group internal constructor(
   public override fun principalAccount(): String? = unwrap(this).getPrincipalAccount()
 
   public interface Builder {
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-    }
+    public fun managedPolicies(managedPolicies: List<IManagedPolicy>)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
   }
 
   private class BuilderImpl(
@@ -73,15 +70,15 @@ public open class Group internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.Group.Builder =
         software.amazon.awscdk.services.iam.Group.Builder.create(scope, id)
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
+    override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
       cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 

@@ -9,11 +9,9 @@ public interface DomainMappingOptions {
   public fun mappingKey(): String? = unwrap(this).getMappingKey()
 
   public interface Builder {
-    public fun domainName(domainName: IDomainName) {
-    }
+    public fun domainName(domainName: IDomainName)
 
-    public fun mappingKey(mappingKey: String) {
-    }
+    public fun mappingKey(mappingKey: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface DomainMappingOptions {
         software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions.builder()
 
-    public override fun domainName(domainName: IDomainName) {
+    override fun domainName(domainName: IDomainName) {
       cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
     }
 
-    public override fun mappingKey(mappingKey: String) {
+    override fun mappingKey(mappingKey: String) {
       cdkBuilder.mappingKey(mappingKey)
     }
 
@@ -36,10 +34,9 @@ public interface DomainMappingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions,
   ) : DomainMappingOptions {
-    public override fun domainName(): IDomainName =
-        unwrap(this).getDomainName().let(IDomainName::wrap)
+    override fun domainName(): IDomainName = unwrap(this).getDomainName().let(IDomainName::wrap)
 
-    public override fun mappingKey(): String? = unwrap(this).getMappingKey()
+    override fun mappingKey(): String? = unwrap(this).getMappingKey()
   }
 
   public companion object {

@@ -82,31 +82,23 @@ public open class CfnTargetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun config(config: IResolvable) {
-    }
+    public fun config(config: IResolvable)
 
-    public fun config(config: TargetGroupConfigProperty) {
-    }
+    public fun config(config: TargetGroupConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4a926747e7caf939bef4de8eae6a385eecd88dfc04fe41e97fa09b0ef118da04")
-    public fun config(config: TargetGroupConfigProperty.Builder.() -> Unit) {
-    }
+    public fun config(config: TargetGroupConfigProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targets(targets: IResolvable) {
-    }
+    public fun targets(targets: IResolvable)
 
-    public fun targets(targets: List<Any>) {
-    }
+    public fun targets(targets: List<Any>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -116,36 +108,36 @@ public open class CfnTargetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.Builder =
         software.amazon.awscdk.services.vpclattice.CfnTargetGroup.Builder.create(scope, id)
 
-    public override fun config(config: IResolvable) {
+    override fun config(config: IResolvable) {
       cdkBuilder.config(config.let(IResolvable::unwrap))
     }
 
-    public override fun config(config: TargetGroupConfigProperty) {
+    override fun config(config: TargetGroupConfigProperty) {
       cdkBuilder.config(config.let(TargetGroupConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4a926747e7caf939bef4de8eae6a385eecd88dfc04fe41e97fa09b0ef118da04")
-    public override fun config(config: TargetGroupConfigProperty.Builder.() -> Unit): Unit =
+    override fun config(config: TargetGroupConfigProperty.Builder.() -> Unit): Unit =
         config(TargetGroupConfigProperty(config))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targets(targets: IResolvable) {
+    override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
 
-    public override fun targets(targets: List<Any>) {
+    override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -196,46 +188,33 @@ public open class CfnTargetGroup internal constructor(
     public fun unhealthyThresholdCount(): Number? = unwrap(this).getUnhealthyThresholdCount()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number) {
-      }
+      public fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number)
 
-      public fun healthCheckTimeoutSeconds(healthCheckTimeoutSeconds: Number) {
-      }
+      public fun healthCheckTimeoutSeconds(healthCheckTimeoutSeconds: Number)
 
-      public fun healthyThresholdCount(healthyThresholdCount: Number) {
-      }
+      public fun healthyThresholdCount(healthyThresholdCount: Number)
 
-      public fun matcher(matcher: IResolvable) {
-      }
+      public fun matcher(matcher: IResolvable)
 
-      public fun matcher(matcher: MatcherProperty) {
-      }
+      public fun matcher(matcher: MatcherProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dc579f163b5fcc356ab59090b8b20c72ca6c0bbb4901bf927133c145f2f336be")
-      public fun matcher(matcher: MatcherProperty.Builder.() -> Unit) {
-      }
+      public fun matcher(matcher: MatcherProperty.Builder.() -> Unit)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun protocolVersion(protocolVersion: String) {
-      }
+      public fun protocolVersion(protocolVersion: String)
 
-      public fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
-      }
+      public fun unhealthyThresholdCount(unhealthyThresholdCount: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -244,56 +223,56 @@ public open class CfnTargetGroup internal constructor(
           =
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number) {
+      override fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number) {
         cdkBuilder.healthCheckIntervalSeconds(healthCheckIntervalSeconds)
       }
 
-      public override fun healthCheckTimeoutSeconds(healthCheckTimeoutSeconds: Number) {
+      override fun healthCheckTimeoutSeconds(healthCheckTimeoutSeconds: Number) {
         cdkBuilder.healthCheckTimeoutSeconds(healthCheckTimeoutSeconds)
       }
 
-      public override fun healthyThresholdCount(healthyThresholdCount: Number) {
+      override fun healthyThresholdCount(healthyThresholdCount: Number) {
         cdkBuilder.healthyThresholdCount(healthyThresholdCount)
       }
 
-      public override fun matcher(matcher: IResolvable) {
+      override fun matcher(matcher: IResolvable) {
         cdkBuilder.matcher(matcher.let(IResolvable::unwrap))
       }
 
-      public override fun matcher(matcher: MatcherProperty) {
+      override fun matcher(matcher: MatcherProperty) {
         cdkBuilder.matcher(matcher.let(MatcherProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dc579f163b5fcc356ab59090b8b20c72ca6c0bbb4901bf927133c145f2f336be")
-      public override fun matcher(matcher: MatcherProperty.Builder.() -> Unit): Unit =
+      override fun matcher(matcher: MatcherProperty.Builder.() -> Unit): Unit =
           matcher(MatcherProperty(matcher))
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun protocolVersion(protocolVersion: String) {
+      override fun protocolVersion(protocolVersion: String) {
         cdkBuilder.protocolVersion(protocolVersion)
       }
 
-      public override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
+      override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
         cdkBuilder.unhealthyThresholdCount(unhealthyThresholdCount)
       }
 
@@ -306,28 +285,27 @@ public open class CfnTargetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty,
     ) : HealthCheckConfigProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun healthCheckIntervalSeconds(): Number? =
+      override fun healthCheckIntervalSeconds(): Number? =
           unwrap(this).getHealthCheckIntervalSeconds()
 
-      public override fun healthCheckTimeoutSeconds(): Number? =
+      override fun healthCheckTimeoutSeconds(): Number? =
           unwrap(this).getHealthCheckTimeoutSeconds()
 
-      public override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
+      override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
 
-      public override fun matcher(): Any? = unwrap(this).getMatcher()
+      override fun matcher(): Any? = unwrap(this).getMatcher()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
 
-      public override fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
+      override fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
 
-      public override fun unhealthyThresholdCount(): Number? =
-          unwrap(this).getUnhealthyThresholdCount()
+      override fun unhealthyThresholdCount(): Number? = unwrap(this).getUnhealthyThresholdCount()
     }
 
     public companion object {
@@ -354,8 +332,7 @@ public open class CfnTargetGroup internal constructor(
     public fun httpCode(): String
 
     public interface Builder {
-      public fun httpCode(httpCode: String) {
-      }
+      public fun httpCode(httpCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -363,7 +340,7 @@ public open class CfnTargetGroup internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty.builder()
 
-      public override fun httpCode(httpCode: String) {
+      override fun httpCode(httpCode: String) {
         cdkBuilder.httpCode(httpCode)
       }
 
@@ -375,7 +352,7 @@ public open class CfnTargetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty,
     ) : MatcherProperty {
-      public override fun httpCode(): String = unwrap(this).getHttpCode()
+      override fun httpCode(): String = unwrap(this).getHttpCode()
     }
 
     public companion object {
@@ -404,11 +381,9 @@ public open class CfnTargetGroup internal constructor(
     public fun port(): Number? = unwrap(this).getPort()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -416,11 +391,11 @@ public open class CfnTargetGroup internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
@@ -432,9 +407,9 @@ public open class CfnTargetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty,
     ) : TargetProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
     }
 
     public companion object {
@@ -474,34 +449,25 @@ public open class CfnTargetGroup internal constructor(
     public fun vpcIdentifier(): String? = unwrap(this).getVpcIdentifier()
 
     public interface Builder {
-      public fun healthCheck(healthCheck: IResolvable) {
-      }
+      public fun healthCheck(healthCheck: IResolvable)
 
-      public fun healthCheck(healthCheck: HealthCheckConfigProperty) {
-      }
+      public fun healthCheck(healthCheck: HealthCheckConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72e53bf3518aa8352dbc54567f9fc646c825ed91bb8f8127cd0a14182046f628")
-      public fun healthCheck(healthCheck: HealthCheckConfigProperty.Builder.() -> Unit) {
-      }
+      public fun healthCheck(healthCheck: HealthCheckConfigProperty.Builder.() -> Unit)
 
-      public fun ipAddressType(ipAddressType: String) {
-      }
+      public fun ipAddressType(ipAddressType: String)
 
-      public fun lambdaEventStructureVersion(lambdaEventStructureVersion: String) {
-      }
+      public fun lambdaEventStructureVersion(lambdaEventStructureVersion: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun protocolVersion(protocolVersion: String) {
-      }
+      public fun protocolVersion(protocolVersion: String)
 
-      public fun vpcIdentifier(vpcIdentifier: String) {
-      }
+      public fun vpcIdentifier(vpcIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -510,40 +476,40 @@ public open class CfnTargetGroup internal constructor(
           =
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty.builder()
 
-      public override fun healthCheck(healthCheck: IResolvable) {
+      override fun healthCheck(healthCheck: IResolvable) {
         cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
       }
 
-      public override fun healthCheck(healthCheck: HealthCheckConfigProperty) {
+      override fun healthCheck(healthCheck: HealthCheckConfigProperty) {
         cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72e53bf3518aa8352dbc54567f9fc646c825ed91bb8f8127cd0a14182046f628")
-      public override fun healthCheck(healthCheck: HealthCheckConfigProperty.Builder.() -> Unit):
-          Unit = healthCheck(HealthCheckConfigProperty(healthCheck))
+      override fun healthCheck(healthCheck: HealthCheckConfigProperty.Builder.() -> Unit): Unit =
+          healthCheck(HealthCheckConfigProperty(healthCheck))
 
-      public override fun ipAddressType(ipAddressType: String) {
+      override fun ipAddressType(ipAddressType: String) {
         cdkBuilder.ipAddressType(ipAddressType)
       }
 
-      public override fun lambdaEventStructureVersion(lambdaEventStructureVersion: String) {
+      override fun lambdaEventStructureVersion(lambdaEventStructureVersion: String) {
         cdkBuilder.lambdaEventStructureVersion(lambdaEventStructureVersion)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun protocolVersion(protocolVersion: String) {
+      override fun protocolVersion(protocolVersion: String) {
         cdkBuilder.protocolVersion(protocolVersion)
       }
 
-      public override fun vpcIdentifier(vpcIdentifier: String) {
+      override fun vpcIdentifier(vpcIdentifier: String) {
         cdkBuilder.vpcIdentifier(vpcIdentifier)
       }
 
@@ -556,20 +522,20 @@ public open class CfnTargetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty,
     ) : TargetGroupConfigProperty {
-      public override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
+      override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
 
-      public override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
+      override fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
-      public override fun lambdaEventStructureVersion(): String? =
+      override fun lambdaEventStructureVersion(): String? =
           unwrap(this).getLambdaEventStructureVersion()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
 
-      public override fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
+      override fun protocolVersion(): String? = unwrap(this).getProtocolVersion()
 
-      public override fun vpcIdentifier(): String? = unwrap(this).getVpcIdentifier()
+      override fun vpcIdentifier(): String? = unwrap(this).getVpcIdentifier()
     }
 
     public companion object {

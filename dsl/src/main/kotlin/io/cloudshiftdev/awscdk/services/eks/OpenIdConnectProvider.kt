@@ -9,8 +9,7 @@ public open class OpenIdConnectProvider internal constructor(
   private val cdkObject: software.amazon.awscdk.services.eks.OpenIdConnectProvider,
 ) : io.cloudshiftdev.awscdk.services.iam.OpenIdConnectProvider(cdkObject) {
   public interface Builder {
-    public fun url(url: String) {
-    }
+    public fun url(url: String)
   }
 
   private class BuilderImpl(
@@ -20,7 +19,7 @@ public open class OpenIdConnectProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.OpenIdConnectProvider.Builder =
         software.amazon.awscdk.services.eks.OpenIdConnectProvider.Builder.create(scope, id)
 
-    public override fun url(url: String) {
+    override fun url(url: String) {
       cdkBuilder.url(url)
     }
 

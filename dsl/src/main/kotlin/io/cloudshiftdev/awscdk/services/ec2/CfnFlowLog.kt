@@ -101,41 +101,29 @@ public open class CfnFlowLog internal constructor(
   }
 
   public interface Builder {
-    public fun deliverCrossAccountRole(deliverCrossAccountRole: String) {
-    }
+    public fun deliverCrossAccountRole(deliverCrossAccountRole: String)
 
-    public fun deliverLogsPermissionArn(deliverLogsPermissionArn: String) {
-    }
+    public fun deliverLogsPermissionArn(deliverLogsPermissionArn: String)
 
-    public fun destinationOptions(destinationOptions: Any) {
-    }
+    public fun destinationOptions(destinationOptions: Any)
 
-    public fun logDestination(logDestination: String) {
-    }
+    public fun logDestination(logDestination: String)
 
-    public fun logDestinationType(logDestinationType: String) {
-    }
+    public fun logDestinationType(logDestinationType: String)
 
-    public fun logFormat(logFormat: String) {
-    }
+    public fun logFormat(logFormat: String)
 
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun maxAggregationInterval(maxAggregationInterval: Number) {
-    }
+    public fun maxAggregationInterval(maxAggregationInterval: Number)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trafficType(trafficType: String) {
-    }
+    public fun trafficType(trafficType: String)
   }
 
   private class BuilderImpl(
@@ -145,51 +133,51 @@ public open class CfnFlowLog internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnFlowLog.Builder =
         software.amazon.awscdk.services.ec2.CfnFlowLog.Builder.create(scope, id)
 
-    public override fun deliverCrossAccountRole(deliverCrossAccountRole: String) {
+    override fun deliverCrossAccountRole(deliverCrossAccountRole: String) {
       cdkBuilder.deliverCrossAccountRole(deliverCrossAccountRole)
     }
 
-    public override fun deliverLogsPermissionArn(deliverLogsPermissionArn: String) {
+    override fun deliverLogsPermissionArn(deliverLogsPermissionArn: String) {
       cdkBuilder.deliverLogsPermissionArn(deliverLogsPermissionArn)
     }
 
-    public override fun destinationOptions(destinationOptions: Any) {
+    override fun destinationOptions(destinationOptions: Any) {
       cdkBuilder.destinationOptions(destinationOptions)
     }
 
-    public override fun logDestination(logDestination: String) {
+    override fun logDestination(logDestination: String) {
       cdkBuilder.logDestination(logDestination)
     }
 
-    public override fun logDestinationType(logDestinationType: String) {
+    override fun logDestinationType(logDestinationType: String) {
       cdkBuilder.logDestinationType(logDestinationType)
     }
 
-    public override fun logFormat(logFormat: String) {
+    override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
     }
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun maxAggregationInterval(maxAggregationInterval: Number) {
+    override fun maxAggregationInterval(maxAggregationInterval: Number) {
       cdkBuilder.maxAggregationInterval(maxAggregationInterval)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trafficType(trafficType: String) {
+    override fun trafficType(trafficType: String) {
       cdkBuilder.trafficType(trafficType)
     }
 
@@ -225,20 +213,15 @@ public open class CfnFlowLog internal constructor(
     public fun perHourPartition(): Any
 
     public interface Builder {
-      public fun fileFormat(fileFormat: String) {
-      }
+      public fun fileFormat(fileFormat: String)
 
-      public fun hiveCompatiblePartitions(hiveCompatiblePartitions: Boolean) {
-      }
+      public fun hiveCompatiblePartitions(hiveCompatiblePartitions: Boolean)
 
-      public fun hiveCompatiblePartitions(hiveCompatiblePartitions: IResolvable) {
-      }
+      public fun hiveCompatiblePartitions(hiveCompatiblePartitions: IResolvable)
 
-      public fun perHourPartition(perHourPartition: Boolean) {
-      }
+      public fun perHourPartition(perHourPartition: Boolean)
 
-      public fun perHourPartition(perHourPartition: IResolvable) {
-      }
+      public fun perHourPartition(perHourPartition: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -246,23 +229,23 @@ public open class CfnFlowLog internal constructor(
           software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty.builder()
 
-      public override fun fileFormat(fileFormat: String) {
+      override fun fileFormat(fileFormat: String) {
         cdkBuilder.fileFormat(fileFormat)
       }
 
-      public override fun hiveCompatiblePartitions(hiveCompatiblePartitions: Boolean) {
+      override fun hiveCompatiblePartitions(hiveCompatiblePartitions: Boolean) {
         cdkBuilder.hiveCompatiblePartitions(hiveCompatiblePartitions)
       }
 
-      public override fun hiveCompatiblePartitions(hiveCompatiblePartitions: IResolvable) {
+      override fun hiveCompatiblePartitions(hiveCompatiblePartitions: IResolvable) {
         cdkBuilder.hiveCompatiblePartitions(hiveCompatiblePartitions.let(IResolvable::unwrap))
       }
 
-      public override fun perHourPartition(perHourPartition: Boolean) {
+      override fun perHourPartition(perHourPartition: Boolean) {
         cdkBuilder.perHourPartition(perHourPartition)
       }
 
-      public override fun perHourPartition(perHourPartition: IResolvable) {
+      override fun perHourPartition(perHourPartition: IResolvable) {
         cdkBuilder.perHourPartition(perHourPartition.let(IResolvable::unwrap))
       }
 
@@ -274,12 +257,11 @@ public open class CfnFlowLog internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty,
     ) : DestinationOptionsProperty {
-      public override fun fileFormat(): String = unwrap(this).getFileFormat()
+      override fun fileFormat(): String = unwrap(this).getFileFormat()
 
-      public override fun hiveCompatiblePartitions(): Any =
-          unwrap(this).getHiveCompatiblePartitions()
+      override fun hiveCompatiblePartitions(): Any = unwrap(this).getHiveCompatiblePartitions()
 
-      public override fun perHourPartition(): Any = unwrap(this).getPerHourPartition()
+      override fun perHourPartition(): Any = unwrap(this).getPerHourPartition()
     }
 
     public companion object {

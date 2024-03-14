@@ -55,22 +55,17 @@ public open class CfnNode internal constructor(
       nodeConfiguration(NodeConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun memberId(memberId: String) {
-    }
+    public fun memberId(memberId: String)
 
-    public fun networkId(networkId: String) {
-    }
+    public fun networkId(networkId: String)
 
-    public fun nodeConfiguration(nodeConfiguration: IResolvable) {
-    }
+    public fun nodeConfiguration(nodeConfiguration: IResolvable)
 
-    public fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty) {
-    }
+    public fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25aeecfc6e7cc309f4cae08c5b752d870903f4d2b570694a11231b1a0f3c8055")
-    public fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -80,27 +75,26 @@ public open class CfnNode internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.managedblockchain.CfnNode.Builder =
         software.amazon.awscdk.services.managedblockchain.CfnNode.Builder.create(scope, id)
 
-    public override fun memberId(memberId: String) {
+    override fun memberId(memberId: String) {
       cdkBuilder.memberId(memberId)
     }
 
-    public override fun networkId(networkId: String) {
+    override fun networkId(networkId: String) {
       cdkBuilder.networkId(networkId)
     }
 
-    public override fun nodeConfiguration(nodeConfiguration: IResolvable) {
+    override fun nodeConfiguration(nodeConfiguration: IResolvable) {
       cdkBuilder.nodeConfiguration(nodeConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty) {
+    override fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty) {
       cdkBuilder.nodeConfiguration(nodeConfiguration.let(NodeConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25aeecfc6e7cc309f4cae08c5b752d870903f4d2b570694a11231b1a0f3c8055")
-    public override
-        fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty.Builder.() -> Unit): Unit
-        = nodeConfiguration(NodeConfigurationProperty(nodeConfiguration))
+    override fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty.Builder.() -> Unit):
+        Unit = nodeConfiguration(NodeConfigurationProperty(nodeConfiguration))
 
     public fun build(): software.amazon.awscdk.services.managedblockchain.CfnNode =
         cdkBuilder.build()
@@ -133,11 +127,9 @@ public open class CfnNode internal constructor(
     public fun instanceType(): String
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -146,11 +138,11 @@ public open class CfnNode internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
@@ -163,9 +155,9 @@ public open class CfnNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnNode.NodeConfigurationProperty,
     ) : NodeConfigurationProperty {
-      public override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
 
-      public override fun instanceType(): String = unwrap(this).getInstanceType()
+      override fun instanceType(): String = unwrap(this).getInstanceType()
     }
 
     public companion object {

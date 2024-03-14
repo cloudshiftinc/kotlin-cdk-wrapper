@@ -151,42 +151,31 @@ public open class HttpApi internal constructor(
   public open fun url(): String? = unwrap(this).getUrl()
 
   public interface Builder {
-    public fun apiName(apiName: String) {
-    }
+    public fun apiName(apiName: String)
 
-    public fun corsPreflight(corsPreflight: CorsPreflightOptions) {
-    }
+    public fun corsPreflight(corsPreflight: CorsPreflightOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b49460585f110b22767f981852b093174e485a77aca089f8d86dde5a8099b33d")
-    public fun corsPreflight(corsPreflight: CorsPreflightOptions.Builder.() -> Unit) {
-    }
+    public fun corsPreflight(corsPreflight: CorsPreflightOptions.Builder.() -> Unit)
 
-    public fun createDefaultStage(createDefaultStage: Boolean) {
-    }
+    public fun createDefaultStage(createDefaultStage: Boolean)
 
-    public fun defaultAuthorizationScopes(defaultAuthorizationScopes: List<String>) {
-    }
+    public fun defaultAuthorizationScopes(defaultAuthorizationScopes: List<String>)
 
-    public fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer) {
-    }
+    public fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer)
 
-    public fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions) {
-    }
+    public fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4e313d90125e87c17209fe208803ecae8b7e44459880754b625235c1f04ac4e")
-    public fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions.Builder.() -> Unit) {
-    }
+    public fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions.Builder.() -> Unit)
 
-    public fun defaultIntegration(defaultIntegration: HttpRouteIntegration) {
-    }
+    public fun defaultIntegration(defaultIntegration: HttpRouteIntegration)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
   }
 
   private class BuilderImpl(
@@ -196,50 +185,50 @@ public open class HttpApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpApi.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpApi.Builder.create(scope, id)
 
-    public override fun apiName(apiName: String) {
+    override fun apiName(apiName: String) {
       cdkBuilder.apiName(apiName)
     }
 
-    public override fun corsPreflight(corsPreflight: CorsPreflightOptions) {
+    override fun corsPreflight(corsPreflight: CorsPreflightOptions) {
       cdkBuilder.corsPreflight(corsPreflight.let(CorsPreflightOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b49460585f110b22767f981852b093174e485a77aca089f8d86dde5a8099b33d")
-    public override fun corsPreflight(corsPreflight: CorsPreflightOptions.Builder.() -> Unit): Unit
-        = corsPreflight(CorsPreflightOptions(corsPreflight))
+    override fun corsPreflight(corsPreflight: CorsPreflightOptions.Builder.() -> Unit): Unit =
+        corsPreflight(CorsPreflightOptions(corsPreflight))
 
-    public override fun createDefaultStage(createDefaultStage: Boolean) {
+    override fun createDefaultStage(createDefaultStage: Boolean) {
       cdkBuilder.createDefaultStage(createDefaultStage)
     }
 
-    public override fun defaultAuthorizationScopes(defaultAuthorizationScopes: List<String>) {
+    override fun defaultAuthorizationScopes(defaultAuthorizationScopes: List<String>) {
       cdkBuilder.defaultAuthorizationScopes(defaultAuthorizationScopes)
     }
 
-    public override fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer) {
+    override fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer) {
       cdkBuilder.defaultAuthorizer(defaultAuthorizer.let(IHttpRouteAuthorizer::unwrap))
     }
 
-    public override fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions) {
+    override fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions) {
       cdkBuilder.defaultDomainMapping(defaultDomainMapping.let(DomainMappingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4e313d90125e87c17209fe208803ecae8b7e44459880754b625235c1f04ac4e")
-    public override
+    override
         fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions.Builder.() -> Unit):
         Unit = defaultDomainMapping(DomainMappingOptions(defaultDomainMapping))
 
-    public override fun defaultIntegration(defaultIntegration: HttpRouteIntegration) {
+    override fun defaultIntegration(defaultIntegration: HttpRouteIntegration) {
       cdkBuilder.defaultIntegration(defaultIntegration.let(HttpRouteIntegration::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
     }
 

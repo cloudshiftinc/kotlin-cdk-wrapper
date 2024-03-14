@@ -23,68 +23,49 @@ public open class SpecRestApi internal constructor(
   public override fun root(): IResource = unwrap(this).getRoot().let(IResource::wrap)
 
   public interface Builder {
-    public fun apiDefinition(apiDefinition: ApiDefinition) {
-    }
+    public fun apiDefinition(apiDefinition: ApiDefinition)
 
-    public fun cloudWatchRole(cloudWatchRole: Boolean) {
-    }
+    public fun cloudWatchRole(cloudWatchRole: Boolean)
 
-    public fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-    }
+    public fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy)
 
-    public fun deploy(deploy: Boolean) {
-    }
+    public fun deploy(deploy: Boolean)
 
-    public fun deployOptions(deployOptions: StageOptions) {
-    }
+    public fun deployOptions(deployOptions: StageOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("758dc6f81ac3ea1bb90e059b8b088a10d0f4c3d7b156b649604d5e6112cd50bd")
-    public fun deployOptions(deployOptions: StageOptions.Builder.() -> Unit) {
-    }
+    public fun deployOptions(deployOptions: StageOptions.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
-    }
+    public fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean)
 
-    public fun domainName(domainName: DomainNameOptions) {
-    }
+    public fun domainName(domainName: DomainNameOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b80c8a9c718f329563b24d3ba2819bfe2c6791a922296beffa47a707d25665db")
-    public fun domainName(domainName: DomainNameOptions.Builder.() -> Unit) {
-    }
+    public fun domainName(domainName: DomainNameOptions.Builder.() -> Unit)
 
-    public fun endpointExportName(endpointExportName: String) {
-    }
+    public fun endpointExportName(endpointExportName: String)
 
-    public fun endpointTypes(endpointTypes: List<EndpointType>) {
-    }
+    public fun endpointTypes(endpointTypes: List<EndpointType>)
 
-    public fun failOnWarnings(failOnWarnings: Boolean) {
-    }
+    public fun failOnWarnings(failOnWarnings: Boolean)
 
-    public fun minCompressionSize(minCompressionSize: Size) {
-    }
+    public fun minCompressionSize(minCompressionSize: Size)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun policy(policy: PolicyDocument) {
-    }
+    public fun policy(policy: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ae5a1977bcc2f7f39aed8bf4f99f237f97db6602689710c9620d5d6cfc9bad5f")
-    public fun policy(policy: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun policy(policy: PolicyDocument.Builder.() -> Unit)
 
-    public fun restApiName(restApiName: String) {
-    }
+    public fun restApiName(restApiName: String)
 
-    public fun retainDeployments(retainDeployments: Boolean) {
-    }
+    public fun retainDeployments(retainDeployments: Boolean)
   }
 
   private class BuilderImpl(
@@ -94,82 +75,82 @@ public open class SpecRestApi internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.SpecRestApi.Builder =
         software.amazon.awscdk.services.apigateway.SpecRestApi.Builder.create(scope, id)
 
-    public override fun apiDefinition(apiDefinition: ApiDefinition) {
+    override fun apiDefinition(apiDefinition: ApiDefinition) {
       cdkBuilder.apiDefinition(apiDefinition.let(ApiDefinition::unwrap))
     }
 
-    public override fun cloudWatchRole(cloudWatchRole: Boolean) {
+    override fun cloudWatchRole(cloudWatchRole: Boolean) {
       cdkBuilder.cloudWatchRole(cloudWatchRole)
     }
 
-    public override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
+    override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
       cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun deploy(deploy: Boolean) {
+    override fun deploy(deploy: Boolean) {
       cdkBuilder.deploy(deploy)
     }
 
-    public override fun deployOptions(deployOptions: StageOptions) {
+    override fun deployOptions(deployOptions: StageOptions) {
       cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("758dc6f81ac3ea1bb90e059b8b088a10d0f4c3d7b156b649604d5e6112cd50bd")
-    public override fun deployOptions(deployOptions: StageOptions.Builder.() -> Unit): Unit =
+    override fun deployOptions(deployOptions: StageOptions.Builder.() -> Unit): Unit =
         deployOptions(StageOptions(deployOptions))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
+    override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: Boolean) {
       cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint)
     }
 
-    public override fun domainName(domainName: DomainNameOptions) {
+    override fun domainName(domainName: DomainNameOptions) {
       cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b80c8a9c718f329563b24d3ba2819bfe2c6791a922296beffa47a707d25665db")
-    public override fun domainName(domainName: DomainNameOptions.Builder.() -> Unit): Unit =
+    override fun domainName(domainName: DomainNameOptions.Builder.() -> Unit): Unit =
         domainName(DomainNameOptions(domainName))
 
-    public override fun endpointExportName(endpointExportName: String) {
+    override fun endpointExportName(endpointExportName: String) {
       cdkBuilder.endpointExportName(endpointExportName)
     }
 
-    public override fun endpointTypes(endpointTypes: List<EndpointType>) {
+    override fun endpointTypes(endpointTypes: List<EndpointType>) {
       cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
     }
 
-    public override fun failOnWarnings(failOnWarnings: Boolean) {
+    override fun failOnWarnings(failOnWarnings: Boolean) {
       cdkBuilder.failOnWarnings(failOnWarnings)
     }
 
-    public override fun minCompressionSize(minCompressionSize: Size) {
+    override fun minCompressionSize(minCompressionSize: Size) {
       cdkBuilder.minCompressionSize(minCompressionSize.let(Size::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun policy(policy: PolicyDocument) {
+    override fun policy(policy: PolicyDocument) {
       cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ae5a1977bcc2f7f39aed8bf4f99f237f97db6602689710c9620d5d6cfc9bad5f")
-    public override fun policy(policy: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun policy(policy: PolicyDocument.Builder.() -> Unit): Unit =
         policy(PolicyDocument(policy))
 
-    public override fun restApiName(restApiName: String) {
+    override fun restApiName(restApiName: String) {
       cdkBuilder.restApiName(restApiName)
     }
 
-    public override fun retainDeployments(retainDeployments: Boolean) {
+    override fun retainDeployments(retainDeployments: Boolean) {
       cdkBuilder.retainDeployments(retainDeployments)
     }
 

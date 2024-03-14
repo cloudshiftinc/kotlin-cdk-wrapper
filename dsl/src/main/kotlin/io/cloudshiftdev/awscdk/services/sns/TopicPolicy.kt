@@ -17,19 +17,15 @@ public open class TopicPolicy internal constructor(
   public open fun document(): PolicyDocument = unwrap(this).getDocument().let(PolicyDocument::wrap)
 
   public interface Builder {
-    public fun enforceSsl(enforceSsl: Boolean) {
-    }
+    public fun enforceSsl(enforceSsl: Boolean)
 
-    public fun policyDocument(policyDocument: PolicyDocument) {
-    }
+    public fun policyDocument(policyDocument: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9a7c2744698ca24c0ae4ca22505105510f722b2d38f07d907481af1470bf2d2")
-    public fun policyDocument(policyDocument: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun policyDocument(policyDocument: PolicyDocument.Builder.() -> Unit)
 
-    public fun topics(topics: List<ITopic>) {
-    }
+    public fun topics(topics: List<ITopic>)
   }
 
   private class BuilderImpl(
@@ -39,20 +35,20 @@ public open class TopicPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sns.TopicPolicy.Builder =
         software.amazon.awscdk.services.sns.TopicPolicy.Builder.create(scope, id)
 
-    public override fun enforceSsl(enforceSsl: Boolean) {
+    override fun enforceSsl(enforceSsl: Boolean) {
       cdkBuilder.enforceSsl(enforceSsl)
     }
 
-    public override fun policyDocument(policyDocument: PolicyDocument) {
+    override fun policyDocument(policyDocument: PolicyDocument) {
       cdkBuilder.policyDocument(policyDocument.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9a7c2744698ca24c0ae4ca22505105510f722b2d38f07d907481af1470bf2d2")
-    public override fun policyDocument(policyDocument: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun policyDocument(policyDocument: PolicyDocument.Builder.() -> Unit): Unit =
         policyDocument(PolicyDocument(policyDocument))
 
-    public override fun topics(topics: List<ITopic>) {
+    override fun topics(topics: List<ITopic>) {
       cdkBuilder.topics(topics.map(ITopic::unwrap))
     }
 

@@ -56,20 +56,15 @@ public open class CfnResourceSet internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resourceTypeList(resourceTypeList: List<String>) {
-    }
+    public fun resourceTypeList(resourceTypeList: List<String>)
 
-    public fun resources(resources: List<String>) {
-    }
+    public fun resources(resources: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnResourceSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fms.CfnResourceSet.Builder =
         software.amazon.awscdk.services.fms.CfnResourceSet.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resourceTypeList(resourceTypeList: List<String>) {
+    override fun resourceTypeList(resourceTypeList: List<String>) {
       cdkBuilder.resourceTypeList(resourceTypeList)
     }
 
-    public override fun resources(resources: List<String>) {
+    override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

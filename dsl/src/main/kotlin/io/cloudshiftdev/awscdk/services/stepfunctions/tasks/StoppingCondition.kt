@@ -7,8 +7,7 @@ public interface StoppingCondition {
   public fun maxRuntime(): Duration? = unwrap(this).getMaxRuntime()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun maxRuntime(maxRuntime: Duration) {
-    }
+    public fun maxRuntime(maxRuntime: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface StoppingCondition {
         software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition.builder()
 
-    public override fun maxRuntime(maxRuntime: Duration) {
+    override fun maxRuntime(maxRuntime: Duration) {
       cdkBuilder.maxRuntime(maxRuntime.let(Duration::unwrap))
     }
 
@@ -27,7 +26,7 @@ public interface StoppingCondition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition,
   ) : StoppingCondition {
-    public override fun maxRuntime(): Duration? = unwrap(this).getMaxRuntime()?.let(Duration::wrap)
+    override fun maxRuntime(): Duration? = unwrap(this).getMaxRuntime()?.let(Duration::wrap)
   }
 
   public companion object {

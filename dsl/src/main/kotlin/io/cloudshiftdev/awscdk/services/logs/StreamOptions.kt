@@ -7,15 +7,14 @@ public interface StreamOptions {
   public fun logStreamName(): String? = unwrap(this).getLogStreamName()
 
   public interface Builder {
-    public fun logStreamName(logStreamName: String) {
-    }
+    public fun logStreamName(logStreamName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.logs.StreamOptions.Builder =
         software.amazon.awscdk.services.logs.StreamOptions.builder()
 
-    public override fun logStreamName(logStreamName: String) {
+    override fun logStreamName(logStreamName: String) {
       cdkBuilder.logStreamName(logStreamName)
     }
 
@@ -25,7 +24,7 @@ public interface StreamOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.StreamOptions,
   ) : StreamOptions {
-    public override fun logStreamName(): String? = unwrap(this).getLogStreamName()
+    override fun logStreamName(): String? = unwrap(this).getLogStreamName()
   }
 
   public companion object {

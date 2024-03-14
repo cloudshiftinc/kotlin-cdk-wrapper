@@ -373,238 +373,172 @@ public open class CfnEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun certificateArn(certificateArn: String) {
-    }
+    public fun certificateArn(certificateArn: String)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun docDbSettings(docDbSettings: IResolvable) {
-    }
+    public fun docDbSettings(docDbSettings: IResolvable)
 
-    public fun docDbSettings(docDbSettings: DocDbSettingsProperty) {
-    }
+    public fun docDbSettings(docDbSettings: DocDbSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6fbde66ac654b5397d727e318fc72d4c5e0ed2add843d1a60ae50a069d8cf78d")
-    public fun docDbSettings(docDbSettings: DocDbSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun docDbSettings(docDbSettings: DocDbSettingsProperty.Builder.() -> Unit)
 
-    public fun dynamoDbSettings(dynamoDbSettings: IResolvable) {
-    }
+    public fun dynamoDbSettings(dynamoDbSettings: IResolvable)
 
-    public fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty) {
-    }
+    public fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5cdc3c3c4090352539fd080a3d02f6645a0a6109d09f40cc53594a993068d096")
-    public fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty.Builder.() -> Unit)
 
-    public fun elasticsearchSettings(elasticsearchSettings: IResolvable) {
-    }
+    public fun elasticsearchSettings(elasticsearchSettings: IResolvable)
 
-    public fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty) {
-    }
+    public fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("889d325b4eeeb0880dc74130a7f1cc5cebd2323685790c333d6149a4f2bfcb8f")
     public
-        fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty.Builder.() -> Unit) {
-    }
+        fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty.Builder.() -> Unit)
 
-    public fun endpointIdentifier(endpointIdentifier: String) {
-    }
+    public fun endpointIdentifier(endpointIdentifier: String)
 
-    public fun endpointType(endpointType: String) {
-    }
+    public fun endpointType(endpointType: String)
 
-    public fun engineName(engineName: String) {
-    }
+    public fun engineName(engineName: String)
 
-    public fun extraConnectionAttributes(extraConnectionAttributes: String) {
-    }
+    public fun extraConnectionAttributes(extraConnectionAttributes: String)
 
-    public fun gcpMySqlSettings(gcpMySqlSettings: IResolvable) {
-    }
+    public fun gcpMySqlSettings(gcpMySqlSettings: IResolvable)
 
-    public fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty) {
-    }
+    public fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("925d4ba9af14d43c38e62d809c4a9bfbfc5cb3d9712b4896f8527703dd9b701e")
-    public fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty.Builder.() -> Unit)
 
-    public fun ibmDb2Settings(ibmDb2Settings: IResolvable) {
-    }
+    public fun ibmDb2Settings(ibmDb2Settings: IResolvable)
 
-    public fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty) {
-    }
+    public fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a55b78aff146203eb19a530ed10a3898c4b42f0d0fc717956cb7c7f6b0c6fac8")
-    public fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty.Builder.() -> Unit) {
-    }
+    public fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty.Builder.() -> Unit)
 
-    public fun kafkaSettings(kafkaSettings: IResolvable) {
-    }
+    public fun kafkaSettings(kafkaSettings: IResolvable)
 
-    public fun kafkaSettings(kafkaSettings: KafkaSettingsProperty) {
-    }
+    public fun kafkaSettings(kafkaSettings: KafkaSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9ed867348022b36c7694b652e12b1cacfa29155ed279f155e9b6a8ede7b2075")
-    public fun kafkaSettings(kafkaSettings: KafkaSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun kafkaSettings(kafkaSettings: KafkaSettingsProperty.Builder.() -> Unit)
 
-    public fun kinesisSettings(kinesisSettings: IResolvable) {
-    }
+    public fun kinesisSettings(kinesisSettings: IResolvable)
 
-    public fun kinesisSettings(kinesisSettings: KinesisSettingsProperty) {
-    }
+    public fun kinesisSettings(kinesisSettings: KinesisSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96defed71e91fdb933b12d6dd79a8a2249d0156ed38c4ecfcd729da4e63e7bd2")
-    public fun kinesisSettings(kinesisSettings: KinesisSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun kinesisSettings(kinesisSettings: KinesisSettingsProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun microsoftSqlServerSettings(microsoftSqlServerSettings: IResolvable) {
-    }
+    public fun microsoftSqlServerSettings(microsoftSqlServerSettings: IResolvable)
 
     public
-        fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty) {
-    }
+        fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adbf309f1b82d81fad56f56705008f24acb04801869f82f113e9ca86220eba07")
     public
-        fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty.Builder.() -> Unit) {
-    }
+        fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty.Builder.() -> Unit)
 
-    public fun mongoDbSettings(mongoDbSettings: IResolvable) {
-    }
+    public fun mongoDbSettings(mongoDbSettings: IResolvable)
 
-    public fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty) {
-    }
+    public fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("050ff78e40a1395c73c5b4f2c039e024a8067554393984a41d14a33f0eac6cf4")
-    public fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty.Builder.() -> Unit)
 
-    public fun mySqlSettings(mySqlSettings: IResolvable) {
-    }
+    public fun mySqlSettings(mySqlSettings: IResolvable)
 
-    public fun mySqlSettings(mySqlSettings: MySqlSettingsProperty) {
-    }
+    public fun mySqlSettings(mySqlSettings: MySqlSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02c1ef3d7d8d9c26762a1b5268ba864ccfdce78bc3570d3083b6493d47e37b54")
-    public fun mySqlSettings(mySqlSettings: MySqlSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun mySqlSettings(mySqlSettings: MySqlSettingsProperty.Builder.() -> Unit)
 
-    public fun neptuneSettings(neptuneSettings: IResolvable) {
-    }
+    public fun neptuneSettings(neptuneSettings: IResolvable)
 
-    public fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty) {
-    }
+    public fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f44b6d9df7919882c0942ce2d41354a6064d5c40384ff1834ce0fa81ae5d2bb7")
-    public fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty.Builder.() -> Unit)
 
-    public fun oracleSettings(oracleSettings: IResolvable) {
-    }
+    public fun oracleSettings(oracleSettings: IResolvable)
 
-    public fun oracleSettings(oracleSettings: OracleSettingsProperty) {
-    }
+    public fun oracleSettings(oracleSettings: OracleSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf0444a7326a153335d36ebdb3dd8d1f3540e068cbdbf7f679c3a4032dccea88")
-    public fun oracleSettings(oracleSettings: OracleSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun oracleSettings(oracleSettings: OracleSettingsProperty.Builder.() -> Unit)
 
-    public fun password(password: String) {
-    }
+    public fun password(password: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
-    }
+    public fun postgreSqlSettings(postgreSqlSettings: IResolvable)
 
-    public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
-    }
+    public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("90679fdd6b6c393ffe4be191fbab0408dfed36b58b34c62d52ff4d5baccc34ce")
-    public
-        fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit)
 
-    public fun redisSettings(redisSettings: IResolvable) {
-    }
+    public fun redisSettings(redisSettings: IResolvable)
 
-    public fun redisSettings(redisSettings: RedisSettingsProperty) {
-    }
+    public fun redisSettings(redisSettings: RedisSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("57864a08b297d92b7b750737cdfc05fd8a6e6de6d220bb98b268830aefc86d30")
-    public fun redisSettings(redisSettings: RedisSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun redisSettings(redisSettings: RedisSettingsProperty.Builder.() -> Unit)
 
-    public fun redshiftSettings(redshiftSettings: IResolvable) {
-    }
+    public fun redshiftSettings(redshiftSettings: IResolvable)
 
-    public fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty) {
-    }
+    public fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11b670292b1e44ce7dda450ac19ef54cc289ada19014482359d029ad114fcb7e")
-    public fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty.Builder.() -> Unit)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun s3Settings(s3Settings: IResolvable) {
-    }
+    public fun s3Settings(s3Settings: IResolvable)
 
-    public fun s3Settings(s3Settings: S3SettingsProperty) {
-    }
+    public fun s3Settings(s3Settings: S3SettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f3e786c777d40066e00740f0ac855a1f9f1dbcb38b044b134764b13af1cbcce")
-    public fun s3Settings(s3Settings: S3SettingsProperty.Builder.() -> Unit) {
-    }
+    public fun s3Settings(s3Settings: S3SettingsProperty.Builder.() -> Unit)
 
-    public fun serverName(serverName: String) {
-    }
+    public fun serverName(serverName: String)
 
-    public fun sslMode(sslMode: String) {
-    }
+    public fun sslMode(sslMode: String)
 
-    public fun sybaseSettings(sybaseSettings: IResolvable) {
-    }
+    public fun sybaseSettings(sybaseSettings: IResolvable)
 
-    public fun sybaseSettings(sybaseSettings: SybaseSettingsProperty) {
-    }
+    public fun sybaseSettings(sybaseSettings: SybaseSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40dcc88d57b0b2dd6f75aa352d9dae019e3e8de6e8a1892482e39a7ef92fe742")
-    public fun sybaseSettings(sybaseSettings: SybaseSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun sybaseSettings(sybaseSettings: SybaseSettingsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -614,292 +548,285 @@ public open class CfnEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnEndpoint.Builder =
         software.amazon.awscdk.services.dms.CfnEndpoint.Builder.create(scope, id)
 
-    public override fun certificateArn(certificateArn: String) {
+    override fun certificateArn(certificateArn: String) {
       cdkBuilder.certificateArn(certificateArn)
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun docDbSettings(docDbSettings: IResolvable) {
+    override fun docDbSettings(docDbSettings: IResolvable) {
       cdkBuilder.docDbSettings(docDbSettings.let(IResolvable::unwrap))
     }
 
-    public override fun docDbSettings(docDbSettings: DocDbSettingsProperty) {
+    override fun docDbSettings(docDbSettings: DocDbSettingsProperty) {
       cdkBuilder.docDbSettings(docDbSettings.let(DocDbSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6fbde66ac654b5397d727e318fc72d4c5e0ed2add843d1a60ae50a069d8cf78d")
-    public override fun docDbSettings(docDbSettings: DocDbSettingsProperty.Builder.() -> Unit): Unit
-        = docDbSettings(DocDbSettingsProperty(docDbSettings))
+    override fun docDbSettings(docDbSettings: DocDbSettingsProperty.Builder.() -> Unit): Unit =
+        docDbSettings(DocDbSettingsProperty(docDbSettings))
 
-    public override fun dynamoDbSettings(dynamoDbSettings: IResolvable) {
+    override fun dynamoDbSettings(dynamoDbSettings: IResolvable) {
       cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(IResolvable::unwrap))
     }
 
-    public override fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty) {
+    override fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty) {
       cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(DynamoDbSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5cdc3c3c4090352539fd080a3d02f6645a0a6109d09f40cc53594a993068d096")
-    public override
-        fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty.Builder.() -> Unit): Unit =
-        dynamoDbSettings(DynamoDbSettingsProperty(dynamoDbSettings))
+    override fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty.Builder.() -> Unit):
+        Unit = dynamoDbSettings(DynamoDbSettingsProperty(dynamoDbSettings))
 
-    public override fun elasticsearchSettings(elasticsearchSettings: IResolvable) {
+    override fun elasticsearchSettings(elasticsearchSettings: IResolvable) {
       cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(IResolvable::unwrap))
     }
 
-    public override
-        fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty) {
+    override fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty) {
       cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(ElasticsearchSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("889d325b4eeeb0880dc74130a7f1cc5cebd2323685790c333d6149a4f2bfcb8f")
-    public override
+    override
         fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty.Builder.() -> Unit):
         Unit = elasticsearchSettings(ElasticsearchSettingsProperty(elasticsearchSettings))
 
-    public override fun endpointIdentifier(endpointIdentifier: String) {
+    override fun endpointIdentifier(endpointIdentifier: String) {
       cdkBuilder.endpointIdentifier(endpointIdentifier)
     }
 
-    public override fun endpointType(endpointType: String) {
+    override fun endpointType(endpointType: String) {
       cdkBuilder.endpointType(endpointType)
     }
 
-    public override fun engineName(engineName: String) {
+    override fun engineName(engineName: String) {
       cdkBuilder.engineName(engineName)
     }
 
-    public override fun extraConnectionAttributes(extraConnectionAttributes: String) {
+    override fun extraConnectionAttributes(extraConnectionAttributes: String) {
       cdkBuilder.extraConnectionAttributes(extraConnectionAttributes)
     }
 
-    public override fun gcpMySqlSettings(gcpMySqlSettings: IResolvable) {
+    override fun gcpMySqlSettings(gcpMySqlSettings: IResolvable) {
       cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(IResolvable::unwrap))
     }
 
-    public override fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty) {
+    override fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty) {
       cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(GcpMySQLSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("925d4ba9af14d43c38e62d809c4a9bfbfc5cb3d9712b4896f8527703dd9b701e")
-    public override
-        fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty.Builder.() -> Unit): Unit =
-        gcpMySqlSettings(GcpMySQLSettingsProperty(gcpMySqlSettings))
+    override fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty.Builder.() -> Unit):
+        Unit = gcpMySqlSettings(GcpMySQLSettingsProperty(gcpMySqlSettings))
 
-    public override fun ibmDb2Settings(ibmDb2Settings: IResolvable) {
+    override fun ibmDb2Settings(ibmDb2Settings: IResolvable) {
       cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IResolvable::unwrap))
     }
 
-    public override fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty) {
+    override fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty) {
       cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IbmDb2SettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a55b78aff146203eb19a530ed10a3898c4b42f0d0fc717956cb7c7f6b0c6fac8")
-    public override fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty.Builder.() -> Unit):
-        Unit = ibmDb2Settings(IbmDb2SettingsProperty(ibmDb2Settings))
+    override fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty.Builder.() -> Unit): Unit =
+        ibmDb2Settings(IbmDb2SettingsProperty(ibmDb2Settings))
 
-    public override fun kafkaSettings(kafkaSettings: IResolvable) {
+    override fun kafkaSettings(kafkaSettings: IResolvable) {
       cdkBuilder.kafkaSettings(kafkaSettings.let(IResolvable::unwrap))
     }
 
-    public override fun kafkaSettings(kafkaSettings: KafkaSettingsProperty) {
+    override fun kafkaSettings(kafkaSettings: KafkaSettingsProperty) {
       cdkBuilder.kafkaSettings(kafkaSettings.let(KafkaSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9ed867348022b36c7694b652e12b1cacfa29155ed279f155e9b6a8ede7b2075")
-    public override fun kafkaSettings(kafkaSettings: KafkaSettingsProperty.Builder.() -> Unit): Unit
-        = kafkaSettings(KafkaSettingsProperty(kafkaSettings))
+    override fun kafkaSettings(kafkaSettings: KafkaSettingsProperty.Builder.() -> Unit): Unit =
+        kafkaSettings(KafkaSettingsProperty(kafkaSettings))
 
-    public override fun kinesisSettings(kinesisSettings: IResolvable) {
+    override fun kinesisSettings(kinesisSettings: IResolvable) {
       cdkBuilder.kinesisSettings(kinesisSettings.let(IResolvable::unwrap))
     }
 
-    public override fun kinesisSettings(kinesisSettings: KinesisSettingsProperty) {
+    override fun kinesisSettings(kinesisSettings: KinesisSettingsProperty) {
       cdkBuilder.kinesisSettings(kinesisSettings.let(KinesisSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96defed71e91fdb933b12d6dd79a8a2249d0156ed38c4ecfcd729da4e63e7bd2")
-    public override
-        fun kinesisSettings(kinesisSettings: KinesisSettingsProperty.Builder.() -> Unit): Unit =
-        kinesisSettings(KinesisSettingsProperty(kinesisSettings))
+    override fun kinesisSettings(kinesisSettings: KinesisSettingsProperty.Builder.() -> Unit): Unit
+        = kinesisSettings(KinesisSettingsProperty(kinesisSettings))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun microsoftSqlServerSettings(microsoftSqlServerSettings: IResolvable) {
+    override fun microsoftSqlServerSettings(microsoftSqlServerSettings: IResolvable) {
       cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty) {
       cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(MicrosoftSqlServerSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adbf309f1b82d81fad56f56705008f24acb04801869f82f113e9ca86220eba07")
-    public override
+    override
         fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty.Builder.() -> Unit):
         Unit =
         microsoftSqlServerSettings(MicrosoftSqlServerSettingsProperty(microsoftSqlServerSettings))
 
-    public override fun mongoDbSettings(mongoDbSettings: IResolvable) {
+    override fun mongoDbSettings(mongoDbSettings: IResolvable) {
       cdkBuilder.mongoDbSettings(mongoDbSettings.let(IResolvable::unwrap))
     }
 
-    public override fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty) {
+    override fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty) {
       cdkBuilder.mongoDbSettings(mongoDbSettings.let(MongoDbSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("050ff78e40a1395c73c5b4f2c039e024a8067554393984a41d14a33f0eac6cf4")
-    public override
-        fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty.Builder.() -> Unit): Unit =
-        mongoDbSettings(MongoDbSettingsProperty(mongoDbSettings))
+    override fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty.Builder.() -> Unit): Unit
+        = mongoDbSettings(MongoDbSettingsProperty(mongoDbSettings))
 
-    public override fun mySqlSettings(mySqlSettings: IResolvable) {
+    override fun mySqlSettings(mySqlSettings: IResolvable) {
       cdkBuilder.mySqlSettings(mySqlSettings.let(IResolvable::unwrap))
     }
 
-    public override fun mySqlSettings(mySqlSettings: MySqlSettingsProperty) {
+    override fun mySqlSettings(mySqlSettings: MySqlSettingsProperty) {
       cdkBuilder.mySqlSettings(mySqlSettings.let(MySqlSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02c1ef3d7d8d9c26762a1b5268ba864ccfdce78bc3570d3083b6493d47e37b54")
-    public override fun mySqlSettings(mySqlSettings: MySqlSettingsProperty.Builder.() -> Unit): Unit
-        = mySqlSettings(MySqlSettingsProperty(mySqlSettings))
+    override fun mySqlSettings(mySqlSettings: MySqlSettingsProperty.Builder.() -> Unit): Unit =
+        mySqlSettings(MySqlSettingsProperty(mySqlSettings))
 
-    public override fun neptuneSettings(neptuneSettings: IResolvable) {
+    override fun neptuneSettings(neptuneSettings: IResolvable) {
       cdkBuilder.neptuneSettings(neptuneSettings.let(IResolvable::unwrap))
     }
 
-    public override fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty) {
+    override fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty) {
       cdkBuilder.neptuneSettings(neptuneSettings.let(NeptuneSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f44b6d9df7919882c0942ce2d41354a6064d5c40384ff1834ce0fa81ae5d2bb7")
-    public override
-        fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty.Builder.() -> Unit): Unit =
-        neptuneSettings(NeptuneSettingsProperty(neptuneSettings))
+    override fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty.Builder.() -> Unit): Unit
+        = neptuneSettings(NeptuneSettingsProperty(neptuneSettings))
 
-    public override fun oracleSettings(oracleSettings: IResolvable) {
+    override fun oracleSettings(oracleSettings: IResolvable) {
       cdkBuilder.oracleSettings(oracleSettings.let(IResolvable::unwrap))
     }
 
-    public override fun oracleSettings(oracleSettings: OracleSettingsProperty) {
+    override fun oracleSettings(oracleSettings: OracleSettingsProperty) {
       cdkBuilder.oracleSettings(oracleSettings.let(OracleSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf0444a7326a153335d36ebdb3dd8d1f3540e068cbdbf7f679c3a4032dccea88")
-    public override fun oracleSettings(oracleSettings: OracleSettingsProperty.Builder.() -> Unit):
-        Unit = oracleSettings(OracleSettingsProperty(oracleSettings))
+    override fun oracleSettings(oracleSettings: OracleSettingsProperty.Builder.() -> Unit): Unit =
+        oracleSettings(OracleSettingsProperty(oracleSettings))
 
-    public override fun password(password: String) {
+    override fun password(password: String) {
       cdkBuilder.password(password)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
+    override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
       cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
     }
 
-    public override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
+    override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
       cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("90679fdd6b6c393ffe4be191fbab0408dfed36b58b34c62d52ff4d5baccc34ce")
-    public override
+    override
         fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit):
         Unit = postgreSqlSettings(PostgreSqlSettingsProperty(postgreSqlSettings))
 
-    public override fun redisSettings(redisSettings: IResolvable) {
+    override fun redisSettings(redisSettings: IResolvable) {
       cdkBuilder.redisSettings(redisSettings.let(IResolvable::unwrap))
     }
 
-    public override fun redisSettings(redisSettings: RedisSettingsProperty) {
+    override fun redisSettings(redisSettings: RedisSettingsProperty) {
       cdkBuilder.redisSettings(redisSettings.let(RedisSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("57864a08b297d92b7b750737cdfc05fd8a6e6de6d220bb98b268830aefc86d30")
-    public override fun redisSettings(redisSettings: RedisSettingsProperty.Builder.() -> Unit): Unit
-        = redisSettings(RedisSettingsProperty(redisSettings))
+    override fun redisSettings(redisSettings: RedisSettingsProperty.Builder.() -> Unit): Unit =
+        redisSettings(RedisSettingsProperty(redisSettings))
 
-    public override fun redshiftSettings(redshiftSettings: IResolvable) {
+    override fun redshiftSettings(redshiftSettings: IResolvable) {
       cdkBuilder.redshiftSettings(redshiftSettings.let(IResolvable::unwrap))
     }
 
-    public override fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty) {
+    override fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty) {
       cdkBuilder.redshiftSettings(redshiftSettings.let(RedshiftSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11b670292b1e44ce7dda450ac19ef54cc289ada19014482359d029ad114fcb7e")
-    public override
-        fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty.Builder.() -> Unit): Unit =
-        redshiftSettings(RedshiftSettingsProperty(redshiftSettings))
+    override fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty.Builder.() -> Unit):
+        Unit = redshiftSettings(RedshiftSettingsProperty(redshiftSettings))
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun s3Settings(s3Settings: IResolvable) {
+    override fun s3Settings(s3Settings: IResolvable) {
       cdkBuilder.s3Settings(s3Settings.let(IResolvable::unwrap))
     }
 
-    public override fun s3Settings(s3Settings: S3SettingsProperty) {
+    override fun s3Settings(s3Settings: S3SettingsProperty) {
       cdkBuilder.s3Settings(s3Settings.let(S3SettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f3e786c777d40066e00740f0ac855a1f9f1dbcb38b044b134764b13af1cbcce")
-    public override fun s3Settings(s3Settings: S3SettingsProperty.Builder.() -> Unit): Unit =
+    override fun s3Settings(s3Settings: S3SettingsProperty.Builder.() -> Unit): Unit =
         s3Settings(S3SettingsProperty(s3Settings))
 
-    public override fun serverName(serverName: String) {
+    override fun serverName(serverName: String) {
       cdkBuilder.serverName(serverName)
     }
 
-    public override fun sslMode(sslMode: String) {
+    override fun sslMode(sslMode: String) {
       cdkBuilder.sslMode(sslMode)
     }
 
-    public override fun sybaseSettings(sybaseSettings: IResolvable) {
+    override fun sybaseSettings(sybaseSettings: IResolvable) {
       cdkBuilder.sybaseSettings(sybaseSettings.let(IResolvable::unwrap))
     }
 
-    public override fun sybaseSettings(sybaseSettings: SybaseSettingsProperty) {
+    override fun sybaseSettings(sybaseSettings: SybaseSettingsProperty) {
       cdkBuilder.sybaseSettings(sybaseSettings.let(SybaseSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40dcc88d57b0b2dd6f75aa352d9dae019e3e8de6e8a1892482e39a7ef92fe742")
-    public override fun sybaseSettings(sybaseSettings: SybaseSettingsProperty.Builder.() -> Unit):
-        Unit = sybaseSettings(SybaseSettingsProperty(sybaseSettings))
+    override fun sybaseSettings(sybaseSettings: SybaseSettingsProperty.Builder.() -> Unit): Unit =
+        sybaseSettings(SybaseSettingsProperty(sybaseSettings))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 
@@ -949,35 +876,25 @@ public open class CfnEndpoint internal constructor(
     public fun targetDbType(): String? = unwrap(this).getTargetDbType()
 
     public interface Builder {
-      public fun afterConnectScript(afterConnectScript: String) {
-      }
+      public fun afterConnectScript(afterConnectScript: String)
 
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
-      }
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean)
 
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
-      }
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable)
 
-      public fun eventsPollInterval(eventsPollInterval: Number) {
-      }
+      public fun eventsPollInterval(eventsPollInterval: Number)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun parallelLoadThreads(parallelLoadThreads: Number) {
-      }
+      public fun parallelLoadThreads(parallelLoadThreads: Number)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun serverTimezone(serverTimezone: String) {
-      }
+      public fun serverTimezone(serverTimezone: String)
 
-      public fun targetDbType(targetDbType: String) {
-      }
+      public fun targetDbType(targetDbType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -985,44 +902,43 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty.builder()
 
-      public override fun afterConnectScript(afterConnectScript: String) {
+      override fun afterConnectScript(afterConnectScript: String) {
         cdkBuilder.afterConnectScript(afterConnectScript)
       }
 
-      public override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
         cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch)
       }
 
-      public override
-          fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
         cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
       }
 
-      public override fun eventsPollInterval(eventsPollInterval: Number) {
+      override fun eventsPollInterval(eventsPollInterval: Number) {
         cdkBuilder.eventsPollInterval(eventsPollInterval)
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun parallelLoadThreads(parallelLoadThreads: Number) {
+      override fun parallelLoadThreads(parallelLoadThreads: Number) {
         cdkBuilder.parallelLoadThreads(parallelLoadThreads)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun serverTimezone(serverTimezone: String) {
+      override fun serverTimezone(serverTimezone: String) {
         cdkBuilder.serverTimezone(serverTimezone)
       }
 
-      public override fun targetDbType(targetDbType: String) {
+      override fun targetDbType(targetDbType: String) {
         cdkBuilder.targetDbType(targetDbType)
       }
 
@@ -1033,26 +949,25 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.MySqlSettingsProperty,
     ) : MySqlSettingsProperty {
-      public override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
 
-      public override fun cleanSourceMetadataOnMismatch(): Any? =
+      override fun cleanSourceMetadataOnMismatch(): Any? =
           unwrap(this).getCleanSourceMetadataOnMismatch()
 
-      public override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
+      override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+      override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
+      override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
 
-      public override fun targetDbType(): String? = unwrap(this).getTargetDbType()
+      override fun targetDbType(): String? = unwrap(this).getTargetDbType()
     }
 
     public companion object {
@@ -1079,8 +994,7 @@ public open class CfnEndpoint internal constructor(
     public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
 
     public interface Builder {
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-      }
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1088,7 +1002,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty.builder()
 
-      public override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
         cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
       }
 
@@ -1100,7 +1014,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.DynamoDbSettingsProperty,
     ) : DynamoDbSettingsProperty {
-      public override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
     }
 
     public companion object {
@@ -1161,80 +1075,55 @@ public open class CfnEndpoint internal constructor(
     public fun topic(): String? = unwrap(this).getTopic()
 
     public interface Builder {
-      public fun broker(broker: String) {
-      }
+      public fun broker(broker: String)
 
-      public fun includeControlDetails(includeControlDetails: Boolean) {
-      }
+      public fun includeControlDetails(includeControlDetails: Boolean)
 
-      public fun includeControlDetails(includeControlDetails: IResolvable) {
-      }
+      public fun includeControlDetails(includeControlDetails: IResolvable)
 
-      public fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
-      }
+      public fun includeNullAndEmpty(includeNullAndEmpty: Boolean)
 
-      public fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
-      }
+      public fun includeNullAndEmpty(includeNullAndEmpty: IResolvable)
 
-      public fun includePartitionValue(includePartitionValue: Boolean) {
-      }
+      public fun includePartitionValue(includePartitionValue: Boolean)
 
-      public fun includePartitionValue(includePartitionValue: IResolvable) {
-      }
+      public fun includePartitionValue(includePartitionValue: IResolvable)
 
-      public fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
-      }
+      public fun includeTableAlterOperations(includeTableAlterOperations: Boolean)
 
-      public fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
-      }
+      public fun includeTableAlterOperations(includeTableAlterOperations: IResolvable)
 
-      public fun includeTransactionDetails(includeTransactionDetails: Boolean) {
-      }
+      public fun includeTransactionDetails(includeTransactionDetails: Boolean)
 
-      public fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
-      }
+      public fun includeTransactionDetails(includeTransactionDetails: IResolvable)
 
-      public fun messageFormat(messageFormat: String) {
-      }
+      public fun messageFormat(messageFormat: String)
 
-      public fun messageMaxBytes(messageMaxBytes: Number) {
-      }
+      public fun messageMaxBytes(messageMaxBytes: Number)
 
-      public fun noHexPrefix(noHexPrefix: Boolean) {
-      }
+      public fun noHexPrefix(noHexPrefix: Boolean)
 
-      public fun noHexPrefix(noHexPrefix: IResolvable) {
-      }
+      public fun noHexPrefix(noHexPrefix: IResolvable)
 
-      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
-      }
+      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean)
 
-      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
-      }
+      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable)
 
-      public fun saslPassword(saslPassword: String) {
-      }
+      public fun saslPassword(saslPassword: String)
 
-      public fun saslUserName(saslUserName: String) {
-      }
+      public fun saslUserName(saslUserName: String)
 
-      public fun securityProtocol(securityProtocol: String) {
-      }
+      public fun securityProtocol(securityProtocol: String)
 
-      public fun sslCaCertificateArn(sslCaCertificateArn: String) {
-      }
+      public fun sslCaCertificateArn(sslCaCertificateArn: String)
 
-      public fun sslClientCertificateArn(sslClientCertificateArn: String) {
-      }
+      public fun sslClientCertificateArn(sslClientCertificateArn: String)
 
-      public fun sslClientKeyArn(sslClientKeyArn: String) {
-      }
+      public fun sslClientKeyArn(sslClientKeyArn: String)
 
-      public fun sslClientKeyPassword(sslClientKeyPassword: String) {
-      }
+      public fun sslClientKeyPassword(sslClientKeyPassword: String)
 
-      public fun topic(topic: String) {
-      }
+      public fun topic(topic: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1242,103 +1131,103 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty.builder()
 
-      public override fun broker(broker: String) {
+      override fun broker(broker: String) {
         cdkBuilder.broker(broker)
       }
 
-      public override fun includeControlDetails(includeControlDetails: Boolean) {
+      override fun includeControlDetails(includeControlDetails: Boolean) {
         cdkBuilder.includeControlDetails(includeControlDetails)
       }
 
-      public override fun includeControlDetails(includeControlDetails: IResolvable) {
+      override fun includeControlDetails(includeControlDetails: IResolvable) {
         cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable::unwrap))
       }
 
-      public override fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
+      override fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
         cdkBuilder.includeNullAndEmpty(includeNullAndEmpty)
       }
 
-      public override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
+      override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
         cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable::unwrap))
       }
 
-      public override fun includePartitionValue(includePartitionValue: Boolean) {
+      override fun includePartitionValue(includePartitionValue: Boolean) {
         cdkBuilder.includePartitionValue(includePartitionValue)
       }
 
-      public override fun includePartitionValue(includePartitionValue: IResolvable) {
+      override fun includePartitionValue(includePartitionValue: IResolvable) {
         cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable::unwrap))
       }
 
-      public override fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
+      override fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
         cdkBuilder.includeTableAlterOperations(includeTableAlterOperations)
       }
 
-      public override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
+      override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
         cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable::unwrap))
       }
 
-      public override fun includeTransactionDetails(includeTransactionDetails: Boolean) {
+      override fun includeTransactionDetails(includeTransactionDetails: Boolean) {
         cdkBuilder.includeTransactionDetails(includeTransactionDetails)
       }
 
-      public override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
+      override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
         cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable::unwrap))
       }
 
-      public override fun messageFormat(messageFormat: String) {
+      override fun messageFormat(messageFormat: String) {
         cdkBuilder.messageFormat(messageFormat)
       }
 
-      public override fun messageMaxBytes(messageMaxBytes: Number) {
+      override fun messageMaxBytes(messageMaxBytes: Number) {
         cdkBuilder.messageMaxBytes(messageMaxBytes)
       }
 
-      public override fun noHexPrefix(noHexPrefix: Boolean) {
+      override fun noHexPrefix(noHexPrefix: Boolean) {
         cdkBuilder.noHexPrefix(noHexPrefix)
       }
 
-      public override fun noHexPrefix(noHexPrefix: IResolvable) {
+      override fun noHexPrefix(noHexPrefix: IResolvable) {
         cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable::unwrap))
       }
 
-      public override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
+      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
         cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable)
       }
 
-      public override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
+      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
         cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable::unwrap))
       }
 
-      public override fun saslPassword(saslPassword: String) {
+      override fun saslPassword(saslPassword: String) {
         cdkBuilder.saslPassword(saslPassword)
       }
 
-      public override fun saslUserName(saslUserName: String) {
+      override fun saslUserName(saslUserName: String) {
         cdkBuilder.saslUserName(saslUserName)
       }
 
-      public override fun securityProtocol(securityProtocol: String) {
+      override fun securityProtocol(securityProtocol: String) {
         cdkBuilder.securityProtocol(securityProtocol)
       }
 
-      public override fun sslCaCertificateArn(sslCaCertificateArn: String) {
+      override fun sslCaCertificateArn(sslCaCertificateArn: String) {
         cdkBuilder.sslCaCertificateArn(sslCaCertificateArn)
       }
 
-      public override fun sslClientCertificateArn(sslClientCertificateArn: String) {
+      override fun sslClientCertificateArn(sslClientCertificateArn: String) {
         cdkBuilder.sslClientCertificateArn(sslClientCertificateArn)
       }
 
-      public override fun sslClientKeyArn(sslClientKeyArn: String) {
+      override fun sslClientKeyArn(sslClientKeyArn: String) {
         cdkBuilder.sslClientKeyArn(sslClientKeyArn)
       }
 
-      public override fun sslClientKeyPassword(sslClientKeyPassword: String) {
+      override fun sslClientKeyPassword(sslClientKeyPassword: String) {
         cdkBuilder.sslClientKeyPassword(sslClientKeyPassword)
       }
 
-      public override fun topic(topic: String) {
+      override fun topic(topic: String) {
         cdkBuilder.topic(topic)
       }
 
@@ -1349,45 +1238,43 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.KafkaSettingsProperty,
     ) : KafkaSettingsProperty {
-      public override fun broker(): String? = unwrap(this).getBroker()
+      override fun broker(): String? = unwrap(this).getBroker()
 
-      public override fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
+      override fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
 
-      public override fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
+      override fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
 
-      public override fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
+      override fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
 
-      public override fun includeTableAlterOperations(): Any? =
+      override fun includeTableAlterOperations(): Any? =
           unwrap(this).getIncludeTableAlterOperations()
 
-      public override fun includeTransactionDetails(): Any? =
-          unwrap(this).getIncludeTransactionDetails()
+      override fun includeTransactionDetails(): Any? = unwrap(this).getIncludeTransactionDetails()
 
-      public override fun messageFormat(): String? = unwrap(this).getMessageFormat()
+      override fun messageFormat(): String? = unwrap(this).getMessageFormat()
 
-      public override fun messageMaxBytes(): Number? = unwrap(this).getMessageMaxBytes()
+      override fun messageMaxBytes(): Number? = unwrap(this).getMessageMaxBytes()
 
-      public override fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
+      override fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
 
-      public override fun partitionIncludeSchemaTable(): Any? =
+      override fun partitionIncludeSchemaTable(): Any? =
           unwrap(this).getPartitionIncludeSchemaTable()
 
-      public override fun saslPassword(): String? = unwrap(this).getSaslPassword()
+      override fun saslPassword(): String? = unwrap(this).getSaslPassword()
 
-      public override fun saslUserName(): String? = unwrap(this).getSaslUserName()
+      override fun saslUserName(): String? = unwrap(this).getSaslUserName()
 
-      public override fun securityProtocol(): String? = unwrap(this).getSecurityProtocol()
+      override fun securityProtocol(): String? = unwrap(this).getSecurityProtocol()
 
-      public override fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
+      override fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
 
-      public override fun sslClientCertificateArn(): String? =
-          unwrap(this).getSslClientCertificateArn()
+      override fun sslClientCertificateArn(): String? = unwrap(this).getSslClientCertificateArn()
 
-      public override fun sslClientKeyArn(): String? = unwrap(this).getSslClientKeyArn()
+      override fun sslClientKeyArn(): String? = unwrap(this).getSslClientKeyArn()
 
-      public override fun sslClientKeyPassword(): String? = unwrap(this).getSslClientKeyPassword()
+      override fun sslClientKeyPassword(): String? = unwrap(this).getSslClientKeyPassword()
 
-      public override fun topic(): String? = unwrap(this).getTopic()
+      override fun topic(): String? = unwrap(this).getTopic()
     }
 
     public companion object {
@@ -1487,157 +1374,106 @@ public open class CfnEndpoint internal constructor(
     public fun usePathPrefix(): String? = unwrap(this).getUsePathPrefix()
 
     public interface Builder {
-      public fun accessAlternateDirectly(accessAlternateDirectly: Boolean) {
-      }
+      public fun accessAlternateDirectly(accessAlternateDirectly: Boolean)
 
-      public fun accessAlternateDirectly(accessAlternateDirectly: IResolvable) {
-      }
+      public fun accessAlternateDirectly(accessAlternateDirectly: IResolvable)
 
-      public fun addSupplementalLogging(addSupplementalLogging: Boolean) {
-      }
+      public fun addSupplementalLogging(addSupplementalLogging: Boolean)
 
-      public fun addSupplementalLogging(addSupplementalLogging: IResolvable) {
-      }
+      public fun addSupplementalLogging(addSupplementalLogging: IResolvable)
 
-      public fun additionalArchivedLogDestId(additionalArchivedLogDestId: Number) {
-      }
+      public fun additionalArchivedLogDestId(additionalArchivedLogDestId: Number)
 
-      public fun allowSelectNestedTables(allowSelectNestedTables: Boolean) {
-      }
+      public fun allowSelectNestedTables(allowSelectNestedTables: Boolean)
 
-      public fun allowSelectNestedTables(allowSelectNestedTables: IResolvable) {
-      }
+      public fun allowSelectNestedTables(allowSelectNestedTables: IResolvable)
 
-      public fun archivedLogDestId(archivedLogDestId: Number) {
-      }
+      public fun archivedLogDestId(archivedLogDestId: Number)
 
-      public fun archivedLogsOnly(archivedLogsOnly: Boolean) {
-      }
+      public fun archivedLogsOnly(archivedLogsOnly: Boolean)
 
-      public fun archivedLogsOnly(archivedLogsOnly: IResolvable) {
-      }
+      public fun archivedLogsOnly(archivedLogsOnly: IResolvable)
 
-      public fun asmPassword(asmPassword: String) {
-      }
+      public fun asmPassword(asmPassword: String)
 
-      public fun asmServer(asmServer: String) {
-      }
+      public fun asmServer(asmServer: String)
 
-      public fun asmUser(asmUser: String) {
-      }
+      public fun asmUser(asmUser: String)
 
-      public fun charLengthSemantics(charLengthSemantics: String) {
-      }
+      public fun charLengthSemantics(charLengthSemantics: String)
 
-      public fun directPathNoLog(directPathNoLog: Boolean) {
-      }
+      public fun directPathNoLog(directPathNoLog: Boolean)
 
-      public fun directPathNoLog(directPathNoLog: IResolvable) {
-      }
+      public fun directPathNoLog(directPathNoLog: IResolvable)
 
-      public fun directPathParallelLoad(directPathParallelLoad: Boolean) {
-      }
+      public fun directPathParallelLoad(directPathParallelLoad: Boolean)
 
-      public fun directPathParallelLoad(directPathParallelLoad: IResolvable) {
-      }
+      public fun directPathParallelLoad(directPathParallelLoad: IResolvable)
 
-      public fun enableHomogenousTablespace(enableHomogenousTablespace: Boolean) {
-      }
+      public fun enableHomogenousTablespace(enableHomogenousTablespace: Boolean)
 
-      public fun enableHomogenousTablespace(enableHomogenousTablespace: IResolvable) {
-      }
+      public fun enableHomogenousTablespace(enableHomogenousTablespace: IResolvable)
 
-      public fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable) {
-      }
+      public fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable)
 
-      public fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>) {
-      }
+      public fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>)
 
-      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
-      }
+      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean)
 
-      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
-      }
+      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable)
 
-      public fun numberDatatypeScale(numberDatatypeScale: Number) {
-      }
+      public fun numberDatatypeScale(numberDatatypeScale: Number)
 
-      public fun oraclePathPrefix(oraclePathPrefix: String) {
-      }
+      public fun oraclePathPrefix(oraclePathPrefix: String)
 
-      public fun parallelAsmReadThreads(parallelAsmReadThreads: Number) {
-      }
+      public fun parallelAsmReadThreads(parallelAsmReadThreads: Number)
 
-      public fun readAheadBlocks(readAheadBlocks: Number) {
-      }
+      public fun readAheadBlocks(readAheadBlocks: Number)
 
-      public fun readTableSpaceName(readTableSpaceName: Boolean) {
-      }
+      public fun readTableSpaceName(readTableSpaceName: Boolean)
 
-      public fun readTableSpaceName(readTableSpaceName: IResolvable) {
-      }
+      public fun readTableSpaceName(readTableSpaceName: IResolvable)
 
-      public fun replacePathPrefix(replacePathPrefix: Boolean) {
-      }
+      public fun replacePathPrefix(replacePathPrefix: Boolean)
 
-      public fun replacePathPrefix(replacePathPrefix: IResolvable) {
-      }
+      public fun replacePathPrefix(replacePathPrefix: IResolvable)
 
-      public fun retryInterval(retryInterval: Number) {
-      }
+      public fun retryInterval(retryInterval: Number)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
+
+      public fun secretsManagerOracleAsmAccessRoleArn(secretsManagerOracleAsmAccessRoleArn: String)
+
+      public fun secretsManagerOracleAsmSecretId(secretsManagerOracleAsmSecretId: String)
+
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
+
+      public fun securityDbEncryption(securityDbEncryption: String)
+
+      public fun securityDbEncryptionName(securityDbEncryptionName: String)
 
       public
-          fun secretsManagerOracleAsmAccessRoleArn(secretsManagerOracleAsmAccessRoleArn: String) {
-      }
+          fun spatialDataOptionToGeoJsonFunctionName(spatialDataOptionToGeoJsonFunctionName: String)
 
-      public fun secretsManagerOracleAsmSecretId(secretsManagerOracleAsmSecretId: String) {
-      }
+      public fun standbyDelayTime(standbyDelayTime: Number)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun useAlternateFolderForOnline(useAlternateFolderForOnline: Boolean)
 
-      public fun securityDbEncryption(securityDbEncryption: String) {
-      }
+      public fun useAlternateFolderForOnline(useAlternateFolderForOnline: IResolvable)
 
-      public fun securityDbEncryptionName(securityDbEncryptionName: String) {
-      }
+      public fun useBFile(useBFile: Boolean)
 
-      public
-          fun spatialDataOptionToGeoJsonFunctionName(spatialDataOptionToGeoJsonFunctionName: String) {
-      }
+      public fun useBFile(useBFile: IResolvable)
 
-      public fun standbyDelayTime(standbyDelayTime: Number) {
-      }
+      public fun useDirectPathFullLoad(useDirectPathFullLoad: Boolean)
 
-      public fun useAlternateFolderForOnline(useAlternateFolderForOnline: Boolean) {
-      }
+      public fun useDirectPathFullLoad(useDirectPathFullLoad: IResolvable)
 
-      public fun useAlternateFolderForOnline(useAlternateFolderForOnline: IResolvable) {
-      }
+      public fun useLogminerReader(useLogminerReader: Boolean)
 
-      public fun useBFile(useBFile: Boolean) {
-      }
+      public fun useLogminerReader(useLogminerReader: IResolvable)
 
-      public fun useBFile(useBFile: IResolvable) {
-      }
-
-      public fun useDirectPathFullLoad(useDirectPathFullLoad: Boolean) {
-      }
-
-      public fun useDirectPathFullLoad(useDirectPathFullLoad: IResolvable) {
-      }
-
-      public fun useLogminerReader(useLogminerReader: Boolean) {
-      }
-
-      public fun useLogminerReader(useLogminerReader: IResolvable) {
-      }
-
-      public fun usePathPrefix(usePathPrefix: String) {
-      }
+      public fun usePathPrefix(usePathPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1645,205 +1481,205 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty.builder()
 
-      public override fun accessAlternateDirectly(accessAlternateDirectly: Boolean) {
+      override fun accessAlternateDirectly(accessAlternateDirectly: Boolean) {
         cdkBuilder.accessAlternateDirectly(accessAlternateDirectly)
       }
 
-      public override fun accessAlternateDirectly(accessAlternateDirectly: IResolvable) {
+      override fun accessAlternateDirectly(accessAlternateDirectly: IResolvable) {
         cdkBuilder.accessAlternateDirectly(accessAlternateDirectly.let(IResolvable::unwrap))
       }
 
-      public override fun addSupplementalLogging(addSupplementalLogging: Boolean) {
+      override fun addSupplementalLogging(addSupplementalLogging: Boolean) {
         cdkBuilder.addSupplementalLogging(addSupplementalLogging)
       }
 
-      public override fun addSupplementalLogging(addSupplementalLogging: IResolvable) {
+      override fun addSupplementalLogging(addSupplementalLogging: IResolvable) {
         cdkBuilder.addSupplementalLogging(addSupplementalLogging.let(IResolvable::unwrap))
       }
 
-      public override fun additionalArchivedLogDestId(additionalArchivedLogDestId: Number) {
+      override fun additionalArchivedLogDestId(additionalArchivedLogDestId: Number) {
         cdkBuilder.additionalArchivedLogDestId(additionalArchivedLogDestId)
       }
 
-      public override fun allowSelectNestedTables(allowSelectNestedTables: Boolean) {
+      override fun allowSelectNestedTables(allowSelectNestedTables: Boolean) {
         cdkBuilder.allowSelectNestedTables(allowSelectNestedTables)
       }
 
-      public override fun allowSelectNestedTables(allowSelectNestedTables: IResolvable) {
+      override fun allowSelectNestedTables(allowSelectNestedTables: IResolvable) {
         cdkBuilder.allowSelectNestedTables(allowSelectNestedTables.let(IResolvable::unwrap))
       }
 
-      public override fun archivedLogDestId(archivedLogDestId: Number) {
+      override fun archivedLogDestId(archivedLogDestId: Number) {
         cdkBuilder.archivedLogDestId(archivedLogDestId)
       }
 
-      public override fun archivedLogsOnly(archivedLogsOnly: Boolean) {
+      override fun archivedLogsOnly(archivedLogsOnly: Boolean) {
         cdkBuilder.archivedLogsOnly(archivedLogsOnly)
       }
 
-      public override fun archivedLogsOnly(archivedLogsOnly: IResolvable) {
+      override fun archivedLogsOnly(archivedLogsOnly: IResolvable) {
         cdkBuilder.archivedLogsOnly(archivedLogsOnly.let(IResolvable::unwrap))
       }
 
-      public override fun asmPassword(asmPassword: String) {
+      override fun asmPassword(asmPassword: String) {
         cdkBuilder.asmPassword(asmPassword)
       }
 
-      public override fun asmServer(asmServer: String) {
+      override fun asmServer(asmServer: String) {
         cdkBuilder.asmServer(asmServer)
       }
 
-      public override fun asmUser(asmUser: String) {
+      override fun asmUser(asmUser: String) {
         cdkBuilder.asmUser(asmUser)
       }
 
-      public override fun charLengthSemantics(charLengthSemantics: String) {
+      override fun charLengthSemantics(charLengthSemantics: String) {
         cdkBuilder.charLengthSemantics(charLengthSemantics)
       }
 
-      public override fun directPathNoLog(directPathNoLog: Boolean) {
+      override fun directPathNoLog(directPathNoLog: Boolean) {
         cdkBuilder.directPathNoLog(directPathNoLog)
       }
 
-      public override fun directPathNoLog(directPathNoLog: IResolvable) {
+      override fun directPathNoLog(directPathNoLog: IResolvable) {
         cdkBuilder.directPathNoLog(directPathNoLog.let(IResolvable::unwrap))
       }
 
-      public override fun directPathParallelLoad(directPathParallelLoad: Boolean) {
+      override fun directPathParallelLoad(directPathParallelLoad: Boolean) {
         cdkBuilder.directPathParallelLoad(directPathParallelLoad)
       }
 
-      public override fun directPathParallelLoad(directPathParallelLoad: IResolvable) {
+      override fun directPathParallelLoad(directPathParallelLoad: IResolvable) {
         cdkBuilder.directPathParallelLoad(directPathParallelLoad.let(IResolvable::unwrap))
       }
 
-      public override fun enableHomogenousTablespace(enableHomogenousTablespace: Boolean) {
+      override fun enableHomogenousTablespace(enableHomogenousTablespace: Boolean) {
         cdkBuilder.enableHomogenousTablespace(enableHomogenousTablespace)
       }
 
-      public override fun enableHomogenousTablespace(enableHomogenousTablespace: IResolvable) {
+      override fun enableHomogenousTablespace(enableHomogenousTablespace: IResolvable) {
         cdkBuilder.enableHomogenousTablespace(enableHomogenousTablespace.let(IResolvable::unwrap))
       }
 
-      public override fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable) {
+      override fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable) {
         cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds.let(IResolvable::unwrap))
       }
 
-      public override fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>) {
+      override fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>) {
         cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds)
       }
 
-      public override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
+      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
         cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation)
       }
 
-      public override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
+      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
         cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable::unwrap))
       }
 
-      public override fun numberDatatypeScale(numberDatatypeScale: Number) {
+      override fun numberDatatypeScale(numberDatatypeScale: Number) {
         cdkBuilder.numberDatatypeScale(numberDatatypeScale)
       }
 
-      public override fun oraclePathPrefix(oraclePathPrefix: String) {
+      override fun oraclePathPrefix(oraclePathPrefix: String) {
         cdkBuilder.oraclePathPrefix(oraclePathPrefix)
       }
 
-      public override fun parallelAsmReadThreads(parallelAsmReadThreads: Number) {
+      override fun parallelAsmReadThreads(parallelAsmReadThreads: Number) {
         cdkBuilder.parallelAsmReadThreads(parallelAsmReadThreads)
       }
 
-      public override fun readAheadBlocks(readAheadBlocks: Number) {
+      override fun readAheadBlocks(readAheadBlocks: Number) {
         cdkBuilder.readAheadBlocks(readAheadBlocks)
       }
 
-      public override fun readTableSpaceName(readTableSpaceName: Boolean) {
+      override fun readTableSpaceName(readTableSpaceName: Boolean) {
         cdkBuilder.readTableSpaceName(readTableSpaceName)
       }
 
-      public override fun readTableSpaceName(readTableSpaceName: IResolvable) {
+      override fun readTableSpaceName(readTableSpaceName: IResolvable) {
         cdkBuilder.readTableSpaceName(readTableSpaceName.let(IResolvable::unwrap))
       }
 
-      public override fun replacePathPrefix(replacePathPrefix: Boolean) {
+      override fun replacePathPrefix(replacePathPrefix: Boolean) {
         cdkBuilder.replacePathPrefix(replacePathPrefix)
       }
 
-      public override fun replacePathPrefix(replacePathPrefix: IResolvable) {
+      override fun replacePathPrefix(replacePathPrefix: IResolvable) {
         cdkBuilder.replacePathPrefix(replacePathPrefix.let(IResolvable::unwrap))
       }
 
-      public override fun retryInterval(retryInterval: Number) {
+      override fun retryInterval(retryInterval: Number) {
         cdkBuilder.retryInterval(retryInterval)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override
+      override
           fun secretsManagerOracleAsmAccessRoleArn(secretsManagerOracleAsmAccessRoleArn: String) {
         cdkBuilder.secretsManagerOracleAsmAccessRoleArn(secretsManagerOracleAsmAccessRoleArn)
       }
 
-      public override fun secretsManagerOracleAsmSecretId(secretsManagerOracleAsmSecretId: String) {
+      override fun secretsManagerOracleAsmSecretId(secretsManagerOracleAsmSecretId: String) {
         cdkBuilder.secretsManagerOracleAsmSecretId(secretsManagerOracleAsmSecretId)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun securityDbEncryption(securityDbEncryption: String) {
+      override fun securityDbEncryption(securityDbEncryption: String) {
         cdkBuilder.securityDbEncryption(securityDbEncryption)
       }
 
-      public override fun securityDbEncryptionName(securityDbEncryptionName: String) {
+      override fun securityDbEncryptionName(securityDbEncryptionName: String) {
         cdkBuilder.securityDbEncryptionName(securityDbEncryptionName)
       }
 
-      public override
+      override
           fun spatialDataOptionToGeoJsonFunctionName(spatialDataOptionToGeoJsonFunctionName: String) {
         cdkBuilder.spatialDataOptionToGeoJsonFunctionName(spatialDataOptionToGeoJsonFunctionName)
       }
 
-      public override fun standbyDelayTime(standbyDelayTime: Number) {
+      override fun standbyDelayTime(standbyDelayTime: Number) {
         cdkBuilder.standbyDelayTime(standbyDelayTime)
       }
 
-      public override fun useAlternateFolderForOnline(useAlternateFolderForOnline: Boolean) {
+      override fun useAlternateFolderForOnline(useAlternateFolderForOnline: Boolean) {
         cdkBuilder.useAlternateFolderForOnline(useAlternateFolderForOnline)
       }
 
-      public override fun useAlternateFolderForOnline(useAlternateFolderForOnline: IResolvable) {
+      override fun useAlternateFolderForOnline(useAlternateFolderForOnline: IResolvable) {
         cdkBuilder.useAlternateFolderForOnline(useAlternateFolderForOnline.let(IResolvable::unwrap))
       }
 
-      public override fun useBFile(useBFile: Boolean) {
+      override fun useBFile(useBFile: Boolean) {
         cdkBuilder.useBFile(useBFile)
       }
 
-      public override fun useBFile(useBFile: IResolvable) {
+      override fun useBFile(useBFile: IResolvable) {
         cdkBuilder.useBFile(useBFile.let(IResolvable::unwrap))
       }
 
-      public override fun useDirectPathFullLoad(useDirectPathFullLoad: Boolean) {
+      override fun useDirectPathFullLoad(useDirectPathFullLoad: Boolean) {
         cdkBuilder.useDirectPathFullLoad(useDirectPathFullLoad)
       }
 
-      public override fun useDirectPathFullLoad(useDirectPathFullLoad: IResolvable) {
+      override fun useDirectPathFullLoad(useDirectPathFullLoad: IResolvable) {
         cdkBuilder.useDirectPathFullLoad(useDirectPathFullLoad.let(IResolvable::unwrap))
       }
 
-      public override fun useLogminerReader(useLogminerReader: Boolean) {
+      override fun useLogminerReader(useLogminerReader: Boolean) {
         cdkBuilder.useLogminerReader(useLogminerReader)
       }
 
-      public override fun useLogminerReader(useLogminerReader: IResolvable) {
+      override fun useLogminerReader(useLogminerReader: IResolvable) {
         cdkBuilder.useLogminerReader(useLogminerReader.let(IResolvable::unwrap))
       }
 
-      public override fun usePathPrefix(usePathPrefix: String) {
+      override fun usePathPrefix(usePathPrefix: String) {
         cdkBuilder.usePathPrefix(usePathPrefix)
       }
 
@@ -1855,89 +1691,81 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.OracleSettingsProperty,
     ) : OracleSettingsProperty {
-      public override fun accessAlternateDirectly(): Any? =
-          unwrap(this).getAccessAlternateDirectly()
+      override fun accessAlternateDirectly(): Any? = unwrap(this).getAccessAlternateDirectly()
 
-      public override fun addSupplementalLogging(): Any? = unwrap(this).getAddSupplementalLogging()
+      override fun addSupplementalLogging(): Any? = unwrap(this).getAddSupplementalLogging()
 
-      public override fun additionalArchivedLogDestId(): Number? =
+      override fun additionalArchivedLogDestId(): Number? =
           unwrap(this).getAdditionalArchivedLogDestId()
 
-      public override fun allowSelectNestedTables(): Any? =
-          unwrap(this).getAllowSelectNestedTables()
+      override fun allowSelectNestedTables(): Any? = unwrap(this).getAllowSelectNestedTables()
 
-      public override fun archivedLogDestId(): Number? = unwrap(this).getArchivedLogDestId()
+      override fun archivedLogDestId(): Number? = unwrap(this).getArchivedLogDestId()
 
-      public override fun archivedLogsOnly(): Any? = unwrap(this).getArchivedLogsOnly()
+      override fun archivedLogsOnly(): Any? = unwrap(this).getArchivedLogsOnly()
 
-      public override fun asmPassword(): String? = unwrap(this).getAsmPassword()
+      override fun asmPassword(): String? = unwrap(this).getAsmPassword()
 
-      public override fun asmServer(): String? = unwrap(this).getAsmServer()
+      override fun asmServer(): String? = unwrap(this).getAsmServer()
 
-      public override fun asmUser(): String? = unwrap(this).getAsmUser()
+      override fun asmUser(): String? = unwrap(this).getAsmUser()
 
-      public override fun charLengthSemantics(): String? = unwrap(this).getCharLengthSemantics()
+      override fun charLengthSemantics(): String? = unwrap(this).getCharLengthSemantics()
 
-      public override fun directPathNoLog(): Any? = unwrap(this).getDirectPathNoLog()
+      override fun directPathNoLog(): Any? = unwrap(this).getDirectPathNoLog()
 
-      public override fun directPathParallelLoad(): Any? = unwrap(this).getDirectPathParallelLoad()
+      override fun directPathParallelLoad(): Any? = unwrap(this).getDirectPathParallelLoad()
 
-      public override fun enableHomogenousTablespace(): Any? =
-          unwrap(this).getEnableHomogenousTablespace()
+      override fun enableHomogenousTablespace(): Any? = unwrap(this).getEnableHomogenousTablespace()
 
-      public override fun extraArchivedLogDestIds(): Any? =
-          unwrap(this).getExtraArchivedLogDestIds()
+      override fun extraArchivedLogDestIds(): Any? = unwrap(this).getExtraArchivedLogDestIds()
 
-      public override fun failTasksOnLobTruncation(): Any? =
-          unwrap(this).getFailTasksOnLobTruncation()
+      override fun failTasksOnLobTruncation(): Any? = unwrap(this).getFailTasksOnLobTruncation()
 
-      public override fun numberDatatypeScale(): Number? = unwrap(this).getNumberDatatypeScale()
+      override fun numberDatatypeScale(): Number? = unwrap(this).getNumberDatatypeScale()
 
-      public override fun oraclePathPrefix(): String? = unwrap(this).getOraclePathPrefix()
+      override fun oraclePathPrefix(): String? = unwrap(this).getOraclePathPrefix()
 
-      public override fun parallelAsmReadThreads(): Number? =
-          unwrap(this).getParallelAsmReadThreads()
+      override fun parallelAsmReadThreads(): Number? = unwrap(this).getParallelAsmReadThreads()
 
-      public override fun readAheadBlocks(): Number? = unwrap(this).getReadAheadBlocks()
+      override fun readAheadBlocks(): Number? = unwrap(this).getReadAheadBlocks()
 
-      public override fun readTableSpaceName(): Any? = unwrap(this).getReadTableSpaceName()
+      override fun readTableSpaceName(): Any? = unwrap(this).getReadTableSpaceName()
 
-      public override fun replacePathPrefix(): Any? = unwrap(this).getReplacePathPrefix()
+      override fun replacePathPrefix(): Any? = unwrap(this).getReplacePathPrefix()
 
-      public override fun retryInterval(): Number? = unwrap(this).getRetryInterval()
+      override fun retryInterval(): Number? = unwrap(this).getRetryInterval()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerOracleAsmAccessRoleArn(): String? =
+      override fun secretsManagerOracleAsmAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerOracleAsmAccessRoleArn()
 
-      public override fun secretsManagerOracleAsmSecretId(): String? =
+      override fun secretsManagerOracleAsmSecretId(): String? =
           unwrap(this).getSecretsManagerOracleAsmSecretId()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun securityDbEncryption(): String? = unwrap(this).getSecurityDbEncryption()
+      override fun securityDbEncryption(): String? = unwrap(this).getSecurityDbEncryption()
 
-      public override fun securityDbEncryptionName(): String? =
-          unwrap(this).getSecurityDbEncryptionName()
+      override fun securityDbEncryptionName(): String? = unwrap(this).getSecurityDbEncryptionName()
 
-      public override fun spatialDataOptionToGeoJsonFunctionName(): String? =
+      override fun spatialDataOptionToGeoJsonFunctionName(): String? =
           unwrap(this).getSpatialDataOptionToGeoJsonFunctionName()
 
-      public override fun standbyDelayTime(): Number? = unwrap(this).getStandbyDelayTime()
+      override fun standbyDelayTime(): Number? = unwrap(this).getStandbyDelayTime()
 
-      public override fun useAlternateFolderForOnline(): Any? =
+      override fun useAlternateFolderForOnline(): Any? =
           unwrap(this).getUseAlternateFolderForOnline()
 
-      public override fun useBFile(): Any? = unwrap(this).getUseBFile()
+      override fun useBFile(): Any? = unwrap(this).getUseBFile()
 
-      public override fun useDirectPathFullLoad(): Any? = unwrap(this).getUseDirectPathFullLoad()
+      override fun useDirectPathFullLoad(): Any? = unwrap(this).getUseDirectPathFullLoad()
 
-      public override fun useLogminerReader(): Any? = unwrap(this).getUseLogminerReader()
+      override fun useLogminerReader(): Any? = unwrap(this).getUseLogminerReader()
 
-      public override fun usePathPrefix(): String? = unwrap(this).getUsePathPrefix()
+      override fun usePathPrefix(): String? = unwrap(this).getUsePathPrefix()
     }
 
     public companion object {
@@ -2047,169 +1875,114 @@ public open class CfnEndpoint internal constructor(
         unwrap(this).getUseTaskStartTimeForFullLoadTimestamp()
 
     public interface Builder {
-      public fun addColumnName(addColumnName: Boolean) {
-      }
+      public fun addColumnName(addColumnName: Boolean)
 
-      public fun addColumnName(addColumnName: IResolvable) {
-      }
+      public fun addColumnName(addColumnName: IResolvable)
 
-      public fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: Boolean) {
-      }
+      public fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: Boolean)
 
-      public fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: IResolvable) {
-      }
+      public fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: IResolvable)
 
-      public fun bucketFolder(bucketFolder: String) {
-      }
+      public fun bucketFolder(bucketFolder: String)
 
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun cannedAclForObjects(cannedAclForObjects: String) {
-      }
+      public fun cannedAclForObjects(cannedAclForObjects: String)
 
-      public fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: Boolean) {
-      }
+      public fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: Boolean)
 
-      public fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: IResolvable) {
-      }
+      public fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: IResolvable)
 
-      public fun cdcInsertsOnly(cdcInsertsOnly: Boolean) {
-      }
+      public fun cdcInsertsOnly(cdcInsertsOnly: Boolean)
 
-      public fun cdcInsertsOnly(cdcInsertsOnly: IResolvable) {
-      }
+      public fun cdcInsertsOnly(cdcInsertsOnly: IResolvable)
 
-      public fun cdcMaxBatchInterval(cdcMaxBatchInterval: Number) {
-      }
+      public fun cdcMaxBatchInterval(cdcMaxBatchInterval: Number)
 
-      public fun cdcMinFileSize(cdcMinFileSize: Number) {
-      }
+      public fun cdcMinFileSize(cdcMinFileSize: Number)
 
-      public fun cdcPath(cdcPath: String) {
-      }
+      public fun cdcPath(cdcPath: String)
 
-      public fun compressionType(compressionType: String) {
-      }
+      public fun compressionType(compressionType: String)
 
-      public fun csvDelimiter(csvDelimiter: String) {
-      }
+      public fun csvDelimiter(csvDelimiter: String)
 
-      public fun csvNoSupValue(csvNoSupValue: String) {
-      }
+      public fun csvNoSupValue(csvNoSupValue: String)
 
-      public fun csvNullValue(csvNullValue: String) {
-      }
+      public fun csvNullValue(csvNullValue: String)
 
-      public fun csvRowDelimiter(csvRowDelimiter: String) {
-      }
+      public fun csvRowDelimiter(csvRowDelimiter: String)
 
-      public fun dataFormat(dataFormat: String) {
-      }
+      public fun dataFormat(dataFormat: String)
 
-      public fun dataPageSize(dataPageSize: Number) {
-      }
+      public fun dataPageSize(dataPageSize: Number)
 
-      public fun datePartitionDelimiter(datePartitionDelimiter: String) {
-      }
+      public fun datePartitionDelimiter(datePartitionDelimiter: String)
 
-      public fun datePartitionEnabled(datePartitionEnabled: Boolean) {
-      }
+      public fun datePartitionEnabled(datePartitionEnabled: Boolean)
 
-      public fun datePartitionEnabled(datePartitionEnabled: IResolvable) {
-      }
+      public fun datePartitionEnabled(datePartitionEnabled: IResolvable)
 
-      public fun datePartitionSequence(datePartitionSequence: String) {
-      }
+      public fun datePartitionSequence(datePartitionSequence: String)
 
-      public fun datePartitionTimezone(datePartitionTimezone: String) {
-      }
+      public fun datePartitionTimezone(datePartitionTimezone: String)
 
-      public fun dictPageSizeLimit(dictPageSizeLimit: Number) {
-      }
+      public fun dictPageSizeLimit(dictPageSizeLimit: Number)
 
-      public fun enableStatistics(enableStatistics: Boolean) {
-      }
+      public fun enableStatistics(enableStatistics: Boolean)
 
-      public fun enableStatistics(enableStatistics: IResolvable) {
-      }
+      public fun enableStatistics(enableStatistics: IResolvable)
 
-      public fun encodingType(encodingType: String) {
-      }
+      public fun encodingType(encodingType: String)
 
-      public fun encryptionMode(encryptionMode: String) {
-      }
+      public fun encryptionMode(encryptionMode: String)
 
-      public fun expectedBucketOwner(expectedBucketOwner: String) {
-      }
+      public fun expectedBucketOwner(expectedBucketOwner: String)
 
-      public fun externalTableDefinition(externalTableDefinition: String) {
-      }
+      public fun externalTableDefinition(externalTableDefinition: String)
 
-      public fun glueCatalogGeneration(glueCatalogGeneration: Boolean) {
-      }
+      public fun glueCatalogGeneration(glueCatalogGeneration: Boolean)
 
-      public fun glueCatalogGeneration(glueCatalogGeneration: IResolvable) {
-      }
+      public fun glueCatalogGeneration(glueCatalogGeneration: IResolvable)
 
-      public fun ignoreHeaderRows(ignoreHeaderRows: Number) {
-      }
+      public fun ignoreHeaderRows(ignoreHeaderRows: Number)
 
-      public fun includeOpForFullLoad(includeOpForFullLoad: Boolean) {
-      }
+      public fun includeOpForFullLoad(includeOpForFullLoad: Boolean)
 
-      public fun includeOpForFullLoad(includeOpForFullLoad: IResolvable) {
-      }
+      public fun includeOpForFullLoad(includeOpForFullLoad: IResolvable)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: Boolean) {
-      }
+      public fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: Boolean)
 
-      public fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: IResolvable) {
-      }
+      public fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: IResolvable)
 
-      public fun parquetVersion(parquetVersion: String) {
-      }
+      public fun parquetVersion(parquetVersion: String)
 
-      public fun preserveTransactions(preserveTransactions: Boolean) {
-      }
+      public fun preserveTransactions(preserveTransactions: Boolean)
 
-      public fun preserveTransactions(preserveTransactions: IResolvable) {
-      }
+      public fun preserveTransactions(preserveTransactions: IResolvable)
 
-      public fun rfc4180(rfc4180: Boolean) {
-      }
+      public fun rfc4180(rfc4180: Boolean)
 
-      public fun rfc4180(rfc4180: IResolvable) {
-      }
+      public fun rfc4180(rfc4180: IResolvable)
 
-      public fun rowGroupLength(rowGroupLength: Number) {
-      }
+      public fun rowGroupLength(rowGroupLength: Number)
 
-      public fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
-      }
+      public fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String)
 
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-      }
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
 
-      public fun timestampColumnName(timestampColumnName: String) {
-      }
+      public fun timestampColumnName(timestampColumnName: String)
 
-      public fun useCsvNoSupValue(useCsvNoSupValue: Boolean) {
-      }
+      public fun useCsvNoSupValue(useCsvNoSupValue: Boolean)
 
-      public fun useCsvNoSupValue(useCsvNoSupValue: IResolvable) {
-      }
+      public fun useCsvNoSupValue(useCsvNoSupValue: IResolvable)
+
+      public fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: Boolean)
 
       public
-          fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: Boolean) {
-      }
-
-      public
-          fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: IResolvable) {
-      }
+          fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2217,221 +1990,220 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty.builder()
 
-      public override fun addColumnName(addColumnName: Boolean) {
+      override fun addColumnName(addColumnName: Boolean) {
         cdkBuilder.addColumnName(addColumnName)
       }
 
-      public override fun addColumnName(addColumnName: IResolvable) {
+      override fun addColumnName(addColumnName: IResolvable) {
         cdkBuilder.addColumnName(addColumnName.let(IResolvable::unwrap))
       }
 
-      public override fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: Boolean) {
+      override fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: Boolean) {
         cdkBuilder.addTrailingPaddingCharacter(addTrailingPaddingCharacter)
       }
 
-      public override fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: IResolvable) {
+      override fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: IResolvable) {
         cdkBuilder.addTrailingPaddingCharacter(addTrailingPaddingCharacter.let(IResolvable::unwrap))
       }
 
-      public override fun bucketFolder(bucketFolder: String) {
+      override fun bucketFolder(bucketFolder: String) {
         cdkBuilder.bucketFolder(bucketFolder)
       }
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun cannedAclForObjects(cannedAclForObjects: String) {
+      override fun cannedAclForObjects(cannedAclForObjects: String) {
         cdkBuilder.cannedAclForObjects(cannedAclForObjects)
       }
 
-      public override fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: Boolean) {
+      override fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: Boolean) {
         cdkBuilder.cdcInsertsAndUpdates(cdcInsertsAndUpdates)
       }
 
-      public override fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: IResolvable) {
+      override fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: IResolvable) {
         cdkBuilder.cdcInsertsAndUpdates(cdcInsertsAndUpdates.let(IResolvable::unwrap))
       }
 
-      public override fun cdcInsertsOnly(cdcInsertsOnly: Boolean) {
+      override fun cdcInsertsOnly(cdcInsertsOnly: Boolean) {
         cdkBuilder.cdcInsertsOnly(cdcInsertsOnly)
       }
 
-      public override fun cdcInsertsOnly(cdcInsertsOnly: IResolvable) {
+      override fun cdcInsertsOnly(cdcInsertsOnly: IResolvable) {
         cdkBuilder.cdcInsertsOnly(cdcInsertsOnly.let(IResolvable::unwrap))
       }
 
-      public override fun cdcMaxBatchInterval(cdcMaxBatchInterval: Number) {
+      override fun cdcMaxBatchInterval(cdcMaxBatchInterval: Number) {
         cdkBuilder.cdcMaxBatchInterval(cdcMaxBatchInterval)
       }
 
-      public override fun cdcMinFileSize(cdcMinFileSize: Number) {
+      override fun cdcMinFileSize(cdcMinFileSize: Number) {
         cdkBuilder.cdcMinFileSize(cdcMinFileSize)
       }
 
-      public override fun cdcPath(cdcPath: String) {
+      override fun cdcPath(cdcPath: String) {
         cdkBuilder.cdcPath(cdcPath)
       }
 
-      public override fun compressionType(compressionType: String) {
+      override fun compressionType(compressionType: String) {
         cdkBuilder.compressionType(compressionType)
       }
 
-      public override fun csvDelimiter(csvDelimiter: String) {
+      override fun csvDelimiter(csvDelimiter: String) {
         cdkBuilder.csvDelimiter(csvDelimiter)
       }
 
-      public override fun csvNoSupValue(csvNoSupValue: String) {
+      override fun csvNoSupValue(csvNoSupValue: String) {
         cdkBuilder.csvNoSupValue(csvNoSupValue)
       }
 
-      public override fun csvNullValue(csvNullValue: String) {
+      override fun csvNullValue(csvNullValue: String) {
         cdkBuilder.csvNullValue(csvNullValue)
       }
 
-      public override fun csvRowDelimiter(csvRowDelimiter: String) {
+      override fun csvRowDelimiter(csvRowDelimiter: String) {
         cdkBuilder.csvRowDelimiter(csvRowDelimiter)
       }
 
-      public override fun dataFormat(dataFormat: String) {
+      override fun dataFormat(dataFormat: String) {
         cdkBuilder.dataFormat(dataFormat)
       }
 
-      public override fun dataPageSize(dataPageSize: Number) {
+      override fun dataPageSize(dataPageSize: Number) {
         cdkBuilder.dataPageSize(dataPageSize)
       }
 
-      public override fun datePartitionDelimiter(datePartitionDelimiter: String) {
+      override fun datePartitionDelimiter(datePartitionDelimiter: String) {
         cdkBuilder.datePartitionDelimiter(datePartitionDelimiter)
       }
 
-      public override fun datePartitionEnabled(datePartitionEnabled: Boolean) {
+      override fun datePartitionEnabled(datePartitionEnabled: Boolean) {
         cdkBuilder.datePartitionEnabled(datePartitionEnabled)
       }
 
-      public override fun datePartitionEnabled(datePartitionEnabled: IResolvable) {
+      override fun datePartitionEnabled(datePartitionEnabled: IResolvable) {
         cdkBuilder.datePartitionEnabled(datePartitionEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun datePartitionSequence(datePartitionSequence: String) {
+      override fun datePartitionSequence(datePartitionSequence: String) {
         cdkBuilder.datePartitionSequence(datePartitionSequence)
       }
 
-      public override fun datePartitionTimezone(datePartitionTimezone: String) {
+      override fun datePartitionTimezone(datePartitionTimezone: String) {
         cdkBuilder.datePartitionTimezone(datePartitionTimezone)
       }
 
-      public override fun dictPageSizeLimit(dictPageSizeLimit: Number) {
+      override fun dictPageSizeLimit(dictPageSizeLimit: Number) {
         cdkBuilder.dictPageSizeLimit(dictPageSizeLimit)
       }
 
-      public override fun enableStatistics(enableStatistics: Boolean) {
+      override fun enableStatistics(enableStatistics: Boolean) {
         cdkBuilder.enableStatistics(enableStatistics)
       }
 
-      public override fun enableStatistics(enableStatistics: IResolvable) {
+      override fun enableStatistics(enableStatistics: IResolvable) {
         cdkBuilder.enableStatistics(enableStatistics.let(IResolvable::unwrap))
       }
 
-      public override fun encodingType(encodingType: String) {
+      override fun encodingType(encodingType: String) {
         cdkBuilder.encodingType(encodingType)
       }
 
-      public override fun encryptionMode(encryptionMode: String) {
+      override fun encryptionMode(encryptionMode: String) {
         cdkBuilder.encryptionMode(encryptionMode)
       }
 
-      public override fun expectedBucketOwner(expectedBucketOwner: String) {
+      override fun expectedBucketOwner(expectedBucketOwner: String) {
         cdkBuilder.expectedBucketOwner(expectedBucketOwner)
       }
 
-      public override fun externalTableDefinition(externalTableDefinition: String) {
+      override fun externalTableDefinition(externalTableDefinition: String) {
         cdkBuilder.externalTableDefinition(externalTableDefinition)
       }
 
-      public override fun glueCatalogGeneration(glueCatalogGeneration: Boolean) {
+      override fun glueCatalogGeneration(glueCatalogGeneration: Boolean) {
         cdkBuilder.glueCatalogGeneration(glueCatalogGeneration)
       }
 
-      public override fun glueCatalogGeneration(glueCatalogGeneration: IResolvable) {
+      override fun glueCatalogGeneration(glueCatalogGeneration: IResolvable) {
         cdkBuilder.glueCatalogGeneration(glueCatalogGeneration.let(IResolvable::unwrap))
       }
 
-      public override fun ignoreHeaderRows(ignoreHeaderRows: Number) {
+      override fun ignoreHeaderRows(ignoreHeaderRows: Number) {
         cdkBuilder.ignoreHeaderRows(ignoreHeaderRows)
       }
 
-      public override fun includeOpForFullLoad(includeOpForFullLoad: Boolean) {
+      override fun includeOpForFullLoad(includeOpForFullLoad: Boolean) {
         cdkBuilder.includeOpForFullLoad(includeOpForFullLoad)
       }
 
-      public override fun includeOpForFullLoad(includeOpForFullLoad: IResolvable) {
+      override fun includeOpForFullLoad(includeOpForFullLoad: IResolvable) {
         cdkBuilder.includeOpForFullLoad(includeOpForFullLoad.let(IResolvable::unwrap))
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: Boolean) {
+      override fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: Boolean) {
         cdkBuilder.parquetTimestampInMillisecond(parquetTimestampInMillisecond)
       }
 
-      public override
-          fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: IResolvable) {
+      override fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: IResolvable) {
         cdkBuilder.parquetTimestampInMillisecond(parquetTimestampInMillisecond.let(IResolvable::unwrap))
       }
 
-      public override fun parquetVersion(parquetVersion: String) {
+      override fun parquetVersion(parquetVersion: String) {
         cdkBuilder.parquetVersion(parquetVersion)
       }
 
-      public override fun preserveTransactions(preserveTransactions: Boolean) {
+      override fun preserveTransactions(preserveTransactions: Boolean) {
         cdkBuilder.preserveTransactions(preserveTransactions)
       }
 
-      public override fun preserveTransactions(preserveTransactions: IResolvable) {
+      override fun preserveTransactions(preserveTransactions: IResolvable) {
         cdkBuilder.preserveTransactions(preserveTransactions.let(IResolvable::unwrap))
       }
 
-      public override fun rfc4180(rfc4180: Boolean) {
+      override fun rfc4180(rfc4180: Boolean) {
         cdkBuilder.rfc4180(rfc4180)
       }
 
-      public override fun rfc4180(rfc4180: IResolvable) {
+      override fun rfc4180(rfc4180: IResolvable) {
         cdkBuilder.rfc4180(rfc4180.let(IResolvable::unwrap))
       }
 
-      public override fun rowGroupLength(rowGroupLength: Number) {
+      override fun rowGroupLength(rowGroupLength: Number) {
         cdkBuilder.rowGroupLength(rowGroupLength)
       }
 
-      public override fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
+      override fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
         cdkBuilder.serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId)
       }
 
-      public override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
         cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
       }
 
-      public override fun timestampColumnName(timestampColumnName: String) {
+      override fun timestampColumnName(timestampColumnName: String) {
         cdkBuilder.timestampColumnName(timestampColumnName)
       }
 
-      public override fun useCsvNoSupValue(useCsvNoSupValue: Boolean) {
+      override fun useCsvNoSupValue(useCsvNoSupValue: Boolean) {
         cdkBuilder.useCsvNoSupValue(useCsvNoSupValue)
       }
 
-      public override fun useCsvNoSupValue(useCsvNoSupValue: IResolvable) {
+      override fun useCsvNoSupValue(useCsvNoSupValue: IResolvable) {
         cdkBuilder.useCsvNoSupValue(useCsvNoSupValue.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: Boolean) {
         cdkBuilder.useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp)
       }
 
-      public override
+      override
           fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: IResolvable) {
         cdkBuilder.useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp.let(IResolvable::unwrap))
       }
@@ -2443,92 +2215,90 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty,
     ) : S3SettingsProperty {
-      public override fun addColumnName(): Any? = unwrap(this).getAddColumnName()
+      override fun addColumnName(): Any? = unwrap(this).getAddColumnName()
 
-      public override fun addTrailingPaddingCharacter(): Any? =
+      override fun addTrailingPaddingCharacter(): Any? =
           unwrap(this).getAddTrailingPaddingCharacter()
 
-      public override fun bucketFolder(): String? = unwrap(this).getBucketFolder()
+      override fun bucketFolder(): String? = unwrap(this).getBucketFolder()
 
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun cannedAclForObjects(): String? = unwrap(this).getCannedAclForObjects()
+      override fun cannedAclForObjects(): String? = unwrap(this).getCannedAclForObjects()
 
-      public override fun cdcInsertsAndUpdates(): Any? = unwrap(this).getCdcInsertsAndUpdates()
+      override fun cdcInsertsAndUpdates(): Any? = unwrap(this).getCdcInsertsAndUpdates()
 
-      public override fun cdcInsertsOnly(): Any? = unwrap(this).getCdcInsertsOnly()
+      override fun cdcInsertsOnly(): Any? = unwrap(this).getCdcInsertsOnly()
 
-      public override fun cdcMaxBatchInterval(): Number? = unwrap(this).getCdcMaxBatchInterval()
+      override fun cdcMaxBatchInterval(): Number? = unwrap(this).getCdcMaxBatchInterval()
 
-      public override fun cdcMinFileSize(): Number? = unwrap(this).getCdcMinFileSize()
+      override fun cdcMinFileSize(): Number? = unwrap(this).getCdcMinFileSize()
 
-      public override fun cdcPath(): String? = unwrap(this).getCdcPath()
+      override fun cdcPath(): String? = unwrap(this).getCdcPath()
 
-      public override fun compressionType(): String? = unwrap(this).getCompressionType()
+      override fun compressionType(): String? = unwrap(this).getCompressionType()
 
-      public override fun csvDelimiter(): String? = unwrap(this).getCsvDelimiter()
+      override fun csvDelimiter(): String? = unwrap(this).getCsvDelimiter()
 
-      public override fun csvNoSupValue(): String? = unwrap(this).getCsvNoSupValue()
+      override fun csvNoSupValue(): String? = unwrap(this).getCsvNoSupValue()
 
-      public override fun csvNullValue(): String? = unwrap(this).getCsvNullValue()
+      override fun csvNullValue(): String? = unwrap(this).getCsvNullValue()
 
-      public override fun csvRowDelimiter(): String? = unwrap(this).getCsvRowDelimiter()
+      override fun csvRowDelimiter(): String? = unwrap(this).getCsvRowDelimiter()
 
-      public override fun dataFormat(): String? = unwrap(this).getDataFormat()
+      override fun dataFormat(): String? = unwrap(this).getDataFormat()
 
-      public override fun dataPageSize(): Number? = unwrap(this).getDataPageSize()
+      override fun dataPageSize(): Number? = unwrap(this).getDataPageSize()
 
-      public override fun datePartitionDelimiter(): String? =
-          unwrap(this).getDatePartitionDelimiter()
+      override fun datePartitionDelimiter(): String? = unwrap(this).getDatePartitionDelimiter()
 
-      public override fun datePartitionEnabled(): Any? = unwrap(this).getDatePartitionEnabled()
+      override fun datePartitionEnabled(): Any? = unwrap(this).getDatePartitionEnabled()
 
-      public override fun datePartitionSequence(): String? = unwrap(this).getDatePartitionSequence()
+      override fun datePartitionSequence(): String? = unwrap(this).getDatePartitionSequence()
 
-      public override fun datePartitionTimezone(): String? = unwrap(this).getDatePartitionTimezone()
+      override fun datePartitionTimezone(): String? = unwrap(this).getDatePartitionTimezone()
 
-      public override fun dictPageSizeLimit(): Number? = unwrap(this).getDictPageSizeLimit()
+      override fun dictPageSizeLimit(): Number? = unwrap(this).getDictPageSizeLimit()
 
-      public override fun enableStatistics(): Any? = unwrap(this).getEnableStatistics()
+      override fun enableStatistics(): Any? = unwrap(this).getEnableStatistics()
 
-      public override fun encodingType(): String? = unwrap(this).getEncodingType()
+      override fun encodingType(): String? = unwrap(this).getEncodingType()
 
-      public override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
 
-      public override fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
+      override fun expectedBucketOwner(): String? = unwrap(this).getExpectedBucketOwner()
 
-      public override fun externalTableDefinition(): String? =
-          unwrap(this).getExternalTableDefinition()
+      override fun externalTableDefinition(): String? = unwrap(this).getExternalTableDefinition()
 
-      public override fun glueCatalogGeneration(): Any? = unwrap(this).getGlueCatalogGeneration()
+      override fun glueCatalogGeneration(): Any? = unwrap(this).getGlueCatalogGeneration()
 
-      public override fun ignoreHeaderRows(): Number? = unwrap(this).getIgnoreHeaderRows()
+      override fun ignoreHeaderRows(): Number? = unwrap(this).getIgnoreHeaderRows()
 
-      public override fun includeOpForFullLoad(): Any? = unwrap(this).getIncludeOpForFullLoad()
+      override fun includeOpForFullLoad(): Any? = unwrap(this).getIncludeOpForFullLoad()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun parquetTimestampInMillisecond(): Any? =
+      override fun parquetTimestampInMillisecond(): Any? =
           unwrap(this).getParquetTimestampInMillisecond()
 
-      public override fun parquetVersion(): String? = unwrap(this).getParquetVersion()
+      override fun parquetVersion(): String? = unwrap(this).getParquetVersion()
 
-      public override fun preserveTransactions(): Any? = unwrap(this).getPreserveTransactions()
+      override fun preserveTransactions(): Any? = unwrap(this).getPreserveTransactions()
 
-      public override fun rfc4180(): Any? = unwrap(this).getRfc4180()
+      override fun rfc4180(): Any? = unwrap(this).getRfc4180()
 
-      public override fun rowGroupLength(): Number? = unwrap(this).getRowGroupLength()
+      override fun rowGroupLength(): Number? = unwrap(this).getRowGroupLength()
 
-      public override fun serverSideEncryptionKmsKeyId(): String? =
+      override fun serverSideEncryptionKmsKeyId(): String? =
           unwrap(this).getServerSideEncryptionKmsKeyId()
 
-      public override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
 
-      public override fun timestampColumnName(): String? = unwrap(this).getTimestampColumnName()
+      override fun timestampColumnName(): String? = unwrap(this).getTimestampColumnName()
 
-      public override fun useCsvNoSupValue(): Any? = unwrap(this).getUseCsvNoSupValue()
+      override fun useCsvNoSupValue(): Any? = unwrap(this).getUseCsvNoSupValue()
 
-      public override fun useTaskStartTimeForFullLoadTimestamp(): Any? =
+      override fun useTaskStartTimeForFullLoadTimestamp(): Any? =
           unwrap(this).getUseTaskStartTimeForFullLoadTimestamp()
     }
 
@@ -2559,11 +2329,9 @@ public open class CfnEndpoint internal constructor(
     public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
     public interface Builder {
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2571,11 +2339,11 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty.builder()
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
@@ -2587,11 +2355,10 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.SybaseSettingsProperty,
     ) : SybaseSettingsProperty {
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
     }
 
     public companion object {
@@ -2651,74 +2418,51 @@ public open class CfnEndpoint internal constructor(
     public fun username(): String? = unwrap(this).getUsername()
 
     public interface Builder {
-      public fun bcpPacketSize(bcpPacketSize: Number) {
-      }
+      public fun bcpPacketSize(bcpPacketSize: Number)
 
-      public fun controlTablesFileGroup(controlTablesFileGroup: String) {
-      }
+      public fun controlTablesFileGroup(controlTablesFileGroup: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun forceLobLookup(forceLobLookup: Boolean) {
-      }
+      public fun forceLobLookup(forceLobLookup: Boolean)
 
-      public fun forceLobLookup(forceLobLookup: IResolvable) {
-      }
+      public fun forceLobLookup(forceLobLookup: IResolvable)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean) {
-      }
+      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean)
 
-      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable) {
-      }
+      public fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable)
 
-      public fun readBackupOnly(readBackupOnly: Boolean) {
-      }
+      public fun readBackupOnly(readBackupOnly: Boolean)
 
-      public fun readBackupOnly(readBackupOnly: IResolvable) {
-      }
+      public fun readBackupOnly(readBackupOnly: IResolvable)
 
-      public fun safeguardPolicy(safeguardPolicy: String) {
-      }
+      public fun safeguardPolicy(safeguardPolicy: String)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun serverName(serverName: String) {
-      }
+      public fun serverName(serverName: String)
 
-      public fun tlogAccessMode(tlogAccessMode: String) {
-      }
+      public fun tlogAccessMode(tlogAccessMode: String)
 
-      public fun trimSpaceInChar(trimSpaceInChar: Boolean) {
-      }
+      public fun trimSpaceInChar(trimSpaceInChar: Boolean)
 
-      public fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
-      }
+      public fun trimSpaceInChar(trimSpaceInChar: IResolvable)
 
-      public fun useBcpFullLoad(useBcpFullLoad: Boolean) {
-      }
+      public fun useBcpFullLoad(useBcpFullLoad: Boolean)
 
-      public fun useBcpFullLoad(useBcpFullLoad: IResolvable) {
-      }
+      public fun useBcpFullLoad(useBcpFullLoad: IResolvable)
 
-      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean) {
-      }
+      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean)
 
-      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
-      }
+      public fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2727,95 +2471,95 @@ public open class CfnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty.builder()
 
-      public override fun bcpPacketSize(bcpPacketSize: Number) {
+      override fun bcpPacketSize(bcpPacketSize: Number) {
         cdkBuilder.bcpPacketSize(bcpPacketSize)
       }
 
-      public override fun controlTablesFileGroup(controlTablesFileGroup: String) {
+      override fun controlTablesFileGroup(controlTablesFileGroup: String) {
         cdkBuilder.controlTablesFileGroup(controlTablesFileGroup)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun forceLobLookup(forceLobLookup: Boolean) {
+      override fun forceLobLookup(forceLobLookup: Boolean) {
         cdkBuilder.forceLobLookup(forceLobLookup)
       }
 
-      public override fun forceLobLookup(forceLobLookup: IResolvable) {
+      override fun forceLobLookup(forceLobLookup: IResolvable) {
         cdkBuilder.forceLobLookup(forceLobLookup.let(IResolvable::unwrap))
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean) {
+      override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: Boolean) {
         cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode)
       }
 
-      public override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable) {
+      override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable) {
         cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode.let(IResolvable::unwrap))
       }
 
-      public override fun readBackupOnly(readBackupOnly: Boolean) {
+      override fun readBackupOnly(readBackupOnly: Boolean) {
         cdkBuilder.readBackupOnly(readBackupOnly)
       }
 
-      public override fun readBackupOnly(readBackupOnly: IResolvable) {
+      override fun readBackupOnly(readBackupOnly: IResolvable) {
         cdkBuilder.readBackupOnly(readBackupOnly.let(IResolvable::unwrap))
       }
 
-      public override fun safeguardPolicy(safeguardPolicy: String) {
+      override fun safeguardPolicy(safeguardPolicy: String) {
         cdkBuilder.safeguardPolicy(safeguardPolicy)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun serverName(serverName: String) {
+      override fun serverName(serverName: String) {
         cdkBuilder.serverName(serverName)
       }
 
-      public override fun tlogAccessMode(tlogAccessMode: String) {
+      override fun tlogAccessMode(tlogAccessMode: String) {
         cdkBuilder.tlogAccessMode(tlogAccessMode)
       }
 
-      public override fun trimSpaceInChar(trimSpaceInChar: Boolean) {
+      override fun trimSpaceInChar(trimSpaceInChar: Boolean) {
         cdkBuilder.trimSpaceInChar(trimSpaceInChar)
       }
 
-      public override fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
+      override fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
         cdkBuilder.trimSpaceInChar(trimSpaceInChar.let(IResolvable::unwrap))
       }
 
-      public override fun useBcpFullLoad(useBcpFullLoad: Boolean) {
+      override fun useBcpFullLoad(useBcpFullLoad: Boolean) {
         cdkBuilder.useBcpFullLoad(useBcpFullLoad)
       }
 
-      public override fun useBcpFullLoad(useBcpFullLoad: IResolvable) {
+      override fun useBcpFullLoad(useBcpFullLoad: IResolvable) {
         cdkBuilder.useBcpFullLoad(useBcpFullLoad.let(IResolvable::unwrap))
       }
 
-      public override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean) {
+      override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: Boolean) {
         cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice)
       }
 
-      public override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
+      override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
         cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice.let(IResolvable::unwrap))
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -2828,44 +2572,40 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.MicrosoftSqlServerSettingsProperty,
     ) : MicrosoftSqlServerSettingsProperty {
-      public override fun bcpPacketSize(): Number? = unwrap(this).getBcpPacketSize()
+      override fun bcpPacketSize(): Number? = unwrap(this).getBcpPacketSize()
 
-      public override fun controlTablesFileGroup(): String? =
-          unwrap(this).getControlTablesFileGroup()
+      override fun controlTablesFileGroup(): String? = unwrap(this).getControlTablesFileGroup()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun forceLobLookup(): Any? = unwrap(this).getForceLobLookup()
+      override fun forceLobLookup(): Any? = unwrap(this).getForceLobLookup()
 
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun querySingleAlwaysOnNode(): Any? =
-          unwrap(this).getQuerySingleAlwaysOnNode()
+      override fun querySingleAlwaysOnNode(): Any? = unwrap(this).getQuerySingleAlwaysOnNode()
 
-      public override fun readBackupOnly(): Any? = unwrap(this).getReadBackupOnly()
+      override fun readBackupOnly(): Any? = unwrap(this).getReadBackupOnly()
 
-      public override fun safeguardPolicy(): String? = unwrap(this).getSafeguardPolicy()
+      override fun safeguardPolicy(): String? = unwrap(this).getSafeguardPolicy()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun serverName(): String? = unwrap(this).getServerName()
+      override fun serverName(): String? = unwrap(this).getServerName()
 
-      public override fun tlogAccessMode(): String? = unwrap(this).getTlogAccessMode()
+      override fun tlogAccessMode(): String? = unwrap(this).getTlogAccessMode()
 
-      public override fun trimSpaceInChar(): Any? = unwrap(this).getTrimSpaceInChar()
+      override fun trimSpaceInChar(): Any? = unwrap(this).getTrimSpaceInChar()
 
-      public override fun useBcpFullLoad(): Any? = unwrap(this).getUseBcpFullLoad()
+      override fun useBcpFullLoad(): Any? = unwrap(this).getUseBcpFullLoad()
 
-      public override fun useThirdPartyBackupDevice(): Any? =
-          unwrap(this).getUseThirdPartyBackupDevice()
+      override fun useThirdPartyBackupDevice(): Any? = unwrap(this).getUseThirdPartyBackupDevice()
 
-      public override fun username(): String? = unwrap(this).getUsername()
+      override fun username(): String? = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -2910,38 +2650,27 @@ public open class CfnEndpoint internal constructor(
     public fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
 
     public interface Builder {
-      public fun currentLsn(currentLsn: String) {
-      }
+      public fun currentLsn(currentLsn: String)
 
-      public fun dataCaptureChanges(setDataCaptureChanges: Boolean) {
-      }
+      public fun dataCaptureChanges(setDataCaptureChanges: Boolean)
 
-      public fun dataCaptureChanges(setDataCaptureChanges: IResolvable) {
-      }
+      public fun dataCaptureChanges(setDataCaptureChanges: IResolvable)
 
-      public fun keepCsvFiles(keepCsvFiles: Boolean) {
-      }
+      public fun keepCsvFiles(keepCsvFiles: Boolean)
 
-      public fun keepCsvFiles(keepCsvFiles: IResolvable) {
-      }
+      public fun keepCsvFiles(keepCsvFiles: IResolvable)
 
-      public fun loadTimeout(loadTimeout: Number) {
-      }
+      public fun loadTimeout(loadTimeout: Number)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun maxKBytesPerRead(maxKBytesPerRead: Number) {
-      }
+      public fun maxKBytesPerRead(maxKBytesPerRead: Number)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun writeBufferSize(writeBufferSize: Number) {
-      }
+      public fun writeBufferSize(writeBufferSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2949,47 +2678,47 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty.builder()
 
-      public override fun currentLsn(currentLsn: String) {
+      override fun currentLsn(currentLsn: String) {
         cdkBuilder.currentLsn(currentLsn)
       }
 
-      public override fun dataCaptureChanges(setDataCaptureChanges: Boolean) {
+      override fun dataCaptureChanges(setDataCaptureChanges: Boolean) {
         cdkBuilder.setDataCaptureChanges(setDataCaptureChanges)
       }
 
-      public override fun dataCaptureChanges(setDataCaptureChanges: IResolvable) {
+      override fun dataCaptureChanges(setDataCaptureChanges: IResolvable) {
         cdkBuilder.setDataCaptureChanges(setDataCaptureChanges.let(IResolvable::unwrap))
       }
 
-      public override fun keepCsvFiles(keepCsvFiles: Boolean) {
+      override fun keepCsvFiles(keepCsvFiles: Boolean) {
         cdkBuilder.keepCsvFiles(keepCsvFiles)
       }
 
-      public override fun keepCsvFiles(keepCsvFiles: IResolvable) {
+      override fun keepCsvFiles(keepCsvFiles: IResolvable) {
         cdkBuilder.keepCsvFiles(keepCsvFiles.let(IResolvable::unwrap))
       }
 
-      public override fun loadTimeout(loadTimeout: Number) {
+      override fun loadTimeout(loadTimeout: Number) {
         cdkBuilder.loadTimeout(loadTimeout)
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun maxKBytesPerRead(maxKBytesPerRead: Number) {
+      override fun maxKBytesPerRead(maxKBytesPerRead: Number) {
         cdkBuilder.maxKBytesPerRead(maxKBytesPerRead)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun writeBufferSize(writeBufferSize: Number) {
+      override fun writeBufferSize(writeBufferSize: Number) {
         cdkBuilder.writeBufferSize(writeBufferSize)
       }
 
@@ -3001,25 +2730,24 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.IbmDb2SettingsProperty,
     ) : IbmDb2SettingsProperty {
-      public override fun currentLsn(): String? = unwrap(this).getCurrentLsn()
+      override fun currentLsn(): String? = unwrap(this).getCurrentLsn()
 
-      public override fun keepCsvFiles(): Any? = unwrap(this).getKeepCsvFiles()
+      override fun keepCsvFiles(): Any? = unwrap(this).getKeepCsvFiles()
 
-      public override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
+      override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun maxKBytesPerRead(): Number? = unwrap(this).getMaxKBytesPerRead()
+      override fun maxKBytesPerRead(): Number? = unwrap(this).getMaxKBytesPerRead()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun setDataCaptureChanges(): Any? = unwrap(this).getSetDataCaptureChanges()
+      override fun setDataCaptureChanges(): Any? = unwrap(this).getSetDataCaptureChanges()
 
-      public override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
+      override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
     }
 
     public companion object {
@@ -3055,23 +2783,17 @@ public open class CfnEndpoint internal constructor(
     public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
     public interface Builder {
-      public fun docsToInvestigate(docsToInvestigate: Number) {
-      }
+      public fun docsToInvestigate(docsToInvestigate: Number)
 
-      public fun extractDocId(extractDocId: Boolean) {
-      }
+      public fun extractDocId(extractDocId: Boolean)
 
-      public fun extractDocId(extractDocId: IResolvable) {
-      }
+      public fun extractDocId(extractDocId: IResolvable)
 
-      public fun nestingLevel(nestingLevel: String) {
-      }
+      public fun nestingLevel(nestingLevel: String)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3079,27 +2801,27 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty.builder()
 
-      public override fun docsToInvestigate(docsToInvestigate: Number) {
+      override fun docsToInvestigate(docsToInvestigate: Number) {
         cdkBuilder.docsToInvestigate(docsToInvestigate)
       }
 
-      public override fun extractDocId(extractDocId: Boolean) {
+      override fun extractDocId(extractDocId: Boolean) {
         cdkBuilder.extractDocId(extractDocId)
       }
 
-      public override fun extractDocId(extractDocId: IResolvable) {
+      override fun extractDocId(extractDocId: IResolvable) {
         cdkBuilder.extractDocId(extractDocId.let(IResolvable::unwrap))
       }
 
-      public override fun nestingLevel(nestingLevel: String) {
+      override fun nestingLevel(nestingLevel: String) {
         cdkBuilder.nestingLevel(nestingLevel)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
@@ -3110,17 +2832,16 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.DocDbSettingsProperty,
     ) : DocDbSettingsProperty {
-      public override fun docsToInvestigate(): Number? = unwrap(this).getDocsToInvestigate()
+      override fun docsToInvestigate(): Number? = unwrap(this).getDocsToInvestigate()
 
-      public override fun extractDocId(): Any? = unwrap(this).getExtractDocId()
+      override fun extractDocId(): Any? = unwrap(this).getExtractDocId()
 
-      public override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
+      override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
     }
 
     public companion object {
@@ -3199,110 +2920,75 @@ public open class CfnEndpoint internal constructor(
     public fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
 
     public interface Builder {
-      public fun acceptAnyDate(acceptAnyDate: Boolean) {
-      }
+      public fun acceptAnyDate(acceptAnyDate: Boolean)
 
-      public fun acceptAnyDate(acceptAnyDate: IResolvable) {
-      }
+      public fun acceptAnyDate(acceptAnyDate: IResolvable)
 
-      public fun afterConnectScript(afterConnectScript: String) {
-      }
+      public fun afterConnectScript(afterConnectScript: String)
 
-      public fun bucketFolder(bucketFolder: String) {
-      }
+      public fun bucketFolder(bucketFolder: String)
 
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun caseSensitiveNames(caseSensitiveNames: Boolean) {
-      }
+      public fun caseSensitiveNames(caseSensitiveNames: Boolean)
 
-      public fun caseSensitiveNames(caseSensitiveNames: IResolvable) {
-      }
+      public fun caseSensitiveNames(caseSensitiveNames: IResolvable)
 
-      public fun compUpdate(compUpdate: Boolean) {
-      }
+      public fun compUpdate(compUpdate: Boolean)
 
-      public fun compUpdate(compUpdate: IResolvable) {
-      }
+      public fun compUpdate(compUpdate: IResolvable)
 
-      public fun connectionTimeout(connectionTimeout: Number) {
-      }
+      public fun connectionTimeout(connectionTimeout: Number)
 
-      public fun dateFormat(dateFormat: String) {
-      }
+      public fun dateFormat(dateFormat: String)
 
-      public fun emptyAsNull(emptyAsNull: Boolean) {
-      }
+      public fun emptyAsNull(emptyAsNull: Boolean)
 
-      public fun emptyAsNull(emptyAsNull: IResolvable) {
-      }
+      public fun emptyAsNull(emptyAsNull: IResolvable)
 
-      public fun encryptionMode(encryptionMode: String) {
-      }
+      public fun encryptionMode(encryptionMode: String)
 
-      public fun explicitIds(explicitIds: Boolean) {
-      }
+      public fun explicitIds(explicitIds: Boolean)
 
-      public fun explicitIds(explicitIds: IResolvable) {
-      }
+      public fun explicitIds(explicitIds: IResolvable)
 
-      public fun fileTransferUploadStreams(fileTransferUploadStreams: Number) {
-      }
+      public fun fileTransferUploadStreams(fileTransferUploadStreams: Number)
 
-      public fun loadTimeout(loadTimeout: Number) {
-      }
+      public fun loadTimeout(loadTimeout: Number)
 
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
-      }
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
 
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
-      }
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun removeQuotes(removeQuotes: Boolean) {
-      }
+      public fun removeQuotes(removeQuotes: Boolean)
 
-      public fun removeQuotes(removeQuotes: IResolvable) {
-      }
+      public fun removeQuotes(removeQuotes: IResolvable)
 
-      public fun replaceChars(replaceChars: String) {
-      }
+      public fun replaceChars(replaceChars: String)
 
-      public fun replaceInvalidChars(replaceInvalidChars: String) {
-      }
+      public fun replaceInvalidChars(replaceInvalidChars: String)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
-      }
+      public fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String)
 
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-      }
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
 
-      public fun timeFormat(timeFormat: String) {
-      }
+      public fun timeFormat(timeFormat: String)
 
-      public fun trimBlanks(trimBlanks: Boolean) {
-      }
+      public fun trimBlanks(trimBlanks: Boolean)
 
-      public fun trimBlanks(trimBlanks: IResolvable) {
-      }
+      public fun trimBlanks(trimBlanks: IResolvable)
 
-      public fun truncateColumns(truncateColumns: Boolean) {
-      }
+      public fun truncateColumns(truncateColumns: Boolean)
 
-      public fun truncateColumns(truncateColumns: IResolvable) {
-      }
+      public fun truncateColumns(truncateColumns: IResolvable)
 
-      public fun writeBufferSize(writeBufferSize: Number) {
-      }
+      public fun writeBufferSize(writeBufferSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3310,143 +2996,143 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty.builder()
 
-      public override fun acceptAnyDate(acceptAnyDate: Boolean) {
+      override fun acceptAnyDate(acceptAnyDate: Boolean) {
         cdkBuilder.acceptAnyDate(acceptAnyDate)
       }
 
-      public override fun acceptAnyDate(acceptAnyDate: IResolvable) {
+      override fun acceptAnyDate(acceptAnyDate: IResolvable) {
         cdkBuilder.acceptAnyDate(acceptAnyDate.let(IResolvable::unwrap))
       }
 
-      public override fun afterConnectScript(afterConnectScript: String) {
+      override fun afterConnectScript(afterConnectScript: String) {
         cdkBuilder.afterConnectScript(afterConnectScript)
       }
 
-      public override fun bucketFolder(bucketFolder: String) {
+      override fun bucketFolder(bucketFolder: String) {
         cdkBuilder.bucketFolder(bucketFolder)
       }
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun caseSensitiveNames(caseSensitiveNames: Boolean) {
+      override fun caseSensitiveNames(caseSensitiveNames: Boolean) {
         cdkBuilder.caseSensitiveNames(caseSensitiveNames)
       }
 
-      public override fun caseSensitiveNames(caseSensitiveNames: IResolvable) {
+      override fun caseSensitiveNames(caseSensitiveNames: IResolvable) {
         cdkBuilder.caseSensitiveNames(caseSensitiveNames.let(IResolvable::unwrap))
       }
 
-      public override fun compUpdate(compUpdate: Boolean) {
+      override fun compUpdate(compUpdate: Boolean) {
         cdkBuilder.compUpdate(compUpdate)
       }
 
-      public override fun compUpdate(compUpdate: IResolvable) {
+      override fun compUpdate(compUpdate: IResolvable) {
         cdkBuilder.compUpdate(compUpdate.let(IResolvable::unwrap))
       }
 
-      public override fun connectionTimeout(connectionTimeout: Number) {
+      override fun connectionTimeout(connectionTimeout: Number) {
         cdkBuilder.connectionTimeout(connectionTimeout)
       }
 
-      public override fun dateFormat(dateFormat: String) {
+      override fun dateFormat(dateFormat: String) {
         cdkBuilder.dateFormat(dateFormat)
       }
 
-      public override fun emptyAsNull(emptyAsNull: Boolean) {
+      override fun emptyAsNull(emptyAsNull: Boolean) {
         cdkBuilder.emptyAsNull(emptyAsNull)
       }
 
-      public override fun emptyAsNull(emptyAsNull: IResolvable) {
+      override fun emptyAsNull(emptyAsNull: IResolvable) {
         cdkBuilder.emptyAsNull(emptyAsNull.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionMode(encryptionMode: String) {
+      override fun encryptionMode(encryptionMode: String) {
         cdkBuilder.encryptionMode(encryptionMode)
       }
 
-      public override fun explicitIds(explicitIds: Boolean) {
+      override fun explicitIds(explicitIds: Boolean) {
         cdkBuilder.explicitIds(explicitIds)
       }
 
-      public override fun explicitIds(explicitIds: IResolvable) {
+      override fun explicitIds(explicitIds: IResolvable) {
         cdkBuilder.explicitIds(explicitIds.let(IResolvable::unwrap))
       }
 
-      public override fun fileTransferUploadStreams(fileTransferUploadStreams: Number) {
+      override fun fileTransferUploadStreams(fileTransferUploadStreams: Number) {
         cdkBuilder.fileTransferUploadStreams(fileTransferUploadStreams)
       }
 
-      public override fun loadTimeout(loadTimeout: Number) {
+      override fun loadTimeout(loadTimeout: Number) {
         cdkBuilder.loadTimeout(loadTimeout)
       }
 
-      public override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
       }
 
-      public override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun removeQuotes(removeQuotes: Boolean) {
+      override fun removeQuotes(removeQuotes: Boolean) {
         cdkBuilder.removeQuotes(removeQuotes)
       }
 
-      public override fun removeQuotes(removeQuotes: IResolvable) {
+      override fun removeQuotes(removeQuotes: IResolvable) {
         cdkBuilder.removeQuotes(removeQuotes.let(IResolvable::unwrap))
       }
 
-      public override fun replaceChars(replaceChars: String) {
+      override fun replaceChars(replaceChars: String) {
         cdkBuilder.replaceChars(replaceChars)
       }
 
-      public override fun replaceInvalidChars(replaceInvalidChars: String) {
+      override fun replaceInvalidChars(replaceInvalidChars: String) {
         cdkBuilder.replaceInvalidChars(replaceInvalidChars)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
+      override fun serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId: String) {
         cdkBuilder.serverSideEncryptionKmsKeyId(serverSideEncryptionKmsKeyId)
       }
 
-      public override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
         cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
       }
 
-      public override fun timeFormat(timeFormat: String) {
+      override fun timeFormat(timeFormat: String) {
         cdkBuilder.timeFormat(timeFormat)
       }
 
-      public override fun trimBlanks(trimBlanks: Boolean) {
+      override fun trimBlanks(trimBlanks: Boolean) {
         cdkBuilder.trimBlanks(trimBlanks)
       }
 
-      public override fun trimBlanks(trimBlanks: IResolvable) {
+      override fun trimBlanks(trimBlanks: IResolvable) {
         cdkBuilder.trimBlanks(trimBlanks.let(IResolvable::unwrap))
       }
 
-      public override fun truncateColumns(truncateColumns: Boolean) {
+      override fun truncateColumns(truncateColumns: Boolean) {
         cdkBuilder.truncateColumns(truncateColumns)
       }
 
-      public override fun truncateColumns(truncateColumns: IResolvable) {
+      override fun truncateColumns(truncateColumns: IResolvable) {
         cdkBuilder.truncateColumns(truncateColumns.let(IResolvable::unwrap))
       }
 
-      public override fun writeBufferSize(writeBufferSize: Number) {
+      override fun writeBufferSize(writeBufferSize: Number) {
         cdkBuilder.writeBufferSize(writeBufferSize)
       }
 
@@ -3458,61 +3144,60 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.RedshiftSettingsProperty,
     ) : RedshiftSettingsProperty {
-      public override fun acceptAnyDate(): Any? = unwrap(this).getAcceptAnyDate()
+      override fun acceptAnyDate(): Any? = unwrap(this).getAcceptAnyDate()
 
-      public override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
 
-      public override fun bucketFolder(): String? = unwrap(this).getBucketFolder()
+      override fun bucketFolder(): String? = unwrap(this).getBucketFolder()
 
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun caseSensitiveNames(): Any? = unwrap(this).getCaseSensitiveNames()
+      override fun caseSensitiveNames(): Any? = unwrap(this).getCaseSensitiveNames()
 
-      public override fun compUpdate(): Any? = unwrap(this).getCompUpdate()
+      override fun compUpdate(): Any? = unwrap(this).getCompUpdate()
 
-      public override fun connectionTimeout(): Number? = unwrap(this).getConnectionTimeout()
+      override fun connectionTimeout(): Number? = unwrap(this).getConnectionTimeout()
 
-      public override fun dateFormat(): String? = unwrap(this).getDateFormat()
+      override fun dateFormat(): String? = unwrap(this).getDateFormat()
 
-      public override fun emptyAsNull(): Any? = unwrap(this).getEmptyAsNull()
+      override fun emptyAsNull(): Any? = unwrap(this).getEmptyAsNull()
 
-      public override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
+      override fun encryptionMode(): String? = unwrap(this).getEncryptionMode()
 
-      public override fun explicitIds(): Any? = unwrap(this).getExplicitIds()
+      override fun explicitIds(): Any? = unwrap(this).getExplicitIds()
 
-      public override fun fileTransferUploadStreams(): Number? =
+      override fun fileTransferUploadStreams(): Number? =
           unwrap(this).getFileTransferUploadStreams()
 
-      public override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
+      override fun loadTimeout(): Number? = unwrap(this).getLoadTimeout()
 
-      public override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
+      override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun removeQuotes(): Any? = unwrap(this).getRemoveQuotes()
+      override fun removeQuotes(): Any? = unwrap(this).getRemoveQuotes()
 
-      public override fun replaceChars(): String? = unwrap(this).getReplaceChars()
+      override fun replaceChars(): String? = unwrap(this).getReplaceChars()
 
-      public override fun replaceInvalidChars(): String? = unwrap(this).getReplaceInvalidChars()
+      override fun replaceInvalidChars(): String? = unwrap(this).getReplaceInvalidChars()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun serverSideEncryptionKmsKeyId(): String? =
+      override fun serverSideEncryptionKmsKeyId(): String? =
           unwrap(this).getServerSideEncryptionKmsKeyId()
 
-      public override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
 
-      public override fun timeFormat(): String? = unwrap(this).getTimeFormat()
+      override fun timeFormat(): String? = unwrap(this).getTimeFormat()
 
-      public override fun trimBlanks(): Any? = unwrap(this).getTrimBlanks()
+      override fun trimBlanks(): Any? = unwrap(this).getTrimBlanks()
 
-      public override fun truncateColumns(): Any? = unwrap(this).getTruncateColumns()
+      override fun truncateColumns(): Any? = unwrap(this).getTruncateColumns()
 
-      public override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
+      override fun writeBufferSize(): Number? = unwrap(this).getWriteBufferSize()
     }
 
     public companion object {
@@ -3564,44 +3249,31 @@ public open class CfnEndpoint internal constructor(
     public fun username(): String? = unwrap(this).getUsername()
 
     public interface Builder {
-      public fun authMechanism(authMechanism: String) {
-      }
+      public fun authMechanism(authMechanism: String)
 
-      public fun authSource(authSource: String) {
-      }
+      public fun authSource(authSource: String)
 
-      public fun authType(authType: String) {
-      }
+      public fun authType(authType: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun docsToInvestigate(docsToInvestigate: String) {
-      }
+      public fun docsToInvestigate(docsToInvestigate: String)
 
-      public fun extractDocId(extractDocId: String) {
-      }
+      public fun extractDocId(extractDocId: String)
 
-      public fun nestingLevel(nestingLevel: String) {
-      }
+      public fun nestingLevel(nestingLevel: String)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun serverName(serverName: String) {
-      }
+      public fun serverName(serverName: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3609,55 +3281,55 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty.builder()
 
-      public override fun authMechanism(authMechanism: String) {
+      override fun authMechanism(authMechanism: String) {
         cdkBuilder.authMechanism(authMechanism)
       }
 
-      public override fun authSource(authSource: String) {
+      override fun authSource(authSource: String) {
         cdkBuilder.authSource(authSource)
       }
 
-      public override fun authType(authType: String) {
+      override fun authType(authType: String) {
         cdkBuilder.authType(authType)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun docsToInvestigate(docsToInvestigate: String) {
+      override fun docsToInvestigate(docsToInvestigate: String) {
         cdkBuilder.docsToInvestigate(docsToInvestigate)
       }
 
-      public override fun extractDocId(extractDocId: String) {
+      override fun extractDocId(extractDocId: String) {
         cdkBuilder.extractDocId(extractDocId)
       }
 
-      public override fun nestingLevel(nestingLevel: String) {
+      override fun nestingLevel(nestingLevel: String) {
         cdkBuilder.nestingLevel(nestingLevel)
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun serverName(serverName: String) {
+      override fun serverName(serverName: String) {
         cdkBuilder.serverName(serverName)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -3669,33 +3341,32 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.MongoDbSettingsProperty,
     ) : MongoDbSettingsProperty {
-      public override fun authMechanism(): String? = unwrap(this).getAuthMechanism()
+      override fun authMechanism(): String? = unwrap(this).getAuthMechanism()
 
-      public override fun authSource(): String? = unwrap(this).getAuthSource()
+      override fun authSource(): String? = unwrap(this).getAuthSource()
 
-      public override fun authType(): String? = unwrap(this).getAuthType()
+      override fun authType(): String? = unwrap(this).getAuthType()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun docsToInvestigate(): String? = unwrap(this).getDocsToInvestigate()
+      override fun docsToInvestigate(): String? = unwrap(this).getDocsToInvestigate()
 
-      public override fun extractDocId(): String? = unwrap(this).getExtractDocId()
+      override fun extractDocId(): String? = unwrap(this).getExtractDocId()
 
-      public override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
+      override fun nestingLevel(): String? = unwrap(this).getNestingLevel()
 
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun serverName(): String? = unwrap(this).getServerName()
+      override fun serverName(): String? = unwrap(this).getServerName()
 
-      public override fun username(): String? = unwrap(this).getUsername()
+      override fun username(): String? = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -3753,65 +3424,45 @@ public open class CfnEndpoint internal constructor(
     public fun slotName(): String? = unwrap(this).getSlotName()
 
     public interface Builder {
-      public fun afterConnectScript(afterConnectScript: String) {
-      }
+      public fun afterConnectScript(afterConnectScript: String)
 
-      public fun babelfishDatabaseName(babelfishDatabaseName: String) {
-      }
+      public fun babelfishDatabaseName(babelfishDatabaseName: String)
 
-      public fun captureDdls(captureDdls: Boolean) {
-      }
+      public fun captureDdls(captureDdls: Boolean)
 
-      public fun captureDdls(captureDdls: IResolvable) {
-      }
+      public fun captureDdls(captureDdls: IResolvable)
 
-      public fun databaseMode(databaseMode: String) {
-      }
+      public fun databaseMode(databaseMode: String)
 
-      public fun ddlArtifactsSchema(ddlArtifactsSchema: String) {
-      }
+      public fun ddlArtifactsSchema(ddlArtifactsSchema: String)
 
-      public fun executeTimeout(executeTimeout: Number) {
-      }
+      public fun executeTimeout(executeTimeout: Number)
 
-      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
-      }
+      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean)
 
-      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
-      }
+      public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable)
 
-      public fun heartbeatEnable(heartbeatEnable: Boolean) {
-      }
+      public fun heartbeatEnable(heartbeatEnable: Boolean)
 
-      public fun heartbeatEnable(heartbeatEnable: IResolvable) {
-      }
+      public fun heartbeatEnable(heartbeatEnable: IResolvable)
 
-      public fun heartbeatFrequency(heartbeatFrequency: Number) {
-      }
+      public fun heartbeatFrequency(heartbeatFrequency: Number)
 
-      public fun heartbeatSchema(heartbeatSchema: String) {
-      }
+      public fun heartbeatSchema(heartbeatSchema: String)
 
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
-      }
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
 
-      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
-      }
+      public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun pluginName(pluginName: String) {
-      }
+      public fun pluginName(pluginName: String)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun slotName(slotName: String) {
-      }
+      public fun slotName(slotName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3819,83 +3470,83 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty.builder()
 
-      public override fun afterConnectScript(afterConnectScript: String) {
+      override fun afterConnectScript(afterConnectScript: String) {
         cdkBuilder.afterConnectScript(afterConnectScript)
       }
 
-      public override fun babelfishDatabaseName(babelfishDatabaseName: String) {
+      override fun babelfishDatabaseName(babelfishDatabaseName: String) {
         cdkBuilder.babelfishDatabaseName(babelfishDatabaseName)
       }
 
-      public override fun captureDdls(captureDdls: Boolean) {
+      override fun captureDdls(captureDdls: Boolean) {
         cdkBuilder.captureDdls(captureDdls)
       }
 
-      public override fun captureDdls(captureDdls: IResolvable) {
+      override fun captureDdls(captureDdls: IResolvable) {
         cdkBuilder.captureDdls(captureDdls.let(IResolvable::unwrap))
       }
 
-      public override fun databaseMode(databaseMode: String) {
+      override fun databaseMode(databaseMode: String) {
         cdkBuilder.databaseMode(databaseMode)
       }
 
-      public override fun ddlArtifactsSchema(ddlArtifactsSchema: String) {
+      override fun ddlArtifactsSchema(ddlArtifactsSchema: String) {
         cdkBuilder.ddlArtifactsSchema(ddlArtifactsSchema)
       }
 
-      public override fun executeTimeout(executeTimeout: Number) {
+      override fun executeTimeout(executeTimeout: Number) {
         cdkBuilder.executeTimeout(executeTimeout)
       }
 
-      public override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
+      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
         cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation)
       }
 
-      public override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
+      override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
         cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable::unwrap))
       }
 
-      public override fun heartbeatEnable(heartbeatEnable: Boolean) {
+      override fun heartbeatEnable(heartbeatEnable: Boolean) {
         cdkBuilder.heartbeatEnable(heartbeatEnable)
       }
 
-      public override fun heartbeatEnable(heartbeatEnable: IResolvable) {
+      override fun heartbeatEnable(heartbeatEnable: IResolvable) {
         cdkBuilder.heartbeatEnable(heartbeatEnable.let(IResolvable::unwrap))
       }
 
-      public override fun heartbeatFrequency(heartbeatFrequency: Number) {
+      override fun heartbeatFrequency(heartbeatFrequency: Number) {
         cdkBuilder.heartbeatFrequency(heartbeatFrequency)
       }
 
-      public override fun heartbeatSchema(heartbeatSchema: String) {
+      override fun heartbeatSchema(heartbeatSchema: String) {
         cdkBuilder.heartbeatSchema(heartbeatSchema)
       }
 
-      public override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
       }
 
-      public override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
+      override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun pluginName(pluginName: String) {
+      override fun pluginName(pluginName: String) {
         cdkBuilder.pluginName(pluginName)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun slotName(slotName: String) {
+      override fun slotName(slotName: String) {
         cdkBuilder.slotName(slotName)
       }
 
@@ -3907,40 +3558,38 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.PostgreSqlSettingsProperty,
     ) : PostgreSqlSettingsProperty {
-      public override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
 
-      public override fun babelfishDatabaseName(): String? = unwrap(this).getBabelfishDatabaseName()
+      override fun babelfishDatabaseName(): String? = unwrap(this).getBabelfishDatabaseName()
 
-      public override fun captureDdls(): Any? = unwrap(this).getCaptureDdls()
+      override fun captureDdls(): Any? = unwrap(this).getCaptureDdls()
 
-      public override fun databaseMode(): String? = unwrap(this).getDatabaseMode()
+      override fun databaseMode(): String? = unwrap(this).getDatabaseMode()
 
-      public override fun ddlArtifactsSchema(): String? = unwrap(this).getDdlArtifactsSchema()
+      override fun ddlArtifactsSchema(): String? = unwrap(this).getDdlArtifactsSchema()
 
-      public override fun executeTimeout(): Number? = unwrap(this).getExecuteTimeout()
+      override fun executeTimeout(): Number? = unwrap(this).getExecuteTimeout()
 
-      public override fun failTasksOnLobTruncation(): Any? =
-          unwrap(this).getFailTasksOnLobTruncation()
+      override fun failTasksOnLobTruncation(): Any? = unwrap(this).getFailTasksOnLobTruncation()
 
-      public override fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
+      override fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
 
-      public override fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
+      override fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
 
-      public override fun heartbeatSchema(): String? = unwrap(this).getHeartbeatSchema()
+      override fun heartbeatSchema(): String? = unwrap(this).getHeartbeatSchema()
 
-      public override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
+      override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun pluginName(): String? = unwrap(this).getPluginName()
+      override fun pluginName(): String? = unwrap(this).getPluginName()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun slotName(): String? = unwrap(this).getSlotName()
+      override fun slotName(): String? = unwrap(this).getSlotName()
     }
 
     public companion object {
@@ -3979,29 +3628,21 @@ public open class CfnEndpoint internal constructor(
     public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
 
     public interface Builder {
-      public fun errorRetryDuration(errorRetryDuration: Number) {
-      }
+      public fun errorRetryDuration(errorRetryDuration: Number)
 
-      public fun iamAuthEnabled(iamAuthEnabled: Boolean) {
-      }
+      public fun iamAuthEnabled(iamAuthEnabled: Boolean)
 
-      public fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
-      }
+      public fun iamAuthEnabled(iamAuthEnabled: IResolvable)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun maxRetryCount(maxRetryCount: Number) {
-      }
+      public fun maxRetryCount(maxRetryCount: Number)
 
-      public fun s3BucketFolder(s3BucketFolder: String) {
-      }
+      public fun s3BucketFolder(s3BucketFolder: String)
 
-      public fun s3BucketName(s3BucketName: String) {
-      }
+      public fun s3BucketName(s3BucketName: String)
 
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-      }
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4009,35 +3650,35 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty.builder()
 
-      public override fun errorRetryDuration(errorRetryDuration: Number) {
+      override fun errorRetryDuration(errorRetryDuration: Number) {
         cdkBuilder.errorRetryDuration(errorRetryDuration)
       }
 
-      public override fun iamAuthEnabled(iamAuthEnabled: Boolean) {
+      override fun iamAuthEnabled(iamAuthEnabled: Boolean) {
         cdkBuilder.iamAuthEnabled(iamAuthEnabled)
       }
 
-      public override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
+      override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
         cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun maxRetryCount(maxRetryCount: Number) {
+      override fun maxRetryCount(maxRetryCount: Number) {
         cdkBuilder.maxRetryCount(maxRetryCount)
       }
 
-      public override fun s3BucketFolder(s3BucketFolder: String) {
+      override fun s3BucketFolder(s3BucketFolder: String) {
         cdkBuilder.s3BucketFolder(s3BucketFolder)
       }
 
-      public override fun s3BucketName(s3BucketName: String) {
+      override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
       }
 
-      public override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
         cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
       }
 
@@ -4049,19 +3690,19 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.NeptuneSettingsProperty,
     ) : NeptuneSettingsProperty {
-      public override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
+      override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
 
-      public override fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
+      override fun iamAuthEnabled(): Any? = unwrap(this).getIamAuthEnabled()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun maxRetryCount(): Number? = unwrap(this).getMaxRetryCount()
+      override fun maxRetryCount(): Number? = unwrap(this).getMaxRetryCount()
 
-      public override fun s3BucketFolder(): String? = unwrap(this).getS3BucketFolder()
+      override fun s3BucketFolder(): String? = unwrap(this).getS3BucketFolder()
 
-      public override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
 
-      public override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
     }
 
     public companion object {
@@ -4106,56 +3747,39 @@ public open class CfnEndpoint internal constructor(
     public fun streamArn(): String? = unwrap(this).getStreamArn()
 
     public interface Builder {
-      public fun includeControlDetails(includeControlDetails: Boolean) {
-      }
+      public fun includeControlDetails(includeControlDetails: Boolean)
 
-      public fun includeControlDetails(includeControlDetails: IResolvable) {
-      }
+      public fun includeControlDetails(includeControlDetails: IResolvable)
 
-      public fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
-      }
+      public fun includeNullAndEmpty(includeNullAndEmpty: Boolean)
 
-      public fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
-      }
+      public fun includeNullAndEmpty(includeNullAndEmpty: IResolvable)
 
-      public fun includePartitionValue(includePartitionValue: Boolean) {
-      }
+      public fun includePartitionValue(includePartitionValue: Boolean)
 
-      public fun includePartitionValue(includePartitionValue: IResolvable) {
-      }
+      public fun includePartitionValue(includePartitionValue: IResolvable)
 
-      public fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
-      }
+      public fun includeTableAlterOperations(includeTableAlterOperations: Boolean)
 
-      public fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
-      }
+      public fun includeTableAlterOperations(includeTableAlterOperations: IResolvable)
 
-      public fun includeTransactionDetails(includeTransactionDetails: Boolean) {
-      }
+      public fun includeTransactionDetails(includeTransactionDetails: Boolean)
 
-      public fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
-      }
+      public fun includeTransactionDetails(includeTransactionDetails: IResolvable)
 
-      public fun messageFormat(messageFormat: String) {
-      }
+      public fun messageFormat(messageFormat: String)
 
-      public fun noHexPrefix(noHexPrefix: Boolean) {
-      }
+      public fun noHexPrefix(noHexPrefix: Boolean)
 
-      public fun noHexPrefix(noHexPrefix: IResolvable) {
-      }
+      public fun noHexPrefix(noHexPrefix: IResolvable)
 
-      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
-      }
+      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean)
 
-      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
-      }
+      public fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable)
 
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-      }
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
 
-      public fun streamArn(streamArn: String) {
-      }
+      public fun streamArn(streamArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4163,71 +3787,71 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty.builder()
 
-      public override fun includeControlDetails(includeControlDetails: Boolean) {
+      override fun includeControlDetails(includeControlDetails: Boolean) {
         cdkBuilder.includeControlDetails(includeControlDetails)
       }
 
-      public override fun includeControlDetails(includeControlDetails: IResolvable) {
+      override fun includeControlDetails(includeControlDetails: IResolvable) {
         cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable::unwrap))
       }
 
-      public override fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
+      override fun includeNullAndEmpty(includeNullAndEmpty: Boolean) {
         cdkBuilder.includeNullAndEmpty(includeNullAndEmpty)
       }
 
-      public override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
+      override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
         cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable::unwrap))
       }
 
-      public override fun includePartitionValue(includePartitionValue: Boolean) {
+      override fun includePartitionValue(includePartitionValue: Boolean) {
         cdkBuilder.includePartitionValue(includePartitionValue)
       }
 
-      public override fun includePartitionValue(includePartitionValue: IResolvable) {
+      override fun includePartitionValue(includePartitionValue: IResolvable) {
         cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable::unwrap))
       }
 
-      public override fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
+      override fun includeTableAlterOperations(includeTableAlterOperations: Boolean) {
         cdkBuilder.includeTableAlterOperations(includeTableAlterOperations)
       }
 
-      public override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
+      override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
         cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable::unwrap))
       }
 
-      public override fun includeTransactionDetails(includeTransactionDetails: Boolean) {
+      override fun includeTransactionDetails(includeTransactionDetails: Boolean) {
         cdkBuilder.includeTransactionDetails(includeTransactionDetails)
       }
 
-      public override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
+      override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
         cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable::unwrap))
       }
 
-      public override fun messageFormat(messageFormat: String) {
+      override fun messageFormat(messageFormat: String) {
         cdkBuilder.messageFormat(messageFormat)
       }
 
-      public override fun noHexPrefix(noHexPrefix: Boolean) {
+      override fun noHexPrefix(noHexPrefix: Boolean) {
         cdkBuilder.noHexPrefix(noHexPrefix)
       }
 
-      public override fun noHexPrefix(noHexPrefix: IResolvable) {
+      override fun noHexPrefix(noHexPrefix: IResolvable) {
         cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable::unwrap))
       }
 
-      public override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
+      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: Boolean) {
         cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable)
       }
 
-      public override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
+      override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
         cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable::unwrap))
       }
 
-      public override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
         cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
       }
 
-      public override fun streamArn(streamArn: String) {
+      override fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
       }
 
@@ -4239,28 +3863,27 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.KinesisSettingsProperty,
     ) : KinesisSettingsProperty {
-      public override fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
+      override fun includeControlDetails(): Any? = unwrap(this).getIncludeControlDetails()
 
-      public override fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
+      override fun includeNullAndEmpty(): Any? = unwrap(this).getIncludeNullAndEmpty()
 
-      public override fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
+      override fun includePartitionValue(): Any? = unwrap(this).getIncludePartitionValue()
 
-      public override fun includeTableAlterOperations(): Any? =
+      override fun includeTableAlterOperations(): Any? =
           unwrap(this).getIncludeTableAlterOperations()
 
-      public override fun includeTransactionDetails(): Any? =
-          unwrap(this).getIncludeTransactionDetails()
+      override fun includeTransactionDetails(): Any? = unwrap(this).getIncludeTransactionDetails()
 
-      public override fun messageFormat(): String? = unwrap(this).getMessageFormat()
+      override fun messageFormat(): String? = unwrap(this).getMessageFormat()
 
-      public override fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
+      override fun noHexPrefix(): Any? = unwrap(this).getNoHexPrefix()
 
-      public override fun partitionIncludeSchemaTable(): Any? =
+      override fun partitionIncludeSchemaTable(): Any? =
           unwrap(this).getPartitionIncludeSchemaTable()
 
-      public override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
 
-      public override fun streamArn(): String? = unwrap(this).getStreamArn()
+      override fun streamArn(): String? = unwrap(this).getStreamArn()
     }
 
     public companion object {
@@ -4293,17 +3916,13 @@ public open class CfnEndpoint internal constructor(
     public fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
 
     public interface Builder {
-      public fun endpointUri(endpointUri: String) {
-      }
+      public fun endpointUri(endpointUri: String)
 
-      public fun errorRetryDuration(errorRetryDuration: Number) {
-      }
+      public fun errorRetryDuration(errorRetryDuration: Number)
 
-      public fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number) {
-      }
+      public fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number)
 
-      public fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
-      }
+      public fun serviceAccessRoleArn(serviceAccessRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4311,19 +3930,19 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty.builder()
 
-      public override fun endpointUri(endpointUri: String) {
+      override fun endpointUri(endpointUri: String) {
         cdkBuilder.endpointUri(endpointUri)
       }
 
-      public override fun errorRetryDuration(errorRetryDuration: Number) {
+      override fun errorRetryDuration(errorRetryDuration: Number) {
         cdkBuilder.errorRetryDuration(errorRetryDuration)
       }
 
-      public override fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number) {
+      override fun fullLoadErrorPercentage(fullLoadErrorPercentage: Number) {
         cdkBuilder.fullLoadErrorPercentage(fullLoadErrorPercentage)
       }
 
-      public override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
+      override fun serviceAccessRoleArn(serviceAccessRoleArn: String) {
         cdkBuilder.serviceAccessRoleArn(serviceAccessRoleArn)
       }
 
@@ -4336,14 +3955,13 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.ElasticsearchSettingsProperty,
     ) : ElasticsearchSettingsProperty {
-      public override fun endpointUri(): String? = unwrap(this).getEndpointUri()
+      override fun endpointUri(): String? = unwrap(this).getEndpointUri()
 
-      public override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
+      override fun errorRetryDuration(): Number? = unwrap(this).getErrorRetryDuration()
 
-      public override fun fullLoadErrorPercentage(): Number? =
-          unwrap(this).getFullLoadErrorPercentage()
+      override fun fullLoadErrorPercentage(): Number? = unwrap(this).getFullLoadErrorPercentage()
 
-      public override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
+      override fun serviceAccessRoleArn(): String? = unwrap(this).getServiceAccessRoleArn()
     }
 
     public companion object {
@@ -4382,26 +4000,19 @@ public open class CfnEndpoint internal constructor(
     public fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
 
     public interface Builder {
-      public fun authPassword(authPassword: String) {
-      }
+      public fun authPassword(authPassword: String)
 
-      public fun authType(authType: String) {
-      }
+      public fun authType(authType: String)
 
-      public fun authUserName(authUserName: String) {
-      }
+      public fun authUserName(authUserName: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun serverName(serverName: String) {
-      }
+      public fun serverName(serverName: String)
 
-      public fun sslCaCertificateArn(sslCaCertificateArn: String) {
-      }
+      public fun sslCaCertificateArn(sslCaCertificateArn: String)
 
-      public fun sslSecurityProtocol(sslSecurityProtocol: String) {
-      }
+      public fun sslSecurityProtocol(sslSecurityProtocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4409,31 +4020,31 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty.builder()
 
-      public override fun authPassword(authPassword: String) {
+      override fun authPassword(authPassword: String) {
         cdkBuilder.authPassword(authPassword)
       }
 
-      public override fun authType(authType: String) {
+      override fun authType(authType: String) {
         cdkBuilder.authType(authType)
       }
 
-      public override fun authUserName(authUserName: String) {
+      override fun authUserName(authUserName: String) {
         cdkBuilder.authUserName(authUserName)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun serverName(serverName: String) {
+      override fun serverName(serverName: String) {
         cdkBuilder.serverName(serverName)
       }
 
-      public override fun sslCaCertificateArn(sslCaCertificateArn: String) {
+      override fun sslCaCertificateArn(sslCaCertificateArn: String) {
         cdkBuilder.sslCaCertificateArn(sslCaCertificateArn)
       }
 
-      public override fun sslSecurityProtocol(sslSecurityProtocol: String) {
+      override fun sslSecurityProtocol(sslSecurityProtocol: String) {
         cdkBuilder.sslSecurityProtocol(sslSecurityProtocol)
       }
 
@@ -4444,19 +4055,19 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dms.CfnEndpoint.RedisSettingsProperty,
     ) : RedisSettingsProperty {
-      public override fun authPassword(): String? = unwrap(this).getAuthPassword()
+      override fun authPassword(): String? = unwrap(this).getAuthPassword()
 
-      public override fun authType(): String? = unwrap(this).getAuthType()
+      override fun authType(): String? = unwrap(this).getAuthType()
 
-      public override fun authUserName(): String? = unwrap(this).getAuthUserName()
+      override fun authUserName(): String? = unwrap(this).getAuthUserName()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun serverName(): String? = unwrap(this).getServerName()
+      override fun serverName(): String? = unwrap(this).getServerName()
 
-      public override fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
+      override fun sslCaCertificateArn(): String? = unwrap(this).getSslCaCertificateArn()
 
-      public override fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
+      override fun sslSecurityProtocol(): String? = unwrap(this).getSslSecurityProtocol()
     }
 
     public companion object {
@@ -4509,47 +4120,33 @@ public open class CfnEndpoint internal constructor(
     public fun username(): String? = unwrap(this).getUsername()
 
     public interface Builder {
-      public fun afterConnectScript(afterConnectScript: String) {
-      }
+      public fun afterConnectScript(afterConnectScript: String)
 
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
-      }
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean)
 
-      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
-      }
+      public fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun eventsPollInterval(eventsPollInterval: Number) {
-      }
+      public fun eventsPollInterval(eventsPollInterval: Number)
 
-      public fun maxFileSize(maxFileSize: Number) {
-      }
+      public fun maxFileSize(maxFileSize: Number)
 
-      public fun parallelLoadThreads(parallelLoadThreads: Number) {
-      }
+      public fun parallelLoadThreads(parallelLoadThreads: Number)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
 
-      public fun serverName(serverName: String) {
-      }
+      public fun serverName(serverName: String)
 
-      public fun serverTimezone(serverTimezone: String) {
-      }
+      public fun serverTimezone(serverTimezone: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4557,60 +4154,59 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty.builder()
 
-      public override fun afterConnectScript(afterConnectScript: String) {
+      override fun afterConnectScript(afterConnectScript: String) {
         cdkBuilder.afterConnectScript(afterConnectScript)
       }
 
-      public override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: Boolean) {
         cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch)
       }
 
-      public override
-          fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
+      override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
         cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun eventsPollInterval(eventsPollInterval: Number) {
+      override fun eventsPollInterval(eventsPollInterval: Number) {
         cdkBuilder.eventsPollInterval(eventsPollInterval)
       }
 
-      public override fun maxFileSize(maxFileSize: Number) {
+      override fun maxFileSize(maxFileSize: Number) {
         cdkBuilder.maxFileSize(maxFileSize)
       }
 
-      public override fun parallelLoadThreads(parallelLoadThreads: Number) {
+      override fun parallelLoadThreads(parallelLoadThreads: Number) {
         cdkBuilder.parallelLoadThreads(parallelLoadThreads)
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
-      public override fun serverName(serverName: String) {
+      override fun serverName(serverName: String) {
         cdkBuilder.serverName(serverName)
       }
 
-      public override fun serverTimezone(serverTimezone: String) {
+      override fun serverTimezone(serverTimezone: String) {
         cdkBuilder.serverTimezone(serverTimezone)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -4622,34 +4218,33 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnEndpoint.GcpMySQLSettingsProperty,
     ) : GcpMySQLSettingsProperty {
-      public override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
+      override fun afterConnectScript(): String? = unwrap(this).getAfterConnectScript()
 
-      public override fun cleanSourceMetadataOnMismatch(): Any? =
+      override fun cleanSourceMetadataOnMismatch(): Any? =
           unwrap(this).getCleanSourceMetadataOnMismatch()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
+      override fun eventsPollInterval(): Number? = unwrap(this).getEventsPollInterval()
 
-      public override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
+      override fun maxFileSize(): Number? = unwrap(this).getMaxFileSize()
 
-      public override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
+      override fun parallelLoadThreads(): Number? = unwrap(this).getParallelLoadThreads()
 
-      public override fun password(): String? = unwrap(this).getPassword()
+      override fun password(): String? = unwrap(this).getPassword()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
-      public override fun serverName(): String? = unwrap(this).getServerName()
+      override fun serverName(): String? = unwrap(this).getServerName()
 
-      public override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
+      override fun serverTimezone(): String? = unwrap(this).getServerTimezone()
 
-      public override fun username(): String? = unwrap(this).getUsername()
+      override fun username(): String? = unwrap(this).getUsername()
     }
 
     public companion object {

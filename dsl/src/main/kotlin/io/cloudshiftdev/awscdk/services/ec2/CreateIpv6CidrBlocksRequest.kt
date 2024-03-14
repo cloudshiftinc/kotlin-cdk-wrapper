@@ -12,29 +12,26 @@ public interface CreateIpv6CidrBlocksRequest {
   public fun subnetCount(): Number
 
   public interface Builder {
-    public fun ipv6SelectedCidr(ipv6SelectedCidr: String) {
-    }
+    public fun ipv6SelectedCidr(ipv6SelectedCidr: String)
 
-    public fun sizeMask(sizeMask: String) {
-    }
+    public fun sizeMask(sizeMask: String)
 
-    public fun subnetCount(subnetCount: Number) {
-    }
+    public fun subnetCount(subnetCount: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest.Builder
         = software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest.builder()
 
-    public override fun ipv6SelectedCidr(ipv6SelectedCidr: String) {
+    override fun ipv6SelectedCidr(ipv6SelectedCidr: String) {
       cdkBuilder.ipv6SelectedCidr(ipv6SelectedCidr)
     }
 
-    public override fun sizeMask(sizeMask: String) {
+    override fun sizeMask(sizeMask: String) {
       cdkBuilder.sizeMask(sizeMask)
     }
 
-    public override fun subnetCount(subnetCount: Number) {
+    override fun subnetCount(subnetCount: Number) {
       cdkBuilder.subnetCount(subnetCount)
     }
 
@@ -45,11 +42,11 @@ public interface CreateIpv6CidrBlocksRequest {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest,
   ) : CreateIpv6CidrBlocksRequest {
-    public override fun ipv6SelectedCidr(): String = unwrap(this).getIpv6SelectedCidr()
+    override fun ipv6SelectedCidr(): String = unwrap(this).getIpv6SelectedCidr()
 
-    public override fun sizeMask(): String? = unwrap(this).getSizeMask()
+    override fun sizeMask(): String? = unwrap(this).getSizeMask()
 
-    public override fun subnetCount(): Number = unwrap(this).getSubnetCount()
+    override fun subnetCount(): Number = unwrap(this).getSubnetCount()
   }
 
   public companion object {

@@ -7,15 +7,14 @@ public interface Http2ConnectionPool {
   public fun maxRequests(): Number
 
   public interface Builder {
-    public fun maxRequests(maxRequests: Number) {
-    }
+    public fun maxRequests(maxRequests: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.Http2ConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.Http2ConnectionPool.builder()
 
-    public override fun maxRequests(maxRequests: Number) {
+    override fun maxRequests(maxRequests: Number) {
       cdkBuilder.maxRequests(maxRequests)
     }
 
@@ -26,7 +25,7 @@ public interface Http2ConnectionPool {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool,
   ) : Http2ConnectionPool {
-    public override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+    override fun maxRequests(): Number = unwrap(this).getMaxRequests()
   }
 
   public companion object {

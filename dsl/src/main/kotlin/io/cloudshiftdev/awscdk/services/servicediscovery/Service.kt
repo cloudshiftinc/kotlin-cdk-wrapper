@@ -73,45 +73,33 @@ public open class Service internal constructor(
   public override fun serviceName(): String = unwrap(this).getServiceName()
 
   public interface Builder {
-    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
-    }
+    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d1b76f09d0c23e4e70030023fec6b487cf4a163a13b98b819f88d27549997f8")
-    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit) {
-    }
+    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun discoveryType(discoveryType: DiscoveryType) {
-    }
+    public fun discoveryType(discoveryType: DiscoveryType)
 
-    public fun dnsRecordType(dnsRecordType: DnsRecordType) {
-    }
+    public fun dnsRecordType(dnsRecordType: DnsRecordType)
 
-    public fun dnsTtl(dnsTtl: Duration) {
-    }
+    public fun dnsTtl(dnsTtl: Duration)
 
-    public fun healthCheck(healthCheck: HealthCheckConfig) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("34e6d47e404c64739af1604e475e4de04d1ae729d19ff40352af79d913d29fc6")
-    public fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit)
 
-    public fun loadBalancer(loadBalancer: Boolean) {
-    }
+    public fun loadBalancer(loadBalancer: Boolean)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun namespace(namespace: INamespace) {
-    }
+    public fun namespace(namespace: INamespace)
 
-    public fun routingPolicy(routingPolicy: RoutingPolicy) {
-    }
+    public fun routingPolicy(routingPolicy: RoutingPolicy)
   }
 
   private class BuilderImpl(
@@ -121,54 +109,53 @@ public open class Service internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicediscovery.Service.Builder =
         software.amazon.awscdk.services.servicediscovery.Service.Builder.create(scope, id)
 
-    public override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
+    override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
       cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d1b76f09d0c23e4e70030023fec6b487cf4a163a13b98b819f88d27549997f8")
-    public override
-        fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit): Unit =
-        customHealthCheck(HealthCheckCustomConfig(customHealthCheck))
+    override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit):
+        Unit = customHealthCheck(HealthCheckCustomConfig(customHealthCheck))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun discoveryType(discoveryType: DiscoveryType) {
+    override fun discoveryType(discoveryType: DiscoveryType) {
       cdkBuilder.discoveryType(discoveryType.let(DiscoveryType::unwrap))
     }
 
-    public override fun dnsRecordType(dnsRecordType: DnsRecordType) {
+    override fun dnsRecordType(dnsRecordType: DnsRecordType) {
       cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
     }
 
-    public override fun dnsTtl(dnsTtl: Duration) {
+    override fun dnsTtl(dnsTtl: Duration) {
       cdkBuilder.dnsTtl(dnsTtl.let(Duration::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheckConfig) {
+    override fun healthCheck(healthCheck: HealthCheckConfig) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("34e6d47e404c64739af1604e475e4de04d1ae729d19ff40352af79d913d29fc6")
-    public override fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit): Unit =
         healthCheck(HealthCheckConfig(healthCheck))
 
-    public override fun loadBalancer(loadBalancer: Boolean) {
+    override fun loadBalancer(loadBalancer: Boolean) {
       cdkBuilder.loadBalancer(loadBalancer)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun namespace(namespace: INamespace) {
+    override fun namespace(namespace: INamespace) {
       cdkBuilder.namespace(namespace.let(INamespace::unwrap))
     }
 
-    public override fun routingPolicy(routingPolicy: RoutingPolicy) {
+    override fun routingPolicy(routingPolicy: RoutingPolicy) {
       cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy::unwrap))
     }
 

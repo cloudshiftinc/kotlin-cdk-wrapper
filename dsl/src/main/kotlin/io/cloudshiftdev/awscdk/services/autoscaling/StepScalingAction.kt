@@ -24,23 +24,17 @@ public open class StepScalingAction internal constructor(
   public open fun scalingPolicyArn(): String = unwrap(this).getScalingPolicyArn()
 
   public interface Builder {
-    public fun adjustmentType(adjustmentType: AdjustmentType) {
-    }
+    public fun adjustmentType(adjustmentType: AdjustmentType)
 
-    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    }
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration)
 
-    public fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-    }
+    public fun metricAggregationType(metricAggregationType: MetricAggregationType)
 
-    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    }
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
   }
 
   private class BuilderImpl(
@@ -50,27 +44,27 @@ public open class StepScalingAction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.StepScalingAction.Builder =
         software.amazon.awscdk.services.autoscaling.StepScalingAction.Builder.create(scope, id)
 
-    public override fun adjustmentType(adjustmentType: AdjustmentType) {
+    override fun adjustmentType(adjustmentType: AdjustmentType) {
       cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
     }
 
-    public override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+    override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
+    override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
       cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
     }
 
-    public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+    override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
       cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
     }
 

@@ -9,22 +9,20 @@ public interface GraphqlApiAttributes {
   public fun graphqlApiId(): String
 
   public interface Builder {
-    public fun graphqlApiArn(graphqlApiArn: String) {
-    }
+    public fun graphqlApiArn(graphqlApiArn: String)
 
-    public fun graphqlApiId(graphqlApiId: String) {
-    }
+    public fun graphqlApiId(graphqlApiId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.GraphqlApiAttributes.Builder =
         software.amazon.awscdk.services.appsync.GraphqlApiAttributes.builder()
 
-    public override fun graphqlApiArn(graphqlApiArn: String) {
+    override fun graphqlApiArn(graphqlApiArn: String) {
       cdkBuilder.graphqlApiArn(graphqlApiArn)
     }
 
-    public override fun graphqlApiId(graphqlApiId: String) {
+    override fun graphqlApiId(graphqlApiId: String) {
       cdkBuilder.graphqlApiId(graphqlApiId)
     }
 
@@ -35,9 +33,9 @@ public interface GraphqlApiAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiAttributes,
   ) : GraphqlApiAttributes {
-    public override fun graphqlApiArn(): String? = unwrap(this).getGraphqlApiArn()
+    override fun graphqlApiArn(): String? = unwrap(this).getGraphqlApiArn()
 
-    public override fun graphqlApiId(): String = unwrap(this).getGraphqlApiId()
+    override fun graphqlApiId(): String = unwrap(this).getGraphqlApiId()
   }
 
   public companion object {

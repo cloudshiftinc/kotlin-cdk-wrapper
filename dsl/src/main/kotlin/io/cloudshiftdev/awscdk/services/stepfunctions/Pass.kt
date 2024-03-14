@@ -21,26 +21,19 @@ public open class Pass internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun parameters(parameters: Map<String, Any>) {
-    }
+    public fun parameters(parameters: Map<String, Any>)
 
-    public fun result(result: Result) {
-    }
+    public fun result(result: Result)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
   }
 
   private class BuilderImpl(
@@ -50,31 +43,31 @@ public open class Pass internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Pass.Builder =
         software.amazon.awscdk.services.stepfunctions.Pass.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun parameters(parameters: Map<String, Any>) {
+    override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun result(result: Result) {
+    override fun result(result: Result) {
       cdkBuilder.result(result.let(Result::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 

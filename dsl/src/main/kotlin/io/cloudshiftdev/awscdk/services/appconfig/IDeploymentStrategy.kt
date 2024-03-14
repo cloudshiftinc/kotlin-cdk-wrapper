@@ -28,34 +28,32 @@ public interface IDeploymentStrategy : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.IDeploymentStrategy,
   ) : IDeploymentStrategy {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun deploymentDurationInMinutes(): Number? =
+    override fun deploymentDurationInMinutes(): Number? =
         unwrap(this).getDeploymentDurationInMinutes()
 
-    public override fun deploymentStrategyArn(): String = unwrap(this).getDeploymentStrategyArn()
+    override fun deploymentStrategyArn(): String = unwrap(this).getDeploymentStrategyArn()
 
-    public override fun deploymentStrategyId(): String = unwrap(this).getDeploymentStrategyId()
+    override fun deploymentStrategyId(): String = unwrap(this).getDeploymentStrategyId()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun finalBakeTimeInMinutes(): Number? = unwrap(this).getFinalBakeTimeInMinutes()
+    override fun finalBakeTimeInMinutes(): Number? = unwrap(this).getFinalBakeTimeInMinutes()
 
-    public override fun growthFactor(): Number? = unwrap(this).getGrowthFactor()
+    override fun growthFactor(): Number? = unwrap(this).getGrowthFactor()
 
-    public override fun growthType(): GrowthType? =
-        unwrap(this).getGrowthType()?.let(GrowthType::wrap)
+    override fun growthType(): GrowthType? = unwrap(this).getGrowthType()?.let(GrowthType::wrap)
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

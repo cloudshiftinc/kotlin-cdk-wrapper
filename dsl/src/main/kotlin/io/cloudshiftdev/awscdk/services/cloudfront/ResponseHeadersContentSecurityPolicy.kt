@@ -10,11 +10,9 @@ public interface ResponseHeadersContentSecurityPolicy {
   public fun `override`(): Boolean
 
   public interface Builder {
-    public fun contentSecurityPolicy(contentSecurityPolicy: String) {
-    }
+    public fun contentSecurityPolicy(contentSecurityPolicy: String)
 
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface ResponseHeadersContentSecurityPolicy {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy.builder()
 
-    public override fun contentSecurityPolicy(contentSecurityPolicy: String) {
+    override fun contentSecurityPolicy(contentSecurityPolicy: String) {
       cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
     }
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
@@ -39,9 +37,9 @@ public interface ResponseHeadersContentSecurityPolicy {
     internal val cdkObject:
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy,
   ) : ResponseHeadersContentSecurityPolicy {
-    public override fun contentSecurityPolicy(): String = unwrap(this).getContentSecurityPolicy()
+    override fun contentSecurityPolicy(): String = unwrap(this).getContentSecurityPolicy()
 
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
   }
 
   public companion object {

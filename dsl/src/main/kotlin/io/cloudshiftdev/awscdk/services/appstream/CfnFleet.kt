@@ -207,107 +207,76 @@ public open class CfnFleet internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun computeCapacity(computeCapacity: IResolvable) {
-    }
+    public fun computeCapacity(computeCapacity: IResolvable)
 
-    public fun computeCapacity(computeCapacity: ComputeCapacityProperty) {
-    }
+    public fun computeCapacity(computeCapacity: ComputeCapacityProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8195d41084fb0cc4bd88ec67ead8b8f66dc2e1cabaaef40f78689f2148083580")
-    public fun computeCapacity(computeCapacity: ComputeCapacityProperty.Builder.() -> Unit) {
-    }
+    public fun computeCapacity(computeCapacity: ComputeCapacityProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disconnectTimeoutInSeconds(disconnectTimeoutInSeconds: Number) {
-    }
+    public fun disconnectTimeoutInSeconds(disconnectTimeoutInSeconds: Number)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun domainJoinInfo(domainJoinInfo: IResolvable) {
-    }
+    public fun domainJoinInfo(domainJoinInfo: IResolvable)
 
-    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
-    }
+    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("506b9b8d13972074c9bc025c0200159e6477bacb687a4372c8b938675473574d")
-    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit) {
-    }
+    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit)
 
-    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
-    }
+    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean)
 
-    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-    }
+    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable)
 
-    public fun fleetType(fleetType: String) {
-    }
+    public fun fleetType(fleetType: String)
 
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun idleDisconnectTimeoutInSeconds(idleDisconnectTimeoutInSeconds: Number) {
-    }
+    public fun idleDisconnectTimeoutInSeconds(idleDisconnectTimeoutInSeconds: Number)
 
-    public fun imageArn(imageArn: String) {
-    }
+    public fun imageArn(imageArn: String)
 
-    public fun imageName(imageName: String) {
-    }
+    public fun imageName(imageName: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun maxConcurrentSessions(maxConcurrentSessions: Number) {
-    }
+    public fun maxConcurrentSessions(maxConcurrentSessions: Number)
 
-    public fun maxSessionsPerInstance(maxSessionsPerInstance: Number) {
-    }
+    public fun maxSessionsPerInstance(maxSessionsPerInstance: Number)
 
-    public fun maxUserDurationInSeconds(maxUserDurationInSeconds: Number) {
-    }
+    public fun maxUserDurationInSeconds(maxUserDurationInSeconds: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun sessionScriptS3Location(sessionScriptS3Location: IResolvable) {
-    }
+    public fun sessionScriptS3Location(sessionScriptS3Location: IResolvable)
 
-    public fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty) {
-    }
+    public fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("56683f90f907d5eb91d8a6af02a81d5f7bb017a32f5aec052db5ab5b82184de3")
     public
-        fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty.Builder.() -> Unit) {
-    }
+        fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty.Builder.() -> Unit)
 
-    public fun streamView(streamView: String) {
-    }
+    public fun streamView(streamView: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun usbDeviceFilterStrings(usbDeviceFilterStrings: List<String>) {
-    }
+    public fun usbDeviceFilterStrings(usbDeviceFilterStrings: List<String>)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("29106d013b41bf806200d4877f319de3dc036117dcc422d9d2682b4e9803ed0f")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -317,134 +286,133 @@ public open class CfnFleet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnFleet.Builder =
         software.amazon.awscdk.services.appstream.CfnFleet.Builder.create(scope, id)
 
-    public override fun computeCapacity(computeCapacity: IResolvable) {
+    override fun computeCapacity(computeCapacity: IResolvable) {
       cdkBuilder.computeCapacity(computeCapacity.let(IResolvable::unwrap))
     }
 
-    public override fun computeCapacity(computeCapacity: ComputeCapacityProperty) {
+    override fun computeCapacity(computeCapacity: ComputeCapacityProperty) {
       cdkBuilder.computeCapacity(computeCapacity.let(ComputeCapacityProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8195d41084fb0cc4bd88ec67ead8b8f66dc2e1cabaaef40f78689f2148083580")
-    public override
-        fun computeCapacity(computeCapacity: ComputeCapacityProperty.Builder.() -> Unit): Unit =
-        computeCapacity(ComputeCapacityProperty(computeCapacity))
+    override fun computeCapacity(computeCapacity: ComputeCapacityProperty.Builder.() -> Unit): Unit
+        = computeCapacity(ComputeCapacityProperty(computeCapacity))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disconnectTimeoutInSeconds(disconnectTimeoutInSeconds: Number) {
+    override fun disconnectTimeoutInSeconds(disconnectTimeoutInSeconds: Number) {
       cdkBuilder.disconnectTimeoutInSeconds(disconnectTimeoutInSeconds)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun domainJoinInfo(domainJoinInfo: IResolvable) {
+    override fun domainJoinInfo(domainJoinInfo: IResolvable) {
       cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable::unwrap))
     }
 
-    public override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
+    override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
       cdkBuilder.domainJoinInfo(domainJoinInfo.let(DomainJoinInfoProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("506b9b8d13972074c9bc025c0200159e6477bacb687a4372c8b938675473574d")
-    public override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit):
-        Unit = domainJoinInfo(DomainJoinInfoProperty(domainJoinInfo))
+    override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit): Unit =
+        domainJoinInfo(DomainJoinInfoProperty(domainJoinInfo))
 
-    public override fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
+    override fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
       cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess)
     }
 
-    public override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
+    override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
       cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
     }
 
-    public override fun fleetType(fleetType: String) {
+    override fun fleetType(fleetType: String) {
       cdkBuilder.fleetType(fleetType)
     }
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun idleDisconnectTimeoutInSeconds(idleDisconnectTimeoutInSeconds: Number) {
+    override fun idleDisconnectTimeoutInSeconds(idleDisconnectTimeoutInSeconds: Number) {
       cdkBuilder.idleDisconnectTimeoutInSeconds(idleDisconnectTimeoutInSeconds)
     }
 
-    public override fun imageArn(imageArn: String) {
+    override fun imageArn(imageArn: String) {
       cdkBuilder.imageArn(imageArn)
     }
 
-    public override fun imageName(imageName: String) {
+    override fun imageName(imageName: String) {
       cdkBuilder.imageName(imageName)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun maxConcurrentSessions(maxConcurrentSessions: Number) {
+    override fun maxConcurrentSessions(maxConcurrentSessions: Number) {
       cdkBuilder.maxConcurrentSessions(maxConcurrentSessions)
     }
 
-    public override fun maxSessionsPerInstance(maxSessionsPerInstance: Number) {
+    override fun maxSessionsPerInstance(maxSessionsPerInstance: Number) {
       cdkBuilder.maxSessionsPerInstance(maxSessionsPerInstance)
     }
 
-    public override fun maxUserDurationInSeconds(maxUserDurationInSeconds: Number) {
+    override fun maxUserDurationInSeconds(maxUserDurationInSeconds: Number) {
       cdkBuilder.maxUserDurationInSeconds(maxUserDurationInSeconds)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun sessionScriptS3Location(sessionScriptS3Location: IResolvable) {
+    override fun sessionScriptS3Location(sessionScriptS3Location: IResolvable) {
       cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty) {
+    override fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty) {
       cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("56683f90f907d5eb91d8a6af02a81d5f7bb017a32f5aec052db5ab5b82184de3")
-    public override
+    override
         fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty.Builder.() -> Unit):
         Unit = sessionScriptS3Location(S3LocationProperty(sessionScriptS3Location))
 
-    public override fun streamView(streamView: String) {
+    override fun streamView(streamView: String) {
       cdkBuilder.streamView(streamView)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun usbDeviceFilterStrings(usbDeviceFilterStrings: List<String>) {
+    override fun usbDeviceFilterStrings(usbDeviceFilterStrings: List<String>) {
       cdkBuilder.usbDeviceFilterStrings(usbDeviceFilterStrings)
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("29106d013b41bf806200d4877f319de3dc036117dcc422d9d2682b4e9803ed0f")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnFleet = cdkBuilder.build()
@@ -477,11 +445,9 @@ public open class CfnFleet internal constructor(
     public fun s3Key(): String
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -489,11 +455,11 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
@@ -504,9 +470,9 @@ public open class CfnFleet internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String = unwrap(this).getS3Key()
+      override fun s3Key(): String = unwrap(this).getS3Key()
     }
 
     public companion object {
@@ -535,11 +501,9 @@ public open class CfnFleet internal constructor(
     public fun desiredSessions(): Number? = unwrap(this).getDesiredSessions()
 
     public interface Builder {
-      public fun desiredInstances(desiredInstances: Number) {
-      }
+      public fun desiredInstances(desiredInstances: Number)
 
-      public fun desiredSessions(desiredSessions: Number) {
-      }
+      public fun desiredSessions(desiredSessions: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -547,11 +511,11 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty.builder()
 
-      public override fun desiredInstances(desiredInstances: Number) {
+      override fun desiredInstances(desiredInstances: Number) {
         cdkBuilder.desiredInstances(desiredInstances)
       }
 
-      public override fun desiredSessions(desiredSessions: Number) {
+      override fun desiredSessions(desiredSessions: Number) {
         cdkBuilder.desiredSessions(desiredSessions)
       }
 
@@ -563,9 +527,9 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnFleet.ComputeCapacityProperty,
     ) : ComputeCapacityProperty {
-      public override fun desiredInstances(): Number? = unwrap(this).getDesiredInstances()
+      override fun desiredInstances(): Number? = unwrap(this).getDesiredInstances()
 
-      public override fun desiredSessions(): Number? = unwrap(this).getDesiredSessions()
+      override fun desiredSessions(): Number? = unwrap(this).getDesiredSessions()
     }
 
     public companion object {
@@ -594,11 +558,9 @@ public open class CfnFleet internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -606,11 +568,11 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -621,10 +583,10 @@ public open class CfnFleet internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -654,11 +616,9 @@ public open class CfnFleet internal constructor(
         unwrap(this).getOrganizationalUnitDistinguishedName()
 
     public interface Builder {
-      public fun directoryName(directoryName: String) {
-      }
+      public fun directoryName(directoryName: String)
 
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-      }
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -666,11 +626,11 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty.builder()
 
-      public override fun directoryName(directoryName: String) {
+      override fun directoryName(directoryName: String) {
         cdkBuilder.directoryName(directoryName)
       }
 
-      public override
+      override
           fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
         cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
       }
@@ -683,9 +643,9 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnFleet.DomainJoinInfoProperty,
     ) : DomainJoinInfoProperty {
-      public override fun directoryName(): String? = unwrap(this).getDirectoryName()
+      override fun directoryName(): String? = unwrap(this).getDirectoryName()
 
-      public override fun organizationalUnitDistinguishedName(): String? =
+      override fun organizationalUnitDistinguishedName(): String? =
           unwrap(this).getOrganizationalUnitDistinguishedName()
     }
 

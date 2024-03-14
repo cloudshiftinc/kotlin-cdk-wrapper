@@ -10,22 +10,20 @@ public interface Share {
   public fun weightFactor(): Number
 
   public interface Builder {
-    public fun shareIdentifier(shareIdentifier: String) {
-    }
+    public fun shareIdentifier(shareIdentifier: String)
 
-    public fun weightFactor(weightFactor: Number) {
-    }
+    public fun weightFactor(weightFactor: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.Share.Builder =
         software.amazon.awscdk.services.batch.Share.builder()
 
-    public override fun shareIdentifier(shareIdentifier: String) {
+    override fun shareIdentifier(shareIdentifier: String) {
       cdkBuilder.shareIdentifier(shareIdentifier)
     }
 
-    public override fun weightFactor(weightFactor: Number) {
+    override fun weightFactor(weightFactor: Number) {
       cdkBuilder.weightFactor(weightFactor)
     }
 
@@ -35,9 +33,9 @@ public interface Share {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.Share,
   ) : Share {
-    public override fun shareIdentifier(): String = unwrap(this).getShareIdentifier()
+    override fun shareIdentifier(): String = unwrap(this).getShareIdentifier()
 
-    public override fun weightFactor(): Number = unwrap(this).getWeightFactor()
+    override fun weightFactor(): Number = unwrap(this).getWeightFactor()
   }
 
   public companion object {

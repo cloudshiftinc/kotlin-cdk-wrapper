@@ -6,7 +6,7 @@ public interface ITopicSubscription {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sns.ITopicSubscription,
   ) : ITopicSubscription {
-    public override fun bind(arg0: ITopic): TopicSubscriptionConfig =
+    override fun bind(arg0: ITopic): TopicSubscriptionConfig =
         unwrap(this).bind(arg0.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
   }
 

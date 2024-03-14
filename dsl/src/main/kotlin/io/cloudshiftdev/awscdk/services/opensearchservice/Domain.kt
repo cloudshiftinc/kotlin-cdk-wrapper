@@ -265,132 +265,96 @@ public open class Domain internal constructor(
       unwrap(this).getSlowSearchLogGroup()?.let(ILogGroup::wrap)
 
   public interface Builder {
-    public fun accessPolicies(accessPolicies: List<PolicyStatement>) {
-    }
+    public fun accessPolicies(accessPolicies: List<PolicyStatement>)
 
-    public fun advancedOptions(advancedOptions: Map<String, String>) {
-    }
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
-    public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
-    }
+    public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number)
 
-    public fun capacity(capacity: CapacityConfig) {
-    }
+    public fun capacity(capacity: CapacityConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb8d74c2a2359f1247467c1c9f3c3b8807038d8d29874d5b8a5226c798f5ecb4")
-    public fun capacity(capacity: CapacityConfig.Builder.() -> Unit) {
-    }
+    public fun capacity(capacity: CapacityConfig.Builder.() -> Unit)
 
-    public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions) {
-    }
+    public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b40b88bb2b5642cedd586a2f5164921ad12a322b47aeee942696cfd6a12c386c")
-    public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions.Builder.() -> Unit) {
-    }
+    public fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions.Builder.() -> Unit)
 
-    public fun customEndpoint(customEndpoint: CustomEndpointOptions) {
-    }
+    public fun customEndpoint(customEndpoint: CustomEndpointOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11b448e2542eb89487142f42a1c4ed9ecbbe3c485df90f9d6065c04682326f0d")
-    public fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit) {
-    }
+    public fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun ebs(ebs: EbsOptions) {
-    }
+    public fun ebs(ebs: EbsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4e1783c9850be27b4f132cfae032260bbf496dcb0262bc181aea33aba8ffaee")
-    public fun ebs(ebs: EbsOptions.Builder.() -> Unit) {
-    }
+    public fun ebs(ebs: EbsOptions.Builder.() -> Unit)
 
-    public fun enableAutoSoftwareUpdate(enableAutoSoftwareUpdate: Boolean) {
-    }
+    public fun enableAutoSoftwareUpdate(enableAutoSoftwareUpdate: Boolean)
 
-    public fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
-    }
+    public fun enableVersionUpgrade(enableVersionUpgrade: Boolean)
 
-    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
-    }
+    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9feb8a42d3d892f21ac29c9c1694e2318675187876431d4b36dc0e195a051192")
-    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit) {
-    }
+    public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit)
 
-    public fun enforceHttps(enforceHttps: Boolean) {
-    }
+    public fun enforceHttps(enforceHttps: Boolean)
 
-    public fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
-    }
+    public fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("722a86d44552c2afeb3222fc9be0fa31a231bf68b4389fb93795473dcee7a8de")
     public
-        fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions.Builder.() -> Unit) {
-    }
+        fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions.Builder.() -> Unit)
 
-    public fun ipAddressType(ipAddressType: IpAddressType) {
-    }
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
-    public fun logging(logging: LoggingOptions) {
-    }
+    public fun logging(logging: LoggingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73acb45b2bb00b33f8c25bd9f52372ccb5eed12bd27b98bb5aac56ece854dc14")
-    public fun logging(logging: LoggingOptions.Builder.() -> Unit) {
-    }
+    public fun logging(logging: LoggingOptions.Builder.() -> Unit)
 
-    public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
-    }
+    public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean)
 
-    public fun offPeakWindowEnabled(offPeakWindowEnabled: Boolean) {
-    }
+    public fun offPeakWindowEnabled(offPeakWindowEnabled: Boolean)
 
-    public fun offPeakWindowStart(offPeakWindowStart: WindowStartTime) {
-    }
+    public fun offPeakWindowStart(offPeakWindowStart: WindowStartTime)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2dfbed53a14ef4561fd1f46cf5d9bec3bb82d355a2bc031fcaa68494bd36aa2b")
-    public fun offPeakWindowStart(offPeakWindowStart: WindowStartTime.Builder.() -> Unit) {
-    }
+    public fun offPeakWindowStart(offPeakWindowStart: WindowStartTime.Builder.() -> Unit)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean) {
-    }
+    public fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean)
 
-    public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
-    }
+    public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy)
 
-    public fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
-    }
+    public fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean)
 
-    public fun version(version: EngineVersion) {
-    }
+    public fun version(version: EngineVersion)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-    }
+    public fun vpcSubnets(vpcSubnets: List<SubnetSelection>)
 
-    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
-    }
+    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93f7b70cd62c8b07dd4f4a432b1ea42e91d0b0858acd791223dd843a01403432")
-    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit) {
-    }
+    public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -400,160 +364,157 @@ public open class Domain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opensearchservice.Domain.Builder =
         software.amazon.awscdk.services.opensearchservice.Domain.Builder.create(scope, id)
 
-    public override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
+    override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
       cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
     }
 
-    public override fun advancedOptions(advancedOptions: Map<String, String>) {
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
       cdkBuilder.advancedOptions(advancedOptions)
     }
 
-    public override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
+    override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
       cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
     }
 
-    public override fun capacity(capacity: CapacityConfig) {
+    override fun capacity(capacity: CapacityConfig) {
       cdkBuilder.capacity(capacity.let(CapacityConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb8d74c2a2359f1247467c1c9f3c3b8807038d8d29874d5b8a5226c798f5ecb4")
-    public override fun capacity(capacity: CapacityConfig.Builder.() -> Unit): Unit =
+    override fun capacity(capacity: CapacityConfig.Builder.() -> Unit): Unit =
         capacity(CapacityConfig(capacity))
 
-    public override fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions) {
+    override fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions) {
       cdkBuilder.cognitoDashboardsAuth(cognitoDashboardsAuth.let(CognitoOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b40b88bb2b5642cedd586a2f5164921ad12a322b47aeee942696cfd6a12c386c")
-    public override
-        fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions.Builder.() -> Unit): Unit =
-        cognitoDashboardsAuth(CognitoOptions(cognitoDashboardsAuth))
+    override fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions.Builder.() -> Unit):
+        Unit = cognitoDashboardsAuth(CognitoOptions(cognitoDashboardsAuth))
 
-    public override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
+    override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
       cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11b448e2542eb89487142f42a1c4ed9ecbbe3c485df90f9d6065c04682326f0d")
-    public override fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit):
-        Unit = customEndpoint(CustomEndpointOptions(customEndpoint))
+    override fun customEndpoint(customEndpoint: CustomEndpointOptions.Builder.() -> Unit): Unit =
+        customEndpoint(CustomEndpointOptions(customEndpoint))
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun ebs(ebs: EbsOptions) {
+    override fun ebs(ebs: EbsOptions) {
       cdkBuilder.ebs(ebs.let(EbsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4e1783c9850be27b4f132cfae032260bbf496dcb0262bc181aea33aba8ffaee")
-    public override fun ebs(ebs: EbsOptions.Builder.() -> Unit): Unit = ebs(EbsOptions(ebs))
+    override fun ebs(ebs: EbsOptions.Builder.() -> Unit): Unit = ebs(EbsOptions(ebs))
 
-    public override fun enableAutoSoftwareUpdate(enableAutoSoftwareUpdate: Boolean) {
+    override fun enableAutoSoftwareUpdate(enableAutoSoftwareUpdate: Boolean) {
       cdkBuilder.enableAutoSoftwareUpdate(enableAutoSoftwareUpdate)
     }
 
-    public override fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
+    override fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
       cdkBuilder.enableVersionUpgrade(enableVersionUpgrade)
     }
 
-    public override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
+    override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
       cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9feb8a42d3d892f21ac29c9c1694e2318675187876431d4b36dc0e195a051192")
-    public override
-        fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit): Unit =
-        encryptionAtRest(EncryptionAtRestOptions(encryptionAtRest))
+    override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions.Builder.() -> Unit):
+        Unit = encryptionAtRest(EncryptionAtRestOptions(encryptionAtRest))
 
-    public override fun enforceHttps(enforceHttps: Boolean) {
+    override fun enforceHttps(enforceHttps: Boolean) {
       cdkBuilder.enforceHttps(enforceHttps)
     }
 
-    public override
-        fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
+    override fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
       cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("722a86d44552c2afeb3222fc9be0fa31a231bf68b4389fb93795473dcee7a8de")
-    public override
+    override
         fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions.Builder.() -> Unit):
         Unit = fineGrainedAccessControl(AdvancedSecurityOptions(fineGrainedAccessControl))
 
-    public override fun ipAddressType(ipAddressType: IpAddressType) {
+    override fun ipAddressType(ipAddressType: IpAddressType) {
       cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
     }
 
-    public override fun logging(logging: LoggingOptions) {
+    override fun logging(logging: LoggingOptions) {
       cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73acb45b2bb00b33f8c25bd9f52372ccb5eed12bd27b98bb5aac56ece854dc14")
-    public override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
+    override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
         logging(LoggingOptions(logging))
 
-    public override fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
+    override fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
       cdkBuilder.nodeToNodeEncryption(nodeToNodeEncryption)
     }
 
-    public override fun offPeakWindowEnabled(offPeakWindowEnabled: Boolean) {
+    override fun offPeakWindowEnabled(offPeakWindowEnabled: Boolean) {
       cdkBuilder.offPeakWindowEnabled(offPeakWindowEnabled)
     }
 
-    public override fun offPeakWindowStart(offPeakWindowStart: WindowStartTime) {
+    override fun offPeakWindowStart(offPeakWindowStart: WindowStartTime) {
       cdkBuilder.offPeakWindowStart(offPeakWindowStart.let(WindowStartTime::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2dfbed53a14ef4561fd1f46cf5d9bec3bb82d355a2bc031fcaa68494bd36aa2b")
-    public override fun offPeakWindowStart(offPeakWindowStart: WindowStartTime.Builder.() -> Unit):
-        Unit = offPeakWindowStart(WindowStartTime(offPeakWindowStart))
+    override fun offPeakWindowStart(offPeakWindowStart: WindowStartTime.Builder.() -> Unit): Unit =
+        offPeakWindowStart(WindowStartTime(offPeakWindowStart))
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean) {
+    override fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean) {
       cdkBuilder.suppressLogsResourcePolicy(suppressLogsResourcePolicy)
     }
 
-    public override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
+    override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
       cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy::unwrap))
     }
 
-    public override fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
+    override fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
       cdkBuilder.useUnsignedBasicAuth(useUnsignedBasicAuth)
     }
 
-    public override fun version(version: EngineVersion) {
+    override fun version(version: EngineVersion) {
       cdkBuilder.version(version.let(EngineVersion::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
+    override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
       cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
     }
 
-    public override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
+    override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
       cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93f7b70cd62c8b07dd4f4a432b1ea42e91d0b0858acd791223dd843a01403432")
-    public override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit): Unit =
+    override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig.Builder.() -> Unit): Unit =
         zoneAwareness(ZoneAwarenessConfig(zoneAwareness))
 
     public fun build(): software.amazon.awscdk.services.opensearchservice.Domain =

@@ -35,14 +35,11 @@ public open class CfnRolePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun roleName(roleName: String) {
-    }
+    public fun roleName(roleName: String)
   }
 
   private class BuilderImpl(
@@ -52,15 +49,15 @@ public open class CfnRolePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnRolePolicy.Builder =
         software.amazon.awscdk.services.iam.CfnRolePolicy.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun roleName(roleName: String) {
+    override fun roleName(roleName: String) {
       cdkBuilder.roleName(roleName)
     }
 

@@ -7,8 +7,7 @@ public interface TransferAccelerationUrlOptions {
   public fun dualStack(): Boolean? = unwrap(this).getDualStack()
 
   public interface Builder {
-    public fun dualStack(dualStack: Boolean) {
-    }
+    public fun dualStack(dualStack: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface TransferAccelerationUrlOptions {
         software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions.Builder =
         software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions.builder()
 
-    public override fun dualStack(dualStack: Boolean) {
+    override fun dualStack(dualStack: Boolean) {
       cdkBuilder.dualStack(dualStack)
     }
 
@@ -27,7 +26,7 @@ public interface TransferAccelerationUrlOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions,
   ) : TransferAccelerationUrlOptions {
-    public override fun dualStack(): Boolean? = unwrap(this).getDualStack()
+    override fun dualStack(): Boolean? = unwrap(this).getDualStack()
   }
 
   public companion object {

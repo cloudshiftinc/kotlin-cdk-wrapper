@@ -18,17 +18,13 @@ public open class ApiMapping internal constructor(
   public open fun mappingKey(): String? = unwrap(this).getMappingKey()
 
   public interface Builder {
-    public fun api(api: IApi) {
-    }
+    public fun api(api: IApi)
 
-    public fun apiMappingKey(apiMappingKey: String) {
-    }
+    public fun apiMappingKey(apiMappingKey: String)
 
-    public fun domainName(domainName: IDomainName) {
-    }
+    public fun domainName(domainName: IDomainName)
 
-    public fun stage(stage: IStage) {
-    }
+    public fun stage(stage: IStage)
   }
 
   private class BuilderImpl(
@@ -38,19 +34,19 @@ public open class ApiMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.ApiMapping.Builder =
         software.amazon.awscdk.services.apigatewayv2.ApiMapping.Builder.create(scope, id)
 
-    public override fun api(api: IApi) {
+    override fun api(api: IApi) {
       cdkBuilder.api(api.let(IApi::unwrap))
     }
 
-    public override fun apiMappingKey(apiMappingKey: String) {
+    override fun apiMappingKey(apiMappingKey: String) {
       cdkBuilder.apiMappingKey(apiMappingKey)
     }
 
-    public override fun domainName(domainName: IDomainName) {
+    override fun domainName(domainName: IDomainName) {
       cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
     }
 
-    public override fun stage(stage: IStage) {
+    override fun stage(stage: IStage) {
       cdkBuilder.stage(stage.let(IStage::unwrap))
     }
 

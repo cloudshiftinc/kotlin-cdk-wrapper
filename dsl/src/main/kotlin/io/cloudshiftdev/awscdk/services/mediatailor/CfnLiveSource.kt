@@ -55,20 +55,15 @@ public open class CfnLiveSource internal constructor(
   }
 
   public interface Builder {
-    public fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
-    }
+    public fun httpPackageConfigurations(httpPackageConfigurations: IResolvable)
 
-    public fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
-    }
+    public fun httpPackageConfigurations(httpPackageConfigurations: List<Any>)
 
-    public fun liveSourceName(liveSourceName: String) {
-    }
+    public fun liveSourceName(liveSourceName: String)
 
-    public fun sourceLocationName(sourceLocationName: String) {
-    }
+    public fun sourceLocationName(sourceLocationName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,23 +73,23 @@ public open class CfnLiveSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediatailor.CfnLiveSource.Builder =
         software.amazon.awscdk.services.mediatailor.CfnLiveSource.Builder.create(scope, id)
 
-    public override fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
+    override fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
       cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
+    override fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
       cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
     }
 
-    public override fun liveSourceName(liveSourceName: String) {
+    override fun liveSourceName(liveSourceName: String) {
       cdkBuilder.liveSourceName(liveSourceName)
     }
 
-    public override fun sourceLocationName(sourceLocationName: String) {
+    override fun sourceLocationName(sourceLocationName: String) {
       cdkBuilder.sourceLocationName(sourceLocationName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -131,14 +126,11 @@ public open class CfnLiveSource internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun sourceGroup(sourceGroup: String) {
-      }
+      public fun sourceGroup(sourceGroup: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -147,15 +139,15 @@ public open class CfnLiveSource internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty.builder()
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun sourceGroup(sourceGroup: String) {
+      override fun sourceGroup(sourceGroup: String) {
         cdkBuilder.sourceGroup(sourceGroup)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -168,11 +160,11 @@ public open class CfnLiveSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnLiveSource.HttpPackageConfigurationProperty,
     ) : HttpPackageConfigurationProperty {
-      public override fun path(): String = unwrap(this).getPath()
+      override fun path(): String = unwrap(this).getPath()
 
-      public override fun sourceGroup(): String = unwrap(this).getSourceGroup()
+      override fun sourceGroup(): String = unwrap(this).getSourceGroup()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

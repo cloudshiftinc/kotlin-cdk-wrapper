@@ -81,33 +81,24 @@ public open class CfnCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun certificateAuthorityArn(certificateAuthorityArn: String) {
-    }
+    public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
     public
-        fun certificateTransparencyLoggingPreference(certificateTransparencyLoggingPreference: String) {
-    }
+        fun certificateTransparencyLoggingPreference(certificateTransparencyLoggingPreference: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainValidationOptions(domainValidationOptions: IResolvable) {
-    }
+    public fun domainValidationOptions(domainValidationOptions: IResolvable)
 
-    public fun domainValidationOptions(domainValidationOptions: List<Any>) {
-    }
+    public fun domainValidationOptions(domainValidationOptions: List<Any>)
 
-    public fun keyAlgorithm(keyAlgorithm: String) {
-    }
+    public fun keyAlgorithm(keyAlgorithm: String)
 
-    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
-    }
+    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun validationMethod(validationMethod: String) {
-    }
+    public fun validationMethod(validationMethod: String)
   }
 
   private class BuilderImpl(
@@ -118,40 +109,40 @@ public open class CfnCertificate internal constructor(
         software.amazon.awscdk.services.certificatemanager.CfnCertificate.Builder =
         software.amazon.awscdk.services.certificatemanager.CfnCertificate.Builder.create(scope, id)
 
-    public override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+    override fun certificateAuthorityArn(certificateAuthorityArn: String) {
       cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
     }
 
-    public override
+    override
         fun certificateTransparencyLoggingPreference(certificateTransparencyLoggingPreference: String) {
       cdkBuilder.certificateTransparencyLoggingPreference(certificateTransparencyLoggingPreference)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainValidationOptions(domainValidationOptions: IResolvable) {
+    override fun domainValidationOptions(domainValidationOptions: IResolvable) {
       cdkBuilder.domainValidationOptions(domainValidationOptions.let(IResolvable::unwrap))
     }
 
-    public override fun domainValidationOptions(domainValidationOptions: List<Any>) {
+    override fun domainValidationOptions(domainValidationOptions: List<Any>) {
       cdkBuilder.domainValidationOptions(domainValidationOptions)
     }
 
-    public override fun keyAlgorithm(keyAlgorithm: String) {
+    override fun keyAlgorithm(keyAlgorithm: String) {
       cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
 
-    public override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
+    override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun validationMethod(validationMethod: String) {
+    override fun validationMethod(validationMethod: String) {
       cdkBuilder.validationMethod(validationMethod)
     }
 
@@ -188,14 +179,11 @@ public open class CfnCertificate internal constructor(
     public fun validationDomain(): String? = unwrap(this).getValidationDomain()
 
     public interface Builder {
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
 
-      public fun validationDomain(validationDomain: String) {
-      }
+      public fun validationDomain(validationDomain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -204,15 +192,15 @@ public open class CfnCertificate internal constructor(
           =
           software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty.builder()
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
-      public override fun validationDomain(validationDomain: String) {
+      override fun validationDomain(validationDomain: String) {
         cdkBuilder.validationDomain(validationDomain)
       }
 
@@ -225,11 +213,11 @@ public open class CfnCertificate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.certificatemanager.CfnCertificate.DomainValidationOptionProperty,
     ) : DomainValidationOptionProperty {
-      public override fun domainName(): String = unwrap(this).getDomainName()
+      override fun domainName(): String = unwrap(this).getDomainName()
 
-      public override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
 
-      public override fun validationDomain(): String? = unwrap(this).getValidationDomain()
+      override fun validationDomain(): String? = unwrap(this).getValidationDomain()
     }
 
     public companion object {

@@ -14,36 +14,32 @@ public interface StackSteps {
   public fun stack(): Stack
 
   public interface Builder {
-    public fun changeSet(changeSet: List<Step>) {
-    }
+    public fun changeSet(changeSet: List<Step>)
 
-    public fun post(post: List<Step>) {
-    }
+    public fun post(post: List<Step>)
 
-    public fun pre(pre: List<Step>) {
-    }
+    public fun pre(pre: List<Step>)
 
-    public fun stack(stack: Stack) {
-    }
+    public fun stack(stack: Stack)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.StackSteps.Builder =
         software.amazon.awscdk.pipelines.StackSteps.builder()
 
-    public override fun changeSet(changeSet: List<Step>) {
+    override fun changeSet(changeSet: List<Step>) {
       cdkBuilder.changeSet(changeSet.map(Step::unwrap))
     }
 
-    public override fun post(post: List<Step>) {
+    override fun post(post: List<Step>) {
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
-    public override fun pre(pre: List<Step>) {
+    override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
 
-    public override fun stack(stack: Stack) {
+    override fun stack(stack: Stack) {
       cdkBuilder.stack(stack.let(Stack::unwrap))
     }
 
@@ -53,14 +49,14 @@ public interface StackSteps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.StackSteps,
   ) : StackSteps {
-    public override fun changeSet(): List<Step> = unwrap(this).getChangeSet()?.map(Step::wrap) ?:
+    override fun changeSet(): List<Step> = unwrap(this).getChangeSet()?.map(Step::wrap) ?:
         emptyList()
 
-    public override fun post(): List<Step> = unwrap(this).getPost()?.map(Step::wrap) ?: emptyList()
+    override fun post(): List<Step> = unwrap(this).getPost()?.map(Step::wrap) ?: emptyList()
 
-    public override fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
+    override fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

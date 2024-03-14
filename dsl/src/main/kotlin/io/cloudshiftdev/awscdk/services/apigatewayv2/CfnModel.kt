@@ -49,20 +49,15 @@ public open class CfnModel internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun contentType(contentType: String) {
-    }
+    public fun contentType(contentType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun schema(schema: Any) {
-    }
+    public fun schema(schema: Any)
   }
 
   private class BuilderImpl(
@@ -72,23 +67,23 @@ public open class CfnModel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnModel.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnModel.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun contentType(contentType: String) {
+    override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun schema(schema: Any) {
+    override fun schema(schema: Any) {
       cdkBuilder.schema(schema)
     }
 

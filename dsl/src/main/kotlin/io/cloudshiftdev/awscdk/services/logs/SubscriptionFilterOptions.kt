@@ -11,29 +11,26 @@ public interface SubscriptionFilterOptions {
   public fun filterPattern(): IFilterPattern
 
   public interface Builder {
-    public fun destination(destination: ILogSubscriptionDestination) {
-    }
+    public fun destination(destination: ILogSubscriptionDestination)
 
-    public fun filterName(filterName: String) {
-    }
+    public fun filterName(filterName: String)
 
-    public fun filterPattern(filterPattern: IFilterPattern) {
-    }
+    public fun filterPattern(filterPattern: IFilterPattern)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.logs.SubscriptionFilterOptions.Builder =
         software.amazon.awscdk.services.logs.SubscriptionFilterOptions.builder()
 
-    public override fun destination(destination: ILogSubscriptionDestination) {
+    override fun destination(destination: ILogSubscriptionDestination) {
       cdkBuilder.destination(destination.let(ILogSubscriptionDestination::unwrap))
     }
 
-    public override fun filterName(filterName: String) {
+    override fun filterName(filterName: String) {
       cdkBuilder.filterName(filterName)
     }
 
-    public override fun filterPattern(filterPattern: IFilterPattern) {
+    override fun filterPattern(filterPattern: IFilterPattern) {
       cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
     }
 
@@ -44,12 +41,12 @@ public interface SubscriptionFilterOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilterOptions,
   ) : SubscriptionFilterOptions {
-    public override fun destination(): ILogSubscriptionDestination =
+    override fun destination(): ILogSubscriptionDestination =
         unwrap(this).getDestination().let(ILogSubscriptionDestination::wrap)
 
-    public override fun filterName(): String? = unwrap(this).getFilterName()
+    override fun filterName(): String? = unwrap(this).getFilterName()
 
-    public override fun filterPattern(): IFilterPattern =
+    override fun filterPattern(): IFilterPattern =
         unwrap(this).getFilterPattern().let(IFilterPattern::wrap)
   }
 

@@ -30,11 +30,9 @@ public open class CfnAcceptedPortfolioShare internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnAcceptedPortfolioShare internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShare.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 

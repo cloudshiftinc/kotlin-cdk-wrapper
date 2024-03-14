@@ -43,17 +43,13 @@ public open class CfnPortfolioProductAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
 
-    public fun sourcePortfolioId(sourcePortfolioId: String) {
-    }
+    public fun sourcePortfolioId(sourcePortfolioId: String)
   }
 
   private class BuilderImpl(
@@ -65,19 +61,19 @@ public open class CfnPortfolioProductAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociation.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
-    public override fun sourcePortfolioId(sourcePortfolioId: String) {
+    override fun sourcePortfolioId(sourcePortfolioId: String) {
       cdkBuilder.sourcePortfolioId(sourcePortfolioId)
     }
 

@@ -186,110 +186,80 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun architecture(architecture: String) {
-    }
+    public fun architecture(architecture: String)
 
-    public fun autoStartConfiguration(autoStartConfiguration: IResolvable) {
-    }
+    public fun autoStartConfiguration(autoStartConfiguration: IResolvable)
 
-    public fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty) {
-    }
+    public fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18fdb9afac26c4dbe15046dee5d150bce42e1254f86f6b615e4b758d23c1a7b5")
     public
-        fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty.Builder.() -> Unit)
 
-    public fun autoStopConfiguration(autoStopConfiguration: IResolvable) {
-    }
+    public fun autoStopConfiguration(autoStopConfiguration: IResolvable)
 
-    public fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty) {
-    }
+    public fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d640017ae5c55847f0b88c39709b93ad9217e264081c45ad93a0f20c4adc60a")
     public
-        fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty.Builder.() -> Unit)
 
-    public fun imageConfiguration(imageConfiguration: IResolvable) {
-    }
+    public fun imageConfiguration(imageConfiguration: IResolvable)
 
-    public fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
-    }
+    public fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("135c9a0f8dac4390742ce2e8e7fbaa6e44a3c55e3f426f6e57acf418b5a62d29")
     public
-        fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit) {
-    }
+        fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit)
 
-    public fun initialCapacity(initialCapacity: IResolvable) {
-    }
+    public fun initialCapacity(initialCapacity: IResolvable)
 
-    public fun initialCapacity(initialCapacity: List<Any>) {
-    }
+    public fun initialCapacity(initialCapacity: List<Any>)
 
-    public fun maximumCapacity(maximumCapacity: IResolvable) {
-    }
+    public fun maximumCapacity(maximumCapacity: IResolvable)
 
-    public fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty) {
-    }
+    public fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e5ff91bb8b13d7563d79d4ffb7db188e847e9c8b505d2e9303080b8b7bd0c88")
-    public
-        fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty.Builder.() -> Unit) {
-    }
+    public fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty.Builder.() -> Unit)
 
-    public fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-    }
+    public fun monitoringConfiguration(monitoringConfiguration: IResolvable)
 
-    public fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
-    }
+    public fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("242a10a764ade48a2bb8514baeb9e403cb10ce3537b62d75d6f04c94a7067ebb")
     public
-        fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun networkConfiguration(networkConfiguration: IResolvable) {
-    }
+    public fun networkConfiguration(networkConfiguration: IResolvable)
 
-    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-    }
+    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c009b63a19f1c75027791ae63828a9cb2a1fb2218e90e5f53b109f77c0728f1d")
     public
-        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit)
 
-    public fun releaseLabel(releaseLabel: String) {
-    }
+    public fun releaseLabel(releaseLabel: String)
 
-    public fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
-    }
+    public fun runtimeConfiguration(runtimeConfiguration: IResolvable)
 
-    public fun runtimeConfiguration(runtimeConfiguration: List<Any>) {
-    }
+    public fun runtimeConfiguration(runtimeConfiguration: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun workerTypeSpecifications(workerTypeSpecifications: IResolvable) {
-    }
+    public fun workerTypeSpecifications(workerTypeSpecifications: IResolvable)
 
-    public fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
-    }
+    public fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>)
   }
 
   private class BuilderImpl(
@@ -299,134 +269,131 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emrserverless.CfnApplication.Builder =
         software.amazon.awscdk.services.emrserverless.CfnApplication.Builder.create(scope, id)
 
-    public override fun architecture(architecture: String) {
+    override fun architecture(architecture: String) {
       cdkBuilder.architecture(architecture)
     }
 
-    public override fun autoStartConfiguration(autoStartConfiguration: IResolvable) {
+    override fun autoStartConfiguration(autoStartConfiguration: IResolvable) {
       cdkBuilder.autoStartConfiguration(autoStartConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty) {
+    override fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty) {
       cdkBuilder.autoStartConfiguration(autoStartConfiguration.let(AutoStartConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18fdb9afac26c4dbe15046dee5d150bce42e1254f86f6b615e4b758d23c1a7b5")
-    public override
+    override
         fun autoStartConfiguration(autoStartConfiguration: AutoStartConfigurationProperty.Builder.() -> Unit):
         Unit = autoStartConfiguration(AutoStartConfigurationProperty(autoStartConfiguration))
 
-    public override fun autoStopConfiguration(autoStopConfiguration: IResolvable) {
+    override fun autoStopConfiguration(autoStopConfiguration: IResolvable) {
       cdkBuilder.autoStopConfiguration(autoStopConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty) {
+    override fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty) {
       cdkBuilder.autoStopConfiguration(autoStopConfiguration.let(AutoStopConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d640017ae5c55847f0b88c39709b93ad9217e264081c45ad93a0f20c4adc60a")
-    public override
+    override
         fun autoStopConfiguration(autoStopConfiguration: AutoStopConfigurationProperty.Builder.() -> Unit):
         Unit = autoStopConfiguration(AutoStopConfigurationProperty(autoStopConfiguration))
 
-    public override fun imageConfiguration(imageConfiguration: IResolvable) {
+    override fun imageConfiguration(imageConfiguration: IResolvable) {
       cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
+    override fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
       cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("135c9a0f8dac4390742ce2e8e7fbaa6e44a3c55e3f426f6e57acf418b5a62d29")
-    public override
+    override
         fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit):
         Unit = imageConfiguration(ImageConfigurationInputProperty(imageConfiguration))
 
-    public override fun initialCapacity(initialCapacity: IResolvable) {
+    override fun initialCapacity(initialCapacity: IResolvable) {
       cdkBuilder.initialCapacity(initialCapacity.let(IResolvable::unwrap))
     }
 
-    public override fun initialCapacity(initialCapacity: List<Any>) {
+    override fun initialCapacity(initialCapacity: List<Any>) {
       cdkBuilder.initialCapacity(initialCapacity)
     }
 
-    public override fun maximumCapacity(maximumCapacity: IResolvable) {
+    override fun maximumCapacity(maximumCapacity: IResolvable) {
       cdkBuilder.maximumCapacity(maximumCapacity.let(IResolvable::unwrap))
     }
 
-    public override fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty) {
+    override fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty) {
       cdkBuilder.maximumCapacity(maximumCapacity.let(MaximumAllowedResourcesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e5ff91bb8b13d7563d79d4ffb7db188e847e9c8b505d2e9303080b8b7bd0c88")
-    public override
+    override
         fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty.Builder.() -> Unit):
         Unit = maximumCapacity(MaximumAllowedResourcesProperty(maximumCapacity))
 
-    public override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
+    override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
       cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
+    override fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
       cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(MonitoringConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("242a10a764ade48a2bb8514baeb9e403cb10ce3537b62d75d6f04c94a7067ebb")
-    public override
+    override
         fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit):
         Unit = monitoringConfiguration(MonitoringConfigurationProperty(monitoringConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun networkConfiguration(networkConfiguration: IResolvable) {
+    override fun networkConfiguration(networkConfiguration: IResolvable) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
+    override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c009b63a19f1c75027791ae63828a9cb2a1fb2218e90e5f53b109f77c0728f1d")
-    public override
+    override
         fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit):
         Unit = networkConfiguration(NetworkConfigurationProperty(networkConfiguration))
 
-    public override fun releaseLabel(releaseLabel: String) {
+    override fun releaseLabel(releaseLabel: String) {
       cdkBuilder.releaseLabel(releaseLabel)
     }
 
-    public override fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
+    override fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
       cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun runtimeConfiguration(runtimeConfiguration: List<Any>) {
+    override fun runtimeConfiguration(runtimeConfiguration: List<Any>) {
       cdkBuilder.runtimeConfiguration(runtimeConfiguration)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun workerTypeSpecifications(workerTypeSpecifications: IResolvable) {
+    override fun workerTypeSpecifications(workerTypeSpecifications: IResolvable) {
       cdkBuilder.workerTypeSpecifications(workerTypeSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
+    override fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
       cdkBuilder.workerTypeSpecifications(workerTypeSpecifications)
     }
 
@@ -461,14 +428,11 @@ public open class CfnApplication internal constructor(
     public fun idleTimeoutMinutes(): Number? = unwrap(this).getIdleTimeoutMinutes()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun idleTimeoutMinutes(idleTimeoutMinutes: Number) {
-      }
+      public fun idleTimeoutMinutes(idleTimeoutMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -477,15 +441,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun idleTimeoutMinutes(idleTimeoutMinutes: Number) {
+      override fun idleTimeoutMinutes(idleTimeoutMinutes: Number) {
         cdkBuilder.idleTimeoutMinutes(idleTimeoutMinutes)
       }
 
@@ -498,9 +462,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty,
     ) : AutoStopConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun idleTimeoutMinutes(): Number? = unwrap(this).getIdleTimeoutMinutes()
+      override fun idleTimeoutMinutes(): Number? = unwrap(this).getIdleTimeoutMinutes()
     }
 
     public companion object {
@@ -533,45 +497,36 @@ public open class CfnApplication internal constructor(
     public fun s3MonitoringConfiguration(): Any? = unwrap(this).getS3MonitoringConfiguration()
 
     public interface Builder {
-      public fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable) {
-      }
+      public fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable)
 
       public
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty) {
-      }
+          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
       public
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit)
 
       public
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable) {
-      }
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable)
 
       public
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty) {
-      }
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
       public
-          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable) {
-      }
+      public fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable)
 
       public
-          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty) {
-      }
+          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51e2ce2ff6b1aa9a20811f234f00a3bfd3472a639d524b2a3c765f488d3ab36b")
       public
-          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -580,52 +535,51 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty.builder()
 
-      public override
-          fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable) {
+      override fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: IResolvable) {
         cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty) {
         cdkBuilder.cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration.let(CloudWatchLoggingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad1153ab61aa5057aecd5d7cafa7e097b24d047ba2769ca788886319ec68472f")
-      public override
+      override
           fun cloudWatchLoggingConfiguration(cloudWatchLoggingConfiguration: CloudWatchLoggingConfigurationProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingConfiguration(CloudWatchLoggingConfigurationProperty(cloudWatchLoggingConfiguration))
 
-      public override
+      override
           fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: IResolvable) {
         cdkBuilder.managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty) {
         cdkBuilder.managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration.let(ManagedPersistenceMonitoringConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bf88f1af2e44e51488e14d43737bb7f0119c63c83cdbc1fccbd5493652d82ad4")
-      public override
+      override
           fun managedPersistenceMonitoringConfiguration(managedPersistenceMonitoringConfiguration: ManagedPersistenceMonitoringConfigurationProperty.Builder.() -> Unit):
           Unit =
           managedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfigurationProperty(managedPersistenceMonitoringConfiguration))
 
-      public override fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable) {
+      override fun s3MonitoringConfiguration(s3MonitoringConfiguration: IResolvable) {
         cdkBuilder.s3MonitoringConfiguration(s3MonitoringConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty) {
         cdkBuilder.s3MonitoringConfiguration(s3MonitoringConfiguration.let(S3MonitoringConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51e2ce2ff6b1aa9a20811f234f00a3bfd3472a639d524b2a3c765f488d3ab36b")
-      public override
+      override
           fun s3MonitoringConfiguration(s3MonitoringConfiguration: S3MonitoringConfigurationProperty.Builder.() -> Unit):
           Unit =
           s3MonitoringConfiguration(S3MonitoringConfigurationProperty(s3MonitoringConfiguration))
@@ -639,14 +593,13 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.MonitoringConfigurationProperty,
     ) : MonitoringConfigurationProperty {
-      public override fun cloudWatchLoggingConfiguration(): Any? =
+      override fun cloudWatchLoggingConfiguration(): Any? =
           unwrap(this).getCloudWatchLoggingConfiguration()
 
-      public override fun managedPersistenceMonitoringConfiguration(): Any? =
+      override fun managedPersistenceMonitoringConfiguration(): Any? =
           unwrap(this).getManagedPersistenceMonitoringConfiguration()
 
-      public override fun s3MonitoringConfiguration(): Any? =
-          unwrap(this).getS3MonitoringConfiguration()
+      override fun s3MonitoringConfiguration(): Any? = unwrap(this).getS3MonitoringConfiguration()
     }
 
     public companion object {
@@ -677,14 +630,11 @@ public open class CfnApplication internal constructor(
     public fun memory(): String
 
     public interface Builder {
-      public fun cpu(cpu: String) {
-      }
+      public fun cpu(cpu: String)
 
-      public fun disk(disk: String) {
-      }
+      public fun disk(disk: String)
 
-      public fun memory(memory: String) {
-      }
+      public fun memory(memory: String)
     }
 
     private class BuilderImpl : Builder {
@@ -693,15 +643,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty.builder()
 
-      public override fun cpu(cpu: String) {
+      override fun cpu(cpu: String) {
         cdkBuilder.cpu(cpu)
       }
 
-      public override fun disk(disk: String) {
+      override fun disk(disk: String) {
         cdkBuilder.disk(disk)
       }
 
-      public override fun memory(memory: String) {
+      override fun memory(memory: String) {
         cdkBuilder.memory(memory)
       }
 
@@ -714,11 +664,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.MaximumAllowedResourcesProperty,
     ) : MaximumAllowedResourcesProperty {
-      public override fun cpu(): String = unwrap(this).getCpu()
+      override fun cpu(): String = unwrap(this).getCpu()
 
-      public override fun disk(): String? = unwrap(this).getDisk()
+      override fun disk(): String? = unwrap(this).getDisk()
 
-      public override fun memory(): String = unwrap(this).getMemory()
+      override fun memory(): String = unwrap(this).getMemory()
     }
 
     public companion object {
@@ -753,26 +703,19 @@ public open class CfnApplication internal constructor(
     public fun logTypeMap(): Any? = unwrap(this).getLogTypeMap()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun encryptionKeyArn(encryptionKeyArn: String) {
-      }
+      public fun encryptionKeyArn(encryptionKeyArn: String)
 
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
 
-      public fun logStreamNamePrefix(logStreamNamePrefix: String) {
-      }
+      public fun logStreamNamePrefix(logStreamNamePrefix: String)
 
-      public fun logTypeMap(logTypeMap: IResolvable) {
-      }
+      public fun logTypeMap(logTypeMap: IResolvable)
 
-      public fun logTypeMap(logTypeMap: List<Any>) {
-      }
+      public fun logTypeMap(logTypeMap: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -781,31 +724,31 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionKeyArn(encryptionKeyArn: String) {
+      override fun encryptionKeyArn(encryptionKeyArn: String) {
         cdkBuilder.encryptionKeyArn(encryptionKeyArn)
       }
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
-      public override fun logStreamNamePrefix(logStreamNamePrefix: String) {
+      override fun logStreamNamePrefix(logStreamNamePrefix: String) {
         cdkBuilder.logStreamNamePrefix(logStreamNamePrefix)
       }
 
-      public override fun logTypeMap(logTypeMap: IResolvable) {
+      override fun logTypeMap(logTypeMap: IResolvable) {
         cdkBuilder.logTypeMap(logTypeMap.let(IResolvable::unwrap))
       }
 
-      public override fun logTypeMap(logTypeMap: List<Any>) {
+      override fun logTypeMap(logTypeMap: List<Any>) {
         cdkBuilder.logTypeMap(logTypeMap)
       }
 
@@ -818,15 +761,15 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty,
     ) : CloudWatchLoggingConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+      override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
 
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
-      public override fun logStreamNamePrefix(): String? = unwrap(this).getLogStreamNamePrefix()
+      override fun logStreamNamePrefix(): String? = unwrap(this).getLogStreamNamePrefix()
 
-      public override fun logTypeMap(): Any? = unwrap(this).getLogTypeMap()
+      override fun logTypeMap(): Any? = unwrap(this).getLogTypeMap()
     }
 
     public companion object {
@@ -856,11 +799,9 @@ public open class CfnApplication internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -869,11 +810,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -886,10 +827,10 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty,
     ) : NetworkConfigurationProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -920,20 +861,15 @@ public open class CfnApplication internal constructor(
     public fun properties(): Any? = unwrap(this).getProperties()
 
     public interface Builder {
-      public fun classification(classification: String) {
-      }
+      public fun classification(classification: String)
 
-      public fun configurations(configurations: IResolvable) {
-      }
+      public fun configurations(configurations: IResolvable)
 
-      public fun configurations(configurations: List<Any>) {
-      }
+      public fun configurations(configurations: List<Any>)
 
-      public fun properties(properties: IResolvable) {
-      }
+      public fun properties(properties: IResolvable)
 
-      public fun properties(properties: Map<String, String>) {
-      }
+      public fun properties(properties: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -942,23 +878,23 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty.builder()
 
-      public override fun classification(classification: String) {
+      override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
-      public override fun configurations(configurations: IResolvable) {
+      override fun configurations(configurations: IResolvable) {
         cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
       }
 
-      public override fun configurations(configurations: List<Any>) {
+      override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
 
-      public override fun properties(properties: IResolvable) {
+      override fun properties(properties: IResolvable) {
         cdkBuilder.properties(properties.let(IResolvable::unwrap))
       }
 
-      public override fun properties(properties: Map<String, String>) {
+      override fun properties(properties: Map<String, String>) {
         cdkBuilder.properties(properties)
       }
 
@@ -971,11 +907,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty,
     ) : ConfigurationObjectProperty {
-      public override fun classification(): String = unwrap(this).getClassification()
+      override fun classification(): String = unwrap(this).getClassification()
 
-      public override fun configurations(): Any? = unwrap(this).getConfigurations()
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
 
-      public override fun properties(): Any? = unwrap(this).getProperties()
+      override fun properties(): Any? = unwrap(this).getProperties()
     }
 
     public companion object {
@@ -1006,14 +942,11 @@ public open class CfnApplication internal constructor(
     public fun memory(): String
 
     public interface Builder {
-      public fun cpu(cpu: String) {
-      }
+      public fun cpu(cpu: String)
 
-      public fun disk(disk: String) {
-      }
+      public fun disk(disk: String)
 
-      public fun memory(memory: String) {
-      }
+      public fun memory(memory: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1022,15 +955,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty.builder()
 
-      public override fun cpu(cpu: String) {
+      override fun cpu(cpu: String) {
         cdkBuilder.cpu(cpu)
       }
 
-      public override fun disk(disk: String) {
+      override fun disk(disk: String) {
         cdkBuilder.disk(disk)
       }
 
-      public override fun memory(memory: String) {
+      override fun memory(memory: String) {
         cdkBuilder.memory(memory)
       }
 
@@ -1043,11 +976,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty,
     ) : WorkerConfigurationProperty {
-      public override fun cpu(): String = unwrap(this).getCpu()
+      override fun cpu(): String = unwrap(this).getCpu()
 
-      public override fun disk(): String? = unwrap(this).getDisk()
+      override fun disk(): String? = unwrap(this).getDisk()
 
-      public override fun memory(): String = unwrap(this).getMemory()
+      override fun memory(): String = unwrap(this).getMemory()
     }
 
     public companion object {
@@ -1074,8 +1007,7 @@ public open class CfnApplication internal constructor(
     public fun imageUri(): String? = unwrap(this).getImageUri()
 
     public interface Builder {
-      public fun imageUri(imageUri: String) {
-      }
+      public fun imageUri(imageUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1084,7 +1016,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty.builder()
 
-      public override fun imageUri(imageUri: String) {
+      override fun imageUri(imageUri: String) {
         cdkBuilder.imageUri(imageUri)
       }
 
@@ -1097,7 +1029,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.ImageConfigurationInputProperty,
     ) : ImageConfigurationInputProperty {
-      public override fun imageUri(): String? = unwrap(this).getImageUri()
+      override fun imageUri(): String? = unwrap(this).getImageUri()
     }
 
     public companion object {
@@ -1126,19 +1058,15 @@ public open class CfnApplication internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: InitialCapacityConfigProperty) {
-      }
+      public fun `value`(`value`: InitialCapacityConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b966ae256b45ece3e93a3e47a1920499c7fa2b401640cb73b25823a42111ae9")
-      public fun `value`(`value`: InitialCapacityConfigProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: InitialCapacityConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1147,21 +1075,21 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: InitialCapacityConfigProperty) {
+      override fun `value`(`value`: InitialCapacityConfigProperty) {
         cdkBuilder.`value`(`value`.let(InitialCapacityConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b966ae256b45ece3e93a3e47a1920499c7fa2b401640cb73b25823a42111ae9")
-      public override fun `value`(`value`: InitialCapacityConfigProperty.Builder.() -> Unit): Unit =
+      override fun `value`(`value`: InitialCapacityConfigProperty.Builder.() -> Unit): Unit =
           `value`(InitialCapacityConfigProperty(`value`))
 
       public fun build():
@@ -1173,9 +1101,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigKeyValuePairProperty,
     ) : InitialCapacityConfigKeyValuePairProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1205,20 +1133,16 @@ public open class CfnApplication internal constructor(
     public fun workerCount(): Number
 
     public interface Builder {
-      public fun workerConfiguration(workerConfiguration: IResolvable) {
-      }
+      public fun workerConfiguration(workerConfiguration: IResolvable)
 
-      public fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty) {
-      }
+      public fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1191fb6c21246b6632678432607689a3e8e09fd368cce0ffc797efa1c110db8b")
       public
-          fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty.Builder.() -> Unit)
 
-      public fun workerCount(workerCount: Number) {
-      }
+      public fun workerCount(workerCount: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1227,21 +1151,21 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty.builder()
 
-      public override fun workerConfiguration(workerConfiguration: IResolvable) {
+      override fun workerConfiguration(workerConfiguration: IResolvable) {
         cdkBuilder.workerConfiguration(workerConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty) {
+      override fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty) {
         cdkBuilder.workerConfiguration(workerConfiguration.let(WorkerConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1191fb6c21246b6632678432607689a3e8e09fd368cce0ffc797efa1c110db8b")
-      public override
+      override
           fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty.Builder.() -> Unit):
           Unit = workerConfiguration(WorkerConfigurationProperty(workerConfiguration))
 
-      public override fun workerCount(workerCount: Number) {
+      override fun workerCount(workerCount: Number) {
         cdkBuilder.workerCount(workerCount)
       }
 
@@ -1254,9 +1178,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.InitialCapacityConfigProperty,
     ) : InitialCapacityConfigProperty {
-      public override fun workerConfiguration(): Any = unwrap(this).getWorkerConfiguration()
+      override fun workerConfiguration(): Any = unwrap(this).getWorkerConfiguration()
 
-      public override fun workerCount(): Number = unwrap(this).getWorkerCount()
+      override fun workerCount(): Number = unwrap(this).getWorkerCount()
     }
 
     public companion object {
@@ -1285,11 +1209,9 @@ public open class CfnApplication internal constructor(
     public fun logUri(): String? = unwrap(this).getLogUri()
 
     public interface Builder {
-      public fun encryptionKeyArn(encryptionKeyArn: String) {
-      }
+      public fun encryptionKeyArn(encryptionKeyArn: String)
 
-      public fun logUri(logUri: String) {
-      }
+      public fun logUri(logUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1298,11 +1220,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty.builder()
 
-      public override fun encryptionKeyArn(encryptionKeyArn: String) {
+      override fun encryptionKeyArn(encryptionKeyArn: String) {
         cdkBuilder.encryptionKeyArn(encryptionKeyArn)
       }
 
-      public override fun logUri(logUri: String) {
+      override fun logUri(logUri: String) {
         cdkBuilder.logUri(logUri)
       }
 
@@ -1315,9 +1237,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.S3MonitoringConfigurationProperty,
     ) : S3MonitoringConfigurationProperty {
-      public override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+      override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
 
-      public override fun logUri(): String? = unwrap(this).getLogUri()
+      override fun logUri(): String? = unwrap(this).getLogUri()
     }
 
     public companion object {
@@ -1345,17 +1267,14 @@ public open class CfnApplication internal constructor(
     public fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
 
     public interface Builder {
-      public fun imageConfiguration(imageConfiguration: IResolvable) {
-      }
+      public fun imageConfiguration(imageConfiguration: IResolvable)
 
-      public fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
-      }
+      public fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dbfe53c6500fcc361b32ac969288665449377160edc69d9c75529b54801c000d")
       public
-          fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit) {
-      }
+          fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1364,17 +1283,17 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty.builder()
 
-      public override fun imageConfiguration(imageConfiguration: IResolvable) {
+      override fun imageConfiguration(imageConfiguration: IResolvable) {
         cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
+      override fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty) {
         cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dbfe53c6500fcc361b32ac969288665449377160edc69d9c75529b54801c000d")
-      public override
+      override
           fun imageConfiguration(imageConfiguration: ImageConfigurationInputProperty.Builder.() -> Unit):
           Unit = imageConfiguration(ImageConfigurationInputProperty(imageConfiguration))
 
@@ -1387,7 +1306,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerTypeSpecificationInputProperty,
     ) : WorkerTypeSpecificationInputProperty {
-      public override fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
+      override fun imageConfiguration(): Any? = unwrap(this).getImageConfiguration()
     }
 
     public companion object {
@@ -1415,11 +1334,9 @@ public open class CfnApplication internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1428,11 +1345,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -1445,7 +1362,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty,
     ) : AutoStartConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -1474,14 +1391,11 @@ public open class CfnApplication internal constructor(
     public fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun encryptionKeyArn(encryptionKeyArn: String) {
-      }
+      public fun encryptionKeyArn(encryptionKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1490,15 +1404,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionKeyArn(encryptionKeyArn: String) {
+      override fun encryptionKeyArn(encryptionKeyArn: String) {
         cdkBuilder.encryptionKeyArn(encryptionKeyArn)
       }
 
@@ -1511,9 +1425,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.ManagedPersistenceMonitoringConfigurationProperty,
     ) : ManagedPersistenceMonitoringConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
+      override fun encryptionKeyArn(): String? = unwrap(this).getEncryptionKeyArn()
     }
 
     public companion object {
@@ -1543,11 +1457,9 @@ public open class CfnApplication internal constructor(
     public fun `value`(): List<String>
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: List<String>) {
-      }
+      public fun `value`(`value`: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1556,11 +1468,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: List<String>) {
+      override fun `value`(`value`: List<String>) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1573,9 +1485,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty,
     ) : LogTypeMapKeyValuePairProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
     }
 
     public companion object {

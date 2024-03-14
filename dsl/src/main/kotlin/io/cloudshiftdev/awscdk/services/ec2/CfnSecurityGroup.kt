@@ -76,29 +76,21 @@ public open class CfnSecurityGroup internal constructor(
   }
 
   public interface Builder {
-    public fun groupDescription(groupDescription: String) {
-    }
+    public fun groupDescription(groupDescription: String)
 
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun securityGroupEgress(securityGroupEgress: IResolvable) {
-    }
+    public fun securityGroupEgress(securityGroupEgress: IResolvable)
 
-    public fun securityGroupEgress(securityGroupEgress: List<Any>) {
-    }
+    public fun securityGroupEgress(securityGroupEgress: List<Any>)
 
-    public fun securityGroupIngress(securityGroupIngress: IResolvable) {
-    }
+    public fun securityGroupIngress(securityGroupIngress: IResolvable)
 
-    public fun securityGroupIngress(securityGroupIngress: List<Any>) {
-    }
+    public fun securityGroupIngress(securityGroupIngress: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -108,35 +100,35 @@ public open class CfnSecurityGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnSecurityGroup.Builder =
         software.amazon.awscdk.services.ec2.CfnSecurityGroup.Builder.create(scope, id)
 
-    public override fun groupDescription(groupDescription: String) {
+    override fun groupDescription(groupDescription: String) {
       cdkBuilder.groupDescription(groupDescription)
     }
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun securityGroupEgress(securityGroupEgress: IResolvable) {
+    override fun securityGroupEgress(securityGroupEgress: IResolvable) {
       cdkBuilder.securityGroupEgress(securityGroupEgress.let(IResolvable::unwrap))
     }
 
-    public override fun securityGroupEgress(securityGroupEgress: List<Any>) {
+    override fun securityGroupEgress(securityGroupEgress: List<Any>) {
       cdkBuilder.securityGroupEgress(securityGroupEgress)
     }
 
-    public override fun securityGroupIngress(securityGroupIngress: IResolvable) {
+    override fun securityGroupIngress(securityGroupIngress: IResolvable) {
       cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable::unwrap))
     }
 
-    public override fun securityGroupIngress(securityGroupIngress: List<Any>) {
+    override fun securityGroupIngress(securityGroupIngress: List<Any>) {
       cdkBuilder.securityGroupIngress(securityGroupIngress)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -186,35 +178,25 @@ public open class CfnSecurityGroup internal constructor(
     public fun toPort(): Number? = unwrap(this).getToPort()
 
     public interface Builder {
-      public fun cidrIp(cidrIp: String) {
-      }
+      public fun cidrIp(cidrIp: String)
 
-      public fun cidrIpv6(cidrIpv6: String) {
-      }
+      public fun cidrIpv6(cidrIpv6: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun ipProtocol(ipProtocol: String) {
-      }
+      public fun ipProtocol(ipProtocol: String)
 
-      public fun sourcePrefixListId(sourcePrefixListId: String) {
-      }
+      public fun sourcePrefixListId(sourcePrefixListId: String)
 
-      public fun sourceSecurityGroupId(sourceSecurityGroupId: String) {
-      }
+      public fun sourceSecurityGroupId(sourceSecurityGroupId: String)
 
-      public fun sourceSecurityGroupName(sourceSecurityGroupName: String) {
-      }
+      public fun sourceSecurityGroupName(sourceSecurityGroupName: String)
 
-      public fun sourceSecurityGroupOwnerId(sourceSecurityGroupOwnerId: String) {
-      }
+      public fun sourceSecurityGroupOwnerId(sourceSecurityGroupOwnerId: String)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -222,43 +204,43 @@ public open class CfnSecurityGroup internal constructor(
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty.builder()
 
-      public override fun cidrIp(cidrIp: String) {
+      override fun cidrIp(cidrIp: String) {
         cdkBuilder.cidrIp(cidrIp)
       }
 
-      public override fun cidrIpv6(cidrIpv6: String) {
+      override fun cidrIpv6(cidrIpv6: String) {
         cdkBuilder.cidrIpv6(cidrIpv6)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun ipProtocol(ipProtocol: String) {
+      override fun ipProtocol(ipProtocol: String) {
         cdkBuilder.ipProtocol(ipProtocol)
       }
 
-      public override fun sourcePrefixListId(sourcePrefixListId: String) {
+      override fun sourcePrefixListId(sourcePrefixListId: String) {
         cdkBuilder.sourcePrefixListId(sourcePrefixListId)
       }
 
-      public override fun sourceSecurityGroupId(sourceSecurityGroupId: String) {
+      override fun sourceSecurityGroupId(sourceSecurityGroupId: String) {
         cdkBuilder.sourceSecurityGroupId(sourceSecurityGroupId)
       }
 
-      public override fun sourceSecurityGroupName(sourceSecurityGroupName: String) {
+      override fun sourceSecurityGroupName(sourceSecurityGroupName: String) {
         cdkBuilder.sourceSecurityGroupName(sourceSecurityGroupName)
       }
 
-      public override fun sourceSecurityGroupOwnerId(sourceSecurityGroupOwnerId: String) {
+      override fun sourceSecurityGroupOwnerId(sourceSecurityGroupOwnerId: String) {
         cdkBuilder.sourceSecurityGroupOwnerId(sourceSecurityGroupOwnerId)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -269,27 +251,26 @@ public open class CfnSecurityGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty,
     ) : IngressProperty {
-      public override fun cidrIp(): String? = unwrap(this).getCidrIp()
+      override fun cidrIp(): String? = unwrap(this).getCidrIp()
 
-      public override fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
+      override fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun fromPort(): Number? = unwrap(this).getFromPort()
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
 
-      public override fun ipProtocol(): String = unwrap(this).getIpProtocol()
+      override fun ipProtocol(): String = unwrap(this).getIpProtocol()
 
-      public override fun sourcePrefixListId(): String? = unwrap(this).getSourcePrefixListId()
+      override fun sourcePrefixListId(): String? = unwrap(this).getSourcePrefixListId()
 
-      public override fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
+      override fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
 
-      public override fun sourceSecurityGroupName(): String? =
-          unwrap(this).getSourceSecurityGroupName()
+      override fun sourceSecurityGroupName(): String? = unwrap(this).getSourceSecurityGroupName()
 
-      public override fun sourceSecurityGroupOwnerId(): String? =
+      override fun sourceSecurityGroupOwnerId(): String? =
           unwrap(this).getSourceSecurityGroupOwnerId()
 
-      public override fun toPort(): Number? = unwrap(this).getToPort()
+      override fun toPort(): Number? = unwrap(this).getToPort()
     }
 
     public companion object {
@@ -330,29 +311,21 @@ public open class CfnSecurityGroup internal constructor(
     public fun toPort(): Number? = unwrap(this).getToPort()
 
     public interface Builder {
-      public fun cidrIp(cidrIp: String) {
-      }
+      public fun cidrIp(cidrIp: String)
 
-      public fun cidrIpv6(cidrIpv6: String) {
-      }
+      public fun cidrIpv6(cidrIpv6: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun destinationPrefixListId(destinationPrefixListId: String) {
-      }
+      public fun destinationPrefixListId(destinationPrefixListId: String)
 
-      public fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
-      }
+      public fun destinationSecurityGroupId(destinationSecurityGroupId: String)
 
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun ipProtocol(ipProtocol: String) {
-      }
+      public fun ipProtocol(ipProtocol: String)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -360,35 +333,35 @@ public open class CfnSecurityGroup internal constructor(
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty.builder()
 
-      public override fun cidrIp(cidrIp: String) {
+      override fun cidrIp(cidrIp: String) {
         cdkBuilder.cidrIp(cidrIp)
       }
 
-      public override fun cidrIpv6(cidrIpv6: String) {
+      override fun cidrIpv6(cidrIpv6: String) {
         cdkBuilder.cidrIpv6(cidrIpv6)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun destinationPrefixListId(destinationPrefixListId: String) {
+      override fun destinationPrefixListId(destinationPrefixListId: String) {
         cdkBuilder.destinationPrefixListId(destinationPrefixListId)
       }
 
-      public override fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
+      override fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
         cdkBuilder.destinationSecurityGroupId(destinationSecurityGroupId)
       }
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun ipProtocol(ipProtocol: String) {
+      override fun ipProtocol(ipProtocol: String) {
         cdkBuilder.ipProtocol(ipProtocol)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -399,23 +372,22 @@ public open class CfnSecurityGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty,
     ) : EgressProperty {
-      public override fun cidrIp(): String? = unwrap(this).getCidrIp()
+      override fun cidrIp(): String? = unwrap(this).getCidrIp()
 
-      public override fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
+      override fun cidrIpv6(): String? = unwrap(this).getCidrIpv6()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun destinationPrefixListId(): String? =
-          unwrap(this).getDestinationPrefixListId()
+      override fun destinationPrefixListId(): String? = unwrap(this).getDestinationPrefixListId()
 
-      public override fun destinationSecurityGroupId(): String? =
+      override fun destinationSecurityGroupId(): String? =
           unwrap(this).getDestinationSecurityGroupId()
 
-      public override fun fromPort(): Number? = unwrap(this).getFromPort()
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
 
-      public override fun ipProtocol(): String = unwrap(this).getIpProtocol()
+      override fun ipProtocol(): String = unwrap(this).getIpProtocol()
 
-      public override fun toPort(): Number? = unwrap(this).getToPort()
+      override fun toPort(): Number? = unwrap(this).getToPort()
     }
 
     public companion object {

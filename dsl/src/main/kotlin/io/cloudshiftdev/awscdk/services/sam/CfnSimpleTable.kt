@@ -84,45 +84,34 @@ public open class CfnSimpleTable internal constructor(
   }
 
   public interface Builder {
-    public fun primaryKey(primaryKey: IResolvable) {
-    }
+    public fun primaryKey(primaryKey: IResolvable)
 
-    public fun primaryKey(primaryKey: PrimaryKeyProperty) {
-    }
+    public fun primaryKey(primaryKey: PrimaryKeyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee6b7873d058d3bb454df3c71cf29aa37e1b1fbf3f3ef8ac229f5a6201aab6f8")
-    public fun primaryKey(primaryKey: PrimaryKeyProperty.Builder.() -> Unit) {
-    }
+    public fun primaryKey(primaryKey: PrimaryKeyProperty.Builder.() -> Unit)
 
-    public fun provisionedThroughput(provisionedThroughput: IResolvable) {
-    }
+    public fun provisionedThroughput(provisionedThroughput: IResolvable)
 
-    public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-    }
+    public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54030f74ed583ac27ecc9c42b817af6e83602f7d08765c2442e7f8ed70c92655")
     public
-        fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit) {
-    }
+        fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
 
-    public fun sseSpecification(sseSpecification: IResolvable) {
-    }
+    public fun sseSpecification(sseSpecification: IResolvable)
 
-    public fun sseSpecification(sseSpecification: SSESpecificationProperty) {
-    }
+    public fun sseSpecification(sseSpecification: SSESpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("308875bca1ffe1a060923c76d3b60424613be8c4c737a576c2dd8a68fcec16ee")
-    public fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit) {
-    }
+    public fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -132,53 +121,51 @@ public open class CfnSimpleTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sam.CfnSimpleTable.Builder =
         software.amazon.awscdk.services.sam.CfnSimpleTable.Builder.create(scope, id)
 
-    public override fun primaryKey(primaryKey: IResolvable) {
+    override fun primaryKey(primaryKey: IResolvable) {
       cdkBuilder.primaryKey(primaryKey.let(IResolvable::unwrap))
     }
 
-    public override fun primaryKey(primaryKey: PrimaryKeyProperty) {
+    override fun primaryKey(primaryKey: PrimaryKeyProperty) {
       cdkBuilder.primaryKey(primaryKey.let(PrimaryKeyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee6b7873d058d3bb454df3c71cf29aa37e1b1fbf3f3ef8ac229f5a6201aab6f8")
-    public override fun primaryKey(primaryKey: PrimaryKeyProperty.Builder.() -> Unit): Unit =
+    override fun primaryKey(primaryKey: PrimaryKeyProperty.Builder.() -> Unit): Unit =
         primaryKey(PrimaryKeyProperty(primaryKey))
 
-    public override fun provisionedThroughput(provisionedThroughput: IResolvable) {
+    override fun provisionedThroughput(provisionedThroughput: IResolvable) {
       cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
     }
 
-    public override
-        fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
+    override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
       cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54030f74ed583ac27ecc9c42b817af6e83602f7d08765c2442e7f8ed70c92655")
-    public override
+    override
         fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
         Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
 
-    public override fun sseSpecification(sseSpecification: IResolvable) {
+    override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
+    override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
       cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("308875bca1ffe1a060923c76d3b60424613be8c4c737a576c2dd8a68fcec16ee")
-    public override
-        fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit): Unit =
-        sseSpecification(SSESpecificationProperty(sseSpecification))
+    override fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit):
+        Unit = sseSpecification(SSESpecificationProperty(sseSpecification))
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -212,11 +199,9 @@ public open class CfnSimpleTable internal constructor(
     public fun writeCapacityUnits(): Number
 
     public interface Builder {
-      public fun readCapacityUnits(readCapacityUnits: Number) {
-      }
+      public fun readCapacityUnits(readCapacityUnits: Number)
 
-      public fun writeCapacityUnits(writeCapacityUnits: Number) {
-      }
+      public fun writeCapacityUnits(writeCapacityUnits: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -224,11 +209,11 @@ public open class CfnSimpleTable internal constructor(
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty.Builder =
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty.builder()
 
-      public override fun readCapacityUnits(readCapacityUnits: Number) {
+      override fun readCapacityUnits(readCapacityUnits: Number) {
         cdkBuilder.readCapacityUnits(readCapacityUnits)
       }
 
-      public override fun writeCapacityUnits(writeCapacityUnits: Number) {
+      override fun writeCapacityUnits(writeCapacityUnits: Number) {
         cdkBuilder.writeCapacityUnits(writeCapacityUnits)
       }
 
@@ -241,9 +226,9 @@ public open class CfnSimpleTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty,
     ) : ProvisionedThroughputProperty {
-      public override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
+      override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
 
-      public override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
+      override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
     }
 
     public companion object {
@@ -272,11 +257,9 @@ public open class CfnSimpleTable internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -284,11 +267,11 @@ public open class CfnSimpleTable internal constructor(
           software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty.Builder =
           software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -299,9 +282,9 @@ public open class CfnSimpleTable internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty,
     ) : PrimaryKeyProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -328,11 +311,9 @@ public open class CfnSimpleTable internal constructor(
     public fun sseEnabled(): Any? = unwrap(this).getSseEnabled()
 
     public interface Builder {
-      public fun sseEnabled(sseEnabled: Boolean) {
-      }
+      public fun sseEnabled(sseEnabled: Boolean)
 
-      public fun sseEnabled(sseEnabled: IResolvable) {
-      }
+      public fun sseEnabled(sseEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -340,11 +321,11 @@ public open class CfnSimpleTable internal constructor(
           software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty.Builder =
           software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty.builder()
 
-      public override fun sseEnabled(sseEnabled: Boolean) {
+      override fun sseEnabled(sseEnabled: Boolean) {
         cdkBuilder.sseEnabled(sseEnabled)
       }
 
-      public override fun sseEnabled(sseEnabled: IResolvable) {
+      override fun sseEnabled(sseEnabled: IResolvable) {
         cdkBuilder.sseEnabled(sseEnabled.let(IResolvable::unwrap))
       }
 
@@ -357,7 +338,7 @@ public open class CfnSimpleTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty,
     ) : SSESpecificationProperty {
-      public override fun sseEnabled(): Any? = unwrap(this).getSseEnabled()
+      override fun sseEnabled(): Any? = unwrap(this).getSseEnabled()
     }
 
     public companion object {

@@ -176,94 +176,68 @@ public open class CfnServer internal constructor(
       workflowDetails(WorkflowDetailsProperty(`value`))
 
   public interface Builder {
-    public fun certificate(certificate: String) {
-    }
+    public fun certificate(certificate: String)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun endpointDetails(endpointDetails: IResolvable) {
-    }
+    public fun endpointDetails(endpointDetails: IResolvable)
 
-    public fun endpointDetails(endpointDetails: EndpointDetailsProperty) {
-    }
+    public fun endpointDetails(endpointDetails: EndpointDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf0a236db158e33b6465b83db4fee875e78a60764aeaeab4a59b5a8275e50fa2")
-    public fun endpointDetails(endpointDetails: EndpointDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun endpointDetails(endpointDetails: EndpointDetailsProperty.Builder.() -> Unit)
 
-    public fun endpointType(endpointType: String) {
-    }
+    public fun endpointType(endpointType: String)
 
-    public fun identityProviderDetails(identityProviderDetails: IResolvable) {
-    }
+    public fun identityProviderDetails(identityProviderDetails: IResolvable)
 
-    public fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty) {
-    }
+    public fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("24ae31b6e5fbf0065d8de2b14590fdff805ca7ab2469499255b6d601154a318e")
     public
-        fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty.Builder.() -> Unit) {
-    }
+        fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty.Builder.() -> Unit)
 
-    public fun identityProviderType(identityProviderType: String) {
-    }
+    public fun identityProviderType(identityProviderType: String)
 
-    public fun loggingRole(loggingRole: String) {
-    }
+    public fun loggingRole(loggingRole: String)
 
-    public fun postAuthenticationLoginBanner(postAuthenticationLoginBanner: String) {
-    }
+    public fun postAuthenticationLoginBanner(postAuthenticationLoginBanner: String)
 
-    public fun preAuthenticationLoginBanner(preAuthenticationLoginBanner: String) {
-    }
+    public fun preAuthenticationLoginBanner(preAuthenticationLoginBanner: String)
 
-    public fun protocolDetails(protocolDetails: IResolvable) {
-    }
+    public fun protocolDetails(protocolDetails: IResolvable)
 
-    public fun protocolDetails(protocolDetails: ProtocolDetailsProperty) {
-    }
+    public fun protocolDetails(protocolDetails: ProtocolDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ccc7183bb666df2becd469fea8bddfeb4f843e9946ac8688388de90179b8c491")
-    public fun protocolDetails(protocolDetails: ProtocolDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun protocolDetails(protocolDetails: ProtocolDetailsProperty.Builder.() -> Unit)
 
-    public fun protocols(protocols: List<String>) {
-    }
+    public fun protocols(protocols: List<String>)
 
-    public fun s3StorageOptions(s3StorageOptions: IResolvable) {
-    }
+    public fun s3StorageOptions(s3StorageOptions: IResolvable)
 
-    public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty) {
-    }
+    public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b659ec0eca872ff75383846e223a401c1c1166dc943ca76d7852c3201d038157")
-    public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty.Builder.() -> Unit)
 
-    public fun securityPolicyName(securityPolicyName: String) {
-    }
+    public fun securityPolicyName(securityPolicyName: String)
 
-    public fun structuredLogDestinations(structuredLogDestinations: List<String>) {
-    }
+    public fun structuredLogDestinations(structuredLogDestinations: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workflowDetails(workflowDetails: IResolvable) {
-    }
+    public fun workflowDetails(workflowDetails: IResolvable)
 
-    public fun workflowDetails(workflowDetails: WorkflowDetailsProperty) {
-    }
+    public fun workflowDetails(workflowDetails: WorkflowDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ef374116af82579036ffca50924ac903bbdc16964dff47ec56c8af807f752c7")
-    public fun workflowDetails(workflowDetails: WorkflowDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun workflowDetails(workflowDetails: WorkflowDetailsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -273,120 +247,115 @@ public open class CfnServer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnServer.Builder =
         software.amazon.awscdk.services.transfer.CfnServer.Builder.create(scope, id)
 
-    public override fun certificate(certificate: String) {
+    override fun certificate(certificate: String) {
       cdkBuilder.certificate(certificate)
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun endpointDetails(endpointDetails: IResolvable) {
+    override fun endpointDetails(endpointDetails: IResolvable) {
       cdkBuilder.endpointDetails(endpointDetails.let(IResolvable::unwrap))
     }
 
-    public override fun endpointDetails(endpointDetails: EndpointDetailsProperty) {
+    override fun endpointDetails(endpointDetails: EndpointDetailsProperty) {
       cdkBuilder.endpointDetails(endpointDetails.let(EndpointDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf0a236db158e33b6465b83db4fee875e78a60764aeaeab4a59b5a8275e50fa2")
-    public override
-        fun endpointDetails(endpointDetails: EndpointDetailsProperty.Builder.() -> Unit): Unit =
-        endpointDetails(EndpointDetailsProperty(endpointDetails))
+    override fun endpointDetails(endpointDetails: EndpointDetailsProperty.Builder.() -> Unit): Unit
+        = endpointDetails(EndpointDetailsProperty(endpointDetails))
 
-    public override fun endpointType(endpointType: String) {
+    override fun endpointType(endpointType: String) {
       cdkBuilder.endpointType(endpointType)
     }
 
-    public override fun identityProviderDetails(identityProviderDetails: IResolvable) {
+    override fun identityProviderDetails(identityProviderDetails: IResolvable) {
       cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable::unwrap))
     }
 
-    public override
-        fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty) {
+    override fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty) {
       cdkBuilder.identityProviderDetails(identityProviderDetails.let(IdentityProviderDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("24ae31b6e5fbf0065d8de2b14590fdff805ca7ab2469499255b6d601154a318e")
-    public override
+    override
         fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty.Builder.() -> Unit):
         Unit = identityProviderDetails(IdentityProviderDetailsProperty(identityProviderDetails))
 
-    public override fun identityProviderType(identityProviderType: String) {
+    override fun identityProviderType(identityProviderType: String) {
       cdkBuilder.identityProviderType(identityProviderType)
     }
 
-    public override fun loggingRole(loggingRole: String) {
+    override fun loggingRole(loggingRole: String) {
       cdkBuilder.loggingRole(loggingRole)
     }
 
-    public override fun postAuthenticationLoginBanner(postAuthenticationLoginBanner: String) {
+    override fun postAuthenticationLoginBanner(postAuthenticationLoginBanner: String) {
       cdkBuilder.postAuthenticationLoginBanner(postAuthenticationLoginBanner)
     }
 
-    public override fun preAuthenticationLoginBanner(preAuthenticationLoginBanner: String) {
+    override fun preAuthenticationLoginBanner(preAuthenticationLoginBanner: String) {
       cdkBuilder.preAuthenticationLoginBanner(preAuthenticationLoginBanner)
     }
 
-    public override fun protocolDetails(protocolDetails: IResolvable) {
+    override fun protocolDetails(protocolDetails: IResolvable) {
       cdkBuilder.protocolDetails(protocolDetails.let(IResolvable::unwrap))
     }
 
-    public override fun protocolDetails(protocolDetails: ProtocolDetailsProperty) {
+    override fun protocolDetails(protocolDetails: ProtocolDetailsProperty) {
       cdkBuilder.protocolDetails(protocolDetails.let(ProtocolDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ccc7183bb666df2becd469fea8bddfeb4f843e9946ac8688388de90179b8c491")
-    public override
-        fun protocolDetails(protocolDetails: ProtocolDetailsProperty.Builder.() -> Unit): Unit =
-        protocolDetails(ProtocolDetailsProperty(protocolDetails))
+    override fun protocolDetails(protocolDetails: ProtocolDetailsProperty.Builder.() -> Unit): Unit
+        = protocolDetails(ProtocolDetailsProperty(protocolDetails))
 
-    public override fun protocols(protocols: List<String>) {
+    override fun protocols(protocols: List<String>) {
       cdkBuilder.protocols(protocols)
     }
 
-    public override fun s3StorageOptions(s3StorageOptions: IResolvable) {
+    override fun s3StorageOptions(s3StorageOptions: IResolvable) {
       cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable::unwrap))
     }
 
-    public override fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty) {
+    override fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty) {
       cdkBuilder.s3StorageOptions(s3StorageOptions.let(S3StorageOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b659ec0eca872ff75383846e223a401c1c1166dc943ca76d7852c3201d038157")
-    public override
-        fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty.Builder.() -> Unit): Unit =
-        s3StorageOptions(S3StorageOptionsProperty(s3StorageOptions))
+    override fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty.Builder.() -> Unit):
+        Unit = s3StorageOptions(S3StorageOptionsProperty(s3StorageOptions))
 
-    public override fun securityPolicyName(securityPolicyName: String) {
+    override fun securityPolicyName(securityPolicyName: String) {
       cdkBuilder.securityPolicyName(securityPolicyName)
     }
 
-    public override fun structuredLogDestinations(structuredLogDestinations: List<String>) {
+    override fun structuredLogDestinations(structuredLogDestinations: List<String>) {
       cdkBuilder.structuredLogDestinations(structuredLogDestinations)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workflowDetails(workflowDetails: IResolvable) {
+    override fun workflowDetails(workflowDetails: IResolvable) {
       cdkBuilder.workflowDetails(workflowDetails.let(IResolvable::unwrap))
     }
 
-    public override fun workflowDetails(workflowDetails: WorkflowDetailsProperty) {
+    override fun workflowDetails(workflowDetails: WorkflowDetailsProperty) {
       cdkBuilder.workflowDetails(workflowDetails.let(WorkflowDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ef374116af82579036ffca50924ac903bbdc16964dff47ec56c8af807f752c7")
-    public override
-        fun workflowDetails(workflowDetails: WorkflowDetailsProperty.Builder.() -> Unit): Unit =
-        workflowDetails(WorkflowDetailsProperty(workflowDetails))
+    override fun workflowDetails(workflowDetails: WorkflowDetailsProperty.Builder.() -> Unit): Unit
+        = workflowDetails(WorkflowDetailsProperty(workflowDetails))
 
     public fun build(): software.amazon.awscdk.services.transfer.CfnServer = cdkBuilder.build()
   }
@@ -422,17 +391,13 @@ public open class CfnServer internal constructor(
     public fun tlsSessionResumptionMode(): String? = unwrap(this).getTlsSessionResumptionMode()
 
     public interface Builder {
-      public fun as2Transports(as2Transports: List<String>) {
-      }
+      public fun as2Transports(as2Transports: List<String>)
 
-      public fun passiveIp(passiveIp: String) {
-      }
+      public fun passiveIp(passiveIp: String)
 
-      public fun statOption(setStatOption: String) {
-      }
+      public fun statOption(setStatOption: String)
 
-      public fun tlsSessionResumptionMode(tlsSessionResumptionMode: String) {
-      }
+      public fun tlsSessionResumptionMode(tlsSessionResumptionMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -440,19 +405,19 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty.builder()
 
-      public override fun as2Transports(as2Transports: List<String>) {
+      override fun as2Transports(as2Transports: List<String>) {
         cdkBuilder.as2Transports(as2Transports)
       }
 
-      public override fun passiveIp(passiveIp: String) {
+      override fun passiveIp(passiveIp: String) {
         cdkBuilder.passiveIp(passiveIp)
       }
 
-      public override fun statOption(setStatOption: String) {
+      override fun statOption(setStatOption: String) {
         cdkBuilder.setStatOption(setStatOption)
       }
 
-      public override fun tlsSessionResumptionMode(tlsSessionResumptionMode: String) {
+      override fun tlsSessionResumptionMode(tlsSessionResumptionMode: String) {
         cdkBuilder.tlsSessionResumptionMode(tlsSessionResumptionMode)
       }
 
@@ -464,15 +429,13 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty,
     ) : ProtocolDetailsProperty {
-      public override fun as2Transports(): List<String> = unwrap(this).getAs2Transports() ?:
-          emptyList()
+      override fun as2Transports(): List<String> = unwrap(this).getAs2Transports() ?: emptyList()
 
-      public override fun passiveIp(): String? = unwrap(this).getPassiveIp()
+      override fun passiveIp(): String? = unwrap(this).getPassiveIp()
 
-      public override fun setStatOption(): String? = unwrap(this).getSetStatOption()
+      override fun setStatOption(): String? = unwrap(this).getSetStatOption()
 
-      public override fun tlsSessionResumptionMode(): String? =
-          unwrap(this).getTlsSessionResumptionMode()
+      override fun tlsSessionResumptionMode(): String? = unwrap(this).getTlsSessionResumptionMode()
     }
 
     public companion object {
@@ -501,17 +464,13 @@ public open class CfnServer internal constructor(
     public fun onUpload(): Any? = unwrap(this).getOnUpload()
 
     public interface Builder {
-      public fun onPartialUpload(onPartialUpload: IResolvable) {
-      }
+      public fun onPartialUpload(onPartialUpload: IResolvable)
 
-      public fun onPartialUpload(onPartialUpload: List<Any>) {
-      }
+      public fun onPartialUpload(onPartialUpload: List<Any>)
 
-      public fun onUpload(onUpload: IResolvable) {
-      }
+      public fun onUpload(onUpload: IResolvable)
 
-      public fun onUpload(onUpload: List<Any>) {
-      }
+      public fun onUpload(onUpload: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -519,19 +478,19 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty.builder()
 
-      public override fun onPartialUpload(onPartialUpload: IResolvable) {
+      override fun onPartialUpload(onPartialUpload: IResolvable) {
         cdkBuilder.onPartialUpload(onPartialUpload.let(IResolvable::unwrap))
       }
 
-      public override fun onPartialUpload(onPartialUpload: List<Any>) {
+      override fun onPartialUpload(onPartialUpload: List<Any>) {
         cdkBuilder.onPartialUpload(onPartialUpload)
       }
 
-      public override fun onUpload(onUpload: IResolvable) {
+      override fun onUpload(onUpload: IResolvable) {
         cdkBuilder.onUpload(onUpload.let(IResolvable::unwrap))
       }
 
-      public override fun onUpload(onUpload: List<Any>) {
+      override fun onUpload(onUpload: List<Any>) {
         cdkBuilder.onUpload(onUpload)
       }
 
@@ -543,9 +502,9 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty,
     ) : WorkflowDetailsProperty {
-      public override fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
+      override fun onPartialUpload(): Any? = unwrap(this).getOnPartialUpload()
 
-      public override fun onUpload(): Any? = unwrap(this).getOnUpload()
+      override fun onUpload(): Any? = unwrap(this).getOnUpload()
     }
 
     public companion object {
@@ -574,11 +533,9 @@ public open class CfnServer internal constructor(
     public fun workflowId(): String
 
     public interface Builder {
-      public fun executionRole(executionRole: String) {
-      }
+      public fun executionRole(executionRole: String)
 
-      public fun workflowId(workflowId: String) {
-      }
+      public fun workflowId(workflowId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -586,11 +543,11 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty.builder()
 
-      public override fun executionRole(executionRole: String) {
+      override fun executionRole(executionRole: String) {
         cdkBuilder.executionRole(executionRole)
       }
 
-      public override fun workflowId(workflowId: String) {
+      override fun workflowId(workflowId: String) {
         cdkBuilder.workflowId(workflowId)
       }
 
@@ -602,9 +559,9 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty,
     ) : WorkflowDetailProperty {
-      public override fun executionRole(): String = unwrap(this).getExecutionRole()
+      override fun executionRole(): String = unwrap(this).getExecutionRole()
 
-      public override fun workflowId(): String = unwrap(this).getWorkflowId()
+      override fun workflowId(): String = unwrap(this).getWorkflowId()
     }
 
     public companion object {
@@ -632,8 +589,7 @@ public open class CfnServer internal constructor(
         unwrap(this).getDirectoryListingOptimization()
 
     public interface Builder {
-      public fun directoryListingOptimization(directoryListingOptimization: String) {
-      }
+      public fun directoryListingOptimization(directoryListingOptimization: String)
     }
 
     private class BuilderImpl : Builder {
@@ -641,7 +597,7 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty.builder()
 
-      public override fun directoryListingOptimization(directoryListingOptimization: String) {
+      override fun directoryListingOptimization(directoryListingOptimization: String) {
         cdkBuilder.directoryListingOptimization(directoryListingOptimization)
       }
 
@@ -654,7 +610,7 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty,
     ) : S3StorageOptionsProperty {
-      public override fun directoryListingOptimization(): String? =
+      override fun directoryListingOptimization(): String? =
           unwrap(this).getDirectoryListingOptimization()
     }
 
@@ -690,20 +646,15 @@ public open class CfnServer internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun directoryId(directoryId: String) {
-      }
+      public fun directoryId(directoryId: String)
 
-      public fun function(function: String) {
-      }
+      public fun function(function: String)
 
-      public fun invocationRole(invocationRole: String) {
-      }
+      public fun invocationRole(invocationRole: String)
 
-      public fun sftpAuthenticationMethods(sftpAuthenticationMethods: String) {
-      }
+      public fun sftpAuthenticationMethods(sftpAuthenticationMethods: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -712,23 +663,23 @@ public open class CfnServer internal constructor(
           =
           software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty.builder()
 
-      public override fun directoryId(directoryId: String) {
+      override fun directoryId(directoryId: String) {
         cdkBuilder.directoryId(directoryId)
       }
 
-      public override fun function(function: String) {
+      override fun function(function: String) {
         cdkBuilder.function(function)
       }
 
-      public override fun invocationRole(invocationRole: String) {
+      override fun invocationRole(invocationRole: String) {
         cdkBuilder.invocationRole(invocationRole)
       }
 
-      public override fun sftpAuthenticationMethods(sftpAuthenticationMethods: String) {
+      override fun sftpAuthenticationMethods(sftpAuthenticationMethods: String) {
         cdkBuilder.sftpAuthenticationMethods(sftpAuthenticationMethods)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -741,16 +692,16 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty,
     ) : IdentityProviderDetailsProperty {
-      public override fun directoryId(): String? = unwrap(this).getDirectoryId()
+      override fun directoryId(): String? = unwrap(this).getDirectoryId()
 
-      public override fun function(): String? = unwrap(this).getFunction()
+      override fun function(): String? = unwrap(this).getFunction()
 
-      public override fun invocationRole(): String? = unwrap(this).getInvocationRole()
+      override fun invocationRole(): String? = unwrap(this).getInvocationRole()
 
-      public override fun sftpAuthenticationMethods(): String? =
+      override fun sftpAuthenticationMethods(): String? =
           unwrap(this).getSftpAuthenticationMethods()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -786,20 +737,15 @@ public open class CfnServer internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun addressAllocationIds(addressAllocationIds: List<String>) {
-      }
+      public fun addressAllocationIds(addressAllocationIds: List<String>)
 
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
 
-      public fun vpcEndpointId(vpcEndpointId: String) {
-      }
+      public fun vpcEndpointId(vpcEndpointId: String)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -807,23 +753,23 @@ public open class CfnServer internal constructor(
           software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty.builder()
 
-      public override fun addressAllocationIds(addressAllocationIds: List<String>) {
+      override fun addressAllocationIds(addressAllocationIds: List<String>) {
         cdkBuilder.addressAllocationIds(addressAllocationIds)
       }
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
-      public override fun vpcEndpointId(vpcEndpointId: String) {
+      override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -835,17 +781,17 @@ public open class CfnServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty,
     ) : EndpointDetailsProperty {
-      public override fun addressAllocationIds(): List<String> =
-          unwrap(this).getAddressAllocationIds() ?: emptyList()
-
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun addressAllocationIds(): List<String> = unwrap(this).getAddressAllocationIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+          emptyList()
 
-      public override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {

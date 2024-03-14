@@ -13,14 +13,11 @@ public interface ApplicationListenerAttributes {
   public fun securityGroup(): ISecurityGroup
 
   public interface Builder {
-    public fun defaultPort(defaultPort: Number) {
-    }
+    public fun defaultPort(defaultPort: Number)
 
-    public fun listenerArn(listenerArn: String) {
-    }
+    public fun listenerArn(listenerArn: String)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
@@ -29,15 +26,15 @@ public interface ApplicationListenerAttributes {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes.builder()
 
-    public override fun defaultPort(defaultPort: Number) {
+    override fun defaultPort(defaultPort: Number) {
       cdkBuilder.defaultPort(defaultPort)
     }
 
-    public override fun listenerArn(listenerArn: String) {
+    override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
@@ -50,11 +47,11 @@ public interface ApplicationListenerAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes,
   ) : ApplicationListenerAttributes {
-    public override fun defaultPort(): Number? = unwrap(this).getDefaultPort()
+    override fun defaultPort(): Number? = unwrap(this).getDefaultPort()
 
-    public override fun listenerArn(): String = unwrap(this).getListenerArn()
+    override fun listenerArn(): String = unwrap(this).getListenerArn()
 
-    public override fun securityGroup(): ISecurityGroup =
+    override fun securityGroup(): ISecurityGroup =
         unwrap(this).getSecurityGroup().let(ISecurityGroup::wrap)
   }
 

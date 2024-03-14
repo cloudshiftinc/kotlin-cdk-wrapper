@@ -8,28 +8,25 @@ public interface BackendConfig {
   public fun virtualServiceBackend(): CfnVirtualNode.BackendProperty
 
   public interface Builder {
-    public fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
-    }
+    public fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f8a48ba3a11c5eea70902c736f67e3953db62e8cf30892e96e2975c4eec673f8")
     public
-        fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty.Builder.() -> Unit) {
-    }
+        fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.BackendConfig.Builder =
         software.amazon.awscdk.services.appmesh.BackendConfig.builder()
 
-    public override
-        fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
+    override fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
       cdkBuilder.virtualServiceBackend(virtualServiceBackend.let(CfnVirtualNode.BackendProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f8a48ba3a11c5eea70902c736f67e3953db62e8cf30892e96e2975c4eec673f8")
-    public override
+    override
         fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty.Builder.() -> Unit):
         Unit = virtualServiceBackend(CfnVirtualNode.BackendProperty(virtualServiceBackend))
 
@@ -39,7 +36,7 @@ public interface BackendConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.BackendConfig,
   ) : BackendConfig {
-    public override fun virtualServiceBackend(): CfnVirtualNode.BackendProperty =
+    override fun virtualServiceBackend(): CfnVirtualNode.BackendProperty =
         unwrap(this).getVirtualServiceBackend().let(CfnVirtualNode.BackendProperty::wrap)
   }
 

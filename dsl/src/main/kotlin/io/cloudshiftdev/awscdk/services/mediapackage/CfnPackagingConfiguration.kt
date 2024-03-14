@@ -109,58 +109,43 @@ public open class CfnPackagingConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun cmafPackage(cmafPackage: IResolvable) {
-    }
+    public fun cmafPackage(cmafPackage: IResolvable)
 
-    public fun cmafPackage(cmafPackage: CmafPackageProperty) {
-    }
+    public fun cmafPackage(cmafPackage: CmafPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a97cc455baf43ff04dc19998d4e476be0fff980eaab7fb2fd85efb4cfaf52582")
-    public fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit) {
-    }
+    public fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit)
 
-    public fun dashPackage(dashPackage: IResolvable) {
-    }
+    public fun dashPackage(dashPackage: IResolvable)
 
-    public fun dashPackage(dashPackage: DashPackageProperty) {
-    }
+    public fun dashPackage(dashPackage: DashPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1713f82d9228e01b345734359e6afd5da9e43efc394939f4e9c7e4a56e05fb4a")
-    public fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit) {
-    }
+    public fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit)
 
-    public fun hlsPackage(hlsPackage: IResolvable) {
-    }
+    public fun hlsPackage(hlsPackage: IResolvable)
 
-    public fun hlsPackage(hlsPackage: HlsPackageProperty) {
-    }
+    public fun hlsPackage(hlsPackage: HlsPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5da5e4c726eafbd8439914dcc7a947902d5d23fddf04d55c893228117c224c93")
-    public fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit) {
-    }
+    public fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun mssPackage(mssPackage: IResolvable) {
-    }
+    public fun mssPackage(mssPackage: IResolvable)
 
-    public fun mssPackage(mssPackage: MssPackageProperty) {
-    }
+    public fun mssPackage(mssPackage: MssPackageProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4bb4218bdb2427217c3aa1741d7196dde0040c95b44ba4a92a8311fa7077e176")
-    public fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit) {
-    }
+    public fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit)
 
-    public fun packagingGroupId(packagingGroupId: String) {
-    }
+    public fun packagingGroupId(packagingGroupId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -172,67 +157,67 @@ public open class CfnPackagingConfiguration internal constructor(
         software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.Builder.create(scope,
         id)
 
-    public override fun cmafPackage(cmafPackage: IResolvable) {
+    override fun cmafPackage(cmafPackage: IResolvable) {
       cdkBuilder.cmafPackage(cmafPackage.let(IResolvable::unwrap))
     }
 
-    public override fun cmafPackage(cmafPackage: CmafPackageProperty) {
+    override fun cmafPackage(cmafPackage: CmafPackageProperty) {
       cdkBuilder.cmafPackage(cmafPackage.let(CmafPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a97cc455baf43ff04dc19998d4e476be0fff980eaab7fb2fd85efb4cfaf52582")
-    public override fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit): Unit =
+    override fun cmafPackage(cmafPackage: CmafPackageProperty.Builder.() -> Unit): Unit =
         cmafPackage(CmafPackageProperty(cmafPackage))
 
-    public override fun dashPackage(dashPackage: IResolvable) {
+    override fun dashPackage(dashPackage: IResolvable) {
       cdkBuilder.dashPackage(dashPackage.let(IResolvable::unwrap))
     }
 
-    public override fun dashPackage(dashPackage: DashPackageProperty) {
+    override fun dashPackage(dashPackage: DashPackageProperty) {
       cdkBuilder.dashPackage(dashPackage.let(DashPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1713f82d9228e01b345734359e6afd5da9e43efc394939f4e9c7e4a56e05fb4a")
-    public override fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit): Unit =
+    override fun dashPackage(dashPackage: DashPackageProperty.Builder.() -> Unit): Unit =
         dashPackage(DashPackageProperty(dashPackage))
 
-    public override fun hlsPackage(hlsPackage: IResolvable) {
+    override fun hlsPackage(hlsPackage: IResolvable) {
       cdkBuilder.hlsPackage(hlsPackage.let(IResolvable::unwrap))
     }
 
-    public override fun hlsPackage(hlsPackage: HlsPackageProperty) {
+    override fun hlsPackage(hlsPackage: HlsPackageProperty) {
       cdkBuilder.hlsPackage(hlsPackage.let(HlsPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5da5e4c726eafbd8439914dcc7a947902d5d23fddf04d55c893228117c224c93")
-    public override fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit): Unit =
+    override fun hlsPackage(hlsPackage: HlsPackageProperty.Builder.() -> Unit): Unit =
         hlsPackage(HlsPackageProperty(hlsPackage))
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun mssPackage(mssPackage: IResolvable) {
+    override fun mssPackage(mssPackage: IResolvable) {
       cdkBuilder.mssPackage(mssPackage.let(IResolvable::unwrap))
     }
 
-    public override fun mssPackage(mssPackage: MssPackageProperty) {
+    override fun mssPackage(mssPackage: MssPackageProperty) {
       cdkBuilder.mssPackage(mssPackage.let(MssPackageProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4bb4218bdb2427217c3aa1741d7196dde0040c95b44ba4a92a8311fa7077e176")
-    public override fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit): Unit =
+    override fun mssPackage(mssPackage: MssPackageProperty.Builder.() -> Unit): Unit =
         mssPackage(MssPackageProperty(mssPackage))
 
-    public override fun packagingGroupId(packagingGroupId: String) {
+    override fun packagingGroupId(packagingGroupId: String) {
       cdkBuilder.packagingGroupId(packagingGroupId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -266,16 +251,13 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8db7b287f4d869addecc5e4d6a4491c12bb49517926b9591b5d8dcadc6b57b77")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -284,19 +266,18 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty.builder()
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8db7b287f4d869addecc5e4d6a4491c12bb49517926b9591b5d8dcadc6b57b77")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty
@@ -307,7 +288,7 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafEncryptionProperty,
     ) : CmafEncryptionProperty {
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -347,45 +328,33 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
 
     public interface Builder {
-      public fun dashManifests(dashManifests: IResolvable) {
-      }
+      public fun dashManifests(dashManifests: IResolvable)
 
-      public fun dashManifests(dashManifests: List<Any>) {
-      }
+      public fun dashManifests(dashManifests: List<Any>)
 
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: DashEncryptionProperty) {
-      }
+      public fun encryption(encryption: DashEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43eca2a40ade88bfc21a51032b082851928c61bb9e40ee06701f24ba5fadd9a9")
-      public fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit)
 
       public
-          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean) {
-      }
+          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean)
 
       public
-          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable) {
-      }
+          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
 
-      public fun periodTriggers(periodTriggers: List<String>) {
-      }
+      public fun periodTriggers(periodTriggers: List<String>)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
-      public fun segmentTemplateFormat(segmentTemplateFormat: String) {
-      }
+      public fun segmentTemplateFormat(segmentTemplateFormat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -394,54 +363,54 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty.builder()
 
-      public override fun dashManifests(dashManifests: IResolvable) {
+      override fun dashManifests(dashManifests: IResolvable) {
         cdkBuilder.dashManifests(dashManifests.let(IResolvable::unwrap))
       }
 
-      public override fun dashManifests(dashManifests: List<Any>) {
+      override fun dashManifests(dashManifests: List<Any>) {
         cdkBuilder.dashManifests(dashManifests)
       }
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: DashEncryptionProperty) {
+      override fun encryption(encryption: DashEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(DashEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43eca2a40ade88bfc21a51032b082851928c61bb9e40ee06701f24ba5fadd9a9")
-      public override fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: DashEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(DashEncryptionProperty(encryption))
 
-      public override
+      override
           fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean) {
         cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments)
       }
 
-      public override
+      override
           fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable) {
         cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments.let(IResolvable::unwrap))
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
       }
 
-      public override fun periodTriggers(periodTriggers: List<String>) {
+      override fun periodTriggers(periodTriggers: List<String>) {
         cdkBuilder.periodTriggers(periodTriggers)
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
-      public override fun segmentTemplateFormat(segmentTemplateFormat: String) {
+      override fun segmentTemplateFormat(segmentTemplateFormat: String) {
         cdkBuilder.segmentTemplateFormat(segmentTemplateFormat)
       }
 
@@ -454,23 +423,20 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashPackageProperty,
     ) : DashPackageProperty {
-      public override fun dashManifests(): Any = unwrap(this).getDashManifests()
+      override fun dashManifests(): Any = unwrap(this).getDashManifests()
 
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun includeEncoderConfigurationInSegments(): Any? =
+      override fun includeEncoderConfigurationInSegments(): Any? =
           unwrap(this).getIncludeEncoderConfigurationInSegments()
 
-      public override fun includeIframeOnlyStream(): Any? =
-          unwrap(this).getIncludeIframeOnlyStream()
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
 
-      public override fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?:
-          emptyList()
+      override fun periodTriggers(): List<String> = unwrap(this).getPeriodTriggers() ?: emptyList()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
-      public override fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
+      override fun segmentTemplateFormat(): String? = unwrap(this).getSegmentTemplateFormat()
     }
 
     public companion object {
@@ -497,16 +463,13 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f71acb67a6c390974394d1529efac75681df0fbc7765e981bf292f492ab6527a")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -515,19 +478,18 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty.builder()
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f71acb67a6c390974394d1529efac75681df0fbc7765e981bf292f492ab6527a")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty
@@ -538,7 +500,7 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashEncryptionProperty,
     ) : DashEncryptionProperty {
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -569,14 +531,11 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun streamOrder(): String? = unwrap(this).getStreamOrder()
 
     public interface Builder {
-      public fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
-      }
+      public fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number)
 
-      public fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
-      }
+      public fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number)
 
-      public fun streamOrder(streamOrder: String) {
-      }
+      public fun streamOrder(streamOrder: String)
     }
 
     private class BuilderImpl : Builder {
@@ -585,15 +544,15 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty.builder()
 
-      public override fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
+      override fun maxVideoBitsPerSecond(maxVideoBitsPerSecond: Number) {
         cdkBuilder.maxVideoBitsPerSecond(maxVideoBitsPerSecond)
       }
 
-      public override fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
+      override fun minVideoBitsPerSecond(minVideoBitsPerSecond: Number) {
         cdkBuilder.minVideoBitsPerSecond(minVideoBitsPerSecond)
       }
 
-      public override fun streamOrder(streamOrder: String) {
+      override fun streamOrder(streamOrder: String) {
         cdkBuilder.streamOrder(streamOrder)
       }
 
@@ -606,11 +565,11 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.StreamSelectionProperty,
     ) : StreamSelectionProperty {
-      public override fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
+      override fun maxVideoBitsPerSecond(): Number? = unwrap(this).getMaxVideoBitsPerSecond()
 
-      public override fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
+      override fun minVideoBitsPerSecond(): Number? = unwrap(this).getMinVideoBitsPerSecond()
 
-      public override fun streamOrder(): String? = unwrap(this).getStreamOrder()
+      override fun streamOrder(): String? = unwrap(this).getStreamOrder()
     }
 
     public companion object {
@@ -641,25 +600,19 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
     public interface Builder {
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: MssEncryptionProperty) {
-      }
+      public fun encryption(encryption: MssEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f9e6b37a79b75f097ddcc69264afb4d7fb123925c41020613b92e5ced4a3406")
-      public fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit)
 
-      public fun mssManifests(mssManifests: IResolvable) {
-      }
+      public fun mssManifests(mssManifests: IResolvable)
 
-      public fun mssManifests(mssManifests: List<Any>) {
-      }
+      public fun mssManifests(mssManifests: List<Any>)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -668,28 +621,28 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty.builder()
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: MssEncryptionProperty) {
+      override fun encryption(encryption: MssEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(MssEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f9e6b37a79b75f097ddcc69264afb4d7fb123925c41020613b92e5ced4a3406")
-      public override fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: MssEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(MssEncryptionProperty(encryption))
 
-      public override fun mssManifests(mssManifests: IResolvable) {
+      override fun mssManifests(mssManifests: IResolvable) {
         cdkBuilder.mssManifests(mssManifests.let(IResolvable::unwrap))
       }
 
-      public override fun mssManifests(mssManifests: List<Any>) {
+      override fun mssManifests(mssManifests: List<Any>) {
         cdkBuilder.mssManifests(mssManifests)
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
@@ -702,12 +655,11 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssPackageProperty,
     ) : MssPackageProperty {
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun mssManifests(): Any = unwrap(this).getMssManifests()
+      override fun mssManifests(): Any = unwrap(this).getMssManifests()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
     }
 
     public companion object {
@@ -739,22 +691,17 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun constantInitializationVector(constantInitializationVector: String) {
-      }
+      public fun constantInitializationVector(constantInitializationVector: String)
 
-      public fun encryptionMethod(encryptionMethod: String) {
-      }
+      public fun encryptionMethod(encryptionMethod: String)
 
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d99db2d7e210d25c3acbbe7a79f2f0b396bb312141d40882d12cf86670e468ac")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -763,27 +710,26 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty.builder()
 
-      public override fun constantInitializationVector(constantInitializationVector: String) {
+      override fun constantInitializationVector(constantInitializationVector: String) {
         cdkBuilder.constantInitializationVector(constantInitializationVector)
       }
 
-      public override fun encryptionMethod(encryptionMethod: String) {
+      override fun encryptionMethod(encryptionMethod: String) {
         cdkBuilder.encryptionMethod(encryptionMethod)
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d99db2d7e210d25c3acbbe7a79f2f0b396bb312141d40882d12cf86670e468ac")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty
@@ -794,12 +740,12 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsEncryptionProperty,
     ) : HlsEncryptionProperty {
-      public override fun constantInitializationVector(): String? =
+      override fun constantInitializationVector(): String? =
           unwrap(this).getConstantInitializationVector()
 
-      public override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
+      override fun encryptionMethod(): String? = unwrap(this).getEncryptionMethod()
 
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -837,37 +783,27 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
     public interface Builder {
-      public fun adMarkers(adMarkers: String) {
-      }
+      public fun adMarkers(adMarkers: String)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean)
 
-      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-      }
+      public fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable)
 
-      public fun manifestName(manifestName: String) {
-      }
+      public fun manifestName(manifestName: String)
 
-      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
-      }
+      public fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number)
 
-      public fun repeatExtXKey(repeatExtXKey: Boolean) {
-      }
+      public fun repeatExtXKey(repeatExtXKey: Boolean)
 
-      public fun repeatExtXKey(repeatExtXKey: IResolvable) {
-      }
+      public fun repeatExtXKey(repeatExtXKey: IResolvable)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5423d98286d792acaf6af6c310486c0d09986786ce611d9d72b1ccff1af2a3a")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -876,47 +812,46 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty.builder()
 
-      public override fun adMarkers(adMarkers: String) {
+      override fun adMarkers(adMarkers: String) {
         cdkBuilder.adMarkers(adMarkers)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: Boolean) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream)
       }
 
-      public override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
+      override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
         cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
       }
 
-      public override fun manifestName(manifestName: String) {
+      override fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
       }
 
-      public override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
+      override fun programDateTimeIntervalSeconds(programDateTimeIntervalSeconds: Number) {
         cdkBuilder.programDateTimeIntervalSeconds(programDateTimeIntervalSeconds)
       }
 
-      public override fun repeatExtXKey(repeatExtXKey: Boolean) {
+      override fun repeatExtXKey(repeatExtXKey: Boolean) {
         cdkBuilder.repeatExtXKey(repeatExtXKey)
       }
 
-      public override fun repeatExtXKey(repeatExtXKey: IResolvable) {
+      override fun repeatExtXKey(repeatExtXKey: IResolvable) {
         cdkBuilder.repeatExtXKey(repeatExtXKey.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5423d98286d792acaf6af6c310486c0d09986786ce611d9d72b1ccff1af2a3a")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty
@@ -927,19 +862,18 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsManifestProperty,
     ) : HlsManifestProperty {
-      public override fun adMarkers(): String? = unwrap(this).getAdMarkers()
+      override fun adMarkers(): String? = unwrap(this).getAdMarkers()
 
-      public override fun includeIframeOnlyStream(): Any? =
-          unwrap(this).getIncludeIframeOnlyStream()
+      override fun includeIframeOnlyStream(): Any? = unwrap(this).getIncludeIframeOnlyStream()
 
-      public override fun manifestName(): String? = unwrap(this).getManifestName()
+      override fun manifestName(): String? = unwrap(this).getManifestName()
 
-      public override fun programDateTimeIntervalSeconds(): Number? =
+      override fun programDateTimeIntervalSeconds(): Number? =
           unwrap(this).getProgramDateTimeIntervalSeconds()
 
-      public override fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
+      override fun repeatExtXKey(): Any? = unwrap(this).getRepeatExtXKey()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
     }
 
     public companion object {
@@ -976,31 +910,23 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
     public interface Builder {
-      public fun manifestLayout(manifestLayout: String) {
-      }
+      public fun manifestLayout(manifestLayout: String)
 
-      public fun manifestName(manifestName: String) {
-      }
+      public fun manifestName(manifestName: String)
 
-      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
-      }
+      public fun minBufferTimeSeconds(minBufferTimeSeconds: Number)
 
-      public fun profile(profile: String) {
-      }
+      public fun profile(profile: String)
 
-      public fun scteMarkersSource(scteMarkersSource: String) {
-      }
+      public fun scteMarkersSource(scteMarkersSource: String)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88f80b902f77cd6785cc6082f0110d0d285608901dedbd1cc0b33e23ca7c8f0f")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1009,39 +935,38 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty.builder()
 
-      public override fun manifestLayout(manifestLayout: String) {
+      override fun manifestLayout(manifestLayout: String) {
         cdkBuilder.manifestLayout(manifestLayout)
       }
 
-      public override fun manifestName(manifestName: String) {
+      override fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
       }
 
-      public override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
+      override fun minBufferTimeSeconds(minBufferTimeSeconds: Number) {
         cdkBuilder.minBufferTimeSeconds(minBufferTimeSeconds)
       }
 
-      public override fun profile(profile: String) {
+      override fun profile(profile: String) {
         cdkBuilder.profile(profile)
       }
 
-      public override fun scteMarkersSource(scteMarkersSource: String) {
+      override fun scteMarkersSource(scteMarkersSource: String) {
         cdkBuilder.scteMarkersSource(scteMarkersSource)
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88f80b902f77cd6785cc6082f0110d0d285608901dedbd1cc0b33e23ca7c8f0f")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty
@@ -1052,17 +977,17 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.DashManifestProperty,
     ) : DashManifestProperty {
-      public override fun manifestLayout(): String? = unwrap(this).getManifestLayout()
+      override fun manifestLayout(): String? = unwrap(this).getManifestLayout()
 
-      public override fun manifestName(): String? = unwrap(this).getManifestName()
+      override fun manifestName(): String? = unwrap(this).getManifestName()
 
-      public override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
+      override fun minBufferTimeSeconds(): Number? = unwrap(this).getMinBufferTimeSeconds()
 
-      public override fun profile(): String? = unwrap(this).getProfile()
+      override fun profile(): String? = unwrap(this).getProfile()
 
-      public override fun scteMarkersSource(): String? = unwrap(this).getScteMarkersSource()
+      override fun scteMarkersSource(): String? = unwrap(this).getScteMarkersSource()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
     }
 
     public companion object {
@@ -1096,27 +1021,21 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun url(): String
 
     public interface Builder {
-      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
-      }
+      public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
 
       public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
-      }
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1cece6a6287095e5b7116dfc977999366ec718dc409e810d2572e22ade2d54f8")
       public
-          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun systemIds(systemIds: List<String>) {
-      }
+      public fun systemIds(systemIds: List<String>)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1125,32 +1044,31 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty.builder()
 
-      public override
-          fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
+      override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
         cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
         cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1cece6a6287095e5b7116dfc977999366ec718dc409e810d2572e22ade2d54f8")
-      public override
+      override
           fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty.Builder.() -> Unit):
           Unit =
           encryptionContractConfiguration(EncryptionContractConfigurationProperty(encryptionContractConfiguration))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun systemIds(systemIds: List<String>) {
+      override fun systemIds(systemIds: List<String>) {
         cdkBuilder.systemIds(systemIds)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -1163,14 +1081,14 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.SpekeKeyProviderProperty,
     ) : SpekeKeyProviderProperty {
-      public override fun encryptionContractConfiguration(): Any? =
+      override fun encryptionContractConfiguration(): Any? =
           unwrap(this).getEncryptionContractConfiguration()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun systemIds(): List<String> = unwrap(this).getSystemIds() ?: emptyList()
+      override fun systemIds(): List<String> = unwrap(this).getSystemIds() ?: emptyList()
 
-      public override fun url(): String = unwrap(this).getUrl()
+      override fun url(): String = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -1199,11 +1117,9 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun presetSpeke20Video(): String
 
     public interface Builder {
-      public fun presetSpeke20Audio(presetSpeke20Audio: String) {
-      }
+      public fun presetSpeke20Audio(presetSpeke20Audio: String)
 
-      public fun presetSpeke20Video(presetSpeke20Video: String) {
-      }
+      public fun presetSpeke20Video(presetSpeke20Video: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1212,11 +1128,11 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty.builder()
 
-      public override fun presetSpeke20Audio(presetSpeke20Audio: String) {
+      override fun presetSpeke20Audio(presetSpeke20Audio: String) {
         cdkBuilder.presetSpeke20Audio(presetSpeke20Audio)
       }
 
-      public override fun presetSpeke20Video(presetSpeke20Video: String) {
+      override fun presetSpeke20Video(presetSpeke20Video: String) {
         cdkBuilder.presetSpeke20Video(presetSpeke20Video)
       }
 
@@ -1229,9 +1145,9 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.EncryptionContractConfigurationProperty,
     ) : EncryptionContractConfigurationProperty {
-      public override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
+      override fun presetSpeke20Audio(): String = unwrap(this).getPresetSpeke20Audio()
 
-      public override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
+      override fun presetSpeke20Video(): String = unwrap(this).getPresetSpeke20Video()
     }
 
     public companion object {
@@ -1267,37 +1183,27 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
 
     public interface Builder {
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: HlsEncryptionProperty) {
-      }
+      public fun encryption(encryption: HlsEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8af0b455d3b7acc944f9336ee53145c04998f1b6a118ef542fc1f7e384f5443")
-      public fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit)
 
-      public fun hlsManifests(hlsManifests: IResolvable) {
-      }
+      public fun hlsManifests(hlsManifests: IResolvable)
 
-      public fun hlsManifests(hlsManifests: List<Any>) {
-      }
+      public fun hlsManifests(hlsManifests: List<Any>)
 
-      public fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
-      }
+      public fun includeDvbSubtitles(includeDvbSubtitles: Boolean)
 
-      public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
-      }
+      public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
-      public fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
-      }
+      public fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean)
 
-      public fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
-      }
+      public fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1306,44 +1212,44 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty.builder()
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: HlsEncryptionProperty) {
+      override fun encryption(encryption: HlsEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(HlsEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8af0b455d3b7acc944f9336ee53145c04998f1b6a118ef542fc1f7e384f5443")
-      public override fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: HlsEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(HlsEncryptionProperty(encryption))
 
-      public override fun hlsManifests(hlsManifests: IResolvable) {
+      override fun hlsManifests(hlsManifests: IResolvable) {
         cdkBuilder.hlsManifests(hlsManifests.let(IResolvable::unwrap))
       }
 
-      public override fun hlsManifests(hlsManifests: List<Any>) {
+      override fun hlsManifests(hlsManifests: List<Any>) {
         cdkBuilder.hlsManifests(hlsManifests)
       }
 
-      public override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
+      override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
         cdkBuilder.includeDvbSubtitles(includeDvbSubtitles)
       }
 
-      public override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
+      override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
         cdkBuilder.includeDvbSubtitles(includeDvbSubtitles.let(IResolvable::unwrap))
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
-      public override fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
+      override fun useAudioRenditionGroup(useAudioRenditionGroup: Boolean) {
         cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup)
       }
 
-      public override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
+      override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
         cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup.let(IResolvable::unwrap))
       }
 
@@ -1356,16 +1262,15 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.HlsPackageProperty,
     ) : HlsPackageProperty {
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun hlsManifests(): Any = unwrap(this).getHlsManifests()
+      override fun hlsManifests(): Any = unwrap(this).getHlsManifests()
 
-      public override fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
+      override fun includeDvbSubtitles(): Any? = unwrap(this).getIncludeDvbSubtitles()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
-      public override fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
+      override fun useAudioRenditionGroup(): Any? = unwrap(this).getUseAudioRenditionGroup()
     }
 
     public companion object {
@@ -1394,19 +1299,15 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun streamSelection(): Any? = unwrap(this).getStreamSelection()
 
     public interface Builder {
-      public fun manifestName(manifestName: String) {
-      }
+      public fun manifestName(manifestName: String)
 
-      public fun streamSelection(streamSelection: IResolvable) {
-      }
+      public fun streamSelection(streamSelection: IResolvable)
 
-      public fun streamSelection(streamSelection: StreamSelectionProperty) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("753f0eb82d5885d5e439e15010c47c7bda667951b874abaf1fec98f40a2c03dc")
-      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit) {
-      }
+      public fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1415,23 +1316,22 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty.builder()
 
-      public override fun manifestName(manifestName: String) {
+      override fun manifestName(manifestName: String) {
         cdkBuilder.manifestName(manifestName)
       }
 
-      public override fun streamSelection(streamSelection: IResolvable) {
+      override fun streamSelection(streamSelection: IResolvable) {
         cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
       }
 
-      public override fun streamSelection(streamSelection: StreamSelectionProperty) {
+      override fun streamSelection(streamSelection: StreamSelectionProperty) {
         cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("753f0eb82d5885d5e439e15010c47c7bda667951b874abaf1fec98f40a2c03dc")
-      public override
-          fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit): Unit =
-          streamSelection(StreamSelectionProperty(streamSelection))
+      override fun streamSelection(streamSelection: StreamSelectionProperty.Builder.() -> Unit):
+          Unit = streamSelection(StreamSelectionProperty(streamSelection))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty
@@ -1442,9 +1342,9 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssManifestProperty,
     ) : MssManifestProperty {
-      public override fun manifestName(): String? = unwrap(this).getManifestName()
+      override fun manifestName(): String? = unwrap(this).getManifestName()
 
-      public override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
+      override fun streamSelection(): Any? = unwrap(this).getStreamSelection()
     }
 
     public companion object {
@@ -1471,16 +1371,13 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun spekeKeyProvider(): Any
 
     public interface Builder {
-      public fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: IResolvable)
 
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9eb5bbe084066bbbb590c3d3041bfd5ea1e2d9ba26bd6982a194932eb2024eef")
-      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit) {
-      }
+      public fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1489,19 +1386,18 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty.builder()
 
-      public override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
+      override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
       }
 
-      public override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
         cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9eb5bbe084066bbbb590c3d3041bfd5ea1e2d9ba26bd6982a194932eb2024eef")
-      public override
-          fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit): Unit
-          = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
+      override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty.Builder.() -> Unit):
+          Unit = spekeKeyProvider(SpekeKeyProviderProperty(spekeKeyProvider))
 
       public fun build():
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty
@@ -1512,7 +1408,7 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.MssEncryptionProperty,
     ) : MssEncryptionProperty {
-      public override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
+      override fun spekeKeyProvider(): Any = unwrap(this).getSpekeKeyProvider()
     }
 
     public companion object {
@@ -1546,33 +1442,25 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
 
     public interface Builder {
-      public fun encryption(encryption: IResolvable) {
-      }
+      public fun encryption(encryption: IResolvable)
 
-      public fun encryption(encryption: CmafEncryptionProperty) {
-      }
+      public fun encryption(encryption: CmafEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25ad786ab44d860064f55c2d4bc77cc4055ca728bfa14b903c798a4b376fe489")
-      public fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit)
 
-      public fun hlsManifests(hlsManifests: IResolvable) {
-      }
+      public fun hlsManifests(hlsManifests: IResolvable)
 
-      public fun hlsManifests(hlsManifests: List<Any>) {
-      }
+      public fun hlsManifests(hlsManifests: List<Any>)
 
       public
-          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean) {
-      }
+          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean)
 
       public
-          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable) {
-      }
+          fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable)
 
-      public fun segmentDurationSeconds(segmentDurationSeconds: Number) {
-      }
+      public fun segmentDurationSeconds(segmentDurationSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1581,38 +1469,38 @@ public open class CfnPackagingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty.builder()
 
-      public override fun encryption(encryption: IResolvable) {
+      override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
       }
 
-      public override fun encryption(encryption: CmafEncryptionProperty) {
+      override fun encryption(encryption: CmafEncryptionProperty) {
         cdkBuilder.encryption(encryption.let(CmafEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25ad786ab44d860064f55c2d4bc77cc4055ca728bfa14b903c798a4b376fe489")
-      public override fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit): Unit =
+      override fun encryption(encryption: CmafEncryptionProperty.Builder.() -> Unit): Unit =
           encryption(CmafEncryptionProperty(encryption))
 
-      public override fun hlsManifests(hlsManifests: IResolvable) {
+      override fun hlsManifests(hlsManifests: IResolvable) {
         cdkBuilder.hlsManifests(hlsManifests.let(IResolvable::unwrap))
       }
 
-      public override fun hlsManifests(hlsManifests: List<Any>) {
+      override fun hlsManifests(hlsManifests: List<Any>) {
         cdkBuilder.hlsManifests(hlsManifests)
       }
 
-      public override
+      override
           fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean) {
         cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments)
       }
 
-      public override
+      override
           fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: IResolvable) {
         cdkBuilder.includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments.let(IResolvable::unwrap))
       }
 
-      public override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
+      override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
       }
 
@@ -1625,15 +1513,14 @@ public open class CfnPackagingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration.CmafPackageProperty,
     ) : CmafPackageProperty {
-      public override fun encryption(): Any? = unwrap(this).getEncryption()
+      override fun encryption(): Any? = unwrap(this).getEncryption()
 
-      public override fun hlsManifests(): Any = unwrap(this).getHlsManifests()
+      override fun hlsManifests(): Any = unwrap(this).getHlsManifests()
 
-      public override fun includeEncoderConfigurationInSegments(): Any? =
+      override fun includeEncoderConfigurationInSegments(): Any? =
           unwrap(this).getIncludeEncoderConfigurationInSegments()
 
-      public override fun segmentDurationSeconds(): Number? =
-          unwrap(this).getSegmentDurationSeconds()
+      override fun segmentDurationSeconds(): Number? = unwrap(this).getSegmentDurationSeconds()
     }
 
     public companion object {

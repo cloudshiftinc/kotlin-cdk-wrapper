@@ -88,34 +88,25 @@ public open class CfnVerifiedAccessGroup internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun policyDocument(policyDocument: String) {
-    }
+    public fun policyDocument(policyDocument: String)
 
-    public fun policyEnabled(policyEnabled: Boolean) {
-    }
+    public fun policyEnabled(policyEnabled: Boolean)
 
-    public fun policyEnabled(policyEnabled: IResolvable) {
-    }
+    public fun policyEnabled(policyEnabled: IResolvable)
 
-    public fun sseSpecification(sseSpecification: IResolvable) {
-    }
+    public fun sseSpecification(sseSpecification: IResolvable)
 
-    public fun sseSpecification(sseSpecification: SseSpecificationProperty) {
-    }
+    public fun sseSpecification(sseSpecification: SseSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f60a3a4d6c62fc065963b9fee159523f4c390b096d88be623010b2d68d950fbe")
-    public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit) {
-    }
+    public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun verifiedAccessInstanceId(verifiedAccessInstanceId: String) {
-    }
+    public fun verifiedAccessInstanceId(verifiedAccessInstanceId: String)
   }
 
   private class BuilderImpl(
@@ -125,41 +116,40 @@ public open class CfnVerifiedAccessGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.Builder =
         software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun policyDocument(policyDocument: String) {
+    override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyEnabled(policyEnabled: Boolean) {
+    override fun policyEnabled(policyEnabled: Boolean) {
       cdkBuilder.policyEnabled(policyEnabled)
     }
 
-    public override fun policyEnabled(policyEnabled: IResolvable) {
+    override fun policyEnabled(policyEnabled: IResolvable) {
       cdkBuilder.policyEnabled(policyEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: IResolvable) {
+    override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
+    override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
       cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f60a3a4d6c62fc065963b9fee159523f4c390b096d88be623010b2d68d950fbe")
-    public override
-        fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit): Unit =
-        sseSpecification(SseSpecificationProperty(sseSpecification))
+    override fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit):
+        Unit = sseSpecification(SseSpecificationProperty(sseSpecification))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun verifiedAccessInstanceId(verifiedAccessInstanceId: String) {
+    override fun verifiedAccessInstanceId(verifiedAccessInstanceId: String) {
       cdkBuilder.verifiedAccessInstanceId(verifiedAccessInstanceId)
     }
 
@@ -194,14 +184,11 @@ public open class CfnVerifiedAccessGroup internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
-      }
+      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean)
 
-      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
-      }
+      public fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -210,15 +197,15 @@ public open class CfnVerifiedAccessGroup internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty.builder()
 
-      public override fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
+      override fun customerManagedKeyEnabled(customerManagedKeyEnabled: Boolean) {
         cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled)
       }
 
-      public override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
+      override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
         cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -231,10 +218,9 @@ public open class CfnVerifiedAccessGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup.SseSpecificationProperty,
     ) : SseSpecificationProperty {
-      public override fun customerManagedKeyEnabled(): Any? =
-          unwrap(this).getCustomerManagedKeyEnabled()
+      override fun customerManagedKeyEnabled(): Any? = unwrap(this).getCustomerManagedKeyEnabled()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {

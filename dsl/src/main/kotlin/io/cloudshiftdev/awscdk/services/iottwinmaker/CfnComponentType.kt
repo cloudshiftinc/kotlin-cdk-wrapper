@@ -131,50 +131,35 @@ public open class CfnComponentType internal constructor(
   }
 
   public interface Builder {
-    public fun componentTypeId(componentTypeId: String) {
-    }
+    public fun componentTypeId(componentTypeId: String)
 
-    public fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
-    }
+    public fun compositeComponentTypes(compositeComponentTypes: IResolvable)
 
-    public fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
-    }
+    public fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun extendsFrom(extendsFrom: List<String>) {
-    }
+    public fun extendsFrom(extendsFrom: List<String>)
 
-    public fun functions(functions: IResolvable) {
-    }
+    public fun functions(functions: IResolvable)
 
-    public fun functions(functions: Map<String, Any>) {
-    }
+    public fun functions(functions: Map<String, Any>)
 
-    public fun isSingleton(isSingleton: Boolean) {
-    }
+    public fun isSingleton(isSingleton: Boolean)
 
-    public fun isSingleton(isSingleton: IResolvable) {
-    }
+    public fun isSingleton(isSingleton: IResolvable)
 
-    public fun propertyDefinitions(propertyDefinitions: IResolvable) {
-    }
+    public fun propertyDefinitions(propertyDefinitions: IResolvable)
 
-    public fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
-    }
+    public fun propertyDefinitions(propertyDefinitions: Map<String, Any>)
 
-    public fun propertyGroups(propertyGroups: IResolvable) {
-    }
+    public fun propertyGroups(propertyGroups: IResolvable)
 
-    public fun propertyGroups(propertyGroups: Map<String, Any>) {
-    }
+    public fun propertyGroups(propertyGroups: Map<String, Any>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun workspaceId(workspaceId: String) {
-    }
+    public fun workspaceId(workspaceId: String)
   }
 
   private class BuilderImpl(
@@ -184,63 +169,63 @@ public open class CfnComponentType internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iottwinmaker.CfnComponentType.Builder =
         software.amazon.awscdk.services.iottwinmaker.CfnComponentType.Builder.create(scope, id)
 
-    public override fun componentTypeId(componentTypeId: String) {
+    override fun componentTypeId(componentTypeId: String) {
       cdkBuilder.componentTypeId(componentTypeId)
     }
 
-    public override fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
+    override fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
       cdkBuilder.compositeComponentTypes(compositeComponentTypes.let(IResolvable::unwrap))
     }
 
-    public override fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
+    override fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
       cdkBuilder.compositeComponentTypes(compositeComponentTypes)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun extendsFrom(extendsFrom: List<String>) {
+    override fun extendsFrom(extendsFrom: List<String>) {
       cdkBuilder.extendsFrom(extendsFrom)
     }
 
-    public override fun functions(functions: IResolvable) {
+    override fun functions(functions: IResolvable) {
       cdkBuilder.functions(functions.let(IResolvable::unwrap))
     }
 
-    public override fun functions(functions: Map<String, Any>) {
+    override fun functions(functions: Map<String, Any>) {
       cdkBuilder.functions(functions)
     }
 
-    public override fun isSingleton(isSingleton: Boolean) {
+    override fun isSingleton(isSingleton: Boolean) {
       cdkBuilder.isSingleton(isSingleton)
     }
 
-    public override fun isSingleton(isSingleton: IResolvable) {
+    override fun isSingleton(isSingleton: IResolvable) {
       cdkBuilder.isSingleton(isSingleton.let(IResolvable::unwrap))
     }
 
-    public override fun propertyDefinitions(propertyDefinitions: IResolvable) {
+    override fun propertyDefinitions(propertyDefinitions: IResolvable) {
       cdkBuilder.propertyDefinitions(propertyDefinitions.let(IResolvable::unwrap))
     }
 
-    public override fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
+    override fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
       cdkBuilder.propertyDefinitions(propertyDefinitions)
     }
 
-    public override fun propertyGroups(propertyGroups: IResolvable) {
+    override fun propertyGroups(propertyGroups: IResolvable) {
       cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
     }
 
-    public override fun propertyGroups(propertyGroups: Map<String, Any>) {
+    override fun propertyGroups(propertyGroups: Map<String, Any>) {
       cdkBuilder.propertyGroups(propertyGroups)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun workspaceId(workspaceId: String) {
+    override fun workspaceId(workspaceId: String) {
       cdkBuilder.workspaceId(workspaceId)
     }
 
@@ -281,39 +266,29 @@ public open class CfnComponentType internal constructor(
     public fun unitOfMeasure(): String? = unwrap(this).getUnitOfMeasure()
 
     public interface Builder {
-      public fun allowedValues(allowedValues: IResolvable) {
-      }
+      public fun allowedValues(allowedValues: IResolvable)
 
-      public fun allowedValues(allowedValues: List<Any>) {
-      }
+      public fun allowedValues(allowedValues: List<Any>)
 
-      public fun nestedType(nestedType: IResolvable) {
-      }
+      public fun nestedType(nestedType: IResolvable)
 
-      public fun nestedType(nestedType: DataTypeProperty) {
-      }
+      public fun nestedType(nestedType: DataTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfe133e2c7fcbca7a83015bb27ecc54401b187a48dd5d74d06a1b7ac56a6453a")
-      public fun nestedType(nestedType: Builder.() -> Unit) {
-      }
+      public fun nestedType(nestedType: Builder.() -> Unit)
 
-      public fun relationship(relationship: IResolvable) {
-      }
+      public fun relationship(relationship: IResolvable)
 
-      public fun relationship(relationship: RelationshipProperty) {
-      }
+      public fun relationship(relationship: RelationshipProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b3230dbda65bc95420cf13c1baa0a1948c9afdbda83a81b9e4863bf10a88195")
-      public fun relationship(relationship: RelationshipProperty.Builder.() -> Unit) {
-      }
+      public fun relationship(relationship: RelationshipProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun unitOfMeasure(unitOfMeasure: String) {
-      }
+      public fun unitOfMeasure(unitOfMeasure: String)
     }
 
     private class BuilderImpl : Builder {
@@ -321,45 +296,45 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty.Builder =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty.builder()
 
-      public override fun allowedValues(allowedValues: IResolvable) {
+      override fun allowedValues(allowedValues: IResolvable) {
         cdkBuilder.allowedValues(allowedValues.let(IResolvable::unwrap))
       }
 
-      public override fun allowedValues(allowedValues: List<Any>) {
+      override fun allowedValues(allowedValues: List<Any>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
-      public override fun nestedType(nestedType: IResolvable) {
+      override fun nestedType(nestedType: IResolvable) {
         cdkBuilder.nestedType(nestedType.let(IResolvable::unwrap))
       }
 
-      public override fun nestedType(nestedType: DataTypeProperty) {
+      override fun nestedType(nestedType: DataTypeProperty) {
         cdkBuilder.nestedType(nestedType.let(DataTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfe133e2c7fcbca7a83015bb27ecc54401b187a48dd5d74d06a1b7ac56a6453a")
-      public override fun nestedType(nestedType: Builder.() -> Unit): Unit =
+      override fun nestedType(nestedType: Builder.() -> Unit): Unit =
           nestedType(DataTypeProperty(nestedType))
 
-      public override fun relationship(relationship: IResolvable) {
+      override fun relationship(relationship: IResolvable) {
         cdkBuilder.relationship(relationship.let(IResolvable::unwrap))
       }
 
-      public override fun relationship(relationship: RelationshipProperty) {
+      override fun relationship(relationship: RelationshipProperty) {
         cdkBuilder.relationship(relationship.let(RelationshipProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b3230dbda65bc95420cf13c1baa0a1948c9afdbda83a81b9e4863bf10a88195")
-      public override fun relationship(relationship: RelationshipProperty.Builder.() -> Unit): Unit
-          = relationship(RelationshipProperty(relationship))
+      override fun relationship(relationship: RelationshipProperty.Builder.() -> Unit): Unit =
+          relationship(RelationshipProperty(relationship))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun unitOfMeasure(unitOfMeasure: String) {
+      override fun unitOfMeasure(unitOfMeasure: String) {
         cdkBuilder.unitOfMeasure(unitOfMeasure)
       }
 
@@ -372,15 +347,15 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataTypeProperty,
     ) : DataTypeProperty {
-      public override fun allowedValues(): Any? = unwrap(this).getAllowedValues()
+      override fun allowedValues(): Any? = unwrap(this).getAllowedValues()
 
-      public override fun nestedType(): Any? = unwrap(this).getNestedType()
+      override fun nestedType(): Any? = unwrap(this).getNestedType()
 
-      public override fun relationship(): Any? = unwrap(this).getRelationship()
+      override fun relationship(): Any? = unwrap(this).getRelationship()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun unitOfMeasure(): String? = unwrap(this).getUnitOfMeasure()
+      override fun unitOfMeasure(): String? = unwrap(this).getUnitOfMeasure()
     }
 
     public companion object {
@@ -409,22 +384,17 @@ public open class CfnComponentType internal constructor(
     public fun lambda(): Any? = unwrap(this).getLambda()
 
     public interface Builder {
-      public fun isNative(isNative: Boolean) {
-      }
+      public fun isNative(isNative: Boolean)
 
-      public fun isNative(isNative: IResolvable) {
-      }
+      public fun isNative(isNative: IResolvable)
 
-      public fun lambda(lambda: IResolvable) {
-      }
+      public fun lambda(lambda: IResolvable)
 
-      public fun lambda(lambda: LambdaFunctionProperty) {
-      }
+      public fun lambda(lambda: LambdaFunctionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c08dd89d97d10c457ef20497f73349df65683ec17c5ab8a3e5c781165cef3ef5")
-      public fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit) {
-      }
+      public fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -433,25 +403,25 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty.builder()
 
-      public override fun isNative(isNative: Boolean) {
+      override fun isNative(isNative: Boolean) {
         cdkBuilder.isNative(isNative)
       }
 
-      public override fun isNative(isNative: IResolvable) {
+      override fun isNative(isNative: IResolvable) {
         cdkBuilder.isNative(isNative.let(IResolvable::unwrap))
       }
 
-      public override fun lambda(lambda: IResolvable) {
+      override fun lambda(lambda: IResolvable) {
         cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
       }
 
-      public override fun lambda(lambda: LambdaFunctionProperty) {
+      override fun lambda(lambda: LambdaFunctionProperty) {
         cdkBuilder.lambda(lambda.let(LambdaFunctionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c08dd89d97d10c457ef20497f73349df65683ec17c5ab8a3e5c781165cef3ef5")
-      public override fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit): Unit =
+      override fun lambda(lambda: LambdaFunctionProperty.Builder.() -> Unit): Unit =
           lambda(LambdaFunctionProperty(lambda))
 
       public fun build():
@@ -463,9 +433,9 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataConnectorProperty,
     ) : DataConnectorProperty {
-      public override fun isNative(): Any? = unwrap(this).getIsNative()
+      override fun isNative(): Any? = unwrap(this).getIsNative()
 
-      public override fun lambda(): Any? = unwrap(this).getLambda()
+      override fun lambda(): Any? = unwrap(this).getLambda()
     }
 
     public companion object {
@@ -492,8 +462,7 @@ public open class CfnComponentType internal constructor(
     public fun arn(): String
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -502,7 +471,7 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -515,7 +484,7 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.LambdaFunctionProperty,
     ) : LambdaFunctionProperty {
-      public override fun arn(): String = unwrap(this).getArn()
+      override fun arn(): String = unwrap(this).getArn()
     }
 
     public companion object {
@@ -544,11 +513,9 @@ public open class CfnComponentType internal constructor(
     public fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?: emptyList()
 
     public interface Builder {
-      public fun groupType(groupType: String) {
-      }
+      public fun groupType(groupType: String)
 
-      public fun propertyNames(propertyNames: List<String>) {
-      }
+      public fun propertyNames(propertyNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -557,11 +524,11 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty.builder()
 
-      public override fun groupType(groupType: String) {
+      override fun groupType(groupType: String) {
         cdkBuilder.groupType(groupType)
       }
 
-      public override fun propertyNames(propertyNames: List<String>) {
+      override fun propertyNames(propertyNames: List<String>) {
         cdkBuilder.propertyNames(propertyNames)
       }
 
@@ -574,10 +541,9 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty,
     ) : PropertyGroupProperty {
-      public override fun groupType(): String? = unwrap(this).getGroupType()
+      override fun groupType(): String? = unwrap(this).getGroupType()
 
-      public override fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?:
-          emptyList()
+      override fun propertyNames(): List<String> = unwrap(this).getPropertyNames() ?: emptyList()
     }
 
     public companion object {
@@ -604,8 +570,7 @@ public open class CfnComponentType internal constructor(
     public fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
 
     public interface Builder {
-      public fun componentTypeId(componentTypeId: String) {
-      }
+      public fun componentTypeId(componentTypeId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -614,7 +579,7 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty.builder()
 
-      public override fun componentTypeId(componentTypeId: String) {
+      override fun componentTypeId(componentTypeId: String) {
         cdkBuilder.componentTypeId(componentTypeId)
       }
 
@@ -627,7 +592,7 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.CompositeComponentTypeProperty,
     ) : CompositeComponentTypeProperty {
-      public override fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
+      override fun componentTypeId(): String? = unwrap(this).getComponentTypeId()
     }
 
     public companion object {
@@ -656,11 +621,9 @@ public open class CfnComponentType internal constructor(
     public fun message(): String? = unwrap(this).getMessage()
 
     public interface Builder {
-      public fun code(code: String) {
-      }
+      public fun code(code: String)
 
-      public fun message(message: String) {
-      }
+      public fun message(message: String)
     }
 
     private class BuilderImpl : Builder {
@@ -668,11 +631,11 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty.Builder =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty.builder()
 
-      public override fun code(code: String) {
+      override fun code(code: String) {
         cdkBuilder.code(code)
       }
 
-      public override fun message(message: String) {
+      override fun message(message: String) {
         cdkBuilder.message(message)
       }
 
@@ -685,9 +648,9 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.ErrorProperty,
     ) : ErrorProperty {
-      public override fun code(): String? = unwrap(this).getCode()
+      override fun code(): String? = unwrap(this).getCode()
 
-      public override fun message(): String? = unwrap(this).getMessage()
+      override fun message(): String? = unwrap(this).getMessage()
     }
 
     public companion object {
@@ -716,11 +679,9 @@ public open class CfnComponentType internal constructor(
     public fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
 
     public interface Builder {
-      public fun targetComponentName(targetComponentName: String) {
-      }
+      public fun targetComponentName(targetComponentName: String)
 
-      public fun targetEntityId(targetEntityId: String) {
-      }
+      public fun targetEntityId(targetEntityId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -729,11 +690,11 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty.builder()
 
-      public override fun targetComponentName(targetComponentName: String) {
+      override fun targetComponentName(targetComponentName: String) {
         cdkBuilder.targetComponentName(targetComponentName)
       }
 
-      public override fun targetEntityId(targetEntityId: String) {
+      override fun targetEntityId(targetEntityId: String) {
         cdkBuilder.targetEntityId(targetEntityId)
       }
 
@@ -746,9 +707,9 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipValueProperty,
     ) : RelationshipValueProperty {
-      public override fun targetComponentName(): String? = unwrap(this).getTargetComponentName()
+      override fun targetComponentName(): String? = unwrap(this).getTargetComponentName()
 
-      public override fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
+      override fun targetEntityId(): String? = unwrap(this).getTargetEntityId()
     }
 
     public companion object {
@@ -791,41 +752,29 @@ public open class CfnComponentType internal constructor(
     public fun stringValue(): String? = unwrap(this).getStringValue()
 
     public interface Builder {
-      public fun booleanValue(booleanValue: Boolean) {
-      }
+      public fun booleanValue(booleanValue: Boolean)
 
-      public fun booleanValue(booleanValue: IResolvable) {
-      }
+      public fun booleanValue(booleanValue: IResolvable)
 
-      public fun doubleValue(doubleValue: Number) {
-      }
+      public fun doubleValue(doubleValue: Number)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun integerValue(integerValue: Number) {
-      }
+      public fun integerValue(integerValue: Number)
 
-      public fun listValue(listValue: IResolvable) {
-      }
+      public fun listValue(listValue: IResolvable)
 
-      public fun listValue(listValue: List<Any>) {
-      }
+      public fun listValue(listValue: List<Any>)
 
-      public fun longValue(longValue: Number) {
-      }
+      public fun longValue(longValue: Number)
 
-      public fun mapValue(mapValue: IResolvable) {
-      }
+      public fun mapValue(mapValue: IResolvable)
 
-      public fun mapValue(mapValue: Map<String, Any>) {
-      }
+      public fun mapValue(mapValue: Map<String, Any>)
 
-      public fun relationshipValue(relationshipValue: Any) {
-      }
+      public fun relationshipValue(relationshipValue: Any)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -833,51 +782,51 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataValueProperty.Builder =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataValueProperty.builder()
 
-      public override fun booleanValue(booleanValue: Boolean) {
+      override fun booleanValue(booleanValue: Boolean) {
         cdkBuilder.booleanValue(booleanValue)
       }
 
-      public override fun booleanValue(booleanValue: IResolvable) {
+      override fun booleanValue(booleanValue: IResolvable) {
         cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
       }
 
-      public override fun doubleValue(doubleValue: Number) {
+      override fun doubleValue(doubleValue: Number) {
         cdkBuilder.doubleValue(doubleValue)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun integerValue(integerValue: Number) {
+      override fun integerValue(integerValue: Number) {
         cdkBuilder.integerValue(integerValue)
       }
 
-      public override fun listValue(listValue: IResolvable) {
+      override fun listValue(listValue: IResolvable) {
         cdkBuilder.listValue(listValue.let(IResolvable::unwrap))
       }
 
-      public override fun listValue(listValue: List<Any>) {
+      override fun listValue(listValue: List<Any>) {
         cdkBuilder.listValue(listValue)
       }
 
-      public override fun longValue(longValue: Number) {
+      override fun longValue(longValue: Number) {
         cdkBuilder.longValue(longValue)
       }
 
-      public override fun mapValue(mapValue: IResolvable) {
+      override fun mapValue(mapValue: IResolvable) {
         cdkBuilder.mapValue(mapValue.let(IResolvable::unwrap))
       }
 
-      public override fun mapValue(mapValue: Map<String, Any>) {
+      override fun mapValue(mapValue: Map<String, Any>) {
         cdkBuilder.mapValue(mapValue)
       }
 
-      public override fun relationshipValue(relationshipValue: Any) {
+      override fun relationshipValue(relationshipValue: Any) {
         cdkBuilder.relationshipValue(relationshipValue)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -890,23 +839,23 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.DataValueProperty,
     ) : DataValueProperty {
-      public override fun booleanValue(): Any? = unwrap(this).getBooleanValue()
+      override fun booleanValue(): Any? = unwrap(this).getBooleanValue()
 
-      public override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
+      override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
 
-      public override fun expression(): String? = unwrap(this).getExpression()
+      override fun expression(): String? = unwrap(this).getExpression()
 
-      public override fun integerValue(): Number? = unwrap(this).getIntegerValue()
+      override fun integerValue(): Number? = unwrap(this).getIntegerValue()
 
-      public override fun listValue(): Any? = unwrap(this).getListValue()
+      override fun listValue(): Any? = unwrap(this).getListValue()
 
-      public override fun longValue(): Number? = unwrap(this).getLongValue()
+      override fun longValue(): Number? = unwrap(this).getLongValue()
 
-      public override fun mapValue(): Any? = unwrap(this).getMapValue()
+      override fun mapValue(): Any? = unwrap(this).getMapValue()
 
-      public override fun relationshipValue(): Any? = unwrap(this).getRelationshipValue()
+      override fun relationshipValue(): Any? = unwrap(this).getRelationshipValue()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
     }
 
     public companion object {
@@ -935,19 +884,15 @@ public open class CfnComponentType internal constructor(
     public fun state(): String? = unwrap(this).getState()
 
     public interface Builder {
-      public fun error(error: IResolvable) {
-      }
+      public fun error(error: IResolvable)
 
-      public fun error(error: ErrorProperty) {
-      }
+      public fun error(error: ErrorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8675338aefb17618022ff9c2a24e31a302ab5639e4f2a99e0f3b38a71943d292")
-      public fun error(error: ErrorProperty.Builder.() -> Unit) {
-      }
+      public fun error(error: ErrorProperty.Builder.() -> Unit)
 
-      public fun state(state: String) {
-      }
+      public fun state(state: String)
     }
 
     private class BuilderImpl : Builder {
@@ -955,20 +900,20 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty.Builder =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty.builder()
 
-      public override fun error(error: IResolvable) {
+      override fun error(error: IResolvable) {
         cdkBuilder.error(error.let(IResolvable::unwrap))
       }
 
-      public override fun error(error: ErrorProperty) {
+      override fun error(error: ErrorProperty) {
         cdkBuilder.error(error.let(ErrorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8675338aefb17618022ff9c2a24e31a302ab5639e4f2a99e0f3b38a71943d292")
-      public override fun error(error: ErrorProperty.Builder.() -> Unit): Unit =
+      override fun error(error: ErrorProperty.Builder.() -> Unit): Unit =
           error(ErrorProperty(error))
 
-      public override fun state(state: String) {
+      override fun state(state: String) {
         cdkBuilder.state(state)
       }
 
@@ -981,9 +926,9 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.StatusProperty,
     ) : StatusProperty {
-      public override fun error(): Any? = unwrap(this).getError()
+      override fun error(): Any? = unwrap(this).getError()
 
-      public override fun state(): String? = unwrap(this).getState()
+      override fun state(): String? = unwrap(this).getState()
     }
 
     public companion object {
@@ -1015,22 +960,17 @@ public open class CfnComponentType internal constructor(
     public fun scope(): String? = unwrap(this).getScope()
 
     public interface Builder {
-      public fun implementedBy(implementedBy: IResolvable) {
-      }
+      public fun implementedBy(implementedBy: IResolvable)
 
-      public fun implementedBy(implementedBy: DataConnectorProperty) {
-      }
+      public fun implementedBy(implementedBy: DataConnectorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1aee36c263610b41f33fb7dfe9d54a34f2eeaa62661e4a28130c31e38a4323fd")
-      public fun implementedBy(implementedBy: DataConnectorProperty.Builder.() -> Unit) {
-      }
+      public fun implementedBy(implementedBy: DataConnectorProperty.Builder.() -> Unit)
 
-      public fun requiredProperties(requiredProperties: List<String>) {
-      }
+      public fun requiredProperties(requiredProperties: List<String>)
 
-      public fun scope(scope: String) {
-      }
+      public fun scope(scope: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1038,24 +978,24 @@ public open class CfnComponentType internal constructor(
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty.Builder =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty.builder()
 
-      public override fun implementedBy(implementedBy: IResolvable) {
+      override fun implementedBy(implementedBy: IResolvable) {
         cdkBuilder.implementedBy(implementedBy.let(IResolvable::unwrap))
       }
 
-      public override fun implementedBy(implementedBy: DataConnectorProperty) {
+      override fun implementedBy(implementedBy: DataConnectorProperty) {
         cdkBuilder.implementedBy(implementedBy.let(DataConnectorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1aee36c263610b41f33fb7dfe9d54a34f2eeaa62661e4a28130c31e38a4323fd")
-      public override fun implementedBy(implementedBy: DataConnectorProperty.Builder.() -> Unit):
-          Unit = implementedBy(DataConnectorProperty(implementedBy))
+      override fun implementedBy(implementedBy: DataConnectorProperty.Builder.() -> Unit): Unit =
+          implementedBy(DataConnectorProperty(implementedBy))
 
-      public override fun requiredProperties(requiredProperties: List<String>) {
+      override fun requiredProperties(requiredProperties: List<String>) {
         cdkBuilder.requiredProperties(requiredProperties)
       }
 
-      public override fun scope(scope: String) {
+      override fun scope(scope: String) {
         cdkBuilder.scope(scope)
       }
 
@@ -1068,12 +1008,12 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.FunctionProperty,
     ) : FunctionProperty {
-      public override fun implementedBy(): Any? = unwrap(this).getImplementedBy()
+      override fun implementedBy(): Any? = unwrap(this).getImplementedBy()
 
-      public override fun requiredProperties(): List<String> = unwrap(this).getRequiredProperties()
-          ?: emptyList()
+      override fun requiredProperties(): List<String> = unwrap(this).getRequiredProperties() ?:
+          emptyList()
 
-      public override fun scope(): String? = unwrap(this).getScope()
+      override fun scope(): String? = unwrap(this).getScope()
     }
 
     public companion object {
@@ -1112,57 +1052,41 @@ public open class CfnComponentType internal constructor(
     public fun isTimeSeries(): Any? = unwrap(this).getIsTimeSeries()
 
     public interface Builder {
-      public fun configurations(configurations: IResolvable) {
-      }
+      public fun configurations(configurations: IResolvable)
 
-      public fun configurations(configurations: Map<String, String>) {
-      }
+      public fun configurations(configurations: Map<String, String>)
 
-      public fun dataType(dataType: IResolvable) {
-      }
+      public fun dataType(dataType: IResolvable)
 
-      public fun dataType(dataType: DataTypeProperty) {
-      }
+      public fun dataType(dataType: DataTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0c970d0a023254c5d84488daa2bf517714d1d3bde253bb30ccdd5e69dd9a943")
-      public fun dataType(dataType: DataTypeProperty.Builder.() -> Unit) {
-      }
+      public fun dataType(dataType: DataTypeProperty.Builder.() -> Unit)
 
-      public fun defaultValue(defaultValue: IResolvable) {
-      }
+      public fun defaultValue(defaultValue: IResolvable)
 
-      public fun defaultValue(defaultValue: DataValueProperty) {
-      }
+      public fun defaultValue(defaultValue: DataValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("06d64c68435ccc2367aabc04976125c24d8f12ccafd6c3ee7df5753c81071108")
-      public fun defaultValue(defaultValue: DataValueProperty.Builder.() -> Unit) {
-      }
+      public fun defaultValue(defaultValue: DataValueProperty.Builder.() -> Unit)
 
-      public fun isExternalId(isExternalId: Boolean) {
-      }
+      public fun isExternalId(isExternalId: Boolean)
 
-      public fun isExternalId(isExternalId: IResolvable) {
-      }
+      public fun isExternalId(isExternalId: IResolvable)
 
-      public fun isRequiredInEntity(isRequiredInEntity: Boolean) {
-      }
+      public fun isRequiredInEntity(isRequiredInEntity: Boolean)
 
-      public fun isRequiredInEntity(isRequiredInEntity: IResolvable) {
-      }
+      public fun isRequiredInEntity(isRequiredInEntity: IResolvable)
 
-      public fun isStoredExternally(isStoredExternally: Boolean) {
-      }
+      public fun isStoredExternally(isStoredExternally: Boolean)
 
-      public fun isStoredExternally(isStoredExternally: IResolvable) {
-      }
+      public fun isStoredExternally(isStoredExternally: IResolvable)
 
-      public fun isTimeSeries(isTimeSeries: Boolean) {
-      }
+      public fun isTimeSeries(isTimeSeries: Boolean)
 
-      public fun isTimeSeries(isTimeSeries: IResolvable) {
-      }
+      public fun isTimeSeries(isTimeSeries: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1171,69 +1095,69 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty.builder()
 
-      public override fun configurations(configurations: IResolvable) {
+      override fun configurations(configurations: IResolvable) {
         cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
       }
 
-      public override fun configurations(configurations: Map<String, String>) {
+      override fun configurations(configurations: Map<String, String>) {
         cdkBuilder.configurations(configurations)
       }
 
-      public override fun dataType(dataType: IResolvable) {
+      override fun dataType(dataType: IResolvable) {
         cdkBuilder.dataType(dataType.let(IResolvable::unwrap))
       }
 
-      public override fun dataType(dataType: DataTypeProperty) {
+      override fun dataType(dataType: DataTypeProperty) {
         cdkBuilder.dataType(dataType.let(DataTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0c970d0a023254c5d84488daa2bf517714d1d3bde253bb30ccdd5e69dd9a943")
-      public override fun dataType(dataType: DataTypeProperty.Builder.() -> Unit): Unit =
+      override fun dataType(dataType: DataTypeProperty.Builder.() -> Unit): Unit =
           dataType(DataTypeProperty(dataType))
 
-      public override fun defaultValue(defaultValue: IResolvable) {
+      override fun defaultValue(defaultValue: IResolvable) {
         cdkBuilder.defaultValue(defaultValue.let(IResolvable::unwrap))
       }
 
-      public override fun defaultValue(defaultValue: DataValueProperty) {
+      override fun defaultValue(defaultValue: DataValueProperty) {
         cdkBuilder.defaultValue(defaultValue.let(DataValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("06d64c68435ccc2367aabc04976125c24d8f12ccafd6c3ee7df5753c81071108")
-      public override fun defaultValue(defaultValue: DataValueProperty.Builder.() -> Unit): Unit =
+      override fun defaultValue(defaultValue: DataValueProperty.Builder.() -> Unit): Unit =
           defaultValue(DataValueProperty(defaultValue))
 
-      public override fun isExternalId(isExternalId: Boolean) {
+      override fun isExternalId(isExternalId: Boolean) {
         cdkBuilder.isExternalId(isExternalId)
       }
 
-      public override fun isExternalId(isExternalId: IResolvable) {
+      override fun isExternalId(isExternalId: IResolvable) {
         cdkBuilder.isExternalId(isExternalId.let(IResolvable::unwrap))
       }
 
-      public override fun isRequiredInEntity(isRequiredInEntity: Boolean) {
+      override fun isRequiredInEntity(isRequiredInEntity: Boolean) {
         cdkBuilder.isRequiredInEntity(isRequiredInEntity)
       }
 
-      public override fun isRequiredInEntity(isRequiredInEntity: IResolvable) {
+      override fun isRequiredInEntity(isRequiredInEntity: IResolvable) {
         cdkBuilder.isRequiredInEntity(isRequiredInEntity.let(IResolvable::unwrap))
       }
 
-      public override fun isStoredExternally(isStoredExternally: Boolean) {
+      override fun isStoredExternally(isStoredExternally: Boolean) {
         cdkBuilder.isStoredExternally(isStoredExternally)
       }
 
-      public override fun isStoredExternally(isStoredExternally: IResolvable) {
+      override fun isStoredExternally(isStoredExternally: IResolvable) {
         cdkBuilder.isStoredExternally(isStoredExternally.let(IResolvable::unwrap))
       }
 
-      public override fun isTimeSeries(isTimeSeries: Boolean) {
+      override fun isTimeSeries(isTimeSeries: Boolean) {
         cdkBuilder.isTimeSeries(isTimeSeries)
       }
 
-      public override fun isTimeSeries(isTimeSeries: IResolvable) {
+      override fun isTimeSeries(isTimeSeries: IResolvable) {
         cdkBuilder.isTimeSeries(isTimeSeries.let(IResolvable::unwrap))
       }
 
@@ -1246,19 +1170,19 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyDefinitionProperty,
     ) : PropertyDefinitionProperty {
-      public override fun configurations(): Any? = unwrap(this).getConfigurations()
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
 
-      public override fun dataType(): Any? = unwrap(this).getDataType()
+      override fun dataType(): Any? = unwrap(this).getDataType()
 
-      public override fun defaultValue(): Any? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): Any? = unwrap(this).getDefaultValue()
 
-      public override fun isExternalId(): Any? = unwrap(this).getIsExternalId()
+      override fun isExternalId(): Any? = unwrap(this).getIsExternalId()
 
-      public override fun isRequiredInEntity(): Any? = unwrap(this).getIsRequiredInEntity()
+      override fun isRequiredInEntity(): Any? = unwrap(this).getIsRequiredInEntity()
 
-      public override fun isStoredExternally(): Any? = unwrap(this).getIsStoredExternally()
+      override fun isStoredExternally(): Any? = unwrap(this).getIsStoredExternally()
 
-      public override fun isTimeSeries(): Any? = unwrap(this).getIsTimeSeries()
+      override fun isTimeSeries(): Any? = unwrap(this).getIsTimeSeries()
     }
 
     public companion object {
@@ -1287,11 +1211,9 @@ public open class CfnComponentType internal constructor(
     public fun targetComponentTypeId(): String? = unwrap(this).getTargetComponentTypeId()
 
     public interface Builder {
-      public fun relationshipType(relationshipType: String) {
-      }
+      public fun relationshipType(relationshipType: String)
 
-      public fun targetComponentTypeId(targetComponentTypeId: String) {
-      }
+      public fun targetComponentTypeId(targetComponentTypeId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1300,11 +1222,11 @@ public open class CfnComponentType internal constructor(
           =
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty.builder()
 
-      public override fun relationshipType(relationshipType: String) {
+      override fun relationshipType(relationshipType: String) {
         cdkBuilder.relationshipType(relationshipType)
       }
 
-      public override fun targetComponentTypeId(targetComponentTypeId: String) {
+      override fun targetComponentTypeId(targetComponentTypeId: String) {
         cdkBuilder.targetComponentTypeId(targetComponentTypeId)
       }
 
@@ -1317,9 +1239,9 @@ public open class CfnComponentType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.RelationshipProperty,
     ) : RelationshipProperty {
-      public override fun relationshipType(): String? = unwrap(this).getRelationshipType()
+      override fun relationshipType(): String? = unwrap(this).getRelationshipType()
 
-      public override fun targetComponentTypeId(): String? = unwrap(this).getTargetComponentTypeId()
+      override fun targetComponentTypeId(): String? = unwrap(this).getTargetComponentTypeId()
     }
 
     public companion object {

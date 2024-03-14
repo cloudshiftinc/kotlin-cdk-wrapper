@@ -15,20 +15,15 @@ public open class WebSocketAuthorizer internal constructor(
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
   public interface Builder {
-    public fun authorizerName(authorizerName: String) {
-    }
+    public fun authorizerName(authorizerName: String)
 
-    public fun authorizerUri(authorizerUri: String) {
-    }
+    public fun authorizerUri(authorizerUri: String)
 
-    public fun identitySource(identitySource: List<String>) {
-    }
+    public fun identitySource(identitySource: List<String>)
 
-    public fun type(type: WebSocketAuthorizerType) {
-    }
+    public fun type(type: WebSocketAuthorizerType)
 
-    public fun webSocketApi(webSocketApi: IWebSocketApi) {
-    }
+    public fun webSocketApi(webSocketApi: IWebSocketApi)
   }
 
   private class BuilderImpl(
@@ -38,23 +33,23 @@ public open class WebSocketAuthorizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer.Builder
         = software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer.Builder.create(scope, id)
 
-    public override fun authorizerName(authorizerName: String) {
+    override fun authorizerName(authorizerName: String) {
       cdkBuilder.authorizerName(authorizerName)
     }
 
-    public override fun authorizerUri(authorizerUri: String) {
+    override fun authorizerUri(authorizerUri: String) {
       cdkBuilder.authorizerUri(authorizerUri)
     }
 
-    public override fun identitySource(identitySource: List<String>) {
+    override fun identitySource(identitySource: List<String>) {
       cdkBuilder.identitySource(identitySource)
     }
 
-    public override fun type(type: WebSocketAuthorizerType) {
+    override fun type(type: WebSocketAuthorizerType) {
       cdkBuilder.type(type.let(WebSocketAuthorizerType::unwrap))
     }
 
-    public override fun webSocketApi(webSocketApi: IWebSocketApi) {
+    override fun webSocketApi(webSocketApi: IWebSocketApi) {
       cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
     }
 

@@ -64,52 +64,39 @@ public open class CloudFormationStackArtifact internal constructor(
   public open fun validateOnSynth(): Boolean? = unwrap(this).getValidateOnSynth()
 
   public interface Builder {
-    public fun dependencies(dependencies: List<String>) {
-    }
+    public fun dependencies(dependencies: List<String>)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun environment(environment: String) {
-    }
+    public fun environment(environment: String)
 
-    public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
-    }
+    public fun metadata(metadata: Map<String, List<MetadataEntry>>)
 
-    public fun properties(properties: AwsCloudFormationStackProperties) {
-    }
+    public fun properties(properties: AwsCloudFormationStackProperties)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("92c205a9470ccdebd826cf4b31ac7003bef204a014ac9f284ba9ba1b499921e7")
-    public fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit) {
-    }
+    public fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit)
 
-    public fun properties(properties: AssetManifestProperties) {
-    }
+    public fun properties(properties: AssetManifestProperties)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3dd6900b1f22ad585674a846e06f59419a9c370083cc0665c9791f83cad33009")
-    public fun properties(properties: AssetManifestProperties.Builder.() -> Unit) {
-    }
+    public fun properties(properties: AssetManifestProperties.Builder.() -> Unit)
 
-    public fun properties(properties: TreeArtifactProperties) {
-    }
+    public fun properties(properties: TreeArtifactProperties)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c66db8a93c609f04a50a253bb6a43f9131a9bb64ae18a714133ee19623bf2d9")
-    public fun properties(properties: TreeArtifactProperties.Builder.() -> Unit) {
-    }
+    public fun properties(properties: TreeArtifactProperties.Builder.() -> Unit)
 
-    public fun properties(properties: NestedCloudAssemblyProperties) {
-    }
+    public fun properties(properties: NestedCloudAssemblyProperties)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89ceb4e9acb0af4e90262523f7c7c05de15be68a16458b25e519add9141b9d88")
-    public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit) {
-    }
+    public fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit)
 
-    public fun type(type: ArtifactType) {
-    }
+    public fun type(type: ArtifactType)
   }
 
   private class BuilderImpl(
@@ -120,59 +107,59 @@ public open class CloudFormationStackArtifact internal constructor(
         software.amazon.awscdk.cxapi.CloudFormationStackArtifact.Builder.create(assembly,
         artifactId)
 
-    public override fun dependencies(dependencies: List<String>) {
+    override fun dependencies(dependencies: List<String>) {
       cdkBuilder.dependencies(dependencies)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun environment(environment: String) {
+    override fun environment(environment: String) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun metadata(metadata: Map<String, List<MetadataEntry>>) {
-      cdkBuilder.metadata(metadata.mapValues { it.value.map(MetadataEntry::unwrap) })
+    override fun metadata(metadata: Map<String, List<MetadataEntry>>) {
+      cdkBuilder.metadata(metadata.mapValues{it.value.map(MetadataEntry::unwrap) })
     }
 
-    public override fun properties(properties: AwsCloudFormationStackProperties) {
+    override fun properties(properties: AwsCloudFormationStackProperties) {
       cdkBuilder.properties(properties.let(AwsCloudFormationStackProperties::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("92c205a9470ccdebd826cf4b31ac7003bef204a014ac9f284ba9ba1b499921e7")
-    public override fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit):
-        Unit = properties(AwsCloudFormationStackProperties(properties))
+    override fun properties(properties: AwsCloudFormationStackProperties.Builder.() -> Unit): Unit =
+        properties(AwsCloudFormationStackProperties(properties))
 
-    public override fun properties(properties: AssetManifestProperties) {
+    override fun properties(properties: AssetManifestProperties) {
       cdkBuilder.properties(properties.let(AssetManifestProperties::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3dd6900b1f22ad585674a846e06f59419a9c370083cc0665c9791f83cad33009")
-    public override fun properties(properties: AssetManifestProperties.Builder.() -> Unit): Unit =
+    override fun properties(properties: AssetManifestProperties.Builder.() -> Unit): Unit =
         properties(AssetManifestProperties(properties))
 
-    public override fun properties(properties: TreeArtifactProperties) {
+    override fun properties(properties: TreeArtifactProperties) {
       cdkBuilder.properties(properties.let(TreeArtifactProperties::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c66db8a93c609f04a50a253bb6a43f9131a9bb64ae18a714133ee19623bf2d9")
-    public override fun properties(properties: TreeArtifactProperties.Builder.() -> Unit): Unit =
+    override fun properties(properties: TreeArtifactProperties.Builder.() -> Unit): Unit =
         properties(TreeArtifactProperties(properties))
 
-    public override fun properties(properties: NestedCloudAssemblyProperties) {
+    override fun properties(properties: NestedCloudAssemblyProperties) {
       cdkBuilder.properties(properties.let(NestedCloudAssemblyProperties::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89ceb4e9acb0af4e90262523f7c7c05de15be68a16458b25e519add9141b9d88")
-    public override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit):
-        Unit = properties(NestedCloudAssemblyProperties(properties))
+    override fun properties(properties: NestedCloudAssemblyProperties.Builder.() -> Unit): Unit =
+        properties(NestedCloudAssemblyProperties(properties))
 
-    public override fun type(type: ArtifactType) {
+    override fun type(type: ArtifactType) {
       cdkBuilder.type(type.let(ArtifactType::unwrap))
     }
 

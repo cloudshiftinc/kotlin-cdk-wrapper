@@ -30,11 +30,9 @@ public open class CfnPolicyPrincipalAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnPolicyPrincipalAttachment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment.Builder
         = software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment.Builder.create(scope, id)
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 

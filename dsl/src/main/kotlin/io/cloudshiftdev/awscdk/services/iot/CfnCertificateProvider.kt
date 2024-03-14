@@ -50,17 +50,13 @@ public open class CfnCertificateProvider internal constructor(
   }
 
   public interface Builder {
-    public fun accountDefaultForOperations(accountDefaultForOperations: List<String>) {
-    }
+    public fun accountDefaultForOperations(accountDefaultForOperations: List<String>)
 
-    public fun certificateProviderName(certificateProviderName: String) {
-    }
+    public fun certificateProviderName(certificateProviderName: String)
 
-    public fun lambdaFunctionArn(lambdaFunctionArn: String) {
-    }
+    public fun lambdaFunctionArn(lambdaFunctionArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -70,19 +66,19 @@ public open class CfnCertificateProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnCertificateProvider.Builder =
         software.amazon.awscdk.services.iot.CfnCertificateProvider.Builder.create(scope, id)
 
-    public override fun accountDefaultForOperations(accountDefaultForOperations: List<String>) {
+    override fun accountDefaultForOperations(accountDefaultForOperations: List<String>) {
       cdkBuilder.accountDefaultForOperations(accountDefaultForOperations)
     }
 
-    public override fun certificateProviderName(certificateProviderName: String) {
+    override fun certificateProviderName(certificateProviderName: String) {
       cdkBuilder.certificateProviderName(certificateProviderName)
     }
 
-    public override fun lambdaFunctionArn(lambdaFunctionArn: String) {
+    override fun lambdaFunctionArn(lambdaFunctionArn: String) {
       cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

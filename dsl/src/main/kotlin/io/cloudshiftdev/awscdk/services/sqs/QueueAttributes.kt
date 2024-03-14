@@ -16,43 +16,38 @@ public interface QueueAttributes {
   public fun queueUrl(): String? = unwrap(this).getQueueUrl()
 
   public interface Builder {
-    public fun fifo(fifo: Boolean) {
-    }
+    public fun fifo(fifo: Boolean)
 
-    public fun keyArn(keyArn: String) {
-    }
+    public fun keyArn(keyArn: String)
 
-    public fun queueArn(queueArn: String) {
-    }
+    public fun queueArn(queueArn: String)
 
-    public fun queueName(queueName: String) {
-    }
+    public fun queueName(queueName: String)
 
-    public fun queueUrl(queueUrl: String) {
-    }
+    public fun queueUrl(queueUrl: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.sqs.QueueAttributes.Builder =
         software.amazon.awscdk.services.sqs.QueueAttributes.builder()
 
-    public override fun fifo(fifo: Boolean) {
+    override fun fifo(fifo: Boolean) {
       cdkBuilder.fifo(fifo)
     }
 
-    public override fun keyArn(keyArn: String) {
+    override fun keyArn(keyArn: String) {
       cdkBuilder.keyArn(keyArn)
     }
 
-    public override fun queueArn(queueArn: String) {
+    override fun queueArn(queueArn: String) {
       cdkBuilder.queueArn(queueArn)
     }
 
-    public override fun queueName(queueName: String) {
+    override fun queueName(queueName: String) {
       cdkBuilder.queueName(queueName)
     }
 
-    public override fun queueUrl(queueUrl: String) {
+    override fun queueUrl(queueUrl: String) {
       cdkBuilder.queueUrl(queueUrl)
     }
 
@@ -62,15 +57,15 @@ public interface QueueAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sqs.QueueAttributes,
   ) : QueueAttributes {
-    public override fun fifo(): Boolean? = unwrap(this).getFifo()
+    override fun fifo(): Boolean? = unwrap(this).getFifo()
 
-    public override fun keyArn(): String? = unwrap(this).getKeyArn()
+    override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-    public override fun queueArn(): String = unwrap(this).getQueueArn()
+    override fun queueArn(): String = unwrap(this).getQueueArn()
 
-    public override fun queueName(): String? = unwrap(this).getQueueName()
+    override fun queueName(): String? = unwrap(this).getQueueName()
 
-    public override fun queueUrl(): String? = unwrap(this).getQueueUrl()
+    override fun queueUrl(): String? = unwrap(this).getQueueUrl()
   }
 
   public companion object {

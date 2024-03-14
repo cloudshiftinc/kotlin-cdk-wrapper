@@ -21,63 +21,45 @@ public open class SqsSendMessage internal constructor(
   private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage,
 ) : TaskStateBase(cdkObject) {
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d701c6cd97dd6102f4693ee5141d08447775453d5d2530d09a8b3f13da328d9")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
-    public fun delay(delay: Duration) {
-    }
+    public fun delay(delay: Duration)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun messageBody(messageBody: TaskInput) {
-    }
+    public fun messageBody(messageBody: TaskInput)
 
-    public fun messageDeduplicationId(messageDeduplicationId: String) {
-    }
+    public fun messageDeduplicationId(messageDeduplicationId: String)
 
-    public fun messageGroupId(messageGroupId: String) {
-    }
+    public fun messageGroupId(messageGroupId: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun queue(queue: IQueue) {
-    }
+    public fun queue(queue: IQueue)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -88,78 +70,78 @@ public open class SqsSendMessage internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d701c6cd97dd6102f4693ee5141d08447775453d5d2530d09a8b3f13da328d9")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
-    public override fun delay(delay: Duration) {
+    override fun delay(delay: Duration) {
       cdkBuilder.delay(delay.let(Duration::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun messageBody(messageBody: TaskInput) {
+    override fun messageBody(messageBody: TaskInput) {
       cdkBuilder.messageBody(messageBody.let(TaskInput::unwrap))
     }
 
-    public override fun messageDeduplicationId(messageDeduplicationId: String) {
+    override fun messageDeduplicationId(messageDeduplicationId: String) {
       cdkBuilder.messageDeduplicationId(messageDeduplicationId)
     }
 
-    public override fun messageGroupId(messageGroupId: String) {
+    override fun messageGroupId(messageGroupId: String) {
       cdkBuilder.messageGroupId(messageGroupId)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun queue(queue: IQueue) {
+    override fun queue(queue: IQueue) {
       cdkBuilder.queue(queue.let(IQueue::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

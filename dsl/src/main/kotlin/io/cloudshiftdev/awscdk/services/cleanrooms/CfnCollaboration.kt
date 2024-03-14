@@ -113,54 +113,40 @@ public open class CfnCollaboration internal constructor(
   }
 
   public interface Builder {
-    public fun creatorDisplayName(creatorDisplayName: String) {
-    }
+    public fun creatorDisplayName(creatorDisplayName: String)
 
-    public fun creatorMemberAbilities(creatorMemberAbilities: List<String>) {
-    }
+    public fun creatorMemberAbilities(creatorMemberAbilities: List<String>)
 
-    public fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable) {
-    }
+    public fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable)
 
     public
-        fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty) {
-    }
+        fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9881ba8f65accaca98fab8be01e5349ad5c421b1be9fd1c5b2df4e9aa4006398")
     public
-        fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit)
 
-    public fun dataEncryptionMetadata(dataEncryptionMetadata: IResolvable) {
-    }
+    public fun dataEncryptionMetadata(dataEncryptionMetadata: IResolvable)
 
-    public fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty) {
-    }
+    public fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("656599c92756a39c63decd3f4368484a397187171f0b4b32ea3e38ea82b5f7dd")
     public
-        fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty.Builder.() -> Unit) {
-    }
+        fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun members(members: IResolvable) {
-    }
+    public fun members(members: IResolvable)
 
-    public fun members(members: List<Any>) {
-    }
+    public fun members(members: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun queryLogStatus(queryLogStatus: String) {
-    }
+    public fun queryLogStatus(queryLogStatus: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -170,66 +156,65 @@ public open class CfnCollaboration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.Builder =
         software.amazon.awscdk.services.cleanrooms.CfnCollaboration.Builder.create(scope, id)
 
-    public override fun creatorDisplayName(creatorDisplayName: String) {
+    override fun creatorDisplayName(creatorDisplayName: String) {
       cdkBuilder.creatorDisplayName(creatorDisplayName)
     }
 
-    public override fun creatorMemberAbilities(creatorMemberAbilities: List<String>) {
+    override fun creatorMemberAbilities(creatorMemberAbilities: List<String>) {
       cdkBuilder.creatorMemberAbilities(creatorMemberAbilities)
     }
 
-    public override fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable) {
+    override fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable) {
       cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty) {
       cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(PaymentConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9881ba8f65accaca98fab8be01e5349ad5c421b1be9fd1c5b2df4e9aa4006398")
-    public override
+    override
         fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit):
         Unit =
         creatorPaymentConfiguration(PaymentConfigurationProperty(creatorPaymentConfiguration))
 
-    public override fun dataEncryptionMetadata(dataEncryptionMetadata: IResolvable) {
+    override fun dataEncryptionMetadata(dataEncryptionMetadata: IResolvable) {
       cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(IResolvable::unwrap))
     }
 
-    public override
-        fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty) {
+    override fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty) {
       cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(DataEncryptionMetadataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("656599c92756a39c63decd3f4368484a397187171f0b4b32ea3e38ea82b5f7dd")
-    public override
+    override
         fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty.Builder.() -> Unit):
         Unit = dataEncryptionMetadata(DataEncryptionMetadataProperty(dataEncryptionMetadata))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun members(members: IResolvable) {
+    override fun members(members: IResolvable) {
       cdkBuilder.members(members.let(IResolvable::unwrap))
     }
 
-    public override fun members(members: List<Any>) {
+    override fun members(members: List<Any>) {
       cdkBuilder.members(members)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun queryLogStatus(queryLogStatus: String) {
+    override fun queryLogStatus(queryLogStatus: String) {
       cdkBuilder.queryLogStatus(queryLogStatus)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -262,16 +247,13 @@ public open class CfnCollaboration internal constructor(
     public fun queryCompute(): Any
 
     public interface Builder {
-      public fun queryCompute(queryCompute: IResolvable) {
-      }
+      public fun queryCompute(queryCompute: IResolvable)
 
-      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
-      }
+      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
-      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit) {
-      }
+      public fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -280,19 +262,18 @@ public open class CfnCollaboration internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty.builder()
 
-      public override fun queryCompute(queryCompute: IResolvable) {
+      override fun queryCompute(queryCompute: IResolvable) {
         cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
       }
 
-      public override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
+      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
         cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1619053f2bed07c05e5bf24c29eab5e69eae176b5c877da7734215b91901bed6")
-      public override
-          fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit): Unit
-          = queryCompute(QueryComputePaymentConfigProperty(queryCompute))
+      override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty.Builder.() -> Unit):
+          Unit = queryCompute(QueryComputePaymentConfigProperty(queryCompute))
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty =
@@ -303,7 +284,7 @@ public open class CfnCollaboration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.PaymentConfigurationProperty,
     ) : PaymentConfigurationProperty {
-      public override fun queryCompute(): Any = unwrap(this).getQueryCompute()
+      override fun queryCompute(): Any = unwrap(this).getQueryCompute()
     }
 
     public companion object {
@@ -336,26 +317,20 @@ public open class CfnCollaboration internal constructor(
     public fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
 
     public interface Builder {
-      public fun accountId(accountId: String) {
-      }
+      public fun accountId(accountId: String)
 
-      public fun displayName(displayName: String) {
-      }
+      public fun displayName(displayName: String)
 
-      public fun memberAbilities(memberAbilities: List<String>) {
-      }
+      public fun memberAbilities(memberAbilities: List<String>)
 
-      public fun paymentConfiguration(paymentConfiguration: IResolvable) {
-      }
+      public fun paymentConfiguration(paymentConfiguration: IResolvable)
 
-      public fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty) {
-      }
+      public fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d5a06511b955a4195335af93a8d0e1f041a053f94cec081565a6d60775ea448")
       public
-          fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -364,29 +339,29 @@ public open class CfnCollaboration internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty.builder()
 
-      public override fun accountId(accountId: String) {
+      override fun accountId(accountId: String) {
         cdkBuilder.accountId(accountId)
       }
 
-      public override fun displayName(displayName: String) {
+      override fun displayName(displayName: String) {
         cdkBuilder.displayName(displayName)
       }
 
-      public override fun memberAbilities(memberAbilities: List<String>) {
+      override fun memberAbilities(memberAbilities: List<String>) {
         cdkBuilder.memberAbilities(memberAbilities)
       }
 
-      public override fun paymentConfiguration(paymentConfiguration: IResolvable) {
+      override fun paymentConfiguration(paymentConfiguration: IResolvable) {
         cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty) {
+      override fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty) {
         cdkBuilder.paymentConfiguration(paymentConfiguration.let(PaymentConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d5a06511b955a4195335af93a8d0e1f041a053f94cec081565a6d60775ea448")
-      public override
+      override
           fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty.Builder.() -> Unit):
           Unit = paymentConfiguration(PaymentConfigurationProperty(paymentConfiguration))
 
@@ -399,14 +374,14 @@ public open class CfnCollaboration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.MemberSpecificationProperty,
     ) : MemberSpecificationProperty {
-      public override fun accountId(): String = unwrap(this).getAccountId()
+      override fun accountId(): String = unwrap(this).getAccountId()
 
-      public override fun displayName(): String = unwrap(this).getDisplayName()
+      override fun displayName(): String = unwrap(this).getDisplayName()
 
-      public override fun memberAbilities(): List<String> = unwrap(this).getMemberAbilities() ?:
+      override fun memberAbilities(): List<String> = unwrap(this).getMemberAbilities() ?:
           emptyList()
 
-      public override fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
+      override fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
     }
 
     public companion object {
@@ -433,11 +408,9 @@ public open class CfnCollaboration internal constructor(
     public fun isResponsible(): Any
 
     public interface Builder {
-      public fun isResponsible(isResponsible: Boolean) {
-      }
+      public fun isResponsible(isResponsible: Boolean)
 
-      public fun isResponsible(isResponsible: IResolvable) {
-      }
+      public fun isResponsible(isResponsible: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -446,11 +419,11 @@ public open class CfnCollaboration internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty.builder()
 
-      public override fun isResponsible(isResponsible: Boolean) {
+      override fun isResponsible(isResponsible: Boolean) {
         cdkBuilder.isResponsible(isResponsible)
       }
 
-      public override fun isResponsible(isResponsible: IResolvable) {
+      override fun isResponsible(isResponsible: IResolvable) {
         cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
       }
 
@@ -463,7 +436,7 @@ public open class CfnCollaboration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.QueryComputePaymentConfigProperty,
     ) : QueryComputePaymentConfigProperty {
-      public override fun isResponsible(): Any = unwrap(this).getIsResponsible()
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
     }
 
     public companion object {
@@ -497,31 +470,23 @@ public open class CfnCollaboration internal constructor(
     public fun preserveNulls(): Any
 
     public interface Builder {
-      public fun allowCleartext(allowCleartext: Boolean) {
-      }
+      public fun allowCleartext(allowCleartext: Boolean)
 
-      public fun allowCleartext(allowCleartext: IResolvable) {
-      }
+      public fun allowCleartext(allowCleartext: IResolvable)
 
-      public fun allowDuplicates(allowDuplicates: Boolean) {
-      }
+      public fun allowDuplicates(allowDuplicates: Boolean)
 
-      public fun allowDuplicates(allowDuplicates: IResolvable) {
-      }
+      public fun allowDuplicates(allowDuplicates: IResolvable)
 
       public
-          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean) {
-      }
+          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean)
 
       public
-          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable) {
-      }
+          fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable)
 
-      public fun preserveNulls(preserveNulls: Boolean) {
-      }
+      public fun preserveNulls(preserveNulls: Boolean)
 
-      public fun preserveNulls(preserveNulls: IResolvable) {
-      }
+      public fun preserveNulls(preserveNulls: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -530,37 +495,37 @@ public open class CfnCollaboration internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty.builder()
 
-      public override fun allowCleartext(allowCleartext: Boolean) {
+      override fun allowCleartext(allowCleartext: Boolean) {
         cdkBuilder.allowCleartext(allowCleartext)
       }
 
-      public override fun allowCleartext(allowCleartext: IResolvable) {
+      override fun allowCleartext(allowCleartext: IResolvable) {
         cdkBuilder.allowCleartext(allowCleartext.let(IResolvable::unwrap))
       }
 
-      public override fun allowDuplicates(allowDuplicates: Boolean) {
+      override fun allowDuplicates(allowDuplicates: Boolean) {
         cdkBuilder.allowDuplicates(allowDuplicates)
       }
 
-      public override fun allowDuplicates(allowDuplicates: IResolvable) {
+      override fun allowDuplicates(allowDuplicates: IResolvable) {
         cdkBuilder.allowDuplicates(allowDuplicates.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: Boolean) {
         cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames)
       }
 
-      public override
+      override
           fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable) {
         cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames.let(IResolvable::unwrap))
       }
 
-      public override fun preserveNulls(preserveNulls: Boolean) {
+      override fun preserveNulls(preserveNulls: Boolean) {
         cdkBuilder.preserveNulls(preserveNulls)
       }
 
-      public override fun preserveNulls(preserveNulls: IResolvable) {
+      override fun preserveNulls(preserveNulls: IResolvable) {
         cdkBuilder.preserveNulls(preserveNulls.let(IResolvable::unwrap))
       }
 
@@ -573,14 +538,14 @@ public open class CfnCollaboration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnCollaboration.DataEncryptionMetadataProperty,
     ) : DataEncryptionMetadataProperty {
-      public override fun allowCleartext(): Any = unwrap(this).getAllowCleartext()
+      override fun allowCleartext(): Any = unwrap(this).getAllowCleartext()
 
-      public override fun allowDuplicates(): Any = unwrap(this).getAllowDuplicates()
+      override fun allowDuplicates(): Any = unwrap(this).getAllowDuplicates()
 
-      public override fun allowJoinsOnColumnsWithDifferentNames(): Any =
+      override fun allowJoinsOnColumnsWithDifferentNames(): Any =
           unwrap(this).getAllowJoinsOnColumnsWithDifferentNames()
 
-      public override fun preserveNulls(): Any = unwrap(this).getPreserveNulls()
+      override fun preserveNulls(): Any = unwrap(this).getPreserveNulls()
     }
 
     public companion object {

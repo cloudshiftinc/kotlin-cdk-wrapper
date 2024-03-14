@@ -28,11 +28,9 @@ public open class CfnServicePrincipalName internal constructor(
   }
 
   public interface Builder {
-    public fun connectorArn(connectorArn: String) {
-    }
+    public fun connectorArn(connectorArn: String)
 
-    public fun directoryRegistrationArn(directoryRegistrationArn: String) {
-    }
+    public fun directoryRegistrationArn(directoryRegistrationArn: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnServicePrincipalName internal constructor(
         software.amazon.awscdk.services.pcaconnectorad.CfnServicePrincipalName.Builder.create(scope,
         id)
 
-    public override fun connectorArn(connectorArn: String) {
+    override fun connectorArn(connectorArn: String) {
       cdkBuilder.connectorArn(connectorArn)
     }
 
-    public override fun directoryRegistrationArn(directoryRegistrationArn: String) {
+    override fun directoryRegistrationArn(directoryRegistrationArn: String) {
       cdkBuilder.directoryRegistrationArn(directoryRegistrationArn)
     }
 

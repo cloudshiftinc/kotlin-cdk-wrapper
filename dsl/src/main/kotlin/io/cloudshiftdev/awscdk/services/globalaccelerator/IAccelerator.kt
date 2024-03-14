@@ -22,28 +22,25 @@ public interface IAccelerator : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.IAccelerator,
   ) : IAccelerator {
-    public override fun acceleratorArn(): String = unwrap(this).getAcceleratorArn()
+    override fun acceleratorArn(): String = unwrap(this).getAcceleratorArn()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun dnsName(): String = unwrap(this).getDnsName()
+    override fun dnsName(): String = unwrap(this).getDnsName()
 
-    public override fun dualStackDnsName(): String? = unwrap(this).getDualStackDnsName()
+    override fun dualStackDnsName(): String? = unwrap(this).getDualStackDnsName()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun ipv4Addresses(): List<String> = unwrap(this).getIpv4Addresses() ?:
-        emptyList()
+    override fun ipv4Addresses(): List<String> = unwrap(this).getIpv4Addresses() ?: emptyList()
 
-    public override fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?:
-        emptyList()
+    override fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?: emptyList()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

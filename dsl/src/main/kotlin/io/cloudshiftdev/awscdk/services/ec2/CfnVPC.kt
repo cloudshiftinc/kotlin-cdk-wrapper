@@ -91,32 +91,23 @@ public open class CfnVPC internal constructor(
   }
 
   public interface Builder {
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun enableDnsHostnames(enableDnsHostnames: Boolean) {
-    }
+    public fun enableDnsHostnames(enableDnsHostnames: Boolean)
 
-    public fun enableDnsHostnames(enableDnsHostnames: IResolvable) {
-    }
+    public fun enableDnsHostnames(enableDnsHostnames: IResolvable)
 
-    public fun enableDnsSupport(enableDnsSupport: Boolean) {
-    }
+    public fun enableDnsSupport(enableDnsSupport: Boolean)
 
-    public fun enableDnsSupport(enableDnsSupport: IResolvable) {
-    }
+    public fun enableDnsSupport(enableDnsSupport: IResolvable)
 
-    public fun instanceTenancy(instanceTenancy: String) {
-    }
+    public fun instanceTenancy(instanceTenancy: String)
 
-    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
-    }
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String)
 
-    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
-    }
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -126,39 +117,39 @@ public open class CfnVPC internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPC.Builder =
         software.amazon.awscdk.services.ec2.CfnVPC.Builder.create(scope, id)
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun enableDnsHostnames(enableDnsHostnames: Boolean) {
+    override fun enableDnsHostnames(enableDnsHostnames: Boolean) {
       cdkBuilder.enableDnsHostnames(enableDnsHostnames)
     }
 
-    public override fun enableDnsHostnames(enableDnsHostnames: IResolvable) {
+    override fun enableDnsHostnames(enableDnsHostnames: IResolvable) {
       cdkBuilder.enableDnsHostnames(enableDnsHostnames.let(IResolvable::unwrap))
     }
 
-    public override fun enableDnsSupport(enableDnsSupport: Boolean) {
+    override fun enableDnsSupport(enableDnsSupport: Boolean) {
       cdkBuilder.enableDnsSupport(enableDnsSupport)
     }
 
-    public override fun enableDnsSupport(enableDnsSupport: IResolvable) {
+    override fun enableDnsSupport(enableDnsSupport: IResolvable) {
       cdkBuilder.enableDnsSupport(enableDnsSupport.let(IResolvable::unwrap))
     }
 
-    public override fun instanceTenancy(instanceTenancy: String) {
+    override fun instanceTenancy(instanceTenancy: String) {
       cdkBuilder.instanceTenancy(instanceTenancy)
     }
 
-    public override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+    override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
       cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
     }
 
-    public override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+    override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
       cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

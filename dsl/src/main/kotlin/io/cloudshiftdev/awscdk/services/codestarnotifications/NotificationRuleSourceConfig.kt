@@ -7,8 +7,7 @@ public interface NotificationRuleSourceConfig {
   public fun sourceArn(): String
 
   public interface Builder {
-    public fun sourceArn(sourceArn: String) {
-    }
+    public fun sourceArn(sourceArn: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface NotificationRuleSourceConfig {
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig.builder()
 
-    public override fun sourceArn(sourceArn: String) {
+    override fun sourceArn(sourceArn: String) {
       cdkBuilder.sourceArn(sourceArn)
     }
 
@@ -29,7 +28,7 @@ public interface NotificationRuleSourceConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig,
   ) : NotificationRuleSourceConfig {
-    public override fun sourceArn(): String = unwrap(this).getSourceArn()
+    override fun sourceArn(): String = unwrap(this).getSourceArn()
   }
 
   public companion object {

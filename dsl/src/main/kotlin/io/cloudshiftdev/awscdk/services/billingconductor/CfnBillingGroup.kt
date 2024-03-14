@@ -95,40 +95,30 @@ public open class CfnBillingGroup internal constructor(
   }
 
   public interface Builder {
-    public fun accountGrouping(accountGrouping: IResolvable) {
-    }
+    public fun accountGrouping(accountGrouping: IResolvable)
 
-    public fun accountGrouping(accountGrouping: AccountGroupingProperty) {
-    }
+    public fun accountGrouping(accountGrouping: AccountGroupingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6561db1e7d55a9da29df832f6a8a7d91bb963600da3dcad22a13f5636bd3135b")
-    public fun accountGrouping(accountGrouping: AccountGroupingProperty.Builder.() -> Unit) {
-    }
+    public fun accountGrouping(accountGrouping: AccountGroupingProperty.Builder.() -> Unit)
 
-    public fun computationPreference(computationPreference: IResolvable) {
-    }
+    public fun computationPreference(computationPreference: IResolvable)
 
-    public fun computationPreference(computationPreference: ComputationPreferenceProperty) {
-    }
+    public fun computationPreference(computationPreference: ComputationPreferenceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("71ad21af2f035a47eb191d558da20b163e51414aed1d111c4a8aa68982c6b191")
     public
-        fun computationPreference(computationPreference: ComputationPreferenceProperty.Builder.() -> Unit) {
-    }
+        fun computationPreference(computationPreference: ComputationPreferenceProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun primaryAccountId(primaryAccountId: String) {
-    }
+    public fun primaryAccountId(primaryAccountId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -138,48 +128,46 @@ public open class CfnBillingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.billingconductor.CfnBillingGroup.Builder
         = software.amazon.awscdk.services.billingconductor.CfnBillingGroup.Builder.create(scope, id)
 
-    public override fun accountGrouping(accountGrouping: IResolvable) {
+    override fun accountGrouping(accountGrouping: IResolvable) {
       cdkBuilder.accountGrouping(accountGrouping.let(IResolvable::unwrap))
     }
 
-    public override fun accountGrouping(accountGrouping: AccountGroupingProperty) {
+    override fun accountGrouping(accountGrouping: AccountGroupingProperty) {
       cdkBuilder.accountGrouping(accountGrouping.let(AccountGroupingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6561db1e7d55a9da29df832f6a8a7d91bb963600da3dcad22a13f5636bd3135b")
-    public override
-        fun accountGrouping(accountGrouping: AccountGroupingProperty.Builder.() -> Unit): Unit =
-        accountGrouping(AccountGroupingProperty(accountGrouping))
+    override fun accountGrouping(accountGrouping: AccountGroupingProperty.Builder.() -> Unit): Unit
+        = accountGrouping(AccountGroupingProperty(accountGrouping))
 
-    public override fun computationPreference(computationPreference: IResolvable) {
+    override fun computationPreference(computationPreference: IResolvable) {
       cdkBuilder.computationPreference(computationPreference.let(IResolvable::unwrap))
     }
 
-    public override
-        fun computationPreference(computationPreference: ComputationPreferenceProperty) {
+    override fun computationPreference(computationPreference: ComputationPreferenceProperty) {
       cdkBuilder.computationPreference(computationPreference.let(ComputationPreferenceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("71ad21af2f035a47eb191d558da20b163e51414aed1d111c4a8aa68982c6b191")
-    public override
+    override
         fun computationPreference(computationPreference: ComputationPreferenceProperty.Builder.() -> Unit):
         Unit = computationPreference(ComputationPreferenceProperty(computationPreference))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun primaryAccountId(primaryAccountId: String) {
+    override fun primaryAccountId(primaryAccountId: String) {
       cdkBuilder.primaryAccountId(primaryAccountId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -214,14 +202,11 @@ public open class CfnBillingGroup internal constructor(
     public fun linkedAccountIds(): List<String>
 
     public interface Builder {
-      public fun autoAssociate(autoAssociate: Boolean) {
-      }
+      public fun autoAssociate(autoAssociate: Boolean)
 
-      public fun autoAssociate(autoAssociate: IResolvable) {
-      }
+      public fun autoAssociate(autoAssociate: IResolvable)
 
-      public fun linkedAccountIds(linkedAccountIds: List<String>) {
-      }
+      public fun linkedAccountIds(linkedAccountIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -230,15 +215,15 @@ public open class CfnBillingGroup internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty.builder()
 
-      public override fun autoAssociate(autoAssociate: Boolean) {
+      override fun autoAssociate(autoAssociate: Boolean) {
         cdkBuilder.autoAssociate(autoAssociate)
       }
 
-      public override fun autoAssociate(autoAssociate: IResolvable) {
+      override fun autoAssociate(autoAssociate: IResolvable) {
         cdkBuilder.autoAssociate(autoAssociate.let(IResolvable::unwrap))
       }
 
-      public override fun linkedAccountIds(linkedAccountIds: List<String>) {
+      override fun linkedAccountIds(linkedAccountIds: List<String>) {
         cdkBuilder.linkedAccountIds(linkedAccountIds)
       }
 
@@ -251,9 +236,9 @@ public open class CfnBillingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnBillingGroup.AccountGroupingProperty,
     ) : AccountGroupingProperty {
-      public override fun autoAssociate(): Any? = unwrap(this).getAutoAssociate()
+      override fun autoAssociate(): Any? = unwrap(this).getAutoAssociate()
 
-      public override fun linkedAccountIds(): List<String> = unwrap(this).getLinkedAccountIds() ?:
+      override fun linkedAccountIds(): List<String> = unwrap(this).getLinkedAccountIds() ?:
           emptyList()
     }
 
@@ -281,8 +266,7 @@ public open class CfnBillingGroup internal constructor(
     public fun pricingPlanArn(): String
 
     public interface Builder {
-      public fun pricingPlanArn(pricingPlanArn: String) {
-      }
+      public fun pricingPlanArn(pricingPlanArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -291,7 +275,7 @@ public open class CfnBillingGroup internal constructor(
           =
           software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty.builder()
 
-      public override fun pricingPlanArn(pricingPlanArn: String) {
+      override fun pricingPlanArn(pricingPlanArn: String) {
         cdkBuilder.pricingPlanArn(pricingPlanArn)
       }
 
@@ -304,7 +288,7 @@ public open class CfnBillingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnBillingGroup.ComputationPreferenceProperty,
     ) : ComputationPreferenceProperty {
-      public override fun pricingPlanArn(): String = unwrap(this).getPricingPlanArn()
+      override fun pricingPlanArn(): String = unwrap(this).getPricingPlanArn()
     }
 
     public companion object {

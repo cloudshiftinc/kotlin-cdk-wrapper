@@ -33,17 +33,13 @@ public open class LinuxParameters internal constructor(
       unwrap(this).renderLinuxParameters().let(CfnJobDefinition.LinuxParametersProperty::wrap)
 
   public interface Builder {
-    public fun initProcessEnabled(initProcessEnabled: Boolean) {
-    }
+    public fun initProcessEnabled(initProcessEnabled: Boolean)
 
-    public fun maxSwap(maxSwap: Size) {
-    }
+    public fun maxSwap(maxSwap: Size)
 
-    public fun sharedMemorySize(sharedMemorySize: Size) {
-    }
+    public fun sharedMemorySize(sharedMemorySize: Size)
 
-    public fun swappiness(swappiness: Number) {
-    }
+    public fun swappiness(swappiness: Number)
   }
 
   private class BuilderImpl(
@@ -53,19 +49,19 @@ public open class LinuxParameters internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.LinuxParameters.Builder =
         software.amazon.awscdk.services.batch.LinuxParameters.Builder.create(scope, id)
 
-    public override fun initProcessEnabled(initProcessEnabled: Boolean) {
+    override fun initProcessEnabled(initProcessEnabled: Boolean) {
       cdkBuilder.initProcessEnabled(initProcessEnabled)
     }
 
-    public override fun maxSwap(maxSwap: Size) {
+    override fun maxSwap(maxSwap: Size) {
       cdkBuilder.maxSwap(maxSwap.let(Size::unwrap))
     }
 
-    public override fun sharedMemorySize(sharedMemorySize: Size) {
+    override fun sharedMemorySize(sharedMemorySize: Size) {
       cdkBuilder.sharedMemorySize(sharedMemorySize.let(Size::unwrap))
     }
 
-    public override fun swappiness(swappiness: Number) {
+    override fun swappiness(swappiness: Number) {
       cdkBuilder.swappiness(swappiness)
     }
 

@@ -8,14 +8,11 @@ public interface CnameInstanceBaseProps : BaseInstanceProps {
   public fun instanceCname(): String
 
   public interface Builder {
-    public fun customAttributes(customAttributes: Map<String, String>) {
-    }
+    public fun customAttributes(customAttributes: Map<String, String>)
 
-    public fun instanceCname(instanceCname: String) {
-    }
+    public fun instanceCname(instanceCname: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -23,15 +20,15 @@ public interface CnameInstanceBaseProps : BaseInstanceProps {
         software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps.Builder =
         software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps.builder()
 
-    public override fun customAttributes(customAttributes: Map<String, String>) {
+    override fun customAttributes(customAttributes: Map<String, String>) {
       cdkBuilder.customAttributes(customAttributes)
     }
 
-    public override fun instanceCname(instanceCname: String) {
+    override fun instanceCname(instanceCname: String) {
       cdkBuilder.instanceCname(instanceCname)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
@@ -42,12 +39,12 @@ public interface CnameInstanceBaseProps : BaseInstanceProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.CnameInstanceBaseProps,
   ) : CnameInstanceBaseProps {
-    public override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes()
-        ?: emptyMap()
+    override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes() ?:
+        emptyMap()
 
-    public override fun instanceCname(): String = unwrap(this).getInstanceCname()
+    override fun instanceCname(): String = unwrap(this).getInstanceCname()
 
-    public override fun instanceId(): String? = unwrap(this).getInstanceId()
+    override fun instanceId(): String? = unwrap(this).getInstanceId()
   }
 
   public companion object {

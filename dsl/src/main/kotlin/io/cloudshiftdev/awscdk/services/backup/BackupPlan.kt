@@ -41,17 +41,13 @@ public open class BackupPlan internal constructor(
   public open fun versionId(): String = unwrap(this).getVersionId()
 
   public interface Builder {
-    public fun backupPlanName(backupPlanName: String) {
-    }
+    public fun backupPlanName(backupPlanName: String)
 
-    public fun backupPlanRules(backupPlanRules: List<BackupPlanRule>) {
-    }
+    public fun backupPlanRules(backupPlanRules: List<BackupPlanRule>)
 
-    public fun backupVault(backupVault: IBackupVault) {
-    }
+    public fun backupVault(backupVault: IBackupVault)
 
-    public fun windowsVss(windowsVss: Boolean) {
-    }
+    public fun windowsVss(windowsVss: Boolean)
   }
 
   private class BuilderImpl(
@@ -61,19 +57,19 @@ public open class BackupPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupPlan.Builder =
         software.amazon.awscdk.services.backup.BackupPlan.Builder.create(scope, id)
 
-    public override fun backupPlanName(backupPlanName: String) {
+    override fun backupPlanName(backupPlanName: String) {
       cdkBuilder.backupPlanName(backupPlanName)
     }
 
-    public override fun backupPlanRules(backupPlanRules: List<BackupPlanRule>) {
+    override fun backupPlanRules(backupPlanRules: List<BackupPlanRule>) {
       cdkBuilder.backupPlanRules(backupPlanRules.map(BackupPlanRule::unwrap))
     }
 
-    public override fun backupVault(backupVault: IBackupVault) {
+    override fun backupVault(backupVault: IBackupVault) {
       cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
     }
 
-    public override fun windowsVss(windowsVss: Boolean) {
+    override fun windowsVss(windowsVss: Boolean) {
       cdkBuilder.windowsVss(windowsVss)
     }
 

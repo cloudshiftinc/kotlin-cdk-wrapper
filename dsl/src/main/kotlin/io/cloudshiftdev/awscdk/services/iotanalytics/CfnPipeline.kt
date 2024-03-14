@@ -53,17 +53,13 @@ public open class CfnPipeline internal constructor(
   }
 
   public interface Builder {
-    public fun pipelineActivities(pipelineActivities: IResolvable) {
-    }
+    public fun pipelineActivities(pipelineActivities: IResolvable)
 
-    public fun pipelineActivities(pipelineActivities: List<Any>) {
-    }
+    public fun pipelineActivities(pipelineActivities: List<Any>)
 
-    public fun pipelineName(pipelineName: String) {
-    }
+    public fun pipelineName(pipelineName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -73,19 +69,19 @@ public open class CfnPipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotanalytics.CfnPipeline.Builder =
         software.amazon.awscdk.services.iotanalytics.CfnPipeline.Builder.create(scope, id)
 
-    public override fun pipelineActivities(pipelineActivities: IResolvable) {
+    override fun pipelineActivities(pipelineActivities: IResolvable) {
       cdkBuilder.pipelineActivities(pipelineActivities.let(IResolvable::unwrap))
     }
 
-    public override fun pipelineActivities(pipelineActivities: List<Any>) {
+    override fun pipelineActivities(pipelineActivities: List<Any>) {
       cdkBuilder.pipelineActivities(pipelineActivities)
     }
 
-    public override fun pipelineName(pipelineName: String) {
+    override fun pipelineName(pipelineName: String) {
       cdkBuilder.pipelineName(pipelineName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -136,117 +132,87 @@ public open class CfnPipeline internal constructor(
     public fun selectAttributes(): Any? = unwrap(this).getSelectAttributes()
 
     public interface Builder {
-      public fun addAttributes(addAttributes: IResolvable) {
-      }
+      public fun addAttributes(addAttributes: IResolvable)
 
-      public fun addAttributes(addAttributes: AddAttributesProperty) {
-      }
+      public fun addAttributes(addAttributes: AddAttributesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6ca532d9574bfdc45d025450d892c0b8d8b62aa85b803d454c5a3fabac19b356")
-      public fun addAttributes(addAttributes: AddAttributesProperty.Builder.() -> Unit) {
-      }
+      public fun addAttributes(addAttributes: AddAttributesProperty.Builder.() -> Unit)
 
-      public fun channel(channel: IResolvable) {
-      }
+      public fun channel(channel: IResolvable)
 
-      public fun channel(channel: ChannelProperty) {
-      }
+      public fun channel(channel: ChannelProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e850e1932b80f5f992254c3d68b3782548220a1bd812c3bf494bdeac00548e8")
-      public fun channel(channel: ChannelProperty.Builder.() -> Unit) {
-      }
+      public fun channel(channel: ChannelProperty.Builder.() -> Unit)
 
-      public fun datastore(datastore: IResolvable) {
-      }
+      public fun datastore(datastore: IResolvable)
 
-      public fun datastore(datastore: DatastoreProperty) {
-      }
+      public fun datastore(datastore: DatastoreProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("269491e224203b708d5986e59ff0705f239a328198b2ceea9b94904122f8a560")
-      public fun datastore(datastore: DatastoreProperty.Builder.() -> Unit) {
-      }
+      public fun datastore(datastore: DatastoreProperty.Builder.() -> Unit)
 
-      public fun deviceRegistryEnrich(deviceRegistryEnrich: IResolvable) {
-      }
+      public fun deviceRegistryEnrich(deviceRegistryEnrich: IResolvable)
 
-      public fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty) {
-      }
+      public fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab22e542b2d957497953e9d0672c37ec53a0d249180ac68a5b2fc0e3e956d83a")
       public
-          fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty.Builder.() -> Unit) {
-      }
+          fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty.Builder.() -> Unit)
 
-      public fun deviceShadowEnrich(deviceShadowEnrich: IResolvable) {
-      }
+      public fun deviceShadowEnrich(deviceShadowEnrich: IResolvable)
 
-      public fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty) {
-      }
+      public fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5d41686fb04cacb0ea68292b59291060d7ff78c8f5b17e4b82aed6959861f72f")
       public
-          fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty.Builder.() -> Unit) {
-      }
+          fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty.Builder.() -> Unit)
 
-      public fun filter(filter: IResolvable) {
-      }
+      public fun filter(filter: IResolvable)
 
-      public fun filter(filter: FilterProperty) {
-      }
+      public fun filter(filter: FilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64cd2356ae73cd4ae7f0839ba69a5293f9ad40ef42a1261335c4f83c45d70a59")
-      public fun filter(filter: FilterProperty.Builder.() -> Unit) {
-      }
+      public fun filter(filter: FilterProperty.Builder.() -> Unit)
 
-      public fun lambda(lambda: IResolvable) {
-      }
+      public fun lambda(lambda: IResolvable)
 
-      public fun lambda(lambda: LambdaProperty) {
-      }
+      public fun lambda(lambda: LambdaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("752400dbe34c10dfb329054e73dc85cd243b45e1b8551bf688df91bfdd8679f7")
-      public fun lambda(lambda: LambdaProperty.Builder.() -> Unit) {
-      }
+      public fun lambda(lambda: LambdaProperty.Builder.() -> Unit)
 
-      public fun math(math: IResolvable) {
-      }
+      public fun math(math: IResolvable)
 
-      public fun math(math: MathProperty) {
-      }
+      public fun math(math: MathProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c6a1a86c0e9519c5c512a75d39a299706b42961487e63592617ff0e0dea4a2b")
-      public fun math(math: MathProperty.Builder.() -> Unit) {
-      }
+      public fun math(math: MathProperty.Builder.() -> Unit)
 
-      public fun removeAttributes(removeAttributes: IResolvable) {
-      }
+      public fun removeAttributes(removeAttributes: IResolvable)
 
-      public fun removeAttributes(removeAttributes: RemoveAttributesProperty) {
-      }
+      public fun removeAttributes(removeAttributes: RemoveAttributesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("12dfffc43b45420039a504fc1680bc58e9c19dd8f2a147c4d16fe29b86bd8285")
-      public fun removeAttributes(removeAttributes: RemoveAttributesProperty.Builder.() -> Unit) {
-      }
+      public fun removeAttributes(removeAttributes: RemoveAttributesProperty.Builder.() -> Unit)
 
-      public fun selectAttributes(selectAttributes: IResolvable) {
-      }
+      public fun selectAttributes(selectAttributes: IResolvable)
 
-      public fun selectAttributes(selectAttributes: SelectAttributesProperty) {
-      }
+      public fun selectAttributes(selectAttributes: SelectAttributesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("af4c5295ff31da7d5583a61d793d81b274c0fc52f577cb78d8d3be56b35f8edf")
-      public fun selectAttributes(selectAttributes: SelectAttributesProperty.Builder.() -> Unit) {
-      }
+      public fun selectAttributes(selectAttributes: SelectAttributesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -254,139 +220,136 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty.builder()
 
-      public override fun addAttributes(addAttributes: IResolvable) {
+      override fun addAttributes(addAttributes: IResolvable) {
         cdkBuilder.addAttributes(addAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun addAttributes(addAttributes: AddAttributesProperty) {
+      override fun addAttributes(addAttributes: AddAttributesProperty) {
         cdkBuilder.addAttributes(addAttributes.let(AddAttributesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6ca532d9574bfdc45d025450d892c0b8d8b62aa85b803d454c5a3fabac19b356")
-      public override fun addAttributes(addAttributes: AddAttributesProperty.Builder.() -> Unit):
-          Unit = addAttributes(AddAttributesProperty(addAttributes))
+      override fun addAttributes(addAttributes: AddAttributesProperty.Builder.() -> Unit): Unit =
+          addAttributes(AddAttributesProperty(addAttributes))
 
-      public override fun channel(channel: IResolvable) {
+      override fun channel(channel: IResolvable) {
         cdkBuilder.channel(channel.let(IResolvable::unwrap))
       }
 
-      public override fun channel(channel: ChannelProperty) {
+      override fun channel(channel: ChannelProperty) {
         cdkBuilder.channel(channel.let(ChannelProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e850e1932b80f5f992254c3d68b3782548220a1bd812c3bf494bdeac00548e8")
-      public override fun channel(channel: ChannelProperty.Builder.() -> Unit): Unit =
+      override fun channel(channel: ChannelProperty.Builder.() -> Unit): Unit =
           channel(ChannelProperty(channel))
 
-      public override fun datastore(datastore: IResolvable) {
+      override fun datastore(datastore: IResolvable) {
         cdkBuilder.datastore(datastore.let(IResolvable::unwrap))
       }
 
-      public override fun datastore(datastore: DatastoreProperty) {
+      override fun datastore(datastore: DatastoreProperty) {
         cdkBuilder.datastore(datastore.let(DatastoreProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("269491e224203b708d5986e59ff0705f239a328198b2ceea9b94904122f8a560")
-      public override fun datastore(datastore: DatastoreProperty.Builder.() -> Unit): Unit =
+      override fun datastore(datastore: DatastoreProperty.Builder.() -> Unit): Unit =
           datastore(DatastoreProperty(datastore))
 
-      public override fun deviceRegistryEnrich(deviceRegistryEnrich: IResolvable) {
+      override fun deviceRegistryEnrich(deviceRegistryEnrich: IResolvable) {
         cdkBuilder.deviceRegistryEnrich(deviceRegistryEnrich.let(IResolvable::unwrap))
       }
 
-      public override fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty) {
+      override fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty) {
         cdkBuilder.deviceRegistryEnrich(deviceRegistryEnrich.let(DeviceRegistryEnrichProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab22e542b2d957497953e9d0672c37ec53a0d249180ac68a5b2fc0e3e956d83a")
-      public override
+      override
           fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty.Builder.() -> Unit):
           Unit = deviceRegistryEnrich(DeviceRegistryEnrichProperty(deviceRegistryEnrich))
 
-      public override fun deviceShadowEnrich(deviceShadowEnrich: IResolvable) {
+      override fun deviceShadowEnrich(deviceShadowEnrich: IResolvable) {
         cdkBuilder.deviceShadowEnrich(deviceShadowEnrich.let(IResolvable::unwrap))
       }
 
-      public override fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty) {
+      override fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty) {
         cdkBuilder.deviceShadowEnrich(deviceShadowEnrich.let(DeviceShadowEnrichProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5d41686fb04cacb0ea68292b59291060d7ff78c8f5b17e4b82aed6959861f72f")
-      public override
+      override
           fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty.Builder.() -> Unit):
           Unit = deviceShadowEnrich(DeviceShadowEnrichProperty(deviceShadowEnrich))
 
-      public override fun filter(filter: IResolvable) {
+      override fun filter(filter: IResolvable) {
         cdkBuilder.filter(filter.let(IResolvable::unwrap))
       }
 
-      public override fun filter(filter: FilterProperty) {
+      override fun filter(filter: FilterProperty) {
         cdkBuilder.filter(filter.let(FilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64cd2356ae73cd4ae7f0839ba69a5293f9ad40ef42a1261335c4f83c45d70a59")
-      public override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
+      override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
           filter(FilterProperty(filter))
 
-      public override fun lambda(lambda: IResolvable) {
+      override fun lambda(lambda: IResolvable) {
         cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
       }
 
-      public override fun lambda(lambda: LambdaProperty) {
+      override fun lambda(lambda: LambdaProperty) {
         cdkBuilder.lambda(lambda.let(LambdaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("752400dbe34c10dfb329054e73dc85cd243b45e1b8551bf688df91bfdd8679f7")
-      public override fun lambda(lambda: LambdaProperty.Builder.() -> Unit): Unit =
+      override fun lambda(lambda: LambdaProperty.Builder.() -> Unit): Unit =
           lambda(LambdaProperty(lambda))
 
-      public override fun math(math: IResolvable) {
+      override fun math(math: IResolvable) {
         cdkBuilder.math(math.let(IResolvable::unwrap))
       }
 
-      public override fun math(math: MathProperty) {
+      override fun math(math: MathProperty) {
         cdkBuilder.math(math.let(MathProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c6a1a86c0e9519c5c512a75d39a299706b42961487e63592617ff0e0dea4a2b")
-      public override fun math(math: MathProperty.Builder.() -> Unit): Unit =
-          math(MathProperty(math))
+      override fun math(math: MathProperty.Builder.() -> Unit): Unit = math(MathProperty(math))
 
-      public override fun removeAttributes(removeAttributes: IResolvable) {
+      override fun removeAttributes(removeAttributes: IResolvable) {
         cdkBuilder.removeAttributes(removeAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun removeAttributes(removeAttributes: RemoveAttributesProperty) {
+      override fun removeAttributes(removeAttributes: RemoveAttributesProperty) {
         cdkBuilder.removeAttributes(removeAttributes.let(RemoveAttributesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("12dfffc43b45420039a504fc1680bc58e9c19dd8f2a147c4d16fe29b86bd8285")
-      public override
-          fun removeAttributes(removeAttributes: RemoveAttributesProperty.Builder.() -> Unit): Unit
-          = removeAttributes(RemoveAttributesProperty(removeAttributes))
+      override fun removeAttributes(removeAttributes: RemoveAttributesProperty.Builder.() -> Unit):
+          Unit = removeAttributes(RemoveAttributesProperty(removeAttributes))
 
-      public override fun selectAttributes(selectAttributes: IResolvable) {
+      override fun selectAttributes(selectAttributes: IResolvable) {
         cdkBuilder.selectAttributes(selectAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun selectAttributes(selectAttributes: SelectAttributesProperty) {
+      override fun selectAttributes(selectAttributes: SelectAttributesProperty) {
         cdkBuilder.selectAttributes(selectAttributes.let(SelectAttributesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("af4c5295ff31da7d5583a61d793d81b274c0fc52f577cb78d8d3be56b35f8edf")
-      public override
-          fun selectAttributes(selectAttributes: SelectAttributesProperty.Builder.() -> Unit): Unit
-          = selectAttributes(SelectAttributesProperty(selectAttributes))
+      override fun selectAttributes(selectAttributes: SelectAttributesProperty.Builder.() -> Unit):
+          Unit = selectAttributes(SelectAttributesProperty(selectAttributes))
 
       public fun build(): software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty
           = cdkBuilder.build()
@@ -396,25 +359,25 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty,
     ) : ActivityProperty {
-      public override fun addAttributes(): Any? = unwrap(this).getAddAttributes()
+      override fun addAttributes(): Any? = unwrap(this).getAddAttributes()
 
-      public override fun channel(): Any? = unwrap(this).getChannel()
+      override fun channel(): Any? = unwrap(this).getChannel()
 
-      public override fun datastore(): Any? = unwrap(this).getDatastore()
+      override fun datastore(): Any? = unwrap(this).getDatastore()
 
-      public override fun deviceRegistryEnrich(): Any? = unwrap(this).getDeviceRegistryEnrich()
+      override fun deviceRegistryEnrich(): Any? = unwrap(this).getDeviceRegistryEnrich()
 
-      public override fun deviceShadowEnrich(): Any? = unwrap(this).getDeviceShadowEnrich()
+      override fun deviceShadowEnrich(): Any? = unwrap(this).getDeviceShadowEnrich()
 
-      public override fun filter(): Any? = unwrap(this).getFilter()
+      override fun filter(): Any? = unwrap(this).getFilter()
 
-      public override fun lambda(): Any? = unwrap(this).getLambda()
+      override fun lambda(): Any? = unwrap(this).getLambda()
 
-      public override fun math(): Any? = unwrap(this).getMath()
+      override fun math(): Any? = unwrap(this).getMath()
 
-      public override fun removeAttributes(): Any? = unwrap(this).getRemoveAttributes()
+      override fun removeAttributes(): Any? = unwrap(this).getRemoveAttributes()
 
-      public override fun selectAttributes(): Any? = unwrap(this).getSelectAttributes()
+      override fun selectAttributes(): Any? = unwrap(this).getSelectAttributes()
     }
 
     public companion object {
@@ -443,11 +406,9 @@ public open class CfnPipeline internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun datastoreName(datastoreName: String) {
-      }
+      public fun datastoreName(datastoreName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -455,11 +416,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty.builder()
 
-      public override fun datastoreName(datastoreName: String) {
+      override fun datastoreName(datastoreName: String) {
         cdkBuilder.datastoreName(datastoreName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -471,9 +432,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty,
     ) : DatastoreProperty {
-      public override fun datastoreName(): String = unwrap(this).getDatastoreName()
+      override fun datastoreName(): String = unwrap(this).getDatastoreName()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -504,17 +465,13 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: Map<String, String>) {
-      }
+      public fun attributes(attributes: Map<String, String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -522,19 +479,19 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: Map<String, String>) {
+      override fun attributes(attributes: Map<String, String>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -547,11 +504,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty,
     ) : AddAttributesProperty {
-      public override fun attributes(): Any = unwrap(this).getAttributes()
+      override fun attributes(): Any = unwrap(this).getAttributes()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -582,14 +539,11 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun filter(filter: String) {
-      }
+      public fun filter(filter: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -597,15 +551,15 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty.builder()
 
-      public override fun filter(filter: String) {
+      override fun filter(filter: String) {
         cdkBuilder.filter(filter)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -617,11 +571,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty,
     ) : FilterProperty {
-      public override fun filter(): String = unwrap(this).getFilter()
+      override fun filter(): String = unwrap(this).getFilter()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -654,17 +608,13 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun batchSize(batchSize: Number) {
-      }
+      public fun batchSize(batchSize: Number)
 
-      public fun lambdaName(lambdaName: String) {
-      }
+      public fun lambdaName(lambdaName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -672,19 +622,19 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty.builder()
 
-      public override fun batchSize(batchSize: Number) {
+      override fun batchSize(batchSize: Number) {
         cdkBuilder.batchSize(batchSize)
       }
 
-      public override fun lambdaName(lambdaName: String) {
+      override fun lambdaName(lambdaName: String) {
         cdkBuilder.lambdaName(lambdaName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -696,13 +646,13 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty,
     ) : LambdaProperty {
-      public override fun batchSize(): Number = unwrap(this).getBatchSize()
+      override fun batchSize(): Number = unwrap(this).getBatchSize()
 
-      public override fun lambdaName(): String = unwrap(this).getLambdaName()
+      override fun lambdaName(): String = unwrap(this).getLambdaName()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -737,20 +687,15 @@ public open class CfnPipeline internal constructor(
     public fun thingName(): String
 
     public interface Builder {
-      public fun attribute(attribute: String) {
-      }
+      public fun attribute(attribute: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun thingName(thingName: String) {
-      }
+      public fun thingName(thingName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -759,23 +704,23 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty.builder()
 
-      public override fun attribute(attribute: String) {
+      override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun thingName(thingName: String) {
+      override fun thingName(thingName: String) {
         cdkBuilder.thingName(thingName)
       }
 
@@ -788,15 +733,15 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty,
     ) : DeviceShadowEnrichProperty {
-      public override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String = unwrap(this).getAttribute()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun thingName(): String = unwrap(this).getThingName()
+      override fun thingName(): String = unwrap(this).getThingName()
     }
 
     public companion object {
@@ -827,14 +772,11 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun attributes(attributes: List<String>) {
-      }
+      public fun attributes(attributes: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -843,15 +785,15 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty.builder()
 
-      public override fun attributes(attributes: List<String>) {
+      override fun attributes(attributes: List<String>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -864,11 +806,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
     ) : SelectAttributesProperty {
-      public override fun attributes(): List<String> = unwrap(this).getAttributes() ?: emptyList()
+      override fun attributes(): List<String> = unwrap(this).getAttributes() ?: emptyList()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -899,14 +841,11 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun attributes(attributes: List<String>) {
-      }
+      public fun attributes(attributes: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -915,15 +854,15 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty.builder()
 
-      public override fun attributes(attributes: List<String>) {
+      override fun attributes(attributes: List<String>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -936,11 +875,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
     ) : RemoveAttributesProperty {
-      public override fun attributes(): List<String> = unwrap(this).getAttributes() ?: emptyList()
+      override fun attributes(): List<String> = unwrap(this).getAttributes() ?: emptyList()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -973,17 +912,13 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun attribute(attribute: String) {
-      }
+      public fun attribute(attribute: String)
 
-      public fun math(math: String) {
-      }
+      public fun math(math: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -991,19 +926,19 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty.builder()
 
-      public override fun attribute(attribute: String) {
+      override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
       }
 
-      public override fun math(math: String) {
+      override fun math(math: String) {
         cdkBuilder.math(math)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -1014,13 +949,13 @@ public open class CfnPipeline internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty,
     ) : MathProperty {
-      public override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String = unwrap(this).getAttribute()
 
-      public override fun math(): String = unwrap(this).getMath()
+      override fun math(): String = unwrap(this).getMath()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -1051,14 +986,11 @@ public open class CfnPipeline internal constructor(
     public fun next(): String? = unwrap(this).getNext()
 
     public interface Builder {
-      public fun channelName(channelName: String) {
-      }
+      public fun channelName(channelName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1066,15 +998,15 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty.builder()
 
-      public override fun channelName(channelName: String) {
+      override fun channelName(channelName: String) {
         cdkBuilder.channelName(channelName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
@@ -1086,11 +1018,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty,
     ) : ChannelProperty {
-      public override fun channelName(): String = unwrap(this).getChannelName()
+      override fun channelName(): String = unwrap(this).getChannelName()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
     }
 
     public companion object {
@@ -1125,20 +1057,15 @@ public open class CfnPipeline internal constructor(
     public fun thingName(): String
 
     public interface Builder {
-      public fun attribute(attribute: String) {
-      }
+      public fun attribute(attribute: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun next(next: String) {
-      }
+      public fun next(next: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun thingName(thingName: String) {
-      }
+      public fun thingName(thingName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1147,23 +1074,23 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty.builder()
 
-      public override fun attribute(attribute: String) {
+      override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun next(next: String) {
+      override fun next(next: String) {
         cdkBuilder.next(next)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun thingName(thingName: String) {
+      override fun thingName(thingName: String) {
         cdkBuilder.thingName(thingName)
       }
 
@@ -1176,15 +1103,15 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty,
     ) : DeviceRegistryEnrichProperty {
-      public override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String = unwrap(this).getAttribute()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun next(): String? = unwrap(this).getNext()
+      override fun next(): String? = unwrap(this).getNext()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun thingName(): String = unwrap(this).getThingName()
+      override fun thingName(): String = unwrap(this).getThingName()
     }
 
     public companion object {

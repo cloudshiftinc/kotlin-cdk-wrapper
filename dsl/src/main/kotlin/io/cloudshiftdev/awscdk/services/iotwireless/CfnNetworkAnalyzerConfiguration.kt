@@ -64,23 +64,17 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun traceContent(traceContent: Any) {
-    }
+    public fun traceContent(traceContent: Any)
 
-    public fun wirelessDevices(wirelessDevices: List<String>) {
-    }
+    public fun wirelessDevices(wirelessDevices: List<String>)
 
-    public fun wirelessGateways(wirelessGateways: List<String>) {
-    }
+    public fun wirelessGateways(wirelessGateways: List<String>)
   }
 
   private class BuilderImpl(
@@ -92,27 +86,27 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
         software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun traceContent(traceContent: Any) {
+    override fun traceContent(traceContent: Any) {
       cdkBuilder.traceContent(traceContent)
     }
 
-    public override fun wirelessDevices(wirelessDevices: List<String>) {
+    override fun wirelessDevices(wirelessDevices: List<String>) {
       cdkBuilder.wirelessDevices(wirelessDevices)
     }
 
-    public override fun wirelessGateways(wirelessGateways: List<String>) {
+    override fun wirelessGateways(wirelessGateways: List<String>) {
       cdkBuilder.wirelessGateways(wirelessGateways)
     }
 
@@ -149,11 +143,9 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
     public fun wirelessDeviceFrameInfo(): String? = unwrap(this).getWirelessDeviceFrameInfo()
 
     public interface Builder {
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
 
-      public fun wirelessDeviceFrameInfo(wirelessDeviceFrameInfo: String) {
-      }
+      public fun wirelessDeviceFrameInfo(wirelessDeviceFrameInfo: String)
     }
 
     private class BuilderImpl : Builder {
@@ -162,11 +154,11 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty.builder()
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
-      public override fun wirelessDeviceFrameInfo(wirelessDeviceFrameInfo: String) {
+      override fun wirelessDeviceFrameInfo(wirelessDeviceFrameInfo: String) {
         cdkBuilder.wirelessDeviceFrameInfo(wirelessDeviceFrameInfo)
       }
 
@@ -179,10 +171,9 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration.TraceContentProperty,
     ) : TraceContentProperty {
-      public override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
 
-      public override fun wirelessDeviceFrameInfo(): String? =
-          unwrap(this).getWirelessDeviceFrameInfo()
+      override fun wirelessDeviceFrameInfo(): String? = unwrap(this).getWirelessDeviceFrameInfo()
     }
 
     public companion object {

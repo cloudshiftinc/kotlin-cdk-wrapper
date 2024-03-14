@@ -68,25 +68,19 @@ public open class CfnSite internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun globalNetworkId(globalNetworkId: String) {
-    }
+    public fun globalNetworkId(globalNetworkId: String)
 
-    public fun location(location: IResolvable) {
-    }
+    public fun location(location: IResolvable)
 
-    public fun location(location: LocationProperty) {
-    }
+    public fun location(location: LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5bfa01d646df37bd2c197504cf756b0316d72477463a0eab7da00a546fb82910")
-    public fun location(location: LocationProperty.Builder.() -> Unit) {
-    }
+    public fun location(location: LocationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -96,28 +90,28 @@ public open class CfnSite internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnSite.Builder =
         software.amazon.awscdk.services.networkmanager.CfnSite.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun globalNetworkId(globalNetworkId: String) {
+    override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
-    public override fun location(location: IResolvable) {
+    override fun location(location: IResolvable) {
       cdkBuilder.location(location.let(IResolvable::unwrap))
     }
 
-    public override fun location(location: LocationProperty) {
+    override fun location(location: LocationProperty) {
       cdkBuilder.location(location.let(LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5bfa01d646df37bd2c197504cf756b0316d72477463a0eab7da00a546fb82910")
-    public override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+    override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
         location(LocationProperty(location))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -153,14 +147,11 @@ public open class CfnSite internal constructor(
     public fun longitude(): String? = unwrap(this).getLongitude()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun latitude(latitude: String) {
-      }
+      public fun latitude(latitude: String)
 
-      public fun longitude(longitude: String) {
-      }
+      public fun longitude(longitude: String)
     }
 
     private class BuilderImpl : Builder {
@@ -168,15 +159,15 @@ public open class CfnSite internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnSite.LocationProperty.Builder =
           software.amazon.awscdk.services.networkmanager.CfnSite.LocationProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun latitude(latitude: String) {
+      override fun latitude(latitude: String) {
         cdkBuilder.latitude(latitude)
       }
 
-      public override fun longitude(longitude: String) {
+      override fun longitude(longitude: String) {
         cdkBuilder.longitude(longitude)
       }
 
@@ -188,11 +179,11 @@ public open class CfnSite internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnSite.LocationProperty,
     ) : LocationProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun latitude(): String? = unwrap(this).getLatitude()
+      override fun latitude(): String? = unwrap(this).getLatitude()
 
-      public override fun longitude(): String? = unwrap(this).getLongitude()
+      override fun longitude(): String? = unwrap(this).getLongitude()
     }
 
     public companion object {

@@ -64,23 +64,17 @@ public open class CfnDHCPOptions internal constructor(
   }
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainNameServers(domainNameServers: List<String>) {
-    }
+    public fun domainNameServers(domainNameServers: List<String>)
 
-    public fun netbiosNameServers(netbiosNameServers: List<String>) {
-    }
+    public fun netbiosNameServers(netbiosNameServers: List<String>)
 
-    public fun netbiosNodeType(netbiosNodeType: Number) {
-    }
+    public fun netbiosNodeType(netbiosNodeType: Number)
 
-    public fun ntpServers(ntpServers: List<String>) {
-    }
+    public fun ntpServers(ntpServers: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -90,27 +84,27 @@ public open class CfnDHCPOptions internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnDHCPOptions.Builder =
         software.amazon.awscdk.services.ec2.CfnDHCPOptions.Builder.create(scope, id)
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainNameServers(domainNameServers: List<String>) {
+    override fun domainNameServers(domainNameServers: List<String>) {
       cdkBuilder.domainNameServers(domainNameServers)
     }
 
-    public override fun netbiosNameServers(netbiosNameServers: List<String>) {
+    override fun netbiosNameServers(netbiosNameServers: List<String>) {
       cdkBuilder.netbiosNameServers(netbiosNameServers)
     }
 
-    public override fun netbiosNodeType(netbiosNodeType: Number) {
+    override fun netbiosNodeType(netbiosNodeType: Number) {
       cdkBuilder.netbiosNodeType(netbiosNodeType)
     }
 
-    public override fun ntpServers(ntpServers: List<String>) {
+    override fun ntpServers(ntpServers: List<String>) {
       cdkBuilder.ntpServers(ntpServers)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

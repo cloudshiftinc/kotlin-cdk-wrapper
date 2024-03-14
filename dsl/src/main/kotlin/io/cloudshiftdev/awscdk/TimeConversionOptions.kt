@@ -7,15 +7,14 @@ public interface TimeConversionOptions {
   public fun integral(): Boolean? = unwrap(this).getIntegral()
 
   public interface Builder {
-    public fun integral(integral: Boolean) {
-    }
+    public fun integral(integral: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.TimeConversionOptions.Builder =
         software.amazon.awscdk.TimeConversionOptions.builder()
 
-    public override fun integral(integral: Boolean) {
+    override fun integral(integral: Boolean) {
       cdkBuilder.integral(integral)
     }
 
@@ -25,7 +24,7 @@ public interface TimeConversionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.TimeConversionOptions,
   ) : TimeConversionOptions {
-    public override fun integral(): Boolean? = unwrap(this).getIntegral()
+    override fun integral(): Boolean? = unwrap(this).getIntegral()
   }
 
   public companion object {

@@ -38,29 +38,21 @@ public open class PublicHostedZone internal constructor(
       unwrap(this).getCrossAccountZoneDelegationRole()?.let(Role::wrap)
 
   public interface Builder {
-    public fun addTrailingDot(addTrailingDot: Boolean) {
-    }
+    public fun addTrailingDot(addTrailingDot: Boolean)
 
-    public fun caaAmazon(caaAmazon: Boolean) {
-    }
+    public fun caaAmazon(caaAmazon: Boolean)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public
-        fun crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal: IPrincipal) {
-    }
+    public fun crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal: IPrincipal)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName: String) {
-    }
+    public fun crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName: String)
 
-    public fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
-    }
+    public fun queryLogsLogGroupArn(queryLogsLogGroupArn: String)
 
-    public fun zoneName(zoneName: String) {
-    }
+    public fun zoneName(zoneName: String)
   }
 
   private class BuilderImpl(
@@ -70,35 +62,34 @@ public open class PublicHostedZone internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.PublicHostedZone.Builder =
         software.amazon.awscdk.services.route53.PublicHostedZone.Builder.create(scope, id)
 
-    public override fun addTrailingDot(addTrailingDot: Boolean) {
+    override fun addTrailingDot(addTrailingDot: Boolean) {
       cdkBuilder.addTrailingDot(addTrailingDot)
     }
 
-    public override fun caaAmazon(caaAmazon: Boolean) {
+    override fun caaAmazon(caaAmazon: Boolean) {
       cdkBuilder.caaAmazon(caaAmazon)
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override
+    override
         fun crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal: IPrincipal) {
       cdkBuilder.crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal.let(IPrincipal::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override
-        fun crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName: String) {
+    override fun crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName: String) {
       cdkBuilder.crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName)
     }
 
-    public override fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
+    override fun queryLogsLogGroupArn(queryLogsLogGroupArn: String) {
       cdkBuilder.queryLogsLogGroupArn(queryLogsLogGroupArn)
     }
 
-    public override fun zoneName(zoneName: String) {
+    override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)
     }
 

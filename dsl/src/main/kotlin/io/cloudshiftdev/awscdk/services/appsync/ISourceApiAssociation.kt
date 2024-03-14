@@ -19,26 +19,23 @@ public interface ISourceApiAssociation : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.ISourceApiAssociation,
   ) : ISourceApiAssociation {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun associationArn(): String = unwrap(this).getAssociationArn()
+    override fun associationArn(): String = unwrap(this).getAssociationArn()
 
-    public override fun associationId(): String = unwrap(this).getAssociationId()
+    override fun associationId(): String = unwrap(this).getAssociationId()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun mergedApi(): IGraphqlApi =
-        unwrap(this).getMergedApi().let(IGraphqlApi::wrap)
+    override fun mergedApi(): IGraphqlApi = unwrap(this).getMergedApi().let(IGraphqlApi::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun sourceApi(): IGraphqlApi =
-        unwrap(this).getSourceApi().let(IGraphqlApi::wrap)
+    override fun sourceApi(): IGraphqlApi = unwrap(this).getSourceApi().let(IGraphqlApi::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

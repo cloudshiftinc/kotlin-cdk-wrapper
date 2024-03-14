@@ -45,19 +45,15 @@ public open class CfnPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun definition(definition: IResolvable) {
-    }
+    public fun definition(definition: IResolvable)
 
-    public fun definition(definition: PolicyDefinitionProperty) {
-    }
+    public fun definition(definition: PolicyDefinitionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3ea4691c0030d18bdd406f2aa7aaf58de05c225848067ef8788e2fa2478b4c26")
-    public fun definition(definition: PolicyDefinitionProperty.Builder.() -> Unit) {
-    }
+    public fun definition(definition: PolicyDefinitionProperty.Builder.() -> Unit)
 
-    public fun policyStoreId(policyStoreId: String) {
-    }
+    public fun policyStoreId(policyStoreId: String)
   }
 
   private class BuilderImpl(
@@ -67,20 +63,20 @@ public open class CfnPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.Builder =
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.Builder.create(scope, id)
 
-    public override fun definition(definition: IResolvable) {
+    override fun definition(definition: IResolvable) {
       cdkBuilder.definition(definition.let(IResolvable::unwrap))
     }
 
-    public override fun definition(definition: PolicyDefinitionProperty) {
+    override fun definition(definition: PolicyDefinitionProperty) {
       cdkBuilder.definition(definition.let(PolicyDefinitionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3ea4691c0030d18bdd406f2aa7aaf58de05c225848067ef8788e2fa2478b4c26")
-    public override fun definition(definition: PolicyDefinitionProperty.Builder.() -> Unit): Unit =
+    override fun definition(definition: PolicyDefinitionProperty.Builder.() -> Unit): Unit =
         definition(PolicyDefinitionProperty(definition))
 
-    public override fun policyStoreId(policyStoreId: String) {
+    override fun policyStoreId(policyStoreId: String) {
       cdkBuilder.policyStoreId(policyStoreId)
     }
 
@@ -115,11 +111,9 @@ public open class CfnPolicy internal constructor(
     public fun entityType(): String
 
     public interface Builder {
-      public fun entityId(entityId: String) {
-      }
+      public fun entityId(entityId: String)
 
-      public fun entityType(entityType: String) {
-      }
+      public fun entityType(entityType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -128,11 +122,11 @@ public open class CfnPolicy internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty.builder()
 
-      public override fun entityId(entityId: String) {
+      override fun entityId(entityId: String) {
         cdkBuilder.entityId(entityId)
       }
 
-      public override fun entityType(entityType: String) {
+      override fun entityType(entityType: String) {
         cdkBuilder.entityType(entityType)
       }
 
@@ -145,9 +139,9 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.EntityIdentifierProperty,
     ) : EntityIdentifierProperty {
-      public override fun entityId(): String = unwrap(this).getEntityId()
+      override fun entityId(): String = unwrap(this).getEntityId()
 
-      public override fun entityType(): String = unwrap(this).getEntityType()
+      override fun entityType(): String = unwrap(this).getEntityType()
     }
 
     public companion object {
@@ -178,30 +172,23 @@ public open class CfnPolicy internal constructor(
     public fun resource(): Any? = unwrap(this).getResource()
 
     public interface Builder {
-      public fun policyTemplateId(policyTemplateId: String) {
-      }
+      public fun policyTemplateId(policyTemplateId: String)
 
-      public fun principal(principal: IResolvable) {
-      }
+      public fun principal(principal: IResolvable)
 
-      public fun principal(principal: EntityIdentifierProperty) {
-      }
+      public fun principal(principal: EntityIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67af872f3f0bc32f6df7215695742092a4a64cbc5d28d7feeef3fbf8af4e79e3")
-      public fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit)
 
-      public fun resource(resource: IResolvable) {
-      }
+      public fun resource(resource: IResolvable)
 
-      public fun resource(resource: EntityIdentifierProperty) {
-      }
+      public fun resource(resource: EntityIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8c256e86965bf2090b3c5083cfd2a4aaa89d6ed2903965890cdf312bf85198f")
-      public fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -210,34 +197,34 @@ public open class CfnPolicy internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty.builder()
 
-      public override fun policyTemplateId(policyTemplateId: String) {
+      override fun policyTemplateId(policyTemplateId: String) {
         cdkBuilder.policyTemplateId(policyTemplateId)
       }
 
-      public override fun principal(principal: IResolvable) {
+      override fun principal(principal: IResolvable) {
         cdkBuilder.principal(principal.let(IResolvable::unwrap))
       }
 
-      public override fun principal(principal: EntityIdentifierProperty) {
+      override fun principal(principal: EntityIdentifierProperty) {
         cdkBuilder.principal(principal.let(EntityIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67af872f3f0bc32f6df7215695742092a4a64cbc5d28d7feeef3fbf8af4e79e3")
-      public override fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun principal(principal: EntityIdentifierProperty.Builder.() -> Unit): Unit =
           principal(EntityIdentifierProperty(principal))
 
-      public override fun resource(resource: IResolvable) {
+      override fun resource(resource: IResolvable) {
         cdkBuilder.resource(resource.let(IResolvable::unwrap))
       }
 
-      public override fun resource(resource: EntityIdentifierProperty) {
+      override fun resource(resource: EntityIdentifierProperty) {
         cdkBuilder.resource(resource.let(EntityIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8c256e86965bf2090b3c5083cfd2a4aaa89d6ed2903965890cdf312bf85198f")
-      public override fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun resource(resource: EntityIdentifierProperty.Builder.() -> Unit): Unit =
           resource(EntityIdentifierProperty(resource))
 
       public fun build():
@@ -249,11 +236,11 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.TemplateLinkedPolicyDefinitionProperty,
     ) : TemplateLinkedPolicyDefinitionProperty {
-      public override fun policyTemplateId(): String = unwrap(this).getPolicyTemplateId()
+      override fun policyTemplateId(): String = unwrap(this).getPolicyTemplateId()
 
-      public override fun principal(): Any? = unwrap(this).getPrincipal()
+      override fun principal(): Any? = unwrap(this).getPrincipal()
 
-      public override fun resource(): Any? = unwrap(this).getResource()
+      override fun resource(): Any? = unwrap(this).getResource()
     }
 
     public companion object {
@@ -283,28 +270,22 @@ public open class CfnPolicy internal constructor(
     public fun templateLinked(): Any? = unwrap(this).getTemplateLinked()
 
     public interface Builder {
-      public fun staticValue(staticValue: IResolvable) {
-      }
+      public fun staticValue(staticValue: IResolvable)
 
-      public fun staticValue(staticValue: StaticPolicyDefinitionProperty) {
-      }
+      public fun staticValue(staticValue: StaticPolicyDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("829766e17a9d57f1d489148df1cab457cd52463198ba25d2339133671ee383cf")
-      public fun staticValue(staticValue: StaticPolicyDefinitionProperty.Builder.() -> Unit) {
-      }
+      public fun staticValue(staticValue: StaticPolicyDefinitionProperty.Builder.() -> Unit)
 
-      public fun templateLinked(templateLinked: IResolvable) {
-      }
+      public fun templateLinked(templateLinked: IResolvable)
 
-      public fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty) {
-      }
+      public fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3958378f5ac72ae87a7e6ab0e6ce35cae9c67a619ac0c0ffee1ac07364a6d64f")
       public
-          fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -313,31 +294,30 @@ public open class CfnPolicy internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty.builder()
 
-      public override fun staticValue(staticValue: IResolvable) {
+      override fun staticValue(staticValue: IResolvable) {
         cdkBuilder.staticValue(staticValue.let(IResolvable::unwrap))
       }
 
-      public override fun staticValue(staticValue: StaticPolicyDefinitionProperty) {
+      override fun staticValue(staticValue: StaticPolicyDefinitionProperty) {
         cdkBuilder.staticValue(staticValue.let(StaticPolicyDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("829766e17a9d57f1d489148df1cab457cd52463198ba25d2339133671ee383cf")
-      public override
-          fun staticValue(staticValue: StaticPolicyDefinitionProperty.Builder.() -> Unit): Unit =
-          staticValue(StaticPolicyDefinitionProperty(staticValue))
+      override fun staticValue(staticValue: StaticPolicyDefinitionProperty.Builder.() -> Unit): Unit
+          = staticValue(StaticPolicyDefinitionProperty(staticValue))
 
-      public override fun templateLinked(templateLinked: IResolvable) {
+      override fun templateLinked(templateLinked: IResolvable) {
         cdkBuilder.templateLinked(templateLinked.let(IResolvable::unwrap))
       }
 
-      public override fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty) {
+      override fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty) {
         cdkBuilder.templateLinked(templateLinked.let(TemplateLinkedPolicyDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3958378f5ac72ae87a7e6ab0e6ce35cae9c67a619ac0c0ffee1ac07364a6d64f")
-      public override
+      override
           fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty.Builder.() -> Unit):
           Unit = templateLinked(TemplateLinkedPolicyDefinitionProperty(templateLinked))
 
@@ -350,9 +330,9 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.PolicyDefinitionProperty,
     ) : PolicyDefinitionProperty {
-      public override fun staticValue(): Any? = unwrap(this).getStaticValue()
+      override fun staticValue(): Any? = unwrap(this).getStaticValue()
 
-      public override fun templateLinked(): Any? = unwrap(this).getTemplateLinked()
+      override fun templateLinked(): Any? = unwrap(this).getTemplateLinked()
     }
 
     public companion object {
@@ -381,11 +361,9 @@ public open class CfnPolicy internal constructor(
     public fun statement(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun statement(statement: String) {
-      }
+      public fun statement(statement: String)
     }
 
     private class BuilderImpl : Builder {
@@ -394,11 +372,11 @@ public open class CfnPolicy internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun statement(statement: String) {
+      override fun statement(statement: String) {
         cdkBuilder.statement(statement)
       }
 
@@ -411,9 +389,9 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicy.StaticPolicyDefinitionProperty,
     ) : StaticPolicyDefinitionProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun statement(): String = unwrap(this).getStatement()
+      override fun statement(): String = unwrap(this).getStatement()
     }
 
     public companion object {

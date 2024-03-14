@@ -76,29 +76,21 @@ public open class CfnAccessEntry internal constructor(
   }
 
   public interface Builder {
-    public fun accessPolicies(accessPolicies: IResolvable) {
-    }
+    public fun accessPolicies(accessPolicies: IResolvable)
 
-    public fun accessPolicies(accessPolicies: List<Any>) {
-    }
+    public fun accessPolicies(accessPolicies: List<Any>)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun kubernetesGroups(kubernetesGroups: List<String>) {
-    }
+    public fun kubernetesGroups(kubernetesGroups: List<String>)
 
-    public fun principalArn(principalArn: String) {
-    }
+    public fun principalArn(principalArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -108,35 +100,35 @@ public open class CfnAccessEntry internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnAccessEntry.Builder =
         software.amazon.awscdk.services.eks.CfnAccessEntry.Builder.create(scope, id)
 
-    public override fun accessPolicies(accessPolicies: IResolvable) {
+    override fun accessPolicies(accessPolicies: IResolvable) {
       cdkBuilder.accessPolicies(accessPolicies.let(IResolvable::unwrap))
     }
 
-    public override fun accessPolicies(accessPolicies: List<Any>) {
+    override fun accessPolicies(accessPolicies: List<Any>) {
       cdkBuilder.accessPolicies(accessPolicies)
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun kubernetesGroups(kubernetesGroups: List<String>) {
+    override fun kubernetesGroups(kubernetesGroups: List<String>) {
       cdkBuilder.kubernetesGroups(kubernetesGroups)
     }
 
-    public override fun principalArn(principalArn: String) {
+    override fun principalArn(principalArn: String) {
       cdkBuilder.principalArn(principalArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 
@@ -170,11 +162,9 @@ public open class CfnAccessEntry internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun namespaces(namespaces: List<String>) {
-      }
+      public fun namespaces(namespaces: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -182,11 +172,11 @@ public open class CfnAccessEntry internal constructor(
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty.Builder =
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty.builder()
 
-      public override fun namespaces(namespaces: List<String>) {
+      override fun namespaces(namespaces: List<String>) {
         cdkBuilder.namespaces(namespaces)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -198,9 +188,9 @@ public open class CfnAccessEntry internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty,
     ) : AccessScopeProperty {
-      public override fun namespaces(): List<String> = unwrap(this).getNamespaces() ?: emptyList()
+      override fun namespaces(): List<String> = unwrap(this).getNamespaces() ?: emptyList()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -229,19 +219,15 @@ public open class CfnAccessEntry internal constructor(
     public fun policyArn(): String
 
     public interface Builder {
-      public fun accessScope(accessScope: IResolvable) {
-      }
+      public fun accessScope(accessScope: IResolvable)
 
-      public fun accessScope(accessScope: AccessScopeProperty) {
-      }
+      public fun accessScope(accessScope: AccessScopeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b5d63cbcdfb4374595a500769eefa1674960e340dae629f9832bd17cb4ba4480")
-      public fun accessScope(accessScope: AccessScopeProperty.Builder.() -> Unit) {
-      }
+      public fun accessScope(accessScope: AccessScopeProperty.Builder.() -> Unit)
 
-      public fun policyArn(policyArn: String) {
-      }
+      public fun policyArn(policyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -249,20 +235,20 @@ public open class CfnAccessEntry internal constructor(
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty.Builder =
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty.builder()
 
-      public override fun accessScope(accessScope: IResolvable) {
+      override fun accessScope(accessScope: IResolvable) {
         cdkBuilder.accessScope(accessScope.let(IResolvable::unwrap))
       }
 
-      public override fun accessScope(accessScope: AccessScopeProperty) {
+      override fun accessScope(accessScope: AccessScopeProperty) {
         cdkBuilder.accessScope(accessScope.let(AccessScopeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b5d63cbcdfb4374595a500769eefa1674960e340dae629f9832bd17cb4ba4480")
-      public override fun accessScope(accessScope: AccessScopeProperty.Builder.() -> Unit): Unit =
+      override fun accessScope(accessScope: AccessScopeProperty.Builder.() -> Unit): Unit =
           accessScope(AccessScopeProperty(accessScope))
 
-      public override fun policyArn(policyArn: String) {
+      override fun policyArn(policyArn: String) {
         cdkBuilder.policyArn(policyArn)
       }
 
@@ -274,9 +260,9 @@ public open class CfnAccessEntry internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty,
     ) : AccessPolicyProperty {
-      public override fun accessScope(): Any = unwrap(this).getAccessScope()
+      override fun accessScope(): Any = unwrap(this).getAccessScope()
 
-      public override fun policyArn(): String = unwrap(this).getPolicyArn()
+      override fun policyArn(): String = unwrap(this).getPolicyArn()
     }
 
     public companion object {

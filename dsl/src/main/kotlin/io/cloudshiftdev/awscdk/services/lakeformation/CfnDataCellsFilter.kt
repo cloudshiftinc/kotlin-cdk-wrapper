@@ -81,42 +81,31 @@ public open class CfnDataCellsFilter internal constructor(
   }
 
   public interface Builder {
-    public fun columnNames(columnNames: List<String>) {
-    }
+    public fun columnNames(columnNames: List<String>)
 
-    public fun columnWildcard(columnWildcard: IResolvable) {
-    }
+    public fun columnWildcard(columnWildcard: IResolvable)
 
-    public fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
-    }
+    public fun columnWildcard(columnWildcard: ColumnWildcardProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1a782abca87786545ff85c73d56e1b48a708a17e905a6bad6c589ca7e46f27dd")
-    public fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit) {
-    }
+    public fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rowFilter(rowFilter: IResolvable) {
-    }
+    public fun rowFilter(rowFilter: IResolvable)
 
-    public fun rowFilter(rowFilter: RowFilterProperty) {
-    }
+    public fun rowFilter(rowFilter: RowFilterProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b8aec745d029dd5db34cc689594c3964031cc29463514afc0d2913022b0dc17")
-    public fun rowFilter(rowFilter: RowFilterProperty.Builder.() -> Unit) {
-    }
+    public fun rowFilter(rowFilter: RowFilterProperty.Builder.() -> Unit)
 
-    public fun tableCatalogId(tableCatalogId: String) {
-    }
+    public fun tableCatalogId(tableCatalogId: String)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
   }
 
   private class BuilderImpl(
@@ -126,49 +115,49 @@ public open class CfnDataCellsFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.Builder
         = software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.Builder.create(scope, id)
 
-    public override fun columnNames(columnNames: List<String>) {
+    override fun columnNames(columnNames: List<String>) {
       cdkBuilder.columnNames(columnNames)
     }
 
-    public override fun columnWildcard(columnWildcard: IResolvable) {
+    override fun columnWildcard(columnWildcard: IResolvable) {
       cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
     }
 
-    public override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
+    override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
       cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1a782abca87786545ff85c73d56e1b48a708a17e905a6bad6c589ca7e46f27dd")
-    public override fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit):
-        Unit = columnWildcard(ColumnWildcardProperty(columnWildcard))
+    override fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit): Unit =
+        columnWildcard(ColumnWildcardProperty(columnWildcard))
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rowFilter(rowFilter: IResolvable) {
+    override fun rowFilter(rowFilter: IResolvable) {
       cdkBuilder.rowFilter(rowFilter.let(IResolvable::unwrap))
     }
 
-    public override fun rowFilter(rowFilter: RowFilterProperty) {
+    override fun rowFilter(rowFilter: RowFilterProperty) {
       cdkBuilder.rowFilter(rowFilter.let(RowFilterProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b8aec745d029dd5db34cc689594c3964031cc29463514afc0d2913022b0dc17")
-    public override fun rowFilter(rowFilter: RowFilterProperty.Builder.() -> Unit): Unit =
+    override fun rowFilter(rowFilter: RowFilterProperty.Builder.() -> Unit): Unit =
         rowFilter(RowFilterProperty(rowFilter))
 
-    public override fun tableCatalogId(tableCatalogId: String) {
+    override fun tableCatalogId(tableCatalogId: String) {
       cdkBuilder.tableCatalogId(tableCatalogId)
     }
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
@@ -202,8 +191,7 @@ public open class CfnDataCellsFilter internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun excludedColumnNames(excludedColumnNames: List<String>) {
-      }
+      public fun excludedColumnNames(excludedColumnNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -212,7 +200,7 @@ public open class CfnDataCellsFilter internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty.builder()
 
-      public override fun excludedColumnNames(excludedColumnNames: List<String>) {
+      override fun excludedColumnNames(excludedColumnNames: List<String>) {
         cdkBuilder.excludedColumnNames(excludedColumnNames)
       }
 
@@ -225,8 +213,8 @@ public open class CfnDataCellsFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty,
     ) : ColumnWildcardProperty {
-      public override fun excludedColumnNames(): List<String> =
-          unwrap(this).getExcludedColumnNames() ?: emptyList()
+      override fun excludedColumnNames(): List<String> = unwrap(this).getExcludedColumnNames() ?:
+          emptyList()
     }
 
     public companion object {
@@ -255,11 +243,9 @@ public open class CfnDataCellsFilter internal constructor(
     public fun filterExpression(): String? = unwrap(this).getFilterExpression()
 
     public interface Builder {
-      public fun allRowsWildcard(allRowsWildcard: Any) {
-      }
+      public fun allRowsWildcard(allRowsWildcard: Any)
 
-      public fun filterExpression(filterExpression: String) {
-      }
+      public fun filterExpression(filterExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -268,11 +254,11 @@ public open class CfnDataCellsFilter internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty.builder()
 
-      public override fun allRowsWildcard(allRowsWildcard: Any) {
+      override fun allRowsWildcard(allRowsWildcard: Any) {
         cdkBuilder.allRowsWildcard(allRowsWildcard)
       }
 
-      public override fun filterExpression(filterExpression: String) {
+      override fun filterExpression(filterExpression: String) {
         cdkBuilder.filterExpression(filterExpression)
       }
 
@@ -285,9 +271,9 @@ public open class CfnDataCellsFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.RowFilterProperty,
     ) : RowFilterProperty {
-      public override fun allRowsWildcard(): Any? = unwrap(this).getAllRowsWildcard()
+      override fun allRowsWildcard(): Any? = unwrap(this).getAllRowsWildcard()
 
-      public override fun filterExpression(): String? = unwrap(this).getFilterExpression()
+      override fun filterExpression(): String? = unwrap(this).getFilterExpression()
     }
 
     public companion object {

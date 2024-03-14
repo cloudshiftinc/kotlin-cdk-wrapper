@@ -56,23 +56,17 @@ public open class CfnUserPoolIdentityProvider internal constructor(
   }
 
   public interface Builder {
-    public fun attributeMapping(attributeMapping: Any) {
-    }
+    public fun attributeMapping(attributeMapping: Any)
 
-    public fun idpIdentifiers(idpIdentifiers: List<String>) {
-    }
+    public fun idpIdentifiers(idpIdentifiers: List<String>)
 
-    public fun providerDetails(providerDetails: Any) {
-    }
+    public fun providerDetails(providerDetails: Any)
 
-    public fun providerName(providerName: String) {
-    }
+    public fun providerName(providerName: String)
 
-    public fun providerType(providerType: String) {
-    }
+    public fun providerType(providerType: String)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl(
@@ -84,27 +78,27 @@ public open class CfnUserPoolIdentityProvider internal constructor(
         software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider.Builder.create(scope,
         id)
 
-    public override fun attributeMapping(attributeMapping: Any) {
+    override fun attributeMapping(attributeMapping: Any) {
       cdkBuilder.attributeMapping(attributeMapping)
     }
 
-    public override fun idpIdentifiers(idpIdentifiers: List<String>) {
+    override fun idpIdentifiers(idpIdentifiers: List<String>) {
       cdkBuilder.idpIdentifiers(idpIdentifiers)
     }
 
-    public override fun providerDetails(providerDetails: Any) {
+    override fun providerDetails(providerDetails: Any) {
       cdkBuilder.providerDetails(providerDetails)
     }
 
-    public override fun providerName(providerName: String) {
+    override fun providerName(providerName: String) {
       cdkBuilder.providerName(providerName)
     }
 
-    public override fun providerType(providerType: String) {
+    override fun providerType(providerType: String) {
       cdkBuilder.providerType(providerType)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 

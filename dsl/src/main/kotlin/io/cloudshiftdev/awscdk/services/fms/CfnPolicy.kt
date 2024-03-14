@@ -165,88 +165,63 @@ public open class CfnPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun deleteAllPolicyResources(deleteAllPolicyResources: Boolean) {
-    }
+    public fun deleteAllPolicyResources(deleteAllPolicyResources: Boolean)
 
-    public fun deleteAllPolicyResources(deleteAllPolicyResources: IResolvable) {
-    }
+    public fun deleteAllPolicyResources(deleteAllPolicyResources: IResolvable)
 
-    public fun excludeMap(excludeMap: IResolvable) {
-    }
+    public fun excludeMap(excludeMap: IResolvable)
 
-    public fun excludeMap(excludeMap: IEMapProperty) {
-    }
+    public fun excludeMap(excludeMap: IEMapProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9201ba49b229379b9cdb087e646f6e6b0a3ee882c187741304b10358610837e3")
-    public fun excludeMap(excludeMap: IEMapProperty.Builder.() -> Unit) {
-    }
+    public fun excludeMap(excludeMap: IEMapProperty.Builder.() -> Unit)
 
-    public fun excludeResourceTags(excludeResourceTags: Boolean) {
-    }
+    public fun excludeResourceTags(excludeResourceTags: Boolean)
 
-    public fun excludeResourceTags(excludeResourceTags: IResolvable) {
-    }
+    public fun excludeResourceTags(excludeResourceTags: IResolvable)
 
-    public fun includeMap(includeMap: IResolvable) {
-    }
+    public fun includeMap(includeMap: IResolvable)
 
-    public fun includeMap(includeMap: IEMapProperty) {
-    }
+    public fun includeMap(includeMap: IEMapProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6be0f3fca68c982884aadf66d90ba2c15d32110488071e4668446e1d23d98c8a")
-    public fun includeMap(includeMap: IEMapProperty.Builder.() -> Unit) {
-    }
+    public fun includeMap(includeMap: IEMapProperty.Builder.() -> Unit)
 
-    public fun policyDescription(policyDescription: String) {
-    }
+    public fun policyDescription(policyDescription: String)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun remediationEnabled(remediationEnabled: Boolean) {
-    }
+    public fun remediationEnabled(remediationEnabled: Boolean)
 
-    public fun remediationEnabled(remediationEnabled: IResolvable) {
-    }
+    public fun remediationEnabled(remediationEnabled: IResolvable)
 
-    public fun resourceSetIds(resourceSetIds: List<String>) {
-    }
+    public fun resourceSetIds(resourceSetIds: List<String>)
 
-    public fun resourceTags(resourceTags: IResolvable) {
-    }
+    public fun resourceTags(resourceTags: IResolvable)
 
-    public fun resourceTags(resourceTags: List<Any>) {
-    }
+    public fun resourceTags(resourceTags: List<Any>)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun resourceTypeList(resourceTypeList: List<String>) {
-    }
+    public fun resourceTypeList(resourceTypeList: List<String>)
 
-    public fun resourcesCleanUp(resourcesCleanUp: Boolean) {
-    }
+    public fun resourcesCleanUp(resourcesCleanUp: Boolean)
 
-    public fun resourcesCleanUp(resourcesCleanUp: IResolvable) {
-    }
+    public fun resourcesCleanUp(resourcesCleanUp: IResolvable)
 
-    public fun securityServicePolicyData(securityServicePolicyData: IResolvable) {
-    }
+    public fun securityServicePolicyData(securityServicePolicyData: IResolvable)
 
     public
-        fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty) {
-    }
+        fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b0a8c4bc2180cc27511bfa544fbcc568c2089639558a518fac066f29b437aa5")
     public
-        fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty.Builder.() -> Unit) {
-    }
+        fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<PolicyTagProperty>) {
-    }
+    public fun tags(tags: List<PolicyTagProperty>)
   }
 
   private class BuilderImpl(
@@ -256,109 +231,109 @@ public open class CfnPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fms.CfnPolicy.Builder =
         software.amazon.awscdk.services.fms.CfnPolicy.Builder.create(scope, id)
 
-    public override fun deleteAllPolicyResources(deleteAllPolicyResources: Boolean) {
+    override fun deleteAllPolicyResources(deleteAllPolicyResources: Boolean) {
       cdkBuilder.deleteAllPolicyResources(deleteAllPolicyResources)
     }
 
-    public override fun deleteAllPolicyResources(deleteAllPolicyResources: IResolvable) {
+    override fun deleteAllPolicyResources(deleteAllPolicyResources: IResolvable) {
       cdkBuilder.deleteAllPolicyResources(deleteAllPolicyResources.let(IResolvable::unwrap))
     }
 
-    public override fun excludeMap(excludeMap: IResolvable) {
+    override fun excludeMap(excludeMap: IResolvable) {
       cdkBuilder.excludeMap(excludeMap.let(IResolvable::unwrap))
     }
 
-    public override fun excludeMap(excludeMap: IEMapProperty) {
+    override fun excludeMap(excludeMap: IEMapProperty) {
       cdkBuilder.excludeMap(excludeMap.let(IEMapProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9201ba49b229379b9cdb087e646f6e6b0a3ee882c187741304b10358610837e3")
-    public override fun excludeMap(excludeMap: IEMapProperty.Builder.() -> Unit): Unit =
+    override fun excludeMap(excludeMap: IEMapProperty.Builder.() -> Unit): Unit =
         excludeMap(IEMapProperty(excludeMap))
 
-    public override fun excludeResourceTags(excludeResourceTags: Boolean) {
+    override fun excludeResourceTags(excludeResourceTags: Boolean) {
       cdkBuilder.excludeResourceTags(excludeResourceTags)
     }
 
-    public override fun excludeResourceTags(excludeResourceTags: IResolvable) {
+    override fun excludeResourceTags(excludeResourceTags: IResolvable) {
       cdkBuilder.excludeResourceTags(excludeResourceTags.let(IResolvable::unwrap))
     }
 
-    public override fun includeMap(includeMap: IResolvable) {
+    override fun includeMap(includeMap: IResolvable) {
       cdkBuilder.includeMap(includeMap.let(IResolvable::unwrap))
     }
 
-    public override fun includeMap(includeMap: IEMapProperty) {
+    override fun includeMap(includeMap: IEMapProperty) {
       cdkBuilder.includeMap(includeMap.let(IEMapProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6be0f3fca68c982884aadf66d90ba2c15d32110488071e4668446e1d23d98c8a")
-    public override fun includeMap(includeMap: IEMapProperty.Builder.() -> Unit): Unit =
+    override fun includeMap(includeMap: IEMapProperty.Builder.() -> Unit): Unit =
         includeMap(IEMapProperty(includeMap))
 
-    public override fun policyDescription(policyDescription: String) {
+    override fun policyDescription(policyDescription: String) {
       cdkBuilder.policyDescription(policyDescription)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun remediationEnabled(remediationEnabled: Boolean) {
+    override fun remediationEnabled(remediationEnabled: Boolean) {
       cdkBuilder.remediationEnabled(remediationEnabled)
     }
 
-    public override fun remediationEnabled(remediationEnabled: IResolvable) {
+    override fun remediationEnabled(remediationEnabled: IResolvable) {
       cdkBuilder.remediationEnabled(remediationEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun resourceSetIds(resourceSetIds: List<String>) {
+    override fun resourceSetIds(resourceSetIds: List<String>) {
       cdkBuilder.resourceSetIds(resourceSetIds)
     }
 
-    public override fun resourceTags(resourceTags: IResolvable) {
+    override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
     }
 
-    public override fun resourceTags(resourceTags: List<Any>) {
+    override fun resourceTags(resourceTags: List<Any>) {
       cdkBuilder.resourceTags(resourceTags)
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun resourceTypeList(resourceTypeList: List<String>) {
+    override fun resourceTypeList(resourceTypeList: List<String>) {
       cdkBuilder.resourceTypeList(resourceTypeList)
     }
 
-    public override fun resourcesCleanUp(resourcesCleanUp: Boolean) {
+    override fun resourcesCleanUp(resourcesCleanUp: Boolean) {
       cdkBuilder.resourcesCleanUp(resourcesCleanUp)
     }
 
-    public override fun resourcesCleanUp(resourcesCleanUp: IResolvable) {
+    override fun resourcesCleanUp(resourcesCleanUp: IResolvable) {
       cdkBuilder.resourcesCleanUp(resourcesCleanUp.let(IResolvable::unwrap))
     }
 
-    public override fun securityServicePolicyData(securityServicePolicyData: IResolvable) {
+    override fun securityServicePolicyData(securityServicePolicyData: IResolvable) {
       cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty) {
       cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(SecurityServicePolicyDataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b0a8c4bc2180cc27511bfa544fbcc568c2089639558a518fac066f29b437aa5")
-    public override
+    override
         fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty.Builder.() -> Unit):
         Unit =
         securityServicePolicyData(SecurityServicePolicyDataProperty(securityServicePolicyData))
 
-    public override fun tags(tags: List<PolicyTagProperty>) {
+    override fun tags(tags: List<PolicyTagProperty>) {
       cdkBuilder.tags(tags.map(PolicyTagProperty::unwrap))
     }
 
@@ -392,22 +367,20 @@ public open class CfnPolicy internal constructor(
     public fun orgunit(): List<String> = unwrap(this).getOrgunit() ?: emptyList()
 
     public interface Builder {
-      public fun account(account: List<String>) {
-      }
+      public fun account(account: List<String>)
 
-      public fun orgunit(orgunit: List<String>) {
-      }
+      public fun orgunit(orgunit: List<String>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty.builder()
 
-      public override fun account(account: List<String>) {
+      override fun account(account: List<String>) {
         cdkBuilder.account(account)
       }
 
-      public override fun orgunit(orgunit: List<String>) {
+      override fun orgunit(orgunit: List<String>) {
         cdkBuilder.orgunit(orgunit)
       }
 
@@ -418,9 +391,9 @@ public open class CfnPolicy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty,
     ) : IEMapProperty {
-      public override fun account(): List<String> = unwrap(this).getAccount() ?: emptyList()
+      override fun account(): List<String> = unwrap(this).getAccount() ?: emptyList()
 
-      public override fun orgunit(): List<String> = unwrap(this).getOrgunit() ?: emptyList()
+      override fun orgunit(): List<String> = unwrap(this).getOrgunit() ?: emptyList()
     }
 
     public companion object {
@@ -448,11 +421,9 @@ public open class CfnPolicy internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -460,11 +431,11 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -475,9 +446,9 @@ public open class CfnPolicy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.ResourceTagProperty,
     ) : ResourceTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -506,11 +477,9 @@ public open class CfnPolicy internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -518,11 +487,11 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -533,9 +502,9 @@ public open class CfnPolicy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyTagProperty,
     ) : PolicyTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -561,8 +530,7 @@ public open class CfnPolicy internal constructor(
     public fun firewallDeploymentModel(): String
 
     public interface Builder {
-      public fun firewallDeploymentModel(firewallDeploymentModel: String) {
-      }
+      public fun firewallDeploymentModel(firewallDeploymentModel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -570,7 +538,7 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty.builder()
 
-      public override fun firewallDeploymentModel(firewallDeploymentModel: String) {
+      override fun firewallDeploymentModel(firewallDeploymentModel: String) {
         cdkBuilder.firewallDeploymentModel(firewallDeploymentModel)
       }
 
@@ -583,8 +551,7 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fms.CfnPolicy.ThirdPartyFirewallPolicyProperty,
     ) : ThirdPartyFirewallPolicyProperty {
-      public override fun firewallDeploymentModel(): String =
-          unwrap(this).getFirewallDeploymentModel()
+      override fun firewallDeploymentModel(): String = unwrap(this).getFirewallDeploymentModel()
     }
 
     public companion object {
@@ -613,30 +580,24 @@ public open class CfnPolicy internal constructor(
     public fun thirdPartyFirewallPolicy(): Any? = unwrap(this).getThirdPartyFirewallPolicy()
 
     public interface Builder {
-      public fun networkFirewallPolicy(networkFirewallPolicy: IResolvable) {
-      }
+      public fun networkFirewallPolicy(networkFirewallPolicy: IResolvable)
 
-      public fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty) {
-      }
+      public fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bcfef3a9236edfe1e7fca0e402ed9c668da4af60317973bf9145ed2b8744616b")
       public
-          fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty.Builder.() -> Unit) {
-      }
+          fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty.Builder.() -> Unit)
 
-      public fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable) {
-      }
+      public fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable)
 
       public
-          fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty) {
-      }
+          fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("46ebfdb764ce864461cebec237cda266d743def4733edcc56b56b4ee2b8cd9fb")
       public
-          fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty.Builder.() -> Unit) {
-      }
+          fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -644,33 +605,32 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty.builder()
 
-      public override fun networkFirewallPolicy(networkFirewallPolicy: IResolvable) {
+      override fun networkFirewallPolicy(networkFirewallPolicy: IResolvable) {
         cdkBuilder.networkFirewallPolicy(networkFirewallPolicy.let(IResolvable::unwrap))
       }
 
-      public override
-          fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty) {
+      override fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty) {
         cdkBuilder.networkFirewallPolicy(networkFirewallPolicy.let(NetworkFirewallPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bcfef3a9236edfe1e7fca0e402ed9c668da4af60317973bf9145ed2b8744616b")
-      public override
+      override
           fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty.Builder.() -> Unit):
           Unit = networkFirewallPolicy(NetworkFirewallPolicyProperty(networkFirewallPolicy))
 
-      public override fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable) {
+      override fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable) {
         cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty) {
         cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy.let(ThirdPartyFirewallPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("46ebfdb764ce864461cebec237cda266d743def4733edcc56b56b4ee2b8cd9fb")
-      public override
+      override
           fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty.Builder.() -> Unit):
           Unit =
           thirdPartyFirewallPolicy(ThirdPartyFirewallPolicyProperty(thirdPartyFirewallPolicy))
@@ -682,10 +642,9 @@ public open class CfnPolicy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PolicyOptionProperty,
     ) : PolicyOptionProperty {
-      public override fun networkFirewallPolicy(): Any? = unwrap(this).getNetworkFirewallPolicy()
+      override fun networkFirewallPolicy(): Any? = unwrap(this).getNetworkFirewallPolicy()
 
-      public override fun thirdPartyFirewallPolicy(): Any? =
-          unwrap(this).getThirdPartyFirewallPolicy()
+      override fun thirdPartyFirewallPolicy(): Any? = unwrap(this).getThirdPartyFirewallPolicy()
     }
 
     public companion object {
@@ -716,22 +675,17 @@ public open class CfnPolicy internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun managedServiceData(managedServiceData: String) {
-      }
+      public fun managedServiceData(managedServiceData: String)
 
-      public fun policyOption(policyOption: IResolvable) {
-      }
+      public fun policyOption(policyOption: IResolvable)
 
-      public fun policyOption(policyOption: PolicyOptionProperty) {
-      }
+      public fun policyOption(policyOption: PolicyOptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f802adb0072e9aff9070aaec6a8b5cccadf0cb1794bb55ea6dcb6d68e66c7c85")
-      public fun policyOption(policyOption: PolicyOptionProperty.Builder.() -> Unit) {
-      }
+      public fun policyOption(policyOption: PolicyOptionProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -739,24 +693,24 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty.builder()
 
-      public override fun managedServiceData(managedServiceData: String) {
+      override fun managedServiceData(managedServiceData: String) {
         cdkBuilder.managedServiceData(managedServiceData)
       }
 
-      public override fun policyOption(policyOption: IResolvable) {
+      override fun policyOption(policyOption: IResolvable) {
         cdkBuilder.policyOption(policyOption.let(IResolvable::unwrap))
       }
 
-      public override fun policyOption(policyOption: PolicyOptionProperty) {
+      override fun policyOption(policyOption: PolicyOptionProperty) {
         cdkBuilder.policyOption(policyOption.let(PolicyOptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f802adb0072e9aff9070aaec6a8b5cccadf0cb1794bb55ea6dcb6d68e66c7c85")
-      public override fun policyOption(policyOption: PolicyOptionProperty.Builder.() -> Unit): Unit
-          = policyOption(PolicyOptionProperty(policyOption))
+      override fun policyOption(policyOption: PolicyOptionProperty.Builder.() -> Unit): Unit =
+          policyOption(PolicyOptionProperty(policyOption))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -769,11 +723,11 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fms.CfnPolicy.SecurityServicePolicyDataProperty,
     ) : SecurityServicePolicyDataProperty {
-      public override fun managedServiceData(): String? = unwrap(this).getManagedServiceData()
+      override fun managedServiceData(): String? = unwrap(this).getManagedServiceData()
 
-      public override fun policyOption(): Any? = unwrap(this).getPolicyOption()
+      override fun policyOption(): Any? = unwrap(this).getPolicyOption()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -801,8 +755,7 @@ public open class CfnPolicy internal constructor(
     public fun firewallDeploymentModel(): String
 
     public interface Builder {
-      public fun firewallDeploymentModel(firewallDeploymentModel: String) {
-      }
+      public fun firewallDeploymentModel(firewallDeploymentModel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -810,7 +763,7 @@ public open class CfnPolicy internal constructor(
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty.builder()
 
-      public override fun firewallDeploymentModel(firewallDeploymentModel: String) {
+      override fun firewallDeploymentModel(firewallDeploymentModel: String) {
         cdkBuilder.firewallDeploymentModel(firewallDeploymentModel)
       }
 
@@ -823,8 +776,7 @@ public open class CfnPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkFirewallPolicyProperty,
     ) : NetworkFirewallPolicyProperty {
-      public override fun firewallDeploymentModel(): String =
-          unwrap(this).getFirewallDeploymentModel()
+      override fun firewallDeploymentModel(): String = unwrap(this).getFirewallDeploymentModel()
     }
 
     public companion object {

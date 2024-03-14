@@ -132,67 +132,49 @@ public open class CfnAssessment internal constructor(
   }
 
   public interface Builder {
-    public fun assessmentReportsDestination(assessmentReportsDestination: IResolvable) {
-    }
+    public fun assessmentReportsDestination(assessmentReportsDestination: IResolvable)
 
     public
-        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty) {
-    }
+        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2291bdad9e377b5b15886106ecdd4ad5cacac6721cc3864c84ce221e4f985f7b")
     public
-        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit) {
-    }
+        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit)
 
-    public fun awsAccount(awsAccount: IResolvable) {
-    }
+    public fun awsAccount(awsAccount: IResolvable)
 
-    public fun awsAccount(awsAccount: AWSAccountProperty) {
-    }
+    public fun awsAccount(awsAccount: AWSAccountProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1580483e9c07085cc822510773463770606f203d1f70bd8575549ccf14ef7a91")
-    public fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit) {
-    }
+    public fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit)
 
-    public fun delegations(delegations: IResolvable) {
-    }
+    public fun delegations(delegations: IResolvable)
 
-    public fun delegations(delegations: List<Any>) {
-    }
+    public fun delegations(delegations: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun frameworkId(frameworkId: String) {
-    }
+    public fun frameworkId(frameworkId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roles(roles: IResolvable) {
-    }
+    public fun roles(roles: IResolvable)
 
-    public fun roles(roles: List<Any>) {
-    }
+    public fun roles(roles: List<Any>)
 
-    public fun scope(scope: IResolvable) {
-    }
+    public fun scope(scope: IResolvable)
 
-    public fun scope(scope: ScopeProperty) {
-    }
+    public fun scope(scope: ScopeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6cd79e98afe771933cfa678ad4e6945e8c8b781c2bead15848ae7da762a4a333")
-    public fun scope(scope: ScopeProperty.Builder.() -> Unit) {
-    }
+    public fun scope(scope: ScopeProperty.Builder.() -> Unit)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -202,81 +184,80 @@ public open class CfnAssessment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.auditmanager.CfnAssessment.Builder =
         software.amazon.awscdk.services.auditmanager.CfnAssessment.Builder.create(scope, id)
 
-    public override fun assessmentReportsDestination(assessmentReportsDestination: IResolvable) {
+    override fun assessmentReportsDestination(assessmentReportsDestination: IResolvable) {
       cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty) {
       cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(AssessmentReportsDestinationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2291bdad9e377b5b15886106ecdd4ad5cacac6721cc3864c84ce221e4f985f7b")
-    public override
+    override
         fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit):
         Unit =
         assessmentReportsDestination(AssessmentReportsDestinationProperty(assessmentReportsDestination))
 
-    public override fun awsAccount(awsAccount: IResolvable) {
+    override fun awsAccount(awsAccount: IResolvable) {
       cdkBuilder.awsAccount(awsAccount.let(IResolvable::unwrap))
     }
 
-    public override fun awsAccount(awsAccount: AWSAccountProperty) {
+    override fun awsAccount(awsAccount: AWSAccountProperty) {
       cdkBuilder.awsAccount(awsAccount.let(AWSAccountProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1580483e9c07085cc822510773463770606f203d1f70bd8575549ccf14ef7a91")
-    public override fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit): Unit =
+    override fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit): Unit =
         awsAccount(AWSAccountProperty(awsAccount))
 
-    public override fun delegations(delegations: IResolvable) {
+    override fun delegations(delegations: IResolvable) {
       cdkBuilder.delegations(delegations.let(IResolvable::unwrap))
     }
 
-    public override fun delegations(delegations: List<Any>) {
+    override fun delegations(delegations: List<Any>) {
       cdkBuilder.delegations(delegations)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun frameworkId(frameworkId: String) {
+    override fun frameworkId(frameworkId: String) {
       cdkBuilder.frameworkId(frameworkId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roles(roles: IResolvable) {
+    override fun roles(roles: IResolvable) {
       cdkBuilder.roles(roles.let(IResolvable::unwrap))
     }
 
-    public override fun roles(roles: List<Any>) {
+    override fun roles(roles: List<Any>) {
       cdkBuilder.roles(roles)
     }
 
-    public override fun scope(scope: IResolvable) {
+    override fun scope(scope: IResolvable) {
       cdkBuilder.scope(scope.let(IResolvable::unwrap))
     }
 
-    public override fun scope(scope: ScopeProperty) {
+    override fun scope(scope: ScopeProperty) {
       cdkBuilder.scope(scope.let(ScopeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6cd79e98afe771933cfa678ad4e6945e8c8b781c2bead15848ae7da762a4a333")
-    public override fun scope(scope: ScopeProperty.Builder.() -> Unit): Unit =
-        scope(ScopeProperty(scope))
+    override fun scope(scope: ScopeProperty.Builder.() -> Unit): Unit = scope(ScopeProperty(scope))
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -313,14 +294,11 @@ public open class CfnAssessment internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun emailAddress(emailAddress: String) {
-      }
+      public fun emailAddress(emailAddress: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -328,15 +306,15 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty.Builder =
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty.builder()
 
-      public override fun emailAddress(emailAddress: String) {
+      override fun emailAddress(emailAddress: String) {
         cdkBuilder.emailAddress(emailAddress)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -349,11 +327,11 @@ public open class CfnAssessment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
     ) : AWSAccountProperty {
-      public override fun emailAddress(): String? = unwrap(this).getEmailAddress()
+      override fun emailAddress(): String? = unwrap(this).getEmailAddress()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -400,38 +378,27 @@ public open class CfnAssessment internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun assessmentId(assessmentId: String) {
-      }
+      public fun assessmentId(assessmentId: String)
 
-      public fun assessmentName(assessmentName: String) {
-      }
+      public fun assessmentName(assessmentName: String)
 
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun controlSetId(controlSetId: String) {
-      }
+      public fun controlSetId(controlSetId: String)
 
-      public fun createdBy(createdBy: String) {
-      }
+      public fun createdBy(createdBy: String)
 
-      public fun creationTime(creationTime: Number) {
-      }
+      public fun creationTime(creationTime: Number)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun lastUpdated(lastUpdated: Number) {
-      }
+      public fun lastUpdated(lastUpdated: Number)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun roleType(roleType: String) {
-      }
+      public fun roleType(roleType: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -439,47 +406,47 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty.Builder =
           software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty.builder()
 
-      public override fun assessmentId(assessmentId: String) {
+      override fun assessmentId(assessmentId: String) {
         cdkBuilder.assessmentId(assessmentId)
       }
 
-      public override fun assessmentName(assessmentName: String) {
+      override fun assessmentName(assessmentName: String) {
         cdkBuilder.assessmentName(assessmentName)
       }
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun controlSetId(controlSetId: String) {
+      override fun controlSetId(controlSetId: String) {
         cdkBuilder.controlSetId(controlSetId)
       }
 
-      public override fun createdBy(createdBy: String) {
+      override fun createdBy(createdBy: String) {
         cdkBuilder.createdBy(createdBy)
       }
 
-      public override fun creationTime(creationTime: Number) {
+      override fun creationTime(creationTime: Number) {
         cdkBuilder.creationTime(creationTime)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun lastUpdated(lastUpdated: Number) {
+      override fun lastUpdated(lastUpdated: Number) {
         cdkBuilder.lastUpdated(lastUpdated)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun roleType(roleType: String) {
+      override fun roleType(roleType: String) {
         cdkBuilder.roleType(roleType)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -492,27 +459,27 @@ public open class CfnAssessment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
     ) : DelegationProperty {
-      public override fun assessmentId(): String? = unwrap(this).getAssessmentId()
+      override fun assessmentId(): String? = unwrap(this).getAssessmentId()
 
-      public override fun assessmentName(): String? = unwrap(this).getAssessmentName()
+      override fun assessmentName(): String? = unwrap(this).getAssessmentName()
 
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun controlSetId(): String? = unwrap(this).getControlSetId()
+      override fun controlSetId(): String? = unwrap(this).getControlSetId()
 
-      public override fun createdBy(): String? = unwrap(this).getCreatedBy()
+      override fun createdBy(): String? = unwrap(this).getCreatedBy()
 
-      public override fun creationTime(): Number? = unwrap(this).getCreationTime()
+      override fun creationTime(): Number? = unwrap(this).getCreationTime()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun lastUpdated(): Number? = unwrap(this).getLastUpdated()
+      override fun lastUpdated(): Number? = unwrap(this).getLastUpdated()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun roleType(): String? = unwrap(this).getRoleType()
+      override fun roleType(): String? = unwrap(this).getRoleType()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -541,11 +508,9 @@ public open class CfnAssessment internal constructor(
     public fun destinationType(): String? = unwrap(this).getDestinationType()
 
     public interface Builder {
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
 
-      public fun destinationType(destinationType: String) {
-      }
+      public fun destinationType(destinationType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -554,11 +519,11 @@ public open class CfnAssessment internal constructor(
           =
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.builder()
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
-      public override fun destinationType(destinationType: String) {
+      override fun destinationType(destinationType: String) {
         cdkBuilder.destinationType(destinationType)
       }
 
@@ -571,9 +536,9 @@ public open class CfnAssessment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
     ) : AssessmentReportsDestinationProperty {
-      public override fun destination(): String? = unwrap(this).getDestination()
+      override fun destination(): String? = unwrap(this).getDestination()
 
-      public override fun destinationType(): String? = unwrap(this).getDestinationType()
+      override fun destinationType(): String? = unwrap(this).getDestinationType()
     }
 
     public companion object {
@@ -603,17 +568,13 @@ public open class CfnAssessment internal constructor(
     public fun awsServices(): Any? = unwrap(this).getAwsServices()
 
     public interface Builder {
-      public fun awsAccounts(awsAccounts: IResolvable) {
-      }
+      public fun awsAccounts(awsAccounts: IResolvable)
 
-      public fun awsAccounts(awsAccounts: List<Any>) {
-      }
+      public fun awsAccounts(awsAccounts: List<Any>)
 
-      public fun awsServices(awsServices: IResolvable) {
-      }
+      public fun awsServices(awsServices: IResolvable)
 
-      public fun awsServices(awsServices: List<Any>) {
-      }
+      public fun awsServices(awsServices: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -621,19 +582,19 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty.Builder =
           software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty.builder()
 
-      public override fun awsAccounts(awsAccounts: IResolvable) {
+      override fun awsAccounts(awsAccounts: IResolvable) {
         cdkBuilder.awsAccounts(awsAccounts.let(IResolvable::unwrap))
       }
 
-      public override fun awsAccounts(awsAccounts: List<Any>) {
+      override fun awsAccounts(awsAccounts: List<Any>) {
         cdkBuilder.awsAccounts(awsAccounts)
       }
 
-      public override fun awsServices(awsServices: IResolvable) {
+      override fun awsServices(awsServices: IResolvable) {
         cdkBuilder.awsServices(awsServices.let(IResolvable::unwrap))
       }
 
-      public override fun awsServices(awsServices: List<Any>) {
+      override fun awsServices(awsServices: List<Any>) {
         cdkBuilder.awsServices(awsServices)
       }
 
@@ -645,9 +606,9 @@ public open class CfnAssessment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
     ) : ScopeProperty {
-      public override fun awsAccounts(): Any? = unwrap(this).getAwsAccounts()
+      override fun awsAccounts(): Any? = unwrap(this).getAwsAccounts()
 
-      public override fun awsServices(): Any? = unwrap(this).getAwsServices()
+      override fun awsServices(): Any? = unwrap(this).getAwsServices()
     }
 
     public companion object {
@@ -676,11 +637,9 @@ public open class CfnAssessment internal constructor(
     public fun roleType(): String? = unwrap(this).getRoleType()
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun roleType(roleType: String) {
-      }
+      public fun roleType(roleType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -688,11 +647,11 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.Builder =
           software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun roleType(roleType: String) {
+      override fun roleType(roleType: String) {
         cdkBuilder.roleType(roleType)
       }
 
@@ -704,9 +663,9 @@ public open class CfnAssessment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
     ) : RoleProperty {
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun roleType(): String? = unwrap(this).getRoleType()
+      override fun roleType(): String? = unwrap(this).getRoleType()
     }
 
     public companion object {
@@ -733,8 +692,7 @@ public open class CfnAssessment internal constructor(
     public fun serviceName(): String? = unwrap(this).getServiceName()
 
     public interface Builder {
-      public fun serviceName(serviceName: String) {
-      }
+      public fun serviceName(serviceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -742,7 +700,7 @@ public open class CfnAssessment internal constructor(
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.Builder =
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.builder()
 
-      public override fun serviceName(serviceName: String) {
+      override fun serviceName(serviceName: String) {
         cdkBuilder.serviceName(serviceName)
       }
 
@@ -755,7 +713,7 @@ public open class CfnAssessment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
     ) : AWSServiceProperty {
-      public override fun serviceName(): String? = unwrap(this).getServiceName()
+      override fun serviceName(): String? = unwrap(this).getServiceName()
     }
 
     public companion object {

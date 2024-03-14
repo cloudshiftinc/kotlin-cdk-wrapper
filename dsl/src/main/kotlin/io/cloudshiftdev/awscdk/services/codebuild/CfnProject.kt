@@ -269,157 +269,112 @@ public open class CfnProject internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun artifacts(artifacts: IResolvable) {
-    }
+    public fun artifacts(artifacts: IResolvable)
 
-    public fun artifacts(artifacts: ArtifactsProperty) {
-    }
+    public fun artifacts(artifacts: ArtifactsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("459b334499b8df6cc300cd5cb1d97e853af8edaa43b90f827dae7dd63c489098")
-    public fun artifacts(artifacts: ArtifactsProperty.Builder.() -> Unit) {
-    }
+    public fun artifacts(artifacts: ArtifactsProperty.Builder.() -> Unit)
 
-    public fun badgeEnabled(badgeEnabled: Boolean) {
-    }
+    public fun badgeEnabled(badgeEnabled: Boolean)
 
-    public fun badgeEnabled(badgeEnabled: IResolvable) {
-    }
+    public fun badgeEnabled(badgeEnabled: IResolvable)
 
-    public fun buildBatchConfig(buildBatchConfig: IResolvable) {
-    }
+    public fun buildBatchConfig(buildBatchConfig: IResolvable)
 
-    public fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty) {
-    }
+    public fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a99374d660e9ee6cf2fb9800fd16273ab4eefa9fe56510b3ca8938e81cc823c2")
     public
-        fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty.Builder.() -> Unit) {
-    }
+        fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty.Builder.() -> Unit)
 
-    public fun cache(cache: IResolvable) {
-    }
+    public fun cache(cache: IResolvable)
 
-    public fun cache(cache: ProjectCacheProperty) {
-    }
+    public fun cache(cache: ProjectCacheProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("87e43351c2449e4d419f7c2b3068ef4e251d4838bbed64849d05a69198f5ec75")
-    public fun cache(cache: ProjectCacheProperty.Builder.() -> Unit) {
-    }
+    public fun cache(cache: ProjectCacheProperty.Builder.() -> Unit)
 
-    public fun concurrentBuildLimit(concurrentBuildLimit: Number) {
-    }
+    public fun concurrentBuildLimit(concurrentBuildLimit: Number)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun encryptionKey(encryptionKey: String) {
-    }
+    public fun encryptionKey(encryptionKey: String)
 
-    public fun environment(environment: IResolvable) {
-    }
+    public fun environment(environment: IResolvable)
 
-    public fun environment(environment: EnvironmentProperty) {
-    }
+    public fun environment(environment: EnvironmentProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17fa6e8915386f41fd25a1f78bacf242ffcc47f74961a5f760c62f79a6046b31")
-    public fun environment(environment: EnvironmentProperty.Builder.() -> Unit) {
-    }
+    public fun environment(environment: EnvironmentProperty.Builder.() -> Unit)
 
-    public fun fileSystemLocations(fileSystemLocations: IResolvable) {
-    }
+    public fun fileSystemLocations(fileSystemLocations: IResolvable)
 
-    public fun fileSystemLocations(fileSystemLocations: List<Any>) {
-    }
+    public fun fileSystemLocations(fileSystemLocations: List<Any>)
 
-    public fun logsConfig(logsConfig: IResolvable) {
-    }
+    public fun logsConfig(logsConfig: IResolvable)
 
-    public fun logsConfig(logsConfig: LogsConfigProperty) {
-    }
+    public fun logsConfig(logsConfig: LogsConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3caea299a6117c080eaf244e0c9266864386388512f206a3e2be71df3fe17565")
-    public fun logsConfig(logsConfig: LogsConfigProperty.Builder.() -> Unit) {
-    }
+    public fun logsConfig(logsConfig: LogsConfigProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun queuedTimeoutInMinutes(queuedTimeoutInMinutes: Number) {
-    }
+    public fun queuedTimeoutInMinutes(queuedTimeoutInMinutes: Number)
 
-    public fun resourceAccessRole(resourceAccessRole: String) {
-    }
+    public fun resourceAccessRole(resourceAccessRole: String)
 
-    public fun secondaryArtifacts(secondaryArtifacts: IResolvable) {
-    }
+    public fun secondaryArtifacts(secondaryArtifacts: IResolvable)
 
-    public fun secondaryArtifacts(secondaryArtifacts: List<Any>) {
-    }
+    public fun secondaryArtifacts(secondaryArtifacts: List<Any>)
 
-    public fun secondarySourceVersions(secondarySourceVersions: IResolvable) {
-    }
+    public fun secondarySourceVersions(secondarySourceVersions: IResolvable)
 
-    public fun secondarySourceVersions(secondarySourceVersions: List<Any>) {
-    }
+    public fun secondarySourceVersions(secondarySourceVersions: List<Any>)
 
-    public fun secondarySources(secondarySources: IResolvable) {
-    }
+    public fun secondarySources(secondarySources: IResolvable)
 
-    public fun secondarySources(secondarySources: List<Any>) {
-    }
+    public fun secondarySources(secondarySources: List<Any>)
 
-    public fun serviceRole(serviceRole: String) {
-    }
+    public fun serviceRole(serviceRole: String)
 
-    public fun source(source: IResolvable) {
-    }
+    public fun source(source: IResolvable)
 
-    public fun source(source: SourceProperty) {
-    }
+    public fun source(source: SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("418cfd1c63a6c94fc6abd6b21ba2eea2769b2997ac24a51f4464397a24e0e412")
-    public fun source(source: SourceProperty.Builder.() -> Unit) {
-    }
+    public fun source(source: SourceProperty.Builder.() -> Unit)
 
-    public fun sourceVersion(sourceVersion: String) {
-    }
+    public fun sourceVersion(sourceVersion: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeoutInMinutes(timeoutInMinutes: Number) {
-    }
+    public fun timeoutInMinutes(timeoutInMinutes: Number)
 
-    public fun triggers(triggers: IResolvable) {
-    }
+    public fun triggers(triggers: IResolvable)
 
-    public fun triggers(triggers: ProjectTriggersProperty) {
-    }
+    public fun triggers(triggers: ProjectTriggersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6989486a850294b2ed92ef6b257e8ed01cff283d6163bdc1ccd27ee4c4b7a753")
-    public fun triggers(triggers: ProjectTriggersProperty.Builder.() -> Unit) {
-    }
+    public fun triggers(triggers: ProjectTriggersProperty.Builder.() -> Unit)
 
-    public fun visibility(visibility: String) {
-    }
+    public fun visibility(visibility: String)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("78a3ddc4357c4f9c956f386a567a0303a2f89eff23a28547bc3546f98d3d0a49")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -429,193 +384,193 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.CfnProject.Builder =
         software.amazon.awscdk.services.codebuild.CfnProject.Builder.create(scope, id)
 
-    public override fun artifacts(artifacts: IResolvable) {
+    override fun artifacts(artifacts: IResolvable) {
       cdkBuilder.artifacts(artifacts.let(IResolvable::unwrap))
     }
 
-    public override fun artifacts(artifacts: ArtifactsProperty) {
+    override fun artifacts(artifacts: ArtifactsProperty) {
       cdkBuilder.artifacts(artifacts.let(ArtifactsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("459b334499b8df6cc300cd5cb1d97e853af8edaa43b90f827dae7dd63c489098")
-    public override fun artifacts(artifacts: ArtifactsProperty.Builder.() -> Unit): Unit =
+    override fun artifacts(artifacts: ArtifactsProperty.Builder.() -> Unit): Unit =
         artifacts(ArtifactsProperty(artifacts))
 
-    public override fun badgeEnabled(badgeEnabled: Boolean) {
+    override fun badgeEnabled(badgeEnabled: Boolean) {
       cdkBuilder.badgeEnabled(badgeEnabled)
     }
 
-    public override fun badgeEnabled(badgeEnabled: IResolvable) {
+    override fun badgeEnabled(badgeEnabled: IResolvable) {
       cdkBuilder.badgeEnabled(badgeEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun buildBatchConfig(buildBatchConfig: IResolvable) {
+    override fun buildBatchConfig(buildBatchConfig: IResolvable) {
       cdkBuilder.buildBatchConfig(buildBatchConfig.let(IResolvable::unwrap))
     }
 
-    public override fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty) {
+    override fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty) {
       cdkBuilder.buildBatchConfig(buildBatchConfig.let(ProjectBuildBatchConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a99374d660e9ee6cf2fb9800fd16273ab4eefa9fe56510b3ca8938e81cc823c2")
-    public override
+    override
         fun buildBatchConfig(buildBatchConfig: ProjectBuildBatchConfigProperty.Builder.() -> Unit):
         Unit = buildBatchConfig(ProjectBuildBatchConfigProperty(buildBatchConfig))
 
-    public override fun cache(cache: IResolvable) {
+    override fun cache(cache: IResolvable) {
       cdkBuilder.cache(cache.let(IResolvable::unwrap))
     }
 
-    public override fun cache(cache: ProjectCacheProperty) {
+    override fun cache(cache: ProjectCacheProperty) {
       cdkBuilder.cache(cache.let(ProjectCacheProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("87e43351c2449e4d419f7c2b3068ef4e251d4838bbed64849d05a69198f5ec75")
-    public override fun cache(cache: ProjectCacheProperty.Builder.() -> Unit): Unit =
+    override fun cache(cache: ProjectCacheProperty.Builder.() -> Unit): Unit =
         cache(ProjectCacheProperty(cache))
 
-    public override fun concurrentBuildLimit(concurrentBuildLimit: Number) {
+    override fun concurrentBuildLimit(concurrentBuildLimit: Number) {
       cdkBuilder.concurrentBuildLimit(concurrentBuildLimit)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun encryptionKey(encryptionKey: String) {
+    override fun encryptionKey(encryptionKey: String) {
       cdkBuilder.encryptionKey(encryptionKey)
     }
 
-    public override fun environment(environment: IResolvable) {
+    override fun environment(environment: IResolvable) {
       cdkBuilder.environment(environment.let(IResolvable::unwrap))
     }
 
-    public override fun environment(environment: EnvironmentProperty) {
+    override fun environment(environment: EnvironmentProperty) {
       cdkBuilder.environment(environment.let(EnvironmentProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17fa6e8915386f41fd25a1f78bacf242ffcc47f74961a5f760c62f79a6046b31")
-    public override fun environment(environment: EnvironmentProperty.Builder.() -> Unit): Unit =
+    override fun environment(environment: EnvironmentProperty.Builder.() -> Unit): Unit =
         environment(EnvironmentProperty(environment))
 
-    public override fun fileSystemLocations(fileSystemLocations: IResolvable) {
+    override fun fileSystemLocations(fileSystemLocations: IResolvable) {
       cdkBuilder.fileSystemLocations(fileSystemLocations.let(IResolvable::unwrap))
     }
 
-    public override fun fileSystemLocations(fileSystemLocations: List<Any>) {
+    override fun fileSystemLocations(fileSystemLocations: List<Any>) {
       cdkBuilder.fileSystemLocations(fileSystemLocations)
     }
 
-    public override fun logsConfig(logsConfig: IResolvable) {
+    override fun logsConfig(logsConfig: IResolvable) {
       cdkBuilder.logsConfig(logsConfig.let(IResolvable::unwrap))
     }
 
-    public override fun logsConfig(logsConfig: LogsConfigProperty) {
+    override fun logsConfig(logsConfig: LogsConfigProperty) {
       cdkBuilder.logsConfig(logsConfig.let(LogsConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3caea299a6117c080eaf244e0c9266864386388512f206a3e2be71df3fe17565")
-    public override fun logsConfig(logsConfig: LogsConfigProperty.Builder.() -> Unit): Unit =
+    override fun logsConfig(logsConfig: LogsConfigProperty.Builder.() -> Unit): Unit =
         logsConfig(LogsConfigProperty(logsConfig))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun queuedTimeoutInMinutes(queuedTimeoutInMinutes: Number) {
+    override fun queuedTimeoutInMinutes(queuedTimeoutInMinutes: Number) {
       cdkBuilder.queuedTimeoutInMinutes(queuedTimeoutInMinutes)
     }
 
-    public override fun resourceAccessRole(resourceAccessRole: String) {
+    override fun resourceAccessRole(resourceAccessRole: String) {
       cdkBuilder.resourceAccessRole(resourceAccessRole)
     }
 
-    public override fun secondaryArtifacts(secondaryArtifacts: IResolvable) {
+    override fun secondaryArtifacts(secondaryArtifacts: IResolvable) {
       cdkBuilder.secondaryArtifacts(secondaryArtifacts.let(IResolvable::unwrap))
     }
 
-    public override fun secondaryArtifacts(secondaryArtifacts: List<Any>) {
+    override fun secondaryArtifacts(secondaryArtifacts: List<Any>) {
       cdkBuilder.secondaryArtifacts(secondaryArtifacts)
     }
 
-    public override fun secondarySourceVersions(secondarySourceVersions: IResolvable) {
+    override fun secondarySourceVersions(secondarySourceVersions: IResolvable) {
       cdkBuilder.secondarySourceVersions(secondarySourceVersions.let(IResolvable::unwrap))
     }
 
-    public override fun secondarySourceVersions(secondarySourceVersions: List<Any>) {
+    override fun secondarySourceVersions(secondarySourceVersions: List<Any>) {
       cdkBuilder.secondarySourceVersions(secondarySourceVersions)
     }
 
-    public override fun secondarySources(secondarySources: IResolvable) {
+    override fun secondarySources(secondarySources: IResolvable) {
       cdkBuilder.secondarySources(secondarySources.let(IResolvable::unwrap))
     }
 
-    public override fun secondarySources(secondarySources: List<Any>) {
+    override fun secondarySources(secondarySources: List<Any>) {
       cdkBuilder.secondarySources(secondarySources)
     }
 
-    public override fun serviceRole(serviceRole: String) {
+    override fun serviceRole(serviceRole: String) {
       cdkBuilder.serviceRole(serviceRole)
     }
 
-    public override fun source(source: IResolvable) {
+    override fun source(source: IResolvable) {
       cdkBuilder.source(source.let(IResolvable::unwrap))
     }
 
-    public override fun source(source: SourceProperty) {
+    override fun source(source: SourceProperty) {
       cdkBuilder.source(source.let(SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("418cfd1c63a6c94fc6abd6b21ba2eea2769b2997ac24a51f4464397a24e0e412")
-    public override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
+    override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
         source(SourceProperty(source))
 
-    public override fun sourceVersion(sourceVersion: String) {
+    override fun sourceVersion(sourceVersion: String) {
       cdkBuilder.sourceVersion(sourceVersion)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeoutInMinutes(timeoutInMinutes: Number) {
+    override fun timeoutInMinutes(timeoutInMinutes: Number) {
       cdkBuilder.timeoutInMinutes(timeoutInMinutes)
     }
 
-    public override fun triggers(triggers: IResolvable) {
+    override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
     }
 
-    public override fun triggers(triggers: ProjectTriggersProperty) {
+    override fun triggers(triggers: ProjectTriggersProperty) {
       cdkBuilder.triggers(triggers.let(ProjectTriggersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6989486a850294b2ed92ef6b257e8ed01cff283d6163bdc1ccd27ee4c4b7a753")
-    public override fun triggers(triggers: ProjectTriggersProperty.Builder.() -> Unit): Unit =
+    override fun triggers(triggers: ProjectTriggersProperty.Builder.() -> Unit): Unit =
         triggers(ProjectTriggersProperty(triggers))
 
-    public override fun visibility(visibility: String) {
+    override fun visibility(visibility: String) {
       cdkBuilder.visibility(visibility)
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("78a3ddc4357c4f9c956f386a567a0303a2f89eff23a28547bc3546f98d3d0a49")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.codebuild.CfnProject = cdkBuilder.build()
@@ -650,14 +605,11 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun modes(modes: List<String>) {
-      }
+      public fun modes(modes: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -665,15 +617,15 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty.builder()
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun modes(modes: List<String>) {
+      override fun modes(modes: List<String>) {
         cdkBuilder.modes(modes)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -685,11 +637,11 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectCacheProperty,
     ) : ProjectCacheProperty {
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun modes(): List<String> = unwrap(this).getModes() ?: emptyList()
+      override fun modes(): List<String> = unwrap(this).getModes() ?: emptyList()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -720,14 +672,11 @@ public open class CfnProject internal constructor(
     public fun streamName(): String? = unwrap(this).getStreamName()
 
     public interface Builder {
-      public fun groupName(groupName: String) {
-      }
+      public fun groupName(groupName: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun streamName(streamName: String) {
-      }
+      public fun streamName(streamName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -736,15 +685,15 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty.builder()
 
-      public override fun groupName(groupName: String) {
+      override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun streamName(streamName: String) {
+      override fun streamName(streamName: String) {
         cdkBuilder.streamName(streamName)
       }
 
@@ -757,11 +706,11 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.CloudWatchLogsConfigProperty,
     ) : CloudWatchLogsConfigProperty {
-      public override fun groupName(): String? = unwrap(this).getGroupName()
+      override fun groupName(): String? = unwrap(this).getGroupName()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
 
-      public override fun streamName(): String? = unwrap(this).getStreamName()
+      override fun streamName(): String? = unwrap(this).getStreamName()
     }
 
     public companion object {
@@ -804,38 +753,27 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun artifactIdentifier(artifactIdentifier: String) {
-      }
+      public fun artifactIdentifier(artifactIdentifier: String)
 
-      public fun encryptionDisabled(encryptionDisabled: Boolean) {
-      }
+      public fun encryptionDisabled(encryptionDisabled: Boolean)
 
-      public fun encryptionDisabled(encryptionDisabled: IResolvable) {
-      }
+      public fun encryptionDisabled(encryptionDisabled: IResolvable)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun namespaceType(namespaceType: String) {
-      }
+      public fun namespaceType(namespaceType: String)
 
-      public fun overrideArtifactName(overrideArtifactName: Boolean) {
-      }
+      public fun overrideArtifactName(overrideArtifactName: Boolean)
 
-      public fun overrideArtifactName(overrideArtifactName: IResolvable) {
-      }
+      public fun overrideArtifactName(overrideArtifactName: IResolvable)
 
-      public fun packaging(packaging: String) {
-      }
+      public fun packaging(packaging: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -843,47 +781,47 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty.builder()
 
-      public override fun artifactIdentifier(artifactIdentifier: String) {
+      override fun artifactIdentifier(artifactIdentifier: String) {
         cdkBuilder.artifactIdentifier(artifactIdentifier)
       }
 
-      public override fun encryptionDisabled(encryptionDisabled: Boolean) {
+      override fun encryptionDisabled(encryptionDisabled: Boolean) {
         cdkBuilder.encryptionDisabled(encryptionDisabled)
       }
 
-      public override fun encryptionDisabled(encryptionDisabled: IResolvable) {
+      override fun encryptionDisabled(encryptionDisabled: IResolvable) {
         cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable::unwrap))
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun namespaceType(namespaceType: String) {
+      override fun namespaceType(namespaceType: String) {
         cdkBuilder.namespaceType(namespaceType)
       }
 
-      public override fun overrideArtifactName(overrideArtifactName: Boolean) {
+      override fun overrideArtifactName(overrideArtifactName: Boolean) {
         cdkBuilder.overrideArtifactName(overrideArtifactName)
       }
 
-      public override fun overrideArtifactName(overrideArtifactName: IResolvable) {
+      override fun overrideArtifactName(overrideArtifactName: IResolvable) {
         cdkBuilder.overrideArtifactName(overrideArtifactName.let(IResolvable::unwrap))
       }
 
-      public override fun packaging(packaging: String) {
+      override fun packaging(packaging: String) {
         cdkBuilder.packaging(packaging)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -895,23 +833,23 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ArtifactsProperty,
     ) : ArtifactsProperty {
-      public override fun artifactIdentifier(): String? = unwrap(this).getArtifactIdentifier()
+      override fun artifactIdentifier(): String? = unwrap(this).getArtifactIdentifier()
 
-      public override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
+      override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
 
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun namespaceType(): String? = unwrap(this).getNamespaceType()
+      override fun namespaceType(): String? = unwrap(this).getNamespaceType()
 
-      public override fun overrideArtifactName(): Any? = unwrap(this).getOverrideArtifactName()
+      override fun overrideArtifactName(): Any? = unwrap(this).getOverrideArtifactName()
 
-      public override fun packaging(): String? = unwrap(this).getPackaging()
+      override fun packaging(): String? = unwrap(this).getPackaging()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -940,11 +878,9 @@ public open class CfnProject internal constructor(
     public fun targetUrl(): String? = unwrap(this).getTargetUrl()
 
     public interface Builder {
-      public fun context(context: String) {
-      }
+      public fun context(context: String)
 
-      public fun targetUrl(targetUrl: String) {
-      }
+      public fun targetUrl(targetUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -952,11 +888,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty.builder()
 
-      public override fun context(context: String) {
+      override fun context(context: String) {
         cdkBuilder.context(context)
       }
 
-      public override fun targetUrl(targetUrl: String) {
+      override fun targetUrl(targetUrl: String) {
         cdkBuilder.targetUrl(targetUrl)
       }
 
@@ -969,9 +905,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.BuildStatusConfigProperty,
     ) : BuildStatusConfigProperty {
-      public override fun context(): String? = unwrap(this).getContext()
+      override fun context(): String? = unwrap(this).getContext()
 
-      public override fun targetUrl(): String? = unwrap(this).getTargetUrl()
+      override fun targetUrl(): String? = unwrap(this).getTargetUrl()
     }
 
     public companion object {
@@ -1001,11 +937,9 @@ public open class CfnProject internal constructor(
     public fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
 
     public interface Builder {
-      public fun computeTypesAllowed(computeTypesAllowed: List<String>) {
-      }
+      public fun computeTypesAllowed(computeTypesAllowed: List<String>)
 
-      public fun maximumBuildsAllowed(maximumBuildsAllowed: Number) {
-      }
+      public fun maximumBuildsAllowed(maximumBuildsAllowed: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1013,11 +947,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty.builder()
 
-      public override fun computeTypesAllowed(computeTypesAllowed: List<String>) {
+      override fun computeTypesAllowed(computeTypesAllowed: List<String>) {
         cdkBuilder.computeTypesAllowed(computeTypesAllowed)
       }
 
-      public override fun maximumBuildsAllowed(maximumBuildsAllowed: Number) {
+      override fun maximumBuildsAllowed(maximumBuildsAllowed: Number) {
         cdkBuilder.maximumBuildsAllowed(maximumBuildsAllowed)
       }
 
@@ -1030,10 +964,10 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.BatchRestrictionsProperty,
     ) : BatchRestrictionsProperty {
-      public override fun computeTypesAllowed(): List<String> =
-          unwrap(this).getComputeTypesAllowed() ?: emptyList()
+      override fun computeTypesAllowed(): List<String> = unwrap(this).getComputeTypesAllowed() ?:
+          emptyList()
 
-      public override fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
+      override fun maximumBuildsAllowed(): Number? = unwrap(this).getMaximumBuildsAllowed()
     }
 
     public companion object {
@@ -1068,31 +1002,23 @@ public open class CfnProject internal constructor(
     public fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
 
     public interface Builder {
-      public fun batchReportMode(batchReportMode: String) {
-      }
+      public fun batchReportMode(batchReportMode: String)
 
-      public fun combineArtifacts(combineArtifacts: Boolean) {
-      }
+      public fun combineArtifacts(combineArtifacts: Boolean)
 
-      public fun combineArtifacts(combineArtifacts: IResolvable) {
-      }
+      public fun combineArtifacts(combineArtifacts: IResolvable)
 
-      public fun restrictions(restrictions: IResolvable) {
-      }
+      public fun restrictions(restrictions: IResolvable)
 
-      public fun restrictions(restrictions: BatchRestrictionsProperty) {
-      }
+      public fun restrictions(restrictions: BatchRestrictionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01751331ef50dd769676487deeb1add0406ffad963fdd1b3b38d0f20bbbdcf0d")
-      public fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit) {
-      }
+      public fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit)
 
-      public fun serviceRole(serviceRole: String) {
-      }
+      public fun serviceRole(serviceRole: String)
 
-      public fun timeoutInMins(timeoutInMins: Number) {
-      }
+      public fun timeoutInMins(timeoutInMins: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1101,36 +1027,36 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty.builder()
 
-      public override fun batchReportMode(batchReportMode: String) {
+      override fun batchReportMode(batchReportMode: String) {
         cdkBuilder.batchReportMode(batchReportMode)
       }
 
-      public override fun combineArtifacts(combineArtifacts: Boolean) {
+      override fun combineArtifacts(combineArtifacts: Boolean) {
         cdkBuilder.combineArtifacts(combineArtifacts)
       }
 
-      public override fun combineArtifacts(combineArtifacts: IResolvable) {
+      override fun combineArtifacts(combineArtifacts: IResolvable) {
         cdkBuilder.combineArtifacts(combineArtifacts.let(IResolvable::unwrap))
       }
 
-      public override fun restrictions(restrictions: IResolvable) {
+      override fun restrictions(restrictions: IResolvable) {
         cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
       }
 
-      public override fun restrictions(restrictions: BatchRestrictionsProperty) {
+      override fun restrictions(restrictions: BatchRestrictionsProperty) {
         cdkBuilder.restrictions(restrictions.let(BatchRestrictionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01751331ef50dd769676487deeb1add0406ffad963fdd1b3b38d0f20bbbdcf0d")
-      public override fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit):
-          Unit = restrictions(BatchRestrictionsProperty(restrictions))
+      override fun restrictions(restrictions: BatchRestrictionsProperty.Builder.() -> Unit): Unit =
+          restrictions(BatchRestrictionsProperty(restrictions))
 
-      public override fun serviceRole(serviceRole: String) {
+      override fun serviceRole(serviceRole: String) {
         cdkBuilder.serviceRole(serviceRole)
       }
 
-      public override fun timeoutInMins(timeoutInMins: Number) {
+      override fun timeoutInMins(timeoutInMins: Number) {
         cdkBuilder.timeoutInMins(timeoutInMins)
       }
 
@@ -1143,15 +1069,15 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectBuildBatchConfigProperty,
     ) : ProjectBuildBatchConfigProperty {
-      public override fun batchReportMode(): String? = unwrap(this).getBatchReportMode()
+      override fun batchReportMode(): String? = unwrap(this).getBatchReportMode()
 
-      public override fun combineArtifacts(): Any? = unwrap(this).getCombineArtifacts()
+      override fun combineArtifacts(): Any? = unwrap(this).getCombineArtifacts()
 
-      public override fun restrictions(): Any? = unwrap(this).getRestrictions()
+      override fun restrictions(): Any? = unwrap(this).getRestrictions()
 
-      public override fun serviceRole(): String? = unwrap(this).getServiceRole()
+      override fun serviceRole(): String? = unwrap(this).getServiceRole()
 
-      public override fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
+      override fun timeoutInMins(): Number? = unwrap(this).getTimeoutInMins()
     }
 
     public companion object {
@@ -1194,55 +1120,40 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun certificate(certificate: String) {
-      }
+      public fun certificate(certificate: String)
 
-      public fun computeType(computeType: String) {
-      }
+      public fun computeType(computeType: String)
 
-      public fun environmentVariables(environmentVariables: IResolvable) {
-      }
+      public fun environmentVariables(environmentVariables: IResolvable)
 
-      public fun environmentVariables(environmentVariables: List<Any>) {
-      }
+      public fun environmentVariables(environmentVariables: List<Any>)
 
-      public fun fleet(fleet: IResolvable) {
-      }
+      public fun fleet(fleet: IResolvable)
 
-      public fun fleet(fleet: ProjectFleetProperty) {
-      }
+      public fun fleet(fleet: ProjectFleetProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e963a710db9474248bb2903fa7622db7928685abf8e7f265afbddcc84e65f8d1")
-      public fun fleet(fleet: ProjectFleetProperty.Builder.() -> Unit) {
-      }
+      public fun fleet(fleet: ProjectFleetProperty.Builder.() -> Unit)
 
-      public fun image(image: String) {
-      }
+      public fun image(image: String)
 
-      public fun imagePullCredentialsType(imagePullCredentialsType: String) {
-      }
+      public fun imagePullCredentialsType(imagePullCredentialsType: String)
 
-      public fun privilegedMode(privilegedMode: Boolean) {
-      }
+      public fun privilegedMode(privilegedMode: Boolean)
 
-      public fun privilegedMode(privilegedMode: IResolvable) {
-      }
+      public fun privilegedMode(privilegedMode: IResolvable)
 
-      public fun registryCredential(registryCredential: IResolvable) {
-      }
+      public fun registryCredential(registryCredential: IResolvable)
 
-      public fun registryCredential(registryCredential: RegistryCredentialProperty) {
-      }
+      public fun registryCredential(registryCredential: RegistryCredentialProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("550b36dfb3bd161ec105f2283a291b87853a40432119e8c4f5a2eb853bcf69be")
       public
-          fun registryCredential(registryCredential: RegistryCredentialProperty.Builder.() -> Unit) {
-      }
+          fun registryCredential(registryCredential: RegistryCredentialProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1250,66 +1161,66 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty.builder()
 
-      public override fun certificate(certificate: String) {
+      override fun certificate(certificate: String) {
         cdkBuilder.certificate(certificate)
       }
 
-      public override fun computeType(computeType: String) {
+      override fun computeType(computeType: String) {
         cdkBuilder.computeType(computeType)
       }
 
-      public override fun environmentVariables(environmentVariables: IResolvable) {
+      override fun environmentVariables(environmentVariables: IResolvable) {
         cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
       }
 
-      public override fun environmentVariables(environmentVariables: List<Any>) {
+      override fun environmentVariables(environmentVariables: List<Any>) {
         cdkBuilder.environmentVariables(environmentVariables)
       }
 
-      public override fun fleet(fleet: IResolvable) {
+      override fun fleet(fleet: IResolvable) {
         cdkBuilder.fleet(fleet.let(IResolvable::unwrap))
       }
 
-      public override fun fleet(fleet: ProjectFleetProperty) {
+      override fun fleet(fleet: ProjectFleetProperty) {
         cdkBuilder.fleet(fleet.let(ProjectFleetProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e963a710db9474248bb2903fa7622db7928685abf8e7f265afbddcc84e65f8d1")
-      public override fun fleet(fleet: ProjectFleetProperty.Builder.() -> Unit): Unit =
+      override fun fleet(fleet: ProjectFleetProperty.Builder.() -> Unit): Unit =
           fleet(ProjectFleetProperty(fleet))
 
-      public override fun image(image: String) {
+      override fun image(image: String) {
         cdkBuilder.image(image)
       }
 
-      public override fun imagePullCredentialsType(imagePullCredentialsType: String) {
+      override fun imagePullCredentialsType(imagePullCredentialsType: String) {
         cdkBuilder.imagePullCredentialsType(imagePullCredentialsType)
       }
 
-      public override fun privilegedMode(privilegedMode: Boolean) {
+      override fun privilegedMode(privilegedMode: Boolean) {
         cdkBuilder.privilegedMode(privilegedMode)
       }
 
-      public override fun privilegedMode(privilegedMode: IResolvable) {
+      override fun privilegedMode(privilegedMode: IResolvable) {
         cdkBuilder.privilegedMode(privilegedMode.let(IResolvable::unwrap))
       }
 
-      public override fun registryCredential(registryCredential: IResolvable) {
+      override fun registryCredential(registryCredential: IResolvable) {
         cdkBuilder.registryCredential(registryCredential.let(IResolvable::unwrap))
       }
 
-      public override fun registryCredential(registryCredential: RegistryCredentialProperty) {
+      override fun registryCredential(registryCredential: RegistryCredentialProperty) {
         cdkBuilder.registryCredential(registryCredential.let(RegistryCredentialProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("550b36dfb3bd161ec105f2283a291b87853a40432119e8c4f5a2eb853bcf69be")
-      public override
+      override
           fun registryCredential(registryCredential: RegistryCredentialProperty.Builder.() -> Unit):
           Unit = registryCredential(RegistryCredentialProperty(registryCredential))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1321,24 +1232,23 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentProperty,
     ) : EnvironmentProperty {
-      public override fun certificate(): String? = unwrap(this).getCertificate()
+      override fun certificate(): String? = unwrap(this).getCertificate()
 
-      public override fun computeType(): String = unwrap(this).getComputeType()
+      override fun computeType(): String = unwrap(this).getComputeType()
 
-      public override fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
+      override fun environmentVariables(): Any? = unwrap(this).getEnvironmentVariables()
 
-      public override fun fleet(): Any? = unwrap(this).getFleet()
+      override fun fleet(): Any? = unwrap(this).getFleet()
 
-      public override fun image(): String = unwrap(this).getImage()
+      override fun image(): String = unwrap(this).getImage()
 
-      public override fun imagePullCredentialsType(): String? =
-          unwrap(this).getImagePullCredentialsType()
+      override fun imagePullCredentialsType(): String? = unwrap(this).getImagePullCredentialsType()
 
-      public override fun privilegedMode(): Any? = unwrap(this).getPrivilegedMode()
+      override fun privilegedMode(): Any? = unwrap(this).getPrivilegedMode()
 
-      public override fun registryCredential(): Any? = unwrap(this).getRegistryCredential()
+      override fun registryCredential(): Any? = unwrap(this).getRegistryCredential()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1365,8 +1275,7 @@ public open class CfnProject internal constructor(
     public fun fleetArn(): String? = unwrap(this).getFleetArn()
 
     public interface Builder {
-      public fun fleetArn(fleetArn: String) {
-      }
+      public fun fleetArn(fleetArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1374,7 +1283,7 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty.builder()
 
-      public override fun fleetArn(fleetArn: String) {
+      override fun fleetArn(fleetArn: String) {
         cdkBuilder.fleetArn(fleetArn)
       }
 
@@ -1386,7 +1295,7 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFleetProperty,
     ) : ProjectFleetProperty {
-      public override fun fleetArn(): String? = unwrap(this).getFleetArn()
+      override fun fleetArn(): String? = unwrap(this).getFleetArn()
     }
 
     public companion object {
@@ -1417,14 +1326,11 @@ public open class CfnProject internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1432,15 +1338,15 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1453,11 +1359,11 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.EnvironmentVariableProperty,
     ) : EnvironmentVariableProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1486,27 +1392,21 @@ public open class CfnProject internal constructor(
     public fun s3Logs(): Any? = unwrap(this).getS3Logs()
 
     public interface Builder {
-      public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: IResolvable)
 
-      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3eb07b1006eeaa9210d3b3ae015fc0b6a3453a558c71c5111539baed39c17e28")
-      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty.Builder.() -> Unit) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty.Builder.() -> Unit)
 
-      public fun s3Logs(s3Logs: IResolvable) {
-      }
+      public fun s3Logs(s3Logs: IResolvable)
 
-      public fun s3Logs(s3Logs: S3LogsConfigProperty) {
-      }
+      public fun s3Logs(s3Logs: S3LogsConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("618f8f82e94a6b7f187397fb3469167fa5390128d214ea66723fcd602bc277f1")
-      public fun s3Logs(s3Logs: S3LogsConfigProperty.Builder.() -> Unit) {
-      }
+      public fun s3Logs(s3Logs: S3LogsConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1514,31 +1414,30 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty.builder()
 
-      public override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
+      override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
       }
 
-      public override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty) {
+      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3eb07b1006eeaa9210d3b3ae015fc0b6a3453a558c71c5111539baed39c17e28")
-      public override
-          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty.Builder.() -> Unit): Unit
-          = cloudWatchLogs(CloudWatchLogsConfigProperty(cloudWatchLogs))
+      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsConfigProperty.Builder.() -> Unit):
+          Unit = cloudWatchLogs(CloudWatchLogsConfigProperty(cloudWatchLogs))
 
-      public override fun s3Logs(s3Logs: IResolvable) {
+      override fun s3Logs(s3Logs: IResolvable) {
         cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
       }
 
-      public override fun s3Logs(s3Logs: S3LogsConfigProperty) {
+      override fun s3Logs(s3Logs: S3LogsConfigProperty) {
         cdkBuilder.s3Logs(s3Logs.let(S3LogsConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("618f8f82e94a6b7f187397fb3469167fa5390128d214ea66723fcd602bc277f1")
-      public override fun s3Logs(s3Logs: S3LogsConfigProperty.Builder.() -> Unit): Unit =
+      override fun s3Logs(s3Logs: S3LogsConfigProperty.Builder.() -> Unit): Unit =
           s3Logs(S3LogsConfigProperty(s3Logs))
 
       public fun build(): software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty =
@@ -1549,9 +1448,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.LogsConfigProperty,
     ) : LogsConfigProperty {
-      public override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
+      override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
 
-      public override fun s3Logs(): Any? = unwrap(this).getS3Logs()
+      override fun s3Logs(): Any? = unwrap(this).getS3Logs()
     }
 
     public companion object {
@@ -1580,11 +1479,9 @@ public open class CfnProject internal constructor(
     public fun credentialProvider(): String
 
     public interface Builder {
-      public fun credential(credential: String) {
-      }
+      public fun credential(credential: String)
 
-      public fun credentialProvider(credentialProvider: String) {
-      }
+      public fun credentialProvider(credentialProvider: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1592,11 +1489,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty.builder()
 
-      public override fun credential(credential: String) {
+      override fun credential(credential: String) {
         cdkBuilder.credential(credential)
       }
 
-      public override fun credentialProvider(credentialProvider: String) {
+      override fun credentialProvider(credentialProvider: String) {
         cdkBuilder.credentialProvider(credentialProvider)
       }
 
@@ -1609,9 +1506,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.RegistryCredentialProperty,
     ) : RegistryCredentialProperty {
-      public override fun credential(): String = unwrap(this).getCredential()
+      override fun credential(): String = unwrap(this).getCredential()
 
-      public override fun credentialProvider(): String = unwrap(this).getCredentialProvider()
+      override fun credentialProvider(): String = unwrap(this).getCredentialProvider()
     }
 
     public companion object {
@@ -1642,20 +1539,15 @@ public open class CfnProject internal constructor(
     public fun webhook(): Any? = unwrap(this).getWebhook()
 
     public interface Builder {
-      public fun buildType(buildType: String) {
-      }
+      public fun buildType(buildType: String)
 
-      public fun filterGroups(filterGroups: IResolvable) {
-      }
+      public fun filterGroups(filterGroups: IResolvable)
 
-      public fun filterGroups(filterGroups: List<Any>) {
-      }
+      public fun filterGroups(filterGroups: List<Any>)
 
-      public fun webhook(webhook: Boolean) {
-      }
+      public fun webhook(webhook: Boolean)
 
-      public fun webhook(webhook: IResolvable) {
-      }
+      public fun webhook(webhook: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1663,23 +1555,23 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty.builder()
 
-      public override fun buildType(buildType: String) {
+      override fun buildType(buildType: String) {
         cdkBuilder.buildType(buildType)
       }
 
-      public override fun filterGroups(filterGroups: IResolvable) {
+      override fun filterGroups(filterGroups: IResolvable) {
         cdkBuilder.filterGroups(filterGroups.let(IResolvable::unwrap))
       }
 
-      public override fun filterGroups(filterGroups: List<Any>) {
+      override fun filterGroups(filterGroups: List<Any>) {
         cdkBuilder.filterGroups(filterGroups)
       }
 
-      public override fun webhook(webhook: Boolean) {
+      override fun webhook(webhook: Boolean) {
         cdkBuilder.webhook(webhook)
       }
 
-      public override fun webhook(webhook: IResolvable) {
+      override fun webhook(webhook: IResolvable) {
         cdkBuilder.webhook(webhook.let(IResolvable::unwrap))
       }
 
@@ -1692,11 +1584,11 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectTriggersProperty,
     ) : ProjectTriggersProperty {
-      public override fun buildType(): String? = unwrap(this).getBuildType()
+      override fun buildType(): String? = unwrap(this).getBuildType()
 
-      public override fun filterGroups(): Any? = unwrap(this).getFilterGroups()
+      override fun filterGroups(): Any? = unwrap(this).getFilterGroups()
 
-      public override fun webhook(): Any? = unwrap(this).getWebhook()
+      override fun webhook(): Any? = unwrap(this).getWebhook()
     }
 
     public companion object {
@@ -1723,11 +1615,9 @@ public open class CfnProject internal constructor(
     public fun fetchSubmodules(): Any
 
     public interface Builder {
-      public fun fetchSubmodules(fetchSubmodules: Boolean) {
-      }
+      public fun fetchSubmodules(fetchSubmodules: Boolean)
 
-      public fun fetchSubmodules(fetchSubmodules: IResolvable) {
-      }
+      public fun fetchSubmodules(fetchSubmodules: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1735,11 +1625,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty.builder()
 
-      public override fun fetchSubmodules(fetchSubmodules: Boolean) {
+      override fun fetchSubmodules(fetchSubmodules: Boolean) {
         cdkBuilder.fetchSubmodules(fetchSubmodules)
       }
 
-      public override fun fetchSubmodules(fetchSubmodules: IResolvable) {
+      override fun fetchSubmodules(fetchSubmodules: IResolvable) {
         cdkBuilder.fetchSubmodules(fetchSubmodules.let(IResolvable::unwrap))
       }
 
@@ -1752,7 +1642,7 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.GitSubmodulesConfigProperty,
     ) : GitSubmodulesConfigProperty {
-      public override fun fetchSubmodules(): Any = unwrap(this).getFetchSubmodules()
+      override fun fetchSubmodules(): Any = unwrap(this).getFetchSubmodules()
     }
 
     public companion object {
@@ -1783,17 +1673,13 @@ public open class CfnProject internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun encryptionDisabled(encryptionDisabled: Boolean) {
-      }
+      public fun encryptionDisabled(encryptionDisabled: Boolean)
 
-      public fun encryptionDisabled(encryptionDisabled: IResolvable) {
-      }
+      public fun encryptionDisabled(encryptionDisabled: IResolvable)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1801,19 +1687,19 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty.builder()
 
-      public override fun encryptionDisabled(encryptionDisabled: Boolean) {
+      override fun encryptionDisabled(encryptionDisabled: Boolean) {
         cdkBuilder.encryptionDisabled(encryptionDisabled)
       }
 
-      public override fun encryptionDisabled(encryptionDisabled: IResolvable) {
+      override fun encryptionDisabled(encryptionDisabled: IResolvable) {
         cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable::unwrap))
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -1825,11 +1711,11 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.S3LogsConfigProperty,
     ) : S3LogsConfigProperty {
-      public override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
+      override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
 
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -1864,20 +1750,15 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun identifier(identifier: String) {
-      }
+      public fun identifier(identifier: String)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun mountOptions(mountOptions: String) {
-      }
+      public fun mountOptions(mountOptions: String)
 
-      public fun mountPoint(mountPoint: String) {
-      }
+      public fun mountPoint(mountPoint: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1886,23 +1767,23 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty.builder()
 
-      public override fun identifier(identifier: String) {
+      override fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun mountOptions(mountOptions: String) {
+      override fun mountOptions(mountOptions: String) {
         cdkBuilder.mountOptions(mountOptions)
       }
 
-      public override fun mountPoint(mountPoint: String) {
+      override fun mountPoint(mountPoint: String) {
         cdkBuilder.mountPoint(mountPoint)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1915,15 +1796,15 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectFileSystemLocationProperty,
     ) : ProjectFileSystemLocationProperty {
-      public override fun identifier(): String = unwrap(this).getIdentifier()
+      override fun identifier(): String = unwrap(this).getIdentifier()
 
-      public override fun location(): String = unwrap(this).getLocation()
+      override fun location(): String = unwrap(this).getLocation()
 
-      public override fun mountOptions(): String? = unwrap(this).getMountOptions()
+      override fun mountOptions(): String? = unwrap(this).getMountOptions()
 
-      public override fun mountPoint(): String = unwrap(this).getMountPoint()
+      override fun mountPoint(): String = unwrap(this).getMountPoint()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1953,11 +1834,9 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun resource(resource: String) {
-      }
+      public fun resource(resource: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1965,11 +1844,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty.builder()
 
-      public override fun resource(resource: String) {
+      override fun resource(resource: String) {
         cdkBuilder.resource(resource)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1981,9 +1860,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.SourceAuthProperty,
     ) : SourceAuthProperty {
-      public override fun resource(): String? = unwrap(this).getResource()
+      override fun resource(): String? = unwrap(this).getResource()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -2012,11 +1891,9 @@ public open class CfnProject internal constructor(
     public fun sourceVersion(): String? = unwrap(this).getSourceVersion()
 
     public interface Builder {
-      public fun sourceIdentifier(sourceIdentifier: String) {
-      }
+      public fun sourceIdentifier(sourceIdentifier: String)
 
-      public fun sourceVersion(sourceVersion: String) {
-      }
+      public fun sourceVersion(sourceVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2025,11 +1902,11 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty.builder()
 
-      public override fun sourceIdentifier(sourceIdentifier: String) {
+      override fun sourceIdentifier(sourceIdentifier: String) {
         cdkBuilder.sourceIdentifier(sourceIdentifier)
       }
 
-      public override fun sourceVersion(sourceVersion: String) {
+      override fun sourceVersion(sourceVersion: String) {
         cdkBuilder.sourceVersion(sourceVersion)
       }
 
@@ -2042,9 +1919,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.ProjectSourceVersionProperty,
     ) : ProjectSourceVersionProperty {
-      public override fun sourceIdentifier(): String = unwrap(this).getSourceIdentifier()
+      override fun sourceIdentifier(): String = unwrap(this).getSourceIdentifier()
 
-      public override fun sourceVersion(): String? = unwrap(this).getSourceVersion()
+      override fun sourceVersion(): String? = unwrap(this).getSourceVersion()
     }
 
     public companion object {
@@ -2075,17 +1952,13 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun excludeMatchedPattern(excludeMatchedPattern: Boolean) {
-      }
+      public fun excludeMatchedPattern(excludeMatchedPattern: Boolean)
 
-      public fun excludeMatchedPattern(excludeMatchedPattern: IResolvable) {
-      }
+      public fun excludeMatchedPattern(excludeMatchedPattern: IResolvable)
 
-      public fun pattern(pattern: String) {
-      }
+      public fun pattern(pattern: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2093,19 +1966,19 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty.builder()
 
-      public override fun excludeMatchedPattern(excludeMatchedPattern: Boolean) {
+      override fun excludeMatchedPattern(excludeMatchedPattern: Boolean) {
         cdkBuilder.excludeMatchedPattern(excludeMatchedPattern)
       }
 
-      public override fun excludeMatchedPattern(excludeMatchedPattern: IResolvable) {
+      override fun excludeMatchedPattern(excludeMatchedPattern: IResolvable) {
         cdkBuilder.excludeMatchedPattern(excludeMatchedPattern.let(IResolvable::unwrap))
       }
 
-      public override fun pattern(pattern: String) {
+      override fun pattern(pattern: String) {
         cdkBuilder.pattern(pattern)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -2117,11 +1990,11 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.WebhookFilterProperty,
     ) : WebhookFilterProperty {
-      public override fun excludeMatchedPattern(): Any? = unwrap(this).getExcludeMatchedPattern()
+      override fun excludeMatchedPattern(): Any? = unwrap(this).getExcludeMatchedPattern()
 
-      public override fun pattern(): String = unwrap(this).getPattern()
+      override fun pattern(): String = unwrap(this).getPattern()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -2152,14 +2025,11 @@ public open class CfnProject internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnets(subnets: List<String>) {
-      }
+      public fun subnets(subnets: List<String>)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2167,15 +2037,15 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnets(subnets: List<String>) {
+      override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -2187,12 +2057,12 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnProject.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {
@@ -2237,67 +2107,48 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun auth(auth: IResolvable) {
-      }
+      public fun auth(auth: IResolvable)
 
-      public fun auth(auth: SourceAuthProperty) {
-      }
+      public fun auth(auth: SourceAuthProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e01b1a50446487485d9436e692397d44744f4240c10d85d6e14283a7bc9a2de4")
-      public fun auth(auth: SourceAuthProperty.Builder.() -> Unit) {
-      }
+      public fun auth(auth: SourceAuthProperty.Builder.() -> Unit)
 
-      public fun buildSpec(buildSpec: String) {
-      }
+      public fun buildSpec(buildSpec: String)
 
-      public fun buildStatusConfig(buildStatusConfig: IResolvable) {
-      }
+      public fun buildStatusConfig(buildStatusConfig: IResolvable)
 
-      public fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty) {
-      }
+      public fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4ae6a4677b24efcacc3648f76cb5e8ef8aa5495620f6f2e32b0258d57d687a47")
-      public
-          fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty.Builder.() -> Unit) {
-      }
+      public fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty.Builder.() -> Unit)
 
-      public fun gitCloneDepth(gitCloneDepth: Number) {
-      }
+      public fun gitCloneDepth(gitCloneDepth: Number)
 
-      public fun gitSubmodulesConfig(gitSubmodulesConfig: IResolvable) {
-      }
+      public fun gitSubmodulesConfig(gitSubmodulesConfig: IResolvable)
 
-      public fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty) {
-      }
+      public fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("648c0ad47d51754c0470a5118c7f95052d27f7158fd3e8aa306fdcd60e3ad2b2")
       public
-          fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty.Builder.() -> Unit) {
-      }
+          fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty.Builder.() -> Unit)
 
-      public fun insecureSsl(insecureSsl: Boolean) {
-      }
+      public fun insecureSsl(insecureSsl: Boolean)
 
-      public fun insecureSsl(insecureSsl: IResolvable) {
-      }
+      public fun insecureSsl(insecureSsl: IResolvable)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun reportBuildStatus(reportBuildStatus: Boolean) {
-      }
+      public fun reportBuildStatus(reportBuildStatus: Boolean)
 
-      public fun reportBuildStatus(reportBuildStatus: IResolvable) {
-      }
+      public fun reportBuildStatus(reportBuildStatus: IResolvable)
 
-      public fun sourceIdentifier(sourceIdentifier: String) {
-      }
+      public fun sourceIdentifier(sourceIdentifier: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2305,80 +2156,80 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty.Builder =
           software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty.builder()
 
-      public override fun auth(auth: IResolvable) {
+      override fun auth(auth: IResolvable) {
         cdkBuilder.auth(auth.let(IResolvable::unwrap))
       }
 
-      public override fun auth(auth: SourceAuthProperty) {
+      override fun auth(auth: SourceAuthProperty) {
         cdkBuilder.auth(auth.let(SourceAuthProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e01b1a50446487485d9436e692397d44744f4240c10d85d6e14283a7bc9a2de4")
-      public override fun auth(auth: SourceAuthProperty.Builder.() -> Unit): Unit =
+      override fun auth(auth: SourceAuthProperty.Builder.() -> Unit): Unit =
           auth(SourceAuthProperty(auth))
 
-      public override fun buildSpec(buildSpec: String) {
+      override fun buildSpec(buildSpec: String) {
         cdkBuilder.buildSpec(buildSpec)
       }
 
-      public override fun buildStatusConfig(buildStatusConfig: IResolvable) {
+      override fun buildStatusConfig(buildStatusConfig: IResolvable) {
         cdkBuilder.buildStatusConfig(buildStatusConfig.let(IResolvable::unwrap))
       }
 
-      public override fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty) {
+      override fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty) {
         cdkBuilder.buildStatusConfig(buildStatusConfig.let(BuildStatusConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4ae6a4677b24efcacc3648f76cb5e8ef8aa5495620f6f2e32b0258d57d687a47")
-      public override
+      override
           fun buildStatusConfig(buildStatusConfig: BuildStatusConfigProperty.Builder.() -> Unit):
           Unit = buildStatusConfig(BuildStatusConfigProperty(buildStatusConfig))
 
-      public override fun gitCloneDepth(gitCloneDepth: Number) {
+      override fun gitCloneDepth(gitCloneDepth: Number) {
         cdkBuilder.gitCloneDepth(gitCloneDepth)
       }
 
-      public override fun gitSubmodulesConfig(gitSubmodulesConfig: IResolvable) {
+      override fun gitSubmodulesConfig(gitSubmodulesConfig: IResolvable) {
         cdkBuilder.gitSubmodulesConfig(gitSubmodulesConfig.let(IResolvable::unwrap))
       }
 
-      public override fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty) {
+      override fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty) {
         cdkBuilder.gitSubmodulesConfig(gitSubmodulesConfig.let(GitSubmodulesConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("648c0ad47d51754c0470a5118c7f95052d27f7158fd3e8aa306fdcd60e3ad2b2")
-      public override
+      override
           fun gitSubmodulesConfig(gitSubmodulesConfig: GitSubmodulesConfigProperty.Builder.() -> Unit):
           Unit = gitSubmodulesConfig(GitSubmodulesConfigProperty(gitSubmodulesConfig))
 
-      public override fun insecureSsl(insecureSsl: Boolean) {
+      override fun insecureSsl(insecureSsl: Boolean) {
         cdkBuilder.insecureSsl(insecureSsl)
       }
 
-      public override fun insecureSsl(insecureSsl: IResolvable) {
+      override fun insecureSsl(insecureSsl: IResolvable) {
         cdkBuilder.insecureSsl(insecureSsl.let(IResolvable::unwrap))
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun reportBuildStatus(reportBuildStatus: Boolean) {
+      override fun reportBuildStatus(reportBuildStatus: Boolean) {
         cdkBuilder.reportBuildStatus(reportBuildStatus)
       }
 
-      public override fun reportBuildStatus(reportBuildStatus: IResolvable) {
+      override fun reportBuildStatus(reportBuildStatus: IResolvable) {
         cdkBuilder.reportBuildStatus(reportBuildStatus.let(IResolvable::unwrap))
       }
 
-      public override fun sourceIdentifier(sourceIdentifier: String) {
+      override fun sourceIdentifier(sourceIdentifier: String) {
         cdkBuilder.sourceIdentifier(sourceIdentifier)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -2389,25 +2240,25 @@ public open class CfnProject internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.codebuild.CfnProject.SourceProperty,
     ) : SourceProperty {
-      public override fun auth(): Any? = unwrap(this).getAuth()
+      override fun auth(): Any? = unwrap(this).getAuth()
 
-      public override fun buildSpec(): String? = unwrap(this).getBuildSpec()
+      override fun buildSpec(): String? = unwrap(this).getBuildSpec()
 
-      public override fun buildStatusConfig(): Any? = unwrap(this).getBuildStatusConfig()
+      override fun buildStatusConfig(): Any? = unwrap(this).getBuildStatusConfig()
 
-      public override fun gitCloneDepth(): Number? = unwrap(this).getGitCloneDepth()
+      override fun gitCloneDepth(): Number? = unwrap(this).getGitCloneDepth()
 
-      public override fun gitSubmodulesConfig(): Any? = unwrap(this).getGitSubmodulesConfig()
+      override fun gitSubmodulesConfig(): Any? = unwrap(this).getGitSubmodulesConfig()
 
-      public override fun insecureSsl(): Any? = unwrap(this).getInsecureSsl()
+      override fun insecureSsl(): Any? = unwrap(this).getInsecureSsl()
 
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun reportBuildStatus(): Any? = unwrap(this).getReportBuildStatus()
+      override fun reportBuildStatus(): Any? = unwrap(this).getReportBuildStatus()
 
-      public override fun sourceIdentifier(): String? = unwrap(this).getSourceIdentifier()
+      override fun sourceIdentifier(): String? = unwrap(this).getSourceIdentifier()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

@@ -12,29 +12,26 @@ public interface CognitoOptions {
   public fun userPoolId(): String
 
   public interface Builder {
-    public fun identityPoolId(identityPoolId: String) {
-    }
+    public fun identityPoolId(identityPoolId: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.opensearchservice.CognitoOptions.Builder
         = software.amazon.awscdk.services.opensearchservice.CognitoOptions.builder()
 
-    public override fun identityPoolId(identityPoolId: String) {
+    override fun identityPoolId(identityPoolId: String) {
       cdkBuilder.identityPoolId(identityPoolId)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
@@ -45,11 +42,11 @@ public interface CognitoOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions,
   ) : CognitoOptions {
-    public override fun identityPoolId(): String = unwrap(this).getIdentityPoolId()
+    override fun identityPoolId(): String = unwrap(this).getIdentityPoolId()
 
-    public override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+    override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
-    public override fun userPoolId(): String = unwrap(this).getUserPoolId()
+    override fun userPoolId(): String = unwrap(this).getUserPoolId()
   }
 
   public companion object {

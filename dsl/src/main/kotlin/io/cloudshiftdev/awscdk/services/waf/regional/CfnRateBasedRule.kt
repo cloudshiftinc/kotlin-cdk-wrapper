@@ -57,23 +57,17 @@ public open class CfnRateBasedRule internal constructor(
   }
 
   public interface Builder {
-    public fun matchPredicates(matchPredicates: IResolvable) {
-    }
+    public fun matchPredicates(matchPredicates: IResolvable)
 
-    public fun matchPredicates(matchPredicates: List<Any>) {
-    }
+    public fun matchPredicates(matchPredicates: List<Any>)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rateKey(rateKey: String) {
-    }
+    public fun rateKey(rateKey: String)
 
-    public fun rateLimit(rateLimit: Number) {
-    }
+    public fun rateLimit(rateLimit: Number)
   }
 
   private class BuilderImpl(
@@ -83,27 +77,27 @@ public open class CfnRateBasedRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.Builder =
         software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.Builder.create(scope, id)
 
-    public override fun matchPredicates(matchPredicates: IResolvable) {
+    override fun matchPredicates(matchPredicates: IResolvable) {
       cdkBuilder.matchPredicates(matchPredicates.let(IResolvable::unwrap))
     }
 
-    public override fun matchPredicates(matchPredicates: List<Any>) {
+    override fun matchPredicates(matchPredicates: List<Any>) {
       cdkBuilder.matchPredicates(matchPredicates)
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rateKey(rateKey: String) {
+    override fun rateKey(rateKey: String) {
       cdkBuilder.rateKey(rateKey)
     }
 
-    public override fun rateLimit(rateLimit: Number) {
+    override fun rateLimit(rateLimit: Number) {
       cdkBuilder.rateLimit(rateLimit)
     }
 
@@ -140,17 +134,13 @@ public open class CfnRateBasedRule internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun dataId(dataId: String) {
-      }
+      public fun dataId(dataId: String)
 
-      public fun negated(negated: Boolean) {
-      }
+      public fun negated(negated: Boolean)
 
-      public fun negated(negated: IResolvable) {
-      }
+      public fun negated(negated: IResolvable)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -158,19 +148,19 @@ public open class CfnRateBasedRule internal constructor(
           software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty.Builder =
           software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty.builder()
 
-      public override fun dataId(dataId: String) {
+      override fun dataId(dataId: String) {
         cdkBuilder.dataId(dataId)
       }
 
-      public override fun negated(negated: Boolean) {
+      override fun negated(negated: Boolean) {
         cdkBuilder.negated(negated)
       }
 
-      public override fun negated(negated: IResolvable) {
+      override fun negated(negated: IResolvable) {
         cdkBuilder.negated(negated.let(IResolvable::unwrap))
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -183,11 +173,11 @@ public open class CfnRateBasedRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty,
     ) : PredicateProperty {
-      public override fun dataId(): String = unwrap(this).getDataId()
+      override fun dataId(): String = unwrap(this).getDataId()
 
-      public override fun negated(): Any = unwrap(this).getNegated()
+      override fun negated(): Any = unwrap(this).getNegated()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

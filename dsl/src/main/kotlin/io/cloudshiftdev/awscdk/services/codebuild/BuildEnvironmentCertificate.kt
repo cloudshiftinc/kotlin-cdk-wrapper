@@ -10,11 +10,9 @@ public interface BuildEnvironmentCertificate {
   public fun objectKey(): String
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun objectKey(objectKey: String) {
-    }
+    public fun objectKey(objectKey: String)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface BuildEnvironmentCertificate {
         software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate.Builder =
         software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun objectKey(objectKey: String) {
+    override fun objectKey(objectKey: String) {
       cdkBuilder.objectKey(objectKey)
     }
 
@@ -37,9 +35,9 @@ public interface BuildEnvironmentCertificate {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentCertificate,
   ) : BuildEnvironmentCertificate {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun objectKey(): String = unwrap(this).getObjectKey()
+    override fun objectKey(): String = unwrap(this).getObjectKey()
   }
 
   public companion object {

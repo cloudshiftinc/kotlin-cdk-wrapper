@@ -11,29 +11,26 @@ public interface SecurityGroupImportOptions {
   public fun mutable(): Boolean? = unwrap(this).getMutable()
 
   public interface Builder {
-    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
-    }
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
 
-    public fun allowAllOutbound(allowAllOutbound: Boolean) {
-    }
+    public fun allowAllOutbound(allowAllOutbound: Boolean)
 
-    public fun mutable(mutable: Boolean) {
-    }
+    public fun mutable(mutable: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.SecurityGroupImportOptions.Builder =
         software.amazon.awscdk.services.ec2.SecurityGroupImportOptions.builder()
 
-    public override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
       cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
     }
 
-    public override fun allowAllOutbound(allowAllOutbound: Boolean) {
+    override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
     }
 
-    public override fun mutable(mutable: Boolean) {
+    override fun mutable(mutable: Boolean) {
       cdkBuilder.mutable(mutable)
     }
 
@@ -44,11 +41,11 @@ public interface SecurityGroupImportOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupImportOptions,
   ) : SecurityGroupImportOptions {
-    public override fun allowAllIpv6Outbound(): Boolean? = unwrap(this).getAllowAllIpv6Outbound()
+    override fun allowAllIpv6Outbound(): Boolean? = unwrap(this).getAllowAllIpv6Outbound()
 
-    public override fun allowAllOutbound(): Boolean? = unwrap(this).getAllowAllOutbound()
+    override fun allowAllOutbound(): Boolean? = unwrap(this).getAllowAllOutbound()
 
-    public override fun mutable(): Boolean? = unwrap(this).getMutable()
+    override fun mutable(): Boolean? = unwrap(this).getMutable()
   }
 
   public companion object {

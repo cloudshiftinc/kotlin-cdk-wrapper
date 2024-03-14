@@ -39,30 +39,23 @@ public open class WebSocketStage internal constructor(
   public override fun url(): String = unwrap(this).getUrl()
 
   public interface Builder {
-    public fun autoDeploy(autoDeploy: Boolean) {
-    }
+    public fun autoDeploy(autoDeploy: Boolean)
 
-    public fun domainMapping(domainMapping: DomainMappingOptions) {
-    }
+    public fun domainMapping(domainMapping: DomainMappingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8e1ea7ecc4ff868f7a8daa92e628e6ab20aa0cb643b7873bde51b041705ca8b9")
-    public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit) {
-    }
+    public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun throttle(throttle: ThrottleSettings) {
-    }
+    public fun throttle(throttle: ThrottleSettings)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e065974bb2dee52f6d529fde0b2997b9658f6379a4b616e18359056a4f373114")
-    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit) {
-    }
+    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit)
 
-    public fun webSocketApi(webSocketApi: IWebSocketApi) {
-    }
+    public fun webSocketApi(webSocketApi: IWebSocketApi)
   }
 
   private class BuilderImpl(
@@ -72,33 +65,33 @@ public open class WebSocketStage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.WebSocketStage.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketStage.Builder.create(scope, id)
 
-    public override fun autoDeploy(autoDeploy: Boolean) {
+    override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
     }
 
-    public override fun domainMapping(domainMapping: DomainMappingOptions) {
+    override fun domainMapping(domainMapping: DomainMappingOptions) {
       cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8e1ea7ecc4ff868f7a8daa92e628e6ab20aa0cb643b7873bde51b041705ca8b9")
-    public override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit
-        = domainMapping(DomainMappingOptions(domainMapping))
+    override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit =
+        domainMapping(DomainMappingOptions(domainMapping))
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun throttle(throttle: ThrottleSettings) {
+    override fun throttle(throttle: ThrottleSettings) {
       cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e065974bb2dee52f6d529fde0b2997b9658f6379a4b616e18359056a4f373114")
-    public override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
+    override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
         throttle(ThrottleSettings(throttle))
 
-    public override fun webSocketApi(webSocketApi: IWebSocketApi) {
+    override fun webSocketApi(webSocketApi: IWebSocketApi) {
       cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
     }
 

@@ -20,11 +20,9 @@ public open class BucketPolicy internal constructor(
   public open fun document(): PolicyDocument = unwrap(this).getDocument().let(PolicyDocument::wrap)
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -34,11 +32,11 @@ public open class BucketPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.BucketPolicy.Builder =
         software.amazon.awscdk.services.s3.BucketPolicy.Builder.create(scope, id)
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

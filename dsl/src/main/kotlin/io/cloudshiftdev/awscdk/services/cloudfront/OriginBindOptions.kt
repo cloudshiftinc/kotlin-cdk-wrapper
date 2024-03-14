@@ -7,15 +7,14 @@ public interface OriginBindOptions {
   public fun originId(): String
 
   public interface Builder {
-    public fun originId(originId: String) {
-    }
+    public fun originId(originId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.OriginBindOptions.Builder =
         software.amazon.awscdk.services.cloudfront.OriginBindOptions.builder()
 
-    public override fun originId(originId: String) {
+    override fun originId(originId: String) {
       cdkBuilder.originId(originId)
     }
 
@@ -26,7 +25,7 @@ public interface OriginBindOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBindOptions,
   ) : OriginBindOptions {
-    public override fun originId(): String = unwrap(this).getOriginId()
+    override fun originId(): String = unwrap(this).getOriginId()
   }
 
   public companion object {

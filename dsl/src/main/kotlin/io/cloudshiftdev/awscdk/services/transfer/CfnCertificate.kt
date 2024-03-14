@@ -85,29 +85,21 @@ public open class CfnCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun activeDate(activeDate: String) {
-    }
+    public fun activeDate(activeDate: String)
 
-    public fun certificate(certificate: String) {
-    }
+    public fun certificate(certificate: String)
 
-    public fun certificateChain(certificateChain: String) {
-    }
+    public fun certificateChain(certificateChain: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun inactiveDate(inactiveDate: String) {
-    }
+    public fun inactiveDate(inactiveDate: String)
 
-    public fun privateKey(privateKey: String) {
-    }
+    public fun privateKey(privateKey: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun usage(usage: String) {
-    }
+    public fun usage(usage: String)
   }
 
   private class BuilderImpl(
@@ -117,35 +109,35 @@ public open class CfnCertificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnCertificate.Builder =
         software.amazon.awscdk.services.transfer.CfnCertificate.Builder.create(scope, id)
 
-    public override fun activeDate(activeDate: String) {
+    override fun activeDate(activeDate: String) {
       cdkBuilder.activeDate(activeDate)
     }
 
-    public override fun certificate(certificate: String) {
+    override fun certificate(certificate: String) {
       cdkBuilder.certificate(certificate)
     }
 
-    public override fun certificateChain(certificateChain: String) {
+    override fun certificateChain(certificateChain: String) {
       cdkBuilder.certificateChain(certificateChain)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun inactiveDate(inactiveDate: String) {
+    override fun inactiveDate(inactiveDate: String) {
       cdkBuilder.inactiveDate(inactiveDate)
     }
 
-    public override fun privateKey(privateKey: String) {
+    override fun privateKey(privateKey: String) {
       cdkBuilder.privateKey(privateKey)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun usage(usage: String) {
+    override fun usage(usage: String) {
       cdkBuilder.usage(usage)
     }
 

@@ -94,82 +94,57 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
       unwrap(this).getUpdateToLatestImageVersion()
 
   public interface Builder {
-    public fun allocationStrategy(allocationStrategy: AllocationStrategy) {
-    }
+    public fun allocationStrategy(allocationStrategy: AllocationStrategy)
 
-    public fun computeEnvironmentName(computeEnvironmentName: String) {
-    }
+    public fun computeEnvironmentName(computeEnvironmentName: String)
 
-    public fun eksCluster(eksCluster: ICluster) {
-    }
+    public fun eksCluster(eksCluster: ICluster)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun images(images: List<EksMachineImage>) {
-    }
+    public fun images(images: List<EksMachineImage>)
 
-    public fun instanceClasses(instanceClasses: List<InstanceClass>) {
-    }
+    public fun instanceClasses(instanceClasses: List<InstanceClass>)
 
-    public fun instanceRole(instanceRole: IRole) {
-    }
+    public fun instanceRole(instanceRole: IRole)
 
-    public fun instanceTypes(instanceTypes: List<InstanceType>) {
-    }
+    public fun instanceTypes(instanceTypes: List<InstanceType>)
 
-    public fun kubernetesNamespace(kubernetesNamespace: String) {
-    }
+    public fun kubernetesNamespace(kubernetesNamespace: String)
 
-    public fun launchTemplate(launchTemplate: ILaunchTemplate) {
-    }
+    public fun launchTemplate(launchTemplate: ILaunchTemplate)
 
-    public fun maxvCpus(maxvCpus: Number) {
-    }
+    public fun maxvCpus(maxvCpus: Number)
 
-    public fun minvCpus(minvCpus: Number) {
-    }
+    public fun minvCpus(minvCpus: Number)
 
-    public fun placementGroup(placementGroup: IPlacementGroup) {
-    }
+    public fun placementGroup(placementGroup: IPlacementGroup)
 
-    public fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean) {
-    }
+    public fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
 
-    public fun spot(spot: Boolean) {
-    }
+    public fun spot(spot: Boolean)
 
-    public fun spotBidPercentage(spotBidPercentage: Number) {
-    }
+    public fun spotBidPercentage(spotBidPercentage: Number)
 
-    public fun terminateOnUpdate(terminateOnUpdate: Boolean) {
-    }
+    public fun terminateOnUpdate(terminateOnUpdate: Boolean)
 
-    public fun updateTimeout(updateTimeout: Duration) {
-    }
+    public fun updateTimeout(updateTimeout: Duration)
 
-    public fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
-    }
+    public fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean)
 
-    public fun useOptimalInstanceClasses(useOptimalInstanceClasses: Boolean) {
-    }
+    public fun useOptimalInstanceClasses(useOptimalInstanceClasses: Boolean)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f494c149f876a353599ab64cc20b8addbb5350474c095b562c52b586754f257c")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -181,105 +156,105 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
         software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment.Builder.create(scope,
         id)
 
-    public override fun allocationStrategy(allocationStrategy: AllocationStrategy) {
+    override fun allocationStrategy(allocationStrategy: AllocationStrategy) {
       cdkBuilder.allocationStrategy(allocationStrategy.let(AllocationStrategy::unwrap))
     }
 
-    public override fun computeEnvironmentName(computeEnvironmentName: String) {
+    override fun computeEnvironmentName(computeEnvironmentName: String) {
       cdkBuilder.computeEnvironmentName(computeEnvironmentName)
     }
 
-    public override fun eksCluster(eksCluster: ICluster) {
+    override fun eksCluster(eksCluster: ICluster) {
       cdkBuilder.eksCluster(eksCluster.let(ICluster::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun images(images: List<EksMachineImage>) {
+    override fun images(images: List<EksMachineImage>) {
       cdkBuilder.images(images.map(EksMachineImage::unwrap))
     }
 
-    public override fun instanceClasses(instanceClasses: List<InstanceClass>) {
+    override fun instanceClasses(instanceClasses: List<InstanceClass>) {
       cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass::unwrap))
     }
 
-    public override fun instanceRole(instanceRole: IRole) {
+    override fun instanceRole(instanceRole: IRole) {
       cdkBuilder.instanceRole(instanceRole.let(IRole::unwrap))
     }
 
-    public override fun instanceTypes(instanceTypes: List<InstanceType>) {
+    override fun instanceTypes(instanceTypes: List<InstanceType>) {
       cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
     }
 
-    public override fun kubernetesNamespace(kubernetesNamespace: String) {
+    override fun kubernetesNamespace(kubernetesNamespace: String) {
       cdkBuilder.kubernetesNamespace(kubernetesNamespace)
     }
 
-    public override fun launchTemplate(launchTemplate: ILaunchTemplate) {
+    override fun launchTemplate(launchTemplate: ILaunchTemplate) {
       cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
     }
 
-    public override fun maxvCpus(maxvCpus: Number) {
+    override fun maxvCpus(maxvCpus: Number) {
       cdkBuilder.maxvCpus(maxvCpus)
     }
 
-    public override fun minvCpus(minvCpus: Number) {
+    override fun minvCpus(minvCpus: Number) {
       cdkBuilder.minvCpus(minvCpus)
     }
 
-    public override fun placementGroup(placementGroup: IPlacementGroup) {
+    override fun placementGroup(placementGroup: IPlacementGroup) {
       cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup::unwrap))
     }
 
-    public override fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean) {
+    override fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean) {
       cdkBuilder.replaceComputeEnvironment(replaceComputeEnvironment)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 
-    public override fun spot(spot: Boolean) {
+    override fun spot(spot: Boolean) {
       cdkBuilder.spot(spot)
     }
 
-    public override fun spotBidPercentage(spotBidPercentage: Number) {
+    override fun spotBidPercentage(spotBidPercentage: Number) {
       cdkBuilder.spotBidPercentage(spotBidPercentage)
     }
 
-    public override fun terminateOnUpdate(terminateOnUpdate: Boolean) {
+    override fun terminateOnUpdate(terminateOnUpdate: Boolean) {
       cdkBuilder.terminateOnUpdate(terminateOnUpdate)
     }
 
-    public override fun updateTimeout(updateTimeout: Duration) {
+    override fun updateTimeout(updateTimeout: Duration) {
       cdkBuilder.updateTimeout(updateTimeout.let(Duration::unwrap))
     }
 
-    public override fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
+    override fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
       cdkBuilder.updateToLatestImageVersion(updateToLatestImageVersion)
     }
 
-    public override fun useOptimalInstanceClasses(useOptimalInstanceClasses: Boolean) {
+    override fun useOptimalInstanceClasses(useOptimalInstanceClasses: Boolean) {
       cdkBuilder.useOptimalInstanceClasses(useOptimalInstanceClasses)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f494c149f876a353599ab64cc20b8addbb5350474c095b562c52b586754f257c")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.batch.ManagedEc2EksComputeEnvironment =

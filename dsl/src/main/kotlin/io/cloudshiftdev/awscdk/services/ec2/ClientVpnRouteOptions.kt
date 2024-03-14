@@ -11,29 +11,26 @@ public interface ClientVpnRouteOptions {
   public fun target(): ClientVpnRouteTarget
 
   public interface Builder {
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun target(target: ClientVpnRouteTarget) {
-    }
+    public fun target(target: ClientVpnRouteTarget)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ClientVpnRouteOptions.Builder =
         software.amazon.awscdk.services.ec2.ClientVpnRouteOptions.builder()
 
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun target(target: ClientVpnRouteTarget) {
+    override fun target(target: ClientVpnRouteTarget) {
       cdkBuilder.target(target.let(ClientVpnRouteTarget::unwrap))
     }
 
@@ -44,11 +41,11 @@ public interface ClientVpnRouteOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteOptions,
   ) : ClientVpnRouteOptions {
-    public override fun cidr(): String = unwrap(this).getCidr()
+    override fun cidr(): String = unwrap(this).getCidr()
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun target(): ClientVpnRouteTarget =
+    override fun target(): ClientVpnRouteTarget =
         unwrap(this).getTarget().let(ClientVpnRouteTarget::wrap)
   }
 

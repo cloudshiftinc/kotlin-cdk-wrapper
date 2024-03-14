@@ -47,20 +47,15 @@ public open class CfnUserPoolGroup internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun precedence(precedence: Number) {
-    }
+    public fun precedence(precedence: Number)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl(
@@ -70,23 +65,23 @@ public open class CfnUserPoolGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CfnUserPoolGroup.Builder =
         software.amazon.awscdk.services.cognito.CfnUserPoolGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun precedence(precedence: Number) {
+    override fun precedence(precedence: Number) {
       cdkBuilder.precedence(precedence)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 

@@ -136,39 +136,35 @@ public open class Connections internal constructor(
       unwrap(this).getSecurityGroups().map(ISecurityGroup::wrap)
 
   public interface Builder {
-    public fun defaultPort(defaultPort: Port) {
-    }
+    public fun defaultPort(defaultPort: Port)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("134875f63575344e60e9fde0e44020cbaaebbf3365cdf9a2e6c7d703571b0f2a")
-    public fun defaultPort(defaultPort: Port.Builder.() -> Unit) {
-    }
+    public fun defaultPort(defaultPort: Port.Builder.() -> Unit)
 
-    public fun peer(peer: IPeer) {
-    }
+    public fun peer(peer: IPeer)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.Connections.Builder =
         software.amazon.awscdk.services.ec2.Connections.Builder.create()
 
-    public override fun defaultPort(defaultPort: Port) {
+    override fun defaultPort(defaultPort: Port) {
       cdkBuilder.defaultPort(defaultPort.let(Port::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("134875f63575344e60e9fde0e44020cbaaebbf3365cdf9a2e6c7d703571b0f2a")
-    public override fun defaultPort(defaultPort: Port.Builder.() -> Unit): Unit =
+    override fun defaultPort(defaultPort: Port.Builder.() -> Unit): Unit =
         defaultPort(Port(defaultPort))
 
-    public override fun peer(peer: IPeer) {
+    override fun peer(peer: IPeer) {
       cdkBuilder.peer(peer.let(IPeer::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 

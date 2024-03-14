@@ -16,13 +16,13 @@ public interface ILifecycleHookTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.ILifecycleHookTarget,
   ) : ILifecycleHookTarget {
-    public override fun bind(arg0: Construct, arg1: BindHookTargetOptions):
-        LifecycleHookTargetConfig = unwrap(this).bind(arg0.let(Construct::unwrap),
+    override fun bind(arg0: Construct, arg1: BindHookTargetOptions): LifecycleHookTargetConfig =
+        unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a256b345ffa3a5089e3c2315d1f614a5e6fb6ed617a236cb05a1ffe90b1f565d")
-    public override fun bind(arg0: Construct, arg1: BindHookTargetOptions.Builder.() -> Unit):
+    override fun bind(arg0: Construct, arg1: BindHookTargetOptions.Builder.() -> Unit):
         LifecycleHookTargetConfig = bind(arg0, BindHookTargetOptions(arg1))
   }
 

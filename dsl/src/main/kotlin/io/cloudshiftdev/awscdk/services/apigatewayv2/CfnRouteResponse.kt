@@ -62,26 +62,19 @@ public open class CfnRouteResponse internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun modelSelectionExpression(modelSelectionExpression: String) {
-    }
+    public fun modelSelectionExpression(modelSelectionExpression: String)
 
-    public fun responseModels(responseModels: Any) {
-    }
+    public fun responseModels(responseModels: Any)
 
-    public fun responseParameters(responseParameters: IResolvable) {
-    }
+    public fun responseParameters(responseParameters: IResolvable)
 
-    public fun responseParameters(responseParameters: Map<String, Any>) {
-    }
+    public fun responseParameters(responseParameters: Map<String, Any>)
 
-    public fun routeId(routeId: String) {
-    }
+    public fun routeId(routeId: String)
 
-    public fun routeResponseKey(routeResponseKey: String) {
-    }
+    public fun routeResponseKey(routeResponseKey: String)
   }
 
   private class BuilderImpl(
@@ -91,31 +84,31 @@ public open class CfnRouteResponse internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun modelSelectionExpression(modelSelectionExpression: String) {
+    override fun modelSelectionExpression(modelSelectionExpression: String) {
       cdkBuilder.modelSelectionExpression(modelSelectionExpression)
     }
 
-    public override fun responseModels(responseModels: Any) {
+    override fun responseModels(responseModels: Any) {
       cdkBuilder.responseModels(responseModels)
     }
 
-    public override fun responseParameters(responseParameters: IResolvable) {
+    override fun responseParameters(responseParameters: IResolvable) {
       cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
     }
 
-    public override fun responseParameters(responseParameters: Map<String, Any>) {
+    override fun responseParameters(responseParameters: Map<String, Any>) {
       cdkBuilder.responseParameters(responseParameters)
     }
 
-    public override fun routeId(routeId: String) {
+    override fun routeId(routeId: String) {
       cdkBuilder.routeId(routeId)
     }
 
-    public override fun routeResponseKey(routeResponseKey: String) {
+    override fun routeResponseKey(routeResponseKey: String) {
       cdkBuilder.routeResponseKey(routeResponseKey)
     }
 
@@ -148,11 +141,9 @@ public open class CfnRouteResponse internal constructor(
     public fun required(): Any
 
     public interface Builder {
-      public fun required(required: Boolean) {
-      }
+      public fun required(required: Boolean)
 
-      public fun required(required: IResolvable) {
-      }
+      public fun required(required: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -161,11 +152,11 @@ public open class CfnRouteResponse internal constructor(
           =
           software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty.builder()
 
-      public override fun required(required: Boolean) {
+      override fun required(required: Boolean) {
         cdkBuilder.required(required)
       }
 
-      public override fun required(required: IResolvable) {
+      override fun required(required: IResolvable) {
         cdkBuilder.required(required.let(IResolvable::unwrap))
       }
 
@@ -178,7 +169,7 @@ public open class CfnRouteResponse internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse.ParameterConstraintsProperty,
     ) : ParameterConstraintsProperty {
-      public override fun required(): Any = unwrap(this).getRequired()
+      override fun required(): Any = unwrap(this).getRequired()
     }
 
     public companion object {

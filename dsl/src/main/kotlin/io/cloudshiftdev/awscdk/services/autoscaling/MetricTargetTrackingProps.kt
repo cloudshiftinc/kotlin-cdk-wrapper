@@ -12,20 +12,15 @@ public interface MetricTargetTrackingProps : BaseTargetTrackingProps {
   public fun targetValue(): Number
 
   public interface Builder {
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-    }
+    public fun disableScaleIn(disableScaleIn: Boolean)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration)
 
-    public fun metric(metric: IMetric) {
-    }
+    public fun metric(metric: IMetric)
 
-    public fun targetValue(targetValue: Number) {
-    }
+    public fun targetValue(targetValue: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -33,23 +28,23 @@ public interface MetricTargetTrackingProps : BaseTargetTrackingProps {
         software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps.Builder =
         software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps.builder()
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun disableScaleIn(disableScaleIn: Boolean) {
+    override fun disableScaleIn(disableScaleIn: Boolean) {
       cdkBuilder.disableScaleIn(disableScaleIn)
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
     }
 
-    public override fun metric(metric: IMetric) {
+    override fun metric(metric: IMetric) {
       cdkBuilder.metric(metric.let(IMetric::unwrap))
     }
 
-    public override fun targetValue(targetValue: Number) {
+    override fun targetValue(targetValue: Number) {
       cdkBuilder.targetValue(targetValue)
     }
 
@@ -60,16 +55,16 @@ public interface MetricTargetTrackingProps : BaseTargetTrackingProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps,
   ) : MetricTargetTrackingProps {
-    public override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
+    override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
 
-    public override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
+    override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
 
-    public override fun estimatedInstanceWarmup(): Duration? =
+    override fun estimatedInstanceWarmup(): Duration? =
         unwrap(this).getEstimatedInstanceWarmup()?.let(Duration::wrap)
 
-    public override fun metric(): IMetric = unwrap(this).getMetric().let(IMetric::wrap)
+    override fun metric(): IMetric = unwrap(this).getMetric().let(IMetric::wrap)
 
-    public override fun targetValue(): Number = unwrap(this).getTargetValue()
+    override fun targetValue(): Number = unwrap(this).getTargetValue()
   }
 
   public companion object {

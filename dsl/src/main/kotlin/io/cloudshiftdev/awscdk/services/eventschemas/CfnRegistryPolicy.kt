@@ -37,14 +37,11 @@ public open class CfnRegistryPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun registryName(registryName: String) {
-    }
+    public fun registryName(registryName: String)
 
-    public fun revisionId(revisionId: String) {
-    }
+    public fun revisionId(revisionId: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnRegistryPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy.Builder =
         software.amazon.awscdk.services.eventschemas.CfnRegistryPolicy.Builder.create(scope, id)
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun registryName(registryName: String) {
+    override fun registryName(registryName: String) {
       cdkBuilder.registryName(registryName)
     }
 
-    public override fun revisionId(revisionId: String) {
+    override fun revisionId(revisionId: String) {
       cdkBuilder.revisionId(revisionId)
     }
 

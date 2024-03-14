@@ -37,14 +37,11 @@ public open class CfnConnectorDefinitionVersion internal constructor(
   }
 
   public interface Builder {
-    public fun connectorDefinitionId(connectorDefinitionId: String) {
-    }
+    public fun connectorDefinitionId(connectorDefinitionId: String)
 
-    public fun connectors(connectors: IResolvable) {
-    }
+    public fun connectors(connectors: IResolvable)
 
-    public fun connectors(connectors: List<Any>) {
-    }
+    public fun connectors(connectors: List<Any>)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnConnectorDefinitionVersion internal constructor(
         software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.Builder.create(scope,
         id)
 
-    public override fun connectorDefinitionId(connectorDefinitionId: String) {
+    override fun connectorDefinitionId(connectorDefinitionId: String) {
       cdkBuilder.connectorDefinitionId(connectorDefinitionId)
     }
 
-    public override fun connectors(connectors: IResolvable) {
+    override fun connectors(connectors: IResolvable) {
       cdkBuilder.connectors(connectors.let(IResolvable::unwrap))
     }
 
-    public override fun connectors(connectors: List<Any>) {
+    override fun connectors(connectors: List<Any>) {
       cdkBuilder.connectors(connectors)
     }
 
@@ -102,14 +99,11 @@ public open class CfnConnectorDefinitionVersion internal constructor(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     public interface Builder {
-      public fun connectorArn(connectorArn: String) {
-      }
+      public fun connectorArn(connectorArn: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -118,15 +112,15 @@ public open class CfnConnectorDefinitionVersion internal constructor(
           =
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.ConnectorProperty.builder()
 
-      public override fun connectorArn(connectorArn: String) {
+      override fun connectorArn(connectorArn: String) {
         cdkBuilder.connectorArn(connectorArn)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
@@ -139,11 +133,11 @@ public open class CfnConnectorDefinitionVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion.ConnectorProperty,
     ) : ConnectorProperty {
-      public override fun connectorArn(): String = unwrap(this).getConnectorArn()
+      override fun connectorArn(): String = unwrap(this).getConnectorArn()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
     }
 
     public companion object {

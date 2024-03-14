@@ -24,44 +24,43 @@ public interface IEksJobDefinition : IJobDefinition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.IEksJobDefinition,
   ) : IEksJobDefinition {
-    public override fun addRetryStrategy(arg0: RetryStrategy) {
+    override fun addRetryStrategy(arg0: RetryStrategy) {
       unwrap(this).addRetryStrategy(arg0.let(RetryStrategy::unwrap))
     }
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun container(): EksContainerDefinition =
+    override fun container(): EksContainerDefinition =
         unwrap(this).getContainer().let(EksContainerDefinition::wrap)
 
-    public override fun dnsPolicy(): DnsPolicy? = unwrap(this).getDnsPolicy()?.let(DnsPolicy::wrap)
+    override fun dnsPolicy(): DnsPolicy? = unwrap(this).getDnsPolicy()?.let(DnsPolicy::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun jobDefinitionArn(): String = unwrap(this).getJobDefinitionArn()
+    override fun jobDefinitionArn(): String = unwrap(this).getJobDefinitionArn()
 
-    public override fun jobDefinitionName(): String = unwrap(this).getJobDefinitionName()
+    override fun jobDefinitionName(): String = unwrap(this).getJobDefinitionName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
+    override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
 
-    public override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
+    override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 
-    public override fun retryStrategies(): List<RetryStrategy> =
+    override fun retryStrategies(): List<RetryStrategy> =
         unwrap(this).getRetryStrategies().map(RetryStrategy::wrap)
 
-    public override fun schedulingPriority(): Number? = unwrap(this).getSchedulingPriority()
+    override fun schedulingPriority(): Number? = unwrap(this).getSchedulingPriority()
 
-    public override fun serviceAccount(): String? = unwrap(this).getServiceAccount()
+    override fun serviceAccount(): String? = unwrap(this).getServiceAccount()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun useHostNetwork(): Boolean? = unwrap(this).getUseHostNetwork()
+    override fun useHostNetwork(): Boolean? = unwrap(this).getUseHostNetwork()
   }
 
   public companion object {

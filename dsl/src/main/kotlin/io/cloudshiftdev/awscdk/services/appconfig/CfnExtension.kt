@@ -74,26 +74,19 @@ public open class CfnExtension internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: Any) {
-    }
+    public fun actions(actions: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun latestVersionNumber(latestVersionNumber: Number) {
-    }
+    public fun latestVersionNumber(latestVersionNumber: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: Map<String, Any>) {
-    }
+    public fun parameters(parameters: Map<String, Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -103,31 +96,31 @@ public open class CfnExtension internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.CfnExtension.Builder =
         software.amazon.awscdk.services.appconfig.CfnExtension.Builder.create(scope, id)
 
-    public override fun actions(actions: Any) {
+    override fun actions(actions: Any) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun latestVersionNumber(latestVersionNumber: Number) {
+    override fun latestVersionNumber(latestVersionNumber: Number) {
       cdkBuilder.latestVersionNumber(latestVersionNumber)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, Any>) {
+    override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -165,17 +158,13 @@ public open class CfnExtension internal constructor(
     public fun uri(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun uri(uri: String) {
-      }
+      public fun uri(uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -183,19 +172,19 @@ public open class CfnExtension internal constructor(
           software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty.Builder =
           software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun uri(uri: String) {
+      override fun uri(uri: String) {
         cdkBuilder.uri(uri)
       }
 
@@ -206,13 +195,13 @@ public open class CfnExtension internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty,
     ) : ActionProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun uri(): String = unwrap(this).getUri()
+      override fun uri(): String = unwrap(this).getUri()
     }
 
     public companion object {
@@ -241,14 +230,11 @@ public open class CfnExtension internal constructor(
     public fun required(): Any
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun required(required: Boolean) {
-      }
+      public fun required(required: Boolean)
 
-      public fun required(required: IResolvable) {
-      }
+      public fun required(required: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -256,15 +242,15 @@ public open class CfnExtension internal constructor(
           software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty.Builder =
           software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun required(required: Boolean) {
+      override fun required(required: Boolean) {
         cdkBuilder.required(required)
       }
 
-      public override fun required(required: IResolvable) {
+      override fun required(required: IResolvable) {
         cdkBuilder.required(required.let(IResolvable::unwrap))
       }
 
@@ -276,9 +262,9 @@ public open class CfnExtension internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appconfig.CfnExtension.ParameterProperty,
     ) : ParameterProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun required(): Any = unwrap(this).getRequired()
+      override fun required(): Any = unwrap(this).getRequired()
     }
 
     public companion object {

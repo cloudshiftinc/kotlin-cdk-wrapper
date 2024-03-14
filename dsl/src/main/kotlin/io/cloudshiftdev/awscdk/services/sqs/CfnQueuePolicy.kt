@@ -32,11 +32,9 @@ public open class CfnQueuePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun queues(queues: List<String>) {
-    }
+    public fun queues(queues: List<String>)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnQueuePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sqs.CfnQueuePolicy.Builder =
         software.amazon.awscdk.services.sqs.CfnQueuePolicy.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun queues(queues: List<String>) {
+    override fun queues(queues: List<String>) {
       cdkBuilder.queues(queues)
     }
 

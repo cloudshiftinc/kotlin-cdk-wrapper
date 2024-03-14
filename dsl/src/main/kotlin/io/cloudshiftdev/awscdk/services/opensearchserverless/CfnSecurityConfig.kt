@@ -56,25 +56,19 @@ public open class CfnSecurityConfig internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun samlOptions(samlOptions: IResolvable) {
-    }
+    public fun samlOptions(samlOptions: IResolvable)
 
-    public fun samlOptions(samlOptions: SamlConfigOptionsProperty) {
-    }
+    public fun samlOptions(samlOptions: SamlConfigOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e6f686691d030724cbcf06455357d131785d142c32d88d2163185e08d40523f2")
-    public fun samlOptions(samlOptions: SamlConfigOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun samlOptions(samlOptions: SamlConfigOptionsProperty.Builder.() -> Unit)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -86,28 +80,28 @@ public open class CfnSecurityConfig internal constructor(
         software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun samlOptions(samlOptions: IResolvable) {
+    override fun samlOptions(samlOptions: IResolvable) {
       cdkBuilder.samlOptions(samlOptions.let(IResolvable::unwrap))
     }
 
-    public override fun samlOptions(samlOptions: SamlConfigOptionsProperty) {
+    override fun samlOptions(samlOptions: SamlConfigOptionsProperty) {
       cdkBuilder.samlOptions(samlOptions.let(SamlConfigOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e6f686691d030724cbcf06455357d131785d142c32d88d2163185e08d40523f2")
-    public override fun samlOptions(samlOptions: SamlConfigOptionsProperty.Builder.() -> Unit): Unit
-        = samlOptions(SamlConfigOptionsProperty(samlOptions))
+    override fun samlOptions(samlOptions: SamlConfigOptionsProperty.Builder.() -> Unit): Unit =
+        samlOptions(SamlConfigOptionsProperty(samlOptions))
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -147,17 +141,13 @@ public open class CfnSecurityConfig internal constructor(
     public fun userAttribute(): String? = unwrap(this).getUserAttribute()
 
     public interface Builder {
-      public fun groupAttribute(groupAttribute: String) {
-      }
+      public fun groupAttribute(groupAttribute: String)
 
-      public fun metadata(metadata: String) {
-      }
+      public fun metadata(metadata: String)
 
-      public fun sessionTimeout(sessionTimeout: Number) {
-      }
+      public fun sessionTimeout(sessionTimeout: Number)
 
-      public fun userAttribute(userAttribute: String) {
-      }
+      public fun userAttribute(userAttribute: String)
     }
 
     private class BuilderImpl : Builder {
@@ -166,19 +156,19 @@ public open class CfnSecurityConfig internal constructor(
           =
           software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty.builder()
 
-      public override fun groupAttribute(groupAttribute: String) {
+      override fun groupAttribute(groupAttribute: String) {
         cdkBuilder.groupAttribute(groupAttribute)
       }
 
-      public override fun metadata(metadata: String) {
+      override fun metadata(metadata: String) {
         cdkBuilder.metadata(metadata)
       }
 
-      public override fun sessionTimeout(sessionTimeout: Number) {
+      override fun sessionTimeout(sessionTimeout: Number) {
         cdkBuilder.sessionTimeout(sessionTimeout)
       }
 
-      public override fun userAttribute(userAttribute: String) {
+      override fun userAttribute(userAttribute: String) {
         cdkBuilder.userAttribute(userAttribute)
       }
 
@@ -191,13 +181,13 @@ public open class CfnSecurityConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty,
     ) : SamlConfigOptionsProperty {
-      public override fun groupAttribute(): String? = unwrap(this).getGroupAttribute()
+      override fun groupAttribute(): String? = unwrap(this).getGroupAttribute()
 
-      public override fun metadata(): String = unwrap(this).getMetadata()
+      override fun metadata(): String = unwrap(this).getMetadata()
 
-      public override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
 
-      public override fun userAttribute(): String? = unwrap(this).getUserAttribute()
+      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
     }
 
     public companion object {

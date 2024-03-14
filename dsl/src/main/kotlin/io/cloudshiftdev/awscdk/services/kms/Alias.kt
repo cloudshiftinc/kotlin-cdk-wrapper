@@ -63,14 +63,11 @@ public open class Alias internal constructor(
   public override fun keyId(): String = unwrap(this).getKeyId()
 
   public interface Builder {
-    public fun aliasName(aliasName: String) {
-    }
+    public fun aliasName(aliasName: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun targetKey(targetKey: IKey) {
-    }
+    public fun targetKey(targetKey: IKey)
   }
 
   private class BuilderImpl(
@@ -80,15 +77,15 @@ public open class Alias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kms.Alias.Builder =
         software.amazon.awscdk.services.kms.Alias.Builder.create(scope, id)
 
-    public override fun aliasName(aliasName: String) {
+    override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun targetKey(targetKey: IKey) {
+    override fun targetKey(targetKey: IKey) {
       cdkBuilder.targetKey(targetKey.let(IKey::unwrap))
     }
 

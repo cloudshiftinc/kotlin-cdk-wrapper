@@ -6,7 +6,7 @@ public interface INextable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.INextable,
   ) : INextable {
-    public override fun next(arg0: IChainable): Chain =
+    override fun next(arg0: IChainable): Chain =
         unwrap(this).next(arg0.let(IChainable::unwrap)).let(Chain::wrap)
   }
 

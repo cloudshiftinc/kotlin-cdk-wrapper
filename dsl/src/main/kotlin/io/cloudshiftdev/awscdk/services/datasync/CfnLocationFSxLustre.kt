@@ -52,17 +52,13 @@ public open class CfnLocationFSxLustre internal constructor(
   }
 
   public interface Builder {
-    public fun fsxFilesystemArn(fsxFilesystemArn: String) {
-    }
+    public fun fsxFilesystemArn(fsxFilesystemArn: String)
 
-    public fun securityGroupArns(securityGroupArns: List<String>) {
-    }
+    public fun securityGroupArns(securityGroupArns: List<String>)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -72,19 +68,19 @@ public open class CfnLocationFSxLustre internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationFSxLustre.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationFSxLustre.Builder.create(scope, id)
 
-    public override fun fsxFilesystemArn(fsxFilesystemArn: String) {
+    override fun fsxFilesystemArn(fsxFilesystemArn: String) {
       cdkBuilder.fsxFilesystemArn(fsxFilesystemArn)
     }
 
-    public override fun securityGroupArns(securityGroupArns: List<String>) {
+    override fun securityGroupArns(securityGroupArns: List<String>) {
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

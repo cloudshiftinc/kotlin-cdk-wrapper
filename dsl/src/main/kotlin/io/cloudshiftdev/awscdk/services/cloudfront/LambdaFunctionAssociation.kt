@@ -12,14 +12,11 @@ public interface LambdaFunctionAssociation {
   public fun lambdaFunction(): IVersion
 
   public interface Builder {
-    public fun eventType(eventType: LambdaEdgeEventType) {
-    }
+    public fun eventType(eventType: LambdaEdgeEventType)
 
-    public fun includeBody(includeBody: Boolean) {
-    }
+    public fun includeBody(includeBody: Boolean)
 
-    public fun lambdaFunction(lambdaFunction: IVersion) {
-    }
+    public fun lambdaFunction(lambdaFunction: IVersion)
   }
 
   private class BuilderImpl : Builder {
@@ -27,15 +24,15 @@ public interface LambdaFunctionAssociation {
         software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation.Builder =
         software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation.builder()
 
-    public override fun eventType(eventType: LambdaEdgeEventType) {
+    override fun eventType(eventType: LambdaEdgeEventType) {
       cdkBuilder.eventType(eventType.let(LambdaEdgeEventType::unwrap))
     }
 
-    public override fun includeBody(includeBody: Boolean) {
+    override fun includeBody(includeBody: Boolean) {
       cdkBuilder.includeBody(includeBody)
     }
 
-    public override fun lambdaFunction(lambdaFunction: IVersion) {
+    override fun lambdaFunction(lambdaFunction: IVersion) {
       cdkBuilder.lambdaFunction(lambdaFunction.let(IVersion::unwrap))
     }
 
@@ -46,13 +43,12 @@ public interface LambdaFunctionAssociation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation,
   ) : LambdaFunctionAssociation {
-    public override fun eventType(): LambdaEdgeEventType =
+    override fun eventType(): LambdaEdgeEventType =
         unwrap(this).getEventType().let(LambdaEdgeEventType::wrap)
 
-    public override fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
+    override fun includeBody(): Boolean? = unwrap(this).getIncludeBody()
 
-    public override fun lambdaFunction(): IVersion =
-        unwrap(this).getLambdaFunction().let(IVersion::wrap)
+    override fun lambdaFunction(): IVersion = unwrap(this).getLambdaFunction().let(IVersion::wrap)
   }
 
   public companion object {

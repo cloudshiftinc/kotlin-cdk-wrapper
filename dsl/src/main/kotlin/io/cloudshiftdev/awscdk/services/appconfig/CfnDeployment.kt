@@ -73,29 +73,21 @@ public open class CfnDeployment internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun configurationProfileId(configurationProfileId: String) {
-    }
+    public fun configurationProfileId(configurationProfileId: String)
 
-    public fun configurationVersion(configurationVersion: String) {
-    }
+    public fun configurationVersion(configurationVersion: String)
 
-    public fun deploymentStrategyId(deploymentStrategyId: String) {
-    }
+    public fun deploymentStrategyId(deploymentStrategyId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environmentId(environmentId: String) {
-    }
+    public fun environmentId(environmentId: String)
 
-    public fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
-    }
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -105,35 +97,35 @@ public open class CfnDeployment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.CfnDeployment.Builder =
         software.amazon.awscdk.services.appconfig.CfnDeployment.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun configurationProfileId(configurationProfileId: String) {
+    override fun configurationProfileId(configurationProfileId: String) {
       cdkBuilder.configurationProfileId(configurationProfileId)
     }
 
-    public override fun configurationVersion(configurationVersion: String) {
+    override fun configurationVersion(configurationVersion: String) {
       cdkBuilder.configurationVersion(configurationVersion)
     }
 
-    public override fun deploymentStrategyId(deploymentStrategyId: String) {
+    override fun deploymentStrategyId(deploymentStrategyId: String) {
       cdkBuilder.deploymentStrategyId(deploymentStrategyId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environmentId(environmentId: String) {
+    override fun environmentId(environmentId: String) {
       cdkBuilder.environmentId(environmentId)
     }
 
-    public override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
       cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

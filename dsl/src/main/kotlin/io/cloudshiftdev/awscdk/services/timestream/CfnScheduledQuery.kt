@@ -148,73 +148,54 @@ public open class CfnScheduledQuery internal constructor(
       = targetConfiguration(TargetConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun clientToken(clientToken: String) {
-    }
+    public fun clientToken(clientToken: String)
 
-    public fun errorReportConfiguration(errorReportConfiguration: IResolvable) {
-    }
+    public fun errorReportConfiguration(errorReportConfiguration: IResolvable)
 
-    public
-        fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty) {
-    }
+    public fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7bfe794776193612b5485c99f5ba93321fe0df4156921ed0dc1b035331c40d3e")
     public
-        fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun notificationConfiguration(notificationConfiguration: IResolvable) {
-    }
+    public fun notificationConfiguration(notificationConfiguration: IResolvable)
 
     public
-        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-    }
+        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0581f4d091c9b040397b06ada7726e666675f642d252b1bda9a21d664c96bd78")
     public
-        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit)
 
-    public fun queryString(queryString: String) {
-    }
+    public fun queryString(queryString: String)
 
-    public fun scheduleConfiguration(scheduleConfiguration: IResolvable) {
-    }
+    public fun scheduleConfiguration(scheduleConfiguration: IResolvable)
 
-    public fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty) {
-    }
+    public fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac3e7fbea51588daf5501c3f5e4234a2843fee71ff735a1d567c3dabce05d27a")
     public
-        fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty.Builder.() -> Unit)
 
-    public fun scheduledQueryExecutionRoleArn(scheduledQueryExecutionRoleArn: String) {
-    }
+    public fun scheduledQueryExecutionRoleArn(scheduledQueryExecutionRoleArn: String)
 
-    public fun scheduledQueryName(scheduledQueryName: String) {
-    }
+    public fun scheduledQueryName(scheduledQueryName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetConfiguration(targetConfiguration: IResolvable) {
-    }
+    public fun targetConfiguration(targetConfiguration: IResolvable)
 
-    public fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
-    }
+    public fun targetConfiguration(targetConfiguration: TargetConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15214f67673f1b761dd057fb89e573b913589d1b0b19b4a46e90b5ff8afd6b90")
     public
-        fun targetConfiguration(targetConfiguration: TargetConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun targetConfiguration(targetConfiguration: TargetConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -224,87 +205,86 @@ public open class CfnScheduledQuery internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.timestream.CfnScheduledQuery.Builder =
         software.amazon.awscdk.services.timestream.CfnScheduledQuery.Builder.create(scope, id)
 
-    public override fun clientToken(clientToken: String) {
+    override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
 
-    public override fun errorReportConfiguration(errorReportConfiguration: IResolvable) {
+    override fun errorReportConfiguration(errorReportConfiguration: IResolvable) {
       cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty) {
       cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(ErrorReportConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7bfe794776193612b5485c99f5ba93321fe0df4156921ed0dc1b035331c40d3e")
-    public override
+    override
         fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty.Builder.() -> Unit):
         Unit = errorReportConfiguration(ErrorReportConfigurationProperty(errorReportConfiguration))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun notificationConfiguration(notificationConfiguration: IResolvable) {
+    override fun notificationConfiguration(notificationConfiguration: IResolvable) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0581f4d091c9b040397b06ada7726e666675f642d252b1bda9a21d664c96bd78")
-    public override
+    override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit):
         Unit =
         notificationConfiguration(NotificationConfigurationProperty(notificationConfiguration))
 
-    public override fun queryString(queryString: String) {
+    override fun queryString(queryString: String) {
       cdkBuilder.queryString(queryString)
     }
 
-    public override fun scheduleConfiguration(scheduleConfiguration: IResolvable) {
+    override fun scheduleConfiguration(scheduleConfiguration: IResolvable) {
       cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty) {
+    override fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty) {
       cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(ScheduleConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac3e7fbea51588daf5501c3f5e4234a2843fee71ff735a1d567c3dabce05d27a")
-    public override
+    override
         fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty.Builder.() -> Unit):
         Unit = scheduleConfiguration(ScheduleConfigurationProperty(scheduleConfiguration))
 
-    public override fun scheduledQueryExecutionRoleArn(scheduledQueryExecutionRoleArn: String) {
+    override fun scheduledQueryExecutionRoleArn(scheduledQueryExecutionRoleArn: String) {
       cdkBuilder.scheduledQueryExecutionRoleArn(scheduledQueryExecutionRoleArn)
     }
 
-    public override fun scheduledQueryName(scheduledQueryName: String) {
+    override fun scheduledQueryName(scheduledQueryName: String) {
       cdkBuilder.scheduledQueryName(scheduledQueryName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetConfiguration(targetConfiguration: IResolvable) {
+    override fun targetConfiguration(targetConfiguration: IResolvable) {
       cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
+    override fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
       cdkBuilder.targetConfiguration(targetConfiguration.let(TargetConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15214f67673f1b761dd057fb89e573b913589d1b0b19b4a46e90b5ff8afd6b90")
-    public override
+    override
         fun targetConfiguration(targetConfiguration: TargetConfigurationProperty.Builder.() -> Unit):
         Unit = targetConfiguration(TargetConfigurationProperty(targetConfiguration))
 
@@ -339,11 +319,9 @@ public open class CfnScheduledQuery internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun dimensionValueType(dimensionValueType: String) {
-      }
+      public fun dimensionValueType(dimensionValueType: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -352,11 +330,11 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.DimensionMappingProperty.builder()
 
-      public override fun dimensionValueType(dimensionValueType: String) {
+      override fun dimensionValueType(dimensionValueType: String) {
         cdkBuilder.dimensionValueType(dimensionValueType)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -369,9 +347,9 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.DimensionMappingProperty,
     ) : DimensionMappingProperty {
-      public override fun dimensionValueType(): String = unwrap(this).getDimensionValueType()
+      override fun dimensionValueType(): String = unwrap(this).getDimensionValueType()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -398,17 +376,14 @@ public open class CfnScheduledQuery internal constructor(
     public fun timestreamConfiguration(): Any
 
     public interface Builder {
-      public fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
-      }
+      public fun timestreamConfiguration(timestreamConfiguration: IResolvable)
 
-      public fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty) {
-      }
+      public fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1ac9ecda4c2a7bc502ab841a078ca5ebdc294da4d1316e3d67027be3199eaef")
       public
-          fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -417,18 +392,18 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TargetConfigurationProperty.builder()
 
-      public override fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
+      override fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
         cdkBuilder.timestreamConfiguration(timestreamConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty) {
         cdkBuilder.timestreamConfiguration(timestreamConfiguration.let(TimestreamConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1ac9ecda4c2a7bc502ab841a078ca5ebdc294da4d1316e3d67027be3199eaef")
-      public override
+      override
           fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty.Builder.() -> Unit):
           Unit = timestreamConfiguration(TimestreamConfigurationProperty(timestreamConfiguration))
 
@@ -441,7 +416,7 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TargetConfigurationProperty,
     ) : TargetConfigurationProperty {
-      public override fun timestreamConfiguration(): Any = unwrap(this).getTimestreamConfiguration()
+      override fun timestreamConfiguration(): Any = unwrap(this).getTimestreamConfiguration()
     }
 
     public companion object {
@@ -480,41 +455,30 @@ public open class CfnScheduledQuery internal constructor(
     public fun timeColumn(): String
 
     public interface Builder {
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun dimensionMappings(dimensionMappings: IResolvable) {
-      }
+      public fun dimensionMappings(dimensionMappings: IResolvable)
 
-      public fun dimensionMappings(dimensionMappings: List<Any>) {
-      }
+      public fun dimensionMappings(dimensionMappings: List<Any>)
 
-      public fun measureNameColumn(measureNameColumn: String) {
-      }
+      public fun measureNameColumn(measureNameColumn: String)
 
-      public fun mixedMeasureMappings(mixedMeasureMappings: IResolvable) {
-      }
+      public fun mixedMeasureMappings(mixedMeasureMappings: IResolvable)
 
-      public fun mixedMeasureMappings(mixedMeasureMappings: List<Any>) {
-      }
+      public fun mixedMeasureMappings(mixedMeasureMappings: List<Any>)
 
-      public fun multiMeasureMappings(multiMeasureMappings: IResolvable) {
-      }
+      public fun multiMeasureMappings(multiMeasureMappings: IResolvable)
 
-      public fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty) {
-      }
+      public fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87aeb44d2a317d991b450e74460067fbe99618c5d2ef7dfba8a64d43392b5601")
       public
-          fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty.Builder.() -> Unit) {
-      }
+          fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty.Builder.() -> Unit)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
 
-      public fun timeColumn(timeColumn: String) {
-      }
+      public fun timeColumn(timeColumn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -523,49 +487,49 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty.builder()
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun dimensionMappings(dimensionMappings: IResolvable) {
+      override fun dimensionMappings(dimensionMappings: IResolvable) {
         cdkBuilder.dimensionMappings(dimensionMappings.let(IResolvable::unwrap))
       }
 
-      public override fun dimensionMappings(dimensionMappings: List<Any>) {
+      override fun dimensionMappings(dimensionMappings: List<Any>) {
         cdkBuilder.dimensionMappings(dimensionMappings)
       }
 
-      public override fun measureNameColumn(measureNameColumn: String) {
+      override fun measureNameColumn(measureNameColumn: String) {
         cdkBuilder.measureNameColumn(measureNameColumn)
       }
 
-      public override fun mixedMeasureMappings(mixedMeasureMappings: IResolvable) {
+      override fun mixedMeasureMappings(mixedMeasureMappings: IResolvable) {
         cdkBuilder.mixedMeasureMappings(mixedMeasureMappings.let(IResolvable::unwrap))
       }
 
-      public override fun mixedMeasureMappings(mixedMeasureMappings: List<Any>) {
+      override fun mixedMeasureMappings(mixedMeasureMappings: List<Any>) {
         cdkBuilder.mixedMeasureMappings(mixedMeasureMappings)
       }
 
-      public override fun multiMeasureMappings(multiMeasureMappings: IResolvable) {
+      override fun multiMeasureMappings(multiMeasureMappings: IResolvable) {
         cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(IResolvable::unwrap))
       }
 
-      public override fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty) {
+      override fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty) {
         cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(MultiMeasureMappingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87aeb44d2a317d991b450e74460067fbe99618c5d2ef7dfba8a64d43392b5601")
-      public override
+      override
           fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty.Builder.() -> Unit):
           Unit = multiMeasureMappings(MultiMeasureMappingsProperty(multiMeasureMappings))
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
-      public override fun timeColumn(timeColumn: String) {
+      override fun timeColumn(timeColumn: String) {
         cdkBuilder.timeColumn(timeColumn)
       }
 
@@ -578,19 +542,19 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty,
     ) : TimestreamConfigurationProperty {
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun dimensionMappings(): Any = unwrap(this).getDimensionMappings()
+      override fun dimensionMappings(): Any = unwrap(this).getDimensionMappings()
 
-      public override fun measureNameColumn(): String? = unwrap(this).getMeasureNameColumn()
+      override fun measureNameColumn(): String? = unwrap(this).getMeasureNameColumn()
 
-      public override fun mixedMeasureMappings(): Any? = unwrap(this).getMixedMeasureMappings()
+      override fun mixedMeasureMappings(): Any? = unwrap(this).getMixedMeasureMappings()
 
-      public override fun multiMeasureMappings(): Any? = unwrap(this).getMultiMeasureMappings()
+      override fun multiMeasureMappings(): Any? = unwrap(this).getMultiMeasureMappings()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
 
-      public override fun timeColumn(): String = unwrap(this).getTimeColumn()
+      override fun timeColumn(): String = unwrap(this).getTimeColumn()
     }
 
     public companion object {
@@ -617,8 +581,7 @@ public open class CfnScheduledQuery internal constructor(
     public fun topicArn(): String
 
     public interface Builder {
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -627,7 +590,7 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty.builder()
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -640,7 +603,7 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty,
     ) : SnsConfigurationProperty {
-      public override fun topicArn(): String = unwrap(this).getTopicArn()
+      override fun topicArn(): String = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -672,14 +635,11 @@ public open class CfnScheduledQuery internal constructor(
         unwrap(this).getTargetMultiMeasureAttributeName()
 
     public interface Builder {
-      public fun measureValueType(measureValueType: String) {
-      }
+      public fun measureValueType(measureValueType: String)
 
-      public fun sourceColumn(sourceColumn: String) {
-      }
+      public fun sourceColumn(sourceColumn: String)
 
-      public fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String) {
-      }
+      public fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -688,15 +648,15 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty.builder()
 
-      public override fun measureValueType(measureValueType: String) {
+      override fun measureValueType(measureValueType: String) {
         cdkBuilder.measureValueType(measureValueType)
       }
 
-      public override fun sourceColumn(sourceColumn: String) {
+      override fun sourceColumn(sourceColumn: String) {
         cdkBuilder.sourceColumn(sourceColumn)
       }
 
-      public override fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String) {
+      override fun targetMultiMeasureAttributeName(targetMultiMeasureAttributeName: String) {
         cdkBuilder.targetMultiMeasureAttributeName(targetMultiMeasureAttributeName)
       }
 
@@ -709,11 +669,11 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty,
     ) : MultiMeasureAttributeMappingProperty {
-      public override fun measureValueType(): String = unwrap(this).getMeasureValueType()
+      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
 
-      public override fun sourceColumn(): String = unwrap(this).getSourceColumn()
+      override fun sourceColumn(): String = unwrap(this).getSourceColumn()
 
-      public override fun targetMultiMeasureAttributeName(): String? =
+      override fun targetMultiMeasureAttributeName(): String? =
           unwrap(this).getTargetMultiMeasureAttributeName()
     }
 
@@ -742,8 +702,7 @@ public open class CfnScheduledQuery internal constructor(
     public fun scheduleExpression(): String
 
     public interface Builder {
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -752,7 +711,7 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty.builder()
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -765,7 +724,7 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty,
     ) : ScheduleConfigurationProperty {
-      public override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -796,14 +755,11 @@ public open class CfnScheduledQuery internal constructor(
     public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun encryptionOption(encryptionOption: String) {
-      }
+      public fun encryptionOption(encryptionOption: String)
 
-      public fun objectKeyPrefix(objectKeyPrefix: String) {
-      }
+      public fun objectKeyPrefix(objectKeyPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -812,15 +768,15 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun encryptionOption(encryptionOption: String) {
+      override fun encryptionOption(encryptionOption: String) {
         cdkBuilder.encryptionOption(encryptionOption)
       }
 
-      public override fun objectKeyPrefix(objectKeyPrefix: String) {
+      override fun objectKeyPrefix(objectKeyPrefix: String) {
         cdkBuilder.objectKeyPrefix(objectKeyPrefix)
       }
 
@@ -833,11 +789,11 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty,
     ) : S3ConfigurationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun encryptionOption(): String? = unwrap(this).getEncryptionOption()
+      override fun encryptionOption(): String? = unwrap(this).getEncryptionOption()
 
-      public override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
     }
 
     public companion object {
@@ -864,16 +820,13 @@ public open class CfnScheduledQuery internal constructor(
     public fun snsConfiguration(): Any
 
     public interface Builder {
-      public fun snsConfiguration(snsConfiguration: IResolvable) {
-      }
+      public fun snsConfiguration(snsConfiguration: IResolvable)
 
-      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty) {
-      }
+      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8247785498329ea3a738659a4497f5286a4da42d7f30083f3f27a84af446aeb9")
-      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -882,19 +835,18 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty.builder()
 
-      public override fun snsConfiguration(snsConfiguration: IResolvable) {
+      override fun snsConfiguration(snsConfiguration: IResolvable) {
         cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty) {
+      override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty) {
         cdkBuilder.snsConfiguration(snsConfiguration.let(SnsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8247785498329ea3a738659a4497f5286a4da42d7f30083f3f27a84af446aeb9")
-      public override
-          fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit): Unit
-          = snsConfiguration(SnsConfigurationProperty(snsConfiguration))
+      override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty.Builder.() -> Unit):
+          Unit = snsConfiguration(SnsConfigurationProperty(snsConfiguration))
 
       public fun build():
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
@@ -905,7 +857,7 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty,
     ) : NotificationConfigurationProperty {
-      public override fun snsConfiguration(): Any = unwrap(this).getSnsConfiguration()
+      override fun snsConfiguration(): Any = unwrap(this).getSnsConfiguration()
     }
 
     public companion object {
@@ -942,23 +894,17 @@ public open class CfnScheduledQuery internal constructor(
     public fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
 
     public interface Builder {
-      public fun measureName(measureName: String) {
-      }
+      public fun measureName(measureName: String)
 
-      public fun measureValueType(measureValueType: String) {
-      }
+      public fun measureValueType(measureValueType: String)
 
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
-      }
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
 
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
-      }
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
 
-      public fun sourceColumn(sourceColumn: String) {
-      }
+      public fun sourceColumn(sourceColumn: String)
 
-      public fun targetMeasureName(targetMeasureName: String) {
-      }
+      public fun targetMeasureName(targetMeasureName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -967,28 +913,27 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty.builder()
 
-      public override fun measureName(measureName: String) {
+      override fun measureName(measureName: String) {
         cdkBuilder.measureName(measureName)
       }
 
-      public override fun measureValueType(measureValueType: String) {
+      override fun measureValueType(measureValueType: String) {
         cdkBuilder.measureValueType(measureValueType)
       }
 
-      public override
-          fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
         cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
       }
 
-      public override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
         cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
       }
 
-      public override fun sourceColumn(sourceColumn: String) {
+      override fun sourceColumn(sourceColumn: String) {
         cdkBuilder.sourceColumn(sourceColumn)
       }
 
-      public override fun targetMeasureName(targetMeasureName: String) {
+      override fun targetMeasureName(targetMeasureName: String) {
         cdkBuilder.targetMeasureName(targetMeasureName)
       }
 
@@ -1001,16 +946,16 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty,
     ) : MixedMeasureMappingProperty {
-      public override fun measureName(): String? = unwrap(this).getMeasureName()
+      override fun measureName(): String? = unwrap(this).getMeasureName()
 
-      public override fun measureValueType(): String = unwrap(this).getMeasureValueType()
+      override fun measureValueType(): String = unwrap(this).getMeasureValueType()
 
-      public override fun multiMeasureAttributeMappings(): Any? =
+      override fun multiMeasureAttributeMappings(): Any? =
           unwrap(this).getMultiMeasureAttributeMappings()
 
-      public override fun sourceColumn(): String? = unwrap(this).getSourceColumn()
+      override fun sourceColumn(): String? = unwrap(this).getSourceColumn()
 
-      public override fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
+      override fun targetMeasureName(): String? = unwrap(this).getTargetMeasureName()
     }
 
     public companion object {
@@ -1039,14 +984,11 @@ public open class CfnScheduledQuery internal constructor(
     public fun targetMultiMeasureName(): String? = unwrap(this).getTargetMultiMeasureName()
 
     public interface Builder {
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
-      }
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable)
 
-      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
-      }
+      public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
 
-      public fun targetMultiMeasureName(targetMultiMeasureName: String) {
-      }
+      public fun targetMultiMeasureName(targetMultiMeasureName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1055,16 +997,15 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty.builder()
 
-      public override
-          fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
         cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
       }
 
-      public override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
+      override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
         cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
       }
 
-      public override fun targetMultiMeasureName(targetMultiMeasureName: String) {
+      override fun targetMultiMeasureName(targetMultiMeasureName: String) {
         cdkBuilder.targetMultiMeasureName(targetMultiMeasureName)
       }
 
@@ -1077,11 +1018,10 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty,
     ) : MultiMeasureMappingsProperty {
-      public override fun multiMeasureAttributeMappings(): Any =
+      override fun multiMeasureAttributeMappings(): Any =
           unwrap(this).getMultiMeasureAttributeMappings()
 
-      public override fun targetMultiMeasureName(): String? =
-          unwrap(this).getTargetMultiMeasureName()
+      override fun targetMultiMeasureName(): String? = unwrap(this).getTargetMultiMeasureName()
     }
 
     public companion object {
@@ -1108,16 +1048,13 @@ public open class CfnScheduledQuery internal constructor(
     public fun s3Configuration(): Any
 
     public interface Builder {
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2b4d8f1b5c3437012e697fbcab384cbae30b7a7c335885984356212fa9d386e5")
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1126,19 +1063,18 @@ public open class CfnScheduledQuery internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty.builder()
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2b4d8f1b5c3437012e697fbcab384cbae30b7a7c335885984356212fa9d386e5")
-      public override
-          fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit): Unit =
-          s3Configuration(S3ConfigurationProperty(s3Configuration))
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit):
+          Unit = s3Configuration(S3ConfigurationProperty(s3Configuration))
 
       public fun build():
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty
@@ -1149,7 +1085,7 @@ public open class CfnScheduledQuery internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty,
     ) : ErrorReportConfigurationProperty {
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
     }
 
     public companion object {

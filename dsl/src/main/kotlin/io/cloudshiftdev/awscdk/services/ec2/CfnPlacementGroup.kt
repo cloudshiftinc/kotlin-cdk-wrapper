@@ -50,17 +50,13 @@ public open class CfnPlacementGroup internal constructor(
   }
 
   public interface Builder {
-    public fun partitionCount(partitionCount: Number) {
-    }
+    public fun partitionCount(partitionCount: Number)
 
-    public fun spreadLevel(spreadLevel: String) {
-    }
+    public fun spreadLevel(spreadLevel: String)
 
-    public fun strategy(strategy: String) {
-    }
+    public fun strategy(strategy: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -70,19 +66,19 @@ public open class CfnPlacementGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnPlacementGroup.Builder =
         software.amazon.awscdk.services.ec2.CfnPlacementGroup.Builder.create(scope, id)
 
-    public override fun partitionCount(partitionCount: Number) {
+    override fun partitionCount(partitionCount: Number) {
       cdkBuilder.partitionCount(partitionCount)
     }
 
-    public override fun spreadLevel(spreadLevel: String) {
+    override fun spreadLevel(spreadLevel: String) {
       cdkBuilder.spreadLevel(spreadLevel)
     }
 
-    public override fun strategy(strategy: String) {
+    override fun strategy(strategy: String) {
       cdkBuilder.strategy(strategy)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

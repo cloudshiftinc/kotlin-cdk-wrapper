@@ -14,17 +14,13 @@ public open class UserPoolResourceServer internal constructor(
       unwrap(this).getUserPoolResourceServerId()
 
   public interface Builder {
-    public fun identifier(identifier: String) {
-    }
+    public fun identifier(identifier: String)
 
-    public fun scopes(scopes: List<ResourceServerScope>) {
-    }
+    public fun scopes(scopes: List<ResourceServerScope>)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
 
-    public fun userPoolResourceServerName(userPoolResourceServerName: String) {
-    }
+    public fun userPoolResourceServerName(userPoolResourceServerName: String)
   }
 
   private class BuilderImpl(
@@ -34,19 +30,19 @@ public open class UserPoolResourceServer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.UserPoolResourceServer.Builder =
         software.amazon.awscdk.services.cognito.UserPoolResourceServer.Builder.create(scope, id)
 
-    public override fun identifier(identifier: String) {
+    override fun identifier(identifier: String) {
       cdkBuilder.identifier(identifier)
     }
 
-    public override fun scopes(scopes: List<ResourceServerScope>) {
+    override fun scopes(scopes: List<ResourceServerScope>) {
       cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
     }
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 
-    public override fun userPoolResourceServerName(userPoolResourceServerName: String) {
+    override fun userPoolResourceServerName(userPoolResourceServerName: String) {
       cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
     }
 

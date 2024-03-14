@@ -7,8 +7,7 @@ public interface ScheduledFargateTaskDefinitionOptions {
   public fun taskDefinition(): FargateTaskDefinition
 
   public interface Builder {
-    public fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: FargateTaskDefinition)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ScheduledFargateTaskDefinitionOptions {
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions.Builder =
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions.builder()
 
-    public override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
+    override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
     }
 
@@ -29,7 +28,7 @@ public interface ScheduledFargateTaskDefinitionOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions,
   ) : ScheduledFargateTaskDefinitionOptions {
-    public override fun taskDefinition(): FargateTaskDefinition =
+    override fun taskDefinition(): FargateTaskDefinition =
         unwrap(this).getTaskDefinition().let(FargateTaskDefinition::wrap)
   }
 

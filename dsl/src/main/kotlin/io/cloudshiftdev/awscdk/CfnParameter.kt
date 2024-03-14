@@ -90,38 +90,27 @@ public open class CfnParameter internal constructor(
   public open fun valueAsString(): String = unwrap(this).getValueAsString()
 
   public interface Builder {
-    public fun allowedPattern(allowedPattern: String) {
-    }
+    public fun allowedPattern(allowedPattern: String)
 
-    public fun allowedValues(allowedValues: List<String>) {
-    }
+    public fun allowedValues(allowedValues: List<String>)
 
-    public fun constraintDescription(constraintDescription: String) {
-    }
+    public fun constraintDescription(constraintDescription: String)
 
-    public fun defaultValue(defaultValue: Any) {
-    }
+    public fun defaultValue(defaultValue: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun maxLength(maxLength: Number) {
-    }
+    public fun maxLength(maxLength: Number)
 
-    public fun maxValue(maxValue: Number) {
-    }
+    public fun maxValue(maxValue: Number)
 
-    public fun minLength(minLength: Number) {
-    }
+    public fun minLength(minLength: Number)
 
-    public fun minValue(minValue: Number) {
-    }
+    public fun minValue(minValue: Number)
 
-    public fun noEcho(noEcho: Boolean) {
-    }
+    public fun noEcho(noEcho: Boolean)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -131,47 +120,47 @@ public open class CfnParameter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnParameter.Builder =
         software.amazon.awscdk.CfnParameter.Builder.create(scope, id)
 
-    public override fun allowedPattern(allowedPattern: String) {
+    override fun allowedPattern(allowedPattern: String) {
       cdkBuilder.allowedPattern(allowedPattern)
     }
 
-    public override fun allowedValues(allowedValues: List<String>) {
+    override fun allowedValues(allowedValues: List<String>) {
       cdkBuilder.allowedValues(allowedValues)
     }
 
-    public override fun constraintDescription(constraintDescription: String) {
+    override fun constraintDescription(constraintDescription: String) {
       cdkBuilder.constraintDescription(constraintDescription)
     }
 
-    public override fun defaultValue(defaultValue: Any) {
+    override fun defaultValue(defaultValue: Any) {
       cdkBuilder.defaultValue(defaultValue)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun maxLength(maxLength: Number) {
+    override fun maxLength(maxLength: Number) {
       cdkBuilder.maxLength(maxLength)
     }
 
-    public override fun maxValue(maxValue: Number) {
+    override fun maxValue(maxValue: Number) {
       cdkBuilder.maxValue(maxValue)
     }
 
-    public override fun minLength(minLength: Number) {
+    override fun minLength(minLength: Number) {
       cdkBuilder.minLength(minLength)
     }
 
-    public override fun minValue(minValue: Number) {
+    override fun minValue(minValue: Number) {
       cdkBuilder.minValue(minValue)
     }
 
-    public override fun noEcho(noEcho: Boolean) {
+    override fun noEcho(noEcho: Boolean) {
       cdkBuilder.noEcho(noEcho)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

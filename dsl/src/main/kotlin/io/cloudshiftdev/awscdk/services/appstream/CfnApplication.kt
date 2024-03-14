@@ -114,49 +114,35 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun appBlockArn(appBlockArn: String) {
-    }
+    public fun appBlockArn(appBlockArn: String)
 
-    public fun attributesToDelete(attributesToDelete: List<String>) {
-    }
+    public fun attributesToDelete(attributesToDelete: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun iconS3Location(iconS3Location: IResolvable) {
-    }
+    public fun iconS3Location(iconS3Location: IResolvable)
 
-    public fun iconS3Location(iconS3Location: S3LocationProperty) {
-    }
+    public fun iconS3Location(iconS3Location: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46379a305c52b05d35309e241b62804bb95cefc712794ec6cb674c528ace3ce1")
-    public fun iconS3Location(iconS3Location: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun iconS3Location(iconS3Location: S3LocationProperty.Builder.() -> Unit)
 
-    public fun instanceFamilies(instanceFamilies: List<String>) {
-    }
+    public fun instanceFamilies(instanceFamilies: List<String>)
 
-    public fun launchParameters(launchParameters: String) {
-    }
+    public fun launchParameters(launchParameters: String)
 
-    public fun launchPath(launchPath: String) {
-    }
+    public fun launchPath(launchPath: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun platforms(platforms: List<String>) {
-    }
+    public fun platforms(platforms: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workingDirectory(workingDirectory: String) {
-    }
+    public fun workingDirectory(workingDirectory: String)
   }
 
   private class BuilderImpl(
@@ -166,60 +152,60 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnApplication.Builder =
         software.amazon.awscdk.services.appstream.CfnApplication.Builder.create(scope, id)
 
-    public override fun appBlockArn(appBlockArn: String) {
+    override fun appBlockArn(appBlockArn: String) {
       cdkBuilder.appBlockArn(appBlockArn)
     }
 
-    public override fun attributesToDelete(attributesToDelete: List<String>) {
+    override fun attributesToDelete(attributesToDelete: List<String>) {
       cdkBuilder.attributesToDelete(attributesToDelete)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun iconS3Location(iconS3Location: IResolvable) {
+    override fun iconS3Location(iconS3Location: IResolvable) {
       cdkBuilder.iconS3Location(iconS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun iconS3Location(iconS3Location: S3LocationProperty) {
+    override fun iconS3Location(iconS3Location: S3LocationProperty) {
       cdkBuilder.iconS3Location(iconS3Location.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46379a305c52b05d35309e241b62804bb95cefc712794ec6cb674c528ace3ce1")
-    public override fun iconS3Location(iconS3Location: S3LocationProperty.Builder.() -> Unit): Unit
-        = iconS3Location(S3LocationProperty(iconS3Location))
+    override fun iconS3Location(iconS3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+        iconS3Location(S3LocationProperty(iconS3Location))
 
-    public override fun instanceFamilies(instanceFamilies: List<String>) {
+    override fun instanceFamilies(instanceFamilies: List<String>) {
       cdkBuilder.instanceFamilies(instanceFamilies)
     }
 
-    public override fun launchParameters(launchParameters: String) {
+    override fun launchParameters(launchParameters: String) {
       cdkBuilder.launchParameters(launchParameters)
     }
 
-    public override fun launchPath(launchPath: String) {
+    override fun launchPath(launchPath: String) {
       cdkBuilder.launchPath(launchPath)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun platforms(platforms: List<String>) {
+    override fun platforms(platforms: List<String>) {
       cdkBuilder.platforms(platforms)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workingDirectory(workingDirectory: String) {
+    override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)
     }
 
@@ -254,11 +240,9 @@ public open class CfnApplication internal constructor(
     public fun s3Key(): String
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -266,11 +250,11 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.appstream.CfnApplication.S3LocationProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnApplication.S3LocationProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
@@ -283,9 +267,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnApplication.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String = unwrap(this).getS3Key()
+      override fun s3Key(): String = unwrap(this).getS3Key()
     }
 
     public companion object {

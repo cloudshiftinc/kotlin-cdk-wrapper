@@ -15,36 +15,32 @@ public interface S3DataSource {
   public fun s3Location(): S3Location
 
   public interface Builder {
-    public fun attributeNames(attributeNames: List<String>) {
-    }
+    public fun attributeNames(attributeNames: List<String>)
 
-    public fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType) {
-    }
+    public fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType)
 
-    public fun s3DataType(s3DataType: S3DataType) {
-    }
+    public fun s3DataType(s3DataType: S3DataType)
 
-    public fun s3Location(s3Location: S3Location) {
-    }
+    public fun s3Location(s3Location: S3Location)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource.Builder
         = software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource.builder()
 
-    public override fun attributeNames(attributeNames: List<String>) {
+    override fun attributeNames(attributeNames: List<String>) {
       cdkBuilder.attributeNames(attributeNames)
     }
 
-    public override fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType) {
+    override fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType) {
       cdkBuilder.s3DataDistributionType(s3DataDistributionType.let(S3DataDistributionType::unwrap))
     }
 
-    public override fun s3DataType(s3DataType: S3DataType) {
+    override fun s3DataType(s3DataType: S3DataType) {
       cdkBuilder.s3DataType(s3DataType.let(S3DataType::unwrap))
     }
 
-    public override fun s3Location(s3Location: S3Location) {
+    override fun s3Location(s3Location: S3Location) {
       cdkBuilder.s3Location(s3Location.let(S3Location::unwrap))
     }
 
@@ -55,17 +51,14 @@ public interface S3DataSource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource,
   ) : S3DataSource {
-    public override fun attributeNames(): List<String> = unwrap(this).getAttributeNames() ?:
-        emptyList()
+    override fun attributeNames(): List<String> = unwrap(this).getAttributeNames() ?: emptyList()
 
-    public override fun s3DataDistributionType(): S3DataDistributionType? =
+    override fun s3DataDistributionType(): S3DataDistributionType? =
         unwrap(this).getS3DataDistributionType()?.let(S3DataDistributionType::wrap)
 
-    public override fun s3DataType(): S3DataType? =
-        unwrap(this).getS3DataType()?.let(S3DataType::wrap)
+    override fun s3DataType(): S3DataType? = unwrap(this).getS3DataType()?.let(S3DataType::wrap)
 
-    public override fun s3Location(): S3Location =
-        unwrap(this).getS3Location().let(S3Location::wrap)
+    override fun s3Location(): S3Location = unwrap(this).getS3Location().let(S3Location::wrap)
   }
 
   public companion object {

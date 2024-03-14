@@ -8,29 +8,26 @@ public interface MountPoint : BaseMountPoint {
   public fun sourceVolume(): String
 
   public interface Builder {
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun readOnly(readOnly: Boolean) {
-    }
+    public fun readOnly(readOnly: Boolean)
 
-    public fun sourceVolume(sourceVolume: String) {
-    }
+    public fun sourceVolume(sourceVolume: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.MountPoint.Builder =
         software.amazon.awscdk.services.ecs.MountPoint.builder()
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun readOnly(readOnly: Boolean) {
+    override fun readOnly(readOnly: Boolean) {
       cdkBuilder.readOnly(readOnly)
     }
 
-    public override fun sourceVolume(sourceVolume: String) {
+    override fun sourceVolume(sourceVolume: String) {
       cdkBuilder.sourceVolume(sourceVolume)
     }
 
@@ -40,11 +37,11 @@ public interface MountPoint : BaseMountPoint {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.MountPoint,
   ) : MountPoint {
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun readOnly(): Boolean = unwrap(this).getReadOnly()
+    override fun readOnly(): Boolean = unwrap(this).getReadOnly()
 
-    public override fun sourceVolume(): String = unwrap(this).getSourceVolume()
+    override fun sourceVolume(): String = unwrap(this).getSourceVolume()
   }
 
   public companion object {

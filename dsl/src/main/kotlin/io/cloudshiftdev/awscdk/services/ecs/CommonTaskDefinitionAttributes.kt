@@ -14,17 +14,13 @@ public interface CommonTaskDefinitionAttributes {
   public fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun networkMode(networkMode: NetworkMode) {
-    }
+    public fun networkMode(networkMode: NetworkMode)
 
-    public fun taskDefinitionArn(taskDefinitionArn: String) {
-    }
+    public fun taskDefinitionArn(taskDefinitionArn: String)
 
-    public fun taskRole(taskRole: IRole) {
-    }
+    public fun taskRole(taskRole: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -32,19 +28,19 @@ public interface CommonTaskDefinitionAttributes {
         software.amazon.awscdk.services.ecs.CommonTaskDefinitionAttributes.Builder =
         software.amazon.awscdk.services.ecs.CommonTaskDefinitionAttributes.builder()
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun networkMode(networkMode: NetworkMode) {
+    override fun networkMode(networkMode: NetworkMode) {
       cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
     }
 
-    public override fun taskDefinitionArn(taskDefinitionArn: String) {
+    override fun taskDefinitionArn(taskDefinitionArn: String) {
       cdkBuilder.taskDefinitionArn(taskDefinitionArn)
     }
 
-    public override fun taskRole(taskRole: IRole) {
+    override fun taskRole(taskRole: IRole) {
       cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
     }
 
@@ -55,14 +51,13 @@ public interface CommonTaskDefinitionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.CommonTaskDefinitionAttributes,
   ) : CommonTaskDefinitionAttributes {
-    public override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+    override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
 
-    public override fun networkMode(): NetworkMode? =
-        unwrap(this).getNetworkMode()?.let(NetworkMode::wrap)
+    override fun networkMode(): NetworkMode? = unwrap(this).getNetworkMode()?.let(NetworkMode::wrap)
 
-    public override fun taskDefinitionArn(): String = unwrap(this).getTaskDefinitionArn()
+    override fun taskDefinitionArn(): String = unwrap(this).getTaskDefinitionArn()
 
-    public override fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
+    override fun taskRole(): IRole? = unwrap(this).getTaskRole()?.let(IRole::wrap)
   }
 
   public companion object {

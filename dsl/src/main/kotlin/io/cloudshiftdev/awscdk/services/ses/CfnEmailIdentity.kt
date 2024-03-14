@@ -115,68 +115,50 @@ public open class CfnEmailIdentity internal constructor(
       mailFromAttributes(MailFromAttributesProperty(`value`))
 
   public interface Builder {
-    public fun configurationSetAttributes(configurationSetAttributes: IResolvable) {
-    }
+    public fun configurationSetAttributes(configurationSetAttributes: IResolvable)
 
     public
-        fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty) {
-    }
+        fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ffd732bc38e8a9a9931b828a2f24ca4cabe7d304286618ff28817e5584ce2ef5")
     public
-        fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty.Builder.() -> Unit) {
-    }
+        fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty.Builder.() -> Unit)
 
-    public fun dkimAttributes(dkimAttributes: IResolvable) {
-    }
+    public fun dkimAttributes(dkimAttributes: IResolvable)
 
-    public fun dkimAttributes(dkimAttributes: DkimAttributesProperty) {
-    }
+    public fun dkimAttributes(dkimAttributes: DkimAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18881700a5539a5cba94fe287dcc39baa1b925439dbb5bd08a36d66b8d2af706")
-    public fun dkimAttributes(dkimAttributes: DkimAttributesProperty.Builder.() -> Unit) {
-    }
+    public fun dkimAttributes(dkimAttributes: DkimAttributesProperty.Builder.() -> Unit)
 
-    public fun dkimSigningAttributes(dkimSigningAttributes: IResolvable) {
-    }
+    public fun dkimSigningAttributes(dkimSigningAttributes: IResolvable)
 
-    public fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty) {
-    }
+    public fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0dc9de9a7cd51baeddf84a283c353afab9d9b5c688a3693de80758c6c6834fee")
     public
-        fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty.Builder.() -> Unit) {
-    }
+        fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty.Builder.() -> Unit)
 
-    public fun emailIdentity(emailIdentity: String) {
-    }
+    public fun emailIdentity(emailIdentity: String)
 
-    public fun feedbackAttributes(feedbackAttributes: IResolvable) {
-    }
+    public fun feedbackAttributes(feedbackAttributes: IResolvable)
 
-    public fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty) {
-    }
+    public fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6001f91ab44b70b5e6ca308eb64654f5701fd36f86cd4ea6d866b8bf460ab8e2")
-    public
-        fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty.Builder.() -> Unit) {
-    }
+    public fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty.Builder.() -> Unit)
 
-    public fun mailFromAttributes(mailFromAttributes: IResolvable) {
-    }
+    public fun mailFromAttributes(mailFromAttributes: IResolvable)
 
-    public fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
-    }
+    public fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("36c483098983e40c937de7187d3738ec856f1c4fef00108fbe31ab20c972c029")
-    public
-        fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty.Builder.() -> Unit) {
-    }
+    public fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -186,79 +168,78 @@ public open class CfnEmailIdentity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnEmailIdentity.Builder =
         software.amazon.awscdk.services.ses.CfnEmailIdentity.Builder.create(scope, id)
 
-    public override fun configurationSetAttributes(configurationSetAttributes: IResolvable) {
+    override fun configurationSetAttributes(configurationSetAttributes: IResolvable) {
       cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty) {
       cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(ConfigurationSetAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ffd732bc38e8a9a9931b828a2f24ca4cabe7d304286618ff28817e5584ce2ef5")
-    public override
+    override
         fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty.Builder.() -> Unit):
         Unit =
         configurationSetAttributes(ConfigurationSetAttributesProperty(configurationSetAttributes))
 
-    public override fun dkimAttributes(dkimAttributes: IResolvable) {
+    override fun dkimAttributes(dkimAttributes: IResolvable) {
       cdkBuilder.dkimAttributes(dkimAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun dkimAttributes(dkimAttributes: DkimAttributesProperty) {
+    override fun dkimAttributes(dkimAttributes: DkimAttributesProperty) {
       cdkBuilder.dkimAttributes(dkimAttributes.let(DkimAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18881700a5539a5cba94fe287dcc39baa1b925439dbb5bd08a36d66b8d2af706")
-    public override fun dkimAttributes(dkimAttributes: DkimAttributesProperty.Builder.() -> Unit):
-        Unit = dkimAttributes(DkimAttributesProperty(dkimAttributes))
+    override fun dkimAttributes(dkimAttributes: DkimAttributesProperty.Builder.() -> Unit): Unit =
+        dkimAttributes(DkimAttributesProperty(dkimAttributes))
 
-    public override fun dkimSigningAttributes(dkimSigningAttributes: IResolvable) {
+    override fun dkimSigningAttributes(dkimSigningAttributes: IResolvable) {
       cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(IResolvable::unwrap))
     }
 
-    public override
-        fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty) {
+    override fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty) {
       cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(DkimSigningAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0dc9de9a7cd51baeddf84a283c353afab9d9b5c688a3693de80758c6c6834fee")
-    public override
+    override
         fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty.Builder.() -> Unit):
         Unit = dkimSigningAttributes(DkimSigningAttributesProperty(dkimSigningAttributes))
 
-    public override fun emailIdentity(emailIdentity: String) {
+    override fun emailIdentity(emailIdentity: String) {
       cdkBuilder.emailIdentity(emailIdentity)
     }
 
-    public override fun feedbackAttributes(feedbackAttributes: IResolvable) {
+    override fun feedbackAttributes(feedbackAttributes: IResolvable) {
       cdkBuilder.feedbackAttributes(feedbackAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty) {
+    override fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty) {
       cdkBuilder.feedbackAttributes(feedbackAttributes.let(FeedbackAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6001f91ab44b70b5e6ca308eb64654f5701fd36f86cd4ea6d866b8bf460ab8e2")
-    public override
+    override
         fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty.Builder.() -> Unit):
         Unit = feedbackAttributes(FeedbackAttributesProperty(feedbackAttributes))
 
-    public override fun mailFromAttributes(mailFromAttributes: IResolvable) {
+    override fun mailFromAttributes(mailFromAttributes: IResolvable) {
       cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
+    override fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
       cdkBuilder.mailFromAttributes(mailFromAttributes.let(MailFromAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("36c483098983e40c937de7187d3738ec856f1c4fef00108fbe31ab20c972c029")
-    public override
+    override
         fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty.Builder.() -> Unit):
         Unit = mailFromAttributes(MailFromAttributesProperty(mailFromAttributes))
 
@@ -290,11 +271,9 @@ public open class CfnEmailIdentity internal constructor(
     public fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
 
     public interface Builder {
-      public fun emailForwardingEnabled(emailForwardingEnabled: Boolean) {
-      }
+      public fun emailForwardingEnabled(emailForwardingEnabled: Boolean)
 
-      public fun emailForwardingEnabled(emailForwardingEnabled: IResolvable) {
-      }
+      public fun emailForwardingEnabled(emailForwardingEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -302,11 +281,11 @@ public open class CfnEmailIdentity internal constructor(
           software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty.Builder =
           software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty.builder()
 
-      public override fun emailForwardingEnabled(emailForwardingEnabled: Boolean) {
+      override fun emailForwardingEnabled(emailForwardingEnabled: Boolean) {
         cdkBuilder.emailForwardingEnabled(emailForwardingEnabled)
       }
 
-      public override fun emailForwardingEnabled(emailForwardingEnabled: IResolvable) {
+      override fun emailForwardingEnabled(emailForwardingEnabled: IResolvable) {
         cdkBuilder.emailForwardingEnabled(emailForwardingEnabled.let(IResolvable::unwrap))
       }
 
@@ -319,7 +298,7 @@ public open class CfnEmailIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnEmailIdentity.FeedbackAttributesProperty,
     ) : FeedbackAttributesProperty {
-      public override fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
+      override fun emailForwardingEnabled(): Any? = unwrap(this).getEmailForwardingEnabled()
     }
 
     public companion object {
@@ -348,11 +327,9 @@ public open class CfnEmailIdentity internal constructor(
     public fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
 
     public interface Builder {
-      public fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
-      }
+      public fun behaviorOnMxFailure(behaviorOnMxFailure: String)
 
-      public fun mailFromDomain(mailFromDomain: String) {
-      }
+      public fun mailFromDomain(mailFromDomain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -360,11 +337,11 @@ public open class CfnEmailIdentity internal constructor(
           software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty.Builder =
           software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty.builder()
 
-      public override fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
+      override fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
         cdkBuilder.behaviorOnMxFailure(behaviorOnMxFailure)
       }
 
-      public override fun mailFromDomain(mailFromDomain: String) {
+      override fun mailFromDomain(mailFromDomain: String) {
         cdkBuilder.mailFromDomain(mailFromDomain)
       }
 
@@ -377,9 +354,9 @@ public open class CfnEmailIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnEmailIdentity.MailFromAttributesProperty,
     ) : MailFromAttributesProperty {
-      public override fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
+      override fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
 
-      public override fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
+      override fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
     }
 
     public companion object {
@@ -410,14 +387,11 @@ public open class CfnEmailIdentity internal constructor(
     public fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
 
     public interface Builder {
-      public fun domainSigningPrivateKey(domainSigningPrivateKey: String) {
-      }
+      public fun domainSigningPrivateKey(domainSigningPrivateKey: String)
 
-      public fun domainSigningSelector(domainSigningSelector: String) {
-      }
+      public fun domainSigningSelector(domainSigningSelector: String)
 
-      public fun nextSigningKeyLength(nextSigningKeyLength: String) {
-      }
+      public fun nextSigningKeyLength(nextSigningKeyLength: String)
     }
 
     private class BuilderImpl : Builder {
@@ -426,15 +400,15 @@ public open class CfnEmailIdentity internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty.builder()
 
-      public override fun domainSigningPrivateKey(domainSigningPrivateKey: String) {
+      override fun domainSigningPrivateKey(domainSigningPrivateKey: String) {
         cdkBuilder.domainSigningPrivateKey(domainSigningPrivateKey)
       }
 
-      public override fun domainSigningSelector(domainSigningSelector: String) {
+      override fun domainSigningSelector(domainSigningSelector: String) {
         cdkBuilder.domainSigningSelector(domainSigningSelector)
       }
 
-      public override fun nextSigningKeyLength(nextSigningKeyLength: String) {
+      override fun nextSigningKeyLength(nextSigningKeyLength: String) {
         cdkBuilder.nextSigningKeyLength(nextSigningKeyLength)
       }
 
@@ -447,12 +421,11 @@ public open class CfnEmailIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimSigningAttributesProperty,
     ) : DkimSigningAttributesProperty {
-      public override fun domainSigningPrivateKey(): String? =
-          unwrap(this).getDomainSigningPrivateKey()
+      override fun domainSigningPrivateKey(): String? = unwrap(this).getDomainSigningPrivateKey()
 
-      public override fun domainSigningSelector(): String? = unwrap(this).getDomainSigningSelector()
+      override fun domainSigningSelector(): String? = unwrap(this).getDomainSigningSelector()
 
-      public override fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
+      override fun nextSigningKeyLength(): String? = unwrap(this).getNextSigningKeyLength()
     }
 
     public companion object {
@@ -479,8 +452,7 @@ public open class CfnEmailIdentity internal constructor(
     public fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
 
     public interface Builder {
-      public fun configurationSetName(configurationSetName: String) {
-      }
+      public fun configurationSetName(configurationSetName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -489,7 +461,7 @@ public open class CfnEmailIdentity internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty.builder()
 
-      public override fun configurationSetName(configurationSetName: String) {
+      override fun configurationSetName(configurationSetName: String) {
         cdkBuilder.configurationSetName(configurationSetName)
       }
 
@@ -502,7 +474,7 @@ public open class CfnEmailIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnEmailIdentity.ConfigurationSetAttributesProperty,
     ) : ConfigurationSetAttributesProperty {
-      public override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+      override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
     }
 
     public companion object {
@@ -530,11 +502,9 @@ public open class CfnEmailIdentity internal constructor(
     public fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
 
     public interface Builder {
-      public fun signingEnabled(signingEnabled: Boolean) {
-      }
+      public fun signingEnabled(signingEnabled: Boolean)
 
-      public fun signingEnabled(signingEnabled: IResolvable) {
-      }
+      public fun signingEnabled(signingEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -542,11 +512,11 @@ public open class CfnEmailIdentity internal constructor(
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.Builder =
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty.builder()
 
-      public override fun signingEnabled(signingEnabled: Boolean) {
+      override fun signingEnabled(signingEnabled: Boolean) {
         cdkBuilder.signingEnabled(signingEnabled)
       }
 
-      public override fun signingEnabled(signingEnabled: IResolvable) {
+      override fun signingEnabled(signingEnabled: IResolvable) {
         cdkBuilder.signingEnabled(signingEnabled.let(IResolvable::unwrap))
       }
 
@@ -559,7 +529,7 @@ public open class CfnEmailIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnEmailIdentity.DkimAttributesProperty,
     ) : DkimAttributesProperty {
-      public override fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
+      override fun signingEnabled(): Any? = unwrap(this).getSigningEnabled()
     }
 
     public companion object {

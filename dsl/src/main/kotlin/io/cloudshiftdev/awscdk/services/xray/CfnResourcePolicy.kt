@@ -41,17 +41,13 @@ public open class CfnResourcePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean) {
-    }
+    public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean)
 
-    public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable) {
-    }
+    public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable)
 
-    public fun policyDocument(policyDocument: String) {
-    }
+    public fun policyDocument(policyDocument: String)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
   }
 
   private class BuilderImpl(
@@ -61,19 +57,19 @@ public open class CfnResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.xray.CfnResourcePolicy.Builder =
         software.amazon.awscdk.services.xray.CfnResourcePolicy.Builder.create(scope, id)
 
-    public override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean) {
+    override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean) {
       cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck)
     }
 
-    public override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable) {
+    override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable) {
       cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck.let(IResolvable::unwrap))
     }
 
-    public override fun policyDocument(policyDocument: String) {
+    override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 

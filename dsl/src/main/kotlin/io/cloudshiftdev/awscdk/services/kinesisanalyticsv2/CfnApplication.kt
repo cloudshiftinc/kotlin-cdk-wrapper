@@ -116,61 +116,44 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun applicationConfiguration(applicationConfiguration: IResolvable) {
-    }
+    public fun applicationConfiguration(applicationConfiguration: IResolvable)
 
-    public
-        fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty) {
-    }
+    public fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("90f924dbfa45b89be4d341c3cb2e03f5125b1f4e304dbad637c1b36750b8a03b")
     public
-        fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty.Builder.() -> Unit)
 
-    public fun applicationDescription(applicationDescription: String) {
-    }
+    public fun applicationDescription(applicationDescription: String)
 
-    public
-        fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable) {
-    }
+    public fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable)
 
     public
-        fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty) {
-    }
+        fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("87f70f8e91c7c91340fc3fb505bf1fb12a937ef7e2b6bfeba9e31465fe1a872d")
     public
-        fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty.Builder.() -> Unit)
 
-    public fun applicationMode(applicationMode: String) {
-    }
+    public fun applicationMode(applicationMode: String)
 
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun runConfiguration(runConfiguration: IResolvable) {
-    }
+    public fun runConfiguration(runConfiguration: IResolvable)
 
-    public fun runConfiguration(runConfiguration: RunConfigurationProperty) {
-    }
+    public fun runConfiguration(runConfiguration: RunConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce34f73b60cb5d1d88415697e0cb762020d25f84a270c4f48813f79656d924af")
-    public fun runConfiguration(runConfiguration: RunConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun runConfiguration(runConfiguration: RunConfigurationProperty.Builder.() -> Unit)
 
-    public fun runtimeEnvironment(runtimeEnvironment: String) {
-    }
+    public fun runtimeEnvironment(runtimeEnvironment: String)
 
-    public fun serviceExecutionRole(serviceExecutionRole: String) {
-    }
+    public fun serviceExecutionRole(serviceExecutionRole: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -181,73 +164,72 @@ public open class CfnApplication internal constructor(
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.Builder =
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.Builder.create(scope, id)
 
-    public override fun applicationConfiguration(applicationConfiguration: IResolvable) {
+    override fun applicationConfiguration(applicationConfiguration: IResolvable) {
       cdkBuilder.applicationConfiguration(applicationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty) {
       cdkBuilder.applicationConfiguration(applicationConfiguration.let(ApplicationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("90f924dbfa45b89be4d341c3cb2e03f5125b1f4e304dbad637c1b36750b8a03b")
-    public override
+    override
         fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty.Builder.() -> Unit):
         Unit = applicationConfiguration(ApplicationConfigurationProperty(applicationConfiguration))
 
-    public override fun applicationDescription(applicationDescription: String) {
+    override fun applicationDescription(applicationDescription: String) {
       cdkBuilder.applicationDescription(applicationDescription)
     }
 
-    public override
+    override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable) {
       cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty) {
       cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(ApplicationMaintenanceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("87f70f8e91c7c91340fc3fb505bf1fb12a937ef7e2b6bfeba9e31465fe1a872d")
-    public override
+    override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty.Builder.() -> Unit):
         Unit =
         applicationMaintenanceConfiguration(ApplicationMaintenanceConfigurationProperty(applicationMaintenanceConfiguration))
 
-    public override fun applicationMode(applicationMode: String) {
+    override fun applicationMode(applicationMode: String) {
       cdkBuilder.applicationMode(applicationMode)
     }
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun runConfiguration(runConfiguration: IResolvable) {
+    override fun runConfiguration(runConfiguration: IResolvable) {
       cdkBuilder.runConfiguration(runConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun runConfiguration(runConfiguration: RunConfigurationProperty) {
+    override fun runConfiguration(runConfiguration: RunConfigurationProperty) {
       cdkBuilder.runConfiguration(runConfiguration.let(RunConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce34f73b60cb5d1d88415697e0cb762020d25f84a270c4f48813f79656d924af")
-    public override
-        fun runConfiguration(runConfiguration: RunConfigurationProperty.Builder.() -> Unit): Unit =
-        runConfiguration(RunConfigurationProperty(runConfiguration))
+    override fun runConfiguration(runConfiguration: RunConfigurationProperty.Builder.() -> Unit):
+        Unit = runConfiguration(RunConfigurationProperty(runConfiguration))
 
-    public override fun runtimeEnvironment(runtimeEnvironment: String) {
+    override fun runtimeEnvironment(runtimeEnvironment: String) {
       cdkBuilder.runtimeEnvironment(runtimeEnvironment)
     }
 
-    public override fun serviceExecutionRole(serviceExecutionRole: String) {
+    override fun serviceExecutionRole(serviceExecutionRole: String) {
       cdkBuilder.serviceExecutionRole(serviceExecutionRole)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -284,14 +266,11 @@ public open class CfnApplication internal constructor(
     public fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
 
     public interface Builder {
-      public fun configurationType(configurationType: String) {
-      }
+      public fun configurationType(configurationType: String)
 
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
 
-      public fun metricsLevel(metricsLevel: String) {
-      }
+      public fun metricsLevel(metricsLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -300,15 +279,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MonitoringConfigurationProperty.builder()
 
-      public override fun configurationType(configurationType: String) {
+      override fun configurationType(configurationType: String) {
         cdkBuilder.configurationType(configurationType)
       }
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
-      public override fun metricsLevel(metricsLevel: String) {
+      override fun metricsLevel(metricsLevel: String) {
         cdkBuilder.metricsLevel(metricsLevel)
       }
 
@@ -321,11 +300,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MonitoringConfigurationProperty,
     ) : MonitoringConfigurationProperty {
-      public override fun configurationType(): String = unwrap(this).getConfigurationType()
+      override fun configurationType(): String = unwrap(this).getConfigurationType()
 
-      public override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
 
-      public override fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
+      override fun metricsLevel(): String? = unwrap(this).getMetricsLevel()
     }
 
     public companion object {
@@ -352,11 +331,9 @@ public open class CfnApplication internal constructor(
     public fun snapshotsEnabled(): Any
 
     public interface Builder {
-      public fun snapshotsEnabled(snapshotsEnabled: Boolean) {
-      }
+      public fun snapshotsEnabled(snapshotsEnabled: Boolean)
 
-      public fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
-      }
+      public fun snapshotsEnabled(snapshotsEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -365,11 +342,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty.builder()
 
-      public override fun snapshotsEnabled(snapshotsEnabled: Boolean) {
+      override fun snapshotsEnabled(snapshotsEnabled: Boolean) {
         cdkBuilder.snapshotsEnabled(snapshotsEnabled)
       }
 
-      public override fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
+      override fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
         cdkBuilder.snapshotsEnabled(snapshotsEnabled.let(IResolvable::unwrap))
       }
 
@@ -382,7 +359,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationSnapshotConfigurationProperty,
     ) : ApplicationSnapshotConfigurationProperty {
-      public override fun snapshotsEnabled(): Any = unwrap(this).getSnapshotsEnabled()
+      override fun snapshotsEnabled(): Any = unwrap(this).getSnapshotsEnabled()
     }
 
     public companion object {
@@ -412,29 +389,23 @@ public open class CfnApplication internal constructor(
     public fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
 
     public interface Builder {
-      public fun csvMappingParameters(csvMappingParameters: IResolvable) {
-      }
+      public fun csvMappingParameters(csvMappingParameters: IResolvable)
 
-      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-      }
+      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("06dc982ddf45b0ed881b41b491fe398268ae0efb1fa0c934e05fee437ae3864c")
       public
-          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit) {
-      }
+          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit)
 
-      public fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-      }
+      public fun jsonMappingParameters(jsonMappingParameters: IResolvable)
 
-      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-      }
+      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("50204536ef00d6390153a15741f4f89590b33a86e1ca38ab8e86557b0da64f9b")
       public
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit) {
-      }
+          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -443,32 +414,31 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MappingParametersProperty.builder()
 
-      public override fun csvMappingParameters(csvMappingParameters: IResolvable) {
+      override fun csvMappingParameters(csvMappingParameters: IResolvable) {
         cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
       }
 
-      public override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
+      override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
         cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("06dc982ddf45b0ed881b41b491fe398268ae0efb1fa0c934e05fee437ae3864c")
-      public override
+      override
           fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit):
           Unit = csvMappingParameters(CSVMappingParametersProperty(csvMappingParameters))
 
-      public override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
+      override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
         cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
       }
 
-      public override
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
+      override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
         cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("50204536ef00d6390153a15741f4f89590b33a86e1ca38ab8e86557b0da64f9b")
-      public override
+      override
           fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit):
           Unit = jsonMappingParameters(JSONMappingParametersProperty(jsonMappingParameters))
 
@@ -481,9 +451,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MappingParametersProperty,
     ) : MappingParametersProperty {
-      public override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+      override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
 
-      public override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+      override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
     }
 
     public companion object {
@@ -510,8 +480,7 @@ public open class CfnApplication internal constructor(
     public fun count(): Number? = unwrap(this).getCount()
 
     public interface Builder {
-      public fun count(count: Number) {
-      }
+      public fun count(count: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -520,7 +489,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputParallelismProperty.builder()
 
-      public override fun count(count: Number) {
+      override fun count(count: Number) {
         cdkBuilder.count(count)
       }
 
@@ -533,7 +502,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputParallelismProperty,
     ) : InputParallelismProperty {
-      public override fun count(): Number? = unwrap(this).getCount()
+      override fun count(): Number? = unwrap(this).getCount()
     }
 
     public companion object {
@@ -560,8 +529,7 @@ public open class CfnApplication internal constructor(
     public fun databaseArn(): String? = unwrap(this).getDatabaseArn()
 
     public interface Builder {
-      public fun databaseArn(databaseArn: String) {
-      }
+      public fun databaseArn(databaseArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -570,7 +538,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.GlueDataCatalogConfigurationProperty.builder()
 
-      public override fun databaseArn(databaseArn: String) {
+      override fun databaseArn(databaseArn: String) {
         cdkBuilder.databaseArn(databaseArn)
       }
 
@@ -583,7 +551,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.GlueDataCatalogConfigurationProperty,
     ) : GlueDataCatalogConfigurationProperty {
-      public override fun databaseArn(): String? = unwrap(this).getDatabaseArn()
+      override fun databaseArn(): String? = unwrap(this).getDatabaseArn()
     }
 
     public companion object {
@@ -613,11 +581,9 @@ public open class CfnApplication internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -626,11 +592,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.VpcConfigurationProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -643,10 +609,10 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -677,42 +643,33 @@ public open class CfnApplication internal constructor(
     public fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
 
     public interface Builder {
-      public fun checkpointConfiguration(checkpointConfiguration: IResolvable) {
-      }
+      public fun checkpointConfiguration(checkpointConfiguration: IResolvable)
 
-      public fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty) {
-      }
+      public fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a2a331f6619f8069b9084e069664e896b4b59ab2b93336622236d8405197e17")
       public
-          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit)
 
-      public fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-      }
+      public fun monitoringConfiguration(monitoringConfiguration: IResolvable)
 
-      public fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
-      }
+      public fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e532f8a5880c5916c3384f733593ac86b69511c491c166e839f781f3dedf2a7")
       public
-          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit)
 
-      public fun parallelismConfiguration(parallelismConfiguration: IResolvable) {
-      }
+      public fun parallelismConfiguration(parallelismConfiguration: IResolvable)
 
       public
-          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty) {
-      }
+          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3eb9e32491e86e72d1101a6d854f2cb99f5e11c95c7415199ba3dec7e059c106")
       public
-          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -721,48 +678,48 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkApplicationConfigurationProperty.builder()
 
-      public override fun checkpointConfiguration(checkpointConfiguration: IResolvable) {
+      override fun checkpointConfiguration(checkpointConfiguration: IResolvable) {
         cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty) {
         cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(CheckpointConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a2a331f6619f8069b9084e069664e896b4b59ab2b93336622236d8405197e17")
-      public override
+      override
           fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty.Builder.() -> Unit):
           Unit = checkpointConfiguration(CheckpointConfigurationProperty(checkpointConfiguration))
 
-      public override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
+      override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
         cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
         cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(MonitoringConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e532f8a5880c5916c3384f733593ac86b69511c491c166e839f781f3dedf2a7")
-      public override
+      override
           fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty.Builder.() -> Unit):
           Unit = monitoringConfiguration(MonitoringConfigurationProperty(monitoringConfiguration))
 
-      public override fun parallelismConfiguration(parallelismConfiguration: IResolvable) {
+      override fun parallelismConfiguration(parallelismConfiguration: IResolvable) {
         cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty) {
         cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(ParallelismConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3eb9e32491e86e72d1101a6d854f2cb99f5e11c95c7415199ba3dec7e059c106")
-      public override
+      override
           fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty.Builder.() -> Unit):
           Unit =
           parallelismConfiguration(ParallelismConfigurationProperty(parallelismConfiguration))
@@ -776,14 +733,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkApplicationConfigurationProperty,
     ) : FlinkApplicationConfigurationProperty {
-      public override fun checkpointConfiguration(): Any? =
-          unwrap(this).getCheckpointConfiguration()
+      override fun checkpointConfiguration(): Any? = unwrap(this).getCheckpointConfiguration()
 
-      public override fun monitoringConfiguration(): Any? =
-          unwrap(this).getMonitoringConfiguration()
+      override fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
 
-      public override fun parallelismConfiguration(): Any? =
-          unwrap(this).getParallelismConfiguration()
+      override fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
     }
 
     public companion object {
@@ -815,25 +769,19 @@ public open class CfnApplication internal constructor(
     public fun recordFormat(): Any
 
     public interface Builder {
-      public fun recordColumns(recordColumns: IResolvable) {
-      }
+      public fun recordColumns(recordColumns: IResolvable)
 
-      public fun recordColumns(recordColumns: List<Any>) {
-      }
+      public fun recordColumns(recordColumns: List<Any>)
 
-      public fun recordEncoding(recordEncoding: String) {
-      }
+      public fun recordEncoding(recordEncoding: String)
 
-      public fun recordFormat(recordFormat: IResolvable) {
-      }
+      public fun recordFormat(recordFormat: IResolvable)
 
-      public fun recordFormat(recordFormat: RecordFormatProperty) {
-      }
+      public fun recordFormat(recordFormat: RecordFormatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64ed657f2df6f0e64c7bd7a4fbe51d08c3695dd141047541bbcf001ef84df8ce")
-      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit) {
-      }
+      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -842,30 +790,30 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputSchemaProperty.builder()
 
-      public override fun recordColumns(recordColumns: IResolvable) {
+      override fun recordColumns(recordColumns: IResolvable) {
         cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
       }
 
-      public override fun recordColumns(recordColumns: List<Any>) {
+      override fun recordColumns(recordColumns: List<Any>) {
         cdkBuilder.recordColumns(recordColumns)
       }
 
-      public override fun recordEncoding(recordEncoding: String) {
+      override fun recordEncoding(recordEncoding: String) {
         cdkBuilder.recordEncoding(recordEncoding)
       }
 
-      public override fun recordFormat(recordFormat: IResolvable) {
+      override fun recordFormat(recordFormat: IResolvable) {
         cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
       }
 
-      public override fun recordFormat(recordFormat: RecordFormatProperty) {
+      override fun recordFormat(recordFormat: RecordFormatProperty) {
         cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("64ed657f2df6f0e64c7bd7a4fbe51d08c3695dd141047541bbcf001ef84df8ce")
-      public override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit
-          = recordFormat(RecordFormatProperty(recordFormat))
+      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
+          recordFormat(RecordFormatProperty(recordFormat))
 
       public fun build():
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputSchemaProperty =
@@ -876,11 +824,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputSchemaProperty,
     ) : InputSchemaProperty {
-      public override fun recordColumns(): Any = unwrap(this).getRecordColumns()
+      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
 
-      public override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
 
-      public override fun recordFormat(): Any = unwrap(this).getRecordFormat()
+      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
     }
 
     public companion object {
@@ -907,8 +855,7 @@ public open class CfnApplication internal constructor(
     public fun recordRowPath(): String
 
     public interface Builder {
-      public fun recordRowPath(recordRowPath: String) {
-      }
+      public fun recordRowPath(recordRowPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -917,7 +864,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.JSONMappingParametersProperty.builder()
 
-      public override fun recordRowPath(recordRowPath: String) {
+      override fun recordRowPath(recordRowPath: String) {
         cdkBuilder.recordRowPath(recordRowPath)
       }
 
@@ -930,7 +877,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.JSONMappingParametersProperty,
     ) : JSONMappingParametersProperty {
-      public override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
+      override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
     }
 
     public companion object {
@@ -961,14 +908,11 @@ public open class CfnApplication internal constructor(
     public fun objectVersion(): String? = unwrap(this).getObjectVersion()
 
     public interface Builder {
-      public fun bucketArn(bucketArn: String) {
-      }
+      public fun bucketArn(bucketArn: String)
 
-      public fun fileKey(fileKey: String) {
-      }
+      public fun fileKey(fileKey: String)
 
-      public fun objectVersion(objectVersion: String) {
-      }
+      public fun objectVersion(objectVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -977,15 +921,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentLocationProperty.builder()
 
-      public override fun bucketArn(bucketArn: String) {
+      override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
-      public override fun fileKey(fileKey: String) {
+      override fun fileKey(fileKey: String) {
         cdkBuilder.fileKey(fileKey)
       }
 
-      public override fun objectVersion(objectVersion: String) {
+      override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
       }
 
@@ -998,11 +942,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentLocationProperty,
     ) : S3ContentLocationProperty {
-      public override fun bucketArn(): String = unwrap(this).getBucketArn()
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
 
-      public override fun fileKey(): String = unwrap(this).getFileKey()
+      override fun fileKey(): String = unwrap(this).getFileKey()
 
-      public override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
     }
 
     public companion object {
@@ -1035,20 +979,15 @@ public open class CfnApplication internal constructor(
     public fun minPauseBetweenCheckpoints(): Number? = unwrap(this).getMinPauseBetweenCheckpoints()
 
     public interface Builder {
-      public fun checkpointInterval(checkpointInterval: Number) {
-      }
+      public fun checkpointInterval(checkpointInterval: Number)
 
-      public fun checkpointingEnabled(checkpointingEnabled: Boolean) {
-      }
+      public fun checkpointingEnabled(checkpointingEnabled: Boolean)
 
-      public fun checkpointingEnabled(checkpointingEnabled: IResolvable) {
-      }
+      public fun checkpointingEnabled(checkpointingEnabled: IResolvable)
 
-      public fun configurationType(configurationType: String) {
-      }
+      public fun configurationType(configurationType: String)
 
-      public fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number) {
-      }
+      public fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1057,23 +996,23 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CheckpointConfigurationProperty.builder()
 
-      public override fun checkpointInterval(checkpointInterval: Number) {
+      override fun checkpointInterval(checkpointInterval: Number) {
         cdkBuilder.checkpointInterval(checkpointInterval)
       }
 
-      public override fun checkpointingEnabled(checkpointingEnabled: Boolean) {
+      override fun checkpointingEnabled(checkpointingEnabled: Boolean) {
         cdkBuilder.checkpointingEnabled(checkpointingEnabled)
       }
 
-      public override fun checkpointingEnabled(checkpointingEnabled: IResolvable) {
+      override fun checkpointingEnabled(checkpointingEnabled: IResolvable) {
         cdkBuilder.checkpointingEnabled(checkpointingEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun configurationType(configurationType: String) {
+      override fun configurationType(configurationType: String) {
         cdkBuilder.configurationType(configurationType)
       }
 
-      public override fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number) {
+      override fun minPauseBetweenCheckpoints(minPauseBetweenCheckpoints: Number) {
         cdkBuilder.minPauseBetweenCheckpoints(minPauseBetweenCheckpoints)
       }
 
@@ -1086,13 +1025,13 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CheckpointConfigurationProperty,
     ) : CheckpointConfigurationProperty {
-      public override fun checkpointInterval(): Number? = unwrap(this).getCheckpointInterval()
+      override fun checkpointInterval(): Number? = unwrap(this).getCheckpointInterval()
 
-      public override fun checkpointingEnabled(): Any? = unwrap(this).getCheckpointingEnabled()
+      override fun checkpointingEnabled(): Any? = unwrap(this).getCheckpointingEnabled()
 
-      public override fun configurationType(): String = unwrap(this).getConfigurationType()
+      override fun configurationType(): String = unwrap(this).getConfigurationType()
 
-      public override fun minPauseBetweenCheckpoints(): Number? =
+      override fun minPauseBetweenCheckpoints(): Number? =
           unwrap(this).getMinPauseBetweenCheckpoints()
     }
 
@@ -1122,19 +1061,15 @@ public open class CfnApplication internal constructor(
     public fun codeContentType(): String
 
     public interface Builder {
-      public fun codeContent(codeContent: IResolvable) {
-      }
+      public fun codeContent(codeContent: IResolvable)
 
-      public fun codeContent(codeContent: CodeContentProperty) {
-      }
+      public fun codeContent(codeContent: CodeContentProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a3fb91dbc21e3cc6ce19b0168de4b380d08d871bb4e71f1b7139a456dff68c61")
-      public fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit) {
-      }
+      public fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit)
 
-      public fun codeContentType(codeContentType: String) {
-      }
+      public fun codeContentType(codeContentType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1143,20 +1078,20 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationCodeConfigurationProperty.builder()
 
-      public override fun codeContent(codeContent: IResolvable) {
+      override fun codeContent(codeContent: IResolvable) {
         cdkBuilder.codeContent(codeContent.let(IResolvable::unwrap))
       }
 
-      public override fun codeContent(codeContent: CodeContentProperty) {
+      override fun codeContent(codeContent: CodeContentProperty) {
         cdkBuilder.codeContent(codeContent.let(CodeContentProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a3fb91dbc21e3cc6ce19b0168de4b380d08d871bb4e71f1b7139a456dff68c61")
-      public override fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit): Unit =
+      override fun codeContent(codeContent: CodeContentProperty.Builder.() -> Unit): Unit =
           codeContent(CodeContentProperty(codeContent))
 
-      public override fun codeContentType(codeContentType: String) {
+      override fun codeContentType(codeContentType: String) {
         cdkBuilder.codeContentType(codeContentType)
       }
 
@@ -1169,9 +1104,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationCodeConfigurationProperty,
     ) : ApplicationCodeConfigurationProperty {
-      public override fun codeContent(): Any = unwrap(this).getCodeContent()
+      override fun codeContent(): Any = unwrap(this).getCodeContent()
 
-      public override fun codeContentType(): String = unwrap(this).getCodeContentType()
+      override fun codeContentType(): String = unwrap(this).getCodeContentType()
     }
 
     public companion object {
@@ -1203,31 +1138,23 @@ public open class CfnApplication internal constructor(
     public fun s3ContentLocation(): Any? = unwrap(this).getS3ContentLocation()
 
     public interface Builder {
-      public fun artifactType(artifactType: String) {
-      }
+      public fun artifactType(artifactType: String)
 
-      public fun mavenReference(mavenReference: IResolvable) {
-      }
+      public fun mavenReference(mavenReference: IResolvable)
 
-      public fun mavenReference(mavenReference: MavenReferenceProperty) {
-      }
+      public fun mavenReference(mavenReference: MavenReferenceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e096744746960911110c857c18c37af8ae7430914754fef46175e251e5b2a4d7")
-      public fun mavenReference(mavenReference: MavenReferenceProperty.Builder.() -> Unit) {
-      }
+      public fun mavenReference(mavenReference: MavenReferenceProperty.Builder.() -> Unit)
 
-      public fun s3ContentLocation(s3ContentLocation: IResolvable) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: IResolvable)
 
-      public fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cd77deb408ba4de3bb61f74cdd1eb47c1893b5d3ab123634ab65c01db6564fe")
-      public
-          fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1236,34 +1163,34 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CustomArtifactConfigurationProperty.builder()
 
-      public override fun artifactType(artifactType: String) {
+      override fun artifactType(artifactType: String) {
         cdkBuilder.artifactType(artifactType)
       }
 
-      public override fun mavenReference(mavenReference: IResolvable) {
+      override fun mavenReference(mavenReference: IResolvable) {
         cdkBuilder.mavenReference(mavenReference.let(IResolvable::unwrap))
       }
 
-      public override fun mavenReference(mavenReference: MavenReferenceProperty) {
+      override fun mavenReference(mavenReference: MavenReferenceProperty) {
         cdkBuilder.mavenReference(mavenReference.let(MavenReferenceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e096744746960911110c857c18c37af8ae7430914754fef46175e251e5b2a4d7")
-      public override fun mavenReference(mavenReference: MavenReferenceProperty.Builder.() -> Unit):
-          Unit = mavenReference(MavenReferenceProperty(mavenReference))
+      override fun mavenReference(mavenReference: MavenReferenceProperty.Builder.() -> Unit): Unit =
+          mavenReference(MavenReferenceProperty(mavenReference))
 
-      public override fun s3ContentLocation(s3ContentLocation: IResolvable) {
+      override fun s3ContentLocation(s3ContentLocation: IResolvable) {
         cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
       }
 
-      public override fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
+      override fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
         cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cd77deb408ba4de3bb61f74cdd1eb47c1893b5d3ab123634ab65c01db6564fe")
-      public override
+      override
           fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty.Builder.() -> Unit):
           Unit = s3ContentLocation(S3ContentLocationProperty(s3ContentLocation))
 
@@ -1276,11 +1203,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CustomArtifactConfigurationProperty,
     ) : CustomArtifactConfigurationProperty {
-      public override fun artifactType(): String = unwrap(this).getArtifactType()
+      override fun artifactType(): String = unwrap(this).getArtifactType()
 
-      public override fun mavenReference(): Any? = unwrap(this).getMavenReference()
+      override fun mavenReference(): Any? = unwrap(this).getMavenReference()
 
-      public override fun s3ContentLocation(): Any? = unwrap(this).getS3ContentLocation()
+      override fun s3ContentLocation(): Any? = unwrap(this).getS3ContentLocation()
     }
 
     public companion object {
@@ -1310,11 +1237,9 @@ public open class CfnApplication internal constructor(
     public fun bucketArn(): String
 
     public interface Builder {
-      public fun basePath(basePath: String) {
-      }
+      public fun basePath(basePath: String)
 
-      public fun bucketArn(bucketArn: String) {
-      }
+      public fun bucketArn(bucketArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1323,11 +1248,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentBaseLocationProperty.builder()
 
-      public override fun basePath(basePath: String) {
+      override fun basePath(basePath: String) {
         cdkBuilder.basePath(basePath)
       }
 
-      public override fun bucketArn(bucketArn: String) {
+      override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
@@ -1340,9 +1265,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.S3ContentBaseLocationProperty,
     ) : S3ContentBaseLocationProperty {
-      public override fun basePath(): String? = unwrap(this).getBasePath()
+      override fun basePath(): String? = unwrap(this).getBasePath()
 
-      public override fun bucketArn(): String = unwrap(this).getBucketArn()
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
     }
 
     public companion object {
@@ -1376,49 +1301,38 @@ public open class CfnApplication internal constructor(
     public fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
 
     public interface Builder {
-      public fun catalogConfiguration(catalogConfiguration: IResolvable) {
-      }
+      public fun catalogConfiguration(catalogConfiguration: IResolvable)
 
-      public fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty) {
-      }
+      public fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a406bfd3e8053c07a462ec7468245bbddb1fa3ae179fb0485f855c8505624ff5")
       public
-          fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty.Builder.() -> Unit)
 
-      public fun customArtifactsConfiguration(customArtifactsConfiguration: IResolvable) {
-      }
+      public fun customArtifactsConfiguration(customArtifactsConfiguration: IResolvable)
 
-      public fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>) {
-      }
+      public fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>)
 
-      public fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable) {
-      }
+      public fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable)
 
       public
-          fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty) {
-      }
+          fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9734947c6d04cb8ce747f61b9050d89a184a8d97a4950f8c49ede2bb1b258120")
       public
-          fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty.Builder.() -> Unit)
 
-      public fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-      }
+      public fun monitoringConfiguration(monitoringConfiguration: IResolvable)
 
       public
-          fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty) {
-      }
+          fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("478c5fb34e0581806a21c8449fa45f9af1304548502762c92f91e8db29d054d4")
       public
-          fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1427,57 +1341,56 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinApplicationConfigurationProperty.builder()
 
-      public override fun catalogConfiguration(catalogConfiguration: IResolvable) {
+      override fun catalogConfiguration(catalogConfiguration: IResolvable) {
         cdkBuilder.catalogConfiguration(catalogConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty) {
+      override fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty) {
         cdkBuilder.catalogConfiguration(catalogConfiguration.let(CatalogConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a406bfd3e8053c07a462ec7468245bbddb1fa3ae179fb0485f855c8505624ff5")
-      public override
+      override
           fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty.Builder.() -> Unit):
           Unit = catalogConfiguration(CatalogConfigurationProperty(catalogConfiguration))
 
-      public override fun customArtifactsConfiguration(customArtifactsConfiguration: IResolvable) {
+      override fun customArtifactsConfiguration(customArtifactsConfiguration: IResolvable) {
         cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>) {
+      override fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>) {
         cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration)
       }
 
-      public override
-          fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable) {
+      override fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable) {
         cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty) {
         cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(DeployAsApplicationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9734947c6d04cb8ce747f61b9050d89a184a8d97a4950f8c49ede2bb1b258120")
-      public override
+      override
           fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty.Builder.() -> Unit):
           Unit =
           deployAsApplicationConfiguration(DeployAsApplicationConfigurationProperty(deployAsApplicationConfiguration))
 
-      public override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
+      override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
         cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty) {
         cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(ZeppelinMonitoringConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("478c5fb34e0581806a21c8449fa45f9af1304548502762c92f91e8db29d054d4")
-      public override
+      override
           fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty.Builder.() -> Unit):
           Unit =
           monitoringConfiguration(ZeppelinMonitoringConfigurationProperty(monitoringConfiguration))
@@ -1491,16 +1404,15 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinApplicationConfigurationProperty,
     ) : ZeppelinApplicationConfigurationProperty {
-      public override fun catalogConfiguration(): Any? = unwrap(this).getCatalogConfiguration()
+      override fun catalogConfiguration(): Any? = unwrap(this).getCatalogConfiguration()
 
-      public override fun customArtifactsConfiguration(): Any? =
+      override fun customArtifactsConfiguration(): Any? =
           unwrap(this).getCustomArtifactsConfiguration()
 
-      public override fun deployAsApplicationConfiguration(): Any? =
+      override fun deployAsApplicationConfiguration(): Any? =
           unwrap(this).getDeployAsApplicationConfiguration()
 
-      public override fun monitoringConfiguration(): Any? =
-          unwrap(this).getMonitoringConfiguration()
+      override fun monitoringConfiguration(): Any? = unwrap(this).getMonitoringConfiguration()
     }
 
     public companion object {
@@ -1528,8 +1440,7 @@ public open class CfnApplication internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1538,7 +1449,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisStreamsInputProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -1551,7 +1462,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisStreamsInputProperty,
     ) : KinesisStreamsInputProperty {
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -1578,11 +1489,9 @@ public open class CfnApplication internal constructor(
     public fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
 
     public interface Builder {
-      public fun propertyGroups(propertyGroups: IResolvable) {
-      }
+      public fun propertyGroups(propertyGroups: IResolvable)
 
-      public fun propertyGroups(propertyGroups: List<Any>) {
-      }
+      public fun propertyGroups(propertyGroups: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1591,11 +1500,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.EnvironmentPropertiesProperty.builder()
 
-      public override fun propertyGroups(propertyGroups: IResolvable) {
+      override fun propertyGroups(propertyGroups: IResolvable) {
         cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
       }
 
-      public override fun propertyGroups(propertyGroups: List<Any>) {
+      override fun propertyGroups(propertyGroups: List<Any>) {
         cdkBuilder.propertyGroups(propertyGroups)
       }
 
@@ -1608,7 +1517,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.EnvironmentPropertiesProperty,
     ) : EnvironmentPropertiesProperty {
-      public override fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
+      override fun propertyGroups(): Any? = unwrap(this).getPropertyGroups()
     }
 
     public companion object {
@@ -1635,17 +1544,14 @@ public open class CfnApplication internal constructor(
     public fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
 
     public interface Builder {
-      public fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
-      }
+      public fun inputLambdaProcessor(inputLambdaProcessor: IResolvable)
 
-      public fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
-      }
+      public fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c155289a722c0e860cf6d56ec1447fb77b92e3fa10a1a0ac2de2e0e3d7a0c92")
       public
-          fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit) {
-      }
+          fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1654,17 +1560,17 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProcessingConfigurationProperty.builder()
 
-      public override fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
+      override fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
         cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable::unwrap))
       }
 
-      public override fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
+      override fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
         cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c155289a722c0e860cf6d56ec1447fb77b92e3fa10a1a0ac2de2e0e3d7a0c92")
-      public override
+      override
           fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty.Builder.() -> Unit):
           Unit = inputLambdaProcessor(InputLambdaProcessorProperty(inputLambdaProcessor))
 
@@ -1677,7 +1583,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProcessingConfigurationProperty,
     ) : InputProcessingConfigurationProperty {
-      public override fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
+      override fun inputLambdaProcessor(): Any? = unwrap(this).getInputLambdaProcessor()
     }
 
     public companion object {
@@ -1707,11 +1613,9 @@ public open class CfnApplication internal constructor(
     public fun snapshotName(): String? = unwrap(this).getSnapshotName()
 
     public interface Builder {
-      public fun applicationRestoreType(applicationRestoreType: String) {
-      }
+      public fun applicationRestoreType(applicationRestoreType: String)
 
-      public fun snapshotName(snapshotName: String) {
-      }
+      public fun snapshotName(snapshotName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1720,11 +1624,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationRestoreConfigurationProperty.builder()
 
-      public override fun applicationRestoreType(applicationRestoreType: String) {
+      override fun applicationRestoreType(applicationRestoreType: String) {
         cdkBuilder.applicationRestoreType(applicationRestoreType)
       }
 
-      public override fun snapshotName(snapshotName: String) {
+      override fun snapshotName(snapshotName: String) {
         cdkBuilder.snapshotName(snapshotName)
       }
 
@@ -1737,10 +1641,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationRestoreConfigurationProperty,
     ) : ApplicationRestoreConfigurationProperty {
-      public override fun applicationRestoreType(): String =
-          unwrap(this).getApplicationRestoreType()
+      override fun applicationRestoreType(): String = unwrap(this).getApplicationRestoreType()
 
-      public override fun snapshotName(): String? = unwrap(this).getSnapshotName()
+      override fun snapshotName(): String? = unwrap(this).getSnapshotName()
     }
 
     public companion object {
@@ -1772,14 +1675,11 @@ public open class CfnApplication internal constructor(
     public fun version(): String
 
     public interface Builder {
-      public fun artifactId(artifactId: String) {
-      }
+      public fun artifactId(artifactId: String)
 
-      public fun groupId(groupId: String) {
-      }
+      public fun groupId(groupId: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1788,15 +1688,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MavenReferenceProperty.builder()
 
-      public override fun artifactId(artifactId: String) {
+      override fun artifactId(artifactId: String) {
         cdkBuilder.artifactId(artifactId)
       }
 
-      public override fun groupId(groupId: String) {
+      override fun groupId(groupId: String) {
         cdkBuilder.groupId(groupId)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -1809,11 +1709,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.MavenReferenceProperty,
     ) : MavenReferenceProperty {
-      public override fun artifactId(): String = unwrap(this).getArtifactId()
+      override fun artifactId(): String = unwrap(this).getArtifactId()
 
-      public override fun groupId(): String = unwrap(this).getGroupId()
+      override fun groupId(): String = unwrap(this).getGroupId()
 
-      public override fun version(): String = unwrap(this).getVersion()
+      override fun version(): String = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -1841,8 +1741,7 @@ public open class CfnApplication internal constructor(
 
     public interface Builder {
       public
-          fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String) {
-      }
+          fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1851,7 +1750,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationMaintenanceConfigurationProperty.builder()
 
-      public override
+      override
           fun applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime: String) {
         cdkBuilder.applicationMaintenanceWindowStartTime(applicationMaintenanceWindowStartTime)
       }
@@ -1865,7 +1764,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationMaintenanceConfigurationProperty,
     ) : ApplicationMaintenanceConfigurationProperty {
-      public override fun applicationMaintenanceWindowStartTime(): String =
+      override fun applicationMaintenanceWindowStartTime(): String =
           unwrap(this).getApplicationMaintenanceWindowStartTime()
     }
 
@@ -1894,11 +1793,9 @@ public open class CfnApplication internal constructor(
     public fun inputs(): Any? = unwrap(this).getInputs()
 
     public interface Builder {
-      public fun inputs(inputs: IResolvable) {
-      }
+      public fun inputs(inputs: IResolvable)
 
-      public fun inputs(inputs: List<Any>) {
-      }
+      public fun inputs(inputs: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1907,11 +1804,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.SqlApplicationConfigurationProperty.builder()
 
-      public override fun inputs(inputs: IResolvable) {
+      override fun inputs(inputs: IResolvable) {
         cdkBuilder.inputs(inputs.let(IResolvable::unwrap))
       }
 
-      public override fun inputs(inputs: List<Any>) {
+      override fun inputs(inputs: List<Any>) {
         cdkBuilder.inputs(inputs)
       }
 
@@ -1924,7 +1821,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.SqlApplicationConfigurationProperty,
     ) : SqlApplicationConfigurationProperty {
-      public override fun inputs(): Any? = unwrap(this).getInputs()
+      override fun inputs(): Any? = unwrap(this).getInputs()
     }
 
     public companion object {
@@ -1952,8 +1849,7 @@ public open class CfnApplication internal constructor(
     public fun logLevel(): String? = unwrap(this).getLogLevel()
 
     public interface Builder {
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1962,7 +1858,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinMonitoringConfigurationProperty.builder()
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
@@ -1975,7 +1871,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ZeppelinMonitoringConfigurationProperty,
     ) : ZeppelinMonitoringConfigurationProperty {
-      public override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
     }
 
     public companion object {
@@ -2003,8 +1899,7 @@ public open class CfnApplication internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2013,7 +1908,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisFirehoseInputProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -2026,7 +1921,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.KinesisFirehoseInputProperty,
     ) : KinesisFirehoseInputProperty {
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -2068,88 +1963,68 @@ public open class CfnApplication internal constructor(
         unwrap(this).getZeppelinApplicationConfiguration()
 
     public interface Builder {
-      public fun applicationCodeConfiguration(applicationCodeConfiguration: IResolvable) {
-      }
+      public fun applicationCodeConfiguration(applicationCodeConfiguration: IResolvable)
 
       public
-          fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty) {
-      }
+          fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d7877605fae94fba496f67774d5d0c87b057f5ae11416a71bdaa1fe79869842d")
       public
-          fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty.Builder.() -> Unit)
 
-      public fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: IResolvable) {
-      }
+      public fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: IResolvable)
 
       public
-          fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty) {
-      }
+          fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30c493a91d69b8dc48f8c1ad0ebc0e1b74f07722c317dc8997c11b2c34afac13")
       public
-          fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty.Builder.() -> Unit)
 
-      public fun environmentProperties(environmentProperties: IResolvable) {
-      }
+      public fun environmentProperties(environmentProperties: IResolvable)
 
-      public fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty) {
-      }
+      public fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("705a63a4a7f4fbb572532c29eea797caa1d0c8a1cbba17fdf4e7e0b5c6f54d8c")
       public
-          fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty.Builder.() -> Unit)
 
-      public fun flinkApplicationConfiguration(flinkApplicationConfiguration: IResolvable) {
-      }
+      public fun flinkApplicationConfiguration(flinkApplicationConfiguration: IResolvable)
 
       public
-          fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty) {
-      }
+          fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("492f8c55c68e53f189bb6f6c90483e42a3e09abeabbe7f54bd0ea1b7f1aa5148")
       public
-          fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty.Builder.() -> Unit)
 
-      public fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable) {
-      }
+      public fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable)
 
       public
-          fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty) {
-      }
+          fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("739a9d42cdc613f937634ee485e7018d1f8244cb03e497d08ddcbafa23ee4cd0")
       public
-          fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty.Builder.() -> Unit)
 
-      public fun vpcConfigurations(vpcConfigurations: IResolvable) {
-      }
+      public fun vpcConfigurations(vpcConfigurations: IResolvable)
 
-      public fun vpcConfigurations(vpcConfigurations: List<Any>) {
-      }
+      public fun vpcConfigurations(vpcConfigurations: List<Any>)
 
-      public fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable) {
-      }
+      public fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable)
 
       public
-          fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty) {
-      }
+          fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b71a50890c438f318a456fa31701c47d511cfa429d6fe6cd84ddaa94fc1d40f6")
       public
-          fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2158,108 +2033,104 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationConfigurationProperty.builder()
 
-      public override fun applicationCodeConfiguration(applicationCodeConfiguration: IResolvable) {
+      override fun applicationCodeConfiguration(applicationCodeConfiguration: IResolvable) {
         cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty) {
         cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration.let(ApplicationCodeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d7877605fae94fba496f67774d5d0c87b057f5ae11416a71bdaa1fe79869842d")
-      public override
+      override
           fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty.Builder.() -> Unit):
           Unit =
           applicationCodeConfiguration(ApplicationCodeConfigurationProperty(applicationCodeConfiguration))
 
-      public override
-          fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: IResolvable) {
+      override fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: IResolvable) {
         cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty) {
         cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration.let(ApplicationSnapshotConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30c493a91d69b8dc48f8c1ad0ebc0e1b74f07722c317dc8997c11b2c34afac13")
-      public override
+      override
           fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty.Builder.() -> Unit):
           Unit =
           applicationSnapshotConfiguration(ApplicationSnapshotConfigurationProperty(applicationSnapshotConfiguration))
 
-      public override fun environmentProperties(environmentProperties: IResolvable) {
+      override fun environmentProperties(environmentProperties: IResolvable) {
         cdkBuilder.environmentProperties(environmentProperties.let(IResolvable::unwrap))
       }
 
-      public override
-          fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty) {
+      override fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty) {
         cdkBuilder.environmentProperties(environmentProperties.let(EnvironmentPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("705a63a4a7f4fbb572532c29eea797caa1d0c8a1cbba17fdf4e7e0b5c6f54d8c")
-      public override
+      override
           fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty.Builder.() -> Unit):
           Unit = environmentProperties(EnvironmentPropertiesProperty(environmentProperties))
 
-      public override
-          fun flinkApplicationConfiguration(flinkApplicationConfiguration: IResolvable) {
+      override fun flinkApplicationConfiguration(flinkApplicationConfiguration: IResolvable) {
         cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty) {
         cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration.let(FlinkApplicationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("492f8c55c68e53f189bb6f6c90483e42a3e09abeabbe7f54bd0ea1b7f1aa5148")
-      public override
+      override
           fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty.Builder.() -> Unit):
           Unit =
           flinkApplicationConfiguration(FlinkApplicationConfigurationProperty(flinkApplicationConfiguration))
 
-      public override fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable) {
+      override fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable) {
         cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty) {
         cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(SqlApplicationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("739a9d42cdc613f937634ee485e7018d1f8244cb03e497d08ddcbafa23ee4cd0")
-      public override
+      override
           fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty.Builder.() -> Unit):
           Unit =
           sqlApplicationConfiguration(SqlApplicationConfigurationProperty(sqlApplicationConfiguration))
 
-      public override fun vpcConfigurations(vpcConfigurations: IResolvable) {
+      override fun vpcConfigurations(vpcConfigurations: IResolvable) {
         cdkBuilder.vpcConfigurations(vpcConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfigurations(vpcConfigurations: List<Any>) {
+      override fun vpcConfigurations(vpcConfigurations: List<Any>) {
         cdkBuilder.vpcConfigurations(vpcConfigurations)
       }
 
-      public override
-          fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable) {
+      override fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable) {
         cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty) {
         cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(ZeppelinApplicationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b71a50890c438f318a456fa31701c47d511cfa429d6fe6cd84ddaa94fc1d40f6")
-      public override
+      override
           fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty.Builder.() -> Unit):
           Unit =
           zeppelinApplicationConfiguration(ZeppelinApplicationConfigurationProperty(zeppelinApplicationConfiguration))
@@ -2273,23 +2144,23 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ApplicationConfigurationProperty,
     ) : ApplicationConfigurationProperty {
-      public override fun applicationCodeConfiguration(): Any? =
+      override fun applicationCodeConfiguration(): Any? =
           unwrap(this).getApplicationCodeConfiguration()
 
-      public override fun applicationSnapshotConfiguration(): Any? =
+      override fun applicationSnapshotConfiguration(): Any? =
           unwrap(this).getApplicationSnapshotConfiguration()
 
-      public override fun environmentProperties(): Any? = unwrap(this).getEnvironmentProperties()
+      override fun environmentProperties(): Any? = unwrap(this).getEnvironmentProperties()
 
-      public override fun flinkApplicationConfiguration(): Any? =
+      override fun flinkApplicationConfiguration(): Any? =
           unwrap(this).getFlinkApplicationConfiguration()
 
-      public override fun sqlApplicationConfiguration(): Any? =
+      override fun sqlApplicationConfiguration(): Any? =
           unwrap(this).getSqlApplicationConfiguration()
 
-      public override fun vpcConfigurations(): Any? = unwrap(this).getVpcConfigurations()
+      override fun vpcConfigurations(): Any? = unwrap(this).getVpcConfigurations()
 
-      public override fun zeppelinApplicationConfiguration(): Any? =
+      override fun zeppelinApplicationConfiguration(): Any? =
           unwrap(this).getZeppelinApplicationConfiguration()
     }
 
@@ -2317,17 +2188,14 @@ public open class CfnApplication internal constructor(
     public fun s3ContentLocation(): Any
 
     public interface Builder {
-      public fun s3ContentLocation(s3ContentLocation: IResolvable) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: IResolvable)
 
-      public fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("580179c7b904c42fc61bfac3acd429505e7efd35244cc4edf50e5602a91223c6")
       public
-          fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit) {
-      }
+          fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2336,17 +2204,17 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.DeployAsApplicationConfigurationProperty.builder()
 
-      public override fun s3ContentLocation(s3ContentLocation: IResolvable) {
+      override fun s3ContentLocation(s3ContentLocation: IResolvable) {
         cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
       }
 
-      public override fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty) {
+      override fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty) {
         cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentBaseLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("580179c7b904c42fc61bfac3acd429505e7efd35244cc4edf50e5602a91223c6")
-      public override
+      override
           fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty.Builder.() -> Unit):
           Unit = s3ContentLocation(S3ContentBaseLocationProperty(s3ContentLocation))
 
@@ -2359,7 +2227,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.DeployAsApplicationConfigurationProperty,
     ) : DeployAsApplicationConfigurationProperty {
-      public override fun s3ContentLocation(): Any = unwrap(this).getS3ContentLocation()
+      override fun s3ContentLocation(): Any = unwrap(this).getS3ContentLocation()
     }
 
     public companion object {
@@ -2389,14 +2257,11 @@ public open class CfnApplication internal constructor(
     public fun propertyMap(): Any? = unwrap(this).getPropertyMap()
 
     public interface Builder {
-      public fun propertyGroupId(propertyGroupId: String) {
-      }
+      public fun propertyGroupId(propertyGroupId: String)
 
-      public fun propertyMap(propertyMap: IResolvable) {
-      }
+      public fun propertyMap(propertyMap: IResolvable)
 
-      public fun propertyMap(propertyMap: Map<String, String>) {
-      }
+      public fun propertyMap(propertyMap: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2405,15 +2270,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.PropertyGroupProperty.builder()
 
-      public override fun propertyGroupId(propertyGroupId: String) {
+      override fun propertyGroupId(propertyGroupId: String) {
         cdkBuilder.propertyGroupId(propertyGroupId)
       }
 
-      public override fun propertyMap(propertyMap: IResolvable) {
+      override fun propertyMap(propertyMap: IResolvable) {
         cdkBuilder.propertyMap(propertyMap.let(IResolvable::unwrap))
       }
 
-      public override fun propertyMap(propertyMap: Map<String, String>) {
+      override fun propertyMap(propertyMap: Map<String, String>) {
         cdkBuilder.propertyMap(propertyMap)
       }
 
@@ -2426,9 +2291,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.PropertyGroupProperty,
     ) : PropertyGroupProperty {
-      public override fun propertyGroupId(): String? = unwrap(this).getPropertyGroupId()
+      override fun propertyGroupId(): String? = unwrap(this).getPropertyGroupId()
 
-      public override fun propertyMap(): Any? = unwrap(this).getPropertyMap()
+      override fun propertyMap(): Any? = unwrap(this).getPropertyMap()
     }
 
     public companion object {
@@ -2455,11 +2320,9 @@ public open class CfnApplication internal constructor(
     public fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
 
     public interface Builder {
-      public fun allowNonRestoredState(allowNonRestoredState: Boolean) {
-      }
+      public fun allowNonRestoredState(allowNonRestoredState: Boolean)
 
-      public fun allowNonRestoredState(allowNonRestoredState: IResolvable) {
-      }
+      public fun allowNonRestoredState(allowNonRestoredState: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2468,11 +2331,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkRunConfigurationProperty.builder()
 
-      public override fun allowNonRestoredState(allowNonRestoredState: Boolean) {
+      override fun allowNonRestoredState(allowNonRestoredState: Boolean) {
         cdkBuilder.allowNonRestoredState(allowNonRestoredState)
       }
 
-      public override fun allowNonRestoredState(allowNonRestoredState: IResolvable) {
+      override fun allowNonRestoredState(allowNonRestoredState: IResolvable) {
         cdkBuilder.allowNonRestoredState(allowNonRestoredState.let(IResolvable::unwrap))
       }
 
@@ -2485,7 +2348,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.FlinkRunConfigurationProperty,
     ) : FlinkRunConfigurationProperty {
-      public override fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
+      override fun allowNonRestoredState(): Any? = unwrap(this).getAllowNonRestoredState()
     }
 
     public companion object {
@@ -2522,67 +2385,51 @@ public open class CfnApplication internal constructor(
     public fun namePrefix(): String
 
     public interface Builder {
-      public fun inputParallelism(inputParallelism: IResolvable) {
-      }
+      public fun inputParallelism(inputParallelism: IResolvable)
 
-      public fun inputParallelism(inputParallelism: InputParallelismProperty) {
-      }
+      public fun inputParallelism(inputParallelism: InputParallelismProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d358a4757b53b52c0a56de1610bfe3f2518772e204dbdbc284f429f33846e7a")
-      public fun inputParallelism(inputParallelism: InputParallelismProperty.Builder.() -> Unit) {
-      }
+      public fun inputParallelism(inputParallelism: InputParallelismProperty.Builder.() -> Unit)
 
-      public fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable) {
-      }
+      public fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable)
 
       public
-          fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty) {
-      }
+          fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e819e00e49bbb2bdc99afd71d723e214ebf1b85326cff1bb84c74f99f14d60e")
       public
-          fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun inputSchema(inputSchema: IResolvable) {
-      }
+      public fun inputSchema(inputSchema: IResolvable)
 
-      public fun inputSchema(inputSchema: InputSchemaProperty) {
-      }
+      public fun inputSchema(inputSchema: InputSchemaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21d2f3230c8f83ad2f05a35f7220f3b5108af69c7115b09a7e84cf8bccaa588b")
-      public fun inputSchema(inputSchema: InputSchemaProperty.Builder.() -> Unit) {
-      }
+      public fun inputSchema(inputSchema: InputSchemaProperty.Builder.() -> Unit)
 
-      public fun kinesisFirehoseInput(kinesisFirehoseInput: IResolvable) {
-      }
+      public fun kinesisFirehoseInput(kinesisFirehoseInput: IResolvable)
 
-      public fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty) {
-      }
+      public fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("714df90655acbc368ff411c8a1ec1bf75d1e22c1241a110189319829987a3de6")
       public
-          fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty.Builder.() -> Unit) {
-      }
+          fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty.Builder.() -> Unit)
 
-      public fun kinesisStreamsInput(kinesisStreamsInput: IResolvable) {
-      }
+      public fun kinesisStreamsInput(kinesisStreamsInput: IResolvable)
 
-      public fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty) {
-      }
+      public fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d3036a9164b1a21b787b267d25c78ce94751d7a52985705e8b7199a63daef428")
       public
-          fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty.Builder.() -> Unit) {
-      }
+          fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty.Builder.() -> Unit)
 
-      public fun namePrefix(namePrefix: String) {
-      }
+      public fun namePrefix(namePrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2590,78 +2437,77 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProperty.Builder =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProperty.builder()
 
-      public override fun inputParallelism(inputParallelism: IResolvable) {
+      override fun inputParallelism(inputParallelism: IResolvable) {
         cdkBuilder.inputParallelism(inputParallelism.let(IResolvable::unwrap))
       }
 
-      public override fun inputParallelism(inputParallelism: InputParallelismProperty) {
+      override fun inputParallelism(inputParallelism: InputParallelismProperty) {
         cdkBuilder.inputParallelism(inputParallelism.let(InputParallelismProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d358a4757b53b52c0a56de1610bfe3f2518772e204dbdbc284f429f33846e7a")
-      public override
-          fun inputParallelism(inputParallelism: InputParallelismProperty.Builder.() -> Unit): Unit
-          = inputParallelism(InputParallelismProperty(inputParallelism))
+      override fun inputParallelism(inputParallelism: InputParallelismProperty.Builder.() -> Unit):
+          Unit = inputParallelism(InputParallelismProperty(inputParallelism))
 
-      public override fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable) {
+      override fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable) {
         cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty) {
         cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(InputProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e819e00e49bbb2bdc99afd71d723e214ebf1b85326cff1bb84c74f99f14d60e")
-      public override
+      override
           fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty.Builder.() -> Unit):
           Unit =
           inputProcessingConfiguration(InputProcessingConfigurationProperty(inputProcessingConfiguration))
 
-      public override fun inputSchema(inputSchema: IResolvable) {
+      override fun inputSchema(inputSchema: IResolvable) {
         cdkBuilder.inputSchema(inputSchema.let(IResolvable::unwrap))
       }
 
-      public override fun inputSchema(inputSchema: InputSchemaProperty) {
+      override fun inputSchema(inputSchema: InputSchemaProperty) {
         cdkBuilder.inputSchema(inputSchema.let(InputSchemaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21d2f3230c8f83ad2f05a35f7220f3b5108af69c7115b09a7e84cf8bccaa588b")
-      public override fun inputSchema(inputSchema: InputSchemaProperty.Builder.() -> Unit): Unit =
+      override fun inputSchema(inputSchema: InputSchemaProperty.Builder.() -> Unit): Unit =
           inputSchema(InputSchemaProperty(inputSchema))
 
-      public override fun kinesisFirehoseInput(kinesisFirehoseInput: IResolvable) {
+      override fun kinesisFirehoseInput(kinesisFirehoseInput: IResolvable) {
         cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty) {
+      override fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty) {
         cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(KinesisFirehoseInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("714df90655acbc368ff411c8a1ec1bf75d1e22c1241a110189319829987a3de6")
-      public override
+      override
           fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty.Builder.() -> Unit):
           Unit = kinesisFirehoseInput(KinesisFirehoseInputProperty(kinesisFirehoseInput))
 
-      public override fun kinesisStreamsInput(kinesisStreamsInput: IResolvable) {
+      override fun kinesisStreamsInput(kinesisStreamsInput: IResolvable) {
         cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty) {
+      override fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty) {
         cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(KinesisStreamsInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d3036a9164b1a21b787b267d25c78ce94751d7a52985705e8b7199a63daef428")
-      public override
+      override
           fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty.Builder.() -> Unit):
           Unit = kinesisStreamsInput(KinesisStreamsInputProperty(kinesisStreamsInput))
 
-      public override fun namePrefix(namePrefix: String) {
+      override fun namePrefix(namePrefix: String) {
         cdkBuilder.namePrefix(namePrefix)
       }
 
@@ -2674,18 +2520,18 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputProperty,
     ) : InputProperty {
-      public override fun inputParallelism(): Any? = unwrap(this).getInputParallelism()
+      override fun inputParallelism(): Any? = unwrap(this).getInputParallelism()
 
-      public override fun inputProcessingConfiguration(): Any? =
+      override fun inputProcessingConfiguration(): Any? =
           unwrap(this).getInputProcessingConfiguration()
 
-      public override fun inputSchema(): Any = unwrap(this).getInputSchema()
+      override fun inputSchema(): Any = unwrap(this).getInputSchema()
 
-      public override fun kinesisFirehoseInput(): Any? = unwrap(this).getKinesisFirehoseInput()
+      override fun kinesisFirehoseInput(): Any? = unwrap(this).getKinesisFirehoseInput()
 
-      public override fun kinesisStreamsInput(): Any? = unwrap(this).getKinesisStreamsInput()
+      override fun kinesisStreamsInput(): Any? = unwrap(this).getKinesisStreamsInput()
 
-      public override fun namePrefix(): String = unwrap(this).getNamePrefix()
+      override fun namePrefix(): String = unwrap(this).getNamePrefix()
     }
 
     public companion object {
@@ -2716,23 +2562,17 @@ public open class CfnApplication internal constructor(
     public fun zipFileContent(): String? = unwrap(this).getZipFileContent()
 
     public interface Builder {
-      public fun s3ContentLocation(s3ContentLocation: IResolvable) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: IResolvable)
 
-      public fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e31dd285444d0e1a125e82c148ade00d1df2f0ec7159b1b49f03f585f5f5183a")
-      public
-          fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty.Builder.() -> Unit)
 
-      public fun textContent(textContent: String) {
-      }
+      public fun textContent(textContent: String)
 
-      public fun zipFileContent(zipFileContent: String) {
-      }
+      public fun zipFileContent(zipFileContent: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2741,25 +2581,25 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CodeContentProperty.builder()
 
-      public override fun s3ContentLocation(s3ContentLocation: IResolvable) {
+      override fun s3ContentLocation(s3ContentLocation: IResolvable) {
         cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
       }
 
-      public override fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
+      override fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
         cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e31dd285444d0e1a125e82c148ade00d1df2f0ec7159b1b49f03f585f5f5183a")
-      public override
+      override
           fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty.Builder.() -> Unit):
           Unit = s3ContentLocation(S3ContentLocationProperty(s3ContentLocation))
 
-      public override fun textContent(textContent: String) {
+      override fun textContent(textContent: String) {
         cdkBuilder.textContent(textContent)
       }
 
-      public override fun zipFileContent(zipFileContent: String) {
+      override fun zipFileContent(zipFileContent: String) {
         cdkBuilder.zipFileContent(zipFileContent)
       }
 
@@ -2772,11 +2612,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CodeContentProperty,
     ) : CodeContentProperty {
-      public override fun s3ContentLocation(): Any? = unwrap(this).getS3ContentLocation()
+      override fun s3ContentLocation(): Any? = unwrap(this).getS3ContentLocation()
 
-      public override fun textContent(): String? = unwrap(this).getTextContent()
+      override fun textContent(): String? = unwrap(this).getTextContent()
 
-      public override fun zipFileContent(): String? = unwrap(this).getZipFileContent()
+      override fun zipFileContent(): String? = unwrap(this).getZipFileContent()
     }
 
     public companion object {
@@ -2807,14 +2647,11 @@ public open class CfnApplication internal constructor(
     public fun sqlType(): String
 
     public interface Builder {
-      public fun mapping(mapping: String) {
-      }
+      public fun mapping(mapping: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sqlType(sqlType: String) {
-      }
+      public fun sqlType(sqlType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2823,15 +2660,15 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordColumnProperty.builder()
 
-      public override fun mapping(mapping: String) {
+      override fun mapping(mapping: String) {
         cdkBuilder.mapping(mapping)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sqlType(sqlType: String) {
+      override fun sqlType(sqlType: String) {
         cdkBuilder.sqlType(sqlType)
       }
 
@@ -2844,11 +2681,11 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordColumnProperty,
     ) : RecordColumnProperty {
-      public override fun mapping(): String? = unwrap(this).getMapping()
+      override fun mapping(): String? = unwrap(this).getMapping()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun sqlType(): String = unwrap(this).getSqlType()
+      override fun sqlType(): String = unwrap(this).getSqlType()
     }
 
     public companion object {
@@ -2875,18 +2712,15 @@ public open class CfnApplication internal constructor(
     public fun glueDataCatalogConfiguration(): Any? = unwrap(this).getGlueDataCatalogConfiguration()
 
     public interface Builder {
-      public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
-      }
+      public fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable)
 
       public
-          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty) {
-      }
+          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9f62b16cd7f274a8d7a905a434ec38b4e1ac7edaf883d3f91aecad961cb58008")
       public
-          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2895,18 +2729,18 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CatalogConfigurationProperty.builder()
 
-      public override fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
+      override fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
         cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty) {
         cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(GlueDataCatalogConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9f62b16cd7f274a8d7a905a434ec38b4e1ac7edaf883d3f91aecad961cb58008")
-      public override
+      override
           fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty.Builder.() -> Unit):
           Unit =
           glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty(glueDataCatalogConfiguration))
@@ -2920,7 +2754,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CatalogConfigurationProperty,
     ) : CatalogConfigurationProperty {
-      public override fun glueDataCatalogConfiguration(): Any? =
+      override fun glueDataCatalogConfiguration(): Any? =
           unwrap(this).getGlueDataCatalogConfiguration()
     }
 
@@ -2950,11 +2784,9 @@ public open class CfnApplication internal constructor(
     public fun recordRowDelimiter(): String
 
     public interface Builder {
-      public fun recordColumnDelimiter(recordColumnDelimiter: String) {
-      }
+      public fun recordColumnDelimiter(recordColumnDelimiter: String)
 
-      public fun recordRowDelimiter(recordRowDelimiter: String) {
-      }
+      public fun recordRowDelimiter(recordRowDelimiter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2963,11 +2795,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CSVMappingParametersProperty.builder()
 
-      public override fun recordColumnDelimiter(recordColumnDelimiter: String) {
+      override fun recordColumnDelimiter(recordColumnDelimiter: String) {
         cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
       }
 
-      public override fun recordRowDelimiter(recordRowDelimiter: String) {
+      override fun recordRowDelimiter(recordRowDelimiter: String) {
         cdkBuilder.recordRowDelimiter(recordRowDelimiter)
       }
 
@@ -2980,9 +2812,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.CSVMappingParametersProperty,
     ) : CSVMappingParametersProperty {
-      public override fun recordColumnDelimiter(): String = unwrap(this).getRecordColumnDelimiter()
+      override fun recordColumnDelimiter(): String = unwrap(this).getRecordColumnDelimiter()
 
-      public override fun recordRowDelimiter(): String = unwrap(this).getRecordRowDelimiter()
+      override fun recordRowDelimiter(): String = unwrap(this).getRecordRowDelimiter()
     }
 
     public companion object {
@@ -3011,20 +2843,15 @@ public open class CfnApplication internal constructor(
     public fun recordFormatType(): String
 
     public interface Builder {
-      public fun mappingParameters(mappingParameters: IResolvable) {
-      }
+      public fun mappingParameters(mappingParameters: IResolvable)
 
-      public fun mappingParameters(mappingParameters: MappingParametersProperty) {
-      }
+      public fun mappingParameters(mappingParameters: MappingParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0ecd3fdb498eb8bf2feb547186492adc0e784e47e8a01c2832653953230ea7c5")
-      public
-          fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit) {
-      }
+      public fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit)
 
-      public fun recordFormatType(recordFormatType: String) {
-      }
+      public fun recordFormatType(recordFormatType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3033,21 +2860,21 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordFormatProperty.builder()
 
-      public override fun mappingParameters(mappingParameters: IResolvable) {
+      override fun mappingParameters(mappingParameters: IResolvable) {
         cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
       }
 
-      public override fun mappingParameters(mappingParameters: MappingParametersProperty) {
+      override fun mappingParameters(mappingParameters: MappingParametersProperty) {
         cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0ecd3fdb498eb8bf2feb547186492adc0e784e47e8a01c2832653953230ea7c5")
-      public override
+      override
           fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit):
           Unit = mappingParameters(MappingParametersProperty(mappingParameters))
 
-      public override fun recordFormatType(recordFormatType: String) {
+      override fun recordFormatType(recordFormatType: String) {
         cdkBuilder.recordFormatType(recordFormatType)
       }
 
@@ -3060,9 +2887,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RecordFormatProperty,
     ) : RecordFormatProperty {
-      public override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+      override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
 
-      public override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
+      override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
     }
 
     public companion object {
@@ -3089,8 +2916,7 @@ public open class CfnApplication internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3099,7 +2925,7 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputLambdaProcessorProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -3112,7 +2938,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.InputLambdaProcessorProperty,
     ) : InputLambdaProcessorProperty {
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -3145,20 +2971,15 @@ public open class CfnApplication internal constructor(
     public fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
 
     public interface Builder {
-      public fun autoScalingEnabled(autoScalingEnabled: Boolean) {
-      }
+      public fun autoScalingEnabled(autoScalingEnabled: Boolean)
 
-      public fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
-      }
+      public fun autoScalingEnabled(autoScalingEnabled: IResolvable)
 
-      public fun configurationType(configurationType: String) {
-      }
+      public fun configurationType(configurationType: String)
 
-      public fun parallelism(parallelism: Number) {
-      }
+      public fun parallelism(parallelism: Number)
 
-      public fun parallelismPerKpu(parallelismPerKpu: Number) {
-      }
+      public fun parallelismPerKpu(parallelismPerKpu: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3167,23 +2988,23 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ParallelismConfigurationProperty.builder()
 
-      public override fun autoScalingEnabled(autoScalingEnabled: Boolean) {
+      override fun autoScalingEnabled(autoScalingEnabled: Boolean) {
         cdkBuilder.autoScalingEnabled(autoScalingEnabled)
       }
 
-      public override fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
+      override fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
         cdkBuilder.autoScalingEnabled(autoScalingEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun configurationType(configurationType: String) {
+      override fun configurationType(configurationType: String) {
         cdkBuilder.configurationType(configurationType)
       }
 
-      public override fun parallelism(parallelism: Number) {
+      override fun parallelism(parallelism: Number) {
         cdkBuilder.parallelism(parallelism)
       }
 
-      public override fun parallelismPerKpu(parallelismPerKpu: Number) {
+      override fun parallelismPerKpu(parallelismPerKpu: Number) {
         cdkBuilder.parallelismPerKpu(parallelismPerKpu)
       }
 
@@ -3196,13 +3017,13 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.ParallelismConfigurationProperty,
     ) : ParallelismConfigurationProperty {
-      public override fun autoScalingEnabled(): Any? = unwrap(this).getAutoScalingEnabled()
+      override fun autoScalingEnabled(): Any? = unwrap(this).getAutoScalingEnabled()
 
-      public override fun configurationType(): String = unwrap(this).getConfigurationType()
+      override fun configurationType(): String = unwrap(this).getConfigurationType()
 
-      public override fun parallelism(): Number? = unwrap(this).getParallelism()
+      override fun parallelism(): Number? = unwrap(this).getParallelism()
 
-      public override fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
+      override fun parallelismPerKpu(): Number? = unwrap(this).getParallelismPerKpu()
     }
 
     public companion object {
@@ -3232,30 +3053,24 @@ public open class CfnApplication internal constructor(
     public fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
 
     public interface Builder {
-      public fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable) {
-      }
+      public fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable)
 
       public
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty) {
-      }
+          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efc332ff3262127040a2c64e17e89c17dad48d5e3c70d84a6c089c7a91480d72")
       public
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit)
 
-      public fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
-      }
+      public fun flinkRunConfiguration(flinkRunConfiguration: IResolvable)
 
-      public fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty) {
-      }
+      public fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a17668293e15c33da2c8cb7c874cb87cff2921c78d503506efab10959b7cdc8a")
       public
-          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3264,35 +3079,33 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RunConfigurationProperty.builder()
 
-      public override
-          fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable) {
+      override fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable) {
         cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty) {
         cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(ApplicationRestoreConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efc332ff3262127040a2c64e17e89c17dad48d5e3c70d84a6c089c7a91480d72")
-      public override
+      override
           fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty.Builder.() -> Unit):
           Unit =
           applicationRestoreConfiguration(ApplicationRestoreConfigurationProperty(applicationRestoreConfiguration))
 
-      public override fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
+      override fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
         cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty) {
+      override fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty) {
         cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(FlinkRunConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a17668293e15c33da2c8cb7c874cb87cff2921c78d503506efab10959b7cdc8a")
-      public override
+      override
           fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty.Builder.() -> Unit):
           Unit = flinkRunConfiguration(FlinkRunConfigurationProperty(flinkRunConfiguration))
 
@@ -3305,10 +3118,10 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication.RunConfigurationProperty,
     ) : RunConfigurationProperty {
-      public override fun applicationRestoreConfiguration(): Any? =
+      override fun applicationRestoreConfiguration(): Any? =
           unwrap(this).getApplicationRestoreConfiguration()
 
-      public override fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
+      override fun flinkRunConfiguration(): Any? = unwrap(this).getFlinkRunConfiguration()
     }
 
     public companion object {

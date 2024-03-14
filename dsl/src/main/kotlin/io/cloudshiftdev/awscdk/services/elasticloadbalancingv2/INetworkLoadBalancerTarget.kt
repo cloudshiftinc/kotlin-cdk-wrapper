@@ -7,8 +7,7 @@ public interface INetworkLoadBalancerTarget {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget,
   ) : INetworkLoadBalancerTarget {
-    public override fun attachToNetworkTargetGroup(arg0: INetworkTargetGroup):
-        LoadBalancerTargetProps =
+    override fun attachToNetworkTargetGroup(arg0: INetworkTargetGroup): LoadBalancerTargetProps =
         unwrap(this).attachToNetworkTargetGroup(arg0.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
   }
 

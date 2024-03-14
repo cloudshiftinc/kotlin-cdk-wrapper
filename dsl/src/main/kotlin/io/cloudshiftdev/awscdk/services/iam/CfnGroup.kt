@@ -50,20 +50,15 @@ public open class CfnGroup internal constructor(
   }
 
   public interface Builder {
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun managedPolicyArns(managedPolicyArns: List<String>) {
-    }
+    public fun managedPolicyArns(managedPolicyArns: List<String>)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun policies(policies: IResolvable) {
-    }
+    public fun policies(policies: IResolvable)
 
-    public fun policies(policies: List<Any>) {
-    }
+    public fun policies(policies: List<Any>)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnGroup.Builder =
         software.amazon.awscdk.services.iam.CfnGroup.Builder.create(scope, id)
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun managedPolicyArns(managedPolicyArns: List<String>) {
+    override fun managedPolicyArns(managedPolicyArns: List<String>) {
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun policies(policies: IResolvable) {
+    override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable::unwrap))
     }
 
-    public override fun policies(policies: List<Any>) {
+    override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
 
@@ -123,22 +118,20 @@ public open class CfnGroup internal constructor(
     public fun policyName(): String
 
     public interface Builder {
-      public fun policyDocument(policyDocument: Any) {
-      }
+      public fun policyDocument(policyDocument: Any)
 
-      public fun policyName(policyName: String) {
-      }
+      public fun policyName(policyName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty.Builder =
           software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty.builder()
 
-      public override fun policyDocument(policyDocument: Any) {
+      override fun policyDocument(policyDocument: Any) {
         cdkBuilder.policyDocument(policyDocument)
       }
 
-      public override fun policyName(policyName: String) {
+      override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
       }
 
@@ -149,9 +142,9 @@ public open class CfnGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iam.CfnGroup.PolicyProperty,
     ) : PolicyProperty {
-      public override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
+      override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
 
-      public override fun policyName(): String = unwrap(this).getPolicyName()
+      override fun policyName(): String = unwrap(this).getPolicyName()
     }
 
     public companion object {

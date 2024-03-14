@@ -63,20 +63,15 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   }
 
   public interface Builder {
-    public fun excludePaths(excludePaths: IResolvable) {
-    }
+    public fun excludePaths(excludePaths: IResolvable)
 
-    public fun excludePaths(excludePaths: List<Any>) {
-    }
+    public fun excludePaths(excludePaths: List<Any>)
 
-    public fun matchPaths(matchPaths: IResolvable) {
-    }
+    public fun matchPaths(matchPaths: IResolvable)
 
-    public fun matchPaths(matchPaths: List<Any>) {
-    }
+    public fun matchPaths(matchPaths: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,23 +82,23 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.Builder.create(scope, id)
 
-    public override fun excludePaths(excludePaths: IResolvable) {
+    override fun excludePaths(excludePaths: IResolvable) {
       cdkBuilder.excludePaths(excludePaths.let(IResolvable::unwrap))
     }
 
-    public override fun excludePaths(excludePaths: List<Any>) {
+    override fun excludePaths(excludePaths: List<Any>) {
       cdkBuilder.excludePaths(excludePaths)
     }
 
-    public override fun matchPaths(matchPaths: IResolvable) {
+    override fun matchPaths(matchPaths: IResolvable) {
       cdkBuilder.matchPaths(matchPaths.let(IResolvable::unwrap))
     }
 
-    public override fun matchPaths(matchPaths: List<Any>) {
+    override fun matchPaths(matchPaths: List<Any>) {
       cdkBuilder.matchPaths(matchPaths)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -136,17 +131,14 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
 
     public interface Builder {
-      public fun resourceStatement(resourceStatement: IResolvable) {
-      }
+      public fun resourceStatement(resourceStatement: IResolvable)
 
-      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
-      }
+      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
       public
-          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit) {
-      }
+          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -155,17 +147,17 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.builder()
 
-      public override fun resourceStatement(resourceStatement: IResolvable) {
+      override fun resourceStatement(resourceStatement: IResolvable) {
         cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
       }
 
-      public override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
+      override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
         cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
-      public override
+      override
           fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit):
           Unit = resourceStatement(ResourceStatementRequestProperty(resourceStatement))
 
@@ -178,7 +170,7 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
     ) : ThroughResourcesStatementRequestProperty {
-      public override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
+      override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
     }
 
     public companion object {
@@ -208,30 +200,23 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
 
     public interface Builder {
-      public fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
-      }
+      public fun packetHeaderStatement(packetHeaderStatement: IResolvable)
 
-      public
-          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty) {
-      }
+      public fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
       public
-          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit) {
-      }
+          fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit)
 
-      public fun resourceStatement(resourceStatement: IResolvable) {
-      }
+      public fun resourceStatement(resourceStatement: IResolvable)
 
-      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
-      }
+      public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
       public
-          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit) {
-      }
+          fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -240,32 +225,32 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty.builder()
 
-      public override fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
+      override fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
         cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty) {
         cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(PacketHeaderStatementRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
-      public override
+      override
           fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit):
           Unit = packetHeaderStatement(PacketHeaderStatementRequestProperty(packetHeaderStatement))
 
-      public override fun resourceStatement(resourceStatement: IResolvable) {
+      override fun resourceStatement(resourceStatement: IResolvable) {
         cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
       }
 
-      public override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
+      override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
         cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
-      public override
+      override
           fun resourceStatement(resourceStatement: ResourceStatementRequestProperty.Builder.() -> Unit):
           Unit = resourceStatement(ResourceStatementRequestProperty(resourceStatement))
 
@@ -278,9 +263,9 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
     ) : PathStatementRequestProperty {
-      public override fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
+      override fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
 
-      public override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
+      override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
     }
 
     public companion object {
@@ -311,33 +296,25 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     public fun throughResources(): Any? = unwrap(this).getThroughResources()
 
     public interface Builder {
-      public fun destination(destination: IResolvable) {
-      }
+      public fun destination(destination: IResolvable)
 
-      public fun destination(destination: PathStatementRequestProperty) {
-      }
+      public fun destination(destination: PathStatementRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1209f052f40165c46e829f5d00392f3ca65d1ec4efcf2823cdd1b16c5daefaaf")
-      public fun destination(destination: PathStatementRequestProperty.Builder.() -> Unit) {
-      }
+      public fun destination(destination: PathStatementRequestProperty.Builder.() -> Unit)
 
-      public fun source(source: IResolvable) {
-      }
+      public fun source(source: IResolvable)
 
-      public fun source(source: PathStatementRequestProperty) {
-      }
+      public fun source(source: PathStatementRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e32f15217edb30ee0f70053d61737d03c0ab342e15686f7c971a56274e5fdc6")
-      public fun source(source: PathStatementRequestProperty.Builder.() -> Unit) {
-      }
+      public fun source(source: PathStatementRequestProperty.Builder.() -> Unit)
 
-      public fun throughResources(throughResources: IResolvable) {
-      }
+      public fun throughResources(throughResources: IResolvable)
 
-      public fun throughResources(throughResources: List<Any>) {
-      }
+      public fun throughResources(throughResources: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -346,37 +323,37 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty.builder()
 
-      public override fun destination(destination: IResolvable) {
+      override fun destination(destination: IResolvable) {
         cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
-      public override fun destination(destination: PathStatementRequestProperty) {
+      override fun destination(destination: PathStatementRequestProperty) {
         cdkBuilder.destination(destination.let(PathStatementRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1209f052f40165c46e829f5d00392f3ca65d1ec4efcf2823cdd1b16c5daefaaf")
-      public override fun destination(destination: PathStatementRequestProperty.Builder.() -> Unit):
-          Unit = destination(PathStatementRequestProperty(destination))
+      override fun destination(destination: PathStatementRequestProperty.Builder.() -> Unit): Unit =
+          destination(PathStatementRequestProperty(destination))
 
-      public override fun source(source: IResolvable) {
+      override fun source(source: IResolvable) {
         cdkBuilder.source(source.let(IResolvable::unwrap))
       }
 
-      public override fun source(source: PathStatementRequestProperty) {
+      override fun source(source: PathStatementRequestProperty) {
         cdkBuilder.source(source.let(PathStatementRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e32f15217edb30ee0f70053d61737d03c0ab342e15686f7c971a56274e5fdc6")
-      public override fun source(source: PathStatementRequestProperty.Builder.() -> Unit): Unit =
+      override fun source(source: PathStatementRequestProperty.Builder.() -> Unit): Unit =
           source(PathStatementRequestProperty(source))
 
-      public override fun throughResources(throughResources: IResolvable) {
+      override fun throughResources(throughResources: IResolvable) {
         cdkBuilder.throughResources(throughResources.let(IResolvable::unwrap))
       }
 
-      public override fun throughResources(throughResources: List<Any>) {
+      override fun throughResources(throughResources: List<Any>) {
         cdkBuilder.throughResources(throughResources)
       }
 
@@ -389,11 +366,11 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
     ) : AccessScopePathRequestProperty {
-      public override fun destination(): Any? = unwrap(this).getDestination()
+      override fun destination(): Any? = unwrap(this).getDestination()
 
-      public override fun source(): Any? = unwrap(this).getSource()
+      override fun source(): Any? = unwrap(this).getSource()
 
-      public override fun throughResources(): Any? = unwrap(this).getThroughResources()
+      override fun throughResources(): Any? = unwrap(this).getThroughResources()
     }
 
     public companion object {
@@ -435,26 +412,19 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun destinationAddresses(destinationAddresses: List<String>) {
-      }
+      public fun destinationAddresses(destinationAddresses: List<String>)
 
-      public fun destinationPorts(destinationPorts: List<String>) {
-      }
+      public fun destinationPorts(destinationPorts: List<String>)
 
-      public fun destinationPrefixLists(destinationPrefixLists: List<String>) {
-      }
+      public fun destinationPrefixLists(destinationPrefixLists: List<String>)
 
-      public fun protocols(protocols: List<String>) {
-      }
+      public fun protocols(protocols: List<String>)
 
-      public fun sourceAddresses(sourceAddresses: List<String>) {
-      }
+      public fun sourceAddresses(sourceAddresses: List<String>)
 
-      public fun sourcePorts(sourcePorts: List<String>) {
-      }
+      public fun sourcePorts(sourcePorts: List<String>)
 
-      public fun sourcePrefixLists(sourcePrefixLists: List<String>) {
-      }
+      public fun sourcePrefixLists(sourcePrefixLists: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -463,31 +433,31 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty.builder()
 
-      public override fun destinationAddresses(destinationAddresses: List<String>) {
+      override fun destinationAddresses(destinationAddresses: List<String>) {
         cdkBuilder.destinationAddresses(destinationAddresses)
       }
 
-      public override fun destinationPorts(destinationPorts: List<String>) {
+      override fun destinationPorts(destinationPorts: List<String>) {
         cdkBuilder.destinationPorts(destinationPorts)
       }
 
-      public override fun destinationPrefixLists(destinationPrefixLists: List<String>) {
+      override fun destinationPrefixLists(destinationPrefixLists: List<String>) {
         cdkBuilder.destinationPrefixLists(destinationPrefixLists)
       }
 
-      public override fun protocols(protocols: List<String>) {
+      override fun protocols(protocols: List<String>) {
         cdkBuilder.protocols(protocols)
       }
 
-      public override fun sourceAddresses(sourceAddresses: List<String>) {
+      override fun sourceAddresses(sourceAddresses: List<String>) {
         cdkBuilder.sourceAddresses(sourceAddresses)
       }
 
-      public override fun sourcePorts(sourcePorts: List<String>) {
+      override fun sourcePorts(sourcePorts: List<String>) {
         cdkBuilder.sourcePorts(sourcePorts)
       }
 
-      public override fun sourcePrefixLists(sourcePrefixLists: List<String>) {
+      override fun sourcePrefixLists(sourcePrefixLists: List<String>) {
         cdkBuilder.sourcePrefixLists(sourcePrefixLists)
       }
 
@@ -500,23 +470,23 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
     ) : PacketHeaderStatementRequestProperty {
-      public override fun destinationAddresses(): List<String> =
-          unwrap(this).getDestinationAddresses() ?: emptyList()
-
-      public override fun destinationPorts(): List<String> = unwrap(this).getDestinationPorts() ?:
+      override fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
           emptyList()
 
-      public override fun destinationPrefixLists(): List<String> =
-          unwrap(this).getDestinationPrefixLists() ?: emptyList()
-
-      public override fun protocols(): List<String> = unwrap(this).getProtocols() ?: emptyList()
-
-      public override fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?:
+      override fun destinationPorts(): List<String> = unwrap(this).getDestinationPorts() ?:
           emptyList()
 
-      public override fun sourcePorts(): List<String> = unwrap(this).getSourcePorts() ?: emptyList()
+      override fun destinationPrefixLists(): List<String> = unwrap(this).getDestinationPrefixLists()
+          ?: emptyList()
 
-      public override fun sourcePrefixLists(): List<String> = unwrap(this).getSourcePrefixLists() ?:
+      override fun protocols(): List<String> = unwrap(this).getProtocols() ?: emptyList()
+
+      override fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?:
+          emptyList()
+
+      override fun sourcePorts(): List<String> = unwrap(this).getSourcePorts() ?: emptyList()
+
+      override fun sourcePrefixLists(): List<String> = unwrap(this).getSourcePrefixLists() ?:
           emptyList()
     }
 
@@ -547,11 +517,9 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     public fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
     public interface Builder {
-      public fun resourceTypes(resourceTypes: List<String>) {
-      }
+      public fun resourceTypes(resourceTypes: List<String>)
 
-      public fun resources(resources: List<String>) {
-      }
+      public fun resources(resources: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -560,11 +528,11 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty.builder()
 
-      public override fun resourceTypes(resourceTypes: List<String>) {
+      override fun resourceTypes(resourceTypes: List<String>) {
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
-      public override fun resources(resources: List<String>) {
+      override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
 
@@ -577,10 +545,9 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
     ) : ResourceStatementRequestProperty {
-      public override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?:
-          emptyList()
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
 
-      public override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+      override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
     }
 
     public companion object {

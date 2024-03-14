@@ -13,17 +13,13 @@ public interface SSMParameterContextQuery {
   public fun region(): String
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun parameterName(parameterName: String) {
-    }
+    public fun parameterName(parameterName: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
@@ -31,19 +27,19 @@ public interface SSMParameterContextQuery {
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun parameterName(parameterName: String) {
+    override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -54,13 +50,13 @@ public interface SSMParameterContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery,
   ) : SSMParameterContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun parameterName(): String = unwrap(this).getParameterName()
+    override fun parameterName(): String = unwrap(this).getParameterName()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
   }
 
   public companion object {

@@ -35,14 +35,11 @@ public open class CfnGroupPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
   }
 
   private class BuilderImpl(
@@ -52,15 +49,15 @@ public open class CfnGroupPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnGroupPolicy.Builder =
         software.amazon.awscdk.services.iam.CfnGroupPolicy.Builder.create(scope, id)
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 

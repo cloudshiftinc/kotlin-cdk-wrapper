@@ -56,27 +56,21 @@ public open class CfnConnector internal constructor(
   }
 
   public interface Builder {
-    public fun connectorLabel(connectorLabel: String) {
-    }
+    public fun connectorLabel(connectorLabel: String)
 
-    public fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
-    }
+    public fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable)
 
     public
-        fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty) {
-    }
+        fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11e561cbca072ea56030f196d2486de545587240ded38203a38b4ee9b0e3bbe5")
     public
-        fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty.Builder.() -> Unit) {
-    }
+        fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty.Builder.() -> Unit)
 
-    public fun connectorProvisioningType(connectorProvisioningType: String) {
-    }
+    public fun connectorProvisioningType(connectorProvisioningType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
   }
 
   private class BuilderImpl(
@@ -86,31 +80,31 @@ public open class CfnConnector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appflow.CfnConnector.Builder =
         software.amazon.awscdk.services.appflow.CfnConnector.Builder.create(scope, id)
 
-    public override fun connectorLabel(connectorLabel: String) {
+    override fun connectorLabel(connectorLabel: String) {
       cdkBuilder.connectorLabel(connectorLabel)
     }
 
-    public override fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
+    override fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
       cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty) {
       cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(ConnectorProvisioningConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11e561cbca072ea56030f196d2486de545587240ded38203a38b4ee9b0e3bbe5")
-    public override
+    override
         fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty.Builder.() -> Unit):
         Unit =
         connectorProvisioningConfig(ConnectorProvisioningConfigProperty(connectorProvisioningConfig))
 
-    public override fun connectorProvisioningType(connectorProvisioningType: String) {
+    override fun connectorProvisioningType(connectorProvisioningType: String) {
       cdkBuilder.connectorProvisioningType(connectorProvisioningType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
@@ -142,16 +136,13 @@ public open class CfnConnector internal constructor(
     public fun lambda(): Any? = unwrap(this).getLambda()
 
     public interface Builder {
-      public fun lambda(lambda: IResolvable) {
-      }
+      public fun lambda(lambda: IResolvable)
 
-      public fun lambda(lambda: LambdaConnectorProvisioningConfigProperty) {
-      }
+      public fun lambda(lambda: LambdaConnectorProvisioningConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5950ab3d5fc3efe717c0d5750d63b530f6dc218e2d5f862378656fa69ec5b00f")
-      public fun lambda(lambda: LambdaConnectorProvisioningConfigProperty.Builder.() -> Unit) {
-      }
+      public fun lambda(lambda: LambdaConnectorProvisioningConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -160,19 +151,18 @@ public open class CfnConnector internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty.builder()
 
-      public override fun lambda(lambda: IResolvable) {
+      override fun lambda(lambda: IResolvable) {
         cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
       }
 
-      public override fun lambda(lambda: LambdaConnectorProvisioningConfigProperty) {
+      override fun lambda(lambda: LambdaConnectorProvisioningConfigProperty) {
         cdkBuilder.lambda(lambda.let(LambdaConnectorProvisioningConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5950ab3d5fc3efe717c0d5750d63b530f6dc218e2d5f862378656fa69ec5b00f")
-      public override
-          fun lambda(lambda: LambdaConnectorProvisioningConfigProperty.Builder.() -> Unit): Unit =
-          lambda(LambdaConnectorProvisioningConfigProperty(lambda))
+      override fun lambda(lambda: LambdaConnectorProvisioningConfigProperty.Builder.() -> Unit):
+          Unit = lambda(LambdaConnectorProvisioningConfigProperty(lambda))
 
       public fun build():
           software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty =
@@ -183,7 +173,7 @@ public open class CfnConnector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnConnector.ConnectorProvisioningConfigProperty,
     ) : ConnectorProvisioningConfigProperty {
-      public override fun lambda(): Any? = unwrap(this).getLambda()
+      override fun lambda(): Any? = unwrap(this).getLambda()
     }
 
     public companion object {
@@ -211,8 +201,7 @@ public open class CfnConnector internal constructor(
     public fun lambdaArn(): String
 
     public interface Builder {
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -221,7 +210,7 @@ public open class CfnConnector internal constructor(
           =
           software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty.builder()
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
@@ -234,7 +223,7 @@ public open class CfnConnector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appflow.CfnConnector.LambdaConnectorProvisioningConfigProperty,
     ) : LambdaConnectorProvisioningConfigProperty {
-      public override fun lambdaArn(): String = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String = unwrap(this).getLambdaArn()
     }
 
     public companion object {

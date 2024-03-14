@@ -14,36 +14,32 @@ public interface TcpHealthCheckOptions {
   public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
 
   public interface Builder {
-    public fun healthyThreshold(healthyThreshold: Number) {
-    }
+    public fun healthyThreshold(healthyThreshold: Number)
 
-    public fun interval(interval: Duration) {
-    }
+    public fun interval(interval: Duration)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun unhealthyThreshold(unhealthyThreshold: Number) {
-    }
+    public fun unhealthyThreshold(unhealthyThreshold: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions.Builder =
         software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions.builder()
 
-    public override fun healthyThreshold(healthyThreshold: Number) {
+    override fun healthyThreshold(healthyThreshold: Number) {
       cdkBuilder.healthyThreshold(healthyThreshold)
     }
 
-    public override fun interval(interval: Duration) {
+    override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun unhealthyThreshold(unhealthyThreshold: Number) {
+    override fun unhealthyThreshold(unhealthyThreshold: Number) {
       cdkBuilder.unhealthyThreshold(unhealthyThreshold)
     }
 
@@ -54,13 +50,13 @@ public interface TcpHealthCheckOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions,
   ) : TcpHealthCheckOptions {
-    public override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+    override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
 
-    public override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
+    override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+    override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
   }
 
   public companion object {

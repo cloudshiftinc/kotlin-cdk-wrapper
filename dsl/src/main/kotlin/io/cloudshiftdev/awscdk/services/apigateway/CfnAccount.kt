@@ -24,8 +24,7 @@ public open class CfnAccount internal constructor(
   }
 
   public interface Builder {
-    public fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
-    }
+    public fun cloudWatchRoleArn(cloudWatchRoleArn: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnAccount internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnAccount.Builder =
         software.amazon.awscdk.services.apigateway.CfnAccount.Builder.create(scope, id)
 
-    public override fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
+    override fun cloudWatchRoleArn(cloudWatchRoleArn: String) {
       cdkBuilder.cloudWatchRoleArn(cloudWatchRoleArn)
     }
 

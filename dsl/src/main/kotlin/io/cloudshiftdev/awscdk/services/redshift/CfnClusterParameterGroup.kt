@@ -59,23 +59,17 @@ public open class CfnClusterParameterGroup internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun parameterGroupFamily(parameterGroupFamily: String) {
-    }
+    public fun parameterGroupFamily(parameterGroupFamily: String)
 
-    public fun parameterGroupName(parameterGroupName: String) {
-    }
+    public fun parameterGroupName(parameterGroupName: String)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: List<Any>) {
-    }
+    public fun parameters(parameters: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -86,27 +80,27 @@ public open class CfnClusterParameterGroup internal constructor(
         software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.Builder =
         software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun parameterGroupFamily(parameterGroupFamily: String) {
+    override fun parameterGroupFamily(parameterGroupFamily: String) {
       cdkBuilder.parameterGroupFamily(parameterGroupFamily)
     }
 
-    public override fun parameterGroupName(parameterGroupName: String) {
+    override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: List<Any>) {
+    override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -141,11 +135,9 @@ public open class CfnClusterParameterGroup internal constructor(
     public fun parameterValue(): String
 
     public interface Builder {
-      public fun parameterName(parameterName: String) {
-      }
+      public fun parameterName(parameterName: String)
 
-      public fun parameterValue(parameterValue: String) {
-      }
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -154,11 +146,11 @@ public open class CfnClusterParameterGroup internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty.builder()
 
-      public override fun parameterName(parameterName: String) {
+      override fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
       }
 
-      public override fun parameterValue(parameterValue: String) {
+      override fun parameterValue(parameterValue: String) {
         cdkBuilder.parameterValue(parameterValue)
       }
 
@@ -171,9 +163,9 @@ public open class CfnClusterParameterGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnClusterParameterGroup.ParameterProperty,
     ) : ParameterProperty {
-      public override fun parameterName(): String = unwrap(this).getParameterName()
+      override fun parameterName(): String = unwrap(this).getParameterName()
 
-      public override fun parameterValue(): String = unwrap(this).getParameterValue()
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
     }
 
     public companion object {

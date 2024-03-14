@@ -57,150 +57,130 @@ public interface EventSourceMappingOptions {
   public fun tumblingWindow(): Duration? = unwrap(this).getTumblingWindow()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun batchSize(batchSize: Number) {
-    }
+    public fun batchSize(batchSize: Number)
 
-    public fun bisectBatchOnError(bisectBatchOnError: Boolean) {
-    }
+    public fun bisectBatchOnError(bisectBatchOnError: Boolean)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun eventSourceArn(eventSourceArn: String) {
-    }
+    public fun eventSourceArn(eventSourceArn: String)
 
-    public fun filters(filters: List<Map<String, Any>>) {
-    }
+    public fun filters(filters: List<Map<String, Any>>)
 
-    public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
-    }
+    public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>)
 
-    public fun kafkaConsumerGroupId(kafkaConsumerGroupId: String) {
-    }
+    public fun kafkaConsumerGroupId(kafkaConsumerGroupId: String)
 
-    public fun kafkaTopic(kafkaTopic: String) {
-    }
+    public fun kafkaTopic(kafkaTopic: String)
 
-    public fun maxBatchingWindow(maxBatchingWindow: Duration) {
-    }
+    public fun maxBatchingWindow(maxBatchingWindow: Duration)
 
-    public fun maxConcurrency(maxConcurrency: Number) {
-    }
+    public fun maxConcurrency(maxConcurrency: Number)
 
-    public fun maxRecordAge(maxRecordAge: Duration) {
-    }
+    public fun maxRecordAge(maxRecordAge: Duration)
 
-    public fun onFailure(onFailure: IEventSourceDlq) {
-    }
+    public fun onFailure(onFailure: IEventSourceDlq)
 
-    public fun parallelizationFactor(parallelizationFactor: Number) {
-    }
+    public fun parallelizationFactor(parallelizationFactor: Number)
 
-    public fun reportBatchItemFailures(reportBatchItemFailures: Boolean) {
-    }
+    public fun reportBatchItemFailures(reportBatchItemFailures: Boolean)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
 
     public
-        fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>) {
-    }
+        fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>)
 
-    public fun startingPosition(startingPosition: StartingPosition) {
-    }
+    public fun startingPosition(startingPosition: StartingPosition)
 
-    public fun startingPositionTimestamp(startingPositionTimestamp: Number) {
-    }
+    public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
-    public fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean) {
-    }
+    public fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean)
 
-    public fun tumblingWindow(tumblingWindow: Duration) {
-    }
+    public fun tumblingWindow(tumblingWindow: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.EventSourceMappingOptions.Builder
         = software.amazon.awscdk.services.lambda.EventSourceMappingOptions.builder()
 
-    public override fun batchSize(batchSize: Number) {
+    override fun batchSize(batchSize: Number) {
       cdkBuilder.batchSize(batchSize)
     }
 
-    public override fun bisectBatchOnError(bisectBatchOnError: Boolean) {
+    override fun bisectBatchOnError(bisectBatchOnError: Boolean) {
       cdkBuilder.bisectBatchOnError(bisectBatchOnError)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun eventSourceArn(eventSourceArn: String) {
+    override fun eventSourceArn(eventSourceArn: String) {
       cdkBuilder.eventSourceArn(eventSourceArn)
     }
 
-    public override fun filters(filters: List<Map<String, Any>>) {
+    override fun filters(filters: List<Map<String, Any>>) {
       cdkBuilder.filters(filters)
     }
 
-    public override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
+    override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
       cdkBuilder.kafkaBootstrapServers(kafkaBootstrapServers)
     }
 
-    public override fun kafkaConsumerGroupId(kafkaConsumerGroupId: String) {
+    override fun kafkaConsumerGroupId(kafkaConsumerGroupId: String) {
       cdkBuilder.kafkaConsumerGroupId(kafkaConsumerGroupId)
     }
 
-    public override fun kafkaTopic(kafkaTopic: String) {
+    override fun kafkaTopic(kafkaTopic: String) {
       cdkBuilder.kafkaTopic(kafkaTopic)
     }
 
-    public override fun maxBatchingWindow(maxBatchingWindow: Duration) {
+    override fun maxBatchingWindow(maxBatchingWindow: Duration) {
       cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
     }
 
-    public override fun maxConcurrency(maxConcurrency: Number) {
+    override fun maxConcurrency(maxConcurrency: Number) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
 
-    public override fun maxRecordAge(maxRecordAge: Duration) {
+    override fun maxRecordAge(maxRecordAge: Duration) {
       cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
     }
 
-    public override fun onFailure(onFailure: IEventSourceDlq) {
+    override fun onFailure(onFailure: IEventSourceDlq) {
       cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
     }
 
-    public override fun parallelizationFactor(parallelizationFactor: Number) {
+    override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
 
-    public override fun reportBatchItemFailures(reportBatchItemFailures: Boolean) {
+    override fun reportBatchItemFailures(reportBatchItemFailures: Boolean) {
       cdkBuilder.reportBatchItemFailures(reportBatchItemFailures)
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 
-    public override
+    override
         fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>) {
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map(SourceAccessConfiguration::unwrap))
     }
 
-    public override fun startingPosition(startingPosition: StartingPosition) {
+    override fun startingPosition(startingPosition: StartingPosition) {
       cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
     }
 
-    public override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
+    override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
       cdkBuilder.startingPositionTimestamp(startingPositionTimestamp)
     }
 
-    public override fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean) {
+    override fun supportS3OnFailureDestination(supportS3OnFailureDestination: Boolean) {
       cdkBuilder.supportS3OnFailureDestination(supportS3OnFailureDestination)
     }
 
-    public override fun tumblingWindow(tumblingWindow: Duration) {
+    override fun tumblingWindow(tumblingWindow: Duration) {
       cdkBuilder.tumblingWindow(tumblingWindow.let(Duration::unwrap))
     }
 
@@ -211,56 +191,52 @@ public interface EventSourceMappingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.EventSourceMappingOptions,
   ) : EventSourceMappingOptions {
-    public override fun batchSize(): Number? = unwrap(this).getBatchSize()
+    override fun batchSize(): Number? = unwrap(this).getBatchSize()
 
-    public override fun bisectBatchOnError(): Boolean? = unwrap(this).getBisectBatchOnError()
+    override fun bisectBatchOnError(): Boolean? = unwrap(this).getBisectBatchOnError()
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun eventSourceArn(): String? = unwrap(this).getEventSourceArn()
+    override fun eventSourceArn(): String? = unwrap(this).getEventSourceArn()
 
-    public override fun filters(): List<Map<String, Any>> = unwrap(this).getFilters() ?: emptyList()
+    override fun filters(): List<Map<String, Any>> = unwrap(this).getFilters() ?: emptyList()
 
-    public override fun kafkaBootstrapServers(): List<String> =
-        unwrap(this).getKafkaBootstrapServers() ?: emptyList()
+    override fun kafkaBootstrapServers(): List<String> = unwrap(this).getKafkaBootstrapServers() ?:
+        emptyList()
 
-    public override fun kafkaConsumerGroupId(): String? = unwrap(this).getKafkaConsumerGroupId()
+    override fun kafkaConsumerGroupId(): String? = unwrap(this).getKafkaConsumerGroupId()
 
-    public override fun kafkaTopic(): String? = unwrap(this).getKafkaTopic()
+    override fun kafkaTopic(): String? = unwrap(this).getKafkaTopic()
 
-    public override fun maxBatchingWindow(): Duration? =
+    override fun maxBatchingWindow(): Duration? =
         unwrap(this).getMaxBatchingWindow()?.let(Duration::wrap)
 
-    public override fun maxConcurrency(): Number? = unwrap(this).getMaxConcurrency()
+    override fun maxConcurrency(): Number? = unwrap(this).getMaxConcurrency()
 
-    public override fun maxRecordAge(): Duration? =
-        unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
+    override fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
-    public override fun onFailure(): IEventSourceDlq? =
+    override fun onFailure(): IEventSourceDlq? =
         unwrap(this).getOnFailure()?.let(IEventSourceDlq::wrap)
 
-    public override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
+    override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
 
-    public override fun reportBatchItemFailures(): Boolean? =
-        unwrap(this).getReportBatchItemFailures()
+    override fun reportBatchItemFailures(): Boolean? = unwrap(this).getReportBatchItemFailures()
 
-    public override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
+    override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 
-    public override fun sourceAccessConfigurations(): List<SourceAccessConfiguration> =
+    override fun sourceAccessConfigurations(): List<SourceAccessConfiguration> =
         unwrap(this).getSourceAccessConfigurations()?.map(SourceAccessConfiguration::wrap) ?:
         emptyList()
 
-    public override fun startingPosition(): StartingPosition? =
+    override fun startingPosition(): StartingPosition? =
         unwrap(this).getStartingPosition()?.let(StartingPosition::wrap)
 
-    public override fun startingPositionTimestamp(): Number? =
-        unwrap(this).getStartingPositionTimestamp()
+    override fun startingPositionTimestamp(): Number? = unwrap(this).getStartingPositionTimestamp()
 
-    public override fun supportS3OnFailureDestination(): Boolean? =
+    override fun supportS3OnFailureDestination(): Boolean? =
         unwrap(this).getSupportS3OnFailureDestination()
 
-    public override fun tumblingWindow(): Duration? =
-        unwrap(this).getTumblingWindow()?.let(Duration::wrap)
+    override fun tumblingWindow(): Duration? = unwrap(this).getTumblingWindow()?.let(Duration::wrap)
   }
 
   public companion object {

@@ -9,22 +9,20 @@ public interface SourceAccessConfiguration {
   public fun uri(): String
 
   public interface Builder {
-    public fun type(type: SourceAccessConfigurationType) {
-    }
+    public fun type(type: SourceAccessConfigurationType)
 
-    public fun uri(uri: String) {
-    }
+    public fun uri(uri: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.SourceAccessConfiguration.Builder
         = software.amazon.awscdk.services.lambda.SourceAccessConfiguration.builder()
 
-    public override fun type(type: SourceAccessConfigurationType) {
+    override fun type(type: SourceAccessConfigurationType) {
       cdkBuilder.type(type.let(SourceAccessConfigurationType::unwrap))
     }
 
-    public override fun uri(uri: String) {
+    override fun uri(uri: String) {
       cdkBuilder.uri(uri)
     }
 
@@ -35,10 +33,10 @@ public interface SourceAccessConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.SourceAccessConfiguration,
   ) : SourceAccessConfiguration {
-    public override fun type(): SourceAccessConfigurationType =
+    override fun type(): SourceAccessConfigurationType =
         unwrap(this).getType().let(SourceAccessConfigurationType::wrap)
 
-    public override fun uri(): String = unwrap(this).getUri()
+    override fun uri(): String = unwrap(this).getUri()
   }
 
   public companion object {

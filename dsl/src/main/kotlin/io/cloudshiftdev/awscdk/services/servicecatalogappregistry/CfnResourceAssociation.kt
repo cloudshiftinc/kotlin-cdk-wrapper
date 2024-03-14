@@ -41,14 +41,11 @@ public open class CfnResourceAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun application(application: String) {
-    }
+    public fun application(application: String)
 
-    public fun resource(resource: String) {
-    }
+    public fun resource(resource: String)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
   }
 
   private class BuilderImpl(
@@ -60,15 +57,15 @@ public open class CfnResourceAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAssociation.Builder.create(scope,
         id)
 
-    public override fun application(application: String) {
+    override fun application(application: String) {
       cdkBuilder.application(application)
     }
 
-    public override fun resource(resource: String) {
+    override fun resource(resource: String) {
       cdkBuilder.resource(resource)
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 

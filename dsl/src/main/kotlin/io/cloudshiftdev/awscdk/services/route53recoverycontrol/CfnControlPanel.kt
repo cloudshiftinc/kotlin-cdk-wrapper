@@ -52,14 +52,11 @@ public open class CfnControlPanel internal constructor(
   }
 
   public interface Builder {
-    public fun clusterArn(clusterArn: String) {
-    }
+    public fun clusterArn(clusterArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -71,15 +68,15 @@ public open class CfnControlPanel internal constructor(
         software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel.Builder.create(scope,
         id)
 
-    public override fun clusterArn(clusterArn: String) {
+    override fun clusterArn(clusterArn: String) {
       cdkBuilder.clusterArn(clusterArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

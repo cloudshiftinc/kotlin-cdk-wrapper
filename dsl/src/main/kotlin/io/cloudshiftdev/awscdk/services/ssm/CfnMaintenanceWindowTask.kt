@@ -132,68 +132,48 @@ public open class CfnMaintenanceWindowTask internal constructor(
   }
 
   public interface Builder {
-    public fun cutoffBehavior(cutoffBehavior: String) {
-    }
+    public fun cutoffBehavior(cutoffBehavior: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun loggingInfo(loggingInfo: IResolvable) {
-    }
+    public fun loggingInfo(loggingInfo: IResolvable)
 
-    public fun loggingInfo(loggingInfo: LoggingInfoProperty) {
-    }
+    public fun loggingInfo(loggingInfo: LoggingInfoProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fdbf17c449fb922feebcb1dff803691433d401a752d8933a05ec06cdd103c753")
-    public fun loggingInfo(loggingInfo: LoggingInfoProperty.Builder.() -> Unit) {
-    }
+    public fun loggingInfo(loggingInfo: LoggingInfoProperty.Builder.() -> Unit)
 
-    public fun maxConcurrency(maxConcurrency: String) {
-    }
+    public fun maxConcurrency(maxConcurrency: String)
 
-    public fun maxErrors(maxErrors: String) {
-    }
+    public fun maxErrors(maxErrors: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun serviceRoleArn(serviceRoleArn: String) {
-    }
+    public fun serviceRoleArn(serviceRoleArn: String)
 
-    public fun targets(targets: IResolvable) {
-    }
+    public fun targets(targets: IResolvable)
 
-    public fun targets(targets: List<Any>) {
-    }
+    public fun targets(targets: List<Any>)
 
-    public fun taskArn(taskArn: String) {
-    }
+    public fun taskArn(taskArn: String)
 
-    public fun taskInvocationParameters(taskInvocationParameters: IResolvable) {
-    }
+    public fun taskInvocationParameters(taskInvocationParameters: IResolvable)
 
-    public
-        fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty) {
-    }
+    public fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40a4651a882485982b5967f6dffd4aeed8c26aa0d3d45a180658ff849c2b80f2")
     public
-        fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty.Builder.() -> Unit) {
-    }
+        fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty.Builder.() -> Unit)
 
-    public fun taskParameters(taskParameters: Any) {
-    }
+    public fun taskParameters(taskParameters: Any)
 
-    public fun taskType(taskType: String) {
-    }
+    public fun taskType(taskType: String)
 
-    public fun windowId(windowId: String) {
-    }
+    public fun windowId(windowId: String)
   }
 
   private class BuilderImpl(
@@ -203,83 +183,83 @@ public open class CfnMaintenanceWindowTask internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.Builder =
         software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.Builder.create(scope, id)
 
-    public override fun cutoffBehavior(cutoffBehavior: String) {
+    override fun cutoffBehavior(cutoffBehavior: String) {
       cdkBuilder.cutoffBehavior(cutoffBehavior)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun loggingInfo(loggingInfo: IResolvable) {
+    override fun loggingInfo(loggingInfo: IResolvable) {
       cdkBuilder.loggingInfo(loggingInfo.let(IResolvable::unwrap))
     }
 
-    public override fun loggingInfo(loggingInfo: LoggingInfoProperty) {
+    override fun loggingInfo(loggingInfo: LoggingInfoProperty) {
       cdkBuilder.loggingInfo(loggingInfo.let(LoggingInfoProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fdbf17c449fb922feebcb1dff803691433d401a752d8933a05ec06cdd103c753")
-    public override fun loggingInfo(loggingInfo: LoggingInfoProperty.Builder.() -> Unit): Unit =
+    override fun loggingInfo(loggingInfo: LoggingInfoProperty.Builder.() -> Unit): Unit =
         loggingInfo(LoggingInfoProperty(loggingInfo))
 
-    public override fun maxConcurrency(maxConcurrency: String) {
+    override fun maxConcurrency(maxConcurrency: String) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
 
-    public override fun maxErrors(maxErrors: String) {
+    override fun maxErrors(maxErrors: String) {
       cdkBuilder.maxErrors(maxErrors)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun serviceRoleArn(serviceRoleArn: String) {
+    override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
 
-    public override fun targets(targets: IResolvable) {
+    override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
 
-    public override fun targets(targets: List<Any>) {
+    override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
 
-    public override fun taskArn(taskArn: String) {
+    override fun taskArn(taskArn: String) {
       cdkBuilder.taskArn(taskArn)
     }
 
-    public override fun taskInvocationParameters(taskInvocationParameters: IResolvable) {
+    override fun taskInvocationParameters(taskInvocationParameters: IResolvable) {
       cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty) {
       cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(TaskInvocationParametersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40a4651a882485982b5967f6dffd4aeed8c26aa0d3d45a180658ff849c2b80f2")
-    public override
+    override
         fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty.Builder.() -> Unit):
         Unit = taskInvocationParameters(TaskInvocationParametersProperty(taskInvocationParameters))
 
-    public override fun taskParameters(taskParameters: Any) {
+    override fun taskParameters(taskParameters: Any) {
       cdkBuilder.taskParameters(taskParameters)
     }
 
-    public override fun taskType(taskType: String) {
+    override fun taskType(taskType: String) {
       cdkBuilder.taskType(taskType)
     }
 
-    public override fun windowId(windowId: String) {
+    override fun windowId(windowId: String) {
       cdkBuilder.windowId(windowId)
     }
 
@@ -316,14 +296,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun qualifier(): String? = unwrap(this).getQualifier()
 
     public interface Builder {
-      public fun clientContext(clientContext: String) {
-      }
+      public fun clientContext(clientContext: String)
 
-      public fun payload(payload: String) {
-      }
+      public fun payload(payload: String)
 
-      public fun qualifier(qualifier: String) {
-      }
+      public fun qualifier(qualifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -332,15 +309,15 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty.builder()
 
-      public override fun clientContext(clientContext: String) {
+      override fun clientContext(clientContext: String) {
         cdkBuilder.clientContext(clientContext)
       }
 
-      public override fun payload(payload: String) {
+      override fun payload(payload: String) {
         cdkBuilder.payload(payload)
       }
 
-      public override fun qualifier(qualifier: String) {
+      override fun qualifier(qualifier: String) {
         cdkBuilder.qualifier(qualifier)
       }
 
@@ -353,11 +330,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty,
     ) : MaintenanceWindowLambdaParametersProperty {
-      public override fun clientContext(): String? = unwrap(this).getClientContext()
+      override fun clientContext(): String? = unwrap(this).getClientContext()
 
-      public override fun payload(): String? = unwrap(this).getPayload()
+      override fun payload(): String? = unwrap(this).getPayload()
 
-      public override fun qualifier(): String? = unwrap(this).getQualifier()
+      override fun qualifier(): String? = unwrap(this).getQualifier()
     }
 
     public companion object {
@@ -405,56 +382,41 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
 
     public interface Builder {
-      public fun cloudWatchOutputConfig(cloudWatchOutputConfig: IResolvable) {
-      }
+      public fun cloudWatchOutputConfig(cloudWatchOutputConfig: IResolvable)
 
-      public fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty) {
-      }
+      public fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("102c967a4cf9341fe42734454c5ad0413f929090f11efe28c173537a2eef95f6")
       public
-          fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty.Builder.() -> Unit)
 
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun documentHash(documentHash: String) {
-      }
+      public fun documentHash(documentHash: String)
 
-      public fun documentHashType(documentHashType: String) {
-      }
+      public fun documentHashType(documentHashType: String)
 
-      public fun documentVersion(documentVersion: String) {
-      }
+      public fun documentVersion(documentVersion: String)
 
-      public fun notificationConfig(notificationConfig: IResolvable) {
-      }
+      public fun notificationConfig(notificationConfig: IResolvable)
 
-      public fun notificationConfig(notificationConfig: NotificationConfigProperty) {
-      }
+      public fun notificationConfig(notificationConfig: NotificationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b25b2c11086aec5ffa4631dd76b650010e51c85ba07b52e2ab287d52404837b4")
       public
-          fun notificationConfig(notificationConfig: NotificationConfigProperty.Builder.() -> Unit) {
-      }
+          fun notificationConfig(notificationConfig: NotificationConfigProperty.Builder.() -> Unit)
 
-      public fun outputS3BucketName(outputS3BucketName: String) {
-      }
+      public fun outputS3BucketName(outputS3BucketName: String)
 
-      public fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
-      }
+      public fun outputS3KeyPrefix(outputS3KeyPrefix: String)
 
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
 
-      public fun serviceRoleArn(serviceRoleArn: String) {
-      }
+      public fun serviceRoleArn(serviceRoleArn: String)
 
-      public fun timeoutSeconds(timeoutSeconds: Number) {
-      }
+      public fun timeoutSeconds(timeoutSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -463,68 +425,67 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.builder()
 
-      public override fun cloudWatchOutputConfig(cloudWatchOutputConfig: IResolvable) {
+      override fun cloudWatchOutputConfig(cloudWatchOutputConfig: IResolvable) {
         cdkBuilder.cloudWatchOutputConfig(cloudWatchOutputConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty) {
+      override fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty) {
         cdkBuilder.cloudWatchOutputConfig(cloudWatchOutputConfig.let(CloudWatchOutputConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("102c967a4cf9341fe42734454c5ad0413f929090f11efe28c173537a2eef95f6")
-      public override
+      override
           fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty.Builder.() -> Unit):
           Unit = cloudWatchOutputConfig(CloudWatchOutputConfigProperty(cloudWatchOutputConfig))
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun documentHash(documentHash: String) {
+      override fun documentHash(documentHash: String) {
         cdkBuilder.documentHash(documentHash)
       }
 
-      public override fun documentHashType(documentHashType: String) {
+      override fun documentHashType(documentHashType: String) {
         cdkBuilder.documentHashType(documentHashType)
       }
 
-      public override fun documentVersion(documentVersion: String) {
+      override fun documentVersion(documentVersion: String) {
         cdkBuilder.documentVersion(documentVersion)
       }
 
-      public override fun notificationConfig(notificationConfig: IResolvable) {
+      override fun notificationConfig(notificationConfig: IResolvable) {
         cdkBuilder.notificationConfig(notificationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun notificationConfig(notificationConfig: NotificationConfigProperty) {
+      override fun notificationConfig(notificationConfig: NotificationConfigProperty) {
         cdkBuilder.notificationConfig(notificationConfig.let(NotificationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b25b2c11086aec5ffa4631dd76b650010e51c85ba07b52e2ab287d52404837b4")
-      public override
+      override
           fun notificationConfig(notificationConfig: NotificationConfigProperty.Builder.() -> Unit):
           Unit = notificationConfig(NotificationConfigProperty(notificationConfig))
 
-      public override fun outputS3BucketName(outputS3BucketName: String) {
+      override fun outputS3BucketName(outputS3BucketName: String) {
         cdkBuilder.outputS3BucketName(outputS3BucketName)
       }
 
-      public override fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
+      override fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
         cdkBuilder.outputS3KeyPrefix(outputS3KeyPrefix)
       }
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun serviceRoleArn(serviceRoleArn: String) {
+      override fun serviceRoleArn(serviceRoleArn: String) {
         cdkBuilder.serviceRoleArn(serviceRoleArn)
       }
 
-      public override fun timeoutSeconds(timeoutSeconds: Number) {
+      override fun timeoutSeconds(timeoutSeconds: Number) {
         cdkBuilder.timeoutSeconds(timeoutSeconds)
       }
 
@@ -537,27 +498,27 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty,
     ) : MaintenanceWindowRunCommandParametersProperty {
-      public override fun cloudWatchOutputConfig(): Any? = unwrap(this).getCloudWatchOutputConfig()
+      override fun cloudWatchOutputConfig(): Any? = unwrap(this).getCloudWatchOutputConfig()
 
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun documentHash(): String? = unwrap(this).getDocumentHash()
+      override fun documentHash(): String? = unwrap(this).getDocumentHash()
 
-      public override fun documentHashType(): String? = unwrap(this).getDocumentHashType()
+      override fun documentHashType(): String? = unwrap(this).getDocumentHashType()
 
-      public override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
-      public override fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
+      override fun notificationConfig(): Any? = unwrap(this).getNotificationConfig()
 
-      public override fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
+      override fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
 
-      public override fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
+      override fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun serviceRoleArn(): String? = unwrap(this).getServiceRoleArn()
+      override fun serviceRoleArn(): String? = unwrap(this).getServiceRoleArn()
 
-      public override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+      override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
     }
 
     public companion object {
@@ -590,14 +551,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun notificationType(): String? = unwrap(this).getNotificationType()
 
     public interface Builder {
-      public fun notificationArn(notificationArn: String) {
-      }
+      public fun notificationArn(notificationArn: String)
 
-      public fun notificationEvents(notificationEvents: List<String>) {
-      }
+      public fun notificationEvents(notificationEvents: List<String>)
 
-      public fun notificationType(notificationType: String) {
-      }
+      public fun notificationType(notificationType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -606,15 +564,15 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty.builder()
 
-      public override fun notificationArn(notificationArn: String) {
+      override fun notificationArn(notificationArn: String) {
         cdkBuilder.notificationArn(notificationArn)
       }
 
-      public override fun notificationEvents(notificationEvents: List<String>) {
+      override fun notificationEvents(notificationEvents: List<String>) {
         cdkBuilder.notificationEvents(notificationEvents)
       }
 
-      public override fun notificationType(notificationType: String) {
+      override fun notificationType(notificationType: String) {
         cdkBuilder.notificationType(notificationType)
       }
 
@@ -627,12 +585,12 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty,
     ) : NotificationConfigProperty {
-      public override fun notificationArn(): String = unwrap(this).getNotificationArn()
+      override fun notificationArn(): String = unwrap(this).getNotificationArn()
 
-      public override fun notificationEvents(): List<String> = unwrap(this).getNotificationEvents()
-          ?: emptyList()
+      override fun notificationEvents(): List<String> = unwrap(this).getNotificationEvents() ?:
+          emptyList()
 
-      public override fun notificationType(): String? = unwrap(this).getNotificationType()
+      override fun notificationType(): String? = unwrap(this).getNotificationType()
     }
 
     public companion object {
@@ -661,11 +619,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -673,11 +629,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -690,9 +646,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty,
     ) : TargetProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -721,11 +677,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     public interface Builder {
-      public fun documentVersion(documentVersion: String) {
-      }
+      public fun documentVersion(documentVersion: String)
 
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -734,11 +688,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.builder()
 
-      public override fun documentVersion(documentVersion: String) {
+      override fun documentVersion(documentVersion: String) {
         cdkBuilder.documentVersion(documentVersion)
       }
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
@@ -751,9 +705,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty,
     ) : MaintenanceWindowAutomationParametersProperty {
-      public override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
     }
 
     public companion object {
@@ -783,11 +737,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun input(input: String) {
-      }
+      public fun input(input: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -796,11 +748,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.builder()
 
-      public override fun input(input: String) {
+      override fun input(input: String) {
         cdkBuilder.input(input)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -813,9 +765,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty,
     ) : MaintenanceWindowStepFunctionsParametersProperty {
-      public override fun input(): String? = unwrap(this).getInput()
+      override fun input(): String? = unwrap(this).getInput()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -845,14 +797,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun cloudWatchOutputEnabled(): Any? = unwrap(this).getCloudWatchOutputEnabled()
 
     public interface Builder {
-      public fun cloudWatchLogGroupName(cloudWatchLogGroupName: String) {
-      }
+      public fun cloudWatchLogGroupName(cloudWatchLogGroupName: String)
 
-      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean) {
-      }
+      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean)
 
-      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable) {
-      }
+      public fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -861,15 +810,15 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty.builder()
 
-      public override fun cloudWatchLogGroupName(cloudWatchLogGroupName: String) {
+      override fun cloudWatchLogGroupName(cloudWatchLogGroupName: String) {
         cdkBuilder.cloudWatchLogGroupName(cloudWatchLogGroupName)
       }
 
-      public override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean) {
+      override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: Boolean) {
         cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled)
       }
 
-      public override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable) {
+      override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable) {
         cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled.let(IResolvable::unwrap))
       }
 
@@ -882,11 +831,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty,
     ) : CloudWatchOutputConfigProperty {
-      public override fun cloudWatchLogGroupName(): String? =
-          unwrap(this).getCloudWatchLogGroupName()
+      override fun cloudWatchLogGroupName(): String? = unwrap(this).getCloudWatchLogGroupName()
 
-      public override fun cloudWatchOutputEnabled(): Any? =
-          unwrap(this).getCloudWatchOutputEnabled()
+      override fun cloudWatchOutputEnabled(): Any? = unwrap(this).getCloudWatchOutputEnabled()
     }
 
     public companion object {
@@ -924,59 +871,47 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
     public interface Builder {
       public
-          fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: IResolvable) {
-      }
+          fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: IResolvable)
 
       public
-          fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty) {
-      }
+          fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63593ae3b7f0d928a6578272ca63cc51e4a876c21628cca9194a24ee8afe3897")
       public
-          fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty.Builder.() -> Unit) {
-      }
+          fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty.Builder.() -> Unit)
 
-      public fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: IResolvable) {
-      }
+      public fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: IResolvable)
 
       public
-          fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty) {
-      }
+          fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3956ce734b93da1442936537185d5795eb29e05ce35a9cad4b851c72c11ee1f6")
       public
-          fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty.Builder.() -> Unit) {
-      }
+          fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty.Builder.() -> Unit)
 
       public
-          fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: IResolvable) {
-      }
+          fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: IResolvable)
 
       public
-          fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty) {
-      }
+          fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5afbfb626ae13685f0b01adfd1badbb701d9f85722c765f966389636f0e69da")
       public
-          fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty.Builder.() -> Unit) {
-      }
+          fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty.Builder.() -> Unit)
 
       public
-          fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: IResolvable) {
-      }
+          fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: IResolvable)
 
       public
-          fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty) {
-      }
+          fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("270f735065e23fe71e6ef7b5b5b4093761bcdfe7c6309ec8c843a2193d1b4ee3")
       public
-          fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty.Builder.() -> Unit) {
-      }
+          fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -985,70 +920,70 @@ public open class CfnMaintenanceWindowTask internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty.builder()
 
-      public override
+      override
           fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: IResolvable) {
         cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty) {
         cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters.let(MaintenanceWindowAutomationParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63593ae3b7f0d928a6578272ca63cc51e4a876c21628cca9194a24ee8afe3897")
-      public override
+      override
           fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty.Builder.() -> Unit):
           Unit =
           maintenanceWindowAutomationParameters(MaintenanceWindowAutomationParametersProperty(maintenanceWindowAutomationParameters))
 
-      public override
+      override
           fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: IResolvable) {
         cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty) {
         cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters.let(MaintenanceWindowLambdaParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3956ce734b93da1442936537185d5795eb29e05ce35a9cad4b851c72c11ee1f6")
-      public override
+      override
           fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty.Builder.() -> Unit):
           Unit =
           maintenanceWindowLambdaParameters(MaintenanceWindowLambdaParametersProperty(maintenanceWindowLambdaParameters))
 
-      public override
+      override
           fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: IResolvable) {
         cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty) {
         cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters.let(MaintenanceWindowRunCommandParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5afbfb626ae13685f0b01adfd1badbb701d9f85722c765f966389636f0e69da")
-      public override
+      override
           fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty.Builder.() -> Unit):
           Unit =
           maintenanceWindowRunCommandParameters(MaintenanceWindowRunCommandParametersProperty(maintenanceWindowRunCommandParameters))
 
-      public override
+      override
           fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: IResolvable) {
         cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty) {
         cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters.let(MaintenanceWindowStepFunctionsParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("270f735065e23fe71e6ef7b5b5b4093761bcdfe7c6309ec8c843a2193d1b4ee3")
-      public override
+      override
           fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty.Builder.() -> Unit):
           Unit =
           maintenanceWindowStepFunctionsParameters(MaintenanceWindowStepFunctionsParametersProperty(maintenanceWindowStepFunctionsParameters))
@@ -1062,16 +997,16 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty,
     ) : TaskInvocationParametersProperty {
-      public override fun maintenanceWindowAutomationParameters(): Any? =
+      override fun maintenanceWindowAutomationParameters(): Any? =
           unwrap(this).getMaintenanceWindowAutomationParameters()
 
-      public override fun maintenanceWindowLambdaParameters(): Any? =
+      override fun maintenanceWindowLambdaParameters(): Any? =
           unwrap(this).getMaintenanceWindowLambdaParameters()
 
-      public override fun maintenanceWindowRunCommandParameters(): Any? =
+      override fun maintenanceWindowRunCommandParameters(): Any? =
           unwrap(this).getMaintenanceWindowRunCommandParameters()
 
-      public override fun maintenanceWindowStepFunctionsParameters(): Any? =
+      override fun maintenanceWindowStepFunctionsParameters(): Any? =
           unwrap(this).getMaintenanceWindowStepFunctionsParameters()
     }
 
@@ -1103,14 +1038,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun s3Prefix(): String? = unwrap(this).getS3Prefix()
 
     public interface Builder {
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Prefix(s3Prefix: String) {
-      }
+      public fun s3Prefix(s3Prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1118,15 +1050,15 @@ public open class CfnMaintenanceWindowTask internal constructor(
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty.builder()
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Prefix(s3Prefix: String) {
+      override fun s3Prefix(s3Prefix: String) {
         cdkBuilder.s3Prefix(s3Prefix)
       }
 
@@ -1139,11 +1071,11 @@ public open class CfnMaintenanceWindowTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty,
     ) : LoggingInfoProperty {
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
 
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Prefix(): String? = unwrap(this).getS3Prefix()
+      override fun s3Prefix(): String? = unwrap(this).getS3Prefix()
     }
 
     public companion object {

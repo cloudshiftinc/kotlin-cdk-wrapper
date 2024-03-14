@@ -461,230 +461,158 @@ public open class CfnDBCluster internal constructor(
   }
 
   public interface Builder {
-    public fun allocatedStorage(allocatedStorage: Number) {
-    }
+    public fun allocatedStorage(allocatedStorage: Number)
 
-    public fun associatedRoles(associatedRoles: IResolvable) {
-    }
+    public fun associatedRoles(associatedRoles: IResolvable)
 
-    public fun associatedRoles(associatedRoles: List<Any>) {
-    }
+    public fun associatedRoles(associatedRoles: List<Any>)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
-    public fun backtrackWindow(backtrackWindow: Number) {
-    }
+    public fun backtrackWindow(backtrackWindow: Number)
 
-    public fun backupRetentionPeriod(backupRetentionPeriod: Number) {
-    }
+    public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-    }
+    public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
-    public fun dbClusterInstanceClass(dbClusterInstanceClass: String) {
-    }
+    public fun dbClusterInstanceClass(dbClusterInstanceClass: String)
 
-    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
-    }
+    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String)
 
-    public fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String) {
-    }
+    public fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String)
 
-    public fun dbSubnetGroupName(dbSubnetGroupName: String) {
-    }
+    public fun dbSubnetGroupName(dbSubnetGroupName: String)
 
-    public fun dbSystemId(dbSystemId: String) {
-    }
+    public fun dbSystemId(dbSystemId: String)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun deletionProtection(deletionProtection: IResolvable) {
-    }
+    public fun deletionProtection(deletionProtection: IResolvable)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun domainIamRoleName(domainIamRoleName: String) {
-    }
+    public fun domainIamRoleName(domainIamRoleName: String)
 
-    public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
-    }
+    public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>)
 
-    public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean) {
-    }
+    public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean)
 
-    public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable) {
-    }
+    public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable)
 
-    public fun enableHttpEndpoint(enableHttpEndpoint: Boolean) {
-    }
+    public fun enableHttpEndpoint(enableHttpEndpoint: Boolean)
 
-    public fun enableHttpEndpoint(enableHttpEndpoint: IResolvable) {
-    }
+    public fun enableHttpEndpoint(enableHttpEndpoint: IResolvable)
 
-    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
-    }
+    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean)
 
-    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
-    }
+    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineMode(engineMode: String) {
-    }
+    public fun engineMode(engineMode: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun globalClusterIdentifier(globalClusterIdentifier: String) {
-    }
+    public fun globalClusterIdentifier(globalClusterIdentifier: String)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
-    }
+    public fun manageMasterUserPassword(manageMasterUserPassword: Boolean)
 
-    public fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
-    }
+    public fun manageMasterUserPassword(manageMasterUserPassword: IResolvable)
 
-    public fun masterUserPassword(masterUserPassword: String) {
-    }
+    public fun masterUserPassword(masterUserPassword: String)
 
-    public fun masterUserSecret(masterUserSecret: IResolvable) {
-    }
+    public fun masterUserSecret(masterUserSecret: IResolvable)
 
-    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
-    }
+    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c5177ba2ce09dd6957b01d7244f34d884d28421ebac39c4b8c7938b5c0ca985")
-    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit) {
-    }
+    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit)
 
-    public fun masterUsername(masterUsername: String) {
-    }
+    public fun masterUsername(masterUsername: String)
 
-    public fun monitoringInterval(monitoringInterval: Number) {
-    }
+    public fun monitoringInterval(monitoringInterval: Number)
 
-    public fun monitoringRoleArn(monitoringRoleArn: String) {
-    }
+    public fun monitoringRoleArn(monitoringRoleArn: String)
 
-    public fun networkType(networkType: String) {
-    }
+    public fun networkType(networkType: String)
 
-    public fun performanceInsightsEnabled(performanceInsightsEnabled: Boolean) {
-    }
+    public fun performanceInsightsEnabled(performanceInsightsEnabled: Boolean)
 
-    public fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable) {
-    }
+    public fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable)
 
-    public fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
-    }
+    public fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String)
 
-    public fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number) {
-    }
+    public fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredBackupWindow(preferredBackupWindow: String) {
-    }
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun replicationSourceIdentifier(replicationSourceIdentifier: String) {
-    }
+    public fun replicationSourceIdentifier(replicationSourceIdentifier: String)
 
-    public fun restoreToTime(restoreToTime: String) {
-    }
+    public fun restoreToTime(restoreToTime: String)
 
-    public fun restoreType(restoreType: String) {
-    }
+    public fun restoreType(restoreType: String)
 
-    public fun scalingConfiguration(scalingConfiguration: IResolvable) {
-    }
+    public fun scalingConfiguration(scalingConfiguration: IResolvable)
 
-    public fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty) {
-    }
+    public fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7fa9676c3039f29f132b6dd8b699ca2cee78d2e1ded81b22cbcd42057c78dafe")
     public
-        fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty.Builder.() -> Unit)
 
-    public fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
-    }
+    public fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable)
 
     public
-        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty) {
-    }
+        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c267a26045ec107b3af7352451263749d4ad8d017efddc544d91f7cc9c89369f")
     public
-        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty.Builder.() -> Unit)
 
-    public fun snapshotIdentifier(snapshotIdentifier: String) {
-    }
+    public fun snapshotIdentifier(snapshotIdentifier: String)
 
-    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
-    }
+    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String)
 
-    public fun sourceRegion(sourceRegion: String) {
-    }
+    public fun sourceRegion(sourceRegion: String)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun storageEncrypted(storageEncrypted: IResolvable) {
-    }
+    public fun storageEncrypted(storageEncrypted: IResolvable)
 
-    public fun storageType(storageType: String) {
-    }
+    public fun storageType(storageType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
-    }
+    public fun useLatestRestorableTime(useLatestRestorableTime: Boolean)
 
-    public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-    }
+    public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -694,302 +622,298 @@ public open class CfnDBCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBCluster.Builder =
         software.amazon.awscdk.services.rds.CfnDBCluster.Builder.create(scope, id)
 
-    public override fun allocatedStorage(allocatedStorage: Number) {
+    override fun allocatedStorage(allocatedStorage: Number) {
       cdkBuilder.allocatedStorage(allocatedStorage)
     }
 
-    public override fun associatedRoles(associatedRoles: IResolvable) {
+    override fun associatedRoles(associatedRoles: IResolvable) {
       cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
     }
 
-    public override fun associatedRoles(associatedRoles: List<Any>) {
+    override fun associatedRoles(associatedRoles: List<Any>) {
       cdkBuilder.associatedRoles(associatedRoles)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
-    public override fun backtrackWindow(backtrackWindow: Number) {
+    override fun backtrackWindow(backtrackWindow: Number) {
       cdkBuilder.backtrackWindow(backtrackWindow)
     }
 
-    public override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
+    override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
       cdkBuilder.backupRetentionPeriod(backupRetentionPeriod)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun dbClusterIdentifier(dbClusterIdentifier: String) {
+    override fun dbClusterIdentifier(dbClusterIdentifier: String) {
       cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
     }
 
-    public override fun dbClusterInstanceClass(dbClusterInstanceClass: String) {
+    override fun dbClusterInstanceClass(dbClusterInstanceClass: String) {
       cdkBuilder.dbClusterInstanceClass(dbClusterInstanceClass)
     }
 
-    public override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
+    override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
       cdkBuilder.dbClusterParameterGroupName(dbClusterParameterGroupName)
     }
 
-    public override fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String) {
+    override fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String) {
       cdkBuilder.dbInstanceParameterGroupName(dbInstanceParameterGroupName)
     }
 
-    public override fun dbSubnetGroupName(dbSubnetGroupName: String) {
+    override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
     }
 
-    public override fun dbSystemId(dbSystemId: String) {
+    override fun dbSystemId(dbSystemId: String) {
       cdkBuilder.dbSystemId(dbSystemId)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deletionProtection(deletionProtection: IResolvable) {
+    override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun domainIamRoleName(domainIamRoleName: String) {
+    override fun domainIamRoleName(domainIamRoleName: String) {
       cdkBuilder.domainIamRoleName(domainIamRoleName)
     }
 
-    public override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
+    override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
       cdkBuilder.enableCloudwatchLogsExports(enableCloudwatchLogsExports)
     }
 
-    public override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean) {
+    override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean) {
       cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding)
     }
 
-    public override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable) {
+    override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable) {
       cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding.let(IResolvable::unwrap))
     }
 
-    public override fun enableHttpEndpoint(enableHttpEndpoint: Boolean) {
+    override fun enableHttpEndpoint(enableHttpEndpoint: Boolean) {
       cdkBuilder.enableHttpEndpoint(enableHttpEndpoint)
     }
 
-    public override fun enableHttpEndpoint(enableHttpEndpoint: IResolvable) {
+    override fun enableHttpEndpoint(enableHttpEndpoint: IResolvable) {
       cdkBuilder.enableHttpEndpoint(enableHttpEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
+    override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
       cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication)
     }
 
-    public override
-        fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
+    override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
       cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable::unwrap))
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineMode(engineMode: String) {
+    override fun engineMode(engineMode: String) {
       cdkBuilder.engineMode(engineMode)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun globalClusterIdentifier(globalClusterIdentifier: String) {
+    override fun globalClusterIdentifier(globalClusterIdentifier: String) {
       cdkBuilder.globalClusterIdentifier(globalClusterIdentifier)
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
+    override fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
       cdkBuilder.manageMasterUserPassword(manageMasterUserPassword)
     }
 
-    public override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
+    override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
       cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable::unwrap))
     }
 
-    public override fun masterUserPassword(masterUserPassword: String) {
+    override fun masterUserPassword(masterUserPassword: String) {
       cdkBuilder.masterUserPassword(masterUserPassword)
     }
 
-    public override fun masterUserSecret(masterUserSecret: IResolvable) {
+    override fun masterUserSecret(masterUserSecret: IResolvable) {
       cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable::unwrap))
     }
 
-    public override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
+    override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
       cdkBuilder.masterUserSecret(masterUserSecret.let(MasterUserSecretProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c5177ba2ce09dd6957b01d7244f34d884d28421ebac39c4b8c7938b5c0ca985")
-    public override
-        fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit): Unit =
-        masterUserSecret(MasterUserSecretProperty(masterUserSecret))
+    override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit):
+        Unit = masterUserSecret(MasterUserSecretProperty(masterUserSecret))
 
-    public override fun masterUsername(masterUsername: String) {
+    override fun masterUsername(masterUsername: String) {
       cdkBuilder.masterUsername(masterUsername)
     }
 
-    public override fun monitoringInterval(monitoringInterval: Number) {
+    override fun monitoringInterval(monitoringInterval: Number) {
       cdkBuilder.monitoringInterval(monitoringInterval)
     }
 
-    public override fun monitoringRoleArn(monitoringRoleArn: String) {
+    override fun monitoringRoleArn(monitoringRoleArn: String) {
       cdkBuilder.monitoringRoleArn(monitoringRoleArn)
     }
 
-    public override fun networkType(networkType: String) {
+    override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
 
-    public override fun performanceInsightsEnabled(performanceInsightsEnabled: Boolean) {
+    override fun performanceInsightsEnabled(performanceInsightsEnabled: Boolean) {
       cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled)
     }
 
-    public override fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable) {
+    override fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable) {
       cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
+    override fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
       cdkBuilder.performanceInsightsKmsKeyId(performanceInsightsKmsKeyId)
     }
 
-    public override
-        fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number) {
+    override fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number) {
       cdkBuilder.performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredBackupWindow(preferredBackupWindow: String) {
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
       cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun replicationSourceIdentifier(replicationSourceIdentifier: String) {
+    override fun replicationSourceIdentifier(replicationSourceIdentifier: String) {
       cdkBuilder.replicationSourceIdentifier(replicationSourceIdentifier)
     }
 
-    public override fun restoreToTime(restoreToTime: String) {
+    override fun restoreToTime(restoreToTime: String) {
       cdkBuilder.restoreToTime(restoreToTime)
     }
 
-    public override fun restoreType(restoreType: String) {
+    override fun restoreType(restoreType: String) {
       cdkBuilder.restoreType(restoreType)
     }
 
-    public override fun scalingConfiguration(scalingConfiguration: IResolvable) {
+    override fun scalingConfiguration(scalingConfiguration: IResolvable) {
       cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty) {
+    override fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty) {
       cdkBuilder.scalingConfiguration(scalingConfiguration.let(ScalingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7fa9676c3039f29f132b6dd8b699ca2cee78d2e1ded81b22cbcd42057c78dafe")
-    public override
+    override
         fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty.Builder.() -> Unit):
         Unit = scalingConfiguration(ScalingConfigurationProperty(scalingConfiguration))
 
-    public override
-        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
+    override fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
       cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty) {
       cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(ServerlessV2ScalingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c267a26045ec107b3af7352451263749d4ad8d017efddc544d91f7cc9c89369f")
-    public override
+    override
         fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty.Builder.() -> Unit):
         Unit =
         serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty(serverlessV2ScalingConfiguration))
 
-    public override fun snapshotIdentifier(snapshotIdentifier: String) {
+    override fun snapshotIdentifier(snapshotIdentifier: String) {
       cdkBuilder.snapshotIdentifier(snapshotIdentifier)
     }
 
-    public override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
+    override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
       cdkBuilder.sourceDbClusterIdentifier(sourceDbClusterIdentifier)
     }
 
-    public override fun sourceRegion(sourceRegion: String) {
+    override fun sourceRegion(sourceRegion: String) {
       cdkBuilder.sourceRegion(sourceRegion)
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun storageEncrypted(storageEncrypted: IResolvable) {
+    override fun storageEncrypted(storageEncrypted: IResolvable) {
       cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
     }
 
-    public override fun storageType(storageType: String) {
+    override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
+    override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
 
-    public override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
+    override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
@@ -1023,11 +947,9 @@ public open class CfnDBCluster internal constructor(
     public fun port(): String? = unwrap(this).getPort()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun port(port: String) {
-      }
+      public fun port(port: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1035,11 +957,11 @@ public open class CfnDBCluster internal constructor(
           software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun port(port: String) {
+      override fun port(port: String) {
         cdkBuilder.port(port)
       }
 
@@ -1050,9 +972,9 @@ public open class CfnDBCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty,
     ) : EndpointProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun port(): String? = unwrap(this).getPort()
+      override fun port(): String? = unwrap(this).getPort()
     }
 
     public companion object {
@@ -1081,11 +1003,9 @@ public open class CfnDBCluster internal constructor(
     public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
     public interface Builder {
-      public fun maxCapacity(maxCapacity: Number) {
-      }
+      public fun maxCapacity(maxCapacity: Number)
 
-      public fun minCapacity(minCapacity: Number) {
-      }
+      public fun minCapacity(minCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1094,11 +1014,11 @@ public open class CfnDBCluster internal constructor(
           =
           software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.builder()
 
-      public override fun maxCapacity(maxCapacity: Number) {
+      override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
       }
 
-      public override fun minCapacity(minCapacity: Number) {
+      override fun minCapacity(minCapacity: Number) {
         cdkBuilder.minCapacity(minCapacity)
       }
 
@@ -1111,9 +1031,9 @@ public open class CfnDBCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty,
     ) : ServerlessV2ScalingConfigurationProperty {
-      public override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
 
-      public override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
     }
 
     public companion object {
@@ -1143,11 +1063,9 @@ public open class CfnDBCluster internal constructor(
     public fun secretArn(): String? = unwrap(this).getSecretArn()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1155,11 +1073,11 @@ public open class CfnDBCluster internal constructor(
           software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
@@ -1171,9 +1089,9 @@ public open class CfnDBCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty,
     ) : MasterUserSecretProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
     }
 
     public companion object {
@@ -1210,26 +1128,19 @@ public open class CfnDBCluster internal constructor(
     public fun timeoutAction(): String? = unwrap(this).getTimeoutAction()
 
     public interface Builder {
-      public fun autoPause(autoPause: Boolean) {
-      }
+      public fun autoPause(autoPause: Boolean)
 
-      public fun autoPause(autoPause: IResolvable) {
-      }
+      public fun autoPause(autoPause: IResolvable)
 
-      public fun maxCapacity(maxCapacity: Number) {
-      }
+      public fun maxCapacity(maxCapacity: Number)
 
-      public fun minCapacity(minCapacity: Number) {
-      }
+      public fun minCapacity(minCapacity: Number)
 
-      public fun secondsBeforeTimeout(secondsBeforeTimeout: Number) {
-      }
+      public fun secondsBeforeTimeout(secondsBeforeTimeout: Number)
 
-      public fun secondsUntilAutoPause(secondsUntilAutoPause: Number) {
-      }
+      public fun secondsUntilAutoPause(secondsUntilAutoPause: Number)
 
-      public fun timeoutAction(timeoutAction: String) {
-      }
+      public fun timeoutAction(timeoutAction: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1237,31 +1148,31 @@ public open class CfnDBCluster internal constructor(
           software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty.builder()
 
-      public override fun autoPause(autoPause: Boolean) {
+      override fun autoPause(autoPause: Boolean) {
         cdkBuilder.autoPause(autoPause)
       }
 
-      public override fun autoPause(autoPause: IResolvable) {
+      override fun autoPause(autoPause: IResolvable) {
         cdkBuilder.autoPause(autoPause.let(IResolvable::unwrap))
       }
 
-      public override fun maxCapacity(maxCapacity: Number) {
+      override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
       }
 
-      public override fun minCapacity(minCapacity: Number) {
+      override fun minCapacity(minCapacity: Number) {
         cdkBuilder.minCapacity(minCapacity)
       }
 
-      public override fun secondsBeforeTimeout(secondsBeforeTimeout: Number) {
+      override fun secondsBeforeTimeout(secondsBeforeTimeout: Number) {
         cdkBuilder.secondsBeforeTimeout(secondsBeforeTimeout)
       }
 
-      public override fun secondsUntilAutoPause(secondsUntilAutoPause: Number) {
+      override fun secondsUntilAutoPause(secondsUntilAutoPause: Number) {
         cdkBuilder.secondsUntilAutoPause(secondsUntilAutoPause)
       }
 
-      public override fun timeoutAction(timeoutAction: String) {
+      override fun timeoutAction(timeoutAction: String) {
         cdkBuilder.timeoutAction(timeoutAction)
       }
 
@@ -1274,17 +1185,17 @@ public open class CfnDBCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty,
     ) : ScalingConfigurationProperty {
-      public override fun autoPause(): Any? = unwrap(this).getAutoPause()
+      override fun autoPause(): Any? = unwrap(this).getAutoPause()
 
-      public override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
 
-      public override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
-      public override fun secondsBeforeTimeout(): Number? = unwrap(this).getSecondsBeforeTimeout()
+      override fun secondsBeforeTimeout(): Number? = unwrap(this).getSecondsBeforeTimeout()
 
-      public override fun secondsUntilAutoPause(): Number? = unwrap(this).getSecondsUntilAutoPause()
+      override fun secondsUntilAutoPause(): Number? = unwrap(this).getSecondsUntilAutoPause()
 
-      public override fun timeoutAction(): String? = unwrap(this).getTimeoutAction()
+      override fun timeoutAction(): String? = unwrap(this).getTimeoutAction()
     }
 
     public companion object {
@@ -1313,11 +1224,9 @@ public open class CfnDBCluster internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun featureName(featureName: String) {
-      }
+      public fun featureName(featureName: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1325,11 +1234,11 @@ public open class CfnDBCluster internal constructor(
           software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty.builder()
 
-      public override fun featureName(featureName: String) {
+      override fun featureName(featureName: String) {
         cdkBuilder.featureName(featureName)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -1341,9 +1250,9 @@ public open class CfnDBCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty,
     ) : DBClusterRoleProperty {
-      public override fun featureName(): String? = unwrap(this).getFeatureName()
+      override fun featureName(): String? = unwrap(this).getFeatureName()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -1370,8 +1279,7 @@ public open class CfnDBCluster internal constructor(
     public fun address(): String? = unwrap(this).getAddress()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1379,7 +1287,7 @@ public open class CfnDBCluster internal constructor(
           software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
@@ -1390,7 +1298,7 @@ public open class CfnDBCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty,
     ) : ReadEndpointProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
     }
 
     public companion object {

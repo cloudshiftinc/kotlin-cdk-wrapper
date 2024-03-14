@@ -7,15 +7,14 @@ public interface TcpTimeout {
   public fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun idle(idle: Duration) {
-    }
+    public fun idle(idle: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TcpTimeout.Builder =
         software.amazon.awscdk.services.appmesh.TcpTimeout.builder()
 
-    public override fun idle(idle: Duration) {
+    override fun idle(idle: Duration) {
       cdkBuilder.idle(idle.let(Duration::unwrap))
     }
 
@@ -25,7 +24,7 @@ public interface TcpTimeout {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TcpTimeout,
   ) : TcpTimeout {
-    public override fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
+    override fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
   }
 
   public companion object {

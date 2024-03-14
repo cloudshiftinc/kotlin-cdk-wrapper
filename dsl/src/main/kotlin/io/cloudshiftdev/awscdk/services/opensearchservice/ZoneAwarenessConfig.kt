@@ -10,11 +10,9 @@ public interface ZoneAwarenessConfig {
   public fun enabled(): Boolean? = unwrap(this).getEnabled()
 
   public interface Builder {
-    public fun availabilityZoneCount(availabilityZoneCount: Number) {
-    }
+    public fun availabilityZoneCount(availabilityZoneCount: Number)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface ZoneAwarenessConfig {
         software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig.Builder =
         software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig.builder()
 
-    public override fun availabilityZoneCount(availabilityZoneCount: Number) {
+    override fun availabilityZoneCount(availabilityZoneCount: Number) {
       cdkBuilder.availabilityZoneCount(availabilityZoneCount)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
@@ -37,9 +35,9 @@ public interface ZoneAwarenessConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig,
   ) : ZoneAwarenessConfig {
-    public override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
+    override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
   }
 
   public companion object {

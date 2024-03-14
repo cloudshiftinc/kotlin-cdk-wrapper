@@ -10,22 +10,20 @@ public interface ReplicaRegion {
   public fun region(): String
 
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.ReplicaRegion.Builder =
         software.amazon.awscdk.services.secretsmanager.ReplicaRegion.builder()
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -36,9 +34,9 @@ public interface ReplicaRegion {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.ReplicaRegion,
   ) : ReplicaRegion {
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
   }
 
   public companion object {

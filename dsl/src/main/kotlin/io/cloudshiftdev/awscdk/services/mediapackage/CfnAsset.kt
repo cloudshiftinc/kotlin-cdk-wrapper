@@ -75,29 +75,21 @@ public open class CfnAsset internal constructor(
   }
 
   public interface Builder {
-    public fun egressEndpoints(egressEndpoints: IResolvable) {
-    }
+    public fun egressEndpoints(egressEndpoints: IResolvable)
 
-    public fun egressEndpoints(egressEndpoints: List<Any>) {
-    }
+    public fun egressEndpoints(egressEndpoints: List<Any>)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun packagingGroupId(packagingGroupId: String) {
-    }
+    public fun packagingGroupId(packagingGroupId: String)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun sourceArn(sourceArn: String) {
-    }
+    public fun sourceArn(sourceArn: String)
 
-    public fun sourceRoleArn(sourceRoleArn: String) {
-    }
+    public fun sourceRoleArn(sourceRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -107,35 +99,35 @@ public open class CfnAsset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediapackage.CfnAsset.Builder =
         software.amazon.awscdk.services.mediapackage.CfnAsset.Builder.create(scope, id)
 
-    public override fun egressEndpoints(egressEndpoints: IResolvable) {
+    override fun egressEndpoints(egressEndpoints: IResolvable) {
       cdkBuilder.egressEndpoints(egressEndpoints.let(IResolvable::unwrap))
     }
 
-    public override fun egressEndpoints(egressEndpoints: List<Any>) {
+    override fun egressEndpoints(egressEndpoints: List<Any>) {
       cdkBuilder.egressEndpoints(egressEndpoints)
     }
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun packagingGroupId(packagingGroupId: String) {
+    override fun packagingGroupId(packagingGroupId: String) {
       cdkBuilder.packagingGroupId(packagingGroupId)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun sourceArn(sourceArn: String) {
+    override fun sourceArn(sourceArn: String) {
       cdkBuilder.sourceArn(sourceArn)
     }
 
-    public override fun sourceRoleArn(sourceRoleArn: String) {
+    override fun sourceRoleArn(sourceRoleArn: String) {
       cdkBuilder.sourceRoleArn(sourceRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -169,11 +161,9 @@ public open class CfnAsset internal constructor(
     public fun url(): String
 
     public interface Builder {
-      public fun packagingConfigurationId(packagingConfigurationId: String) {
-      }
+      public fun packagingConfigurationId(packagingConfigurationId: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -181,11 +171,11 @@ public open class CfnAsset internal constructor(
           software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty.Builder =
           software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty.builder()
 
-      public override fun packagingConfigurationId(packagingConfigurationId: String) {
+      override fun packagingConfigurationId(packagingConfigurationId: String) {
         cdkBuilder.packagingConfigurationId(packagingConfigurationId)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -198,10 +188,9 @@ public open class CfnAsset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnAsset.EgressEndpointProperty,
     ) : EgressEndpointProperty {
-      public override fun packagingConfigurationId(): String =
-          unwrap(this).getPackagingConfigurationId()
+      override fun packagingConfigurationId(): String = unwrap(this).getPackagingConfigurationId()
 
-      public override fun url(): String = unwrap(this).getUrl()
+      override fun url(): String = unwrap(this).getUrl()
     }
 
     public companion object {

@@ -148,40 +148,29 @@ public open class Stack internal constructor(
   public open fun urlSuffix(): String = unwrap(this).getUrlSuffix()
 
   public interface Builder {
-    public fun analyticsReporting(analyticsReporting: Boolean) {
-    }
+    public fun analyticsReporting(analyticsReporting: Boolean)
 
-    public fun crossRegionReferences(crossRegionReferences: Boolean) {
-    }
+    public fun crossRegionReferences(crossRegionReferences: Boolean)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun env(env: Environment) {
-    }
+    public fun env(env: Environment)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("257d47dfd98ff7d3e84d09d23159057e237273e6f9d86e0e1a4729cfbd62261d")
-    public fun env(env: Environment.Builder.() -> Unit) {
-    }
+    public fun env(env: Environment.Builder.() -> Unit)
 
-    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary)
 
-    public fun stackName(stackName: String) {
-    }
+    public fun stackName(stackName: String)
 
-    public fun suppressTemplateIndentation(suppressTemplateIndentation: Boolean) {
-    }
+    public fun suppressTemplateIndentation(suppressTemplateIndentation: Boolean)
 
-    public fun synthesizer(synthesizer: IStackSynthesizer) {
-    }
+    public fun synthesizer(synthesizer: IStackSynthesizer)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun terminationProtection(terminationProtection: Boolean) {
-    }
+    public fun terminationProtection(terminationProtection: Boolean)
   }
 
   private class BuilderImpl(
@@ -191,47 +180,47 @@ public open class Stack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.Stack.Builder =
         software.amazon.awscdk.Stack.Builder.create(scope, id)
 
-    public override fun analyticsReporting(analyticsReporting: Boolean) {
+    override fun analyticsReporting(analyticsReporting: Boolean) {
       cdkBuilder.analyticsReporting(analyticsReporting)
     }
 
-    public override fun crossRegionReferences(crossRegionReferences: Boolean) {
+    override fun crossRegionReferences(crossRegionReferences: Boolean) {
       cdkBuilder.crossRegionReferences(crossRegionReferences)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun env(env: Environment) {
+    override fun env(env: Environment) {
       cdkBuilder.env(env.let(Environment::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("257d47dfd98ff7d3e84d09d23159057e237273e6f9d86e0e1a4729cfbd62261d")
-    public override fun env(env: Environment.Builder.() -> Unit): Unit = env(Environment(env))
+    override fun env(env: Environment.Builder.() -> Unit): Unit = env(Environment(env))
 
-    public override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
+    override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary::unwrap))
     }
 
-    public override fun stackName(stackName: String) {
+    override fun stackName(stackName: String) {
       cdkBuilder.stackName(stackName)
     }
 
-    public override fun suppressTemplateIndentation(suppressTemplateIndentation: Boolean) {
+    override fun suppressTemplateIndentation(suppressTemplateIndentation: Boolean) {
       cdkBuilder.suppressTemplateIndentation(suppressTemplateIndentation)
     }
 
-    public override fun synthesizer(synthesizer: IStackSynthesizer) {
+    override fun synthesizer(synthesizer: IStackSynthesizer) {
       cdkBuilder.synthesizer(synthesizer.let(IStackSynthesizer::unwrap))
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun terminationProtection(terminationProtection: Boolean) {
+    override fun terminationProtection(terminationProtection: Boolean) {
       cdkBuilder.terminationProtection(terminationProtection)
     }
 

@@ -43,11 +43,9 @@ public open class CfnConnectionAlias internal constructor(
   }
 
   public interface Builder {
-    public fun connectionString(connectionString: String) {
-    }
+    public fun connectionString(connectionString: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -57,11 +55,11 @@ public open class CfnConnectionAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.workspaces.CfnConnectionAlias.Builder =
         software.amazon.awscdk.services.workspaces.CfnConnectionAlias.Builder.create(scope, id)
 
-    public override fun connectionString(connectionString: String) {
+    override fun connectionString(connectionString: String) {
       cdkBuilder.connectionString(connectionString)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -100,17 +98,13 @@ public open class CfnConnectionAlias internal constructor(
     public fun resourceId(): String? = unwrap(this).getResourceId()
 
     public interface Builder {
-      public fun associatedAccountId(associatedAccountId: String) {
-      }
+      public fun associatedAccountId(associatedAccountId: String)
 
-      public fun associationStatus(associationStatus: String) {
-      }
+      public fun associationStatus(associationStatus: String)
 
-      public fun connectionIdentifier(connectionIdentifier: String) {
-      }
+      public fun connectionIdentifier(connectionIdentifier: String)
 
-      public fun resourceId(resourceId: String) {
-      }
+      public fun resourceId(resourceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -119,19 +113,19 @@ public open class CfnConnectionAlias internal constructor(
           =
           software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty.builder()
 
-      public override fun associatedAccountId(associatedAccountId: String) {
+      override fun associatedAccountId(associatedAccountId: String) {
         cdkBuilder.associatedAccountId(associatedAccountId)
       }
 
-      public override fun associationStatus(associationStatus: String) {
+      override fun associationStatus(associationStatus: String) {
         cdkBuilder.associationStatus(associationStatus)
       }
 
-      public override fun connectionIdentifier(connectionIdentifier: String) {
+      override fun connectionIdentifier(connectionIdentifier: String) {
         cdkBuilder.connectionIdentifier(connectionIdentifier)
       }
 
-      public override fun resourceId(resourceId: String) {
+      override fun resourceId(resourceId: String) {
         cdkBuilder.resourceId(resourceId)
       }
 
@@ -144,13 +138,13 @@ public open class CfnConnectionAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.workspaces.CfnConnectionAlias.ConnectionAliasAssociationProperty,
     ) : ConnectionAliasAssociationProperty {
-      public override fun associatedAccountId(): String? = unwrap(this).getAssociatedAccountId()
+      override fun associatedAccountId(): String? = unwrap(this).getAssociatedAccountId()
 
-      public override fun associationStatus(): String? = unwrap(this).getAssociationStatus()
+      override fun associationStatus(): String? = unwrap(this).getAssociationStatus()
 
-      public override fun connectionIdentifier(): String? = unwrap(this).getConnectionIdentifier()
+      override fun connectionIdentifier(): String? = unwrap(this).getConnectionIdentifier()
 
-      public override fun resourceId(): String? = unwrap(this).getResourceId()
+      override fun resourceId(): String? = unwrap(this).getResourceId()
     }
 
     public companion object {

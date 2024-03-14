@@ -61,20 +61,15 @@ public open class CfnCollection internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun standbyReplicas(standbyReplicas: String) {
-    }
+    public fun standbyReplicas(standbyReplicas: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -85,23 +80,23 @@ public open class CfnCollection internal constructor(
         software.amazon.awscdk.services.opensearchserverless.CfnCollection.Builder =
         software.amazon.awscdk.services.opensearchserverless.CfnCollection.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun standbyReplicas(standbyReplicas: String) {
+    override fun standbyReplicas(standbyReplicas: String) {
       cdkBuilder.standbyReplicas(standbyReplicas)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

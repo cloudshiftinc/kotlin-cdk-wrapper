@@ -133,162 +133,159 @@ public interface IQueue : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sqs.IQueue,
   ) : IQueue {
-    public override fun addToResourcePolicy(arg0: PolicyStatement): AddToResourcePolicyResult =
+    override fun addToResourcePolicy(arg0: PolicyStatement): AddToResourcePolicyResult =
         unwrap(this).addToResourcePolicy(arg0.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
-    public override fun addToResourcePolicy(arg0: PolicyStatement.Builder.() -> Unit):
+    override fun addToResourcePolicy(arg0: PolicyStatement.Builder.() -> Unit):
         AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(arg0))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun encryptionMasterKey(): IKey? =
+    override fun encryptionMasterKey(): IKey? =
         unwrap(this).getEncryptionMasterKey()?.let(IKey::wrap)
 
-    public override fun encryptionType(): QueueEncryption? =
+    override fun encryptionType(): QueueEncryption? =
         unwrap(this).getEncryptionType()?.let(QueueEncryption::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun fifo(): Boolean = unwrap(this).getFifo()
+    override fun fifo(): Boolean = unwrap(this).getFifo()
 
-    public override fun grant(arg0: IGrantable, arg1: String): Grant =
+    override fun grant(arg0: IGrantable, arg1: String): Grant =
         unwrap(this).grant(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
 
-    public override fun grantConsumeMessages(arg0: IGrantable): Grant =
+    override fun grantConsumeMessages(arg0: IGrantable): Grant =
         unwrap(this).grantConsumeMessages(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantPurge(arg0: IGrantable): Grant =
+    override fun grantPurge(arg0: IGrantable): Grant =
         unwrap(this).grantPurge(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantSendMessages(arg0: IGrantable): Grant =
+    override fun grantSendMessages(arg0: IGrantable): Grant =
         unwrap(this).grantSendMessages(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
+    override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
 
-    public override fun metric(arg0: String, arg1: MetricOptions): Metric =
-        unwrap(this).metric(arg0, arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
+    override fun metric(arg0: String, arg1: MetricOptions): Metric = unwrap(this).metric(arg0,
+        arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-    public override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric =
-        metric(arg0, MetricOptions(arg1))
+    override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric = metric(arg0,
+        MetricOptions(arg1))
 
-    public override fun metricApproximateAgeOfOldestMessage(): Metric =
+    override fun metricApproximateAgeOfOldestMessage(): Metric =
         unwrap(this).metricApproximateAgeOfOldestMessage().let(Metric::wrap)
 
-    public override fun metricApproximateAgeOfOldestMessage(arg0: MetricOptions): Metric =
+    override fun metricApproximateAgeOfOldestMessage(arg0: MetricOptions): Metric =
         unwrap(this).metricApproximateAgeOfOldestMessage(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb447dbf2a82c05bdfcd7dcd24abf2ca95a39f1b33a13e2394e3ae4232332ada")
-    public override fun metricApproximateAgeOfOldestMessage(arg0: MetricOptions.Builder.() -> Unit):
-        Metric = metricApproximateAgeOfOldestMessage(MetricOptions(arg0))
+    override fun metricApproximateAgeOfOldestMessage(arg0: MetricOptions.Builder.() -> Unit): Metric
+        = metricApproximateAgeOfOldestMessage(MetricOptions(arg0))
 
-    public override fun metricApproximateNumberOfMessagesDelayed(): Metric =
+    override fun metricApproximateNumberOfMessagesDelayed(): Metric =
         unwrap(this).metricApproximateNumberOfMessagesDelayed().let(Metric::wrap)
 
-    public override fun metricApproximateNumberOfMessagesDelayed(arg0: MetricOptions): Metric =
+    override fun metricApproximateNumberOfMessagesDelayed(arg0: MetricOptions): Metric =
         unwrap(this).metricApproximateNumberOfMessagesDelayed(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec20e8b1c6fa8dfa1811d5d75d734a7f4ccef6a8b1fc748ab047cd2c8a6b70a9")
-    public override
-        fun metricApproximateNumberOfMessagesDelayed(arg0: MetricOptions.Builder.() -> Unit): Metric
-        = metricApproximateNumberOfMessagesDelayed(MetricOptions(arg0))
+    override fun metricApproximateNumberOfMessagesDelayed(arg0: MetricOptions.Builder.() -> Unit):
+        Metric = metricApproximateNumberOfMessagesDelayed(MetricOptions(arg0))
 
-    public override fun metricApproximateNumberOfMessagesNotVisible(): Metric =
+    override fun metricApproximateNumberOfMessagesNotVisible(): Metric =
         unwrap(this).metricApproximateNumberOfMessagesNotVisible().let(Metric::wrap)
 
-    public override fun metricApproximateNumberOfMessagesNotVisible(arg0: MetricOptions): Metric =
+    override fun metricApproximateNumberOfMessagesNotVisible(arg0: MetricOptions): Metric =
         unwrap(this).metricApproximateNumberOfMessagesNotVisible(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1e0e358f95f85dcccfdbf1e95cf401c51e0960552cdad28bac191cfd56faf4b1")
-    public override
+    override
         fun metricApproximateNumberOfMessagesNotVisible(arg0: MetricOptions.Builder.() -> Unit):
         Metric = metricApproximateNumberOfMessagesNotVisible(MetricOptions(arg0))
 
-    public override fun metricApproximateNumberOfMessagesVisible(): Metric =
+    override fun metricApproximateNumberOfMessagesVisible(): Metric =
         unwrap(this).metricApproximateNumberOfMessagesVisible().let(Metric::wrap)
 
-    public override fun metricApproximateNumberOfMessagesVisible(arg0: MetricOptions): Metric =
+    override fun metricApproximateNumberOfMessagesVisible(arg0: MetricOptions): Metric =
         unwrap(this).metricApproximateNumberOfMessagesVisible(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d90f82144565dad643479d1bf8c90cfa7841f02407b91ae1f30ecd1738076f01")
-    public override
-        fun metricApproximateNumberOfMessagesVisible(arg0: MetricOptions.Builder.() -> Unit): Metric
-        = metricApproximateNumberOfMessagesVisible(MetricOptions(arg0))
+    override fun metricApproximateNumberOfMessagesVisible(arg0: MetricOptions.Builder.() -> Unit):
+        Metric = metricApproximateNumberOfMessagesVisible(MetricOptions(arg0))
 
-    public override fun metricNumberOfEmptyReceives(): Metric =
+    override fun metricNumberOfEmptyReceives(): Metric =
         unwrap(this).metricNumberOfEmptyReceives().let(Metric::wrap)
 
-    public override fun metricNumberOfEmptyReceives(arg0: MetricOptions): Metric =
+    override fun metricNumberOfEmptyReceives(arg0: MetricOptions): Metric =
         unwrap(this).metricNumberOfEmptyReceives(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2cfecb20f0f28f71404e98cd81ef7bae26ed306a74d315ae104a3740d5323cc8")
-    public override fun metricNumberOfEmptyReceives(arg0: MetricOptions.Builder.() -> Unit): Metric
-        = metricNumberOfEmptyReceives(MetricOptions(arg0))
+    override fun metricNumberOfEmptyReceives(arg0: MetricOptions.Builder.() -> Unit): Metric =
+        metricNumberOfEmptyReceives(MetricOptions(arg0))
 
-    public override fun metricNumberOfMessagesDeleted(): Metric =
+    override fun metricNumberOfMessagesDeleted(): Metric =
         unwrap(this).metricNumberOfMessagesDeleted().let(Metric::wrap)
 
-    public override fun metricNumberOfMessagesDeleted(arg0: MetricOptions): Metric =
+    override fun metricNumberOfMessagesDeleted(arg0: MetricOptions): Metric =
         unwrap(this).metricNumberOfMessagesDeleted(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43f4c13dd245a3194abcc55746b35f7f0f0efcc0f74c3a7b9a32d11805492932")
-    public override fun metricNumberOfMessagesDeleted(arg0: MetricOptions.Builder.() -> Unit):
-        Metric = metricNumberOfMessagesDeleted(MetricOptions(arg0))
+    override fun metricNumberOfMessagesDeleted(arg0: MetricOptions.Builder.() -> Unit): Metric =
+        metricNumberOfMessagesDeleted(MetricOptions(arg0))
 
-    public override fun metricNumberOfMessagesReceived(): Metric =
+    override fun metricNumberOfMessagesReceived(): Metric =
         unwrap(this).metricNumberOfMessagesReceived().let(Metric::wrap)
 
-    public override fun metricNumberOfMessagesReceived(arg0: MetricOptions): Metric =
+    override fun metricNumberOfMessagesReceived(arg0: MetricOptions): Metric =
         unwrap(this).metricNumberOfMessagesReceived(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2068c34cb94ecf96b8a1cf0fd6d58ebfd3ac48f69d718af0bdd6c1a31d866f18")
-    public override fun metricNumberOfMessagesReceived(arg0: MetricOptions.Builder.() -> Unit):
-        Metric = metricNumberOfMessagesReceived(MetricOptions(arg0))
+    override fun metricNumberOfMessagesReceived(arg0: MetricOptions.Builder.() -> Unit): Metric =
+        metricNumberOfMessagesReceived(MetricOptions(arg0))
 
-    public override fun metricNumberOfMessagesSent(): Metric =
+    override fun metricNumberOfMessagesSent(): Metric =
         unwrap(this).metricNumberOfMessagesSent().let(Metric::wrap)
 
-    public override fun metricNumberOfMessagesSent(arg0: MetricOptions): Metric =
+    override fun metricNumberOfMessagesSent(arg0: MetricOptions): Metric =
         unwrap(this).metricNumberOfMessagesSent(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b2902186b84a01800470ae306a0422607a541d9a2cde3513fb6f67fcec9eca13")
-    public override fun metricNumberOfMessagesSent(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricNumberOfMessagesSent(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricNumberOfMessagesSent(MetricOptions(arg0))
 
-    public override fun metricSentMessageSize(): Metric =
+    override fun metricSentMessageSize(): Metric =
         unwrap(this).metricSentMessageSize().let(Metric::wrap)
 
-    public override fun metricSentMessageSize(arg0: MetricOptions): Metric =
+    override fun metricSentMessageSize(arg0: MetricOptions): Metric =
         unwrap(this).metricSentMessageSize(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f744b4a69e8a4f4581ffdd347d3f50ff19bcd06ea1a2cae6fea703890c06cfdf")
-    public override fun metricSentMessageSize(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricSentMessageSize(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricSentMessageSize(MetricOptions(arg0))
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun queueArn(): String = unwrap(this).getQueueArn()
+    override fun queueArn(): String = unwrap(this).getQueueArn()
 
-    public override fun queueName(): String = unwrap(this).getQueueName()
+    override fun queueName(): String = unwrap(this).getQueueName()
 
-    public override fun queueUrl(): String = unwrap(this).getQueueUrl()
+    override fun queueUrl(): String = unwrap(this).getQueueUrl()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

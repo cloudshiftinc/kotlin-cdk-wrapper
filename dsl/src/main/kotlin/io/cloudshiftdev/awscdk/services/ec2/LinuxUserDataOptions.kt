@@ -7,15 +7,14 @@ public interface LinuxUserDataOptions {
   public fun shebang(): String? = unwrap(this).getShebang()
 
   public interface Builder {
-    public fun shebang(shebang: String) {
-    }
+    public fun shebang(shebang: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LinuxUserDataOptions.Builder =
         software.amazon.awscdk.services.ec2.LinuxUserDataOptions.builder()
 
-    public override fun shebang(shebang: String) {
+    override fun shebang(shebang: String) {
       cdkBuilder.shebang(shebang)
     }
 
@@ -26,7 +25,7 @@ public interface LinuxUserDataOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.LinuxUserDataOptions,
   ) : LinuxUserDataOptions {
-    public override fun shebang(): String? = unwrap(this).getShebang()
+    override fun shebang(): String? = unwrap(this).getShebang()
   }
 
   public companion object {

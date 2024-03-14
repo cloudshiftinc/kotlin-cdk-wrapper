@@ -34,31 +34,30 @@ public interface IBuildImage {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.IBuildImage,
   ) : IBuildImage {
-    public override fun defaultComputeType(): ComputeType =
+    override fun defaultComputeType(): ComputeType =
         unwrap(this).getDefaultComputeType().let(ComputeType::wrap)
 
-    public override fun imageId(): String = unwrap(this).getImageId()
+    override fun imageId(): String = unwrap(this).getImageId()
 
-    public override fun imagePullPrincipalType(): ImagePullPrincipalType? =
+    override fun imagePullPrincipalType(): ImagePullPrincipalType? =
         unwrap(this).getImagePullPrincipalType()?.let(ImagePullPrincipalType::wrap)
 
-    public override fun repository(): IRepository? =
-        unwrap(this).getRepository()?.let(IRepository::wrap)
+    override fun repository(): IRepository? = unwrap(this).getRepository()?.let(IRepository::wrap)
 
-    public override fun runScriptBuildspec(arg0: String): BuildSpec =
+    override fun runScriptBuildspec(arg0: String): BuildSpec =
         unwrap(this).runScriptBuildspec(arg0).let(BuildSpec::wrap)
 
-    public override fun secretsManagerCredentials(): ISecret? =
+    override fun secretsManagerCredentials(): ISecret? =
         unwrap(this).getSecretsManagerCredentials()?.let(ISecret::wrap)
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
 
-    public override fun validate(arg0: BuildEnvironment): List<String> =
+    override fun validate(arg0: BuildEnvironment): List<String> =
         unwrap(this).validate(arg0.let(BuildEnvironment::unwrap)) ?: emptyList()
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff36d333164150adb92277700abb7153d45f26e16fa225966e7bf6fc0bedfcee")
-    public override fun validate(arg0: BuildEnvironment.Builder.() -> Unit): List<String> =
+    override fun validate(arg0: BuildEnvironment.Builder.() -> Unit): List<String> =
         validate(BuildEnvironment(arg0))
   }
 

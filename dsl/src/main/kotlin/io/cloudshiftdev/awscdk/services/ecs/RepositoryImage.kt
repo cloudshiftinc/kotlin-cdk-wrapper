@@ -13,8 +13,7 @@ public open class RepositoryImage internal constructor(
       containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
 
   public interface Builder {
-    public fun credentials(credentials: ISecret) {
-    }
+    public fun credentials(credentials: ISecret)
   }
 
   private class BuilderImpl(
@@ -23,7 +22,7 @@ public open class RepositoryImage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.RepositoryImage.Builder =
         software.amazon.awscdk.services.ecs.RepositoryImage.Builder.create(imageName)
 
-    public override fun credentials(credentials: ISecret) {
+    override fun credentials(credentials: ISecret) {
       cdkBuilder.credentials(credentials.let(ISecret::unwrap))
     }
 

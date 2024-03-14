@@ -21,24 +21,23 @@ public interface IComputeEnvironment : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.IComputeEnvironment,
   ) : IComputeEnvironment {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun computeEnvironmentArn(): String = unwrap(this).getComputeEnvironmentArn()
+    override fun computeEnvironmentArn(): String = unwrap(this).getComputeEnvironmentArn()
 
-    public override fun computeEnvironmentName(): String = unwrap(this).getComputeEnvironmentName()
+    override fun computeEnvironmentName(): String = unwrap(this).getComputeEnvironmentName()
 
-    public override fun enabled(): Boolean = unwrap(this).getEnabled()
+    override fun enabled(): Boolean = unwrap(this).getEnabled()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun serviceRole(): IRole? = unwrap(this).getServiceRole()?.let(IRole::wrap)
+    override fun serviceRole(): IRole? = unwrap(this).getServiceRole()?.let(IRole::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

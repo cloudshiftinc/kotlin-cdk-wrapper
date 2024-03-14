@@ -28,30 +28,29 @@ public interface IApi : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.IApi,
   ) : IApi {
-    public override fun apiEndpoint(): String = unwrap(this).getApiEndpoint()
+    override fun apiEndpoint(): String = unwrap(this).getApiEndpoint()
 
-    public override fun apiId(): String = unwrap(this).getApiId()
+    override fun apiId(): String = unwrap(this).getApiId()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
+    override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
 
-    public override fun metric(arg0: String, arg1: MetricOptions): Metric =
-        unwrap(this).metric(arg0, arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
+    override fun metric(arg0: String, arg1: MetricOptions): Metric = unwrap(this).metric(arg0,
+        arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-    public override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric =
-        metric(arg0, MetricOptions(arg1))
+    override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric = metric(arg0,
+        MetricOptions(arg1))
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

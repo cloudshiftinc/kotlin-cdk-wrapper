@@ -89,23 +89,17 @@ public open class SecurityGroup internal constructor(
   public override fun uniqueId(): String = unwrap(this).getUniqueId()
 
   public interface Builder {
-    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
-    }
+    public fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean)
 
-    public fun allowAllOutbound(allowAllOutbound: Boolean) {
-    }
+    public fun allowAllOutbound(allowAllOutbound: Boolean)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disableInlineRules(disableInlineRules: Boolean) {
-    }
+    public fun disableInlineRules(disableInlineRules: Boolean)
 
-    public fun securityGroupName(securityGroupName: String) {
-    }
+    public fun securityGroupName(securityGroupName: String)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -115,27 +109,27 @@ public open class SecurityGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.SecurityGroup.Builder =
         software.amazon.awscdk.services.ec2.SecurityGroup.Builder.create(scope, id)
 
-    public override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
+    override fun allowAllIpv6Outbound(allowAllIpv6Outbound: Boolean) {
       cdkBuilder.allowAllIpv6Outbound(allowAllIpv6Outbound)
     }
 
-    public override fun allowAllOutbound(allowAllOutbound: Boolean) {
+    override fun allowAllOutbound(allowAllOutbound: Boolean) {
       cdkBuilder.allowAllOutbound(allowAllOutbound)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disableInlineRules(disableInlineRules: Boolean) {
+    override fun disableInlineRules(disableInlineRules: Boolean) {
       cdkBuilder.disableInlineRules(disableInlineRules)
     }
 
-    public override fun securityGroupName(securityGroupName: String) {
+    override fun securityGroupName(securityGroupName: String) {
       cdkBuilder.securityGroupName(securityGroupName)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

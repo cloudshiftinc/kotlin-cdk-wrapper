@@ -6,11 +6,9 @@ import kotlin.Unit
 
 public interface TimeBasedCanaryTrafficRoutingProps : BaseTrafficShiftingConfigProps {
   public interface Builder {
-    public fun interval(interval: Duration) {
-    }
+    public fun interval(interval: Duration)
 
-    public fun percentage(percentage: Number) {
-    }
+    public fun percentage(percentage: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -18,11 +16,11 @@ public interface TimeBasedCanaryTrafficRoutingProps : BaseTrafficShiftingConfigP
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps.Builder =
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps.builder()
 
-    public override fun interval(interval: Duration) {
+    override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
-    public override fun percentage(percentage: Number) {
+    override fun percentage(percentage: Number) {
       cdkBuilder.percentage(percentage)
     }
 
@@ -35,9 +33,9 @@ public interface TimeBasedCanaryTrafficRoutingProps : BaseTrafficShiftingConfigP
     internal val cdkObject:
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps,
   ) : TimeBasedCanaryTrafficRoutingProps {
-    public override fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
+    override fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
 
-    public override fun percentage(): Number = unwrap(this).getPercentage()
+    override fun percentage(): Number = unwrap(this).getPercentage()
   }
 
   public companion object {

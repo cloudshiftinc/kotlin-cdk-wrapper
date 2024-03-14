@@ -12,29 +12,26 @@ public interface BlockDevice {
   public fun volume(): BlockDeviceVolume
 
   public interface Builder {
-    public fun deviceName(deviceName: String) {
-    }
+    public fun deviceName(deviceName: String)
 
-    public fun mappingEnabled(mappingEnabled: Boolean) {
-    }
+    public fun mappingEnabled(mappingEnabled: Boolean)
 
-    public fun volume(volume: BlockDeviceVolume) {
-    }
+    public fun volume(volume: BlockDeviceVolume)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.BlockDevice.Builder =
         software.amazon.awscdk.services.ec2.BlockDevice.builder()
 
-    public override fun deviceName(deviceName: String) {
+    override fun deviceName(deviceName: String) {
       cdkBuilder.deviceName(deviceName)
     }
 
-    public override fun mappingEnabled(mappingEnabled: Boolean) {
+    override fun mappingEnabled(mappingEnabled: Boolean) {
       cdkBuilder.mappingEnabled(mappingEnabled)
     }
 
-    public override fun volume(volume: BlockDeviceVolume) {
+    override fun volume(volume: BlockDeviceVolume) {
       cdkBuilder.volume(volume.let(BlockDeviceVolume::unwrap))
     }
 
@@ -44,12 +41,11 @@ public interface BlockDevice {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.BlockDevice,
   ) : BlockDevice {
-    public override fun deviceName(): String = unwrap(this).getDeviceName()
+    override fun deviceName(): String = unwrap(this).getDeviceName()
 
-    public override fun mappingEnabled(): Boolean? = unwrap(this).getMappingEnabled()
+    override fun mappingEnabled(): Boolean? = unwrap(this).getMappingEnabled()
 
-    public override fun volume(): BlockDeviceVolume =
-        unwrap(this).getVolume().let(BlockDeviceVolume::wrap)
+    override fun volume(): BlockDeviceVolume = unwrap(this).getVolume().let(BlockDeviceVolume::wrap)
   }
 
   public companion object {

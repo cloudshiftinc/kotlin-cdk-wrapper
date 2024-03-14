@@ -30,11 +30,9 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
   }
 
   public interface Builder {
-    public fun allowedPrincipals(allowedPrincipals: List<String>) {
-    }
+    public fun allowedPrincipals(allowedPrincipals: List<String>)
 
-    public fun serviceId(serviceId: String) {
-    }
+    public fun serviceId(serviceId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
         software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions.Builder.create(scope,
         id)
 
-    public override fun allowedPrincipals(allowedPrincipals: List<String>) {
+    override fun allowedPrincipals(allowedPrincipals: List<String>) {
       cdkBuilder.allowedPrincipals(allowedPrincipals)
     }
 
-    public override fun serviceId(serviceId: String) {
+    override fun serviceId(serviceId: String) {
       cdkBuilder.serviceId(serviceId)
     }
 

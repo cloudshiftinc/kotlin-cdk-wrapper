@@ -62,26 +62,19 @@ public open class CfnIntegrationResponse internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun contentHandlingStrategy(contentHandlingStrategy: String) {
-    }
+    public fun contentHandlingStrategy(contentHandlingStrategy: String)
 
-    public fun integrationId(integrationId: String) {
-    }
+    public fun integrationId(integrationId: String)
 
-    public fun integrationResponseKey(integrationResponseKey: String) {
-    }
+    public fun integrationResponseKey(integrationResponseKey: String)
 
-    public fun responseParameters(responseParameters: Any) {
-    }
+    public fun responseParameters(responseParameters: Any)
 
-    public fun responseTemplates(responseTemplates: Any) {
-    }
+    public fun responseTemplates(responseTemplates: Any)
 
-    public fun templateSelectionExpression(templateSelectionExpression: String) {
-    }
+    public fun templateSelectionExpression(templateSelectionExpression: String)
   }
 
   private class BuilderImpl(
@@ -93,31 +86,31 @@ public open class CfnIntegrationResponse internal constructor(
         software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse.Builder.create(scope,
         id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun contentHandlingStrategy(contentHandlingStrategy: String) {
+    override fun contentHandlingStrategy(contentHandlingStrategy: String) {
       cdkBuilder.contentHandlingStrategy(contentHandlingStrategy)
     }
 
-    public override fun integrationId(integrationId: String) {
+    override fun integrationId(integrationId: String) {
       cdkBuilder.integrationId(integrationId)
     }
 
-    public override fun integrationResponseKey(integrationResponseKey: String) {
+    override fun integrationResponseKey(integrationResponseKey: String) {
       cdkBuilder.integrationResponseKey(integrationResponseKey)
     }
 
-    public override fun responseParameters(responseParameters: Any) {
+    override fun responseParameters(responseParameters: Any) {
       cdkBuilder.responseParameters(responseParameters)
     }
 
-    public override fun responseTemplates(responseTemplates: Any) {
+    override fun responseTemplates(responseTemplates: Any) {
       cdkBuilder.responseTemplates(responseTemplates)
     }
 
-    public override fun templateSelectionExpression(templateSelectionExpression: String) {
+    override fun templateSelectionExpression(templateSelectionExpression: String) {
       cdkBuilder.templateSelectionExpression(templateSelectionExpression)
     }
 

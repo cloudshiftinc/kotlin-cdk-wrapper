@@ -8,13 +8,11 @@ public interface VirtualNodeListenerConfig {
   public fun listener(): CfnVirtualNode.ListenerProperty
 
   public interface Builder {
-    public fun listener(listener: CfnVirtualNode.ListenerProperty) {
-    }
+    public fun listener(listener: CfnVirtualNode.ListenerProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a3f8b2f835cee2bab65592bbbe7a640bd1efacf36487c07f3a471b288d59450")
-    public fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit) {
-    }
+    public fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -22,14 +20,14 @@ public interface VirtualNodeListenerConfig {
         software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig.Builder =
         software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig.builder()
 
-    public override fun listener(listener: CfnVirtualNode.ListenerProperty) {
+    override fun listener(listener: CfnVirtualNode.ListenerProperty) {
       cdkBuilder.listener(listener.let(CfnVirtualNode.ListenerProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a3f8b2f835cee2bab65592bbbe7a640bd1efacf36487c07f3a471b288d59450")
-    public override fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit): Unit
-        = listener(CfnVirtualNode.ListenerProperty(listener))
+    override fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit): Unit =
+        listener(CfnVirtualNode.ListenerProperty(listener))
 
     public fun build(): software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig =
         cdkBuilder.build()
@@ -38,7 +36,7 @@ public interface VirtualNodeListenerConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig,
   ) : VirtualNodeListenerConfig {
-    public override fun listener(): CfnVirtualNode.ListenerProperty =
+    override fun listener(): CfnVirtualNode.ListenerProperty =
         unwrap(this).getListener().let(CfnVirtualNode.ListenerProperty::wrap)
   }
 

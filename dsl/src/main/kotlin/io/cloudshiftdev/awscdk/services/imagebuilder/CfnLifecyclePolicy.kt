@@ -87,40 +87,29 @@ public open class CfnLifecyclePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun executionRole(executionRole: String) {
-    }
+    public fun executionRole(executionRole: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policyDetails(policyDetails: IResolvable) {
-    }
+    public fun policyDetails(policyDetails: IResolvable)
 
-    public fun policyDetails(policyDetails: List<Any>) {
-    }
+    public fun policyDetails(policyDetails: List<Any>)
 
-    public fun resourceSelection(resourceSelection: IResolvable) {
-    }
+    public fun resourceSelection(resourceSelection: IResolvable)
 
-    public fun resourceSelection(resourceSelection: ResourceSelectionProperty) {
-    }
+    public fun resourceSelection(resourceSelection: ResourceSelectionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b694048909f47d075362b9546c0a1899d67512c9b414b769fa22e7ad69d8b44")
-    public fun resourceSelection(resourceSelection: ResourceSelectionProperty.Builder.() -> Unit) {
-    }
+    public fun resourceSelection(resourceSelection: ResourceSelectionProperty.Builder.() -> Unit)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -130,49 +119,48 @@ public open class CfnLifecyclePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.Builder
         = software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun executionRole(executionRole: String) {
+    override fun executionRole(executionRole: String) {
       cdkBuilder.executionRole(executionRole)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policyDetails(policyDetails: IResolvable) {
+    override fun policyDetails(policyDetails: IResolvable) {
       cdkBuilder.policyDetails(policyDetails.let(IResolvable::unwrap))
     }
 
-    public override fun policyDetails(policyDetails: List<Any>) {
+    override fun policyDetails(policyDetails: List<Any>) {
       cdkBuilder.policyDetails(policyDetails)
     }
 
-    public override fun resourceSelection(resourceSelection: IResolvable) {
+    override fun resourceSelection(resourceSelection: IResolvable) {
       cdkBuilder.resourceSelection(resourceSelection.let(IResolvable::unwrap))
     }
 
-    public override fun resourceSelection(resourceSelection: ResourceSelectionProperty) {
+    override fun resourceSelection(resourceSelection: ResourceSelectionProperty) {
       cdkBuilder.resourceSelection(resourceSelection.let(ResourceSelectionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b694048909f47d075362b9546c0a1899d67512c9b414b769fa22e7ad69d8b44")
-    public override
-        fun resourceSelection(resourceSelection: ResourceSelectionProperty.Builder.() -> Unit): Unit
-        = resourceSelection(ResourceSelectionProperty(resourceSelection))
+    override fun resourceSelection(resourceSelection: ResourceSelectionProperty.Builder.() -> Unit):
+        Unit = resourceSelection(ResourceSelectionProperty(resourceSelection))
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -207,11 +195,9 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -220,11 +206,11 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty.builder()
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -237,9 +223,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.LastLaunchedProperty,
     ) : LastLaunchedProperty {
-      public override fun unit(): String = unwrap(this).getUnit()
+      override fun unit(): String = unwrap(this).getUnit()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -270,23 +256,17 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun snapshots(): Any? = unwrap(this).getSnapshots()
 
     public interface Builder {
-      public fun amis(amis: Boolean) {
-      }
+      public fun amis(amis: Boolean)
 
-      public fun amis(amis: IResolvable) {
-      }
+      public fun amis(amis: IResolvable)
 
-      public fun containers(containers: Boolean) {
-      }
+      public fun containers(containers: Boolean)
 
-      public fun containers(containers: IResolvable) {
-      }
+      public fun containers(containers: IResolvable)
 
-      public fun snapshots(snapshots: Boolean) {
-      }
+      public fun snapshots(snapshots: Boolean)
 
-      public fun snapshots(snapshots: IResolvable) {
-      }
+      public fun snapshots(snapshots: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -295,27 +275,27 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty.builder()
 
-      public override fun amis(amis: Boolean) {
+      override fun amis(amis: Boolean) {
         cdkBuilder.amis(amis)
       }
 
-      public override fun amis(amis: IResolvable) {
+      override fun amis(amis: IResolvable) {
         cdkBuilder.amis(amis.let(IResolvable::unwrap))
       }
 
-      public override fun containers(containers: Boolean) {
+      override fun containers(containers: Boolean) {
         cdkBuilder.containers(containers)
       }
 
-      public override fun containers(containers: IResolvable) {
+      override fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers.let(IResolvable::unwrap))
       }
 
-      public override fun snapshots(snapshots: Boolean) {
+      override fun snapshots(snapshots: Boolean) {
         cdkBuilder.snapshots(snapshots)
       }
 
-      public override fun snapshots(snapshots: IResolvable) {
+      override fun snapshots(snapshots: IResolvable) {
         cdkBuilder.snapshots(snapshots.let(IResolvable::unwrap))
       }
 
@@ -328,11 +308,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.IncludeResourcesProperty,
     ) : IncludeResourcesProperty {
-      public override fun amis(): Any? = unwrap(this).getAmis()
+      override fun amis(): Any? = unwrap(this).getAmis()
 
-      public override fun containers(): Any? = unwrap(this).getContainers()
+      override fun containers(): Any? = unwrap(this).getContainers()
 
-      public override fun snapshots(): Any? = unwrap(this).getSnapshots()
+      override fun snapshots(): Any? = unwrap(this).getSnapshots()
     }
 
     public companion object {
@@ -361,19 +341,15 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun includeResources(includeResources: IResolvable) {
-      }
+      public fun includeResources(includeResources: IResolvable)
 
-      public fun includeResources(includeResources: IncludeResourcesProperty) {
-      }
+      public fun includeResources(includeResources: IncludeResourcesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aad034d8d4102f123b01d990347b1e1b62631c0d661ae867d50bfd9934c31a4a")
-      public fun includeResources(includeResources: IncludeResourcesProperty.Builder.() -> Unit) {
-      }
+      public fun includeResources(includeResources: IncludeResourcesProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -381,21 +357,20 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty.Builder =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty.builder()
 
-      public override fun includeResources(includeResources: IResolvable) {
+      override fun includeResources(includeResources: IResolvable) {
         cdkBuilder.includeResources(includeResources.let(IResolvable::unwrap))
       }
 
-      public override fun includeResources(includeResources: IncludeResourcesProperty) {
+      override fun includeResources(includeResources: IncludeResourcesProperty) {
         cdkBuilder.includeResources(includeResources.let(IncludeResourcesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aad034d8d4102f123b01d990347b1e1b62631c0d661ae867d50bfd9934c31a4a")
-      public override
-          fun includeResources(includeResources: IncludeResourcesProperty.Builder.() -> Unit): Unit
-          = includeResources(IncludeResourcesProperty(includeResources))
+      override fun includeResources(includeResources: IncludeResourcesProperty.Builder.() -> Unit):
+          Unit = includeResources(IncludeResourcesProperty(includeResources))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -408,9 +383,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ActionProperty,
     ) : ActionProperty {
-      public override fun includeResources(): Any? = unwrap(this).getIncludeResources()
+      override fun includeResources(): Any? = unwrap(this).getIncludeResources()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -439,11 +414,9 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun semanticVersion(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun semanticVersion(semanticVersion: String) {
-      }
+      public fun semanticVersion(semanticVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -452,11 +425,11 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun semanticVersion(semanticVersion: String) {
+      override fun semanticVersion(semanticVersion: String) {
         cdkBuilder.semanticVersion(semanticVersion)
       }
 
@@ -469,9 +442,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.RecipeSelectionProperty,
     ) : RecipeSelectionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun semanticVersion(): String = unwrap(this).getSemanticVersion()
+      override fun semanticVersion(): String = unwrap(this).getSemanticVersion()
     }
 
     public companion object {
@@ -500,17 +473,13 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun tagMap(): Any? = unwrap(this).getTagMap()
 
     public interface Builder {
-      public fun recipes(recipes: IResolvable) {
-      }
+      public fun recipes(recipes: IResolvable)
 
-      public fun recipes(recipes: List<Any>) {
-      }
+      public fun recipes(recipes: List<Any>)
 
-      public fun tagMap(tagMap: IResolvable) {
-      }
+      public fun tagMap(tagMap: IResolvable)
 
-      public fun tagMap(tagMap: Map<String, String>) {
-      }
+      public fun tagMap(tagMap: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -519,19 +488,19 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty.builder()
 
-      public override fun recipes(recipes: IResolvable) {
+      override fun recipes(recipes: IResolvable) {
         cdkBuilder.recipes(recipes.let(IResolvable::unwrap))
       }
 
-      public override fun recipes(recipes: List<Any>) {
+      override fun recipes(recipes: List<Any>) {
         cdkBuilder.recipes(recipes)
       }
 
-      public override fun tagMap(tagMap: IResolvable) {
+      override fun tagMap(tagMap: IResolvable) {
         cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
       }
 
-      public override fun tagMap(tagMap: Map<String, String>) {
+      override fun tagMap(tagMap: Map<String, String>) {
         cdkBuilder.tagMap(tagMap)
       }
 
@@ -544,9 +513,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ResourceSelectionProperty,
     ) : ResourceSelectionProperty {
-      public override fun recipes(): Any? = unwrap(this).getRecipes()
+      override fun recipes(): Any? = unwrap(this).getRecipes()
 
-      public override fun tagMap(): Any? = unwrap(this).getTagMap()
+      override fun tagMap(): Any? = unwrap(this).getTagMap()
     }
 
     public companion object {
@@ -579,17 +548,13 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun retainAtLeast(retainAtLeast: Number) {
-      }
+      public fun retainAtLeast(retainAtLeast: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -597,19 +562,19 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty.Builder =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty.builder()
 
-      public override fun retainAtLeast(retainAtLeast: Number) {
+      override fun retainAtLeast(retainAtLeast: Number) {
         cdkBuilder.retainAtLeast(retainAtLeast)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -622,13 +587,13 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.FilterProperty,
     ) : FilterProperty {
-      public override fun retainAtLeast(): Number? = unwrap(this).getRetainAtLeast()
+      override fun retainAtLeast(): Number? = unwrap(this).getRetainAtLeast()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -659,38 +624,29 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun filter(): Any
 
     public interface Builder {
-      public fun action(action: IResolvable) {
-      }
+      public fun action(action: IResolvable)
 
-      public fun action(action: ActionProperty) {
-      }
+      public fun action(action: ActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9dbb42e008c2d9f934812afdd7d0401f3db973cb54b7172a6deac66ce238c17")
-      public fun action(action: ActionProperty.Builder.() -> Unit) {
-      }
+      public fun action(action: ActionProperty.Builder.() -> Unit)
 
-      public fun exclusionRules(exclusionRules: IResolvable) {
-      }
+      public fun exclusionRules(exclusionRules: IResolvable)
 
-      public fun exclusionRules(exclusionRules: ExclusionRulesProperty) {
-      }
+      public fun exclusionRules(exclusionRules: ExclusionRulesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2aefbdee6810949a08fbc3ec96996e7ff8320d4c8ad322f84ce069c822106be")
-      public fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit) {
-      }
+      public fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit)
 
-      public fun filter(filter: IResolvable) {
-      }
+      public fun filter(filter: IResolvable)
 
-      public fun filter(filter: FilterProperty) {
-      }
+      public fun filter(filter: FilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("48e93a5d8726b320824ecbcb01841580b080f8860aa78ed0736beb59b4dc81ec")
-      public fun filter(filter: FilterProperty.Builder.() -> Unit) {
-      }
+      public fun filter(filter: FilterProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -699,43 +655,43 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty.builder()
 
-      public override fun action(action: IResolvable) {
+      override fun action(action: IResolvable) {
         cdkBuilder.action(action.let(IResolvable::unwrap))
       }
 
-      public override fun action(action: ActionProperty) {
+      override fun action(action: ActionProperty) {
         cdkBuilder.action(action.let(ActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9dbb42e008c2d9f934812afdd7d0401f3db973cb54b7172a6deac66ce238c17")
-      public override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
+      override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
           action(ActionProperty(action))
 
-      public override fun exclusionRules(exclusionRules: IResolvable) {
+      override fun exclusionRules(exclusionRules: IResolvable) {
         cdkBuilder.exclusionRules(exclusionRules.let(IResolvable::unwrap))
       }
 
-      public override fun exclusionRules(exclusionRules: ExclusionRulesProperty) {
+      override fun exclusionRules(exclusionRules: ExclusionRulesProperty) {
         cdkBuilder.exclusionRules(exclusionRules.let(ExclusionRulesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2aefbdee6810949a08fbc3ec96996e7ff8320d4c8ad322f84ce069c822106be")
-      public override fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit):
-          Unit = exclusionRules(ExclusionRulesProperty(exclusionRules))
+      override fun exclusionRules(exclusionRules: ExclusionRulesProperty.Builder.() -> Unit): Unit =
+          exclusionRules(ExclusionRulesProperty(exclusionRules))
 
-      public override fun filter(filter: IResolvable) {
+      override fun filter(filter: IResolvable) {
         cdkBuilder.filter(filter.let(IResolvable::unwrap))
       }
 
-      public override fun filter(filter: FilterProperty) {
+      override fun filter(filter: FilterProperty) {
         cdkBuilder.filter(filter.let(FilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("48e93a5d8726b320824ecbcb01841580b080f8860aa78ed0736beb59b4dc81ec")
-      public override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
+      override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
           filter(FilterProperty(filter))
 
       public fun build():
@@ -747,11 +703,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.PolicyDetailProperty,
     ) : PolicyDetailProperty {
-      public override fun action(): Any = unwrap(this).getAction()
+      override fun action(): Any = unwrap(this).getAction()
 
-      public override fun exclusionRules(): Any? = unwrap(this).getExclusionRules()
+      override fun exclusionRules(): Any? = unwrap(this).getExclusionRules()
 
-      public override fun filter(): Any = unwrap(this).getFilter()
+      override fun filter(): Any = unwrap(this).getFilter()
     }
 
     public companion object {
@@ -786,34 +742,25 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun tagMap(): Any? = unwrap(this).getTagMap()
 
     public interface Builder {
-      public fun isPublic(isPublic: Boolean) {
-      }
+      public fun isPublic(isPublic: Boolean)
 
-      public fun isPublic(isPublic: IResolvable) {
-      }
+      public fun isPublic(isPublic: IResolvable)
 
-      public fun lastLaunched(lastLaunched: IResolvable) {
-      }
+      public fun lastLaunched(lastLaunched: IResolvable)
 
-      public fun lastLaunched(lastLaunched: LastLaunchedProperty) {
-      }
+      public fun lastLaunched(lastLaunched: LastLaunchedProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88db98081f27153c3fd435b4d3401bbc9f02f63b4b3009e0d191966948c431eb")
-      public fun lastLaunched(lastLaunched: LastLaunchedProperty.Builder.() -> Unit) {
-      }
+      public fun lastLaunched(lastLaunched: LastLaunchedProperty.Builder.() -> Unit)
 
-      public fun regions(regions: List<String>) {
-      }
+      public fun regions(regions: List<String>)
 
-      public fun sharedAccounts(sharedAccounts: List<String>) {
-      }
+      public fun sharedAccounts(sharedAccounts: List<String>)
 
-      public fun tagMap(tagMap: IResolvable) {
-      }
+      public fun tagMap(tagMap: IResolvable)
 
-      public fun tagMap(tagMap: Map<String, String>) {
-      }
+      public fun tagMap(tagMap: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -822,40 +769,40 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.AmiExclusionRulesProperty.builder()
 
-      public override fun isPublic(isPublic: Boolean) {
+      override fun isPublic(isPublic: Boolean) {
         cdkBuilder.isPublic(isPublic)
       }
 
-      public override fun isPublic(isPublic: IResolvable) {
+      override fun isPublic(isPublic: IResolvable) {
         cdkBuilder.isPublic(isPublic.let(IResolvable::unwrap))
       }
 
-      public override fun lastLaunched(lastLaunched: IResolvable) {
+      override fun lastLaunched(lastLaunched: IResolvable) {
         cdkBuilder.lastLaunched(lastLaunched.let(IResolvable::unwrap))
       }
 
-      public override fun lastLaunched(lastLaunched: LastLaunchedProperty) {
+      override fun lastLaunched(lastLaunched: LastLaunchedProperty) {
         cdkBuilder.lastLaunched(lastLaunched.let(LastLaunchedProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88db98081f27153c3fd435b4d3401bbc9f02f63b4b3009e0d191966948c431eb")
-      public override fun lastLaunched(lastLaunched: LastLaunchedProperty.Builder.() -> Unit): Unit
-          = lastLaunched(LastLaunchedProperty(lastLaunched))
+      override fun lastLaunched(lastLaunched: LastLaunchedProperty.Builder.() -> Unit): Unit =
+          lastLaunched(LastLaunchedProperty(lastLaunched))
 
-      public override fun regions(regions: List<String>) {
+      override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
 
-      public override fun sharedAccounts(sharedAccounts: List<String>) {
+      override fun sharedAccounts(sharedAccounts: List<String>) {
         cdkBuilder.sharedAccounts(sharedAccounts)
       }
 
-      public override fun tagMap(tagMap: IResolvable) {
+      override fun tagMap(tagMap: IResolvable) {
         cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
       }
 
-      public override fun tagMap(tagMap: Map<String, String>) {
+      override fun tagMap(tagMap: Map<String, String>) {
         cdkBuilder.tagMap(tagMap)
       }
 
@@ -868,16 +815,15 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.AmiExclusionRulesProperty,
     ) : AmiExclusionRulesProperty {
-      public override fun isPublic(): Any? = unwrap(this).getIsPublic()
+      override fun isPublic(): Any? = unwrap(this).getIsPublic()
 
-      public override fun lastLaunched(): Any? = unwrap(this).getLastLaunched()
+      override fun lastLaunched(): Any? = unwrap(this).getLastLaunched()
 
-      public override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+      override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
 
-      public override fun sharedAccounts(): List<String> = unwrap(this).getSharedAccounts() ?:
-          emptyList()
+      override fun sharedAccounts(): List<String> = unwrap(this).getSharedAccounts() ?: emptyList()
 
-      public override fun tagMap(): Any? = unwrap(this).getTagMap()
+      override fun tagMap(): Any? = unwrap(this).getTagMap()
     }
 
     public companion object {
@@ -906,22 +852,17 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun tagMap(): Any? = unwrap(this).getTagMap()
 
     public interface Builder {
-      public fun amis(amis: IResolvable) {
-      }
+      public fun amis(amis: IResolvable)
 
-      public fun amis(amis: AmiExclusionRulesProperty) {
-      }
+      public fun amis(amis: AmiExclusionRulesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c2122b0a58ad15c1af0fb85f28b31361f85dd23377995c8c5ea473b2a188a9de")
-      public fun amis(amis: AmiExclusionRulesProperty.Builder.() -> Unit) {
-      }
+      public fun amis(amis: AmiExclusionRulesProperty.Builder.() -> Unit)
 
-      public fun tagMap(tagMap: IResolvable) {
-      }
+      public fun tagMap(tagMap: IResolvable)
 
-      public fun tagMap(tagMap: Map<String, String>) {
-      }
+      public fun tagMap(tagMap: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -930,24 +871,24 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty.builder()
 
-      public override fun amis(amis: IResolvable) {
+      override fun amis(amis: IResolvable) {
         cdkBuilder.amis(amis.let(IResolvable::unwrap))
       }
 
-      public override fun amis(amis: AmiExclusionRulesProperty) {
+      override fun amis(amis: AmiExclusionRulesProperty) {
         cdkBuilder.amis(amis.let(AmiExclusionRulesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c2122b0a58ad15c1af0fb85f28b31361f85dd23377995c8c5ea473b2a188a9de")
-      public override fun amis(amis: AmiExclusionRulesProperty.Builder.() -> Unit): Unit =
+      override fun amis(amis: AmiExclusionRulesProperty.Builder.() -> Unit): Unit =
           amis(AmiExclusionRulesProperty(amis))
 
-      public override fun tagMap(tagMap: IResolvable) {
+      override fun tagMap(tagMap: IResolvable) {
         cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
       }
 
-      public override fun tagMap(tagMap: Map<String, String>) {
+      override fun tagMap(tagMap: Map<String, String>) {
         cdkBuilder.tagMap(tagMap)
       }
 
@@ -960,9 +901,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy.ExclusionRulesProperty,
     ) : ExclusionRulesProperty {
-      public override fun amis(): Any? = unwrap(this).getAmis()
+      override fun amis(): Any? = unwrap(this).getAmis()
 
-      public override fun tagMap(): Any? = unwrap(this).getTagMap()
+      override fun tagMap(): Any? = unwrap(this).getTagMap()
     }
 
     public companion object {

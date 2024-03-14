@@ -7,15 +7,14 @@ public interface WithoutPolicyUpdatesOptions {
   public fun addGrantsToResources(): Boolean? = unwrap(this).getAddGrantsToResources()
 
   public interface Builder {
-    public fun addGrantsToResources(addGrantsToResources: Boolean) {
-    }
+    public fun addGrantsToResources(addGrantsToResources: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions.Builder
         = software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions.builder()
 
-    public override fun addGrantsToResources(addGrantsToResources: Boolean) {
+    override fun addGrantsToResources(addGrantsToResources: Boolean) {
       cdkBuilder.addGrantsToResources(addGrantsToResources)
     }
 
@@ -26,7 +25,7 @@ public interface WithoutPolicyUpdatesOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions,
   ) : WithoutPolicyUpdatesOptions {
-    public override fun addGrantsToResources(): Boolean? = unwrap(this).getAddGrantsToResources()
+    override fun addGrantsToResources(): Boolean? = unwrap(this).getAddGrantsToResources()
   }
 
   public companion object {

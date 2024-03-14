@@ -11,29 +11,26 @@ public interface StageSynthesisOptions {
   public fun validateOnSynthesis(): Boolean? = unwrap(this).getValidateOnSynthesis()
 
   public interface Builder {
-    public fun force(force: Boolean) {
-    }
+    public fun force(force: Boolean)
 
-    public fun skipValidation(skipValidation: Boolean) {
-    }
+    public fun skipValidation(skipValidation: Boolean)
 
-    public fun validateOnSynthesis(validateOnSynthesis: Boolean) {
-    }
+    public fun validateOnSynthesis(validateOnSynthesis: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.StageSynthesisOptions.Builder =
         software.amazon.awscdk.StageSynthesisOptions.builder()
 
-    public override fun force(force: Boolean) {
+    override fun force(force: Boolean) {
       cdkBuilder.force(force)
     }
 
-    public override fun skipValidation(skipValidation: Boolean) {
+    override fun skipValidation(skipValidation: Boolean) {
       cdkBuilder.skipValidation(skipValidation)
     }
 
-    public override fun validateOnSynthesis(validateOnSynthesis: Boolean) {
+    override fun validateOnSynthesis(validateOnSynthesis: Boolean) {
       cdkBuilder.validateOnSynthesis(validateOnSynthesis)
     }
 
@@ -43,11 +40,11 @@ public interface StageSynthesisOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.StageSynthesisOptions,
   ) : StageSynthesisOptions {
-    public override fun force(): Boolean? = unwrap(this).getForce()
+    override fun force(): Boolean? = unwrap(this).getForce()
 
-    public override fun skipValidation(): Boolean? = unwrap(this).getSkipValidation()
+    override fun skipValidation(): Boolean? = unwrap(this).getSkipValidation()
 
-    public override fun validateOnSynthesis(): Boolean? = unwrap(this).getValidateOnSynthesis()
+    override fun validateOnSynthesis(): Boolean? = unwrap(this).getValidateOnSynthesis()
   }
 
   public companion object {

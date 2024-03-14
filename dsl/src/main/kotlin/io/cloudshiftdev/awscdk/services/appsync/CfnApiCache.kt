@@ -72,32 +72,23 @@ public open class CfnApiCache internal constructor(
   }
 
   public interface Builder {
-    public fun apiCachingBehavior(apiCachingBehavior: String) {
-    }
+    public fun apiCachingBehavior(apiCachingBehavior: String)
 
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
-    }
+    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean)
 
-    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
-    }
+    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable)
 
-    public fun healthMetricsConfig(healthMetricsConfig: String) {
-    }
+    public fun healthMetricsConfig(healthMetricsConfig: String)
 
-    public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
-    }
+    public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean)
 
-    public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-    }
+    public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable)
 
-    public fun ttl(ttl: Number) {
-    }
+    public fun ttl(ttl: Number)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -107,39 +98,39 @@ public open class CfnApiCache internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnApiCache.Builder =
         software.amazon.awscdk.services.appsync.CfnApiCache.Builder.create(scope, id)
 
-    public override fun apiCachingBehavior(apiCachingBehavior: String) {
+    override fun apiCachingBehavior(apiCachingBehavior: String) {
       cdkBuilder.apiCachingBehavior(apiCachingBehavior)
     }
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
+    override fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
       cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled)
     }
 
-    public override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
+    override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
       cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun healthMetricsConfig(healthMetricsConfig: String) {
+    override fun healthMetricsConfig(healthMetricsConfig: String) {
       cdkBuilder.healthMetricsConfig(healthMetricsConfig)
     }
 
-    public override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
+    override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled)
     }
 
-    public override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
+    override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun ttl(ttl: Number) {
+    override fun ttl(ttl: Number) {
       cdkBuilder.ttl(ttl)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

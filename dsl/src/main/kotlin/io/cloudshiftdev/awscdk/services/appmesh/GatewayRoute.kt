@@ -19,14 +19,11 @@ public open class GatewayRoute internal constructor(
       unwrap(this).getVirtualGateway().let(IVirtualGateway::wrap)
 
   public interface Builder {
-    public fun gatewayRouteName(gatewayRouteName: String) {
-    }
+    public fun gatewayRouteName(gatewayRouteName: String)
 
-    public fun routeSpec(routeSpec: GatewayRouteSpec) {
-    }
+    public fun routeSpec(routeSpec: GatewayRouteSpec)
 
-    public fun virtualGateway(virtualGateway: IVirtualGateway) {
-    }
+    public fun virtualGateway(virtualGateway: IVirtualGateway)
   }
 
   private class BuilderImpl(
@@ -36,15 +33,15 @@ public open class GatewayRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRoute.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRoute.Builder.create(scope, id)
 
-    public override fun gatewayRouteName(gatewayRouteName: String) {
+    override fun gatewayRouteName(gatewayRouteName: String) {
       cdkBuilder.gatewayRouteName(gatewayRouteName)
     }
 
-    public override fun routeSpec(routeSpec: GatewayRouteSpec) {
+    override fun routeSpec(routeSpec: GatewayRouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec::unwrap))
     }
 
-    public override fun virtualGateway(virtualGateway: IVirtualGateway) {
+    override fun virtualGateway(virtualGateway: IVirtualGateway) {
       cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
     }
 

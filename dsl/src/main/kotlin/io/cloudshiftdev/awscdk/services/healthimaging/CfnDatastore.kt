@@ -50,14 +50,11 @@ public open class CfnDatastore internal constructor(
   }
 
   public interface Builder {
-    public fun datastoreName(datastoreName: String) {
-    }
+    public fun datastoreName(datastoreName: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -67,15 +64,15 @@ public open class CfnDatastore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.healthimaging.CfnDatastore.Builder =
         software.amazon.awscdk.services.healthimaging.CfnDatastore.Builder.create(scope, id)
 
-    public override fun datastoreName(datastoreName: String) {
+    override fun datastoreName(datastoreName: String) {
       cdkBuilder.datastoreName(datastoreName)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

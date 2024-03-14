@@ -49,14 +49,11 @@ public open class CfnLocalGatewayRouteTableVPCAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
-    }
+    public fun localGatewayRouteTableId(localGatewayRouteTableId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -68,15 +65,15 @@ public open class CfnLocalGatewayRouteTableVPCAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociation.Builder.create(scope,
         id)
 
-    public override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
+    override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
       cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

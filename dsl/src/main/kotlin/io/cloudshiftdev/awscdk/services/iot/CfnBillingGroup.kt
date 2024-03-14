@@ -59,23 +59,18 @@ public open class CfnBillingGroup internal constructor(
   }
 
   public interface Builder {
-    public fun billingGroupName(billingGroupName: String) {
-    }
+    public fun billingGroupName(billingGroupName: String)
 
-    public fun billingGroupProperties(billingGroupProperties: IResolvable) {
-    }
+    public fun billingGroupProperties(billingGroupProperties: IResolvable)
 
-    public fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty) {
-    }
+    public fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("55dbff1410458bd4eef08c70df11ab68af290157f142e2f6921fd29524062fd5")
     public
-        fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty.Builder.() -> Unit) {
-    }
+        fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -85,26 +80,25 @@ public open class CfnBillingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnBillingGroup.Builder =
         software.amazon.awscdk.services.iot.CfnBillingGroup.Builder.create(scope, id)
 
-    public override fun billingGroupName(billingGroupName: String) {
+    override fun billingGroupName(billingGroupName: String) {
       cdkBuilder.billingGroupName(billingGroupName)
     }
 
-    public override fun billingGroupProperties(billingGroupProperties: IResolvable) {
+    override fun billingGroupProperties(billingGroupProperties: IResolvable) {
       cdkBuilder.billingGroupProperties(billingGroupProperties.let(IResolvable::unwrap))
     }
 
-    public override
-        fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty) {
+    override fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty) {
       cdkBuilder.billingGroupProperties(billingGroupProperties.let(BillingGroupPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("55dbff1410458bd4eef08c70df11ab68af290157f142e2f6921fd29524062fd5")
-    public override
+    override
         fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty.Builder.() -> Unit):
         Unit = billingGroupProperties(BillingGroupPropertiesProperty(billingGroupProperties))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -136,8 +130,7 @@ public open class CfnBillingGroup internal constructor(
     public fun billingGroupDescription(): String? = unwrap(this).getBillingGroupDescription()
 
     public interface Builder {
-      public fun billingGroupDescription(billingGroupDescription: String) {
-      }
+      public fun billingGroupDescription(billingGroupDescription: String)
     }
 
     private class BuilderImpl : Builder {
@@ -146,7 +139,7 @@ public open class CfnBillingGroup internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty.builder()
 
-      public override fun billingGroupDescription(billingGroupDescription: String) {
+      override fun billingGroupDescription(billingGroupDescription: String) {
         cdkBuilder.billingGroupDescription(billingGroupDescription)
       }
 
@@ -159,8 +152,7 @@ public open class CfnBillingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty,
     ) : BillingGroupPropertiesProperty {
-      public override fun billingGroupDescription(): String? =
-          unwrap(this).getBillingGroupDescription()
+      override fun billingGroupDescription(): String? = unwrap(this).getBillingGroupDescription()
     }
 
     public companion object {

@@ -17,17 +17,13 @@ public interface RotationScheduleOptions {
   public fun rotationLambda(): IFunction? = unwrap(this).getRotationLambda()?.let(IFunction::wrap)
 
   public interface Builder {
-    public fun automaticallyAfter(automaticallyAfter: Duration) {
-    }
+    public fun automaticallyAfter(automaticallyAfter: Duration)
 
-    public fun hostedRotation(hostedRotation: HostedRotation) {
-    }
+    public fun hostedRotation(hostedRotation: HostedRotation)
 
-    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
-    }
+    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean)
 
-    public fun rotationLambda(rotationLambda: IFunction) {
-    }
+    public fun rotationLambda(rotationLambda: IFunction)
   }
 
   private class BuilderImpl : Builder {
@@ -35,19 +31,19 @@ public interface RotationScheduleOptions {
         software.amazon.awscdk.services.secretsmanager.RotationScheduleOptions.Builder =
         software.amazon.awscdk.services.secretsmanager.RotationScheduleOptions.builder()
 
-    public override fun automaticallyAfter(automaticallyAfter: Duration) {
+    override fun automaticallyAfter(automaticallyAfter: Duration) {
       cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
     }
 
-    public override fun hostedRotation(hostedRotation: HostedRotation) {
+    override fun hostedRotation(hostedRotation: HostedRotation) {
       cdkBuilder.hostedRotation(hostedRotation.let(HostedRotation::unwrap))
     }
 
-    public override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+    override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
     }
 
-    public override fun rotationLambda(rotationLambda: IFunction) {
+    override fun rotationLambda(rotationLambda: IFunction) {
       cdkBuilder.rotationLambda(rotationLambda.let(IFunction::unwrap))
     }
 
@@ -58,16 +54,15 @@ public interface RotationScheduleOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.RotationScheduleOptions,
   ) : RotationScheduleOptions {
-    public override fun automaticallyAfter(): Duration? =
+    override fun automaticallyAfter(): Duration? =
         unwrap(this).getAutomaticallyAfter()?.let(Duration::wrap)
 
-    public override fun hostedRotation(): HostedRotation? =
+    override fun hostedRotation(): HostedRotation? =
         unwrap(this).getHostedRotation()?.let(HostedRotation::wrap)
 
-    public override fun rotateImmediatelyOnUpdate(): Boolean? =
-        unwrap(this).getRotateImmediatelyOnUpdate()
+    override fun rotateImmediatelyOnUpdate(): Boolean? = unwrap(this).getRotateImmediatelyOnUpdate()
 
-    public override fun rotationLambda(): IFunction? =
+    override fun rotationLambda(): IFunction? =
         unwrap(this).getRotationLambda()?.let(IFunction::wrap)
   }
 

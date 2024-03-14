@@ -79,32 +79,23 @@ public open class CfnParameter internal constructor(
   }
 
   public interface Builder {
-    public fun allowedPattern(allowedPattern: String) {
-    }
+    public fun allowedPattern(allowedPattern: String)
 
-    public fun dataType(dataType: String) {
-    }
+    public fun dataType(dataType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policies(policies: String) {
-    }
+    public fun policies(policies: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun tier(tier: String) {
-    }
+    public fun tier(tier: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl(
@@ -114,39 +105,39 @@ public open class CfnParameter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnParameter.Builder =
         software.amazon.awscdk.services.ssm.CfnParameter.Builder.create(scope, id)
 
-    public override fun allowedPattern(allowedPattern: String) {
+    override fun allowedPattern(allowedPattern: String) {
       cdkBuilder.allowedPattern(allowedPattern)
     }
 
-    public override fun dataType(dataType: String) {
+    override fun dataType(dataType: String) {
       cdkBuilder.dataType(dataType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policies(policies: String) {
+    override fun policies(policies: String) {
       cdkBuilder.policies(policies)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun tier(tier: String) {
+    override fun tier(tier: String) {
       cdkBuilder.tier(tier)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 

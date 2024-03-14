@@ -10,11 +10,9 @@ public interface NotificationConfiguration {
   public fun topic(): ITopic
 
   public interface Builder {
-    public fun scalingEvents(scalingEvents: ScalingEvents) {
-    }
+    public fun scalingEvents(scalingEvents: ScalingEvents)
 
-    public fun topic(topic: ITopic) {
-    }
+    public fun topic(topic: ITopic)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface NotificationConfiguration {
         software.amazon.awscdk.services.autoscaling.NotificationConfiguration.Builder =
         software.amazon.awscdk.services.autoscaling.NotificationConfiguration.builder()
 
-    public override fun scalingEvents(scalingEvents: ScalingEvents) {
+    override fun scalingEvents(scalingEvents: ScalingEvents) {
       cdkBuilder.scalingEvents(scalingEvents.let(ScalingEvents::unwrap))
     }
 
-    public override fun topic(topic: ITopic) {
+    override fun topic(topic: ITopic) {
       cdkBuilder.topic(topic.let(ITopic::unwrap))
     }
 
@@ -37,10 +35,10 @@ public interface NotificationConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.NotificationConfiguration,
   ) : NotificationConfiguration {
-    public override fun scalingEvents(): ScalingEvents? =
+    override fun scalingEvents(): ScalingEvents? =
         unwrap(this).getScalingEvents()?.let(ScalingEvents::wrap)
 
-    public override fun topic(): ITopic = unwrap(this).getTopic().let(ITopic::wrap)
+    override fun topic(): ITopic = unwrap(this).getTopic().let(ITopic::wrap)
   }
 
   public companion object {

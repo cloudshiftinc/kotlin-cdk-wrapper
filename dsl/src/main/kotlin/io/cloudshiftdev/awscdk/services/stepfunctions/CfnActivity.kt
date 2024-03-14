@@ -38,11 +38,9 @@ public open class CfnActivity internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<TagsEntryProperty>) {
-    }
+    public fun tags(tags: List<TagsEntryProperty>)
   }
 
   private class BuilderImpl(
@@ -52,11 +50,11 @@ public open class CfnActivity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.CfnActivity.Builder =
         software.amazon.awscdk.services.stepfunctions.CfnActivity.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<TagsEntryProperty>) {
+    override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
@@ -91,11 +89,9 @@ public open class CfnActivity internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -103,11 +99,11 @@ public open class CfnActivity internal constructor(
           software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty.Builder =
           software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -120,9 +116,9 @@ public open class CfnActivity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.CfnActivity.TagsEntryProperty,
     ) : TagsEntryProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

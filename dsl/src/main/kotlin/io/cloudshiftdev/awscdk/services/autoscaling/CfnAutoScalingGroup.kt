@@ -277,151 +277,108 @@ public open class CfnAutoScalingGroup internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingGroupName(autoScalingGroupName: String) {
-    }
+    public fun autoScalingGroupName(autoScalingGroupName: String)
 
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
-    public fun capacityRebalance(capacityRebalance: Boolean) {
-    }
+    public fun capacityRebalance(capacityRebalance: Boolean)
 
-    public fun capacityRebalance(capacityRebalance: IResolvable) {
-    }
+    public fun capacityRebalance(capacityRebalance: IResolvable)
 
-    public fun context(context: String) {
-    }
+    public fun context(context: String)
 
-    public fun cooldown(cooldown: String) {
-    }
+    public fun cooldown(cooldown: String)
 
-    public fun defaultInstanceWarmup(defaultInstanceWarmup: Number) {
-    }
+    public fun defaultInstanceWarmup(defaultInstanceWarmup: Number)
 
-    public fun desiredCapacity(desiredCapacity: String) {
-    }
+    public fun desiredCapacity(desiredCapacity: String)
 
-    public fun desiredCapacityType(desiredCapacityType: String) {
-    }
+    public fun desiredCapacityType(desiredCapacityType: String)
 
-    public fun healthCheckGracePeriod(healthCheckGracePeriod: Number) {
-    }
+    public fun healthCheckGracePeriod(healthCheckGracePeriod: Number)
 
-    public fun healthCheckType(healthCheckType: String) {
-    }
+    public fun healthCheckType(healthCheckType: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
-    }
+    public fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable)
 
     public
-        fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty) {
-    }
+        fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1b31a935f878d6378f68b18f226cb9517d4642a7e37455a7770205f6bb21c964")
     public
-        fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty.Builder.() -> Unit) {
-    }
+        fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty.Builder.() -> Unit)
 
-    public fun launchConfigurationName(launchConfigurationName: String) {
-    }
+    public fun launchConfigurationName(launchConfigurationName: String)
 
-    public fun launchTemplate(launchTemplate: IResolvable) {
-    }
+    public fun launchTemplate(launchTemplate: IResolvable)
 
-    public fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
-    }
+    public fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4400d81b41005748e36414987dda265ab35efce6e88dfd5d285d0fd08dab830f")
     public
-        fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
 
-    public fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: IResolvable) {
-    }
+    public fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: IResolvable)
 
-    public fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>) {
-    }
+    public fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>)
 
-    public fun loadBalancerNames(loadBalancerNames: List<String>) {
-    }
+    public fun loadBalancerNames(loadBalancerNames: List<String>)
 
-    public fun maxInstanceLifetime(maxInstanceLifetime: Number) {
-    }
+    public fun maxInstanceLifetime(maxInstanceLifetime: Number)
 
-    public fun maxSize(maxSize: String) {
-    }
+    public fun maxSize(maxSize: String)
 
-    public fun metricsCollection(metricsCollection: IResolvable) {
-    }
+    public fun metricsCollection(metricsCollection: IResolvable)
 
-    public fun metricsCollection(metricsCollection: List<Any>) {
-    }
+    public fun metricsCollection(metricsCollection: List<Any>)
 
-    public fun minSize(minSize: String) {
-    }
+    public fun minSize(minSize: String)
 
-    public fun mixedInstancesPolicy(mixedInstancesPolicy: IResolvable) {
-    }
+    public fun mixedInstancesPolicy(mixedInstancesPolicy: IResolvable)
 
-    public fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty) {
-    }
+    public fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("225b9b144c2f54944bd28485b6bb3492a765f1d00ca05604123531373cae2a81")
     public
-        fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty.Builder.() -> Unit) {
-    }
+        fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty.Builder.() -> Unit)
 
-    public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean) {
-    }
+    public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean)
 
-    public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
-    }
+    public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun notificationConfiguration(notificationConfiguration: IResolvable) {
-    }
+    public fun notificationConfiguration(notificationConfiguration: IResolvable)
 
     @Deprecated(message = "deprecated in CDK")
     public
-        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-    }
+        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8a4b1af8972202b84a7387964643523d0d39173add845a86f803ad0c280243a9")
     public
-        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit)
 
-    public fun notificationConfigurations(notificationConfigurations: IResolvable) {
-    }
+    public fun notificationConfigurations(notificationConfigurations: IResolvable)
 
-    public fun notificationConfigurations(notificationConfigurations: List<Any>) {
-    }
+    public fun notificationConfigurations(notificationConfigurations: List<Any>)
 
-    public fun placementGroup(placementGroup: String) {
-    }
+    public fun placementGroup(placementGroup: String)
 
-    public fun serviceLinkedRoleArn(serviceLinkedRoleArn: String) {
-    }
+    public fun serviceLinkedRoleArn(serviceLinkedRoleArn: String)
 
-    public fun tags(tags: List<TagPropertyProperty>) {
-    }
+    public fun tags(tags: List<TagPropertyProperty>)
 
-    public fun targetGroupArns(targetGroupArns: List<String>) {
-    }
+    public fun targetGroupArns(targetGroupArns: List<String>)
 
-    public fun terminationPolicies(terminationPolicies: List<String>) {
-    }
+    public fun terminationPolicies(terminationPolicies: List<String>)
 
-    public fun vpcZoneIdentifier(vpcZoneIdentifier: List<String>) {
-    }
+    public fun vpcZoneIdentifier(vpcZoneIdentifier: List<String>)
   }
 
   private class BuilderImpl(
@@ -431,152 +388,149 @@ public open class CfnAutoScalingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.Builder
         = software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.Builder.create(scope, id)
 
-    public override fun autoScalingGroupName(autoScalingGroupName: String) {
+    override fun autoScalingGroupName(autoScalingGroupName: String) {
       cdkBuilder.autoScalingGroupName(autoScalingGroupName)
     }
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
-    public override fun capacityRebalance(capacityRebalance: Boolean) {
+    override fun capacityRebalance(capacityRebalance: Boolean) {
       cdkBuilder.capacityRebalance(capacityRebalance)
     }
 
-    public override fun capacityRebalance(capacityRebalance: IResolvable) {
+    override fun capacityRebalance(capacityRebalance: IResolvable) {
       cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
     }
 
-    public override fun context(context: String) {
+    override fun context(context: String) {
       cdkBuilder.context(context)
     }
 
-    public override fun cooldown(cooldown: String) {
+    override fun cooldown(cooldown: String) {
       cdkBuilder.cooldown(cooldown)
     }
 
-    public override fun defaultInstanceWarmup(defaultInstanceWarmup: Number) {
+    override fun defaultInstanceWarmup(defaultInstanceWarmup: Number) {
       cdkBuilder.defaultInstanceWarmup(defaultInstanceWarmup)
     }
 
-    public override fun desiredCapacity(desiredCapacity: String) {
+    override fun desiredCapacity(desiredCapacity: String) {
       cdkBuilder.desiredCapacity(desiredCapacity)
     }
 
-    public override fun desiredCapacityType(desiredCapacityType: String) {
+    override fun desiredCapacityType(desiredCapacityType: String) {
       cdkBuilder.desiredCapacityType(desiredCapacityType)
     }
 
-    public override fun healthCheckGracePeriod(healthCheckGracePeriod: Number) {
+    override fun healthCheckGracePeriod(healthCheckGracePeriod: Number) {
       cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod)
     }
 
-    public override fun healthCheckType(healthCheckType: String) {
+    override fun healthCheckType(healthCheckType: String) {
       cdkBuilder.healthCheckType(healthCheckType)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
+    override fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
       cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty) {
       cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(InstanceMaintenancePolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1b31a935f878d6378f68b18f226cb9517d4642a7e37455a7770205f6bb21c964")
-    public override
+    override
         fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty.Builder.() -> Unit):
         Unit =
         instanceMaintenancePolicy(InstanceMaintenancePolicyProperty(instanceMaintenancePolicy))
 
-    public override fun launchConfigurationName(launchConfigurationName: String) {
+    override fun launchConfigurationName(launchConfigurationName: String) {
       cdkBuilder.launchConfigurationName(launchConfigurationName)
     }
 
-    public override fun launchTemplate(launchTemplate: IResolvable) {
+    override fun launchTemplate(launchTemplate: IResolvable) {
       cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
     }
 
-    public override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
+    override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
       cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4400d81b41005748e36414987dda265ab35efce6e88dfd5d285d0fd08dab830f")
-    public override
+    override
         fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
         Unit = launchTemplate(LaunchTemplateSpecificationProperty(launchTemplate))
 
-    public override
-        fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: IResolvable) {
+    override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: IResolvable) {
       cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.let(IResolvable::unwrap))
     }
 
-    public override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>) {
+    override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>) {
       cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList)
     }
 
-    public override fun loadBalancerNames(loadBalancerNames: List<String>) {
+    override fun loadBalancerNames(loadBalancerNames: List<String>) {
       cdkBuilder.loadBalancerNames(loadBalancerNames)
     }
 
-    public override fun maxInstanceLifetime(maxInstanceLifetime: Number) {
+    override fun maxInstanceLifetime(maxInstanceLifetime: Number) {
       cdkBuilder.maxInstanceLifetime(maxInstanceLifetime)
     }
 
-    public override fun maxSize(maxSize: String) {
+    override fun maxSize(maxSize: String) {
       cdkBuilder.maxSize(maxSize)
     }
 
-    public override fun metricsCollection(metricsCollection: IResolvable) {
+    override fun metricsCollection(metricsCollection: IResolvable) {
       cdkBuilder.metricsCollection(metricsCollection.let(IResolvable::unwrap))
     }
 
-    public override fun metricsCollection(metricsCollection: List<Any>) {
+    override fun metricsCollection(metricsCollection: List<Any>) {
       cdkBuilder.metricsCollection(metricsCollection)
     }
 
-    public override fun minSize(minSize: String) {
+    override fun minSize(minSize: String) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun mixedInstancesPolicy(mixedInstancesPolicy: IResolvable) {
+    override fun mixedInstancesPolicy(mixedInstancesPolicy: IResolvable) {
       cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty) {
+    override fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty) {
       cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(MixedInstancesPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("225b9b144c2f54944bd28485b6bb3492a765f1d00ca05604123531373cae2a81")
-    public override
+    override
         fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty.Builder.() -> Unit):
         Unit = mixedInstancesPolicy(MixedInstancesPolicyProperty(mixedInstancesPolicy))
 
-    public override
-        fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean) {
+    override fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: Boolean) {
       cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn)
     }
 
-    public override
-        fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
+    override fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
       cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn.let(IResolvable::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun notificationConfiguration(notificationConfiguration: IResolvable) {
+    override fun notificationConfiguration(notificationConfiguration: IResolvable) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override
+    override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
     }
@@ -584,40 +538,40 @@ public open class CfnAutoScalingGroup internal constructor(
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8a4b1af8972202b84a7387964643523d0d39173add845a86f803ad0c280243a9")
-    public override
+    override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit):
         Unit =
         notificationConfiguration(NotificationConfigurationProperty(notificationConfiguration))
 
-    public override fun notificationConfigurations(notificationConfigurations: IResolvable) {
+    override fun notificationConfigurations(notificationConfigurations: IResolvable) {
       cdkBuilder.notificationConfigurations(notificationConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun notificationConfigurations(notificationConfigurations: List<Any>) {
+    override fun notificationConfigurations(notificationConfigurations: List<Any>) {
       cdkBuilder.notificationConfigurations(notificationConfigurations)
     }
 
-    public override fun placementGroup(placementGroup: String) {
+    override fun placementGroup(placementGroup: String) {
       cdkBuilder.placementGroup(placementGroup)
     }
 
-    public override fun serviceLinkedRoleArn(serviceLinkedRoleArn: String) {
+    override fun serviceLinkedRoleArn(serviceLinkedRoleArn: String) {
       cdkBuilder.serviceLinkedRoleArn(serviceLinkedRoleArn)
     }
 
-    public override fun tags(tags: List<TagPropertyProperty>) {
+    override fun tags(tags: List<TagPropertyProperty>) {
       cdkBuilder.tags(tags.map(TagPropertyProperty::unwrap))
     }
 
-    public override fun targetGroupArns(targetGroupArns: List<String>) {
+    override fun targetGroupArns(targetGroupArns: List<String>) {
       cdkBuilder.targetGroupArns(targetGroupArns)
     }
 
-    public override fun terminationPolicies(terminationPolicies: List<String>) {
+    override fun terminationPolicies(terminationPolicies: List<String>) {
       cdkBuilder.terminationPolicies(terminationPolicies)
     }
 
-    public override fun vpcZoneIdentifier(vpcZoneIdentifier: List<String>) {
+    override fun vpcZoneIdentifier(vpcZoneIdentifier: List<String>) {
       cdkBuilder.vpcZoneIdentifier(vpcZoneIdentifier)
     }
 
@@ -652,11 +606,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -665,11 +617,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -682,9 +634,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty,
     ) : MemoryMiBRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -713,11 +665,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -726,11 +676,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -743,9 +693,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty,
     ) : TotalLocalStorageGBRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -777,14 +727,11 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun version(): String
 
     public interface Builder {
-      public fun launchTemplateId(launchTemplateId: String) {
-      }
+      public fun launchTemplateId(launchTemplateId: String)
 
-      public fun launchTemplateName(launchTemplateName: String) {
-      }
+      public fun launchTemplateName(launchTemplateName: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -793,15 +740,15 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty.builder()
 
-      public override fun launchTemplateId(launchTemplateId: String) {
+      override fun launchTemplateId(launchTemplateId: String) {
         cdkBuilder.launchTemplateId(launchTemplateId)
       }
 
-      public override fun launchTemplateName(launchTemplateName: String) {
+      override fun launchTemplateName(launchTemplateName: String) {
         cdkBuilder.launchTemplateName(launchTemplateName)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -814,11 +761,11 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty,
     ) : LaunchTemplateSpecificationProperty {
-      public override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
-      public override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
-      public override fun version(): String = unwrap(this).getVersion()
+      override fun version(): String = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -848,11 +795,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -861,11 +806,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -878,9 +823,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty,
     ) : NetworkInterfaceCountRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -912,17 +857,13 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun propagateAtLaunch(propagateAtLaunch: Boolean) {
-      }
+      public fun propagateAtLaunch(propagateAtLaunch: Boolean)
 
-      public fun propagateAtLaunch(propagateAtLaunch: IResolvable) {
-      }
+      public fun propagateAtLaunch(propagateAtLaunch: IResolvable)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -931,19 +872,19 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun propagateAtLaunch(propagateAtLaunch: Boolean) {
+      override fun propagateAtLaunch(propagateAtLaunch: Boolean) {
         cdkBuilder.propagateAtLaunch(propagateAtLaunch)
       }
 
-      public override fun propagateAtLaunch(propagateAtLaunch: IResolvable) {
+      override fun propagateAtLaunch(propagateAtLaunch: IResolvable) {
         cdkBuilder.propagateAtLaunch(propagateAtLaunch.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -956,11 +897,11 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty,
     ) : TagPropertyProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun propagateAtLaunch(): Any = unwrap(this).getPropagateAtLaunch()
+      override fun propagateAtLaunch(): Any = unwrap(this).getPropagateAtLaunch()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -989,11 +930,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1002,11 +941,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -1019,9 +958,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty,
     ) : NetworkBandwidthGbpsRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -1051,11 +990,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1064,11 +1001,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -1081,9 +1018,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty,
     ) : VCpuCountRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -1112,11 +1049,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1125,11 +1060,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -1142,9 +1077,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty,
     ) : AcceleratorCountRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -1173,11 +1108,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1186,11 +1119,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -1203,9 +1136,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty,
     ) : MemoryGiBPerVCpuRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -1238,36 +1171,28 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
 
     public interface Builder {
-      public fun instanceRequirements(instanceRequirements: IResolvable) {
-      }
+      public fun instanceRequirements(instanceRequirements: IResolvable)
 
-      public fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
-      }
+      public fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94f4ea0c74ec4495738121b8d42fa540ee0b3090a922cc85121645d3598842f2")
       public
-          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit) {
-      }
+          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-      }
+      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
 
       public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
-      }
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfadd002dc80530ce8daf12a2dd7485c3550a7438eb96f083b1fd2313b9aa4a2")
       public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
 
-      public fun weightedCapacity(weightedCapacity: String) {
-      }
+      public fun weightedCapacity(weightedCapacity: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1276,41 +1201,41 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty.builder()
 
-      public override fun instanceRequirements(instanceRequirements: IResolvable) {
+      override fun instanceRequirements(instanceRequirements: IResolvable) {
         cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
       }
 
-      public override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
+      override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
         cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94f4ea0c74ec4495738121b8d42fa540ee0b3090a922cc85121645d3598842f2")
-      public override
+      override
           fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit):
           Unit = instanceRequirements(InstanceRequirementsProperty(instanceRequirements))
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
+      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
         cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
         cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfadd002dc80530ce8daf12a2dd7485c3550a7438eb96f083b1fd2313b9aa4a2")
-      public override
+      override
           fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
           Unit =
           launchTemplateSpecification(LaunchTemplateSpecificationProperty(launchTemplateSpecification))
 
-      public override fun weightedCapacity(weightedCapacity: String) {
+      override fun weightedCapacity(weightedCapacity: String) {
         cdkBuilder.weightedCapacity(weightedCapacity)
       }
 
@@ -1323,14 +1248,14 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty,
     ) : LaunchTemplateOverridesProperty {
-      public override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
+      override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun launchTemplateSpecification(): Any? =
+      override fun launchTemplateSpecification(): Any? =
           unwrap(this).getLaunchTemplateSpecification()
 
-      public override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
+      override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
     }
 
     public companion object {
@@ -1368,23 +1293,17 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
 
     public interface Builder {
-      public fun onDemandAllocationStrategy(onDemandAllocationStrategy: String) {
-      }
+      public fun onDemandAllocationStrategy(onDemandAllocationStrategy: String)
 
-      public fun onDemandBaseCapacity(onDemandBaseCapacity: Number) {
-      }
+      public fun onDemandBaseCapacity(onDemandBaseCapacity: Number)
 
-      public fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number) {
-      }
+      public fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number)
 
-      public fun spotAllocationStrategy(spotAllocationStrategy: String) {
-      }
+      public fun spotAllocationStrategy(spotAllocationStrategy: String)
 
-      public fun spotInstancePools(spotInstancePools: Number) {
-      }
+      public fun spotInstancePools(spotInstancePools: Number)
 
-      public fun spotMaxPrice(spotMaxPrice: String) {
-      }
+      public fun spotMaxPrice(spotMaxPrice: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1393,28 +1312,28 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty.builder()
 
-      public override fun onDemandAllocationStrategy(onDemandAllocationStrategy: String) {
+      override fun onDemandAllocationStrategy(onDemandAllocationStrategy: String) {
         cdkBuilder.onDemandAllocationStrategy(onDemandAllocationStrategy)
       }
 
-      public override fun onDemandBaseCapacity(onDemandBaseCapacity: Number) {
+      override fun onDemandBaseCapacity(onDemandBaseCapacity: Number) {
         cdkBuilder.onDemandBaseCapacity(onDemandBaseCapacity)
       }
 
-      public override
+      override
           fun onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity: Number) {
         cdkBuilder.onDemandPercentageAboveBaseCapacity(onDemandPercentageAboveBaseCapacity)
       }
 
-      public override fun spotAllocationStrategy(spotAllocationStrategy: String) {
+      override fun spotAllocationStrategy(spotAllocationStrategy: String) {
         cdkBuilder.spotAllocationStrategy(spotAllocationStrategy)
       }
 
-      public override fun spotInstancePools(spotInstancePools: Number) {
+      override fun spotInstancePools(spotInstancePools: Number) {
         cdkBuilder.spotInstancePools(spotInstancePools)
       }
 
-      public override fun spotMaxPrice(spotMaxPrice: String) {
+      override fun spotMaxPrice(spotMaxPrice: String) {
         cdkBuilder.spotMaxPrice(spotMaxPrice)
       }
 
@@ -1427,20 +1346,19 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty,
     ) : InstancesDistributionProperty {
-      public override fun onDemandAllocationStrategy(): String? =
+      override fun onDemandAllocationStrategy(): String? =
           unwrap(this).getOnDemandAllocationStrategy()
 
-      public override fun onDemandBaseCapacity(): Number? = unwrap(this).getOnDemandBaseCapacity()
+      override fun onDemandBaseCapacity(): Number? = unwrap(this).getOnDemandBaseCapacity()
 
-      public override fun onDemandPercentageAboveBaseCapacity(): Number? =
+      override fun onDemandPercentageAboveBaseCapacity(): Number? =
           unwrap(this).getOnDemandPercentageAboveBaseCapacity()
 
-      public override fun spotAllocationStrategy(): String? =
-          unwrap(this).getSpotAllocationStrategy()
+      override fun spotAllocationStrategy(): String? = unwrap(this).getSpotAllocationStrategy()
 
-      public override fun spotInstancePools(): Number? = unwrap(this).getSpotInstancePools()
+      override fun spotInstancePools(): Number? = unwrap(this).getSpotInstancePools()
 
-      public override fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
+      override fun spotMaxPrice(): String? = unwrap(this).getSpotMaxPrice()
     }
 
     public companion object {
@@ -1470,11 +1388,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun topicArn(): String
 
     public interface Builder {
-      public fun notificationTypes(notificationTypes: List<String>) {
-      }
+      public fun notificationTypes(notificationTypes: List<String>)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1483,11 +1399,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty.builder()
 
-      public override fun notificationTypes(notificationTypes: List<String>) {
+      override fun notificationTypes(notificationTypes: List<String>) {
         cdkBuilder.notificationTypes(notificationTypes)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -1500,10 +1416,10 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty,
     ) : NotificationConfigurationProperty {
-      public override fun notificationTypes(): List<String> = unwrap(this).getNotificationTypes() ?:
+      override fun notificationTypes(): List<String> = unwrap(this).getNotificationTypes() ?:
           emptyList()
 
-      public override fun topicArn(): String = unwrap(this).getTopicArn()
+      override fun topicArn(): String = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -1533,11 +1449,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
 
     public interface Builder {
-      public fun granularity(granularity: String) {
-      }
+      public fun granularity(granularity: String)
 
-      public fun metrics(metrics: List<String>) {
-      }
+      public fun metrics(metrics: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1546,11 +1460,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty.builder()
 
-      public override fun granularity(granularity: String) {
+      override fun granularity(granularity: String) {
         cdkBuilder.granularity(granularity)
       }
 
-      public override fun metrics(metrics: List<String>) {
+      override fun metrics(metrics: List<String>) {
         cdkBuilder.metrics(metrics)
       }
 
@@ -1563,9 +1477,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty,
     ) : MetricsCollectionProperty {
-      public override fun granularity(): String = unwrap(this).getGranularity()
+      override fun granularity(): String = unwrap(this).getGranularity()
 
-      public override fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
+      override fun metrics(): List<String> = unwrap(this).getMetrics() ?: emptyList()
     }
 
     public companion object {
@@ -1646,165 +1560,121 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun vCpuCount(): Any
 
     public interface Builder {
-      public fun acceleratorCount(acceleratorCount: IResolvable) {
-      }
+      public fun acceleratorCount(acceleratorCount: IResolvable)
 
-      public fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty) {
-      }
+      public fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da54f95b7b9114b6e8c7e1024e8206a703bc28b5f93f2c30c33fa5caddfcbcad")
       public
-          fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty.Builder.() -> Unit) {
-      }
+          fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty.Builder.() -> Unit)
 
-      public fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
-      }
+      public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
 
-      public fun acceleratorNames(acceleratorNames: List<String>) {
-      }
+      public fun acceleratorNames(acceleratorNames: List<String>)
 
-      public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-      }
+      public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
 
       public
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty) {
-      }
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba7739b20a48dd2ab478fcc4d91c25765804a9600b7eeb1aba86f05bffe0751e")
       public
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty.Builder.() -> Unit) {
-      }
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty.Builder.() -> Unit)
 
-      public fun acceleratorTypes(acceleratorTypes: List<String>) {
-      }
+      public fun acceleratorTypes(acceleratorTypes: List<String>)
 
-      public fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
-      }
+      public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
 
-      public fun bareMetal(bareMetal: String) {
-      }
+      public fun bareMetal(bareMetal: String)
 
-      public fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-      }
+      public fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable)
 
       public
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty) {
-      }
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1630feddc0146d1229586f809df8dd5224c4da3d0a2f82b7464a3ec0839fc8d4")
       public
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit) {
-      }
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit)
 
-      public fun burstablePerformance(burstablePerformance: String) {
-      }
+      public fun burstablePerformance(burstablePerformance: String)
 
-      public fun cpuManufacturers(cpuManufacturers: List<String>) {
-      }
+      public fun cpuManufacturers(cpuManufacturers: List<String>)
 
-      public fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
-      }
+      public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
 
-      public fun instanceGenerations(instanceGenerations: List<String>) {
-      }
+      public fun instanceGenerations(instanceGenerations: List<String>)
 
-      public fun localStorage(localStorage: String) {
-      }
+      public fun localStorage(localStorage: String)
 
-      public fun localStorageTypes(localStorageTypes: List<String>) {
-      }
+      public fun localStorageTypes(localStorageTypes: List<String>)
 
       public
-          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
-      }
+          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
 
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-      }
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable)
 
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty) {
-      }
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d55290b531e2ee1dd41118265c957a9f776060c1d7b27f944e40119ab5bc7e54")
       public
-          fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty.Builder.() -> Unit) {
-      }
+          fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty.Builder.() -> Unit)
 
-      public fun memoryMiB(memoryMiB: IResolvable) {
-      }
+      public fun memoryMiB(memoryMiB: IResolvable)
 
-      public fun memoryMiB(memoryMiB: MemoryMiBRequestProperty) {
-      }
+      public fun memoryMiB(memoryMiB: MemoryMiBRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6ebca97333f952b321ec1462a00b68924c214d836a3916882cfbf12b221439c9")
-      public fun memoryMiB(memoryMiB: MemoryMiBRequestProperty.Builder.() -> Unit) {
-      }
+      public fun memoryMiB(memoryMiB: MemoryMiBRequestProperty.Builder.() -> Unit)
 
-      public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-      }
+      public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable)
 
-      public fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty) {
-      }
+      public fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6552c11e18dd37c163b404c01333428d50703b58a125a26ed1c038a32f6188e9")
       public
-          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty.Builder.() -> Unit) {
-      }
+          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty.Builder.() -> Unit)
 
-      public fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-      }
+      public fun networkInterfaceCount(networkInterfaceCount: IResolvable)
 
-      public
-          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty) {
-      }
+      public fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5f6237141895884dc736bee2ae072d1805502b7ea88c288aa06e7ee2a2b764d")
       public
-          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty.Builder.() -> Unit) {
-      }
+          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty.Builder.() -> Unit)
 
       public
-          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number) {
-      }
+          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number)
 
-      public fun requireHibernateSupport(requireHibernateSupport: Boolean) {
-      }
+      public fun requireHibernateSupport(requireHibernateSupport: Boolean)
 
-      public fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-      }
+      public fun requireHibernateSupport(requireHibernateSupport: IResolvable)
 
       public
-          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
-      }
+          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number)
 
-      public fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-      }
+      public fun totalLocalStorageGb(totalLocalStorageGb: IResolvable)
 
-      public fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty) {
-      }
+      public fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d4481573ab159ffe8f7c8ac32f6180c31832cfec39436d8ca19b2adf307383e")
       public
-          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty.Builder.() -> Unit) {
-      }
+          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty.Builder.() -> Unit)
 
-      public fun vCpuCount(vCpuCount: IResolvable) {
-      }
+      public fun vCpuCount(vCpuCount: IResolvable)
 
-      public fun vCpuCount(vCpuCount: VCpuCountRequestProperty) {
-      }
+      public fun vCpuCount(vCpuCount: VCpuCountRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7dee68f654f869370b7228ff7e3ee0bca7647aca23a2359d986734fb9648fa6d")
-      public fun vCpuCount(vCpuCount: VCpuCountRequestProperty.Builder.() -> Unit) {
-      }
+      public fun vCpuCount(vCpuCount: VCpuCountRequestProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1813,202 +1683,200 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty.builder()
 
-      public override fun acceleratorCount(acceleratorCount: IResolvable) {
+      override fun acceleratorCount(acceleratorCount: IResolvable) {
         cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
       }
 
-      public override fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty) {
+      override fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty) {
         cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da54f95b7b9114b6e8c7e1024e8206a703bc28b5f93f2c30c33fa5caddfcbcad")
-      public override
+      override
           fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty.Builder.() -> Unit):
           Unit = acceleratorCount(AcceleratorCountRequestProperty(acceleratorCount))
 
-      public override fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
+      override fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
         cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
       }
 
-      public override fun acceleratorNames(acceleratorNames: List<String>) {
+      override fun acceleratorNames(acceleratorNames: List<String>) {
         cdkBuilder.acceleratorNames(acceleratorNames)
       }
 
-      public override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
+      override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba7739b20a48dd2ab478fcc4d91c25765804a9600b7eeb1aba86f05bffe0751e")
-      public override
+      override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty.Builder.() -> Unit):
           Unit =
           acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty(acceleratorTotalMemoryMiB))
 
-      public override fun acceleratorTypes(acceleratorTypes: List<String>) {
+      override fun acceleratorTypes(acceleratorTypes: List<String>) {
         cdkBuilder.acceleratorTypes(acceleratorTypes)
       }
 
-      public override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
+      override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
         cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
       }
 
-      public override fun bareMetal(bareMetal: String) {
+      override fun bareMetal(bareMetal: String) {
         cdkBuilder.bareMetal(bareMetal)
       }
 
-      public override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
+      override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
         cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty) {
         cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1630feddc0146d1229586f809df8dd5224c4da3d0a2f82b7464a3ec0839fc8d4")
-      public override
+      override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit):
           Unit =
           baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty(baselineEbsBandwidthMbps))
 
-      public override fun burstablePerformance(burstablePerformance: String) {
+      override fun burstablePerformance(burstablePerformance: String) {
         cdkBuilder.burstablePerformance(burstablePerformance)
       }
 
-      public override fun cpuManufacturers(cpuManufacturers: List<String>) {
+      override fun cpuManufacturers(cpuManufacturers: List<String>) {
         cdkBuilder.cpuManufacturers(cpuManufacturers)
       }
 
-      public override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
+      override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
         cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
       }
 
-      public override fun instanceGenerations(instanceGenerations: List<String>) {
+      override fun instanceGenerations(instanceGenerations: List<String>) {
         cdkBuilder.instanceGenerations(instanceGenerations)
       }
 
-      public override fun localStorage(localStorage: String) {
+      override fun localStorage(localStorage: String) {
         cdkBuilder.localStorage(localStorage)
       }
 
-      public override fun localStorageTypes(localStorageTypes: List<String>) {
+      override fun localStorageTypes(localStorageTypes: List<String>) {
         cdkBuilder.localStorageTypes(localStorageTypes)
       }
 
-      public override
+      override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
         cdkBuilder.maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice)
       }
 
-      public override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
         cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
       }
 
-      public override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty) {
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty) {
         cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d55290b531e2ee1dd41118265c957a9f776060c1d7b27f944e40119ab5bc7e54")
-      public override
+      override
           fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty.Builder.() -> Unit):
           Unit = memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty(memoryGiBPerVCpu))
 
-      public override fun memoryMiB(memoryMiB: IResolvable) {
+      override fun memoryMiB(memoryMiB: IResolvable) {
         cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
       }
 
-      public override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty) {
+      override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty) {
         cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6ebca97333f952b321ec1462a00b68924c214d836a3916882cfbf12b221439c9")
-      public override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty.Builder.() -> Unit): Unit =
+      override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty.Builder.() -> Unit): Unit =
           memoryMiB(MemoryMiBRequestProperty(memoryMiB))
 
-      public override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
+      override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
         cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
       }
 
-      public override
-          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty) {
+      override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty) {
         cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6552c11e18dd37c163b404c01333428d50703b58a125a26ed1c038a32f6188e9")
-      public override
+      override
           fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty.Builder.() -> Unit):
           Unit = networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty(networkBandwidthGbps))
 
-      public override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
+      override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
         cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty) {
         cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5f6237141895884dc736bee2ae072d1805502b7ea88c288aa06e7ee2a2b764d")
-      public override
+      override
           fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty.Builder.() -> Unit):
           Unit = networkInterfaceCount(NetworkInterfaceCountRequestProperty(networkInterfaceCount))
 
-      public override
+      override
           fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number) {
         cdkBuilder.onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice)
       }
 
-      public override fun requireHibernateSupport(requireHibernateSupport: Boolean) {
+      override fun requireHibernateSupport(requireHibernateSupport: Boolean) {
         cdkBuilder.requireHibernateSupport(requireHibernateSupport)
       }
 
-      public override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
+      override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
         cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
         cdkBuilder.spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice)
       }
 
-      public override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
+      override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
         cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
       }
 
-      public override
-          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty) {
+      override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty) {
         cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d4481573ab159ffe8f7c8ac32f6180c31832cfec39436d8ca19b2adf307383e")
-      public override
+      override
           fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty.Builder.() -> Unit):
           Unit = totalLocalStorageGb(TotalLocalStorageGBRequestProperty(totalLocalStorageGb))
 
-      public override fun vCpuCount(vCpuCount: IResolvable) {
+      override fun vCpuCount(vCpuCount: IResolvable) {
         cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
       }
 
-      public override fun vCpuCount(vCpuCount: VCpuCountRequestProperty) {
+      override fun vCpuCount(vCpuCount: VCpuCountRequestProperty) {
         cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7dee68f654f869370b7228ff7e3ee0bca7647aca23a2359d986734fb9648fa6d")
-      public override fun vCpuCount(vCpuCount: VCpuCountRequestProperty.Builder.() -> Unit): Unit =
+      override fun vCpuCount(vCpuCount: VCpuCountRequestProperty.Builder.() -> Unit): Unit =
           vCpuCount(VCpuCountRequestProperty(vCpuCount))
 
       public fun build():
@@ -2020,67 +1888,64 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty,
     ) : InstanceRequirementsProperty {
-      public override fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
+      override fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
 
-      public override fun acceleratorManufacturers(): List<String> =
+      override fun acceleratorManufacturers(): List<String> =
           unwrap(this).getAcceleratorManufacturers() ?: emptyList()
 
-      public override fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?:
+      override fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?:
           emptyList()
 
-      public override fun acceleratorTotalMemoryMiB(): Any? =
-          unwrap(this).getAcceleratorTotalMemoryMiB()
+      override fun acceleratorTotalMemoryMiB(): Any? = unwrap(this).getAcceleratorTotalMemoryMiB()
 
-      public override fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
+      override fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
           emptyList()
 
-      public override fun allowedInstanceTypes(): List<String> =
-          unwrap(this).getAllowedInstanceTypes() ?: emptyList()
-
-      public override fun bareMetal(): String? = unwrap(this).getBareMetal()
-
-      public override fun baselineEbsBandwidthMbps(): Any? =
-          unwrap(this).getBaselineEbsBandwidthMbps()
-
-      public override fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
-
-      public override fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?:
+      override fun allowedInstanceTypes(): List<String> = unwrap(this).getAllowedInstanceTypes() ?:
           emptyList()
 
-      public override fun excludedInstanceTypes(): List<String> =
-          unwrap(this).getExcludedInstanceTypes() ?: emptyList()
+      override fun bareMetal(): String? = unwrap(this).getBareMetal()
 
-      public override fun instanceGenerations(): List<String> =
-          unwrap(this).getInstanceGenerations() ?: emptyList()
+      override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
 
-      public override fun localStorage(): String? = unwrap(this).getLocalStorage()
+      override fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
 
-      public override fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
+      override fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?:
           emptyList()
 
-      public override fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
+      override fun excludedInstanceTypes(): List<String> = unwrap(this).getExcludedInstanceTypes()
+          ?: emptyList()
+
+      override fun instanceGenerations(): List<String> = unwrap(this).getInstanceGenerations() ?:
+          emptyList()
+
+      override fun localStorage(): String? = unwrap(this).getLocalStorage()
+
+      override fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
+          emptyList()
+
+      override fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
           unwrap(this).getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
 
-      public override fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
+      override fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
 
-      public override fun memoryMiB(): Any = unwrap(this).getMemoryMiB()
+      override fun memoryMiB(): Any = unwrap(this).getMemoryMiB()
 
-      public override fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
+      override fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
 
-      public override fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
+      override fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
 
-      public override fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
+      override fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
           unwrap(this).getOnDemandMaxPricePercentageOverLowestPrice()
 
-      public override fun requireHibernateSupport(): Any? =
-          unwrap(this).getRequireHibernateSupport()
+      override fun requireHibernateSupport(): Any? = unwrap(this).getRequireHibernateSupport()
 
-      public override fun spotMaxPricePercentageOverLowestPrice(): Number? =
+      override fun spotMaxPricePercentageOverLowestPrice(): Number? =
           unwrap(this).getSpotMaxPricePercentageOverLowestPrice()
 
-      public override fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
+      override fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
 
-      public override fun vCpuCount(): Any = unwrap(this).getVCpuCount()
+      override fun vCpuCount(): Any = unwrap(this).getVCpuCount()
     }
 
     public companion object {
@@ -2109,11 +1974,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
 
     public interface Builder {
-      public fun maxHealthyPercentage(maxHealthyPercentage: Number) {
-      }
+      public fun maxHealthyPercentage(maxHealthyPercentage: Number)
 
-      public fun minHealthyPercentage(minHealthyPercentage: Number) {
-      }
+      public fun minHealthyPercentage(minHealthyPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2122,11 +1985,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty.builder()
 
-      public override fun maxHealthyPercentage(maxHealthyPercentage: Number) {
+      override fun maxHealthyPercentage(maxHealthyPercentage: Number) {
         cdkBuilder.maxHealthyPercentage(maxHealthyPercentage)
       }
 
-      public override fun minHealthyPercentage(minHealthyPercentage: Number) {
+      override fun minHealthyPercentage(minHealthyPercentage: Number) {
         cdkBuilder.minHealthyPercentage(minHealthyPercentage)
       }
 
@@ -2139,9 +2002,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty,
     ) : InstanceMaintenancePolicyProperty {
-      public override fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
+      override fun maxHealthyPercentage(): Number? = unwrap(this).getMaxHealthyPercentage()
 
-      public override fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
+      override fun minHealthyPercentage(): Number? = unwrap(this).getMinHealthyPercentage()
     }
 
     public companion object {
@@ -2171,11 +2034,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2184,11 +2045,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -2201,9 +2062,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty,
     ) : BaselineEbsBandwidthMbpsRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -2243,26 +2104,19 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun defaultResult(defaultResult: String) {
-      }
+      public fun defaultResult(defaultResult: String)
 
-      public fun heartbeatTimeout(heartbeatTimeout: Number) {
-      }
+      public fun heartbeatTimeout(heartbeatTimeout: Number)
 
-      public fun lifecycleHookName(lifecycleHookName: String) {
-      }
+      public fun lifecycleHookName(lifecycleHookName: String)
 
-      public fun lifecycleTransition(lifecycleTransition: String) {
-      }
+      public fun lifecycleTransition(lifecycleTransition: String)
 
-      public fun notificationMetadata(notificationMetadata: String) {
-      }
+      public fun notificationMetadata(notificationMetadata: String)
 
-      public fun notificationTargetArn(notificationTargetArn: String) {
-      }
+      public fun notificationTargetArn(notificationTargetArn: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2271,31 +2125,31 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty.builder()
 
-      public override fun defaultResult(defaultResult: String) {
+      override fun defaultResult(defaultResult: String) {
         cdkBuilder.defaultResult(defaultResult)
       }
 
-      public override fun heartbeatTimeout(heartbeatTimeout: Number) {
+      override fun heartbeatTimeout(heartbeatTimeout: Number) {
         cdkBuilder.heartbeatTimeout(heartbeatTimeout)
       }
 
-      public override fun lifecycleHookName(lifecycleHookName: String) {
+      override fun lifecycleHookName(lifecycleHookName: String) {
         cdkBuilder.lifecycleHookName(lifecycleHookName)
       }
 
-      public override fun lifecycleTransition(lifecycleTransition: String) {
+      override fun lifecycleTransition(lifecycleTransition: String) {
         cdkBuilder.lifecycleTransition(lifecycleTransition)
       }
 
-      public override fun notificationMetadata(notificationMetadata: String) {
+      override fun notificationMetadata(notificationMetadata: String) {
         cdkBuilder.notificationMetadata(notificationMetadata)
       }
 
-      public override fun notificationTargetArn(notificationTargetArn: String) {
+      override fun notificationTargetArn(notificationTargetArn: String) {
         cdkBuilder.notificationTargetArn(notificationTargetArn)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -2308,19 +2162,19 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty,
     ) : LifecycleHookSpecificationProperty {
-      public override fun defaultResult(): String? = unwrap(this).getDefaultResult()
+      override fun defaultResult(): String? = unwrap(this).getDefaultResult()
 
-      public override fun heartbeatTimeout(): Number? = unwrap(this).getHeartbeatTimeout()
+      override fun heartbeatTimeout(): Number? = unwrap(this).getHeartbeatTimeout()
 
-      public override fun lifecycleHookName(): String = unwrap(this).getLifecycleHookName()
+      override fun lifecycleHookName(): String = unwrap(this).getLifecycleHookName()
 
-      public override fun lifecycleTransition(): String = unwrap(this).getLifecycleTransition()
+      override fun lifecycleTransition(): String = unwrap(this).getLifecycleTransition()
 
-      public override fun notificationMetadata(): String? = unwrap(this).getNotificationMetadata()
+      override fun notificationMetadata(): String? = unwrap(this).getNotificationMetadata()
 
-      public override fun notificationTargetArn(): String? = unwrap(this).getNotificationTargetArn()
+      override fun notificationTargetArn(): String? = unwrap(this).getNotificationTargetArn()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -2350,28 +2204,22 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun launchTemplate(): Any
 
     public interface Builder {
-      public fun instancesDistribution(instancesDistribution: IResolvable) {
-      }
+      public fun instancesDistribution(instancesDistribution: IResolvable)
 
-      public fun instancesDistribution(instancesDistribution: InstancesDistributionProperty) {
-      }
+      public fun instancesDistribution(instancesDistribution: InstancesDistributionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e03d4866caf69019336418ba081e967544f265959db95c169dda70812c5c4544")
       public
-          fun instancesDistribution(instancesDistribution: InstancesDistributionProperty.Builder.() -> Unit) {
-      }
+          fun instancesDistribution(instancesDistribution: InstancesDistributionProperty.Builder.() -> Unit)
 
-      public fun launchTemplate(launchTemplate: IResolvable) {
-      }
+      public fun launchTemplate(launchTemplate: IResolvable)
 
-      public fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
-      }
+      public fun launchTemplate(launchTemplate: LaunchTemplateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ce44d33aa3fb8b16dd87d85a8716387ee4ee1693a6889cfcfb3e7ce7ded3d33")
-      public fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit) {
-      }
+      public fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2380,33 +2228,32 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty.builder()
 
-      public override fun instancesDistribution(instancesDistribution: IResolvable) {
+      override fun instancesDistribution(instancesDistribution: IResolvable) {
         cdkBuilder.instancesDistribution(instancesDistribution.let(IResolvable::unwrap))
       }
 
-      public override
-          fun instancesDistribution(instancesDistribution: InstancesDistributionProperty) {
+      override fun instancesDistribution(instancesDistribution: InstancesDistributionProperty) {
         cdkBuilder.instancesDistribution(instancesDistribution.let(InstancesDistributionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e03d4866caf69019336418ba081e967544f265959db95c169dda70812c5c4544")
-      public override
+      override
           fun instancesDistribution(instancesDistribution: InstancesDistributionProperty.Builder.() -> Unit):
           Unit = instancesDistribution(InstancesDistributionProperty(instancesDistribution))
 
-      public override fun launchTemplate(launchTemplate: IResolvable) {
+      override fun launchTemplate(launchTemplate: IResolvable) {
         cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
       }
 
-      public override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
+      override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
         cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ce44d33aa3fb8b16dd87d85a8716387ee4ee1693a6889cfcfb3e7ce7ded3d33")
-      public override fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit):
-          Unit = launchTemplate(LaunchTemplateProperty(launchTemplate))
+      override fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit): Unit =
+          launchTemplate(LaunchTemplateProperty(launchTemplate))
 
       public fun build():
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty
@@ -2417,9 +2264,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty,
     ) : MixedInstancesPolicyProperty {
-      public override fun instancesDistribution(): Any? = unwrap(this).getInstancesDistribution()
+      override fun instancesDistribution(): Any? = unwrap(this).getInstancesDistribution()
 
-      public override fun launchTemplate(): Any = unwrap(this).getLaunchTemplate()
+      override fun launchTemplate(): Any = unwrap(this).getLaunchTemplate()
     }
 
     public companion object {
@@ -2448,11 +2295,9 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2461,11 +2306,11 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -2478,9 +2323,9 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty,
     ) : AcceleratorTotalMemoryMiBRequestProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -2510,24 +2355,19 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun overrides(): Any? = unwrap(this).getOverrides()
 
     public interface Builder {
-      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-      }
+      public fun launchTemplateSpecification(launchTemplateSpecification: IResolvable)
 
       public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
-      }
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("782d4c0c4f990e75a08265698f12ae7348b54caa42bc1d02c7f7bc986706a071")
       public
-          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
 
-      public fun overrides(overrides: IResolvable) {
-      }
+      public fun overrides(overrides: IResolvable)
 
-      public fun overrides(overrides: List<Any>) {
-      }
+      public fun overrides(overrides: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2536,27 +2376,27 @@ public open class CfnAutoScalingGroup internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty.builder()
 
-      public override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
+      override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
         cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
         cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("782d4c0c4f990e75a08265698f12ae7348b54caa42bc1d02c7f7bc986706a071")
-      public override
+      override
           fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
           Unit =
           launchTemplateSpecification(LaunchTemplateSpecificationProperty(launchTemplateSpecification))
 
-      public override fun overrides(overrides: IResolvable) {
+      override fun overrides(overrides: IResolvable) {
         cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
       }
 
-      public override fun overrides(overrides: List<Any>) {
+      override fun overrides(overrides: List<Any>) {
         cdkBuilder.overrides(overrides)
       }
 
@@ -2569,10 +2409,10 @@ public open class CfnAutoScalingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty,
     ) : LaunchTemplateProperty {
-      public override fun launchTemplateSpecification(): Any =
+      override fun launchTemplateSpecification(): Any =
           unwrap(this).getLaunchTemplateSpecification()
 
-      public override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun overrides(): Any? = unwrap(this).getOverrides()
     }
 
     public companion object {

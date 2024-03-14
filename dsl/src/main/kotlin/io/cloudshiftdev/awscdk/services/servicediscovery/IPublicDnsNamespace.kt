@@ -10,24 +10,23 @@ public interface IPublicDnsNamespace : INamespace {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.IPublicDnsNamespace,
   ) : IPublicDnsNamespace {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun namespaceArn(): String = unwrap(this).getNamespaceArn()
+    override fun namespaceArn(): String = unwrap(this).getNamespaceArn()
 
-    public override fun namespaceId(): String = unwrap(this).getNamespaceId()
+    override fun namespaceId(): String = unwrap(this).getNamespaceId()
 
-    public override fun namespaceName(): String = unwrap(this).getNamespaceName()
+    override fun namespaceName(): String = unwrap(this).getNamespaceName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun type(): NamespaceType = unwrap(this).getType().let(NamespaceType::wrap)
+    override fun type(): NamespaceType = unwrap(this).getType().let(NamespaceType::wrap)
   }
 
   public companion object {

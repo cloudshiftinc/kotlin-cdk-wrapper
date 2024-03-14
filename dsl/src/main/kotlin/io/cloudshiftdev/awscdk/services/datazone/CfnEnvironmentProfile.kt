@@ -87,32 +87,23 @@ public open class CfnEnvironmentProfile internal constructor(
   }
 
   public interface Builder {
-    public fun awsAccountId(awsAccountId: String) {
-    }
+    public fun awsAccountId(awsAccountId: String)
 
-    public fun awsAccountRegion(awsAccountRegion: String) {
-    }
+    public fun awsAccountRegion(awsAccountRegion: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainIdentifier(domainIdentifier: String) {
-    }
+    public fun domainIdentifier(domainIdentifier: String)
 
-    public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
-    }
+    public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun projectIdentifier(projectIdentifier: String) {
-    }
+    public fun projectIdentifier(projectIdentifier: String)
 
-    public fun userParameters(userParameters: IResolvable) {
-    }
+    public fun userParameters(userParameters: IResolvable)
 
-    public fun userParameters(userParameters: List<Any>) {
-    }
+    public fun userParameters(userParameters: List<Any>)
   }
 
   private class BuilderImpl(
@@ -122,39 +113,39 @@ public open class CfnEnvironmentProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.Builder =
         software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.Builder.create(scope, id)
 
-    public override fun awsAccountId(awsAccountId: String) {
+    override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    public override fun awsAccountRegion(awsAccountRegion: String) {
+    override fun awsAccountRegion(awsAccountRegion: String) {
       cdkBuilder.awsAccountRegion(awsAccountRegion)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainIdentifier(domainIdentifier: String) {
+    override fun domainIdentifier(domainIdentifier: String) {
       cdkBuilder.domainIdentifier(domainIdentifier)
     }
 
-    public override fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
+    override fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
       cdkBuilder.environmentBlueprintIdentifier(environmentBlueprintIdentifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun projectIdentifier(projectIdentifier: String) {
+    override fun projectIdentifier(projectIdentifier: String) {
       cdkBuilder.projectIdentifier(projectIdentifier)
     }
 
-    public override fun userParameters(userParameters: IResolvable) {
+    override fun userParameters(userParameters: IResolvable) {
       cdkBuilder.userParameters(userParameters.let(IResolvable::unwrap))
     }
 
-    public override fun userParameters(userParameters: List<Any>) {
+    override fun userParameters(userParameters: List<Any>) {
       cdkBuilder.userParameters(userParameters)
     }
 
@@ -189,11 +180,9 @@ public open class CfnEnvironmentProfile internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -202,11 +191,11 @@ public open class CfnEnvironmentProfile internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -219,9 +208,9 @@ public open class CfnEnvironmentProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnEnvironmentProfile.EnvironmentParameterProperty,
     ) : EnvironmentParameterProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

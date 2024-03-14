@@ -11,29 +11,26 @@ public interface ScalingInterval {
   public fun upper(): Number? = unwrap(this).getUpper()
 
   public interface Builder {
-    public fun change(change: Number) {
-    }
+    public fun change(change: Number)
 
-    public fun lower(lower: Number) {
-    }
+    public fun lower(lower: Number)
 
-    public fun upper(upper: Number) {
-    }
+    public fun upper(upper: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.ScalingInterval.Builder =
         software.amazon.awscdk.services.autoscaling.ScalingInterval.builder()
 
-    public override fun change(change: Number) {
+    override fun change(change: Number) {
       cdkBuilder.change(change)
     }
 
-    public override fun lower(lower: Number) {
+    override fun lower(lower: Number) {
       cdkBuilder.lower(lower)
     }
 
-    public override fun upper(upper: Number) {
+    override fun upper(upper: Number) {
       cdkBuilder.upper(upper)
     }
 
@@ -44,11 +41,11 @@ public interface ScalingInterval {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.ScalingInterval,
   ) : ScalingInterval {
-    public override fun change(): Number = unwrap(this).getChange()
+    override fun change(): Number = unwrap(this).getChange()
 
-    public override fun lower(): Number? = unwrap(this).getLower()
+    override fun lower(): Number? = unwrap(this).getLower()
 
-    public override fun upper(): Number? = unwrap(this).getUpper()
+    override fun upper(): Number? = unwrap(this).getUpper()
   }
 
   public companion object {

@@ -25,68 +25,59 @@ public interface FlowLogDestinationConfig {
   public fun s3Bucket(): IBucket? = unwrap(this).getS3Bucket()?.let(IBucket::wrap)
 
   public interface Builder {
-    public fun deliveryStreamArn(deliveryStreamArn: String) {
-    }
+    public fun deliveryStreamArn(deliveryStreamArn: String)
 
-    public fun destinationOptions(destinationOptions: DestinationOptions) {
-    }
+    public fun destinationOptions(destinationOptions: DestinationOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02d09c7315047db96eb323140996abee62be981bb530359a8954e74ded966af4")
-    public fun destinationOptions(destinationOptions: DestinationOptions.Builder.() -> Unit) {
-    }
+    public fun destinationOptions(destinationOptions: DestinationOptions.Builder.() -> Unit)
 
-    public fun iamRole(iamRole: IRole) {
-    }
+    public fun iamRole(iamRole: IRole)
 
-    public fun keyPrefix(keyPrefix: String) {
-    }
+    public fun keyPrefix(keyPrefix: String)
 
-    public fun logDestinationType(logDestinationType: FlowLogDestinationType) {
-    }
+    public fun logDestinationType(logDestinationType: FlowLogDestinationType)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun s3Bucket(s3Bucket: IBucket) {
-    }
+    public fun s3Bucket(s3Bucket: IBucket)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.FlowLogDestinationConfig.Builder =
         software.amazon.awscdk.services.ec2.FlowLogDestinationConfig.builder()
 
-    public override fun deliveryStreamArn(deliveryStreamArn: String) {
+    override fun deliveryStreamArn(deliveryStreamArn: String) {
       cdkBuilder.deliveryStreamArn(deliveryStreamArn)
     }
 
-    public override fun destinationOptions(destinationOptions: DestinationOptions) {
+    override fun destinationOptions(destinationOptions: DestinationOptions) {
       cdkBuilder.destinationOptions(destinationOptions.let(DestinationOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02d09c7315047db96eb323140996abee62be981bb530359a8954e74ded966af4")
-    public override
-        fun destinationOptions(destinationOptions: DestinationOptions.Builder.() -> Unit): Unit =
-        destinationOptions(DestinationOptions(destinationOptions))
+    override fun destinationOptions(destinationOptions: DestinationOptions.Builder.() -> Unit): Unit
+        = destinationOptions(DestinationOptions(destinationOptions))
 
-    public override fun iamRole(iamRole: IRole) {
+    override fun iamRole(iamRole: IRole) {
       cdkBuilder.iamRole(iamRole.let(IRole::unwrap))
     }
 
-    public override fun keyPrefix(keyPrefix: String) {
+    override fun keyPrefix(keyPrefix: String) {
       cdkBuilder.keyPrefix(keyPrefix)
     }
 
-    public override fun logDestinationType(logDestinationType: FlowLogDestinationType) {
+    override fun logDestinationType(logDestinationType: FlowLogDestinationType) {
       cdkBuilder.logDestinationType(logDestinationType.let(FlowLogDestinationType::unwrap))
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun s3Bucket(s3Bucket: IBucket) {
+    override fun s3Bucket(s3Bucket: IBucket) {
       cdkBuilder.s3Bucket(s3Bucket.let(IBucket::unwrap))
     }
 
@@ -97,21 +88,21 @@ public interface FlowLogDestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestinationConfig,
   ) : FlowLogDestinationConfig {
-    public override fun deliveryStreamArn(): String? = unwrap(this).getDeliveryStreamArn()
+    override fun deliveryStreamArn(): String? = unwrap(this).getDeliveryStreamArn()
 
-    public override fun destinationOptions(): DestinationOptions? =
+    override fun destinationOptions(): DestinationOptions? =
         unwrap(this).getDestinationOptions()?.let(DestinationOptions::wrap)
 
-    public override fun iamRole(): IRole? = unwrap(this).getIamRole()?.let(IRole::wrap)
+    override fun iamRole(): IRole? = unwrap(this).getIamRole()?.let(IRole::wrap)
 
-    public override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+    override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
 
-    public override fun logDestinationType(): FlowLogDestinationType =
+    override fun logDestinationType(): FlowLogDestinationType =
         unwrap(this).getLogDestinationType().let(FlowLogDestinationType::wrap)
 
-    public override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
+    override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun s3Bucket(): IBucket? = unwrap(this).getS3Bucket()?.let(IBucket::wrap)
+    override fun s3Bucket(): IBucket? = unwrap(this).getS3Bucket()?.let(IBucket::wrap)
   }
 
   public companion object {

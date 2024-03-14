@@ -78,28 +78,21 @@ public open class LogGroup internal constructor(
   public override fun logGroupPhysicalName(): String = unwrap(this).logGroupPhysicalName()
 
   public interface Builder {
-    public fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy) {
-    }
+    public fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc6cad86baae33f8b5b0d27b09aaae065f78d70995269a7073f3d2b5413994cd")
-    public fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy.Builder.() -> Unit) {
-    }
+    public fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy.Builder.() -> Unit)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun logGroupClass(logGroupClass: LogGroupClass) {
-    }
+    public fun logGroupClass(logGroupClass: LogGroupClass)
 
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun retention(retention: RetentionDays) {
-    }
+    public fun retention(retention: RetentionDays)
   }
 
   private class BuilderImpl(
@@ -109,33 +102,33 @@ public open class LogGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.LogGroup.Builder =
         software.amazon.awscdk.services.logs.LogGroup.Builder.create(scope, id)
 
-    public override fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy) {
+    override fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy) {
       cdkBuilder.dataProtectionPolicy(dataProtectionPolicy.let(DataProtectionPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc6cad86baae33f8b5b0d27b09aaae065f78d70995269a7073f3d2b5413994cd")
-    public override
+    override
         fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy.Builder.() -> Unit):
         Unit = dataProtectionPolicy(DataProtectionPolicy(dataProtectionPolicy))
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun logGroupClass(logGroupClass: LogGroupClass) {
+    override fun logGroupClass(logGroupClass: LogGroupClass) {
       cdkBuilder.logGroupClass(logGroupClass.let(LogGroupClass::unwrap))
     }
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun retention(retention: RetentionDays) {
+    override fun retention(retention: RetentionDays) {
       cdkBuilder.retention(retention.let(RetentionDays::unwrap))
     }
 

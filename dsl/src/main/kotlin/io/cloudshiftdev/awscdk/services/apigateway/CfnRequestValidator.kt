@@ -53,23 +53,17 @@ public open class CfnRequestValidator internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
 
-    public fun validateRequestBody(validateRequestBody: Boolean) {
-    }
+    public fun validateRequestBody(validateRequestBody: Boolean)
 
-    public fun validateRequestBody(validateRequestBody: IResolvable) {
-    }
+    public fun validateRequestBody(validateRequestBody: IResolvable)
 
-    public fun validateRequestParameters(validateRequestParameters: Boolean) {
-    }
+    public fun validateRequestParameters(validateRequestParameters: Boolean)
 
-    public fun validateRequestParameters(validateRequestParameters: IResolvable) {
-    }
+    public fun validateRequestParameters(validateRequestParameters: IResolvable)
   }
 
   private class BuilderImpl(
@@ -79,27 +73,27 @@ public open class CfnRequestValidator internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnRequestValidator.Builder =
         software.amazon.awscdk.services.apigateway.CfnRequestValidator.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
-    public override fun validateRequestBody(validateRequestBody: Boolean) {
+    override fun validateRequestBody(validateRequestBody: Boolean) {
       cdkBuilder.validateRequestBody(validateRequestBody)
     }
 
-    public override fun validateRequestBody(validateRequestBody: IResolvable) {
+    override fun validateRequestBody(validateRequestBody: IResolvable) {
       cdkBuilder.validateRequestBody(validateRequestBody.let(IResolvable::unwrap))
     }
 
-    public override fun validateRequestParameters(validateRequestParameters: Boolean) {
+    override fun validateRequestParameters(validateRequestParameters: Boolean) {
       cdkBuilder.validateRequestParameters(validateRequestParameters)
     }
 
-    public override fun validateRequestParameters(validateRequestParameters: IResolvable) {
+    override fun validateRequestParameters(validateRequestParameters: IResolvable) {
       cdkBuilder.validateRequestParameters(validateRequestParameters.let(IResolvable::unwrap))
     }
 

@@ -15,43 +15,31 @@ public open class Resolver internal constructor(
   public open fun arn(): String = unwrap(this).getArn()
 
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun cachingConfig(cachingConfig: CachingConfig) {
-    }
+    public fun cachingConfig(cachingConfig: CachingConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51f4392e584a1d17065b5b3621ce2b3e99c2bea2ef09929722839c455de638c6")
-    public fun cachingConfig(cachingConfig: CachingConfig.Builder.() -> Unit) {
-    }
+    public fun cachingConfig(cachingConfig: CachingConfig.Builder.() -> Unit)
 
-    public fun code(code: Code) {
-    }
+    public fun code(code: Code)
 
-    public fun dataSource(dataSource: BaseDataSource) {
-    }
+    public fun dataSource(dataSource: BaseDataSource)
 
-    public fun fieldName(fieldName: String) {
-    }
+    public fun fieldName(fieldName: String)
 
-    public fun maxBatchSize(maxBatchSize: Number) {
-    }
+    public fun maxBatchSize(maxBatchSize: Number)
 
-    public fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>) {
-    }
+    public fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>)
 
-    public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-    }
+    public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate)
 
-    public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-    }
+    public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate)
 
-    public fun runtime(runtime: FunctionRuntime) {
-    }
+    public fun runtime(runtime: FunctionRuntime)
 
-    public fun typeName(typeName: String) {
-    }
+    public fun typeName(typeName: String)
   }
 
   private class BuilderImpl(
@@ -61,52 +49,52 @@ public open class Resolver internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.Resolver.Builder =
         software.amazon.awscdk.services.appsync.Resolver.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun cachingConfig(cachingConfig: CachingConfig) {
+    override fun cachingConfig(cachingConfig: CachingConfig) {
       cdkBuilder.cachingConfig(cachingConfig.let(CachingConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51f4392e584a1d17065b5b3621ce2b3e99c2bea2ef09929722839c455de638c6")
-    public override fun cachingConfig(cachingConfig: CachingConfig.Builder.() -> Unit): Unit =
+    override fun cachingConfig(cachingConfig: CachingConfig.Builder.() -> Unit): Unit =
         cachingConfig(CachingConfig(cachingConfig))
 
-    public override fun code(code: Code) {
+    override fun code(code: Code) {
       cdkBuilder.code(code.let(Code::unwrap))
     }
 
-    public override fun dataSource(dataSource: BaseDataSource) {
+    override fun dataSource(dataSource: BaseDataSource) {
       cdkBuilder.dataSource(dataSource.let(BaseDataSource::unwrap))
     }
 
-    public override fun fieldName(fieldName: String) {
+    override fun fieldName(fieldName: String) {
       cdkBuilder.fieldName(fieldName)
     }
 
-    public override fun maxBatchSize(maxBatchSize: Number) {
+    override fun maxBatchSize(maxBatchSize: Number) {
       cdkBuilder.maxBatchSize(maxBatchSize)
     }
 
-    public override fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>) {
+    override fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>) {
       cdkBuilder.pipelineConfig(pipelineConfig.map(IAppsyncFunction::unwrap))
     }
 
-    public override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
+    override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
       cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))
     }
 
-    public override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
+    override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
       cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate::unwrap))
     }
 
-    public override fun runtime(runtime: FunctionRuntime) {
+    override fun runtime(runtime: FunctionRuntime) {
       cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
     }
 
-    public override fun typeName(typeName: String) {
+    override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 

@@ -47,43 +47,31 @@ public open class LambdaDeploymentGroup internal constructor(
   public open fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun alarms(alarms: List<IAlarm>) {
-    }
+    public fun alarms(alarms: List<IAlarm>)
 
-    public fun alias(alias: Alias) {
-    }
+    public fun alias(alias: Alias)
 
-    public fun application(application: ILambdaApplication) {
-    }
+    public fun application(application: ILambdaApplication)
 
-    public fun autoRollback(autoRollback: AutoRollbackConfig) {
-    }
+    public fun autoRollback(autoRollback: AutoRollbackConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1a77b4d1556f08e2a1b224b8abae3c73114c1b48b5174e9c5417dda497e6ab0")
-    public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit) {
-    }
+    public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit)
 
-    public fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
-    }
+    public fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
 
-    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
-    }
+    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean)
 
-    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
-    }
+    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean)
 
-    public fun postHook(postHook: IFunction) {
-    }
+    public fun postHook(postHook: IFunction)
 
-    public fun preHook(preHook: IFunction) {
-    }
+    public fun preHook(preHook: IFunction)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -93,52 +81,52 @@ public open class LambdaDeploymentGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup.Builder
         = software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup.Builder.create(scope, id)
 
-    public override fun alarms(alarms: List<IAlarm>) {
+    override fun alarms(alarms: List<IAlarm>) {
       cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
     }
 
-    public override fun alias(alias: Alias) {
+    override fun alias(alias: Alias) {
       cdkBuilder.alias(alias.let(Alias::unwrap))
     }
 
-    public override fun application(application: ILambdaApplication) {
+    override fun application(application: ILambdaApplication) {
       cdkBuilder.application(application.let(ILambdaApplication::unwrap))
     }
 
-    public override fun autoRollback(autoRollback: AutoRollbackConfig) {
+    override fun autoRollback(autoRollback: AutoRollbackConfig) {
       cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1a77b4d1556f08e2a1b224b8abae3c73114c1b48b5174e9c5417dda497e6ab0")
-    public override fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit): Unit =
+    override fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit): Unit =
         autoRollback(AutoRollbackConfig(autoRollback))
 
-    public override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
+    override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig::unwrap))
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
-    public override fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
+    override fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
       cdkBuilder.ignoreAlarmConfiguration(ignoreAlarmConfiguration)
     }
 
-    public override fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
+    override fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
       cdkBuilder.ignorePollAlarmsFailure(ignorePollAlarmsFailure)
     }
 
-    public override fun postHook(postHook: IFunction) {
+    override fun postHook(postHook: IFunction) {
       cdkBuilder.postHook(postHook.let(IFunction::unwrap))
     }
 
-    public override fun preHook(preHook: IFunction) {
+    override fun preHook(preHook: IFunction) {
       cdkBuilder.preHook(preHook.let(IFunction::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 

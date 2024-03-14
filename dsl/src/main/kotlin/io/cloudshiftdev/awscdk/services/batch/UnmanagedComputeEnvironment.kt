@@ -23,17 +23,13 @@ public open class UnmanagedComputeEnvironment internal constructor(
   public override fun unmanagedvCpUs(): Number? = unwrap(this).getUnmanagedvCPUs()
 
   public interface Builder {
-    public fun computeEnvironmentName(computeEnvironmentName: String) {
-    }
+    public fun computeEnvironmentName(computeEnvironmentName: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
 
-    public fun unmanagedvCpus(unmanagedvCpus: Number) {
-    }
+    public fun unmanagedvCpus(unmanagedvCpus: Number)
   }
 
   private class BuilderImpl(
@@ -44,19 +40,19 @@ public open class UnmanagedComputeEnvironment internal constructor(
         software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment.Builder =
         software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment.Builder.create(scope, id)
 
-    public override fun computeEnvironmentName(computeEnvironmentName: String) {
+    override fun computeEnvironmentName(computeEnvironmentName: String) {
       cdkBuilder.computeEnvironmentName(computeEnvironmentName)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 
-    public override fun unmanagedvCpus(unmanagedvCpus: Number) {
+    override fun unmanagedvCpus(unmanagedvCpus: Number) {
       cdkBuilder.unmanagedvCpus(unmanagedvCpus)
     }
 

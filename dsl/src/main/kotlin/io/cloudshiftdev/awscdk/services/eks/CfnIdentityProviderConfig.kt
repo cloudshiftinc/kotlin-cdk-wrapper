@@ -70,28 +70,21 @@ public open class CfnIdentityProviderConfig internal constructor(
   }
 
   public interface Builder {
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun identityProviderConfigName(identityProviderConfigName: String) {
-    }
+    public fun identityProviderConfigName(identityProviderConfigName: String)
 
-    public fun oidc(oidc: IResolvable) {
-    }
+    public fun oidc(oidc: IResolvable)
 
-    public fun oidc(oidc: OidcIdentityProviderConfigProperty) {
-    }
+    public fun oidc(oidc: OidcIdentityProviderConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("636c29617688f50a4eb30db8537c7b914a05ffc9df96e58d326da443d44712ce")
-    public fun oidc(oidc: OidcIdentityProviderConfigProperty.Builder.() -> Unit) {
-    }
+    public fun oidc(oidc: OidcIdentityProviderConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -101,32 +94,32 @@ public open class CfnIdentityProviderConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.Builder =
         software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.Builder.create(scope, id)
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun identityProviderConfigName(identityProviderConfigName: String) {
+    override fun identityProviderConfigName(identityProviderConfigName: String) {
       cdkBuilder.identityProviderConfigName(identityProviderConfigName)
     }
 
-    public override fun oidc(oidc: IResolvable) {
+    override fun oidc(oidc: IResolvable) {
       cdkBuilder.oidc(oidc.let(IResolvable::unwrap))
     }
 
-    public override fun oidc(oidc: OidcIdentityProviderConfigProperty) {
+    override fun oidc(oidc: OidcIdentityProviderConfigProperty) {
       cdkBuilder.oidc(oidc.let(OidcIdentityProviderConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("636c29617688f50a4eb30db8537c7b914a05ffc9df96e58d326da443d44712ce")
-    public override fun oidc(oidc: OidcIdentityProviderConfigProperty.Builder.() -> Unit): Unit =
+    override fun oidc(oidc: OidcIdentityProviderConfigProperty.Builder.() -> Unit): Unit =
         oidc(OidcIdentityProviderConfigProperty(oidc))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -171,29 +164,21 @@ public open class CfnIdentityProviderConfig internal constructor(
     public fun usernamePrefix(): String? = unwrap(this).getUsernamePrefix()
 
     public interface Builder {
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun groupsClaim(groupsClaim: String) {
-      }
+      public fun groupsClaim(groupsClaim: String)
 
-      public fun groupsPrefix(groupsPrefix: String) {
-      }
+      public fun groupsPrefix(groupsPrefix: String)
 
-      public fun issuerUrl(issuerUrl: String) {
-      }
+      public fun issuerUrl(issuerUrl: String)
 
-      public fun requiredClaims(requiredClaims: IResolvable) {
-      }
+      public fun requiredClaims(requiredClaims: IResolvable)
 
-      public fun requiredClaims(requiredClaims: List<Any>) {
-      }
+      public fun requiredClaims(requiredClaims: List<Any>)
 
-      public fun usernameClaim(usernameClaim: String) {
-      }
+      public fun usernameClaim(usernameClaim: String)
 
-      public fun usernamePrefix(usernamePrefix: String) {
-      }
+      public fun usernamePrefix(usernamePrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -202,35 +187,35 @@ public open class CfnIdentityProviderConfig internal constructor(
           =
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty.builder()
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun groupsClaim(groupsClaim: String) {
+      override fun groupsClaim(groupsClaim: String) {
         cdkBuilder.groupsClaim(groupsClaim)
       }
 
-      public override fun groupsPrefix(groupsPrefix: String) {
+      override fun groupsPrefix(groupsPrefix: String) {
         cdkBuilder.groupsPrefix(groupsPrefix)
       }
 
-      public override fun issuerUrl(issuerUrl: String) {
+      override fun issuerUrl(issuerUrl: String) {
         cdkBuilder.issuerUrl(issuerUrl)
       }
 
-      public override fun requiredClaims(requiredClaims: IResolvable) {
+      override fun requiredClaims(requiredClaims: IResolvable) {
         cdkBuilder.requiredClaims(requiredClaims.let(IResolvable::unwrap))
       }
 
-      public override fun requiredClaims(requiredClaims: List<Any>) {
+      override fun requiredClaims(requiredClaims: List<Any>) {
         cdkBuilder.requiredClaims(requiredClaims)
       }
 
-      public override fun usernameClaim(usernameClaim: String) {
+      override fun usernameClaim(usernameClaim: String) {
         cdkBuilder.usernameClaim(usernameClaim)
       }
 
-      public override fun usernamePrefix(usernamePrefix: String) {
+      override fun usernamePrefix(usernamePrefix: String) {
         cdkBuilder.usernamePrefix(usernamePrefix)
       }
 
@@ -243,19 +228,19 @@ public open class CfnIdentityProviderConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty,
     ) : OidcIdentityProviderConfigProperty {
-      public override fun clientId(): String = unwrap(this).getClientId()
+      override fun clientId(): String = unwrap(this).getClientId()
 
-      public override fun groupsClaim(): String? = unwrap(this).getGroupsClaim()
+      override fun groupsClaim(): String? = unwrap(this).getGroupsClaim()
 
-      public override fun groupsPrefix(): String? = unwrap(this).getGroupsPrefix()
+      override fun groupsPrefix(): String? = unwrap(this).getGroupsPrefix()
 
-      public override fun issuerUrl(): String = unwrap(this).getIssuerUrl()
+      override fun issuerUrl(): String = unwrap(this).getIssuerUrl()
 
-      public override fun requiredClaims(): Any? = unwrap(this).getRequiredClaims()
+      override fun requiredClaims(): Any? = unwrap(this).getRequiredClaims()
 
-      public override fun usernameClaim(): String? = unwrap(this).getUsernameClaim()
+      override fun usernameClaim(): String? = unwrap(this).getUsernameClaim()
 
-      public override fun usernamePrefix(): String? = unwrap(this).getUsernamePrefix()
+      override fun usernamePrefix(): String? = unwrap(this).getUsernamePrefix()
     }
 
     public companion object {
@@ -285,11 +270,9 @@ public open class CfnIdentityProviderConfig internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -298,11 +281,11 @@ public open class CfnIdentityProviderConfig internal constructor(
           =
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -315,9 +298,9 @@ public open class CfnIdentityProviderConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty,
     ) : RequiredClaimProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

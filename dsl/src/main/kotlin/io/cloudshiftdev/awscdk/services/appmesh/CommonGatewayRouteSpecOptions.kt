@@ -7,8 +7,7 @@ public interface CommonGatewayRouteSpecOptions {
   public fun priority(): Number? = unwrap(this).getPriority()
 
   public interface Builder {
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface CommonGatewayRouteSpecOptions {
         software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions.Builder =
         software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions.builder()
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
@@ -27,7 +26,7 @@ public interface CommonGatewayRouteSpecOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions,
   ) : CommonGatewayRouteSpecOptions {
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
   }
 
   public companion object {

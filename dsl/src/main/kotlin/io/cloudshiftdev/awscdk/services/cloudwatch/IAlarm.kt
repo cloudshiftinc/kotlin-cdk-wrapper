@@ -15,22 +15,21 @@ public interface IAlarm : IAlarmRule, IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarm,
   ) : IAlarm {
-    public override fun alarmArn(): String = unwrap(this).getAlarmArn()
+    override fun alarmArn(): String = unwrap(this).getAlarmArn()
 
-    public override fun alarmName(): String = unwrap(this).getAlarmName()
+    override fun alarmName(): String = unwrap(this).getAlarmName()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
+    override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

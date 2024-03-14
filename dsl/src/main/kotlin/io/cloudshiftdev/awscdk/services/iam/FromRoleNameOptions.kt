@@ -6,29 +6,26 @@ import kotlin.Unit
 
 public interface FromRoleNameOptions : FromRoleArnOptions {
   public interface Builder {
-    public fun addGrantsToResources(addGrantsToResources: Boolean) {
-    }
+    public fun addGrantsToResources(addGrantsToResources: Boolean)
 
-    public fun defaultPolicyName(defaultPolicyName: String) {
-    }
+    public fun defaultPolicyName(defaultPolicyName: String)
 
-    public fun mutable(mutable: Boolean) {
-    }
+    public fun mutable(mutable: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.FromRoleNameOptions.Builder =
         software.amazon.awscdk.services.iam.FromRoleNameOptions.builder()
 
-    public override fun addGrantsToResources(addGrantsToResources: Boolean) {
+    override fun addGrantsToResources(addGrantsToResources: Boolean) {
       cdkBuilder.addGrantsToResources(addGrantsToResources)
     }
 
-    public override fun defaultPolicyName(defaultPolicyName: String) {
+    override fun defaultPolicyName(defaultPolicyName: String) {
       cdkBuilder.defaultPolicyName(defaultPolicyName)
     }
 
-    public override fun mutable(mutable: Boolean) {
+    override fun mutable(mutable: Boolean) {
       cdkBuilder.mutable(mutable)
     }
 
@@ -38,11 +35,11 @@ public interface FromRoleNameOptions : FromRoleArnOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.FromRoleNameOptions,
   ) : FromRoleNameOptions {
-    public override fun addGrantsToResources(): Boolean? = unwrap(this).getAddGrantsToResources()
+    override fun addGrantsToResources(): Boolean? = unwrap(this).getAddGrantsToResources()
 
-    public override fun defaultPolicyName(): String? = unwrap(this).getDefaultPolicyName()
+    override fun defaultPolicyName(): String? = unwrap(this).getDefaultPolicyName()
 
-    public override fun mutable(): Boolean? = unwrap(this).getMutable()
+    override fun mutable(): Boolean? = unwrap(this).getMutable()
   }
 
   public companion object {

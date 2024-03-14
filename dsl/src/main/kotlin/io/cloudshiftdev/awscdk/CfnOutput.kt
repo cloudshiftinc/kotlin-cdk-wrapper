@@ -36,20 +36,15 @@ public open class CfnOutput internal constructor(
   }
 
   public interface Builder {
-    public fun condition(condition: CfnCondition) {
-    }
+    public fun condition(condition: CfnCondition)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun exportName(exportName: String) {
-    }
+    public fun exportName(exportName: String)
 
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl(
@@ -59,23 +54,23 @@ public open class CfnOutput internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnOutput.Builder =
         software.amazon.awscdk.CfnOutput.Builder.create(scope, id)
 
-    public override fun condition(condition: CfnCondition) {
+    override fun condition(condition: CfnCondition) {
       cdkBuilder.condition(condition.let(CfnCondition::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun exportName(exportName: String) {
+    override fun exportName(exportName: String) {
       cdkBuilder.exportName(exportName)
     }
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 

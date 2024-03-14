@@ -83,35 +83,26 @@ public open class CfnStream internal constructor(
   }
 
   public interface Builder {
-    public fun exclusiveEndTime(exclusiveEndTime: String) {
-    }
+    public fun exclusiveEndTime(exclusiveEndTime: String)
 
-    public fun inclusiveStartTime(inclusiveStartTime: String) {
-    }
+    public fun inclusiveStartTime(inclusiveStartTime: String)
 
-    public fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
-    }
+    public fun kinesisConfiguration(kinesisConfiguration: IResolvable)
 
-    public fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty) {
-    }
+    public fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6eb11e9ed469570ba3bc97103edbb5bf655976e20a4082a43e3f442faa9ecb7")
     public
-        fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty.Builder.() -> Unit)
 
-    public fun ledgerName(ledgerName: String) {
-    }
+    public fun ledgerName(ledgerName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun streamName(streamName: String) {
-    }
+    public fun streamName(streamName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -121,41 +112,41 @@ public open class CfnStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.qldb.CfnStream.Builder =
         software.amazon.awscdk.services.qldb.CfnStream.Builder.create(scope, id)
 
-    public override fun exclusiveEndTime(exclusiveEndTime: String) {
+    override fun exclusiveEndTime(exclusiveEndTime: String) {
       cdkBuilder.exclusiveEndTime(exclusiveEndTime)
     }
 
-    public override fun inclusiveStartTime(inclusiveStartTime: String) {
+    override fun inclusiveStartTime(inclusiveStartTime: String) {
       cdkBuilder.inclusiveStartTime(inclusiveStartTime)
     }
 
-    public override fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
+    override fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
       cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty) {
+    override fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty) {
       cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(KinesisConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6eb11e9ed469570ba3bc97103edbb5bf655976e20a4082a43e3f442faa9ecb7")
-    public override
+    override
         fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty.Builder.() -> Unit):
         Unit = kinesisConfiguration(KinesisConfigurationProperty(kinesisConfiguration))
 
-    public override fun ledgerName(ledgerName: String) {
+    override fun ledgerName(ledgerName: String) {
       cdkBuilder.ledgerName(ledgerName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun streamName(streamName: String) {
+    override fun streamName(streamName: String) {
       cdkBuilder.streamName(streamName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -189,14 +180,11 @@ public open class CfnStream internal constructor(
     public fun streamArn(): String? = unwrap(this).getStreamArn()
 
     public interface Builder {
-      public fun aggregationEnabled(aggregationEnabled: Boolean) {
-      }
+      public fun aggregationEnabled(aggregationEnabled: Boolean)
 
-      public fun aggregationEnabled(aggregationEnabled: IResolvable) {
-      }
+      public fun aggregationEnabled(aggregationEnabled: IResolvable)
 
-      public fun streamArn(streamArn: String) {
-      }
+      public fun streamArn(streamArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -204,15 +192,15 @@ public open class CfnStream internal constructor(
           software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty.Builder =
           software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty.builder()
 
-      public override fun aggregationEnabled(aggregationEnabled: Boolean) {
+      override fun aggregationEnabled(aggregationEnabled: Boolean) {
         cdkBuilder.aggregationEnabled(aggregationEnabled)
       }
 
-      public override fun aggregationEnabled(aggregationEnabled: IResolvable) {
+      override fun aggregationEnabled(aggregationEnabled: IResolvable) {
         cdkBuilder.aggregationEnabled(aggregationEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun streamArn(streamArn: String) {
+      override fun streamArn(streamArn: String) {
         cdkBuilder.streamArn(streamArn)
       }
 
@@ -225,9 +213,9 @@ public open class CfnStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.qldb.CfnStream.KinesisConfigurationProperty,
     ) : KinesisConfigurationProperty {
-      public override fun aggregationEnabled(): Any? = unwrap(this).getAggregationEnabled()
+      override fun aggregationEnabled(): Any? = unwrap(this).getAggregationEnabled()
 
-      public override fun streamArn(): String? = unwrap(this).getStreamArn()
+      override fun streamArn(): String? = unwrap(this).getStreamArn()
     }
 
     public companion object {

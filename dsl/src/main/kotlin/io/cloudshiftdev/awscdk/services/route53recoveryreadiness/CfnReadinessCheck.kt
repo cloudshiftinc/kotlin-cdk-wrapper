@@ -43,14 +43,11 @@ public open class CfnReadinessCheck internal constructor(
   }
 
   public interface Builder {
-    public fun readinessCheckName(readinessCheckName: String) {
-    }
+    public fun readinessCheckName(readinessCheckName: String)
 
-    public fun resourceSetName(resourceSetName: String) {
-    }
+    public fun resourceSetName(resourceSetName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnReadinessCheck internal constructor(
         software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheck.Builder.create(scope,
         id)
 
-    public override fun readinessCheckName(readinessCheckName: String) {
+    override fun readinessCheckName(readinessCheckName: String) {
       cdkBuilder.readinessCheckName(readinessCheckName)
     }
 
-    public override fun resourceSetName(resourceSetName: String) {
+    override fun resourceSetName(resourceSetName: String) {
       cdkBuilder.resourceSetName(resourceSetName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

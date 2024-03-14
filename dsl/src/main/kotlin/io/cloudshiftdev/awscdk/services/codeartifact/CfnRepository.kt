@@ -81,29 +81,21 @@ public open class CfnRepository internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainOwner(domainOwner: String) {
-    }
+    public fun domainOwner(domainOwner: String)
 
-    public fun externalConnections(externalConnections: List<String>) {
-    }
+    public fun externalConnections(externalConnections: List<String>)
 
-    public fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
-    }
+    public fun permissionsPolicyDocument(permissionsPolicyDocument: Any)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun upstreams(upstreams: List<String>) {
-    }
+    public fun upstreams(upstreams: List<String>)
   }
 
   private class BuilderImpl(
@@ -113,35 +105,35 @@ public open class CfnRepository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codeartifact.CfnRepository.Builder =
         software.amazon.awscdk.services.codeartifact.CfnRepository.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainOwner(domainOwner: String) {
+    override fun domainOwner(domainOwner: String) {
       cdkBuilder.domainOwner(domainOwner)
     }
 
-    public override fun externalConnections(externalConnections: List<String>) {
+    override fun externalConnections(externalConnections: List<String>) {
       cdkBuilder.externalConnections(externalConnections)
     }
 
-    public override fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
+    override fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
       cdkBuilder.permissionsPolicyDocument(permissionsPolicyDocument)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun upstreams(upstreams: List<String>) {
+    override fun upstreams(upstreams: List<String>) {
       cdkBuilder.upstreams(upstreams)
     }
 

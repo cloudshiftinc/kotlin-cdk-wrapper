@@ -21,57 +21,50 @@ public interface VpcContextQuery {
   public fun subnetGroupNameTag(): String? = unwrap(this).getSubnetGroupNameTag()
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun filter(filter: Map<String, String>) {
-    }
+    public fun filter(filter: Map<String, String>)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun returnAsymmetricSubnets(returnAsymmetricSubnets: Boolean) {
-    }
+    public fun returnAsymmetricSubnets(returnAsymmetricSubnets: Boolean)
 
-    public fun returnVpnGateways(returnVpnGateways: Boolean) {
-    }
+    public fun returnVpnGateways(returnVpnGateways: Boolean)
 
-    public fun subnetGroupNameTag(subnetGroupNameTag: String) {
-    }
+    public fun subnetGroupNameTag(subnetGroupNameTag: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.VpcContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.VpcContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun filter(filter: Map<String, String>) {
+    override fun filter(filter: Map<String, String>) {
       cdkBuilder.filter(filter)
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun returnAsymmetricSubnets(returnAsymmetricSubnets: Boolean) {
+    override fun returnAsymmetricSubnets(returnAsymmetricSubnets: Boolean) {
       cdkBuilder.returnAsymmetricSubnets(returnAsymmetricSubnets)
     }
 
-    public override fun returnVpnGateways(returnVpnGateways: Boolean) {
+    override fun returnVpnGateways(returnVpnGateways: Boolean) {
       cdkBuilder.returnVpnGateways(returnVpnGateways)
     }
 
-    public override fun subnetGroupNameTag(subnetGroupNameTag: String) {
+    override fun subnetGroupNameTag(subnetGroupNameTag: String) {
       cdkBuilder.subnetGroupNameTag(subnetGroupNameTag)
     }
 
@@ -82,20 +75,19 @@ public interface VpcContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.VpcContextQuery,
   ) : VpcContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun filter(): Map<String, String> = unwrap(this).getFilter() ?: emptyMap()
+    override fun filter(): Map<String, String> = unwrap(this).getFilter() ?: emptyMap()
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
 
-    public override fun returnAsymmetricSubnets(): Boolean? =
-        unwrap(this).getReturnAsymmetricSubnets()
+    override fun returnAsymmetricSubnets(): Boolean? = unwrap(this).getReturnAsymmetricSubnets()
 
-    public override fun returnVpnGateways(): Boolean? = unwrap(this).getReturnVpnGateways()
+    override fun returnVpnGateways(): Boolean? = unwrap(this).getReturnVpnGateways()
 
-    public override fun subnetGroupNameTag(): String? = unwrap(this).getSubnetGroupNameTag()
+    override fun subnetGroupNameTag(): String? = unwrap(this).getSubnetGroupNameTag()
   }
 
   public companion object {

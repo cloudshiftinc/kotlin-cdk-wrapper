@@ -10,22 +10,20 @@ public interface BackupProps {
   public fun retention(): Duration
 
   public interface Builder {
-    public fun preferredWindow(preferredWindow: String) {
-    }
+    public fun preferredWindow(preferredWindow: String)
 
-    public fun retention(retention: Duration) {
-    }
+    public fun retention(retention: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.BackupProps.Builder =
         software.amazon.awscdk.services.rds.BackupProps.builder()
 
-    public override fun preferredWindow(preferredWindow: String) {
+    override fun preferredWindow(preferredWindow: String) {
       cdkBuilder.preferredWindow(preferredWindow)
     }
 
-    public override fun retention(retention: Duration) {
+    override fun retention(retention: Duration) {
       cdkBuilder.retention(retention.let(Duration::unwrap))
     }
 
@@ -35,9 +33,9 @@ public interface BackupProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.BackupProps,
   ) : BackupProps {
-    public override fun preferredWindow(): String? = unwrap(this).getPreferredWindow()
+    override fun preferredWindow(): String? = unwrap(this).getPreferredWindow()
 
-    public override fun retention(): Duration = unwrap(this).getRetention().let(Duration::wrap)
+    override fun retention(): Duration = unwrap(this).getRetention().let(Duration::wrap)
   }
 
   public companion object {

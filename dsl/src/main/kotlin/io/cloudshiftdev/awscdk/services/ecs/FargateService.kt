@@ -17,103 +17,75 @@ public open class FargateService internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.FargateService,
 ) : BaseService(cdkObject), IFargateService {
   public interface Builder {
-    public fun assignPublicIp(assignPublicIp: Boolean) {
-    }
+    public fun assignPublicIp(assignPublicIp: Boolean)
 
     public
-        fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-    }
+        fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-    }
+    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b4133a5d5444a3ad32024ac1bdb3aad4ca6d2044f408b729296940b41ba29997")
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit) {
-    }
+    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit)
 
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-    }
+    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d2703f8bbc1f869e307080200a2798a7db4ac891d546f15bc6804480b796296")
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit) {
-    }
+    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
-    }
+    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fba7bfc6bbaec8f7ce17a64df0b3e3f774311f4bb6b68689cbc622a5cb8dbe7f")
-    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit) {
-    }
+    public fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit)
 
-    public fun deploymentController(deploymentController: DeploymentController) {
-    }
+    public fun deploymentController(deploymentController: DeploymentController)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4191ad45937172fc43b2c8cb1cd42ab6fb9217c27289514c478654666afbc6e0")
-    public fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit) {
-    }
+    public fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit)
 
-    public fun desiredCount(desiredCount: Number) {
-    }
+    public fun desiredCount(desiredCount: Number)
 
-    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
-    }
+    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
-    public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
-    }
+    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
-    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-    }
+    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration)
 
-    public fun maxHealthyPercent(maxHealthyPercent: Number) {
-    }
+    public fun maxHealthyPercent(maxHealthyPercent: Number)
 
-    public fun minHealthyPercent(minHealthyPercent: Number) {
-    }
+    public fun minHealthyPercent(minHealthyPercent: Number)
 
-    public fun platformVersion(platformVersion: FargatePlatformVersion) {
-    }
+    public fun platformVersion(platformVersion: FargatePlatformVersion)
 
-    public fun propagateTags(propagateTags: PropagatedTagSource) {
-    }
+    public fun propagateTags(propagateTags: PropagatedTagSource)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
-    }
+    public fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c00341cc9ac612e3652f4a111b430e8c917ac8622d39cc00d0f091ebbb440488")
     public
-        fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps.Builder.() -> Unit) {
-    }
+        fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps.Builder.() -> Unit)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
 
-    public fun taskDefinition(taskDefinition: TaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: TaskDefinition)
 
-    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
-    }
+    public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision)
 
-    public fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
-    }
+    public fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("424a118b89462e45ea412cf00a89eaddf35e0cb909046a921e7a57e64bc4420a")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -123,127 +95,125 @@ public open class FargateService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.FargateService.Builder =
         software.amazon.awscdk.services.ecs.FargateService.Builder.create(scope, id)
 
-    public override fun assignPublicIp(assignPublicIp: Boolean) {
+    override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
     }
 
-    public override
+    override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
 
-    public override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
+    override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b4133a5d5444a3ad32024ac1bdb3aad4ca6d2044f408b729296940b41ba29997")
-    public override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit):
-        Unit = circuitBreaker(DeploymentCircuitBreaker(circuitBreaker))
+    override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit): Unit =
+        circuitBreaker(DeploymentCircuitBreaker(circuitBreaker))
 
-    public override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
+    override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
       cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d2703f8bbc1f869e307080200a2798a7db4ac891d546f15bc6804480b796296")
-    public override fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit): Unit =
+    override fun cloudMapOptions(cloudMapOptions: CloudMapOptions.Builder.() -> Unit): Unit =
         cloudMapOptions(CloudMapOptions(cloudMapOptions))
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
+    override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
       cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fba7bfc6bbaec8f7ce17a64df0b3e3f774311f4bb6b68689cbc622a5cb8dbe7f")
-    public override
-        fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit): Unit =
-        deploymentAlarms(DeploymentAlarmConfig(deploymentAlarms))
+    override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig.Builder.() -> Unit): Unit
+        = deploymentAlarms(DeploymentAlarmConfig(deploymentAlarms))
 
-    public override fun deploymentController(deploymentController: DeploymentController) {
+    override fun deploymentController(deploymentController: DeploymentController) {
       cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4191ad45937172fc43b2c8cb1cd42ab6fb9217c27289514c478654666afbc6e0")
-    public override
+    override
         fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit):
         Unit = deploymentController(DeploymentController(deploymentController))
 
-    public override fun desiredCount(desiredCount: Number) {
+    override fun desiredCount(desiredCount: Number) {
       cdkBuilder.desiredCount(desiredCount)
     }
 
-    public override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
+    override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
       cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
     }
 
-    public override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
       cdkBuilder.enableExecuteCommand(enableExecuteCommand)
     }
 
-    public override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
+    override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
       cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
     }
 
-    public override fun maxHealthyPercent(maxHealthyPercent: Number) {
+    override fun maxHealthyPercent(maxHealthyPercent: Number) {
       cdkBuilder.maxHealthyPercent(maxHealthyPercent)
     }
 
-    public override fun minHealthyPercent(minHealthyPercent: Number) {
+    override fun minHealthyPercent(minHealthyPercent: Number) {
       cdkBuilder.minHealthyPercent(minHealthyPercent)
     }
 
-    public override fun platformVersion(platformVersion: FargatePlatformVersion) {
+    override fun platformVersion(platformVersion: FargatePlatformVersion) {
       cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
     }
 
-    public override fun propagateTags(propagateTags: PropagatedTagSource) {
+    override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override
-        fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
+    override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
       cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c00341cc9ac612e3652f4a111b430e8c917ac8622d39cc00d0f091ebbb440488")
-    public override
+    override
         fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps.Builder.() -> Unit):
         Unit = serviceConnectConfiguration(ServiceConnectProps(serviceConnectConfiguration))
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
-    public override fun taskDefinition(taskDefinition: TaskDefinition) {
+    override fun taskDefinition(taskDefinition: TaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
     }
 
-    public override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
+    override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
       cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision::unwrap))
     }
 
-    public override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
+    override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("424a118b89462e45ea412cf00a89eaddf35e0cb909046a921e7a57e64bc4420a")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.ecs.FargateService = cdkBuilder.build()

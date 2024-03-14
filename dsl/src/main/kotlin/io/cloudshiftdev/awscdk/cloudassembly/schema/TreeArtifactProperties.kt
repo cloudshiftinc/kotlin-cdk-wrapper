@@ -7,8 +7,7 @@ public interface TreeArtifactProperties {
   public fun `file`(): String
 
   public interface Builder {
-    public fun `file`(`file`: String) {
-    }
+    public fun `file`(`file`: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface TreeArtifactProperties {
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.Builder =
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.builder()
 
-    public override fun `file`(`file`: String) {
+    override fun `file`(`file`: String) {
       cdkBuilder.`file`(`file`)
     }
 
@@ -27,7 +26,7 @@ public interface TreeArtifactProperties {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
   ) : TreeArtifactProperties {
-    public override fun `file`(): String = unwrap(this).getFile()
+    override fun `file`(): String = unwrap(this).getFile()
   }
 
   public companion object {

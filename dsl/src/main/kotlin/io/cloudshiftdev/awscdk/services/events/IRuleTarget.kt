@@ -10,10 +10,10 @@ public interface IRuleTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.IRuleTarget,
   ) : IRuleTarget {
-    public override fun bind(arg0: IRule): RuleTargetConfig =
+    override fun bind(arg0: IRule): RuleTargetConfig =
         unwrap(this).bind(arg0.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
 
-    public override fun bind(arg0: IRule, arg1: String): RuleTargetConfig =
+    override fun bind(arg0: IRule, arg1: String): RuleTargetConfig =
         unwrap(this).bind(arg0.let(IRule::unwrap), arg1).let(RuleTargetConfig::wrap)
   }
 

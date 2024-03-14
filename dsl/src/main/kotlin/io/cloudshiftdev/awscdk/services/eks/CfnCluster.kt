@@ -159,80 +159,58 @@ public open class CfnCluster internal constructor(
   }
 
   public interface Builder {
-    public fun accessConfig(accessConfig: IResolvable) {
-    }
+    public fun accessConfig(accessConfig: IResolvable)
 
-    public fun accessConfig(accessConfig: AccessConfigProperty) {
-    }
+    public fun accessConfig(accessConfig: AccessConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec4c1a7d3a6de171eddcfa8c911dcb17d9b0926ae11adb71b6e5b373e025c017")
-    public fun accessConfig(accessConfig: AccessConfigProperty.Builder.() -> Unit) {
-    }
+    public fun accessConfig(accessConfig: AccessConfigProperty.Builder.() -> Unit)
 
-    public fun encryptionConfig(encryptionConfig: IResolvable) {
-    }
+    public fun encryptionConfig(encryptionConfig: IResolvable)
 
-    public fun encryptionConfig(encryptionConfig: List<Any>) {
-    }
+    public fun encryptionConfig(encryptionConfig: List<Any>)
 
-    public fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
-    }
+    public fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable)
 
-    public fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty) {
-    }
+    public fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("790fe92404891b374995e9dfa06db968cf66fb7fea54f12e1ddfe19395e58665")
     public
-        fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty.Builder.() -> Unit) {
-    }
+        fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty.Builder.() -> Unit)
 
-    public fun logging(logging: IResolvable) {
-    }
+    public fun logging(logging: IResolvable)
 
-    public fun logging(logging: LoggingProperty) {
-    }
+    public fun logging(logging: LoggingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6153bf06bf61e6a7a510b8026e66d18479c8742b8aa3412d834b150dcad1024")
-    public fun logging(logging: LoggingProperty.Builder.() -> Unit) {
-    }
+    public fun logging(logging: LoggingProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outpostConfig(outpostConfig: IResolvable) {
-    }
+    public fun outpostConfig(outpostConfig: IResolvable)
 
-    public fun outpostConfig(outpostConfig: OutpostConfigProperty) {
-    }
+    public fun outpostConfig(outpostConfig: OutpostConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd33fe939cf4bdbab02c5d1407a0364d4da3d4d15abcbd69ab72657b980bf691")
-    public fun outpostConfig(outpostConfig: OutpostConfigProperty.Builder.() -> Unit) {
-    }
+    public fun outpostConfig(outpostConfig: OutpostConfigProperty.Builder.() -> Unit)
 
-    public fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
-    }
+    public fun resourcesVpcConfig(resourcesVpcConfig: IResolvable)
 
-    public fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty) {
-    }
+    public fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5fc182e569f83b4f2259bcf755a598aac7a873678fefda3a91de8d9ff379b29c")
-    public
-        fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -242,95 +220,94 @@ public open class CfnCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnCluster.Builder =
         software.amazon.awscdk.services.eks.CfnCluster.Builder.create(scope, id)
 
-    public override fun accessConfig(accessConfig: IResolvable) {
+    override fun accessConfig(accessConfig: IResolvable) {
       cdkBuilder.accessConfig(accessConfig.let(IResolvable::unwrap))
     }
 
-    public override fun accessConfig(accessConfig: AccessConfigProperty) {
+    override fun accessConfig(accessConfig: AccessConfigProperty) {
       cdkBuilder.accessConfig(accessConfig.let(AccessConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec4c1a7d3a6de171eddcfa8c911dcb17d9b0926ae11adb71b6e5b373e025c017")
-    public override fun accessConfig(accessConfig: AccessConfigProperty.Builder.() -> Unit): Unit =
+    override fun accessConfig(accessConfig: AccessConfigProperty.Builder.() -> Unit): Unit =
         accessConfig(AccessConfigProperty(accessConfig))
 
-    public override fun encryptionConfig(encryptionConfig: IResolvable) {
+    override fun encryptionConfig(encryptionConfig: IResolvable) {
       cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
     }
 
-    public override fun encryptionConfig(encryptionConfig: List<Any>) {
+    override fun encryptionConfig(encryptionConfig: List<Any>) {
       cdkBuilder.encryptionConfig(encryptionConfig)
     }
 
-    public override fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
+    override fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
       cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty) {
+    override fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty) {
       cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(KubernetesNetworkConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("790fe92404891b374995e9dfa06db968cf66fb7fea54f12e1ddfe19395e58665")
-    public override
+    override
         fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty.Builder.() -> Unit):
         Unit = kubernetesNetworkConfig(KubernetesNetworkConfigProperty(kubernetesNetworkConfig))
 
-    public override fun logging(logging: IResolvable) {
+    override fun logging(logging: IResolvable) {
       cdkBuilder.logging(logging.let(IResolvable::unwrap))
     }
 
-    public override fun logging(logging: LoggingProperty) {
+    override fun logging(logging: LoggingProperty) {
       cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6153bf06bf61e6a7a510b8026e66d18479c8742b8aa3412d834b150dcad1024")
-    public override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
+    override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
         logging(LoggingProperty(logging))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outpostConfig(outpostConfig: IResolvable) {
+    override fun outpostConfig(outpostConfig: IResolvable) {
       cdkBuilder.outpostConfig(outpostConfig.let(IResolvable::unwrap))
     }
 
-    public override fun outpostConfig(outpostConfig: OutpostConfigProperty) {
+    override fun outpostConfig(outpostConfig: OutpostConfigProperty) {
       cdkBuilder.outpostConfig(outpostConfig.let(OutpostConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd33fe939cf4bdbab02c5d1407a0364d4da3d4d15abcbd69ab72657b980bf691")
-    public override fun outpostConfig(outpostConfig: OutpostConfigProperty.Builder.() -> Unit): Unit
-        = outpostConfig(OutpostConfigProperty(outpostConfig))
+    override fun outpostConfig(outpostConfig: OutpostConfigProperty.Builder.() -> Unit): Unit =
+        outpostConfig(OutpostConfigProperty(outpostConfig))
 
-    public override fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
+    override fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
       cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty) {
+    override fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty) {
       cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(ResourcesVpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5fc182e569f83b4f2259bcf755a598aac7a873678fefda3a91de8d9ff379b29c")
-    public override
+    override
         fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty.Builder.() -> Unit):
         Unit = resourcesVpcConfig(ResourcesVpcConfigProperty(resourcesVpcConfig))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -365,16 +342,13 @@ public open class CfnCluster internal constructor(
         unwrap(this).getBootstrapClusterCreatorAdminPermissions()
 
     public interface Builder {
-      public fun authenticationMode(authenticationMode: String) {
-      }
+      public fun authenticationMode(authenticationMode: String)
 
       public
-          fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean) {
-      }
+          fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean)
 
       public
-          fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: IResolvable) {
-      }
+          fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -382,16 +356,16 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty.builder()
 
-      public override fun authenticationMode(authenticationMode: String) {
+      override fun authenticationMode(authenticationMode: String) {
         cdkBuilder.authenticationMode(authenticationMode)
       }
 
-      public override
+      override
           fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: Boolean) {
         cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions)
       }
 
-      public override
+      override
           fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: IResolvable) {
         cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions.let(IResolvable::unwrap))
       }
@@ -403,9 +377,9 @@ public open class CfnCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty,
     ) : AccessConfigProperty {
-      public override fun authenticationMode(): String? = unwrap(this).getAuthenticationMode()
+      override fun authenticationMode(): String? = unwrap(this).getAuthenticationMode()
 
-      public override fun bootstrapClusterCreatorAdminPermissions(): Any? =
+      override fun bootstrapClusterCreatorAdminPermissions(): Any? =
           unwrap(this).getBootstrapClusterCreatorAdminPermissions()
     }
 
@@ -433,8 +407,7 @@ public open class CfnCluster internal constructor(
     public fun groupName(): String? = unwrap(this).getGroupName()
 
     public interface Builder {
-      public fun groupName(groupName: String) {
-      }
+      public fun groupName(groupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -442,7 +415,7 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty.builder()
 
-      public override fun groupName(groupName: String) {
+      override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
       }
 
@@ -455,7 +428,7 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty,
     ) : ControlPlanePlacementProperty {
-      public override fun groupName(): String? = unwrap(this).getGroupName()
+      override fun groupName(): String? = unwrap(this).getGroupName()
     }
 
     public companion object {
@@ -482,11 +455,9 @@ public open class CfnCluster internal constructor(
     public fun enabledTypes(): Any? = unwrap(this).getEnabledTypes()
 
     public interface Builder {
-      public fun enabledTypes(enabledTypes: IResolvable) {
-      }
+      public fun enabledTypes(enabledTypes: IResolvable)
 
-      public fun enabledTypes(enabledTypes: List<Any>) {
-      }
+      public fun enabledTypes(enabledTypes: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -494,11 +465,11 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty.builder()
 
-      public override fun enabledTypes(enabledTypes: IResolvable) {
+      override fun enabledTypes(enabledTypes: IResolvable) {
         cdkBuilder.enabledTypes(enabledTypes.let(IResolvable::unwrap))
       }
 
-      public override fun enabledTypes(enabledTypes: List<Any>) {
+      override fun enabledTypes(enabledTypes: List<Any>) {
         cdkBuilder.enabledTypes(enabledTypes)
       }
 
@@ -509,7 +480,7 @@ public open class CfnCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty,
     ) : ClusterLoggingProperty {
-      public override fun enabledTypes(): Any? = unwrap(this).getEnabledTypes()
+      override fun enabledTypes(): Any? = unwrap(this).getEnabledTypes()
     }
 
     public companion object {
@@ -545,26 +516,19 @@ public open class CfnCluster internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun endpointPrivateAccess(endpointPrivateAccess: Boolean) {
-      }
+      public fun endpointPrivateAccess(endpointPrivateAccess: Boolean)
 
-      public fun endpointPrivateAccess(endpointPrivateAccess: IResolvable) {
-      }
+      public fun endpointPrivateAccess(endpointPrivateAccess: IResolvable)
 
-      public fun endpointPublicAccess(endpointPublicAccess: Boolean) {
-      }
+      public fun endpointPublicAccess(endpointPublicAccess: Boolean)
 
-      public fun endpointPublicAccess(endpointPublicAccess: IResolvable) {
-      }
+      public fun endpointPublicAccess(endpointPublicAccess: IResolvable)
 
-      public fun publicAccessCidrs(publicAccessCidrs: List<String>) {
-      }
+      public fun publicAccessCidrs(publicAccessCidrs: List<String>)
 
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -572,31 +536,31 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty.builder()
 
-      public override fun endpointPrivateAccess(endpointPrivateAccess: Boolean) {
+      override fun endpointPrivateAccess(endpointPrivateAccess: Boolean) {
         cdkBuilder.endpointPrivateAccess(endpointPrivateAccess)
       }
 
-      public override fun endpointPrivateAccess(endpointPrivateAccess: IResolvable) {
+      override fun endpointPrivateAccess(endpointPrivateAccess: IResolvable) {
         cdkBuilder.endpointPrivateAccess(endpointPrivateAccess.let(IResolvable::unwrap))
       }
 
-      public override fun endpointPublicAccess(endpointPublicAccess: Boolean) {
+      override fun endpointPublicAccess(endpointPublicAccess: Boolean) {
         cdkBuilder.endpointPublicAccess(endpointPublicAccess)
       }
 
-      public override fun endpointPublicAccess(endpointPublicAccess: IResolvable) {
+      override fun endpointPublicAccess(endpointPublicAccess: IResolvable) {
         cdkBuilder.endpointPublicAccess(endpointPublicAccess.let(IResolvable::unwrap))
       }
 
-      public override fun publicAccessCidrs(publicAccessCidrs: List<String>) {
+      override fun publicAccessCidrs(publicAccessCidrs: List<String>) {
         cdkBuilder.publicAccessCidrs(publicAccessCidrs)
       }
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -608,17 +572,17 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty,
     ) : ResourcesVpcConfigProperty {
-      public override fun endpointPrivateAccess(): Any? = unwrap(this).getEndpointPrivateAccess()
+      override fun endpointPrivateAccess(): Any? = unwrap(this).getEndpointPrivateAccess()
 
-      public override fun endpointPublicAccess(): Any? = unwrap(this).getEndpointPublicAccess()
+      override fun endpointPublicAccess(): Any? = unwrap(this).getEndpointPublicAccess()
 
-      public override fun publicAccessCidrs(): List<String> = unwrap(this).getPublicAccessCidrs() ?:
+      override fun publicAccessCidrs(): List<String> = unwrap(this).getPublicAccessCidrs() ?:
           emptyList()
 
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -645,8 +609,7 @@ public open class CfnCluster internal constructor(
     public fun keyArn(): String? = unwrap(this).getKeyArn()
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -654,7 +617,7 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
@@ -665,7 +628,7 @@ public open class CfnCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ProviderProperty,
     ) : ProviderProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
     }
 
     public companion object {
@@ -691,34 +654,31 @@ public open class CfnCluster internal constructor(
     public fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
 
     public interface Builder {
-      public fun clusterLogging(clusterLogging: IResolvable) {
-      }
+      public fun clusterLogging(clusterLogging: IResolvable)
 
-      public fun clusterLogging(clusterLogging: ClusterLoggingProperty) {
-      }
+      public fun clusterLogging(clusterLogging: ClusterLoggingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6eef5ca98ad698d391f4345c1070b4d8235bd9d01892094d471af59ebc1ff719")
-      public fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit) {
-      }
+      public fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty.Builder
           = software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty.builder()
 
-      public override fun clusterLogging(clusterLogging: IResolvable) {
+      override fun clusterLogging(clusterLogging: IResolvable) {
         cdkBuilder.clusterLogging(clusterLogging.let(IResolvable::unwrap))
       }
 
-      public override fun clusterLogging(clusterLogging: ClusterLoggingProperty) {
+      override fun clusterLogging(clusterLogging: ClusterLoggingProperty) {
         cdkBuilder.clusterLogging(clusterLogging.let(ClusterLoggingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6eef5ca98ad698d391f4345c1070b4d8235bd9d01892094d471af59ebc1ff719")
-      public override fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit):
-          Unit = clusterLogging(ClusterLoggingProperty(clusterLogging))
+      override fun clusterLogging(clusterLogging: ClusterLoggingProperty.Builder.() -> Unit): Unit =
+          clusterLogging(ClusterLoggingProperty(clusterLogging))
 
       public fun build(): software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty =
           cdkBuilder.build()
@@ -727,7 +687,7 @@ public open class CfnCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.LoggingProperty,
     ) : LoggingProperty {
-      public override fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
+      override fun clusterLogging(): Any? = unwrap(this).getClusterLogging()
     }
 
     public companion object {
@@ -757,23 +717,18 @@ public open class CfnCluster internal constructor(
     public fun outpostArns(): List<String>
 
     public interface Builder {
-      public fun controlPlaneInstanceType(controlPlaneInstanceType: String) {
-      }
+      public fun controlPlaneInstanceType(controlPlaneInstanceType: String)
 
-      public fun controlPlanePlacement(controlPlanePlacement: IResolvable) {
-      }
+      public fun controlPlanePlacement(controlPlanePlacement: IResolvable)
 
-      public fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty) {
-      }
+      public fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a11057470261230998833a07856832074f2f428b9635537fa10ab3a00da279ff")
       public
-          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit) {
-      }
+          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit)
 
-      public fun outpostArns(outpostArns: List<String>) {
-      }
+      public fun outpostArns(outpostArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -781,26 +736,25 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty.builder()
 
-      public override fun controlPlaneInstanceType(controlPlaneInstanceType: String) {
+      override fun controlPlaneInstanceType(controlPlaneInstanceType: String) {
         cdkBuilder.controlPlaneInstanceType(controlPlaneInstanceType)
       }
 
-      public override fun controlPlanePlacement(controlPlanePlacement: IResolvable) {
+      override fun controlPlanePlacement(controlPlanePlacement: IResolvable) {
         cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(IResolvable::unwrap))
       }
 
-      public override
-          fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty) {
+      override fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty) {
         cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(ControlPlanePlacementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a11057470261230998833a07856832074f2f428b9635537fa10ab3a00da279ff")
-      public override
+      override
           fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit):
           Unit = controlPlanePlacement(ControlPlanePlacementProperty(controlPlanePlacement))
 
-      public override fun outpostArns(outpostArns: List<String>) {
+      override fun outpostArns(outpostArns: List<String>) {
         cdkBuilder.outpostArns(outpostArns)
       }
 
@@ -811,12 +765,11 @@ public open class CfnCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty,
     ) : OutpostConfigProperty {
-      public override fun controlPlaneInstanceType(): String =
-          unwrap(this).getControlPlaneInstanceType()
+      override fun controlPlaneInstanceType(): String = unwrap(this).getControlPlaneInstanceType()
 
-      public override fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
+      override fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
 
-      public override fun outpostArns(): List<String> = unwrap(this).getOutpostArns() ?: emptyList()
+      override fun outpostArns(): List<String> = unwrap(this).getOutpostArns() ?: emptyList()
     }
 
     public companion object {
@@ -847,14 +800,11 @@ public open class CfnCluster internal constructor(
     public fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
 
     public interface Builder {
-      public fun ipFamily(ipFamily: String) {
-      }
+      public fun ipFamily(ipFamily: String)
 
-      public fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
-      }
+      public fun serviceIpv4Cidr(serviceIpv4Cidr: String)
 
-      public fun serviceIpv6Cidr(serviceIpv6Cidr: String) {
-      }
+      public fun serviceIpv6Cidr(serviceIpv6Cidr: String)
     }
 
     private class BuilderImpl : Builder {
@@ -862,15 +812,15 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.builder()
 
-      public override fun ipFamily(ipFamily: String) {
+      override fun ipFamily(ipFamily: String) {
         cdkBuilder.ipFamily(ipFamily)
       }
 
-      public override fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
+      override fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
         cdkBuilder.serviceIpv4Cidr(serviceIpv4Cidr)
       }
 
-      public override fun serviceIpv6Cidr(serviceIpv6Cidr: String) {
+      override fun serviceIpv6Cidr(serviceIpv6Cidr: String) {
         cdkBuilder.serviceIpv6Cidr(serviceIpv6Cidr)
       }
 
@@ -883,11 +833,11 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
     ) : KubernetesNetworkConfigProperty {
-      public override fun ipFamily(): String? = unwrap(this).getIpFamily()
+      override fun ipFamily(): String? = unwrap(this).getIpFamily()
 
-      public override fun serviceIpv4Cidr(): String? = unwrap(this).getServiceIpv4Cidr()
+      override fun serviceIpv4Cidr(): String? = unwrap(this).getServiceIpv4Cidr()
 
-      public override fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
+      override fun serviceIpv6Cidr(): String? = unwrap(this).getServiceIpv6Cidr()
     }
 
     public companion object {
@@ -914,8 +864,7 @@ public open class CfnCluster internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -923,7 +872,7 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -935,7 +884,7 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnCluster.LoggingTypeConfigProperty,
     ) : LoggingTypeConfigProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -964,19 +913,15 @@ public open class CfnCluster internal constructor(
     public fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
     public interface Builder {
-      public fun provider(provider: IResolvable) {
-      }
+      public fun provider(provider: IResolvable)
 
-      public fun provider(provider: ProviderProperty) {
-      }
+      public fun provider(provider: ProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba6e737e61209cc121faf7416cd1f79e39e64e9efc1ac515c84c441be6580677")
-      public fun provider(provider: ProviderProperty.Builder.() -> Unit) {
-      }
+      public fun provider(provider: ProviderProperty.Builder.() -> Unit)
 
-      public fun resources(resources: List<String>) {
-      }
+      public fun resources(resources: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -984,20 +929,20 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty.builder()
 
-      public override fun provider(provider: IResolvable) {
+      override fun provider(provider: IResolvable) {
         cdkBuilder.provider(provider.let(IResolvable::unwrap))
       }
 
-      public override fun provider(provider: ProviderProperty) {
+      override fun provider(provider: ProviderProperty) {
         cdkBuilder.provider(provider.let(ProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba6e737e61209cc121faf7416cd1f79e39e64e9efc1ac515c84c441be6580677")
-      public override fun provider(provider: ProviderProperty.Builder.() -> Unit): Unit =
+      override fun provider(provider: ProviderProperty.Builder.() -> Unit): Unit =
           provider(ProviderProperty(provider))
 
-      public override fun resources(resources: List<String>) {
+      override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
 
@@ -1009,9 +954,9 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty,
     ) : EncryptionConfigProperty {
-      public override fun provider(): Any? = unwrap(this).getProvider()
+      override fun provider(): Any? = unwrap(this).getProvider()
 
-      public override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+      override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
     }
 
     public companion object {

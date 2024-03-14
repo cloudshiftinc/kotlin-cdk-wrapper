@@ -202,50 +202,36 @@ public open class ApplicationTargetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun deregistrationDelay(deregistrationDelay: Duration) {
-    }
+    public fun deregistrationDelay(deregistrationDelay: Duration)
 
-    public fun healthCheck(healthCheck: HealthCheck) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("05551a8897b13ef92696e78fac308b2def5ca4407866770b3893b34a21ead542")
-    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
 
     public
-        fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType) {
-    }
+        fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: ApplicationProtocol) {
-    }
+    public fun protocol(protocol: ApplicationProtocol)
 
-    public fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
-    }
+    public fun protocolVersion(protocolVersion: ApplicationProtocolVersion)
 
-    public fun slowStart(slowStart: Duration) {
-    }
+    public fun slowStart(slowStart: Duration)
 
-    public fun stickinessCookieDuration(stickinessCookieDuration: Duration) {
-    }
+    public fun stickinessCookieDuration(stickinessCookieDuration: Duration)
 
-    public fun stickinessCookieName(stickinessCookieName: String) {
-    }
+    public fun stickinessCookieName(stickinessCookieName: String)
 
-    public fun targetGroupName(targetGroupName: String) {
-    }
+    public fun targetGroupName(targetGroupName: String)
 
-    public fun targetType(targetType: TargetType) {
-    }
+    public fun targetType(targetType: TargetType)
 
-    public fun targets(targets: List<IApplicationLoadBalancerTarget>) {
-    }
+    public fun targets(targets: List<IApplicationLoadBalancerTarget>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -257,61 +243,61 @@ public open class ApplicationTargetGroup internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup.Builder.create(scope,
         id)
 
-    public override fun deregistrationDelay(deregistrationDelay: Duration) {
+    override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheck) {
+    override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("05551a8897b13ef92696e78fac308b2def5ca4407866770b3893b34a21ead542")
-    public override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
 
-    public override
+    override
         fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType) {
       cdkBuilder.loadBalancingAlgorithmType(loadBalancingAlgorithmType.let(TargetGroupLoadBalancingAlgorithmType::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: ApplicationProtocol) {
+    override fun protocol(protocol: ApplicationProtocol) {
       cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
     }
 
-    public override fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
+    override fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
       cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion::unwrap))
     }
 
-    public override fun slowStart(slowStart: Duration) {
+    override fun slowStart(slowStart: Duration) {
       cdkBuilder.slowStart(slowStart.let(Duration::unwrap))
     }
 
-    public override fun stickinessCookieDuration(stickinessCookieDuration: Duration) {
+    override fun stickinessCookieDuration(stickinessCookieDuration: Duration) {
       cdkBuilder.stickinessCookieDuration(stickinessCookieDuration.let(Duration::unwrap))
     }
 
-    public override fun stickinessCookieName(stickinessCookieName: String) {
+    override fun stickinessCookieName(stickinessCookieName: String) {
       cdkBuilder.stickinessCookieName(stickinessCookieName)
     }
 
-    public override fun targetGroupName(targetGroupName: String) {
+    override fun targetGroupName(targetGroupName: String) {
       cdkBuilder.targetGroupName(targetGroupName)
     }
 
-    public override fun targetType(targetType: TargetType) {
+    override fun targetType(targetType: TargetType) {
       cdkBuilder.targetType(targetType.let(TargetType::unwrap))
     }
 
-    public override fun targets(targets: List<IApplicationLoadBalancerTarget>) {
+    override fun targets(targets: List<IApplicationLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(IApplicationLoadBalancerTarget::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

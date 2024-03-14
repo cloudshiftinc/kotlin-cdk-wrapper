@@ -10,17 +10,13 @@ public open class ClientVpnAuthorizationRule internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
-    }
+    public fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun groupId(groupId: String) {
-    }
+    public fun groupId(groupId: String)
   }
 
   private class BuilderImpl(
@@ -30,19 +26,19 @@ public open class ClientVpnAuthorizationRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule.Builder =
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule.Builder.create(scope, id)
 
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
+    override fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
       cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun groupId(groupId: String) {
+    override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
     }
 

@@ -34,14 +34,11 @@ public open class CfnModuleDefaultVersion internal constructor(
   }
 
   public interface Builder {
-    public fun arn(arn: String) {
-    }
+    public fun arn(arn: String)
 
-    public fun moduleName(moduleName: String) {
-    }
+    public fun moduleName(moduleName: String)
 
-    public fun versionId(versionId: String) {
-    }
+    public fun versionId(versionId: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnModuleDefaultVersion internal constructor(
         software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion.Builder.create(scope,
         id)
 
-    public override fun arn(arn: String) {
+    override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
-    public override fun moduleName(moduleName: String) {
+    override fun moduleName(moduleName: String) {
       cdkBuilder.moduleName(moduleName)
     }
 
-    public override fun versionId(versionId: String) {
+    override fun versionId(versionId: String) {
       cdkBuilder.versionId(versionId)
     }
 

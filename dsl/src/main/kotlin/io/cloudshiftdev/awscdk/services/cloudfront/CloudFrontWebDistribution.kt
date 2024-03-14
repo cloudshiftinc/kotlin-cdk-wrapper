@@ -29,50 +29,36 @@ public open class CloudFrontWebDistribution internal constructor(
   public open fun loggingBucket(): IBucket? = unwrap(this).getLoggingBucket()?.let(IBucket::wrap)
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun defaultRootObject(defaultRootObject: String) {
-    }
+    public fun defaultRootObject(defaultRootObject: String)
 
-    public fun enableIpV6(enableIpV6: Boolean) {
-    }
+    public fun enableIpV6(enableIpV6: Boolean)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
     public
-        fun errorConfigurations(errorConfigurations: List<CfnDistribution.CustomErrorResponseProperty>) {
-    }
+        fun errorConfigurations(errorConfigurations: List<CfnDistribution.CustomErrorResponseProperty>)
 
-    public fun geoRestriction(geoRestriction: GeoRestriction) {
-    }
+    public fun geoRestriction(geoRestriction: GeoRestriction)
 
-    public fun httpVersion(httpVersion: HttpVersion) {
-    }
+    public fun httpVersion(httpVersion: HttpVersion)
 
-    public fun loggingConfig(loggingConfig: LoggingConfiguration) {
-    }
+    public fun loggingConfig(loggingConfig: LoggingConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("118297c79f59a3d02eff71388488a07ba458cc57ae2cfb797a344b74e12cca7f")
-    public fun loggingConfig(loggingConfig: LoggingConfiguration.Builder.() -> Unit) {
-    }
+    public fun loggingConfig(loggingConfig: LoggingConfiguration.Builder.() -> Unit)
 
-    public fun originConfigs(originConfigs: List<SourceConfiguration>) {
-    }
+    public fun originConfigs(originConfigs: List<SourceConfiguration>)
 
-    public fun priceClass(priceClass: PriceClass) {
-    }
+    public fun priceClass(priceClass: PriceClass)
 
-    public fun viewerCertificate(viewerCertificate: ViewerCertificate) {
-    }
+    public fun viewerCertificate(viewerCertificate: ViewerCertificate)
 
-    public fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
-    }
+    public fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy)
 
-    public fun webAclId(webAclId: String) {
-    }
+    public fun webAclId(webAclId: String)
   }
 
   private class BuilderImpl(
@@ -84,61 +70,61 @@ public open class CloudFrontWebDistribution internal constructor(
         software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution.Builder.create(scope,
         id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun defaultRootObject(defaultRootObject: String) {
+    override fun defaultRootObject(defaultRootObject: String) {
       cdkBuilder.defaultRootObject(defaultRootObject)
     }
 
-    public override fun enableIpV6(enableIpV6: Boolean) {
+    override fun enableIpV6(enableIpV6: Boolean) {
       cdkBuilder.enableIpV6(enableIpV6)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override
+    override
         fun errorConfigurations(errorConfigurations: List<CfnDistribution.CustomErrorResponseProperty>) {
       cdkBuilder.errorConfigurations(errorConfigurations.map(CfnDistribution.CustomErrorResponseProperty::unwrap))
     }
 
-    public override fun geoRestriction(geoRestriction: GeoRestriction) {
+    override fun geoRestriction(geoRestriction: GeoRestriction) {
       cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
     }
 
-    public override fun httpVersion(httpVersion: HttpVersion) {
+    override fun httpVersion(httpVersion: HttpVersion) {
       cdkBuilder.httpVersion(httpVersion.let(HttpVersion::unwrap))
     }
 
-    public override fun loggingConfig(loggingConfig: LoggingConfiguration) {
+    override fun loggingConfig(loggingConfig: LoggingConfiguration) {
       cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("118297c79f59a3d02eff71388488a07ba458cc57ae2cfb797a344b74e12cca7f")
-    public override fun loggingConfig(loggingConfig: LoggingConfiguration.Builder.() -> Unit): Unit
-        = loggingConfig(LoggingConfiguration(loggingConfig))
+    override fun loggingConfig(loggingConfig: LoggingConfiguration.Builder.() -> Unit): Unit =
+        loggingConfig(LoggingConfiguration(loggingConfig))
 
-    public override fun originConfigs(originConfigs: List<SourceConfiguration>) {
+    override fun originConfigs(originConfigs: List<SourceConfiguration>) {
       cdkBuilder.originConfigs(originConfigs.map(SourceConfiguration::unwrap))
     }
 
-    public override fun priceClass(priceClass: PriceClass) {
+    override fun priceClass(priceClass: PriceClass) {
       cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))
     }
 
-    public override fun viewerCertificate(viewerCertificate: ViewerCertificate) {
+    override fun viewerCertificate(viewerCertificate: ViewerCertificate) {
       cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificate::unwrap))
     }
 
-    public override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
+    override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
       cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))
     }
 
-    public override fun webAclId(webAclId: String) {
+    override fun webAclId(webAclId: String) {
       cdkBuilder.webAclId(webAclId)
     }
 

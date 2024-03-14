@@ -29,34 +29,25 @@ public interface AddNetworkTargetsProps {
       unwrap(this).getTargets()?.map(INetworkLoadBalancerTarget::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun deregistrationDelay(deregistrationDelay: Duration) {
-    }
+    public fun deregistrationDelay(deregistrationDelay: Duration)
 
-    public fun healthCheck(healthCheck: HealthCheck) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("010fcd39b9643a438c847e391bcd3db988b02e2fbdbc00a9c959553c55f573d4")
-    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preserveClientIp(preserveClientIp: Boolean) {
-    }
+    public fun preserveClientIp(preserveClientIp: Boolean)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
 
-    public fun proxyProtocolV2(proxyProtocolV2: Boolean) {
-    }
+    public fun proxyProtocolV2(proxyProtocolV2: Boolean)
 
-    public fun targetGroupName(targetGroupName: String) {
-    }
+    public fun targetGroupName(targetGroupName: String)
 
-    public fun targets(targets: List<INetworkLoadBalancerTarget>) {
-    }
+    public fun targets(targets: List<INetworkLoadBalancerTarget>)
   }
 
   private class BuilderImpl : Builder {
@@ -64,40 +55,40 @@ public interface AddNetworkTargetsProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps.builder()
 
-    public override fun deregistrationDelay(deregistrationDelay: Duration) {
+    override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheck) {
+    override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("010fcd39b9643a438c847e391bcd3db988b02e2fbdbc00a9c959553c55f573d4")
-    public override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preserveClientIp(preserveClientIp: Boolean) {
+    override fun preserveClientIp(preserveClientIp: Boolean) {
       cdkBuilder.preserveClientIp(preserveClientIp)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
-    public override fun proxyProtocolV2(proxyProtocolV2: Boolean) {
+    override fun proxyProtocolV2(proxyProtocolV2: Boolean) {
       cdkBuilder.proxyProtocolV2(proxyProtocolV2)
     }
 
-    public override fun targetGroupName(targetGroupName: String) {
+    override fun targetGroupName(targetGroupName: String) {
       cdkBuilder.targetGroupName(targetGroupName)
     }
 
-    public override fun targets(targets: List<INetworkLoadBalancerTarget>) {
+    override fun targets(targets: List<INetworkLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget::unwrap))
     }
 
@@ -110,23 +101,22 @@ public interface AddNetworkTargetsProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps,
   ) : AddNetworkTargetsProps {
-    public override fun deregistrationDelay(): Duration? =
+    override fun deregistrationDelay(): Duration? =
         unwrap(this).getDeregistrationDelay()?.let(Duration::wrap)
 
-    public override fun healthCheck(): HealthCheck? =
-        unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+    override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun preserveClientIp(): Boolean? = unwrap(this).getPreserveClientIp()
+    override fun preserveClientIp(): Boolean? = unwrap(this).getPreserveClientIp()
 
-    public override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
+    override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
 
-    public override fun proxyProtocolV2(): Boolean? = unwrap(this).getProxyProtocolV2()
+    override fun proxyProtocolV2(): Boolean? = unwrap(this).getProxyProtocolV2()
 
-    public override fun targetGroupName(): String? = unwrap(this).getTargetGroupName()
+    override fun targetGroupName(): String? = unwrap(this).getTargetGroupName()
 
-    public override fun targets(): List<INetworkLoadBalancerTarget> =
+    override fun targets(): List<INetworkLoadBalancerTarget> =
         unwrap(this).getTargets()?.map(INetworkLoadBalancerTarget::wrap) ?: emptyList()
   }
 

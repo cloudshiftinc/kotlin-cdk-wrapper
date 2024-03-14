@@ -12,23 +12,17 @@ public open class KubernetesObjectValue internal constructor(
   public open fun `value`(): String = unwrap(this).getValue()
 
   public interface Builder {
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun jsonPath(jsonPath: String) {
-    }
+    public fun jsonPath(jsonPath: String)
 
-    public fun objectName(objectName: String) {
-    }
+    public fun objectName(objectName: String)
 
-    public fun objectNamespace(objectNamespace: String) {
-    }
+    public fun objectNamespace(objectNamespace: String)
 
-    public fun objectType(objectType: String) {
-    }
+    public fun objectType(objectType: String)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -38,27 +32,27 @@ public open class KubernetesObjectValue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubernetesObjectValue.Builder =
         software.amazon.awscdk.services.eks.KubernetesObjectValue.Builder.create(scope, id)
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun jsonPath(jsonPath: String) {
+    override fun jsonPath(jsonPath: String) {
       cdkBuilder.jsonPath(jsonPath)
     }
 
-    public override fun objectName(objectName: String) {
+    override fun objectName(objectName: String) {
       cdkBuilder.objectName(objectName)
     }
 
-    public override fun objectNamespace(objectNamespace: String) {
+    override fun objectNamespace(objectNamespace: String) {
       cdkBuilder.objectNamespace(objectNamespace)
     }
 
-    public override fun objectType(objectType: String) {
+    override fun objectType(objectType: String) {
       cdkBuilder.objectType(objectType)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

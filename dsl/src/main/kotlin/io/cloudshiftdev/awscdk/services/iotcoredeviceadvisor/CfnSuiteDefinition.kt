@@ -46,11 +46,9 @@ public open class CfnSuiteDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun suiteDefinitionConfiguration(suiteDefinitionConfiguration: Any) {
-    }
+    public fun suiteDefinitionConfiguration(suiteDefinitionConfiguration: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -62,11 +60,11 @@ public open class CfnSuiteDefinition internal constructor(
         software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.Builder.create(scope,
         id)
 
-    public override fun suiteDefinitionConfiguration(suiteDefinitionConfiguration: Any) {
+    override fun suiteDefinitionConfiguration(suiteDefinitionConfiguration: Any) {
       cdkBuilder.suiteDefinitionConfiguration(suiteDefinitionConfiguration)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -108,26 +106,19 @@ public open class CfnSuiteDefinition internal constructor(
     public fun suiteDefinitionName(): String? = unwrap(this).getSuiteDefinitionName()
 
     public interface Builder {
-      public fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
-      }
+      public fun devicePermissionRoleArn(devicePermissionRoleArn: String)
 
-      public fun devices(devices: IResolvable) {
-      }
+      public fun devices(devices: IResolvable)
 
-      public fun devices(devices: List<Any>) {
-      }
+      public fun devices(devices: List<Any>)
 
-      public fun intendedForQualification(intendedForQualification: Boolean) {
-      }
+      public fun intendedForQualification(intendedForQualification: Boolean)
 
-      public fun intendedForQualification(intendedForQualification: IResolvable) {
-      }
+      public fun intendedForQualification(intendedForQualification: IResolvable)
 
-      public fun rootGroup(rootGroup: String) {
-      }
+      public fun rootGroup(rootGroup: String)
 
-      public fun suiteDefinitionName(suiteDefinitionName: String) {
-      }
+      public fun suiteDefinitionName(suiteDefinitionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -136,31 +127,31 @@ public open class CfnSuiteDefinition internal constructor(
           =
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty.builder()
 
-      public override fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
+      override fun devicePermissionRoleArn(devicePermissionRoleArn: String) {
         cdkBuilder.devicePermissionRoleArn(devicePermissionRoleArn)
       }
 
-      public override fun devices(devices: IResolvable) {
+      override fun devices(devices: IResolvable) {
         cdkBuilder.devices(devices.let(IResolvable::unwrap))
       }
 
-      public override fun devices(devices: List<Any>) {
+      override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
 
-      public override fun intendedForQualification(intendedForQualification: Boolean) {
+      override fun intendedForQualification(intendedForQualification: Boolean) {
         cdkBuilder.intendedForQualification(intendedForQualification)
       }
 
-      public override fun intendedForQualification(intendedForQualification: IResolvable) {
+      override fun intendedForQualification(intendedForQualification: IResolvable) {
         cdkBuilder.intendedForQualification(intendedForQualification.let(IResolvable::unwrap))
       }
 
-      public override fun rootGroup(rootGroup: String) {
+      override fun rootGroup(rootGroup: String) {
         cdkBuilder.rootGroup(rootGroup)
       }
 
-      public override fun suiteDefinitionName(suiteDefinitionName: String) {
+      override fun suiteDefinitionName(suiteDefinitionName: String) {
         cdkBuilder.suiteDefinitionName(suiteDefinitionName)
       }
 
@@ -173,17 +164,15 @@ public open class CfnSuiteDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.SuiteDefinitionConfigurationProperty,
     ) : SuiteDefinitionConfigurationProperty {
-      public override fun devicePermissionRoleArn(): String =
-          unwrap(this).getDevicePermissionRoleArn()
+      override fun devicePermissionRoleArn(): String = unwrap(this).getDevicePermissionRoleArn()
 
-      public override fun devices(): Any? = unwrap(this).getDevices()
+      override fun devices(): Any? = unwrap(this).getDevices()
 
-      public override fun intendedForQualification(): Any? =
-          unwrap(this).getIntendedForQualification()
+      override fun intendedForQualification(): Any? = unwrap(this).getIntendedForQualification()
 
-      public override fun rootGroup(): String = unwrap(this).getRootGroup()
+      override fun rootGroup(): String = unwrap(this).getRootGroup()
 
-      public override fun suiteDefinitionName(): String? = unwrap(this).getSuiteDefinitionName()
+      override fun suiteDefinitionName(): String? = unwrap(this).getSuiteDefinitionName()
     }
 
     public companion object {
@@ -213,11 +202,9 @@ public open class CfnSuiteDefinition internal constructor(
     public fun thingArn(): String? = unwrap(this).getThingArn()
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun thingArn(thingArn: String) {
-      }
+      public fun thingArn(thingArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -226,11 +213,11 @@ public open class CfnSuiteDefinition internal constructor(
           =
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun thingArn(thingArn: String) {
+      override fun thingArn(thingArn: String) {
         cdkBuilder.thingArn(thingArn)
       }
 
@@ -243,9 +230,9 @@ public open class CfnSuiteDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition.DeviceUnderTestProperty,
     ) : DeviceUnderTestProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
-      public override fun thingArn(): String? = unwrap(this).getThingArn()
+      override fun thingArn(): String? = unwrap(this).getThingArn()
     }
 
     public companion object {

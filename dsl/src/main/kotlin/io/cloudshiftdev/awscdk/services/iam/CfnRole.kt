@@ -89,35 +89,25 @@ public open class CfnRole internal constructor(
   }
 
   public interface Builder {
-    public fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any) {
-    }
+    public fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun managedPolicyArns(managedPolicyArns: List<String>) {
-    }
+    public fun managedPolicyArns(managedPolicyArns: List<String>)
 
-    public fun maxSessionDuration(maxSessionDuration: Number) {
-    }
+    public fun maxSessionDuration(maxSessionDuration: Number)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun permissionsBoundary(permissionsBoundary: String) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: String)
 
-    public fun policies(policies: IResolvable) {
-    }
+    public fun policies(policies: IResolvable)
 
-    public fun policies(policies: List<Any>) {
-    }
+    public fun policies(policies: List<Any>)
 
-    public fun roleName(roleName: String) {
-    }
+    public fun roleName(roleName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -127,43 +117,43 @@ public open class CfnRole internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnRole.Builder =
         software.amazon.awscdk.services.iam.CfnRole.Builder.create(scope, id)
 
-    public override fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any) {
+    override fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any) {
       cdkBuilder.assumeRolePolicyDocument(assumeRolePolicyDocument)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun managedPolicyArns(managedPolicyArns: List<String>) {
+    override fun managedPolicyArns(managedPolicyArns: List<String>) {
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
-    public override fun maxSessionDuration(maxSessionDuration: Number) {
+    override fun maxSessionDuration(maxSessionDuration: Number) {
       cdkBuilder.maxSessionDuration(maxSessionDuration)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: String) {
+    override fun permissionsBoundary(permissionsBoundary: String) {
       cdkBuilder.permissionsBoundary(permissionsBoundary)
     }
 
-    public override fun policies(policies: IResolvable) {
+    override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable::unwrap))
     }
 
-    public override fun policies(policies: List<Any>) {
+    override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
 
-    public override fun roleName(roleName: String) {
+    override fun roleName(roleName: String) {
       cdkBuilder.roleName(roleName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -197,22 +187,20 @@ public open class CfnRole internal constructor(
     public fun policyName(): String
 
     public interface Builder {
-      public fun policyDocument(policyDocument: Any) {
-      }
+      public fun policyDocument(policyDocument: Any)
 
-      public fun policyName(policyName: String) {
-      }
+      public fun policyName(policyName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.iam.CfnRole.PolicyProperty.Builder =
           software.amazon.awscdk.services.iam.CfnRole.PolicyProperty.builder()
 
-      public override fun policyDocument(policyDocument: Any) {
+      override fun policyDocument(policyDocument: Any) {
         cdkBuilder.policyDocument(policyDocument)
       }
 
-      public override fun policyName(policyName: String) {
+      override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
       }
 
@@ -223,9 +211,9 @@ public open class CfnRole internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iam.CfnRole.PolicyProperty,
     ) : PolicyProperty {
-      public override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
+      override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
 
-      public override fun policyName(): String = unwrap(this).getPolicyName()
+      override fun policyName(): String = unwrap(this).getPolicyName()
     }
 
     public companion object {

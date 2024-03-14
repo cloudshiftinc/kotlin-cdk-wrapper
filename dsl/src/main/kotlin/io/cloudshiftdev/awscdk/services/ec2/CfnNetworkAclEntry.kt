@@ -99,51 +99,37 @@ public open class CfnNetworkAclEntry internal constructor(
   }
 
   public interface Builder {
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun egress(egress: Boolean) {
-    }
+    public fun egress(egress: Boolean)
 
-    public fun egress(egress: IResolvable) {
-    }
+    public fun egress(egress: IResolvable)
 
-    public fun icmp(icmp: IResolvable) {
-    }
+    public fun icmp(icmp: IResolvable)
 
-    public fun icmp(icmp: IcmpProperty) {
-    }
+    public fun icmp(icmp: IcmpProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8a613d51f545c688842567246531da6476a28bfac69f661517869cfd459e1f00")
-    public fun icmp(icmp: IcmpProperty.Builder.() -> Unit) {
-    }
+    public fun icmp(icmp: IcmpProperty.Builder.() -> Unit)
 
-    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
-    public fun networkAclId(networkAclId: String) {
-    }
+    public fun networkAclId(networkAclId: String)
 
-    public fun portRange(portRange: IResolvable) {
-    }
+    public fun portRange(portRange: IResolvable)
 
-    public fun portRange(portRange: PortRangeProperty) {
-    }
+    public fun portRange(portRange: PortRangeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac611dc7fb1882857f12b7c643de7e7def24e62823ba7c3d4f0dad0d02b4fd8c")
-    public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit) {
-    }
+    public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit)
 
-    public fun protocol(protocol: Number) {
-    }
+    public fun protocol(protocol: Number)
 
-    public fun ruleAction(ruleAction: String) {
-    }
+    public fun ruleAction(ruleAction: String)
 
-    public fun ruleNumber(ruleNumber: Number) {
-    }
+    public fun ruleNumber(ruleNumber: Number)
   }
 
   private class BuilderImpl(
@@ -153,60 +139,60 @@ public open class CfnNetworkAclEntry internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.Builder.create(scope, id)
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun egress(egress: Boolean) {
+    override fun egress(egress: Boolean) {
       cdkBuilder.egress(egress)
     }
 
-    public override fun egress(egress: IResolvable) {
+    override fun egress(egress: IResolvable) {
       cdkBuilder.egress(egress.let(IResolvable::unwrap))
     }
 
-    public override fun icmp(icmp: IResolvable) {
+    override fun icmp(icmp: IResolvable) {
       cdkBuilder.icmp(icmp.let(IResolvable::unwrap))
     }
 
-    public override fun icmp(icmp: IcmpProperty) {
+    override fun icmp(icmp: IcmpProperty) {
       cdkBuilder.icmp(icmp.let(IcmpProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8a613d51f545c688842567246531da6476a28bfac69f661517869cfd459e1f00")
-    public override fun icmp(icmp: IcmpProperty.Builder.() -> Unit): Unit = icmp(IcmpProperty(icmp))
+    override fun icmp(icmp: IcmpProperty.Builder.() -> Unit): Unit = icmp(IcmpProperty(icmp))
 
-    public override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+    override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
-    public override fun networkAclId(networkAclId: String) {
+    override fun networkAclId(networkAclId: String) {
       cdkBuilder.networkAclId(networkAclId)
     }
 
-    public override fun portRange(portRange: IResolvable) {
+    override fun portRange(portRange: IResolvable) {
       cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
     }
 
-    public override fun portRange(portRange: PortRangeProperty) {
+    override fun portRange(portRange: PortRangeProperty) {
       cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac611dc7fb1882857f12b7c643de7e7def24e62823ba7c3d4f0dad0d02b4fd8c")
-    public override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
+    override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
         portRange(PortRangeProperty(portRange))
 
-    public override fun protocol(protocol: Number) {
+    override fun protocol(protocol: Number) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun ruleAction(ruleAction: String) {
+    override fun ruleAction(ruleAction: String) {
       cdkBuilder.ruleAction(ruleAction)
     }
 
-    public override fun ruleNumber(ruleNumber: Number) {
+    override fun ruleNumber(ruleNumber: Number) {
       cdkBuilder.ruleNumber(ruleNumber)
     }
 
@@ -240,11 +226,9 @@ public open class CfnNetworkAclEntry internal constructor(
     public fun type(): Number? = unwrap(this).getType()
 
     public interface Builder {
-      public fun code(code: Number) {
-      }
+      public fun code(code: Number)
 
-      public fun type(type: Number) {
-      }
+      public fun type(type: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -252,11 +236,11 @@ public open class CfnNetworkAclEntry internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty.builder()
 
-      public override fun code(code: Number) {
+      override fun code(code: Number) {
         cdkBuilder.code(code)
       }
 
-      public override fun type(type: Number) {
+      override fun type(type: Number) {
         cdkBuilder.type(type)
       }
 
@@ -267,9 +251,9 @@ public open class CfnNetworkAclEntry internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty,
     ) : IcmpProperty {
-      public override fun code(): Number? = unwrap(this).getCode()
+      override fun code(): Number? = unwrap(this).getCode()
 
-      public override fun type(): Number? = unwrap(this).getType()
+      override fun type(): Number? = unwrap(this).getType()
     }
 
     public companion object {
@@ -298,11 +282,9 @@ public open class CfnNetworkAclEntry internal constructor(
     public fun to(): Number? = unwrap(this).getTo()
 
     public interface Builder {
-      public fun from(from: Number) {
-      }
+      public fun from(from: Number)
 
-      public fun to(to: Number) {
-      }
+      public fun to(to: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -310,11 +292,11 @@ public open class CfnNetworkAclEntry internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty.builder()
 
-      public override fun from(from: Number) {
+      override fun from(from: Number) {
         cdkBuilder.from(from)
       }
 
-      public override fun to(to: Number) {
+      override fun to(to: Number) {
         cdkBuilder.to(to)
       }
 
@@ -326,9 +308,9 @@ public open class CfnNetworkAclEntry internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty,
     ) : PortRangeProperty {
-      public override fun from(): Number? = unwrap(this).getFrom()
+      override fun from(): Number? = unwrap(this).getFrom()
 
-      public override fun to(): Number? = unwrap(this).getTo()
+      override fun to(): Number? = unwrap(this).getTo()
     }
 
     public companion object {

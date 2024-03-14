@@ -30,11 +30,9 @@ public open class CfnWebACLAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun resourceArn(resourceArn: String) {
-    }
+    public fun resourceArn(resourceArn: String)
 
-    public fun webAclId(webAclId: String) {
-    }
+    public fun webAclId(webAclId: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnWebACLAssociation internal constructor(
         software.amazon.awscdk.services.waf.regional.CfnWebACLAssociation.Builder =
         software.amazon.awscdk.services.waf.regional.CfnWebACLAssociation.Builder.create(scope, id)
 
-    public override fun resourceArn(resourceArn: String) {
+    override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
-    public override fun webAclId(webAclId: String) {
+    override fun webAclId(webAclId: String) {
       cdkBuilder.webAclId(webAclId)
     }
 

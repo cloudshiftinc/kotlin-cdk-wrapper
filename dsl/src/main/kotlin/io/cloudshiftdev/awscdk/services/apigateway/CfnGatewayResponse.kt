@@ -59,26 +59,19 @@ public open class CfnGatewayResponse internal constructor(
   }
 
   public interface Builder {
-    public fun responseParameters(responseParameters: IResolvable) {
-    }
+    public fun responseParameters(responseParameters: IResolvable)
 
-    public fun responseParameters(responseParameters: Map<String, String>) {
-    }
+    public fun responseParameters(responseParameters: Map<String, String>)
 
-    public fun responseTemplates(responseTemplates: IResolvable) {
-    }
+    public fun responseTemplates(responseTemplates: IResolvable)
 
-    public fun responseTemplates(responseTemplates: Map<String, String>) {
-    }
+    public fun responseTemplates(responseTemplates: Map<String, String>)
 
-    public fun responseType(responseType: String) {
-    }
+    public fun responseType(responseType: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
 
-    public fun statusCode(statusCode: String) {
-    }
+    public fun statusCode(statusCode: String)
   }
 
   private class BuilderImpl(
@@ -88,31 +81,31 @@ public open class CfnGatewayResponse internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnGatewayResponse.Builder =
         software.amazon.awscdk.services.apigateway.CfnGatewayResponse.Builder.create(scope, id)
 
-    public override fun responseParameters(responseParameters: IResolvable) {
+    override fun responseParameters(responseParameters: IResolvable) {
       cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
     }
 
-    public override fun responseParameters(responseParameters: Map<String, String>) {
+    override fun responseParameters(responseParameters: Map<String, String>) {
       cdkBuilder.responseParameters(responseParameters)
     }
 
-    public override fun responseTemplates(responseTemplates: IResolvable) {
+    override fun responseTemplates(responseTemplates: IResolvable) {
       cdkBuilder.responseTemplates(responseTemplates.let(IResolvable::unwrap))
     }
 
-    public override fun responseTemplates(responseTemplates: Map<String, String>) {
+    override fun responseTemplates(responseTemplates: Map<String, String>) {
       cdkBuilder.responseTemplates(responseTemplates)
     }
 
-    public override fun responseType(responseType: String) {
+    override fun responseType(responseType: String) {
       cdkBuilder.responseType(responseType)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
-    public override fun statusCode(statusCode: String) {
+    override fun statusCode(statusCode: String) {
       cdkBuilder.statusCode(statusCode)
     }
 

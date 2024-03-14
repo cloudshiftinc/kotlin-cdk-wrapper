@@ -21,16 +21,16 @@ public interface IItemReader {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.IItemReader,
   ) : IItemReader {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun maxItems(): Number? = unwrap(this).getMaxItems()
+    override fun maxItems(): Number? = unwrap(this).getMaxItems()
 
-    public override fun providePolicyStatements(): List<PolicyStatement> =
+    override fun providePolicyStatements(): List<PolicyStatement> =
         unwrap(this).providePolicyStatements().map(PolicyStatement::wrap)
 
-    public override fun render(): Any = unwrap(this).render()
+    override fun render(): Any = unwrap(this).render()
 
-    public override fun resource(): String = unwrap(this).getResource()
+    override fun resource(): String = unwrap(this).getResource()
   }
 
   public companion object {

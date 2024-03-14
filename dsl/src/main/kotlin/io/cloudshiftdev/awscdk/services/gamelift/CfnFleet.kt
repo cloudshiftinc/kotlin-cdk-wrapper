@@ -246,136 +246,97 @@ public open class CfnFleet internal constructor(
   }
 
   public interface Builder {
-    public fun anywhereConfiguration(anywhereConfiguration: IResolvable) {
-    }
+    public fun anywhereConfiguration(anywhereConfiguration: IResolvable)
 
-    public fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty) {
-    }
+    public fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2661928c18c4a178bc7a01449bf72729fb5248293bfdd9f3f77a154dd4333b9")
     public
-        fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty.Builder.() -> Unit)
 
-    public fun applyCapacity(applyCapacity: String) {
-    }
+    public fun applyCapacity(applyCapacity: String)
 
-    public fun buildId(buildId: String) {
-    }
+    public fun buildId(buildId: String)
 
-    public fun certificateConfiguration(certificateConfiguration: IResolvable) {
-    }
+    public fun certificateConfiguration(certificateConfiguration: IResolvable)
 
-    public
-        fun certificateConfiguration(certificateConfiguration: CertificateConfigurationProperty) {
-    }
+    public fun certificateConfiguration(certificateConfiguration: CertificateConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e7ad6c4917736d0c5335363f8da4f8d65e0ee9c6a1b8e8f30c887c572ccf8fa0")
     public
-        fun certificateConfiguration(certificateConfiguration: CertificateConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun certificateConfiguration(certificateConfiguration: CertificateConfigurationProperty.Builder.() -> Unit)
 
-    public fun computeType(computeType: String) {
-    }
+    public fun computeType(computeType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun desiredEc2Instances(desiredEc2Instances: Number) {
-    }
+    public fun desiredEc2Instances(desiredEc2Instances: Number)
 
-    public fun ec2InboundPermissions(ec2InboundPermissions: IResolvable) {
-    }
+    public fun ec2InboundPermissions(ec2InboundPermissions: IResolvable)
 
-    public fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
-    }
+    public fun ec2InboundPermissions(ec2InboundPermissions: List<Any>)
 
-    public fun ec2InstanceType(ec2InstanceType: String) {
-    }
+    public fun ec2InstanceType(ec2InstanceType: String)
 
-    public fun fleetType(fleetType: String) {
-    }
+    public fun fleetType(fleetType: String)
 
-    public fun instanceRoleArn(instanceRoleArn: String) {
-    }
+    public fun instanceRoleArn(instanceRoleArn: String)
 
-    public fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String) {
-    }
+    public fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String)
 
-    public fun locations(locations: IResolvable) {
-    }
+    public fun locations(locations: IResolvable)
 
-    public fun locations(locations: List<Any>) {
-    }
+    public fun locations(locations: List<Any>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun logPaths(logPaths: List<String>) {
-    }
+    public fun logPaths(logPaths: List<String>)
 
-    public fun maxSize(maxSize: Number) {
-    }
+    public fun maxSize(maxSize: Number)
 
-    public fun metricGroups(metricGroups: List<String>) {
-    }
+    public fun metricGroups(metricGroups: List<String>)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String) {
-    }
+    public fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String)
 
-    public fun peerVpcAwsAccountId(peerVpcAwsAccountId: String) {
-    }
+    public fun peerVpcAwsAccountId(peerVpcAwsAccountId: String)
 
-    public fun peerVpcId(peerVpcId: String) {
-    }
+    public fun peerVpcId(peerVpcId: String)
 
-    public fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: IResolvable) {
-    }
+    public fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: IResolvable)
 
     public
-        fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: ResourceCreationLimitPolicyProperty) {
-    }
+        fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: ResourceCreationLimitPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a16622527c205d3f8f7e8bf9ba63ad02b40fec4c20212321e8fda075d93f553f")
     public
-        fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: ResourceCreationLimitPolicyProperty.Builder.() -> Unit) {
-    }
+        fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: ResourceCreationLimitPolicyProperty.Builder.() -> Unit)
 
-    public fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
-    }
+    public fun runtimeConfiguration(runtimeConfiguration: IResolvable)
 
-    public fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty) {
-    }
+    public fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0627cf5d1239128484c5e236ab999e30df9307e33f611a0bc163bf3a7b6d62d")
     public
-        fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty.Builder.() -> Unit)
 
-    public fun scalingPolicies(scalingPolicies: IResolvable) {
-    }
+    public fun scalingPolicies(scalingPolicies: IResolvable)
 
-    public fun scalingPolicies(scalingPolicies: List<Any>) {
-    }
+    public fun scalingPolicies(scalingPolicies: List<Any>)
 
-    public fun scriptId(scriptId: String) {
-    }
+    public fun scriptId(scriptId: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun serverLaunchParameters(serverLaunchParameters: String) {
-    }
+    public fun serverLaunchParameters(serverLaunchParameters: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun serverLaunchPath(serverLaunchPath: String) {
-    }
+    public fun serverLaunchPath(serverLaunchPath: String)
   }
 
   private class BuilderImpl(
@@ -385,170 +346,169 @@ public open class CfnFleet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnFleet.Builder =
         software.amazon.awscdk.services.gamelift.CfnFleet.Builder.create(scope, id)
 
-    public override fun anywhereConfiguration(anywhereConfiguration: IResolvable) {
+    override fun anywhereConfiguration(anywhereConfiguration: IResolvable) {
       cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty) {
+    override fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty) {
       cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(AnywhereConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2661928c18c4a178bc7a01449bf72729fb5248293bfdd9f3f77a154dd4333b9")
-    public override
+    override
         fun anywhereConfiguration(anywhereConfiguration: AnywhereConfigurationProperty.Builder.() -> Unit):
         Unit = anywhereConfiguration(AnywhereConfigurationProperty(anywhereConfiguration))
 
-    public override fun applyCapacity(applyCapacity: String) {
+    override fun applyCapacity(applyCapacity: String) {
       cdkBuilder.applyCapacity(applyCapacity)
     }
 
-    public override fun buildId(buildId: String) {
+    override fun buildId(buildId: String) {
       cdkBuilder.buildId(buildId)
     }
 
-    public override fun certificateConfiguration(certificateConfiguration: IResolvable) {
+    override fun certificateConfiguration(certificateConfiguration: IResolvable) {
       cdkBuilder.certificateConfiguration(certificateConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun certificateConfiguration(certificateConfiguration: CertificateConfigurationProperty) {
       cdkBuilder.certificateConfiguration(certificateConfiguration.let(CertificateConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e7ad6c4917736d0c5335363f8da4f8d65e0ee9c6a1b8e8f30c887c572ccf8fa0")
-    public override
+    override
         fun certificateConfiguration(certificateConfiguration: CertificateConfigurationProperty.Builder.() -> Unit):
         Unit = certificateConfiguration(CertificateConfigurationProperty(certificateConfiguration))
 
-    public override fun computeType(computeType: String) {
+    override fun computeType(computeType: String) {
       cdkBuilder.computeType(computeType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun desiredEc2Instances(desiredEc2Instances: Number) {
+    override fun desiredEc2Instances(desiredEc2Instances: Number) {
       cdkBuilder.desiredEc2Instances(desiredEc2Instances)
     }
 
-    public override fun ec2InboundPermissions(ec2InboundPermissions: IResolvable) {
+    override fun ec2InboundPermissions(ec2InboundPermissions: IResolvable) {
       cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.let(IResolvable::unwrap))
     }
 
-    public override fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
+    override fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
       cdkBuilder.ec2InboundPermissions(ec2InboundPermissions)
     }
 
-    public override fun ec2InstanceType(ec2InstanceType: String) {
+    override fun ec2InstanceType(ec2InstanceType: String) {
       cdkBuilder.ec2InstanceType(ec2InstanceType)
     }
 
-    public override fun fleetType(fleetType: String) {
+    override fun fleetType(fleetType: String) {
       cdkBuilder.fleetType(fleetType)
     }
 
-    public override fun instanceRoleArn(instanceRoleArn: String) {
+    override fun instanceRoleArn(instanceRoleArn: String) {
       cdkBuilder.instanceRoleArn(instanceRoleArn)
     }
 
-    public override fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String) {
+    override fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String) {
       cdkBuilder.instanceRoleCredentialsProvider(instanceRoleCredentialsProvider)
     }
 
-    public override fun locations(locations: IResolvable) {
+    override fun locations(locations: IResolvable) {
       cdkBuilder.locations(locations.let(IResolvable::unwrap))
     }
 
-    public override fun locations(locations: List<Any>) {
+    override fun locations(locations: List<Any>) {
       cdkBuilder.locations(locations)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun logPaths(logPaths: List<String>) {
+    override fun logPaths(logPaths: List<String>) {
       cdkBuilder.logPaths(logPaths)
     }
 
-    public override fun maxSize(maxSize: Number) {
+    override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
     }
 
-    public override fun metricGroups(metricGroups: List<String>) {
+    override fun metricGroups(metricGroups: List<String>) {
       cdkBuilder.metricGroups(metricGroups)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String) {
+    override fun newGameSessionProtectionPolicy(newGameSessionProtectionPolicy: String) {
       cdkBuilder.newGameSessionProtectionPolicy(newGameSessionProtectionPolicy)
     }
 
-    public override fun peerVpcAwsAccountId(peerVpcAwsAccountId: String) {
+    override fun peerVpcAwsAccountId(peerVpcAwsAccountId: String) {
       cdkBuilder.peerVpcAwsAccountId(peerVpcAwsAccountId)
     }
 
-    public override fun peerVpcId(peerVpcId: String) {
+    override fun peerVpcId(peerVpcId: String) {
       cdkBuilder.peerVpcId(peerVpcId)
     }
 
-    public override fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: IResolvable) {
+    override fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: IResolvable) {
       cdkBuilder.resourceCreationLimitPolicy(resourceCreationLimitPolicy.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: ResourceCreationLimitPolicyProperty) {
       cdkBuilder.resourceCreationLimitPolicy(resourceCreationLimitPolicy.let(ResourceCreationLimitPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a16622527c205d3f8f7e8bf9ba63ad02b40fec4c20212321e8fda075d93f553f")
-    public override
+    override
         fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: ResourceCreationLimitPolicyProperty.Builder.() -> Unit):
         Unit =
         resourceCreationLimitPolicy(ResourceCreationLimitPolicyProperty(resourceCreationLimitPolicy))
 
-    public override fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
+    override fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
       cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty) {
+    override fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty) {
       cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(RuntimeConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0627cf5d1239128484c5e236ab999e30df9307e33f611a0bc163bf3a7b6d62d")
-    public override
+    override
         fun runtimeConfiguration(runtimeConfiguration: RuntimeConfigurationProperty.Builder.() -> Unit):
         Unit = runtimeConfiguration(RuntimeConfigurationProperty(runtimeConfiguration))
 
-    public override fun scalingPolicies(scalingPolicies: IResolvable) {
+    override fun scalingPolicies(scalingPolicies: IResolvable) {
       cdkBuilder.scalingPolicies(scalingPolicies.let(IResolvable::unwrap))
     }
 
-    public override fun scalingPolicies(scalingPolicies: List<Any>) {
+    override fun scalingPolicies(scalingPolicies: List<Any>) {
       cdkBuilder.scalingPolicies(scalingPolicies)
     }
 
-    public override fun scriptId(scriptId: String) {
+    override fun scriptId(scriptId: String) {
       cdkBuilder.scriptId(scriptId)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun serverLaunchParameters(serverLaunchParameters: String) {
+    override fun serverLaunchParameters(serverLaunchParameters: String) {
       cdkBuilder.serverLaunchParameters(serverLaunchParameters)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun serverLaunchPath(serverLaunchPath: String) {
+    override fun serverLaunchPath(serverLaunchPath: String) {
       cdkBuilder.serverLaunchPath(serverLaunchPath)
     }
 
@@ -580,8 +540,7 @@ public open class CfnFleet internal constructor(
     public fun targetValue(): Number
 
     public interface Builder {
-      public fun targetValue(targetValue: Number) {
-      }
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -589,7 +548,7 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty.builder()
 
-      public override fun targetValue(targetValue: Number) {
+      override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
 
@@ -602,7 +561,7 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty,
     ) : TargetConfigurationProperty {
-      public override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
@@ -629,8 +588,7 @@ public open class CfnFleet internal constructor(
     public fun cost(): String
 
     public interface Builder {
-      public fun cost(cost: String) {
-      }
+      public fun cost(cost: String)
     }
 
     private class BuilderImpl : Builder {
@@ -638,7 +596,7 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty.builder()
 
-      public override fun cost(cost: String) {
+      override fun cost(cost: String) {
         cdkBuilder.cost(cost)
       }
 
@@ -651,7 +609,7 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty,
     ) : AnywhereConfigurationProperty {
-      public override fun cost(): String = unwrap(this).getCost()
+      override fun cost(): String = unwrap(this).getCost()
     }
 
     public companion object {
@@ -684,17 +642,13 @@ public open class CfnFleet internal constructor(
     public fun toPort(): Number
 
     public interface Builder {
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun ipRange(ipRange: String) {
-      }
+      public fun ipRange(ipRange: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -702,19 +656,19 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty.builder()
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun ipRange(ipRange: String) {
+      override fun ipRange(ipRange: String) {
         cdkBuilder.ipRange(ipRange)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -726,13 +680,13 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty,
     ) : IpPermissionProperty {
-      public override fun fromPort(): Number = unwrap(this).getFromPort()
+      override fun fromPort(): Number = unwrap(this).getFromPort()
 
-      public override fun ipRange(): String = unwrap(this).getIpRange()
+      override fun ipRange(): String = unwrap(this).getIpRange()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun toPort(): Number = unwrap(this).getToPort()
+      override fun toPort(): Number = unwrap(this).getToPort()
     }
 
     public companion object {
@@ -761,11 +715,9 @@ public open class CfnFleet internal constructor(
     public fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
 
     public interface Builder {
-      public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
-      }
+      public fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number)
 
-      public fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
-      }
+      public fun policyPeriodInMinutes(policyPeriodInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -774,11 +726,11 @@ public open class CfnFleet internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty.builder()
 
-      public override fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
+      override fun newGameSessionsPerCreator(newGameSessionsPerCreator: Number) {
         cdkBuilder.newGameSessionsPerCreator(newGameSessionsPerCreator)
       }
 
-      public override fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
+      override fun policyPeriodInMinutes(policyPeriodInMinutes: Number) {
         cdkBuilder.policyPeriodInMinutes(policyPeriodInMinutes)
       }
 
@@ -791,10 +743,10 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty,
     ) : ResourceCreationLimitPolicyProperty {
-      public override fun newGameSessionsPerCreator(): Number? =
+      override fun newGameSessionsPerCreator(): Number? =
           unwrap(this).getNewGameSessionsPerCreator()
 
-      public override fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
+      override fun policyPeriodInMinutes(): Number? = unwrap(this).getPolicyPeriodInMinutes()
     }
 
     public companion object {
@@ -824,19 +776,15 @@ public open class CfnFleet internal constructor(
     public fun locationCapacity(): Any? = unwrap(this).getLocationCapacity()
 
     public interface Builder {
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun locationCapacity(locationCapacity: IResolvable) {
-      }
+      public fun locationCapacity(locationCapacity: IResolvable)
 
-      public fun locationCapacity(locationCapacity: LocationCapacityProperty) {
-      }
+      public fun locationCapacity(locationCapacity: LocationCapacityProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5ea934de2798ac88723461897145f3614d1ebc41bacbc214d99e3e82366b78d")
-      public fun locationCapacity(locationCapacity: LocationCapacityProperty.Builder.() -> Unit) {
-      }
+      public fun locationCapacity(locationCapacity: LocationCapacityProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -844,23 +792,22 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty.builder()
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun locationCapacity(locationCapacity: IResolvable) {
+      override fun locationCapacity(locationCapacity: IResolvable) {
         cdkBuilder.locationCapacity(locationCapacity.let(IResolvable::unwrap))
       }
 
-      public override fun locationCapacity(locationCapacity: LocationCapacityProperty) {
+      override fun locationCapacity(locationCapacity: LocationCapacityProperty) {
         cdkBuilder.locationCapacity(locationCapacity.let(LocationCapacityProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f5ea934de2798ac88723461897145f3614d1ebc41bacbc214d99e3e82366b78d")
-      public override
-          fun locationCapacity(locationCapacity: LocationCapacityProperty.Builder.() -> Unit): Unit
-          = locationCapacity(LocationCapacityProperty(locationCapacity))
+      override fun locationCapacity(locationCapacity: LocationCapacityProperty.Builder.() -> Unit):
+          Unit = locationCapacity(LocationCapacityProperty(locationCapacity))
 
       public fun build():
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty =
@@ -871,9 +818,9 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty,
     ) : LocationConfigurationProperty {
-      public override fun location(): String = unwrap(this).getLocation()
+      override fun location(): String = unwrap(this).getLocation()
 
-      public override fun locationCapacity(): Any? = unwrap(this).getLocationCapacity()
+      override fun locationCapacity(): Any? = unwrap(this).getLocationCapacity()
     }
 
     public companion object {
@@ -904,14 +851,11 @@ public open class CfnFleet internal constructor(
     public fun parameters(): String? = unwrap(this).getParameters()
 
     public interface Builder {
-      public fun concurrentExecutions(concurrentExecutions: Number) {
-      }
+      public fun concurrentExecutions(concurrentExecutions: Number)
 
-      public fun launchPath(launchPath: String) {
-      }
+      public fun launchPath(launchPath: String)
 
-      public fun parameters(parameters: String) {
-      }
+      public fun parameters(parameters: String)
     }
 
     private class BuilderImpl : Builder {
@@ -919,15 +863,15 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty.builder()
 
-      public override fun concurrentExecutions(concurrentExecutions: Number) {
+      override fun concurrentExecutions(concurrentExecutions: Number) {
         cdkBuilder.concurrentExecutions(concurrentExecutions)
       }
 
-      public override fun launchPath(launchPath: String) {
+      override fun launchPath(launchPath: String) {
         cdkBuilder.launchPath(launchPath)
       }
 
-      public override fun parameters(parameters: String) {
+      override fun parameters(parameters: String) {
         cdkBuilder.parameters(parameters)
       }
 
@@ -939,11 +883,11 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty,
     ) : ServerProcessProperty {
-      public override fun concurrentExecutions(): Number = unwrap(this).getConcurrentExecutions()
+      override fun concurrentExecutions(): Number = unwrap(this).getConcurrentExecutions()
 
-      public override fun launchPath(): String = unwrap(this).getLaunchPath()
+      override fun launchPath(): String = unwrap(this).getLaunchPath()
 
-      public override fun parameters(): String? = unwrap(this).getParameters()
+      override fun parameters(): String? = unwrap(this).getParameters()
     }
 
     public companion object {
@@ -976,17 +920,13 @@ public open class CfnFleet internal constructor(
     public fun serverProcesses(): Any? = unwrap(this).getServerProcesses()
 
     public interface Builder {
-      public fun gameSessionActivationTimeoutSeconds(gameSessionActivationTimeoutSeconds: Number) {
-      }
+      public fun gameSessionActivationTimeoutSeconds(gameSessionActivationTimeoutSeconds: Number)
 
-      public fun maxConcurrentGameSessionActivations(maxConcurrentGameSessionActivations: Number) {
-      }
+      public fun maxConcurrentGameSessionActivations(maxConcurrentGameSessionActivations: Number)
 
-      public fun serverProcesses(serverProcesses: IResolvable) {
-      }
+      public fun serverProcesses(serverProcesses: IResolvable)
 
-      public fun serverProcesses(serverProcesses: List<Any>) {
-      }
+      public fun serverProcesses(serverProcesses: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -994,21 +934,21 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty.builder()
 
-      public override
+      override
           fun gameSessionActivationTimeoutSeconds(gameSessionActivationTimeoutSeconds: Number) {
         cdkBuilder.gameSessionActivationTimeoutSeconds(gameSessionActivationTimeoutSeconds)
       }
 
-      public override
+      override
           fun maxConcurrentGameSessionActivations(maxConcurrentGameSessionActivations: Number) {
         cdkBuilder.maxConcurrentGameSessionActivations(maxConcurrentGameSessionActivations)
       }
 
-      public override fun serverProcesses(serverProcesses: IResolvable) {
+      override fun serverProcesses(serverProcesses: IResolvable) {
         cdkBuilder.serverProcesses(serverProcesses.let(IResolvable::unwrap))
       }
 
-      public override fun serverProcesses(serverProcesses: List<Any>) {
+      override fun serverProcesses(serverProcesses: List<Any>) {
         cdkBuilder.serverProcesses(serverProcesses)
       }
 
@@ -1021,13 +961,13 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty,
     ) : RuntimeConfigurationProperty {
-      public override fun gameSessionActivationTimeoutSeconds(): Number? =
+      override fun gameSessionActivationTimeoutSeconds(): Number? =
           unwrap(this).getGameSessionActivationTimeoutSeconds()
 
-      public override fun maxConcurrentGameSessionActivations(): Number? =
+      override fun maxConcurrentGameSessionActivations(): Number? =
           unwrap(this).getMaxConcurrentGameSessionActivations()
 
-      public override fun serverProcesses(): Any? = unwrap(this).getServerProcesses()
+      override fun serverProcesses(): Any? = unwrap(this).getServerProcesses()
     }
 
     public companion object {
@@ -1058,14 +998,11 @@ public open class CfnFleet internal constructor(
     public fun minSize(): Number
 
     public interface Builder {
-      public fun desiredEc2Instances(desiredEc2Instances: Number) {
-      }
+      public fun desiredEc2Instances(desiredEc2Instances: Number)
 
-      public fun maxSize(maxSize: Number) {
-      }
+      public fun maxSize(maxSize: Number)
 
-      public fun minSize(minSize: Number) {
-      }
+      public fun minSize(minSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1073,15 +1010,15 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty.builder()
 
-      public override fun desiredEc2Instances(desiredEc2Instances: Number) {
+      override fun desiredEc2Instances(desiredEc2Instances: Number) {
         cdkBuilder.desiredEc2Instances(desiredEc2Instances)
       }
 
-      public override fun maxSize(maxSize: Number) {
+      override fun maxSize(maxSize: Number) {
         cdkBuilder.maxSize(maxSize)
       }
 
-      public override fun minSize(minSize: Number) {
+      override fun minSize(minSize: Number) {
         cdkBuilder.minSize(minSize)
       }
 
@@ -1093,11 +1030,11 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty,
     ) : LocationCapacityProperty {
-      public override fun desiredEc2Instances(): Number = unwrap(this).getDesiredEc2Instances()
+      override fun desiredEc2Instances(): Number = unwrap(this).getDesiredEc2Instances()
 
-      public override fun maxSize(): Number = unwrap(this).getMaxSize()
+      override fun maxSize(): Number = unwrap(this).getMaxSize()
 
-      public override fun minSize(): Number = unwrap(this).getMinSize()
+      override fun minSize(): Number = unwrap(this).getMinSize()
     }
 
     public companion object {
@@ -1146,50 +1083,36 @@ public open class CfnFleet internal constructor(
     public fun updateStatus(): String? = unwrap(this).getUpdateStatus()
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: String) {
-      }
+      public fun comparisonOperator(comparisonOperator: String)
 
-      public fun evaluationPeriods(evaluationPeriods: Number) {
-      }
+      public fun evaluationPeriods(evaluationPeriods: Number)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun policyType(policyType: String) {
-      }
+      public fun policyType(policyType: String)
 
-      public fun scalingAdjustment(scalingAdjustment: Number) {
-      }
+      public fun scalingAdjustment(scalingAdjustment: Number)
 
-      public fun scalingAdjustmentType(scalingAdjustmentType: String) {
-      }
+      public fun scalingAdjustmentType(scalingAdjustmentType: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun targetConfiguration(targetConfiguration: IResolvable) {
-      }
+      public fun targetConfiguration(targetConfiguration: IResolvable)
 
-      public fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
-      }
+      public fun targetConfiguration(targetConfiguration: TargetConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0b0b337b57e3a5a24e7cb4418ee3663db31c914108fb66054b6598bc2c749e8")
       public
-          fun targetConfiguration(targetConfiguration: TargetConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun targetConfiguration(targetConfiguration: TargetConfigurationProperty.Builder.() -> Unit)
 
-      public fun threshold(threshold: Number) {
-      }
+      public fun threshold(threshold: Number)
 
-      public fun updateStatus(updateStatus: String) {
-      }
+      public fun updateStatus(updateStatus: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1197,61 +1120,61 @@ public open class CfnFleet internal constructor(
           software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty.builder()
 
-      public override fun comparisonOperator(comparisonOperator: String) {
+      override fun comparisonOperator(comparisonOperator: String) {
         cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
-      public override fun evaluationPeriods(evaluationPeriods: Number) {
+      override fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun policyType(policyType: String) {
+      override fun policyType(policyType: String) {
         cdkBuilder.policyType(policyType)
       }
 
-      public override fun scalingAdjustment(scalingAdjustment: Number) {
+      override fun scalingAdjustment(scalingAdjustment: Number) {
         cdkBuilder.scalingAdjustment(scalingAdjustment)
       }
 
-      public override fun scalingAdjustmentType(scalingAdjustmentType: String) {
+      override fun scalingAdjustmentType(scalingAdjustmentType: String) {
         cdkBuilder.scalingAdjustmentType(scalingAdjustmentType)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun targetConfiguration(targetConfiguration: IResolvable) {
+      override fun targetConfiguration(targetConfiguration: IResolvable) {
         cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
+      override fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
         cdkBuilder.targetConfiguration(targetConfiguration.let(TargetConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d0b0b337b57e3a5a24e7cb4418ee3663db31c914108fb66054b6598bc2c749e8")
-      public override
+      override
           fun targetConfiguration(targetConfiguration: TargetConfigurationProperty.Builder.() -> Unit):
           Unit = targetConfiguration(TargetConfigurationProperty(targetConfiguration))
 
-      public override fun threshold(threshold: Number) {
+      override fun threshold(threshold: Number) {
         cdkBuilder.threshold(threshold)
       }
 
-      public override fun updateStatus(updateStatus: String) {
+      override fun updateStatus(updateStatus: String) {
         cdkBuilder.updateStatus(updateStatus)
       }
 
@@ -1263,29 +1186,29 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty,
     ) : ScalingPolicyProperty {
-      public override fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
+      override fun comparisonOperator(): String? = unwrap(this).getComparisonOperator()
 
-      public override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
+      override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
 
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun policyType(): String? = unwrap(this).getPolicyType()
+      override fun policyType(): String? = unwrap(this).getPolicyType()
 
-      public override fun scalingAdjustment(): Number? = unwrap(this).getScalingAdjustment()
+      override fun scalingAdjustment(): Number? = unwrap(this).getScalingAdjustment()
 
-      public override fun scalingAdjustmentType(): String? = unwrap(this).getScalingAdjustmentType()
+      override fun scalingAdjustmentType(): String? = unwrap(this).getScalingAdjustmentType()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun targetConfiguration(): Any? = unwrap(this).getTargetConfiguration()
+      override fun targetConfiguration(): Any? = unwrap(this).getTargetConfiguration()
 
-      public override fun threshold(): Number? = unwrap(this).getThreshold()
+      override fun threshold(): Number? = unwrap(this).getThreshold()
 
-      public override fun updateStatus(): String? = unwrap(this).getUpdateStatus()
+      override fun updateStatus(): String? = unwrap(this).getUpdateStatus()
     }
 
     public companion object {
@@ -1312,8 +1235,7 @@ public open class CfnFleet internal constructor(
     public fun certificateType(): String
 
     public interface Builder {
-      public fun certificateType(certificateType: String) {
-      }
+      public fun certificateType(certificateType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1322,7 +1244,7 @@ public open class CfnFleet internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty.builder()
 
-      public override fun certificateType(certificateType: String) {
+      override fun certificateType(certificateType: String) {
         cdkBuilder.certificateType(certificateType)
       }
 
@@ -1335,7 +1257,7 @@ public open class CfnFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty,
     ) : CertificateConfigurationProperty {
-      public override fun certificateType(): String = unwrap(this).getCertificateType()
+      override fun certificateType(): String = unwrap(this).getCertificateType()
     }
 
     public companion object {

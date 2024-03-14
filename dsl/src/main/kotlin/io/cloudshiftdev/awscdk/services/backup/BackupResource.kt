@@ -23,14 +23,11 @@ public open class BackupResource internal constructor(
       unwrap(this).getTagCondition()?.let(TagCondition::wrap)
 
   public interface Builder {
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun operation(operation: TagOperation) {
-    }
+    public fun operation(operation: TagOperation)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl(
@@ -40,15 +37,15 @@ public open class BackupResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupResource.Builder =
         software.amazon.awscdk.services.backup.BackupResource.Builder.create(resource, construct)
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun operation(operation: TagOperation) {
+    override fun operation(operation: TagOperation) {
       cdkBuilder.operation(operation.let(TagOperation::unwrap))
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 

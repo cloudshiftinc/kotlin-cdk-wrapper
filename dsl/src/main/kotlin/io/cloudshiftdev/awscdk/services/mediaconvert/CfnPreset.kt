@@ -57,20 +57,15 @@ public open class CfnPreset internal constructor(
   }
 
   public interface Builder {
-    public fun category(category: String) {
-    }
+    public fun category(category: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun tingsJson(settingsJson: Any) {
-    }
+    public fun tingsJson(settingsJson: Any)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnPreset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconvert.CfnPreset.Builder =
         software.amazon.awscdk.services.mediaconvert.CfnPreset.Builder.create(scope, id)
 
-    public override fun category(category: String) {
+    override fun category(category: String) {
       cdkBuilder.category(category)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun tingsJson(settingsJson: Any) {
+    override fun tingsJson(settingsJson: Any) {
       cdkBuilder.settingsJson(settingsJson)
     }
 

@@ -70,28 +70,21 @@ public open class CfnSequenceStore internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun fallbackLocation(fallbackLocation: String) {
-    }
+    public fun fallbackLocation(fallbackLocation: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun sseConfig(sseConfig: IResolvable) {
-    }
+    public fun sseConfig(sseConfig: IResolvable)
 
-    public fun sseConfig(sseConfig: SseConfigProperty) {
-    }
+    public fun sseConfig(sseConfig: SseConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5054d3a312f35f864b6398f168248b335cf44ed2e39da07fcbc901f9f91d5d54")
-    public fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -101,32 +94,32 @@ public open class CfnSequenceStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.omics.CfnSequenceStore.Builder =
         software.amazon.awscdk.services.omics.CfnSequenceStore.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun fallbackLocation(fallbackLocation: String) {
+    override fun fallbackLocation(fallbackLocation: String) {
       cdkBuilder.fallbackLocation(fallbackLocation)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun sseConfig(sseConfig: IResolvable) {
+    override fun sseConfig(sseConfig: IResolvable) {
       cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sseConfig(sseConfig: SseConfigProperty) {
+    override fun sseConfig(sseConfig: SseConfigProperty) {
       cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5054d3a312f35f864b6398f168248b335cf44ed2e39da07fcbc901f9f91d5d54")
-    public override fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit): Unit =
+    override fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit): Unit =
         sseConfig(SseConfigProperty(sseConfig))
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -160,11 +153,9 @@ public open class CfnSequenceStore internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -172,11 +163,11 @@ public open class CfnSequenceStore internal constructor(
           software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty.Builder =
           software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -188,9 +179,9 @@ public open class CfnSequenceStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnSequenceStore.SseConfigProperty,
     ) : SseConfigProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

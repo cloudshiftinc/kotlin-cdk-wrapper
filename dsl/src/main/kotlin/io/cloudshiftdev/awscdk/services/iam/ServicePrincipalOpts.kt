@@ -11,22 +11,20 @@ public interface ServicePrincipalOpts {
   public fun region(): String? = unwrap(this).getRegion()
 
   public interface Builder {
-    public fun conditions(conditions: Map<String, Any>) {
-    }
+    public fun conditions(conditions: Map<String, Any>)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.ServicePrincipalOpts.Builder =
         software.amazon.awscdk.services.iam.ServicePrincipalOpts.builder()
 
-    public override fun conditions(conditions: Map<String, Any>) {
+    override fun conditions(conditions: Map<String, Any>) {
       cdkBuilder.conditions(conditions)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -37,9 +35,9 @@ public interface ServicePrincipalOpts {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.ServicePrincipalOpts,
   ) : ServicePrincipalOpts {
-    public override fun conditions(): Map<String, Any> = unwrap(this).getConditions() ?: emptyMap()
+    override fun conditions(): Map<String, Any> = unwrap(this).getConditions() ?: emptyMap()
 
-    public override fun region(): String? = unwrap(this).getRegion()
+    override fun region(): String? = unwrap(this).getRegion()
   }
 
   public companion object {

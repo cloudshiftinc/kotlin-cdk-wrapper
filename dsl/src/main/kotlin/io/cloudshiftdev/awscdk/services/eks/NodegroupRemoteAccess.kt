@@ -12,22 +12,20 @@ public interface NodegroupRemoteAccess {
   public fun sshKeyName(): String
 
   public interface Builder {
-    public fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>) {
-    }
+    public fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>)
 
-    public fun sshKeyName(sshKeyName: String) {
-    }
+    public fun sshKeyName(sshKeyName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.NodegroupRemoteAccess.Builder =
         software.amazon.awscdk.services.eks.NodegroupRemoteAccess.builder()
 
-    public override fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>) {
+    override fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>) {
       cdkBuilder.sourceSecurityGroups(sourceSecurityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun sshKeyName(sshKeyName: String) {
+    override fun sshKeyName(sshKeyName: String) {
       cdkBuilder.sshKeyName(sshKeyName)
     }
 
@@ -38,10 +36,10 @@ public interface NodegroupRemoteAccess {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.NodegroupRemoteAccess,
   ) : NodegroupRemoteAccess {
-    public override fun sourceSecurityGroups(): List<ISecurityGroup> =
+    override fun sourceSecurityGroups(): List<ISecurityGroup> =
         unwrap(this).getSourceSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    public override fun sshKeyName(): String = unwrap(this).getSshKeyName()
+    override fun sshKeyName(): String = unwrap(this).getSshKeyName()
   }
 
   public companion object {

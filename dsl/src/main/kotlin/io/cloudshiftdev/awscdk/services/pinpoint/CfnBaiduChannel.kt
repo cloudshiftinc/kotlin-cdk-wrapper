@@ -49,20 +49,15 @@ public open class CfnBaiduChannel internal constructor(
   }
 
   public interface Builder {
-    public fun apiKey(apiKey: String) {
-    }
+    public fun apiKey(apiKey: String)
 
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun secretKey(secretKey: String) {
-    }
+    public fun secretKey(secretKey: String)
   }
 
   private class BuilderImpl(
@@ -72,23 +67,23 @@ public open class CfnBaiduChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnBaiduChannel.Builder =
         software.amazon.awscdk.services.pinpoint.CfnBaiduChannel.Builder.create(scope, id)
 
-    public override fun apiKey(apiKey: String) {
+    override fun apiKey(apiKey: String) {
       cdkBuilder.apiKey(apiKey)
     }
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun secretKey(secretKey: String) {
+    override fun secretKey(secretKey: String) {
       cdkBuilder.secretKey(secretKey)
     }
 

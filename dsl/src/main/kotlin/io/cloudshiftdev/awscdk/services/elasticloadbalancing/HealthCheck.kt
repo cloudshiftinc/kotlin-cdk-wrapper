@@ -22,57 +22,50 @@ public interface HealthCheck {
   public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
 
   public interface Builder {
-    public fun healthyThreshold(healthyThreshold: Number) {
-    }
+    public fun healthyThreshold(healthyThreshold: Number)
 
-    public fun interval(interval: Duration) {
-    }
+    public fun interval(interval: Duration)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: LoadBalancingProtocol) {
-    }
+    public fun protocol(protocol: LoadBalancingProtocol)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun unhealthyThreshold(unhealthyThreshold: Number) {
-    }
+    public fun unhealthyThreshold(unhealthyThreshold: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.elasticloadbalancing.HealthCheck.Builder
         = software.amazon.awscdk.services.elasticloadbalancing.HealthCheck.builder()
 
-    public override fun healthyThreshold(healthyThreshold: Number) {
+    override fun healthyThreshold(healthyThreshold: Number) {
       cdkBuilder.healthyThreshold(healthyThreshold)
     }
 
-    public override fun interval(interval: Duration) {
+    override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: LoadBalancingProtocol) {
+    override fun protocol(protocol: LoadBalancingProtocol) {
       cdkBuilder.protocol(protocol.let(LoadBalancingProtocol::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun unhealthyThreshold(unhealthyThreshold: Number) {
+    override fun unhealthyThreshold(unhealthyThreshold: Number) {
       cdkBuilder.unhealthyThreshold(unhealthyThreshold)
     }
 
@@ -83,20 +76,20 @@ public interface HealthCheck {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancing.HealthCheck,
   ) : HealthCheck {
-    public override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+    override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
 
-    public override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
+    override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
 
-    public override fun path(): String? = unwrap(this).getPath()
+    override fun path(): String? = unwrap(this).getPath()
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun protocol(): LoadBalancingProtocol? =
+    override fun protocol(): LoadBalancingProtocol? =
         unwrap(this).getProtocol()?.let(LoadBalancingProtocol::wrap)
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+    override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
   }
 
   public companion object {

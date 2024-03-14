@@ -28,11 +28,9 @@ public open class CfnMapping internal constructor(
   }
 
   public interface Builder {
-    public fun lazy(lazy: Boolean) {
-    }
+    public fun lazy(lazy: Boolean)
 
-    public fun mapping(mapping: Map<String, Map<String, Any>>) {
-    }
+    public fun mapping(mapping: Map<String, Map<String, Any>>)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnMapping.Builder =
         software.amazon.awscdk.CfnMapping.Builder.create(scope, id)
 
-    public override fun lazy(lazy: Boolean) {
+    override fun lazy(lazy: Boolean) {
       cdkBuilder.lazy(lazy)
     }
 
-    public override fun mapping(mapping: Map<String, Map<String, Any>>) {
+    override fun mapping(mapping: Map<String, Map<String, Any>>) {
       cdkBuilder.mapping(mapping)
     }
 

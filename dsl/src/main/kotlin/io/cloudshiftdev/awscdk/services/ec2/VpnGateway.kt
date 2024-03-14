@@ -13,11 +13,9 @@ public open class VpnGateway internal constructor(
   public override fun gatewayId(): String = unwrap(this).getGatewayId()
 
   public interface Builder {
-    public fun amazonSideAsn(amazonSideAsn: Number) {
-    }
+    public fun amazonSideAsn(amazonSideAsn: Number)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -27,11 +25,11 @@ public open class VpnGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnGateway.Builder =
         software.amazon.awscdk.services.ec2.VpnGateway.Builder.create(scope, id)
 
-    public override fun amazonSideAsn(amazonSideAsn: Number) {
+    override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

@@ -16,17 +16,13 @@ public interface ListenerOptions {
       unwrap(this).getProtocol()?.let(ConnectionProtocol::wrap)
 
   public interface Builder {
-    public fun clientAffinity(clientAffinity: ClientAffinity) {
-    }
+    public fun clientAffinity(clientAffinity: ClientAffinity)
 
-    public fun listenerName(listenerName: String) {
-    }
+    public fun listenerName(listenerName: String)
 
-    public fun portRanges(portRanges: List<PortRange>) {
-    }
+    public fun portRanges(portRanges: List<PortRange>)
 
-    public fun protocol(protocol: ConnectionProtocol) {
-    }
+    public fun protocol(protocol: ConnectionProtocol)
   }
 
   private class BuilderImpl : Builder {
@@ -34,19 +30,19 @@ public interface ListenerOptions {
         software.amazon.awscdk.services.globalaccelerator.ListenerOptions.Builder =
         software.amazon.awscdk.services.globalaccelerator.ListenerOptions.builder()
 
-    public override fun clientAffinity(clientAffinity: ClientAffinity) {
+    override fun clientAffinity(clientAffinity: ClientAffinity) {
       cdkBuilder.clientAffinity(clientAffinity.let(ClientAffinity::unwrap))
     }
 
-    public override fun listenerName(listenerName: String) {
+    override fun listenerName(listenerName: String) {
       cdkBuilder.listenerName(listenerName)
     }
 
-    public override fun portRanges(portRanges: List<PortRange>) {
+    override fun portRanges(portRanges: List<PortRange>) {
       cdkBuilder.portRanges(portRanges.map(PortRange::unwrap))
     }
 
-    public override fun protocol(protocol: ConnectionProtocol) {
+    override fun protocol(protocol: ConnectionProtocol) {
       cdkBuilder.protocol(protocol.let(ConnectionProtocol::unwrap))
     }
 
@@ -57,15 +53,14 @@ public interface ListenerOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.ListenerOptions,
   ) : ListenerOptions {
-    public override fun clientAffinity(): ClientAffinity? =
+    override fun clientAffinity(): ClientAffinity? =
         unwrap(this).getClientAffinity()?.let(ClientAffinity::wrap)
 
-    public override fun listenerName(): String? = unwrap(this).getListenerName()
+    override fun listenerName(): String? = unwrap(this).getListenerName()
 
-    public override fun portRanges(): List<PortRange> =
-        unwrap(this).getPortRanges().map(PortRange::wrap)
+    override fun portRanges(): List<PortRange> = unwrap(this).getPortRanges().map(PortRange::wrap)
 
-    public override fun protocol(): ConnectionProtocol? =
+    override fun protocol(): ConnectionProtocol? =
         unwrap(this).getProtocol()?.let(ConnectionProtocol::wrap)
   }
 

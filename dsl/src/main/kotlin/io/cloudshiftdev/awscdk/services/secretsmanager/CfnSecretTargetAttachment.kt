@@ -36,14 +36,11 @@ public open class CfnSecretTargetAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun secretId(secretId: String) {
-    }
+    public fun secretId(secretId: String)
 
-    public fun targetId(targetId: String) {
-    }
+    public fun targetId(targetId: String)
 
-    public fun targetType(targetType: String) {
-    }
+    public fun targetType(targetType: String)
   }
 
   private class BuilderImpl(
@@ -55,15 +52,15 @@ public open class CfnSecretTargetAttachment internal constructor(
         software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment.Builder.create(scope,
         id)
 
-    public override fun secretId(secretId: String) {
+    override fun secretId(secretId: String) {
       cdkBuilder.secretId(secretId)
     }
 
-    public override fun targetId(targetId: String) {
+    override fun targetId(targetId: String) {
       cdkBuilder.targetId(targetId)
     }
 
-    public override fun targetType(targetType: String) {
+    override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
 

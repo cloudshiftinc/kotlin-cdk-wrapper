@@ -10,22 +10,20 @@ public interface VpnGatewayProps {
   public fun type(): String
 
   public interface Builder {
-    public fun amazonSideAsn(amazonSideAsn: Number) {
-    }
+    public fun amazonSideAsn(amazonSideAsn: Number)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnGatewayProps.Builder =
         software.amazon.awscdk.services.ec2.VpnGatewayProps.builder()
 
-    public override fun amazonSideAsn(amazonSideAsn: Number) {
+    override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -35,9 +33,9 @@ public interface VpnGatewayProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpnGatewayProps,
   ) : VpnGatewayProps {
-    public override fun amazonSideAsn(): Number? = unwrap(this).getAmazonSideAsn()
+    override fun amazonSideAsn(): Number? = unwrap(this).getAmazonSideAsn()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

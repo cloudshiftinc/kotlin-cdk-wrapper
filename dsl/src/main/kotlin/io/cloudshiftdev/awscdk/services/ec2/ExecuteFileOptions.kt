@@ -9,22 +9,20 @@ public interface ExecuteFileOptions {
   public fun filePath(): String
 
   public interface Builder {
-    public fun arguments(arguments: String) {
-    }
+    public fun arguments(arguments: String)
 
-    public fun filePath(filePath: String) {
-    }
+    public fun filePath(filePath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ExecuteFileOptions.Builder =
         software.amazon.awscdk.services.ec2.ExecuteFileOptions.builder()
 
-    public override fun arguments(arguments: String) {
+    override fun arguments(arguments: String) {
       cdkBuilder.arguments(arguments)
     }
 
-    public override fun filePath(filePath: String) {
+    override fun filePath(filePath: String) {
       cdkBuilder.filePath(filePath)
     }
 
@@ -34,9 +32,9 @@ public interface ExecuteFileOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ExecuteFileOptions,
   ) : ExecuteFileOptions {
-    public override fun arguments(): String? = unwrap(this).getArguments()
+    override fun arguments(): String? = unwrap(this).getArguments()
 
-    public override fun filePath(): String = unwrap(this).getFilePath()
+    override fun filePath(): String = unwrap(this).getFilePath()
   }
 
   public companion object {

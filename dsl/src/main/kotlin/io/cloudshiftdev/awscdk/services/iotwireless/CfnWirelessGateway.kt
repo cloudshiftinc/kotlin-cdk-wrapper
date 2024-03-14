@@ -82,34 +82,25 @@ public open class CfnWirelessGateway internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
-    }
+    public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String)
 
-    public fun loRaWan(loRaWan: IResolvable) {
-    }
+    public fun loRaWan(loRaWan: IResolvable)
 
-    public fun loRaWan(loRaWan: LoRaWANGatewayProperty) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANGatewayProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2edb31ea263b4d6a7606bcf64e145d28b52083400d9b3be894280b6d67deae33")
-    public fun loRaWan(loRaWan: LoRaWANGatewayProperty.Builder.() -> Unit) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANGatewayProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun thingArn(thingArn: String) {
-    }
+    public fun thingArn(thingArn: String)
 
-    public fun thingName(thingName: String) {
-    }
+    public fun thingName(thingName: String)
   }
 
   private class BuilderImpl(
@@ -119,40 +110,40 @@ public open class CfnWirelessGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.Builder =
         software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
+    override fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
       cdkBuilder.lastUplinkReceivedAt(lastUplinkReceivedAt)
     }
 
-    public override fun loRaWan(loRaWan: IResolvable) {
+    override fun loRaWan(loRaWan: IResolvable) {
       cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWan(loRaWan: LoRaWANGatewayProperty) {
+    override fun loRaWan(loRaWan: LoRaWANGatewayProperty) {
       cdkBuilder.loRaWan(loRaWan.let(LoRaWANGatewayProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2edb31ea263b4d6a7606bcf64e145d28b52083400d9b3be894280b6d67deae33")
-    public override fun loRaWan(loRaWan: LoRaWANGatewayProperty.Builder.() -> Unit): Unit =
+    override fun loRaWan(loRaWan: LoRaWANGatewayProperty.Builder.() -> Unit): Unit =
         loRaWan(LoRaWANGatewayProperty(loRaWan))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun thingArn(thingArn: String) {
+    override fun thingArn(thingArn: String) {
       cdkBuilder.thingArn(thingArn)
     }
 
-    public override fun thingName(thingName: String) {
+    override fun thingName(thingName: String) {
       cdkBuilder.thingName(thingName)
     }
 
@@ -187,11 +178,9 @@ public open class CfnWirelessGateway internal constructor(
     public fun rfRegion(): String
 
     public interface Builder {
-      public fun gatewayEui(gatewayEui: String) {
-      }
+      public fun gatewayEui(gatewayEui: String)
 
-      public fun rfRegion(rfRegion: String) {
-      }
+      public fun rfRegion(rfRegion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -200,11 +189,11 @@ public open class CfnWirelessGateway internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty.builder()
 
-      public override fun gatewayEui(gatewayEui: String) {
+      override fun gatewayEui(gatewayEui: String) {
         cdkBuilder.gatewayEui(gatewayEui)
       }
 
-      public override fun rfRegion(rfRegion: String) {
+      override fun rfRegion(rfRegion: String) {
         cdkBuilder.rfRegion(rfRegion)
       }
 
@@ -217,9 +206,9 @@ public open class CfnWirelessGateway internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessGateway.LoRaWANGatewayProperty,
     ) : LoRaWANGatewayProperty {
-      public override fun gatewayEui(): String = unwrap(this).getGatewayEui()
+      override fun gatewayEui(): String = unwrap(this).getGatewayEui()
 
-      public override fun rfRegion(): String = unwrap(this).getRfRegion()
+      override fun rfRegion(): String = unwrap(this).getRfRegion()
     }
 
     public companion object {

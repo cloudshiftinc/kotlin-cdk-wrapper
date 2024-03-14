@@ -20,26 +20,19 @@ public interface SAMLOptionsProperty {
   public fun subjectKey(): String? = unwrap(this).getSubjectKey()
 
   public interface Builder {
-    public fun idpEntityId(idpEntityId: String) {
-    }
+    public fun idpEntityId(idpEntityId: String)
 
-    public fun idpMetadataContent(idpMetadataContent: String) {
-    }
+    public fun idpMetadataContent(idpMetadataContent: String)
 
-    public fun masterBackendRole(masterBackendRole: String) {
-    }
+    public fun masterBackendRole(masterBackendRole: String)
 
-    public fun masterUserName(masterUserName: String) {
-    }
+    public fun masterUserName(masterUserName: String)
 
-    public fun rolesKey(rolesKey: String) {
-    }
+    public fun rolesKey(rolesKey: String)
 
-    public fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
-    }
+    public fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number)
 
-    public fun subjectKey(subjectKey: String) {
-    }
+    public fun subjectKey(subjectKey: String)
   }
 
   private class BuilderImpl : Builder {
@@ -47,31 +40,31 @@ public interface SAMLOptionsProperty {
         software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty.Builder =
         software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty.builder()
 
-    public override fun idpEntityId(idpEntityId: String) {
+    override fun idpEntityId(idpEntityId: String) {
       cdkBuilder.idpEntityId(idpEntityId)
     }
 
-    public override fun idpMetadataContent(idpMetadataContent: String) {
+    override fun idpMetadataContent(idpMetadataContent: String) {
       cdkBuilder.idpMetadataContent(idpMetadataContent)
     }
 
-    public override fun masterBackendRole(masterBackendRole: String) {
+    override fun masterBackendRole(masterBackendRole: String) {
       cdkBuilder.masterBackendRole(masterBackendRole)
     }
 
-    public override fun masterUserName(masterUserName: String) {
+    override fun masterUserName(masterUserName: String) {
       cdkBuilder.masterUserName(masterUserName)
     }
 
-    public override fun rolesKey(rolesKey: String) {
+    override fun rolesKey(rolesKey: String) {
       cdkBuilder.rolesKey(rolesKey)
     }
 
-    public override fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
+    override fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
       cdkBuilder.sessionTimeoutMinutes(sessionTimeoutMinutes)
     }
 
-    public override fun subjectKey(subjectKey: String) {
+    override fun subjectKey(subjectKey: String) {
       cdkBuilder.subjectKey(subjectKey)
     }
 
@@ -82,19 +75,19 @@ public interface SAMLOptionsProperty {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty,
   ) : SAMLOptionsProperty {
-    public override fun idpEntityId(): String = unwrap(this).getIdpEntityId()
+    override fun idpEntityId(): String = unwrap(this).getIdpEntityId()
 
-    public override fun idpMetadataContent(): String = unwrap(this).getIdpMetadataContent()
+    override fun idpMetadataContent(): String = unwrap(this).getIdpMetadataContent()
 
-    public override fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
+    override fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
 
-    public override fun masterUserName(): String? = unwrap(this).getMasterUserName()
+    override fun masterUserName(): String? = unwrap(this).getMasterUserName()
 
-    public override fun rolesKey(): String? = unwrap(this).getRolesKey()
+    override fun rolesKey(): String? = unwrap(this).getRolesKey()
 
-    public override fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
+    override fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
 
-    public override fun subjectKey(): String? = unwrap(this).getSubjectKey()
+    override fun subjectKey(): String? = unwrap(this).getSubjectKey()
   }
 
   public companion object {

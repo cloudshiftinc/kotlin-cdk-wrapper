@@ -10,11 +10,9 @@ public interface PortfolioShareOptions {
   public fun shareTagOptions(): Boolean? = unwrap(this).getShareTagOptions()
 
   public interface Builder {
-    public fun messageLanguage(messageLanguage: MessageLanguage) {
-    }
+    public fun messageLanguage(messageLanguage: MessageLanguage)
 
-    public fun shareTagOptions(shareTagOptions: Boolean) {
-    }
+    public fun shareTagOptions(shareTagOptions: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface PortfolioShareOptions {
         software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions.Builder =
         software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions.builder()
 
-    public override fun messageLanguage(messageLanguage: MessageLanguage) {
+    override fun messageLanguage(messageLanguage: MessageLanguage) {
       cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
     }
 
-    public override fun shareTagOptions(shareTagOptions: Boolean) {
+    override fun shareTagOptions(shareTagOptions: Boolean) {
       cdkBuilder.shareTagOptions(shareTagOptions)
     }
 
@@ -37,10 +35,10 @@ public interface PortfolioShareOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions,
   ) : PortfolioShareOptions {
-    public override fun messageLanguage(): MessageLanguage? =
+    override fun messageLanguage(): MessageLanguage? =
         unwrap(this).getMessageLanguage()?.let(MessageLanguage::wrap)
 
-    public override fun shareTagOptions(): Boolean? = unwrap(this).getShareTagOptions()
+    override fun shareTagOptions(): Boolean? = unwrap(this).getShareTagOptions()
   }
 
   public companion object {

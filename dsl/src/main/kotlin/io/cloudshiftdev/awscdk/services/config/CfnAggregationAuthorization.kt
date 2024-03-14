@@ -44,14 +44,11 @@ public open class CfnAggregationAuthorization internal constructor(
   }
 
   public interface Builder {
-    public fun authorizedAccountId(authorizedAccountId: String) {
-    }
+    public fun authorizedAccountId(authorizedAccountId: String)
 
-    public fun authorizedAwsRegion(authorizedAwsRegion: String) {
-    }
+    public fun authorizedAwsRegion(authorizedAwsRegion: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnAggregationAuthorization internal constructor(
         software.amazon.awscdk.services.config.CfnAggregationAuthorization.Builder =
         software.amazon.awscdk.services.config.CfnAggregationAuthorization.Builder.create(scope, id)
 
-    public override fun authorizedAccountId(authorizedAccountId: String) {
+    override fun authorizedAccountId(authorizedAccountId: String) {
       cdkBuilder.authorizedAccountId(authorizedAccountId)
     }
 
-    public override fun authorizedAwsRegion(authorizedAwsRegion: String) {
+    override fun authorizedAwsRegion(authorizedAwsRegion: String) {
       cdkBuilder.authorizedAwsRegion(authorizedAwsRegion)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

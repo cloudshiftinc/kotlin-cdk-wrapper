@@ -27,88 +27,63 @@ public open class CodePipeline internal constructor(
   public open fun synthProject(): IProject = unwrap(this).getSynthProject().let(IProject::wrap)
 
   public interface Builder {
-    public fun artifactBucket(artifactBucket: IBucket) {
-    }
+    public fun artifactBucket(artifactBucket: IBucket)
 
-    public
-        fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions) {
-    }
+    public fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13976c16c7fda8250624b156d2574ea437cfda46a000cb44a752fa302b503f7e")
     public
-        fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit) {
-    }
+        fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit)
 
-    public fun cliVersion(cliVersion: String) {
-    }
+    public fun cliVersion(cliVersion: String)
 
-    public fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions) {
-    }
+    public fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("92416628ee0d4ef7efc74754c30fcf9c872c992904f5b1db3c94b24ca77cd7ed")
-    public fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions.Builder.() -> Unit) {
-    }
+    public fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions.Builder.() -> Unit)
 
-    public fun codePipeline(codePipeline: Pipeline) {
-    }
+    public fun codePipeline(codePipeline: Pipeline)
 
-    public fun crossAccountKeys(crossAccountKeys: Boolean) {
-    }
+    public fun crossAccountKeys(crossAccountKeys: Boolean)
 
-    public fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>) {
-    }
+    public fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>)
 
-    public fun dockerCredentials(dockerCredentials: List<DockerCredential>) {
-    }
+    public fun dockerCredentials(dockerCredentials: List<DockerCredential>)
 
-    public fun dockerEnabledForSelfMutation(dockerEnabledForSelfMutation: Boolean) {
-    }
+    public fun dockerEnabledForSelfMutation(dockerEnabledForSelfMutation: Boolean)
 
-    public fun dockerEnabledForSynth(dockerEnabledForSynth: Boolean) {
-    }
+    public fun dockerEnabledForSynth(dockerEnabledForSynth: Boolean)
 
-    public fun enableKeyRotation(enableKeyRotation: Boolean) {
-    }
+    public fun enableKeyRotation(enableKeyRotation: Boolean)
 
-    public fun pipelineName(pipelineName: String) {
-    }
+    public fun pipelineName(pipelineName: String)
 
-    public fun publishAssetsInParallel(publishAssetsInParallel: Boolean) {
-    }
+    public fun publishAssetsInParallel(publishAssetsInParallel: Boolean)
 
-    public fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
-    }
+    public fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun selfMutation(selfMutation: Boolean) {
-    }
+    public fun selfMutation(selfMutation: Boolean)
 
-    public fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions) {
-    }
+    public fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2790694c1a1ce1299e7bfb748866e114b8b330eb250494bb1b607438cedb87c")
     public
-        fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit) {
-    }
+        fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit)
 
-    public fun synth(synth: IFileSetProducer) {
-    }
+    public fun synth(synth: IFileSetProducer)
 
-    public fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions) {
-    }
+    public fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ca7d4625a6b01d9bbb45d464baf8d48c59aaca88a925ec8b7f0ee11d400412d")
-    public fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit) {
-    }
+    public fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit)
 
-    public fun useChangeSets(useChangeSets: Boolean) {
-    }
+    public fun useChangeSets(useChangeSets: Boolean)
   }
 
   private class BuilderImpl(
@@ -118,110 +93,108 @@ public open class CodePipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.pipelines.CodePipeline.Builder =
         software.amazon.awscdk.pipelines.CodePipeline.Builder.create(scope, id)
 
-    public override fun artifactBucket(artifactBucket: IBucket) {
+    override fun artifactBucket(artifactBucket: IBucket) {
       cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
     }
 
-    public override
+    override
         fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions) {
       cdkBuilder.assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults.let(CodeBuildOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13976c16c7fda8250624b156d2574ea437cfda46a000cb44a752fa302b503f7e")
-    public override
+    override
         fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit):
         Unit = assetPublishingCodeBuildDefaults(CodeBuildOptions(assetPublishingCodeBuildDefaults))
 
-    public override fun cliVersion(cliVersion: String) {
+    override fun cliVersion(cliVersion: String) {
       cdkBuilder.cliVersion(cliVersion)
     }
 
-    public override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions) {
+    override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions) {
       cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("92416628ee0d4ef7efc74754c30fcf9c872c992904f5b1db3c94b24ca77cd7ed")
-    public override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions.Builder.() -> Unit):
-        Unit = codeBuildDefaults(CodeBuildOptions(codeBuildDefaults))
+    override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions.Builder.() -> Unit): Unit =
+        codeBuildDefaults(CodeBuildOptions(codeBuildDefaults))
 
-    public override fun codePipeline(codePipeline: Pipeline) {
+    override fun codePipeline(codePipeline: Pipeline) {
       cdkBuilder.codePipeline(codePipeline.let(Pipeline::unwrap))
     }
 
-    public override fun crossAccountKeys(crossAccountKeys: Boolean) {
+    override fun crossAccountKeys(crossAccountKeys: Boolean) {
       cdkBuilder.crossAccountKeys(crossAccountKeys)
     }
 
-    public override
+    override
         fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>) {
-      cdkBuilder.crossRegionReplicationBuckets(crossRegionReplicationBuckets.mapValues {
-          IBucket.unwrap(it.value)})
+      cdkBuilder.crossRegionReplicationBuckets(crossRegionReplicationBuckets.mapValues{IBucket.unwrap(it.value)})
     }
 
-    public override fun dockerCredentials(dockerCredentials: List<DockerCredential>) {
+    override fun dockerCredentials(dockerCredentials: List<DockerCredential>) {
       cdkBuilder.dockerCredentials(dockerCredentials.map(DockerCredential::unwrap))
     }
 
-    public override fun dockerEnabledForSelfMutation(dockerEnabledForSelfMutation: Boolean) {
+    override fun dockerEnabledForSelfMutation(dockerEnabledForSelfMutation: Boolean) {
       cdkBuilder.dockerEnabledForSelfMutation(dockerEnabledForSelfMutation)
     }
 
-    public override fun dockerEnabledForSynth(dockerEnabledForSynth: Boolean) {
+    override fun dockerEnabledForSynth(dockerEnabledForSynth: Boolean) {
       cdkBuilder.dockerEnabledForSynth(dockerEnabledForSynth)
     }
 
-    public override fun enableKeyRotation(enableKeyRotation: Boolean) {
+    override fun enableKeyRotation(enableKeyRotation: Boolean) {
       cdkBuilder.enableKeyRotation(enableKeyRotation)
     }
 
-    public override fun pipelineName(pipelineName: String) {
+    override fun pipelineName(pipelineName: String) {
       cdkBuilder.pipelineName(pipelineName)
     }
 
-    public override fun publishAssetsInParallel(publishAssetsInParallel: Boolean) {
+    override fun publishAssetsInParallel(publishAssetsInParallel: Boolean) {
       cdkBuilder.publishAssetsInParallel(publishAssetsInParallel)
     }
 
-    public override fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
+    override fun reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks: Boolean) {
       cdkBuilder.reuseCrossRegionSupportStacks(reuseCrossRegionSupportStacks)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun selfMutation(selfMutation: Boolean) {
+    override fun selfMutation(selfMutation: Boolean) {
       cdkBuilder.selfMutation(selfMutation)
     }
 
-    public override
-        fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions) {
+    override fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions) {
       cdkBuilder.selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults.let(CodeBuildOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2790694c1a1ce1299e7bfb748866e114b8b330eb250494bb1b607438cedb87c")
-    public override
+    override
         fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit):
         Unit = selfMutationCodeBuildDefaults(CodeBuildOptions(selfMutationCodeBuildDefaults))
 
-    public override fun synth(synth: IFileSetProducer) {
+    override fun synth(synth: IFileSetProducer) {
       cdkBuilder.synth(synth.let(IFileSetProducer::unwrap))
     }
 
-    public override fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions) {
+    override fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions) {
       cdkBuilder.synthCodeBuildDefaults(synthCodeBuildDefaults.let(CodeBuildOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ca7d4625a6b01d9bbb45d464baf8d48c59aaca88a925ec8b7f0ee11d400412d")
-    public override
+    override
         fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions.Builder.() -> Unit):
         Unit = synthCodeBuildDefaults(CodeBuildOptions(synthCodeBuildDefaults))
 
-    public override fun useChangeSets(useChangeSets: Boolean) {
+    override fun useChangeSets(useChangeSets: Boolean) {
       cdkBuilder.useChangeSets(useChangeSets)
     }
 

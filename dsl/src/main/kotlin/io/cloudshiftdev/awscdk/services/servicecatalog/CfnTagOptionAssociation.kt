@@ -30,11 +30,9 @@ public open class CfnTagOptionAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun tagOptionId(tagOptionId: String) {
-    }
+    public fun tagOptionId(tagOptionId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnTagOptionAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation.Builder.create(scope,
         id)
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun tagOptionId(tagOptionId: String) {
+    override fun tagOptionId(tagOptionId: String) {
       cdkBuilder.tagOptionId(tagOptionId)
     }
 

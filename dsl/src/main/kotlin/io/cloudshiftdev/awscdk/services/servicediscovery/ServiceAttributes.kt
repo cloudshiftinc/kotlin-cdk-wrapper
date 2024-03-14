@@ -20,26 +20,19 @@ public interface ServiceAttributes {
   public fun serviceName(): String
 
   public interface Builder {
-    public fun discoveryType(discoveryType: DiscoveryType) {
-    }
+    public fun discoveryType(discoveryType: DiscoveryType)
 
-    public fun dnsRecordType(dnsRecordType: DnsRecordType) {
-    }
+    public fun dnsRecordType(dnsRecordType: DnsRecordType)
 
-    public fun namespace(namespace: INamespace) {
-    }
+    public fun namespace(namespace: INamespace)
 
-    public fun routingPolicy(routingPolicy: RoutingPolicy) {
-    }
+    public fun routingPolicy(routingPolicy: RoutingPolicy)
 
-    public fun serviceArn(serviceArn: String) {
-    }
+    public fun serviceArn(serviceArn: String)
 
-    public fun serviceId(serviceId: String) {
-    }
+    public fun serviceId(serviceId: String)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -47,31 +40,31 @@ public interface ServiceAttributes {
         software.amazon.awscdk.services.servicediscovery.ServiceAttributes.Builder =
         software.amazon.awscdk.services.servicediscovery.ServiceAttributes.builder()
 
-    public override fun discoveryType(discoveryType: DiscoveryType) {
+    override fun discoveryType(discoveryType: DiscoveryType) {
       cdkBuilder.discoveryType(discoveryType.let(DiscoveryType::unwrap))
     }
 
-    public override fun dnsRecordType(dnsRecordType: DnsRecordType) {
+    override fun dnsRecordType(dnsRecordType: DnsRecordType) {
       cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
     }
 
-    public override fun namespace(namespace: INamespace) {
+    override fun namespace(namespace: INamespace) {
       cdkBuilder.namespace(namespace.let(INamespace::unwrap))
     }
 
-    public override fun routingPolicy(routingPolicy: RoutingPolicy) {
+    override fun routingPolicy(routingPolicy: RoutingPolicy) {
       cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy::unwrap))
     }
 
-    public override fun serviceArn(serviceArn: String) {
+    override fun serviceArn(serviceArn: String) {
       cdkBuilder.serviceArn(serviceArn)
     }
 
-    public override fun serviceId(serviceId: String) {
+    override fun serviceId(serviceId: String) {
       cdkBuilder.serviceId(serviceId)
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
@@ -82,22 +75,22 @@ public interface ServiceAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.ServiceAttributes,
   ) : ServiceAttributes {
-    public override fun discoveryType(): DiscoveryType? =
+    override fun discoveryType(): DiscoveryType? =
         unwrap(this).getDiscoveryType()?.let(DiscoveryType::wrap)
 
-    public override fun dnsRecordType(): DnsRecordType =
+    override fun dnsRecordType(): DnsRecordType =
         unwrap(this).getDnsRecordType().let(DnsRecordType::wrap)
 
-    public override fun namespace(): INamespace = unwrap(this).getNamespace().let(INamespace::wrap)
+    override fun namespace(): INamespace = unwrap(this).getNamespace().let(INamespace::wrap)
 
-    public override fun routingPolicy(): RoutingPolicy =
+    override fun routingPolicy(): RoutingPolicy =
         unwrap(this).getRoutingPolicy().let(RoutingPolicy::wrap)
 
-    public override fun serviceArn(): String = unwrap(this).getServiceArn()
+    override fun serviceArn(): String = unwrap(this).getServiceArn()
 
-    public override fun serviceId(): String = unwrap(this).getServiceId()
+    override fun serviceId(): String = unwrap(this).getServiceId()
 
-    public override fun serviceName(): String = unwrap(this).getServiceName()
+    override fun serviceName(): String = unwrap(this).getServiceName()
   }
 
   public companion object {

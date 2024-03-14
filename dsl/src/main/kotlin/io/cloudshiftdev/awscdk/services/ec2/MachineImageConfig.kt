@@ -11,29 +11,26 @@ public interface MachineImageConfig {
   public fun userData(): UserData
 
   public interface Builder {
-    public fun imageId(imageId: String) {
-    }
+    public fun imageId(imageId: String)
 
-    public fun osType(osType: OperatingSystemType) {
-    }
+    public fun osType(osType: OperatingSystemType)
 
-    public fun userData(userData: UserData) {
-    }
+    public fun userData(userData: UserData)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.MachineImageConfig.Builder =
         software.amazon.awscdk.services.ec2.MachineImageConfig.builder()
 
-    public override fun imageId(imageId: String) {
+    override fun imageId(imageId: String) {
       cdkBuilder.imageId(imageId)
     }
 
-    public override fun osType(osType: OperatingSystemType) {
+    override fun osType(osType: OperatingSystemType) {
       cdkBuilder.osType(osType.let(OperatingSystemType::unwrap))
     }
 
-    public override fun userData(userData: UserData) {
+    override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }
 
@@ -43,12 +40,12 @@ public interface MachineImageConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.MachineImageConfig,
   ) : MachineImageConfig {
-    public override fun imageId(): String = unwrap(this).getImageId()
+    override fun imageId(): String = unwrap(this).getImageId()
 
-    public override fun osType(): OperatingSystemType =
+    override fun osType(): OperatingSystemType =
         unwrap(this).getOsType().let(OperatingSystemType::wrap)
 
-    public override fun userData(): UserData = unwrap(this).getUserData().let(UserData::wrap)
+    override fun userData(): UserData = unwrap(this).getUserData().let(UserData::wrap)
   }
 
   public companion object {

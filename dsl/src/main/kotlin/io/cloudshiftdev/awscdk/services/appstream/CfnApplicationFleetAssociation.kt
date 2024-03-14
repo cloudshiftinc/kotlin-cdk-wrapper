@@ -28,11 +28,9 @@ public open class CfnApplicationFleetAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun applicationArn(applicationArn: String) {
-    }
+    public fun applicationArn(applicationArn: String)
 
-    public fun fleetName(fleetName: String) {
-    }
+    public fun fleetName(fleetName: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnApplicationFleetAssociation internal constructor(
         software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation.Builder.create(scope,
         id)
 
-    public override fun applicationArn(applicationArn: String) {
+    override fun applicationArn(applicationArn: String) {
       cdkBuilder.applicationArn(applicationArn)
     }
 
-    public override fun fleetName(fleetName: String) {
+    override fun fleetName(fleetName: String) {
       cdkBuilder.fleetName(fleetName)
     }
 

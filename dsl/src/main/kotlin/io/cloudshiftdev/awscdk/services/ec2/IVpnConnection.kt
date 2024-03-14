@@ -57,67 +57,64 @@ public interface IVpnConnection : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IVpnConnection,
   ) : IVpnConnection {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun customerGatewayAsn(): Number = unwrap(this).getCustomerGatewayAsn()
+    override fun customerGatewayAsn(): Number = unwrap(this).getCustomerGatewayAsn()
 
-    public override fun customerGatewayId(): String = unwrap(this).getCustomerGatewayId()
+    override fun customerGatewayId(): String = unwrap(this).getCustomerGatewayId()
 
-    public override fun customerGatewayIp(): String = unwrap(this).getCustomerGatewayIp()
+    override fun customerGatewayIp(): String = unwrap(this).getCustomerGatewayIp()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
+    override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
 
-    public override fun metric(arg0: String, arg1: MetricOptions): Metric =
-        unwrap(this).metric(arg0, arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
+    override fun metric(arg0: String, arg1: MetricOptions): Metric = unwrap(this).metric(arg0,
+        arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-    public override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric =
-        metric(arg0, MetricOptions(arg1))
+    override fun metric(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric = metric(arg0,
+        MetricOptions(arg1))
 
-    public override fun metricTunnelDataIn(): Metric =
-        unwrap(this).metricTunnelDataIn().let(Metric::wrap)
+    override fun metricTunnelDataIn(): Metric = unwrap(this).metricTunnelDataIn().let(Metric::wrap)
 
-    public override fun metricTunnelDataIn(arg0: MetricOptions): Metric =
+    override fun metricTunnelDataIn(arg0: MetricOptions): Metric =
         unwrap(this).metricTunnelDataIn(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a408d4099c755aa5052825a697a1e09ed3c0922fb2e01c022a92ae8971f3cc41")
-    public override fun metricTunnelDataIn(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricTunnelDataIn(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricTunnelDataIn(MetricOptions(arg0))
 
-    public override fun metricTunnelDataOut(): Metric =
+    override fun metricTunnelDataOut(): Metric =
         unwrap(this).metricTunnelDataOut().let(Metric::wrap)
 
-    public override fun metricTunnelDataOut(arg0: MetricOptions): Metric =
+    override fun metricTunnelDataOut(arg0: MetricOptions): Metric =
         unwrap(this).metricTunnelDataOut(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2a0186808bc5d783adc386b6893f8cd28b7ae5632db2feac47a15f37f4b9f43f")
-    public override fun metricTunnelDataOut(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricTunnelDataOut(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricTunnelDataOut(MetricOptions(arg0))
 
-    public override fun metricTunnelState(): Metric =
-        unwrap(this).metricTunnelState().let(Metric::wrap)
+    override fun metricTunnelState(): Metric = unwrap(this).metricTunnelState().let(Metric::wrap)
 
-    public override fun metricTunnelState(arg0: MetricOptions): Metric =
+    override fun metricTunnelState(arg0: MetricOptions): Metric =
         unwrap(this).metricTunnelState(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a1beb32a9ea480a143d1145556689d9f3e16ee288165a9b93d39cc36626ae1f8")
-    public override fun metricTunnelState(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricTunnelState(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricTunnelState(MetricOptions(arg0))
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun vpnId(): String = unwrap(this).getVpnId()
+    override fun vpnId(): String = unwrap(this).getVpnId()
   }
 
   public companion object {

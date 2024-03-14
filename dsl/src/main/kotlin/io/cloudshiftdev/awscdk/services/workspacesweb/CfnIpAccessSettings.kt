@@ -78,29 +78,21 @@ public open class CfnIpAccessSettings internal constructor(
   }
 
   public interface Builder {
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
-    public fun customerManagedKey(customerManagedKey: String) {
-    }
+    public fun customerManagedKey(customerManagedKey: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun ipRules(ipRules: IResolvable) {
-    }
+    public fun ipRules(ipRules: IResolvable)
 
-    public fun ipRules(ipRules: List<Any>) {
-    }
+    public fun ipRules(ipRules: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -111,36 +103,35 @@ public open class CfnIpAccessSettings internal constructor(
         software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.Builder =
         software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.Builder.create(scope, id)
 
-    public override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
     }
 
-    public override
-        fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
-    public override fun customerManagedKey(customerManagedKey: String) {
+    override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun ipRules(ipRules: IResolvable) {
+    override fun ipRules(ipRules: IResolvable) {
       cdkBuilder.ipRules(ipRules.let(IResolvable::unwrap))
     }
 
-    public override fun ipRules(ipRules: List<Any>) {
+    override fun ipRules(ipRules: List<Any>) {
       cdkBuilder.ipRules(ipRules)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -175,11 +166,9 @@ public open class CfnIpAccessSettings internal constructor(
     public fun ipRange(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun ipRange(ipRange: String) {
-      }
+      public fun ipRange(ipRange: String)
     }
 
     private class BuilderImpl : Builder {
@@ -187,11 +176,11 @@ public open class CfnIpAccessSettings internal constructor(
           software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty.Builder =
           software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun ipRange(ipRange: String) {
+      override fun ipRange(ipRange: String) {
         cdkBuilder.ipRange(ipRange)
       }
 
@@ -204,9 +193,9 @@ public open class CfnIpAccessSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings.IpRuleProperty,
     ) : IpRuleProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun ipRange(): String = unwrap(this).getIpRange()
+      override fun ipRange(): String = unwrap(this).getIpRange()
     }
 
     public companion object {

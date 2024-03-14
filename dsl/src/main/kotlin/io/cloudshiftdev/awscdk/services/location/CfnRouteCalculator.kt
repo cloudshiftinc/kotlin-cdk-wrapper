@@ -61,20 +61,15 @@ public open class CfnRouteCalculator internal constructor(
   }
 
   public interface Builder {
-    public fun calculatorName(calculatorName: String) {
-    }
+    public fun calculatorName(calculatorName: String)
 
-    public fun dataSource(dataSource: String) {
-    }
+    public fun dataSource(dataSource: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun pricingPlan(pricingPlan: String) {
-    }
+    public fun pricingPlan(pricingPlan: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -84,23 +79,23 @@ public open class CfnRouteCalculator internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnRouteCalculator.Builder =
         software.amazon.awscdk.services.location.CfnRouteCalculator.Builder.create(scope, id)
 
-    public override fun calculatorName(calculatorName: String) {
+    override fun calculatorName(calculatorName: String) {
       cdkBuilder.calculatorName(calculatorName)
     }
 
-    public override fun dataSource(dataSource: String) {
+    override fun dataSource(dataSource: String) {
       cdkBuilder.dataSource(dataSource)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun pricingPlan(pricingPlan: String) {
+    override fun pricingPlan(pricingPlan: String) {
       cdkBuilder.pricingPlan(pricingPlan)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

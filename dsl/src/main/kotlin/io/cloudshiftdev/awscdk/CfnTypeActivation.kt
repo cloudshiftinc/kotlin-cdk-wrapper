@@ -92,46 +92,33 @@ public open class CfnTypeActivation internal constructor(
   }
 
   public interface Builder {
-    public fun autoUpdate(autoUpdate: Boolean) {
-    }
+    public fun autoUpdate(autoUpdate: Boolean)
 
-    public fun autoUpdate(autoUpdate: IResolvable) {
-    }
+    public fun autoUpdate(autoUpdate: IResolvable)
 
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun loggingConfig(loggingConfig: IResolvable) {
-    }
+    public fun loggingConfig(loggingConfig: IResolvable)
 
-    public fun loggingConfig(loggingConfig: LoggingConfigProperty) {
-    }
+    public fun loggingConfig(loggingConfig: LoggingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c1bbfec49c9f9961582a67a53408b16796a1f7127dc2abb183cd575761004f7")
-    public fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit) {
-    }
+    public fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit)
 
-    public fun majorVersion(majorVersion: String) {
-    }
+    public fun majorVersion(majorVersion: String)
 
-    public fun publicTypeArn(publicTypeArn: String) {
-    }
+    public fun publicTypeArn(publicTypeArn: String)
 
-    public fun publisherId(publisherId: String) {
-    }
+    public fun publisherId(publisherId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun typeName(typeName: String) {
-    }
+    public fun typeName(typeName: String)
 
-    public fun typeNameAlias(typeNameAlias: String) {
-    }
+    public fun typeNameAlias(typeNameAlias: String)
 
-    public fun versionBump(versionBump: String) {
-    }
+    public fun versionBump(versionBump: String)
   }
 
   private class BuilderImpl(
@@ -141,56 +128,56 @@ public open class CfnTypeActivation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnTypeActivation.Builder =
         software.amazon.awscdk.CfnTypeActivation.Builder.create(scope, id)
 
-    public override fun autoUpdate(autoUpdate: Boolean) {
+    override fun autoUpdate(autoUpdate: Boolean) {
       cdkBuilder.autoUpdate(autoUpdate)
     }
 
-    public override fun autoUpdate(autoUpdate: IResolvable) {
+    override fun autoUpdate(autoUpdate: IResolvable) {
       cdkBuilder.autoUpdate(autoUpdate.let(IResolvable::unwrap))
     }
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun loggingConfig(loggingConfig: IResolvable) {
+    override fun loggingConfig(loggingConfig: IResolvable) {
       cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfig(loggingConfig: LoggingConfigProperty) {
+    override fun loggingConfig(loggingConfig: LoggingConfigProperty) {
       cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c1bbfec49c9f9961582a67a53408b16796a1f7127dc2abb183cd575761004f7")
-    public override fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit): Unit
-        = loggingConfig(LoggingConfigProperty(loggingConfig))
+    override fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit): Unit =
+        loggingConfig(LoggingConfigProperty(loggingConfig))
 
-    public override fun majorVersion(majorVersion: String) {
+    override fun majorVersion(majorVersion: String) {
       cdkBuilder.majorVersion(majorVersion)
     }
 
-    public override fun publicTypeArn(publicTypeArn: String) {
+    override fun publicTypeArn(publicTypeArn: String) {
       cdkBuilder.publicTypeArn(publicTypeArn)
     }
 
-    public override fun publisherId(publisherId: String) {
+    override fun publisherId(publisherId: String) {
       cdkBuilder.publisherId(publisherId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun typeName(typeName: String) {
+    override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 
-    public override fun typeNameAlias(typeNameAlias: String) {
+    override fun typeNameAlias(typeNameAlias: String) {
       cdkBuilder.typeNameAlias(typeNameAlias)
     }
 
-    public override fun versionBump(versionBump: String) {
+    override fun versionBump(versionBump: String) {
       cdkBuilder.versionBump(versionBump)
     }
 
@@ -224,22 +211,20 @@ public open class CfnTypeActivation internal constructor(
     public fun logRoleArn(): String? = unwrap(this).getLogRoleArn()
 
     public interface Builder {
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
 
-      public fun logRoleArn(logRoleArn: String) {
-      }
+      public fun logRoleArn(logRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.CfnTypeActivation.LoggingConfigProperty.Builder
           = software.amazon.awscdk.CfnTypeActivation.LoggingConfigProperty.builder()
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
-      public override fun logRoleArn(logRoleArn: String) {
+      override fun logRoleArn(logRoleArn: String) {
         cdkBuilder.logRoleArn(logRoleArn)
       }
 
@@ -250,9 +235,9 @@ public open class CfnTypeActivation internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.CfnTypeActivation.LoggingConfigProperty,
     ) : LoggingConfigProperty {
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
-      public override fun logRoleArn(): String? = unwrap(this).getLogRoleArn()
+      override fun logRoleArn(): String? = unwrap(this).getLogRoleArn()
     }
 
     public companion object {

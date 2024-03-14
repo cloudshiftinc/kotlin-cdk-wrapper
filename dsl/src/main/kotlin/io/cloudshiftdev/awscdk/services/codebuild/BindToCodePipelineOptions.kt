@@ -7,8 +7,7 @@ public interface BindToCodePipelineOptions {
   public fun artifactBucket(): IBucket
 
   public interface Builder {
-    public fun artifactBucket(artifactBucket: IBucket) {
-    }
+    public fun artifactBucket(artifactBucket: IBucket)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface BindToCodePipelineOptions {
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions.Builder =
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions.builder()
 
-    public override fun artifactBucket(artifactBucket: IBucket) {
+    override fun artifactBucket(artifactBucket: IBucket) {
       cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
     }
 
@@ -27,8 +26,7 @@ public interface BindToCodePipelineOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions,
   ) : BindToCodePipelineOptions {
-    public override fun artifactBucket(): IBucket =
-        unwrap(this).getArtifactBucket().let(IBucket::wrap)
+    override fun artifactBucket(): IBucket = unwrap(this).getArtifactBucket().let(IBucket::wrap)
   }
 
   public companion object {

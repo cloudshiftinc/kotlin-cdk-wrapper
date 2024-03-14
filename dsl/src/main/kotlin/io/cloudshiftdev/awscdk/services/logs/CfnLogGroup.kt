@@ -63,23 +63,17 @@ public open class CfnLogGroup internal constructor(
   }
 
   public interface Builder {
-    public fun dataProtectionPolicy(dataProtectionPolicy: Any) {
-    }
+    public fun dataProtectionPolicy(dataProtectionPolicy: Any)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun logGroupClass(logGroupClass: String) {
-    }
+    public fun logGroupClass(logGroupClass: String)
 
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun retentionInDays(retentionInDays: Number) {
-    }
+    public fun retentionInDays(retentionInDays: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnLogGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnLogGroup.Builder =
         software.amazon.awscdk.services.logs.CfnLogGroup.Builder.create(scope, id)
 
-    public override fun dataProtectionPolicy(dataProtectionPolicy: Any) {
+    override fun dataProtectionPolicy(dataProtectionPolicy: Any) {
       cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun logGroupClass(logGroupClass: String) {
+    override fun logGroupClass(logGroupClass: String) {
       cdkBuilder.logGroupClass(logGroupClass)
     }
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun retentionInDays(retentionInDays: Number) {
+    override fun retentionInDays(retentionInDays: Number) {
       cdkBuilder.retentionInDays(retentionInDays)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

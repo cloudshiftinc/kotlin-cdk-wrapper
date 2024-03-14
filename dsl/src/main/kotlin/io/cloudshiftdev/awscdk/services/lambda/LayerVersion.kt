@@ -29,26 +29,19 @@ public open class LayerVersion internal constructor(
   public override fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
 
   public interface Builder {
-    public fun code(code: Code) {
-    }
+    public fun code(code: Code)
 
-    public fun compatibleArchitectures(compatibleArchitectures: List<Architecture>) {
-    }
+    public fun compatibleArchitectures(compatibleArchitectures: List<Architecture>)
 
-    public fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
-    }
+    public fun compatibleRuntimes(compatibleRuntimes: List<Runtime>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun layerVersionName(layerVersionName: String) {
-    }
+    public fun layerVersionName(layerVersionName: String)
 
-    public fun license(license: String) {
-    }
+    public fun license(license: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -58,31 +51,31 @@ public open class LayerVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.LayerVersion.Builder =
         software.amazon.awscdk.services.lambda.LayerVersion.Builder.create(scope, id)
 
-    public override fun code(code: Code) {
+    override fun code(code: Code) {
       cdkBuilder.code(code.let(Code::unwrap))
     }
 
-    public override fun compatibleArchitectures(compatibleArchitectures: List<Architecture>) {
+    override fun compatibleArchitectures(compatibleArchitectures: List<Architecture>) {
       cdkBuilder.compatibleArchitectures(compatibleArchitectures.map(Architecture::unwrap))
     }
 
-    public override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
+    override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun layerVersionName(layerVersionName: String) {
+    override fun layerVersionName(layerVersionName: String) {
       cdkBuilder.layerVersionName(layerVersionName)
     }
 
-    public override fun license(license: String) {
+    override fun license(license: String) {
       cdkBuilder.license(license)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

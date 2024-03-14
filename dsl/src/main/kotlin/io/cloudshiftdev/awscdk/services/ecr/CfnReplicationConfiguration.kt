@@ -39,18 +39,14 @@ public open class CfnReplicationConfiguration internal constructor(
       Unit = replicationConfiguration(ReplicationConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun replicationConfiguration(replicationConfiguration: IResolvable) {
-    }
+    public fun replicationConfiguration(replicationConfiguration: IResolvable)
 
-    public
-        fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
-    }
+    public fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("762bbc6d209327be38da800159550f0200c9dcc39614a4bfd99efa2d329edc0b")
     public
-        fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -60,18 +56,18 @@ public open class CfnReplicationConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.Builder
         = software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.Builder.create(scope, id)
 
-    public override fun replicationConfiguration(replicationConfiguration: IResolvable) {
+    override fun replicationConfiguration(replicationConfiguration: IResolvable) {
       cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
       cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("762bbc6d209327be38da800159550f0200c9dcc39614a4bfd99efa2d329edc0b")
-    public override
+    override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty.Builder.() -> Unit):
         Unit = replicationConfiguration(ReplicationConfigurationProperty(replicationConfiguration))
 
@@ -106,11 +102,9 @@ public open class CfnReplicationConfiguration internal constructor(
     public fun registryId(): String
 
     public interface Builder {
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun registryId(registryId: String) {
-      }
+      public fun registryId(registryId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -119,11 +113,11 @@ public open class CfnReplicationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty.builder()
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun registryId(registryId: String) {
+      override fun registryId(registryId: String) {
         cdkBuilder.registryId(registryId)
       }
 
@@ -136,9 +130,9 @@ public open class CfnReplicationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationDestinationProperty,
     ) : ReplicationDestinationProperty {
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
 
-      public override fun registryId(): String = unwrap(this).getRegistryId()
+      override fun registryId(): String = unwrap(this).getRegistryId()
     }
 
     public companion object {
@@ -165,11 +159,9 @@ public open class CfnReplicationConfiguration internal constructor(
     public fun rules(): Any
 
     public interface Builder {
-      public fun rules(rules: IResolvable) {
-      }
+      public fun rules(rules: IResolvable)
 
-      public fun rules(rules: List<Any>) {
-      }
+      public fun rules(rules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -178,11 +170,11 @@ public open class CfnReplicationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty.builder()
 
-      public override fun rules(rules: IResolvable) {
+      override fun rules(rules: IResolvable) {
         cdkBuilder.rules(rules.let(IResolvable::unwrap))
       }
 
-      public override fun rules(rules: List<Any>) {
+      override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
 
@@ -195,7 +187,7 @@ public open class CfnReplicationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty,
     ) : ReplicationConfigurationProperty {
-      public override fun rules(): Any = unwrap(this).getRules()
+      override fun rules(): Any = unwrap(this).getRules()
     }
 
     public companion object {
@@ -224,17 +216,13 @@ public open class CfnReplicationConfiguration internal constructor(
     public fun repositoryFilters(): Any? = unwrap(this).getRepositoryFilters()
 
     public interface Builder {
-      public fun destinations(destinations: IResolvable) {
-      }
+      public fun destinations(destinations: IResolvable)
 
-      public fun destinations(destinations: List<Any>) {
-      }
+      public fun destinations(destinations: List<Any>)
 
-      public fun repositoryFilters(repositoryFilters: IResolvable) {
-      }
+      public fun repositoryFilters(repositoryFilters: IResolvable)
 
-      public fun repositoryFilters(repositoryFilters: List<Any>) {
-      }
+      public fun repositoryFilters(repositoryFilters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -243,19 +231,19 @@ public open class CfnReplicationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty.builder()
 
-      public override fun destinations(destinations: IResolvable) {
+      override fun destinations(destinations: IResolvable) {
         cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
       }
 
-      public override fun destinations(destinations: List<Any>) {
+      override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
 
-      public override fun repositoryFilters(repositoryFilters: IResolvable) {
+      override fun repositoryFilters(repositoryFilters: IResolvable) {
         cdkBuilder.repositoryFilters(repositoryFilters.let(IResolvable::unwrap))
       }
 
-      public override fun repositoryFilters(repositoryFilters: List<Any>) {
+      override fun repositoryFilters(repositoryFilters: List<Any>) {
         cdkBuilder.repositoryFilters(repositoryFilters)
       }
 
@@ -268,9 +256,9 @@ public open class CfnReplicationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty,
     ) : ReplicationRuleProperty {
-      public override fun destinations(): Any = unwrap(this).getDestinations()
+      override fun destinations(): Any = unwrap(this).getDestinations()
 
-      public override fun repositoryFilters(): Any? = unwrap(this).getRepositoryFilters()
+      override fun repositoryFilters(): Any? = unwrap(this).getRepositoryFilters()
     }
 
     public companion object {
@@ -299,11 +287,9 @@ public open class CfnReplicationConfiguration internal constructor(
     public fun filterType(): String
 
     public interface Builder {
-      public fun filter(filter: String) {
-      }
+      public fun filter(filter: String)
 
-      public fun filterType(filterType: String) {
-      }
+      public fun filterType(filterType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -312,11 +298,11 @@ public open class CfnReplicationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty.builder()
 
-      public override fun filter(filter: String) {
+      override fun filter(filter: String) {
         cdkBuilder.filter(filter)
       }
 
-      public override fun filterType(filterType: String) {
+      override fun filterType(filterType: String) {
         cdkBuilder.filterType(filterType)
       }
 
@@ -329,9 +315,9 @@ public open class CfnReplicationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.RepositoryFilterProperty,
     ) : RepositoryFilterProperty {
-      public override fun filter(): String = unwrap(this).getFilter()
+      override fun filter(): String = unwrap(this).getFilter()
 
-      public override fun filterType(): String = unwrap(this).getFilterType()
+      override fun filterType(): String = unwrap(this).getFilterType()
     }
 
     public companion object {

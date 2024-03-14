@@ -58,8 +58,7 @@ public open class TagManager internal constructor(
   public open fun tagValues(): Map<String, String> = unwrap(this).tagValues() ?: emptyMap()
 
   public interface Builder {
-    public fun tagPropertyName(tagPropertyName: String) {
-    }
+    public fun tagPropertyName(tagPropertyName: String)
   }
 
   private class BuilderImpl(
@@ -70,7 +69,7 @@ public open class TagManager internal constructor(
     private val cdkBuilder: software.amazon.awscdk.TagManager.Builder =
         software.amazon.awscdk.TagManager.Builder.create(tagType, resourceTypeName, initialTags)
 
-    public override fun tagPropertyName(tagPropertyName: String) {
+    override fun tagPropertyName(tagPropertyName: String) {
       cdkBuilder.tagPropertyName(tagPropertyName)
     }
 

@@ -48,20 +48,15 @@ public open class CfnMetricFilter internal constructor(
   }
 
   public interface Builder {
-    public fun filterName(filterName: String) {
-    }
+    public fun filterName(filterName: String)
 
-    public fun filterPattern(filterPattern: String) {
-    }
+    public fun filterPattern(filterPattern: String)
 
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun metricTransformations(metricTransformations: IResolvable) {
-    }
+    public fun metricTransformations(metricTransformations: IResolvable)
 
-    public fun metricTransformations(metricTransformations: List<Any>) {
-    }
+    public fun metricTransformations(metricTransformations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -71,23 +66,23 @@ public open class CfnMetricFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnMetricFilter.Builder =
         software.amazon.awscdk.services.logs.CfnMetricFilter.Builder.create(scope, id)
 
-    public override fun filterName(filterName: String) {
+    override fun filterName(filterName: String) {
       cdkBuilder.filterName(filterName)
     }
 
-    public override fun filterPattern(filterPattern: String) {
+    override fun filterPattern(filterPattern: String) {
       cdkBuilder.filterPattern(filterPattern)
     }
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun metricTransformations(metricTransformations: IResolvable) {
+    override fun metricTransformations(metricTransformations: IResolvable) {
       cdkBuilder.metricTransformations(metricTransformations.let(IResolvable::unwrap))
     }
 
-    public override fun metricTransformations(metricTransformations: List<Any>) {
+    override fun metricTransformations(metricTransformations: List<Any>) {
       cdkBuilder.metricTransformations(metricTransformations)
     }
 
@@ -121,11 +116,9 @@ public open class CfnMetricFilter internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -133,11 +126,11 @@ public open class CfnMetricFilter internal constructor(
           software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty.Builder =
           software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -149,9 +142,9 @@ public open class CfnMetricFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty,
     ) : DimensionProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -188,26 +181,19 @@ public open class CfnMetricFilter internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun defaultValue(defaultValue: Number) {
-      }
+      public fun defaultValue(defaultValue: Number)
 
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun metricNamespace(metricNamespace: String) {
-      }
+      public fun metricNamespace(metricNamespace: String)
 
-      public fun metricValue(metricValue: String) {
-      }
+      public fun metricValue(metricValue: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -216,31 +202,31 @@ public open class CfnMetricFilter internal constructor(
           =
           software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty.builder()
 
-      public override fun defaultValue(defaultValue: Number) {
+      override fun defaultValue(defaultValue: Number) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun metricNamespace(metricNamespace: String) {
+      override fun metricNamespace(metricNamespace: String) {
         cdkBuilder.metricNamespace(metricNamespace)
       }
 
-      public override fun metricValue(metricValue: String) {
+      override fun metricValue(metricValue: String) {
         cdkBuilder.metricValue(metricValue)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -253,17 +239,17 @@ public open class CfnMetricFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty,
     ) : MetricTransformationProperty {
-      public override fun defaultValue(): Number? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): Number? = unwrap(this).getDefaultValue()
 
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun metricNamespace(): String = unwrap(this).getMetricNamespace()
+      override fun metricNamespace(): String = unwrap(this).getMetricNamespace()
 
-      public override fun metricValue(): String = unwrap(this).getMetricValue()
+      override fun metricValue(): String = unwrap(this).getMetricValue()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {

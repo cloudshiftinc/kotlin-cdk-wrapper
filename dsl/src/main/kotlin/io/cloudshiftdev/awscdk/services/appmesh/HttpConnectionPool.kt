@@ -9,22 +9,20 @@ public interface HttpConnectionPool {
   public fun maxPendingRequests(): Number
 
   public interface Builder {
-    public fun maxConnections(maxConnections: Number) {
-    }
+    public fun maxConnections(maxConnections: Number)
 
-    public fun maxPendingRequests(maxPendingRequests: Number) {
-    }
+    public fun maxPendingRequests(maxPendingRequests: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.HttpConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.HttpConnectionPool.builder()
 
-    public override fun maxConnections(maxConnections: Number) {
+    override fun maxConnections(maxConnections: Number) {
       cdkBuilder.maxConnections(maxConnections)
     }
 
-    public override fun maxPendingRequests(maxPendingRequests: Number) {
+    override fun maxPendingRequests(maxPendingRequests: Number) {
       cdkBuilder.maxPendingRequests(maxPendingRequests)
     }
 
@@ -35,9 +33,9 @@ public interface HttpConnectionPool {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.HttpConnectionPool,
   ) : HttpConnectionPool {
-    public override fun maxConnections(): Number = unwrap(this).getMaxConnections()
+    override fun maxConnections(): Number = unwrap(this).getMaxConnections()
 
-    public override fun maxPendingRequests(): Number = unwrap(this).getMaxPendingRequests()
+    override fun maxPendingRequests(): Number = unwrap(this).getMaxPendingRequests()
   }
 
   public companion object {

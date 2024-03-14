@@ -79,29 +79,21 @@ public open class CfnScene internal constructor(
   }
 
   public interface Builder {
-    public fun capabilities(capabilities: List<String>) {
-    }
+    public fun capabilities(capabilities: List<String>)
 
-    public fun contentLocation(contentLocation: String) {
-    }
+    public fun contentLocation(contentLocation: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun sceneId(sceneId: String) {
-    }
+    public fun sceneId(sceneId: String)
 
-    public fun sceneMetadata(sceneMetadata: IResolvable) {
-    }
+    public fun sceneMetadata(sceneMetadata: IResolvable)
 
-    public fun sceneMetadata(sceneMetadata: Map<String, String>) {
-    }
+    public fun sceneMetadata(sceneMetadata: Map<String, String>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun workspaceId(workspaceId: String) {
-    }
+    public fun workspaceId(workspaceId: String)
   }
 
   private class BuilderImpl(
@@ -111,35 +103,35 @@ public open class CfnScene internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iottwinmaker.CfnScene.Builder =
         software.amazon.awscdk.services.iottwinmaker.CfnScene.Builder.create(scope, id)
 
-    public override fun capabilities(capabilities: List<String>) {
+    override fun capabilities(capabilities: List<String>) {
       cdkBuilder.capabilities(capabilities)
     }
 
-    public override fun contentLocation(contentLocation: String) {
+    override fun contentLocation(contentLocation: String) {
       cdkBuilder.contentLocation(contentLocation)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun sceneId(sceneId: String) {
+    override fun sceneId(sceneId: String) {
       cdkBuilder.sceneId(sceneId)
     }
 
-    public override fun sceneMetadata(sceneMetadata: IResolvable) {
+    override fun sceneMetadata(sceneMetadata: IResolvable) {
       cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable::unwrap))
     }
 
-    public override fun sceneMetadata(sceneMetadata: Map<String, String>) {
+    override fun sceneMetadata(sceneMetadata: Map<String, String>) {
       cdkBuilder.sceneMetadata(sceneMetadata)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun workspaceId(workspaceId: String) {
+    override fun workspaceId(workspaceId: String) {
       cdkBuilder.workspaceId(workspaceId)
     }
 

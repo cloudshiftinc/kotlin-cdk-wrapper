@@ -55,14 +55,11 @@ public open class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation inte
   }
 
   public interface Builder {
-    public fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
-    }
+    public fun localGatewayRouteTableId(localGatewayRouteTableId: String)
 
-    public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
-    }
+    public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -75,16 +72,15 @@ public open class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation inte
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation.Builder.create(scope,
         id)
 
-    public override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
+    override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
       cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
     }
 
-    public override
-        fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
+    override fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
       cdkBuilder.localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

@@ -20,20 +20,15 @@ public open class CustomResource internal constructor(
   public open fun ref(): String = unwrap(this).getRef()
 
   public interface Builder {
-    public fun pascalCaseProperties(pascalCaseProperties: Boolean) {
-    }
+    public fun pascalCaseProperties(pascalCaseProperties: Boolean)
 
-    public fun properties(properties: Map<String, Any>) {
-    }
+    public fun properties(properties: Map<String, Any>)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun serviceToken(serviceToken: String) {
-    }
+    public fun serviceToken(serviceToken: String)
   }
 
   private class BuilderImpl(
@@ -43,23 +38,23 @@ public open class CustomResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CustomResource.Builder =
         software.amazon.awscdk.CustomResource.Builder.create(scope, id)
 
-    public override fun pascalCaseProperties(pascalCaseProperties: Boolean) {
+    override fun pascalCaseProperties(pascalCaseProperties: Boolean) {
       cdkBuilder.pascalCaseProperties(pascalCaseProperties)
     }
 
-    public override fun properties(properties: Map<String, Any>) {
+    override fun properties(properties: Map<String, Any>) {
       cdkBuilder.properties(properties)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun serviceToken(serviceToken: String) {
+    override fun serviceToken(serviceToken: String) {
       cdkBuilder.serviceToken(serviceToken)
     }
 

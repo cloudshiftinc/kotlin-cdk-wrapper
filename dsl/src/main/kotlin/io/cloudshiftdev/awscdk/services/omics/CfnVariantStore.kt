@@ -88,36 +88,27 @@ public open class CfnVariantStore internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun reference(reference: IResolvable) {
-    }
+    public fun reference(reference: IResolvable)
 
-    public fun reference(reference: ReferenceItemProperty) {
-    }
+    public fun reference(reference: ReferenceItemProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bad7d77455224cc7c3ebfb552a282ce4210a14bd1e17965b10826a8b341188e3")
-    public fun reference(reference: ReferenceItemProperty.Builder.() -> Unit) {
-    }
+    public fun reference(reference: ReferenceItemProperty.Builder.() -> Unit)
 
-    public fun sseConfig(sseConfig: IResolvable) {
-    }
+    public fun sseConfig(sseConfig: IResolvable)
 
-    public fun sseConfig(sseConfig: SseConfigProperty) {
-    }
+    public fun sseConfig(sseConfig: SseConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d8ac15b344a45f91b8dd63c865bc33d644e6e7fa6d7bbd6c76750a2a941227bf")
-    public fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -127,41 +118,41 @@ public open class CfnVariantStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.omics.CfnVariantStore.Builder =
         software.amazon.awscdk.services.omics.CfnVariantStore.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun reference(reference: IResolvable) {
+    override fun reference(reference: IResolvable) {
       cdkBuilder.reference(reference.let(IResolvable::unwrap))
     }
 
-    public override fun reference(reference: ReferenceItemProperty) {
+    override fun reference(reference: ReferenceItemProperty) {
       cdkBuilder.reference(reference.let(ReferenceItemProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bad7d77455224cc7c3ebfb552a282ce4210a14bd1e17965b10826a8b341188e3")
-    public override fun reference(reference: ReferenceItemProperty.Builder.() -> Unit): Unit =
+    override fun reference(reference: ReferenceItemProperty.Builder.() -> Unit): Unit =
         reference(ReferenceItemProperty(reference))
 
-    public override fun sseConfig(sseConfig: IResolvable) {
+    override fun sseConfig(sseConfig: IResolvable) {
       cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sseConfig(sseConfig: SseConfigProperty) {
+    override fun sseConfig(sseConfig: SseConfigProperty) {
       cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d8ac15b344a45f91b8dd63c865bc33d644e6e7fa6d7bbd6c76750a2a941227bf")
-    public override fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit): Unit =
+    override fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit): Unit =
         sseConfig(SseConfigProperty(sseConfig))
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -195,11 +186,9 @@ public open class CfnVariantStore internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -207,11 +196,11 @@ public open class CfnVariantStore internal constructor(
           software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty.Builder =
           software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -223,9 +212,9 @@ public open class CfnVariantStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnVariantStore.SseConfigProperty,
     ) : SseConfigProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -252,8 +241,7 @@ public open class CfnVariantStore internal constructor(
     public fun referenceArn(): String
 
     public interface Builder {
-      public fun referenceArn(referenceArn: String) {
-      }
+      public fun referenceArn(referenceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,7 +249,7 @@ public open class CfnVariantStore internal constructor(
           software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty.Builder =
           software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty.builder()
 
-      public override fun referenceArn(referenceArn: String) {
+      override fun referenceArn(referenceArn: String) {
         cdkBuilder.referenceArn(referenceArn)
       }
 
@@ -274,7 +262,7 @@ public open class CfnVariantStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnVariantStore.ReferenceItemProperty,
     ) : ReferenceItemProperty {
-      public override fun referenceArn(): String = unwrap(this).getReferenceArn()
+      override fun referenceArn(): String = unwrap(this).getReferenceArn()
     }
 
     public companion object {

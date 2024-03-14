@@ -42,17 +42,13 @@ public open class CfnSourceCredential internal constructor(
   }
 
   public interface Builder {
-    public fun authType(authType: String) {
-    }
+    public fun authType(authType: String)
 
-    public fun serverType(serverType: String) {
-    }
+    public fun serverType(serverType: String)
 
-    public fun token(token: String) {
-    }
+    public fun token(token: String)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnSourceCredential internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.CfnSourceCredential.Builder =
         software.amazon.awscdk.services.codebuild.CfnSourceCredential.Builder.create(scope, id)
 
-    public override fun authType(authType: String) {
+    override fun authType(authType: String) {
       cdkBuilder.authType(authType)
     }
 
-    public override fun serverType(serverType: String) {
+    override fun serverType(serverType: String) {
       cdkBuilder.serverType(serverType)
     }
 
-    public override fun token(token: String) {
+    override fun token(token: String) {
       cdkBuilder.token(token)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 

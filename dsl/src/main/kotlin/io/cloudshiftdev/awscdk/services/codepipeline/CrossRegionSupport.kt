@@ -10,22 +10,20 @@ public interface CrossRegionSupport {
   public fun stack(): Stack
 
   public interface Builder {
-    public fun replicationBucket(replicationBucket: IBucket) {
-    }
+    public fun replicationBucket(replicationBucket: IBucket)
 
-    public fun stack(stack: Stack) {
-    }
+    public fun stack(stack: Stack)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.CrossRegionSupport.Builder
         = software.amazon.awscdk.services.codepipeline.CrossRegionSupport.builder()
 
-    public override fun replicationBucket(replicationBucket: IBucket) {
+    override fun replicationBucket(replicationBucket: IBucket) {
       cdkBuilder.replicationBucket(replicationBucket.let(IBucket::unwrap))
     }
 
-    public override fun stack(stack: Stack) {
+    override fun stack(stack: Stack) {
       cdkBuilder.stack(stack.let(Stack::unwrap))
     }
 
@@ -36,10 +34,10 @@ public interface CrossRegionSupport {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.CrossRegionSupport,
   ) : CrossRegionSupport {
-    public override fun replicationBucket(): IBucket =
+    override fun replicationBucket(): IBucket =
         unwrap(this).getReplicationBucket().let(IBucket::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

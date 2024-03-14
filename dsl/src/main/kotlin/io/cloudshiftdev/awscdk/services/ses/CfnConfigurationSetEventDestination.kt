@@ -45,19 +45,15 @@ public open class CfnConfigurationSetEventDestination internal constructor(
   }
 
   public interface Builder {
-    public fun configurationSetName(configurationSetName: String) {
-    }
+    public fun configurationSetName(configurationSetName: String)
 
-    public fun eventDestination(eventDestination: IResolvable) {
-    }
+    public fun eventDestination(eventDestination: IResolvable)
 
-    public fun eventDestination(eventDestination: EventDestinationProperty) {
-    }
+    public fun eventDestination(eventDestination: EventDestinationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2f4d87013c9c0fe207561ee83bdde5e8d51ca236fe5b45cb88067774bcccb78")
-    public fun eventDestination(eventDestination: EventDestinationProperty.Builder.() -> Unit) {
-    }
+    public fun eventDestination(eventDestination: EventDestinationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -69,23 +65,22 @@ public open class CfnConfigurationSetEventDestination internal constructor(
         software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.Builder.create(scope,
         id)
 
-    public override fun configurationSetName(configurationSetName: String) {
+    override fun configurationSetName(configurationSetName: String) {
       cdkBuilder.configurationSetName(configurationSetName)
     }
 
-    public override fun eventDestination(eventDestination: IResolvable) {
+    override fun eventDestination(eventDestination: IResolvable) {
       cdkBuilder.eventDestination(eventDestination.let(IResolvable::unwrap))
     }
 
-    public override fun eventDestination(eventDestination: EventDestinationProperty) {
+    override fun eventDestination(eventDestination: EventDestinationProperty) {
       cdkBuilder.eventDestination(eventDestination.let(EventDestinationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2f4d87013c9c0fe207561ee83bdde5e8d51ca236fe5b45cb88067774bcccb78")
-    public override
-        fun eventDestination(eventDestination: EventDestinationProperty.Builder.() -> Unit): Unit =
-        eventDestination(EventDestinationProperty(eventDestination))
+    override fun eventDestination(eventDestination: EventDestinationProperty.Builder.() -> Unit):
+        Unit = eventDestination(EventDestinationProperty(eventDestination))
 
     public fun build(): software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination =
         cdkBuilder.build()
@@ -119,11 +114,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     public fun iamRoleArn(): String
 
     public interface Builder {
-      public fun deliveryStreamArn(deliveryStreamArn: String) {
-      }
+      public fun deliveryStreamArn(deliveryStreamArn: String)
 
-      public fun iamRoleArn(iamRoleArn: String) {
-      }
+      public fun iamRoleArn(iamRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -132,11 +125,11 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty.builder()
 
-      public override fun deliveryStreamArn(deliveryStreamArn: String) {
+      override fun deliveryStreamArn(deliveryStreamArn: String) {
         cdkBuilder.deliveryStreamArn(deliveryStreamArn)
       }
 
-      public override fun iamRoleArn(iamRoleArn: String) {
+      override fun iamRoleArn(iamRoleArn: String) {
         cdkBuilder.iamRoleArn(iamRoleArn)
       }
 
@@ -149,9 +142,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.KinesisFirehoseDestinationProperty,
     ) : KinesisFirehoseDestinationProperty {
-      public override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
+      override fun deliveryStreamArn(): String = unwrap(this).getDeliveryStreamArn()
 
-      public override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
     }
 
     public companion object {
@@ -183,14 +176,11 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     public fun dimensionValueSource(): String
 
     public interface Builder {
-      public fun defaultDimensionValue(defaultDimensionValue: String) {
-      }
+      public fun defaultDimensionValue(defaultDimensionValue: String)
 
-      public fun dimensionName(dimensionName: String) {
-      }
+      public fun dimensionName(dimensionName: String)
 
-      public fun dimensionValueSource(dimensionValueSource: String) {
-      }
+      public fun dimensionValueSource(dimensionValueSource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -199,15 +189,15 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty.builder()
 
-      public override fun defaultDimensionValue(defaultDimensionValue: String) {
+      override fun defaultDimensionValue(defaultDimensionValue: String) {
         cdkBuilder.defaultDimensionValue(defaultDimensionValue)
       }
 
-      public override fun dimensionName(dimensionName: String) {
+      override fun dimensionName(dimensionName: String) {
         cdkBuilder.dimensionName(dimensionName)
       }
 
-      public override fun dimensionValueSource(dimensionValueSource: String) {
+      override fun dimensionValueSource(dimensionValueSource: String) {
         cdkBuilder.dimensionValueSource(dimensionValueSource)
       }
 
@@ -220,11 +210,11 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.DimensionConfigurationProperty,
     ) : DimensionConfigurationProperty {
-      public override fun defaultDimensionValue(): String = unwrap(this).getDefaultDimensionValue()
+      override fun defaultDimensionValue(): String = unwrap(this).getDefaultDimensionValue()
 
-      public override fun dimensionName(): String = unwrap(this).getDimensionName()
+      override fun dimensionName(): String = unwrap(this).getDimensionName()
 
-      public override fun dimensionValueSource(): String = unwrap(this).getDimensionValueSource()
+      override fun dimensionValueSource(): String = unwrap(this).getDimensionValueSource()
     }
 
     public companion object {
@@ -261,53 +251,40 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     public fun snsDestination(): Any? = unwrap(this).getSnsDestination()
 
     public interface Builder {
-      public fun cloudWatchDestination(cloudWatchDestination: IResolvable) {
-      }
+      public fun cloudWatchDestination(cloudWatchDestination: IResolvable)
 
-      public fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty) {
-      }
+      public fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("278e4dff254572ecbe9e82bc4744a7e10e6ac6eda054f05dc7ebf5e76de16c9c")
       public
-          fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty.Builder.() -> Unit)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun kinesisFirehoseDestination(kinesisFirehoseDestination: IResolvable) {
-      }
+      public fun kinesisFirehoseDestination(kinesisFirehoseDestination: IResolvable)
 
       public
-          fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty) {
-      }
+          fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ea582a16a05b679d481121ad0dd24ffca83b813af5b007a6f5fb342cad5105b")
       public
-          fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty.Builder.() -> Unit) {
-      }
+          fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty.Builder.() -> Unit)
 
-      public fun matchingEventTypes(matchingEventTypes: List<String>) {
-      }
+      public fun matchingEventTypes(matchingEventTypes: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun snsDestination(snsDestination: IResolvable) {
-      }
+      public fun snsDestination(snsDestination: IResolvable)
 
-      public fun snsDestination(snsDestination: SnsDestinationProperty) {
-      }
+      public fun snsDestination(snsDestination: SnsDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ab54454e6b879739a0b83849de763b91d732f6b07bc63e0f52b0a6c5e489bb4")
-      public fun snsDestination(snsDestination: SnsDestinationProperty.Builder.() -> Unit) {
-      }
+      public fun snsDestination(snsDestination: SnsDestinationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -316,65 +293,64 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty.builder()
 
-      public override fun cloudWatchDestination(cloudWatchDestination: IResolvable) {
+      override fun cloudWatchDestination(cloudWatchDestination: IResolvable) {
         cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(IResolvable::unwrap))
       }
 
-      public override
-          fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty) {
+      override fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty) {
         cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(CloudWatchDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("278e4dff254572ecbe9e82bc4744a7e10e6ac6eda054f05dc7ebf5e76de16c9c")
-      public override
+      override
           fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty.Builder.() -> Unit):
           Unit = cloudWatchDestination(CloudWatchDestinationProperty(cloudWatchDestination))
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisFirehoseDestination(kinesisFirehoseDestination: IResolvable) {
+      override fun kinesisFirehoseDestination(kinesisFirehoseDestination: IResolvable) {
         cdkBuilder.kinesisFirehoseDestination(kinesisFirehoseDestination.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty) {
         cdkBuilder.kinesisFirehoseDestination(kinesisFirehoseDestination.let(KinesisFirehoseDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ea582a16a05b679d481121ad0dd24ffca83b813af5b007a6f5fb342cad5105b")
-      public override
+      override
           fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty.Builder.() -> Unit):
           Unit =
           kinesisFirehoseDestination(KinesisFirehoseDestinationProperty(kinesisFirehoseDestination))
 
-      public override fun matchingEventTypes(matchingEventTypes: List<String>) {
+      override fun matchingEventTypes(matchingEventTypes: List<String>) {
         cdkBuilder.matchingEventTypes(matchingEventTypes)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun snsDestination(snsDestination: IResolvable) {
+      override fun snsDestination(snsDestination: IResolvable) {
         cdkBuilder.snsDestination(snsDestination.let(IResolvable::unwrap))
       }
 
-      public override fun snsDestination(snsDestination: SnsDestinationProperty) {
+      override fun snsDestination(snsDestination: SnsDestinationProperty) {
         cdkBuilder.snsDestination(snsDestination.let(SnsDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ab54454e6b879739a0b83849de763b91d732f6b07bc63e0f52b0a6c5e489bb4")
-      public override fun snsDestination(snsDestination: SnsDestinationProperty.Builder.() -> Unit):
-          Unit = snsDestination(SnsDestinationProperty(snsDestination))
+      override fun snsDestination(snsDestination: SnsDestinationProperty.Builder.() -> Unit): Unit =
+          snsDestination(SnsDestinationProperty(snsDestination))
 
       public fun build():
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty
@@ -385,19 +361,18 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.EventDestinationProperty,
     ) : EventDestinationProperty {
-      public override fun cloudWatchDestination(): Any? = unwrap(this).getCloudWatchDestination()
+      override fun cloudWatchDestination(): Any? = unwrap(this).getCloudWatchDestination()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun kinesisFirehoseDestination(): Any? =
-          unwrap(this).getKinesisFirehoseDestination()
+      override fun kinesisFirehoseDestination(): Any? = unwrap(this).getKinesisFirehoseDestination()
 
-      public override fun matchingEventTypes(): List<String> = unwrap(this).getMatchingEventTypes()
-          ?: emptyList()
+      override fun matchingEventTypes(): List<String> = unwrap(this).getMatchingEventTypes() ?:
+          emptyList()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun snsDestination(): Any? = unwrap(this).getSnsDestination()
+      override fun snsDestination(): Any? = unwrap(this).getSnsDestination()
     }
 
     public companion object {
@@ -424,8 +399,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     public fun topicArn(): String
 
     public interface Builder {
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -434,7 +408,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty.builder()
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -447,7 +421,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.SnsDestinationProperty,
     ) : SnsDestinationProperty {
-      public override fun topicArn(): String = unwrap(this).getTopicArn()
+      override fun topicArn(): String = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -474,11 +448,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
     public fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
 
     public interface Builder {
-      public fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
-      }
+      public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
 
-      public fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
-      }
+      public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -487,11 +459,11 @@ public open class CfnConfigurationSetEventDestination internal constructor(
           =
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.builder()
 
-      public override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
+      override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
         cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
+      override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
         cdkBuilder.dimensionConfigurations(dimensionConfigurations)
       }
 
@@ -504,8 +476,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty,
     ) : CloudWatchDestinationProperty {
-      public override fun dimensionConfigurations(): Any? =
-          unwrap(this).getDimensionConfigurations()
+      override fun dimensionConfigurations(): Any? = unwrap(this).getDimensionConfigurations()
     }
 
     public companion object {

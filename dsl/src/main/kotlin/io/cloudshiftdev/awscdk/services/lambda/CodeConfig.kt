@@ -14,50 +14,45 @@ public interface CodeConfig {
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
 
   public interface Builder {
-    public fun image(image: CodeImageConfig) {
-    }
+    public fun image(image: CodeImageConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b1e1e6ade5b3a4b75b92589c86c564d75d189c7cac37b4afc672b5ccd816577f")
-    public fun image(image: CodeImageConfig.Builder.() -> Unit) {
-    }
+    public fun image(image: CodeImageConfig.Builder.() -> Unit)
 
-    public fun inlineCode(inlineCode: String) {
-    }
+    public fun inlineCode(inlineCode: String)
 
-    public fun s3Location(s3Location: Location) {
-    }
+    public fun s3Location(s3Location: Location)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("515247777926bcadf9ef8155d90f499a52f7282a137f4faa241eb4e02d5b0ced")
-    public fun s3Location(s3Location: Location.Builder.() -> Unit) {
-    }
+    public fun s3Location(s3Location: Location.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CodeConfig.Builder =
         software.amazon.awscdk.services.lambda.CodeConfig.builder()
 
-    public override fun image(image: CodeImageConfig) {
+    override fun image(image: CodeImageConfig) {
       cdkBuilder.image(image.let(CodeImageConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b1e1e6ade5b3a4b75b92589c86c564d75d189c7cac37b4afc672b5ccd816577f")
-    public override fun image(image: CodeImageConfig.Builder.() -> Unit): Unit =
+    override fun image(image: CodeImageConfig.Builder.() -> Unit): Unit =
         image(CodeImageConfig(image))
 
-    public override fun inlineCode(inlineCode: String) {
+    override fun inlineCode(inlineCode: String) {
       cdkBuilder.inlineCode(inlineCode)
     }
 
-    public override fun s3Location(s3Location: Location) {
+    override fun s3Location(s3Location: Location) {
       cdkBuilder.s3Location(s3Location.let(Location::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("515247777926bcadf9ef8155d90f499a52f7282a137f4faa241eb4e02d5b0ced")
-    public override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
+    override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
         s3Location(Location(s3Location))
 
     public fun build(): software.amazon.awscdk.services.lambda.CodeConfig = cdkBuilder.build()
@@ -66,12 +61,11 @@ public interface CodeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.CodeConfig,
   ) : CodeConfig {
-    public override fun image(): CodeImageConfig? =
-        unwrap(this).getImage()?.let(CodeImageConfig::wrap)
+    override fun image(): CodeImageConfig? = unwrap(this).getImage()?.let(CodeImageConfig::wrap)
 
-    public override fun inlineCode(): String? = unwrap(this).getInlineCode()
+    override fun inlineCode(): String? = unwrap(this).getInlineCode()
 
-    public override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+    override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
   }
 
   public companion object {

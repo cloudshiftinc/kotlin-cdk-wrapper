@@ -61,23 +61,17 @@ public open class CfnVPCPeeringConnection internal constructor(
   }
 
   public interface Builder {
-    public fun peerOwnerId(peerOwnerId: String) {
-    }
+    public fun peerOwnerId(peerOwnerId: String)
 
-    public fun peerRegion(peerRegion: String) {
-    }
+    public fun peerRegion(peerRegion: String)
 
-    public fun peerRoleArn(peerRoleArn: String) {
-    }
+    public fun peerRoleArn(peerRoleArn: String)
 
-    public fun peerVpcId(peerVpcId: String) {
-    }
+    public fun peerVpcId(peerVpcId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -87,27 +81,27 @@ public open class CfnVPCPeeringConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection.Builder.create(scope, id)
 
-    public override fun peerOwnerId(peerOwnerId: String) {
+    override fun peerOwnerId(peerOwnerId: String) {
       cdkBuilder.peerOwnerId(peerOwnerId)
     }
 
-    public override fun peerRegion(peerRegion: String) {
+    override fun peerRegion(peerRegion: String) {
       cdkBuilder.peerRegion(peerRegion)
     }
 
-    public override fun peerRoleArn(peerRoleArn: String) {
+    override fun peerRoleArn(peerRoleArn: String) {
       cdkBuilder.peerRoleArn(peerRoleArn)
     }
 
-    public override fun peerVpcId(peerVpcId: String) {
+    override fun peerVpcId(peerVpcId: String) {
       cdkBuilder.peerVpcId(peerVpcId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

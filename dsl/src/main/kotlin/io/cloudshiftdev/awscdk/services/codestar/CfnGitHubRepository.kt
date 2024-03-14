@@ -87,43 +87,31 @@ public open class CfnGitHubRepository internal constructor(
   }
 
   public interface Builder {
-    public fun code(code: IResolvable) {
-    }
+    public fun code(code: IResolvable)
 
-    public fun code(code: CodeProperty) {
-    }
+    public fun code(code: CodeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0576170719d008fcc3e4deb282cca208bfd690f67322915753fcb0ac80b47f77")
-    public fun code(code: CodeProperty.Builder.() -> Unit) {
-    }
+    public fun code(code: CodeProperty.Builder.() -> Unit)
 
-    public fun connectionArn(connectionArn: String) {
-    }
+    public fun connectionArn(connectionArn: String)
 
-    public fun enableIssues(enableIssues: Boolean) {
-    }
+    public fun enableIssues(enableIssues: Boolean)
 
-    public fun enableIssues(enableIssues: IResolvable) {
-    }
+    public fun enableIssues(enableIssues: IResolvable)
 
-    public fun isPrivate(isPrivate: Boolean) {
-    }
+    public fun isPrivate(isPrivate: Boolean)
 
-    public fun isPrivate(isPrivate: IResolvable) {
-    }
+    public fun isPrivate(isPrivate: IResolvable)
 
-    public fun repositoryAccessToken(repositoryAccessToken: String) {
-    }
+    public fun repositoryAccessToken(repositoryAccessToken: String)
 
-    public fun repositoryDescription(repositoryDescription: String) {
-    }
+    public fun repositoryDescription(repositoryDescription: String)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
 
-    public fun repositoryOwner(repositoryOwner: String) {
-    }
+    public fun repositoryOwner(repositoryOwner: String)
   }
 
   private class BuilderImpl(
@@ -133,51 +121,51 @@ public open class CfnGitHubRepository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codestar.CfnGitHubRepository.Builder =
         software.amazon.awscdk.services.codestar.CfnGitHubRepository.Builder.create(scope, id)
 
-    public override fun code(code: IResolvable) {
+    override fun code(code: IResolvable) {
       cdkBuilder.code(code.let(IResolvable::unwrap))
     }
 
-    public override fun code(code: CodeProperty) {
+    override fun code(code: CodeProperty) {
       cdkBuilder.code(code.let(CodeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0576170719d008fcc3e4deb282cca208bfd690f67322915753fcb0ac80b47f77")
-    public override fun code(code: CodeProperty.Builder.() -> Unit): Unit = code(CodeProperty(code))
+    override fun code(code: CodeProperty.Builder.() -> Unit): Unit = code(CodeProperty(code))
 
-    public override fun connectionArn(connectionArn: String) {
+    override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
     }
 
-    public override fun enableIssues(enableIssues: Boolean) {
+    override fun enableIssues(enableIssues: Boolean) {
       cdkBuilder.enableIssues(enableIssues)
     }
 
-    public override fun enableIssues(enableIssues: IResolvable) {
+    override fun enableIssues(enableIssues: IResolvable) {
       cdkBuilder.enableIssues(enableIssues.let(IResolvable::unwrap))
     }
 
-    public override fun isPrivate(isPrivate: Boolean) {
+    override fun isPrivate(isPrivate: Boolean) {
       cdkBuilder.isPrivate(isPrivate)
     }
 
-    public override fun isPrivate(isPrivate: IResolvable) {
+    override fun isPrivate(isPrivate: IResolvable) {
       cdkBuilder.isPrivate(isPrivate.let(IResolvable::unwrap))
     }
 
-    public override fun repositoryAccessToken(repositoryAccessToken: String) {
+    override fun repositoryAccessToken(repositoryAccessToken: String) {
       cdkBuilder.repositoryAccessToken(repositoryAccessToken)
     }
 
-    public override fun repositoryDescription(repositoryDescription: String) {
+    override fun repositoryDescription(repositoryDescription: String) {
       cdkBuilder.repositoryDescription(repositoryDescription)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun repositoryOwner(repositoryOwner: String) {
+    override fun repositoryOwner(repositoryOwner: String) {
       cdkBuilder.repositoryOwner(repositoryOwner)
     }
 
@@ -210,16 +198,13 @@ public open class CfnGitHubRepository internal constructor(
     public fun s3(): Any
 
     public interface Builder {
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3Property) {
-      }
+      public fun s3(s3: S3Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fd3a546b010d0c31ae1661af2835497807d2c9e6a6f40850ec667d3d8e1c61e")
-      public fun s3(s3: S3Property.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -227,17 +212,17 @@ public open class CfnGitHubRepository internal constructor(
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty.Builder =
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty.builder()
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3Property) {
+      override fun s3(s3: S3Property) {
         cdkBuilder.s3(s3.let(S3Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fd3a546b010d0c31ae1661af2835497807d2c9e6a6f40850ec667d3d8e1c61e")
-      public override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
+      override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
 
       public fun build(): software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty
           = cdkBuilder.build()
@@ -247,7 +232,7 @@ public open class CfnGitHubRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.CodeProperty,
     ) : CodeProperty {
-      public override fun s3(): Any = unwrap(this).getS3()
+      override fun s3(): Any = unwrap(this).getS3()
     }
 
     public companion object {
@@ -278,14 +263,11 @@ public open class CfnGitHubRepository internal constructor(
     public fun objectVersion(): String? = unwrap(this).getObjectVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun objectVersion(objectVersion: String) {
-      }
+      public fun objectVersion(objectVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -293,15 +275,15 @@ public open class CfnGitHubRepository internal constructor(
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property.Builder =
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun objectVersion(objectVersion: String) {
+      override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
       }
 
@@ -313,11 +295,11 @@ public open class CfnGitHubRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codestar.CfnGitHubRepository.S3Property,
     ) : S3Property {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
     }
 
     public companion object {

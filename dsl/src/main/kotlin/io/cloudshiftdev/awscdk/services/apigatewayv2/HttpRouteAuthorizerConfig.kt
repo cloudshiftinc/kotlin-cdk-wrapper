@@ -13,14 +13,11 @@ public interface HttpRouteAuthorizerConfig {
   public fun authorizerId(): String? = unwrap(this).getAuthorizerId()
 
   public interface Builder {
-    public fun authorizationScopes(authorizationScopes: List<String>) {
-    }
+    public fun authorizationScopes(authorizationScopes: List<String>)
 
-    public fun authorizationType(authorizationType: String) {
-    }
+    public fun authorizationType(authorizationType: String)
 
-    public fun authorizerId(authorizerId: String) {
-    }
+    public fun authorizerId(authorizerId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface HttpRouteAuthorizerConfig {
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig.builder()
 
-    public override fun authorizationScopes(authorizationScopes: List<String>) {
+    override fun authorizationScopes(authorizationScopes: List<String>) {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
-    public override fun authorizationType(authorizationType: String) {
+    override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)
     }
 
-    public override fun authorizerId(authorizerId: String) {
+    override fun authorizerId(authorizerId: String) {
       cdkBuilder.authorizerId(authorizerId)
     }
 
@@ -47,12 +44,12 @@ public interface HttpRouteAuthorizerConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig,
   ) : HttpRouteAuthorizerConfig {
-    public override fun authorizationScopes(): List<String> = unwrap(this).getAuthorizationScopes()
-        ?: emptyList()
+    override fun authorizationScopes(): List<String> = unwrap(this).getAuthorizationScopes() ?:
+        emptyList()
 
-    public override fun authorizationType(): String = unwrap(this).getAuthorizationType()
+    override fun authorizationType(): String = unwrap(this).getAuthorizationType()
 
-    public override fun authorizerId(): String? = unwrap(this).getAuthorizerId()
+    override fun authorizerId(): String? = unwrap(this).getAuthorizerId()
   }
 
   public companion object {

@@ -15,36 +15,32 @@ public interface DatabaseProxyAttributes {
   public fun securityGroups(): List<ISecurityGroup>
 
   public interface Builder {
-    public fun dbProxyArn(dbProxyArn: String) {
-    }
+    public fun dbProxyArn(dbProxyArn: String)
 
-    public fun dbProxyName(dbProxyName: String) {
-    }
+    public fun dbProxyName(dbProxyName: String)
 
-    public fun endpoint(endpoint: String) {
-    }
+    public fun endpoint(endpoint: String)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseProxyAttributes.Builder =
         software.amazon.awscdk.services.rds.DatabaseProxyAttributes.builder()
 
-    public override fun dbProxyArn(dbProxyArn: String) {
+    override fun dbProxyArn(dbProxyArn: String) {
       cdkBuilder.dbProxyArn(dbProxyArn)
     }
 
-    public override fun dbProxyName(dbProxyName: String) {
+    override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
     }
 
-    public override fun endpoint(endpoint: String) {
+    override fun endpoint(endpoint: String) {
       cdkBuilder.endpoint(endpoint)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
@@ -55,13 +51,13 @@ public interface DatabaseProxyAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyAttributes,
   ) : DatabaseProxyAttributes {
-    public override fun dbProxyArn(): String = unwrap(this).getDbProxyArn()
+    override fun dbProxyArn(): String = unwrap(this).getDbProxyArn()
 
-    public override fun dbProxyName(): String = unwrap(this).getDbProxyName()
+    override fun dbProxyName(): String = unwrap(this).getDbProxyName()
 
-    public override fun endpoint(): String = unwrap(this).getEndpoint()
+    override fun endpoint(): String = unwrap(this).getEndpoint()
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups().map(ISecurityGroup::wrap)
   }
 

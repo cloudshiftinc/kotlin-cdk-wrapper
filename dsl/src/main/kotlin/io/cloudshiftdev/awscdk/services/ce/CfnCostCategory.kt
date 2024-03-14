@@ -50,20 +50,15 @@ public open class CfnCostCategory internal constructor(
   }
 
   public interface Builder {
-    public fun defaultValue(defaultValue: String) {
-    }
+    public fun defaultValue(defaultValue: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun ruleVersion(ruleVersion: String) {
-    }
+    public fun ruleVersion(ruleVersion: String)
 
-    public fun rules(rules: String) {
-    }
+    public fun rules(rules: String)
 
-    public fun splitChargeRules(splitChargeRules: String) {
-    }
+    public fun splitChargeRules(splitChargeRules: String)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnCostCategory internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ce.CfnCostCategory.Builder =
         software.amazon.awscdk.services.ce.CfnCostCategory.Builder.create(scope, id)
 
-    public override fun defaultValue(defaultValue: String) {
+    override fun defaultValue(defaultValue: String) {
       cdkBuilder.defaultValue(defaultValue)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun ruleVersion(ruleVersion: String) {
+    override fun ruleVersion(ruleVersion: String) {
       cdkBuilder.ruleVersion(ruleVersion)
     }
 
-    public override fun rules(rules: String) {
+    override fun rules(rules: String) {
       cdkBuilder.rules(rules)
     }
 
-    public override fun splitChargeRules(splitChargeRules: String) {
+    override fun splitChargeRules(splitChargeRules: String) {
       cdkBuilder.splitChargeRules(splitChargeRules)
     }
 

@@ -82,35 +82,25 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun configurationName(configurationName: String) {
-    }
+    public fun configurationName(configurationName: String)
 
-    public fun guardrailPolicies(guardrailPolicies: List<String>) {
-    }
+    public fun guardrailPolicies(guardrailPolicies: List<String>)
 
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun loggingLevel(loggingLevel: String) {
-    }
+    public fun loggingLevel(loggingLevel: String)
 
-    public fun snsTopicArns(snsTopicArns: List<String>) {
-    }
+    public fun snsTopicArns(snsTopicArns: List<String>)
 
-    public fun teamId(teamId: String) {
-    }
+    public fun teamId(teamId: String)
 
-    public fun teamsChannelId(teamsChannelId: String) {
-    }
+    public fun teamsChannelId(teamsChannelId: String)
 
-    public fun teamsTenantId(teamsTenantId: String) {
-    }
+    public fun teamsTenantId(teamsTenantId: String)
 
-    public fun userRoleRequired(userRoleRequired: Boolean) {
-    }
+    public fun userRoleRequired(userRoleRequired: Boolean)
 
-    public fun userRoleRequired(userRoleRequired: IResolvable) {
-    }
+    public fun userRoleRequired(userRoleRequired: IResolvable)
   }
 
   private class BuilderImpl(
@@ -122,43 +112,43 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
         software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration.Builder.create(scope,
         id)
 
-    public override fun configurationName(configurationName: String) {
+    override fun configurationName(configurationName: String) {
       cdkBuilder.configurationName(configurationName)
     }
 
-    public override fun guardrailPolicies(guardrailPolicies: List<String>) {
+    override fun guardrailPolicies(guardrailPolicies: List<String>) {
       cdkBuilder.guardrailPolicies(guardrailPolicies)
     }
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun loggingLevel(loggingLevel: String) {
+    override fun loggingLevel(loggingLevel: String) {
       cdkBuilder.loggingLevel(loggingLevel)
     }
 
-    public override fun snsTopicArns(snsTopicArns: List<String>) {
+    override fun snsTopicArns(snsTopicArns: List<String>) {
       cdkBuilder.snsTopicArns(snsTopicArns)
     }
 
-    public override fun teamId(teamId: String) {
+    override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)
     }
 
-    public override fun teamsChannelId(teamsChannelId: String) {
+    override fun teamsChannelId(teamsChannelId: String) {
       cdkBuilder.teamsChannelId(teamsChannelId)
     }
 
-    public override fun teamsTenantId(teamsTenantId: String) {
+    override fun teamsTenantId(teamsTenantId: String) {
       cdkBuilder.teamsTenantId(teamsTenantId)
     }
 
-    public override fun userRoleRequired(userRoleRequired: Boolean) {
+    override fun userRoleRequired(userRoleRequired: Boolean) {
       cdkBuilder.userRoleRequired(userRoleRequired)
     }
 
-    public override fun userRoleRequired(userRoleRequired: IResolvable) {
+    override fun userRoleRequired(userRoleRequired: IResolvable) {
       cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable::unwrap))
     }
 

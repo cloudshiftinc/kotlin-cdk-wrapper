@@ -42,134 +42,116 @@ public interface RequestContext {
   public fun userArn(): Boolean? = unwrap(this).getUserArn()
 
   public interface Builder {
-    public fun accountId(accountId: Boolean) {
-    }
+    public fun accountId(accountId: Boolean)
 
-    public fun apiId(apiId: Boolean) {
-    }
+    public fun apiId(apiId: Boolean)
 
-    public fun apiKey(apiKey: Boolean) {
-    }
+    public fun apiKey(apiKey: Boolean)
 
-    public fun authorizerPrincipalId(authorizerPrincipalId: Boolean) {
-    }
+    public fun authorizerPrincipalId(authorizerPrincipalId: Boolean)
 
-    public fun caller(caller: Boolean) {
-    }
+    public fun caller(caller: Boolean)
 
-    public fun cognitoAuthenticationProvider(cognitoAuthenticationProvider: Boolean) {
-    }
+    public fun cognitoAuthenticationProvider(cognitoAuthenticationProvider: Boolean)
 
-    public fun cognitoAuthenticationType(cognitoAuthenticationType: Boolean) {
-    }
+    public fun cognitoAuthenticationType(cognitoAuthenticationType: Boolean)
 
-    public fun cognitoIdentityId(cognitoIdentityId: Boolean) {
-    }
+    public fun cognitoIdentityId(cognitoIdentityId: Boolean)
 
-    public fun cognitoIdentityPoolId(cognitoIdentityPoolId: Boolean) {
-    }
+    public fun cognitoIdentityPoolId(cognitoIdentityPoolId: Boolean)
 
-    public fun httpMethod(httpMethod: Boolean) {
-    }
+    public fun httpMethod(httpMethod: Boolean)
 
-    public fun requestId(requestId: Boolean) {
-    }
+    public fun requestId(requestId: Boolean)
 
-    public fun resourceId(resourceId: Boolean) {
-    }
+    public fun resourceId(resourceId: Boolean)
 
-    public fun resourcePath(resourcePath: Boolean) {
-    }
+    public fun resourcePath(resourcePath: Boolean)
 
-    public fun sourceIp(sourceIp: Boolean) {
-    }
+    public fun sourceIp(sourceIp: Boolean)
 
-    public fun stage(stage: Boolean) {
-    }
+    public fun stage(stage: Boolean)
 
-    public fun user(user: Boolean) {
-    }
+    public fun user(user: Boolean)
 
-    public fun userAgent(userAgent: Boolean) {
-    }
+    public fun userAgent(userAgent: Boolean)
 
-    public fun userArn(userArn: Boolean) {
-    }
+    public fun userArn(userArn: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.RequestContext.Builder =
         software.amazon.awscdk.services.apigateway.RequestContext.builder()
 
-    public override fun accountId(accountId: Boolean) {
+    override fun accountId(accountId: Boolean) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun apiId(apiId: Boolean) {
+    override fun apiId(apiId: Boolean) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun apiKey(apiKey: Boolean) {
+    override fun apiKey(apiKey: Boolean) {
       cdkBuilder.apiKey(apiKey)
     }
 
-    public override fun authorizerPrincipalId(authorizerPrincipalId: Boolean) {
+    override fun authorizerPrincipalId(authorizerPrincipalId: Boolean) {
       cdkBuilder.authorizerPrincipalId(authorizerPrincipalId)
     }
 
-    public override fun caller(caller: Boolean) {
+    override fun caller(caller: Boolean) {
       cdkBuilder.caller(caller)
     }
 
-    public override fun cognitoAuthenticationProvider(cognitoAuthenticationProvider: Boolean) {
+    override fun cognitoAuthenticationProvider(cognitoAuthenticationProvider: Boolean) {
       cdkBuilder.cognitoAuthenticationProvider(cognitoAuthenticationProvider)
     }
 
-    public override fun cognitoAuthenticationType(cognitoAuthenticationType: Boolean) {
+    override fun cognitoAuthenticationType(cognitoAuthenticationType: Boolean) {
       cdkBuilder.cognitoAuthenticationType(cognitoAuthenticationType)
     }
 
-    public override fun cognitoIdentityId(cognitoIdentityId: Boolean) {
+    override fun cognitoIdentityId(cognitoIdentityId: Boolean) {
       cdkBuilder.cognitoIdentityId(cognitoIdentityId)
     }
 
-    public override fun cognitoIdentityPoolId(cognitoIdentityPoolId: Boolean) {
+    override fun cognitoIdentityPoolId(cognitoIdentityPoolId: Boolean) {
       cdkBuilder.cognitoIdentityPoolId(cognitoIdentityPoolId)
     }
 
-    public override fun httpMethod(httpMethod: Boolean) {
+    override fun httpMethod(httpMethod: Boolean) {
       cdkBuilder.httpMethod(httpMethod)
     }
 
-    public override fun requestId(requestId: Boolean) {
+    override fun requestId(requestId: Boolean) {
       cdkBuilder.requestId(requestId)
     }
 
-    public override fun resourceId(resourceId: Boolean) {
+    override fun resourceId(resourceId: Boolean) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun resourcePath(resourcePath: Boolean) {
+    override fun resourcePath(resourcePath: Boolean) {
       cdkBuilder.resourcePath(resourcePath)
     }
 
-    public override fun sourceIp(sourceIp: Boolean) {
+    override fun sourceIp(sourceIp: Boolean) {
       cdkBuilder.sourceIp(sourceIp)
     }
 
-    public override fun stage(stage: Boolean) {
+    override fun stage(stage: Boolean) {
       cdkBuilder.stage(stage)
     }
 
-    public override fun user(user: Boolean) {
+    override fun user(user: Boolean) {
       cdkBuilder.user(user)
     }
 
-    public override fun userAgent(userAgent: Boolean) {
+    override fun userAgent(userAgent: Boolean) {
       cdkBuilder.userAgent(userAgent)
     }
 
-    public override fun userArn(userArn: Boolean) {
+    override fun userArn(userArn: Boolean) {
       cdkBuilder.userArn(userArn)
     }
 
@@ -180,43 +162,42 @@ public interface RequestContext {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.RequestContext,
   ) : RequestContext {
-    public override fun accountId(): Boolean? = unwrap(this).getAccountId()
+    override fun accountId(): Boolean? = unwrap(this).getAccountId()
 
-    public override fun apiId(): Boolean? = unwrap(this).getApiId()
+    override fun apiId(): Boolean? = unwrap(this).getApiId()
 
-    public override fun apiKey(): Boolean? = unwrap(this).getApiKey()
+    override fun apiKey(): Boolean? = unwrap(this).getApiKey()
 
-    public override fun authorizerPrincipalId(): Boolean? = unwrap(this).getAuthorizerPrincipalId()
+    override fun authorizerPrincipalId(): Boolean? = unwrap(this).getAuthorizerPrincipalId()
 
-    public override fun caller(): Boolean? = unwrap(this).getCaller()
+    override fun caller(): Boolean? = unwrap(this).getCaller()
 
-    public override fun cognitoAuthenticationProvider(): Boolean? =
+    override fun cognitoAuthenticationProvider(): Boolean? =
         unwrap(this).getCognitoAuthenticationProvider()
 
-    public override fun cognitoAuthenticationType(): Boolean? =
-        unwrap(this).getCognitoAuthenticationType()
+    override fun cognitoAuthenticationType(): Boolean? = unwrap(this).getCognitoAuthenticationType()
 
-    public override fun cognitoIdentityId(): Boolean? = unwrap(this).getCognitoIdentityId()
+    override fun cognitoIdentityId(): Boolean? = unwrap(this).getCognitoIdentityId()
 
-    public override fun cognitoIdentityPoolId(): Boolean? = unwrap(this).getCognitoIdentityPoolId()
+    override fun cognitoIdentityPoolId(): Boolean? = unwrap(this).getCognitoIdentityPoolId()
 
-    public override fun httpMethod(): Boolean? = unwrap(this).getHttpMethod()
+    override fun httpMethod(): Boolean? = unwrap(this).getHttpMethod()
 
-    public override fun requestId(): Boolean? = unwrap(this).getRequestId()
+    override fun requestId(): Boolean? = unwrap(this).getRequestId()
 
-    public override fun resourceId(): Boolean? = unwrap(this).getResourceId()
+    override fun resourceId(): Boolean? = unwrap(this).getResourceId()
 
-    public override fun resourcePath(): Boolean? = unwrap(this).getResourcePath()
+    override fun resourcePath(): Boolean? = unwrap(this).getResourcePath()
 
-    public override fun sourceIp(): Boolean? = unwrap(this).getSourceIp()
+    override fun sourceIp(): Boolean? = unwrap(this).getSourceIp()
 
-    public override fun stage(): Boolean? = unwrap(this).getStage()
+    override fun stage(): Boolean? = unwrap(this).getStage()
 
-    public override fun user(): Boolean? = unwrap(this).getUser()
+    override fun user(): Boolean? = unwrap(this).getUser()
 
-    public override fun userAgent(): Boolean? = unwrap(this).getUserAgent()
+    override fun userAgent(): Boolean? = unwrap(this).getUserAgent()
 
-    public override fun userArn(): Boolean? = unwrap(this).getUserArn()
+    override fun userArn(): Boolean? = unwrap(this).getUserArn()
   }
 
   public companion object {

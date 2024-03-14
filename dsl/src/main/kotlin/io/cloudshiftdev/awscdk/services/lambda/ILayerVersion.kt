@@ -26,31 +26,29 @@ public interface ILayerVersion : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.ILayerVersion,
   ) : ILayerVersion {
-    public override fun addPermission(arg0: String, arg1: LayerVersionPermission) {
+    override fun addPermission(arg0: String, arg1: LayerVersionPermission) {
       unwrap(this).addPermission(arg0, arg1.let(LayerVersionPermission::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eec498e4e61d6da6cbaf711269e77f3d0940f81924a2490180fb8f64482ccdbd")
-    public override fun addPermission(arg0: String,
-        arg1: LayerVersionPermission.Builder.() -> Unit): Unit = addPermission(arg0,
-        LayerVersionPermission(arg1))
+    override fun addPermission(arg0: String, arg1: LayerVersionPermission.Builder.() -> Unit): Unit
+        = addPermission(arg0, LayerVersionPermission(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun compatibleRuntimes(): List<Runtime> =
+    override fun compatibleRuntimes(): List<Runtime> =
         unwrap(this).getCompatibleRuntimes()?.map(Runtime::wrap) ?: emptyList()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
+    override fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

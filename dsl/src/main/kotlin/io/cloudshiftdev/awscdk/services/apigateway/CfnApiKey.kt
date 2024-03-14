@@ -88,38 +88,27 @@ public open class CfnApiKey internal constructor(
   }
 
   public interface Builder {
-    public fun customerId(customerId: String) {
-    }
+    public fun customerId(customerId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun generateDistinctId(generateDistinctId: Boolean) {
-    }
+    public fun generateDistinctId(generateDistinctId: Boolean)
 
-    public fun generateDistinctId(generateDistinctId: IResolvable) {
-    }
+    public fun generateDistinctId(generateDistinctId: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun stageKeys(stageKeys: IResolvable) {
-    }
+    public fun stageKeys(stageKeys: IResolvable)
 
-    public fun stageKeys(stageKeys: List<Any>) {
-    }
+    public fun stageKeys(stageKeys: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl(
@@ -129,47 +118,47 @@ public open class CfnApiKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnApiKey.Builder =
         software.amazon.awscdk.services.apigateway.CfnApiKey.Builder.create(scope, id)
 
-    public override fun customerId(customerId: String) {
+    override fun customerId(customerId: String) {
       cdkBuilder.customerId(customerId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun generateDistinctId(generateDistinctId: Boolean) {
+    override fun generateDistinctId(generateDistinctId: Boolean) {
       cdkBuilder.generateDistinctId(generateDistinctId)
     }
 
-    public override fun generateDistinctId(generateDistinctId: IResolvable) {
+    override fun generateDistinctId(generateDistinctId: IResolvable) {
       cdkBuilder.generateDistinctId(generateDistinctId.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun stageKeys(stageKeys: IResolvable) {
+    override fun stageKeys(stageKeys: IResolvable) {
       cdkBuilder.stageKeys(stageKeys.let(IResolvable::unwrap))
     }
 
-    public override fun stageKeys(stageKeys: List<Any>) {
+    override fun stageKeys(stageKeys: List<Any>) {
       cdkBuilder.stageKeys(stageKeys)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -203,11 +192,9 @@ public open class CfnApiKey internal constructor(
     public fun stageName(): String? = unwrap(this).getStageName()
 
     public interface Builder {
-      public fun restApiId(restApiId: String) {
-      }
+      public fun restApiId(restApiId: String)
 
-      public fun stageName(stageName: String) {
-      }
+      public fun stageName(stageName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -215,11 +202,11 @@ public open class CfnApiKey internal constructor(
           software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty.builder()
 
-      public override fun restApiId(restApiId: String) {
+      override fun restApiId(restApiId: String) {
         cdkBuilder.restApiId(restApiId)
       }
 
-      public override fun stageName(stageName: String) {
+      override fun stageName(stageName: String) {
         cdkBuilder.stageName(stageName)
       }
 
@@ -230,9 +217,9 @@ public open class CfnApiKey internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty,
     ) : StageKeyProperty {
-      public override fun restApiId(): String? = unwrap(this).getRestApiId()
+      override fun restApiId(): String? = unwrap(this).getRestApiId()
 
-      public override fun stageName(): String? = unwrap(this).getStageName()
+      override fun stageName(): String? = unwrap(this).getStageName()
     }
 
     public companion object {

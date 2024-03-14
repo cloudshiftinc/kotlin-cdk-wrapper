@@ -9,11 +9,9 @@ public interface OutputDataConfig {
   public fun s3OutputLocation(): S3Location
 
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun s3OutputLocation(s3OutputLocation: S3Location) {
-    }
+    public fun s3OutputLocation(s3OutputLocation: S3Location)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface OutputDataConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig.builder()
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun s3OutputLocation(s3OutputLocation: S3Location) {
+    override fun s3OutputLocation(s3OutputLocation: S3Location) {
       cdkBuilder.s3OutputLocation(s3OutputLocation.let(S3Location::unwrap))
     }
 
@@ -36,9 +34,9 @@ public interface OutputDataConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig,
   ) : OutputDataConfig {
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun s3OutputLocation(): S3Location =
+    override fun s3OutputLocation(): S3Location =
         unwrap(this).getS3OutputLocation().let(S3Location::wrap)
   }
 

@@ -16,8 +16,7 @@ public open class SecretRotationApplication internal constructor(
       unwrap(this).semanticVersionForPartition(partition)
 
   public interface Builder {
-    public fun isMultiUser(isMultiUser: Boolean) {
-    }
+    public fun isMultiUser(isMultiUser: Boolean)
   }
 
   private class BuilderImpl(
@@ -29,7 +28,7 @@ public open class SecretRotationApplication internal constructor(
         software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.Builder.create(applicationId,
         semanticVersion)
 
-    public override fun isMultiUser(isMultiUser: Boolean) {
+    override fun isMultiUser(isMultiUser: Boolean) {
       cdkBuilder.isMultiUser(isMultiUser)
     }
 

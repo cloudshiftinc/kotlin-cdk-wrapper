@@ -20,23 +20,17 @@ public open class WebSocketRoute internal constructor(
       unwrap(this).getWebSocketApi().let(IWebSocketApi::wrap)
 
   public interface Builder {
-    public fun apiKeyRequired(apiKeyRequired: Boolean) {
-    }
+    public fun apiKeyRequired(apiKeyRequired: Boolean)
 
-    public fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
-    }
+    public fun authorizer(authorizer: IWebSocketRouteAuthorizer)
 
-    public fun integration(integration: WebSocketRouteIntegration) {
-    }
+    public fun integration(integration: WebSocketRouteIntegration)
 
-    public fun returnResponse(returnResponse: Boolean) {
-    }
+    public fun returnResponse(returnResponse: Boolean)
 
-    public fun routeKey(routeKey: String) {
-    }
+    public fun routeKey(routeKey: String)
 
-    public fun webSocketApi(webSocketApi: IWebSocketApi) {
-    }
+    public fun webSocketApi(webSocketApi: IWebSocketApi)
   }
 
   private class BuilderImpl(
@@ -46,27 +40,27 @@ public open class WebSocketRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.WebSocketRoute.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketRoute.Builder.create(scope, id)
 
-    public override fun apiKeyRequired(apiKeyRequired: Boolean) {
+    override fun apiKeyRequired(apiKeyRequired: Boolean) {
       cdkBuilder.apiKeyRequired(apiKeyRequired)
     }
 
-    public override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
+    override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
       cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer::unwrap))
     }
 
-    public override fun integration(integration: WebSocketRouteIntegration) {
+    override fun integration(integration: WebSocketRouteIntegration) {
       cdkBuilder.integration(integration.let(WebSocketRouteIntegration::unwrap))
     }
 
-    public override fun returnResponse(returnResponse: Boolean) {
+    override fun returnResponse(returnResponse: Boolean) {
       cdkBuilder.returnResponse(returnResponse)
     }
 
-    public override fun routeKey(routeKey: String) {
+    override fun routeKey(routeKey: String) {
       cdkBuilder.routeKey(routeKey)
     }
 
-    public override fun webSocketApi(webSocketApi: IWebSocketApi) {
+    override fun webSocketApi(webSocketApi: IWebSocketApi) {
       cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
     }
 

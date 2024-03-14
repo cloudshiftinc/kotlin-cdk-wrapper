@@ -11,29 +11,26 @@ public interface LambdaActionConfig {
   public fun topicArn(): String? = unwrap(this).getTopicArn()
 
   public interface Builder {
-    public fun functionArn(functionArn: String) {
-    }
+    public fun functionArn(functionArn: String)
 
-    public fun invocationType(invocationType: String) {
-    }
+    public fun invocationType(invocationType: String)
 
-    public fun topicArn(topicArn: String) {
-    }
+    public fun topicArn(topicArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.LambdaActionConfig.Builder =
         software.amazon.awscdk.services.ses.LambdaActionConfig.builder()
 
-    public override fun functionArn(functionArn: String) {
+    override fun functionArn(functionArn: String) {
       cdkBuilder.functionArn(functionArn)
     }
 
-    public override fun invocationType(invocationType: String) {
+    override fun invocationType(invocationType: String) {
       cdkBuilder.invocationType(invocationType)
     }
 
-    public override fun topicArn(topicArn: String) {
+    override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
 
@@ -43,11 +40,11 @@ public interface LambdaActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.LambdaActionConfig,
   ) : LambdaActionConfig {
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-    public override fun invocationType(): String? = unwrap(this).getInvocationType()
+    override fun invocationType(): String? = unwrap(this).getInvocationType()
 
-    public override fun topicArn(): String? = unwrap(this).getTopicArn()
+    override fun topicArn(): String? = unwrap(this).getTopicArn()
   }
 
   public companion object {

@@ -19,38 +19,27 @@ public open class CloudFormationProduct internal constructor(
   public override fun productId(): String = unwrap(this).getProductId()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun distributor(distributor: String) {
-    }
+    public fun distributor(distributor: String)
 
-    public fun messageLanguage(messageLanguage: MessageLanguage) {
-    }
+    public fun messageLanguage(messageLanguage: MessageLanguage)
 
-    public fun owner(owner: String) {
-    }
+    public fun owner(owner: String)
 
-    public fun productName(productName: String) {
-    }
+    public fun productName(productName: String)
 
-    public fun productVersions(productVersions: List<CloudFormationProductVersion>) {
-    }
+    public fun productVersions(productVersions: List<CloudFormationProductVersion>)
 
-    public fun replaceProductVersionIds(replaceProductVersionIds: Boolean) {
-    }
+    public fun replaceProductVersionIds(replaceProductVersionIds: Boolean)
 
-    public fun supportDescription(supportDescription: String) {
-    }
+    public fun supportDescription(supportDescription: String)
 
-    public fun supportEmail(supportEmail: String) {
-    }
+    public fun supportEmail(supportEmail: String)
 
-    public fun supportUrl(supportUrl: String) {
-    }
+    public fun supportUrl(supportUrl: String)
 
-    public fun tagOptions(tagOptions: TagOptions) {
-    }
+    public fun tagOptions(tagOptions: TagOptions)
   }
 
   private class BuilderImpl(
@@ -62,47 +51,47 @@ public open class CloudFormationProduct internal constructor(
         software.amazon.awscdk.services.servicecatalog.CloudFormationProduct.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun distributor(distributor: String) {
+    override fun distributor(distributor: String) {
       cdkBuilder.distributor(distributor)
     }
 
-    public override fun messageLanguage(messageLanguage: MessageLanguage) {
+    override fun messageLanguage(messageLanguage: MessageLanguage) {
       cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
     }
 
-    public override fun owner(owner: String) {
+    override fun owner(owner: String) {
       cdkBuilder.owner(owner)
     }
 
-    public override fun productName(productName: String) {
+    override fun productName(productName: String) {
       cdkBuilder.productName(productName)
     }
 
-    public override fun productVersions(productVersions: List<CloudFormationProductVersion>) {
+    override fun productVersions(productVersions: List<CloudFormationProductVersion>) {
       cdkBuilder.productVersions(productVersions.map(CloudFormationProductVersion::unwrap))
     }
 
-    public override fun replaceProductVersionIds(replaceProductVersionIds: Boolean) {
+    override fun replaceProductVersionIds(replaceProductVersionIds: Boolean) {
       cdkBuilder.replaceProductVersionIds(replaceProductVersionIds)
     }
 
-    public override fun supportDescription(supportDescription: String) {
+    override fun supportDescription(supportDescription: String) {
       cdkBuilder.supportDescription(supportDescription)
     }
 
-    public override fun supportEmail(supportEmail: String) {
+    override fun supportEmail(supportEmail: String) {
       cdkBuilder.supportEmail(supportEmail)
     }
 
-    public override fun supportUrl(supportUrl: String) {
+    override fun supportUrl(supportUrl: String) {
       cdkBuilder.supportUrl(supportUrl)
     }
 
-    public override fun tagOptions(tagOptions: TagOptions) {
+    override fun tagOptions(tagOptions: TagOptions) {
       cdkBuilder.tagOptions(tagOptions.let(TagOptions::unwrap))
     }
 

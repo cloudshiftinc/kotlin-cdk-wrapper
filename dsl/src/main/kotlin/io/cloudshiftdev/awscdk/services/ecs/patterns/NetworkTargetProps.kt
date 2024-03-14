@@ -10,22 +10,20 @@ public interface NetworkTargetProps {
   public fun listener(): String? = unwrap(this).getListener()
 
   public interface Builder {
-    public fun containerPort(containerPort: Number) {
-    }
+    public fun containerPort(containerPort: Number)
 
-    public fun listener(listener: String) {
-    }
+    public fun listener(listener: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps.Builder
         = software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps.builder()
 
-    public override fun containerPort(containerPort: Number) {
+    override fun containerPort(containerPort: Number) {
       cdkBuilder.containerPort(containerPort)
     }
 
-    public override fun listener(listener: String) {
+    override fun listener(listener: String) {
       cdkBuilder.listener(listener)
     }
 
@@ -36,9 +34,9 @@ public interface NetworkTargetProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps,
   ) : NetworkTargetProps {
-    public override fun containerPort(): Number = unwrap(this).getContainerPort()
+    override fun containerPort(): Number = unwrap(this).getContainerPort()
 
-    public override fun listener(): String? = unwrap(this).getListener()
+    override fun listener(): String? = unwrap(this).getListener()
   }
 
   public companion object {

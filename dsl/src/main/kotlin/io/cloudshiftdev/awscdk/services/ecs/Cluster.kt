@@ -152,44 +152,33 @@ public open class Cluster internal constructor(
   public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
 
   public interface Builder {
-    public fun capacity(capacity: AddCapacityOptions) {
-    }
+    public fun capacity(capacity: AddCapacityOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1747d0a15bfbde19321a2d8d7aab5ad188daf08bbad720ff8cd78f71bc5d0c30")
-    public fun capacity(capacity: AddCapacityOptions.Builder.() -> Unit) {
-    }
+    public fun capacity(capacity: AddCapacityOptions.Builder.() -> Unit)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun containerInsights(containerInsights: Boolean) {
-    }
+    public fun containerInsights(containerInsights: Boolean)
 
-    public fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions) {
-    }
+    public fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("86fad33d93456dd392654e74eedbe276ef8687f3da3062b59797356804ca9d7d")
     public
-        fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions.Builder.() -> Unit) {
-    }
+        fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions.Builder.() -> Unit)
 
-    public fun enableFargateCapacityProviders(enableFargateCapacityProviders: Boolean) {
-    }
+    public fun enableFargateCapacityProviders(enableFargateCapacityProviders: Boolean)
 
-    public
-        fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration) {
-    }
+    public fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0f4f83939edf7aed5681a9f9f8be14a1bb3bcc72ded205cab8950d1b23aed33")
     public
-        fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration.Builder.() -> Unit) {
-    }
+        fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -199,50 +188,49 @@ public open class Cluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.Cluster.Builder =
         software.amazon.awscdk.services.ecs.Cluster.Builder.create(scope, id)
 
-    public override fun capacity(capacity: AddCapacityOptions) {
+    override fun capacity(capacity: AddCapacityOptions) {
       cdkBuilder.capacity(capacity.let(AddCapacityOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1747d0a15bfbde19321a2d8d7aab5ad188daf08bbad720ff8cd78f71bc5d0c30")
-    public override fun capacity(capacity: AddCapacityOptions.Builder.() -> Unit): Unit =
+    override fun capacity(capacity: AddCapacityOptions.Builder.() -> Unit): Unit =
         capacity(AddCapacityOptions(capacity))
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun containerInsights(containerInsights: Boolean) {
+    override fun containerInsights(containerInsights: Boolean) {
       cdkBuilder.containerInsights(containerInsights)
     }
 
-    public override
-        fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions) {
+    override fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions) {
       cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(CloudMapNamespaceOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("86fad33d93456dd392654e74eedbe276ef8687f3da3062b59797356804ca9d7d")
-    public override
+    override
         fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions.Builder.() -> Unit):
         Unit = defaultCloudMapNamespace(CloudMapNamespaceOptions(defaultCloudMapNamespace))
 
-    public override fun enableFargateCapacityProviders(enableFargateCapacityProviders: Boolean) {
+    override fun enableFargateCapacityProviders(enableFargateCapacityProviders: Boolean) {
       cdkBuilder.enableFargateCapacityProviders(enableFargateCapacityProviders)
     }
 
-    public override
+    override
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration) {
       cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0f4f83939edf7aed5681a9f9f8be14a1bb3bcc72ded205cab8950d1b23aed33")
-    public override
+    override
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration.Builder.() -> Unit):
         Unit = executeCommandConfiguration(ExecuteCommandConfiguration(executeCommandConfiguration))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

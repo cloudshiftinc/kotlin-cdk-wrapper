@@ -45,20 +45,15 @@ public open class CfnMacro internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun logRoleArn(logRoleArn: String) {
-    }
+    public fun logRoleArn(logRoleArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -68,23 +63,23 @@ public open class CfnMacro internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnMacro.Builder =
         software.amazon.awscdk.CfnMacro.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun logRoleArn(logRoleArn: String) {
+    override fun logRoleArn(logRoleArn: String) {
       cdkBuilder.logRoleArn(logRoleArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

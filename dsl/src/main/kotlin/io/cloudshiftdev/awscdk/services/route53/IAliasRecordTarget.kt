@@ -8,10 +8,10 @@ public interface IAliasRecordTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.IAliasRecordTarget,
   ) : IAliasRecordTarget {
-    public override fun bind(arg0: IRecordSet): AliasRecordTargetConfig =
+    override fun bind(arg0: IRecordSet): AliasRecordTargetConfig =
         unwrap(this).bind(arg0.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
-    public override fun bind(arg0: IRecordSet, arg1: IHostedZone): AliasRecordTargetConfig =
+    override fun bind(arg0: IRecordSet, arg1: IHostedZone): AliasRecordTargetConfig =
         unwrap(this).bind(arg0.let(IRecordSet::unwrap),
         arg1.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
   }

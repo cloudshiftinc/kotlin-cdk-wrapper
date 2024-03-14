@@ -37,14 +37,11 @@ public open class CfnProactiveEngagement internal constructor(
   }
 
   public interface Builder {
-    public fun emergencyContactList(emergencyContactList: IResolvable) {
-    }
+    public fun emergencyContactList(emergencyContactList: IResolvable)
 
-    public fun emergencyContactList(emergencyContactList: List<Any>) {
-    }
+    public fun emergencyContactList(emergencyContactList: List<Any>)
 
-    public fun proactiveEngagementStatus(proactiveEngagementStatus: String) {
-    }
+    public fun proactiveEngagementStatus(proactiveEngagementStatus: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnProactiveEngagement internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.shield.CfnProactiveEngagement.Builder =
         software.amazon.awscdk.services.shield.CfnProactiveEngagement.Builder.create(scope, id)
 
-    public override fun emergencyContactList(emergencyContactList: IResolvable) {
+    override fun emergencyContactList(emergencyContactList: IResolvable) {
       cdkBuilder.emergencyContactList(emergencyContactList.let(IResolvable::unwrap))
     }
 
-    public override fun emergencyContactList(emergencyContactList: List<Any>) {
+    override fun emergencyContactList(emergencyContactList: List<Any>) {
       cdkBuilder.emergencyContactList(emergencyContactList)
     }
 
-    public override fun proactiveEngagementStatus(proactiveEngagementStatus: String) {
+    override fun proactiveEngagementStatus(proactiveEngagementStatus: String) {
       cdkBuilder.proactiveEngagementStatus(proactiveEngagementStatus)
     }
 
@@ -99,14 +96,11 @@ public open class CfnProactiveEngagement internal constructor(
     public fun phoneNumber(): String? = unwrap(this).getPhoneNumber()
 
     public interface Builder {
-      public fun contactNotes(contactNotes: String) {
-      }
+      public fun contactNotes(contactNotes: String)
 
-      public fun emailAddress(emailAddress: String) {
-      }
+      public fun emailAddress(emailAddress: String)
 
-      public fun phoneNumber(phoneNumber: String) {
-      }
+      public fun phoneNumber(phoneNumber: String)
     }
 
     private class BuilderImpl : Builder {
@@ -115,15 +109,15 @@ public open class CfnProactiveEngagement internal constructor(
           =
           software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty.builder()
 
-      public override fun contactNotes(contactNotes: String) {
+      override fun contactNotes(contactNotes: String) {
         cdkBuilder.contactNotes(contactNotes)
       }
 
-      public override fun emailAddress(emailAddress: String) {
+      override fun emailAddress(emailAddress: String) {
         cdkBuilder.emailAddress(emailAddress)
       }
 
-      public override fun phoneNumber(phoneNumber: String) {
+      override fun phoneNumber(phoneNumber: String) {
         cdkBuilder.phoneNumber(phoneNumber)
       }
 
@@ -136,11 +130,11 @@ public open class CfnProactiveEngagement internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.shield.CfnProactiveEngagement.EmergencyContactProperty,
     ) : EmergencyContactProperty {
-      public override fun contactNotes(): String? = unwrap(this).getContactNotes()
+      override fun contactNotes(): String? = unwrap(this).getContactNotes()
 
-      public override fun emailAddress(): String = unwrap(this).getEmailAddress()
+      override fun emailAddress(): String = unwrap(this).getEmailAddress()
 
-      public override fun phoneNumber(): String? = unwrap(this).getPhoneNumber()
+      override fun phoneNumber(): String? = unwrap(this).getPhoneNumber()
     }
 
     public companion object {

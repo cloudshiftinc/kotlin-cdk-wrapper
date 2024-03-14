@@ -74,29 +74,21 @@ public open class CfnTrafficMirrorSession internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
 
-    public fun packetLength(packetLength: Number) {
-    }
+    public fun packetLength(packetLength: Number)
 
-    public fun sessionNumber(sessionNumber: Number) {
-    }
+    public fun sessionNumber(sessionNumber: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
-    }
+    public fun trafficMirrorFilterId(trafficMirrorFilterId: String)
 
-    public fun trafficMirrorTargetId(trafficMirrorTargetId: String) {
-    }
+    public fun trafficMirrorTargetId(trafficMirrorTargetId: String)
 
-    public fun virtualNetworkId(virtualNetworkId: Number) {
-    }
+    public fun virtualNetworkId(virtualNetworkId: Number)
   }
 
   private class BuilderImpl(
@@ -106,35 +98,35 @@ public open class CfnTrafficMirrorSession internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession.Builder =
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
-    public override fun packetLength(packetLength: Number) {
+    override fun packetLength(packetLength: Number) {
       cdkBuilder.packetLength(packetLength)
     }
 
-    public override fun sessionNumber(sessionNumber: Number) {
+    override fun sessionNumber(sessionNumber: Number) {
       cdkBuilder.sessionNumber(sessionNumber)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
+    override fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
       cdkBuilder.trafficMirrorFilterId(trafficMirrorFilterId)
     }
 
-    public override fun trafficMirrorTargetId(trafficMirrorTargetId: String) {
+    override fun trafficMirrorTargetId(trafficMirrorTargetId: String) {
       cdkBuilder.trafficMirrorTargetId(trafficMirrorTargetId)
     }
 
-    public override fun virtualNetworkId(virtualNetworkId: Number) {
+    override fun virtualNetworkId(virtualNetworkId: Number) {
       cdkBuilder.virtualNetworkId(virtualNetworkId)
     }
 

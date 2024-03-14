@@ -15,42 +15,37 @@ public interface DefinitionConfig {
   public fun definitionString(): String? = unwrap(this).getDefinitionString()
 
   public interface Builder {
-    public fun definition(definition: Any) {
-    }
+    public fun definition(definition: Any)
 
-    public fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
-    }
+    public fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("74b8aebc03e1dd04aa46dcdfe896ceb0e50df80fdd74079e76fec8d00025254b")
     public
-        fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty.Builder.() -> Unit) {
-    }
+        fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty.Builder.() -> Unit)
 
-    public fun definitionString(definitionString: String) {
-    }
+    public fun definitionString(definitionString: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.DefinitionConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.DefinitionConfig.builder()
 
-    public override fun definition(definition: Any) {
+    override fun definition(definition: Any) {
       cdkBuilder.definition(definition)
     }
 
-    public override
-        fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
+    override fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
       cdkBuilder.definitionS3Location(definitionS3Location.let(CfnStateMachine.S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("74b8aebc03e1dd04aa46dcdfe896ceb0e50df80fdd74079e76fec8d00025254b")
-    public override
+    override
         fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty.Builder.() -> Unit):
         Unit = definitionS3Location(CfnStateMachine.S3LocationProperty(definitionS3Location))
 
-    public override fun definitionString(definitionString: String) {
+    override fun definitionString(definitionString: String) {
       cdkBuilder.definitionString(definitionString)
     }
 
@@ -61,12 +56,12 @@ public interface DefinitionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionConfig,
   ) : DefinitionConfig {
-    public override fun definition(): Any? = unwrap(this).getDefinition()
+    override fun definition(): Any? = unwrap(this).getDefinition()
 
-    public override fun definitionS3Location(): CfnStateMachine.S3LocationProperty? =
+    override fun definitionS3Location(): CfnStateMachine.S3LocationProperty? =
         unwrap(this).getDefinitionS3Location()?.let(CfnStateMachine.S3LocationProperty::wrap)
 
-    public override fun definitionString(): String? = unwrap(this).getDefinitionString()
+    override fun definitionString(): String? = unwrap(this).getDefinitionString()
   }
 
   public companion object {

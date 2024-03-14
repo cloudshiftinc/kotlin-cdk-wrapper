@@ -14,14 +14,11 @@ public interface ApplicationConfiguration {
   public fun properties(): Map<String, String> = unwrap(this).getProperties() ?: emptyMap()
 
   public interface Builder {
-    public fun classification(classification: Classification) {
-    }
+    public fun classification(classification: Classification)
 
-    public fun nestedConfig(nestedConfig: List<ApplicationConfiguration>) {
-    }
+    public fun nestedConfig(nestedConfig: List<ApplicationConfiguration>)
 
-    public fun properties(properties: Map<String, String>) {
-    }
+    public fun properties(properties: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -29,15 +26,15 @@ public interface ApplicationConfiguration {
         software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration.builder()
 
-    public override fun classification(classification: Classification) {
+    override fun classification(classification: Classification) {
       cdkBuilder.classification(classification.let(Classification::unwrap))
     }
 
-    public override fun nestedConfig(nestedConfig: List<ApplicationConfiguration>) {
+    override fun nestedConfig(nestedConfig: List<ApplicationConfiguration>) {
       cdkBuilder.nestedConfig(nestedConfig.map(ApplicationConfiguration::unwrap))
     }
 
-    public override fun properties(properties: Map<String, String>) {
+    override fun properties(properties: Map<String, String>) {
       cdkBuilder.properties(properties)
     }
 
@@ -49,14 +46,13 @@ public interface ApplicationConfiguration {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.ApplicationConfiguration,
   ) : ApplicationConfiguration {
-    public override fun classification(): Classification =
+    override fun classification(): Classification =
         unwrap(this).getClassification().let(Classification::wrap)
 
-    public override fun nestedConfig(): List<ApplicationConfiguration> =
+    override fun nestedConfig(): List<ApplicationConfiguration> =
         unwrap(this).getNestedConfig()?.map(ApplicationConfiguration::wrap) ?: emptyList()
 
-    public override fun properties(): Map<String, String> = unwrap(this).getProperties() ?:
-        emptyMap()
+    override fun properties(): Map<String, String> = unwrap(this).getProperties() ?: emptyMap()
   }
 
   public companion object {

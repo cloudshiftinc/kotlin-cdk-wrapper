@@ -61,29 +61,22 @@ public open class CfnStateMachineAlias internal constructor(
   }
 
   public interface Builder {
-    public fun deploymentPreference(deploymentPreference: IResolvable) {
-    }
+    public fun deploymentPreference(deploymentPreference: IResolvable)
 
-    public fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty) {
-    }
+    public fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1962753474155368b7bbfd69a608a1d69b2cf283bf9dc71d5338dcc916936569")
     public
-        fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty.Builder.() -> Unit) {
-    }
+        fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun routingConfiguration(routingConfiguration: IResolvable) {
-    }
+    public fun routingConfiguration(routingConfiguration: IResolvable)
 
-    public fun routingConfiguration(routingConfiguration: List<Any>) {
-    }
+    public fun routingConfiguration(routingConfiguration: List<Any>)
   }
 
   private class BuilderImpl(
@@ -94,33 +87,33 @@ public open class CfnStateMachineAlias internal constructor(
         software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.Builder =
         software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.Builder.create(scope, id)
 
-    public override fun deploymentPreference(deploymentPreference: IResolvable) {
+    override fun deploymentPreference(deploymentPreference: IResolvable) {
       cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable::unwrap))
     }
 
-    public override fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty) {
+    override fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty) {
       cdkBuilder.deploymentPreference(deploymentPreference.let(DeploymentPreferenceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1962753474155368b7bbfd69a608a1d69b2cf283bf9dc71d5338dcc916936569")
-    public override
+    override
         fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty.Builder.() -> Unit):
         Unit = deploymentPreference(DeploymentPreferenceProperty(deploymentPreference))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun routingConfiguration(routingConfiguration: IResolvable) {
+    override fun routingConfiguration(routingConfiguration: IResolvable) {
       cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun routingConfiguration(routingConfiguration: List<Any>) {
+    override fun routingConfiguration(routingConfiguration: List<Any>) {
       cdkBuilder.routingConfiguration(routingConfiguration)
     }
 
@@ -156,11 +149,9 @@ public open class CfnStateMachineAlias internal constructor(
     public fun weight(): Number
 
     public interface Builder {
-      public fun stateMachineVersionArn(stateMachineVersionArn: String) {
-      }
+      public fun stateMachineVersionArn(stateMachineVersionArn: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -169,11 +160,11 @@ public open class CfnStateMachineAlias internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty.builder()
 
-      public override fun stateMachineVersionArn(stateMachineVersionArn: String) {
+      override fun stateMachineVersionArn(stateMachineVersionArn: String) {
         cdkBuilder.stateMachineVersionArn(stateMachineVersionArn)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -186,10 +177,9 @@ public open class CfnStateMachineAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty,
     ) : RoutingConfigurationVersionProperty {
-      public override fun stateMachineVersionArn(): String =
-          unwrap(this).getStateMachineVersionArn()
+      override fun stateMachineVersionArn(): String = unwrap(this).getStateMachineVersionArn()
 
-      public override fun weight(): Number = unwrap(this).getWeight()
+      override fun weight(): Number = unwrap(this).getWeight()
     }
 
     public companion object {
@@ -225,20 +215,15 @@ public open class CfnStateMachineAlias internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun alarms(alarms: List<String>) {
-      }
+      public fun alarms(alarms: List<String>)
 
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun percentage(percentage: Number) {
-      }
+      public fun percentage(percentage: Number)
 
-      public fun stateMachineVersionArn(stateMachineVersionArn: String) {
-      }
+      public fun stateMachineVersionArn(stateMachineVersionArn: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -247,23 +232,23 @@ public open class CfnStateMachineAlias internal constructor(
           =
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty.builder()
 
-      public override fun alarms(alarms: List<String>) {
+      override fun alarms(alarms: List<String>) {
         cdkBuilder.alarms(alarms)
       }
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun percentage(percentage: Number) {
+      override fun percentage(percentage: Number) {
         cdkBuilder.percentage(percentage)
       }
 
-      public override fun stateMachineVersionArn(stateMachineVersionArn: String) {
+      override fun stateMachineVersionArn(stateMachineVersionArn: String) {
         cdkBuilder.stateMachineVersionArn(stateMachineVersionArn)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -276,16 +261,15 @@ public open class CfnStateMachineAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty,
     ) : DeploymentPreferenceProperty {
-      public override fun alarms(): List<String> = unwrap(this).getAlarms() ?: emptyList()
+      override fun alarms(): List<String> = unwrap(this).getAlarms() ?: emptyList()
 
-      public override fun interval(): Number? = unwrap(this).getInterval()
+      override fun interval(): Number? = unwrap(this).getInterval()
 
-      public override fun percentage(): Number? = unwrap(this).getPercentage()
+      override fun percentage(): Number? = unwrap(this).getPercentage()
 
-      public override fun stateMachineVersionArn(): String =
-          unwrap(this).getStateMachineVersionArn()
+      override fun stateMachineVersionArn(): String = unwrap(this).getStateMachineVersionArn()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

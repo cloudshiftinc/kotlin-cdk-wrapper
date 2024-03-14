@@ -94,47 +94,34 @@ public open class CfnDeployment internal constructor(
   }
 
   public interface Builder {
-    public fun components(components: IResolvable) {
-    }
+    public fun components(components: IResolvable)
 
-    public fun components(components: Map<String, Any>) {
-    }
+    public fun components(components: Map<String, Any>)
 
-    public fun deploymentName(deploymentName: String) {
-    }
+    public fun deploymentName(deploymentName: String)
 
-    public fun deploymentPolicies(deploymentPolicies: IResolvable) {
-    }
+    public fun deploymentPolicies(deploymentPolicies: IResolvable)
 
-    public fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty) {
-    }
+    public fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6abdf667c4571f2e053be60238321b64f1b0cb205d4938adba46df49ad0ba187")
-    public
-        fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty.Builder.() -> Unit) {
-    }
+    public fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty.Builder.() -> Unit)
 
-    public fun iotJobConfiguration(iotJobConfiguration: IResolvable) {
-    }
+    public fun iotJobConfiguration(iotJobConfiguration: IResolvable)
 
-    public fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty) {
-    }
+    public fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("47375d74830768d23d48de5b6201039cef3e1b3620fe1f6ef05e4b6ccd0a4c6c")
     public
-        fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty.Builder.() -> Unit)
 
-    public fun parentTargetArn(parentTargetArn: String) {
-    }
+    public fun parentTargetArn(parentTargetArn: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun targetArn(targetArn: String) {
-    }
+    public fun targetArn(targetArn: String)
   }
 
   private class BuilderImpl(
@@ -144,56 +131,55 @@ public open class CfnDeployment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.greengrassv2.CfnDeployment.Builder =
         software.amazon.awscdk.services.greengrassv2.CfnDeployment.Builder.create(scope, id)
 
-    public override fun components(components: IResolvable) {
+    override fun components(components: IResolvable) {
       cdkBuilder.components(components.let(IResolvable::unwrap))
     }
 
-    public override fun components(components: Map<String, Any>) {
+    override fun components(components: Map<String, Any>) {
       cdkBuilder.components(components)
     }
 
-    public override fun deploymentName(deploymentName: String) {
+    override fun deploymentName(deploymentName: String) {
       cdkBuilder.deploymentName(deploymentName)
     }
 
-    public override fun deploymentPolicies(deploymentPolicies: IResolvable) {
+    override fun deploymentPolicies(deploymentPolicies: IResolvable) {
       cdkBuilder.deploymentPolicies(deploymentPolicies.let(IResolvable::unwrap))
     }
 
-    public override fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty) {
+    override fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty) {
       cdkBuilder.deploymentPolicies(deploymentPolicies.let(DeploymentPoliciesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6abdf667c4571f2e053be60238321b64f1b0cb205d4938adba46df49ad0ba187")
-    public override
+    override
         fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty.Builder.() -> Unit):
         Unit = deploymentPolicies(DeploymentPoliciesProperty(deploymentPolicies))
 
-    public override fun iotJobConfiguration(iotJobConfiguration: IResolvable) {
+    override fun iotJobConfiguration(iotJobConfiguration: IResolvable) {
       cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty) {
+    override fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty) {
       cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(DeploymentIoTJobConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("47375d74830768d23d48de5b6201039cef3e1b3620fe1f6ef05e4b6ccd0a4c6c")
-    public override
+    override
         fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty.Builder.() -> Unit):
         Unit = iotJobConfiguration(DeploymentIoTJobConfigurationProperty(iotJobConfiguration))
 
-    public override fun parentTargetArn(parentTargetArn: String) {
+    override fun parentTargetArn(parentTargetArn: String) {
       cdkBuilder.parentTargetArn(parentTargetArn)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun targetArn(targetArn: String) {
+    override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
     }
 
@@ -230,31 +216,24 @@ public open class CfnDeployment internal constructor(
     public fun runWith(): Any? = unwrap(this).getRunWith()
 
     public interface Builder {
-      public fun componentVersion(componentVersion: String) {
-      }
+      public fun componentVersion(componentVersion: String)
 
-      public fun configurationUpdate(configurationUpdate: IResolvable) {
-      }
+      public fun configurationUpdate(configurationUpdate: IResolvable)
 
-      public fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty) {
-      }
+      public fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bff8a79f37c7f2b8d15a21d1fb6b2699725a3bd18ee3d1a1210700f5854c3c98")
       public
-          fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty.Builder.() -> Unit) {
-      }
+          fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty.Builder.() -> Unit)
 
-      public fun runWith(runWith: IResolvable) {
-      }
+      public fun runWith(runWith: IResolvable)
 
-      public fun runWith(runWith: ComponentRunWithProperty) {
-      }
+      public fun runWith(runWith: ComponentRunWithProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2fedfda318dca168ff86448eb05b7921146a82619d9f1a0fc65d92986e666558")
-      public fun runWith(runWith: ComponentRunWithProperty.Builder.() -> Unit) {
-      }
+      public fun runWith(runWith: ComponentRunWithProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -263,36 +242,35 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty.builder()
 
-      public override fun componentVersion(componentVersion: String) {
+      override fun componentVersion(componentVersion: String) {
         cdkBuilder.componentVersion(componentVersion)
       }
 
-      public override fun configurationUpdate(configurationUpdate: IResolvable) {
+      override fun configurationUpdate(configurationUpdate: IResolvable) {
         cdkBuilder.configurationUpdate(configurationUpdate.let(IResolvable::unwrap))
       }
 
-      public override
-          fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty) {
+      override fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty) {
         cdkBuilder.configurationUpdate(configurationUpdate.let(ComponentConfigurationUpdateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bff8a79f37c7f2b8d15a21d1fb6b2699725a3bd18ee3d1a1210700f5854c3c98")
-      public override
+      override
           fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty.Builder.() -> Unit):
           Unit = configurationUpdate(ComponentConfigurationUpdateProperty(configurationUpdate))
 
-      public override fun runWith(runWith: IResolvable) {
+      override fun runWith(runWith: IResolvable) {
         cdkBuilder.runWith(runWith.let(IResolvable::unwrap))
       }
 
-      public override fun runWith(runWith: ComponentRunWithProperty) {
+      override fun runWith(runWith: ComponentRunWithProperty) {
         cdkBuilder.runWith(runWith.let(ComponentRunWithProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2fedfda318dca168ff86448eb05b7921146a82619d9f1a0fc65d92986e666558")
-      public override fun runWith(runWith: ComponentRunWithProperty.Builder.() -> Unit): Unit =
+      override fun runWith(runWith: ComponentRunWithProperty.Builder.() -> Unit): Unit =
           runWith(ComponentRunWithProperty(runWith))
 
       public fun build():
@@ -304,11 +282,11 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentDeploymentSpecificationProperty,
     ) : ComponentDeploymentSpecificationProperty {
-      public override fun componentVersion(): String? = unwrap(this).getComponentVersion()
+      override fun componentVersion(): String? = unwrap(this).getComponentVersion()
 
-      public override fun configurationUpdate(): Any? = unwrap(this).getConfigurationUpdate()
+      override fun configurationUpdate(): Any? = unwrap(this).getConfigurationUpdate()
 
-      public override fun runWith(): Any? = unwrap(this).getRunWith()
+      override fun runWith(): Any? = unwrap(this).getRunWith()
     }
 
     public companion object {
@@ -342,17 +320,13 @@ public open class CfnDeployment internal constructor(
     public fun thresholdPercentage(): Number
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun failureType(failureType: String) {
-      }
+      public fun failureType(failureType: String)
 
-      public fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
-      }
+      public fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number)
 
-      public fun thresholdPercentage(thresholdPercentage: Number) {
-      }
+      public fun thresholdPercentage(thresholdPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -361,19 +335,19 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun failureType(failureType: String) {
+      override fun failureType(failureType: String) {
         cdkBuilder.failureType(failureType)
       }
 
-      public override fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
+      override fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
         cdkBuilder.minNumberOfExecutedThings(minNumberOfExecutedThings)
       }
 
-      public override fun thresholdPercentage(thresholdPercentage: Number) {
+      override fun thresholdPercentage(thresholdPercentage: Number) {
         cdkBuilder.thresholdPercentage(thresholdPercentage)
       }
 
@@ -386,14 +360,13 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortCriteriaProperty,
     ) : IoTJobAbortCriteriaProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
 
-      public override fun failureType(): String = unwrap(this).getFailureType()
+      override fun failureType(): String = unwrap(this).getFailureType()
 
-      public override fun minNumberOfExecutedThings(): Number =
-          unwrap(this).getMinNumberOfExecutedThings()
+      override fun minNumberOfExecutedThings(): Number = unwrap(this).getMinNumberOfExecutedThings()
 
-      public override fun thresholdPercentage(): Number = unwrap(this).getThresholdPercentage()
+      override fun thresholdPercentage(): Number = unwrap(this).getThresholdPercentage()
     }
 
     public companion object {
@@ -420,8 +393,7 @@ public open class CfnDeployment internal constructor(
     public fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
 
     public interface Builder {
-      public fun timeoutInSeconds(timeoutInSeconds: Number) {
-      }
+      public fun timeoutInSeconds(timeoutInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -430,7 +402,7 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty.builder()
 
-      public override fun timeoutInSeconds(timeoutInSeconds: Number) {
+      override fun timeoutInSeconds(timeoutInSeconds: Number) {
         cdkBuilder.timeoutInSeconds(timeoutInSeconds)
       }
 
@@ -443,7 +415,7 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentConfigurationValidationPolicyProperty,
     ) : DeploymentConfigurationValidationPolicyProperty {
-      public override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
+      override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
     }
 
     public companion object {
@@ -473,11 +445,9 @@ public open class CfnDeployment internal constructor(
     public fun memory(): Number? = unwrap(this).getMemory()
 
     public interface Builder {
-      public fun cpus(cpus: Number) {
-      }
+      public fun cpus(cpus: Number)
 
-      public fun memory(memory: Number) {
-      }
+      public fun memory(memory: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -486,11 +456,11 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty.builder()
 
-      public override fun cpus(cpus: Number) {
+      override fun cpus(cpus: Number) {
         cdkBuilder.cpus(cpus)
       }
 
-      public override fun memory(memory: Number) {
+      override fun memory(memory: Number) {
         cdkBuilder.memory(memory)
       }
 
@@ -503,9 +473,9 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.SystemResourceLimitsProperty,
     ) : SystemResourceLimitsProperty {
-      public override fun cpus(): Number? = unwrap(this).getCpus()
+      override fun cpus(): Number? = unwrap(this).getCpus()
 
-      public override fun memory(): Number? = unwrap(this).getMemory()
+      override fun memory(): Number? = unwrap(this).getMemory()
     }
 
     public companion object {
@@ -532,8 +502,7 @@ public open class CfnDeployment internal constructor(
     public fun inProgressTimeoutInMinutes(): Number? = unwrap(this).getInProgressTimeoutInMinutes()
 
     public interface Builder {
-      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
-      }
+      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -542,7 +511,7 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty.builder()
 
-      public override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
+      override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
         cdkBuilder.inProgressTimeoutInMinutes(inProgressTimeoutInMinutes)
       }
 
@@ -555,7 +524,7 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobTimeoutConfigProperty,
     ) : IoTJobTimeoutConfigProperty {
-      public override fun inProgressTimeoutInMinutes(): Number? =
+      override fun inProgressTimeoutInMinutes(): Number? =
           unwrap(this).getInProgressTimeoutInMinutes()
     }
 
@@ -585,11 +554,9 @@ public open class CfnDeployment internal constructor(
     public fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
 
     public interface Builder {
-      public fun merge(merge: String) {
-      }
+      public fun merge(merge: String)
 
-      public fun reset(reset: List<String>) {
-      }
+      public fun reset(reset: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -598,11 +565,11 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty.builder()
 
-      public override fun merge(merge: String) {
+      override fun merge(merge: String) {
         cdkBuilder.merge(merge)
       }
 
-      public override fun reset(reset: List<String>) {
+      override fun reset(reset: List<String>) {
         cdkBuilder.reset(reset)
       }
 
@@ -615,9 +582,9 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty,
     ) : ComponentConfigurationUpdateProperty {
-      public override fun merge(): String? = unwrap(this).getMerge()
+      override fun merge(): String? = unwrap(this).getMerge()
 
-      public override fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
+      override fun reset(): List<String> = unwrap(this).getReset() ?: emptyList()
     }
 
     public companion object {
@@ -650,34 +617,27 @@ public open class CfnDeployment internal constructor(
     public fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
 
     public interface Builder {
-      public fun componentUpdatePolicy(componentUpdatePolicy: IResolvable) {
-      }
+      public fun componentUpdatePolicy(componentUpdatePolicy: IResolvable)
 
       public
-          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty) {
-      }
+          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd23378d3da5e5acd7651bf7bf4ea97194d457df8dfe715430fb85addc9a463e")
       public
-          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit) {
-      }
+          fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit)
 
-      public fun configurationValidationPolicy(configurationValidationPolicy: IResolvable) {
-      }
+      public fun configurationValidationPolicy(configurationValidationPolicy: IResolvable)
 
       public
-          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty) {
-      }
+          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17f4cf5091503aa7e9264b7b3909fd1087ec714ea6e3e7ffea9a49a6d6e15f0b")
       public
-          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit) {
-      }
+          fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit)
 
-      public fun failureHandlingPolicy(failureHandlingPolicy: String) {
-      }
+      public fun failureHandlingPolicy(failureHandlingPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -686,40 +646,39 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty.builder()
 
-      public override fun componentUpdatePolicy(componentUpdatePolicy: IResolvable) {
+      override fun componentUpdatePolicy(componentUpdatePolicy: IResolvable) {
         cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty) {
         cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(DeploymentComponentUpdatePolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd23378d3da5e5acd7651bf7bf4ea97194d457df8dfe715430fb85addc9a463e")
-      public override
+      override
           fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty.Builder.() -> Unit):
           Unit =
           componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty(componentUpdatePolicy))
 
-      public override
-          fun configurationValidationPolicy(configurationValidationPolicy: IResolvable) {
+      override fun configurationValidationPolicy(configurationValidationPolicy: IResolvable) {
         cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty) {
         cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(DeploymentConfigurationValidationPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17f4cf5091503aa7e9264b7b3909fd1087ec714ea6e3e7ffea9a49a6d6e15f0b")
-      public override
+      override
           fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty.Builder.() -> Unit):
           Unit =
           configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty(configurationValidationPolicy))
 
-      public override fun failureHandlingPolicy(failureHandlingPolicy: String) {
+      override fun failureHandlingPolicy(failureHandlingPolicy: String) {
         cdkBuilder.failureHandlingPolicy(failureHandlingPolicy)
       }
 
@@ -732,12 +691,12 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentPoliciesProperty,
     ) : DeploymentPoliciesProperty {
-      public override fun componentUpdatePolicy(): Any? = unwrap(this).getComponentUpdatePolicy()
+      override fun componentUpdatePolicy(): Any? = unwrap(this).getComponentUpdatePolicy()
 
-      public override fun configurationValidationPolicy(): Any? =
+      override fun configurationValidationPolicy(): Any? =
           unwrap(this).getConfigurationValidationPolicy()
 
-      public override fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
+      override fun failureHandlingPolicy(): String? = unwrap(this).getFailureHandlingPolicy()
     }
 
     public companion object {
@@ -764,11 +723,9 @@ public open class CfnDeployment internal constructor(
     public fun criteriaList(): Any
 
     public interface Builder {
-      public fun criteriaList(criteriaList: IResolvable) {
-      }
+      public fun criteriaList(criteriaList: IResolvable)
 
-      public fun criteriaList(criteriaList: List<Any>) {
-      }
+      public fun criteriaList(criteriaList: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -777,11 +734,11 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty.builder()
 
-      public override fun criteriaList(criteriaList: IResolvable) {
+      override fun criteriaList(criteriaList: IResolvable) {
         cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
       }
 
-      public override fun criteriaList(criteriaList: List<Any>) {
+      override fun criteriaList(criteriaList: List<Any>) {
         cdkBuilder.criteriaList(criteriaList)
       }
 
@@ -794,7 +751,7 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty,
     ) : IoTJobAbortConfigProperty {
-      public override fun criteriaList(): Any = unwrap(this).getCriteriaList()
+      override fun criteriaList(): Any = unwrap(this).getCriteriaList()
     }
 
     public companion object {
@@ -823,11 +780,9 @@ public open class CfnDeployment internal constructor(
     public fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun timeoutInSeconds(timeoutInSeconds: Number) {
-      }
+      public fun timeoutInSeconds(timeoutInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -836,11 +791,11 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun timeoutInSeconds(timeoutInSeconds: Number) {
+      override fun timeoutInSeconds(timeoutInSeconds: Number) {
         cdkBuilder.timeoutInSeconds(timeoutInSeconds)
       }
 
@@ -853,9 +808,9 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentComponentUpdatePolicyProperty,
     ) : DeploymentComponentUpdatePolicyProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
 
-      public override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
+      override fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
     }
 
     public companion object {
@@ -887,40 +842,31 @@ public open class CfnDeployment internal constructor(
     public fun timeoutConfig(): Any? = unwrap(this).getTimeoutConfig()
 
     public interface Builder {
-      public fun abortConfig(abortConfig: IResolvable) {
-      }
+      public fun abortConfig(abortConfig: IResolvable)
 
-      public fun abortConfig(abortConfig: IoTJobAbortConfigProperty) {
-      }
+      public fun abortConfig(abortConfig: IoTJobAbortConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5d858e42f8f3f4ef01f1431c7d10deefde49f8ac38da46d650259358da27a86e")
-      public fun abortConfig(abortConfig: IoTJobAbortConfigProperty.Builder.() -> Unit) {
-      }
+      public fun abortConfig(abortConfig: IoTJobAbortConfigProperty.Builder.() -> Unit)
 
-      public fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IResolvable) {
-      }
+      public fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IResolvable)
 
       public
-          fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty) {
-      }
+          fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0ce12a5b66c90be2970b4d2ff92e31b15057ab75bc218b87232f484795e2b796")
       public
-          fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty.Builder.() -> Unit) {
-      }
+          fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty.Builder.() -> Unit)
 
-      public fun timeoutConfig(timeoutConfig: IResolvable) {
-      }
+      public fun timeoutConfig(timeoutConfig: IResolvable)
 
-      public fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty) {
-      }
+      public fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5bbff9c41ac0d600277c1581de9bef91b834f376dabcf95949d9426d71cd1527")
-      public fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty.Builder.() -> Unit) {
-      }
+      public fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -929,48 +875,47 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty.builder()
 
-      public override fun abortConfig(abortConfig: IResolvable) {
+      override fun abortConfig(abortConfig: IResolvable) {
         cdkBuilder.abortConfig(abortConfig.let(IResolvable::unwrap))
       }
 
-      public override fun abortConfig(abortConfig: IoTJobAbortConfigProperty) {
+      override fun abortConfig(abortConfig: IoTJobAbortConfigProperty) {
         cdkBuilder.abortConfig(abortConfig.let(IoTJobAbortConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5d858e42f8f3f4ef01f1431c7d10deefde49f8ac38da46d650259358da27a86e")
-      public override fun abortConfig(abortConfig: IoTJobAbortConfigProperty.Builder.() -> Unit):
-          Unit = abortConfig(IoTJobAbortConfigProperty(abortConfig))
+      override fun abortConfig(abortConfig: IoTJobAbortConfigProperty.Builder.() -> Unit): Unit =
+          abortConfig(IoTJobAbortConfigProperty(abortConfig))
 
-      public override fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IResolvable) {
+      override fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IResolvable) {
         cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty) {
         cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig.let(IoTJobExecutionsRolloutConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0ce12a5b66c90be2970b4d2ff92e31b15057ab75bc218b87232f484795e2b796")
-      public override
+      override
           fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty.Builder.() -> Unit):
           Unit =
           jobExecutionsRolloutConfig(IoTJobExecutionsRolloutConfigProperty(jobExecutionsRolloutConfig))
 
-      public override fun timeoutConfig(timeoutConfig: IResolvable) {
+      override fun timeoutConfig(timeoutConfig: IResolvable) {
         cdkBuilder.timeoutConfig(timeoutConfig.let(IResolvable::unwrap))
       }
 
-      public override fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty) {
+      override fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty) {
         cdkBuilder.timeoutConfig(timeoutConfig.let(IoTJobTimeoutConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5bbff9c41ac0d600277c1581de9bef91b834f376dabcf95949d9426d71cd1527")
-      public override
-          fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty.Builder.() -> Unit): Unit =
-          timeoutConfig(IoTJobTimeoutConfigProperty(timeoutConfig))
+      override fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty.Builder.() -> Unit):
+          Unit = timeoutConfig(IoTJobTimeoutConfigProperty(timeoutConfig))
 
       public fun build():
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty
@@ -981,12 +926,11 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.DeploymentIoTJobConfigurationProperty,
     ) : DeploymentIoTJobConfigurationProperty {
-      public override fun abortConfig(): Any? = unwrap(this).getAbortConfig()
+      override fun abortConfig(): Any? = unwrap(this).getAbortConfig()
 
-      public override fun jobExecutionsRolloutConfig(): Any? =
-          unwrap(this).getJobExecutionsRolloutConfig()
+      override fun jobExecutionsRolloutConfig(): Any? = unwrap(this).getJobExecutionsRolloutConfig()
 
-      public override fun timeoutConfig(): Any? = unwrap(this).getTimeoutConfig()
+      override fun timeoutConfig(): Any? = unwrap(this).getTimeoutConfig()
     }
 
     public companion object {
@@ -1018,14 +962,11 @@ public open class CfnDeployment internal constructor(
     public fun rateIncreaseCriteria(): Any
 
     public interface Builder {
-      public fun baseRatePerMinute(baseRatePerMinute: Number) {
-      }
+      public fun baseRatePerMinute(baseRatePerMinute: Number)
 
-      public fun incrementFactor(incrementFactor: Number) {
-      }
+      public fun incrementFactor(incrementFactor: Number)
 
-      public fun rateIncreaseCriteria(rateIncreaseCriteria: Any) {
-      }
+      public fun rateIncreaseCriteria(rateIncreaseCriteria: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1034,15 +975,15 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty.builder()
 
-      public override fun baseRatePerMinute(baseRatePerMinute: Number) {
+      override fun baseRatePerMinute(baseRatePerMinute: Number) {
         cdkBuilder.baseRatePerMinute(baseRatePerMinute)
       }
 
-      public override fun incrementFactor(incrementFactor: Number) {
+      override fun incrementFactor(incrementFactor: Number) {
         cdkBuilder.incrementFactor(incrementFactor)
       }
 
-      public override fun rateIncreaseCriteria(rateIncreaseCriteria: Any) {
+      override fun rateIncreaseCriteria(rateIncreaseCriteria: Any) {
         cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria)
       }
 
@@ -1055,11 +996,11 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExponentialRolloutRateProperty,
     ) : IoTJobExponentialRolloutRateProperty {
-      public override fun baseRatePerMinute(): Number = unwrap(this).getBaseRatePerMinute()
+      override fun baseRatePerMinute(): Number = unwrap(this).getBaseRatePerMinute()
 
-      public override fun incrementFactor(): Number = unwrap(this).getIncrementFactor()
+      override fun incrementFactor(): Number = unwrap(this).getIncrementFactor()
 
-      public override fun rateIncreaseCriteria(): Any = unwrap(this).getRateIncreaseCriteria()
+      override fun rateIncreaseCriteria(): Any = unwrap(this).getRateIncreaseCriteria()
     }
 
     public companion object {
@@ -1091,23 +1032,18 @@ public open class CfnDeployment internal constructor(
     public fun windowsUser(): String? = unwrap(this).getWindowsUser()
 
     public interface Builder {
-      public fun posixUser(posixUser: String) {
-      }
+      public fun posixUser(posixUser: String)
 
-      public fun systemResourceLimits(systemResourceLimits: IResolvable) {
-      }
+      public fun systemResourceLimits(systemResourceLimits: IResolvable)
 
-      public fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty) {
-      }
+      public fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aef781a843243efacf3e7c91fe786e9fcf8a47f6be21dd3ead4beb719503243e")
       public
-          fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit) {
-      }
+          fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit)
 
-      public fun windowsUser(windowsUser: String) {
-      }
+      public fun windowsUser(windowsUser: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1116,25 +1052,25 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty.builder()
 
-      public override fun posixUser(posixUser: String) {
+      override fun posixUser(posixUser: String) {
         cdkBuilder.posixUser(posixUser)
       }
 
-      public override fun systemResourceLimits(systemResourceLimits: IResolvable) {
+      override fun systemResourceLimits(systemResourceLimits: IResolvable) {
         cdkBuilder.systemResourceLimits(systemResourceLimits.let(IResolvable::unwrap))
       }
 
-      public override fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty) {
+      override fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty) {
         cdkBuilder.systemResourceLimits(systemResourceLimits.let(SystemResourceLimitsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aef781a843243efacf3e7c91fe786e9fcf8a47f6be21dd3ead4beb719503243e")
-      public override
+      override
           fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty.Builder.() -> Unit):
           Unit = systemResourceLimits(SystemResourceLimitsProperty(systemResourceLimits))
 
-      public override fun windowsUser(windowsUser: String) {
+      override fun windowsUser(windowsUser: String) {
         cdkBuilder.windowsUser(windowsUser)
       }
 
@@ -1147,11 +1083,11 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentRunWithProperty,
     ) : ComponentRunWithProperty {
-      public override fun posixUser(): String? = unwrap(this).getPosixUser()
+      override fun posixUser(): String? = unwrap(this).getPosixUser()
 
-      public override fun systemResourceLimits(): Any? = unwrap(this).getSystemResourceLimits()
+      override fun systemResourceLimits(): Any? = unwrap(this).getSystemResourceLimits()
 
-      public override fun windowsUser(): String? = unwrap(this).getWindowsUser()
+      override fun windowsUser(): String? = unwrap(this).getWindowsUser()
     }
 
     public companion object {
@@ -1180,20 +1116,16 @@ public open class CfnDeployment internal constructor(
     public fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
 
     public interface Builder {
-      public fun exponentialRate(exponentialRate: IResolvable) {
-      }
+      public fun exponentialRate(exponentialRate: IResolvable)
 
-      public fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty) {
-      }
+      public fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9352d70c9c76997bcbd392503dd83aa2ecde1cd0de73073eddaab53ba524c5dd")
       public
-          fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty.Builder.() -> Unit) {
-      }
+          fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty.Builder.() -> Unit)
 
-      public fun maximumPerMinute(maximumPerMinute: Number) {
-      }
+      public fun maximumPerMinute(maximumPerMinute: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1202,21 +1134,21 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty.builder()
 
-      public override fun exponentialRate(exponentialRate: IResolvable) {
+      override fun exponentialRate(exponentialRate: IResolvable) {
         cdkBuilder.exponentialRate(exponentialRate.let(IResolvable::unwrap))
       }
 
-      public override fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty) {
+      override fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty) {
         cdkBuilder.exponentialRate(exponentialRate.let(IoTJobExponentialRolloutRateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9352d70c9c76997bcbd392503dd83aa2ecde1cd0de73073eddaab53ba524c5dd")
-      public override
+      override
           fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty.Builder.() -> Unit):
           Unit = exponentialRate(IoTJobExponentialRolloutRateProperty(exponentialRate))
 
-      public override fun maximumPerMinute(maximumPerMinute: Number) {
+      override fun maximumPerMinute(maximumPerMinute: Number) {
         cdkBuilder.maximumPerMinute(maximumPerMinute)
       }
 
@@ -1229,9 +1161,9 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobExecutionsRolloutConfigProperty,
     ) : IoTJobExecutionsRolloutConfigProperty {
-      public override fun exponentialRate(): Any? = unwrap(this).getExponentialRate()
+      override fun exponentialRate(): Any? = unwrap(this).getExponentialRate()
 
-      public override fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
+      override fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
     }
 
     public companion object {

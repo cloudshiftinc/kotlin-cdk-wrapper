@@ -15,14 +15,11 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
       unwrap(this).getReplicaRegions()?.map(ReplicaRegion::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun excludeCharacters(excludeCharacters: String) {
-    }
+    public fun excludeCharacters(excludeCharacters: String)
 
-    public fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-    }
+    public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
   }
 
   private class BuilderImpl : Builder {
@@ -31,15 +28,15 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
         =
         software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions.builder()
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun excludeCharacters(excludeCharacters: String) {
+    override fun excludeCharacters(excludeCharacters: String) {
       cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    public override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
+    override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
       cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
     }
 
@@ -52,11 +49,11 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions,
   ) : SnapshotCredentialsFromGeneratedPasswordOptions {
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-    public override fun replicaRegions(): List<ReplicaRegion> =
+    override fun replicaRegions(): List<ReplicaRegion> =
         unwrap(this).getReplicaRegions()?.map(ReplicaRegion::wrap) ?: emptyList()
   }
 

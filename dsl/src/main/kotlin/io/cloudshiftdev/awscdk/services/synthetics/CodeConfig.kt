@@ -12,33 +12,30 @@ public interface CodeConfig {
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
 
   public interface Builder {
-    public fun inlineCode(inlineCode: String) {
-    }
+    public fun inlineCode(inlineCode: String)
 
-    public fun s3Location(s3Location: Location) {
-    }
+    public fun s3Location(s3Location: Location)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d14624bb83a293d56416ee3361f61fcc132656d131fd0fcfbcaad92b0f6264b6")
-    public fun s3Location(s3Location: Location.Builder.() -> Unit) {
-    }
+    public fun s3Location(s3Location: Location.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.CodeConfig.Builder =
         software.amazon.awscdk.services.synthetics.CodeConfig.builder()
 
-    public override fun inlineCode(inlineCode: String) {
+    override fun inlineCode(inlineCode: String) {
       cdkBuilder.inlineCode(inlineCode)
     }
 
-    public override fun s3Location(s3Location: Location) {
+    override fun s3Location(s3Location: Location) {
       cdkBuilder.s3Location(s3Location.let(Location::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d14624bb83a293d56416ee3361f61fcc132656d131fd0fcfbcaad92b0f6264b6")
-    public override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
+    override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
         s3Location(Location(s3Location))
 
     public fun build(): software.amazon.awscdk.services.synthetics.CodeConfig = cdkBuilder.build()
@@ -47,9 +44,9 @@ public interface CodeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.synthetics.CodeConfig,
   ) : CodeConfig {
-    public override fun inlineCode(): String? = unwrap(this).getInlineCode()
+    override fun inlineCode(): String? = unwrap(this).getInlineCode()
 
-    public override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+    override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
   }
 
   public companion object {

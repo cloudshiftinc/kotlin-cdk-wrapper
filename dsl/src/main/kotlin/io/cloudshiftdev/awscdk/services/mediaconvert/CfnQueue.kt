@@ -57,20 +57,15 @@ public open class CfnQueue internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun pricingPlan(pricingPlan: String) {
-    }
+    public fun pricingPlan(pricingPlan: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnQueue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconvert.CfnQueue.Builder =
         software.amazon.awscdk.services.mediaconvert.CfnQueue.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun pricingPlan(pricingPlan: String) {
+    override fun pricingPlan(pricingPlan: String) {
       cdkBuilder.pricingPlan(pricingPlan)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 

@@ -11,22 +11,20 @@ public interface AddToResourcePolicyResult {
   public fun statementAdded(): Boolean
 
   public interface Builder {
-    public fun policyDependable(policyDependable: IDependable) {
-    }
+    public fun policyDependable(policyDependable: IDependable)
 
-    public fun statementAdded(statementAdded: Boolean) {
-    }
+    public fun statementAdded(statementAdded: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.AddToResourcePolicyResult.Builder =
         software.amazon.awscdk.services.iam.AddToResourcePolicyResult.builder()
 
-    public override fun policyDependable(policyDependable: IDependable) {
+    override fun policyDependable(policyDependable: IDependable) {
       cdkBuilder.policyDependable(policyDependable.let(IDependable::unwrap))
     }
 
-    public override fun statementAdded(statementAdded: Boolean) {
+    override fun statementAdded(statementAdded: Boolean) {
       cdkBuilder.statementAdded(statementAdded)
     }
 
@@ -37,10 +35,10 @@ public interface AddToResourcePolicyResult {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.AddToResourcePolicyResult,
   ) : AddToResourcePolicyResult {
-    public override fun policyDependable(): IDependable? =
+    override fun policyDependable(): IDependable? =
         unwrap(this).getPolicyDependable()?.let(IDependable::wrap)
 
-    public override fun statementAdded(): Boolean = unwrap(this).getStatementAdded()
+    override fun statementAdded(): Boolean = unwrap(this).getStatementAdded()
   }
 
   public companion object {

@@ -61,24 +61,18 @@ public open class CfnLoggingConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun destinationConfiguration(destinationConfiguration: IResolvable) {
-    }
+    public fun destinationConfiguration(destinationConfiguration: IResolvable)
 
-    public
-        fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty) {
-    }
+    public fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18eb57c632a1391c6a0d20056d1ab98d9496299c5c2cd11e1bc8805249aef694")
     public
-        fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -88,26 +82,26 @@ public open class CfnLoggingConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.Builder
         = software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.Builder.create(scope, id)
 
-    public override fun destinationConfiguration(destinationConfiguration: IResolvable) {
+    override fun destinationConfiguration(destinationConfiguration: IResolvable) {
       cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty) {
       cdkBuilder.destinationConfiguration(destinationConfiguration.let(DestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18eb57c632a1391c6a0d20056d1ab98d9496299c5c2cd11e1bc8805249aef694")
-    public override
+    override
         fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty.Builder.() -> Unit):
         Unit = destinationConfiguration(DestinationConfigurationProperty(destinationConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -140,8 +134,7 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun logGroupName(): String
 
     public interface Builder {
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -150,7 +143,7 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty.builder()
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
@@ -163,7 +156,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty,
     ) : CloudWatchLogsDestinationConfigurationProperty {
-      public override fun logGroupName(): String = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String = unwrap(this).getLogGroupName()
     }
 
     public companion object {
@@ -191,8 +184,7 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun deliveryStreamName(): String
 
     public interface Builder {
-      public fun deliveryStreamName(deliveryStreamName: String) {
-      }
+      public fun deliveryStreamName(deliveryStreamName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -201,7 +193,7 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty.builder()
 
-      public override fun deliveryStreamName(deliveryStreamName: String) {
+      override fun deliveryStreamName(deliveryStreamName: String) {
         cdkBuilder.deliveryStreamName(deliveryStreamName)
       }
 
@@ -214,7 +206,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty,
     ) : FirehoseDestinationConfigurationProperty {
-      public override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
+      override fun deliveryStreamName(): String = unwrap(this).getDeliveryStreamName()
     }
 
     public companion object {
@@ -246,39 +238,30 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun s3(): Any? = unwrap(this).getS3()
 
     public interface Builder {
-      public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: IResolvable)
 
-      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty) {
-      }
+      public fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3968e85bcc2c237bcec17c819acdc83e32d3ffadd52380cabcb56b86085b3fef")
       public
-          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun firehose(firehose: IResolvable) {
-      }
+      public fun firehose(firehose: IResolvable)
 
-      public fun firehose(firehose: FirehoseDestinationConfigurationProperty) {
-      }
+      public fun firehose(firehose: FirehoseDestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a5833b0964624baeda12c696042c032ca461b193e07f2a8a9ca7a9ff2c58cd6a")
-      public fun firehose(firehose: FirehoseDestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun firehose(firehose: FirehoseDestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3DestinationConfigurationProperty) {
-      }
+      public fun s3(s3: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93a3f0da321aee205bede398975e578ba3c4c961686a7cb73d1cce27830adf22")
-      public fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -287,46 +270,44 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty.builder()
 
-      public override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
+      override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
       }
 
-      public override
-          fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty) {
+      override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty) {
         cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsDestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3968e85bcc2c237bcec17c819acdc83e32d3ffadd52380cabcb56b86085b3fef")
-      public override
+      override
           fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty.Builder.() -> Unit):
           Unit = cloudWatchLogs(CloudWatchLogsDestinationConfigurationProperty(cloudWatchLogs))
 
-      public override fun firehose(firehose: IResolvable) {
+      override fun firehose(firehose: IResolvable) {
         cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
       }
 
-      public override fun firehose(firehose: FirehoseDestinationConfigurationProperty) {
+      override fun firehose(firehose: FirehoseDestinationConfigurationProperty) {
         cdkBuilder.firehose(firehose.let(FirehoseDestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a5833b0964624baeda12c696042c032ca461b193e07f2a8a9ca7a9ff2c58cd6a")
-      public override
-          fun firehose(firehose: FirehoseDestinationConfigurationProperty.Builder.() -> Unit): Unit
-          = firehose(FirehoseDestinationConfigurationProperty(firehose))
+      override fun firehose(firehose: FirehoseDestinationConfigurationProperty.Builder.() -> Unit):
+          Unit = firehose(FirehoseDestinationConfigurationProperty(firehose))
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3DestinationConfigurationProperty) {
+      override fun s3(s3: S3DestinationConfigurationProperty) {
         cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93a3f0da321aee205bede398975e578ba3c4c961686a7cb73d1cce27830adf22")
-      public override fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun s3(s3: S3DestinationConfigurationProperty.Builder.() -> Unit): Unit =
           s3(S3DestinationConfigurationProperty(s3))
 
       public fun build():
@@ -338,11 +319,11 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty,
     ) : DestinationConfigurationProperty {
-      public override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
+      override fun cloudWatchLogs(): Any? = unwrap(this).getCloudWatchLogs()
 
-      public override fun firehose(): Any? = unwrap(this).getFirehose()
+      override fun firehose(): Any? = unwrap(this).getFirehose()
 
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
     }
 
     public companion object {
@@ -369,8 +350,7 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun bucketName(): String
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -379,7 +359,7 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
@@ -392,7 +372,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty,
     ) : S3DestinationConfigurationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
     }
 
     public companion object {

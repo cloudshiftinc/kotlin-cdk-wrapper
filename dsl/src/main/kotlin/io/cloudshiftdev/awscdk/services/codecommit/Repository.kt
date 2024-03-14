@@ -331,14 +331,11 @@ public open class Repository internal constructor(
   public override fun repositoryName(): String = unwrap(this).getRepositoryName()
 
   public interface Builder {
-    public fun code(code: Code) {
-    }
+    public fun code(code: Code)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
   }
 
   private class BuilderImpl(
@@ -348,15 +345,15 @@ public open class Repository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codecommit.Repository.Builder =
         software.amazon.awscdk.services.codecommit.Repository.Builder.create(scope, id)
 
-    public override fun code(code: Code) {
+    override fun code(code: Code) {
       cdkBuilder.code(code.let(Code::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 

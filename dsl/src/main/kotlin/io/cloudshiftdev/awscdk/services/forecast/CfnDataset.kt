@@ -64,26 +64,19 @@ public open class CfnDataset internal constructor(
   }
 
   public interface Builder {
-    public fun dataFrequency(dataFrequency: String) {
-    }
+    public fun dataFrequency(dataFrequency: String)
 
-    public fun datasetName(datasetName: String) {
-    }
+    public fun datasetName(datasetName: String)
 
-    public fun datasetType(datasetType: String) {
-    }
+    public fun datasetType(datasetType: String)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun encryptionConfig(encryptionConfig: Any) {
-    }
+    public fun encryptionConfig(encryptionConfig: Any)
 
-    public fun schema(schema: Any) {
-    }
+    public fun schema(schema: Any)
 
-    public fun tags(tags: List<TagsItemsProperty>) {
-    }
+    public fun tags(tags: List<TagsItemsProperty>)
   }
 
   private class BuilderImpl(
@@ -93,31 +86,31 @@ public open class CfnDataset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.forecast.CfnDataset.Builder =
         software.amazon.awscdk.services.forecast.CfnDataset.Builder.create(scope, id)
 
-    public override fun dataFrequency(dataFrequency: String) {
+    override fun dataFrequency(dataFrequency: String) {
       cdkBuilder.dataFrequency(dataFrequency)
     }
 
-    public override fun datasetName(datasetName: String) {
+    override fun datasetName(datasetName: String) {
       cdkBuilder.datasetName(datasetName)
     }
 
-    public override fun datasetType(datasetType: String) {
+    override fun datasetType(datasetType: String) {
       cdkBuilder.datasetType(datasetType)
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun encryptionConfig(encryptionConfig: Any) {
+    override fun encryptionConfig(encryptionConfig: Any) {
       cdkBuilder.encryptionConfig(encryptionConfig)
     }
 
-    public override fun schema(schema: Any) {
+    override fun schema(schema: Any) {
       cdkBuilder.schema(schema)
     }
 
-    public override fun tags(tags: List<TagsItemsProperty>) {
+    override fun tags(tags: List<TagsItemsProperty>) {
       cdkBuilder.tags(tags.map(TagsItemsProperty::unwrap))
     }
 
@@ -151,11 +144,9 @@ public open class CfnDataset internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -163,11 +154,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty.Builder =
           software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty.builder()
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -180,9 +171,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.forecast.CfnDataset.EncryptionConfigProperty,
     ) : EncryptionConfigProperty {
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -209,11 +200,9 @@ public open class CfnDataset internal constructor(
     public fun attributes(): Any? = unwrap(this).getAttributes()
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: List<Any>) {
-      }
+      public fun attributes(attributes: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -221,11 +210,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty.Builder =
           software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: List<Any>) {
+      override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
 
@@ -236,7 +225,7 @@ public open class CfnDataset internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty,
     ) : SchemaProperty {
-      public override fun attributes(): Any? = unwrap(this).getAttributes()
+      override fun attributes(): Any? = unwrap(this).getAttributes()
     }
 
     public companion object {
@@ -265,11 +254,9 @@ public open class CfnDataset internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -277,11 +264,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty.Builder =
           software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -292,9 +279,9 @@ public open class CfnDataset internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.forecast.CfnDataset.TagsItemsProperty,
     ) : TagsItemsProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -323,11 +310,9 @@ public open class CfnDataset internal constructor(
     public fun attributeType(): String? = unwrap(this).getAttributeType()
 
     public interface Builder {
-      public fun attributeName(attributeName: String) {
-      }
+      public fun attributeName(attributeName: String)
 
-      public fun attributeType(attributeType: String) {
-      }
+      public fun attributeType(attributeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -335,11 +320,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty.Builder =
           software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty.builder()
 
-      public override fun attributeName(attributeName: String) {
+      override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
-      public override fun attributeType(attributeType: String) {
+      override fun attributeType(attributeType: String) {
         cdkBuilder.attributeType(attributeType)
       }
 
@@ -352,9 +337,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.forecast.CfnDataset.AttributesItemsProperty,
     ) : AttributesItemsProperty {
-      public override fun attributeName(): String? = unwrap(this).getAttributeName()
+      override fun attributeName(): String? = unwrap(this).getAttributeName()
 
-      public override fun attributeType(): String? = unwrap(this).getAttributeType()
+      override fun attributeType(): String? = unwrap(this).getAttributeType()
     }
 
     public companion object {

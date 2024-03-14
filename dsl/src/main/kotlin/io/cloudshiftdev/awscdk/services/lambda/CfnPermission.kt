@@ -66,29 +66,21 @@ public open class CfnPermission internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun eventSourceToken(eventSourceToken: String) {
-    }
+    public fun eventSourceToken(eventSourceToken: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun functionUrlAuthType(functionUrlAuthType: String) {
-    }
+    public fun functionUrlAuthType(functionUrlAuthType: String)
 
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
 
-    public fun principalOrgId(principalOrgId: String) {
-    }
+    public fun principalOrgId(principalOrgId: String)
 
-    public fun sourceAccount(sourceAccount: String) {
-    }
+    public fun sourceAccount(sourceAccount: String)
 
-    public fun sourceArn(sourceArn: String) {
-    }
+    public fun sourceArn(sourceArn: String)
   }
 
   private class BuilderImpl(
@@ -98,35 +90,35 @@ public open class CfnPermission internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnPermission.Builder =
         software.amazon.awscdk.services.lambda.CfnPermission.Builder.create(scope, id)
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun eventSourceToken(eventSourceToken: String) {
+    override fun eventSourceToken(eventSourceToken: String) {
       cdkBuilder.eventSourceToken(eventSourceToken)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun functionUrlAuthType(functionUrlAuthType: String) {
+    override fun functionUrlAuthType(functionUrlAuthType: String) {
       cdkBuilder.functionUrlAuthType(functionUrlAuthType)
     }
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 
-    public override fun principalOrgId(principalOrgId: String) {
+    override fun principalOrgId(principalOrgId: String) {
       cdkBuilder.principalOrgId(principalOrgId)
     }
 
-    public override fun sourceAccount(sourceAccount: String) {
+    override fun sourceAccount(sourceAccount: String) {
       cdkBuilder.sourceAccount(sourceAccount)
     }
 
-    public override fun sourceArn(sourceArn: String) {
+    override fun sourceArn(sourceArn: String) {
       cdkBuilder.sourceArn(sourceArn)
     }
 

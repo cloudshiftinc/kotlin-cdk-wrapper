@@ -75,23 +75,17 @@ public open class ScalableTaskCount internal constructor(
       TrackCustomMetricProps(props))
 
   public interface Builder {
-    public fun dimension(dimension: String) {
-    }
+    public fun dimension(dimension: String)
 
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun serviceNamespace(serviceNamespace: ServiceNamespace) {
-    }
+    public fun serviceNamespace(serviceNamespace: ServiceNamespace)
   }
 
   private class BuilderImpl(
@@ -101,27 +95,27 @@ public open class ScalableTaskCount internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ScalableTaskCount.Builder =
         software.amazon.awscdk.services.ecs.ScalableTaskCount.Builder.create(scope, id)
 
-    public override fun dimension(dimension: String) {
+    override fun dimension(dimension: String) {
       cdkBuilder.dimension(dimension)
     }
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
+    override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
       cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace::unwrap))
     }
 

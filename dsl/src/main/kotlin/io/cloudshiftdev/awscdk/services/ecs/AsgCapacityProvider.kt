@@ -30,44 +30,31 @@ public open class AsgCapacityProvider internal constructor(
       unwrap(this).getMachineImageType().let(MachineImageType::wrap)
 
   public interface Builder {
-    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    }
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
-    public fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
-    }
+    public fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean)
 
-    public fun capacityProviderName(capacityProviderName: String) {
-    }
+    public fun capacityProviderName(capacityProviderName: String)
 
-    public fun enableManagedDraining(enableManagedDraining: Boolean) {
-    }
+    public fun enableManagedDraining(enableManagedDraining: Boolean)
 
-    public fun enableManagedScaling(enableManagedScaling: Boolean) {
-    }
+    public fun enableManagedScaling(enableManagedScaling: Boolean)
 
-    public fun enableManagedTerminationProtection(enableManagedTerminationProtection: Boolean) {
-    }
+    public fun enableManagedTerminationProtection(enableManagedTerminationProtection: Boolean)
 
-    public fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
-    }
+    public fun instanceWarmupPeriod(instanceWarmupPeriod: Number)
 
-    public fun machineImageType(machineImageType: MachineImageType) {
-    }
+    public fun machineImageType(machineImageType: MachineImageType)
 
-    public fun maximumScalingStepSize(maximumScalingStepSize: Number) {
-    }
+    public fun maximumScalingStepSize(maximumScalingStepSize: Number)
 
-    public fun minimumScalingStepSize(minimumScalingStepSize: Number) {
-    }
+    public fun minimumScalingStepSize(minimumScalingStepSize: Number)
 
-    public fun spotInstanceDraining(spotInstanceDraining: Boolean) {
-    }
+    public fun spotInstanceDraining(spotInstanceDraining: Boolean)
 
-    public fun targetCapacityPercent(targetCapacityPercent: Number) {
-    }
+    public fun targetCapacityPercent(targetCapacityPercent: Number)
 
-    public fun topicEncryptionKey(topicEncryptionKey: IKey) {
-    }
+    public fun topicEncryptionKey(topicEncryptionKey: IKey)
   }
 
   private class BuilderImpl(
@@ -77,56 +64,55 @@ public open class AsgCapacityProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.AsgCapacityProvider.Builder =
         software.amazon.awscdk.services.ecs.AsgCapacityProvider.Builder.create(scope, id)
 
-    public override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+    override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
     }
 
-    public override fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
+    override fun canContainersAccessInstanceRole(canContainersAccessInstanceRole: Boolean) {
       cdkBuilder.canContainersAccessInstanceRole(canContainersAccessInstanceRole)
     }
 
-    public override fun capacityProviderName(capacityProviderName: String) {
+    override fun capacityProviderName(capacityProviderName: String) {
       cdkBuilder.capacityProviderName(capacityProviderName)
     }
 
-    public override fun enableManagedDraining(enableManagedDraining: Boolean) {
+    override fun enableManagedDraining(enableManagedDraining: Boolean) {
       cdkBuilder.enableManagedDraining(enableManagedDraining)
     }
 
-    public override fun enableManagedScaling(enableManagedScaling: Boolean) {
+    override fun enableManagedScaling(enableManagedScaling: Boolean) {
       cdkBuilder.enableManagedScaling(enableManagedScaling)
     }
 
-    public override
-        fun enableManagedTerminationProtection(enableManagedTerminationProtection: Boolean) {
+    override fun enableManagedTerminationProtection(enableManagedTerminationProtection: Boolean) {
       cdkBuilder.enableManagedTerminationProtection(enableManagedTerminationProtection)
     }
 
-    public override fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
+    override fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
       cdkBuilder.instanceWarmupPeriod(instanceWarmupPeriod)
     }
 
-    public override fun machineImageType(machineImageType: MachineImageType) {
+    override fun machineImageType(machineImageType: MachineImageType) {
       cdkBuilder.machineImageType(machineImageType.let(MachineImageType::unwrap))
     }
 
-    public override fun maximumScalingStepSize(maximumScalingStepSize: Number) {
+    override fun maximumScalingStepSize(maximumScalingStepSize: Number) {
       cdkBuilder.maximumScalingStepSize(maximumScalingStepSize)
     }
 
-    public override fun minimumScalingStepSize(minimumScalingStepSize: Number) {
+    override fun minimumScalingStepSize(minimumScalingStepSize: Number) {
       cdkBuilder.minimumScalingStepSize(minimumScalingStepSize)
     }
 
-    public override fun spotInstanceDraining(spotInstanceDraining: Boolean) {
+    override fun spotInstanceDraining(spotInstanceDraining: Boolean) {
       cdkBuilder.spotInstanceDraining(spotInstanceDraining)
     }
 
-    public override fun targetCapacityPercent(targetCapacityPercent: Number) {
+    override fun targetCapacityPercent(targetCapacityPercent: Number) {
       cdkBuilder.targetCapacityPercent(targetCapacityPercent)
     }
 
-    public override fun topicEncryptionKey(topicEncryptionKey: IKey) {
+    override fun topicEncryptionKey(topicEncryptionKey: IKey) {
       cdkBuilder.topicEncryptionKey(topicEncryptionKey.let(IKey::unwrap))
     }
 

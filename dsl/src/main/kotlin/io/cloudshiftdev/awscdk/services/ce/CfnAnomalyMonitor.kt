@@ -64,23 +64,17 @@ public open class CfnAnomalyMonitor internal constructor(
   }
 
   public interface Builder {
-    public fun monitorDimension(monitorDimension: String) {
-    }
+    public fun monitorDimension(monitorDimension: String)
 
-    public fun monitorName(monitorName: String) {
-    }
+    public fun monitorName(monitorName: String)
 
-    public fun monitorSpecification(monitorSpecification: String) {
-    }
+    public fun monitorSpecification(monitorSpecification: String)
 
-    public fun monitorType(monitorType: String) {
-    }
+    public fun monitorType(monitorType: String)
 
-    public fun resourceTags(resourceTags: IResolvable) {
-    }
+    public fun resourceTags(resourceTags: IResolvable)
 
-    public fun resourceTags(resourceTags: List<Any>) {
-    }
+    public fun resourceTags(resourceTags: List<Any>)
   }
 
   private class BuilderImpl(
@@ -90,27 +84,27 @@ public open class CfnAnomalyMonitor internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ce.CfnAnomalyMonitor.Builder =
         software.amazon.awscdk.services.ce.CfnAnomalyMonitor.Builder.create(scope, id)
 
-    public override fun monitorDimension(monitorDimension: String) {
+    override fun monitorDimension(monitorDimension: String) {
       cdkBuilder.monitorDimension(monitorDimension)
     }
 
-    public override fun monitorName(monitorName: String) {
+    override fun monitorName(monitorName: String) {
       cdkBuilder.monitorName(monitorName)
     }
 
-    public override fun monitorSpecification(monitorSpecification: String) {
+    override fun monitorSpecification(monitorSpecification: String) {
       cdkBuilder.monitorSpecification(monitorSpecification)
     }
 
-    public override fun monitorType(monitorType: String) {
+    override fun monitorType(monitorType: String) {
       cdkBuilder.monitorType(monitorType)
     }
 
-    public override fun resourceTags(resourceTags: IResolvable) {
+    override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
     }
 
-    public override fun resourceTags(resourceTags: List<Any>) {
+    override fun resourceTags(resourceTags: List<Any>) {
       cdkBuilder.resourceTags(resourceTags)
     }
 
@@ -144,11 +138,9 @@ public open class CfnAnomalyMonitor internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -156,11 +148,11 @@ public open class CfnAnomalyMonitor internal constructor(
           software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty.Builder =
           software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -172,9 +164,9 @@ public open class CfnAnomalyMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ce.CfnAnomalyMonitor.ResourceTagProperty,
     ) : ResourceTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

@@ -31,35 +31,33 @@ public interface IVirtualGateway : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.IVirtualGateway,
   ) : IVirtualGateway {
-    public override fun addGatewayRoute(arg0: String, arg1: GatewayRouteBaseProps): GatewayRoute =
+    override fun addGatewayRoute(arg0: String, arg1: GatewayRouteBaseProps): GatewayRoute =
         unwrap(this).addGatewayRoute(arg0,
         arg1.let(GatewayRouteBaseProps::unwrap)).let(GatewayRoute::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("088adf02806882d057d24f01d7bde8e78aae6d65ce74dad71dfdd37cbc9bcf9c")
-    public override fun addGatewayRoute(arg0: String,
-        arg1: GatewayRouteBaseProps.Builder.() -> Unit): GatewayRoute = addGatewayRoute(arg0,
-        GatewayRouteBaseProps(arg1))
+    override fun addGatewayRoute(arg0: String, arg1: GatewayRouteBaseProps.Builder.() -> Unit):
+        GatewayRoute = addGatewayRoute(arg0, GatewayRouteBaseProps(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantStreamAggregatedResources(arg0: IGrantable): Grant =
+    override fun grantStreamAggregatedResources(arg0: IGrantable): Grant =
         unwrap(this).grantStreamAggregatedResources(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
+    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun virtualGatewayArn(): String = unwrap(this).getVirtualGatewayArn()
+    override fun virtualGatewayArn(): String = unwrap(this).getVirtualGatewayArn()
 
-    public override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
+    override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
   }
 
   public companion object {

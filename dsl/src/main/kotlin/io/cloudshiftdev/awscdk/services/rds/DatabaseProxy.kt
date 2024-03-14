@@ -45,61 +45,43 @@ public open class DatabaseProxy internal constructor(
       unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
 
   public interface Builder {
-    public fun borrowTimeout(borrowTimeout: Duration) {
-    }
+    public fun borrowTimeout(borrowTimeout: Duration)
 
-    public fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
-    }
+    public fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType)
 
-    public fun dbProxyName(dbProxyName: String) {
-    }
+    public fun dbProxyName(dbProxyName: String)
 
-    public fun debugLogging(debugLogging: Boolean) {
-    }
+    public fun debugLogging(debugLogging: Boolean)
 
-    public fun iamAuth(iamAuth: Boolean) {
-    }
+    public fun iamAuth(iamAuth: Boolean)
 
-    public fun idleClientTimeout(idleClientTimeout: Duration) {
-    }
+    public fun idleClientTimeout(idleClientTimeout: Duration)
 
-    public fun initQuery(initQuery: String) {
-    }
+    public fun initQuery(initQuery: String)
 
-    public fun maxConnectionsPercent(maxConnectionsPercent: Number) {
-    }
+    public fun maxConnectionsPercent(maxConnectionsPercent: Number)
 
-    public fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number) {
-    }
+    public fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number)
 
-    public fun proxyTarget(proxyTarget: ProxyTarget) {
-    }
+    public fun proxyTarget(proxyTarget: ProxyTarget)
 
-    public fun requireTls(requireTls: Boolean) {
-    }
+    public fun requireTls(requireTls: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun secrets(secrets: List<ISecret>) {
-    }
+    public fun secrets(secrets: List<ISecret>)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>) {
-    }
+    public fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c68b30f229b15499e91e27a72992551b35e1884ba3a8da5c138cbf4bd71e01fe")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -109,77 +91,77 @@ public open class DatabaseProxy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseProxy.Builder =
         software.amazon.awscdk.services.rds.DatabaseProxy.Builder.create(scope, id)
 
-    public override fun borrowTimeout(borrowTimeout: Duration) {
+    override fun borrowTimeout(borrowTimeout: Duration) {
       cdkBuilder.borrowTimeout(borrowTimeout.let(Duration::unwrap))
     }
 
-    public override fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
+    override fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
       cdkBuilder.clientPasswordAuthType(clientPasswordAuthType.let(ClientPasswordAuthType::unwrap))
     }
 
-    public override fun dbProxyName(dbProxyName: String) {
+    override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
     }
 
-    public override fun debugLogging(debugLogging: Boolean) {
+    override fun debugLogging(debugLogging: Boolean) {
       cdkBuilder.debugLogging(debugLogging)
     }
 
-    public override fun iamAuth(iamAuth: Boolean) {
+    override fun iamAuth(iamAuth: Boolean) {
       cdkBuilder.iamAuth(iamAuth)
     }
 
-    public override fun idleClientTimeout(idleClientTimeout: Duration) {
+    override fun idleClientTimeout(idleClientTimeout: Duration) {
       cdkBuilder.idleClientTimeout(idleClientTimeout.let(Duration::unwrap))
     }
 
-    public override fun initQuery(initQuery: String) {
+    override fun initQuery(initQuery: String) {
       cdkBuilder.initQuery(initQuery)
     }
 
-    public override fun maxConnectionsPercent(maxConnectionsPercent: Number) {
+    override fun maxConnectionsPercent(maxConnectionsPercent: Number) {
       cdkBuilder.maxConnectionsPercent(maxConnectionsPercent)
     }
 
-    public override fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number) {
+    override fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number) {
       cdkBuilder.maxIdleConnectionsPercent(maxIdleConnectionsPercent)
     }
 
-    public override fun proxyTarget(proxyTarget: ProxyTarget) {
+    override fun proxyTarget(proxyTarget: ProxyTarget) {
       cdkBuilder.proxyTarget(proxyTarget.let(ProxyTarget::unwrap))
     }
 
-    public override fun requireTls(requireTls: Boolean) {
+    override fun requireTls(requireTls: Boolean) {
       cdkBuilder.requireTls(requireTls)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun secrets(secrets: List<ISecret>) {
+    override fun secrets(secrets: List<ISecret>) {
       cdkBuilder.secrets(secrets.map(ISecret::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>) {
+    override fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>) {
       cdkBuilder.sessionPinningFilters(sessionPinningFilters.map(SessionPinningFilter::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c68b30f229b15499e91e27a72992551b35e1884ba3a8da5c138cbf4bd71e01fe")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.rds.DatabaseProxy = cdkBuilder.build()

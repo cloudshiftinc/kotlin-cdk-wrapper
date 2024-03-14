@@ -106,43 +106,31 @@ public open class CfnFuotaTask internal constructor(
   }
 
   public interface Builder {
-    public fun associateMulticastGroup(associateMulticastGroup: String) {
-    }
+    public fun associateMulticastGroup(associateMulticastGroup: String)
 
-    public fun associateWirelessDevice(associateWirelessDevice: String) {
-    }
+    public fun associateWirelessDevice(associateWirelessDevice: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun disassociateMulticastGroup(disassociateMulticastGroup: String) {
-    }
+    public fun disassociateMulticastGroup(disassociateMulticastGroup: String)
 
-    public fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
-    }
+    public fun disassociateWirelessDevice(disassociateWirelessDevice: String)
 
-    public fun firmwareUpdateImage(firmwareUpdateImage: String) {
-    }
+    public fun firmwareUpdateImage(firmwareUpdateImage: String)
 
-    public fun firmwareUpdateRole(firmwareUpdateRole: String) {
-    }
+    public fun firmwareUpdateRole(firmwareUpdateRole: String)
 
-    public fun loRaWan(loRaWan: IResolvable) {
-    }
+    public fun loRaWan(loRaWan: IResolvable)
 
-    public fun loRaWan(loRaWan: LoRaWANProperty) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c48060063cf77fafc4ecbb90c1bb6c1b3396b527ab5f61f846c7acaf7fcccd7")
-    public fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -152,52 +140,52 @@ public open class CfnFuotaTask internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnFuotaTask.Builder =
         software.amazon.awscdk.services.iotwireless.CfnFuotaTask.Builder.create(scope, id)
 
-    public override fun associateMulticastGroup(associateMulticastGroup: String) {
+    override fun associateMulticastGroup(associateMulticastGroup: String) {
       cdkBuilder.associateMulticastGroup(associateMulticastGroup)
     }
 
-    public override fun associateWirelessDevice(associateWirelessDevice: String) {
+    override fun associateWirelessDevice(associateWirelessDevice: String) {
       cdkBuilder.associateWirelessDevice(associateWirelessDevice)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun disassociateMulticastGroup(disassociateMulticastGroup: String) {
+    override fun disassociateMulticastGroup(disassociateMulticastGroup: String) {
       cdkBuilder.disassociateMulticastGroup(disassociateMulticastGroup)
     }
 
-    public override fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
+    override fun disassociateWirelessDevice(disassociateWirelessDevice: String) {
       cdkBuilder.disassociateWirelessDevice(disassociateWirelessDevice)
     }
 
-    public override fun firmwareUpdateImage(firmwareUpdateImage: String) {
+    override fun firmwareUpdateImage(firmwareUpdateImage: String) {
       cdkBuilder.firmwareUpdateImage(firmwareUpdateImage)
     }
 
-    public override fun firmwareUpdateRole(firmwareUpdateRole: String) {
+    override fun firmwareUpdateRole(firmwareUpdateRole: String) {
       cdkBuilder.firmwareUpdateRole(firmwareUpdateRole)
     }
 
-    public override fun loRaWan(loRaWan: IResolvable) {
+    override fun loRaWan(loRaWan: IResolvable) {
       cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWan(loRaWan: LoRaWANProperty) {
+    override fun loRaWan(loRaWan: LoRaWANProperty) {
       cdkBuilder.loRaWan(loRaWan.let(LoRaWANProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c48060063cf77fafc4ecbb90c1bb6c1b3396b527ab5f61f846c7acaf7fcccd7")
-    public override fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit): Unit =
+    override fun loRaWan(loRaWan: LoRaWANProperty.Builder.() -> Unit): Unit =
         loRaWan(LoRaWANProperty(loRaWan))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -232,11 +220,9 @@ public open class CfnFuotaTask internal constructor(
     public fun startTime(): String? = unwrap(this).getStartTime()
 
     public interface Builder {
-      public fun rfRegion(rfRegion: String) {
-      }
+      public fun rfRegion(rfRegion: String)
 
-      public fun startTime(startTime: String) {
-      }
+      public fun startTime(startTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -244,11 +230,11 @@ public open class CfnFuotaTask internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty.Builder =
           software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty.builder()
 
-      public override fun rfRegion(rfRegion: String) {
+      override fun rfRegion(rfRegion: String) {
         cdkBuilder.rfRegion(rfRegion)
       }
 
-      public override fun startTime(startTime: String) {
+      override fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)
       }
 
@@ -260,9 +246,9 @@ public open class CfnFuotaTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnFuotaTask.LoRaWANProperty,
     ) : LoRaWANProperty {
-      public override fun rfRegion(): String = unwrap(this).getRfRegion()
+      override fun rfRegion(): String = unwrap(this).getRfRegion()
 
-      public override fun startTime(): String? = unwrap(this).getStartTime()
+      override fun startTime(): String? = unwrap(this).getStartTime()
     }
 
     public companion object {

@@ -23,26 +23,25 @@ public interface IOptionGroup : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.IOptionGroup,
   ) : IOptionGroup {
-    public override fun addConfiguration(arg0: OptionConfiguration): Boolean =
+    override fun addConfiguration(arg0: OptionConfiguration): Boolean =
         unwrap(this).addConfiguration(arg0.let(OptionConfiguration::unwrap))
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("12b43bc5b68d5862bb4430eddcc0fef9fc36fe009a38b9e972fbd6e89f47a190")
-    public override fun addConfiguration(arg0: OptionConfiguration.Builder.() -> Unit): Boolean =
+    override fun addConfiguration(arg0: OptionConfiguration.Builder.() -> Unit): Boolean =
         addConfiguration(OptionConfiguration(arg0))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun optionGroupName(): String = unwrap(this).getOptionGroupName()
+    override fun optionGroupName(): String = unwrap(this).getOptionGroupName()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

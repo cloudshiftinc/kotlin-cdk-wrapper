@@ -101,52 +101,38 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun destinationPortRange(destinationPortRange: IResolvable) {
-    }
+    public fun destinationPortRange(destinationPortRange: IResolvable)
 
-    public fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty) {
-    }
+    public fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2db10abca88db1493b54a0e5d6c9b1f72a0ea3617d0f02596052a458b0eabf9c")
     public
-        fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty.Builder.() -> Unit) {
-    }
+        fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty.Builder.() -> Unit)
 
-    public fun protocol(protocol: Number) {
-    }
+    public fun protocol(protocol: Number)
 
-    public fun ruleAction(ruleAction: String) {
-    }
+    public fun ruleAction(ruleAction: String)
 
-    public fun ruleNumber(ruleNumber: Number) {
-    }
+    public fun ruleNumber(ruleNumber: Number)
 
-    public fun sourceCidrBlock(sourceCidrBlock: String) {
-    }
+    public fun sourceCidrBlock(sourceCidrBlock: String)
 
-    public fun sourcePortRange(sourcePortRange: IResolvable) {
-    }
+    public fun sourcePortRange(sourcePortRange: IResolvable)
 
-    public fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty) {
-    }
+    public fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f857ab00af762cf044e690ee3f6928e738c828c0867a4415dc02afb4621b061")
-    public fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty.Builder.() -> Unit) {
-    }
+    public fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty.Builder.() -> Unit)
 
-    public fun trafficDirection(trafficDirection: String) {
-    }
+    public fun trafficDirection(trafficDirection: String)
 
-    public fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
-    }
+    public fun trafficMirrorFilterId(trafficMirrorFilterId: String)
   }
 
   private class BuilderImpl(
@@ -156,63 +142,63 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.Builder =
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun destinationPortRange(destinationPortRange: IResolvable) {
+    override fun destinationPortRange(destinationPortRange: IResolvable) {
       cdkBuilder.destinationPortRange(destinationPortRange.let(IResolvable::unwrap))
     }
 
-    public override fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty) {
+    override fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty) {
       cdkBuilder.destinationPortRange(destinationPortRange.let(TrafficMirrorPortRangeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2db10abca88db1493b54a0e5d6c9b1f72a0ea3617d0f02596052a458b0eabf9c")
-    public override
+    override
         fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty.Builder.() -> Unit):
         Unit = destinationPortRange(TrafficMirrorPortRangeProperty(destinationPortRange))
 
-    public override fun protocol(protocol: Number) {
+    override fun protocol(protocol: Number) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun ruleAction(ruleAction: String) {
+    override fun ruleAction(ruleAction: String) {
       cdkBuilder.ruleAction(ruleAction)
     }
 
-    public override fun ruleNumber(ruleNumber: Number) {
+    override fun ruleNumber(ruleNumber: Number) {
       cdkBuilder.ruleNumber(ruleNumber)
     }
 
-    public override fun sourceCidrBlock(sourceCidrBlock: String) {
+    override fun sourceCidrBlock(sourceCidrBlock: String) {
       cdkBuilder.sourceCidrBlock(sourceCidrBlock)
     }
 
-    public override fun sourcePortRange(sourcePortRange: IResolvable) {
+    override fun sourcePortRange(sourcePortRange: IResolvable) {
       cdkBuilder.sourcePortRange(sourcePortRange.let(IResolvable::unwrap))
     }
 
-    public override fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty) {
+    override fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty) {
       cdkBuilder.sourcePortRange(sourcePortRange.let(TrafficMirrorPortRangeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f857ab00af762cf044e690ee3f6928e738c828c0867a4415dc02afb4621b061")
-    public override
+    override
         fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty.Builder.() -> Unit):
         Unit = sourcePortRange(TrafficMirrorPortRangeProperty(sourcePortRange))
 
-    public override fun trafficDirection(trafficDirection: String) {
+    override fun trafficDirection(trafficDirection: String) {
       cdkBuilder.trafficDirection(trafficDirection)
     }
 
-    public override fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
+    override fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
       cdkBuilder.trafficMirrorFilterId(trafficMirrorFilterId)
     }
 
@@ -247,11 +233,9 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
     public fun toPort(): Number
 
     public interface Builder {
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -260,11 +244,11 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty.builder()
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -277,9 +261,9 @@ public open class CfnTrafficMirrorFilterRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty,
     ) : TrafficMirrorPortRangeProperty {
-      public override fun fromPort(): Number = unwrap(this).getFromPort()
+      override fun fromPort(): Number = unwrap(this).getFromPort()
 
-      public override fun toPort(): Number = unwrap(this).getToPort()
+      override fun toPort(): Number = unwrap(this).getToPort()
     }
 
     public companion object {

@@ -21,26 +21,20 @@ public interface AdvancedSecurityOptions {
       unwrap(this).getSamlAuthenticationOptions()?.let(SAMLOptionsProperty::wrap)
 
   public interface Builder {
-    public fun masterUserArn(masterUserArn: String) {
-    }
+    public fun masterUserArn(masterUserArn: String)
 
-    public fun masterUserName(masterUserName: String) {
-    }
+    public fun masterUserName(masterUserName: String)
 
-    public fun masterUserPassword(masterUserPassword: SecretValue) {
-    }
+    public fun masterUserPassword(masterUserPassword: SecretValue)
 
-    public fun samlAuthenticationEnabled(samlAuthenticationEnabled: Boolean) {
-    }
+    public fun samlAuthenticationEnabled(samlAuthenticationEnabled: Boolean)
 
-    public fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty) {
-    }
+    public fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95d35bcd5990b82875687519147a3dda825cd7a271485f83779d92ad8484332d")
     public
-        fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty.Builder.() -> Unit) {
-    }
+        fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -48,29 +42,29 @@ public interface AdvancedSecurityOptions {
         software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions.Builder =
         software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions.builder()
 
-    public override fun masterUserArn(masterUserArn: String) {
+    override fun masterUserArn(masterUserArn: String) {
       cdkBuilder.masterUserArn(masterUserArn)
     }
 
-    public override fun masterUserName(masterUserName: String) {
+    override fun masterUserName(masterUserName: String) {
       cdkBuilder.masterUserName(masterUserName)
     }
 
-    public override fun masterUserPassword(masterUserPassword: SecretValue) {
+    override fun masterUserPassword(masterUserPassword: SecretValue) {
       cdkBuilder.masterUserPassword(masterUserPassword.let(SecretValue::unwrap))
     }
 
-    public override fun samlAuthenticationEnabled(samlAuthenticationEnabled: Boolean) {
+    override fun samlAuthenticationEnabled(samlAuthenticationEnabled: Boolean) {
       cdkBuilder.samlAuthenticationEnabled(samlAuthenticationEnabled)
     }
 
-    public override fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty) {
+    override fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty) {
       cdkBuilder.samlAuthenticationOptions(samlAuthenticationOptions.let(SAMLOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95d35bcd5990b82875687519147a3dda825cd7a271485f83779d92ad8484332d")
-    public override
+    override
         fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty.Builder.() -> Unit):
         Unit = samlAuthenticationOptions(SAMLOptionsProperty(samlAuthenticationOptions))
 
@@ -82,17 +76,16 @@ public interface AdvancedSecurityOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions,
   ) : AdvancedSecurityOptions {
-    public override fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
+    override fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
 
-    public override fun masterUserName(): String? = unwrap(this).getMasterUserName()
+    override fun masterUserName(): String? = unwrap(this).getMasterUserName()
 
-    public override fun masterUserPassword(): SecretValue? =
+    override fun masterUserPassword(): SecretValue? =
         unwrap(this).getMasterUserPassword()?.let(SecretValue::wrap)
 
-    public override fun samlAuthenticationEnabled(): Boolean? =
-        unwrap(this).getSamlAuthenticationEnabled()
+    override fun samlAuthenticationEnabled(): Boolean? = unwrap(this).getSamlAuthenticationEnabled()
 
-    public override fun samlAuthenticationOptions(): SAMLOptionsProperty? =
+    override fun samlAuthenticationOptions(): SAMLOptionsProperty? =
         unwrap(this).getSamlAuthenticationOptions()?.let(SAMLOptionsProperty::wrap)
   }
 

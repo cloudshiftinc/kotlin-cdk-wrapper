@@ -26,8 +26,7 @@ public open class TarballImageAsset internal constructor(
   }
 
   public interface Builder {
-    public fun tarballFile(tarballFile: String) {
-    }
+    public fun tarballFile(tarballFile: String)
   }
 
   private class BuilderImpl(
@@ -37,7 +36,7 @@ public open class TarballImageAsset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecr.assets.TarballImageAsset.Builder =
         software.amazon.awscdk.services.ecr.assets.TarballImageAsset.Builder.create(scope, id)
 
-    public override fun tarballFile(tarballFile: String) {
+    override fun tarballFile(tarballFile: String) {
       cdkBuilder.tarballFile(tarballFile)
     }
 

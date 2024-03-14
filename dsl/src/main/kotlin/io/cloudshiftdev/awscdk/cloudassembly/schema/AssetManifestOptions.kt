@@ -12,23 +12,20 @@ public interface AssetManifestOptions {
       unwrap(this).getRequiresBootstrapStackVersion()
 
   public interface Builder {
-    public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
-    }
+    public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String)
 
-    public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
-    }
+    public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.AssetManifestOptions.Builder
         = software.amazon.awscdk.cloudassembly.schema.AssetManifestOptions.builder()
 
-    public override
-        fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
+    override fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
       cdkBuilder.bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter)
     }
 
-    public override fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
+    override fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
       cdkBuilder.requiresBootstrapStackVersion(requiresBootstrapStackVersion)
     }
 
@@ -39,10 +36,10 @@ public interface AssetManifestOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifestOptions,
   ) : AssetManifestOptions {
-    public override fun bootstrapStackVersionSsmParameter(): String? =
+    override fun bootstrapStackVersionSsmParameter(): String? =
         unwrap(this).getBootstrapStackVersionSsmParameter()
 
-    public override fun requiresBootstrapStackVersion(): Number? =
+    override fun requiresBootstrapStackVersion(): Number? =
         unwrap(this).getRequiresBootstrapStackVersion()
   }
 

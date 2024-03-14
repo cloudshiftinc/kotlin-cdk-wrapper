@@ -43,14 +43,11 @@ public open class CfnTransitGatewayMulticastDomainAssociation internal construct
   }
 
   public interface Builder {
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
-    }
+    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String)
 
-    public fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
-    }
+    public fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnTransitGatewayMulticastDomainAssociation internal construct
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation.Builder.create(scope,
         id)
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
+    override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
       cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
     }
 
-    public override fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
+    override fun transitGatewayMulticastDomainId(transitGatewayMulticastDomainId: String) {
       cdkBuilder.transitGatewayMulticastDomainId(transitGatewayMulticastDomainId)
     }
 

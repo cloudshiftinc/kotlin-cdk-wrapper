@@ -205,112 +205,81 @@ public open class CfnPlaybackConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun adDecisionServerUrl(adDecisionServerUrl: String) {
-    }
+    public fun adDecisionServerUrl(adDecisionServerUrl: String)
 
-    public fun availSuppression(availSuppression: IResolvable) {
-    }
+    public fun availSuppression(availSuppression: IResolvable)
 
-    public fun availSuppression(availSuppression: AvailSuppressionProperty) {
-    }
+    public fun availSuppression(availSuppression: AvailSuppressionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d6924f99449990b6b0d5dd995c60cf2b6f1113dcda5bcf6c7259ebe0819a4567")
-    public fun availSuppression(availSuppression: AvailSuppressionProperty.Builder.() -> Unit) {
-    }
+    public fun availSuppression(availSuppression: AvailSuppressionProperty.Builder.() -> Unit)
 
-    public fun bumper(bumper: IResolvable) {
-    }
+    public fun bumper(bumper: IResolvable)
 
-    public fun bumper(bumper: BumperProperty) {
-    }
+    public fun bumper(bumper: BumperProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e5452ff38542cc70684a10a1039519c9a104dc7f382774202e749c2829ff7448")
-    public fun bumper(bumper: BumperProperty.Builder.() -> Unit) {
-    }
+    public fun bumper(bumper: BumperProperty.Builder.() -> Unit)
 
-    public fun cdnConfiguration(cdnConfiguration: IResolvable) {
-    }
+    public fun cdnConfiguration(cdnConfiguration: IResolvable)
 
-    public fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty) {
-    }
+    public fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0de38d0cd8cd9cf62650be13037818eec5e7b683f6549e8589f2a53dcb4a62d1")
-    public fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty.Builder.() -> Unit)
 
-    public fun configurationAliases(configurationAliases: IResolvable) {
-    }
+    public fun configurationAliases(configurationAliases: IResolvable)
 
-    public fun configurationAliases(configurationAliases: Map<String, Any>) {
-    }
+    public fun configurationAliases(configurationAliases: Map<String, Any>)
 
-    public fun dashConfiguration(dashConfiguration: IResolvable) {
-    }
+    public fun dashConfiguration(dashConfiguration: IResolvable)
 
-    public fun dashConfiguration(dashConfiguration: DashConfigurationProperty) {
-    }
+    public fun dashConfiguration(dashConfiguration: DashConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9721fe66029a0ca3f322a6e86e4a46b6a19242ed6d826a69e69cdab00427a55f")
-    public fun dashConfiguration(dashConfiguration: DashConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun dashConfiguration(dashConfiguration: DashConfigurationProperty.Builder.() -> Unit)
 
-    public fun hlsConfiguration(hlsConfiguration: IResolvable) {
-    }
+    public fun hlsConfiguration(hlsConfiguration: IResolvable)
 
-    public fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty) {
-    }
+    public fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5513dff53429d8e9883e964e7e6c98d600e1f0d5cc869ff26f4eec8a3d6e689b")
-    public fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty.Builder.() -> Unit)
 
-    public fun livePreRollConfiguration(livePreRollConfiguration: IResolvable) {
-    }
+    public fun livePreRollConfiguration(livePreRollConfiguration: IResolvable)
 
-    public
-        fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty) {
-    }
+    public fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f82feb9340165b402df0727d1542a0723dda6732cb73a8fadfd92f8aafde4ad8")
     public
-        fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty.Builder.() -> Unit)
 
-    public fun manifestProcessingRules(manifestProcessingRules: IResolvable) {
-    }
+    public fun manifestProcessingRules(manifestProcessingRules: IResolvable)
 
-    public fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty) {
-    }
+    public fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44a04b713c6699cdab0097b7bfa1aa5622cbb24a44a3a812263d130b49d05e34")
     public
-        fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty.Builder.() -> Unit) {
-    }
+        fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun personalizationThresholdSeconds(personalizationThresholdSeconds: Number) {
-    }
+    public fun personalizationThresholdSeconds(personalizationThresholdSeconds: Number)
 
-    public fun slateAdUrl(slateAdUrl: String) {
-    }
+    public fun slateAdUrl(slateAdUrl: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transcodeProfileName(transcodeProfileName: String) {
-    }
+    public fun transcodeProfileName(transcodeProfileName: String)
 
-    public fun videoContentSourceUrl(videoContentSourceUrl: String) {
-    }
+    public fun videoContentSourceUrl(videoContentSourceUrl: String)
   }
 
   private class BuilderImpl(
@@ -322,138 +291,133 @@ public open class CfnPlaybackConfiguration internal constructor(
         software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.Builder.create(scope,
         id)
 
-    public override fun adDecisionServerUrl(adDecisionServerUrl: String) {
+    override fun adDecisionServerUrl(adDecisionServerUrl: String) {
       cdkBuilder.adDecisionServerUrl(adDecisionServerUrl)
     }
 
-    public override fun availSuppression(availSuppression: IResolvable) {
+    override fun availSuppression(availSuppression: IResolvable) {
       cdkBuilder.availSuppression(availSuppression.let(IResolvable::unwrap))
     }
 
-    public override fun availSuppression(availSuppression: AvailSuppressionProperty) {
+    override fun availSuppression(availSuppression: AvailSuppressionProperty) {
       cdkBuilder.availSuppression(availSuppression.let(AvailSuppressionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d6924f99449990b6b0d5dd995c60cf2b6f1113dcda5bcf6c7259ebe0819a4567")
-    public override
-        fun availSuppression(availSuppression: AvailSuppressionProperty.Builder.() -> Unit): Unit =
-        availSuppression(AvailSuppressionProperty(availSuppression))
+    override fun availSuppression(availSuppression: AvailSuppressionProperty.Builder.() -> Unit):
+        Unit = availSuppression(AvailSuppressionProperty(availSuppression))
 
-    public override fun bumper(bumper: IResolvable) {
+    override fun bumper(bumper: IResolvable) {
       cdkBuilder.bumper(bumper.let(IResolvable::unwrap))
     }
 
-    public override fun bumper(bumper: BumperProperty) {
+    override fun bumper(bumper: BumperProperty) {
       cdkBuilder.bumper(bumper.let(BumperProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e5452ff38542cc70684a10a1039519c9a104dc7f382774202e749c2829ff7448")
-    public override fun bumper(bumper: BumperProperty.Builder.() -> Unit): Unit =
+    override fun bumper(bumper: BumperProperty.Builder.() -> Unit): Unit =
         bumper(BumperProperty(bumper))
 
-    public override fun cdnConfiguration(cdnConfiguration: IResolvable) {
+    override fun cdnConfiguration(cdnConfiguration: IResolvable) {
       cdkBuilder.cdnConfiguration(cdnConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty) {
+    override fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty) {
       cdkBuilder.cdnConfiguration(cdnConfiguration.let(CdnConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0de38d0cd8cd9cf62650be13037818eec5e7b683f6549e8589f2a53dcb4a62d1")
-    public override
-        fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty.Builder.() -> Unit): Unit =
-        cdnConfiguration(CdnConfigurationProperty(cdnConfiguration))
+    override fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty.Builder.() -> Unit):
+        Unit = cdnConfiguration(CdnConfigurationProperty(cdnConfiguration))
 
-    public override fun configurationAliases(configurationAliases: IResolvable) {
+    override fun configurationAliases(configurationAliases: IResolvable) {
       cdkBuilder.configurationAliases(configurationAliases.let(IResolvable::unwrap))
     }
 
-    public override fun configurationAliases(configurationAliases: Map<String, Any>) {
+    override fun configurationAliases(configurationAliases: Map<String, Any>) {
       cdkBuilder.configurationAliases(configurationAliases)
     }
 
-    public override fun dashConfiguration(dashConfiguration: IResolvable) {
+    override fun dashConfiguration(dashConfiguration: IResolvable) {
       cdkBuilder.dashConfiguration(dashConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun dashConfiguration(dashConfiguration: DashConfigurationProperty) {
+    override fun dashConfiguration(dashConfiguration: DashConfigurationProperty) {
       cdkBuilder.dashConfiguration(dashConfiguration.let(DashConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9721fe66029a0ca3f322a6e86e4a46b6a19242ed6d826a69e69cdab00427a55f")
-    public override
-        fun dashConfiguration(dashConfiguration: DashConfigurationProperty.Builder.() -> Unit): Unit
-        = dashConfiguration(DashConfigurationProperty(dashConfiguration))
+    override fun dashConfiguration(dashConfiguration: DashConfigurationProperty.Builder.() -> Unit):
+        Unit = dashConfiguration(DashConfigurationProperty(dashConfiguration))
 
-    public override fun hlsConfiguration(hlsConfiguration: IResolvable) {
+    override fun hlsConfiguration(hlsConfiguration: IResolvable) {
       cdkBuilder.hlsConfiguration(hlsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty) {
+    override fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty) {
       cdkBuilder.hlsConfiguration(hlsConfiguration.let(HlsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5513dff53429d8e9883e964e7e6c98d600e1f0d5cc869ff26f4eec8a3d6e689b")
-    public override
-        fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty.Builder.() -> Unit): Unit =
-        hlsConfiguration(HlsConfigurationProperty(hlsConfiguration))
+    override fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty.Builder.() -> Unit):
+        Unit = hlsConfiguration(HlsConfigurationProperty(hlsConfiguration))
 
-    public override fun livePreRollConfiguration(livePreRollConfiguration: IResolvable) {
+    override fun livePreRollConfiguration(livePreRollConfiguration: IResolvable) {
       cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty) {
       cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(LivePreRollConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f82feb9340165b402df0727d1542a0723dda6732cb73a8fadfd92f8aafde4ad8")
-    public override
+    override
         fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty.Builder.() -> Unit):
         Unit = livePreRollConfiguration(LivePreRollConfigurationProperty(livePreRollConfiguration))
 
-    public override fun manifestProcessingRules(manifestProcessingRules: IResolvable) {
+    override fun manifestProcessingRules(manifestProcessingRules: IResolvable) {
       cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(IResolvable::unwrap))
     }
 
-    public override
-        fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty) {
+    override fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty) {
       cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(ManifestProcessingRulesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44a04b713c6699cdab0097b7bfa1aa5622cbb24a44a3a812263d130b49d05e34")
-    public override
+    override
         fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty.Builder.() -> Unit):
         Unit = manifestProcessingRules(ManifestProcessingRulesProperty(manifestProcessingRules))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun personalizationThresholdSeconds(personalizationThresholdSeconds: Number) {
+    override fun personalizationThresholdSeconds(personalizationThresholdSeconds: Number) {
       cdkBuilder.personalizationThresholdSeconds(personalizationThresholdSeconds)
     }
 
-    public override fun slateAdUrl(slateAdUrl: String) {
+    override fun slateAdUrl(slateAdUrl: String) {
       cdkBuilder.slateAdUrl(slateAdUrl)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transcodeProfileName(transcodeProfileName: String) {
+    override fun transcodeProfileName(transcodeProfileName: String) {
       cdkBuilder.transcodeProfileName(transcodeProfileName)
     }
 
-    public override fun videoContentSourceUrl(videoContentSourceUrl: String) {
+    override fun videoContentSourceUrl(videoContentSourceUrl: String) {
       cdkBuilder.videoContentSourceUrl(videoContentSourceUrl)
     }
 
@@ -489,11 +453,9 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun contentSegmentUrlPrefix(): String? = unwrap(this).getContentSegmentUrlPrefix()
 
     public interface Builder {
-      public fun adSegmentUrlPrefix(adSegmentUrlPrefix: String) {
-      }
+      public fun adSegmentUrlPrefix(adSegmentUrlPrefix: String)
 
-      public fun contentSegmentUrlPrefix(contentSegmentUrlPrefix: String) {
-      }
+      public fun contentSegmentUrlPrefix(contentSegmentUrlPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -502,11 +464,11 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty.builder()
 
-      public override fun adSegmentUrlPrefix(adSegmentUrlPrefix: String) {
+      override fun adSegmentUrlPrefix(adSegmentUrlPrefix: String) {
         cdkBuilder.adSegmentUrlPrefix(adSegmentUrlPrefix)
       }
 
-      public override fun contentSegmentUrlPrefix(contentSegmentUrlPrefix: String) {
+      override fun contentSegmentUrlPrefix(contentSegmentUrlPrefix: String) {
         cdkBuilder.contentSegmentUrlPrefix(contentSegmentUrlPrefix)
       }
 
@@ -519,10 +481,9 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.CdnConfigurationProperty,
     ) : CdnConfigurationProperty {
-      public override fun adSegmentUrlPrefix(): String? = unwrap(this).getAdSegmentUrlPrefix()
+      override fun adSegmentUrlPrefix(): String? = unwrap(this).getAdSegmentUrlPrefix()
 
-      public override fun contentSegmentUrlPrefix(): String? =
-          unwrap(this).getContentSegmentUrlPrefix()
+      override fun contentSegmentUrlPrefix(): String? = unwrap(this).getContentSegmentUrlPrefix()
     }
 
     public companion object {
@@ -551,11 +512,9 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
 
     public interface Builder {
-      public fun adDecisionServerUrl(adDecisionServerUrl: String) {
-      }
+      public fun adDecisionServerUrl(adDecisionServerUrl: String)
 
-      public fun maxDurationSeconds(maxDurationSeconds: Number) {
-      }
+      public fun maxDurationSeconds(maxDurationSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -564,11 +523,11 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty.builder()
 
-      public override fun adDecisionServerUrl(adDecisionServerUrl: String) {
+      override fun adDecisionServerUrl(adDecisionServerUrl: String) {
         cdkBuilder.adDecisionServerUrl(adDecisionServerUrl)
       }
 
-      public override fun maxDurationSeconds(maxDurationSeconds: Number) {
+      override fun maxDurationSeconds(maxDurationSeconds: Number) {
         cdkBuilder.maxDurationSeconds(maxDurationSeconds)
       }
 
@@ -581,9 +540,9 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.LivePreRollConfigurationProperty,
     ) : LivePreRollConfigurationProperty {
-      public override fun adDecisionServerUrl(): String? = unwrap(this).getAdDecisionServerUrl()
+      override fun adDecisionServerUrl(): String? = unwrap(this).getAdDecisionServerUrl()
 
-      public override fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
+      override fun maxDurationSeconds(): Number? = unwrap(this).getMaxDurationSeconds()
     }
 
     public companion object {
@@ -614,14 +573,11 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun originManifestType(): String? = unwrap(this).getOriginManifestType()
 
     public interface Builder {
-      public fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
-      }
+      public fun manifestEndpointPrefix(manifestEndpointPrefix: String)
 
-      public fun mpdLocation(mpdLocation: String) {
-      }
+      public fun mpdLocation(mpdLocation: String)
 
-      public fun originManifestType(originManifestType: String) {
-      }
+      public fun originManifestType(originManifestType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -630,15 +586,15 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty.builder()
 
-      public override fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
+      override fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
         cdkBuilder.manifestEndpointPrefix(manifestEndpointPrefix)
       }
 
-      public override fun mpdLocation(mpdLocation: String) {
+      override fun mpdLocation(mpdLocation: String) {
         cdkBuilder.mpdLocation(mpdLocation)
       }
 
-      public override fun originManifestType(originManifestType: String) {
+      override fun originManifestType(originManifestType: String) {
         cdkBuilder.originManifestType(originManifestType)
       }
 
@@ -651,12 +607,11 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.DashConfigurationProperty,
     ) : DashConfigurationProperty {
-      public override fun manifestEndpointPrefix(): String? =
-          unwrap(this).getManifestEndpointPrefix()
+      override fun manifestEndpointPrefix(): String? = unwrap(this).getManifestEndpointPrefix()
 
-      public override fun mpdLocation(): String? = unwrap(this).getMpdLocation()
+      override fun mpdLocation(): String? = unwrap(this).getMpdLocation()
 
-      public override fun originManifestType(): String? = unwrap(this).getOriginManifestType()
+      override fun originManifestType(): String? = unwrap(this).getOriginManifestType()
     }
 
     public companion object {
@@ -683,8 +638,7 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun manifestEndpointPrefix(): String? = unwrap(this).getManifestEndpointPrefix()
 
     public interface Builder {
-      public fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
-      }
+      public fun manifestEndpointPrefix(manifestEndpointPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -693,7 +647,7 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty.builder()
 
-      public override fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
+      override fun manifestEndpointPrefix(manifestEndpointPrefix: String) {
         cdkBuilder.manifestEndpointPrefix(manifestEndpointPrefix)
       }
 
@@ -706,8 +660,7 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.HlsConfigurationProperty,
     ) : HlsConfigurationProperty {
-      public override fun manifestEndpointPrefix(): String? =
-          unwrap(this).getManifestEndpointPrefix()
+      override fun manifestEndpointPrefix(): String? = unwrap(this).getManifestEndpointPrefix()
     }
 
     public companion object {
@@ -736,11 +689,9 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun startUrl(): String? = unwrap(this).getStartUrl()
 
     public interface Builder {
-      public fun endUrl(endUrl: String) {
-      }
+      public fun endUrl(endUrl: String)
 
-      public fun startUrl(startUrl: String) {
-      }
+      public fun startUrl(startUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -749,11 +700,11 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty.builder()
 
-      public override fun endUrl(endUrl: String) {
+      override fun endUrl(endUrl: String) {
         cdkBuilder.endUrl(endUrl)
       }
 
-      public override fun startUrl(startUrl: String) {
+      override fun startUrl(startUrl: String) {
         cdkBuilder.startUrl(startUrl)
       }
 
@@ -766,9 +717,9 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.BumperProperty,
     ) : BumperProperty {
-      public override fun endUrl(): String? = unwrap(this).getEndUrl()
+      override fun endUrl(): String? = unwrap(this).getEndUrl()
 
-      public override fun startUrl(): String? = unwrap(this).getStartUrl()
+      override fun startUrl(): String? = unwrap(this).getStartUrl()
     }
 
     public companion object {
@@ -797,11 +748,9 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -810,11 +759,11 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -827,9 +776,9 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AvailSuppressionProperty,
     ) : AvailSuppressionProperty {
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -856,17 +805,14 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun adMarkerPassthrough(): Any? = unwrap(this).getAdMarkerPassthrough()
 
     public interface Builder {
-      public fun adMarkerPassthrough(adMarkerPassthrough: IResolvable) {
-      }
+      public fun adMarkerPassthrough(adMarkerPassthrough: IResolvable)
 
-      public fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty) {
-      }
+      public fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("31a5ddef7bb8163764922d8d7fbbdd01c9762270611101fcd57f0a70c9e385be")
       public
-          fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty.Builder.() -> Unit) {
-      }
+          fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -875,17 +821,17 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty.builder()
 
-      public override fun adMarkerPassthrough(adMarkerPassthrough: IResolvable) {
+      override fun adMarkerPassthrough(adMarkerPassthrough: IResolvable) {
         cdkBuilder.adMarkerPassthrough(adMarkerPassthrough.let(IResolvable::unwrap))
       }
 
-      public override fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty) {
+      override fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty) {
         cdkBuilder.adMarkerPassthrough(adMarkerPassthrough.let(AdMarkerPassthroughProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("31a5ddef7bb8163764922d8d7fbbdd01c9762270611101fcd57f0a70c9e385be")
-      public override
+      override
           fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty.Builder.() -> Unit):
           Unit = adMarkerPassthrough(AdMarkerPassthroughProperty(adMarkerPassthrough))
 
@@ -898,7 +844,7 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.ManifestProcessingRulesProperty,
     ) : ManifestProcessingRulesProperty {
-      public override fun adMarkerPassthrough(): Any? = unwrap(this).getAdMarkerPassthrough()
+      override fun adMarkerPassthrough(): Any? = unwrap(this).getAdMarkerPassthrough()
     }
 
     public companion object {
@@ -925,11 +871,9 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -938,11 +882,11 @@ public open class CfnPlaybackConfiguration internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -955,7 +899,7 @@ public open class CfnPlaybackConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration.AdMarkerPassthroughProperty,
     ) : AdMarkerPassthroughProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {

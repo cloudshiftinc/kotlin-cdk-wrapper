@@ -11,20 +11,15 @@ public interface MemoryUtilizationScalingProps : BaseTargetTrackingProps {
   public fun targetUtilizationPercent(): Number
 
   public interface Builder {
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-    }
+    public fun disableScaleIn(disableScaleIn: Boolean)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun scaleInCooldown(scaleInCooldown: Duration) {
-    }
+    public fun scaleInCooldown(scaleInCooldown: Duration)
 
-    public fun scaleOutCooldown(scaleOutCooldown: Duration) {
-    }
+    public fun scaleOutCooldown(scaleOutCooldown: Duration)
 
-    public fun targetUtilizationPercent(targetUtilizationPercent: Number) {
-    }
+    public fun targetUtilizationPercent(targetUtilizationPercent: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -32,23 +27,23 @@ public interface MemoryUtilizationScalingProps : BaseTargetTrackingProps {
         software.amazon.awscdk.services.ecs.MemoryUtilizationScalingProps.Builder =
         software.amazon.awscdk.services.ecs.MemoryUtilizationScalingProps.builder()
 
-    public override fun disableScaleIn(disableScaleIn: Boolean) {
+    override fun disableScaleIn(disableScaleIn: Boolean) {
       cdkBuilder.disableScaleIn(disableScaleIn)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun scaleInCooldown(scaleInCooldown: Duration) {
+    override fun scaleInCooldown(scaleInCooldown: Duration) {
       cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
     }
 
-    public override fun scaleOutCooldown(scaleOutCooldown: Duration) {
+    override fun scaleOutCooldown(scaleOutCooldown: Duration) {
       cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
     }
 
-    public override fun targetUtilizationPercent(targetUtilizationPercent: Number) {
+    override fun targetUtilizationPercent(targetUtilizationPercent: Number) {
       cdkBuilder.targetUtilizationPercent(targetUtilizationPercent)
     }
 
@@ -59,18 +54,17 @@ public interface MemoryUtilizationScalingProps : BaseTargetTrackingProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.MemoryUtilizationScalingProps,
   ) : MemoryUtilizationScalingProps {
-    public override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
+    override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
 
-    public override fun policyName(): String? = unwrap(this).getPolicyName()
+    override fun policyName(): String? = unwrap(this).getPolicyName()
 
-    public override fun scaleInCooldown(): Duration? =
+    override fun scaleInCooldown(): Duration? =
         unwrap(this).getScaleInCooldown()?.let(Duration::wrap)
 
-    public override fun scaleOutCooldown(): Duration? =
+    override fun scaleOutCooldown(): Duration? =
         unwrap(this).getScaleOutCooldown()?.let(Duration::wrap)
 
-    public override fun targetUtilizationPercent(): Number =
-        unwrap(this).getTargetUtilizationPercent()
+    override fun targetUtilizationPercent(): Number = unwrap(this).getTargetUtilizationPercent()
   }
 
   public companion object {

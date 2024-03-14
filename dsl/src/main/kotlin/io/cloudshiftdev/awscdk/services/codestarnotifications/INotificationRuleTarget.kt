@@ -9,8 +9,7 @@ public interface INotificationRuleTarget {
     internal val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget,
   ) : INotificationRuleTarget {
-    public override fun bindAsNotificationRuleTarget(arg0: Construct): NotificationRuleTargetConfig
-        =
+    override fun bindAsNotificationRuleTarget(arg0: Construct): NotificationRuleTargetConfig =
         unwrap(this).bindAsNotificationRuleTarget(arg0.let(Construct::unwrap)).let(NotificationRuleTargetConfig::wrap)
   }
 

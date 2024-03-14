@@ -6,8 +6,7 @@ public interface BatchHttpRouteOptions {
   public fun integration(): HttpRouteIntegration
 
   public interface Builder {
-    public fun integration(integration: HttpRouteIntegration) {
-    }
+    public fun integration(integration: HttpRouteIntegration)
   }
 
   private class BuilderImpl : Builder {
@@ -15,7 +14,7 @@ public interface BatchHttpRouteOptions {
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions.builder()
 
-    public override fun integration(integration: HttpRouteIntegration) {
+    override fun integration(integration: HttpRouteIntegration) {
       cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
     }
 
@@ -26,7 +25,7 @@ public interface BatchHttpRouteOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions,
   ) : BatchHttpRouteOptions {
-    public override fun integration(): HttpRouteIntegration =
+    override fun integration(): HttpRouteIntegration =
         unwrap(this).getIntegration().let(HttpRouteIntegration::wrap)
   }
 

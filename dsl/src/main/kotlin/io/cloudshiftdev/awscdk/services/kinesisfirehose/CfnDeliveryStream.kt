@@ -267,173 +267,134 @@ public open class CfnDeliveryStream internal constructor(
 
   public interface Builder {
     public
-        fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: IResolvable) {
-    }
+        fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: IResolvable)
 
     public
-        fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty) {
-    }
+        fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6853de422f2e16dfe8a986fcc9f02e63b77b55179c8bebfbbec5b5200944acd")
     public
-        fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty.Builder.() -> Unit)
 
     public
-        fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: IResolvable) {
-    }
+        fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: IResolvable)
 
     public
-        fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty) {
-    }
+        fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b0e750dd8298dba0e5c02f301c88e6a2f91f32b1eb4c4d5bf8cd380c5a643229")
     public
-        fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty.Builder.() -> Unit)
 
     public
-        fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: IResolvable) {
-    }
+        fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: IResolvable)
 
     public
-        fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty) {
-    }
+        fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ab692c19801842492183b9e872222254e095277511bf02e81be652274d244d1")
     public
-        fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty.Builder.() -> Unit) {
-    }
+        fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty.Builder.() -> Unit)
 
-    public fun deliveryStreamName(deliveryStreamName: String) {
-    }
+    public fun deliveryStreamName(deliveryStreamName: String)
 
-    public fun deliveryStreamType(deliveryStreamType: String) {
-    }
+    public fun deliveryStreamType(deliveryStreamType: String)
 
     public
-        fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: IResolvable) {
-    }
+        fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: IResolvable)
 
     public
-        fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty) {
-    }
+        fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e250eef7235cc63f426265344f51a8ff69fcc8cd948c0e67f937d5bdf1245fd")
     public
-        fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: IResolvable) {
-    }
+    public fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: IResolvable)
 
     public
-        fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty) {
-    }
+        fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("804c0ad62fefcbd3a84762891f680a28e32d801c8adae97f7dc25df681c39728")
     public
-        fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty.Builder.() -> Unit)
 
     public
-        fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: IResolvable) {
-    }
+        fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: IResolvable)
 
     public
-        fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty) {
-    }
+        fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02bda40d7d17a3bea2aa4bdc2c92fe46910fdb0919bfd3fc4954f2bc133f5a85")
     public
-        fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: IResolvable) {
-    }
+    public fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: IResolvable)
 
     public
-        fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty) {
-    }
+        fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c8ff51ace8046f164b30f7b7c7ac9b9cad0a6405a4a04f198383d16b4f369f2")
     public
-        fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty.Builder.() -> Unit)
 
-    public fun mskSourceConfiguration(mskSourceConfiguration: IResolvable) {
-    }
+    public fun mskSourceConfiguration(mskSourceConfiguration: IResolvable)
 
-    public fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty) {
-    }
+    public fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("167b672ab608a479965f8b9832f5d781f2ea06250b1edf2687df728d87242969")
     public
-        fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty.Builder.() -> Unit)
 
-    public fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: IResolvable) {
-    }
+    public fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: IResolvable)
 
     public
-        fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty) {
-    }
+        fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("74cb5c9a75ab0d5d3125ae16330f7f4a07f9daa3f09b90f46df915fd8c345a18")
     public
-        fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
-    }
+    public fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable)
 
     public
-        fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty) {
-    }
+        fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cef601312d98974061b66bd8152f76623e6f4dd72a5526c35dd1f6c5850f24c0")
     public
-        fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: IResolvable) {
-    }
+    public fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: IResolvable)
 
     public
-        fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty) {
-    }
+        fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15cbf3df7ca5c2d9edaafbedfcc169f3791bdb7c223e6bb201410f57eb9bb10c")
     public
-        fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun splunkDestinationConfiguration(splunkDestinationConfiguration: IResolvable) {
-    }
+    public fun splunkDestinationConfiguration(splunkDestinationConfiguration: IResolvable)
 
     public
-        fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty) {
-    }
+        fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b63f26c8956fbfe5ba15ca0ae73dd495f67dee4d1673fd29dff176ebbeaef6e")
     public
-        fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -444,216 +405,211 @@ public open class CfnDeliveryStream internal constructor(
         software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.Builder =
         software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.Builder.create(scope, id)
 
-    public override
+    override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: IResolvable) {
       cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty) {
       cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(AmazonOpenSearchServerlessDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6853de422f2e16dfe8a986fcc9f02e63b77b55179c8bebfbbec5b5200944acd")
-    public override
+    override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         amazonOpenSearchServerlessDestinationConfiguration(AmazonOpenSearchServerlessDestinationConfigurationProperty(amazonOpenSearchServerlessDestinationConfiguration))
 
-    public override
+    override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: IResolvable) {
       cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty) {
       cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(AmazonopensearchserviceDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b0e750dd8298dba0e5c02f301c88e6a2f91f32b1eb4c4d5bf8cd380c5a643229")
-    public override
+    override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         amazonopensearchserviceDestinationConfiguration(AmazonopensearchserviceDestinationConfigurationProperty(amazonopensearchserviceDestinationConfiguration))
 
-    public override
+    override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: IResolvable) {
       cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty) {
       cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(DeliveryStreamEncryptionConfigurationInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ab692c19801842492183b9e872222254e095277511bf02e81be652274d244d1")
-    public override
+    override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty.Builder.() -> Unit):
         Unit =
         deliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInputProperty(deliveryStreamEncryptionConfigurationInput))
 
-    public override fun deliveryStreamName(deliveryStreamName: String) {
+    override fun deliveryStreamName(deliveryStreamName: String) {
       cdkBuilder.deliveryStreamName(deliveryStreamName)
     }
 
-    public override fun deliveryStreamType(deliveryStreamType: String) {
+    override fun deliveryStreamType(deliveryStreamType: String) {
       cdkBuilder.deliveryStreamType(deliveryStreamType)
     }
 
-    public override
+    override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: IResolvable) {
       cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty) {
       cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(ElasticsearchDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e250eef7235cc63f426265344f51a8ff69fcc8cd948c0e67f937d5bdf1245fd")
-    public override
+    override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         elasticsearchDestinationConfiguration(ElasticsearchDestinationConfigurationProperty(elasticsearchDestinationConfiguration))
 
-    public override
+    override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: IResolvable) {
       cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty) {
       cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(ExtendedS3DestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("804c0ad62fefcbd3a84762891f680a28e32d801c8adae97f7dc25df681c39728")
-    public override
+    override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         extendedS3DestinationConfiguration(ExtendedS3DestinationConfigurationProperty(extendedS3DestinationConfiguration))
 
-    public override
+    override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: IResolvable) {
       cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty) {
       cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(HttpEndpointDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02bda40d7d17a3bea2aa4bdc2c92fe46910fdb0919bfd3fc4954f2bc133f5a85")
-    public override
+    override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         httpEndpointDestinationConfiguration(HttpEndpointDestinationConfigurationProperty(httpEndpointDestinationConfiguration))
 
-    public override
-        fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: IResolvable) {
+    override fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: IResolvable) {
       cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty) {
       cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(KinesisStreamSourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c8ff51ace8046f164b30f7b7c7ac9b9cad0a6405a4a04f198383d16b4f369f2")
-    public override
+    override
         fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty.Builder.() -> Unit):
         Unit =
         kinesisStreamSourceConfiguration(KinesisStreamSourceConfigurationProperty(kinesisStreamSourceConfiguration))
 
-    public override fun mskSourceConfiguration(mskSourceConfiguration: IResolvable) {
+    override fun mskSourceConfiguration(mskSourceConfiguration: IResolvable) {
       cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty) {
+    override fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty) {
       cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(MSKSourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("167b672ab608a479965f8b9832f5d781f2ea06250b1edf2687df728d87242969")
-    public override
+    override
         fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty.Builder.() -> Unit):
         Unit = mskSourceConfiguration(MSKSourceConfigurationProperty(mskSourceConfiguration))
 
-    public override
-        fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: IResolvable) {
+    override fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: IResolvable) {
       cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty) {
       cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(RedshiftDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("74cb5c9a75ab0d5d3125ae16330f7f4a07f9daa3f09b90f46df915fd8c345a18")
-    public override
+    override
         fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         redshiftDestinationConfiguration(RedshiftDestinationConfigurationProperty(redshiftDestinationConfiguration))
 
-    public override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
+    override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
       cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty) {
       cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(S3DestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cef601312d98974061b66bd8152f76623e6f4dd72a5526c35dd1f6c5850f24c0")
-    public override
+    override
         fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         s3DestinationConfiguration(S3DestinationConfigurationProperty(s3DestinationConfiguration))
 
-    public override
-        fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: IResolvable) {
+    override fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: IResolvable) {
       cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty) {
       cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(SnowflakeDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15cbf3df7ca5c2d9edaafbedfcc169f3791bdb7c223e6bb201410f57eb9bb10c")
-    public override
+    override
         fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         snowflakeDestinationConfiguration(SnowflakeDestinationConfigurationProperty(snowflakeDestinationConfiguration))
 
-    public override
-        fun splunkDestinationConfiguration(splunkDestinationConfiguration: IResolvable) {
+    override fun splunkDestinationConfiguration(splunkDestinationConfiguration: IResolvable) {
       cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty) {
       cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(SplunkDestinationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b63f26c8956fbfe5ba15ca0ae73dd495f67dee4d1673fd29dff176ebbeaef6e")
-    public override
+    override
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty.Builder.() -> Unit):
         Unit =
         splunkDestinationConfiguration(SplunkDestinationConfigurationProperty(splunkDestinationConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -696,23 +652,17 @@ public open class CfnDeliveryStream internal constructor(
     public fun versionId(): String? = unwrap(this).getVersionId()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
 
-      public fun versionId(versionId: String) {
-      }
+      public fun versionId(versionId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -721,27 +671,27 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaConfigurationProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
-      public override fun versionId(versionId: String) {
+      override fun versionId(versionId: String) {
         cdkBuilder.versionId(versionId)
       }
 
@@ -754,17 +704,17 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaConfigurationProperty,
     ) : SchemaConfigurationProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun tableName(): String? = unwrap(this).getTableName()
+      override fun tableName(): String? = unwrap(this).getTableName()
 
-      public override fun versionId(): String? = unwrap(this).getVersionId()
+      override fun versionId(): String? = unwrap(this).getVersionId()
     }
 
     public companion object {
@@ -791,8 +741,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun defaultDocumentIdFormat(): String
 
     public interface Builder {
-      public fun defaultDocumentIdFormat(defaultDocumentIdFormat: String) {
-      }
+      public fun defaultDocumentIdFormat(defaultDocumentIdFormat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -801,7 +750,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DocumentIdOptionsProperty.builder()
 
-      public override fun defaultDocumentIdFormat(defaultDocumentIdFormat: String) {
+      override fun defaultDocumentIdFormat(defaultDocumentIdFormat: String) {
         cdkBuilder.defaultDocumentIdFormat(defaultDocumentIdFormat)
       }
 
@@ -814,8 +763,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DocumentIdOptionsProperty,
     ) : DocumentIdOptionsProperty {
-      public override fun defaultDocumentIdFormat(): String =
-          unwrap(this).getDefaultDocumentIdFormat()
+      override fun defaultDocumentIdFormat(): String = unwrap(this).getDefaultDocumentIdFormat()
     }
 
     public companion object {
@@ -844,11 +792,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
 
     public interface Builder {
-      public fun intervalInSeconds(intervalInSeconds: Number) {
-      }
+      public fun intervalInSeconds(intervalInSeconds: Number)
 
-      public fun sizeInMBs(sizeInMBs: Number) {
-      }
+      public fun sizeInMBs(sizeInMBs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -857,11 +803,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty.builder()
 
-      public override fun intervalInSeconds(intervalInSeconds: Number) {
+      override fun intervalInSeconds(intervalInSeconds: Number) {
         cdkBuilder.intervalInSeconds(intervalInSeconds)
       }
 
-      public override fun sizeInMBs(sizeInMBs: Number) {
+      override fun sizeInMBs(sizeInMBs: Number) {
         cdkBuilder.sizeInMBs(sizeInMBs)
       }
 
@@ -874,9 +820,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty,
     ) : ElasticsearchBufferingHintsProperty {
-      public override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
+      override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
 
-      public override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
+      override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
     }
 
     public companion object {
@@ -930,109 +876,80 @@ public open class CfnDeliveryStream internal constructor(
     public fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
 
     public interface Builder {
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e340df446c87b68e1e4db744c5bcad411fd76543fd8ac0099e797242ea40d393")
       public
-          fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty.Builder.() -> Unit) {
-      }
+          fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10a33b53a184502ac926541dc7c0d35cc6f40b520bbe25c32635d17c532d66ce")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun clusterEndpoint(clusterEndpoint: String) {
-      }
+      public fun clusterEndpoint(clusterEndpoint: String)
 
-      public fun documentIdOptions(documentIdOptions: IResolvable) {
-      }
+      public fun documentIdOptions(documentIdOptions: IResolvable)
 
-      public fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
-      }
+      public fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5929d4c5b569128d81d5a2f4fe012a50b5708c0fcb55a4b2b61b98b307a073c6")
-      public
-          fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty.Builder.() -> Unit)
 
-      public fun domainArn(domainArn: String) {
-      }
+      public fun domainArn(domainArn: String)
 
-      public fun indexName(indexName: String) {
-      }
+      public fun indexName(indexName: String)
 
-      public fun indexRotationPeriod(indexRotationPeriod: String) {
-      }
+      public fun indexRotationPeriod(indexRotationPeriod: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6b9d8492561b471a963248aeed15022e7b6148dc60f9a15c3b359d3ff6126525")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6b3dee5ac7c674196a462de689006c06d8d94e430434c0e18048b01a8631565")
-      public fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("334e920a445bd1b45df5fceb29dda0b70cf95eb11c35e5d5fa949d75105fba9c")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun typeName(typeName: String) {
-      }
+      public fun typeName(typeName: String)
 
-      public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28d81a27050691270e4b42417272ed11988a312b2692cd26fdacc00690c2b7d3")
-      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1041,134 +958,132 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.builder()
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty) {
+      override fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(ElasticsearchBufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e340df446c87b68e1e4db744c5bcad411fd76543fd8ac0099e797242ea40d393")
-      public override
+      override
           fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty.Builder.() -> Unit):
           Unit = bufferingHints(ElasticsearchBufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10a33b53a184502ac926541dc7c0d35cc6f40b520bbe25c32635d17c532d66ce")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun clusterEndpoint(clusterEndpoint: String) {
+      override fun clusterEndpoint(clusterEndpoint: String) {
         cdkBuilder.clusterEndpoint(clusterEndpoint)
       }
 
-      public override fun documentIdOptions(documentIdOptions: IResolvable) {
+      override fun documentIdOptions(documentIdOptions: IResolvable) {
         cdkBuilder.documentIdOptions(documentIdOptions.let(IResolvable::unwrap))
       }
 
-      public override fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
+      override fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
         cdkBuilder.documentIdOptions(documentIdOptions.let(DocumentIdOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5929d4c5b569128d81d5a2f4fe012a50b5708c0fcb55a4b2b61b98b307a073c6")
-      public override
+      override
           fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty.Builder.() -> Unit):
           Unit = documentIdOptions(DocumentIdOptionsProperty(documentIdOptions))
 
-      public override fun domainArn(domainArn: String) {
+      override fun domainArn(domainArn: String) {
         cdkBuilder.domainArn(domainArn)
       }
 
-      public override fun indexName(indexName: String) {
+      override fun indexName(indexName: String) {
         cdkBuilder.indexName(indexName)
       }
 
-      public override fun indexRotationPeriod(indexRotationPeriod: String) {
+      override fun indexRotationPeriod(indexRotationPeriod: String) {
         cdkBuilder.indexRotationPeriod(indexRotationPeriod)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6b9d8492561b471a963248aeed15022e7b6148dc60f9a15c3b359d3ff6126525")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty) {
+      override fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(ElasticsearchRetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6b3dee5ac7c674196a462de689006c06d8d94e430434c0e18048b01a8631565")
-      public override
-          fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty.Builder.() -> Unit): Unit
-          = retryOptions(ElasticsearchRetryOptionsProperty(retryOptions))
+      override fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty.Builder.() -> Unit):
+          Unit = retryOptions(ElasticsearchRetryOptionsProperty(retryOptions))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("334e920a445bd1b45df5fceb29dda0b70cf95eb11c35e5d5fa949d75105fba9c")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
-      public override fun typeName(typeName: String) {
+      override fun typeName(typeName: String) {
         cdkBuilder.typeName(typeName)
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+      override fun vpcConfiguration(vpcConfiguration: IResolvable) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
+      override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28d81a27050691270e4b42417272ed11988a312b2692cd26fdacc00690c2b7d3")
-      public override
-          fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit): Unit
-          = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
+      override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit):
+          Unit = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty
@@ -1179,35 +1094,33 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty,
     ) : ElasticsearchDestinationConfigurationProperty {
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun clusterEndpoint(): String? = unwrap(this).getClusterEndpoint()
+      override fun clusterEndpoint(): String? = unwrap(this).getClusterEndpoint()
 
-      public override fun documentIdOptions(): Any? = unwrap(this).getDocumentIdOptions()
+      override fun documentIdOptions(): Any? = unwrap(this).getDocumentIdOptions()
 
-      public override fun domainArn(): String? = unwrap(this).getDomainArn()
+      override fun domainArn(): String? = unwrap(this).getDomainArn()
 
-      public override fun indexName(): String = unwrap(this).getIndexName()
+      override fun indexName(): String = unwrap(this).getIndexName()
 
-      public override fun indexRotationPeriod(): String? = unwrap(this).getIndexRotationPeriod()
+      override fun indexRotationPeriod(): String? = unwrap(this).getIndexRotationPeriod()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
 
-      public override fun typeName(): String? = unwrap(this).getTypeName()
+      override fun typeName(): String? = unwrap(this).getTypeName()
 
-      public override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
+      override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
     }
 
     public companion object {
@@ -1237,11 +1150,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun kinesisStreamArn(kinesisStreamArn: String) {
-      }
+      public fun kinesisStreamArn(kinesisStreamArn: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1250,11 +1161,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.builder()
 
-      public override fun kinesisStreamArn(kinesisStreamArn: String) {
+      override fun kinesisStreamArn(kinesisStreamArn: String) {
         cdkBuilder.kinesisStreamArn(kinesisStreamArn)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -1267,9 +1178,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty,
     ) : KinesisStreamSourceConfigurationProperty {
-      public override fun kinesisStreamArn(): String = unwrap(this).getKinesisStreamArn()
+      override fun kinesisStreamArn(): String = unwrap(this).getKinesisStreamArn()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -1297,8 +1208,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun privateLinkVpceId(): String
 
     public interface Builder {
-      public fun privateLinkVpceId(privateLinkVpceId: String) {
-      }
+      public fun privateLinkVpceId(privateLinkVpceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1307,7 +1217,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeVpcConfigurationProperty.builder()
 
-      public override fun privateLinkVpceId(privateLinkVpceId: String) {
+      override fun privateLinkVpceId(privateLinkVpceId: String) {
         cdkBuilder.privateLinkVpceId(privateLinkVpceId)
       }
 
@@ -1320,7 +1230,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeVpcConfigurationProperty,
     ) : SnowflakeVpcConfigurationProperty {
-      public override fun privateLinkVpceId(): String = unwrap(this).getPrivateLinkVpceId()
+      override fun privateLinkVpceId(): String = unwrap(this).getPrivateLinkVpceId()
     }
 
     public companion object {
@@ -1367,79 +1277,59 @@ public open class CfnDeliveryStream internal constructor(
     public fun s3Configuration(): Any
 
     public interface Builder {
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e25def6f003540905f3374225e52403efb0d805d8805ec1a33e463075f9addae")
-      public fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty.Builder.() -> Unit) {
-      }
+      public fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e04fa488be9ab07ebb7d1ee306afe46fec4aa0eb8c592b5b13c85ebfd7546987")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds: Number) {
-      }
+      public fun hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds: Number)
 
-      public fun hecEndpoint(hecEndpoint: String) {
-      }
+      public fun hecEndpoint(hecEndpoint: String)
 
-      public fun hecEndpointType(hecEndpointType: String) {
-      }
+      public fun hecEndpointType(hecEndpointType: String)
 
-      public fun hecToken(hecToken: String) {
-      }
+      public fun hecToken(hecToken: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e395e5d9c1fc9badbd09c50045b9b31c56c5260e0d4cc9c3e596589d4ab99d1a")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: SplunkRetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: SplunkRetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("71f8f02652601f3e606cd73f6578999a420ce7a860cc1cb0de05e8897044a4d2")
-      public fun retryOptions(retryOptions: SplunkRetryOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun retryOptions(retryOptions: SplunkRetryOptionsProperty.Builder.() -> Unit)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fa50c6dcaba52e45c88391090c23eef3caf9b4e2903b6fd6aa2a89e92abee921")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1448,96 +1338,94 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty.builder()
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty) {
+      override fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(SplunkBufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e25def6f003540905f3374225e52403efb0d805d8805ec1a33e463075f9addae")
-      public override
-          fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty.Builder.() -> Unit): Unit
-          = bufferingHints(SplunkBufferingHintsProperty(bufferingHints))
+      override fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty.Builder.() -> Unit):
+          Unit = bufferingHints(SplunkBufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e04fa488be9ab07ebb7d1ee306afe46fec4aa0eb8c592b5b13c85ebfd7546987")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override
-          fun hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds: Number) {
+      override fun hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds: Number) {
         cdkBuilder.hecAcknowledgmentTimeoutInSeconds(hecAcknowledgmentTimeoutInSeconds)
       }
 
-      public override fun hecEndpoint(hecEndpoint: String) {
+      override fun hecEndpoint(hecEndpoint: String) {
         cdkBuilder.hecEndpoint(hecEndpoint)
       }
 
-      public override fun hecEndpointType(hecEndpointType: String) {
+      override fun hecEndpointType(hecEndpointType: String) {
         cdkBuilder.hecEndpointType(hecEndpointType)
       }
 
-      public override fun hecToken(hecToken: String) {
+      override fun hecToken(hecToken: String) {
         cdkBuilder.hecToken(hecToken)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e395e5d9c1fc9badbd09c50045b9b31c56c5260e0d4cc9c3e596589d4ab99d1a")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: SplunkRetryOptionsProperty) {
+      override fun retryOptions(retryOptions: SplunkRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(SplunkRetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("71f8f02652601f3e606cd73f6578999a420ce7a860cc1cb0de05e8897044a4d2")
-      public override fun retryOptions(retryOptions: SplunkRetryOptionsProperty.Builder.() -> Unit):
-          Unit = retryOptions(SplunkRetryOptionsProperty(retryOptions))
+      override fun retryOptions(retryOptions: SplunkRetryOptionsProperty.Builder.() -> Unit): Unit =
+          retryOptions(SplunkRetryOptionsProperty(retryOptions))
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fa50c6dcaba52e45c88391090c23eef3caf9b4e2903b6fd6aa2a89e92abee921")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
@@ -1550,28 +1438,26 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty,
     ) : SplunkDestinationConfigurationProperty {
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun hecAcknowledgmentTimeoutInSeconds(): Number? =
+      override fun hecAcknowledgmentTimeoutInSeconds(): Number? =
           unwrap(this).getHecAcknowledgmentTimeoutInSeconds()
 
-      public override fun hecEndpoint(): String = unwrap(this).getHecEndpoint()
+      override fun hecEndpoint(): String = unwrap(this).getHecEndpoint()
 
-      public override fun hecEndpointType(): String = unwrap(this).getHecEndpointType()
+      override fun hecEndpointType(): String = unwrap(this).getHecEndpointType()
 
-      public override fun hecToken(): String = unwrap(this).getHecToken()
+      override fun hecToken(): String = unwrap(this).getHecToken()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
     }
 
     public companion object {
@@ -1599,8 +1485,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1609,7 +1494,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -1622,7 +1507,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RetryOptionsProperty,
     ) : RetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -1653,14 +1538,11 @@ public open class CfnDeliveryStream internal constructor(
     public fun url(): String
 
     public interface Builder {
-      public fun accessKey(accessKey: String) {
-      }
+      public fun accessKey(accessKey: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1669,15 +1551,15 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointConfigurationProperty.builder()
 
-      public override fun accessKey(accessKey: String) {
+      override fun accessKey(accessKey: String) {
         cdkBuilder.accessKey(accessKey)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -1690,11 +1572,11 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointConfigurationProperty,
     ) : HttpEndpointConfigurationProperty {
-      public override fun accessKey(): String? = unwrap(this).getAccessKey()
+      override fun accessKey(): String? = unwrap(this).getAccessKey()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun url(): String = unwrap(this).getUrl()
+      override fun url(): String = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -1724,11 +1606,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
 
     public interface Builder {
-      public fun intervalInSeconds(intervalInSeconds: Number) {
-      }
+      public fun intervalInSeconds(intervalInSeconds: Number)
 
-      public fun sizeInMBs(sizeInMBs: Number) {
-      }
+      public fun sizeInMBs(sizeInMBs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1737,11 +1617,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkBufferingHintsProperty.builder()
 
-      public override fun intervalInSeconds(intervalInSeconds: Number) {
+      override fun intervalInSeconds(intervalInSeconds: Number) {
         cdkBuilder.intervalInSeconds(intervalInSeconds)
       }
 
-      public override fun sizeInMBs(sizeInMBs: Number) {
+      override fun sizeInMBs(sizeInMBs: Number) {
         cdkBuilder.sizeInMBs(sizeInMBs)
       }
 
@@ -1754,9 +1634,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkBufferingHintsProperty,
     ) : SplunkBufferingHintsProperty {
-      public override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
+      override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
 
-      public override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
+      override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
     }
 
     public companion object {
@@ -1803,38 +1683,27 @@ public open class CfnDeliveryStream internal constructor(
     public fun stripeSizeBytes(): Number? = unwrap(this).getStripeSizeBytes()
 
     public interface Builder {
-      public fun blockSizeBytes(blockSizeBytes: Number) {
-      }
+      public fun blockSizeBytes(blockSizeBytes: Number)
 
-      public fun bloomFilterColumns(bloomFilterColumns: List<String>) {
-      }
+      public fun bloomFilterColumns(bloomFilterColumns: List<String>)
 
-      public fun bloomFilterFalsePositiveProbability(bloomFilterFalsePositiveProbability: Number) {
-      }
+      public fun bloomFilterFalsePositiveProbability(bloomFilterFalsePositiveProbability: Number)
 
-      public fun compression(compression: String) {
-      }
+      public fun compression(compression: String)
 
-      public fun dictionaryKeyThreshold(dictionaryKeyThreshold: Number) {
-      }
+      public fun dictionaryKeyThreshold(dictionaryKeyThreshold: Number)
 
-      public fun enablePadding(enablePadding: Boolean) {
-      }
+      public fun enablePadding(enablePadding: Boolean)
 
-      public fun enablePadding(enablePadding: IResolvable) {
-      }
+      public fun enablePadding(enablePadding: IResolvable)
 
-      public fun formatVersion(formatVersion: String) {
-      }
+      public fun formatVersion(formatVersion: String)
 
-      public fun paddingTolerance(paddingTolerance: Number) {
-      }
+      public fun paddingTolerance(paddingTolerance: Number)
 
-      public fun rowIndexStride(rowIndexStride: Number) {
-      }
+      public fun rowIndexStride(rowIndexStride: Number)
 
-      public fun stripeSizeBytes(stripeSizeBytes: Number) {
-      }
+      public fun stripeSizeBytes(stripeSizeBytes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1843,48 +1712,48 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OrcSerDeProperty.builder()
 
-      public override fun blockSizeBytes(blockSizeBytes: Number) {
+      override fun blockSizeBytes(blockSizeBytes: Number) {
         cdkBuilder.blockSizeBytes(blockSizeBytes)
       }
 
-      public override fun bloomFilterColumns(bloomFilterColumns: List<String>) {
+      override fun bloomFilterColumns(bloomFilterColumns: List<String>) {
         cdkBuilder.bloomFilterColumns(bloomFilterColumns)
       }
 
-      public override
+      override
           fun bloomFilterFalsePositiveProbability(bloomFilterFalsePositiveProbability: Number) {
         cdkBuilder.bloomFilterFalsePositiveProbability(bloomFilterFalsePositiveProbability)
       }
 
-      public override fun compression(compression: String) {
+      override fun compression(compression: String) {
         cdkBuilder.compression(compression)
       }
 
-      public override fun dictionaryKeyThreshold(dictionaryKeyThreshold: Number) {
+      override fun dictionaryKeyThreshold(dictionaryKeyThreshold: Number) {
         cdkBuilder.dictionaryKeyThreshold(dictionaryKeyThreshold)
       }
 
-      public override fun enablePadding(enablePadding: Boolean) {
+      override fun enablePadding(enablePadding: Boolean) {
         cdkBuilder.enablePadding(enablePadding)
       }
 
-      public override fun enablePadding(enablePadding: IResolvable) {
+      override fun enablePadding(enablePadding: IResolvable) {
         cdkBuilder.enablePadding(enablePadding.let(IResolvable::unwrap))
       }
 
-      public override fun formatVersion(formatVersion: String) {
+      override fun formatVersion(formatVersion: String) {
         cdkBuilder.formatVersion(formatVersion)
       }
 
-      public override fun paddingTolerance(paddingTolerance: Number) {
+      override fun paddingTolerance(paddingTolerance: Number) {
         cdkBuilder.paddingTolerance(paddingTolerance)
       }
 
-      public override fun rowIndexStride(rowIndexStride: Number) {
+      override fun rowIndexStride(rowIndexStride: Number) {
         cdkBuilder.rowIndexStride(rowIndexStride)
       }
 
-      public override fun stripeSizeBytes(stripeSizeBytes: Number) {
+      override fun stripeSizeBytes(stripeSizeBytes: Number) {
         cdkBuilder.stripeSizeBytes(stripeSizeBytes)
       }
 
@@ -1897,28 +1766,27 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OrcSerDeProperty,
     ) : OrcSerDeProperty {
-      public override fun blockSizeBytes(): Number? = unwrap(this).getBlockSizeBytes()
+      override fun blockSizeBytes(): Number? = unwrap(this).getBlockSizeBytes()
 
-      public override fun bloomFilterColumns(): List<String> = unwrap(this).getBloomFilterColumns()
-          ?: emptyList()
+      override fun bloomFilterColumns(): List<String> = unwrap(this).getBloomFilterColumns() ?:
+          emptyList()
 
-      public override fun bloomFilterFalsePositiveProbability(): Number? =
+      override fun bloomFilterFalsePositiveProbability(): Number? =
           unwrap(this).getBloomFilterFalsePositiveProbability()
 
-      public override fun compression(): String? = unwrap(this).getCompression()
+      override fun compression(): String? = unwrap(this).getCompression()
 
-      public override fun dictionaryKeyThreshold(): Number? =
-          unwrap(this).getDictionaryKeyThreshold()
+      override fun dictionaryKeyThreshold(): Number? = unwrap(this).getDictionaryKeyThreshold()
 
-      public override fun enablePadding(): Any? = unwrap(this).getEnablePadding()
+      override fun enablePadding(): Any? = unwrap(this).getEnablePadding()
 
-      public override fun formatVersion(): String? = unwrap(this).getFormatVersion()
+      override fun formatVersion(): String? = unwrap(this).getFormatVersion()
 
-      public override fun paddingTolerance(): Number? = unwrap(this).getPaddingTolerance()
+      override fun paddingTolerance(): Number? = unwrap(this).getPaddingTolerance()
 
-      public override fun rowIndexStride(): Number? = unwrap(this).getRowIndexStride()
+      override fun rowIndexStride(): Number? = unwrap(this).getRowIndexStride()
 
-      public override fun stripeSizeBytes(): Number? = unwrap(this).getStripeSizeBytes()
+      override fun stripeSizeBytes(): Number? = unwrap(this).getStripeSizeBytes()
     }
 
     public companion object {
@@ -1950,24 +1818,17 @@ public open class CfnDeliveryStream internal constructor(
         unwrap(this).getConvertDotsInJsonKeysToUnderscores()
 
     public interface Builder {
-      public fun caseInsensitive(caseInsensitive: Boolean) {
-      }
+      public fun caseInsensitive(caseInsensitive: Boolean)
 
-      public fun caseInsensitive(caseInsensitive: IResolvable) {
-      }
+      public fun caseInsensitive(caseInsensitive: IResolvable)
 
-      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable) {
-      }
+      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable)
 
-      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>) {
-      }
+      public fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>)
 
-      public fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: Boolean) {
-      }
+      public fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: Boolean)
 
-      public
-          fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: IResolvable) {
-      }
+      public fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1976,28 +1837,27 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OpenXJsonSerDeProperty.builder()
 
-      public override fun caseInsensitive(caseInsensitive: Boolean) {
+      override fun caseInsensitive(caseInsensitive: Boolean) {
         cdkBuilder.caseInsensitive(caseInsensitive)
       }
 
-      public override fun caseInsensitive(caseInsensitive: IResolvable) {
+      override fun caseInsensitive(caseInsensitive: IResolvable) {
         cdkBuilder.caseInsensitive(caseInsensitive.let(IResolvable::unwrap))
       }
 
-      public override fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable) {
+      override fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable) {
         cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings.let(IResolvable::unwrap))
       }
 
-      public override fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>) {
+      override fun columnToJsonKeyMappings(columnToJsonKeyMappings: Map<String, String>) {
         cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings)
       }
 
-      public override
-          fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: Boolean) {
+      override fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: Boolean) {
         cdkBuilder.convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores)
       }
 
-      public override
+      override
           fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: IResolvable) {
         cdkBuilder.convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores.let(IResolvable::unwrap))
       }
@@ -2011,12 +1871,11 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OpenXJsonSerDeProperty,
     ) : OpenXJsonSerDeProperty {
-      public override fun caseInsensitive(): Any? = unwrap(this).getCaseInsensitive()
+      override fun caseInsensitive(): Any? = unwrap(this).getCaseInsensitive()
 
-      public override fun columnToJsonKeyMappings(): Any? =
-          unwrap(this).getColumnToJsonKeyMappings()
+      override fun columnToJsonKeyMappings(): Any? = unwrap(this).getColumnToJsonKeyMappings()
 
-      public override fun convertDotsInJsonKeysToUnderscores(): Any? =
+      override fun convertDotsInJsonKeysToUnderscores(): Any? =
           unwrap(this).getConvertDotsInJsonKeysToUnderscores()
     }
 
@@ -2048,14 +1907,11 @@ public open class CfnDeliveryStream internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2064,15 +1920,15 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -2085,12 +1941,12 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -2117,8 +1973,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2127,7 +1982,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -2140,7 +1995,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty,
     ) : ElasticsearchRetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -2170,14 +2025,11 @@ public open class CfnDeliveryStream internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: List<Any>) {
-      }
+      public fun parameters(parameters: List<Any>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2186,15 +2038,15 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty.builder()
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: List<Any>) {
+      override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -2207,9 +2059,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty,
     ) : ProcessorProperty {
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -2238,14 +2090,11 @@ public open class CfnDeliveryStream internal constructor(
     public fun snowflakeRole(): String? = unwrap(this).getSnowflakeRole()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun snowflakeRole(snowflakeRole: String) {
-      }
+      public fun snowflakeRole(snowflakeRole: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2254,15 +2103,15 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRoleConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun snowflakeRole(snowflakeRole: String) {
+      override fun snowflakeRole(snowflakeRole: String) {
         cdkBuilder.snowflakeRole(snowflakeRole)
       }
 
@@ -2275,9 +2124,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRoleConfigurationProperty,
     ) : SnowflakeRoleConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun snowflakeRole(): String? = unwrap(this).getSnowflakeRole()
+      override fun snowflakeRole(): String? = unwrap(this).getSnowflakeRole()
     }
 
     public companion object {
@@ -2331,110 +2180,81 @@ public open class CfnDeliveryStream internal constructor(
     public fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
 
     public interface Builder {
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b89c7cac5caea6077a6d3afe95c17a6914cfc69f98c077a91f9274521054ff81")
       public
-          fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty.Builder.() -> Unit) {
-      }
+          fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0480543c5b31704c8985256dcb75739e4a49b3aecf8cc480932506aa9c7560cc")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun clusterEndpoint(clusterEndpoint: String) {
-      }
+      public fun clusterEndpoint(clusterEndpoint: String)
 
-      public fun documentIdOptions(documentIdOptions: IResolvable) {
-      }
+      public fun documentIdOptions(documentIdOptions: IResolvable)
 
-      public fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
-      }
+      public fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("02068fbba14d0c23ec9989b0831c0bec7802371f7e334303e5d723e9d2cc206c")
-      public
-          fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty.Builder.() -> Unit)
 
-      public fun domainArn(domainArn: String) {
-      }
+      public fun domainArn(domainArn: String)
 
-      public fun indexName(indexName: String) {
-      }
+      public fun indexName(indexName: String)
 
-      public fun indexRotationPeriod(indexRotationPeriod: String) {
-      }
+      public fun indexRotationPeriod(indexRotationPeriod: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f9f815b97b0ea3b87059c8de3ca7b4f2c53ed8b1fc5d2dd5e42221899c8566ab")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("54cc6f9702ca24e1db84ff65e28dcf95334f41b5478662da12a8d4b96bed1803")
       public
-          fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty.Builder.() -> Unit) {
-      }
+          fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6319aa65986b2481919ad9a91034af8e3e076f0e69b4646cd3b6271ed91d9748")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun typeName(typeName: String) {
-      }
+      public fun typeName(typeName: String)
 
-      public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("179632889a6656e9eb630e8e460068ded8cf2952111ad805fa353be523234b25")
-      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2443,135 +2263,133 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty.builder()
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override
-          fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty) {
+      override fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(AmazonopensearchserviceBufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b89c7cac5caea6077a6d3afe95c17a6914cfc69f98c077a91f9274521054ff81")
-      public override
+      override
           fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty.Builder.() -> Unit):
           Unit = bufferingHints(AmazonopensearchserviceBufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0480543c5b31704c8985256dcb75739e4a49b3aecf8cc480932506aa9c7560cc")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun clusterEndpoint(clusterEndpoint: String) {
+      override fun clusterEndpoint(clusterEndpoint: String) {
         cdkBuilder.clusterEndpoint(clusterEndpoint)
       }
 
-      public override fun documentIdOptions(documentIdOptions: IResolvable) {
+      override fun documentIdOptions(documentIdOptions: IResolvable) {
         cdkBuilder.documentIdOptions(documentIdOptions.let(IResolvable::unwrap))
       }
 
-      public override fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
+      override fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
         cdkBuilder.documentIdOptions(documentIdOptions.let(DocumentIdOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("02068fbba14d0c23ec9989b0831c0bec7802371f7e334303e5d723e9d2cc206c")
-      public override
+      override
           fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty.Builder.() -> Unit):
           Unit = documentIdOptions(DocumentIdOptionsProperty(documentIdOptions))
 
-      public override fun domainArn(domainArn: String) {
+      override fun domainArn(domainArn: String) {
         cdkBuilder.domainArn(domainArn)
       }
 
-      public override fun indexName(indexName: String) {
+      override fun indexName(indexName: String) {
         cdkBuilder.indexName(indexName)
       }
 
-      public override fun indexRotationPeriod(indexRotationPeriod: String) {
+      override fun indexRotationPeriod(indexRotationPeriod: String) {
         cdkBuilder.indexRotationPeriod(indexRotationPeriod)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f9f815b97b0ea3b87059c8de3ca7b4f2c53ed8b1fc5d2dd5e42221899c8566ab")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty) {
+      override fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(AmazonopensearchserviceRetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("54cc6f9702ca24e1db84ff65e28dcf95334f41b5478662da12a8d4b96bed1803")
-      public override
+      override
           fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty.Builder.() -> Unit):
           Unit = retryOptions(AmazonopensearchserviceRetryOptionsProperty(retryOptions))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6319aa65986b2481919ad9a91034af8e3e076f0e69b4646cd3b6271ed91d9748")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
-      public override fun typeName(typeName: String) {
+      override fun typeName(typeName: String) {
         cdkBuilder.typeName(typeName)
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+      override fun vpcConfiguration(vpcConfiguration: IResolvable) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
+      override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("179632889a6656e9eb630e8e460068ded8cf2952111ad805fa353be523234b25")
-      public override
-          fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit): Unit
-          = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
+      override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit):
+          Unit = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty
@@ -2582,35 +2400,33 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty,
     ) : AmazonopensearchserviceDestinationConfigurationProperty {
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun clusterEndpoint(): String? = unwrap(this).getClusterEndpoint()
+      override fun clusterEndpoint(): String? = unwrap(this).getClusterEndpoint()
 
-      public override fun documentIdOptions(): Any? = unwrap(this).getDocumentIdOptions()
+      override fun documentIdOptions(): Any? = unwrap(this).getDocumentIdOptions()
 
-      public override fun domainArn(): String? = unwrap(this).getDomainArn()
+      override fun domainArn(): String? = unwrap(this).getDomainArn()
 
-      public override fun indexName(): String = unwrap(this).getIndexName()
+      override fun indexName(): String = unwrap(this).getIndexName()
 
-      public override fun indexRotationPeriod(): String? = unwrap(this).getIndexRotationPeriod()
+      override fun indexRotationPeriod(): String? = unwrap(this).getIndexRotationPeriod()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
 
-      public override fun typeName(): String? = unwrap(this).getTypeName()
+      override fun typeName(): String? = unwrap(this).getTypeName()
 
-      public override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
+      override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
     }
 
     public companion object {
@@ -2638,8 +2454,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2648,7 +2463,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftRetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -2661,7 +2476,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftRetryOptionsProperty,
     ) : RedshiftRetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -2698,26 +2513,19 @@ public open class CfnDeliveryStream internal constructor(
     public fun writerVersion(): String? = unwrap(this).getWriterVersion()
 
     public interface Builder {
-      public fun blockSizeBytes(blockSizeBytes: Number) {
-      }
+      public fun blockSizeBytes(blockSizeBytes: Number)
 
-      public fun compression(compression: String) {
-      }
+      public fun compression(compression: String)
 
-      public fun enableDictionaryCompression(enableDictionaryCompression: Boolean) {
-      }
+      public fun enableDictionaryCompression(enableDictionaryCompression: Boolean)
 
-      public fun enableDictionaryCompression(enableDictionaryCompression: IResolvable) {
-      }
+      public fun enableDictionaryCompression(enableDictionaryCompression: IResolvable)
 
-      public fun maxPaddingBytes(maxPaddingBytes: Number) {
-      }
+      public fun maxPaddingBytes(maxPaddingBytes: Number)
 
-      public fun pageSizeBytes(pageSizeBytes: Number) {
-      }
+      public fun pageSizeBytes(pageSizeBytes: Number)
 
-      public fun writerVersion(writerVersion: String) {
-      }
+      public fun writerVersion(writerVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2726,31 +2534,31 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty.builder()
 
-      public override fun blockSizeBytes(blockSizeBytes: Number) {
+      override fun blockSizeBytes(blockSizeBytes: Number) {
         cdkBuilder.blockSizeBytes(blockSizeBytes)
       }
 
-      public override fun compression(compression: String) {
+      override fun compression(compression: String) {
         cdkBuilder.compression(compression)
       }
 
-      public override fun enableDictionaryCompression(enableDictionaryCompression: Boolean) {
+      override fun enableDictionaryCompression(enableDictionaryCompression: Boolean) {
         cdkBuilder.enableDictionaryCompression(enableDictionaryCompression)
       }
 
-      public override fun enableDictionaryCompression(enableDictionaryCompression: IResolvable) {
+      override fun enableDictionaryCompression(enableDictionaryCompression: IResolvable) {
         cdkBuilder.enableDictionaryCompression(enableDictionaryCompression.let(IResolvable::unwrap))
       }
 
-      public override fun maxPaddingBytes(maxPaddingBytes: Number) {
+      override fun maxPaddingBytes(maxPaddingBytes: Number) {
         cdkBuilder.maxPaddingBytes(maxPaddingBytes)
       }
 
-      public override fun pageSizeBytes(pageSizeBytes: Number) {
+      override fun pageSizeBytes(pageSizeBytes: Number) {
         cdkBuilder.pageSizeBytes(pageSizeBytes)
       }
 
-      public override fun writerVersion(writerVersion: String) {
+      override fun writerVersion(writerVersion: String) {
         cdkBuilder.writerVersion(writerVersion)
       }
 
@@ -2763,18 +2571,18 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty,
     ) : ParquetSerDeProperty {
-      public override fun blockSizeBytes(): Number? = unwrap(this).getBlockSizeBytes()
+      override fun blockSizeBytes(): Number? = unwrap(this).getBlockSizeBytes()
 
-      public override fun compression(): String? = unwrap(this).getCompression()
+      override fun compression(): String? = unwrap(this).getCompression()
 
-      public override fun enableDictionaryCompression(): Any? =
+      override fun enableDictionaryCompression(): Any? =
           unwrap(this).getEnableDictionaryCompression()
 
-      public override fun maxPaddingBytes(): Number? = unwrap(this).getMaxPaddingBytes()
+      override fun maxPaddingBytes(): Number? = unwrap(this).getMaxPaddingBytes()
 
-      public override fun pageSizeBytes(): Number? = unwrap(this).getPageSizeBytes()
+      override fun pageSizeBytes(): Number? = unwrap(this).getPageSizeBytes()
 
-      public override fun writerVersion(): String? = unwrap(this).getWriterVersion()
+      override fun writerVersion(): String? = unwrap(this).getWriterVersion()
     }
 
     public companion object {
@@ -2803,11 +2611,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun connectivity(connectivity: String) {
-      }
+      public fun connectivity(connectivity: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2816,11 +2622,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AuthenticationConfigurationProperty.builder()
 
-      public override fun connectivity(connectivity: String) {
+      override fun connectivity(connectivity: String) {
         cdkBuilder.connectivity(connectivity)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -2833,9 +2639,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AuthenticationConfigurationProperty,
     ) : AuthenticationConfigurationProperty {
-      public override fun connectivity(): String = unwrap(this).getConnectivity()
+      override fun connectivity(): String = unwrap(this).getConnectivity()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -2867,24 +2673,19 @@ public open class CfnDeliveryStream internal constructor(
     public fun topicName(): String
 
     public interface Builder {
-      public fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-      }
+      public fun authenticationConfiguration(authenticationConfiguration: IResolvable)
 
       public
-          fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
-      }
+          fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a009abd1f8243e28dde7de4258e4bac1917c47952371575f57756fad31e8f105")
       public
-          fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit)
 
-      public fun mskClusterArn(mskClusterArn: String) {
-      }
+      public fun mskClusterArn(mskClusterArn: String)
 
-      public fun topicName(topicName: String) {
-      }
+      public fun topicName(topicName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2893,27 +2694,27 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.MSKSourceConfigurationProperty.builder()
 
-      public override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
+      override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
         cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
         cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a009abd1f8243e28dde7de4258e4bac1917c47952371575f57756fad31e8f105")
-      public override
+      override
           fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit):
           Unit =
           authenticationConfiguration(AuthenticationConfigurationProperty(authenticationConfiguration))
 
-      public override fun mskClusterArn(mskClusterArn: String) {
+      override fun mskClusterArn(mskClusterArn: String) {
         cdkBuilder.mskClusterArn(mskClusterArn)
       }
 
-      public override fun topicName(topicName: String) {
+      override fun topicName(topicName: String) {
         cdkBuilder.topicName(topicName)
       }
 
@@ -2926,12 +2727,12 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.MSKSourceConfigurationProperty,
     ) : MSKSourceConfigurationProperty {
-      public override fun authenticationConfiguration(): Any =
+      override fun authenticationConfiguration(): Any =
           unwrap(this).getAuthenticationConfiguration()
 
-      public override fun mskClusterArn(): String = unwrap(this).getMskClusterArn()
+      override fun mskClusterArn(): String = unwrap(this).getMskClusterArn()
 
-      public override fun topicName(): String = unwrap(this).getTopicName()
+      override fun topicName(): String = unwrap(this).getTopicName()
     }
 
     public companion object {
@@ -2992,115 +2793,85 @@ public open class CfnDeliveryStream internal constructor(
     public fun user(): String
 
     public interface Builder {
-      public fun accountUrl(accountUrl: String) {
-      }
+      public fun accountUrl(accountUrl: String)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("170277a56d71d5888a1fa0c19bc90f2fb7fcf005ec215173246f019a5b967f23")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun contentColumnName(contentColumnName: String) {
-      }
+      public fun contentColumnName(contentColumnName: String)
 
-      public fun dataLoadingOption(dataLoadingOption: String) {
-      }
+      public fun dataLoadingOption(dataLoadingOption: String)
 
-      public fun database(database: String) {
-      }
+      public fun database(database: String)
 
-      public fun keyPassphrase(keyPassphrase: String) {
-      }
+      public fun keyPassphrase(keyPassphrase: String)
 
-      public fun metaDataColumnName(metaDataColumnName: String) {
-      }
+      public fun metaDataColumnName(metaDataColumnName: String)
 
-      public fun privateKey(privateKey: String) {
-      }
+      public fun privateKey(privateKey: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f4b7c9eba4d19077ec65fc84e44e03de2e061dd971541a78967a3eb994b65cfc")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95f2330e3e5338c6ffe7bd1a73525ae96d392e0dfb3479e1adc537d86f3da813")
-      public fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("80cdc5e0777f30389d371b9c606800ce9acc5ddce5043eb2fa0979d38bea4c38")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun schema(schema: String) {
-      }
+      public fun schema(schema: String)
 
-      public fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: IResolvable) {
-      }
+      public fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: IResolvable)
 
       public
-          fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty) {
-      }
+          fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("200e025cb87cbf9d6960af9286d74d3371aca4a7b342a4ed533869277c728ef8")
       public
-          fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty.Builder.() -> Unit)
 
-      public fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: IResolvable) {
-      }
+      public fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: IResolvable)
 
       public
-          fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty) {
-      }
+          fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f1bf2038b878cbf77e526aac4338f21f8c4dd056bf19a9c87bef4f478c1dc7b")
       public
-          fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty.Builder.() -> Unit)
 
-      public fun table(table: String) {
-      }
+      public fun table(table: String)
 
-      public fun user(user: String) {
-      }
+      public fun user(user: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3109,142 +2880,141 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeDestinationConfigurationProperty.builder()
 
-      public override fun accountUrl(accountUrl: String) {
+      override fun accountUrl(accountUrl: String) {
         cdkBuilder.accountUrl(accountUrl)
       }
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("170277a56d71d5888a1fa0c19bc90f2fb7fcf005ec215173246f019a5b967f23")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun contentColumnName(contentColumnName: String) {
+      override fun contentColumnName(contentColumnName: String) {
         cdkBuilder.contentColumnName(contentColumnName)
       }
 
-      public override fun dataLoadingOption(dataLoadingOption: String) {
+      override fun dataLoadingOption(dataLoadingOption: String) {
         cdkBuilder.dataLoadingOption(dataLoadingOption)
       }
 
-      public override fun database(database: String) {
+      override fun database(database: String) {
         cdkBuilder.database(database)
       }
 
-      public override fun keyPassphrase(keyPassphrase: String) {
+      override fun keyPassphrase(keyPassphrase: String) {
         cdkBuilder.keyPassphrase(keyPassphrase)
       }
 
-      public override fun metaDataColumnName(metaDataColumnName: String) {
+      override fun metaDataColumnName(metaDataColumnName: String) {
         cdkBuilder.metaDataColumnName(metaDataColumnName)
       }
 
-      public override fun privateKey(privateKey: String) {
+      override fun privateKey(privateKey: String) {
         cdkBuilder.privateKey(privateKey)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f4b7c9eba4d19077ec65fc84e44e03de2e061dd971541a78967a3eb994b65cfc")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty) {
+      override fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(SnowflakeRetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95f2330e3e5338c6ffe7bd1a73525ae96d392e0dfb3479e1adc537d86f3da813")
-      public override
-          fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty.Builder.() -> Unit): Unit =
-          retryOptions(SnowflakeRetryOptionsProperty(retryOptions))
+      override fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty.Builder.() -> Unit):
+          Unit = retryOptions(SnowflakeRetryOptionsProperty(retryOptions))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("80cdc5e0777f30389d371b9c606800ce9acc5ddce5043eb2fa0979d38bea4c38")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
-      public override fun schema(schema: String) {
+      override fun schema(schema: String) {
         cdkBuilder.schema(schema)
       }
 
-      public override fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: IResolvable) {
+      override fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: IResolvable) {
         cdkBuilder.snowflakeRoleConfiguration(snowflakeRoleConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty) {
         cdkBuilder.snowflakeRoleConfiguration(snowflakeRoleConfiguration.let(SnowflakeRoleConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("200e025cb87cbf9d6960af9286d74d3371aca4a7b342a4ed533869277c728ef8")
-      public override
+      override
           fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty.Builder.() -> Unit):
           Unit =
           snowflakeRoleConfiguration(SnowflakeRoleConfigurationProperty(snowflakeRoleConfiguration))
 
-      public override fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: IResolvable) {
+      override fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: IResolvable) {
         cdkBuilder.snowflakeVpcConfiguration(snowflakeVpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty) {
         cdkBuilder.snowflakeVpcConfiguration(snowflakeVpcConfiguration.let(SnowflakeVpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f1bf2038b878cbf77e526aac4338f21f8c4dd056bf19a9c87bef4f478c1dc7b")
-      public override
+      override
           fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty.Builder.() -> Unit):
           Unit =
           snowflakeVpcConfiguration(SnowflakeVpcConfigurationProperty(snowflakeVpcConfiguration))
 
-      public override fun table(table: String) {
+      override fun table(table: String) {
         cdkBuilder.table(table)
       }
 
-      public override fun user(user: String) {
+      override fun user(user: String) {
         cdkBuilder.user(user)
       }
 
@@ -3257,45 +3027,41 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeDestinationConfigurationProperty,
     ) : SnowflakeDestinationConfigurationProperty {
-      public override fun accountUrl(): String = unwrap(this).getAccountUrl()
+      override fun accountUrl(): String = unwrap(this).getAccountUrl()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun contentColumnName(): String? = unwrap(this).getContentColumnName()
+      override fun contentColumnName(): String? = unwrap(this).getContentColumnName()
 
-      public override fun dataLoadingOption(): String? = unwrap(this).getDataLoadingOption()
+      override fun dataLoadingOption(): String? = unwrap(this).getDataLoadingOption()
 
-      public override fun database(): String = unwrap(this).getDatabase()
+      override fun database(): String = unwrap(this).getDatabase()
 
-      public override fun keyPassphrase(): String? = unwrap(this).getKeyPassphrase()
+      override fun keyPassphrase(): String? = unwrap(this).getKeyPassphrase()
 
-      public override fun metaDataColumnName(): String? = unwrap(this).getMetaDataColumnName()
+      override fun metaDataColumnName(): String? = unwrap(this).getMetaDataColumnName()
 
-      public override fun privateKey(): String = unwrap(this).getPrivateKey()
+      override fun privateKey(): String = unwrap(this).getPrivateKey()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
 
-      public override fun schema(): String = unwrap(this).getSchema()
+      override fun schema(): String = unwrap(this).getSchema()
 
-      public override fun snowflakeRoleConfiguration(): Any? =
-          unwrap(this).getSnowflakeRoleConfiguration()
+      override fun snowflakeRoleConfiguration(): Any? = unwrap(this).getSnowflakeRoleConfiguration()
 
-      public override fun snowflakeVpcConfiguration(): Any? =
-          unwrap(this).getSnowflakeVpcConfiguration()
+      override fun snowflakeVpcConfiguration(): Any? = unwrap(this).getSnowflakeVpcConfiguration()
 
-      public override fun table(): String = unwrap(this).getTable()
+      override fun table(): String = unwrap(this).getTable()
 
-      public override fun user(): String = unwrap(this).getUser()
+      override fun user(): String = unwrap(this).getUser()
     }
 
     public companion object {
@@ -3325,11 +3091,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
 
     public interface Builder {
-      public fun intervalInSeconds(intervalInSeconds: Number) {
-      }
+      public fun intervalInSeconds(intervalInSeconds: Number)
 
-      public fun sizeInMBs(sizeInMBs: Number) {
-      }
+      public fun sizeInMBs(sizeInMBs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3338,11 +3102,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty.builder()
 
-      public override fun intervalInSeconds(intervalInSeconds: Number) {
+      override fun intervalInSeconds(intervalInSeconds: Number) {
         cdkBuilder.intervalInSeconds(intervalInSeconds)
       }
 
-      public override fun sizeInMBs(sizeInMBs: Number) {
+      override fun sizeInMBs(sizeInMBs: Number) {
         cdkBuilder.sizeInMBs(sizeInMBs)
       }
 
@@ -3355,9 +3119,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty,
     ) : AmazonopensearchserviceBufferingHintsProperty {
-      public override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
+      override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
 
-      public override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
+      override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
     }
 
     public companion object {
@@ -3387,14 +3151,11 @@ public open class CfnDeliveryStream internal constructor(
     public fun contentEncoding(): String? = unwrap(this).getContentEncoding()
 
     public interface Builder {
-      public fun commonAttributes(commonAttributes: IResolvable) {
-      }
+      public fun commonAttributes(commonAttributes: IResolvable)
 
-      public fun commonAttributes(commonAttributes: List<Any>) {
-      }
+      public fun commonAttributes(commonAttributes: List<Any>)
 
-      public fun contentEncoding(contentEncoding: String) {
-      }
+      public fun contentEncoding(contentEncoding: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3403,15 +3164,15 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointRequestConfigurationProperty.builder()
 
-      public override fun commonAttributes(commonAttributes: IResolvable) {
+      override fun commonAttributes(commonAttributes: IResolvable) {
         cdkBuilder.commonAttributes(commonAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun commonAttributes(commonAttributes: List<Any>) {
+      override fun commonAttributes(commonAttributes: List<Any>) {
         cdkBuilder.commonAttributes(commonAttributes)
       }
 
-      public override fun contentEncoding(contentEncoding: String) {
+      override fun contentEncoding(contentEncoding: String) {
         cdkBuilder.contentEncoding(contentEncoding)
       }
 
@@ -3424,9 +3185,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointRequestConfigurationProperty,
     ) : HttpEndpointRequestConfigurationProperty {
-      public override fun commonAttributes(): Any? = unwrap(this).getCommonAttributes()
+      override fun commonAttributes(): Any? = unwrap(this).getCommonAttributes()
 
-      public override fun contentEncoding(): String? = unwrap(this).getContentEncoding()
+      override fun contentEncoding(): String? = unwrap(this).getContentEncoding()
     }
 
     public companion object {
@@ -3468,56 +3229,42 @@ public open class CfnDeliveryStream internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun bucketArn(bucketArn: String) {
-      }
+      public fun bucketArn(bucketArn: String)
 
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: BufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: BufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ca41090aa09a13ec5426865590ddd3f8b1e82a068acd483ca57d70c28240945")
-      public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit) {
-      }
+      public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0d0cd231850b2f6d2f8a9fe62d93558b0f6160910001b5d45539a4dd0579ed6")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun compressionFormat(compressionFormat: String) {
-      }
+      public fun compressionFormat(compressionFormat: String)
 
-      public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      }
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
-      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      }
+      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("640a3a95b3147b90f2305f6a8b387a89a87a516f000595d840a59627a444f789")
       public
-          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
-      public fun errorOutputPrefix(errorOutputPrefix: String) {
-      }
+      public fun errorOutputPrefix(errorOutputPrefix: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3526,67 +3273,67 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty.builder()
 
-      public override fun bucketArn(bucketArn: String) {
+      override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
+      override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ca41090aa09a13ec5426865590ddd3f8b1e82a068acd483ca57d70c28240945")
-      public override fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit):
-          Unit = bufferingHints(BufferingHintsProperty(bufferingHints))
+      override fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit): Unit =
+          bufferingHints(BufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0d0cd231850b2f6d2f8a9fe62d93558b0f6160910001b5d45539a4dd0579ed6")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun compressionFormat(compressionFormat: String) {
+      override fun compressionFormat(compressionFormat: String) {
         cdkBuilder.compressionFormat(compressionFormat)
       }
 
-      public override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("640a3a95b3147b90f2305f6a8b387a89a87a516f000595d840a59627a444f789")
-      public override
+      override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
           Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
 
-      public override fun errorOutputPrefix(errorOutputPrefix: String) {
+      override fun errorOutputPrefix(errorOutputPrefix: String) {
         cdkBuilder.errorOutputPrefix(errorOutputPrefix)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -3599,23 +3346,21 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty,
     ) : S3DestinationConfigurationProperty {
-      public override fun bucketArn(): String = unwrap(this).getBucketArn()
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
 
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun compressionFormat(): String? = unwrap(this).getCompressionFormat()
+      override fun compressionFormat(): String? = unwrap(this).getCompressionFormat()
 
-      public override fun encryptionConfiguration(): Any? =
-          unwrap(this).getEncryptionConfiguration()
+      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
-      public override fun errorOutputPrefix(): String? = unwrap(this).getErrorOutputPrefix()
+      override fun errorOutputPrefix(): String? = unwrap(this).getErrorOutputPrefix()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -3645,11 +3390,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
 
     public interface Builder {
-      public fun intervalInSeconds(intervalInSeconds: Number) {
-      }
+      public fun intervalInSeconds(intervalInSeconds: Number)
 
-      public fun sizeInMBs(sizeInMBs: Number) {
-      }
+      public fun sizeInMBs(sizeInMBs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3658,11 +3401,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty.builder()
 
-      public override fun intervalInSeconds(intervalInSeconds: Number) {
+      override fun intervalInSeconds(intervalInSeconds: Number) {
         cdkBuilder.intervalInSeconds(intervalInSeconds)
       }
 
-      public override fun sizeInMBs(sizeInMBs: Number) {
+      override fun sizeInMBs(sizeInMBs: Number) {
         cdkBuilder.sizeInMBs(sizeInMBs)
       }
 
@@ -3675,9 +3418,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty,
     ) : AmazonOpenSearchServerlessBufferingHintsProperty {
-      public override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
+      override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
 
-      public override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
+      override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
     }
 
     public companion object {
@@ -3705,8 +3448,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3715,7 +3457,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -3728,7 +3470,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty,
     ) : AmazonopensearchserviceRetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -3758,27 +3500,21 @@ public open class CfnDeliveryStream internal constructor(
     public fun openXJsonSerDe(): Any? = unwrap(this).getOpenXJsonSerDe()
 
     public interface Builder {
-      public fun hiveJsonSerDe(hiveJsonSerDe: IResolvable) {
-      }
+      public fun hiveJsonSerDe(hiveJsonSerDe: IResolvable)
 
-      public fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty) {
-      }
+      public fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1ea33b2c029a95c087850deaf83c4f3e4a5fdbdff139ee9977885b798807ce2d")
-      public fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty.Builder.() -> Unit) {
-      }
+      public fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty.Builder.() -> Unit)
 
-      public fun openXJsonSerDe(openXJsonSerDe: IResolvable) {
-      }
+      public fun openXJsonSerDe(openXJsonSerDe: IResolvable)
 
-      public fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty) {
-      }
+      public fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7e0b536a1bcf046899c4f672537af31dd8b8a1add133e9cf60bc6036aa85bde")
-      public fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty.Builder.() -> Unit) {
-      }
+      public fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3787,31 +3523,31 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty.builder()
 
-      public override fun hiveJsonSerDe(hiveJsonSerDe: IResolvable) {
+      override fun hiveJsonSerDe(hiveJsonSerDe: IResolvable) {
         cdkBuilder.hiveJsonSerDe(hiveJsonSerDe.let(IResolvable::unwrap))
       }
 
-      public override fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty) {
+      override fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty) {
         cdkBuilder.hiveJsonSerDe(hiveJsonSerDe.let(HiveJsonSerDeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1ea33b2c029a95c087850deaf83c4f3e4a5fdbdff139ee9977885b798807ce2d")
-      public override fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty.Builder.() -> Unit):
-          Unit = hiveJsonSerDe(HiveJsonSerDeProperty(hiveJsonSerDe))
+      override fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty.Builder.() -> Unit): Unit =
+          hiveJsonSerDe(HiveJsonSerDeProperty(hiveJsonSerDe))
 
-      public override fun openXJsonSerDe(openXJsonSerDe: IResolvable) {
+      override fun openXJsonSerDe(openXJsonSerDe: IResolvable) {
         cdkBuilder.openXJsonSerDe(openXJsonSerDe.let(IResolvable::unwrap))
       }
 
-      public override fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty) {
+      override fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty) {
         cdkBuilder.openXJsonSerDe(openXJsonSerDe.let(OpenXJsonSerDeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7e0b536a1bcf046899c4f672537af31dd8b8a1add133e9cf60bc6036aa85bde")
-      public override fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty.Builder.() -> Unit):
-          Unit = openXJsonSerDe(OpenXJsonSerDeProperty(openXJsonSerDe))
+      override fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty.Builder.() -> Unit): Unit =
+          openXJsonSerDe(OpenXJsonSerDeProperty(openXJsonSerDe))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty =
@@ -3822,9 +3558,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty,
     ) : DeserializerProperty {
-      public override fun hiveJsonSerDe(): Any? = unwrap(this).getHiveJsonSerDe()
+      override fun hiveJsonSerDe(): Any? = unwrap(this).getHiveJsonSerDe()
 
-      public override fun openXJsonSerDe(): Any? = unwrap(this).getOpenXJsonSerDe()
+      override fun openXJsonSerDe(): Any? = unwrap(this).getOpenXJsonSerDe()
     }
 
     public companion object {
@@ -3853,27 +3589,21 @@ public open class CfnDeliveryStream internal constructor(
     public fun parquetSerDe(): Any? = unwrap(this).getParquetSerDe()
 
     public interface Builder {
-      public fun orcSerDe(orcSerDe: IResolvable) {
-      }
+      public fun orcSerDe(orcSerDe: IResolvable)
 
-      public fun orcSerDe(orcSerDe: OrcSerDeProperty) {
-      }
+      public fun orcSerDe(orcSerDe: OrcSerDeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d783f896de9fcee687d32c744d0e49bce185d90b1b7e3b7cfd4f23ccb4e53da2")
-      public fun orcSerDe(orcSerDe: OrcSerDeProperty.Builder.() -> Unit) {
-      }
+      public fun orcSerDe(orcSerDe: OrcSerDeProperty.Builder.() -> Unit)
 
-      public fun parquetSerDe(parquetSerDe: IResolvable) {
-      }
+      public fun parquetSerDe(parquetSerDe: IResolvable)
 
-      public fun parquetSerDe(parquetSerDe: ParquetSerDeProperty) {
-      }
+      public fun parquetSerDe(parquetSerDe: ParquetSerDeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("953e85fd9f4dd15c7294aa43c03da0cfc0e1f6e7e39d451bb5c5cb6bb68a84b0")
-      public fun parquetSerDe(parquetSerDe: ParquetSerDeProperty.Builder.() -> Unit) {
-      }
+      public fun parquetSerDe(parquetSerDe: ParquetSerDeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3882,31 +3612,31 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty.builder()
 
-      public override fun orcSerDe(orcSerDe: IResolvable) {
+      override fun orcSerDe(orcSerDe: IResolvable) {
         cdkBuilder.orcSerDe(orcSerDe.let(IResolvable::unwrap))
       }
 
-      public override fun orcSerDe(orcSerDe: OrcSerDeProperty) {
+      override fun orcSerDe(orcSerDe: OrcSerDeProperty) {
         cdkBuilder.orcSerDe(orcSerDe.let(OrcSerDeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d783f896de9fcee687d32c744d0e49bce185d90b1b7e3b7cfd4f23ccb4e53da2")
-      public override fun orcSerDe(orcSerDe: OrcSerDeProperty.Builder.() -> Unit): Unit =
+      override fun orcSerDe(orcSerDe: OrcSerDeProperty.Builder.() -> Unit): Unit =
           orcSerDe(OrcSerDeProperty(orcSerDe))
 
-      public override fun parquetSerDe(parquetSerDe: IResolvable) {
+      override fun parquetSerDe(parquetSerDe: IResolvable) {
         cdkBuilder.parquetSerDe(parquetSerDe.let(IResolvable::unwrap))
       }
 
-      public override fun parquetSerDe(parquetSerDe: ParquetSerDeProperty) {
+      override fun parquetSerDe(parquetSerDe: ParquetSerDeProperty) {
         cdkBuilder.parquetSerDe(parquetSerDe.let(ParquetSerDeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("953e85fd9f4dd15c7294aa43c03da0cfc0e1f6e7e39d451bb5c5cb6bb68a84b0")
-      public override fun parquetSerDe(parquetSerDe: ParquetSerDeProperty.Builder.() -> Unit): Unit
-          = parquetSerDe(ParquetSerDeProperty(parquetSerDe))
+      override fun parquetSerDe(parquetSerDe: ParquetSerDeProperty.Builder.() -> Unit): Unit =
+          parquetSerDe(ParquetSerDeProperty(parquetSerDe))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty =
@@ -3917,9 +3647,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty,
     ) : SerializerProperty {
-      public override fun orcSerDe(): Any? = unwrap(this).getOrcSerDe()
+      override fun orcSerDe(): Any? = unwrap(this).getOrcSerDe()
 
-      public override fun parquetSerDe(): Any? = unwrap(this).getParquetSerDe()
+      override fun parquetSerDe(): Any? = unwrap(this).getParquetSerDe()
     }
 
     public companion object {
@@ -3950,17 +3680,13 @@ public open class CfnDeliveryStream internal constructor(
     public fun logStreamName(): String? = unwrap(this).getLogStreamName()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
 
-      public fun logStreamName(logStreamName: String) {
-      }
+      public fun logStreamName(logStreamName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3969,19 +3695,19 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
-      public override fun logStreamName(logStreamName: String) {
+      override fun logStreamName(logStreamName: String) {
         cdkBuilder.logStreamName(logStreamName)
       }
 
@@ -3994,11 +3720,11 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty,
     ) : CloudWatchLoggingOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
-      public override fun logStreamName(): String? = unwrap(this).getLogStreamName()
+      override fun logStreamName(): String? = unwrap(this).getLogStreamName()
     }
 
     public companion object {
@@ -4025,16 +3751,13 @@ public open class CfnDeliveryStream internal constructor(
     public fun deserializer(): Any? = unwrap(this).getDeserializer()
 
     public interface Builder {
-      public fun deserializer(deserializer: IResolvable) {
-      }
+      public fun deserializer(deserializer: IResolvable)
 
-      public fun deserializer(deserializer: DeserializerProperty) {
-      }
+      public fun deserializer(deserializer: DeserializerProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("23ec1039d99303312bdb2fc16a73f2a2e373ead331e31a481f326503b95ca673")
-      public fun deserializer(deserializer: DeserializerProperty.Builder.() -> Unit) {
-      }
+      public fun deserializer(deserializer: DeserializerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4043,18 +3766,18 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty.builder()
 
-      public override fun deserializer(deserializer: IResolvable) {
+      override fun deserializer(deserializer: IResolvable) {
         cdkBuilder.deserializer(deserializer.let(IResolvable::unwrap))
       }
 
-      public override fun deserializer(deserializer: DeserializerProperty) {
+      override fun deserializer(deserializer: DeserializerProperty) {
         cdkBuilder.deserializer(deserializer.let(DeserializerProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("23ec1039d99303312bdb2fc16a73f2a2e373ead331e31a481f326503b95ca673")
-      public override fun deserializer(deserializer: DeserializerProperty.Builder.() -> Unit): Unit
-          = deserializer(DeserializerProperty(deserializer))
+      override fun deserializer(deserializer: DeserializerProperty.Builder.() -> Unit): Unit =
+          deserializer(DeserializerProperty(deserializer))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty
@@ -4065,7 +3788,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty,
     ) : InputFormatConfigurationProperty {
-      public override fun deserializer(): Any? = unwrap(this).getDeserializer()
+      override fun deserializer(): Any? = unwrap(this).getDeserializer()
     }
 
     public companion object {
@@ -4092,8 +3815,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -4102,7 +3824,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -4115,7 +3837,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty,
     ) : AmazonOpenSearchServerlessRetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -4145,11 +3867,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun attributeValue(): String
 
     public interface Builder {
-      public fun attributeName(attributeName: String) {
-      }
+      public fun attributeName(attributeName: String)
 
-      public fun attributeValue(attributeValue: String) {
-      }
+      public fun attributeValue(attributeValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4158,11 +3878,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointCommonAttributeProperty.builder()
 
-      public override fun attributeName(attributeName: String) {
+      override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
-      public override fun attributeValue(attributeValue: String) {
+      override fun attributeValue(attributeValue: String) {
         cdkBuilder.attributeValue(attributeValue)
       }
 
@@ -4175,9 +3895,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointCommonAttributeProperty,
     ) : HttpEndpointCommonAttributeProperty {
-      public override fun attributeName(): String = unwrap(this).getAttributeName()
+      override fun attributeName(): String = unwrap(this).getAttributeName()
 
-      public override fun attributeValue(): String = unwrap(this).getAttributeValue()
+      override fun attributeValue(): String = unwrap(this).getAttributeValue()
     }
 
     public companion object {
@@ -4221,95 +3941,72 @@ public open class CfnDeliveryStream internal constructor(
     public fun s3Configuration(): Any
 
     public interface Builder {
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: BufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: BufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f1a13f33fd5f6df119c0b45ed202ee628910f8d4777c13ecb1a927549fcbeaef")
-      public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit) {
-      }
+      public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ccdba24c0ec57c435f7fe3732f10b7a42aafaf6bcb6d7405711e1a3bde676be7")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      }
+      public fun endpointConfiguration(endpointConfiguration: IResolvable)
 
-      public fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty) {
-      }
+      public fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0764ae9bfb42ba183e70fd8c675c00e81b4ebe3ad0ddd795dc13dabb1a6ebe8")
       public
-          fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty.Builder.() -> Unit)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("df44256b8689bc61dd24b653a7d54973be448b61c7011b67dce39b8578c1b475")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun requestConfiguration(requestConfiguration: IResolvable) {
-      }
+      public fun requestConfiguration(requestConfiguration: IResolvable)
 
       public
-          fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty) {
-      }
+          fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("997e41975a88698fdf9438071100b9f58f63b2e3f38260225dc0e978312a56b4")
       public
-          fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: RetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: RetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("559085756a6e15b1b81c15bfdd751099d912b10160f7c17b843f69e7ef17b819")
-      public fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3028a43c60af828f00c40d725e2fe11ad07370d61b25c36f3684653b96bfcdd7")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4318,113 +4015,112 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty.builder()
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
+      override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f1a13f33fd5f6df119c0b45ed202ee628910f8d4777c13ecb1a927549fcbeaef")
-      public override fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit):
-          Unit = bufferingHints(BufferingHintsProperty(bufferingHints))
+      override fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit): Unit =
+          bufferingHints(BufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ccdba24c0ec57c435f7fe3732f10b7a42aafaf6bcb6d7405711e1a3bde676be7")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun endpointConfiguration(endpointConfiguration: IResolvable) {
+      override fun endpointConfiguration(endpointConfiguration: IResolvable) {
         cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty) {
+      override fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty) {
         cdkBuilder.endpointConfiguration(endpointConfiguration.let(HttpEndpointConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0764ae9bfb42ba183e70fd8c675c00e81b4ebe3ad0ddd795dc13dabb1a6ebe8")
-      public override
+      override
           fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty.Builder.() -> Unit):
           Unit = endpointConfiguration(HttpEndpointConfigurationProperty(endpointConfiguration))
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("df44256b8689bc61dd24b653a7d54973be448b61c7011b67dce39b8578c1b475")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun requestConfiguration(requestConfiguration: IResolvable) {
+      override fun requestConfiguration(requestConfiguration: IResolvable) {
         cdkBuilder.requestConfiguration(requestConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty) {
         cdkBuilder.requestConfiguration(requestConfiguration.let(HttpEndpointRequestConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("997e41975a88698fdf9438071100b9f58f63b2e3f38260225dc0e978312a56b4")
-      public override
+      override
           fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty.Builder.() -> Unit):
           Unit =
           requestConfiguration(HttpEndpointRequestConfigurationProperty(requestConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: RetryOptionsProperty) {
+      override fun retryOptions(retryOptions: RetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(RetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("559085756a6e15b1b81c15bfdd751099d912b10160f7c17b843f69e7ef17b819")
-      public override fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit): Unit
-          = retryOptions(RetryOptionsProperty(retryOptions))
+      override fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit): Unit =
+          retryOptions(RetryOptionsProperty(retryOptions))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3028a43c60af828f00c40d725e2fe11ad07370d61b25c36f3684653b96bfcdd7")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
@@ -4437,25 +4133,23 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty,
     ) : HttpEndpointDestinationConfigurationProperty {
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun endpointConfiguration(): Any = unwrap(this).getEndpointConfiguration()
+      override fun endpointConfiguration(): Any = unwrap(this).getEndpointConfiguration()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun requestConfiguration(): Any? = unwrap(this).getRequestConfiguration()
+      override fun requestConfiguration(): Any? = unwrap(this).getRequestConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
     }
 
     public companion object {
@@ -4483,8 +4177,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun timestampFormats(): List<String> = unwrap(this).getTimestampFormats() ?: emptyList()
 
     public interface Builder {
-      public fun timestampFormats(timestampFormats: List<String>) {
-      }
+      public fun timestampFormats(timestampFormats: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -4493,7 +4186,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty.builder()
 
-      public override fun timestampFormats(timestampFormats: List<String>) {
+      override fun timestampFormats(timestampFormats: List<String>) {
         cdkBuilder.timestampFormats(timestampFormats)
       }
 
@@ -4506,7 +4199,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty,
     ) : HiveJsonSerDeProperty {
-      public override fun timestampFormats(): List<String> = unwrap(this).getTimestampFormats() ?:
+      override fun timestampFormats(): List<String> = unwrap(this).getTimestampFormats() ?:
           emptyList()
     }
 
@@ -4564,115 +4257,86 @@ public open class CfnDeliveryStream internal constructor(
     public fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
     public interface Builder {
-      public fun bucketArn(bucketArn: String) {
-      }
+      public fun bucketArn(bucketArn: String)
 
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: BufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: BufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76ed7dcfa53f225c44bbfb337353d8351f222239d3db30f3b5c5fd9254fe7561")
-      public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit) {
-      }
+      public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aaf1d827e086a90ccbe61dae63485c39ab22db86dae0ac0592a4ee2c1262c711")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun compressionFormat(compressionFormat: String) {
-      }
+      public fun compressionFormat(compressionFormat: String)
 
-      public fun customTimeZone(customTimeZone: String) {
-      }
+      public fun customTimeZone(customTimeZone: String)
 
-      public fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: IResolvable) {
-      }
+      public fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: IResolvable)
 
       public
-          fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty) {
-      }
+          fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67dcd2b258d463c407842d1fc46593e9bb1abbf394cacd7d25a49da3f02d6a8a")
       public
-          fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty.Builder.() -> Unit)
 
-      public fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: IResolvable) {
-      }
+      public fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: IResolvable)
 
       public
-          fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty) {
-      }
+          fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("893f7631d9f20ab8a66513fad134896ba742af22fd769461cf30b85d42e82985")
       public
-          fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty.Builder.() -> Unit)
 
-      public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      }
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
-      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      }
+      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a5d173a1b0584d4adbb2d31b81347141312686f87cb6155670e61726e2bbb2c")
       public
-          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
-      public fun errorOutputPrefix(errorOutputPrefix: String) {
-      }
+      public fun errorOutputPrefix(errorOutputPrefix: String)
 
-      public fun fileExtension(fileExtension: String) {
-      }
+      public fun fileExtension(fileExtension: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a710cd8228354ceb6f3cae2c0decf839f8c2b86f00e8ec1ddb508272af2f7fb2")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
-      }
+      public fun s3BackupConfiguration(s3BackupConfiguration: IResolvable)
 
-      public fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("41c024b93d3ac730d3df10eb56e1d65de2e17df9c07c47791f82caff1a2658e2")
       public
-          fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4681,143 +4345,142 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.builder()
 
-      public override fun bucketArn(bucketArn: String) {
+      override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
+      override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76ed7dcfa53f225c44bbfb337353d8351f222239d3db30f3b5c5fd9254fe7561")
-      public override fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit):
-          Unit = bufferingHints(BufferingHintsProperty(bufferingHints))
+      override fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit): Unit =
+          bufferingHints(BufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aaf1d827e086a90ccbe61dae63485c39ab22db86dae0ac0592a4ee2c1262c711")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun compressionFormat(compressionFormat: String) {
+      override fun compressionFormat(compressionFormat: String) {
         cdkBuilder.compressionFormat(compressionFormat)
       }
 
-      public override fun customTimeZone(customTimeZone: String) {
+      override fun customTimeZone(customTimeZone: String) {
         cdkBuilder.customTimeZone(customTimeZone)
       }
 
-      public override
+      override
           fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: IResolvable) {
         cdkBuilder.dataFormatConversionConfiguration(dataFormatConversionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty) {
         cdkBuilder.dataFormatConversionConfiguration(dataFormatConversionConfiguration.let(DataFormatConversionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67dcd2b258d463c407842d1fc46593e9bb1abbf394cacd7d25a49da3f02d6a8a")
-      public override
+      override
           fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty.Builder.() -> Unit):
           Unit =
           dataFormatConversionConfiguration(DataFormatConversionConfigurationProperty(dataFormatConversionConfiguration))
 
-      public override
-          fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: IResolvable) {
+      override fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: IResolvable) {
         cdkBuilder.dynamicPartitioningConfiguration(dynamicPartitioningConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty) {
         cdkBuilder.dynamicPartitioningConfiguration(dynamicPartitioningConfiguration.let(DynamicPartitioningConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("893f7631d9f20ab8a66513fad134896ba742af22fd769461cf30b85d42e82985")
-      public override
+      override
           fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty.Builder.() -> Unit):
           Unit =
           dynamicPartitioningConfiguration(DynamicPartitioningConfigurationProperty(dynamicPartitioningConfiguration))
 
-      public override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a5d173a1b0584d4adbb2d31b81347141312686f87cb6155670e61726e2bbb2c")
-      public override
+      override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
           Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
 
-      public override fun errorOutputPrefix(errorOutputPrefix: String) {
+      override fun errorOutputPrefix(errorOutputPrefix: String) {
         cdkBuilder.errorOutputPrefix(errorOutputPrefix)
       }
 
-      public override fun fileExtension(fileExtension: String) {
+      override fun fileExtension(fileExtension: String) {
         cdkBuilder.fileExtension(fileExtension)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a710cd8228354ceb6f3cae2c0decf839f8c2b86f00e8ec1ddb508272af2f7fb2")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
+      override fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
         cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("41c024b93d3ac730d3df10eb56e1d65de2e17df9c07c47791f82caff1a2658e2")
-      public override
+      override
           fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3BackupConfiguration(S3DestinationConfigurationProperty(s3BackupConfiguration))
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
@@ -4830,40 +4493,37 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty,
     ) : ExtendedS3DestinationConfigurationProperty {
-      public override fun bucketArn(): String = unwrap(this).getBucketArn()
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
 
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun compressionFormat(): String? = unwrap(this).getCompressionFormat()
+      override fun compressionFormat(): String? = unwrap(this).getCompressionFormat()
 
-      public override fun customTimeZone(): String? = unwrap(this).getCustomTimeZone()
+      override fun customTimeZone(): String? = unwrap(this).getCustomTimeZone()
 
-      public override fun dataFormatConversionConfiguration(): Any? =
+      override fun dataFormatConversionConfiguration(): Any? =
           unwrap(this).getDataFormatConversionConfiguration()
 
-      public override fun dynamicPartitioningConfiguration(): Any? =
+      override fun dynamicPartitioningConfiguration(): Any? =
           unwrap(this).getDynamicPartitioningConfiguration()
 
-      public override fun encryptionConfiguration(): Any? =
-          unwrap(this).getEncryptionConfiguration()
+      override fun encryptionConfiguration(): Any? = unwrap(this).getEncryptionConfiguration()
 
-      public override fun errorOutputPrefix(): String? = unwrap(this).getErrorOutputPrefix()
+      override fun errorOutputPrefix(): String? = unwrap(this).getErrorOutputPrefix()
 
-      public override fun fileExtension(): String? = unwrap(this).getFileExtension()
+      override fun fileExtension(): String? = unwrap(this).getFileExtension()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun s3BackupConfiguration(): Any? = unwrap(this).getS3BackupConfiguration()
+      override fun s3BackupConfiguration(): Any? = unwrap(this).getS3BackupConfiguration()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
     }
 
     public companion object {
@@ -4893,11 +4553,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun parameterValue(): String
 
     public interface Builder {
-      public fun parameterName(parameterName: String) {
-      }
+      public fun parameterName(parameterName: String)
 
-      public fun parameterValue(parameterValue: String) {
-      }
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4906,11 +4564,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty.builder()
 
-      public override fun parameterName(parameterName: String) {
+      override fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
       }
 
-      public override fun parameterValue(parameterValue: String) {
+      override fun parameterValue(parameterValue: String) {
         cdkBuilder.parameterValue(parameterValue)
       }
 
@@ -4923,9 +4581,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty,
     ) : ProcessorParameterProperty {
-      public override fun parameterName(): String = unwrap(this).getParameterName()
+      override fun parameterName(): String = unwrap(this).getParameterName()
 
-      public override fun parameterValue(): String = unwrap(this).getParameterValue()
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
     }
 
     public companion object {
@@ -4956,14 +4614,11 @@ public open class CfnDeliveryStream internal constructor(
     public fun dataTableName(): String
 
     public interface Builder {
-      public fun copyOptions(copyOptions: String) {
-      }
+      public fun copyOptions(copyOptions: String)
 
-      public fun dataTableColumns(dataTableColumns: String) {
-      }
+      public fun dataTableColumns(dataTableColumns: String)
 
-      public fun dataTableName(dataTableName: String) {
-      }
+      public fun dataTableName(dataTableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4972,15 +4627,15 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty.builder()
 
-      public override fun copyOptions(copyOptions: String) {
+      override fun copyOptions(copyOptions: String) {
         cdkBuilder.copyOptions(copyOptions)
       }
 
-      public override fun dataTableColumns(dataTableColumns: String) {
+      override fun dataTableColumns(dataTableColumns: String) {
         cdkBuilder.dataTableColumns(dataTableColumns)
       }
 
-      public override fun dataTableName(dataTableName: String) {
+      override fun dataTableName(dataTableName: String) {
         cdkBuilder.dataTableName(dataTableName)
       }
 
@@ -4993,11 +4648,11 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty,
     ) : CopyCommandProperty {
-      public override fun copyOptions(): String? = unwrap(this).getCopyOptions()
+      override fun copyOptions(): String? = unwrap(this).getCopyOptions()
 
-      public override fun dataTableColumns(): String? = unwrap(this).getDataTableColumns()
+      override fun dataTableColumns(): String? = unwrap(this).getDataTableColumns()
 
-      public override fun dataTableName(): String = unwrap(this).getDataTableName()
+      override fun dataTableName(): String = unwrap(this).getDataTableName()
     }
 
     public companion object {
@@ -5026,20 +4681,16 @@ public open class CfnDeliveryStream internal constructor(
     public fun noEncryptionConfig(): String? = unwrap(this).getNoEncryptionConfig()
 
     public interface Builder {
-      public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
-      }
+      public fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable)
 
-      public fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty) {
-      }
+      public fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7557a7e60b43e91e5493722a7945cc9887eae4f02f8cf3a0845a00addc3549b4")
       public
-          fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty.Builder.() -> Unit) {
-      }
+          fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty.Builder.() -> Unit)
 
-      public fun noEncryptionConfig(noEncryptionConfig: String) {
-      }
+      public fun noEncryptionConfig(noEncryptionConfig: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5048,21 +4699,21 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty.builder()
 
-      public override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
+      override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
         cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable::unwrap))
       }
 
-      public override fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty) {
+      override fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty) {
         cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KMSEncryptionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7557a7e60b43e91e5493722a7945cc9887eae4f02f8cf3a0845a00addc3549b4")
-      public override
+      override
           fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty.Builder.() -> Unit):
           Unit = kmsEncryptionConfig(KMSEncryptionConfigProperty(kmsEncryptionConfig))
 
-      public override fun noEncryptionConfig(noEncryptionConfig: String) {
+      override fun noEncryptionConfig(noEncryptionConfig: String) {
         cdkBuilder.noEncryptionConfig(noEncryptionConfig)
       }
 
@@ -5075,9 +4726,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty,
     ) : EncryptionConfigurationProperty {
-      public override fun kmsEncryptionConfig(): Any? = unwrap(this).getKmsEncryptionConfig()
+      override fun kmsEncryptionConfig(): Any? = unwrap(this).getKmsEncryptionConfig()
 
-      public override fun noEncryptionConfig(): String? = unwrap(this).getNoEncryptionConfig()
+      override fun noEncryptionConfig(): String? = unwrap(this).getNoEncryptionConfig()
     }
 
     public companion object {
@@ -5104,8 +4755,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -5114,7 +4764,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -5127,7 +4777,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty,
     ) : SplunkRetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -5156,17 +4806,13 @@ public open class CfnDeliveryStream internal constructor(
     public fun processors(): Any? = unwrap(this).getProcessors()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun processors(processors: IResolvable) {
-      }
+      public fun processors(processors: IResolvable)
 
-      public fun processors(processors: List<Any>) {
-      }
+      public fun processors(processors: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -5175,19 +4821,19 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun processors(processors: IResolvable) {
+      override fun processors(processors: IResolvable) {
         cdkBuilder.processors(processors.let(IResolvable::unwrap))
       }
 
-      public override fun processors(processors: List<Any>) {
+      override fun processors(processors: List<Any>) {
         cdkBuilder.processors(processors)
       }
 
@@ -5200,9 +4846,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty,
     ) : ProcessingConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun processors(): Any? = unwrap(this).getProcessors()
+      override fun processors(): Any? = unwrap(this).getProcessors()
     }
 
     public companion object {
@@ -5231,11 +4877,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
 
     public interface Builder {
-      public fun intervalInSeconds(intervalInSeconds: Number) {
-      }
+      public fun intervalInSeconds(intervalInSeconds: Number)
 
-      public fun sizeInMBs(sizeInMBs: Number) {
-      }
+      public fun sizeInMBs(sizeInMBs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -5244,11 +4888,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty.builder()
 
-      public override fun intervalInSeconds(intervalInSeconds: Number) {
+      override fun intervalInSeconds(intervalInSeconds: Number) {
         cdkBuilder.intervalInSeconds(intervalInSeconds)
       }
 
-      public override fun sizeInMBs(sizeInMBs: Number) {
+      override fun sizeInMBs(sizeInMBs: Number) {
         cdkBuilder.sizeInMBs(sizeInMBs)
       }
 
@@ -5261,9 +4905,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty,
     ) : BufferingHintsProperty {
-      public override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
+      override fun intervalInSeconds(): Number? = unwrap(this).getIntervalInSeconds()
 
-      public override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
+      override fun sizeInMBs(): Number? = unwrap(this).getSizeInMBs()
     }
 
     public companion object {
@@ -5290,8 +4934,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
 
     public interface Builder {
-      public fun durationInSeconds(durationInSeconds: Number) {
-      }
+      public fun durationInSeconds(durationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -5300,7 +4943,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRetryOptionsProperty.builder()
 
-      public override fun durationInSeconds(durationInSeconds: Number) {
+      override fun durationInSeconds(durationInSeconds: Number) {
         cdkBuilder.durationInSeconds(durationInSeconds)
       }
 
@@ -5313,7 +4956,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRetryOptionsProperty,
     ) : SnowflakeRetryOptionsProperty {
-      public override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
+      override fun durationInSeconds(): Number? = unwrap(this).getDurationInSeconds()
     }
 
     public companion object {
@@ -5342,11 +4985,9 @@ public open class CfnDeliveryStream internal constructor(
     public fun keyType(): String
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5355,11 +4996,11 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
@@ -5372,9 +5013,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty,
     ) : DeliveryStreamEncryptionConfigurationInputProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-      public override fun keyType(): String = unwrap(this).getKeyType()
+      override fun keyType(): String = unwrap(this).getKeyType()
     }
 
     public companion object {
@@ -5422,91 +5063,68 @@ public open class CfnDeliveryStream internal constructor(
     public fun username(): String
 
     public interface Builder {
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45ef4423662114d977ecc3114c7802625a877da0c62692f1467c0d79e3a2ddac")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun clusterJdbcurl(clusterJdbcurl: String) {
-      }
+      public fun clusterJdbcurl(clusterJdbcurl: String)
 
-      public fun copyCommand(copyCommand: IResolvable) {
-      }
+      public fun copyCommand(copyCommand: IResolvable)
 
-      public fun copyCommand(copyCommand: CopyCommandProperty) {
-      }
+      public fun copyCommand(copyCommand: CopyCommandProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4d2ef5f2291d07a9512a3ff24555b5f91c228a87a4ae9a1b79a43f5f4485d2a3")
-      public fun copyCommand(copyCommand: CopyCommandProperty.Builder.() -> Unit) {
-      }
+      public fun copyCommand(copyCommand: CopyCommandProperty.Builder.() -> Unit)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87c2f921f49d7736ae64ab395b6ef401195e0ac58e53ca5e9a1d20c29ec9c679")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: RedshiftRetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: RedshiftRetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c77b9a2c545114228f3d9ae0d91705b4701ea2de7e29d7d742a34ca79f340ab0")
-      public fun retryOptions(retryOptions: RedshiftRetryOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun retryOptions(retryOptions: RedshiftRetryOptionsProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
-      }
+      public fun s3BackupConfiguration(s3BackupConfiguration: IResolvable)
 
-      public fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76f495a1f6c03576e673bcb8e356998d035f673113fceb47e468570787f93feb")
       public
-          fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("180c65a4b7e2398bf76a2db60147c8ea87bb6d69a8be2d7c4a62846c15d24e55")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5515,110 +5133,109 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty.builder()
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45ef4423662114d977ecc3114c7802625a877da0c62692f1467c0d79e3a2ddac")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun clusterJdbcurl(clusterJdbcurl: String) {
+      override fun clusterJdbcurl(clusterJdbcurl: String) {
         cdkBuilder.clusterJdbcurl(clusterJdbcurl)
       }
 
-      public override fun copyCommand(copyCommand: IResolvable) {
+      override fun copyCommand(copyCommand: IResolvable) {
         cdkBuilder.copyCommand(copyCommand.let(IResolvable::unwrap))
       }
 
-      public override fun copyCommand(copyCommand: CopyCommandProperty) {
+      override fun copyCommand(copyCommand: CopyCommandProperty) {
         cdkBuilder.copyCommand(copyCommand.let(CopyCommandProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4d2ef5f2291d07a9512a3ff24555b5f91c228a87a4ae9a1b79a43f5f4485d2a3")
-      public override fun copyCommand(copyCommand: CopyCommandProperty.Builder.() -> Unit): Unit =
+      override fun copyCommand(copyCommand: CopyCommandProperty.Builder.() -> Unit): Unit =
           copyCommand(CopyCommandProperty(copyCommand))
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87c2f921f49d7736ae64ab395b6ef401195e0ac58e53ca5e9a1d20c29ec9c679")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: RedshiftRetryOptionsProperty) {
+      override fun retryOptions(retryOptions: RedshiftRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(RedshiftRetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c77b9a2c545114228f3d9ae0d91705b4701ea2de7e29d7d742a34ca79f340ab0")
-      public override
-          fun retryOptions(retryOptions: RedshiftRetryOptionsProperty.Builder.() -> Unit): Unit =
-          retryOptions(RedshiftRetryOptionsProperty(retryOptions))
+      override fun retryOptions(retryOptions: RedshiftRetryOptionsProperty.Builder.() -> Unit): Unit
+          = retryOptions(RedshiftRetryOptionsProperty(retryOptions))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
+      override fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
         cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("76f495a1f6c03576e673bcb8e356998d035f673113fceb47e468570787f93feb")
-      public override
+      override
           fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3BackupConfiguration(S3DestinationConfigurationProperty(s3BackupConfiguration))
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("180c65a4b7e2398bf76a2db60147c8ea87bb6d69a8be2d7c4a62846c15d24e55")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -5631,29 +5248,27 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty,
     ) : RedshiftDestinationConfigurationProperty {
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun clusterJdbcurl(): String = unwrap(this).getClusterJdbcurl()
+      override fun clusterJdbcurl(): String = unwrap(this).getClusterJdbcurl()
 
-      public override fun copyCommand(): Any = unwrap(this).getCopyCommand()
+      override fun copyCommand(): Any = unwrap(this).getCopyCommand()
 
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun s3BackupConfiguration(): Any? = unwrap(this).getS3BackupConfiguration()
+      override fun s3BackupConfiguration(): Any? = unwrap(this).getS3BackupConfiguration()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
 
-      public override fun username(): String = unwrap(this).getUsername()
+      override fun username(): String = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -5683,22 +5298,17 @@ public open class CfnDeliveryStream internal constructor(
     public fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: RetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: RetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d6e3695b89866f4eda2f073df2c3303fefb131630b8d3779f0b3e202e4fb0c6e")
-      public fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -5707,26 +5317,26 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override fun retryOptions(retryOptions: RetryOptionsProperty) {
+      override fun retryOptions(retryOptions: RetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(RetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d6e3695b89866f4eda2f073df2c3303fefb131630b8d3779f0b3e202e4fb0c6e")
-      public override fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit): Unit
-          = retryOptions(RetryOptionsProperty(retryOptions))
+      override fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit): Unit =
+          retryOptions(RetryOptionsProperty(retryOptions))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty
@@ -5737,9 +5347,9 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty,
     ) : DynamicPartitioningConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
     }
 
     public companion object {
@@ -5767,8 +5377,7 @@ public open class CfnDeliveryStream internal constructor(
     public fun awskmsKeyArn(): String
 
     public interface Builder {
-      public fun awskmsKeyArn(awskmsKeyArn: String) {
-      }
+      public fun awskmsKeyArn(awskmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5777,7 +5386,7 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty.builder()
 
-      public override fun awskmsKeyArn(awskmsKeyArn: String) {
+      override fun awskmsKeyArn(awskmsKeyArn: String) {
         cdkBuilder.awskmsKeyArn(awskmsKeyArn)
       }
 
@@ -5790,7 +5399,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty,
     ) : KMSEncryptionConfigProperty {
-      public override fun awskmsKeyArn(): String = unwrap(this).getAwskmsKeyArn()
+      override fun awskmsKeyArn(): String = unwrap(this).getAwskmsKeyArn()
     }
 
     public companion object {
@@ -5817,16 +5426,13 @@ public open class CfnDeliveryStream internal constructor(
     public fun serializer(): Any? = unwrap(this).getSerializer()
 
     public interface Builder {
-      public fun serializer(serializer: IResolvable) {
-      }
+      public fun serializer(serializer: IResolvable)
 
-      public fun serializer(serializer: SerializerProperty) {
-      }
+      public fun serializer(serializer: SerializerProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7ef4373c5cefbf7b5d68af38d5da0d60c3f2bb67b3fd7c9f10a0c0f75fdef9e")
-      public fun serializer(serializer: SerializerProperty.Builder.() -> Unit) {
-      }
+      public fun serializer(serializer: SerializerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -5835,17 +5441,17 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OutputFormatConfigurationProperty.builder()
 
-      public override fun serializer(serializer: IResolvable) {
+      override fun serializer(serializer: IResolvable) {
         cdkBuilder.serializer(serializer.let(IResolvable::unwrap))
       }
 
-      public override fun serializer(serializer: SerializerProperty) {
+      override fun serializer(serializer: SerializerProperty) {
         cdkBuilder.serializer(serializer.let(SerializerProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7ef4373c5cefbf7b5d68af38d5da0d60c3f2bb67b3fd7c9f10a0c0f75fdef9e")
-      public override fun serializer(serializer: SerializerProperty.Builder.() -> Unit): Unit =
+      override fun serializer(serializer: SerializerProperty.Builder.() -> Unit): Unit =
           serializer(SerializerProperty(serializer))
 
       public fun build():
@@ -5857,7 +5463,7 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OutputFormatConfigurationProperty,
     ) : OutputFormatConfigurationProperty {
-      public override fun serializer(): Any? = unwrap(this).getSerializer()
+      override fun serializer(): Any? = unwrap(this).getSerializer()
     }
 
     public companion object {
@@ -5903,89 +5509,67 @@ public open class CfnDeliveryStream internal constructor(
     public fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
 
     public interface Builder {
-      public fun bufferingHints(bufferingHints: IResolvable) {
-      }
+      public fun bufferingHints(bufferingHints: IResolvable)
 
-      public fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty) {
-      }
+      public fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d856ab156b753ed34b97d707610833958654efb99b63689d310e18ca5cc6583")
       public
-          fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty.Builder.() -> Unit) {
-      }
+          fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty.Builder.() -> Unit)
 
-      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-      }
+      public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("85c1f70b9d28fa71684e73fc02e4379e2f8d35cf0d80bc3aebfd45885bc13a0a")
       public
-          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit)
 
-      public fun collectionEndpoint(collectionEndpoint: String) {
-      }
+      public fun collectionEndpoint(collectionEndpoint: String)
 
-      public fun indexName(indexName: String) {
-      }
+      public fun indexName(indexName: String)
 
-      public fun processingConfiguration(processingConfiguration: IResolvable) {
-      }
+      public fun processingConfiguration(processingConfiguration: IResolvable)
 
-      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-      }
+      public fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8b53401fcfe636bcf5972a097267d944d66bb96777d24d33b9b0fed827b4a222")
       public
-          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit)
 
-      public fun retryOptions(retryOptions: IResolvable) {
-      }
+      public fun retryOptions(retryOptions: IResolvable)
 
-      public fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty) {
-      }
+      public fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24baa8be39905e54321fc8fe03cede3cf6b3711a56985984f0822b7c0919c876")
       public
-          fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty.Builder.() -> Unit) {
-      }
+          fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun s3BackupMode(s3BackupMode: String) {
-      }
+      public fun s3BackupMode(s3BackupMode: String)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("347f6c226c18b5f3ec5857d7d02259e43bca74bdb689e2865aee76411fc20f45")
       public
-          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca89cda108d01b6b82ba5abf1a018f9b6d7b1a6b6ea409e8c8f0af1c4b528b01")
-      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -5994,110 +5578,108 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty.builder()
 
-      public override fun bufferingHints(bufferingHints: IResolvable) {
+      override fun bufferingHints(bufferingHints: IResolvable) {
         cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty) {
         cdkBuilder.bufferingHints(bufferingHints.let(AmazonOpenSearchServerlessBufferingHintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0d856ab156b753ed34b97d707610833958654efb99b63689d310e18ca5cc6583")
-      public override
+      override
           fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty.Builder.() -> Unit):
           Unit = bufferingHints(AmazonOpenSearchServerlessBufferingHintsProperty(bufferingHints))
 
-      public override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
+      override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("85c1f70b9d28fa71684e73fc02e4379e2f8d35cf0d80bc3aebfd45885bc13a0a")
-      public override
+      override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty(cloudWatchLoggingOptions))
 
-      public override fun collectionEndpoint(collectionEndpoint: String) {
+      override fun collectionEndpoint(collectionEndpoint: String) {
         cdkBuilder.collectionEndpoint(collectionEndpoint)
       }
 
-      public override fun indexName(indexName: String) {
+      override fun indexName(indexName: String) {
         cdkBuilder.indexName(indexName)
       }
 
-      public override fun processingConfiguration(processingConfiguration: IResolvable) {
+      override fun processingConfiguration(processingConfiguration: IResolvable) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
         cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8b53401fcfe636bcf5972a097267d944d66bb96777d24d33b9b0fed827b4a222")
-      public override
+      override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty.Builder.() -> Unit):
           Unit = processingConfiguration(ProcessingConfigurationProperty(processingConfiguration))
 
-      public override fun retryOptions(retryOptions: IResolvable) {
+      override fun retryOptions(retryOptions: IResolvable) {
         cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
       }
 
-      public override
-          fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty) {
+      override fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty) {
         cdkBuilder.retryOptions(retryOptions.let(AmazonOpenSearchServerlessRetryOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24baa8be39905e54321fc8fe03cede3cf6b3711a56985984f0822b7c0919c876")
-      public override
+      override
           fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty.Builder.() -> Unit):
           Unit = retryOptions(AmazonOpenSearchServerlessRetryOptionsProperty(retryOptions))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun s3BackupMode(s3BackupMode: String) {
+      override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
       }
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("347f6c226c18b5f3ec5857d7d02259e43bca74bdb689e2865aee76411fc20f45")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DestinationConfigurationProperty(s3Configuration))
 
-      public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+      override fun vpcConfiguration(vpcConfiguration: IResolvable) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
+      override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca89cda108d01b6b82ba5abf1a018f9b6d7b1a6b6ea409e8c8f0af1c4b528b01")
-      public override
-          fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit): Unit
-          = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
+      override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit):
+          Unit = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty
@@ -6108,27 +5690,25 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty,
     ) : AmazonOpenSearchServerlessDestinationConfigurationProperty {
-      public override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
+      override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
-      public override fun cloudWatchLoggingOptions(): Any? =
-          unwrap(this).getCloudWatchLoggingOptions()
+      override fun cloudWatchLoggingOptions(): Any? = unwrap(this).getCloudWatchLoggingOptions()
 
-      public override fun collectionEndpoint(): String? = unwrap(this).getCollectionEndpoint()
+      override fun collectionEndpoint(): String? = unwrap(this).getCollectionEndpoint()
 
-      public override fun indexName(): String = unwrap(this).getIndexName()
+      override fun indexName(): String = unwrap(this).getIndexName()
 
-      public override fun processingConfiguration(): Any? =
-          unwrap(this).getProcessingConfiguration()
+      override fun processingConfiguration(): Any? = unwrap(this).getProcessingConfiguration()
 
-      public override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
+      override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
+      override fun s3BackupMode(): String? = unwrap(this).getS3BackupMode()
 
-      public override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any = unwrap(this).getS3Configuration()
 
-      public override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
+      override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
     }
 
     public companion object {
@@ -6162,49 +5742,38 @@ public open class CfnDeliveryStream internal constructor(
     public fun schemaConfiguration(): Any? = unwrap(this).getSchemaConfiguration()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun inputFormatConfiguration(inputFormatConfiguration: IResolvable) {
-      }
+      public fun inputFormatConfiguration(inputFormatConfiguration: IResolvable)
 
       public
-          fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty) {
-      }
+          fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc2b0ec3231b0412fd064bcb2115b381da4a8ed0566f7661555da38c36ee7bdb")
       public
-          fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty.Builder.() -> Unit)
 
-      public fun outputFormatConfiguration(outputFormatConfiguration: IResolvable) {
-      }
+      public fun outputFormatConfiguration(outputFormatConfiguration: IResolvable)
 
       public
-          fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty) {
-      }
+          fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ef4d026eb2d120e4a2efe591bb453b2bb5a3bfc49c0a4fd805eea0f00d12af5")
       public
-          fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty.Builder.() -> Unit)
 
-      public fun schemaConfiguration(schemaConfiguration: IResolvable) {
-      }
+      public fun schemaConfiguration(schemaConfiguration: IResolvable)
 
-      public fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty) {
-      }
+      public fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9d477f488e9dd4fe6c57ca7eaafa8455b6007569ef7569de70804f8c647fdd5")
       public
-          fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -6213,57 +5782,57 @@ public open class CfnDeliveryStream internal constructor(
           =
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DataFormatConversionConfigurationProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun inputFormatConfiguration(inputFormatConfiguration: IResolvable) {
+      override fun inputFormatConfiguration(inputFormatConfiguration: IResolvable) {
         cdkBuilder.inputFormatConfiguration(inputFormatConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty) {
         cdkBuilder.inputFormatConfiguration(inputFormatConfiguration.let(InputFormatConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc2b0ec3231b0412fd064bcb2115b381da4a8ed0566f7661555da38c36ee7bdb")
-      public override
+      override
           fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty.Builder.() -> Unit):
           Unit =
           inputFormatConfiguration(InputFormatConfigurationProperty(inputFormatConfiguration))
 
-      public override fun outputFormatConfiguration(outputFormatConfiguration: IResolvable) {
+      override fun outputFormatConfiguration(outputFormatConfiguration: IResolvable) {
         cdkBuilder.outputFormatConfiguration(outputFormatConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty) {
         cdkBuilder.outputFormatConfiguration(outputFormatConfiguration.let(OutputFormatConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7ef4d026eb2d120e4a2efe591bb453b2bb5a3bfc49c0a4fd805eea0f00d12af5")
-      public override
+      override
           fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty.Builder.() -> Unit):
           Unit =
           outputFormatConfiguration(OutputFormatConfigurationProperty(outputFormatConfiguration))
 
-      public override fun schemaConfiguration(schemaConfiguration: IResolvable) {
+      override fun schemaConfiguration(schemaConfiguration: IResolvable) {
         cdkBuilder.schemaConfiguration(schemaConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty) {
+      override fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty) {
         cdkBuilder.schemaConfiguration(schemaConfiguration.let(SchemaConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b9d477f488e9dd4fe6c57ca7eaafa8455b6007569ef7569de70804f8c647fdd5")
-      public override
+      override
           fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty.Builder.() -> Unit):
           Unit = schemaConfiguration(SchemaConfigurationProperty(schemaConfiguration))
 
@@ -6276,15 +5845,13 @@ public open class CfnDeliveryStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DataFormatConversionConfigurationProperty,
     ) : DataFormatConversionConfigurationProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun inputFormatConfiguration(): Any? =
-          unwrap(this).getInputFormatConfiguration()
+      override fun inputFormatConfiguration(): Any? = unwrap(this).getInputFormatConfiguration()
 
-      public override fun outputFormatConfiguration(): Any? =
-          unwrap(this).getOutputFormatConfiguration()
+      override fun outputFormatConfiguration(): Any? = unwrap(this).getOutputFormatConfiguration()
 
-      public override fun schemaConfiguration(): Any? = unwrap(this).getSchemaConfiguration()
+      override fun schemaConfiguration(): Any? = unwrap(this).getSchemaConfiguration()
     }
 
     public companion object {

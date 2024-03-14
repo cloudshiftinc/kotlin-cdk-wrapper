@@ -27,31 +27,23 @@ public open class InterfaceVpcEndpoint internal constructor(
       unwrap(this).getVpcEndpointNetworkInterfaceIds() ?: emptyList()
 
   public interface Builder {
-    public fun lookupSupportedAzs(lookupSupportedAzs: Boolean) {
-    }
+    public fun lookupSupportedAzs(lookupSupportedAzs: Boolean)
 
-    public fun `open`(`open`: Boolean) {
-    }
+    public fun `open`(`open`: Boolean)
 
-    public fun privateDnsEnabled(privateDnsEnabled: Boolean) {
-    }
+    public fun privateDnsEnabled(privateDnsEnabled: Boolean)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun service(service: IInterfaceVpcEndpointService) {
-    }
+    public fun service(service: IInterfaceVpcEndpointService)
 
-    public fun subnets(subnets: SubnetSelection) {
-    }
+    public fun subnets(subnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d78aef04157c83ec653390dbf7d09f4dc3276cd8641ce21de017f7e4c5b6029d")
-    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -61,36 +53,36 @@ public open class InterfaceVpcEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint.Builder =
         software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint.Builder.create(scope, id)
 
-    public override fun lookupSupportedAzs(lookupSupportedAzs: Boolean) {
+    override fun lookupSupportedAzs(lookupSupportedAzs: Boolean) {
       cdkBuilder.lookupSupportedAzs(lookupSupportedAzs)
     }
 
-    public override fun `open`(`open`: Boolean) {
+    override fun `open`(`open`: Boolean) {
       cdkBuilder.`open`(`open`)
     }
 
-    public override fun privateDnsEnabled(privateDnsEnabled: Boolean) {
+    override fun privateDnsEnabled(privateDnsEnabled: Boolean) {
       cdkBuilder.privateDnsEnabled(privateDnsEnabled)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun service(service: IInterfaceVpcEndpointService) {
+    override fun service(service: IInterfaceVpcEndpointService) {
       cdkBuilder.service(service.let(IInterfaceVpcEndpointService::unwrap))
     }
 
-    public override fun subnets(subnets: SubnetSelection) {
+    override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d78aef04157c83ec653390dbf7d09f4dc3276cd8641ce21de017f7e4c5b6029d")
-    public override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
         subnets(SubnetSelection(subnets))
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

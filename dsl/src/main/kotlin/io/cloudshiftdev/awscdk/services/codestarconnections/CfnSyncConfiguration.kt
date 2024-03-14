@@ -58,23 +58,17 @@ public open class CfnSyncConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun branch(branch: String) {
-    }
+    public fun branch(branch: String)
 
-    public fun configFile(configFile: String) {
-    }
+    public fun configFile(configFile: String)
 
-    public fun repositoryLinkId(repositoryLinkId: String) {
-    }
+    public fun repositoryLinkId(repositoryLinkId: String)
 
-    public fun resourceName(resourceName: String) {
-    }
+    public fun resourceName(resourceName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun syncType(syncType: String) {
-    }
+    public fun syncType(syncType: String)
   }
 
   private class BuilderImpl(
@@ -86,27 +80,27 @@ public open class CfnSyncConfiguration internal constructor(
         software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration.Builder.create(scope,
         id)
 
-    public override fun branch(branch: String) {
+    override fun branch(branch: String) {
       cdkBuilder.branch(branch)
     }
 
-    public override fun configFile(configFile: String) {
+    override fun configFile(configFile: String) {
       cdkBuilder.configFile(configFile)
     }
 
-    public override fun repositoryLinkId(repositoryLinkId: String) {
+    override fun repositoryLinkId(repositoryLinkId: String) {
       cdkBuilder.repositoryLinkId(repositoryLinkId)
     }
 
-    public override fun resourceName(resourceName: String) {
+    override fun resourceName(resourceName: String) {
       cdkBuilder.resourceName(resourceName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun syncType(syncType: String) {
+    override fun syncType(syncType: String) {
       cdkBuilder.syncType(syncType)
     }
 

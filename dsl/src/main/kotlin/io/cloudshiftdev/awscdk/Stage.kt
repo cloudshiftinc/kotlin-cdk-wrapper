@@ -43,25 +43,19 @@ public open class Stage internal constructor(
       synth(StageSynthesisOptions(options))
 
   public interface Builder {
-    public fun env(env: Environment) {
-    }
+    public fun env(env: Environment)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d6fb3bfd47ec19372384a721dfafbb2e623d906353b629e5d3f9b8ecc34bd33")
-    public fun env(env: Environment.Builder.() -> Unit) {
-    }
+    public fun env(env: Environment.Builder.() -> Unit)
 
-    public fun outdir(outdir: String) {
-    }
+    public fun outdir(outdir: String)
 
-    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary)
 
-    public fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
-    }
+    public fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl(
@@ -71,28 +65,27 @@ public open class Stage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.Stage.Builder =
         software.amazon.awscdk.Stage.Builder.create(scope, id)
 
-    public override fun env(env: Environment) {
+    override fun env(env: Environment) {
       cdkBuilder.env(env.let(Environment::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d6fb3bfd47ec19372384a721dfafbb2e623d906353b629e5d3f9b8ecc34bd33")
-    public override fun env(env: Environment.Builder.() -> Unit): Unit = env(Environment(env))
+    override fun env(env: Environment.Builder.() -> Unit): Unit = env(Environment(env))
 
-    public override fun outdir(outdir: String) {
+    override fun outdir(outdir: String) {
       cdkBuilder.outdir(outdir)
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
+    override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary::unwrap))
     }
 
-    public override
-        fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
+    override fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
       cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1::unwrap))
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 

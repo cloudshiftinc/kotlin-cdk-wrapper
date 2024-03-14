@@ -114,47 +114,34 @@ public open class CfnApplicationInstance internal constructor(
   }
 
   public interface Builder {
-    public fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String) {
-    }
+    public fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String)
 
-    public fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String) {
-    }
+    public fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
-    }
+    public fun manifestOverridesPayload(manifestOverridesPayload: IResolvable)
 
-    public
-        fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty) {
-    }
+    public fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3fea6e0388b64f4224c3966cc05a778b0e96eff05e2571d6856a0d19cede2ff")
     public
-        fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty.Builder.() -> Unit) {
-    }
+        fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty.Builder.() -> Unit)
 
-    public fun manifestPayload(manifestPayload: IResolvable) {
-    }
+    public fun manifestPayload(manifestPayload: IResolvable)
 
-    public fun manifestPayload(manifestPayload: ManifestPayloadProperty) {
-    }
+    public fun manifestPayload(manifestPayload: ManifestPayloadProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f9948972873d9876a1879bd640f247de1c5d81f10a5efe27effe1ddbf495bb9f")
-    public fun manifestPayload(manifestPayload: ManifestPayloadProperty.Builder.() -> Unit) {
-    }
+    public fun manifestPayload(manifestPayload: ManifestPayloadProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun runtimeRoleArn(runtimeRoleArn: String) {
-    }
+    public fun runtimeRoleArn(runtimeRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -164,56 +151,55 @@ public open class CfnApplicationInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.panorama.CfnApplicationInstance.Builder
         = software.amazon.awscdk.services.panorama.CfnApplicationInstance.Builder.create(scope, id)
 
-    public override fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String) {
+    override fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String) {
       cdkBuilder.applicationInstanceIdToReplace(applicationInstanceIdToReplace)
     }
 
-    public override fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String) {
+    override fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String) {
       cdkBuilder.defaultRuntimeContextDevice(defaultRuntimeContextDevice)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
+    override fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
       cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty) {
       cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(ManifestOverridesPayloadProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3fea6e0388b64f4224c3966cc05a778b0e96eff05e2571d6856a0d19cede2ff")
-    public override
+    override
         fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty.Builder.() -> Unit):
         Unit = manifestOverridesPayload(ManifestOverridesPayloadProperty(manifestOverridesPayload))
 
-    public override fun manifestPayload(manifestPayload: IResolvable) {
+    override fun manifestPayload(manifestPayload: IResolvable) {
       cdkBuilder.manifestPayload(manifestPayload.let(IResolvable::unwrap))
     }
 
-    public override fun manifestPayload(manifestPayload: ManifestPayloadProperty) {
+    override fun manifestPayload(manifestPayload: ManifestPayloadProperty) {
       cdkBuilder.manifestPayload(manifestPayload.let(ManifestPayloadProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f9948972873d9876a1879bd640f247de1c5d81f10a5efe27effe1ddbf495bb9f")
-    public override
-        fun manifestPayload(manifestPayload: ManifestPayloadProperty.Builder.() -> Unit): Unit =
-        manifestPayload(ManifestPayloadProperty(manifestPayload))
+    override fun manifestPayload(manifestPayload: ManifestPayloadProperty.Builder.() -> Unit): Unit
+        = manifestPayload(ManifestPayloadProperty(manifestPayload))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun runtimeRoleArn(runtimeRoleArn: String) {
+    override fun runtimeRoleArn(runtimeRoleArn: String) {
       cdkBuilder.runtimeRoleArn(runtimeRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -246,8 +232,7 @@ public open class CfnApplicationInstance internal constructor(
     public fun payloadData(): String? = unwrap(this).getPayloadData()
 
     public interface Builder {
-      public fun payloadData(payloadData: String) {
-      }
+      public fun payloadData(payloadData: String)
     }
 
     private class BuilderImpl : Builder {
@@ -256,7 +241,7 @@ public open class CfnApplicationInstance internal constructor(
           =
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty.builder()
 
-      public override fun payloadData(payloadData: String) {
+      override fun payloadData(payloadData: String) {
         cdkBuilder.payloadData(payloadData)
       }
 
@@ -269,7 +254,7 @@ public open class CfnApplicationInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestOverridesPayloadProperty,
     ) : ManifestOverridesPayloadProperty {
-      public override fun payloadData(): String? = unwrap(this).getPayloadData()
+      override fun payloadData(): String? = unwrap(this).getPayloadData()
     }
 
     public companion object {
@@ -296,8 +281,7 @@ public open class CfnApplicationInstance internal constructor(
     public fun payloadData(): String? = unwrap(this).getPayloadData()
 
     public interface Builder {
-      public fun payloadData(payloadData: String) {
-      }
+      public fun payloadData(payloadData: String)
     }
 
     private class BuilderImpl : Builder {
@@ -306,7 +290,7 @@ public open class CfnApplicationInstance internal constructor(
           =
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty.builder()
 
-      public override fun payloadData(payloadData: String) {
+      override fun payloadData(payloadData: String) {
         cdkBuilder.payloadData(payloadData)
       }
 
@@ -319,7 +303,7 @@ public open class CfnApplicationInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.panorama.CfnApplicationInstance.ManifestPayloadProperty,
     ) : ManifestPayloadProperty {
-      public override fun payloadData(): String? = unwrap(this).getPayloadData()
+      override fun payloadData(): String? = unwrap(this).getPayloadData()
     }
 
     public companion object {

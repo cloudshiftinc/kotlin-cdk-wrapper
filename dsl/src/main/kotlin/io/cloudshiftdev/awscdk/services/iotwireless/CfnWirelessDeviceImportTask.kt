@@ -80,22 +80,17 @@ public open class CfnWirelessDeviceImportTask internal constructor(
   }
 
   public interface Builder {
-    public fun destinationName(destinationName: String) {
-    }
+    public fun destinationName(destinationName: String)
 
-    public fun sidewalk(sidewalk: IResolvable) {
-    }
+    public fun sidewalk(sidewalk: IResolvable)
 
-    public fun sidewalk(sidewalk: SidewalkProperty) {
-    }
+    public fun sidewalk(sidewalk: SidewalkProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("618b8fa4fb0220c54e94bd1ed512f164f5fbddbea8503e502a125a9aab7252d8")
-    public fun sidewalk(sidewalk: SidewalkProperty.Builder.() -> Unit) {
-    }
+    public fun sidewalk(sidewalk: SidewalkProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -107,24 +102,24 @@ public open class CfnWirelessDeviceImportTask internal constructor(
         software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.Builder.create(scope,
         id)
 
-    public override fun destinationName(destinationName: String) {
+    override fun destinationName(destinationName: String) {
       cdkBuilder.destinationName(destinationName)
     }
 
-    public override fun sidewalk(sidewalk: IResolvable) {
+    override fun sidewalk(sidewalk: IResolvable) {
       cdkBuilder.sidewalk(sidewalk.let(IResolvable::unwrap))
     }
 
-    public override fun sidewalk(sidewalk: SidewalkProperty) {
+    override fun sidewalk(sidewalk: SidewalkProperty) {
       cdkBuilder.sidewalk(sidewalk.let(SidewalkProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("618b8fa4fb0220c54e94bd1ed512f164f5fbddbea8503e502a125a9aab7252d8")
-    public override fun sidewalk(sidewalk: SidewalkProperty.Builder.() -> Unit): Unit =
+    override fun sidewalk(sidewalk: SidewalkProperty.Builder.() -> Unit): Unit =
         sidewalk(SidewalkProperty(sidewalk))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -165,17 +160,13 @@ public open class CfnWirelessDeviceImportTask internal constructor(
     public fun sidewalkManufacturingSn(): String? = unwrap(this).getSidewalkManufacturingSn()
 
     public interface Builder {
-      public fun deviceCreationFile(deviceCreationFile: String) {
-      }
+      public fun deviceCreationFile(deviceCreationFile: String)
 
-      public fun deviceCreationFileList(deviceCreationFileList: List<String>) {
-      }
+      public fun deviceCreationFileList(deviceCreationFileList: List<String>)
 
-      public fun role(role: String) {
-      }
+      public fun role(role: String)
 
-      public fun sidewalkManufacturingSn(sidewalkManufacturingSn: String) {
-      }
+      public fun sidewalkManufacturingSn(sidewalkManufacturingSn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -184,19 +175,19 @@ public open class CfnWirelessDeviceImportTask internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty.builder()
 
-      public override fun deviceCreationFile(deviceCreationFile: String) {
+      override fun deviceCreationFile(deviceCreationFile: String) {
         cdkBuilder.deviceCreationFile(deviceCreationFile)
       }
 
-      public override fun deviceCreationFileList(deviceCreationFileList: List<String>) {
+      override fun deviceCreationFileList(deviceCreationFileList: List<String>) {
         cdkBuilder.deviceCreationFileList(deviceCreationFileList)
       }
 
-      public override fun role(role: String) {
+      override fun role(role: String) {
         cdkBuilder.role(role)
       }
 
-      public override fun sidewalkManufacturingSn(sidewalkManufacturingSn: String) {
+      override fun sidewalkManufacturingSn(sidewalkManufacturingSn: String) {
         cdkBuilder.sidewalkManufacturingSn(sidewalkManufacturingSn)
       }
 
@@ -209,15 +200,14 @@ public open class CfnWirelessDeviceImportTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask.SidewalkProperty,
     ) : SidewalkProperty {
-      public override fun deviceCreationFile(): String? = unwrap(this).getDeviceCreationFile()
+      override fun deviceCreationFile(): String? = unwrap(this).getDeviceCreationFile()
 
-      public override fun deviceCreationFileList(): List<String> =
-          unwrap(this).getDeviceCreationFileList() ?: emptyList()
+      override fun deviceCreationFileList(): List<String> = unwrap(this).getDeviceCreationFileList()
+          ?: emptyList()
 
-      public override fun role(): String? = unwrap(this).getRole()
+      override fun role(): String? = unwrap(this).getRole()
 
-      public override fun sidewalkManufacturingSn(): String? =
-          unwrap(this).getSidewalkManufacturingSn()
+      override fun sidewalkManufacturingSn(): String? = unwrap(this).getSidewalkManufacturingSn()
     }
 
     public companion object {

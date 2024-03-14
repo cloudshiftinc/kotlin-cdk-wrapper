@@ -106,48 +106,35 @@ public open class CfnImageRecipe internal constructor(
   }
 
   public interface Builder {
-    public fun additionalInstanceConfiguration(additionalInstanceConfiguration: IResolvable) {
-    }
+    public fun additionalInstanceConfiguration(additionalInstanceConfiguration: IResolvable)
 
     public
-        fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty) {
-    }
+        fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c792503db491a17e5a33ca7eff774f01e9559bcbfb437dc2ca9d82c53b23915e")
     public
-        fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty.Builder.() -> Unit)
 
-    public fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-    }
+    public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
 
-    public fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-    }
+    public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
-    public fun components(components: IResolvable) {
-    }
+    public fun components(components: IResolvable)
 
-    public fun components(components: List<Any>) {
-    }
+    public fun components(components: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun parentImage(parentImage: String) {
-    }
+    public fun parentImage(parentImage: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
 
-    public fun workingDirectory(workingDirectory: String) {
-    }
+    public fun workingDirectory(workingDirectory: String)
   }
 
   private class BuilderImpl(
@@ -157,60 +144,59 @@ public open class CfnImageRecipe internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.Builder =
         software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.Builder.create(scope, id)
 
-    public override
-        fun additionalInstanceConfiguration(additionalInstanceConfiguration: IResolvable) {
+    override fun additionalInstanceConfiguration(additionalInstanceConfiguration: IResolvable) {
       cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty) {
       cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(AdditionalInstanceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c792503db491a17e5a33ca7eff774f01e9559bcbfb437dc2ca9d82c53b23915e")
-    public override
+    override
         fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty.Builder.() -> Unit):
         Unit =
         additionalInstanceConfiguration(AdditionalInstanceConfigurationProperty(additionalInstanceConfiguration))
 
-    public override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+    override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
     }
 
-    public override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+    override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
 
-    public override fun components(components: IResolvable) {
+    override fun components(components: IResolvable) {
       cdkBuilder.components(components.let(IResolvable::unwrap))
     }
 
-    public override fun components(components: List<Any>) {
+    override fun components(components: List<Any>) {
       cdkBuilder.components(components)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun parentImage(parentImage: String) {
+    override fun parentImage(parentImage: String) {
       cdkBuilder.parentImage(parentImage)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
-    public override fun workingDirectory(workingDirectory: String) {
+    override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)
     }
 
@@ -245,11 +231,9 @@ public open class CfnImageRecipe internal constructor(
     public fun `value`(): List<String>
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: List<String>) {
-      }
+      public fun `value`(`value`: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -258,11 +242,11 @@ public open class CfnImageRecipe internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: List<String>) {
+      override fun `value`(`value`: List<String>) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -275,9 +259,9 @@ public open class CfnImageRecipe internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty,
     ) : ComponentParameterProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
     }
 
     public companion object {
@@ -306,20 +290,16 @@ public open class CfnImageRecipe internal constructor(
     public fun userDataOverride(): String? = unwrap(this).getUserDataOverride()
 
     public interface Builder {
-      public fun systemsManagerAgent(systemsManagerAgent: IResolvable) {
-      }
+      public fun systemsManagerAgent(systemsManagerAgent: IResolvable)
 
-      public fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty) {
-      }
+      public fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9103d23f896be0e9de53c701e87aafb2c948661dcff257c9a29cb652d6cb1329")
       public
-          fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty.Builder.() -> Unit) {
-      }
+          fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty.Builder.() -> Unit)
 
-      public fun userDataOverride(userDataOverride: String) {
-      }
+      public fun userDataOverride(userDataOverride: String)
     }
 
     private class BuilderImpl : Builder {
@@ -328,21 +308,21 @@ public open class CfnImageRecipe internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty.builder()
 
-      public override fun systemsManagerAgent(systemsManagerAgent: IResolvable) {
+      override fun systemsManagerAgent(systemsManagerAgent: IResolvable) {
         cdkBuilder.systemsManagerAgent(systemsManagerAgent.let(IResolvable::unwrap))
       }
 
-      public override fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty) {
+      override fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty) {
         cdkBuilder.systemsManagerAgent(systemsManagerAgent.let(SystemsManagerAgentProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9103d23f896be0e9de53c701e87aafb2c948661dcff257c9a29cb652d6cb1329")
-      public override
+      override
           fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty.Builder.() -> Unit):
           Unit = systemsManagerAgent(SystemsManagerAgentProperty(systemsManagerAgent))
 
-      public override fun userDataOverride(userDataOverride: String) {
+      override fun userDataOverride(userDataOverride: String) {
         cdkBuilder.userDataOverride(userDataOverride)
       }
 
@@ -355,9 +335,9 @@ public open class CfnImageRecipe internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.AdditionalInstanceConfigurationProperty,
     ) : AdditionalInstanceConfigurationProperty {
-      public override fun systemsManagerAgent(): Any? = unwrap(this).getSystemsManagerAgent()
+      override fun systemsManagerAgent(): Any? = unwrap(this).getSystemsManagerAgent()
 
-      public override fun userDataOverride(): String? = unwrap(this).getUserDataOverride()
+      override fun userDataOverride(): String? = unwrap(this).getUserDataOverride()
     }
 
     public companion object {
@@ -387,14 +367,11 @@ public open class CfnImageRecipe internal constructor(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     public interface Builder {
-      public fun componentArn(componentArn: String) {
-      }
+      public fun componentArn(componentArn: String)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: List<Any>) {
-      }
+      public fun parameters(parameters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -403,15 +380,15 @@ public open class CfnImageRecipe internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty.builder()
 
-      public override fun componentArn(componentArn: String) {
+      override fun componentArn(componentArn: String) {
         cdkBuilder.componentArn(componentArn)
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: List<Any>) {
+      override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
 
@@ -424,9 +401,9 @@ public open class CfnImageRecipe internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty,
     ) : ComponentConfigurationProperty {
-      public override fun componentArn(): String? = unwrap(this).getComponentArn()
+      override fun componentArn(): String? = unwrap(this).getComponentArn()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
     }
 
     public companion object {
@@ -453,11 +430,9 @@ public open class CfnImageRecipe internal constructor(
     public fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
 
     public interface Builder {
-      public fun uninstallAfterBuild(uninstallAfterBuild: Boolean) {
-      }
+      public fun uninstallAfterBuild(uninstallAfterBuild: Boolean)
 
-      public fun uninstallAfterBuild(uninstallAfterBuild: IResolvable) {
-      }
+      public fun uninstallAfterBuild(uninstallAfterBuild: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -466,11 +441,11 @@ public open class CfnImageRecipe internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty.builder()
 
-      public override fun uninstallAfterBuild(uninstallAfterBuild: Boolean) {
+      override fun uninstallAfterBuild(uninstallAfterBuild: Boolean) {
         cdkBuilder.uninstallAfterBuild(uninstallAfterBuild)
       }
 
-      public override fun uninstallAfterBuild(uninstallAfterBuild: IResolvable) {
+      override fun uninstallAfterBuild(uninstallAfterBuild: IResolvable) {
         cdkBuilder.uninstallAfterBuild(uninstallAfterBuild.let(IResolvable::unwrap))
       }
 
@@ -483,7 +458,7 @@ public open class CfnImageRecipe internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.SystemsManagerAgentProperty,
     ) : SystemsManagerAgentProperty {
-      public override fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
+      override fun uninstallAfterBuild(): Any? = unwrap(this).getUninstallAfterBuild()
     }
 
     public companion object {
@@ -516,25 +491,19 @@ public open class CfnImageRecipe internal constructor(
     public fun virtualName(): String? = unwrap(this).getVirtualName()
 
     public interface Builder {
-      public fun deviceName(deviceName: String) {
-      }
+      public fun deviceName(deviceName: String)
 
-      public fun ebs(ebs: IResolvable) {
-      }
+      public fun ebs(ebs: IResolvable)
 
-      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
-      }
+      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("81df05fefd03046b380ec12ea800dec283d0ed7acb50b2a7b9ce3905e31e3b5e")
-      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit) {
-      }
+      public fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit)
 
-      public fun noDevice(noDevice: String) {
-      }
+      public fun noDevice(noDevice: String)
 
-      public fun virtualName(virtualName: String) {
-      }
+      public fun virtualName(virtualName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -543,28 +512,28 @@ public open class CfnImageRecipe internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty.builder()
 
-      public override fun deviceName(deviceName: String) {
+      override fun deviceName(deviceName: String) {
         cdkBuilder.deviceName(deviceName)
       }
 
-      public override fun ebs(ebs: IResolvable) {
+      override fun ebs(ebs: IResolvable) {
         cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
       }
 
-      public override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
+      override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
         cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("81df05fefd03046b380ec12ea800dec283d0ed7acb50b2a7b9ce3905e31e3b5e")
-      public override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit):
-          Unit = ebs(EbsInstanceBlockDeviceSpecificationProperty(ebs))
+      override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty.Builder.() -> Unit): Unit =
+          ebs(EbsInstanceBlockDeviceSpecificationProperty(ebs))
 
-      public override fun noDevice(noDevice: String) {
+      override fun noDevice(noDevice: String) {
         cdkBuilder.noDevice(noDevice)
       }
 
-      public override fun virtualName(virtualName: String) {
+      override fun virtualName(virtualName: String) {
         cdkBuilder.virtualName(virtualName)
       }
 
@@ -577,13 +546,13 @@ public open class CfnImageRecipe internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.InstanceBlockDeviceMappingProperty,
     ) : InstanceBlockDeviceMappingProperty {
-      public override fun deviceName(): String? = unwrap(this).getDeviceName()
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
 
-      public override fun ebs(): Any? = unwrap(this).getEbs()
+      override fun ebs(): Any? = unwrap(this).getEbs()
 
-      public override fun noDevice(): String? = unwrap(this).getNoDevice()
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
 
-      public override fun virtualName(): String? = unwrap(this).getVirtualName()
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
     }
 
     public companion object {
@@ -625,35 +594,25 @@ public open class CfnImageRecipe internal constructor(
     public fun volumeType(): String? = unwrap(this).getVolumeType()
 
     public interface Builder {
-      public fun deleteOnTermination(deleteOnTermination: Boolean) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
 
-      public fun encrypted(encrypted: Boolean) {
-      }
+      public fun encrypted(encrypted: Boolean)
 
-      public fun encrypted(encrypted: IResolvable) {
-      }
+      public fun encrypted(encrypted: IResolvable)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun snapshotId(snapshotId: String) {
-      }
+      public fun snapshotId(snapshotId: String)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
 
-      public fun volumeSize(volumeSize: Number) {
-      }
+      public fun volumeSize(volumeSize: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -662,43 +621,43 @@ public open class CfnImageRecipe internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty.builder()
 
-      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
         cdkBuilder.deleteOnTermination(deleteOnTermination)
       }
 
-      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
         cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
       }
 
-      public override fun encrypted(encrypted: Boolean) {
+      override fun encrypted(encrypted: Boolean) {
         cdkBuilder.encrypted(encrypted)
       }
 
-      public override fun encrypted(encrypted: IResolvable) {
+      override fun encrypted(encrypted: IResolvable) {
         cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun snapshotId(snapshotId: String) {
+      override fun snapshotId(snapshotId: String) {
         cdkBuilder.snapshotId(snapshotId)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
-      public override fun volumeSize(volumeSize: Number) {
+      override fun volumeSize(volumeSize: Number) {
         cdkBuilder.volumeSize(volumeSize)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -711,21 +670,21 @@ public open class CfnImageRecipe internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty,
     ) : EbsInstanceBlockDeviceSpecificationProperty {
-      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
 
-      public override fun encrypted(): Any? = unwrap(this).getEncrypted()
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
 
-      public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
-      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
     }
 
     public companion object {

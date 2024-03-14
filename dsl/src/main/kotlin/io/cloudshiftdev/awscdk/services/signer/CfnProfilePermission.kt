@@ -46,20 +46,15 @@ public open class CfnProfilePermission internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
 
-    public fun profileName(profileName: String) {
-    }
+    public fun profileName(profileName: String)
 
-    public fun profileVersion(profileVersion: String) {
-    }
+    public fun profileVersion(profileVersion: String)
 
-    public fun statementId(statementId: String) {
-    }
+    public fun statementId(statementId: String)
   }
 
   private class BuilderImpl(
@@ -69,23 +64,23 @@ public open class CfnProfilePermission internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.signer.CfnProfilePermission.Builder =
         software.amazon.awscdk.services.signer.CfnProfilePermission.Builder.create(scope, id)
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 
-    public override fun profileName(profileName: String) {
+    override fun profileName(profileName: String) {
       cdkBuilder.profileName(profileName)
     }
 
-    public override fun profileVersion(profileVersion: String) {
+    override fun profileVersion(profileVersion: String) {
       cdkBuilder.profileVersion(profileVersion)
     }
 
-    public override fun statementId(statementId: String) {
+    override fun statementId(statementId: String) {
       cdkBuilder.statementId(statementId)
     }
 

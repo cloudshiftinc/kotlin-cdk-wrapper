@@ -21,28 +21,26 @@ public interface IDatabaseInstance : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.docdb.IDatabaseInstance,
   ) : IDatabaseInstance {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun dbInstanceEndpointAddress(): String =
-        unwrap(this).getDbInstanceEndpointAddress()
+    override fun dbInstanceEndpointAddress(): String = unwrap(this).getDbInstanceEndpointAddress()
 
-    public override fun dbInstanceEndpointPort(): String = unwrap(this).getDbInstanceEndpointPort()
+    override fun dbInstanceEndpointPort(): String = unwrap(this).getDbInstanceEndpointPort()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun instanceArn(): String = unwrap(this).getInstanceArn()
+    override fun instanceArn(): String = unwrap(this).getInstanceArn()
 
-    public override fun instanceEndpoint(): Endpoint =
+    override fun instanceEndpoint(): Endpoint =
         unwrap(this).getInstanceEndpoint().let(Endpoint::wrap)
 
-    public override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
+    override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

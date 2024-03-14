@@ -46,58 +46,57 @@ public interface IVolume : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IVolume,
   ) : IVolume {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+    override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
 
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantAttachVolume(arg0: IGrantable): Grant =
+    override fun grantAttachVolume(arg0: IGrantable): Grant =
         unwrap(this).grantAttachVolume(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantAttachVolume(arg0: IGrantable, arg1: List<IInstance>): Grant =
+    override fun grantAttachVolume(arg0: IGrantable, arg1: List<IInstance>): Grant =
         unwrap(this).grantAttachVolume(arg0.let(IGrantable::unwrap),
         arg1.map(IInstance::unwrap)).let(Grant::wrap)
 
-    public override fun grantAttachVolumeByResourceTag(arg0: IGrantable, arg1: List<Construct>):
-        Grant = unwrap(this).grantAttachVolumeByResourceTag(arg0.let(IGrantable::unwrap),
+    override fun grantAttachVolumeByResourceTag(arg0: IGrantable, arg1: List<Construct>): Grant =
+        unwrap(this).grantAttachVolumeByResourceTag(arg0.let(IGrantable::unwrap),
         arg1.map(Construct::unwrap)).let(Grant::wrap)
 
-    public override fun grantAttachVolumeByResourceTag(
+    override fun grantAttachVolumeByResourceTag(
       arg0: IGrantable,
       arg1: List<Construct>,
       arg2: String,
     ): Grant = unwrap(this).grantAttachVolumeByResourceTag(arg0.let(IGrantable::unwrap),
         arg1.map(Construct::unwrap), arg2).let(Grant::wrap)
 
-    public override fun grantDetachVolume(arg0: IGrantable): Grant =
+    override fun grantDetachVolume(arg0: IGrantable): Grant =
         unwrap(this).grantDetachVolume(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantDetachVolume(arg0: IGrantable, arg1: List<IInstance>): Grant =
+    override fun grantDetachVolume(arg0: IGrantable, arg1: List<IInstance>): Grant =
         unwrap(this).grantDetachVolume(arg0.let(IGrantable::unwrap),
         arg1.map(IInstance::unwrap)).let(Grant::wrap)
 
-    public override fun grantDetachVolumeByResourceTag(arg0: IGrantable, arg1: List<Construct>):
-        Grant = unwrap(this).grantDetachVolumeByResourceTag(arg0.let(IGrantable::unwrap),
+    override fun grantDetachVolumeByResourceTag(arg0: IGrantable, arg1: List<Construct>): Grant =
+        unwrap(this).grantDetachVolumeByResourceTag(arg0.let(IGrantable::unwrap),
         arg1.map(Construct::unwrap)).let(Grant::wrap)
 
-    public override fun grantDetachVolumeByResourceTag(
+    override fun grantDetachVolumeByResourceTag(
       arg0: IGrantable,
       arg1: List<Construct>,
       arg2: String,
     ): Grant = unwrap(this).grantDetachVolumeByResourceTag(arg0.let(IGrantable::unwrap),
         arg1.map(Construct::unwrap), arg2).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun volumeId(): String = unwrap(this).getVolumeId()
+    override fun volumeId(): String = unwrap(this).getVolumeId()
   }
 
   public companion object {

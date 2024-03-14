@@ -86,38 +86,28 @@ public open class CfnSecret internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun generateSecretString(generateSecretString: IResolvable) {
-    }
+    public fun generateSecretString(generateSecretString: IResolvable)
 
-    public fun generateSecretString(generateSecretString: GenerateSecretStringProperty) {
-    }
+    public fun generateSecretString(generateSecretString: GenerateSecretStringProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e223691f205e021a942110c10c4226c829ebe5305e708ddfa406aedf731c0b9")
     public
-        fun generateSecretString(generateSecretString: GenerateSecretStringProperty.Builder.() -> Unit) {
-    }
+        fun generateSecretString(generateSecretString: GenerateSecretStringProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun replicaRegions(replicaRegions: IResolvable) {
-    }
+    public fun replicaRegions(replicaRegions: IResolvable)
 
-    public fun replicaRegions(replicaRegions: List<Any>) {
-    }
+    public fun replicaRegions(replicaRegions: List<Any>)
 
-    public fun secretString(secretString: String) {
-    }
+    public fun secretString(secretString: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -127,45 +117,45 @@ public open class CfnSecret internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.CfnSecret.Builder =
         software.amazon.awscdk.services.secretsmanager.CfnSecret.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun generateSecretString(generateSecretString: IResolvable) {
+    override fun generateSecretString(generateSecretString: IResolvable) {
       cdkBuilder.generateSecretString(generateSecretString.let(IResolvable::unwrap))
     }
 
-    public override fun generateSecretString(generateSecretString: GenerateSecretStringProperty) {
+    override fun generateSecretString(generateSecretString: GenerateSecretStringProperty) {
       cdkBuilder.generateSecretString(generateSecretString.let(GenerateSecretStringProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e223691f205e021a942110c10c4226c829ebe5305e708ddfa406aedf731c0b9")
-    public override
+    override
         fun generateSecretString(generateSecretString: GenerateSecretStringProperty.Builder.() -> Unit):
         Unit = generateSecretString(GenerateSecretStringProperty(generateSecretString))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun replicaRegions(replicaRegions: IResolvable) {
+    override fun replicaRegions(replicaRegions: IResolvable) {
       cdkBuilder.replicaRegions(replicaRegions.let(IResolvable::unwrap))
     }
 
-    public override fun replicaRegions(replicaRegions: List<Any>) {
+    override fun replicaRegions(replicaRegions: List<Any>) {
       cdkBuilder.replicaRegions(replicaRegions)
     }
 
-    public override fun secretString(secretString: String) {
+    override fun secretString(secretString: String) {
       cdkBuilder.secretString(secretString)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -200,11 +190,9 @@ public open class CfnSecret internal constructor(
     public fun region(): String
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -212,11 +200,11 @@ public open class CfnSecret internal constructor(
           software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty.Builder =
           software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -229,9 +217,9 @@ public open class CfnSecret internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.secretsmanager.CfnSecret.ReplicaRegionProperty,
     ) : ReplicaRegionProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
     }
 
     public companion object {
@@ -276,53 +264,37 @@ public open class CfnSecret internal constructor(
     public fun secretStringTemplate(): String? = unwrap(this).getSecretStringTemplate()
 
     public interface Builder {
-      public fun excludeCharacters(excludeCharacters: String) {
-      }
+      public fun excludeCharacters(excludeCharacters: String)
 
-      public fun excludeLowercase(excludeLowercase: Boolean) {
-      }
+      public fun excludeLowercase(excludeLowercase: Boolean)
 
-      public fun excludeLowercase(excludeLowercase: IResolvable) {
-      }
+      public fun excludeLowercase(excludeLowercase: IResolvable)
 
-      public fun excludeNumbers(excludeNumbers: Boolean) {
-      }
+      public fun excludeNumbers(excludeNumbers: Boolean)
 
-      public fun excludeNumbers(excludeNumbers: IResolvable) {
-      }
+      public fun excludeNumbers(excludeNumbers: IResolvable)
 
-      public fun excludePunctuation(excludePunctuation: Boolean) {
-      }
+      public fun excludePunctuation(excludePunctuation: Boolean)
 
-      public fun excludePunctuation(excludePunctuation: IResolvable) {
-      }
+      public fun excludePunctuation(excludePunctuation: IResolvable)
 
-      public fun excludeUppercase(excludeUppercase: Boolean) {
-      }
+      public fun excludeUppercase(excludeUppercase: Boolean)
 
-      public fun excludeUppercase(excludeUppercase: IResolvable) {
-      }
+      public fun excludeUppercase(excludeUppercase: IResolvable)
 
-      public fun generateStringKey(generateStringKey: String) {
-      }
+      public fun generateStringKey(generateStringKey: String)
 
-      public fun includeSpace(includeSpace: Boolean) {
-      }
+      public fun includeSpace(includeSpace: Boolean)
 
-      public fun includeSpace(includeSpace: IResolvable) {
-      }
+      public fun includeSpace(includeSpace: IResolvable)
 
-      public fun passwordLength(passwordLength: Number) {
-      }
+      public fun passwordLength(passwordLength: Number)
 
-      public fun requireEachIncludedType(requireEachIncludedType: Boolean) {
-      }
+      public fun requireEachIncludedType(requireEachIncludedType: Boolean)
 
-      public fun requireEachIncludedType(requireEachIncludedType: IResolvable) {
-      }
+      public fun requireEachIncludedType(requireEachIncludedType: IResolvable)
 
-      public fun secretStringTemplate(secretStringTemplate: String) {
-      }
+      public fun secretStringTemplate(secretStringTemplate: String)
     }
 
     private class BuilderImpl : Builder {
@@ -331,67 +303,67 @@ public open class CfnSecret internal constructor(
           =
           software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty.builder()
 
-      public override fun excludeCharacters(excludeCharacters: String) {
+      override fun excludeCharacters(excludeCharacters: String) {
         cdkBuilder.excludeCharacters(excludeCharacters)
       }
 
-      public override fun excludeLowercase(excludeLowercase: Boolean) {
+      override fun excludeLowercase(excludeLowercase: Boolean) {
         cdkBuilder.excludeLowercase(excludeLowercase)
       }
 
-      public override fun excludeLowercase(excludeLowercase: IResolvable) {
+      override fun excludeLowercase(excludeLowercase: IResolvable) {
         cdkBuilder.excludeLowercase(excludeLowercase.let(IResolvable::unwrap))
       }
 
-      public override fun excludeNumbers(excludeNumbers: Boolean) {
+      override fun excludeNumbers(excludeNumbers: Boolean) {
         cdkBuilder.excludeNumbers(excludeNumbers)
       }
 
-      public override fun excludeNumbers(excludeNumbers: IResolvable) {
+      override fun excludeNumbers(excludeNumbers: IResolvable) {
         cdkBuilder.excludeNumbers(excludeNumbers.let(IResolvable::unwrap))
       }
 
-      public override fun excludePunctuation(excludePunctuation: Boolean) {
+      override fun excludePunctuation(excludePunctuation: Boolean) {
         cdkBuilder.excludePunctuation(excludePunctuation)
       }
 
-      public override fun excludePunctuation(excludePunctuation: IResolvable) {
+      override fun excludePunctuation(excludePunctuation: IResolvable) {
         cdkBuilder.excludePunctuation(excludePunctuation.let(IResolvable::unwrap))
       }
 
-      public override fun excludeUppercase(excludeUppercase: Boolean) {
+      override fun excludeUppercase(excludeUppercase: Boolean) {
         cdkBuilder.excludeUppercase(excludeUppercase)
       }
 
-      public override fun excludeUppercase(excludeUppercase: IResolvable) {
+      override fun excludeUppercase(excludeUppercase: IResolvable) {
         cdkBuilder.excludeUppercase(excludeUppercase.let(IResolvable::unwrap))
       }
 
-      public override fun generateStringKey(generateStringKey: String) {
+      override fun generateStringKey(generateStringKey: String) {
         cdkBuilder.generateStringKey(generateStringKey)
       }
 
-      public override fun includeSpace(includeSpace: Boolean) {
+      override fun includeSpace(includeSpace: Boolean) {
         cdkBuilder.includeSpace(includeSpace)
       }
 
-      public override fun includeSpace(includeSpace: IResolvable) {
+      override fun includeSpace(includeSpace: IResolvable) {
         cdkBuilder.includeSpace(includeSpace.let(IResolvable::unwrap))
       }
 
-      public override fun passwordLength(passwordLength: Number) {
+      override fun passwordLength(passwordLength: Number) {
         cdkBuilder.passwordLength(passwordLength)
       }
 
-      public override fun requireEachIncludedType(requireEachIncludedType: Boolean) {
+      override fun requireEachIncludedType(requireEachIncludedType: Boolean) {
         cdkBuilder.requireEachIncludedType(requireEachIncludedType)
       }
 
-      public override fun requireEachIncludedType(requireEachIncludedType: IResolvable) {
+      override fun requireEachIncludedType(requireEachIncludedType: IResolvable) {
         cdkBuilder.requireEachIncludedType(requireEachIncludedType.let(IResolvable::unwrap))
       }
 
-      public override fun secretStringTemplate(secretStringTemplate: String) {
+      override fun secretStringTemplate(secretStringTemplate: String) {
         cdkBuilder.secretStringTemplate(secretStringTemplate)
       }
 
@@ -404,26 +376,25 @@ public open class CfnSecret internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.secretsmanager.CfnSecret.GenerateSecretStringProperty,
     ) : GenerateSecretStringProperty {
-      public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+      override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-      public override fun excludeLowercase(): Any? = unwrap(this).getExcludeLowercase()
+      override fun excludeLowercase(): Any? = unwrap(this).getExcludeLowercase()
 
-      public override fun excludeNumbers(): Any? = unwrap(this).getExcludeNumbers()
+      override fun excludeNumbers(): Any? = unwrap(this).getExcludeNumbers()
 
-      public override fun excludePunctuation(): Any? = unwrap(this).getExcludePunctuation()
+      override fun excludePunctuation(): Any? = unwrap(this).getExcludePunctuation()
 
-      public override fun excludeUppercase(): Any? = unwrap(this).getExcludeUppercase()
+      override fun excludeUppercase(): Any? = unwrap(this).getExcludeUppercase()
 
-      public override fun generateStringKey(): String? = unwrap(this).getGenerateStringKey()
+      override fun generateStringKey(): String? = unwrap(this).getGenerateStringKey()
 
-      public override fun includeSpace(): Any? = unwrap(this).getIncludeSpace()
+      override fun includeSpace(): Any? = unwrap(this).getIncludeSpace()
 
-      public override fun passwordLength(): Number? = unwrap(this).getPasswordLength()
+      override fun passwordLength(): Number? = unwrap(this).getPasswordLength()
 
-      public override fun requireEachIncludedType(): Any? =
-          unwrap(this).getRequireEachIncludedType()
+      override fun requireEachIncludedType(): Any? = unwrap(this).getRequireEachIncludedType()
 
-      public override fun secretStringTemplate(): String? = unwrap(this).getSecretStringTemplate()
+      override fun secretStringTemplate(): String? = unwrap(this).getSecretStringTemplate()
     }
 
     public companion object {

@@ -202,110 +202,78 @@ public open class CfnJob internal constructor(
   }
 
   public interface Builder {
-    public fun dataCatalogOutputs(dataCatalogOutputs: IResolvable) {
-    }
+    public fun dataCatalogOutputs(dataCatalogOutputs: IResolvable)
 
-    public fun dataCatalogOutputs(dataCatalogOutputs: List<Any>) {
-    }
+    public fun dataCatalogOutputs(dataCatalogOutputs: List<Any>)
 
-    public fun databaseOutputs(databaseOutputs: IResolvable) {
-    }
+    public fun databaseOutputs(databaseOutputs: IResolvable)
 
-    public fun databaseOutputs(databaseOutputs: List<Any>) {
-    }
+    public fun databaseOutputs(databaseOutputs: List<Any>)
 
-    public fun datasetName(datasetName: String) {
-    }
+    public fun datasetName(datasetName: String)
 
-    public fun encryptionKeyArn(encryptionKeyArn: String) {
-    }
+    public fun encryptionKeyArn(encryptionKeyArn: String)
 
-    public fun encryptionMode(encryptionMode: String) {
-    }
+    public fun encryptionMode(encryptionMode: String)
 
-    public fun jobSample(jobSample: IResolvable) {
-    }
+    public fun jobSample(jobSample: IResolvable)
 
-    public fun jobSample(jobSample: JobSampleProperty) {
-    }
+    public fun jobSample(jobSample: JobSampleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b549f28bb0c6235cf13067784fe0d1308de17069cff35e16d9b73d0d78498494")
-    public fun jobSample(jobSample: JobSampleProperty.Builder.() -> Unit) {
-    }
+    public fun jobSample(jobSample: JobSampleProperty.Builder.() -> Unit)
 
-    public fun logSubscription(logSubscription: String) {
-    }
+    public fun logSubscription(logSubscription: String)
 
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun maxRetries(maxRetries: Number) {
-    }
+    public fun maxRetries(maxRetries: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outputLocation(outputLocation: IResolvable) {
-    }
+    public fun outputLocation(outputLocation: IResolvable)
 
-    public fun outputLocation(outputLocation: OutputLocationProperty) {
-    }
+    public fun outputLocation(outputLocation: OutputLocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7075009e7896fa2dac2cb2a0801bb0767f212db5c58846c9c3602666778667af")
-    public fun outputLocation(outputLocation: OutputLocationProperty.Builder.() -> Unit) {
-    }
+    public fun outputLocation(outputLocation: OutputLocationProperty.Builder.() -> Unit)
 
-    public fun outputs(outputs: IResolvable) {
-    }
+    public fun outputs(outputs: IResolvable)
 
-    public fun outputs(outputs: List<Any>) {
-    }
+    public fun outputs(outputs: List<Any>)
 
-    public fun profileConfiguration(profileConfiguration: IResolvable) {
-    }
+    public fun profileConfiguration(profileConfiguration: IResolvable)
 
-    public fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty) {
-    }
+    public fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b51a4b5e47d6827520d89764cd2c50826dc27eb6c70d83a7c6ecd3719514a065")
     public
-        fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty.Builder.() -> Unit)
 
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
 
-    public fun recipe(recipe: IResolvable) {
-    }
+    public fun recipe(recipe: IResolvable)
 
-    public fun recipe(recipe: RecipeProperty) {
-    }
+    public fun recipe(recipe: RecipeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0be0d2ffef1642982d7e29c724383ad3e41980a32dd097444e1c1b7186e338fb")
-    public fun recipe(recipe: RecipeProperty.Builder.() -> Unit) {
-    }
+    public fun recipe(recipe: RecipeProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun timeout(timeout: Number) {
-    }
+    public fun timeout(timeout: Number)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun validationConfigurations(validationConfigurations: IResolvable) {
-    }
+    public fun validationConfigurations(validationConfigurations: IResolvable)
 
-    public fun validationConfigurations(validationConfigurations: List<Any>) {
-    }
+    public fun validationConfigurations(validationConfigurations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -315,136 +283,136 @@ public open class CfnJob internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnJob.Builder =
         software.amazon.awscdk.services.databrew.CfnJob.Builder.create(scope, id)
 
-    public override fun dataCatalogOutputs(dataCatalogOutputs: IResolvable) {
+    override fun dataCatalogOutputs(dataCatalogOutputs: IResolvable) {
       cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.let(IResolvable::unwrap))
     }
 
-    public override fun dataCatalogOutputs(dataCatalogOutputs: List<Any>) {
+    override fun dataCatalogOutputs(dataCatalogOutputs: List<Any>) {
       cdkBuilder.dataCatalogOutputs(dataCatalogOutputs)
     }
 
-    public override fun databaseOutputs(databaseOutputs: IResolvable) {
+    override fun databaseOutputs(databaseOutputs: IResolvable) {
       cdkBuilder.databaseOutputs(databaseOutputs.let(IResolvable::unwrap))
     }
 
-    public override fun databaseOutputs(databaseOutputs: List<Any>) {
+    override fun databaseOutputs(databaseOutputs: List<Any>) {
       cdkBuilder.databaseOutputs(databaseOutputs)
     }
 
-    public override fun datasetName(datasetName: String) {
+    override fun datasetName(datasetName: String) {
       cdkBuilder.datasetName(datasetName)
     }
 
-    public override fun encryptionKeyArn(encryptionKeyArn: String) {
+    override fun encryptionKeyArn(encryptionKeyArn: String) {
       cdkBuilder.encryptionKeyArn(encryptionKeyArn)
     }
 
-    public override fun encryptionMode(encryptionMode: String) {
+    override fun encryptionMode(encryptionMode: String) {
       cdkBuilder.encryptionMode(encryptionMode)
     }
 
-    public override fun jobSample(jobSample: IResolvable) {
+    override fun jobSample(jobSample: IResolvable) {
       cdkBuilder.jobSample(jobSample.let(IResolvable::unwrap))
     }
 
-    public override fun jobSample(jobSample: JobSampleProperty) {
+    override fun jobSample(jobSample: JobSampleProperty) {
       cdkBuilder.jobSample(jobSample.let(JobSampleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b549f28bb0c6235cf13067784fe0d1308de17069cff35e16d9b73d0d78498494")
-    public override fun jobSample(jobSample: JobSampleProperty.Builder.() -> Unit): Unit =
+    override fun jobSample(jobSample: JobSampleProperty.Builder.() -> Unit): Unit =
         jobSample(JobSampleProperty(jobSample))
 
-    public override fun logSubscription(logSubscription: String) {
+    override fun logSubscription(logSubscription: String) {
       cdkBuilder.logSubscription(logSubscription)
     }
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun maxRetries(maxRetries: Number) {
+    override fun maxRetries(maxRetries: Number) {
       cdkBuilder.maxRetries(maxRetries)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outputLocation(outputLocation: IResolvable) {
+    override fun outputLocation(outputLocation: IResolvable) {
       cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
     }
 
-    public override fun outputLocation(outputLocation: OutputLocationProperty) {
+    override fun outputLocation(outputLocation: OutputLocationProperty) {
       cdkBuilder.outputLocation(outputLocation.let(OutputLocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7075009e7896fa2dac2cb2a0801bb0767f212db5c58846c9c3602666778667af")
-    public override fun outputLocation(outputLocation: OutputLocationProperty.Builder.() -> Unit):
-        Unit = outputLocation(OutputLocationProperty(outputLocation))
+    override fun outputLocation(outputLocation: OutputLocationProperty.Builder.() -> Unit): Unit =
+        outputLocation(OutputLocationProperty(outputLocation))
 
-    public override fun outputs(outputs: IResolvable) {
+    override fun outputs(outputs: IResolvable) {
       cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
     }
 
-    public override fun outputs(outputs: List<Any>) {
+    override fun outputs(outputs: List<Any>) {
       cdkBuilder.outputs(outputs)
     }
 
-    public override fun profileConfiguration(profileConfiguration: IResolvable) {
+    override fun profileConfiguration(profileConfiguration: IResolvable) {
       cdkBuilder.profileConfiguration(profileConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty) {
+    override fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty) {
       cdkBuilder.profileConfiguration(profileConfiguration.let(ProfileConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b51a4b5e47d6827520d89764cd2c50826dc27eb6c70d83a7c6ecd3719514a065")
-    public override
+    override
         fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty.Builder.() -> Unit):
         Unit = profileConfiguration(ProfileConfigurationProperty(profileConfiguration))
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 
-    public override fun recipe(recipe: IResolvable) {
+    override fun recipe(recipe: IResolvable) {
       cdkBuilder.recipe(recipe.let(IResolvable::unwrap))
     }
 
-    public override fun recipe(recipe: RecipeProperty) {
+    override fun recipe(recipe: RecipeProperty) {
       cdkBuilder.recipe(recipe.let(RecipeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0be0d2ffef1642982d7e29c724383ad3e41980a32dd097444e1c1b7186e338fb")
-    public override fun recipe(recipe: RecipeProperty.Builder.() -> Unit): Unit =
+    override fun recipe(recipe: RecipeProperty.Builder.() -> Unit): Unit =
         recipe(RecipeProperty(recipe))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun timeout(timeout: Number) {
+    override fun timeout(timeout: Number) {
       cdkBuilder.timeout(timeout)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun validationConfigurations(validationConfigurations: IResolvable) {
+    override fun validationConfigurations(validationConfigurations: IResolvable) {
       cdkBuilder.validationConfigurations(validationConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun validationConfigurations(validationConfigurations: List<Any>) {
+    override fun validationConfigurations(validationConfigurations: List<Any>) {
       cdkBuilder.validationConfigurations(validationConfigurations)
     }
 
@@ -480,14 +448,11 @@ public open class CfnJob internal constructor(
     public fun key(): String? = unwrap(this).getKey()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun bucketOwner(bucketOwner: String) {
-      }
+      public fun bucketOwner(bucketOwner: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -495,15 +460,15 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun bucketOwner(bucketOwner: String) {
+      override fun bucketOwner(bucketOwner: String) {
         cdkBuilder.bucketOwner(bucketOwner)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -514,11 +479,11 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
     }
 
     public companion object {
@@ -549,14 +514,11 @@ public open class CfnJob internal constructor(
     public fun key(): String? = unwrap(this).getKey()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun bucketOwner(bucketOwner: String) {
-      }
+      public fun bucketOwner(bucketOwner: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -564,15 +526,15 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun bucketOwner(bucketOwner: String) {
+      override fun bucketOwner(bucketOwner: String) {
         cdkBuilder.bucketOwner(bucketOwner)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -584,11 +546,11 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.OutputLocationProperty,
     ) : OutputLocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
     }
 
     public companion object {
@@ -625,43 +587,32 @@ public open class CfnJob internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun databaseOptions(databaseOptions: IResolvable) {
-      }
+      public fun databaseOptions(databaseOptions: IResolvable)
 
-      public fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
-      }
+      public fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce4395f18fa301583c04a5e808f9abda747b3e0e7509e74a92caa05f01ac9e62")
       public
-          fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty.Builder.() -> Unit) {
-      }
+          fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty.Builder.() -> Unit)
 
-      public fun overwrite(overwrite: Boolean) {
-      }
+      public fun overwrite(overwrite: Boolean)
 
-      public fun overwrite(overwrite: IResolvable) {
-      }
+      public fun overwrite(overwrite: IResolvable)
 
-      public fun s3Options(s3Options: IResolvable) {
-      }
+      public fun s3Options(s3Options: IResolvable)
 
-      public fun s3Options(s3Options: S3TableOutputOptionsProperty) {
-      }
+      public fun s3Options(s3Options: S3TableOutputOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1d15bd4718f2f177d93f4a891e11f0dfe436114e63f06eaa7fbc97bab31dbc36")
-      public fun s3Options(s3Options: S3TableOutputOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun s3Options(s3Options: S3TableOutputOptionsProperty.Builder.() -> Unit)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -669,50 +620,50 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun databaseOptions(databaseOptions: IResolvable) {
+      override fun databaseOptions(databaseOptions: IResolvable) {
         cdkBuilder.databaseOptions(databaseOptions.let(IResolvable::unwrap))
       }
 
-      public override fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
+      override fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
         cdkBuilder.databaseOptions(databaseOptions.let(DatabaseTableOutputOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce4395f18fa301583c04a5e808f9abda747b3e0e7509e74a92caa05f01ac9e62")
-      public override
+      override
           fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty.Builder.() -> Unit):
           Unit = databaseOptions(DatabaseTableOutputOptionsProperty(databaseOptions))
 
-      public override fun overwrite(overwrite: Boolean) {
+      override fun overwrite(overwrite: Boolean) {
         cdkBuilder.overwrite(overwrite)
       }
 
-      public override fun overwrite(overwrite: IResolvable) {
+      override fun overwrite(overwrite: IResolvable) {
         cdkBuilder.overwrite(overwrite.let(IResolvable::unwrap))
       }
 
-      public override fun s3Options(s3Options: IResolvable) {
+      override fun s3Options(s3Options: IResolvable) {
         cdkBuilder.s3Options(s3Options.let(IResolvable::unwrap))
       }
 
-      public override fun s3Options(s3Options: S3TableOutputOptionsProperty) {
+      override fun s3Options(s3Options: S3TableOutputOptionsProperty) {
         cdkBuilder.s3Options(s3Options.let(S3TableOutputOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1d15bd4718f2f177d93f4a891e11f0dfe436114e63f06eaa7fbc97bab31dbc36")
-      public override fun s3Options(s3Options: S3TableOutputOptionsProperty.Builder.() -> Unit):
-          Unit = s3Options(S3TableOutputOptionsProperty(s3Options))
+      override fun s3Options(s3Options: S3TableOutputOptionsProperty.Builder.() -> Unit): Unit =
+          s3Options(S3TableOutputOptionsProperty(s3Options))
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -724,17 +675,17 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.DataCatalogOutputProperty,
     ) : DataCatalogOutputProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun databaseOptions(): Any? = unwrap(this).getDatabaseOptions()
+      override fun databaseOptions(): Any? = unwrap(this).getDatabaseOptions()
 
-      public override fun overwrite(): Any? = unwrap(this).getOverwrite()
+      override fun overwrite(): Any? = unwrap(this).getOverwrite()
 
-      public override fun s3Options(): Any? = unwrap(this).getS3Options()
+      override fun s3Options(): Any? = unwrap(this).getS3Options()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -761,8 +712,7 @@ public open class CfnJob internal constructor(
     public fun statistics(): List<String>
 
     public interface Builder {
-      public fun statistics(statistics: List<String>) {
-      }
+      public fun statistics(statistics: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -770,7 +720,7 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty.builder()
 
-      public override fun statistics(statistics: List<String>) {
+      override fun statistics(statistics: List<String>) {
         cdkBuilder.statistics(statistics)
       }
 
@@ -782,7 +732,7 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty,
     ) : AllowedStatisticsProperty {
-      public override fun statistics(): List<String> = unwrap(this).getStatistics() ?: emptyList()
+      override fun statistics(): List<String> = unwrap(this).getStatistics() ?: emptyList()
     }
 
     public companion object {
@@ -811,14 +761,11 @@ public open class CfnJob internal constructor(
     public fun statistic(): String
 
     public interface Builder {
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: Map<String, String>) {
-      }
+      public fun parameters(parameters: Map<String, String>)
 
-      public fun statistic(statistic: String) {
-      }
+      public fun statistic(statistic: String)
     }
 
     private class BuilderImpl : Builder {
@@ -826,15 +773,15 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty.builder()
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: Map<String, String>) {
+      override fun parameters(parameters: Map<String, String>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun statistic(statistic: String) {
+      override fun statistic(statistic: String) {
         cdkBuilder.statistic(statistic)
       }
 
@@ -846,9 +793,9 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.StatisticOverrideProperty,
     ) : StatisticOverrideProperty {
-      public override fun parameters(): Any = unwrap(this).getParameters()
+      override fun parameters(): Any = unwrap(this).getParameters()
 
-      public override fun statistic(): String = unwrap(this).getStatistic()
+      override fun statistic(): String = unwrap(this).getStatistic()
     }
 
     public companion object {
@@ -875,8 +822,7 @@ public open class CfnJob internal constructor(
     public fun delimiter(): String? = unwrap(this).getDelimiter()
 
     public interface Builder {
-      public fun delimiter(delimiter: String) {
-      }
+      public fun delimiter(delimiter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -884,7 +830,7 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty.builder()
 
-      public override fun delimiter(delimiter: String) {
+      override fun delimiter(delimiter: String) {
         cdkBuilder.delimiter(delimiter)
       }
 
@@ -896,7 +842,7 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.CsvOutputOptionsProperty,
     ) : CsvOutputOptionsProperty {
-      public override fun delimiter(): String? = unwrap(this).getDelimiter()
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
     }
 
     public companion object {
@@ -935,99 +881,86 @@ public open class CfnJob internal constructor(
     public fun partitionColumns(): List<String> = unwrap(this).getPartitionColumns() ?: emptyList()
 
     public interface Builder {
-      public fun compressionFormat(compressionFormat: String) {
-      }
+      public fun compressionFormat(compressionFormat: String)
 
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
 
-      public fun formatOptions(formatOptions: IResolvable) {
-      }
+      public fun formatOptions(formatOptions: IResolvable)
 
-      public fun formatOptions(formatOptions: OutputFormatOptionsProperty) {
-      }
+      public fun formatOptions(formatOptions: OutputFormatOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7839962fc021fba29606c84c0c1f2af7c3053d3d71d87a0eccef3a1d43d5a9d8")
-      public fun formatOptions(formatOptions: OutputFormatOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun formatOptions(formatOptions: OutputFormatOptionsProperty.Builder.() -> Unit)
 
-      public fun location(location: IResolvable) {
-      }
+      public fun location(location: IResolvable)
 
-      public fun location(location: S3LocationProperty) {
-      }
+      public fun location(location: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb3769ff3eb925e87f899d0da733430132d44280d763d281c79e8a9563fb072d")
-      public fun location(location: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun location(location: S3LocationProperty.Builder.() -> Unit)
 
-      public fun maxOutputFiles(maxOutputFiles: Number) {
-      }
+      public fun maxOutputFiles(maxOutputFiles: Number)
 
-      public fun overwrite(overwrite: Boolean) {
-      }
+      public fun overwrite(overwrite: Boolean)
 
-      public fun overwrite(overwrite: IResolvable) {
-      }
+      public fun overwrite(overwrite: IResolvable)
 
-      public fun partitionColumns(partitionColumns: List<String>) {
-      }
+      public fun partitionColumns(partitionColumns: List<String>)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnJob.OutputProperty.Builder
           = software.amazon.awscdk.services.databrew.CfnJob.OutputProperty.builder()
 
-      public override fun compressionFormat(compressionFormat: String) {
+      override fun compressionFormat(compressionFormat: String) {
         cdkBuilder.compressionFormat(compressionFormat)
       }
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
-      public override fun formatOptions(formatOptions: IResolvable) {
+      override fun formatOptions(formatOptions: IResolvable) {
         cdkBuilder.formatOptions(formatOptions.let(IResolvable::unwrap))
       }
 
-      public override fun formatOptions(formatOptions: OutputFormatOptionsProperty) {
+      override fun formatOptions(formatOptions: OutputFormatOptionsProperty) {
         cdkBuilder.formatOptions(formatOptions.let(OutputFormatOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7839962fc021fba29606c84c0c1f2af7c3053d3d71d87a0eccef3a1d43d5a9d8")
-      public override
-          fun formatOptions(formatOptions: OutputFormatOptionsProperty.Builder.() -> Unit): Unit =
-          formatOptions(OutputFormatOptionsProperty(formatOptions))
+      override fun formatOptions(formatOptions: OutputFormatOptionsProperty.Builder.() -> Unit):
+          Unit = formatOptions(OutputFormatOptionsProperty(formatOptions))
 
-      public override fun location(location: IResolvable) {
+      override fun location(location: IResolvable) {
         cdkBuilder.location(location.let(IResolvable::unwrap))
       }
 
-      public override fun location(location: S3LocationProperty) {
+      override fun location(location: S3LocationProperty) {
         cdkBuilder.location(location.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb3769ff3eb925e87f899d0da733430132d44280d763d281c79e8a9563fb072d")
-      public override fun location(location: S3LocationProperty.Builder.() -> Unit): Unit =
+      override fun location(location: S3LocationProperty.Builder.() -> Unit): Unit =
           location(S3LocationProperty(location))
 
-      public override fun maxOutputFiles(maxOutputFiles: Number) {
+      override fun maxOutputFiles(maxOutputFiles: Number) {
         cdkBuilder.maxOutputFiles(maxOutputFiles)
       }
 
-      public override fun overwrite(overwrite: Boolean) {
+      override fun overwrite(overwrite: Boolean) {
         cdkBuilder.overwrite(overwrite)
       }
 
-      public override fun overwrite(overwrite: IResolvable) {
+      override fun overwrite(overwrite: IResolvable) {
         cdkBuilder.overwrite(overwrite.let(IResolvable::unwrap))
       }
 
-      public override fun partitionColumns(partitionColumns: List<String>) {
+      override fun partitionColumns(partitionColumns: List<String>) {
         cdkBuilder.partitionColumns(partitionColumns)
       }
 
@@ -1038,19 +971,19 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.OutputProperty,
     ) : OutputProperty {
-      public override fun compressionFormat(): String? = unwrap(this).getCompressionFormat()
+      override fun compressionFormat(): String? = unwrap(this).getCompressionFormat()
 
-      public override fun format(): String? = unwrap(this).getFormat()
+      override fun format(): String? = unwrap(this).getFormat()
 
-      public override fun formatOptions(): Any? = unwrap(this).getFormatOptions()
+      override fun formatOptions(): Any? = unwrap(this).getFormatOptions()
 
-      public override fun location(): Any = unwrap(this).getLocation()
+      override fun location(): Any = unwrap(this).getLocation()
 
-      public override fun maxOutputFiles(): Number? = unwrap(this).getMaxOutputFiles()
+      override fun maxOutputFiles(): Number? = unwrap(this).getMaxOutputFiles()
 
-      public override fun overwrite(): Any? = unwrap(this).getOverwrite()
+      override fun overwrite(): Any? = unwrap(this).getOverwrite()
 
-      public override fun partitionColumns(): List<String> = unwrap(this).getPartitionColumns() ?:
+      override fun partitionColumns(): List<String> = unwrap(this).getPartitionColumns() ?:
           emptyList()
     }
 
@@ -1079,19 +1012,15 @@ public open class CfnJob internal constructor(
     public fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
 
     public interface Builder {
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
 
-      public fun tempDirectory(tempDirectory: IResolvable) {
-      }
+      public fun tempDirectory(tempDirectory: IResolvable)
 
-      public fun tempDirectory(tempDirectory: S3LocationProperty) {
-      }
+      public fun tempDirectory(tempDirectory: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16da935a357eb6c65efef5f0570ae33313458f51bc5d3beef9127fdb6f79a5e0")
-      public fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1100,22 +1029,22 @@ public open class CfnJob internal constructor(
           =
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty.builder()
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
-      public override fun tempDirectory(tempDirectory: IResolvable) {
+      override fun tempDirectory(tempDirectory: IResolvable) {
         cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
       }
 
-      public override fun tempDirectory(tempDirectory: S3LocationProperty) {
+      override fun tempDirectory(tempDirectory: S3LocationProperty) {
         cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16da935a357eb6c65efef5f0570ae33313458f51bc5d3beef9127fdb6f79a5e0")
-      public override fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit): Unit
-          = tempDirectory(S3LocationProperty(tempDirectory))
+      override fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit): Unit =
+          tempDirectory(S3LocationProperty(tempDirectory))
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty =
@@ -1126,9 +1055,9 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseTableOutputOptionsProperty,
     ) : DatabaseTableOutputOptionsProperty {
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
 
-      public override fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
+      override fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
     }
 
     public companion object {
@@ -1158,11 +1087,9 @@ public open class CfnJob internal constructor(
     public fun regex(): String? = unwrap(this).getRegex()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun regex(regex: String) {
-      }
+      public fun regex(regex: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1170,11 +1097,11 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun regex(regex: String) {
+      override fun regex(regex: String) {
         cdkBuilder.regex(regex)
       }
 
@@ -1186,9 +1113,9 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.ColumnSelectorProperty,
     ) : ColumnSelectorProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun regex(): String? = unwrap(this).getRegex()
+      override fun regex(): String? = unwrap(this).getRegex()
     }
 
     public companion object {
@@ -1217,20 +1144,15 @@ public open class CfnJob internal constructor(
     public fun entityTypes(): List<String>
 
     public interface Builder {
-      public fun allowedStatistics(allowedStatistics: IResolvable) {
-      }
+      public fun allowedStatistics(allowedStatistics: IResolvable)
 
-      public fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty) {
-      }
+      public fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("18a52ea22ca052defefa3edb2935f140eea9a62c96d99a18fa5a366cc9a75b9b")
-      public
-          fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty.Builder.() -> Unit) {
-      }
+      public fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty.Builder.() -> Unit)
 
-      public fun entityTypes(entityTypes: List<String>) {
-      }
+      public fun entityTypes(entityTypes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1239,21 +1161,21 @@ public open class CfnJob internal constructor(
           =
           software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty.builder()
 
-      public override fun allowedStatistics(allowedStatistics: IResolvable) {
+      override fun allowedStatistics(allowedStatistics: IResolvable) {
         cdkBuilder.allowedStatistics(allowedStatistics.let(IResolvable::unwrap))
       }
 
-      public override fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty) {
+      override fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty) {
         cdkBuilder.allowedStatistics(allowedStatistics.let(AllowedStatisticsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("18a52ea22ca052defefa3edb2935f140eea9a62c96d99a18fa5a366cc9a75b9b")
-      public override
+      override
           fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty.Builder.() -> Unit):
           Unit = allowedStatistics(AllowedStatisticsProperty(allowedStatistics))
 
-      public override fun entityTypes(entityTypes: List<String>) {
+      override fun entityTypes(entityTypes: List<String>) {
         cdkBuilder.entityTypes(entityTypes)
       }
 
@@ -1266,9 +1188,9 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty,
     ) : EntityDetectorConfigurationProperty {
-      public override fun allowedStatistics(): Any? = unwrap(this).getAllowedStatistics()
+      override fun allowedStatistics(): Any? = unwrap(this).getAllowedStatistics()
 
-      public override fun entityTypes(): List<String> = unwrap(this).getEntityTypes() ?: emptyList()
+      override fun entityTypes(): List<String> = unwrap(this).getEntityTypes() ?: emptyList()
     }
 
     public companion object {
@@ -1298,22 +1220,17 @@ public open class CfnJob internal constructor(
     public fun statistics(): Any
 
     public interface Builder {
-      public fun selectors(selectors: IResolvable) {
-      }
+      public fun selectors(selectors: IResolvable)
 
-      public fun selectors(selectors: List<Any>) {
-      }
+      public fun selectors(selectors: List<Any>)
 
-      public fun statistics(statistics: IResolvable) {
-      }
+      public fun statistics(statistics: IResolvable)
 
-      public fun statistics(statistics: StatisticsConfigurationProperty) {
-      }
+      public fun statistics(statistics: StatisticsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e3072c99b72c101cb44f2aa0c466c22019355c3795b79ee1a50ed0defa76fab")
-      public fun statistics(statistics: StatisticsConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun statistics(statistics: StatisticsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1322,27 +1239,26 @@ public open class CfnJob internal constructor(
           =
           software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty.builder()
 
-      public override fun selectors(selectors: IResolvable) {
+      override fun selectors(selectors: IResolvable) {
         cdkBuilder.selectors(selectors.let(IResolvable::unwrap))
       }
 
-      public override fun selectors(selectors: List<Any>) {
+      override fun selectors(selectors: List<Any>) {
         cdkBuilder.selectors(selectors)
       }
 
-      public override fun statistics(statistics: IResolvable) {
+      override fun statistics(statistics: IResolvable) {
         cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
       }
 
-      public override fun statistics(statistics: StatisticsConfigurationProperty) {
+      override fun statistics(statistics: StatisticsConfigurationProperty) {
         cdkBuilder.statistics(statistics.let(StatisticsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e3072c99b72c101cb44f2aa0c466c22019355c3795b79ee1a50ed0defa76fab")
-      public override
-          fun statistics(statistics: StatisticsConfigurationProperty.Builder.() -> Unit): Unit =
-          statistics(StatisticsConfigurationProperty(statistics))
+      override fun statistics(statistics: StatisticsConfigurationProperty.Builder.() -> Unit): Unit
+          = statistics(StatisticsConfigurationProperty(statistics))
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty =
@@ -1353,9 +1269,9 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.ColumnStatisticsConfigurationProperty,
     ) : ColumnStatisticsConfigurationProperty {
-      public override fun selectors(): Any? = unwrap(this).getSelectors()
+      override fun selectors(): Any? = unwrap(this).getSelectors()
 
-      public override fun statistics(): Any = unwrap(this).getStatistics()
+      override fun statistics(): Any = unwrap(this).getStatistics()
     }
 
     public companion object {
@@ -1385,11 +1301,9 @@ public open class CfnJob internal constructor(
     public fun validationMode(): String? = unwrap(this).getValidationMode()
 
     public interface Builder {
-      public fun rulesetArn(rulesetArn: String) {
-      }
+      public fun rulesetArn(rulesetArn: String)
 
-      public fun validationMode(validationMode: String) {
-      }
+      public fun validationMode(validationMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1397,11 +1311,11 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty.builder()
 
-      public override fun rulesetArn(rulesetArn: String) {
+      override fun rulesetArn(rulesetArn: String) {
         cdkBuilder.rulesetArn(rulesetArn)
       }
 
-      public override fun validationMode(validationMode: String) {
+      override fun validationMode(validationMode: String) {
         cdkBuilder.validationMode(validationMode)
       }
 
@@ -1414,9 +1328,9 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.ValidationConfigurationProperty,
     ) : ValidationConfigurationProperty {
-      public override fun rulesetArn(): String = unwrap(this).getRulesetArn()
+      override fun rulesetArn(): String = unwrap(this).getRulesetArn()
 
-      public override fun validationMode(): String? = unwrap(this).getValidationMode()
+      override fun validationMode(): String? = unwrap(this).getValidationMode()
     }
 
     public companion object {
@@ -1445,22 +1359,20 @@ public open class CfnJob internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty.Builder
           = software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -1471,9 +1383,9 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.RecipeProperty,
     ) : RecipeProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -1502,14 +1414,11 @@ public open class CfnJob internal constructor(
     public fun overrides(): Any? = unwrap(this).getOverrides()
 
     public interface Builder {
-      public fun includedStatistics(includedStatistics: List<String>) {
-      }
+      public fun includedStatistics(includedStatistics: List<String>)
 
-      public fun overrides(overrides: IResolvable) {
-      }
+      public fun overrides(overrides: IResolvable)
 
-      public fun overrides(overrides: List<Any>) {
-      }
+      public fun overrides(overrides: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1517,15 +1426,15 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty.builder()
 
-      public override fun includedStatistics(includedStatistics: List<String>) {
+      override fun includedStatistics(includedStatistics: List<String>) {
         cdkBuilder.includedStatistics(includedStatistics)
       }
 
-      public override fun overrides(overrides: IResolvable) {
+      override fun overrides(overrides: IResolvable) {
         cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
       }
 
-      public override fun overrides(overrides: List<Any>) {
+      override fun overrides(overrides: List<Any>) {
         cdkBuilder.overrides(overrides)
       }
 
@@ -1538,10 +1447,10 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty,
     ) : StatisticsConfigurationProperty {
-      public override fun includedStatistics(): List<String> = unwrap(this).getIncludedStatistics()
-          ?: emptyList()
+      override fun includedStatistics(): List<String> = unwrap(this).getIncludedStatistics() ?:
+          emptyList()
 
-      public override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun overrides(): Any? = unwrap(this).getOverrides()
     }
 
     public companion object {
@@ -1576,43 +1485,33 @@ public open class CfnJob internal constructor(
     public fun profileColumns(): Any? = unwrap(this).getProfileColumns()
 
     public interface Builder {
-      public fun columnStatisticsConfigurations(columnStatisticsConfigurations: IResolvable) {
-      }
+      public fun columnStatisticsConfigurations(columnStatisticsConfigurations: IResolvable)
 
-      public fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>) {
-      }
+      public fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>)
 
-      public fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable) {
-      }
+      public fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable)
 
       public
-          fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty) {
-      }
+          fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("061b787e24cb4e82818805cf79278644db54356267fc0bbd8a69fde1df2ef0b3")
       public
-          fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty.Builder.() -> Unit)
 
-      public fun entityDetectorConfiguration(entityDetectorConfiguration: IResolvable) {
-      }
+      public fun entityDetectorConfiguration(entityDetectorConfiguration: IResolvable)
 
       public
-          fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty) {
-      }
+          fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8c051fde2cc8b2e6f39eb2dfc10b577b234699d332c2cf2842df9692a0e5d01")
       public
-          fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty.Builder.() -> Unit)
 
-      public fun profileColumns(profileColumns: IResolvable) {
-      }
+      public fun profileColumns(profileColumns: IResolvable)
 
-      public fun profileColumns(profileColumns: List<Any>) {
-      }
+      public fun profileColumns(profileColumns: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1620,54 +1519,51 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty.builder()
 
-      public override
-          fun columnStatisticsConfigurations(columnStatisticsConfigurations: IResolvable) {
+      override fun columnStatisticsConfigurations(columnStatisticsConfigurations: IResolvable) {
         cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations.let(IResolvable::unwrap))
       }
 
-      public override
-          fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>) {
+      override fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>) {
         cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations)
       }
 
-      public override
-          fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable) {
+      override fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable) {
         cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty) {
         cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(StatisticsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("061b787e24cb4e82818805cf79278644db54356267fc0bbd8a69fde1df2ef0b3")
-      public override
+      override
           fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty.Builder.() -> Unit):
           Unit =
           datasetStatisticsConfiguration(StatisticsConfigurationProperty(datasetStatisticsConfiguration))
 
-      public override fun entityDetectorConfiguration(entityDetectorConfiguration: IResolvable) {
+      override fun entityDetectorConfiguration(entityDetectorConfiguration: IResolvable) {
         cdkBuilder.entityDetectorConfiguration(entityDetectorConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty) {
         cdkBuilder.entityDetectorConfiguration(entityDetectorConfiguration.let(EntityDetectorConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8c051fde2cc8b2e6f39eb2dfc10b577b234699d332c2cf2842df9692a0e5d01")
-      public override
+      override
           fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty.Builder.() -> Unit):
           Unit =
           entityDetectorConfiguration(EntityDetectorConfigurationProperty(entityDetectorConfiguration))
 
-      public override fun profileColumns(profileColumns: IResolvable) {
+      override fun profileColumns(profileColumns: IResolvable) {
         cdkBuilder.profileColumns(profileColumns.let(IResolvable::unwrap))
       }
 
-      public override fun profileColumns(profileColumns: List<Any>) {
+      override fun profileColumns(profileColumns: List<Any>) {
         cdkBuilder.profileColumns(profileColumns)
       }
 
@@ -1680,16 +1576,16 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty,
     ) : ProfileConfigurationProperty {
-      public override fun columnStatisticsConfigurations(): Any? =
+      override fun columnStatisticsConfigurations(): Any? =
           unwrap(this).getColumnStatisticsConfigurations()
 
-      public override fun datasetStatisticsConfiguration(): Any? =
+      override fun datasetStatisticsConfiguration(): Any? =
           unwrap(this).getDatasetStatisticsConfiguration()
 
-      public override fun entityDetectorConfiguration(): Any? =
+      override fun entityDetectorConfiguration(): Any? =
           unwrap(this).getEntityDetectorConfiguration()
 
-      public override fun profileColumns(): Any? = unwrap(this).getProfileColumns()
+      override fun profileColumns(): Any? = unwrap(this).getProfileColumns()
     }
 
     public companion object {
@@ -1716,16 +1612,13 @@ public open class CfnJob internal constructor(
     public fun csv(): Any? = unwrap(this).getCsv()
 
     public interface Builder {
-      public fun csv(csv: IResolvable) {
-      }
+      public fun csv(csv: IResolvable)
 
-      public fun csv(csv: CsvOutputOptionsProperty) {
-      }
+      public fun csv(csv: CsvOutputOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7b05105eb14aeeb56d1114d1c8589bd24eed2eb4796c6cbab8243e92129ebabe")
-      public fun csv(csv: CsvOutputOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun csv(csv: CsvOutputOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1733,17 +1626,17 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty.builder()
 
-      public override fun csv(csv: IResolvable) {
+      override fun csv(csv: IResolvable) {
         cdkBuilder.csv(csv.let(IResolvable::unwrap))
       }
 
-      public override fun csv(csv: CsvOutputOptionsProperty) {
+      override fun csv(csv: CsvOutputOptionsProperty) {
         cdkBuilder.csv(csv.let(CsvOutputOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7b05105eb14aeeb56d1114d1c8589bd24eed2eb4796c6cbab8243e92129ebabe")
-      public override fun csv(csv: CsvOutputOptionsProperty.Builder.() -> Unit): Unit =
+      override fun csv(csv: CsvOutputOptionsProperty.Builder.() -> Unit): Unit =
           csv(CsvOutputOptionsProperty(csv))
 
       public fun build():
@@ -1755,7 +1648,7 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.OutputFormatOptionsProperty,
     ) : OutputFormatOptionsProperty {
-      public override fun csv(): Any? = unwrap(this).getCsv()
+      override fun csv(): Any? = unwrap(this).getCsv()
     }
 
     public companion object {
@@ -1782,16 +1675,13 @@ public open class CfnJob internal constructor(
     public fun location(): Any
 
     public interface Builder {
-      public fun location(location: IResolvable) {
-      }
+      public fun location(location: IResolvable)
 
-      public fun location(location: S3LocationProperty) {
-      }
+      public fun location(location: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d68267f60a07432aaee729323c11d3267babe697374b61028568ea043fcd158")
-      public fun location(location: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun location(location: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1799,17 +1689,17 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty.builder()
 
-      public override fun location(location: IResolvable) {
+      override fun location(location: IResolvable) {
         cdkBuilder.location(location.let(IResolvable::unwrap))
       }
 
-      public override fun location(location: S3LocationProperty) {
+      override fun location(location: S3LocationProperty) {
         cdkBuilder.location(location.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d68267f60a07432aaee729323c11d3267babe697374b61028568ea043fcd158")
-      public override fun location(location: S3LocationProperty.Builder.() -> Unit): Unit =
+      override fun location(location: S3LocationProperty.Builder.() -> Unit): Unit =
           location(S3LocationProperty(location))
 
       public fun build():
@@ -1821,7 +1711,7 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.S3TableOutputOptionsProperty,
     ) : S3TableOutputOptionsProperty {
-      public override fun location(): Any = unwrap(this).getLocation()
+      override fun location(): Any = unwrap(this).getLocation()
     }
 
     public companion object {
@@ -1852,23 +1742,18 @@ public open class CfnJob internal constructor(
     public fun glueConnectionName(): String
 
     public interface Builder {
-      public fun databaseOptions(databaseOptions: IResolvable) {
-      }
+      public fun databaseOptions(databaseOptions: IResolvable)
 
-      public fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
-      }
+      public fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1196af73934d09b1eecaedbf7ed5c6b2c76ac68dbb90adcf21f73f65f421c7b5")
       public
-          fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty.Builder.() -> Unit) {
-      }
+          fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty.Builder.() -> Unit)
 
-      public fun databaseOutputMode(databaseOutputMode: String) {
-      }
+      public fun databaseOutputMode(databaseOutputMode: String)
 
-      public fun glueConnectionName(glueConnectionName: String) {
-      }
+      public fun glueConnectionName(glueConnectionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1876,25 +1761,25 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty.builder()
 
-      public override fun databaseOptions(databaseOptions: IResolvable) {
+      override fun databaseOptions(databaseOptions: IResolvable) {
         cdkBuilder.databaseOptions(databaseOptions.let(IResolvable::unwrap))
       }
 
-      public override fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
+      override fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
         cdkBuilder.databaseOptions(databaseOptions.let(DatabaseTableOutputOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1196af73934d09b1eecaedbf7ed5c6b2c76ac68dbb90adcf21f73f65f421c7b5")
-      public override
+      override
           fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty.Builder.() -> Unit):
           Unit = databaseOptions(DatabaseTableOutputOptionsProperty(databaseOptions))
 
-      public override fun databaseOutputMode(databaseOutputMode: String) {
+      override fun databaseOutputMode(databaseOutputMode: String) {
         cdkBuilder.databaseOutputMode(databaseOutputMode)
       }
 
-      public override fun glueConnectionName(glueConnectionName: String) {
+      override fun glueConnectionName(glueConnectionName: String) {
         cdkBuilder.glueConnectionName(glueConnectionName)
       }
 
@@ -1906,11 +1791,11 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.DatabaseOutputProperty,
     ) : DatabaseOutputProperty {
-      public override fun databaseOptions(): Any = unwrap(this).getDatabaseOptions()
+      override fun databaseOptions(): Any = unwrap(this).getDatabaseOptions()
 
-      public override fun databaseOutputMode(): String? = unwrap(this).getDatabaseOutputMode()
+      override fun databaseOutputMode(): String? = unwrap(this).getDatabaseOutputMode()
 
-      public override fun glueConnectionName(): String = unwrap(this).getGlueConnectionName()
+      override fun glueConnectionName(): String = unwrap(this).getGlueConnectionName()
     }
 
     public companion object {
@@ -1939,11 +1824,9 @@ public open class CfnJob internal constructor(
     public fun size(): Number? = unwrap(this).getSize()
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1951,11 +1834,11 @@ public open class CfnJob internal constructor(
           software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
@@ -1966,9 +1849,9 @@ public open class CfnJob internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnJob.JobSampleProperty,
     ) : JobSampleProperty {
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
 
-      public override fun size(): Number? = unwrap(this).getSize()
+      override fun size(): Number? = unwrap(this).getSize()
     }
 
     public companion object {

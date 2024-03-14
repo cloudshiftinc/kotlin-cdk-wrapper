@@ -92,40 +92,29 @@ public open class CfnContainer internal constructor(
   }
 
   public interface Builder {
-    public fun accessLoggingEnabled(accessLoggingEnabled: Boolean) {
-    }
+    public fun accessLoggingEnabled(accessLoggingEnabled: Boolean)
 
-    public fun accessLoggingEnabled(accessLoggingEnabled: IResolvable) {
-    }
+    public fun accessLoggingEnabled(accessLoggingEnabled: IResolvable)
 
-    public fun containerName(containerName: String) {
-    }
+    public fun containerName(containerName: String)
 
-    public fun corsPolicy(corsPolicy: IResolvable) {
-    }
+    public fun corsPolicy(corsPolicy: IResolvable)
 
-    public fun corsPolicy(corsPolicy: List<Any>) {
-    }
+    public fun corsPolicy(corsPolicy: List<Any>)
 
-    public fun lifecyclePolicy(lifecyclePolicy: String) {
-    }
+    public fun lifecyclePolicy(lifecyclePolicy: String)
 
-    public fun metricPolicy(metricPolicy: IResolvable) {
-    }
+    public fun metricPolicy(metricPolicy: IResolvable)
 
-    public fun metricPolicy(metricPolicy: MetricPolicyProperty) {
-    }
+    public fun metricPolicy(metricPolicy: MetricPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e37cc4c8bc6c719112c42e2773256cdec9ad280b8934023a1763cc5845c8f29a")
-    public fun metricPolicy(metricPolicy: MetricPolicyProperty.Builder.() -> Unit) {
-    }
+    public fun metricPolicy(metricPolicy: MetricPolicyProperty.Builder.() -> Unit)
 
-    public fun policy(policy: String) {
-    }
+    public fun policy(policy: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -135,48 +124,48 @@ public open class CfnContainer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediastore.CfnContainer.Builder =
         software.amazon.awscdk.services.mediastore.CfnContainer.Builder.create(scope, id)
 
-    public override fun accessLoggingEnabled(accessLoggingEnabled: Boolean) {
+    override fun accessLoggingEnabled(accessLoggingEnabled: Boolean) {
       cdkBuilder.accessLoggingEnabled(accessLoggingEnabled)
     }
 
-    public override fun accessLoggingEnabled(accessLoggingEnabled: IResolvable) {
+    override fun accessLoggingEnabled(accessLoggingEnabled: IResolvable) {
       cdkBuilder.accessLoggingEnabled(accessLoggingEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun containerName(containerName: String) {
+    override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
     }
 
-    public override fun corsPolicy(corsPolicy: IResolvable) {
+    override fun corsPolicy(corsPolicy: IResolvable) {
       cdkBuilder.corsPolicy(corsPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun corsPolicy(corsPolicy: List<Any>) {
+    override fun corsPolicy(corsPolicy: List<Any>) {
       cdkBuilder.corsPolicy(corsPolicy)
     }
 
-    public override fun lifecyclePolicy(lifecyclePolicy: String) {
+    override fun lifecyclePolicy(lifecyclePolicy: String) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy)
     }
 
-    public override fun metricPolicy(metricPolicy: IResolvable) {
+    override fun metricPolicy(metricPolicy: IResolvable) {
       cdkBuilder.metricPolicy(metricPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun metricPolicy(metricPolicy: MetricPolicyProperty) {
+    override fun metricPolicy(metricPolicy: MetricPolicyProperty) {
       cdkBuilder.metricPolicy(metricPolicy.let(MetricPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e37cc4c8bc6c719112c42e2773256cdec9ad280b8934023a1763cc5845c8f29a")
-    public override fun metricPolicy(metricPolicy: MetricPolicyProperty.Builder.() -> Unit): Unit =
+    override fun metricPolicy(metricPolicy: MetricPolicyProperty.Builder.() -> Unit): Unit =
         metricPolicy(MetricPolicyProperty(metricPolicy))
 
-    public override fun policy(policy: String) {
+    override fun policy(policy: String) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -210,11 +199,9 @@ public open class CfnContainer internal constructor(
     public fun objectGroupName(): String
 
     public interface Builder {
-      public fun objectGroup(objectGroup: String) {
-      }
+      public fun objectGroup(objectGroup: String)
 
-      public fun objectGroupName(objectGroupName: String) {
-      }
+      public fun objectGroupName(objectGroupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -222,11 +209,11 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty.Builder =
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty.builder()
 
-      public override fun objectGroup(objectGroup: String) {
+      override fun objectGroup(objectGroup: String) {
         cdkBuilder.objectGroup(objectGroup)
       }
 
-      public override fun objectGroupName(objectGroupName: String) {
+      override fun objectGroupName(objectGroupName: String) {
         cdkBuilder.objectGroupName(objectGroupName)
       }
 
@@ -239,9 +226,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyRuleProperty,
     ) : MetricPolicyRuleProperty {
-      public override fun objectGroup(): String = unwrap(this).getObjectGroup()
+      override fun objectGroup(): String = unwrap(this).getObjectGroup()
 
-      public override fun objectGroupName(): String = unwrap(this).getObjectGroupName()
+      override fun objectGroupName(): String = unwrap(this).getObjectGroupName()
     }
 
     public companion object {
@@ -270,14 +257,11 @@ public open class CfnContainer internal constructor(
     public fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
 
     public interface Builder {
-      public fun containerLevelMetrics(containerLevelMetrics: String) {
-      }
+      public fun containerLevelMetrics(containerLevelMetrics: String)
 
-      public fun metricPolicyRules(metricPolicyRules: IResolvable) {
-      }
+      public fun metricPolicyRules(metricPolicyRules: IResolvable)
 
-      public fun metricPolicyRules(metricPolicyRules: List<Any>) {
-      }
+      public fun metricPolicyRules(metricPolicyRules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -285,15 +269,15 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty.Builder =
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty.builder()
 
-      public override fun containerLevelMetrics(containerLevelMetrics: String) {
+      override fun containerLevelMetrics(containerLevelMetrics: String) {
         cdkBuilder.containerLevelMetrics(containerLevelMetrics)
       }
 
-      public override fun metricPolicyRules(metricPolicyRules: IResolvable) {
+      override fun metricPolicyRules(metricPolicyRules: IResolvable) {
         cdkBuilder.metricPolicyRules(metricPolicyRules.let(IResolvable::unwrap))
       }
 
-      public override fun metricPolicyRules(metricPolicyRules: List<Any>) {
+      override fun metricPolicyRules(metricPolicyRules: List<Any>) {
         cdkBuilder.metricPolicyRules(metricPolicyRules)
       }
 
@@ -306,9 +290,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty,
     ) : MetricPolicyProperty {
-      public override fun containerLevelMetrics(): String = unwrap(this).getContainerLevelMetrics()
+      override fun containerLevelMetrics(): String = unwrap(this).getContainerLevelMetrics()
 
-      public override fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
+      override fun metricPolicyRules(): Any? = unwrap(this).getMetricPolicyRules()
     }
 
     public companion object {
@@ -343,20 +327,15 @@ public open class CfnContainer internal constructor(
     public fun maxAgeSeconds(): Number? = unwrap(this).getMaxAgeSeconds()
 
     public interface Builder {
-      public fun allowedHeaders(allowedHeaders: List<String>) {
-      }
+      public fun allowedHeaders(allowedHeaders: List<String>)
 
-      public fun allowedMethods(allowedMethods: List<String>) {
-      }
+      public fun allowedMethods(allowedMethods: List<String>)
 
-      public fun allowedOrigins(allowedOrigins: List<String>) {
-      }
+      public fun allowedOrigins(allowedOrigins: List<String>)
 
-      public fun exposeHeaders(exposeHeaders: List<String>) {
-      }
+      public fun exposeHeaders(exposeHeaders: List<String>)
 
-      public fun maxAgeSeconds(maxAgeSeconds: Number) {
-      }
+      public fun maxAgeSeconds(maxAgeSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -364,23 +343,23 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty.Builder =
           software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty.builder()
 
-      public override fun allowedHeaders(allowedHeaders: List<String>) {
+      override fun allowedHeaders(allowedHeaders: List<String>) {
         cdkBuilder.allowedHeaders(allowedHeaders)
       }
 
-      public override fun allowedMethods(allowedMethods: List<String>) {
+      override fun allowedMethods(allowedMethods: List<String>) {
         cdkBuilder.allowedMethods(allowedMethods)
       }
 
-      public override fun allowedOrigins(allowedOrigins: List<String>) {
+      override fun allowedOrigins(allowedOrigins: List<String>) {
         cdkBuilder.allowedOrigins(allowedOrigins)
       }
 
-      public override fun exposeHeaders(exposeHeaders: List<String>) {
+      override fun exposeHeaders(exposeHeaders: List<String>) {
         cdkBuilder.exposeHeaders(exposeHeaders)
       }
 
-      public override fun maxAgeSeconds(maxAgeSeconds: Number) {
+      override fun maxAgeSeconds(maxAgeSeconds: Number) {
         cdkBuilder.maxAgeSeconds(maxAgeSeconds)
       }
 
@@ -392,19 +371,15 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediastore.CfnContainer.CorsRuleProperty,
     ) : CorsRuleProperty {
-      public override fun allowedHeaders(): List<String> = unwrap(this).getAllowedHeaders() ?:
-          emptyList()
+      override fun allowedHeaders(): List<String> = unwrap(this).getAllowedHeaders() ?: emptyList()
 
-      public override fun allowedMethods(): List<String> = unwrap(this).getAllowedMethods() ?:
-          emptyList()
+      override fun allowedMethods(): List<String> = unwrap(this).getAllowedMethods() ?: emptyList()
 
-      public override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins() ?:
-          emptyList()
+      override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins() ?: emptyList()
 
-      public override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?:
-          emptyList()
+      override fun exposeHeaders(): List<String> = unwrap(this).getExposeHeaders() ?: emptyList()
 
-      public override fun maxAgeSeconds(): Number? = unwrap(this).getMaxAgeSeconds()
+      override fun maxAgeSeconds(): Number? = unwrap(this).getMaxAgeSeconds()
     }
 
     public companion object {

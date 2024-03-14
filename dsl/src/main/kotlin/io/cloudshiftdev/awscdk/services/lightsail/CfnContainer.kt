@@ -113,54 +113,40 @@ public open class CfnContainer internal constructor(
   }
 
   public interface Builder {
-    public fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
-    }
+    public fun containerServiceDeployment(containerServiceDeployment: IResolvable)
 
     public
-        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty) {
-    }
+        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("910de1d67437b07873e857602657233912e64a04b1bd95e036f3e6b94de73148")
     public
-        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit) {
-    }
+        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit)
 
-    public fun isDisabled(isDisabled: Boolean) {
-    }
+    public fun isDisabled(isDisabled: Boolean)
 
-    public fun isDisabled(isDisabled: IResolvable) {
-    }
+    public fun isDisabled(isDisabled: IResolvable)
 
-    public fun power(power: String) {
-    }
+    public fun power(power: String)
 
-    public fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
-    }
+    public fun privateRegistryAccess(privateRegistryAccess: IResolvable)
 
-    public fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty) {
-    }
+    public fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51d988934b3c0025c7ccb6fe2246ff1029e269c5028299f7e8ee97c8f8ce44eb")
     public
-        fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit) {
-    }
+        fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit)
 
-    public fun publicDomainNames(publicDomainNames: IResolvable) {
-    }
+    public fun publicDomainNames(publicDomainNames: IResolvable)
 
-    public fun publicDomainNames(publicDomainNames: List<Any>) {
-    }
+    public fun publicDomainNames(publicDomainNames: List<Any>)
 
-    public fun scale(scale: Number) {
-    }
+    public fun scale(scale: Number)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -170,66 +156,65 @@ public open class CfnContainer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnContainer.Builder =
         software.amazon.awscdk.services.lightsail.CfnContainer.Builder.create(scope, id)
 
-    public override fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
+    override fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
       cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty) {
       cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(ContainerServiceDeploymentProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("910de1d67437b07873e857602657233912e64a04b1bd95e036f3e6b94de73148")
-    public override
+    override
         fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit):
         Unit =
         containerServiceDeployment(ContainerServiceDeploymentProperty(containerServiceDeployment))
 
-    public override fun isDisabled(isDisabled: Boolean) {
+    override fun isDisabled(isDisabled: Boolean) {
       cdkBuilder.isDisabled(isDisabled)
     }
 
-    public override fun isDisabled(isDisabled: IResolvable) {
+    override fun isDisabled(isDisabled: IResolvable) {
       cdkBuilder.isDisabled(isDisabled.let(IResolvable::unwrap))
     }
 
-    public override fun power(power: String) {
+    override fun power(power: String) {
       cdkBuilder.power(power)
     }
 
-    public override fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
+    override fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
       cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable::unwrap))
     }
 
-    public override
-        fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty) {
+    override fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty) {
       cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(PrivateRegistryAccessProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51d988934b3c0025c7ccb6fe2246ff1029e269c5028299f7e8ee97c8f8ce44eb")
-    public override
+    override
         fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit):
         Unit = privateRegistryAccess(PrivateRegistryAccessProperty(privateRegistryAccess))
 
-    public override fun publicDomainNames(publicDomainNames: IResolvable) {
+    override fun publicDomainNames(publicDomainNames: IResolvable) {
       cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable::unwrap))
     }
 
-    public override fun publicDomainNames(publicDomainNames: List<Any>) {
+    override fun publicDomainNames(publicDomainNames: List<Any>) {
       cdkBuilder.publicDomainNames(publicDomainNames)
     }
 
-    public override fun scale(scale: Number) {
+    override fun scale(scale: Number) {
       cdkBuilder.scale(scale)
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -261,17 +246,14 @@ public open class CfnContainer internal constructor(
     public fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
 
     public interface Builder {
-      public fun ecrImagePullerRole(ecrImagePullerRole: IResolvable) {
-      }
+      public fun ecrImagePullerRole(ecrImagePullerRole: IResolvable)
 
-      public fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty) {
-      }
+      public fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fa629e212b634adb107bf727e15842e667ed1f17f336bacee57bd0201774c2b2")
       public
-          fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit) {
-      }
+          fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -280,17 +262,17 @@ public open class CfnContainer internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty.builder()
 
-      public override fun ecrImagePullerRole(ecrImagePullerRole: IResolvable) {
+      override fun ecrImagePullerRole(ecrImagePullerRole: IResolvable) {
         cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty) {
+      override fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty) {
         cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(EcrImagePullerRoleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fa629e212b634adb107bf727e15842e667ed1f17f336bacee57bd0201774c2b2")
-      public override
+      override
           fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit):
           Unit = ecrImagePullerRole(EcrImagePullerRoleProperty(ecrImagePullerRole))
 
@@ -303,7 +285,7 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty,
     ) : PrivateRegistryAccessProperty {
-      public override fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
+      override fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
     }
 
     public companion object {
@@ -332,11 +314,9 @@ public open class CfnContainer internal constructor(
     public fun variable(): String? = unwrap(this).getVariable()
 
     public interface Builder {
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
 
-      public fun variable(variable: String) {
-      }
+      public fun variable(variable: String)
     }
 
     private class BuilderImpl : Builder {
@@ -345,11 +325,11 @@ public open class CfnContainer internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty.builder()
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
-      public override fun variable(variable: String) {
+      override fun variable(variable: String) {
         cdkBuilder.variable(variable)
       }
 
@@ -362,9 +342,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty,
     ) : EnvironmentVariableProperty {
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
 
-      public override fun variable(): String? = unwrap(this).getVariable()
+      override fun variable(): String? = unwrap(this).getVariable()
     }
 
     public companion object {
@@ -393,11 +373,9 @@ public open class CfnContainer internal constructor(
     public fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
 
     public interface Builder {
-      public fun certificateName(certificateName: String) {
-      }
+      public fun certificateName(certificateName: String)
 
-      public fun domainNames(domainNames: List<String>) {
-      }
+      public fun domainNames(domainNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -405,11 +383,11 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty.builder()
 
-      public override fun certificateName(certificateName: String) {
+      override fun certificateName(certificateName: String) {
         cdkBuilder.certificateName(certificateName)
       }
 
-      public override fun domainNames(domainNames: List<String>) {
+      override fun domainNames(domainNames: List<String>) {
         cdkBuilder.domainNames(domainNames)
       }
 
@@ -422,9 +400,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty,
     ) : PublicDomainNameProperty {
-      public override fun certificateName(): String? = unwrap(this).getCertificateName()
+      override fun certificateName(): String? = unwrap(this).getCertificateName()
 
-      public override fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
+      override fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
     }
 
     public companion object {
@@ -453,14 +431,11 @@ public open class CfnContainer internal constructor(
     public fun principalArn(): String? = unwrap(this).getPrincipalArn()
 
     public interface Builder {
-      public fun isActive(isActive: Boolean) {
-      }
+      public fun isActive(isActive: Boolean)
 
-      public fun isActive(isActive: IResolvable) {
-      }
+      public fun isActive(isActive: IResolvable)
 
-      public fun principalArn(principalArn: String) {
-      }
+      public fun principalArn(principalArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -469,15 +444,15 @@ public open class CfnContainer internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty.builder()
 
-      public override fun isActive(isActive: Boolean) {
+      override fun isActive(isActive: Boolean) {
         cdkBuilder.isActive(isActive)
       }
 
-      public override fun isActive(isActive: IResolvable) {
+      override fun isActive(isActive: IResolvable) {
         cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
       }
 
-      public override fun principalArn(principalArn: String) {
+      override fun principalArn(principalArn: String) {
         cdkBuilder.principalArn(principalArn)
       }
 
@@ -490,9 +465,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty,
     ) : EcrImagePullerRoleProperty {
-      public override fun isActive(): Any? = unwrap(this).getIsActive()
+      override fun isActive(): Any? = unwrap(this).getIsActive()
 
-      public override fun principalArn(): String? = unwrap(this).getPrincipalArn()
+      override fun principalArn(): String? = unwrap(this).getPrincipalArn()
     }
 
     public companion object {
@@ -521,11 +496,9 @@ public open class CfnContainer internal constructor(
     public fun protocol(): String? = unwrap(this).getProtocol()
 
     public interface Builder {
-      public fun port(port: String) {
-      }
+      public fun port(port: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -533,11 +506,11 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty.builder()
 
-      public override fun port(port: String) {
+      override fun port(port: String) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -549,9 +522,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty,
     ) : PortInfoProperty {
-      public override fun port(): String? = unwrap(this).getPort()
+      override fun port(): String? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
     }
 
     public companion object {
@@ -586,26 +559,19 @@ public open class CfnContainer internal constructor(
     public fun ports(): Any? = unwrap(this).getPorts()
 
     public interface Builder {
-      public fun command(command: List<String>) {
-      }
+      public fun command(command: List<String>)
 
-      public fun containerName(containerName: String) {
-      }
+      public fun containerName(containerName: String)
 
-      public fun environment(environment: IResolvable) {
-      }
+      public fun environment(environment: IResolvable)
 
-      public fun environment(environment: List<Any>) {
-      }
+      public fun environment(environment: List<Any>)
 
-      public fun image(image: String) {
-      }
+      public fun image(image: String)
 
-      public fun ports(ports: IResolvable) {
-      }
+      public fun ports(ports: IResolvable)
 
-      public fun ports(ports: List<Any>) {
-      }
+      public fun ports(ports: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -613,31 +579,31 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty.builder()
 
-      public override fun command(command: List<String>) {
+      override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
 
-      public override fun containerName(containerName: String) {
+      override fun containerName(containerName: String) {
         cdkBuilder.containerName(containerName)
       }
 
-      public override fun environment(environment: IResolvable) {
+      override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
       }
 
-      public override fun environment(environment: List<Any>) {
+      override fun environment(environment: List<Any>) {
         cdkBuilder.environment(environment)
       }
 
-      public override fun image(image: String) {
+      override fun image(image: String) {
         cdkBuilder.image(image)
       }
 
-      public override fun ports(ports: IResolvable) {
+      override fun ports(ports: IResolvable) {
         cdkBuilder.ports(ports.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: List<Any>) {
+      override fun ports(ports: List<Any>) {
         cdkBuilder.ports(ports)
       }
 
@@ -649,15 +615,15 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty,
     ) : ContainerProperty {
-      public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-      public override fun containerName(): String? = unwrap(this).getContainerName()
+      override fun containerName(): String? = unwrap(this).getContainerName()
 
-      public override fun environment(): Any? = unwrap(this).getEnvironment()
+      override fun environment(): Any? = unwrap(this).getEnvironment()
 
-      public override fun image(): String? = unwrap(this).getImage()
+      override fun image(): String? = unwrap(this).getImage()
 
-      public override fun ports(): Any? = unwrap(this).getPorts()
+      override fun ports(): Any? = unwrap(this).getPorts()
     }
 
     public companion object {
@@ -694,23 +660,17 @@ public open class CfnContainer internal constructor(
     public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
 
     public interface Builder {
-      public fun healthyThreshold(healthyThreshold: Number) {
-      }
+      public fun healthyThreshold(healthyThreshold: Number)
 
-      public fun intervalSeconds(intervalSeconds: Number) {
-      }
+      public fun intervalSeconds(intervalSeconds: Number)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun successCodes(successCodes: String) {
-      }
+      public fun successCodes(successCodes: String)
 
-      public fun timeoutSeconds(timeoutSeconds: Number) {
-      }
+      public fun timeoutSeconds(timeoutSeconds: Number)
 
-      public fun unhealthyThreshold(unhealthyThreshold: Number) {
-      }
+      public fun unhealthyThreshold(unhealthyThreshold: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -718,27 +678,27 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty.builder()
 
-      public override fun healthyThreshold(healthyThreshold: Number) {
+      override fun healthyThreshold(healthyThreshold: Number) {
         cdkBuilder.healthyThreshold(healthyThreshold)
       }
 
-      public override fun intervalSeconds(intervalSeconds: Number) {
+      override fun intervalSeconds(intervalSeconds: Number) {
         cdkBuilder.intervalSeconds(intervalSeconds)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun successCodes(successCodes: String) {
+      override fun successCodes(successCodes: String) {
         cdkBuilder.successCodes(successCodes)
       }
 
-      public override fun timeoutSeconds(timeoutSeconds: Number) {
+      override fun timeoutSeconds(timeoutSeconds: Number) {
         cdkBuilder.timeoutSeconds(timeoutSeconds)
       }
 
-      public override fun unhealthyThreshold(unhealthyThreshold: Number) {
+      override fun unhealthyThreshold(unhealthyThreshold: Number) {
         cdkBuilder.unhealthyThreshold(unhealthyThreshold)
       }
 
@@ -751,17 +711,17 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty,
     ) : HealthCheckConfigProperty {
-      public override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+      override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
 
-      public override fun intervalSeconds(): Number? = unwrap(this).getIntervalSeconds()
+      override fun intervalSeconds(): Number? = unwrap(this).getIntervalSeconds()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun successCodes(): String? = unwrap(this).getSuccessCodes()
+      override fun successCodes(): String? = unwrap(this).getSuccessCodes()
 
-      public override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+      override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
 
-      public override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+      override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
     }
 
     public companion object {
@@ -790,22 +750,17 @@ public open class CfnContainer internal constructor(
     public fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
 
     public interface Builder {
-      public fun containers(containers: IResolvable) {
-      }
+      public fun containers(containers: IResolvable)
 
-      public fun containers(containers: List<Any>) {
-      }
+      public fun containers(containers: List<Any>)
 
-      public fun publicEndpoint(publicEndpoint: IResolvable) {
-      }
+      public fun publicEndpoint(publicEndpoint: IResolvable)
 
-      public fun publicEndpoint(publicEndpoint: PublicEndpointProperty) {
-      }
+      public fun publicEndpoint(publicEndpoint: PublicEndpointProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c45185e4c5081a7a57c2048a7d30a43fc4200b5d930c77ba5f693d10f5ced8b")
-      public fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit) {
-      }
+      public fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -814,26 +769,26 @@ public open class CfnContainer internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty.builder()
 
-      public override fun containers(containers: IResolvable) {
+      override fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers.let(IResolvable::unwrap))
       }
 
-      public override fun containers(containers: List<Any>) {
+      override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers)
       }
 
-      public override fun publicEndpoint(publicEndpoint: IResolvable) {
+      override fun publicEndpoint(publicEndpoint: IResolvable) {
         cdkBuilder.publicEndpoint(publicEndpoint.let(IResolvable::unwrap))
       }
 
-      public override fun publicEndpoint(publicEndpoint: PublicEndpointProperty) {
+      override fun publicEndpoint(publicEndpoint: PublicEndpointProperty) {
         cdkBuilder.publicEndpoint(publicEndpoint.let(PublicEndpointProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c45185e4c5081a7a57c2048a7d30a43fc4200b5d930c77ba5f693d10f5ced8b")
-      public override fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit):
-          Unit = publicEndpoint(PublicEndpointProperty(publicEndpoint))
+      override fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit): Unit =
+          publicEndpoint(PublicEndpointProperty(publicEndpoint))
 
       public fun build():
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty
@@ -844,9 +799,9 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty,
     ) : ContainerServiceDeploymentProperty {
-      public override fun containers(): Any? = unwrap(this).getContainers()
+      override fun containers(): Any? = unwrap(this).getContainers()
 
-      public override fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
+      override fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
     }
 
     public companion object {
@@ -878,23 +833,17 @@ public open class CfnContainer internal constructor(
     public fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
 
     public interface Builder {
-      public fun containerName(containerName: String) {
-      }
+      public fun containerName(containerName: String)
 
-      public fun containerPort(containerPort: Number) {
-      }
+      public fun containerPort(containerPort: Number)
 
-      public fun healthCheckConfig(healthCheckConfig: IResolvable) {
-      }
+      public fun healthCheckConfig(healthCheckConfig: IResolvable)
 
-      public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-      }
+      public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44fa4e095f5a171e0db397ff2351377f66c7e234035c5d0f7629259cf0298758")
-      public
-          fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit) {
-      }
+      public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -902,25 +851,25 @@ public open class CfnContainer internal constructor(
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty.builder()
 
-      public override fun containerName(containerName: String) {
+      override fun containerName(containerName: String) {
         cdkBuilder.containerName(containerName)
       }
 
-      public override fun containerPort(containerPort: Number) {
+      override fun containerPort(containerPort: Number) {
         cdkBuilder.containerPort(containerPort)
       }
 
-      public override fun healthCheckConfig(healthCheckConfig: IResolvable) {
+      override fun healthCheckConfig(healthCheckConfig: IResolvable) {
         cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
       }
 
-      public override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
+      override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
         cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44fa4e095f5a171e0db397ff2351377f66c7e234035c5d0f7629259cf0298758")
-      public override
+      override
           fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit):
           Unit = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
 
@@ -933,11 +882,11 @@ public open class CfnContainer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty,
     ) : PublicEndpointProperty {
-      public override fun containerName(): String? = unwrap(this).getContainerName()
+      override fun containerName(): String? = unwrap(this).getContainerName()
 
-      public override fun containerPort(): Number? = unwrap(this).getContainerPort()
+      override fun containerPort(): Number? = unwrap(this).getContainerPort()
 
-      public override fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
+      override fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
     }
 
     public companion object {

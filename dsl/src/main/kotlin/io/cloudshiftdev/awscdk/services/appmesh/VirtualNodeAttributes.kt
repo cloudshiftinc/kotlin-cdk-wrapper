@@ -9,22 +9,20 @@ public interface VirtualNodeAttributes {
   public fun virtualNodeName(): String
 
   public interface Builder {
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun virtualNodeName(virtualNodeName: String) {
-    }
+    public fun virtualNodeName(virtualNodeName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualNodeAttributes.Builder =
         software.amazon.awscdk.services.appmesh.VirtualNodeAttributes.builder()
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun virtualNodeName(virtualNodeName: String) {
+    override fun virtualNodeName(virtualNodeName: String) {
       cdkBuilder.virtualNodeName(virtualNodeName)
     }
 
@@ -35,9 +33,9 @@ public interface VirtualNodeAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeAttributes,
   ) : VirtualNodeAttributes {
-    public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
+    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-    public override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
+    override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
   }
 
   public companion object {

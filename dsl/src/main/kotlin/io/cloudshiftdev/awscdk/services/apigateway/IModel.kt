@@ -8,7 +8,7 @@ public interface IModel {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.IModel,
   ) : IModel {
-    public override fun modelId(): String = unwrap(this).getModelId()
+    override fun modelId(): String = unwrap(this).getModelId()
   }
 
   public companion object {

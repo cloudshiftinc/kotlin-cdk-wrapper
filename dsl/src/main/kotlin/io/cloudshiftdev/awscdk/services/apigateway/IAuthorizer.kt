@@ -11,10 +11,10 @@ public interface IAuthorizer {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.IAuthorizer,
   ) : IAuthorizer {
-    public override fun authorizationType(): AuthorizationType? =
+    override fun authorizationType(): AuthorizationType? =
         unwrap(this).getAuthorizationType()?.let(AuthorizationType::wrap)
 
-    public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
+    override fun authorizerId(): String = unwrap(this).getAuthorizerId()
   }
 
   public companion object {

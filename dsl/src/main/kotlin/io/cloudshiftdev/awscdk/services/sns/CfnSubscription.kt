@@ -91,41 +91,29 @@ public open class CfnSubscription internal constructor(
   }
 
   public interface Builder {
-    public fun deliveryPolicy(deliveryPolicy: Any) {
-    }
+    public fun deliveryPolicy(deliveryPolicy: Any)
 
-    public fun endpoint(endpoint: String) {
-    }
+    public fun endpoint(endpoint: String)
 
-    public fun filterPolicy(filterPolicy: Any) {
-    }
+    public fun filterPolicy(filterPolicy: Any)
 
-    public fun filterPolicyScope(filterPolicyScope: String) {
-    }
+    public fun filterPolicyScope(filterPolicyScope: String)
 
-    public fun protocol(protocol: String) {
-    }
+    public fun protocol(protocol: String)
 
-    public fun rawMessageDelivery(rawMessageDelivery: Boolean) {
-    }
+    public fun rawMessageDelivery(rawMessageDelivery: Boolean)
 
-    public fun rawMessageDelivery(rawMessageDelivery: IResolvable) {
-    }
+    public fun rawMessageDelivery(rawMessageDelivery: IResolvable)
 
-    public fun redrivePolicy(redrivePolicy: Any) {
-    }
+    public fun redrivePolicy(redrivePolicy: Any)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun replayPolicy(replayPolicy: Any) {
-    }
+    public fun replayPolicy(replayPolicy: Any)
 
-    public fun subscriptionRoleArn(subscriptionRoleArn: String) {
-    }
+    public fun subscriptionRoleArn(subscriptionRoleArn: String)
 
-    public fun topicArn(topicArn: String) {
-    }
+    public fun topicArn(topicArn: String)
   }
 
   private class BuilderImpl(
@@ -135,51 +123,51 @@ public open class CfnSubscription internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sns.CfnSubscription.Builder =
         software.amazon.awscdk.services.sns.CfnSubscription.Builder.create(scope, id)
 
-    public override fun deliveryPolicy(deliveryPolicy: Any) {
+    override fun deliveryPolicy(deliveryPolicy: Any) {
       cdkBuilder.deliveryPolicy(deliveryPolicy)
     }
 
-    public override fun endpoint(endpoint: String) {
+    override fun endpoint(endpoint: String) {
       cdkBuilder.endpoint(endpoint)
     }
 
-    public override fun filterPolicy(filterPolicy: Any) {
+    override fun filterPolicy(filterPolicy: Any) {
       cdkBuilder.filterPolicy(filterPolicy)
     }
 
-    public override fun filterPolicyScope(filterPolicyScope: String) {
+    override fun filterPolicyScope(filterPolicyScope: String) {
       cdkBuilder.filterPolicyScope(filterPolicyScope)
     }
 
-    public override fun protocol(protocol: String) {
+    override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun rawMessageDelivery(rawMessageDelivery: Boolean) {
+    override fun rawMessageDelivery(rawMessageDelivery: Boolean) {
       cdkBuilder.rawMessageDelivery(rawMessageDelivery)
     }
 
-    public override fun rawMessageDelivery(rawMessageDelivery: IResolvable) {
+    override fun rawMessageDelivery(rawMessageDelivery: IResolvable) {
       cdkBuilder.rawMessageDelivery(rawMessageDelivery.let(IResolvable::unwrap))
     }
 
-    public override fun redrivePolicy(redrivePolicy: Any) {
+    override fun redrivePolicy(redrivePolicy: Any) {
       cdkBuilder.redrivePolicy(redrivePolicy)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun replayPolicy(replayPolicy: Any) {
+    override fun replayPolicy(replayPolicy: Any) {
       cdkBuilder.replayPolicy(replayPolicy)
     }
 
-    public override fun subscriptionRoleArn(subscriptionRoleArn: String) {
+    override fun subscriptionRoleArn(subscriptionRoleArn: String) {
       cdkBuilder.subscriptionRoleArn(subscriptionRoleArn)
     }
 
-    public override fun topicArn(topicArn: String) {
+    override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
 

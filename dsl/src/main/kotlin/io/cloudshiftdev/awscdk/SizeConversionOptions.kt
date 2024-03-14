@@ -7,15 +7,14 @@ public interface SizeConversionOptions {
       unwrap(this).getRounding()?.let(SizeRoundingBehavior::wrap)
 
   public interface Builder {
-    public fun rounding(rounding: SizeRoundingBehavior) {
-    }
+    public fun rounding(rounding: SizeRoundingBehavior)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.SizeConversionOptions.Builder =
         software.amazon.awscdk.SizeConversionOptions.builder()
 
-    public override fun rounding(rounding: SizeRoundingBehavior) {
+    override fun rounding(rounding: SizeRoundingBehavior) {
       cdkBuilder.rounding(rounding.let(SizeRoundingBehavior::unwrap))
     }
 
@@ -25,7 +24,7 @@ public interface SizeConversionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.SizeConversionOptions,
   ) : SizeConversionOptions {
-    public override fun rounding(): SizeRoundingBehavior? =
+    override fun rounding(): SizeRoundingBehavior? =
         unwrap(this).getRounding()?.let(SizeRoundingBehavior::wrap)
   }
 

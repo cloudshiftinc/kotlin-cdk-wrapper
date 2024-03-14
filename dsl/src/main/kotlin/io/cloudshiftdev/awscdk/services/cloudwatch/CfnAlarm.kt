@@ -165,77 +165,53 @@ public open class CfnAlarm internal constructor(
   }
 
   public interface Builder {
-    public fun actionsEnabled(actionsEnabled: Boolean) {
-    }
+    public fun actionsEnabled(actionsEnabled: Boolean)
 
-    public fun actionsEnabled(actionsEnabled: IResolvable) {
-    }
+    public fun actionsEnabled(actionsEnabled: IResolvable)
 
-    public fun alarmActions(alarmActions: List<String>) {
-    }
+    public fun alarmActions(alarmActions: List<String>)
 
-    public fun alarmDescription(alarmDescription: String) {
-    }
+    public fun alarmDescription(alarmDescription: String)
 
-    public fun alarmName(alarmName: String) {
-    }
+    public fun alarmName(alarmName: String)
 
-    public fun comparisonOperator(comparisonOperator: String) {
-    }
+    public fun comparisonOperator(comparisonOperator: String)
 
-    public fun datapointsToAlarm(datapointsToAlarm: Number) {
-    }
+    public fun datapointsToAlarm(datapointsToAlarm: Number)
 
-    public fun dimensions(dimensions: IResolvable) {
-    }
+    public fun dimensions(dimensions: IResolvable)
 
-    public fun dimensions(dimensions: List<Any>) {
-    }
+    public fun dimensions(dimensions: List<Any>)
 
-    public fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
-    }
+    public fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String)
 
-    public fun evaluationPeriods(evaluationPeriods: Number) {
-    }
+    public fun evaluationPeriods(evaluationPeriods: Number)
 
-    public fun extendedStatistic(extendedStatistic: String) {
-    }
+    public fun extendedStatistic(extendedStatistic: String)
 
-    public fun insufficientDataActions(insufficientDataActions: List<String>) {
-    }
+    public fun insufficientDataActions(insufficientDataActions: List<String>)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun metrics(metrics: IResolvable) {
-    }
+    public fun metrics(metrics: IResolvable)
 
-    public fun metrics(metrics: List<Any>) {
-    }
+    public fun metrics(metrics: List<Any>)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun okActions(okActions: List<String>) {
-    }
+    public fun okActions(okActions: List<String>)
 
-    public fun period(period: Number) {
-    }
+    public fun period(period: Number)
 
-    public fun statistic(statistic: String) {
-    }
+    public fun statistic(statistic: String)
 
-    public fun threshold(threshold: Number) {
-    }
+    public fun threshold(threshold: Number)
 
-    public fun thresholdMetricId(thresholdMetricId: String) {
-    }
+    public fun thresholdMetricId(thresholdMetricId: String)
 
-    public fun treatMissingData(treatMissingData: String) {
-    }
+    public fun treatMissingData(treatMissingData: String)
 
-    public fun unit(unit: String) {
-    }
+    public fun unit(unit: String)
   }
 
   private class BuilderImpl(
@@ -245,99 +221,99 @@ public open class CfnAlarm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnAlarm.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnAlarm.Builder.create(scope, id)
 
-    public override fun actionsEnabled(actionsEnabled: Boolean) {
+    override fun actionsEnabled(actionsEnabled: Boolean) {
       cdkBuilder.actionsEnabled(actionsEnabled)
     }
 
-    public override fun actionsEnabled(actionsEnabled: IResolvable) {
+    override fun actionsEnabled(actionsEnabled: IResolvable) {
       cdkBuilder.actionsEnabled(actionsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun alarmActions(alarmActions: List<String>) {
+    override fun alarmActions(alarmActions: List<String>) {
       cdkBuilder.alarmActions(alarmActions)
     }
 
-    public override fun alarmDescription(alarmDescription: String) {
+    override fun alarmDescription(alarmDescription: String) {
       cdkBuilder.alarmDescription(alarmDescription)
     }
 
-    public override fun alarmName(alarmName: String) {
+    override fun alarmName(alarmName: String) {
       cdkBuilder.alarmName(alarmName)
     }
 
-    public override fun comparisonOperator(comparisonOperator: String) {
+    override fun comparisonOperator(comparisonOperator: String) {
       cdkBuilder.comparisonOperator(comparisonOperator)
     }
 
-    public override fun datapointsToAlarm(datapointsToAlarm: Number) {
+    override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
     }
 
-    public override fun dimensions(dimensions: IResolvable) {
+    override fun dimensions(dimensions: IResolvable) {
       cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
     }
 
-    public override fun dimensions(dimensions: List<Any>) {
+    override fun dimensions(dimensions: List<Any>) {
       cdkBuilder.dimensions(dimensions)
     }
 
-    public override fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
+    override fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
       cdkBuilder.evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile)
     }
 
-    public override fun evaluationPeriods(evaluationPeriods: Number) {
+    override fun evaluationPeriods(evaluationPeriods: Number) {
       cdkBuilder.evaluationPeriods(evaluationPeriods)
     }
 
-    public override fun extendedStatistic(extendedStatistic: String) {
+    override fun extendedStatistic(extendedStatistic: String) {
       cdkBuilder.extendedStatistic(extendedStatistic)
     }
 
-    public override fun insufficientDataActions(insufficientDataActions: List<String>) {
+    override fun insufficientDataActions(insufficientDataActions: List<String>) {
       cdkBuilder.insufficientDataActions(insufficientDataActions)
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun metrics(metrics: IResolvable) {
+    override fun metrics(metrics: IResolvable) {
       cdkBuilder.metrics(metrics.let(IResolvable::unwrap))
     }
 
-    public override fun metrics(metrics: List<Any>) {
+    override fun metrics(metrics: List<Any>) {
       cdkBuilder.metrics(metrics)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun okActions(okActions: List<String>) {
+    override fun okActions(okActions: List<String>) {
       cdkBuilder.okActions(okActions)
     }
 
-    public override fun period(period: Number) {
+    override fun period(period: Number) {
       cdkBuilder.period(period)
     }
 
-    public override fun statistic(statistic: String) {
+    override fun statistic(statistic: String) {
       cdkBuilder.statistic(statistic)
     }
 
-    public override fun threshold(threshold: Number) {
+    override fun threshold(threshold: Number) {
       cdkBuilder.threshold(threshold)
     }
 
-    public override fun thresholdMetricId(thresholdMetricId: String) {
+    override fun thresholdMetricId(thresholdMetricId: String) {
       cdkBuilder.thresholdMetricId(thresholdMetricId)
     }
 
-    public override fun treatMissingData(treatMissingData: String) {
+    override fun treatMissingData(treatMissingData: String) {
       cdkBuilder.treatMissingData(treatMissingData)
     }
 
-    public override fun unit(unit: String) {
+    override fun unit(unit: String) {
       cdkBuilder.unit(unit)
     }
 
@@ -381,37 +357,27 @@ public open class CfnAlarm internal constructor(
     public fun returnData(): Any? = unwrap(this).getReturnData()
 
     public interface Builder {
-      public fun accountId(accountId: String) {
-      }
+      public fun accountId(accountId: String)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun label(label: String) {
-      }
+      public fun label(label: String)
 
-      public fun metricStat(metricStat: IResolvable) {
-      }
+      public fun metricStat(metricStat: IResolvable)
 
-      public fun metricStat(metricStat: MetricStatProperty) {
-      }
+      public fun metricStat(metricStat: MetricStatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("35ff4c30a5382088d4e276f1dbe5523064d9a89a90d32bbdf22fed7a8efb9743")
-      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit) {
-      }
+      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit)
 
-      public fun period(period: Number) {
-      }
+      public fun period(period: Number)
 
-      public fun returnData(returnData: Boolean) {
-      }
+      public fun returnData(returnData: Boolean)
 
-      public fun returnData(returnData: IResolvable) {
-      }
+      public fun returnData(returnData: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -419,44 +385,44 @@ public open class CfnAlarm internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty.builder()
 
-      public override fun accountId(accountId: String) {
+      override fun accountId(accountId: String) {
         cdkBuilder.accountId(accountId)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun label(label: String) {
+      override fun label(label: String) {
         cdkBuilder.label(label)
       }
 
-      public override fun metricStat(metricStat: IResolvable) {
+      override fun metricStat(metricStat: IResolvable) {
         cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
       }
 
-      public override fun metricStat(metricStat: MetricStatProperty) {
+      override fun metricStat(metricStat: MetricStatProperty) {
         cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("35ff4c30a5382088d4e276f1dbe5523064d9a89a90d32bbdf22fed7a8efb9743")
-      public override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
+      override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
           metricStat(MetricStatProperty(metricStat))
 
-      public override fun period(period: Number) {
+      override fun period(period: Number) {
         cdkBuilder.period(period)
       }
 
-      public override fun returnData(returnData: Boolean) {
+      override fun returnData(returnData: Boolean) {
         cdkBuilder.returnData(returnData)
       }
 
-      public override fun returnData(returnData: IResolvable) {
+      override fun returnData(returnData: IResolvable) {
         cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
       }
 
@@ -469,19 +435,19 @@ public open class CfnAlarm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricDataQueryProperty,
     ) : MetricDataQueryProperty {
-      public override fun accountId(): String? = unwrap(this).getAccountId()
+      override fun accountId(): String? = unwrap(this).getAccountId()
 
-      public override fun expression(): String? = unwrap(this).getExpression()
+      override fun expression(): String? = unwrap(this).getExpression()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun label(): String? = unwrap(this).getLabel()
+      override fun label(): String? = unwrap(this).getLabel()
 
-      public override fun metricStat(): Any? = unwrap(this).getMetricStat()
+      override fun metricStat(): Any? = unwrap(this).getMetricStat()
 
-      public override fun period(): Number? = unwrap(this).getPeriod()
+      override fun period(): Number? = unwrap(this).getPeriod()
 
-      public override fun returnData(): Any? = unwrap(this).getReturnData()
+      override fun returnData(): Any? = unwrap(this).getReturnData()
     }
 
     public companion object {
@@ -510,11 +476,9 @@ public open class CfnAlarm internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -522,11 +486,11 @@ public open class CfnAlarm internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -537,9 +501,9 @@ public open class CfnAlarm internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.DimensionProperty,
     ) : DimensionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -572,25 +536,19 @@ public open class CfnAlarm internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun metric(metric: IResolvable) {
-      }
+      public fun metric(metric: IResolvable)
 
-      public fun metric(metric: MetricProperty) {
-      }
+      public fun metric(metric: MetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fc27b440a87875b0db87fe50953a4e80fe02929afedc911ebb790e48307db7e")
-      public fun metric(metric: MetricProperty.Builder.() -> Unit) {
-      }
+      public fun metric(metric: MetricProperty.Builder.() -> Unit)
 
-      public fun period(period: Number) {
-      }
+      public fun period(period: Number)
 
-      public fun stat(stat: String) {
-      }
+      public fun stat(stat: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -598,28 +556,28 @@ public open class CfnAlarm internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty.builder()
 
-      public override fun metric(metric: IResolvable) {
+      override fun metric(metric: IResolvable) {
         cdkBuilder.metric(metric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: MetricProperty) {
+      override fun metric(metric: MetricProperty) {
         cdkBuilder.metric(metric.let(MetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fc27b440a87875b0db87fe50953a4e80fe02929afedc911ebb790e48307db7e")
-      public override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
+      override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
           metric(MetricProperty(metric))
 
-      public override fun period(period: Number) {
+      override fun period(period: Number) {
         cdkBuilder.period(period)
       }
 
-      public override fun stat(stat: String) {
+      override fun stat(stat: String) {
         cdkBuilder.stat(stat)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -631,13 +589,13 @@ public open class CfnAlarm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricStatProperty,
     ) : MetricStatProperty {
-      public override fun metric(): Any = unwrap(this).getMetric()
+      override fun metric(): Any = unwrap(this).getMetric()
 
-      public override fun period(): Number = unwrap(this).getPeriod()
+      override fun period(): Number = unwrap(this).getPeriod()
 
-      public override fun stat(): String = unwrap(this).getStat()
+      override fun stat(): String = unwrap(this).getStat()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -668,17 +626,13 @@ public open class CfnAlarm internal constructor(
     public fun namespace(): String? = unwrap(this).getNamespace()
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -686,19 +640,19 @@ public open class CfnAlarm internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -709,11 +663,11 @@ public open class CfnAlarm internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm.MetricProperty,
     ) : MetricProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String? = unwrap(this).getMetricName()
+      override fun metricName(): String? = unwrap(this).getMetricName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
     }
 
     public companion object {

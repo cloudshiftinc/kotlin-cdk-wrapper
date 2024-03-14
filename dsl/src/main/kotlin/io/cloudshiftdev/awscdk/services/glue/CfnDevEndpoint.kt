@@ -116,50 +116,35 @@ public open class CfnDevEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun arguments(arguments: Any) {
-    }
+    public fun arguments(arguments: Any)
 
-    public fun endpointName(endpointName: String) {
-    }
+    public fun endpointName(endpointName: String)
 
-    public fun extraJarsS3Path(extraJarsS3Path: String) {
-    }
+    public fun extraJarsS3Path(extraJarsS3Path: String)
 
-    public fun extraPythonLibsS3Path(extraPythonLibsS3Path: String) {
-    }
+    public fun extraPythonLibsS3Path(extraPythonLibsS3Path: String)
 
-    public fun glueVersion(glueVersion: String) {
-    }
+    public fun glueVersion(glueVersion: String)
 
-    public fun numberOfNodes(numberOfNodes: Number) {
-    }
+    public fun numberOfNodes(numberOfNodes: Number)
 
-    public fun numberOfWorkers(numberOfWorkers: Number) {
-    }
+    public fun numberOfWorkers(numberOfWorkers: Number)
 
-    public fun publicKey(publicKey: String) {
-    }
+    public fun publicKey(publicKey: String)
 
-    public fun publicKeys(publicKeys: List<String>) {
-    }
+    public fun publicKeys(publicKeys: List<String>)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun securityConfiguration(securityConfiguration: String) {
-    }
+    public fun securityConfiguration(securityConfiguration: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun workerType(workerType: String) {
-    }
+    public fun workerType(workerType: String)
   }
 
   private class BuilderImpl(
@@ -169,63 +154,63 @@ public open class CfnDevEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnDevEndpoint.Builder =
         software.amazon.awscdk.services.glue.CfnDevEndpoint.Builder.create(scope, id)
 
-    public override fun arguments(arguments: Any) {
+    override fun arguments(arguments: Any) {
       cdkBuilder.arguments(arguments)
     }
 
-    public override fun endpointName(endpointName: String) {
+    override fun endpointName(endpointName: String) {
       cdkBuilder.endpointName(endpointName)
     }
 
-    public override fun extraJarsS3Path(extraJarsS3Path: String) {
+    override fun extraJarsS3Path(extraJarsS3Path: String) {
       cdkBuilder.extraJarsS3Path(extraJarsS3Path)
     }
 
-    public override fun extraPythonLibsS3Path(extraPythonLibsS3Path: String) {
+    override fun extraPythonLibsS3Path(extraPythonLibsS3Path: String) {
       cdkBuilder.extraPythonLibsS3Path(extraPythonLibsS3Path)
     }
 
-    public override fun glueVersion(glueVersion: String) {
+    override fun glueVersion(glueVersion: String) {
       cdkBuilder.glueVersion(glueVersion)
     }
 
-    public override fun numberOfNodes(numberOfNodes: Number) {
+    override fun numberOfNodes(numberOfNodes: Number) {
       cdkBuilder.numberOfNodes(numberOfNodes)
     }
 
-    public override fun numberOfWorkers(numberOfWorkers: Number) {
+    override fun numberOfWorkers(numberOfWorkers: Number) {
       cdkBuilder.numberOfWorkers(numberOfWorkers)
     }
 
-    public override fun publicKey(publicKey: String) {
+    override fun publicKey(publicKey: String) {
       cdkBuilder.publicKey(publicKey)
     }
 
-    public override fun publicKeys(publicKeys: List<String>) {
+    override fun publicKeys(publicKeys: List<String>) {
       cdkBuilder.publicKeys(publicKeys)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun securityConfiguration(securityConfiguration: String) {
+    override fun securityConfiguration(securityConfiguration: String) {
       cdkBuilder.securityConfiguration(securityConfiguration)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun workerType(workerType: String) {
+    override fun workerType(workerType: String) {
       cdkBuilder.workerType(workerType)
     }
 

@@ -64,23 +64,17 @@ public open class CfnWorkflow internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun onExceptionSteps(onExceptionSteps: IResolvable) {
-    }
+    public fun onExceptionSteps(onExceptionSteps: IResolvable)
 
-    public fun onExceptionSteps(onExceptionSteps: List<Any>) {
-    }
+    public fun onExceptionSteps(onExceptionSteps: List<Any>)
 
-    public fun steps(steps: IResolvable) {
-    }
+    public fun steps(steps: IResolvable)
 
-    public fun steps(steps: List<Any>) {
-    }
+    public fun steps(steps: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -90,27 +84,27 @@ public open class CfnWorkflow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnWorkflow.Builder =
         software.amazon.awscdk.services.transfer.CfnWorkflow.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun onExceptionSteps(onExceptionSteps: IResolvable) {
+    override fun onExceptionSteps(onExceptionSteps: IResolvable) {
       cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable::unwrap))
     }
 
-    public override fun onExceptionSteps(onExceptionSteps: List<Any>) {
+    override fun onExceptionSteps(onExceptionSteps: List<Any>) {
       cdkBuilder.onExceptionSteps(onExceptionSteps)
     }
 
-    public override fun steps(steps: IResolvable) {
+    override fun steps(steps: IResolvable) {
       cdkBuilder.steps(steps.let(IResolvable::unwrap))
     }
 
-    public override fun steps(steps: List<Any>) {
+    override fun steps(steps: List<Any>) {
       cdkBuilder.steps(steps)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -144,27 +138,21 @@ public open class CfnWorkflow internal constructor(
     public fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
 
     public interface Builder {
-      public fun efsFileLocation(efsFileLocation: IResolvable) {
-      }
+      public fun efsFileLocation(efsFileLocation: IResolvable)
 
-      public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty) {
-      }
+      public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49397a7dcf7bcd8b504d41c0da5636a27f6146c4157ffa3e9c52044a3e8b0799")
-      public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit) {
-      }
+      public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit)
 
-      public fun s3FileLocation(s3FileLocation: IResolvable) {
-      }
+      public fun s3FileLocation(s3FileLocation: IResolvable)
 
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
-      }
+      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5be4718862fbc7c4ff9af0f039f9438fbe20f35876c9c4245e4d8ea4a2bb719f")
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -172,33 +160,32 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty.builder()
 
-      public override fun efsFileLocation(efsFileLocation: IResolvable) {
+      override fun efsFileLocation(efsFileLocation: IResolvable) {
         cdkBuilder.efsFileLocation(efsFileLocation.let(IResolvable::unwrap))
       }
 
-      public override fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty) {
+      override fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty) {
         cdkBuilder.efsFileLocation(efsFileLocation.let(EfsInputFileLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49397a7dcf7bcd8b504d41c0da5636a27f6146c4157ffa3e9c52044a3e8b0799")
-      public override
+      override
           fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit):
           Unit = efsFileLocation(EfsInputFileLocationProperty(efsFileLocation))
 
-      public override fun s3FileLocation(s3FileLocation: IResolvable) {
+      override fun s3FileLocation(s3FileLocation: IResolvable) {
         cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
       }
 
-      public override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
+      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
         cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5be4718862fbc7c4ff9af0f039f9438fbe20f35876c9c4245e4d8ea4a2bb719f")
-      public override
-          fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit): Unit =
-          s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
+      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit):
+          Unit = s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
 
       public fun build():
           software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty =
@@ -209,9 +196,9 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty,
     ) : InputFileLocationProperty {
-      public override fun efsFileLocation(): Any? = unwrap(this).getEfsFileLocation()
+      override fun efsFileLocation(): Any? = unwrap(this).getEfsFileLocation()
 
-      public override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
+      override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
     }
 
     public companion object {
@@ -240,11 +227,9 @@ public open class CfnWorkflow internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun fileSystemId(fileSystemId: String) {
-      }
+      public fun fileSystemId(fileSystemId: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -253,11 +238,11 @@ public open class CfnWorkflow internal constructor(
           =
           software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty.builder()
 
-      public override fun fileSystemId(fileSystemId: String) {
+      override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -270,9 +255,9 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty,
     ) : EfsInputFileLocationProperty {
-      public override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+      override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {
@@ -307,29 +292,22 @@ public open class CfnWorkflow internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun destinationFileLocation(destinationFileLocation: IResolvable) {
-      }
+      public fun destinationFileLocation(destinationFileLocation: IResolvable)
 
-      public fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty) {
-      }
+      public fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28d206b1fd4837a7686be621f37592cc66f513ac0d25d20a550e090b4817ddba")
       public
-          fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit) {
-      }
+          fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun overwriteExisting(overwriteExisting: String) {
-      }
+      public fun overwriteExisting(overwriteExisting: String)
 
-      public fun sourceFileLocation(sourceFileLocation: String) {
-      }
+      public fun sourceFileLocation(sourceFileLocation: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,34 +315,33 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty.builder()
 
-      public override fun destinationFileLocation(destinationFileLocation: IResolvable) {
+      override fun destinationFileLocation(destinationFileLocation: IResolvable) {
         cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
       }
 
-      public override
-          fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty) {
+      override fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty) {
         cdkBuilder.destinationFileLocation(destinationFileLocation.let(InputFileLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28d206b1fd4837a7686be621f37592cc66f513ac0d25d20a550e090b4817ddba")
-      public override
+      override
           fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit):
           Unit = destinationFileLocation(InputFileLocationProperty(destinationFileLocation))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun overwriteExisting(overwriteExisting: String) {
+      override fun overwriteExisting(overwriteExisting: String) {
         cdkBuilder.overwriteExisting(overwriteExisting)
       }
 
-      public override fun sourceFileLocation(sourceFileLocation: String) {
+      override fun sourceFileLocation(sourceFileLocation: String) {
         cdkBuilder.sourceFileLocation(sourceFileLocation)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -377,16 +354,15 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty,
     ) : DecryptStepDetailsProperty {
-      public override fun destinationFileLocation(): Any? =
-          unwrap(this).getDestinationFileLocation()
+      override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
+      override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
 
-      public override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -415,11 +391,9 @@ public open class CfnWorkflow internal constructor(
     public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sourceFileLocation(sourceFileLocation: String) {
-      }
+      public fun sourceFileLocation(sourceFileLocation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -427,11 +401,11 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sourceFileLocation(sourceFileLocation: String) {
+      override fun sourceFileLocation(sourceFileLocation: String) {
         cdkBuilder.sourceFileLocation(sourceFileLocation)
       }
 
@@ -444,9 +418,9 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty,
     ) : DeleteStepDetailsProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
     }
 
     public companion object {
@@ -479,26 +453,20 @@ public open class CfnWorkflow internal constructor(
     public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
     public interface Builder {
-      public fun destinationFileLocation(destinationFileLocation: IResolvable) {
-      }
+      public fun destinationFileLocation(destinationFileLocation: IResolvable)
 
-      public fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty) {
-      }
+      public fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7cd6d54a8f85b9454d405adbac4c046f5d96acab55ffa21a0dd2794316ff0b22")
       public
-          fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit) {
-      }
+          fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun overwriteExisting(overwriteExisting: String) {
-      }
+      public fun overwriteExisting(overwriteExisting: String)
 
-      public fun sourceFileLocation(sourceFileLocation: String) {
-      }
+      public fun sourceFileLocation(sourceFileLocation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -506,29 +474,29 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty.builder()
 
-      public override fun destinationFileLocation(destinationFileLocation: IResolvable) {
+      override fun destinationFileLocation(destinationFileLocation: IResolvable) {
         cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
       }
 
-      public override fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty) {
+      override fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty) {
         cdkBuilder.destinationFileLocation(destinationFileLocation.let(S3FileLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7cd6d54a8f85b9454d405adbac4c046f5d96acab55ffa21a0dd2794316ff0b22")
-      public override
+      override
           fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit):
           Unit = destinationFileLocation(S3FileLocationProperty(destinationFileLocation))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun overwriteExisting(overwriteExisting: String) {
+      override fun overwriteExisting(overwriteExisting: String) {
         cdkBuilder.overwriteExisting(overwriteExisting)
       }
 
-      public override fun sourceFileLocation(sourceFileLocation: String) {
+      override fun sourceFileLocation(sourceFileLocation: String) {
         cdkBuilder.sourceFileLocation(sourceFileLocation)
       }
 
@@ -541,14 +509,13 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty,
     ) : CopyStepDetailsProperty {
-      public override fun destinationFileLocation(): Any? =
-          unwrap(this).getDestinationFileLocation()
+      override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
+      override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
 
-      public override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
     }
 
     public companion object {
@@ -581,17 +548,13 @@ public open class CfnWorkflow internal constructor(
     public fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sourceFileLocation(sourceFileLocation: String) {
-      }
+      public fun sourceFileLocation(sourceFileLocation: String)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
 
-      public fun timeoutSeconds(timeoutSeconds: Number) {
-      }
+      public fun timeoutSeconds(timeoutSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -599,19 +562,19 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sourceFileLocation(sourceFileLocation: String) {
+      override fun sourceFileLocation(sourceFileLocation: String) {
         cdkBuilder.sourceFileLocation(sourceFileLocation)
       }
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
-      public override fun timeoutSeconds(timeoutSeconds: Number) {
+      override fun timeoutSeconds(timeoutSeconds: Number) {
         cdkBuilder.timeoutSeconds(timeoutSeconds)
       }
 
@@ -624,13 +587,13 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty,
     ) : CustomStepDetailsProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public override fun target(): String? = unwrap(this).getTarget()
+      override fun target(): String? = unwrap(this).getTarget()
 
-      public override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+      override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
     }
 
     public companion object {
@@ -667,32 +630,24 @@ public open class CfnWorkflow internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun copyStepDetails(copyStepDetails: Any) {
-      }
+      public fun copyStepDetails(copyStepDetails: Any)
 
-      public fun customStepDetails(customStepDetails: Any) {
-      }
+      public fun customStepDetails(customStepDetails: Any)
 
-      public fun decryptStepDetails(decryptStepDetails: IResolvable) {
-      }
+      public fun decryptStepDetails(decryptStepDetails: IResolvable)
 
-      public fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty) {
-      }
+      public fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1ecb1c1adfefb87617f71a28b53753de53b6cc237ff4207bf5e639516a5e34a")
       public
-          fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit) {
-      }
+          fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit)
 
-      public fun deleteStepDetails(deleteStepDetails: Any) {
-      }
+      public fun deleteStepDetails(deleteStepDetails: Any)
 
-      public fun tagStepDetails(tagStepDetails: Any) {
-      }
+      public fun tagStepDetails(tagStepDetails: Any)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -700,37 +655,37 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty.builder()
 
-      public override fun copyStepDetails(copyStepDetails: Any) {
+      override fun copyStepDetails(copyStepDetails: Any) {
         cdkBuilder.copyStepDetails(copyStepDetails)
       }
 
-      public override fun customStepDetails(customStepDetails: Any) {
+      override fun customStepDetails(customStepDetails: Any) {
         cdkBuilder.customStepDetails(customStepDetails)
       }
 
-      public override fun decryptStepDetails(decryptStepDetails: IResolvable) {
+      override fun decryptStepDetails(decryptStepDetails: IResolvable) {
         cdkBuilder.decryptStepDetails(decryptStepDetails.let(IResolvable::unwrap))
       }
 
-      public override fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty) {
+      override fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty) {
         cdkBuilder.decryptStepDetails(decryptStepDetails.let(DecryptStepDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1ecb1c1adfefb87617f71a28b53753de53b6cc237ff4207bf5e639516a5e34a")
-      public override
+      override
           fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit):
           Unit = decryptStepDetails(DecryptStepDetailsProperty(decryptStepDetails))
 
-      public override fun deleteStepDetails(deleteStepDetails: Any) {
+      override fun deleteStepDetails(deleteStepDetails: Any) {
         cdkBuilder.deleteStepDetails(deleteStepDetails)
       }
 
-      public override fun tagStepDetails(tagStepDetails: Any) {
+      override fun tagStepDetails(tagStepDetails: Any) {
         cdkBuilder.tagStepDetails(tagStepDetails)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -742,17 +697,17 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty,
     ) : WorkflowStepProperty {
-      public override fun copyStepDetails(): Any? = unwrap(this).getCopyStepDetails()
+      override fun copyStepDetails(): Any? = unwrap(this).getCopyStepDetails()
 
-      public override fun customStepDetails(): Any? = unwrap(this).getCustomStepDetails()
+      override fun customStepDetails(): Any? = unwrap(this).getCustomStepDetails()
 
-      public override fun decryptStepDetails(): Any? = unwrap(this).getDecryptStepDetails()
+      override fun decryptStepDetails(): Any? = unwrap(this).getDecryptStepDetails()
 
-      public override fun deleteStepDetails(): Any? = unwrap(this).getDeleteStepDetails()
+      override fun deleteStepDetails(): Any? = unwrap(this).getDeleteStepDetails()
 
-      public override fun tagStepDetails(): Any? = unwrap(this).getTagStepDetails()
+      override fun tagStepDetails(): Any? = unwrap(this).getTagStepDetails()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -781,11 +736,9 @@ public open class CfnWorkflow internal constructor(
     public fun key(): String? = unwrap(this).getKey()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -793,11 +746,11 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -810,9 +763,9 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty,
     ) : S3InputFileLocationProperty {
-      public override fun bucket(): String? = unwrap(this).getBucket()
+      override fun bucket(): String? = unwrap(this).getBucket()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
     }
 
     public companion object {
@@ -841,11 +794,9 @@ public open class CfnWorkflow internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -853,11 +804,11 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -868,9 +819,9 @@ public open class CfnWorkflow internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty,
     ) : S3TagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -902,14 +853,11 @@ public open class CfnWorkflow internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sourceFileLocation(sourceFileLocation: String) {
-      }
+      public fun sourceFileLocation(sourceFileLocation: String)
 
-      public fun tags(tags: List<S3TagProperty>) {
-      }
+      public fun tags(tags: List<S3TagProperty>)
     }
 
     private class BuilderImpl : Builder {
@@ -917,15 +865,15 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sourceFileLocation(sourceFileLocation: String) {
+      override fun sourceFileLocation(sourceFileLocation: String) {
         cdkBuilder.sourceFileLocation(sourceFileLocation)
       }
 
-      public override fun tags(tags: List<S3TagProperty>) {
+      override fun tags(tags: List<S3TagProperty>) {
         cdkBuilder.tags(tags.map(S3TagProperty::unwrap))
       }
 
@@ -938,12 +886,12 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty,
     ) : TagStepDetailsProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public override fun tags(): List<S3TagProperty> =
-          unwrap(this).getTags()?.map(S3TagProperty::wrap) ?: emptyList()
+      override fun tags(): List<S3TagProperty> = unwrap(this).getTags()?.map(S3TagProperty::wrap) ?:
+          emptyList()
     }
 
     public companion object {
@@ -970,16 +918,13 @@ public open class CfnWorkflow internal constructor(
     public fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
 
     public interface Builder {
-      public fun s3FileLocation(s3FileLocation: IResolvable) {
-      }
+      public fun s3FileLocation(s3FileLocation: IResolvable)
 
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
-      }
+      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5deeba364254a7436d45af464edae04e28b4856f11f3df8dbc74f70fcaf2cd5d")
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -987,19 +932,18 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty.Builder =
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty.builder()
 
-      public override fun s3FileLocation(s3FileLocation: IResolvable) {
+      override fun s3FileLocation(s3FileLocation: IResolvable) {
         cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
       }
 
-      public override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
+      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
         cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5deeba364254a7436d45af464edae04e28b4856f11f3df8dbc74f70fcaf2cd5d")
-      public override
-          fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit): Unit =
-          s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
+      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit):
+          Unit = s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
 
       public fun build():
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty =
@@ -1010,7 +954,7 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty,
     ) : S3FileLocationProperty {
-      public override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
+      override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
     }
 
     public companion object {

@@ -81,39 +81,29 @@ public open class CfnFunction internal constructor(
   }
 
   public interface Builder {
-    public fun autoPublish(autoPublish: Boolean) {
-    }
+    public fun autoPublish(autoPublish: Boolean)
 
-    public fun autoPublish(autoPublish: IResolvable) {
-    }
+    public fun autoPublish(autoPublish: IResolvable)
 
-    public fun functionCode(functionCode: String) {
-    }
+    public fun functionCode(functionCode: String)
 
-    public fun functionConfig(functionConfig: IResolvable) {
-    }
+    public fun functionConfig(functionConfig: IResolvable)
 
-    public fun functionConfig(functionConfig: FunctionConfigProperty) {
-    }
+    public fun functionConfig(functionConfig: FunctionConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fce6d74021529b7d490dff859dc0036e222c115069813d8f548ff68f74b843bc")
-    public fun functionConfig(functionConfig: FunctionConfigProperty.Builder.() -> Unit) {
-    }
+    public fun functionConfig(functionConfig: FunctionConfigProperty.Builder.() -> Unit)
 
-    public fun functionMetadata(functionMetadata: IResolvable) {
-    }
+    public fun functionMetadata(functionMetadata: IResolvable)
 
-    public fun functionMetadata(functionMetadata: FunctionMetadataProperty) {
-    }
+    public fun functionMetadata(functionMetadata: FunctionMetadataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d795f119cc42115758eadb9d3fbc68e16bd1a5de441d59689f44259f847f0d41")
-    public fun functionMetadata(functionMetadata: FunctionMetadataProperty.Builder.() -> Unit) {
-    }
+    public fun functionMetadata(functionMetadata: FunctionMetadataProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -123,46 +113,45 @@ public open class CfnFunction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnFunction.Builder =
         software.amazon.awscdk.services.cloudfront.CfnFunction.Builder.create(scope, id)
 
-    public override fun autoPublish(autoPublish: Boolean) {
+    override fun autoPublish(autoPublish: Boolean) {
       cdkBuilder.autoPublish(autoPublish)
     }
 
-    public override fun autoPublish(autoPublish: IResolvable) {
+    override fun autoPublish(autoPublish: IResolvable) {
       cdkBuilder.autoPublish(autoPublish.let(IResolvable::unwrap))
     }
 
-    public override fun functionCode(functionCode: String) {
+    override fun functionCode(functionCode: String) {
       cdkBuilder.functionCode(functionCode)
     }
 
-    public override fun functionConfig(functionConfig: IResolvable) {
+    override fun functionConfig(functionConfig: IResolvable) {
       cdkBuilder.functionConfig(functionConfig.let(IResolvable::unwrap))
     }
 
-    public override fun functionConfig(functionConfig: FunctionConfigProperty) {
+    override fun functionConfig(functionConfig: FunctionConfigProperty) {
       cdkBuilder.functionConfig(functionConfig.let(FunctionConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fce6d74021529b7d490dff859dc0036e222c115069813d8f548ff68f74b843bc")
-    public override fun functionConfig(functionConfig: FunctionConfigProperty.Builder.() -> Unit):
-        Unit = functionConfig(FunctionConfigProperty(functionConfig))
+    override fun functionConfig(functionConfig: FunctionConfigProperty.Builder.() -> Unit): Unit =
+        functionConfig(FunctionConfigProperty(functionConfig))
 
-    public override fun functionMetadata(functionMetadata: IResolvable) {
+    override fun functionMetadata(functionMetadata: IResolvable) {
       cdkBuilder.functionMetadata(functionMetadata.let(IResolvable::unwrap))
     }
 
-    public override fun functionMetadata(functionMetadata: FunctionMetadataProperty) {
+    override fun functionMetadata(functionMetadata: FunctionMetadataProperty) {
       cdkBuilder.functionMetadata(functionMetadata.let(FunctionMetadataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d795f119cc42115758eadb9d3fbc68e16bd1a5de441d59689f44259f847f0d41")
-    public override
-        fun functionMetadata(functionMetadata: FunctionMetadataProperty.Builder.() -> Unit): Unit =
-        functionMetadata(FunctionMetadataProperty(functionMetadata))
+    override fun functionMetadata(functionMetadata: FunctionMetadataProperty.Builder.() -> Unit):
+        Unit = functionMetadata(FunctionMetadataProperty(functionMetadata))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -194,8 +183,7 @@ public open class CfnFunction internal constructor(
     public fun functionArn(): String? = unwrap(this).getFunctionArn()
 
     public interface Builder {
-      public fun functionArn(functionArn: String) {
-      }
+      public fun functionArn(functionArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -203,7 +191,7 @@ public open class CfnFunction internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty.builder()
 
-      public override fun functionArn(functionArn: String) {
+      override fun functionArn(functionArn: String) {
         cdkBuilder.functionArn(functionArn)
       }
 
@@ -216,7 +204,7 @@ public open class CfnFunction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty,
     ) : FunctionMetadataProperty {
-      public override fun functionArn(): String? = unwrap(this).getFunctionArn()
+      override fun functionArn(): String? = unwrap(this).getFunctionArn()
     }
 
     public companion object {
@@ -247,17 +235,13 @@ public open class CfnFunction internal constructor(
     public fun runtime(): String
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun keyValueStoreAssociations(keyValueStoreAssociations: IResolvable) {
-      }
+      public fun keyValueStoreAssociations(keyValueStoreAssociations: IResolvable)
 
-      public fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>) {
-      }
+      public fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>)
 
-      public fun runtime(runtime: String) {
-      }
+      public fun runtime(runtime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -265,19 +249,19 @@ public open class CfnFunction internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun keyValueStoreAssociations(keyValueStoreAssociations: IResolvable) {
+      override fun keyValueStoreAssociations(keyValueStoreAssociations: IResolvable) {
         cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations.let(IResolvable::unwrap))
       }
 
-      public override fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>) {
+      override fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>) {
         cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations)
       }
 
-      public override fun runtime(runtime: String) {
+      override fun runtime(runtime: String) {
         cdkBuilder.runtime(runtime)
       }
 
@@ -290,12 +274,11 @@ public open class CfnFunction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty,
     ) : FunctionConfigProperty {
-      public override fun comment(): String = unwrap(this).getComment()
+      override fun comment(): String = unwrap(this).getComment()
 
-      public override fun keyValueStoreAssociations(): Any? =
-          unwrap(this).getKeyValueStoreAssociations()
+      override fun keyValueStoreAssociations(): Any? = unwrap(this).getKeyValueStoreAssociations()
 
-      public override fun runtime(): String = unwrap(this).getRuntime()
+      override fun runtime(): String = unwrap(this).getRuntime()
     }
 
     public companion object {
@@ -322,8 +305,7 @@ public open class CfnFunction internal constructor(
     public fun keyValueStoreArn(): String
 
     public interface Builder {
-      public fun keyValueStoreArn(keyValueStoreArn: String) {
-      }
+      public fun keyValueStoreArn(keyValueStoreArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -332,7 +314,7 @@ public open class CfnFunction internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty.builder()
 
-      public override fun keyValueStoreArn(keyValueStoreArn: String) {
+      override fun keyValueStoreArn(keyValueStoreArn: String) {
         cdkBuilder.keyValueStoreArn(keyValueStoreArn)
       }
 
@@ -345,7 +327,7 @@ public open class CfnFunction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty,
     ) : KeyValueStoreAssociationProperty {
-      public override fun keyValueStoreArn(): String = unwrap(this).getKeyValueStoreArn()
+      override fun keyValueStoreArn(): String = unwrap(this).getKeyValueStoreArn()
     }
 
     public companion object {

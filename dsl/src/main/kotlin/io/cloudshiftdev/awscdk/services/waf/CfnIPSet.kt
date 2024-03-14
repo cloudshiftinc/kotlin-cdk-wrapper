@@ -37,14 +37,11 @@ public open class CfnIPSet internal constructor(
   }
 
   public interface Builder {
-    public fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
-    }
+    public fun ipSetDescriptors(ipSetDescriptors: IResolvable)
 
-    public fun ipSetDescriptors(ipSetDescriptors: List<Any>) {
-    }
+    public fun ipSetDescriptors(ipSetDescriptors: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnIPSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.CfnIPSet.Builder =
         software.amazon.awscdk.services.waf.CfnIPSet.Builder.create(scope, id)
 
-    public override fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
+    override fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
       cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable::unwrap))
     }
 
-    public override fun ipSetDescriptors(ipSetDescriptors: List<Any>) {
+    override fun ipSetDescriptors(ipSetDescriptors: List<Any>) {
       cdkBuilder.ipSetDescriptors(ipSetDescriptors)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -96,11 +93,9 @@ public open class CfnIPSet internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -108,11 +103,11 @@ public open class CfnIPSet internal constructor(
           software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty.Builder =
           software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -123,9 +118,9 @@ public open class CfnIPSet internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty,
     ) : IPSetDescriptorProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

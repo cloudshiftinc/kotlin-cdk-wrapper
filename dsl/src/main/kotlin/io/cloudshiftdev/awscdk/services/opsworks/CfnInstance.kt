@@ -183,86 +183,60 @@ public open class CfnInstance internal constructor(
   }
 
   public interface Builder {
-    public fun agentVersion(agentVersion: String) {
-    }
+    public fun agentVersion(agentVersion: String)
 
-    public fun amiId(amiId: String) {
-    }
+    public fun amiId(amiId: String)
 
-    public fun architecture(architecture: String) {
-    }
+    public fun architecture(architecture: String)
 
-    public fun autoScalingType(autoScalingType: String) {
-    }
+    public fun autoScalingType(autoScalingType: String)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-    }
+    public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
 
-    public fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-    }
+    public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
-    public fun ebsOptimized(ebsOptimized: Boolean) {
-    }
+    public fun ebsOptimized(ebsOptimized: Boolean)
 
-    public fun ebsOptimized(ebsOptimized: IResolvable) {
-    }
+    public fun ebsOptimized(ebsOptimized: IResolvable)
 
-    public fun elasticIps(elasticIps: List<String>) {
-    }
+    public fun elasticIps(elasticIps: List<String>)
 
-    public fun hostname(hostname: String) {
-    }
+    public fun hostname(hostname: String)
 
-    public fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean) {
-    }
+    public fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean)
 
-    public fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
-    }
+    public fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun layerIds(layerIds: List<String>) {
-    }
+    public fun layerIds(layerIds: List<String>)
 
-    public fun os(os: String) {
-    }
+    public fun os(os: String)
 
-    public fun rootDeviceType(rootDeviceType: String) {
-    }
+    public fun rootDeviceType(rootDeviceType: String)
 
-    public fun sshKeyName(sshKeyName: String) {
-    }
+    public fun sshKeyName(sshKeyName: String)
 
-    public fun stackId(stackId: String) {
-    }
+    public fun stackId(stackId: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tenancy(tenancy: String) {
-    }
+    public fun tenancy(tenancy: String)
 
-    public fun timeBasedAutoScaling(timeBasedAutoScaling: IResolvable) {
-    }
+    public fun timeBasedAutoScaling(timeBasedAutoScaling: IResolvable)
 
-    public fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty) {
-    }
+    public fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d0f4085d8c13f8af5e1920e12319b76161cac1bdcdc6e741f66421e1ad2eb89")
     public
-        fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty.Builder.() -> Unit) {
-    }
+        fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty.Builder.() -> Unit)
 
-    public fun virtualizationType(virtualizationType: String) {
-    }
+    public fun virtualizationType(virtualizationType: String)
 
-    public fun volumes(volumes: List<String>) {
-    }
+    public fun volumes(volumes: List<String>)
   }
 
   private class BuilderImpl(
@@ -272,109 +246,109 @@ public open class CfnInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnInstance.Builder =
         software.amazon.awscdk.services.opsworks.CfnInstance.Builder.create(scope, id)
 
-    public override fun agentVersion(agentVersion: String) {
+    override fun agentVersion(agentVersion: String) {
       cdkBuilder.agentVersion(agentVersion)
     }
 
-    public override fun amiId(amiId: String) {
+    override fun amiId(amiId: String) {
       cdkBuilder.amiId(amiId)
     }
 
-    public override fun architecture(architecture: String) {
+    override fun architecture(architecture: String) {
       cdkBuilder.architecture(architecture)
     }
 
-    public override fun autoScalingType(autoScalingType: String) {
+    override fun autoScalingType(autoScalingType: String) {
       cdkBuilder.autoScalingType(autoScalingType)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+    override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
     }
 
-    public override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+    override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
 
-    public override fun ebsOptimized(ebsOptimized: Boolean) {
+    override fun ebsOptimized(ebsOptimized: Boolean) {
       cdkBuilder.ebsOptimized(ebsOptimized)
     }
 
-    public override fun ebsOptimized(ebsOptimized: IResolvable) {
+    override fun ebsOptimized(ebsOptimized: IResolvable) {
       cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
     }
 
-    public override fun elasticIps(elasticIps: List<String>) {
+    override fun elasticIps(elasticIps: List<String>) {
       cdkBuilder.elasticIps(elasticIps)
     }
 
-    public override fun hostname(hostname: String) {
+    override fun hostname(hostname: String) {
       cdkBuilder.hostname(hostname)
     }
 
-    public override fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean) {
+    override fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean) {
       cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot)
     }
 
-    public override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
+    override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
       cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable::unwrap))
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun layerIds(layerIds: List<String>) {
+    override fun layerIds(layerIds: List<String>) {
       cdkBuilder.layerIds(layerIds)
     }
 
-    public override fun os(os: String) {
+    override fun os(os: String) {
       cdkBuilder.os(os)
     }
 
-    public override fun rootDeviceType(rootDeviceType: String) {
+    override fun rootDeviceType(rootDeviceType: String) {
       cdkBuilder.rootDeviceType(rootDeviceType)
     }
 
-    public override fun sshKeyName(sshKeyName: String) {
+    override fun sshKeyName(sshKeyName: String) {
       cdkBuilder.sshKeyName(sshKeyName)
     }
 
-    public override fun stackId(stackId: String) {
+    override fun stackId(stackId: String) {
       cdkBuilder.stackId(stackId)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tenancy(tenancy: String) {
+    override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
     }
 
-    public override fun timeBasedAutoScaling(timeBasedAutoScaling: IResolvable) {
+    override fun timeBasedAutoScaling(timeBasedAutoScaling: IResolvable) {
       cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(IResolvable::unwrap))
     }
 
-    public override fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty) {
+    override fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty) {
       cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(TimeBasedAutoScalingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d0f4085d8c13f8af5e1920e12319b76161cac1bdcdc6e741f66421e1ad2eb89")
-    public override
+    override
         fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty.Builder.() -> Unit):
         Unit = timeBasedAutoScaling(TimeBasedAutoScalingProperty(timeBasedAutoScaling))
 
-    public override fun virtualizationType(virtualizationType: String) {
+    override fun virtualizationType(virtualizationType: String) {
       cdkBuilder.virtualizationType(virtualizationType)
     }
 
-    public override fun volumes(volumes: List<String>) {
+    override fun volumes(volumes: List<String>) {
       cdkBuilder.volumes(volumes)
     }
 
@@ -418,47 +392,33 @@ public open class CfnInstance internal constructor(
     public fun wednesday(): Any? = unwrap(this).getWednesday()
 
     public interface Builder {
-      public fun friday(friday: IResolvable) {
-      }
+      public fun friday(friday: IResolvable)
 
-      public fun friday(friday: Map<String, String>) {
-      }
+      public fun friday(friday: Map<String, String>)
 
-      public fun monday(monday: IResolvable) {
-      }
+      public fun monday(monday: IResolvable)
 
-      public fun monday(monday: Map<String, String>) {
-      }
+      public fun monday(monday: Map<String, String>)
 
-      public fun saturday(saturday: IResolvable) {
-      }
+      public fun saturday(saturday: IResolvable)
 
-      public fun saturday(saturday: Map<String, String>) {
-      }
+      public fun saturday(saturday: Map<String, String>)
 
-      public fun sunday(sunday: IResolvable) {
-      }
+      public fun sunday(sunday: IResolvable)
 
-      public fun sunday(sunday: Map<String, String>) {
-      }
+      public fun sunday(sunday: Map<String, String>)
 
-      public fun thursday(thursday: IResolvable) {
-      }
+      public fun thursday(thursday: IResolvable)
 
-      public fun thursday(thursday: Map<String, String>) {
-      }
+      public fun thursday(thursday: Map<String, String>)
 
-      public fun tuesday(tuesday: IResolvable) {
-      }
+      public fun tuesday(tuesday: IResolvable)
 
-      public fun tuesday(tuesday: Map<String, String>) {
-      }
+      public fun tuesday(tuesday: Map<String, String>)
 
-      public fun wednesday(wednesday: IResolvable) {
-      }
+      public fun wednesday(wednesday: IResolvable)
 
-      public fun wednesday(wednesday: Map<String, String>) {
-      }
+      public fun wednesday(wednesday: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -467,59 +427,59 @@ public open class CfnInstance internal constructor(
           =
           software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty.builder()
 
-      public override fun friday(friday: IResolvable) {
+      override fun friday(friday: IResolvable) {
         cdkBuilder.friday(friday.let(IResolvable::unwrap))
       }
 
-      public override fun friday(friday: Map<String, String>) {
+      override fun friday(friday: Map<String, String>) {
         cdkBuilder.friday(friday)
       }
 
-      public override fun monday(monday: IResolvable) {
+      override fun monday(monday: IResolvable) {
         cdkBuilder.monday(monday.let(IResolvable::unwrap))
       }
 
-      public override fun monday(monday: Map<String, String>) {
+      override fun monday(monday: Map<String, String>) {
         cdkBuilder.monday(monday)
       }
 
-      public override fun saturday(saturday: IResolvable) {
+      override fun saturday(saturday: IResolvable) {
         cdkBuilder.saturday(saturday.let(IResolvable::unwrap))
       }
 
-      public override fun saturday(saturday: Map<String, String>) {
+      override fun saturday(saturday: Map<String, String>) {
         cdkBuilder.saturday(saturday)
       }
 
-      public override fun sunday(sunday: IResolvable) {
+      override fun sunday(sunday: IResolvable) {
         cdkBuilder.sunday(sunday.let(IResolvable::unwrap))
       }
 
-      public override fun sunday(sunday: Map<String, String>) {
+      override fun sunday(sunday: Map<String, String>) {
         cdkBuilder.sunday(sunday)
       }
 
-      public override fun thursday(thursday: IResolvable) {
+      override fun thursday(thursday: IResolvable) {
         cdkBuilder.thursday(thursday.let(IResolvable::unwrap))
       }
 
-      public override fun thursday(thursday: Map<String, String>) {
+      override fun thursday(thursday: Map<String, String>) {
         cdkBuilder.thursday(thursday)
       }
 
-      public override fun tuesday(tuesday: IResolvable) {
+      override fun tuesday(tuesday: IResolvable) {
         cdkBuilder.tuesday(tuesday.let(IResolvable::unwrap))
       }
 
-      public override fun tuesday(tuesday: Map<String, String>) {
+      override fun tuesday(tuesday: Map<String, String>) {
         cdkBuilder.tuesday(tuesday)
       }
 
-      public override fun wednesday(wednesday: IResolvable) {
+      override fun wednesday(wednesday: IResolvable) {
         cdkBuilder.wednesday(wednesday.let(IResolvable::unwrap))
       }
 
-      public override fun wednesday(wednesday: Map<String, String>) {
+      override fun wednesday(wednesday: Map<String, String>) {
         cdkBuilder.wednesday(wednesday)
       }
 
@@ -532,19 +492,19 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnInstance.TimeBasedAutoScalingProperty,
     ) : TimeBasedAutoScalingProperty {
-      public override fun friday(): Any? = unwrap(this).getFriday()
+      override fun friday(): Any? = unwrap(this).getFriday()
 
-      public override fun monday(): Any? = unwrap(this).getMonday()
+      override fun monday(): Any? = unwrap(this).getMonday()
 
-      public override fun saturday(): Any? = unwrap(this).getSaturday()
+      override fun saturday(): Any? = unwrap(this).getSaturday()
 
-      public override fun sunday(): Any? = unwrap(this).getSunday()
+      override fun sunday(): Any? = unwrap(this).getSunday()
 
-      public override fun thursday(): Any? = unwrap(this).getThursday()
+      override fun thursday(): Any? = unwrap(this).getThursday()
 
-      public override fun tuesday(): Any? = unwrap(this).getTuesday()
+      override fun tuesday(): Any? = unwrap(this).getTuesday()
 
-      public override fun wednesday(): Any? = unwrap(this).getWednesday()
+      override fun wednesday(): Any? = unwrap(this).getWednesday()
     }
 
     public companion object {
@@ -579,23 +539,17 @@ public open class CfnInstance internal constructor(
     public fun volumeType(): String? = unwrap(this).getVolumeType()
 
     public interface Builder {
-      public fun deleteOnTermination(deleteOnTermination: Boolean) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun snapshotId(snapshotId: String) {
-      }
+      public fun snapshotId(snapshotId: String)
 
-      public fun volumeSize(volumeSize: Number) {
-      }
+      public fun volumeSize(volumeSize: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -603,27 +557,27 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty.builder()
 
-      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
         cdkBuilder.deleteOnTermination(deleteOnTermination)
       }
 
-      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
         cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun snapshotId(snapshotId: String) {
+      override fun snapshotId(snapshotId: String) {
         cdkBuilder.snapshotId(snapshotId)
       }
 
-      public override fun volumeSize(volumeSize: Number) {
+      override fun volumeSize(volumeSize: Number) {
         cdkBuilder.volumeSize(volumeSize)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -636,15 +590,15 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnInstance.EbsBlockDeviceProperty,
     ) : EbsBlockDeviceProperty {
-      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
 
-      public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
-      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -677,25 +631,19 @@ public open class CfnInstance internal constructor(
     public fun virtualName(): String? = unwrap(this).getVirtualName()
 
     public interface Builder {
-      public fun deviceName(deviceName: String) {
-      }
+      public fun deviceName(deviceName: String)
 
-      public fun ebs(ebs: IResolvable) {
-      }
+      public fun ebs(ebs: IResolvable)
 
-      public fun ebs(ebs: EbsBlockDeviceProperty) {
-      }
+      public fun ebs(ebs: EbsBlockDeviceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2db9fbc79bd708ea3ad6349cce8c96ac5bda7031f43285f108268ea1eec10429")
-      public fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit) {
-      }
+      public fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit)
 
-      public fun noDevice(noDevice: String) {
-      }
+      public fun noDevice(noDevice: String)
 
-      public fun virtualName(virtualName: String) {
-      }
+      public fun virtualName(virtualName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -703,28 +651,28 @@ public open class CfnInstance internal constructor(
           software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty.builder()
 
-      public override fun deviceName(deviceName: String) {
+      override fun deviceName(deviceName: String) {
         cdkBuilder.deviceName(deviceName)
       }
 
-      public override fun ebs(ebs: IResolvable) {
+      override fun ebs(ebs: IResolvable) {
         cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
       }
 
-      public override fun ebs(ebs: EbsBlockDeviceProperty) {
+      override fun ebs(ebs: EbsBlockDeviceProperty) {
         cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2db9fbc79bd708ea3ad6349cce8c96ac5bda7031f43285f108268ea1eec10429")
-      public override fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit): Unit =
+      override fun ebs(ebs: EbsBlockDeviceProperty.Builder.() -> Unit): Unit =
           ebs(EbsBlockDeviceProperty(ebs))
 
-      public override fun noDevice(noDevice: String) {
+      override fun noDevice(noDevice: String) {
         cdkBuilder.noDevice(noDevice)
       }
 
-      public override fun virtualName(virtualName: String) {
+      override fun virtualName(virtualName: String) {
         cdkBuilder.virtualName(virtualName)
       }
 
@@ -737,13 +685,13 @@ public open class CfnInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnInstance.BlockDeviceMappingProperty,
     ) : BlockDeviceMappingProperty {
-      public override fun deviceName(): String? = unwrap(this).getDeviceName()
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
 
-      public override fun ebs(): Any? = unwrap(this).getEbs()
+      override fun ebs(): Any? = unwrap(this).getEbs()
 
-      public override fun noDevice(): String? = unwrap(this).getNoDevice()
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
 
-      public override fun virtualName(): String? = unwrap(this).getVirtualName()
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
     }
 
     public companion object {

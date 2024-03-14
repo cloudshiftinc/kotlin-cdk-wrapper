@@ -9,22 +9,20 @@ public interface PortOverride {
   public fun listenerPort(): Number
 
   public interface Builder {
-    public fun endpointPort(endpointPort: Number) {
-    }
+    public fun endpointPort(endpointPort: Number)
 
-    public fun listenerPort(listenerPort: Number) {
-    }
+    public fun listenerPort(listenerPort: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.PortOverride.Builder =
         software.amazon.awscdk.services.globalaccelerator.PortOverride.builder()
 
-    public override fun endpointPort(endpointPort: Number) {
+    override fun endpointPort(endpointPort: Number) {
       cdkBuilder.endpointPort(endpointPort)
     }
 
-    public override fun listenerPort(listenerPort: Number) {
+    override fun listenerPort(listenerPort: Number) {
       cdkBuilder.listenerPort(listenerPort)
     }
 
@@ -35,9 +33,9 @@ public interface PortOverride {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.PortOverride,
   ) : PortOverride {
-    public override fun endpointPort(): Number = unwrap(this).getEndpointPort()
+    override fun endpointPort(): Number = unwrap(this).getEndpointPort()
 
-    public override fun listenerPort(): Number = unwrap(this).getListenerPort()
+    override fun listenerPort(): Number = unwrap(this).getListenerPort()
   }
 
   public companion object {

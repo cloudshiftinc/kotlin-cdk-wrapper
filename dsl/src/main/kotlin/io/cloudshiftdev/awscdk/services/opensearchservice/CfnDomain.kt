@@ -296,164 +296,121 @@ public open class CfnDomain internal constructor(
       vpcOptions(VPCOptionsProperty(`value`))
 
   public interface Builder {
-    public fun accessPolicies(accessPolicies: Any) {
-    }
+    public fun accessPolicies(accessPolicies: Any)
 
-    public fun advancedOptions(advancedOptions: IResolvable) {
-    }
+    public fun advancedOptions(advancedOptions: IResolvable)
 
-    public fun advancedOptions(advancedOptions: Map<String, String>) {
-    }
+    public fun advancedOptions(advancedOptions: Map<String, String>)
 
-    public fun advancedSecurityOptions(advancedSecurityOptions: IResolvable) {
-    }
+    public fun advancedSecurityOptions(advancedSecurityOptions: IResolvable)
 
     public
-        fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty) {
-    }
+        fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cff95f06bbe4f718dcc8b3f07f1d447fa61aea2aab93bb2133840db36f656aef")
     public
-        fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty.Builder.() -> Unit) {
-    }
+        fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty.Builder.() -> Unit)
 
-    public fun clusterConfig(clusterConfig: IResolvable) {
-    }
+    public fun clusterConfig(clusterConfig: IResolvable)
 
-    public fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-    }
+    public fun clusterConfig(clusterConfig: ClusterConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b5dd218dbd779db471ccb326f7f4bf12c2df12a9ee4464f7e3bf4981c3bfa70")
-    public fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit) {
-    }
+    public fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit)
 
-    public fun cognitoOptions(cognitoOptions: IResolvable) {
-    }
+    public fun cognitoOptions(cognitoOptions: IResolvable)
 
-    public fun cognitoOptions(cognitoOptions: CognitoOptionsProperty) {
-    }
+    public fun cognitoOptions(cognitoOptions: CognitoOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4bbf5b9c5171b1ae7b4aebdc4a06f730f24d5e5f5f024dfdc3e9ce4d90603359")
-    public fun cognitoOptions(cognitoOptions: CognitoOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun cognitoOptions(cognitoOptions: CognitoOptionsProperty.Builder.() -> Unit)
 
-    public fun domainArn(domainArn: String) {
-    }
+    public fun domainArn(domainArn: String)
 
-    public fun domainEndpointOptions(domainEndpointOptions: IResolvable) {
-    }
+    public fun domainEndpointOptions(domainEndpointOptions: IResolvable)
 
-    public fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty) {
-    }
+    public fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("254043fab7706a69964bd04ba00f4938efd89d3bcba72a854478c427e1aae7b4")
     public
-        fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty.Builder.() -> Unit) {
-    }
+        fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty.Builder.() -> Unit)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun ebsOptions(ebsOptions: IResolvable) {
-    }
+    public fun ebsOptions(ebsOptions: IResolvable)
 
-    public fun ebsOptions(ebsOptions: EBSOptionsProperty) {
-    }
+    public fun ebsOptions(ebsOptions: EBSOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a15cd8967fb7df8426143e70c8919d0fe344957f9fd90759af1760ec63b16ae")
-    public fun ebsOptions(ebsOptions: EBSOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun ebsOptions(ebsOptions: EBSOptionsProperty.Builder.() -> Unit)
 
-    public fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
-    }
+    public fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable)
 
-    public fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
-    }
+    public fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2c540038a60d9380dcfbdae380d305126e72c3893df4fbf893a2051861b3e67")
     public
-        fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty.Builder.() -> Unit) {
-    }
+        fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty.Builder.() -> Unit)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun ipAddressType(ipAddressType: String) {
-    }
+    public fun ipAddressType(ipAddressType: String)
 
-    public fun logPublishingOptions(logPublishingOptions: IResolvable) {
-    }
+    public fun logPublishingOptions(logPublishingOptions: IResolvable)
 
-    public fun logPublishingOptions(logPublishingOptions: Map<String, Any>) {
-    }
+    public fun logPublishingOptions(logPublishingOptions: Map<String, Any>)
 
-    public fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: IResolvable) {
-    }
+    public fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: IResolvable)
 
     public
-        fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty) {
-    }
+        fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3cd2d31758310fde86c8260065275d297e7e1091f47c05666565eab12698cc81")
     public
-        fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty.Builder.() -> Unit) {
-    }
+        fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty.Builder.() -> Unit)
 
-    public fun offPeakWindowOptions(offPeakWindowOptions: IResolvable) {
-    }
+    public fun offPeakWindowOptions(offPeakWindowOptions: IResolvable)
 
-    public fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty) {
-    }
+    public fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e70e5778d97125c7fda25481a6d9e1dee790e8fcafaf024d5d7c4e554b4a6f72")
     public
-        fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty.Builder.() -> Unit) {
-    }
+        fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty.Builder.() -> Unit)
 
-    public fun snapshotOptions(snapshotOptions: IResolvable) {
-    }
+    public fun snapshotOptions(snapshotOptions: IResolvable)
 
-    public fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty) {
-    }
+    public fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72bd4cd626caa011c00aedc195d48d59960c1e02bab0f3d5aa0f5923597e593e")
-    public fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty.Builder.() -> Unit)
 
-    public fun softwareUpdateOptions(softwareUpdateOptions: IResolvable) {
-    }
+    public fun softwareUpdateOptions(softwareUpdateOptions: IResolvable)
 
-    public fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty) {
-    }
+    public fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e26d3115ca890c89afa47f5ab6ffe5fb905dfa1a0a2a8f81deb379168fa8458")
     public
-        fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty.Builder.() -> Unit) {
-    }
+        fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcOptions(vpcOptions: IResolvable) {
-    }
+    public fun vpcOptions(vpcOptions: IResolvable)
 
-    public fun vpcOptions(vpcOptions: VPCOptionsProperty) {
-    }
+    public fun vpcOptions(vpcOptions: VPCOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19c2530da7c20d4902b3f93679f21fb0a9aa629f1fc4b216b31aa8fec75a0e0e")
-    public fun vpcOptions(vpcOptions: VPCOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun vpcOptions(vpcOptions: VPCOptionsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -463,201 +420,197 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opensearchservice.CfnDomain.Builder =
         software.amazon.awscdk.services.opensearchservice.CfnDomain.Builder.create(scope, id)
 
-    public override fun accessPolicies(accessPolicies: Any) {
+    override fun accessPolicies(accessPolicies: Any) {
       cdkBuilder.accessPolicies(accessPolicies)
     }
 
-    public override fun advancedOptions(advancedOptions: IResolvable) {
+    override fun advancedOptions(advancedOptions: IResolvable) {
       cdkBuilder.advancedOptions(advancedOptions.let(IResolvable::unwrap))
     }
 
-    public override fun advancedOptions(advancedOptions: Map<String, String>) {
+    override fun advancedOptions(advancedOptions: Map<String, String>) {
       cdkBuilder.advancedOptions(advancedOptions)
     }
 
-    public override fun advancedSecurityOptions(advancedSecurityOptions: IResolvable) {
+    override fun advancedSecurityOptions(advancedSecurityOptions: IResolvable) {
       cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty) {
       cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(AdvancedSecurityOptionsInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cff95f06bbe4f718dcc8b3f07f1d447fa61aea2aab93bb2133840db36f656aef")
-    public override
+    override
         fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty.Builder.() -> Unit):
         Unit =
         advancedSecurityOptions(AdvancedSecurityOptionsInputProperty(advancedSecurityOptions))
 
-    public override fun clusterConfig(clusterConfig: IResolvable) {
+    override fun clusterConfig(clusterConfig: IResolvable) {
       cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
     }
 
-    public override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
+    override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
       cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b5dd218dbd779db471ccb326f7f4bf12c2df12a9ee4464f7e3bf4981c3bfa70")
-    public override fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit): Unit
-        = clusterConfig(ClusterConfigProperty(clusterConfig))
+    override fun clusterConfig(clusterConfig: ClusterConfigProperty.Builder.() -> Unit): Unit =
+        clusterConfig(ClusterConfigProperty(clusterConfig))
 
-    public override fun cognitoOptions(cognitoOptions: IResolvable) {
+    override fun cognitoOptions(cognitoOptions: IResolvable) {
       cdkBuilder.cognitoOptions(cognitoOptions.let(IResolvable::unwrap))
     }
 
-    public override fun cognitoOptions(cognitoOptions: CognitoOptionsProperty) {
+    override fun cognitoOptions(cognitoOptions: CognitoOptionsProperty) {
       cdkBuilder.cognitoOptions(cognitoOptions.let(CognitoOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4bbf5b9c5171b1ae7b4aebdc4a06f730f24d5e5f5f024dfdc3e9ce4d90603359")
-    public override fun cognitoOptions(cognitoOptions: CognitoOptionsProperty.Builder.() -> Unit):
-        Unit = cognitoOptions(CognitoOptionsProperty(cognitoOptions))
+    override fun cognitoOptions(cognitoOptions: CognitoOptionsProperty.Builder.() -> Unit): Unit =
+        cognitoOptions(CognitoOptionsProperty(cognitoOptions))
 
-    public override fun domainArn(domainArn: String) {
+    override fun domainArn(domainArn: String) {
       cdkBuilder.domainArn(domainArn)
     }
 
-    public override fun domainEndpointOptions(domainEndpointOptions: IResolvable) {
+    override fun domainEndpointOptions(domainEndpointOptions: IResolvable) {
       cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty) {
+    override fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty) {
       cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(DomainEndpointOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("254043fab7706a69964bd04ba00f4938efd89d3bcba72a854478c427e1aae7b4")
-    public override
+    override
         fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty.Builder.() -> Unit):
         Unit = domainEndpointOptions(DomainEndpointOptionsProperty(domainEndpointOptions))
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun ebsOptions(ebsOptions: IResolvable) {
+    override fun ebsOptions(ebsOptions: IResolvable) {
       cdkBuilder.ebsOptions(ebsOptions.let(IResolvable::unwrap))
     }
 
-    public override fun ebsOptions(ebsOptions: EBSOptionsProperty) {
+    override fun ebsOptions(ebsOptions: EBSOptionsProperty) {
       cdkBuilder.ebsOptions(ebsOptions.let(EBSOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a15cd8967fb7df8426143e70c8919d0fe344957f9fd90759af1760ec63b16ae")
-    public override fun ebsOptions(ebsOptions: EBSOptionsProperty.Builder.() -> Unit): Unit =
+    override fun ebsOptions(ebsOptions: EBSOptionsProperty.Builder.() -> Unit): Unit =
         ebsOptions(EBSOptionsProperty(ebsOptions))
 
-    public override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
+    override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
       cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
+    override fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
       cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(EncryptionAtRestOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2c540038a60d9380dcfbdae380d305126e72c3893df4fbf893a2051861b3e67")
-    public override
+    override
         fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty.Builder.() -> Unit):
         Unit = encryptionAtRestOptions(EncryptionAtRestOptionsProperty(encryptionAtRestOptions))
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun ipAddressType(ipAddressType: String) {
+    override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
     }
 
-    public override fun logPublishingOptions(logPublishingOptions: IResolvable) {
+    override fun logPublishingOptions(logPublishingOptions: IResolvable) {
       cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable::unwrap))
     }
 
-    public override fun logPublishingOptions(logPublishingOptions: Map<String, Any>) {
+    override fun logPublishingOptions(logPublishingOptions: Map<String, Any>) {
       cdkBuilder.logPublishingOptions(logPublishingOptions)
     }
 
-    public override fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: IResolvable) {
+    override fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: IResolvable) {
       cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty) {
       cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(NodeToNodeEncryptionOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3cd2d31758310fde86c8260065275d297e7e1091f47c05666565eab12698cc81")
-    public override
+    override
         fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty.Builder.() -> Unit):
         Unit =
         nodeToNodeEncryptionOptions(NodeToNodeEncryptionOptionsProperty(nodeToNodeEncryptionOptions))
 
-    public override fun offPeakWindowOptions(offPeakWindowOptions: IResolvable) {
+    override fun offPeakWindowOptions(offPeakWindowOptions: IResolvable) {
       cdkBuilder.offPeakWindowOptions(offPeakWindowOptions.let(IResolvable::unwrap))
     }
 
-    public override fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty) {
+    override fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty) {
       cdkBuilder.offPeakWindowOptions(offPeakWindowOptions.let(OffPeakWindowOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e70e5778d97125c7fda25481a6d9e1dee790e8fcafaf024d5d7c4e554b4a6f72")
-    public override
+    override
         fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty.Builder.() -> Unit):
         Unit = offPeakWindowOptions(OffPeakWindowOptionsProperty(offPeakWindowOptions))
 
-    public override fun snapshotOptions(snapshotOptions: IResolvable) {
+    override fun snapshotOptions(snapshotOptions: IResolvable) {
       cdkBuilder.snapshotOptions(snapshotOptions.let(IResolvable::unwrap))
     }
 
-    public override fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty) {
+    override fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty) {
       cdkBuilder.snapshotOptions(snapshotOptions.let(SnapshotOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72bd4cd626caa011c00aedc195d48d59960c1e02bab0f3d5aa0f5923597e593e")
-    public override
-        fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty.Builder.() -> Unit): Unit =
-        snapshotOptions(SnapshotOptionsProperty(snapshotOptions))
+    override fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty.Builder.() -> Unit): Unit
+        = snapshotOptions(SnapshotOptionsProperty(snapshotOptions))
 
-    public override fun softwareUpdateOptions(softwareUpdateOptions: IResolvable) {
+    override fun softwareUpdateOptions(softwareUpdateOptions: IResolvable) {
       cdkBuilder.softwareUpdateOptions(softwareUpdateOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty) {
+    override fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty) {
       cdkBuilder.softwareUpdateOptions(softwareUpdateOptions.let(SoftwareUpdateOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e26d3115ca890c89afa47f5ab6ffe5fb905dfa1a0a2a8f81deb379168fa8458")
-    public override
+    override
         fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty.Builder.() -> Unit):
         Unit = softwareUpdateOptions(SoftwareUpdateOptionsProperty(softwareUpdateOptions))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcOptions(vpcOptions: IResolvable) {
+    override fun vpcOptions(vpcOptions: IResolvable) {
       cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
     }
 
-    public override fun vpcOptions(vpcOptions: VPCOptionsProperty) {
+    override fun vpcOptions(vpcOptions: VPCOptionsProperty) {
       cdkBuilder.vpcOptions(vpcOptions.let(VPCOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19c2530da7c20d4902b3f93679f21fb0a9aa629f1fc4b216b31aa8fec75a0e0e")
-    public override fun vpcOptions(vpcOptions: VPCOptionsProperty.Builder.() -> Unit): Unit =
+    override fun vpcOptions(vpcOptions: VPCOptionsProperty.Builder.() -> Unit): Unit =
         vpcOptions(VPCOptionsProperty(vpcOptions))
 
     public fun build(): software.amazon.awscdk.services.opensearchservice.CfnDomain =
@@ -693,14 +646,11 @@ public open class CfnDomain internal constructor(
     public fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
 
     public interface Builder {
-      public fun masterUserArn(masterUserArn: String) {
-      }
+      public fun masterUserArn(masterUserArn: String)
 
-      public fun masterUserName(masterUserName: String) {
-      }
+      public fun masterUserName(masterUserName: String)
 
-      public fun masterUserPassword(masterUserPassword: String) {
-      }
+      public fun masterUserPassword(masterUserPassword: String)
     }
 
     private class BuilderImpl : Builder {
@@ -709,15 +659,15 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty.builder()
 
-      public override fun masterUserArn(masterUserArn: String) {
+      override fun masterUserArn(masterUserArn: String) {
         cdkBuilder.masterUserArn(masterUserArn)
       }
 
-      public override fun masterUserName(masterUserName: String) {
+      override fun masterUserName(masterUserName: String) {
         cdkBuilder.masterUserName(masterUserName)
       }
 
-      public override fun masterUserPassword(masterUserPassword: String) {
+      override fun masterUserPassword(masterUserPassword: String) {
         cdkBuilder.masterUserPassword(masterUserPassword)
       }
 
@@ -730,11 +680,11 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.MasterUserOptionsProperty,
     ) : MasterUserOptionsProperty {
-      public override fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
+      override fun masterUserArn(): String? = unwrap(this).getMasterUserArn()
 
-      public override fun masterUserName(): String? = unwrap(this).getMasterUserName()
+      override fun masterUserName(): String? = unwrap(this).getMasterUserName()
 
-      public override fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
+      override fun masterUserPassword(): String? = unwrap(this).getMasterUserPassword()
     }
 
     public companion object {
@@ -771,49 +721,35 @@ public open class CfnDomain internal constructor(
     public fun samlOptions(): Any? = unwrap(this).getSamlOptions()
 
     public interface Builder {
-      public fun anonymousAuthDisableDate(anonymousAuthDisableDate: String) {
-      }
+      public fun anonymousAuthDisableDate(anonymousAuthDisableDate: String)
 
-      public fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean) {
-      }
+      public fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean)
 
-      public fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable) {
-      }
+      public fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean) {
-      }
+      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean)
 
-      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable) {
-      }
+      public fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable)
 
-      public fun masterUserOptions(masterUserOptions: IResolvable) {
-      }
+      public fun masterUserOptions(masterUserOptions: IResolvable)
 
-      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty) {
-      }
+      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db718d65484ad7164088f3bb85f48b915da76cb61cefa31caf55466a4df21631")
-      public
-          fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit)
 
-      public fun samlOptions(samlOptions: IResolvable) {
-      }
+      public fun samlOptions(samlOptions: IResolvable)
 
-      public fun samlOptions(samlOptions: SAMLOptionsProperty) {
-      }
+      public fun samlOptions(samlOptions: SAMLOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce753ad125cbf06be7919d8c6277eaf4989fa6029b9ca7fa095f124a48a12afb")
-      public fun samlOptions(samlOptions: SAMLOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun samlOptions(samlOptions: SAMLOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -822,59 +758,59 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty.builder()
 
-      public override fun anonymousAuthDisableDate(anonymousAuthDisableDate: String) {
+      override fun anonymousAuthDisableDate(anonymousAuthDisableDate: String) {
         cdkBuilder.anonymousAuthDisableDate(anonymousAuthDisableDate)
       }
 
-      public override fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean) {
+      override fun anonymousAuthEnabled(anonymousAuthEnabled: Boolean) {
         cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled)
       }
 
-      public override fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable) {
+      override fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable) {
         cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean) {
+      override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: Boolean) {
         cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled)
       }
 
-      public override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable) {
+      override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable) {
         cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun masterUserOptions(masterUserOptions: IResolvable) {
+      override fun masterUserOptions(masterUserOptions: IResolvable) {
         cdkBuilder.masterUserOptions(masterUserOptions.let(IResolvable::unwrap))
       }
 
-      public override fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty) {
+      override fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty) {
         cdkBuilder.masterUserOptions(masterUserOptions.let(MasterUserOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db718d65484ad7164088f3bb85f48b915da76cb61cefa31caf55466a4df21631")
-      public override
+      override
           fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty.Builder.() -> Unit):
           Unit = masterUserOptions(MasterUserOptionsProperty(masterUserOptions))
 
-      public override fun samlOptions(samlOptions: IResolvable) {
+      override fun samlOptions(samlOptions: IResolvable) {
         cdkBuilder.samlOptions(samlOptions.let(IResolvable::unwrap))
       }
 
-      public override fun samlOptions(samlOptions: SAMLOptionsProperty) {
+      override fun samlOptions(samlOptions: SAMLOptionsProperty) {
         cdkBuilder.samlOptions(samlOptions.let(SAMLOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce753ad125cbf06be7919d8c6277eaf4989fa6029b9ca7fa095f124a48a12afb")
-      public override fun samlOptions(samlOptions: SAMLOptionsProperty.Builder.() -> Unit): Unit =
+      override fun samlOptions(samlOptions: SAMLOptionsProperty.Builder.() -> Unit): Unit =
           samlOptions(SAMLOptionsProperty(samlOptions))
 
       public fun build():
@@ -886,19 +822,18 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.AdvancedSecurityOptionsInputProperty,
     ) : AdvancedSecurityOptionsInputProperty {
-      public override fun anonymousAuthDisableDate(): String? =
-          unwrap(this).getAnonymousAuthDisableDate()
+      override fun anonymousAuthDisableDate(): String? = unwrap(this).getAnonymousAuthDisableDate()
 
-      public override fun anonymousAuthEnabled(): Any? = unwrap(this).getAnonymousAuthEnabled()
+      override fun anonymousAuthEnabled(): Any? = unwrap(this).getAnonymousAuthEnabled()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun internalUserDatabaseEnabled(): Any? =
+      override fun internalUserDatabaseEnabled(): Any? =
           unwrap(this).getInternalUserDatabaseEnabled()
 
-      public override fun masterUserOptions(): Any? = unwrap(this).getMasterUserOptions()
+      override fun masterUserOptions(): Any? = unwrap(this).getMasterUserOptions()
 
-      public override fun samlOptions(): Any? = unwrap(this).getSamlOptions()
+      override fun samlOptions(): Any? = unwrap(this).getSamlOptions()
     }
 
     public companion object {
@@ -928,14 +863,11 @@ public open class CfnDomain internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
-      }
+      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -944,15 +876,15 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty.builder()
 
-      public override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
+      override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
         cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -965,10 +897,10 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.LogPublishingOptionProperty,
     ) : LogPublishingOptionProperty {
-      public override fun cloudWatchLogsLogGroupArn(): String? =
+      override fun cloudWatchLogsLogGroupArn(): String? =
           unwrap(this).getCloudWatchLogsLogGroupArn()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -997,11 +929,9 @@ public open class CfnDomain internal constructor(
     public fun metadataContent(): String
 
     public interface Builder {
-      public fun entityId(entityId: String) {
-      }
+      public fun entityId(entityId: String)
 
-      public fun metadataContent(metadataContent: String) {
-      }
+      public fun metadataContent(metadataContent: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1009,11 +939,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty.Builder =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty.builder()
 
-      public override fun entityId(entityId: String) {
+      override fun entityId(entityId: String) {
         cdkBuilder.entityId(entityId)
       }
 
-      public override fun metadataContent(metadataContent: String) {
+      override fun metadataContent(metadataContent: String) {
         cdkBuilder.metadataContent(metadataContent)
       }
 
@@ -1025,9 +955,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.IdpProperty,
     ) : IdpProperty {
-      public override fun entityId(): String = unwrap(this).getEntityId()
+      override fun entityId(): String = unwrap(this).getEntityId()
 
-      public override fun metadataContent(): String = unwrap(this).getMetadataContent()
+      override fun metadataContent(): String = unwrap(this).getMetadataContent()
     }
 
     public companion object {
@@ -1054,11 +984,9 @@ public open class CfnDomain internal constructor(
     public fun autoSoftwareUpdateEnabled(): Any? = unwrap(this).getAutoSoftwareUpdateEnabled()
 
     public interface Builder {
-      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean) {
-      }
+      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean)
 
-      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
-      }
+      public fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1067,11 +995,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty.builder()
 
-      public override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean) {
+      override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: Boolean) {
         cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled)
       }
 
-      public override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
+      override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
         cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled.let(IResolvable::unwrap))
       }
 
@@ -1084,8 +1012,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SoftwareUpdateOptionsProperty,
     ) : SoftwareUpdateOptionsProperty {
-      public override fun autoSoftwareUpdateEnabled(): Any? =
-          unwrap(this).getAutoSoftwareUpdateEnabled()
+      override fun autoSoftwareUpdateEnabled(): Any? = unwrap(this).getAutoSoftwareUpdateEnabled()
     }
 
     public companion object {
@@ -1112,16 +1039,13 @@ public open class CfnDomain internal constructor(
     public fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
 
     public interface Builder {
-      public fun windowStartTime(windowStartTime: IResolvable) {
-      }
+      public fun windowStartTime(windowStartTime: IResolvable)
 
-      public fun windowStartTime(windowStartTime: WindowStartTimeProperty) {
-      }
+      public fun windowStartTime(windowStartTime: WindowStartTimeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cc5262ef36470bc541159ef7d9a759a914ee2768b27431e784d1afc15afb33f3")
-      public fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit) {
-      }
+      public fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1130,19 +1054,18 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty.builder()
 
-      public override fun windowStartTime(windowStartTime: IResolvable) {
+      override fun windowStartTime(windowStartTime: IResolvable) {
         cdkBuilder.windowStartTime(windowStartTime.let(IResolvable::unwrap))
       }
 
-      public override fun windowStartTime(windowStartTime: WindowStartTimeProperty) {
+      override fun windowStartTime(windowStartTime: WindowStartTimeProperty) {
         cdkBuilder.windowStartTime(windowStartTime.let(WindowStartTimeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cc5262ef36470bc541159ef7d9a759a914ee2768b27431e784d1afc15afb33f3")
-      public override
-          fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit): Unit =
-          windowStartTime(WindowStartTimeProperty(windowStartTime))
+      override fun windowStartTime(windowStartTime: WindowStartTimeProperty.Builder.() -> Unit):
+          Unit = windowStartTime(WindowStartTimeProperty(windowStartTime))
 
       public fun build():
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty =
@@ -1153,7 +1076,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowProperty,
     ) : OffPeakWindowProperty {
-      public override fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
+      override fun windowStartTime(): Any? = unwrap(this).getWindowStartTime()
     }
 
     public companion object {
@@ -1192,37 +1115,27 @@ public open class CfnDomain internal constructor(
     public fun subjectKey(): String? = unwrap(this).getSubjectKey()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun idp(idp: IResolvable) {
-      }
+      public fun idp(idp: IResolvable)
 
-      public fun idp(idp: IdpProperty) {
-      }
+      public fun idp(idp: IdpProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("98f2e7eab165afbb620ad885b13a80a025703d8a9b6df570b0ab2364e8364860")
-      public fun idp(idp: IdpProperty.Builder.() -> Unit) {
-      }
+      public fun idp(idp: IdpProperty.Builder.() -> Unit)
 
-      public fun masterBackendRole(masterBackendRole: String) {
-      }
+      public fun masterBackendRole(masterBackendRole: String)
 
-      public fun masterUserName(masterUserName: String) {
-      }
+      public fun masterUserName(masterUserName: String)
 
-      public fun rolesKey(rolesKey: String) {
-      }
+      public fun rolesKey(rolesKey: String)
 
-      public fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
-      }
+      public fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number)
 
-      public fun subjectKey(subjectKey: String) {
-      }
+      public fun subjectKey(subjectKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1230,43 +1143,43 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty.Builder =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun idp(idp: IResolvable) {
+      override fun idp(idp: IResolvable) {
         cdkBuilder.idp(idp.let(IResolvable::unwrap))
       }
 
-      public override fun idp(idp: IdpProperty) {
+      override fun idp(idp: IdpProperty) {
         cdkBuilder.idp(idp.let(IdpProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("98f2e7eab165afbb620ad885b13a80a025703d8a9b6df570b0ab2364e8364860")
-      public override fun idp(idp: IdpProperty.Builder.() -> Unit): Unit = idp(IdpProperty(idp))
+      override fun idp(idp: IdpProperty.Builder.() -> Unit): Unit = idp(IdpProperty(idp))
 
-      public override fun masterBackendRole(masterBackendRole: String) {
+      override fun masterBackendRole(masterBackendRole: String) {
         cdkBuilder.masterBackendRole(masterBackendRole)
       }
 
-      public override fun masterUserName(masterUserName: String) {
+      override fun masterUserName(masterUserName: String) {
         cdkBuilder.masterUserName(masterUserName)
       }
 
-      public override fun rolesKey(rolesKey: String) {
+      override fun rolesKey(rolesKey: String) {
         cdkBuilder.rolesKey(rolesKey)
       }
 
-      public override fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
+      override fun sessionTimeoutMinutes(sessionTimeoutMinutes: Number) {
         cdkBuilder.sessionTimeoutMinutes(sessionTimeoutMinutes)
       }
 
-      public override fun subjectKey(subjectKey: String) {
+      override fun subjectKey(subjectKey: String) {
         cdkBuilder.subjectKey(subjectKey)
       }
 
@@ -1279,19 +1192,19 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SAMLOptionsProperty,
     ) : SAMLOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun idp(): Any? = unwrap(this).getIdp()
+      override fun idp(): Any? = unwrap(this).getIdp()
 
-      public override fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
+      override fun masterBackendRole(): String? = unwrap(this).getMasterBackendRole()
 
-      public override fun masterUserName(): String? = unwrap(this).getMasterUserName()
+      override fun masterUserName(): String? = unwrap(this).getMasterUserName()
 
-      public override fun rolesKey(): String? = unwrap(this).getRolesKey()
+      override fun rolesKey(): String? = unwrap(this).getRolesKey()
 
-      public override fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
+      override fun sessionTimeoutMinutes(): Number? = unwrap(this).getSessionTimeoutMinutes()
 
-      public override fun subjectKey(): String? = unwrap(this).getSubjectKey()
+      override fun subjectKey(): String? = unwrap(this).getSubjectKey()
     }
 
     public companion object {
@@ -1320,14 +1233,11 @@ public open class CfnDomain internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1336,15 +1246,15 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -1357,9 +1267,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty,
     ) : EncryptionAtRestOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {
@@ -1388,22 +1298,17 @@ public open class CfnDomain internal constructor(
     public fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun offPeakWindow(offPeakWindow: IResolvable) {
-      }
+      public fun offPeakWindow(offPeakWindow: IResolvable)
 
-      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty) {
-      }
+      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0816bae19b39183938b8f9bbfbcecebc689836be9c7c945c0fda0ba6d6bb8c40")
-      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit) {
-      }
+      public fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1412,26 +1317,26 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun offPeakWindow(offPeakWindow: IResolvable) {
+      override fun offPeakWindow(offPeakWindow: IResolvable) {
         cdkBuilder.offPeakWindow(offPeakWindow.let(IResolvable::unwrap))
       }
 
-      public override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty) {
+      override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty) {
         cdkBuilder.offPeakWindow(offPeakWindow.let(OffPeakWindowProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0816bae19b39183938b8f9bbfbcecebc689836be9c7c945c0fda0ba6d6bb8c40")
-      public override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit):
-          Unit = offPeakWindow(OffPeakWindowProperty(offPeakWindow))
+      override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty.Builder.() -> Unit): Unit =
+          offPeakWindow(OffPeakWindowProperty(offPeakWindow))
 
       public fun build():
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty =
@@ -1442,9 +1347,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.OffPeakWindowOptionsProperty,
     ) : OffPeakWindowOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
+      override fun offPeakWindow(): Any? = unwrap(this).getOffPeakWindow()
     }
 
     public companion object {
@@ -1493,71 +1398,51 @@ public open class CfnDomain internal constructor(
     public fun zoneAwarenessEnabled(): Any? = unwrap(this).getZoneAwarenessEnabled()
 
     public interface Builder {
-      public fun coldStorageOptions(coldStorageOptions: IResolvable) {
-      }
+      public fun coldStorageOptions(coldStorageOptions: IResolvable)
 
-      public fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty) {
-      }
+      public fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1822352ea71203b92b2fbf8a9c574aa529cf46c3083eb8ea53e532de17da1635")
       public
-          fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty.Builder.() -> Unit) {
-      }
+          fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty.Builder.() -> Unit)
 
-      public fun dedicatedMasterCount(dedicatedMasterCount: Number) {
-      }
+      public fun dedicatedMasterCount(dedicatedMasterCount: Number)
 
-      public fun dedicatedMasterEnabled(dedicatedMasterEnabled: Boolean) {
-      }
+      public fun dedicatedMasterEnabled(dedicatedMasterEnabled: Boolean)
 
-      public fun dedicatedMasterEnabled(dedicatedMasterEnabled: IResolvable) {
-      }
+      public fun dedicatedMasterEnabled(dedicatedMasterEnabled: IResolvable)
 
-      public fun dedicatedMasterType(dedicatedMasterType: String) {
-      }
+      public fun dedicatedMasterType(dedicatedMasterType: String)
 
-      public fun instanceCount(instanceCount: Number) {
-      }
+      public fun instanceCount(instanceCount: Number)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean) {
-      }
+      public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean)
 
-      public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: IResolvable) {
-      }
+      public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: IResolvable)
 
-      public fun warmCount(warmCount: Number) {
-      }
+      public fun warmCount(warmCount: Number)
 
-      public fun warmEnabled(warmEnabled: Boolean) {
-      }
+      public fun warmEnabled(warmEnabled: Boolean)
 
-      public fun warmEnabled(warmEnabled: IResolvable) {
-      }
+      public fun warmEnabled(warmEnabled: IResolvable)
 
-      public fun warmType(warmType: String) {
-      }
+      public fun warmType(warmType: String)
 
-      public fun zoneAwarenessConfig(zoneAwarenessConfig: IResolvable) {
-      }
+      public fun zoneAwarenessConfig(zoneAwarenessConfig: IResolvable)
 
-      public fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty) {
-      }
+      public fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cdc81f2f0fd336ad06569f2ff2c6451da52fa162b58311d6df529bf63527dbb0")
       public
-          fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty.Builder.() -> Unit) {
-      }
+          fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty.Builder.() -> Unit)
 
-      public fun zoneAwarenessEnabled(zoneAwarenessEnabled: Boolean) {
-      }
+      public fun zoneAwarenessEnabled(zoneAwarenessEnabled: Boolean)
 
-      public fun zoneAwarenessEnabled(zoneAwarenessEnabled: IResolvable) {
-      }
+      public fun zoneAwarenessEnabled(zoneAwarenessEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1566,87 +1451,87 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty.builder()
 
-      public override fun coldStorageOptions(coldStorageOptions: IResolvable) {
+      override fun coldStorageOptions(coldStorageOptions: IResolvable) {
         cdkBuilder.coldStorageOptions(coldStorageOptions.let(IResolvable::unwrap))
       }
 
-      public override fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty) {
+      override fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty) {
         cdkBuilder.coldStorageOptions(coldStorageOptions.let(ColdStorageOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1822352ea71203b92b2fbf8a9c574aa529cf46c3083eb8ea53e532de17da1635")
-      public override
+      override
           fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty.Builder.() -> Unit):
           Unit = coldStorageOptions(ColdStorageOptionsProperty(coldStorageOptions))
 
-      public override fun dedicatedMasterCount(dedicatedMasterCount: Number) {
+      override fun dedicatedMasterCount(dedicatedMasterCount: Number) {
         cdkBuilder.dedicatedMasterCount(dedicatedMasterCount)
       }
 
-      public override fun dedicatedMasterEnabled(dedicatedMasterEnabled: Boolean) {
+      override fun dedicatedMasterEnabled(dedicatedMasterEnabled: Boolean) {
         cdkBuilder.dedicatedMasterEnabled(dedicatedMasterEnabled)
       }
 
-      public override fun dedicatedMasterEnabled(dedicatedMasterEnabled: IResolvable) {
+      override fun dedicatedMasterEnabled(dedicatedMasterEnabled: IResolvable) {
         cdkBuilder.dedicatedMasterEnabled(dedicatedMasterEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun dedicatedMasterType(dedicatedMasterType: String) {
+      override fun dedicatedMasterType(dedicatedMasterType: String) {
         cdkBuilder.dedicatedMasterType(dedicatedMasterType)
       }
 
-      public override fun instanceCount(instanceCount: Number) {
+      override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean) {
+      override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean) {
         cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled)
       }
 
-      public override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: IResolvable) {
+      override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: IResolvable) {
         cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun warmCount(warmCount: Number) {
+      override fun warmCount(warmCount: Number) {
         cdkBuilder.warmCount(warmCount)
       }
 
-      public override fun warmEnabled(warmEnabled: Boolean) {
+      override fun warmEnabled(warmEnabled: Boolean) {
         cdkBuilder.warmEnabled(warmEnabled)
       }
 
-      public override fun warmEnabled(warmEnabled: IResolvable) {
+      override fun warmEnabled(warmEnabled: IResolvable) {
         cdkBuilder.warmEnabled(warmEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun warmType(warmType: String) {
+      override fun warmType(warmType: String) {
         cdkBuilder.warmType(warmType)
       }
 
-      public override fun zoneAwarenessConfig(zoneAwarenessConfig: IResolvable) {
+      override fun zoneAwarenessConfig(zoneAwarenessConfig: IResolvable) {
         cdkBuilder.zoneAwarenessConfig(zoneAwarenessConfig.let(IResolvable::unwrap))
       }
 
-      public override fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty) {
+      override fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty) {
         cdkBuilder.zoneAwarenessConfig(zoneAwarenessConfig.let(ZoneAwarenessConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cdc81f2f0fd336ad06569f2ff2c6451da52fa162b58311d6df529bf63527dbb0")
-      public override
+      override
           fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty.Builder.() -> Unit):
           Unit = zoneAwarenessConfig(ZoneAwarenessConfigProperty(zoneAwarenessConfig))
 
-      public override fun zoneAwarenessEnabled(zoneAwarenessEnabled: Boolean) {
+      override fun zoneAwarenessEnabled(zoneAwarenessEnabled: Boolean) {
         cdkBuilder.zoneAwarenessEnabled(zoneAwarenessEnabled)
       }
 
-      public override fun zoneAwarenessEnabled(zoneAwarenessEnabled: IResolvable) {
+      override fun zoneAwarenessEnabled(zoneAwarenessEnabled: IResolvable) {
         cdkBuilder.zoneAwarenessEnabled(zoneAwarenessEnabled.let(IResolvable::unwrap))
       }
 
@@ -1659,30 +1544,29 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ClusterConfigProperty,
     ) : ClusterConfigProperty {
-      public override fun coldStorageOptions(): Any? = unwrap(this).getColdStorageOptions()
+      override fun coldStorageOptions(): Any? = unwrap(this).getColdStorageOptions()
 
-      public override fun dedicatedMasterCount(): Number? = unwrap(this).getDedicatedMasterCount()
+      override fun dedicatedMasterCount(): Number? = unwrap(this).getDedicatedMasterCount()
 
-      public override fun dedicatedMasterEnabled(): Any? = unwrap(this).getDedicatedMasterEnabled()
+      override fun dedicatedMasterEnabled(): Any? = unwrap(this).getDedicatedMasterEnabled()
 
-      public override fun dedicatedMasterType(): String? = unwrap(this).getDedicatedMasterType()
+      override fun dedicatedMasterType(): String? = unwrap(this).getDedicatedMasterType()
 
-      public override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
+      override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
 
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun multiAzWithStandbyEnabled(): Any? =
-          unwrap(this).getMultiAzWithStandbyEnabled()
+      override fun multiAzWithStandbyEnabled(): Any? = unwrap(this).getMultiAzWithStandbyEnabled()
 
-      public override fun warmCount(): Number? = unwrap(this).getWarmCount()
+      override fun warmCount(): Number? = unwrap(this).getWarmCount()
 
-      public override fun warmEnabled(): Any? = unwrap(this).getWarmEnabled()
+      override fun warmEnabled(): Any? = unwrap(this).getWarmEnabled()
 
-      public override fun warmType(): String? = unwrap(this).getWarmType()
+      override fun warmType(): String? = unwrap(this).getWarmType()
 
-      public override fun zoneAwarenessConfig(): Any? = unwrap(this).getZoneAwarenessConfig()
+      override fun zoneAwarenessConfig(): Any? = unwrap(this).getZoneAwarenessConfig()
 
-      public override fun zoneAwarenessEnabled(): Any? = unwrap(this).getZoneAwarenessEnabled()
+      override fun zoneAwarenessEnabled(): Any? = unwrap(this).getZoneAwarenessEnabled()
     }
 
     public companion object {
@@ -1709,11 +1593,9 @@ public open class CfnDomain internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1722,11 +1604,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -1739,7 +1621,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.NodeToNodeEncryptionOptionsProperty,
     ) : NodeToNodeEncryptionOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -1767,8 +1649,7 @@ public open class CfnDomain internal constructor(
     public fun automatedSnapshotStartHour(): Number? = unwrap(this).getAutomatedSnapshotStartHour()
 
     public interface Builder {
-      public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
-      }
+      public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1777,7 +1658,7 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty.builder()
 
-      public override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
+      override fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
         cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
       }
 
@@ -1790,7 +1671,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.SnapshotOptionsProperty,
     ) : SnapshotOptionsProperty {
-      public override fun automatedSnapshotStartHour(): Number? =
+      override fun automatedSnapshotStartHour(): Number? =
           unwrap(this).getAutomatedSnapshotStartHour()
     }
 
@@ -1818,8 +1699,7 @@ public open class CfnDomain internal constructor(
     public fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
 
     public interface Builder {
-      public fun availabilityZoneCount(availabilityZoneCount: Number) {
-      }
+      public fun availabilityZoneCount(availabilityZoneCount: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1828,7 +1708,7 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty.builder()
 
-      public override fun availabilityZoneCount(availabilityZoneCount: Number) {
+      override fun availabilityZoneCount(availabilityZoneCount: Number) {
         cdkBuilder.availabilityZoneCount(availabilityZoneCount)
       }
 
@@ -1841,7 +1721,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ZoneAwarenessConfigProperty,
     ) : ZoneAwarenessConfigProperty {
-      public override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
+      override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
     }
 
     public companion object {
@@ -1877,26 +1757,19 @@ public open class CfnDomain internal constructor(
     public fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
 
     public interface Builder {
-      public fun customEndpoint(customEndpoint: String) {
-      }
+      public fun customEndpoint(customEndpoint: String)
 
-      public fun customEndpointCertificateArn(customEndpointCertificateArn: String) {
-      }
+      public fun customEndpointCertificateArn(customEndpointCertificateArn: String)
 
-      public fun customEndpointEnabled(customEndpointEnabled: Boolean) {
-      }
+      public fun customEndpointEnabled(customEndpointEnabled: Boolean)
 
-      public fun customEndpointEnabled(customEndpointEnabled: IResolvable) {
-      }
+      public fun customEndpointEnabled(customEndpointEnabled: IResolvable)
 
-      public fun enforceHttps(enforceHttps: Boolean) {
-      }
+      public fun enforceHttps(enforceHttps: Boolean)
 
-      public fun enforceHttps(enforceHttps: IResolvable) {
-      }
+      public fun enforceHttps(enforceHttps: IResolvable)
 
-      public fun tlsSecurityPolicy(tlsSecurityPolicy: String) {
-      }
+      public fun tlsSecurityPolicy(tlsSecurityPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1905,31 +1778,31 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty.builder()
 
-      public override fun customEndpoint(customEndpoint: String) {
+      override fun customEndpoint(customEndpoint: String) {
         cdkBuilder.customEndpoint(customEndpoint)
       }
 
-      public override fun customEndpointCertificateArn(customEndpointCertificateArn: String) {
+      override fun customEndpointCertificateArn(customEndpointCertificateArn: String) {
         cdkBuilder.customEndpointCertificateArn(customEndpointCertificateArn)
       }
 
-      public override fun customEndpointEnabled(customEndpointEnabled: Boolean) {
+      override fun customEndpointEnabled(customEndpointEnabled: Boolean) {
         cdkBuilder.customEndpointEnabled(customEndpointEnabled)
       }
 
-      public override fun customEndpointEnabled(customEndpointEnabled: IResolvable) {
+      override fun customEndpointEnabled(customEndpointEnabled: IResolvable) {
         cdkBuilder.customEndpointEnabled(customEndpointEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun enforceHttps(enforceHttps: Boolean) {
+      override fun enforceHttps(enforceHttps: Boolean) {
         cdkBuilder.enforceHttps(enforceHttps)
       }
 
-      public override fun enforceHttps(enforceHttps: IResolvable) {
+      override fun enforceHttps(enforceHttps: IResolvable) {
         cdkBuilder.enforceHttps(enforceHttps.let(IResolvable::unwrap))
       }
 
-      public override fun tlsSecurityPolicy(tlsSecurityPolicy: String) {
+      override fun tlsSecurityPolicy(tlsSecurityPolicy: String) {
         cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy)
       }
 
@@ -1942,16 +1815,16 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.DomainEndpointOptionsProperty,
     ) : DomainEndpointOptionsProperty {
-      public override fun customEndpoint(): String? = unwrap(this).getCustomEndpoint()
+      override fun customEndpoint(): String? = unwrap(this).getCustomEndpoint()
 
-      public override fun customEndpointCertificateArn(): String? =
+      override fun customEndpointCertificateArn(): String? =
           unwrap(this).getCustomEndpointCertificateArn()
 
-      public override fun customEndpointEnabled(): Any? = unwrap(this).getCustomEndpointEnabled()
+      override fun customEndpointEnabled(): Any? = unwrap(this).getCustomEndpointEnabled()
 
-      public override fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
+      override fun enforceHttps(): Any? = unwrap(this).getEnforceHttps()
 
-      public override fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
+      override fun tlsSecurityPolicy(): String? = unwrap(this).getTlsSecurityPolicy()
     }
 
     public companion object {
@@ -1992,38 +1865,27 @@ public open class CfnDomain internal constructor(
     public fun updateStatus(): String? = unwrap(this).getUpdateStatus()
 
     public interface Builder {
-      public fun automatedUpdateDate(automatedUpdateDate: String) {
-      }
+      public fun automatedUpdateDate(automatedUpdateDate: String)
 
-      public fun cancellable(cancellable: Boolean) {
-      }
+      public fun cancellable(cancellable: Boolean)
 
-      public fun cancellable(cancellable: IResolvable) {
-      }
+      public fun cancellable(cancellable: IResolvable)
 
-      public fun currentVersion(currentVersion: String) {
-      }
+      public fun currentVersion(currentVersion: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun newVersion(newVersion: String) {
-      }
+      public fun newVersion(newVersion: String)
 
-      public fun optionalDeployment(optionalDeployment: Boolean) {
-      }
+      public fun optionalDeployment(optionalDeployment: Boolean)
 
-      public fun optionalDeployment(optionalDeployment: IResolvable) {
-      }
+      public fun optionalDeployment(optionalDeployment: IResolvable)
 
-      public fun updateAvailable(updateAvailable: Boolean) {
-      }
+      public fun updateAvailable(updateAvailable: Boolean)
 
-      public fun updateAvailable(updateAvailable: IResolvable) {
-      }
+      public fun updateAvailable(updateAvailable: IResolvable)
 
-      public fun updateStatus(updateStatus: String) {
-      }
+      public fun updateStatus(updateStatus: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2032,47 +1894,47 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty.builder()
 
-      public override fun automatedUpdateDate(automatedUpdateDate: String) {
+      override fun automatedUpdateDate(automatedUpdateDate: String) {
         cdkBuilder.automatedUpdateDate(automatedUpdateDate)
       }
 
-      public override fun cancellable(cancellable: Boolean) {
+      override fun cancellable(cancellable: Boolean) {
         cdkBuilder.cancellable(cancellable)
       }
 
-      public override fun cancellable(cancellable: IResolvable) {
+      override fun cancellable(cancellable: IResolvable) {
         cdkBuilder.cancellable(cancellable.let(IResolvable::unwrap))
       }
 
-      public override fun currentVersion(currentVersion: String) {
+      override fun currentVersion(currentVersion: String) {
         cdkBuilder.currentVersion(currentVersion)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun newVersion(newVersion: String) {
+      override fun newVersion(newVersion: String) {
         cdkBuilder.newVersion(newVersion)
       }
 
-      public override fun optionalDeployment(optionalDeployment: Boolean) {
+      override fun optionalDeployment(optionalDeployment: Boolean) {
         cdkBuilder.optionalDeployment(optionalDeployment)
       }
 
-      public override fun optionalDeployment(optionalDeployment: IResolvable) {
+      override fun optionalDeployment(optionalDeployment: IResolvable) {
         cdkBuilder.optionalDeployment(optionalDeployment.let(IResolvable::unwrap))
       }
 
-      public override fun updateAvailable(updateAvailable: Boolean) {
+      override fun updateAvailable(updateAvailable: Boolean) {
         cdkBuilder.updateAvailable(updateAvailable)
       }
 
-      public override fun updateAvailable(updateAvailable: IResolvable) {
+      override fun updateAvailable(updateAvailable: IResolvable) {
         cdkBuilder.updateAvailable(updateAvailable.let(IResolvable::unwrap))
       }
 
-      public override fun updateStatus(updateStatus: String) {
+      override fun updateStatus(updateStatus: String) {
         cdkBuilder.updateStatus(updateStatus)
       }
 
@@ -2085,21 +1947,21 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ServiceSoftwareOptionsProperty,
     ) : ServiceSoftwareOptionsProperty {
-      public override fun automatedUpdateDate(): String? = unwrap(this).getAutomatedUpdateDate()
+      override fun automatedUpdateDate(): String? = unwrap(this).getAutomatedUpdateDate()
 
-      public override fun cancellable(): Any? = unwrap(this).getCancellable()
+      override fun cancellable(): Any? = unwrap(this).getCancellable()
 
-      public override fun currentVersion(): String? = unwrap(this).getCurrentVersion()
+      override fun currentVersion(): String? = unwrap(this).getCurrentVersion()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun newVersion(): String? = unwrap(this).getNewVersion()
+      override fun newVersion(): String? = unwrap(this).getNewVersion()
 
-      public override fun optionalDeployment(): Any? = unwrap(this).getOptionalDeployment()
+      override fun optionalDeployment(): Any? = unwrap(this).getOptionalDeployment()
 
-      public override fun updateAvailable(): Any? = unwrap(this).getUpdateAvailable()
+      override fun updateAvailable(): Any? = unwrap(this).getUpdateAvailable()
 
-      public override fun updateStatus(): String? = unwrap(this).getUpdateStatus()
+      override fun updateStatus(): String? = unwrap(this).getUpdateStatus()
     }
 
     public companion object {
@@ -2128,11 +1990,9 @@ public open class CfnDomain internal constructor(
     public fun minutes(): Number
 
     public interface Builder {
-      public fun hours(hours: Number) {
-      }
+      public fun hours(hours: Number)
 
-      public fun minutes(minutes: Number) {
-      }
+      public fun minutes(minutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2141,11 +2001,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty.builder()
 
-      public override fun hours(hours: Number) {
+      override fun hours(hours: Number) {
         cdkBuilder.hours(hours)
       }
 
-      public override fun minutes(minutes: Number) {
+      override fun minutes(minutes: Number) {
         cdkBuilder.minutes(minutes)
       }
 
@@ -2158,9 +2018,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.WindowStartTimeProperty,
     ) : WindowStartTimeProperty {
-      public override fun hours(): Number = unwrap(this).getHours()
+      override fun hours(): Number = unwrap(this).getHours()
 
-      public override fun minutes(): Number = unwrap(this).getMinutes()
+      override fun minutes(): Number = unwrap(this).getMinutes()
     }
 
     public companion object {
@@ -2187,11 +2047,9 @@ public open class CfnDomain internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2200,11 +2058,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -2217,7 +2075,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.ColdStorageOptionsProperty,
     ) : ColdStorageOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -2246,11 +2104,9 @@ public open class CfnDomain internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2258,11 +2114,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty.Builder =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -2275,10 +2131,10 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.VPCOptionsProperty,
     ) : VPCOptionsProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -2313,23 +2169,17 @@ public open class CfnDomain internal constructor(
     public fun volumeType(): String? = unwrap(this).getVolumeType()
 
     public interface Builder {
-      public fun ebsEnabled(ebsEnabled: Boolean) {
-      }
+      public fun ebsEnabled(ebsEnabled: Boolean)
 
-      public fun ebsEnabled(ebsEnabled: IResolvable) {
-      }
+      public fun ebsEnabled(ebsEnabled: IResolvable)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
 
-      public fun volumeSize(volumeSize: Number) {
-      }
+      public fun volumeSize(volumeSize: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2337,27 +2187,27 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty.Builder =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty.builder()
 
-      public override fun ebsEnabled(ebsEnabled: Boolean) {
+      override fun ebsEnabled(ebsEnabled: Boolean) {
         cdkBuilder.ebsEnabled(ebsEnabled)
       }
 
-      public override fun ebsEnabled(ebsEnabled: IResolvable) {
+      override fun ebsEnabled(ebsEnabled: IResolvable) {
         cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
-      public override fun volumeSize(volumeSize: Number) {
+      override fun volumeSize(volumeSize: Number) {
         cdkBuilder.volumeSize(volumeSize)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -2370,15 +2220,15 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EBSOptionsProperty,
     ) : EBSOptionsProperty {
-      public override fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
+      override fun ebsEnabled(): Any? = unwrap(this).getEbsEnabled()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
 
-      public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
-      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -2411,20 +2261,15 @@ public open class CfnDomain internal constructor(
     public fun userPoolId(): String? = unwrap(this).getUserPoolId()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun identityPoolId(identityPoolId: String) {
-      }
+      public fun identityPoolId(identityPoolId: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun userPoolId(userPoolId: String) {
-      }
+      public fun userPoolId(userPoolId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2433,23 +2278,23 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun identityPoolId(identityPoolId: String) {
+      override fun identityPoolId(identityPoolId: String) {
         cdkBuilder.identityPoolId(identityPoolId)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun userPoolId(userPoolId: String) {
+      override fun userPoolId(userPoolId: String) {
         cdkBuilder.userPoolId(userPoolId)
       }
 
@@ -2462,13 +2307,13 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opensearchservice.CfnDomain.CognitoOptionsProperty,
     ) : CognitoOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
+      override fun identityPoolId(): String? = unwrap(this).getIdentityPoolId()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun userPoolId(): String? = unwrap(this).getUserPoolId()
+      override fun userPoolId(): String? = unwrap(this).getUserPoolId()
     }
 
     public companion object {

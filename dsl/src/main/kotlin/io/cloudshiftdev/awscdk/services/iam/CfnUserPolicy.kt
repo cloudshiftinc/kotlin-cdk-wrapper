@@ -35,14 +35,11 @@ public open class CfnUserPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -52,15 +49,15 @@ public open class CfnUserPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnUserPolicy.Builder =
         software.amazon.awscdk.services.iam.CfnUserPolicy.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 

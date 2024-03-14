@@ -26,20 +26,15 @@ public open class SourceApiAssociation internal constructor(
   public override fun sourceApi(): IGraphqlApi = unwrap(this).getSourceApi().let(IGraphqlApi::wrap)
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun mergeType(mergeType: MergeType) {
-    }
+    public fun mergeType(mergeType: MergeType)
 
-    public fun mergedApi(mergedApi: IGraphqlApi) {
-    }
+    public fun mergedApi(mergedApi: IGraphqlApi)
 
-    public fun mergedApiExecutionRole(mergedApiExecutionRole: IRole) {
-    }
+    public fun mergedApiExecutionRole(mergedApiExecutionRole: IRole)
 
-    public fun sourceApi(sourceApi: IGraphqlApi) {
-    }
+    public fun sourceApi(sourceApi: IGraphqlApi)
   }
 
   private class BuilderImpl(
@@ -49,23 +44,23 @@ public open class SourceApiAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.SourceApiAssociation.Builder =
         software.amazon.awscdk.services.appsync.SourceApiAssociation.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun mergeType(mergeType: MergeType) {
+    override fun mergeType(mergeType: MergeType) {
       cdkBuilder.mergeType(mergeType.let(MergeType::unwrap))
     }
 
-    public override fun mergedApi(mergedApi: IGraphqlApi) {
+    override fun mergedApi(mergedApi: IGraphqlApi) {
       cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi::unwrap))
     }
 
-    public override fun mergedApiExecutionRole(mergedApiExecutionRole: IRole) {
+    override fun mergedApiExecutionRole(mergedApiExecutionRole: IRole) {
       cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(IRole::unwrap))
     }
 
-    public override fun sourceApi(sourceApi: IGraphqlApi) {
+    override fun sourceApi(sourceApi: IGraphqlApi) {
       cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi::unwrap))
     }
 

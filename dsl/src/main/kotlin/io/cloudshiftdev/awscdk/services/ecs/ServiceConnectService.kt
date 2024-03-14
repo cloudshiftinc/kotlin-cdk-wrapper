@@ -22,57 +22,50 @@ public interface ServiceConnectService {
   public fun portMappingName(): String
 
   public interface Builder {
-    public fun discoveryName(discoveryName: String) {
-    }
+    public fun discoveryName(discoveryName: String)
 
-    public fun dnsName(dnsName: String) {
-    }
+    public fun dnsName(dnsName: String)
 
-    public fun idleTimeout(idleTimeout: Duration) {
-    }
+    public fun idleTimeout(idleTimeout: Duration)
 
-    public fun ingressPortOverride(ingressPortOverride: Number) {
-    }
+    public fun ingressPortOverride(ingressPortOverride: Number)
 
-    public fun perRequestTimeout(perRequestTimeout: Duration) {
-    }
+    public fun perRequestTimeout(perRequestTimeout: Duration)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun portMappingName(portMappingName: String) {
-    }
+    public fun portMappingName(portMappingName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ServiceConnectService.Builder =
         software.amazon.awscdk.services.ecs.ServiceConnectService.builder()
 
-    public override fun discoveryName(discoveryName: String) {
+    override fun discoveryName(discoveryName: String) {
       cdkBuilder.discoveryName(discoveryName)
     }
 
-    public override fun dnsName(dnsName: String) {
+    override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
     }
 
-    public override fun idleTimeout(idleTimeout: Duration) {
+    override fun idleTimeout(idleTimeout: Duration) {
       cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
     }
 
-    public override fun ingressPortOverride(ingressPortOverride: Number) {
+    override fun ingressPortOverride(ingressPortOverride: Number) {
       cdkBuilder.ingressPortOverride(ingressPortOverride)
     }
 
-    public override fun perRequestTimeout(perRequestTimeout: Duration) {
+    override fun perRequestTimeout(perRequestTimeout: Duration) {
       cdkBuilder.perRequestTimeout(perRequestTimeout.let(Duration::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun portMappingName(portMappingName: String) {
+    override fun portMappingName(portMappingName: String) {
       cdkBuilder.portMappingName(portMappingName)
     }
 
@@ -83,21 +76,20 @@ public interface ServiceConnectService {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectService,
   ) : ServiceConnectService {
-    public override fun discoveryName(): String? = unwrap(this).getDiscoveryName()
+    override fun discoveryName(): String? = unwrap(this).getDiscoveryName()
 
-    public override fun dnsName(): String? = unwrap(this).getDnsName()
+    override fun dnsName(): String? = unwrap(this).getDnsName()
 
-    public override fun idleTimeout(): Duration? =
-        unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+    override fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
 
-    public override fun ingressPortOverride(): Number? = unwrap(this).getIngressPortOverride()
+    override fun ingressPortOverride(): Number? = unwrap(this).getIngressPortOverride()
 
-    public override fun perRequestTimeout(): Duration? =
+    override fun perRequestTimeout(): Duration? =
         unwrap(this).getPerRequestTimeout()?.let(Duration::wrap)
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun portMappingName(): String = unwrap(this).getPortMappingName()
+    override fun portMappingName(): String = unwrap(this).getPortMappingName()
   }
 
   public companion object {

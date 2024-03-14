@@ -27,14 +27,11 @@ public open class ReceiptRuleSet internal constructor(
   public override fun receiptRuleSetName(): String = unwrap(this).getReceiptRuleSetName()
 
   public interface Builder {
-    public fun dropSpam(dropSpam: Boolean) {
-    }
+    public fun dropSpam(dropSpam: Boolean)
 
-    public fun receiptRuleSetName(receiptRuleSetName: String) {
-    }
+    public fun receiptRuleSetName(receiptRuleSetName: String)
 
-    public fun rules(rules: List<ReceiptRuleOptions>) {
-    }
+    public fun rules(rules: List<ReceiptRuleOptions>)
   }
 
   private class BuilderImpl(
@@ -44,15 +41,15 @@ public open class ReceiptRuleSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.ReceiptRuleSet.Builder =
         software.amazon.awscdk.services.ses.ReceiptRuleSet.Builder.create(scope, id)
 
-    public override fun dropSpam(dropSpam: Boolean) {
+    override fun dropSpam(dropSpam: Boolean) {
       cdkBuilder.dropSpam(dropSpam)
     }
 
-    public override fun receiptRuleSetName(receiptRuleSetName: String) {
+    override fun receiptRuleSetName(receiptRuleSetName: String) {
       cdkBuilder.receiptRuleSetName(receiptRuleSetName)
     }
 
-    public override fun rules(rules: List<ReceiptRuleOptions>) {
+    override fun rules(rules: List<ReceiptRuleOptions>) {
       cdkBuilder.rules(rules.map(ReceiptRuleOptions::unwrap))
     }
 

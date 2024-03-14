@@ -11,29 +11,26 @@ public interface RestApiAttributes {
   public fun rootResourceId(): String
 
   public interface Builder {
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
 
-    public fun restApiName(restApiName: String) {
-    }
+    public fun restApiName(restApiName: String)
 
-    public fun rootResourceId(rootResourceId: String) {
-    }
+    public fun rootResourceId(rootResourceId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.RestApiAttributes.Builder =
         software.amazon.awscdk.services.apigateway.RestApiAttributes.builder()
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
-    public override fun restApiName(restApiName: String) {
+    override fun restApiName(restApiName: String) {
       cdkBuilder.restApiName(restApiName)
     }
 
-    public override fun rootResourceId(rootResourceId: String) {
+    override fun rootResourceId(rootResourceId: String) {
       cdkBuilder.rootResourceId(rootResourceId)
     }
 
@@ -44,11 +41,11 @@ public interface RestApiAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.RestApiAttributes,
   ) : RestApiAttributes {
-    public override fun restApiId(): String = unwrap(this).getRestApiId()
+    override fun restApiId(): String = unwrap(this).getRestApiId()
 
-    public override fun restApiName(): String? = unwrap(this).getRestApiName()
+    override fun restApiName(): String? = unwrap(this).getRestApiName()
 
-    public override fun rootResourceId(): String = unwrap(this).getRootResourceId()
+    override fun rootResourceId(): String = unwrap(this).getRootResourceId()
   }
 
   public companion object {

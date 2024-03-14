@@ -139,67 +139,48 @@ public open class CfnInfrastructureConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
-    }
+    public fun instanceMetadataOptions(instanceMetadataOptions: IResolvable)
 
-    public fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty) {
-    }
+    public fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a248e5d7f6fd3e44d70ef3b895c0577238f43ea28ab2bef4a5b7492a38ef371")
     public
-        fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty.Builder.() -> Unit) {
-    }
+        fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty.Builder.() -> Unit)
 
-    public fun instanceProfileName(instanceProfileName: String) {
-    }
+    public fun instanceProfileName(instanceProfileName: String)
 
-    public fun instanceTypes(instanceTypes: List<String>) {
-    }
+    public fun instanceTypes(instanceTypes: List<String>)
 
-    public fun keyPair(keyPair: String) {
-    }
+    public fun keyPair(keyPair: String)
 
-    public fun logging(logging: IResolvable) {
-    }
+    public fun logging(logging: IResolvable)
 
-    public fun logging(logging: LoggingProperty) {
-    }
+    public fun logging(logging: LoggingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("668f7e605a157c72d15bc514ef2dec91a5b4d84d02e0db4d951ddae0a3db24ae")
-    public fun logging(logging: LoggingProperty.Builder.() -> Unit) {
-    }
+    public fun logging(logging: LoggingProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resourceTags(resourceTags: IResolvable) {
-    }
+    public fun resourceTags(resourceTags: IResolvable)
 
-    public fun resourceTags(resourceTags: Map<String, String>) {
-    }
+    public fun resourceTags(resourceTags: Map<String, String>)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun snsTopicArn(snsTopicArn: String) {
-    }
+    public fun snsTopicArn(snsTopicArn: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean) {
-    }
+    public fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean)
 
-    public fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
-    }
+    public fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable)
   }
 
   private class BuilderImpl(
@@ -211,83 +192,82 @@ public open class CfnInfrastructureConfiguration internal constructor(
         software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
+    override fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
       cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty) {
+    override fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty) {
       cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(InstanceMetadataOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a248e5d7f6fd3e44d70ef3b895c0577238f43ea28ab2bef4a5b7492a38ef371")
-    public override
+    override
         fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty.Builder.() -> Unit):
         Unit = instanceMetadataOptions(InstanceMetadataOptionsProperty(instanceMetadataOptions))
 
-    public override fun instanceProfileName(instanceProfileName: String) {
+    override fun instanceProfileName(instanceProfileName: String) {
       cdkBuilder.instanceProfileName(instanceProfileName)
     }
 
-    public override fun instanceTypes(instanceTypes: List<String>) {
+    override fun instanceTypes(instanceTypes: List<String>) {
       cdkBuilder.instanceTypes(instanceTypes)
     }
 
-    public override fun keyPair(keyPair: String) {
+    override fun keyPair(keyPair: String) {
       cdkBuilder.keyPair(keyPair)
     }
 
-    public override fun logging(logging: IResolvable) {
+    override fun logging(logging: IResolvable) {
       cdkBuilder.logging(logging.let(IResolvable::unwrap))
     }
 
-    public override fun logging(logging: LoggingProperty) {
+    override fun logging(logging: LoggingProperty) {
       cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("668f7e605a157c72d15bc514ef2dec91a5b4d84d02e0db4d951ddae0a3db24ae")
-    public override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
+    override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
         logging(LoggingProperty(logging))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resourceTags(resourceTags: IResolvable) {
+    override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
     }
 
-    public override fun resourceTags(resourceTags: Map<String, String>) {
+    override fun resourceTags(resourceTags: Map<String, String>) {
       cdkBuilder.resourceTags(resourceTags)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun snsTopicArn(snsTopicArn: String) {
+    override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean) {
+    override fun terminateInstanceOnFailure(terminateInstanceOnFailure: Boolean) {
       cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure)
     }
 
-    public override fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
+    override fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
       cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure.let(IResolvable::unwrap))
     }
 
@@ -324,11 +304,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
     public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
     public interface Builder {
-      public fun s3BucketName(s3BucketName: String) {
-      }
+      public fun s3BucketName(s3BucketName: String)
 
-      public fun s3KeyPrefix(s3KeyPrefix: String) {
-      }
+      public fun s3KeyPrefix(s3KeyPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,11 +315,11 @@ public open class CfnInfrastructureConfiguration internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty.builder()
 
-      public override fun s3BucketName(s3BucketName: String) {
+      override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
       }
 
-      public override fun s3KeyPrefix(s3KeyPrefix: String) {
+      override fun s3KeyPrefix(s3KeyPrefix: String) {
         cdkBuilder.s3KeyPrefix(s3KeyPrefix)
       }
 
@@ -354,9 +332,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty,
     ) : S3LogsProperty {
-      public override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
+      override fun s3BucketName(): String? = unwrap(this).getS3BucketName()
 
-      public override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
+      override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
     }
 
     public companion object {
@@ -383,16 +361,13 @@ public open class CfnInfrastructureConfiguration internal constructor(
     public fun s3Logs(): Any? = unwrap(this).getS3Logs()
 
     public interface Builder {
-      public fun s3Logs(s3Logs: IResolvable) {
-      }
+      public fun s3Logs(s3Logs: IResolvable)
 
-      public fun s3Logs(s3Logs: S3LogsProperty) {
-      }
+      public fun s3Logs(s3Logs: S3LogsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10e9563363a0603bf873c97808686b4ca093cdb2e6f9f28e63b7c800744cafff")
-      public fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit) {
-      }
+      public fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -401,17 +376,17 @@ public open class CfnInfrastructureConfiguration internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty.builder()
 
-      public override fun s3Logs(s3Logs: IResolvable) {
+      override fun s3Logs(s3Logs: IResolvable) {
         cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
       }
 
-      public override fun s3Logs(s3Logs: S3LogsProperty) {
+      override fun s3Logs(s3Logs: S3LogsProperty) {
         cdkBuilder.s3Logs(s3Logs.let(S3LogsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10e9563363a0603bf873c97808686b4ca093cdb2e6f9f28e63b7c800744cafff")
-      public override fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit): Unit =
+      override fun s3Logs(s3Logs: S3LogsProperty.Builder.() -> Unit): Unit =
           s3Logs(S3LogsProperty(s3Logs))
 
       public fun build():
@@ -423,7 +398,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty,
     ) : LoggingProperty {
-      public override fun s3Logs(): Any? = unwrap(this).getS3Logs()
+      override fun s3Logs(): Any? = unwrap(this).getS3Logs()
     }
 
     public companion object {
@@ -452,11 +427,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
     public fun httpTokens(): String? = unwrap(this).getHttpTokens()
 
     public interface Builder {
-      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
-      }
+      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
 
-      public fun httpTokens(httpTokens: String) {
-      }
+      public fun httpTokens(httpTokens: String)
     }
 
     private class BuilderImpl : Builder {
@@ -465,11 +438,11 @@ public open class CfnInfrastructureConfiguration internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty.builder()
 
-      public override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
+      override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
         cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
       }
 
-      public override fun httpTokens(httpTokens: String) {
+      override fun httpTokens(httpTokens: String) {
         cdkBuilder.httpTokens(httpTokens)
       }
 
@@ -482,10 +455,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty,
     ) : InstanceMetadataOptionsProperty {
-      public override fun httpPutResponseHopLimit(): Number? =
-          unwrap(this).getHttpPutResponseHopLimit()
+      override fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
 
-      public override fun httpTokens(): String? = unwrap(this).getHttpTokens()
+      override fun httpTokens(): String? = unwrap(this).getHttpTokens()
     }
 
     public companion object {

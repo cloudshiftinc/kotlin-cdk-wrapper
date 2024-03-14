@@ -9,11 +9,9 @@ public interface WeightedTargetGroup {
   public fun weight(): Number? = unwrap(this).getWeight()
 
   public interface Builder {
-    public fun targetGroup(targetGroup: IApplicationTargetGroup) {
-    }
+    public fun targetGroup(targetGroup: IApplicationTargetGroup)
 
-    public fun weight(weight: Number) {
-    }
+    public fun weight(weight: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface WeightedTargetGroup {
         software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGroup.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGroup.builder()
 
-    public override fun targetGroup(targetGroup: IApplicationTargetGroup) {
+    override fun targetGroup(targetGroup: IApplicationTargetGroup) {
       cdkBuilder.targetGroup(targetGroup.let(IApplicationTargetGroup::unwrap))
     }
 
-    public override fun weight(weight: Number) {
+    override fun weight(weight: Number) {
       cdkBuilder.weight(weight)
     }
 
@@ -37,10 +35,10 @@ public interface WeightedTargetGroup {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGroup,
   ) : WeightedTargetGroup {
-    public override fun targetGroup(): IApplicationTargetGroup =
+    override fun targetGroup(): IApplicationTargetGroup =
         unwrap(this).getTargetGroup().let(IApplicationTargetGroup::wrap)
 
-    public override fun weight(): Number? = unwrap(this).getWeight()
+    override fun weight(): Number? = unwrap(this).getWeight()
   }
 
   public companion object {

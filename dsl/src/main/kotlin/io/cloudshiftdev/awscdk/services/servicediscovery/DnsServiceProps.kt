@@ -22,92 +22,80 @@ public interface DnsServiceProps : BaseServiceProps {
       unwrap(this).getRoutingPolicy()?.let(RoutingPolicy::wrap)
 
   public interface Builder {
-    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
-    }
+    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e99c1cede38ec10ef3ed240f04f9c88a9e8d7fd197d3317dd65eb0f8e9bc2ee8")
-    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit) {
-    }
+    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun discoveryType(discoveryType: DiscoveryType) {
-    }
+    public fun discoveryType(discoveryType: DiscoveryType)
 
-    public fun dnsRecordType(dnsRecordType: DnsRecordType) {
-    }
+    public fun dnsRecordType(dnsRecordType: DnsRecordType)
 
-    public fun dnsTtl(dnsTtl: Duration) {
-    }
+    public fun dnsTtl(dnsTtl: Duration)
 
-    public fun healthCheck(healthCheck: HealthCheckConfig) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c6bb39373eb4116d4d40eb1dfd568fbc3c43574ddd6cb828fafc775de079d6f9")
-    public fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit)
 
-    public fun loadBalancer(loadBalancer: Boolean) {
-    }
+    public fun loadBalancer(loadBalancer: Boolean)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun routingPolicy(routingPolicy: RoutingPolicy) {
-    }
+    public fun routingPolicy(routingPolicy: RoutingPolicy)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.servicediscovery.DnsServiceProps.Builder
         = software.amazon.awscdk.services.servicediscovery.DnsServiceProps.builder()
 
-    public override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
+    override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
       cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e99c1cede38ec10ef3ed240f04f9c88a9e8d7fd197d3317dd65eb0f8e9bc2ee8")
-    public override
-        fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit): Unit =
-        customHealthCheck(HealthCheckCustomConfig(customHealthCheck))
+    override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit):
+        Unit = customHealthCheck(HealthCheckCustomConfig(customHealthCheck))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun discoveryType(discoveryType: DiscoveryType) {
+    override fun discoveryType(discoveryType: DiscoveryType) {
       cdkBuilder.discoveryType(discoveryType.let(DiscoveryType::unwrap))
     }
 
-    public override fun dnsRecordType(dnsRecordType: DnsRecordType) {
+    override fun dnsRecordType(dnsRecordType: DnsRecordType) {
       cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
     }
 
-    public override fun dnsTtl(dnsTtl: Duration) {
+    override fun dnsTtl(dnsTtl: Duration) {
       cdkBuilder.dnsTtl(dnsTtl.let(Duration::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheckConfig) {
+    override fun healthCheck(healthCheck: HealthCheckConfig) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c6bb39373eb4116d4d40eb1dfd568fbc3c43574ddd6cb828fafc775de079d6f9")
-    public override fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit): Unit =
         healthCheck(HealthCheckConfig(healthCheck))
 
-    public override fun loadBalancer(loadBalancer: Boolean) {
+    override fun loadBalancer(loadBalancer: Boolean) {
       cdkBuilder.loadBalancer(loadBalancer)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun routingPolicy(routingPolicy: RoutingPolicy) {
+    override fun routingPolicy(routingPolicy: RoutingPolicy) {
       cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy::unwrap))
     }
 
@@ -118,27 +106,27 @@ public interface DnsServiceProps : BaseServiceProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.DnsServiceProps,
   ) : DnsServiceProps {
-    public override fun customHealthCheck(): HealthCheckCustomConfig? =
+    override fun customHealthCheck(): HealthCheckCustomConfig? =
         unwrap(this).getCustomHealthCheck()?.let(HealthCheckCustomConfig::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun discoveryType(): DiscoveryType? =
+    override fun discoveryType(): DiscoveryType? =
         unwrap(this).getDiscoveryType()?.let(DiscoveryType::wrap)
 
-    public override fun dnsRecordType(): DnsRecordType? =
+    override fun dnsRecordType(): DnsRecordType? =
         unwrap(this).getDnsRecordType()?.let(DnsRecordType::wrap)
 
-    public override fun dnsTtl(): Duration? = unwrap(this).getDnsTtl()?.let(Duration::wrap)
+    override fun dnsTtl(): Duration? = unwrap(this).getDnsTtl()?.let(Duration::wrap)
 
-    public override fun healthCheck(): HealthCheckConfig? =
+    override fun healthCheck(): HealthCheckConfig? =
         unwrap(this).getHealthCheck()?.let(HealthCheckConfig::wrap)
 
-    public override fun loadBalancer(): Boolean? = unwrap(this).getLoadBalancer()
+    override fun loadBalancer(): Boolean? = unwrap(this).getLoadBalancer()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun routingPolicy(): RoutingPolicy? =
+    override fun routingPolicy(): RoutingPolicy? =
         unwrap(this).getRoutingPolicy()?.let(RoutingPolicy::wrap)
   }
 

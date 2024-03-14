@@ -22,23 +22,17 @@ public open class BackupSelection internal constructor(
   public open fun selectionId(): String = unwrap(this).getSelectionId()
 
   public interface Builder {
-    public fun allowRestores(allowRestores: Boolean) {
-    }
+    public fun allowRestores(allowRestores: Boolean)
 
-    public fun backupPlan(backupPlan: IBackupPlan) {
-    }
+    public fun backupPlan(backupPlan: IBackupPlan)
 
-    public fun backupSelectionName(backupSelectionName: String) {
-    }
+    public fun backupSelectionName(backupSelectionName: String)
 
-    public fun disableDefaultBackupPolicy(disableDefaultBackupPolicy: Boolean) {
-    }
+    public fun disableDefaultBackupPolicy(disableDefaultBackupPolicy: Boolean)
 
-    public fun resources(resources: List<BackupResource>) {
-    }
+    public fun resources(resources: List<BackupResource>)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -48,27 +42,27 @@ public open class BackupSelection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupSelection.Builder =
         software.amazon.awscdk.services.backup.BackupSelection.Builder.create(scope, id)
 
-    public override fun allowRestores(allowRestores: Boolean) {
+    override fun allowRestores(allowRestores: Boolean) {
       cdkBuilder.allowRestores(allowRestores)
     }
 
-    public override fun backupPlan(backupPlan: IBackupPlan) {
+    override fun backupPlan(backupPlan: IBackupPlan) {
       cdkBuilder.backupPlan(backupPlan.let(IBackupPlan::unwrap))
     }
 
-    public override fun backupSelectionName(backupSelectionName: String) {
+    override fun backupSelectionName(backupSelectionName: String) {
       cdkBuilder.backupSelectionName(backupSelectionName)
     }
 
-    public override fun disableDefaultBackupPolicy(disableDefaultBackupPolicy: Boolean) {
+    override fun disableDefaultBackupPolicy(disableDefaultBackupPolicy: Boolean) {
       cdkBuilder.disableDefaultBackupPolicy(disableDefaultBackupPolicy)
     }
 
-    public override fun resources(resources: List<BackupResource>) {
+    override fun resources(resources: List<BackupResource>) {
       cdkBuilder.resources(resources.map(BackupResource::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 

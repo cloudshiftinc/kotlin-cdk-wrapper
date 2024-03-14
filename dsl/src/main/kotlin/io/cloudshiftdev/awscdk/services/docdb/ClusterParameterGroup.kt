@@ -13,17 +13,13 @@ public open class ClusterParameterGroup internal constructor(
   public override fun parameterGroupName(): String = unwrap(this).getParameterGroupName()
 
   public interface Builder {
-    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
-    }
+    public fun dbClusterParameterGroupName(dbClusterParameterGroupName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -33,19 +29,19 @@ public open class ClusterParameterGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdb.ClusterParameterGroup.Builder =
         software.amazon.awscdk.services.docdb.ClusterParameterGroup.Builder.create(scope, id)
 
-    public override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
+    override fun dbClusterParameterGroupName(dbClusterParameterGroupName: String) {
       cdkBuilder.dbClusterParameterGroupName(dbClusterParameterGroupName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 

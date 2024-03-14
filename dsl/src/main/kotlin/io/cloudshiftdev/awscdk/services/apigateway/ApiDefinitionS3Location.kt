@@ -11,14 +11,11 @@ public interface ApiDefinitionS3Location {
   public fun version(): String? = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun bucket(bucket: String) {
-    }
+    public fun bucket(bucket: String)
 
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface ApiDefinitionS3Location {
         software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location.Builder =
         software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location.builder()
 
-    public override fun bucket(bucket: String) {
+    override fun bucket(bucket: String) {
       cdkBuilder.bucket(bucket)
     }
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -45,11 +42,11 @@ public interface ApiDefinitionS3Location {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location,
   ) : ApiDefinitionS3Location {
-    public override fun bucket(): String = unwrap(this).getBucket()
+    override fun bucket(): String = unwrap(this).getBucket()
 
-    public override fun key(): String = unwrap(this).getKey()
+    override fun key(): String = unwrap(this).getKey()
 
-    public override fun version(): String? = unwrap(this).getVersion()
+    override fun version(): String? = unwrap(this).getVersion()
   }
 
   public companion object {

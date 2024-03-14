@@ -38,14 +38,11 @@ public open class CfnRoutingControl internal constructor(
   }
 
   public interface Builder {
-    public fun clusterArn(clusterArn: String) {
-    }
+    public fun clusterArn(clusterArn: String)
 
-    public fun controlPanelArn(controlPanelArn: String) {
-    }
+    public fun controlPanelArn(controlPanelArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -57,15 +54,15 @@ public open class CfnRoutingControl internal constructor(
         software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl.Builder.create(scope,
         id)
 
-    public override fun clusterArn(clusterArn: String) {
+    override fun clusterArn(clusterArn: String) {
       cdkBuilder.clusterArn(clusterArn)
     }
 
-    public override fun controlPanelArn(controlPanelArn: String) {
+    override fun controlPanelArn(controlPanelArn: String) {
       cdkBuilder.controlPanelArn(controlPanelArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

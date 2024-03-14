@@ -10,11 +10,9 @@ public interface ServiceLoadBalancerAddressOptions {
   public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface ServiceLoadBalancerAddressOptions {
         software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions.Builder =
         software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions.builder()
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface ServiceLoadBalancerAddressOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions,
   ) : ServiceLoadBalancerAddressOptions {
-    public override fun namespace(): String? = unwrap(this).getNamespace()
+    override fun namespace(): String? = unwrap(this).getNamespace()
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

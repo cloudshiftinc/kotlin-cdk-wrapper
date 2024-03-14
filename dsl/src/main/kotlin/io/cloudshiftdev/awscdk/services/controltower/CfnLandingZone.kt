@@ -53,14 +53,11 @@ public open class CfnLandingZone internal constructor(
   }
 
   public interface Builder {
-    public fun manifest(manifest: Any) {
-    }
+    public fun manifest(manifest: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -70,15 +67,15 @@ public open class CfnLandingZone internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.controltower.CfnLandingZone.Builder =
         software.amazon.awscdk.services.controltower.CfnLandingZone.Builder.create(scope, id)
 
-    public override fun manifest(manifest: Any) {
+    override fun manifest(manifest: Any) {
       cdkBuilder.manifest(manifest)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 

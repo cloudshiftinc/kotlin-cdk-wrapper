@@ -23,64 +23,56 @@ public interface MetricStatConfig {
   public fun unitFilter(): Unit? = unwrap(this).getUnitFilter()?.let(Unit::wrap)
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun dimensions(dimensions: List<Dimension>) {
-    }
+    public fun dimensions(dimensions: List<Dimension>)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun period(period: Duration) {
-    }
+    public fun period(period: Duration)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun statistic(statistic: String) {
-    }
+    public fun statistic(statistic: String)
 
-    public fun unitFilter(unitFilter: Unit) {
-    }
+    public fun unitFilter(unitFilter: Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.MetricStatConfig.Builder =
         software.amazon.awscdk.services.cloudwatch.MetricStatConfig.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun dimensions(dimensions: List<Dimension>) {
+    override fun dimensions(dimensions: List<Dimension>) {
       cdkBuilder.dimensions(dimensions.map(Dimension::unwrap))
     }
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun period(period: Duration) {
+    override fun period(period: Duration) {
       cdkBuilder.period(period.let(Duration::unwrap))
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun statistic(statistic: String) {
+    override fun statistic(statistic: String) {
       cdkBuilder.statistic(statistic)
     }
 
-    public override fun unitFilter(unitFilter: Unit) {
+    override fun unitFilter(unitFilter: Unit) {
       cdkBuilder.unitFilter(unitFilter.let(Unit::unwrap))
     }
 
@@ -91,22 +83,22 @@ public interface MetricStatConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.MetricStatConfig,
   ) : MetricStatConfig {
-    public override fun account(): String? = unwrap(this).getAccount()
+    override fun account(): String? = unwrap(this).getAccount()
 
-    public override fun dimensions(): List<Dimension> =
-        unwrap(this).getDimensions()?.map(Dimension::wrap) ?: emptyList()
+    override fun dimensions(): List<Dimension> = unwrap(this).getDimensions()?.map(Dimension::wrap)
+        ?: emptyList()
 
-    public override fun metricName(): String = unwrap(this).getMetricName()
+    override fun metricName(): String = unwrap(this).getMetricName()
 
-    public override fun namespace(): String = unwrap(this).getNamespace()
+    override fun namespace(): String = unwrap(this).getNamespace()
 
-    public override fun period(): Duration = unwrap(this).getPeriod().let(Duration::wrap)
+    override fun period(): Duration = unwrap(this).getPeriod().let(Duration::wrap)
 
-    public override fun region(): String? = unwrap(this).getRegion()
+    override fun region(): String? = unwrap(this).getRegion()
 
-    public override fun statistic(): String = unwrap(this).getStatistic()
+    override fun statistic(): String = unwrap(this).getStatistic()
 
-    public override fun unitFilter(): Unit? = unwrap(this).getUnitFilter()?.let(Unit::wrap)
+    override fun unitFilter(): Unit? = unwrap(this).getUnitFilter()?.let(Unit::wrap)
   }
 
   public companion object {

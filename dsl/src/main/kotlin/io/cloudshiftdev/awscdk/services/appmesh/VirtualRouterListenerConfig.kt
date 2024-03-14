@@ -8,14 +8,11 @@ public interface VirtualRouterListenerConfig {
   public fun listener(): CfnVirtualRouter.VirtualRouterListenerProperty
 
   public interface Builder {
-    public fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
-    }
+    public fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("768c71cb501fee1746f047f0faf378c8014752ce2588a0572bac13d01e23f6b9")
-    public
-        fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty.Builder.() -> Unit) {
-    }
+    public fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -23,13 +20,13 @@ public interface VirtualRouterListenerConfig {
         software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig.Builder =
         software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig.builder()
 
-    public override fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
+    override fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
       cdkBuilder.listener(listener.let(CfnVirtualRouter.VirtualRouterListenerProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("768c71cb501fee1746f047f0faf378c8014752ce2588a0572bac13d01e23f6b9")
-    public override
+    override
         fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty.Builder.() -> Unit):
         Unit = listener(CfnVirtualRouter.VirtualRouterListenerProperty(listener))
 
@@ -40,7 +37,7 @@ public interface VirtualRouterListenerConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig,
   ) : VirtualRouterListenerConfig {
-    public override fun listener(): CfnVirtualRouter.VirtualRouterListenerProperty =
+    override fun listener(): CfnVirtualRouter.VirtualRouterListenerProperty =
         unwrap(this).getListener().let(CfnVirtualRouter.VirtualRouterListenerProperty::wrap)
   }
 

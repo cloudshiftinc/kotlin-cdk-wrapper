@@ -44,14 +44,11 @@ public open class CfnGraph internal constructor(
   }
 
   public interface Builder {
-    public fun autoEnableMembers(autoEnableMembers: Boolean) {
-    }
+    public fun autoEnableMembers(autoEnableMembers: Boolean)
 
-    public fun autoEnableMembers(autoEnableMembers: IResolvable) {
-    }
+    public fun autoEnableMembers(autoEnableMembers: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -61,15 +58,15 @@ public open class CfnGraph internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.detective.CfnGraph.Builder =
         software.amazon.awscdk.services.detective.CfnGraph.Builder.create(scope, id)
 
-    public override fun autoEnableMembers(autoEnableMembers: Boolean) {
+    override fun autoEnableMembers(autoEnableMembers: Boolean) {
       cdkBuilder.autoEnableMembers(autoEnableMembers)
     }
 
-    public override fun autoEnableMembers(autoEnableMembers: IResolvable) {
+    override fun autoEnableMembers(autoEnableMembers: IResolvable) {
       cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

@@ -12,23 +12,17 @@ public open class EventInvokeConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfig,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun function(function: IFunction) {
-    }
+    public fun function(function: IFunction)
 
-    public fun maxEventAge(maxEventAge: Duration) {
-    }
+    public fun maxEventAge(maxEventAge: Duration)
 
-    public fun onFailure(onFailure: IDestination) {
-    }
+    public fun onFailure(onFailure: IDestination)
 
-    public fun onSuccess(onSuccess: IDestination) {
-    }
+    public fun onSuccess(onSuccess: IDestination)
 
-    public fun qualifier(qualifier: String) {
-    }
+    public fun qualifier(qualifier: String)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
   }
 
   private class BuilderImpl(
@@ -38,27 +32,27 @@ public open class EventInvokeConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.EventInvokeConfig.Builder =
         software.amazon.awscdk.services.lambda.EventInvokeConfig.Builder.create(scope, id)
 
-    public override fun function(function: IFunction) {
+    override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
 
-    public override fun maxEventAge(maxEventAge: Duration) {
+    override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
     }
 
-    public override fun onFailure(onFailure: IDestination) {
+    override fun onFailure(onFailure: IDestination) {
       cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
     }
 
-    public override fun onSuccess(onSuccess: IDestination) {
+    override fun onSuccess(onSuccess: IDestination) {
       cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
     }
 
-    public override fun qualifier(qualifier: String) {
+    override fun qualifier(qualifier: String) {
       cdkBuilder.qualifier(qualifier)
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 

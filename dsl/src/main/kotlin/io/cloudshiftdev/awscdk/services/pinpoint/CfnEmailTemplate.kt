@@ -67,26 +67,19 @@ public open class CfnEmailTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun defaultSubstitutions(defaultSubstitutions: String) {
-    }
+    public fun defaultSubstitutions(defaultSubstitutions: String)
 
-    public fun htmlPart(htmlPart: String) {
-    }
+    public fun htmlPart(htmlPart: String)
 
-    public fun subject(subject: String) {
-    }
+    public fun subject(subject: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun templateDescription(templateDescription: String) {
-    }
+    public fun templateDescription(templateDescription: String)
 
-    public fun templateName(templateName: String) {
-    }
+    public fun templateName(templateName: String)
 
-    public fun textPart(textPart: String) {
-    }
+    public fun textPart(textPart: String)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnEmailTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnEmailTemplate.Builder =
         software.amazon.awscdk.services.pinpoint.CfnEmailTemplate.Builder.create(scope, id)
 
-    public override fun defaultSubstitutions(defaultSubstitutions: String) {
+    override fun defaultSubstitutions(defaultSubstitutions: String) {
       cdkBuilder.defaultSubstitutions(defaultSubstitutions)
     }
 
-    public override fun htmlPart(htmlPart: String) {
+    override fun htmlPart(htmlPart: String) {
       cdkBuilder.htmlPart(htmlPart)
     }
 
-    public override fun subject(subject: String) {
+    override fun subject(subject: String) {
       cdkBuilder.subject(subject)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun templateDescription(templateDescription: String) {
+    override fun templateDescription(templateDescription: String) {
       cdkBuilder.templateDescription(templateDescription)
     }
 
-    public override fun templateName(templateName: String) {
+    override fun templateName(templateName: String) {
       cdkBuilder.templateName(templateName)
     }
 
-    public override fun textPart(textPart: String) {
+    override fun textPart(textPart: String) {
       cdkBuilder.textPart(textPart)
     }
 

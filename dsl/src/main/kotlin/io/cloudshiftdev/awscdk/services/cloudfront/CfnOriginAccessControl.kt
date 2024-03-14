@@ -38,18 +38,15 @@ public open class CfnOriginAccessControl internal constructor(
       Unit = originAccessControlConfig(OriginAccessControlConfigProperty(`value`))
 
   public interface Builder {
-    public fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
-    }
+    public fun originAccessControlConfig(originAccessControlConfig: IResolvable)
 
     public
-        fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty) {
-    }
+        fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("361ff33cabc99e16410906f2dac29bca4d560587ad47173768c86bb19a7ec07c")
     public
-        fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty.Builder.() -> Unit) {
-    }
+        fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -60,18 +57,18 @@ public open class CfnOriginAccessControl internal constructor(
         software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.Builder =
         software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.Builder.create(scope, id)
 
-    public override fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
+    override fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
       cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty) {
       cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(OriginAccessControlConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("361ff33cabc99e16410906f2dac29bca4d560587ad47173768c86bb19a7ec07c")
-    public override
+    override
         fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty.Builder.() -> Unit):
         Unit =
         originAccessControlConfig(OriginAccessControlConfigProperty(originAccessControlConfig))
@@ -113,20 +110,15 @@ public open class CfnOriginAccessControl internal constructor(
     public fun signingProtocol(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun originAccessControlOriginType(originAccessControlOriginType: String) {
-      }
+      public fun originAccessControlOriginType(originAccessControlOriginType: String)
 
-      public fun signingBehavior(signingBehavior: String) {
-      }
+      public fun signingBehavior(signingBehavior: String)
 
-      public fun signingProtocol(signingProtocol: String) {
-      }
+      public fun signingProtocol(signingProtocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -135,23 +127,23 @@ public open class CfnOriginAccessControl internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun originAccessControlOriginType(originAccessControlOriginType: String) {
+      override fun originAccessControlOriginType(originAccessControlOriginType: String) {
         cdkBuilder.originAccessControlOriginType(originAccessControlOriginType)
       }
 
-      public override fun signingBehavior(signingBehavior: String) {
+      override fun signingBehavior(signingBehavior: String) {
         cdkBuilder.signingBehavior(signingBehavior)
       }
 
-      public override fun signingProtocol(signingProtocol: String) {
+      override fun signingProtocol(signingProtocol: String) {
         cdkBuilder.signingProtocol(signingProtocol)
       }
 
@@ -164,16 +156,16 @@ public open class CfnOriginAccessControl internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl.OriginAccessControlConfigProperty,
     ) : OriginAccessControlConfigProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun originAccessControlOriginType(): String =
+      override fun originAccessControlOriginType(): String =
           unwrap(this).getOriginAccessControlOriginType()
 
-      public override fun signingBehavior(): String = unwrap(this).getSigningBehavior()
+      override fun signingBehavior(): String = unwrap(this).getSigningBehavior()
 
-      public override fun signingProtocol(): String = unwrap(this).getSigningProtocol()
+      override fun signingProtocol(): String = unwrap(this).getSigningProtocol()
     }
 
     public companion object {

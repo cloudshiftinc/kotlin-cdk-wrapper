@@ -24,8 +24,7 @@ public open class CfnSnapshotBlockPublicAccess internal constructor(
   }
 
   public interface Builder {
-    public fun state(state: String) {
-    }
+    public fun state(state: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnSnapshotBlockPublicAccess internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess.Builder
         = software.amazon.awscdk.services.ec2.CfnSnapshotBlockPublicAccess.Builder.create(scope, id)
 
-    public override fun state(state: String) {
+    override fun state(state: String) {
       cdkBuilder.state(state)
     }
 

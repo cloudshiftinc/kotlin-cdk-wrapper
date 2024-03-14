@@ -26,7 +26,7 @@ internal object WrapperTypeGenerator {
     fun generate(model: CdkModel): List<FileSpec> {
         val constructs =
             model.classes.filter { it.concreteClass && IConstruct in model.superTypesOf(it.className) }
-             //   .filter { it.className.packageName.startsWith("software.amazon.awscdk.services.elasticloadbalancingv2") }
+        //   .filter { it.className.packageName.startsWith("software.amazon.awscdk.services.elasticloadbalancingv2") }
 
         logger.lifecycle("Generating ${constructs.size} construct classes")
 
@@ -324,7 +324,13 @@ internal object WrapperTypeGenerator {
                 ctx,
                 forceOverride = true,
             )
-            wrapperBuilder.addFunctions(methods.map { it.implementationMethod })
+            wrapperBuilder.addFunctions(
+                methods.map {
+                    val x = it.implementationMethod.toBuilder()
+                    x.modifiers.remove(KModifier.PUBLIC)
+                    x.build()
+                },
+            )
         }
 
         return wrapperBuilder.build()

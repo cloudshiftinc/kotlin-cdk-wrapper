@@ -18,37 +18,30 @@ public interface HttpGatewayRoutePathMatchConfig {
       unwrap(this).getWholePathRewrite()?.let(CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty::wrap)
 
   public interface Builder {
-    public fun prefixPathMatch(prefixPathMatch: String) {
-    }
+    public fun prefixPathMatch(prefixPathMatch: String)
 
     public
-        fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty) {
-    }
+        fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d76de5131b8aaf9567b4371c8e7c59b17f1335a4d59d7105c0aff4e0a13753d6")
     public
-        fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty.Builder.() -> Unit) {
-    }
+        fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty.Builder.() -> Unit)
 
-    public fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty) {
-    }
+    public fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d1b52d87c876c58becd77c8920b8fa7c765d5c7584f8715e3e497402d62312b")
     public
-        fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty.Builder.() -> Unit) {
-    }
+        fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty.Builder.() -> Unit)
 
     public
-        fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty) {
-    }
+        fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ef3e634fe15d2617f4f81f386ae5069062e589dca64161e03e6c7d59e7c5aad")
     public
-        fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder.() -> Unit) {
-    }
+        fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -56,40 +49,40 @@ public interface HttpGatewayRoutePathMatchConfig {
         software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig.Builder =
         software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig.builder()
 
-    public override fun prefixPathMatch(prefixPathMatch: String) {
+    override fun prefixPathMatch(prefixPathMatch: String) {
       cdkBuilder.prefixPathMatch(prefixPathMatch)
     }
 
-    public override
+    override
         fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty) {
       cdkBuilder.prefixPathRewrite(prefixPathRewrite.let(CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d76de5131b8aaf9567b4371c8e7c59b17f1335a4d59d7105c0aff4e0a13753d6")
-    public override
+    override
         fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty.Builder.() -> Unit):
         Unit =
         prefixPathRewrite(CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty(prefixPathRewrite))
 
-    public override fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty) {
+    override fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty) {
       cdkBuilder.wholePathMatch(wholePathMatch.let(CfnGatewayRoute.HttpPathMatchProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7d1b52d87c876c58becd77c8920b8fa7c765d5c7584f8715e3e497402d62312b")
-    public override
+    override
         fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty.Builder.() -> Unit):
         Unit = wholePathMatch(CfnGatewayRoute.HttpPathMatchProperty(wholePathMatch))
 
-    public override
+    override
         fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty) {
       cdkBuilder.wholePathRewrite(wholePathRewrite.let(CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ef3e634fe15d2617f4f81f386ae5069062e589dca64161e03e6c7d59e7c5aad")
-    public override
+    override
         fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder.() -> Unit):
         Unit =
         wholePathRewrite(CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty(wholePathRewrite))
@@ -101,16 +94,15 @@ public interface HttpGatewayRoutePathMatchConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig,
   ) : HttpGatewayRoutePathMatchConfig {
-    public override fun prefixPathMatch(): String? = unwrap(this).getPrefixPathMatch()
+    override fun prefixPathMatch(): String? = unwrap(this).getPrefixPathMatch()
 
-    public override fun prefixPathRewrite(): CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty?
-        =
+    override fun prefixPathRewrite(): CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty? =
         unwrap(this).getPrefixPathRewrite()?.let(CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty::wrap)
 
-    public override fun wholePathMatch(): CfnGatewayRoute.HttpPathMatchProperty? =
+    override fun wholePathMatch(): CfnGatewayRoute.HttpPathMatchProperty? =
         unwrap(this).getWholePathMatch()?.let(CfnGatewayRoute.HttpPathMatchProperty::wrap)
 
-    public override fun wholePathRewrite(): CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty? =
+    override fun wholePathRewrite(): CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty? =
         unwrap(this).getWholePathRewrite()?.let(CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty::wrap)
   }
 

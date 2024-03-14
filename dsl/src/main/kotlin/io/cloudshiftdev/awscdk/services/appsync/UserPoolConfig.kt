@@ -13,29 +13,26 @@ public interface UserPoolConfig {
   public fun userPool(): IUserPool
 
   public interface Builder {
-    public fun appIdClientRegex(appIdClientRegex: String) {
-    }
+    public fun appIdClientRegex(appIdClientRegex: String)
 
-    public fun defaultAction(defaultAction: UserPoolDefaultAction) {
-    }
+    public fun defaultAction(defaultAction: UserPoolDefaultAction)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.UserPoolConfig.Builder =
         software.amazon.awscdk.services.appsync.UserPoolConfig.builder()
 
-    public override fun appIdClientRegex(appIdClientRegex: String) {
+    override fun appIdClientRegex(appIdClientRegex: String) {
       cdkBuilder.appIdClientRegex(appIdClientRegex)
     }
 
-    public override fun defaultAction(defaultAction: UserPoolDefaultAction) {
+    override fun defaultAction(defaultAction: UserPoolDefaultAction) {
       cdkBuilder.defaultAction(defaultAction.let(UserPoolDefaultAction::unwrap))
     }
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 
@@ -45,12 +42,12 @@ public interface UserPoolConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.UserPoolConfig,
   ) : UserPoolConfig {
-    public override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
+    override fun appIdClientRegex(): String? = unwrap(this).getAppIdClientRegex()
 
-    public override fun defaultAction(): UserPoolDefaultAction? =
+    override fun defaultAction(): UserPoolDefaultAction? =
         unwrap(this).getDefaultAction()?.let(UserPoolDefaultAction::wrap)
 
-    public override fun userPool(): IUserPool = unwrap(this).getUserPool().let(IUserPool::wrap)
+    override fun userPool(): IUserPool = unwrap(this).getUserPool().let(IUserPool::wrap)
   }
 
   public companion object {

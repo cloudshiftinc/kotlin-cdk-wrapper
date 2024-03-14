@@ -24,8 +24,7 @@ public open class CfnDomain internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sdb.CfnDomain.Builder =
         software.amazon.awscdk.services.sdb.CfnDomain.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 

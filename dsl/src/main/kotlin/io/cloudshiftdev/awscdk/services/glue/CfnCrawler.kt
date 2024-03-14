@@ -144,77 +144,55 @@ public open class CfnCrawler internal constructor(
       targets(TargetsProperty(`value`))
 
   public interface Builder {
-    public fun classifiers(classifiers: List<String>) {
-    }
+    public fun classifiers(classifiers: List<String>)
 
-    public fun configuration(configuration: String) {
-    }
+    public fun configuration(configuration: String)
 
-    public fun crawlerSecurityConfiguration(crawlerSecurityConfiguration: String) {
-    }
+    public fun crawlerSecurityConfiguration(crawlerSecurityConfiguration: String)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun recrawlPolicy(recrawlPolicy: IResolvable) {
-    }
+    public fun recrawlPolicy(recrawlPolicy: IResolvable)
 
-    public fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty) {
-    }
+    public fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ba5594a016b6832aaa15f4ee49c0d1fb127a8678f8be249d8255e368f35d7a3")
-    public fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty.Builder.() -> Unit) {
-    }
+    public fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty.Builder.() -> Unit)
 
-    public fun role(role: String) {
-    }
+    public fun role(role: String)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: ScheduleProperty) {
-    }
+    public fun schedule(schedule: ScheduleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6a696fd1898cddc8c22693f98a8145cbc8b15e7bc3d6054d10900cc716e5d471")
-    public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit)
 
-    public fun schemaChangePolicy(schemaChangePolicy: IResolvable) {
-    }
+    public fun schemaChangePolicy(schemaChangePolicy: IResolvable)
 
-    public fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty) {
-    }
+    public fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b716e27af2a3d3a2fad1065e6f782d8ab4f64ae1928e7549f53995479842be3c")
-    public
-        fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty.Builder.() -> Unit) {
-    }
+    public fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty.Builder.() -> Unit)
 
-    public fun tablePrefix(tablePrefix: String) {
-    }
+    public fun tablePrefix(tablePrefix: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun targets(targets: IResolvable) {
-    }
+    public fun targets(targets: IResolvable)
 
-    public fun targets(targets: TargetsProperty) {
-    }
+    public fun targets(targets: TargetsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b2cc3927cdad123b2c3fb3f63af5bb8db9e9dfaaa55ca1464764d438161323d7")
-    public fun targets(targets: TargetsProperty.Builder.() -> Unit) {
-    }
+    public fun targets(targets: TargetsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -224,93 +202,93 @@ public open class CfnCrawler internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnCrawler.Builder =
         software.amazon.awscdk.services.glue.CfnCrawler.Builder.create(scope, id)
 
-    public override fun classifiers(classifiers: List<String>) {
+    override fun classifiers(classifiers: List<String>) {
       cdkBuilder.classifiers(classifiers)
     }
 
-    public override fun configuration(configuration: String) {
+    override fun configuration(configuration: String) {
       cdkBuilder.configuration(configuration)
     }
 
-    public override fun crawlerSecurityConfiguration(crawlerSecurityConfiguration: String) {
+    override fun crawlerSecurityConfiguration(crawlerSecurityConfiguration: String) {
       cdkBuilder.crawlerSecurityConfiguration(crawlerSecurityConfiguration)
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun recrawlPolicy(recrawlPolicy: IResolvable) {
+    override fun recrawlPolicy(recrawlPolicy: IResolvable) {
       cdkBuilder.recrawlPolicy(recrawlPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty) {
+    override fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty) {
       cdkBuilder.recrawlPolicy(recrawlPolicy.let(RecrawlPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ba5594a016b6832aaa15f4ee49c0d1fb127a8678f8be249d8255e368f35d7a3")
-    public override fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty.Builder.() -> Unit): Unit
-        = recrawlPolicy(RecrawlPolicyProperty(recrawlPolicy))
+    override fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty.Builder.() -> Unit): Unit =
+        recrawlPolicy(RecrawlPolicyProperty(recrawlPolicy))
 
-    public override fun role(role: String) {
+    override fun role(role: String) {
       cdkBuilder.role(role)
     }
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: ScheduleProperty) {
+    override fun schedule(schedule: ScheduleProperty) {
       cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6a696fd1898cddc8c22693f98a8145cbc8b15e7bc3d6054d10900cc716e5d471")
-    public override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
+    override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
         schedule(ScheduleProperty(schedule))
 
-    public override fun schemaChangePolicy(schemaChangePolicy: IResolvable) {
+    override fun schemaChangePolicy(schemaChangePolicy: IResolvable) {
       cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(IResolvable::unwrap))
     }
 
-    public override fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty) {
+    override fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty) {
       cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(SchemaChangePolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b716e27af2a3d3a2fad1065e6f782d8ab4f64ae1928e7549f53995479842be3c")
-    public override
+    override
         fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty.Builder.() -> Unit):
         Unit = schemaChangePolicy(SchemaChangePolicyProperty(schemaChangePolicy))
 
-    public override fun tablePrefix(tablePrefix: String) {
+    override fun tablePrefix(tablePrefix: String) {
       cdkBuilder.tablePrefix(tablePrefix)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun targets(targets: IResolvable) {
+    override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
 
-    public override fun targets(targets: TargetsProperty) {
+    override fun targets(targets: TargetsProperty) {
       cdkBuilder.targets(targets.let(TargetsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b2cc3927cdad123b2c3fb3f63af5bb8db9e9dfaaa55ca1464764d438161323d7")
-    public override fun targets(targets: TargetsProperty.Builder.() -> Unit): Unit =
+    override fun targets(targets: TargetsProperty.Builder.() -> Unit): Unit =
         targets(TargetsProperty(targets))
 
     public fun build(): software.amazon.awscdk.services.glue.CfnCrawler = cdkBuilder.build()
@@ -351,23 +329,17 @@ public open class CfnCrawler internal constructor(
     public fun sampleSize(): Number? = unwrap(this).getSampleSize()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun dlqEventQueueArn(dlqEventQueueArn: String) {
-      }
+      public fun dlqEventQueueArn(dlqEventQueueArn: String)
 
-      public fun eventQueueArn(eventQueueArn: String) {
-      }
+      public fun eventQueueArn(eventQueueArn: String)
 
-      public fun exclusions(exclusions: List<String>) {
-      }
+      public fun exclusions(exclusions: List<String>)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun sampleSize(sampleSize: Number) {
-      }
+      public fun sampleSize(sampleSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -375,27 +347,27 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun dlqEventQueueArn(dlqEventQueueArn: String) {
+      override fun dlqEventQueueArn(dlqEventQueueArn: String) {
         cdkBuilder.dlqEventQueueArn(dlqEventQueueArn)
       }
 
-      public override fun eventQueueArn(eventQueueArn: String) {
+      override fun eventQueueArn(eventQueueArn: String) {
         cdkBuilder.eventQueueArn(eventQueueArn)
       }
 
-      public override fun exclusions(exclusions: List<String>) {
+      override fun exclusions(exclusions: List<String>) {
         cdkBuilder.exclusions(exclusions)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun sampleSize(sampleSize: Number) {
+      override fun sampleSize(sampleSize: Number) {
         cdkBuilder.sampleSize(sampleSize)
       }
 
@@ -406,17 +378,17 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.S3TargetProperty,
     ) : S3TargetProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
+      override fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
 
-      public override fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
+      override fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
 
-      public override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun sampleSize(): Number? = unwrap(this).getSampleSize()
+      override fun sampleSize(): Number? = unwrap(this).getSampleSize()
     }
 
     public companion object {
@@ -443,8 +415,7 @@ public open class CfnCrawler internal constructor(
     public fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
 
     public interface Builder {
-      public fun recrawlBehavior(recrawlBehavior: String) {
-      }
+      public fun recrawlBehavior(recrawlBehavior: String)
     }
 
     private class BuilderImpl : Builder {
@@ -452,7 +423,7 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty.builder()
 
-      public override fun recrawlBehavior(recrawlBehavior: String) {
+      override fun recrawlBehavior(recrawlBehavior: String) {
         cdkBuilder.recrawlBehavior(recrawlBehavior)
       }
 
@@ -463,7 +434,7 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.RecrawlPolicyProperty,
     ) : RecrawlPolicyProperty {
-      public override fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
+      override fun recrawlBehavior(): String? = unwrap(this).getRecrawlBehavior()
     }
 
     public companion object {
@@ -498,20 +469,15 @@ public open class CfnCrawler internal constructor(
     public fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun dlqEventQueueArn(dlqEventQueueArn: String) {
-      }
+      public fun dlqEventQueueArn(dlqEventQueueArn: String)
 
-      public fun eventQueueArn(eventQueueArn: String) {
-      }
+      public fun eventQueueArn(eventQueueArn: String)
 
-      public fun tables(tables: List<String>) {
-      }
+      public fun tables(tables: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -519,23 +485,23 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun dlqEventQueueArn(dlqEventQueueArn: String) {
+      override fun dlqEventQueueArn(dlqEventQueueArn: String) {
         cdkBuilder.dlqEventQueueArn(dlqEventQueueArn)
       }
 
-      public override fun eventQueueArn(eventQueueArn: String) {
+      override fun eventQueueArn(eventQueueArn: String) {
         cdkBuilder.eventQueueArn(eventQueueArn)
       }
 
-      public override fun tables(tables: List<String>) {
+      override fun tables(tables: List<String>) {
         cdkBuilder.tables(tables)
       }
 
@@ -546,15 +512,15 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty,
     ) : CatalogTargetProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
+      override fun dlqEventQueueArn(): String? = unwrap(this).getDlqEventQueueArn()
 
-      public override fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
+      override fun eventQueueArn(): String? = unwrap(this).getEventQueueArn()
 
-      public override fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
+      override fun tables(): List<String> = unwrap(this).getTables() ?: emptyList()
     }
 
     public companion object {
@@ -583,11 +549,9 @@ public open class CfnCrawler internal constructor(
     public fun updateBehavior(): String? = unwrap(this).getUpdateBehavior()
 
     public interface Builder {
-      public fun deleteBehavior(deleteBehavior: String) {
-      }
+      public fun deleteBehavior(deleteBehavior: String)
 
-      public fun updateBehavior(updateBehavior: String) {
-      }
+      public fun updateBehavior(updateBehavior: String)
     }
 
     private class BuilderImpl : Builder {
@@ -595,11 +559,11 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty.builder()
 
-      public override fun deleteBehavior(deleteBehavior: String) {
+      override fun deleteBehavior(deleteBehavior: String) {
         cdkBuilder.deleteBehavior(deleteBehavior)
       }
 
-      public override fun updateBehavior(updateBehavior: String) {
+      override fun updateBehavior(updateBehavior: String) {
         cdkBuilder.updateBehavior(updateBehavior)
       }
 
@@ -611,9 +575,9 @@ public open class CfnCrawler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnCrawler.SchemaChangePolicyProperty,
     ) : SchemaChangePolicyProperty {
-      public override fun deleteBehavior(): String? = unwrap(this).getDeleteBehavior()
+      override fun deleteBehavior(): String? = unwrap(this).getDeleteBehavior()
 
-      public override fun updateBehavior(): String? = unwrap(this).getUpdateBehavior()
+      override fun updateBehavior(): String? = unwrap(this).getUpdateBehavior()
     }
 
     public companion object {
@@ -646,23 +610,17 @@ public open class CfnCrawler internal constructor(
     public fun writeManifest(): Any? = unwrap(this).getWriteManifest()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun createNativeDeltaTable(createNativeDeltaTable: Boolean) {
-      }
+      public fun createNativeDeltaTable(createNativeDeltaTable: Boolean)
 
-      public fun createNativeDeltaTable(createNativeDeltaTable: IResolvable) {
-      }
+      public fun createNativeDeltaTable(createNativeDeltaTable: IResolvable)
 
-      public fun deltaTables(deltaTables: List<String>) {
-      }
+      public fun deltaTables(deltaTables: List<String>)
 
-      public fun writeManifest(writeManifest: Boolean) {
-      }
+      public fun writeManifest(writeManifest: Boolean)
 
-      public fun writeManifest(writeManifest: IResolvable) {
-      }
+      public fun writeManifest(writeManifest: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -670,27 +628,27 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun createNativeDeltaTable(createNativeDeltaTable: Boolean) {
+      override fun createNativeDeltaTable(createNativeDeltaTable: Boolean) {
         cdkBuilder.createNativeDeltaTable(createNativeDeltaTable)
       }
 
-      public override fun createNativeDeltaTable(createNativeDeltaTable: IResolvable) {
+      override fun createNativeDeltaTable(createNativeDeltaTable: IResolvable) {
         cdkBuilder.createNativeDeltaTable(createNativeDeltaTable.let(IResolvable::unwrap))
       }
 
-      public override fun deltaTables(deltaTables: List<String>) {
+      override fun deltaTables(deltaTables: List<String>) {
         cdkBuilder.deltaTables(deltaTables)
       }
 
-      public override fun writeManifest(writeManifest: Boolean) {
+      override fun writeManifest(writeManifest: Boolean) {
         cdkBuilder.writeManifest(writeManifest)
       }
 
-      public override fun writeManifest(writeManifest: IResolvable) {
+      override fun writeManifest(writeManifest: IResolvable) {
         cdkBuilder.writeManifest(writeManifest.let(IResolvable::unwrap))
       }
 
@@ -701,13 +659,13 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty,
     ) : DeltaTargetProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun createNativeDeltaTable(): Any? = unwrap(this).getCreateNativeDeltaTable()
+      override fun createNativeDeltaTable(): Any? = unwrap(this).getCreateNativeDeltaTable()
 
-      public override fun deltaTables(): List<String> = unwrap(this).getDeltaTables() ?: emptyList()
+      override fun deltaTables(): List<String> = unwrap(this).getDeltaTables() ?: emptyList()
 
-      public override fun writeManifest(): Any? = unwrap(this).getWriteManifest()
+      override fun writeManifest(): Any? = unwrap(this).getWriteManifest()
     }
 
     public companion object {
@@ -734,8 +692,7 @@ public open class CfnCrawler internal constructor(
     public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
 
     public interface Builder {
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -743,7 +700,7 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty.builder()
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -754,7 +711,7 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.ScheduleProperty,
     ) : ScheduleProperty {
-      public override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -793,47 +750,33 @@ public open class CfnCrawler internal constructor(
     public fun s3Targets(): Any? = unwrap(this).getS3Targets()
 
     public interface Builder {
-      public fun catalogTargets(catalogTargets: IResolvable) {
-      }
+      public fun catalogTargets(catalogTargets: IResolvable)
 
-      public fun catalogTargets(catalogTargets: List<Any>) {
-      }
+      public fun catalogTargets(catalogTargets: List<Any>)
 
-      public fun deltaTargets(deltaTargets: IResolvable) {
-      }
+      public fun deltaTargets(deltaTargets: IResolvable)
 
-      public fun deltaTargets(deltaTargets: List<Any>) {
-      }
+      public fun deltaTargets(deltaTargets: List<Any>)
 
-      public fun dynamoDbTargets(dynamoDbTargets: IResolvable) {
-      }
+      public fun dynamoDbTargets(dynamoDbTargets: IResolvable)
 
-      public fun dynamoDbTargets(dynamoDbTargets: List<Any>) {
-      }
+      public fun dynamoDbTargets(dynamoDbTargets: List<Any>)
 
-      public fun icebergTargets(icebergTargets: IResolvable) {
-      }
+      public fun icebergTargets(icebergTargets: IResolvable)
 
-      public fun icebergTargets(icebergTargets: List<Any>) {
-      }
+      public fun icebergTargets(icebergTargets: List<Any>)
 
-      public fun jdbcTargets(jdbcTargets: IResolvable) {
-      }
+      public fun jdbcTargets(jdbcTargets: IResolvable)
 
-      public fun jdbcTargets(jdbcTargets: List<Any>) {
-      }
+      public fun jdbcTargets(jdbcTargets: List<Any>)
 
-      public fun mongoDbTargets(mongoDbTargets: IResolvable) {
-      }
+      public fun mongoDbTargets(mongoDbTargets: IResolvable)
 
-      public fun mongoDbTargets(mongoDbTargets: List<Any>) {
-      }
+      public fun mongoDbTargets(mongoDbTargets: List<Any>)
 
-      public fun s3Targets(s3Targets: IResolvable) {
-      }
+      public fun s3Targets(s3Targets: IResolvable)
 
-      public fun s3Targets(s3Targets: List<Any>) {
-      }
+      public fun s3Targets(s3Targets: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -841,59 +784,59 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty.builder()
 
-      public override fun catalogTargets(catalogTargets: IResolvable) {
+      override fun catalogTargets(catalogTargets: IResolvable) {
         cdkBuilder.catalogTargets(catalogTargets.let(IResolvable::unwrap))
       }
 
-      public override fun catalogTargets(catalogTargets: List<Any>) {
+      override fun catalogTargets(catalogTargets: List<Any>) {
         cdkBuilder.catalogTargets(catalogTargets)
       }
 
-      public override fun deltaTargets(deltaTargets: IResolvable) {
+      override fun deltaTargets(deltaTargets: IResolvable) {
         cdkBuilder.deltaTargets(deltaTargets.let(IResolvable::unwrap))
       }
 
-      public override fun deltaTargets(deltaTargets: List<Any>) {
+      override fun deltaTargets(deltaTargets: List<Any>) {
         cdkBuilder.deltaTargets(deltaTargets)
       }
 
-      public override fun dynamoDbTargets(dynamoDbTargets: IResolvable) {
+      override fun dynamoDbTargets(dynamoDbTargets: IResolvable) {
         cdkBuilder.dynamoDbTargets(dynamoDbTargets.let(IResolvable::unwrap))
       }
 
-      public override fun dynamoDbTargets(dynamoDbTargets: List<Any>) {
+      override fun dynamoDbTargets(dynamoDbTargets: List<Any>) {
         cdkBuilder.dynamoDbTargets(dynamoDbTargets)
       }
 
-      public override fun icebergTargets(icebergTargets: IResolvable) {
+      override fun icebergTargets(icebergTargets: IResolvable) {
         cdkBuilder.icebergTargets(icebergTargets.let(IResolvable::unwrap))
       }
 
-      public override fun icebergTargets(icebergTargets: List<Any>) {
+      override fun icebergTargets(icebergTargets: List<Any>) {
         cdkBuilder.icebergTargets(icebergTargets)
       }
 
-      public override fun jdbcTargets(jdbcTargets: IResolvable) {
+      override fun jdbcTargets(jdbcTargets: IResolvable) {
         cdkBuilder.jdbcTargets(jdbcTargets.let(IResolvable::unwrap))
       }
 
-      public override fun jdbcTargets(jdbcTargets: List<Any>) {
+      override fun jdbcTargets(jdbcTargets: List<Any>) {
         cdkBuilder.jdbcTargets(jdbcTargets)
       }
 
-      public override fun mongoDbTargets(mongoDbTargets: IResolvable) {
+      override fun mongoDbTargets(mongoDbTargets: IResolvable) {
         cdkBuilder.mongoDbTargets(mongoDbTargets.let(IResolvable::unwrap))
       }
 
-      public override fun mongoDbTargets(mongoDbTargets: List<Any>) {
+      override fun mongoDbTargets(mongoDbTargets: List<Any>) {
         cdkBuilder.mongoDbTargets(mongoDbTargets)
       }
 
-      public override fun s3Targets(s3Targets: IResolvable) {
+      override fun s3Targets(s3Targets: IResolvable) {
         cdkBuilder.s3Targets(s3Targets.let(IResolvable::unwrap))
       }
 
-      public override fun s3Targets(s3Targets: List<Any>) {
+      override fun s3Targets(s3Targets: List<Any>) {
         cdkBuilder.s3Targets(s3Targets)
       }
 
@@ -904,19 +847,19 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty,
     ) : TargetsProperty {
-      public override fun catalogTargets(): Any? = unwrap(this).getCatalogTargets()
+      override fun catalogTargets(): Any? = unwrap(this).getCatalogTargets()
 
-      public override fun deltaTargets(): Any? = unwrap(this).getDeltaTargets()
+      override fun deltaTargets(): Any? = unwrap(this).getDeltaTargets()
 
-      public override fun dynamoDbTargets(): Any? = unwrap(this).getDynamoDbTargets()
+      override fun dynamoDbTargets(): Any? = unwrap(this).getDynamoDbTargets()
 
-      public override fun icebergTargets(): Any? = unwrap(this).getIcebergTargets()
+      override fun icebergTargets(): Any? = unwrap(this).getIcebergTargets()
 
-      public override fun jdbcTargets(): Any? = unwrap(this).getJdbcTargets()
+      override fun jdbcTargets(): Any? = unwrap(this).getJdbcTargets()
 
-      public override fun mongoDbTargets(): Any? = unwrap(this).getMongoDbTargets()
+      override fun mongoDbTargets(): Any? = unwrap(this).getMongoDbTargets()
 
-      public override fun s3Targets(): Any? = unwrap(this).getS3Targets()
+      override fun s3Targets(): Any? = unwrap(this).getS3Targets()
     }
 
     public companion object {
@@ -942,8 +885,7 @@ public open class CfnCrawler internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -951,7 +893,7 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty.builder()
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -963,7 +905,7 @@ public open class CfnCrawler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnCrawler.DynamoDBTargetProperty,
     ) : DynamoDBTargetProperty {
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {
@@ -992,11 +934,9 @@ public open class CfnCrawler internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1004,11 +944,11 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -1019,9 +959,9 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.MongoDBTargetProperty,
     ) : MongoDBTargetProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {
@@ -1054,17 +994,13 @@ public open class CfnCrawler internal constructor(
     public fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun exclusions(exclusions: List<String>) {
-      }
+      public fun exclusions(exclusions: List<String>)
 
-      public fun maximumTraversalDepth(maximumTraversalDepth: Number) {
-      }
+      public fun maximumTraversalDepth(maximumTraversalDepth: Number)
 
-      public fun paths(paths: List<String>) {
-      }
+      public fun paths(paths: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1072,19 +1008,19 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun exclusions(exclusions: List<String>) {
+      override fun exclusions(exclusions: List<String>) {
         cdkBuilder.exclusions(exclusions)
       }
 
-      public override fun maximumTraversalDepth(maximumTraversalDepth: Number) {
+      override fun maximumTraversalDepth(maximumTraversalDepth: Number) {
         cdkBuilder.maximumTraversalDepth(maximumTraversalDepth)
       }
 
-      public override fun paths(paths: List<String>) {
+      override fun paths(paths: List<String>) {
         cdkBuilder.paths(paths)
       }
 
@@ -1095,13 +1031,13 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty,
     ) : IcebergTargetProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
 
-      public override fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
+      override fun maximumTraversalDepth(): Number? = unwrap(this).getMaximumTraversalDepth()
 
-      public override fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
+      override fun paths(): List<String> = unwrap(this).getPaths() ?: emptyList()
     }
 
     public companion object {
@@ -1132,14 +1068,11 @@ public open class CfnCrawler internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun exclusions(exclusions: List<String>) {
-      }
+      public fun exclusions(exclusions: List<String>)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1147,15 +1080,15 @@ public open class CfnCrawler internal constructor(
           software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty.Builder =
           software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun exclusions(exclusions: List<String>) {
+      override fun exclusions(exclusions: List<String>) {
         cdkBuilder.exclusions(exclusions)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -1166,11 +1099,11 @@ public open class CfnCrawler internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty,
     ) : JdbcTargetProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
+      override fun exclusions(): List<String> = unwrap(this).getExclusions() ?: emptyList()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {

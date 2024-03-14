@@ -8,7 +8,7 @@ public interface IFilterPattern {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.IFilterPattern,
   ) : IFilterPattern {
-    public override fun logPatternString(): String = unwrap(this).getLogPatternString()
+    override fun logPatternString(): String = unwrap(this).getLogPatternString()
   }
 
   public companion object {

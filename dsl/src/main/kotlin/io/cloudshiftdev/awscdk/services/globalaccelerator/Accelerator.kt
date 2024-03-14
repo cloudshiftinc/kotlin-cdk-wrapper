@@ -32,17 +32,13 @@ public open class Accelerator internal constructor(
   public override fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?: emptyList()
 
   public interface Builder {
-    public fun acceleratorName(acceleratorName: String) {
-    }
+    public fun acceleratorName(acceleratorName: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun ipAddressType(ipAddressType: IpAddressType) {
-    }
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
-    public fun ipAddresses(ipAddresses: List<String>) {
-    }
+    public fun ipAddresses(ipAddresses: List<String>)
   }
 
   private class BuilderImpl(
@@ -52,19 +48,19 @@ public open class Accelerator internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.Accelerator.Builder =
         software.amazon.awscdk.services.globalaccelerator.Accelerator.Builder.create(scope, id)
 
-    public override fun acceleratorName(acceleratorName: String) {
+    override fun acceleratorName(acceleratorName: String) {
       cdkBuilder.acceleratorName(acceleratorName)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun ipAddressType(ipAddressType: IpAddressType) {
+    override fun ipAddressType(ipAddressType: IpAddressType) {
       cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
     }
 
-    public override fun ipAddresses(ipAddresses: List<String>) {
+    override fun ipAddresses(ipAddresses: List<String>) {
       cdkBuilder.ipAddresses(ipAddresses)
     }
 

@@ -13,8 +13,7 @@ public open class ResourcePolicy internal constructor(
   public open fun document(): PolicyDocument = unwrap(this).getDocument().let(PolicyDocument::wrap)
 
   public interface Builder {
-    public fun secret(secret: ISecret) {
-    }
+    public fun secret(secret: ISecret)
   }
 
   private class BuilderImpl(
@@ -24,7 +23,7 @@ public open class ResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.ResourcePolicy.Builder =
         software.amazon.awscdk.services.secretsmanager.ResourcePolicy.Builder.create(scope, id)
 
-    public override fun secret(secret: ISecret) {
+    override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }
 

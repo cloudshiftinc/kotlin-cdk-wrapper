@@ -7,15 +7,14 @@ public interface PluginContextQuery {
   public fun pluginName(): String
 
   public interface Builder {
-    public fun pluginName(pluginName: String) {
-    }
+    public fun pluginName(pluginName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.PluginContextQuery.builder()
 
-    public override fun pluginName(pluginName: String) {
+    override fun pluginName(pluginName: String) {
       cdkBuilder.pluginName(pluginName)
     }
 
@@ -26,7 +25,7 @@ public interface PluginContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery,
   ) : PluginContextQuery {
-    public override fun pluginName(): String = unwrap(this).getPluginName()
+    override fun pluginName(): String = unwrap(this).getPluginName()
   }
 
   public companion object {

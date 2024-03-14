@@ -9,22 +9,20 @@ public interface KeyPairAttributes {
   public fun type(): KeyPairType? = unwrap(this).getType()?.let(KeyPairType::wrap)
 
   public interface Builder {
-    public fun keyPairName(keyPairName: String) {
-    }
+    public fun keyPairName(keyPairName: String)
 
-    public fun type(type: KeyPairType) {
-    }
+    public fun type(type: KeyPairType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.KeyPairAttributes.Builder =
         software.amazon.awscdk.services.ec2.KeyPairAttributes.builder()
 
-    public override fun keyPairName(keyPairName: String) {
+    override fun keyPairName(keyPairName: String) {
       cdkBuilder.keyPairName(keyPairName)
     }
 
-    public override fun type(type: KeyPairType) {
+    override fun type(type: KeyPairType) {
       cdkBuilder.type(type.let(KeyPairType::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface KeyPairAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.KeyPairAttributes,
   ) : KeyPairAttributes {
-    public override fun keyPairName(): String = unwrap(this).getKeyPairName()
+    override fun keyPairName(): String = unwrap(this).getKeyPairName()
 
-    public override fun type(): KeyPairType? = unwrap(this).getType()?.let(KeyPairType::wrap)
+    override fun type(): KeyPairType? = unwrap(this).getType()?.let(KeyPairType::wrap)
   }
 
   public companion object {

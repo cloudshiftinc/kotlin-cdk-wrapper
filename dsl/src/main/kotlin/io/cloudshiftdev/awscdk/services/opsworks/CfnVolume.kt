@@ -42,17 +42,13 @@ public open class CfnVolume internal constructor(
   }
 
   public interface Builder {
-    public fun ec2VolumeId(ec2VolumeId: String) {
-    }
+    public fun ec2VolumeId(ec2VolumeId: String)
 
-    public fun mountPoint(mountPoint: String) {
-    }
+    public fun mountPoint(mountPoint: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun stackId(stackId: String) {
-    }
+    public fun stackId(stackId: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnVolume internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnVolume.Builder =
         software.amazon.awscdk.services.opsworks.CfnVolume.Builder.create(scope, id)
 
-    public override fun ec2VolumeId(ec2VolumeId: String) {
+    override fun ec2VolumeId(ec2VolumeId: String) {
       cdkBuilder.ec2VolumeId(ec2VolumeId)
     }
 
-    public override fun mountPoint(mountPoint: String) {
+    override fun mountPoint(mountPoint: String) {
       cdkBuilder.mountPoint(mountPoint)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun stackId(stackId: String) {
+    override fun stackId(stackId: String) {
       cdkBuilder.stackId(stackId)
     }
 

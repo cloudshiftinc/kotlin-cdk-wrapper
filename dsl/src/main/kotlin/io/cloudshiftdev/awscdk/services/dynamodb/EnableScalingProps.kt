@@ -9,22 +9,20 @@ public interface EnableScalingProps {
   public fun minCapacity(): Number
 
   public interface Builder {
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.EnableScalingProps.Builder =
         software.amazon.awscdk.services.dynamodb.EnableScalingProps.builder()
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
@@ -35,9 +33,9 @@ public interface EnableScalingProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps,
   ) : EnableScalingProps {
-    public override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
+    override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
 
-    public override fun minCapacity(): Number = unwrap(this).getMinCapacity()
+    override fun minCapacity(): Number = unwrap(this).getMinCapacity()
   }
 
   public companion object {

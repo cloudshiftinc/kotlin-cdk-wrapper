@@ -92,43 +92,32 @@ public open class CfnRule internal constructor(
       Unit = triggerEventSource(RuleTriggerEventSourceProperty(`value`))
 
   public interface Builder {
-    public fun actions(actions: IResolvable) {
-    }
+    public fun actions(actions: IResolvable)
 
-    public fun actions(actions: ActionsProperty) {
-    }
+    public fun actions(actions: ActionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b67caaa242e4bb9d2be7e79d9f28c5d1275448bf083d71d76ae77046202463f9")
-    public fun actions(actions: ActionsProperty.Builder.() -> Unit) {
-    }
+    public fun actions(actions: ActionsProperty.Builder.() -> Unit)
 
-    public fun function(function: String) {
-    }
+    public fun function(function: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun publishStatus(publishStatus: String) {
-    }
+    public fun publishStatus(publishStatus: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun triggerEventSource(triggerEventSource: IResolvable) {
-    }
+    public fun triggerEventSource(triggerEventSource: IResolvable)
 
-    public fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty) {
-    }
+    public fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6770d60045eb707d2cdb9bcff23a919cdb0a4e29565bdf23cd7e7d4705b72a81")
     public
-        fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty.Builder.() -> Unit) {
-    }
+        fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -138,50 +127,50 @@ public open class CfnRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnRule.Builder =
         software.amazon.awscdk.services.connect.CfnRule.Builder.create(scope, id)
 
-    public override fun actions(actions: IResolvable) {
+    override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable::unwrap))
     }
 
-    public override fun actions(actions: ActionsProperty) {
+    override fun actions(actions: ActionsProperty) {
       cdkBuilder.actions(actions.let(ActionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b67caaa242e4bb9d2be7e79d9f28c5d1275448bf083d71d76ae77046202463f9")
-    public override fun actions(actions: ActionsProperty.Builder.() -> Unit): Unit =
+    override fun actions(actions: ActionsProperty.Builder.() -> Unit): Unit =
         actions(ActionsProperty(actions))
 
-    public override fun function(function: String) {
+    override fun function(function: String) {
       cdkBuilder.function(function)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun publishStatus(publishStatus: String) {
+    override fun publishStatus(publishStatus: String) {
       cdkBuilder.publishStatus(publishStatus)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun triggerEventSource(triggerEventSource: IResolvable) {
+    override fun triggerEventSource(triggerEventSource: IResolvable) {
       cdkBuilder.triggerEventSource(triggerEventSource.let(IResolvable::unwrap))
     }
 
-    public override fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty) {
+    override fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty) {
       cdkBuilder.triggerEventSource(triggerEventSource.let(RuleTriggerEventSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6770d60045eb707d2cdb9bcff23a919cdb0a4e29565bdf23cd7e7d4705b72a81")
-    public override
+    override
         fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty.Builder.() -> Unit):
         Unit = triggerEventSource(RuleTriggerEventSourceProperty(triggerEventSource))
 
@@ -219,20 +208,15 @@ public open class CfnRule internal constructor(
     public fun stringValue(): String? = unwrap(this).getStringValue()
 
     public interface Builder {
-      public fun booleanValue(booleanValue: Boolean) {
-      }
+      public fun booleanValue(booleanValue: Boolean)
 
-      public fun booleanValue(booleanValue: IResolvable) {
-      }
+      public fun booleanValue(booleanValue: IResolvable)
 
-      public fun doubleValue(doubleValue: Number) {
-      }
+      public fun doubleValue(doubleValue: Number)
 
-      public fun emptyValue(emptyValue: Any) {
-      }
+      public fun emptyValue(emptyValue: Any)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -240,23 +224,23 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty.builder()
 
-      public override fun booleanValue(booleanValue: Boolean) {
+      override fun booleanValue(booleanValue: Boolean) {
         cdkBuilder.booleanValue(booleanValue)
       }
 
-      public override fun booleanValue(booleanValue: IResolvable) {
+      override fun booleanValue(booleanValue: IResolvable) {
         cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
       }
 
-      public override fun doubleValue(doubleValue: Number) {
+      override fun doubleValue(doubleValue: Number) {
         cdkBuilder.doubleValue(doubleValue)
       }
 
-      public override fun emptyValue(emptyValue: Any) {
+      override fun emptyValue(emptyValue: Any) {
         cdkBuilder.emptyValue(emptyValue)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -267,13 +251,13 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty,
     ) : FieldValueProperty {
-      public override fun booleanValue(): Any? = unwrap(this).getBooleanValue()
+      override fun booleanValue(): Any? = unwrap(this).getBooleanValue()
 
-      public override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
+      override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
 
-      public override fun emptyValue(): Any? = unwrap(this).getEmptyValue()
+      override fun emptyValue(): Any? = unwrap(this).getEmptyValue()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
     }
 
     public companion object {
@@ -300,11 +284,9 @@ public open class CfnRule internal constructor(
     public fun fields(): Any
 
     public interface Builder {
-      public fun fields(fields: IResolvable) {
-      }
+      public fun fields(fields: IResolvable)
 
-      public fun fields(fields: List<Any>) {
-      }
+      public fun fields(fields: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -312,11 +294,11 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty.builder()
 
-      public override fun fields(fields: IResolvable) {
+      override fun fields(fields: IResolvable) {
         cdkBuilder.fields(fields.let(IResolvable::unwrap))
       }
 
-      public override fun fields(fields: List<Any>) {
+      override fun fields(fields: List<Any>) {
         cdkBuilder.fields(fields)
       }
 
@@ -328,7 +310,7 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty,
     ) : UpdateCaseActionProperty {
-      public override fun fields(): Any = unwrap(this).getFields()
+      override fun fields(): Any = unwrap(this).getFields()
     }
 
     public companion object {
@@ -357,40 +339,36 @@ public open class CfnRule internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: FieldValueProperty) {
-      }
+      public fun `value`(`value`: FieldValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39cb40b8cb920f22e478e3d3eed571fc7797d9217007ee67008ff865810ebeeb")
-      public fun `value`(`value`: FieldValueProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: FieldValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.connect.CfnRule.FieldProperty.Builder
           = software.amazon.awscdk.services.connect.CfnRule.FieldProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: FieldValueProperty) {
+      override fun `value`(`value`: FieldValueProperty) {
         cdkBuilder.`value`(`value`.let(FieldValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39cb40b8cb920f22e478e3d3eed571fc7797d9217007ee67008ff865810ebeeb")
-      public override fun `value`(`value`: FieldValueProperty.Builder.() -> Unit): Unit =
+      override fun `value`(`value`: FieldValueProperty.Builder.() -> Unit): Unit =
           `value`(FieldValueProperty(`value`))
 
       public fun build(): software.amazon.awscdk.services.connect.CfnRule.FieldProperty =
@@ -400,9 +378,9 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldProperty,
     ) : FieldProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {
@@ -430,14 +408,11 @@ public open class CfnRule internal constructor(
     public fun templateId(): String
 
     public interface Builder {
-      public fun fields(fields: IResolvable) {
-      }
+      public fun fields(fields: IResolvable)
 
-      public fun fields(fields: List<Any>) {
-      }
+      public fun fields(fields: List<Any>)
 
-      public fun templateId(templateId: String) {
-      }
+      public fun templateId(templateId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -445,15 +420,15 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty.builder()
 
-      public override fun fields(fields: IResolvable) {
+      override fun fields(fields: IResolvable) {
         cdkBuilder.fields(fields.let(IResolvable::unwrap))
       }
 
-      public override fun fields(fields: List<Any>) {
+      override fun fields(fields: List<Any>) {
         cdkBuilder.fields(fields)
       }
 
-      public override fun templateId(templateId: String) {
+      override fun templateId(templateId: String) {
         cdkBuilder.templateId(templateId)
       }
 
@@ -465,9 +440,9 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty,
     ) : CreateCaseActionProperty {
-      public override fun fields(): Any = unwrap(this).getFields()
+      override fun fields(): Any = unwrap(this).getFields()
 
-      public override fun templateId(): String = unwrap(this).getTemplateId()
+      override fun templateId(): String = unwrap(this).getTemplateId()
     }
 
     public companion object {
@@ -496,11 +471,9 @@ public open class CfnRule internal constructor(
     public fun integrationAssociationArn(): String? = unwrap(this).getIntegrationAssociationArn()
 
     public interface Builder {
-      public fun eventSourceName(eventSourceName: String) {
-      }
+      public fun eventSourceName(eventSourceName: String)
 
-      public fun integrationAssociationArn(integrationAssociationArn: String) {
-      }
+      public fun integrationAssociationArn(integrationAssociationArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -508,11 +481,11 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty.builder()
 
-      public override fun eventSourceName(eventSourceName: String) {
+      override fun eventSourceName(eventSourceName: String) {
         cdkBuilder.eventSourceName(eventSourceName)
       }
 
-      public override fun integrationAssociationArn(integrationAssociationArn: String) {
+      override fun integrationAssociationArn(integrationAssociationArn: String) {
         cdkBuilder.integrationAssociationArn(integrationAssociationArn)
       }
 
@@ -525,9 +498,9 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty,
     ) : RuleTriggerEventSourceProperty {
-      public override fun eventSourceName(): String = unwrap(this).getEventSourceName()
+      override fun eventSourceName(): String = unwrap(this).getEventSourceName()
 
-      public override fun integrationAssociationArn(): String? =
+      override fun integrationAssociationArn(): String? =
           unwrap(this).getIntegrationAssociationArn()
     }
 
@@ -561,20 +534,15 @@ public open class CfnRule internal constructor(
     public fun references(): Any? = unwrap(this).getReferences()
 
     public interface Builder {
-      public fun contactFlowArn(contactFlowArn: String) {
-      }
+      public fun contactFlowArn(contactFlowArn: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun references(references: IResolvable) {
-      }
+      public fun references(references: IResolvable)
 
-      public fun references(references: Map<String, Any>) {
-      }
+      public fun references(references: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -582,23 +550,23 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty.builder()
 
-      public override fun contactFlowArn(contactFlowArn: String) {
+      override fun contactFlowArn(contactFlowArn: String) {
         cdkBuilder.contactFlowArn(contactFlowArn)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun references(references: IResolvable) {
+      override fun references(references: IResolvable) {
         cdkBuilder.references(references.let(IResolvable::unwrap))
       }
 
-      public override fun references(references: Map<String, Any>) {
+      override fun references(references: Map<String, Any>) {
         cdkBuilder.references(references)
       }
 
@@ -609,13 +577,13 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty,
     ) : TaskActionProperty {
-      public override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
+      override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun references(): Any? = unwrap(this).getReferences()
+      override fun references(): Any? = unwrap(this).getReferences()
     }
 
     public companion object {
@@ -650,28 +618,21 @@ public open class CfnRule internal constructor(
     public fun subject(): String? = unwrap(this).getSubject()
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
 
-      public fun contentType(contentType: String) {
-      }
+      public fun contentType(contentType: String)
 
-      public fun deliveryMethod(deliveryMethod: String) {
-      }
+      public fun deliveryMethod(deliveryMethod: String)
 
-      public fun recipient(recipient: IResolvable) {
-      }
+      public fun recipient(recipient: IResolvable)
 
-      public fun recipient(recipient: NotificationRecipientTypeProperty) {
-      }
+      public fun recipient(recipient: NotificationRecipientTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6214677c1471da5635831c025da1ed2c2693e2d582dd859d8cf1a7f9720cfe2a")
-      public fun recipient(recipient: NotificationRecipientTypeProperty.Builder.() -> Unit) {
-      }
+      public fun recipient(recipient: NotificationRecipientTypeProperty.Builder.() -> Unit)
 
-      public fun subject(subject: String) {
-      }
+      public fun subject(subject: String)
     }
 
     private class BuilderImpl : Builder {
@@ -679,33 +640,32 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
-      public override fun contentType(contentType: String) {
+      override fun contentType(contentType: String) {
         cdkBuilder.contentType(contentType)
       }
 
-      public override fun deliveryMethod(deliveryMethod: String) {
+      override fun deliveryMethod(deliveryMethod: String) {
         cdkBuilder.deliveryMethod(deliveryMethod)
       }
 
-      public override fun recipient(recipient: IResolvable) {
+      override fun recipient(recipient: IResolvable) {
         cdkBuilder.recipient(recipient.let(IResolvable::unwrap))
       }
 
-      public override fun recipient(recipient: NotificationRecipientTypeProperty) {
+      override fun recipient(recipient: NotificationRecipientTypeProperty) {
         cdkBuilder.recipient(recipient.let(NotificationRecipientTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6214677c1471da5635831c025da1ed2c2693e2d582dd859d8cf1a7f9720cfe2a")
-      public override
-          fun recipient(recipient: NotificationRecipientTypeProperty.Builder.() -> Unit): Unit =
-          recipient(NotificationRecipientTypeProperty(recipient))
+      override fun recipient(recipient: NotificationRecipientTypeProperty.Builder.() -> Unit): Unit
+          = recipient(NotificationRecipientTypeProperty(recipient))
 
-      public override fun subject(subject: String) {
+      override fun subject(subject: String) {
         cdkBuilder.subject(subject)
       }
 
@@ -718,15 +678,15 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty,
     ) : SendNotificationActionProperty {
-      public override fun content(): String = unwrap(this).getContent()
+      override fun content(): String = unwrap(this).getContent()
 
-      public override fun contentType(): String = unwrap(this).getContentType()
+      override fun contentType(): String = unwrap(this).getContentType()
 
-      public override fun deliveryMethod(): String = unwrap(this).getDeliveryMethod()
+      override fun deliveryMethod(): String = unwrap(this).getDeliveryMethod()
 
-      public override fun recipient(): Any = unwrap(this).getRecipient()
+      override fun recipient(): Any = unwrap(this).getRecipient()
 
-      public override fun subject(): String? = unwrap(this).getSubject()
+      override fun subject(): String? = unwrap(this).getSubject()
     }
 
     public companion object {
@@ -753,8 +713,7 @@ public open class CfnRule internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -762,7 +721,7 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -774,7 +733,7 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty,
     ) : EventBridgeActionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -803,11 +762,9 @@ public open class CfnRule internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -815,11 +772,11 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -830,9 +787,9 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty,
     ) : ReferenceProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -861,14 +818,11 @@ public open class CfnRule internal constructor(
     public fun userTags(): Any? = unwrap(this).getUserTags()
 
     public interface Builder {
-      public fun userArns(userArns: List<String>) {
-      }
+      public fun userArns(userArns: List<String>)
 
-      public fun userTags(userTags: IResolvable) {
-      }
+      public fun userTags(userTags: IResolvable)
 
-      public fun userTags(userTags: Map<String, String>) {
-      }
+      public fun userTags(userTags: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -877,15 +831,15 @@ public open class CfnRule internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty.builder()
 
-      public override fun userArns(userArns: List<String>) {
+      override fun userArns(userArns: List<String>) {
         cdkBuilder.userArns(userArns)
       }
 
-      public override fun userTags(userTags: IResolvable) {
+      override fun userTags(userTags: IResolvable) {
         cdkBuilder.userTags(userTags.let(IResolvable::unwrap))
       }
 
-      public override fun userTags(userTags: Map<String, String>) {
+      override fun userTags(userTags: Map<String, String>) {
         cdkBuilder.userTags(userTags)
       }
 
@@ -898,9 +852,9 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty,
     ) : NotificationRecipientTypeProperty {
-      public override fun userArns(): List<String> = unwrap(this).getUserArns() ?: emptyList()
+      override fun userArns(): List<String> = unwrap(this).getUserArns() ?: emptyList()
 
-      public override fun userTags(): Any? = unwrap(this).getUserTags()
+      override fun userTags(): Any? = unwrap(this).getUserTags()
     }
 
     public companion object {
@@ -940,47 +894,33 @@ public open class CfnRule internal constructor(
     public fun updateCaseActions(): Any? = unwrap(this).getUpdateCaseActions()
 
     public interface Builder {
-      public fun assignContactCategoryActions(assignContactCategoryActions: List<Any>) {
-      }
+      public fun assignContactCategoryActions(assignContactCategoryActions: List<Any>)
 
-      public fun assignContactCategoryActions(assignContactCategoryActions: IResolvable) {
-      }
+      public fun assignContactCategoryActions(assignContactCategoryActions: IResolvable)
 
-      public fun createCaseActions(createCaseActions: IResolvable) {
-      }
+      public fun createCaseActions(createCaseActions: IResolvable)
 
-      public fun createCaseActions(createCaseActions: List<Any>) {
-      }
+      public fun createCaseActions(createCaseActions: List<Any>)
 
-      public fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>) {
-      }
+      public fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>)
 
-      public fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable) {
-      }
+      public fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable)
 
-      public fun eventBridgeActions(eventBridgeActions: IResolvable) {
-      }
+      public fun eventBridgeActions(eventBridgeActions: IResolvable)
 
-      public fun eventBridgeActions(eventBridgeActions: List<Any>) {
-      }
+      public fun eventBridgeActions(eventBridgeActions: List<Any>)
 
-      public fun sendNotificationActions(sendNotificationActions: IResolvable) {
-      }
+      public fun sendNotificationActions(sendNotificationActions: IResolvable)
 
-      public fun sendNotificationActions(sendNotificationActions: List<Any>) {
-      }
+      public fun sendNotificationActions(sendNotificationActions: List<Any>)
 
-      public fun taskActions(taskActions: IResolvable) {
-      }
+      public fun taskActions(taskActions: IResolvable)
 
-      public fun taskActions(taskActions: List<Any>) {
-      }
+      public fun taskActions(taskActions: List<Any>)
 
-      public fun updateCaseActions(updateCaseActions: IResolvable) {
-      }
+      public fun updateCaseActions(updateCaseActions: IResolvable)
 
-      public fun updateCaseActions(updateCaseActions: List<Any>) {
-      }
+      public fun updateCaseActions(updateCaseActions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -988,59 +928,59 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.connect.CfnRule.ActionsProperty.Builder =
           software.amazon.awscdk.services.connect.CfnRule.ActionsProperty.builder()
 
-      public override fun assignContactCategoryActions(assignContactCategoryActions: List<Any>) {
+      override fun assignContactCategoryActions(assignContactCategoryActions: List<Any>) {
         cdkBuilder.assignContactCategoryActions(assignContactCategoryActions)
       }
 
-      public override fun assignContactCategoryActions(assignContactCategoryActions: IResolvable) {
+      override fun assignContactCategoryActions(assignContactCategoryActions: IResolvable) {
         cdkBuilder.assignContactCategoryActions(assignContactCategoryActions.let(IResolvable::unwrap))
       }
 
-      public override fun createCaseActions(createCaseActions: IResolvable) {
+      override fun createCaseActions(createCaseActions: IResolvable) {
         cdkBuilder.createCaseActions(createCaseActions.let(IResolvable::unwrap))
       }
 
-      public override fun createCaseActions(createCaseActions: List<Any>) {
+      override fun createCaseActions(createCaseActions: List<Any>) {
         cdkBuilder.createCaseActions(createCaseActions)
       }
 
-      public override fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>) {
+      override fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>) {
         cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions)
       }
 
-      public override fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable) {
+      override fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable) {
         cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions.let(IResolvable::unwrap))
       }
 
-      public override fun eventBridgeActions(eventBridgeActions: IResolvable) {
+      override fun eventBridgeActions(eventBridgeActions: IResolvable) {
         cdkBuilder.eventBridgeActions(eventBridgeActions.let(IResolvable::unwrap))
       }
 
-      public override fun eventBridgeActions(eventBridgeActions: List<Any>) {
+      override fun eventBridgeActions(eventBridgeActions: List<Any>) {
         cdkBuilder.eventBridgeActions(eventBridgeActions)
       }
 
-      public override fun sendNotificationActions(sendNotificationActions: IResolvable) {
+      override fun sendNotificationActions(sendNotificationActions: IResolvable) {
         cdkBuilder.sendNotificationActions(sendNotificationActions.let(IResolvable::unwrap))
       }
 
-      public override fun sendNotificationActions(sendNotificationActions: List<Any>) {
+      override fun sendNotificationActions(sendNotificationActions: List<Any>) {
         cdkBuilder.sendNotificationActions(sendNotificationActions)
       }
 
-      public override fun taskActions(taskActions: IResolvable) {
+      override fun taskActions(taskActions: IResolvable) {
         cdkBuilder.taskActions(taskActions.let(IResolvable::unwrap))
       }
 
-      public override fun taskActions(taskActions: List<Any>) {
+      override fun taskActions(taskActions: List<Any>) {
         cdkBuilder.taskActions(taskActions)
       }
 
-      public override fun updateCaseActions(updateCaseActions: IResolvable) {
+      override fun updateCaseActions(updateCaseActions: IResolvable) {
         cdkBuilder.updateCaseActions(updateCaseActions.let(IResolvable::unwrap))
       }
 
-      public override fun updateCaseActions(updateCaseActions: List<Any>) {
+      override fun updateCaseActions(updateCaseActions: List<Any>) {
         cdkBuilder.updateCaseActions(updateCaseActions)
       }
 
@@ -1051,22 +991,20 @@ public open class CfnRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.connect.CfnRule.ActionsProperty,
     ) : ActionsProperty {
-      public override fun assignContactCategoryActions(): Any? =
+      override fun assignContactCategoryActions(): Any? =
           unwrap(this).getAssignContactCategoryActions()
 
-      public override fun createCaseActions(): Any? = unwrap(this).getCreateCaseActions()
+      override fun createCaseActions(): Any? = unwrap(this).getCreateCaseActions()
 
-      public override fun endAssociatedTasksActions(): Any? =
-          unwrap(this).getEndAssociatedTasksActions()
+      override fun endAssociatedTasksActions(): Any? = unwrap(this).getEndAssociatedTasksActions()
 
-      public override fun eventBridgeActions(): Any? = unwrap(this).getEventBridgeActions()
+      override fun eventBridgeActions(): Any? = unwrap(this).getEventBridgeActions()
 
-      public override fun sendNotificationActions(): Any? =
-          unwrap(this).getSendNotificationActions()
+      override fun sendNotificationActions(): Any? = unwrap(this).getSendNotificationActions()
 
-      public override fun taskActions(): Any? = unwrap(this).getTaskActions()
+      override fun taskActions(): Any? = unwrap(this).getTaskActions()
 
-      public override fun updateCaseActions(): Any? = unwrap(this).getUpdateCaseActions()
+      override fun updateCaseActions(): Any? = unwrap(this).getUpdateCaseActions()
     }
 
     public companion object {

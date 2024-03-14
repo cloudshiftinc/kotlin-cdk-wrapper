@@ -48,22 +48,17 @@ public open class CfnBridgeOutput internal constructor(
       networkOutput(BridgeNetworkOutputProperty(`value`))
 
   public interface Builder {
-    public fun bridgeArn(bridgeArn: String) {
-    }
+    public fun bridgeArn(bridgeArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun networkOutput(networkOutput: IResolvable) {
-    }
+    public fun networkOutput(networkOutput: IResolvable)
 
-    public fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
-    }
+    public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63c91da5424a8f4038ef57a0a4d6fbaa9b9de0f8567926eec46aad2a834a19d3")
-    public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit) {
-    }
+    public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -73,27 +68,26 @@ public open class CfnBridgeOutput internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.Builder =
         software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.Builder.create(scope, id)
 
-    public override fun bridgeArn(bridgeArn: String) {
+    override fun bridgeArn(bridgeArn: String) {
       cdkBuilder.bridgeArn(bridgeArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun networkOutput(networkOutput: IResolvable) {
+    override fun networkOutput(networkOutput: IResolvable) {
       cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
     }
 
-    public override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
+    override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
       cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("63c91da5424a8f4038ef57a0a4d6fbaa9b9de0f8567926eec46aad2a834a19d3")
-    public override
-        fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit): Unit =
-        networkOutput(BridgeNetworkOutputProperty(networkOutput))
+    override fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit): Unit
+        = networkOutput(BridgeNetworkOutputProperty(networkOutput))
 
     public fun build(): software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput =
         cdkBuilder.build()
@@ -132,20 +126,15 @@ public open class CfnBridgeOutput internal constructor(
     public fun ttl(): Number
 
     public interface Builder {
-      public fun ipAddress(ipAddress: String) {
-      }
+      public fun ipAddress(ipAddress: String)
 
-      public fun networkName(networkName: String) {
-      }
+      public fun networkName(networkName: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun ttl(ttl: Number) {
-      }
+      public fun ttl(ttl: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -154,23 +143,23 @@ public open class CfnBridgeOutput internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty.builder()
 
-      public override fun ipAddress(ipAddress: String) {
+      override fun ipAddress(ipAddress: String) {
         cdkBuilder.ipAddress(ipAddress)
       }
 
-      public override fun networkName(networkName: String) {
+      override fun networkName(networkName: String) {
         cdkBuilder.networkName(networkName)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun ttl(ttl: Number) {
+      override fun ttl(ttl: Number) {
         cdkBuilder.ttl(ttl)
       }
 
@@ -183,15 +172,15 @@ public open class CfnBridgeOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput.BridgeNetworkOutputProperty,
     ) : BridgeNetworkOutputProperty {
-      public override fun ipAddress(): String = unwrap(this).getIpAddress()
+      override fun ipAddress(): String = unwrap(this).getIpAddress()
 
-      public override fun networkName(): String = unwrap(this).getNetworkName()
+      override fun networkName(): String = unwrap(this).getNetworkName()
 
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun ttl(): Number = unwrap(this).getTtl()
+      override fun ttl(): Number = unwrap(this).getTtl()
     }
 
     public companion object {

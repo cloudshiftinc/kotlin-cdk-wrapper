@@ -14,36 +14,32 @@ public interface EventInvokeConfigOptions {
   public fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 
   public interface Builder {
-    public fun maxEventAge(maxEventAge: Duration) {
-    }
+    public fun maxEventAge(maxEventAge: Duration)
 
-    public fun onFailure(onFailure: IDestination) {
-    }
+    public fun onFailure(onFailure: IDestination)
 
-    public fun onSuccess(onSuccess: IDestination) {
-    }
+    public fun onSuccess(onSuccess: IDestination)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.EventInvokeConfigOptions.Builder
         = software.amazon.awscdk.services.lambda.EventInvokeConfigOptions.builder()
 
-    public override fun maxEventAge(maxEventAge: Duration) {
+    override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
     }
 
-    public override fun onFailure(onFailure: IDestination) {
+    override fun onFailure(onFailure: IDestination) {
       cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
     }
 
-    public override fun onSuccess(onSuccess: IDestination) {
+    override fun onSuccess(onSuccess: IDestination) {
       cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 
@@ -54,16 +50,13 @@ public interface EventInvokeConfigOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigOptions,
   ) : EventInvokeConfigOptions {
-    public override fun maxEventAge(): Duration? =
-        unwrap(this).getMaxEventAge()?.let(Duration::wrap)
+    override fun maxEventAge(): Duration? = unwrap(this).getMaxEventAge()?.let(Duration::wrap)
 
-    public override fun onFailure(): IDestination? =
-        unwrap(this).getOnFailure()?.let(IDestination::wrap)
+    override fun onFailure(): IDestination? = unwrap(this).getOnFailure()?.let(IDestination::wrap)
 
-    public override fun onSuccess(): IDestination? =
-        unwrap(this).getOnSuccess()?.let(IDestination::wrap)
+    override fun onSuccess(): IDestination? = unwrap(this).getOnSuccess()?.let(IDestination::wrap)
 
-    public override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
+    override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
   }
 
   public companion object {

@@ -109,50 +109,35 @@ public open class CfnRoute internal constructor(
   }
 
   public interface Builder {
-    public fun carrierGatewayId(carrierGatewayId: String) {
-    }
+    public fun carrierGatewayId(carrierGatewayId: String)
 
-    public fun coreNetworkArn(coreNetworkArn: String) {
-    }
+    public fun coreNetworkArn(coreNetworkArn: String)
 
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
-    }
+    public fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String)
 
-    public fun destinationPrefixListId(destinationPrefixListId: String) {
-    }
+    public fun destinationPrefixListId(destinationPrefixListId: String)
 
-    public fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String) {
-    }
+    public fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String)
 
-    public fun gatewayId(gatewayId: String) {
-    }
+    public fun gatewayId(gatewayId: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun localGatewayId(localGatewayId: String) {
-    }
+    public fun localGatewayId(localGatewayId: String)
 
-    public fun natGatewayId(natGatewayId: String) {
-    }
+    public fun natGatewayId(natGatewayId: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
 
-    public fun routeTableId(routeTableId: String) {
-    }
+    public fun routeTableId(routeTableId: String)
 
-    public fun transitGatewayId(transitGatewayId: String) {
-    }
+    public fun transitGatewayId(transitGatewayId: String)
 
-    public fun vpcEndpointId(vpcEndpointId: String) {
-    }
+    public fun vpcEndpointId(vpcEndpointId: String)
 
-    public fun vpcPeeringConnectionId(vpcPeeringConnectionId: String) {
-    }
+    public fun vpcPeeringConnectionId(vpcPeeringConnectionId: String)
   }
 
   private class BuilderImpl(
@@ -162,63 +147,63 @@ public open class CfnRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnRoute.Builder =
         software.amazon.awscdk.services.ec2.CfnRoute.Builder.create(scope, id)
 
-    public override fun carrierGatewayId(carrierGatewayId: String) {
+    override fun carrierGatewayId(carrierGatewayId: String) {
       cdkBuilder.carrierGatewayId(carrierGatewayId)
     }
 
-    public override fun coreNetworkArn(coreNetworkArn: String) {
+    override fun coreNetworkArn(coreNetworkArn: String) {
       cdkBuilder.coreNetworkArn(coreNetworkArn)
     }
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
+    override fun destinationIpv6CidrBlock(destinationIpv6CidrBlock: String) {
       cdkBuilder.destinationIpv6CidrBlock(destinationIpv6CidrBlock)
     }
 
-    public override fun destinationPrefixListId(destinationPrefixListId: String) {
+    override fun destinationPrefixListId(destinationPrefixListId: String) {
       cdkBuilder.destinationPrefixListId(destinationPrefixListId)
     }
 
-    public override fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String) {
+    override fun egressOnlyInternetGatewayId(egressOnlyInternetGatewayId: String) {
       cdkBuilder.egressOnlyInternetGatewayId(egressOnlyInternetGatewayId)
     }
 
-    public override fun gatewayId(gatewayId: String) {
+    override fun gatewayId(gatewayId: String) {
       cdkBuilder.gatewayId(gatewayId)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun localGatewayId(localGatewayId: String) {
+    override fun localGatewayId(localGatewayId: String) {
       cdkBuilder.localGatewayId(localGatewayId)
     }
 
-    public override fun natGatewayId(natGatewayId: String) {
+    override fun natGatewayId(natGatewayId: String) {
       cdkBuilder.natGatewayId(natGatewayId)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
-    public override fun routeTableId(routeTableId: String) {
+    override fun routeTableId(routeTableId: String) {
       cdkBuilder.routeTableId(routeTableId)
     }
 
-    public override fun transitGatewayId(transitGatewayId: String) {
+    override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
     }
 
-    public override fun vpcEndpointId(vpcEndpointId: String) {
+    override fun vpcEndpointId(vpcEndpointId: String) {
       cdkBuilder.vpcEndpointId(vpcEndpointId)
     }
 
-    public override fun vpcPeeringConnectionId(vpcPeeringConnectionId: String) {
+    override fun vpcPeeringConnectionId(vpcPeeringConnectionId: String) {
       cdkBuilder.vpcPeeringConnectionId(vpcPeeringConnectionId)
     }
 

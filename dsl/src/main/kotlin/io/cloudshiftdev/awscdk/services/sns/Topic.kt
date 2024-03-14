@@ -33,29 +33,21 @@ public open class Topic internal constructor(
   public override fun topicName(): String = unwrap(this).getTopicName()
 
   public interface Builder {
-    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
-    }
+    public fun contentBasedDeduplication(contentBasedDeduplication: Boolean)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun enforceSsl(enforceSsl: Boolean) {
-    }
+    public fun enforceSsl(enforceSsl: Boolean)
 
-    public fun fifo(fifo: Boolean) {
-    }
+    public fun fifo(fifo: Boolean)
 
-    public fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
-    }
+    public fun loggingConfigs(loggingConfigs: List<LoggingConfig>)
 
-    public fun masterKey(masterKey: IKey) {
-    }
+    public fun masterKey(masterKey: IKey)
 
-    public fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number) {
-    }
+    public fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number)
 
-    public fun topicName(topicName: String) {
-    }
+    public fun topicName(topicName: String)
   }
 
   private class BuilderImpl(
@@ -65,35 +57,35 @@ public open class Topic internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sns.Topic.Builder =
         software.amazon.awscdk.services.sns.Topic.Builder.create(scope, id)
 
-    public override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
+    override fun contentBasedDeduplication(contentBasedDeduplication: Boolean) {
       cdkBuilder.contentBasedDeduplication(contentBasedDeduplication)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun enforceSsl(enforceSsl: Boolean) {
+    override fun enforceSsl(enforceSsl: Boolean) {
       cdkBuilder.enforceSsl(enforceSsl)
     }
 
-    public override fun fifo(fifo: Boolean) {
+    override fun fifo(fifo: Boolean) {
       cdkBuilder.fifo(fifo)
     }
 
-    public override fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
+    override fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
       cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig::unwrap))
     }
 
-    public override fun masterKey(masterKey: IKey) {
+    override fun masterKey(masterKey: IKey) {
       cdkBuilder.masterKey(masterKey.let(IKey::unwrap))
     }
 
-    public override fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number) {
+    override fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number) {
       cdkBuilder.messageRetentionPeriodInDays(messageRetentionPeriodInDays)
     }
 
-    public override fun topicName(topicName: String) {
+    override fun topicName(topicName: String) {
       cdkBuilder.topicName(topicName)
     }
 

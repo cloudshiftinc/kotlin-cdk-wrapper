@@ -14,49 +14,45 @@ public interface HealthCheckConfig {
 
   public interface Builder {
     public
-        fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty) {
-    }
+        fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5d2727c4abc0be2ab3184c7ee43a68ed3225d92e3f65f508da11122da666ab26")
     public
-        fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit) {
-    }
+        fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit)
 
-    public fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty) {
-    }
+    public fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7075c05c4b9b75632e54ea94d7244864fd3d2863b4f2a408cac19135fed1d971")
     public
-        fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty.Builder.() -> Unit) {
-    }
+        fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.HealthCheckConfig.Builder =
         software.amazon.awscdk.services.appmesh.HealthCheckConfig.builder()
 
-    public override
+    override
         fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty) {
       cdkBuilder.virtualGatewayHealthCheck(virtualGatewayHealthCheck.let(CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5d2727c4abc0be2ab3184c7ee43a68ed3225d92e3f65f508da11122da666ab26")
-    public override
+    override
         fun virtualGatewayHealthCheck(virtualGatewayHealthCheck: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.Builder.() -> Unit):
         Unit =
         virtualGatewayHealthCheck(CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty(virtualGatewayHealthCheck))
 
-    public override
+    override
         fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty) {
       cdkBuilder.virtualNodeHealthCheck(virtualNodeHealthCheck.let(CfnVirtualNode.HealthCheckProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7075c05c4b9b75632e54ea94d7244864fd3d2863b4f2a408cac19135fed1d971")
-    public override
+    override
         fun virtualNodeHealthCheck(virtualNodeHealthCheck: CfnVirtualNode.HealthCheckProperty.Builder.() -> Unit):
         Unit = virtualNodeHealthCheck(CfnVirtualNode.HealthCheckProperty(virtualNodeHealthCheck))
 
@@ -67,11 +63,11 @@ public interface HealthCheckConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheckConfig,
   ) : HealthCheckConfig {
-    public override fun virtualGatewayHealthCheck():
+    override fun virtualGatewayHealthCheck():
         CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty? =
         unwrap(this).getVirtualGatewayHealthCheck()?.let(CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty::wrap)
 
-    public override fun virtualNodeHealthCheck(): CfnVirtualNode.HealthCheckProperty? =
+    override fun virtualNodeHealthCheck(): CfnVirtualNode.HealthCheckProperty? =
         unwrap(this).getVirtualNodeHealthCheck()?.let(CfnVirtualNode.HealthCheckProperty::wrap)
   }
 

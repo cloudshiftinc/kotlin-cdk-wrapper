@@ -50,22 +50,17 @@ public open class CfnReceiptRule internal constructor(
   }
 
   public interface Builder {
-    public fun after(after: String) {
-    }
+    public fun after(after: String)
 
-    public fun rule(rule: IResolvable) {
-    }
+    public fun rule(rule: IResolvable)
 
-    public fun rule(rule: RuleProperty) {
-    }
+    public fun rule(rule: RuleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d1b403cdfc8768d3f05c8e81b7694f70ccaa205d6434a849f7d762c120d77f3")
-    public fun rule(rule: RuleProperty.Builder.() -> Unit) {
-    }
+    public fun rule(rule: RuleProperty.Builder.() -> Unit)
 
-    public fun ruleSetName(ruleSetName: String) {
-    }
+    public fun ruleSetName(ruleSetName: String)
   }
 
   private class BuilderImpl(
@@ -75,23 +70,23 @@ public open class CfnReceiptRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnReceiptRule.Builder =
         software.amazon.awscdk.services.ses.CfnReceiptRule.Builder.create(scope, id)
 
-    public override fun after(after: String) {
+    override fun after(after: String) {
       cdkBuilder.after(after)
     }
 
-    public override fun rule(rule: IResolvable) {
+    override fun rule(rule: IResolvable) {
       cdkBuilder.rule(rule.let(IResolvable::unwrap))
     }
 
-    public override fun rule(rule: RuleProperty) {
+    override fun rule(rule: RuleProperty) {
       cdkBuilder.rule(rule.let(RuleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d1b403cdfc8768d3f05c8e81b7694f70ccaa205d6434a849f7d762c120d77f3")
-    public override fun rule(rule: RuleProperty.Builder.() -> Unit): Unit = rule(RuleProperty(rule))
+    override fun rule(rule: RuleProperty.Builder.() -> Unit): Unit = rule(RuleProperty(rule))
 
-    public override fun ruleSetName(ruleSetName: String) {
+    override fun ruleSetName(ruleSetName: String) {
       cdkBuilder.ruleSetName(ruleSetName)
     }
 
@@ -127,14 +122,11 @@ public open class CfnReceiptRule internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun functionArn(functionArn: String) {
-      }
+      public fun functionArn(functionArn: String)
 
-      public fun invocationType(invocationType: String) {
-      }
+      public fun invocationType(invocationType: String)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -142,15 +134,15 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty.builder()
 
-      public override fun functionArn(functionArn: String) {
+      override fun functionArn(functionArn: String) {
         cdkBuilder.functionArn(functionArn)
       }
 
-      public override fun invocationType(invocationType: String) {
+      override fun invocationType(invocationType: String) {
         cdkBuilder.invocationType(invocationType)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -162,11 +154,11 @@ public open class CfnReceiptRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty,
     ) : LambdaActionProperty {
-      public override fun functionArn(): String = unwrap(this).getFunctionArn()
+      override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-      public override fun invocationType(): String? = unwrap(this).getInvocationType()
+      override fun invocationType(): String? = unwrap(this).getInvocationType()
 
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -195,11 +187,9 @@ public open class CfnReceiptRule internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun organizationArn(organizationArn: String) {
-      }
+      public fun organizationArn(organizationArn: String)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -207,11 +197,11 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty.builder()
 
-      public override fun organizationArn(organizationArn: String) {
+      override fun organizationArn(organizationArn: String) {
         cdkBuilder.organizationArn(organizationArn)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -223,9 +213,9 @@ public open class CfnReceiptRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty,
     ) : WorkmailActionProperty {
-      public override fun organizationArn(): String = unwrap(this).getOrganizationArn()
+      override fun organizationArn(): String = unwrap(this).getOrganizationArn()
 
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -254,11 +244,9 @@ public open class CfnReceiptRule internal constructor(
     public fun headerValue(): String
 
     public interface Builder {
-      public fun headerName(headerName: String) {
-      }
+      public fun headerName(headerName: String)
 
-      public fun headerValue(headerValue: String) {
-      }
+      public fun headerValue(headerValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -266,11 +254,11 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty.builder()
 
-      public override fun headerName(headerName: String) {
+      override fun headerName(headerName: String) {
         cdkBuilder.headerName(headerName)
       }
 
-      public override fun headerValue(headerValue: String) {
+      override fun headerValue(headerValue: String) {
         cdkBuilder.headerValue(headerValue)
       }
 
@@ -282,9 +270,9 @@ public open class CfnReceiptRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty,
     ) : AddHeaderActionProperty {
-      public override fun headerName(): String = unwrap(this).getHeaderName()
+      override fun headerName(): String = unwrap(this).getHeaderName()
 
-      public override fun headerValue(): String = unwrap(this).getHeaderValue()
+      override fun headerValue(): String = unwrap(this).getHeaderValue()
     }
 
     public companion object {
@@ -317,17 +305,13 @@ public open class CfnReceiptRule internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
 
-      public fun objectKeyPrefix(objectKeyPrefix: String) {
-      }
+      public fun objectKeyPrefix(objectKeyPrefix: String)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -335,19 +319,19 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      public override fun objectKeyPrefix(objectKeyPrefix: String) {
+      override fun objectKeyPrefix(objectKeyPrefix: String) {
         cdkBuilder.objectKeyPrefix(objectKeyPrefix)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -358,13 +342,13 @@ public open class CfnReceiptRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty,
     ) : S3ActionProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
-      public override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
 
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -399,20 +383,15 @@ public open class CfnReceiptRule internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun message(message: String) {
-      }
+      public fun message(message: String)
 
-      public fun sender(sender: String) {
-      }
+      public fun sender(sender: String)
 
-      public fun smtpReplyCode(smtpReplyCode: String) {
-      }
+      public fun smtpReplyCode(smtpReplyCode: String)
 
-      public fun statusCode(statusCode: String) {
-      }
+      public fun statusCode(statusCode: String)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -420,23 +399,23 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty.builder()
 
-      public override fun message(message: String) {
+      override fun message(message: String) {
         cdkBuilder.message(message)
       }
 
-      public override fun sender(sender: String) {
+      override fun sender(sender: String) {
         cdkBuilder.sender(sender)
       }
 
-      public override fun smtpReplyCode(smtpReplyCode: String) {
+      override fun smtpReplyCode(smtpReplyCode: String) {
         cdkBuilder.smtpReplyCode(smtpReplyCode)
       }
 
-      public override fun statusCode(statusCode: String) {
+      override fun statusCode(statusCode: String) {
         cdkBuilder.statusCode(statusCode)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -448,15 +427,15 @@ public open class CfnReceiptRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty,
     ) : BounceActionProperty {
-      public override fun message(): String = unwrap(this).getMessage()
+      override fun message(): String = unwrap(this).getMessage()
 
-      public override fun sender(): String = unwrap(this).getSender()
+      override fun sender(): String = unwrap(this).getSender()
 
-      public override fun smtpReplyCode(): String = unwrap(this).getSmtpReplyCode()
+      override fun smtpReplyCode(): String = unwrap(this).getSmtpReplyCode()
 
-      public override fun statusCode(): String? = unwrap(this).getStatusCode()
+      override fun statusCode(): String? = unwrap(this).getStatusCode()
 
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -493,32 +472,23 @@ public open class CfnReceiptRule internal constructor(
     public fun tlsPolicy(): String? = unwrap(this).getTlsPolicy()
 
     public interface Builder {
-      public fun actions(actions: IResolvable) {
-      }
+      public fun actions(actions: IResolvable)
 
-      public fun actions(actions: List<Any>) {
-      }
+      public fun actions(actions: List<Any>)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun recipients(recipients: List<String>) {
-      }
+      public fun recipients(recipients: List<String>)
 
-      public fun scanEnabled(scanEnabled: Boolean) {
-      }
+      public fun scanEnabled(scanEnabled: Boolean)
 
-      public fun scanEnabled(scanEnabled: IResolvable) {
-      }
+      public fun scanEnabled(scanEnabled: IResolvable)
 
-      public fun tlsPolicy(tlsPolicy: String) {
-      }
+      public fun tlsPolicy(tlsPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -526,39 +496,39 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty.builder()
 
-      public override fun actions(actions: IResolvable) {
+      override fun actions(actions: IResolvable) {
         cdkBuilder.actions(actions.let(IResolvable::unwrap))
       }
 
-      public override fun actions(actions: List<Any>) {
+      override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun recipients(recipients: List<String>) {
+      override fun recipients(recipients: List<String>) {
         cdkBuilder.recipients(recipients)
       }
 
-      public override fun scanEnabled(scanEnabled: Boolean) {
+      override fun scanEnabled(scanEnabled: Boolean) {
         cdkBuilder.scanEnabled(scanEnabled)
       }
 
-      public override fun scanEnabled(scanEnabled: IResolvable) {
+      override fun scanEnabled(scanEnabled: IResolvable) {
         cdkBuilder.scanEnabled(scanEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun tlsPolicy(tlsPolicy: String) {
+      override fun tlsPolicy(tlsPolicy: String) {
         cdkBuilder.tlsPolicy(tlsPolicy)
       }
 
@@ -569,17 +539,17 @@ public open class CfnReceiptRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty,
     ) : RuleProperty {
-      public override fun actions(): Any? = unwrap(this).getActions()
+      override fun actions(): Any? = unwrap(this).getActions()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun recipients(): List<String> = unwrap(this).getRecipients() ?: emptyList()
+      override fun recipients(): List<String> = unwrap(this).getRecipients() ?: emptyList()
 
-      public override fun scanEnabled(): Any? = unwrap(this).getScanEnabled()
+      override fun scanEnabled(): Any? = unwrap(this).getScanEnabled()
 
-      public override fun tlsPolicy(): String? = unwrap(this).getTlsPolicy()
+      override fun tlsPolicy(): String? = unwrap(this).getTlsPolicy()
     }
 
     public companion object {
@@ -607,11 +577,9 @@ public open class CfnReceiptRule internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun encoding(encoding: String) {
-      }
+      public fun encoding(encoding: String)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -619,11 +587,11 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty.builder()
 
-      public override fun encoding(encoding: String) {
+      override fun encoding(encoding: String) {
         cdkBuilder.encoding(encoding)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -634,9 +602,9 @@ public open class CfnReceiptRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty,
     ) : SNSActionProperty {
-      public override fun encoding(): String? = unwrap(this).getEncoding()
+      override fun encoding(): String? = unwrap(this).getEncoding()
 
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -665,11 +633,9 @@ public open class CfnReceiptRule internal constructor(
     public fun topicArn(): String? = unwrap(this).getTopicArn()
 
     public interface Builder {
-      public fun scope(scope: String) {
-      }
+      public fun scope(scope: String)
 
-      public fun topicArn(topicArn: String) {
-      }
+      public fun topicArn(topicArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -677,11 +643,11 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty.builder()
 
-      public override fun scope(scope: String) {
+      override fun scope(scope: String) {
         cdkBuilder.scope(scope)
       }
 
-      public override fun topicArn(topicArn: String) {
+      override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
       }
 
@@ -692,9 +658,9 @@ public open class CfnReceiptRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty,
     ) : StopActionProperty {
-      public override fun scope(): String = unwrap(this).getScope()
+      override fun scope(): String = unwrap(this).getScope()
 
-      public override fun topicArn(): String? = unwrap(this).getTopicArn()
+      override fun topicArn(): String? = unwrap(this).getTopicArn()
     }
 
     public companion object {
@@ -733,82 +699,61 @@ public open class CfnReceiptRule internal constructor(
     public fun workmailAction(): Any? = unwrap(this).getWorkmailAction()
 
     public interface Builder {
-      public fun addHeaderAction(addHeaderAction: IResolvable) {
-      }
+      public fun addHeaderAction(addHeaderAction: IResolvable)
 
-      public fun addHeaderAction(addHeaderAction: AddHeaderActionProperty) {
-      }
+      public fun addHeaderAction(addHeaderAction: AddHeaderActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9657342d5d725aa7477565fb4f7c62b6b32733c91f8ff2534f2413da365db9d9")
-      public fun addHeaderAction(addHeaderAction: AddHeaderActionProperty.Builder.() -> Unit) {
-      }
+      public fun addHeaderAction(addHeaderAction: AddHeaderActionProperty.Builder.() -> Unit)
 
-      public fun bounceAction(bounceAction: IResolvable) {
-      }
+      public fun bounceAction(bounceAction: IResolvable)
 
-      public fun bounceAction(bounceAction: BounceActionProperty) {
-      }
+      public fun bounceAction(bounceAction: BounceActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45943b0805b36445eee8feb6884a6b0e91f26389e796f71bca770b22ee55b580")
-      public fun bounceAction(bounceAction: BounceActionProperty.Builder.() -> Unit) {
-      }
+      public fun bounceAction(bounceAction: BounceActionProperty.Builder.() -> Unit)
 
-      public fun lambdaAction(lambdaAction: IResolvable) {
-      }
+      public fun lambdaAction(lambdaAction: IResolvable)
 
-      public fun lambdaAction(lambdaAction: LambdaActionProperty) {
-      }
+      public fun lambdaAction(lambdaAction: LambdaActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fa41d57bee605fca01822c760a8a9020105a2d44d39aeab7a79fa532090c8ff")
-      public fun lambdaAction(lambdaAction: LambdaActionProperty.Builder.() -> Unit) {
-      }
+      public fun lambdaAction(lambdaAction: LambdaActionProperty.Builder.() -> Unit)
 
-      public fun s3Action(s3Action: IResolvable) {
-      }
+      public fun s3Action(s3Action: IResolvable)
 
-      public fun s3Action(s3Action: S3ActionProperty) {
-      }
+      public fun s3Action(s3Action: S3ActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac64193bd062afbc8f65aa49e24738f9181901ef3701cba3ad6be486fc8126a1")
-      public fun s3Action(s3Action: S3ActionProperty.Builder.() -> Unit) {
-      }
+      public fun s3Action(s3Action: S3ActionProperty.Builder.() -> Unit)
 
-      public fun snsAction(snsAction: IResolvable) {
-      }
+      public fun snsAction(snsAction: IResolvable)
 
-      public fun snsAction(snsAction: SNSActionProperty) {
-      }
+      public fun snsAction(snsAction: SNSActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3db4cb2bf27edbab1846c2a57b8d5375d014303e7a42a2b3f0faa2285c3c4320")
-      public fun snsAction(snsAction: SNSActionProperty.Builder.() -> Unit) {
-      }
+      public fun snsAction(snsAction: SNSActionProperty.Builder.() -> Unit)
 
-      public fun stopAction(stopAction: IResolvable) {
-      }
+      public fun stopAction(stopAction: IResolvable)
 
-      public fun stopAction(stopAction: StopActionProperty) {
-      }
+      public fun stopAction(stopAction: StopActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("18fab212c7b1d1441244ab51c1bc3b8a8e1f85e7a9c4b2439f6847cc36b2f0de")
-      public fun stopAction(stopAction: StopActionProperty.Builder.() -> Unit) {
-      }
+      public fun stopAction(stopAction: StopActionProperty.Builder.() -> Unit)
 
-      public fun workmailAction(workmailAction: IResolvable) {
-      }
+      public fun workmailAction(workmailAction: IResolvable)
 
-      public fun workmailAction(workmailAction: WorkmailActionProperty) {
-      }
+      public fun workmailAction(workmailAction: WorkmailActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e6da27a29ffc59c66ab95ebaa1a29b810412f3740b2dbd633e4d4201903ad81")
-      public fun workmailAction(workmailAction: WorkmailActionProperty.Builder.() -> Unit) {
-      }
+      public fun workmailAction(workmailAction: WorkmailActionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -816,97 +761,96 @@ public open class CfnReceiptRule internal constructor(
           software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty.Builder =
           software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty.builder()
 
-      public override fun addHeaderAction(addHeaderAction: IResolvable) {
+      override fun addHeaderAction(addHeaderAction: IResolvable) {
         cdkBuilder.addHeaderAction(addHeaderAction.let(IResolvable::unwrap))
       }
 
-      public override fun addHeaderAction(addHeaderAction: AddHeaderActionProperty) {
+      override fun addHeaderAction(addHeaderAction: AddHeaderActionProperty) {
         cdkBuilder.addHeaderAction(addHeaderAction.let(AddHeaderActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9657342d5d725aa7477565fb4f7c62b6b32733c91f8ff2534f2413da365db9d9")
-      public override
-          fun addHeaderAction(addHeaderAction: AddHeaderActionProperty.Builder.() -> Unit): Unit =
-          addHeaderAction(AddHeaderActionProperty(addHeaderAction))
+      override fun addHeaderAction(addHeaderAction: AddHeaderActionProperty.Builder.() -> Unit):
+          Unit = addHeaderAction(AddHeaderActionProperty(addHeaderAction))
 
-      public override fun bounceAction(bounceAction: IResolvable) {
+      override fun bounceAction(bounceAction: IResolvable) {
         cdkBuilder.bounceAction(bounceAction.let(IResolvable::unwrap))
       }
 
-      public override fun bounceAction(bounceAction: BounceActionProperty) {
+      override fun bounceAction(bounceAction: BounceActionProperty) {
         cdkBuilder.bounceAction(bounceAction.let(BounceActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45943b0805b36445eee8feb6884a6b0e91f26389e796f71bca770b22ee55b580")
-      public override fun bounceAction(bounceAction: BounceActionProperty.Builder.() -> Unit): Unit
-          = bounceAction(BounceActionProperty(bounceAction))
+      override fun bounceAction(bounceAction: BounceActionProperty.Builder.() -> Unit): Unit =
+          bounceAction(BounceActionProperty(bounceAction))
 
-      public override fun lambdaAction(lambdaAction: IResolvable) {
+      override fun lambdaAction(lambdaAction: IResolvable) {
         cdkBuilder.lambdaAction(lambdaAction.let(IResolvable::unwrap))
       }
 
-      public override fun lambdaAction(lambdaAction: LambdaActionProperty) {
+      override fun lambdaAction(lambdaAction: LambdaActionProperty) {
         cdkBuilder.lambdaAction(lambdaAction.let(LambdaActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fa41d57bee605fca01822c760a8a9020105a2d44d39aeab7a79fa532090c8ff")
-      public override fun lambdaAction(lambdaAction: LambdaActionProperty.Builder.() -> Unit): Unit
-          = lambdaAction(LambdaActionProperty(lambdaAction))
+      override fun lambdaAction(lambdaAction: LambdaActionProperty.Builder.() -> Unit): Unit =
+          lambdaAction(LambdaActionProperty(lambdaAction))
 
-      public override fun s3Action(s3Action: IResolvable) {
+      override fun s3Action(s3Action: IResolvable) {
         cdkBuilder.s3Action(s3Action.let(IResolvable::unwrap))
       }
 
-      public override fun s3Action(s3Action: S3ActionProperty) {
+      override fun s3Action(s3Action: S3ActionProperty) {
         cdkBuilder.s3Action(s3Action.let(S3ActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac64193bd062afbc8f65aa49e24738f9181901ef3701cba3ad6be486fc8126a1")
-      public override fun s3Action(s3Action: S3ActionProperty.Builder.() -> Unit): Unit =
+      override fun s3Action(s3Action: S3ActionProperty.Builder.() -> Unit): Unit =
           s3Action(S3ActionProperty(s3Action))
 
-      public override fun snsAction(snsAction: IResolvable) {
+      override fun snsAction(snsAction: IResolvable) {
         cdkBuilder.snsAction(snsAction.let(IResolvable::unwrap))
       }
 
-      public override fun snsAction(snsAction: SNSActionProperty) {
+      override fun snsAction(snsAction: SNSActionProperty) {
         cdkBuilder.snsAction(snsAction.let(SNSActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3db4cb2bf27edbab1846c2a57b8d5375d014303e7a42a2b3f0faa2285c3c4320")
-      public override fun snsAction(snsAction: SNSActionProperty.Builder.() -> Unit): Unit =
+      override fun snsAction(snsAction: SNSActionProperty.Builder.() -> Unit): Unit =
           snsAction(SNSActionProperty(snsAction))
 
-      public override fun stopAction(stopAction: IResolvable) {
+      override fun stopAction(stopAction: IResolvable) {
         cdkBuilder.stopAction(stopAction.let(IResolvable::unwrap))
       }
 
-      public override fun stopAction(stopAction: StopActionProperty) {
+      override fun stopAction(stopAction: StopActionProperty) {
         cdkBuilder.stopAction(stopAction.let(StopActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("18fab212c7b1d1441244ab51c1bc3b8a8e1f85e7a9c4b2439f6847cc36b2f0de")
-      public override fun stopAction(stopAction: StopActionProperty.Builder.() -> Unit): Unit =
+      override fun stopAction(stopAction: StopActionProperty.Builder.() -> Unit): Unit =
           stopAction(StopActionProperty(stopAction))
 
-      public override fun workmailAction(workmailAction: IResolvable) {
+      override fun workmailAction(workmailAction: IResolvable) {
         cdkBuilder.workmailAction(workmailAction.let(IResolvable::unwrap))
       }
 
-      public override fun workmailAction(workmailAction: WorkmailActionProperty) {
+      override fun workmailAction(workmailAction: WorkmailActionProperty) {
         cdkBuilder.workmailAction(workmailAction.let(WorkmailActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e6da27a29ffc59c66ab95ebaa1a29b810412f3740b2dbd633e4d4201903ad81")
-      public override fun workmailAction(workmailAction: WorkmailActionProperty.Builder.() -> Unit):
-          Unit = workmailAction(WorkmailActionProperty(workmailAction))
+      override fun workmailAction(workmailAction: WorkmailActionProperty.Builder.() -> Unit): Unit =
+          workmailAction(WorkmailActionProperty(workmailAction))
 
       public fun build(): software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty =
           cdkBuilder.build()
@@ -915,19 +859,19 @@ public open class CfnReceiptRule internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty,
     ) : ActionProperty {
-      public override fun addHeaderAction(): Any? = unwrap(this).getAddHeaderAction()
+      override fun addHeaderAction(): Any? = unwrap(this).getAddHeaderAction()
 
-      public override fun bounceAction(): Any? = unwrap(this).getBounceAction()
+      override fun bounceAction(): Any? = unwrap(this).getBounceAction()
 
-      public override fun lambdaAction(): Any? = unwrap(this).getLambdaAction()
+      override fun lambdaAction(): Any? = unwrap(this).getLambdaAction()
 
-      public override fun s3Action(): Any? = unwrap(this).getS3Action()
+      override fun s3Action(): Any? = unwrap(this).getS3Action()
 
-      public override fun snsAction(): Any? = unwrap(this).getSnsAction()
+      override fun snsAction(): Any? = unwrap(this).getSnsAction()
 
-      public override fun stopAction(): Any? = unwrap(this).getStopAction()
+      override fun stopAction(): Any? = unwrap(this).getStopAction()
 
-      public override fun workmailAction(): Any? = unwrap(this).getWorkmailAction()
+      override fun workmailAction(): Any? = unwrap(this).getWorkmailAction()
     }
 
     public companion object {

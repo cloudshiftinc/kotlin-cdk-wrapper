@@ -223,103 +223,71 @@ public open class Cluster internal constructor(
   public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
 
   public interface Builder {
-    public fun albController(albController: AlbControllerOptions) {
-    }
+    public fun albController(albController: AlbControllerOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbe068c46270cace75364fb602b5c014effada559e8728ea8145d8012378d9d")
-    public fun albController(albController: AlbControllerOptions.Builder.() -> Unit) {
-    }
+    public fun albController(albController: AlbControllerOptions.Builder.() -> Unit)
 
-    public fun awscliLayer(awscliLayer: ILayerVersion) {
-    }
+    public fun awscliLayer(awscliLayer: ILayerVersion)
 
-    public fun clusterHandlerEnvironment(clusterHandlerEnvironment: Map<String, String>) {
-    }
+    public fun clusterHandlerEnvironment(clusterHandlerEnvironment: Map<String, String>)
 
-    public fun clusterHandlerSecurityGroup(clusterHandlerSecurityGroup: ISecurityGroup) {
-    }
+    public fun clusterHandlerSecurityGroup(clusterHandlerSecurityGroup: ISecurityGroup)
 
-    public fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>) {
-    }
+    public fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType) {
-    }
+    public fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType)
 
-    public fun defaultCapacity(defaultCapacity: Number) {
-    }
+    public fun defaultCapacity(defaultCapacity: Number)
 
-    public fun defaultCapacityInstance(defaultCapacityInstance: InstanceType) {
-    }
+    public fun defaultCapacityInstance(defaultCapacityInstance: InstanceType)
 
-    public fun defaultCapacityType(defaultCapacityType: DefaultCapacityType) {
-    }
+    public fun defaultCapacityType(defaultCapacityType: DefaultCapacityType)
 
-    public fun endpointAccess(endpointAccess: EndpointAccess) {
-    }
+    public fun endpointAccess(endpointAccess: EndpointAccess)
 
-    public fun ipFamily(ipFamily: IpFamily) {
-    }
+    public fun ipFamily(ipFamily: IpFamily)
 
-    public fun kubectlEnvironment(kubectlEnvironment: Map<String, String>) {
-    }
+    public fun kubectlEnvironment(kubectlEnvironment: Map<String, String>)
 
-    public fun kubectlLambdaRole(kubectlLambdaRole: IRole) {
-    }
+    public fun kubectlLambdaRole(kubectlLambdaRole: IRole)
 
-    public fun kubectlLayer(kubectlLayer: ILayerVersion) {
-    }
+    public fun kubectlLayer(kubectlLayer: ILayerVersion)
 
-    public fun kubectlMemory(kubectlMemory: Size) {
-    }
+    public fun kubectlMemory(kubectlMemory: Size)
 
-    public fun mastersRole(mastersRole: IRole) {
-    }
+    public fun mastersRole(mastersRole: IRole)
 
-    public fun onEventLayer(onEventLayer: ILayerVersion) {
-    }
+    public fun onEventLayer(onEventLayer: ILayerVersion)
 
-    public fun outputClusterName(outputClusterName: Boolean) {
-    }
+    public fun outputClusterName(outputClusterName: Boolean)
 
-    public fun outputConfigCommand(outputConfigCommand: Boolean) {
-    }
+    public fun outputConfigCommand(outputConfigCommand: Boolean)
 
-    public fun outputMastersRoleArn(outputMastersRoleArn: Boolean) {
-    }
+    public fun outputMastersRoleArn(outputMastersRoleArn: Boolean)
 
-    public fun placeClusterHandlerInVpc(placeClusterHandlerInVpc: Boolean) {
-    }
+    public fun placeClusterHandlerInVpc(placeClusterHandlerInVpc: Boolean)
 
-    public fun prune(prune: Boolean) {
-    }
+    public fun prune(prune: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun secretsEncryptionKey(secretsEncryptionKey: IKey) {
-    }
+    public fun secretsEncryptionKey(secretsEncryptionKey: IKey)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
-    }
+    public fun serviceIpv4Cidr(serviceIpv4Cidr: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun version(version: KubernetesVersion) {
-    }
+    public fun version(version: KubernetesVersion)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-    }
+    public fun vpcSubnets(vpcSubnets: List<SubnetSelection>)
   }
 
   private class BuilderImpl(
@@ -329,132 +297,132 @@ public open class Cluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.Cluster.Builder =
         software.amazon.awscdk.services.eks.Cluster.Builder.create(scope, id)
 
-    public override fun albController(albController: AlbControllerOptions) {
+    override fun albController(albController: AlbControllerOptions) {
       cdkBuilder.albController(albController.let(AlbControllerOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbe068c46270cace75364fb602b5c014effada559e8728ea8145d8012378d9d")
-    public override fun albController(albController: AlbControllerOptions.Builder.() -> Unit): Unit
-        = albController(AlbControllerOptions(albController))
+    override fun albController(albController: AlbControllerOptions.Builder.() -> Unit): Unit =
+        albController(AlbControllerOptions(albController))
 
-    public override fun awscliLayer(awscliLayer: ILayerVersion) {
+    override fun awscliLayer(awscliLayer: ILayerVersion) {
       cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion::unwrap))
     }
 
-    public override fun clusterHandlerEnvironment(clusterHandlerEnvironment: Map<String, String>) {
+    override fun clusterHandlerEnvironment(clusterHandlerEnvironment: Map<String, String>) {
       cdkBuilder.clusterHandlerEnvironment(clusterHandlerEnvironment)
     }
 
-    public override fun clusterHandlerSecurityGroup(clusterHandlerSecurityGroup: ISecurityGroup) {
+    override fun clusterHandlerSecurityGroup(clusterHandlerSecurityGroup: ISecurityGroup) {
       cdkBuilder.clusterHandlerSecurityGroup(clusterHandlerSecurityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>) {
+    override fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>) {
       cdkBuilder.clusterLogging(clusterLogging.map(ClusterLoggingTypes::unwrap))
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType) {
+    override fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType) {
       cdkBuilder.coreDnsComputeType(coreDnsComputeType.let(CoreDnsComputeType::unwrap))
     }
 
-    public override fun defaultCapacity(defaultCapacity: Number) {
+    override fun defaultCapacity(defaultCapacity: Number) {
       cdkBuilder.defaultCapacity(defaultCapacity)
     }
 
-    public override fun defaultCapacityInstance(defaultCapacityInstance: InstanceType) {
+    override fun defaultCapacityInstance(defaultCapacityInstance: InstanceType) {
       cdkBuilder.defaultCapacityInstance(defaultCapacityInstance.let(InstanceType::unwrap))
     }
 
-    public override fun defaultCapacityType(defaultCapacityType: DefaultCapacityType) {
+    override fun defaultCapacityType(defaultCapacityType: DefaultCapacityType) {
       cdkBuilder.defaultCapacityType(defaultCapacityType.let(DefaultCapacityType::unwrap))
     }
 
-    public override fun endpointAccess(endpointAccess: EndpointAccess) {
+    override fun endpointAccess(endpointAccess: EndpointAccess) {
       cdkBuilder.endpointAccess(endpointAccess.let(EndpointAccess::unwrap))
     }
 
-    public override fun ipFamily(ipFamily: IpFamily) {
+    override fun ipFamily(ipFamily: IpFamily) {
       cdkBuilder.ipFamily(ipFamily.let(IpFamily::unwrap))
     }
 
-    public override fun kubectlEnvironment(kubectlEnvironment: Map<String, String>) {
+    override fun kubectlEnvironment(kubectlEnvironment: Map<String, String>) {
       cdkBuilder.kubectlEnvironment(kubectlEnvironment)
     }
 
-    public override fun kubectlLambdaRole(kubectlLambdaRole: IRole) {
+    override fun kubectlLambdaRole(kubectlLambdaRole: IRole) {
       cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole::unwrap))
     }
 
-    public override fun kubectlLayer(kubectlLayer: ILayerVersion) {
+    override fun kubectlLayer(kubectlLayer: ILayerVersion) {
       cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion::unwrap))
     }
 
-    public override fun kubectlMemory(kubectlMemory: Size) {
+    override fun kubectlMemory(kubectlMemory: Size) {
       cdkBuilder.kubectlMemory(kubectlMemory.let(Size::unwrap))
     }
 
-    public override fun mastersRole(mastersRole: IRole) {
+    override fun mastersRole(mastersRole: IRole) {
       cdkBuilder.mastersRole(mastersRole.let(IRole::unwrap))
     }
 
-    public override fun onEventLayer(onEventLayer: ILayerVersion) {
+    override fun onEventLayer(onEventLayer: ILayerVersion) {
       cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion::unwrap))
     }
 
-    public override fun outputClusterName(outputClusterName: Boolean) {
+    override fun outputClusterName(outputClusterName: Boolean) {
       cdkBuilder.outputClusterName(outputClusterName)
     }
 
-    public override fun outputConfigCommand(outputConfigCommand: Boolean) {
+    override fun outputConfigCommand(outputConfigCommand: Boolean) {
       cdkBuilder.outputConfigCommand(outputConfigCommand)
     }
 
-    public override fun outputMastersRoleArn(outputMastersRoleArn: Boolean) {
+    override fun outputMastersRoleArn(outputMastersRoleArn: Boolean) {
       cdkBuilder.outputMastersRoleArn(outputMastersRoleArn)
     }
 
-    public override fun placeClusterHandlerInVpc(placeClusterHandlerInVpc: Boolean) {
+    override fun placeClusterHandlerInVpc(placeClusterHandlerInVpc: Boolean) {
       cdkBuilder.placeClusterHandlerInVpc(placeClusterHandlerInVpc)
     }
 
-    public override fun prune(prune: Boolean) {
+    override fun prune(prune: Boolean) {
       cdkBuilder.prune(prune)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun secretsEncryptionKey(secretsEncryptionKey: IKey) {
+    override fun secretsEncryptionKey(secretsEncryptionKey: IKey) {
       cdkBuilder.secretsEncryptionKey(secretsEncryptionKey.let(IKey::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
+    override fun serviceIpv4Cidr(serviceIpv4Cidr: String) {
       cdkBuilder.serviceIpv4Cidr(serviceIpv4Cidr)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun version(version: KubernetesVersion) {
+    override fun version(version: KubernetesVersion) {
       cdkBuilder.version(version.let(KubernetesVersion::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
+    override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
       cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
     }
 

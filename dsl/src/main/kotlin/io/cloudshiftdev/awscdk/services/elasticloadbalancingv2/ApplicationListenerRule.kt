@@ -22,20 +22,15 @@ public open class ApplicationListenerRule internal constructor(
   public open fun listenerRuleArn(): String = unwrap(this).getListenerRuleArn()
 
   public interface Builder {
-    public fun action(action: ListenerAction) {
-    }
+    public fun action(action: ListenerAction)
 
-    public fun conditions(conditions: List<ListenerCondition>) {
-    }
+    public fun conditions(conditions: List<ListenerCondition>)
 
-    public fun listener(listener: IApplicationListener) {
-    }
+    public fun listener(listener: IApplicationListener)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
-    }
+    public fun targetGroups(targetGroups: List<IApplicationTargetGroup>)
   }
 
   private class BuilderImpl(
@@ -47,23 +42,23 @@ public open class ApplicationListenerRule internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule.Builder.create(scope,
         id)
 
-    public override fun action(action: ListenerAction) {
+    override fun action(action: ListenerAction) {
       cdkBuilder.action(action.let(ListenerAction::unwrap))
     }
 
-    public override fun conditions(conditions: List<ListenerCondition>) {
+    override fun conditions(conditions: List<ListenerCondition>) {
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
 
-    public override fun listener(listener: IApplicationListener) {
+    override fun listener(listener: IApplicationListener) {
       cdkBuilder.listener(listener.let(IApplicationListener::unwrap))
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
+    override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
       cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup::unwrap))
     }
 

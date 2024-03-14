@@ -11,29 +11,26 @@ public interface Ulimit {
   public fun softLimit(): Number
 
   public interface Builder {
-    public fun hardLimit(hardLimit: Number) {
-    }
+    public fun hardLimit(hardLimit: Number)
 
-    public fun name(name: UlimitName) {
-    }
+    public fun name(name: UlimitName)
 
-    public fun softLimit(softLimit: Number) {
-    }
+    public fun softLimit(softLimit: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.Ulimit.Builder =
         software.amazon.awscdk.services.batch.Ulimit.builder()
 
-    public override fun hardLimit(hardLimit: Number) {
+    override fun hardLimit(hardLimit: Number) {
       cdkBuilder.hardLimit(hardLimit)
     }
 
-    public override fun name(name: UlimitName) {
+    override fun name(name: UlimitName) {
       cdkBuilder.name(name.let(UlimitName::unwrap))
     }
 
-    public override fun softLimit(softLimit: Number) {
+    override fun softLimit(softLimit: Number) {
       cdkBuilder.softLimit(softLimit)
     }
 
@@ -43,11 +40,11 @@ public interface Ulimit {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.Ulimit,
   ) : Ulimit {
-    public override fun hardLimit(): Number = unwrap(this).getHardLimit()
+    override fun hardLimit(): Number = unwrap(this).getHardLimit()
 
-    public override fun name(): UlimitName = unwrap(this).getName().let(UlimitName::wrap)
+    override fun name(): UlimitName = unwrap(this).getName().let(UlimitName::wrap)
 
-    public override fun softLimit(): Number = unwrap(this).getSoftLimit()
+    override fun softLimit(): Number = unwrap(this).getSoftLimit()
   }
 
   public companion object {

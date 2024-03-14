@@ -11,22 +11,20 @@ public interface VirtualRouterBaseProps {
   public fun virtualRouterName(): String? = unwrap(this).getVirtualRouterName()
 
   public interface Builder {
-    public fun listeners(listeners: List<VirtualRouterListener>) {
-    }
+    public fun listeners(listeners: List<VirtualRouterListener>)
 
-    public fun virtualRouterName(virtualRouterName: String) {
-    }
+    public fun virtualRouterName(virtualRouterName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps.Builder =
         software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps.builder()
 
-    public override fun listeners(listeners: List<VirtualRouterListener>) {
+    override fun listeners(listeners: List<VirtualRouterListener>) {
       cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
     }
 
-    public override fun virtualRouterName(virtualRouterName: String) {
+    override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)
     }
 
@@ -37,10 +35,10 @@ public interface VirtualRouterBaseProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps,
   ) : VirtualRouterBaseProps {
-    public override fun listeners(): List<VirtualRouterListener> =
+    override fun listeners(): List<VirtualRouterListener> =
         unwrap(this).getListeners()?.map(VirtualRouterListener::wrap) ?: emptyList()
 
-    public override fun virtualRouterName(): String? = unwrap(this).getVirtualRouterName()
+    override fun virtualRouterName(): String? = unwrap(this).getVirtualRouterName()
   }
 
   public companion object {

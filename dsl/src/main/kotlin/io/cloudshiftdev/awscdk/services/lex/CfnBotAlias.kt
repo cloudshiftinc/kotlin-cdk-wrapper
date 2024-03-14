@@ -94,44 +94,32 @@ public open class CfnBotAlias internal constructor(
   }
 
   public interface Builder {
-    public fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
-    }
+    public fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable)
 
-    public fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
-    }
+    public fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>)
 
-    public fun botAliasName(botAliasName: String) {
-    }
+    public fun botAliasName(botAliasName: String)
 
-    public fun botAliasTags(botAliasTags: IResolvable) {
-    }
+    public fun botAliasTags(botAliasTags: IResolvable)
 
-    public fun botAliasTags(botAliasTags: List<Any>) {
-    }
+    public fun botAliasTags(botAliasTags: List<Any>)
 
-    public fun botId(botId: String) {
-    }
+    public fun botId(botId: String)
 
-    public fun botVersion(botVersion: String) {
-    }
+    public fun botVersion(botVersion: String)
 
-    public fun conversationLogSettings(conversationLogSettings: IResolvable) {
-    }
+    public fun conversationLogSettings(conversationLogSettings: IResolvable)
 
-    public fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty) {
-    }
+    public fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("196b16d3549d326e0b26c2eb003d401fc79f45fbb219cc0d0f5e2877d43ca582")
     public
-        fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty.Builder.() -> Unit) {
-    }
+        fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun sentimentAnalysisSettings(sentimentAnalysisSettings: Any) {
-    }
+    public fun sentimentAnalysisSettings(sentimentAnalysisSettings: Any)
   }
 
   private class BuilderImpl(
@@ -141,54 +129,53 @@ public open class CfnBotAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lex.CfnBotAlias.Builder =
         software.amazon.awscdk.services.lex.CfnBotAlias.Builder.create(scope, id)
 
-    public override fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
+    override fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
       cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable::unwrap))
     }
 
-    public override fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
+    override fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
       cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
     }
 
-    public override fun botAliasName(botAliasName: String) {
+    override fun botAliasName(botAliasName: String) {
       cdkBuilder.botAliasName(botAliasName)
     }
 
-    public override fun botAliasTags(botAliasTags: IResolvable) {
+    override fun botAliasTags(botAliasTags: IResolvable) {
       cdkBuilder.botAliasTags(botAliasTags.let(IResolvable::unwrap))
     }
 
-    public override fun botAliasTags(botAliasTags: List<Any>) {
+    override fun botAliasTags(botAliasTags: List<Any>) {
       cdkBuilder.botAliasTags(botAliasTags)
     }
 
-    public override fun botId(botId: String) {
+    override fun botId(botId: String) {
       cdkBuilder.botId(botId)
     }
 
-    public override fun botVersion(botVersion: String) {
+    override fun botVersion(botVersion: String) {
       cdkBuilder.botVersion(botVersion)
     }
 
-    public override fun conversationLogSettings(conversationLogSettings: IResolvable) {
+    override fun conversationLogSettings(conversationLogSettings: IResolvable) {
       cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable::unwrap))
     }
 
-    public override
-        fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty) {
+    override fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty) {
       cdkBuilder.conversationLogSettings(conversationLogSettings.let(ConversationLogSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("196b16d3549d326e0b26c2eb003d401fc79f45fbb219cc0d0f5e2877d43ca582")
-    public override
+    override
         fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty.Builder.() -> Unit):
         Unit = conversationLogSettings(ConversationLogSettingsProperty(conversationLogSettings))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun sentimentAnalysisSettings(sentimentAnalysisSettings: Any) {
+    override fun sentimentAnalysisSettings(sentimentAnalysisSettings: Any) {
       cdkBuilder.sentimentAnalysisSettings(sentimentAnalysisSettings)
     }
 
@@ -222,22 +209,17 @@ public open class CfnBotAlias internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun destination(destination: IResolvable) {
-      }
+      public fun destination(destination: IResolvable)
 
-      public fun destination(destination: AudioLogDestinationProperty) {
-      }
+      public fun destination(destination: AudioLogDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91167c4637e32b60700a8c5a293b9930e735916da683cd738b3c2050cb48754a")
-      public fun destination(destination: AudioLogDestinationProperty.Builder.() -> Unit) {
-      }
+      public fun destination(destination: AudioLogDestinationProperty.Builder.() -> Unit)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -245,24 +227,24 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty.builder()
 
-      public override fun destination(destination: IResolvable) {
+      override fun destination(destination: IResolvable) {
         cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
-      public override fun destination(destination: AudioLogDestinationProperty) {
+      override fun destination(destination: AudioLogDestinationProperty) {
         cdkBuilder.destination(destination.let(AudioLogDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91167c4637e32b60700a8c5a293b9930e735916da683cd738b3c2050cb48754a")
-      public override fun destination(destination: AudioLogDestinationProperty.Builder.() -> Unit):
-          Unit = destination(AudioLogDestinationProperty(destination))
+      override fun destination(destination: AudioLogDestinationProperty.Builder.() -> Unit): Unit =
+          destination(AudioLogDestinationProperty(destination))
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -274,9 +256,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty,
     ) : AudioLogSettingProperty {
-      public override fun destination(): Any = unwrap(this).getDestination()
+      override fun destination(): Any = unwrap(this).getDestination()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -305,23 +287,18 @@ public open class CfnBotAlias internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun codeHookSpecification(codeHookSpecification: IResolvable) {
-      }
+      public fun codeHookSpecification(codeHookSpecification: IResolvable)
 
-      public fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty) {
-      }
+      public fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0dc9b405e10908791a6c8b4fbef7a2966eee97b8bb4cd3da101d70dee9914164")
       public
-          fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty.Builder.() -> Unit)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -329,26 +306,25 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty.builder()
 
-      public override fun codeHookSpecification(codeHookSpecification: IResolvable) {
+      override fun codeHookSpecification(codeHookSpecification: IResolvable) {
         cdkBuilder.codeHookSpecification(codeHookSpecification.let(IResolvable::unwrap))
       }
 
-      public override
-          fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty) {
+      override fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty) {
         cdkBuilder.codeHookSpecification(codeHookSpecification.let(CodeHookSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0dc9b405e10908791a6c8b4fbef7a2966eee97b8bb4cd3da101d70dee9914164")
-      public override
+      override
           fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty.Builder.() -> Unit):
           Unit = codeHookSpecification(CodeHookSpecificationProperty(codeHookSpecification))
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -361,9 +337,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsProperty,
     ) : BotAliasLocaleSettingsProperty {
-      public override fun codeHookSpecification(): Any? = unwrap(this).getCodeHookSpecification()
+      override fun codeHookSpecification(): Any? = unwrap(this).getCodeHookSpecification()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -390,11 +366,9 @@ public open class CfnBotAlias internal constructor(
     public fun detectSentiment(): Any
 
     public interface Builder {
-      public fun detectSentiment(detectSentiment: Boolean) {
-      }
+      public fun detectSentiment(detectSentiment: Boolean)
 
-      public fun detectSentiment(detectSentiment: IResolvable) {
-      }
+      public fun detectSentiment(detectSentiment: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -403,11 +377,11 @@ public open class CfnBotAlias internal constructor(
           =
           software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty.builder()
 
-      public override fun detectSentiment(detectSentiment: Boolean) {
+      override fun detectSentiment(detectSentiment: Boolean) {
         cdkBuilder.detectSentiment(detectSentiment)
       }
 
-      public override fun detectSentiment(detectSentiment: IResolvable) {
+      override fun detectSentiment(detectSentiment: IResolvable) {
         cdkBuilder.detectSentiment(detectSentiment.let(IResolvable::unwrap))
       }
 
@@ -420,7 +394,7 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.SentimentAnalysisSettingsProperty,
     ) : SentimentAnalysisSettingsProperty {
-      public override fun detectSentiment(): Any = unwrap(this).getDetectSentiment()
+      override fun detectSentiment(): Any = unwrap(this).getDetectSentiment()
     }
 
     public companion object {
@@ -448,16 +422,13 @@ public open class CfnBotAlias internal constructor(
     public fun lambdaCodeHook(): Any
 
     public interface Builder {
-      public fun lambdaCodeHook(lambdaCodeHook: IResolvable) {
-      }
+      public fun lambdaCodeHook(lambdaCodeHook: IResolvable)
 
-      public fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty) {
-      }
+      public fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7c53cd7386022c7f7d781befd8f70e8f48cec699259d08cd545b9e2c258e4e19")
-      public fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty.Builder.() -> Unit) {
-      }
+      public fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -465,18 +436,18 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty.builder()
 
-      public override fun lambdaCodeHook(lambdaCodeHook: IResolvable) {
+      override fun lambdaCodeHook(lambdaCodeHook: IResolvable) {
         cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(IResolvable::unwrap))
       }
 
-      public override fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty) {
+      override fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty) {
         cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(LambdaCodeHookProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7c53cd7386022c7f7d781befd8f70e8f48cec699259d08cd545b9e2c258e4e19")
-      public override fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty.Builder.() -> Unit):
-          Unit = lambdaCodeHook(LambdaCodeHookProperty(lambdaCodeHook))
+      override fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty.Builder.() -> Unit): Unit =
+          lambdaCodeHook(LambdaCodeHookProperty(lambdaCodeHook))
 
       public fun build():
           software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty =
@@ -487,7 +458,7 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.CodeHookSpecificationProperty,
     ) : CodeHookSpecificationProperty {
-      public override fun lambdaCodeHook(): Any = unwrap(this).getLambdaCodeHook()
+      override fun lambdaCodeHook(): Any = unwrap(this).getLambdaCodeHook()
     }
 
     public companion object {
@@ -516,11 +487,9 @@ public open class CfnBotAlias internal constructor(
     public fun lambdaArn(): String
 
     public interface Builder {
-      public fun codeHookInterfaceVersion(codeHookInterfaceVersion: String) {
-      }
+      public fun codeHookInterfaceVersion(codeHookInterfaceVersion: String)
 
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -528,11 +497,11 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty.builder()
 
-      public override fun codeHookInterfaceVersion(codeHookInterfaceVersion: String) {
+      override fun codeHookInterfaceVersion(codeHookInterfaceVersion: String) {
         cdkBuilder.codeHookInterfaceVersion(codeHookInterfaceVersion)
       }
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
@@ -544,10 +513,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.LambdaCodeHookProperty,
     ) : LambdaCodeHookProperty {
-      public override fun codeHookInterfaceVersion(): String =
-          unwrap(this).getCodeHookInterfaceVersion()
+      override fun codeHookInterfaceVersion(): String = unwrap(this).getCodeHookInterfaceVersion()
 
-      public override fun lambdaArn(): String = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String = unwrap(this).getLambdaArn()
     }
 
     public companion object {
@@ -576,20 +544,16 @@ public open class CfnBotAlias internal constructor(
     public fun localeId(): String
 
     public interface Builder {
-      public fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
-      }
+      public fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable)
 
-      public fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
-      }
+      public fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40e7307211638298925ef64f94a772d3f0a29670df6319215ef6ec37c2a7bbf3")
       public
-          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit) {
-      }
+          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit)
 
-      public fun localeId(localeId: String) {
-      }
+      public fun localeId(localeId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -598,22 +562,21 @@ public open class CfnBotAlias internal constructor(
           =
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty.builder()
 
-      public override fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
+      override fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
         cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable::unwrap))
       }
 
-      public override
-          fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
+      override fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
         cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40e7307211638298925ef64f94a772d3f0a29670df6319215ef6ec37c2a7bbf3")
-      public override
+      override
           fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty.Builder.() -> Unit):
           Unit = botAliasLocaleSetting(BotAliasLocaleSettingsProperty(botAliasLocaleSetting))
 
-      public override fun localeId(localeId: String) {
+      override fun localeId(localeId: String) {
         cdkBuilder.localeId(localeId)
       }
 
@@ -626,9 +589,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.BotAliasLocaleSettingsItemProperty,
     ) : BotAliasLocaleSettingsItemProperty {
-      public override fun botAliasLocaleSetting(): Any = unwrap(this).getBotAliasLocaleSetting()
+      override fun botAliasLocaleSetting(): Any = unwrap(this).getBotAliasLocaleSetting()
 
-      public override fun localeId(): String = unwrap(this).getLocaleId()
+      override fun localeId(): String = unwrap(this).getLocaleId()
     }
 
     public companion object {
@@ -660,14 +623,11 @@ public open class CfnBotAlias internal constructor(
     public fun s3BucketArn(): String
 
     public interface Builder {
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
 
-      public fun logPrefix(logPrefix: String) {
-      }
+      public fun logPrefix(logPrefix: String)
 
-      public fun s3BucketArn(s3BucketArn: String) {
-      }
+      public fun s3BucketArn(s3BucketArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -675,15 +635,15 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty.builder()
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      public override fun logPrefix(logPrefix: String) {
+      override fun logPrefix(logPrefix: String) {
         cdkBuilder.logPrefix(logPrefix)
       }
 
-      public override fun s3BucketArn(s3BucketArn: String) {
+      override fun s3BucketArn(s3BucketArn: String) {
         cdkBuilder.s3BucketArn(s3BucketArn)
       }
 
@@ -696,11 +656,11 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.S3BucketLogDestinationProperty,
     ) : S3BucketLogDestinationProperty {
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
-      public override fun logPrefix(): String = unwrap(this).getLogPrefix()
+      override fun logPrefix(): String = unwrap(this).getLogPrefix()
 
-      public override fun s3BucketArn(): String = unwrap(this).getS3BucketArn()
+      override fun s3BucketArn(): String = unwrap(this).getS3BucketArn()
     }
 
     public companion object {
@@ -727,16 +687,13 @@ public open class CfnBotAlias internal constructor(
     public fun s3Bucket(): Any
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: IResolvable) {
-      }
+      public fun s3Bucket(s3Bucket: IResolvable)
 
-      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
-      }
+      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f8f1defb0eed06484c23d307f6271c407c94ce540e0efade59a31f34da430b1")
-      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit) {
-      }
+      public fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -744,18 +701,18 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: IResolvable) {
+      override fun s3Bucket(s3Bucket: IResolvable) {
         cdkBuilder.s3Bucket(s3Bucket.let(IResolvable::unwrap))
       }
 
-      public override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
+      override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
         cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f8f1defb0eed06484c23d307f6271c407c94ce540e0efade59a31f34da430b1")
-      public override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit):
-          Unit = s3Bucket(S3BucketLogDestinationProperty(s3Bucket))
+      override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty.Builder.() -> Unit): Unit =
+          s3Bucket(S3BucketLogDestinationProperty(s3Bucket))
 
       public fun build():
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty =
@@ -766,7 +723,7 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogDestinationProperty,
     ) : AudioLogDestinationProperty {
-      public override fun s3Bucket(): Any = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): Any = unwrap(this).getS3Bucket()
     }
 
     public companion object {
@@ -793,17 +750,13 @@ public open class CfnBotAlias internal constructor(
     public fun cloudWatch(): Any
 
     public interface Builder {
-      public fun cloudWatch(cloudWatch: IResolvable) {
-      }
+      public fun cloudWatch(cloudWatch: IResolvable)
 
-      public fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty) {
-      }
+      public fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b3dfd722502e06c769bfb4b3823bd10dbcfae037729b1fbf993f7aad35170d8")
-      public
-          fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty.Builder.() -> Unit) {
-      }
+      public fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -811,17 +764,17 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty.builder()
 
-      public override fun cloudWatch(cloudWatch: IResolvable) {
+      override fun cloudWatch(cloudWatch: IResolvable) {
         cdkBuilder.cloudWatch(cloudWatch.let(IResolvable::unwrap))
       }
 
-      public override fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty) {
+      override fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty) {
         cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLogGroupLogDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b3dfd722502e06c769bfb4b3823bd10dbcfae037729b1fbf993f7aad35170d8")
-      public override
+      override
           fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty.Builder.() -> Unit):
           Unit = cloudWatch(CloudWatchLogGroupLogDestinationProperty(cloudWatch))
 
@@ -833,7 +786,7 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogDestinationProperty,
     ) : TextLogDestinationProperty {
-      public override fun cloudWatch(): Any = unwrap(this).getCloudWatch()
+      override fun cloudWatch(): Any = unwrap(this).getCloudWatch()
     }
 
     public companion object {
@@ -862,22 +815,17 @@ public open class CfnBotAlias internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun destination(destination: IResolvable) {
-      }
+      public fun destination(destination: IResolvable)
 
-      public fun destination(destination: TextLogDestinationProperty) {
-      }
+      public fun destination(destination: TextLogDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("449a0c43418e184284c7ee809fd458e4f30a39d4b88999b684291d5986c6d4b7")
-      public fun destination(destination: TextLogDestinationProperty.Builder.() -> Unit) {
-      }
+      public fun destination(destination: TextLogDestinationProperty.Builder.() -> Unit)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -885,24 +833,24 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty.builder()
 
-      public override fun destination(destination: IResolvable) {
+      override fun destination(destination: IResolvable) {
         cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
-      public override fun destination(destination: TextLogDestinationProperty) {
+      override fun destination(destination: TextLogDestinationProperty) {
         cdkBuilder.destination(destination.let(TextLogDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("449a0c43418e184284c7ee809fd458e4f30a39d4b88999b684291d5986c6d4b7")
-      public override fun destination(destination: TextLogDestinationProperty.Builder.() -> Unit):
-          Unit = destination(TextLogDestinationProperty(destination))
+      override fun destination(destination: TextLogDestinationProperty.Builder.() -> Unit): Unit =
+          destination(TextLogDestinationProperty(destination))
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -914,9 +862,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty,
     ) : TextLogSettingProperty {
-      public override fun destination(): Any = unwrap(this).getDestination()
+      override fun destination(): Any = unwrap(this).getDestination()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -945,11 +893,9 @@ public open class CfnBotAlias internal constructor(
     public fun logPrefix(): String
 
     public interface Builder {
-      public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
-      }
+      public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
-      public fun logPrefix(logPrefix: String) {
-      }
+      public fun logPrefix(logPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -958,11 +904,11 @@ public open class CfnBotAlias internal constructor(
           =
           software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty.builder()
 
-      public override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
+      override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
         cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
       }
 
-      public override fun logPrefix(logPrefix: String) {
+      override fun logPrefix(logPrefix: String) {
         cdkBuilder.logPrefix(logPrefix)
       }
 
@@ -975,9 +921,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.CloudWatchLogGroupLogDestinationProperty,
     ) : CloudWatchLogGroupLogDestinationProperty {
-      public override fun cloudWatchLogGroupArn(): String = unwrap(this).getCloudWatchLogGroupArn()
+      override fun cloudWatchLogGroupArn(): String = unwrap(this).getCloudWatchLogGroupArn()
 
-      public override fun logPrefix(): String = unwrap(this).getLogPrefix()
+      override fun logPrefix(): String = unwrap(this).getLogPrefix()
     }
 
     public companion object {
@@ -1007,17 +953,13 @@ public open class CfnBotAlias internal constructor(
     public fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
 
     public interface Builder {
-      public fun audioLogSettings(audioLogSettings: IResolvable) {
-      }
+      public fun audioLogSettings(audioLogSettings: IResolvable)
 
-      public fun audioLogSettings(audioLogSettings: List<Any>) {
-      }
+      public fun audioLogSettings(audioLogSettings: List<Any>)
 
-      public fun textLogSettings(textLogSettings: IResolvable) {
-      }
+      public fun textLogSettings(textLogSettings: IResolvable)
 
-      public fun textLogSettings(textLogSettings: List<Any>) {
-      }
+      public fun textLogSettings(textLogSettings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1025,19 +967,19 @@ public open class CfnBotAlias internal constructor(
           software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty.Builder =
           software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty.builder()
 
-      public override fun audioLogSettings(audioLogSettings: IResolvable) {
+      override fun audioLogSettings(audioLogSettings: IResolvable) {
         cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable::unwrap))
       }
 
-      public override fun audioLogSettings(audioLogSettings: List<Any>) {
+      override fun audioLogSettings(audioLogSettings: List<Any>) {
         cdkBuilder.audioLogSettings(audioLogSettings)
       }
 
-      public override fun textLogSettings(textLogSettings: IResolvable) {
+      override fun textLogSettings(textLogSettings: IResolvable) {
         cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
       }
 
-      public override fun textLogSettings(textLogSettings: List<Any>) {
+      override fun textLogSettings(textLogSettings: List<Any>) {
         cdkBuilder.textLogSettings(textLogSettings)
       }
 
@@ -1050,9 +992,9 @@ public open class CfnBotAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty,
     ) : ConversationLogSettingsProperty {
-      public override fun audioLogSettings(): Any? = unwrap(this).getAudioLogSettings()
+      override fun audioLogSettings(): Any? = unwrap(this).getAudioLogSettings()
 
-      public override fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
+      override fun textLogSettings(): Any? = unwrap(this).getTextLogSettings()
     }
 
     public companion object {

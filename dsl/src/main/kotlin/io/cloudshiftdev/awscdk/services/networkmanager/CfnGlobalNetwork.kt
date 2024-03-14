@@ -51,17 +51,13 @@ public open class CfnGlobalNetwork internal constructor(
   }
 
   public interface Builder {
-    public fun createdAt(createdAt: String) {
-    }
+    public fun createdAt(createdAt: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun state(state: String) {
-    }
+    public fun state(state: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -71,19 +67,19 @@ public open class CfnGlobalNetwork internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork.Builder
         = software.amazon.awscdk.services.networkmanager.CfnGlobalNetwork.Builder.create(scope, id)
 
-    public override fun createdAt(createdAt: String) {
+    override fun createdAt(createdAt: String) {
       cdkBuilder.createdAt(createdAt)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun state(state: String) {
+    override fun state(state: String) {
       cdkBuilder.state(state)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

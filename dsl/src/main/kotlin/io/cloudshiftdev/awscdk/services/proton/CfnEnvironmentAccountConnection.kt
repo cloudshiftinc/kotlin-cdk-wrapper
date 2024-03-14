@@ -71,26 +71,19 @@ public open class CfnEnvironmentAccountConnection internal constructor(
   }
 
   public interface Builder {
-    public fun codebuildRoleArn(codebuildRoleArn: String) {
-    }
+    public fun codebuildRoleArn(codebuildRoleArn: String)
 
-    public fun componentRoleArn(componentRoleArn: String) {
-    }
+    public fun componentRoleArn(componentRoleArn: String)
 
-    public fun environmentAccountId(environmentAccountId: String) {
-    }
+    public fun environmentAccountId(environmentAccountId: String)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun managementAccountId(managementAccountId: String) {
-    }
+    public fun managementAccountId(managementAccountId: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -102,31 +95,31 @@ public open class CfnEnvironmentAccountConnection internal constructor(
         software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnection.Builder.create(scope,
         id)
 
-    public override fun codebuildRoleArn(codebuildRoleArn: String) {
+    override fun codebuildRoleArn(codebuildRoleArn: String) {
       cdkBuilder.codebuildRoleArn(codebuildRoleArn)
     }
 
-    public override fun componentRoleArn(componentRoleArn: String) {
+    override fun componentRoleArn(componentRoleArn: String) {
       cdkBuilder.componentRoleArn(componentRoleArn)
     }
 
-    public override fun environmentAccountId(environmentAccountId: String) {
+    override fun environmentAccountId(environmentAccountId: String) {
       cdkBuilder.environmentAccountId(environmentAccountId)
     }
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun managementAccountId(managementAccountId: String) {
+    override fun managementAccountId(managementAccountId: String) {
       cdkBuilder.managementAccountId(managementAccountId)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

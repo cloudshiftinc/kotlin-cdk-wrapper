@@ -29,11 +29,9 @@ public open class CfnResourcePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun resourceArn(resourceArn: String) {
-    }
+    public fun resourceArn(resourceArn: String)
 
-    public fun resourcePolicy(resourcePolicy: Any) {
-    }
+    public fun resourcePolicy(resourcePolicy: Any)
   }
 
   private class BuilderImpl(
@@ -43,11 +41,11 @@ public open class CfnResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy.Builder =
         software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy.Builder.create(scope, id)
 
-    public override fun resourceArn(resourceArn: String) {
+    override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
-    public override fun resourcePolicy(resourcePolicy: Any) {
+    override fun resourcePolicy(resourcePolicy: Any) {
       cdkBuilder.resourcePolicy(resourcePolicy)
     }
 

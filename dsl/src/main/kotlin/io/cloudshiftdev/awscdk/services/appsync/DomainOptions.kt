@@ -10,22 +10,20 @@ public interface DomainOptions {
   public fun domainName(): String
 
   public interface Builder {
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.DomainOptions.Builder =
         software.amazon.awscdk.services.appsync.DomainOptions.builder()
 
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
@@ -35,10 +33,9 @@ public interface DomainOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.DomainOptions,
   ) : DomainOptions {
-    public override fun certificate(): ICertificate =
-        unwrap(this).getCertificate().let(ICertificate::wrap)
+    override fun certificate(): ICertificate = unwrap(this).getCertificate().let(ICertificate::wrap)
 
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
   }
 
   public companion object {

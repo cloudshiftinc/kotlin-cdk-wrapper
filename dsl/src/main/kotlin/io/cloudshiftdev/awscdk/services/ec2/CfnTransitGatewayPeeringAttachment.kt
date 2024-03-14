@@ -67,20 +67,15 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun peerAccountId(peerAccountId: String) {
-    }
+    public fun peerAccountId(peerAccountId: String)
 
-    public fun peerRegion(peerRegion: String) {
-    }
+    public fun peerRegion(peerRegion: String)
 
-    public fun peerTransitGatewayId(peerTransitGatewayId: String) {
-    }
+    public fun peerTransitGatewayId(peerTransitGatewayId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitGatewayId(transitGatewayId: String) {
-    }
+    public fun transitGatewayId(transitGatewayId: String)
   }
 
   private class BuilderImpl(
@@ -92,23 +87,23 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
         software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.Builder.create(scope,
         id)
 
-    public override fun peerAccountId(peerAccountId: String) {
+    override fun peerAccountId(peerAccountId: String) {
       cdkBuilder.peerAccountId(peerAccountId)
     }
 
-    public override fun peerRegion(peerRegion: String) {
+    override fun peerRegion(peerRegion: String) {
       cdkBuilder.peerRegion(peerRegion)
     }
 
-    public override fun peerTransitGatewayId(peerTransitGatewayId: String) {
+    override fun peerTransitGatewayId(peerTransitGatewayId: String) {
       cdkBuilder.peerTransitGatewayId(peerTransitGatewayId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitGatewayId(transitGatewayId: String) {
+    override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
     }
 
@@ -144,11 +139,9 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
     public fun message(): String? = unwrap(this).getMessage()
 
     public interface Builder {
-      public fun code(code: String) {
-      }
+      public fun code(code: String)
 
-      public fun message(message: String) {
-      }
+      public fun message(message: String)
     }
 
     private class BuilderImpl : Builder {
@@ -157,11 +150,11 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty.builder()
 
-      public override fun code(code: String) {
+      override fun code(code: String) {
         cdkBuilder.code(code)
       }
 
-      public override fun message(message: String) {
+      override fun message(message: String) {
         cdkBuilder.message(message)
       }
 
@@ -174,9 +167,9 @@ public open class CfnTransitGatewayPeeringAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment.PeeringAttachmentStatusProperty,
     ) : PeeringAttachmentStatusProperty {
-      public override fun code(): String? = unwrap(this).getCode()
+      override fun code(): String? = unwrap(this).getCode()
 
-      public override fun message(): String? = unwrap(this).getMessage()
+      override fun message(): String? = unwrap(this).getMessage()
     }
 
     public companion object {

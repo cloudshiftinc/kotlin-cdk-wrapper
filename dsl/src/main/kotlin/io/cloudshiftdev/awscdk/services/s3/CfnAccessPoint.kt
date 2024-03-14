@@ -85,41 +85,31 @@ public open class CfnAccessPoint internal constructor(
       vpcConfiguration(VpcConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun bucket(bucket: String) {
-    }
+    public fun bucket(bucket: String)
 
-    public fun bucketAccountId(bucketAccountId: String) {
-    }
+    public fun bucketAccountId(bucketAccountId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
-    }
+    public fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable)
 
     public
-        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
-    }
+        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a94e44c5767736663ba688d54f25e54ade02ad65a0049a0b3b529ad589955982")
     public
-        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty.Builder.() -> Unit)
 
-    public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("85c47197668efa14d7c0432310d8ae12067385700d95791716f25d33e98362b8")
-    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -129,52 +119,50 @@ public open class CfnAccessPoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.CfnAccessPoint.Builder =
         software.amazon.awscdk.services.s3.CfnAccessPoint.Builder.create(scope, id)
 
-    public override fun bucket(bucket: String) {
+    override fun bucket(bucket: String) {
       cdkBuilder.bucket(bucket)
     }
 
-    public override fun bucketAccountId(bucketAccountId: String) {
+    override fun bucketAccountId(bucketAccountId: String) {
       cdkBuilder.bucketAccountId(bucketAccountId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override
-        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
+    override fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
       cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
       cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a94e44c5767736663ba688d54f25e54ade02ad65a0049a0b3b529ad589955982")
-    public override
+    override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty.Builder.() -> Unit):
         Unit =
         publicAccessBlockConfiguration(PublicAccessBlockConfigurationProperty(publicAccessBlockConfiguration))
 
-    public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+    override fun vpcConfiguration(vpcConfiguration: IResolvable) {
       cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
+    override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
       cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("85c47197668efa14d7c0432310d8ae12067385700d95791716f25d33e98362b8")
-    public override
-        fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit): Unit =
-        vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
+    override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit):
+        Unit = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
 
     public fun build(): software.amazon.awscdk.services.s3.CfnAccessPoint = cdkBuilder.build()
   }
@@ -204,8 +192,7 @@ public open class CfnAccessPoint internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,7 +200,7 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty.Builder =
           software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty.builder()
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -225,7 +212,7 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3.CfnAccessPoint.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {
@@ -258,29 +245,21 @@ public open class CfnAccessPoint internal constructor(
     public fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
 
     public interface Builder {
-      public fun blockPublicAcls(blockPublicAcls: Boolean) {
-      }
+      public fun blockPublicAcls(blockPublicAcls: Boolean)
 
-      public fun blockPublicAcls(blockPublicAcls: IResolvable) {
-      }
+      public fun blockPublicAcls(blockPublicAcls: IResolvable)
 
-      public fun blockPublicPolicy(blockPublicPolicy: Boolean) {
-      }
+      public fun blockPublicPolicy(blockPublicPolicy: Boolean)
 
-      public fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-      }
+      public fun blockPublicPolicy(blockPublicPolicy: IResolvable)
 
-      public fun ignorePublicAcls(ignorePublicAcls: Boolean) {
-      }
+      public fun ignorePublicAcls(ignorePublicAcls: Boolean)
 
-      public fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-      }
+      public fun ignorePublicAcls(ignorePublicAcls: IResolvable)
 
-      public fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
-      }
+      public fun restrictPublicBuckets(restrictPublicBuckets: Boolean)
 
-      public fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-      }
+      public fun restrictPublicBuckets(restrictPublicBuckets: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -289,35 +268,35 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty.builder()
 
-      public override fun blockPublicAcls(blockPublicAcls: Boolean) {
+      override fun blockPublicAcls(blockPublicAcls: Boolean) {
         cdkBuilder.blockPublicAcls(blockPublicAcls)
       }
 
-      public override fun blockPublicAcls(blockPublicAcls: IResolvable) {
+      override fun blockPublicAcls(blockPublicAcls: IResolvable) {
         cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
       }
 
-      public override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
+      override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
         cdkBuilder.blockPublicPolicy(blockPublicPolicy)
       }
 
-      public override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
+      override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
         cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
+      override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
         cdkBuilder.ignorePublicAcls(ignorePublicAcls)
       }
 
-      public override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
+      override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
         cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
       }
 
-      public override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
+      override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
         cdkBuilder.restrictPublicBuckets(restrictPublicBuckets)
       }
 
-      public override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
+      override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
         cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
       }
 
@@ -330,13 +309,13 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
     ) : PublicAccessBlockConfigurationProperty {
-      public override fun blockPublicAcls(): Any? = unwrap(this).getBlockPublicAcls()
+      override fun blockPublicAcls(): Any? = unwrap(this).getBlockPublicAcls()
 
-      public override fun blockPublicPolicy(): Any? = unwrap(this).getBlockPublicPolicy()
+      override fun blockPublicPolicy(): Any? = unwrap(this).getBlockPublicPolicy()
 
-      public override fun ignorePublicAcls(): Any? = unwrap(this).getIgnorePublicAcls()
+      override fun ignorePublicAcls(): Any? = unwrap(this).getIgnorePublicAcls()
 
-      public override fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
+      override fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
     }
 
     public companion object {

@@ -9,11 +9,9 @@ public interface EnableScalingProps {
   public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
   public interface Builder {
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface EnableScalingProps {
         software.amazon.awscdk.services.applicationautoscaling.EnableScalingProps.Builder =
         software.amazon.awscdk.services.applicationautoscaling.EnableScalingProps.builder()
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
@@ -37,9 +35,9 @@ public interface EnableScalingProps {
     internal val cdkObject:
         software.amazon.awscdk.services.applicationautoscaling.EnableScalingProps,
   ) : EnableScalingProps {
-    public override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
+    override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
 
-    public override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+    override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
   }
 
   public companion object {

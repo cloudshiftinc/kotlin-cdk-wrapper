@@ -65,17 +65,13 @@ public open class CfnCoreNetwork internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun globalNetworkId(globalNetworkId: String) {
-    }
+    public fun globalNetworkId(globalNetworkId: String)
 
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -85,19 +81,19 @@ public open class CfnCoreNetwork internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.Builder =
         software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun globalNetworkId(globalNetworkId: String) {
+    override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -134,14 +130,11 @@ public open class CfnCoreNetwork internal constructor(
     public fun sharedSegments(): List<String> = unwrap(this).getSharedSegments() ?: emptyList()
 
     public interface Builder {
-      public fun edgeLocations(edgeLocations: List<String>) {
-      }
+      public fun edgeLocations(edgeLocations: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sharedSegments(sharedSegments: List<String>) {
-      }
+      public fun sharedSegments(sharedSegments: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -150,15 +143,15 @@ public open class CfnCoreNetwork internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty.builder()
 
-      public override fun edgeLocations(edgeLocations: List<String>) {
+      override fun edgeLocations(edgeLocations: List<String>) {
         cdkBuilder.edgeLocations(edgeLocations)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sharedSegments(sharedSegments: List<String>) {
+      override fun sharedSegments(sharedSegments: List<String>) {
         cdkBuilder.sharedSegments(sharedSegments)
       }
 
@@ -171,13 +164,11 @@ public open class CfnCoreNetwork internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty,
     ) : CoreNetworkSegmentProperty {
-      public override fun edgeLocations(): List<String> = unwrap(this).getEdgeLocations() ?:
-          emptyList()
+      override fun edgeLocations(): List<String> = unwrap(this).getEdgeLocations() ?: emptyList()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun sharedSegments(): List<String> = unwrap(this).getSharedSegments() ?:
-          emptyList()
+      override fun sharedSegments(): List<String> = unwrap(this).getSharedSegments() ?: emptyList()
     }
 
     public companion object {
@@ -208,14 +199,11 @@ public open class CfnCoreNetwork internal constructor(
     public fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?: emptyList()
 
     public interface Builder {
-      public fun asn(asn: Number) {
-      }
+      public fun asn(asn: Number)
 
-      public fun edgeLocation(edgeLocation: String) {
-      }
+      public fun edgeLocation(edgeLocation: String)
 
-      public fun insideCidrBlocks(insideCidrBlocks: List<String>) {
-      }
+      public fun insideCidrBlocks(insideCidrBlocks: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -224,15 +212,15 @@ public open class CfnCoreNetwork internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty.builder()
 
-      public override fun asn(asn: Number) {
+      override fun asn(asn: Number) {
         cdkBuilder.asn(asn)
       }
 
-      public override fun edgeLocation(edgeLocation: String) {
+      override fun edgeLocation(edgeLocation: String) {
         cdkBuilder.edgeLocation(edgeLocation)
       }
 
-      public override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
+      override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
         cdkBuilder.insideCidrBlocks(insideCidrBlocks)
       }
 
@@ -245,11 +233,11 @@ public open class CfnCoreNetwork internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty,
     ) : CoreNetworkEdgeProperty {
-      public override fun asn(): Number? = unwrap(this).getAsn()
+      override fun asn(): Number? = unwrap(this).getAsn()
 
-      public override fun edgeLocation(): String? = unwrap(this).getEdgeLocation()
+      override fun edgeLocation(): String? = unwrap(this).getEdgeLocation()
 
-      public override fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?:
+      override fun insideCidrBlocks(): List<String> = unwrap(this).getInsideCidrBlocks() ?:
           emptyList()
     }
 

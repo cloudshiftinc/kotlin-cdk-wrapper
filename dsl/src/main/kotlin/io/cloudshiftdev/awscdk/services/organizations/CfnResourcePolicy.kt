@@ -40,11 +40,9 @@ public open class CfnResourcePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun content(content: Any) {
-    }
+    public fun content(content: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -54,11 +52,11 @@ public open class CfnResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.organizations.CfnResourcePolicy.Builder
         = software.amazon.awscdk.services.organizations.CfnResourcePolicy.Builder.create(scope, id)
 
-    public override fun content(content: Any) {
+    override fun content(content: Any) {
       cdkBuilder.content(content)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

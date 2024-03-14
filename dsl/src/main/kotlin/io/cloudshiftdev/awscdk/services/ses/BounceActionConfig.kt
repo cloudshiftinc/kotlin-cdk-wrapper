@@ -15,43 +15,38 @@ public interface BounceActionConfig {
   public fun topicArn(): String? = unwrap(this).getTopicArn()
 
   public interface Builder {
-    public fun message(message: String) {
-    }
+    public fun message(message: String)
 
-    public fun sender(sender: String) {
-    }
+    public fun sender(sender: String)
 
-    public fun smtpReplyCode(smtpReplyCode: String) {
-    }
+    public fun smtpReplyCode(smtpReplyCode: String)
 
-    public fun statusCode(statusCode: String) {
-    }
+    public fun statusCode(statusCode: String)
 
-    public fun topicArn(topicArn: String) {
-    }
+    public fun topicArn(topicArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.BounceActionConfig.Builder =
         software.amazon.awscdk.services.ses.BounceActionConfig.builder()
 
-    public override fun message(message: String) {
+    override fun message(message: String) {
       cdkBuilder.message(message)
     }
 
-    public override fun sender(sender: String) {
+    override fun sender(sender: String) {
       cdkBuilder.sender(sender)
     }
 
-    public override fun smtpReplyCode(smtpReplyCode: String) {
+    override fun smtpReplyCode(smtpReplyCode: String) {
       cdkBuilder.smtpReplyCode(smtpReplyCode)
     }
 
-    public override fun statusCode(statusCode: String) {
+    override fun statusCode(statusCode: String) {
       cdkBuilder.statusCode(statusCode)
     }
 
-    public override fun topicArn(topicArn: String) {
+    override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
 
@@ -61,15 +56,15 @@ public interface BounceActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.BounceActionConfig,
   ) : BounceActionConfig {
-    public override fun message(): String = unwrap(this).getMessage()
+    override fun message(): String = unwrap(this).getMessage()
 
-    public override fun sender(): String = unwrap(this).getSender()
+    override fun sender(): String = unwrap(this).getSender()
 
-    public override fun smtpReplyCode(): String = unwrap(this).getSmtpReplyCode()
+    override fun smtpReplyCode(): String = unwrap(this).getSmtpReplyCode()
 
-    public override fun statusCode(): String? = unwrap(this).getStatusCode()
+    override fun statusCode(): String? = unwrap(this).getStatusCode()
 
-    public override fun topicArn(): String? = unwrap(this).getTopicArn()
+    override fun topicArn(): String? = unwrap(this).getTopicArn()
   }
 
   public companion object {

@@ -54,19 +54,15 @@ public open class Mesh internal constructor(
   public override fun meshName(): String = unwrap(this).getMeshName()
 
   public interface Builder {
-    public fun egressFilter(egressFilter: MeshFilterType) {
-    }
+    public fun egressFilter(egressFilter: MeshFilterType)
 
-    public fun meshName(meshName: String) {
-    }
+    public fun meshName(meshName: String)
 
-    public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
-    }
+    public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f46f06016003ebdf0c0bf2751b049660800532528bdd97c5e4a5abda4a0c0df7")
-    public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery.Builder.() -> Unit) {
-    }
+    public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -76,22 +72,22 @@ public open class Mesh internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.Mesh.Builder =
         software.amazon.awscdk.services.appmesh.Mesh.Builder.create(scope, id)
 
-    public override fun egressFilter(egressFilter: MeshFilterType) {
+    override fun egressFilter(egressFilter: MeshFilterType) {
       cdkBuilder.egressFilter(egressFilter.let(MeshFilterType::unwrap))
     }
 
-    public override fun meshName(meshName: String) {
+    override fun meshName(meshName: String) {
       cdkBuilder.meshName(meshName)
     }
 
-    public override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
+    override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
       cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscovery::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f46f06016003ebdf0c0bf2751b049660800532528bdd97c5e4a5abda4a0c0df7")
-    public override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery.Builder.() -> Unit):
-        Unit = serviceDiscovery(MeshServiceDiscovery(serviceDiscovery))
+    override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery.Builder.() -> Unit): Unit =
+        serviceDiscovery(MeshServiceDiscovery(serviceDiscovery))
 
     public fun build(): software.amazon.awscdk.services.appmesh.Mesh = cdkBuilder.build()
   }

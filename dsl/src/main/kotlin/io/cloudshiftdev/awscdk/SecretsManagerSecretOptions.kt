@@ -11,29 +11,26 @@ public interface SecretsManagerSecretOptions {
   public fun versionStage(): String? = unwrap(this).getVersionStage()
 
   public interface Builder {
-    public fun jsonField(jsonField: String) {
-    }
+    public fun jsonField(jsonField: String)
 
-    public fun versionId(versionId: String) {
-    }
+    public fun versionId(versionId: String)
 
-    public fun versionStage(versionStage: String) {
-    }
+    public fun versionStage(versionStage: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.SecretsManagerSecretOptions.Builder =
         software.amazon.awscdk.SecretsManagerSecretOptions.builder()
 
-    public override fun jsonField(jsonField: String) {
+    override fun jsonField(jsonField: String) {
       cdkBuilder.jsonField(jsonField)
     }
 
-    public override fun versionId(versionId: String) {
+    override fun versionId(versionId: String) {
       cdkBuilder.versionId(versionId)
     }
 
-    public override fun versionStage(versionStage: String) {
+    override fun versionStage(versionStage: String) {
       cdkBuilder.versionStage(versionStage)
     }
 
@@ -43,11 +40,11 @@ public interface SecretsManagerSecretOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.SecretsManagerSecretOptions,
   ) : SecretsManagerSecretOptions {
-    public override fun jsonField(): String? = unwrap(this).getJsonField()
+    override fun jsonField(): String? = unwrap(this).getJsonField()
 
-    public override fun versionId(): String? = unwrap(this).getVersionId()
+    override fun versionId(): String? = unwrap(this).getVersionId()
 
-    public override fun versionStage(): String? = unwrap(this).getVersionStage()
+    override fun versionStage(): String? = unwrap(this).getVersionStage()
   }
 
   public companion object {

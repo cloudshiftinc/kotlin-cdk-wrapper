@@ -23,7 +23,7 @@ public interface IClusterInstance {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.IClusterInstance,
   ) : IClusterInstance {
-    public override fun bind(
+    override fun bind(
       arg0: Construct,
       arg1: IDatabaseCluster,
       arg2: ClusterInstanceBindOptions,
@@ -33,7 +33,7 @@ public interface IClusterInstance {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("399891285f8ba8d6e579258f766002e872fa6db6740626abf35971b320798eee")
-    public override fun bind(
+    override fun bind(
       arg0: Construct,
       arg1: IDatabaseCluster,
       arg2: ClusterInstanceBindOptions.Builder.() -> Unit,

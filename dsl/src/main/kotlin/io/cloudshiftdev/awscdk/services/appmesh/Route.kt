@@ -19,17 +19,13 @@ public open class Route internal constructor(
       unwrap(this).getVirtualRouter().let(IVirtualRouter::wrap)
 
   public interface Builder {
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun routeName(routeName: String) {
-    }
+    public fun routeName(routeName: String)
 
-    public fun routeSpec(routeSpec: RouteSpec) {
-    }
+    public fun routeSpec(routeSpec: RouteSpec)
 
-    public fun virtualRouter(virtualRouter: IVirtualRouter) {
-    }
+    public fun virtualRouter(virtualRouter: IVirtualRouter)
   }
 
   private class BuilderImpl(
@@ -39,19 +35,19 @@ public open class Route internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.Route.Builder =
         software.amazon.awscdk.services.appmesh.Route.Builder.create(scope, id)
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun routeName(routeName: String) {
+    override fun routeName(routeName: String) {
       cdkBuilder.routeName(routeName)
     }
 
-    public override fun routeSpec(routeSpec: RouteSpec) {
+    override fun routeSpec(routeSpec: RouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
     }
 
-    public override fun virtualRouter(virtualRouter: IVirtualRouter) {
+    override fun virtualRouter(virtualRouter: IVirtualRouter) {
       cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap))
     }
 

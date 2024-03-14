@@ -80,34 +80,25 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun definition(definition: IResolvable) {
-    }
+    public fun definition(definition: IResolvable)
 
-    public fun definition(definition: DefinitionProperty) {
-    }
+    public fun definition(definition: DefinitionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fa07a797264e8a049043822049769f620ab982b21b833a0a72617a2a86d9255c")
-    public fun definition(definition: DefinitionProperty.Builder.() -> Unit) {
-    }
+    public fun definition(definition: DefinitionProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engineType(engineType: String) {
-    }
+    public fun engineType(engineType: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -117,40 +108,40 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.m2.CfnApplication.Builder =
         software.amazon.awscdk.services.m2.CfnApplication.Builder.create(scope, id)
 
-    public override fun definition(definition: IResolvable) {
+    override fun definition(definition: IResolvable) {
       cdkBuilder.definition(definition.let(IResolvable::unwrap))
     }
 
-    public override fun definition(definition: DefinitionProperty) {
+    override fun definition(definition: DefinitionProperty) {
       cdkBuilder.definition(definition.let(DefinitionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fa07a797264e8a049043822049769f620ab982b21b833a0a72617a2a86d9255c")
-    public override fun definition(definition: DefinitionProperty.Builder.() -> Unit): Unit =
+    override fun definition(definition: DefinitionProperty.Builder.() -> Unit): Unit =
         definition(DefinitionProperty(definition))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engineType(engineType: String) {
+    override fun engineType(engineType: String) {
       cdkBuilder.engineType(engineType)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -184,11 +175,9 @@ public open class CfnApplication internal constructor(
     public fun s3Location(): String? = unwrap(this).getS3Location()
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
 
-      public fun s3Location(s3Location: String) {
-      }
+      public fun s3Location(s3Location: String)
     }
 
     private class BuilderImpl : Builder {
@@ -196,11 +185,11 @@ public open class CfnApplication internal constructor(
           software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty.Builder =
           software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
-      public override fun s3Location(s3Location: String) {
+      override fun s3Location(s3Location: String) {
         cdkBuilder.s3Location(s3Location)
       }
 
@@ -211,9 +200,9 @@ public open class CfnApplication internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.m2.CfnApplication.DefinitionProperty,
     ) : DefinitionProperty {
-      public override fun content(): String? = unwrap(this).getContent()
+      override fun content(): String? = unwrap(this).getContent()
 
-      public override fun s3Location(): String? = unwrap(this).getS3Location()
+      override fun s3Location(): String? = unwrap(this).getS3Location()
     }
 
     public companion object {

@@ -11,14 +11,11 @@ public interface AvailabilityZonesContextQuery {
   public fun region(): String
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface AvailabilityZonesContextQuery {
         software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -46,11 +43,11 @@ public interface AvailabilityZonesContextQuery {
     internal val cdkObject:
         software.amazon.awscdk.cloudassembly.schema.AvailabilityZonesContextQuery,
   ) : AvailabilityZonesContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
   }
 
   public companion object {

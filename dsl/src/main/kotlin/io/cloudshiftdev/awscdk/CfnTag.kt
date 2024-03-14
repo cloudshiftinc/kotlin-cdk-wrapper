@@ -9,22 +9,20 @@ public interface CfnTag {
   public fun `value`(): String
 
   public interface Builder {
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
 
-    public fun `value`(`value`: String) {
-    }
+    public fun `value`(`value`: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnTag.Builder =
         software.amazon.awscdk.CfnTag.builder()
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
-    public override fun `value`(`value`: String) {
+    override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -34,9 +32,9 @@ public interface CfnTag {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnTag,
   ) : CfnTag {
-    public override fun key(): String = unwrap(this).getKey()
+    override fun key(): String = unwrap(this).getKey()
 
-    public override fun `value`(): String = unwrap(this).getValue()
+    override fun `value`(): String = unwrap(this).getValue()
   }
 
   public companion object {

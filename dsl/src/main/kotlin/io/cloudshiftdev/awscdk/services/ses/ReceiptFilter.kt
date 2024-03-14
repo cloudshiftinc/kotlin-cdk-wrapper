@@ -10,14 +10,11 @@ public open class ReceiptFilter internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ses.ReceiptFilter,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun ip(ip: String) {
-    }
+    public fun ip(ip: String)
 
-    public fun policy(policy: ReceiptFilterPolicy) {
-    }
+    public fun policy(policy: ReceiptFilterPolicy)
 
-    public fun receiptFilterName(receiptFilterName: String) {
-    }
+    public fun receiptFilterName(receiptFilterName: String)
   }
 
   private class BuilderImpl(
@@ -27,15 +24,15 @@ public open class ReceiptFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.ReceiptFilter.Builder =
         software.amazon.awscdk.services.ses.ReceiptFilter.Builder.create(scope, id)
 
-    public override fun ip(ip: String) {
+    override fun ip(ip: String) {
       cdkBuilder.ip(ip)
     }
 
-    public override fun policy(policy: ReceiptFilterPolicy) {
+    override fun policy(policy: ReceiptFilterPolicy) {
       cdkBuilder.policy(policy.let(ReceiptFilterPolicy::unwrap))
     }
 
-    public override fun receiptFilterName(receiptFilterName: String) {
+    override fun receiptFilterName(receiptFilterName: String) {
       cdkBuilder.receiptFilterName(receiptFilterName)
     }
 

@@ -8,7 +8,7 @@ public interface IMachineImage {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IMachineImage,
   ) : IMachineImage {
-    public override fun image(arg0: Construct): MachineImageConfig =
+    override fun image(arg0: Construct): MachineImageConfig =
         unwrap(this).getImage(arg0.let(Construct::unwrap)).let(MachineImageConfig::wrap)
   }
 

@@ -11,29 +11,26 @@ public interface UserInvitationConfig {
   public fun smsMessage(): String? = unwrap(this).getSmsMessage()
 
   public interface Builder {
-    public fun emailBody(emailBody: String) {
-    }
+    public fun emailBody(emailBody: String)
 
-    public fun emailSubject(emailSubject: String) {
-    }
+    public fun emailSubject(emailSubject: String)
 
-    public fun smsMessage(smsMessage: String) {
-    }
+    public fun smsMessage(smsMessage: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.UserInvitationConfig.Builder =
         software.amazon.awscdk.services.cognito.UserInvitationConfig.builder()
 
-    public override fun emailBody(emailBody: String) {
+    override fun emailBody(emailBody: String) {
       cdkBuilder.emailBody(emailBody)
     }
 
-    public override fun emailSubject(emailSubject: String) {
+    override fun emailSubject(emailSubject: String) {
       cdkBuilder.emailSubject(emailSubject)
     }
 
-    public override fun smsMessage(smsMessage: String) {
+    override fun smsMessage(smsMessage: String) {
       cdkBuilder.smsMessage(smsMessage)
     }
 
@@ -44,11 +41,11 @@ public interface UserInvitationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.UserInvitationConfig,
   ) : UserInvitationConfig {
-    public override fun emailBody(): String? = unwrap(this).getEmailBody()
+    override fun emailBody(): String? = unwrap(this).getEmailBody()
 
-    public override fun emailSubject(): String? = unwrap(this).getEmailSubject()
+    override fun emailSubject(): String? = unwrap(this).getEmailSubject()
 
-    public override fun smsMessage(): String? = unwrap(this).getSmsMessage()
+    override fun smsMessage(): String? = unwrap(this).getSmsMessage()
   }
 
   public companion object {

@@ -88,31 +88,23 @@ public open class CfnApplication internal constructor(
   }
 
   public interface Builder {
-    public fun apiGatewayProxy(apiGatewayProxy: IResolvable) {
-    }
+    public fun apiGatewayProxy(apiGatewayProxy: IResolvable)
 
-    public fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty) {
-    }
+    public fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82084cfa4d5be34cb317f6744332230060ebd89a2ad16fc185f5ce500b1462d8")
-    public fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty.Builder.() -> Unit) {
-    }
+    public fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty.Builder.() -> Unit)
 
-    public fun environmentIdentifier(environmentIdentifier: String) {
-    }
+    public fun environmentIdentifier(environmentIdentifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun proxyType(proxyType: String) {
-    }
+    public fun proxyType(proxyType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -122,37 +114,36 @@ public open class CfnApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.refactorspaces.CfnApplication.Builder =
         software.amazon.awscdk.services.refactorspaces.CfnApplication.Builder.create(scope, id)
 
-    public override fun apiGatewayProxy(apiGatewayProxy: IResolvable) {
+    override fun apiGatewayProxy(apiGatewayProxy: IResolvable) {
       cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(IResolvable::unwrap))
     }
 
-    public override fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty) {
+    override fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty) {
       cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(ApiGatewayProxyInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82084cfa4d5be34cb317f6744332230060ebd89a2ad16fc185f5ce500b1462d8")
-    public override
-        fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty.Builder.() -> Unit): Unit
-        = apiGatewayProxy(ApiGatewayProxyInputProperty(apiGatewayProxy))
+    override fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty.Builder.() -> Unit):
+        Unit = apiGatewayProxy(ApiGatewayProxyInputProperty(apiGatewayProxy))
 
-    public override fun environmentIdentifier(environmentIdentifier: String) {
+    override fun environmentIdentifier(environmentIdentifier: String) {
       cdkBuilder.environmentIdentifier(environmentIdentifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun proxyType(proxyType: String) {
+    override fun proxyType(proxyType: String) {
       cdkBuilder.proxyType(proxyType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -187,11 +178,9 @@ public open class CfnApplication internal constructor(
     public fun stageName(): String? = unwrap(this).getStageName()
 
     public interface Builder {
-      public fun endpointType(endpointType: String) {
-      }
+      public fun endpointType(endpointType: String)
 
-      public fun stageName(stageName: String) {
-      }
+      public fun stageName(stageName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -200,11 +189,11 @@ public open class CfnApplication internal constructor(
           =
           software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty.builder()
 
-      public override fun endpointType(endpointType: String) {
+      override fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
       }
 
-      public override fun stageName(stageName: String) {
+      override fun stageName(stageName: String) {
         cdkBuilder.stageName(stageName)
       }
 
@@ -217,9 +206,9 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty,
     ) : ApiGatewayProxyInputProperty {
-      public override fun endpointType(): String? = unwrap(this).getEndpointType()
+      override fun endpointType(): String? = unwrap(this).getEndpointType()
 
-      public override fun stageName(): String? = unwrap(this).getStageName()
+      override fun stageName(): String? = unwrap(this).getStageName()
     }
 
     public companion object {

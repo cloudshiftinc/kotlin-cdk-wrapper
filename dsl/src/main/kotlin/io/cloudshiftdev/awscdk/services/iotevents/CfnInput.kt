@@ -60,25 +60,19 @@ public open class CfnInput internal constructor(
   }
 
   public interface Builder {
-    public fun inputDefinition(inputDefinition: IResolvable) {
-    }
+    public fun inputDefinition(inputDefinition: IResolvable)
 
-    public fun inputDefinition(inputDefinition: InputDefinitionProperty) {
-    }
+    public fun inputDefinition(inputDefinition: InputDefinitionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e29149db2e0b6786b9737a01c465fc73f7fd99ee7ba077b14a1716b68649e11f")
-    public fun inputDefinition(inputDefinition: InputDefinitionProperty.Builder.() -> Unit) {
-    }
+    public fun inputDefinition(inputDefinition: InputDefinitionProperty.Builder.() -> Unit)
 
-    public fun inputDescription(inputDescription: String) {
-    }
+    public fun inputDescription(inputDescription: String)
 
-    public fun inputName(inputName: String) {
-    }
+    public fun inputName(inputName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -88,29 +82,28 @@ public open class CfnInput internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotevents.CfnInput.Builder =
         software.amazon.awscdk.services.iotevents.CfnInput.Builder.create(scope, id)
 
-    public override fun inputDefinition(inputDefinition: IResolvable) {
+    override fun inputDefinition(inputDefinition: IResolvable) {
       cdkBuilder.inputDefinition(inputDefinition.let(IResolvable::unwrap))
     }
 
-    public override fun inputDefinition(inputDefinition: InputDefinitionProperty) {
+    override fun inputDefinition(inputDefinition: InputDefinitionProperty) {
       cdkBuilder.inputDefinition(inputDefinition.let(InputDefinitionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e29149db2e0b6786b9737a01c465fc73f7fd99ee7ba077b14a1716b68649e11f")
-    public override
-        fun inputDefinition(inputDefinition: InputDefinitionProperty.Builder.() -> Unit): Unit =
-        inputDefinition(InputDefinitionProperty(inputDefinition))
+    override fun inputDefinition(inputDefinition: InputDefinitionProperty.Builder.() -> Unit): Unit
+        = inputDefinition(InputDefinitionProperty(inputDefinition))
 
-    public override fun inputDescription(inputDescription: String) {
+    override fun inputDescription(inputDescription: String) {
       cdkBuilder.inputDescription(inputDescription)
     }
 
-    public override fun inputName(inputName: String) {
+    override fun inputName(inputName: String) {
       cdkBuilder.inputName(inputName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -142,8 +135,7 @@ public open class CfnInput internal constructor(
     public fun jsonPath(): String
 
     public interface Builder {
-      public fun jsonPath(jsonPath: String) {
-      }
+      public fun jsonPath(jsonPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -151,7 +143,7 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty.builder()
 
-      public override fun jsonPath(jsonPath: String) {
+      override fun jsonPath(jsonPath: String) {
         cdkBuilder.jsonPath(jsonPath)
       }
 
@@ -162,7 +154,7 @@ public open class CfnInput internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty,
     ) : AttributeProperty {
-      public override fun jsonPath(): String = unwrap(this).getJsonPath()
+      override fun jsonPath(): String = unwrap(this).getJsonPath()
     }
 
     public companion object {
@@ -189,11 +181,9 @@ public open class CfnInput internal constructor(
     public fun attributes(): Any
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: List<Any>) {
-      }
+      public fun attributes(attributes: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -201,11 +191,11 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty.Builder =
           software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: List<Any>) {
+      override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
 
@@ -217,7 +207,7 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty,
     ) : InputDefinitionProperty {
-      public override fun attributes(): Any = unwrap(this).getAttributes()
+      override fun attributes(): Any = unwrap(this).getAttributes()
     }
 
     public companion object {

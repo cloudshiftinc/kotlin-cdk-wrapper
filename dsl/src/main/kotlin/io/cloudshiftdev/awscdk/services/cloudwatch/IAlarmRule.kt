@@ -8,7 +8,7 @@ public interface IAlarmRule {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmRule,
   ) : IAlarmRule {
-    public override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
+    override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
   }
 
   public companion object {

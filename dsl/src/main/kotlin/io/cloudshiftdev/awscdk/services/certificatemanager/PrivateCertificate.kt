@@ -29,17 +29,13 @@ public open class PrivateCertificate internal constructor(
       metricDaysToExpiry(MetricOptions(props))
 
   public interface Builder {
-    public fun certificateAuthority(certificateAuthority: ICertificateAuthority) {
-    }
+    public fun certificateAuthority(certificateAuthority: ICertificateAuthority)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-    }
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm)
 
-    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
-    }
+    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
   }
 
   private class BuilderImpl(
@@ -51,19 +47,19 @@ public open class PrivateCertificate internal constructor(
         software.amazon.awscdk.services.certificatemanager.PrivateCertificate.Builder.create(scope,
         id)
 
-    public override fun certificateAuthority(certificateAuthority: ICertificateAuthority) {
+    override fun certificateAuthority(certificateAuthority: ICertificateAuthority) {
       cdkBuilder.certificateAuthority(certificateAuthority.let(ICertificateAuthority::unwrap))
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+    override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
       cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
     }
 
-    public override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
+    override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
 

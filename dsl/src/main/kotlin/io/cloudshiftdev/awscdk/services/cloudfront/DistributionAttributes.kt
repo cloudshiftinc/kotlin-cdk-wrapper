@@ -9,11 +9,9 @@ public interface DistributionAttributes {
   public fun domainName(): String
 
   public interface Builder {
-    public fun distributionId(distributionId: String) {
-    }
+    public fun distributionId(distributionId: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface DistributionAttributes {
         software.amazon.awscdk.services.cloudfront.DistributionAttributes.Builder =
         software.amazon.awscdk.services.cloudfront.DistributionAttributes.builder()
 
-    public override fun distributionId(distributionId: String) {
+    override fun distributionId(distributionId: String) {
       cdkBuilder.distributionId(distributionId)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
@@ -36,9 +34,9 @@ public interface DistributionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.DistributionAttributes,
   ) : DistributionAttributes {
-    public override fun distributionId(): String = unwrap(this).getDistributionId()
+    override fun distributionId(): String = unwrap(this).getDistributionId()
 
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
   }
 
   public companion object {

@@ -42,17 +42,13 @@ public open class CfnHookTypeConfig internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: String) {
-    }
+    public fun configuration(configuration: String)
 
-    public fun configurationAlias(configurationAlias: String) {
-    }
+    public fun configurationAlias(configurationAlias: String)
 
-    public fun typeArn(typeArn: String) {
-    }
+    public fun typeArn(typeArn: String)
 
-    public fun typeName(typeName: String) {
-    }
+    public fun typeName(typeName: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnHookTypeConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudformation.CfnHookTypeConfig.Builder
         = software.amazon.awscdk.services.cloudformation.CfnHookTypeConfig.Builder.create(scope, id)
 
-    public override fun configuration(configuration: String) {
+    override fun configuration(configuration: String) {
       cdkBuilder.configuration(configuration)
     }
 
-    public override fun configurationAlias(configurationAlias: String) {
+    override fun configurationAlias(configurationAlias: String) {
       cdkBuilder.configurationAlias(configurationAlias)
     }
 
-    public override fun typeArn(typeArn: String) {
+    override fun typeArn(typeArn: String) {
       cdkBuilder.typeArn(typeArn)
     }
 
-    public override fun typeName(typeName: String) {
+    override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 

@@ -46,19 +46,15 @@ public open class CfnThing internal constructor(
   }
 
   public interface Builder {
-    public fun attributePayload(attributePayload: IResolvable) {
-    }
+    public fun attributePayload(attributePayload: IResolvable)
 
-    public fun attributePayload(attributePayload: AttributePayloadProperty) {
-    }
+    public fun attributePayload(attributePayload: AttributePayloadProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5aaa61e1661e96b9c29f7c3abde7336cb5bc324ecc60d4ceb73c8ea86316459c")
-    public fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit) {
-    }
+    public fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit)
 
-    public fun thingName(thingName: String) {
-    }
+    public fun thingName(thingName: String)
   }
 
   private class BuilderImpl(
@@ -68,21 +64,20 @@ public open class CfnThing internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnThing.Builder =
         software.amazon.awscdk.services.iot.CfnThing.Builder.create(scope, id)
 
-    public override fun attributePayload(attributePayload: IResolvable) {
+    override fun attributePayload(attributePayload: IResolvable) {
       cdkBuilder.attributePayload(attributePayload.let(IResolvable::unwrap))
     }
 
-    public override fun attributePayload(attributePayload: AttributePayloadProperty) {
+    override fun attributePayload(attributePayload: AttributePayloadProperty) {
       cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5aaa61e1661e96b9c29f7c3abde7336cb5bc324ecc60d4ceb73c8ea86316459c")
-    public override
-        fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit): Unit =
-        attributePayload(AttributePayloadProperty(attributePayload))
+    override fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit):
+        Unit = attributePayload(AttributePayloadProperty(attributePayload))
 
-    public override fun thingName(thingName: String) {
+    override fun thingName(thingName: String) {
       cdkBuilder.thingName(thingName)
     }
 
@@ -114,11 +109,9 @@ public open class CfnThing internal constructor(
     public fun attributes(): Any? = unwrap(this).getAttributes()
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: Map<String, String>) {
-      }
+      public fun attributes(attributes: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -126,11 +119,11 @@ public open class CfnThing internal constructor(
           software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty.Builder =
           software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: Map<String, String>) {
+      override fun attributes(attributes: Map<String, String>) {
         cdkBuilder.attributes(attributes)
       }
 
@@ -141,7 +134,7 @@ public open class CfnThing internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iot.CfnThing.AttributePayloadProperty,
     ) : AttributePayloadProperty {
-      public override fun attributes(): Any? = unwrap(this).getAttributes()
+      override fun attributes(): Any? = unwrap(this).getAttributes()
     }
 
     public companion object {

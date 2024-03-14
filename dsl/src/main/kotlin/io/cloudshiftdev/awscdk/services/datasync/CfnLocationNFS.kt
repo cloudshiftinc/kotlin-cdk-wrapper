@@ -79,36 +79,27 @@ public open class CfnLocationNFS internal constructor(
   }
 
   public interface Builder {
-    public fun mountOptions(mountOptions: IResolvable) {
-    }
+    public fun mountOptions(mountOptions: IResolvable)
 
-    public fun mountOptions(mountOptions: MountOptionsProperty) {
-    }
+    public fun mountOptions(mountOptions: MountOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25a432ce7f1c75dc7f0fe7de40701517a3b87f70b0202663b66a2091262a75ad")
-    public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit)
 
-    public fun onPremConfig(onPremConfig: IResolvable) {
-    }
+    public fun onPremConfig(onPremConfig: IResolvable)
 
-    public fun onPremConfig(onPremConfig: OnPremConfigProperty) {
-    }
+    public fun onPremConfig(onPremConfig: OnPremConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2cd9f0ae144cf14221414b6db7af184a49d45996e7a95573bd995075ba3c701f")
-    public fun onPremConfig(onPremConfig: OnPremConfigProperty.Builder.() -> Unit) {
-    }
+    public fun onPremConfig(onPremConfig: OnPremConfigProperty.Builder.() -> Unit)
 
-    public fun serverHostname(serverHostname: String) {
-    }
+    public fun serverHostname(serverHostname: String)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -118,41 +109,41 @@ public open class CfnLocationNFS internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationNFS.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationNFS.Builder.create(scope, id)
 
-    public override fun mountOptions(mountOptions: IResolvable) {
+    override fun mountOptions(mountOptions: IResolvable) {
       cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
     }
 
-    public override fun mountOptions(mountOptions: MountOptionsProperty) {
+    override fun mountOptions(mountOptions: MountOptionsProperty) {
       cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25a432ce7f1c75dc7f0fe7de40701517a3b87f70b0202663b66a2091262a75ad")
-    public override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
+    override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
         mountOptions(MountOptionsProperty(mountOptions))
 
-    public override fun onPremConfig(onPremConfig: IResolvable) {
+    override fun onPremConfig(onPremConfig: IResolvable) {
       cdkBuilder.onPremConfig(onPremConfig.let(IResolvable::unwrap))
     }
 
-    public override fun onPremConfig(onPremConfig: OnPremConfigProperty) {
+    override fun onPremConfig(onPremConfig: OnPremConfigProperty) {
       cdkBuilder.onPremConfig(onPremConfig.let(OnPremConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2cd9f0ae144cf14221414b6db7af184a49d45996e7a95573bd995075ba3c701f")
-    public override fun onPremConfig(onPremConfig: OnPremConfigProperty.Builder.() -> Unit): Unit =
+    override fun onPremConfig(onPremConfig: OnPremConfigProperty.Builder.() -> Unit): Unit =
         onPremConfig(OnPremConfigProperty(onPremConfig))
 
-    public override fun serverHostname(serverHostname: String) {
+    override fun serverHostname(serverHostname: String) {
       cdkBuilder.serverHostname(serverHostname)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -184,8 +175,7 @@ public open class CfnLocationNFS internal constructor(
     public fun agentArns(): List<String>
 
     public interface Builder {
-      public fun agentArns(agentArns: List<String>) {
-      }
+      public fun agentArns(agentArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -193,7 +183,7 @@ public open class CfnLocationNFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty.builder()
 
-      public override fun agentArns(agentArns: List<String>) {
+      override fun agentArns(agentArns: List<String>) {
         cdkBuilder.agentArns(agentArns)
       }
 
@@ -206,7 +196,7 @@ public open class CfnLocationNFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty,
     ) : OnPremConfigProperty {
-      public override fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+      override fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
     }
 
     public companion object {
@@ -233,8 +223,7 @@ public open class CfnLocationNFS internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -242,7 +231,7 @@ public open class CfnLocationNFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty.builder()
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -255,7 +244,7 @@ public open class CfnLocationNFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationNFS.MountOptionsProperty,
     ) : MountOptionsProperty {
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {

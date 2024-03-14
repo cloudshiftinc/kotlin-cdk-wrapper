@@ -12,29 +12,26 @@ public interface UsagePlanPerApiStage {
       unwrap(this).getThrottle()?.map(ThrottlingPerMethod::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun api(api: IRestApi) {
-    }
+    public fun api(api: IRestApi)
 
-    public fun stage(stage: Stage) {
-    }
+    public fun stage(stage: Stage)
 
-    public fun throttle(throttle: List<ThrottlingPerMethod>) {
-    }
+    public fun throttle(throttle: List<ThrottlingPerMethod>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage.Builder
         = software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage.builder()
 
-    public override fun api(api: IRestApi) {
+    override fun api(api: IRestApi) {
       cdkBuilder.api(api.let(IRestApi::unwrap))
     }
 
-    public override fun stage(stage: Stage) {
+    override fun stage(stage: Stage) {
       cdkBuilder.stage(stage.let(Stage::unwrap))
     }
 
-    public override fun throttle(throttle: List<ThrottlingPerMethod>) {
+    override fun throttle(throttle: List<ThrottlingPerMethod>) {
       cdkBuilder.throttle(throttle.map(ThrottlingPerMethod::unwrap))
     }
 
@@ -45,11 +42,11 @@ public interface UsagePlanPerApiStage {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage,
   ) : UsagePlanPerApiStage {
-    public override fun api(): IRestApi? = unwrap(this).getApi()?.let(IRestApi::wrap)
+    override fun api(): IRestApi? = unwrap(this).getApi()?.let(IRestApi::wrap)
 
-    public override fun stage(): Stage? = unwrap(this).getStage()?.let(Stage::wrap)
+    override fun stage(): Stage? = unwrap(this).getStage()?.let(Stage::wrap)
 
-    public override fun throttle(): List<ThrottlingPerMethod> =
+    override fun throttle(): List<ThrottlingPerMethod> =
         unwrap(this).getThrottle()?.map(ThrottlingPerMethod::wrap) ?: emptyList()
   }
 

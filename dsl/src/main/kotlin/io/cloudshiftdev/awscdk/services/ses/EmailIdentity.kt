@@ -39,27 +39,19 @@ public open class EmailIdentity internal constructor(
       unwrap(this).grantSendEmail(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
 
   public interface Builder {
-    public fun configurationSet(configurationSet: IConfigurationSet) {
-    }
+    public fun configurationSet(configurationSet: IConfigurationSet)
 
-    public fun dkimIdentity(dkimIdentity: DkimIdentity) {
-    }
+    public fun dkimIdentity(dkimIdentity: DkimIdentity)
 
-    public fun dkimSigning(dkimSigning: Boolean) {
-    }
+    public fun dkimSigning(dkimSigning: Boolean)
 
-    public fun feedbackForwarding(feedbackForwarding: Boolean) {
-    }
+    public fun feedbackForwarding(feedbackForwarding: Boolean)
 
-    public fun identity(identity: Identity) {
-    }
+    public fun identity(identity: Identity)
 
-    public
-        fun mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure: MailFromBehaviorOnMxFailure) {
-    }
+    public fun mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure: MailFromBehaviorOnMxFailure)
 
-    public fun mailFromDomain(mailFromDomain: String) {
-    }
+    public fun mailFromDomain(mailFromDomain: String)
   }
 
   private class BuilderImpl(
@@ -69,32 +61,32 @@ public open class EmailIdentity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.EmailIdentity.Builder =
         software.amazon.awscdk.services.ses.EmailIdentity.Builder.create(scope, id)
 
-    public override fun configurationSet(configurationSet: IConfigurationSet) {
+    override fun configurationSet(configurationSet: IConfigurationSet) {
       cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet::unwrap))
     }
 
-    public override fun dkimIdentity(dkimIdentity: DkimIdentity) {
+    override fun dkimIdentity(dkimIdentity: DkimIdentity) {
       cdkBuilder.dkimIdentity(dkimIdentity.let(DkimIdentity::unwrap))
     }
 
-    public override fun dkimSigning(dkimSigning: Boolean) {
+    override fun dkimSigning(dkimSigning: Boolean) {
       cdkBuilder.dkimSigning(dkimSigning)
     }
 
-    public override fun feedbackForwarding(feedbackForwarding: Boolean) {
+    override fun feedbackForwarding(feedbackForwarding: Boolean) {
       cdkBuilder.feedbackForwarding(feedbackForwarding)
     }
 
-    public override fun identity(identity: Identity) {
+    override fun identity(identity: Identity) {
       cdkBuilder.identity(identity.let(Identity::unwrap))
     }
 
-    public override
+    override
         fun mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure: MailFromBehaviorOnMxFailure) {
       cdkBuilder.mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure.let(MailFromBehaviorOnMxFailure::unwrap))
     }
 
-    public override fun mailFromDomain(mailFromDomain: String) {
+    override fun mailFromDomain(mailFromDomain: String) {
       cdkBuilder.mailFromDomain(mailFromDomain)
     }
 

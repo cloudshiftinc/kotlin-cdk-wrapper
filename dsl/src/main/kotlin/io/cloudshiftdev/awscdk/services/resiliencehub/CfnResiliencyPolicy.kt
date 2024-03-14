@@ -66,26 +66,19 @@ public open class CfnResiliencyPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun dataLocationConstraint(dataLocationConstraint: String) {
-    }
+    public fun dataLocationConstraint(dataLocationConstraint: String)
 
-    public fun policy(policy: IResolvable) {
-    }
+    public fun policy(policy: IResolvable)
 
-    public fun policy(policy: Map<String, Any>) {
-    }
+    public fun policy(policy: Map<String, Any>)
 
-    public fun policyDescription(policyDescription: String) {
-    }
+    public fun policyDescription(policyDescription: String)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun tier(tier: String) {
-    }
+    public fun tier(tier: String)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnResiliencyPolicy internal constructor(
         software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.Builder =
         software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.Builder.create(scope, id)
 
-    public override fun dataLocationConstraint(dataLocationConstraint: String) {
+    override fun dataLocationConstraint(dataLocationConstraint: String) {
       cdkBuilder.dataLocationConstraint(dataLocationConstraint)
     }
 
-    public override fun policy(policy: IResolvable) {
+    override fun policy(policy: IResolvable) {
       cdkBuilder.policy(policy.let(IResolvable::unwrap))
     }
 
-    public override fun policy(policy: Map<String, Any>) {
+    override fun policy(policy: Map<String, Any>) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun policyDescription(policyDescription: String) {
+    override fun policyDescription(policyDescription: String) {
       cdkBuilder.policyDescription(policyDescription)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun tier(tier: String) {
+    override fun tier(tier: String) {
       cdkBuilder.tier(tier)
     }
 
@@ -155,11 +148,9 @@ public open class CfnResiliencyPolicy internal constructor(
     public fun rtoInSecs(): Number
 
     public interface Builder {
-      public fun rpoInSecs(rpoInSecs: Number) {
-      }
+      public fun rpoInSecs(rpoInSecs: Number)
 
-      public fun rtoInSecs(rtoInSecs: Number) {
-      }
+      public fun rtoInSecs(rtoInSecs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -168,11 +159,11 @@ public open class CfnResiliencyPolicy internal constructor(
           =
           software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty.builder()
 
-      public override fun rpoInSecs(rpoInSecs: Number) {
+      override fun rpoInSecs(rpoInSecs: Number) {
         cdkBuilder.rpoInSecs(rpoInSecs)
       }
 
-      public override fun rtoInSecs(rtoInSecs: Number) {
+      override fun rtoInSecs(rtoInSecs: Number) {
         cdkBuilder.rtoInSecs(rtoInSecs)
       }
 
@@ -185,9 +176,9 @@ public open class CfnResiliencyPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy.FailurePolicyProperty,
     ) : FailurePolicyProperty {
-      public override fun rpoInSecs(): Number = unwrap(this).getRpoInSecs()
+      override fun rpoInSecs(): Number = unwrap(this).getRpoInSecs()
 
-      public override fun rtoInSecs(): Number = unwrap(this).getRtoInSecs()
+      override fun rtoInSecs(): Number = unwrap(this).getRtoInSecs()
     }
 
     public companion object {

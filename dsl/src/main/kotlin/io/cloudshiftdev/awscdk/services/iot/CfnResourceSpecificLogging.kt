@@ -36,14 +36,11 @@ public open class CfnResourceSpecificLogging internal constructor(
   }
 
   public interface Builder {
-    public fun logLevel(logLevel: String) {
-    }
+    public fun logLevel(logLevel: String)
 
-    public fun targetName(targetName: String) {
-    }
+    public fun targetName(targetName: String)
 
-    public fun targetType(targetType: String) {
-    }
+    public fun targetType(targetType: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnResourceSpecificLogging internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnResourceSpecificLogging.Builder =
         software.amazon.awscdk.services.iot.CfnResourceSpecificLogging.Builder.create(scope, id)
 
-    public override fun logLevel(logLevel: String) {
+    override fun logLevel(logLevel: String) {
       cdkBuilder.logLevel(logLevel)
     }
 
-    public override fun targetName(targetName: String) {
+    override fun targetName(targetName: String) {
       cdkBuilder.targetName(targetName)
     }
 
-    public override fun targetType(targetType: String) {
+    override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
 

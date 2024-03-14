@@ -96,40 +96,29 @@ public open class CfnWirelessDevice internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun destinationName(destinationName: String) {
-    }
+    public fun destinationName(destinationName: String)
 
-    public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
-    }
+    public fun lastUplinkReceivedAt(lastUplinkReceivedAt: String)
 
-    public fun loRaWan(loRaWan: IResolvable) {
-    }
+    public fun loRaWan(loRaWan: IResolvable)
 
-    public fun loRaWan(loRaWan: LoRaWANDeviceProperty) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANDeviceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17db95673df2b6886b960f1082d8cbdb9116647da1b05b3a57a75d0b298dc6e4")
-    public fun loRaWan(loRaWan: LoRaWANDeviceProperty.Builder.() -> Unit) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANDeviceProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun positioning(positioning: String) {
-    }
+    public fun positioning(positioning: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun thingArn(thingArn: String) {
-    }
+    public fun thingArn(thingArn: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -139,48 +128,48 @@ public open class CfnWirelessDevice internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.Builder =
         software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun destinationName(destinationName: String) {
+    override fun destinationName(destinationName: String) {
       cdkBuilder.destinationName(destinationName)
     }
 
-    public override fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
+    override fun lastUplinkReceivedAt(lastUplinkReceivedAt: String) {
       cdkBuilder.lastUplinkReceivedAt(lastUplinkReceivedAt)
     }
 
-    public override fun loRaWan(loRaWan: IResolvable) {
+    override fun loRaWan(loRaWan: IResolvable) {
       cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWan(loRaWan: LoRaWANDeviceProperty) {
+    override fun loRaWan(loRaWan: LoRaWANDeviceProperty) {
       cdkBuilder.loRaWan(loRaWan.let(LoRaWANDeviceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17db95673df2b6886b960f1082d8cbdb9116647da1b05b3a57a75d0b298dc6e4")
-    public override fun loRaWan(loRaWan: LoRaWANDeviceProperty.Builder.() -> Unit): Unit =
+    override fun loRaWan(loRaWan: LoRaWANDeviceProperty.Builder.() -> Unit): Unit =
         loRaWan(LoRaWANDeviceProperty(loRaWan))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun positioning(positioning: String) {
+    override fun positioning(positioning: String) {
       cdkBuilder.positioning(positioning)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun thingArn(thingArn: String) {
+    override fun thingArn(thingArn: String) {
       cdkBuilder.thingArn(thingArn)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -215,19 +204,15 @@ public open class CfnWirelessDevice internal constructor(
     public fun sessionKeys(): Any
 
     public interface Builder {
-      public fun devAddr(devAddr: String) {
-      }
+      public fun devAddr(devAddr: String)
 
-      public fun sessionKeys(sessionKeys: IResolvable) {
-      }
+      public fun sessionKeys(sessionKeys: IResolvable)
 
-      public fun sessionKeys(sessionKeys: SessionKeysAbpV11Property) {
-      }
+      public fun sessionKeys(sessionKeys: SessionKeysAbpV11Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("59a4ab19815afb52a5115c2c1c22281e7dc245874a390b9057281b5f2477d776")
-      public fun sessionKeys(sessionKeys: SessionKeysAbpV11Property.Builder.() -> Unit) {
-      }
+      public fun sessionKeys(sessionKeys: SessionKeysAbpV11Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -235,22 +220,22 @@ public open class CfnWirelessDevice internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property.Builder =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property.builder()
 
-      public override fun devAddr(devAddr: String) {
+      override fun devAddr(devAddr: String) {
         cdkBuilder.devAddr(devAddr)
       }
 
-      public override fun sessionKeys(sessionKeys: IResolvable) {
+      override fun sessionKeys(sessionKeys: IResolvable) {
         cdkBuilder.sessionKeys(sessionKeys.let(IResolvable::unwrap))
       }
 
-      public override fun sessionKeys(sessionKeys: SessionKeysAbpV11Property) {
+      override fun sessionKeys(sessionKeys: SessionKeysAbpV11Property) {
         cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV11Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("59a4ab19815afb52a5115c2c1c22281e7dc245874a390b9057281b5f2477d776")
-      public override fun sessionKeys(sessionKeys: SessionKeysAbpV11Property.Builder.() -> Unit):
-          Unit = sessionKeys(SessionKeysAbpV11Property(sessionKeys))
+      override fun sessionKeys(sessionKeys: SessionKeysAbpV11Property.Builder.() -> Unit): Unit =
+          sessionKeys(SessionKeysAbpV11Property(sessionKeys))
 
       public fun build():
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property =
@@ -261,9 +246,9 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property,
     ) : AbpV11Property {
-      public override fun devAddr(): String = unwrap(this).getDevAddr()
+      override fun devAddr(): String = unwrap(this).getDevAddr()
 
-      public override fun sessionKeys(): Any = unwrap(this).getSessionKeys()
+      override fun sessionKeys(): Any = unwrap(this).getSessionKeys()
     }
 
     public companion object {
@@ -296,17 +281,13 @@ public open class CfnWirelessDevice internal constructor(
     public fun sNwkSIntKey(): String
 
     public interface Builder {
-      public fun appSKey(appSKey: String) {
-      }
+      public fun appSKey(appSKey: String)
 
-      public fun fNwkSIntKey(fNwkSIntKey: String) {
-      }
+      public fun fNwkSIntKey(fNwkSIntKey: String)
 
-      public fun nwkSEncKey(nwkSEncKey: String) {
-      }
+      public fun nwkSEncKey(nwkSEncKey: String)
 
-      public fun sNwkSIntKey(sNwkSIntKey: String) {
-      }
+      public fun sNwkSIntKey(sNwkSIntKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -315,19 +296,19 @@ public open class CfnWirelessDevice internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property.builder()
 
-      public override fun appSKey(appSKey: String) {
+      override fun appSKey(appSKey: String) {
         cdkBuilder.appSKey(appSKey)
       }
 
-      public override fun fNwkSIntKey(fNwkSIntKey: String) {
+      override fun fNwkSIntKey(fNwkSIntKey: String) {
         cdkBuilder.fNwkSIntKey(fNwkSIntKey)
       }
 
-      public override fun nwkSEncKey(nwkSEncKey: String) {
+      override fun nwkSEncKey(nwkSEncKey: String) {
         cdkBuilder.nwkSEncKey(nwkSEncKey)
       }
 
-      public override fun sNwkSIntKey(sNwkSIntKey: String) {
+      override fun sNwkSIntKey(sNwkSIntKey: String) {
         cdkBuilder.sNwkSIntKey(sNwkSIntKey)
       }
 
@@ -340,13 +321,13 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property,
     ) : SessionKeysAbpV11Property {
-      public override fun appSKey(): String = unwrap(this).getAppSKey()
+      override fun appSKey(): String = unwrap(this).getAppSKey()
 
-      public override fun fNwkSIntKey(): String = unwrap(this).getFNwkSIntKey()
+      override fun fNwkSIntKey(): String = unwrap(this).getFNwkSIntKey()
 
-      public override fun nwkSEncKey(): String = unwrap(this).getNwkSEncKey()
+      override fun nwkSEncKey(): String = unwrap(this).getNwkSEncKey()
 
-      public override fun sNwkSIntKey(): String = unwrap(this).getSNwkSIntKey()
+      override fun sNwkSIntKey(): String = unwrap(this).getSNwkSIntKey()
     }
 
     public companion object {
@@ -377,14 +358,11 @@ public open class CfnWirelessDevice internal constructor(
     public fun nwkKey(): String
 
     public interface Builder {
-      public fun appKey(appKey: String) {
-      }
+      public fun appKey(appKey: String)
 
-      public fun joinEui(joinEui: String) {
-      }
+      public fun joinEui(joinEui: String)
 
-      public fun nwkKey(nwkKey: String) {
-      }
+      public fun nwkKey(nwkKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -392,15 +370,15 @@ public open class CfnWirelessDevice internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property.Builder =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property.builder()
 
-      public override fun appKey(appKey: String) {
+      override fun appKey(appKey: String) {
         cdkBuilder.appKey(appKey)
       }
 
-      public override fun joinEui(joinEui: String) {
+      override fun joinEui(joinEui: String) {
         cdkBuilder.joinEui(joinEui)
       }
 
-      public override fun nwkKey(nwkKey: String) {
+      override fun nwkKey(nwkKey: String) {
         cdkBuilder.nwkKey(nwkKey)
       }
 
@@ -413,11 +391,11 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property,
     ) : OtaaV11Property {
-      public override fun appKey(): String = unwrap(this).getAppKey()
+      override fun appKey(): String = unwrap(this).getAppKey()
 
-      public override fun joinEui(): String = unwrap(this).getJoinEui()
+      override fun joinEui(): String = unwrap(this).getJoinEui()
 
-      public override fun nwkKey(): String = unwrap(this).getNwkKey()
+      override fun nwkKey(): String = unwrap(this).getNwkKey()
     }
 
     public companion object {
@@ -446,19 +424,15 @@ public open class CfnWirelessDevice internal constructor(
     public fun sessionKeys(): Any
 
     public interface Builder {
-      public fun devAddr(devAddr: String) {
-      }
+      public fun devAddr(devAddr: String)
 
-      public fun sessionKeys(sessionKeys: IResolvable) {
-      }
+      public fun sessionKeys(sessionKeys: IResolvable)
 
-      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty) {
-      }
+      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb15038e40fff6bc52daf846737f0c14b826cf665300fcaa90a307c5cdef1235")
-      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit) {
-      }
+      public fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -466,22 +440,22 @@ public open class CfnWirelessDevice internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty.Builder =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty.builder()
 
-      public override fun devAddr(devAddr: String) {
+      override fun devAddr(devAddr: String) {
         cdkBuilder.devAddr(devAddr)
       }
 
-      public override fun sessionKeys(sessionKeys: IResolvable) {
+      override fun sessionKeys(sessionKeys: IResolvable) {
         cdkBuilder.sessionKeys(sessionKeys.let(IResolvable::unwrap))
       }
 
-      public override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty) {
+      override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty) {
         cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV10xProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb15038e40fff6bc52daf846737f0c14b826cf665300fcaa90a307c5cdef1235")
-      public override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit):
-          Unit = sessionKeys(SessionKeysAbpV10xProperty(sessionKeys))
+      override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty.Builder.() -> Unit): Unit =
+          sessionKeys(SessionKeysAbpV10xProperty(sessionKeys))
 
       public fun build():
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty =
@@ -492,9 +466,9 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty,
     ) : AbpV10xProperty {
-      public override fun devAddr(): String = unwrap(this).getDevAddr()
+      override fun devAddr(): String = unwrap(this).getDevAddr()
 
-      public override fun sessionKeys(): Any = unwrap(this).getSessionKeys()
+      override fun sessionKeys(): Any = unwrap(this).getSessionKeys()
     }
 
     public companion object {
@@ -523,11 +497,9 @@ public open class CfnWirelessDevice internal constructor(
     public fun appKey(): String
 
     public interface Builder {
-      public fun appEui(appEui: String) {
-      }
+      public fun appEui(appEui: String)
 
-      public fun appKey(appKey: String) {
-      }
+      public fun appKey(appKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -535,11 +507,11 @@ public open class CfnWirelessDevice internal constructor(
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty.Builder =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty.builder()
 
-      public override fun appEui(appEui: String) {
+      override fun appEui(appEui: String) {
         cdkBuilder.appEui(appEui)
       }
 
-      public override fun appKey(appKey: String) {
+      override fun appKey(appKey: String) {
         cdkBuilder.appKey(appKey)
       }
 
@@ -552,9 +524,9 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty,
     ) : OtaaV10xProperty {
-      public override fun appEui(): String = unwrap(this).getAppEui()
+      override fun appEui(): String = unwrap(this).getAppEui()
 
-      public override fun appKey(): String = unwrap(this).getAppKey()
+      override fun appKey(): String = unwrap(this).getAppKey()
     }
 
     public companion object {
@@ -583,11 +555,9 @@ public open class CfnWirelessDevice internal constructor(
     public fun nwkSKey(): String
 
     public interface Builder {
-      public fun appSKey(appSKey: String) {
-      }
+      public fun appSKey(appSKey: String)
 
-      public fun nwkSKey(nwkSKey: String) {
-      }
+      public fun nwkSKey(nwkSKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -596,11 +566,11 @@ public open class CfnWirelessDevice internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty.builder()
 
-      public override fun appSKey(appSKey: String) {
+      override fun appSKey(appSKey: String) {
         cdkBuilder.appSKey(appSKey)
       }
 
-      public override fun nwkSKey(nwkSKey: String) {
+      override fun nwkSKey(nwkSKey: String) {
         cdkBuilder.nwkSKey(nwkSKey)
       }
 
@@ -613,9 +583,9 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty,
     ) : SessionKeysAbpV10xProperty {
-      public override fun appSKey(): String = unwrap(this).getAppSKey()
+      override fun appSKey(): String = unwrap(this).getAppSKey()
 
-      public override fun nwkSKey(): String = unwrap(this).getNwkSKey()
+      override fun nwkSKey(): String = unwrap(this).getNwkSKey()
     }
 
     public companion object {
@@ -654,58 +624,43 @@ public open class CfnWirelessDevice internal constructor(
     public fun serviceProfileId(): String? = unwrap(this).getServiceProfileId()
 
     public interface Builder {
-      public fun abpV10x(abpV10X: IResolvable) {
-      }
+      public fun abpV10x(abpV10X: IResolvable)
 
-      public fun abpV10x(abpV10X: AbpV10xProperty) {
-      }
+      public fun abpV10x(abpV10X: AbpV10xProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5178e3a9b15e101d25e20d372730d352b8850925bb7d52c981ab283bfd41e05e")
-      public fun abpV10x(abpV10X: AbpV10xProperty.Builder.() -> Unit) {
-      }
+      public fun abpV10x(abpV10X: AbpV10xProperty.Builder.() -> Unit)
 
-      public fun abpV11(abpV11: IResolvable) {
-      }
+      public fun abpV11(abpV11: IResolvable)
 
-      public fun abpV11(abpV11: AbpV11Property) {
-      }
+      public fun abpV11(abpV11: AbpV11Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6536c67eef3767a4ae92e3a1014e34742a2aa29f52f0b6055fe5fcc30ac41b40")
-      public fun abpV11(abpV11: AbpV11Property.Builder.() -> Unit) {
-      }
+      public fun abpV11(abpV11: AbpV11Property.Builder.() -> Unit)
 
-      public fun devEui(devEui: String) {
-      }
+      public fun devEui(devEui: String)
 
-      public fun deviceProfileId(deviceProfileId: String) {
-      }
+      public fun deviceProfileId(deviceProfileId: String)
 
-      public fun otaaV10x(otaaV10X: IResolvable) {
-      }
+      public fun otaaV10x(otaaV10X: IResolvable)
 
-      public fun otaaV10x(otaaV10X: OtaaV10xProperty) {
-      }
+      public fun otaaV10x(otaaV10X: OtaaV10xProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("42f54ce128eedb8686fb22d1877fea1d6a762394c25c672f14833e1d980f3285")
-      public fun otaaV10x(otaaV10X: OtaaV10xProperty.Builder.() -> Unit) {
-      }
+      public fun otaaV10x(otaaV10X: OtaaV10xProperty.Builder.() -> Unit)
 
-      public fun otaaV11(otaaV11: IResolvable) {
-      }
+      public fun otaaV11(otaaV11: IResolvable)
 
-      public fun otaaV11(otaaV11: OtaaV11Property) {
-      }
+      public fun otaaV11(otaaV11: OtaaV11Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("50001fd6c81be7952f9e3e7f379b431600dce85809310301bde2e1cf32cf63a3")
-      public fun otaaV11(otaaV11: OtaaV11Property.Builder.() -> Unit) {
-      }
+      public fun otaaV11(otaaV11: OtaaV11Property.Builder.() -> Unit)
 
-      public fun serviceProfileId(serviceProfileId: String) {
-      }
+      public fun serviceProfileId(serviceProfileId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -714,67 +669,67 @@ public open class CfnWirelessDevice internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty.builder()
 
-      public override fun abpV10x(abpV10X: IResolvable) {
+      override fun abpV10x(abpV10X: IResolvable) {
         cdkBuilder.abpV10X(abpV10X.let(IResolvable::unwrap))
       }
 
-      public override fun abpV10x(abpV10X: AbpV10xProperty) {
+      override fun abpV10x(abpV10X: AbpV10xProperty) {
         cdkBuilder.abpV10X(abpV10X.let(AbpV10xProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5178e3a9b15e101d25e20d372730d352b8850925bb7d52c981ab283bfd41e05e")
-      public override fun abpV10x(abpV10X: AbpV10xProperty.Builder.() -> Unit): Unit =
+      override fun abpV10x(abpV10X: AbpV10xProperty.Builder.() -> Unit): Unit =
           abpV10x(AbpV10xProperty(abpV10X))
 
-      public override fun abpV11(abpV11: IResolvable) {
+      override fun abpV11(abpV11: IResolvable) {
         cdkBuilder.abpV11(abpV11.let(IResolvable::unwrap))
       }
 
-      public override fun abpV11(abpV11: AbpV11Property) {
+      override fun abpV11(abpV11: AbpV11Property) {
         cdkBuilder.abpV11(abpV11.let(AbpV11Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6536c67eef3767a4ae92e3a1014e34742a2aa29f52f0b6055fe5fcc30ac41b40")
-      public override fun abpV11(abpV11: AbpV11Property.Builder.() -> Unit): Unit =
+      override fun abpV11(abpV11: AbpV11Property.Builder.() -> Unit): Unit =
           abpV11(AbpV11Property(abpV11))
 
-      public override fun devEui(devEui: String) {
+      override fun devEui(devEui: String) {
         cdkBuilder.devEui(devEui)
       }
 
-      public override fun deviceProfileId(deviceProfileId: String) {
+      override fun deviceProfileId(deviceProfileId: String) {
         cdkBuilder.deviceProfileId(deviceProfileId)
       }
 
-      public override fun otaaV10x(otaaV10X: IResolvable) {
+      override fun otaaV10x(otaaV10X: IResolvable) {
         cdkBuilder.otaaV10X(otaaV10X.let(IResolvable::unwrap))
       }
 
-      public override fun otaaV10x(otaaV10X: OtaaV10xProperty) {
+      override fun otaaV10x(otaaV10X: OtaaV10xProperty) {
         cdkBuilder.otaaV10X(otaaV10X.let(OtaaV10xProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("42f54ce128eedb8686fb22d1877fea1d6a762394c25c672f14833e1d980f3285")
-      public override fun otaaV10x(otaaV10X: OtaaV10xProperty.Builder.() -> Unit): Unit =
+      override fun otaaV10x(otaaV10X: OtaaV10xProperty.Builder.() -> Unit): Unit =
           otaaV10x(OtaaV10xProperty(otaaV10X))
 
-      public override fun otaaV11(otaaV11: IResolvable) {
+      override fun otaaV11(otaaV11: IResolvable) {
         cdkBuilder.otaaV11(otaaV11.let(IResolvable::unwrap))
       }
 
-      public override fun otaaV11(otaaV11: OtaaV11Property) {
+      override fun otaaV11(otaaV11: OtaaV11Property) {
         cdkBuilder.otaaV11(otaaV11.let(OtaaV11Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("50001fd6c81be7952f9e3e7f379b431600dce85809310301bde2e1cf32cf63a3")
-      public override fun otaaV11(otaaV11: OtaaV11Property.Builder.() -> Unit): Unit =
+      override fun otaaV11(otaaV11: OtaaV11Property.Builder.() -> Unit): Unit =
           otaaV11(OtaaV11Property(otaaV11))
 
-      public override fun serviceProfileId(serviceProfileId: String) {
+      override fun serviceProfileId(serviceProfileId: String) {
         cdkBuilder.serviceProfileId(serviceProfileId)
       }
 
@@ -787,19 +742,19 @@ public open class CfnWirelessDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty,
     ) : LoRaWANDeviceProperty {
-      public override fun abpV10x(): Any? = unwrap(this).getAbpV10X()
+      override fun abpV10x(): Any? = unwrap(this).getAbpV10X()
 
-      public override fun abpV11(): Any? = unwrap(this).getAbpV11()
+      override fun abpV11(): Any? = unwrap(this).getAbpV11()
 
-      public override fun devEui(): String? = unwrap(this).getDevEui()
+      override fun devEui(): String? = unwrap(this).getDevEui()
 
-      public override fun deviceProfileId(): String? = unwrap(this).getDeviceProfileId()
+      override fun deviceProfileId(): String? = unwrap(this).getDeviceProfileId()
 
-      public override fun otaaV10x(): Any? = unwrap(this).getOtaaV10X()
+      override fun otaaV10x(): Any? = unwrap(this).getOtaaV10X()
 
-      public override fun otaaV11(): Any? = unwrap(this).getOtaaV11()
+      override fun otaaV11(): Any? = unwrap(this).getOtaaV11()
 
-      public override fun serviceProfileId(): String? = unwrap(this).getServiceProfileId()
+      override fun serviceProfileId(): String? = unwrap(this).getServiceProfileId()
     }
 
     public companion object {

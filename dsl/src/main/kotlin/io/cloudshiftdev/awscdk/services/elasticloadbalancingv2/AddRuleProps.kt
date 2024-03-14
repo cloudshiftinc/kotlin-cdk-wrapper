@@ -11,11 +11,9 @@ public interface AddRuleProps {
   public fun priority(): Number? = unwrap(this).getPriority()
 
   public interface Builder {
-    public fun conditions(conditions: List<ListenerCondition>) {
-    }
+    public fun conditions(conditions: List<ListenerCondition>)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -23,11 +21,11 @@ public interface AddRuleProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps.builder()
 
-    public override fun conditions(conditions: List<ListenerCondition>) {
+    override fun conditions(conditions: List<ListenerCondition>) {
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
@@ -38,10 +36,10 @@ public interface AddRuleProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps,
   ) : AddRuleProps {
-    public override fun conditions(): List<ListenerCondition> =
+    override fun conditions(): List<ListenerCondition> =
         unwrap(this).getConditions()?.map(ListenerCondition::wrap) ?: emptyList()
 
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
   }
 
   public companion object {

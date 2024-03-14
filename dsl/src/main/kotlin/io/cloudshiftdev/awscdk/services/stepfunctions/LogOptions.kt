@@ -12,29 +12,26 @@ public interface LogOptions {
   public fun level(): LogLevel? = unwrap(this).getLevel()?.let(LogLevel::wrap)
 
   public interface Builder {
-    public fun destination(destination: ILogGroup) {
-    }
+    public fun destination(destination: ILogGroup)
 
-    public fun includeExecutionData(includeExecutionData: Boolean) {
-    }
+    public fun includeExecutionData(includeExecutionData: Boolean)
 
-    public fun level(level: LogLevel) {
-    }
+    public fun level(level: LogLevel)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.LogOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.LogOptions.builder()
 
-    public override fun destination(destination: ILogGroup) {
+    override fun destination(destination: ILogGroup) {
       cdkBuilder.destination(destination.let(ILogGroup::unwrap))
     }
 
-    public override fun includeExecutionData(includeExecutionData: Boolean) {
+    override fun includeExecutionData(includeExecutionData: Boolean) {
       cdkBuilder.includeExecutionData(includeExecutionData)
     }
 
-    public override fun level(level: LogLevel) {
+    override fun level(level: LogLevel) {
       cdkBuilder.level(level.let(LogLevel::unwrap))
     }
 
@@ -45,12 +42,11 @@ public interface LogOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.LogOptions,
   ) : LogOptions {
-    public override fun destination(): ILogGroup =
-        unwrap(this).getDestination().let(ILogGroup::wrap)
+    override fun destination(): ILogGroup = unwrap(this).getDestination().let(ILogGroup::wrap)
 
-    public override fun includeExecutionData(): Boolean? = unwrap(this).getIncludeExecutionData()
+    override fun includeExecutionData(): Boolean? = unwrap(this).getIncludeExecutionData()
 
-    public override fun level(): LogLevel? = unwrap(this).getLevel()?.let(LogLevel::wrap)
+    override fun level(): LogLevel? = unwrap(this).getLevel()?.let(LogLevel::wrap)
   }
 
   public companion object {

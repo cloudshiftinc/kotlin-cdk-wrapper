@@ -76,29 +76,21 @@ public open class CfnTheme internal constructor(
   }
 
   public interface Builder {
-    public fun appId(appId: String) {
-    }
+    public fun appId(appId: String)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun overrides(overrides: IResolvable) {
-    }
+    public fun overrides(overrides: IResolvable)
 
-    public fun overrides(overrides: List<Any>) {
-    }
+    public fun overrides(overrides: List<Any>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun values(values: IResolvable) {
-    }
+    public fun values(values: IResolvable)
 
-    public fun values(values: List<Any>) {
-    }
+    public fun values(values: List<Any>)
   }
 
   private class BuilderImpl(
@@ -108,35 +100,35 @@ public open class CfnTheme internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.Builder =
         software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.Builder.create(scope, id)
 
-    public override fun appId(appId: String) {
+    override fun appId(appId: String) {
       cdkBuilder.appId(appId)
     }
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun overrides(overrides: IResolvable) {
+    override fun overrides(overrides: IResolvable) {
       cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
     }
 
-    public override fun overrides(overrides: List<Any>) {
+    override fun overrides(overrides: List<Any>) {
       cdkBuilder.overrides(overrides)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun values(values: IResolvable) {
+    override fun values(values: IResolvable) {
       cdkBuilder.values(values.let(IResolvable::unwrap))
     }
 
-    public override fun values(values: List<Any>) {
+    override fun values(values: List<Any>) {
       cdkBuilder.values(values)
     }
 
@@ -171,19 +163,15 @@ public open class CfnTheme internal constructor(
     public fun `value`(): Any? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: IResolvable) {
-      }
+      public fun `value`(`value`: IResolvable)
 
-      public fun `value`(`value`: ThemeValueProperty) {
-      }
+      public fun `value`(`value`: ThemeValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("35433fbe0a3c1523107c7f69fb9c117e2d4e7d21eb2de9e2f329067b72cd4cfe")
-      public fun `value`(`value`: ThemeValueProperty.Builder.() -> Unit) {
-      }
+      public fun `value`(`value`: ThemeValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -191,21 +179,21 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: IResolvable) {
+      override fun `value`(`value`: IResolvable) {
         cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
       }
 
-      public override fun `value`(`value`: ThemeValueProperty) {
+      override fun `value`(`value`: ThemeValueProperty) {
         cdkBuilder.`value`(`value`.let(ThemeValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("35433fbe0a3c1523107c7f69fb9c117e2d4e7d21eb2de9e2f329067b72cd4cfe")
-      public override fun `value`(`value`: ThemeValueProperty.Builder.() -> Unit): Unit =
+      override fun `value`(`value`: ThemeValueProperty.Builder.() -> Unit): Unit =
           `value`(ThemeValueProperty(`value`))
 
       public fun build():
@@ -217,9 +205,9 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValuesProperty,
     ) : ThemeValuesProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): Any? = unwrap(this).getValue()
+      override fun `value`(): Any? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -248,14 +236,11 @@ public open class CfnTheme internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun children(children: IResolvable) {
-      }
+      public fun children(children: IResolvable)
 
-      public fun children(children: List<Any>) {
-      }
+      public fun children(children: List<Any>)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -263,15 +248,15 @@ public open class CfnTheme internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty.builder()
 
-      public override fun children(children: IResolvable) {
+      override fun children(children: IResolvable) {
         cdkBuilder.children(children.let(IResolvable::unwrap))
       }
 
-      public override fun children(children: List<Any>) {
+      override fun children(children: List<Any>) {
         cdkBuilder.children(children)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -284,9 +269,9 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnTheme.ThemeValueProperty,
     ) : ThemeValueProperty {
-      public override fun children(): Any? = unwrap(this).getChildren()
+      override fun children(): Any? = unwrap(this).getChildren()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

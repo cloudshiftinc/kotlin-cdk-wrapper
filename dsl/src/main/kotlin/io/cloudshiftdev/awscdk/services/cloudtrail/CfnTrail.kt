@@ -158,77 +158,53 @@ public open class CfnTrail internal constructor(
   }
 
   public interface Builder {
-    public fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
-    }
+    public fun advancedEventSelectors(advancedEventSelectors: IResolvable)
 
-    public fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
-    }
+    public fun advancedEventSelectors(advancedEventSelectors: List<Any>)
 
-    public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
-    }
+    public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
 
-    public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
-    }
+    public fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String)
 
-    public fun enableLogFileValidation(enableLogFileValidation: Boolean) {
-    }
+    public fun enableLogFileValidation(enableLogFileValidation: Boolean)
 
-    public fun enableLogFileValidation(enableLogFileValidation: IResolvable) {
-    }
+    public fun enableLogFileValidation(enableLogFileValidation: IResolvable)
 
-    public fun eventSelectors(eventSelectors: IResolvable) {
-    }
+    public fun eventSelectors(eventSelectors: IResolvable)
 
-    public fun eventSelectors(eventSelectors: List<Any>) {
-    }
+    public fun eventSelectors(eventSelectors: List<Any>)
 
-    public fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
-    }
+    public fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean)
 
-    public fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable) {
-    }
+    public fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable)
 
-    public fun insightSelectors(insightSelectors: IResolvable) {
-    }
+    public fun insightSelectors(insightSelectors: IResolvable)
 
-    public fun insightSelectors(insightSelectors: List<Any>) {
-    }
+    public fun insightSelectors(insightSelectors: List<Any>)
 
-    public fun isLogging(isLogging: Boolean) {
-    }
+    public fun isLogging(isLogging: Boolean)
 
-    public fun isLogging(isLogging: IResolvable) {
-    }
+    public fun isLogging(isLogging: IResolvable)
 
-    public fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
-    }
+    public fun isMultiRegionTrail(isMultiRegionTrail: Boolean)
 
-    public fun isMultiRegionTrail(isMultiRegionTrail: IResolvable) {
-    }
+    public fun isMultiRegionTrail(isMultiRegionTrail: IResolvable)
 
-    public fun isOrganizationTrail(isOrganizationTrail: Boolean) {
-    }
+    public fun isOrganizationTrail(isOrganizationTrail: Boolean)
 
-    public fun isOrganizationTrail(isOrganizationTrail: IResolvable) {
-    }
+    public fun isOrganizationTrail(isOrganizationTrail: IResolvable)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun s3BucketName(s3BucketName: String) {
-    }
+    public fun s3BucketName(s3BucketName: String)
 
-    public fun s3KeyPrefix(s3KeyPrefix: String) {
-    }
+    public fun s3KeyPrefix(s3KeyPrefix: String)
 
-    public fun snsTopicName(snsTopicName: String) {
-    }
+    public fun snsTopicName(snsTopicName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trailName(trailName: String) {
-    }
+    public fun trailName(trailName: String)
   }
 
   private class BuilderImpl(
@@ -238,99 +214,99 @@ public open class CfnTrail internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudtrail.CfnTrail.Builder =
         software.amazon.awscdk.services.cloudtrail.CfnTrail.Builder.create(scope, id)
 
-    public override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
+    override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
       cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable::unwrap))
     }
 
-    public override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
+    override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
       cdkBuilder.advancedEventSelectors(advancedEventSelectors)
     }
 
-    public override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
+    override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
       cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
     }
 
-    public override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
+    override fun cloudWatchLogsRoleArn(cloudWatchLogsRoleArn: String) {
       cdkBuilder.cloudWatchLogsRoleArn(cloudWatchLogsRoleArn)
     }
 
-    public override fun enableLogFileValidation(enableLogFileValidation: Boolean) {
+    override fun enableLogFileValidation(enableLogFileValidation: Boolean) {
       cdkBuilder.enableLogFileValidation(enableLogFileValidation)
     }
 
-    public override fun enableLogFileValidation(enableLogFileValidation: IResolvable) {
+    override fun enableLogFileValidation(enableLogFileValidation: IResolvable) {
       cdkBuilder.enableLogFileValidation(enableLogFileValidation.let(IResolvable::unwrap))
     }
 
-    public override fun eventSelectors(eventSelectors: IResolvable) {
+    override fun eventSelectors(eventSelectors: IResolvable) {
       cdkBuilder.eventSelectors(eventSelectors.let(IResolvable::unwrap))
     }
 
-    public override fun eventSelectors(eventSelectors: List<Any>) {
+    override fun eventSelectors(eventSelectors: List<Any>) {
       cdkBuilder.eventSelectors(eventSelectors)
     }
 
-    public override fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
+    override fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
       cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents)
     }
 
-    public override fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable) {
+    override fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable) {
       cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents.let(IResolvable::unwrap))
     }
 
-    public override fun insightSelectors(insightSelectors: IResolvable) {
+    override fun insightSelectors(insightSelectors: IResolvable) {
       cdkBuilder.insightSelectors(insightSelectors.let(IResolvable::unwrap))
     }
 
-    public override fun insightSelectors(insightSelectors: List<Any>) {
+    override fun insightSelectors(insightSelectors: List<Any>) {
       cdkBuilder.insightSelectors(insightSelectors)
     }
 
-    public override fun isLogging(isLogging: Boolean) {
+    override fun isLogging(isLogging: Boolean) {
       cdkBuilder.isLogging(isLogging)
     }
 
-    public override fun isLogging(isLogging: IResolvable) {
+    override fun isLogging(isLogging: IResolvable) {
       cdkBuilder.isLogging(isLogging.let(IResolvable::unwrap))
     }
 
-    public override fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
+    override fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
       cdkBuilder.isMultiRegionTrail(isMultiRegionTrail)
     }
 
-    public override fun isMultiRegionTrail(isMultiRegionTrail: IResolvable) {
+    override fun isMultiRegionTrail(isMultiRegionTrail: IResolvable) {
       cdkBuilder.isMultiRegionTrail(isMultiRegionTrail.let(IResolvable::unwrap))
     }
 
-    public override fun isOrganizationTrail(isOrganizationTrail: Boolean) {
+    override fun isOrganizationTrail(isOrganizationTrail: Boolean) {
       cdkBuilder.isOrganizationTrail(isOrganizationTrail)
     }
 
-    public override fun isOrganizationTrail(isOrganizationTrail: IResolvable) {
+    override fun isOrganizationTrail(isOrganizationTrail: IResolvable) {
       cdkBuilder.isOrganizationTrail(isOrganizationTrail.let(IResolvable::unwrap))
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun s3BucketName(s3BucketName: String) {
+    override fun s3BucketName(s3BucketName: String) {
       cdkBuilder.s3BucketName(s3BucketName)
     }
 
-    public override fun s3KeyPrefix(s3KeyPrefix: String) {
+    override fun s3KeyPrefix(s3KeyPrefix: String) {
       cdkBuilder.s3KeyPrefix(s3KeyPrefix)
     }
 
-    public override fun snsTopicName(snsTopicName: String) {
+    override fun snsTopicName(snsTopicName: String) {
       cdkBuilder.snsTopicName(snsTopicName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trailName(trailName: String) {
+    override fun trailName(trailName: String) {
       cdkBuilder.trailName(trailName)
     }
 
@@ -364,14 +340,11 @@ public open class CfnTrail internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun fieldSelectors(fieldSelectors: IResolvable) {
-      }
+      public fun fieldSelectors(fieldSelectors: IResolvable)
 
-      public fun fieldSelectors(fieldSelectors: List<Any>) {
-      }
+      public fun fieldSelectors(fieldSelectors: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -380,15 +353,15 @@ public open class CfnTrail internal constructor(
           =
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty.builder()
 
-      public override fun fieldSelectors(fieldSelectors: IResolvable) {
+      override fun fieldSelectors(fieldSelectors: IResolvable) {
         cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable::unwrap))
       }
 
-      public override fun fieldSelectors(fieldSelectors: List<Any>) {
+      override fun fieldSelectors(fieldSelectors: List<Any>) {
         cdkBuilder.fieldSelectors(fieldSelectors)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -401,9 +374,9 @@ public open class CfnTrail internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty,
     ) : AdvancedEventSelectorProperty {
-      public override fun fieldSelectors(): Any = unwrap(this).getFieldSelectors()
+      override fun fieldSelectors(): Any = unwrap(this).getFieldSelectors()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -437,23 +410,17 @@ public open class CfnTrail internal constructor(
     public fun readWriteType(): String? = unwrap(this).getReadWriteType()
 
     public interface Builder {
-      public fun dataResources(dataResources: IResolvable) {
-      }
+      public fun dataResources(dataResources: IResolvable)
 
-      public fun dataResources(dataResources: List<Any>) {
-      }
+      public fun dataResources(dataResources: List<Any>)
 
-      public fun excludeManagementEventSources(excludeManagementEventSources: List<String>) {
-      }
+      public fun excludeManagementEventSources(excludeManagementEventSources: List<String>)
 
-      public fun includeManagementEvents(includeManagementEvents: Boolean) {
-      }
+      public fun includeManagementEvents(includeManagementEvents: Boolean)
 
-      public fun includeManagementEvents(includeManagementEvents: IResolvable) {
-      }
+      public fun includeManagementEvents(includeManagementEvents: IResolvable)
 
-      public fun readWriteType(readWriteType: String) {
-      }
+      public fun readWriteType(readWriteType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -461,28 +428,27 @@ public open class CfnTrail internal constructor(
           software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty.Builder =
           software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty.builder()
 
-      public override fun dataResources(dataResources: IResolvable) {
+      override fun dataResources(dataResources: IResolvable) {
         cdkBuilder.dataResources(dataResources.let(IResolvable::unwrap))
       }
 
-      public override fun dataResources(dataResources: List<Any>) {
+      override fun dataResources(dataResources: List<Any>) {
         cdkBuilder.dataResources(dataResources)
       }
 
-      public override
-          fun excludeManagementEventSources(excludeManagementEventSources: List<String>) {
+      override fun excludeManagementEventSources(excludeManagementEventSources: List<String>) {
         cdkBuilder.excludeManagementEventSources(excludeManagementEventSources)
       }
 
-      public override fun includeManagementEvents(includeManagementEvents: Boolean) {
+      override fun includeManagementEvents(includeManagementEvents: Boolean) {
         cdkBuilder.includeManagementEvents(includeManagementEvents)
       }
 
-      public override fun includeManagementEvents(includeManagementEvents: IResolvable) {
+      override fun includeManagementEvents(includeManagementEvents: IResolvable) {
         cdkBuilder.includeManagementEvents(includeManagementEvents.let(IResolvable::unwrap))
       }
 
-      public override fun readWriteType(readWriteType: String) {
+      override fun readWriteType(readWriteType: String) {
         cdkBuilder.readWriteType(readWriteType)
       }
 
@@ -494,15 +460,14 @@ public open class CfnTrail internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty,
     ) : EventSelectorProperty {
-      public override fun dataResources(): Any? = unwrap(this).getDataResources()
+      override fun dataResources(): Any? = unwrap(this).getDataResources()
 
-      public override fun excludeManagementEventSources(): List<String> =
+      override fun excludeManagementEventSources(): List<String> =
           unwrap(this).getExcludeManagementEventSources() ?: emptyList()
 
-      public override fun includeManagementEvents(): Any? =
-          unwrap(this).getIncludeManagementEvents()
+      override fun includeManagementEvents(): Any? = unwrap(this).getIncludeManagementEvents()
 
-      public override fun readWriteType(): String? = unwrap(this).getReadWriteType()
+      override fun readWriteType(): String? = unwrap(this).getReadWriteType()
     }
 
     public companion object {
@@ -541,26 +506,19 @@ public open class CfnTrail internal constructor(
     public fun startsWith(): List<String> = unwrap(this).getStartsWith() ?: emptyList()
 
     public interface Builder {
-      public fun endsWith(endsWith: List<String>) {
-      }
+      public fun endsWith(endsWith: List<String>)
 
-      public fun equalTo(equalTo: List<String>) {
-      }
+      public fun equalTo(equalTo: List<String>)
 
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun notEndsWith(notEndsWith: List<String>) {
-      }
+      public fun notEndsWith(notEndsWith: List<String>)
 
-      public fun notEquals(notEquals: List<String>) {
-      }
+      public fun notEquals(notEquals: List<String>)
 
-      public fun notStartsWith(notStartsWith: List<String>) {
-      }
+      public fun notStartsWith(notStartsWith: List<String>)
 
-      public fun startsWith(startsWith: List<String>) {
-      }
+      public fun startsWith(startsWith: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -569,31 +527,31 @@ public open class CfnTrail internal constructor(
           =
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty.builder()
 
-      public override fun endsWith(endsWith: List<String>) {
+      override fun endsWith(endsWith: List<String>) {
         cdkBuilder.endsWith(endsWith)
       }
 
-      public override fun equalTo(equalTo: List<String>) {
+      override fun equalTo(equalTo: List<String>) {
         cdkBuilder.equalTo(equalTo)
       }
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun notEndsWith(notEndsWith: List<String>) {
+      override fun notEndsWith(notEndsWith: List<String>) {
         cdkBuilder.notEndsWith(notEndsWith)
       }
 
-      public override fun notEquals(notEquals: List<String>) {
+      override fun notEquals(notEquals: List<String>) {
         cdkBuilder.notEquals(notEquals)
       }
 
-      public override fun notStartsWith(notStartsWith: List<String>) {
+      override fun notStartsWith(notStartsWith: List<String>) {
         cdkBuilder.notStartsWith(notStartsWith)
       }
 
-      public override fun startsWith(startsWith: List<String>) {
+      override fun startsWith(startsWith: List<String>) {
         cdkBuilder.startsWith(startsWith)
       }
 
@@ -606,20 +564,19 @@ public open class CfnTrail internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty,
     ) : AdvancedFieldSelectorProperty {
-      public override fun endsWith(): List<String> = unwrap(this).getEndsWith() ?: emptyList()
+      override fun endsWith(): List<String> = unwrap(this).getEndsWith() ?: emptyList()
 
-      public override fun equalTo(): List<String> = unwrap(this).getEqualTo() ?: emptyList()
+      override fun equalTo(): List<String> = unwrap(this).getEqualTo() ?: emptyList()
 
-      public override fun `field`(): String = unwrap(this).getField()
+      override fun `field`(): String = unwrap(this).getField()
 
-      public override fun notEndsWith(): List<String> = unwrap(this).getNotEndsWith() ?: emptyList()
+      override fun notEndsWith(): List<String> = unwrap(this).getNotEndsWith() ?: emptyList()
 
-      public override fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
+      override fun notEquals(): List<String> = unwrap(this).getNotEquals() ?: emptyList()
 
-      public override fun notStartsWith(): List<String> = unwrap(this).getNotStartsWith() ?:
-          emptyList()
+      override fun notStartsWith(): List<String> = unwrap(this).getNotStartsWith() ?: emptyList()
 
-      public override fun startsWith(): List<String> = unwrap(this).getStartsWith() ?: emptyList()
+      override fun startsWith(): List<String> = unwrap(this).getStartsWith() ?: emptyList()
     }
 
     public companion object {
@@ -648,11 +605,9 @@ public open class CfnTrail internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -660,11 +615,11 @@ public open class CfnTrail internal constructor(
           software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty.Builder =
           software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -676,9 +631,9 @@ public open class CfnTrail internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty,
     ) : DataResourceProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -705,8 +660,7 @@ public open class CfnTrail internal constructor(
     public fun insightType(): String? = unwrap(this).getInsightType()
 
     public interface Builder {
-      public fun insightType(insightType: String) {
-      }
+      public fun insightType(insightType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -714,7 +668,7 @@ public open class CfnTrail internal constructor(
           software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty.Builder =
           software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty.builder()
 
-      public override fun insightType(insightType: String) {
+      override fun insightType(insightType: String) {
         cdkBuilder.insightType(insightType)
       }
 
@@ -727,7 +681,7 @@ public open class CfnTrail internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty,
     ) : InsightSelectorProperty {
-      public override fun insightType(): String? = unwrap(this).getInsightType()
+      override fun insightType(): String? = unwrap(this).getInsightType()
     }
 
     public companion object {

@@ -141,65 +141,45 @@ public open class CfnComponent internal constructor(
   }
 
   public interface Builder {
-    public fun appId(appId: String) {
-    }
+    public fun appId(appId: String)
 
-    public fun bindingProperties(bindingProperties: IResolvable) {
-    }
+    public fun bindingProperties(bindingProperties: IResolvable)
 
-    public fun bindingProperties(bindingProperties: Map<String, Any>) {
-    }
+    public fun bindingProperties(bindingProperties: Map<String, Any>)
 
-    public fun children(children: IResolvable) {
-    }
+    public fun children(children: IResolvable)
 
-    public fun children(children: List<Any>) {
-    }
+    public fun children(children: List<Any>)
 
-    public fun collectionProperties(collectionProperties: IResolvable) {
-    }
+    public fun collectionProperties(collectionProperties: IResolvable)
 
-    public fun collectionProperties(collectionProperties: Map<String, Any>) {
-    }
+    public fun collectionProperties(collectionProperties: Map<String, Any>)
 
-    public fun componentType(componentType: String) {
-    }
+    public fun componentType(componentType: String)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun events(events: IResolvable) {
-    }
+    public fun events(events: IResolvable)
 
-    public fun events(events: Map<String, Any>) {
-    }
+    public fun events(events: Map<String, Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun overrides(overrides: Any) {
-    }
+    public fun overrides(overrides: Any)
 
-    public fun properties(properties: IResolvable) {
-    }
+    public fun properties(properties: IResolvable)
 
-    public fun properties(properties: Map<String, Any>) {
-    }
+    public fun properties(properties: Map<String, Any>)
 
-    public fun schemaVersion(schemaVersion: String) {
-    }
+    public fun schemaVersion(schemaVersion: String)
 
-    public fun sourceId(sourceId: String) {
-    }
+    public fun sourceId(sourceId: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun variants(variants: IResolvable) {
-    }
+    public fun variants(variants: IResolvable)
 
-    public fun variants(variants: List<Any>) {
-    }
+    public fun variants(variants: List<Any>)
   }
 
   private class BuilderImpl(
@@ -209,83 +189,83 @@ public open class CfnComponent internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.Builder =
         software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.Builder.create(scope, id)
 
-    public override fun appId(appId: String) {
+    override fun appId(appId: String) {
       cdkBuilder.appId(appId)
     }
 
-    public override fun bindingProperties(bindingProperties: IResolvable) {
+    override fun bindingProperties(bindingProperties: IResolvable) {
       cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
     }
 
-    public override fun bindingProperties(bindingProperties: Map<String, Any>) {
+    override fun bindingProperties(bindingProperties: Map<String, Any>) {
       cdkBuilder.bindingProperties(bindingProperties)
     }
 
-    public override fun children(children: IResolvable) {
+    override fun children(children: IResolvable) {
       cdkBuilder.children(children.let(IResolvable::unwrap))
     }
 
-    public override fun children(children: List<Any>) {
+    override fun children(children: List<Any>) {
       cdkBuilder.children(children)
     }
 
-    public override fun collectionProperties(collectionProperties: IResolvable) {
+    override fun collectionProperties(collectionProperties: IResolvable) {
       cdkBuilder.collectionProperties(collectionProperties.let(IResolvable::unwrap))
     }
 
-    public override fun collectionProperties(collectionProperties: Map<String, Any>) {
+    override fun collectionProperties(collectionProperties: Map<String, Any>) {
       cdkBuilder.collectionProperties(collectionProperties)
     }
 
-    public override fun componentType(componentType: String) {
+    override fun componentType(componentType: String) {
       cdkBuilder.componentType(componentType)
     }
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun events(events: IResolvable) {
+    override fun events(events: IResolvable) {
       cdkBuilder.events(events.let(IResolvable::unwrap))
     }
 
-    public override fun events(events: Map<String, Any>) {
+    override fun events(events: Map<String, Any>) {
       cdkBuilder.events(events)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun overrides(overrides: Any) {
+    override fun overrides(overrides: Any) {
       cdkBuilder.overrides(overrides)
     }
 
-    public override fun properties(properties: IResolvable) {
+    override fun properties(properties: IResolvable) {
       cdkBuilder.properties(properties.let(IResolvable::unwrap))
     }
 
-    public override fun properties(properties: Map<String, Any>) {
+    override fun properties(properties: Map<String, Any>) {
       cdkBuilder.properties(properties)
     }
 
-    public override fun schemaVersion(schemaVersion: String) {
+    override fun schemaVersion(schemaVersion: String) {
       cdkBuilder.schemaVersion(schemaVersion)
     }
 
-    public override fun sourceId(sourceId: String) {
+    override fun sourceId(sourceId: String) {
       cdkBuilder.sourceId(sourceId)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun variants(variants: IResolvable) {
+    override fun variants(variants: IResolvable) {
       cdkBuilder.variants(variants.let(IResolvable::unwrap))
     }
 
-    public override fun variants(variants: List<Any>) {
+    override fun variants(variants: List<Any>) {
       cdkBuilder.variants(variants)
     }
 
@@ -322,22 +302,17 @@ public open class CfnComponent internal constructor(
     public fun `set`(): Any
 
     public interface Builder {
-      public fun componentName(componentName: String) {
-      }
+      public fun componentName(componentName: String)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
 
-      public fun `set`(`set`: IResolvable) {
-      }
+      public fun `set`(`set`: IResolvable)
 
-      public fun `set`(`set`: ComponentPropertyProperty) {
-      }
+      public fun `set`(`set`: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("268e7dd1367b58ce4520bdb52a483dcab7206d642fd774d0fe24797972f81210")
-      public fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -346,25 +321,25 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty.builder()
 
-      public override fun componentName(componentName: String) {
+      override fun componentName(componentName: String) {
         cdkBuilder.componentName(componentName)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
-      public override fun `set`(`set`: IResolvable) {
+      override fun `set`(`set`: IResolvable) {
         cdkBuilder.`set`(`set`.let(IResolvable::unwrap))
       }
 
-      public override fun `set`(`set`: ComponentPropertyProperty) {
+      override fun `set`(`set`: ComponentPropertyProperty) {
         cdkBuilder.`set`(`set`.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("268e7dd1367b58ce4520bdb52a483dcab7206d642fd774d0fe24797972f81210")
-      public override fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun `set`(`set`: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           `set`(ComponentPropertyProperty(`set`))
 
       public fun build():
@@ -376,11 +351,11 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.MutationActionSetStateParameterProperty,
     ) : MutationActionSetStateParameterProperty {
-      public override fun componentName(): String = unwrap(this).getComponentName()
+      override fun componentName(): String = unwrap(this).getComponentName()
 
-      public override fun `property`(): String = unwrap(this).getProperty()
+      override fun `property`(): String = unwrap(this).getProperty()
 
-      public override fun `set`(): Any = unwrap(this).getSet()
+      override fun `set`(): Any = unwrap(this).getSet()
     }
 
     public companion object {
@@ -418,32 +393,23 @@ public open class CfnComponent internal constructor(
     public fun sourceId(): String? = unwrap(this).getSourceId()
 
     public interface Builder {
-      public fun children(children: IResolvable) {
-      }
+      public fun children(children: IResolvable)
 
-      public fun children(children: List<Any>) {
-      }
+      public fun children(children: List<Any>)
 
-      public fun componentType(componentType: String) {
-      }
+      public fun componentType(componentType: String)
 
-      public fun events(events: IResolvable) {
-      }
+      public fun events(events: IResolvable)
 
-      public fun events(events: Map<String, Any>) {
-      }
+      public fun events(events: Map<String, Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun properties(properties: IResolvable) {
-      }
+      public fun properties(properties: IResolvable)
 
-      public fun properties(properties: Map<String, Any>) {
-      }
+      public fun properties(properties: Map<String, Any>)
 
-      public fun sourceId(sourceId: String) {
-      }
+      public fun sourceId(sourceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -452,39 +418,39 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty.builder()
 
-      public override fun children(children: IResolvable) {
+      override fun children(children: IResolvable) {
         cdkBuilder.children(children.let(IResolvable::unwrap))
       }
 
-      public override fun children(children: List<Any>) {
+      override fun children(children: List<Any>) {
         cdkBuilder.children(children)
       }
 
-      public override fun componentType(componentType: String) {
+      override fun componentType(componentType: String) {
         cdkBuilder.componentType(componentType)
       }
 
-      public override fun events(events: IResolvable) {
+      override fun events(events: IResolvable) {
         cdkBuilder.events(events.let(IResolvable::unwrap))
       }
 
-      public override fun events(events: Map<String, Any>) {
+      override fun events(events: Map<String, Any>) {
         cdkBuilder.events(events)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun properties(properties: IResolvable) {
+      override fun properties(properties: IResolvable) {
         cdkBuilder.properties(properties.let(IResolvable::unwrap))
       }
 
-      public override fun properties(properties: Map<String, Any>) {
+      override fun properties(properties: Map<String, Any>) {
         cdkBuilder.properties(properties)
       }
 
-      public override fun sourceId(sourceId: String) {
+      override fun sourceId(sourceId: String) {
         cdkBuilder.sourceId(sourceId)
       }
 
@@ -497,17 +463,17 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentChildProperty,
     ) : ComponentChildProperty {
-      public override fun children(): Any? = unwrap(this).getChildren()
+      override fun children(): Any? = unwrap(this).getChildren()
 
-      public override fun componentType(): String = unwrap(this).getComponentType()
+      override fun componentType(): String = unwrap(this).getComponentType()
 
-      public override fun events(): Any? = unwrap(this).getEvents()
+      override fun events(): Any? = unwrap(this).getEvents()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun properties(): Any = unwrap(this).getProperties()
+      override fun properties(): Any = unwrap(this).getProperties()
 
-      public override fun sourceId(): String? = unwrap(this).getSourceId()
+      override fun sourceId(): String? = unwrap(this).getSourceId()
     }
 
     public companion object {
@@ -536,11 +502,9 @@ public open class CfnComponent internal constructor(
     public fun `property`(): String
 
     public interface Builder {
-      public fun element(element: String) {
-      }
+      public fun element(element: String)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -549,11 +513,11 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty.builder()
 
-      public override fun element(element: String) {
+      override fun element(element: String) {
         cdkBuilder.element(element)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
@@ -566,9 +530,9 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.FormBindingElementProperty,
     ) : FormBindingElementProperty {
-      public override fun element(): String = unwrap(this).getElement()
+      override fun element(): String = unwrap(this).getElement()
 
-      public override fun `property`(): String = unwrap(this).getProperty()
+      override fun `property`(): String = unwrap(this).getProperty()
     }
 
     public companion object {
@@ -599,22 +563,17 @@ public open class CfnComponent internal constructor(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun bindingEvent(bindingEvent: String) {
-      }
+      public fun bindingEvent(bindingEvent: String)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: ActionParametersProperty) {
-      }
+      public fun parameters(parameters: ActionParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2830b6054ec32069ea63b002e6341cc356b212c778069b2b216fb49e696dd57")
-      public fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit) {
-      }
+      public fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -623,26 +582,26 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun bindingEvent(bindingEvent: String) {
+      override fun bindingEvent(bindingEvent: String) {
         cdkBuilder.bindingEvent(bindingEvent)
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: ActionParametersProperty) {
+      override fun parameters(parameters: ActionParametersProperty) {
         cdkBuilder.parameters(parameters.let(ActionParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2830b6054ec32069ea63b002e6341cc356b212c778069b2b216fb49e696dd57")
-      public override fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit): Unit
-          = parameters(ActionParametersProperty(parameters))
+      override fun parameters(parameters: ActionParametersProperty.Builder.() -> Unit): Unit =
+          parameters(ActionParametersProperty(parameters))
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty =
@@ -653,11 +612,11 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentEventProperty,
     ) : ComponentEventProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
 
-      public override fun bindingEvent(): String? = unwrap(this).getBindingEvent()
+      override fun bindingEvent(): String? = unwrap(this).getBindingEvent()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
     }
 
     public companion object {
@@ -712,86 +671,62 @@ public open class CfnComponent internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun bindingProperties(bindingProperties: IResolvable) {
-      }
+      public fun bindingProperties(bindingProperties: IResolvable)
 
-      public fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty) {
-      }
+      public fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2dcd3db6920bfaa007a0b3fb1ff2b36cc7f8fd52acfeed84578d23db202caa90")
       public
-          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit)
 
-      public fun bindings(bindings: IResolvable) {
-      }
+      public fun bindings(bindings: IResolvable)
 
-      public fun bindings(bindings: Map<String, Any>) {
-      }
+      public fun bindings(bindings: Map<String, Any>)
 
-      public fun collectionBindingProperties(collectionBindingProperties: IResolvable) {
-      }
+      public fun collectionBindingProperties(collectionBindingProperties: IResolvable)
 
       public
-          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty) {
-      }
+          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1fddd1f0dd5ea438a032b6b81a2bfb7edadb0fcd314202ebffb5e3d9b377c62")
       public
-          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit)
 
-      public fun componentName(componentName: String) {
-      }
+      public fun componentName(componentName: String)
 
-      public fun concat(concat: IResolvable) {
-      }
+      public fun concat(concat: IResolvable)
 
-      public fun concat(concat: List<Any>) {
-      }
+      public fun concat(concat: List<Any>)
 
-      public fun condition(condition: IResolvable) {
-      }
+      public fun condition(condition: IResolvable)
 
-      public fun condition(condition: ComponentConditionPropertyProperty) {
-      }
+      public fun condition(condition: ComponentConditionPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e62b20dc5d4889db9e220ec40a5ff6226b3ee7051309bf21dcff586c5556c04")
-      public fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit)
 
-      public fun configured(configured: Boolean) {
-      }
+      public fun configured(configured: Boolean)
 
-      public fun configured(configured: IResolvable) {
-      }
+      public fun configured(configured: IResolvable)
 
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun event(event: String) {
-      }
+      public fun event(event: String)
 
-      public fun importedValue(importedValue: String) {
-      }
+      public fun importedValue(importedValue: String)
 
-      public fun model(model: String) {
-      }
+      public fun model(model: String)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun userAttribute(userAttribute: String) {
-      }
+      public fun userAttribute(userAttribute: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -800,108 +735,107 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty.builder()
 
-      public override fun bindingProperties(bindingProperties: IResolvable) {
+      override fun bindingProperties(bindingProperties: IResolvable) {
         cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty) {
         cdkBuilder.bindingProperties(bindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2dcd3db6920bfaa007a0b3fb1ff2b36cc7f8fd52acfeed84578d23db202caa90")
-      public override
+      override
           fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit):
           Unit = bindingProperties(ComponentPropertyBindingPropertiesProperty(bindingProperties))
 
-      public override fun bindings(bindings: IResolvable) {
+      override fun bindings(bindings: IResolvable) {
         cdkBuilder.bindings(bindings.let(IResolvable::unwrap))
       }
 
-      public override fun bindings(bindings: Map<String, Any>) {
+      override fun bindings(bindings: Map<String, Any>) {
         cdkBuilder.bindings(bindings)
       }
 
-      public override fun collectionBindingProperties(collectionBindingProperties: IResolvable) {
+      override fun collectionBindingProperties(collectionBindingProperties: IResolvable) {
         cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty) {
         cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1fddd1f0dd5ea438a032b6b81a2bfb7edadb0fcd314202ebffb5e3d9b377c62")
-      public override
+      override
           fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty.Builder.() -> Unit):
           Unit =
           collectionBindingProperties(ComponentPropertyBindingPropertiesProperty(collectionBindingProperties))
 
-      public override fun componentName(componentName: String) {
+      override fun componentName(componentName: String) {
         cdkBuilder.componentName(componentName)
       }
 
-      public override fun concat(concat: IResolvable) {
+      override fun concat(concat: IResolvable) {
         cdkBuilder.concat(concat.let(IResolvable::unwrap))
       }
 
-      public override fun concat(concat: List<Any>) {
+      override fun concat(concat: List<Any>) {
         cdkBuilder.concat(concat)
       }
 
-      public override fun condition(condition: IResolvable) {
+      override fun condition(condition: IResolvable) {
         cdkBuilder.condition(condition.let(IResolvable::unwrap))
       }
 
-      public override fun condition(condition: ComponentConditionPropertyProperty) {
+      override fun condition(condition: ComponentConditionPropertyProperty) {
         cdkBuilder.condition(condition.let(ComponentConditionPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e62b20dc5d4889db9e220ec40a5ff6226b3ee7051309bf21dcff586c5556c04")
-      public override
-          fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit): Unit =
-          condition(ComponentConditionPropertyProperty(condition))
+      override fun condition(condition: ComponentConditionPropertyProperty.Builder.() -> Unit): Unit
+          = condition(ComponentConditionPropertyProperty(condition))
 
-      public override fun configured(configured: Boolean) {
+      override fun configured(configured: Boolean) {
         cdkBuilder.configured(configured)
       }
 
-      public override fun configured(configured: IResolvable) {
+      override fun configured(configured: IResolvable) {
         cdkBuilder.configured(configured.let(IResolvable::unwrap))
       }
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun event(event: String) {
+      override fun event(event: String) {
         cdkBuilder.event(event)
       }
 
-      public override fun importedValue(importedValue: String) {
+      override fun importedValue(importedValue: String) {
         cdkBuilder.importedValue(importedValue)
       }
 
-      public override fun model(model: String) {
+      override fun model(model: String) {
         cdkBuilder.model(model)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun userAttribute(userAttribute: String) {
+      override fun userAttribute(userAttribute: String) {
         cdkBuilder.userAttribute(userAttribute)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -914,36 +848,36 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyProperty,
     ) : ComponentPropertyProperty {
-      public override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
 
-      public override fun bindings(): Any? = unwrap(this).getBindings()
+      override fun bindings(): Any? = unwrap(this).getBindings()
 
-      public override fun collectionBindingProperties(): Any? =
+      override fun collectionBindingProperties(): Any? =
           unwrap(this).getCollectionBindingProperties()
 
-      public override fun componentName(): String? = unwrap(this).getComponentName()
+      override fun componentName(): String? = unwrap(this).getComponentName()
 
-      public override fun concat(): Any? = unwrap(this).getConcat()
+      override fun concat(): Any? = unwrap(this).getConcat()
 
-      public override fun condition(): Any? = unwrap(this).getCondition()
+      override fun condition(): Any? = unwrap(this).getCondition()
 
-      public override fun configured(): Any? = unwrap(this).getConfigured()
+      override fun configured(): Any? = unwrap(this).getConfigured()
 
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun event(): String? = unwrap(this).getEvent()
+      override fun event(): String? = unwrap(this).getEvent()
 
-      public override fun importedValue(): String? = unwrap(this).getImportedValue()
+      override fun importedValue(): String? = unwrap(this).getImportedValue()
 
-      public override fun model(): String? = unwrap(this).getModel()
+      override fun model(): String? = unwrap(this).getModel()
 
-      public override fun `property`(): String? = unwrap(this).getProperty()
+      override fun `property`(): String? = unwrap(this).getProperty()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun userAttribute(): String? = unwrap(this).getUserAttribute()
+      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -984,32 +918,23 @@ public open class CfnComponent internal constructor(
     public fun userAttribute(): String? = unwrap(this).getUserAttribute()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun model(model: String) {
-      }
+      public fun model(model: String)
 
-      public fun predicates(predicates: IResolvable) {
-      }
+      public fun predicates(predicates: IResolvable)
 
-      public fun predicates(predicates: List<Any>) {
-      }
+      public fun predicates(predicates: List<Any>)
 
-      public fun slotName(slotName: String) {
-      }
+      public fun slotName(slotName: String)
 
-      public fun userAttribute(userAttribute: String) {
-      }
+      public fun userAttribute(userAttribute: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1018,39 +943,39 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun model(model: String) {
+      override fun model(model: String) {
         cdkBuilder.model(model)
       }
 
-      public override fun predicates(predicates: IResolvable) {
+      override fun predicates(predicates: IResolvable) {
         cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
       }
 
-      public override fun predicates(predicates: List<Any>) {
+      override fun predicates(predicates: List<Any>) {
         cdkBuilder.predicates(predicates)
       }
 
-      public override fun slotName(slotName: String) {
+      override fun slotName(slotName: String) {
         cdkBuilder.slotName(slotName)
       }
 
-      public override fun userAttribute(userAttribute: String) {
+      override fun userAttribute(userAttribute: String) {
         cdkBuilder.userAttribute(userAttribute)
       }
 
@@ -1063,21 +988,21 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValuePropertiesProperty,
     ) : ComponentBindingPropertiesValuePropertiesProperty {
-      public override fun bucket(): String? = unwrap(this).getBucket()
+      override fun bucket(): String? = unwrap(this).getBucket()
 
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun `field`(): String? = unwrap(this).getField()
+      override fun `field`(): String? = unwrap(this).getField()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun model(): String? = unwrap(this).getModel()
+      override fun model(): String? = unwrap(this).getModel()
 
-      public override fun predicates(): Any? = unwrap(this).getPredicates()
+      override fun predicates(): Any? = unwrap(this).getPredicates()
 
-      public override fun slotName(): String? = unwrap(this).getSlotName()
+      override fun slotName(): String? = unwrap(this).getSlotName()
 
-      public override fun userAttribute(): String? = unwrap(this).getUserAttribute()
+      override fun userAttribute(): String? = unwrap(this).getUserAttribute()
     }
 
     public companion object {
@@ -1107,11 +1032,9 @@ public open class CfnComponent internal constructor(
     public fun `field`(): String
 
     public interface Builder {
-      public fun direction(direction: String) {
-      }
+      public fun direction(direction: String)
 
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1120,11 +1043,11 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty.builder()
 
-      public override fun direction(direction: String) {
+      override fun direction(direction: String) {
         cdkBuilder.direction(direction)
       }
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
@@ -1137,9 +1060,9 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.SortPropertyProperty,
     ) : SortPropertyProperty {
-      public override fun direction(): String = unwrap(this).getDirection()
+      override fun direction(): String = unwrap(this).getDirection()
 
-      public override fun `field`(): String = unwrap(this).getField()
+      override fun `field`(): String = unwrap(this).getField()
     }
 
     public companion object {
@@ -1178,42 +1101,31 @@ public open class CfnComponent internal constructor(
     public fun then(): Any? = unwrap(this).getThen()
 
     public interface Builder {
-      public fun elseValue(elseValue: IResolvable) {
-      }
+      public fun elseValue(elseValue: IResolvable)
 
-      public fun elseValue(elseValue: ComponentPropertyProperty) {
-      }
+      public fun elseValue(elseValue: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eca01b8b92d9526b56f720609de95a3966bbd801629f5d93e39777c641a8b2a4")
-      public fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit)
 
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun operand(operand: String) {
-      }
+      public fun operand(operand: String)
 
-      public fun operandType(operandType: String) {
-      }
+      public fun operandType(operandType: String)
 
-      public fun `operator`(`operator`: String) {
-      }
+      public fun `operator`(`operator`: String)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
 
-      public fun then(then: IResolvable) {
-      }
+      public fun then(then: IResolvable)
 
-      public fun then(then: ComponentPropertyProperty) {
-      }
+      public fun then(then: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40f024eeb71e4a3806fdb425ae62ef18b8adba72de5a6c410aea5203f23f681e")
-      public fun then(then: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun then(then: ComponentPropertyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1222,50 +1134,50 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty.builder()
 
-      public override fun elseValue(elseValue: IResolvable) {
+      override fun elseValue(elseValue: IResolvable) {
         cdkBuilder.elseValue(elseValue.let(IResolvable::unwrap))
       }
 
-      public override fun elseValue(elseValue: ComponentPropertyProperty) {
+      override fun elseValue(elseValue: ComponentPropertyProperty) {
         cdkBuilder.elseValue(elseValue.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eca01b8b92d9526b56f720609de95a3966bbd801629f5d93e39777c641a8b2a4")
-      public override fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun elseValue(elseValue: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           elseValue(ComponentPropertyProperty(elseValue))
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun operand(operand: String) {
+      override fun operand(operand: String) {
         cdkBuilder.operand(operand)
       }
 
-      public override fun operandType(operandType: String) {
+      override fun operandType(operandType: String) {
         cdkBuilder.operandType(operandType)
       }
 
-      public override fun `operator`(`operator`: String) {
+      override fun `operator`(`operator`: String) {
         cdkBuilder.`operator`(`operator`)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
-      public override fun then(then: IResolvable) {
+      override fun then(then: IResolvable) {
         cdkBuilder.then(then.let(IResolvable::unwrap))
       }
 
-      public override fun then(then: ComponentPropertyProperty) {
+      override fun then(then: ComponentPropertyProperty) {
         cdkBuilder.then(then.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40f024eeb71e4a3806fdb425ae62ef18b8adba72de5a6c410aea5203f23f681e")
-      public override fun then(then: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun then(then: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           then(ComponentPropertyProperty(then))
 
       public fun build():
@@ -1277,19 +1189,19 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentConditionPropertyProperty,
     ) : ComponentConditionPropertyProperty {
-      public override fun elseValue(): Any? = unwrap(this).getElseValue()
+      override fun elseValue(): Any? = unwrap(this).getElseValue()
 
-      public override fun `field`(): String? = unwrap(this).getField()
+      override fun `field`(): String? = unwrap(this).getField()
 
-      public override fun operand(): String? = unwrap(this).getOperand()
+      override fun operand(): String? = unwrap(this).getOperand()
 
-      public override fun operandType(): String? = unwrap(this).getOperandType()
+      override fun operandType(): String? = unwrap(this).getOperandType()
 
-      public override fun `operator`(): String? = unwrap(this).getOperator()
+      override fun `operator`(): String? = unwrap(this).getOperator()
 
-      public override fun `property`(): String? = unwrap(this).getProperty()
+      override fun `property`(): String? = unwrap(this).getProperty()
 
-      public override fun then(): Any? = unwrap(this).getThen()
+      override fun then(): Any? = unwrap(this).getThen()
     }
 
     public companion object {
@@ -1321,24 +1233,19 @@ public open class CfnComponent internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun bindingProperties(bindingProperties: IResolvable) {
-      }
+      public fun bindingProperties(bindingProperties: IResolvable)
 
       public
-          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty) {
-      }
+          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1692f10397a6ae11fa8801385935e558d961ff4ad8638e3301b1012903fbe79f")
       public
-          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit) {
-      }
+          fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit)
 
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1347,27 +1254,27 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty.builder()
 
-      public override fun bindingProperties(bindingProperties: IResolvable) {
+      override fun bindingProperties(bindingProperties: IResolvable) {
         cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty) {
         cdkBuilder.bindingProperties(bindingProperties.let(ComponentBindingPropertiesValuePropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1692f10397a6ae11fa8801385935e558d961ff4ad8638e3301b1012903fbe79f")
-      public override
+      override
           fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty.Builder.() -> Unit):
           Unit =
           bindingProperties(ComponentBindingPropertiesValuePropertiesProperty(bindingProperties))
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1380,11 +1287,11 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentBindingPropertiesValueProperty,
     ) : ComponentBindingPropertiesValueProperty {
-      public override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
+      override fun bindingProperties(): Any? = unwrap(this).getBindingProperties()
 
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -1422,29 +1329,21 @@ public open class CfnComponent internal constructor(
     public fun or(): Any? = unwrap(this).getOr()
 
     public interface Builder {
-      public fun and(and: IResolvable) {
-      }
+      public fun and(and: IResolvable)
 
-      public fun and(and: List<Any>) {
-      }
+      public fun and(and: List<Any>)
 
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun operand(operand: String) {
-      }
+      public fun operand(operand: String)
 
-      public fun operandType(operandType: String) {
-      }
+      public fun operandType(operandType: String)
 
-      public fun `operator`(`operator`: String) {
-      }
+      public fun `operator`(`operator`: String)
 
-      public fun or(or: IResolvable) {
-      }
+      public fun or(or: IResolvable)
 
-      public fun or(or: List<Any>) {
-      }
+      public fun or(or: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1452,35 +1351,35 @@ public open class CfnComponent internal constructor(
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty.Builder =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty.builder()
 
-      public override fun and(and: IResolvable) {
+      override fun and(and: IResolvable) {
         cdkBuilder.and(and.let(IResolvable::unwrap))
       }
 
-      public override fun and(and: List<Any>) {
+      override fun and(and: List<Any>) {
         cdkBuilder.and(and)
       }
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun operand(operand: String) {
+      override fun operand(operand: String) {
         cdkBuilder.operand(operand)
       }
 
-      public override fun operandType(operandType: String) {
+      override fun operandType(operandType: String) {
         cdkBuilder.operandType(operandType)
       }
 
-      public override fun `operator`(`operator`: String) {
+      override fun `operator`(`operator`: String) {
         cdkBuilder.`operator`(`operator`)
       }
 
-      public override fun or(or: IResolvable) {
+      override fun or(or: IResolvable) {
         cdkBuilder.or(or.let(IResolvable::unwrap))
       }
 
-      public override fun or(or: List<Any>) {
+      override fun or(or: List<Any>) {
         cdkBuilder.or(or)
       }
 
@@ -1493,17 +1392,17 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty,
     ) : PredicateProperty {
-      public override fun and(): Any? = unwrap(this).getAnd()
+      override fun and(): Any? = unwrap(this).getAnd()
 
-      public override fun `field`(): String? = unwrap(this).getField()
+      override fun `field`(): String? = unwrap(this).getField()
 
-      public override fun operand(): String? = unwrap(this).getOperand()
+      override fun operand(): String? = unwrap(this).getOperand()
 
-      public override fun operandType(): String? = unwrap(this).getOperandType()
+      override fun operandType(): String? = unwrap(this).getOperandType()
 
-      public override fun `operator`(): String? = unwrap(this).getOperator()
+      override fun `operator`(): String? = unwrap(this).getOperator()
 
-      public override fun or(): Any? = unwrap(this).getOr()
+      override fun or(): Any? = unwrap(this).getOr()
     }
 
     public companion object {
@@ -1532,11 +1431,9 @@ public open class CfnComponent internal constructor(
     public fun `property`(): String
 
     public interface Builder {
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun `property`(`property`: String) {
-      }
+      public fun `property`(`property`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1545,11 +1442,11 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty.builder()
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun `property`(`property`: String) {
+      override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
       }
 
@@ -1562,9 +1459,9 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentPropertyBindingPropertiesProperty,
     ) : ComponentPropertyBindingPropertiesProperty {
-      public override fun `field`(): String? = unwrap(this).getField()
+      override fun `field`(): String? = unwrap(this).getField()
 
-      public override fun `property`(): String = unwrap(this).getProperty()
+      override fun `property`(): String = unwrap(this).getProperty()
     }
 
     public companion object {
@@ -1594,14 +1491,11 @@ public open class CfnComponent internal constructor(
     public fun variantValues(): Any? = unwrap(this).getVariantValues()
 
     public interface Builder {
-      public fun overrides(overrides: Any) {
-      }
+      public fun overrides(overrides: Any)
 
-      public fun variantValues(variantValues: IResolvable) {
-      }
+      public fun variantValues(variantValues: IResolvable)
 
-      public fun variantValues(variantValues: Map<String, String>) {
-      }
+      public fun variantValues(variantValues: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1610,15 +1504,15 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty.builder()
 
-      public override fun overrides(overrides: Any) {
+      override fun overrides(overrides: Any) {
         cdkBuilder.overrides(overrides)
       }
 
-      public override fun variantValues(variantValues: IResolvable) {
+      override fun variantValues(variantValues: IResolvable) {
         cdkBuilder.variantValues(variantValues.let(IResolvable::unwrap))
       }
 
-      public override fun variantValues(variantValues: Map<String, String>) {
+      override fun variantValues(variantValues: Map<String, String>) {
         cdkBuilder.variantValues(variantValues)
       }
 
@@ -1631,9 +1525,9 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentVariantProperty,
     ) : ComponentVariantProperty {
-      public override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun overrides(): Any? = unwrap(this).getOverrides()
 
-      public override fun variantValues(): Any? = unwrap(this).getVariantValues()
+      override fun variantValues(): Any? = unwrap(this).getVariantValues()
     }
 
     public companion object {
@@ -1676,91 +1570,67 @@ public open class CfnComponent internal constructor(
     public fun url(): Any? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun anchor(anchor: IResolvable) {
-      }
+      public fun anchor(anchor: IResolvable)
 
-      public fun anchor(anchor: ComponentPropertyProperty) {
-      }
+      public fun anchor(anchor: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b99fc0a65594fae1e242ee44d06d80da334b5849915ec16f39b8b408ab72a670")
-      public fun anchor(anchor: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun anchor(anchor: ComponentPropertyProperty.Builder.() -> Unit)
 
-      public fun fields(fields: IResolvable) {
-      }
+      public fun fields(fields: IResolvable)
 
-      public fun fields(fields: Map<String, Any>) {
-      }
+      public fun fields(fields: Map<String, Any>)
 
-      public fun global(global: IResolvable) {
-      }
+      public fun global(global: IResolvable)
 
-      public fun global(global: ComponentPropertyProperty) {
-      }
+      public fun global(global: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("56dda333eb785f4338e29ac168711f8b5ef42304bac44d78dec3135a2045cbbb")
-      public fun global(global: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun global(global: ComponentPropertyProperty.Builder.() -> Unit)
 
-      public fun id(id: IResolvable) {
-      }
+      public fun id(id: IResolvable)
 
-      public fun id(id: ComponentPropertyProperty) {
-      }
+      public fun id(id: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e11d4ed0b9dfe83d7a76ae590944cd50c9096a38808380b4243a847062b562a2")
-      public fun id(id: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun id(id: ComponentPropertyProperty.Builder.() -> Unit)
 
-      public fun model(model: String) {
-      }
+      public fun model(model: String)
 
-      public fun state(state: IResolvable) {
-      }
+      public fun state(state: IResolvable)
 
-      public fun state(state: MutationActionSetStateParameterProperty) {
-      }
+      public fun state(state: MutationActionSetStateParameterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b05b4096837075a71dfa3d3fa8ded0e88897a8d87c89734554e5d74a3ad83208")
-      public fun state(state: MutationActionSetStateParameterProperty.Builder.() -> Unit) {
-      }
+      public fun state(state: MutationActionSetStateParameterProperty.Builder.() -> Unit)
 
-      public fun target(target: IResolvable) {
-      }
+      public fun target(target: IResolvable)
 
-      public fun target(target: ComponentPropertyProperty) {
-      }
+      public fun target(target: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b5b059659d10e5bdc3d91347b4d72756f093694d997f855776a6cc043c4c1705")
-      public fun target(target: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun target(target: ComponentPropertyProperty.Builder.() -> Unit)
 
-      public fun type(type: IResolvable) {
-      }
+      public fun type(type: IResolvable)
 
-      public fun type(type: ComponentPropertyProperty) {
-      }
+      public fun type(type: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7342f6066ddaff2c907eb9bb3b8099bd7317f9ea594e28953470da7aacd19cd3")
-      public fun type(type: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun type(type: ComponentPropertyProperty.Builder.() -> Unit)
 
-      public fun url(url: IResolvable) {
-      }
+      public fun url(url: IResolvable)
 
-      public fun url(url: ComponentPropertyProperty) {
-      }
+      public fun url(url: ComponentPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("36bca09fd23e69f3b7e7ca1a6a4546eb710cd44df45097796b263c13e5ca35fd")
-      public fun url(url: ComponentPropertyProperty.Builder.() -> Unit) {
-      }
+      public fun url(url: ComponentPropertyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1769,107 +1639,107 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty.builder()
 
-      public override fun anchor(anchor: IResolvable) {
+      override fun anchor(anchor: IResolvable) {
         cdkBuilder.anchor(anchor.let(IResolvable::unwrap))
       }
 
-      public override fun anchor(anchor: ComponentPropertyProperty) {
+      override fun anchor(anchor: ComponentPropertyProperty) {
         cdkBuilder.anchor(anchor.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b99fc0a65594fae1e242ee44d06d80da334b5849915ec16f39b8b408ab72a670")
-      public override fun anchor(anchor: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun anchor(anchor: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           anchor(ComponentPropertyProperty(anchor))
 
-      public override fun fields(fields: IResolvable) {
+      override fun fields(fields: IResolvable) {
         cdkBuilder.fields(fields.let(IResolvable::unwrap))
       }
 
-      public override fun fields(fields: Map<String, Any>) {
+      override fun fields(fields: Map<String, Any>) {
         cdkBuilder.fields(fields)
       }
 
-      public override fun global(global: IResolvable) {
+      override fun global(global: IResolvable) {
         cdkBuilder.global(global.let(IResolvable::unwrap))
       }
 
-      public override fun global(global: ComponentPropertyProperty) {
+      override fun global(global: ComponentPropertyProperty) {
         cdkBuilder.global(global.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("56dda333eb785f4338e29ac168711f8b5ef42304bac44d78dec3135a2045cbbb")
-      public override fun global(global: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun global(global: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           global(ComponentPropertyProperty(global))
 
-      public override fun id(id: IResolvable) {
+      override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
 
-      public override fun id(id: ComponentPropertyProperty) {
+      override fun id(id: ComponentPropertyProperty) {
         cdkBuilder.id(id.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e11d4ed0b9dfe83d7a76ae590944cd50c9096a38808380b4243a847062b562a2")
-      public override fun id(id: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun id(id: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           id(ComponentPropertyProperty(id))
 
-      public override fun model(model: String) {
+      override fun model(model: String) {
         cdkBuilder.model(model)
       }
 
-      public override fun state(state: IResolvable) {
+      override fun state(state: IResolvable) {
         cdkBuilder.state(state.let(IResolvable::unwrap))
       }
 
-      public override fun state(state: MutationActionSetStateParameterProperty) {
+      override fun state(state: MutationActionSetStateParameterProperty) {
         cdkBuilder.state(state.let(MutationActionSetStateParameterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b05b4096837075a71dfa3d3fa8ded0e88897a8d87c89734554e5d74a3ad83208")
-      public override fun state(state: MutationActionSetStateParameterProperty.Builder.() -> Unit):
-          Unit = state(MutationActionSetStateParameterProperty(state))
+      override fun state(state: MutationActionSetStateParameterProperty.Builder.() -> Unit): Unit =
+          state(MutationActionSetStateParameterProperty(state))
 
-      public override fun target(target: IResolvable) {
+      override fun target(target: IResolvable) {
         cdkBuilder.target(target.let(IResolvable::unwrap))
       }
 
-      public override fun target(target: ComponentPropertyProperty) {
+      override fun target(target: ComponentPropertyProperty) {
         cdkBuilder.target(target.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b5b059659d10e5bdc3d91347b4d72756f093694d997f855776a6cc043c4c1705")
-      public override fun target(target: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun target(target: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           target(ComponentPropertyProperty(target))
 
-      public override fun type(type: IResolvable) {
+      override fun type(type: IResolvable) {
         cdkBuilder.type(type.let(IResolvable::unwrap))
       }
 
-      public override fun type(type: ComponentPropertyProperty) {
+      override fun type(type: ComponentPropertyProperty) {
         cdkBuilder.type(type.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7342f6066ddaff2c907eb9bb3b8099bd7317f9ea594e28953470da7aacd19cd3")
-      public override fun type(type: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun type(type: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           type(ComponentPropertyProperty(type))
 
-      public override fun url(url: IResolvable) {
+      override fun url(url: IResolvable) {
         cdkBuilder.url(url.let(IResolvable::unwrap))
       }
 
-      public override fun url(url: ComponentPropertyProperty) {
+      override fun url(url: ComponentPropertyProperty) {
         cdkBuilder.url(url.let(ComponentPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("36bca09fd23e69f3b7e7ca1a6a4546eb710cd44df45097796b263c13e5ca35fd")
-      public override fun url(url: ComponentPropertyProperty.Builder.() -> Unit): Unit =
+      override fun url(url: ComponentPropertyProperty.Builder.() -> Unit): Unit =
           url(ComponentPropertyProperty(url))
 
       public fun build():
@@ -1881,23 +1751,23 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ActionParametersProperty,
     ) : ActionParametersProperty {
-      public override fun anchor(): Any? = unwrap(this).getAnchor()
+      override fun anchor(): Any? = unwrap(this).getAnchor()
 
-      public override fun fields(): Any? = unwrap(this).getFields()
+      override fun fields(): Any? = unwrap(this).getFields()
 
-      public override fun global(): Any? = unwrap(this).getGlobal()
+      override fun global(): Any? = unwrap(this).getGlobal()
 
-      public override fun id(): Any? = unwrap(this).getId()
+      override fun id(): Any? = unwrap(this).getId()
 
-      public override fun model(): String? = unwrap(this).getModel()
+      override fun model(): String? = unwrap(this).getModel()
 
-      public override fun state(): Any? = unwrap(this).getState()
+      override fun state(): Any? = unwrap(this).getState()
 
-      public override fun target(): Any? = unwrap(this).getTarget()
+      override fun target(): Any? = unwrap(this).getTarget()
 
-      public override fun type(): Any? = unwrap(this).getType()
+      override fun type(): Any? = unwrap(this).getType()
 
-      public override fun url(): Any? = unwrap(this).getUrl()
+      override fun url(): Any? = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -1930,28 +1800,21 @@ public open class CfnComponent internal constructor(
     public fun sort(): Any? = unwrap(this).getSort()
 
     public interface Builder {
-      public fun identifiers(identifiers: List<String>) {
-      }
+      public fun identifiers(identifiers: List<String>)
 
-      public fun model(model: String) {
-      }
+      public fun model(model: String)
 
-      public fun predicate(predicate: IResolvable) {
-      }
+      public fun predicate(predicate: IResolvable)
 
-      public fun predicate(predicate: PredicateProperty) {
-      }
+      public fun predicate(predicate: PredicateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fc9628f2bca7ef392d9c2c88057753e581a430b34742ede1c075d08502caaa7")
-      public fun predicate(predicate: PredicateProperty.Builder.() -> Unit) {
-      }
+      public fun predicate(predicate: PredicateProperty.Builder.() -> Unit)
 
-      public fun sort(sort: IResolvable) {
-      }
+      public fun sort(sort: IResolvable)
 
-      public fun sort(sort: List<Any>) {
-      }
+      public fun sort(sort: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1960,32 +1823,32 @@ public open class CfnComponent internal constructor(
           =
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty.builder()
 
-      public override fun identifiers(identifiers: List<String>) {
+      override fun identifiers(identifiers: List<String>) {
         cdkBuilder.identifiers(identifiers)
       }
 
-      public override fun model(model: String) {
+      override fun model(model: String) {
         cdkBuilder.model(model)
       }
 
-      public override fun predicate(predicate: IResolvable) {
+      override fun predicate(predicate: IResolvable) {
         cdkBuilder.predicate(predicate.let(IResolvable::unwrap))
       }
 
-      public override fun predicate(predicate: PredicateProperty) {
+      override fun predicate(predicate: PredicateProperty) {
         cdkBuilder.predicate(predicate.let(PredicateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fc9628f2bca7ef392d9c2c88057753e581a430b34742ede1c075d08502caaa7")
-      public override fun predicate(predicate: PredicateProperty.Builder.() -> Unit): Unit =
+      override fun predicate(predicate: PredicateProperty.Builder.() -> Unit): Unit =
           predicate(PredicateProperty(predicate))
 
-      public override fun sort(sort: IResolvable) {
+      override fun sort(sort: IResolvable) {
         cdkBuilder.sort(sort.let(IResolvable::unwrap))
       }
 
-      public override fun sort(sort: List<Any>) {
+      override fun sort(sort: List<Any>) {
         cdkBuilder.sort(sort)
       }
 
@@ -1998,13 +1861,13 @@ public open class CfnComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty,
     ) : ComponentDataConfigurationProperty {
-      public override fun identifiers(): List<String> = unwrap(this).getIdentifiers() ?: emptyList()
+      override fun identifiers(): List<String> = unwrap(this).getIdentifiers() ?: emptyList()
 
-      public override fun model(): String = unwrap(this).getModel()
+      override fun model(): String = unwrap(this).getModel()
 
-      public override fun predicate(): Any? = unwrap(this).getPredicate()
+      override fun predicate(): Any? = unwrap(this).getPredicate()
 
-      public override fun sort(): Any? = unwrap(this).getSort()
+      override fun sort(): Any? = unwrap(this).getSort()
     }
 
     public companion object {

@@ -53,23 +53,17 @@ public open class CfnMemberInvitation internal constructor(
   }
 
   public interface Builder {
-    public fun disableEmailNotification(disableEmailNotification: Boolean) {
-    }
+    public fun disableEmailNotification(disableEmailNotification: Boolean)
 
-    public fun disableEmailNotification(disableEmailNotification: IResolvable) {
-    }
+    public fun disableEmailNotification(disableEmailNotification: IResolvable)
 
-    public fun graphArn(graphArn: String) {
-    }
+    public fun graphArn(graphArn: String)
 
-    public fun memberEmailAddress(memberEmailAddress: String) {
-    }
+    public fun memberEmailAddress(memberEmailAddress: String)
 
-    public fun memberId(memberId: String) {
-    }
+    public fun memberId(memberId: String)
 
-    public fun message(message: String) {
-    }
+    public fun message(message: String)
   }
 
   private class BuilderImpl(
@@ -79,27 +73,27 @@ public open class CfnMemberInvitation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.detective.CfnMemberInvitation.Builder =
         software.amazon.awscdk.services.detective.CfnMemberInvitation.Builder.create(scope, id)
 
-    public override fun disableEmailNotification(disableEmailNotification: Boolean) {
+    override fun disableEmailNotification(disableEmailNotification: Boolean) {
       cdkBuilder.disableEmailNotification(disableEmailNotification)
     }
 
-    public override fun disableEmailNotification(disableEmailNotification: IResolvable) {
+    override fun disableEmailNotification(disableEmailNotification: IResolvable) {
       cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable::unwrap))
     }
 
-    public override fun graphArn(graphArn: String) {
+    override fun graphArn(graphArn: String) {
       cdkBuilder.graphArn(graphArn)
     }
 
-    public override fun memberEmailAddress(memberEmailAddress: String) {
+    override fun memberEmailAddress(memberEmailAddress: String) {
       cdkBuilder.memberEmailAddress(memberEmailAddress)
     }
 
-    public override fun memberId(memberId: String) {
+    override fun memberId(memberId: String) {
       cdkBuilder.memberId(memberId)
     }
 
-    public override fun message(message: String) {
+    override fun message(message: String) {
       cdkBuilder.message(message)
     }
 

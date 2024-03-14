@@ -6,7 +6,7 @@ public interface IInspectable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IInspectable,
   ) : IInspectable {
-    public override fun inspect(arg0: TreeInspector) {
+    override fun inspect(arg0: TreeInspector) {
       unwrap(this).inspect(arg0.let(TreeInspector::unwrap))
     }
   }

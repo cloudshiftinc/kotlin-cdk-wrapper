@@ -36,14 +36,11 @@ public open class CfnWaitCondition internal constructor(
   }
 
   public interface Builder {
-    public fun count(count: Number) {
-    }
+    public fun count(count: Number)
 
-    public fun handle(handle: String) {
-    }
+    public fun handle(handle: String)
 
-    public fun timeout(timeout: String) {
-    }
+    public fun timeout(timeout: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnWaitCondition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnWaitCondition.Builder =
         software.amazon.awscdk.CfnWaitCondition.Builder.create(scope, id)
 
-    public override fun count(count: Number) {
+    override fun count(count: Number) {
       cdkBuilder.count(count)
     }
 
-    public override fun handle(handle: String) {
+    override fun handle(handle: String) {
       cdkBuilder.handle(handle)
     }
 
-    public override fun timeout(timeout: String) {
+    override fun timeout(timeout: String) {
       cdkBuilder.timeout(timeout)
     }
 

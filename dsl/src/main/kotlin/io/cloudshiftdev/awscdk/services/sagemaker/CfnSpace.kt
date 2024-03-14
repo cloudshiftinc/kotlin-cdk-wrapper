@@ -101,51 +101,38 @@ public open class CfnSpace internal constructor(
   }
 
   public interface Builder {
-    public fun domainId(domainId: String) {
-    }
+    public fun domainId(domainId: String)
 
-    public fun ownershipSettings(ownershipSettings: IResolvable) {
-    }
+    public fun ownershipSettings(ownershipSettings: IResolvable)
 
-    public fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty) {
-    }
+    public fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("acff03d049c60e7437e3b8b96be6700c9699cbb5404ff8c2ee976cd2f854490a")
-    public fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty.Builder.() -> Unit)
 
-    public fun spaceDisplayName(spaceDisplayName: String) {
-    }
+    public fun spaceDisplayName(spaceDisplayName: String)
 
-    public fun spaceName(spaceName: String) {
-    }
+    public fun spaceName(spaceName: String)
 
-    public fun spaceSettings(spaceSettings: IResolvable) {
-    }
+    public fun spaceSettings(spaceSettings: IResolvable)
 
-    public fun spaceSettings(spaceSettings: SpaceSettingsProperty) {
-    }
+    public fun spaceSettings(spaceSettings: SpaceSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6634b88a1ac01ba70589bef8fcb5e7beef54ea21ef0e569ec43440c5c2645d4e")
-    public fun spaceSettings(spaceSettings: SpaceSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun spaceSettings(spaceSettings: SpaceSettingsProperty.Builder.() -> Unit)
 
-    public fun spaceSharingSettings(spaceSharingSettings: IResolvable) {
-    }
+    public fun spaceSharingSettings(spaceSharingSettings: IResolvable)
 
-    public fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty) {
-    }
+    public fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08def4189b469d2edc8bfea2b451f8f7a9ad8bd03172f1f72dbbf334be9460a7")
     public
-        fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty.Builder.() -> Unit) {
-    }
+        fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -155,60 +142,59 @@ public open class CfnSpace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnSpace.Builder =
         software.amazon.awscdk.services.sagemaker.CfnSpace.Builder.create(scope, id)
 
-    public override fun domainId(domainId: String) {
+    override fun domainId(domainId: String) {
       cdkBuilder.domainId(domainId)
     }
 
-    public override fun ownershipSettings(ownershipSettings: IResolvable) {
+    override fun ownershipSettings(ownershipSettings: IResolvable) {
       cdkBuilder.ownershipSettings(ownershipSettings.let(IResolvable::unwrap))
     }
 
-    public override fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty) {
+    override fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty) {
       cdkBuilder.ownershipSettings(ownershipSettings.let(OwnershipSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("acff03d049c60e7437e3b8b96be6700c9699cbb5404ff8c2ee976cd2f854490a")
-    public override
-        fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty.Builder.() -> Unit): Unit
-        = ownershipSettings(OwnershipSettingsProperty(ownershipSettings))
+    override fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty.Builder.() -> Unit):
+        Unit = ownershipSettings(OwnershipSettingsProperty(ownershipSettings))
 
-    public override fun spaceDisplayName(spaceDisplayName: String) {
+    override fun spaceDisplayName(spaceDisplayName: String) {
       cdkBuilder.spaceDisplayName(spaceDisplayName)
     }
 
-    public override fun spaceName(spaceName: String) {
+    override fun spaceName(spaceName: String) {
       cdkBuilder.spaceName(spaceName)
     }
 
-    public override fun spaceSettings(spaceSettings: IResolvable) {
+    override fun spaceSettings(spaceSettings: IResolvable) {
       cdkBuilder.spaceSettings(spaceSettings.let(IResolvable::unwrap))
     }
 
-    public override fun spaceSettings(spaceSettings: SpaceSettingsProperty) {
+    override fun spaceSettings(spaceSettings: SpaceSettingsProperty) {
       cdkBuilder.spaceSettings(spaceSettings.let(SpaceSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6634b88a1ac01ba70589bef8fcb5e7beef54ea21ef0e569ec43440c5c2645d4e")
-    public override fun spaceSettings(spaceSettings: SpaceSettingsProperty.Builder.() -> Unit): Unit
-        = spaceSettings(SpaceSettingsProperty(spaceSettings))
+    override fun spaceSettings(spaceSettings: SpaceSettingsProperty.Builder.() -> Unit): Unit =
+        spaceSettings(SpaceSettingsProperty(spaceSettings))
 
-    public override fun spaceSharingSettings(spaceSharingSettings: IResolvable) {
+    override fun spaceSharingSettings(spaceSharingSettings: IResolvable) {
       cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(IResolvable::unwrap))
     }
 
-    public override fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty) {
+    override fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty) {
       cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(SpaceSharingSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08def4189b469d2edc8bfea2b451f8f7a9ad8bd03172f1f72dbbf334be9460a7")
-    public override
+    override
         fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty.Builder.() -> Unit):
         Unit = spaceSharingSettings(SpaceSharingSettingsProperty(spaceSharingSettings))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -240,8 +226,7 @@ public open class CfnSpace internal constructor(
     public fun sharingType(): String
 
     public interface Builder {
-      public fun sharingType(sharingType: String) {
-      }
+      public fun sharingType(sharingType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -249,7 +234,7 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty.builder()
 
-      public override fun sharingType(sharingType: String) {
+      override fun sharingType(sharingType: String) {
         cdkBuilder.sharingType(sharingType)
       }
 
@@ -262,7 +247,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSharingSettingsProperty,
     ) : SpaceSharingSettingsProperty {
-      public override fun sharingType(): String = unwrap(this).getSharingType()
+      override fun sharingType(): String = unwrap(this).getSharingType()
     }
 
     public companion object {
@@ -289,16 +274,13 @@ public open class CfnSpace internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc1e1750215a44aee76b455f21d67ef6ab019a86d8976d254c0ff18df7dcf342")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -307,17 +289,17 @@ public open class CfnSpace internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty.builder()
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc1e1750215a44aee76b455f21d67ef6ab019a86d8976d254c0ff18df7dcf342")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -330,7 +312,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.JupyterServerAppSettingsProperty,
     ) : JupyterServerAppSettingsProperty {
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {
@@ -357,8 +339,7 @@ public open class CfnSpace internal constructor(
     public fun fileSystemId(): String
 
     public interface Builder {
-      public fun fileSystemId(fileSystemId: String) {
-      }
+      public fun fileSystemId(fileSystemId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -366,7 +347,7 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty.builder()
 
-      public override fun fileSystemId(fileSystemId: String) {
+      override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
@@ -378,7 +359,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.EFSFileSystemProperty,
     ) : EFSFileSystemProperty {
-      public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
     }
 
     public companion object {
@@ -407,22 +388,17 @@ public open class CfnSpace internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun codeRepositories(codeRepositories: IResolvable) {
-      }
+      public fun codeRepositories(codeRepositories: IResolvable)
 
-      public fun codeRepositories(codeRepositories: List<Any>) {
-      }
+      public fun codeRepositories(codeRepositories: List<Any>)
 
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e610d39a8b0aa40803e5cbf82f3480f352a013c3c69dabe189197d7d609a6cf")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -431,25 +407,25 @@ public open class CfnSpace internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty.builder()
 
-      public override fun codeRepositories(codeRepositories: IResolvable) {
+      override fun codeRepositories(codeRepositories: IResolvable) {
         cdkBuilder.codeRepositories(codeRepositories.let(IResolvable::unwrap))
       }
 
-      public override fun codeRepositories(codeRepositories: List<Any>) {
+      override fun codeRepositories(codeRepositories: List<Any>) {
         cdkBuilder.codeRepositories(codeRepositories)
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e610d39a8b0aa40803e5cbf82f3480f352a013c3c69dabe189197d7d609a6cf")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -462,9 +438,9 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceJupyterLabAppSettingsProperty,
     ) : SpaceJupyterLabAppSettingsProperty {
-      public override fun codeRepositories(): Any? = unwrap(this).getCodeRepositories()
+      override fun codeRepositories(): Any? = unwrap(this).getCodeRepositories()
 
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {
@@ -496,14 +472,11 @@ public open class CfnSpace internal constructor(
     public fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
 
     public interface Builder {
-      public fun appImageConfigName(appImageConfigName: String) {
-      }
+      public fun appImageConfigName(appImageConfigName: String)
 
-      public fun imageName(imageName: String) {
-      }
+      public fun imageName(imageName: String)
 
-      public fun imageVersionNumber(imageVersionNumber: Number) {
-      }
+      public fun imageVersionNumber(imageVersionNumber: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -511,15 +484,15 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty.builder()
 
-      public override fun appImageConfigName(appImageConfigName: String) {
+      override fun appImageConfigName(appImageConfigName: String) {
         cdkBuilder.appImageConfigName(appImageConfigName)
       }
 
-      public override fun imageName(imageName: String) {
+      override fun imageName(imageName: String) {
         cdkBuilder.imageName(imageName)
       }
 
-      public override fun imageVersionNumber(imageVersionNumber: Number) {
+      override fun imageVersionNumber(imageVersionNumber: Number) {
         cdkBuilder.imageVersionNumber(imageVersionNumber)
       }
 
@@ -531,11 +504,11 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomImageProperty,
     ) : CustomImageProperty {
-      public override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
+      override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
 
-      public override fun imageName(): String = unwrap(this).getImageName()
+      override fun imageName(): String = unwrap(this).getImageName()
 
-      public override fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
+      override fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
     }
 
     public companion object {
@@ -562,8 +535,7 @@ public open class CfnSpace internal constructor(
     public fun ebsVolumeSizeInGb(): Number
 
     public interface Builder {
-      public fun ebsVolumeSizeInGb(ebsVolumeSizeInGb: Number) {
-      }
+      public fun ebsVolumeSizeInGb(ebsVolumeSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -571,7 +543,7 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty.builder()
 
-      public override fun ebsVolumeSizeInGb(ebsVolumeSizeInGb: Number) {
+      override fun ebsVolumeSizeInGb(ebsVolumeSizeInGb: Number) {
         cdkBuilder.ebsVolumeSizeInGb(ebsVolumeSizeInGb)
       }
 
@@ -584,7 +556,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty,
     ) : EbsStorageSettingsProperty {
-      public override fun ebsVolumeSizeInGb(): Number = unwrap(this).getEbsVolumeSizeInGb()
+      override fun ebsVolumeSizeInGb(): Number = unwrap(this).getEbsVolumeSizeInGb()
     }
 
     public companion object {
@@ -611,8 +583,7 @@ public open class CfnSpace internal constructor(
     public fun repositoryUrl(): String
 
     public interface Builder {
-      public fun repositoryUrl(repositoryUrl: String) {
-      }
+      public fun repositoryUrl(repositoryUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -620,7 +591,7 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty.builder()
 
-      public override fun repositoryUrl(repositoryUrl: String) {
+      override fun repositoryUrl(repositoryUrl: String) {
         cdkBuilder.repositoryUrl(repositoryUrl)
       }
 
@@ -632,7 +603,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.CodeRepositoryProperty,
     ) : CodeRepositoryProperty {
-      public override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
+      override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
     }
 
     public companion object {
@@ -659,8 +630,7 @@ public open class CfnSpace internal constructor(
     public fun ownerUserProfileName(): String
 
     public interface Builder {
-      public fun ownerUserProfileName(ownerUserProfileName: String) {
-      }
+      public fun ownerUserProfileName(ownerUserProfileName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -668,7 +638,7 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty.builder()
 
-      public override fun ownerUserProfileName(ownerUserProfileName: String) {
+      override fun ownerUserProfileName(ownerUserProfileName: String) {
         cdkBuilder.ownerUserProfileName(ownerUserProfileName)
       }
 
@@ -681,7 +651,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty,
     ) : OwnershipSettingsProperty {
-      public override fun ownerUserProfileName(): String = unwrap(this).getOwnerUserProfileName()
+      override fun ownerUserProfileName(): String = unwrap(this).getOwnerUserProfileName()
     }
 
     public companion object {
@@ -720,76 +690,58 @@ public open class CfnSpace internal constructor(
     public fun spaceStorageSettings(): Any? = unwrap(this).getSpaceStorageSettings()
 
     public interface Builder {
-      public fun appType(appType: String) {
-      }
+      public fun appType(appType: String)
 
-      public fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
-      }
+      public fun codeEditorAppSettings(codeEditorAppSettings: IResolvable)
 
-      public fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty) {
-      }
+      public fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f918775596280a32b6b9fe283d250c4fe4e357bfbacd027c2dc1e466771fd38e")
       public
-          fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty.Builder.() -> Unit)
 
-      public fun customFileSystems(customFileSystems: IResolvable) {
-      }
+      public fun customFileSystems(customFileSystems: IResolvable)
 
-      public fun customFileSystems(customFileSystems: List<Any>) {
-      }
+      public fun customFileSystems(customFileSystems: List<Any>)
 
-      public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
-      }
+      public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable)
 
-      public fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty) {
-      }
+      public fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e7df97d51739f4eb6d7bfa218eeb377f9a60767f0d205be6bd6ffc66ccd37e1")
       public
-          fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty.Builder.() -> Unit)
 
-      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-      }
+      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable)
 
       public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-      }
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f7c6c76f44d64841bb5864ff13e770e9e0045acaca2391de9ccd8b43e4bcc3b")
       public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit)
 
-      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-      }
+      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable)
 
       public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-      }
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1aec0cb1505855775f7e5ed514c4faeca23d281b6af5443186f140f7e6b5bb1c")
       public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
 
-      public fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
-      }
+      public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
 
-      public fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty) {
-      }
+      public fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e918c17a2faf9653cd99fc52b83a57eea99102a611f1a0f4f0580518aa18211e")
       public
-          fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty.Builder.() -> Unit) {
-      }
+          fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -797,91 +749,91 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty.builder()
 
-      public override fun appType(appType: String) {
+      override fun appType(appType: String) {
         cdkBuilder.appType(appType)
       }
 
-      public override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
+      override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
         cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty) {
         cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(SpaceCodeEditorAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f918775596280a32b6b9fe283d250c4fe4e357bfbacd027c2dc1e466771fd38e")
-      public override
+      override
           fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty.Builder.() -> Unit):
           Unit = codeEditorAppSettings(SpaceCodeEditorAppSettingsProperty(codeEditorAppSettings))
 
-      public override fun customFileSystems(customFileSystems: IResolvable) {
+      override fun customFileSystems(customFileSystems: IResolvable) {
         cdkBuilder.customFileSystems(customFileSystems.let(IResolvable::unwrap))
       }
 
-      public override fun customFileSystems(customFileSystems: List<Any>) {
+      override fun customFileSystems(customFileSystems: List<Any>) {
         cdkBuilder.customFileSystems(customFileSystems)
       }
 
-      public override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
+      override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(SpaceJupyterLabAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2e7df97d51739f4eb6d7bfa218eeb377f9a60767f0d205be6bd6ffc66ccd37e1")
-      public override
+      override
           fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty.Builder.() -> Unit):
           Unit = jupyterLabAppSettings(SpaceJupyterLabAppSettingsProperty(jupyterLabAppSettings))
 
-      public override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
+      override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
         cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
         cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f7c6c76f44d64841bb5864ff13e770e9e0045acaca2391de9ccd8b43e4bcc3b")
-      public override
+      override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit):
           Unit =
           jupyterServerAppSettings(JupyterServerAppSettingsProperty(jupyterServerAppSettings))
 
-      public override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
+      override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1aec0cb1505855775f7e5ed514c4faeca23d281b6af5443186f140f7e6b5bb1c")
-      public override
+      override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit):
           Unit =
           kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
 
-      public override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
+      override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
         cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable::unwrap))
       }
 
-      public override fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty) {
+      override fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty) {
         cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(SpaceStorageSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e918c17a2faf9653cd99fc52b83a57eea99102a611f1a0f4f0580518aa18211e")
-      public override
+      override
           fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty.Builder.() -> Unit):
           Unit = spaceStorageSettings(SpaceStorageSettingsProperty(spaceStorageSettings))
 
@@ -893,21 +845,19 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceSettingsProperty,
     ) : SpaceSettingsProperty {
-      public override fun appType(): String? = unwrap(this).getAppType()
+      override fun appType(): String? = unwrap(this).getAppType()
 
-      public override fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
+      override fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
 
-      public override fun customFileSystems(): Any? = unwrap(this).getCustomFileSystems()
+      override fun customFileSystems(): Any? = unwrap(this).getCustomFileSystems()
 
-      public override fun jupyterLabAppSettings(): Any? = unwrap(this).getJupyterLabAppSettings()
+      override fun jupyterLabAppSettings(): Any? = unwrap(this).getJupyterLabAppSettings()
 
-      public override fun jupyterServerAppSettings(): Any? =
-          unwrap(this).getJupyterServerAppSettings()
+      override fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
 
-      public override fun kernelGatewayAppSettings(): Any? =
-          unwrap(this).getKernelGatewayAppSettings()
+      override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
 
-      public override fun spaceStorageSettings(): Any? = unwrap(this).getSpaceStorageSettings()
+      override fun spaceStorageSettings(): Any? = unwrap(this).getSpaceStorageSettings()
     }
 
     public companion object {
@@ -938,14 +888,11 @@ public open class CfnSpace internal constructor(
     public fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
 
     public interface Builder {
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun sageMakerImageArn(sageMakerImageArn: String) {
-      }
+      public fun sageMakerImageArn(sageMakerImageArn: String)
 
-      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
-      }
+      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -953,15 +900,15 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty.builder()
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun sageMakerImageArn(sageMakerImageArn: String) {
+      override fun sageMakerImageArn(sageMakerImageArn: String) {
         cdkBuilder.sageMakerImageArn(sageMakerImageArn)
       }
 
-      public override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
+      override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
         cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
       }
 
@@ -973,12 +920,11 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.ResourceSpecProperty,
     ) : ResourceSpecProperty {
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
+      override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
 
-      public override fun sageMakerImageVersionArn(): String? =
-          unwrap(this).getSageMakerImageVersionArn()
+      override fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
     }
 
     public companion object {
@@ -1005,17 +951,14 @@ public open class CfnSpace internal constructor(
     public fun ebsStorageSettings(): Any? = unwrap(this).getEbsStorageSettings()
 
     public interface Builder {
-      public fun ebsStorageSettings(ebsStorageSettings: IResolvable) {
-      }
+      public fun ebsStorageSettings(ebsStorageSettings: IResolvable)
 
-      public fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty) {
-      }
+      public fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("685af989ba2409bea91c1c7183d1e017811b8406dc2cb03fc45796cc3adf4da3")
       public
-          fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty.Builder.() -> Unit) {
-      }
+          fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1023,17 +966,17 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty.builder()
 
-      public override fun ebsStorageSettings(ebsStorageSettings: IResolvable) {
+      override fun ebsStorageSettings(ebsStorageSettings: IResolvable) {
         cdkBuilder.ebsStorageSettings(ebsStorageSettings.let(IResolvable::unwrap))
       }
 
-      public override fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty) {
+      override fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty) {
         cdkBuilder.ebsStorageSettings(ebsStorageSettings.let(EbsStorageSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("685af989ba2409bea91c1c7183d1e017811b8406dc2cb03fc45796cc3adf4da3")
-      public override
+      override
           fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty.Builder.() -> Unit):
           Unit = ebsStorageSettings(EbsStorageSettingsProperty(ebsStorageSettings))
 
@@ -1046,7 +989,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty,
     ) : SpaceStorageSettingsProperty {
-      public override fun ebsStorageSettings(): Any? = unwrap(this).getEbsStorageSettings()
+      override fun ebsStorageSettings(): Any? = unwrap(this).getEbsStorageSettings()
     }
 
     public companion object {
@@ -1073,16 +1016,13 @@ public open class CfnSpace internal constructor(
     public fun efsFileSystem(): Any? = unwrap(this).getEfsFileSystem()
 
     public interface Builder {
-      public fun efsFileSystem(efsFileSystem: IResolvable) {
-      }
+      public fun efsFileSystem(efsFileSystem: IResolvable)
 
-      public fun efsFileSystem(efsFileSystem: EFSFileSystemProperty) {
-      }
+      public fun efsFileSystem(efsFileSystem: EFSFileSystemProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("725ca5e0d45e073f9dc82a5b9c4d49c124c28a0ae1d82214e51e13314304bc14")
-      public fun efsFileSystem(efsFileSystem: EFSFileSystemProperty.Builder.() -> Unit) {
-      }
+      public fun efsFileSystem(efsFileSystem: EFSFileSystemProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1090,18 +1030,18 @@ public open class CfnSpace internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty.builder()
 
-      public override fun efsFileSystem(efsFileSystem: IResolvable) {
+      override fun efsFileSystem(efsFileSystem: IResolvable) {
         cdkBuilder.efsFileSystem(efsFileSystem.let(IResolvable::unwrap))
       }
 
-      public override fun efsFileSystem(efsFileSystem: EFSFileSystemProperty) {
+      override fun efsFileSystem(efsFileSystem: EFSFileSystemProperty) {
         cdkBuilder.efsFileSystem(efsFileSystem.let(EFSFileSystemProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("725ca5e0d45e073f9dc82a5b9c4d49c124c28a0ae1d82214e51e13314304bc14")
-      public override fun efsFileSystem(efsFileSystem: EFSFileSystemProperty.Builder.() -> Unit):
-          Unit = efsFileSystem(EFSFileSystemProperty(efsFileSystem))
+      override fun efsFileSystem(efsFileSystem: EFSFileSystemProperty.Builder.() -> Unit): Unit =
+          efsFileSystem(EFSFileSystemProperty(efsFileSystem))
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty =
@@ -1112,7 +1052,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.CustomFileSystemProperty,
     ) : CustomFileSystemProperty {
-      public override fun efsFileSystem(): Any? = unwrap(this).getEfsFileSystem()
+      override fun efsFileSystem(): Any? = unwrap(this).getEfsFileSystem()
     }
 
     public companion object {
@@ -1141,22 +1081,17 @@ public open class CfnSpace internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun customImages(customImages: IResolvable) {
-      }
+      public fun customImages(customImages: IResolvable)
 
-      public fun customImages(customImages: List<Any>) {
-      }
+      public fun customImages(customImages: List<Any>)
 
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b722b7492eff2a37138d40822cae857b7cd89725c1db0e9ebb4795dee8b85261")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1165,25 +1100,25 @@ public open class CfnSpace internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty.builder()
 
-      public override fun customImages(customImages: IResolvable) {
+      override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
       }
 
-      public override fun customImages(customImages: List<Any>) {
+      override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b722b7492eff2a37138d40822cae857b7cd89725c1db0e9ebb4795dee8b85261")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -1196,9 +1131,9 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.KernelGatewayAppSettingsProperty,
     ) : KernelGatewayAppSettingsProperty {
-      public override fun customImages(): Any? = unwrap(this).getCustomImages()
+      override fun customImages(): Any? = unwrap(this).getCustomImages()
 
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {
@@ -1225,16 +1160,13 @@ public open class CfnSpace internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("65b5eb6b456a89a31e6a1c4f192aec82d615d1889ad6ceed9c477f7052f28caf")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1243,17 +1175,17 @@ public open class CfnSpace internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty.builder()
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("65b5eb6b456a89a31e6a1c4f192aec82d615d1889ad6ceed9c477f7052f28caf")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -1266,7 +1198,7 @@ public open class CfnSpace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceCodeEditorAppSettingsProperty,
     ) : SpaceCodeEditorAppSettingsProperty {
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {

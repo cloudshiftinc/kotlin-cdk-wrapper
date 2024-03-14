@@ -114,58 +114,42 @@ public open class CfnDataset internal constructor(
       = versioningConfiguration(VersioningConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun actions(actions: IResolvable) {
-    }
+    public fun actions(actions: IResolvable)
 
-    public fun actions(actions: List<Any>) {
-    }
+    public fun actions(actions: List<Any>)
 
-    public fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
-    }
+    public fun contentDeliveryRules(contentDeliveryRules: IResolvable)
 
-    public fun contentDeliveryRules(contentDeliveryRules: List<Any>) {
-    }
+    public fun contentDeliveryRules(contentDeliveryRules: List<Any>)
 
-    public fun datasetName(datasetName: String) {
-    }
+    public fun datasetName(datasetName: String)
 
-    public fun lateDataRules(lateDataRules: IResolvable) {
-    }
+    public fun lateDataRules(lateDataRules: IResolvable)
 
-    public fun lateDataRules(lateDataRules: List<Any>) {
-    }
+    public fun lateDataRules(lateDataRules: List<Any>)
 
-    public fun retentionPeriod(retentionPeriod: IResolvable) {
-    }
+    public fun retentionPeriod(retentionPeriod: IResolvable)
 
-    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
-    }
+    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed4b1a6c499b1aab7253c220d7bea5f6b604f2bae56e1a41fc8a151531e688b6")
-    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit) {
-    }
+    public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun triggers(triggers: IResolvable) {
-    }
+    public fun triggers(triggers: IResolvable)
 
-    public fun triggers(triggers: List<Any>) {
-    }
+    public fun triggers(triggers: List<Any>)
 
-    public fun versioningConfiguration(versioningConfiguration: IResolvable) {
-    }
+    public fun versioningConfiguration(versioningConfiguration: IResolvable)
 
-    public fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty) {
-    }
+    public fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cdff7b61aeda49e270b8e34c4421b701bf69a337e52852300e910e8de7f64610")
     public
-        fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -175,72 +159,70 @@ public open class CfnDataset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotanalytics.CfnDataset.Builder =
         software.amazon.awscdk.services.iotanalytics.CfnDataset.Builder.create(scope, id)
 
-    public override fun actions(actions: IResolvable) {
+    override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable::unwrap))
     }
 
-    public override fun actions(actions: List<Any>) {
+    override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
+    override fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
       cdkBuilder.contentDeliveryRules(contentDeliveryRules.let(IResolvable::unwrap))
     }
 
-    public override fun contentDeliveryRules(contentDeliveryRules: List<Any>) {
+    override fun contentDeliveryRules(contentDeliveryRules: List<Any>) {
       cdkBuilder.contentDeliveryRules(contentDeliveryRules)
     }
 
-    public override fun datasetName(datasetName: String) {
+    override fun datasetName(datasetName: String) {
       cdkBuilder.datasetName(datasetName)
     }
 
-    public override fun lateDataRules(lateDataRules: IResolvable) {
+    override fun lateDataRules(lateDataRules: IResolvable) {
       cdkBuilder.lateDataRules(lateDataRules.let(IResolvable::unwrap))
     }
 
-    public override fun lateDataRules(lateDataRules: List<Any>) {
+    override fun lateDataRules(lateDataRules: List<Any>) {
       cdkBuilder.lateDataRules(lateDataRules)
     }
 
-    public override fun retentionPeriod(retentionPeriod: IResolvable) {
+    override fun retentionPeriod(retentionPeriod: IResolvable) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
     }
 
-    public override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
+    override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed4b1a6c499b1aab7253c220d7bea5f6b604f2bae56e1a41fc8a151531e688b6")
-    public override
-        fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit): Unit =
-        retentionPeriod(RetentionPeriodProperty(retentionPeriod))
+    override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit): Unit
+        = retentionPeriod(RetentionPeriodProperty(retentionPeriod))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun triggers(triggers: IResolvable) {
+    override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
     }
 
-    public override fun triggers(triggers: List<Any>) {
+    override fun triggers(triggers: List<Any>) {
       cdkBuilder.triggers(triggers)
     }
 
-    public override fun versioningConfiguration(versioningConfiguration: IResolvable) {
+    override fun versioningConfiguration(versioningConfiguration: IResolvable) {
       cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty) {
+    override fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty) {
       cdkBuilder.versioningConfiguration(versioningConfiguration.let(VersioningConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cdff7b61aeda49e270b8e34c4421b701bf69a337e52852300e910e8de7f64610")
-    public override
+    override
         fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty.Builder.() -> Unit):
         Unit = versioningConfiguration(VersioningConfigurationProperty(versioningConfiguration))
 
@@ -274,11 +256,9 @@ public open class CfnDataset internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -287,11 +267,11 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty.builder()
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -304,9 +284,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.GlueConfigurationProperty,
     ) : GlueConfigurationProperty {
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -335,11 +315,9 @@ public open class CfnDataset internal constructor(
     public fun timeExpression(): String
 
     public interface Builder {
-      public fun offsetSeconds(offsetSeconds: Number) {
-      }
+      public fun offsetSeconds(offsetSeconds: Number)
 
-      public fun timeExpression(timeExpression: String) {
-      }
+      public fun timeExpression(timeExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -347,11 +325,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty.builder()
 
-      public override fun offsetSeconds(offsetSeconds: Number) {
+      override fun offsetSeconds(offsetSeconds: Number) {
         cdkBuilder.offsetSeconds(offsetSeconds)
       }
 
-      public override fun timeExpression(timeExpression: String) {
+      override fun timeExpression(timeExpression: String) {
         cdkBuilder.timeExpression(timeExpression)
       }
 
@@ -363,9 +341,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeProperty,
     ) : DeltaTimeProperty {
-      public override fun offsetSeconds(): Number = unwrap(this).getOffsetSeconds()
+      override fun offsetSeconds(): Number = unwrap(this).getOffsetSeconds()
 
-      public override fun timeExpression(): String = unwrap(this).getTimeExpression()
+      override fun timeExpression(): String = unwrap(this).getTimeExpression()
     }
 
     public companion object {
@@ -398,26 +376,19 @@ public open class CfnDataset internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun glueConfiguration(glueConfiguration: IResolvable) {
-      }
+      public fun glueConfiguration(glueConfiguration: IResolvable)
 
-      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty) {
-      }
+      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8d986fc3b747807a579f2262617d81f0c53cbf1ab91bc6b0b387b4db40f60623")
-      public
-          fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -426,29 +397,29 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun glueConfiguration(glueConfiguration: IResolvable) {
+      override fun glueConfiguration(glueConfiguration: IResolvable) {
         cdkBuilder.glueConfiguration(glueConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun glueConfiguration(glueConfiguration: GlueConfigurationProperty) {
+      override fun glueConfiguration(glueConfiguration: GlueConfigurationProperty) {
         cdkBuilder.glueConfiguration(glueConfiguration.let(GlueConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8d986fc3b747807a579f2262617d81f0c53cbf1ab91bc6b0b387b4db40f60623")
-      public override
+      override
           fun glueConfiguration(glueConfiguration: GlueConfigurationProperty.Builder.() -> Unit):
           Unit = glueConfiguration(GlueConfigurationProperty(glueConfiguration))
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -461,13 +432,13 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.S3DestinationConfigurationProperty,
     ) : S3DestinationConfigurationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun glueConfiguration(): Any? = unwrap(this).getGlueConfiguration()
+      override fun glueConfiguration(): Any? = unwrap(this).getGlueConfiguration()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -495,8 +466,7 @@ public open class CfnDataset internal constructor(
     public fun fileName(): String
 
     public interface Builder {
-      public fun fileName(fileName: String) {
-      }
+      public fun fileName(fileName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -505,7 +475,7 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty.builder()
 
-      public override fun fileName(fileName: String) {
+      override fun fileName(fileName: String) {
         cdkBuilder.fileName(fileName)
       }
 
@@ -518,7 +488,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.OutputFileUriValueProperty,
     ) : OutputFileUriValueProperty {
-      public override fun fileName(): String = unwrap(this).getFileName()
+      override fun fileName(): String = unwrap(this).getFileName()
     }
 
     public companion object {
@@ -551,29 +521,22 @@ public open class CfnDataset internal constructor(
     public fun variables(): Any? = unwrap(this).getVariables()
 
     public interface Builder {
-      public fun executionRoleArn(executionRoleArn: String) {
-      }
+      public fun executionRoleArn(executionRoleArn: String)
 
-      public fun image(image: String) {
-      }
+      public fun image(image: String)
 
-      public fun resourceConfiguration(resourceConfiguration: IResolvable) {
-      }
+      public fun resourceConfiguration(resourceConfiguration: IResolvable)
 
-      public fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty) {
-      }
+      public fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f94ac89e4da5cf7280e11af6d60fab30c7a8ca77c06c00fbaff39e36613543b3")
       public
-          fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty.Builder.() -> Unit)
 
-      public fun variables(variables: IResolvable) {
-      }
+      public fun variables(variables: IResolvable)
 
-      public fun variables(variables: List<Any>) {
-      }
+      public fun variables(variables: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -581,34 +544,33 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty.builder()
 
-      public override fun executionRoleArn(executionRoleArn: String) {
+      override fun executionRoleArn(executionRoleArn: String) {
         cdkBuilder.executionRoleArn(executionRoleArn)
       }
 
-      public override fun image(image: String) {
+      override fun image(image: String) {
         cdkBuilder.image(image)
       }
 
-      public override fun resourceConfiguration(resourceConfiguration: IResolvable) {
+      override fun resourceConfiguration(resourceConfiguration: IResolvable) {
         cdkBuilder.resourceConfiguration(resourceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty) {
+      override fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty) {
         cdkBuilder.resourceConfiguration(resourceConfiguration.let(ResourceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f94ac89e4da5cf7280e11af6d60fab30c7a8ca77c06c00fbaff39e36613543b3")
-      public override
+      override
           fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty.Builder.() -> Unit):
           Unit = resourceConfiguration(ResourceConfigurationProperty(resourceConfiguration))
 
-      public override fun variables(variables: IResolvable) {
+      override fun variables(variables: IResolvable) {
         cdkBuilder.variables(variables.let(IResolvable::unwrap))
       }
 
-      public override fun variables(variables: List<Any>) {
+      override fun variables(variables: List<Any>) {
         cdkBuilder.variables(variables)
       }
 
@@ -621,13 +583,13 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty,
     ) : ContainerActionProperty {
-      public override fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
+      override fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
 
-      public override fun image(): String = unwrap(this).getImage()
+      override fun image(): String = unwrap(this).getImage()
 
-      public override fun resourceConfiguration(): Any = unwrap(this).getResourceConfiguration()
+      override fun resourceConfiguration(): Any = unwrap(this).getResourceConfiguration()
 
-      public override fun variables(): Any? = unwrap(this).getVariables()
+      override fun variables(): Any? = unwrap(this).getVariables()
     }
 
     public companion object {
@@ -654,8 +616,7 @@ public open class CfnDataset internal constructor(
     public fun datasetName(): String
 
     public interface Builder {
-      public fun datasetName(datasetName: String) {
-      }
+      public fun datasetName(datasetName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -664,7 +625,7 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty.builder()
 
-      public override fun datasetName(datasetName: String) {
+      override fun datasetName(datasetName: String) {
         cdkBuilder.datasetName(datasetName)
       }
 
@@ -677,7 +638,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentVersionValueProperty,
     ) : DatasetContentVersionValueProperty {
-      public override fun datasetName(): String = unwrap(this).getDatasetName()
+      override fun datasetName(): String = unwrap(this).getDatasetName()
     }
 
     public companion object {
@@ -705,16 +666,13 @@ public open class CfnDataset internal constructor(
     public fun deltaTime(): Any? = unwrap(this).getDeltaTime()
 
     public interface Builder {
-      public fun deltaTime(deltaTime: IResolvable) {
-      }
+      public fun deltaTime(deltaTime: IResolvable)
 
-      public fun deltaTime(deltaTime: DeltaTimeProperty) {
-      }
+      public fun deltaTime(deltaTime: DeltaTimeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("292b1a57aa57aee4937f19c951a48b9710aa5a181672b7d5d6d32846b1e2af24")
-      public fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit) {
-      }
+      public fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -722,17 +680,17 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty.builder()
 
-      public override fun deltaTime(deltaTime: IResolvable) {
+      override fun deltaTime(deltaTime: IResolvable) {
         cdkBuilder.deltaTime(deltaTime.let(IResolvable::unwrap))
       }
 
-      public override fun deltaTime(deltaTime: DeltaTimeProperty) {
+      override fun deltaTime(deltaTime: DeltaTimeProperty) {
         cdkBuilder.deltaTime(deltaTime.let(DeltaTimeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("292b1a57aa57aee4937f19c951a48b9710aa5a181672b7d5d6d32846b1e2af24")
-      public override fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit): Unit =
+      override fun deltaTime(deltaTime: DeltaTimeProperty.Builder.() -> Unit): Unit =
           deltaTime(DeltaTimeProperty(deltaTime))
 
       public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty =
@@ -743,7 +701,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.FilterProperty,
     ) : FilterProperty {
-      public override fun deltaTime(): Any? = unwrap(this).getDeltaTime()
+      override fun deltaTime(): Any? = unwrap(this).getDeltaTime()
     }
 
     public companion object {
@@ -770,8 +728,7 @@ public open class CfnDataset internal constructor(
     public fun timeoutInMinutes(): Number
 
     public interface Builder {
-      public fun timeoutInMinutes(timeoutInMinutes: Number) {
-      }
+      public fun timeoutInMinutes(timeoutInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -780,7 +737,7 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty.builder()
 
-      public override fun timeoutInMinutes(timeoutInMinutes: Number) {
+      override fun timeoutInMinutes(timeoutInMinutes: Number) {
         cdkBuilder.timeoutInMinutes(timeoutInMinutes)
       }
 
@@ -793,7 +750,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DeltaTimeSessionWindowConfigurationProperty,
     ) : DeltaTimeSessionWindowConfigurationProperty {
-      public override fun timeoutInMinutes(): Number = unwrap(this).getTimeoutInMinutes()
+      override fun timeoutInMinutes(): Number = unwrap(this).getTimeoutInMinutes()
     }
 
     public companion object {
@@ -824,31 +781,25 @@ public open class CfnDataset internal constructor(
     public fun s3DestinationConfiguration(): Any? = unwrap(this).getS3DestinationConfiguration()
 
     public interface Builder {
-      public fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IResolvable) {
-      }
+      public fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IResolvable)
 
       public
-          fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty) {
-      }
+          fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a18c9c3ed206c1322a375f674aebf05dc3a1a936a9a9e2543dea8eb19a30fed1")
       public
-          fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
-      }
+      public fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable)
 
       public
-          fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty) {
-      }
+          fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4deed4a0e02afd5fc0a753305e969501d27a4a93446b9b8f63aed29f905facd6")
       public
-          fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -857,35 +808,35 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleDestinationProperty.builder()
 
-      public override
+      override
           fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IResolvable) {
         cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty) {
         cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration.let(IotEventsDestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a18c9c3ed206c1322a375f674aebf05dc3a1a936a9a9e2543dea8eb19a30fed1")
-      public override
+      override
           fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty.Builder.() -> Unit):
           Unit =
           iotEventsDestinationConfiguration(IotEventsDestinationConfigurationProperty(iotEventsDestinationConfiguration))
 
-      public override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
+      override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
         cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty) {
         cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(S3DestinationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4deed4a0e02afd5fc0a753305e969501d27a4a93446b9b8f63aed29f905facd6")
-      public override
+      override
           fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty.Builder.() -> Unit):
           Unit =
           s3DestinationConfiguration(S3DestinationConfigurationProperty(s3DestinationConfiguration))
@@ -899,11 +850,10 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleDestinationProperty,
     ) : DatasetContentDeliveryRuleDestinationProperty {
-      public override fun iotEventsDestinationConfiguration(): Any? =
+      override fun iotEventsDestinationConfiguration(): Any? =
           unwrap(this).getIotEventsDestinationConfiguration()
 
-      public override fun s3DestinationConfiguration(): Any? =
-          unwrap(this).getS3DestinationConfiguration()
+      override fun s3DestinationConfiguration(): Any? = unwrap(this).getS3DestinationConfiguration()
     }
 
     public companion object {
@@ -933,11 +883,9 @@ public open class CfnDataset internal constructor(
     public fun volumeSizeInGb(): Number
 
     public interface Builder {
-      public fun computeType(computeType: String) {
-      }
+      public fun computeType(computeType: String)
 
-      public fun volumeSizeInGb(volumeSizeInGb: Number) {
-      }
+      public fun volumeSizeInGb(volumeSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -946,11 +894,11 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty.builder()
 
-      public override fun computeType(computeType: String) {
+      override fun computeType(computeType: String) {
         cdkBuilder.computeType(computeType)
       }
 
-      public override fun volumeSizeInGb(volumeSizeInGb: Number) {
+      override fun volumeSizeInGb(volumeSizeInGb: Number) {
         cdkBuilder.volumeSizeInGb(volumeSizeInGb)
       }
 
@@ -963,9 +911,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ResourceConfigurationProperty,
     ) : ResourceConfigurationProperty {
-      public override fun computeType(): String = unwrap(this).getComputeType()
+      override fun computeType(): String = unwrap(this).getComputeType()
 
-      public override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
+      override fun volumeSizeInGb(): Number = unwrap(this).getVolumeSizeInGb()
     }
 
     public companion object {
@@ -994,20 +942,16 @@ public open class CfnDataset internal constructor(
     public fun ruleName(): String? = unwrap(this).getRuleName()
 
     public interface Builder {
-      public fun ruleConfiguration(ruleConfiguration: IResolvable) {
-      }
+      public fun ruleConfiguration(ruleConfiguration: IResolvable)
 
-      public fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty) {
-      }
+      public fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("463e70cb7b75495f7fc174c3f8820d790710441ef27883c96a823c3a9562ddde")
       public
-          fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty.Builder.() -> Unit)
 
-      public fun ruleName(ruleName: String) {
-      }
+      public fun ruleName(ruleName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1015,21 +959,21 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty.builder()
 
-      public override fun ruleConfiguration(ruleConfiguration: IResolvable) {
+      override fun ruleConfiguration(ruleConfiguration: IResolvable) {
         cdkBuilder.ruleConfiguration(ruleConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty) {
+      override fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty) {
         cdkBuilder.ruleConfiguration(ruleConfiguration.let(LateDataRuleConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("463e70cb7b75495f7fc174c3f8820d790710441ef27883c96a823c3a9562ddde")
-      public override
+      override
           fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty.Builder.() -> Unit):
           Unit = ruleConfiguration(LateDataRuleConfigurationProperty(ruleConfiguration))
 
-      public override fun ruleName(ruleName: String) {
+      override fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)
       }
 
@@ -1042,9 +986,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleProperty,
     ) : LateDataRuleProperty {
-      public override fun ruleConfiguration(): Any = unwrap(this).getRuleConfiguration()
+      override fun ruleConfiguration(): Any = unwrap(this).getRuleConfiguration()
 
-      public override fun ruleName(): String? = unwrap(this).getRuleName()
+      override fun ruleName(): String? = unwrap(this).getRuleName()
     }
 
     public companion object {
@@ -1073,28 +1017,21 @@ public open class CfnDataset internal constructor(
     public fun triggeringDataset(): Any? = unwrap(this).getTriggeringDataset()
 
     public interface Builder {
-      public fun schedule(schedule: IResolvable) {
-      }
+      public fun schedule(schedule: IResolvable)
 
-      public fun schedule(schedule: ScheduleProperty) {
-      }
+      public fun schedule(schedule: ScheduleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0282a88062b57f5491e350a63ffc7c391ab9e243980fdc18451e57d3916020d8")
-      public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit) {
-      }
+      public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit)
 
-      public fun triggeringDataset(triggeringDataset: IResolvable) {
-      }
+      public fun triggeringDataset(triggeringDataset: IResolvable)
 
-      public fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty) {
-      }
+      public fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51aea310296e38b3b60aeb893a2a47e782046054bf5e23a5360066b529afdf0d")
-      public
-          fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty.Builder.() -> Unit) {
-      }
+      public fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1102,30 +1039,30 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty.builder()
 
-      public override fun schedule(schedule: IResolvable) {
+      override fun schedule(schedule: IResolvable) {
         cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
       }
 
-      public override fun schedule(schedule: ScheduleProperty) {
+      override fun schedule(schedule: ScheduleProperty) {
         cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0282a88062b57f5491e350a63ffc7c391ab9e243980fdc18451e57d3916020d8")
-      public override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
+      override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
           schedule(ScheduleProperty(schedule))
 
-      public override fun triggeringDataset(triggeringDataset: IResolvable) {
+      override fun triggeringDataset(triggeringDataset: IResolvable) {
         cdkBuilder.triggeringDataset(triggeringDataset.let(IResolvable::unwrap))
       }
 
-      public override fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty) {
+      override fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty) {
         cdkBuilder.triggeringDataset(triggeringDataset.let(TriggeringDatasetProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51aea310296e38b3b60aeb893a2a47e782046054bf5e23a5360066b529afdf0d")
-      public override
+      override
           fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty.Builder.() -> Unit):
           Unit = triggeringDataset(TriggeringDatasetProperty(triggeringDataset))
 
@@ -1137,9 +1074,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggerProperty,
     ) : TriggerProperty {
-      public override fun schedule(): Any? = unwrap(this).getSchedule()
+      override fun schedule(): Any? = unwrap(this).getSchedule()
 
-      public override fun triggeringDataset(): Any? = unwrap(this).getTriggeringDataset()
+      override fun triggeringDataset(): Any? = unwrap(this).getTriggeringDataset()
     }
 
     public companion object {
@@ -1168,20 +1105,16 @@ public open class CfnDataset internal constructor(
     public fun entryName(): String? = unwrap(this).getEntryName()
 
     public interface Builder {
-      public fun destination(destination: IResolvable) {
-      }
+      public fun destination(destination: IResolvable)
 
-      public fun destination(destination: DatasetContentDeliveryRuleDestinationProperty) {
-      }
+      public fun destination(destination: DatasetContentDeliveryRuleDestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7002a69a78fa0a8d9c60b7eaf42ecee41d1f3761d56ad36c4cd9b8976df45abc")
       public
-          fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit) {
-      }
+          fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit)
 
-      public fun entryName(entryName: String) {
-      }
+      public fun entryName(entryName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1190,21 +1123,21 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty.builder()
 
-      public override fun destination(destination: IResolvable) {
+      override fun destination(destination: IResolvable) {
         cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
-      public override fun destination(destination: DatasetContentDeliveryRuleDestinationProperty) {
+      override fun destination(destination: DatasetContentDeliveryRuleDestinationProperty) {
         cdkBuilder.destination(destination.let(DatasetContentDeliveryRuleDestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7002a69a78fa0a8d9c60b7eaf42ecee41d1f3761d56ad36c4cd9b8976df45abc")
-      public override
+      override
           fun destination(destination: DatasetContentDeliveryRuleDestinationProperty.Builder.() -> Unit):
           Unit = destination(DatasetContentDeliveryRuleDestinationProperty(destination))
 
-      public override fun entryName(entryName: String) {
+      override fun entryName(entryName: String) {
         cdkBuilder.entryName(entryName)
       }
 
@@ -1217,9 +1150,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.DatasetContentDeliveryRuleProperty,
     ) : DatasetContentDeliveryRuleProperty {
-      public override fun destination(): Any = unwrap(this).getDestination()
+      override fun destination(): Any = unwrap(this).getDestination()
 
-      public override fun entryName(): String? = unwrap(this).getEntryName()
+      override fun entryName(): String? = unwrap(this).getEntryName()
     }
 
     public companion object {
@@ -1251,30 +1184,23 @@ public open class CfnDataset internal constructor(
     public fun queryAction(): Any? = unwrap(this).getQueryAction()
 
     public interface Builder {
-      public fun actionName(actionName: String) {
-      }
+      public fun actionName(actionName: String)
 
-      public fun containerAction(containerAction: IResolvable) {
-      }
+      public fun containerAction(containerAction: IResolvable)
 
-      public fun containerAction(containerAction: ContainerActionProperty) {
-      }
+      public fun containerAction(containerAction: ContainerActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7fb0b2b4600952a7a3c76e021204da23616aea133683262928c645a6b64097d5")
-      public fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit) {
-      }
+      public fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit)
 
-      public fun queryAction(queryAction: IResolvable) {
-      }
+      public fun queryAction(queryAction: IResolvable)
 
-      public fun queryAction(queryAction: QueryActionProperty) {
-      }
+      public fun queryAction(queryAction: QueryActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("209643db6aef748be34590f8f172d702dfc98b6d584c2242f0f32d2150c0bf0e")
-      public fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit) {
-      }
+      public fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1282,35 +1208,34 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty.builder()
 
-      public override fun actionName(actionName: String) {
+      override fun actionName(actionName: String) {
         cdkBuilder.actionName(actionName)
       }
 
-      public override fun containerAction(containerAction: IResolvable) {
+      override fun containerAction(containerAction: IResolvable) {
         cdkBuilder.containerAction(containerAction.let(IResolvable::unwrap))
       }
 
-      public override fun containerAction(containerAction: ContainerActionProperty) {
+      override fun containerAction(containerAction: ContainerActionProperty) {
         cdkBuilder.containerAction(containerAction.let(ContainerActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7fb0b2b4600952a7a3c76e021204da23616aea133683262928c645a6b64097d5")
-      public override
-          fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit): Unit =
-          containerAction(ContainerActionProperty(containerAction))
+      override fun containerAction(containerAction: ContainerActionProperty.Builder.() -> Unit):
+          Unit = containerAction(ContainerActionProperty(containerAction))
 
-      public override fun queryAction(queryAction: IResolvable) {
+      override fun queryAction(queryAction: IResolvable) {
         cdkBuilder.queryAction(queryAction.let(IResolvable::unwrap))
       }
 
-      public override fun queryAction(queryAction: QueryActionProperty) {
+      override fun queryAction(queryAction: QueryActionProperty) {
         cdkBuilder.queryAction(queryAction.let(QueryActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("209643db6aef748be34590f8f172d702dfc98b6d584c2242f0f32d2150c0bf0e")
-      public override fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit): Unit =
+      override fun queryAction(queryAction: QueryActionProperty.Builder.() -> Unit): Unit =
           queryAction(QueryActionProperty(queryAction))
 
       public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty =
@@ -1321,11 +1246,11 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ActionProperty,
     ) : ActionProperty {
-      public override fun actionName(): String = unwrap(this).getActionName()
+      override fun actionName(): String = unwrap(this).getActionName()
 
-      public override fun containerAction(): Any? = unwrap(this).getContainerAction()
+      override fun containerAction(): Any? = unwrap(this).getContainerAction()
 
-      public override fun queryAction(): Any? = unwrap(this).getQueryAction()
+      override fun queryAction(): Any? = unwrap(this).getQueryAction()
     }
 
     public companion object {
@@ -1354,14 +1279,11 @@ public open class CfnDataset internal constructor(
     public fun sqlQuery(): String
 
     public interface Builder {
-      public fun filters(filters: IResolvable) {
-      }
+      public fun filters(filters: IResolvable)
 
-      public fun filters(filters: List<Any>) {
-      }
+      public fun filters(filters: List<Any>)
 
-      public fun sqlQuery(sqlQuery: String) {
-      }
+      public fun sqlQuery(sqlQuery: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1369,15 +1291,15 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty.builder()
 
-      public override fun filters(filters: IResolvable) {
+      override fun filters(filters: IResolvable) {
         cdkBuilder.filters(filters.let(IResolvable::unwrap))
       }
 
-      public override fun filters(filters: List<Any>) {
+      override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
 
-      public override fun sqlQuery(sqlQuery: String) {
+      override fun sqlQuery(sqlQuery: String) {
         cdkBuilder.sqlQuery(sqlQuery)
       }
 
@@ -1390,9 +1312,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.QueryActionProperty,
     ) : QueryActionProperty {
-      public override fun filters(): Any? = unwrap(this).getFilters()
+      override fun filters(): Any? = unwrap(this).getFilters()
 
-      public override fun sqlQuery(): String = unwrap(this).getSqlQuery()
+      override fun sqlQuery(): String = unwrap(this).getSqlQuery()
     }
 
     public companion object {
@@ -1419,8 +1341,7 @@ public open class CfnDataset internal constructor(
     public fun scheduleExpression(): String
 
     public interface Builder {
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1428,7 +1349,7 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty.builder()
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -1440,7 +1361,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ScheduleProperty,
     ) : ScheduleProperty {
-      public override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -1475,39 +1396,30 @@ public open class CfnDataset internal constructor(
     public fun variableName(): String
 
     public interface Builder {
-      public fun datasetContentVersionValue(datasetContentVersionValue: IResolvable) {
-      }
+      public fun datasetContentVersionValue(datasetContentVersionValue: IResolvable)
 
       public
-          fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty) {
-      }
+          fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("319789726cadd953937be8d1bb9555c02edebefaaaf31aa32a55cc7e68537fc2")
       public
-          fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty.Builder.() -> Unit) {
-      }
+          fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty.Builder.() -> Unit)
 
-      public fun doubleValue(doubleValue: Number) {
-      }
+      public fun doubleValue(doubleValue: Number)
 
-      public fun outputFileUriValue(outputFileUriValue: IResolvable) {
-      }
+      public fun outputFileUriValue(outputFileUriValue: IResolvable)
 
-      public fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty) {
-      }
+      public fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dff49335f37131756e75020f0f7bc73ce35f07617897f614befcd7d8205a3e1a")
       public
-          fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty.Builder.() -> Unit) {
-      }
+          fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty.Builder.() -> Unit)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
 
-      public fun variableName(variableName: String) {
-      }
+      public fun variableName(variableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1515,45 +1427,45 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty.builder()
 
-      public override fun datasetContentVersionValue(datasetContentVersionValue: IResolvable) {
+      override fun datasetContentVersionValue(datasetContentVersionValue: IResolvable) {
         cdkBuilder.datasetContentVersionValue(datasetContentVersionValue.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty) {
         cdkBuilder.datasetContentVersionValue(datasetContentVersionValue.let(DatasetContentVersionValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("319789726cadd953937be8d1bb9555c02edebefaaaf31aa32a55cc7e68537fc2")
-      public override
+      override
           fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty.Builder.() -> Unit):
           Unit =
           datasetContentVersionValue(DatasetContentVersionValueProperty(datasetContentVersionValue))
 
-      public override fun doubleValue(doubleValue: Number) {
+      override fun doubleValue(doubleValue: Number) {
         cdkBuilder.doubleValue(doubleValue)
       }
 
-      public override fun outputFileUriValue(outputFileUriValue: IResolvable) {
+      override fun outputFileUriValue(outputFileUriValue: IResolvable) {
         cdkBuilder.outputFileUriValue(outputFileUriValue.let(IResolvable::unwrap))
       }
 
-      public override fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty) {
+      override fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty) {
         cdkBuilder.outputFileUriValue(outputFileUriValue.let(OutputFileUriValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dff49335f37131756e75020f0f7bc73ce35f07617897f614befcd7d8205a3e1a")
-      public override
+      override
           fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty.Builder.() -> Unit):
           Unit = outputFileUriValue(OutputFileUriValueProperty(outputFileUriValue))
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
-      public override fun variableName(variableName: String) {
+      override fun variableName(variableName: String) {
         cdkBuilder.variableName(variableName)
       }
 
@@ -1565,16 +1477,15 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VariableProperty,
     ) : VariableProperty {
-      public override fun datasetContentVersionValue(): Any? =
-          unwrap(this).getDatasetContentVersionValue()
+      override fun datasetContentVersionValue(): Any? = unwrap(this).getDatasetContentVersionValue()
 
-      public override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
+      override fun doubleValue(): Number? = unwrap(this).getDoubleValue()
 
-      public override fun outputFileUriValue(): Any? = unwrap(this).getOutputFileUriValue()
+      override fun outputFileUriValue(): Any? = unwrap(this).getOutputFileUriValue()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
 
-      public override fun variableName(): String = unwrap(this).getVariableName()
+      override fun variableName(): String = unwrap(this).getVariableName()
     }
 
     public companion object {
@@ -1603,18 +1514,15 @@ public open class CfnDataset internal constructor(
 
     public interface Builder {
       public
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable) {
-      }
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable)
 
       public
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty) {
-      }
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9d87bc4aa9b49a152d09288df1a27a69707702fb08a386436e141051109adc4")
       public
-          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1623,19 +1531,19 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty.builder()
 
-      public override
+      override
           fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable) {
         cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty) {
         cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(DeltaTimeSessionWindowConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9d87bc4aa9b49a152d09288df1a27a69707702fb08a386436e141051109adc4")
-      public override
+      override
           fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty.Builder.() -> Unit):
           Unit =
           deltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfigurationProperty(deltaTimeSessionWindowConfiguration))
@@ -1649,7 +1557,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.LateDataRuleConfigurationProperty,
     ) : LateDataRuleConfigurationProperty {
-      public override fun deltaTimeSessionWindowConfiguration(): Any? =
+      override fun deltaTimeSessionWindowConfiguration(): Any? =
           unwrap(this).getDeltaTimeSessionWindowConfiguration()
     }
 
@@ -1680,14 +1588,11 @@ public open class CfnDataset internal constructor(
     public fun unlimited(): Any? = unwrap(this).getUnlimited()
 
     public interface Builder {
-      public fun numberOfDays(numberOfDays: Number) {
-      }
+      public fun numberOfDays(numberOfDays: Number)
 
-      public fun unlimited(unlimited: Boolean) {
-      }
+      public fun unlimited(unlimited: Boolean)
 
-      public fun unlimited(unlimited: IResolvable) {
-      }
+      public fun unlimited(unlimited: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1695,15 +1600,15 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty.Builder =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty.builder()
 
-      public override fun numberOfDays(numberOfDays: Number) {
+      override fun numberOfDays(numberOfDays: Number) {
         cdkBuilder.numberOfDays(numberOfDays)
       }
 
-      public override fun unlimited(unlimited: Boolean) {
+      override fun unlimited(unlimited: Boolean) {
         cdkBuilder.unlimited(unlimited)
       }
 
-      public override fun unlimited(unlimited: IResolvable) {
+      override fun unlimited(unlimited: IResolvable) {
         cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
       }
 
@@ -1716,9 +1621,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.RetentionPeriodProperty,
     ) : RetentionPeriodProperty {
-      public override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
+      override fun numberOfDays(): Number? = unwrap(this).getNumberOfDays()
 
-      public override fun unlimited(): Any? = unwrap(this).getUnlimited()
+      override fun unlimited(): Any? = unwrap(this).getUnlimited()
     }
 
     public companion object {
@@ -1747,14 +1652,11 @@ public open class CfnDataset internal constructor(
     public fun unlimited(): Any? = unwrap(this).getUnlimited()
 
     public interface Builder {
-      public fun maxVersions(maxVersions: Number) {
-      }
+      public fun maxVersions(maxVersions: Number)
 
-      public fun unlimited(unlimited: Boolean) {
-      }
+      public fun unlimited(unlimited: Boolean)
 
-      public fun unlimited(unlimited: IResolvable) {
-      }
+      public fun unlimited(unlimited: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1763,15 +1665,15 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty.builder()
 
-      public override fun maxVersions(maxVersions: Number) {
+      override fun maxVersions(maxVersions: Number) {
         cdkBuilder.maxVersions(maxVersions)
       }
 
-      public override fun unlimited(unlimited: Boolean) {
+      override fun unlimited(unlimited: Boolean) {
         cdkBuilder.unlimited(unlimited)
       }
 
-      public override fun unlimited(unlimited: IResolvable) {
+      override fun unlimited(unlimited: IResolvable) {
         cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
       }
 
@@ -1784,9 +1686,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.VersioningConfigurationProperty,
     ) : VersioningConfigurationProperty {
-      public override fun maxVersions(): Number? = unwrap(this).getMaxVersions()
+      override fun maxVersions(): Number? = unwrap(this).getMaxVersions()
 
-      public override fun unlimited(): Any? = unwrap(this).getUnlimited()
+      override fun unlimited(): Any? = unwrap(this).getUnlimited()
     }
 
     public companion object {
@@ -1815,11 +1717,9 @@ public open class CfnDataset internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun inputName(inputName: String) {
-      }
+      public fun inputName(inputName: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1828,11 +1728,11 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty.builder()
 
-      public override fun inputName(inputName: String) {
+      override fun inputName(inputName: String) {
         cdkBuilder.inputName(inputName)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -1845,9 +1745,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.IotEventsDestinationConfigurationProperty,
     ) : IotEventsDestinationConfigurationProperty {
-      public override fun inputName(): String = unwrap(this).getInputName()
+      override fun inputName(): String = unwrap(this).getInputName()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -1875,8 +1775,7 @@ public open class CfnDataset internal constructor(
     public fun datasetName(): String
 
     public interface Builder {
-      public fun datasetName(datasetName: String) {
-      }
+      public fun datasetName(datasetName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1885,7 +1784,7 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty.builder()
 
-      public override fun datasetName(datasetName: String) {
+      override fun datasetName(datasetName: String) {
         cdkBuilder.datasetName(datasetName)
       }
 
@@ -1898,7 +1797,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnDataset.TriggeringDatasetProperty,
     ) : TriggeringDatasetProperty {
-      public override fun datasetName(): String = unwrap(this).getDatasetName()
+      override fun datasetName(): String = unwrap(this).getDatasetName()
     }
 
     public companion object {

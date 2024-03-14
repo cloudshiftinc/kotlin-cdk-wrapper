@@ -9,22 +9,20 @@ public interface MutualTlsValidation {
   public fun trust(): MutualTlsValidationTrust
 
   public interface Builder {
-    public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
-    }
+    public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames)
 
-    public fun trust(trust: MutualTlsValidationTrust) {
-    }
+    public fun trust(trust: MutualTlsValidationTrust)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.MutualTlsValidation.Builder =
         software.amazon.awscdk.services.appmesh.MutualTlsValidation.builder()
 
-    public override fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
+    override fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNames::unwrap))
     }
 
-    public override fun trust(trust: MutualTlsValidationTrust) {
+    override fun trust(trust: MutualTlsValidationTrust) {
       cdkBuilder.trust(trust.let(MutualTlsValidationTrust::unwrap))
     }
 
@@ -35,10 +33,10 @@ public interface MutualTlsValidation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsValidation,
   ) : MutualTlsValidation {
-    public override fun subjectAlternativeNames(): SubjectAlternativeNames? =
+    override fun subjectAlternativeNames(): SubjectAlternativeNames? =
         unwrap(this).getSubjectAlternativeNames()?.let(SubjectAlternativeNames::wrap)
 
-    public override fun trust(): MutualTlsValidationTrust =
+    override fun trust(): MutualTlsValidationTrust =
         unwrap(this).getTrust().let(MutualTlsValidationTrust::wrap)
   }
 

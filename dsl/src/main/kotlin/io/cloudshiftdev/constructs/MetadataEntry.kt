@@ -13,29 +13,26 @@ public interface MetadataEntry {
   public fun type(): String
 
   public interface Builder {
-    public fun `data`(`data`: Any) {
-    }
+    public fun `data`(`data`: Any)
 
-    public fun trace(trace: List<String>) {
-    }
+    public fun trace(trace: List<String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.constructs.MetadataEntry.Builder =
         software.constructs.MetadataEntry.builder()
 
-    public override fun `data`(`data`: Any) {
+    override fun `data`(`data`: Any) {
       cdkBuilder.`data`(`data`)
     }
 
-    public override fun trace(trace: List<String>) {
+    override fun trace(trace: List<String>) {
       cdkBuilder.trace(trace)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -45,11 +42,11 @@ public interface MetadataEntry {
   private class Wrapper internal constructor(
     internal val cdkObject: software.constructs.MetadataEntry,
   ) : MetadataEntry {
-    public override fun `data`(): Any = unwrap(this).getData()
+    override fun `data`(): Any = unwrap(this).getData()
 
-    public override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
+    override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

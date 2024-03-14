@@ -90,40 +90,29 @@ public open class CfnScheduledAction internal constructor(
       targetAction(ScheduledActionTypeProperty(`value`))
 
   public interface Builder {
-    public fun enable(enable: Boolean) {
-    }
+    public fun enable(enable: Boolean)
 
-    public fun enable(enable: IResolvable) {
-    }
+    public fun enable(enable: IResolvable)
 
-    public fun endTime(endTime: String) {
-    }
+    public fun endTime(endTime: String)
 
-    public fun iamRole(iamRole: String) {
-    }
+    public fun iamRole(iamRole: String)
 
-    public fun schedule(schedule: String) {
-    }
+    public fun schedule(schedule: String)
 
-    public fun scheduledActionDescription(scheduledActionDescription: String) {
-    }
+    public fun scheduledActionDescription(scheduledActionDescription: String)
 
-    public fun scheduledActionName(scheduledActionName: String) {
-    }
+    public fun scheduledActionName(scheduledActionName: String)
 
-    public fun startTime(startTime: String) {
-    }
+    public fun startTime(startTime: String)
 
-    public fun targetAction(targetAction: IResolvable) {
-    }
+    public fun targetAction(targetAction: IResolvable)
 
-    public fun targetAction(targetAction: ScheduledActionTypeProperty) {
-    }
+    public fun targetAction(targetAction: ScheduledActionTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d14944716e8349afb884b0656bf96de37477ce11afde21172787d26fbb9224eb")
-    public fun targetAction(targetAction: ScheduledActionTypeProperty.Builder.() -> Unit) {
-    }
+    public fun targetAction(targetAction: ScheduledActionTypeProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -133,50 +122,50 @@ public open class CfnScheduledAction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.redshift.CfnScheduledAction.Builder =
         software.amazon.awscdk.services.redshift.CfnScheduledAction.Builder.create(scope, id)
 
-    public override fun enable(enable: Boolean) {
+    override fun enable(enable: Boolean) {
       cdkBuilder.enable(enable)
     }
 
-    public override fun enable(enable: IResolvable) {
+    override fun enable(enable: IResolvable) {
       cdkBuilder.enable(enable.let(IResolvable::unwrap))
     }
 
-    public override fun endTime(endTime: String) {
+    override fun endTime(endTime: String) {
       cdkBuilder.endTime(endTime)
     }
 
-    public override fun iamRole(iamRole: String) {
+    override fun iamRole(iamRole: String) {
       cdkBuilder.iamRole(iamRole)
     }
 
-    public override fun schedule(schedule: String) {
+    override fun schedule(schedule: String) {
       cdkBuilder.schedule(schedule)
     }
 
-    public override fun scheduledActionDescription(scheduledActionDescription: String) {
+    override fun scheduledActionDescription(scheduledActionDescription: String) {
       cdkBuilder.scheduledActionDescription(scheduledActionDescription)
     }
 
-    public override fun scheduledActionName(scheduledActionName: String) {
+    override fun scheduledActionName(scheduledActionName: String) {
       cdkBuilder.scheduledActionName(scheduledActionName)
     }
 
-    public override fun startTime(startTime: String) {
+    override fun startTime(startTime: String) {
       cdkBuilder.startTime(startTime)
     }
 
-    public override fun targetAction(targetAction: IResolvable) {
+    override fun targetAction(targetAction: IResolvable) {
       cdkBuilder.targetAction(targetAction.let(IResolvable::unwrap))
     }
 
-    public override fun targetAction(targetAction: ScheduledActionTypeProperty) {
+    override fun targetAction(targetAction: ScheduledActionTypeProperty) {
       cdkBuilder.targetAction(targetAction.let(ScheduledActionTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d14944716e8349afb884b0656bf96de37477ce11afde21172787d26fbb9224eb")
-    public override fun targetAction(targetAction: ScheduledActionTypeProperty.Builder.() -> Unit):
-        Unit = targetAction(ScheduledActionTypeProperty(targetAction))
+    override fun targetAction(targetAction: ScheduledActionTypeProperty.Builder.() -> Unit): Unit =
+        targetAction(ScheduledActionTypeProperty(targetAction))
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnScheduledAction =
         cdkBuilder.build()
@@ -215,23 +204,17 @@ public open class CfnScheduledAction internal constructor(
     public fun numberOfNodes(): Number? = unwrap(this).getNumberOfNodes()
 
     public interface Builder {
-      public fun classic(classic: Boolean) {
-      }
+      public fun classic(classic: Boolean)
 
-      public fun classic(classic: IResolvable) {
-      }
+      public fun classic(classic: IResolvable)
 
-      public fun clusterIdentifier(clusterIdentifier: String) {
-      }
+      public fun clusterIdentifier(clusterIdentifier: String)
 
-      public fun clusterType(clusterType: String) {
-      }
+      public fun clusterType(clusterType: String)
 
-      public fun nodeType(nodeType: String) {
-      }
+      public fun nodeType(nodeType: String)
 
-      public fun numberOfNodes(numberOfNodes: Number) {
-      }
+      public fun numberOfNodes(numberOfNodes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -240,27 +223,27 @@ public open class CfnScheduledAction internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty.builder()
 
-      public override fun classic(classic: Boolean) {
+      override fun classic(classic: Boolean) {
         cdkBuilder.classic(classic)
       }
 
-      public override fun classic(classic: IResolvable) {
+      override fun classic(classic: IResolvable) {
         cdkBuilder.classic(classic.let(IResolvable::unwrap))
       }
 
-      public override fun clusterIdentifier(clusterIdentifier: String) {
+      override fun clusterIdentifier(clusterIdentifier: String) {
         cdkBuilder.clusterIdentifier(clusterIdentifier)
       }
 
-      public override fun clusterType(clusterType: String) {
+      override fun clusterType(clusterType: String) {
         cdkBuilder.clusterType(clusterType)
       }
 
-      public override fun nodeType(nodeType: String) {
+      override fun nodeType(nodeType: String) {
         cdkBuilder.nodeType(nodeType)
       }
 
-      public override fun numberOfNodes(numberOfNodes: Number) {
+      override fun numberOfNodes(numberOfNodes: Number) {
         cdkBuilder.numberOfNodes(numberOfNodes)
       }
 
@@ -273,15 +256,15 @@ public open class CfnScheduledAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResizeClusterMessageProperty,
     ) : ResizeClusterMessageProperty {
-      public override fun classic(): Any? = unwrap(this).getClassic()
+      override fun classic(): Any? = unwrap(this).getClassic()
 
-      public override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+      override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
 
-      public override fun clusterType(): String? = unwrap(this).getClusterType()
+      override fun clusterType(): String? = unwrap(this).getClusterType()
 
-      public override fun nodeType(): String? = unwrap(this).getNodeType()
+      override fun nodeType(): String? = unwrap(this).getNodeType()
 
-      public override fun numberOfNodes(): Number? = unwrap(this).getNumberOfNodes()
+      override fun numberOfNodes(): Number? = unwrap(this).getNumberOfNodes()
     }
 
     public companion object {
@@ -308,8 +291,7 @@ public open class CfnScheduledAction internal constructor(
     public fun clusterIdentifier(): String
 
     public interface Builder {
-      public fun clusterIdentifier(clusterIdentifier: String) {
-      }
+      public fun clusterIdentifier(clusterIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -318,7 +300,7 @@ public open class CfnScheduledAction internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty.builder()
 
-      public override fun clusterIdentifier(clusterIdentifier: String) {
+      override fun clusterIdentifier(clusterIdentifier: String) {
         cdkBuilder.clusterIdentifier(clusterIdentifier)
       }
 
@@ -331,7 +313,7 @@ public open class CfnScheduledAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ResumeClusterMessageProperty,
     ) : ResumeClusterMessageProperty {
-      public override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+      override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
     }
 
     public companion object {
@@ -358,8 +340,7 @@ public open class CfnScheduledAction internal constructor(
     public fun clusterIdentifier(): String
 
     public interface Builder {
-      public fun clusterIdentifier(clusterIdentifier: String) {
-      }
+      public fun clusterIdentifier(clusterIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -368,7 +349,7 @@ public open class CfnScheduledAction internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty.builder()
 
-      public override fun clusterIdentifier(clusterIdentifier: String) {
+      override fun clusterIdentifier(clusterIdentifier: String) {
         cdkBuilder.clusterIdentifier(clusterIdentifier)
       }
 
@@ -381,7 +362,7 @@ public open class CfnScheduledAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnScheduledAction.PauseClusterMessageProperty,
     ) : PauseClusterMessageProperty {
-      public override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+      override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
     }
 
     public companion object {
@@ -412,38 +393,29 @@ public open class CfnScheduledAction internal constructor(
     public fun resumeCluster(): Any? = unwrap(this).getResumeCluster()
 
     public interface Builder {
-      public fun pauseCluster(pauseCluster: IResolvable) {
-      }
+      public fun pauseCluster(pauseCluster: IResolvable)
 
-      public fun pauseCluster(pauseCluster: PauseClusterMessageProperty) {
-      }
+      public fun pauseCluster(pauseCluster: PauseClusterMessageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a24da4bcf80749aa50cbefd201500769afcab07d995759c89ae4b58185cd8ff4")
-      public fun pauseCluster(pauseCluster: PauseClusterMessageProperty.Builder.() -> Unit) {
-      }
+      public fun pauseCluster(pauseCluster: PauseClusterMessageProperty.Builder.() -> Unit)
 
-      public fun resizeCluster(resizeCluster: IResolvable) {
-      }
+      public fun resizeCluster(resizeCluster: IResolvable)
 
-      public fun resizeCluster(resizeCluster: ResizeClusterMessageProperty) {
-      }
+      public fun resizeCluster(resizeCluster: ResizeClusterMessageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dc0c6375f9e1956454d5514ce08573f2beb7656c87933e47644f071f71821d30")
-      public fun resizeCluster(resizeCluster: ResizeClusterMessageProperty.Builder.() -> Unit) {
-      }
+      public fun resizeCluster(resizeCluster: ResizeClusterMessageProperty.Builder.() -> Unit)
 
-      public fun resumeCluster(resumeCluster: IResolvable) {
-      }
+      public fun resumeCluster(resumeCluster: IResolvable)
 
-      public fun resumeCluster(resumeCluster: ResumeClusterMessageProperty) {
-      }
+      public fun resumeCluster(resumeCluster: ResumeClusterMessageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb060bab55e9fef415647c52936d5aa164157292c6e5658c8be5d9de35546c1b")
-      public fun resumeCluster(resumeCluster: ResumeClusterMessageProperty.Builder.() -> Unit) {
-      }
+      public fun resumeCluster(resumeCluster: ResumeClusterMessageProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -452,47 +424,44 @@ public open class CfnScheduledAction internal constructor(
           =
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty.builder()
 
-      public override fun pauseCluster(pauseCluster: IResolvable) {
+      override fun pauseCluster(pauseCluster: IResolvable) {
         cdkBuilder.pauseCluster(pauseCluster.let(IResolvable::unwrap))
       }
 
-      public override fun pauseCluster(pauseCluster: PauseClusterMessageProperty) {
+      override fun pauseCluster(pauseCluster: PauseClusterMessageProperty) {
         cdkBuilder.pauseCluster(pauseCluster.let(PauseClusterMessageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a24da4bcf80749aa50cbefd201500769afcab07d995759c89ae4b58185cd8ff4")
-      public override
-          fun pauseCluster(pauseCluster: PauseClusterMessageProperty.Builder.() -> Unit): Unit =
-          pauseCluster(PauseClusterMessageProperty(pauseCluster))
+      override fun pauseCluster(pauseCluster: PauseClusterMessageProperty.Builder.() -> Unit): Unit
+          = pauseCluster(PauseClusterMessageProperty(pauseCluster))
 
-      public override fun resizeCluster(resizeCluster: IResolvable) {
+      override fun resizeCluster(resizeCluster: IResolvable) {
         cdkBuilder.resizeCluster(resizeCluster.let(IResolvable::unwrap))
       }
 
-      public override fun resizeCluster(resizeCluster: ResizeClusterMessageProperty) {
+      override fun resizeCluster(resizeCluster: ResizeClusterMessageProperty) {
         cdkBuilder.resizeCluster(resizeCluster.let(ResizeClusterMessageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dc0c6375f9e1956454d5514ce08573f2beb7656c87933e47644f071f71821d30")
-      public override
-          fun resizeCluster(resizeCluster: ResizeClusterMessageProperty.Builder.() -> Unit): Unit =
-          resizeCluster(ResizeClusterMessageProperty(resizeCluster))
+      override fun resizeCluster(resizeCluster: ResizeClusterMessageProperty.Builder.() -> Unit):
+          Unit = resizeCluster(ResizeClusterMessageProperty(resizeCluster))
 
-      public override fun resumeCluster(resumeCluster: IResolvable) {
+      override fun resumeCluster(resumeCluster: IResolvable) {
         cdkBuilder.resumeCluster(resumeCluster.let(IResolvable::unwrap))
       }
 
-      public override fun resumeCluster(resumeCluster: ResumeClusterMessageProperty) {
+      override fun resumeCluster(resumeCluster: ResumeClusterMessageProperty) {
         cdkBuilder.resumeCluster(resumeCluster.let(ResumeClusterMessageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb060bab55e9fef415647c52936d5aa164157292c6e5658c8be5d9de35546c1b")
-      public override
-          fun resumeCluster(resumeCluster: ResumeClusterMessageProperty.Builder.() -> Unit): Unit =
-          resumeCluster(ResumeClusterMessageProperty(resumeCluster))
+      override fun resumeCluster(resumeCluster: ResumeClusterMessageProperty.Builder.() -> Unit):
+          Unit = resumeCluster(ResumeClusterMessageProperty(resumeCluster))
 
       public fun build():
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty =
@@ -503,11 +472,11 @@ public open class CfnScheduledAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshift.CfnScheduledAction.ScheduledActionTypeProperty,
     ) : ScheduledActionTypeProperty {
-      public override fun pauseCluster(): Any? = unwrap(this).getPauseCluster()
+      override fun pauseCluster(): Any? = unwrap(this).getPauseCluster()
 
-      public override fun resizeCluster(): Any? = unwrap(this).getResizeCluster()
+      override fun resizeCluster(): Any? = unwrap(this).getResizeCluster()
 
-      public override fun resumeCluster(): Any? = unwrap(this).getResumeCluster()
+      override fun resumeCluster(): Any? = unwrap(this).getResumeCluster()
     }
 
     public companion object {

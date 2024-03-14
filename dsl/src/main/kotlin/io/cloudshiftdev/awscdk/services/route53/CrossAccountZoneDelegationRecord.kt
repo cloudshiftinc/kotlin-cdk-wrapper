@@ -12,23 +12,17 @@ public open class CrossAccountZoneDelegationRecord internal constructor(
   private val cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun delegatedZone(delegatedZone: IHostedZone) {
-    }
+    public fun delegatedZone(delegatedZone: IHostedZone)
 
-    public fun delegationRole(delegationRole: IRole) {
-    }
+    public fun delegationRole(delegationRole: IRole)
 
-    public fun parentHostedZoneId(parentHostedZoneId: String) {
-    }
+    public fun parentHostedZoneId(parentHostedZoneId: String)
 
-    public fun parentHostedZoneName(parentHostedZoneName: String) {
-    }
+    public fun parentHostedZoneName(parentHostedZoneName: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun ttl(ttl: Duration) {
-    }
+    public fun ttl(ttl: Duration)
   }
 
   private class BuilderImpl(
@@ -40,27 +34,27 @@ public open class CrossAccountZoneDelegationRecord internal constructor(
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord.Builder.create(scope,
         id)
 
-    public override fun delegatedZone(delegatedZone: IHostedZone) {
+    override fun delegatedZone(delegatedZone: IHostedZone) {
       cdkBuilder.delegatedZone(delegatedZone.let(IHostedZone::unwrap))
     }
 
-    public override fun delegationRole(delegationRole: IRole) {
+    override fun delegationRole(delegationRole: IRole) {
       cdkBuilder.delegationRole(delegationRole.let(IRole::unwrap))
     }
 
-    public override fun parentHostedZoneId(parentHostedZoneId: String) {
+    override fun parentHostedZoneId(parentHostedZoneId: String) {
       cdkBuilder.parentHostedZoneId(parentHostedZoneId)
     }
 
-    public override fun parentHostedZoneName(parentHostedZoneName: String) {
+    override fun parentHostedZoneName(parentHostedZoneName: String) {
       cdkBuilder.parentHostedZoneName(parentHostedZoneName)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun ttl(ttl: Duration) {
+    override fun ttl(ttl: Duration) {
       cdkBuilder.ttl(ttl.let(Duration::unwrap))
     }
 

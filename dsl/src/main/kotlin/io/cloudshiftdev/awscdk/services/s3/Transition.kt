@@ -12,29 +12,26 @@ public interface Transition {
   public fun transitionDate(): Instant? = unwrap(this).getTransitionDate()
 
   public interface Builder {
-    public fun storageClass(storageClass: StorageClass) {
-    }
+    public fun storageClass(storageClass: StorageClass)
 
-    public fun transitionAfter(transitionAfter: Duration) {
-    }
+    public fun transitionAfter(transitionAfter: Duration)
 
-    public fun transitionDate(transitionDate: Instant) {
-    }
+    public fun transitionDate(transitionDate: Instant)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.Transition.Builder =
         software.amazon.awscdk.services.s3.Transition.builder()
 
-    public override fun storageClass(storageClass: StorageClass) {
+    override fun storageClass(storageClass: StorageClass) {
       cdkBuilder.storageClass(storageClass.let(StorageClass::unwrap))
     }
 
-    public override fun transitionAfter(transitionAfter: Duration) {
+    override fun transitionAfter(transitionAfter: Duration) {
       cdkBuilder.transitionAfter(transitionAfter.let(Duration::unwrap))
     }
 
-    public override fun transitionDate(transitionDate: Instant) {
+    override fun transitionDate(transitionDate: Instant) {
       cdkBuilder.transitionDate(transitionDate)
     }
 
@@ -44,13 +41,13 @@ public interface Transition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.Transition,
   ) : Transition {
-    public override fun storageClass(): StorageClass =
+    override fun storageClass(): StorageClass =
         unwrap(this).getStorageClass().let(StorageClass::wrap)
 
-    public override fun transitionAfter(): Duration? =
+    override fun transitionAfter(): Duration? =
         unwrap(this).getTransitionAfter()?.let(Duration::wrap)
 
-    public override fun transitionDate(): Instant? = unwrap(this).getTransitionDate()
+    override fun transitionDate(): Instant? = unwrap(this).getTransitionDate()
   }
 
   public companion object {

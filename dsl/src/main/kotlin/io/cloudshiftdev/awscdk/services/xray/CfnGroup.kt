@@ -63,26 +63,20 @@ public open class CfnGroup internal constructor(
   }
 
   public interface Builder {
-    public fun filterExpression(filterExpression: String) {
-    }
+    public fun filterExpression(filterExpression: String)
 
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun insightsConfiguration(insightsConfiguration: IResolvable) {
-    }
+    public fun insightsConfiguration(insightsConfiguration: IResolvable)
 
-    public fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty) {
-    }
+    public fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e14f6cec07b18027436bd71c2f8cbcc7699546fea0b70fd3021cfc68390e860")
     public
-        fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -92,30 +86,29 @@ public open class CfnGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.xray.CfnGroup.Builder =
         software.amazon.awscdk.services.xray.CfnGroup.Builder.create(scope, id)
 
-    public override fun filterExpression(filterExpression: String) {
+    override fun filterExpression(filterExpression: String) {
       cdkBuilder.filterExpression(filterExpression)
     }
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun insightsConfiguration(insightsConfiguration: IResolvable) {
+    override fun insightsConfiguration(insightsConfiguration: IResolvable) {
       cdkBuilder.insightsConfiguration(insightsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty) {
+    override fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty) {
       cdkBuilder.insightsConfiguration(insightsConfiguration.let(InsightsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e14f6cec07b18027436bd71c2f8cbcc7699546fea0b70fd3021cfc68390e860")
-    public override
+    override
         fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty.Builder.() -> Unit):
         Unit = insightsConfiguration(InsightsConfigurationProperty(insightsConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -149,17 +142,13 @@ public open class CfnGroup internal constructor(
     public fun notificationsEnabled(): Any? = unwrap(this).getNotificationsEnabled()
 
     public interface Builder {
-      public fun insightsEnabled(insightsEnabled: Boolean) {
-      }
+      public fun insightsEnabled(insightsEnabled: Boolean)
 
-      public fun insightsEnabled(insightsEnabled: IResolvable) {
-      }
+      public fun insightsEnabled(insightsEnabled: IResolvable)
 
-      public fun notificationsEnabled(notificationsEnabled: Boolean) {
-      }
+      public fun notificationsEnabled(notificationsEnabled: Boolean)
 
-      public fun notificationsEnabled(notificationsEnabled: IResolvable) {
-      }
+      public fun notificationsEnabled(notificationsEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -167,19 +156,19 @@ public open class CfnGroup internal constructor(
           software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty.Builder =
           software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty.builder()
 
-      public override fun insightsEnabled(insightsEnabled: Boolean) {
+      override fun insightsEnabled(insightsEnabled: Boolean) {
         cdkBuilder.insightsEnabled(insightsEnabled)
       }
 
-      public override fun insightsEnabled(insightsEnabled: IResolvable) {
+      override fun insightsEnabled(insightsEnabled: IResolvable) {
         cdkBuilder.insightsEnabled(insightsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun notificationsEnabled(notificationsEnabled: Boolean) {
+      override fun notificationsEnabled(notificationsEnabled: Boolean) {
         cdkBuilder.notificationsEnabled(notificationsEnabled)
       }
 
-      public override fun notificationsEnabled(notificationsEnabled: IResolvable) {
+      override fun notificationsEnabled(notificationsEnabled: IResolvable) {
         cdkBuilder.notificationsEnabled(notificationsEnabled.let(IResolvable::unwrap))
       }
 
@@ -192,9 +181,9 @@ public open class CfnGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty,
     ) : InsightsConfigurationProperty {
-      public override fun insightsEnabled(): Any? = unwrap(this).getInsightsEnabled()
+      override fun insightsEnabled(): Any? = unwrap(this).getInsightsEnabled()
 
-      public override fun notificationsEnabled(): Any? = unwrap(this).getNotificationsEnabled()
+      override fun notificationsEnabled(): Any? = unwrap(this).getNotificationsEnabled()
     }
 
     public companion object {

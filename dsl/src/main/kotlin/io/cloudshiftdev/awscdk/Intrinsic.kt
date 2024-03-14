@@ -22,11 +22,9 @@ public open class Intrinsic internal constructor(
       unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
 
   public interface Builder {
-    public fun stackTrace(stackTrace: Boolean) {
-    }
+    public fun stackTrace(stackTrace: Boolean)
 
-    public fun typeHint(typeHint: ResolutionTypeHint) {
-    }
+    public fun typeHint(typeHint: ResolutionTypeHint)
   }
 
   private class BuilderImpl(
@@ -35,11 +33,11 @@ public open class Intrinsic internal constructor(
     private val cdkBuilder: software.amazon.awscdk.Intrinsic.Builder =
         software.amazon.awscdk.Intrinsic.Builder.create(`value`)
 
-    public override fun stackTrace(stackTrace: Boolean) {
+    override fun stackTrace(stackTrace: Boolean) {
       cdkBuilder.stackTrace(stackTrace)
     }
 
-    public override fun typeHint(typeHint: ResolutionTypeHint) {
+    override fun typeHint(typeHint: ResolutionTypeHint) {
       cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint::unwrap))
     }
 

@@ -61,23 +61,17 @@ public open class CfnDestination internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun expression(expression: String) {
-    }
+    public fun expression(expression: String)
 
-    public fun expressionType(expressionType: String) {
-    }
+    public fun expressionType(expressionType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,27 +81,27 @@ public open class CfnDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnDestination.Builder =
         software.amazon.awscdk.services.iotwireless.CfnDestination.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun expression(expression: String) {
+    override fun expression(expression: String) {
       cdkBuilder.expression(expression)
     }
 
-    public override fun expressionType(expressionType: String) {
+    override fun expressionType(expressionType: String) {
       cdkBuilder.expressionType(expressionType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

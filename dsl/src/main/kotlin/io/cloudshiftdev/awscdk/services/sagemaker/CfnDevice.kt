@@ -54,22 +54,17 @@ public open class CfnDevice internal constructor(
   }
 
   public interface Builder {
-    public fun device(device: IResolvable) {
-    }
+    public fun device(device: IResolvable)
 
-    public fun device(device: DeviceProperty) {
-    }
+    public fun device(device: DeviceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8b4e7a7e3cbe04285da0f7a5e0957f8dec55dd96ae1f2aa55cb43fe225fccb36")
-    public fun device(device: DeviceProperty.Builder.() -> Unit) {
-    }
+    public fun device(device: DeviceProperty.Builder.() -> Unit)
 
-    public fun deviceFleetName(deviceFleetName: String) {
-    }
+    public fun deviceFleetName(deviceFleetName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,24 +74,24 @@ public open class CfnDevice internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnDevice.Builder =
         software.amazon.awscdk.services.sagemaker.CfnDevice.Builder.create(scope, id)
 
-    public override fun device(device: IResolvable) {
+    override fun device(device: IResolvable) {
       cdkBuilder.device(device.let(IResolvable::unwrap))
     }
 
-    public override fun device(device: DeviceProperty) {
+    override fun device(device: DeviceProperty) {
       cdkBuilder.device(device.let(DeviceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8b4e7a7e3cbe04285da0f7a5e0957f8dec55dd96ae1f2aa55cb43fe225fccb36")
-    public override fun device(device: DeviceProperty.Builder.() -> Unit): Unit =
+    override fun device(device: DeviceProperty.Builder.() -> Unit): Unit =
         device(DeviceProperty(device))
 
-    public override fun deviceFleetName(deviceFleetName: String) {
+    override fun deviceFleetName(deviceFleetName: String) {
       cdkBuilder.deviceFleetName(deviceFleetName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -132,14 +127,11 @@ public open class CfnDevice internal constructor(
     public fun iotThingName(): String? = unwrap(this).getIotThingName()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun deviceName(deviceName: String) {
-      }
+      public fun deviceName(deviceName: String)
 
-      public fun iotThingName(iotThingName: String) {
-      }
+      public fun iotThingName(iotThingName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -147,15 +139,15 @@ public open class CfnDevice internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDevice.DeviceProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDevice.DeviceProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun deviceName(deviceName: String) {
+      override fun deviceName(deviceName: String) {
         cdkBuilder.deviceName(deviceName)
       }
 
-      public override fun iotThingName(iotThingName: String) {
+      override fun iotThingName(iotThingName: String) {
         cdkBuilder.iotThingName(iotThingName)
       }
 
@@ -166,11 +158,11 @@ public open class CfnDevice internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sagemaker.CfnDevice.DeviceProperty,
     ) : DeviceProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun deviceName(): String = unwrap(this).getDeviceName()
+      override fun deviceName(): String = unwrap(this).getDeviceName()
 
-      public override fun iotThingName(): String? = unwrap(this).getIotThingName()
+      override fun iotThingName(): String? = unwrap(this).getIotThingName()
     }
 
     public companion object {

@@ -6,15 +6,14 @@ public interface Credentials {
   public fun role(): TaskRole
 
   public interface Builder {
-    public fun role(role: TaskRole) {
-    }
+    public fun role(role: TaskRole)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Credentials.Builder =
         software.amazon.awscdk.services.stepfunctions.Credentials.builder()
 
-    public override fun role(role: TaskRole) {
+    override fun role(role: TaskRole) {
       cdkBuilder.role(role.let(TaskRole::unwrap))
     }
 
@@ -25,7 +24,7 @@ public interface Credentials {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.Credentials,
   ) : Credentials {
-    public override fun role(): TaskRole = unwrap(this).getRole().let(TaskRole::wrap)
+    override fun role(): TaskRole = unwrap(this).getRole().let(TaskRole::wrap)
   }
 
   public companion object {

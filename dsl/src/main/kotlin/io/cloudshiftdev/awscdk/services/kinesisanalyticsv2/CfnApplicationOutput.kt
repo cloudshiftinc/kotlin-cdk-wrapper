@@ -43,19 +43,15 @@ public open class CfnApplicationOutput internal constructor(
       output(OutputProperty(`value`))
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun output(output: IResolvable) {
-    }
+    public fun output(output: IResolvable)
 
-    public fun output(output: OutputProperty) {
-    }
+    public fun output(output: OutputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("992464f9b498ca92ac99f58583a408b80b254246bb61b772ffa84a60e9fa617e")
-    public fun output(output: OutputProperty.Builder.() -> Unit) {
-    }
+    public fun output(output: OutputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -67,21 +63,21 @@ public open class CfnApplicationOutput internal constructor(
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.Builder.create(scope,
         id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun output(output: IResolvable) {
+    override fun output(output: IResolvable) {
       cdkBuilder.output(output.let(IResolvable::unwrap))
     }
 
-    public override fun output(output: OutputProperty) {
+    override fun output(output: OutputProperty) {
       cdkBuilder.output(output.let(OutputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("992464f9b498ca92ac99f58583a408b80b254246bb61b772ffa84a60e9fa617e")
-    public override fun output(output: OutputProperty.Builder.() -> Unit): Unit =
+    override fun output(output: OutputProperty.Builder.() -> Unit): Unit =
         output(OutputProperty(output))
 
     public fun build(): software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput =
@@ -114,8 +110,7 @@ public open class CfnApplicationOutput internal constructor(
     public fun recordFormatType(): String? = unwrap(this).getRecordFormatType()
 
     public interface Builder {
-      public fun recordFormatType(recordFormatType: String) {
-      }
+      public fun recordFormatType(recordFormatType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -124,7 +119,7 @@ public open class CfnApplicationOutput internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.DestinationSchemaProperty.builder()
 
-      public override fun recordFormatType(recordFormatType: String) {
+      override fun recordFormatType(recordFormatType: String) {
         cdkBuilder.recordFormatType(recordFormatType)
       }
 
@@ -137,7 +132,7 @@ public open class CfnApplicationOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.DestinationSchemaProperty,
     ) : DestinationSchemaProperty {
-      public override fun recordFormatType(): String? = unwrap(this).getRecordFormatType()
+      override fun recordFormatType(): String? = unwrap(this).getRecordFormatType()
     }
 
     public companion object {
@@ -164,8 +159,7 @@ public open class CfnApplicationOutput internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -174,7 +168,7 @@ public open class CfnApplicationOutput internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.KinesisStreamsOutputProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -187,7 +181,7 @@ public open class CfnApplicationOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.KinesisStreamsOutputProperty,
     ) : KinesisStreamsOutputProperty {
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -222,55 +216,41 @@ public open class CfnApplicationOutput internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun destinationSchema(destinationSchema: IResolvable) {
-      }
+      public fun destinationSchema(destinationSchema: IResolvable)
 
-      public fun destinationSchema(destinationSchema: DestinationSchemaProperty) {
-      }
+      public fun destinationSchema(destinationSchema: DestinationSchemaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43c5222f39a078dbc48f9a4630c71e5527a14036c63cb30612b836495c5e8b84")
-      public
-          fun destinationSchema(destinationSchema: DestinationSchemaProperty.Builder.() -> Unit) {
-      }
+      public fun destinationSchema(destinationSchema: DestinationSchemaProperty.Builder.() -> Unit)
 
-      public fun kinesisFirehoseOutput(kinesisFirehoseOutput: IResolvable) {
-      }
+      public fun kinesisFirehoseOutput(kinesisFirehoseOutput: IResolvable)
 
-      public fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty) {
-      }
+      public fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ddca7eed72ed56a3e61d54fabc41324125463ed6fc674822ec7f0d23c2fa25e")
       public
-          fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty.Builder.() -> Unit) {
-      }
+          fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty.Builder.() -> Unit)
 
-      public fun kinesisStreamsOutput(kinesisStreamsOutput: IResolvable) {
-      }
+      public fun kinesisStreamsOutput(kinesisStreamsOutput: IResolvable)
 
-      public fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty) {
-      }
+      public fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5a3f757690c98eaa87ccf93c1cdb7defbad1dd220b9ffe6fa63449033654ac1e")
       public
-          fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty.Builder.() -> Unit) {
-      }
+          fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty.Builder.() -> Unit)
 
-      public fun lambdaOutput(lambdaOutput: IResolvable) {
-      }
+      public fun lambdaOutput(lambdaOutput: IResolvable)
 
-      public fun lambdaOutput(lambdaOutput: LambdaOutputProperty) {
-      }
+      public fun lambdaOutput(lambdaOutput: LambdaOutputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a3c83defc385c5dbb0f17ec993a9ec6441c174788caf38e7d5c15029f6f81a41")
-      public fun lambdaOutput(lambdaOutput: LambdaOutputProperty.Builder.() -> Unit) {
-      }
+      public fun lambdaOutput(lambdaOutput: LambdaOutputProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -279,63 +259,62 @@ public open class CfnApplicationOutput internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.OutputProperty.builder()
 
-      public override fun destinationSchema(destinationSchema: IResolvable) {
+      override fun destinationSchema(destinationSchema: IResolvable) {
         cdkBuilder.destinationSchema(destinationSchema.let(IResolvable::unwrap))
       }
 
-      public override fun destinationSchema(destinationSchema: DestinationSchemaProperty) {
+      override fun destinationSchema(destinationSchema: DestinationSchemaProperty) {
         cdkBuilder.destinationSchema(destinationSchema.let(DestinationSchemaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43c5222f39a078dbc48f9a4630c71e5527a14036c63cb30612b836495c5e8b84")
-      public override
+      override
           fun destinationSchema(destinationSchema: DestinationSchemaProperty.Builder.() -> Unit):
           Unit = destinationSchema(DestinationSchemaProperty(destinationSchema))
 
-      public override fun kinesisFirehoseOutput(kinesisFirehoseOutput: IResolvable) {
+      override fun kinesisFirehoseOutput(kinesisFirehoseOutput: IResolvable) {
         cdkBuilder.kinesisFirehoseOutput(kinesisFirehoseOutput.let(IResolvable::unwrap))
       }
 
-      public override
-          fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty) {
+      override fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty) {
         cdkBuilder.kinesisFirehoseOutput(kinesisFirehoseOutput.let(KinesisFirehoseOutputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ddca7eed72ed56a3e61d54fabc41324125463ed6fc674822ec7f0d23c2fa25e")
-      public override
+      override
           fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty.Builder.() -> Unit):
           Unit = kinesisFirehoseOutput(KinesisFirehoseOutputProperty(kinesisFirehoseOutput))
 
-      public override fun kinesisStreamsOutput(kinesisStreamsOutput: IResolvable) {
+      override fun kinesisStreamsOutput(kinesisStreamsOutput: IResolvable) {
         cdkBuilder.kinesisStreamsOutput(kinesisStreamsOutput.let(IResolvable::unwrap))
       }
 
-      public override fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty) {
+      override fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty) {
         cdkBuilder.kinesisStreamsOutput(kinesisStreamsOutput.let(KinesisStreamsOutputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5a3f757690c98eaa87ccf93c1cdb7defbad1dd220b9ffe6fa63449033654ac1e")
-      public override
+      override
           fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty.Builder.() -> Unit):
           Unit = kinesisStreamsOutput(KinesisStreamsOutputProperty(kinesisStreamsOutput))
 
-      public override fun lambdaOutput(lambdaOutput: IResolvable) {
+      override fun lambdaOutput(lambdaOutput: IResolvable) {
         cdkBuilder.lambdaOutput(lambdaOutput.let(IResolvable::unwrap))
       }
 
-      public override fun lambdaOutput(lambdaOutput: LambdaOutputProperty) {
+      override fun lambdaOutput(lambdaOutput: LambdaOutputProperty) {
         cdkBuilder.lambdaOutput(lambdaOutput.let(LambdaOutputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a3c83defc385c5dbb0f17ec993a9ec6441c174788caf38e7d5c15029f6f81a41")
-      public override fun lambdaOutput(lambdaOutput: LambdaOutputProperty.Builder.() -> Unit): Unit
-          = lambdaOutput(LambdaOutputProperty(lambdaOutput))
+      override fun lambdaOutput(lambdaOutput: LambdaOutputProperty.Builder.() -> Unit): Unit =
+          lambdaOutput(LambdaOutputProperty(lambdaOutput))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -348,15 +327,15 @@ public open class CfnApplicationOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.OutputProperty,
     ) : OutputProperty {
-      public override fun destinationSchema(): Any = unwrap(this).getDestinationSchema()
+      override fun destinationSchema(): Any = unwrap(this).getDestinationSchema()
 
-      public override fun kinesisFirehoseOutput(): Any? = unwrap(this).getKinesisFirehoseOutput()
+      override fun kinesisFirehoseOutput(): Any? = unwrap(this).getKinesisFirehoseOutput()
 
-      public override fun kinesisStreamsOutput(): Any? = unwrap(this).getKinesisStreamsOutput()
+      override fun kinesisStreamsOutput(): Any? = unwrap(this).getKinesisStreamsOutput()
 
-      public override fun lambdaOutput(): Any? = unwrap(this).getLambdaOutput()
+      override fun lambdaOutput(): Any? = unwrap(this).getLambdaOutput()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -383,8 +362,7 @@ public open class CfnApplicationOutput internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -393,7 +371,7 @@ public open class CfnApplicationOutput internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.KinesisFirehoseOutputProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -406,7 +384,7 @@ public open class CfnApplicationOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.KinesisFirehoseOutputProperty,
     ) : KinesisFirehoseOutputProperty {
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {
@@ -433,8 +411,7 @@ public open class CfnApplicationOutput internal constructor(
     public fun resourceArn(): String
 
     public interface Builder {
-      public fun resourceArn(resourceArn: String) {
-      }
+      public fun resourceArn(resourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -443,7 +420,7 @@ public open class CfnApplicationOutput internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.LambdaOutputProperty.builder()
 
-      public override fun resourceArn(resourceArn: String) {
+      override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)
       }
 
@@ -456,7 +433,7 @@ public open class CfnApplicationOutput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput.LambdaOutputProperty,
     ) : LambdaOutputProperty {
-      public override fun resourceArn(): String = unwrap(this).getResourceArn()
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
     }
 
     public companion object {

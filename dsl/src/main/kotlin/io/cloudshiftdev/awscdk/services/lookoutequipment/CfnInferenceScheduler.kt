@@ -84,32 +84,23 @@ public open class CfnInferenceScheduler internal constructor(
   }
 
   public interface Builder {
-    public fun dataDelayOffsetInMinutes(dataDelayOffsetInMinutes: Number) {
-    }
+    public fun dataDelayOffsetInMinutes(dataDelayOffsetInMinutes: Number)
 
-    public fun dataInputConfiguration(dataInputConfiguration: Any) {
-    }
+    public fun dataInputConfiguration(dataInputConfiguration: Any)
 
-    public fun dataOutputConfiguration(dataOutputConfiguration: Any) {
-    }
+    public fun dataOutputConfiguration(dataOutputConfiguration: Any)
 
-    public fun dataUploadFrequency(dataUploadFrequency: String) {
-    }
+    public fun dataUploadFrequency(dataUploadFrequency: String)
 
-    public fun inferenceSchedulerName(inferenceSchedulerName: String) {
-    }
+    public fun inferenceSchedulerName(inferenceSchedulerName: String)
 
-    public fun modelName(modelName: String) {
-    }
+    public fun modelName(modelName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun serverSideKmsKeyId(serverSideKmsKeyId: String) {
-    }
+    public fun serverSideKmsKeyId(serverSideKmsKeyId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -121,39 +112,39 @@ public open class CfnInferenceScheduler internal constructor(
         software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.Builder.create(scope,
         id)
 
-    public override fun dataDelayOffsetInMinutes(dataDelayOffsetInMinutes: Number) {
+    override fun dataDelayOffsetInMinutes(dataDelayOffsetInMinutes: Number) {
       cdkBuilder.dataDelayOffsetInMinutes(dataDelayOffsetInMinutes)
     }
 
-    public override fun dataInputConfiguration(dataInputConfiguration: Any) {
+    override fun dataInputConfiguration(dataInputConfiguration: Any) {
       cdkBuilder.dataInputConfiguration(dataInputConfiguration)
     }
 
-    public override fun dataOutputConfiguration(dataOutputConfiguration: Any) {
+    override fun dataOutputConfiguration(dataOutputConfiguration: Any) {
       cdkBuilder.dataOutputConfiguration(dataOutputConfiguration)
     }
 
-    public override fun dataUploadFrequency(dataUploadFrequency: String) {
+    override fun dataUploadFrequency(dataUploadFrequency: String) {
       cdkBuilder.dataUploadFrequency(dataUploadFrequency)
     }
 
-    public override fun inferenceSchedulerName(inferenceSchedulerName: String) {
+    override fun inferenceSchedulerName(inferenceSchedulerName: String) {
       cdkBuilder.inferenceSchedulerName(inferenceSchedulerName)
     }
 
-    public override fun modelName(modelName: String) {
+    override fun modelName(modelName: String) {
       cdkBuilder.modelName(modelName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun serverSideKmsKeyId(serverSideKmsKeyId: String) {
+    override fun serverSideKmsKeyId(serverSideKmsKeyId: String) {
       cdkBuilder.serverSideKmsKeyId(serverSideKmsKeyId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -192,33 +183,26 @@ public open class CfnInferenceScheduler internal constructor(
     public fun s3InputConfiguration(): Any
 
     public interface Builder {
-      public fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: IResolvable) {
-      }
+      public fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: IResolvable)
 
       public
-          fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty) {
-      }
+          fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cc3f0e0ed00422f895da9a493862858ac7c1a8f3e5221bac391be6a411abf54")
       public
-          fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty.Builder.() -> Unit)
 
-      public fun inputTimeZoneOffset(inputTimeZoneOffset: String) {
-      }
+      public fun inputTimeZoneOffset(inputTimeZoneOffset: String)
 
-      public fun s3InputConfiguration(s3InputConfiguration: IResolvable) {
-      }
+      public fun s3InputConfiguration(s3InputConfiguration: IResolvable)
 
-      public fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty) {
-      }
+      public fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("581c61355ec25fe90a3613d8b08027e9c9a03c8b726cb116e503600ae4ef83c9")
       public
-          fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -227,38 +211,37 @@ public open class CfnInferenceScheduler internal constructor(
           =
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty.builder()
 
-      public override
-          fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: IResolvable) {
+      override fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: IResolvable) {
         cdkBuilder.inferenceInputNameConfiguration(inferenceInputNameConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty) {
         cdkBuilder.inferenceInputNameConfiguration(inferenceInputNameConfiguration.let(InputNameConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cc3f0e0ed00422f895da9a493862858ac7c1a8f3e5221bac391be6a411abf54")
-      public override
+      override
           fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty.Builder.() -> Unit):
           Unit =
           inferenceInputNameConfiguration(InputNameConfigurationProperty(inferenceInputNameConfiguration))
 
-      public override fun inputTimeZoneOffset(inputTimeZoneOffset: String) {
+      override fun inputTimeZoneOffset(inputTimeZoneOffset: String) {
         cdkBuilder.inputTimeZoneOffset(inputTimeZoneOffset)
       }
 
-      public override fun s3InputConfiguration(s3InputConfiguration: IResolvable) {
+      override fun s3InputConfiguration(s3InputConfiguration: IResolvable) {
         cdkBuilder.s3InputConfiguration(s3InputConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty) {
+      override fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty) {
         cdkBuilder.s3InputConfiguration(s3InputConfiguration.let(S3InputConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("581c61355ec25fe90a3613d8b08027e9c9a03c8b726cb116e503600ae4ef83c9")
-      public override
+      override
           fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty.Builder.() -> Unit):
           Unit = s3InputConfiguration(S3InputConfigurationProperty(s3InputConfiguration))
 
@@ -271,12 +254,12 @@ public open class CfnInferenceScheduler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataInputConfigurationProperty,
     ) : DataInputConfigurationProperty {
-      public override fun inferenceInputNameConfiguration(): Any? =
+      override fun inferenceInputNameConfiguration(): Any? =
           unwrap(this).getInferenceInputNameConfiguration()
 
-      public override fun inputTimeZoneOffset(): String? = unwrap(this).getInputTimeZoneOffset()
+      override fun inputTimeZoneOffset(): String? = unwrap(this).getInputTimeZoneOffset()
 
-      public override fun s3InputConfiguration(): Any = unwrap(this).getS3InputConfiguration()
+      override fun s3InputConfiguration(): Any = unwrap(this).getS3InputConfiguration()
     }
 
     public companion object {
@@ -306,11 +289,9 @@ public open class CfnInferenceScheduler internal constructor(
     public fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
 
     public interface Builder {
-      public fun componentTimestampDelimiter(componentTimestampDelimiter: String) {
-      }
+      public fun componentTimestampDelimiter(componentTimestampDelimiter: String)
 
-      public fun timestampFormat(timestampFormat: String) {
-      }
+      public fun timestampFormat(timestampFormat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -319,11 +300,11 @@ public open class CfnInferenceScheduler internal constructor(
           =
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty.builder()
 
-      public override fun componentTimestampDelimiter(componentTimestampDelimiter: String) {
+      override fun componentTimestampDelimiter(componentTimestampDelimiter: String) {
         cdkBuilder.componentTimestampDelimiter(componentTimestampDelimiter)
       }
 
-      public override fun timestampFormat(timestampFormat: String) {
+      override fun timestampFormat(timestampFormat: String) {
         cdkBuilder.timestampFormat(timestampFormat)
       }
 
@@ -336,10 +317,10 @@ public open class CfnInferenceScheduler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.InputNameConfigurationProperty,
     ) : InputNameConfigurationProperty {
-      public override fun componentTimestampDelimiter(): String? =
+      override fun componentTimestampDelimiter(): String? =
           unwrap(this).getComponentTimestampDelimiter()
 
-      public override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
+      override fun timestampFormat(): String? = unwrap(this).getTimestampFormat()
     }
 
     public companion object {
@@ -368,11 +349,9 @@ public open class CfnInferenceScheduler internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -381,11 +360,11 @@ public open class CfnInferenceScheduler internal constructor(
           =
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -398,9 +377,9 @@ public open class CfnInferenceScheduler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3InputConfigurationProperty,
     ) : S3InputConfigurationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -429,20 +408,16 @@ public open class CfnInferenceScheduler internal constructor(
     public fun s3OutputConfiguration(): Any
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
-      }
+      public fun s3OutputConfiguration(s3OutputConfiguration: IResolvable)
 
-      public fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty) {
-      }
+      public fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("58f2e19d838f5a1605d85010c381976bec8cbbb520d702395aa620174c42879c")
       public
-          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -451,22 +426,21 @@ public open class CfnInferenceScheduler internal constructor(
           =
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
+      override fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
         cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty) {
+      override fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty) {
         cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(S3OutputConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("58f2e19d838f5a1605d85010c381976bec8cbbb520d702395aa620174c42879c")
-      public override
+      override
           fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty.Builder.() -> Unit):
           Unit = s3OutputConfiguration(S3OutputConfigurationProperty(s3OutputConfiguration))
 
@@ -479,9 +453,9 @@ public open class CfnInferenceScheduler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.DataOutputConfigurationProperty,
     ) : DataOutputConfigurationProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun s3OutputConfiguration(): Any = unwrap(this).getS3OutputConfiguration()
+      override fun s3OutputConfiguration(): Any = unwrap(this).getS3OutputConfiguration()
     }
 
     public companion object {
@@ -510,11 +484,9 @@ public open class CfnInferenceScheduler internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -523,11 +495,11 @@ public open class CfnInferenceScheduler internal constructor(
           =
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -540,9 +512,9 @@ public open class CfnInferenceScheduler internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler.S3OutputConfigurationProperty,
     ) : S3OutputConfigurationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {

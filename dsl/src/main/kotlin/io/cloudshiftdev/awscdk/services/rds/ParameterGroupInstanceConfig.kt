@@ -7,15 +7,14 @@ public interface ParameterGroupInstanceConfig {
   public fun parameterGroupName(): String
 
   public interface Builder {
-    public fun parameterGroupName(parameterGroupName: String) {
-    }
+    public fun parameterGroupName(parameterGroupName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig.Builder
         = software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig.builder()
 
-    public override fun parameterGroupName(parameterGroupName: String) {
+    override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
 
@@ -26,7 +25,7 @@ public interface ParameterGroupInstanceConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig,
   ) : ParameterGroupInstanceConfig {
-    public override fun parameterGroupName(): String = unwrap(this).getParameterGroupName()
+    override fun parameterGroupName(): String = unwrap(this).getParameterGroupName()
   }
 
   public companion object {

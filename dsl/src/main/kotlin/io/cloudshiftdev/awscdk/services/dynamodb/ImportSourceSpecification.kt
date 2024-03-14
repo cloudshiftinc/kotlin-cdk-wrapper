@@ -17,20 +17,15 @@ public interface ImportSourceSpecification {
   public fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun bucketOwner(bucketOwner: String) {
-    }
+    public fun bucketOwner(bucketOwner: String)
 
-    public fun compressionType(compressionType: InputCompressionType) {
-    }
+    public fun compressionType(compressionType: InputCompressionType)
 
-    public fun inputFormat(inputFormat: InputFormat) {
-    }
+    public fun inputFormat(inputFormat: InputFormat)
 
-    public fun keyPrefix(keyPrefix: String) {
-    }
+    public fun keyPrefix(keyPrefix: String)
   }
 
   private class BuilderImpl : Builder {
@@ -38,23 +33,23 @@ public interface ImportSourceSpecification {
         software.amazon.awscdk.services.dynamodb.ImportSourceSpecification.Builder =
         software.amazon.awscdk.services.dynamodb.ImportSourceSpecification.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun bucketOwner(bucketOwner: String) {
+    override fun bucketOwner(bucketOwner: String) {
       cdkBuilder.bucketOwner(bucketOwner)
     }
 
-    public override fun compressionType(compressionType: InputCompressionType) {
+    override fun compressionType(compressionType: InputCompressionType) {
       cdkBuilder.compressionType(compressionType.let(InputCompressionType::unwrap))
     }
 
-    public override fun inputFormat(inputFormat: InputFormat) {
+    override fun inputFormat(inputFormat: InputFormat) {
       cdkBuilder.inputFormat(inputFormat.let(InputFormat::unwrap))
     }
 
-    public override fun keyPrefix(keyPrefix: String) {
+    override fun keyPrefix(keyPrefix: String) {
       cdkBuilder.keyPrefix(keyPrefix)
     }
 
@@ -65,17 +60,16 @@ public interface ImportSourceSpecification {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.ImportSourceSpecification,
   ) : ImportSourceSpecification {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+    override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
-    public override fun compressionType(): InputCompressionType? =
+    override fun compressionType(): InputCompressionType? =
         unwrap(this).getCompressionType()?.let(InputCompressionType::wrap)
 
-    public override fun inputFormat(): InputFormat =
-        unwrap(this).getInputFormat().let(InputFormat::wrap)
+    override fun inputFormat(): InputFormat = unwrap(this).getInputFormat().let(InputFormat::wrap)
 
-    public override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+    override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
   }
 
   public companion object {

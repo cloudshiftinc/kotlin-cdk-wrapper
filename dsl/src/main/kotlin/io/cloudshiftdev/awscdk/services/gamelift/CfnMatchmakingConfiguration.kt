@@ -142,62 +142,43 @@ public open class CfnMatchmakingConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun acceptanceRequired(acceptanceRequired: Boolean) {
-    }
+    public fun acceptanceRequired(acceptanceRequired: Boolean)
 
-    public fun acceptanceRequired(acceptanceRequired: IResolvable) {
-    }
+    public fun acceptanceRequired(acceptanceRequired: IResolvable)
 
-    public fun acceptanceTimeoutSeconds(acceptanceTimeoutSeconds: Number) {
-    }
+    public fun acceptanceTimeoutSeconds(acceptanceTimeoutSeconds: Number)
 
-    public fun additionalPlayerCount(additionalPlayerCount: Number) {
-    }
+    public fun additionalPlayerCount(additionalPlayerCount: Number)
 
-    public fun backfillMode(backfillMode: String) {
-    }
+    public fun backfillMode(backfillMode: String)
 
-    public fun creationTime(creationTime: String) {
-    }
+    public fun creationTime(creationTime: String)
 
-    public fun customEventData(customEventData: String) {
-    }
+    public fun customEventData(customEventData: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun flexMatchMode(flexMatchMode: String) {
-    }
+    public fun flexMatchMode(flexMatchMode: String)
 
-    public fun gameProperties(gameProperties: IResolvable) {
-    }
+    public fun gameProperties(gameProperties: IResolvable)
 
-    public fun gameProperties(gameProperties: List<Any>) {
-    }
+    public fun gameProperties(gameProperties: List<Any>)
 
-    public fun gameSessionData(gameSessionData: String) {
-    }
+    public fun gameSessionData(gameSessionData: String)
 
-    public fun gameSessionQueueArns(gameSessionQueueArns: List<String>) {
-    }
+    public fun gameSessionQueueArns(gameSessionQueueArns: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun notificationTarget(notificationTarget: String) {
-    }
+    public fun notificationTarget(notificationTarget: String)
 
-    public fun requestTimeoutSeconds(requestTimeoutSeconds: Number) {
-    }
+    public fun requestTimeoutSeconds(requestTimeoutSeconds: Number)
 
-    public fun ruleSetArn(ruleSetArn: String) {
-    }
+    public fun ruleSetArn(ruleSetArn: String)
 
-    public fun ruleSetName(ruleSetName: String) {
-    }
+    public fun ruleSetName(ruleSetName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -209,79 +190,79 @@ public open class CfnMatchmakingConfiguration internal constructor(
         software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.Builder.create(scope,
         id)
 
-    public override fun acceptanceRequired(acceptanceRequired: Boolean) {
+    override fun acceptanceRequired(acceptanceRequired: Boolean) {
       cdkBuilder.acceptanceRequired(acceptanceRequired)
     }
 
-    public override fun acceptanceRequired(acceptanceRequired: IResolvable) {
+    override fun acceptanceRequired(acceptanceRequired: IResolvable) {
       cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable::unwrap))
     }
 
-    public override fun acceptanceTimeoutSeconds(acceptanceTimeoutSeconds: Number) {
+    override fun acceptanceTimeoutSeconds(acceptanceTimeoutSeconds: Number) {
       cdkBuilder.acceptanceTimeoutSeconds(acceptanceTimeoutSeconds)
     }
 
-    public override fun additionalPlayerCount(additionalPlayerCount: Number) {
+    override fun additionalPlayerCount(additionalPlayerCount: Number) {
       cdkBuilder.additionalPlayerCount(additionalPlayerCount)
     }
 
-    public override fun backfillMode(backfillMode: String) {
+    override fun backfillMode(backfillMode: String) {
       cdkBuilder.backfillMode(backfillMode)
     }
 
-    public override fun creationTime(creationTime: String) {
+    override fun creationTime(creationTime: String) {
       cdkBuilder.creationTime(creationTime)
     }
 
-    public override fun customEventData(customEventData: String) {
+    override fun customEventData(customEventData: String) {
       cdkBuilder.customEventData(customEventData)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun flexMatchMode(flexMatchMode: String) {
+    override fun flexMatchMode(flexMatchMode: String) {
       cdkBuilder.flexMatchMode(flexMatchMode)
     }
 
-    public override fun gameProperties(gameProperties: IResolvable) {
+    override fun gameProperties(gameProperties: IResolvable) {
       cdkBuilder.gameProperties(gameProperties.let(IResolvable::unwrap))
     }
 
-    public override fun gameProperties(gameProperties: List<Any>) {
+    override fun gameProperties(gameProperties: List<Any>) {
       cdkBuilder.gameProperties(gameProperties)
     }
 
-    public override fun gameSessionData(gameSessionData: String) {
+    override fun gameSessionData(gameSessionData: String) {
       cdkBuilder.gameSessionData(gameSessionData)
     }
 
-    public override fun gameSessionQueueArns(gameSessionQueueArns: List<String>) {
+    override fun gameSessionQueueArns(gameSessionQueueArns: List<String>) {
       cdkBuilder.gameSessionQueueArns(gameSessionQueueArns)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun notificationTarget(notificationTarget: String) {
+    override fun notificationTarget(notificationTarget: String) {
       cdkBuilder.notificationTarget(notificationTarget)
     }
 
-    public override fun requestTimeoutSeconds(requestTimeoutSeconds: Number) {
+    override fun requestTimeoutSeconds(requestTimeoutSeconds: Number) {
       cdkBuilder.requestTimeoutSeconds(requestTimeoutSeconds)
     }
 
-    public override fun ruleSetArn(ruleSetArn: String) {
+    override fun ruleSetArn(ruleSetArn: String) {
       cdkBuilder.ruleSetArn(ruleSetArn)
     }
 
-    public override fun ruleSetName(ruleSetName: String) {
+    override fun ruleSetName(ruleSetName: String) {
       cdkBuilder.ruleSetName(ruleSetName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -317,11 +298,9 @@ public open class CfnMatchmakingConfiguration internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -330,11 +309,11 @@ public open class CfnMatchmakingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.GamePropertyProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -347,9 +326,9 @@ public open class CfnMatchmakingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration.GamePropertyProperty,
     ) : GamePropertyProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

@@ -67,26 +67,19 @@ public open class CfnHypervisor internal constructor(
   }
 
   public interface Builder {
-    public fun host(host: String) {
-    }
+    public fun host(host: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun logGroupArn(logGroupArn: String) {
-    }
+    public fun logGroupArn(logGroupArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun password(password: String) {
-    }
+    public fun password(password: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnHypervisor internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backupgateway.CfnHypervisor.Builder =
         software.amazon.awscdk.services.backupgateway.CfnHypervisor.Builder.create(scope, id)
 
-    public override fun host(host: String) {
+    override fun host(host: String) {
       cdkBuilder.host(host)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun logGroupArn(logGroupArn: String) {
+    override fun logGroupArn(logGroupArn: String) {
       cdkBuilder.logGroupArn(logGroupArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun password(password: String) {
+    override fun password(password: String) {
       cdkBuilder.password(password)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 

@@ -16,20 +16,15 @@ public interface AcceleratorAttributes {
   public fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?: emptyList()
 
   public interface Builder {
-    public fun acceleratorArn(acceleratorArn: String) {
-    }
+    public fun acceleratorArn(acceleratorArn: String)
 
-    public fun dnsName(dnsName: String) {
-    }
+    public fun dnsName(dnsName: String)
 
-    public fun dualStackDnsName(dualStackDnsName: String) {
-    }
+    public fun dualStackDnsName(dualStackDnsName: String)
 
-    public fun ipv4Addresses(ipv4Addresses: List<String>) {
-    }
+    public fun ipv4Addresses(ipv4Addresses: List<String>)
 
-    public fun ipv6Addresses(ipv6Addresses: List<String>) {
-    }
+    public fun ipv6Addresses(ipv6Addresses: List<String>)
   }
 
   private class BuilderImpl : Builder {
@@ -37,23 +32,23 @@ public interface AcceleratorAttributes {
         software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes.Builder =
         software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes.builder()
 
-    public override fun acceleratorArn(acceleratorArn: String) {
+    override fun acceleratorArn(acceleratorArn: String) {
       cdkBuilder.acceleratorArn(acceleratorArn)
     }
 
-    public override fun dnsName(dnsName: String) {
+    override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
     }
 
-    public override fun dualStackDnsName(dualStackDnsName: String) {
+    override fun dualStackDnsName(dualStackDnsName: String) {
       cdkBuilder.dualStackDnsName(dualStackDnsName)
     }
 
-    public override fun ipv4Addresses(ipv4Addresses: List<String>) {
+    override fun ipv4Addresses(ipv4Addresses: List<String>) {
       cdkBuilder.ipv4Addresses(ipv4Addresses)
     }
 
-    public override fun ipv6Addresses(ipv6Addresses: List<String>) {
+    override fun ipv6Addresses(ipv6Addresses: List<String>) {
       cdkBuilder.ipv6Addresses(ipv6Addresses)
     }
 
@@ -64,17 +59,15 @@ public interface AcceleratorAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes,
   ) : AcceleratorAttributes {
-    public override fun acceleratorArn(): String = unwrap(this).getAcceleratorArn()
+    override fun acceleratorArn(): String = unwrap(this).getAcceleratorArn()
 
-    public override fun dnsName(): String = unwrap(this).getDnsName()
+    override fun dnsName(): String = unwrap(this).getDnsName()
 
-    public override fun dualStackDnsName(): String? = unwrap(this).getDualStackDnsName()
+    override fun dualStackDnsName(): String? = unwrap(this).getDualStackDnsName()
 
-    public override fun ipv4Addresses(): List<String> = unwrap(this).getIpv4Addresses() ?:
-        emptyList()
+    override fun ipv4Addresses(): List<String> = unwrap(this).getIpv4Addresses() ?: emptyList()
 
-    public override fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?:
-        emptyList()
+    override fun ipv6Addresses(): List<String> = unwrap(this).getIpv6Addresses() ?: emptyList()
   }
 
   public companion object {

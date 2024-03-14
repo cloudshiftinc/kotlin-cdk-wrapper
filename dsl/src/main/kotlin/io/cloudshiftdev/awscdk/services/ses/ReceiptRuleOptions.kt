@@ -22,57 +22,50 @@ public interface ReceiptRuleOptions {
   public fun tlsPolicy(): TlsPolicy? = unwrap(this).getTlsPolicy()?.let(TlsPolicy::wrap)
 
   public interface Builder {
-    public fun actions(actions: List<IReceiptRuleAction>) {
-    }
+    public fun actions(actions: List<IReceiptRuleAction>)
 
-    public fun after(after: IReceiptRule) {
-    }
+    public fun after(after: IReceiptRule)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun receiptRuleName(receiptRuleName: String) {
-    }
+    public fun receiptRuleName(receiptRuleName: String)
 
-    public fun recipients(recipients: List<String>) {
-    }
+    public fun recipients(recipients: List<String>)
 
-    public fun scanEnabled(scanEnabled: Boolean) {
-    }
+    public fun scanEnabled(scanEnabled: Boolean)
 
-    public fun tlsPolicy(tlsPolicy: TlsPolicy) {
-    }
+    public fun tlsPolicy(tlsPolicy: TlsPolicy)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.ReceiptRuleOptions.Builder =
         software.amazon.awscdk.services.ses.ReceiptRuleOptions.builder()
 
-    public override fun actions(actions: List<IReceiptRuleAction>) {
+    override fun actions(actions: List<IReceiptRuleAction>) {
       cdkBuilder.actions(actions.map(IReceiptRuleAction::unwrap))
     }
 
-    public override fun after(after: IReceiptRule) {
+    override fun after(after: IReceiptRule) {
       cdkBuilder.after(after.let(IReceiptRule::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun receiptRuleName(receiptRuleName: String) {
+    override fun receiptRuleName(receiptRuleName: String) {
       cdkBuilder.receiptRuleName(receiptRuleName)
     }
 
-    public override fun recipients(recipients: List<String>) {
+    override fun recipients(recipients: List<String>) {
       cdkBuilder.recipients(recipients)
     }
 
-    public override fun scanEnabled(scanEnabled: Boolean) {
+    override fun scanEnabled(scanEnabled: Boolean) {
       cdkBuilder.scanEnabled(scanEnabled)
     }
 
-    public override fun tlsPolicy(tlsPolicy: TlsPolicy) {
+    override fun tlsPolicy(tlsPolicy: TlsPolicy) {
       cdkBuilder.tlsPolicy(tlsPolicy.let(TlsPolicy::unwrap))
     }
 
@@ -82,20 +75,20 @@ public interface ReceiptRuleOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleOptions,
   ) : ReceiptRuleOptions {
-    public override fun actions(): List<IReceiptRuleAction> =
+    override fun actions(): List<IReceiptRuleAction> =
         unwrap(this).getActions()?.map(IReceiptRuleAction::wrap) ?: emptyList()
 
-    public override fun after(): IReceiptRule? = unwrap(this).getAfter()?.let(IReceiptRule::wrap)
+    override fun after(): IReceiptRule? = unwrap(this).getAfter()?.let(IReceiptRule::wrap)
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun receiptRuleName(): String? = unwrap(this).getReceiptRuleName()
+    override fun receiptRuleName(): String? = unwrap(this).getReceiptRuleName()
 
-    public override fun recipients(): List<String> = unwrap(this).getRecipients() ?: emptyList()
+    override fun recipients(): List<String> = unwrap(this).getRecipients() ?: emptyList()
 
-    public override fun scanEnabled(): Boolean? = unwrap(this).getScanEnabled()
+    override fun scanEnabled(): Boolean? = unwrap(this).getScanEnabled()
 
-    public override fun tlsPolicy(): TlsPolicy? = unwrap(this).getTlsPolicy()?.let(TlsPolicy::wrap)
+    override fun tlsPolicy(): TlsPolicy? = unwrap(this).getTlsPolicy()?.let(TlsPolicy::wrap)
   }
 
   public companion object {

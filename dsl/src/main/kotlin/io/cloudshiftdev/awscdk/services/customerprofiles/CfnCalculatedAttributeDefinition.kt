@@ -99,45 +99,33 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
   }
 
   public interface Builder {
-    public fun attributeDetails(attributeDetails: IResolvable) {
-    }
+    public fun attributeDetails(attributeDetails: IResolvable)
 
-    public fun attributeDetails(attributeDetails: AttributeDetailsProperty) {
-    }
+    public fun attributeDetails(attributeDetails: AttributeDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3881dc042b395f90daa320a565b09de633274397edc76dc644a9b702387a2365")
-    public fun attributeDetails(attributeDetails: AttributeDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun attributeDetails(attributeDetails: AttributeDetailsProperty.Builder.() -> Unit)
 
-    public fun calculatedAttributeName(calculatedAttributeName: String) {
-    }
+    public fun calculatedAttributeName(calculatedAttributeName: String)
 
-    public fun conditions(conditions: IResolvable) {
-    }
+    public fun conditions(conditions: IResolvable)
 
-    public fun conditions(conditions: ConditionsProperty) {
-    }
+    public fun conditions(conditions: ConditionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1da2b4b405c95db816b62c6348222ef8731f68daed8a2e7f42b9d0246d9ed16b")
-    public fun conditions(conditions: ConditionsProperty.Builder.() -> Unit) {
-    }
+    public fun conditions(conditions: ConditionsProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun statistic(statistic: String) {
-    }
+    public fun statistic(statistic: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -149,54 +137,53 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
         software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.Builder.create(scope,
         id)
 
-    public override fun attributeDetails(attributeDetails: IResolvable) {
+    override fun attributeDetails(attributeDetails: IResolvable) {
       cdkBuilder.attributeDetails(attributeDetails.let(IResolvable::unwrap))
     }
 
-    public override fun attributeDetails(attributeDetails: AttributeDetailsProperty) {
+    override fun attributeDetails(attributeDetails: AttributeDetailsProperty) {
       cdkBuilder.attributeDetails(attributeDetails.let(AttributeDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3881dc042b395f90daa320a565b09de633274397edc76dc644a9b702387a2365")
-    public override
-        fun attributeDetails(attributeDetails: AttributeDetailsProperty.Builder.() -> Unit): Unit =
-        attributeDetails(AttributeDetailsProperty(attributeDetails))
+    override fun attributeDetails(attributeDetails: AttributeDetailsProperty.Builder.() -> Unit):
+        Unit = attributeDetails(AttributeDetailsProperty(attributeDetails))
 
-    public override fun calculatedAttributeName(calculatedAttributeName: String) {
+    override fun calculatedAttributeName(calculatedAttributeName: String) {
       cdkBuilder.calculatedAttributeName(calculatedAttributeName)
     }
 
-    public override fun conditions(conditions: IResolvable) {
+    override fun conditions(conditions: IResolvable) {
       cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
     }
 
-    public override fun conditions(conditions: ConditionsProperty) {
+    override fun conditions(conditions: ConditionsProperty) {
       cdkBuilder.conditions(conditions.let(ConditionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1da2b4b405c95db816b62c6348222ef8731f68daed8a2e7f42b9d0246d9ed16b")
-    public override fun conditions(conditions: ConditionsProperty.Builder.() -> Unit): Unit =
+    override fun conditions(conditions: ConditionsProperty.Builder.() -> Unit): Unit =
         conditions(ConditionsProperty(conditions))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun statistic(statistic: String) {
+    override fun statistic(statistic: String) {
       cdkBuilder.statistic(statistic)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -232,8 +219,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -242,7 +228,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -255,7 +241,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty,
     ) : AttributeItemProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -284,14 +270,11 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     public fun expression(): String
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: List<Any>) {
-      }
+      public fun attributes(attributes: List<Any>)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -300,15 +283,15 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: List<Any>) {
+      override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
@@ -321,9 +304,9 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty,
     ) : AttributeDetailsProperty {
-      public override fun attributes(): Any = unwrap(this).getAttributes()
+      override fun attributes(): Any = unwrap(this).getAttributes()
 
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
     }
 
     public companion object {
@@ -352,11 +335,9 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun `operator`(`operator`: String) {
-      }
+      public fun `operator`(`operator`: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -365,11 +346,11 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty.builder()
 
-      public override fun `operator`(`operator`: String) {
+      override fun `operator`(`operator`: String) {
         cdkBuilder.`operator`(`operator`)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -382,9 +363,9 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty,
     ) : ThresholdProperty {
-      public override fun `operator`(): String = unwrap(this).getOperator()
+      override fun `operator`(): String = unwrap(this).getOperator()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -413,11 +394,9 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -426,11 +405,11 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty.builder()
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -443,9 +422,9 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty,
     ) : RangeProperty {
-      public override fun unit(): String = unwrap(this).getUnit()
+      override fun unit(): String = unwrap(this).getUnit()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -476,30 +455,23 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     public fun threshold(): Any? = unwrap(this).getThreshold()
 
     public interface Builder {
-      public fun objectCount(objectCount: Number) {
-      }
+      public fun objectCount(objectCount: Number)
 
-      public fun range(range: IResolvable) {
-      }
+      public fun range(range: IResolvable)
 
-      public fun range(range: RangeProperty) {
-      }
+      public fun range(range: RangeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("55433c8f447ab8b0e9916c26120b3417412b55218e46749e7beedf62954673d1")
-      public fun range(range: RangeProperty.Builder.() -> Unit) {
-      }
+      public fun range(range: RangeProperty.Builder.() -> Unit)
 
-      public fun threshold(threshold: IResolvable) {
-      }
+      public fun threshold(threshold: IResolvable)
 
-      public fun threshold(threshold: ThresholdProperty) {
-      }
+      public fun threshold(threshold: ThresholdProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6e1bfbdeaf682a3af64a7f2a45474eb98c3958538da1667abe412e099856ce96")
-      public fun threshold(threshold: ThresholdProperty.Builder.() -> Unit) {
-      }
+      public fun threshold(threshold: ThresholdProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -508,34 +480,34 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty.builder()
 
-      public override fun objectCount(objectCount: Number) {
+      override fun objectCount(objectCount: Number) {
         cdkBuilder.objectCount(objectCount)
       }
 
-      public override fun range(range: IResolvable) {
+      override fun range(range: IResolvable) {
         cdkBuilder.range(range.let(IResolvable::unwrap))
       }
 
-      public override fun range(range: RangeProperty) {
+      override fun range(range: RangeProperty) {
         cdkBuilder.range(range.let(RangeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("55433c8f447ab8b0e9916c26120b3417412b55218e46749e7beedf62954673d1")
-      public override fun range(range: RangeProperty.Builder.() -> Unit): Unit =
+      override fun range(range: RangeProperty.Builder.() -> Unit): Unit =
           range(RangeProperty(range))
 
-      public override fun threshold(threshold: IResolvable) {
+      override fun threshold(threshold: IResolvable) {
         cdkBuilder.threshold(threshold.let(IResolvable::unwrap))
       }
 
-      public override fun threshold(threshold: ThresholdProperty) {
+      override fun threshold(threshold: ThresholdProperty) {
         cdkBuilder.threshold(threshold.let(ThresholdProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6e1bfbdeaf682a3af64a7f2a45474eb98c3958538da1667abe412e099856ce96")
-      public override fun threshold(threshold: ThresholdProperty.Builder.() -> Unit): Unit =
+      override fun threshold(threshold: ThresholdProperty.Builder.() -> Unit): Unit =
           threshold(ThresholdProperty(threshold))
 
       public fun build():
@@ -547,11 +519,11 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty,
     ) : ConditionsProperty {
-      public override fun objectCount(): Number? = unwrap(this).getObjectCount()
+      override fun objectCount(): Number? = unwrap(this).getObjectCount()
 
-      public override fun range(): Any? = unwrap(this).getRange()
+      override fun range(): Any? = unwrap(this).getRange()
 
-      public override fun threshold(): Any? = unwrap(this).getThreshold()
+      override fun threshold(): Any? = unwrap(this).getThreshold()
     }
 
     public companion object {

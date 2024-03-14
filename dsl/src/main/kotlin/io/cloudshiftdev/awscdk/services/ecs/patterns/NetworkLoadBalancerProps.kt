@@ -18,20 +18,15 @@ public interface NetworkLoadBalancerProps {
   public fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainZone(domainZone: IHostedZone) {
-    }
+    public fun domainZone(domainZone: IHostedZone)
 
-    public fun listeners(listeners: List<NetworkListenerProps>) {
-    }
+    public fun listeners(listeners: List<NetworkListenerProps>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun publicLoadBalancer(publicLoadBalancer: Boolean) {
-    }
+    public fun publicLoadBalancer(publicLoadBalancer: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -39,23 +34,23 @@ public interface NetworkLoadBalancerProps {
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps.Builder =
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps.builder()
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainZone(domainZone: IHostedZone) {
+    override fun domainZone(domainZone: IHostedZone) {
       cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
     }
 
-    public override fun listeners(listeners: List<NetworkListenerProps>) {
+    override fun listeners(listeners: List<NetworkListenerProps>) {
       cdkBuilder.listeners(listeners.map(NetworkListenerProps::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun publicLoadBalancer(publicLoadBalancer: Boolean) {
+    override fun publicLoadBalancer(publicLoadBalancer: Boolean) {
       cdkBuilder.publicLoadBalancer(publicLoadBalancer)
     }
 
@@ -66,17 +61,16 @@ public interface NetworkLoadBalancerProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps,
   ) : NetworkLoadBalancerProps {
-    public override fun domainName(): String? = unwrap(this).getDomainName()
+    override fun domainName(): String? = unwrap(this).getDomainName()
 
-    public override fun domainZone(): IHostedZone? =
-        unwrap(this).getDomainZone()?.let(IHostedZone::wrap)
+    override fun domainZone(): IHostedZone? = unwrap(this).getDomainZone()?.let(IHostedZone::wrap)
 
-    public override fun listeners(): List<NetworkListenerProps> =
+    override fun listeners(): List<NetworkListenerProps> =
         unwrap(this).getListeners().map(NetworkListenerProps::wrap)
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
+    override fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
   }
 
   public companion object {

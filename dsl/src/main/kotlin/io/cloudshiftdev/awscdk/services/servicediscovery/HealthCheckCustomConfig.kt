@@ -7,8 +7,7 @@ public interface HealthCheckCustomConfig {
   public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
 
   public interface Builder {
-    public fun failureThreshold(failureThreshold: Number) {
-    }
+    public fun failureThreshold(failureThreshold: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface HealthCheckCustomConfig {
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig.Builder =
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig.builder()
 
-    public override fun failureThreshold(failureThreshold: Number) {
+    override fun failureThreshold(failureThreshold: Number) {
       cdkBuilder.failureThreshold(failureThreshold)
     }
 
@@ -28,7 +27,7 @@ public interface HealthCheckCustomConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig,
   ) : HealthCheckCustomConfig {
-    public override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+    override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
   }
 
   public companion object {

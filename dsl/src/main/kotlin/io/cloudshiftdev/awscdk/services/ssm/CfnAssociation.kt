@@ -147,71 +147,50 @@ public open class CfnAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: Boolean) {
-    }
+    public fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: Boolean)
 
-    public fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: IResolvable) {
-    }
+    public fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: IResolvable)
 
-    public fun associationName(associationName: String) {
-    }
+    public fun associationName(associationName: String)
 
-    public fun automationTargetParameterName(automationTargetParameterName: String) {
-    }
+    public fun automationTargetParameterName(automationTargetParameterName: String)
 
-    public fun calendarNames(calendarNames: List<String>) {
-    }
+    public fun calendarNames(calendarNames: List<String>)
 
-    public fun complianceSeverity(complianceSeverity: String) {
-    }
+    public fun complianceSeverity(complianceSeverity: String)
 
-    public fun documentVersion(documentVersion: String) {
-    }
+    public fun documentVersion(documentVersion: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun maxConcurrency(maxConcurrency: String) {
-    }
+    public fun maxConcurrency(maxConcurrency: String)
 
-    public fun maxErrors(maxErrors: String) {
-    }
+    public fun maxErrors(maxErrors: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outputLocation(outputLocation: IResolvable) {
-    }
+    public fun outputLocation(outputLocation: IResolvable)
 
-    public fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty) {
-    }
+    public fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1683d449e4e23bb23aa1a3820b4404b90f5308902fbd9751df5dac86071e3a88")
     public
-        fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty.Builder.() -> Unit) {
-    }
+        fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty.Builder.() -> Unit)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun scheduleExpression(scheduleExpression: String) {
-    }
+    public fun scheduleExpression(scheduleExpression: String)
 
-    public fun scheduleOffset(scheduleOffset: Number) {
-    }
+    public fun scheduleOffset(scheduleOffset: Number)
 
-    public fun syncCompliance(syncCompliance: String) {
-    }
+    public fun syncCompliance(syncCompliance: String)
 
-    public fun targets(targets: IResolvable) {
-    }
+    public fun targets(targets: IResolvable)
 
-    public fun targets(targets: List<Any>) {
-    }
+    public fun targets(targets: List<Any>)
 
-    public fun waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds: Number) {
-    }
+    public fun waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds: Number)
   }
 
   private class BuilderImpl(
@@ -221,89 +200,89 @@ public open class CfnAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnAssociation.Builder =
         software.amazon.awscdk.services.ssm.CfnAssociation.Builder.create(scope, id)
 
-    public override fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: Boolean) {
+    override fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: Boolean) {
       cdkBuilder.applyOnlyAtCronInterval(applyOnlyAtCronInterval)
     }
 
-    public override fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: IResolvable) {
+    override fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: IResolvable) {
       cdkBuilder.applyOnlyAtCronInterval(applyOnlyAtCronInterval.let(IResolvable::unwrap))
     }
 
-    public override fun associationName(associationName: String) {
+    override fun associationName(associationName: String) {
       cdkBuilder.associationName(associationName)
     }
 
-    public override fun automationTargetParameterName(automationTargetParameterName: String) {
+    override fun automationTargetParameterName(automationTargetParameterName: String) {
       cdkBuilder.automationTargetParameterName(automationTargetParameterName)
     }
 
-    public override fun calendarNames(calendarNames: List<String>) {
+    override fun calendarNames(calendarNames: List<String>) {
       cdkBuilder.calendarNames(calendarNames)
     }
 
-    public override fun complianceSeverity(complianceSeverity: String) {
+    override fun complianceSeverity(complianceSeverity: String) {
       cdkBuilder.complianceSeverity(complianceSeverity)
     }
 
-    public override fun documentVersion(documentVersion: String) {
+    override fun documentVersion(documentVersion: String) {
       cdkBuilder.documentVersion(documentVersion)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun maxConcurrency(maxConcurrency: String) {
+    override fun maxConcurrency(maxConcurrency: String) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
 
-    public override fun maxErrors(maxErrors: String) {
+    override fun maxErrors(maxErrors: String) {
       cdkBuilder.maxErrors(maxErrors)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outputLocation(outputLocation: IResolvable) {
+    override fun outputLocation(outputLocation: IResolvable) {
       cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
     }
 
-    public override fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty) {
+    override fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty) {
       cdkBuilder.outputLocation(outputLocation.let(InstanceAssociationOutputLocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1683d449e4e23bb23aa1a3820b4404b90f5308902fbd9751df5dac86071e3a88")
-    public override
+    override
         fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty.Builder.() -> Unit):
         Unit = outputLocation(InstanceAssociationOutputLocationProperty(outputLocation))
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun scheduleExpression(scheduleExpression: String) {
+    override fun scheduleExpression(scheduleExpression: String) {
       cdkBuilder.scheduleExpression(scheduleExpression)
     }
 
-    public override fun scheduleOffset(scheduleOffset: Number) {
+    override fun scheduleOffset(scheduleOffset: Number) {
       cdkBuilder.scheduleOffset(scheduleOffset)
     }
 
-    public override fun syncCompliance(syncCompliance: String) {
+    override fun syncCompliance(syncCompliance: String) {
       cdkBuilder.syncCompliance(syncCompliance)
     }
 
-    public override fun targets(targets: IResolvable) {
+    override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
 
-    public override fun targets(targets: List<Any>) {
+    override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
 
-    public override fun waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds: Number) {
+    override fun waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds: Number) {
       cdkBuilder.waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds)
     }
 
@@ -337,11 +316,9 @@ public open class CfnAssociation internal constructor(
     public fun values(): List<String>
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -349,11 +326,11 @@ public open class CfnAssociation internal constructor(
           software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -364,9 +341,9 @@ public open class CfnAssociation internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty,
     ) : TargetProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -397,14 +374,11 @@ public open class CfnAssociation internal constructor(
     public fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
 
     public interface Builder {
-      public fun outputS3BucketName(outputS3BucketName: String) {
-      }
+      public fun outputS3BucketName(outputS3BucketName: String)
 
-      public fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
-      }
+      public fun outputS3KeyPrefix(outputS3KeyPrefix: String)
 
-      public fun outputS3Region(outputS3Region: String) {
-      }
+      public fun outputS3Region(outputS3Region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -412,15 +386,15 @@ public open class CfnAssociation internal constructor(
           software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty.builder()
 
-      public override fun outputS3BucketName(outputS3BucketName: String) {
+      override fun outputS3BucketName(outputS3BucketName: String) {
         cdkBuilder.outputS3BucketName(outputS3BucketName)
       }
 
-      public override fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
+      override fun outputS3KeyPrefix(outputS3KeyPrefix: String) {
         cdkBuilder.outputS3KeyPrefix(outputS3KeyPrefix)
       }
 
-      public override fun outputS3Region(outputS3Region: String) {
+      override fun outputS3Region(outputS3Region: String) {
         cdkBuilder.outputS3Region(outputS3Region)
       }
 
@@ -433,11 +407,11 @@ public open class CfnAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty,
     ) : S3OutputLocationProperty {
-      public override fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
+      override fun outputS3BucketName(): String? = unwrap(this).getOutputS3BucketName()
 
-      public override fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
+      override fun outputS3KeyPrefix(): String? = unwrap(this).getOutputS3KeyPrefix()
 
-      public override fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
+      override fun outputS3Region(): String? = unwrap(this).getOutputS3Region()
     }
 
     public companion object {
@@ -464,16 +438,13 @@ public open class CfnAssociation internal constructor(
     public fun s3Location(): Any? = unwrap(this).getS3Location()
 
     public interface Builder {
-      public fun s3Location(s3Location: IResolvable) {
-      }
+      public fun s3Location(s3Location: IResolvable)
 
-      public fun s3Location(s3Location: S3OutputLocationProperty) {
-      }
+      public fun s3Location(s3Location: S3OutputLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9c59af672b5f9a495e841765dce821e782b6e5ccfb4906892e2f4f9a56ee979")
-      public fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -482,18 +453,18 @@ public open class CfnAssociation internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty.builder()
 
-      public override fun s3Location(s3Location: IResolvable) {
+      override fun s3Location(s3Location: IResolvable) {
         cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
       }
 
-      public override fun s3Location(s3Location: S3OutputLocationProperty) {
+      override fun s3Location(s3Location: S3OutputLocationProperty) {
         cdkBuilder.s3Location(s3Location.let(S3OutputLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9c59af672b5f9a495e841765dce821e782b6e5ccfb4906892e2f4f9a56ee979")
-      public override fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit): Unit
-          = s3Location(S3OutputLocationProperty(s3Location))
+      override fun s3Location(s3Location: S3OutputLocationProperty.Builder.() -> Unit): Unit =
+          s3Location(S3OutputLocationProperty(s3Location))
 
       public fun build():
           software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty
@@ -504,7 +475,7 @@ public open class CfnAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty,
     ) : InstanceAssociationOutputLocationProperty {
-      public override fun s3Location(): Any? = unwrap(this).getS3Location()
+      override fun s3Location(): Any? = unwrap(this).getS3Location()
     }
 
     public companion object {

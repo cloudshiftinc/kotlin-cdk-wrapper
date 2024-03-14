@@ -10,22 +10,17 @@ public interface LocalSecondaryIndexProps : SecondaryIndexProps {
   public fun sortKey(): Attribute
 
   public interface Builder {
-    public fun indexName(indexName: String) {
-    }
+    public fun indexName(indexName: String)
 
-    public fun nonKeyAttributes(nonKeyAttributes: List<String>) {
-    }
+    public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
-    public fun projectionType(projectionType: ProjectionType) {
-    }
+    public fun projectionType(projectionType: ProjectionType)
 
-    public fun sortKey(sortKey: Attribute) {
-    }
+    public fun sortKey(sortKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c886d09806679b298f25bbf7fdda5a00deacee4c6bfe47a743ab2e6aaa13058c")
-    public fun sortKey(sortKey: Attribute.Builder.() -> Unit) {
-    }
+    public fun sortKey(sortKey: Attribute.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -33,26 +28,25 @@ public interface LocalSecondaryIndexProps : SecondaryIndexProps {
         software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps.Builder =
         software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps.builder()
 
-    public override fun indexName(indexName: String) {
+    override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
     }
 
-    public override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
+    override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
       cdkBuilder.nonKeyAttributes(nonKeyAttributes)
     }
 
-    public override fun projectionType(projectionType: ProjectionType) {
+    override fun projectionType(projectionType: ProjectionType) {
       cdkBuilder.projectionType(projectionType.let(ProjectionType::unwrap))
     }
 
-    public override fun sortKey(sortKey: Attribute) {
+    override fun sortKey(sortKey: Attribute) {
       cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c886d09806679b298f25bbf7fdda5a00deacee4c6bfe47a743ab2e6aaa13058c")
-    public override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit =
-        sortKey(Attribute(sortKey))
+    override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit = sortKey(Attribute(sortKey))
 
     public fun build(): software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps =
         cdkBuilder.build()
@@ -61,15 +55,15 @@ public interface LocalSecondaryIndexProps : SecondaryIndexProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps,
   ) : LocalSecondaryIndexProps {
-    public override fun indexName(): String = unwrap(this).getIndexName()
+    override fun indexName(): String = unwrap(this).getIndexName()
 
-    public override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
+    override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
         emptyList()
 
-    public override fun projectionType(): ProjectionType? =
+    override fun projectionType(): ProjectionType? =
         unwrap(this).getProjectionType()?.let(ProjectionType::wrap)
 
-    public override fun sortKey(): Attribute = unwrap(this).getSortKey().let(Attribute::wrap)
+    override fun sortKey(): Attribute = unwrap(this).getSortKey().let(Attribute::wrap)
   }
 
   public companion object {

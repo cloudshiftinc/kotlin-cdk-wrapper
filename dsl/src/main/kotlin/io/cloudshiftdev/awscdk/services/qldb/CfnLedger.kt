@@ -62,23 +62,17 @@ public open class CfnLedger internal constructor(
   }
 
   public interface Builder {
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun deletionProtection(deletionProtection: IResolvable) {
-    }
+    public fun deletionProtection(deletionProtection: IResolvable)
 
-    public fun kmsKey(kmsKey: String) {
-    }
+    public fun kmsKey(kmsKey: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun permissionsMode(permissionsMode: String) {
-    }
+    public fun permissionsMode(permissionsMode: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -88,27 +82,27 @@ public open class CfnLedger internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.qldb.CfnLedger.Builder =
         software.amazon.awscdk.services.qldb.CfnLedger.Builder.create(scope, id)
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deletionProtection(deletionProtection: IResolvable) {
+    override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
     }
 
-    public override fun kmsKey(kmsKey: String) {
+    override fun kmsKey(kmsKey: String) {
       cdkBuilder.kmsKey(kmsKey)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun permissionsMode(permissionsMode: String) {
+    override fun permissionsMode(permissionsMode: String) {
       cdkBuilder.permissionsMode(permissionsMode)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

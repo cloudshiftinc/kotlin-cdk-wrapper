@@ -40,14 +40,11 @@ public open class CfnSizeConstraintSet internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun sizeConstraints(sizeConstraints: IResolvable) {
-    }
+    public fun sizeConstraints(sizeConstraints: IResolvable)
 
-    public fun sizeConstraints(sizeConstraints: List<Any>) {
-    }
+    public fun sizeConstraints(sizeConstraints: List<Any>)
   }
 
   private class BuilderImpl(
@@ -58,15 +55,15 @@ public open class CfnSizeConstraintSet internal constructor(
         software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.Builder =
         software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun sizeConstraints(sizeConstraints: IResolvable) {
+    override fun sizeConstraints(sizeConstraints: IResolvable) {
       cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable::unwrap))
     }
 
-    public override fun sizeConstraints(sizeConstraints: List<Any>) {
+    override fun sizeConstraints(sizeConstraints: List<Any>) {
       cdkBuilder.sizeConstraints(sizeConstraints)
     }
 
@@ -101,11 +98,9 @@ public open class CfnSizeConstraintSet internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun `data`(`data`: String) {
-      }
+      public fun `data`(`data`: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -114,11 +109,11 @@ public open class CfnSizeConstraintSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty.builder()
 
-      public override fun `data`(`data`: String) {
+      override fun `data`(`data`: String) {
         cdkBuilder.`data`(`data`)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -131,9 +126,9 @@ public open class CfnSizeConstraintSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty,
     ) : FieldToMatchProperty {
-      public override fun `data`(): String? = unwrap(this).getData()
+      override fun `data`(): String? = unwrap(this).getData()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -166,25 +161,19 @@ public open class CfnSizeConstraintSet internal constructor(
     public fun textTransformation(): String
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: String) {
-      }
+      public fun comparisonOperator(comparisonOperator: String)
 
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7da431dacaaba41d435b9b01e697b3a6191eeb851118af65548c35a7fc8c6885")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
 
-      public fun textTransformation(textTransformation: String) {
-      }
+      public fun textTransformation(textTransformation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -193,28 +182,28 @@ public open class CfnSizeConstraintSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty.builder()
 
-      public override fun comparisonOperator(comparisonOperator: String) {
+      override fun comparisonOperator(comparisonOperator: String) {
         cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7da431dacaaba41d435b9b01e697b3a6191eeb851118af65548c35a7fc8c6885")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
-      public override fun textTransformation(textTransformation: String) {
+      override fun textTransformation(textTransformation: String) {
         cdkBuilder.textTransformation(textTransformation)
       }
 
@@ -227,13 +216,13 @@ public open class CfnSizeConstraintSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty,
     ) : SizeConstraintProperty {
-      public override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
+      override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
 
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun size(): Number = unwrap(this).getSize()
+      override fun size(): Number = unwrap(this).getSize()
 
-      public override fun textTransformation(): String = unwrap(this).getTextTransformation()
+      override fun textTransformation(): String = unwrap(this).getTextTransformation()
     }
 
     public companion object {

@@ -52,11 +52,9 @@ public open class CloudAssemblyBuilder internal constructor(
   public open fun outdir(): String = unwrap(this).getOutdir()
 
   public interface Builder {
-    public fun assetOutdir(assetOutdir: String) {
-    }
+    public fun assetOutdir(assetOutdir: String)
 
-    public fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
-    }
+    public fun parentBuilder(parentBuilder: CloudAssemblyBuilder)
   }
 
   private class BuilderImpl(
@@ -65,11 +63,11 @@ public open class CloudAssemblyBuilder internal constructor(
     private val cdkBuilder: software.amazon.awscdk.cxapi.CloudAssemblyBuilder.Builder =
         software.amazon.awscdk.cxapi.CloudAssemblyBuilder.Builder.create(outdir)
 
-    public override fun assetOutdir(assetOutdir: String) {
+    override fun assetOutdir(assetOutdir: String) {
       cdkBuilder.assetOutdir(assetOutdir)
     }
 
-    public override fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
+    override fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
       cdkBuilder.parentBuilder(parentBuilder.let(CloudAssemblyBuilder::unwrap))
     }
 

@@ -16,14 +16,11 @@ public open class KeyValueStore internal constructor(
   public override fun keyValueStoreStatus(): String = unwrap(this).getKeyValueStoreStatus()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun keyValueStoreName(keyValueStoreName: String) {
-    }
+    public fun keyValueStoreName(keyValueStoreName: String)
 
-    public fun source(source: ImportSource) {
-    }
+    public fun source(source: ImportSource)
   }
 
   private class BuilderImpl(
@@ -33,15 +30,15 @@ public open class KeyValueStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.KeyValueStore.Builder =
         software.amazon.awscdk.services.cloudfront.KeyValueStore.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun keyValueStoreName(keyValueStoreName: String) {
+    override fun keyValueStoreName(keyValueStoreName: String) {
       cdkBuilder.keyValueStoreName(keyValueStoreName)
     }
 
-    public override fun source(source: ImportSource) {
+    override fun source(source: ImportSource) {
       cdkBuilder.source(source.let(ImportSource::unwrap))
     }
 

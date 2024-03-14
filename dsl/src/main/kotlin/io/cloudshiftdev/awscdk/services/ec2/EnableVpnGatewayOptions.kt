@@ -10,29 +10,26 @@ public interface EnableVpnGatewayOptions : VpnGatewayProps {
       unwrap(this).getVpnRoutePropagation()?.map(SubnetSelection::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun amazonSideAsn(amazonSideAsn: Number) {
-    }
+    public fun amazonSideAsn(amazonSideAsn: Number)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
-    }
+    public fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.EnableVpnGatewayOptions.Builder =
         software.amazon.awscdk.services.ec2.EnableVpnGatewayOptions.builder()
 
-    public override fun amazonSideAsn(amazonSideAsn: Number) {
+    override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
+    override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
       cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
     }
 
@@ -43,11 +40,11 @@ public interface EnableVpnGatewayOptions : VpnGatewayProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.EnableVpnGatewayOptions,
   ) : EnableVpnGatewayOptions {
-    public override fun amazonSideAsn(): Number? = unwrap(this).getAmazonSideAsn()
+    override fun amazonSideAsn(): Number? = unwrap(this).getAmazonSideAsn()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
 
-    public override fun vpnRoutePropagation(): List<SubnetSelection> =
+    override fun vpnRoutePropagation(): List<SubnetSelection> =
         unwrap(this).getVpnRoutePropagation()?.map(SubnetSelection::wrap) ?: emptyList()
   }
 

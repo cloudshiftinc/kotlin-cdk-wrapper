@@ -10,32 +10,29 @@ public interface FirelensConfig {
   public fun type(): FirelensLogRouterType
 
   public interface Builder {
-    public fun options(options: FirelensOptions) {
-    }
+    public fun options(options: FirelensOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b2a56dc7893552029c77062db91cbc8d0a2a2f1898db47586a83f479af359a2")
-    public fun options(options: FirelensOptions.Builder.() -> Unit) {
-    }
+    public fun options(options: FirelensOptions.Builder.() -> Unit)
 
-    public fun type(type: FirelensLogRouterType) {
-    }
+    public fun type(type: FirelensLogRouterType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.FirelensConfig.Builder =
         software.amazon.awscdk.services.ecs.FirelensConfig.builder()
 
-    public override fun options(options: FirelensOptions) {
+    override fun options(options: FirelensOptions) {
       cdkBuilder.options(options.let(FirelensOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b2a56dc7893552029c77062db91cbc8d0a2a2f1898db47586a83f479af359a2")
-    public override fun options(options: FirelensOptions.Builder.() -> Unit): Unit =
+    override fun options(options: FirelensOptions.Builder.() -> Unit): Unit =
         options(FirelensOptions(options))
 
-    public override fun type(type: FirelensLogRouterType) {
+    override fun type(type: FirelensLogRouterType) {
       cdkBuilder.type(type.let(FirelensLogRouterType::unwrap))
     }
 
@@ -45,10 +42,9 @@ public interface FirelensConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.FirelensConfig,
   ) : FirelensConfig {
-    public override fun options(): FirelensOptions? =
-        unwrap(this).getOptions()?.let(FirelensOptions::wrap)
+    override fun options(): FirelensOptions? = unwrap(this).getOptions()?.let(FirelensOptions::wrap)
 
-    public override fun type(): FirelensLogRouterType =
+    override fun type(): FirelensLogRouterType =
         unwrap(this).getType().let(FirelensLogRouterType::wrap)
   }
 

@@ -36,14 +36,11 @@ public open class CfnServiceLinkedRole internal constructor(
   }
 
   public interface Builder {
-    public fun awsServiceName(awsServiceName: String) {
-    }
+    public fun awsServiceName(awsServiceName: String)
 
-    public fun customSuffix(customSuffix: String) {
-    }
+    public fun customSuffix(customSuffix: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnServiceLinkedRole internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnServiceLinkedRole.Builder =
         software.amazon.awscdk.services.iam.CfnServiceLinkedRole.Builder.create(scope, id)
 
-    public override fun awsServiceName(awsServiceName: String) {
+    override fun awsServiceName(awsServiceName: String) {
       cdkBuilder.awsServiceName(awsServiceName)
     }
 
-    public override fun customSuffix(customSuffix: String) {
+    override fun customSuffix(customSuffix: String) {
       cdkBuilder.customSuffix(customSuffix)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 

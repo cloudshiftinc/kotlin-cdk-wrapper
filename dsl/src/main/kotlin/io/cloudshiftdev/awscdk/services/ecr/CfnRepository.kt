@@ -113,59 +113,44 @@ public open class CfnRepository internal constructor(
   }
 
   public interface Builder {
-    public fun emptyOnDelete(emptyOnDelete: Boolean) {
-    }
+    public fun emptyOnDelete(emptyOnDelete: Boolean)
 
-    public fun emptyOnDelete(emptyOnDelete: IResolvable) {
-    }
+    public fun emptyOnDelete(emptyOnDelete: IResolvable)
 
-    public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-    }
+    public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
-    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-    }
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f046f772f75aad2be55954f3bcf4f694ce2bca4c76ae59c5fa5f4e279125e61")
     public
-        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-    }
+    public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable)
 
     public
-        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty) {
-    }
+        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d7ac0672aa0b91e56a9eb254121c32b1a4ecb95b1da632ff7ed429a394df2743")
     public
-        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty.Builder.() -> Unit)
 
-    public fun imageTagMutability(imageTagMutability: String) {
-    }
+    public fun imageTagMutability(imageTagMutability: String)
 
-    public fun lifecyclePolicy(lifecyclePolicy: IResolvable) {
-    }
+    public fun lifecyclePolicy(lifecyclePolicy: IResolvable)
 
-    public fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty) {
-    }
+    public fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d6ad27a65aea65dbb4d8f833113f05c5dc1799ae2056ee03563388b4b0003725")
-    public fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty.Builder.() -> Unit) {
-    }
+    public fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty.Builder.() -> Unit)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
 
-    public fun repositoryPolicyText(repositoryPolicyText: Any) {
-    }
+    public fun repositoryPolicyText(repositoryPolicyText: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -175,72 +160,70 @@ public open class CfnRepository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecr.CfnRepository.Builder =
         software.amazon.awscdk.services.ecr.CfnRepository.Builder.create(scope, id)
 
-    public override fun emptyOnDelete(emptyOnDelete: Boolean) {
+    override fun emptyOnDelete(emptyOnDelete: Boolean) {
       cdkBuilder.emptyOnDelete(emptyOnDelete)
     }
 
-    public override fun emptyOnDelete(emptyOnDelete: IResolvable) {
+    override fun emptyOnDelete(emptyOnDelete: IResolvable) {
       cdkBuilder.emptyOnDelete(emptyOnDelete.let(IResolvable::unwrap))
     }
 
-    public override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+    override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f046f772f75aad2be55954f3bcf4f694ce2bca4c76ae59c5fa5f4e279125e61")
-    public override
+    override
         fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
         Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
 
-    public override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
+    override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
       cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty) {
       cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(ImageScanningConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d7ac0672aa0b91e56a9eb254121c32b1a4ecb95b1da632ff7ed429a394df2743")
-    public override
+    override
         fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty.Builder.() -> Unit):
         Unit =
         imageScanningConfiguration(ImageScanningConfigurationProperty(imageScanningConfiguration))
 
-    public override fun imageTagMutability(imageTagMutability: String) {
+    override fun imageTagMutability(imageTagMutability: String) {
       cdkBuilder.imageTagMutability(imageTagMutability)
     }
 
-    public override fun lifecyclePolicy(lifecyclePolicy: IResolvable) {
+    override fun lifecyclePolicy(lifecyclePolicy: IResolvable) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(IResolvable::unwrap))
     }
 
-    public override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty) {
+    override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d6ad27a65aea65dbb4d8f833113f05c5dc1799ae2056ee03563388b4b0003725")
-    public override
-        fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty.Builder.() -> Unit): Unit =
-        lifecyclePolicy(LifecyclePolicyProperty(lifecyclePolicy))
+    override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty.Builder.() -> Unit): Unit
+        = lifecyclePolicy(LifecyclePolicyProperty(lifecyclePolicy))
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun repositoryPolicyText(repositoryPolicyText: Any) {
+    override fun repositoryPolicyText(repositoryPolicyText: Any) {
       cdkBuilder.repositoryPolicyText(repositoryPolicyText)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -272,11 +255,9 @@ public open class CfnRepository internal constructor(
     public fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
 
     public interface Builder {
-      public fun scanOnPush(scanOnPush: Boolean) {
-      }
+      public fun scanOnPush(scanOnPush: Boolean)
 
-      public fun scanOnPush(scanOnPush: IResolvable) {
-      }
+      public fun scanOnPush(scanOnPush: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -285,11 +266,11 @@ public open class CfnRepository internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty.builder()
 
-      public override fun scanOnPush(scanOnPush: Boolean) {
+      override fun scanOnPush(scanOnPush: Boolean) {
         cdkBuilder.scanOnPush(scanOnPush)
       }
 
-      public override fun scanOnPush(scanOnPush: IResolvable) {
+      override fun scanOnPush(scanOnPush: IResolvable) {
         cdkBuilder.scanOnPush(scanOnPush.let(IResolvable::unwrap))
       }
 
@@ -302,7 +283,7 @@ public open class CfnRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnRepository.ImageScanningConfigurationProperty,
     ) : ImageScanningConfigurationProperty {
-      public override fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
+      override fun scanOnPush(): Any? = unwrap(this).getScanOnPush()
     }
 
     public companion object {
@@ -332,11 +313,9 @@ public open class CfnRepository internal constructor(
     public fun registryId(): String? = unwrap(this).getRegistryId()
 
     public interface Builder {
-      public fun lifecyclePolicyText(lifecyclePolicyText: String) {
-      }
+      public fun lifecyclePolicyText(lifecyclePolicyText: String)
 
-      public fun registryId(registryId: String) {
-      }
+      public fun registryId(registryId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -344,11 +323,11 @@ public open class CfnRepository internal constructor(
           software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty.Builder =
           software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty.builder()
 
-      public override fun lifecyclePolicyText(lifecyclePolicyText: String) {
+      override fun lifecyclePolicyText(lifecyclePolicyText: String) {
         cdkBuilder.lifecyclePolicyText(lifecyclePolicyText)
       }
 
-      public override fun registryId(registryId: String) {
+      override fun registryId(registryId: String) {
         cdkBuilder.registryId(registryId)
       }
 
@@ -360,9 +339,9 @@ public open class CfnRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnRepository.LifecyclePolicyProperty,
     ) : LifecyclePolicyProperty {
-      public override fun lifecyclePolicyText(): String? = unwrap(this).getLifecyclePolicyText()
+      override fun lifecyclePolicyText(): String? = unwrap(this).getLifecyclePolicyText()
 
-      public override fun registryId(): String? = unwrap(this).getRegistryId()
+      override fun registryId(): String? = unwrap(this).getRegistryId()
     }
 
     public companion object {
@@ -391,11 +370,9 @@ public open class CfnRepository internal constructor(
     public fun kmsKey(): String? = unwrap(this).getKmsKey()
 
     public interface Builder {
-      public fun encryptionType(encryptionType: String) {
-      }
+      public fun encryptionType(encryptionType: String)
 
-      public fun kmsKey(kmsKey: String) {
-      }
+      public fun kmsKey(kmsKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -404,11 +381,11 @@ public open class CfnRepository internal constructor(
           =
           software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty.builder()
 
-      public override fun encryptionType(encryptionType: String) {
+      override fun encryptionType(encryptionType: String) {
         cdkBuilder.encryptionType(encryptionType)
       }
 
-      public override fun kmsKey(kmsKey: String) {
+      override fun kmsKey(kmsKey: String) {
         cdkBuilder.kmsKey(kmsKey)
       }
 
@@ -421,9 +398,9 @@ public open class CfnRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecr.CfnRepository.EncryptionConfigurationProperty,
     ) : EncryptionConfigurationProperty {
-      public override fun encryptionType(): String = unwrap(this).getEncryptionType()
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
 
-      public override fun kmsKey(): String? = unwrap(this).getKmsKey()
+      override fun kmsKey(): String? = unwrap(this).getKmsKey()
     }
 
     public companion object {

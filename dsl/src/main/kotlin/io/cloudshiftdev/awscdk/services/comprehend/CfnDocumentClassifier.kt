@@ -130,67 +130,49 @@ public open class CfnDocumentClassifier internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun dataAccessRoleArn(dataAccessRoleArn: String) {
-    }
+    public fun dataAccessRoleArn(dataAccessRoleArn: String)
 
-    public fun documentClassifierName(documentClassifierName: String) {
-    }
+    public fun documentClassifierName(documentClassifierName: String)
 
-    public fun inputDataConfig(inputDataConfig: IResolvable) {
-    }
+    public fun inputDataConfig(inputDataConfig: IResolvable)
 
-    public fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty) {
-    }
+    public fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ead844577296208fa182b5d35956d753a0389f6213608c2de7573aeaac3511c9")
     public
-        fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty.Builder.() -> Unit) {
-    }
+        fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty.Builder.() -> Unit)
 
-    public fun languageCode(languageCode: String) {
-    }
+    public fun languageCode(languageCode: String)
 
-    public fun mode(mode: String) {
-    }
+    public fun mode(mode: String)
 
-    public fun modelKmsKeyId(modelKmsKeyId: String) {
-    }
+    public fun modelKmsKeyId(modelKmsKeyId: String)
 
-    public fun modelPolicy(modelPolicy: String) {
-    }
+    public fun modelPolicy(modelPolicy: String)
 
-    public fun outputDataConfig(outputDataConfig: IResolvable) {
-    }
+    public fun outputDataConfig(outputDataConfig: IResolvable)
 
-    public fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty) {
-    }
+    public fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("042164220275f5e173eed7aa0b7339bb447218978d0fa011149f7b206a8ecc8f")
     public
-        fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty.Builder.() -> Unit) {
-    }
+        fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun versionName(versionName: String) {
-    }
+    public fun versionName(versionName: String)
 
-    public fun volumeKmsKeyId(volumeKmsKeyId: String) {
-    }
+    public fun volumeKmsKeyId(volumeKmsKeyId: String)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2dec6a95827b49471469399ea4357f96c18cdef6b0e07e9f74ffd43ec8ed69e6")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -200,83 +182,81 @@ public open class CfnDocumentClassifier internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.Builder
         = software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.Builder.create(scope, id)
 
-    public override fun dataAccessRoleArn(dataAccessRoleArn: String) {
+    override fun dataAccessRoleArn(dataAccessRoleArn: String) {
       cdkBuilder.dataAccessRoleArn(dataAccessRoleArn)
     }
 
-    public override fun documentClassifierName(documentClassifierName: String) {
+    override fun documentClassifierName(documentClassifierName: String) {
       cdkBuilder.documentClassifierName(documentClassifierName)
     }
 
-    public override fun inputDataConfig(inputDataConfig: IResolvable) {
+    override fun inputDataConfig(inputDataConfig: IResolvable) {
       cdkBuilder.inputDataConfig(inputDataConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty) {
+    override fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty) {
       cdkBuilder.inputDataConfig(inputDataConfig.let(DocumentClassifierInputDataConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ead844577296208fa182b5d35956d753a0389f6213608c2de7573aeaac3511c9")
-    public override
+    override
         fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty.Builder.() -> Unit):
         Unit = inputDataConfig(DocumentClassifierInputDataConfigProperty(inputDataConfig))
 
-    public override fun languageCode(languageCode: String) {
+    override fun languageCode(languageCode: String) {
       cdkBuilder.languageCode(languageCode)
     }
 
-    public override fun mode(mode: String) {
+    override fun mode(mode: String) {
       cdkBuilder.mode(mode)
     }
 
-    public override fun modelKmsKeyId(modelKmsKeyId: String) {
+    override fun modelKmsKeyId(modelKmsKeyId: String) {
       cdkBuilder.modelKmsKeyId(modelKmsKeyId)
     }
 
-    public override fun modelPolicy(modelPolicy: String) {
+    override fun modelPolicy(modelPolicy: String) {
       cdkBuilder.modelPolicy(modelPolicy)
     }
 
-    public override fun outputDataConfig(outputDataConfig: IResolvable) {
+    override fun outputDataConfig(outputDataConfig: IResolvable) {
       cdkBuilder.outputDataConfig(outputDataConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty) {
+    override fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty) {
       cdkBuilder.outputDataConfig(outputDataConfig.let(DocumentClassifierOutputDataConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("042164220275f5e173eed7aa0b7339bb447218978d0fa011149f7b206a8ecc8f")
-    public override
+    override
         fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty.Builder.() -> Unit):
         Unit = outputDataConfig(DocumentClassifierOutputDataConfigProperty(outputDataConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun versionName(versionName: String) {
+    override fun versionName(versionName: String) {
       cdkBuilder.versionName(versionName)
     }
 
-    public override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+    override fun volumeKmsKeyId(volumeKmsKeyId: String) {
       cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2dec6a95827b49471469399ea4357f96c18cdef6b0e07e9f74ffd43ec8ed69e6")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.comprehend.CfnDocumentClassifier =
@@ -312,14 +292,11 @@ public open class CfnDocumentClassifier internal constructor(
     public fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
 
     public interface Builder {
-      public fun documentReadAction(documentReadAction: String) {
-      }
+      public fun documentReadAction(documentReadAction: String)
 
-      public fun documentReadMode(documentReadMode: String) {
-      }
+      public fun documentReadMode(documentReadMode: String)
 
-      public fun featureTypes(featureTypes: List<String>) {
-      }
+      public fun featureTypes(featureTypes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -328,15 +305,15 @@ public open class CfnDocumentClassifier internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty.builder()
 
-      public override fun documentReadAction(documentReadAction: String) {
+      override fun documentReadAction(documentReadAction: String) {
         cdkBuilder.documentReadAction(documentReadAction)
       }
 
-      public override fun documentReadMode(documentReadMode: String) {
+      override fun documentReadMode(documentReadMode: String) {
         cdkBuilder.documentReadMode(documentReadMode)
       }
 
-      public override fun featureTypes(featureTypes: List<String>) {
+      override fun featureTypes(featureTypes: List<String>) {
         cdkBuilder.featureTypes(featureTypes)
       }
 
@@ -349,12 +326,11 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty,
     ) : DocumentReaderConfigProperty {
-      public override fun documentReadAction(): String = unwrap(this).getDocumentReadAction()
+      override fun documentReadAction(): String = unwrap(this).getDocumentReadAction()
 
-      public override fun documentReadMode(): String? = unwrap(this).getDocumentReadMode()
+      override fun documentReadMode(): String? = unwrap(this).getDocumentReadMode()
 
-      public override fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?:
-          emptyList()
+      override fun featureTypes(): List<String> = unwrap(this).getFeatureTypes() ?: emptyList()
     }
 
     public companion object {
@@ -383,11 +359,9 @@ public open class CfnDocumentClassifier internal constructor(
     public fun testS3Uri(): String? = unwrap(this).getTestS3Uri()
 
     public interface Builder {
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
 
-      public fun testS3Uri(testS3Uri: String) {
-      }
+      public fun testS3Uri(testS3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -396,11 +370,11 @@ public open class CfnDocumentClassifier internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierDocumentsProperty.builder()
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
-      public override fun testS3Uri(testS3Uri: String) {
+      override fun testS3Uri(testS3Uri: String) {
         cdkBuilder.testS3Uri(testS3Uri)
       }
 
@@ -413,9 +387,9 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierDocumentsProperty,
     ) : DocumentClassifierDocumentsProperty {
-      public override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
 
-      public override fun testS3Uri(): String? = unwrap(this).getTestS3Uri()
+      override fun testS3Uri(): String? = unwrap(this).getTestS3Uri()
     }
 
     public companion object {
@@ -457,49 +431,36 @@ public open class CfnDocumentClassifier internal constructor(
     public fun testS3Uri(): String? = unwrap(this).getTestS3Uri()
 
     public interface Builder {
-      public fun augmentedManifests(augmentedManifests: IResolvable) {
-      }
+      public fun augmentedManifests(augmentedManifests: IResolvable)
 
-      public fun augmentedManifests(augmentedManifests: List<Any>) {
-      }
+      public fun augmentedManifests(augmentedManifests: List<Any>)
 
-      public fun dataFormat(dataFormat: String) {
-      }
+      public fun dataFormat(dataFormat: String)
 
-      public fun documentReaderConfig(documentReaderConfig: IResolvable) {
-      }
+      public fun documentReaderConfig(documentReaderConfig: IResolvable)
 
-      public fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty) {
-      }
+      public fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("519b411b789a1ad772bfb7eb17d0edf75e33b4fb53670cdcc45bf87398c2eb16")
       public
-          fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty.Builder.() -> Unit) {
-      }
+          fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty.Builder.() -> Unit)
 
-      public fun documentType(documentType: String) {
-      }
+      public fun documentType(documentType: String)
 
-      public fun documents(documents: IResolvable) {
-      }
+      public fun documents(documents: IResolvable)
 
-      public fun documents(documents: DocumentClassifierDocumentsProperty) {
-      }
+      public fun documents(documents: DocumentClassifierDocumentsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7748e5335ba3bb7e210f124dc3f55569cf05ba479b2c865e0b3f4bc3b087b97b")
-      public fun documents(documents: DocumentClassifierDocumentsProperty.Builder.() -> Unit) {
-      }
+      public fun documents(documents: DocumentClassifierDocumentsProperty.Builder.() -> Unit)
 
-      public fun labelDelimiter(labelDelimiter: String) {
-      }
+      public fun labelDelimiter(labelDelimiter: String)
 
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
 
-      public fun testS3Uri(testS3Uri: String) {
-      }
+      public fun testS3Uri(testS3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -508,59 +469,58 @@ public open class CfnDocumentClassifier internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty.builder()
 
-      public override fun augmentedManifests(augmentedManifests: IResolvable) {
+      override fun augmentedManifests(augmentedManifests: IResolvable) {
         cdkBuilder.augmentedManifests(augmentedManifests.let(IResolvable::unwrap))
       }
 
-      public override fun augmentedManifests(augmentedManifests: List<Any>) {
+      override fun augmentedManifests(augmentedManifests: List<Any>) {
         cdkBuilder.augmentedManifests(augmentedManifests)
       }
 
-      public override fun dataFormat(dataFormat: String) {
+      override fun dataFormat(dataFormat: String) {
         cdkBuilder.dataFormat(dataFormat)
       }
 
-      public override fun documentReaderConfig(documentReaderConfig: IResolvable) {
+      override fun documentReaderConfig(documentReaderConfig: IResolvable) {
         cdkBuilder.documentReaderConfig(documentReaderConfig.let(IResolvable::unwrap))
       }
 
-      public override fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty) {
+      override fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty) {
         cdkBuilder.documentReaderConfig(documentReaderConfig.let(DocumentReaderConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("519b411b789a1ad772bfb7eb17d0edf75e33b4fb53670cdcc45bf87398c2eb16")
-      public override
+      override
           fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty.Builder.() -> Unit):
           Unit = documentReaderConfig(DocumentReaderConfigProperty(documentReaderConfig))
 
-      public override fun documentType(documentType: String) {
+      override fun documentType(documentType: String) {
         cdkBuilder.documentType(documentType)
       }
 
-      public override fun documents(documents: IResolvable) {
+      override fun documents(documents: IResolvable) {
         cdkBuilder.documents(documents.let(IResolvable::unwrap))
       }
 
-      public override fun documents(documents: DocumentClassifierDocumentsProperty) {
+      override fun documents(documents: DocumentClassifierDocumentsProperty) {
         cdkBuilder.documents(documents.let(DocumentClassifierDocumentsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7748e5335ba3bb7e210f124dc3f55569cf05ba479b2c865e0b3f4bc3b087b97b")
-      public override
-          fun documents(documents: DocumentClassifierDocumentsProperty.Builder.() -> Unit): Unit =
-          documents(DocumentClassifierDocumentsProperty(documents))
+      override fun documents(documents: DocumentClassifierDocumentsProperty.Builder.() -> Unit):
+          Unit = documents(DocumentClassifierDocumentsProperty(documents))
 
-      public override fun labelDelimiter(labelDelimiter: String) {
+      override fun labelDelimiter(labelDelimiter: String) {
         cdkBuilder.labelDelimiter(labelDelimiter)
       }
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
-      public override fun testS3Uri(testS3Uri: String) {
+      override fun testS3Uri(testS3Uri: String) {
         cdkBuilder.testS3Uri(testS3Uri)
       }
 
@@ -573,21 +533,21 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty,
     ) : DocumentClassifierInputDataConfigProperty {
-      public override fun augmentedManifests(): Any? = unwrap(this).getAugmentedManifests()
+      override fun augmentedManifests(): Any? = unwrap(this).getAugmentedManifests()
 
-      public override fun dataFormat(): String? = unwrap(this).getDataFormat()
+      override fun dataFormat(): String? = unwrap(this).getDataFormat()
 
-      public override fun documentReaderConfig(): Any? = unwrap(this).getDocumentReaderConfig()
+      override fun documentReaderConfig(): Any? = unwrap(this).getDocumentReaderConfig()
 
-      public override fun documentType(): String? = unwrap(this).getDocumentType()
+      override fun documentType(): String? = unwrap(this).getDocumentType()
 
-      public override fun documents(): Any? = unwrap(this).getDocuments()
+      override fun documents(): Any? = unwrap(this).getDocuments()
 
-      public override fun labelDelimiter(): String? = unwrap(this).getLabelDelimiter()
+      override fun labelDelimiter(): String? = unwrap(this).getLabelDelimiter()
 
-      public override fun s3Uri(): String? = unwrap(this).getS3Uri()
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
 
-      public override fun testS3Uri(): String? = unwrap(this).getTestS3Uri()
+      override fun testS3Uri(): String? = unwrap(this).getTestS3Uri()
     }
 
     public companion object {
@@ -617,11 +577,9 @@ public open class CfnDocumentClassifier internal constructor(
     public fun s3Uri(): String? = unwrap(this).getS3Uri()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -630,11 +588,11 @@ public open class CfnDocumentClassifier internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
@@ -647,9 +605,9 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty,
     ) : DocumentClassifierOutputDataConfigProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun s3Uri(): String? = unwrap(this).getS3Uri()
+      override fun s3Uri(): String? = unwrap(this).getS3Uri()
     }
 
     public companion object {
@@ -681,14 +639,11 @@ public open class CfnDocumentClassifier internal constructor(
     public fun split(): String? = unwrap(this).getSplit()
 
     public interface Builder {
-      public fun attributeNames(attributeNames: List<String>) {
-      }
+      public fun attributeNames(attributeNames: List<String>)
 
-      public fun s3Uri(s3Uri: String) {
-      }
+      public fun s3Uri(s3Uri: String)
 
-      public fun split(split: String) {
-      }
+      public fun split(split: String)
     }
 
     private class BuilderImpl : Builder {
@@ -697,15 +652,15 @@ public open class CfnDocumentClassifier internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty.builder()
 
-      public override fun attributeNames(attributeNames: List<String>) {
+      override fun attributeNames(attributeNames: List<String>) {
         cdkBuilder.attributeNames(attributeNames)
       }
 
-      public override fun s3Uri(s3Uri: String) {
+      override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
       }
 
-      public override fun split(split: String) {
+      override fun split(split: String) {
         cdkBuilder.split(split)
       }
 
@@ -718,12 +673,11 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty,
     ) : AugmentedManifestsListItemProperty {
-      public override fun attributeNames(): List<String> = unwrap(this).getAttributeNames() ?:
-          emptyList()
+      override fun attributeNames(): List<String> = unwrap(this).getAttributeNames() ?: emptyList()
 
-      public override fun s3Uri(): String = unwrap(this).getS3Uri()
+      override fun s3Uri(): String = unwrap(this).getS3Uri()
 
-      public override fun split(): String? = unwrap(this).getSplit()
+      override fun split(): String? = unwrap(this).getSplit()
     }
 
     public companion object {
@@ -753,11 +707,9 @@ public open class CfnDocumentClassifier internal constructor(
     public fun subnets(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnets(subnets: List<String>) {
-      }
+      public fun subnets(subnets: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -766,11 +718,11 @@ public open class CfnDocumentClassifier internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnets(subnets: List<String>) {
+      override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
 
@@ -783,10 +735,10 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
     }
 
     public companion object {

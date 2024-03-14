@@ -52,17 +52,13 @@ public open class CfnVpcConnector internal constructor(
   }
 
   public interface Builder {
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun subnets(subnets: List<String>) {
-    }
+    public fun subnets(subnets: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcConnectorName(vpcConnectorName: String) {
-    }
+    public fun vpcConnectorName(vpcConnectorName: String)
   }
 
   private class BuilderImpl(
@@ -72,19 +68,19 @@ public open class CfnVpcConnector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apprunner.CfnVpcConnector.Builder =
         software.amazon.awscdk.services.apprunner.CfnVpcConnector.Builder.create(scope, id)
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun subnets(subnets: List<String>) {
+    override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcConnectorName(vpcConnectorName: String) {
+    override fun vpcConnectorName(vpcConnectorName: String) {
       cdkBuilder.vpcConnectorName(vpcConnectorName)
     }
 

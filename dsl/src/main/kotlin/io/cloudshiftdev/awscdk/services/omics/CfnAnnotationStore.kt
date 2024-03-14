@@ -109,50 +109,37 @@ public open class CfnAnnotationStore internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun reference(reference: IResolvable) {
-    }
+    public fun reference(reference: IResolvable)
 
-    public fun reference(reference: ReferenceItemProperty) {
-    }
+    public fun reference(reference: ReferenceItemProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b22f41b8a821fe302ac46e3b1913c8d8308a0c128f5983ae28a00c1e4338e220")
-    public fun reference(reference: ReferenceItemProperty.Builder.() -> Unit) {
-    }
+    public fun reference(reference: ReferenceItemProperty.Builder.() -> Unit)
 
-    public fun sseConfig(sseConfig: IResolvable) {
-    }
+    public fun sseConfig(sseConfig: IResolvable)
 
-    public fun sseConfig(sseConfig: SseConfigProperty) {
-    }
+    public fun sseConfig(sseConfig: SseConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("742026332c2b98f1f2e17b196108d72301db805af046abb664e8285bdfee8680")
-    public fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit)
 
-    public fun storeFormat(storeFormat: String) {
-    }
+    public fun storeFormat(storeFormat: String)
 
-    public fun storeOptions(storeOptions: IResolvable) {
-    }
+    public fun storeOptions(storeOptions: IResolvable)
 
-    public fun storeOptions(storeOptions: StoreOptionsProperty) {
-    }
+    public fun storeOptions(storeOptions: StoreOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("beb1462e4842546350e44250c96c6d60a6a58edea24c6780a368fe4b701e385d")
-    public fun storeOptions(storeOptions: StoreOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun storeOptions(storeOptions: StoreOptionsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -162,58 +149,58 @@ public open class CfnAnnotationStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.omics.CfnAnnotationStore.Builder =
         software.amazon.awscdk.services.omics.CfnAnnotationStore.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun reference(reference: IResolvable) {
+    override fun reference(reference: IResolvable) {
       cdkBuilder.reference(reference.let(IResolvable::unwrap))
     }
 
-    public override fun reference(reference: ReferenceItemProperty) {
+    override fun reference(reference: ReferenceItemProperty) {
       cdkBuilder.reference(reference.let(ReferenceItemProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b22f41b8a821fe302ac46e3b1913c8d8308a0c128f5983ae28a00c1e4338e220")
-    public override fun reference(reference: ReferenceItemProperty.Builder.() -> Unit): Unit =
+    override fun reference(reference: ReferenceItemProperty.Builder.() -> Unit): Unit =
         reference(ReferenceItemProperty(reference))
 
-    public override fun sseConfig(sseConfig: IResolvable) {
+    override fun sseConfig(sseConfig: IResolvable) {
       cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sseConfig(sseConfig: SseConfigProperty) {
+    override fun sseConfig(sseConfig: SseConfigProperty) {
       cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("742026332c2b98f1f2e17b196108d72301db805af046abb664e8285bdfee8680")
-    public override fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit): Unit =
+    override fun sseConfig(sseConfig: SseConfigProperty.Builder.() -> Unit): Unit =
         sseConfig(SseConfigProperty(sseConfig))
 
-    public override fun storeFormat(storeFormat: String) {
+    override fun storeFormat(storeFormat: String) {
       cdkBuilder.storeFormat(storeFormat)
     }
 
-    public override fun storeOptions(storeOptions: IResolvable) {
+    override fun storeOptions(storeOptions: IResolvable) {
       cdkBuilder.storeOptions(storeOptions.let(IResolvable::unwrap))
     }
 
-    public override fun storeOptions(storeOptions: StoreOptionsProperty) {
+    override fun storeOptions(storeOptions: StoreOptionsProperty) {
       cdkBuilder.storeOptions(storeOptions.let(StoreOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("beb1462e4842546350e44250c96c6d60a6a58edea24c6780a368fe4b701e385d")
-    public override fun storeOptions(storeOptions: StoreOptionsProperty.Builder.() -> Unit): Unit =
+    override fun storeOptions(storeOptions: StoreOptionsProperty.Builder.() -> Unit): Unit =
         storeOptions(StoreOptionsProperty(storeOptions))
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -246,8 +233,7 @@ public open class CfnAnnotationStore internal constructor(
     public fun referenceArn(): String
 
     public interface Builder {
-      public fun referenceArn(referenceArn: String) {
-      }
+      public fun referenceArn(referenceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -255,7 +241,7 @@ public open class CfnAnnotationStore internal constructor(
           software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty.Builder =
           software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty.builder()
 
-      public override fun referenceArn(referenceArn: String) {
+      override fun referenceArn(referenceArn: String) {
         cdkBuilder.referenceArn(referenceArn)
       }
 
@@ -268,7 +254,7 @@ public open class CfnAnnotationStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnAnnotationStore.ReferenceItemProperty,
     ) : ReferenceItemProperty {
-      public override fun referenceArn(): String = unwrap(this).getReferenceArn()
+      override fun referenceArn(): String = unwrap(this).getReferenceArn()
     }
 
     public companion object {
@@ -295,16 +281,13 @@ public open class CfnAnnotationStore internal constructor(
     public fun tsvStoreOptions(): Any
 
     public interface Builder {
-      public fun tsvStoreOptions(tsvStoreOptions: IResolvable) {
-      }
+      public fun tsvStoreOptions(tsvStoreOptions: IResolvable)
 
-      public fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty) {
-      }
+      public fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da03542bf298b1170fb52c32eea77b038cc256601686481b3dc9a051bd3305e1")
-      public fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -312,19 +295,18 @@ public open class CfnAnnotationStore internal constructor(
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty.Builder =
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty.builder()
 
-      public override fun tsvStoreOptions(tsvStoreOptions: IResolvable) {
+      override fun tsvStoreOptions(tsvStoreOptions: IResolvable) {
         cdkBuilder.tsvStoreOptions(tsvStoreOptions.let(IResolvable::unwrap))
       }
 
-      public override fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty) {
+      override fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty) {
         cdkBuilder.tsvStoreOptions(tsvStoreOptions.let(TsvStoreOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da03542bf298b1170fb52c32eea77b038cc256601686481b3dc9a051bd3305e1")
-      public override
-          fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty.Builder.() -> Unit): Unit =
-          tsvStoreOptions(TsvStoreOptionsProperty(tsvStoreOptions))
+      override fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty.Builder.() -> Unit):
+          Unit = tsvStoreOptions(TsvStoreOptionsProperty(tsvStoreOptions))
 
       public fun build():
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty =
@@ -335,7 +317,7 @@ public open class CfnAnnotationStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnAnnotationStore.StoreOptionsProperty,
     ) : StoreOptionsProperty {
-      public override fun tsvStoreOptions(): Any = unwrap(this).getTsvStoreOptions()
+      override fun tsvStoreOptions(): Any = unwrap(this).getTsvStoreOptions()
     }
 
     public companion object {
@@ -364,11 +346,9 @@ public open class CfnAnnotationStore internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -376,11 +356,11 @@ public open class CfnAnnotationStore internal constructor(
           software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty.Builder =
           software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -392,9 +372,9 @@ public open class CfnAnnotationStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnAnnotationStore.SseConfigProperty,
     ) : SseConfigProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -425,17 +405,13 @@ public open class CfnAnnotationStore internal constructor(
     public fun schema(): Any? = unwrap(this).getSchema()
 
     public interface Builder {
-      public fun annotationType(annotationType: String) {
-      }
+      public fun annotationType(annotationType: String)
 
-      public fun formatToHeader(formatToHeader: IResolvable) {
-      }
+      public fun formatToHeader(formatToHeader: IResolvable)
 
-      public fun formatToHeader(formatToHeader: Map<String, String>) {
-      }
+      public fun formatToHeader(formatToHeader: Map<String, String>)
 
-      public fun schema(schema: Any) {
-      }
+      public fun schema(schema: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -443,19 +419,19 @@ public open class CfnAnnotationStore internal constructor(
           software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty.Builder =
           software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty.builder()
 
-      public override fun annotationType(annotationType: String) {
+      override fun annotationType(annotationType: String) {
         cdkBuilder.annotationType(annotationType)
       }
 
-      public override fun formatToHeader(formatToHeader: IResolvable) {
+      override fun formatToHeader(formatToHeader: IResolvable) {
         cdkBuilder.formatToHeader(formatToHeader.let(IResolvable::unwrap))
       }
 
-      public override fun formatToHeader(formatToHeader: Map<String, String>) {
+      override fun formatToHeader(formatToHeader: Map<String, String>) {
         cdkBuilder.formatToHeader(formatToHeader)
       }
 
-      public override fun schema(schema: Any) {
+      override fun schema(schema: Any) {
         cdkBuilder.schema(schema)
       }
 
@@ -468,11 +444,11 @@ public open class CfnAnnotationStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnAnnotationStore.TsvStoreOptionsProperty,
     ) : TsvStoreOptionsProperty {
-      public override fun annotationType(): String? = unwrap(this).getAnnotationType()
+      override fun annotationType(): String? = unwrap(this).getAnnotationType()
 
-      public override fun formatToHeader(): Any? = unwrap(this).getFormatToHeader()
+      override fun formatToHeader(): Any? = unwrap(this).getFormatToHeader()
 
-      public override fun schema(): Any? = unwrap(this).getSchema()
+      override fun schema(): Any? = unwrap(this).getSchema()
     }
 
     public companion object {

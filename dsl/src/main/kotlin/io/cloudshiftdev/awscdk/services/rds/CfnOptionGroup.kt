@@ -66,26 +66,19 @@ public open class CfnOptionGroup internal constructor(
   }
 
   public interface Builder {
-    public fun engineName(engineName: String) {
-    }
+    public fun engineName(engineName: String)
 
-    public fun majorEngineVersion(majorEngineVersion: String) {
-    }
+    public fun majorEngineVersion(majorEngineVersion: String)
 
-    public fun optionConfigurations(optionConfigurations: IResolvable) {
-    }
+    public fun optionConfigurations(optionConfigurations: IResolvable)
 
-    public fun optionConfigurations(optionConfigurations: List<Any>) {
-    }
+    public fun optionConfigurations(optionConfigurations: List<Any>)
 
-    public fun optionGroupDescription(optionGroupDescription: String) {
-    }
+    public fun optionGroupDescription(optionGroupDescription: String)
 
-    public fun optionGroupName(optionGroupName: String) {
-    }
+    public fun optionGroupName(optionGroupName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -95,31 +88,31 @@ public open class CfnOptionGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnOptionGroup.Builder =
         software.amazon.awscdk.services.rds.CfnOptionGroup.Builder.create(scope, id)
 
-    public override fun engineName(engineName: String) {
+    override fun engineName(engineName: String) {
       cdkBuilder.engineName(engineName)
     }
 
-    public override fun majorEngineVersion(majorEngineVersion: String) {
+    override fun majorEngineVersion(majorEngineVersion: String) {
       cdkBuilder.majorEngineVersion(majorEngineVersion)
     }
 
-    public override fun optionConfigurations(optionConfigurations: IResolvable) {
+    override fun optionConfigurations(optionConfigurations: IResolvable) {
       cdkBuilder.optionConfigurations(optionConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun optionConfigurations(optionConfigurations: List<Any>) {
+    override fun optionConfigurations(optionConfigurations: List<Any>) {
       cdkBuilder.optionConfigurations(optionConfigurations)
     }
 
-    public override fun optionGroupDescription(optionGroupDescription: String) {
+    override fun optionGroupDescription(optionGroupDescription: String) {
       cdkBuilder.optionGroupDescription(optionGroupDescription)
     }
 
-    public override fun optionGroupName(optionGroupName: String) {
+    override fun optionGroupName(optionGroupName: String) {
       cdkBuilder.optionGroupName(optionGroupName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -163,26 +156,19 @@ public open class CfnOptionGroup internal constructor(
         unwrap(this).getVpcSecurityGroupMemberships() ?: emptyList()
 
     public interface Builder {
-      public fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>) {
-      }
+      public fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>)
 
-      public fun optionName(optionName: String) {
-      }
+      public fun optionName(optionName: String)
 
-      public fun optionSettings(optionSettings: IResolvable) {
-      }
+      public fun optionSettings(optionSettings: IResolvable)
 
-      public fun optionSettings(optionSettings: List<Any>) {
-      }
+      public fun optionSettings(optionSettings: List<Any>)
 
-      public fun optionVersion(optionVersion: String) {
-      }
+      public fun optionVersion(optionVersion: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>) {
-      }
+      public fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -190,31 +176,31 @@ public open class CfnOptionGroup internal constructor(
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty.Builder =
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty.builder()
 
-      public override fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>) {
+      override fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>) {
         cdkBuilder.dbSecurityGroupMemberships(dbSecurityGroupMemberships)
       }
 
-      public override fun optionName(optionName: String) {
+      override fun optionName(optionName: String) {
         cdkBuilder.optionName(optionName)
       }
 
-      public override fun optionSettings(optionSettings: IResolvable) {
+      override fun optionSettings(optionSettings: IResolvable) {
         cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
       }
 
-      public override fun optionSettings(optionSettings: List<Any>) {
+      override fun optionSettings(optionSettings: List<Any>) {
         cdkBuilder.optionSettings(optionSettings)
       }
 
-      public override fun optionVersion(optionVersion: String) {
+      override fun optionVersion(optionVersion: String) {
         cdkBuilder.optionVersion(optionVersion)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>) {
+      override fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>) {
         cdkBuilder.vpcSecurityGroupMemberships(vpcSecurityGroupMemberships)
       }
 
@@ -227,18 +213,18 @@ public open class CfnOptionGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty,
     ) : OptionConfigurationProperty {
-      public override fun dbSecurityGroupMemberships(): List<String> =
+      override fun dbSecurityGroupMemberships(): List<String> =
           unwrap(this).getDbSecurityGroupMemberships() ?: emptyList()
 
-      public override fun optionName(): String = unwrap(this).getOptionName()
+      override fun optionName(): String = unwrap(this).getOptionName()
 
-      public override fun optionSettings(): Any? = unwrap(this).getOptionSettings()
+      override fun optionSettings(): Any? = unwrap(this).getOptionSettings()
 
-      public override fun optionVersion(): String? = unwrap(this).getOptionVersion()
+      override fun optionVersion(): String? = unwrap(this).getOptionVersion()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun vpcSecurityGroupMemberships(): List<String> =
+      override fun vpcSecurityGroupMemberships(): List<String> =
           unwrap(this).getVpcSecurityGroupMemberships() ?: emptyList()
     }
 
@@ -268,11 +254,9 @@ public open class CfnOptionGroup internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -280,11 +264,11 @@ public open class CfnOptionGroup internal constructor(
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty.Builder =
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -296,9 +280,9 @@ public open class CfnOptionGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty,
     ) : OptionSettingProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

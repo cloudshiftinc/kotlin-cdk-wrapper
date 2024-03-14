@@ -61,43 +61,31 @@ public open class NetworkTargetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun connectionTermination(connectionTermination: Boolean) {
-    }
+    public fun connectionTermination(connectionTermination: Boolean)
 
-    public fun deregistrationDelay(deregistrationDelay: Duration) {
-    }
+    public fun deregistrationDelay(deregistrationDelay: Duration)
 
-    public fun healthCheck(healthCheck: HealthCheck) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c7ee6a16ec18311c4c64074c4eac245e90c71b6535cdddc06564288488e16b5")
-    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preserveClientIp(preserveClientIp: Boolean) {
-    }
+    public fun preserveClientIp(preserveClientIp: Boolean)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
 
-    public fun proxyProtocolV2(proxyProtocolV2: Boolean) {
-    }
+    public fun proxyProtocolV2(proxyProtocolV2: Boolean)
 
-    public fun targetGroupName(targetGroupName: String) {
-    }
+    public fun targetGroupName(targetGroupName: String)
 
-    public fun targetType(targetType: TargetType) {
-    }
+    public fun targetType(targetType: TargetType)
 
-    public fun targets(targets: List<INetworkLoadBalancerTarget>) {
-    }
+    public fun targets(targets: List<INetworkLoadBalancerTarget>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -109,52 +97,52 @@ public open class NetworkTargetGroup internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup.Builder.create(scope,
         id)
 
-    public override fun connectionTermination(connectionTermination: Boolean) {
+    override fun connectionTermination(connectionTermination: Boolean) {
       cdkBuilder.connectionTermination(connectionTermination)
     }
 
-    public override fun deregistrationDelay(deregistrationDelay: Duration) {
+    override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheck) {
+    override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c7ee6a16ec18311c4c64074c4eac245e90c71b6535cdddc06564288488e16b5")
-    public override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preserveClientIp(preserveClientIp: Boolean) {
+    override fun preserveClientIp(preserveClientIp: Boolean) {
       cdkBuilder.preserveClientIp(preserveClientIp)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
-    public override fun proxyProtocolV2(proxyProtocolV2: Boolean) {
+    override fun proxyProtocolV2(proxyProtocolV2: Boolean) {
       cdkBuilder.proxyProtocolV2(proxyProtocolV2)
     }
 
-    public override fun targetGroupName(targetGroupName: String) {
+    override fun targetGroupName(targetGroupName: String) {
       cdkBuilder.targetGroupName(targetGroupName)
     }
 
-    public override fun targetType(targetType: TargetType) {
+    override fun targetType(targetType: TargetType) {
       cdkBuilder.targetType(targetType.let(TargetType::unwrap))
     }
 
-    public override fun targets(targets: List<INetworkLoadBalancerTarget>) {
+    override fun targets(targets: List<INetworkLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

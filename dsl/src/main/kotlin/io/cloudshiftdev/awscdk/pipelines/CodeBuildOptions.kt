@@ -43,108 +43,95 @@ public interface CodeBuildOptions {
   public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
   public interface Builder {
-    public fun buildEnvironment(buildEnvironment: BuildEnvironment) {
-    }
+    public fun buildEnvironment(buildEnvironment: BuildEnvironment)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c3a687835e189ee4baf969e19076ab9c8a363a995aff69ee6b510acfa79550f")
-    public fun buildEnvironment(buildEnvironment: BuildEnvironment.Builder.() -> Unit) {
-    }
+    public fun buildEnvironment(buildEnvironment: BuildEnvironment.Builder.() -> Unit)
 
-    public fun cache(cache: Cache) {
-    }
+    public fun cache(cache: Cache)
 
-    public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-    }
+    public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>)
 
-    public fun logging(logging: LoggingOptions) {
-    }
+    public fun logging(logging: LoggingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abf37ca978f283cd317c366abfcbaf5875e30b98b3c196f6850c5c027dad7835")
-    public fun logging(logging: LoggingOptions.Builder.() -> Unit) {
-    }
+    public fun logging(logging: LoggingOptions.Builder.() -> Unit)
 
-    public fun partialBuildSpec(partialBuildSpec: BuildSpec) {
-    }
+    public fun partialBuildSpec(partialBuildSpec: BuildSpec)
 
-    public fun rolePolicy(rolePolicy: List<PolicyStatement>) {
-    }
+    public fun rolePolicy(rolePolicy: List<PolicyStatement>)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50f1a4ecf72ee950cf9d0486b74ebba1ab84ef9bd51b98513c980a1559646d1e")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.CodeBuildOptions.Builder =
         software.amazon.awscdk.pipelines.CodeBuildOptions.builder()
 
-    public override fun buildEnvironment(buildEnvironment: BuildEnvironment) {
+    override fun buildEnvironment(buildEnvironment: BuildEnvironment) {
       cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c3a687835e189ee4baf969e19076ab9c8a363a995aff69ee6b510acfa79550f")
-    public override fun buildEnvironment(buildEnvironment: BuildEnvironment.Builder.() -> Unit):
-        Unit = buildEnvironment(BuildEnvironment(buildEnvironment))
+    override fun buildEnvironment(buildEnvironment: BuildEnvironment.Builder.() -> Unit): Unit =
+        buildEnvironment(BuildEnvironment(buildEnvironment))
 
-    public override fun cache(cache: Cache) {
+    override fun cache(cache: Cache) {
       cdkBuilder.cache(cache.let(Cache::unwrap))
     }
 
-    public override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
+    override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
       cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
     }
 
-    public override fun logging(logging: LoggingOptions) {
+    override fun logging(logging: LoggingOptions) {
       cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abf37ca978f283cd317c366abfcbaf5875e30b98b3c196f6850c5c027dad7835")
-    public override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
+    override fun logging(logging: LoggingOptions.Builder.() -> Unit): Unit =
         logging(LoggingOptions(logging))
 
-    public override fun partialBuildSpec(partialBuildSpec: BuildSpec) {
+    override fun partialBuildSpec(partialBuildSpec: BuildSpec) {
       cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec::unwrap))
     }
 
-    public override fun rolePolicy(rolePolicy: List<PolicyStatement>) {
+    override fun rolePolicy(rolePolicy: List<PolicyStatement>) {
       cdkBuilder.rolePolicy(rolePolicy.map(PolicyStatement::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50f1a4ecf72ee950cf9d0486b74ebba1ab84ef9bd51b98513c980a1559646d1e")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
@@ -154,32 +141,31 @@ public interface CodeBuildOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.CodeBuildOptions,
   ) : CodeBuildOptions {
-    public override fun buildEnvironment(): BuildEnvironment? =
+    override fun buildEnvironment(): BuildEnvironment? =
         unwrap(this).getBuildEnvironment()?.let(BuildEnvironment::wrap)
 
-    public override fun cache(): Cache? = unwrap(this).getCache()?.let(Cache::wrap)
+    override fun cache(): Cache? = unwrap(this).getCache()?.let(Cache::wrap)
 
-    public override fun fileSystemLocations(): List<IFileSystemLocation> =
+    override fun fileSystemLocations(): List<IFileSystemLocation> =
         unwrap(this).getFileSystemLocations()?.map(IFileSystemLocation::wrap) ?: emptyList()
 
-    public override fun logging(): LoggingOptions? =
-        unwrap(this).getLogging()?.let(LoggingOptions::wrap)
+    override fun logging(): LoggingOptions? = unwrap(this).getLogging()?.let(LoggingOptions::wrap)
 
-    public override fun partialBuildSpec(): BuildSpec? =
+    override fun partialBuildSpec(): BuildSpec? =
         unwrap(this).getPartialBuildSpec()?.let(BuildSpec::wrap)
 
-    public override fun rolePolicy(): List<PolicyStatement> =
+    override fun rolePolicy(): List<PolicyStatement> =
         unwrap(this).getRolePolicy()?.map(PolicyStatement::wrap) ?: emptyList()
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    public override fun subnetSelection(): SubnetSelection? =
+    override fun subnetSelection(): SubnetSelection? =
         unwrap(this).getSubnetSelection()?.let(SubnetSelection::wrap)
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
+    override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
   }
 
   public companion object {

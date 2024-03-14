@@ -75,22 +75,17 @@ public open class CfnPackage internal constructor(
   }
 
   public interface Builder {
-    public fun packageName(packageName: String) {
-    }
+    public fun packageName(packageName: String)
 
-    public fun storageLocation(storageLocation: IResolvable) {
-    }
+    public fun storageLocation(storageLocation: IResolvable)
 
-    public fun storageLocation(storageLocation: StorageLocationProperty) {
-    }
+    public fun storageLocation(storageLocation: StorageLocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9eef293a1640ac178bc21191a3d7ed8355f679870b8a18c912b9ad3cf896ba7c")
-    public fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit) {
-    }
+    public fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -100,25 +95,24 @@ public open class CfnPackage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.panorama.CfnPackage.Builder =
         software.amazon.awscdk.services.panorama.CfnPackage.Builder.create(scope, id)
 
-    public override fun packageName(packageName: String) {
+    override fun packageName(packageName: String) {
       cdkBuilder.packageName(packageName)
     }
 
-    public override fun storageLocation(storageLocation: IResolvable) {
+    override fun storageLocation(storageLocation: IResolvable) {
       cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
     }
 
-    public override fun storageLocation(storageLocation: StorageLocationProperty) {
+    override fun storageLocation(storageLocation: StorageLocationProperty) {
       cdkBuilder.storageLocation(storageLocation.let(StorageLocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9eef293a1640ac178bc21191a3d7ed8355f679870b8a18c912b9ad3cf896ba7c")
-    public override
-        fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit): Unit =
-        storageLocation(StorageLocationProperty(storageLocation))
+    override fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit): Unit
+        = storageLocation(StorageLocationProperty(storageLocation))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -158,20 +152,15 @@ public open class CfnPackage internal constructor(
     public fun repoPrefixLocation(): String? = unwrap(this).getRepoPrefixLocation()
 
     public interface Builder {
-      public fun binaryPrefixLocation(binaryPrefixLocation: String) {
-      }
+      public fun binaryPrefixLocation(binaryPrefixLocation: String)
 
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun generatedPrefixLocation(generatedPrefixLocation: String) {
-      }
+      public fun generatedPrefixLocation(generatedPrefixLocation: String)
 
-      public fun manifestPrefixLocation(manifestPrefixLocation: String) {
-      }
+      public fun manifestPrefixLocation(manifestPrefixLocation: String)
 
-      public fun repoPrefixLocation(repoPrefixLocation: String) {
-      }
+      public fun repoPrefixLocation(repoPrefixLocation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -179,23 +168,23 @@ public open class CfnPackage internal constructor(
           software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty.Builder =
           software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty.builder()
 
-      public override fun binaryPrefixLocation(binaryPrefixLocation: String) {
+      override fun binaryPrefixLocation(binaryPrefixLocation: String) {
         cdkBuilder.binaryPrefixLocation(binaryPrefixLocation)
       }
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun generatedPrefixLocation(generatedPrefixLocation: String) {
+      override fun generatedPrefixLocation(generatedPrefixLocation: String) {
         cdkBuilder.generatedPrefixLocation(generatedPrefixLocation)
       }
 
-      public override fun manifestPrefixLocation(manifestPrefixLocation: String) {
+      override fun manifestPrefixLocation(manifestPrefixLocation: String) {
         cdkBuilder.manifestPrefixLocation(manifestPrefixLocation)
       }
 
-      public override fun repoPrefixLocation(repoPrefixLocation: String) {
+      override fun repoPrefixLocation(repoPrefixLocation: String) {
         cdkBuilder.repoPrefixLocation(repoPrefixLocation)
       }
 
@@ -208,17 +197,15 @@ public open class CfnPackage internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.panorama.CfnPackage.StorageLocationProperty,
     ) : StorageLocationProperty {
-      public override fun binaryPrefixLocation(): String? = unwrap(this).getBinaryPrefixLocation()
+      override fun binaryPrefixLocation(): String? = unwrap(this).getBinaryPrefixLocation()
 
-      public override fun bucket(): String? = unwrap(this).getBucket()
+      override fun bucket(): String? = unwrap(this).getBucket()
 
-      public override fun generatedPrefixLocation(): String? =
-          unwrap(this).getGeneratedPrefixLocation()
+      override fun generatedPrefixLocation(): String? = unwrap(this).getGeneratedPrefixLocation()
 
-      public override fun manifestPrefixLocation(): String? =
-          unwrap(this).getManifestPrefixLocation()
+      override fun manifestPrefixLocation(): String? = unwrap(this).getManifestPrefixLocation()
 
-      public override fun repoPrefixLocation(): String? = unwrap(this).getRepoPrefixLocation()
+      override fun repoPrefixLocation(): String? = unwrap(this).getRepoPrefixLocation()
     }
 
     public companion object {

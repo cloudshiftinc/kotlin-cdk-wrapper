@@ -9,11 +9,9 @@ public interface FixedResponseOptions {
   public fun messageBody(): String? = unwrap(this).getMessageBody()
 
   public interface Builder {
-    public fun contentType(contentType: String) {
-    }
+    public fun contentType(contentType: String)
 
-    public fun messageBody(messageBody: String) {
-    }
+    public fun messageBody(messageBody: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface FixedResponseOptions {
         software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions.builder()
 
-    public override fun contentType(contentType: String) {
+    override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
 
-    public override fun messageBody(messageBody: String) {
+    override fun messageBody(messageBody: String) {
       cdkBuilder.messageBody(messageBody)
     }
 
@@ -37,9 +35,9 @@ public interface FixedResponseOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions,
   ) : FixedResponseOptions {
-    public override fun contentType(): String? = unwrap(this).getContentType()
+    override fun contentType(): String? = unwrap(this).getContentType()
 
-    public override fun messageBody(): String? = unwrap(this).getMessageBody()
+    override fun messageBody(): String? = unwrap(this).getMessageBody()
   }
 
   public companion object {

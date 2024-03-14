@@ -16,36 +16,32 @@ public interface CloudMapNamespaceOptions {
   public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun type(type: NamespaceType) {
-    }
+    public fun type(type: NamespaceType)
 
-    public fun useForServiceConnect(useForServiceConnect: Boolean) {
-    }
+    public fun useForServiceConnect(useForServiceConnect: Boolean)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions.Builder =
         software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun type(type: NamespaceType) {
+    override fun type(type: NamespaceType) {
       cdkBuilder.type(type.let(NamespaceType::unwrap))
     }
 
-    public override fun useForServiceConnect(useForServiceConnect: Boolean) {
+    override fun useForServiceConnect(useForServiceConnect: Boolean) {
       cdkBuilder.useForServiceConnect(useForServiceConnect)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
@@ -56,13 +52,13 @@ public interface CloudMapNamespaceOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions,
   ) : CloudMapNamespaceOptions {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun type(): NamespaceType? = unwrap(this).getType()?.let(NamespaceType::wrap)
+    override fun type(): NamespaceType? = unwrap(this).getType()?.let(NamespaceType::wrap)
 
-    public override fun useForServiceConnect(): Boolean? = unwrap(this).getUseForServiceConnect()
+    override fun useForServiceConnect(): Boolean? = unwrap(this).getUseForServiceConnect()
 
-    public override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
+    override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
   }
 
   public companion object {

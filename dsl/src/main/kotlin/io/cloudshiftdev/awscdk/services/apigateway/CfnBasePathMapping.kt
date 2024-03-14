@@ -46,20 +46,15 @@ public open class CfnBasePathMapping internal constructor(
   }
 
   public interface Builder {
-    public fun basePath(basePath: String) {
-    }
+    public fun basePath(basePath: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
 
-    public fun stage(stage: String) {
-    }
+    public fun stage(stage: String)
   }
 
   private class BuilderImpl(
@@ -69,23 +64,23 @@ public open class CfnBasePathMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnBasePathMapping.Builder =
         software.amazon.awscdk.services.apigateway.CfnBasePathMapping.Builder.create(scope, id)
 
-    public override fun basePath(basePath: String) {
+    override fun basePath(basePath: String) {
       cdkBuilder.basePath(basePath)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
-    public override fun stage(stage: String) {
+    override fun stage(stage: String) {
       cdkBuilder.stage(stage)
     }
 

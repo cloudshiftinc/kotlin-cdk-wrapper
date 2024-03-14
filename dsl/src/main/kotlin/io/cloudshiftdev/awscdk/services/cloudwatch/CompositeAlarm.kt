@@ -15,26 +15,19 @@ public open class CompositeAlarm internal constructor(
   public override fun alarmName(): String = unwrap(this).getAlarmName()
 
   public interface Builder {
-    public fun actionsEnabled(actionsEnabled: Boolean) {
-    }
+    public fun actionsEnabled(actionsEnabled: Boolean)
 
-    public fun actionsSuppressor(actionsSuppressor: IAlarm) {
-    }
+    public fun actionsSuppressor(actionsSuppressor: IAlarm)
 
-    public fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Duration) {
-    }
+    public fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Duration)
 
-    public fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Duration) {
-    }
+    public fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Duration)
 
-    public fun alarmDescription(alarmDescription: String) {
-    }
+    public fun alarmDescription(alarmDescription: String)
 
-    public fun alarmRule(alarmRule: IAlarmRule) {
-    }
+    public fun alarmRule(alarmRule: IAlarmRule)
 
-    public fun compositeAlarmName(compositeAlarmName: String) {
-    }
+    public fun compositeAlarmName(compositeAlarmName: String)
   }
 
   private class BuilderImpl(
@@ -44,32 +37,31 @@ public open class CompositeAlarm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CompositeAlarm.Builder =
         software.amazon.awscdk.services.cloudwatch.CompositeAlarm.Builder.create(scope, id)
 
-    public override fun actionsEnabled(actionsEnabled: Boolean) {
+    override fun actionsEnabled(actionsEnabled: Boolean) {
       cdkBuilder.actionsEnabled(actionsEnabled)
     }
 
-    public override fun actionsSuppressor(actionsSuppressor: IAlarm) {
+    override fun actionsSuppressor(actionsSuppressor: IAlarm) {
       cdkBuilder.actionsSuppressor(actionsSuppressor.let(IAlarm::unwrap))
     }
 
-    public override
-        fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Duration) {
+    override fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Duration) {
       cdkBuilder.actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod.let(Duration::unwrap))
     }
 
-    public override fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Duration) {
+    override fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Duration) {
       cdkBuilder.actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod.let(Duration::unwrap))
     }
 
-    public override fun alarmDescription(alarmDescription: String) {
+    override fun alarmDescription(alarmDescription: String) {
       cdkBuilder.alarmDescription(alarmDescription)
     }
 
-    public override fun alarmRule(alarmRule: IAlarmRule) {
+    override fun alarmRule(alarmRule: IAlarmRule) {
       cdkBuilder.alarmRule(alarmRule.let(IAlarmRule::unwrap))
     }
 
-    public override fun compositeAlarmName(compositeAlarmName: String) {
+    override fun compositeAlarmName(compositeAlarmName: String) {
       cdkBuilder.compositeAlarmName(compositeAlarmName)
     }
 

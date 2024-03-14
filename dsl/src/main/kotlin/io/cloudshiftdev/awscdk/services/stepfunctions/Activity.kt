@@ -125,8 +125,7 @@ public open class Activity internal constructor(
       metricTimedOut(MetricOptions(props))
 
   public interface Builder {
-    public fun activityName(activityName: String) {
-    }
+    public fun activityName(activityName: String)
   }
 
   private class BuilderImpl(
@@ -136,7 +135,7 @@ public open class Activity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Activity.Builder =
         software.amazon.awscdk.services.stepfunctions.Activity.Builder.create(scope, id)
 
-    public override fun activityName(activityName: String) {
+    override fun activityName(activityName: String) {
       cdkBuilder.activityName(activityName)
     }
 

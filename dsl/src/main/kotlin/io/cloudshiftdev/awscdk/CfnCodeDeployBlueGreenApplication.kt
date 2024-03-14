@@ -10,46 +10,41 @@ public interface CfnCodeDeployBlueGreenApplication {
   public fun target(): CfnCodeDeployBlueGreenApplicationTarget
 
   public interface Builder {
-    public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes) {
-    }
+    public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2949b093137affa82667f7aadd73d2a3f9a659a80e8ce0a5773e3a9520660c1a")
-    public
-        fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes.Builder.() -> Unit) {
-    }
+    public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes.Builder.() -> Unit)
 
-    public fun target(target: CfnCodeDeployBlueGreenApplicationTarget) {
-    }
+    public fun target(target: CfnCodeDeployBlueGreenApplicationTarget)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a6b144a7caab90d92ab5814297f2d3e984915d397737fb5bcc194546504c0df")
-    public fun target(target: CfnCodeDeployBlueGreenApplicationTarget.Builder.() -> Unit) {
-    }
+    public fun target(target: CfnCodeDeployBlueGreenApplicationTarget.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenApplication.builder()
 
-    public override fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes) {
+    override fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes) {
       cdkBuilder.ecsAttributes(ecsAttributes.let(CfnCodeDeployBlueGreenEcsAttributes::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2949b093137affa82667f7aadd73d2a3f9a659a80e8ce0a5773e3a9520660c1a")
-    public override
+    override
         fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes.Builder.() -> Unit):
         Unit = ecsAttributes(CfnCodeDeployBlueGreenEcsAttributes(ecsAttributes))
 
-    public override fun target(target: CfnCodeDeployBlueGreenApplicationTarget) {
+    override fun target(target: CfnCodeDeployBlueGreenApplicationTarget) {
       cdkBuilder.target(target.let(CfnCodeDeployBlueGreenApplicationTarget::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a6b144a7caab90d92ab5814297f2d3e984915d397737fb5bcc194546504c0df")
-    public override fun target(target: CfnCodeDeployBlueGreenApplicationTarget.Builder.() -> Unit):
-        Unit = target(CfnCodeDeployBlueGreenApplicationTarget(target))
+    override fun target(target: CfnCodeDeployBlueGreenApplicationTarget.Builder.() -> Unit): Unit =
+        target(CfnCodeDeployBlueGreenApplicationTarget(target))
 
     public fun build(): software.amazon.awscdk.CfnCodeDeployBlueGreenApplication =
         cdkBuilder.build()
@@ -58,10 +53,10 @@ public interface CfnCodeDeployBlueGreenApplication {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication,
   ) : CfnCodeDeployBlueGreenApplication {
-    public override fun ecsAttributes(): CfnCodeDeployBlueGreenEcsAttributes =
+    override fun ecsAttributes(): CfnCodeDeployBlueGreenEcsAttributes =
         unwrap(this).getEcsAttributes().let(CfnCodeDeployBlueGreenEcsAttributes::wrap)
 
-    public override fun target(): CfnCodeDeployBlueGreenApplicationTarget =
+    override fun target(): CfnCodeDeployBlueGreenApplicationTarget =
         unwrap(this).getTarget().let(CfnCodeDeployBlueGreenApplicationTarget::wrap)
   }
 

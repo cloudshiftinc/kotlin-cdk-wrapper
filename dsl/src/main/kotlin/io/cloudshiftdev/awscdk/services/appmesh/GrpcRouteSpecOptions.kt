@@ -17,73 +17,65 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
   public fun weightedTargets(): List<WeightedTarget>
 
   public interface Builder {
-    public fun match(match: GrpcRouteMatch) {
-    }
+    public fun match(match: GrpcRouteMatch)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c443c125c7e307cde08650895cc490bd331f5b0f32fa1bb2e182e68d29ad7566")
-    public fun match(match: GrpcRouteMatch.Builder.() -> Unit) {
-    }
+    public fun match(match: GrpcRouteMatch.Builder.() -> Unit)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun retryPolicy(retryPolicy: GrpcRetryPolicy) {
-    }
+    public fun retryPolicy(retryPolicy: GrpcRetryPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0eaf43c24ce77189ff2d04f1dd89d3653fbfd69c6bd04ac7856362d6837f8ed9")
-    public fun retryPolicy(retryPolicy: GrpcRetryPolicy.Builder.() -> Unit) {
-    }
+    public fun retryPolicy(retryPolicy: GrpcRetryPolicy.Builder.() -> Unit)
 
-    public fun timeout(timeout: GrpcTimeout) {
-    }
+    public fun timeout(timeout: GrpcTimeout)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("589c0e3c735f3163a5450e3579eda4be3603edf18107dca80bd9d145541d0582")
-    public fun timeout(timeout: GrpcTimeout.Builder.() -> Unit) {
-    }
+    public fun timeout(timeout: GrpcTimeout.Builder.() -> Unit)
 
-    public fun weightedTargets(weightedTargets: List<WeightedTarget>) {
-    }
+    public fun weightedTargets(weightedTargets: List<WeightedTarget>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions.Builder =
         software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions.builder()
 
-    public override fun match(match: GrpcRouteMatch) {
+    override fun match(match: GrpcRouteMatch) {
       cdkBuilder.match(match.let(GrpcRouteMatch::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c443c125c7e307cde08650895cc490bd331f5b0f32fa1bb2e182e68d29ad7566")
-    public override fun match(match: GrpcRouteMatch.Builder.() -> Unit): Unit =
+    override fun match(match: GrpcRouteMatch.Builder.() -> Unit): Unit =
         match(GrpcRouteMatch(match))
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun retryPolicy(retryPolicy: GrpcRetryPolicy) {
+    override fun retryPolicy(retryPolicy: GrpcRetryPolicy) {
       cdkBuilder.retryPolicy(retryPolicy.let(GrpcRetryPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0eaf43c24ce77189ff2d04f1dd89d3653fbfd69c6bd04ac7856362d6837f8ed9")
-    public override fun retryPolicy(retryPolicy: GrpcRetryPolicy.Builder.() -> Unit): Unit =
+    override fun retryPolicy(retryPolicy: GrpcRetryPolicy.Builder.() -> Unit): Unit =
         retryPolicy(GrpcRetryPolicy(retryPolicy))
 
-    public override fun timeout(timeout: GrpcTimeout) {
+    override fun timeout(timeout: GrpcTimeout) {
       cdkBuilder.timeout(timeout.let(GrpcTimeout::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("589c0e3c735f3163a5450e3579eda4be3603edf18107dca80bd9d145541d0582")
-    public override fun timeout(timeout: GrpcTimeout.Builder.() -> Unit): Unit =
+    override fun timeout(timeout: GrpcTimeout.Builder.() -> Unit): Unit =
         timeout(GrpcTimeout(timeout))
 
-    public override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
+    override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
       cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget::unwrap))
     }
 
@@ -94,16 +86,16 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions,
   ) : GrpcRouteSpecOptions {
-    public override fun match(): GrpcRouteMatch = unwrap(this).getMatch().let(GrpcRouteMatch::wrap)
+    override fun match(): GrpcRouteMatch = unwrap(this).getMatch().let(GrpcRouteMatch::wrap)
 
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
 
-    public override fun retryPolicy(): GrpcRetryPolicy? =
+    override fun retryPolicy(): GrpcRetryPolicy? =
         unwrap(this).getRetryPolicy()?.let(GrpcRetryPolicy::wrap)
 
-    public override fun timeout(): GrpcTimeout? = unwrap(this).getTimeout()?.let(GrpcTimeout::wrap)
+    override fun timeout(): GrpcTimeout? = unwrap(this).getTimeout()?.let(GrpcTimeout::wrap)
 
-    public override fun weightedTargets(): List<WeightedTarget> =
+    override fun weightedTargets(): List<WeightedTarget> =
         unwrap(this).getWeightedTargets().map(WeightedTarget::wrap)
   }
 

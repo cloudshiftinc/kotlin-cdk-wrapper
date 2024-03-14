@@ -43,14 +43,11 @@ public open class CfnResolverRuleAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resolverRuleId(resolverRuleId: String) {
-    }
+    public fun resolverRuleId(resolverRuleId: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnResolverRuleAssociation internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation.Builder.create(scope,
         id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resolverRuleId(resolverRuleId: String) {
+    override fun resolverRuleId(resolverRuleId: String) {
       cdkBuilder.resolverRuleId(resolverRuleId)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

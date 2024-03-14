@@ -618,311 +618,211 @@ public open class CfnDBInstance internal constructor(
   }
 
   public interface Builder {
-    public fun allocatedStorage(allocatedStorage: String) {
-    }
+    public fun allocatedStorage(allocatedStorage: String)
 
-    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
-    }
+    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
-    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-    }
+    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable)
 
-    public fun associatedRoles(associatedRoles: IResolvable) {
-    }
+    public fun associatedRoles(associatedRoles: IResolvable)
 
-    public fun associatedRoles(associatedRoles: List<Any>) {
-    }
+    public fun associatedRoles(associatedRoles: List<Any>)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String) {
-    }
+    public fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun backupRetentionPeriod(backupRetentionPeriod: Number) {
-    }
+    public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
-    public fun caCertificateIdentifier(caCertificateIdentifier: String) {
-    }
+    public fun caCertificateIdentifier(caCertificateIdentifier: String)
 
-    public fun certificateDetails(certificateDetails: IResolvable) {
-    }
+    public fun certificateDetails(certificateDetails: IResolvable)
 
-    public fun certificateDetails(certificateDetails: CertificateDetailsProperty) {
-    }
+    public fun certificateDetails(certificateDetails: CertificateDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("527e2d3895792e597e6dd0df6c49c0c759da008f3ce325ffa8f5506a21c6806b")
-    public
-        fun certificateDetails(certificateDetails: CertificateDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun certificateDetails(certificateDetails: CertificateDetailsProperty.Builder.() -> Unit)
 
-    public fun certificateRotationRestart(certificateRotationRestart: Boolean) {
-    }
+    public fun certificateRotationRestart(certificateRotationRestart: Boolean)
 
-    public fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
-    }
+    public fun certificateRotationRestart(certificateRotationRestart: IResolvable)
 
-    public fun characterSetName(characterSetName: String) {
-    }
+    public fun characterSetName(characterSetName: String)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable)
 
-    public fun customIamInstanceProfile(customIamInstanceProfile: String) {
-    }
+    public fun customIamInstanceProfile(customIamInstanceProfile: String)
 
-    public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-    }
+    public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
-    public fun dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier: String) {
-    }
+    public fun dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier: String)
 
-    public fun dbInstanceClass(dbInstanceClass: String) {
-    }
+    public fun dbInstanceClass(dbInstanceClass: String)
 
-    public fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
-    }
+    public fun dbInstanceIdentifier(dbInstanceIdentifier: String)
 
-    public fun dbName(dbName: String) {
-    }
+    public fun dbName(dbName: String)
 
-    public fun dbParameterGroupName(dbParameterGroupName: String) {
-    }
+    public fun dbParameterGroupName(dbParameterGroupName: String)
 
-    public fun dbSecurityGroups(dbSecurityGroups: List<String>) {
-    }
+    public fun dbSecurityGroups(dbSecurityGroups: List<String>)
 
-    public fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
-    }
+    public fun dbSnapshotIdentifier(dbSnapshotIdentifier: String)
 
-    public fun dbSubnetGroupName(dbSubnetGroupName: String) {
-    }
+    public fun dbSubnetGroupName(dbSubnetGroupName: String)
 
-    public fun dedicatedLogVolume(dedicatedLogVolume: Boolean) {
-    }
+    public fun dedicatedLogVolume(dedicatedLogVolume: Boolean)
 
-    public fun dedicatedLogVolume(dedicatedLogVolume: IResolvable) {
-    }
+    public fun dedicatedLogVolume(dedicatedLogVolume: IResolvable)
 
-    public fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
-    }
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean)
 
-    public fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
-    }
+    public fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun deletionProtection(deletionProtection: IResolvable) {
-    }
+    public fun deletionProtection(deletionProtection: IResolvable)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun domainAuthSecretArn(domainAuthSecretArn: String) {
-    }
+    public fun domainAuthSecretArn(domainAuthSecretArn: String)
 
-    public fun domainDnsIps(domainDnsIps: List<String>) {
-    }
+    public fun domainDnsIps(domainDnsIps: List<String>)
 
-    public fun domainFqdn(domainFqdn: String) {
-    }
+    public fun domainFqdn(domainFqdn: String)
 
-    public fun domainIamRoleName(domainIamRoleName: String) {
-    }
+    public fun domainIamRoleName(domainIamRoleName: String)
 
-    public fun domainOu(domainOu: String) {
-    }
+    public fun domainOu(domainOu: String)
 
-    public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
-    }
+    public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>)
 
-    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
-    }
+    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean)
 
-    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
-    }
+    public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: IResolvable)
 
-    public fun endpoint(endpoint: IResolvable) {
-    }
+    public fun endpoint(endpoint: IResolvable)
 
-    public fun endpoint(endpoint: EndpointProperty) {
-    }
+    public fun endpoint(endpoint: EndpointProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4452934eeca24e633389478e0f49757d09a975774c1f229cfa992255ae2a6b9a")
-    public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit) {
-    }
+    public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun licenseModel(licenseModel: String) {
-    }
+    public fun licenseModel(licenseModel: String)
 
-    public fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
-    }
+    public fun manageMasterUserPassword(manageMasterUserPassword: Boolean)
 
-    public fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
-    }
+    public fun manageMasterUserPassword(manageMasterUserPassword: IResolvable)
 
-    public fun masterUserPassword(masterUserPassword: String) {
-    }
+    public fun masterUserPassword(masterUserPassword: String)
 
-    public fun masterUserSecret(masterUserSecret: IResolvable) {
-    }
+    public fun masterUserSecret(masterUserSecret: IResolvable)
 
-    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
-    }
+    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd2e9e3e70cdc72e383888e63bd1e2a69e4b1df6b4c3b633e7736d38e672fb2c")
-    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit) {
-    }
+    public fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit)
 
-    public fun masterUsername(masterUsername: String) {
-    }
+    public fun masterUsername(masterUsername: String)
 
-    public fun maxAllocatedStorage(maxAllocatedStorage: Number) {
-    }
+    public fun maxAllocatedStorage(maxAllocatedStorage: Number)
 
-    public fun monitoringInterval(monitoringInterval: Number) {
-    }
+    public fun monitoringInterval(monitoringInterval: Number)
 
-    public fun monitoringRoleArn(monitoringRoleArn: String) {
-    }
+    public fun monitoringRoleArn(monitoringRoleArn: String)
 
-    public fun multiAz(multiAz: Boolean) {
-    }
+    public fun multiAz(multiAz: Boolean)
 
-    public fun multiAz(multiAz: IResolvable) {
-    }
+    public fun multiAz(multiAz: IResolvable)
 
-    public fun ncharCharacterSetName(ncharCharacterSetName: String) {
-    }
+    public fun ncharCharacterSetName(ncharCharacterSetName: String)
 
-    public fun networkType(networkType: String) {
-    }
+    public fun networkType(networkType: String)
 
-    public fun optionGroupName(optionGroupName: String) {
-    }
+    public fun optionGroupName(optionGroupName: String)
 
-    public fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
-    }
+    public fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String)
 
-    public fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number) {
-    }
+    public fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number)
 
-    public fun port(port: String) {
-    }
+    public fun port(port: String)
 
-    public fun preferredBackupWindow(preferredBackupWindow: String) {
-    }
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun processorFeatures(processorFeatures: IResolvable) {
-    }
+    public fun processorFeatures(processorFeatures: IResolvable)
 
-    public fun processorFeatures(processorFeatures: List<Any>) {
-    }
+    public fun processorFeatures(processorFeatures: List<Any>)
 
-    public fun promotionTier(promotionTier: Number) {
-    }
+    public fun promotionTier(promotionTier: Number)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun replicaMode(replicaMode: String) {
-    }
+    public fun replicaMode(replicaMode: String)
 
-    public fun restoreTime(restoreTime: String) {
-    }
+    public fun restoreTime(restoreTime: String)
 
-    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
-    }
+    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String)
 
-    public fun sourceDbInstanceAutomatedBackupsArn(sourceDbInstanceAutomatedBackupsArn: String) {
-    }
+    public fun sourceDbInstanceAutomatedBackupsArn(sourceDbInstanceAutomatedBackupsArn: String)
 
-    public fun sourceDbInstanceIdentifier(sourceDbInstanceIdentifier: String) {
-    }
+    public fun sourceDbInstanceIdentifier(sourceDbInstanceIdentifier: String)
 
-    public fun sourceDbiResourceId(sourceDbiResourceId: String) {
-    }
+    public fun sourceDbiResourceId(sourceDbiResourceId: String)
 
-    public fun sourceRegion(sourceRegion: String) {
-    }
+    public fun sourceRegion(sourceRegion: String)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun storageEncrypted(storageEncrypted: IResolvable) {
-    }
+    public fun storageEncrypted(storageEncrypted: IResolvable)
 
-    public fun storageThroughput(storageThroughput: Number) {
-    }
+    public fun storageThroughput(storageThroughput: Number)
 
-    public fun storageType(storageType: String) {
-    }
+    public fun storageType(storageType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun tdeCredentialArn(tdeCredentialArn: String) {
-    }
+    public fun tdeCredentialArn(tdeCredentialArn: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun tdeCredentialPassword(tdeCredentialPassword: String) {
-    }
+    public fun tdeCredentialPassword(tdeCredentialPassword: String)
 
-    public fun timezone(timezone: String) {
-    }
+    public fun timezone(timezone: String)
 
-    public fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: Boolean) {
-    }
+    public fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: Boolean)
 
-    public fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: IResolvable) {
-    }
+    public fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: IResolvable)
 
-    public fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
-    }
+    public fun useLatestRestorableTime(useLatestRestorableTime: Boolean)
 
-    public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-    }
+    public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable)
 
-    public fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
-    }
+    public fun vpcSecurityGroups(vpcSecurityGroups: List<String>)
   }
 
   private class BuilderImpl(
@@ -932,409 +832,405 @@ public open class CfnDBInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBInstance.Builder =
         software.amazon.awscdk.services.rds.CfnDBInstance.Builder.create(scope, id)
 
-    public override fun allocatedStorage(allocatedStorage: String) {
+    override fun allocatedStorage(allocatedStorage: String) {
       cdkBuilder.allocatedStorage(allocatedStorage)
     }
 
-    public override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
+    override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
       cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade)
     }
 
-    public override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
+    override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
       cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun associatedRoles(associatedRoles: IResolvable) {
+    override fun associatedRoles(associatedRoles: IResolvable) {
       cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
     }
 
-    public override fun associatedRoles(associatedRoles: List<Any>) {
+    override fun associatedRoles(associatedRoles: List<Any>) {
       cdkBuilder.associatedRoles(associatedRoles)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String) {
+    override fun automaticBackupReplicationRegion(automaticBackupReplicationRegion: String) {
       cdkBuilder.automaticBackupReplicationRegion(automaticBackupReplicationRegion)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
+    override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
       cdkBuilder.backupRetentionPeriod(backupRetentionPeriod)
     }
 
-    public override fun caCertificateIdentifier(caCertificateIdentifier: String) {
+    override fun caCertificateIdentifier(caCertificateIdentifier: String) {
       cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
     }
 
-    public override fun certificateDetails(certificateDetails: IResolvable) {
+    override fun certificateDetails(certificateDetails: IResolvable) {
       cdkBuilder.certificateDetails(certificateDetails.let(IResolvable::unwrap))
     }
 
-    public override fun certificateDetails(certificateDetails: CertificateDetailsProperty) {
+    override fun certificateDetails(certificateDetails: CertificateDetailsProperty) {
       cdkBuilder.certificateDetails(certificateDetails.let(CertificateDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("527e2d3895792e597e6dd0df6c49c0c759da008f3ce325ffa8f5506a21c6806b")
-    public override
+    override
         fun certificateDetails(certificateDetails: CertificateDetailsProperty.Builder.() -> Unit):
         Unit = certificateDetails(CertificateDetailsProperty(certificateDetails))
 
-    public override fun certificateRotationRestart(certificateRotationRestart: Boolean) {
+    override fun certificateRotationRestart(certificateRotationRestart: Boolean) {
       cdkBuilder.certificateRotationRestart(certificateRotationRestart)
     }
 
-    public override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
+    override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
       cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable::unwrap))
     }
 
-    public override fun characterSetName(characterSetName: String) {
+    override fun characterSetName(characterSetName: String) {
       cdkBuilder.characterSetName(characterSetName)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
     }
 
-    public override fun customIamInstanceProfile(customIamInstanceProfile: String) {
+    override fun customIamInstanceProfile(customIamInstanceProfile: String) {
       cdkBuilder.customIamInstanceProfile(customIamInstanceProfile)
     }
 
-    public override fun dbClusterIdentifier(dbClusterIdentifier: String) {
+    override fun dbClusterIdentifier(dbClusterIdentifier: String) {
       cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
     }
 
-    public override fun dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier: String) {
+    override fun dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier: String) {
       cdkBuilder.dbClusterSnapshotIdentifier(dbClusterSnapshotIdentifier)
     }
 
-    public override fun dbInstanceClass(dbInstanceClass: String) {
+    override fun dbInstanceClass(dbInstanceClass: String) {
       cdkBuilder.dbInstanceClass(dbInstanceClass)
     }
 
-    public override fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
+    override fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
       cdkBuilder.dbInstanceIdentifier(dbInstanceIdentifier)
     }
 
-    public override fun dbName(dbName: String) {
+    override fun dbName(dbName: String) {
       cdkBuilder.dbName(dbName)
     }
 
-    public override fun dbParameterGroupName(dbParameterGroupName: String) {
+    override fun dbParameterGroupName(dbParameterGroupName: String) {
       cdkBuilder.dbParameterGroupName(dbParameterGroupName)
     }
 
-    public override fun dbSecurityGroups(dbSecurityGroups: List<String>) {
+    override fun dbSecurityGroups(dbSecurityGroups: List<String>) {
       cdkBuilder.dbSecurityGroups(dbSecurityGroups)
     }
 
-    public override fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
+    override fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
       cdkBuilder.dbSnapshotIdentifier(dbSnapshotIdentifier)
     }
 
-    public override fun dbSubnetGroupName(dbSubnetGroupName: String) {
+    override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
     }
 
-    public override fun dedicatedLogVolume(dedicatedLogVolume: Boolean) {
+    override fun dedicatedLogVolume(dedicatedLogVolume: Boolean) {
       cdkBuilder.dedicatedLogVolume(dedicatedLogVolume)
     }
 
-    public override fun dedicatedLogVolume(dedicatedLogVolume: IResolvable) {
+    override fun dedicatedLogVolume(dedicatedLogVolume: IResolvable) {
       cdkBuilder.dedicatedLogVolume(dedicatedLogVolume.let(IResolvable::unwrap))
     }
 
-    public override fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: Boolean) {
       cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups)
     }
 
-    public override fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
+    override fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
       cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable::unwrap))
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deletionProtection(deletionProtection: IResolvable) {
+    override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun domainAuthSecretArn(domainAuthSecretArn: String) {
+    override fun domainAuthSecretArn(domainAuthSecretArn: String) {
       cdkBuilder.domainAuthSecretArn(domainAuthSecretArn)
     }
 
-    public override fun domainDnsIps(domainDnsIps: List<String>) {
+    override fun domainDnsIps(domainDnsIps: List<String>) {
       cdkBuilder.domainDnsIps(domainDnsIps)
     }
 
-    public override fun domainFqdn(domainFqdn: String) {
+    override fun domainFqdn(domainFqdn: String) {
       cdkBuilder.domainFqdn(domainFqdn)
     }
 
-    public override fun domainIamRoleName(domainIamRoleName: String) {
+    override fun domainIamRoleName(domainIamRoleName: String) {
       cdkBuilder.domainIamRoleName(domainIamRoleName)
     }
 
-    public override fun domainOu(domainOu: String) {
+    override fun domainOu(domainOu: String) {
       cdkBuilder.domainOu(domainOu)
     }
 
-    public override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
+    override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
       cdkBuilder.enableCloudwatchLogsExports(enableCloudwatchLogsExports)
     }
 
-    public override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
+    override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
       cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication)
     }
 
-    public override
-        fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
+    override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
       cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable::unwrap))
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable::unwrap))
     }
 
-    public override fun endpoint(endpoint: IResolvable) {
+    override fun endpoint(endpoint: IResolvable) {
       cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
     }
 
-    public override fun endpoint(endpoint: EndpointProperty) {
+    override fun endpoint(endpoint: EndpointProperty) {
       cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4452934eeca24e633389478e0f49757d09a975774c1f229cfa992255ae2a6b9a")
-    public override fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit): Unit =
+    override fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit): Unit =
         endpoint(EndpointProperty(endpoint))
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun licenseModel(licenseModel: String) {
+    override fun licenseModel(licenseModel: String) {
       cdkBuilder.licenseModel(licenseModel)
     }
 
-    public override fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
+    override fun manageMasterUserPassword(manageMasterUserPassword: Boolean) {
       cdkBuilder.manageMasterUserPassword(manageMasterUserPassword)
     }
 
-    public override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
+    override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
       cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable::unwrap))
     }
 
-    public override fun masterUserPassword(masterUserPassword: String) {
+    override fun masterUserPassword(masterUserPassword: String) {
       cdkBuilder.masterUserPassword(masterUserPassword)
     }
 
-    public override fun masterUserSecret(masterUserSecret: IResolvable) {
+    override fun masterUserSecret(masterUserSecret: IResolvable) {
       cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable::unwrap))
     }
 
-    public override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
+    override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
       cdkBuilder.masterUserSecret(masterUserSecret.let(MasterUserSecretProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd2e9e3e70cdc72e383888e63bd1e2a69e4b1df6b4c3b633e7736d38e672fb2c")
-    public override
-        fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit): Unit =
-        masterUserSecret(MasterUserSecretProperty(masterUserSecret))
+    override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty.Builder.() -> Unit):
+        Unit = masterUserSecret(MasterUserSecretProperty(masterUserSecret))
 
-    public override fun masterUsername(masterUsername: String) {
+    override fun masterUsername(masterUsername: String) {
       cdkBuilder.masterUsername(masterUsername)
     }
 
-    public override fun maxAllocatedStorage(maxAllocatedStorage: Number) {
+    override fun maxAllocatedStorage(maxAllocatedStorage: Number) {
       cdkBuilder.maxAllocatedStorage(maxAllocatedStorage)
     }
 
-    public override fun monitoringInterval(monitoringInterval: Number) {
+    override fun monitoringInterval(monitoringInterval: Number) {
       cdkBuilder.monitoringInterval(monitoringInterval)
     }
 
-    public override fun monitoringRoleArn(monitoringRoleArn: String) {
+    override fun monitoringRoleArn(monitoringRoleArn: String) {
       cdkBuilder.monitoringRoleArn(monitoringRoleArn)
     }
 
-    public override fun multiAz(multiAz: Boolean) {
+    override fun multiAz(multiAz: Boolean) {
       cdkBuilder.multiAz(multiAz)
     }
 
-    public override fun multiAz(multiAz: IResolvable) {
+    override fun multiAz(multiAz: IResolvable) {
       cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
     }
 
-    public override fun ncharCharacterSetName(ncharCharacterSetName: String) {
+    override fun ncharCharacterSetName(ncharCharacterSetName: String) {
       cdkBuilder.ncharCharacterSetName(ncharCharacterSetName)
     }
 
-    public override fun networkType(networkType: String) {
+    override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
 
-    public override fun optionGroupName(optionGroupName: String) {
+    override fun optionGroupName(optionGroupName: String) {
       cdkBuilder.optionGroupName(optionGroupName)
     }
 
-    public override fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
+    override fun performanceInsightsKmsKeyId(performanceInsightsKmsKeyId: String) {
       cdkBuilder.performanceInsightsKmsKeyId(performanceInsightsKmsKeyId)
     }
 
-    public override
-        fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number) {
+    override fun performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod: Number) {
       cdkBuilder.performanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod)
     }
 
-    public override fun port(port: String) {
+    override fun port(port: String) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredBackupWindow(preferredBackupWindow: String) {
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
       cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun processorFeatures(processorFeatures: IResolvable) {
+    override fun processorFeatures(processorFeatures: IResolvable) {
       cdkBuilder.processorFeatures(processorFeatures.let(IResolvable::unwrap))
     }
 
-    public override fun processorFeatures(processorFeatures: List<Any>) {
+    override fun processorFeatures(processorFeatures: List<Any>) {
       cdkBuilder.processorFeatures(processorFeatures)
     }
 
-    public override fun promotionTier(promotionTier: Number) {
+    override fun promotionTier(promotionTier: Number) {
       cdkBuilder.promotionTier(promotionTier)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun replicaMode(replicaMode: String) {
+    override fun replicaMode(replicaMode: String) {
       cdkBuilder.replicaMode(replicaMode)
     }
 
-    public override fun restoreTime(restoreTime: String) {
+    override fun restoreTime(restoreTime: String) {
       cdkBuilder.restoreTime(restoreTime)
     }
 
-    public override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
+    override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
       cdkBuilder.sourceDbClusterIdentifier(sourceDbClusterIdentifier)
     }
 
-    public override
-        fun sourceDbInstanceAutomatedBackupsArn(sourceDbInstanceAutomatedBackupsArn: String) {
+    override fun sourceDbInstanceAutomatedBackupsArn(sourceDbInstanceAutomatedBackupsArn: String) {
       cdkBuilder.sourceDbInstanceAutomatedBackupsArn(sourceDbInstanceAutomatedBackupsArn)
     }
 
-    public override fun sourceDbInstanceIdentifier(sourceDbInstanceIdentifier: String) {
+    override fun sourceDbInstanceIdentifier(sourceDbInstanceIdentifier: String) {
       cdkBuilder.sourceDbInstanceIdentifier(sourceDbInstanceIdentifier)
     }
 
-    public override fun sourceDbiResourceId(sourceDbiResourceId: String) {
+    override fun sourceDbiResourceId(sourceDbiResourceId: String) {
       cdkBuilder.sourceDbiResourceId(sourceDbiResourceId)
     }
 
-    public override fun sourceRegion(sourceRegion: String) {
+    override fun sourceRegion(sourceRegion: String) {
       cdkBuilder.sourceRegion(sourceRegion)
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun storageEncrypted(storageEncrypted: IResolvable) {
+    override fun storageEncrypted(storageEncrypted: IResolvable) {
       cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
     }
 
-    public override fun storageThroughput(storageThroughput: Number) {
+    override fun storageThroughput(storageThroughput: Number) {
       cdkBuilder.storageThroughput(storageThroughput)
     }
 
-    public override fun storageType(storageType: String) {
+    override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun tdeCredentialArn(tdeCredentialArn: String) {
+    override fun tdeCredentialArn(tdeCredentialArn: String) {
       cdkBuilder.tdeCredentialArn(tdeCredentialArn)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun tdeCredentialPassword(tdeCredentialPassword: String) {
+    override fun tdeCredentialPassword(tdeCredentialPassword: String) {
       cdkBuilder.tdeCredentialPassword(tdeCredentialPassword)
     }
 
-    public override fun timezone(timezone: String) {
+    override fun timezone(timezone: String) {
       cdkBuilder.timezone(timezone)
     }
 
-    public override fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: Boolean) {
+    override fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: Boolean) {
       cdkBuilder.useDefaultProcessorFeatures(useDefaultProcessorFeatures)
     }
 
-    public override fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: IResolvable) {
+    override fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: IResolvable) {
       cdkBuilder.useDefaultProcessorFeatures(useDefaultProcessorFeatures.let(IResolvable::unwrap))
     }
 
-    public override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
+    override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
 
-    public override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
+    override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
     }
 
-    public override fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
+    override fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
       cdkBuilder.vpcSecurityGroups(vpcSecurityGroups)
     }
 
@@ -1368,11 +1264,9 @@ public open class CfnDBInstance internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun featureName(featureName: String) {
-      }
+      public fun featureName(featureName: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1380,11 +1274,11 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty.builder()
 
-      public override fun featureName(featureName: String) {
+      override fun featureName(featureName: String) {
         cdkBuilder.featureName(featureName)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -1396,9 +1290,9 @@ public open class CfnDBInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBInstance.DBInstanceRoleProperty,
     ) : DBInstanceRoleProperty {
-      public override fun featureName(): String = unwrap(this).getFeatureName()
+      override fun featureName(): String = unwrap(this).getFeatureName()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -1429,14 +1323,11 @@ public open class CfnDBInstance internal constructor(
     public fun port(): String? = unwrap(this).getPort()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
 
-      public fun port(port: String) {
-      }
+      public fun port(port: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1444,15 +1335,15 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
-      public override fun port(port: String) {
+      override fun port(port: String) {
         cdkBuilder.port(port)
       }
 
@@ -1463,11 +1354,11 @@ public open class CfnDBInstance internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance.EndpointProperty,
     ) : EndpointProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
 
-      public override fun port(): String? = unwrap(this).getPort()
+      override fun port(): String? = unwrap(this).getPort()
     }
 
     public companion object {
@@ -1496,11 +1387,9 @@ public open class CfnDBInstance internal constructor(
     public fun validTill(): String? = unwrap(this).getValidTill()
 
     public interface Builder {
-      public fun caIdentifier(caIdentifier: String) {
-      }
+      public fun caIdentifier(caIdentifier: String)
 
-      public fun validTill(validTill: String) {
-      }
+      public fun validTill(validTill: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1508,11 +1397,11 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty.builder()
 
-      public override fun caIdentifier(caIdentifier: String) {
+      override fun caIdentifier(caIdentifier: String) {
         cdkBuilder.caIdentifier(caIdentifier)
       }
 
-      public override fun validTill(validTill: String) {
+      override fun validTill(validTill: String) {
         cdkBuilder.validTill(validTill)
       }
 
@@ -1525,9 +1414,9 @@ public open class CfnDBInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBInstance.CertificateDetailsProperty,
     ) : CertificateDetailsProperty {
-      public override fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
+      override fun caIdentifier(): String? = unwrap(this).getCaIdentifier()
 
-      public override fun validTill(): String? = unwrap(this).getValidTill()
+      override fun validTill(): String? = unwrap(this).getValidTill()
     }
 
     public companion object {
@@ -1556,11 +1445,9 @@ public open class CfnDBInstance internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1568,11 +1455,11 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1584,9 +1471,9 @@ public open class CfnDBInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBInstance.ProcessorFeatureProperty,
     ) : ProcessorFeatureProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1615,11 +1502,9 @@ public open class CfnDBInstance internal constructor(
     public fun secretArn(): String? = unwrap(this).getSecretArn()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1627,11 +1512,11 @@ public open class CfnDBInstance internal constructor(
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
@@ -1643,9 +1528,9 @@ public open class CfnDBInstance internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBInstance.MasterUserSecretProperty,
     ) : MasterUserSecretProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
     }
 
     public companion object {

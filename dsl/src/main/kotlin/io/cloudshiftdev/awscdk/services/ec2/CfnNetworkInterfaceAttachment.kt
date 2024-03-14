@@ -66,32 +66,24 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun deleteOnTermination(deleteOnTermination: Boolean) {
-    }
+    public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-    public fun deleteOnTermination(deleteOnTermination: IResolvable) {
-    }
+    public fun deleteOnTermination(deleteOnTermination: IResolvable)
 
-    public fun deviceIndex(deviceIndex: String) {
-    }
+    public fun deviceIndex(deviceIndex: String)
 
-    public fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
-    }
+    public fun enaSrdSpecification(enaSrdSpecification: IResolvable)
 
-    public fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
-    }
+    public fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2844026d64cad90b7d73a1297af418e0480836d89ff4786c9c0e5cc0b78cdd8")
     public
-        fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
   }
 
   private class BuilderImpl(
@@ -102,37 +94,37 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
         software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.Builder.create(scope, id)
 
-    public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+    override fun deleteOnTermination(deleteOnTermination: Boolean) {
       cdkBuilder.deleteOnTermination(deleteOnTermination)
     }
 
-    public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+    override fun deleteOnTermination(deleteOnTermination: IResolvable) {
       cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
     }
 
-    public override fun deviceIndex(deviceIndex: String) {
+    override fun deviceIndex(deviceIndex: String) {
       cdkBuilder.deviceIndex(deviceIndex)
     }
 
-    public override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
+    override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
       cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
+    override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
       cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2844026d64cad90b7d73a1297af418e0480836d89ff4786c9c0e5cc0b78cdd8")
-    public override
+    override
         fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit):
         Unit = enaSrdSpecification(EnaSrdSpecificationProperty(enaSrdSpecification))
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
@@ -165,11 +157,9 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
     public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
 
     public interface Builder {
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
-      }
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
 
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
-      }
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -178,11 +168,11 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty.builder()
 
-      public override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
         cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
       }
 
-      public override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
         cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
       }
 
@@ -195,7 +185,7 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty,
     ) : EnaSrdUdpSpecificationProperty {
-      public override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
     }
 
     public companion object {
@@ -224,23 +214,18 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
     public fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
 
     public interface Builder {
-      public fun enaSrdEnabled(enaSrdEnabled: Boolean) {
-      }
+      public fun enaSrdEnabled(enaSrdEnabled: Boolean)
 
-      public fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
-      }
+      public fun enaSrdEnabled(enaSrdEnabled: IResolvable)
 
-      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
-      }
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable)
 
-      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
-      }
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b8d2766962cbbac50057650c19657945de7468cb1d17da11e865970b1a6348d")
       public
-          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -249,26 +234,25 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty.builder()
 
-      public override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
+      override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
         cdkBuilder.enaSrdEnabled(enaSrdEnabled)
       }
 
-      public override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
+      override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
         cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
         cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable::unwrap))
       }
 
-      public override
-          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
         cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b8d2766962cbbac50057650c19657945de7468cb1d17da11e865970b1a6348d")
-      public override
+      override
           fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit):
           Unit = enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty(enaSrdUdpSpecification))
 
@@ -281,9 +265,9 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty,
     ) : EnaSrdSpecificationProperty {
-      public override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
+      override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
 
-      public override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
+      override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
     }
 
     public companion object {

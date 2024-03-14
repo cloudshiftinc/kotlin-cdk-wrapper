@@ -9,26 +9,24 @@ public interface BackendDefaults {
       unwrap(this).getTlsClientPolicy()?.let(TlsClientPolicy::wrap)
 
   public interface Builder {
-    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
-    }
+    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e996c14c629bc229d00dc4ace25d0993cc82bf53577c0120d82f87798f45e5ca")
-    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit) {
-    }
+    public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.BackendDefaults.Builder =
         software.amazon.awscdk.services.appmesh.BackendDefaults.builder()
 
-    public override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
+    override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
       cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e996c14c629bc229d00dc4ace25d0993cc82bf53577c0120d82f87798f45e5ca")
-    public override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit): Unit =
+    override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit): Unit =
         tlsClientPolicy(TlsClientPolicy(tlsClientPolicy))
 
     public fun build(): software.amazon.awscdk.services.appmesh.BackendDefaults = cdkBuilder.build()
@@ -37,7 +35,7 @@ public interface BackendDefaults {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.BackendDefaults,
   ) : BackendDefaults {
-    public override fun tlsClientPolicy(): TlsClientPolicy? =
+    override fun tlsClientPolicy(): TlsClientPolicy? =
         unwrap(this).getTlsClientPolicy()?.let(TlsClientPolicy::wrap)
   }
 

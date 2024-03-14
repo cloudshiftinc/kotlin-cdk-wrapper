@@ -63,20 +63,15 @@ public open class CfnAccount internal constructor(
   }
 
   public interface Builder {
-    public fun accountName(accountName: String) {
-    }
+    public fun accountName(accountName: String)
 
-    public fun email(email: String) {
-    }
+    public fun email(email: String)
 
-    public fun parentIds(parentIds: List<String>) {
-    }
+    public fun parentIds(parentIds: List<String>)
 
-    public fun roleName(roleName: String) {
-    }
+    public fun roleName(roleName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -86,23 +81,23 @@ public open class CfnAccount internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.organizations.CfnAccount.Builder =
         software.amazon.awscdk.services.organizations.CfnAccount.Builder.create(scope, id)
 
-    public override fun accountName(accountName: String) {
+    override fun accountName(accountName: String) {
       cdkBuilder.accountName(accountName)
     }
 
-    public override fun email(email: String) {
+    override fun email(email: String) {
       cdkBuilder.email(email)
     }
 
-    public override fun parentIds(parentIds: List<String>) {
+    override fun parentIds(parentIds: List<String>) {
       cdkBuilder.parentIds(parentIds)
     }
 
-    public override fun roleName(roleName: String) {
+    override fun roleName(roleName: String) {
       cdkBuilder.roleName(roleName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

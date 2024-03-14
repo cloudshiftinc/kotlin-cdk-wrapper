@@ -92,32 +92,23 @@ public open class CfnVPCConnection internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityStatus(availabilityStatus: String) {
-    }
+    public fun availabilityStatus(availabilityStatus: String)
 
-    public fun awsAccountId(awsAccountId: String) {
-    }
+    public fun awsAccountId(awsAccountId: String)
 
-    public fun dnsResolvers(dnsResolvers: List<String>) {
-    }
+    public fun dnsResolvers(dnsResolvers: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcConnectionId(vpcConnectionId: String) {
-    }
+    public fun vpcConnectionId(vpcConnectionId: String)
   }
 
   private class BuilderImpl(
@@ -127,39 +118,39 @@ public open class CfnVPCConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.quicksight.CfnVPCConnection.Builder =
         software.amazon.awscdk.services.quicksight.CfnVPCConnection.Builder.create(scope, id)
 
-    public override fun availabilityStatus(availabilityStatus: String) {
+    override fun availabilityStatus(availabilityStatus: String) {
       cdkBuilder.availabilityStatus(availabilityStatus)
     }
 
-    public override fun awsAccountId(awsAccountId: String) {
+    override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    public override fun dnsResolvers(dnsResolvers: List<String>) {
+    override fun dnsResolvers(dnsResolvers: List<String>) {
       cdkBuilder.dnsResolvers(dnsResolvers)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcConnectionId(vpcConnectionId: String) {
+    override fun vpcConnectionId(vpcConnectionId: String) {
       cdkBuilder.vpcConnectionId(vpcConnectionId)
     }
 
@@ -200,20 +191,15 @@ public open class CfnVPCConnection internal constructor(
     public fun subnetId(): String? = unwrap(this).getSubnetId()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun errorMessage(errorMessage: String) {
-      }
+      public fun errorMessage(errorMessage: String)
 
-      public fun networkInterfaceId(networkInterfaceId: String) {
-      }
+      public fun networkInterfaceId(networkInterfaceId: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -222,23 +208,23 @@ public open class CfnVPCConnection internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun errorMessage(errorMessage: String) {
+      override fun errorMessage(errorMessage: String) {
         cdkBuilder.errorMessage(errorMessage)
       }
 
-      public override fun networkInterfaceId(networkInterfaceId: String) {
+      override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -251,15 +237,15 @@ public open class CfnVPCConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnVPCConnection.NetworkInterfaceProperty,
     ) : NetworkInterfaceProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun errorMessage(): String? = unwrap(this).getErrorMessage()
+      override fun errorMessage(): String? = unwrap(this).getErrorMessage()
 
-      public override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun subnetId(): String? = unwrap(this).getSubnetId()
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
     }
 
     public companion object {

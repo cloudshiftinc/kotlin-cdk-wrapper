@@ -5,36 +5,32 @@ import kotlin.Unit
 
 public interface PrivateSubnetAttributes : SubnetAttributes {
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun ipv4CidrBlock(ipv4CidrBlock: String) {
-    }
+    public fun ipv4CidrBlock(ipv4CidrBlock: String)
 
-    public fun routeTableId(routeTableId: String) {
-    }
+    public fun routeTableId(routeTableId: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.PrivateSubnetAttributes.Builder =
         software.amazon.awscdk.services.ec2.PrivateSubnetAttributes.builder()
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun ipv4CidrBlock(ipv4CidrBlock: String) {
+    override fun ipv4CidrBlock(ipv4CidrBlock: String) {
       cdkBuilder.ipv4CidrBlock(ipv4CidrBlock)
     }
 
-    public override fun routeTableId(routeTableId: String) {
+    override fun routeTableId(routeTableId: String) {
       cdkBuilder.routeTableId(routeTableId)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
@@ -45,13 +41,13 @@ public interface PrivateSubnetAttributes : SubnetAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnetAttributes,
   ) : PrivateSubnetAttributes {
-    public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+    override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-    public override fun ipv4CidrBlock(): String? = unwrap(this).getIpv4CidrBlock()
+    override fun ipv4CidrBlock(): String? = unwrap(this).getIpv4CidrBlock()
 
-    public override fun routeTableId(): String? = unwrap(this).getRouteTableId()
+    override fun routeTableId(): String? = unwrap(this).getRouteTableId()
 
-    public override fun subnetId(): String = unwrap(this).getSubnetId()
+    override fun subnetId(): String = unwrap(this).getSubnetId()
   }
 
   public companion object {

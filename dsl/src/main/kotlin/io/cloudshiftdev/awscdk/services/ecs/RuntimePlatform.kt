@@ -10,22 +10,20 @@ public interface RuntimePlatform {
       unwrap(this).getOperatingSystemFamily()?.let(OperatingSystemFamily::wrap)
 
   public interface Builder {
-    public fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
-    }
+    public fun cpuArchitecture(cpuArchitecture: CpuArchitecture)
 
-    public fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
-    }
+    public fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.RuntimePlatform.Builder =
         software.amazon.awscdk.services.ecs.RuntimePlatform.builder()
 
-    public override fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
+    override fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
       cdkBuilder.cpuArchitecture(cpuArchitecture.let(CpuArchitecture::unwrap))
     }
 
-    public override fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
+    override fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
       cdkBuilder.operatingSystemFamily(operatingSystemFamily.let(OperatingSystemFamily::unwrap))
     }
 
@@ -35,10 +33,10 @@ public interface RuntimePlatform {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.RuntimePlatform,
   ) : RuntimePlatform {
-    public override fun cpuArchitecture(): CpuArchitecture? =
+    override fun cpuArchitecture(): CpuArchitecture? =
         unwrap(this).getCpuArchitecture()?.let(CpuArchitecture::wrap)
 
-    public override fun operatingSystemFamily(): OperatingSystemFamily? =
+    override fun operatingSystemFamily(): OperatingSystemFamily? =
         unwrap(this).getOperatingSystemFamily()?.let(OperatingSystemFamily::wrap)
   }
 

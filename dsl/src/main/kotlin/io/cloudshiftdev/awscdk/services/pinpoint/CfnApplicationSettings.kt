@@ -85,47 +85,35 @@ public open class CfnApplicationSettings internal constructor(
       quietTime(QuietTimeProperty(`value`))
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun campaignHook(campaignHook: IResolvable) {
-    }
+    public fun campaignHook(campaignHook: IResolvable)
 
-    public fun campaignHook(campaignHook: CampaignHookProperty) {
-    }
+    public fun campaignHook(campaignHook: CampaignHookProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abfe5f6e64936476164afef70afb18eff364a1e76a371e2d133650f4478b7fd8")
-    public fun campaignHook(campaignHook: CampaignHookProperty.Builder.() -> Unit) {
-    }
+    public fun campaignHook(campaignHook: CampaignHookProperty.Builder.() -> Unit)
 
-    public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
-    }
+    public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean)
 
-    public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-    }
+    public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable)
 
-    public fun limits(limits: IResolvable) {
-    }
+    public fun limits(limits: IResolvable)
 
-    public fun limits(limits: LimitsProperty) {
-    }
+    public fun limits(limits: LimitsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed85d66155567a9450c6bfa16a94acb7d536ee6a7a73c6fbdfc9734a6ae2c277")
-    public fun limits(limits: LimitsProperty.Builder.() -> Unit) {
-    }
+    public fun limits(limits: LimitsProperty.Builder.() -> Unit)
 
-    public fun quietTime(quietTime: IResolvable) {
-    }
+    public fun quietTime(quietTime: IResolvable)
 
-    public fun quietTime(quietTime: QuietTimeProperty) {
-    }
+    public fun quietTime(quietTime: QuietTimeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("22f5b180df47d9c7d4c5cd8481e68acca995533e7f3ffd465f5f99286178b3e1")
-    public fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit) {
-    }
+    public fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -135,55 +123,55 @@ public open class CfnApplicationSettings internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.Builder
         = software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun campaignHook(campaignHook: IResolvable) {
+    override fun campaignHook(campaignHook: IResolvable) {
       cdkBuilder.campaignHook(campaignHook.let(IResolvable::unwrap))
     }
 
-    public override fun campaignHook(campaignHook: CampaignHookProperty) {
+    override fun campaignHook(campaignHook: CampaignHookProperty) {
       cdkBuilder.campaignHook(campaignHook.let(CampaignHookProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abfe5f6e64936476164afef70afb18eff364a1e76a371e2d133650f4478b7fd8")
-    public override fun campaignHook(campaignHook: CampaignHookProperty.Builder.() -> Unit): Unit =
+    override fun campaignHook(campaignHook: CampaignHookProperty.Builder.() -> Unit): Unit =
         campaignHook(CampaignHookProperty(campaignHook))
 
-    public override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
+    override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
       cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
     }
 
-    public override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
+    override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
       cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun limits(limits: IResolvable) {
+    override fun limits(limits: IResolvable) {
       cdkBuilder.limits(limits.let(IResolvable::unwrap))
     }
 
-    public override fun limits(limits: LimitsProperty) {
+    override fun limits(limits: LimitsProperty) {
       cdkBuilder.limits(limits.let(LimitsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed85d66155567a9450c6bfa16a94acb7d536ee6a7a73c6fbdfc9734a6ae2c277")
-    public override fun limits(limits: LimitsProperty.Builder.() -> Unit): Unit =
+    override fun limits(limits: LimitsProperty.Builder.() -> Unit): Unit =
         limits(LimitsProperty(limits))
 
-    public override fun quietTime(quietTime: IResolvable) {
+    override fun quietTime(quietTime: IResolvable) {
       cdkBuilder.quietTime(quietTime.let(IResolvable::unwrap))
     }
 
-    public override fun quietTime(quietTime: QuietTimeProperty) {
+    override fun quietTime(quietTime: QuietTimeProperty) {
       cdkBuilder.quietTime(quietTime.let(QuietTimeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("22f5b180df47d9c7d4c5cd8481e68acca995533e7f3ffd465f5f99286178b3e1")
-    public override fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit): Unit =
+    override fun quietTime(quietTime: QuietTimeProperty.Builder.() -> Unit): Unit =
         quietTime(QuietTimeProperty(quietTime))
 
     public fun build(): software.amazon.awscdk.services.pinpoint.CfnApplicationSettings =
@@ -221,17 +209,13 @@ public open class CfnApplicationSettings internal constructor(
     public fun total(): Number? = unwrap(this).getTotal()
 
     public interface Builder {
-      public fun daily(daily: Number) {
-      }
+      public fun daily(daily: Number)
 
-      public fun maximumDuration(maximumDuration: Number) {
-      }
+      public fun maximumDuration(maximumDuration: Number)
 
-      public fun messagesPerSecond(messagesPerSecond: Number) {
-      }
+      public fun messagesPerSecond(messagesPerSecond: Number)
 
-      public fun total(total: Number) {
-      }
+      public fun total(total: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -239,19 +223,19 @@ public open class CfnApplicationSettings internal constructor(
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty.Builder =
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty.builder()
 
-      public override fun daily(daily: Number) {
+      override fun daily(daily: Number) {
         cdkBuilder.daily(daily)
       }
 
-      public override fun maximumDuration(maximumDuration: Number) {
+      override fun maximumDuration(maximumDuration: Number) {
         cdkBuilder.maximumDuration(maximumDuration)
       }
 
-      public override fun messagesPerSecond(messagesPerSecond: Number) {
+      override fun messagesPerSecond(messagesPerSecond: Number) {
         cdkBuilder.messagesPerSecond(messagesPerSecond)
       }
 
-      public override fun total(total: Number) {
+      override fun total(total: Number) {
         cdkBuilder.total(total)
       }
 
@@ -264,13 +248,13 @@ public open class CfnApplicationSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty,
     ) : LimitsProperty {
-      public override fun daily(): Number? = unwrap(this).getDaily()
+      override fun daily(): Number? = unwrap(this).getDaily()
 
-      public override fun maximumDuration(): Number? = unwrap(this).getMaximumDuration()
+      override fun maximumDuration(): Number? = unwrap(this).getMaximumDuration()
 
-      public override fun messagesPerSecond(): Number? = unwrap(this).getMessagesPerSecond()
+      override fun messagesPerSecond(): Number? = unwrap(this).getMessagesPerSecond()
 
-      public override fun total(): Number? = unwrap(this).getTotal()
+      override fun total(): Number? = unwrap(this).getTotal()
     }
 
     public companion object {
@@ -301,14 +285,11 @@ public open class CfnApplicationSettings internal constructor(
     public fun webUrl(): String? = unwrap(this).getWebUrl()
 
     public interface Builder {
-      public fun lambdaFunctionName(lambdaFunctionName: String) {
-      }
+      public fun lambdaFunctionName(lambdaFunctionName: String)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun webUrl(webUrl: String) {
-      }
+      public fun webUrl(webUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -317,15 +298,15 @@ public open class CfnApplicationSettings internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty.builder()
 
-      public override fun lambdaFunctionName(lambdaFunctionName: String) {
+      override fun lambdaFunctionName(lambdaFunctionName: String) {
         cdkBuilder.lambdaFunctionName(lambdaFunctionName)
       }
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun webUrl(webUrl: String) {
+      override fun webUrl(webUrl: String) {
         cdkBuilder.webUrl(webUrl)
       }
 
@@ -338,11 +319,11 @@ public open class CfnApplicationSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty,
     ) : CampaignHookProperty {
-      public override fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
+      override fun lambdaFunctionName(): String? = unwrap(this).getLambdaFunctionName()
 
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
 
-      public override fun webUrl(): String? = unwrap(this).getWebUrl()
+      override fun webUrl(): String? = unwrap(this).getWebUrl()
     }
 
     public companion object {
@@ -371,11 +352,9 @@ public open class CfnApplicationSettings internal constructor(
     public fun start(): String
 
     public interface Builder {
-      public fun end(end: String) {
-      }
+      public fun end(end: String)
 
-      public fun start(start: String) {
-      }
+      public fun start(start: String)
     }
 
     private class BuilderImpl : Builder {
@@ -384,11 +363,11 @@ public open class CfnApplicationSettings internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty.builder()
 
-      public override fun end(end: String) {
+      override fun end(end: String) {
         cdkBuilder.end(end)
       }
 
-      public override fun start(start: String) {
+      override fun start(start: String) {
         cdkBuilder.start(start)
       }
 
@@ -401,9 +380,9 @@ public open class CfnApplicationSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty,
     ) : QuietTimeProperty {
-      public override fun end(): String = unwrap(this).getEnd()
+      override fun end(): String = unwrap(this).getEnd()
 
-      public override fun start(): String = unwrap(this).getStart()
+      override fun start(): String = unwrap(this).getStart()
     }
 
     public companion object {

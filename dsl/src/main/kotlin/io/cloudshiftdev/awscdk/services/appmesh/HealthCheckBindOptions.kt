@@ -7,15 +7,14 @@ public interface HealthCheckBindOptions {
   public fun defaultPort(): Number? = unwrap(this).getDefaultPort()
 
   public interface Builder {
-    public fun defaultPort(defaultPort: Number) {
-    }
+    public fun defaultPort(defaultPort: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.HealthCheckBindOptions.Builder =
         software.amazon.awscdk.services.appmesh.HealthCheckBindOptions.builder()
 
-    public override fun defaultPort(defaultPort: Number) {
+    override fun defaultPort(defaultPort: Number) {
       cdkBuilder.defaultPort(defaultPort)
     }
 
@@ -26,7 +25,7 @@ public interface HealthCheckBindOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheckBindOptions,
   ) : HealthCheckBindOptions {
-    public override fun defaultPort(): Number? = unwrap(this).getDefaultPort()
+    override fun defaultPort(): Number? = unwrap(this).getDefaultPort()
   }
 
   public companion object {

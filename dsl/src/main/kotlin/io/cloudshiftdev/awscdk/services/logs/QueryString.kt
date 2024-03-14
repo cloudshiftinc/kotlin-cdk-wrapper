@@ -10,75 +10,66 @@ public open class QueryString internal constructor(
   private val cdkObject: software.amazon.awscdk.services.logs.QueryString,
 ) {
   public interface Builder {
-    public fun display(display: String) {
-    }
+    public fun display(display: String)
 
-    public fun fields(fields: List<String>) {
-    }
+    public fun fields(fields: List<String>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun filter(filter: String) {
-    }
+    public fun filter(filter: String)
 
-    public fun filterStatements(filterStatements: List<String>) {
-    }
+    public fun filterStatements(filterStatements: List<String>)
 
-    public fun limit(limit: Number) {
-    }
+    public fun limit(limit: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun parse(parse: String) {
-    }
+    public fun parse(parse: String)
 
-    public fun parseStatements(parseStatements: List<String>) {
-    }
+    public fun parseStatements(parseStatements: List<String>)
 
-    public fun sort(sort: String) {
-    }
+    public fun sort(sort: String)
 
-    public fun stats(stats: String) {
-    }
+    public fun stats(stats: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.logs.QueryString.Builder =
         software.amazon.awscdk.services.logs.QueryString.Builder.create()
 
-    public override fun display(display: String) {
+    override fun display(display: String) {
       cdkBuilder.display(display)
     }
 
-    public override fun fields(fields: List<String>) {
+    override fun fields(fields: List<String>) {
       cdkBuilder.fields(fields)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun filter(filter: String) {
+    override fun filter(filter: String) {
       cdkBuilder.filter(filter)
     }
 
-    public override fun filterStatements(filterStatements: List<String>) {
+    override fun filterStatements(filterStatements: List<String>) {
       cdkBuilder.filterStatements(filterStatements)
     }
 
-    public override fun limit(limit: Number) {
+    override fun limit(limit: Number) {
       cdkBuilder.limit(limit)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun parse(parse: String) {
+    override fun parse(parse: String) {
       cdkBuilder.parse(parse)
     }
 
-    public override fun parseStatements(parseStatements: List<String>) {
+    override fun parseStatements(parseStatements: List<String>) {
       cdkBuilder.parseStatements(parseStatements)
     }
 
-    public override fun sort(sort: String) {
+    override fun sort(sort: String) {
       cdkBuilder.sort(sort)
     }
 
-    public override fun stats(stats: String) {
+    override fun stats(stats: String) {
       cdkBuilder.stats(stats)
     }
 

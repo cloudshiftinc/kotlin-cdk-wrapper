@@ -131,67 +131,48 @@ public open class CfnDistribution internal constructor(
   }
 
   public interface Builder {
-    public fun bundleId(bundleId: String) {
-    }
+    public fun bundleId(bundleId: String)
 
-    public fun cacheBehaviorSettings(cacheBehaviorSettings: IResolvable) {
-    }
+    public fun cacheBehaviorSettings(cacheBehaviorSettings: IResolvable)
 
-    public fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty) {
-    }
+    public fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f7be9dd6a199c12d315ac62758530f6e3c1deceb2b119cf1bda341cc3fe6eeb1")
     public
-        fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty.Builder.() -> Unit) {
-    }
+        fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty.Builder.() -> Unit)
 
-    public fun cacheBehaviors(cacheBehaviors: IResolvable) {
-    }
+    public fun cacheBehaviors(cacheBehaviors: IResolvable)
 
-    public fun cacheBehaviors(cacheBehaviors: List<Any>) {
-    }
+    public fun cacheBehaviors(cacheBehaviors: List<Any>)
 
-    public fun certificateName(certificateName: String) {
-    }
+    public fun certificateName(certificateName: String)
 
-    public fun defaultCacheBehavior(defaultCacheBehavior: IResolvable) {
-    }
+    public fun defaultCacheBehavior(defaultCacheBehavior: IResolvable)
 
-    public fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty) {
-    }
+    public fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b4157d6c3d1a227fcd50f9ada92f79843f63a504eb29c54a28b5157aeb2ae401")
-    public
-        fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty.Builder.() -> Unit) {
-    }
+    public fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty.Builder.() -> Unit)
 
-    public fun distributionName(distributionName: String) {
-    }
+    public fun distributionName(distributionName: String)
 
-    public fun ipAddressType(ipAddressType: String) {
-    }
+    public fun ipAddressType(ipAddressType: String)
 
-    public fun isEnabled(isEnabled: Boolean) {
-    }
+    public fun isEnabled(isEnabled: Boolean)
 
-    public fun isEnabled(isEnabled: IResolvable) {
-    }
+    public fun isEnabled(isEnabled: IResolvable)
 
-    public fun origin(origin: IResolvable) {
-    }
+    public fun origin(origin: IResolvable)
 
-    public fun origin(origin: InputOriginProperty) {
-    }
+    public fun origin(origin: InputOriginProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a95170e276150a0f651d6df3157aed185b387fec3a0a2b81b8b6b0002a7f65c5")
-    public fun origin(origin: InputOriginProperty.Builder.() -> Unit) {
-    }
+    public fun origin(origin: InputOriginProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -201,80 +182,80 @@ public open class CfnDistribution internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnDistribution.Builder =
         software.amazon.awscdk.services.lightsail.CfnDistribution.Builder.create(scope, id)
 
-    public override fun bundleId(bundleId: String) {
+    override fun bundleId(bundleId: String) {
       cdkBuilder.bundleId(bundleId)
     }
 
-    public override fun cacheBehaviorSettings(cacheBehaviorSettings: IResolvable) {
+    override fun cacheBehaviorSettings(cacheBehaviorSettings: IResolvable) {
       cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(IResolvable::unwrap))
     }
 
-    public override fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty) {
+    override fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty) {
       cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(CacheSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f7be9dd6a199c12d315ac62758530f6e3c1deceb2b119cf1bda341cc3fe6eeb1")
-    public override
+    override
         fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty.Builder.() -> Unit):
         Unit = cacheBehaviorSettings(CacheSettingsProperty(cacheBehaviorSettings))
 
-    public override fun cacheBehaviors(cacheBehaviors: IResolvable) {
+    override fun cacheBehaviors(cacheBehaviors: IResolvable) {
       cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable::unwrap))
     }
 
-    public override fun cacheBehaviors(cacheBehaviors: List<Any>) {
+    override fun cacheBehaviors(cacheBehaviors: List<Any>) {
       cdkBuilder.cacheBehaviors(cacheBehaviors)
     }
 
-    public override fun certificateName(certificateName: String) {
+    override fun certificateName(certificateName: String) {
       cdkBuilder.certificateName(certificateName)
     }
 
-    public override fun defaultCacheBehavior(defaultCacheBehavior: IResolvable) {
+    override fun defaultCacheBehavior(defaultCacheBehavior: IResolvable) {
       cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable::unwrap))
     }
 
-    public override fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty) {
+    override fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty) {
       cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(CacheBehaviorProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b4157d6c3d1a227fcd50f9ada92f79843f63a504eb29c54a28b5157aeb2ae401")
-    public override
+    override
         fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty.Builder.() -> Unit):
         Unit = defaultCacheBehavior(CacheBehaviorProperty(defaultCacheBehavior))
 
-    public override fun distributionName(distributionName: String) {
+    override fun distributionName(distributionName: String) {
       cdkBuilder.distributionName(distributionName)
     }
 
-    public override fun ipAddressType(ipAddressType: String) {
+    override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
     }
 
-    public override fun isEnabled(isEnabled: Boolean) {
+    override fun isEnabled(isEnabled: Boolean) {
       cdkBuilder.isEnabled(isEnabled)
     }
 
-    public override fun isEnabled(isEnabled: IResolvable) {
+    override fun isEnabled(isEnabled: IResolvable) {
       cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun origin(origin: IResolvable) {
+    override fun origin(origin: IResolvable) {
       cdkBuilder.origin(origin.let(IResolvable::unwrap))
     }
 
-    public override fun origin(origin: InputOriginProperty) {
+    override fun origin(origin: InputOriginProperty) {
       cdkBuilder.origin(origin.let(InputOriginProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a95170e276150a0f651d6df3157aed185b387fec3a0a2b81b8b6b0002a7f65c5")
-    public override fun origin(origin: InputOriginProperty.Builder.() -> Unit): Unit =
+    override fun origin(origin: InputOriginProperty.Builder.() -> Unit): Unit =
         origin(InputOriginProperty(origin))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -307,8 +288,7 @@ public open class CfnDistribution internal constructor(
     public fun behavior(): String? = unwrap(this).getBehavior()
 
     public interface Builder {
-      public fun behavior(behavior: String) {
-      }
+      public fun behavior(behavior: String)
     }
 
     private class BuilderImpl : Builder {
@@ -316,7 +296,7 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty.builder()
 
-      public override fun behavior(behavior: String) {
+      override fun behavior(behavior: String) {
         cdkBuilder.behavior(behavior)
       }
 
@@ -329,7 +309,7 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorProperty,
     ) : CacheBehaviorProperty {
-      public override fun behavior(): String? = unwrap(this).getBehavior()
+      override fun behavior(): String? = unwrap(this).getBehavior()
     }
 
     public companion object {
@@ -358,11 +338,9 @@ public open class CfnDistribution internal constructor(
     public fun option(): String? = unwrap(this).getOption()
 
     public interface Builder {
-      public fun cookiesAllowList(cookiesAllowList: List<String>) {
-      }
+      public fun cookiesAllowList(cookiesAllowList: List<String>)
 
-      public fun option(option: String) {
-      }
+      public fun option(option: String)
     }
 
     private class BuilderImpl : Builder {
@@ -370,11 +348,11 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty.builder()
 
-      public override fun cookiesAllowList(cookiesAllowList: List<String>) {
+      override fun cookiesAllowList(cookiesAllowList: List<String>) {
         cdkBuilder.cookiesAllowList(cookiesAllowList)
       }
 
-      public override fun option(option: String) {
+      override fun option(option: String) {
         cdkBuilder.option(option)
       }
 
@@ -387,10 +365,10 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.CookieObjectProperty,
     ) : CookieObjectProperty {
-      public override fun cookiesAllowList(): List<String> = unwrap(this).getCookiesAllowList() ?:
+      override fun cookiesAllowList(): List<String> = unwrap(this).getCookiesAllowList() ?:
           emptyList()
 
-      public override fun option(): String? = unwrap(this).getOption()
+      override fun option(): String? = unwrap(this).getOption()
     }
 
     public companion object {
@@ -419,11 +397,9 @@ public open class CfnDistribution internal constructor(
     public fun option(): String? = unwrap(this).getOption()
 
     public interface Builder {
-      public fun headersAllowList(headersAllowList: List<String>) {
-      }
+      public fun headersAllowList(headersAllowList: List<String>)
 
-      public fun option(option: String) {
-      }
+      public fun option(option: String)
     }
 
     private class BuilderImpl : Builder {
@@ -431,11 +407,11 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty.builder()
 
-      public override fun headersAllowList(headersAllowList: List<String>) {
+      override fun headersAllowList(headersAllowList: List<String>) {
         cdkBuilder.headersAllowList(headersAllowList)
       }
 
-      public override fun option(option: String) {
+      override fun option(option: String) {
         cdkBuilder.option(option)
       }
 
@@ -448,10 +424,10 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.HeaderObjectProperty,
     ) : HeaderObjectProperty {
-      public override fun headersAllowList(): List<String> = unwrap(this).getHeadersAllowList() ?:
+      override fun headersAllowList(): List<String> = unwrap(this).getHeadersAllowList() ?:
           emptyList()
 
-      public override fun option(): String? = unwrap(this).getOption()
+      override fun option(): String? = unwrap(this).getOption()
     }
 
     public companion object {
@@ -492,54 +468,40 @@ public open class CfnDistribution internal constructor(
     public fun minimumTtl(): Number? = unwrap(this).getMinimumTtl()
 
     public interface Builder {
-      public fun allowedHttpMethods(allowedHttpMethods: String) {
-      }
+      public fun allowedHttpMethods(allowedHttpMethods: String)
 
-      public fun cachedHttpMethods(cachedHttpMethods: String) {
-      }
+      public fun cachedHttpMethods(cachedHttpMethods: String)
 
-      public fun defaultTtl(defaultTtl: Number) {
-      }
+      public fun defaultTtl(defaultTtl: Number)
 
-      public fun forwardedCookies(forwardedCookies: IResolvable) {
-      }
+      public fun forwardedCookies(forwardedCookies: IResolvable)
 
-      public fun forwardedCookies(forwardedCookies: CookieObjectProperty) {
-      }
+      public fun forwardedCookies(forwardedCookies: CookieObjectProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c922e547404c44d6e645910173c087833c3a63b46c3df390f032d632e93db26")
-      public fun forwardedCookies(forwardedCookies: CookieObjectProperty.Builder.() -> Unit) {
-      }
+      public fun forwardedCookies(forwardedCookies: CookieObjectProperty.Builder.() -> Unit)
 
-      public fun forwardedHeaders(forwardedHeaders: IResolvable) {
-      }
+      public fun forwardedHeaders(forwardedHeaders: IResolvable)
 
-      public fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty) {
-      }
+      public fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8c5e4bf40216dbcd990d823b98baa309d58f4960b0737400d37c0f8bf7963d8")
-      public fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty.Builder.() -> Unit) {
-      }
+      public fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty.Builder.() -> Unit)
 
-      public fun forwardedQueryStrings(forwardedQueryStrings: IResolvable) {
-      }
+      public fun forwardedQueryStrings(forwardedQueryStrings: IResolvable)
 
-      public fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty) {
-      }
+      public fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cfe764aaa9a7c09e6074777153751f674301feab5a38748d2705ee804d4b307")
       public
-          fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty.Builder.() -> Unit) {
-      }
+          fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty.Builder.() -> Unit)
 
-      public fun maximumTtl(maximumTtl: Number) {
-      }
+      public fun maximumTtl(maximumTtl: Number)
 
-      public fun minimumTtl(minimumTtl: Number) {
-      }
+      public fun minimumTtl(minimumTtl: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -547,65 +509,63 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty.builder()
 
-      public override fun allowedHttpMethods(allowedHttpMethods: String) {
+      override fun allowedHttpMethods(allowedHttpMethods: String) {
         cdkBuilder.allowedHttpMethods(allowedHttpMethods)
       }
 
-      public override fun cachedHttpMethods(cachedHttpMethods: String) {
+      override fun cachedHttpMethods(cachedHttpMethods: String) {
         cdkBuilder.cachedHttpMethods(cachedHttpMethods)
       }
 
-      public override fun defaultTtl(defaultTtl: Number) {
+      override fun defaultTtl(defaultTtl: Number) {
         cdkBuilder.defaultTtl(defaultTtl)
       }
 
-      public override fun forwardedCookies(forwardedCookies: IResolvable) {
+      override fun forwardedCookies(forwardedCookies: IResolvable) {
         cdkBuilder.forwardedCookies(forwardedCookies.let(IResolvable::unwrap))
       }
 
-      public override fun forwardedCookies(forwardedCookies: CookieObjectProperty) {
+      override fun forwardedCookies(forwardedCookies: CookieObjectProperty) {
         cdkBuilder.forwardedCookies(forwardedCookies.let(CookieObjectProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c922e547404c44d6e645910173c087833c3a63b46c3df390f032d632e93db26")
-      public override
-          fun forwardedCookies(forwardedCookies: CookieObjectProperty.Builder.() -> Unit): Unit =
-          forwardedCookies(CookieObjectProperty(forwardedCookies))
+      override fun forwardedCookies(forwardedCookies: CookieObjectProperty.Builder.() -> Unit): Unit
+          = forwardedCookies(CookieObjectProperty(forwardedCookies))
 
-      public override fun forwardedHeaders(forwardedHeaders: IResolvable) {
+      override fun forwardedHeaders(forwardedHeaders: IResolvable) {
         cdkBuilder.forwardedHeaders(forwardedHeaders.let(IResolvable::unwrap))
       }
 
-      public override fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty) {
+      override fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty) {
         cdkBuilder.forwardedHeaders(forwardedHeaders.let(HeaderObjectProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d8c5e4bf40216dbcd990d823b98baa309d58f4960b0737400d37c0f8bf7963d8")
-      public override
-          fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty.Builder.() -> Unit): Unit =
-          forwardedHeaders(HeaderObjectProperty(forwardedHeaders))
+      override fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty.Builder.() -> Unit): Unit
+          = forwardedHeaders(HeaderObjectProperty(forwardedHeaders))
 
-      public override fun forwardedQueryStrings(forwardedQueryStrings: IResolvable) {
+      override fun forwardedQueryStrings(forwardedQueryStrings: IResolvable) {
         cdkBuilder.forwardedQueryStrings(forwardedQueryStrings.let(IResolvable::unwrap))
       }
 
-      public override fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty) {
+      override fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty) {
         cdkBuilder.forwardedQueryStrings(forwardedQueryStrings.let(QueryStringObjectProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cfe764aaa9a7c09e6074777153751f674301feab5a38748d2705ee804d4b307")
-      public override
+      override
           fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty.Builder.() -> Unit):
           Unit = forwardedQueryStrings(QueryStringObjectProperty(forwardedQueryStrings))
 
-      public override fun maximumTtl(maximumTtl: Number) {
+      override fun maximumTtl(maximumTtl: Number) {
         cdkBuilder.maximumTtl(maximumTtl)
       }
 
-      public override fun minimumTtl(minimumTtl: Number) {
+      override fun minimumTtl(minimumTtl: Number) {
         cdkBuilder.minimumTtl(minimumTtl)
       }
 
@@ -618,21 +578,21 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheSettingsProperty,
     ) : CacheSettingsProperty {
-      public override fun allowedHttpMethods(): String? = unwrap(this).getAllowedHttpMethods()
+      override fun allowedHttpMethods(): String? = unwrap(this).getAllowedHttpMethods()
 
-      public override fun cachedHttpMethods(): String? = unwrap(this).getCachedHttpMethods()
+      override fun cachedHttpMethods(): String? = unwrap(this).getCachedHttpMethods()
 
-      public override fun defaultTtl(): Number? = unwrap(this).getDefaultTtl()
+      override fun defaultTtl(): Number? = unwrap(this).getDefaultTtl()
 
-      public override fun forwardedCookies(): Any? = unwrap(this).getForwardedCookies()
+      override fun forwardedCookies(): Any? = unwrap(this).getForwardedCookies()
 
-      public override fun forwardedHeaders(): Any? = unwrap(this).getForwardedHeaders()
+      override fun forwardedHeaders(): Any? = unwrap(this).getForwardedHeaders()
 
-      public override fun forwardedQueryStrings(): Any? = unwrap(this).getForwardedQueryStrings()
+      override fun forwardedQueryStrings(): Any? = unwrap(this).getForwardedQueryStrings()
 
-      public override fun maximumTtl(): Number? = unwrap(this).getMaximumTtl()
+      override fun maximumTtl(): Number? = unwrap(this).getMaximumTtl()
 
-      public override fun minimumTtl(): Number? = unwrap(this).getMinimumTtl()
+      override fun minimumTtl(): Number? = unwrap(this).getMinimumTtl()
     }
 
     public companion object {
@@ -663,14 +623,11 @@ public open class CfnDistribution internal constructor(
     public fun regionName(): String? = unwrap(this).getRegionName()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun protocolPolicy(protocolPolicy: String) {
-      }
+      public fun protocolPolicy(protocolPolicy: String)
 
-      public fun regionName(regionName: String) {
-      }
+      public fun regionName(regionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -678,15 +635,15 @@ public open class CfnDistribution internal constructor(
           software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun protocolPolicy(protocolPolicy: String) {
+      override fun protocolPolicy(protocolPolicy: String) {
         cdkBuilder.protocolPolicy(protocolPolicy)
       }
 
-      public override fun regionName(regionName: String) {
+      override fun regionName(regionName: String) {
         cdkBuilder.regionName(regionName)
       }
 
@@ -699,11 +656,11 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.InputOriginProperty,
     ) : InputOriginProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun protocolPolicy(): String? = unwrap(this).getProtocolPolicy()
+      override fun protocolPolicy(): String? = unwrap(this).getProtocolPolicy()
 
-      public override fun regionName(): String? = unwrap(this).getRegionName()
+      override fun regionName(): String? = unwrap(this).getRegionName()
     }
 
     public companion object {
@@ -733,14 +690,11 @@ public open class CfnDistribution internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun option(option: Boolean) {
-      }
+      public fun option(option: Boolean)
 
-      public fun option(option: IResolvable) {
-      }
+      public fun option(option: IResolvable)
 
-      public fun queryStringsAllowList(queryStringsAllowList: List<String>) {
-      }
+      public fun queryStringsAllowList(queryStringsAllowList: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -749,15 +703,15 @@ public open class CfnDistribution internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty.builder()
 
-      public override fun option(option: Boolean) {
+      override fun option(option: Boolean) {
         cdkBuilder.option(option)
       }
 
-      public override fun option(option: IResolvable) {
+      override fun option(option: IResolvable) {
         cdkBuilder.option(option.let(IResolvable::unwrap))
       }
 
-      public override fun queryStringsAllowList(queryStringsAllowList: List<String>) {
+      override fun queryStringsAllowList(queryStringsAllowList: List<String>) {
         cdkBuilder.queryStringsAllowList(queryStringsAllowList)
       }
 
@@ -770,10 +724,10 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty,
     ) : QueryStringObjectProperty {
-      public override fun option(): Any? = unwrap(this).getOption()
+      override fun option(): Any? = unwrap(this).getOption()
 
-      public override fun queryStringsAllowList(): List<String> =
-          unwrap(this).getQueryStringsAllowList() ?: emptyList()
+      override fun queryStringsAllowList(): List<String> = unwrap(this).getQueryStringsAllowList()
+          ?: emptyList()
     }
 
     public companion object {
@@ -802,11 +756,9 @@ public open class CfnDistribution internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun behavior(behavior: String) {
-      }
+      public fun behavior(behavior: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -815,11 +767,11 @@ public open class CfnDistribution internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty.builder()
 
-      public override fun behavior(behavior: String) {
+      override fun behavior(behavior: String) {
         cdkBuilder.behavior(behavior)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -832,9 +784,9 @@ public open class CfnDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDistribution.CacheBehaviorPerPathProperty,
     ) : CacheBehaviorPerPathProperty {
-      public override fun behavior(): String? = unwrap(this).getBehavior()
+      override fun behavior(): String? = unwrap(this).getBehavior()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {

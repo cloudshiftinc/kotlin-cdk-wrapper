@@ -39,11 +39,9 @@ public open class PublicDnsNamespace internal constructor(
   public override fun type(): NamespaceType = unwrap(this).getType().let(NamespaceType::wrap)
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -55,11 +53,11 @@ public open class PublicDnsNamespace internal constructor(
         software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

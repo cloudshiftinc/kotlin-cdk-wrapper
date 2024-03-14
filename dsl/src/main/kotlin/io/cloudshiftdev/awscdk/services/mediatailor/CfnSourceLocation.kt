@@ -101,54 +101,40 @@ public open class CfnSourceLocation internal constructor(
   }
 
   public interface Builder {
-    public fun accessConfiguration(accessConfiguration: IResolvable) {
-    }
+    public fun accessConfiguration(accessConfiguration: IResolvable)
 
-    public fun accessConfiguration(accessConfiguration: AccessConfigurationProperty) {
-    }
+    public fun accessConfiguration(accessConfiguration: AccessConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f7a88d145bc10a5f5f2f903b775091902ea3ff0a961a7aeeb328bd12627aed70")
     public
-        fun accessConfiguration(accessConfiguration: AccessConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun accessConfiguration(accessConfiguration: AccessConfigurationProperty.Builder.() -> Unit)
+
+    public fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: IResolvable)
 
     public
-        fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: IResolvable) {
-    }
-
-    public
-        fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty) {
-    }
+        fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b2bfcbc2ff29a32e75ed5a5d10e2ac67ca558e25a14e61ffbb2f99463b1ca7f")
     public
-        fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty.Builder.() -> Unit)
 
-    public fun httpConfiguration(httpConfiguration: IResolvable) {
-    }
+    public fun httpConfiguration(httpConfiguration: IResolvable)
 
-    public fun httpConfiguration(httpConfiguration: HttpConfigurationProperty) {
-    }
+    public fun httpConfiguration(httpConfiguration: HttpConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("411543ce488bbe8334be375cc6ac845d6e4a00b8a51c9bdfa215efd6da46bc51")
-    public fun httpConfiguration(httpConfiguration: HttpConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun httpConfiguration(httpConfiguration: HttpConfigurationProperty.Builder.() -> Unit)
 
-    public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable) {
-    }
+    public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable)
 
-    public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>) {
-    }
+    public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>)
 
-    public fun sourceLocationName(sourceLocationName: String) {
-    }
+    public fun sourceLocationName(sourceLocationName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -158,64 +144,63 @@ public open class CfnSourceLocation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediatailor.CfnSourceLocation.Builder =
         software.amazon.awscdk.services.mediatailor.CfnSourceLocation.Builder.create(scope, id)
 
-    public override fun accessConfiguration(accessConfiguration: IResolvable) {
+    override fun accessConfiguration(accessConfiguration: IResolvable) {
       cdkBuilder.accessConfiguration(accessConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun accessConfiguration(accessConfiguration: AccessConfigurationProperty) {
+    override fun accessConfiguration(accessConfiguration: AccessConfigurationProperty) {
       cdkBuilder.accessConfiguration(accessConfiguration.let(AccessConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f7a88d145bc10a5f5f2f903b775091902ea3ff0a961a7aeeb328bd12627aed70")
-    public override
+    override
         fun accessConfiguration(accessConfiguration: AccessConfigurationProperty.Builder.() -> Unit):
         Unit = accessConfiguration(AccessConfigurationProperty(accessConfiguration))
 
-    public override
+    override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: IResolvable) {
       cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty) {
       cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(DefaultSegmentDeliveryConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b2bfcbc2ff29a32e75ed5a5d10e2ac67ca558e25a14e61ffbb2f99463b1ca7f")
-    public override
+    override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty.Builder.() -> Unit):
         Unit =
         defaultSegmentDeliveryConfiguration(DefaultSegmentDeliveryConfigurationProperty(defaultSegmentDeliveryConfiguration))
 
-    public override fun httpConfiguration(httpConfiguration: IResolvable) {
+    override fun httpConfiguration(httpConfiguration: IResolvable) {
       cdkBuilder.httpConfiguration(httpConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun httpConfiguration(httpConfiguration: HttpConfigurationProperty) {
+    override fun httpConfiguration(httpConfiguration: HttpConfigurationProperty) {
       cdkBuilder.httpConfiguration(httpConfiguration.let(HttpConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("411543ce488bbe8334be375cc6ac845d6e4a00b8a51c9bdfa215efd6da46bc51")
-    public override
-        fun httpConfiguration(httpConfiguration: HttpConfigurationProperty.Builder.() -> Unit): Unit
-        = httpConfiguration(HttpConfigurationProperty(httpConfiguration))
+    override fun httpConfiguration(httpConfiguration: HttpConfigurationProperty.Builder.() -> Unit):
+        Unit = httpConfiguration(HttpConfigurationProperty(httpConfiguration))
 
-    public override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable) {
+    override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable) {
       cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>) {
+    override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>) {
       cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations)
     }
 
-    public override fun sourceLocationName(sourceLocationName: String) {
+    override fun sourceLocationName(sourceLocationName: String) {
       cdkBuilder.sourceLocationName(sourceLocationName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -248,8 +233,7 @@ public open class CfnSourceLocation internal constructor(
     public fun baseUrl(): String? = unwrap(this).getBaseUrl()
 
     public interface Builder {
-      public fun baseUrl(baseUrl: String) {
-      }
+      public fun baseUrl(baseUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -258,7 +242,7 @@ public open class CfnSourceLocation internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty.builder()
 
-      public override fun baseUrl(baseUrl: String) {
+      override fun baseUrl(baseUrl: String) {
         cdkBuilder.baseUrl(baseUrl)
       }
 
@@ -271,7 +255,7 @@ public open class CfnSourceLocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty,
     ) : DefaultSegmentDeliveryConfigurationProperty {
-      public override fun baseUrl(): String? = unwrap(this).getBaseUrl()
+      override fun baseUrl(): String? = unwrap(this).getBaseUrl()
     }
 
     public companion object {
@@ -301,11 +285,9 @@ public open class CfnSourceLocation internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun baseUrl(baseUrl: String) {
-      }
+      public fun baseUrl(baseUrl: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -314,11 +296,11 @@ public open class CfnSourceLocation internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty.builder()
 
-      public override fun baseUrl(baseUrl: String) {
+      override fun baseUrl(baseUrl: String) {
         cdkBuilder.baseUrl(baseUrl)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -331,9 +313,9 @@ public open class CfnSourceLocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SegmentDeliveryConfigurationProperty,
     ) : SegmentDeliveryConfigurationProperty {
-      public override fun baseUrl(): String? = unwrap(this).getBaseUrl()
+      override fun baseUrl(): String? = unwrap(this).getBaseUrl()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -365,14 +347,11 @@ public open class CfnSourceLocation internal constructor(
     public fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
 
     public interface Builder {
-      public fun headerName(headerName: String) {
-      }
+      public fun headerName(headerName: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun secretStringKey(secretStringKey: String) {
-      }
+      public fun secretStringKey(secretStringKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -381,15 +360,15 @@ public open class CfnSourceLocation internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty.builder()
 
-      public override fun headerName(headerName: String) {
+      override fun headerName(headerName: String) {
         cdkBuilder.headerName(headerName)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun secretStringKey(secretStringKey: String) {
+      override fun secretStringKey(secretStringKey: String) {
         cdkBuilder.secretStringKey(secretStringKey)
       }
 
@@ -402,11 +381,11 @@ public open class CfnSourceLocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.SecretsManagerAccessTokenConfigurationProperty,
     ) : SecretsManagerAccessTokenConfigurationProperty {
-      public override fun headerName(): String? = unwrap(this).getHeaderName()
+      override fun headerName(): String? = unwrap(this).getHeaderName()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
 
-      public override fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
+      override fun secretStringKey(): String? = unwrap(this).getSecretStringKey()
     }
 
     public companion object {
@@ -434,8 +413,7 @@ public open class CfnSourceLocation internal constructor(
     public fun baseUrl(): String
 
     public interface Builder {
-      public fun baseUrl(baseUrl: String) {
-      }
+      public fun baseUrl(baseUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -444,7 +422,7 @@ public open class CfnSourceLocation internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty.builder()
 
-      public override fun baseUrl(baseUrl: String) {
+      override fun baseUrl(baseUrl: String) {
         cdkBuilder.baseUrl(baseUrl)
       }
 
@@ -457,7 +435,7 @@ public open class CfnSourceLocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.HttpConfigurationProperty,
     ) : HttpConfigurationProperty {
-      public override fun baseUrl(): String = unwrap(this).getBaseUrl()
+      override fun baseUrl(): String = unwrap(this).getBaseUrl()
     }
 
     public companion object {
@@ -487,22 +465,18 @@ public open class CfnSourceLocation internal constructor(
         unwrap(this).getSecretsManagerAccessTokenConfiguration()
 
     public interface Builder {
-      public fun accessType(accessType: String) {
-      }
+      public fun accessType(accessType: String)
 
       public
-          fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: IResolvable) {
-      }
+          fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: IResolvable)
 
       public
-          fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty) {
-      }
+          fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1866a09a4118eb44d3a715ed2465a6ded5a1a5722f6b6958bdb47e09f0dfe2bf")
       public
-          fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -511,23 +485,23 @@ public open class CfnSourceLocation internal constructor(
           =
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty.builder()
 
-      public override fun accessType(accessType: String) {
+      override fun accessType(accessType: String) {
         cdkBuilder.accessType(accessType)
       }
 
-      public override
+      override
           fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: IResolvable) {
         cdkBuilder.secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty) {
         cdkBuilder.secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration.let(SecretsManagerAccessTokenConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1866a09a4118eb44d3a715ed2465a6ded5a1a5722f6b6958bdb47e09f0dfe2bf")
-      public override
+      override
           fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty.Builder.() -> Unit):
           Unit =
           secretsManagerAccessTokenConfiguration(SecretsManagerAccessTokenConfigurationProperty(secretsManagerAccessTokenConfiguration))
@@ -541,9 +515,9 @@ public open class CfnSourceLocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediatailor.CfnSourceLocation.AccessConfigurationProperty,
     ) : AccessConfigurationProperty {
-      public override fun accessType(): String? = unwrap(this).getAccessType()
+      override fun accessType(): String? = unwrap(this).getAccessType()
 
-      public override fun secretsManagerAccessTokenConfiguration(): Any? =
+      override fun secretsManagerAccessTokenConfiguration(): Any? =
           unwrap(this).getSecretsManagerAccessTokenConfiguration()
     }
 

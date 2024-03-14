@@ -150,73 +150,52 @@ public open class CfnDataSource internal constructor(
   }
 
   public interface Builder {
-    public fun assetFormsInput(assetFormsInput: IResolvable) {
-    }
+    public fun assetFormsInput(assetFormsInput: IResolvable)
 
-    public fun assetFormsInput(assetFormsInput: List<Any>) {
-    }
+    public fun assetFormsInput(assetFormsInput: List<Any>)
 
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: DataSourceConfigurationInputProperty) {
-    }
+    public fun configuration(configuration: DataSourceConfigurationInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b3ec791e0d25fc33d1ac2eec8eb8fa0593889ce0bdc6dfff97ba69776a29daa5")
-    public
-        fun configuration(configuration: DataSourceConfigurationInputProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: DataSourceConfigurationInputProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainIdentifier(domainIdentifier: String) {
-    }
+    public fun domainIdentifier(domainIdentifier: String)
 
-    public fun enableSetting(enableSetting: String) {
-    }
+    public fun enableSetting(enableSetting: String)
 
-    public fun environmentIdentifier(environmentIdentifier: String) {
-    }
+    public fun environmentIdentifier(environmentIdentifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun projectIdentifier(projectIdentifier: String) {
-    }
+    public fun projectIdentifier(projectIdentifier: String)
 
-    public fun publishOnImport(publishOnImport: Boolean) {
-    }
+    public fun publishOnImport(publishOnImport: Boolean)
 
-    public fun publishOnImport(publishOnImport: IResolvable) {
-    }
+    public fun publishOnImport(publishOnImport: IResolvable)
 
-    public fun recommendation(recommendation: IResolvable) {
-    }
+    public fun recommendation(recommendation: IResolvable)
 
-    public fun recommendation(recommendation: RecommendationConfigurationProperty) {
-    }
+    public fun recommendation(recommendation: RecommendationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b97fcbea14c52a4d8dafc2e7c2248c163509fe2022ed84f50269dcacc0e347a8")
     public
-        fun recommendation(recommendation: RecommendationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun recommendation(recommendation: RecommendationConfigurationProperty.Builder.() -> Unit)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: ScheduleConfigurationProperty) {
-    }
+    public fun schedule(schedule: ScheduleConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ee789eb03243a9d6801ac1d3e58da6f9195671336c08efab3768e4ea970bdbb")
-    public fun schedule(schedule: ScheduleConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: ScheduleConfigurationProperty.Builder.() -> Unit)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -226,88 +205,88 @@ public open class CfnDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datazone.CfnDataSource.Builder =
         software.amazon.awscdk.services.datazone.CfnDataSource.Builder.create(scope, id)
 
-    public override fun assetFormsInput(assetFormsInput: IResolvable) {
+    override fun assetFormsInput(assetFormsInput: IResolvable) {
       cdkBuilder.assetFormsInput(assetFormsInput.let(IResolvable::unwrap))
     }
 
-    public override fun assetFormsInput(assetFormsInput: List<Any>) {
+    override fun assetFormsInput(assetFormsInput: List<Any>) {
       cdkBuilder.assetFormsInput(assetFormsInput)
     }
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: DataSourceConfigurationInputProperty) {
+    override fun configuration(configuration: DataSourceConfigurationInputProperty) {
       cdkBuilder.configuration(configuration.let(DataSourceConfigurationInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b3ec791e0d25fc33d1ac2eec8eb8fa0593889ce0bdc6dfff97ba69776a29daa5")
-    public override
+    override
         fun configuration(configuration: DataSourceConfigurationInputProperty.Builder.() -> Unit):
         Unit = configuration(DataSourceConfigurationInputProperty(configuration))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainIdentifier(domainIdentifier: String) {
+    override fun domainIdentifier(domainIdentifier: String) {
       cdkBuilder.domainIdentifier(domainIdentifier)
     }
 
-    public override fun enableSetting(enableSetting: String) {
+    override fun enableSetting(enableSetting: String) {
       cdkBuilder.enableSetting(enableSetting)
     }
 
-    public override fun environmentIdentifier(environmentIdentifier: String) {
+    override fun environmentIdentifier(environmentIdentifier: String) {
       cdkBuilder.environmentIdentifier(environmentIdentifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun projectIdentifier(projectIdentifier: String) {
+    override fun projectIdentifier(projectIdentifier: String) {
       cdkBuilder.projectIdentifier(projectIdentifier)
     }
 
-    public override fun publishOnImport(publishOnImport: Boolean) {
+    override fun publishOnImport(publishOnImport: Boolean) {
       cdkBuilder.publishOnImport(publishOnImport)
     }
 
-    public override fun publishOnImport(publishOnImport: IResolvable) {
+    override fun publishOnImport(publishOnImport: IResolvable) {
       cdkBuilder.publishOnImport(publishOnImport.let(IResolvable::unwrap))
     }
 
-    public override fun recommendation(recommendation: IResolvable) {
+    override fun recommendation(recommendation: IResolvable) {
       cdkBuilder.recommendation(recommendation.let(IResolvable::unwrap))
     }
 
-    public override fun recommendation(recommendation: RecommendationConfigurationProperty) {
+    override fun recommendation(recommendation: RecommendationConfigurationProperty) {
       cdkBuilder.recommendation(recommendation.let(RecommendationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b97fcbea14c52a4d8dafc2e7c2248c163509fe2022ed84f50269dcacc0e347a8")
-    public override
+    override
         fun recommendation(recommendation: RecommendationConfigurationProperty.Builder.() -> Unit):
         Unit = recommendation(RecommendationConfigurationProperty(recommendation))
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: ScheduleConfigurationProperty) {
+    override fun schedule(schedule: ScheduleConfigurationProperty) {
       cdkBuilder.schedule(schedule.let(ScheduleConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ee789eb03243a9d6801ac1d3e58da6f9195671336c08efab3768e4ea970bdbb")
-    public override fun schedule(schedule: ScheduleConfigurationProperty.Builder.() -> Unit): Unit =
+    override fun schedule(schedule: ScheduleConfigurationProperty.Builder.() -> Unit): Unit =
         schedule(ScheduleConfigurationProperty(schedule))
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -339,8 +318,7 @@ public open class CfnDataSource internal constructor(
     public fun workgroupName(): String
 
     public interface Builder {
-      public fun workgroupName(workgroupName: String) {
-      }
+      public fun workgroupName(workgroupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -349,7 +327,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty.builder()
 
-      public override fun workgroupName(workgroupName: String) {
+      override fun workgroupName(workgroupName: String) {
         cdkBuilder.workgroupName(workgroupName)
       }
 
@@ -362,7 +340,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty,
     ) : RedshiftServerlessStorageProperty {
-      public override fun workgroupName(): String = unwrap(this).getWorkgroupName()
+      override fun workgroupName(): String = unwrap(this).getWorkgroupName()
     }
 
     public companion object {
@@ -392,11 +370,9 @@ public open class CfnDataSource internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -404,11 +380,11 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty.Builder =
           software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty.builder()
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -421,9 +397,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty,
     ) : FilterExpressionProperty {
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -450,11 +426,9 @@ public open class CfnDataSource internal constructor(
     public fun enableBusinessNameGeneration(): Any? = unwrap(this).getEnableBusinessNameGeneration()
 
     public interface Builder {
-      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean) {
-      }
+      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean)
 
-      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable) {
-      }
+      public fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -463,11 +437,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty.builder()
 
-      public override fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean) {
+      override fun enableBusinessNameGeneration(enableBusinessNameGeneration: Boolean) {
         cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration)
       }
 
-      public override fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable) {
+      override fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable) {
         cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration.let(IResolvable::unwrap))
       }
 
@@ -480,7 +454,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty,
     ) : RecommendationConfigurationProperty {
-      public override fun enableBusinessNameGeneration(): Any? =
+      override fun enableBusinessNameGeneration(): Any? =
           unwrap(this).getEnableBusinessNameGeneration()
     }
 
@@ -513,17 +487,13 @@ public open class CfnDataSource internal constructor(
     public fun schemaName(): String? = unwrap(this).getSchemaName()
 
     public interface Builder {
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun filterExpressions(filterExpressions: IResolvable) {
-      }
+      public fun filterExpressions(filterExpressions: IResolvable)
 
-      public fun filterExpressions(filterExpressions: List<Any>) {
-      }
+      public fun filterExpressions(filterExpressions: List<Any>)
 
-      public fun schemaName(schemaName: String) {
-      }
+      public fun schemaName(schemaName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -532,19 +502,19 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty.builder()
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun filterExpressions(filterExpressions: IResolvable) {
+      override fun filterExpressions(filterExpressions: IResolvable) {
         cdkBuilder.filterExpressions(filterExpressions.let(IResolvable::unwrap))
       }
 
-      public override fun filterExpressions(filterExpressions: List<Any>) {
+      override fun filterExpressions(filterExpressions: List<Any>) {
         cdkBuilder.filterExpressions(filterExpressions)
       }
 
-      public override fun schemaName(schemaName: String) {
+      override fun schemaName(schemaName: String) {
         cdkBuilder.schemaName(schemaName)
       }
 
@@ -557,11 +527,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty,
     ) : RelationalFilterConfigurationProperty {
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun filterExpressions(): Any? = unwrap(this).getFilterExpressions()
+      override fun filterExpressions(): Any? = unwrap(this).getFilterExpressions()
 
-      public override fun schemaName(): String? = unwrap(this).getSchemaName()
+      override fun schemaName(): String? = unwrap(this).getSchemaName()
     }
 
     public companion object {
@@ -591,30 +561,24 @@ public open class CfnDataSource internal constructor(
     public fun redshiftServerlessSource(): Any? = unwrap(this).getRedshiftServerlessSource()
 
     public interface Builder {
-      public fun redshiftClusterSource(redshiftClusterSource: IResolvable) {
-      }
+      public fun redshiftClusterSource(redshiftClusterSource: IResolvable)
 
-      public fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty) {
-      }
+      public fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba8616c977c827ba122709ece163c4044a0f88c0eec2a2e168f7c5fb8764a851")
       public
-          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit) {
-      }
+          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit)
 
-      public fun redshiftServerlessSource(redshiftServerlessSource: IResolvable) {
-      }
+      public fun redshiftServerlessSource(redshiftServerlessSource: IResolvable)
 
       public
-          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty) {
-      }
+          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30d400db2ad3eb359f03e7de3fd458556e7af9b01d3fdd573178e52d2eea73ea")
       public
-          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit) {
-      }
+          fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -622,33 +586,32 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty.Builder =
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty.builder()
 
-      public override fun redshiftClusterSource(redshiftClusterSource: IResolvable) {
+      override fun redshiftClusterSource(redshiftClusterSource: IResolvable) {
         cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(IResolvable::unwrap))
       }
 
-      public override
-          fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty) {
+      override fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty) {
         cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(RedshiftClusterStorageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba8616c977c827ba122709ece163c4044a0f88c0eec2a2e168f7c5fb8764a851")
-      public override
+      override
           fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty.Builder.() -> Unit):
           Unit = redshiftClusterSource(RedshiftClusterStorageProperty(redshiftClusterSource))
 
-      public override fun redshiftServerlessSource(redshiftServerlessSource: IResolvable) {
+      override fun redshiftServerlessSource(redshiftServerlessSource: IResolvable) {
         cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty) {
         cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(RedshiftServerlessStorageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30d400db2ad3eb359f03e7de3fd458556e7af9b01d3fdd573178e52d2eea73ea")
-      public override
+      override
           fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty.Builder.() -> Unit):
           Unit =
           redshiftServerlessSource(RedshiftServerlessStorageProperty(redshiftServerlessSource))
@@ -662,10 +625,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty,
     ) : RedshiftStorageProperty {
-      public override fun redshiftClusterSource(): Any? = unwrap(this).getRedshiftClusterSource()
+      override fun redshiftClusterSource(): Any? = unwrap(this).getRedshiftClusterSource()
 
-      public override fun redshiftServerlessSource(): Any? =
-          unwrap(this).getRedshiftServerlessSource()
+      override fun redshiftServerlessSource(): Any? = unwrap(this).getRedshiftServerlessSource()
     }
 
     public companion object {
@@ -694,11 +656,9 @@ public open class CfnDataSource internal constructor(
     public fun timezone(): String? = unwrap(this).getTimezone()
 
     public interface Builder {
-      public fun schedule(schedule: String) {
-      }
+      public fun schedule(schedule: String)
 
-      public fun timezone(timezone: String) {
-      }
+      public fun timezone(timezone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -707,11 +667,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty.builder()
 
-      public override fun schedule(schedule: String) {
+      override fun schedule(schedule: String) {
         cdkBuilder.schedule(schedule)
       }
 
-      public override fun timezone(timezone: String) {
+      override fun timezone(timezone: String) {
         cdkBuilder.timezone(timezone)
       }
 
@@ -724,9 +684,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty,
     ) : ScheduleConfigurationProperty {
-      public override fun schedule(): String? = unwrap(this).getSchedule()
+      override fun schedule(): String? = unwrap(this).getSchedule()
 
-      public override fun timezone(): String? = unwrap(this).getTimezone()
+      override fun timezone(): String? = unwrap(this).getTimezone()
     }
 
     public companion object {
@@ -755,30 +715,24 @@ public open class CfnDataSource internal constructor(
     public fun redshiftRunConfiguration(): Any? = unwrap(this).getRedshiftRunConfiguration()
 
     public interface Builder {
-      public fun glueRunConfiguration(glueRunConfiguration: IResolvable) {
-      }
+      public fun glueRunConfiguration(glueRunConfiguration: IResolvable)
 
-      public fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty) {
-      }
+      public fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32c49eeceba0aa5a83d13ed911660f833c1e5ccdf436d9954e682b7288b79823")
       public
-          fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty.Builder.() -> Unit) {
-      }
+          fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty.Builder.() -> Unit)
 
-      public fun redshiftRunConfiguration(redshiftRunConfiguration: IResolvable) {
-      }
+      public fun redshiftRunConfiguration(redshiftRunConfiguration: IResolvable)
 
       public
-          fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty) {
-      }
+          fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87ea29d27e9f07fa556b546a5850087d69a993ce39f2c81674d2c99b16b76a8a")
       public
-          fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty.Builder.() -> Unit) {
-      }
+          fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -787,33 +741,32 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty.builder()
 
-      public override fun glueRunConfiguration(glueRunConfiguration: IResolvable) {
+      override fun glueRunConfiguration(glueRunConfiguration: IResolvable) {
         cdkBuilder.glueRunConfiguration(glueRunConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty) {
+      override fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty) {
         cdkBuilder.glueRunConfiguration(glueRunConfiguration.let(GlueRunConfigurationInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32c49eeceba0aa5a83d13ed911660f833c1e5ccdf436d9954e682b7288b79823")
-      public override
+      override
           fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty.Builder.() -> Unit):
           Unit = glueRunConfiguration(GlueRunConfigurationInputProperty(glueRunConfiguration))
 
-      public override fun redshiftRunConfiguration(redshiftRunConfiguration: IResolvable) {
+      override fun redshiftRunConfiguration(redshiftRunConfiguration: IResolvable) {
         cdkBuilder.redshiftRunConfiguration(redshiftRunConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty) {
         cdkBuilder.redshiftRunConfiguration(redshiftRunConfiguration.let(RedshiftRunConfigurationInputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87ea29d27e9f07fa556b546a5850087d69a993ce39f2c81674d2c99b16b76a8a")
-      public override
+      override
           fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty.Builder.() -> Unit):
           Unit =
           redshiftRunConfiguration(RedshiftRunConfigurationInputProperty(redshiftRunConfiguration))
@@ -827,10 +780,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty,
     ) : DataSourceConfigurationInputProperty {
-      public override fun glueRunConfiguration(): Any? = unwrap(this).getGlueRunConfiguration()
+      override fun glueRunConfiguration(): Any? = unwrap(this).getGlueRunConfiguration()
 
-      public override fun redshiftRunConfiguration(): Any? =
-          unwrap(this).getRedshiftRunConfiguration()
+      override fun redshiftRunConfiguration(): Any? = unwrap(this).getRedshiftRunConfiguration()
     }
 
     public companion object {
@@ -858,8 +810,7 @@ public open class CfnDataSource internal constructor(
     public fun clusterName(): String
 
     public interface Builder {
-      public fun clusterName(clusterName: String) {
-      }
+      public fun clusterName(clusterName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -868,7 +819,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftClusterStorageProperty.builder()
 
-      public override fun clusterName(clusterName: String) {
+      override fun clusterName(clusterName: String) {
         cdkBuilder.clusterName(clusterName)
       }
 
@@ -881,7 +832,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftClusterStorageProperty,
     ) : RedshiftClusterStorageProperty {
-      public override fun clusterName(): String = unwrap(this).getClusterName()
+      override fun clusterName(): String = unwrap(this).getClusterName()
     }
 
     public companion object {
@@ -908,8 +859,7 @@ public open class CfnDataSource internal constructor(
     public fun secretManagerArn(): String
 
     public interface Builder {
-      public fun secretManagerArn(secretManagerArn: String) {
-      }
+      public fun secretManagerArn(secretManagerArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -918,7 +868,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftCredentialConfigurationProperty.builder()
 
-      public override fun secretManagerArn(secretManagerArn: String) {
+      override fun secretManagerArn(secretManagerArn: String) {
         cdkBuilder.secretManagerArn(secretManagerArn)
       }
 
@@ -931,7 +881,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftCredentialConfigurationProperty,
     ) : RedshiftCredentialConfigurationProperty {
-      public override fun secretManagerArn(): String = unwrap(this).getSecretManagerArn()
+      override fun secretManagerArn(): String = unwrap(this).getSecretManagerArn()
     }
 
     public companion object {
@@ -965,38 +915,29 @@ public open class CfnDataSource internal constructor(
     public fun relationalFilterConfigurations(): Any
 
     public interface Builder {
-      public fun dataAccessRole(dataAccessRole: String) {
-      }
+      public fun dataAccessRole(dataAccessRole: String)
 
-      public fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable) {
-      }
+      public fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable)
 
       public
-          fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty) {
-      }
+          fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e201875d0fa55c8500b08cfe89434f772ef00b245c4a8273ea2ba4ba6fcbc207")
       public
-          fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty.Builder.() -> Unit)
 
-      public fun redshiftStorage(redshiftStorage: IResolvable) {
-      }
+      public fun redshiftStorage(redshiftStorage: IResolvable)
 
-      public fun redshiftStorage(redshiftStorage: RedshiftStorageProperty) {
-      }
+      public fun redshiftStorage(redshiftStorage: RedshiftStorageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c96c9f1fca94be303cefa3be2240a1598e8f221de0dab9360c4273e4ae3ac81b")
-      public fun redshiftStorage(redshiftStorage: RedshiftStorageProperty.Builder.() -> Unit) {
-      }
+      public fun redshiftStorage(redshiftStorage: RedshiftStorageProperty.Builder.() -> Unit)
 
-      public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
-      }
+      public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable)
 
-      public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
-      }
+      public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1005,48 +946,44 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftRunConfigurationInputProperty.builder()
 
-      public override fun dataAccessRole(dataAccessRole: String) {
+      override fun dataAccessRole(dataAccessRole: String) {
         cdkBuilder.dataAccessRole(dataAccessRole)
       }
 
-      public override
-          fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable) {
+      override fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable) {
         cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty) {
         cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(RedshiftCredentialConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e201875d0fa55c8500b08cfe89434f772ef00b245c4a8273ea2ba4ba6fcbc207")
-      public override
+      override
           fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty.Builder.() -> Unit):
           Unit =
           redshiftCredentialConfiguration(RedshiftCredentialConfigurationProperty(redshiftCredentialConfiguration))
 
-      public override fun redshiftStorage(redshiftStorage: IResolvable) {
+      override fun redshiftStorage(redshiftStorage: IResolvable) {
         cdkBuilder.redshiftStorage(redshiftStorage.let(IResolvable::unwrap))
       }
 
-      public override fun redshiftStorage(redshiftStorage: RedshiftStorageProperty) {
+      override fun redshiftStorage(redshiftStorage: RedshiftStorageProperty) {
         cdkBuilder.redshiftStorage(redshiftStorage.let(RedshiftStorageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c96c9f1fca94be303cefa3be2240a1598e8f221de0dab9360c4273e4ae3ac81b")
-      public override
-          fun redshiftStorage(redshiftStorage: RedshiftStorageProperty.Builder.() -> Unit): Unit =
-          redshiftStorage(RedshiftStorageProperty(redshiftStorage))
+      override fun redshiftStorage(redshiftStorage: RedshiftStorageProperty.Builder.() -> Unit):
+          Unit = redshiftStorage(RedshiftStorageProperty(redshiftStorage))
 
-      public override
-          fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
+      override fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
         cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable::unwrap))
       }
 
-      public override
-          fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
+      override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
         cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
       }
 
@@ -1059,14 +996,14 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftRunConfigurationInputProperty,
     ) : RedshiftRunConfigurationInputProperty {
-      public override fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
+      override fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
 
-      public override fun redshiftCredentialConfiguration(): Any =
+      override fun redshiftCredentialConfiguration(): Any =
           unwrap(this).getRedshiftCredentialConfiguration()
 
-      public override fun redshiftStorage(): Any = unwrap(this).getRedshiftStorage()
+      override fun redshiftStorage(): Any = unwrap(this).getRedshiftStorage()
 
-      public override fun relationalFilterConfigurations(): Any =
+      override fun relationalFilterConfigurations(): Any =
           unwrap(this).getRelationalFilterConfigurations()
     }
 
@@ -1097,14 +1034,11 @@ public open class CfnDataSource internal constructor(
     public fun relationalFilterConfigurations(): Any
 
     public interface Builder {
-      public fun dataAccessRole(dataAccessRole: String) {
-      }
+      public fun dataAccessRole(dataAccessRole: String)
 
-      public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
-      }
+      public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable)
 
-      public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
-      }
+      public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1113,17 +1047,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.builder()
 
-      public override fun dataAccessRole(dataAccessRole: String) {
+      override fun dataAccessRole(dataAccessRole: String) {
         cdkBuilder.dataAccessRole(dataAccessRole)
       }
 
-      public override
-          fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
+      override fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
         cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable::unwrap))
       }
 
-      public override
-          fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
+      override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
         cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
       }
 
@@ -1136,9 +1068,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty,
     ) : GlueRunConfigurationInputProperty {
-      public override fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
+      override fun dataAccessRole(): String? = unwrap(this).getDataAccessRole()
 
-      public override fun relationalFilterConfigurations(): Any =
+      override fun relationalFilterConfigurations(): Any =
           unwrap(this).getRelationalFilterConfigurations()
     }
 
@@ -1173,17 +1105,13 @@ public open class CfnDataSource internal constructor(
     public fun typeRevision(): String? = unwrap(this).getTypeRevision()
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
 
-      public fun formName(formName: String) {
-      }
+      public fun formName(formName: String)
 
-      public fun typeIdentifier(typeIdentifier: String) {
-      }
+      public fun typeIdentifier(typeIdentifier: String)
 
-      public fun typeRevision(typeRevision: String) {
-      }
+      public fun typeRevision(typeRevision: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1191,19 +1119,19 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty.Builder =
           software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
-      public override fun formName(formName: String) {
+      override fun formName(formName: String) {
         cdkBuilder.formName(formName)
       }
 
-      public override fun typeIdentifier(typeIdentifier: String) {
+      override fun typeIdentifier(typeIdentifier: String) {
         cdkBuilder.typeIdentifier(typeIdentifier)
       }
 
-      public override fun typeRevision(typeRevision: String) {
+      override fun typeRevision(typeRevision: String) {
         cdkBuilder.typeRevision(typeRevision)
       }
 
@@ -1215,13 +1143,13 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty,
     ) : FormInputProperty {
-      public override fun content(): String? = unwrap(this).getContent()
+      override fun content(): String? = unwrap(this).getContent()
 
-      public override fun formName(): String = unwrap(this).getFormName()
+      override fun formName(): String = unwrap(this).getFormName()
 
-      public override fun typeIdentifier(): String? = unwrap(this).getTypeIdentifier()
+      override fun typeIdentifier(): String? = unwrap(this).getTypeIdentifier()
 
-      public override fun typeRevision(): String? = unwrap(this).getTypeRevision()
+      override fun typeRevision(): String? = unwrap(this).getTypeRevision()
     }
 
     public companion object {

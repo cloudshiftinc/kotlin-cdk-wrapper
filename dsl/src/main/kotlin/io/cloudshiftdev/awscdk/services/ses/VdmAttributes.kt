@@ -15,11 +15,9 @@ public open class VdmAttributes internal constructor(
   public open fun vdmAttributesResourceId(): String = unwrap(this).getVdmAttributesResourceId()
 
   public interface Builder {
-    public fun engagementMetrics(engagementMetrics: Boolean) {
-    }
+    public fun engagementMetrics(engagementMetrics: Boolean)
 
-    public fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
-    }
+    public fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean)
   }
 
   private class BuilderImpl(
@@ -29,11 +27,11 @@ public open class VdmAttributes internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.VdmAttributes.Builder =
         software.amazon.awscdk.services.ses.VdmAttributes.Builder.create(scope, id)
 
-    public override fun engagementMetrics(engagementMetrics: Boolean) {
+    override fun engagementMetrics(engagementMetrics: Boolean) {
       cdkBuilder.engagementMetrics(engagementMetrics)
     }
 
-    public override fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
+    override fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
       cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
     }
 

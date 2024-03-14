@@ -14,36 +14,32 @@ public interface ScratchSpace {
   public fun sourcePath(): String
 
   public interface Builder {
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readOnly(readOnly: Boolean) {
-    }
+    public fun readOnly(readOnly: Boolean)
 
-    public fun sourcePath(sourcePath: String) {
-    }
+    public fun sourcePath(sourcePath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ScratchSpace.Builder =
         software.amazon.awscdk.services.ecs.ScratchSpace.builder()
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readOnly(readOnly: Boolean) {
+    override fun readOnly(readOnly: Boolean) {
       cdkBuilder.readOnly(readOnly)
     }
 
-    public override fun sourcePath(sourcePath: String) {
+    override fun sourcePath(sourcePath: String) {
       cdkBuilder.sourcePath(sourcePath)
     }
 
@@ -53,13 +49,13 @@ public interface ScratchSpace {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ScratchSpace,
   ) : ScratchSpace {
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun readOnly(): Boolean = unwrap(this).getReadOnly()
+    override fun readOnly(): Boolean = unwrap(this).getReadOnly()
 
-    public override fun sourcePath(): String = unwrap(this).getSourcePath()
+    override fun sourcePath(): String = unwrap(this).getSourcePath()
   }
 
   public companion object {

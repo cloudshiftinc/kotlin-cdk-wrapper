@@ -113,51 +113,37 @@ public open class CfnDevice internal constructor(
   }
 
   public interface Builder {
-    public fun awsLocation(awsLocation: IResolvable) {
-    }
+    public fun awsLocation(awsLocation: IResolvable)
 
-    public fun awsLocation(awsLocation: AWSLocationProperty) {
-    }
+    public fun awsLocation(awsLocation: AWSLocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("876b852edb9897dee52b427b91554cf016d67b1c8c78a214475b98d0e8752b43")
-    public fun awsLocation(awsLocation: AWSLocationProperty.Builder.() -> Unit) {
-    }
+    public fun awsLocation(awsLocation: AWSLocationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun globalNetworkId(globalNetworkId: String) {
-    }
+    public fun globalNetworkId(globalNetworkId: String)
 
-    public fun location(location: IResolvable) {
-    }
+    public fun location(location: IResolvable)
 
-    public fun location(location: LocationProperty) {
-    }
+    public fun location(location: LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a741859ec421cd2266f4416b1a2c580555d70e8b533608f512b1a0b89cde9c39")
-    public fun location(location: LocationProperty.Builder.() -> Unit) {
-    }
+    public fun location(location: LocationProperty.Builder.() -> Unit)
 
-    public fun model(model: String) {
-    }
+    public fun model(model: String)
 
-    public fun serialNumber(serialNumber: String) {
-    }
+    public fun serialNumber(serialNumber: String)
 
-    public fun siteId(siteId: String) {
-    }
+    public fun siteId(siteId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun vendor(vendor: String) {
-    }
+    public fun vendor(vendor: String)
   }
 
   private class BuilderImpl(
@@ -167,61 +153,61 @@ public open class CfnDevice internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnDevice.Builder =
         software.amazon.awscdk.services.networkmanager.CfnDevice.Builder.create(scope, id)
 
-    public override fun awsLocation(awsLocation: IResolvable) {
+    override fun awsLocation(awsLocation: IResolvable) {
       cdkBuilder.awsLocation(awsLocation.let(IResolvable::unwrap))
     }
 
-    public override fun awsLocation(awsLocation: AWSLocationProperty) {
+    override fun awsLocation(awsLocation: AWSLocationProperty) {
       cdkBuilder.awsLocation(awsLocation.let(AWSLocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("876b852edb9897dee52b427b91554cf016d67b1c8c78a214475b98d0e8752b43")
-    public override fun awsLocation(awsLocation: AWSLocationProperty.Builder.() -> Unit): Unit =
+    override fun awsLocation(awsLocation: AWSLocationProperty.Builder.() -> Unit): Unit =
         awsLocation(AWSLocationProperty(awsLocation))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun globalNetworkId(globalNetworkId: String) {
+    override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
-    public override fun location(location: IResolvable) {
+    override fun location(location: IResolvable) {
       cdkBuilder.location(location.let(IResolvable::unwrap))
     }
 
-    public override fun location(location: LocationProperty) {
+    override fun location(location: LocationProperty) {
       cdkBuilder.location(location.let(LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a741859ec421cd2266f4416b1a2c580555d70e8b533608f512b1a0b89cde9c39")
-    public override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+    override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
         location(LocationProperty(location))
 
-    public override fun model(model: String) {
+    override fun model(model: String) {
       cdkBuilder.model(model)
     }
 
-    public override fun serialNumber(serialNumber: String) {
+    override fun serialNumber(serialNumber: String) {
       cdkBuilder.serialNumber(serialNumber)
     }
 
-    public override fun siteId(siteId: String) {
+    override fun siteId(siteId: String) {
       cdkBuilder.siteId(siteId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun vendor(vendor: String) {
+    override fun vendor(vendor: String) {
       cdkBuilder.vendor(vendor)
     }
 
@@ -256,11 +242,9 @@ public open class CfnDevice internal constructor(
     public fun zone(): String? = unwrap(this).getZone()
 
     public interface Builder {
-      public fun subnetArn(subnetArn: String) {
-      }
+      public fun subnetArn(subnetArn: String)
 
-      public fun zone(zone: String) {
-      }
+      public fun zone(zone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -268,11 +252,11 @@ public open class CfnDevice internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty.Builder =
           software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty.builder()
 
-      public override fun subnetArn(subnetArn: String) {
+      override fun subnetArn(subnetArn: String) {
         cdkBuilder.subnetArn(subnetArn)
       }
 
-      public override fun zone(zone: String) {
+      override fun zone(zone: String) {
         cdkBuilder.zone(zone)
       }
 
@@ -285,9 +269,9 @@ public open class CfnDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnDevice.AWSLocationProperty,
     ) : AWSLocationProperty {
-      public override fun subnetArn(): String? = unwrap(this).getSubnetArn()
+      override fun subnetArn(): String? = unwrap(this).getSubnetArn()
 
-      public override fun zone(): String? = unwrap(this).getZone()
+      override fun zone(): String? = unwrap(this).getZone()
     }
 
     public companion object {
@@ -318,14 +302,11 @@ public open class CfnDevice internal constructor(
     public fun longitude(): String? = unwrap(this).getLongitude()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun latitude(latitude: String) {
-      }
+      public fun latitude(latitude: String)
 
-      public fun longitude(longitude: String) {
-      }
+      public fun longitude(longitude: String)
     }
 
     private class BuilderImpl : Builder {
@@ -333,15 +314,15 @@ public open class CfnDevice internal constructor(
           software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty.Builder =
           software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun latitude(latitude: String) {
+      override fun latitude(latitude: String) {
         cdkBuilder.latitude(latitude)
       }
 
-      public override fun longitude(longitude: String) {
+      override fun longitude(longitude: String) {
         cdkBuilder.longitude(longitude)
       }
 
@@ -353,11 +334,11 @@ public open class CfnDevice internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnDevice.LocationProperty,
     ) : LocationProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun latitude(): String? = unwrap(this).getLatitude()
+      override fun latitude(): String? = unwrap(this).getLatitude()
 
-      public override fun longitude(): String? = unwrap(this).getLongitude()
+      override fun longitude(): String? = unwrap(this).getLongitude()
     }
 
     public companion object {

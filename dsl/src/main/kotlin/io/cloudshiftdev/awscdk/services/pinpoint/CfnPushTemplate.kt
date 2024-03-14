@@ -127,73 +127,54 @@ public open class CfnPushTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun adm(adm: IResolvable) {
-    }
+    public fun adm(adm: IResolvable)
 
-    public fun adm(adm: AndroidPushNotificationTemplateProperty) {
-    }
+    public fun adm(adm: AndroidPushNotificationTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8736366f826fa0836f98e7a8e80e2c65765a4cae20b41ac956584a4aabd373e9")
-    public fun adm(adm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun adm(adm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit)
 
-    public fun apns(apns: IResolvable) {
-    }
+    public fun apns(apns: IResolvable)
 
-    public fun apns(apns: APNSPushNotificationTemplateProperty) {
-    }
+    public fun apns(apns: APNSPushNotificationTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d6067c22e38a120431f1532d54a94bf205ebfc2c03c6477a9a85f487751c2227")
-    public fun apns(apns: APNSPushNotificationTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun apns(apns: APNSPushNotificationTemplateProperty.Builder.() -> Unit)
 
-    public fun baidu(baidu: IResolvable) {
-    }
+    public fun baidu(baidu: IResolvable)
 
-    public fun baidu(baidu: AndroidPushNotificationTemplateProperty) {
-    }
+    public fun baidu(baidu: AndroidPushNotificationTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc694eece0399854bffddc89d3dbd2d5a139541583ffe80e340afa48420aa17d")
-    public fun baidu(baidu: AndroidPushNotificationTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun baidu(baidu: AndroidPushNotificationTemplateProperty.Builder.() -> Unit)
 
-    public fun defaultSubstitutions(defaultSubstitutions: String) {
-    }
+    public fun defaultSubstitutions(defaultSubstitutions: String)
 
-    public fun defaultValue(defaultValue: IResolvable) {
-    }
+    public fun defaultValue(defaultValue: IResolvable)
 
-    public fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty) {
-    }
+    public fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("405c89e1287eef14060f58aac5cd607ec014bc5df4ea14ee5bc8927aa537d9e3")
     public
-        fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty.Builder.() -> Unit) {
-    }
+        fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty.Builder.() -> Unit)
 
-    public fun gcm(gcm: IResolvable) {
-    }
+    public fun gcm(gcm: IResolvable)
 
-    public fun gcm(gcm: AndroidPushNotificationTemplateProperty) {
-    }
+    public fun gcm(gcm: AndroidPushNotificationTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("703a749ec0a76a9c29c8ea53fe8c0b07876271194c7561f4d225d88d9cb8ab2a")
-    public fun gcm(gcm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun gcm(gcm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun templateDescription(templateDescription: String) {
-    }
+    public fun templateDescription(templateDescription: String)
 
-    public fun templateName(templateName: String) {
-    }
+    public fun templateName(templateName: String)
   }
 
   private class BuilderImpl(
@@ -203,85 +184,85 @@ public open class CfnPushTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.Builder =
         software.amazon.awscdk.services.pinpoint.CfnPushTemplate.Builder.create(scope, id)
 
-    public override fun adm(adm: IResolvable) {
+    override fun adm(adm: IResolvable) {
       cdkBuilder.adm(adm.let(IResolvable::unwrap))
     }
 
-    public override fun adm(adm: AndroidPushNotificationTemplateProperty) {
+    override fun adm(adm: AndroidPushNotificationTemplateProperty) {
       cdkBuilder.adm(adm.let(AndroidPushNotificationTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8736366f826fa0836f98e7a8e80e2c65765a4cae20b41ac956584a4aabd373e9")
-    public override fun adm(adm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
+    override fun adm(adm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
         adm(AndroidPushNotificationTemplateProperty(adm))
 
-    public override fun apns(apns: IResolvable) {
+    override fun apns(apns: IResolvable) {
       cdkBuilder.apns(apns.let(IResolvable::unwrap))
     }
 
-    public override fun apns(apns: APNSPushNotificationTemplateProperty) {
+    override fun apns(apns: APNSPushNotificationTemplateProperty) {
       cdkBuilder.apns(apns.let(APNSPushNotificationTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d6067c22e38a120431f1532d54a94bf205ebfc2c03c6477a9a85f487751c2227")
-    public override fun apns(apns: APNSPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
+    override fun apns(apns: APNSPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
         apns(APNSPushNotificationTemplateProperty(apns))
 
-    public override fun baidu(baidu: IResolvable) {
+    override fun baidu(baidu: IResolvable) {
       cdkBuilder.baidu(baidu.let(IResolvable::unwrap))
     }
 
-    public override fun baidu(baidu: AndroidPushNotificationTemplateProperty) {
+    override fun baidu(baidu: AndroidPushNotificationTemplateProperty) {
       cdkBuilder.baidu(baidu.let(AndroidPushNotificationTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc694eece0399854bffddc89d3dbd2d5a139541583ffe80e340afa48420aa17d")
-    public override fun baidu(baidu: AndroidPushNotificationTemplateProperty.Builder.() -> Unit):
-        Unit = baidu(AndroidPushNotificationTemplateProperty(baidu))
+    override fun baidu(baidu: AndroidPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
+        baidu(AndroidPushNotificationTemplateProperty(baidu))
 
-    public override fun defaultSubstitutions(defaultSubstitutions: String) {
+    override fun defaultSubstitutions(defaultSubstitutions: String) {
       cdkBuilder.defaultSubstitutions(defaultSubstitutions)
     }
 
-    public override fun defaultValue(defaultValue: IResolvable) {
+    override fun defaultValue(defaultValue: IResolvable) {
       cdkBuilder.defaultValue(defaultValue.let(IResolvable::unwrap))
     }
 
-    public override fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty) {
+    override fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty) {
       cdkBuilder.defaultValue(defaultValue.let(DefaultPushNotificationTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("405c89e1287eef14060f58aac5cd607ec014bc5df4ea14ee5bc8927aa537d9e3")
-    public override
+    override
         fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty.Builder.() -> Unit):
         Unit = defaultValue(DefaultPushNotificationTemplateProperty(defaultValue))
 
-    public override fun gcm(gcm: IResolvable) {
+    override fun gcm(gcm: IResolvable) {
       cdkBuilder.gcm(gcm.let(IResolvable::unwrap))
     }
 
-    public override fun gcm(gcm: AndroidPushNotificationTemplateProperty) {
+    override fun gcm(gcm: AndroidPushNotificationTemplateProperty) {
       cdkBuilder.gcm(gcm.let(AndroidPushNotificationTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("703a749ec0a76a9c29c8ea53fe8c0b07876271194c7561f4d225d88d9cb8ab2a")
-    public override fun gcm(gcm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
+    override fun gcm(gcm: AndroidPushNotificationTemplateProperty.Builder.() -> Unit): Unit =
         gcm(AndroidPushNotificationTemplateProperty(gcm))
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun templateDescription(templateDescription: String) {
+    override fun templateDescription(templateDescription: String) {
       cdkBuilder.templateDescription(templateDescription)
     }
 
-    public override fun templateName(templateName: String) {
+    override fun templateName(templateName: String) {
       cdkBuilder.templateName(templateName)
     }
 
@@ -322,20 +303,15 @@ public open class CfnPushTemplate internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun body(body: String) {
-      }
+      public fun body(body: String)
 
-      public fun sound(sound: String) {
-      }
+      public fun sound(sound: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -344,23 +320,23 @@ public open class CfnPushTemplate internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun body(body: String) {
+      override fun body(body: String) {
         cdkBuilder.body(body)
       }
 
-      public override fun sound(sound: String) {
+      override fun sound(sound: String) {
         cdkBuilder.sound(sound)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -373,15 +349,15 @@ public open class CfnPushTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty,
     ) : DefaultPushNotificationTemplateProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
 
-      public override fun body(): String? = unwrap(this).getBody()
+      override fun body(): String? = unwrap(this).getBody()
 
-      public override fun sound(): String? = unwrap(this).getSound()
+      override fun sound(): String? = unwrap(this).getSound()
 
-      public override fun title(): String? = unwrap(this).getTitle()
+      override fun title(): String? = unwrap(this).getTitle()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -423,29 +399,21 @@ public open class CfnPushTemplate internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun body(body: String) {
-      }
+      public fun body(body: String)
 
-      public fun imageIconUrl(imageIconUrl: String) {
-      }
+      public fun imageIconUrl(imageIconUrl: String)
 
-      public fun imageUrl(imageUrl: String) {
-      }
+      public fun imageUrl(imageUrl: String)
 
-      public fun smallImageIconUrl(smallImageIconUrl: String) {
-      }
+      public fun smallImageIconUrl(smallImageIconUrl: String)
 
-      public fun sound(sound: String) {
-      }
+      public fun sound(sound: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -454,35 +422,35 @@ public open class CfnPushTemplate internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun body(body: String) {
+      override fun body(body: String) {
         cdkBuilder.body(body)
       }
 
-      public override fun imageIconUrl(imageIconUrl: String) {
+      override fun imageIconUrl(imageIconUrl: String) {
         cdkBuilder.imageIconUrl(imageIconUrl)
       }
 
-      public override fun imageUrl(imageUrl: String) {
+      override fun imageUrl(imageUrl: String) {
         cdkBuilder.imageUrl(imageUrl)
       }
 
-      public override fun smallImageIconUrl(smallImageIconUrl: String) {
+      override fun smallImageIconUrl(smallImageIconUrl: String) {
         cdkBuilder.smallImageIconUrl(smallImageIconUrl)
       }
 
-      public override fun sound(sound: String) {
+      override fun sound(sound: String) {
         cdkBuilder.sound(sound)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -495,21 +463,21 @@ public open class CfnPushTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty,
     ) : AndroidPushNotificationTemplateProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
 
-      public override fun body(): String? = unwrap(this).getBody()
+      override fun body(): String? = unwrap(this).getBody()
 
-      public override fun imageIconUrl(): String? = unwrap(this).getImageIconUrl()
+      override fun imageIconUrl(): String? = unwrap(this).getImageIconUrl()
 
-      public override fun imageUrl(): String? = unwrap(this).getImageUrl()
+      override fun imageUrl(): String? = unwrap(this).getImageUrl()
 
-      public override fun smallImageIconUrl(): String? = unwrap(this).getSmallImageIconUrl()
+      override fun smallImageIconUrl(): String? = unwrap(this).getSmallImageIconUrl()
 
-      public override fun sound(): String? = unwrap(this).getSound()
+      override fun sound(): String? = unwrap(this).getSound()
 
-      public override fun title(): String? = unwrap(this).getTitle()
+      override fun title(): String? = unwrap(this).getTitle()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -547,23 +515,17 @@ public open class CfnPushTemplate internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun body(body: String) {
-      }
+      public fun body(body: String)
 
-      public fun mediaUrl(mediaUrl: String) {
-      }
+      public fun mediaUrl(mediaUrl: String)
 
-      public fun sound(sound: String) {
-      }
+      public fun sound(sound: String)
 
-      public fun title(title: String) {
-      }
+      public fun title(title: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -572,27 +534,27 @@ public open class CfnPushTemplate internal constructor(
           =
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun body(body: String) {
+      override fun body(body: String) {
         cdkBuilder.body(body)
       }
 
-      public override fun mediaUrl(mediaUrl: String) {
+      override fun mediaUrl(mediaUrl: String) {
         cdkBuilder.mediaUrl(mediaUrl)
       }
 
-      public override fun sound(sound: String) {
+      override fun sound(sound: String) {
         cdkBuilder.sound(sound)
       }
 
-      public override fun title(title: String) {
+      override fun title(title: String) {
         cdkBuilder.title(title)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -605,17 +567,17 @@ public open class CfnPushTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty,
     ) : APNSPushNotificationTemplateProperty {
-      public override fun action(): String? = unwrap(this).getAction()
+      override fun action(): String? = unwrap(this).getAction()
 
-      public override fun body(): String? = unwrap(this).getBody()
+      override fun body(): String? = unwrap(this).getBody()
 
-      public override fun mediaUrl(): String? = unwrap(this).getMediaUrl()
+      override fun mediaUrl(): String? = unwrap(this).getMediaUrl()
 
-      public override fun sound(): String? = unwrap(this).getSound()
+      override fun sound(): String? = unwrap(this).getSound()
 
-      public override fun title(): String? = unwrap(this).getTitle()
+      override fun title(): String? = unwrap(this).getTitle()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {

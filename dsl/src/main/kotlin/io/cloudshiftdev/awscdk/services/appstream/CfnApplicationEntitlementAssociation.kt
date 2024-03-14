@@ -35,14 +35,11 @@ public open class CfnApplicationEntitlementAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun applicationIdentifier(applicationIdentifier: String) {
-    }
+    public fun applicationIdentifier(applicationIdentifier: String)
 
-    public fun entitlementName(entitlementName: String) {
-    }
+    public fun entitlementName(entitlementName: String)
 
-    public fun stackName(stackName: String) {
-    }
+    public fun stackName(stackName: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnApplicationEntitlementAssociation internal constructor(
         software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation.Builder.create(scope,
         id)
 
-    public override fun applicationIdentifier(applicationIdentifier: String) {
+    override fun applicationIdentifier(applicationIdentifier: String) {
       cdkBuilder.applicationIdentifier(applicationIdentifier)
     }
 
-    public override fun entitlementName(entitlementName: String) {
+    override fun entitlementName(entitlementName: String) {
       cdkBuilder.entitlementName(entitlementName)
     }
 
-    public override fun stackName(stackName: String) {
+    override fun stackName(stackName: String) {
       cdkBuilder.stackName(stackName)
     }
 

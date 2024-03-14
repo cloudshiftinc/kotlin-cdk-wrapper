@@ -13,36 +13,32 @@ public interface OidcEndpoints {
   public fun userInfo(): String
 
   public interface Builder {
-    public fun authorization(authorization: String) {
-    }
+    public fun authorization(authorization: String)
 
-    public fun jwksUri(jwksUri: String) {
-    }
+    public fun jwksUri(jwksUri: String)
 
-    public fun token(token: String) {
-    }
+    public fun token(token: String)
 
-    public fun userInfo(userInfo: String) {
-    }
+    public fun userInfo(userInfo: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.OidcEndpoints.Builder =
         software.amazon.awscdk.services.cognito.OidcEndpoints.builder()
 
-    public override fun authorization(authorization: String) {
+    override fun authorization(authorization: String) {
       cdkBuilder.authorization(authorization)
     }
 
-    public override fun jwksUri(jwksUri: String) {
+    override fun jwksUri(jwksUri: String) {
       cdkBuilder.jwksUri(jwksUri)
     }
 
-    public override fun token(token: String) {
+    override fun token(token: String) {
       cdkBuilder.token(token)
     }
 
-    public override fun userInfo(userInfo: String) {
+    override fun userInfo(userInfo: String) {
       cdkBuilder.userInfo(userInfo)
     }
 
@@ -52,13 +48,13 @@ public interface OidcEndpoints {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.OidcEndpoints,
   ) : OidcEndpoints {
-    public override fun authorization(): String = unwrap(this).getAuthorization()
+    override fun authorization(): String = unwrap(this).getAuthorization()
 
-    public override fun jwksUri(): String = unwrap(this).getJwksUri()
+    override fun jwksUri(): String = unwrap(this).getJwksUri()
 
-    public override fun token(): String = unwrap(this).getToken()
+    override fun token(): String = unwrap(this).getToken()
 
-    public override fun userInfo(): String = unwrap(this).getUserInfo()
+    override fun userInfo(): String = unwrap(this).getUserInfo()
   }
 
   public companion object {

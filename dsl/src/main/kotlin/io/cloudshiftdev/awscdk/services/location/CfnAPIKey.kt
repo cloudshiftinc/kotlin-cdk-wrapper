@@ -105,46 +105,33 @@ public open class CfnAPIKey internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun expireTime(expireTime: String) {
-    }
+    public fun expireTime(expireTime: String)
 
-    public fun forceDelete(forceDelete: Boolean) {
-    }
+    public fun forceDelete(forceDelete: Boolean)
 
-    public fun forceDelete(forceDelete: IResolvable) {
-    }
+    public fun forceDelete(forceDelete: IResolvable)
 
-    public fun forceUpdate(forceUpdate: Boolean) {
-    }
+    public fun forceUpdate(forceUpdate: Boolean)
 
-    public fun forceUpdate(forceUpdate: IResolvable) {
-    }
+    public fun forceUpdate(forceUpdate: IResolvable)
 
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun noExpiry(noExpiry: Boolean) {
-    }
+    public fun noExpiry(noExpiry: Boolean)
 
-    public fun noExpiry(noExpiry: IResolvable) {
-    }
+    public fun noExpiry(noExpiry: IResolvable)
 
-    public fun restrictions(restrictions: IResolvable) {
-    }
+    public fun restrictions(restrictions: IResolvable)
 
-    public fun restrictions(restrictions: ApiKeyRestrictionsProperty) {
-    }
+    public fun restrictions(restrictions: ApiKeyRestrictionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28df308d066f6b9260576bb3b0f83accbb556eecab505dc18fb18a99fee74a1d")
-    public fun restrictions(restrictions: ApiKeyRestrictionsProperty.Builder.() -> Unit) {
-    }
+    public fun restrictions(restrictions: ApiKeyRestrictionsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -154,56 +141,56 @@ public open class CfnAPIKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnAPIKey.Builder =
         software.amazon.awscdk.services.location.CfnAPIKey.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun expireTime(expireTime: String) {
+    override fun expireTime(expireTime: String) {
       cdkBuilder.expireTime(expireTime)
     }
 
-    public override fun forceDelete(forceDelete: Boolean) {
+    override fun forceDelete(forceDelete: Boolean) {
       cdkBuilder.forceDelete(forceDelete)
     }
 
-    public override fun forceDelete(forceDelete: IResolvable) {
+    override fun forceDelete(forceDelete: IResolvable) {
       cdkBuilder.forceDelete(forceDelete.let(IResolvable::unwrap))
     }
 
-    public override fun forceUpdate(forceUpdate: Boolean) {
+    override fun forceUpdate(forceUpdate: Boolean) {
       cdkBuilder.forceUpdate(forceUpdate)
     }
 
-    public override fun forceUpdate(forceUpdate: IResolvable) {
+    override fun forceUpdate(forceUpdate: IResolvable) {
       cdkBuilder.forceUpdate(forceUpdate.let(IResolvable::unwrap))
     }
 
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun noExpiry(noExpiry: Boolean) {
+    override fun noExpiry(noExpiry: Boolean) {
       cdkBuilder.noExpiry(noExpiry)
     }
 
-    public override fun noExpiry(noExpiry: IResolvable) {
+    override fun noExpiry(noExpiry: IResolvable) {
       cdkBuilder.noExpiry(noExpiry.let(IResolvable::unwrap))
     }
 
-    public override fun restrictions(restrictions: IResolvable) {
+    override fun restrictions(restrictions: IResolvable) {
       cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
     }
 
-    public override fun restrictions(restrictions: ApiKeyRestrictionsProperty) {
+    override fun restrictions(restrictions: ApiKeyRestrictionsProperty) {
       cdkBuilder.restrictions(restrictions.let(ApiKeyRestrictionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28df308d066f6b9260576bb3b0f83accbb556eecab505dc18fb18a99fee74a1d")
-    public override fun restrictions(restrictions: ApiKeyRestrictionsProperty.Builder.() -> Unit):
-        Unit = restrictions(ApiKeyRestrictionsProperty(restrictions))
+    override fun restrictions(restrictions: ApiKeyRestrictionsProperty.Builder.() -> Unit): Unit =
+        restrictions(ApiKeyRestrictionsProperty(restrictions))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -239,14 +226,11 @@ public open class CfnAPIKey internal constructor(
     public fun allowResources(): List<String>
 
     public interface Builder {
-      public fun allowActions(allowActions: List<String>) {
-      }
+      public fun allowActions(allowActions: List<String>)
 
-      public fun allowReferers(allowReferers: List<String>) {
-      }
+      public fun allowReferers(allowReferers: List<String>)
 
-      public fun allowResources(allowResources: List<String>) {
-      }
+      public fun allowResources(allowResources: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -254,15 +238,15 @@ public open class CfnAPIKey internal constructor(
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty.Builder =
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty.builder()
 
-      public override fun allowActions(allowActions: List<String>) {
+      override fun allowActions(allowActions: List<String>) {
         cdkBuilder.allowActions(allowActions)
       }
 
-      public override fun allowReferers(allowReferers: List<String>) {
+      override fun allowReferers(allowReferers: List<String>) {
         cdkBuilder.allowReferers(allowReferers)
       }
 
-      public override fun allowResources(allowResources: List<String>) {
+      override fun allowResources(allowResources: List<String>) {
         cdkBuilder.allowResources(allowResources)
       }
 
@@ -275,14 +259,11 @@ public open class CfnAPIKey internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty,
     ) : ApiKeyRestrictionsProperty {
-      public override fun allowActions(): List<String> = unwrap(this).getAllowActions() ?:
-          emptyList()
+      override fun allowActions(): List<String> = unwrap(this).getAllowActions() ?: emptyList()
 
-      public override fun allowReferers(): List<String> = unwrap(this).getAllowReferers() ?:
-          emptyList()
+      override fun allowReferers(): List<String> = unwrap(this).getAllowReferers() ?: emptyList()
 
-      public override fun allowResources(): List<String> = unwrap(this).getAllowResources() ?:
-          emptyList()
+      override fun allowResources(): List<String> = unwrap(this).getAllowResources() ?: emptyList()
     }
 
     public companion object {

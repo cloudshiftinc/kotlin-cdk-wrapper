@@ -15,12 +15,10 @@ public interface EncryptionAtRestOptions {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun kmsKey(kmsKey: IKey) {
-    }
+    public fun kmsKey(kmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -29,12 +27,12 @@ public interface EncryptionAtRestOptions {
         software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun kmsKey(kmsKey: IKey) {
+    override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
     }
 
@@ -46,10 +44,10 @@ public interface EncryptionAtRestOptions {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions,
   ) : EncryptionAtRestOptions {
     @Deprecated(message = "deprecated in CDK")
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
+    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
   }
 
   public companion object {

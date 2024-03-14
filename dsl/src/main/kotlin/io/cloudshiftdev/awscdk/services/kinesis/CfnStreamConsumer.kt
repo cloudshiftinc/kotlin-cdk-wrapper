@@ -41,11 +41,9 @@ public open class CfnStreamConsumer internal constructor(
   }
 
   public interface Builder {
-    public fun consumerName(consumerName: String) {
-    }
+    public fun consumerName(consumerName: String)
 
-    public fun streamArn(streamArn: String) {
-    }
+    public fun streamArn(streamArn: String)
   }
 
   private class BuilderImpl(
@@ -55,11 +53,11 @@ public open class CfnStreamConsumer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kinesis.CfnStreamConsumer.Builder =
         software.amazon.awscdk.services.kinesis.CfnStreamConsumer.Builder.create(scope, id)
 
-    public override fun consumerName(consumerName: String) {
+    override fun consumerName(consumerName: String) {
       cdkBuilder.consumerName(consumerName)
     }
 
-    public override fun streamArn(streamArn: String) {
+    override fun streamArn(streamArn: String) {
       cdkBuilder.streamArn(streamArn)
     }
 

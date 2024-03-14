@@ -47,10 +47,10 @@ public interface IAction {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.IAction,
   ) : IAction {
-    public override fun actionProperties(): ActionProperties =
+    override fun actionProperties(): ActionProperties =
         unwrap(this).getActionProperties().let(ActionProperties::wrap)
 
-    public override fun bind(
+    override fun bind(
       arg0: Construct,
       arg1: IStage,
       arg2: ActionBindOptions,
@@ -59,19 +59,19 @@ public interface IAction {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("955d9e45cf1f3d172efb2ef89796d9b65af874c3315b9773b499eab1fdc76ba9")
-    public override fun bind(
+    override fun bind(
       arg0: Construct,
       arg1: IStage,
       arg2: ActionBindOptions.Builder.() -> Unit,
     ): ActionConfig = bind(arg0, arg1, ActionBindOptions(arg2))
 
-    public override fun onStateChange(arg0: String): Rule =
+    override fun onStateChange(arg0: String): Rule =
         unwrap(this).onStateChange(arg0).let(Rule::wrap)
 
-    public override fun onStateChange(arg0: String, arg1: IRuleTarget): Rule =
+    override fun onStateChange(arg0: String, arg1: IRuleTarget): Rule =
         unwrap(this).onStateChange(arg0, arg1.let(IRuleTarget::unwrap)).let(Rule::wrap)
 
-    public override fun onStateChange(
+    override fun onStateChange(
       arg0: String,
       arg1: IRuleTarget,
       arg2: RuleProps,
@@ -80,7 +80,7 @@ public interface IAction {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("83ca362934f6f86114f7601f1f93b6cd0f94a44e6ee3262ddc4ccfd9f4986058")
-    public override fun onStateChange(
+    override fun onStateChange(
       arg0: String,
       arg1: IRuleTarget,
       arg2: RuleProps.Builder.() -> Unit,

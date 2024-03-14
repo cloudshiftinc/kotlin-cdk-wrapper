@@ -23,32 +23,23 @@ public interface JsonWithStandardFieldProps {
   public fun user(): Boolean
 
   public interface Builder {
-    public fun caller(caller: Boolean) {
-    }
+    public fun caller(caller: Boolean)
 
-    public fun httpMethod(httpMethod: Boolean) {
-    }
+    public fun httpMethod(httpMethod: Boolean)
 
-    public fun ip(ip: Boolean) {
-    }
+    public fun ip(ip: Boolean)
 
-    public fun protocol(protocol: Boolean) {
-    }
+    public fun protocol(protocol: Boolean)
 
-    public fun requestTime(requestTime: Boolean) {
-    }
+    public fun requestTime(requestTime: Boolean)
 
-    public fun resourcePath(resourcePath: Boolean) {
-    }
+    public fun resourcePath(resourcePath: Boolean)
 
-    public fun responseLength(responseLength: Boolean) {
-    }
+    public fun responseLength(responseLength: Boolean)
 
-    public fun status(status: Boolean) {
-    }
+    public fun status(status: Boolean)
 
-    public fun user(user: Boolean) {
-    }
+    public fun user(user: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -56,39 +47,39 @@ public interface JsonWithStandardFieldProps {
         software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps.Builder =
         software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps.builder()
 
-    public override fun caller(caller: Boolean) {
+    override fun caller(caller: Boolean) {
       cdkBuilder.caller(caller)
     }
 
-    public override fun httpMethod(httpMethod: Boolean) {
+    override fun httpMethod(httpMethod: Boolean) {
       cdkBuilder.httpMethod(httpMethod)
     }
 
-    public override fun ip(ip: Boolean) {
+    override fun ip(ip: Boolean) {
       cdkBuilder.ip(ip)
     }
 
-    public override fun protocol(protocol: Boolean) {
+    override fun protocol(protocol: Boolean) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun requestTime(requestTime: Boolean) {
+    override fun requestTime(requestTime: Boolean) {
       cdkBuilder.requestTime(requestTime)
     }
 
-    public override fun resourcePath(resourcePath: Boolean) {
+    override fun resourcePath(resourcePath: Boolean) {
       cdkBuilder.resourcePath(resourcePath)
     }
 
-    public override fun responseLength(responseLength: Boolean) {
+    override fun responseLength(responseLength: Boolean) {
       cdkBuilder.responseLength(responseLength)
     }
 
-    public override fun status(status: Boolean) {
+    override fun status(status: Boolean) {
       cdkBuilder.status(status)
     }
 
-    public override fun user(user: Boolean) {
+    override fun user(user: Boolean) {
       cdkBuilder.user(user)
     }
 
@@ -99,23 +90,23 @@ public interface JsonWithStandardFieldProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps,
   ) : JsonWithStandardFieldProps {
-    public override fun caller(): Boolean = unwrap(this).getCaller()
+    override fun caller(): Boolean = unwrap(this).getCaller()
 
-    public override fun httpMethod(): Boolean = unwrap(this).getHttpMethod()
+    override fun httpMethod(): Boolean = unwrap(this).getHttpMethod()
 
-    public override fun ip(): Boolean = unwrap(this).getIp()
+    override fun ip(): Boolean = unwrap(this).getIp()
 
-    public override fun protocol(): Boolean = unwrap(this).getProtocol()
+    override fun protocol(): Boolean = unwrap(this).getProtocol()
 
-    public override fun requestTime(): Boolean = unwrap(this).getRequestTime()
+    override fun requestTime(): Boolean = unwrap(this).getRequestTime()
 
-    public override fun resourcePath(): Boolean = unwrap(this).getResourcePath()
+    override fun resourcePath(): Boolean = unwrap(this).getResourcePath()
 
-    public override fun responseLength(): Boolean = unwrap(this).getResponseLength()
+    override fun responseLength(): Boolean = unwrap(this).getResponseLength()
 
-    public override fun status(): Boolean = unwrap(this).getStatus()
+    override fun status(): Boolean = unwrap(this).getStatus()
 
-    public override fun user(): Boolean = unwrap(this).getUser()
+    override fun user(): Boolean = unwrap(this).getUser()
   }
 
   public companion object {

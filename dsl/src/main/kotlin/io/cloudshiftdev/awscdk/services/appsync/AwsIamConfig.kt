@@ -9,22 +9,20 @@ public interface AwsIamConfig {
   public fun signingServiceName(): String
 
   public interface Builder {
-    public fun signingRegion(signingRegion: String) {
-    }
+    public fun signingRegion(signingRegion: String)
 
-    public fun signingServiceName(signingServiceName: String) {
-    }
+    public fun signingServiceName(signingServiceName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.AwsIamConfig.Builder =
         software.amazon.awscdk.services.appsync.AwsIamConfig.builder()
 
-    public override fun signingRegion(signingRegion: String) {
+    override fun signingRegion(signingRegion: String) {
       cdkBuilder.signingRegion(signingRegion)
     }
 
-    public override fun signingServiceName(signingServiceName: String) {
+    override fun signingServiceName(signingServiceName: String) {
       cdkBuilder.signingServiceName(signingServiceName)
     }
 
@@ -34,9 +32,9 @@ public interface AwsIamConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig,
   ) : AwsIamConfig {
-    public override fun signingRegion(): String = unwrap(this).getSigningRegion()
+    override fun signingRegion(): String = unwrap(this).getSigningRegion()
 
-    public override fun signingServiceName(): String = unwrap(this).getSigningServiceName()
+    override fun signingServiceName(): String = unwrap(this).getSigningServiceName()
   }
 
   public companion object {

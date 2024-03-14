@@ -56,20 +56,15 @@ public open class CfnParameterGroup internal constructor(
   }
 
   public interface Builder {
-    public fun cacheParameterGroupFamily(cacheParameterGroupFamily: String) {
-    }
+    public fun cacheParameterGroupFamily(cacheParameterGroupFamily: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun properties(properties: IResolvable) {
-    }
+    public fun properties(properties: IResolvable)
 
-    public fun properties(properties: Map<String, String>) {
-    }
+    public fun properties(properties: Map<String, String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnParameterGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnParameterGroup.Builder =
         software.amazon.awscdk.services.elasticache.CfnParameterGroup.Builder.create(scope, id)
 
-    public override fun cacheParameterGroupFamily(cacheParameterGroupFamily: String) {
+    override fun cacheParameterGroupFamily(cacheParameterGroupFamily: String) {
       cdkBuilder.cacheParameterGroupFamily(cacheParameterGroupFamily)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun properties(properties: IResolvable) {
+    override fun properties(properties: IResolvable) {
       cdkBuilder.properties(properties.let(IResolvable::unwrap))
     }
 
-    public override fun properties(properties: Map<String, String>) {
+    override fun properties(properties: Map<String, String>) {
       cdkBuilder.properties(properties)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

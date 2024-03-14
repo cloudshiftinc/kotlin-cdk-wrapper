@@ -135,66 +135,47 @@ public open class CfnImageBuilder internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun accessEndpoints(accessEndpoints: IResolvable) {
-    }
+    public fun accessEndpoints(accessEndpoints: IResolvable)
 
-    public fun accessEndpoints(accessEndpoints: List<Any>) {
-    }
+    public fun accessEndpoints(accessEndpoints: List<Any>)
 
-    public fun appstreamAgentVersion(appstreamAgentVersion: String) {
-    }
+    public fun appstreamAgentVersion(appstreamAgentVersion: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun domainJoinInfo(domainJoinInfo: IResolvable) {
-    }
+    public fun domainJoinInfo(domainJoinInfo: IResolvable)
 
-    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
-    }
+    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("892d21893f8c8149e1f2dca8b0912cf523bbfd26d9a9398ea22035f82b3dfb53")
-    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit) {
-    }
+    public fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit)
 
-    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
-    }
+    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean)
 
-    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-    }
+    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable)
 
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun imageArn(imageArn: String) {
-    }
+    public fun imageArn(imageArn: String)
 
-    public fun imageName(imageName: String) {
-    }
+    public fun imageName(imageName: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7eaa48dba7fd3c1831dd408ef33113cddb0e123a7059af0a186c78dd5bc1531a")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -204,82 +185,82 @@ public open class CfnImageBuilder internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnImageBuilder.Builder =
         software.amazon.awscdk.services.appstream.CfnImageBuilder.Builder.create(scope, id)
 
-    public override fun accessEndpoints(accessEndpoints: IResolvable) {
+    override fun accessEndpoints(accessEndpoints: IResolvable) {
       cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
     }
 
-    public override fun accessEndpoints(accessEndpoints: List<Any>) {
+    override fun accessEndpoints(accessEndpoints: List<Any>) {
       cdkBuilder.accessEndpoints(accessEndpoints)
     }
 
-    public override fun appstreamAgentVersion(appstreamAgentVersion: String) {
+    override fun appstreamAgentVersion(appstreamAgentVersion: String) {
       cdkBuilder.appstreamAgentVersion(appstreamAgentVersion)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun domainJoinInfo(domainJoinInfo: IResolvable) {
+    override fun domainJoinInfo(domainJoinInfo: IResolvable) {
       cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable::unwrap))
     }
 
-    public override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
+    override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
       cdkBuilder.domainJoinInfo(domainJoinInfo.let(DomainJoinInfoProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("892d21893f8c8149e1f2dca8b0912cf523bbfd26d9a9398ea22035f82b3dfb53")
-    public override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit):
-        Unit = domainJoinInfo(DomainJoinInfoProperty(domainJoinInfo))
+    override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty.Builder.() -> Unit): Unit =
+        domainJoinInfo(DomainJoinInfoProperty(domainJoinInfo))
 
-    public override fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
+    override fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
       cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess)
     }
 
-    public override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
+    override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
       cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
     }
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun imageArn(imageArn: String) {
+    override fun imageArn(imageArn: String) {
       cdkBuilder.imageArn(imageArn)
     }
 
-    public override fun imageName(imageName: String) {
+    override fun imageName(imageName: String) {
       cdkBuilder.imageName(imageName)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7eaa48dba7fd3c1831dd408ef33113cddb0e123a7059af0a186c78dd5bc1531a")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnImageBuilder =
@@ -314,11 +295,9 @@ public open class CfnImageBuilder internal constructor(
         unwrap(this).getOrganizationalUnitDistinguishedName()
 
     public interface Builder {
-      public fun directoryName(directoryName: String) {
-      }
+      public fun directoryName(directoryName: String)
 
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-      }
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -326,11 +305,11 @@ public open class CfnImageBuilder internal constructor(
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty.builder()
 
-      public override fun directoryName(directoryName: String) {
+      override fun directoryName(directoryName: String) {
         cdkBuilder.directoryName(directoryName)
       }
 
-      public override
+      override
           fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
         cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
       }
@@ -344,9 +323,9 @@ public open class CfnImageBuilder internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty,
     ) : DomainJoinInfoProperty {
-      public override fun directoryName(): String? = unwrap(this).getDirectoryName()
+      override fun directoryName(): String? = unwrap(this).getDirectoryName()
 
-      public override fun organizationalUnitDistinguishedName(): String? =
+      override fun organizationalUnitDistinguishedName(): String? =
           unwrap(this).getOrganizationalUnitDistinguishedName()
     }
 
@@ -376,11 +355,9 @@ public open class CfnImageBuilder internal constructor(
     public fun vpceId(): String
 
     public interface Builder {
-      public fun endpointType(endpointType: String) {
-      }
+      public fun endpointType(endpointType: String)
 
-      public fun vpceId(vpceId: String) {
-      }
+      public fun vpceId(vpceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -388,11 +365,11 @@ public open class CfnImageBuilder internal constructor(
           software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty.builder()
 
-      public override fun endpointType(endpointType: String) {
+      override fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
       }
 
-      public override fun vpceId(vpceId: String) {
+      override fun vpceId(vpceId: String) {
         cdkBuilder.vpceId(vpceId)
       }
 
@@ -405,9 +382,9 @@ public open class CfnImageBuilder internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty,
     ) : AccessEndpointProperty {
-      public override fun endpointType(): String = unwrap(this).getEndpointType()
+      override fun endpointType(): String = unwrap(this).getEndpointType()
 
-      public override fun vpceId(): String = unwrap(this).getVpceId()
+      override fun vpceId(): String = unwrap(this).getVpceId()
     }
 
     public companion object {
@@ -436,11 +413,9 @@ public open class CfnImageBuilder internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -448,11 +423,11 @@ public open class CfnImageBuilder internal constructor(
           software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -465,10 +440,10 @@ public open class CfnImageBuilder internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {

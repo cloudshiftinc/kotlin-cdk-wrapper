@@ -16,17 +16,13 @@ public interface ResourceConfig {
   public fun volumeSize(): Size
 
   public interface Builder {
-    public fun instanceCount(instanceCount: Number) {
-    }
+    public fun instanceCount(instanceCount: Number)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
-    }
+    public fun volumeEncryptionKey(volumeEncryptionKey: IKey)
 
-    public fun volumeSize(volumeSize: Size) {
-    }
+    public fun volumeSize(volumeSize: Size)
   }
 
   private class BuilderImpl : Builder {
@@ -34,19 +30,19 @@ public interface ResourceConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig.builder()
 
-    public override fun instanceCount(instanceCount: Number) {
+    override fun instanceCount(instanceCount: Number) {
       cdkBuilder.instanceCount(instanceCount)
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
+    override fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
       cdkBuilder.volumeEncryptionKey(volumeEncryptionKey.let(IKey::unwrap))
     }
 
-    public override fun volumeSize(volumeSize: Size) {
+    override fun volumeSize(volumeSize: Size) {
       cdkBuilder.volumeSize(volumeSize.let(Size::unwrap))
     }
 
@@ -57,15 +53,15 @@ public interface ResourceConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig,
   ) : ResourceConfig {
-    public override fun instanceCount(): Number = unwrap(this).getInstanceCount()
+    override fun instanceCount(): Number = unwrap(this).getInstanceCount()
 
-    public override fun instanceType(): InstanceType =
+    override fun instanceType(): InstanceType =
         unwrap(this).getInstanceType().let(InstanceType::wrap)
 
-    public override fun volumeEncryptionKey(): IKey? =
+    override fun volumeEncryptionKey(): IKey? =
         unwrap(this).getVolumeEncryptionKey()?.let(IKey::wrap)
 
-    public override fun volumeSize(): Size = unwrap(this).getVolumeSize().let(Size::wrap)
+    override fun volumeSize(): Size = unwrap(this).getVolumeSize().let(Size::wrap)
   }
 
   public companion object {

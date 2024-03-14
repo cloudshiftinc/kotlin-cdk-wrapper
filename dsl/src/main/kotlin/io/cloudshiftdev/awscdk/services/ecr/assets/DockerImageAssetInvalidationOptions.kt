@@ -25,35 +25,25 @@ public interface DockerImageAssetInvalidationOptions {
   public fun target(): Boolean? = unwrap(this).getTarget()
 
   public interface Builder {
-    public fun buildArgs(buildArgs: Boolean) {
-    }
+    public fun buildArgs(buildArgs: Boolean)
 
-    public fun buildSecrets(buildSecrets: Boolean) {
-    }
+    public fun buildSecrets(buildSecrets: Boolean)
 
-    public fun buildSsh(buildSsh: Boolean) {
-    }
+    public fun buildSsh(buildSsh: Boolean)
 
-    public fun extraHash(extraHash: Boolean) {
-    }
+    public fun extraHash(extraHash: Boolean)
 
-    public fun `file`(`file`: Boolean) {
-    }
+    public fun `file`(`file`: Boolean)
 
-    public fun networkMode(networkMode: Boolean) {
-    }
+    public fun networkMode(networkMode: Boolean)
 
-    public fun outputs(outputs: Boolean) {
-    }
+    public fun outputs(outputs: Boolean)
 
-    public fun platform(platform: Boolean) {
-    }
+    public fun platform(platform: Boolean)
 
-    public fun repositoryName(repositoryName: Boolean) {
-    }
+    public fun repositoryName(repositoryName: Boolean)
 
-    public fun target(target: Boolean) {
-    }
+    public fun target(target: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -61,43 +51,43 @@ public interface DockerImageAssetInvalidationOptions {
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions.Builder =
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions.builder()
 
-    public override fun buildArgs(buildArgs: Boolean) {
+    override fun buildArgs(buildArgs: Boolean) {
       cdkBuilder.buildArgs(buildArgs)
     }
 
-    public override fun buildSecrets(buildSecrets: Boolean) {
+    override fun buildSecrets(buildSecrets: Boolean) {
       cdkBuilder.buildSecrets(buildSecrets)
     }
 
-    public override fun buildSsh(buildSsh: Boolean) {
+    override fun buildSsh(buildSsh: Boolean) {
       cdkBuilder.buildSsh(buildSsh)
     }
 
-    public override fun extraHash(extraHash: Boolean) {
+    override fun extraHash(extraHash: Boolean) {
       cdkBuilder.extraHash(extraHash)
     }
 
-    public override fun `file`(`file`: Boolean) {
+    override fun `file`(`file`: Boolean) {
       cdkBuilder.`file`(`file`)
     }
 
-    public override fun networkMode(networkMode: Boolean) {
+    override fun networkMode(networkMode: Boolean) {
       cdkBuilder.networkMode(networkMode)
     }
 
-    public override fun outputs(outputs: Boolean) {
+    override fun outputs(outputs: Boolean) {
       cdkBuilder.outputs(outputs)
     }
 
-    public override fun platform(platform: Boolean) {
+    override fun platform(platform: Boolean) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun repositoryName(repositoryName: Boolean) {
+    override fun repositoryName(repositoryName: Boolean) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun target(target: Boolean) {
+    override fun target(target: Boolean) {
       cdkBuilder.target(target)
     }
 
@@ -110,25 +100,25 @@ public interface DockerImageAssetInvalidationOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions,
   ) : DockerImageAssetInvalidationOptions {
-    public override fun buildArgs(): Boolean? = unwrap(this).getBuildArgs()
+    override fun buildArgs(): Boolean? = unwrap(this).getBuildArgs()
 
-    public override fun buildSecrets(): Boolean? = unwrap(this).getBuildSecrets()
+    override fun buildSecrets(): Boolean? = unwrap(this).getBuildSecrets()
 
-    public override fun buildSsh(): Boolean? = unwrap(this).getBuildSsh()
+    override fun buildSsh(): Boolean? = unwrap(this).getBuildSsh()
 
-    public override fun extraHash(): Boolean? = unwrap(this).getExtraHash()
+    override fun extraHash(): Boolean? = unwrap(this).getExtraHash()
 
-    public override fun `file`(): Boolean? = unwrap(this).getFile()
+    override fun `file`(): Boolean? = unwrap(this).getFile()
 
-    public override fun networkMode(): Boolean? = unwrap(this).getNetworkMode()
+    override fun networkMode(): Boolean? = unwrap(this).getNetworkMode()
 
-    public override fun outputs(): Boolean? = unwrap(this).getOutputs()
+    override fun outputs(): Boolean? = unwrap(this).getOutputs()
 
-    public override fun platform(): Boolean? = unwrap(this).getPlatform()
+    override fun platform(): Boolean? = unwrap(this).getPlatform()
 
-    public override fun repositoryName(): Boolean? = unwrap(this).getRepositoryName()
+    override fun repositoryName(): Boolean? = unwrap(this).getRepositoryName()
 
-    public override fun target(): Boolean? = unwrap(this).getTarget()
+    override fun target(): Boolean? = unwrap(this).getTarget()
   }
 
   public companion object {

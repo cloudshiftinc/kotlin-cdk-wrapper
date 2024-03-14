@@ -23,28 +23,27 @@ public interface IDatabaseProxy : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.IDatabaseProxy,
   ) : IDatabaseProxy {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun dbProxyArn(): String = unwrap(this).getDbProxyArn()
+    override fun dbProxyArn(): String = unwrap(this).getDbProxyArn()
 
-    public override fun dbProxyName(): String = unwrap(this).getDbProxyName()
+    override fun dbProxyName(): String = unwrap(this).getDbProxyName()
 
-    public override fun endpoint(): String = unwrap(this).getEndpoint()
+    override fun endpoint(): String = unwrap(this).getEndpoint()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantConnect(arg0: IGrantable): Grant =
+    override fun grantConnect(arg0: IGrantable): Grant =
         unwrap(this).grantConnect(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantConnect(arg0: IGrantable, arg1: String): Grant =
+    override fun grantConnect(arg0: IGrantable, arg1: String): Grant =
         unwrap(this).grantConnect(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

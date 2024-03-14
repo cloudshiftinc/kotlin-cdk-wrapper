@@ -43,14 +43,11 @@ public open class CfnSoftwarePackage internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun packageName(packageName: String) {
-    }
+    public fun packageName(packageName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -60,15 +57,15 @@ public open class CfnSoftwarePackage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnSoftwarePackage.Builder =
         software.amazon.awscdk.services.iot.CfnSoftwarePackage.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun packageName(packageName: String) {
+    override fun packageName(packageName: String) {
       cdkBuilder.packageName(packageName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

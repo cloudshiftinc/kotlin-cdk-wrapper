@@ -10,22 +10,20 @@ public interface AllocateVpcIpv6CidrRequest {
   public fun vpcId(): String
 
   public interface Builder {
-    public fun scope(scope: Construct) {
-    }
+    public fun scope(scope: Construct)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest.Builder =
         software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest.builder()
 
-    public override fun scope(scope: Construct) {
+    override fun scope(scope: Construct) {
       cdkBuilder.scope(scope.let(Construct::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -36,9 +34,9 @@ public interface AllocateVpcIpv6CidrRequest {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AllocateVpcIpv6CidrRequest,
   ) : AllocateVpcIpv6CidrRequest {
-    public override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
+    override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
 
-    public override fun vpcId(): String = unwrap(this).getVpcId()
+    override fun vpcId(): String = unwrap(this).getVpcId()
   }
 
   public companion object {

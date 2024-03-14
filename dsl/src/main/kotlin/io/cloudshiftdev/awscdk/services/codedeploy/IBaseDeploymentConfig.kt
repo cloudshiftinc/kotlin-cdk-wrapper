@@ -10,9 +10,9 @@ public interface IBaseDeploymentConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.IBaseDeploymentConfig,
   ) : IBaseDeploymentConfig {
-    public override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
+    override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
 
-    public override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
+    override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
   }
 
   public companion object {

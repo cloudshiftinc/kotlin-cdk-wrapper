@@ -12,22 +12,18 @@ public interface ResultConfiguration {
   public fun outputLocation(): Location? = unwrap(this).getOutputLocation()?.let(Location::wrap)
 
   public interface Builder {
-    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
-    }
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bee7008d40e5551ab7be6c4bf800ba632be586de8e46f75a362658c46ea1196a")
     public
-        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration.Builder.() -> Unit) {
-    }
+        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration.Builder.() -> Unit)
 
-    public fun outputLocation(outputLocation: Location) {
-    }
+    public fun outputLocation(outputLocation: Location)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("946c2aa2db98360f318aef4e7640a30dbef5168659f0b8d99722c1997ca1f670")
-    public fun outputLocation(outputLocation: Location.Builder.() -> Unit) {
-    }
+    public fun outputLocation(outputLocation: Location.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -35,23 +31,23 @@ public interface ResultConfiguration {
         software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration.builder()
 
-    public override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bee7008d40e5551ab7be6c4bf800ba632be586de8e46f75a362658c46ea1196a")
-    public override
+    override
         fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration.Builder.() -> Unit):
         Unit = encryptionConfiguration(EncryptionConfiguration(encryptionConfiguration))
 
-    public override fun outputLocation(outputLocation: Location) {
+    override fun outputLocation(outputLocation: Location) {
       cdkBuilder.outputLocation(outputLocation.let(Location::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("946c2aa2db98360f318aef4e7640a30dbef5168659f0b8d99722c1997ca1f670")
-    public override fun outputLocation(outputLocation: Location.Builder.() -> Unit): Unit =
+    override fun outputLocation(outputLocation: Location.Builder.() -> Unit): Unit =
         outputLocation(Location(outputLocation))
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration =
@@ -61,11 +57,10 @@ public interface ResultConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration,
   ) : ResultConfiguration {
-    public override fun encryptionConfiguration(): EncryptionConfiguration? =
+    override fun encryptionConfiguration(): EncryptionConfiguration? =
         unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
 
-    public override fun outputLocation(): Location? =
-        unwrap(this).getOutputLocation()?.let(Location::wrap)
+    override fun outputLocation(): Location? = unwrap(this).getOutputLocation()?.let(Location::wrap)
   }
 
   public companion object {

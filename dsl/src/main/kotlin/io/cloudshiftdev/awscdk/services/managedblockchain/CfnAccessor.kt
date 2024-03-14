@@ -51,14 +51,11 @@ public open class CfnAccessor internal constructor(
   }
 
   public interface Builder {
-    public fun accessorType(accessorType: String) {
-    }
+    public fun accessorType(accessorType: String)
 
-    public fun networkType(networkType: String) {
-    }
+    public fun networkType(networkType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -68,15 +65,15 @@ public open class CfnAccessor internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.managedblockchain.CfnAccessor.Builder =
         software.amazon.awscdk.services.managedblockchain.CfnAccessor.Builder.create(scope, id)
 
-    public override fun accessorType(accessorType: String) {
+    override fun accessorType(accessorType: String) {
       cdkBuilder.accessorType(accessorType)
     }
 
-    public override fun networkType(networkType: String) {
+    override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

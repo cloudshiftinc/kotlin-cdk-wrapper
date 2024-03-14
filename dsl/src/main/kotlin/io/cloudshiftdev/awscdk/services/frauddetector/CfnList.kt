@@ -59,20 +59,15 @@ public open class CfnList internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun elements(elements: List<String>) {
-    }
+    public fun elements(elements: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun variableType(variableType: String) {
-    }
+    public fun variableType(variableType: String)
   }
 
   private class BuilderImpl(
@@ -82,23 +77,23 @@ public open class CfnList internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.frauddetector.CfnList.Builder =
         software.amazon.awscdk.services.frauddetector.CfnList.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun elements(elements: List<String>) {
+    override fun elements(elements: List<String>) {
       cdkBuilder.elements(elements)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun variableType(variableType: String) {
+    override fun variableType(variableType: String) {
       cdkBuilder.variableType(variableType)
     }
 

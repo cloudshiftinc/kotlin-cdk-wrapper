@@ -64,22 +64,17 @@ public open class CfnTransitGatewayConnect internal constructor(
   }
 
   public interface Builder {
-    public fun options(options: IResolvable) {
-    }
+    public fun options(options: IResolvable)
 
-    public fun options(options: TransitGatewayConnectOptionsProperty) {
-    }
+    public fun options(options: TransitGatewayConnectOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21b92d09de996ca5f42748c09084837f9a531a7edcfeaebde1daee4f1162274d")
-    public fun options(options: TransitGatewayConnectOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun options(options: TransitGatewayConnectOptionsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
-    }
+    public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String)
   }
 
   private class BuilderImpl(
@@ -89,25 +84,24 @@ public open class CfnTransitGatewayConnect internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.Builder =
         software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.Builder.create(scope, id)
 
-    public override fun options(options: IResolvable) {
+    override fun options(options: IResolvable) {
       cdkBuilder.options(options.let(IResolvable::unwrap))
     }
 
-    public override fun options(options: TransitGatewayConnectOptionsProperty) {
+    override fun options(options: TransitGatewayConnectOptionsProperty) {
       cdkBuilder.options(options.let(TransitGatewayConnectOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21b92d09de996ca5f42748c09084837f9a531a7edcfeaebde1daee4f1162274d")
-    public override fun options(options: TransitGatewayConnectOptionsProperty.Builder.() -> Unit):
-        Unit = options(TransitGatewayConnectOptionsProperty(options))
+    override fun options(options: TransitGatewayConnectOptionsProperty.Builder.() -> Unit): Unit =
+        options(TransitGatewayConnectOptionsProperty(options))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override
-        fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
+    override fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
       cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
     }
 
@@ -140,8 +134,7 @@ public open class CfnTransitGatewayConnect internal constructor(
     public fun protocol(): String? = unwrap(this).getProtocol()
 
     public interface Builder {
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -150,7 +143,7 @@ public open class CfnTransitGatewayConnect internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty.builder()
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -163,7 +156,7 @@ public open class CfnTransitGatewayConnect internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty,
     ) : TransitGatewayConnectOptionsProperty {
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
     }
 
     public companion object {

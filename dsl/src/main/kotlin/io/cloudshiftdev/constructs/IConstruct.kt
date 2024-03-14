@@ -6,7 +6,7 @@ public interface IConstruct : IDependable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.constructs.IConstruct,
   ) : IConstruct {
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
   }
 
   public companion object {

@@ -11,29 +11,26 @@ public interface InventoryDestination {
   public fun prefix(): String? = unwrap(this).getPrefix()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun bucketOwner(bucketOwner: String) {
-    }
+    public fun bucketOwner(bucketOwner: String)
 
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.InventoryDestination.Builder =
         software.amazon.awscdk.services.s3.InventoryDestination.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun bucketOwner(bucketOwner: String) {
+    override fun bucketOwner(bucketOwner: String) {
       cdkBuilder.bucketOwner(bucketOwner)
     }
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
@@ -43,11 +40,11 @@ public interface InventoryDestination {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.InventoryDestination,
   ) : InventoryDestination {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+    override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
   }
 
   public companion object {

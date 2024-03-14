@@ -52,14 +52,11 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
   }
 
   public interface Builder {
-    public fun options(options: Any) {
-    }
+    public fun options(options: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitGatewayId(transitGatewayId: String) {
-    }
+    public fun transitGatewayId(transitGatewayId: String)
   }
 
   private class BuilderImpl(
@@ -71,15 +68,15 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
         software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.Builder.create(scope,
         id)
 
-    public override fun options(options: Any) {
+    override fun options(options: Any) {
       cdkBuilder.options(options)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitGatewayId(transitGatewayId: String) {
+    override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
     }
 
@@ -118,14 +115,11 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
     public fun staticSourcesSupport(): String? = unwrap(this).getStaticSourcesSupport()
 
     public interface Builder {
-      public fun autoAcceptSharedAssociations(autoAcceptSharedAssociations: String) {
-      }
+      public fun autoAcceptSharedAssociations(autoAcceptSharedAssociations: String)
 
-      public fun igmpv2Support(igmpv2Support: String) {
-      }
+      public fun igmpv2Support(igmpv2Support: String)
 
-      public fun staticSourcesSupport(staticSourcesSupport: String) {
-      }
+      public fun staticSourcesSupport(staticSourcesSupport: String)
     }
 
     private class BuilderImpl : Builder {
@@ -134,15 +128,15 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty.builder()
 
-      public override fun autoAcceptSharedAssociations(autoAcceptSharedAssociations: String) {
+      override fun autoAcceptSharedAssociations(autoAcceptSharedAssociations: String) {
         cdkBuilder.autoAcceptSharedAssociations(autoAcceptSharedAssociations)
       }
 
-      public override fun igmpv2Support(igmpv2Support: String) {
+      override fun igmpv2Support(igmpv2Support: String) {
         cdkBuilder.igmpv2Support(igmpv2Support)
       }
 
-      public override fun staticSourcesSupport(staticSourcesSupport: String) {
+      override fun staticSourcesSupport(staticSourcesSupport: String) {
         cdkBuilder.staticSourcesSupport(staticSourcesSupport)
       }
 
@@ -155,12 +149,12 @@ public open class CfnTransitGatewayMulticastDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain.OptionsProperty,
     ) : OptionsProperty {
-      public override fun autoAcceptSharedAssociations(): String? =
+      override fun autoAcceptSharedAssociations(): String? =
           unwrap(this).getAutoAcceptSharedAssociations()
 
-      public override fun igmpv2Support(): String? = unwrap(this).getIgmpv2Support()
+      override fun igmpv2Support(): String? = unwrap(this).getIgmpv2Support()
 
-      public override fun staticSourcesSupport(): String? = unwrap(this).getStaticSourcesSupport()
+      override fun staticSourcesSupport(): String? = unwrap(this).getStaticSourcesSupport()
     }
 
     public companion object {

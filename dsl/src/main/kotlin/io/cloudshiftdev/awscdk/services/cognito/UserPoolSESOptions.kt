@@ -17,50 +17,44 @@ public interface UserPoolSESOptions {
   public fun sesVerifiedDomain(): String? = unwrap(this).getSesVerifiedDomain()
 
   public interface Builder {
-    public fun configurationSetName(configurationSetName: String) {
-    }
+    public fun configurationSetName(configurationSetName: String)
 
-    public fun fromEmail(fromEmail: String) {
-    }
+    public fun fromEmail(fromEmail: String)
 
-    public fun fromName(fromName: String) {
-    }
+    public fun fromName(fromName: String)
 
-    public fun replyTo(replyTo: String) {
-    }
+    public fun replyTo(replyTo: String)
 
-    public fun sesRegion(sesRegion: String) {
-    }
+    public fun sesRegion(sesRegion: String)
 
-    public fun sesVerifiedDomain(sesVerifiedDomain: String) {
-    }
+    public fun sesVerifiedDomain(sesVerifiedDomain: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.UserPoolSESOptions.Builder =
         software.amazon.awscdk.services.cognito.UserPoolSESOptions.builder()
 
-    public override fun configurationSetName(configurationSetName: String) {
+    override fun configurationSetName(configurationSetName: String) {
       cdkBuilder.configurationSetName(configurationSetName)
     }
 
-    public override fun fromEmail(fromEmail: String) {
+    override fun fromEmail(fromEmail: String) {
       cdkBuilder.fromEmail(fromEmail)
     }
 
-    public override fun fromName(fromName: String) {
+    override fun fromName(fromName: String) {
       cdkBuilder.fromName(fromName)
     }
 
-    public override fun replyTo(replyTo: String) {
+    override fun replyTo(replyTo: String) {
       cdkBuilder.replyTo(replyTo)
     }
 
-    public override fun sesRegion(sesRegion: String) {
+    override fun sesRegion(sesRegion: String) {
       cdkBuilder.sesRegion(sesRegion)
     }
 
-    public override fun sesVerifiedDomain(sesVerifiedDomain: String) {
+    override fun sesVerifiedDomain(sesVerifiedDomain: String) {
       cdkBuilder.sesVerifiedDomain(sesVerifiedDomain)
     }
 
@@ -71,17 +65,17 @@ public interface UserPoolSESOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.UserPoolSESOptions,
   ) : UserPoolSESOptions {
-    public override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
+    override fun configurationSetName(): String? = unwrap(this).getConfigurationSetName()
 
-    public override fun fromEmail(): String = unwrap(this).getFromEmail()
+    override fun fromEmail(): String = unwrap(this).getFromEmail()
 
-    public override fun fromName(): String? = unwrap(this).getFromName()
+    override fun fromName(): String? = unwrap(this).getFromName()
 
-    public override fun replyTo(): String? = unwrap(this).getReplyTo()
+    override fun replyTo(): String? = unwrap(this).getReplyTo()
 
-    public override fun sesRegion(): String? = unwrap(this).getSesRegion()
+    override fun sesRegion(): String? = unwrap(this).getSesRegion()
 
-    public override fun sesVerifiedDomain(): String? = unwrap(this).getSesVerifiedDomain()
+    override fun sesVerifiedDomain(): String? = unwrap(this).getSesVerifiedDomain()
   }
 
   public companion object {

@@ -138,62 +138,43 @@ public open class CfnDatabase internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun backupRetention(backupRetention: Boolean) {
-    }
+    public fun backupRetention(backupRetention: Boolean)
 
-    public fun backupRetention(backupRetention: IResolvable) {
-    }
+    public fun backupRetention(backupRetention: IResolvable)
 
-    public fun caCertificateIdentifier(caCertificateIdentifier: String) {
-    }
+    public fun caCertificateIdentifier(caCertificateIdentifier: String)
 
-    public fun masterDatabaseName(masterDatabaseName: String) {
-    }
+    public fun masterDatabaseName(masterDatabaseName: String)
 
-    public fun masterUserPassword(masterUserPassword: String) {
-    }
+    public fun masterUserPassword(masterUserPassword: String)
 
-    public fun masterUsername(masterUsername: String) {
-    }
+    public fun masterUsername(masterUsername: String)
 
-    public fun preferredBackupWindow(preferredBackupWindow: String) {
-    }
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun relationalDatabaseBlueprintId(relationalDatabaseBlueprintId: String) {
-    }
+    public fun relationalDatabaseBlueprintId(relationalDatabaseBlueprintId: String)
 
-    public fun relationalDatabaseBundleId(relationalDatabaseBundleId: String) {
-    }
+    public fun relationalDatabaseBundleId(relationalDatabaseBundleId: String)
 
-    public fun relationalDatabaseName(relationalDatabaseName: String) {
-    }
+    public fun relationalDatabaseName(relationalDatabaseName: String)
 
-    public fun relationalDatabaseParameters(relationalDatabaseParameters: IResolvable) {
-    }
+    public fun relationalDatabaseParameters(relationalDatabaseParameters: IResolvable)
 
-    public fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>) {
-    }
+    public fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>)
 
-    public fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean) {
-    }
+    public fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean)
 
-    public fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable) {
-    }
+    public fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -203,79 +184,79 @@ public open class CfnDatabase internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnDatabase.Builder =
         software.amazon.awscdk.services.lightsail.CfnDatabase.Builder.create(scope, id)
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun backupRetention(backupRetention: Boolean) {
+    override fun backupRetention(backupRetention: Boolean) {
       cdkBuilder.backupRetention(backupRetention)
     }
 
-    public override fun backupRetention(backupRetention: IResolvable) {
+    override fun backupRetention(backupRetention: IResolvable) {
       cdkBuilder.backupRetention(backupRetention.let(IResolvable::unwrap))
     }
 
-    public override fun caCertificateIdentifier(caCertificateIdentifier: String) {
+    override fun caCertificateIdentifier(caCertificateIdentifier: String) {
       cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)
     }
 
-    public override fun masterDatabaseName(masterDatabaseName: String) {
+    override fun masterDatabaseName(masterDatabaseName: String) {
       cdkBuilder.masterDatabaseName(masterDatabaseName)
     }
 
-    public override fun masterUserPassword(masterUserPassword: String) {
+    override fun masterUserPassword(masterUserPassword: String) {
       cdkBuilder.masterUserPassword(masterUserPassword)
     }
 
-    public override fun masterUsername(masterUsername: String) {
+    override fun masterUsername(masterUsername: String) {
       cdkBuilder.masterUsername(masterUsername)
     }
 
-    public override fun preferredBackupWindow(preferredBackupWindow: String) {
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
       cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun relationalDatabaseBlueprintId(relationalDatabaseBlueprintId: String) {
+    override fun relationalDatabaseBlueprintId(relationalDatabaseBlueprintId: String) {
       cdkBuilder.relationalDatabaseBlueprintId(relationalDatabaseBlueprintId)
     }
 
-    public override fun relationalDatabaseBundleId(relationalDatabaseBundleId: String) {
+    override fun relationalDatabaseBundleId(relationalDatabaseBundleId: String) {
       cdkBuilder.relationalDatabaseBundleId(relationalDatabaseBundleId)
     }
 
-    public override fun relationalDatabaseName(relationalDatabaseName: String) {
+    override fun relationalDatabaseName(relationalDatabaseName: String) {
       cdkBuilder.relationalDatabaseName(relationalDatabaseName)
     }
 
-    public override fun relationalDatabaseParameters(relationalDatabaseParameters: IResolvable) {
+    override fun relationalDatabaseParameters(relationalDatabaseParameters: IResolvable) {
       cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters.let(IResolvable::unwrap))
     }
 
-    public override fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>) {
+    override fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>) {
       cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters)
     }
 
-    public override fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean) {
+    override fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean) {
       cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword)
     }
 
-    public override fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable) {
+    override fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable) {
       cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -321,32 +302,23 @@ public open class CfnDatabase internal constructor(
     public fun parameterValue(): String? = unwrap(this).getParameterValue()
 
     public interface Builder {
-      public fun allowedValues(allowedValues: String) {
-      }
+      public fun allowedValues(allowedValues: String)
 
-      public fun applyMethod(applyMethod: String) {
-      }
+      public fun applyMethod(applyMethod: String)
 
-      public fun applyType(applyType: String) {
-      }
+      public fun applyType(applyType: String)
 
-      public fun dataType(dataType: String) {
-      }
+      public fun dataType(dataType: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun isModifiable(isModifiable: Boolean) {
-      }
+      public fun isModifiable(isModifiable: Boolean)
 
-      public fun isModifiable(isModifiable: IResolvable) {
-      }
+      public fun isModifiable(isModifiable: IResolvable)
 
-      public fun parameterName(parameterName: String) {
-      }
+      public fun parameterName(parameterName: String)
 
-      public fun parameterValue(parameterValue: String) {
-      }
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -355,39 +327,39 @@ public open class CfnDatabase internal constructor(
           =
           software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty.builder()
 
-      public override fun allowedValues(allowedValues: String) {
+      override fun allowedValues(allowedValues: String) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
-      public override fun applyMethod(applyMethod: String) {
+      override fun applyMethod(applyMethod: String) {
         cdkBuilder.applyMethod(applyMethod)
       }
 
-      public override fun applyType(applyType: String) {
+      override fun applyType(applyType: String) {
         cdkBuilder.applyType(applyType)
       }
 
-      public override fun dataType(dataType: String) {
+      override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun isModifiable(isModifiable: Boolean) {
+      override fun isModifiable(isModifiable: Boolean) {
         cdkBuilder.isModifiable(isModifiable)
       }
 
-      public override fun isModifiable(isModifiable: IResolvable) {
+      override fun isModifiable(isModifiable: IResolvable) {
         cdkBuilder.isModifiable(isModifiable.let(IResolvable::unwrap))
       }
 
-      public override fun parameterName(parameterName: String) {
+      override fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
       }
 
-      public override fun parameterValue(parameterValue: String) {
+      override fun parameterValue(parameterValue: String) {
         cdkBuilder.parameterValue(parameterValue)
       }
 
@@ -400,21 +372,21 @@ public open class CfnDatabase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnDatabase.RelationalDatabaseParameterProperty,
     ) : RelationalDatabaseParameterProperty {
-      public override fun allowedValues(): String? = unwrap(this).getAllowedValues()
+      override fun allowedValues(): String? = unwrap(this).getAllowedValues()
 
-      public override fun applyMethod(): String? = unwrap(this).getApplyMethod()
+      override fun applyMethod(): String? = unwrap(this).getApplyMethod()
 
-      public override fun applyType(): String? = unwrap(this).getApplyType()
+      override fun applyType(): String? = unwrap(this).getApplyType()
 
-      public override fun dataType(): String? = unwrap(this).getDataType()
+      override fun dataType(): String? = unwrap(this).getDataType()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun isModifiable(): Any? = unwrap(this).getIsModifiable()
+      override fun isModifiable(): Any? = unwrap(this).getIsModifiable()
 
-      public override fun parameterName(): String? = unwrap(this).getParameterName()
+      override fun parameterName(): String? = unwrap(this).getParameterName()
 
-      public override fun parameterValue(): String? = unwrap(this).getParameterValue()
+      override fun parameterValue(): String? = unwrap(this).getParameterValue()
     }
 
     public companion object {

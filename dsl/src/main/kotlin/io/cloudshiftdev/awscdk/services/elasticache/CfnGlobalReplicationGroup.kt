@@ -94,41 +94,29 @@ public open class CfnGlobalReplicationGroup internal constructor(
   }
 
   public interface Builder {
-    public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
-    }
+    public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean)
 
-    public fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
-    }
+    public fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable)
 
-    public fun cacheNodeType(cacheNodeType: String) {
-    }
+    public fun cacheNodeType(cacheNodeType: String)
 
-    public fun cacheParameterGroupName(cacheParameterGroupName: String) {
-    }
+    public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun globalNodeGroupCount(globalNodeGroupCount: Number) {
-    }
+    public fun globalNodeGroupCount(globalNodeGroupCount: Number)
 
-    public fun globalReplicationGroupDescription(globalReplicationGroupDescription: String) {
-    }
+    public fun globalReplicationGroupDescription(globalReplicationGroupDescription: String)
 
-    public fun globalReplicationGroupIdSuffix(globalReplicationGroupIdSuffix: String) {
-    }
+    public fun globalReplicationGroupIdSuffix(globalReplicationGroupIdSuffix: String)
 
-    public fun members(members: IResolvable) {
-    }
+    public fun members(members: IResolvable)
 
-    public fun members(members: List<Any>) {
-    }
+    public fun members(members: List<Any>)
 
-    public fun regionalConfigurations(regionalConfigurations: IResolvable) {
-    }
+    public fun regionalConfigurations(regionalConfigurations: IResolvable)
 
-    public fun regionalConfigurations(regionalConfigurations: List<Any>) {
-    }
+    public fun regionalConfigurations(regionalConfigurations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -140,52 +128,51 @@ public open class CfnGlobalReplicationGroup internal constructor(
         software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.Builder.create(scope,
         id)
 
-    public override fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
+    override fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
       cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled)
     }
 
-    public override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
+    override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
       cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun cacheNodeType(cacheNodeType: String) {
+    override fun cacheNodeType(cacheNodeType: String) {
       cdkBuilder.cacheNodeType(cacheNodeType)
     }
 
-    public override fun cacheParameterGroupName(cacheParameterGroupName: String) {
+    override fun cacheParameterGroupName(cacheParameterGroupName: String) {
       cdkBuilder.cacheParameterGroupName(cacheParameterGroupName)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun globalNodeGroupCount(globalNodeGroupCount: Number) {
+    override fun globalNodeGroupCount(globalNodeGroupCount: Number) {
       cdkBuilder.globalNodeGroupCount(globalNodeGroupCount)
     }
 
-    public override
-        fun globalReplicationGroupDescription(globalReplicationGroupDescription: String) {
+    override fun globalReplicationGroupDescription(globalReplicationGroupDescription: String) {
       cdkBuilder.globalReplicationGroupDescription(globalReplicationGroupDescription)
     }
 
-    public override fun globalReplicationGroupIdSuffix(globalReplicationGroupIdSuffix: String) {
+    override fun globalReplicationGroupIdSuffix(globalReplicationGroupIdSuffix: String) {
       cdkBuilder.globalReplicationGroupIdSuffix(globalReplicationGroupIdSuffix)
     }
 
-    public override fun members(members: IResolvable) {
+    override fun members(members: IResolvable) {
       cdkBuilder.members(members.let(IResolvable::unwrap))
     }
 
-    public override fun members(members: List<Any>) {
+    override fun members(members: List<Any>) {
       cdkBuilder.members(members)
     }
 
-    public override fun regionalConfigurations(regionalConfigurations: IResolvable) {
+    override fun regionalConfigurations(regionalConfigurations: IResolvable) {
       cdkBuilder.regionalConfigurations(regionalConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun regionalConfigurations(regionalConfigurations: List<Any>) {
+    override fun regionalConfigurations(regionalConfigurations: List<Any>) {
       cdkBuilder.regionalConfigurations(regionalConfigurations)
     }
 
@@ -223,14 +210,11 @@ public open class CfnGlobalReplicationGroup internal constructor(
     public fun role(): String? = unwrap(this).getRole()
 
     public interface Builder {
-      public fun replicationGroupId(replicationGroupId: String) {
-      }
+      public fun replicationGroupId(replicationGroupId: String)
 
-      public fun replicationGroupRegion(replicationGroupRegion: String) {
-      }
+      public fun replicationGroupRegion(replicationGroupRegion: String)
 
-      public fun role(role: String) {
-      }
+      public fun role(role: String)
     }
 
     private class BuilderImpl : Builder {
@@ -239,15 +223,15 @@ public open class CfnGlobalReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty.builder()
 
-      public override fun replicationGroupId(replicationGroupId: String) {
+      override fun replicationGroupId(replicationGroupId: String) {
         cdkBuilder.replicationGroupId(replicationGroupId)
       }
 
-      public override fun replicationGroupRegion(replicationGroupRegion: String) {
+      override fun replicationGroupRegion(replicationGroupRegion: String) {
         cdkBuilder.replicationGroupRegion(replicationGroupRegion)
       }
 
-      public override fun role(role: String) {
+      override fun role(role: String) {
         cdkBuilder.role(role)
       }
 
@@ -260,12 +244,11 @@ public open class CfnGlobalReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.GlobalReplicationGroupMemberProperty,
     ) : GlobalReplicationGroupMemberProperty {
-      public override fun replicationGroupId(): String? = unwrap(this).getReplicationGroupId()
+      override fun replicationGroupId(): String? = unwrap(this).getReplicationGroupId()
 
-      public override fun replicationGroupRegion(): String? =
-          unwrap(this).getReplicationGroupRegion()
+      override fun replicationGroupRegion(): String? = unwrap(this).getReplicationGroupRegion()
 
-      public override fun role(): String? = unwrap(this).getRole()
+      override fun role(): String? = unwrap(this).getRole()
     }
 
     public companion object {
@@ -296,11 +279,9 @@ public open class CfnGlobalReplicationGroup internal constructor(
         unwrap(this).getPreferredAvailabilityZones() ?: emptyList()
 
     public interface Builder {
-      public fun nodeGroupId(nodeGroupId: String) {
-      }
+      public fun nodeGroupId(nodeGroupId: String)
 
-      public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
-      }
+      public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -309,11 +290,11 @@ public open class CfnGlobalReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty.builder()
 
-      public override fun nodeGroupId(nodeGroupId: String) {
+      override fun nodeGroupId(nodeGroupId: String) {
         cdkBuilder.nodeGroupId(nodeGroupId)
       }
 
-      public override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
+      override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
         cdkBuilder.preferredAvailabilityZones(preferredAvailabilityZones)
       }
 
@@ -326,9 +307,9 @@ public open class CfnGlobalReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty,
     ) : ReshardingConfigurationProperty {
-      public override fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
+      override fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
 
-      public override fun preferredAvailabilityZones(): List<String> =
+      override fun preferredAvailabilityZones(): List<String> =
           unwrap(this).getPreferredAvailabilityZones() ?: emptyList()
     }
 
@@ -360,17 +341,13 @@ public open class CfnGlobalReplicationGroup internal constructor(
     public fun reshardingConfigurations(): Any? = unwrap(this).getReshardingConfigurations()
 
     public interface Builder {
-      public fun replicationGroupId(replicationGroupId: String) {
-      }
+      public fun replicationGroupId(replicationGroupId: String)
 
-      public fun replicationGroupRegion(replicationGroupRegion: String) {
-      }
+      public fun replicationGroupRegion(replicationGroupRegion: String)
 
-      public fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
-      }
+      public fun reshardingConfigurations(reshardingConfigurations: IResolvable)
 
-      public fun reshardingConfigurations(reshardingConfigurations: List<Any>) {
-      }
+      public fun reshardingConfigurations(reshardingConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -379,19 +356,19 @@ public open class CfnGlobalReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty.builder()
 
-      public override fun replicationGroupId(replicationGroupId: String) {
+      override fun replicationGroupId(replicationGroupId: String) {
         cdkBuilder.replicationGroupId(replicationGroupId)
       }
 
-      public override fun replicationGroupRegion(replicationGroupRegion: String) {
+      override fun replicationGroupRegion(replicationGroupRegion: String) {
         cdkBuilder.replicationGroupRegion(replicationGroupRegion)
       }
 
-      public override fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
+      override fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
         cdkBuilder.reshardingConfigurations(reshardingConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun reshardingConfigurations(reshardingConfigurations: List<Any>) {
+      override fun reshardingConfigurations(reshardingConfigurations: List<Any>) {
         cdkBuilder.reshardingConfigurations(reshardingConfigurations)
       }
 
@@ -404,13 +381,11 @@ public open class CfnGlobalReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty,
     ) : RegionalConfigurationProperty {
-      public override fun replicationGroupId(): String? = unwrap(this).getReplicationGroupId()
+      override fun replicationGroupId(): String? = unwrap(this).getReplicationGroupId()
 
-      public override fun replicationGroupRegion(): String? =
-          unwrap(this).getReplicationGroupRegion()
+      override fun replicationGroupRegion(): String? = unwrap(this).getReplicationGroupRegion()
 
-      public override fun reshardingConfigurations(): Any? =
-          unwrap(this).getReshardingConfigurations()
+      override fun reshardingConfigurations(): Any? = unwrap(this).getReshardingConfigurations()
     }
 
     public companion object {

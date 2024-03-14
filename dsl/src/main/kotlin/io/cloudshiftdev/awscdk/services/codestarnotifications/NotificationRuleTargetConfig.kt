@@ -9,11 +9,9 @@ public interface NotificationRuleTargetConfig {
   public fun targetType(): String
 
   public interface Builder {
-    public fun targetAddress(targetAddress: String) {
-    }
+    public fun targetAddress(targetAddress: String)
 
-    public fun targetType(targetType: String) {
-    }
+    public fun targetType(targetType: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface NotificationRuleTargetConfig {
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig.builder()
 
-    public override fun targetAddress(targetAddress: String) {
+    override fun targetAddress(targetAddress: String) {
       cdkBuilder.targetAddress(targetAddress)
     }
 
-    public override fun targetType(targetType: String) {
+    override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
 
@@ -38,9 +36,9 @@ public interface NotificationRuleTargetConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig,
   ) : NotificationRuleTargetConfig {
-    public override fun targetAddress(): String = unwrap(this).getTargetAddress()
+    override fun targetAddress(): String = unwrap(this).getTargetAddress()
 
-    public override fun targetType(): String = unwrap(this).getTargetType()
+    override fun targetType(): String = unwrap(this).getTargetType()
   }
 
   public companion object {

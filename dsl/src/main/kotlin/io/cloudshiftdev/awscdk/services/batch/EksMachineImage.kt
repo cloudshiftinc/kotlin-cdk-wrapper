@@ -10,22 +10,20 @@ public interface EksMachineImage {
       unwrap(this).getImageType()?.let(EksMachineImageType::wrap)
 
   public interface Builder {
-    public fun image(image: IMachineImage) {
-    }
+    public fun image(image: IMachineImage)
 
-    public fun imageType(imageType: EksMachineImageType) {
-    }
+    public fun imageType(imageType: EksMachineImageType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.EksMachineImage.Builder =
         software.amazon.awscdk.services.batch.EksMachineImage.builder()
 
-    public override fun image(image: IMachineImage) {
+    override fun image(image: IMachineImage) {
       cdkBuilder.image(image.let(IMachineImage::unwrap))
     }
 
-    public override fun imageType(imageType: EksMachineImageType) {
+    override fun imageType(imageType: EksMachineImageType) {
       cdkBuilder.imageType(imageType.let(EksMachineImageType::unwrap))
     }
 
@@ -35,9 +33,9 @@ public interface EksMachineImage {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.EksMachineImage,
   ) : EksMachineImage {
-    public override fun image(): IMachineImage? = unwrap(this).getImage()?.let(IMachineImage::wrap)
+    override fun image(): IMachineImage? = unwrap(this).getImage()?.let(IMachineImage::wrap)
 
-    public override fun imageType(): EksMachineImageType? =
+    override fun imageType(): EksMachineImageType? =
         unwrap(this).getImageType()?.let(EksMachineImageType::wrap)
   }
 

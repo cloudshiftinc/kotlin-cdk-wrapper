@@ -82,32 +82,23 @@ public open class CfnVPCEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: Any) {
-    }
+    public fun policyDocument(policyDocument: Any)
 
-    public fun privateDnsEnabled(privateDnsEnabled: Boolean) {
-    }
+    public fun privateDnsEnabled(privateDnsEnabled: Boolean)
 
-    public fun privateDnsEnabled(privateDnsEnabled: IResolvable) {
-    }
+    public fun privateDnsEnabled(privateDnsEnabled: IResolvable)
 
-    public fun routeTableIds(routeTableIds: List<String>) {
-    }
+    public fun routeTableIds(routeTableIds: List<String>)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun vpcEndpointType(vpcEndpointType: String) {
-    }
+    public fun vpcEndpointType(vpcEndpointType: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -117,39 +108,39 @@ public open class CfnVPCEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCEndpoint.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCEndpoint.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: Any) {
+    override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun privateDnsEnabled(privateDnsEnabled: Boolean) {
+    override fun privateDnsEnabled(privateDnsEnabled: Boolean) {
       cdkBuilder.privateDnsEnabled(privateDnsEnabled)
     }
 
-    public override fun privateDnsEnabled(privateDnsEnabled: IResolvable) {
+    override fun privateDnsEnabled(privateDnsEnabled: IResolvable) {
       cdkBuilder.privateDnsEnabled(privateDnsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun routeTableIds(routeTableIds: List<String>) {
+    override fun routeTableIds(routeTableIds: List<String>) {
       cdkBuilder.routeTableIds(routeTableIds)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun vpcEndpointType(vpcEndpointType: String) {
+    override fun vpcEndpointType(vpcEndpointType: String) {
       cdkBuilder.vpcEndpointType(vpcEndpointType)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

@@ -15,78 +15,68 @@ public open class BackupPlanRule internal constructor(
       unwrap(this).getProps().let(BackupPlanRuleProps::wrap)
 
   public interface Builder {
-    public fun backupVault(backupVault: IBackupVault) {
-    }
+    public fun backupVault(backupVault: IBackupVault)
 
-    public fun completionWindow(completionWindow: Duration) {
-    }
+    public fun completionWindow(completionWindow: Duration)
 
-    public fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
-    }
+    public fun copyActions(copyActions: List<BackupPlanCopyActionProps>)
 
-    public fun deleteAfter(deleteAfter: Duration) {
-    }
+    public fun deleteAfter(deleteAfter: Duration)
 
-    public fun enableContinuousBackup(enableContinuousBackup: Boolean) {
-    }
+    public fun enableContinuousBackup(enableContinuousBackup: Boolean)
 
-    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-    }
+    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration)
 
-    public fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
-    }
+    public fun recoveryPointTags(recoveryPointTags: Map<String, String>)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun scheduleExpression(scheduleExpression: Schedule) {
-    }
+    public fun scheduleExpression(scheduleExpression: Schedule)
 
-    public fun startWindow(startWindow: Duration) {
-    }
+    public fun startWindow(startWindow: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupPlanRule.Builder =
         software.amazon.awscdk.services.backup.BackupPlanRule.Builder.create()
 
-    public override fun backupVault(backupVault: IBackupVault) {
+    override fun backupVault(backupVault: IBackupVault) {
       cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
     }
 
-    public override fun completionWindow(completionWindow: Duration) {
+    override fun completionWindow(completionWindow: Duration) {
       cdkBuilder.completionWindow(completionWindow.let(Duration::unwrap))
     }
 
-    public override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
+    override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
       cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps::unwrap))
     }
 
-    public override fun deleteAfter(deleteAfter: Duration) {
+    override fun deleteAfter(deleteAfter: Duration) {
       cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))
     }
 
-    public override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
+    override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
       cdkBuilder.enableContinuousBackup(enableContinuousBackup)
     }
 
-    public override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
+    override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
       cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration::unwrap))
     }
 
-    public override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
+    override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
       cdkBuilder.recoveryPointTags(recoveryPointTags)
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun scheduleExpression(scheduleExpression: Schedule) {
+    override fun scheduleExpression(scheduleExpression: Schedule) {
       cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule::unwrap))
     }
 
-    public override fun startWindow(startWindow: Duration) {
+    override fun startWindow(startWindow: Duration) {
       cdkBuilder.startWindow(startWindow.let(Duration::unwrap))
     }
 

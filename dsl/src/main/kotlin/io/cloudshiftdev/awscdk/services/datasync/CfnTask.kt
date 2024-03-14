@@ -133,65 +133,47 @@ public open class CfnTask internal constructor(
       taskReportConfig(TaskReportConfigProperty(`value`))
 
   public interface Builder {
-    public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
-    }
+    public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
-    public fun destinationLocationArn(destinationLocationArn: String) {
-    }
+    public fun destinationLocationArn(destinationLocationArn: String)
 
-    public fun excludes(excludes: IResolvable) {
-    }
+    public fun excludes(excludes: IResolvable)
 
-    public fun excludes(excludes: List<Any>) {
-    }
+    public fun excludes(excludes: List<Any>)
 
-    public fun includes(includes: IResolvable) {
-    }
+    public fun includes(includes: IResolvable)
 
-    public fun includes(includes: List<Any>) {
-    }
+    public fun includes(includes: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun options(options: IResolvable) {
-    }
+    public fun options(options: IResolvable)
 
-    public fun options(options: OptionsProperty) {
-    }
+    public fun options(options: OptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72305d8f86064d3c2e00f3c3ac30d4951c2ad22f68f689c764cd4ac5db235abc")
-    public fun options(options: OptionsProperty.Builder.() -> Unit) {
-    }
+    public fun options(options: OptionsProperty.Builder.() -> Unit)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: TaskScheduleProperty) {
-    }
+    public fun schedule(schedule: TaskScheduleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc570e5121b77db56ad8465e2e4b2bca206399256c4c7ca3af30554a5dfe7e3c")
-    public fun schedule(schedule: TaskScheduleProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: TaskScheduleProperty.Builder.() -> Unit)
 
-    public fun sourceLocationArn(sourceLocationArn: String) {
-    }
+    public fun sourceLocationArn(sourceLocationArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun taskReportConfig(taskReportConfig: IResolvable) {
-    }
+    public fun taskReportConfig(taskReportConfig: IResolvable)
 
-    public fun taskReportConfig(taskReportConfig: TaskReportConfigProperty) {
-    }
+    public fun taskReportConfig(taskReportConfig: TaskReportConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be882d8209e6a0c57067438e1607b0d0fe8570513ca4471839eb30502477f1ca")
-    public fun taskReportConfig(taskReportConfig: TaskReportConfigProperty.Builder.() -> Unit) {
-    }
+    public fun taskReportConfig(taskReportConfig: TaskReportConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -201,81 +183,80 @@ public open class CfnTask internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnTask.Builder =
         software.amazon.awscdk.services.datasync.CfnTask.Builder.create(scope, id)
 
-    public override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
+    override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
       cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
     }
 
-    public override fun destinationLocationArn(destinationLocationArn: String) {
+    override fun destinationLocationArn(destinationLocationArn: String) {
       cdkBuilder.destinationLocationArn(destinationLocationArn)
     }
 
-    public override fun excludes(excludes: IResolvable) {
+    override fun excludes(excludes: IResolvable) {
       cdkBuilder.excludes(excludes.let(IResolvable::unwrap))
     }
 
-    public override fun excludes(excludes: List<Any>) {
+    override fun excludes(excludes: List<Any>) {
       cdkBuilder.excludes(excludes)
     }
 
-    public override fun includes(includes: IResolvable) {
+    override fun includes(includes: IResolvable) {
       cdkBuilder.includes(includes.let(IResolvable::unwrap))
     }
 
-    public override fun includes(includes: List<Any>) {
+    override fun includes(includes: List<Any>) {
       cdkBuilder.includes(includes)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun options(options: IResolvable) {
+    override fun options(options: IResolvable) {
       cdkBuilder.options(options.let(IResolvable::unwrap))
     }
 
-    public override fun options(options: OptionsProperty) {
+    override fun options(options: OptionsProperty) {
       cdkBuilder.options(options.let(OptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72305d8f86064d3c2e00f3c3ac30d4951c2ad22f68f689c764cd4ac5db235abc")
-    public override fun options(options: OptionsProperty.Builder.() -> Unit): Unit =
+    override fun options(options: OptionsProperty.Builder.() -> Unit): Unit =
         options(OptionsProperty(options))
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: TaskScheduleProperty) {
+    override fun schedule(schedule: TaskScheduleProperty) {
       cdkBuilder.schedule(schedule.let(TaskScheduleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc570e5121b77db56ad8465e2e4b2bca206399256c4c7ca3af30554a5dfe7e3c")
-    public override fun schedule(schedule: TaskScheduleProperty.Builder.() -> Unit): Unit =
+    override fun schedule(schedule: TaskScheduleProperty.Builder.() -> Unit): Unit =
         schedule(TaskScheduleProperty(schedule))
 
-    public override fun sourceLocationArn(sourceLocationArn: String) {
+    override fun sourceLocationArn(sourceLocationArn: String) {
       cdkBuilder.sourceLocationArn(sourceLocationArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun taskReportConfig(taskReportConfig: IResolvable) {
+    override fun taskReportConfig(taskReportConfig: IResolvable) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(IResolvable::unwrap))
     }
 
-    public override fun taskReportConfig(taskReportConfig: TaskReportConfigProperty) {
+    override fun taskReportConfig(taskReportConfig: TaskReportConfigProperty) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(TaskReportConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be882d8209e6a0c57067438e1607b0d0fe8570513ca4471839eb30502477f1ca")
-    public override
-        fun taskReportConfig(taskReportConfig: TaskReportConfigProperty.Builder.() -> Unit): Unit =
-        taskReportConfig(TaskReportConfigProperty(taskReportConfig))
+    override fun taskReportConfig(taskReportConfig: TaskReportConfigProperty.Builder.() -> Unit):
+        Unit = taskReportConfig(TaskReportConfigProperty(taskReportConfig))
 
     public fun build(): software.amazon.awscdk.services.datasync.CfnTask = cdkBuilder.build()
   }
@@ -305,8 +286,7 @@ public open class CfnTask internal constructor(
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
 
     public interface Builder {
-      public fun reportLevel(reportLevel: String) {
-      }
+      public fun reportLevel(reportLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -314,7 +294,7 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty.builder()
 
-      public override fun reportLevel(reportLevel: String) {
+      override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
       }
 
@@ -325,7 +305,7 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DeletedProperty,
     ) : DeletedProperty {
-      public override fun reportLevel(): String? = unwrap(this).getReportLevel()
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
     }
 
     public companion object {
@@ -354,11 +334,9 @@ public open class CfnTask internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun filterType(filterType: String) {
-      }
+      public fun filterType(filterType: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -366,11 +344,11 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty.builder()
 
-      public override fun filterType(filterType: String) {
+      override fun filterType(filterType: String) {
         cdkBuilder.filterType(filterType)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -381,9 +359,9 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty,
     ) : FilterRuleProperty {
-      public override fun filterType(): String? = unwrap(this).getFilterType()
+      override fun filterType(): String? = unwrap(this).getFilterType()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -416,49 +394,37 @@ public open class CfnTask internal constructor(
     public fun verified(): Any? = unwrap(this).getVerified()
 
     public interface Builder {
-      public fun deleted(deleted: IResolvable) {
-      }
+      public fun deleted(deleted: IResolvable)
 
-      public fun deleted(deleted: DeletedProperty) {
-      }
+      public fun deleted(deleted: DeletedProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
-      public fun deleted(deleted: DeletedProperty.Builder.() -> Unit) {
-      }
+      public fun deleted(deleted: DeletedProperty.Builder.() -> Unit)
 
-      public fun skipped(skipped: IResolvable) {
-      }
+      public fun skipped(skipped: IResolvable)
 
-      public fun skipped(skipped: SkippedProperty) {
-      }
+      public fun skipped(skipped: SkippedProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
-      public fun skipped(skipped: SkippedProperty.Builder.() -> Unit) {
-      }
+      public fun skipped(skipped: SkippedProperty.Builder.() -> Unit)
 
-      public fun transferred(transferred: IResolvable) {
-      }
+      public fun transferred(transferred: IResolvable)
 
-      public fun transferred(transferred: TransferredProperty) {
-      }
+      public fun transferred(transferred: TransferredProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
-      public fun transferred(transferred: TransferredProperty.Builder.() -> Unit) {
-      }
+      public fun transferred(transferred: TransferredProperty.Builder.() -> Unit)
 
-      public fun verified(verified: IResolvable) {
-      }
+      public fun verified(verified: IResolvable)
 
-      public fun verified(verified: VerifiedProperty) {
-      }
+      public fun verified(verified: VerifiedProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
-      public fun verified(verified: VerifiedProperty.Builder.() -> Unit) {
-      }
+      public fun verified(verified: VerifiedProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -466,56 +432,56 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty.builder()
 
-      public override fun deleted(deleted: IResolvable) {
+      override fun deleted(deleted: IResolvable) {
         cdkBuilder.deleted(deleted.let(IResolvable::unwrap))
       }
 
-      public override fun deleted(deleted: DeletedProperty) {
+      override fun deleted(deleted: DeletedProperty) {
         cdkBuilder.deleted(deleted.let(DeletedProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("178ba2b5cf2ea2064355ea97986f3eb26a133c25410c0cd8a534e038d634e103")
-      public override fun deleted(deleted: DeletedProperty.Builder.() -> Unit): Unit =
+      override fun deleted(deleted: DeletedProperty.Builder.() -> Unit): Unit =
           deleted(DeletedProperty(deleted))
 
-      public override fun skipped(skipped: IResolvable) {
+      override fun skipped(skipped: IResolvable) {
         cdkBuilder.skipped(skipped.let(IResolvable::unwrap))
       }
 
-      public override fun skipped(skipped: SkippedProperty) {
+      override fun skipped(skipped: SkippedProperty) {
         cdkBuilder.skipped(skipped.let(SkippedProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a8634100c7e7679d1298a9e8c62ef0e782009db9965eb037d9f30f19f4dec76")
-      public override fun skipped(skipped: SkippedProperty.Builder.() -> Unit): Unit =
+      override fun skipped(skipped: SkippedProperty.Builder.() -> Unit): Unit =
           skipped(SkippedProperty(skipped))
 
-      public override fun transferred(transferred: IResolvable) {
+      override fun transferred(transferred: IResolvable) {
         cdkBuilder.transferred(transferred.let(IResolvable::unwrap))
       }
 
-      public override fun transferred(transferred: TransferredProperty) {
+      override fun transferred(transferred: TransferredProperty) {
         cdkBuilder.transferred(transferred.let(TransferredProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("867ccf2419e9301cde6a783a341d38eb0896e2ac7c58c19f1fb9e34a7bc656f3")
-      public override fun transferred(transferred: TransferredProperty.Builder.() -> Unit): Unit =
+      override fun transferred(transferred: TransferredProperty.Builder.() -> Unit): Unit =
           transferred(TransferredProperty(transferred))
 
-      public override fun verified(verified: IResolvable) {
+      override fun verified(verified: IResolvable) {
         cdkBuilder.verified(verified.let(IResolvable::unwrap))
       }
 
-      public override fun verified(verified: VerifiedProperty) {
+      override fun verified(verified: VerifiedProperty) {
         cdkBuilder.verified(verified.let(VerifiedProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6de5119e7772a304c44a8d224fb786e3b2b3c6fb013deaf42c69720fd3212640")
-      public override fun verified(verified: VerifiedProperty.Builder.() -> Unit): Unit =
+      override fun verified(verified: VerifiedProperty.Builder.() -> Unit): Unit =
           verified(VerifiedProperty(verified))
 
       public fun build(): software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty =
@@ -525,13 +491,13 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OverridesProperty,
     ) : OverridesProperty {
-      public override fun deleted(): Any? = unwrap(this).getDeleted()
+      override fun deleted(): Any? = unwrap(this).getDeleted()
 
-      public override fun skipped(): Any? = unwrap(this).getSkipped()
+      override fun skipped(): Any? = unwrap(this).getSkipped()
 
-      public override fun transferred(): Any? = unwrap(this).getTransferred()
+      override fun transferred(): Any? = unwrap(this).getTransferred()
 
-      public override fun verified(): Any? = unwrap(this).getVerified()
+      override fun verified(): Any? = unwrap(this).getVerified()
     }
 
     public companion object {
@@ -558,8 +524,7 @@ public open class CfnTask internal constructor(
     public fun scheduleExpression(): String
 
     public interface Builder {
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -567,7 +532,7 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.builder()
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -578,7 +543,7 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
     ) : TaskScheduleProperty {
-      public override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -609,29 +574,26 @@ public open class CfnTask internal constructor(
     public fun subdirectory(): String? = unwrap(this).getSubdirectory()
 
     public interface Builder {
-      public fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
-      }
+      public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
 
-      public fun s3BucketArn(s3BucketArn: String) {
-      }
+      public fun s3BucketArn(s3BucketArn: String)
 
-      public fun subdirectory(subdirectory: String) {
-      }
+      public fun subdirectory(subdirectory: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnTask.S3Property.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.S3Property.builder()
 
-      public override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
+      override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
         cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
       }
 
-      public override fun s3BucketArn(s3BucketArn: String) {
+      override fun s3BucketArn(s3BucketArn: String) {
         cdkBuilder.s3BucketArn(s3BucketArn)
       }
 
-      public override fun subdirectory(subdirectory: String) {
+      override fun subdirectory(subdirectory: String) {
         cdkBuilder.subdirectory(subdirectory)
       }
 
@@ -642,11 +604,11 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
     ) : S3Property {
-      public override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
+      override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
 
-      public override fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
+      override fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
 
-      public override fun subdirectory(): String? = unwrap(this).getSubdirectory()
+      override fun subdirectory(): String? = unwrap(this).getSubdirectory()
     }
 
     public companion object {
@@ -672,16 +634,13 @@ public open class CfnTask internal constructor(
     public fun s3(): Any? = unwrap(this).getS3()
 
     public interface Builder {
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3Property) {
-      }
+      public fun s3(s3: S3Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feeda5b4004520bfe4b68bdf0e8efea7feea712d87baf6b70181bdd6ffd01dc2")
-      public fun s3(s3: S3Property.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -689,17 +648,17 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty.builder()
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3Property) {
+      override fun s3(s3: S3Property) {
         cdkBuilder.s3(s3.let(S3Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feeda5b4004520bfe4b68bdf0e8efea7feea712d87baf6b70181bdd6ffd01dc2")
-      public override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
+      override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
 
       public fun build(): software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty =
           cdkBuilder.build()
@@ -708,7 +667,7 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.DestinationProperty,
     ) : DestinationProperty {
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
     }
 
     public companion object {
@@ -764,50 +723,35 @@ public open class CfnTask internal constructor(
     public fun verifyMode(): String? = unwrap(this).getVerifyMode()
 
     public interface Builder {
-      public fun atime(atime: String) {
-      }
+      public fun atime(atime: String)
 
-      public fun bytesPerSecond(bytesPerSecond: Number) {
-      }
+      public fun bytesPerSecond(bytesPerSecond: Number)
 
-      public fun gid(gid: String) {
-      }
+      public fun gid(gid: String)
 
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
 
-      public fun mtime(mtime: String) {
-      }
+      public fun mtime(mtime: String)
 
-      public fun objectTags(objectTags: String) {
-      }
+      public fun objectTags(objectTags: String)
 
-      public fun overwriteMode(overwriteMode: String) {
-      }
+      public fun overwriteMode(overwriteMode: String)
 
-      public fun posixPermissions(posixPermissions: String) {
-      }
+      public fun posixPermissions(posixPermissions: String)
 
-      public fun preserveDeletedFiles(preserveDeletedFiles: String) {
-      }
+      public fun preserveDeletedFiles(preserveDeletedFiles: String)
 
-      public fun preserveDevices(preserveDevices: String) {
-      }
+      public fun preserveDevices(preserveDevices: String)
 
-      public fun securityDescriptorCopyFlags(securityDescriptorCopyFlags: String) {
-      }
+      public fun securityDescriptorCopyFlags(securityDescriptorCopyFlags: String)
 
-      public fun taskQueueing(taskQueueing: String) {
-      }
+      public fun taskQueueing(taskQueueing: String)
 
-      public fun transferMode(transferMode: String) {
-      }
+      public fun transferMode(transferMode: String)
 
-      public fun uid(uid: String) {
-      }
+      public fun uid(uid: String)
 
-      public fun verifyMode(verifyMode: String) {
-      }
+      public fun verifyMode(verifyMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -815,63 +759,63 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty.builder()
 
-      public override fun atime(atime: String) {
+      override fun atime(atime: String) {
         cdkBuilder.atime(atime)
       }
 
-      public override fun bytesPerSecond(bytesPerSecond: Number) {
+      override fun bytesPerSecond(bytesPerSecond: Number) {
         cdkBuilder.bytesPerSecond(bytesPerSecond)
       }
 
-      public override fun gid(gid: String) {
+      override fun gid(gid: String) {
         cdkBuilder.gid(gid)
       }
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
-      public override fun mtime(mtime: String) {
+      override fun mtime(mtime: String) {
         cdkBuilder.mtime(mtime)
       }
 
-      public override fun objectTags(objectTags: String) {
+      override fun objectTags(objectTags: String) {
         cdkBuilder.objectTags(objectTags)
       }
 
-      public override fun overwriteMode(overwriteMode: String) {
+      override fun overwriteMode(overwriteMode: String) {
         cdkBuilder.overwriteMode(overwriteMode)
       }
 
-      public override fun posixPermissions(posixPermissions: String) {
+      override fun posixPermissions(posixPermissions: String) {
         cdkBuilder.posixPermissions(posixPermissions)
       }
 
-      public override fun preserveDeletedFiles(preserveDeletedFiles: String) {
+      override fun preserveDeletedFiles(preserveDeletedFiles: String) {
         cdkBuilder.preserveDeletedFiles(preserveDeletedFiles)
       }
 
-      public override fun preserveDevices(preserveDevices: String) {
+      override fun preserveDevices(preserveDevices: String) {
         cdkBuilder.preserveDevices(preserveDevices)
       }
 
-      public override fun securityDescriptorCopyFlags(securityDescriptorCopyFlags: String) {
+      override fun securityDescriptorCopyFlags(securityDescriptorCopyFlags: String) {
         cdkBuilder.securityDescriptorCopyFlags(securityDescriptorCopyFlags)
       }
 
-      public override fun taskQueueing(taskQueueing: String) {
+      override fun taskQueueing(taskQueueing: String) {
         cdkBuilder.taskQueueing(taskQueueing)
       }
 
-      public override fun transferMode(transferMode: String) {
+      override fun transferMode(transferMode: String) {
         cdkBuilder.transferMode(transferMode)
       }
 
-      public override fun uid(uid: String) {
+      override fun uid(uid: String) {
         cdkBuilder.uid(uid)
       }
 
-      public override fun verifyMode(verifyMode: String) {
+      override fun verifyMode(verifyMode: String) {
         cdkBuilder.verifyMode(verifyMode)
       }
 
@@ -882,36 +826,36 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.OptionsProperty,
     ) : OptionsProperty {
-      public override fun atime(): String? = unwrap(this).getAtime()
+      override fun atime(): String? = unwrap(this).getAtime()
 
-      public override fun bytesPerSecond(): Number? = unwrap(this).getBytesPerSecond()
+      override fun bytesPerSecond(): Number? = unwrap(this).getBytesPerSecond()
 
-      public override fun gid(): String? = unwrap(this).getGid()
+      override fun gid(): String? = unwrap(this).getGid()
 
-      public override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
 
-      public override fun mtime(): String? = unwrap(this).getMtime()
+      override fun mtime(): String? = unwrap(this).getMtime()
 
-      public override fun objectTags(): String? = unwrap(this).getObjectTags()
+      override fun objectTags(): String? = unwrap(this).getObjectTags()
 
-      public override fun overwriteMode(): String? = unwrap(this).getOverwriteMode()
+      override fun overwriteMode(): String? = unwrap(this).getOverwriteMode()
 
-      public override fun posixPermissions(): String? = unwrap(this).getPosixPermissions()
+      override fun posixPermissions(): String? = unwrap(this).getPosixPermissions()
 
-      public override fun preserveDeletedFiles(): String? = unwrap(this).getPreserveDeletedFiles()
+      override fun preserveDeletedFiles(): String? = unwrap(this).getPreserveDeletedFiles()
 
-      public override fun preserveDevices(): String? = unwrap(this).getPreserveDevices()
+      override fun preserveDevices(): String? = unwrap(this).getPreserveDevices()
 
-      public override fun securityDescriptorCopyFlags(): String? =
+      override fun securityDescriptorCopyFlags(): String? =
           unwrap(this).getSecurityDescriptorCopyFlags()
 
-      public override fun taskQueueing(): String? = unwrap(this).getTaskQueueing()
+      override fun taskQueueing(): String? = unwrap(this).getTaskQueueing()
 
-      public override fun transferMode(): String? = unwrap(this).getTransferMode()
+      override fun transferMode(): String? = unwrap(this).getTransferMode()
 
-      public override fun uid(): String? = unwrap(this).getUid()
+      override fun uid(): String? = unwrap(this).getUid()
 
-      public override fun verifyMode(): String? = unwrap(this).getVerifyMode()
+      override fun verifyMode(): String? = unwrap(this).getVerifyMode()
     }
 
     public companion object {
@@ -946,36 +890,27 @@ public open class CfnTask internal constructor(
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
 
     public interface Builder {
-      public fun destination(destination: IResolvable) {
-      }
+      public fun destination(destination: IResolvable)
 
-      public fun destination(destination: DestinationProperty) {
-      }
+      public fun destination(destination: DestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fdbf726fa76d94dfb1383ff714be978466c41118561c38e153b56fe0d20ba16e")
-      public fun destination(destination: DestinationProperty.Builder.() -> Unit) {
-      }
+      public fun destination(destination: DestinationProperty.Builder.() -> Unit)
 
-      public fun objectVersionIds(objectVersionIds: String) {
-      }
+      public fun objectVersionIds(objectVersionIds: String)
 
-      public fun outputType(outputType: String) {
-      }
+      public fun outputType(outputType: String)
 
-      public fun overrides(overrides: IResolvable) {
-      }
+      public fun overrides(overrides: IResolvable)
 
-      public fun overrides(overrides: OverridesProperty) {
-      }
+      public fun overrides(overrides: OverridesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("31b8097e5cf74692b3a83ff4b60e489d9346bdc0905c80d77b375ef9d1deecbc")
-      public fun overrides(overrides: OverridesProperty.Builder.() -> Unit) {
-      }
+      public fun overrides(overrides: OverridesProperty.Builder.() -> Unit)
 
-      public fun reportLevel(reportLevel: String) {
-      }
+      public fun reportLevel(reportLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -983,41 +918,41 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty.builder()
 
-      public override fun destination(destination: IResolvable) {
+      override fun destination(destination: IResolvable) {
         cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
-      public override fun destination(destination: DestinationProperty) {
+      override fun destination(destination: DestinationProperty) {
         cdkBuilder.destination(destination.let(DestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fdbf726fa76d94dfb1383ff714be978466c41118561c38e153b56fe0d20ba16e")
-      public override fun destination(destination: DestinationProperty.Builder.() -> Unit): Unit =
+      override fun destination(destination: DestinationProperty.Builder.() -> Unit): Unit =
           destination(DestinationProperty(destination))
 
-      public override fun objectVersionIds(objectVersionIds: String) {
+      override fun objectVersionIds(objectVersionIds: String) {
         cdkBuilder.objectVersionIds(objectVersionIds)
       }
 
-      public override fun outputType(outputType: String) {
+      override fun outputType(outputType: String) {
         cdkBuilder.outputType(outputType)
       }
 
-      public override fun overrides(overrides: IResolvable) {
+      override fun overrides(overrides: IResolvable) {
         cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
       }
 
-      public override fun overrides(overrides: OverridesProperty) {
+      override fun overrides(overrides: OverridesProperty) {
         cdkBuilder.overrides(overrides.let(OverridesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("31b8097e5cf74692b3a83ff4b60e489d9346bdc0905c80d77b375ef9d1deecbc")
-      public override fun overrides(overrides: OverridesProperty.Builder.() -> Unit): Unit =
+      override fun overrides(overrides: OverridesProperty.Builder.() -> Unit): Unit =
           overrides(OverridesProperty(overrides))
 
-      public override fun reportLevel(reportLevel: String) {
+      override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
       }
 
@@ -1029,15 +964,15 @@ public open class CfnTask internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnTask.TaskReportConfigProperty,
     ) : TaskReportConfigProperty {
-      public override fun destination(): Any = unwrap(this).getDestination()
+      override fun destination(): Any = unwrap(this).getDestination()
 
-      public override fun objectVersionIds(): String? = unwrap(this).getObjectVersionIds()
+      override fun objectVersionIds(): String? = unwrap(this).getObjectVersionIds()
 
-      public override fun outputType(): String = unwrap(this).getOutputType()
+      override fun outputType(): String = unwrap(this).getOutputType()
 
-      public override fun overrides(): Any? = unwrap(this).getOverrides()
+      override fun overrides(): Any? = unwrap(this).getOverrides()
 
-      public override fun reportLevel(): String? = unwrap(this).getReportLevel()
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
     }
 
     public companion object {
@@ -1064,8 +999,7 @@ public open class CfnTask internal constructor(
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
 
     public interface Builder {
-      public fun reportLevel(reportLevel: String) {
-      }
+      public fun reportLevel(reportLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1073,7 +1007,7 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty.builder()
 
-      public override fun reportLevel(reportLevel: String) {
+      override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
       }
 
@@ -1084,7 +1018,7 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty,
     ) : SkippedProperty {
-      public override fun reportLevel(): String? = unwrap(this).getReportLevel()
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
     }
 
     public companion object {
@@ -1111,8 +1045,7 @@ public open class CfnTask internal constructor(
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
 
     public interface Builder {
-      public fun reportLevel(reportLevel: String) {
-      }
+      public fun reportLevel(reportLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1120,7 +1053,7 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty.builder()
 
-      public override fun reportLevel(reportLevel: String) {
+      override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
       }
 
@@ -1131,7 +1064,7 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.VerifiedProperty,
     ) : VerifiedProperty {
-      public override fun reportLevel(): String? = unwrap(this).getReportLevel()
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
     }
 
     public companion object {
@@ -1158,8 +1091,7 @@ public open class CfnTask internal constructor(
     public fun reportLevel(): String? = unwrap(this).getReportLevel()
 
     public interface Builder {
-      public fun reportLevel(reportLevel: String) {
-      }
+      public fun reportLevel(reportLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1167,7 +1099,7 @@ public open class CfnTask internal constructor(
           software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty.builder()
 
-      public override fun reportLevel(reportLevel: String) {
+      override fun reportLevel(reportLevel: String) {
         cdkBuilder.reportLevel(reportLevel)
       }
 
@@ -1178,7 +1110,7 @@ public open class CfnTask internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TransferredProperty,
     ) : TransferredProperty {
-      public override fun reportLevel(): String? = unwrap(this).getReportLevel()
+      override fun reportLevel(): String? = unwrap(this).getReportLevel()
     }
 
     public companion object {

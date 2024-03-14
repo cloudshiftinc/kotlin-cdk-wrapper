@@ -36,14 +36,11 @@ public open class CfnNetworkInterfacePermission internal constructor(
   }
 
   public interface Builder {
-    public fun awsAccountId(awsAccountId: String) {
-    }
+    public fun awsAccountId(awsAccountId: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
 
-    public fun permission(permission: String) {
-    }
+    public fun permission(permission: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnNetworkInterfacePermission internal constructor(
         software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission.Builder.create(scope, id)
 
-    public override fun awsAccountId(awsAccountId: String) {
+    override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 
-    public override fun permission(permission: String) {
+    override fun permission(permission: String) {
       cdkBuilder.permission(permission)
     }
 

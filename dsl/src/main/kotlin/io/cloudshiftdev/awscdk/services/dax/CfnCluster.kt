@@ -134,55 +134,39 @@ public open class CfnCluster internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
-    public fun clusterEndpointEncryptionType(clusterEndpointEncryptionType: String) {
-    }
+    public fun clusterEndpointEncryptionType(clusterEndpointEncryptionType: String)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun nodeType(nodeType: String) {
-    }
+    public fun nodeType(nodeType: String)
 
-    public fun notificationTopicArn(notificationTopicArn: String) {
-    }
+    public fun notificationTopicArn(notificationTopicArn: String)
 
-    public fun parameterGroupName(parameterGroupName: String) {
-    }
+    public fun parameterGroupName(parameterGroupName: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun replicationFactor(replicationFactor: Number) {
-    }
+    public fun replicationFactor(replicationFactor: Number)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun sseSpecification(sseSpecification: IResolvable) {
-    }
+    public fun sseSpecification(sseSpecification: IResolvable)
 
-    public fun sseSpecification(sseSpecification: SSESpecificationProperty) {
-    }
+    public fun sseSpecification(sseSpecification: SSESpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c809a44e1ba9227fb3a562887ecdac01bc3bdef30dc351232bb9ccc13054d6a0")
-    public fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit) {
-    }
+    public fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit)
 
-    public fun subnetGroupName(subnetGroupName: String) {
-    }
+    public fun subnetGroupName(subnetGroupName: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -192,69 +176,68 @@ public open class CfnCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dax.CfnCluster.Builder =
         software.amazon.awscdk.services.dax.CfnCluster.Builder.create(scope, id)
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
-    public override fun clusterEndpointEncryptionType(clusterEndpointEncryptionType: String) {
+    override fun clusterEndpointEncryptionType(clusterEndpointEncryptionType: String) {
       cdkBuilder.clusterEndpointEncryptionType(clusterEndpointEncryptionType)
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun nodeType(nodeType: String) {
+    override fun nodeType(nodeType: String) {
       cdkBuilder.nodeType(nodeType)
     }
 
-    public override fun notificationTopicArn(notificationTopicArn: String) {
+    override fun notificationTopicArn(notificationTopicArn: String) {
       cdkBuilder.notificationTopicArn(notificationTopicArn)
     }
 
-    public override fun parameterGroupName(parameterGroupName: String) {
+    override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun replicationFactor(replicationFactor: Number) {
+    override fun replicationFactor(replicationFactor: Number) {
       cdkBuilder.replicationFactor(replicationFactor)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun sseSpecification(sseSpecification: IResolvable) {
+    override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
 
-    public override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
+    override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
       cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c809a44e1ba9227fb3a562887ecdac01bc3bdef30dc351232bb9ccc13054d6a0")
-    public override
-        fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit): Unit =
-        sseSpecification(SSESpecificationProperty(sseSpecification))
+    override fun sseSpecification(sseSpecification: SSESpecificationProperty.Builder.() -> Unit):
+        Unit = sseSpecification(SSESpecificationProperty(sseSpecification))
 
-    public override fun subnetGroupName(subnetGroupName: String) {
+    override fun subnetGroupName(subnetGroupName: String) {
       cdkBuilder.subnetGroupName(subnetGroupName)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -286,11 +269,9 @@ public open class CfnCluster internal constructor(
     public fun sseEnabled(): Any? = unwrap(this).getSseEnabled()
 
     public interface Builder {
-      public fun sseEnabled(sseEnabled: Boolean) {
-      }
+      public fun sseEnabled(sseEnabled: Boolean)
 
-      public fun sseEnabled(sseEnabled: IResolvable) {
-      }
+      public fun sseEnabled(sseEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -298,11 +279,11 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty.Builder =
           software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty.builder()
 
-      public override fun sseEnabled(sseEnabled: Boolean) {
+      override fun sseEnabled(sseEnabled: Boolean) {
         cdkBuilder.sseEnabled(sseEnabled)
       }
 
-      public override fun sseEnabled(sseEnabled: IResolvable) {
+      override fun sseEnabled(sseEnabled: IResolvable) {
         cdkBuilder.sseEnabled(sseEnabled.let(IResolvable::unwrap))
       }
 
@@ -314,7 +295,7 @@ public open class CfnCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty,
     ) : SSESpecificationProperty {
-      public override fun sseEnabled(): Any? = unwrap(this).getSseEnabled()
+      override fun sseEnabled(): Any? = unwrap(this).getSseEnabled()
     }
 
     public companion object {

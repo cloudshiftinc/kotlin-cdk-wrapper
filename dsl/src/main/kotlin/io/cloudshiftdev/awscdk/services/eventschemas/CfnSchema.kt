@@ -68,23 +68,17 @@ public open class CfnSchema internal constructor(
   }
 
   public interface Builder {
-    public fun content(content: String) {
-    }
+    public fun content(content: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun registryName(registryName: String) {
-    }
+    public fun registryName(registryName: String)
 
-    public fun schemaName(schemaName: String) {
-    }
+    public fun schemaName(schemaName: String)
 
-    public fun tags(tags: List<TagsEntryProperty>) {
-    }
+    public fun tags(tags: List<TagsEntryProperty>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -94,27 +88,27 @@ public open class CfnSchema internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eventschemas.CfnSchema.Builder =
         software.amazon.awscdk.services.eventschemas.CfnSchema.Builder.create(scope, id)
 
-    public override fun content(content: String) {
+    override fun content(content: String) {
       cdkBuilder.content(content)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun registryName(registryName: String) {
+    override fun registryName(registryName: String) {
       cdkBuilder.registryName(registryName)
     }
 
-    public override fun schemaName(schemaName: String) {
+    override fun schemaName(schemaName: String) {
       cdkBuilder.schemaName(schemaName)
     }
 
-    public override fun tags(tags: List<TagsEntryProperty>) {
+    override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -148,11 +142,9 @@ public open class CfnSchema internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -160,11 +152,11 @@ public open class CfnSchema internal constructor(
           software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty.Builder =
           software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -176,9 +168,9 @@ public open class CfnSchema internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eventschemas.CfnSchema.TagsEntryProperty,
     ) : TagsEntryProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

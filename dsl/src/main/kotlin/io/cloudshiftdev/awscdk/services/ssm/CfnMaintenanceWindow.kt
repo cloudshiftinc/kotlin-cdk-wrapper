@@ -99,41 +99,29 @@ public open class CfnMaintenanceWindow internal constructor(
   }
 
   public interface Builder {
-    public fun allowUnassociatedTargets(allowUnassociatedTargets: Boolean) {
-    }
+    public fun allowUnassociatedTargets(allowUnassociatedTargets: Boolean)
 
-    public fun allowUnassociatedTargets(allowUnassociatedTargets: IResolvable) {
-    }
+    public fun allowUnassociatedTargets(allowUnassociatedTargets: IResolvable)
 
-    public fun cutoff(cutoff: Number) {
-    }
+    public fun cutoff(cutoff: Number)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun duration(duration: Number) {
-    }
+    public fun duration(duration: Number)
 
-    public fun endDate(endDate: String) {
-    }
+    public fun endDate(endDate: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun schedule(schedule: String) {
-    }
+    public fun schedule(schedule: String)
 
-    public fun scheduleOffset(scheduleOffset: Number) {
-    }
+    public fun scheduleOffset(scheduleOffset: Number)
 
-    public fun scheduleTimezone(scheduleTimezone: String) {
-    }
+    public fun scheduleTimezone(scheduleTimezone: String)
 
-    public fun startDate(startDate: String) {
-    }
+    public fun startDate(startDate: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -143,51 +131,51 @@ public open class CfnMaintenanceWindow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnMaintenanceWindow.Builder =
         software.amazon.awscdk.services.ssm.CfnMaintenanceWindow.Builder.create(scope, id)
 
-    public override fun allowUnassociatedTargets(allowUnassociatedTargets: Boolean) {
+    override fun allowUnassociatedTargets(allowUnassociatedTargets: Boolean) {
       cdkBuilder.allowUnassociatedTargets(allowUnassociatedTargets)
     }
 
-    public override fun allowUnassociatedTargets(allowUnassociatedTargets: IResolvable) {
+    override fun allowUnassociatedTargets(allowUnassociatedTargets: IResolvable) {
       cdkBuilder.allowUnassociatedTargets(allowUnassociatedTargets.let(IResolvable::unwrap))
     }
 
-    public override fun cutoff(cutoff: Number) {
+    override fun cutoff(cutoff: Number) {
       cdkBuilder.cutoff(cutoff)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun duration(duration: Number) {
+    override fun duration(duration: Number) {
       cdkBuilder.duration(duration)
     }
 
-    public override fun endDate(endDate: String) {
+    override fun endDate(endDate: String) {
       cdkBuilder.endDate(endDate)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun schedule(schedule: String) {
+    override fun schedule(schedule: String) {
       cdkBuilder.schedule(schedule)
     }
 
-    public override fun scheduleOffset(scheduleOffset: Number) {
+    override fun scheduleOffset(scheduleOffset: Number) {
       cdkBuilder.scheduleOffset(scheduleOffset)
     }
 
-    public override fun scheduleTimezone(scheduleTimezone: String) {
+    override fun scheduleTimezone(scheduleTimezone: String) {
       cdkBuilder.scheduleTimezone(scheduleTimezone)
     }
 
-    public override fun startDate(startDate: String) {
+    override fun startDate(startDate: String) {
       cdkBuilder.startDate(startDate)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

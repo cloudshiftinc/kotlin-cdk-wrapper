@@ -7,15 +7,14 @@ public interface KeyLookupOptions {
   public fun aliasName(): String
 
   public interface Builder {
-    public fun aliasName(aliasName: String) {
-    }
+    public fun aliasName(aliasName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.kms.KeyLookupOptions.Builder =
         software.amazon.awscdk.services.kms.KeyLookupOptions.builder()
 
-    public override fun aliasName(aliasName: String) {
+    override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
 
@@ -25,7 +24,7 @@ public interface KeyLookupOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions,
   ) : KeyLookupOptions {
-    public override fun aliasName(): String = unwrap(this).getAliasName()
+    override fun aliasName(): String = unwrap(this).getAliasName()
   }
 
   public companion object {

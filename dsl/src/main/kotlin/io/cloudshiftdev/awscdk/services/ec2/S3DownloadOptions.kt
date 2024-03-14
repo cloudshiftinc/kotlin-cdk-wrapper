@@ -14,36 +14,32 @@ public interface S3DownloadOptions {
   public fun region(): String? = unwrap(this).getRegion()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun bucketKey(bucketKey: String) {
-    }
+    public fun bucketKey(bucketKey: String)
 
-    public fun localFile(localFile: String) {
-    }
+    public fun localFile(localFile: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.S3DownloadOptions.Builder =
         software.amazon.awscdk.services.ec2.S3DownloadOptions.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun bucketKey(bucketKey: String) {
+    override fun bucketKey(bucketKey: String) {
       cdkBuilder.bucketKey(bucketKey)
     }
 
-    public override fun localFile(localFile: String) {
+    override fun localFile(localFile: String) {
       cdkBuilder.localFile(localFile)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -53,13 +49,13 @@ public interface S3DownloadOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.S3DownloadOptions,
   ) : S3DownloadOptions {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun bucketKey(): String = unwrap(this).getBucketKey()
+    override fun bucketKey(): String = unwrap(this).getBucketKey()
 
-    public override fun localFile(): String? = unwrap(this).getLocalFile()
+    override fun localFile(): String? = unwrap(this).getLocalFile()
 
-    public override fun region(): String? = unwrap(this).getRegion()
+    override fun region(): String? = unwrap(this).getRegion()
   }
 
   public companion object {

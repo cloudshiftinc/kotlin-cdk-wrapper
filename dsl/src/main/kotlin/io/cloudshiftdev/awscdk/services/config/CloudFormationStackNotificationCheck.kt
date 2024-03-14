@@ -14,23 +14,17 @@ public open class CloudFormationStackNotificationCheck internal constructor(
       software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck,
 ) : ManagedRule(cdkObject) {
   public interface Builder {
-    public fun configRuleName(configRuleName: String) {
-    }
+    public fun configRuleName(configRuleName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun inputParameters(inputParameters: Map<String, Any>) {
-    }
+    public fun inputParameters(inputParameters: Map<String, Any>)
 
-    public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-    }
+    public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency)
 
-    public fun ruleScope(ruleScope: RuleScope) {
-    }
+    public fun ruleScope(ruleScope: RuleScope)
 
-    public fun topics(topics: List<ITopic>) {
-    }
+    public fun topics(topics: List<ITopic>)
   }
 
   private class BuilderImpl(
@@ -42,28 +36,27 @@ public open class CloudFormationStackNotificationCheck internal constructor(
         software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck.Builder.create(scope,
         id)
 
-    public override fun configRuleName(configRuleName: String) {
+    override fun configRuleName(configRuleName: String) {
       cdkBuilder.configRuleName(configRuleName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun inputParameters(inputParameters: Map<String, Any>) {
+    override fun inputParameters(inputParameters: Map<String, Any>) {
       cdkBuilder.inputParameters(inputParameters)
     }
 
-    public override
-        fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
+    override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
       cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
     }
 
-    public override fun ruleScope(ruleScope: RuleScope) {
+    override fun ruleScope(ruleScope: RuleScope) {
       cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
     }
 
-    public override fun topics(topics: List<ITopic>) {
+    override fun topics(topics: List<ITopic>) {
       cdkBuilder.topics(topics.map(ITopic::unwrap))
     }
 

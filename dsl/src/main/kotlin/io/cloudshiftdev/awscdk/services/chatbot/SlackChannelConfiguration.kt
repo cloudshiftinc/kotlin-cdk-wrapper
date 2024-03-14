@@ -62,41 +62,30 @@ public open class SlackChannelConfiguration internal constructor(
       unwrap(this).getSlackChannelConfigurationName()
 
   public interface Builder {
-    public fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>) {
-    }
+    public fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>)
 
-    public fun logRetention(logRetention: RetentionDays) {
-    }
+    public fun logRetention(logRetention: RetentionDays)
 
-    public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-    }
+    public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2c861a99cf5abe84ce016f409329bbce6972ff1c929882e07f7e7a9791c13164")
     public
-        fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions.Builder.() -> Unit) {
-    }
+        fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions.Builder.() -> Unit)
 
-    public fun logRetentionRole(logRetentionRole: IRole) {
-    }
+    public fun logRetentionRole(logRetentionRole: IRole)
 
-    public fun loggingLevel(loggingLevel: LoggingLevel) {
-    }
+    public fun loggingLevel(loggingLevel: LoggingLevel)
 
-    public fun notificationTopics(notificationTopics: List<ITopic>) {
-    }
+    public fun notificationTopics(notificationTopics: List<ITopic>)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun slackChannelConfigurationName(slackChannelConfigurationName: String) {
-    }
+    public fun slackChannelConfigurationName(slackChannelConfigurationName: String)
 
-    public fun slackChannelId(slackChannelId: String) {
-    }
+    public fun slackChannelId(slackChannelId: String)
 
-    public fun slackWorkspaceId(slackWorkspaceId: String) {
-    }
+    public fun slackWorkspaceId(slackWorkspaceId: String)
   }
 
   private class BuilderImpl(
@@ -107,50 +96,49 @@ public open class SlackChannelConfiguration internal constructor(
         software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.Builder =
         software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.Builder.create(scope, id)
 
-    public override fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>) {
+    override fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>) {
       cdkBuilder.guardrailPolicies(guardrailPolicies.map(IManagedPolicy::unwrap))
     }
 
-    public override fun logRetention(logRetention: RetentionDays) {
+    override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
     }
 
-    public override
-        fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
+    override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
       cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2c861a99cf5abe84ce016f409329bbce6972ff1c929882e07f7e7a9791c13164")
-    public override
+    override
         fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions.Builder.() -> Unit):
         Unit = logRetentionRetryOptions(LogRetentionRetryOptions(logRetentionRetryOptions))
 
-    public override fun logRetentionRole(logRetentionRole: IRole) {
+    override fun logRetentionRole(logRetentionRole: IRole) {
       cdkBuilder.logRetentionRole(logRetentionRole.let(IRole::unwrap))
     }
 
-    public override fun loggingLevel(loggingLevel: LoggingLevel) {
+    override fun loggingLevel(loggingLevel: LoggingLevel) {
       cdkBuilder.loggingLevel(loggingLevel.let(LoggingLevel::unwrap))
     }
 
-    public override fun notificationTopics(notificationTopics: List<ITopic>) {
+    override fun notificationTopics(notificationTopics: List<ITopic>) {
       cdkBuilder.notificationTopics(notificationTopics.map(ITopic::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun slackChannelConfigurationName(slackChannelConfigurationName: String) {
+    override fun slackChannelConfigurationName(slackChannelConfigurationName: String) {
       cdkBuilder.slackChannelConfigurationName(slackChannelConfigurationName)
     }
 
-    public override fun slackChannelId(slackChannelId: String) {
+    override fun slackChannelId(slackChannelId: String) {
       cdkBuilder.slackChannelId(slackChannelId)
     }
 
-    public override fun slackWorkspaceId(slackWorkspaceId: String) {
+    override fun slackWorkspaceId(slackWorkspaceId: String) {
       cdkBuilder.slackWorkspaceId(slackWorkspaceId)
     }
 

@@ -96,38 +96,27 @@ public open class CfnEnvironmentEC2 internal constructor(
   }
 
   public interface Builder {
-    public fun automaticStopTimeMinutes(automaticStopTimeMinutes: Number) {
-    }
+    public fun automaticStopTimeMinutes(automaticStopTimeMinutes: Number)
 
-    public fun connectionType(connectionType: String) {
-    }
+    public fun connectionType(connectionType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun imageId(imageId: String) {
-    }
+    public fun imageId(imageId: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun ownerArn(ownerArn: String) {
-    }
+    public fun ownerArn(ownerArn: String)
 
-    public fun repositories(repositories: IResolvable) {
-    }
+    public fun repositories(repositories: IResolvable)
 
-    public fun repositories(repositories: List<Any>) {
-    }
+    public fun repositories(repositories: List<Any>)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -137,47 +126,47 @@ public open class CfnEnvironmentEC2 internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.Builder =
         software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.Builder.create(scope, id)
 
-    public override fun automaticStopTimeMinutes(automaticStopTimeMinutes: Number) {
+    override fun automaticStopTimeMinutes(automaticStopTimeMinutes: Number) {
       cdkBuilder.automaticStopTimeMinutes(automaticStopTimeMinutes)
     }
 
-    public override fun connectionType(connectionType: String) {
+    override fun connectionType(connectionType: String) {
       cdkBuilder.connectionType(connectionType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun imageId(imageId: String) {
+    override fun imageId(imageId: String) {
       cdkBuilder.imageId(imageId)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun ownerArn(ownerArn: String) {
+    override fun ownerArn(ownerArn: String) {
       cdkBuilder.ownerArn(ownerArn)
     }
 
-    public override fun repositories(repositories: IResolvable) {
+    override fun repositories(repositories: IResolvable) {
       cdkBuilder.repositories(repositories.let(IResolvable::unwrap))
     }
 
-    public override fun repositories(repositories: List<Any>) {
+    override fun repositories(repositories: List<Any>) {
       cdkBuilder.repositories(repositories)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -212,11 +201,9 @@ public open class CfnEnvironmentEC2 internal constructor(
     public fun repositoryUrl(): String
 
     public interface Builder {
-      public fun pathComponent(pathComponent: String) {
-      }
+      public fun pathComponent(pathComponent: String)
 
-      public fun repositoryUrl(repositoryUrl: String) {
-      }
+      public fun repositoryUrl(repositoryUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -224,11 +211,11 @@ public open class CfnEnvironmentEC2 internal constructor(
           software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty.Builder =
           software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty.builder()
 
-      public override fun pathComponent(pathComponent: String) {
+      override fun pathComponent(pathComponent: String) {
         cdkBuilder.pathComponent(pathComponent)
       }
 
-      public override fun repositoryUrl(repositoryUrl: String) {
+      override fun repositoryUrl(repositoryUrl: String) {
         cdkBuilder.repositoryUrl(repositoryUrl)
       }
 
@@ -241,9 +228,9 @@ public open class CfnEnvironmentEC2 internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty,
     ) : RepositoryProperty {
-      public override fun pathComponent(): String = unwrap(this).getPathComponent()
+      override fun pathComponent(): String = unwrap(this).getPathComponent()
 
-      public override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
+      override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
     }
 
     public companion object {

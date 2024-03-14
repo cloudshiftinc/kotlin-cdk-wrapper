@@ -52,20 +52,15 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
   }
 
   public interface Builder {
-    public fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String) {
-    }
+    public fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String)
 
-    public fun onCreate(onCreate: IResolvable) {
-    }
+    public fun onCreate(onCreate: IResolvable)
 
-    public fun onCreate(onCreate: List<Any>) {
-    }
+    public fun onCreate(onCreate: List<Any>)
 
-    public fun onStart(onStart: IResolvable) {
-    }
+    public fun onStart(onStart: IResolvable)
 
-    public fun onStart(onStart: List<Any>) {
-    }
+    public fun onStart(onStart: List<Any>)
   }
 
   private class BuilderImpl(
@@ -77,24 +72,23 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.Builder.create(scope,
         id)
 
-    public override
-        fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String) {
+    override fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String) {
       cdkBuilder.notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName)
     }
 
-    public override fun onCreate(onCreate: IResolvable) {
+    override fun onCreate(onCreate: IResolvable) {
       cdkBuilder.onCreate(onCreate.let(IResolvable::unwrap))
     }
 
-    public override fun onCreate(onCreate: List<Any>) {
+    override fun onCreate(onCreate: List<Any>) {
       cdkBuilder.onCreate(onCreate)
     }
 
-    public override fun onStart(onStart: IResolvable) {
+    override fun onStart(onStart: IResolvable) {
       cdkBuilder.onStart(onStart.let(IResolvable::unwrap))
     }
 
-    public override fun onStart(onStart: List<Any>) {
+    override fun onStart(onStart: List<Any>) {
       cdkBuilder.onStart(onStart)
     }
 
@@ -129,8 +123,7 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
     public fun content(): String? = unwrap(this).getContent()
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
     }
 
     private class BuilderImpl : Builder {
@@ -139,7 +132,7 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
@@ -152,7 +145,7 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty,
     ) : NotebookInstanceLifecycleHookProperty {
-      public override fun content(): String? = unwrap(this).getContent()
+      override fun content(): String? = unwrap(this).getContent()
     }
 
     public companion object {

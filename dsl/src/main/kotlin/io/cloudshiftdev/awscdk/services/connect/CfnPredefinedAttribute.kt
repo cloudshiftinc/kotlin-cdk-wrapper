@@ -48,22 +48,17 @@ public open class CfnPredefinedAttribute internal constructor(
       values(ValuesProperty(`value`))
 
   public interface Builder {
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun values(values: IResolvable) {
-    }
+    public fun values(values: IResolvable)
 
-    public fun values(values: ValuesProperty) {
-    }
+    public fun values(values: ValuesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ca05e794ede7220981b4a1b47c982b834db1d4785ca333d1e4e8f843ec36be5")
-    public fun values(values: ValuesProperty.Builder.() -> Unit) {
-    }
+    public fun values(values: ValuesProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -73,25 +68,25 @@ public open class CfnPredefinedAttribute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnPredefinedAttribute.Builder =
         software.amazon.awscdk.services.connect.CfnPredefinedAttribute.Builder.create(scope, id)
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun values(values: IResolvable) {
+    override fun values(values: IResolvable) {
       cdkBuilder.values(values.let(IResolvable::unwrap))
     }
 
-    public override fun values(values: ValuesProperty) {
+    override fun values(values: ValuesProperty) {
       cdkBuilder.values(values.let(ValuesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ca05e794ede7220981b4a1b47c982b834db1d4785ca333d1e4e8f843ec36be5")
-    public override fun values(values: ValuesProperty.Builder.() -> Unit): Unit =
+    override fun values(values: ValuesProperty.Builder.() -> Unit): Unit =
         values(ValuesProperty(values))
 
     public fun build(): software.amazon.awscdk.services.connect.CfnPredefinedAttribute =
@@ -123,8 +118,7 @@ public open class CfnPredefinedAttribute internal constructor(
     public fun stringList(): List<String> = unwrap(this).getStringList() ?: emptyList()
 
     public interface Builder {
-      public fun stringList(stringList: List<String>) {
-      }
+      public fun stringList(stringList: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -132,7 +126,7 @@ public open class CfnPredefinedAttribute internal constructor(
           software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty.Builder =
           software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty.builder()
 
-      public override fun stringList(stringList: List<String>) {
+      override fun stringList(stringList: List<String>) {
         cdkBuilder.stringList(stringList)
       }
 
@@ -145,7 +139,7 @@ public open class CfnPredefinedAttribute internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty,
     ) : ValuesProperty {
-      public override fun stringList(): List<String> = unwrap(this).getStringList() ?: emptyList()
+      override fun stringList(): List<String> = unwrap(this).getStringList() ?: emptyList()
     }
 
     public companion object {

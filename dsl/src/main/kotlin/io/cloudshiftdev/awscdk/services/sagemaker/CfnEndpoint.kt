@@ -97,43 +97,31 @@ public open class CfnEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun deploymentConfig(deploymentConfig: IResolvable) {
-    }
+    public fun deploymentConfig(deploymentConfig: IResolvable)
 
-    public fun deploymentConfig(deploymentConfig: DeploymentConfigProperty) {
-    }
+    public fun deploymentConfig(deploymentConfig: DeploymentConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a541c408e70416a81e50a6f3c53ab0ea85b12aaa791ea908466a2e921fa9fd67")
-    public fun deploymentConfig(deploymentConfig: DeploymentConfigProperty.Builder.() -> Unit) {
-    }
+    public fun deploymentConfig(deploymentConfig: DeploymentConfigProperty.Builder.() -> Unit)
 
-    public fun endpointConfigName(endpointConfigName: String) {
-    }
+    public fun endpointConfigName(endpointConfigName: String)
 
-    public fun endpointName(endpointName: String) {
-    }
+    public fun endpointName(endpointName: String)
 
-    public fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: IResolvable) {
-    }
+    public fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: IResolvable)
 
-    public fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>) {
-    }
+    public fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>)
 
-    public fun retainAllVariantProperties(retainAllVariantProperties: Boolean) {
-    }
+    public fun retainAllVariantProperties(retainAllVariantProperties: Boolean)
 
-    public fun retainAllVariantProperties(retainAllVariantProperties: IResolvable) {
-    }
+    public fun retainAllVariantProperties(retainAllVariantProperties: IResolvable)
 
-    public fun retainDeploymentConfig(retainDeploymentConfig: Boolean) {
-    }
+    public fun retainDeploymentConfig(retainDeploymentConfig: Boolean)
 
-    public fun retainDeploymentConfig(retainDeploymentConfig: IResolvable) {
-    }
+    public fun retainDeploymentConfig(retainDeploymentConfig: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -143,55 +131,52 @@ public open class CfnEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnEndpoint.Builder =
         software.amazon.awscdk.services.sagemaker.CfnEndpoint.Builder.create(scope, id)
 
-    public override fun deploymentConfig(deploymentConfig: IResolvable) {
+    override fun deploymentConfig(deploymentConfig: IResolvable) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable::unwrap))
     }
 
-    public override fun deploymentConfig(deploymentConfig: DeploymentConfigProperty) {
+    override fun deploymentConfig(deploymentConfig: DeploymentConfigProperty) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(DeploymentConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a541c408e70416a81e50a6f3c53ab0ea85b12aaa791ea908466a2e921fa9fd67")
-    public override
-        fun deploymentConfig(deploymentConfig: DeploymentConfigProperty.Builder.() -> Unit): Unit =
-        deploymentConfig(DeploymentConfigProperty(deploymentConfig))
+    override fun deploymentConfig(deploymentConfig: DeploymentConfigProperty.Builder.() -> Unit):
+        Unit = deploymentConfig(DeploymentConfigProperty(deploymentConfig))
 
-    public override fun endpointConfigName(endpointConfigName: String) {
+    override fun endpointConfigName(endpointConfigName: String) {
       cdkBuilder.endpointConfigName(endpointConfigName)
     }
 
-    public override fun endpointName(endpointName: String) {
+    override fun endpointName(endpointName: String) {
       cdkBuilder.endpointName(endpointName)
     }
 
-    public override
-        fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: IResolvable) {
+    override fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: IResolvable) {
       cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.let(IResolvable::unwrap))
     }
 
-    public override
-        fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>) {
+    override fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>) {
       cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties)
     }
 
-    public override fun retainAllVariantProperties(retainAllVariantProperties: Boolean) {
+    override fun retainAllVariantProperties(retainAllVariantProperties: Boolean) {
       cdkBuilder.retainAllVariantProperties(retainAllVariantProperties)
     }
 
-    public override fun retainAllVariantProperties(retainAllVariantProperties: IResolvable) {
+    override fun retainAllVariantProperties(retainAllVariantProperties: IResolvable) {
       cdkBuilder.retainAllVariantProperties(retainAllVariantProperties.let(IResolvable::unwrap))
     }
 
-    public override fun retainDeploymentConfig(retainDeploymentConfig: Boolean) {
+    override fun retainDeploymentConfig(retainDeploymentConfig: Boolean) {
       cdkBuilder.retainDeploymentConfig(retainDeploymentConfig)
     }
 
-    public override fun retainDeploymentConfig(retainDeploymentConfig: IResolvable) {
+    override fun retainDeploymentConfig(retainDeploymentConfig: IResolvable) {
       cdkBuilder.retainDeploymentConfig(retainDeploymentConfig.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -228,24 +213,19 @@ public open class CfnEndpoint internal constructor(
     public fun trafficRoutingConfiguration(): Any
 
     public interface Builder {
-      public fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
-      }
+      public fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number)
 
-      public fun terminationWaitInSeconds(terminationWaitInSeconds: Number) {
-      }
+      public fun terminationWaitInSeconds(terminationWaitInSeconds: Number)
 
-      public fun trafficRoutingConfiguration(trafficRoutingConfiguration: IResolvable) {
-      }
+      public fun trafficRoutingConfiguration(trafficRoutingConfiguration: IResolvable)
 
       public
-          fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty) {
-      }
+          fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51869a7c33e2d22e368bc328ee4247451f379d44eaf37de8dcf248ff6f736472")
       public
-          fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty.Builder.() -> Unit) {
-      }
+          fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -254,27 +234,26 @@ public open class CfnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty.builder()
 
-      public override
-          fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
+      override fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
         cdkBuilder.maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds)
       }
 
-      public override fun terminationWaitInSeconds(terminationWaitInSeconds: Number) {
+      override fun terminationWaitInSeconds(terminationWaitInSeconds: Number) {
         cdkBuilder.terminationWaitInSeconds(terminationWaitInSeconds)
       }
 
-      public override fun trafficRoutingConfiguration(trafficRoutingConfiguration: IResolvable) {
+      override fun trafficRoutingConfiguration(trafficRoutingConfiguration: IResolvable) {
         cdkBuilder.trafficRoutingConfiguration(trafficRoutingConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty) {
         cdkBuilder.trafficRoutingConfiguration(trafficRoutingConfiguration.let(TrafficRoutingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51869a7c33e2d22e368bc328ee4247451f379d44eaf37de8dcf248ff6f736472")
-      public override
+      override
           fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty.Builder.() -> Unit):
           Unit =
           trafficRoutingConfiguration(TrafficRoutingConfigProperty(trafficRoutingConfiguration))
@@ -288,13 +267,12 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty,
     ) : BlueGreenUpdatePolicyProperty {
-      public override fun maximumExecutionTimeoutInSeconds(): Number? =
+      override fun maximumExecutionTimeoutInSeconds(): Number? =
           unwrap(this).getMaximumExecutionTimeoutInSeconds()
 
-      public override fun terminationWaitInSeconds(): Number? =
-          unwrap(this).getTerminationWaitInSeconds()
+      override fun terminationWaitInSeconds(): Number? = unwrap(this).getTerminationWaitInSeconds()
 
-      public override fun trafficRoutingConfiguration(): Any =
+      override fun trafficRoutingConfiguration(): Any =
           unwrap(this).getTrafficRoutingConfiguration()
     }
 
@@ -324,11 +302,9 @@ public open class CfnEndpoint internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -336,11 +312,11 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -352,9 +328,9 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty,
     ) : CapacitySizeProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -381,8 +357,7 @@ public open class CfnEndpoint internal constructor(
     public fun alarmName(): String
 
     public interface Builder {
-      public fun alarmName(alarmName: String) {
-      }
+      public fun alarmName(alarmName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -390,7 +365,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty.builder()
 
-      public override fun alarmName(alarmName: String) {
+      override fun alarmName(alarmName: String) {
         cdkBuilder.alarmName(alarmName)
       }
 
@@ -401,7 +376,7 @@ public open class CfnEndpoint internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty,
     ) : AlarmProperty {
-      public override fun alarmName(): String = unwrap(this).getAlarmName()
+      override fun alarmName(): String = unwrap(this).getAlarmName()
     }
 
     public companion object {
@@ -428,8 +403,7 @@ public open class CfnEndpoint internal constructor(
     public fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
 
     public interface Builder {
-      public fun variantPropertyType(variantPropertyType: String) {
-      }
+      public fun variantPropertyType(variantPropertyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -437,7 +411,7 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty.builder()
 
-      public override fun variantPropertyType(variantPropertyType: String) {
+      override fun variantPropertyType(variantPropertyType: String) {
         cdkBuilder.variantPropertyType(variantPropertyType)
       }
 
@@ -450,7 +424,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty,
     ) : VariantPropertyProperty {
-      public override fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
+      override fun variantPropertyType(): String? = unwrap(this).getVariantPropertyType()
     }
 
     public companion object {
@@ -484,34 +458,26 @@ public open class CfnEndpoint internal constructor(
     public fun waitIntervalInSeconds(): Number
 
     public interface Builder {
-      public fun maximumBatchSize(maximumBatchSize: IResolvable) {
-      }
+      public fun maximumBatchSize(maximumBatchSize: IResolvable)
 
-      public fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty) {
-      }
+      public fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32b94e7fa10506ddc71461a663ace895c4b842cc406ba48b75d5b58d099d98f6")
-      public fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty.Builder.() -> Unit) {
-      }
+      public fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty.Builder.() -> Unit)
 
-      public fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
-      }
+      public fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number)
 
-      public fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable) {
-      }
+      public fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable)
 
-      public fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty) {
-      }
+      public fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eebdbfee6d8c83471bb6ba6753b4e9174787cb4c3e0ce6b798ce75383ee16656")
       public
-          fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty.Builder.() -> Unit) {
-      }
+          fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty.Builder.() -> Unit)
 
-      public fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
-      }
+      public fun waitIntervalInSeconds(waitIntervalInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -520,40 +486,38 @@ public open class CfnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty.builder()
 
-      public override fun maximumBatchSize(maximumBatchSize: IResolvable) {
+      override fun maximumBatchSize(maximumBatchSize: IResolvable) {
         cdkBuilder.maximumBatchSize(maximumBatchSize.let(IResolvable::unwrap))
       }
 
-      public override fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty) {
+      override fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty) {
         cdkBuilder.maximumBatchSize(maximumBatchSize.let(CapacitySizeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32b94e7fa10506ddc71461a663ace895c4b842cc406ba48b75d5b58d099d98f6")
-      public override
-          fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty.Builder.() -> Unit): Unit =
-          maximumBatchSize(CapacitySizeProperty(maximumBatchSize))
+      override fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty.Builder.() -> Unit): Unit
+          = maximumBatchSize(CapacitySizeProperty(maximumBatchSize))
 
-      public override
-          fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
+      override fun maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds: Number) {
         cdkBuilder.maximumExecutionTimeoutInSeconds(maximumExecutionTimeoutInSeconds)
       }
 
-      public override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable) {
+      override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable) {
         cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(IResolvable::unwrap))
       }
 
-      public override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty) {
+      override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty) {
         cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(CapacitySizeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eebdbfee6d8c83471bb6ba6753b4e9174787cb4c3e0ce6b798ce75383ee16656")
-      public override
+      override
           fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty.Builder.() -> Unit):
           Unit = rollbackMaximumBatchSize(CapacitySizeProperty(rollbackMaximumBatchSize))
 
-      public override fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
+      override fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
         cdkBuilder.waitIntervalInSeconds(waitIntervalInSeconds)
       }
 
@@ -566,15 +530,14 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty,
     ) : RollingUpdatePolicyProperty {
-      public override fun maximumBatchSize(): Any = unwrap(this).getMaximumBatchSize()
+      override fun maximumBatchSize(): Any = unwrap(this).getMaximumBatchSize()
 
-      public override fun maximumExecutionTimeoutInSeconds(): Number? =
+      override fun maximumExecutionTimeoutInSeconds(): Number? =
           unwrap(this).getMaximumExecutionTimeoutInSeconds()
 
-      public override fun rollbackMaximumBatchSize(): Any? =
-          unwrap(this).getRollbackMaximumBatchSize()
+      override fun rollbackMaximumBatchSize(): Any? = unwrap(this).getRollbackMaximumBatchSize()
 
-      public override fun waitIntervalInSeconds(): Number = unwrap(this).getWaitIntervalInSeconds()
+      override fun waitIntervalInSeconds(): Number = unwrap(this).getWaitIntervalInSeconds()
     }
 
     public companion object {
@@ -607,33 +570,25 @@ public open class CfnEndpoint internal constructor(
     public fun waitIntervalInSeconds(): Number? = unwrap(this).getWaitIntervalInSeconds()
 
     public interface Builder {
-      public fun canarySize(canarySize: IResolvable) {
-      }
+      public fun canarySize(canarySize: IResolvable)
 
-      public fun canarySize(canarySize: CapacitySizeProperty) {
-      }
+      public fun canarySize(canarySize: CapacitySizeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30c71f5bea9be0b32e1b90249590a39011c7ed824dd03e8f24610eedb0153327")
-      public fun canarySize(canarySize: CapacitySizeProperty.Builder.() -> Unit) {
-      }
+      public fun canarySize(canarySize: CapacitySizeProperty.Builder.() -> Unit)
 
-      public fun linearStepSize(linearStepSize: IResolvable) {
-      }
+      public fun linearStepSize(linearStepSize: IResolvable)
 
-      public fun linearStepSize(linearStepSize: CapacitySizeProperty) {
-      }
+      public fun linearStepSize(linearStepSize: CapacitySizeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f4e7862c25a4542dca6816d79476a0bfbaf5837819073237189a60f8a763343")
-      public fun linearStepSize(linearStepSize: CapacitySizeProperty.Builder.() -> Unit) {
-      }
+      public fun linearStepSize(linearStepSize: CapacitySizeProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
-      }
+      public fun waitIntervalInSeconds(waitIntervalInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -642,37 +597,37 @@ public open class CfnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty.builder()
 
-      public override fun canarySize(canarySize: IResolvable) {
+      override fun canarySize(canarySize: IResolvable) {
         cdkBuilder.canarySize(canarySize.let(IResolvable::unwrap))
       }
 
-      public override fun canarySize(canarySize: CapacitySizeProperty) {
+      override fun canarySize(canarySize: CapacitySizeProperty) {
         cdkBuilder.canarySize(canarySize.let(CapacitySizeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30c71f5bea9be0b32e1b90249590a39011c7ed824dd03e8f24610eedb0153327")
-      public override fun canarySize(canarySize: CapacitySizeProperty.Builder.() -> Unit): Unit =
+      override fun canarySize(canarySize: CapacitySizeProperty.Builder.() -> Unit): Unit =
           canarySize(CapacitySizeProperty(canarySize))
 
-      public override fun linearStepSize(linearStepSize: IResolvable) {
+      override fun linearStepSize(linearStepSize: IResolvable) {
         cdkBuilder.linearStepSize(linearStepSize.let(IResolvable::unwrap))
       }
 
-      public override fun linearStepSize(linearStepSize: CapacitySizeProperty) {
+      override fun linearStepSize(linearStepSize: CapacitySizeProperty) {
         cdkBuilder.linearStepSize(linearStepSize.let(CapacitySizeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f4e7862c25a4542dca6816d79476a0bfbaf5837819073237189a60f8a763343")
-      public override fun linearStepSize(linearStepSize: CapacitySizeProperty.Builder.() -> Unit):
-          Unit = linearStepSize(CapacitySizeProperty(linearStepSize))
+      override fun linearStepSize(linearStepSize: CapacitySizeProperty.Builder.() -> Unit): Unit =
+          linearStepSize(CapacitySizeProperty(linearStepSize))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
+      override fun waitIntervalInSeconds(waitIntervalInSeconds: Number) {
         cdkBuilder.waitIntervalInSeconds(waitIntervalInSeconds)
       }
 
@@ -685,13 +640,13 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty,
     ) : TrafficRoutingConfigProperty {
-      public override fun canarySize(): Any? = unwrap(this).getCanarySize()
+      override fun canarySize(): Any? = unwrap(this).getCanarySize()
 
-      public override fun linearStepSize(): Any? = unwrap(this).getLinearStepSize()
+      override fun linearStepSize(): Any? = unwrap(this).getLinearStepSize()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun waitIntervalInSeconds(): Number? = unwrap(this).getWaitIntervalInSeconds()
+      override fun waitIntervalInSeconds(): Number? = unwrap(this).getWaitIntervalInSeconds()
     }
 
     public companion object {
@@ -718,11 +673,9 @@ public open class CfnEndpoint internal constructor(
     public fun alarms(): Any
 
     public interface Builder {
-      public fun alarms(alarms: IResolvable) {
-      }
+      public fun alarms(alarms: IResolvable)
 
-      public fun alarms(alarms: List<Any>) {
-      }
+      public fun alarms(alarms: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -730,11 +683,11 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty.builder()
 
-      public override fun alarms(alarms: IResolvable) {
+      override fun alarms(alarms: IResolvable) {
         cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
       }
 
-      public override fun alarms(alarms: List<Any>) {
+      override fun alarms(alarms: List<Any>) {
         cdkBuilder.alarms(alarms)
       }
 
@@ -747,7 +700,7 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty,
     ) : AutoRollbackConfigProperty {
-      public override fun alarms(): Any = unwrap(this).getAlarms()
+      override fun alarms(): Any = unwrap(this).getAlarms()
     }
 
     public companion object {
@@ -778,41 +731,32 @@ public open class CfnEndpoint internal constructor(
     public fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
 
     public interface Builder {
-      public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
-      }
+      public fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable)
 
-      public fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty) {
-      }
+      public fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91c784e9b22c4fa4e9231cc0983480e54d126259089cd2d399efdba9976aae58")
       public
-          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit) {
-      }
+          fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit)
 
-      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable) {
-      }
+      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable)
 
-      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty) {
-      }
+      public fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b1a1c7d71c378c8c09d73dd58cc6ccfcc453f7ea516b959e0c6d54b927918e84")
       public
-          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit) {
-      }
+          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit)
 
-      public fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
-      }
+      public fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable)
 
-      public fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty) {
-      }
+      public fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da9c76e6c3ab105d9e15606e840dcdcb00d8103aa17e1b3ca60bd12cd834d2cd")
       public
-          fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit) {
-      }
+          fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -820,47 +764,46 @@ public open class CfnEndpoint internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty.builder()
 
-      public override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
+      override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
         cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty) {
         cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91c784e9b22c4fa4e9231cc0983480e54d126259089cd2d399efdba9976aae58")
-      public override
+      override
           fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty.Builder.() -> Unit):
           Unit = autoRollbackConfiguration(AutoRollbackConfigProperty(autoRollbackConfiguration))
 
-      public override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable) {
+      override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable) {
         cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(IResolvable::unwrap))
       }
 
-      public override
-          fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty) {
+      override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty) {
         cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(BlueGreenUpdatePolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b1a1c7d71c378c8c09d73dd58cc6ccfcc453f7ea516b959e0c6d54b927918e84")
-      public override
+      override
           fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty.Builder.() -> Unit):
           Unit = blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty(blueGreenUpdatePolicy))
 
-      public override fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
+      override fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
         cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(IResolvable::unwrap))
       }
 
-      public override fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty) {
+      override fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty) {
         cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(RollingUpdatePolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da9c76e6c3ab105d9e15606e840dcdcb00d8103aa17e1b3ca60bd12cd834d2cd")
-      public override
+      override
           fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty.Builder.() -> Unit):
           Unit = rollingUpdatePolicy(RollingUpdatePolicyProperty(rollingUpdatePolicy))
 
@@ -873,12 +816,11 @@ public open class CfnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty,
     ) : DeploymentConfigProperty {
-      public override fun autoRollbackConfiguration(): Any? =
-          unwrap(this).getAutoRollbackConfiguration()
+      override fun autoRollbackConfiguration(): Any? = unwrap(this).getAutoRollbackConfiguration()
 
-      public override fun blueGreenUpdatePolicy(): Any? = unwrap(this).getBlueGreenUpdatePolicy()
+      override fun blueGreenUpdatePolicy(): Any? = unwrap(this).getBlueGreenUpdatePolicy()
 
-      public override fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
+      override fun rollingUpdatePolicy(): Any? = unwrap(this).getRollingUpdatePolicy()
     }
 
     public companion object {

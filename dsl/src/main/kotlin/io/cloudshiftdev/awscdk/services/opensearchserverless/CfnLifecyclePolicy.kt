@@ -40,17 +40,13 @@ public open class CfnLifecyclePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policy(policy: String) {
-    }
+    public fun policy(policy: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnLifecyclePolicy internal constructor(
         software.amazon.awscdk.services.opensearchserverless.CfnLifecyclePolicy.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policy(policy: String) {
+    override fun policy(policy: String) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

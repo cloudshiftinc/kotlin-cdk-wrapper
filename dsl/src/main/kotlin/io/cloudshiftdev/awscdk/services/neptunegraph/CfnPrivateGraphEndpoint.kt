@@ -47,17 +47,13 @@ public open class CfnPrivateGraphEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun graphIdentifier(graphIdentifier: String) {
-    }
+    public fun graphIdentifier(graphIdentifier: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnPrivateGraphEndpoint internal constructor(
         software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint.Builder.create(scope,
         id)
 
-    public override fun graphIdentifier(graphIdentifier: String) {
+    override fun graphIdentifier(graphIdentifier: String) {
       cdkBuilder.graphIdentifier(graphIdentifier)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

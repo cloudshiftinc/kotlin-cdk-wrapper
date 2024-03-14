@@ -12,14 +12,11 @@ public interface WebSocketRouteOptions {
   public fun returnResponse(): Boolean? = unwrap(this).getReturnResponse()
 
   public interface Builder {
-    public fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
-    }
+    public fun authorizer(authorizer: IWebSocketRouteAuthorizer)
 
-    public fun integration(integration: WebSocketRouteIntegration) {
-    }
+    public fun integration(integration: WebSocketRouteIntegration)
 
-    public fun returnResponse(returnResponse: Boolean) {
-    }
+    public fun returnResponse(returnResponse: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -27,15 +24,15 @@ public interface WebSocketRouteOptions {
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions.builder()
 
-    public override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
+    override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
       cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer::unwrap))
     }
 
-    public override fun integration(integration: WebSocketRouteIntegration) {
+    override fun integration(integration: WebSocketRouteIntegration) {
       cdkBuilder.integration(integration.let(WebSocketRouteIntegration::unwrap))
     }
 
-    public override fun returnResponse(returnResponse: Boolean) {
+    override fun returnResponse(returnResponse: Boolean) {
       cdkBuilder.returnResponse(returnResponse)
     }
 
@@ -46,13 +43,13 @@ public interface WebSocketRouteOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteOptions,
   ) : WebSocketRouteOptions {
-    public override fun authorizer(): IWebSocketRouteAuthorizer? =
+    override fun authorizer(): IWebSocketRouteAuthorizer? =
         unwrap(this).getAuthorizer()?.let(IWebSocketRouteAuthorizer::wrap)
 
-    public override fun integration(): WebSocketRouteIntegration =
+    override fun integration(): WebSocketRouteIntegration =
         unwrap(this).getIntegration().let(WebSocketRouteIntegration::wrap)
 
-    public override fun returnResponse(): Boolean? = unwrap(this).getReturnResponse()
+    override fun returnResponse(): Boolean? = unwrap(this).getReturnResponse()
   }
 
   public companion object {

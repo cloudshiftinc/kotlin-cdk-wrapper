@@ -11,22 +11,20 @@ public interface RotationMultiUserOptions {
   public fun secret(): ISecret
 
   public interface Builder {
-    public fun automaticallyAfter(automaticallyAfter: Duration) {
-    }
+    public fun automaticallyAfter(automaticallyAfter: Duration)
 
-    public fun secret(secret: ISecret) {
-    }
+    public fun secret(secret: ISecret)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.docdb.RotationMultiUserOptions.Builder =
         software.amazon.awscdk.services.docdb.RotationMultiUserOptions.builder()
 
-    public override fun automaticallyAfter(automaticallyAfter: Duration) {
+    override fun automaticallyAfter(automaticallyAfter: Duration) {
       cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
     }
 
-    public override fun secret(secret: ISecret) {
+    override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }
 
@@ -37,10 +35,10 @@ public interface RotationMultiUserOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions,
   ) : RotationMultiUserOptions {
-    public override fun automaticallyAfter(): Duration? =
+    override fun automaticallyAfter(): Duration? =
         unwrap(this).getAutomaticallyAfter()?.let(Duration::wrap)
 
-    public override fun secret(): ISecret = unwrap(this).getSecret().let(ISecret::wrap)
+    override fun secret(): ISecret = unwrap(this).getSecret().let(ISecret::wrap)
   }
 
   public companion object {

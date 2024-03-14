@@ -57,20 +57,15 @@ public open class CfnDashboard internal constructor(
   }
 
   public interface Builder {
-    public fun dashboardDefinition(dashboardDefinition: String) {
-    }
+    public fun dashboardDefinition(dashboardDefinition: String)
 
-    public fun dashboardDescription(dashboardDescription: String) {
-    }
+    public fun dashboardDescription(dashboardDescription: String)
 
-    public fun dashboardName(dashboardName: String) {
-    }
+    public fun dashboardName(dashboardName: String)
 
-    public fun projectId(projectId: String) {
-    }
+    public fun projectId(projectId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnDashboard internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotsitewise.CfnDashboard.Builder =
         software.amazon.awscdk.services.iotsitewise.CfnDashboard.Builder.create(scope, id)
 
-    public override fun dashboardDefinition(dashboardDefinition: String) {
+    override fun dashboardDefinition(dashboardDefinition: String) {
       cdkBuilder.dashboardDefinition(dashboardDefinition)
     }
 
-    public override fun dashboardDescription(dashboardDescription: String) {
+    override fun dashboardDescription(dashboardDescription: String) {
       cdkBuilder.dashboardDescription(dashboardDescription)
     }
 
-    public override fun dashboardName(dashboardName: String) {
+    override fun dashboardName(dashboardName: String) {
       cdkBuilder.dashboardName(dashboardName)
     }
 
-    public override fun projectId(projectId: String) {
+    override fun projectId(projectId: String) {
       cdkBuilder.projectId(projectId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

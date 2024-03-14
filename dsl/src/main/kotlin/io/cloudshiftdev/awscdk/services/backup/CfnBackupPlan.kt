@@ -57,19 +57,15 @@ public open class CfnBackupPlan internal constructor(
   }
 
   public interface Builder {
-    public fun backupPlan(backupPlan: IResolvable) {
-    }
+    public fun backupPlan(backupPlan: IResolvable)
 
-    public fun backupPlan(backupPlan: BackupPlanResourceTypeProperty) {
-    }
+    public fun backupPlan(backupPlan: BackupPlanResourceTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d790c488ea554c98218cf0812f40687ff90d3707d2cee1dff1218fa54bdd5c5")
-    public fun backupPlan(backupPlan: BackupPlanResourceTypeProperty.Builder.() -> Unit) {
-    }
+    public fun backupPlan(backupPlan: BackupPlanResourceTypeProperty.Builder.() -> Unit)
 
-    public fun backupPlanTags(backupPlanTags: Map<String, String>) {
-    }
+    public fun backupPlanTags(backupPlanTags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -79,20 +75,20 @@ public open class CfnBackupPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnBackupPlan.Builder =
         software.amazon.awscdk.services.backup.CfnBackupPlan.Builder.create(scope, id)
 
-    public override fun backupPlan(backupPlan: IResolvable) {
+    override fun backupPlan(backupPlan: IResolvable) {
       cdkBuilder.backupPlan(backupPlan.let(IResolvable::unwrap))
     }
 
-    public override fun backupPlan(backupPlan: BackupPlanResourceTypeProperty) {
+    override fun backupPlan(backupPlan: BackupPlanResourceTypeProperty) {
       cdkBuilder.backupPlan(backupPlan.let(BackupPlanResourceTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d790c488ea554c98218cf0812f40687ff90d3707d2cee1dff1218fa54bdd5c5")
-    public override fun backupPlan(backupPlan: BackupPlanResourceTypeProperty.Builder.() -> Unit):
-        Unit = backupPlan(BackupPlanResourceTypeProperty(backupPlan))
+    override fun backupPlan(backupPlan: BackupPlanResourceTypeProperty.Builder.() -> Unit): Unit =
+        backupPlan(BackupPlanResourceTypeProperty(backupPlan))
 
-    public override fun backupPlanTags(backupPlanTags: Map<String, String>) {
+    override fun backupPlanTags(backupPlanTags: Map<String, String>) {
       cdkBuilder.backupPlanTags(backupPlanTags)
     }
 
@@ -126,19 +122,15 @@ public open class CfnBackupPlan internal constructor(
     public fun lifecycle(): Any? = unwrap(this).getLifecycle()
 
     public interface Builder {
-      public fun destinationBackupVaultArn(destinationBackupVaultArn: String) {
-      }
+      public fun destinationBackupVaultArn(destinationBackupVaultArn: String)
 
-      public fun lifecycle(lifecycle: IResolvable) {
-      }
+      public fun lifecycle(lifecycle: IResolvable)
 
-      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
-      }
+      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9dbbe619efbd94ebbcffe3e2d61e20f2d1c9393f514d35642d54e265d1434d19")
-      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit) {
-      }
+      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -147,22 +139,22 @@ public open class CfnBackupPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty.builder()
 
-      public override fun destinationBackupVaultArn(destinationBackupVaultArn: String) {
+      override fun destinationBackupVaultArn(destinationBackupVaultArn: String) {
         cdkBuilder.destinationBackupVaultArn(destinationBackupVaultArn)
       }
 
-      public override fun lifecycle(lifecycle: IResolvable) {
+      override fun lifecycle(lifecycle: IResolvable) {
         cdkBuilder.lifecycle(lifecycle.let(IResolvable::unwrap))
       }
 
-      public override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
+      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
         cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9dbbe619efbd94ebbcffe3e2d61e20f2d1c9393f514d35642d54e265d1434d19")
-      public override fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit):
-          Unit = lifecycle(LifecycleResourceTypeProperty(lifecycle))
+      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit): Unit =
+          lifecycle(LifecycleResourceTypeProperty(lifecycle))
 
       public fun build():
           software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty =
@@ -173,10 +165,9 @@ public open class CfnBackupPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupPlan.CopyActionResourceTypeProperty,
     ) : CopyActionResourceTypeProperty {
-      public override fun destinationBackupVaultArn(): String =
-          unwrap(this).getDestinationBackupVaultArn()
+      override fun destinationBackupVaultArn(): String = unwrap(this).getDestinationBackupVaultArn()
 
-      public override fun lifecycle(): Any? = unwrap(this).getLifecycle()
+      override fun lifecycle(): Any? = unwrap(this).getLifecycle()
     }
 
     public companion object {
@@ -205,11 +196,9 @@ public open class CfnBackupPlan internal constructor(
     public fun resourceType(): String
 
     public interface Builder {
-      public fun backupOptions(backupOptions: Any) {
-      }
+      public fun backupOptions(backupOptions: Any)
 
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -218,11 +207,11 @@ public open class CfnBackupPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty.builder()
 
-      public override fun backupOptions(backupOptions: Any) {
+      override fun backupOptions(backupOptions: Any) {
         cdkBuilder.backupOptions(backupOptions)
       }
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
@@ -235,9 +224,9 @@ public open class CfnBackupPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty,
     ) : AdvancedBackupSettingResourceTypeProperty {
-      public override fun backupOptions(): Any = unwrap(this).getBackupOptions()
+      override fun backupOptions(): Any = unwrap(this).getBackupOptions()
 
-      public override fun resourceType(): String = unwrap(this).getResourceType()
+      override fun resourceType(): String = unwrap(this).getResourceType()
     }
 
     public companion object {
@@ -269,20 +258,15 @@ public open class CfnBackupPlan internal constructor(
     public fun backupPlanRule(): Any
 
     public interface Builder {
-      public fun advancedBackupSettings(advancedBackupSettings: IResolvable) {
-      }
+      public fun advancedBackupSettings(advancedBackupSettings: IResolvable)
 
-      public fun advancedBackupSettings(advancedBackupSettings: List<Any>) {
-      }
+      public fun advancedBackupSettings(advancedBackupSettings: List<Any>)
 
-      public fun backupPlanName(backupPlanName: String) {
-      }
+      public fun backupPlanName(backupPlanName: String)
 
-      public fun backupPlanRule(backupPlanRule: IResolvable) {
-      }
+      public fun backupPlanRule(backupPlanRule: IResolvable)
 
-      public fun backupPlanRule(backupPlanRule: List<Any>) {
-      }
+      public fun backupPlanRule(backupPlanRule: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -291,23 +275,23 @@ public open class CfnBackupPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty.builder()
 
-      public override fun advancedBackupSettings(advancedBackupSettings: IResolvable) {
+      override fun advancedBackupSettings(advancedBackupSettings: IResolvable) {
         cdkBuilder.advancedBackupSettings(advancedBackupSettings.let(IResolvable::unwrap))
       }
 
-      public override fun advancedBackupSettings(advancedBackupSettings: List<Any>) {
+      override fun advancedBackupSettings(advancedBackupSettings: List<Any>) {
         cdkBuilder.advancedBackupSettings(advancedBackupSettings)
       }
 
-      public override fun backupPlanName(backupPlanName: String) {
+      override fun backupPlanName(backupPlanName: String) {
         cdkBuilder.backupPlanName(backupPlanName)
       }
 
-      public override fun backupPlanRule(backupPlanRule: IResolvable) {
+      override fun backupPlanRule(backupPlanRule: IResolvable) {
         cdkBuilder.backupPlanRule(backupPlanRule.let(IResolvable::unwrap))
       }
 
-      public override fun backupPlanRule(backupPlanRule: List<Any>) {
+      override fun backupPlanRule(backupPlanRule: List<Any>) {
         cdkBuilder.backupPlanRule(backupPlanRule)
       }
 
@@ -320,11 +304,11 @@ public open class CfnBackupPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty,
     ) : BackupPlanResourceTypeProperty {
-      public override fun advancedBackupSettings(): Any? = unwrap(this).getAdvancedBackupSettings()
+      override fun advancedBackupSettings(): Any? = unwrap(this).getAdvancedBackupSettings()
 
-      public override fun backupPlanName(): String = unwrap(this).getBackupPlanName()
+      override fun backupPlanName(): String = unwrap(this).getBackupPlanName()
 
-      public override fun backupPlanRule(): Any = unwrap(this).getBackupPlanRule()
+      override fun backupPlanRule(): Any = unwrap(this).getBackupPlanRule()
     }
 
     public companion object {
@@ -369,52 +353,37 @@ public open class CfnBackupPlan internal constructor(
     public fun targetBackupVault(): String
 
     public interface Builder {
-      public fun completionWindowMinutes(completionWindowMinutes: Number) {
-      }
+      public fun completionWindowMinutes(completionWindowMinutes: Number)
 
-      public fun copyActions(copyActions: IResolvable) {
-      }
+      public fun copyActions(copyActions: IResolvable)
 
-      public fun copyActions(copyActions: List<Any>) {
-      }
+      public fun copyActions(copyActions: List<Any>)
 
-      public fun enableContinuousBackup(enableContinuousBackup: Boolean) {
-      }
+      public fun enableContinuousBackup(enableContinuousBackup: Boolean)
 
-      public fun enableContinuousBackup(enableContinuousBackup: IResolvable) {
-      }
+      public fun enableContinuousBackup(enableContinuousBackup: IResolvable)
 
-      public fun lifecycle(lifecycle: IResolvable) {
-      }
+      public fun lifecycle(lifecycle: IResolvable)
 
-      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
-      }
+      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b61328720a5c3d3b5a4be3c0e7a8de70f9f408a46a9880c179b25fb88b891133")
-      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit) {
-      }
+      public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit)
 
-      public fun recoveryPointTags(recoveryPointTags: IResolvable) {
-      }
+      public fun recoveryPointTags(recoveryPointTags: IResolvable)
 
-      public fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
-      }
+      public fun recoveryPointTags(recoveryPointTags: Map<String, String>)
 
-      public fun ruleName(ruleName: String) {
-      }
+      public fun ruleName(ruleName: String)
 
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
 
-      public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
-      }
+      public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
 
-      public fun startWindowMinutes(startWindowMinutes: Number) {
-      }
+      public fun startWindowMinutes(startWindowMinutes: Number)
 
-      public fun targetBackupVault(targetBackupVault: String) {
-      }
+      public fun targetBackupVault(targetBackupVault: String)
     }
 
     private class BuilderImpl : Builder {
@@ -423,64 +392,64 @@ public open class CfnBackupPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty.builder()
 
-      public override fun completionWindowMinutes(completionWindowMinutes: Number) {
+      override fun completionWindowMinutes(completionWindowMinutes: Number) {
         cdkBuilder.completionWindowMinutes(completionWindowMinutes)
       }
 
-      public override fun copyActions(copyActions: IResolvable) {
+      override fun copyActions(copyActions: IResolvable) {
         cdkBuilder.copyActions(copyActions.let(IResolvable::unwrap))
       }
 
-      public override fun copyActions(copyActions: List<Any>) {
+      override fun copyActions(copyActions: List<Any>) {
         cdkBuilder.copyActions(copyActions)
       }
 
-      public override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
+      override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
         cdkBuilder.enableContinuousBackup(enableContinuousBackup)
       }
 
-      public override fun enableContinuousBackup(enableContinuousBackup: IResolvable) {
+      override fun enableContinuousBackup(enableContinuousBackup: IResolvable) {
         cdkBuilder.enableContinuousBackup(enableContinuousBackup.let(IResolvable::unwrap))
       }
 
-      public override fun lifecycle(lifecycle: IResolvable) {
+      override fun lifecycle(lifecycle: IResolvable) {
         cdkBuilder.lifecycle(lifecycle.let(IResolvable::unwrap))
       }
 
-      public override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
+      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
         cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b61328720a5c3d3b5a4be3c0e7a8de70f9f408a46a9880c179b25fb88b891133")
-      public override fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit):
-          Unit = lifecycle(LifecycleResourceTypeProperty(lifecycle))
+      override fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit): Unit =
+          lifecycle(LifecycleResourceTypeProperty(lifecycle))
 
-      public override fun recoveryPointTags(recoveryPointTags: IResolvable) {
+      override fun recoveryPointTags(recoveryPointTags: IResolvable) {
         cdkBuilder.recoveryPointTags(recoveryPointTags.let(IResolvable::unwrap))
       }
 
-      public override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
+      override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
         cdkBuilder.recoveryPointTags(recoveryPointTags)
       }
 
-      public override fun ruleName(ruleName: String) {
+      override fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)
       }
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
-      public override fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
+      override fun scheduleExpressionTimezone(scheduleExpressionTimezone: String) {
         cdkBuilder.scheduleExpressionTimezone(scheduleExpressionTimezone)
       }
 
-      public override fun startWindowMinutes(startWindowMinutes: Number) {
+      override fun startWindowMinutes(startWindowMinutes: Number) {
         cdkBuilder.startWindowMinutes(startWindowMinutes)
       }
 
-      public override fun targetBackupVault(targetBackupVault: String) {
+      override fun targetBackupVault(targetBackupVault: String) {
         cdkBuilder.targetBackupVault(targetBackupVault)
       }
 
@@ -493,27 +462,26 @@ public open class CfnBackupPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupRuleResourceTypeProperty,
     ) : BackupRuleResourceTypeProperty {
-      public override fun completionWindowMinutes(): Number? =
-          unwrap(this).getCompletionWindowMinutes()
+      override fun completionWindowMinutes(): Number? = unwrap(this).getCompletionWindowMinutes()
 
-      public override fun copyActions(): Any? = unwrap(this).getCopyActions()
+      override fun copyActions(): Any? = unwrap(this).getCopyActions()
 
-      public override fun enableContinuousBackup(): Any? = unwrap(this).getEnableContinuousBackup()
+      override fun enableContinuousBackup(): Any? = unwrap(this).getEnableContinuousBackup()
 
-      public override fun lifecycle(): Any? = unwrap(this).getLifecycle()
+      override fun lifecycle(): Any? = unwrap(this).getLifecycle()
 
-      public override fun recoveryPointTags(): Any? = unwrap(this).getRecoveryPointTags()
+      override fun recoveryPointTags(): Any? = unwrap(this).getRecoveryPointTags()
 
-      public override fun ruleName(): String = unwrap(this).getRuleName()
+      override fun ruleName(): String = unwrap(this).getRuleName()
 
-      public override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
 
-      public override fun scheduleExpressionTimezone(): String? =
+      override fun scheduleExpressionTimezone(): String? =
           unwrap(this).getScheduleExpressionTimezone()
 
-      public override fun startWindowMinutes(): Number? = unwrap(this).getStartWindowMinutes()
+      override fun startWindowMinutes(): Number? = unwrap(this).getStartWindowMinutes()
 
-      public override fun targetBackupVault(): String = unwrap(this).getTargetBackupVault()
+      override fun targetBackupVault(): String = unwrap(this).getTargetBackupVault()
     }
 
     public companion object {
@@ -545,18 +513,14 @@ public open class CfnBackupPlan internal constructor(
         unwrap(this).getOptInToArchiveForSupportedResources()
 
     public interface Builder {
-      public fun deleteAfterDays(deleteAfterDays: Number) {
-      }
+      public fun deleteAfterDays(deleteAfterDays: Number)
 
-      public fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number) {
-      }
+      public fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number)
 
-      public fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: Boolean) {
-      }
+      public fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: Boolean)
 
       public
-          fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: IResolvable) {
-      }
+          fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -565,20 +529,20 @@ public open class CfnBackupPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty.builder()
 
-      public override fun deleteAfterDays(deleteAfterDays: Number) {
+      override fun deleteAfterDays(deleteAfterDays: Number) {
         cdkBuilder.deleteAfterDays(deleteAfterDays)
       }
 
-      public override fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number) {
+      override fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number) {
         cdkBuilder.moveToColdStorageAfterDays(moveToColdStorageAfterDays)
       }
 
-      public override
+      override
           fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: Boolean) {
         cdkBuilder.optInToArchiveForSupportedResources(optInToArchiveForSupportedResources)
       }
 
-      public override
+      override
           fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: IResolvable) {
         cdkBuilder.optInToArchiveForSupportedResources(optInToArchiveForSupportedResources.let(IResolvable::unwrap))
       }
@@ -592,12 +556,12 @@ public open class CfnBackupPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupPlan.LifecycleResourceTypeProperty,
     ) : LifecycleResourceTypeProperty {
-      public override fun deleteAfterDays(): Number? = unwrap(this).getDeleteAfterDays()
+      override fun deleteAfterDays(): Number? = unwrap(this).getDeleteAfterDays()
 
-      public override fun moveToColdStorageAfterDays(): Number? =
+      override fun moveToColdStorageAfterDays(): Number? =
           unwrap(this).getMoveToColdStorageAfterDays()
 
-      public override fun optInToArchiveForSupportedResources(): Any? =
+      override fun optInToArchiveForSupportedResources(): Any? =
           unwrap(this).getOptInToArchiveForSupportedResources()
     }
 

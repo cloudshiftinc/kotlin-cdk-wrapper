@@ -85,34 +85,25 @@ public open class CfnRepository internal constructor(
   }
 
   public interface Builder {
-    public fun code(code: IResolvable) {
-    }
+    public fun code(code: IResolvable)
 
-    public fun code(code: CodeProperty) {
-    }
+    public fun code(code: CodeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9fd4d268d04ae519367c5e33ce2b6df25d1e474a34053bdfc54974fc3b3d3dc1")
-    public fun code(code: CodeProperty.Builder.() -> Unit) {
-    }
+    public fun code(code: CodeProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun repositoryDescription(repositoryDescription: String) {
-    }
+    public fun repositoryDescription(repositoryDescription: String)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun triggers(triggers: IResolvable) {
-    }
+    public fun triggers(triggers: IResolvable)
 
-    public fun triggers(triggers: List<Any>) {
-    }
+    public fun triggers(triggers: List<Any>)
   }
 
   private class BuilderImpl(
@@ -122,39 +113,39 @@ public open class CfnRepository internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codecommit.CfnRepository.Builder =
         software.amazon.awscdk.services.codecommit.CfnRepository.Builder.create(scope, id)
 
-    public override fun code(code: IResolvable) {
+    override fun code(code: IResolvable) {
       cdkBuilder.code(code.let(IResolvable::unwrap))
     }
 
-    public override fun code(code: CodeProperty) {
+    override fun code(code: CodeProperty) {
       cdkBuilder.code(code.let(CodeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9fd4d268d04ae519367c5e33ce2b6df25d1e474a34053bdfc54974fc3b3d3dc1")
-    public override fun code(code: CodeProperty.Builder.() -> Unit): Unit = code(CodeProperty(code))
+    override fun code(code: CodeProperty.Builder.() -> Unit): Unit = code(CodeProperty(code))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun repositoryDescription(repositoryDescription: String) {
+    override fun repositoryDescription(repositoryDescription: String) {
       cdkBuilder.repositoryDescription(repositoryDescription)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun triggers(triggers: IResolvable) {
+    override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
     }
 
-    public override fun triggers(triggers: List<Any>) {
+    override fun triggers(triggers: List<Any>) {
       cdkBuilder.triggers(triggers)
     }
 
@@ -189,19 +180,15 @@ public open class CfnRepository internal constructor(
     public fun s3(): Any
 
     public interface Builder {
-      public fun branchName(branchName: String) {
-      }
+      public fun branchName(branchName: String)
 
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3Property) {
-      }
+      public fun s3(s3: S3Property)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c913cac2906efe85d52961192d80b494f8add6529f9c3d9d5834e0d5692edef1")
-      public fun s3(s3: S3Property.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3Property.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -209,21 +196,21 @@ public open class CfnRepository internal constructor(
           software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty.Builder =
           software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty.builder()
 
-      public override fun branchName(branchName: String) {
+      override fun branchName(branchName: String) {
         cdkBuilder.branchName(branchName)
       }
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3Property) {
+      override fun s3(s3: S3Property) {
         cdkBuilder.s3(s3.let(S3Property::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c913cac2906efe85d52961192d80b494f8add6529f9c3d9d5834e0d5692edef1")
-      public override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
+      override fun s3(s3: S3Property.Builder.() -> Unit): Unit = s3(S3Property(s3))
 
       public fun build(): software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty =
           cdkBuilder.build()
@@ -232,9 +219,9 @@ public open class CfnRepository internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty,
     ) : CodeProperty {
-      public override fun branchName(): String? = unwrap(this).getBranchName()
+      override fun branchName(): String? = unwrap(this).getBranchName()
 
-      public override fun s3(): Any = unwrap(this).getS3()
+      override fun s3(): Any = unwrap(this).getS3()
     }
 
     public companion object {
@@ -265,14 +252,11 @@ public open class CfnRepository internal constructor(
     public fun objectVersion(): String? = unwrap(this).getObjectVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun objectVersion(objectVersion: String) {
-      }
+      public fun objectVersion(objectVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -280,15 +264,15 @@ public open class CfnRepository internal constructor(
           software.amazon.awscdk.services.codecommit.CfnRepository.S3Property.Builder =
           software.amazon.awscdk.services.codecommit.CfnRepository.S3Property.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun objectVersion(objectVersion: String) {
+      override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
       }
 
@@ -299,11 +283,11 @@ public open class CfnRepository internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property,
     ) : S3Property {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
     }
 
     public companion object {
@@ -338,20 +322,15 @@ public open class CfnRepository internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun branches(branches: List<String>) {
-      }
+      public fun branches(branches: List<String>)
 
-      public fun customData(customData: String) {
-      }
+      public fun customData(customData: String)
 
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
 
-      public fun events(events: List<String>) {
-      }
+      public fun events(events: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -360,23 +339,23 @@ public open class CfnRepository internal constructor(
           =
           software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty.builder()
 
-      public override fun branches(branches: List<String>) {
+      override fun branches(branches: List<String>) {
         cdkBuilder.branches(branches)
       }
 
-      public override fun customData(customData: String) {
+      override fun customData(customData: String) {
         cdkBuilder.customData(customData)
       }
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
-      public override fun events(events: List<String>) {
+      override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -389,15 +368,15 @@ public open class CfnRepository internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty,
     ) : RepositoryTriggerProperty {
-      public override fun branches(): List<String> = unwrap(this).getBranches() ?: emptyList()
+      override fun branches(): List<String> = unwrap(this).getBranches() ?: emptyList()
 
-      public override fun customData(): String? = unwrap(this).getCustomData()
+      override fun customData(): String? = unwrap(this).getCustomData()
 
-      public override fun destinationArn(): String = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String = unwrap(this).getDestinationArn()
 
-      public override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {

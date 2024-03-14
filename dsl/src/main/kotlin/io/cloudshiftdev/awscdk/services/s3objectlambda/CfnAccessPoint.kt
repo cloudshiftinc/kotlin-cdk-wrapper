@@ -75,21 +75,17 @@ public open class CfnAccessPoint internal constructor(
       Unit = objectLambdaConfiguration(ObjectLambdaConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
-    }
+    public fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable)
 
     public
-        fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty) {
-    }
+        fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("70ea7a604b02851fdb8d2a38172c4fae60064cab75cb03121fa2f05f1bfd6daf")
     public
-        fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -99,22 +95,22 @@ public open class CfnAccessPoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.Builder =
         software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
+    override fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
       cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty) {
       cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(ObjectLambdaConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("70ea7a604b02851fdb8d2a38172c4fae60064cab75cb03121fa2f05f1bfd6daf")
-    public override
+    override
         fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty.Builder.() -> Unit):
         Unit =
         objectLambdaConfiguration(ObjectLambdaConfigurationProperty(objectLambdaConfiguration))
@@ -148,16 +144,13 @@ public open class CfnAccessPoint internal constructor(
     public fun awsLambda(): Any
 
     public interface Builder {
-      public fun awsLambda(awsLambda: IResolvable) {
-      }
+      public fun awsLambda(awsLambda: IResolvable)
 
-      public fun awsLambda(awsLambda: AwsLambdaProperty) {
-      }
+      public fun awsLambda(awsLambda: AwsLambdaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9be69232cc9fe2a47abed902c83a6e2e7141bcc7c89a6b07fb166e08b6896776")
-      public fun awsLambda(awsLambda: AwsLambdaProperty.Builder.() -> Unit) {
-      }
+      public fun awsLambda(awsLambda: AwsLambdaProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -166,17 +159,17 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ContentTransformationProperty.builder()
 
-      public override fun awsLambda(awsLambda: IResolvable) {
+      override fun awsLambda(awsLambda: IResolvable) {
         cdkBuilder.awsLambda(awsLambda.let(IResolvable::unwrap))
       }
 
-      public override fun awsLambda(awsLambda: AwsLambdaProperty) {
+      override fun awsLambda(awsLambda: AwsLambdaProperty) {
         cdkBuilder.awsLambda(awsLambda.let(AwsLambdaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9be69232cc9fe2a47abed902c83a6e2e7141bcc7c89a6b07fb166e08b6896776")
-      public override fun awsLambda(awsLambda: AwsLambdaProperty.Builder.() -> Unit): Unit =
+      override fun awsLambda(awsLambda: AwsLambdaProperty.Builder.() -> Unit): Unit =
           awsLambda(AwsLambdaProperty(awsLambda))
 
       public fun build():
@@ -188,7 +181,7 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ContentTransformationProperty,
     ) : ContentTransformationProperty {
-      public override fun awsLambda(): Any = unwrap(this).getAwsLambda()
+      override fun awsLambda(): Any = unwrap(this).getAwsLambda()
     }
 
     public companion object {
@@ -215,11 +208,9 @@ public open class CfnAccessPoint internal constructor(
     public fun isPublic(): Any? = unwrap(this).getIsPublic()
 
     public interface Builder {
-      public fun isPublic(isPublic: Boolean) {
-      }
+      public fun isPublic(isPublic: Boolean)
 
-      public fun isPublic(isPublic: IResolvable) {
-      }
+      public fun isPublic(isPublic: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -228,11 +219,11 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty.builder()
 
-      public override fun isPublic(isPublic: Boolean) {
+      override fun isPublic(isPublic: Boolean) {
         cdkBuilder.isPublic(isPublic)
       }
 
-      public override fun isPublic(isPublic: IResolvable) {
+      override fun isPublic(isPublic: IResolvable) {
         cdkBuilder.isPublic(isPublic.let(IResolvable::unwrap))
       }
 
@@ -245,7 +236,7 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PolicyStatusProperty,
     ) : PolicyStatusProperty {
-      public override fun isPublic(): Any? = unwrap(this).getIsPublic()
+      override fun isPublic(): Any? = unwrap(this).getIsPublic()
     }
 
     public companion object {
@@ -274,11 +265,9 @@ public open class CfnAccessPoint internal constructor(
     public fun functionPayload(): String? = unwrap(this).getFunctionPayload()
 
     public interface Builder {
-      public fun functionArn(functionArn: String) {
-      }
+      public fun functionArn(functionArn: String)
 
-      public fun functionPayload(functionPayload: String) {
-      }
+      public fun functionPayload(functionPayload: String)
     }
 
     private class BuilderImpl : Builder {
@@ -286,11 +275,11 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty.Builder =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty.builder()
 
-      public override fun functionArn(functionArn: String) {
+      override fun functionArn(functionArn: String) {
         cdkBuilder.functionArn(functionArn)
       }
 
-      public override fun functionPayload(functionPayload: String) {
+      override fun functionPayload(functionPayload: String) {
         cdkBuilder.functionPayload(functionPayload)
       }
 
@@ -303,9 +292,9 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AwsLambdaProperty,
     ) : AwsLambdaProperty {
-      public override fun functionArn(): String = unwrap(this).getFunctionArn()
+      override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-      public override fun functionPayload(): String? = unwrap(this).getFunctionPayload()
+      override fun functionPayload(): String? = unwrap(this).getFunctionPayload()
     }
 
     public companion object {
@@ -338,29 +327,21 @@ public open class CfnAccessPoint internal constructor(
     public fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
 
     public interface Builder {
-      public fun blockPublicAcls(blockPublicAcls: Boolean) {
-      }
+      public fun blockPublicAcls(blockPublicAcls: Boolean)
 
-      public fun blockPublicAcls(blockPublicAcls: IResolvable) {
-      }
+      public fun blockPublicAcls(blockPublicAcls: IResolvable)
 
-      public fun blockPublicPolicy(blockPublicPolicy: Boolean) {
-      }
+      public fun blockPublicPolicy(blockPublicPolicy: Boolean)
 
-      public fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-      }
+      public fun blockPublicPolicy(blockPublicPolicy: IResolvable)
 
-      public fun ignorePublicAcls(ignorePublicAcls: Boolean) {
-      }
+      public fun ignorePublicAcls(ignorePublicAcls: Boolean)
 
-      public fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-      }
+      public fun ignorePublicAcls(ignorePublicAcls: IResolvable)
 
-      public fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
-      }
+      public fun restrictPublicBuckets(restrictPublicBuckets: Boolean)
 
-      public fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-      }
+      public fun restrictPublicBuckets(restrictPublicBuckets: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -369,35 +350,35 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PublicAccessBlockConfigurationProperty.builder()
 
-      public override fun blockPublicAcls(blockPublicAcls: Boolean) {
+      override fun blockPublicAcls(blockPublicAcls: Boolean) {
         cdkBuilder.blockPublicAcls(blockPublicAcls)
       }
 
-      public override fun blockPublicAcls(blockPublicAcls: IResolvable) {
+      override fun blockPublicAcls(blockPublicAcls: IResolvable) {
         cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
       }
 
-      public override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
+      override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
         cdkBuilder.blockPublicPolicy(blockPublicPolicy)
       }
 
-      public override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
+      override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
         cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
+      override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
         cdkBuilder.ignorePublicAcls(ignorePublicAcls)
       }
 
-      public override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
+      override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
         cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
       }
 
-      public override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
+      override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
         cdkBuilder.restrictPublicBuckets(restrictPublicBuckets)
       }
 
-      public override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
+      override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
         cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
       }
 
@@ -410,13 +391,13 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.PublicAccessBlockConfigurationProperty,
     ) : PublicAccessBlockConfigurationProperty {
-      public override fun blockPublicAcls(): Any? = unwrap(this).getBlockPublicAcls()
+      override fun blockPublicAcls(): Any? = unwrap(this).getBlockPublicAcls()
 
-      public override fun blockPublicPolicy(): Any? = unwrap(this).getBlockPublicPolicy()
+      override fun blockPublicPolicy(): Any? = unwrap(this).getBlockPublicPolicy()
 
-      public override fun ignorePublicAcls(): Any? = unwrap(this).getIgnorePublicAcls()
+      override fun ignorePublicAcls(): Any? = unwrap(this).getIgnorePublicAcls()
 
-      public override fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
+      override fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
     }
 
     public companion object {
@@ -446,11 +427,9 @@ public open class CfnAccessPoint internal constructor(
     public fun contentTransformation(): Any
 
     public interface Builder {
-      public fun actions(actions: List<String>) {
-      }
+      public fun actions(actions: List<String>)
 
-      public fun contentTransformation(contentTransformation: Any) {
-      }
+      public fun contentTransformation(contentTransformation: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -459,11 +438,11 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty.builder()
 
-      public override fun actions(actions: List<String>) {
+      override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
 
-      public override fun contentTransformation(contentTransformation: Any) {
+      override fun contentTransformation(contentTransformation: Any) {
         cdkBuilder.contentTransformation(contentTransformation)
       }
 
@@ -476,9 +455,9 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty,
     ) : TransformationConfigurationProperty {
-      public override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
 
-      public override fun contentTransformation(): Any = unwrap(this).getContentTransformation()
+      override fun contentTransformation(): Any = unwrap(this).getContentTransformation()
     }
 
     public companion object {
@@ -512,23 +491,17 @@ public open class CfnAccessPoint internal constructor(
     public fun transformationConfigurations(): Any
 
     public interface Builder {
-      public fun allowedFeatures(allowedFeatures: List<String>) {
-      }
+      public fun allowedFeatures(allowedFeatures: List<String>)
 
-      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
-      }
+      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean)
 
-      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-      }
+      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable)
 
-      public fun supportingAccessPoint(supportingAccessPoint: String) {
-      }
+      public fun supportingAccessPoint(supportingAccessPoint: String)
 
-      public fun transformationConfigurations(transformationConfigurations: IResolvable) {
-      }
+      public fun transformationConfigurations(transformationConfigurations: IResolvable)
 
-      public fun transformationConfigurations(transformationConfigurations: List<Any>) {
-      }
+      public fun transformationConfigurations(transformationConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -537,27 +510,27 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty.builder()
 
-      public override fun allowedFeatures(allowedFeatures: List<String>) {
+      override fun allowedFeatures(allowedFeatures: List<String>) {
         cdkBuilder.allowedFeatures(allowedFeatures)
       }
 
-      public override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
+      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
       }
 
-      public override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
+      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun supportingAccessPoint(supportingAccessPoint: String) {
+      override fun supportingAccessPoint(supportingAccessPoint: String) {
         cdkBuilder.supportingAccessPoint(supportingAccessPoint)
       }
 
-      public override fun transformationConfigurations(transformationConfigurations: IResolvable) {
+      override fun transformationConfigurations(transformationConfigurations: IResolvable) {
         cdkBuilder.transformationConfigurations(transformationConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun transformationConfigurations(transformationConfigurations: List<Any>) {
+      override fun transformationConfigurations(transformationConfigurations: List<Any>) {
         cdkBuilder.transformationConfigurations(transformationConfigurations)
       }
 
@@ -570,15 +543,14 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty,
     ) : ObjectLambdaConfigurationProperty {
-      public override fun allowedFeatures(): List<String> = unwrap(this).getAllowedFeatures() ?:
+      override fun allowedFeatures(): List<String> = unwrap(this).getAllowedFeatures() ?:
           emptyList()
 
-      public override fun cloudWatchMetricsEnabled(): Any? =
-          unwrap(this).getCloudWatchMetricsEnabled()
+      override fun cloudWatchMetricsEnabled(): Any? = unwrap(this).getCloudWatchMetricsEnabled()
 
-      public override fun supportingAccessPoint(): String = unwrap(this).getSupportingAccessPoint()
+      override fun supportingAccessPoint(): String = unwrap(this).getSupportingAccessPoint()
 
-      public override fun transformationConfigurations(): Any =
+      override fun transformationConfigurations(): Any =
           unwrap(this).getTransformationConfigurations()
     }
 
@@ -609,11 +581,9 @@ public open class CfnAccessPoint internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -621,11 +591,11 @@ public open class CfnAccessPoint internal constructor(
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty.Builder =
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty.builder()
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -638,9 +608,9 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.AliasProperty,
     ) : AliasProperty {
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

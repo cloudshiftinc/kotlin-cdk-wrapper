@@ -94,41 +94,29 @@ public open class CfnCACertificate internal constructor(
   }
 
   public interface Builder {
-    public fun autoRegistrationStatus(autoRegistrationStatus: String) {
-    }
+    public fun autoRegistrationStatus(autoRegistrationStatus: String)
 
-    public fun caCertificatePem(caCertificatePem: String) {
-    }
+    public fun caCertificatePem(caCertificatePem: String)
 
-    public fun certificateMode(certificateMode: String) {
-    }
+    public fun certificateMode(certificateMode: String)
 
-    public fun registrationConfig(registrationConfig: IResolvable) {
-    }
+    public fun registrationConfig(registrationConfig: IResolvable)
 
-    public fun registrationConfig(registrationConfig: RegistrationConfigProperty) {
-    }
+    public fun registrationConfig(registrationConfig: RegistrationConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e2142c3ff8971b8bf8373de41fcccea8548a7d3aeba5325b6636b84f35d0ba07")
-    public
-        fun registrationConfig(registrationConfig: RegistrationConfigProperty.Builder.() -> Unit) {
-    }
+    public fun registrationConfig(registrationConfig: RegistrationConfigProperty.Builder.() -> Unit)
 
-    public fun removeAutoRegistration(removeAutoRegistration: Boolean) {
-    }
+    public fun removeAutoRegistration(removeAutoRegistration: Boolean)
 
-    public fun removeAutoRegistration(removeAutoRegistration: IResolvable) {
-    }
+    public fun removeAutoRegistration(removeAutoRegistration: IResolvable)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun verificationCertificatePem(verificationCertificatePem: String) {
-    }
+    public fun verificationCertificatePem(verificationCertificatePem: String)
   }
 
   private class BuilderImpl(
@@ -138,49 +126,49 @@ public open class CfnCACertificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnCACertificate.Builder =
         software.amazon.awscdk.services.iot.CfnCACertificate.Builder.create(scope, id)
 
-    public override fun autoRegistrationStatus(autoRegistrationStatus: String) {
+    override fun autoRegistrationStatus(autoRegistrationStatus: String) {
       cdkBuilder.autoRegistrationStatus(autoRegistrationStatus)
     }
 
-    public override fun caCertificatePem(caCertificatePem: String) {
+    override fun caCertificatePem(caCertificatePem: String) {
       cdkBuilder.caCertificatePem(caCertificatePem)
     }
 
-    public override fun certificateMode(certificateMode: String) {
+    override fun certificateMode(certificateMode: String) {
       cdkBuilder.certificateMode(certificateMode)
     }
 
-    public override fun registrationConfig(registrationConfig: IResolvable) {
+    override fun registrationConfig(registrationConfig: IResolvable) {
       cdkBuilder.registrationConfig(registrationConfig.let(IResolvable::unwrap))
     }
 
-    public override fun registrationConfig(registrationConfig: RegistrationConfigProperty) {
+    override fun registrationConfig(registrationConfig: RegistrationConfigProperty) {
       cdkBuilder.registrationConfig(registrationConfig.let(RegistrationConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e2142c3ff8971b8bf8373de41fcccea8548a7d3aeba5325b6636b84f35d0ba07")
-    public override
+    override
         fun registrationConfig(registrationConfig: RegistrationConfigProperty.Builder.() -> Unit):
         Unit = registrationConfig(RegistrationConfigProperty(registrationConfig))
 
-    public override fun removeAutoRegistration(removeAutoRegistration: Boolean) {
+    override fun removeAutoRegistration(removeAutoRegistration: Boolean) {
       cdkBuilder.removeAutoRegistration(removeAutoRegistration)
     }
 
-    public override fun removeAutoRegistration(removeAutoRegistration: IResolvable) {
+    override fun removeAutoRegistration(removeAutoRegistration: IResolvable) {
       cdkBuilder.removeAutoRegistration(removeAutoRegistration.let(IResolvable::unwrap))
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun verificationCertificatePem(verificationCertificatePem: String) {
+    override fun verificationCertificatePem(verificationCertificatePem: String) {
       cdkBuilder.verificationCertificatePem(verificationCertificatePem)
     }
 
@@ -216,14 +204,11 @@ public open class CfnCACertificate internal constructor(
     public fun templateName(): String? = unwrap(this).getTemplateName()
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun templateBody(templateBody: String) {
-      }
+      public fun templateBody(templateBody: String)
 
-      public fun templateName(templateName: String) {
-      }
+      public fun templateName(templateName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -231,15 +216,15 @@ public open class CfnCACertificate internal constructor(
           software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty.Builder =
           software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun templateBody(templateBody: String) {
+      override fun templateBody(templateBody: String) {
         cdkBuilder.templateBody(templateBody)
       }
 
-      public override fun templateName(templateName: String) {
+      override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
       }
 
@@ -252,11 +237,11 @@ public open class CfnCACertificate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnCACertificate.RegistrationConfigProperty,
     ) : RegistrationConfigProperty {
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun templateBody(): String? = unwrap(this).getTemplateBody()
+      override fun templateBody(): String? = unwrap(this).getTemplateBody()
 
-      public override fun templateName(): String? = unwrap(this).getTemplateName()
+      override fun templateName(): String? = unwrap(this).getTemplateName()
     }
 
     public companion object {

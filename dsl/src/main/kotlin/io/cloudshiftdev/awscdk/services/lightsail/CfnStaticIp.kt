@@ -36,11 +36,9 @@ public open class CfnStaticIp internal constructor(
   }
 
   public interface Builder {
-    public fun attachedTo(attachedTo: String) {
-    }
+    public fun attachedTo(attachedTo: String)
 
-    public fun staticIpName(staticIpName: String) {
-    }
+    public fun staticIpName(staticIpName: String)
   }
 
   private class BuilderImpl(
@@ -50,11 +48,11 @@ public open class CfnStaticIp internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnStaticIp.Builder =
         software.amazon.awscdk.services.lightsail.CfnStaticIp.Builder.create(scope, id)
 
-    public override fun attachedTo(attachedTo: String) {
+    override fun attachedTo(attachedTo: String) {
       cdkBuilder.attachedTo(attachedTo)
     }
 
-    public override fun staticIpName(staticIpName: String) {
+    override fun staticIpName(staticIpName: String) {
       cdkBuilder.staticIpName(staticIpName)
     }
 

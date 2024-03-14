@@ -47,17 +47,13 @@ public open class CfnPlan internal constructor(
   }
 
   public interface Builder {
-    public fun contactId(contactId: String) {
-    }
+    public fun contactId(contactId: String)
 
-    public fun rotationIds(rotationIds: List<String>) {
-    }
+    public fun rotationIds(rotationIds: List<String>)
 
-    public fun stages(stages: IResolvable) {
-    }
+    public fun stages(stages: IResolvable)
 
-    public fun stages(stages: List<Any>) {
-    }
+    public fun stages(stages: List<Any>)
   }
 
   private class BuilderImpl(
@@ -67,19 +63,19 @@ public open class CfnPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssmcontacts.CfnPlan.Builder =
         software.amazon.awscdk.services.ssmcontacts.CfnPlan.Builder.create(scope, id)
 
-    public override fun contactId(contactId: String) {
+    override fun contactId(contactId: String) {
       cdkBuilder.contactId(contactId)
     }
 
-    public override fun rotationIds(rotationIds: List<String>) {
+    override fun rotationIds(rotationIds: List<String>) {
       cdkBuilder.rotationIds(rotationIds)
     }
 
-    public override fun stages(stages: IResolvable) {
+    override fun stages(stages: IResolvable) {
       cdkBuilder.stages(stages.let(IResolvable::unwrap))
     }
 
-    public override fun stages(stages: List<Any>) {
+    override fun stages(stages: List<Any>) {
       cdkBuilder.stages(stages)
     }
 
@@ -113,11 +109,9 @@ public open class CfnPlan internal constructor(
     public fun retryIntervalInMinutes(): Number
 
     public interface Builder {
-      public fun channelId(channelId: String) {
-      }
+      public fun channelId(channelId: String)
 
-      public fun retryIntervalInMinutes(retryIntervalInMinutes: Number) {
-      }
+      public fun retryIntervalInMinutes(retryIntervalInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -125,11 +119,11 @@ public open class CfnPlan internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty.builder()
 
-      public override fun channelId(channelId: String) {
+      override fun channelId(channelId: String) {
         cdkBuilder.channelId(channelId)
       }
 
-      public override fun retryIntervalInMinutes(retryIntervalInMinutes: Number) {
+      override fun retryIntervalInMinutes(retryIntervalInMinutes: Number) {
         cdkBuilder.retryIntervalInMinutes(retryIntervalInMinutes)
       }
 
@@ -142,10 +136,9 @@ public open class CfnPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty,
     ) : ChannelTargetInfoProperty {
-      public override fun channelId(): String = unwrap(this).getChannelId()
+      override fun channelId(): String = unwrap(this).getChannelId()
 
-      public override fun retryIntervalInMinutes(): Number =
-          unwrap(this).getRetryIntervalInMinutes()
+      override fun retryIntervalInMinutes(): Number = unwrap(this).getRetryIntervalInMinutes()
     }
 
     public companion object {
@@ -174,29 +167,21 @@ public open class CfnPlan internal constructor(
     public fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
 
     public interface Builder {
-      public fun channelTargetInfo(channelTargetInfo: IResolvable) {
-      }
+      public fun channelTargetInfo(channelTargetInfo: IResolvable)
 
-      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty) {
-      }
+      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e71becc743875d6062f09190ed71b0cc7036598b981ca96b066ae6778c1c94f")
-      public
-          fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit) {
-      }
+      public fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit)
 
-      public fun contactTargetInfo(contactTargetInfo: IResolvable) {
-      }
+      public fun contactTargetInfo(contactTargetInfo: IResolvable)
 
-      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty) {
-      }
+      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("117105694507bf7d70016ab178c9333de2b3a6a01ed47a06890d9f3ff81c73eb")
-      public
-          fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit) {
-      }
+      public fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -204,31 +189,31 @@ public open class CfnPlan internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty.builder()
 
-      public override fun channelTargetInfo(channelTargetInfo: IResolvable) {
+      override fun channelTargetInfo(channelTargetInfo: IResolvable) {
         cdkBuilder.channelTargetInfo(channelTargetInfo.let(IResolvable::unwrap))
       }
 
-      public override fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty) {
+      override fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty) {
         cdkBuilder.channelTargetInfo(channelTargetInfo.let(ChannelTargetInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e71becc743875d6062f09190ed71b0cc7036598b981ca96b066ae6778c1c94f")
-      public override
+      override
           fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty.Builder.() -> Unit):
           Unit = channelTargetInfo(ChannelTargetInfoProperty(channelTargetInfo))
 
-      public override fun contactTargetInfo(contactTargetInfo: IResolvable) {
+      override fun contactTargetInfo(contactTargetInfo: IResolvable) {
         cdkBuilder.contactTargetInfo(contactTargetInfo.let(IResolvable::unwrap))
       }
 
-      public override fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty) {
+      override fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty) {
         cdkBuilder.contactTargetInfo(contactTargetInfo.let(ContactTargetInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("117105694507bf7d70016ab178c9333de2b3a6a01ed47a06890d9f3ff81c73eb")
-      public override
+      override
           fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty.Builder.() -> Unit):
           Unit = contactTargetInfo(ContactTargetInfoProperty(contactTargetInfo))
 
@@ -239,9 +224,9 @@ public open class CfnPlan internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty,
     ) : TargetsProperty {
-      public override fun channelTargetInfo(): Any? = unwrap(this).getChannelTargetInfo()
+      override fun channelTargetInfo(): Any? = unwrap(this).getChannelTargetInfo()
 
-      public override fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
+      override fun contactTargetInfo(): Any? = unwrap(this).getContactTargetInfo()
     }
 
     public companion object {
@@ -270,14 +255,11 @@ public open class CfnPlan internal constructor(
     public fun isEssential(): Any
 
     public interface Builder {
-      public fun contactId(contactId: String) {
-      }
+      public fun contactId(contactId: String)
 
-      public fun isEssential(isEssential: Boolean) {
-      }
+      public fun isEssential(isEssential: Boolean)
 
-      public fun isEssential(isEssential: IResolvable) {
-      }
+      public fun isEssential(isEssential: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -285,15 +267,15 @@ public open class CfnPlan internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty.builder()
 
-      public override fun contactId(contactId: String) {
+      override fun contactId(contactId: String) {
         cdkBuilder.contactId(contactId)
       }
 
-      public override fun isEssential(isEssential: Boolean) {
+      override fun isEssential(isEssential: Boolean) {
         cdkBuilder.isEssential(isEssential)
       }
 
-      public override fun isEssential(isEssential: IResolvable) {
+      override fun isEssential(isEssential: IResolvable) {
         cdkBuilder.isEssential(isEssential.let(IResolvable::unwrap))
       }
 
@@ -306,9 +288,9 @@ public open class CfnPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty,
     ) : ContactTargetInfoProperty {
-      public override fun contactId(): String = unwrap(this).getContactId()
+      override fun contactId(): String = unwrap(this).getContactId()
 
-      public override fun isEssential(): Any = unwrap(this).getIsEssential()
+      override fun isEssential(): Any = unwrap(this).getIsEssential()
     }
 
     public companion object {
@@ -337,14 +319,11 @@ public open class CfnPlan internal constructor(
     public fun targets(): Any? = unwrap(this).getTargets()
 
     public interface Builder {
-      public fun durationInMinutes(durationInMinutes: Number) {
-      }
+      public fun durationInMinutes(durationInMinutes: Number)
 
-      public fun targets(targets: IResolvable) {
-      }
+      public fun targets(targets: IResolvable)
 
-      public fun targets(targets: List<Any>) {
-      }
+      public fun targets(targets: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -352,15 +331,15 @@ public open class CfnPlan internal constructor(
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty.Builder =
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty.builder()
 
-      public override fun durationInMinutes(durationInMinutes: Number) {
+      override fun durationInMinutes(durationInMinutes: Number) {
         cdkBuilder.durationInMinutes(durationInMinutes)
       }
 
-      public override fun targets(targets: IResolvable) {
+      override fun targets(targets: IResolvable) {
         cdkBuilder.targets(targets.let(IResolvable::unwrap))
       }
 
-      public override fun targets(targets: List<Any>) {
+      override fun targets(targets: List<Any>) {
         cdkBuilder.targets(targets)
       }
 
@@ -371,9 +350,9 @@ public open class CfnPlan internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty,
     ) : StageProperty {
-      public override fun durationInMinutes(): Number = unwrap(this).getDurationInMinutes()
+      override fun durationInMinutes(): Number = unwrap(this).getDurationInMinutes()
 
-      public override fun targets(): Any? = unwrap(this).getTargets()
+      override fun targets(): Any? = unwrap(this).getTargets()
     }
 
     public companion object {

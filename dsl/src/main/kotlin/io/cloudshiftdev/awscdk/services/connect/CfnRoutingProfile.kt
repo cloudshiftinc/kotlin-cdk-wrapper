@@ -86,35 +86,25 @@ public open class CfnRoutingProfile internal constructor(
   }
 
   public interface Builder {
-    public fun agentAvailabilityTimer(agentAvailabilityTimer: String) {
-    }
+    public fun agentAvailabilityTimer(agentAvailabilityTimer: String)
 
-    public fun defaultOutboundQueueArn(defaultOutboundQueueArn: String) {
-    }
+    public fun defaultOutboundQueueArn(defaultOutboundQueueArn: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun mediaConcurrencies(mediaConcurrencies: IResolvable) {
-    }
+    public fun mediaConcurrencies(mediaConcurrencies: IResolvable)
 
-    public fun mediaConcurrencies(mediaConcurrencies: List<Any>) {
-    }
+    public fun mediaConcurrencies(mediaConcurrencies: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun queueConfigs(queueConfigs: IResolvable) {
-    }
+    public fun queueConfigs(queueConfigs: IResolvable)
 
-    public fun queueConfigs(queueConfigs: List<Any>) {
-    }
+    public fun queueConfigs(queueConfigs: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -124,43 +114,43 @@ public open class CfnRoutingProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnRoutingProfile.Builder =
         software.amazon.awscdk.services.connect.CfnRoutingProfile.Builder.create(scope, id)
 
-    public override fun agentAvailabilityTimer(agentAvailabilityTimer: String) {
+    override fun agentAvailabilityTimer(agentAvailabilityTimer: String) {
       cdkBuilder.agentAvailabilityTimer(agentAvailabilityTimer)
     }
 
-    public override fun defaultOutboundQueueArn(defaultOutboundQueueArn: String) {
+    override fun defaultOutboundQueueArn(defaultOutboundQueueArn: String) {
       cdkBuilder.defaultOutboundQueueArn(defaultOutboundQueueArn)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun mediaConcurrencies(mediaConcurrencies: IResolvable) {
+    override fun mediaConcurrencies(mediaConcurrencies: IResolvable) {
       cdkBuilder.mediaConcurrencies(mediaConcurrencies.let(IResolvable::unwrap))
     }
 
-    public override fun mediaConcurrencies(mediaConcurrencies: List<Any>) {
+    override fun mediaConcurrencies(mediaConcurrencies: List<Any>) {
       cdkBuilder.mediaConcurrencies(mediaConcurrencies)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun queueConfigs(queueConfigs: IResolvable) {
+    override fun queueConfigs(queueConfigs: IResolvable) {
       cdkBuilder.queueConfigs(queueConfigs.let(IResolvable::unwrap))
     }
 
-    public override fun queueConfigs(queueConfigs: List<Any>) {
+    override fun queueConfigs(queueConfigs: List<Any>) {
       cdkBuilder.queueConfigs(queueConfigs)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -193,8 +183,7 @@ public open class CfnRoutingProfile internal constructor(
     public fun behaviorType(): String
 
     public interface Builder {
-      public fun behaviorType(behaviorType: String) {
-      }
+      public fun behaviorType(behaviorType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -203,7 +192,7 @@ public open class CfnRoutingProfile internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty.builder()
 
-      public override fun behaviorType(behaviorType: String) {
+      override fun behaviorType(behaviorType: String) {
         cdkBuilder.behaviorType(behaviorType)
       }
 
@@ -216,7 +205,7 @@ public open class CfnRoutingProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRoutingProfile.CrossChannelBehaviorProperty,
     ) : CrossChannelBehaviorProperty {
-      public override fun behaviorType(): String = unwrap(this).getBehaviorType()
+      override fun behaviorType(): String = unwrap(this).getBehaviorType()
     }
 
     public companion object {
@@ -247,23 +236,18 @@ public open class CfnRoutingProfile internal constructor(
     public fun crossChannelBehavior(): Any? = unwrap(this).getCrossChannelBehavior()
 
     public interface Builder {
-      public fun channel(channel: String) {
-      }
+      public fun channel(channel: String)
 
-      public fun concurrency(concurrency: Number) {
-      }
+      public fun concurrency(concurrency: Number)
 
-      public fun crossChannelBehavior(crossChannelBehavior: IResolvable) {
-      }
+      public fun crossChannelBehavior(crossChannelBehavior: IResolvable)
 
-      public fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty) {
-      }
+      public fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cfcde8aa362d223ee3c2ab2d6377b352befebe3fface34711f13a5df2121a4ab")
       public
-          fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty.Builder.() -> Unit) {
-      }
+          fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -272,25 +256,25 @@ public open class CfnRoutingProfile internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty.builder()
 
-      public override fun channel(channel: String) {
+      override fun channel(channel: String) {
         cdkBuilder.channel(channel)
       }
 
-      public override fun concurrency(concurrency: Number) {
+      override fun concurrency(concurrency: Number) {
         cdkBuilder.concurrency(concurrency)
       }
 
-      public override fun crossChannelBehavior(crossChannelBehavior: IResolvable) {
+      override fun crossChannelBehavior(crossChannelBehavior: IResolvable) {
         cdkBuilder.crossChannelBehavior(crossChannelBehavior.let(IResolvable::unwrap))
       }
 
-      public override fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty) {
+      override fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty) {
         cdkBuilder.crossChannelBehavior(crossChannelBehavior.let(CrossChannelBehaviorProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cfcde8aa362d223ee3c2ab2d6377b352befebe3fface34711f13a5df2121a4ab")
-      public override
+      override
           fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty.Builder.() -> Unit):
           Unit = crossChannelBehavior(CrossChannelBehaviorProperty(crossChannelBehavior))
 
@@ -303,11 +287,11 @@ public open class CfnRoutingProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRoutingProfile.MediaConcurrencyProperty,
     ) : MediaConcurrencyProperty {
-      public override fun channel(): String = unwrap(this).getChannel()
+      override fun channel(): String = unwrap(this).getChannel()
 
-      public override fun concurrency(): Number = unwrap(this).getConcurrency()
+      override fun concurrency(): Number = unwrap(this).getConcurrency()
 
-      public override fun crossChannelBehavior(): Any? = unwrap(this).getCrossChannelBehavior()
+      override fun crossChannelBehavior(): Any? = unwrap(this).getCrossChannelBehavior()
     }
 
     public companion object {
@@ -338,23 +322,18 @@ public open class CfnRoutingProfile internal constructor(
     public fun queueReference(): Any
 
     public interface Builder {
-      public fun delay(delay: Number) {
-      }
+      public fun delay(delay: Number)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun queueReference(queueReference: IResolvable) {
-      }
+      public fun queueReference(queueReference: IResolvable)
 
-      public fun queueReference(queueReference: RoutingProfileQueueReferenceProperty) {
-      }
+      public fun queueReference(queueReference: RoutingProfileQueueReferenceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cddc030719541bcfcb2fe6a3158c8c91e398771a27ed58cebda8879e7b5a6947")
       public
-          fun queueReference(queueReference: RoutingProfileQueueReferenceProperty.Builder.() -> Unit) {
-      }
+          fun queueReference(queueReference: RoutingProfileQueueReferenceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -363,25 +342,25 @@ public open class CfnRoutingProfile internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty.builder()
 
-      public override fun delay(delay: Number) {
+      override fun delay(delay: Number) {
         cdkBuilder.delay(delay)
       }
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun queueReference(queueReference: IResolvable) {
+      override fun queueReference(queueReference: IResolvable) {
         cdkBuilder.queueReference(queueReference.let(IResolvable::unwrap))
       }
 
-      public override fun queueReference(queueReference: RoutingProfileQueueReferenceProperty) {
+      override fun queueReference(queueReference: RoutingProfileQueueReferenceProperty) {
         cdkBuilder.queueReference(queueReference.let(RoutingProfileQueueReferenceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cddc030719541bcfcb2fe6a3158c8c91e398771a27ed58cebda8879e7b5a6947")
-      public override
+      override
           fun queueReference(queueReference: RoutingProfileQueueReferenceProperty.Builder.() -> Unit):
           Unit = queueReference(RoutingProfileQueueReferenceProperty(queueReference))
 
@@ -394,11 +373,11 @@ public open class CfnRoutingProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueConfigProperty,
     ) : RoutingProfileQueueConfigProperty {
-      public override fun delay(): Number = unwrap(this).getDelay()
+      override fun delay(): Number = unwrap(this).getDelay()
 
-      public override fun priority(): Number = unwrap(this).getPriority()
+      override fun priority(): Number = unwrap(this).getPriority()
 
-      public override fun queueReference(): Any = unwrap(this).getQueueReference()
+      override fun queueReference(): Any = unwrap(this).getQueueReference()
     }
 
     public companion object {
@@ -428,11 +407,9 @@ public open class CfnRoutingProfile internal constructor(
     public fun queueArn(): String
 
     public interface Builder {
-      public fun channel(channel: String) {
-      }
+      public fun channel(channel: String)
 
-      public fun queueArn(queueArn: String) {
-      }
+      public fun queueArn(queueArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -441,11 +418,11 @@ public open class CfnRoutingProfile internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty.builder()
 
-      public override fun channel(channel: String) {
+      override fun channel(channel: String) {
         cdkBuilder.channel(channel)
       }
 
-      public override fun queueArn(queueArn: String) {
+      override fun queueArn(queueArn: String) {
         cdkBuilder.queueArn(queueArn)
       }
 
@@ -458,9 +435,9 @@ public open class CfnRoutingProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnRoutingProfile.RoutingProfileQueueReferenceProperty,
     ) : RoutingProfileQueueReferenceProperty {
-      public override fun channel(): String = unwrap(this).getChannel()
+      override fun channel(): String = unwrap(this).getChannel()
 
-      public override fun queueArn(): String = unwrap(this).getQueueArn()
+      override fun queueArn(): String = unwrap(this).getQueueArn()
     }
 
     public companion object {

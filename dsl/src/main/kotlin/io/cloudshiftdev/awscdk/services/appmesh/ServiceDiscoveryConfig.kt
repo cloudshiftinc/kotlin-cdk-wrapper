@@ -12,46 +12,42 @@ public interface ServiceDiscoveryConfig {
       unwrap(this).getDns()?.let(CfnVirtualNode.DnsServiceDiscoveryProperty::wrap)
 
   public interface Builder {
-    public fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty) {
-    }
+    public fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7246157f6b89ec0fcdb2403b4e9036c19e6203aa026f820dc1a629629707093c")
     public
-        fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit) {
-    }
+        fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit)
 
-    public fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty) {
-    }
+    public fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d1f545ce5c02cea5dcad961485c3d0b63becbc4a8f28abcca9cbe2a05336c880")
-    public fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty.Builder.() -> Unit) {
-    }
+    public fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig.Builder =
         software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig.builder()
 
-    public override fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty) {
+    override fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty) {
       cdkBuilder.cloudmap(cloudmap.let(CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7246157f6b89ec0fcdb2403b4e9036c19e6203aa026f820dc1a629629707093c")
-    public override
+    override
         fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit):
         Unit = cloudmap(CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty(cloudmap))
 
-    public override fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty) {
+    override fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty) {
       cdkBuilder.dns(dns.let(CfnVirtualNode.DnsServiceDiscoveryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d1f545ce5c02cea5dcad961485c3d0b63becbc4a8f28abcca9cbe2a05336c880")
-    public override fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty.Builder.() -> Unit):
-        Unit = dns(CfnVirtualNode.DnsServiceDiscoveryProperty(dns))
+    override fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty.Builder.() -> Unit): Unit =
+        dns(CfnVirtualNode.DnsServiceDiscoveryProperty(dns))
 
     public fun build(): software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig =
         cdkBuilder.build()
@@ -60,10 +56,10 @@ public interface ServiceDiscoveryConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig,
   ) : ServiceDiscoveryConfig {
-    public override fun cloudmap(): CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty? =
+    override fun cloudmap(): CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty? =
         unwrap(this).getCloudmap()?.let(CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty::wrap)
 
-    public override fun dns(): CfnVirtualNode.DnsServiceDiscoveryProperty? =
+    override fun dns(): CfnVirtualNode.DnsServiceDiscoveryProperty? =
         unwrap(this).getDns()?.let(CfnVirtualNode.DnsServiceDiscoveryProperty::wrap)
   }
 

@@ -52,17 +52,13 @@ public open class CfnCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun certificateName(certificateName: String) {
-    }
+    public fun certificateName(certificateName: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
-    }
+    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -72,19 +68,19 @@ public open class CfnCertificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnCertificate.Builder =
         software.amazon.awscdk.services.lightsail.CfnCertificate.Builder.create(scope, id)
 
-    public override fun certificateName(certificateName: String) {
+    override fun certificateName(certificateName: String) {
       cdkBuilder.certificateName(certificateName)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
+    override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

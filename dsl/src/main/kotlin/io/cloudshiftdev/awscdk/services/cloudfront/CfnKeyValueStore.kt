@@ -53,22 +53,17 @@ public open class CfnKeyValueStore internal constructor(
   }
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun importSource(importSource: IResolvable) {
-    }
+    public fun importSource(importSource: IResolvable)
 
-    public fun importSource(importSource: ImportSourceProperty) {
-    }
+    public fun importSource(importSource: ImportSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e23f3a7caff7bb94ad582cd5f164ed195bd067efa764be9a366e6adcf12ca5b4")
-    public fun importSource(importSource: ImportSourceProperty.Builder.() -> Unit) {
-    }
+    public fun importSource(importSource: ImportSourceProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -78,24 +73,24 @@ public open class CfnKeyValueStore internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.Builder =
         software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun importSource(importSource: IResolvable) {
+    override fun importSource(importSource: IResolvable) {
       cdkBuilder.importSource(importSource.let(IResolvable::unwrap))
     }
 
-    public override fun importSource(importSource: ImportSourceProperty) {
+    override fun importSource(importSource: ImportSourceProperty) {
       cdkBuilder.importSource(importSource.let(ImportSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e23f3a7caff7bb94ad582cd5f164ed195bd067efa764be9a366e6adcf12ca5b4")
-    public override fun importSource(importSource: ImportSourceProperty.Builder.() -> Unit): Unit =
+    override fun importSource(importSource: ImportSourceProperty.Builder.() -> Unit): Unit =
         importSource(ImportSourceProperty(importSource))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -130,11 +125,9 @@ public open class CfnKeyValueStore internal constructor(
     public fun sourceType(): String
 
     public interface Builder {
-      public fun sourceArn(sourceArn: String) {
-      }
+      public fun sourceArn(sourceArn: String)
 
-      public fun sourceType(sourceType: String) {
-      }
+      public fun sourceType(sourceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -142,11 +135,11 @@ public open class CfnKeyValueStore internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty.builder()
 
-      public override fun sourceArn(sourceArn: String) {
+      override fun sourceArn(sourceArn: String) {
         cdkBuilder.sourceArn(sourceArn)
       }
 
-      public override fun sourceType(sourceType: String) {
+      override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
       }
 
@@ -159,9 +152,9 @@ public open class CfnKeyValueStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnKeyValueStore.ImportSourceProperty,
     ) : ImportSourceProperty {
-      public override fun sourceArn(): String = unwrap(this).getSourceArn()
+      override fun sourceArn(): String = unwrap(this).getSourceArn()
 
-      public override fun sourceType(): String = unwrap(this).getSourceType()
+      override fun sourceType(): String = unwrap(this).getSourceType()
     }
 
     public companion object {

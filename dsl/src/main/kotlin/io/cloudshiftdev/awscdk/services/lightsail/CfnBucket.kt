@@ -92,37 +92,27 @@ public open class CfnBucket internal constructor(
   }
 
   public interface Builder {
-    public fun accessRules(accessRules: IResolvable) {
-    }
+    public fun accessRules(accessRules: IResolvable)
 
-    public fun accessRules(accessRules: AccessRulesProperty) {
-    }
+    public fun accessRules(accessRules: AccessRulesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bfa6456dc7a9a43da03b9688cb627d224c83e44098ae1afa1a12ccd7bc2d6c2")
-    public fun accessRules(accessRules: AccessRulesProperty.Builder.() -> Unit) {
-    }
+    public fun accessRules(accessRules: AccessRulesProperty.Builder.() -> Unit)
 
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun bundleId(bundleId: String) {
-    }
+    public fun bundleId(bundleId: String)
 
-    public fun objectVersioning(objectVersioning: Boolean) {
-    }
+    public fun objectVersioning(objectVersioning: Boolean)
 
-    public fun objectVersioning(objectVersioning: IResolvable) {
-    }
+    public fun objectVersioning(objectVersioning: IResolvable)
 
-    public fun readOnlyAccessAccounts(readOnlyAccessAccounts: List<String>) {
-    }
+    public fun readOnlyAccessAccounts(readOnlyAccessAccounts: List<String>)
 
-    public fun resourcesReceivingAccess(resourcesReceivingAccess: List<String>) {
-    }
+    public fun resourcesReceivingAccess(resourcesReceivingAccess: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -132,44 +122,44 @@ public open class CfnBucket internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnBucket.Builder =
         software.amazon.awscdk.services.lightsail.CfnBucket.Builder.create(scope, id)
 
-    public override fun accessRules(accessRules: IResolvable) {
+    override fun accessRules(accessRules: IResolvable) {
       cdkBuilder.accessRules(accessRules.let(IResolvable::unwrap))
     }
 
-    public override fun accessRules(accessRules: AccessRulesProperty) {
+    override fun accessRules(accessRules: AccessRulesProperty) {
       cdkBuilder.accessRules(accessRules.let(AccessRulesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bfa6456dc7a9a43da03b9688cb627d224c83e44098ae1afa1a12ccd7bc2d6c2")
-    public override fun accessRules(accessRules: AccessRulesProperty.Builder.() -> Unit): Unit =
+    override fun accessRules(accessRules: AccessRulesProperty.Builder.() -> Unit): Unit =
         accessRules(AccessRulesProperty(accessRules))
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun bundleId(bundleId: String) {
+    override fun bundleId(bundleId: String) {
       cdkBuilder.bundleId(bundleId)
     }
 
-    public override fun objectVersioning(objectVersioning: Boolean) {
+    override fun objectVersioning(objectVersioning: Boolean) {
       cdkBuilder.objectVersioning(objectVersioning)
     }
 
-    public override fun objectVersioning(objectVersioning: IResolvable) {
+    override fun objectVersioning(objectVersioning: IResolvable) {
       cdkBuilder.objectVersioning(objectVersioning.let(IResolvable::unwrap))
     }
 
-    public override fun readOnlyAccessAccounts(readOnlyAccessAccounts: List<String>) {
+    override fun readOnlyAccessAccounts(readOnlyAccessAccounts: List<String>) {
       cdkBuilder.readOnlyAccessAccounts(readOnlyAccessAccounts)
     }
 
-    public override fun resourcesReceivingAccess(resourcesReceivingAccess: List<String>) {
+    override fun resourcesReceivingAccess(resourcesReceivingAccess: List<String>) {
       cdkBuilder.resourcesReceivingAccess(resourcesReceivingAccess)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -203,14 +193,11 @@ public open class CfnBucket internal constructor(
     public fun objectAccess(): String? = unwrap(this).getObjectAccess()
 
     public interface Builder {
-      public fun allowPublicOverrides(allowPublicOverrides: Boolean) {
-      }
+      public fun allowPublicOverrides(allowPublicOverrides: Boolean)
 
-      public fun allowPublicOverrides(allowPublicOverrides: IResolvable) {
-      }
+      public fun allowPublicOverrides(allowPublicOverrides: IResolvable)
 
-      public fun objectAccess(objectAccess: String) {
-      }
+      public fun objectAccess(objectAccess: String)
     }
 
     private class BuilderImpl : Builder {
@@ -218,15 +205,15 @@ public open class CfnBucket internal constructor(
           software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty.Builder =
           software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty.builder()
 
-      public override fun allowPublicOverrides(allowPublicOverrides: Boolean) {
+      override fun allowPublicOverrides(allowPublicOverrides: Boolean) {
         cdkBuilder.allowPublicOverrides(allowPublicOverrides)
       }
 
-      public override fun allowPublicOverrides(allowPublicOverrides: IResolvable) {
+      override fun allowPublicOverrides(allowPublicOverrides: IResolvable) {
         cdkBuilder.allowPublicOverrides(allowPublicOverrides.let(IResolvable::unwrap))
       }
 
-      public override fun objectAccess(objectAccess: String) {
+      override fun objectAccess(objectAccess: String) {
         cdkBuilder.objectAccess(objectAccess)
       }
 
@@ -238,9 +225,9 @@ public open class CfnBucket internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lightsail.CfnBucket.AccessRulesProperty,
     ) : AccessRulesProperty {
-      public override fun allowPublicOverrides(): Any? = unwrap(this).getAllowPublicOverrides()
+      override fun allowPublicOverrides(): Any? = unwrap(this).getAllowPublicOverrides()
 
-      public override fun objectAccess(): String? = unwrap(this).getObjectAccess()
+      override fun objectAccess(): String? = unwrap(this).getObjectAccess()
     }
 
     public companion object {

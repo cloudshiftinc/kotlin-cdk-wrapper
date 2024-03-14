@@ -22,8 +22,7 @@ public open class CfnDNSSEC internal constructor(
   }
 
   public interface Builder {
-    public fun hostedZoneId(hostedZoneId: String) {
-    }
+    public fun hostedZoneId(hostedZoneId: String)
   }
 
   private class BuilderImpl(
@@ -33,7 +32,7 @@ public open class CfnDNSSEC internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnDNSSEC.Builder =
         software.amazon.awscdk.services.route53.CfnDNSSEC.Builder.create(scope, id)
 
-    public override fun hostedZoneId(hostedZoneId: String) {
+    override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 

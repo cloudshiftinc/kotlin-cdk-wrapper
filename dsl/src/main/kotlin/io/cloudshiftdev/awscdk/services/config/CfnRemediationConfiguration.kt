@@ -98,46 +98,33 @@ public open class CfnRemediationConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun automatic(automatic: Boolean) {
-    }
+    public fun automatic(automatic: Boolean)
 
-    public fun automatic(automatic: IResolvable) {
-    }
+    public fun automatic(automatic: IResolvable)
 
-    public fun configRuleName(configRuleName: String) {
-    }
+    public fun configRuleName(configRuleName: String)
 
-    public fun executionControls(executionControls: IResolvable) {
-    }
+    public fun executionControls(executionControls: IResolvable)
 
-    public fun executionControls(executionControls: ExecutionControlsProperty) {
-    }
+    public fun executionControls(executionControls: ExecutionControlsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be3a45ce517b58c86588a47a50ae3f6fff75472adb1a9bb29cbe4bd2da29274f")
-    public fun executionControls(executionControls: ExecutionControlsProperty.Builder.() -> Unit) {
-    }
+    public fun executionControls(executionControls: ExecutionControlsProperty.Builder.() -> Unit)
 
-    public fun maximumAutomaticAttempts(maximumAutomaticAttempts: Number) {
-    }
+    public fun maximumAutomaticAttempts(maximumAutomaticAttempts: Number)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun retryAttemptSeconds(retryAttemptSeconds: Number) {
-    }
+    public fun retryAttemptSeconds(retryAttemptSeconds: Number)
 
-    public fun targetId(targetId: String) {
-    }
+    public fun targetId(targetId: String)
 
-    public fun targetType(targetType: String) {
-    }
+    public fun targetType(targetType: String)
 
-    public fun targetVersion(targetVersion: String) {
-    }
+    public fun targetVersion(targetVersion: String)
   }
 
   private class BuilderImpl(
@@ -148,57 +135,56 @@ public open class CfnRemediationConfiguration internal constructor(
         software.amazon.awscdk.services.config.CfnRemediationConfiguration.Builder =
         software.amazon.awscdk.services.config.CfnRemediationConfiguration.Builder.create(scope, id)
 
-    public override fun automatic(automatic: Boolean) {
+    override fun automatic(automatic: Boolean) {
       cdkBuilder.automatic(automatic)
     }
 
-    public override fun automatic(automatic: IResolvable) {
+    override fun automatic(automatic: IResolvable) {
       cdkBuilder.automatic(automatic.let(IResolvable::unwrap))
     }
 
-    public override fun configRuleName(configRuleName: String) {
+    override fun configRuleName(configRuleName: String) {
       cdkBuilder.configRuleName(configRuleName)
     }
 
-    public override fun executionControls(executionControls: IResolvable) {
+    override fun executionControls(executionControls: IResolvable) {
       cdkBuilder.executionControls(executionControls.let(IResolvable::unwrap))
     }
 
-    public override fun executionControls(executionControls: ExecutionControlsProperty) {
+    override fun executionControls(executionControls: ExecutionControlsProperty) {
       cdkBuilder.executionControls(executionControls.let(ExecutionControlsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be3a45ce517b58c86588a47a50ae3f6fff75472adb1a9bb29cbe4bd2da29274f")
-    public override
-        fun executionControls(executionControls: ExecutionControlsProperty.Builder.() -> Unit): Unit
-        = executionControls(ExecutionControlsProperty(executionControls))
+    override fun executionControls(executionControls: ExecutionControlsProperty.Builder.() -> Unit):
+        Unit = executionControls(ExecutionControlsProperty(executionControls))
 
-    public override fun maximumAutomaticAttempts(maximumAutomaticAttempts: Number) {
+    override fun maximumAutomaticAttempts(maximumAutomaticAttempts: Number) {
       cdkBuilder.maximumAutomaticAttempts(maximumAutomaticAttempts)
     }
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun retryAttemptSeconds(retryAttemptSeconds: Number) {
+    override fun retryAttemptSeconds(retryAttemptSeconds: Number) {
       cdkBuilder.retryAttemptSeconds(retryAttemptSeconds)
     }
 
-    public override fun targetId(targetId: String) {
+    override fun targetId(targetId: String) {
       cdkBuilder.targetId(targetId)
     }
 
-    public override fun targetType(targetType: String) {
+    override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
 
-    public override fun targetVersion(targetVersion: String) {
+    override fun targetVersion(targetVersion: String) {
       cdkBuilder.targetVersion(targetVersion)
     }
 
@@ -232,8 +218,7 @@ public open class CfnRemediationConfiguration internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -242,7 +227,7 @@ public open class CfnRemediationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty.builder()
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -255,7 +240,7 @@ public open class CfnRemediationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ResourceValueProperty,
     ) : ResourceValueProperty {
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -282,16 +267,13 @@ public open class CfnRemediationConfiguration internal constructor(
     public fun ssmControls(): Any? = unwrap(this).getSsmControls()
 
     public interface Builder {
-      public fun ssmControls(ssmControls: IResolvable) {
-      }
+      public fun ssmControls(ssmControls: IResolvable)
 
-      public fun ssmControls(ssmControls: SsmControlsProperty) {
-      }
+      public fun ssmControls(ssmControls: SsmControlsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b4b643ffb4f3a16cf00c0244f3bd7a404fc2d41a89b02ab4615003c0613676c")
-      public fun ssmControls(ssmControls: SsmControlsProperty.Builder.() -> Unit) {
-      }
+      public fun ssmControls(ssmControls: SsmControlsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -300,17 +282,17 @@ public open class CfnRemediationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty.builder()
 
-      public override fun ssmControls(ssmControls: IResolvable) {
+      override fun ssmControls(ssmControls: IResolvable) {
         cdkBuilder.ssmControls(ssmControls.let(IResolvable::unwrap))
       }
 
-      public override fun ssmControls(ssmControls: SsmControlsProperty) {
+      override fun ssmControls(ssmControls: SsmControlsProperty) {
         cdkBuilder.ssmControls(ssmControls.let(SsmControlsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b4b643ffb4f3a16cf00c0244f3bd7a404fc2d41a89b02ab4615003c0613676c")
-      public override fun ssmControls(ssmControls: SsmControlsProperty.Builder.() -> Unit): Unit =
+      override fun ssmControls(ssmControls: SsmControlsProperty.Builder.() -> Unit): Unit =
           ssmControls(SsmControlsProperty(ssmControls))
 
       public fun build():
@@ -322,7 +304,7 @@ public open class CfnRemediationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.ExecutionControlsProperty,
     ) : ExecutionControlsProperty {
-      public override fun ssmControls(): Any? = unwrap(this).getSsmControls()
+      override fun ssmControls(): Any? = unwrap(this).getSsmControls()
     }
 
     public companion object {
@@ -352,11 +334,9 @@ public open class CfnRemediationConfiguration internal constructor(
     public fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
 
     public interface Builder {
-      public fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number) {
-      }
+      public fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number)
 
-      public fun errorPercentage(errorPercentage: Number) {
-      }
+      public fun errorPercentage(errorPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -365,12 +345,11 @@ public open class CfnRemediationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty.builder()
 
-      public override
-          fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number) {
+      override fun concurrentExecutionRatePercentage(concurrentExecutionRatePercentage: Number) {
         cdkBuilder.concurrentExecutionRatePercentage(concurrentExecutionRatePercentage)
       }
 
-      public override fun errorPercentage(errorPercentage: Number) {
+      override fun errorPercentage(errorPercentage: Number) {
         cdkBuilder.errorPercentage(errorPercentage)
       }
 
@@ -383,10 +362,10 @@ public open class CfnRemediationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.SsmControlsProperty,
     ) : SsmControlsProperty {
-      public override fun concurrentExecutionRatePercentage(): Number? =
+      override fun concurrentExecutionRatePercentage(): Number? =
           unwrap(this).getConcurrentExecutionRatePercentage()
 
-      public override fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
+      override fun errorPercentage(): Number? = unwrap(this).getErrorPercentage()
     }
 
     public companion object {
@@ -415,11 +394,9 @@ public open class CfnRemediationConfiguration internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun `value`(`value`: List<String>) {
-      }
+      public fun `value`(`value`: List<String>)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -428,11 +405,11 @@ public open class CfnRemediationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty.builder()
 
-      public override fun `value`(`value`: List<String>) {
+      override fun `value`(`value`: List<String>) {
         cdkBuilder.`value`(`value`)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -445,9 +422,9 @@ public open class CfnRemediationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty,
     ) : StaticValueProperty {
-      public override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -476,27 +453,21 @@ public open class CfnRemediationConfiguration internal constructor(
     public fun staticValue(): Any? = unwrap(this).getStaticValue()
 
     public interface Builder {
-      public fun resourceValue(resourceValue: IResolvable) {
-      }
+      public fun resourceValue(resourceValue: IResolvable)
 
-      public fun resourceValue(resourceValue: ResourceValueProperty) {
-      }
+      public fun resourceValue(resourceValue: ResourceValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a1446444839d26f366a9c554c7dad27fe1feaef75c5dbb0601c8b3d433e992f")
-      public fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit) {
-      }
+      public fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit)
 
-      public fun staticValue(staticValue: IResolvable) {
-      }
+      public fun staticValue(staticValue: IResolvable)
 
-      public fun staticValue(staticValue: StaticValueProperty) {
-      }
+      public fun staticValue(staticValue: StaticValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f05fed1261a019c0caa131c0722b34f856f69966d834f444b31a673c861ea26")
-      public fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit) {
-      }
+      public fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -505,30 +476,30 @@ public open class CfnRemediationConfiguration internal constructor(
           =
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty.builder()
 
-      public override fun resourceValue(resourceValue: IResolvable) {
+      override fun resourceValue(resourceValue: IResolvable) {
         cdkBuilder.resourceValue(resourceValue.let(IResolvable::unwrap))
       }
 
-      public override fun resourceValue(resourceValue: ResourceValueProperty) {
+      override fun resourceValue(resourceValue: ResourceValueProperty) {
         cdkBuilder.resourceValue(resourceValue.let(ResourceValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a1446444839d26f366a9c554c7dad27fe1feaef75c5dbb0601c8b3d433e992f")
-      public override fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit):
-          Unit = resourceValue(ResourceValueProperty(resourceValue))
+      override fun resourceValue(resourceValue: ResourceValueProperty.Builder.() -> Unit): Unit =
+          resourceValue(ResourceValueProperty(resourceValue))
 
-      public override fun staticValue(staticValue: IResolvable) {
+      override fun staticValue(staticValue: IResolvable) {
         cdkBuilder.staticValue(staticValue.let(IResolvable::unwrap))
       }
 
-      public override fun staticValue(staticValue: StaticValueProperty) {
+      override fun staticValue(staticValue: StaticValueProperty) {
         cdkBuilder.staticValue(staticValue.let(StaticValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f05fed1261a019c0caa131c0722b34f856f69966d834f444b31a673c861ea26")
-      public override fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit): Unit =
+      override fun staticValue(staticValue: StaticValueProperty.Builder.() -> Unit): Unit =
           staticValue(StaticValueProperty(staticValue))
 
       public fun build():
@@ -540,9 +511,9 @@ public open class CfnRemediationConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.RemediationParameterValueProperty,
     ) : RemediationParameterValueProperty {
-      public override fun resourceValue(): Any? = unwrap(this).getResourceValue()
+      override fun resourceValue(): Any? = unwrap(this).getResourceValue()
 
-      public override fun staticValue(): Any? = unwrap(this).getStaticValue()
+      override fun staticValue(): Any? = unwrap(this).getStaticValue()
     }
 
     public companion object {

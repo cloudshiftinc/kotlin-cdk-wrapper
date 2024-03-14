@@ -10,44 +10,39 @@ public interface SchemaOptions {
   public fun sortKey(): Attribute? = unwrap(this).getSortKey()?.let(Attribute::wrap)
 
   public interface Builder {
-    public fun partitionKey(partitionKey: Attribute) {
-    }
+    public fun partitionKey(partitionKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a4c35138eae0dcd4575d9c3db2f0433fc5be81aa0d4958afdc44db8653bda5dc")
-    public fun partitionKey(partitionKey: Attribute.Builder.() -> Unit) {
-    }
+    public fun partitionKey(partitionKey: Attribute.Builder.() -> Unit)
 
-    public fun sortKey(sortKey: Attribute) {
-    }
+    public fun sortKey(sortKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5449151fb1479c80881adff8c2b13729f36d00bbc0474ac2a3482509b93c268e")
-    public fun sortKey(sortKey: Attribute.Builder.() -> Unit) {
-    }
+    public fun sortKey(sortKey: Attribute.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.SchemaOptions.Builder =
         software.amazon.awscdk.services.dynamodb.SchemaOptions.builder()
 
-    public override fun partitionKey(partitionKey: Attribute) {
+    override fun partitionKey(partitionKey: Attribute) {
       cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a4c35138eae0dcd4575d9c3db2f0433fc5be81aa0d4958afdc44db8653bda5dc")
-    public override fun partitionKey(partitionKey: Attribute.Builder.() -> Unit): Unit =
+    override fun partitionKey(partitionKey: Attribute.Builder.() -> Unit): Unit =
         partitionKey(Attribute(partitionKey))
 
-    public override fun sortKey(sortKey: Attribute) {
+    override fun sortKey(sortKey: Attribute) {
       cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5449151fb1479c80881adff8c2b13729f36d00bbc0474ac2a3482509b93c268e")
-    public override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit =
-        sortKey(Attribute(sortKey))
+    override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit = sortKey(Attribute(sortKey))
 
     public fun build(): software.amazon.awscdk.services.dynamodb.SchemaOptions = cdkBuilder.build()
   }
@@ -55,10 +50,9 @@ public interface SchemaOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.SchemaOptions,
   ) : SchemaOptions {
-    public override fun partitionKey(): Attribute =
-        unwrap(this).getPartitionKey().let(Attribute::wrap)
+    override fun partitionKey(): Attribute = unwrap(this).getPartitionKey().let(Attribute::wrap)
 
-    public override fun sortKey(): Attribute? = unwrap(this).getSortKey()?.let(Attribute::wrap)
+    override fun sortKey(): Attribute? = unwrap(this).getSortKey()?.let(Attribute::wrap)
   }
 
   public companion object {

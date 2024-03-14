@@ -107,49 +107,35 @@ public open class CfnAuthorizer internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun authorizerCredentialsArn(authorizerCredentialsArn: String) {
-    }
+    public fun authorizerCredentialsArn(authorizerCredentialsArn: String)
 
-    public fun authorizerPayloadFormatVersion(authorizerPayloadFormatVersion: String) {
-    }
+    public fun authorizerPayloadFormatVersion(authorizerPayloadFormatVersion: String)
 
-    public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
-    }
+    public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number)
 
-    public fun authorizerType(authorizerType: String) {
-    }
+    public fun authorizerType(authorizerType: String)
 
-    public fun authorizerUri(authorizerUri: String) {
-    }
+    public fun authorizerUri(authorizerUri: String)
 
-    public fun enableSimpleResponses(enableSimpleResponses: Boolean) {
-    }
+    public fun enableSimpleResponses(enableSimpleResponses: Boolean)
 
-    public fun enableSimpleResponses(enableSimpleResponses: IResolvable) {
-    }
+    public fun enableSimpleResponses(enableSimpleResponses: IResolvable)
 
-    public fun identitySource(identitySource: List<String>) {
-    }
+    public fun identitySource(identitySource: List<String>)
 
-    public fun identityValidationExpression(identityValidationExpression: String) {
-    }
+    public fun identityValidationExpression(identityValidationExpression: String)
 
-    public fun jwtConfiguration(jwtConfiguration: IResolvable) {
-    }
+    public fun jwtConfiguration(jwtConfiguration: IResolvable)
 
-    public fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty) {
-    }
+    public fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e27125f0db7456c147dc77c030c5a26fe0b613bb82de1d4a8a9d63760df2af6c")
-    public fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -159,61 +145,60 @@ public open class CfnAuthorizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun authorizerCredentialsArn(authorizerCredentialsArn: String) {
+    override fun authorizerCredentialsArn(authorizerCredentialsArn: String) {
       cdkBuilder.authorizerCredentialsArn(authorizerCredentialsArn)
     }
 
-    public override fun authorizerPayloadFormatVersion(authorizerPayloadFormatVersion: String) {
+    override fun authorizerPayloadFormatVersion(authorizerPayloadFormatVersion: String) {
       cdkBuilder.authorizerPayloadFormatVersion(authorizerPayloadFormatVersion)
     }
 
-    public override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
+    override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
       cdkBuilder.authorizerResultTtlInSeconds(authorizerResultTtlInSeconds)
     }
 
-    public override fun authorizerType(authorizerType: String) {
+    override fun authorizerType(authorizerType: String) {
       cdkBuilder.authorizerType(authorizerType)
     }
 
-    public override fun authorizerUri(authorizerUri: String) {
+    override fun authorizerUri(authorizerUri: String) {
       cdkBuilder.authorizerUri(authorizerUri)
     }
 
-    public override fun enableSimpleResponses(enableSimpleResponses: Boolean) {
+    override fun enableSimpleResponses(enableSimpleResponses: Boolean) {
       cdkBuilder.enableSimpleResponses(enableSimpleResponses)
     }
 
-    public override fun enableSimpleResponses(enableSimpleResponses: IResolvable) {
+    override fun enableSimpleResponses(enableSimpleResponses: IResolvable) {
       cdkBuilder.enableSimpleResponses(enableSimpleResponses.let(IResolvable::unwrap))
     }
 
-    public override fun identitySource(identitySource: List<String>) {
+    override fun identitySource(identitySource: List<String>) {
       cdkBuilder.identitySource(identitySource)
     }
 
-    public override fun identityValidationExpression(identityValidationExpression: String) {
+    override fun identityValidationExpression(identityValidationExpression: String) {
       cdkBuilder.identityValidationExpression(identityValidationExpression)
     }
 
-    public override fun jwtConfiguration(jwtConfiguration: IResolvable) {
+    override fun jwtConfiguration(jwtConfiguration: IResolvable) {
       cdkBuilder.jwtConfiguration(jwtConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty) {
+    override fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty) {
       cdkBuilder.jwtConfiguration(jwtConfiguration.let(JWTConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e27125f0db7456c147dc77c030c5a26fe0b613bb82de1d4a8a9d63760df2af6c")
-    public override
-        fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty.Builder.() -> Unit): Unit =
-        jwtConfiguration(JWTConfigurationProperty(jwtConfiguration))
+    override fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty.Builder.() -> Unit):
+        Unit = jwtConfiguration(JWTConfigurationProperty(jwtConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -248,11 +233,9 @@ public open class CfnAuthorizer internal constructor(
     public fun issuer(): String? = unwrap(this).getIssuer()
 
     public interface Builder {
-      public fun audience(audience: List<String>) {
-      }
+      public fun audience(audience: List<String>)
 
-      public fun issuer(issuer: String) {
-      }
+      public fun issuer(issuer: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,11 +244,11 @@ public open class CfnAuthorizer internal constructor(
           =
           software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty.builder()
 
-      public override fun audience(audience: List<String>) {
+      override fun audience(audience: List<String>) {
         cdkBuilder.audience(audience)
       }
 
-      public override fun issuer(issuer: String) {
+      override fun issuer(issuer: String) {
         cdkBuilder.issuer(issuer)
       }
 
@@ -278,9 +261,9 @@ public open class CfnAuthorizer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty,
     ) : JWTConfigurationProperty {
-      public override fun audience(): List<String> = unwrap(this).getAudience() ?: emptyList()
+      override fun audience(): List<String> = unwrap(this).getAudience() ?: emptyList()
 
-      public override fun issuer(): String? = unwrap(this).getIssuer()
+      override fun issuer(): String? = unwrap(this).getIssuer()
     }
 
     public companion object {

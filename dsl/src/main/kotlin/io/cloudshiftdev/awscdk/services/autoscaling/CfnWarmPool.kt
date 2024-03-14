@@ -61,29 +61,22 @@ public open class CfnWarmPool internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingGroupName(autoScalingGroupName: String) {
-    }
+    public fun autoScalingGroupName(autoScalingGroupName: String)
 
-    public fun instanceReusePolicy(instanceReusePolicy: IResolvable) {
-    }
+    public fun instanceReusePolicy(instanceReusePolicy: IResolvable)
 
-    public fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty) {
-    }
+    public fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2ff5f96c2ab03a54304029bc8d707c33d8e1684eb458cf69a86659ee2f20bc8")
     public
-        fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty.Builder.() -> Unit) {
-    }
+        fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty.Builder.() -> Unit)
 
-    public fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
-    }
+    public fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun poolState(poolState: String) {
-    }
+    public fun poolState(poolState: String)
   }
 
   private class BuilderImpl(
@@ -93,33 +86,33 @@ public open class CfnWarmPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.CfnWarmPool.Builder =
         software.amazon.awscdk.services.autoscaling.CfnWarmPool.Builder.create(scope, id)
 
-    public override fun autoScalingGroupName(autoScalingGroupName: String) {
+    override fun autoScalingGroupName(autoScalingGroupName: String) {
       cdkBuilder.autoScalingGroupName(autoScalingGroupName)
     }
 
-    public override fun instanceReusePolicy(instanceReusePolicy: IResolvable) {
+    override fun instanceReusePolicy(instanceReusePolicy: IResolvable) {
       cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(IResolvable::unwrap))
     }
 
-    public override fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty) {
+    override fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty) {
       cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(InstanceReusePolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a2ff5f96c2ab03a54304029bc8d707c33d8e1684eb458cf69a86659ee2f20bc8")
-    public override
+    override
         fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty.Builder.() -> Unit):
         Unit = instanceReusePolicy(InstanceReusePolicyProperty(instanceReusePolicy))
 
-    public override fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
+    override fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
       cdkBuilder.maxGroupPreparedCapacity(maxGroupPreparedCapacity)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun poolState(poolState: String) {
+    override fun poolState(poolState: String) {
       cdkBuilder.poolState(poolState)
     }
 
@@ -151,11 +144,9 @@ public open class CfnWarmPool internal constructor(
     public fun reuseOnScaleIn(): Any? = unwrap(this).getReuseOnScaleIn()
 
     public interface Builder {
-      public fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
-      }
+      public fun reuseOnScaleIn(reuseOnScaleIn: Boolean)
 
-      public fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
-      }
+      public fun reuseOnScaleIn(reuseOnScaleIn: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -164,11 +155,11 @@ public open class CfnWarmPool internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnWarmPool.InstanceReusePolicyProperty.builder()
 
-      public override fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
+      override fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
         cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
       }
 
-      public override fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
+      override fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
         cdkBuilder.reuseOnScaleIn(reuseOnScaleIn.let(IResolvable::unwrap))
       }
 
@@ -181,7 +172,7 @@ public open class CfnWarmPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnWarmPool.InstanceReusePolicyProperty,
     ) : InstanceReusePolicyProperty {
-      public override fun reuseOnScaleIn(): Any? = unwrap(this).getReuseOnScaleIn()
+      override fun reuseOnScaleIn(): Any? = unwrap(this).getReuseOnScaleIn()
     }
 
     public companion object {

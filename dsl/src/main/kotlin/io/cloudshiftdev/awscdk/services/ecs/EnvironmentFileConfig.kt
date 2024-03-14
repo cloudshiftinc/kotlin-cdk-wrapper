@@ -11,33 +11,30 @@ public interface EnvironmentFileConfig {
   public fun s3Location(): Location
 
   public interface Builder {
-    public fun fileType(fileType: EnvironmentFileType) {
-    }
+    public fun fileType(fileType: EnvironmentFileType)
 
-    public fun s3Location(s3Location: Location) {
-    }
+    public fun s3Location(s3Location: Location)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17deb9224b1df8a8edb2295024ecf99e0645213f9656d16be844db7b415dda7d")
-    public fun s3Location(s3Location: Location.Builder.() -> Unit) {
-    }
+    public fun s3Location(s3Location: Location.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.EnvironmentFileConfig.Builder =
         software.amazon.awscdk.services.ecs.EnvironmentFileConfig.builder()
 
-    public override fun fileType(fileType: EnvironmentFileType) {
+    override fun fileType(fileType: EnvironmentFileType) {
       cdkBuilder.fileType(fileType.let(EnvironmentFileType::unwrap))
     }
 
-    public override fun s3Location(s3Location: Location) {
+    override fun s3Location(s3Location: Location) {
       cdkBuilder.s3Location(s3Location.let(Location::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17deb9224b1df8a8edb2295024ecf99e0645213f9656d16be844db7b415dda7d")
-    public override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
+    override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
         s3Location(Location(s3Location))
 
     public fun build(): software.amazon.awscdk.services.ecs.EnvironmentFileConfig =
@@ -47,10 +44,10 @@ public interface EnvironmentFileConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFileConfig,
   ) : EnvironmentFileConfig {
-    public override fun fileType(): EnvironmentFileType =
+    override fun fileType(): EnvironmentFileType =
         unwrap(this).getFileType().let(EnvironmentFileType::wrap)
 
-    public override fun s3Location(): Location = unwrap(this).getS3Location().let(Location::wrap)
+    override fun s3Location(): Location = unwrap(this).getS3Location().let(Location::wrap)
   }
 
   public companion object {

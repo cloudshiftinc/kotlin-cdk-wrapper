@@ -17,16 +17,16 @@ public interface ITargetGroup : IConstruct {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ITargetGroup,
   ) : ITargetGroup {
-    public override fun loadBalancerArns(): String = unwrap(this).getLoadBalancerArns()
+    override fun loadBalancerArns(): String = unwrap(this).getLoadBalancerArns()
 
-    public override fun loadBalancerAttached(): IDependable =
+    override fun loadBalancerAttached(): IDependable =
         unwrap(this).getLoadBalancerAttached().let(IDependable::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun targetGroupArn(): String = unwrap(this).getTargetGroupArn()
+    override fun targetGroupArn(): String = unwrap(this).getTargetGroupArn()
 
-    public override fun targetGroupName(): String = unwrap(this).getTargetGroupName()
+    override fun targetGroupName(): String = unwrap(this).getTargetGroupName()
   }
 
   public companion object {

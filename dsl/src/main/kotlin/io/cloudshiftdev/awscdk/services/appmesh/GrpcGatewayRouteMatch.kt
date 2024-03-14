@@ -20,43 +20,38 @@ public interface GrpcGatewayRouteMatch {
   public fun serviceName(): String? = unwrap(this).getServiceName()
 
   public interface Builder {
-    public fun hostname(hostname: GatewayRouteHostnameMatch) {
-    }
+    public fun hostname(hostname: GatewayRouteHostnameMatch)
 
-    public fun metadata(metadata: List<HeaderMatch>) {
-    }
+    public fun metadata(metadata: List<HeaderMatch>)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun rewriteRequestHostname(rewriteRequestHostname: Boolean) {
-    }
+    public fun rewriteRequestHostname(rewriteRequestHostname: Boolean)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch.Builder =
         software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch.builder()
 
-    public override fun hostname(hostname: GatewayRouteHostnameMatch) {
+    override fun hostname(hostname: GatewayRouteHostnameMatch) {
       cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatch::unwrap))
     }
 
-    public override fun metadata(metadata: List<HeaderMatch>) {
+    override fun metadata(metadata: List<HeaderMatch>) {
       cdkBuilder.metadata(metadata.map(HeaderMatch::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun rewriteRequestHostname(rewriteRequestHostname: Boolean) {
+    override fun rewriteRequestHostname(rewriteRequestHostname: Boolean) {
       cdkBuilder.rewriteRequestHostname(rewriteRequestHostname)
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
@@ -67,18 +62,17 @@ public interface GrpcGatewayRouteMatch {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch,
   ) : GrpcGatewayRouteMatch {
-    public override fun hostname(): GatewayRouteHostnameMatch? =
+    override fun hostname(): GatewayRouteHostnameMatch? =
         unwrap(this).getHostname()?.let(GatewayRouteHostnameMatch::wrap)
 
-    public override fun metadata(): List<HeaderMatch> =
-        unwrap(this).getMetadata()?.map(HeaderMatch::wrap) ?: emptyList()
+    override fun metadata(): List<HeaderMatch> = unwrap(this).getMetadata()?.map(HeaderMatch::wrap)
+        ?: emptyList()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun rewriteRequestHostname(): Boolean? =
-        unwrap(this).getRewriteRequestHostname()
+    override fun rewriteRequestHostname(): Boolean? = unwrap(this).getRewriteRequestHostname()
 
-    public override fun serviceName(): String? = unwrap(this).getServiceName()
+    override fun serviceName(): String? = unwrap(this).getServiceName()
   }
 
   public companion object {

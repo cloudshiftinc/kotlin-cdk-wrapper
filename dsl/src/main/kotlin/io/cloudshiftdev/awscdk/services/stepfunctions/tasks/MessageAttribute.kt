@@ -10,11 +10,9 @@ public interface MessageAttribute {
   public fun `value`(): Any
 
   public interface Builder {
-    public fun dataType(dataType: MessageAttributeDataType) {
-    }
+    public fun dataType(dataType: MessageAttributeDataType)
 
-    public fun `value`(`value`: Any) {
-    }
+    public fun `value`(`value`: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface MessageAttribute {
         software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute.builder()
 
-    public override fun dataType(dataType: MessageAttributeDataType) {
+    override fun dataType(dataType: MessageAttributeDataType) {
       cdkBuilder.dataType(dataType.let(MessageAttributeDataType::unwrap))
     }
 
-    public override fun `value`(`value`: Any) {
+    override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -37,10 +35,10 @@ public interface MessageAttribute {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute,
   ) : MessageAttribute {
-    public override fun dataType(): MessageAttributeDataType? =
+    override fun dataType(): MessageAttributeDataType? =
         unwrap(this).getDataType()?.let(MessageAttributeDataType::wrap)
 
-    public override fun `value`(): Any = unwrap(this).getValue()
+    override fun `value`(): Any = unwrap(this).getValue()
   }
 
   public companion object {

@@ -33,46 +33,34 @@ public open class EcsDeploymentGroup internal constructor(
   public open fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun alarms(alarms: List<IAlarm>) {
-    }
+    public fun alarms(alarms: List<IAlarm>)
 
-    public fun application(application: IEcsApplication) {
-    }
+    public fun application(application: IEcsApplication)
 
-    public fun autoRollback(autoRollback: AutoRollbackConfig) {
-    }
+    public fun autoRollback(autoRollback: AutoRollbackConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("83ca78f6c480a773a52a22a9984eed5a13140cba7eb85a91c2ef1936289762ff")
-    public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit) {
-    }
+    public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit)
 
-    public fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig) {
-    }
+    public fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3db92814a60ba1017debcfb7ffd9c75400feaac833dea2d99093e30b12df762")
     public
-        fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig.Builder.() -> Unit) {
-    }
+        fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig.Builder.() -> Unit)
 
-    public fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
-    }
+    public fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
 
-    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
-    }
+    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean)
 
-    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
-    }
+    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun service(service: IBaseService) {
-    }
+    public fun service(service: IBaseService)
   }
 
   private class BuilderImpl(
@@ -82,55 +70,55 @@ public open class EcsDeploymentGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup.Builder =
         software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup.Builder.create(scope, id)
 
-    public override fun alarms(alarms: List<IAlarm>) {
+    override fun alarms(alarms: List<IAlarm>) {
       cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
     }
 
-    public override fun application(application: IEcsApplication) {
+    override fun application(application: IEcsApplication) {
       cdkBuilder.application(application.let(IEcsApplication::unwrap))
     }
 
-    public override fun autoRollback(autoRollback: AutoRollbackConfig) {
+    override fun autoRollback(autoRollback: AutoRollbackConfig) {
       cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("83ca78f6c480a773a52a22a9984eed5a13140cba7eb85a91c2ef1936289762ff")
-    public override fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit): Unit =
+    override fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit): Unit =
         autoRollback(AutoRollbackConfig(autoRollback))
 
-    public override
+    override
         fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig) {
       cdkBuilder.blueGreenDeploymentConfig(blueGreenDeploymentConfig.let(EcsBlueGreenDeploymentConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d3db92814a60ba1017debcfb7ffd9c75400feaac833dea2d99093e30b12df762")
-    public override
+    override
         fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig.Builder.() -> Unit):
         Unit = blueGreenDeploymentConfig(EcsBlueGreenDeploymentConfig(blueGreenDeploymentConfig))
 
-    public override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
+    override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig::unwrap))
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
-    public override fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
+    override fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
       cdkBuilder.ignoreAlarmConfiguration(ignoreAlarmConfiguration)
     }
 
-    public override fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
+    override fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
       cdkBuilder.ignorePollAlarmsFailure(ignorePollAlarmsFailure)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun service(service: IBaseService) {
+    override fun service(service: IBaseService) {
       cdkBuilder.service(service.let(IBaseService::unwrap))
     }
 

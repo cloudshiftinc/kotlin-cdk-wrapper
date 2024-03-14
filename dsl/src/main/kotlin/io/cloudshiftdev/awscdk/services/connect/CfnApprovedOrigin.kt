@@ -28,11 +28,9 @@ public open class CfnApprovedOrigin internal constructor(
   }
 
   public interface Builder {
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun origin(origin: String) {
-    }
+    public fun origin(origin: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnApprovedOrigin internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnApprovedOrigin.Builder =
         software.amazon.awscdk.services.connect.CfnApprovedOrigin.Builder.create(scope, id)
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun origin(origin: String) {
+    override fun origin(origin: String) {
       cdkBuilder.origin(origin)
     }
 

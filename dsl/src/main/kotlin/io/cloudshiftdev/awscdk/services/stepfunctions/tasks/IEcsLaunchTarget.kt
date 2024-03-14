@@ -15,13 +15,13 @@ public interface IEcsLaunchTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.IEcsLaunchTarget,
   ) : IEcsLaunchTarget {
-    public override fun bind(arg0: EcsRunTask, arg1: LaunchTargetBindOptions): EcsLaunchTargetConfig
-        = unwrap(this).bind(arg0.let(EcsRunTask::unwrap),
+    override fun bind(arg0: EcsRunTask, arg1: LaunchTargetBindOptions): EcsLaunchTargetConfig =
+        unwrap(this).bind(arg0.let(EcsRunTask::unwrap),
         arg1.let(LaunchTargetBindOptions::unwrap)).let(EcsLaunchTargetConfig::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9be8b1f0cae602d733f00715d7adf0ffaba00624095ed77fb348fca6a99c06a8")
-    public override fun bind(arg0: EcsRunTask, arg1: LaunchTargetBindOptions.Builder.() -> Unit):
+    override fun bind(arg0: EcsRunTask, arg1: LaunchTargetBindOptions.Builder.() -> Unit):
         EcsLaunchTargetConfig = bind(arg0, LaunchTargetBindOptions(arg1))
   }
 

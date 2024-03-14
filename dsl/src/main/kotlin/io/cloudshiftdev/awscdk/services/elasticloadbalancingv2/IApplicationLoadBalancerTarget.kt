@@ -7,7 +7,7 @@ public interface IApplicationLoadBalancerTarget {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerTarget,
   ) : IApplicationLoadBalancerTarget {
-    public override fun attachToApplicationTargetGroup(arg0: IApplicationTargetGroup):
+    override fun attachToApplicationTargetGroup(arg0: IApplicationTargetGroup):
         LoadBalancerTargetProps =
         unwrap(this).attachToApplicationTargetGroup(arg0.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
   }

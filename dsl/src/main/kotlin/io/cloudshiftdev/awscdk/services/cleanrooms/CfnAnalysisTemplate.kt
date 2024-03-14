@@ -99,37 +99,27 @@ public open class CfnAnalysisTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun analysisParameters(analysisParameters: IResolvable) {
-    }
+    public fun analysisParameters(analysisParameters: IResolvable)
 
-    public fun analysisParameters(analysisParameters: List<Any>) {
-    }
+    public fun analysisParameters(analysisParameters: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun format(format: String) {
-    }
+    public fun format(format: String)
 
-    public fun membershipIdentifier(membershipIdentifier: String) {
-    }
+    public fun membershipIdentifier(membershipIdentifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun source(source: IResolvable) {
-    }
+    public fun source(source: IResolvable)
 
-    public fun source(source: AnalysisSourceProperty) {
-    }
+    public fun source(source: AnalysisSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e785149e3cb40f1492f363f91d84288a1fc5535a66b6f33d66fe0006c4eabcf9")
-    public fun source(source: AnalysisSourceProperty.Builder.() -> Unit) {
-    }
+    public fun source(source: AnalysisSourceProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -139,44 +129,44 @@ public open class CfnAnalysisTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.Builder =
         software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.Builder.create(scope, id)
 
-    public override fun analysisParameters(analysisParameters: IResolvable) {
+    override fun analysisParameters(analysisParameters: IResolvable) {
       cdkBuilder.analysisParameters(analysisParameters.let(IResolvable::unwrap))
     }
 
-    public override fun analysisParameters(analysisParameters: List<Any>) {
+    override fun analysisParameters(analysisParameters: List<Any>) {
       cdkBuilder.analysisParameters(analysisParameters)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun format(format: String) {
+    override fun format(format: String) {
       cdkBuilder.format(format)
     }
 
-    public override fun membershipIdentifier(membershipIdentifier: String) {
+    override fun membershipIdentifier(membershipIdentifier: String) {
       cdkBuilder.membershipIdentifier(membershipIdentifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun source(source: IResolvable) {
+    override fun source(source: IResolvable) {
       cdkBuilder.source(source.let(IResolvable::unwrap))
     }
 
-    public override fun source(source: AnalysisSourceProperty) {
+    override fun source(source: AnalysisSourceProperty) {
       cdkBuilder.source(source.let(AnalysisSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e785149e3cb40f1492f363f91d84288a1fc5535a66b6f33d66fe0006c4eabcf9")
-    public override fun source(source: AnalysisSourceProperty.Builder.() -> Unit): Unit =
+    override fun source(source: AnalysisSourceProperty.Builder.() -> Unit): Unit =
         source(AnalysisSourceProperty(source))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -209,8 +199,7 @@ public open class CfnAnalysisTemplate internal constructor(
     public fun text(): String
 
     public interface Builder {
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
     }
 
     private class BuilderImpl : Builder {
@@ -219,7 +208,7 @@ public open class CfnAnalysisTemplate internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty.builder()
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
@@ -232,7 +221,7 @@ public open class CfnAnalysisTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSourceProperty,
     ) : AnalysisSourceProperty {
-      public override fun text(): String = unwrap(this).getText()
+      override fun text(): String = unwrap(this).getText()
     }
 
     public companion object {
@@ -259,8 +248,7 @@ public open class CfnAnalysisTemplate internal constructor(
     public fun referencedTables(): List<String>
 
     public interface Builder {
-      public fun referencedTables(referencedTables: List<String>) {
-      }
+      public fun referencedTables(referencedTables: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -269,7 +257,7 @@ public open class CfnAnalysisTemplate internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty.builder()
 
-      public override fun referencedTables(referencedTables: List<String>) {
+      override fun referencedTables(referencedTables: List<String>) {
         cdkBuilder.referencedTables(referencedTables)
       }
 
@@ -282,7 +270,7 @@ public open class CfnAnalysisTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
     ) : AnalysisSchemaProperty {
-      public override fun referencedTables(): List<String> = unwrap(this).getReferencedTables() ?:
+      override fun referencedTables(): List<String> = unwrap(this).getReferencedTables() ?:
           emptyList()
     }
 
@@ -314,14 +302,11 @@ public open class CfnAnalysisTemplate internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -330,15 +315,15 @@ public open class CfnAnalysisTemplate internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty.builder()
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -351,11 +336,11 @@ public open class CfnAnalysisTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisParameterProperty,
     ) : AnalysisParameterProperty {
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

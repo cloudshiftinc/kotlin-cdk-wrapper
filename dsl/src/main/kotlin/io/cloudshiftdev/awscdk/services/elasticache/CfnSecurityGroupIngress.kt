@@ -36,14 +36,11 @@ public open class CfnSecurityGroupIngress internal constructor(
   }
 
   public interface Builder {
-    public fun cacheSecurityGroupName(cacheSecurityGroupName: String) {
-    }
+    public fun cacheSecurityGroupName(cacheSecurityGroupName: String)
 
-    public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
-    }
+    public fun ec2SecurityGroupName(ec2SecurityGroupName: String)
 
-    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
-    }
+    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String)
   }
 
   private class BuilderImpl(
@@ -55,15 +52,15 @@ public open class CfnSecurityGroupIngress internal constructor(
         software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngress.Builder.create(scope,
         id)
 
-    public override fun cacheSecurityGroupName(cacheSecurityGroupName: String) {
+    override fun cacheSecurityGroupName(cacheSecurityGroupName: String) {
       cdkBuilder.cacheSecurityGroupName(cacheSecurityGroupName)
     }
 
-    public override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
+    override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
       cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
     }
 
-    public override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
+    override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
       cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
     }
 

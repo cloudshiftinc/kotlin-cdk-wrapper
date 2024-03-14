@@ -93,44 +93,33 @@ public open class CfnTaskDefinition internal constructor(
       = update(UpdateWirelessGatewayTaskCreateProperty(`value`))
 
   public interface Builder {
-    public fun autoCreateTasks(autoCreateTasks: Boolean) {
-    }
+    public fun autoCreateTasks(autoCreateTasks: Boolean)
 
-    public fun autoCreateTasks(autoCreateTasks: IResolvable) {
-    }
+    public fun autoCreateTasks(autoCreateTasks: IResolvable)
 
-    public fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
-    }
+    public fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable)
 
     public
-        fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty) {
-    }
+        fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4029b89ab3c57a112afb8f4a10f136caacb63e73b69ed8aec5cb67efdcf6f365")
     public
-        fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty.Builder.() -> Unit) {
-    }
+        fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun taskDefinitionType(taskDefinitionType: String) {
-    }
+    public fun taskDefinitionType(taskDefinitionType: String)
 
-    public fun update(update: IResolvable) {
-    }
+    public fun update(update: IResolvable)
 
-    public fun update(update: UpdateWirelessGatewayTaskCreateProperty) {
-    }
+    public fun update(update: UpdateWirelessGatewayTaskCreateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("59d42d697f4c628bcaabb093931b235aaafcd93e189237d78bc134273c295dc2")
-    public fun update(update: UpdateWirelessGatewayTaskCreateProperty.Builder.() -> Unit) {
-    }
+    public fun update(update: UpdateWirelessGatewayTaskCreateProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -140,54 +129,54 @@ public open class CfnTaskDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.Builder =
         software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.Builder.create(scope, id)
 
-    public override fun autoCreateTasks(autoCreateTasks: Boolean) {
+    override fun autoCreateTasks(autoCreateTasks: Boolean) {
       cdkBuilder.autoCreateTasks(autoCreateTasks)
     }
 
-    public override fun autoCreateTasks(autoCreateTasks: IResolvable) {
+    override fun autoCreateTasks(autoCreateTasks: IResolvable) {
       cdkBuilder.autoCreateTasks(autoCreateTasks.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
+    override fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
       cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty) {
       cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(LoRaWANUpdateGatewayTaskEntryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4029b89ab3c57a112afb8f4a10f136caacb63e73b69ed8aec5cb67efdcf6f365")
-    public override
+    override
         fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty.Builder.() -> Unit):
         Unit =
         loRaWanUpdateGatewayTaskEntry(LoRaWANUpdateGatewayTaskEntryProperty(loRaWanUpdateGatewayTaskEntry))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun taskDefinitionType(taskDefinitionType: String) {
+    override fun taskDefinitionType(taskDefinitionType: String) {
       cdkBuilder.taskDefinitionType(taskDefinitionType)
     }
 
-    public override fun update(update: IResolvable) {
+    override fun update(update: IResolvable) {
       cdkBuilder.update(update.let(IResolvable::unwrap))
     }
 
-    public override fun update(update: UpdateWirelessGatewayTaskCreateProperty) {
+    override fun update(update: UpdateWirelessGatewayTaskCreateProperty) {
       cdkBuilder.update(update.let(UpdateWirelessGatewayTaskCreateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("59d42d697f4c628bcaabb093931b235aaafcd93e189237d78bc134273c295dc2")
-    public override fun update(update: UpdateWirelessGatewayTaskCreateProperty.Builder.() -> Unit):
-        Unit = update(UpdateWirelessGatewayTaskCreateProperty(update))
+    override fun update(update: UpdateWirelessGatewayTaskCreateProperty.Builder.() -> Unit): Unit =
+        update(UpdateWirelessGatewayTaskCreateProperty(update))
 
     public fun build(): software.amazon.awscdk.services.iotwireless.CfnTaskDefinition =
         cdkBuilder.build()
@@ -222,22 +211,17 @@ public open class CfnTaskDefinition internal constructor(
     public fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
 
     public interface Builder {
-      public fun loRaWan(loRaWan: IResolvable) {
-      }
+      public fun loRaWan(loRaWan: IResolvable)
 
-      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty) {
-      }
+      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9e1b2e9bb716c698778bb5a59a337f75a51f4015d1aee0f4516f361f7795069")
-      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit) {
-      }
+      public fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit)
 
-      public fun updateDataRole(updateDataRole: String) {
-      }
+      public fun updateDataRole(updateDataRole: String)
 
-      public fun updateDataSource(updateDataSource: String) {
-      }
+      public fun updateDataSource(updateDataSource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -246,25 +230,24 @@ public open class CfnTaskDefinition internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty.builder()
 
-      public override fun loRaWan(loRaWan: IResolvable) {
+      override fun loRaWan(loRaWan: IResolvable) {
         cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
       }
 
-      public override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty) {
+      override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty) {
         cdkBuilder.loRaWan(loRaWan.let(LoRaWANUpdateGatewayTaskCreateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9e1b2e9bb716c698778bb5a59a337f75a51f4015d1aee0f4516f361f7795069")
-      public override
-          fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit): Unit =
-          loRaWan(LoRaWANUpdateGatewayTaskCreateProperty(loRaWan))
+      override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty.Builder.() -> Unit): Unit
+          = loRaWan(LoRaWANUpdateGatewayTaskCreateProperty(loRaWan))
 
-      public override fun updateDataRole(updateDataRole: String) {
+      override fun updateDataRole(updateDataRole: String) {
         cdkBuilder.updateDataRole(updateDataRole)
       }
 
-      public override fun updateDataSource(updateDataSource: String) {
+      override fun updateDataSource(updateDataSource: String) {
         cdkBuilder.updateDataSource(updateDataSource)
       }
 
@@ -277,11 +260,11 @@ public open class CfnTaskDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty,
     ) : UpdateWirelessGatewayTaskCreateProperty {
-      public override fun loRaWan(): Any? = unwrap(this).getLoRaWan()
+      override fun loRaWan(): Any? = unwrap(this).getLoRaWan()
 
-      public override fun updateDataRole(): String? = unwrap(this).getUpdateDataRole()
+      override fun updateDataRole(): String? = unwrap(this).getUpdateDataRole()
 
-      public override fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
+      override fun updateDataSource(): String? = unwrap(this).getUpdateDataSource()
     }
 
     public companion object {
@@ -315,33 +298,25 @@ public open class CfnTaskDefinition internal constructor(
     public fun updateVersion(): Any? = unwrap(this).getUpdateVersion()
 
     public interface Builder {
-      public fun currentVersion(currentVersion: IResolvable) {
-      }
+      public fun currentVersion(currentVersion: IResolvable)
 
-      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
-      }
+      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83e3dbdb85fcfaaeccfd1a6ad8772385e5aa1b77e660d8770f4647676c1b51c0")
-      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit) {
-      }
+      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit)
 
-      public fun sigKeyCrc(sigKeyCrc: Number) {
-      }
+      public fun sigKeyCrc(sigKeyCrc: Number)
 
-      public fun updateSignature(updateSignature: String) {
-      }
+      public fun updateSignature(updateSignature: String)
 
-      public fun updateVersion(updateVersion: IResolvable) {
-      }
+      public fun updateVersion(updateVersion: IResolvable)
 
-      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
-      }
+      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52920c2c3e1f516601d9998280389f4e63f6cb3a334cdf420fd38489c65e9bbf")
-      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit) {
-      }
+      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -350,41 +325,39 @@ public open class CfnTaskDefinition internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty.builder()
 
-      public override fun currentVersion(currentVersion: IResolvable) {
+      override fun currentVersion(currentVersion: IResolvable) {
         cdkBuilder.currentVersion(currentVersion.let(IResolvable::unwrap))
       }
 
-      public override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
+      override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
         cdkBuilder.currentVersion(currentVersion.let(LoRaWANGatewayVersionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83e3dbdb85fcfaaeccfd1a6ad8772385e5aa1b77e660d8770f4647676c1b51c0")
-      public override
-          fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit): Unit
-          = currentVersion(LoRaWANGatewayVersionProperty(currentVersion))
+      override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit):
+          Unit = currentVersion(LoRaWANGatewayVersionProperty(currentVersion))
 
-      public override fun sigKeyCrc(sigKeyCrc: Number) {
+      override fun sigKeyCrc(sigKeyCrc: Number) {
         cdkBuilder.sigKeyCrc(sigKeyCrc)
       }
 
-      public override fun updateSignature(updateSignature: String) {
+      override fun updateSignature(updateSignature: String) {
         cdkBuilder.updateSignature(updateSignature)
       }
 
-      public override fun updateVersion(updateVersion: IResolvable) {
+      override fun updateVersion(updateVersion: IResolvable) {
         cdkBuilder.updateVersion(updateVersion.let(IResolvable::unwrap))
       }
 
-      public override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
+      override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
         cdkBuilder.updateVersion(updateVersion.let(LoRaWANGatewayVersionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52920c2c3e1f516601d9998280389f4e63f6cb3a334cdf420fd38489c65e9bbf")
-      public override
-          fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit): Unit =
-          updateVersion(LoRaWANGatewayVersionProperty(updateVersion))
+      override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit):
+          Unit = updateVersion(LoRaWANGatewayVersionProperty(updateVersion))
 
       public fun build():
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty
@@ -395,13 +368,13 @@ public open class CfnTaskDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty,
     ) : LoRaWANUpdateGatewayTaskCreateProperty {
-      public override fun currentVersion(): Any? = unwrap(this).getCurrentVersion()
+      override fun currentVersion(): Any? = unwrap(this).getCurrentVersion()
 
-      public override fun sigKeyCrc(): Number? = unwrap(this).getSigKeyCrc()
+      override fun sigKeyCrc(): Number? = unwrap(this).getSigKeyCrc()
 
-      public override fun updateSignature(): String? = unwrap(this).getUpdateSignature()
+      override fun updateSignature(): String? = unwrap(this).getUpdateSignature()
 
-      public override fun updateVersion(): Any? = unwrap(this).getUpdateVersion()
+      override fun updateVersion(): Any? = unwrap(this).getUpdateVersion()
     }
 
     public companion object {
@@ -431,27 +404,21 @@ public open class CfnTaskDefinition internal constructor(
     public fun updateVersion(): Any? = unwrap(this).getUpdateVersion()
 
     public interface Builder {
-      public fun currentVersion(currentVersion: IResolvable) {
-      }
+      public fun currentVersion(currentVersion: IResolvable)
 
-      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
-      }
+      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b83f1b58b8ad73fb0907fded0e7c11ce88aca0abf09a4ae8750fcde7ed6bafe")
-      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit) {
-      }
+      public fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit)
 
-      public fun updateVersion(updateVersion: IResolvable) {
-      }
+      public fun updateVersion(updateVersion: IResolvable)
 
-      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
-      }
+      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a68afc149d3991232ab5c4e32d6fc7ce61c665336a8035635bb16402202f1124")
-      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit) {
-      }
+      public fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -460,33 +427,31 @@ public open class CfnTaskDefinition internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty.builder()
 
-      public override fun currentVersion(currentVersion: IResolvable) {
+      override fun currentVersion(currentVersion: IResolvable) {
         cdkBuilder.currentVersion(currentVersion.let(IResolvable::unwrap))
       }
 
-      public override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
+      override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
         cdkBuilder.currentVersion(currentVersion.let(LoRaWANGatewayVersionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9b83f1b58b8ad73fb0907fded0e7c11ce88aca0abf09a4ae8750fcde7ed6bafe")
-      public override
-          fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit): Unit
-          = currentVersion(LoRaWANGatewayVersionProperty(currentVersion))
+      override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit):
+          Unit = currentVersion(LoRaWANGatewayVersionProperty(currentVersion))
 
-      public override fun updateVersion(updateVersion: IResolvable) {
+      override fun updateVersion(updateVersion: IResolvable) {
         cdkBuilder.updateVersion(updateVersion.let(IResolvable::unwrap))
       }
 
-      public override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
+      override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
         cdkBuilder.updateVersion(updateVersion.let(LoRaWANGatewayVersionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a68afc149d3991232ab5c4e32d6fc7ce61c665336a8035635bb16402202f1124")
-      public override
-          fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit): Unit =
-          updateVersion(LoRaWANGatewayVersionProperty(updateVersion))
+      override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty.Builder.() -> Unit):
+          Unit = updateVersion(LoRaWANGatewayVersionProperty(updateVersion))
 
       public fun build():
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty
@@ -497,9 +462,9 @@ public open class CfnTaskDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty,
     ) : LoRaWANUpdateGatewayTaskEntryProperty {
-      public override fun currentVersion(): Any? = unwrap(this).getCurrentVersion()
+      override fun currentVersion(): Any? = unwrap(this).getCurrentVersion()
 
-      public override fun updateVersion(): Any? = unwrap(this).getUpdateVersion()
+      override fun updateVersion(): Any? = unwrap(this).getUpdateVersion()
     }
 
     public companion object {
@@ -531,14 +496,11 @@ public open class CfnTaskDefinition internal constructor(
     public fun station(): String? = unwrap(this).getStation()
 
     public interface Builder {
-      public fun model(model: String) {
-      }
+      public fun model(model: String)
 
-      public fun packageVersion(packageVersion: String) {
-      }
+      public fun packageVersion(packageVersion: String)
 
-      public fun station(station: String) {
-      }
+      public fun station(station: String)
     }
 
     private class BuilderImpl : Builder {
@@ -547,15 +509,15 @@ public open class CfnTaskDefinition internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty.builder()
 
-      public override fun model(model: String) {
+      override fun model(model: String) {
         cdkBuilder.model(model)
       }
 
-      public override fun packageVersion(packageVersion: String) {
+      override fun packageVersion(packageVersion: String) {
         cdkBuilder.packageVersion(packageVersion)
       }
 
-      public override fun station(station: String) {
+      override fun station(station: String) {
         cdkBuilder.station(station)
       }
 
@@ -568,11 +530,11 @@ public open class CfnTaskDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty,
     ) : LoRaWANGatewayVersionProperty {
-      public override fun model(): String? = unwrap(this).getModel()
+      override fun model(): String? = unwrap(this).getModel()
 
-      public override fun packageVersion(): String? = unwrap(this).getPackageVersion()
+      override fun packageVersion(): String? = unwrap(this).getPackageVersion()
 
-      public override fun station(): String? = unwrap(this).getStation()
+      override fun station(): String? = unwrap(this).getStation()
     }
 
     public companion object {

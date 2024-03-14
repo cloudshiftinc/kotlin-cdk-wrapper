@@ -9,22 +9,20 @@ public interface CfnRuleAssertion {
   public fun assertValue(): ICfnConditionExpression
 
   public interface Builder {
-    public fun assertDescription(assertDescription: String) {
-    }
+    public fun assertDescription(assertDescription: String)
 
-    public fun assertValue(assertValue: ICfnConditionExpression) {
-    }
+    public fun assertValue(assertValue: ICfnConditionExpression)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnRuleAssertion.Builder =
         software.amazon.awscdk.CfnRuleAssertion.builder()
 
-    public override fun assertDescription(assertDescription: String) {
+    override fun assertDescription(assertDescription: String) {
       cdkBuilder.assertDescription(assertDescription)
     }
 
-    public override fun assertValue(assertValue: ICfnConditionExpression) {
+    override fun assertValue(assertValue: ICfnConditionExpression) {
       cdkBuilder.assertValue(assertValue.let(ICfnConditionExpression::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface CfnRuleAssertion {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnRuleAssertion,
   ) : CfnRuleAssertion {
-    public override fun assertDescription(): String = unwrap(this).getAssertDescription()
+    override fun assertDescription(): String = unwrap(this).getAssertDescription()
 
-    public override fun assertValue(): ICfnConditionExpression =
+    override fun assertValue(): ICfnConditionExpression =
         unwrap(this).getAssertValue().let(ICfnConditionExpression::wrap)
   }
 

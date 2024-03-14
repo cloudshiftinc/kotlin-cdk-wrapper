@@ -7,15 +7,14 @@ public interface ApiMappingOptions {
   public fun basePath(): String? = unwrap(this).getBasePath()
 
   public interface Builder {
-    public fun basePath(basePath: String) {
-    }
+    public fun basePath(basePath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ApiMappingOptions.Builder =
         software.amazon.awscdk.services.apigateway.ApiMappingOptions.builder()
 
-    public override fun basePath(basePath: String) {
+    override fun basePath(basePath: String) {
       cdkBuilder.basePath(basePath)
     }
 
@@ -26,7 +25,7 @@ public interface ApiMappingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ApiMappingOptions,
   ) : ApiMappingOptions {
-    public override fun basePath(): String? = unwrap(this).getBasePath()
+    override fun basePath(): String? = unwrap(this).getBasePath()
   }
 
   public companion object {

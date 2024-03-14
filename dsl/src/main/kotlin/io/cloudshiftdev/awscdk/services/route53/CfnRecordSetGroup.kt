@@ -53,20 +53,15 @@ public open class CfnRecordSetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun hostedZoneId(hostedZoneId: String) {
-    }
+    public fun hostedZoneId(hostedZoneId: String)
 
-    public fun hostedZoneName(hostedZoneName: String) {
-    }
+    public fun hostedZoneName(hostedZoneName: String)
 
-    public fun recordSets(recordSets: IResolvable) {
-    }
+    public fun recordSets(recordSets: IResolvable)
 
-    public fun recordSets(recordSets: List<Any>) {
-    }
+    public fun recordSets(recordSets: List<Any>)
   }
 
   private class BuilderImpl(
@@ -76,23 +71,23 @@ public open class CfnRecordSetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnRecordSetGroup.Builder =
         software.amazon.awscdk.services.route53.CfnRecordSetGroup.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun hostedZoneId(hostedZoneId: String) {
+    override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 
-    public override fun hostedZoneName(hostedZoneName: String) {
+    override fun hostedZoneName(hostedZoneName: String) {
       cdkBuilder.hostedZoneName(hostedZoneName)
     }
 
-    public override fun recordSets(recordSets: IResolvable) {
+    override fun recordSets(recordSets: IResolvable) {
       cdkBuilder.recordSets(recordSets.let(IResolvable::unwrap))
     }
 
-    public override fun recordSets(recordSets: List<Any>) {
+    override fun recordSets(recordSets: List<Any>) {
       cdkBuilder.recordSets(recordSets)
     }
 
@@ -127,11 +122,9 @@ public open class CfnRecordSetGroup internal constructor(
     public fun longitude(): String
 
     public interface Builder {
-      public fun latitude(latitude: String) {
-      }
+      public fun latitude(latitude: String)
 
-      public fun longitude(longitude: String) {
-      }
+      public fun longitude(longitude: String)
     }
 
     private class BuilderImpl : Builder {
@@ -139,11 +132,11 @@ public open class CfnRecordSetGroup internal constructor(
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty.Builder =
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty.builder()
 
-      public override fun latitude(latitude: String) {
+      override fun latitude(latitude: String) {
         cdkBuilder.latitude(latitude)
       }
 
-      public override fun longitude(longitude: String) {
+      override fun longitude(longitude: String) {
         cdkBuilder.longitude(longitude)
       }
 
@@ -156,9 +149,9 @@ public open class CfnRecordSetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.CoordinatesProperty,
     ) : CoordinatesProperty {
-      public override fun latitude(): String = unwrap(this).getLatitude()
+      override fun latitude(): String = unwrap(this).getLatitude()
 
-      public override fun longitude(): String = unwrap(this).getLongitude()
+      override fun longitude(): String = unwrap(this).getLongitude()
     }
 
     public companion object {
@@ -191,25 +184,19 @@ public open class CfnRecordSetGroup internal constructor(
     public fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
 
     public interface Builder {
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun bias(bias: Number) {
-      }
+      public fun bias(bias: Number)
 
-      public fun coordinates(coordinates: IResolvable) {
-      }
+      public fun coordinates(coordinates: IResolvable)
 
-      public fun coordinates(coordinates: CoordinatesProperty) {
-      }
+      public fun coordinates(coordinates: CoordinatesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("403c1cd48607f49f91e0e983b38dbdc5005b4fddb480ba24dc6ac49f3e4e1609")
-      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit) {
-      }
+      public fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit)
 
-      public fun localZoneGroup(localZoneGroup: String) {
-      }
+      public fun localZoneGroup(localZoneGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -218,28 +205,28 @@ public open class CfnRecordSetGroup internal constructor(
           =
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty.builder()
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun bias(bias: Number) {
+      override fun bias(bias: Number) {
         cdkBuilder.bias(bias)
       }
 
-      public override fun coordinates(coordinates: IResolvable) {
+      override fun coordinates(coordinates: IResolvable) {
         cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
       }
 
-      public override fun coordinates(coordinates: CoordinatesProperty) {
+      override fun coordinates(coordinates: CoordinatesProperty) {
         cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("403c1cd48607f49f91e0e983b38dbdc5005b4fddb480ba24dc6ac49f3e4e1609")
-      public override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
+      override fun coordinates(coordinates: CoordinatesProperty.Builder.() -> Unit): Unit =
           coordinates(CoordinatesProperty(coordinates))
 
-      public override fun localZoneGroup(localZoneGroup: String) {
+      override fun localZoneGroup(localZoneGroup: String) {
         cdkBuilder.localZoneGroup(localZoneGroup)
       }
 
@@ -252,13 +239,13 @@ public open class CfnRecordSetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoProximityLocationProperty,
     ) : GeoProximityLocationProperty {
-      public override fun awsRegion(): String? = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String? = unwrap(this).getAwsRegion()
 
-      public override fun bias(): Number? = unwrap(this).getBias()
+      override fun bias(): Number? = unwrap(this).getBias()
 
-      public override fun coordinates(): Any? = unwrap(this).getCoordinates()
+      override fun coordinates(): Any? = unwrap(this).getCoordinates()
 
-      public override fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
+      override fun localZoneGroup(): String? = unwrap(this).getLocalZoneGroup()
     }
 
     public companion object {
@@ -287,11 +274,9 @@ public open class CfnRecordSetGroup internal constructor(
     public fun locationName(): String
 
     public interface Builder {
-      public fun collectionId(collectionId: String) {
-      }
+      public fun collectionId(collectionId: String)
 
-      public fun locationName(locationName: String) {
-      }
+      public fun locationName(locationName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -300,11 +285,11 @@ public open class CfnRecordSetGroup internal constructor(
           =
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty.builder()
 
-      public override fun collectionId(collectionId: String) {
+      override fun collectionId(collectionId: String) {
         cdkBuilder.collectionId(collectionId)
       }
 
-      public override fun locationName(locationName: String) {
+      override fun locationName(locationName: String) {
         cdkBuilder.locationName(locationName)
       }
 
@@ -317,9 +302,9 @@ public open class CfnRecordSetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.CidrRoutingConfigProperty,
     ) : CidrRoutingConfigProperty {
-      public override fun collectionId(): String = unwrap(this).getCollectionId()
+      override fun collectionId(): String = unwrap(this).getCollectionId()
 
-      public override fun locationName(): String = unwrap(this).getLocationName()
+      override fun locationName(): String = unwrap(this).getLocationName()
     }
 
     public companion object {
@@ -350,14 +335,11 @@ public open class CfnRecordSetGroup internal constructor(
     public fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
 
     public interface Builder {
-      public fun continentCode(continentCode: String) {
-      }
+      public fun continentCode(continentCode: String)
 
-      public fun countryCode(countryCode: String) {
-      }
+      public fun countryCode(countryCode: String)
 
-      public fun subdivisionCode(subdivisionCode: String) {
-      }
+      public fun subdivisionCode(subdivisionCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -365,15 +347,15 @@ public open class CfnRecordSetGroup internal constructor(
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty.Builder =
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty.builder()
 
-      public override fun continentCode(continentCode: String) {
+      override fun continentCode(continentCode: String) {
         cdkBuilder.continentCode(continentCode)
       }
 
-      public override fun countryCode(countryCode: String) {
+      override fun countryCode(countryCode: String) {
         cdkBuilder.countryCode(countryCode)
       }
 
-      public override fun subdivisionCode(subdivisionCode: String) {
+      override fun subdivisionCode(subdivisionCode: String) {
         cdkBuilder.subdivisionCode(subdivisionCode)
       }
 
@@ -386,11 +368,11 @@ public open class CfnRecordSetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty,
     ) : GeoLocationProperty {
-      public override fun continentCode(): String? = unwrap(this).getContinentCode()
+      override fun continentCode(): String? = unwrap(this).getContinentCode()
 
-      public override fun countryCode(): String? = unwrap(this).getCountryCode()
+      override fun countryCode(): String? = unwrap(this).getCountryCode()
 
-      public override fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
+      override fun subdivisionCode(): String? = unwrap(this).getSubdivisionCode()
     }
 
     public companion object {
@@ -421,17 +403,13 @@ public open class CfnRecordSetGroup internal constructor(
     public fun hostedZoneId(): String
 
     public interface Builder {
-      public fun dnsName(dnsName: String) {
-      }
+      public fun dnsName(dnsName: String)
 
-      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-      }
+      public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
 
-      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-      }
+      public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -439,19 +417,19 @@ public open class CfnRecordSetGroup internal constructor(
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty.Builder =
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty.builder()
 
-      public override fun dnsName(dnsName: String) {
+      override fun dnsName(dnsName: String) {
         cdkBuilder.dnsName(dnsName)
       }
 
-      public override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+      override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
         cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
       }
 
-      public override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+      override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
         cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
@@ -464,11 +442,11 @@ public open class CfnRecordSetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty,
     ) : AliasTargetProperty {
-      public override fun dnsName(): String = unwrap(this).getDnsName()
+      override fun dnsName(): String = unwrap(this).getDnsName()
 
-      public override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
+      override fun evaluateTargetHealth(): Any? = unwrap(this).getEvaluateTargetHealth()
 
-      public override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
     }
 
     public companion object {
@@ -525,90 +503,64 @@ public open class CfnRecordSetGroup internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun aliasTarget(aliasTarget: IResolvable) {
-      }
+      public fun aliasTarget(aliasTarget: IResolvable)
 
-      public fun aliasTarget(aliasTarget: AliasTargetProperty) {
-      }
+      public fun aliasTarget(aliasTarget: AliasTargetProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efc3fca356b21acf6b38aa9cf75411c4f33ab2f2525b7e5f768c4291bc300ab9")
-      public fun aliasTarget(aliasTarget: AliasTargetProperty.Builder.() -> Unit) {
-      }
+      public fun aliasTarget(aliasTarget: AliasTargetProperty.Builder.() -> Unit)
 
-      public fun cidrRoutingConfig(cidrRoutingConfig: IResolvable) {
-      }
+      public fun cidrRoutingConfig(cidrRoutingConfig: IResolvable)
 
-      public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty) {
-      }
+      public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f994abe22d3e39e024a475c2fe39bae7e3c8393f2519714f52cd2abb0591254")
-      public
-          fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty.Builder.() -> Unit) {
-      }
+      public fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty.Builder.() -> Unit)
 
-      public fun failover(failover: String) {
-      }
+      public fun failover(failover: String)
 
-      public fun geoLocation(geoLocation: IResolvable) {
-      }
+      public fun geoLocation(geoLocation: IResolvable)
 
-      public fun geoLocation(geoLocation: GeoLocationProperty) {
-      }
+      public fun geoLocation(geoLocation: GeoLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("50ec19885adc4a116a32544c092c0acd0fd3577beaf34dacff846f2b171c6006")
-      public fun geoLocation(geoLocation: GeoLocationProperty.Builder.() -> Unit) {
-      }
+      public fun geoLocation(geoLocation: GeoLocationProperty.Builder.() -> Unit)
 
-      public fun geoProximityLocation(geoProximityLocation: IResolvable) {
-      }
+      public fun geoProximityLocation(geoProximityLocation: IResolvable)
 
-      public fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty) {
-      }
+      public fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb7bba9ec85e663409ea69ea66ef74ac4c0cde53214787b6a6c399a7c1946b37")
       public
-          fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty.Builder.() -> Unit) {
-      }
+          fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty.Builder.() -> Unit)
 
-      public fun healthCheckId(healthCheckId: String) {
-      }
+      public fun healthCheckId(healthCheckId: String)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
 
-      public fun hostedZoneName(hostedZoneName: String) {
-      }
+      public fun hostedZoneName(hostedZoneName: String)
 
-      public fun identifier(setIdentifier: String) {
-      }
+      public fun identifier(setIdentifier: String)
 
-      public fun multiValueAnswer(multiValueAnswer: Boolean) {
-      }
+      public fun multiValueAnswer(multiValueAnswer: Boolean)
 
-      public fun multiValueAnswer(multiValueAnswer: IResolvable) {
-      }
+      public fun multiValueAnswer(multiValueAnswer: IResolvable)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun resourceRecords(resourceRecords: List<String>) {
-      }
+      public fun resourceRecords(resourceRecords: List<String>)
 
-      public fun ttl(ttl: String) {
-      }
+      public fun ttl(ttl: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -616,109 +568,109 @@ public open class CfnRecordSetGroup internal constructor(
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty.Builder =
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty.builder()
 
-      public override fun aliasTarget(aliasTarget: IResolvable) {
+      override fun aliasTarget(aliasTarget: IResolvable) {
         cdkBuilder.aliasTarget(aliasTarget.let(IResolvable::unwrap))
       }
 
-      public override fun aliasTarget(aliasTarget: AliasTargetProperty) {
+      override fun aliasTarget(aliasTarget: AliasTargetProperty) {
         cdkBuilder.aliasTarget(aliasTarget.let(AliasTargetProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efc3fca356b21acf6b38aa9cf75411c4f33ab2f2525b7e5f768c4291bc300ab9")
-      public override fun aliasTarget(aliasTarget: AliasTargetProperty.Builder.() -> Unit): Unit =
+      override fun aliasTarget(aliasTarget: AliasTargetProperty.Builder.() -> Unit): Unit =
           aliasTarget(AliasTargetProperty(aliasTarget))
 
-      public override fun cidrRoutingConfig(cidrRoutingConfig: IResolvable) {
+      override fun cidrRoutingConfig(cidrRoutingConfig: IResolvable) {
         cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable::unwrap))
       }
 
-      public override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty) {
+      override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty) {
         cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f994abe22d3e39e024a475c2fe39bae7e3c8393f2519714f52cd2abb0591254")
-      public override
+      override
           fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty.Builder.() -> Unit):
           Unit = cidrRoutingConfig(CidrRoutingConfigProperty(cidrRoutingConfig))
 
-      public override fun failover(failover: String) {
+      override fun failover(failover: String) {
         cdkBuilder.failover(failover)
       }
 
-      public override fun geoLocation(geoLocation: IResolvable) {
+      override fun geoLocation(geoLocation: IResolvable) {
         cdkBuilder.geoLocation(geoLocation.let(IResolvable::unwrap))
       }
 
-      public override fun geoLocation(geoLocation: GeoLocationProperty) {
+      override fun geoLocation(geoLocation: GeoLocationProperty) {
         cdkBuilder.geoLocation(geoLocation.let(GeoLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("50ec19885adc4a116a32544c092c0acd0fd3577beaf34dacff846f2b171c6006")
-      public override fun geoLocation(geoLocation: GeoLocationProperty.Builder.() -> Unit): Unit =
+      override fun geoLocation(geoLocation: GeoLocationProperty.Builder.() -> Unit): Unit =
           geoLocation(GeoLocationProperty(geoLocation))
 
-      public override fun geoProximityLocation(geoProximityLocation: IResolvable) {
+      override fun geoProximityLocation(geoProximityLocation: IResolvable) {
         cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable::unwrap))
       }
 
-      public override fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty) {
+      override fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty) {
         cdkBuilder.geoProximityLocation(geoProximityLocation.let(GeoProximityLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb7bba9ec85e663409ea69ea66ef74ac4c0cde53214787b6a6c399a7c1946b37")
-      public override
+      override
           fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty.Builder.() -> Unit):
           Unit = geoProximityLocation(GeoProximityLocationProperty(geoProximityLocation))
 
-      public override fun healthCheckId(healthCheckId: String) {
+      override fun healthCheckId(healthCheckId: String) {
         cdkBuilder.healthCheckId(healthCheckId)
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
-      public override fun hostedZoneName(hostedZoneName: String) {
+      override fun hostedZoneName(hostedZoneName: String) {
         cdkBuilder.hostedZoneName(hostedZoneName)
       }
 
-      public override fun identifier(setIdentifier: String) {
+      override fun identifier(setIdentifier: String) {
         cdkBuilder.setIdentifier(setIdentifier)
       }
 
-      public override fun multiValueAnswer(multiValueAnswer: Boolean) {
+      override fun multiValueAnswer(multiValueAnswer: Boolean) {
         cdkBuilder.multiValueAnswer(multiValueAnswer)
       }
 
-      public override fun multiValueAnswer(multiValueAnswer: IResolvable) {
+      override fun multiValueAnswer(multiValueAnswer: IResolvable) {
         cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun resourceRecords(resourceRecords: List<String>) {
+      override fun resourceRecords(resourceRecords: List<String>) {
         cdkBuilder.resourceRecords(resourceRecords)
       }
 
-      public override fun ttl(ttl: String) {
+      override fun ttl(ttl: String) {
         cdkBuilder.ttl(ttl)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -731,38 +683,38 @@ public open class CfnRecordSetGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty,
     ) : RecordSetProperty {
-      public override fun aliasTarget(): Any? = unwrap(this).getAliasTarget()
+      override fun aliasTarget(): Any? = unwrap(this).getAliasTarget()
 
-      public override fun cidrRoutingConfig(): Any? = unwrap(this).getCidrRoutingConfig()
+      override fun cidrRoutingConfig(): Any? = unwrap(this).getCidrRoutingConfig()
 
-      public override fun failover(): String? = unwrap(this).getFailover()
+      override fun failover(): String? = unwrap(this).getFailover()
 
-      public override fun geoLocation(): Any? = unwrap(this).getGeoLocation()
+      override fun geoLocation(): Any? = unwrap(this).getGeoLocation()
 
-      public override fun geoProximityLocation(): Any? = unwrap(this).getGeoProximityLocation()
+      override fun geoProximityLocation(): Any? = unwrap(this).getGeoProximityLocation()
 
-      public override fun healthCheckId(): String? = unwrap(this).getHealthCheckId()
+      override fun healthCheckId(): String? = unwrap(this).getHealthCheckId()
 
-      public override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
 
-      public override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
+      override fun hostedZoneName(): String? = unwrap(this).getHostedZoneName()
 
-      public override fun multiValueAnswer(): Any? = unwrap(this).getMultiValueAnswer()
+      override fun multiValueAnswer(): Any? = unwrap(this).getMultiValueAnswer()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
 
-      public override fun resourceRecords(): List<String> = unwrap(this).getResourceRecords() ?:
+      override fun resourceRecords(): List<String> = unwrap(this).getResourceRecords() ?:
           emptyList()
 
-      public override fun setIdentifier(): String? = unwrap(this).getSetIdentifier()
+      override fun setIdentifier(): String? = unwrap(this).getSetIdentifier()
 
-      public override fun ttl(): String? = unwrap(this).getTtl()
+      override fun ttl(): String? = unwrap(this).getTtl()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {

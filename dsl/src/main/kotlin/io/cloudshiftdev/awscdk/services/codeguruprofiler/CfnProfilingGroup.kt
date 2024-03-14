@@ -62,25 +62,19 @@ public open class CfnProfilingGroup internal constructor(
   }
 
   public interface Builder {
-    public fun agentPermissions(agentPermissions: Any) {
-    }
+    public fun agentPermissions(agentPermissions: Any)
 
     public
-        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
-    }
+        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable)
 
     public
-        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>) {
-    }
+        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>)
 
-    public fun computePlatform(computePlatform: String) {
-    }
+    public fun computePlatform(computePlatform: String)
 
-    public fun profilingGroupName(profilingGroupName: String) {
-    }
+    public fun profilingGroupName(profilingGroupName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -91,29 +85,29 @@ public open class CfnProfilingGroup internal constructor(
         software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.Builder =
         software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.Builder.create(scope, id)
 
-    public override fun agentPermissions(agentPermissions: Any) {
+    override fun agentPermissions(agentPermissions: Any) {
       cdkBuilder.agentPermissions(agentPermissions)
     }
 
-    public override
+    override
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
       cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>) {
       cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
     }
 
-    public override fun computePlatform(computePlatform: String) {
+    override fun computePlatform(computePlatform: String) {
       cdkBuilder.computePlatform(computePlatform)
     }
 
-    public override fun profilingGroupName(profilingGroupName: String) {
+    override fun profilingGroupName(profilingGroupName: String) {
       cdkBuilder.profilingGroupName(profilingGroupName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -147,8 +141,7 @@ public open class CfnProfilingGroup internal constructor(
     public fun principals(): List<String>
 
     public interface Builder {
-      public fun principals(principals: List<String>) {
-      }
+      public fun principals(principals: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -157,7 +150,7 @@ public open class CfnProfilingGroup internal constructor(
           =
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty.builder()
 
-      public override fun principals(principals: List<String>) {
+      override fun principals(principals: List<String>) {
         cdkBuilder.principals(principals)
       }
 
@@ -170,7 +163,7 @@ public open class CfnProfilingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty,
     ) : AgentPermissionsProperty {
-      public override fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
+      override fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
     }
 
     public companion object {
@@ -199,11 +192,9 @@ public open class CfnProfilingGroup internal constructor(
     public fun channelUri(): String
 
     public interface Builder {
-      public fun channelId(channelId: String) {
-      }
+      public fun channelId(channelId: String)
 
-      public fun channelUri(channelUri: String) {
-      }
+      public fun channelUri(channelUri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -212,11 +203,11 @@ public open class CfnProfilingGroup internal constructor(
           =
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty.builder()
 
-      public override fun channelId(channelId: String) {
+      override fun channelId(channelId: String) {
         cdkBuilder.channelId(channelId)
       }
 
-      public override fun channelUri(channelUri: String) {
+      override fun channelUri(channelUri: String) {
         cdkBuilder.channelUri(channelUri)
       }
 
@@ -229,9 +220,9 @@ public open class CfnProfilingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty,
     ) : ChannelProperty {
-      public override fun channelId(): String? = unwrap(this).getChannelId()
+      override fun channelId(): String? = unwrap(this).getChannelId()
 
-      public override fun channelUri(): String = unwrap(this).getChannelUri()
+      override fun channelUri(): String = unwrap(this).getChannelUri()
     }
 
     public companion object {

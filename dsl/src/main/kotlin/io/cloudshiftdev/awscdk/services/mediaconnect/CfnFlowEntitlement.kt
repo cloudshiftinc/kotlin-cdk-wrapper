@@ -76,34 +76,25 @@ public open class CfnFlowEntitlement internal constructor(
   }
 
   public interface Builder {
-    public fun dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent: Number) {
-    }
+    public fun dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent: Number)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun encryption(encryption: IResolvable) {
-    }
+    public fun encryption(encryption: IResolvable)
 
-    public fun encryption(encryption: EncryptionProperty) {
-    }
+    public fun encryption(encryption: EncryptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d33a6a6d917eef73825c3446bf9108c8e3d1046148d7e4a6af45c3aaaeebd876")
-    public fun encryption(encryption: EncryptionProperty.Builder.() -> Unit) {
-    }
+    public fun encryption(encryption: EncryptionProperty.Builder.() -> Unit)
 
-    public fun entitlementStatus(entitlementStatus: String) {
-    }
+    public fun entitlementStatus(entitlementStatus: String)
 
-    public fun flowArn(flowArn: String) {
-    }
+    public fun flowArn(flowArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun subscribers(subscribers: List<String>) {
-    }
+    public fun subscribers(subscribers: List<String>)
   }
 
   private class BuilderImpl(
@@ -113,40 +104,40 @@ public open class CfnFlowEntitlement internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.Builder
         = software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.Builder.create(scope, id)
 
-    public override fun dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent: Number) {
+    override fun dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent: Number) {
       cdkBuilder.dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun encryption(encryption: IResolvable) {
+    override fun encryption(encryption: IResolvable) {
       cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
     }
 
-    public override fun encryption(encryption: EncryptionProperty) {
+    override fun encryption(encryption: EncryptionProperty) {
       cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d33a6a6d917eef73825c3446bf9108c8e3d1046148d7e4a6af45c3aaaeebd876")
-    public override fun encryption(encryption: EncryptionProperty.Builder.() -> Unit): Unit =
+    override fun encryption(encryption: EncryptionProperty.Builder.() -> Unit): Unit =
         encryption(EncryptionProperty(encryption))
 
-    public override fun entitlementStatus(entitlementStatus: String) {
+    override fun entitlementStatus(entitlementStatus: String) {
       cdkBuilder.entitlementStatus(entitlementStatus)
     }
 
-    public override fun flowArn(flowArn: String) {
+    override fun flowArn(flowArn: String) {
       cdkBuilder.flowArn(flowArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun subscribers(subscribers: List<String>) {
+    override fun subscribers(subscribers: List<String>) {
       cdkBuilder.subscribers(subscribers)
     }
 
@@ -196,32 +187,23 @@ public open class CfnFlowEntitlement internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun algorithm(algorithm: String) {
-      }
+      public fun algorithm(algorithm: String)
 
-      public fun constantInitializationVector(constantInitializationVector: String) {
-      }
+      public fun constantInitializationVector(constantInitializationVector: String)
 
-      public fun deviceId(deviceId: String) {
-      }
+      public fun deviceId(deviceId: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun resourceId(resourceId: String) {
-      }
+      public fun resourceId(resourceId: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -230,39 +212,39 @@ public open class CfnFlowEntitlement internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty.builder()
 
-      public override fun algorithm(algorithm: String) {
+      override fun algorithm(algorithm: String) {
         cdkBuilder.algorithm(algorithm)
       }
 
-      public override fun constantInitializationVector(constantInitializationVector: String) {
+      override fun constantInitializationVector(constantInitializationVector: String) {
         cdkBuilder.constantInitializationVector(constantInitializationVector)
       }
 
-      public override fun deviceId(deviceId: String) {
+      override fun deviceId(deviceId: String) {
         cdkBuilder.deviceId(deviceId)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun resourceId(resourceId: String) {
+      override fun resourceId(resourceId: String) {
         cdkBuilder.resourceId(resourceId)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -275,24 +257,24 @@ public open class CfnFlowEntitlement internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement.EncryptionProperty,
     ) : EncryptionProperty {
-      public override fun algorithm(): String = unwrap(this).getAlgorithm()
+      override fun algorithm(): String = unwrap(this).getAlgorithm()
 
-      public override fun constantInitializationVector(): String? =
+      override fun constantInitializationVector(): String? =
           unwrap(this).getConstantInitializationVector()
 
-      public override fun deviceId(): String? = unwrap(this).getDeviceId()
+      override fun deviceId(): String? = unwrap(this).getDeviceId()
 
-      public override fun keyType(): String? = unwrap(this).getKeyType()
+      override fun keyType(): String? = unwrap(this).getKeyType()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
 
-      public override fun resourceId(): String? = unwrap(this).getResourceId()
+      override fun resourceId(): String? = unwrap(this).getResourceId()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {

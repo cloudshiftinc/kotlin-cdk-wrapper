@@ -27,31 +27,30 @@ public interface IServerDeploymentGroup : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup,
   ) : IServerDeploymentGroup {
-    public override fun application(): IServerApplication =
+    override fun application(): IServerApplication =
         unwrap(this).getApplication().let(IServerApplication::wrap)
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun autoScalingGroups(): List<IAutoScalingGroup> =
+    override fun autoScalingGroups(): List<IAutoScalingGroup> =
         unwrap(this).getAutoScalingGroups()?.map(IAutoScalingGroup::wrap) ?: emptyList()
 
-    public override fun deploymentConfig(): IServerDeploymentConfig =
+    override fun deploymentConfig(): IServerDeploymentConfig =
         unwrap(this).getDeploymentConfig().let(IServerDeploymentConfig::wrap)
 
-    public override fun deploymentGroupArn(): String = unwrap(this).getDeploymentGroupArn()
+    override fun deploymentGroupArn(): String = unwrap(this).getDeploymentGroupArn()
 
-    public override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
+    override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

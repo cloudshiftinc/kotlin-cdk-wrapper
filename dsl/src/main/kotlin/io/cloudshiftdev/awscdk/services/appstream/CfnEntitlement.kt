@@ -57,23 +57,17 @@ public open class CfnEntitlement internal constructor(
   }
 
   public interface Builder {
-    public fun appVisibility(appVisibility: String) {
-    }
+    public fun appVisibility(appVisibility: String)
 
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: List<Any>) {
-    }
+    public fun attributes(attributes: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun stackName(stackName: String) {
-    }
+    public fun stackName(stackName: String)
   }
 
   private class BuilderImpl(
@@ -83,27 +77,27 @@ public open class CfnEntitlement internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnEntitlement.Builder =
         software.amazon.awscdk.services.appstream.CfnEntitlement.Builder.create(scope, id)
 
-    public override fun appVisibility(appVisibility: String) {
+    override fun appVisibility(appVisibility: String) {
       cdkBuilder.appVisibility(appVisibility)
     }
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: List<Any>) {
+    override fun attributes(attributes: List<Any>) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun stackName(stackName: String) {
+    override fun stackName(stackName: String) {
       cdkBuilder.stackName(stackName)
     }
 
@@ -138,11 +132,9 @@ public open class CfnEntitlement internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -150,11 +142,11 @@ public open class CfnEntitlement internal constructor(
           software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -166,9 +158,9 @@ public open class CfnEntitlement internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnEntitlement.AttributeProperty,
     ) : AttributeProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

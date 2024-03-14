@@ -56,17 +56,13 @@ public open class CfnDomain internal constructor(
   }
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun encryptionKey(encryptionKey: String) {
-    }
+    public fun encryptionKey(encryptionKey: String)
 
-    public fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
-    }
+    public fun permissionsPolicyDocument(permissionsPolicyDocument: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -76,19 +72,19 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codeartifact.CfnDomain.Builder =
         software.amazon.awscdk.services.codeartifact.CfnDomain.Builder.create(scope, id)
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun encryptionKey(encryptionKey: String) {
+    override fun encryptionKey(encryptionKey: String) {
       cdkBuilder.encryptionKey(encryptionKey)
     }
 
-    public override fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
+    override fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
       cdkBuilder.permissionsPolicyDocument(permissionsPolicyDocument)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

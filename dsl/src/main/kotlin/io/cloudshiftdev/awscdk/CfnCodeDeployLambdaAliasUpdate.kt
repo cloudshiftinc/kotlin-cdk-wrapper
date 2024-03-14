@@ -13,36 +13,32 @@ public interface CfnCodeDeployLambdaAliasUpdate {
   public fun deploymentGroupName(): String
 
   public interface Builder {
-    public fun afterAllowTrafficHook(afterAllowTrafficHook: String) {
-    }
+    public fun afterAllowTrafficHook(afterAllowTrafficHook: String)
 
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun beforeAllowTrafficHook(beforeAllowTrafficHook: String) {
-    }
+    public fun beforeAllowTrafficHook(beforeAllowTrafficHook: String)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate.Builder =
         software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate.builder()
 
-    public override fun afterAllowTrafficHook(afterAllowTrafficHook: String) {
+    override fun afterAllowTrafficHook(afterAllowTrafficHook: String) {
       cdkBuilder.afterAllowTrafficHook(afterAllowTrafficHook)
     }
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun beforeAllowTrafficHook(beforeAllowTrafficHook: String) {
+    override fun beforeAllowTrafficHook(beforeAllowTrafficHook: String) {
       cdkBuilder.beforeAllowTrafficHook(beforeAllowTrafficHook)
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
@@ -52,13 +48,13 @@ public interface CfnCodeDeployLambdaAliasUpdate {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate,
   ) : CfnCodeDeployLambdaAliasUpdate {
-    public override fun afterAllowTrafficHook(): String? = unwrap(this).getAfterAllowTrafficHook()
+    override fun afterAllowTrafficHook(): String? = unwrap(this).getAfterAllowTrafficHook()
 
-    public override fun applicationName(): String = unwrap(this).getApplicationName()
+    override fun applicationName(): String = unwrap(this).getApplicationName()
 
-    public override fun beforeAllowTrafficHook(): String? = unwrap(this).getBeforeAllowTrafficHook()
+    override fun beforeAllowTrafficHook(): String? = unwrap(this).getBeforeAllowTrafficHook()
 
-    public override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
+    override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
   }
 
   public companion object {

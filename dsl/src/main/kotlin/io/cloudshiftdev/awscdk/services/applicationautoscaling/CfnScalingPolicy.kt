@@ -97,50 +97,38 @@ public open class CfnScalingPolicy internal constructor(
       targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun policyType(policyType: String) {
-    }
+    public fun policyType(policyType: String)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun scalableDimension(scalableDimension: String) {
-    }
+    public fun scalableDimension(scalableDimension: String)
 
-    public fun scalingTargetId(scalingTargetId: String) {
-    }
+    public fun scalingTargetId(scalingTargetId: String)
 
-    public fun serviceNamespace(serviceNamespace: String) {
-    }
+    public fun serviceNamespace(serviceNamespace: String)
 
-    public fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: IResolvable) {
-    }
+    public fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: IResolvable)
 
     public
-        fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty) {
-    }
+        fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4233461c421591e47c223b679b39f21d2831ceb9981e55c0db6210e958ba422")
     public
-        fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty.Builder.() -> Unit)
 
     public
-        fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
-    }
+        fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable)
 
     public
-        fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
-    }
+        fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6bb01833b031a51b7934bf5f38185ed693f8bf70cbf1dc28a15524df83ee436b")
     public
-        fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -152,60 +140,59 @@ public open class CfnScalingPolicy internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.Builder.create(scope,
         id)
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun policyType(policyType: String) {
+    override fun policyType(policyType: String) {
       cdkBuilder.policyType(policyType)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun scalableDimension(scalableDimension: String) {
+    override fun scalableDimension(scalableDimension: String) {
       cdkBuilder.scalableDimension(scalableDimension)
     }
 
-    public override fun scalingTargetId(scalingTargetId: String) {
+    override fun scalingTargetId(scalingTargetId: String) {
       cdkBuilder.scalingTargetId(scalingTargetId)
     }
 
-    public override fun serviceNamespace(serviceNamespace: String) {
+    override fun serviceNamespace(serviceNamespace: String) {
       cdkBuilder.serviceNamespace(serviceNamespace)
     }
 
-    public override
-        fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: IResolvable) {
+    override fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: IResolvable) {
       cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty) {
       cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(StepScalingPolicyConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4233461c421591e47c223b679b39f21d2831ceb9981e55c0db6210e958ba422")
-    public override
+    override
         fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty.Builder.() -> Unit):
         Unit =
         stepScalingPolicyConfiguration(StepScalingPolicyConfigurationProperty(stepScalingPolicyConfiguration))
 
-    public override
+    override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
       cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
       cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6bb01833b031a51b7934bf5f38185ed693f8bf70cbf1dc28a15524df83ee436b")
-    public override
+    override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit):
         Unit =
         targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty(targetTrackingScalingPolicyConfiguration))
@@ -242,11 +229,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
 
     public interface Builder {
-      public fun predefinedMetricType(predefinedMetricType: String) {
-      }
+      public fun predefinedMetricType(predefinedMetricType: String)
 
-      public fun resourceLabel(resourceLabel: String) {
-      }
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -255,11 +240,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty.builder()
 
-      public override fun predefinedMetricType(predefinedMetricType: String) {
+      override fun predefinedMetricType(predefinedMetricType: String) {
         cdkBuilder.predefinedMetricType(predefinedMetricType)
       }
 
-      public override fun resourceLabel(resourceLabel: String) {
+      override fun resourceLabel(resourceLabel: String) {
         cdkBuilder.resourceLabel(resourceLabel)
       }
 
@@ -272,9 +257,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
     ) : PredefinedMetricSpecificationProperty {
-      public override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
 
-      public override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
@@ -306,22 +291,17 @@ public open class CfnScalingPolicy internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun metric(metric: IResolvable) {
-      }
+      public fun metric(metric: IResolvable)
 
-      public fun metric(metric: TargetTrackingMetricProperty) {
-      }
+      public fun metric(metric: TargetTrackingMetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c1a4e1aa6ba488e4ff61ccab0feebf5b3aadf6fb5a9a2d56771735f9dcdfed9")
-      public fun metric(metric: TargetTrackingMetricProperty.Builder.() -> Unit) {
-      }
+      public fun metric(metric: TargetTrackingMetricProperty.Builder.() -> Unit)
 
-      public fun stat(stat: String) {
-      }
+      public fun stat(stat: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -330,24 +310,24 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricStatProperty.builder()
 
-      public override fun metric(metric: IResolvable) {
+      override fun metric(metric: IResolvable) {
         cdkBuilder.metric(metric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: TargetTrackingMetricProperty) {
+      override fun metric(metric: TargetTrackingMetricProperty) {
         cdkBuilder.metric(metric.let(TargetTrackingMetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c1a4e1aa6ba488e4ff61ccab0feebf5b3aadf6fb5a9a2d56771735f9dcdfed9")
-      public override fun metric(metric: TargetTrackingMetricProperty.Builder.() -> Unit): Unit =
+      override fun metric(metric: TargetTrackingMetricProperty.Builder.() -> Unit): Unit =
           metric(TargetTrackingMetricProperty(metric))
 
-      public override fun stat(stat: String) {
+      override fun stat(stat: String) {
         cdkBuilder.stat(stat)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -360,11 +340,11 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricStatProperty,
     ) : TargetTrackingMetricStatProperty {
-      public override fun metric(): Any? = unwrap(this).getMetric()
+      override fun metric(): Any? = unwrap(this).getMetric()
 
-      public override fun stat(): String? = unwrap(this).getStat()
+      override fun stat(): String? = unwrap(this).getStat()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -395,14 +375,11 @@ public open class CfnScalingPolicy internal constructor(
     public fun scalingAdjustment(): Number
 
     public interface Builder {
-      public fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
-      }
+      public fun metricIntervalLowerBound(metricIntervalLowerBound: Number)
 
-      public fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
-      }
+      public fun metricIntervalUpperBound(metricIntervalUpperBound: Number)
 
-      public fun scalingAdjustment(scalingAdjustment: Number) {
-      }
+      public fun scalingAdjustment(scalingAdjustment: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -411,15 +388,15 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepAdjustmentProperty.builder()
 
-      public override fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
+      override fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
         cdkBuilder.metricIntervalLowerBound(metricIntervalLowerBound)
       }
 
-      public override fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
+      override fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
         cdkBuilder.metricIntervalUpperBound(metricIntervalUpperBound)
       }
 
-      public override fun scalingAdjustment(scalingAdjustment: Number) {
+      override fun scalingAdjustment(scalingAdjustment: Number) {
         cdkBuilder.scalingAdjustment(scalingAdjustment)
       }
 
@@ -432,13 +409,11 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepAdjustmentProperty,
     ) : StepAdjustmentProperty {
-      public override fun metricIntervalLowerBound(): Number? =
-          unwrap(this).getMetricIntervalLowerBound()
+      override fun metricIntervalLowerBound(): Number? = unwrap(this).getMetricIntervalLowerBound()
 
-      public override fun metricIntervalUpperBound(): Number? =
-          unwrap(this).getMetricIntervalUpperBound()
+      override fun metricIntervalUpperBound(): Number? = unwrap(this).getMetricIntervalUpperBound()
 
-      public override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
+      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
     }
 
     public companion object {
@@ -467,11 +442,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -480,11 +453,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricDimensionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -497,9 +470,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricDimensionProperty,
     ) : TargetTrackingMetricDimensionProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -535,23 +508,17 @@ public open class CfnScalingPolicy internal constructor(
     public fun stepAdjustments(): Any? = unwrap(this).getStepAdjustments()
 
     public interface Builder {
-      public fun adjustmentType(adjustmentType: String) {
-      }
+      public fun adjustmentType(adjustmentType: String)
 
-      public fun cooldown(cooldown: Number) {
-      }
+      public fun cooldown(cooldown: Number)
 
-      public fun metricAggregationType(metricAggregationType: String) {
-      }
+      public fun metricAggregationType(metricAggregationType: String)
 
-      public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-      }
+      public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
-      public fun stepAdjustments(stepAdjustments: IResolvable) {
-      }
+      public fun stepAdjustments(stepAdjustments: IResolvable)
 
-      public fun stepAdjustments(stepAdjustments: List<Any>) {
-      }
+      public fun stepAdjustments(stepAdjustments: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -560,27 +527,27 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepScalingPolicyConfigurationProperty.builder()
 
-      public override fun adjustmentType(adjustmentType: String) {
+      override fun adjustmentType(adjustmentType: String) {
         cdkBuilder.adjustmentType(adjustmentType)
       }
 
-      public override fun cooldown(cooldown: Number) {
+      override fun cooldown(cooldown: Number) {
         cdkBuilder.cooldown(cooldown)
       }
 
-      public override fun metricAggregationType(metricAggregationType: String) {
+      override fun metricAggregationType(metricAggregationType: String) {
         cdkBuilder.metricAggregationType(metricAggregationType)
       }
 
-      public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+      override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
         cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
       }
 
-      public override fun stepAdjustments(stepAdjustments: IResolvable) {
+      override fun stepAdjustments(stepAdjustments: IResolvable) {
         cdkBuilder.stepAdjustments(stepAdjustments.let(IResolvable::unwrap))
       }
 
-      public override fun stepAdjustments(stepAdjustments: List<Any>) {
+      override fun stepAdjustments(stepAdjustments: List<Any>) {
         cdkBuilder.stepAdjustments(stepAdjustments)
       }
 
@@ -593,16 +560,15 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepScalingPolicyConfigurationProperty,
     ) : StepScalingPolicyConfigurationProperty {
-      public override fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
+      override fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
 
-      public override fun cooldown(): Number? = unwrap(this).getCooldown()
+      override fun cooldown(): Number? = unwrap(this).getCooldown()
 
-      public override fun metricAggregationType(): String? = unwrap(this).getMetricAggregationType()
+      override fun metricAggregationType(): String? = unwrap(this).getMetricAggregationType()
 
-      public override fun minAdjustmentMagnitude(): Number? =
-          unwrap(this).getMinAdjustmentMagnitude()
+      override fun minAdjustmentMagnitude(): Number? = unwrap(this).getMinAdjustmentMagnitude()
 
-      public override fun stepAdjustments(): Any? = unwrap(this).getStepAdjustments()
+      override fun stepAdjustments(): Any? = unwrap(this).getStepAdjustments()
     }
 
     public companion object {
@@ -640,29 +606,21 @@ public open class CfnScalingPolicy internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun metrics(metrics: IResolvable) {
-      }
+      public fun metrics(metrics: IResolvable)
 
-      public fun metrics(metrics: List<Any>) {
-      }
+      public fun metrics(metrics: List<Any>)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun statistic(statistic: String) {
-      }
+      public fun statistic(statistic: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -671,35 +629,35 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun metrics(metrics: IResolvable) {
+      override fun metrics(metrics: IResolvable) {
         cdkBuilder.metrics(metrics.let(IResolvable::unwrap))
       }
 
-      public override fun metrics(metrics: List<Any>) {
+      override fun metrics(metrics: List<Any>) {
         cdkBuilder.metrics(metrics)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun statistic(statistic: String) {
+      override fun statistic(statistic: String) {
         cdkBuilder.statistic(statistic)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -712,17 +670,17 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
     ) : CustomizedMetricSpecificationProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String? = unwrap(this).getMetricName()
+      override fun metricName(): String? = unwrap(this).getMetricName()
 
-      public override fun metrics(): Any? = unwrap(this).getMetrics()
+      override fun metrics(): Any? = unwrap(this).getMetrics()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun statistic(): String? = unwrap(this).getStatistic()
+      override fun statistic(): String? = unwrap(this).getStatistic()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -758,31 +716,23 @@ public open class CfnScalingPolicy internal constructor(
     public fun returnData(): Any? = unwrap(this).getReturnData()
 
     public interface Builder {
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun label(label: String) {
-      }
+      public fun label(label: String)
 
-      public fun metricStat(metricStat: IResolvable) {
-      }
+      public fun metricStat(metricStat: IResolvable)
 
-      public fun metricStat(metricStat: TargetTrackingMetricStatProperty) {
-      }
+      public fun metricStat(metricStat: TargetTrackingMetricStatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("212adca6a74036f0fadf8d3aab1a9cd434f87243e7be7d72832b6caf3cc86131")
-      public fun metricStat(metricStat: TargetTrackingMetricStatProperty.Builder.() -> Unit) {
-      }
+      public fun metricStat(metricStat: TargetTrackingMetricStatProperty.Builder.() -> Unit)
 
-      public fun returnData(returnData: Boolean) {
-      }
+      public fun returnData(returnData: Boolean)
 
-      public fun returnData(returnData: IResolvable) {
-      }
+      public fun returnData(returnData: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -791,37 +741,36 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricDataQueryProperty.builder()
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun label(label: String) {
+      override fun label(label: String) {
         cdkBuilder.label(label)
       }
 
-      public override fun metricStat(metricStat: IResolvable) {
+      override fun metricStat(metricStat: IResolvable) {
         cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
       }
 
-      public override fun metricStat(metricStat: TargetTrackingMetricStatProperty) {
+      override fun metricStat(metricStat: TargetTrackingMetricStatProperty) {
         cdkBuilder.metricStat(metricStat.let(TargetTrackingMetricStatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("212adca6a74036f0fadf8d3aab1a9cd434f87243e7be7d72832b6caf3cc86131")
-      public override
-          fun metricStat(metricStat: TargetTrackingMetricStatProperty.Builder.() -> Unit): Unit =
-          metricStat(TargetTrackingMetricStatProperty(metricStat))
+      override fun metricStat(metricStat: TargetTrackingMetricStatProperty.Builder.() -> Unit): Unit
+          = metricStat(TargetTrackingMetricStatProperty(metricStat))
 
-      public override fun returnData(returnData: Boolean) {
+      override fun returnData(returnData: Boolean) {
         cdkBuilder.returnData(returnData)
       }
 
-      public override fun returnData(returnData: IResolvable) {
+      override fun returnData(returnData: IResolvable) {
         cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
       }
 
@@ -834,15 +783,15 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricDataQueryProperty,
     ) : TargetTrackingMetricDataQueryProperty {
-      public override fun expression(): String? = unwrap(this).getExpression()
+      override fun expression(): String? = unwrap(this).getExpression()
 
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun label(): String? = unwrap(this).getLabel()
+      override fun label(): String? = unwrap(this).getLabel()
 
-      public override fun metricStat(): Any? = unwrap(this).getMetricStat()
+      override fun metricStat(): Any? = unwrap(this).getMetricStat()
 
-      public override fun returnData(): Any? = unwrap(this).getReturnData()
+      override fun returnData(): Any? = unwrap(this).getReturnData()
     }
 
     public companion object {
@@ -882,46 +831,35 @@ public open class CfnScalingPolicy internal constructor(
     public fun targetValue(): Number
 
     public interface Builder {
-      public fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
-      }
+      public fun customizedMetricSpecification(customizedMetricSpecification: IResolvable)
 
       public
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
-      }
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0fe2d38cab95b93f60665ae50eacec48c022280a20a01316669b2fe3c29e9e41")
       public
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit)
 
-      public fun disableScaleIn(disableScaleIn: Boolean) {
-      }
+      public fun disableScaleIn(disableScaleIn: Boolean)
 
-      public fun disableScaleIn(disableScaleIn: IResolvable) {
-      }
+      public fun disableScaleIn(disableScaleIn: IResolvable)
 
-      public fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
-      }
+      public fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable)
 
       public
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
-      }
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e620e4bb9d79b0fdbbba8341f5cd87f28064dcd828e54b89de06cfc98c2c766a")
       public
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit)
 
-      public fun scaleInCooldown(scaleInCooldown: Number) {
-      }
+      public fun scaleInCooldown(scaleInCooldown: Number)
 
-      public fun scaleOutCooldown(scaleOutCooldown: Number) {
-      }
+      public fun scaleOutCooldown(scaleOutCooldown: Number)
 
-      public fun targetValue(targetValue: Number) {
-      }
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -930,57 +868,55 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty.builder()
 
-      public override
-          fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
+      override fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
         cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
         cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(CustomizedMetricSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0fe2d38cab95b93f60665ae50eacec48c022280a20a01316669b2fe3c29e9e41")
-      public override
+      override
           fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit):
           Unit =
           customizedMetricSpecification(CustomizedMetricSpecificationProperty(customizedMetricSpecification))
 
-      public override fun disableScaleIn(disableScaleIn: Boolean) {
+      override fun disableScaleIn(disableScaleIn: Boolean) {
         cdkBuilder.disableScaleIn(disableScaleIn)
       }
 
-      public override fun disableScaleIn(disableScaleIn: IResolvable) {
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
         cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
       }
 
-      public override
-          fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
+      override fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
         cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
         cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(PredefinedMetricSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e620e4bb9d79b0fdbbba8341f5cd87f28064dcd828e54b89de06cfc98c2c766a")
-      public override
+      override
           fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit):
           Unit =
           predefinedMetricSpecification(PredefinedMetricSpecificationProperty(predefinedMetricSpecification))
 
-      public override fun scaleInCooldown(scaleInCooldown: Number) {
+      override fun scaleInCooldown(scaleInCooldown: Number) {
         cdkBuilder.scaleInCooldown(scaleInCooldown)
       }
 
-      public override fun scaleOutCooldown(scaleOutCooldown: Number) {
+      override fun scaleOutCooldown(scaleOutCooldown: Number) {
         cdkBuilder.scaleOutCooldown(scaleOutCooldown)
       }
 
-      public override fun targetValue(targetValue: Number) {
+      override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
 
@@ -993,19 +929,19 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty,
     ) : TargetTrackingScalingPolicyConfigurationProperty {
-      public override fun customizedMetricSpecification(): Any? =
+      override fun customizedMetricSpecification(): Any? =
           unwrap(this).getCustomizedMetricSpecification()
 
-      public override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
 
-      public override fun predefinedMetricSpecification(): Any? =
+      override fun predefinedMetricSpecification(): Any? =
           unwrap(this).getPredefinedMetricSpecification()
 
-      public override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
 
-      public override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
 
-      public override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
@@ -1037,17 +973,13 @@ public open class CfnScalingPolicy internal constructor(
     public fun namespace(): String? = unwrap(this).getNamespace()
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1056,19 +988,19 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -1081,11 +1013,11 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.TargetTrackingMetricProperty,
     ) : TargetTrackingMetricProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String? = unwrap(this).getMetricName()
+      override fun metricName(): String? = unwrap(this).getMetricName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
     }
 
     public companion object {
@@ -1114,11 +1046,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1127,11 +1057,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.MetricDimensionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1144,9 +1074,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.MetricDimensionProperty,
     ) : MetricDimensionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

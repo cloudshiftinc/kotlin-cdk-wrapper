@@ -9,22 +9,20 @@ public interface DeploymentCircuitBreaker {
   public fun rollback(): Boolean? = unwrap(this).getRollback()
 
   public interface Builder {
-    public fun enable(enable: Boolean) {
-    }
+    public fun enable(enable: Boolean)
 
-    public fun rollback(rollback: Boolean) {
-    }
+    public fun rollback(rollback: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker.Builder =
         software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker.builder()
 
-    public override fun enable(enable: Boolean) {
+    override fun enable(enable: Boolean) {
       cdkBuilder.enable(enable)
     }
 
-    public override fun rollback(rollback: Boolean) {
+    override fun rollback(rollback: Boolean) {
       cdkBuilder.rollback(rollback)
     }
 
@@ -35,9 +33,9 @@ public interface DeploymentCircuitBreaker {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker,
   ) : DeploymentCircuitBreaker {
-    public override fun enable(): Boolean? = unwrap(this).getEnable()
+    override fun enable(): Boolean? = unwrap(this).getEnable()
 
-    public override fun rollback(): Boolean? = unwrap(this).getRollback()
+    override fun rollback(): Boolean? = unwrap(this).getRollback()
   }
 
   public companion object {

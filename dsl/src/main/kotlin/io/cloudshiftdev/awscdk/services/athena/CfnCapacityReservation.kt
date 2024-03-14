@@ -75,27 +75,21 @@ public open class CfnCapacityReservation internal constructor(
   }
 
   public interface Builder {
-    public fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: IResolvable) {
-    }
+    public fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: IResolvable)
 
     public
-        fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty) {
-    }
+        fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f001a886dd0a53d1116add225212dc5c6d24da356ab06da3e64adabe3878ae64")
     public
-        fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetDpus(targetDpus: Number) {
-    }
+    public fun targetDpus(targetDpus: Number)
   }
 
   private class BuilderImpl(
@@ -105,32 +99,31 @@ public open class CfnCapacityReservation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.athena.CfnCapacityReservation.Builder =
         software.amazon.awscdk.services.athena.CfnCapacityReservation.Builder.create(scope, id)
 
-    public override
-        fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: IResolvable) {
+    override fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: IResolvable) {
       cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty) {
       cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(CapacityAssignmentConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f001a886dd0a53d1116add225212dc5c6d24da356ab06da3e64adabe3878ae64")
-    public override
+    override
         fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty.Builder.() -> Unit):
         Unit =
         capacityAssignmentConfiguration(CapacityAssignmentConfigurationProperty(capacityAssignmentConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetDpus(targetDpus: Number) {
+    override fun targetDpus(targetDpus: Number) {
       cdkBuilder.targetDpus(targetDpus)
     }
 
@@ -163,11 +156,9 @@ public open class CfnCapacityReservation internal constructor(
     public fun capacityAssignments(): Any
 
     public interface Builder {
-      public fun capacityAssignments(capacityAssignments: IResolvable) {
-      }
+      public fun capacityAssignments(capacityAssignments: IResolvable)
 
-      public fun capacityAssignments(capacityAssignments: List<Any>) {
-      }
+      public fun capacityAssignments(capacityAssignments: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -176,11 +167,11 @@ public open class CfnCapacityReservation internal constructor(
           =
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty.builder()
 
-      public override fun capacityAssignments(capacityAssignments: IResolvable) {
+      override fun capacityAssignments(capacityAssignments: IResolvable) {
         cdkBuilder.capacityAssignments(capacityAssignments.let(IResolvable::unwrap))
       }
 
-      public override fun capacityAssignments(capacityAssignments: List<Any>) {
+      override fun capacityAssignments(capacityAssignments: List<Any>) {
         cdkBuilder.capacityAssignments(capacityAssignments)
       }
 
@@ -193,7 +184,7 @@ public open class CfnCapacityReservation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty,
     ) : CapacityAssignmentConfigurationProperty {
-      public override fun capacityAssignments(): Any = unwrap(this).getCapacityAssignments()
+      override fun capacityAssignments(): Any = unwrap(this).getCapacityAssignments()
     }
 
     public companion object {
@@ -221,8 +212,7 @@ public open class CfnCapacityReservation internal constructor(
     public fun workgroupNames(): List<String>
 
     public interface Builder {
-      public fun workgroupNames(workgroupNames: List<String>) {
-      }
+      public fun workgroupNames(workgroupNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -231,7 +221,7 @@ public open class CfnCapacityReservation internal constructor(
           =
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty.builder()
 
-      public override fun workgroupNames(workgroupNames: List<String>) {
+      override fun workgroupNames(workgroupNames: List<String>) {
         cdkBuilder.workgroupNames(workgroupNames)
       }
 
@@ -244,8 +234,7 @@ public open class CfnCapacityReservation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty,
     ) : CapacityAssignmentProperty {
-      public override fun workgroupNames(): List<String> = unwrap(this).getWorkgroupNames() ?:
-          emptyList()
+      override fun workgroupNames(): List<String> = unwrap(this).getWorkgroupNames() ?: emptyList()
     }
 
     public companion object {

@@ -14,17 +14,13 @@ public interface TransformOutput {
   public fun s3OutputPath(): String
 
   public interface Builder {
-    public fun accept(accept: String) {
-    }
+    public fun accept(accept: String)
 
-    public fun assembleWith(assembleWith: AssembleWith) {
-    }
+    public fun assembleWith(assembleWith: AssembleWith)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun s3OutputPath(s3OutputPath: String) {
-    }
+    public fun s3OutputPath(s3OutputPath: String)
   }
 
   private class BuilderImpl : Builder {
@@ -32,19 +28,19 @@ public interface TransformOutput {
         software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput.builder()
 
-    public override fun accept(accept: String) {
+    override fun accept(accept: String) {
       cdkBuilder.accept(accept)
     }
 
-    public override fun assembleWith(assembleWith: AssembleWith) {
+    override fun assembleWith(assembleWith: AssembleWith) {
       cdkBuilder.assembleWith(assembleWith.let(AssembleWith::unwrap))
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun s3OutputPath(s3OutputPath: String) {
+    override fun s3OutputPath(s3OutputPath: String) {
       cdkBuilder.s3OutputPath(s3OutputPath)
     }
 
@@ -55,14 +51,14 @@ public interface TransformOutput {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformOutput,
   ) : TransformOutput {
-    public override fun accept(): String? = unwrap(this).getAccept()
+    override fun accept(): String? = unwrap(this).getAccept()
 
-    public override fun assembleWith(): AssembleWith? =
+    override fun assembleWith(): AssembleWith? =
         unwrap(this).getAssembleWith()?.let(AssembleWith::wrap)
 
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun s3OutputPath(): String = unwrap(this).getS3OutputPath()
+    override fun s3OutputPath(): String = unwrap(this).getS3OutputPath()
   }
 
   public companion object {

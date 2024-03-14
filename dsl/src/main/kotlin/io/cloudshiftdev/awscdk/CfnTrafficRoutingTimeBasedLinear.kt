@@ -9,22 +9,20 @@ public interface CfnTrafficRoutingTimeBasedLinear {
   public fun stepPercentage(): Number? = unwrap(this).getStepPercentage()
 
   public interface Builder {
-    public fun bakeTimeMins(bakeTimeMins: Number) {
-    }
+    public fun bakeTimeMins(bakeTimeMins: Number)
 
-    public fun stepPercentage(stepPercentage: Number) {
-    }
+    public fun stepPercentage(stepPercentage: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear.Builder =
         software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear.builder()
 
-    public override fun bakeTimeMins(bakeTimeMins: Number) {
+    override fun bakeTimeMins(bakeTimeMins: Number) {
       cdkBuilder.bakeTimeMins(bakeTimeMins)
     }
 
-    public override fun stepPercentage(stepPercentage: Number) {
+    override fun stepPercentage(stepPercentage: Number) {
       cdkBuilder.stepPercentage(stepPercentage)
     }
 
@@ -34,9 +32,9 @@ public interface CfnTrafficRoutingTimeBasedLinear {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear,
   ) : CfnTrafficRoutingTimeBasedLinear {
-    public override fun bakeTimeMins(): Number? = unwrap(this).getBakeTimeMins()
+    override fun bakeTimeMins(): Number? = unwrap(this).getBakeTimeMins()
 
-    public override fun stepPercentage(): Number? = unwrap(this).getStepPercentage()
+    override fun stepPercentage(): Number? = unwrap(this).getStepPercentage()
   }
 
   public companion object {

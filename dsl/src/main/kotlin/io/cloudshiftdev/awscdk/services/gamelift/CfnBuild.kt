@@ -61,28 +61,21 @@ public open class CfnBuild internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun operatingSystem(operatingSystem: String) {
-    }
+    public fun operatingSystem(operatingSystem: String)
 
-    public fun serverSdkVersion(serverSdkVersion: String) {
-    }
+    public fun serverSdkVersion(serverSdkVersion: String)
 
-    public fun storageLocation(storageLocation: IResolvable) {
-    }
+    public fun storageLocation(storageLocation: IResolvable)
 
-    public fun storageLocation(storageLocation: StorageLocationProperty) {
-    }
+    public fun storageLocation(storageLocation: StorageLocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d5c1888cb6aea4a915f59edee556ca7c9485511849194e4c2886604f2c122cd")
-    public fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit) {
-    }
+    public fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -92,33 +85,32 @@ public open class CfnBuild internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnBuild.Builder =
         software.amazon.awscdk.services.gamelift.CfnBuild.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun operatingSystem(operatingSystem: String) {
+    override fun operatingSystem(operatingSystem: String) {
       cdkBuilder.operatingSystem(operatingSystem)
     }
 
-    public override fun serverSdkVersion(serverSdkVersion: String) {
+    override fun serverSdkVersion(serverSdkVersion: String) {
       cdkBuilder.serverSdkVersion(serverSdkVersion)
     }
 
-    public override fun storageLocation(storageLocation: IResolvable) {
+    override fun storageLocation(storageLocation: IResolvable) {
       cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
     }
 
-    public override fun storageLocation(storageLocation: StorageLocationProperty) {
+    override fun storageLocation(storageLocation: StorageLocationProperty) {
       cdkBuilder.storageLocation(storageLocation.let(StorageLocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d5c1888cb6aea4a915f59edee556ca7c9485511849194e4c2886604f2c122cd")
-    public override
-        fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit): Unit =
-        storageLocation(StorageLocationProperty(storageLocation))
+    override fun storageLocation(storageLocation: StorageLocationProperty.Builder.() -> Unit): Unit
+        = storageLocation(StorageLocationProperty(storageLocation))
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -156,17 +148,13 @@ public open class CfnBuild internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun objectVersion(objectVersion: String) {
-      }
+      public fun objectVersion(objectVersion: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -174,19 +162,19 @@ public open class CfnBuild internal constructor(
           software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun objectVersion(objectVersion: String) {
+      override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -198,13 +186,13 @@ public open class CfnBuild internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnBuild.StorageLocationProperty,
     ) : StorageLocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {

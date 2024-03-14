@@ -54,21 +54,17 @@ public open class CfnStreamingDistribution internal constructor(
   }
 
   public interface Builder {
-    public fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
-    }
+    public fun streamingDistributionConfig(streamingDistributionConfig: IResolvable)
 
     public
-        fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty) {
-    }
+        fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e9e247bd8e0c49394b5256d88df77e390a367befd6d78e2d0c82fd1b014d789")
     public
-        fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty.Builder.() -> Unit) {
-    }
+        fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -80,23 +76,23 @@ public open class CfnStreamingDistribution internal constructor(
         software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.Builder.create(scope,
         id)
 
-    public override fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
+    override fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
       cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty) {
       cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(StreamingDistributionConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e9e247bd8e0c49394b5256d88df77e390a367befd6d78e2d0c82fd1b014d789")
-    public override
+    override
         fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty.Builder.() -> Unit):
         Unit =
         streamingDistributionConfig(StreamingDistributionConfigProperty(streamingDistributionConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -142,53 +138,39 @@ public open class CfnStreamingDistribution internal constructor(
     public fun trustedSigners(): Any
 
     public interface Builder {
-      public fun aliases(aliases: List<String>) {
-      }
+      public fun aliases(aliases: List<String>)
 
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun logging(logging: IResolvable) {
-      }
+      public fun logging(logging: IResolvable)
 
-      public fun logging(logging: LoggingProperty) {
-      }
+      public fun logging(logging: LoggingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c2f86d3e1713c896fb6b6048a204745494e4f7ad2e124a1ed4e078c164c50efe")
-      public fun logging(logging: LoggingProperty.Builder.() -> Unit) {
-      }
+      public fun logging(logging: LoggingProperty.Builder.() -> Unit)
 
-      public fun priceClass(priceClass: String) {
-      }
+      public fun priceClass(priceClass: String)
 
-      public fun s3Origin(s3Origin: IResolvable) {
-      }
+      public fun s3Origin(s3Origin: IResolvable)
 
-      public fun s3Origin(s3Origin: S3OriginProperty) {
-      }
+      public fun s3Origin(s3Origin: S3OriginProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4c12f2c7ecb120a8392f852fb6f6fbdb57dd7fbeb250122704d188034199aea")
-      public fun s3Origin(s3Origin: S3OriginProperty.Builder.() -> Unit) {
-      }
+      public fun s3Origin(s3Origin: S3OriginProperty.Builder.() -> Unit)
 
-      public fun trustedSigners(trustedSigners: IResolvable) {
-      }
+      public fun trustedSigners(trustedSigners: IResolvable)
 
-      public fun trustedSigners(trustedSigners: TrustedSignersProperty) {
-      }
+      public fun trustedSigners(trustedSigners: TrustedSignersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("743ef977a158c5f6c2f051d502ab89211e8cda4e0e8658699025623e3dd74121")
-      public fun trustedSigners(trustedSigners: TrustedSignersProperty.Builder.() -> Unit) {
-      }
+      public fun trustedSigners(trustedSigners: TrustedSignersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -197,64 +179,64 @@ public open class CfnStreamingDistribution internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty.builder()
 
-      public override fun aliases(aliases: List<String>) {
+      override fun aliases(aliases: List<String>) {
         cdkBuilder.aliases(aliases)
       }
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun logging(logging: IResolvable) {
+      override fun logging(logging: IResolvable) {
         cdkBuilder.logging(logging.let(IResolvable::unwrap))
       }
 
-      public override fun logging(logging: LoggingProperty) {
+      override fun logging(logging: LoggingProperty) {
         cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c2f86d3e1713c896fb6b6048a204745494e4f7ad2e124a1ed4e078c164c50efe")
-      public override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
+      override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
           logging(LoggingProperty(logging))
 
-      public override fun priceClass(priceClass: String) {
+      override fun priceClass(priceClass: String) {
         cdkBuilder.priceClass(priceClass)
       }
 
-      public override fun s3Origin(s3Origin: IResolvable) {
+      override fun s3Origin(s3Origin: IResolvable) {
         cdkBuilder.s3Origin(s3Origin.let(IResolvable::unwrap))
       }
 
-      public override fun s3Origin(s3Origin: S3OriginProperty) {
+      override fun s3Origin(s3Origin: S3OriginProperty) {
         cdkBuilder.s3Origin(s3Origin.let(S3OriginProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4c12f2c7ecb120a8392f852fb6f6fbdb57dd7fbeb250122704d188034199aea")
-      public override fun s3Origin(s3Origin: S3OriginProperty.Builder.() -> Unit): Unit =
+      override fun s3Origin(s3Origin: S3OriginProperty.Builder.() -> Unit): Unit =
           s3Origin(S3OriginProperty(s3Origin))
 
-      public override fun trustedSigners(trustedSigners: IResolvable) {
+      override fun trustedSigners(trustedSigners: IResolvable) {
         cdkBuilder.trustedSigners(trustedSigners.let(IResolvable::unwrap))
       }
 
-      public override fun trustedSigners(trustedSigners: TrustedSignersProperty) {
+      override fun trustedSigners(trustedSigners: TrustedSignersProperty) {
         cdkBuilder.trustedSigners(trustedSigners.let(TrustedSignersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("743ef977a158c5f6c2f051d502ab89211e8cda4e0e8658699025623e3dd74121")
-      public override fun trustedSigners(trustedSigners: TrustedSignersProperty.Builder.() -> Unit):
-          Unit = trustedSigners(TrustedSignersProperty(trustedSigners))
+      override fun trustedSigners(trustedSigners: TrustedSignersProperty.Builder.() -> Unit): Unit =
+          trustedSigners(TrustedSignersProperty(trustedSigners))
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty
@@ -265,19 +247,19 @@ public open class CfnStreamingDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.StreamingDistributionConfigProperty,
     ) : StreamingDistributionConfigProperty {
-      public override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+      override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
 
-      public override fun comment(): String = unwrap(this).getComment()
+      override fun comment(): String = unwrap(this).getComment()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun logging(): Any? = unwrap(this).getLogging()
+      override fun logging(): Any? = unwrap(this).getLogging()
 
-      public override fun priceClass(): String? = unwrap(this).getPriceClass()
+      override fun priceClass(): String? = unwrap(this).getPriceClass()
 
-      public override fun s3Origin(): Any = unwrap(this).getS3Origin()
+      override fun s3Origin(): Any = unwrap(this).getS3Origin()
 
-      public override fun trustedSigners(): Any = unwrap(this).getTrustedSigners()
+      override fun trustedSigners(): Any = unwrap(this).getTrustedSigners()
     }
 
     public companion object {
@@ -307,11 +289,9 @@ public open class CfnStreamingDistribution internal constructor(
     public fun originAccessIdentity(): String
 
     public interface Builder {
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun originAccessIdentity(originAccessIdentity: String) {
-      }
+      public fun originAccessIdentity(originAccessIdentity: String)
     }
 
     private class BuilderImpl : Builder {
@@ -320,11 +300,11 @@ public open class CfnStreamingDistribution internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty.builder()
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun originAccessIdentity(originAccessIdentity: String) {
+      override fun originAccessIdentity(originAccessIdentity: String) {
         cdkBuilder.originAccessIdentity(originAccessIdentity)
       }
 
@@ -337,9 +317,9 @@ public open class CfnStreamingDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.S3OriginProperty,
     ) : S3OriginProperty {
-      public override fun domainName(): String = unwrap(this).getDomainName()
+      override fun domainName(): String = unwrap(this).getDomainName()
 
-      public override fun originAccessIdentity(): String = unwrap(this).getOriginAccessIdentity()
+      override fun originAccessIdentity(): String = unwrap(this).getOriginAccessIdentity()
     }
 
     public companion object {
@@ -370,17 +350,13 @@ public open class CfnStreamingDistribution internal constructor(
     public fun prefix(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -389,19 +365,19 @@ public open class CfnStreamingDistribution internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -414,11 +390,11 @@ public open class CfnStreamingDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.LoggingProperty,
     ) : LoggingProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun prefix(): String = unwrap(this).getPrefix()
+      override fun prefix(): String = unwrap(this).getPrefix()
     }
 
     public companion object {
@@ -448,14 +424,11 @@ public open class CfnStreamingDistribution internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun awsAccountNumbers(awsAccountNumbers: List<String>) {
-      }
+      public fun awsAccountNumbers(awsAccountNumbers: List<String>)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -464,15 +437,15 @@ public open class CfnStreamingDistribution internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty.builder()
 
-      public override fun awsAccountNumbers(awsAccountNumbers: List<String>) {
+      override fun awsAccountNumbers(awsAccountNumbers: List<String>) {
         cdkBuilder.awsAccountNumbers(awsAccountNumbers)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -485,10 +458,10 @@ public open class CfnStreamingDistribution internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution.TrustedSignersProperty,
     ) : TrustedSignersProperty {
-      public override fun awsAccountNumbers(): List<String> = unwrap(this).getAwsAccountNumbers() ?:
+      override fun awsAccountNumbers(): List<String> = unwrap(this).getAwsAccountNumbers() ?:
           emptyList()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {

@@ -51,20 +51,15 @@ public open class CfnUserProfile internal constructor(
   }
 
   public interface Builder {
-    public fun allowSelfManagement(allowSelfManagement: Boolean) {
-    }
+    public fun allowSelfManagement(allowSelfManagement: Boolean)
 
-    public fun allowSelfManagement(allowSelfManagement: IResolvable) {
-    }
+    public fun allowSelfManagement(allowSelfManagement: IResolvable)
 
-    public fun iamUserArn(iamUserArn: String) {
-    }
+    public fun iamUserArn(iamUserArn: String)
 
-    public fun sshPublicKey(sshPublicKey: String) {
-    }
+    public fun sshPublicKey(sshPublicKey: String)
 
-    public fun sshUsername(sshUsername: String) {
-    }
+    public fun sshUsername(sshUsername: String)
   }
 
   private class BuilderImpl(
@@ -74,23 +69,23 @@ public open class CfnUserProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnUserProfile.Builder =
         software.amazon.awscdk.services.opsworks.CfnUserProfile.Builder.create(scope, id)
 
-    public override fun allowSelfManagement(allowSelfManagement: Boolean) {
+    override fun allowSelfManagement(allowSelfManagement: Boolean) {
       cdkBuilder.allowSelfManagement(allowSelfManagement)
     }
 
-    public override fun allowSelfManagement(allowSelfManagement: IResolvable) {
+    override fun allowSelfManagement(allowSelfManagement: IResolvable) {
       cdkBuilder.allowSelfManagement(allowSelfManagement.let(IResolvable::unwrap))
     }
 
-    public override fun iamUserArn(iamUserArn: String) {
+    override fun iamUserArn(iamUserArn: String) {
       cdkBuilder.iamUserArn(iamUserArn)
     }
 
-    public override fun sshPublicKey(sshPublicKey: String) {
+    override fun sshPublicKey(sshPublicKey: String) {
       cdkBuilder.sshPublicKey(sshPublicKey)
     }
 
-    public override fun sshUsername(sshUsername: String) {
+    override fun sshUsername(sshUsername: String) {
       cdkBuilder.sshUsername(sshUsername)
     }
 

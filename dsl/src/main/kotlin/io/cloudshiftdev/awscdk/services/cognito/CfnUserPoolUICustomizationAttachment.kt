@@ -37,14 +37,11 @@ public open class CfnUserPoolUICustomizationAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun clientId(clientId: String) {
-    }
+    public fun clientId(clientId: String)
 
-    public fun css(css: String) {
-    }
+    public fun css(css: String)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnUserPoolUICustomizationAttachment internal constructor(
         software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachment.Builder.create(scope,
         id)
 
-    public override fun clientId(clientId: String) {
+    override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
-    public override fun css(css: String) {
+    override fun css(css: String) {
       cdkBuilder.css(css)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 

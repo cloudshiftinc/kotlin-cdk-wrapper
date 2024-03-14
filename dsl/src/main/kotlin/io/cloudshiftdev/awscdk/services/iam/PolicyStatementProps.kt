@@ -28,71 +28,62 @@ public interface PolicyStatementProps {
   public fun sid(): String? = unwrap(this).getSid()
 
   public interface Builder {
-    public fun actions(actions: List<String>) {
-    }
+    public fun actions(actions: List<String>)
 
-    public fun conditions(conditions: Map<String, Any>) {
-    }
+    public fun conditions(conditions: Map<String, Any>)
 
-    public fun effect(effect: Effect) {
-    }
+    public fun effect(effect: Effect)
 
-    public fun notActions(notActions: List<String>) {
-    }
+    public fun notActions(notActions: List<String>)
 
-    public fun notPrincipals(notPrincipals: List<IPrincipal>) {
-    }
+    public fun notPrincipals(notPrincipals: List<IPrincipal>)
 
-    public fun notResources(notResources: List<String>) {
-    }
+    public fun notResources(notResources: List<String>)
 
-    public fun principals(principals: List<IPrincipal>) {
-    }
+    public fun principals(principals: List<IPrincipal>)
 
-    public fun resources(resources: List<String>) {
-    }
+    public fun resources(resources: List<String>)
 
-    public fun sid(sid: String) {
-    }
+    public fun sid(sid: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.PolicyStatementProps.Builder =
         software.amazon.awscdk.services.iam.PolicyStatementProps.builder()
 
-    public override fun actions(actions: List<String>) {
+    override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun conditions(conditions: Map<String, Any>) {
+    override fun conditions(conditions: Map<String, Any>) {
       cdkBuilder.conditions(conditions)
     }
 
-    public override fun effect(effect: Effect) {
+    override fun effect(effect: Effect) {
       cdkBuilder.effect(effect.let(Effect::unwrap))
     }
 
-    public override fun notActions(notActions: List<String>) {
+    override fun notActions(notActions: List<String>) {
       cdkBuilder.notActions(notActions)
     }
 
-    public override fun notPrincipals(notPrincipals: List<IPrincipal>) {
+    override fun notPrincipals(notPrincipals: List<IPrincipal>) {
       cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal::unwrap))
     }
 
-    public override fun notResources(notResources: List<String>) {
+    override fun notResources(notResources: List<String>) {
       cdkBuilder.notResources(notResources)
     }
 
-    public override fun principals(principals: List<IPrincipal>) {
+    override fun principals(principals: List<IPrincipal>) {
       cdkBuilder.principals(principals.map(IPrincipal::unwrap))
     }
 
-    public override fun resources(resources: List<String>) {
+    override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
-    public override fun sid(sid: String) {
+    override fun sid(sid: String) {
       cdkBuilder.sid(sid)
     }
 
@@ -103,25 +94,25 @@ public interface PolicyStatementProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.PolicyStatementProps,
   ) : PolicyStatementProps {
-    public override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+    override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
 
-    public override fun conditions(): Map<String, Any> = unwrap(this).getConditions() ?: emptyMap()
+    override fun conditions(): Map<String, Any> = unwrap(this).getConditions() ?: emptyMap()
 
-    public override fun effect(): Effect? = unwrap(this).getEffect()?.let(Effect::wrap)
+    override fun effect(): Effect? = unwrap(this).getEffect()?.let(Effect::wrap)
 
-    public override fun notActions(): List<String> = unwrap(this).getNotActions() ?: emptyList()
+    override fun notActions(): List<String> = unwrap(this).getNotActions() ?: emptyList()
 
-    public override fun notPrincipals(): List<IPrincipal> =
+    override fun notPrincipals(): List<IPrincipal> =
         unwrap(this).getNotPrincipals()?.map(IPrincipal::wrap) ?: emptyList()
 
-    public override fun notResources(): List<String> = unwrap(this).getNotResources() ?: emptyList()
+    override fun notResources(): List<String> = unwrap(this).getNotResources() ?: emptyList()
 
-    public override fun principals(): List<IPrincipal> =
+    override fun principals(): List<IPrincipal> =
         unwrap(this).getPrincipals()?.map(IPrincipal::wrap) ?: emptyList()
 
-    public override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+    override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
-    public override fun sid(): String? = unwrap(this).getSid()
+    override fun sid(): String? = unwrap(this).getSid()
   }
 
   public companion object {

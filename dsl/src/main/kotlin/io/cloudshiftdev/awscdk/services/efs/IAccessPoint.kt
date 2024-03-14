@@ -17,23 +17,21 @@ public interface IAccessPoint : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.efs.IAccessPoint,
   ) : IAccessPoint {
-    public override fun accessPointArn(): String = unwrap(this).getAccessPointArn()
+    override fun accessPointArn(): String = unwrap(this).getAccessPointArn()
 
-    public override fun accessPointId(): String = unwrap(this).getAccessPointId()
+    override fun accessPointId(): String = unwrap(this).getAccessPointId()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun fileSystem(): IFileSystem =
-        unwrap(this).getFileSystem().let(IFileSystem::wrap)
+    override fun fileSystem(): IFileSystem = unwrap(this).getFileSystem().let(IFileSystem::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

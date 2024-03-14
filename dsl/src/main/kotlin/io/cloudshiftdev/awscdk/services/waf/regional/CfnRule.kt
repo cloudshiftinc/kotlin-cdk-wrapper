@@ -44,17 +44,13 @@ public open class CfnRule internal constructor(
   }
 
   public interface Builder {
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun predicates(predicates: IResolvable) {
-    }
+    public fun predicates(predicates: IResolvable)
 
-    public fun predicates(predicates: List<Any>) {
-    }
+    public fun predicates(predicates: List<Any>)
   }
 
   private class BuilderImpl(
@@ -64,19 +60,19 @@ public open class CfnRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.regional.CfnRule.Builder =
         software.amazon.awscdk.services.waf.regional.CfnRule.Builder.create(scope, id)
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun predicates(predicates: IResolvable) {
+    override fun predicates(predicates: IResolvable) {
       cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
     }
 
-    public override fun predicates(predicates: List<Any>) {
+    override fun predicates(predicates: List<Any>) {
       cdkBuilder.predicates(predicates)
     }
 
@@ -112,17 +108,13 @@ public open class CfnRule internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun dataId(dataId: String) {
-      }
+      public fun dataId(dataId: String)
 
-      public fun negated(negated: Boolean) {
-      }
+      public fun negated(negated: Boolean)
 
-      public fun negated(negated: IResolvable) {
-      }
+      public fun negated(negated: IResolvable)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -130,19 +122,19 @@ public open class CfnRule internal constructor(
           software.amazon.awscdk.services.waf.regional.CfnRule.PredicateProperty.Builder =
           software.amazon.awscdk.services.waf.regional.CfnRule.PredicateProperty.builder()
 
-      public override fun dataId(dataId: String) {
+      override fun dataId(dataId: String) {
         cdkBuilder.dataId(dataId)
       }
 
-      public override fun negated(negated: Boolean) {
+      override fun negated(negated: Boolean) {
         cdkBuilder.negated(negated)
       }
 
-      public override fun negated(negated: IResolvable) {
+      override fun negated(negated: IResolvable) {
         cdkBuilder.negated(negated.let(IResolvable::unwrap))
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -154,11 +146,11 @@ public open class CfnRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnRule.PredicateProperty,
     ) : PredicateProperty {
-      public override fun dataId(): String = unwrap(this).getDataId()
+      override fun dataId(): String = unwrap(this).getDataId()
 
-      public override fun negated(): Any = unwrap(this).getNegated()
+      override fun negated(): Any = unwrap(this).getNegated()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

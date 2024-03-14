@@ -11,14 +11,11 @@ public interface DomainNameAttributes {
   public fun regionalHostedZoneId(): String
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun regionalDomainName(regionalDomainName: String) {
-    }
+    public fun regionalDomainName(regionalDomainName: String)
 
-    public fun regionalHostedZoneId(regionalHostedZoneId: String) {
-    }
+    public fun regionalHostedZoneId(regionalHostedZoneId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface DomainNameAttributes {
         software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun regionalDomainName(regionalDomainName: String) {
+    override fun regionalDomainName(regionalDomainName: String) {
       cdkBuilder.regionalDomainName(regionalDomainName)
     }
 
-    public override fun regionalHostedZoneId(regionalHostedZoneId: String) {
+    override fun regionalHostedZoneId(regionalHostedZoneId: String) {
       cdkBuilder.regionalHostedZoneId(regionalHostedZoneId)
     }
 
@@ -45,11 +42,11 @@ public interface DomainNameAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameAttributes,
   ) : DomainNameAttributes {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun regionalDomainName(): String = unwrap(this).getRegionalDomainName()
+    override fun regionalDomainName(): String = unwrap(this).getRegionalDomainName()
 
-    public override fun regionalHostedZoneId(): String = unwrap(this).getRegionalHostedZoneId()
+    override fun regionalHostedZoneId(): String = unwrap(this).getRegionalHostedZoneId()
   }
 
   public companion object {

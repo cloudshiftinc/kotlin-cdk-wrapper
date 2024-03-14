@@ -7,15 +7,14 @@ public interface GrpcConnectionPool {
   public fun maxRequests(): Number
 
   public interface Builder {
-    public fun maxRequests(maxRequests: Number) {
-    }
+    public fun maxRequests(maxRequests: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GrpcConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.GrpcConnectionPool.builder()
 
-    public override fun maxRequests(maxRequests: Number) {
+    override fun maxRequests(maxRequests: Number) {
       cdkBuilder.maxRequests(maxRequests)
     }
 
@@ -26,7 +25,7 @@ public interface GrpcConnectionPool {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool,
   ) : GrpcConnectionPool {
-    public override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+    override fun maxRequests(): Number = unwrap(this).getMaxRequests()
   }
 
   public companion object {

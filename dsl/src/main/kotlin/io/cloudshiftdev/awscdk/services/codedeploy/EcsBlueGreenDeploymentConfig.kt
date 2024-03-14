@@ -21,23 +21,17 @@ public interface EcsBlueGreenDeploymentConfig {
   public fun testListener(): IListener? = unwrap(this).getTestListener()?.let(IListener::wrap)
 
   public interface Builder {
-    public fun blueTargetGroup(blueTargetGroup: ITargetGroup) {
-    }
+    public fun blueTargetGroup(blueTargetGroup: ITargetGroup)
 
-    public fun deploymentApprovalWaitTime(deploymentApprovalWaitTime: Duration) {
-    }
+    public fun deploymentApprovalWaitTime(deploymentApprovalWaitTime: Duration)
 
-    public fun greenTargetGroup(greenTargetGroup: ITargetGroup) {
-    }
+    public fun greenTargetGroup(greenTargetGroup: ITargetGroup)
 
-    public fun listener(listener: IListener) {
-    }
+    public fun listener(listener: IListener)
 
-    public fun terminationWaitTime(terminationWaitTime: Duration) {
-    }
+    public fun terminationWaitTime(terminationWaitTime: Duration)
 
-    public fun testListener(testListener: IListener) {
-    }
+    public fun testListener(testListener: IListener)
   }
 
   private class BuilderImpl : Builder {
@@ -45,27 +39,27 @@ public interface EcsBlueGreenDeploymentConfig {
         software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig.Builder =
         software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig.builder()
 
-    public override fun blueTargetGroup(blueTargetGroup: ITargetGroup) {
+    override fun blueTargetGroup(blueTargetGroup: ITargetGroup) {
       cdkBuilder.blueTargetGroup(blueTargetGroup.let(ITargetGroup::unwrap))
     }
 
-    public override fun deploymentApprovalWaitTime(deploymentApprovalWaitTime: Duration) {
+    override fun deploymentApprovalWaitTime(deploymentApprovalWaitTime: Duration) {
       cdkBuilder.deploymentApprovalWaitTime(deploymentApprovalWaitTime.let(Duration::unwrap))
     }
 
-    public override fun greenTargetGroup(greenTargetGroup: ITargetGroup) {
+    override fun greenTargetGroup(greenTargetGroup: ITargetGroup) {
       cdkBuilder.greenTargetGroup(greenTargetGroup.let(ITargetGroup::unwrap))
     }
 
-    public override fun listener(listener: IListener) {
+    override fun listener(listener: IListener) {
       cdkBuilder.listener(listener.let(IListener::unwrap))
     }
 
-    public override fun terminationWaitTime(terminationWaitTime: Duration) {
+    override fun terminationWaitTime(terminationWaitTime: Duration) {
       cdkBuilder.terminationWaitTime(terminationWaitTime.let(Duration::unwrap))
     }
 
-    public override fun testListener(testListener: IListener) {
+    override fun testListener(testListener: IListener) {
       cdkBuilder.testListener(testListener.let(IListener::unwrap))
     }
 
@@ -76,22 +70,21 @@ public interface EcsBlueGreenDeploymentConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig,
   ) : EcsBlueGreenDeploymentConfig {
-    public override fun blueTargetGroup(): ITargetGroup =
+    override fun blueTargetGroup(): ITargetGroup =
         unwrap(this).getBlueTargetGroup().let(ITargetGroup::wrap)
 
-    public override fun deploymentApprovalWaitTime(): Duration? =
+    override fun deploymentApprovalWaitTime(): Duration? =
         unwrap(this).getDeploymentApprovalWaitTime()?.let(Duration::wrap)
 
-    public override fun greenTargetGroup(): ITargetGroup =
+    override fun greenTargetGroup(): ITargetGroup =
         unwrap(this).getGreenTargetGroup().let(ITargetGroup::wrap)
 
-    public override fun listener(): IListener = unwrap(this).getListener().let(IListener::wrap)
+    override fun listener(): IListener = unwrap(this).getListener().let(IListener::wrap)
 
-    public override fun terminationWaitTime(): Duration? =
+    override fun terminationWaitTime(): Duration? =
         unwrap(this).getTerminationWaitTime()?.let(Duration::wrap)
 
-    public override fun testListener(): IListener? =
-        unwrap(this).getTestListener()?.let(IListener::wrap)
+    override fun testListener(): IListener? = unwrap(this).getTestListener()?.let(IListener::wrap)
   }
 
   public companion object {

@@ -12,14 +12,11 @@ public interface RequestValidatorOptions {
   public fun validateRequestParameters(): Boolean? = unwrap(this).getValidateRequestParameters()
 
   public interface Builder {
-    public fun requestValidatorName(requestValidatorName: String) {
-    }
+    public fun requestValidatorName(requestValidatorName: String)
 
-    public fun validateRequestBody(validateRequestBody: Boolean) {
-    }
+    public fun validateRequestBody(validateRequestBody: Boolean)
 
-    public fun validateRequestParameters(validateRequestParameters: Boolean) {
-    }
+    public fun validateRequestParameters(validateRequestParameters: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -27,15 +24,15 @@ public interface RequestValidatorOptions {
         software.amazon.awscdk.services.apigateway.RequestValidatorOptions.Builder =
         software.amazon.awscdk.services.apigateway.RequestValidatorOptions.builder()
 
-    public override fun requestValidatorName(requestValidatorName: String) {
+    override fun requestValidatorName(requestValidatorName: String) {
       cdkBuilder.requestValidatorName(requestValidatorName)
     }
 
-    public override fun validateRequestBody(validateRequestBody: Boolean) {
+    override fun validateRequestBody(validateRequestBody: Boolean) {
       cdkBuilder.validateRequestBody(validateRequestBody)
     }
 
-    public override fun validateRequestParameters(validateRequestParameters: Boolean) {
+    override fun validateRequestParameters(validateRequestParameters: Boolean) {
       cdkBuilder.validateRequestParameters(validateRequestParameters)
     }
 
@@ -46,12 +43,11 @@ public interface RequestValidatorOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.RequestValidatorOptions,
   ) : RequestValidatorOptions {
-    public override fun requestValidatorName(): String? = unwrap(this).getRequestValidatorName()
+    override fun requestValidatorName(): String? = unwrap(this).getRequestValidatorName()
 
-    public override fun validateRequestBody(): Boolean? = unwrap(this).getValidateRequestBody()
+    override fun validateRequestBody(): Boolean? = unwrap(this).getValidateRequestBody()
 
-    public override fun validateRequestParameters(): Boolean? =
-        unwrap(this).getValidateRequestParameters()
+    override fun validateRequestParameters(): Boolean? = unwrap(this).getValidateRequestParameters()
   }
 
   public companion object {

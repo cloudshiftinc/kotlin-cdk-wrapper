@@ -8,15 +8,14 @@ public interface GrantInvokeOptions {
       ?: emptyList()
 
   public interface Builder {
-    public fun httpMethods(httpMethods: List<HttpMethod>) {
-    }
+    public fun httpMethods(httpMethods: List<HttpMethod>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions.Builder
         = software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions.builder()
 
-    public override fun httpMethods(httpMethods: List<HttpMethod>) {
+    override fun httpMethods(httpMethods: List<HttpMethod>) {
       cdkBuilder.httpMethods(httpMethods.map(HttpMethod::unwrap))
     }
 
@@ -27,7 +26,7 @@ public interface GrantInvokeOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions,
   ) : GrantInvokeOptions {
-    public override fun httpMethods(): List<HttpMethod> =
+    override fun httpMethods(): List<HttpMethod> =
         unwrap(this).getHttpMethods()?.map(HttpMethod::wrap) ?: emptyList()
   }
 

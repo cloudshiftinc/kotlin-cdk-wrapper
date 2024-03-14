@@ -30,67 +30,49 @@ public open class AwsCustomResource internal constructor(
       unwrap(this).getResponseFieldReference(dataPath).let(Reference::wrap)
 
   public interface Builder {
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun installLatestAwsSdk(installLatestAwsSdk: Boolean) {
-    }
+    public fun installLatestAwsSdk(installLatestAwsSdk: Boolean)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun logRetention(logRetention: RetentionDays) {
-    }
+    public fun logRetention(logRetention: RetentionDays)
 
-    public fun onCreate(onCreate: AwsSdkCall) {
-    }
+    public fun onCreate(onCreate: AwsSdkCall)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0abceb2a25226ed018ed77bc9067d5e666f441f9f7c8b30365b8ba71d382af32")
-    public fun onCreate(onCreate: AwsSdkCall.Builder.() -> Unit) {
-    }
+    public fun onCreate(onCreate: AwsSdkCall.Builder.() -> Unit)
 
-    public fun onDelete(onDelete: AwsSdkCall) {
-    }
+    public fun onDelete(onDelete: AwsSdkCall)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efb30bcba09a86be18f98a0f5ace3302a9a2b7655bc8409423acddb0fab3208d")
-    public fun onDelete(onDelete: AwsSdkCall.Builder.() -> Unit) {
-    }
+    public fun onDelete(onDelete: AwsSdkCall.Builder.() -> Unit)
 
-    public fun onUpdate(onUpdate: AwsSdkCall) {
-    }
+    public fun onUpdate(onUpdate: AwsSdkCall)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b47349731bf7e943a6dc22393547fa8cfd7aa5ce1efd59b106715f42b7de03c")
-    public fun onUpdate(onUpdate: AwsSdkCall.Builder.() -> Unit) {
-    }
+    public fun onUpdate(onUpdate: AwsSdkCall.Builder.() -> Unit)
 
-    public fun policy(policy: AwsCustomResourcePolicy) {
-    }
+    public fun policy(policy: AwsCustomResourcePolicy)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("832e5764ad2889290b88a07eb3c204b7c910500a8ca75024237e0e7ba9fee539")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -100,80 +82,80 @@ public open class AwsCustomResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.customresources.AwsCustomResource.Builder =
         software.amazon.awscdk.customresources.AwsCustomResource.Builder.create(scope, id)
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun installLatestAwsSdk(installLatestAwsSdk: Boolean) {
+    override fun installLatestAwsSdk(installLatestAwsSdk: Boolean) {
       cdkBuilder.installLatestAwsSdk(installLatestAwsSdk)
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun logRetention(logRetention: RetentionDays) {
+    override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun onCreate(onCreate: AwsSdkCall) {
+    override fun onCreate(onCreate: AwsSdkCall) {
       cdkBuilder.onCreate(onCreate.let(AwsSdkCall::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0abceb2a25226ed018ed77bc9067d5e666f441f9f7c8b30365b8ba71d382af32")
-    public override fun onCreate(onCreate: AwsSdkCall.Builder.() -> Unit): Unit =
+    override fun onCreate(onCreate: AwsSdkCall.Builder.() -> Unit): Unit =
         onCreate(AwsSdkCall(onCreate))
 
-    public override fun onDelete(onDelete: AwsSdkCall) {
+    override fun onDelete(onDelete: AwsSdkCall) {
       cdkBuilder.onDelete(onDelete.let(AwsSdkCall::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efb30bcba09a86be18f98a0f5ace3302a9a2b7655bc8409423acddb0fab3208d")
-    public override fun onDelete(onDelete: AwsSdkCall.Builder.() -> Unit): Unit =
+    override fun onDelete(onDelete: AwsSdkCall.Builder.() -> Unit): Unit =
         onDelete(AwsSdkCall(onDelete))
 
-    public override fun onUpdate(onUpdate: AwsSdkCall) {
+    override fun onUpdate(onUpdate: AwsSdkCall) {
       cdkBuilder.onUpdate(onUpdate.let(AwsSdkCall::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b47349731bf7e943a6dc22393547fa8cfd7aa5ce1efd59b106715f42b7de03c")
-    public override fun onUpdate(onUpdate: AwsSdkCall.Builder.() -> Unit): Unit =
+    override fun onUpdate(onUpdate: AwsSdkCall.Builder.() -> Unit): Unit =
         onUpdate(AwsSdkCall(onUpdate))
 
-    public override fun policy(policy: AwsCustomResourcePolicy) {
+    override fun policy(policy: AwsCustomResourcePolicy) {
       cdkBuilder.policy(policy.let(AwsCustomResourcePolicy::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("832e5764ad2889290b88a07eb3c204b7c910500a8ca75024237e0e7ba9fee539")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.customresources.AwsCustomResource =

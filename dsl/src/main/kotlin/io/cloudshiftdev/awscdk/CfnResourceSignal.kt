@@ -10,22 +10,20 @@ public interface CfnResourceSignal {
   public fun timeout(): String? = unwrap(this).getTimeout()
 
   public interface Builder {
-    public fun count(count: Number) {
-    }
+    public fun count(count: Number)
 
-    public fun timeout(timeout: String) {
-    }
+    public fun timeout(timeout: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnResourceSignal.Builder =
         software.amazon.awscdk.CfnResourceSignal.builder()
 
-    public override fun count(count: Number) {
+    override fun count(count: Number) {
       cdkBuilder.count(count)
     }
 
-    public override fun timeout(timeout: String) {
+    override fun timeout(timeout: String) {
       cdkBuilder.timeout(timeout)
     }
 
@@ -35,9 +33,9 @@ public interface CfnResourceSignal {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnResourceSignal,
   ) : CfnResourceSignal {
-    public override fun count(): Number? = unwrap(this).getCount()
+    override fun count(): Number? = unwrap(this).getCount()
 
-    public override fun timeout(): String? = unwrap(this).getTimeout()
+    override fun timeout(): String? = unwrap(this).getTimeout()
   }
 
   public companion object {

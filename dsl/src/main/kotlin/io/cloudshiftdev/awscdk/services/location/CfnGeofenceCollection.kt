@@ -72,25 +72,19 @@ public open class CfnGeofenceCollection internal constructor(
   }
 
   public interface Builder {
-    public fun collectionName(collectionName: String) {
-    }
+    public fun collectionName(collectionName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun pricingPlan(pricingPlan: String) {
-    }
+    public fun pricingPlan(pricingPlan: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun pricingPlanDataSource(pricingPlanDataSource: String) {
-    }
+    public fun pricingPlanDataSource(pricingPlanDataSource: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -100,29 +94,29 @@ public open class CfnGeofenceCollection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnGeofenceCollection.Builder =
         software.amazon.awscdk.services.location.CfnGeofenceCollection.Builder.create(scope, id)
 
-    public override fun collectionName(collectionName: String) {
+    override fun collectionName(collectionName: String) {
       cdkBuilder.collectionName(collectionName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun pricingPlan(pricingPlan: String) {
+    override fun pricingPlan(pricingPlan: String) {
       cdkBuilder.pricingPlan(pricingPlan)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun pricingPlanDataSource(pricingPlanDataSource: String) {
+    override fun pricingPlanDataSource(pricingPlanDataSource: String) {
       cdkBuilder.pricingPlanDataSource(pricingPlanDataSource)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

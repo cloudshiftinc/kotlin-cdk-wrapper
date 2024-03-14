@@ -8,15 +8,14 @@ public interface RuntimeInfo {
   public fun libraries(): Map<String, String>
 
   public interface Builder {
-    public fun libraries(libraries: Map<String, String>) {
-    }
+    public fun libraries(libraries: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.Builder =
         software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.builder()
 
-    public override fun libraries(libraries: Map<String, String>) {
+    override fun libraries(libraries: Map<String, String>) {
       cdkBuilder.libraries(libraries)
     }
 
@@ -26,7 +25,7 @@ public interface RuntimeInfo {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
   ) : RuntimeInfo {
-    public override fun libraries(): Map<String, String> = unwrap(this).getLibraries() ?: emptyMap()
+    override fun libraries(): Map<String, String> = unwrap(this).getLibraries() ?: emptyMap()
   }
 
   public companion object {

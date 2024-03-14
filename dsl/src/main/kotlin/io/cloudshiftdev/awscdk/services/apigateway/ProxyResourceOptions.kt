@@ -9,71 +9,63 @@ public interface ProxyResourceOptions : ResourceOptions {
   public fun anyMethod(): Boolean? = unwrap(this).getAnyMethod()
 
   public interface Builder {
-    public fun anyMethod(anyMethod: Boolean) {
-    }
+    public fun anyMethod(anyMethod: Boolean)
 
-    public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-    }
+    public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e151382df0c851b3ddf006133fee29eab092530e27fe393dd9f9af288f2b0c39")
     public
-        fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit) {
-    }
+        fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit)
 
-    public fun defaultIntegration(defaultIntegration: Integration) {
-    }
+    public fun defaultIntegration(defaultIntegration: Integration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("515a82bc88058a7cb28cdd5615e50a9b89cae9951829f41bb311bf96f48320cb")
-    public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit) {
-    }
+    public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit)
 
-    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-    }
+    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("443689287b59c52a05c959c5696ae42ca2386111cfe7d9ddb62e63d8b60b38f9")
-    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit) {
-    }
+    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ProxyResourceOptions.Builder
         = software.amazon.awscdk.services.apigateway.ProxyResourceOptions.builder()
 
-    public override fun anyMethod(anyMethod: Boolean) {
+    override fun anyMethod(anyMethod: Boolean) {
       cdkBuilder.anyMethod(anyMethod)
     }
 
-    public override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
+    override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
       cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e151382df0c851b3ddf006133fee29eab092530e27fe393dd9f9af288f2b0c39")
-    public override
+    override
         fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit):
         Unit = defaultCorsPreflightOptions(CorsOptions(defaultCorsPreflightOptions))
 
-    public override fun defaultIntegration(defaultIntegration: Integration) {
+    override fun defaultIntegration(defaultIntegration: Integration) {
       cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("515a82bc88058a7cb28cdd5615e50a9b89cae9951829f41bb311bf96f48320cb")
-    public override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit
-        = defaultIntegration(Integration(defaultIntegration))
+    override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit =
+        defaultIntegration(Integration(defaultIntegration))
 
-    public override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
+    override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
       cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("443689287b59c52a05c959c5696ae42ca2386111cfe7d9ddb62e63d8b60b38f9")
-    public override
-        fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit =
-        defaultMethodOptions(MethodOptions(defaultMethodOptions))
+    override fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit
+        = defaultMethodOptions(MethodOptions(defaultMethodOptions))
 
     public fun build(): software.amazon.awscdk.services.apigateway.ProxyResourceOptions =
         cdkBuilder.build()
@@ -82,15 +74,15 @@ public interface ProxyResourceOptions : ResourceOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ProxyResourceOptions,
   ) : ProxyResourceOptions {
-    public override fun anyMethod(): Boolean? = unwrap(this).getAnyMethod()
+    override fun anyMethod(): Boolean? = unwrap(this).getAnyMethod()
 
-    public override fun defaultCorsPreflightOptions(): CorsOptions? =
+    override fun defaultCorsPreflightOptions(): CorsOptions? =
         unwrap(this).getDefaultCorsPreflightOptions()?.let(CorsOptions::wrap)
 
-    public override fun defaultIntegration(): Integration? =
+    override fun defaultIntegration(): Integration? =
         unwrap(this).getDefaultIntegration()?.let(Integration::wrap)
 
-    public override fun defaultMethodOptions(): MethodOptions? =
+    override fun defaultMethodOptions(): MethodOptions? =
         unwrap(this).getDefaultMethodOptions()?.let(MethodOptions::wrap)
   }
 

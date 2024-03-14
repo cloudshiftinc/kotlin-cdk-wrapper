@@ -21,43 +21,33 @@ public interface TcpVirtualNodeListenerOptions {
   public fun tls(): ListenerTlsOptions? = unwrap(this).getTls()?.let(ListenerTlsOptions::wrap)
 
   public interface Builder {
-    public fun connectionPool(connectionPool: TcpConnectionPool) {
-    }
+    public fun connectionPool(connectionPool: TcpConnectionPool)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9417603406ad0ebf506640d551658d1d8a01f0cde7730d35257ba9956b6aa88c")
-    public fun connectionPool(connectionPool: TcpConnectionPool.Builder.() -> Unit) {
-    }
+    public fun connectionPool(connectionPool: TcpConnectionPool.Builder.() -> Unit)
 
-    public fun healthCheck(healthCheck: HealthCheck) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck)
 
-    public fun outlierDetection(outlierDetection: OutlierDetection) {
-    }
+    public fun outlierDetection(outlierDetection: OutlierDetection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e8cc3eef3c07ce80a3333305dee63ac379da21b90fb3dab4e5ec4bd6686e722b")
-    public fun outlierDetection(outlierDetection: OutlierDetection.Builder.() -> Unit) {
-    }
+    public fun outlierDetection(outlierDetection: OutlierDetection.Builder.() -> Unit)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun timeout(timeout: TcpTimeout) {
-    }
+    public fun timeout(timeout: TcpTimeout)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("969713d98d3d60f921746fba50266c9a022c7e67bea2353fc62f276e4b87cf02")
-    public fun timeout(timeout: TcpTimeout.Builder.() -> Unit) {
-    }
+    public fun timeout(timeout: TcpTimeout.Builder.() -> Unit)
 
-    public fun tls(tls: ListenerTlsOptions) {
-    }
+    public fun tls(tls: ListenerTlsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e59cc51715eec391954a3486c6272e68e768fb6a0e792d746a97e5f1ebf75130")
-    public fun tls(tls: ListenerTlsOptions.Builder.() -> Unit) {
-    }
+    public fun tls(tls: ListenerTlsOptions.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -65,48 +55,48 @@ public interface TcpVirtualNodeListenerOptions {
         software.amazon.awscdk.services.appmesh.TcpVirtualNodeListenerOptions.Builder =
         software.amazon.awscdk.services.appmesh.TcpVirtualNodeListenerOptions.builder()
 
-    public override fun connectionPool(connectionPool: TcpConnectionPool) {
+    override fun connectionPool(connectionPool: TcpConnectionPool) {
       cdkBuilder.connectionPool(connectionPool.let(TcpConnectionPool::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9417603406ad0ebf506640d551658d1d8a01f0cde7730d35257ba9956b6aa88c")
-    public override fun connectionPool(connectionPool: TcpConnectionPool.Builder.() -> Unit): Unit =
+    override fun connectionPool(connectionPool: TcpConnectionPool.Builder.() -> Unit): Unit =
         connectionPool(TcpConnectionPool(connectionPool))
 
-    public override fun healthCheck(healthCheck: HealthCheck) {
+    override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
     }
 
-    public override fun outlierDetection(outlierDetection: OutlierDetection) {
+    override fun outlierDetection(outlierDetection: OutlierDetection) {
       cdkBuilder.outlierDetection(outlierDetection.let(OutlierDetection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e8cc3eef3c07ce80a3333305dee63ac379da21b90fb3dab4e5ec4bd6686e722b")
-    public override fun outlierDetection(outlierDetection: OutlierDetection.Builder.() -> Unit):
-        Unit = outlierDetection(OutlierDetection(outlierDetection))
+    override fun outlierDetection(outlierDetection: OutlierDetection.Builder.() -> Unit): Unit =
+        outlierDetection(OutlierDetection(outlierDetection))
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun timeout(timeout: TcpTimeout) {
+    override fun timeout(timeout: TcpTimeout) {
       cdkBuilder.timeout(timeout.let(TcpTimeout::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("969713d98d3d60f921746fba50266c9a022c7e67bea2353fc62f276e4b87cf02")
-    public override fun timeout(timeout: TcpTimeout.Builder.() -> Unit): Unit =
+    override fun timeout(timeout: TcpTimeout.Builder.() -> Unit): Unit =
         timeout(TcpTimeout(timeout))
 
-    public override fun tls(tls: ListenerTlsOptions) {
+    override fun tls(tls: ListenerTlsOptions) {
       cdkBuilder.tls(tls.let(ListenerTlsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e59cc51715eec391954a3486c6272e68e768fb6a0e792d746a97e5f1ebf75130")
-    public override fun tls(tls: ListenerTlsOptions.Builder.() -> Unit): Unit =
+    override fun tls(tls: ListenerTlsOptions.Builder.() -> Unit): Unit =
         tls(ListenerTlsOptions(tls))
 
     public fun build(): software.amazon.awscdk.services.appmesh.TcpVirtualNodeListenerOptions =
@@ -116,21 +106,19 @@ public interface TcpVirtualNodeListenerOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TcpVirtualNodeListenerOptions,
   ) : TcpVirtualNodeListenerOptions {
-    public override fun connectionPool(): TcpConnectionPool? =
+    override fun connectionPool(): TcpConnectionPool? =
         unwrap(this).getConnectionPool()?.let(TcpConnectionPool::wrap)
 
-    public override fun healthCheck(): HealthCheck? =
-        unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+    override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
 
-    public override fun outlierDetection(): OutlierDetection? =
+    override fun outlierDetection(): OutlierDetection? =
         unwrap(this).getOutlierDetection()?.let(OutlierDetection::wrap)
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
 
-    public override fun timeout(): TcpTimeout? = unwrap(this).getTimeout()?.let(TcpTimeout::wrap)
+    override fun timeout(): TcpTimeout? = unwrap(this).getTimeout()?.let(TcpTimeout::wrap)
 
-    public override fun tls(): ListenerTlsOptions? =
-        unwrap(this).getTls()?.let(ListenerTlsOptions::wrap)
+    override fun tls(): ListenerTlsOptions? = unwrap(this).getTls()?.let(ListenerTlsOptions::wrap)
   }
 
   public companion object {

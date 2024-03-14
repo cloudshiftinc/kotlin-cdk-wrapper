@@ -40,17 +40,13 @@ public open class CfnPreparedStatement internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun queryStatement(queryStatement: String) {
-    }
+    public fun queryStatement(queryStatement: String)
 
-    public fun statementName(statementName: String) {
-    }
+    public fun statementName(statementName: String)
 
-    public fun workGroup(workGroup: String) {
-    }
+    public fun workGroup(workGroup: String)
   }
 
   private class BuilderImpl(
@@ -60,19 +56,19 @@ public open class CfnPreparedStatement internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.athena.CfnPreparedStatement.Builder =
         software.amazon.awscdk.services.athena.CfnPreparedStatement.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun queryStatement(queryStatement: String) {
+    override fun queryStatement(queryStatement: String) {
       cdkBuilder.queryStatement(queryStatement)
     }
 
-    public override fun statementName(statementName: String) {
+    override fun statementName(statementName: String) {
       cdkBuilder.statementName(statementName)
     }
 
-    public override fun workGroup(workGroup: String) {
+    override fun workGroup(workGroup: String) {
       cdkBuilder.workGroup(workGroup)
     }
 

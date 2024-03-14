@@ -42,17 +42,13 @@ public open class CfnLayerVersionPermission internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun layerVersionArn(layerVersionArn: String) {
-    }
+    public fun layerVersionArn(layerVersionArn: String)
 
-    public fun organizationId(organizationId: String) {
-    }
+    public fun organizationId(organizationId: String)
 
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnLayerVersionPermission internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnLayerVersionPermission.Builder
         = software.amazon.awscdk.services.lambda.CfnLayerVersionPermission.Builder.create(scope, id)
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun layerVersionArn(layerVersionArn: String) {
+    override fun layerVersionArn(layerVersionArn: String) {
       cdkBuilder.layerVersionArn(layerVersionArn)
     }
 
-    public override fun organizationId(organizationId: String) {
+    override fun organizationId(organizationId: String) {
       cdkBuilder.organizationId(organizationId)
     }
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 

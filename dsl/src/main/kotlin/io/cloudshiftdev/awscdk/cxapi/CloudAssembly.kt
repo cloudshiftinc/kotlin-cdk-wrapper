@@ -49,14 +49,11 @@ public open class CloudAssembly internal constructor(
   public open fun version(): String = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun skipEnumCheck(skipEnumCheck: Boolean) {
-    }
+    public fun skipEnumCheck(skipEnumCheck: Boolean)
 
-    public fun skipVersionCheck(skipVersionCheck: Boolean) {
-    }
+    public fun skipVersionCheck(skipVersionCheck: Boolean)
 
-    public fun topoSort(topoSort: Boolean) {
-    }
+    public fun topoSort(topoSort: Boolean)
   }
 
   private class BuilderImpl(
@@ -65,15 +62,15 @@ public open class CloudAssembly internal constructor(
     private val cdkBuilder: software.amazon.awscdk.cxapi.CloudAssembly.Builder =
         software.amazon.awscdk.cxapi.CloudAssembly.Builder.create(directory)
 
-    public override fun skipEnumCheck(skipEnumCheck: Boolean) {
+    override fun skipEnumCheck(skipEnumCheck: Boolean) {
       cdkBuilder.skipEnumCheck(skipEnumCheck)
     }
 
-    public override fun skipVersionCheck(skipVersionCheck: Boolean) {
+    override fun skipVersionCheck(skipVersionCheck: Boolean) {
       cdkBuilder.skipVersionCheck(skipVersionCheck)
     }
 
-    public override fun topoSort(topoSort: Boolean) {
+    override fun topoSort(topoSort: Boolean) {
       cdkBuilder.topoSort(topoSort)
     }
 

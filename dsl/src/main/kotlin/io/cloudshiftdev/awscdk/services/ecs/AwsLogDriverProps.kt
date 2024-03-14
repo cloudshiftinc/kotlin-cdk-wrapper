@@ -23,57 +23,50 @@ public interface AwsLogDriverProps {
   public fun streamPrefix(): String
 
   public interface Builder {
-    public fun datetimeFormat(datetimeFormat: String) {
-    }
+    public fun datetimeFormat(datetimeFormat: String)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun logRetention(logRetention: RetentionDays) {
-    }
+    public fun logRetention(logRetention: RetentionDays)
 
-    public fun maxBufferSize(maxBufferSize: Size) {
-    }
+    public fun maxBufferSize(maxBufferSize: Size)
 
-    public fun mode(mode: AwsLogDriverMode) {
-    }
+    public fun mode(mode: AwsLogDriverMode)
 
-    public fun multilinePattern(multilinePattern: String) {
-    }
+    public fun multilinePattern(multilinePattern: String)
 
-    public fun streamPrefix(streamPrefix: String) {
-    }
+    public fun streamPrefix(streamPrefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.AwsLogDriverProps.Builder =
         software.amazon.awscdk.services.ecs.AwsLogDriverProps.builder()
 
-    public override fun datetimeFormat(datetimeFormat: String) {
+    override fun datetimeFormat(datetimeFormat: String) {
       cdkBuilder.datetimeFormat(datetimeFormat)
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun logRetention(logRetention: RetentionDays) {
+    override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun maxBufferSize(maxBufferSize: Size) {
+    override fun maxBufferSize(maxBufferSize: Size) {
       cdkBuilder.maxBufferSize(maxBufferSize.let(Size::unwrap))
     }
 
-    public override fun mode(mode: AwsLogDriverMode) {
+    override fun mode(mode: AwsLogDriverMode) {
       cdkBuilder.mode(mode.let(AwsLogDriverMode::unwrap))
     }
 
-    public override fun multilinePattern(multilinePattern: String) {
+    override fun multilinePattern(multilinePattern: String) {
       cdkBuilder.multilinePattern(multilinePattern)
     }
 
-    public override fun streamPrefix(streamPrefix: String) {
+    override fun streamPrefix(streamPrefix: String) {
       cdkBuilder.streamPrefix(streamPrefix)
     }
 
@@ -83,21 +76,20 @@ public interface AwsLogDriverProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriverProps,
   ) : AwsLogDriverProps {
-    public override fun datetimeFormat(): String? = unwrap(this).getDatetimeFormat()
+    override fun datetimeFormat(): String? = unwrap(this).getDatetimeFormat()
 
-    public override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
+    override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun logRetention(): RetentionDays? =
+    override fun logRetention(): RetentionDays? =
         unwrap(this).getLogRetention()?.let(RetentionDays::wrap)
 
-    public override fun maxBufferSize(): Size? = unwrap(this).getMaxBufferSize()?.let(Size::wrap)
+    override fun maxBufferSize(): Size? = unwrap(this).getMaxBufferSize()?.let(Size::wrap)
 
-    public override fun mode(): AwsLogDriverMode? =
-        unwrap(this).getMode()?.let(AwsLogDriverMode::wrap)
+    override fun mode(): AwsLogDriverMode? = unwrap(this).getMode()?.let(AwsLogDriverMode::wrap)
 
-    public override fun multilinePattern(): String? = unwrap(this).getMultilinePattern()
+    override fun multilinePattern(): String? = unwrap(this).getMultilinePattern()
 
-    public override fun streamPrefix(): String = unwrap(this).getStreamPrefix()
+    override fun streamPrefix(): String = unwrap(this).getStreamPrefix()
   }
 
   public companion object {

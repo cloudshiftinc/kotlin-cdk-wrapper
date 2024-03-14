@@ -9,22 +9,20 @@ public interface RouteBaseProps {
   public fun routeSpec(): RouteSpec
 
   public interface Builder {
-    public fun routeName(routeName: String) {
-    }
+    public fun routeName(routeName: String)
 
-    public fun routeSpec(routeSpec: RouteSpec) {
-    }
+    public fun routeSpec(routeSpec: RouteSpec)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.RouteBaseProps.Builder =
         software.amazon.awscdk.services.appmesh.RouteBaseProps.builder()
 
-    public override fun routeName(routeName: String) {
+    override fun routeName(routeName: String) {
       cdkBuilder.routeName(routeName)
     }
 
-    public override fun routeSpec(routeSpec: RouteSpec) {
+    override fun routeSpec(routeSpec: RouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface RouteBaseProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.RouteBaseProps,
   ) : RouteBaseProps {
-    public override fun routeName(): String? = unwrap(this).getRouteName()
+    override fun routeName(): String? = unwrap(this).getRouteName()
 
-    public override fun routeSpec(): RouteSpec = unwrap(this).getRouteSpec().let(RouteSpec::wrap)
+    override fun routeSpec(): RouteSpec = unwrap(this).getRouteSpec().let(RouteSpec::wrap)
   }
 
   public companion object {

@@ -59,23 +59,17 @@ public open class CfnHub internal constructor(
   }
 
   public interface Builder {
-    public fun autoEnableControls(autoEnableControls: Boolean) {
-    }
+    public fun autoEnableControls(autoEnableControls: Boolean)
 
-    public fun autoEnableControls(autoEnableControls: IResolvable) {
-    }
+    public fun autoEnableControls(autoEnableControls: IResolvable)
 
-    public fun controlFindingGenerator(controlFindingGenerator: String) {
-    }
+    public fun controlFindingGenerator(controlFindingGenerator: String)
 
-    public fun enableDefaultStandards(enableDefaultStandards: Boolean) {
-    }
+    public fun enableDefaultStandards(enableDefaultStandards: Boolean)
 
-    public fun enableDefaultStandards(enableDefaultStandards: IResolvable) {
-    }
+    public fun enableDefaultStandards(enableDefaultStandards: IResolvable)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -85,27 +79,27 @@ public open class CfnHub internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.securityhub.CfnHub.Builder =
         software.amazon.awscdk.services.securityhub.CfnHub.Builder.create(scope, id)
 
-    public override fun autoEnableControls(autoEnableControls: Boolean) {
+    override fun autoEnableControls(autoEnableControls: Boolean) {
       cdkBuilder.autoEnableControls(autoEnableControls)
     }
 
-    public override fun autoEnableControls(autoEnableControls: IResolvable) {
+    override fun autoEnableControls(autoEnableControls: IResolvable) {
       cdkBuilder.autoEnableControls(autoEnableControls.let(IResolvable::unwrap))
     }
 
-    public override fun controlFindingGenerator(controlFindingGenerator: String) {
+    override fun controlFindingGenerator(controlFindingGenerator: String) {
       cdkBuilder.controlFindingGenerator(controlFindingGenerator)
     }
 
-    public override fun enableDefaultStandards(enableDefaultStandards: Boolean) {
+    override fun enableDefaultStandards(enableDefaultStandards: Boolean) {
       cdkBuilder.enableDefaultStandards(enableDefaultStandards)
     }
 
-    public override fun enableDefaultStandards(enableDefaultStandards: IResolvable) {
+    override fun enableDefaultStandards(enableDefaultStandards: IResolvable) {
       cdkBuilder.enableDefaultStandards(enableDefaultStandards.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 

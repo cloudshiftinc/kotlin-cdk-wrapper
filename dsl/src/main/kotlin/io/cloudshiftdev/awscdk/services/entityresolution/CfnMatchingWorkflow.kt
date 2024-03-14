@@ -94,41 +94,30 @@ public open class CfnMatchingWorkflow internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun inputSourceConfig(inputSourceConfig: IResolvable) {
-    }
+    public fun inputSourceConfig(inputSourceConfig: IResolvable)
 
-    public fun inputSourceConfig(inputSourceConfig: List<Any>) {
-    }
+    public fun inputSourceConfig(inputSourceConfig: List<Any>)
 
-    public fun outputSourceConfig(outputSourceConfig: IResolvable) {
-    }
+    public fun outputSourceConfig(outputSourceConfig: IResolvable)
 
-    public fun outputSourceConfig(outputSourceConfig: List<Any>) {
-    }
+    public fun outputSourceConfig(outputSourceConfig: List<Any>)
 
-    public fun resolutionTechniques(resolutionTechniques: IResolvable) {
-    }
+    public fun resolutionTechniques(resolutionTechniques: IResolvable)
 
-    public fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty) {
-    }
+    public fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a12242bc1b27d8c9689dda0dfefcf5d7fd966f70e529f3e77333e4b94f1a9f0e")
     public
-        fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty.Builder.() -> Unit) {
-    }
+        fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty.Builder.() -> Unit)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workflowName(workflowName: String) {
-    }
+    public fun workflowName(workflowName: String)
   }
 
   private class BuilderImpl(
@@ -140,49 +129,49 @@ public open class CfnMatchingWorkflow internal constructor(
         software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun inputSourceConfig(inputSourceConfig: IResolvable) {
+    override fun inputSourceConfig(inputSourceConfig: IResolvable) {
       cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override fun inputSourceConfig(inputSourceConfig: List<Any>) {
+    override fun inputSourceConfig(inputSourceConfig: List<Any>) {
       cdkBuilder.inputSourceConfig(inputSourceConfig)
     }
 
-    public override fun outputSourceConfig(outputSourceConfig: IResolvable) {
+    override fun outputSourceConfig(outputSourceConfig: IResolvable) {
       cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override fun outputSourceConfig(outputSourceConfig: List<Any>) {
+    override fun outputSourceConfig(outputSourceConfig: List<Any>) {
       cdkBuilder.outputSourceConfig(outputSourceConfig)
     }
 
-    public override fun resolutionTechniques(resolutionTechniques: IResolvable) {
+    override fun resolutionTechniques(resolutionTechniques: IResolvable) {
       cdkBuilder.resolutionTechniques(resolutionTechniques.let(IResolvable::unwrap))
     }
 
-    public override fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty) {
+    override fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty) {
       cdkBuilder.resolutionTechniques(resolutionTechniques.let(ResolutionTechniquesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a12242bc1b27d8c9689dda0dfefcf5d7fd966f70e529f3e77333e4b94f1a9f0e")
-    public override
+    override
         fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty.Builder.() -> Unit):
         Unit = resolutionTechniques(ResolutionTechniquesProperty(resolutionTechniques))
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workflowName(workflowName: String) {
+    override fun workflowName(workflowName: String) {
       cdkBuilder.workflowName(workflowName)
     }
 
@@ -218,14 +207,11 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun rules(): Any
 
     public interface Builder {
-      public fun attributeMatchingModel(attributeMatchingModel: String) {
-      }
+      public fun attributeMatchingModel(attributeMatchingModel: String)
 
-      public fun rules(rules: IResolvable) {
-      }
+      public fun rules(rules: IResolvable)
 
-      public fun rules(rules: List<Any>) {
-      }
+      public fun rules(rules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -234,15 +220,15 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty.builder()
 
-      public override fun attributeMatchingModel(attributeMatchingModel: String) {
+      override fun attributeMatchingModel(attributeMatchingModel: String) {
         cdkBuilder.attributeMatchingModel(attributeMatchingModel)
       }
 
-      public override fun rules(rules: IResolvable) {
+      override fun rules(rules: IResolvable) {
         cdkBuilder.rules(rules.let(IResolvable::unwrap))
       }
 
-      public override fun rules(rules: List<Any>) {
+      override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
 
@@ -255,10 +241,9 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty,
     ) : RuleBasedPropertiesProperty {
-      public override fun attributeMatchingModel(): String =
-          unwrap(this).getAttributeMatchingModel()
+      override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
 
-      public override fun rules(): Any = unwrap(this).getRules()
+      override fun rules(): Any = unwrap(this).getRules()
     }
 
     public companion object {
@@ -291,23 +276,17 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun outputS3Path(): String
 
     public interface Builder {
-      public fun applyNormalization(applyNormalization: Boolean) {
-      }
+      public fun applyNormalization(applyNormalization: Boolean)
 
-      public fun applyNormalization(applyNormalization: IResolvable) {
-      }
+      public fun applyNormalization(applyNormalization: IResolvable)
 
-      public fun kmsArn(kmsArn: String) {
-      }
+      public fun kmsArn(kmsArn: String)
 
-      public fun output(output: IResolvable) {
-      }
+      public fun output(output: IResolvable)
 
-      public fun output(output: List<Any>) {
-      }
+      public fun output(output: List<Any>)
 
-      public fun outputS3Path(outputS3Path: String) {
-      }
+      public fun outputS3Path(outputS3Path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -316,27 +295,27 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty.builder()
 
-      public override fun applyNormalization(applyNormalization: Boolean) {
+      override fun applyNormalization(applyNormalization: Boolean) {
         cdkBuilder.applyNormalization(applyNormalization)
       }
 
-      public override fun applyNormalization(applyNormalization: IResolvable) {
+      override fun applyNormalization(applyNormalization: IResolvable) {
         cdkBuilder.applyNormalization(applyNormalization.let(IResolvable::unwrap))
       }
 
-      public override fun kmsArn(kmsArn: String) {
+      override fun kmsArn(kmsArn: String) {
         cdkBuilder.kmsArn(kmsArn)
       }
 
-      public override fun output(output: IResolvable) {
+      override fun output(output: IResolvable) {
         cdkBuilder.output(output.let(IResolvable::unwrap))
       }
 
-      public override fun output(output: List<Any>) {
+      override fun output(output: List<Any>) {
         cdkBuilder.output(output)
       }
 
-      public override fun outputS3Path(outputS3Path: String) {
+      override fun outputS3Path(outputS3Path: String) {
         cdkBuilder.outputS3Path(outputS3Path)
       }
 
@@ -349,13 +328,13 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputSourceProperty,
     ) : OutputSourceProperty {
-      public override fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
+      override fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
 
-      public override fun kmsArn(): String? = unwrap(this).getKmsArn()
+      override fun kmsArn(): String? = unwrap(this).getKmsArn()
 
-      public override fun output(): Any = unwrap(this).getOutput()
+      override fun output(): Any = unwrap(this).getOutput()
 
-      public override fun outputS3Path(): String = unwrap(this).getOutputS3Path()
+      override fun outputS3Path(): String = unwrap(this).getOutputS3Path()
     }
 
     public companion object {
@@ -387,27 +366,21 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun providerServiceArn(): String
 
     public interface Builder {
-      public fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
-      }
+      public fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable)
 
       public
-          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty) {
-      }
+          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44b6a1a49cdb72077c62dd50da4e7abffc10e54d5ad4313fd78ba4abdc5b1a15")
       public
-          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty.Builder.() -> Unit)
 
-      public fun providerConfiguration(providerConfiguration: IResolvable) {
-      }
+      public fun providerConfiguration(providerConfiguration: IResolvable)
 
-      public fun providerConfiguration(providerConfiguration: Map<String, String>) {
-      }
+      public fun providerConfiguration(providerConfiguration: Map<String, String>)
 
-      public fun providerServiceArn(providerServiceArn: String) {
-      }
+      public fun providerServiceArn(providerServiceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -416,32 +389,31 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty.builder()
 
-      public override
-          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
+      override fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
         cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty) {
         cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IntermediateSourceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44b6a1a49cdb72077c62dd50da4e7abffc10e54d5ad4313fd78ba4abdc5b1a15")
-      public override
+      override
           fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty.Builder.() -> Unit):
           Unit =
           intermediateSourceConfiguration(IntermediateSourceConfigurationProperty(intermediateSourceConfiguration))
 
-      public override fun providerConfiguration(providerConfiguration: IResolvable) {
+      override fun providerConfiguration(providerConfiguration: IResolvable) {
         cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun providerConfiguration(providerConfiguration: Map<String, String>) {
+      override fun providerConfiguration(providerConfiguration: Map<String, String>) {
         cdkBuilder.providerConfiguration(providerConfiguration)
       }
 
-      public override fun providerServiceArn(providerServiceArn: String) {
+      override fun providerServiceArn(providerServiceArn: String) {
         cdkBuilder.providerServiceArn(providerServiceArn)
       }
 
@@ -454,12 +426,12 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ProviderPropertiesProperty,
     ) : ProviderPropertiesProperty {
-      public override fun intermediateSourceConfiguration(): Any? =
+      override fun intermediateSourceConfiguration(): Any? =
           unwrap(this).getIntermediateSourceConfiguration()
 
-      public override fun providerConfiguration(): Any? = unwrap(this).getProviderConfiguration()
+      override fun providerConfiguration(): Any? = unwrap(this).getProviderConfiguration()
 
-      public override fun providerServiceArn(): String = unwrap(this).getProviderServiceArn()
+      override fun providerServiceArn(): String = unwrap(this).getProviderServiceArn()
     }
 
     public companion object {
@@ -490,32 +462,25 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
 
     public interface Builder {
-      public fun providerProperties(providerProperties: IResolvable) {
-      }
+      public fun providerProperties(providerProperties: IResolvable)
 
-      public fun providerProperties(providerProperties: ProviderPropertiesProperty) {
-      }
+      public fun providerProperties(providerProperties: ProviderPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e1873bb6790a95692a48ecbe2d02211a68fb7e870f066de197064e5211312d4")
       public
-          fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit)
 
-      public fun resolutionType(resolutionType: String) {
-      }
+      public fun resolutionType(resolutionType: String)
 
-      public fun ruleBasedProperties(ruleBasedProperties: IResolvable) {
-      }
+      public fun ruleBasedProperties(ruleBasedProperties: IResolvable)
 
-      public fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty) {
-      }
+      public fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1e25091e8a97032b2c448c5ce58b3d554750bdc070d7440d4c6c2bf477344024")
       public
-          fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -524,35 +489,35 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty.builder()
 
-      public override fun providerProperties(providerProperties: IResolvable) {
+      override fun providerProperties(providerProperties: IResolvable) {
         cdkBuilder.providerProperties(providerProperties.let(IResolvable::unwrap))
       }
 
-      public override fun providerProperties(providerProperties: ProviderPropertiesProperty) {
+      override fun providerProperties(providerProperties: ProviderPropertiesProperty) {
         cdkBuilder.providerProperties(providerProperties.let(ProviderPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e1873bb6790a95692a48ecbe2d02211a68fb7e870f066de197064e5211312d4")
-      public override
+      override
           fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit):
           Unit = providerProperties(ProviderPropertiesProperty(providerProperties))
 
-      public override fun resolutionType(resolutionType: String) {
+      override fun resolutionType(resolutionType: String) {
         cdkBuilder.resolutionType(resolutionType)
       }
 
-      public override fun ruleBasedProperties(ruleBasedProperties: IResolvable) {
+      override fun ruleBasedProperties(ruleBasedProperties: IResolvable) {
         cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(IResolvable::unwrap))
       }
 
-      public override fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty) {
+      override fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty) {
         cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(RuleBasedPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1e25091e8a97032b2c448c5ce58b3d554750bdc070d7440d4c6c2bf477344024")
-      public override
+      override
           fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty.Builder.() -> Unit):
           Unit = ruleBasedProperties(RuleBasedPropertiesProperty(ruleBasedProperties))
 
@@ -565,11 +530,11 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.ResolutionTechniquesProperty,
     ) : ResolutionTechniquesProperty {
-      public override fun providerProperties(): Any? = unwrap(this).getProviderProperties()
+      override fun providerProperties(): Any? = unwrap(this).getProviderProperties()
 
-      public override fun resolutionType(): String? = unwrap(this).getResolutionType()
+      override fun resolutionType(): String? = unwrap(this).getResolutionType()
 
-      public override fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
+      override fun ruleBasedProperties(): Any? = unwrap(this).getRuleBasedProperties()
     }
 
     public companion object {
@@ -600,17 +565,13 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun schemaArn(): String
 
     public interface Builder {
-      public fun applyNormalization(applyNormalization: Boolean) {
-      }
+      public fun applyNormalization(applyNormalization: Boolean)
 
-      public fun applyNormalization(applyNormalization: IResolvable) {
-      }
+      public fun applyNormalization(applyNormalization: IResolvable)
 
-      public fun inputSourceArn(inputSourceArn: String) {
-      }
+      public fun inputSourceArn(inputSourceArn: String)
 
-      public fun schemaArn(schemaArn: String) {
-      }
+      public fun schemaArn(schemaArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -619,19 +580,19 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty.builder()
 
-      public override fun applyNormalization(applyNormalization: Boolean) {
+      override fun applyNormalization(applyNormalization: Boolean) {
         cdkBuilder.applyNormalization(applyNormalization)
       }
 
-      public override fun applyNormalization(applyNormalization: IResolvable) {
+      override fun applyNormalization(applyNormalization: IResolvable) {
         cdkBuilder.applyNormalization(applyNormalization.let(IResolvable::unwrap))
       }
 
-      public override fun inputSourceArn(inputSourceArn: String) {
+      override fun inputSourceArn(inputSourceArn: String) {
         cdkBuilder.inputSourceArn(inputSourceArn)
       }
 
-      public override fun schemaArn(schemaArn: String) {
+      override fun schemaArn(schemaArn: String) {
         cdkBuilder.schemaArn(schemaArn)
       }
 
@@ -644,11 +605,11 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.InputSourceProperty,
     ) : InputSourceProperty {
-      public override fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
+      override fun applyNormalization(): Any? = unwrap(this).getApplyNormalization()
 
-      public override fun inputSourceArn(): String = unwrap(this).getInputSourceArn()
+      override fun inputSourceArn(): String = unwrap(this).getInputSourceArn()
 
-      public override fun schemaArn(): String = unwrap(this).getSchemaArn()
+      override fun schemaArn(): String = unwrap(this).getSchemaArn()
     }
 
     public companion object {
@@ -675,8 +636,7 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun intermediateS3Path(): String
 
     public interface Builder {
-      public fun intermediateS3Path(intermediateS3Path: String) {
-      }
+      public fun intermediateS3Path(intermediateS3Path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -685,7 +645,7 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty.builder()
 
-      public override fun intermediateS3Path(intermediateS3Path: String) {
+      override fun intermediateS3Path(intermediateS3Path: String) {
         cdkBuilder.intermediateS3Path(intermediateS3Path)
       }
 
@@ -698,7 +658,7 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.IntermediateSourceConfigurationProperty,
     ) : IntermediateSourceConfigurationProperty {
-      public override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
+      override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
     }
 
     public companion object {
@@ -728,14 +688,11 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun hashed(hashed: Boolean) {
-      }
+      public fun hashed(hashed: Boolean)
 
-      public fun hashed(hashed: IResolvable) {
-      }
+      public fun hashed(hashed: IResolvable)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -744,15 +701,15 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty.builder()
 
-      public override fun hashed(hashed: Boolean) {
+      override fun hashed(hashed: Boolean) {
         cdkBuilder.hashed(hashed)
       }
 
-      public override fun hashed(hashed: IResolvable) {
+      override fun hashed(hashed: IResolvable) {
         cdkBuilder.hashed(hashed.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -765,9 +722,9 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.OutputAttributeProperty,
     ) : OutputAttributeProperty {
-      public override fun hashed(): Any? = unwrap(this).getHashed()
+      override fun hashed(): Any? = unwrap(this).getHashed()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -796,11 +753,9 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun ruleName(): String
 
     public interface Builder {
-      public fun matchingKeys(matchingKeys: List<String>) {
-      }
+      public fun matchingKeys(matchingKeys: List<String>)
 
-      public fun ruleName(ruleName: String) {
-      }
+      public fun ruleName(ruleName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -809,11 +764,11 @@ public open class CfnMatchingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty.builder()
 
-      public override fun matchingKeys(matchingKeys: List<String>) {
+      override fun matchingKeys(matchingKeys: List<String>) {
         cdkBuilder.matchingKeys(matchingKeys)
       }
 
-      public override fun ruleName(ruleName: String) {
+      override fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)
       }
 
@@ -826,10 +781,9 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty,
     ) : RuleProperty {
-      public override fun matchingKeys(): List<String> = unwrap(this).getMatchingKeys() ?:
-          emptyList()
+      override fun matchingKeys(): List<String> = unwrap(this).getMatchingKeys() ?: emptyList()
 
-      public override fun ruleName(): String = unwrap(this).getRuleName()
+      override fun ruleName(): String = unwrap(this).getRuleName()
     }
 
     public companion object {

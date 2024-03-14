@@ -30,11 +30,9 @@ public open class CfnSecurityKey internal constructor(
   }
 
   public interface Builder {
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun key(key: String) {
-    }
+    public fun key(key: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnSecurityKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnSecurityKey.Builder =
         software.amazon.awscdk.services.connect.CfnSecurityKey.Builder.create(scope, id)
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun key(key: String) {
+    override fun key(key: String) {
       cdkBuilder.key(key)
     }
 

@@ -12,33 +12,30 @@ public interface ApiDefinitionConfig {
       unwrap(this).getS3Location()?.let(ApiDefinitionS3Location::wrap)
 
   public interface Builder {
-    public fun inlineDefinition(inlineDefinition: Any) {
-    }
+    public fun inlineDefinition(inlineDefinition: Any)
 
-    public fun s3Location(s3Location: ApiDefinitionS3Location) {
-    }
+    public fun s3Location(s3Location: ApiDefinitionS3Location)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4eceb3142d927046d2ff9f8c231ea40847b258880f47c118a3b88b7a29b4b7d7")
-    public fun s3Location(s3Location: ApiDefinitionS3Location.Builder.() -> Unit) {
-    }
+    public fun s3Location(s3Location: ApiDefinitionS3Location.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig.Builder =
         software.amazon.awscdk.services.apigateway.ApiDefinitionConfig.builder()
 
-    public override fun inlineDefinition(inlineDefinition: Any) {
+    override fun inlineDefinition(inlineDefinition: Any) {
       cdkBuilder.inlineDefinition(inlineDefinition)
     }
 
-    public override fun s3Location(s3Location: ApiDefinitionS3Location) {
+    override fun s3Location(s3Location: ApiDefinitionS3Location) {
       cdkBuilder.s3Location(s3Location.let(ApiDefinitionS3Location::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4eceb3142d927046d2ff9f8c231ea40847b258880f47c118a3b88b7a29b4b7d7")
-    public override fun s3Location(s3Location: ApiDefinitionS3Location.Builder.() -> Unit): Unit =
+    override fun s3Location(s3Location: ApiDefinitionS3Location.Builder.() -> Unit): Unit =
         s3Location(ApiDefinitionS3Location(s3Location))
 
     public fun build(): software.amazon.awscdk.services.apigateway.ApiDefinitionConfig =
@@ -48,9 +45,9 @@ public interface ApiDefinitionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig,
   ) : ApiDefinitionConfig {
-    public override fun inlineDefinition(): Any? = unwrap(this).getInlineDefinition()
+    override fun inlineDefinition(): Any? = unwrap(this).getInlineDefinition()
 
-    public override fun s3Location(): ApiDefinitionS3Location? =
+    override fun s3Location(): ApiDefinitionS3Location? =
         unwrap(this).getS3Location()?.let(ApiDefinitionS3Location::wrap)
   }
 

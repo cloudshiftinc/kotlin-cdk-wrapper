@@ -102,35 +102,25 @@ public open class CfnResolverEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun direction(direction: String) {
-    }
+    public fun direction(direction: String)
 
-    public fun ipAddresses(ipAddresses: IResolvable) {
-    }
+    public fun ipAddresses(ipAddresses: IResolvable)
 
-    public fun ipAddresses(ipAddresses: List<Any>) {
-    }
+    public fun ipAddresses(ipAddresses: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outpostArn(outpostArn: String) {
-    }
+    public fun outpostArn(outpostArn: String)
 
-    public fun preferredInstanceType(preferredInstanceType: String) {
-    }
+    public fun preferredInstanceType(preferredInstanceType: String)
 
-    public fun protocols(protocols: List<String>) {
-    }
+    public fun protocols(protocols: List<String>)
 
-    public fun resolverEndpointType(resolverEndpointType: String) {
-    }
+    public fun resolverEndpointType(resolverEndpointType: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -142,43 +132,43 @@ public open class CfnResolverEndpoint internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.Builder.create(scope,
         id)
 
-    public override fun direction(direction: String) {
+    override fun direction(direction: String) {
       cdkBuilder.direction(direction)
     }
 
-    public override fun ipAddresses(ipAddresses: IResolvable) {
+    override fun ipAddresses(ipAddresses: IResolvable) {
       cdkBuilder.ipAddresses(ipAddresses.let(IResolvable::unwrap))
     }
 
-    public override fun ipAddresses(ipAddresses: List<Any>) {
+    override fun ipAddresses(ipAddresses: List<Any>) {
       cdkBuilder.ipAddresses(ipAddresses)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outpostArn(outpostArn: String) {
+    override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
 
-    public override fun preferredInstanceType(preferredInstanceType: String) {
+    override fun preferredInstanceType(preferredInstanceType: String) {
       cdkBuilder.preferredInstanceType(preferredInstanceType)
     }
 
-    public override fun protocols(protocols: List<String>) {
+    override fun protocols(protocols: List<String>) {
       cdkBuilder.protocols(protocols)
     }
 
-    public override fun resolverEndpointType(resolverEndpointType: String) {
+    override fun resolverEndpointType(resolverEndpointType: String) {
       cdkBuilder.resolverEndpointType(resolverEndpointType)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -216,14 +206,11 @@ public open class CfnResolverEndpoint internal constructor(
     public fun subnetId(): String
 
     public interface Builder {
-      public fun ip(ip: String) {
-      }
+      public fun ip(ip: String)
 
-      public fun ipv6(ipv6: String) {
-      }
+      public fun ipv6(ipv6: String)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -232,15 +219,15 @@ public open class CfnResolverEndpoint internal constructor(
           =
           software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty.builder()
 
-      public override fun ip(ip: String) {
+      override fun ip(ip: String) {
         cdkBuilder.ip(ip)
       }
 
-      public override fun ipv6(ipv6: String) {
+      override fun ipv6(ipv6: String) {
         cdkBuilder.ipv6(ipv6)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -253,11 +240,11 @@ public open class CfnResolverEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty,
     ) : IpAddressRequestProperty {
-      public override fun ip(): String? = unwrap(this).getIp()
+      override fun ip(): String? = unwrap(this).getIp()
 
-      public override fun ipv6(): String? = unwrap(this).getIpv6()
+      override fun ipv6(): String? = unwrap(this).getIpv6()
 
-      public override fun subnetId(): String = unwrap(this).getSubnetId()
+      override fun subnetId(): String = unwrap(this).getSubnetId()
     }
 
     public companion object {

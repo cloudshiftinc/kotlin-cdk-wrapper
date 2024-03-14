@@ -14,15 +14,15 @@ public interface ISchemaConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.ISchemaConfig,
   ) : ISchemaConfig {
-    public override fun apiId(): String = unwrap(this).getApiId()
+    override fun apiId(): String = unwrap(this).getApiId()
 
-    public override fun apiId(arg0: String) {
+    override fun apiId(arg0: String) {
       unwrap(this).setApiId(arg0)
     }
 
-    public override fun definition(): String = unwrap(this).getDefinition()
+    override fun definition(): String = unwrap(this).getDefinition()
 
-    public override fun definition(arg0: String) {
+    override fun definition(arg0: String) {
       unwrap(this).setDefinition(arg0)
     }
   }

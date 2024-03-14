@@ -170,104 +170,76 @@ public open class CfnDataSource internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun dynamoDbConfig(dynamoDbConfig: IResolvable) {
-    }
+    public fun dynamoDbConfig(dynamoDbConfig: IResolvable)
 
-    public fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty) {
-    }
+    public fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0bf043b8a0324e8cba83c896eb3b8de672374ba174fe1c1840e63db4787ab86d")
-    public fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty.Builder.() -> Unit)
 
-    public fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
-    }
+    public fun elasticsearchConfig(elasticsearchConfig: IResolvable)
 
-    public fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty) {
-    }
+    public fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af23ba3c1884605cbefd293bf604520c0a4999decc3132972519ce6c8f566eec")
     public
-        fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty.Builder.() -> Unit) {
-    }
+        fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty.Builder.() -> Unit)
 
-    public fun eventBridgeConfig(eventBridgeConfig: IResolvable) {
-    }
+    public fun eventBridgeConfig(eventBridgeConfig: IResolvable)
 
-    public fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty) {
-    }
+    public fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4c74ddc3490714ef3189129995dee44bb1ca9c7bfba1a9a6bdb7d2451070dd2")
-    public fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty.Builder.() -> Unit) {
-    }
+    public fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty.Builder.() -> Unit)
 
-    public fun httpConfig(httpConfig: IResolvable) {
-    }
+    public fun httpConfig(httpConfig: IResolvable)
 
-    public fun httpConfig(httpConfig: HttpConfigProperty) {
-    }
+    public fun httpConfig(httpConfig: HttpConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e08d6ea4ca692be29a521d63c170735c9a43cec6600bce9728f00b25dfbf0908")
-    public fun httpConfig(httpConfig: HttpConfigProperty.Builder.() -> Unit) {
-    }
+    public fun httpConfig(httpConfig: HttpConfigProperty.Builder.() -> Unit)
 
-    public fun lambdaConfig(lambdaConfig: IResolvable) {
-    }
+    public fun lambdaConfig(lambdaConfig: IResolvable)
 
-    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
-    }
+    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b061edee103eb893f92d9a14bc5d5ef3ed457c5565af3b903d8cf4377662d99b")
-    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit) {
-    }
+    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit)
 
-    public fun metricsConfig(metricsConfig: String) {
-    }
+    public fun metricsConfig(metricsConfig: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun openSearchServiceConfig(openSearchServiceConfig: IResolvable) {
-    }
+    public fun openSearchServiceConfig(openSearchServiceConfig: IResolvable)
 
-    public fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty) {
-    }
+    public fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7db0304fb68d98d60026fc85293012ba30cd0ea0ae55a233747776aa47fc0734")
     public
-        fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty.Builder.() -> Unit) {
-    }
+        fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty.Builder.() -> Unit)
 
-    public fun relationalDatabaseConfig(relationalDatabaseConfig: IResolvable) {
-    }
+    public fun relationalDatabaseConfig(relationalDatabaseConfig: IResolvable)
 
-    public
-        fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty) {
-    }
+    public fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1744480542680fc4bd2c859423c6a216f70f90bec2eb184b72ad0c1660b5243")
     public
-        fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty.Builder.() -> Unit) {
-    }
+        fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty.Builder.() -> Unit)
 
-    public fun serviceRoleArn(serviceRoleArn: String) {
-    }
+    public fun serviceRoleArn(serviceRoleArn: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -277,124 +249,122 @@ public open class CfnDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnDataSource.Builder =
         software.amazon.awscdk.services.appsync.CfnDataSource.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun dynamoDbConfig(dynamoDbConfig: IResolvable) {
+    override fun dynamoDbConfig(dynamoDbConfig: IResolvable) {
       cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(IResolvable::unwrap))
     }
 
-    public override fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty) {
+    override fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty) {
       cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(DynamoDBConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0bf043b8a0324e8cba83c896eb3b8de672374ba174fe1c1840e63db4787ab86d")
-    public override fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty.Builder.() -> Unit):
-        Unit = dynamoDbConfig(DynamoDBConfigProperty(dynamoDbConfig))
+    override fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty.Builder.() -> Unit): Unit =
+        dynamoDbConfig(DynamoDBConfigProperty(dynamoDbConfig))
 
-    public override fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
+    override fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
       cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable::unwrap))
     }
 
-    public override fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty) {
+    override fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty) {
       cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(ElasticsearchConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af23ba3c1884605cbefd293bf604520c0a4999decc3132972519ce6c8f566eec")
-    public override
+    override
         fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty.Builder.() -> Unit):
         Unit = elasticsearchConfig(ElasticsearchConfigProperty(elasticsearchConfig))
 
-    public override fun eventBridgeConfig(eventBridgeConfig: IResolvable) {
+    override fun eventBridgeConfig(eventBridgeConfig: IResolvable) {
       cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(IResolvable::unwrap))
     }
 
-    public override fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty) {
+    override fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty) {
       cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(EventBridgeConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4c74ddc3490714ef3189129995dee44bb1ca9c7bfba1a9a6bdb7d2451070dd2")
-    public override
-        fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty.Builder.() -> Unit): Unit
-        = eventBridgeConfig(EventBridgeConfigProperty(eventBridgeConfig))
+    override fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty.Builder.() -> Unit):
+        Unit = eventBridgeConfig(EventBridgeConfigProperty(eventBridgeConfig))
 
-    public override fun httpConfig(httpConfig: IResolvable) {
+    override fun httpConfig(httpConfig: IResolvable) {
       cdkBuilder.httpConfig(httpConfig.let(IResolvable::unwrap))
     }
 
-    public override fun httpConfig(httpConfig: HttpConfigProperty) {
+    override fun httpConfig(httpConfig: HttpConfigProperty) {
       cdkBuilder.httpConfig(httpConfig.let(HttpConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e08d6ea4ca692be29a521d63c170735c9a43cec6600bce9728f00b25dfbf0908")
-    public override fun httpConfig(httpConfig: HttpConfigProperty.Builder.() -> Unit): Unit =
+    override fun httpConfig(httpConfig: HttpConfigProperty.Builder.() -> Unit): Unit =
         httpConfig(HttpConfigProperty(httpConfig))
 
-    public override fun lambdaConfig(lambdaConfig: IResolvable) {
+    override fun lambdaConfig(lambdaConfig: IResolvable) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
     }
 
-    public override fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
+    override fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(LambdaConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b061edee103eb893f92d9a14bc5d5ef3ed457c5565af3b903d8cf4377662d99b")
-    public override fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit): Unit =
+    override fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit): Unit =
         lambdaConfig(LambdaConfigProperty(lambdaConfig))
 
-    public override fun metricsConfig(metricsConfig: String) {
+    override fun metricsConfig(metricsConfig: String) {
       cdkBuilder.metricsConfig(metricsConfig)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun openSearchServiceConfig(openSearchServiceConfig: IResolvable) {
+    override fun openSearchServiceConfig(openSearchServiceConfig: IResolvable) {
       cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty) {
+    override fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty) {
       cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(OpenSearchServiceConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7db0304fb68d98d60026fc85293012ba30cd0ea0ae55a233747776aa47fc0734")
-    public override
+    override
         fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty.Builder.() -> Unit):
         Unit = openSearchServiceConfig(OpenSearchServiceConfigProperty(openSearchServiceConfig))
 
-    public override fun relationalDatabaseConfig(relationalDatabaseConfig: IResolvable) {
+    override fun relationalDatabaseConfig(relationalDatabaseConfig: IResolvable) {
       cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty) {
       cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(RelationalDatabaseConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1744480542680fc4bd2c859423c6a216f70f90bec2eb184b72ad0c1660b5243")
-    public override
+    override
         fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty.Builder.() -> Unit):
         Unit = relationalDatabaseConfig(RelationalDatabaseConfigProperty(relationalDatabaseConfig))
 
-    public override fun serviceRoleArn(serviceRoleArn: String) {
+    override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -428,20 +398,16 @@ public open class CfnDataSource internal constructor(
     public fun endpoint(): String
 
     public interface Builder {
-      public fun authorizationConfig(authorizationConfig: IResolvable) {
-      }
+      public fun authorizationConfig(authorizationConfig: IResolvable)
 
-      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-      }
+      public fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9900f5245e9541abfe09c6a72be99e3d73b35739de732b27e104b26649a924fd")
       public
-          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit) {
-      }
+          fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit)
 
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -449,21 +415,21 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty.builder()
 
-      public override fun authorizationConfig(authorizationConfig: IResolvable) {
+      override fun authorizationConfig(authorizationConfig: IResolvable) {
         cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
       }
 
-      public override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
+      override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
         cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9900f5245e9541abfe09c6a72be99e3d73b35739de732b27e104b26649a924fd")
-      public override
+      override
           fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty.Builder.() -> Unit):
           Unit = authorizationConfig(AuthorizationConfigProperty(authorizationConfig))
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
@@ -475,9 +441,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.HttpConfigProperty,
     ) : HttpConfigProperty {
-      public override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
 
-      public override fun endpoint(): String = unwrap(this).getEndpoint()
+      override fun endpoint(): String = unwrap(this).getEndpoint()
     }
 
     public companion object {
@@ -506,19 +472,15 @@ public open class CfnDataSource internal constructor(
     public fun awsIamConfig(): Any? = unwrap(this).getAwsIamConfig()
 
     public interface Builder {
-      public fun authorizationType(authorizationType: String) {
-      }
+      public fun authorizationType(authorizationType: String)
 
-      public fun awsIamConfig(awsIamConfig: IResolvable) {
-      }
+      public fun awsIamConfig(awsIamConfig: IResolvable)
 
-      public fun awsIamConfig(awsIamConfig: AwsIamConfigProperty) {
-      }
+      public fun awsIamConfig(awsIamConfig: AwsIamConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e361c77d7cd39b00648a85be5e24e1d444972385f26641485f260026656be75")
-      public fun awsIamConfig(awsIamConfig: AwsIamConfigProperty.Builder.() -> Unit) {
-      }
+      public fun awsIamConfig(awsIamConfig: AwsIamConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -527,22 +489,22 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty.builder()
 
-      public override fun authorizationType(authorizationType: String) {
+      override fun authorizationType(authorizationType: String) {
         cdkBuilder.authorizationType(authorizationType)
       }
 
-      public override fun awsIamConfig(awsIamConfig: IResolvable) {
+      override fun awsIamConfig(awsIamConfig: IResolvable) {
         cdkBuilder.awsIamConfig(awsIamConfig.let(IResolvable::unwrap))
       }
 
-      public override fun awsIamConfig(awsIamConfig: AwsIamConfigProperty) {
+      override fun awsIamConfig(awsIamConfig: AwsIamConfigProperty) {
         cdkBuilder.awsIamConfig(awsIamConfig.let(AwsIamConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e361c77d7cd39b00648a85be5e24e1d444972385f26641485f260026656be75")
-      public override fun awsIamConfig(awsIamConfig: AwsIamConfigProperty.Builder.() -> Unit): Unit
-          = awsIamConfig(AwsIamConfigProperty(awsIamConfig))
+      override fun awsIamConfig(awsIamConfig: AwsIamConfigProperty.Builder.() -> Unit): Unit =
+          awsIamConfig(AwsIamConfigProperty(awsIamConfig))
 
       public fun build():
           software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty =
@@ -553,9 +515,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.AuthorizationConfigProperty,
     ) : AuthorizationConfigProperty {
-      public override fun authorizationType(): String = unwrap(this).getAuthorizationType()
+      override fun authorizationType(): String = unwrap(this).getAuthorizationType()
 
-      public override fun awsIamConfig(): Any? = unwrap(this).getAwsIamConfig()
+      override fun awsIamConfig(): Any? = unwrap(this).getAwsIamConfig()
     }
 
     public companion object {
@@ -582,8 +544,7 @@ public open class CfnDataSource internal constructor(
     public fun eventBusArn(): String
 
     public interface Builder {
-      public fun eventBusArn(eventBusArn: String) {
-      }
+      public fun eventBusArn(eventBusArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -591,7 +552,7 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty.builder()
 
-      public override fun eventBusArn(eventBusArn: String) {
+      override fun eventBusArn(eventBusArn: String) {
         cdkBuilder.eventBusArn(eventBusArn)
       }
 
@@ -604,7 +565,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.EventBridgeConfigProperty,
     ) : EventBridgeConfigProperty {
-      public override fun eventBusArn(): String = unwrap(this).getEventBusArn()
+      override fun eventBusArn(): String = unwrap(this).getEventBusArn()
     }
 
     public companion object {
@@ -633,20 +594,16 @@ public open class CfnDataSource internal constructor(
     public fun relationalDatabaseSourceType(): String
 
     public interface Builder {
-      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
-      }
+      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable)
 
-      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty) {
-      }
+      public fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b0c0e1a030f7709ef41b4271ecea3609f7962dfd162d9b4ff87849ef4d907eab")
       public
-          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit) {
-      }
+          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit)
 
-      public fun relationalDatabaseSourceType(relationalDatabaseSourceType: String) {
-      }
+      public fun relationalDatabaseSourceType(relationalDatabaseSourceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -655,22 +612,21 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty.builder()
 
-      public override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
+      override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
         cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty) {
+      override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty) {
         cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(RdsHttpEndpointConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b0c0e1a030f7709ef41b4271ecea3609f7962dfd162d9b4ff87849ef4d907eab")
-      public override
+      override
           fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty.Builder.() -> Unit):
           Unit = rdsHttpEndpointConfig(RdsHttpEndpointConfigProperty(rdsHttpEndpointConfig))
 
-      public override fun relationalDatabaseSourceType(relationalDatabaseSourceType: String) {
+      override fun relationalDatabaseSourceType(relationalDatabaseSourceType: String) {
         cdkBuilder.relationalDatabaseSourceType(relationalDatabaseSourceType)
       }
 
@@ -683,9 +639,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.RelationalDatabaseConfigProperty,
     ) : RelationalDatabaseConfigProperty {
-      public override fun rdsHttpEndpointConfig(): Any? = unwrap(this).getRdsHttpEndpointConfig()
+      override fun rdsHttpEndpointConfig(): Any? = unwrap(this).getRdsHttpEndpointConfig()
 
-      public override fun relationalDatabaseSourceType(): String =
+      override fun relationalDatabaseSourceType(): String =
           unwrap(this).getRelationalDatabaseSourceType()
     }
 
@@ -715,11 +671,9 @@ public open class CfnDataSource internal constructor(
     public fun endpoint(): String
 
     public interface Builder {
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -728,11 +682,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty.builder()
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
@@ -745,9 +699,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.OpenSearchServiceConfigProperty,
     ) : OpenSearchServiceConfigProperty {
-      public override fun awsRegion(): String = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String = unwrap(this).getAwsRegion()
 
-      public override fun endpoint(): String = unwrap(this).getEndpoint()
+      override fun endpoint(): String = unwrap(this).getEndpoint()
     }
 
     public companion object {
@@ -776,11 +730,9 @@ public open class CfnDataSource internal constructor(
     public fun signingServiceName(): String? = unwrap(this).getSigningServiceName()
 
     public interface Builder {
-      public fun signingRegion(signingRegion: String) {
-      }
+      public fun signingRegion(signingRegion: String)
 
-      public fun signingServiceName(signingServiceName: String) {
-      }
+      public fun signingServiceName(signingServiceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -788,11 +740,11 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty.builder()
 
-      public override fun signingRegion(signingRegion: String) {
+      override fun signingRegion(signingRegion: String) {
         cdkBuilder.signingRegion(signingRegion)
       }
 
-      public override fun signingServiceName(signingServiceName: String) {
+      override fun signingServiceName(signingServiceName: String) {
         cdkBuilder.signingServiceName(signingServiceName)
       }
 
@@ -804,9 +756,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.AwsIamConfigProperty,
     ) : AwsIamConfigProperty {
-      public override fun signingRegion(): String? = unwrap(this).getSigningRegion()
+      override fun signingRegion(): String? = unwrap(this).getSigningRegion()
 
-      public override fun signingServiceName(): String? = unwrap(this).getSigningServiceName()
+      override fun signingServiceName(): String? = unwrap(this).getSigningServiceName()
     }
 
     public companion object {
@@ -835,11 +787,9 @@ public open class CfnDataSource internal constructor(
     public fun endpoint(): String
 
     public interface Builder {
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -848,11 +798,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty.builder()
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
@@ -865,9 +815,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.ElasticsearchConfigProperty,
     ) : ElasticsearchConfigProperty {
-      public override fun awsRegion(): String = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String = unwrap(this).getAwsRegion()
 
-      public override fun endpoint(): String = unwrap(this).getEndpoint()
+      override fun endpoint(): String = unwrap(this).getEndpoint()
     }
 
     public companion object {
@@ -898,14 +848,11 @@ public open class CfnDataSource internal constructor(
     public fun deltaSyncTableTtl(): String
 
     public interface Builder {
-      public fun baseTableTtl(baseTableTtl: String) {
-      }
+      public fun baseTableTtl(baseTableTtl: String)
 
-      public fun deltaSyncTableName(deltaSyncTableName: String) {
-      }
+      public fun deltaSyncTableName(deltaSyncTableName: String)
 
-      public fun deltaSyncTableTtl(deltaSyncTableTtl: String) {
-      }
+      public fun deltaSyncTableTtl(deltaSyncTableTtl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -913,15 +860,15 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.DeltaSyncConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnDataSource.DeltaSyncConfigProperty.builder()
 
-      public override fun baseTableTtl(baseTableTtl: String) {
+      override fun baseTableTtl(baseTableTtl: String) {
         cdkBuilder.baseTableTtl(baseTableTtl)
       }
 
-      public override fun deltaSyncTableName(deltaSyncTableName: String) {
+      override fun deltaSyncTableName(deltaSyncTableName: String) {
         cdkBuilder.deltaSyncTableName(deltaSyncTableName)
       }
 
-      public override fun deltaSyncTableTtl(deltaSyncTableTtl: String) {
+      override fun deltaSyncTableTtl(deltaSyncTableTtl: String) {
         cdkBuilder.deltaSyncTableTtl(deltaSyncTableTtl)
       }
 
@@ -934,11 +881,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.DeltaSyncConfigProperty,
     ) : DeltaSyncConfigProperty {
-      public override fun baseTableTtl(): String = unwrap(this).getBaseTableTtl()
+      override fun baseTableTtl(): String = unwrap(this).getBaseTableTtl()
 
-      public override fun deltaSyncTableName(): String = unwrap(this).getDeltaSyncTableName()
+      override fun deltaSyncTableName(): String = unwrap(this).getDeltaSyncTableName()
 
-      public override fun deltaSyncTableTtl(): String = unwrap(this).getDeltaSyncTableTtl()
+      override fun deltaSyncTableTtl(): String = unwrap(this).getDeltaSyncTableTtl()
     }
 
     public companion object {
@@ -973,34 +920,25 @@ public open class CfnDataSource internal constructor(
     public fun versioned(): Any? = unwrap(this).getVersioned()
 
     public interface Builder {
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun deltaSyncConfig(deltaSyncConfig: IResolvable) {
-      }
+      public fun deltaSyncConfig(deltaSyncConfig: IResolvable)
 
-      public fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty) {
-      }
+      public fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1002deaccd15ebe98dae193da399c9a598c2958f044db78528bbe004ff78089")
-      public fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty.Builder.() -> Unit) {
-      }
+      public fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty.Builder.() -> Unit)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
 
-      public fun useCallerCredentials(useCallerCredentials: Boolean) {
-      }
+      public fun useCallerCredentials(useCallerCredentials: Boolean)
 
-      public fun useCallerCredentials(useCallerCredentials: IResolvable) {
-      }
+      public fun useCallerCredentials(useCallerCredentials: IResolvable)
 
-      public fun versioned(versioned: Boolean) {
-      }
+      public fun versioned(versioned: Boolean)
 
-      public fun versioned(versioned: IResolvable) {
-      }
+      public fun versioned(versioned: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1008,41 +946,40 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty.builder()
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun deltaSyncConfig(deltaSyncConfig: IResolvable) {
+      override fun deltaSyncConfig(deltaSyncConfig: IResolvable) {
         cdkBuilder.deltaSyncConfig(deltaSyncConfig.let(IResolvable::unwrap))
       }
 
-      public override fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty) {
+      override fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty) {
         cdkBuilder.deltaSyncConfig(deltaSyncConfig.let(DeltaSyncConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1002deaccd15ebe98dae193da399c9a598c2958f044db78528bbe004ff78089")
-      public override
-          fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty.Builder.() -> Unit): Unit =
-          deltaSyncConfig(DeltaSyncConfigProperty(deltaSyncConfig))
+      override fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty.Builder.() -> Unit):
+          Unit = deltaSyncConfig(DeltaSyncConfigProperty(deltaSyncConfig))
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
-      public override fun useCallerCredentials(useCallerCredentials: Boolean) {
+      override fun useCallerCredentials(useCallerCredentials: Boolean) {
         cdkBuilder.useCallerCredentials(useCallerCredentials)
       }
 
-      public override fun useCallerCredentials(useCallerCredentials: IResolvable) {
+      override fun useCallerCredentials(useCallerCredentials: IResolvable) {
         cdkBuilder.useCallerCredentials(useCallerCredentials.let(IResolvable::unwrap))
       }
 
-      public override fun versioned(versioned: Boolean) {
+      override fun versioned(versioned: Boolean) {
         cdkBuilder.versioned(versioned)
       }
 
-      public override fun versioned(versioned: IResolvable) {
+      override fun versioned(versioned: IResolvable) {
         cdkBuilder.versioned(versioned.let(IResolvable::unwrap))
       }
 
@@ -1055,15 +992,15 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.DynamoDBConfigProperty,
     ) : DynamoDBConfigProperty {
-      public override fun awsRegion(): String = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String = unwrap(this).getAwsRegion()
 
-      public override fun deltaSyncConfig(): Any? = unwrap(this).getDeltaSyncConfig()
+      override fun deltaSyncConfig(): Any? = unwrap(this).getDeltaSyncConfig()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
 
-      public override fun useCallerCredentials(): Any? = unwrap(this).getUseCallerCredentials()
+      override fun useCallerCredentials(): Any? = unwrap(this).getUseCallerCredentials()
 
-      public override fun versioned(): Any? = unwrap(this).getVersioned()
+      override fun versioned(): Any? = unwrap(this).getVersioned()
     }
 
     public companion object {
@@ -1090,8 +1027,7 @@ public open class CfnDataSource internal constructor(
     public fun lambdaFunctionArn(): String
 
     public interface Builder {
-      public fun lambdaFunctionArn(lambdaFunctionArn: String) {
-      }
+      public fun lambdaFunctionArn(lambdaFunctionArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1099,7 +1035,7 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty.Builder =
           software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty.builder()
 
-      public override fun lambdaFunctionArn(lambdaFunctionArn: String) {
+      override fun lambdaFunctionArn(lambdaFunctionArn: String) {
         cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
       }
 
@@ -1111,7 +1047,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.LambdaConfigProperty,
     ) : LambdaConfigProperty {
-      public override fun lambdaFunctionArn(): String = unwrap(this).getLambdaFunctionArn()
+      override fun lambdaFunctionArn(): String = unwrap(this).getLambdaFunctionArn()
     }
 
     public companion object {
@@ -1146,20 +1082,15 @@ public open class CfnDataSource internal constructor(
     public fun schema(): String? = unwrap(this).getSchema()
 
     public interface Builder {
-      public fun awsRegion(awsRegion: String) {
-      }
+      public fun awsRegion(awsRegion: String)
 
-      public fun awsSecretStoreArn(awsSecretStoreArn: String) {
-      }
+      public fun awsSecretStoreArn(awsSecretStoreArn: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-      }
+      public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
-      public fun schema(schema: String) {
-      }
+      public fun schema(schema: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1168,23 +1099,23 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty.builder()
 
-      public override fun awsRegion(awsRegion: String) {
+      override fun awsRegion(awsRegion: String) {
         cdkBuilder.awsRegion(awsRegion)
       }
 
-      public override fun awsSecretStoreArn(awsSecretStoreArn: String) {
+      override fun awsSecretStoreArn(awsSecretStoreArn: String) {
         cdkBuilder.awsSecretStoreArn(awsSecretStoreArn)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun dbClusterIdentifier(dbClusterIdentifier: String) {
+      override fun dbClusterIdentifier(dbClusterIdentifier: String) {
         cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
       }
 
-      public override fun schema(schema: String) {
+      override fun schema(schema: String) {
         cdkBuilder.schema(schema)
       }
 
@@ -1197,15 +1128,15 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnDataSource.RdsHttpEndpointConfigProperty,
     ) : RdsHttpEndpointConfigProperty {
-      public override fun awsRegion(): String = unwrap(this).getAwsRegion()
+      override fun awsRegion(): String = unwrap(this).getAwsRegion()
 
-      public override fun awsSecretStoreArn(): String = unwrap(this).getAwsSecretStoreArn()
+      override fun awsSecretStoreArn(): String = unwrap(this).getAwsSecretStoreArn()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun dbClusterIdentifier(): String = unwrap(this).getDbClusterIdentifier()
+      override fun dbClusterIdentifier(): String = unwrap(this).getDbClusterIdentifier()
 
-      public override fun schema(): String? = unwrap(this).getSchema()
+      override fun schema(): String? = unwrap(this).getSchema()
     }
 
     public companion object {

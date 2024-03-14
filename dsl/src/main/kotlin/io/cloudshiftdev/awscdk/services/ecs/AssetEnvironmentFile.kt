@@ -22,34 +22,25 @@ public open class AssetEnvironmentFile internal constructor(
   public open fun path(): String = unwrap(this).getPath()
 
   public interface Builder {
-    public fun assetHash(assetHash: String) {
-    }
+    public fun assetHash(assetHash: String)
 
-    public fun assetHashType(assetHashType: AssetHashType) {
-    }
+    public fun assetHashType(assetHashType: AssetHashType)
 
-    public fun bundling(bundling: BundlingOptions) {
-    }
+    public fun bundling(bundling: BundlingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2340990b1c321dbdf222110179975f1e8a15d6807621bbce582a740dac93f0b")
-    public fun bundling(bundling: BundlingOptions.Builder.() -> Unit) {
-    }
+    public fun bundling(bundling: BundlingOptions.Builder.() -> Unit)
 
-    public fun deployTime(deployTime: Boolean) {
-    }
+    public fun deployTime(deployTime: Boolean)
 
-    public fun exclude(exclude: List<String>) {
-    }
+    public fun exclude(exclude: List<String>)
 
-    public fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-    }
+    public fun followSymlinks(followSymlinks: SymlinkFollowMode)
 
-    public fun ignoreMode(ignoreMode: IgnoreMode) {
-    }
+    public fun ignoreMode(ignoreMode: IgnoreMode)
 
-    public fun readers(readers: List<IGrantable>) {
-    }
+    public fun readers(readers: List<IGrantable>)
   }
 
   private class BuilderImpl(
@@ -58,40 +49,40 @@ public open class AssetEnvironmentFile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.AssetEnvironmentFile.Builder =
         software.amazon.awscdk.services.ecs.AssetEnvironmentFile.Builder.create(path)
 
-    public override fun assetHash(assetHash: String) {
+    override fun assetHash(assetHash: String) {
       cdkBuilder.assetHash(assetHash)
     }
 
-    public override fun assetHashType(assetHashType: AssetHashType) {
+    override fun assetHashType(assetHashType: AssetHashType) {
       cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
     }
 
-    public override fun bundling(bundling: BundlingOptions) {
+    override fun bundling(bundling: BundlingOptions) {
       cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f2340990b1c321dbdf222110179975f1e8a15d6807621bbce582a740dac93f0b")
-    public override fun bundling(bundling: BundlingOptions.Builder.() -> Unit): Unit =
+    override fun bundling(bundling: BundlingOptions.Builder.() -> Unit): Unit =
         bundling(BundlingOptions(bundling))
 
-    public override fun deployTime(deployTime: Boolean) {
+    override fun deployTime(deployTime: Boolean) {
       cdkBuilder.deployTime(deployTime)
     }
 
-    public override fun exclude(exclude: List<String>) {
+    override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
 
-    public override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
+    override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
       cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
     }
 
-    public override fun ignoreMode(ignoreMode: IgnoreMode) {
+    override fun ignoreMode(ignoreMode: IgnoreMode) {
       cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
     }
 
-    public override fun readers(readers: List<IGrantable>) {
+    override fun readers(readers: List<IGrantable>) {
       cdkBuilder.readers(readers.map(IGrantable::unwrap))
     }
 

@@ -73,28 +73,21 @@ public open class CfnConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun kafkaVersionsList(kafkaVersionsList: List<String>) {
-    }
+    public fun kafkaVersionsList(kafkaVersionsList: List<String>)
 
-    public fun latestRevision(latestRevision: IResolvable) {
-    }
+    public fun latestRevision(latestRevision: IResolvable)
 
-    public fun latestRevision(latestRevision: LatestRevisionProperty) {
-    }
+    public fun latestRevision(latestRevision: LatestRevisionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5191f149a214eef0b3503b51de3a98cb0e8b852b1d529b6d7ab7c0d1f3e2e7c9")
-    public fun latestRevision(latestRevision: LatestRevisionProperty.Builder.() -> Unit) {
-    }
+    public fun latestRevision(latestRevision: LatestRevisionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun serverProperties(serverProperties: String) {
-    }
+    public fun serverProperties(serverProperties: String)
   }
 
   private class BuilderImpl(
@@ -104,32 +97,32 @@ public open class CfnConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.msk.CfnConfiguration.Builder =
         software.amazon.awscdk.services.msk.CfnConfiguration.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun kafkaVersionsList(kafkaVersionsList: List<String>) {
+    override fun kafkaVersionsList(kafkaVersionsList: List<String>) {
       cdkBuilder.kafkaVersionsList(kafkaVersionsList)
     }
 
-    public override fun latestRevision(latestRevision: IResolvable) {
+    override fun latestRevision(latestRevision: IResolvable) {
       cdkBuilder.latestRevision(latestRevision.let(IResolvable::unwrap))
     }
 
-    public override fun latestRevision(latestRevision: LatestRevisionProperty) {
+    override fun latestRevision(latestRevision: LatestRevisionProperty) {
       cdkBuilder.latestRevision(latestRevision.let(LatestRevisionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5191f149a214eef0b3503b51de3a98cb0e8b852b1d529b6d7ab7c0d1f3e2e7c9")
-    public override fun latestRevision(latestRevision: LatestRevisionProperty.Builder.() -> Unit):
-        Unit = latestRevision(LatestRevisionProperty(latestRevision))
+    override fun latestRevision(latestRevision: LatestRevisionProperty.Builder.() -> Unit): Unit =
+        latestRevision(LatestRevisionProperty(latestRevision))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun serverProperties(serverProperties: String) {
+    override fun serverProperties(serverProperties: String) {
       cdkBuilder.serverProperties(serverProperties)
     }
 
@@ -165,14 +158,11 @@ public open class CfnConfiguration internal constructor(
     public fun revision(): Number? = unwrap(this).getRevision()
 
     public interface Builder {
-      public fun creationTime(creationTime: String) {
-      }
+      public fun creationTime(creationTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun revision(revision: Number) {
-      }
+      public fun revision(revision: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -180,15 +170,15 @@ public open class CfnConfiguration internal constructor(
           software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty.Builder =
           software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty.builder()
 
-      public override fun creationTime(creationTime: String) {
+      override fun creationTime(creationTime: String) {
         cdkBuilder.creationTime(creationTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun revision(revision: Number) {
+      override fun revision(revision: Number) {
         cdkBuilder.revision(revision)
       }
 
@@ -201,11 +191,11 @@ public open class CfnConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty,
     ) : LatestRevisionProperty {
-      public override fun creationTime(): String? = unwrap(this).getCreationTime()
+      override fun creationTime(): String? = unwrap(this).getCreationTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun revision(): Number? = unwrap(this).getRevision()
+      override fun revision(): Number? = unwrap(this).getRevision()
     }
 
     public companion object {

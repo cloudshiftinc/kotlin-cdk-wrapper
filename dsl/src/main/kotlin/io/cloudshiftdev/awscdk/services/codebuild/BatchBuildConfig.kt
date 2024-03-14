@@ -7,15 +7,14 @@ public interface BatchBuildConfig {
   public fun role(): IRole
 
   public interface Builder {
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.BatchBuildConfig.Builder =
         software.amazon.awscdk.services.codebuild.BatchBuildConfig.builder()
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -26,7 +25,7 @@ public interface BatchBuildConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BatchBuildConfig,
   ) : BatchBuildConfig {
-    public override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+    override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
   }
 
   public companion object {

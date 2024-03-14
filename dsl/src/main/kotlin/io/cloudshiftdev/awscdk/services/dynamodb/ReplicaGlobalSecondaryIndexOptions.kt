@@ -9,11 +9,9 @@ public interface ReplicaGlobalSecondaryIndexOptions {
   public fun readCapacity(): Capacity? = unwrap(this).getReadCapacity()?.let(Capacity::wrap)
 
   public interface Builder {
-    public fun contributorInsights(contributorInsights: Boolean) {
-    }
+    public fun contributorInsights(contributorInsights: Boolean)
 
-    public fun readCapacity(readCapacity: Capacity) {
-    }
+    public fun readCapacity(readCapacity: Capacity)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface ReplicaGlobalSecondaryIndexOptions {
         software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions.Builder =
         software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions.builder()
 
-    public override fun contributorInsights(contributorInsights: Boolean) {
+    override fun contributorInsights(contributorInsights: Boolean) {
       cdkBuilder.contributorInsights(contributorInsights)
     }
 
-    public override fun readCapacity(readCapacity: Capacity) {
+    override fun readCapacity(readCapacity: Capacity) {
       cdkBuilder.readCapacity(readCapacity.let(Capacity::unwrap))
     }
 
@@ -37,10 +35,9 @@ public interface ReplicaGlobalSecondaryIndexOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions,
   ) : ReplicaGlobalSecondaryIndexOptions {
-    public override fun contributorInsights(): Boolean? = unwrap(this).getContributorInsights()
+    override fun contributorInsights(): Boolean? = unwrap(this).getContributorInsights()
 
-    public override fun readCapacity(): Capacity? =
-        unwrap(this).getReadCapacity()?.let(Capacity::wrap)
+    override fun readCapacity(): Capacity? = unwrap(this).getReadCapacity()?.let(Capacity::wrap)
   }
 
   public companion object {

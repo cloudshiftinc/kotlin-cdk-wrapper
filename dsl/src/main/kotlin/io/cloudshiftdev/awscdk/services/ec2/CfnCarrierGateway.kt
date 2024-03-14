@@ -41,11 +41,9 @@ public open class CfnCarrierGateway internal constructor(
   }
 
   public interface Builder {
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -55,11 +53,11 @@ public open class CfnCarrierGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnCarrierGateway.Builder =
         software.amazon.awscdk.services.ec2.CfnCarrierGateway.Builder.create(scope, id)
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

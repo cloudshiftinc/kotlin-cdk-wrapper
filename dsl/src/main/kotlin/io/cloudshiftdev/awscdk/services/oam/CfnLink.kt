@@ -50,17 +50,13 @@ public open class CfnLink internal constructor(
   }
 
   public interface Builder {
-    public fun labelTemplate(labelTemplate: String) {
-    }
+    public fun labelTemplate(labelTemplate: String)
 
-    public fun resourceTypes(resourceTypes: List<String>) {
-    }
+    public fun resourceTypes(resourceTypes: List<String>)
 
-    public fun sinkIdentifier(sinkIdentifier: String) {
-    }
+    public fun sinkIdentifier(sinkIdentifier: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -70,19 +66,19 @@ public open class CfnLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.oam.CfnLink.Builder =
         software.amazon.awscdk.services.oam.CfnLink.Builder.create(scope, id)
 
-    public override fun labelTemplate(labelTemplate: String) {
+    override fun labelTemplate(labelTemplate: String) {
       cdkBuilder.labelTemplate(labelTemplate)
     }
 
-    public override fun resourceTypes(resourceTypes: List<String>) {
+    override fun resourceTypes(resourceTypes: List<String>) {
       cdkBuilder.resourceTypes(resourceTypes)
     }
 
-    public override fun sinkIdentifier(sinkIdentifier: String) {
+    override fun sinkIdentifier(sinkIdentifier: String) {
       cdkBuilder.sinkIdentifier(sinkIdentifier)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

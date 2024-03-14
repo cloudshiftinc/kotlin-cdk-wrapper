@@ -14,39 +14,35 @@ public interface FunctionUrlOptions {
   public fun invokeMode(): InvokeMode? = unwrap(this).getInvokeMode()?.let(InvokeMode::wrap)
 
   public interface Builder {
-    public fun authType(authType: FunctionUrlAuthType) {
-    }
+    public fun authType(authType: FunctionUrlAuthType)
 
-    public fun cors(cors: FunctionUrlCorsOptions) {
-    }
+    public fun cors(cors: FunctionUrlCorsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4883d6eb36bdf679c06aa88778c5bd16745954a43799b6506dff8b528b6a4d59")
-    public fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit) {
-    }
+    public fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit)
 
-    public fun invokeMode(invokeMode: InvokeMode) {
-    }
+    public fun invokeMode(invokeMode: InvokeMode)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.FunctionUrlOptions.Builder =
         software.amazon.awscdk.services.lambda.FunctionUrlOptions.builder()
 
-    public override fun authType(authType: FunctionUrlAuthType) {
+    override fun authType(authType: FunctionUrlAuthType) {
       cdkBuilder.authType(authType.let(FunctionUrlAuthType::unwrap))
     }
 
-    public override fun cors(cors: FunctionUrlCorsOptions) {
+    override fun cors(cors: FunctionUrlCorsOptions) {
       cdkBuilder.cors(cors.let(FunctionUrlCorsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4883d6eb36bdf679c06aa88778c5bd16745954a43799b6506dff8b528b6a4d59")
-    public override fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit): Unit =
+    override fun cors(cors: FunctionUrlCorsOptions.Builder.() -> Unit): Unit =
         cors(FunctionUrlCorsOptions(cors))
 
-    public override fun invokeMode(invokeMode: InvokeMode) {
+    override fun invokeMode(invokeMode: InvokeMode) {
       cdkBuilder.invokeMode(invokeMode.let(InvokeMode::unwrap))
     }
 
@@ -57,14 +53,13 @@ public interface FunctionUrlOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.FunctionUrlOptions,
   ) : FunctionUrlOptions {
-    public override fun authType(): FunctionUrlAuthType? =
+    override fun authType(): FunctionUrlAuthType? =
         unwrap(this).getAuthType()?.let(FunctionUrlAuthType::wrap)
 
-    public override fun cors(): FunctionUrlCorsOptions? =
+    override fun cors(): FunctionUrlCorsOptions? =
         unwrap(this).getCors()?.let(FunctionUrlCorsOptions::wrap)
 
-    public override fun invokeMode(): InvokeMode? =
-        unwrap(this).getInvokeMode()?.let(InvokeMode::wrap)
+    override fun invokeMode(): InvokeMode? = unwrap(this).getInvokeMode()?.let(InvokeMode::wrap)
   }
 
   public companion object {

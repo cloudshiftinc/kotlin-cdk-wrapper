@@ -7,15 +7,14 @@ public interface DeploymentController {
       unwrap(this).getType()?.let(DeploymentControllerType::wrap)
 
   public interface Builder {
-    public fun type(type: DeploymentControllerType) {
-    }
+    public fun type(type: DeploymentControllerType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.DeploymentController.Builder =
         software.amazon.awscdk.services.ecs.DeploymentController.builder()
 
-    public override fun type(type: DeploymentControllerType) {
+    override fun type(type: DeploymentControllerType) {
       cdkBuilder.type(type.let(DeploymentControllerType::unwrap))
     }
 
@@ -26,7 +25,7 @@ public interface DeploymentController {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.DeploymentController,
   ) : DeploymentController {
-    public override fun type(): DeploymentControllerType? =
+    override fun type(): DeploymentControllerType? =
         unwrap(this).getType()?.let(DeploymentControllerType::wrap)
   }
 

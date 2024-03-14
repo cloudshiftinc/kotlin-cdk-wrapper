@@ -31,11 +31,9 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
   }
 
   public interface Builder {
-    public fun routeTableIds(routeTableIds: List<String>) {
-    }
+    public fun routeTableIds(routeTableIds: List<String>)
 
-    public fun vpnGatewayId(vpnGatewayId: String) {
-    }
+    public fun vpnGatewayId(vpnGatewayId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
         software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation.Builder =
         software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation.Builder.create(scope, id)
 
-    public override fun routeTableIds(routeTableIds: List<String>) {
+    override fun routeTableIds(routeTableIds: List<String>) {
       cdkBuilder.routeTableIds(routeTableIds)
     }
 
-    public override fun vpnGatewayId(vpnGatewayId: String) {
+    override fun vpnGatewayId(vpnGatewayId: String) {
       cdkBuilder.vpnGatewayId(vpnGatewayId)
     }
 

@@ -32,35 +32,34 @@ public interface IEventBus : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.IEventBus,
   ) : IEventBus {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun archive(arg0: String, arg1: BaseArchiveProps): Archive =
-        unwrap(this).archive(arg0, arg1.let(BaseArchiveProps::unwrap)).let(Archive::wrap)
+    override fun archive(arg0: String, arg1: BaseArchiveProps): Archive = unwrap(this).archive(arg0,
+        arg1.let(BaseArchiveProps::unwrap)).let(Archive::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("022c3ca8d5890e1ec18db540710cb5526fbb7150a28da5ba76fa1ad5de277488")
-    public override fun archive(arg0: String, arg1: BaseArchiveProps.Builder.() -> Unit): Archive =
+    override fun archive(arg0: String, arg1: BaseArchiveProps.Builder.() -> Unit): Archive =
         archive(arg0, BaseArchiveProps(arg1))
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun eventBusArn(): String = unwrap(this).getEventBusArn()
+    override fun eventBusArn(): String = unwrap(this).getEventBusArn()
 
-    public override fun eventBusName(): String = unwrap(this).getEventBusName()
+    override fun eventBusName(): String = unwrap(this).getEventBusName()
 
-    public override fun eventBusPolicy(): String = unwrap(this).getEventBusPolicy()
+    override fun eventBusPolicy(): String = unwrap(this).getEventBusPolicy()
 
-    public override fun eventSourceName(): String? = unwrap(this).getEventSourceName()
+    override fun eventSourceName(): String? = unwrap(this).getEventSourceName()
 
-    public override fun grantPutEventsTo(arg0: IGrantable): Grant =
+    override fun grantPutEventsTo(arg0: IGrantable): Grant =
         unwrap(this).grantPutEventsTo(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

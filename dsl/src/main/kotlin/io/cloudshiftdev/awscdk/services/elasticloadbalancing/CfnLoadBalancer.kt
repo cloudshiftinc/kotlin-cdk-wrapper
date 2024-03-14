@@ -199,104 +199,73 @@ public open class CfnLoadBalancer internal constructor(
   }
 
   public interface Builder {
-    public fun accessLoggingPolicy(accessLoggingPolicy: IResolvable) {
-    }
+    public fun accessLoggingPolicy(accessLoggingPolicy: IResolvable)
 
-    public fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty) {
-    }
+    public fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18d943578206ad14c83ad52f5ea15e3893d45d3139a43179598ff115c2ed0f00")
     public
-        fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty.Builder.() -> Unit) {
-    }
+        fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty.Builder.() -> Unit)
 
-    public fun appCookieStickinessPolicy(appCookieStickinessPolicy: IResolvable) {
-    }
+    public fun appCookieStickinessPolicy(appCookieStickinessPolicy: IResolvable)
 
-    public fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>) {
-    }
+    public fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>)
 
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
-    public fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
-    }
+    public fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable)
 
-    public
-        fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty) {
-    }
+    public fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1308d9c6af6779b05692fd2444332ab6d46359ba54c4060ced1a9f2d4bf788c")
     public
-        fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty.Builder.() -> Unit) {
-    }
+        fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty.Builder.() -> Unit)
 
-    public fun connectionSettings(connectionSettings: IResolvable) {
-    }
+    public fun connectionSettings(connectionSettings: IResolvable)
 
-    public fun connectionSettings(connectionSettings: ConnectionSettingsProperty) {
-    }
+    public fun connectionSettings(connectionSettings: ConnectionSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef1c9b12d6535ae9972f770ffb300128431c29da02f5c9554522ae128923e5cf")
-    public
-        fun connectionSettings(connectionSettings: ConnectionSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun connectionSettings(connectionSettings: ConnectionSettingsProperty.Builder.() -> Unit)
 
-    public fun crossZone(crossZone: Boolean) {
-    }
+    public fun crossZone(crossZone: Boolean)
 
-    public fun crossZone(crossZone: IResolvable) {
-    }
+    public fun crossZone(crossZone: IResolvable)
 
-    public fun healthCheck(healthCheck: IResolvable) {
-    }
+    public fun healthCheck(healthCheck: IResolvable)
 
-    public fun healthCheck(healthCheck: HealthCheckProperty) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("42ae2f476bb579083ac310d027410b288b9e8b294f4fae50b6fd050fe84c7e98")
-    public fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit)
 
-    public fun instances(instances: List<String>) {
-    }
+    public fun instances(instances: List<String>)
 
-    public fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable) {
-    }
+    public fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable)
 
-    public fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>) {
-    }
+    public fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>)
 
-    public fun listeners(listeners: IResolvable) {
-    }
+    public fun listeners(listeners: IResolvable)
 
-    public fun listeners(listeners: List<Any>) {
-    }
+    public fun listeners(listeners: List<Any>)
 
-    public fun loadBalancerName(loadBalancerName: String) {
-    }
+    public fun loadBalancerName(loadBalancerName: String)
 
-    public fun policies(policies: IResolvable) {
-    }
+    public fun policies(policies: IResolvable)
 
-    public fun policies(policies: List<Any>) {
-    }
+    public fun policies(policies: List<Any>)
 
-    public fun scheme(scheme: String) {
-    }
+    public fun scheme(scheme: String)
 
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun subnets(subnets: List<String>) {
-    }
+    public fun subnets(subnets: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -308,127 +277,127 @@ public open class CfnLoadBalancer internal constructor(
         software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.Builder.create(scope,
         id)
 
-    public override fun accessLoggingPolicy(accessLoggingPolicy: IResolvable) {
+    override fun accessLoggingPolicy(accessLoggingPolicy: IResolvable) {
       cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty) {
+    override fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty) {
       cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(AccessLoggingPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18d943578206ad14c83ad52f5ea15e3893d45d3139a43179598ff115c2ed0f00")
-    public override
+    override
         fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty.Builder.() -> Unit):
         Unit = accessLoggingPolicy(AccessLoggingPolicyProperty(accessLoggingPolicy))
 
-    public override fun appCookieStickinessPolicy(appCookieStickinessPolicy: IResolvable) {
+    override fun appCookieStickinessPolicy(appCookieStickinessPolicy: IResolvable) {
       cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>) {
+    override fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>) {
       cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy)
     }
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
-    public override fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
+    override fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
       cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty) {
       cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(ConnectionDrainingPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1308d9c6af6779b05692fd2444332ab6d46359ba54c4060ced1a9f2d4bf788c")
-    public override
+    override
         fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty.Builder.() -> Unit):
         Unit = connectionDrainingPolicy(ConnectionDrainingPolicyProperty(connectionDrainingPolicy))
 
-    public override fun connectionSettings(connectionSettings: IResolvable) {
+    override fun connectionSettings(connectionSettings: IResolvable) {
       cdkBuilder.connectionSettings(connectionSettings.let(IResolvable::unwrap))
     }
 
-    public override fun connectionSettings(connectionSettings: ConnectionSettingsProperty) {
+    override fun connectionSettings(connectionSettings: ConnectionSettingsProperty) {
       cdkBuilder.connectionSettings(connectionSettings.let(ConnectionSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef1c9b12d6535ae9972f770ffb300128431c29da02f5c9554522ae128923e5cf")
-    public override
+    override
         fun connectionSettings(connectionSettings: ConnectionSettingsProperty.Builder.() -> Unit):
         Unit = connectionSettings(ConnectionSettingsProperty(connectionSettings))
 
-    public override fun crossZone(crossZone: Boolean) {
+    override fun crossZone(crossZone: Boolean) {
       cdkBuilder.crossZone(crossZone)
     }
 
-    public override fun crossZone(crossZone: IResolvable) {
+    override fun crossZone(crossZone: IResolvable) {
       cdkBuilder.crossZone(crossZone.let(IResolvable::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: IResolvable) {
+    override fun healthCheck(healthCheck: IResolvable) {
       cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
     }
 
-    public override fun healthCheck(healthCheck: HealthCheckProperty) {
+    override fun healthCheck(healthCheck: HealthCheckProperty) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("42ae2f476bb579083ac310d027410b288b9e8b294f4fae50b6fd050fe84c7e98")
-    public override fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit): Unit =
         healthCheck(HealthCheckProperty(healthCheck))
 
-    public override fun instances(instances: List<String>) {
+    override fun instances(instances: List<String>) {
       cdkBuilder.instances(instances)
     }
 
-    public override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable) {
+    override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable) {
       cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>) {
+    override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>) {
       cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy)
     }
 
-    public override fun listeners(listeners: IResolvable) {
+    override fun listeners(listeners: IResolvable) {
       cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
     }
 
-    public override fun listeners(listeners: List<Any>) {
+    override fun listeners(listeners: List<Any>) {
       cdkBuilder.listeners(listeners)
     }
 
-    public override fun loadBalancerName(loadBalancerName: String) {
+    override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
     }
 
-    public override fun policies(policies: IResolvable) {
+    override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable::unwrap))
     }
 
-    public override fun policies(policies: List<Any>) {
+    override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
 
-    public override fun scheme(scheme: String) {
+    override fun scheme(scheme: String) {
       cdkBuilder.scheme(scheme)
     }
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun subnets(subnets: List<String>) {
+    override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -471,23 +440,17 @@ public open class CfnLoadBalancer internal constructor(
     public fun policyType(): String
 
     public interface Builder {
-      public fun attributes(attributes: List<Any>) {
-      }
+      public fun attributes(attributes: List<Any>)
 
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun instancePorts(instancePorts: List<String>) {
-      }
+      public fun instancePorts(instancePorts: List<String>)
 
-      public fun loadBalancerPorts(loadBalancerPorts: List<String>) {
-      }
+      public fun loadBalancerPorts(loadBalancerPorts: List<String>)
 
-      public fun policyName(policyName: String) {
-      }
+      public fun policyName(policyName: String)
 
-      public fun policyType(policyType: String) {
-      }
+      public fun policyType(policyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -496,27 +459,27 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty.builder()
 
-      public override fun attributes(attributes: List<Any>) {
+      override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun instancePorts(instancePorts: List<String>) {
+      override fun instancePorts(instancePorts: List<String>) {
         cdkBuilder.instancePorts(instancePorts)
       }
 
-      public override fun loadBalancerPorts(loadBalancerPorts: List<String>) {
+      override fun loadBalancerPorts(loadBalancerPorts: List<String>) {
         cdkBuilder.loadBalancerPorts(loadBalancerPorts)
       }
 
-      public override fun policyName(policyName: String) {
+      override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
       }
 
-      public override fun policyType(policyType: String) {
+      override fun policyType(policyType: String) {
         cdkBuilder.policyType(policyType)
       }
 
@@ -529,17 +492,16 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.PoliciesProperty,
     ) : PoliciesProperty {
-      public override fun attributes(): Any = unwrap(this).getAttributes()
+      override fun attributes(): Any = unwrap(this).getAttributes()
 
-      public override fun instancePorts(): List<String> = unwrap(this).getInstancePorts() ?:
+      override fun instancePorts(): List<String> = unwrap(this).getInstancePorts() ?: emptyList()
+
+      override fun loadBalancerPorts(): List<String> = unwrap(this).getLoadBalancerPorts() ?:
           emptyList()
 
-      public override fun loadBalancerPorts(): List<String> = unwrap(this).getLoadBalancerPorts() ?:
-          emptyList()
+      override fun policyName(): String = unwrap(this).getPolicyName()
 
-      public override fun policyName(): String = unwrap(this).getPolicyName()
-
-      public override fun policyType(): String = unwrap(this).getPolicyType()
+      override fun policyType(): String = unwrap(this).getPolicyType()
     }
 
     public companion object {
@@ -568,11 +530,9 @@ public open class CfnLoadBalancer internal constructor(
     public fun policyName(): String? = unwrap(this).getPolicyName()
 
     public interface Builder {
-      public fun cookieExpirationPeriod(cookieExpirationPeriod: String) {
-      }
+      public fun cookieExpirationPeriod(cookieExpirationPeriod: String)
 
-      public fun policyName(policyName: String) {
-      }
+      public fun policyName(policyName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -581,11 +541,11 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty.builder()
 
-      public override fun cookieExpirationPeriod(cookieExpirationPeriod: String) {
+      override fun cookieExpirationPeriod(cookieExpirationPeriod: String) {
         cdkBuilder.cookieExpirationPeriod(cookieExpirationPeriod)
       }
 
-      public override fun policyName(policyName: String) {
+      override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
       }
 
@@ -598,10 +558,9 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.LBCookieStickinessPolicyProperty,
     ) : LBCookieStickinessPolicyProperty {
-      public override fun cookieExpirationPeriod(): String? =
-          unwrap(this).getCookieExpirationPeriod()
+      override fun cookieExpirationPeriod(): String? = unwrap(this).getCookieExpirationPeriod()
 
-      public override fun policyName(): String? = unwrap(this).getPolicyName()
+      override fun policyName(): String? = unwrap(this).getPolicyName()
     }
 
     public companion object {
@@ -634,20 +593,15 @@ public open class CfnLoadBalancer internal constructor(
     public fun s3BucketPrefix(): String? = unwrap(this).getS3BucketPrefix()
 
     public interface Builder {
-      public fun emitInterval(emitInterval: Number) {
-      }
+      public fun emitInterval(emitInterval: Number)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun s3BucketName(s3BucketName: String) {
-      }
+      public fun s3BucketName(s3BucketName: String)
 
-      public fun s3BucketPrefix(s3BucketPrefix: String) {
-      }
+      public fun s3BucketPrefix(s3BucketPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -656,23 +610,23 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty.builder()
 
-      public override fun emitInterval(emitInterval: Number) {
+      override fun emitInterval(emitInterval: Number) {
         cdkBuilder.emitInterval(emitInterval)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun s3BucketName(s3BucketName: String) {
+      override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
       }
 
-      public override fun s3BucketPrefix(s3BucketPrefix: String) {
+      override fun s3BucketPrefix(s3BucketPrefix: String) {
         cdkBuilder.s3BucketPrefix(s3BucketPrefix)
       }
 
@@ -685,13 +639,13 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AccessLoggingPolicyProperty,
     ) : AccessLoggingPolicyProperty {
-      public override fun emitInterval(): Number? = unwrap(this).getEmitInterval()
+      override fun emitInterval(): Number? = unwrap(this).getEmitInterval()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun s3BucketName(): String = unwrap(this).getS3BucketName()
+      override fun s3BucketName(): String = unwrap(this).getS3BucketName()
 
-      public override fun s3BucketPrefix(): String? = unwrap(this).getS3BucketPrefix()
+      override fun s3BucketPrefix(): String? = unwrap(this).getS3BucketPrefix()
     }
 
     public companion object {
@@ -720,11 +674,9 @@ public open class CfnLoadBalancer internal constructor(
     public fun policyName(): String
 
     public interface Builder {
-      public fun cookieName(cookieName: String) {
-      }
+      public fun cookieName(cookieName: String)
 
-      public fun policyName(policyName: String) {
-      }
+      public fun policyName(policyName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -733,11 +685,11 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty.builder()
 
-      public override fun cookieName(cookieName: String) {
+      override fun cookieName(cookieName: String) {
         cdkBuilder.cookieName(cookieName)
       }
 
-      public override fun policyName(policyName: String) {
+      override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
       }
 
@@ -750,9 +702,9 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.AppCookieStickinessPolicyProperty,
     ) : AppCookieStickinessPolicyProperty {
-      public override fun cookieName(): String = unwrap(this).getCookieName()
+      override fun cookieName(): String = unwrap(this).getCookieName()
 
-      public override fun policyName(): String = unwrap(this).getPolicyName()
+      override fun policyName(): String = unwrap(this).getPolicyName()
     }
 
     public companion object {
@@ -790,23 +742,17 @@ public open class CfnLoadBalancer internal constructor(
     public fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
 
     public interface Builder {
-      public fun instancePort(instancePort: String) {
-      }
+      public fun instancePort(instancePort: String)
 
-      public fun instanceProtocol(instanceProtocol: String) {
-      }
+      public fun instanceProtocol(instanceProtocol: String)
 
-      public fun loadBalancerPort(loadBalancerPort: String) {
-      }
+      public fun loadBalancerPort(loadBalancerPort: String)
 
-      public fun policyNames(policyNames: List<String>) {
-      }
+      public fun policyNames(policyNames: List<String>)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun sslCertificateId(sslCertificateId: String) {
-      }
+      public fun sslCertificateId(sslCertificateId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -815,27 +761,27 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty.builder()
 
-      public override fun instancePort(instancePort: String) {
+      override fun instancePort(instancePort: String) {
         cdkBuilder.instancePort(instancePort)
       }
 
-      public override fun instanceProtocol(instanceProtocol: String) {
+      override fun instanceProtocol(instanceProtocol: String) {
         cdkBuilder.instanceProtocol(instanceProtocol)
       }
 
-      public override fun loadBalancerPort(loadBalancerPort: String) {
+      override fun loadBalancerPort(loadBalancerPort: String) {
         cdkBuilder.loadBalancerPort(loadBalancerPort)
       }
 
-      public override fun policyNames(policyNames: List<String>) {
+      override fun policyNames(policyNames: List<String>) {
         cdkBuilder.policyNames(policyNames)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun sslCertificateId(sslCertificateId: String) {
+      override fun sslCertificateId(sslCertificateId: String) {
         cdkBuilder.sslCertificateId(sslCertificateId)
       }
 
@@ -848,17 +794,17 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ListenersProperty,
     ) : ListenersProperty {
-      public override fun instancePort(): String = unwrap(this).getInstancePort()
+      override fun instancePort(): String = unwrap(this).getInstancePort()
 
-      public override fun instanceProtocol(): String? = unwrap(this).getInstanceProtocol()
+      override fun instanceProtocol(): String? = unwrap(this).getInstanceProtocol()
 
-      public override fun loadBalancerPort(): String = unwrap(this).getLoadBalancerPort()
+      override fun loadBalancerPort(): String = unwrap(this).getLoadBalancerPort()
 
-      public override fun policyNames(): List<String> = unwrap(this).getPolicyNames() ?: emptyList()
+      override fun policyNames(): List<String> = unwrap(this).getPolicyNames() ?: emptyList()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
+      override fun sslCertificateId(): String? = unwrap(this).getSslCertificateId()
     }
 
     public companion object {
@@ -885,8 +831,7 @@ public open class CfnLoadBalancer internal constructor(
     public fun idleTimeout(): Number
 
     public interface Builder {
-      public fun idleTimeout(idleTimeout: Number) {
-      }
+      public fun idleTimeout(idleTimeout: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -895,7 +840,7 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty.builder()
 
-      public override fun idleTimeout(idleTimeout: Number) {
+      override fun idleTimeout(idleTimeout: Number) {
         cdkBuilder.idleTimeout(idleTimeout)
       }
 
@@ -908,7 +853,7 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionSettingsProperty,
     ) : ConnectionSettingsProperty {
-      public override fun idleTimeout(): Number = unwrap(this).getIdleTimeout()
+      override fun idleTimeout(): Number = unwrap(this).getIdleTimeout()
     }
 
     public companion object {
@@ -943,20 +888,15 @@ public open class CfnLoadBalancer internal constructor(
     public fun unhealthyThreshold(): String
 
     public interface Builder {
-      public fun healthyThreshold(healthyThreshold: String) {
-      }
+      public fun healthyThreshold(healthyThreshold: String)
 
-      public fun interval(interval: String) {
-      }
+      public fun interval(interval: String)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
 
-      public fun timeout(timeout: String) {
-      }
+      public fun timeout(timeout: String)
 
-      public fun unhealthyThreshold(unhealthyThreshold: String) {
-      }
+      public fun unhealthyThreshold(unhealthyThreshold: String)
     }
 
     private class BuilderImpl : Builder {
@@ -965,23 +905,23 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty.builder()
 
-      public override fun healthyThreshold(healthyThreshold: String) {
+      override fun healthyThreshold(healthyThreshold: String) {
         cdkBuilder.healthyThreshold(healthyThreshold)
       }
 
-      public override fun interval(interval: String) {
+      override fun interval(interval: String) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
-      public override fun timeout(timeout: String) {
+      override fun timeout(timeout: String) {
         cdkBuilder.timeout(timeout)
       }
 
-      public override fun unhealthyThreshold(unhealthyThreshold: String) {
+      override fun unhealthyThreshold(unhealthyThreshold: String) {
         cdkBuilder.unhealthyThreshold(unhealthyThreshold)
       }
 
@@ -994,15 +934,15 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.HealthCheckProperty,
     ) : HealthCheckProperty {
-      public override fun healthyThreshold(): String = unwrap(this).getHealthyThreshold()
+      override fun healthyThreshold(): String = unwrap(this).getHealthyThreshold()
 
-      public override fun interval(): String = unwrap(this).getInterval()
+      override fun interval(): String = unwrap(this).getInterval()
 
-      public override fun target(): String = unwrap(this).getTarget()
+      override fun target(): String = unwrap(this).getTarget()
 
-      public override fun timeout(): String = unwrap(this).getTimeout()
+      override fun timeout(): String = unwrap(this).getTimeout()
 
-      public override fun unhealthyThreshold(): String = unwrap(this).getUnhealthyThreshold()
+      override fun unhealthyThreshold(): String = unwrap(this).getUnhealthyThreshold()
     }
 
     public companion object {
@@ -1031,14 +971,11 @@ public open class CfnLoadBalancer internal constructor(
     public fun timeout(): Number? = unwrap(this).getTimeout()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun timeout(timeout: Number) {
-      }
+      public fun timeout(timeout: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1047,15 +984,15 @@ public open class CfnLoadBalancer internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun timeout(timeout: Number) {
+      override fun timeout(timeout: Number) {
         cdkBuilder.timeout(timeout)
       }
 
@@ -1068,9 +1005,9 @@ public open class CfnLoadBalancer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer.ConnectionDrainingPolicyProperty,
     ) : ConnectionDrainingPolicyProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun timeout(): Number? = unwrap(this).getTimeout()
+      override fun timeout(): Number? = unwrap(this).getTimeout()
     }
 
     public companion object {

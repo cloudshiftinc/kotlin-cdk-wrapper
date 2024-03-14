@@ -19,17 +19,13 @@ public open class CognitoUserPoolsAuthorizer internal constructor(
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
   public interface Builder {
-    public fun authorizerName(authorizerName: String) {
-    }
+    public fun authorizerName(authorizerName: String)
 
-    public fun cognitoUserPools(cognitoUserPools: List<IUserPool>) {
-    }
+    public fun cognitoUserPools(cognitoUserPools: List<IUserPool>)
 
-    public fun identitySource(identitySource: String) {
-    }
+    public fun identitySource(identitySource: String)
 
-    public fun resultsCacheTtl(resultsCacheTtl: Duration) {
-    }
+    public fun resultsCacheTtl(resultsCacheTtl: Duration)
   }
 
   private class BuilderImpl(
@@ -41,19 +37,19 @@ public open class CognitoUserPoolsAuthorizer internal constructor(
         software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer.Builder.create(scope,
         id)
 
-    public override fun authorizerName(authorizerName: String) {
+    override fun authorizerName(authorizerName: String) {
       cdkBuilder.authorizerName(authorizerName)
     }
 
-    public override fun cognitoUserPools(cognitoUserPools: List<IUserPool>) {
+    override fun cognitoUserPools(cognitoUserPools: List<IUserPool>) {
       cdkBuilder.cognitoUserPools(cognitoUserPools.map(IUserPool::unwrap))
     }
 
-    public override fun identitySource(identitySource: String) {
+    override fun identitySource(identitySource: String) {
       cdkBuilder.identitySource(identitySource)
     }
 
-    public override fun resultsCacheTtl(resultsCacheTtl: Duration) {
+    override fun resultsCacheTtl(resultsCacheTtl: Duration) {
       cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
     }
 

@@ -61,31 +61,24 @@ public open class CfnCodeSigningConfig internal constructor(
   }
 
   public interface Builder {
-    public fun allowedPublishers(allowedPublishers: IResolvable) {
-    }
+    public fun allowedPublishers(allowedPublishers: IResolvable)
 
-    public fun allowedPublishers(allowedPublishers: AllowedPublishersProperty) {
-    }
+    public fun allowedPublishers(allowedPublishers: AllowedPublishersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c2395a9a65c86a919fe259c9e87bafb8370a17fc1a777d0393a8be7354c0731")
-    public fun allowedPublishers(allowedPublishers: AllowedPublishersProperty.Builder.() -> Unit) {
-    }
+    public fun allowedPublishers(allowedPublishers: AllowedPublishersProperty.Builder.() -> Unit)
 
-    public fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
-    }
+    public fun codeSigningPolicies(codeSigningPolicies: IResolvable)
 
-    public fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty) {
-    }
+    public fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e89c4bb122d8303bbd07d0c45a8ccec11bfba0a9205276573e8b3bdf0af14c6")
     public
-        fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty.Builder.() -> Unit) {
-    }
+        fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
   }
 
   private class BuilderImpl(
@@ -95,35 +88,34 @@ public open class CfnCodeSigningConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.Builder =
         software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.Builder.create(scope, id)
 
-    public override fun allowedPublishers(allowedPublishers: IResolvable) {
+    override fun allowedPublishers(allowedPublishers: IResolvable) {
       cdkBuilder.allowedPublishers(allowedPublishers.let(IResolvable::unwrap))
     }
 
-    public override fun allowedPublishers(allowedPublishers: AllowedPublishersProperty) {
+    override fun allowedPublishers(allowedPublishers: AllowedPublishersProperty) {
       cdkBuilder.allowedPublishers(allowedPublishers.let(AllowedPublishersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6c2395a9a65c86a919fe259c9e87bafb8370a17fc1a777d0393a8be7354c0731")
-    public override
-        fun allowedPublishers(allowedPublishers: AllowedPublishersProperty.Builder.() -> Unit): Unit
-        = allowedPublishers(AllowedPublishersProperty(allowedPublishers))
+    override fun allowedPublishers(allowedPublishers: AllowedPublishersProperty.Builder.() -> Unit):
+        Unit = allowedPublishers(AllowedPublishersProperty(allowedPublishers))
 
-    public override fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
+    override fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
       cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(IResolvable::unwrap))
     }
 
-    public override fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty) {
+    override fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty) {
       cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(CodeSigningPoliciesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e89c4bb122d8303bbd07d0c45a8ccec11bfba0a9205276573e8b3bdf0af14c6")
-    public override
+    override
         fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty.Builder.() -> Unit):
         Unit = codeSigningPolicies(CodeSigningPoliciesProperty(codeSigningPolicies))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
@@ -156,8 +148,7 @@ public open class CfnCodeSigningConfig internal constructor(
     public fun signingProfileVersionArns(): List<String>
 
     public interface Builder {
-      public fun signingProfileVersionArns(signingProfileVersionArns: List<String>) {
-      }
+      public fun signingProfileVersionArns(signingProfileVersionArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -166,7 +157,7 @@ public open class CfnCodeSigningConfig internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty.builder()
 
-      public override fun signingProfileVersionArns(signingProfileVersionArns: List<String>) {
+      override fun signingProfileVersionArns(signingProfileVersionArns: List<String>) {
         cdkBuilder.signingProfileVersionArns(signingProfileVersionArns)
       }
 
@@ -179,7 +170,7 @@ public open class CfnCodeSigningConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty,
     ) : AllowedPublishersProperty {
-      public override fun signingProfileVersionArns(): List<String> =
+      override fun signingProfileVersionArns(): List<String> =
           unwrap(this).getSigningProfileVersionArns() ?: emptyList()
     }
 
@@ -207,8 +198,7 @@ public open class CfnCodeSigningConfig internal constructor(
     public fun untrustedArtifactOnDeployment(): String
 
     public interface Builder {
-      public fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: String) {
-      }
+      public fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: String)
     }
 
     private class BuilderImpl : Builder {
@@ -217,7 +207,7 @@ public open class CfnCodeSigningConfig internal constructor(
           =
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty.builder()
 
-      public override fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: String) {
+      override fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: String) {
         cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment)
       }
 
@@ -230,7 +220,7 @@ public open class CfnCodeSigningConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.CodeSigningPoliciesProperty,
     ) : CodeSigningPoliciesProperty {
-      public override fun untrustedArtifactOnDeployment(): String =
+      override fun untrustedArtifactOnDeployment(): String =
           unwrap(this).getUntrustedArtifactOnDeployment()
     }
 

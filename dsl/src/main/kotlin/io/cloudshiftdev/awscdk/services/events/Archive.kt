@@ -17,25 +17,19 @@ public open class Archive internal constructor(
   public open fun archiveName(): String = unwrap(this).getArchiveName()
 
   public interface Builder {
-    public fun archiveName(archiveName: String) {
-    }
+    public fun archiveName(archiveName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventPattern(eventPattern: EventPattern) {
-    }
+    public fun eventPattern(eventPattern: EventPattern)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54203e45cadc4b2928902af7430b96858863a84f06d0449c50223a1ac08c387c")
-    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit) {
-    }
+    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
 
-    public fun retention(retention: Duration) {
-    }
+    public fun retention(retention: Duration)
 
-    public fun sourceEventBus(sourceEventBus: IEventBus) {
-    }
+    public fun sourceEventBus(sourceEventBus: IEventBus)
   }
 
   private class BuilderImpl(
@@ -45,28 +39,28 @@ public open class Archive internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.Archive.Builder =
         software.amazon.awscdk.services.events.Archive.Builder.create(scope, id)
 
-    public override fun archiveName(archiveName: String) {
+    override fun archiveName(archiveName: String) {
       cdkBuilder.archiveName(archiveName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventPattern(eventPattern: EventPattern) {
+    override fun eventPattern(eventPattern: EventPattern) {
       cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54203e45cadc4b2928902af7430b96858863a84f06d0449c50223a1ac08c387c")
-    public override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
+    override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
         eventPattern(EventPattern(eventPattern))
 
-    public override fun retention(retention: Duration) {
+    override fun retention(retention: Duration) {
       cdkBuilder.retention(retention.let(Duration::unwrap))
     }
 
-    public override fun sourceEventBus(sourceEventBus: IEventBus) {
+    override fun sourceEventBus(sourceEventBus: IEventBus) {
       cdkBuilder.sourceEventBus(sourceEventBus.let(IEventBus::unwrap))
     }
 

@@ -42,53 +42,38 @@ public open class ServerDeploymentGroup internal constructor(
   public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun alarms(alarms: List<IAlarm>) {
-    }
+    public fun alarms(alarms: List<IAlarm>)
 
-    public fun application(application: IServerApplication) {
-    }
+    public fun application(application: IServerApplication)
 
-    public fun autoRollback(autoRollback: AutoRollbackConfig) {
-    }
+    public fun autoRollback(autoRollback: AutoRollbackConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0c54e4cfaaa14cf8c23135a5ce5e71f8784d080143325d499e3147100edc21e")
-    public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit) {
-    }
+    public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit)
 
-    public fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>) {
-    }
+    public fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>)
 
-    public fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
-    }
+    public fun deploymentConfig(deploymentConfig: IServerDeploymentConfig)
 
-    public fun deploymentGroupName(deploymentGroupName: String) {
-    }
+    public fun deploymentGroupName(deploymentGroupName: String)
 
-    public fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
-    }
+    public fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet)
 
-    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
-    }
+    public fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean)
 
-    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
-    }
+    public fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean)
 
-    public fun installAgent(installAgent: Boolean) {
-    }
+    public fun installAgent(installAgent: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun loadBalancer(loadBalancer: LoadBalancer) {
-    }
+    public fun loadBalancer(loadBalancer: LoadBalancer)
 
-    public fun loadBalancers(loadBalancers: List<LoadBalancer>) {
-    }
+    public fun loadBalancers(loadBalancers: List<LoadBalancer>)
 
-    public fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
-    }
+    public fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -98,65 +83,65 @@ public open class ServerDeploymentGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup.Builder
         = software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup.Builder.create(scope, id)
 
-    public override fun alarms(alarms: List<IAlarm>) {
+    override fun alarms(alarms: List<IAlarm>) {
       cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
     }
 
-    public override fun application(application: IServerApplication) {
+    override fun application(application: IServerApplication) {
       cdkBuilder.application(application.let(IServerApplication::unwrap))
     }
 
-    public override fun autoRollback(autoRollback: AutoRollbackConfig) {
+    override fun autoRollback(autoRollback: AutoRollbackConfig) {
       cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0c54e4cfaaa14cf8c23135a5ce5e71f8784d080143325d499e3147100edc21e")
-    public override fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit): Unit =
+    override fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit): Unit =
         autoRollback(AutoRollbackConfig(autoRollback))
 
-    public override fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>) {
+    override fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>) {
       cdkBuilder.autoScalingGroups(autoScalingGroups.map(IAutoScalingGroup::unwrap))
     }
 
-    public override fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
+    override fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig::unwrap))
     }
 
-    public override fun deploymentGroupName(deploymentGroupName: String) {
+    override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
 
-    public override fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
+    override fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
       cdkBuilder.ec2InstanceTags(ec2InstanceTags.let(InstanceTagSet::unwrap))
     }
 
-    public override fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
+    override fun ignoreAlarmConfiguration(ignoreAlarmConfiguration: Boolean) {
       cdkBuilder.ignoreAlarmConfiguration(ignoreAlarmConfiguration)
     }
 
-    public override fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
+    override fun ignorePollAlarmsFailure(ignorePollAlarmsFailure: Boolean) {
       cdkBuilder.ignorePollAlarmsFailure(ignorePollAlarmsFailure)
     }
 
-    public override fun installAgent(installAgent: Boolean) {
+    override fun installAgent(installAgent: Boolean) {
       cdkBuilder.installAgent(installAgent)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun loadBalancer(loadBalancer: LoadBalancer) {
+    override fun loadBalancer(loadBalancer: LoadBalancer) {
       cdkBuilder.loadBalancer(loadBalancer.let(LoadBalancer::unwrap))
     }
 
-    public override fun loadBalancers(loadBalancers: List<LoadBalancer>) {
+    override fun loadBalancers(loadBalancers: List<LoadBalancer>) {
       cdkBuilder.loadBalancers(loadBalancers.map(LoadBalancer::unwrap))
     }
 
-    public override fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
+    override fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
       cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags.let(InstanceTagSet::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 

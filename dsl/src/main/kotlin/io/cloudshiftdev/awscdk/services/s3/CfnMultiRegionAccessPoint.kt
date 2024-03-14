@@ -59,27 +59,21 @@ public open class CfnMultiRegionAccessPoint internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
-    }
+    public fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable)
 
     public
-        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
-    }
+        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("20f6a7f47a3bc4cd686a60978549578e0dd3252392a493f7262eb0a74e430e1c")
     public
-        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty.Builder.() -> Unit)
 
-    public fun regions(regions: IResolvable) {
-    }
+    public fun regions(regions: IResolvable)
 
-    public fun regions(regions: List<Any>) {
-    }
+    public fun regions(regions: List<Any>)
   }
 
   private class BuilderImpl(
@@ -89,32 +83,31 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.Builder =
         software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override
-        fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
+    override fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
       cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
       cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("20f6a7f47a3bc4cd686a60978549578e0dd3252392a493f7262eb0a74e430e1c")
-    public override
+    override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty.Builder.() -> Unit):
         Unit =
         publicAccessBlockConfiguration(PublicAccessBlockConfigurationProperty(publicAccessBlockConfiguration))
 
-    public override fun regions(regions: IResolvable) {
+    override fun regions(regions: IResolvable) {
       cdkBuilder.regions(regions.let(IResolvable::unwrap))
     }
 
-    public override fun regions(regions: List<Any>) {
+    override fun regions(regions: List<Any>) {
       cdkBuilder.regions(regions)
     }
 
@@ -153,29 +146,21 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     public fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
 
     public interface Builder {
-      public fun blockPublicAcls(blockPublicAcls: Boolean) {
-      }
+      public fun blockPublicAcls(blockPublicAcls: Boolean)
 
-      public fun blockPublicAcls(blockPublicAcls: IResolvable) {
-      }
+      public fun blockPublicAcls(blockPublicAcls: IResolvable)
 
-      public fun blockPublicPolicy(blockPublicPolicy: Boolean) {
-      }
+      public fun blockPublicPolicy(blockPublicPolicy: Boolean)
 
-      public fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-      }
+      public fun blockPublicPolicy(blockPublicPolicy: IResolvable)
 
-      public fun ignorePublicAcls(ignorePublicAcls: Boolean) {
-      }
+      public fun ignorePublicAcls(ignorePublicAcls: Boolean)
 
-      public fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-      }
+      public fun ignorePublicAcls(ignorePublicAcls: IResolvable)
 
-      public fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
-      }
+      public fun restrictPublicBuckets(restrictPublicBuckets: Boolean)
 
-      public fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-      }
+      public fun restrictPublicBuckets(restrictPublicBuckets: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -184,35 +169,35 @@ public open class CfnMultiRegionAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty.builder()
 
-      public override fun blockPublicAcls(blockPublicAcls: Boolean) {
+      override fun blockPublicAcls(blockPublicAcls: Boolean) {
         cdkBuilder.blockPublicAcls(blockPublicAcls)
       }
 
-      public override fun blockPublicAcls(blockPublicAcls: IResolvable) {
+      override fun blockPublicAcls(blockPublicAcls: IResolvable) {
         cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
       }
 
-      public override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
+      override fun blockPublicPolicy(blockPublicPolicy: Boolean) {
         cdkBuilder.blockPublicPolicy(blockPublicPolicy)
       }
 
-      public override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
+      override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
         cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
+      override fun ignorePublicAcls(ignorePublicAcls: Boolean) {
         cdkBuilder.ignorePublicAcls(ignorePublicAcls)
       }
 
-      public override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
+      override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
         cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
       }
 
-      public override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
+      override fun restrictPublicBuckets(restrictPublicBuckets: Boolean) {
         cdkBuilder.restrictPublicBuckets(restrictPublicBuckets)
       }
 
-      public override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
+      override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
         cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
       }
 
@@ -225,13 +210,13 @@ public open class CfnMultiRegionAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty,
     ) : PublicAccessBlockConfigurationProperty {
-      public override fun blockPublicAcls(): Any? = unwrap(this).getBlockPublicAcls()
+      override fun blockPublicAcls(): Any? = unwrap(this).getBlockPublicAcls()
 
-      public override fun blockPublicPolicy(): Any? = unwrap(this).getBlockPublicPolicy()
+      override fun blockPublicPolicy(): Any? = unwrap(this).getBlockPublicPolicy()
 
-      public override fun ignorePublicAcls(): Any? = unwrap(this).getIgnorePublicAcls()
+      override fun ignorePublicAcls(): Any? = unwrap(this).getIgnorePublicAcls()
 
-      public override fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
+      override fun restrictPublicBuckets(): Any? = unwrap(this).getRestrictPublicBuckets()
     }
 
     public companion object {
@@ -261,11 +246,9 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     public fun bucketAccountId(): String? = unwrap(this).getBucketAccountId()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun bucketAccountId(bucketAccountId: String) {
-      }
+      public fun bucketAccountId(bucketAccountId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -273,11 +256,11 @@ public open class CfnMultiRegionAccessPoint internal constructor(
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty.Builder =
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun bucketAccountId(bucketAccountId: String) {
+      override fun bucketAccountId(bucketAccountId: String) {
         cdkBuilder.bucketAccountId(bucketAccountId)
       }
 
@@ -290,9 +273,9 @@ public open class CfnMultiRegionAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint.RegionProperty,
     ) : RegionProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun bucketAccountId(): String? = unwrap(this).getBucketAccountId()
+      override fun bucketAccountId(): String? = unwrap(this).getBucketAccountId()
     }
 
     public companion object {

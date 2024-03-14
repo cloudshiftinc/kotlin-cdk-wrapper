@@ -47,17 +47,13 @@ public open class CfnDBSubnetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun dbSubnetGroupDescription(dbSubnetGroupDescription: String) {
-    }
+    public fun dbSubnetGroupDescription(dbSubnetGroupDescription: String)
 
-    public fun dbSubnetGroupName(dbSubnetGroupName: String) {
-    }
+    public fun dbSubnetGroupName(dbSubnetGroupName: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -67,19 +63,19 @@ public open class CfnDBSubnetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBSubnetGroup.Builder =
         software.amazon.awscdk.services.rds.CfnDBSubnetGroup.Builder.create(scope, id)
 
-    public override fun dbSubnetGroupDescription(dbSubnetGroupDescription: String) {
+    override fun dbSubnetGroupDescription(dbSubnetGroupDescription: String) {
       cdkBuilder.dbSubnetGroupDescription(dbSubnetGroupDescription)
     }
 
-    public override fun dbSubnetGroupName(dbSubnetGroupName: String) {
+    override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

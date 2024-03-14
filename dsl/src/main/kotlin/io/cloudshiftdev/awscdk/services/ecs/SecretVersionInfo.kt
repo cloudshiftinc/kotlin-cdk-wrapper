@@ -9,22 +9,20 @@ public interface SecretVersionInfo {
   public fun versionStage(): String? = unwrap(this).getVersionStage()
 
   public interface Builder {
-    public fun versionId(versionId: String) {
-    }
+    public fun versionId(versionId: String)
 
-    public fun versionStage(versionStage: String) {
-    }
+    public fun versionStage(versionStage: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.SecretVersionInfo.Builder =
         software.amazon.awscdk.services.ecs.SecretVersionInfo.builder()
 
-    public override fun versionId(versionId: String) {
+    override fun versionId(versionId: String) {
       cdkBuilder.versionId(versionId)
     }
 
-    public override fun versionStage(versionStage: String) {
+    override fun versionStage(versionStage: String) {
       cdkBuilder.versionStage(versionStage)
     }
 
@@ -34,9 +32,9 @@ public interface SecretVersionInfo {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.SecretVersionInfo,
   ) : SecretVersionInfo {
-    public override fun versionId(): String? = unwrap(this).getVersionId()
+    override fun versionId(): String? = unwrap(this).getVersionId()
 
-    public override fun versionStage(): String? = unwrap(this).getVersionStage()
+    override fun versionStage(): String? = unwrap(this).getVersionStage()
   }
 
   public companion object {

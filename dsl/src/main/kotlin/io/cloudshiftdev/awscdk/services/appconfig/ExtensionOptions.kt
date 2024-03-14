@@ -16,36 +16,32 @@ public interface ExtensionOptions {
       emptyList()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun extensionName(extensionName: String) {
-    }
+    public fun extensionName(extensionName: String)
 
-    public fun latestVersionNumber(latestVersionNumber: Number) {
-    }
+    public fun latestVersionNumber(latestVersionNumber: Number)
 
-    public fun parameters(parameters: List<Parameter>) {
-    }
+    public fun parameters(parameters: List<Parameter>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.ExtensionOptions.Builder =
         software.amazon.awscdk.services.appconfig.ExtensionOptions.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun extensionName(extensionName: String) {
+    override fun extensionName(extensionName: String) {
       cdkBuilder.extensionName(extensionName)
     }
 
-    public override fun latestVersionNumber(latestVersionNumber: Number) {
+    override fun latestVersionNumber(latestVersionNumber: Number) {
       cdkBuilder.latestVersionNumber(latestVersionNumber)
     }
 
-    public override fun parameters(parameters: List<Parameter>) {
+    override fun parameters(parameters: List<Parameter>) {
       cdkBuilder.parameters(parameters.map(Parameter::unwrap))
     }
 
@@ -56,14 +52,14 @@ public interface ExtensionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.ExtensionOptions,
   ) : ExtensionOptions {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun extensionName(): String? = unwrap(this).getExtensionName()
+    override fun extensionName(): String? = unwrap(this).getExtensionName()
 
-    public override fun latestVersionNumber(): Number? = unwrap(this).getLatestVersionNumber()
+    override fun latestVersionNumber(): Number? = unwrap(this).getLatestVersionNumber()
 
-    public override fun parameters(): List<Parameter> =
-        unwrap(this).getParameters()?.map(Parameter::wrap) ?: emptyList()
+    override fun parameters(): List<Parameter> = unwrap(this).getParameters()?.map(Parameter::wrap)
+        ?: emptyList()
   }
 
   public companion object {

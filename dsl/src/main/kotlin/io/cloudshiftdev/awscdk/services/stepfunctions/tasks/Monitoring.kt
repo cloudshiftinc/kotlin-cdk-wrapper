@@ -18,43 +18,38 @@ public interface Monitoring {
   public fun persistentAppUi(): Boolean? = unwrap(this).getPersistentAppUI()
 
   public interface Builder {
-    public fun logBucket(logBucket: IBucket) {
-    }
+    public fun logBucket(logBucket: IBucket)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
 
-    public fun logStreamNamePrefix(logStreamNamePrefix: String) {
-    }
+    public fun logStreamNamePrefix(logStreamNamePrefix: String)
 
-    public fun logging(logging: Boolean) {
-    }
+    public fun logging(logging: Boolean)
 
-    public fun persistentAppUi(persistentAppUi: Boolean) {
-    }
+    public fun persistentAppUi(persistentAppUi: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.tasks.Monitoring.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.Monitoring.builder()
 
-    public override fun logBucket(logBucket: IBucket) {
+    override fun logBucket(logBucket: IBucket) {
       cdkBuilder.logBucket(logBucket.let(IBucket::unwrap))
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun logStreamNamePrefix(logStreamNamePrefix: String) {
+    override fun logStreamNamePrefix(logStreamNamePrefix: String) {
       cdkBuilder.logStreamNamePrefix(logStreamNamePrefix)
     }
 
-    public override fun logging(logging: Boolean) {
+    override fun logging(logging: Boolean) {
       cdkBuilder.logging(logging)
     }
 
-    public override fun persistentAppUi(persistentAppUi: Boolean) {
+    override fun persistentAppUi(persistentAppUi: Boolean) {
       cdkBuilder.persistentAppUi(persistentAppUi)
     }
 
@@ -65,15 +60,15 @@ public interface Monitoring {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Monitoring,
   ) : Monitoring {
-    public override fun logBucket(): IBucket? = unwrap(this).getLogBucket()?.let(IBucket::wrap)
+    override fun logBucket(): IBucket? = unwrap(this).getLogBucket()?.let(IBucket::wrap)
 
-    public override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
+    override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
-    public override fun logStreamNamePrefix(): String? = unwrap(this).getLogStreamNamePrefix()
+    override fun logStreamNamePrefix(): String? = unwrap(this).getLogStreamNamePrefix()
 
-    public override fun logging(): Boolean? = unwrap(this).getLogging()
+    override fun logging(): Boolean? = unwrap(this).getLogging()
 
-    public override fun persistentAppUi(): Boolean? = unwrap(this).getPersistentAppUI()
+    override fun persistentAppUi(): Boolean? = unwrap(this).getPersistentAppUI()
   }
 
   public companion object {

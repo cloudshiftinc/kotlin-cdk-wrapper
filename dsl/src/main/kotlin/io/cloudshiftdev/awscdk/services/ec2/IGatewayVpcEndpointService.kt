@@ -8,7 +8,7 @@ public interface IGatewayVpcEndpointService {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService,
   ) : IGatewayVpcEndpointService {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
   }
 
   public companion object {

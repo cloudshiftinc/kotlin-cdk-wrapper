@@ -1,7 +1,5 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
-import software.constructs.Construct as SoftwareConstructsConstruct
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -9,6 +7,15 @@ import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import kotlin.Boolean
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
 
 public open class ApplicationLoadBalancer internal constructor(
   private val cdkObject:
@@ -376,43 +383,31 @@ public open class ApplicationLoadBalancer internal constructor(
   public override fun vpc(): IVpc? = IApplicationLoadBalancer.unwrap(this).vpc?.let(IVpc::wrap)
 
   public interface Builder {
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode) {
-    }
+    public fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode)
 
-    public fun dropInvalidHeaderFields(dropInvalidHeaderFields: Boolean) {
-    }
+    public fun dropInvalidHeaderFields(dropInvalidHeaderFields: Boolean)
 
-    public fun http2Enabled(http2Enabled: Boolean) {
-    }
+    public fun http2Enabled(http2Enabled: Boolean)
 
-    public fun idleTimeout(idleTimeout: Duration) {
-    }
+    public fun idleTimeout(idleTimeout: Duration)
 
-    public fun internetFacing(internetFacing: Boolean) {
-    }
+    public fun internetFacing(internetFacing: Boolean)
 
-    public fun ipAddressType(ipAddressType: IpAddressType) {
-    }
+    public fun ipAddressType(ipAddressType: IpAddressType)
 
-    public fun loadBalancerName(loadBalancerName: String) {
-    }
+    public fun loadBalancerName(loadBalancerName: String)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37ab8b88b872e71ae62e225b437c3fd8223e8c24ae05dc0ea4ccb865fb06a8c6")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -424,53 +419,53 @@ public open class ApplicationLoadBalancer internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer.Builder.create(scope,
         id)
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode) {
+    override fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode) {
       cdkBuilder.desyncMitigationMode(desyncMitigationMode.let(DesyncMitigationMode::unwrap))
     }
 
-    public override fun dropInvalidHeaderFields(dropInvalidHeaderFields: Boolean) {
+    override fun dropInvalidHeaderFields(dropInvalidHeaderFields: Boolean) {
       cdkBuilder.dropInvalidHeaderFields(dropInvalidHeaderFields)
     }
 
-    public override fun http2Enabled(http2Enabled: Boolean) {
+    override fun http2Enabled(http2Enabled: Boolean) {
       cdkBuilder.http2Enabled(http2Enabled)
     }
 
-    public override fun idleTimeout(idleTimeout: Duration) {
+    override fun idleTimeout(idleTimeout: Duration) {
       cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
     }
 
-    public override fun internetFacing(internetFacing: Boolean) {
+    override fun internetFacing(internetFacing: Boolean) {
       cdkBuilder.internetFacing(internetFacing)
     }
 
-    public override fun ipAddressType(ipAddressType: IpAddressType) {
+    override fun ipAddressType(ipAddressType: IpAddressType) {
       cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
     }
 
-    public override fun loadBalancerName(loadBalancerName: String) {
+    override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37ab8b88b872e71ae62e225b437c3fd8223e8c24ae05dc0ea4ccb865fb06a8c6")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build():

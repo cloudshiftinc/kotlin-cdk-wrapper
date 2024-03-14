@@ -26,71 +26,62 @@ public interface AwsSdkCall {
   public fun service(): String
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun apiVersion(apiVersion: String) {
-    }
+    public fun apiVersion(apiVersion: String)
 
-    public fun assumedRoleArn(assumedRoleArn: String) {
-    }
+    public fun assumedRoleArn(assumedRoleArn: String)
 
-    public fun ignoreErrorCodesMatching(ignoreErrorCodesMatching: String) {
-    }
+    public fun ignoreErrorCodesMatching(ignoreErrorCodesMatching: String)
 
-    public fun outputPaths(outputPaths: List<String>) {
-    }
+    public fun outputPaths(outputPaths: List<String>)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun physicalResourceId(physicalResourceId: PhysicalResourceId) {
-    }
+    public fun physicalResourceId(physicalResourceId: PhysicalResourceId)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun service(service: String) {
-    }
+    public fun service(service: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.customresources.AwsSdkCall.Builder =
         software.amazon.awscdk.customresources.AwsSdkCall.builder()
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun apiVersion(apiVersion: String) {
+    override fun apiVersion(apiVersion: String) {
       cdkBuilder.apiVersion(apiVersion)
     }
 
-    public override fun assumedRoleArn(assumedRoleArn: String) {
+    override fun assumedRoleArn(assumedRoleArn: String) {
       cdkBuilder.assumedRoleArn(assumedRoleArn)
     }
 
-    public override fun ignoreErrorCodesMatching(ignoreErrorCodesMatching: String) {
+    override fun ignoreErrorCodesMatching(ignoreErrorCodesMatching: String) {
       cdkBuilder.ignoreErrorCodesMatching(ignoreErrorCodesMatching)
     }
 
-    public override fun outputPaths(outputPaths: List<String>) {
+    override fun outputPaths(outputPaths: List<String>) {
       cdkBuilder.outputPaths(outputPaths)
     }
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun physicalResourceId(physicalResourceId: PhysicalResourceId) {
+    override fun physicalResourceId(physicalResourceId: PhysicalResourceId) {
       cdkBuilder.physicalResourceId(physicalResourceId.let(PhysicalResourceId::unwrap))
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun service(service: String) {
+    override fun service(service: String) {
       cdkBuilder.service(service)
     }
 
@@ -100,25 +91,24 @@ public interface AwsSdkCall {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.customresources.AwsSdkCall,
   ) : AwsSdkCall {
-    public override fun action(): String = unwrap(this).getAction()
+    override fun action(): String = unwrap(this).getAction()
 
-    public override fun apiVersion(): String? = unwrap(this).getApiVersion()
+    override fun apiVersion(): String? = unwrap(this).getApiVersion()
 
-    public override fun assumedRoleArn(): String? = unwrap(this).getAssumedRoleArn()
+    override fun assumedRoleArn(): String? = unwrap(this).getAssumedRoleArn()
 
-    public override fun ignoreErrorCodesMatching(): String? =
-        unwrap(this).getIgnoreErrorCodesMatching()
+    override fun ignoreErrorCodesMatching(): String? = unwrap(this).getIgnoreErrorCodesMatching()
 
-    public override fun outputPaths(): List<String> = unwrap(this).getOutputPaths() ?: emptyList()
+    override fun outputPaths(): List<String> = unwrap(this).getOutputPaths() ?: emptyList()
 
-    public override fun parameters(): Any? = unwrap(this).getParameters()
+    override fun parameters(): Any? = unwrap(this).getParameters()
 
-    public override fun physicalResourceId(): PhysicalResourceId? =
+    override fun physicalResourceId(): PhysicalResourceId? =
         unwrap(this).getPhysicalResourceId()?.let(PhysicalResourceId::wrap)
 
-    public override fun region(): String? = unwrap(this).getRegion()
+    override fun region(): String? = unwrap(this).getRegion()
 
-    public override fun service(): String = unwrap(this).getService()
+    override fun service(): String = unwrap(this).getService()
   }
 
   public companion object {

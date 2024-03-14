@@ -13,20 +13,15 @@ public interface IpInstanceBaseProps : BaseInstanceProps {
   public fun port(): Number? = unwrap(this).getPort()
 
   public interface Builder {
-    public fun customAttributes(customAttributes: Map<String, String>) {
-    }
+    public fun customAttributes(customAttributes: Map<String, String>)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun ipv4(ipv4: String) {
-    }
+    public fun ipv4(ipv4: String)
 
-    public fun ipv6(ipv6: String) {
-    }
+    public fun ipv6(ipv6: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -34,23 +29,23 @@ public interface IpInstanceBaseProps : BaseInstanceProps {
         software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps.Builder =
         software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps.builder()
 
-    public override fun customAttributes(customAttributes: Map<String, String>) {
+    override fun customAttributes(customAttributes: Map<String, String>) {
       cdkBuilder.customAttributes(customAttributes)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun ipv4(ipv4: String) {
+    override fun ipv4(ipv4: String) {
       cdkBuilder.ipv4(ipv4)
     }
 
-    public override fun ipv6(ipv6: String) {
+    override fun ipv6(ipv6: String) {
       cdkBuilder.ipv6(ipv6)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
@@ -61,16 +56,16 @@ public interface IpInstanceBaseProps : BaseInstanceProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.IpInstanceBaseProps,
   ) : IpInstanceBaseProps {
-    public override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes()
-        ?: emptyMap()
+    override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes() ?:
+        emptyMap()
 
-    public override fun instanceId(): String? = unwrap(this).getInstanceId()
+    override fun instanceId(): String? = unwrap(this).getInstanceId()
 
-    public override fun ipv4(): String? = unwrap(this).getIpv4()
+    override fun ipv4(): String? = unwrap(this).getIpv4()
 
-    public override fun ipv6(): String? = unwrap(this).getIpv6()
+    override fun ipv6(): String? = unwrap(this).getIpv6()
 
-    public override fun port(): Number? = unwrap(this).getPort()
+    override fun port(): Number? = unwrap(this).getPort()
   }
 
   public companion object {

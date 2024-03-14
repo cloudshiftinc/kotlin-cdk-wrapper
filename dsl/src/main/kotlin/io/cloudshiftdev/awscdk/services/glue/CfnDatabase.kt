@@ -44,19 +44,15 @@ public open class CfnDatabase internal constructor(
   }
 
   public interface Builder {
-    public fun catalogId(catalogId: String) {
-    }
+    public fun catalogId(catalogId: String)
 
-    public fun databaseInput(databaseInput: IResolvable) {
-    }
+    public fun databaseInput(databaseInput: IResolvable)
 
-    public fun databaseInput(databaseInput: DatabaseInputProperty) {
-    }
+    public fun databaseInput(databaseInput: DatabaseInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("977dcab4f4d2d0a2cf36d1e9a7b5532875b1237f2589a2f57b19100e301a879b")
-    public fun databaseInput(databaseInput: DatabaseInputProperty.Builder.() -> Unit) {
-    }
+    public fun databaseInput(databaseInput: DatabaseInputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -66,22 +62,22 @@ public open class CfnDatabase internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnDatabase.Builder =
         software.amazon.awscdk.services.glue.CfnDatabase.Builder.create(scope, id)
 
-    public override fun catalogId(catalogId: String) {
+    override fun catalogId(catalogId: String) {
       cdkBuilder.catalogId(catalogId)
     }
 
-    public override fun databaseInput(databaseInput: IResolvable) {
+    override fun databaseInput(databaseInput: IResolvable) {
       cdkBuilder.databaseInput(databaseInput.let(IResolvable::unwrap))
     }
 
-    public override fun databaseInput(databaseInput: DatabaseInputProperty) {
+    override fun databaseInput(databaseInput: DatabaseInputProperty) {
       cdkBuilder.databaseInput(databaseInput.let(DatabaseInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("977dcab4f4d2d0a2cf36d1e9a7b5532875b1237f2589a2f57b19100e301a879b")
-    public override fun databaseInput(databaseInput: DatabaseInputProperty.Builder.() -> Unit): Unit
-        = databaseInput(DatabaseInputProperty(databaseInput))
+    override fun databaseInput(databaseInput: DatabaseInputProperty.Builder.() -> Unit): Unit =
+        databaseInput(DatabaseInputProperty(databaseInput))
 
     public fun build(): software.amazon.awscdk.services.glue.CfnDatabase = cdkBuilder.build()
   }
@@ -124,46 +120,33 @@ public open class CfnDatabase internal constructor(
     public fun targetDatabase(): Any? = unwrap(this).getTargetDatabase()
 
     public interface Builder {
-      public fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
-      }
+      public fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable)
 
-      public fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
-      }
+      public fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun federatedDatabase(federatedDatabase: IResolvable) {
-      }
+      public fun federatedDatabase(federatedDatabase: IResolvable)
 
-      public fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty) {
-      }
+      public fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4b65ff7c8b03e9b65250939a9639ccc40f86571e64b8ca5ca97272767ae23b00")
-      public
-          fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty.Builder.() -> Unit) {
-      }
+      public fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty.Builder.() -> Unit)
 
-      public fun locationUri(locationUri: String) {
-      }
+      public fun locationUri(locationUri: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun parameters(parameters: Any) {
-      }
+      public fun parameters(parameters: Any)
 
-      public fun targetDatabase(targetDatabase: IResolvable) {
-      }
+      public fun targetDatabase(targetDatabase: IResolvable)
 
-      public fun targetDatabase(targetDatabase: DatabaseIdentifierProperty) {
-      }
+      public fun targetDatabase(targetDatabase: DatabaseIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8343aa203b412577f62ae7a45c499c1c61ea101c62145d4fd2f7b75aaecf2792")
-      public fun targetDatabase(targetDatabase: DatabaseIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun targetDatabase(targetDatabase: DatabaseIdentifierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -171,58 +154,56 @@ public open class CfnDatabase internal constructor(
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty.Builder =
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty.builder()
 
-      public override
-          fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
+      override fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
         cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable::unwrap))
       }
 
-      public override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
+      override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
         cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun federatedDatabase(federatedDatabase: IResolvable) {
+      override fun federatedDatabase(federatedDatabase: IResolvable) {
         cdkBuilder.federatedDatabase(federatedDatabase.let(IResolvable::unwrap))
       }
 
-      public override fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty) {
+      override fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty) {
         cdkBuilder.federatedDatabase(federatedDatabase.let(FederatedDatabaseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4b65ff7c8b03e9b65250939a9639ccc40f86571e64b8ca5ca97272767ae23b00")
-      public override
+      override
           fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty.Builder.() -> Unit):
           Unit = federatedDatabase(FederatedDatabaseProperty(federatedDatabase))
 
-      public override fun locationUri(locationUri: String) {
+      override fun locationUri(locationUri: String) {
         cdkBuilder.locationUri(locationUri)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun parameters(parameters: Any) {
+      override fun parameters(parameters: Any) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun targetDatabase(targetDatabase: IResolvable) {
+      override fun targetDatabase(targetDatabase: IResolvable) {
         cdkBuilder.targetDatabase(targetDatabase.let(IResolvable::unwrap))
       }
 
-      public override fun targetDatabase(targetDatabase: DatabaseIdentifierProperty) {
+      override fun targetDatabase(targetDatabase: DatabaseIdentifierProperty) {
         cdkBuilder.targetDatabase(targetDatabase.let(DatabaseIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8343aa203b412577f62ae7a45c499c1c61ea101c62145d4fd2f7b75aaecf2792")
-      public override
-          fun targetDatabase(targetDatabase: DatabaseIdentifierProperty.Builder.() -> Unit): Unit =
-          targetDatabase(DatabaseIdentifierProperty(targetDatabase))
+      override fun targetDatabase(targetDatabase: DatabaseIdentifierProperty.Builder.() -> Unit):
+          Unit = targetDatabase(DatabaseIdentifierProperty(targetDatabase))
 
       public fun build(): software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty =
           cdkBuilder.build()
@@ -232,20 +213,20 @@ public open class CfnDatabase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty,
     ) : DatabaseInputProperty {
-      public override fun createTableDefaultPermissions(): Any? =
+      override fun createTableDefaultPermissions(): Any? =
           unwrap(this).getCreateTableDefaultPermissions()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun federatedDatabase(): Any? = unwrap(this).getFederatedDatabase()
+      override fun federatedDatabase(): Any? = unwrap(this).getFederatedDatabase()
 
-      public override fun locationUri(): String? = unwrap(this).getLocationUri()
+      override fun locationUri(): String? = unwrap(this).getLocationUri()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun targetDatabase(): Any? = unwrap(this).getTargetDatabase()
+      override fun targetDatabase(): Any? = unwrap(this).getTargetDatabase()
     }
 
     public companion object {
@@ -274,11 +255,9 @@ public open class CfnDatabase internal constructor(
     public fun identifier(): String? = unwrap(this).getIdentifier()
 
     public interface Builder {
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun identifier(identifier: String) {
-      }
+      public fun identifier(identifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -286,11 +265,11 @@ public open class CfnDatabase internal constructor(
           software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty.Builder =
           software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty.builder()
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun identifier(identifier: String) {
+      override fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
       }
 
@@ -302,9 +281,9 @@ public open class CfnDatabase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty,
     ) : FederatedDatabaseProperty {
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun identifier(): String? = unwrap(this).getIdentifier()
+      override fun identifier(): String? = unwrap(this).getIdentifier()
     }
 
     public companion object {
@@ -332,8 +311,7 @@ public open class CfnDatabase internal constructor(
         unwrap(this).getDataLakePrincipalIdentifier()
 
     public interface Builder {
-      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
-      }
+      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -341,7 +319,7 @@ public open class CfnDatabase internal constructor(
           software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty.Builder =
           software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty.builder()
 
-      public override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
+      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
         cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
       }
 
@@ -353,7 +331,7 @@ public open class CfnDatabase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty,
     ) : DataLakePrincipalProperty {
-      public override fun dataLakePrincipalIdentifier(): String? =
+      override fun dataLakePrincipalIdentifier(): String? =
           unwrap(this).getDataLakePrincipalIdentifier()
     }
 
@@ -383,19 +361,15 @@ public open class CfnDatabase internal constructor(
     public fun principal(): Any? = unwrap(this).getPrincipal()
 
     public interface Builder {
-      public fun permissions(permissions: List<String>) {
-      }
+      public fun permissions(permissions: List<String>)
 
-      public fun principal(principal: IResolvable) {
-      }
+      public fun principal(principal: IResolvable)
 
-      public fun principal(principal: DataLakePrincipalProperty) {
-      }
+      public fun principal(principal: DataLakePrincipalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("26a401ea0875e6e271c7b0116fc64b0c6609b7fca88d8ba318032f56fd772af6")
-      public fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit) {
-      }
+      public fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -403,21 +377,21 @@ public open class CfnDatabase internal constructor(
           software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty.Builder =
           software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty.builder()
 
-      public override fun permissions(permissions: List<String>) {
+      override fun permissions(permissions: List<String>) {
         cdkBuilder.permissions(permissions)
       }
 
-      public override fun principal(principal: IResolvable) {
+      override fun principal(principal: IResolvable) {
         cdkBuilder.principal(principal.let(IResolvable::unwrap))
       }
 
-      public override fun principal(principal: DataLakePrincipalProperty) {
+      override fun principal(principal: DataLakePrincipalProperty) {
         cdkBuilder.principal(principal.let(DataLakePrincipalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("26a401ea0875e6e271c7b0116fc64b0c6609b7fca88d8ba318032f56fd772af6")
-      public override fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit): Unit =
+      override fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit): Unit =
           principal(DataLakePrincipalProperty(principal))
 
       public fun build():
@@ -429,9 +403,9 @@ public open class CfnDatabase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty,
     ) : PrincipalPrivilegesProperty {
-      public override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
+      override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
 
-      public override fun principal(): Any? = unwrap(this).getPrincipal()
+      override fun principal(): Any? = unwrap(this).getPrincipal()
     }
 
     public companion object {
@@ -462,14 +436,11 @@ public open class CfnDatabase internal constructor(
     public fun region(): String? = unwrap(this).getRegion()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -477,15 +448,15 @@ public open class CfnDatabase internal constructor(
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty.Builder =
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -498,11 +469,11 @@ public open class CfnDatabase internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty,
     ) : DatabaseIdentifierProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
     }
 
     public companion object {

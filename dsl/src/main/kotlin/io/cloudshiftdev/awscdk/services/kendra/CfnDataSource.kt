@@ -117,54 +117,40 @@ public open class CfnDataSource internal constructor(
 
   public interface Builder {
     public
-        fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: IResolvable) {
-    }
+        fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: IResolvable)
 
     public
-        fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty) {
-    }
+        fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("09a24b55237400780b4036c110934fe50e5d4eee1f31ff47c56735f466c92960")
     public
-        fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty.Builder.() -> Unit)
 
-    public fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-    }
+    public fun dataSourceConfiguration(dataSourceConfiguration: IResolvable)
 
-    public fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
-    }
+    public fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("feac19ef158c17713136dc6e927a341682e4c0881325337d9e9743c12659145f")
     public
-        fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun indexId(indexId: String) {
-    }
+    public fun indexId(indexId: String)
 
-    public fun languageCode(languageCode: String) {
-    }
+    public fun languageCode(languageCode: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun schedule(schedule: String) {
-    }
+    public fun schedule(schedule: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -174,67 +160,66 @@ public open class CfnDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kendra.CfnDataSource.Builder =
         software.amazon.awscdk.services.kendra.CfnDataSource.Builder.create(scope, id)
 
-    public override
+    override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: IResolvable) {
       cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty) {
       cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(CustomDocumentEnrichmentConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("09a24b55237400780b4036c110934fe50e5d4eee1f31ff47c56735f466c92960")
-    public override
+    override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty.Builder.() -> Unit):
         Unit =
         customDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfigurationProperty(customDocumentEnrichmentConfiguration))
 
-    public override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
+    override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
       cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
+    override fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
       cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("feac19ef158c17713136dc6e927a341682e4c0881325337d9e9743c12659145f")
-    public override
+    override
         fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty.Builder.() -> Unit):
         Unit = dataSourceConfiguration(DataSourceConfigurationProperty(dataSourceConfiguration))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun indexId(indexId: String) {
+    override fun indexId(indexId: String) {
       cdkBuilder.indexId(indexId)
     }
 
-    public override fun languageCode(languageCode: String) {
+    override fun languageCode(languageCode: String) {
       cdkBuilder.languageCode(languageCode)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun schedule(schedule: String) {
+    override fun schedule(schedule: String) {
       cdkBuilder.schedule(schedule)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -268,11 +253,9 @@ public open class CfnDataSource internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -281,11 +264,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -298,10 +281,10 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty,
     ) : DataSourceVpcConfigurationProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -353,70 +336,50 @@ public open class CfnDataSource internal constructor(
     public fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
 
     public interface Builder {
-      public fun crawlAttachments(crawlAttachments: Boolean) {
-      }
+      public fun crawlAttachments(crawlAttachments: Boolean)
 
-      public fun crawlAttachments(crawlAttachments: IResolvable) {
-      }
+      public fun crawlAttachments(crawlAttachments: IResolvable)
 
-      public fun disableLocalGroups(disableLocalGroups: Boolean) {
-      }
+      public fun disableLocalGroups(disableLocalGroups: Boolean)
 
-      public fun disableLocalGroups(disableLocalGroups: IResolvable) {
-      }
+      public fun disableLocalGroups(disableLocalGroups: IResolvable)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun exclusionPatterns(exclusionPatterns: List<String>) {
-      }
+      public fun exclusionPatterns(exclusionPatterns: List<String>)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun inclusionPatterns(inclusionPatterns: List<String>) {
-      }
+      public fun inclusionPatterns(inclusionPatterns: List<String>)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun sharePointVersion(sharePointVersion: String) {
-      }
+      public fun sharePointVersion(sharePointVersion: String)
 
-      public fun sslCertificateS3Path(sslCertificateS3Path: IResolvable) {
-      }
+      public fun sslCertificateS3Path(sslCertificateS3Path: IResolvable)
 
-      public fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty) {
-      }
+      public fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2127e493613bd538dabcc5b42d3edd169d9f2c98a2067b34e2faeb5848504144")
-      public fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty.Builder.() -> Unit) {
-      }
+      public fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty.Builder.() -> Unit)
 
-      public fun urls(urls: List<String>) {
-      }
+      public fun urls(urls: List<String>)
 
-      public fun useChangeLog(useChangeLog: Boolean) {
-      }
+      public fun useChangeLog(useChangeLog: Boolean)
 
-      public fun useChangeLog(useChangeLog: IResolvable) {
-      }
+      public fun useChangeLog(useChangeLog: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b23baf699d4733b7ee2ece45ce9c72df4129e855c5c040cbeaa1a3d84f649f1f")
       public
-          fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -425,87 +388,86 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SharePointConfigurationProperty.builder()
 
-      public override fun crawlAttachments(crawlAttachments: Boolean) {
+      override fun crawlAttachments(crawlAttachments: Boolean) {
         cdkBuilder.crawlAttachments(crawlAttachments)
       }
 
-      public override fun crawlAttachments(crawlAttachments: IResolvable) {
+      override fun crawlAttachments(crawlAttachments: IResolvable) {
         cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
       }
 
-      public override fun disableLocalGroups(disableLocalGroups: Boolean) {
+      override fun disableLocalGroups(disableLocalGroups: Boolean) {
         cdkBuilder.disableLocalGroups(disableLocalGroups)
       }
 
-      public override fun disableLocalGroups(disableLocalGroups: IResolvable) {
+      override fun disableLocalGroups(disableLocalGroups: IResolvable) {
         cdkBuilder.disableLocalGroups(disableLocalGroups.let(IResolvable::unwrap))
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override fun exclusionPatterns(exclusionPatterns: List<String>) {
+      override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun inclusionPatterns(inclusionPatterns: List<String>) {
+      override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun sharePointVersion(sharePointVersion: String) {
+      override fun sharePointVersion(sharePointVersion: String) {
         cdkBuilder.sharePointVersion(sharePointVersion)
       }
 
-      public override fun sslCertificateS3Path(sslCertificateS3Path: IResolvable) {
+      override fun sslCertificateS3Path(sslCertificateS3Path: IResolvable) {
         cdkBuilder.sslCertificateS3Path(sslCertificateS3Path.let(IResolvable::unwrap))
       }
 
-      public override fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty) {
+      override fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty) {
         cdkBuilder.sslCertificateS3Path(sslCertificateS3Path.let(S3PathProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2127e493613bd538dabcc5b42d3edd169d9f2c98a2067b34e2faeb5848504144")
-      public override
-          fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty.Builder.() -> Unit): Unit =
-          sslCertificateS3Path(S3PathProperty(sslCertificateS3Path))
+      override fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty.Builder.() -> Unit):
+          Unit = sslCertificateS3Path(S3PathProperty(sslCertificateS3Path))
 
-      public override fun urls(urls: List<String>) {
+      override fun urls(urls: List<String>) {
         cdkBuilder.urls(urls)
       }
 
-      public override fun useChangeLog(useChangeLog: Boolean) {
+      override fun useChangeLog(useChangeLog: Boolean) {
         cdkBuilder.useChangeLog(useChangeLog)
       }
 
-      public override fun useChangeLog(useChangeLog: IResolvable) {
+      override fun useChangeLog(useChangeLog: IResolvable) {
         cdkBuilder.useChangeLog(useChangeLog.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+      override fun vpcConfiguration(vpcConfiguration: IResolvable) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
+      override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b23baf699d4733b7ee2ece45ce9c72df4129e855c5c040cbeaa1a3d84f649f1f")
-      public override
+      override
           fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit):
           Unit = vpcConfiguration(DataSourceVpcConfigurationProperty(vpcConfiguration))
 
@@ -518,32 +480,31 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SharePointConfigurationProperty,
     ) : SharePointConfigurationProperty {
-      public override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
+      override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
 
-      public override fun disableLocalGroups(): Any? = unwrap(this).getDisableLocalGroups()
+      override fun disableLocalGroups(): Any? = unwrap(this).getDisableLocalGroups()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+      override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
           emptyList()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+      override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
           emptyList()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
 
-      public override fun sharePointVersion(): String = unwrap(this).getSharePointVersion()
+      override fun sharePointVersion(): String = unwrap(this).getSharePointVersion()
 
-      public override fun sslCertificateS3Path(): Any? = unwrap(this).getSslCertificateS3Path()
+      override fun sslCertificateS3Path(): Any? = unwrap(this).getSslCertificateS3Path()
 
-      public override fun urls(): List<String> = unwrap(this).getUrls() ?: emptyList()
+      override fun urls(): List<String> = unwrap(this).getUrls() ?: emptyList()
 
-      public override fun useChangeLog(): Any? = unwrap(this).getUseChangeLog()
+      override fun useChangeLog(): Any? = unwrap(this).getUseChangeLog()
 
-      public override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
+      override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
     }
 
     public companion object {
@@ -589,59 +550,44 @@ public open class CfnDataSource internal constructor(
     public fun urls(): Any
 
     public interface Builder {
-      public fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-      }
+      public fun authenticationConfiguration(authenticationConfiguration: IResolvable)
 
       public
-          fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty) {
-      }
+          fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d9375cd609ac8ce64ac0fc38e414d174cee4fda680c1fbc196c808540d4bcb44")
       public
-          fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty.Builder.() -> Unit)
 
-      public fun crawlDepth(crawlDepth: Number) {
-      }
+      public fun crawlDepth(crawlDepth: Number)
 
-      public fun maxContentSizePerPageInMegaBytes(maxContentSizePerPageInMegaBytes: Number) {
-      }
+      public fun maxContentSizePerPageInMegaBytes(maxContentSizePerPageInMegaBytes: Number)
 
-      public fun maxLinksPerPage(maxLinksPerPage: Number) {
-      }
+      public fun maxLinksPerPage(maxLinksPerPage: Number)
 
-      public fun maxUrlsPerMinuteCrawlRate(maxUrlsPerMinuteCrawlRate: Number) {
-      }
+      public fun maxUrlsPerMinuteCrawlRate(maxUrlsPerMinuteCrawlRate: Number)
 
-      public fun proxyConfiguration(proxyConfiguration: IResolvable) {
-      }
+      public fun proxyConfiguration(proxyConfiguration: IResolvable)
 
-      public fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty) {
-      }
+      public fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ce8baf561a2460e7a66d6a6a4fd470f85e30b1d5ffb8009028dcff89fc3f74e")
       public
-          fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty.Builder.() -> Unit)
 
-      public fun urlExclusionPatterns(urlExclusionPatterns: List<String>) {
-      }
+      public fun urlExclusionPatterns(urlExclusionPatterns: List<String>)
 
-      public fun urlInclusionPatterns(urlInclusionPatterns: List<String>) {
-      }
+      public fun urlInclusionPatterns(urlInclusionPatterns: List<String>)
 
-      public fun urls(urls: IResolvable) {
-      }
+      public fun urls(urls: IResolvable)
 
-      public fun urls(urls: WebCrawlerUrlsProperty) {
-      }
+      public fun urls(urls: WebCrawlerUrlsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("89c4546fdcecabe3d16ebadb3808f7692f825e5692f249b5b0d55db6cf17fd68")
-      public fun urls(urls: WebCrawlerUrlsProperty.Builder.() -> Unit) {
-      }
+      public fun urls(urls: WebCrawlerUrlsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -650,72 +596,71 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerConfigurationProperty.builder()
 
-      public override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
+      override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
         cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty) {
         cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(WebCrawlerAuthenticationConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d9375cd609ac8ce64ac0fc38e414d174cee4fda680c1fbc196c808540d4bcb44")
-      public override
+      override
           fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty.Builder.() -> Unit):
           Unit =
           authenticationConfiguration(WebCrawlerAuthenticationConfigurationProperty(authenticationConfiguration))
 
-      public override fun crawlDepth(crawlDepth: Number) {
+      override fun crawlDepth(crawlDepth: Number) {
         cdkBuilder.crawlDepth(crawlDepth)
       }
 
-      public override
-          fun maxContentSizePerPageInMegaBytes(maxContentSizePerPageInMegaBytes: Number) {
+      override fun maxContentSizePerPageInMegaBytes(maxContentSizePerPageInMegaBytes: Number) {
         cdkBuilder.maxContentSizePerPageInMegaBytes(maxContentSizePerPageInMegaBytes)
       }
 
-      public override fun maxLinksPerPage(maxLinksPerPage: Number) {
+      override fun maxLinksPerPage(maxLinksPerPage: Number) {
         cdkBuilder.maxLinksPerPage(maxLinksPerPage)
       }
 
-      public override fun maxUrlsPerMinuteCrawlRate(maxUrlsPerMinuteCrawlRate: Number) {
+      override fun maxUrlsPerMinuteCrawlRate(maxUrlsPerMinuteCrawlRate: Number) {
         cdkBuilder.maxUrlsPerMinuteCrawlRate(maxUrlsPerMinuteCrawlRate)
       }
 
-      public override fun proxyConfiguration(proxyConfiguration: IResolvable) {
+      override fun proxyConfiguration(proxyConfiguration: IResolvable) {
         cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty) {
+      override fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty) {
         cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ce8baf561a2460e7a66d6a6a4fd470f85e30b1d5ffb8009028dcff89fc3f74e")
-      public override
+      override
           fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty.Builder.() -> Unit):
           Unit = proxyConfiguration(ProxyConfigurationProperty(proxyConfiguration))
 
-      public override fun urlExclusionPatterns(urlExclusionPatterns: List<String>) {
+      override fun urlExclusionPatterns(urlExclusionPatterns: List<String>) {
         cdkBuilder.urlExclusionPatterns(urlExclusionPatterns)
       }
 
-      public override fun urlInclusionPatterns(urlInclusionPatterns: List<String>) {
+      override fun urlInclusionPatterns(urlInclusionPatterns: List<String>) {
         cdkBuilder.urlInclusionPatterns(urlInclusionPatterns)
       }
 
-      public override fun urls(urls: IResolvable) {
+      override fun urls(urls: IResolvable) {
         cdkBuilder.urls(urls.let(IResolvable::unwrap))
       }
 
-      public override fun urls(urls: WebCrawlerUrlsProperty) {
+      override fun urls(urls: WebCrawlerUrlsProperty) {
         cdkBuilder.urls(urls.let(WebCrawlerUrlsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("89c4546fdcecabe3d16ebadb3808f7692f825e5692f249b5b0d55db6cf17fd68")
-      public override fun urls(urls: WebCrawlerUrlsProperty.Builder.() -> Unit): Unit =
+      override fun urls(urls: WebCrawlerUrlsProperty.Builder.() -> Unit): Unit =
           urls(WebCrawlerUrlsProperty(urls))
 
       public fun build():
@@ -727,28 +672,28 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerConfigurationProperty,
     ) : WebCrawlerConfigurationProperty {
-      public override fun authenticationConfiguration(): Any? =
+      override fun authenticationConfiguration(): Any? =
           unwrap(this).getAuthenticationConfiguration()
 
-      public override fun crawlDepth(): Number? = unwrap(this).getCrawlDepth()
+      override fun crawlDepth(): Number? = unwrap(this).getCrawlDepth()
 
-      public override fun maxContentSizePerPageInMegaBytes(): Number? =
+      override fun maxContentSizePerPageInMegaBytes(): Number? =
           unwrap(this).getMaxContentSizePerPageInMegaBytes()
 
-      public override fun maxLinksPerPage(): Number? = unwrap(this).getMaxLinksPerPage()
+      override fun maxLinksPerPage(): Number? = unwrap(this).getMaxLinksPerPage()
 
-      public override fun maxUrlsPerMinuteCrawlRate(): Number? =
+      override fun maxUrlsPerMinuteCrawlRate(): Number? =
           unwrap(this).getMaxUrlsPerMinuteCrawlRate()
 
-      public override fun proxyConfiguration(): Any? = unwrap(this).getProxyConfiguration()
+      override fun proxyConfiguration(): Any? = unwrap(this).getProxyConfiguration()
 
-      public override fun urlExclusionPatterns(): List<String> =
-          unwrap(this).getUrlExclusionPatterns() ?: emptyList()
+      override fun urlExclusionPatterns(): List<String> = unwrap(this).getUrlExclusionPatterns() ?:
+          emptyList()
 
-      public override fun urlInclusionPatterns(): List<String> =
-          unwrap(this).getUrlInclusionPatterns() ?: emptyList()
+      override fun urlInclusionPatterns(): List<String> = unwrap(this).getUrlInclusionPatterns() ?:
+          emptyList()
 
-      public override fun urls(): Any = unwrap(this).getUrls()
+      override fun urls(): Any = unwrap(this).getUrls()
     }
 
     public companion object {
@@ -779,23 +724,18 @@ public open class CfnDataSource internal constructor(
     public fun `operator`(): String
 
     public interface Builder {
-      public fun conditionDocumentAttributeKey(conditionDocumentAttributeKey: String) {
-      }
+      public fun conditionDocumentAttributeKey(conditionDocumentAttributeKey: String)
 
-      public fun conditionOnValue(conditionOnValue: IResolvable) {
-      }
+      public fun conditionOnValue(conditionOnValue: IResolvable)
 
-      public fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty) {
-      }
+      public fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("285b669c46af63d22de26994b154bd53be93f4c75d0166c78845717e213f8bad")
       public
-          fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty.Builder.() -> Unit) {
-      }
+          fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty.Builder.() -> Unit)
 
-      public fun `operator`(`operator`: String) {
-      }
+      public fun `operator`(`operator`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -804,25 +744,25 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeConditionProperty.builder()
 
-      public override fun conditionDocumentAttributeKey(conditionDocumentAttributeKey: String) {
+      override fun conditionDocumentAttributeKey(conditionDocumentAttributeKey: String) {
         cdkBuilder.conditionDocumentAttributeKey(conditionDocumentAttributeKey)
       }
 
-      public override fun conditionOnValue(conditionOnValue: IResolvable) {
+      override fun conditionOnValue(conditionOnValue: IResolvable) {
         cdkBuilder.conditionOnValue(conditionOnValue.let(IResolvable::unwrap))
       }
 
-      public override fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty) {
+      override fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty) {
         cdkBuilder.conditionOnValue(conditionOnValue.let(DocumentAttributeValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("285b669c46af63d22de26994b154bd53be93f4c75d0166c78845717e213f8bad")
-      public override
+      override
           fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty.Builder.() -> Unit):
           Unit = conditionOnValue(DocumentAttributeValueProperty(conditionOnValue))
 
-      public override fun `operator`(`operator`: String) {
+      override fun `operator`(`operator`: String) {
         cdkBuilder.`operator`(`operator`)
       }
 
@@ -835,12 +775,12 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeConditionProperty,
     ) : DocumentAttributeConditionProperty {
-      public override fun conditionDocumentAttributeKey(): String =
+      override fun conditionDocumentAttributeKey(): String =
           unwrap(this).getConditionDocumentAttributeKey()
 
-      public override fun conditionOnValue(): Any? = unwrap(this).getConditionOnValue()
+      override fun conditionOnValue(): Any? = unwrap(this).getConditionOnValue()
 
-      public override fun `operator`(): String = unwrap(this).getOperator()
+      override fun `operator`(): String = unwrap(this).getOperator()
     }
 
     public companion object {
@@ -868,11 +808,9 @@ public open class CfnDataSource internal constructor(
     public fun pageFieldMappings(): Any? = unwrap(this).getPageFieldMappings()
 
     public interface Builder {
-      public fun pageFieldMappings(pageFieldMappings: IResolvable) {
-      }
+      public fun pageFieldMappings(pageFieldMappings: IResolvable)
 
-      public fun pageFieldMappings(pageFieldMappings: List<Any>) {
-      }
+      public fun pageFieldMappings(pageFieldMappings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -881,11 +819,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty.builder()
 
-      public override fun pageFieldMappings(pageFieldMappings: IResolvable) {
+      override fun pageFieldMappings(pageFieldMappings: IResolvable) {
         cdkBuilder.pageFieldMappings(pageFieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun pageFieldMappings(pageFieldMappings: List<Any>) {
+      override fun pageFieldMappings(pageFieldMappings: List<Any>) {
         cdkBuilder.pageFieldMappings(pageFieldMappings)
       }
 
@@ -898,7 +836,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty,
     ) : ConfluencePageConfigurationProperty {
-      public override fun pageFieldMappings(): Any? = unwrap(this).getPageFieldMappings()
+      override fun pageFieldMappings(): Any? = unwrap(this).getPageFieldMappings()
     }
 
     public companion object {
@@ -934,29 +872,21 @@ public open class CfnDataSource internal constructor(
     public fun spaceFieldMappings(): Any? = unwrap(this).getSpaceFieldMappings()
 
     public interface Builder {
-      public fun crawlArchivedSpaces(crawlArchivedSpaces: Boolean) {
-      }
+      public fun crawlArchivedSpaces(crawlArchivedSpaces: Boolean)
 
-      public fun crawlArchivedSpaces(crawlArchivedSpaces: IResolvable) {
-      }
+      public fun crawlArchivedSpaces(crawlArchivedSpaces: IResolvable)
 
-      public fun crawlPersonalSpaces(crawlPersonalSpaces: Boolean) {
-      }
+      public fun crawlPersonalSpaces(crawlPersonalSpaces: Boolean)
 
-      public fun crawlPersonalSpaces(crawlPersonalSpaces: IResolvable) {
-      }
+      public fun crawlPersonalSpaces(crawlPersonalSpaces: IResolvable)
 
-      public fun excludeSpaces(excludeSpaces: List<String>) {
-      }
+      public fun excludeSpaces(excludeSpaces: List<String>)
 
-      public fun includeSpaces(includeSpaces: List<String>) {
-      }
+      public fun includeSpaces(includeSpaces: List<String>)
 
-      public fun spaceFieldMappings(spaceFieldMappings: IResolvable) {
-      }
+      public fun spaceFieldMappings(spaceFieldMappings: IResolvable)
 
-      public fun spaceFieldMappings(spaceFieldMappings: List<Any>) {
-      }
+      public fun spaceFieldMappings(spaceFieldMappings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -965,35 +895,35 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty.builder()
 
-      public override fun crawlArchivedSpaces(crawlArchivedSpaces: Boolean) {
+      override fun crawlArchivedSpaces(crawlArchivedSpaces: Boolean) {
         cdkBuilder.crawlArchivedSpaces(crawlArchivedSpaces)
       }
 
-      public override fun crawlArchivedSpaces(crawlArchivedSpaces: IResolvable) {
+      override fun crawlArchivedSpaces(crawlArchivedSpaces: IResolvable) {
         cdkBuilder.crawlArchivedSpaces(crawlArchivedSpaces.let(IResolvable::unwrap))
       }
 
-      public override fun crawlPersonalSpaces(crawlPersonalSpaces: Boolean) {
+      override fun crawlPersonalSpaces(crawlPersonalSpaces: Boolean) {
         cdkBuilder.crawlPersonalSpaces(crawlPersonalSpaces)
       }
 
-      public override fun crawlPersonalSpaces(crawlPersonalSpaces: IResolvable) {
+      override fun crawlPersonalSpaces(crawlPersonalSpaces: IResolvable) {
         cdkBuilder.crawlPersonalSpaces(crawlPersonalSpaces.let(IResolvable::unwrap))
       }
 
-      public override fun excludeSpaces(excludeSpaces: List<String>) {
+      override fun excludeSpaces(excludeSpaces: List<String>) {
         cdkBuilder.excludeSpaces(excludeSpaces)
       }
 
-      public override fun includeSpaces(includeSpaces: List<String>) {
+      override fun includeSpaces(includeSpaces: List<String>) {
         cdkBuilder.includeSpaces(includeSpaces)
       }
 
-      public override fun spaceFieldMappings(spaceFieldMappings: IResolvable) {
+      override fun spaceFieldMappings(spaceFieldMappings: IResolvable) {
         cdkBuilder.spaceFieldMappings(spaceFieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun spaceFieldMappings(spaceFieldMappings: List<Any>) {
+      override fun spaceFieldMappings(spaceFieldMappings: List<Any>) {
         cdkBuilder.spaceFieldMappings(spaceFieldMappings)
       }
 
@@ -1006,17 +936,15 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty,
     ) : ConfluenceSpaceConfigurationProperty {
-      public override fun crawlArchivedSpaces(): Any? = unwrap(this).getCrawlArchivedSpaces()
+      override fun crawlArchivedSpaces(): Any? = unwrap(this).getCrawlArchivedSpaces()
 
-      public override fun crawlPersonalSpaces(): Any? = unwrap(this).getCrawlPersonalSpaces()
+      override fun crawlPersonalSpaces(): Any? = unwrap(this).getCrawlPersonalSpaces()
 
-      public override fun excludeSpaces(): List<String> = unwrap(this).getExcludeSpaces() ?:
-          emptyList()
+      override fun excludeSpaces(): List<String> = unwrap(this).getExcludeSpaces() ?: emptyList()
 
-      public override fun includeSpaces(): List<String> = unwrap(this).getIncludeSpaces() ?:
-          emptyList()
+      override fun includeSpaces(): List<String> = unwrap(this).getIncludeSpaces() ?: emptyList()
 
-      public override fun spaceFieldMappings(): Any? = unwrap(this).getSpaceFieldMappings()
+      override fun spaceFieldMappings(): Any? = unwrap(this).getSpaceFieldMappings()
     }
 
     public companion object {
@@ -1055,43 +983,33 @@ public open class CfnDataSource internal constructor(
     public fun serviceNowBuildVersion(): String
 
     public interface Builder {
-      public fun authenticationType(authenticationType: String) {
-      }
+      public fun authenticationType(authenticationType: String)
 
-      public fun hostUrl(hostUrl: String) {
-      }
+      public fun hostUrl(hostUrl: String)
 
-      public fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
-      }
+      public fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable)
 
       public
-          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty) {
-      }
+          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7dff183ee3b02978e1302255425930d8fea7d80745b0c3f3c3b26f43dd458b7f")
       public
-          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty.Builder.() -> Unit)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun serviceCatalogConfiguration(serviceCatalogConfiguration: IResolvable) {
-      }
+      public fun serviceCatalogConfiguration(serviceCatalogConfiguration: IResolvable)
 
       public
-          fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty) {
-      }
+          fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2279aa4b9e87d489a0b396992572b5ff2ec71a23436393be77757e9500ca350f")
       public
-          fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty.Builder.() -> Unit)
 
-      public fun serviceNowBuildVersion(serviceNowBuildVersion: String) {
-      }
+      public fun serviceNowBuildVersion(serviceNowBuildVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1100,52 +1018,51 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowConfigurationProperty.builder()
 
-      public override fun authenticationType(authenticationType: String) {
+      override fun authenticationType(authenticationType: String) {
         cdkBuilder.authenticationType(authenticationType)
       }
 
-      public override fun hostUrl(hostUrl: String) {
+      override fun hostUrl(hostUrl: String) {
         cdkBuilder.hostUrl(hostUrl)
       }
 
-      public override
-          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
+      override fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
         cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty) {
         cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(ServiceNowKnowledgeArticleConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7dff183ee3b02978e1302255425930d8fea7d80745b0c3f3c3b26f43dd458b7f")
-      public override
+      override
           fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty.Builder.() -> Unit):
           Unit =
           knowledgeArticleConfiguration(ServiceNowKnowledgeArticleConfigurationProperty(knowledgeArticleConfiguration))
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun serviceCatalogConfiguration(serviceCatalogConfiguration: IResolvable) {
+      override fun serviceCatalogConfiguration(serviceCatalogConfiguration: IResolvable) {
         cdkBuilder.serviceCatalogConfiguration(serviceCatalogConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty) {
         cdkBuilder.serviceCatalogConfiguration(serviceCatalogConfiguration.let(ServiceNowServiceCatalogConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2279aa4b9e87d489a0b396992572b5ff2ec71a23436393be77757e9500ca350f")
-      public override
+      override
           fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty.Builder.() -> Unit):
           Unit =
           serviceCatalogConfiguration(ServiceNowServiceCatalogConfigurationProperty(serviceCatalogConfiguration))
 
-      public override fun serviceNowBuildVersion(serviceNowBuildVersion: String) {
+      override fun serviceNowBuildVersion(serviceNowBuildVersion: String) {
         cdkBuilder.serviceNowBuildVersion(serviceNowBuildVersion)
       }
 
@@ -1158,20 +1075,19 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowConfigurationProperty,
     ) : ServiceNowConfigurationProperty {
-      public override fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+      override fun authenticationType(): String? = unwrap(this).getAuthenticationType()
 
-      public override fun hostUrl(): String = unwrap(this).getHostUrl()
+      override fun hostUrl(): String = unwrap(this).getHostUrl()
 
-      public override fun knowledgeArticleConfiguration(): Any? =
+      override fun knowledgeArticleConfiguration(): Any? =
           unwrap(this).getKnowledgeArticleConfiguration()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
 
-      public override fun serviceCatalogConfiguration(): Any? =
+      override fun serviceCatalogConfiguration(): Any? =
           unwrap(this).getServiceCatalogConfiguration()
 
-      public override fun serviceNowBuildVersion(): String =
-          unwrap(this).getServiceNowBuildVersion()
+      override fun serviceNowBuildVersion(): String = unwrap(this).getServiceNowBuildVersion()
     }
 
     public companion object {
@@ -1198,11 +1114,9 @@ public open class CfnDataSource internal constructor(
     public fun basicAuthentication(): Any? = unwrap(this).getBasicAuthentication()
 
     public interface Builder {
-      public fun basicAuthentication(basicAuthentication: IResolvable) {
-      }
+      public fun basicAuthentication(basicAuthentication: IResolvable)
 
-      public fun basicAuthentication(basicAuthentication: List<Any>) {
-      }
+      public fun basicAuthentication(basicAuthentication: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1211,11 +1125,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty.builder()
 
-      public override fun basicAuthentication(basicAuthentication: IResolvable) {
+      override fun basicAuthentication(basicAuthentication: IResolvable) {
         cdkBuilder.basicAuthentication(basicAuthentication.let(IResolvable::unwrap))
       }
 
-      public override fun basicAuthentication(basicAuthentication: List<Any>) {
+      override fun basicAuthentication(basicAuthentication: List<Any>) {
         cdkBuilder.basicAuthentication(basicAuthentication)
       }
 
@@ -1228,7 +1142,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty,
     ) : WebCrawlerAuthenticationConfigurationProperty {
-      public override fun basicAuthentication(): Any? = unwrap(this).getBasicAuthentication()
+      override fun basicAuthentication(): Any? = unwrap(this).getBasicAuthentication()
     }
 
     public companion object {
@@ -1261,29 +1175,22 @@ public open class CfnDataSource internal constructor(
         unwrap(this).getTargetDocumentAttributeValueDeletion()
 
     public interface Builder {
-      public fun targetDocumentAttributeKey(targetDocumentAttributeKey: String) {
-      }
+      public fun targetDocumentAttributeKey(targetDocumentAttributeKey: String)
 
-      public fun targetDocumentAttributeValue(targetDocumentAttributeValue: IResolvable) {
-      }
+      public fun targetDocumentAttributeValue(targetDocumentAttributeValue: IResolvable)
 
       public
-          fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty) {
-      }
+          fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("774f20a498c29bf09d11321926ba0c355f86d6248d70891bb628bc865d6fb5d2")
       public
-          fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty.Builder.() -> Unit) {
-      }
+          fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty.Builder.() -> Unit)
+
+      public fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: Boolean)
 
       public
-          fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: Boolean) {
-      }
-
-      public
-          fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: IResolvable) {
-      }
+          fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1292,32 +1199,32 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeTargetProperty.builder()
 
-      public override fun targetDocumentAttributeKey(targetDocumentAttributeKey: String) {
+      override fun targetDocumentAttributeKey(targetDocumentAttributeKey: String) {
         cdkBuilder.targetDocumentAttributeKey(targetDocumentAttributeKey)
       }
 
-      public override fun targetDocumentAttributeValue(targetDocumentAttributeValue: IResolvable) {
+      override fun targetDocumentAttributeValue(targetDocumentAttributeValue: IResolvable) {
         cdkBuilder.targetDocumentAttributeValue(targetDocumentAttributeValue.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty) {
         cdkBuilder.targetDocumentAttributeValue(targetDocumentAttributeValue.let(DocumentAttributeValueProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("774f20a498c29bf09d11321926ba0c355f86d6248d70891bb628bc865d6fb5d2")
-      public override
+      override
           fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty.Builder.() -> Unit):
           Unit =
           targetDocumentAttributeValue(DocumentAttributeValueProperty(targetDocumentAttributeValue))
 
-      public override
+      override
           fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: Boolean) {
         cdkBuilder.targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion)
       }
 
-      public override
+      override
           fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: IResolvable) {
         cdkBuilder.targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion.let(IResolvable::unwrap))
       }
@@ -1331,13 +1238,13 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeTargetProperty,
     ) : DocumentAttributeTargetProperty {
-      public override fun targetDocumentAttributeKey(): String =
+      override fun targetDocumentAttributeKey(): String =
           unwrap(this).getTargetDocumentAttributeKey()
 
-      public override fun targetDocumentAttributeValue(): Any? =
+      override fun targetDocumentAttributeValue(): Any? =
           unwrap(this).getTargetDocumentAttributeValue()
 
-      public override fun targetDocumentAttributeValueDeletion(): Any? =
+      override fun targetDocumentAttributeValueDeletion(): Any? =
           unwrap(this).getTargetDocumentAttributeValueDeletion()
     }
 
@@ -1372,29 +1279,23 @@ public open class CfnDataSource internal constructor(
 
     public interface Builder {
       public
-          fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: IResolvable) {
-      }
+          fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: IResolvable)
 
       public
-          fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: List<Any>) {
-      }
+          fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: List<Any>)
 
-      public fun includedStates(includedStates: List<String>) {
-      }
+      public fun includedStates(includedStates: List<String>)
 
       public
-          fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: IResolvable) {
-      }
+          fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: IResolvable)
 
       public
-          fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty) {
-      }
+          fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("46ca786b35ab5c6f82a4b8e6b9acd488d12446293d97a931e164dbb8f825d79c")
       public
-          fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1403,33 +1304,33 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty.builder()
 
-      public override
+      override
           fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: IResolvable) {
         cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: List<Any>) {
         cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations)
       }
 
-      public override fun includedStates(includedStates: List<String>) {
+      override fun includedStates(includedStates: List<String>) {
         cdkBuilder.includedStates(includedStates)
       }
 
-      public override
+      override
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: IResolvable) {
         cdkBuilder.standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty) {
         cdkBuilder.standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration.let(SalesforceStandardKnowledgeArticleTypeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("46ca786b35ab5c6f82a4b8e6b9acd488d12446293d97a931e164dbb8f825d79c")
-      public override
+      override
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty.Builder.() -> Unit):
           Unit =
           standardKnowledgeArticleTypeConfiguration(SalesforceStandardKnowledgeArticleTypeConfigurationProperty(standardKnowledgeArticleTypeConfiguration))
@@ -1443,13 +1344,12 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty,
     ) : SalesforceKnowledgeArticleConfigurationProperty {
-      public override fun customKnowledgeArticleTypeConfigurations(): Any? =
+      override fun customKnowledgeArticleTypeConfigurations(): Any? =
           unwrap(this).getCustomKnowledgeArticleTypeConfigurations()
 
-      public override fun includedStates(): List<String> = unwrap(this).getIncludedStates() ?:
-          emptyList()
+      override fun includedStates(): List<String> = unwrap(this).getIncludedStates() ?: emptyList()
 
-      public override fun standardKnowledgeArticleTypeConfiguration(): Any? =
+      override fun standardKnowledgeArticleTypeConfiguration(): Any? =
           unwrap(this).getStandardKnowledgeArticleTypeConfiguration()
     }
 
@@ -1478,8 +1378,7 @@ public open class CfnDataSource internal constructor(
     public fun template(): String
 
     public interface Builder {
-      public fun template(template: String) {
-      }
+      public fun template(template: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1488,7 +1387,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty.builder()
 
-      public override fun template(template: String) {
+      override fun template(template: String) {
         cdkBuilder.template(template)
       }
 
@@ -1501,7 +1400,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.TemplateConfigurationProperty,
     ) : TemplateConfigurationProperty {
-      public override fun template(): String = unwrap(this).getTemplate()
+      override fun template(): String = unwrap(this).getTemplate()
     }
 
     public companion object {
@@ -1532,23 +1431,18 @@ public open class CfnDataSource internal constructor(
     public fun s3Bucket(): String
 
     public interface Builder {
-      public fun invocationCondition(invocationCondition: IResolvable) {
-      }
+      public fun invocationCondition(invocationCondition: IResolvable)
 
-      public fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty) {
-      }
+      public fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82d73a148b5aa5a0fd24a5f19521070ac2298b04b99e5383a60507c731d552fa")
       public
-          fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty.Builder.() -> Unit) {
-      }
+          fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty.Builder.() -> Unit)
 
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
 
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1556,26 +1450,25 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty.builder()
 
-      public override fun invocationCondition(invocationCondition: IResolvable) {
+      override fun invocationCondition(invocationCondition: IResolvable) {
         cdkBuilder.invocationCondition(invocationCondition.let(IResolvable::unwrap))
       }
 
-      public override
-          fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty) {
+      override fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty) {
         cdkBuilder.invocationCondition(invocationCondition.let(DocumentAttributeConditionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82d73a148b5aa5a0fd24a5f19521070ac2298b04b99e5383a60507c731d552fa")
-      public override
+      override
           fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty.Builder.() -> Unit):
           Unit = invocationCondition(DocumentAttributeConditionProperty(invocationCondition))
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
@@ -1588,11 +1481,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.HookConfigurationProperty,
     ) : HookConfigurationProperty {
-      public override fun invocationCondition(): Any? = unwrap(this).getInvocationCondition()
+      override fun invocationCondition(): Any? = unwrap(this).getInvocationCondition()
 
-      public override fun lambdaArn(): String = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String = unwrap(this).getLambdaArn()
 
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
     }
 
     public companion object {
@@ -1625,20 +1518,15 @@ public open class CfnDataSource internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun documentDataFieldName(documentDataFieldName: String) {
-      }
+      public fun documentDataFieldName(documentDataFieldName: String)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1647,23 +1535,23 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceCustomKnowledgeArticleTypeConfigurationProperty.builder()
 
-      public override fun documentDataFieldName(documentDataFieldName: String) {
+      override fun documentDataFieldName(documentDataFieldName: String) {
         cdkBuilder.documentDataFieldName(documentDataFieldName)
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1676,14 +1564,13 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceCustomKnowledgeArticleTypeConfigurationProperty,
     ) : SalesforceCustomKnowledgeArticleTypeConfigurationProperty {
-      public override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
+      override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -1731,81 +1618,61 @@ public open class CfnDataSource internal constructor(
     public fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
 
     public interface Builder {
-      public fun attachmentConfiguration(attachmentConfiguration: IResolvable) {
-      }
+      public fun attachmentConfiguration(attachmentConfiguration: IResolvable)
 
       public
-          fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty) {
-      }
+          fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a93229e94c0a713647b91082f0d2734f6345754816985c19812aa93675a8ca4d")
       public
-          fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty.Builder.() -> Unit)
 
-      public fun blogConfiguration(blogConfiguration: IResolvable) {
-      }
+      public fun blogConfiguration(blogConfiguration: IResolvable)
 
-      public fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty) {
-      }
+      public fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("070d46cbf6cbda26dc2a798fafa2a64869e56ed765b1f8a3f39062df940a515e")
       public
-          fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty.Builder.() -> Unit)
 
-      public fun exclusionPatterns(exclusionPatterns: List<String>) {
-      }
+      public fun exclusionPatterns(exclusionPatterns: List<String>)
 
-      public fun inclusionPatterns(inclusionPatterns: List<String>) {
-      }
+      public fun inclusionPatterns(inclusionPatterns: List<String>)
 
-      public fun pageConfiguration(pageConfiguration: IResolvable) {
-      }
+      public fun pageConfiguration(pageConfiguration: IResolvable)
 
-      public fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty) {
-      }
+      public fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2817f144d572ac768d2a7fb4d11a22d4469a4dded7d9df3a788c1de0ec26a80f")
       public
-          fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty.Builder.() -> Unit)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun serverUrl(serverUrl: String) {
-      }
+      public fun serverUrl(serverUrl: String)
 
-      public fun spaceConfiguration(spaceConfiguration: IResolvable) {
-      }
+      public fun spaceConfiguration(spaceConfiguration: IResolvable)
 
-      public fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty) {
-      }
+      public fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49ba2bbc317db4f0cde9cb944797b99a0adcfebdaa1d5d8ec4748dca0830b906")
       public
-          fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty.Builder.() -> Unit)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
 
-      public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e3a149baf8e9e42acaf53635797748128816d30d56df2db6343cc8981ce503b")
       public
-          fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1814,98 +1681,95 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceConfigurationProperty.builder()
 
-      public override fun attachmentConfiguration(attachmentConfiguration: IResolvable) {
+      override fun attachmentConfiguration(attachmentConfiguration: IResolvable) {
         cdkBuilder.attachmentConfiguration(attachmentConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty) {
         cdkBuilder.attachmentConfiguration(attachmentConfiguration.let(ConfluenceAttachmentConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a93229e94c0a713647b91082f0d2734f6345754816985c19812aa93675a8ca4d")
-      public override
+      override
           fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty.Builder.() -> Unit):
           Unit =
           attachmentConfiguration(ConfluenceAttachmentConfigurationProperty(attachmentConfiguration))
 
-      public override fun blogConfiguration(blogConfiguration: IResolvable) {
+      override fun blogConfiguration(blogConfiguration: IResolvable) {
         cdkBuilder.blogConfiguration(blogConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty) {
+      override fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty) {
         cdkBuilder.blogConfiguration(blogConfiguration.let(ConfluenceBlogConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("070d46cbf6cbda26dc2a798fafa2a64869e56ed765b1f8a3f39062df940a515e")
-      public override
+      override
           fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty.Builder.() -> Unit):
           Unit = blogConfiguration(ConfluenceBlogConfigurationProperty(blogConfiguration))
 
-      public override fun exclusionPatterns(exclusionPatterns: List<String>) {
+      override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
-      public override fun inclusionPatterns(inclusionPatterns: List<String>) {
+      override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
-      public override fun pageConfiguration(pageConfiguration: IResolvable) {
+      override fun pageConfiguration(pageConfiguration: IResolvable) {
         cdkBuilder.pageConfiguration(pageConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty) {
+      override fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty) {
         cdkBuilder.pageConfiguration(pageConfiguration.let(ConfluencePageConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2817f144d572ac768d2a7fb4d11a22d4469a4dded7d9df3a788c1de0ec26a80f")
-      public override
+      override
           fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty.Builder.() -> Unit):
           Unit = pageConfiguration(ConfluencePageConfigurationProperty(pageConfiguration))
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun serverUrl(serverUrl: String) {
+      override fun serverUrl(serverUrl: String) {
         cdkBuilder.serverUrl(serverUrl)
       }
 
-      public override fun spaceConfiguration(spaceConfiguration: IResolvable) {
+      override fun spaceConfiguration(spaceConfiguration: IResolvable) {
         cdkBuilder.spaceConfiguration(spaceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty) {
+      override fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty) {
         cdkBuilder.spaceConfiguration(spaceConfiguration.let(ConfluenceSpaceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("49ba2bbc317db4f0cde9cb944797b99a0adcfebdaa1d5d8ec4748dca0830b906")
-      public override
+      override
           fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty.Builder.() -> Unit):
           Unit = spaceConfiguration(ConfluenceSpaceConfigurationProperty(spaceConfiguration))
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+      override fun vpcConfiguration(vpcConfiguration: IResolvable) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
+      override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e3a149baf8e9e42acaf53635797748128816d30d56df2db6343cc8981ce503b")
-      public override
+      override
           fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit):
           Unit = vpcConfiguration(DataSourceVpcConfigurationProperty(vpcConfiguration))
 
@@ -1918,28 +1782,27 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceConfigurationProperty,
     ) : ConfluenceConfigurationProperty {
-      public override fun attachmentConfiguration(): Any? =
-          unwrap(this).getAttachmentConfiguration()
+      override fun attachmentConfiguration(): Any? = unwrap(this).getAttachmentConfiguration()
 
-      public override fun blogConfiguration(): Any? = unwrap(this).getBlogConfiguration()
+      override fun blogConfiguration(): Any? = unwrap(this).getBlogConfiguration()
 
-      public override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+      override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
           emptyList()
 
-      public override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+      override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
           emptyList()
 
-      public override fun pageConfiguration(): Any? = unwrap(this).getPageConfiguration()
+      override fun pageConfiguration(): Any? = unwrap(this).getPageConfiguration()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
 
-      public override fun serverUrl(): String = unwrap(this).getServerUrl()
+      override fun serverUrl(): String = unwrap(this).getServerUrl()
 
-      public override fun spaceConfiguration(): Any? = unwrap(this).getSpaceConfiguration()
+      override fun spaceConfiguration(): Any? = unwrap(this).getSpaceConfiguration()
 
-      public override fun version(): String = unwrap(this).getVersion()
+      override fun version(): String = unwrap(this).getVersion()
 
-      public override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
+      override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
     }
 
     public companion object {
@@ -1970,17 +1833,13 @@ public open class CfnDataSource internal constructor(
     public fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
     public interface Builder {
-      public fun documentDataFieldName(documentDataFieldName: String) {
-      }
+      public fun documentDataFieldName(documentDataFieldName: String)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1989,19 +1848,19 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty.builder()
 
-      public override fun documentDataFieldName(documentDataFieldName: String) {
+      override fun documentDataFieldName(documentDataFieldName: String) {
         cdkBuilder.documentDataFieldName(documentDataFieldName)
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
@@ -2014,12 +1873,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty,
     ) : SalesforceStandardKnowledgeArticleTypeConfigurationProperty {
-      public override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
+      override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
     }
 
     public companion object {
@@ -2051,14 +1909,11 @@ public open class CfnDataSource internal constructor(
     public fun indexFieldName(): String
 
     public interface Builder {
-      public fun dataSourceFieldName(dataSourceFieldName: String) {
-      }
+      public fun dataSourceFieldName(dataSourceFieldName: String)
 
-      public fun dateFieldFormat(dateFieldFormat: String) {
-      }
+      public fun dateFieldFormat(dateFieldFormat: String)
 
-      public fun indexFieldName(indexFieldName: String) {
-      }
+      public fun indexFieldName(indexFieldName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2067,15 +1922,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceToIndexFieldMappingProperty.builder()
 
-      public override fun dataSourceFieldName(dataSourceFieldName: String) {
+      override fun dataSourceFieldName(dataSourceFieldName: String) {
         cdkBuilder.dataSourceFieldName(dataSourceFieldName)
       }
 
-      public override fun dateFieldFormat(dateFieldFormat: String) {
+      override fun dateFieldFormat(dateFieldFormat: String) {
         cdkBuilder.dateFieldFormat(dateFieldFormat)
       }
 
-      public override fun indexFieldName(indexFieldName: String) {
+      override fun indexFieldName(indexFieldName: String) {
         cdkBuilder.indexFieldName(indexFieldName)
       }
 
@@ -2088,11 +1943,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceToIndexFieldMappingProperty,
     ) : DataSourceToIndexFieldMappingProperty {
-      public override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
+      override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
 
-      public override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
+      override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
 
-      public override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
+      override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
     }
 
     public companion object {
@@ -2126,17 +1981,13 @@ public open class CfnDataSource internal constructor(
     public fun stringValue(): String? = unwrap(this).getStringValue()
 
     public interface Builder {
-      public fun dateValue(dateValue: String) {
-      }
+      public fun dateValue(dateValue: String)
 
-      public fun longValue(longValue: Number) {
-      }
+      public fun longValue(longValue: Number)
 
-      public fun stringListValue(stringListValue: List<String>) {
-      }
+      public fun stringListValue(stringListValue: List<String>)
 
-      public fun stringValue(stringValue: String) {
-      }
+      public fun stringValue(stringValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2145,19 +1996,19 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeValueProperty.builder()
 
-      public override fun dateValue(dateValue: String) {
+      override fun dateValue(dateValue: String) {
         cdkBuilder.dateValue(dateValue)
       }
 
-      public override fun longValue(longValue: Number) {
+      override fun longValue(longValue: Number) {
         cdkBuilder.longValue(longValue)
       }
 
-      public override fun stringListValue(stringListValue: List<String>) {
+      override fun stringListValue(stringListValue: List<String>) {
         cdkBuilder.stringListValue(stringListValue)
       }
 
-      public override fun stringValue(stringValue: String) {
+      override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
       }
 
@@ -2170,14 +2021,14 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentAttributeValueProperty,
     ) : DocumentAttributeValueProperty {
-      public override fun dateValue(): String? = unwrap(this).getDateValue()
+      override fun dateValue(): String? = unwrap(this).getDateValue()
 
-      public override fun longValue(): Number? = unwrap(this).getLongValue()
+      override fun longValue(): Number? = unwrap(this).getLongValue()
 
-      public override fun stringListValue(): List<String> = unwrap(this).getStringListValue() ?:
+      override fun stringListValue(): List<String> = unwrap(this).getStringListValue() ?:
           emptyList()
 
-      public override fun stringValue(): String? = unwrap(this).getStringValue()
+      override fun stringValue(): String? = unwrap(this).getStringValue()
     }
 
     public companion object {
@@ -2218,40 +2069,29 @@ public open class CfnDataSource internal constructor(
     public fun tenantDomain(): String
 
     public interface Builder {
-      public fun disableLocalGroups(disableLocalGroups: Boolean) {
-      }
+      public fun disableLocalGroups(disableLocalGroups: Boolean)
 
-      public fun disableLocalGroups(disableLocalGroups: IResolvable) {
-      }
+      public fun disableLocalGroups(disableLocalGroups: IResolvable)
 
-      public fun exclusionPatterns(exclusionPatterns: List<String>) {
-      }
+      public fun exclusionPatterns(exclusionPatterns: List<String>)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun inclusionPatterns(inclusionPatterns: List<String>) {
-      }
+      public fun inclusionPatterns(inclusionPatterns: List<String>)
 
-      public fun oneDriveUsers(oneDriveUsers: IResolvable) {
-      }
+      public fun oneDriveUsers(oneDriveUsers: IResolvable)
 
-      public fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty) {
-      }
+      public fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("832281f44d77ef71aa969c9a77c034c404ef104bce394194024f7c50f951f426")
-      public fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty.Builder.() -> Unit) {
-      }
+      public fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty.Builder.() -> Unit)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun tenantDomain(tenantDomain: String) {
-      }
+      public fun tenantDomain(tenantDomain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2260,48 +2100,48 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveConfigurationProperty.builder()
 
-      public override fun disableLocalGroups(disableLocalGroups: Boolean) {
+      override fun disableLocalGroups(disableLocalGroups: Boolean) {
         cdkBuilder.disableLocalGroups(disableLocalGroups)
       }
 
-      public override fun disableLocalGroups(disableLocalGroups: IResolvable) {
+      override fun disableLocalGroups(disableLocalGroups: IResolvable) {
         cdkBuilder.disableLocalGroups(disableLocalGroups.let(IResolvable::unwrap))
       }
 
-      public override fun exclusionPatterns(exclusionPatterns: List<String>) {
+      override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun inclusionPatterns(inclusionPatterns: List<String>) {
+      override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
-      public override fun oneDriveUsers(oneDriveUsers: IResolvable) {
+      override fun oneDriveUsers(oneDriveUsers: IResolvable) {
         cdkBuilder.oneDriveUsers(oneDriveUsers.let(IResolvable::unwrap))
       }
 
-      public override fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty) {
+      override fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty) {
         cdkBuilder.oneDriveUsers(oneDriveUsers.let(OneDriveUsersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("832281f44d77ef71aa969c9a77c034c404ef104bce394194024f7c50f951f426")
-      public override fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty.Builder.() -> Unit):
-          Unit = oneDriveUsers(OneDriveUsersProperty(oneDriveUsers))
+      override fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty.Builder.() -> Unit): Unit =
+          oneDriveUsers(OneDriveUsersProperty(oneDriveUsers))
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun tenantDomain(tenantDomain: String) {
+      override fun tenantDomain(tenantDomain: String) {
         cdkBuilder.tenantDomain(tenantDomain)
       }
 
@@ -2314,21 +2154,21 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveConfigurationProperty,
     ) : OneDriveConfigurationProperty {
-      public override fun disableLocalGroups(): Any? = unwrap(this).getDisableLocalGroups()
+      override fun disableLocalGroups(): Any? = unwrap(this).getDisableLocalGroups()
 
-      public override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+      override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
           emptyList()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+      override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
           emptyList()
 
-      public override fun oneDriveUsers(): Any = unwrap(this).getOneDriveUsers()
+      override fun oneDriveUsers(): Any = unwrap(this).getOneDriveUsers()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
 
-      public override fun tenantDomain(): String = unwrap(this).getTenantDomain()
+      override fun tenantDomain(): String = unwrap(this).getTenantDomain()
     }
 
     public companion object {
@@ -2357,19 +2197,15 @@ public open class CfnDataSource internal constructor(
     public fun oneDriveUserS3Path(): Any? = unwrap(this).getOneDriveUserS3Path()
 
     public interface Builder {
-      public fun oneDriveUserList(oneDriveUserList: List<String>) {
-      }
+      public fun oneDriveUserList(oneDriveUserList: List<String>)
 
-      public fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable) {
-      }
+      public fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable)
 
-      public fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty) {
-      }
+      public fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0519f8aec787b99317fd3af06d3c129b2799c34b41915b30d58c5df23c3e66a")
-      public fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty.Builder.() -> Unit) {
-      }
+      public fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2377,22 +2213,22 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty.builder()
 
-      public override fun oneDriveUserList(oneDriveUserList: List<String>) {
+      override fun oneDriveUserList(oneDriveUserList: List<String>) {
         cdkBuilder.oneDriveUserList(oneDriveUserList)
       }
 
-      public override fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable) {
+      override fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable) {
         cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(IResolvable::unwrap))
       }
 
-      public override fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty) {
+      override fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty) {
         cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(S3PathProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0519f8aec787b99317fd3af06d3c129b2799c34b41915b30d58c5df23c3e66a")
-      public override fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty.Builder.() -> Unit):
-          Unit = oneDriveUserS3Path(S3PathProperty(oneDriveUserS3Path))
+      override fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty.Builder.() -> Unit): Unit =
+          oneDriveUserS3Path(S3PathProperty(oneDriveUserS3Path))
 
       public fun build(): software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty
           = cdkBuilder.build()
@@ -2402,10 +2238,10 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.OneDriveUsersProperty,
     ) : OneDriveUsersProperty {
-      public override fun oneDriveUserList(): List<String> = unwrap(this).getOneDriveUserList() ?:
+      override fun oneDriveUserList(): List<String> = unwrap(this).getOneDriveUserList() ?:
           emptyList()
 
-      public override fun oneDriveUserS3Path(): Any? = unwrap(this).getOneDriveUserS3Path()
+      override fun oneDriveUserS3Path(): Any? = unwrap(this).getOneDriveUserS3Path()
     }
 
     public companion object {
@@ -2440,40 +2276,31 @@ public open class CfnDataSource internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun inlineConfigurations(inlineConfigurations: IResolvable) {
-      }
+      public fun inlineConfigurations(inlineConfigurations: IResolvable)
 
-      public fun inlineConfigurations(inlineConfigurations: List<Any>) {
-      }
+      public fun inlineConfigurations(inlineConfigurations: List<Any>)
 
-      public fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable) {
-      }
+      public fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable)
 
       public
-          fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty) {
-      }
+          fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("661bdfab95b4c4f7dc5bd929d1c69b1f860934f458a303688be5f26bf90003e8")
       public
-          fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit)
 
-      public fun preExtractionHookConfiguration(preExtractionHookConfiguration: IResolvable) {
-      }
+      public fun preExtractionHookConfiguration(preExtractionHookConfiguration: IResolvable)
 
       public
-          fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty) {
-      }
+          fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be71f589c859a4ce488fbe4bdf449b4b6cddb9162e4362bebbdd5298d572769d")
       public
-          fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2482,49 +2309,47 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.CustomDocumentEnrichmentConfigurationProperty.builder()
 
-      public override fun inlineConfigurations(inlineConfigurations: IResolvable) {
+      override fun inlineConfigurations(inlineConfigurations: IResolvable) {
         cdkBuilder.inlineConfigurations(inlineConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun inlineConfigurations(inlineConfigurations: List<Any>) {
+      override fun inlineConfigurations(inlineConfigurations: List<Any>) {
         cdkBuilder.inlineConfigurations(inlineConfigurations)
       }
 
-      public override
-          fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable) {
+      override fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable) {
         cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty) {
         cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(HookConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("661bdfab95b4c4f7dc5bd929d1c69b1f860934f458a303688be5f26bf90003e8")
-      public override
+      override
           fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit):
           Unit =
           postExtractionHookConfiguration(HookConfigurationProperty(postExtractionHookConfiguration))
 
-      public override
-          fun preExtractionHookConfiguration(preExtractionHookConfiguration: IResolvable) {
+      override fun preExtractionHookConfiguration(preExtractionHookConfiguration: IResolvable) {
         cdkBuilder.preExtractionHookConfiguration(preExtractionHookConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty) {
         cdkBuilder.preExtractionHookConfiguration(preExtractionHookConfiguration.let(HookConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be71f589c859a4ce488fbe4bdf449b4b6cddb9162e4362bebbdd5298d572769d")
-      public override
+      override
           fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit):
           Unit =
           preExtractionHookConfiguration(HookConfigurationProperty(preExtractionHookConfiguration))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -2537,15 +2362,15 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.CustomDocumentEnrichmentConfigurationProperty,
     ) : CustomDocumentEnrichmentConfigurationProperty {
-      public override fun inlineConfigurations(): Any? = unwrap(this).getInlineConfigurations()
+      override fun inlineConfigurations(): Any? = unwrap(this).getInlineConfigurations()
 
-      public override fun postExtractionHookConfiguration(): Any? =
+      override fun postExtractionHookConfiguration(): Any? =
           unwrap(this).getPostExtractionHookConfiguration()
 
-      public override fun preExtractionHookConfiguration(): Any? =
+      override fun preExtractionHookConfiguration(): Any? =
           unwrap(this).getPreExtractionHookConfiguration()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -2580,20 +2405,15 @@ public open class CfnDataSource internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun documentDataFieldName(documentDataFieldName: String) {
-      }
+      public fun documentDataFieldName(documentDataFieldName: String)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun includeFilterTypes(includeFilterTypes: List<String>) {
-      }
+      public fun includeFilterTypes(includeFilterTypes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2602,23 +2422,23 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty.builder()
 
-      public override fun documentDataFieldName(documentDataFieldName: String) {
+      override fun documentDataFieldName(documentDataFieldName: String) {
         cdkBuilder.documentDataFieldName(documentDataFieldName)
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun includeFilterTypes(includeFilterTypes: List<String>) {
+      override fun includeFilterTypes(includeFilterTypes: List<String>) {
         cdkBuilder.includeFilterTypes(includeFilterTypes)
       }
 
@@ -2631,15 +2451,14 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty,
     ) : SalesforceChatterFeedConfigurationProperty {
-      public override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
+      override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun includeFilterTypes(): List<String> = unwrap(this).getIncludeFilterTypes()
-          ?: emptyList()
+      override fun includeFilterTypes(): List<String> = unwrap(this).getIncludeFilterTypes() ?:
+          emptyList()
     }
 
     public companion object {
@@ -2679,29 +2498,21 @@ public open class CfnDataSource internal constructor(
         unwrap(this).getIncludeAttachmentFilePatterns() ?: emptyList()
 
     public interface Builder {
-      public fun crawlAttachments(crawlAttachments: Boolean) {
-      }
+      public fun crawlAttachments(crawlAttachments: Boolean)
 
-      public fun crawlAttachments(crawlAttachments: IResolvable) {
-      }
+      public fun crawlAttachments(crawlAttachments: IResolvable)
 
-      public fun documentDataFieldName(documentDataFieldName: String) {
-      }
+      public fun documentDataFieldName(documentDataFieldName: String)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
-      }
+      public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
-      }
+      public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2710,37 +2521,35 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty.builder()
 
-      public override fun crawlAttachments(crawlAttachments: Boolean) {
+      override fun crawlAttachments(crawlAttachments: Boolean) {
         cdkBuilder.crawlAttachments(crawlAttachments)
       }
 
-      public override fun crawlAttachments(crawlAttachments: IResolvable) {
+      override fun crawlAttachments(crawlAttachments: IResolvable) {
         cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
       }
 
-      public override fun documentDataFieldName(documentDataFieldName: String) {
+      override fun documentDataFieldName(documentDataFieldName: String) {
         cdkBuilder.documentDataFieldName(documentDataFieldName)
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override
-          fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
+      override fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
         cdkBuilder.excludeAttachmentFilePatterns(excludeAttachmentFilePatterns)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override
-          fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
+      override fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
         cdkBuilder.includeAttachmentFilePatterns(includeAttachmentFilePatterns)
       }
 
@@ -2753,19 +2562,18 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty,
     ) : ServiceNowServiceCatalogConfigurationProperty {
-      public override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
+      override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
 
-      public override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
+      override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun excludeAttachmentFilePatterns(): List<String> =
+      override fun excludeAttachmentFilePatterns(): List<String> =
           unwrap(this).getExcludeAttachmentFilePatterns() ?: emptyList()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun includeAttachmentFilePatterns(): List<String> =
+      override fun includeAttachmentFilePatterns(): List<String> =
           unwrap(this).getIncludeAttachmentFilePatterns() ?: emptyList()
     }
 
@@ -2794,8 +2602,7 @@ public open class CfnDataSource internal constructor(
     public fun s3Prefix(): String? = unwrap(this).getS3Prefix()
 
     public interface Builder {
-      public fun s3Prefix(s3Prefix: String) {
-      }
+      public fun s3Prefix(s3Prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2804,7 +2611,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentsMetadataConfigurationProperty.builder()
 
-      public override fun s3Prefix(s3Prefix: String) {
+      override fun s3Prefix(s3Prefix: String) {
         cdkBuilder.s3Prefix(s3Prefix)
       }
 
@@ -2817,7 +2624,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DocumentsMetadataConfigurationProperty,
     ) : DocumentsMetadataConfigurationProperty {
-      public override fun s3Prefix(): String? = unwrap(this).getS3Prefix()
+      override fun s3Prefix(): String? = unwrap(this).getS3Prefix()
     }
 
     public companion object {
@@ -2865,138 +2672,105 @@ public open class CfnDataSource internal constructor(
     public fun workDocsConfiguration(): Any? = unwrap(this).getWorkDocsConfiguration()
 
     public interface Builder {
-      public fun confluenceConfiguration(confluenceConfiguration: IResolvable) {
-      }
+      public fun confluenceConfiguration(confluenceConfiguration: IResolvable)
 
-      public fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty) {
-      }
+      public fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("74a304598badf31a242e6c219d463310ff0402d1ba504e05151fd9cd5e8a00fe")
       public
-          fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty.Builder.() -> Unit)
 
-      public fun databaseConfiguration(databaseConfiguration: IResolvable) {
-      }
+      public fun databaseConfiguration(databaseConfiguration: IResolvable)
 
-      public fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty) {
-      }
+      public fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e7bc2443f8f4a793561df05be393d6f8db933294ac12f96e1513bfe364e0b5f")
       public
-          fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty.Builder.() -> Unit)
 
-      public fun googleDriveConfiguration(googleDriveConfiguration: IResolvable) {
-      }
+      public fun googleDriveConfiguration(googleDriveConfiguration: IResolvable)
 
       public
-          fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty) {
-      }
+          fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("07e628e0081db648e12f378eaf2c8281429fa94cf03828149f039ebfad0ef9a5")
       public
-          fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty.Builder.() -> Unit)
 
-      public fun oneDriveConfiguration(oneDriveConfiguration: IResolvable) {
-      }
+      public fun oneDriveConfiguration(oneDriveConfiguration: IResolvable)
 
-      public fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty) {
-      }
+      public fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61abe0808a502e3528ac6cac5bcef15cb4e47fccda7c506d23eb6557936b8b52")
       public
-          fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty.Builder.() -> Unit)
 
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d80e7f32b0239da0e288cfb5e46c690fb93a60eabfaa4d3a0c88fc8a498c82b2")
       public
-          fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty.Builder.() -> Unit)
 
-      public fun salesforceConfiguration(salesforceConfiguration: IResolvable) {
-      }
+      public fun salesforceConfiguration(salesforceConfiguration: IResolvable)
 
-      public fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty) {
-      }
+      public fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69fda77f8ee5736ab588d12e3ae1a53741e45921c8c36c01c831fd588bba4cc5")
       public
-          fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty.Builder.() -> Unit)
 
-      public fun serviceNowConfiguration(serviceNowConfiguration: IResolvable) {
-      }
+      public fun serviceNowConfiguration(serviceNowConfiguration: IResolvable)
 
-      public fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty) {
-      }
+      public fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da8e0f0b2d4dd7ffce7fca5554d53ae3b646ca01891b474180434900a91bee6c")
       public
-          fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty.Builder.() -> Unit)
 
-      public fun sharePointConfiguration(sharePointConfiguration: IResolvable) {
-      }
+      public fun sharePointConfiguration(sharePointConfiguration: IResolvable)
 
-      public fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty) {
-      }
+      public fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("37d9fd47feaec1504f846956b823b88829564367e5619a776ee765b16e562757")
       public
-          fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty.Builder.() -> Unit)
 
-      public fun templateConfiguration(templateConfiguration: IResolvable) {
-      }
+      public fun templateConfiguration(templateConfiguration: IResolvable)
 
-      public fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
-      }
+      public fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("761ddab5ea2fb8114d8e3a3aad1ad2a6b467ea256238d87e7c81bae2db508d34")
       public
-          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit)
 
-      public fun webCrawlerConfiguration(webCrawlerConfiguration: IResolvable) {
-      }
+      public fun webCrawlerConfiguration(webCrawlerConfiguration: IResolvable)
 
-      public fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty) {
-      }
+      public fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("438d237d9d26bf2eeea70a2713abe3dd404fa9d182ff774239a1b8cd85ec7548")
       public
-          fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty.Builder.() -> Unit)
 
-      public fun workDocsConfiguration(workDocsConfiguration: IResolvable) {
-      }
+      public fun workDocsConfiguration(workDocsConfiguration: IResolvable)
 
-      public fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty) {
-      }
+      public fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6b0e34b2f6369dcf764dff33a0dfa88bfc8ef9f7cdc214f6022f8a5c620580f")
       public
-          fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3005,168 +2779,164 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceConfigurationProperty.builder()
 
-      public override fun confluenceConfiguration(confluenceConfiguration: IResolvable) {
+      override fun confluenceConfiguration(confluenceConfiguration: IResolvable) {
         cdkBuilder.confluenceConfiguration(confluenceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty) {
         cdkBuilder.confluenceConfiguration(confluenceConfiguration.let(ConfluenceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("74a304598badf31a242e6c219d463310ff0402d1ba504e05151fd9cd5e8a00fe")
-      public override
+      override
           fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty.Builder.() -> Unit):
           Unit = confluenceConfiguration(ConfluenceConfigurationProperty(confluenceConfiguration))
 
-      public override fun databaseConfiguration(databaseConfiguration: IResolvable) {
+      override fun databaseConfiguration(databaseConfiguration: IResolvable) {
         cdkBuilder.databaseConfiguration(databaseConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty) {
+      override fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty) {
         cdkBuilder.databaseConfiguration(databaseConfiguration.let(DatabaseConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e7bc2443f8f4a793561df05be393d6f8db933294ac12f96e1513bfe364e0b5f")
-      public override
+      override
           fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty.Builder.() -> Unit):
           Unit = databaseConfiguration(DatabaseConfigurationProperty(databaseConfiguration))
 
-      public override fun googleDriveConfiguration(googleDriveConfiguration: IResolvable) {
+      override fun googleDriveConfiguration(googleDriveConfiguration: IResolvable) {
         cdkBuilder.googleDriveConfiguration(googleDriveConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty) {
         cdkBuilder.googleDriveConfiguration(googleDriveConfiguration.let(GoogleDriveConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("07e628e0081db648e12f378eaf2c8281429fa94cf03828149f039ebfad0ef9a5")
-      public override
+      override
           fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty.Builder.() -> Unit):
           Unit =
           googleDriveConfiguration(GoogleDriveConfigurationProperty(googleDriveConfiguration))
 
-      public override fun oneDriveConfiguration(oneDriveConfiguration: IResolvable) {
+      override fun oneDriveConfiguration(oneDriveConfiguration: IResolvable) {
         cdkBuilder.oneDriveConfiguration(oneDriveConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty) {
+      override fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty) {
         cdkBuilder.oneDriveConfiguration(oneDriveConfiguration.let(OneDriveConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("61abe0808a502e3528ac6cac5bcef15cb4e47fccda7c506d23eb6557936b8b52")
-      public override
+      override
           fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty.Builder.() -> Unit):
           Unit = oneDriveConfiguration(OneDriveConfigurationProperty(oneDriveConfiguration))
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3DataSourceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d80e7f32b0239da0e288cfb5e46c690fb93a60eabfaa4d3a0c88fc8a498c82b2")
-      public override
+      override
           fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty.Builder.() -> Unit):
           Unit = s3Configuration(S3DataSourceConfigurationProperty(s3Configuration))
 
-      public override fun salesforceConfiguration(salesforceConfiguration: IResolvable) {
+      override fun salesforceConfiguration(salesforceConfiguration: IResolvable) {
         cdkBuilder.salesforceConfiguration(salesforceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty) {
         cdkBuilder.salesforceConfiguration(salesforceConfiguration.let(SalesforceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69fda77f8ee5736ab588d12e3ae1a53741e45921c8c36c01c831fd588bba4cc5")
-      public override
+      override
           fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty.Builder.() -> Unit):
           Unit = salesforceConfiguration(SalesforceConfigurationProperty(salesforceConfiguration))
 
-      public override fun serviceNowConfiguration(serviceNowConfiguration: IResolvable) {
+      override fun serviceNowConfiguration(serviceNowConfiguration: IResolvable) {
         cdkBuilder.serviceNowConfiguration(serviceNowConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty) {
         cdkBuilder.serviceNowConfiguration(serviceNowConfiguration.let(ServiceNowConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("da8e0f0b2d4dd7ffce7fca5554d53ae3b646ca01891b474180434900a91bee6c")
-      public override
+      override
           fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty.Builder.() -> Unit):
           Unit = serviceNowConfiguration(ServiceNowConfigurationProperty(serviceNowConfiguration))
 
-      public override fun sharePointConfiguration(sharePointConfiguration: IResolvable) {
+      override fun sharePointConfiguration(sharePointConfiguration: IResolvable) {
         cdkBuilder.sharePointConfiguration(sharePointConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty) {
         cdkBuilder.sharePointConfiguration(sharePointConfiguration.let(SharePointConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("37d9fd47feaec1504f846956b823b88829564367e5619a776ee765b16e562757")
-      public override
+      override
           fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty.Builder.() -> Unit):
           Unit = sharePointConfiguration(SharePointConfigurationProperty(sharePointConfiguration))
 
-      public override fun templateConfiguration(templateConfiguration: IResolvable) {
+      override fun templateConfiguration(templateConfiguration: IResolvable) {
         cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
+      override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
         cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("761ddab5ea2fb8114d8e3a3aad1ad2a6b467ea256238d87e7c81bae2db508d34")
-      public override
+      override
           fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty.Builder.() -> Unit):
           Unit = templateConfiguration(TemplateConfigurationProperty(templateConfiguration))
 
-      public override fun webCrawlerConfiguration(webCrawlerConfiguration: IResolvable) {
+      override fun webCrawlerConfiguration(webCrawlerConfiguration: IResolvable) {
         cdkBuilder.webCrawlerConfiguration(webCrawlerConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty) {
         cdkBuilder.webCrawlerConfiguration(webCrawlerConfiguration.let(WebCrawlerConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("438d237d9d26bf2eeea70a2713abe3dd404fa9d182ff774239a1b8cd85ec7548")
-      public override
+      override
           fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty.Builder.() -> Unit):
           Unit = webCrawlerConfiguration(WebCrawlerConfigurationProperty(webCrawlerConfiguration))
 
-      public override fun workDocsConfiguration(workDocsConfiguration: IResolvable) {
+      override fun workDocsConfiguration(workDocsConfiguration: IResolvable) {
         cdkBuilder.workDocsConfiguration(workDocsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
-          fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty) {
+      override fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty) {
         cdkBuilder.workDocsConfiguration(workDocsConfiguration.let(WorkDocsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6b0e34b2f6369dcf764dff33a0dfa88bfc8ef9f7cdc214f6022f8a5c620580f")
-      public override
+      override
           fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty.Builder.() -> Unit):
           Unit = workDocsConfiguration(WorkDocsConfigurationProperty(workDocsConfiguration))
 
@@ -3179,33 +2949,27 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceConfigurationProperty,
     ) : DataSourceConfigurationProperty {
-      public override fun confluenceConfiguration(): Any? =
-          unwrap(this).getConfluenceConfiguration()
+      override fun confluenceConfiguration(): Any? = unwrap(this).getConfluenceConfiguration()
 
-      public override fun databaseConfiguration(): Any? = unwrap(this).getDatabaseConfiguration()
+      override fun databaseConfiguration(): Any? = unwrap(this).getDatabaseConfiguration()
 
-      public override fun googleDriveConfiguration(): Any? =
-          unwrap(this).getGoogleDriveConfiguration()
+      override fun googleDriveConfiguration(): Any? = unwrap(this).getGoogleDriveConfiguration()
 
-      public override fun oneDriveConfiguration(): Any? = unwrap(this).getOneDriveConfiguration()
+      override fun oneDriveConfiguration(): Any? = unwrap(this).getOneDriveConfiguration()
 
-      public override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
 
-      public override fun salesforceConfiguration(): Any? =
-          unwrap(this).getSalesforceConfiguration()
+      override fun salesforceConfiguration(): Any? = unwrap(this).getSalesforceConfiguration()
 
-      public override fun serviceNowConfiguration(): Any? =
-          unwrap(this).getServiceNowConfiguration()
+      override fun serviceNowConfiguration(): Any? = unwrap(this).getServiceNowConfiguration()
 
-      public override fun sharePointConfiguration(): Any? =
-          unwrap(this).getSharePointConfiguration()
+      override fun sharePointConfiguration(): Any? = unwrap(this).getSharePointConfiguration()
 
-      public override fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
+      override fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
 
-      public override fun webCrawlerConfiguration(): Any? =
-          unwrap(this).getWebCrawlerConfiguration()
+      override fun webCrawlerConfiguration(): Any? = unwrap(this).getWebCrawlerConfiguration()
 
-      public override fun workDocsConfiguration(): Any? = unwrap(this).getWorkDocsConfiguration()
+      override fun workDocsConfiguration(): Any? = unwrap(this).getWorkDocsConfiguration()
     }
 
     public companion object {
@@ -3238,20 +3002,15 @@ public open class CfnDataSource internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun documentDataFieldName(documentDataFieldName: String) {
-      }
+      public fun documentDataFieldName(documentDataFieldName: String)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3260,23 +3019,23 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectConfigurationProperty.builder()
 
-      public override fun documentDataFieldName(documentDataFieldName: String) {
+      override fun documentDataFieldName(documentDataFieldName: String) {
         cdkBuilder.documentDataFieldName(documentDataFieldName)
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -3289,14 +3048,13 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectConfigurationProperty,
     ) : SalesforceStandardObjectConfigurationProperty {
-      public override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
+      override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -3324,8 +3082,7 @@ public open class CfnDataSource internal constructor(
     public fun siteMaps(): List<String>
 
     public interface Builder {
-      public fun siteMaps(siteMaps: List<String>) {
-      }
+      public fun siteMaps(siteMaps: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -3334,7 +3091,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty.builder()
 
-      public override fun siteMaps(siteMaps: List<String>) {
+      override fun siteMaps(siteMaps: List<String>) {
         cdkBuilder.siteMaps(siteMaps)
       }
 
@@ -3347,7 +3104,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty,
     ) : WebCrawlerSiteMapsConfigurationProperty {
-      public override fun siteMaps(): List<String> = unwrap(this).getSiteMaps() ?: emptyList()
+      override fun siteMaps(): List<String> = unwrap(this).getSiteMaps() ?: emptyList()
     }
 
     public companion object {
@@ -3383,20 +3140,15 @@ public open class CfnDataSource internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun databaseHost(databaseHost: String) {
-      }
+      public fun databaseHost(databaseHost: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun databasePort(databasePort: Number) {
-      }
+      public fun databasePort(databasePort: Number)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3405,23 +3157,23 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConnectionConfigurationProperty.builder()
 
-      public override fun databaseHost(databaseHost: String) {
+      override fun databaseHost(databaseHost: String) {
         cdkBuilder.databaseHost(databaseHost)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun databasePort(databasePort: Number) {
+      override fun databasePort(databasePort: Number) {
         cdkBuilder.databasePort(databasePort)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -3434,15 +3186,15 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConnectionConfigurationProperty,
     ) : ConnectionConfigurationProperty {
-      public override fun databaseHost(): String = unwrap(this).getDatabaseHost()
+      override fun databaseHost(): String = unwrap(this).getDatabaseHost()
 
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun databasePort(): Number = unwrap(this).getDatabasePort()
+      override fun databasePort(): Number = unwrap(this).getDatabasePort()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -3481,32 +3233,23 @@ public open class CfnDataSource internal constructor(
     public fun useChangeLog(): Any? = unwrap(this).getUseChangeLog()
 
     public interface Builder {
-      public fun crawlComments(crawlComments: Boolean) {
-      }
+      public fun crawlComments(crawlComments: Boolean)
 
-      public fun crawlComments(crawlComments: IResolvable) {
-      }
+      public fun crawlComments(crawlComments: IResolvable)
 
-      public fun exclusionPatterns(exclusionPatterns: List<String>) {
-      }
+      public fun exclusionPatterns(exclusionPatterns: List<String>)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun inclusionPatterns(inclusionPatterns: List<String>) {
-      }
+      public fun inclusionPatterns(inclusionPatterns: List<String>)
 
-      public fun organizationId(organizationId: String) {
-      }
+      public fun organizationId(organizationId: String)
 
-      public fun useChangeLog(useChangeLog: Boolean) {
-      }
+      public fun useChangeLog(useChangeLog: Boolean)
 
-      public fun useChangeLog(useChangeLog: IResolvable) {
-      }
+      public fun useChangeLog(useChangeLog: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3515,39 +3258,39 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.WorkDocsConfigurationProperty.builder()
 
-      public override fun crawlComments(crawlComments: Boolean) {
+      override fun crawlComments(crawlComments: Boolean) {
         cdkBuilder.crawlComments(crawlComments)
       }
 
-      public override fun crawlComments(crawlComments: IResolvable) {
+      override fun crawlComments(crawlComments: IResolvable) {
         cdkBuilder.crawlComments(crawlComments.let(IResolvable::unwrap))
       }
 
-      public override fun exclusionPatterns(exclusionPatterns: List<String>) {
+      override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun inclusionPatterns(inclusionPatterns: List<String>) {
+      override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
-      public override fun organizationId(organizationId: String) {
+      override fun organizationId(organizationId: String) {
         cdkBuilder.organizationId(organizationId)
       }
 
-      public override fun useChangeLog(useChangeLog: Boolean) {
+      override fun useChangeLog(useChangeLog: Boolean) {
         cdkBuilder.useChangeLog(useChangeLog)
       }
 
-      public override fun useChangeLog(useChangeLog: IResolvable) {
+      override fun useChangeLog(useChangeLog: IResolvable) {
         cdkBuilder.useChangeLog(useChangeLog.let(IResolvable::unwrap))
       }
 
@@ -3560,19 +3303,19 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WorkDocsConfigurationProperty,
     ) : WorkDocsConfigurationProperty {
-      public override fun crawlComments(): Any? = unwrap(this).getCrawlComments()
+      override fun crawlComments(): Any? = unwrap(this).getCrawlComments()
 
-      public override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+      override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
           emptyList()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+      override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
           emptyList()
 
-      public override fun organizationId(): String = unwrap(this).getOrganizationId()
+      override fun organizationId(): String = unwrap(this).getOrganizationId()
 
-      public override fun useChangeLog(): Any? = unwrap(this).getUseChangeLog()
+      override fun useChangeLog(): Any? = unwrap(this).getUseChangeLog()
     }
 
     public companion object {
@@ -3619,69 +3362,52 @@ public open class CfnDataSource internal constructor(
     public fun standardObjectConfigurations(): Any? = unwrap(this).getStandardObjectConfigurations()
 
     public interface Builder {
-      public fun chatterFeedConfiguration(chatterFeedConfiguration: IResolvable) {
-      }
+      public fun chatterFeedConfiguration(chatterFeedConfiguration: IResolvable)
 
       public
-          fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty) {
-      }
+          fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("68ea8e49d52c80abe84b7b1e8979979927fc2fa72e7d99362d95420fbe6ffc58")
       public
-          fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty.Builder.() -> Unit)
 
-      public fun crawlAttachments(crawlAttachments: Boolean) {
-      }
+      public fun crawlAttachments(crawlAttachments: Boolean)
 
-      public fun crawlAttachments(crawlAttachments: IResolvable) {
-      }
+      public fun crawlAttachments(crawlAttachments: IResolvable)
 
-      public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
-      }
+      public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>)
 
-      public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
-      }
+      public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>)
 
-      public fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
-      }
+      public fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable)
 
       public
-          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty) {
-      }
+          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("717fdd3835d3fadefd0088da282d3e63c6bf72afe900df51cf6b1bc4cdb7f04b")
       public
-          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty.Builder.() -> Unit)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun serverUrl(serverUrl: String) {
-      }
+      public fun serverUrl(serverUrl: String)
 
       public
-          fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: IResolvable) {
-      }
+          fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: IResolvable)
 
       public
-          fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty) {
-      }
+          fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b89b446b1576b097cd3c009ab9272752ffdc64b2efffdacd5430f35518bce67d")
       public
-          fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty.Builder.() -> Unit)
 
-      public fun standardObjectConfigurations(standardObjectConfigurations: IResolvable) {
-      }
+      public fun standardObjectConfigurations(standardObjectConfigurations: IResolvable)
 
-      public fun standardObjectConfigurations(standardObjectConfigurations: List<Any>) {
-      }
+      public fun standardObjectConfigurations(standardObjectConfigurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3690,87 +3416,84 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty.builder()
 
-      public override fun chatterFeedConfiguration(chatterFeedConfiguration: IResolvable) {
+      override fun chatterFeedConfiguration(chatterFeedConfiguration: IResolvable) {
         cdkBuilder.chatterFeedConfiguration(chatterFeedConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty) {
         cdkBuilder.chatterFeedConfiguration(chatterFeedConfiguration.let(SalesforceChatterFeedConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("68ea8e49d52c80abe84b7b1e8979979927fc2fa72e7d99362d95420fbe6ffc58")
-      public override
+      override
           fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty.Builder.() -> Unit):
           Unit =
           chatterFeedConfiguration(SalesforceChatterFeedConfigurationProperty(chatterFeedConfiguration))
 
-      public override fun crawlAttachments(crawlAttachments: Boolean) {
+      override fun crawlAttachments(crawlAttachments: Boolean) {
         cdkBuilder.crawlAttachments(crawlAttachments)
       }
 
-      public override fun crawlAttachments(crawlAttachments: IResolvable) {
+      override fun crawlAttachments(crawlAttachments: IResolvable) {
         cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
       }
 
-      public override
-          fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
+      override fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
         cdkBuilder.excludeAttachmentFilePatterns(excludeAttachmentFilePatterns)
       }
 
-      public override
-          fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
+      override fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
         cdkBuilder.includeAttachmentFilePatterns(includeAttachmentFilePatterns)
       }
 
-      public override
-          fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
+      override fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
         cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty) {
         cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(SalesforceKnowledgeArticleConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("717fdd3835d3fadefd0088da282d3e63c6bf72afe900df51cf6b1bc4cdb7f04b")
-      public override
+      override
           fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty.Builder.() -> Unit):
           Unit =
           knowledgeArticleConfiguration(SalesforceKnowledgeArticleConfigurationProperty(knowledgeArticleConfiguration))
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun serverUrl(serverUrl: String) {
+      override fun serverUrl(serverUrl: String) {
         cdkBuilder.serverUrl(serverUrl)
       }
 
-      public override
+      override
           fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: IResolvable) {
         cdkBuilder.standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty) {
         cdkBuilder.standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration.let(SalesforceStandardObjectAttachmentConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b89b446b1576b097cd3c009ab9272752ffdc64b2efffdacd5430f35518bce67d")
-      public override
+      override
           fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty.Builder.() -> Unit):
           Unit =
           standardObjectAttachmentConfiguration(SalesforceStandardObjectAttachmentConfigurationProperty(standardObjectAttachmentConfiguration))
 
-      public override fun standardObjectConfigurations(standardObjectConfigurations: IResolvable) {
+      override fun standardObjectConfigurations(standardObjectConfigurations: IResolvable) {
         cdkBuilder.standardObjectConfigurations(standardObjectConfigurations.let(IResolvable::unwrap))
       }
 
-      public override fun standardObjectConfigurations(standardObjectConfigurations: List<Any>) {
+      override fun standardObjectConfigurations(standardObjectConfigurations: List<Any>) {
         cdkBuilder.standardObjectConfigurations(standardObjectConfigurations)
       }
 
@@ -3783,28 +3506,27 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty,
     ) : SalesforceConfigurationProperty {
-      public override fun chatterFeedConfiguration(): Any? =
-          unwrap(this).getChatterFeedConfiguration()
+      override fun chatterFeedConfiguration(): Any? = unwrap(this).getChatterFeedConfiguration()
 
-      public override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
+      override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
 
-      public override fun excludeAttachmentFilePatterns(): List<String> =
+      override fun excludeAttachmentFilePatterns(): List<String> =
           unwrap(this).getExcludeAttachmentFilePatterns() ?: emptyList()
 
-      public override fun includeAttachmentFilePatterns(): List<String> =
+      override fun includeAttachmentFilePatterns(): List<String> =
           unwrap(this).getIncludeAttachmentFilePatterns() ?: emptyList()
 
-      public override fun knowledgeArticleConfiguration(): Any? =
+      override fun knowledgeArticleConfiguration(): Any? =
           unwrap(this).getKnowledgeArticleConfiguration()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun secretArn(): String = unwrap(this).getSecretArn()
 
-      public override fun serverUrl(): String = unwrap(this).getServerUrl()
+      override fun serverUrl(): String = unwrap(this).getServerUrl()
 
-      public override fun standardObjectAttachmentConfiguration(): Any? =
+      override fun standardObjectAttachmentConfiguration(): Any? =
           unwrap(this).getStandardObjectAttachmentConfiguration()
 
-      public override fun standardObjectConfigurations(): Any? =
+      override fun standardObjectConfigurations(): Any? =
           unwrap(this).getStandardObjectConfigurations()
     }
 
@@ -3832,8 +3554,7 @@ public open class CfnDataSource internal constructor(
     public fun allowedGroupsColumnName(): String
 
     public interface Builder {
-      public fun allowedGroupsColumnName(allowedGroupsColumnName: String) {
-      }
+      public fun allowedGroupsColumnName(allowedGroupsColumnName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3841,7 +3562,7 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty.builder()
 
-      public override fun allowedGroupsColumnName(allowedGroupsColumnName: String) {
+      override fun allowedGroupsColumnName(allowedGroupsColumnName: String) {
         cdkBuilder.allowedGroupsColumnName(allowedGroupsColumnName)
       }
 
@@ -3854,8 +3575,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.AclConfigurationProperty,
     ) : AclConfigurationProperty {
-      public override fun allowedGroupsColumnName(): String =
-          unwrap(this).getAllowedGroupsColumnName()
+      override fun allowedGroupsColumnName(): String = unwrap(this).getAllowedGroupsColumnName()
     }
 
     public companion object {
@@ -3886,14 +3606,11 @@ public open class CfnDataSource internal constructor(
     public fun indexFieldName(): String
 
     public interface Builder {
-      public fun dataSourceFieldName(dataSourceFieldName: String) {
-      }
+      public fun dataSourceFieldName(dataSourceFieldName: String)
 
-      public fun dateFieldFormat(dateFieldFormat: String) {
-      }
+      public fun dateFieldFormat(dateFieldFormat: String)
 
-      public fun indexFieldName(indexFieldName: String) {
-      }
+      public fun indexFieldName(indexFieldName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3902,15 +3619,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageToIndexFieldMappingProperty.builder()
 
-      public override fun dataSourceFieldName(dataSourceFieldName: String) {
+      override fun dataSourceFieldName(dataSourceFieldName: String) {
         cdkBuilder.dataSourceFieldName(dataSourceFieldName)
       }
 
-      public override fun dateFieldFormat(dateFieldFormat: String) {
+      override fun dateFieldFormat(dateFieldFormat: String) {
         cdkBuilder.dateFieldFormat(dateFieldFormat)
       }
 
-      public override fun indexFieldName(indexFieldName: String) {
+      override fun indexFieldName(indexFieldName: String) {
         cdkBuilder.indexFieldName(indexFieldName)
       }
 
@@ -3923,11 +3640,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageToIndexFieldMappingProperty,
     ) : ConfluencePageToIndexFieldMappingProperty {
-      public override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
+      override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
 
-      public override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
+      override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
 
-      public override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
+      override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
     }
 
     public companion object {
@@ -3957,11 +3674,9 @@ public open class CfnDataSource internal constructor(
     public fun webCrawlerMode(): String? = unwrap(this).getWebCrawlerMode()
 
     public interface Builder {
-      public fun seedUrls(seedUrls: List<String>) {
-      }
+      public fun seedUrls(seedUrls: List<String>)
 
-      public fun webCrawlerMode(webCrawlerMode: String) {
-      }
+      public fun webCrawlerMode(webCrawlerMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3970,11 +3685,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty.builder()
 
-      public override fun seedUrls(seedUrls: List<String>) {
+      override fun seedUrls(seedUrls: List<String>) {
         cdkBuilder.seedUrls(seedUrls)
       }
 
-      public override fun webCrawlerMode(webCrawlerMode: String) {
+      override fun webCrawlerMode(webCrawlerMode: String) {
         cdkBuilder.webCrawlerMode(webCrawlerMode)
       }
 
@@ -3987,9 +3702,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty,
     ) : WebCrawlerSeedUrlConfigurationProperty {
-      public override fun seedUrls(): List<String> = unwrap(this).getSeedUrls() ?: emptyList()
+      override fun seedUrls(): List<String> = unwrap(this).getSeedUrls() ?: emptyList()
 
-      public override fun webCrawlerMode(): String? = unwrap(this).getWebCrawlerMode()
+      override fun webCrawlerMode(): String? = unwrap(this).getWebCrawlerMode()
     }
 
     public companion object {
@@ -4019,14 +3734,11 @@ public open class CfnDataSource internal constructor(
     public fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
     public interface Builder {
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4035,15 +3747,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty.builder()
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
@@ -4056,10 +3768,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty,
     ) : SalesforceStandardObjectAttachmentConfigurationProperty {
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
     }
 
     public companion object {
@@ -4097,66 +3808,50 @@ public open class CfnDataSource internal constructor(
     public fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
 
     public interface Builder {
-      public fun aclConfiguration(aclConfiguration: IResolvable) {
-      }
+      public fun aclConfiguration(aclConfiguration: IResolvable)
 
-      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
-      }
+      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("597613032f6a5e3b1dd51dc5e4ba5e6d511c7123be64f71e0cfea153ec734aed")
-      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit)
 
-      public fun columnConfiguration(columnConfiguration: IResolvable) {
-      }
+      public fun columnConfiguration(columnConfiguration: IResolvable)
 
-      public fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty) {
-      }
+      public fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a79a843cb7aacc95d6e019f396615a8d3d00ba8c21f1c7a257b5fe7605aae5c")
       public
-          fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty.Builder.() -> Unit)
 
-      public fun connectionConfiguration(connectionConfiguration: IResolvable) {
-      }
+      public fun connectionConfiguration(connectionConfiguration: IResolvable)
 
-      public fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty) {
-      }
+      public fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("60e1f87ea045ceafcb905310214daf8007a3f4b75ee1c76c57a32db72c8f4878")
       public
-          fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty.Builder.() -> Unit)
 
-      public fun databaseEngineType(databaseEngineType: String) {
-      }
+      public fun databaseEngineType(databaseEngineType: String)
 
-      public fun sqlConfiguration(sqlConfiguration: IResolvable) {
-      }
+      public fun sqlConfiguration(sqlConfiguration: IResolvable)
 
-      public fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty) {
-      }
+      public fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cd8d5b1c3c5fa7772f6a9977bc8090bae223df6e6bdfb5f24b4f7f9fe096df57")
-      public fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty.Builder.() -> Unit)
 
-      public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-      public fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
-      }
+      public fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a60c2e6e79c6a1516849eac70a6882a6dc4bbf1121378a9818225c243aadbe73")
       public
-          fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4165,78 +3860,76 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.DatabaseConfigurationProperty.builder()
 
-      public override fun aclConfiguration(aclConfiguration: IResolvable) {
+      override fun aclConfiguration(aclConfiguration: IResolvable) {
         cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
+      override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
         cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("597613032f6a5e3b1dd51dc5e4ba5e6d511c7123be64f71e0cfea153ec734aed")
-      public override
-          fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit): Unit
-          = aclConfiguration(AclConfigurationProperty(aclConfiguration))
+      override fun aclConfiguration(aclConfiguration: AclConfigurationProperty.Builder.() -> Unit):
+          Unit = aclConfiguration(AclConfigurationProperty(aclConfiguration))
 
-      public override fun columnConfiguration(columnConfiguration: IResolvable) {
+      override fun columnConfiguration(columnConfiguration: IResolvable) {
         cdkBuilder.columnConfiguration(columnConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty) {
+      override fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty) {
         cdkBuilder.columnConfiguration(columnConfiguration.let(ColumnConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a79a843cb7aacc95d6e019f396615a8d3d00ba8c21f1c7a257b5fe7605aae5c")
-      public override
+      override
           fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty.Builder.() -> Unit):
           Unit = columnConfiguration(ColumnConfigurationProperty(columnConfiguration))
 
-      public override fun connectionConfiguration(connectionConfiguration: IResolvable) {
+      override fun connectionConfiguration(connectionConfiguration: IResolvable) {
         cdkBuilder.connectionConfiguration(connectionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty) {
         cdkBuilder.connectionConfiguration(connectionConfiguration.let(ConnectionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("60e1f87ea045ceafcb905310214daf8007a3f4b75ee1c76c57a32db72c8f4878")
-      public override
+      override
           fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty.Builder.() -> Unit):
           Unit = connectionConfiguration(ConnectionConfigurationProperty(connectionConfiguration))
 
-      public override fun databaseEngineType(databaseEngineType: String) {
+      override fun databaseEngineType(databaseEngineType: String) {
         cdkBuilder.databaseEngineType(databaseEngineType)
       }
 
-      public override fun sqlConfiguration(sqlConfiguration: IResolvable) {
+      override fun sqlConfiguration(sqlConfiguration: IResolvable) {
         cdkBuilder.sqlConfiguration(sqlConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty) {
+      override fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty) {
         cdkBuilder.sqlConfiguration(sqlConfiguration.let(SqlConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cd8d5b1c3c5fa7772f6a9977bc8090bae223df6e6bdfb5f24b4f7f9fe096df57")
-      public override
-          fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty.Builder.() -> Unit): Unit
-          = sqlConfiguration(SqlConfigurationProperty(sqlConfiguration))
+      override fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty.Builder.() -> Unit):
+          Unit = sqlConfiguration(SqlConfigurationProperty(sqlConfiguration))
 
-      public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+      override fun vpcConfiguration(vpcConfiguration: IResolvable) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
+      override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
         cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a60c2e6e79c6a1516849eac70a6882a6dc4bbf1121378a9818225c243aadbe73")
-      public override
+      override
           fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty.Builder.() -> Unit):
           Unit = vpcConfiguration(DataSourceVpcConfigurationProperty(vpcConfiguration))
 
@@ -4249,17 +3942,17 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DatabaseConfigurationProperty,
     ) : DatabaseConfigurationProperty {
-      public override fun aclConfiguration(): Any? = unwrap(this).getAclConfiguration()
+      override fun aclConfiguration(): Any? = unwrap(this).getAclConfiguration()
 
-      public override fun columnConfiguration(): Any = unwrap(this).getColumnConfiguration()
+      override fun columnConfiguration(): Any = unwrap(this).getColumnConfiguration()
 
-      public override fun connectionConfiguration(): Any = unwrap(this).getConnectionConfiguration()
+      override fun connectionConfiguration(): Any = unwrap(this).getConnectionConfiguration()
 
-      public override fun databaseEngineType(): String = unwrap(this).getDatabaseEngineType()
+      override fun databaseEngineType(): String = unwrap(this).getDatabaseEngineType()
 
-      public override fun sqlConfiguration(): Any? = unwrap(this).getSqlConfiguration()
+      override fun sqlConfiguration(): Any? = unwrap(this).getSqlConfiguration()
 
-      public override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
+      override fun vpcConfiguration(): Any? = unwrap(this).getVpcConfiguration()
     }
 
     public companion object {
@@ -4290,14 +3983,11 @@ public open class CfnDataSource internal constructor(
     public fun port(): Number
 
     public interface Builder {
-      public fun credentials(credentials: String) {
-      }
+      public fun credentials(credentials: String)
 
-      public fun host(host: String) {
-      }
+      public fun host(host: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -4306,15 +3996,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty.builder()
 
-      public override fun credentials(credentials: String) {
+      override fun credentials(credentials: String) {
         cdkBuilder.credentials(credentials)
       }
 
-      public override fun host(host: String) {
+      override fun host(host: String) {
         cdkBuilder.host(host)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
@@ -4327,11 +4017,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty,
     ) : WebCrawlerBasicAuthenticationProperty {
-      public override fun credentials(): String = unwrap(this).getCredentials()
+      override fun credentials(): String = unwrap(this).getCredentials()
 
-      public override fun host(): String = unwrap(this).getHost()
+      override fun host(): String = unwrap(this).getHost()
 
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
     }
 
     public companion object {
@@ -4361,31 +4051,24 @@ public open class CfnDataSource internal constructor(
     public fun siteMapsConfiguration(): Any? = unwrap(this).getSiteMapsConfiguration()
 
     public interface Builder {
-      public fun seedUrlConfiguration(seedUrlConfiguration: IResolvable) {
-      }
+      public fun seedUrlConfiguration(seedUrlConfiguration: IResolvable)
 
-      public
-          fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty) {
-      }
+      public fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82f98e3cc6b19884926eac964217023af22b275e09e65fa53d053724d4d2b6bd")
       public
-          fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty.Builder.() -> Unit)
 
-      public fun siteMapsConfiguration(siteMapsConfiguration: IResolvable) {
-      }
+      public fun siteMapsConfiguration(siteMapsConfiguration: IResolvable)
 
       public
-          fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty) {
-      }
+          fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("42270145f287d26bf5765aa46ea377506996d9f8ff2928c03856ac644e6facd4")
       public
-          fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4393,33 +4076,33 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty.builder()
 
-      public override fun seedUrlConfiguration(seedUrlConfiguration: IResolvable) {
+      override fun seedUrlConfiguration(seedUrlConfiguration: IResolvable) {
         cdkBuilder.seedUrlConfiguration(seedUrlConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty) {
         cdkBuilder.seedUrlConfiguration(seedUrlConfiguration.let(WebCrawlerSeedUrlConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82f98e3cc6b19884926eac964217023af22b275e09e65fa53d053724d4d2b6bd")
-      public override
+      override
           fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty.Builder.() -> Unit):
           Unit = seedUrlConfiguration(WebCrawlerSeedUrlConfigurationProperty(seedUrlConfiguration))
 
-      public override fun siteMapsConfiguration(siteMapsConfiguration: IResolvable) {
+      override fun siteMapsConfiguration(siteMapsConfiguration: IResolvable) {
         cdkBuilder.siteMapsConfiguration(siteMapsConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty) {
         cdkBuilder.siteMapsConfiguration(siteMapsConfiguration.let(WebCrawlerSiteMapsConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("42270145f287d26bf5765aa46ea377506996d9f8ff2928c03856ac644e6facd4")
-      public override
+      override
           fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty.Builder.() -> Unit):
           Unit =
           siteMapsConfiguration(WebCrawlerSiteMapsConfigurationProperty(siteMapsConfiguration))
@@ -4433,9 +4116,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerUrlsProperty,
     ) : WebCrawlerUrlsProperty {
-      public override fun seedUrlConfiguration(): Any? = unwrap(this).getSeedUrlConfiguration()
+      override fun seedUrlConfiguration(): Any? = unwrap(this).getSeedUrlConfiguration()
 
-      public override fun siteMapsConfiguration(): Any? = unwrap(this).getSiteMapsConfiguration()
+      override fun siteMapsConfiguration(): Any? = unwrap(this).getSiteMapsConfiguration()
     }
 
     public companion object {
@@ -4462,11 +4145,9 @@ public open class CfnDataSource internal constructor(
     public fun blogFieldMappings(): Any? = unwrap(this).getBlogFieldMappings()
 
     public interface Builder {
-      public fun blogFieldMappings(blogFieldMappings: IResolvable) {
-      }
+      public fun blogFieldMappings(blogFieldMappings: IResolvable)
 
-      public fun blogFieldMappings(blogFieldMappings: List<Any>) {
-      }
+      public fun blogFieldMappings(blogFieldMappings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4475,11 +4156,11 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty.builder()
 
-      public override fun blogFieldMappings(blogFieldMappings: IResolvable) {
+      override fun blogFieldMappings(blogFieldMappings: IResolvable) {
         cdkBuilder.blogFieldMappings(blogFieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun blogFieldMappings(blogFieldMappings: List<Any>) {
+      override fun blogFieldMappings(blogFieldMappings: List<Any>) {
         cdkBuilder.blogFieldMappings(blogFieldMappings)
       }
 
@@ -4492,7 +4173,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty,
     ) : ConfluenceBlogConfigurationProperty {
-      public override fun blogFieldMappings(): Any? = unwrap(this).getBlogFieldMappings()
+      override fun blogFieldMappings(): Any? = unwrap(this).getBlogFieldMappings()
     }
 
     public companion object {
@@ -4521,8 +4202,7 @@ public open class CfnDataSource internal constructor(
         unwrap(this).getQueryIdentifiersEnclosingOption()
 
     public interface Builder {
-      public fun queryIdentifiersEnclosingOption(queryIdentifiersEnclosingOption: String) {
-      }
+      public fun queryIdentifiersEnclosingOption(queryIdentifiersEnclosingOption: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4530,7 +4210,7 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty.builder()
 
-      public override fun queryIdentifiersEnclosingOption(queryIdentifiersEnclosingOption: String) {
+      override fun queryIdentifiersEnclosingOption(queryIdentifiersEnclosingOption: String) {
         cdkBuilder.queryIdentifiersEnclosingOption(queryIdentifiersEnclosingOption)
       }
 
@@ -4543,7 +4223,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.SqlConfigurationProperty,
     ) : SqlConfigurationProperty {
-      public override fun queryIdentifiersEnclosingOption(): String? =
+      override fun queryIdentifiersEnclosingOption(): String? =
           unwrap(this).getQueryIdentifiersEnclosingOption()
     }
 
@@ -4573,11 +4253,9 @@ public open class CfnDataSource internal constructor(
     public fun key(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4585,11 +4263,11 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -4600,9 +4278,9 @@ public open class CfnDataSource internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.S3PathProperty,
     ) : S3PathProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
     }
 
     public companion object {
@@ -4633,14 +4311,11 @@ public open class CfnDataSource internal constructor(
     public fun indexFieldName(): String
 
     public interface Builder {
-      public fun dataSourceFieldName(dataSourceFieldName: String) {
-      }
+      public fun dataSourceFieldName(dataSourceFieldName: String)
 
-      public fun dateFieldFormat(dateFieldFormat: String) {
-      }
+      public fun dateFieldFormat(dateFieldFormat: String)
 
-      public fun indexFieldName(indexFieldName: String) {
-      }
+      public fun indexFieldName(indexFieldName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4649,15 +4324,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceToIndexFieldMappingProperty.builder()
 
-      public override fun dataSourceFieldName(dataSourceFieldName: String) {
+      override fun dataSourceFieldName(dataSourceFieldName: String) {
         cdkBuilder.dataSourceFieldName(dataSourceFieldName)
       }
 
-      public override fun dateFieldFormat(dateFieldFormat: String) {
+      override fun dateFieldFormat(dateFieldFormat: String) {
         cdkBuilder.dateFieldFormat(dateFieldFormat)
       }
 
-      public override fun indexFieldName(indexFieldName: String) {
+      override fun indexFieldName(indexFieldName: String) {
         cdkBuilder.indexFieldName(indexFieldName)
       }
 
@@ -4670,11 +4345,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceToIndexFieldMappingProperty,
     ) : ConfluenceSpaceToIndexFieldMappingProperty {
-      public override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
+      override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
 
-      public override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
+      override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
 
-      public override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
+      override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
     }
 
     public companion object {
@@ -4706,14 +4381,11 @@ public open class CfnDataSource internal constructor(
     public fun indexFieldName(): String
 
     public interface Builder {
-      public fun dataSourceFieldName(dataSourceFieldName: String) {
-      }
+      public fun dataSourceFieldName(dataSourceFieldName: String)
 
-      public fun dateFieldFormat(dateFieldFormat: String) {
-      }
+      public fun dateFieldFormat(dateFieldFormat: String)
 
-      public fun indexFieldName(indexFieldName: String) {
-      }
+      public fun indexFieldName(indexFieldName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4722,15 +4394,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogToIndexFieldMappingProperty.builder()
 
-      public override fun dataSourceFieldName(dataSourceFieldName: String) {
+      override fun dataSourceFieldName(dataSourceFieldName: String) {
         cdkBuilder.dataSourceFieldName(dataSourceFieldName)
       }
 
-      public override fun dateFieldFormat(dateFieldFormat: String) {
+      override fun dateFieldFormat(dateFieldFormat: String) {
         cdkBuilder.dateFieldFormat(dateFieldFormat)
       }
 
-      public override fun indexFieldName(indexFieldName: String) {
+      override fun indexFieldName(indexFieldName: String) {
         cdkBuilder.indexFieldName(indexFieldName)
       }
 
@@ -4743,11 +4415,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogToIndexFieldMappingProperty,
     ) : ConfluenceBlogToIndexFieldMappingProperty {
-      public override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
+      override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
 
-      public override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
+      override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
 
-      public override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
+      override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
     }
 
     public companion object {
@@ -4779,14 +4451,11 @@ public open class CfnDataSource internal constructor(
     public fun port(): Number
 
     public interface Builder {
-      public fun credentials(credentials: String) {
-      }
+      public fun credentials(credentials: String)
 
-      public fun host(host: String) {
-      }
+      public fun host(host: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -4794,15 +4463,15 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty.builder()
 
-      public override fun credentials(credentials: String) {
+      override fun credentials(credentials: String) {
         cdkBuilder.credentials(credentials)
       }
 
-      public override fun host(host: String) {
+      override fun host(host: String) {
         cdkBuilder.host(host)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
@@ -4815,11 +4484,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty,
     ) : ProxyConfigurationProperty {
-      public override fun credentials(): String? = unwrap(this).getCredentials()
+      override fun credentials(): String? = unwrap(this).getCredentials()
 
-      public override fun host(): String = unwrap(this).getHost()
+      override fun host(): String = unwrap(this).getHost()
 
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
     }
 
     public companion object {
@@ -4846,8 +4515,7 @@ public open class CfnDataSource internal constructor(
     public fun keyPath(): String? = unwrap(this).getKeyPath()
 
     public interface Builder {
-      public fun keyPath(keyPath: String) {
-      }
+      public fun keyPath(keyPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4856,7 +4524,7 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.AccessControlListConfigurationProperty.builder()
 
-      public override fun keyPath(keyPath: String) {
+      override fun keyPath(keyPath: String) {
         cdkBuilder.keyPath(keyPath)
       }
 
@@ -4869,7 +4537,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.AccessControlListConfigurationProperty,
     ) : AccessControlListConfigurationProperty {
-      public override fun keyPath(): String? = unwrap(this).getKeyPath()
+      override fun keyPath(): String? = unwrap(this).getKeyPath()
     }
 
     public companion object {
@@ -4901,14 +4569,11 @@ public open class CfnDataSource internal constructor(
     public fun indexFieldName(): String
 
     public interface Builder {
-      public fun dataSourceFieldName(dataSourceFieldName: String) {
-      }
+      public fun dataSourceFieldName(dataSourceFieldName: String)
 
-      public fun dateFieldFormat(dateFieldFormat: String) {
-      }
+      public fun dateFieldFormat(dateFieldFormat: String)
 
-      public fun indexFieldName(indexFieldName: String) {
-      }
+      public fun indexFieldName(indexFieldName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4917,15 +4582,15 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty.builder()
 
-      public override fun dataSourceFieldName(dataSourceFieldName: String) {
+      override fun dataSourceFieldName(dataSourceFieldName: String) {
         cdkBuilder.dataSourceFieldName(dataSourceFieldName)
       }
 
-      public override fun dateFieldFormat(dateFieldFormat: String) {
+      override fun dateFieldFormat(dateFieldFormat: String) {
         cdkBuilder.dateFieldFormat(dateFieldFormat)
       }
 
-      public override fun indexFieldName(indexFieldName: String) {
+      override fun indexFieldName(indexFieldName: String) {
         cdkBuilder.indexFieldName(indexFieldName)
       }
 
@@ -4938,11 +4603,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty,
     ) : ConfluenceAttachmentToIndexFieldMappingProperty {
-      public override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
+      override fun dataSourceFieldName(): String = unwrap(this).getDataSourceFieldName()
 
-      public override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
+      override fun dateFieldFormat(): String? = unwrap(this).getDateFieldFormat()
 
-      public override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
+      override fun indexFieldName(): String = unwrap(this).getIndexFieldName()
     }
 
     public companion object {
@@ -4972,17 +4637,13 @@ public open class CfnDataSource internal constructor(
     public fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
 
     public interface Builder {
-      public fun attachmentFieldMappings(attachmentFieldMappings: IResolvable) {
-      }
+      public fun attachmentFieldMappings(attachmentFieldMappings: IResolvable)
 
-      public fun attachmentFieldMappings(attachmentFieldMappings: List<Any>) {
-      }
+      public fun attachmentFieldMappings(attachmentFieldMappings: List<Any>)
 
-      public fun crawlAttachments(crawlAttachments: Boolean) {
-      }
+      public fun crawlAttachments(crawlAttachments: Boolean)
 
-      public fun crawlAttachments(crawlAttachments: IResolvable) {
-      }
+      public fun crawlAttachments(crawlAttachments: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -4991,19 +4652,19 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentConfigurationProperty.builder()
 
-      public override fun attachmentFieldMappings(attachmentFieldMappings: IResolvable) {
+      override fun attachmentFieldMappings(attachmentFieldMappings: IResolvable) {
         cdkBuilder.attachmentFieldMappings(attachmentFieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun attachmentFieldMappings(attachmentFieldMappings: List<Any>) {
+      override fun attachmentFieldMappings(attachmentFieldMappings: List<Any>) {
         cdkBuilder.attachmentFieldMappings(attachmentFieldMappings)
       }
 
-      public override fun crawlAttachments(crawlAttachments: Boolean) {
+      override fun crawlAttachments(crawlAttachments: Boolean) {
         cdkBuilder.crawlAttachments(crawlAttachments)
       }
 
-      public override fun crawlAttachments(crawlAttachments: IResolvable) {
+      override fun crawlAttachments(crawlAttachments: IResolvable) {
         cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
       }
 
@@ -5016,10 +4677,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceAttachmentConfigurationProperty,
     ) : ConfluenceAttachmentConfigurationProperty {
-      public override fun attachmentFieldMappings(): Any? =
-          unwrap(this).getAttachmentFieldMappings()
+      override fun attachmentFieldMappings(): Any? = unwrap(this).getAttachmentFieldMappings()
 
-      public override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
+      override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
     }
 
     public companion object {
@@ -5051,33 +4711,25 @@ public open class CfnDataSource internal constructor(
     public fun target(): Any? = unwrap(this).getTarget()
 
     public interface Builder {
-      public fun condition(condition: IResolvable) {
-      }
+      public fun condition(condition: IResolvable)
 
-      public fun condition(condition: DocumentAttributeConditionProperty) {
-      }
+      public fun condition(condition: DocumentAttributeConditionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("372eb10ee98294f51fc68306591bc84442eccbfa064b67783a71dda041a0902a")
-      public fun condition(condition: DocumentAttributeConditionProperty.Builder.() -> Unit) {
-      }
+      public fun condition(condition: DocumentAttributeConditionProperty.Builder.() -> Unit)
 
-      public fun documentContentDeletion(documentContentDeletion: Boolean) {
-      }
+      public fun documentContentDeletion(documentContentDeletion: Boolean)
 
-      public fun documentContentDeletion(documentContentDeletion: IResolvable) {
-      }
+      public fun documentContentDeletion(documentContentDeletion: IResolvable)
 
-      public fun target(target: IResolvable) {
-      }
+      public fun target(target: IResolvable)
 
-      public fun target(target: DocumentAttributeTargetProperty) {
-      }
+      public fun target(target: DocumentAttributeTargetProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1ba879dc4c824e5d2166f0aa9878e17fb1bcac8b563f403834655e16a2bef59")
-      public fun target(target: DocumentAttributeTargetProperty.Builder.() -> Unit) {
-      }
+      public fun target(target: DocumentAttributeTargetProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -5086,39 +4738,38 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.InlineCustomDocumentEnrichmentConfigurationProperty.builder()
 
-      public override fun condition(condition: IResolvable) {
+      override fun condition(condition: IResolvable) {
         cdkBuilder.condition(condition.let(IResolvable::unwrap))
       }
 
-      public override fun condition(condition: DocumentAttributeConditionProperty) {
+      override fun condition(condition: DocumentAttributeConditionProperty) {
         cdkBuilder.condition(condition.let(DocumentAttributeConditionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("372eb10ee98294f51fc68306591bc84442eccbfa064b67783a71dda041a0902a")
-      public override
-          fun condition(condition: DocumentAttributeConditionProperty.Builder.() -> Unit): Unit =
-          condition(DocumentAttributeConditionProperty(condition))
+      override fun condition(condition: DocumentAttributeConditionProperty.Builder.() -> Unit): Unit
+          = condition(DocumentAttributeConditionProperty(condition))
 
-      public override fun documentContentDeletion(documentContentDeletion: Boolean) {
+      override fun documentContentDeletion(documentContentDeletion: Boolean) {
         cdkBuilder.documentContentDeletion(documentContentDeletion)
       }
 
-      public override fun documentContentDeletion(documentContentDeletion: IResolvable) {
+      override fun documentContentDeletion(documentContentDeletion: IResolvable) {
         cdkBuilder.documentContentDeletion(documentContentDeletion.let(IResolvable::unwrap))
       }
 
-      public override fun target(target: IResolvable) {
+      override fun target(target: IResolvable) {
         cdkBuilder.target(target.let(IResolvable::unwrap))
       }
 
-      public override fun target(target: DocumentAttributeTargetProperty) {
+      override fun target(target: DocumentAttributeTargetProperty) {
         cdkBuilder.target(target.let(DocumentAttributeTargetProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c1ba879dc4c824e5d2166f0aa9878e17fb1bcac8b563f403834655e16a2bef59")
-      public override fun target(target: DocumentAttributeTargetProperty.Builder.() -> Unit): Unit =
+      override fun target(target: DocumentAttributeTargetProperty.Builder.() -> Unit): Unit =
           target(DocumentAttributeTargetProperty(target))
 
       public fun build():
@@ -5130,12 +4781,11 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.InlineCustomDocumentEnrichmentConfigurationProperty,
     ) : InlineCustomDocumentEnrichmentConfigurationProperty {
-      public override fun condition(): Any? = unwrap(this).getCondition()
+      override fun condition(): Any? = unwrap(this).getCondition()
 
-      public override fun documentContentDeletion(): Any? =
-          unwrap(this).getDocumentContentDeletion()
+      override fun documentContentDeletion(): Any? = unwrap(this).getDocumentContentDeletion()
 
-      public override fun target(): Any? = unwrap(this).getTarget()
+      override fun target(): Any? = unwrap(this).getTarget()
     }
 
     public companion object {
@@ -5178,43 +4828,33 @@ public open class CfnDataSource internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun accessControlListConfiguration(accessControlListConfiguration: IResolvable) {
-      }
+      public fun accessControlListConfiguration(accessControlListConfiguration: IResolvable)
 
       public
-          fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty) {
-      }
+          fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad7f7d2544abe79db57cd7d122e90ba7101511573636633c85a2332f1c60b76c")
       public
-          fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty.Builder.() -> Unit)
 
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun documentsMetadataConfiguration(documentsMetadataConfiguration: IResolvable) {
-      }
+      public fun documentsMetadataConfiguration(documentsMetadataConfiguration: IResolvable)
 
       public
-          fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty) {
-      }
+          fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e62841f85387b18315a1a2a9c0ddbe5b09a6442ce91b81a01d85c19f2e7d41e2")
       public
-          fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty.Builder.() -> Unit)
 
-      public fun exclusionPatterns(exclusionPatterns: List<String>) {
-      }
+      public fun exclusionPatterns(exclusionPatterns: List<String>)
 
-      public fun inclusionPatterns(inclusionPatterns: List<String>) {
-      }
+      public fun inclusionPatterns(inclusionPatterns: List<String>)
 
-      public fun inclusionPrefixes(inclusionPrefixes: List<String>) {
-      }
+      public fun inclusionPrefixes(inclusionPrefixes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -5223,53 +4863,51 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty.builder()
 
-      public override
-          fun accessControlListConfiguration(accessControlListConfiguration: IResolvable) {
+      override fun accessControlListConfiguration(accessControlListConfiguration: IResolvable) {
         cdkBuilder.accessControlListConfiguration(accessControlListConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty) {
         cdkBuilder.accessControlListConfiguration(accessControlListConfiguration.let(AccessControlListConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad7f7d2544abe79db57cd7d122e90ba7101511573636633c85a2332f1c60b76c")
-      public override
+      override
           fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty.Builder.() -> Unit):
           Unit =
           accessControlListConfiguration(AccessControlListConfigurationProperty(accessControlListConfiguration))
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override
-          fun documentsMetadataConfiguration(documentsMetadataConfiguration: IResolvable) {
+      override fun documentsMetadataConfiguration(documentsMetadataConfiguration: IResolvable) {
         cdkBuilder.documentsMetadataConfiguration(documentsMetadataConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty) {
         cdkBuilder.documentsMetadataConfiguration(documentsMetadataConfiguration.let(DocumentsMetadataConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e62841f85387b18315a1a2a9c0ddbe5b09a6442ce91b81a01d85c19f2e7d41e2")
-      public override
+      override
           fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty.Builder.() -> Unit):
           Unit =
           documentsMetadataConfiguration(DocumentsMetadataConfigurationProperty(documentsMetadataConfiguration))
 
-      public override fun exclusionPatterns(exclusionPatterns: List<String>) {
+      override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
-      public override fun inclusionPatterns(inclusionPatterns: List<String>) {
+      override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
-      public override fun inclusionPrefixes(inclusionPrefixes: List<String>) {
+      override fun inclusionPrefixes(inclusionPrefixes: List<String>) {
         cdkBuilder.inclusionPrefixes(inclusionPrefixes)
       }
 
@@ -5282,21 +4920,21 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty,
     ) : S3DataSourceConfigurationProperty {
-      public override fun accessControlListConfiguration(): Any? =
+      override fun accessControlListConfiguration(): Any? =
           unwrap(this).getAccessControlListConfiguration()
 
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun documentsMetadataConfiguration(): Any? =
+      override fun documentsMetadataConfiguration(): Any? =
           unwrap(this).getDocumentsMetadataConfiguration()
 
-      public override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+      override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
           emptyList()
 
-      public override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+      override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
           emptyList()
 
-      public override fun inclusionPrefixes(): List<String> = unwrap(this).getInclusionPrefixes() ?:
+      override fun inclusionPrefixes(): List<String> = unwrap(this).getInclusionPrefixes() ?:
           emptyList()
     }
 
@@ -5333,23 +4971,17 @@ public open class CfnDataSource internal constructor(
     public fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
     public interface Builder {
-      public fun changeDetectingColumns(changeDetectingColumns: List<String>) {
-      }
+      public fun changeDetectingColumns(changeDetectingColumns: List<String>)
 
-      public fun documentDataColumnName(documentDataColumnName: String) {
-      }
+      public fun documentDataColumnName(documentDataColumnName: String)
 
-      public fun documentIdColumnName(documentIdColumnName: String) {
-      }
+      public fun documentIdColumnName(documentIdColumnName: String)
 
-      public fun documentTitleColumnName(documentTitleColumnName: String) {
-      }
+      public fun documentTitleColumnName(documentTitleColumnName: String)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -5357,27 +4989,27 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty.Builder =
           software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty.builder()
 
-      public override fun changeDetectingColumns(changeDetectingColumns: List<String>) {
+      override fun changeDetectingColumns(changeDetectingColumns: List<String>) {
         cdkBuilder.changeDetectingColumns(changeDetectingColumns)
       }
 
-      public override fun documentDataColumnName(documentDataColumnName: String) {
+      override fun documentDataColumnName(documentDataColumnName: String) {
         cdkBuilder.documentDataColumnName(documentDataColumnName)
       }
 
-      public override fun documentIdColumnName(documentIdColumnName: String) {
+      override fun documentIdColumnName(documentIdColumnName: String) {
         cdkBuilder.documentIdColumnName(documentIdColumnName)
       }
 
-      public override fun documentTitleColumnName(documentTitleColumnName: String) {
+      override fun documentTitleColumnName(documentTitleColumnName: String) {
         cdkBuilder.documentTitleColumnName(documentTitleColumnName)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
@@ -5390,18 +5022,16 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty,
     ) : ColumnConfigurationProperty {
-      public override fun changeDetectingColumns(): List<String> =
-          unwrap(this).getChangeDetectingColumns() ?: emptyList()
+      override fun changeDetectingColumns(): List<String> = unwrap(this).getChangeDetectingColumns()
+          ?: emptyList()
 
-      public override fun documentDataColumnName(): String =
-          unwrap(this).getDocumentDataColumnName()
+      override fun documentDataColumnName(): String = unwrap(this).getDocumentDataColumnName()
 
-      public override fun documentIdColumnName(): String = unwrap(this).getDocumentIdColumnName()
+      override fun documentIdColumnName(): String = unwrap(this).getDocumentIdColumnName()
 
-      public override fun documentTitleColumnName(): String? =
-          unwrap(this).getDocumentTitleColumnName()
+      override fun documentTitleColumnName(): String? = unwrap(this).getDocumentTitleColumnName()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
     }
 
     public companion object {
@@ -5442,32 +5072,23 @@ public open class CfnDataSource internal constructor(
         unwrap(this).getIncludeAttachmentFilePatterns() ?: emptyList()
 
     public interface Builder {
-      public fun crawlAttachments(crawlAttachments: Boolean) {
-      }
+      public fun crawlAttachments(crawlAttachments: Boolean)
 
-      public fun crawlAttachments(crawlAttachments: IResolvable) {
-      }
+      public fun crawlAttachments(crawlAttachments: IResolvable)
 
-      public fun documentDataFieldName(documentDataFieldName: String) {
-      }
+      public fun documentDataFieldName(documentDataFieldName: String)
 
-      public fun documentTitleFieldName(documentTitleFieldName: String) {
-      }
+      public fun documentTitleFieldName(documentTitleFieldName: String)
 
-      public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
-      }
+      public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun filterQuery(filterQuery: String) {
-      }
+      public fun filterQuery(filterQuery: String)
 
-      public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
-      }
+      public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -5476,41 +5097,39 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty.builder()
 
-      public override fun crawlAttachments(crawlAttachments: Boolean) {
+      override fun crawlAttachments(crawlAttachments: Boolean) {
         cdkBuilder.crawlAttachments(crawlAttachments)
       }
 
-      public override fun crawlAttachments(crawlAttachments: IResolvable) {
+      override fun crawlAttachments(crawlAttachments: IResolvable) {
         cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
       }
 
-      public override fun documentDataFieldName(documentDataFieldName: String) {
+      override fun documentDataFieldName(documentDataFieldName: String) {
         cdkBuilder.documentDataFieldName(documentDataFieldName)
       }
 
-      public override fun documentTitleFieldName(documentTitleFieldName: String) {
+      override fun documentTitleFieldName(documentTitleFieldName: String) {
         cdkBuilder.documentTitleFieldName(documentTitleFieldName)
       }
 
-      public override
-          fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
+      override fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>) {
         cdkBuilder.excludeAttachmentFilePatterns(excludeAttachmentFilePatterns)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun filterQuery(filterQuery: String) {
+      override fun filterQuery(filterQuery: String) {
         cdkBuilder.filterQuery(filterQuery)
       }
 
-      public override
-          fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
+      override fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
         cdkBuilder.includeAttachmentFilePatterns(includeAttachmentFilePatterns)
       }
 
@@ -5523,21 +5142,20 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty,
     ) : ServiceNowKnowledgeArticleConfigurationProperty {
-      public override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
+      override fun crawlAttachments(): Any? = unwrap(this).getCrawlAttachments()
 
-      public override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
+      override fun documentDataFieldName(): String = unwrap(this).getDocumentDataFieldName()
 
-      public override fun documentTitleFieldName(): String? =
-          unwrap(this).getDocumentTitleFieldName()
+      override fun documentTitleFieldName(): String? = unwrap(this).getDocumentTitleFieldName()
 
-      public override fun excludeAttachmentFilePatterns(): List<String> =
+      override fun excludeAttachmentFilePatterns(): List<String> =
           unwrap(this).getExcludeAttachmentFilePatterns() ?: emptyList()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
 
-      public override fun filterQuery(): String? = unwrap(this).getFilterQuery()
+      override fun filterQuery(): String? = unwrap(this).getFilterQuery()
 
-      public override fun includeAttachmentFilePatterns(): List<String> =
+      override fun includeAttachmentFilePatterns(): List<String> =
           unwrap(this).getIncludeAttachmentFilePatterns() ?: emptyList()
     }
 
@@ -5582,29 +5200,21 @@ public open class CfnDataSource internal constructor(
     public fun secretArn(): String
 
     public interface Builder {
-      public fun excludeMimeTypes(excludeMimeTypes: List<String>) {
-      }
+      public fun excludeMimeTypes(excludeMimeTypes: List<String>)
 
-      public fun excludeSharedDrives(excludeSharedDrives: List<String>) {
-      }
+      public fun excludeSharedDrives(excludeSharedDrives: List<String>)
 
-      public fun excludeUserAccounts(excludeUserAccounts: List<String>) {
-      }
+      public fun excludeUserAccounts(excludeUserAccounts: List<String>)
 
-      public fun exclusionPatterns(exclusionPatterns: List<String>) {
-      }
+      public fun exclusionPatterns(exclusionPatterns: List<String>)
 
-      public fun fieldMappings(fieldMappings: IResolvable) {
-      }
+      public fun fieldMappings(fieldMappings: IResolvable)
 
-      public fun fieldMappings(fieldMappings: List<Any>) {
-      }
+      public fun fieldMappings(fieldMappings: List<Any>)
 
-      public fun inclusionPatterns(inclusionPatterns: List<String>) {
-      }
+      public fun inclusionPatterns(inclusionPatterns: List<String>)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5613,35 +5223,35 @@ public open class CfnDataSource internal constructor(
           =
           software.amazon.awscdk.services.kendra.CfnDataSource.GoogleDriveConfigurationProperty.builder()
 
-      public override fun excludeMimeTypes(excludeMimeTypes: List<String>) {
+      override fun excludeMimeTypes(excludeMimeTypes: List<String>) {
         cdkBuilder.excludeMimeTypes(excludeMimeTypes)
       }
 
-      public override fun excludeSharedDrives(excludeSharedDrives: List<String>) {
+      override fun excludeSharedDrives(excludeSharedDrives: List<String>) {
         cdkBuilder.excludeSharedDrives(excludeSharedDrives)
       }
 
-      public override fun excludeUserAccounts(excludeUserAccounts: List<String>) {
+      override fun excludeUserAccounts(excludeUserAccounts: List<String>) {
         cdkBuilder.excludeUserAccounts(excludeUserAccounts)
       }
 
-      public override fun exclusionPatterns(exclusionPatterns: List<String>) {
+      override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
-      public override fun fieldMappings(fieldMappings: IResolvable) {
+      override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
 
-      public override fun fieldMappings(fieldMappings: List<Any>) {
+      override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
-      public override fun inclusionPatterns(inclusionPatterns: List<String>) {
+      override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
@@ -5654,24 +5264,24 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.GoogleDriveConfigurationProperty,
     ) : GoogleDriveConfigurationProperty {
-      public override fun excludeMimeTypes(): List<String> = unwrap(this).getExcludeMimeTypes() ?:
+      override fun excludeMimeTypes(): List<String> = unwrap(this).getExcludeMimeTypes() ?:
           emptyList()
 
-      public override fun excludeSharedDrives(): List<String> =
-          unwrap(this).getExcludeSharedDrives() ?: emptyList()
-
-      public override fun excludeUserAccounts(): List<String> =
-          unwrap(this).getExcludeUserAccounts() ?: emptyList()
-
-      public override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+      override fun excludeSharedDrives(): List<String> = unwrap(this).getExcludeSharedDrives() ?:
           emptyList()
 
-      public override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
-
-      public override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+      override fun excludeUserAccounts(): List<String> = unwrap(this).getExcludeUserAccounts() ?:
           emptyList()
 
-      public override fun secretArn(): String = unwrap(this).getSecretArn()
+      override fun exclusionPatterns(): List<String> = unwrap(this).getExclusionPatterns() ?:
+          emptyList()
+
+      override fun fieldMappings(): Any? = unwrap(this).getFieldMappings()
+
+      override fun inclusionPatterns(): List<String> = unwrap(this).getInclusionPatterns() ?:
+          emptyList()
+
+      override fun secretArn(): String = unwrap(this).getSecretArn()
     }
 
     public companion object {

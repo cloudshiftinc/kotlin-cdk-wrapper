@@ -96,38 +96,27 @@ public open class CfnInstanceProfile internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceProfileIdentifier(instanceProfileIdentifier: String) {
-    }
+    public fun instanceProfileIdentifier(instanceProfileIdentifier: String)
 
-    public fun instanceProfileName(instanceProfileName: String) {
-    }
+    public fun instanceProfileName(instanceProfileName: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun networkType(networkType: String) {
-    }
+    public fun networkType(networkType: String)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun subnetGroupIdentifier(subnetGroupIdentifier: String) {
-    }
+    public fun subnetGroupIdentifier(subnetGroupIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
-    }
+    public fun vpcSecurityGroups(vpcSecurityGroups: List<String>)
   }
 
   private class BuilderImpl(
@@ -137,47 +126,47 @@ public open class CfnInstanceProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnInstanceProfile.Builder =
         software.amazon.awscdk.services.dms.CfnInstanceProfile.Builder.create(scope, id)
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceProfileIdentifier(instanceProfileIdentifier: String) {
+    override fun instanceProfileIdentifier(instanceProfileIdentifier: String) {
       cdkBuilder.instanceProfileIdentifier(instanceProfileIdentifier)
     }
 
-    public override fun instanceProfileName(instanceProfileName: String) {
+    override fun instanceProfileName(instanceProfileName: String) {
       cdkBuilder.instanceProfileName(instanceProfileName)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun networkType(networkType: String) {
+    override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun subnetGroupIdentifier(subnetGroupIdentifier: String) {
+    override fun subnetGroupIdentifier(subnetGroupIdentifier: String) {
       cdkBuilder.subnetGroupIdentifier(subnetGroupIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
+    override fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
       cdkBuilder.vpcSecurityGroups(vpcSecurityGroups)
     }
 

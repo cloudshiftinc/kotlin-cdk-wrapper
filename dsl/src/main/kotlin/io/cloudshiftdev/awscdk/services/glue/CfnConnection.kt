@@ -44,19 +44,15 @@ public open class CfnConnection internal constructor(
   }
 
   public interface Builder {
-    public fun catalogId(catalogId: String) {
-    }
+    public fun catalogId(catalogId: String)
 
-    public fun connectionInput(connectionInput: IResolvable) {
-    }
+    public fun connectionInput(connectionInput: IResolvable)
 
-    public fun connectionInput(connectionInput: ConnectionInputProperty) {
-    }
+    public fun connectionInput(connectionInput: ConnectionInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c054d79a6f4f180cc0bb153a4582bd3bf2eb5bd1d65394592303eaf70bb55bab")
-    public fun connectionInput(connectionInput: ConnectionInputProperty.Builder.() -> Unit) {
-    }
+    public fun connectionInput(connectionInput: ConnectionInputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -66,23 +62,22 @@ public open class CfnConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnConnection.Builder =
         software.amazon.awscdk.services.glue.CfnConnection.Builder.create(scope, id)
 
-    public override fun catalogId(catalogId: String) {
+    override fun catalogId(catalogId: String) {
       cdkBuilder.catalogId(catalogId)
     }
 
-    public override fun connectionInput(connectionInput: IResolvable) {
+    override fun connectionInput(connectionInput: IResolvable) {
       cdkBuilder.connectionInput(connectionInput.let(IResolvable::unwrap))
     }
 
-    public override fun connectionInput(connectionInput: ConnectionInputProperty) {
+    override fun connectionInput(connectionInput: ConnectionInputProperty) {
       cdkBuilder.connectionInput(connectionInput.let(ConnectionInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c054d79a6f4f180cc0bb153a4582bd3bf2eb5bd1d65394592303eaf70bb55bab")
-    public override
-        fun connectionInput(connectionInput: ConnectionInputProperty.Builder.() -> Unit): Unit =
-        connectionInput(ConnectionInputProperty(connectionInput))
+    override fun connectionInput(connectionInput: ConnectionInputProperty.Builder.() -> Unit): Unit
+        = connectionInput(ConnectionInputProperty(connectionInput))
 
     public fun build(): software.amazon.awscdk.services.glue.CfnConnection = cdkBuilder.build()
   }
@@ -123,33 +118,25 @@ public open class CfnConnection internal constructor(
         unwrap(this).getPhysicalConnectionRequirements()
 
     public interface Builder {
-      public fun connectionProperties(connectionProperties: Any) {
-      }
+      public fun connectionProperties(connectionProperties: Any)
 
-      public fun connectionType(connectionType: String) {
-      }
+      public fun connectionType(connectionType: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun matchCriteria(matchCriteria: List<String>) {
-      }
+      public fun matchCriteria(matchCriteria: List<String>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable) {
-      }
+      public fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable)
 
       public
-          fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty) {
-      }
+          fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b3a681d707a4b419f21be2fa852df2b7c429b91fffc84f200ac88783cb319cdc")
       public
-          fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty.Builder.() -> Unit) {
-      }
+          fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -157,39 +144,38 @@ public open class CfnConnection internal constructor(
           software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty.Builder =
           software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty.builder()
 
-      public override fun connectionProperties(connectionProperties: Any) {
+      override fun connectionProperties(connectionProperties: Any) {
         cdkBuilder.connectionProperties(connectionProperties)
       }
 
-      public override fun connectionType(connectionType: String) {
+      override fun connectionType(connectionType: String) {
         cdkBuilder.connectionType(connectionType)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun matchCriteria(matchCriteria: List<String>) {
+      override fun matchCriteria(matchCriteria: List<String>) {
         cdkBuilder.matchCriteria(matchCriteria)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override
-          fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable) {
+      override fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable) {
         cdkBuilder.physicalConnectionRequirements(physicalConnectionRequirements.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty) {
         cdkBuilder.physicalConnectionRequirements(physicalConnectionRequirements.let(PhysicalConnectionRequirementsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b3a681d707a4b419f21be2fa852df2b7c429b91fffc84f200ac88783cb319cdc")
-      public override
+      override
           fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty.Builder.() -> Unit):
           Unit =
           physicalConnectionRequirements(PhysicalConnectionRequirementsProperty(physicalConnectionRequirements))
@@ -202,18 +188,17 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty,
     ) : ConnectionInputProperty {
-      public override fun connectionProperties(): Any? = unwrap(this).getConnectionProperties()
+      override fun connectionProperties(): Any? = unwrap(this).getConnectionProperties()
 
-      public override fun connectionType(): String = unwrap(this).getConnectionType()
+      override fun connectionType(): String = unwrap(this).getConnectionType()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun matchCriteria(): List<String> = unwrap(this).getMatchCriteria() ?:
-          emptyList()
+      override fun matchCriteria(): List<String> = unwrap(this).getMatchCriteria() ?: emptyList()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun physicalConnectionRequirements(): Any? =
+      override fun physicalConnectionRequirements(): Any? =
           unwrap(this).getPhysicalConnectionRequirements()
     }
 
@@ -246,14 +231,11 @@ public open class CfnConnection internal constructor(
     public fun subnetId(): String? = unwrap(this).getSubnetId()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun securityGroupIdList(securityGroupIdList: List<String>) {
-      }
+      public fun securityGroupIdList(securityGroupIdList: List<String>)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -262,15 +244,15 @@ public open class CfnConnection internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun securityGroupIdList(securityGroupIdList: List<String>) {
+      override fun securityGroupIdList(securityGroupIdList: List<String>) {
         cdkBuilder.securityGroupIdList(securityGroupIdList)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -283,12 +265,12 @@ public open class CfnConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty,
     ) : PhysicalConnectionRequirementsProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun securityGroupIdList(): List<String> =
-          unwrap(this).getSecurityGroupIdList() ?: emptyList()
+      override fun securityGroupIdList(): List<String> = unwrap(this).getSecurityGroupIdList() ?:
+          emptyList()
 
-      public override fun subnetId(): String? = unwrap(this).getSubnetId()
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
     }
 
     public companion object {

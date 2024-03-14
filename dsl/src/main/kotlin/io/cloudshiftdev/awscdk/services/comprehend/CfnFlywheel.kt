@@ -95,46 +95,33 @@ public open class CfnFlywheel internal constructor(
       taskConfig(TaskConfigProperty(`value`))
 
   public interface Builder {
-    public fun activeModelArn(activeModelArn: String) {
-    }
+    public fun activeModelArn(activeModelArn: String)
 
-    public fun dataAccessRoleArn(dataAccessRoleArn: String) {
-    }
+    public fun dataAccessRoleArn(dataAccessRoleArn: String)
 
-    public fun dataLakeS3Uri(dataLakeS3Uri: String) {
-    }
+    public fun dataLakeS3Uri(dataLakeS3Uri: String)
 
-    public fun dataSecurityConfig(dataSecurityConfig: IResolvable) {
-    }
+    public fun dataSecurityConfig(dataSecurityConfig: IResolvable)
 
-    public fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty) {
-    }
+    public fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("817e8a9bad11909e847082d3e9f601041c2aedd678201044b663f0719e9ac320")
-    public
-        fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty.Builder.() -> Unit)
 
-    public fun flywheelName(flywheelName: String) {
-    }
+    public fun flywheelName(flywheelName: String)
 
-    public fun modelType(modelType: String) {
-    }
+    public fun modelType(modelType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun taskConfig(taskConfig: IResolvable) {
-    }
+    public fun taskConfig(taskConfig: IResolvable)
 
-    public fun taskConfig(taskConfig: TaskConfigProperty) {
-    }
+    public fun taskConfig(taskConfig: TaskConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("09eba78f68059042ae50f73fa7f01f04f82c002aaa4e6cd375b73157c78bcd11")
-    public fun taskConfig(taskConfig: TaskConfigProperty.Builder.() -> Unit) {
-    }
+    public fun taskConfig(taskConfig: TaskConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -144,55 +131,55 @@ public open class CfnFlywheel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.comprehend.CfnFlywheel.Builder =
         software.amazon.awscdk.services.comprehend.CfnFlywheel.Builder.create(scope, id)
 
-    public override fun activeModelArn(activeModelArn: String) {
+    override fun activeModelArn(activeModelArn: String) {
       cdkBuilder.activeModelArn(activeModelArn)
     }
 
-    public override fun dataAccessRoleArn(dataAccessRoleArn: String) {
+    override fun dataAccessRoleArn(dataAccessRoleArn: String) {
       cdkBuilder.dataAccessRoleArn(dataAccessRoleArn)
     }
 
-    public override fun dataLakeS3Uri(dataLakeS3Uri: String) {
+    override fun dataLakeS3Uri(dataLakeS3Uri: String) {
       cdkBuilder.dataLakeS3Uri(dataLakeS3Uri)
     }
 
-    public override fun dataSecurityConfig(dataSecurityConfig: IResolvable) {
+    override fun dataSecurityConfig(dataSecurityConfig: IResolvable) {
       cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(IResolvable::unwrap))
     }
 
-    public override fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty) {
+    override fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty) {
       cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(DataSecurityConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("817e8a9bad11909e847082d3e9f601041c2aedd678201044b663f0719e9ac320")
-    public override
+    override
         fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty.Builder.() -> Unit):
         Unit = dataSecurityConfig(DataSecurityConfigProperty(dataSecurityConfig))
 
-    public override fun flywheelName(flywheelName: String) {
+    override fun flywheelName(flywheelName: String) {
       cdkBuilder.flywheelName(flywheelName)
     }
 
-    public override fun modelType(modelType: String) {
+    override fun modelType(modelType: String) {
       cdkBuilder.modelType(modelType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun taskConfig(taskConfig: IResolvable) {
+    override fun taskConfig(taskConfig: IResolvable) {
       cdkBuilder.taskConfig(taskConfig.let(IResolvable::unwrap))
     }
 
-    public override fun taskConfig(taskConfig: TaskConfigProperty) {
+    override fun taskConfig(taskConfig: TaskConfigProperty) {
       cdkBuilder.taskConfig(taskConfig.let(TaskConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("09eba78f68059042ae50f73fa7f01f04f82c002aaa4e6cd375b73157c78bcd11")
-    public override fun taskConfig(taskConfig: TaskConfigProperty.Builder.() -> Unit): Unit =
+    override fun taskConfig(taskConfig: TaskConfigProperty.Builder.() -> Unit): Unit =
         taskConfig(TaskConfigProperty(taskConfig))
 
     public fun build(): software.amazon.awscdk.services.comprehend.CfnFlywheel = cdkBuilder.build()
@@ -227,33 +214,26 @@ public open class CfnFlywheel internal constructor(
     public fun languageCode(): String
 
     public interface Builder {
-      public fun documentClassificationConfig(documentClassificationConfig: IResolvable) {
-      }
+      public fun documentClassificationConfig(documentClassificationConfig: IResolvable)
 
       public
-          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty) {
-      }
+          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c03bf1866fb06a9eeca14958a7d8128b8db4e0beac190da74f07d6dbcd06bd6")
       public
-          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit) {
-      }
+          fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit)
 
-      public fun entityRecognitionConfig(entityRecognitionConfig: IResolvable) {
-      }
+      public fun entityRecognitionConfig(entityRecognitionConfig: IResolvable)
 
-      public fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty) {
-      }
+      public fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32aff837a53f4deca6be85f3c340a711b900d2b07ea9f545e6ca3bb8527b7538")
       public
-          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit) {
-      }
+          fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit)
 
-      public fun languageCode(languageCode: String) {
-      }
+      public fun languageCode(languageCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,38 +241,38 @@ public open class CfnFlywheel internal constructor(
           software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty.Builder =
           software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty.builder()
 
-      public override fun documentClassificationConfig(documentClassificationConfig: IResolvable) {
+      override fun documentClassificationConfig(documentClassificationConfig: IResolvable) {
         cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty) {
         cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(DocumentClassificationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c03bf1866fb06a9eeca14958a7d8128b8db4e0beac190da74f07d6dbcd06bd6")
-      public override
+      override
           fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty.Builder.() -> Unit):
           Unit =
           documentClassificationConfig(DocumentClassificationConfigProperty(documentClassificationConfig))
 
-      public override fun entityRecognitionConfig(entityRecognitionConfig: IResolvable) {
+      override fun entityRecognitionConfig(entityRecognitionConfig: IResolvable) {
         cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty) {
         cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(EntityRecognitionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32aff837a53f4deca6be85f3c340a711b900d2b07ea9f545e6ca3bb8527b7538")
-      public override
+      override
           fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty.Builder.() -> Unit):
           Unit = entityRecognitionConfig(EntityRecognitionConfigProperty(entityRecognitionConfig))
 
-      public override fun languageCode(languageCode: String) {
+      override fun languageCode(languageCode: String) {
         cdkBuilder.languageCode(languageCode)
       }
 
@@ -304,13 +284,12 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.TaskConfigProperty,
     ) : TaskConfigProperty {
-      public override fun documentClassificationConfig(): Any? =
+      override fun documentClassificationConfig(): Any? =
           unwrap(this).getDocumentClassificationConfig()
 
-      public override fun entityRecognitionConfig(): Any? =
-          unwrap(this).getEntityRecognitionConfig()
+      override fun entityRecognitionConfig(): Any? = unwrap(this).getEntityRecognitionConfig()
 
-      public override fun languageCode(): String = unwrap(this).getLanguageCode()
+      override fun languageCode(): String = unwrap(this).getLanguageCode()
     }
 
     public companion object {
@@ -339,11 +318,9 @@ public open class CfnFlywheel internal constructor(
     public fun subnets(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnets(subnets: List<String>) {
-      }
+      public fun subnets(subnets: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -351,11 +328,11 @@ public open class CfnFlywheel internal constructor(
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnets(subnets: List<String>) {
+      override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
 
@@ -367,10 +344,10 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
     }
 
     public companion object {
@@ -403,25 +380,19 @@ public open class CfnFlywheel internal constructor(
     public fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
     public interface Builder {
-      public fun dataLakeKmsKeyId(dataLakeKmsKeyId: String) {
-      }
+      public fun dataLakeKmsKeyId(dataLakeKmsKeyId: String)
 
-      public fun modelKmsKeyId(modelKmsKeyId: String) {
-      }
+      public fun modelKmsKeyId(modelKmsKeyId: String)
 
-      public fun volumeKmsKeyId(volumeKmsKeyId: String) {
-      }
+      public fun volumeKmsKeyId(volumeKmsKeyId: String)
 
-      public fun vpcConfig(vpcConfig: IResolvable) {
-      }
+      public fun vpcConfig(vpcConfig: IResolvable)
 
-      public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      }
+      public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad6014fdcd8de69b64beb8facb1fb63a7f13a50ee6e082c13819782318101c13")
-      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-      }
+      public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -430,29 +401,29 @@ public open class CfnFlywheel internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty.builder()
 
-      public override fun dataLakeKmsKeyId(dataLakeKmsKeyId: String) {
+      override fun dataLakeKmsKeyId(dataLakeKmsKeyId: String) {
         cdkBuilder.dataLakeKmsKeyId(dataLakeKmsKeyId)
       }
 
-      public override fun modelKmsKeyId(modelKmsKeyId: String) {
+      override fun modelKmsKeyId(modelKmsKeyId: String) {
         cdkBuilder.modelKmsKeyId(modelKmsKeyId)
       }
 
-      public override fun volumeKmsKeyId(volumeKmsKeyId: String) {
+      override fun volumeKmsKeyId(volumeKmsKeyId: String) {
         cdkBuilder.volumeKmsKeyId(volumeKmsKeyId)
       }
 
-      public override fun vpcConfig(vpcConfig: IResolvable) {
+      override fun vpcConfig(vpcConfig: IResolvable) {
         cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
       }
 
-      public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+      override fun vpcConfig(vpcConfig: VpcConfigProperty) {
         cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ad6014fdcd8de69b64beb8facb1fb63a7f13a50ee6e082c13819782318101c13")
-      public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+      override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
           vpcConfig(VpcConfigProperty(vpcConfig))
 
       public fun build():
@@ -464,13 +435,13 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DataSecurityConfigProperty,
     ) : DataSecurityConfigProperty {
-      public override fun dataLakeKmsKeyId(): String? = unwrap(this).getDataLakeKmsKeyId()
+      override fun dataLakeKmsKeyId(): String? = unwrap(this).getDataLakeKmsKeyId()
 
-      public override fun modelKmsKeyId(): String? = unwrap(this).getModelKmsKeyId()
+      override fun modelKmsKeyId(): String? = unwrap(this).getModelKmsKeyId()
 
-      public override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
+      override fun volumeKmsKeyId(): String? = unwrap(this).getVolumeKmsKeyId()
 
-      public override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
+      override fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
     }
 
     public companion object {
@@ -497,11 +468,9 @@ public open class CfnFlywheel internal constructor(
     public fun entityTypes(): Any? = unwrap(this).getEntityTypes()
 
     public interface Builder {
-      public fun entityTypes(entityTypes: IResolvable) {
-      }
+      public fun entityTypes(entityTypes: IResolvable)
 
-      public fun entityTypes(entityTypes: List<Any>) {
-      }
+      public fun entityTypes(entityTypes: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -510,11 +479,11 @@ public open class CfnFlywheel internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty.builder()
 
-      public override fun entityTypes(entityTypes: IResolvable) {
+      override fun entityTypes(entityTypes: IResolvable) {
         cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
       }
 
-      public override fun entityTypes(entityTypes: List<Any>) {
+      override fun entityTypes(entityTypes: List<Any>) {
         cdkBuilder.entityTypes(entityTypes)
       }
 
@@ -527,7 +496,7 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty,
     ) : EntityRecognitionConfigProperty {
-      public override fun entityTypes(): Any? = unwrap(this).getEntityTypes()
+      override fun entityTypes(): Any? = unwrap(this).getEntityTypes()
     }
 
     public companion object {
@@ -554,8 +523,7 @@ public open class CfnFlywheel internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -564,7 +532,7 @@ public open class CfnFlywheel internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -577,7 +545,7 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityTypesListItemProperty,
     ) : EntityTypesListItemProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -606,11 +574,9 @@ public open class CfnFlywheel internal constructor(
     public fun mode(): String
 
     public interface Builder {
-      public fun labels(labels: List<String>) {
-      }
+      public fun labels(labels: List<String>)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -619,11 +585,11 @@ public open class CfnFlywheel internal constructor(
           =
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty.builder()
 
-      public override fun labels(labels: List<String>) {
+      override fun labels(labels: List<String>) {
         cdkBuilder.labels(labels)
       }
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
@@ -636,9 +602,9 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.DocumentClassificationConfigProperty,
     ) : DocumentClassificationConfigProperty {
-      public override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+      override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
 
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
     }
 
     public companion object {

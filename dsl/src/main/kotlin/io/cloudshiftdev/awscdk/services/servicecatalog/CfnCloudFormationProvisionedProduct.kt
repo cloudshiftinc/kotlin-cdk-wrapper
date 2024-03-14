@@ -125,53 +125,38 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun notificationArns(notificationArns: List<String>) {
-    }
+    public fun notificationArns(notificationArns: List<String>)
 
-    public fun pathId(pathId: String) {
-    }
+    public fun pathId(pathId: String)
 
-    public fun pathName(pathName: String) {
-    }
+    public fun pathName(pathName: String)
 
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
 
-    public fun productName(productName: String) {
-    }
+    public fun productName(productName: String)
 
-    public fun provisionedProductName(provisionedProductName: String) {
-    }
+    public fun provisionedProductName(provisionedProductName: String)
 
-    public fun provisioningArtifactId(provisioningArtifactId: String) {
-    }
+    public fun provisioningArtifactId(provisioningArtifactId: String)
 
-    public fun provisioningArtifactName(provisioningArtifactName: String) {
-    }
+    public fun provisioningArtifactName(provisioningArtifactName: String)
 
-    public fun provisioningParameters(provisioningParameters: IResolvable) {
-    }
+    public fun provisioningParameters(provisioningParameters: IResolvable)
 
-    public fun provisioningParameters(provisioningParameters: List<Any>) {
-    }
+    public fun provisioningParameters(provisioningParameters: List<Any>)
 
-    public fun provisioningPreferences(provisioningPreferences: IResolvable) {
-    }
+    public fun provisioningPreferences(provisioningPreferences: IResolvable)
 
-    public fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty) {
-    }
+    public fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c7bfa0d91a2109413d50bab59d017092f8e0720001bd47f7afae9453e5a190b")
     public
-        fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty.Builder.() -> Unit) {
-    }
+        fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -183,66 +168,65 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun notificationArns(notificationArns: List<String>) {
+    override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
 
-    public override fun pathId(pathId: String) {
+    override fun pathId(pathId: String) {
       cdkBuilder.pathId(pathId)
     }
 
-    public override fun pathName(pathName: String) {
+    override fun pathName(pathName: String) {
       cdkBuilder.pathName(pathName)
     }
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
-    public override fun productName(productName: String) {
+    override fun productName(productName: String) {
       cdkBuilder.productName(productName)
     }
 
-    public override fun provisionedProductName(provisionedProductName: String) {
+    override fun provisionedProductName(provisionedProductName: String) {
       cdkBuilder.provisionedProductName(provisionedProductName)
     }
 
-    public override fun provisioningArtifactId(provisioningArtifactId: String) {
+    override fun provisioningArtifactId(provisioningArtifactId: String) {
       cdkBuilder.provisioningArtifactId(provisioningArtifactId)
     }
 
-    public override fun provisioningArtifactName(provisioningArtifactName: String) {
+    override fun provisioningArtifactName(provisioningArtifactName: String) {
       cdkBuilder.provisioningArtifactName(provisioningArtifactName)
     }
 
-    public override fun provisioningParameters(provisioningParameters: IResolvable) {
+    override fun provisioningParameters(provisioningParameters: IResolvable) {
       cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
     }
 
-    public override fun provisioningParameters(provisioningParameters: List<Any>) {
+    override fun provisioningParameters(provisioningParameters: List<Any>) {
       cdkBuilder.provisioningParameters(provisioningParameters)
     }
 
-    public override fun provisioningPreferences(provisioningPreferences: IResolvable) {
+    override fun provisioningPreferences(provisioningPreferences: IResolvable) {
       cdkBuilder.provisioningPreferences(provisioningPreferences.let(IResolvable::unwrap))
     }
 
-    public override
-        fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty) {
+    override fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty) {
       cdkBuilder.provisioningPreferences(provisioningPreferences.let(ProvisioningPreferencesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c7bfa0d91a2109413d50bab59d017092f8e0720001bd47f7afae9453e5a190b")
-    public override
+    override
         fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty.Builder.() -> Unit):
         Unit = provisioningPreferences(ProvisioningPreferencesProperty(provisioningPreferences))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -280,11 +264,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -293,11 +275,11 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -310,9 +292,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningParameterProperty,
     ) : ProvisioningParameterProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -355,26 +337,19 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     public fun stackSetRegions(): List<String> = unwrap(this).getStackSetRegions() ?: emptyList()
 
     public interface Builder {
-      public fun stackSetAccounts(stackSetAccounts: List<String>) {
-      }
+      public fun stackSetAccounts(stackSetAccounts: List<String>)
 
-      public fun stackSetFailureToleranceCount(stackSetFailureToleranceCount: Number) {
-      }
+      public fun stackSetFailureToleranceCount(stackSetFailureToleranceCount: Number)
 
-      public fun stackSetFailureTolerancePercentage(stackSetFailureTolerancePercentage: Number) {
-      }
+      public fun stackSetFailureTolerancePercentage(stackSetFailureTolerancePercentage: Number)
 
-      public fun stackSetMaxConcurrencyCount(stackSetMaxConcurrencyCount: Number) {
-      }
+      public fun stackSetMaxConcurrencyCount(stackSetMaxConcurrencyCount: Number)
 
-      public fun stackSetMaxConcurrencyPercentage(stackSetMaxConcurrencyPercentage: Number) {
-      }
+      public fun stackSetMaxConcurrencyPercentage(stackSetMaxConcurrencyPercentage: Number)
 
-      public fun stackSetOperationType(stackSetOperationType: String) {
-      }
+      public fun stackSetOperationType(stackSetOperationType: String)
 
-      public fun stackSetRegions(stackSetRegions: List<String>) {
-      }
+      public fun stackSetRegions(stackSetRegions: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -383,33 +358,31 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty.builder()
 
-      public override fun stackSetAccounts(stackSetAccounts: List<String>) {
+      override fun stackSetAccounts(stackSetAccounts: List<String>) {
         cdkBuilder.stackSetAccounts(stackSetAccounts)
       }
 
-      public override fun stackSetFailureToleranceCount(stackSetFailureToleranceCount: Number) {
+      override fun stackSetFailureToleranceCount(stackSetFailureToleranceCount: Number) {
         cdkBuilder.stackSetFailureToleranceCount(stackSetFailureToleranceCount)
       }
 
-      public override
-          fun stackSetFailureTolerancePercentage(stackSetFailureTolerancePercentage: Number) {
+      override fun stackSetFailureTolerancePercentage(stackSetFailureTolerancePercentage: Number) {
         cdkBuilder.stackSetFailureTolerancePercentage(stackSetFailureTolerancePercentage)
       }
 
-      public override fun stackSetMaxConcurrencyCount(stackSetMaxConcurrencyCount: Number) {
+      override fun stackSetMaxConcurrencyCount(stackSetMaxConcurrencyCount: Number) {
         cdkBuilder.stackSetMaxConcurrencyCount(stackSetMaxConcurrencyCount)
       }
 
-      public override
-          fun stackSetMaxConcurrencyPercentage(stackSetMaxConcurrencyPercentage: Number) {
+      override fun stackSetMaxConcurrencyPercentage(stackSetMaxConcurrencyPercentage: Number) {
         cdkBuilder.stackSetMaxConcurrencyPercentage(stackSetMaxConcurrencyPercentage)
       }
 
-      public override fun stackSetOperationType(stackSetOperationType: String) {
+      override fun stackSetOperationType(stackSetOperationType: String) {
         cdkBuilder.stackSetOperationType(stackSetOperationType)
       }
 
-      public override fun stackSetRegions(stackSetRegions: List<String>) {
+      override fun stackSetRegions(stackSetRegions: List<String>) {
         cdkBuilder.stackSetRegions(stackSetRegions)
       }
 
@@ -422,24 +395,24 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty,
     ) : ProvisioningPreferencesProperty {
-      public override fun stackSetAccounts(): List<String> = unwrap(this).getStackSetAccounts() ?:
+      override fun stackSetAccounts(): List<String> = unwrap(this).getStackSetAccounts() ?:
           emptyList()
 
-      public override fun stackSetFailureToleranceCount(): Number? =
+      override fun stackSetFailureToleranceCount(): Number? =
           unwrap(this).getStackSetFailureToleranceCount()
 
-      public override fun stackSetFailureTolerancePercentage(): Number? =
+      override fun stackSetFailureTolerancePercentage(): Number? =
           unwrap(this).getStackSetFailureTolerancePercentage()
 
-      public override fun stackSetMaxConcurrencyCount(): Number? =
+      override fun stackSetMaxConcurrencyCount(): Number? =
           unwrap(this).getStackSetMaxConcurrencyCount()
 
-      public override fun stackSetMaxConcurrencyPercentage(): Number? =
+      override fun stackSetMaxConcurrencyPercentage(): Number? =
           unwrap(this).getStackSetMaxConcurrencyPercentage()
 
-      public override fun stackSetOperationType(): String? = unwrap(this).getStackSetOperationType()
+      override fun stackSetOperationType(): String? = unwrap(this).getStackSetOperationType()
 
-      public override fun stackSetRegions(): List<String> = unwrap(this).getStackSetRegions() ?:
+      override fun stackSetRegions(): List<String> = unwrap(this).getStackSetRegions() ?:
           emptyList()
     }
 

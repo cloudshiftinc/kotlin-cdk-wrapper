@@ -9,22 +9,20 @@ public interface WaveOptions {
   public fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun post(post: List<Step>) {
-    }
+    public fun post(post: List<Step>)
 
-    public fun pre(pre: List<Step>) {
-    }
+    public fun pre(pre: List<Step>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.WaveOptions.Builder =
         software.amazon.awscdk.pipelines.WaveOptions.builder()
 
-    public override fun post(post: List<Step>) {
+    override fun post(post: List<Step>) {
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
-    public override fun pre(pre: List<Step>) {
+    override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface WaveOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.WaveOptions,
   ) : WaveOptions {
-    public override fun post(): List<Step> = unwrap(this).getPost()?.map(Step::wrap) ?: emptyList()
+    override fun post(): List<Step> = unwrap(this).getPost()?.map(Step::wrap) ?: emptyList()
 
-    public override fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
+    override fun pre(): List<Step> = unwrap(this).getPre()?.map(Step::wrap) ?: emptyList()
   }
 
   public companion object {

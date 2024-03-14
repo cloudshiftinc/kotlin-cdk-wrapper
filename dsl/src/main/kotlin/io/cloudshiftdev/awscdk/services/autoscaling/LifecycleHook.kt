@@ -16,29 +16,21 @@ public open class LifecycleHook internal constructor(
   public override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    }
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
-    public fun defaultResult(defaultResult: DefaultResult) {
-    }
+    public fun defaultResult(defaultResult: DefaultResult)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Duration) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Duration)
 
-    public fun lifecycleHookName(lifecycleHookName: String) {
-    }
+    public fun lifecycleHookName(lifecycleHookName: String)
 
-    public fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
-    }
+    public fun lifecycleTransition(lifecycleTransition: LifecycleTransition)
 
-    public fun notificationMetadata(notificationMetadata: String) {
-    }
+    public fun notificationMetadata(notificationMetadata: String)
 
-    public fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
-    }
+    public fun notificationTarget(notificationTarget: ILifecycleHookTarget)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl(
@@ -48,35 +40,35 @@ public open class LifecycleHook internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.LifecycleHook.Builder =
         software.amazon.awscdk.services.autoscaling.LifecycleHook.Builder.create(scope, id)
 
-    public override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+    override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
     }
 
-    public override fun defaultResult(defaultResult: DefaultResult) {
+    override fun defaultResult(defaultResult: DefaultResult) {
       cdkBuilder.defaultResult(defaultResult.let(DefaultResult::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Duration) {
+    override fun heartbeatTimeout(heartbeatTimeout: Duration) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Duration::unwrap))
     }
 
-    public override fun lifecycleHookName(lifecycleHookName: String) {
+    override fun lifecycleHookName(lifecycleHookName: String) {
       cdkBuilder.lifecycleHookName(lifecycleHookName)
     }
 
-    public override fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
+    override fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
       cdkBuilder.lifecycleTransition(lifecycleTransition.let(LifecycleTransition::unwrap))
     }
 
-    public override fun notificationMetadata(notificationMetadata: String) {
+    override fun notificationMetadata(notificationMetadata: String) {
       cdkBuilder.notificationMetadata(notificationMetadata)
     }
 
-    public override fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
+    override fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
       cdkBuilder.notificationTarget(notificationTarget.let(ILifecycleHookTarget::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 

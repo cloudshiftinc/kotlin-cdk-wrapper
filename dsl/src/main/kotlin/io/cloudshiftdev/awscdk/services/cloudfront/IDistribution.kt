@@ -21,26 +21,25 @@ public interface IDistribution : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.IDistribution,
   ) : IDistribution {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun distributionDomainName(): String = unwrap(this).getDistributionDomainName()
+    override fun distributionDomainName(): String = unwrap(this).getDistributionDomainName()
 
-    public override fun distributionId(): String = unwrap(this).getDistributionId()
+    override fun distributionId(): String = unwrap(this).getDistributionId()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grant(arg0: IGrantable, arg1: String): Grant =
+    override fun grant(arg0: IGrantable, arg1: String): Grant =
         unwrap(this).grant(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
 
-    public override fun grantCreateInvalidation(arg0: IGrantable): Grant =
+    override fun grantCreateInvalidation(arg0: IGrantable): Grant =
         unwrap(this).grantCreateInvalidation(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

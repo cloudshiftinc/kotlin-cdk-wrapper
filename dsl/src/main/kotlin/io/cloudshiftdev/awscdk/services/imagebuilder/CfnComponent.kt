@@ -93,35 +93,25 @@ public open class CfnComponent internal constructor(
   }
 
   public interface Builder {
-    public fun changeDescription(changeDescription: String) {
-    }
+    public fun changeDescription(changeDescription: String)
 
-    public fun `data`(`data`: String) {
-    }
+    public fun `data`(`data`: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun supportedOsVersions(supportedOsVersions: List<String>) {
-    }
+    public fun supportedOsVersions(supportedOsVersions: List<String>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun uri(uri: String) {
-    }
+    public fun uri(uri: String)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -131,43 +121,43 @@ public open class CfnComponent internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.imagebuilder.CfnComponent.Builder =
         software.amazon.awscdk.services.imagebuilder.CfnComponent.Builder.create(scope, id)
 
-    public override fun changeDescription(changeDescription: String) {
+    override fun changeDescription(changeDescription: String) {
       cdkBuilder.changeDescription(changeDescription)
     }
 
-    public override fun `data`(`data`: String) {
+    override fun `data`(`data`: String) {
       cdkBuilder.`data`(`data`)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun supportedOsVersions(supportedOsVersions: List<String>) {
+    override fun supportedOsVersions(supportedOsVersions: List<String>) {
       cdkBuilder.supportedOsVersions(supportedOsVersions)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun uri(uri: String) {
+    override fun uri(uri: String) {
       cdkBuilder.uri(uri)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 

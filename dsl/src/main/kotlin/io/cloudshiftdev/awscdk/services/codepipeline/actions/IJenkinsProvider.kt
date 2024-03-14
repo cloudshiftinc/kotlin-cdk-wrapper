@@ -14,13 +14,13 @@ public interface IJenkinsProvider : IConstruct {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider,
   ) : IJenkinsProvider {
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun providerName(): String = unwrap(this).getProviderName()
+    override fun providerName(): String = unwrap(this).getProviderName()
 
-    public override fun serverUrl(): String = unwrap(this).getServerUrl()
+    override fun serverUrl(): String = unwrap(this).getServerUrl()
 
-    public override fun version(): String = unwrap(this).getVersion()
+    override fun version(): String = unwrap(this).getVersion()
   }
 
   public companion object {

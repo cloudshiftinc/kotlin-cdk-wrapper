@@ -8,7 +8,7 @@ public interface ILogSubscriptionDestination {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.ILogSubscriptionDestination,
   ) : ILogSubscriptionDestination {
-    public override fun bind(arg0: Construct, arg1: ILogGroup): LogSubscriptionDestinationConfig =
+    override fun bind(arg0: Construct, arg1: ILogGroup): LogSubscriptionDestinationConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
   }

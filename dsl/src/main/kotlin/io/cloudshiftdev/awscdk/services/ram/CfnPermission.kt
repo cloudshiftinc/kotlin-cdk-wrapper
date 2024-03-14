@@ -58,17 +58,13 @@ public open class CfnPermission internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policyTemplate(policyTemplate: Any) {
-    }
+    public fun policyTemplate(policyTemplate: Any)
 
-    public fun resourceType(resourceType: String) {
-    }
+    public fun resourceType(resourceType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,19 +74,19 @@ public open class CfnPermission internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ram.CfnPermission.Builder =
         software.amazon.awscdk.services.ram.CfnPermission.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policyTemplate(policyTemplate: Any) {
+    override fun policyTemplate(policyTemplate: Any) {
       cdkBuilder.policyTemplate(policyTemplate)
     }
 
-    public override fun resourceType(resourceType: String) {
+    override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

@@ -70,26 +70,19 @@ public open class CfnPipeline internal constructor(
   }
 
   public interface Builder {
-    public fun parallelismConfiguration(parallelismConfiguration: Any) {
-    }
+    public fun parallelismConfiguration(parallelismConfiguration: Any)
 
-    public fun pipelineDefinition(pipelineDefinition: Any) {
-    }
+    public fun pipelineDefinition(pipelineDefinition: Any)
 
-    public fun pipelineDescription(pipelineDescription: String) {
-    }
+    public fun pipelineDescription(pipelineDescription: String)
 
-    public fun pipelineDisplayName(pipelineDisplayName: String) {
-    }
+    public fun pipelineDisplayName(pipelineDisplayName: String)
 
-    public fun pipelineName(pipelineName: String) {
-    }
+    public fun pipelineName(pipelineName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -99,31 +92,31 @@ public open class CfnPipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnPipeline.Builder =
         software.amazon.awscdk.services.sagemaker.CfnPipeline.Builder.create(scope, id)
 
-    public override fun parallelismConfiguration(parallelismConfiguration: Any) {
+    override fun parallelismConfiguration(parallelismConfiguration: Any) {
       cdkBuilder.parallelismConfiguration(parallelismConfiguration)
     }
 
-    public override fun pipelineDefinition(pipelineDefinition: Any) {
+    override fun pipelineDefinition(pipelineDefinition: Any) {
       cdkBuilder.pipelineDefinition(pipelineDefinition)
     }
 
-    public override fun pipelineDescription(pipelineDescription: String) {
+    override fun pipelineDescription(pipelineDescription: String) {
       cdkBuilder.pipelineDescription(pipelineDescription)
     }
 
-    public override fun pipelineDisplayName(pipelineDisplayName: String) {
+    override fun pipelineDisplayName(pipelineDisplayName: String) {
       cdkBuilder.pipelineDisplayName(pipelineDisplayName)
     }
 
-    public override fun pipelineName(pipelineName: String) {
+    override fun pipelineName(pipelineName: String) {
       cdkBuilder.pipelineName(pipelineName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -161,17 +154,13 @@ public open class CfnPipeline internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun eTag(eTag: String) {
-      }
+      public fun eTag(eTag: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -179,19 +168,19 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun eTag(eTag: String) {
+      override fun eTag(eTag: String) {
         cdkBuilder.eTag(eTag)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -203,13 +192,13 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun eTag(): String? = unwrap(this).getETag()
+      override fun eTag(): String? = unwrap(this).getETag()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -238,20 +227,16 @@ public open class CfnPipeline internal constructor(
     public fun pipelineDefinitionS3Location(): Any? = unwrap(this).getPipelineDefinitionS3Location()
 
     public interface Builder {
-      public fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
-      }
+      public fun pipelineDefinitionBody(pipelineDefinitionBody: String)
 
-      public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable) {
-      }
+      public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable)
 
-      public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty) {
-      }
+      public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1df0e687c3066c62629cdd1b718c8d4ebdc9be95b8c663f15f623c857c772010")
       public
-          fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit) {
-      }
+          fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -259,22 +244,21 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty.builder()
 
-      public override fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
+      override fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
         cdkBuilder.pipelineDefinitionBody(pipelineDefinitionBody)
       }
 
-      public override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable) {
+      override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable) {
         cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(IResolvable::unwrap))
       }
 
-      public override
-          fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty) {
+      override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty) {
         cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1df0e687c3066c62629cdd1b718c8d4ebdc9be95b8c663f15f623c857c772010")
-      public override
+      override
           fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit):
           Unit = pipelineDefinitionS3Location(S3LocationProperty(pipelineDefinitionS3Location))
 
@@ -287,10 +271,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
     ) : PipelineDefinitionProperty {
-      public override fun pipelineDefinitionBody(): String =
-          unwrap(this).getPipelineDefinitionBody()
+      override fun pipelineDefinitionBody(): String = unwrap(this).getPipelineDefinitionBody()
 
-      public override fun pipelineDefinitionS3Location(): Any? =
+      override fun pipelineDefinitionS3Location(): Any? =
           unwrap(this).getPipelineDefinitionS3Location()
     }
 
@@ -318,8 +301,7 @@ public open class CfnPipeline internal constructor(
     public fun maxParallelExecutionSteps(): Number
 
     public interface Builder {
-      public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
-      }
+      public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -328,7 +310,7 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.builder()
 
-      public override fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
+      override fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
         cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
       }
 
@@ -341,8 +323,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
     ) : ParallelismConfigurationProperty {
-      public override fun maxParallelExecutionSteps(): Number =
-          unwrap(this).getMaxParallelExecutionSteps()
+      override fun maxParallelExecutionSteps(): Number = unwrap(this).getMaxParallelExecutionSteps()
     }
 
     public companion object {

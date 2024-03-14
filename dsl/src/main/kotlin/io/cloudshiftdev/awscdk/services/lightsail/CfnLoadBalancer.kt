@@ -89,36 +89,26 @@ public open class CfnLoadBalancer internal constructor(
   }
 
   public interface Builder {
-    public fun attachedInstances(attachedInstances: List<String>) {
-    }
+    public fun attachedInstances(attachedInstances: List<String>)
 
-    public fun healthCheckPath(healthCheckPath: String) {
-    }
+    public fun healthCheckPath(healthCheckPath: String)
 
-    public fun instancePort(instancePort: Number) {
-    }
+    public fun instancePort(instancePort: Number)
 
-    public fun ipAddressType(ipAddressType: String) {
-    }
+    public fun ipAddressType(ipAddressType: String)
 
-    public fun loadBalancerName(loadBalancerName: String) {
-    }
+    public fun loadBalancerName(loadBalancerName: String)
 
-    public fun sessionStickinessEnabled(sessionStickinessEnabled: Boolean) {
-    }
+    public fun sessionStickinessEnabled(sessionStickinessEnabled: Boolean)
 
-    public fun sessionStickinessEnabled(sessionStickinessEnabled: IResolvable) {
-    }
+    public fun sessionStickinessEnabled(sessionStickinessEnabled: IResolvable)
 
     public
-        fun sessionStickinessLbCookieDurationSeconds(sessionStickinessLbCookieDurationSeconds: String) {
-    }
+        fun sessionStickinessLbCookieDurationSeconds(sessionStickinessLbCookieDurationSeconds: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tlsPolicyName(tlsPolicyName: String) {
-    }
+    public fun tlsPolicyName(tlsPolicyName: String)
   }
 
   private class BuilderImpl(
@@ -128,44 +118,44 @@ public open class CfnLoadBalancer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnLoadBalancer.Builder =
         software.amazon.awscdk.services.lightsail.CfnLoadBalancer.Builder.create(scope, id)
 
-    public override fun attachedInstances(attachedInstances: List<String>) {
+    override fun attachedInstances(attachedInstances: List<String>) {
       cdkBuilder.attachedInstances(attachedInstances)
     }
 
-    public override fun healthCheckPath(healthCheckPath: String) {
+    override fun healthCheckPath(healthCheckPath: String) {
       cdkBuilder.healthCheckPath(healthCheckPath)
     }
 
-    public override fun instancePort(instancePort: Number) {
+    override fun instancePort(instancePort: Number) {
       cdkBuilder.instancePort(instancePort)
     }
 
-    public override fun ipAddressType(ipAddressType: String) {
+    override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
     }
 
-    public override fun loadBalancerName(loadBalancerName: String) {
+    override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
     }
 
-    public override fun sessionStickinessEnabled(sessionStickinessEnabled: Boolean) {
+    override fun sessionStickinessEnabled(sessionStickinessEnabled: Boolean) {
       cdkBuilder.sessionStickinessEnabled(sessionStickinessEnabled)
     }
 
-    public override fun sessionStickinessEnabled(sessionStickinessEnabled: IResolvable) {
+    override fun sessionStickinessEnabled(sessionStickinessEnabled: IResolvable) {
       cdkBuilder.sessionStickinessEnabled(sessionStickinessEnabled.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun sessionStickinessLbCookieDurationSeconds(sessionStickinessLbCookieDurationSeconds: String) {
       cdkBuilder.sessionStickinessLbCookieDurationSeconds(sessionStickinessLbCookieDurationSeconds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tlsPolicyName(tlsPolicyName: String) {
+    override fun tlsPolicyName(tlsPolicyName: String) {
       cdkBuilder.tlsPolicyName(tlsPolicyName)
     }
 

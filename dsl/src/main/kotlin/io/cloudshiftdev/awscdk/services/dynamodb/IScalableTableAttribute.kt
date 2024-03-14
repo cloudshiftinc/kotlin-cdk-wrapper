@@ -22,22 +22,22 @@ public interface IScalableTableAttribute {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
   ) : IScalableTableAttribute {
-    public override fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule) {
+    override fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule) {
       unwrap(this).scaleOnSchedule(arg0, arg1.let(ScalingSchedule::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e652746809f3e4412c49544d1500446974784d78cd2e4c1d569436b4931291f")
-    public override fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule.Builder.() -> Unit):
-        Unit = scaleOnSchedule(arg0, ScalingSchedule(arg1))
+    override fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule.Builder.() -> Unit): Unit =
+        scaleOnSchedule(arg0, ScalingSchedule(arg1))
 
-    public override fun scaleOnUtilization(arg0: UtilizationScalingProps) {
+    override fun scaleOnUtilization(arg0: UtilizationScalingProps) {
       unwrap(this).scaleOnUtilization(arg0.let(UtilizationScalingProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df7aa7d44150d61decd5c4ccb502479fe291ac38d35d0eed8af5ae5676750e45")
-    public override fun scaleOnUtilization(arg0: UtilizationScalingProps.Builder.() -> Unit): Unit =
+    override fun scaleOnUtilization(arg0: UtilizationScalingProps.Builder.() -> Unit): Unit =
         scaleOnUtilization(UtilizationScalingProps(arg0))
   }
 

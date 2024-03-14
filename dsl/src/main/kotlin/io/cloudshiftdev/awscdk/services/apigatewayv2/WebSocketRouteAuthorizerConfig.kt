@@ -9,11 +9,9 @@ public interface WebSocketRouteAuthorizerConfig {
   public fun authorizerId(): String? = unwrap(this).getAuthorizerId()
 
   public interface Builder {
-    public fun authorizationType(authorizationType: String) {
-    }
+    public fun authorizationType(authorizationType: String)
 
-    public fun authorizerId(authorizerId: String) {
-    }
+    public fun authorizerId(authorizerId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface WebSocketRouteAuthorizerConfig {
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig.builder()
 
-    public override fun authorizationType(authorizationType: String) {
+    override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)
     }
 
-    public override fun authorizerId(authorizerId: String) {
+    override fun authorizerId(authorizerId: String) {
       cdkBuilder.authorizerId(authorizerId)
     }
 
@@ -37,9 +35,9 @@ public interface WebSocketRouteAuthorizerConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerConfig,
   ) : WebSocketRouteAuthorizerConfig {
-    public override fun authorizationType(): String = unwrap(this).getAuthorizationType()
+    override fun authorizationType(): String = unwrap(this).getAuthorizationType()
 
-    public override fun authorizerId(): String? = unwrap(this).getAuthorizerId()
+    override fun authorizerId(): String? = unwrap(this).getAuthorizerId()
   }
 
   public companion object {

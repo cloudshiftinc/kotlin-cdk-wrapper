@@ -37,17 +37,13 @@ public open class ParameterGroup internal constructor(
       ParameterGroupInstanceConfig = bindToInstance(ParameterGroupInstanceBindOptions(_options))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engine(engine: IEngine) {
-    }
+    public fun engine(engine: IEngine)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -57,19 +53,19 @@ public open class ParameterGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.ParameterGroup.Builder =
         software.amazon.awscdk.services.rds.ParameterGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engine(engine: IEngine) {
+    override fun engine(engine: IEngine) {
       cdkBuilder.engine(engine.let(IEngine::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

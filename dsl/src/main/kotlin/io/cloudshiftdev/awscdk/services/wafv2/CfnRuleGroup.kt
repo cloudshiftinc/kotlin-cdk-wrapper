@@ -121,55 +121,39 @@ public open class CfnRuleGroup internal constructor(
       visibilityConfig(VisibilityConfigProperty(`value`))
 
   public interface Builder {
-    public fun availableLabels(availableLabels: IResolvable) {
-    }
+    public fun availableLabels(availableLabels: IResolvable)
 
-    public fun availableLabels(availableLabels: List<Any>) {
-    }
+    public fun availableLabels(availableLabels: List<Any>)
 
-    public fun capacity(capacity: Number) {
-    }
+    public fun capacity(capacity: Number)
 
-    public fun consumedLabels(consumedLabels: IResolvable) {
-    }
+    public fun consumedLabels(consumedLabels: IResolvable)
 
-    public fun consumedLabels(consumedLabels: List<Any>) {
-    }
+    public fun consumedLabels(consumedLabels: List<Any>)
 
-    public fun customResponseBodies(customResponseBodies: IResolvable) {
-    }
+    public fun customResponseBodies(customResponseBodies: IResolvable)
 
-    public fun customResponseBodies(customResponseBodies: Map<String, Any>) {
-    }
+    public fun customResponseBodies(customResponseBodies: Map<String, Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rules(rules: IResolvable) {
-    }
+    public fun rules(rules: IResolvable)
 
-    public fun rules(rules: List<Any>) {
-    }
+    public fun rules(rules: List<Any>)
 
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun visibilityConfig(visibilityConfig: IResolvable) {
-    }
+    public fun visibilityConfig(visibilityConfig: IResolvable)
 
-    public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
-    }
+    public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("366b1aaea94889b5c9a40c56f60673f0c33bfa5abb730b81db6d98b05dc0236d")
-    public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit) {
-    }
+    public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -179,71 +163,70 @@ public open class CfnRuleGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wafv2.CfnRuleGroup.Builder =
         software.amazon.awscdk.services.wafv2.CfnRuleGroup.Builder.create(scope, id)
 
-    public override fun availableLabels(availableLabels: IResolvable) {
+    override fun availableLabels(availableLabels: IResolvable) {
       cdkBuilder.availableLabels(availableLabels.let(IResolvable::unwrap))
     }
 
-    public override fun availableLabels(availableLabels: List<Any>) {
+    override fun availableLabels(availableLabels: List<Any>) {
       cdkBuilder.availableLabels(availableLabels)
     }
 
-    public override fun capacity(capacity: Number) {
+    override fun capacity(capacity: Number) {
       cdkBuilder.capacity(capacity)
     }
 
-    public override fun consumedLabels(consumedLabels: IResolvable) {
+    override fun consumedLabels(consumedLabels: IResolvable) {
       cdkBuilder.consumedLabels(consumedLabels.let(IResolvable::unwrap))
     }
 
-    public override fun consumedLabels(consumedLabels: List<Any>) {
+    override fun consumedLabels(consumedLabels: List<Any>) {
       cdkBuilder.consumedLabels(consumedLabels)
     }
 
-    public override fun customResponseBodies(customResponseBodies: IResolvable) {
+    override fun customResponseBodies(customResponseBodies: IResolvable) {
       cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable::unwrap))
     }
 
-    public override fun customResponseBodies(customResponseBodies: Map<String, Any>) {
+    override fun customResponseBodies(customResponseBodies: Map<String, Any>) {
       cdkBuilder.customResponseBodies(customResponseBodies)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rules(rules: IResolvable) {
+    override fun rules(rules: IResolvable) {
       cdkBuilder.rules(rules.let(IResolvable::unwrap))
     }
 
-    public override fun rules(rules: List<Any>) {
+    override fun rules(rules: List<Any>) {
       cdkBuilder.rules(rules)
     }
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun visibilityConfig(visibilityConfig: IResolvable) {
+    override fun visibilityConfig(visibilityConfig: IResolvable) {
       cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
     }
 
-    public override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
+    override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
       cdkBuilder.visibilityConfig(visibilityConfig.let(VisibilityConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("366b1aaea94889b5c9a40c56f60673f0c33bfa5abb730b81db6d98b05dc0236d")
-    public override
-        fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit): Unit =
-        visibilityConfig(VisibilityConfigProperty(visibilityConfig))
+    override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit):
+        Unit = visibilityConfig(VisibilityConfigProperty(visibilityConfig))
 
     public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup = cdkBuilder.build()
   }
@@ -279,25 +262,19 @@ public open class CfnRuleGroup internal constructor(
     public fun oversizeHandling(): String? = unwrap(this).getOversizeHandling()
 
     public interface Builder {
-      public fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
-      }
+      public fun invalidFallbackBehavior(invalidFallbackBehavior: String)
 
-      public fun matchPattern(matchPattern: IResolvable) {
-      }
+      public fun matchPattern(matchPattern: IResolvable)
 
-      public fun matchPattern(matchPattern: JsonMatchPatternProperty) {
-      }
+      public fun matchPattern(matchPattern: JsonMatchPatternProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e590ca33e821e7413e1d874dd0a487ee5942ed0046a60284a111ebad7bac59f")
-      public fun matchPattern(matchPattern: JsonMatchPatternProperty.Builder.() -> Unit) {
-      }
+      public fun matchPattern(matchPattern: JsonMatchPatternProperty.Builder.() -> Unit)
 
-      public fun matchScope(matchScope: String) {
-      }
+      public fun matchScope(matchScope: String)
 
-      public fun oversizeHandling(oversizeHandling: String) {
-      }
+      public fun oversizeHandling(oversizeHandling: String)
     }
 
     private class BuilderImpl : Builder {
@@ -305,28 +282,28 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonBodyProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonBodyProperty.builder()
 
-      public override fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
+      override fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
         cdkBuilder.invalidFallbackBehavior(invalidFallbackBehavior)
       }
 
-      public override fun matchPattern(matchPattern: IResolvable) {
+      override fun matchPattern(matchPattern: IResolvable) {
         cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
       }
 
-      public override fun matchPattern(matchPattern: JsonMatchPatternProperty) {
+      override fun matchPattern(matchPattern: JsonMatchPatternProperty) {
         cdkBuilder.matchPattern(matchPattern.let(JsonMatchPatternProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8e590ca33e821e7413e1d874dd0a487ee5942ed0046a60284a111ebad7bac59f")
-      public override fun matchPattern(matchPattern: JsonMatchPatternProperty.Builder.() -> Unit):
-          Unit = matchPattern(JsonMatchPatternProperty(matchPattern))
+      override fun matchPattern(matchPattern: JsonMatchPatternProperty.Builder.() -> Unit): Unit =
+          matchPattern(JsonMatchPatternProperty(matchPattern))
 
-      public override fun matchScope(matchScope: String) {
+      override fun matchScope(matchScope: String) {
         cdkBuilder.matchScope(matchScope)
       }
 
-      public override fun oversizeHandling(oversizeHandling: String) {
+      override fun oversizeHandling(oversizeHandling: String) {
         cdkBuilder.oversizeHandling(oversizeHandling)
       }
 
@@ -337,14 +314,13 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonBodyProperty,
     ) : JsonBodyProperty {
-      public override fun invalidFallbackBehavior(): String? =
-          unwrap(this).getInvalidFallbackBehavior()
+      override fun invalidFallbackBehavior(): String? = unwrap(this).getInvalidFallbackBehavior()
 
-      public override fun matchPattern(): Any = unwrap(this).getMatchPattern()
+      override fun matchPattern(): Any = unwrap(this).getMatchPattern()
 
-      public override fun matchScope(): String = unwrap(this).getMatchScope()
+      override fun matchScope(): String = unwrap(this).getMatchScope()
 
-      public override fun oversizeHandling(): String? = unwrap(this).getOversizeHandling()
+      override fun oversizeHandling(): String? = unwrap(this).getOversizeHandling()
     }
 
     public companion object {
@@ -375,17 +351,13 @@ public open class CfnRuleGroup internal constructor(
     public fun responseHeaders(): Any? = unwrap(this).getResponseHeaders()
 
     public interface Builder {
-      public fun customResponseBodyKey(customResponseBodyKey: String) {
-      }
+      public fun customResponseBodyKey(customResponseBodyKey: String)
 
-      public fun responseCode(responseCode: Number) {
-      }
+      public fun responseCode(responseCode: Number)
 
-      public fun responseHeaders(responseHeaders: IResolvable) {
-      }
+      public fun responseHeaders(responseHeaders: IResolvable)
 
-      public fun responseHeaders(responseHeaders: List<Any>) {
-      }
+      public fun responseHeaders(responseHeaders: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -393,19 +365,19 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty.builder()
 
-      public override fun customResponseBodyKey(customResponseBodyKey: String) {
+      override fun customResponseBodyKey(customResponseBodyKey: String) {
         cdkBuilder.customResponseBodyKey(customResponseBodyKey)
       }
 
-      public override fun responseCode(responseCode: Number) {
+      override fun responseCode(responseCode: Number) {
         cdkBuilder.responseCode(responseCode)
       }
 
-      public override fun responseHeaders(responseHeaders: IResolvable) {
+      override fun responseHeaders(responseHeaders: IResolvable) {
         cdkBuilder.responseHeaders(responseHeaders.let(IResolvable::unwrap))
       }
 
-      public override fun responseHeaders(responseHeaders: List<Any>) {
+      override fun responseHeaders(responseHeaders: List<Any>) {
         cdkBuilder.responseHeaders(responseHeaders)
       }
 
@@ -417,11 +389,11 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty,
     ) : CustomResponseProperty {
-      public override fun customResponseBodyKey(): String? = unwrap(this).getCustomResponseBodyKey()
+      override fun customResponseBodyKey(): String? = unwrap(this).getCustomResponseBodyKey()
 
-      public override fun responseCode(): Number = unwrap(this).getResponseCode()
+      override fun responseCode(): Number = unwrap(this).getResponseCode()
 
-      public override fun responseHeaders(): Any? = unwrap(this).getResponseHeaders()
+      override fun responseHeaders(): Any? = unwrap(this).getResponseHeaders()
     }
 
     public companion object {
@@ -448,8 +420,7 @@ public open class CfnRuleGroup internal constructor(
     public fun immunityTime(): Number
 
     public interface Builder {
-      public fun immunityTime(immunityTime: Number) {
-      }
+      public fun immunityTime(immunityTime: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -457,7 +428,7 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ImmunityTimePropertyProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ImmunityTimePropertyProperty.builder()
 
-      public override fun immunityTime(immunityTime: Number) {
+      override fun immunityTime(immunityTime: Number) {
         cdkBuilder.immunityTime(immunityTime)
       }
 
@@ -470,7 +441,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ImmunityTimePropertyProperty,
     ) : ImmunityTimePropertyProperty {
-      public override fun immunityTime(): Number = unwrap(this).getImmunityTime()
+      override fun immunityTime(): Number = unwrap(this).getImmunityTime()
     }
 
     public companion object {
@@ -505,20 +476,15 @@ public open class CfnRuleGroup internal constructor(
     public fun count(): Any? = unwrap(this).getCount()
 
     public interface Builder {
-      public fun allow(allow: Any) {
-      }
+      public fun allow(allow: Any)
 
-      public fun block(block: Any) {
-      }
+      public fun block(block: Any)
 
-      public fun captcha(captcha: Any) {
-      }
+      public fun captcha(captcha: Any)
 
-      public fun challenge(challenge: Any) {
-      }
+      public fun challenge(challenge: Any)
 
-      public fun count(count: Any) {
-      }
+      public fun count(count: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -526,23 +492,23 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleActionProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleActionProperty.builder()
 
-      public override fun allow(allow: Any) {
+      override fun allow(allow: Any) {
         cdkBuilder.allow(allow)
       }
 
-      public override fun block(block: Any) {
+      override fun block(block: Any) {
         cdkBuilder.block(block)
       }
 
-      public override fun captcha(captcha: Any) {
+      override fun captcha(captcha: Any) {
         cdkBuilder.captcha(captcha)
       }
 
-      public override fun challenge(challenge: Any) {
+      override fun challenge(challenge: Any) {
         cdkBuilder.challenge(challenge)
       }
 
-      public override fun count(count: Any) {
+      override fun count(count: Any) {
         cdkBuilder.count(count)
       }
 
@@ -553,15 +519,15 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleActionProperty,
     ) : RuleActionProperty {
-      public override fun allow(): Any? = unwrap(this).getAllow()
+      override fun allow(): Any? = unwrap(this).getAllow()
 
-      public override fun block(): Any? = unwrap(this).getBlock()
+      override fun block(): Any? = unwrap(this).getBlock()
 
-      public override fun captcha(): Any? = unwrap(this).getCaptcha()
+      override fun captcha(): Any? = unwrap(this).getCaptcha()
 
-      public override fun challenge(): Any? = unwrap(this).getChallenge()
+      override fun challenge(): Any? = unwrap(this).getChallenge()
 
-      public override fun count(): Any? = unwrap(this).getCount()
+      override fun count(): Any? = unwrap(this).getCount()
     }
 
     public companion object {
@@ -602,72 +568,53 @@ public open class CfnRuleGroup internal constructor(
     public fun visibilityConfig(): Any
 
     public interface Builder {
-      public fun action(action: IResolvable) {
-      }
+      public fun action(action: IResolvable)
 
-      public fun action(action: RuleActionProperty) {
-      }
+      public fun action(action: RuleActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ab59604d66f34cfbcc06b518a5a65e829356d92292693b3017e1180b0b691e3")
-      public fun action(action: RuleActionProperty.Builder.() -> Unit) {
-      }
+      public fun action(action: RuleActionProperty.Builder.() -> Unit)
 
-      public fun captchaConfig(captchaConfig: IResolvable) {
-      }
+      public fun captchaConfig(captchaConfig: IResolvable)
 
-      public fun captchaConfig(captchaConfig: CaptchaConfigProperty) {
-      }
+      public fun captchaConfig(captchaConfig: CaptchaConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("90f6e38e2c3c5b6a7f2d6756b5812401a10b2c32776c5257df07e13164b43707")
-      public fun captchaConfig(captchaConfig: CaptchaConfigProperty.Builder.() -> Unit) {
-      }
+      public fun captchaConfig(captchaConfig: CaptchaConfigProperty.Builder.() -> Unit)
 
-      public fun challengeConfig(challengeConfig: IResolvable) {
-      }
+      public fun challengeConfig(challengeConfig: IResolvable)
 
-      public fun challengeConfig(challengeConfig: ChallengeConfigProperty) {
-      }
+      public fun challengeConfig(challengeConfig: ChallengeConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c6f4e93253cc8051bfe46a07df51ba9e7e46aa181e3d7cd2aba87c121221f6e")
-      public fun challengeConfig(challengeConfig: ChallengeConfigProperty.Builder.() -> Unit) {
-      }
+      public fun challengeConfig(challengeConfig: ChallengeConfigProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun ruleLabels(ruleLabels: IResolvable) {
-      }
+      public fun ruleLabels(ruleLabels: IResolvable)
 
-      public fun ruleLabels(ruleLabels: List<Any>) {
-      }
+      public fun ruleLabels(ruleLabels: List<Any>)
 
-      public fun statement(statement: IResolvable) {
-      }
+      public fun statement(statement: IResolvable)
 
-      public fun statement(statement: StatementProperty) {
-      }
+      public fun statement(statement: StatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("177124055aa0539a2933b6a8f96eb0a9dce6c9fa01a254f7dbd404587f1d47ec")
-      public fun statement(statement: StatementProperty.Builder.() -> Unit) {
-      }
+      public fun statement(statement: StatementProperty.Builder.() -> Unit)
 
-      public fun visibilityConfig(visibilityConfig: IResolvable) {
-      }
+      public fun visibilityConfig(visibilityConfig: IResolvable)
 
-      public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
-      }
+      public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db831e145764c8bfbc00a3984a4b6f1bac975abdf526651e355015faae968afe")
-      public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit) {
-      }
+      public fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -675,88 +622,86 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty.builder()
 
-      public override fun action(action: IResolvable) {
+      override fun action(action: IResolvable) {
         cdkBuilder.action(action.let(IResolvable::unwrap))
       }
 
-      public override fun action(action: RuleActionProperty) {
+      override fun action(action: RuleActionProperty) {
         cdkBuilder.action(action.let(RuleActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ab59604d66f34cfbcc06b518a5a65e829356d92292693b3017e1180b0b691e3")
-      public override fun action(action: RuleActionProperty.Builder.() -> Unit): Unit =
+      override fun action(action: RuleActionProperty.Builder.() -> Unit): Unit =
           action(RuleActionProperty(action))
 
-      public override fun captchaConfig(captchaConfig: IResolvable) {
+      override fun captchaConfig(captchaConfig: IResolvable) {
         cdkBuilder.captchaConfig(captchaConfig.let(IResolvable::unwrap))
       }
 
-      public override fun captchaConfig(captchaConfig: CaptchaConfigProperty) {
+      override fun captchaConfig(captchaConfig: CaptchaConfigProperty) {
         cdkBuilder.captchaConfig(captchaConfig.let(CaptchaConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("90f6e38e2c3c5b6a7f2d6756b5812401a10b2c32776c5257df07e13164b43707")
-      public override fun captchaConfig(captchaConfig: CaptchaConfigProperty.Builder.() -> Unit):
-          Unit = captchaConfig(CaptchaConfigProperty(captchaConfig))
+      override fun captchaConfig(captchaConfig: CaptchaConfigProperty.Builder.() -> Unit): Unit =
+          captchaConfig(CaptchaConfigProperty(captchaConfig))
 
-      public override fun challengeConfig(challengeConfig: IResolvable) {
+      override fun challengeConfig(challengeConfig: IResolvable) {
         cdkBuilder.challengeConfig(challengeConfig.let(IResolvable::unwrap))
       }
 
-      public override fun challengeConfig(challengeConfig: ChallengeConfigProperty) {
+      override fun challengeConfig(challengeConfig: ChallengeConfigProperty) {
         cdkBuilder.challengeConfig(challengeConfig.let(ChallengeConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c6f4e93253cc8051bfe46a07df51ba9e7e46aa181e3d7cd2aba87c121221f6e")
-      public override
-          fun challengeConfig(challengeConfig: ChallengeConfigProperty.Builder.() -> Unit): Unit =
-          challengeConfig(ChallengeConfigProperty(challengeConfig))
+      override fun challengeConfig(challengeConfig: ChallengeConfigProperty.Builder.() -> Unit):
+          Unit = challengeConfig(ChallengeConfigProperty(challengeConfig))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun ruleLabels(ruleLabels: IResolvable) {
+      override fun ruleLabels(ruleLabels: IResolvable) {
         cdkBuilder.ruleLabels(ruleLabels.let(IResolvable::unwrap))
       }
 
-      public override fun ruleLabels(ruleLabels: List<Any>) {
+      override fun ruleLabels(ruleLabels: List<Any>) {
         cdkBuilder.ruleLabels(ruleLabels)
       }
 
-      public override fun statement(statement: IResolvable) {
+      override fun statement(statement: IResolvable) {
         cdkBuilder.statement(statement.let(IResolvable::unwrap))
       }
 
-      public override fun statement(statement: StatementProperty) {
+      override fun statement(statement: StatementProperty) {
         cdkBuilder.statement(statement.let(StatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("177124055aa0539a2933b6a8f96eb0a9dce6c9fa01a254f7dbd404587f1d47ec")
-      public override fun statement(statement: StatementProperty.Builder.() -> Unit): Unit =
+      override fun statement(statement: StatementProperty.Builder.() -> Unit): Unit =
           statement(StatementProperty(statement))
 
-      public override fun visibilityConfig(visibilityConfig: IResolvable) {
+      override fun visibilityConfig(visibilityConfig: IResolvable) {
         cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
       }
 
-      public override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
+      override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
         cdkBuilder.visibilityConfig(visibilityConfig.let(VisibilityConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db831e145764c8bfbc00a3984a4b6f1bac975abdf526651e355015faae968afe")
-      public override
-          fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit): Unit
-          = visibilityConfig(VisibilityConfigProperty(visibilityConfig))
+      override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty.Builder.() -> Unit):
+          Unit = visibilityConfig(VisibilityConfigProperty(visibilityConfig))
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty =
           cdkBuilder.build()
@@ -765,21 +710,21 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.RuleProperty,
     ) : RuleProperty {
-      public override fun action(): Any? = unwrap(this).getAction()
+      override fun action(): Any? = unwrap(this).getAction()
 
-      public override fun captchaConfig(): Any? = unwrap(this).getCaptchaConfig()
+      override fun captchaConfig(): Any? = unwrap(this).getCaptchaConfig()
 
-      public override fun challengeConfig(): Any? = unwrap(this).getChallengeConfig()
+      override fun challengeConfig(): Any? = unwrap(this).getChallengeConfig()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun priority(): Number = unwrap(this).getPriority()
+      override fun priority(): Number = unwrap(this).getPriority()
 
-      public override fun ruleLabels(): Any? = unwrap(this).getRuleLabels()
+      override fun ruleLabels(): Any? = unwrap(this).getRuleLabels()
 
-      public override fun statement(): Any = unwrap(this).getStatement()
+      override fun statement(): Any = unwrap(this).getStatement()
 
-      public override fun visibilityConfig(): Any = unwrap(this).getVisibilityConfig()
+      override fun visibilityConfig(): Any = unwrap(this).getVisibilityConfig()
     }
 
     public companion object {
@@ -807,20 +752,16 @@ public open class CfnRuleGroup internal constructor(
     public fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
 
     public interface Builder {
-      public fun countryCodes(countryCodes: List<String>) {
-      }
+      public fun countryCodes(countryCodes: List<String>)
 
-      public fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
-      }
+      public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
 
-      public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
-      }
+      public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8a4f29dbbb3946321469421b45c2a51aceb555245d5013a1734684891b20097c")
       public
-          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -828,21 +769,21 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.GeoMatchStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.GeoMatchStatementProperty.builder()
 
-      public override fun countryCodes(countryCodes: List<String>) {
+      override fun countryCodes(countryCodes: List<String>) {
         cdkBuilder.countryCodes(countryCodes)
       }
 
-      public override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
+      override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
       }
 
-      public override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
+      override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8a4f29dbbb3946321469421b45c2a51aceb555245d5013a1734684891b20097c")
-      public override
+      override
           fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit):
           Unit = forwardedIpConfig(ForwardedIPConfigurationProperty(forwardedIpConfig))
 
@@ -855,10 +796,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.GeoMatchStatementProperty,
     ) : GeoMatchStatementProperty {
-      public override fun countryCodes(): List<String> = unwrap(this).getCountryCodes() ?:
-          emptyList()
+      override fun countryCodes(): List<String> = unwrap(this).getCountryCodes() ?: emptyList()
 
-      public override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
+      override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
     }
 
     public companion object {
@@ -889,14 +829,11 @@ public open class CfnRuleGroup internal constructor(
     public fun includedCookies(): List<String> = unwrap(this).getIncludedCookies() ?: emptyList()
 
     public interface Builder {
-      public fun all(all: Any) {
-      }
+      public fun all(all: Any)
 
-      public fun excludedCookies(excludedCookies: List<String>) {
-      }
+      public fun excludedCookies(excludedCookies: List<String>)
 
-      public fun includedCookies(includedCookies: List<String>) {
-      }
+      public fun includedCookies(includedCookies: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -904,15 +841,15 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty.builder()
 
-      public override fun all(all: Any) {
+      override fun all(all: Any) {
         cdkBuilder.all(all)
       }
 
-      public override fun excludedCookies(excludedCookies: List<String>) {
+      override fun excludedCookies(excludedCookies: List<String>) {
         cdkBuilder.excludedCookies(excludedCookies)
       }
 
-      public override fun includedCookies(includedCookies: List<String>) {
+      override fun includedCookies(includedCookies: List<String>) {
         cdkBuilder.includedCookies(includedCookies)
       }
 
@@ -925,12 +862,12 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty,
     ) : CookieMatchPatternProperty {
-      public override fun all(): Any? = unwrap(this).getAll()
+      override fun all(): Any? = unwrap(this).getAll()
 
-      public override fun excludedCookies(): List<String> = unwrap(this).getExcludedCookies() ?:
+      override fun excludedCookies(): List<String> = unwrap(this).getExcludedCookies() ?:
           emptyList()
 
-      public override fun includedCookies(): List<String> = unwrap(this).getIncludedCookies() ?:
+      override fun includedCookies(): List<String> = unwrap(this).getIncludedCookies() ?:
           emptyList()
     }
 
@@ -964,28 +901,21 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: String) {
-      }
+      public fun comparisonOperator(comparisonOperator: String)
 
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6d1490d529bfb0d803940d5fa42f7fbb88c77728c7e36dd75b0e48a28bd3c86")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -994,32 +924,32 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SizeConstraintStatementProperty.builder()
 
-      public override fun comparisonOperator(comparisonOperator: String) {
+      override fun comparisonOperator(comparisonOperator: String) {
         cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6d1490d529bfb0d803940d5fa42f7fbb88c77728c7e36dd75b0e48a28bd3c86")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -1032,13 +962,13 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SizeConstraintStatementProperty,
     ) : SizeConstraintStatementProperty {
-      public override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
+      override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
 
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun size(): Number = unwrap(this).getSize()
+      override fun size(): Number = unwrap(this).getSize()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -1083,67 +1013,49 @@ public open class CfnRuleGroup internal constructor(
     public fun uriPath(): Any? = unwrap(this).getUriPath()
 
     public interface Builder {
-      public fun allQueryArguments(allQueryArguments: Any) {
-      }
+      public fun allQueryArguments(allQueryArguments: Any)
 
-      public fun body(body: IResolvable) {
-      }
+      public fun body(body: IResolvable)
 
-      public fun body(body: BodyProperty) {
-      }
+      public fun body(body: BodyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79864400e90dbcd5de51d6f4db3e7ed861fc5cbcb9b6c0fcfc44129431036578")
-      public fun body(body: BodyProperty.Builder.() -> Unit) {
-      }
+      public fun body(body: BodyProperty.Builder.() -> Unit)
 
-      public fun cookies(cookies: IResolvable) {
-      }
+      public fun cookies(cookies: IResolvable)
 
-      public fun cookies(cookies: CookiesProperty) {
-      }
+      public fun cookies(cookies: CookiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ead24464c68e8c25d8b85ad2a797c5308d8909f0ff70571cdcbbcd0e032d2a1")
-      public fun cookies(cookies: CookiesProperty.Builder.() -> Unit) {
-      }
+      public fun cookies(cookies: CookiesProperty.Builder.() -> Unit)
 
-      public fun headers(headers: IResolvable) {
-      }
+      public fun headers(headers: IResolvable)
 
-      public fun headers(headers: HeadersProperty) {
-      }
+      public fun headers(headers: HeadersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fff74242ecdf7074ecb24424c8d763c2aec2072774004f540d2b2f241e767101")
-      public fun headers(headers: HeadersProperty.Builder.() -> Unit) {
-      }
+      public fun headers(headers: HeadersProperty.Builder.() -> Unit)
 
-      public fun jsonBody(jsonBody: IResolvable) {
-      }
+      public fun jsonBody(jsonBody: IResolvable)
 
-      public fun jsonBody(jsonBody: JsonBodyProperty) {
-      }
+      public fun jsonBody(jsonBody: JsonBodyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("909fe9a4a46334fd962c7f7a77d29a600004873f56cb7532bda93905171693f4")
-      public fun jsonBody(jsonBody: JsonBodyProperty.Builder.() -> Unit) {
-      }
+      public fun jsonBody(jsonBody: JsonBodyProperty.Builder.() -> Unit)
 
-      public fun method(method: Any) {
-      }
+      public fun method(method: Any)
 
-      public fun queryString(queryString: Any) {
-      }
+      public fun queryString(queryString: Any)
 
-      public fun singleHeader(singleHeader: Any) {
-      }
+      public fun singleHeader(singleHeader: Any)
 
-      public fun singleQueryArgument(singleQueryArgument: Any) {
-      }
+      public fun singleQueryArgument(singleQueryArgument: Any)
 
-      public fun uriPath(uriPath: Any) {
-      }
+      public fun uriPath(uriPath: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1151,79 +1063,78 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.FieldToMatchProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.FieldToMatchProperty.builder()
 
-      public override fun allQueryArguments(allQueryArguments: Any) {
+      override fun allQueryArguments(allQueryArguments: Any) {
         cdkBuilder.allQueryArguments(allQueryArguments)
       }
 
-      public override fun body(body: IResolvable) {
+      override fun body(body: IResolvable) {
         cdkBuilder.body(body.let(IResolvable::unwrap))
       }
 
-      public override fun body(body: BodyProperty) {
+      override fun body(body: BodyProperty) {
         cdkBuilder.body(body.let(BodyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79864400e90dbcd5de51d6f4db3e7ed861fc5cbcb9b6c0fcfc44129431036578")
-      public override fun body(body: BodyProperty.Builder.() -> Unit): Unit =
-          body(BodyProperty(body))
+      override fun body(body: BodyProperty.Builder.() -> Unit): Unit = body(BodyProperty(body))
 
-      public override fun cookies(cookies: IResolvable) {
+      override fun cookies(cookies: IResolvable) {
         cdkBuilder.cookies(cookies.let(IResolvable::unwrap))
       }
 
-      public override fun cookies(cookies: CookiesProperty) {
+      override fun cookies(cookies: CookiesProperty) {
         cdkBuilder.cookies(cookies.let(CookiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ead24464c68e8c25d8b85ad2a797c5308d8909f0ff70571cdcbbcd0e032d2a1")
-      public override fun cookies(cookies: CookiesProperty.Builder.() -> Unit): Unit =
+      override fun cookies(cookies: CookiesProperty.Builder.() -> Unit): Unit =
           cookies(CookiesProperty(cookies))
 
-      public override fun headers(headers: IResolvable) {
+      override fun headers(headers: IResolvable) {
         cdkBuilder.headers(headers.let(IResolvable::unwrap))
       }
 
-      public override fun headers(headers: HeadersProperty) {
+      override fun headers(headers: HeadersProperty) {
         cdkBuilder.headers(headers.let(HeadersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fff74242ecdf7074ecb24424c8d763c2aec2072774004f540d2b2f241e767101")
-      public override fun headers(headers: HeadersProperty.Builder.() -> Unit): Unit =
+      override fun headers(headers: HeadersProperty.Builder.() -> Unit): Unit =
           headers(HeadersProperty(headers))
 
-      public override fun jsonBody(jsonBody: IResolvable) {
+      override fun jsonBody(jsonBody: IResolvable) {
         cdkBuilder.jsonBody(jsonBody.let(IResolvable::unwrap))
       }
 
-      public override fun jsonBody(jsonBody: JsonBodyProperty) {
+      override fun jsonBody(jsonBody: JsonBodyProperty) {
         cdkBuilder.jsonBody(jsonBody.let(JsonBodyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("909fe9a4a46334fd962c7f7a77d29a600004873f56cb7532bda93905171693f4")
-      public override fun jsonBody(jsonBody: JsonBodyProperty.Builder.() -> Unit): Unit =
+      override fun jsonBody(jsonBody: JsonBodyProperty.Builder.() -> Unit): Unit =
           jsonBody(JsonBodyProperty(jsonBody))
 
-      public override fun method(method: Any) {
+      override fun method(method: Any) {
         cdkBuilder.method(method)
       }
 
-      public override fun queryString(queryString: Any) {
+      override fun queryString(queryString: Any) {
         cdkBuilder.queryString(queryString)
       }
 
-      public override fun singleHeader(singleHeader: Any) {
+      override fun singleHeader(singleHeader: Any) {
         cdkBuilder.singleHeader(singleHeader)
       }
 
-      public override fun singleQueryArgument(singleQueryArgument: Any) {
+      override fun singleQueryArgument(singleQueryArgument: Any) {
         cdkBuilder.singleQueryArgument(singleQueryArgument)
       }
 
-      public override fun uriPath(uriPath: Any) {
+      override fun uriPath(uriPath: Any) {
         cdkBuilder.uriPath(uriPath)
       }
 
@@ -1235,25 +1146,25 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.FieldToMatchProperty,
     ) : FieldToMatchProperty {
-      public override fun allQueryArguments(): Any? = unwrap(this).getAllQueryArguments()
+      override fun allQueryArguments(): Any? = unwrap(this).getAllQueryArguments()
 
-      public override fun body(): Any? = unwrap(this).getBody()
+      override fun body(): Any? = unwrap(this).getBody()
 
-      public override fun cookies(): Any? = unwrap(this).getCookies()
+      override fun cookies(): Any? = unwrap(this).getCookies()
 
-      public override fun headers(): Any? = unwrap(this).getHeaders()
+      override fun headers(): Any? = unwrap(this).getHeaders()
 
-      public override fun jsonBody(): Any? = unwrap(this).getJsonBody()
+      override fun jsonBody(): Any? = unwrap(this).getJsonBody()
 
-      public override fun method(): Any? = unwrap(this).getMethod()
+      override fun method(): Any? = unwrap(this).getMethod()
 
-      public override fun queryString(): Any? = unwrap(this).getQueryString()
+      override fun queryString(): Any? = unwrap(this).getQueryString()
 
-      public override fun singleHeader(): Any? = unwrap(this).getSingleHeader()
+      override fun singleHeader(): Any? = unwrap(this).getSingleHeader()
 
-      public override fun singleQueryArgument(): Any? = unwrap(this).getSingleQueryArgument()
+      override fun singleQueryArgument(): Any? = unwrap(this).getSingleQueryArgument()
 
-      public override fun uriPath(): Any? = unwrap(this).getUriPath()
+      override fun uriPath(): Any? = unwrap(this).getUriPath()
     }
 
     public companion object {
@@ -1282,11 +1193,9 @@ public open class CfnRuleGroup internal constructor(
     public fun scope(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun scope(scope: String) {
-      }
+      public fun scope(scope: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1294,11 +1203,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelMatchStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelMatchStatementProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun scope(scope: String) {
+      override fun scope(scope: String) {
         cdkBuilder.scope(scope)
       }
 
@@ -1311,9 +1220,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelMatchStatementProperty,
     ) : LabelMatchStatementProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun scope(): String = unwrap(this).getScope()
+      override fun scope(): String = unwrap(this).getScope()
     }
 
     public companion object {
@@ -1340,16 +1249,13 @@ public open class CfnRuleGroup internal constructor(
     public fun statement(): Any
 
     public interface Builder {
-      public fun statement(statement: IResolvable) {
-      }
+      public fun statement(statement: IResolvable)
 
-      public fun statement(statement: StatementProperty) {
-      }
+      public fun statement(statement: StatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9f5c555ee8c440d36600a410097192dd6e85ac534995d25faeebf55d6e22dbc5")
-      public fun statement(statement: StatementProperty.Builder.() -> Unit) {
-      }
+      public fun statement(statement: StatementProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1357,17 +1263,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty.builder()
 
-      public override fun statement(statement: IResolvable) {
+      override fun statement(statement: IResolvable) {
         cdkBuilder.statement(statement.let(IResolvable::unwrap))
       }
 
-      public override fun statement(statement: StatementProperty) {
+      override fun statement(statement: StatementProperty) {
         cdkBuilder.statement(statement.let(StatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9f5c555ee8c440d36600a410097192dd6e85ac534995d25faeebf55d6e22dbc5")
-      public override fun statement(statement: StatementProperty.Builder.() -> Unit): Unit =
+      override fun statement(statement: StatementProperty.Builder.() -> Unit): Unit =
           statement(StatementProperty(statement))
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty =
@@ -1378,7 +1284,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.NotStatementProperty,
     ) : NotStatementProperty {
-      public override fun statement(): Any = unwrap(this).getStatement()
+      override fun statement(): Any = unwrap(this).getStatement()
     }
 
     public companion object {
@@ -1409,20 +1315,15 @@ public open class CfnRuleGroup internal constructor(
     public fun sampledRequestsEnabled(): Any
 
     public interface Builder {
-      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
-      }
+      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean)
 
-      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-      }
+      public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean) {
-      }
+      public fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean)
 
-      public fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
-      }
+      public fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1430,23 +1331,23 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.VisibilityConfigProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.VisibilityConfigProperty.builder()
 
-      public override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
+      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
       }
 
-      public override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
+      override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean) {
+      override fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled)
       }
 
-      public override fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
+      override fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled.let(IResolvable::unwrap))
       }
 
@@ -1459,12 +1360,11 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.VisibilityConfigProperty,
     ) : VisibilityConfigProperty {
-      public override fun cloudWatchMetricsEnabled(): Any =
-          unwrap(this).getCloudWatchMetricsEnabled()
+      override fun cloudWatchMetricsEnabled(): Any = unwrap(this).getCloudWatchMetricsEnabled()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun sampledRequestsEnabled(): Any = unwrap(this).getSampledRequestsEnabled()
+      override fun sampledRequestsEnabled(): Any = unwrap(this).getSampledRequestsEnabled()
     }
 
     public companion object {
@@ -1491,8 +1391,7 @@ public open class CfnRuleGroup internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1501,7 +1400,7 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitLabelNamespaceProperty.builder()
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -1514,7 +1413,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitLabelNamespaceProperty,
     ) : RateLimitLabelNamespaceProperty {
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
@@ -1566,159 +1465,118 @@ public open class CfnRuleGroup internal constructor(
     public fun xssMatchStatement(): Any? = unwrap(this).getXssMatchStatement()
 
     public interface Builder {
-      public fun andStatement(andStatement: IResolvable) {
-      }
+      public fun andStatement(andStatement: IResolvable)
 
-      public fun andStatement(andStatement: AndStatementProperty) {
-      }
+      public fun andStatement(andStatement: AndStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f84784e4830593c9b471589c902f676367c17294727111d314f1caec89c6e22")
-      public fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit) {
-      }
+      public fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit)
 
-      public fun byteMatchStatement(byteMatchStatement: IResolvable) {
-      }
+      public fun byteMatchStatement(byteMatchStatement: IResolvable)
 
-      public fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty) {
-      }
+      public fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb06d910592d98a855bd9168f0a5c142e5f51bec98f9a9aa52a47918efa5dc4b")
       public
-          fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty.Builder.() -> Unit) {
-      }
+          fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty.Builder.() -> Unit)
 
-      public fun geoMatchStatement(geoMatchStatement: IResolvable) {
-      }
+      public fun geoMatchStatement(geoMatchStatement: IResolvable)
 
-      public fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty) {
-      }
+      public fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b98767a03cb91f73a06c0f74957732cd56c6757f90cfefb368998d3fe8a7c14")
-      public
-          fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty.Builder.() -> Unit) {
-      }
+      public fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty.Builder.() -> Unit)
 
-      public fun ipSetReferenceStatement(ipSetReferenceStatement: IResolvable) {
-      }
+      public fun ipSetReferenceStatement(ipSetReferenceStatement: IResolvable)
 
-      public fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty) {
-      }
+      public fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6deaa9ef49cad09c3238358efcf05a41b39f0b8439b527190c0f8c232135561")
       public
-          fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty.Builder.() -> Unit) {
-      }
+          fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty.Builder.() -> Unit)
 
-      public fun labelMatchStatement(labelMatchStatement: IResolvable) {
-      }
+      public fun labelMatchStatement(labelMatchStatement: IResolvable)
 
-      public fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty) {
-      }
+      public fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("986e5de76be654a8e15d6058c9ee74294e83fe3810db67688f779f82170788a1")
       public
-          fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty.Builder.() -> Unit) {
-      }
+          fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty.Builder.() -> Unit)
 
-      public fun notStatement(notStatement: IResolvable) {
-      }
+      public fun notStatement(notStatement: IResolvable)
 
-      public fun notStatement(notStatement: NotStatementProperty) {
-      }
+      public fun notStatement(notStatement: NotStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f4b07d4665ef1370e1b2372257a3c3047436992d110003b67d92cbb890c06aae")
-      public fun notStatement(notStatement: NotStatementProperty.Builder.() -> Unit) {
-      }
+      public fun notStatement(notStatement: NotStatementProperty.Builder.() -> Unit)
 
-      public fun orStatement(orStatement: IResolvable) {
-      }
+      public fun orStatement(orStatement: IResolvable)
 
-      public fun orStatement(orStatement: OrStatementProperty) {
-      }
+      public fun orStatement(orStatement: OrStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("59a8a2a043bbe0095a069a387fb083cd57f9cde91be9671eeee6256c2b04d4f6")
-      public fun orStatement(orStatement: OrStatementProperty.Builder.() -> Unit) {
-      }
+      public fun orStatement(orStatement: OrStatementProperty.Builder.() -> Unit)
 
-      public fun rateBasedStatement(rateBasedStatement: IResolvable) {
-      }
+      public fun rateBasedStatement(rateBasedStatement: IResolvable)
 
-      public fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty) {
-      }
+      public fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8bcfd0d44bbb6308f131b368f5d5098eee6e7d23736279eeb92b50311609b4d9")
       public
-          fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty.Builder.() -> Unit) {
-      }
+          fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty.Builder.() -> Unit)
 
-      public fun regexMatchStatement(regexMatchStatement: IResolvable) {
-      }
+      public fun regexMatchStatement(regexMatchStatement: IResolvable)
 
-      public fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty) {
-      }
+      public fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cab718641bfc23238d998ba962f49b68c7c0ad9ac57e0d1f09949e0da4e506f8")
       public
-          fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty.Builder.() -> Unit) {
-      }
+          fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty.Builder.() -> Unit)
 
-      public fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: IResolvable) {
-      }
+      public fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: IResolvable)
 
       public
-          fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty) {
-      }
+          fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aca9516d1d1380f25cad4dd73b064a09e3e99d316436f6dde2017f23c043a372")
       public
-          fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty.Builder.() -> Unit) {
-      }
+          fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty.Builder.() -> Unit)
 
-      public fun sizeConstraintStatement(sizeConstraintStatement: IResolvable) {
-      }
+      public fun sizeConstraintStatement(sizeConstraintStatement: IResolvable)
 
-      public fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty) {
-      }
+      public fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f70e09b6dff74f1e7a668ab987d9edf5a8b525e88baf4dd3a64c5ba80790b394")
       public
-          fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty.Builder.() -> Unit) {
-      }
+          fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty.Builder.() -> Unit)
 
-      public fun sqliMatchStatement(sqliMatchStatement: IResolvable) {
-      }
+      public fun sqliMatchStatement(sqliMatchStatement: IResolvable)
 
-      public fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty) {
-      }
+      public fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0fdab764bc61099312cfe517891cb2231ee5552284f8fd95a4f44fdbb7ddf3f5")
       public
-          fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty.Builder.() -> Unit) {
-      }
+          fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty.Builder.() -> Unit)
 
-      public fun xssMatchStatement(xssMatchStatement: IResolvable) {
-      }
+      public fun xssMatchStatement(xssMatchStatement: IResolvable)
 
-      public fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty) {
-      }
+      public fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d2f50b19cc87986feaf8db81faf794d3554022dd9e71876a010beea7ac2d6210")
-      public
-          fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty.Builder.() -> Unit) {
-      }
+      public fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1726,187 +1584,187 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.StatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.StatementProperty.builder()
 
-      public override fun andStatement(andStatement: IResolvable) {
+      override fun andStatement(andStatement: IResolvable) {
         cdkBuilder.andStatement(andStatement.let(IResolvable::unwrap))
       }
 
-      public override fun andStatement(andStatement: AndStatementProperty) {
+      override fun andStatement(andStatement: AndStatementProperty) {
         cdkBuilder.andStatement(andStatement.let(AndStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5f84784e4830593c9b471589c902f676367c17294727111d314f1caec89c6e22")
-      public override fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit): Unit
-          = andStatement(AndStatementProperty(andStatement))
+      override fun andStatement(andStatement: AndStatementProperty.Builder.() -> Unit): Unit =
+          andStatement(AndStatementProperty(andStatement))
 
-      public override fun byteMatchStatement(byteMatchStatement: IResolvable) {
+      override fun byteMatchStatement(byteMatchStatement: IResolvable) {
         cdkBuilder.byteMatchStatement(byteMatchStatement.let(IResolvable::unwrap))
       }
 
-      public override fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty) {
+      override fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty) {
         cdkBuilder.byteMatchStatement(byteMatchStatement.let(ByteMatchStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb06d910592d98a855bd9168f0a5c142e5f51bec98f9a9aa52a47918efa5dc4b")
-      public override
+      override
           fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty.Builder.() -> Unit):
           Unit = byteMatchStatement(ByteMatchStatementProperty(byteMatchStatement))
 
-      public override fun geoMatchStatement(geoMatchStatement: IResolvable) {
+      override fun geoMatchStatement(geoMatchStatement: IResolvable) {
         cdkBuilder.geoMatchStatement(geoMatchStatement.let(IResolvable::unwrap))
       }
 
-      public override fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty) {
+      override fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty) {
         cdkBuilder.geoMatchStatement(geoMatchStatement.let(GeoMatchStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b98767a03cb91f73a06c0f74957732cd56c6757f90cfefb368998d3fe8a7c14")
-      public override
+      override
           fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty.Builder.() -> Unit):
           Unit = geoMatchStatement(GeoMatchStatementProperty(geoMatchStatement))
 
-      public override fun ipSetReferenceStatement(ipSetReferenceStatement: IResolvable) {
+      override fun ipSetReferenceStatement(ipSetReferenceStatement: IResolvable) {
         cdkBuilder.ipSetReferenceStatement(ipSetReferenceStatement.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty) {
         cdkBuilder.ipSetReferenceStatement(ipSetReferenceStatement.let(IPSetReferenceStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6deaa9ef49cad09c3238358efcf05a41b39f0b8439b527190c0f8c232135561")
-      public override
+      override
           fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty.Builder.() -> Unit):
           Unit = ipSetReferenceStatement(IPSetReferenceStatementProperty(ipSetReferenceStatement))
 
-      public override fun labelMatchStatement(labelMatchStatement: IResolvable) {
+      override fun labelMatchStatement(labelMatchStatement: IResolvable) {
         cdkBuilder.labelMatchStatement(labelMatchStatement.let(IResolvable::unwrap))
       }
 
-      public override fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty) {
+      override fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty) {
         cdkBuilder.labelMatchStatement(labelMatchStatement.let(LabelMatchStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("986e5de76be654a8e15d6058c9ee74294e83fe3810db67688f779f82170788a1")
-      public override
+      override
           fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty.Builder.() -> Unit):
           Unit = labelMatchStatement(LabelMatchStatementProperty(labelMatchStatement))
 
-      public override fun notStatement(notStatement: IResolvable) {
+      override fun notStatement(notStatement: IResolvable) {
         cdkBuilder.notStatement(notStatement.let(IResolvable::unwrap))
       }
 
-      public override fun notStatement(notStatement: NotStatementProperty) {
+      override fun notStatement(notStatement: NotStatementProperty) {
         cdkBuilder.notStatement(notStatement.let(NotStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f4b07d4665ef1370e1b2372257a3c3047436992d110003b67d92cbb890c06aae")
-      public override fun notStatement(notStatement: NotStatementProperty.Builder.() -> Unit): Unit
-          = notStatement(NotStatementProperty(notStatement))
+      override fun notStatement(notStatement: NotStatementProperty.Builder.() -> Unit): Unit =
+          notStatement(NotStatementProperty(notStatement))
 
-      public override fun orStatement(orStatement: IResolvable) {
+      override fun orStatement(orStatement: IResolvable) {
         cdkBuilder.orStatement(orStatement.let(IResolvable::unwrap))
       }
 
-      public override fun orStatement(orStatement: OrStatementProperty) {
+      override fun orStatement(orStatement: OrStatementProperty) {
         cdkBuilder.orStatement(orStatement.let(OrStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("59a8a2a043bbe0095a069a387fb083cd57f9cde91be9671eeee6256c2b04d4f6")
-      public override fun orStatement(orStatement: OrStatementProperty.Builder.() -> Unit): Unit =
+      override fun orStatement(orStatement: OrStatementProperty.Builder.() -> Unit): Unit =
           orStatement(OrStatementProperty(orStatement))
 
-      public override fun rateBasedStatement(rateBasedStatement: IResolvable) {
+      override fun rateBasedStatement(rateBasedStatement: IResolvable) {
         cdkBuilder.rateBasedStatement(rateBasedStatement.let(IResolvable::unwrap))
       }
 
-      public override fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty) {
+      override fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty) {
         cdkBuilder.rateBasedStatement(rateBasedStatement.let(RateBasedStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8bcfd0d44bbb6308f131b368f5d5098eee6e7d23736279eeb92b50311609b4d9")
-      public override
+      override
           fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty.Builder.() -> Unit):
           Unit = rateBasedStatement(RateBasedStatementProperty(rateBasedStatement))
 
-      public override fun regexMatchStatement(regexMatchStatement: IResolvable) {
+      override fun regexMatchStatement(regexMatchStatement: IResolvable) {
         cdkBuilder.regexMatchStatement(regexMatchStatement.let(IResolvable::unwrap))
       }
 
-      public override fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty) {
+      override fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty) {
         cdkBuilder.regexMatchStatement(regexMatchStatement.let(RegexMatchStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cab718641bfc23238d998ba962f49b68c7c0ad9ac57e0d1f09949e0da4e506f8")
-      public override
+      override
           fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty.Builder.() -> Unit):
           Unit = regexMatchStatement(RegexMatchStatementProperty(regexMatchStatement))
 
-      public override
+      override
           fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: IResolvable) {
         cdkBuilder.regexPatternSetReferenceStatement(regexPatternSetReferenceStatement.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty) {
         cdkBuilder.regexPatternSetReferenceStatement(regexPatternSetReferenceStatement.let(RegexPatternSetReferenceStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aca9516d1d1380f25cad4dd73b064a09e3e99d316436f6dde2017f23c043a372")
-      public override
+      override
           fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty.Builder.() -> Unit):
           Unit =
           regexPatternSetReferenceStatement(RegexPatternSetReferenceStatementProperty(regexPatternSetReferenceStatement))
 
-      public override fun sizeConstraintStatement(sizeConstraintStatement: IResolvable) {
+      override fun sizeConstraintStatement(sizeConstraintStatement: IResolvable) {
         cdkBuilder.sizeConstraintStatement(sizeConstraintStatement.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty) {
         cdkBuilder.sizeConstraintStatement(sizeConstraintStatement.let(SizeConstraintStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f70e09b6dff74f1e7a668ab987d9edf5a8b525e88baf4dd3a64c5ba80790b394")
-      public override
+      override
           fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty.Builder.() -> Unit):
           Unit = sizeConstraintStatement(SizeConstraintStatementProperty(sizeConstraintStatement))
 
-      public override fun sqliMatchStatement(sqliMatchStatement: IResolvable) {
+      override fun sqliMatchStatement(sqliMatchStatement: IResolvable) {
         cdkBuilder.sqliMatchStatement(sqliMatchStatement.let(IResolvable::unwrap))
       }
 
-      public override fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty) {
+      override fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty) {
         cdkBuilder.sqliMatchStatement(sqliMatchStatement.let(SqliMatchStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0fdab764bc61099312cfe517891cb2231ee5552284f8fd95a4f44fdbb7ddf3f5")
-      public override
+      override
           fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty.Builder.() -> Unit):
           Unit = sqliMatchStatement(SqliMatchStatementProperty(sqliMatchStatement))
 
-      public override fun xssMatchStatement(xssMatchStatement: IResolvable) {
+      override fun xssMatchStatement(xssMatchStatement: IResolvable) {
         cdkBuilder.xssMatchStatement(xssMatchStatement.let(IResolvable::unwrap))
       }
 
-      public override fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty) {
+      override fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty) {
         cdkBuilder.xssMatchStatement(xssMatchStatement.let(XssMatchStatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d2f50b19cc87986feaf8db81faf794d3554022dd9e71876a010beea7ac2d6210")
-      public override
+      override
           fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty.Builder.() -> Unit):
           Unit = xssMatchStatement(XssMatchStatementProperty(xssMatchStatement))
 
@@ -1917,34 +1775,32 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.StatementProperty,
     ) : StatementProperty {
-      public override fun andStatement(): Any? = unwrap(this).getAndStatement()
+      override fun andStatement(): Any? = unwrap(this).getAndStatement()
 
-      public override fun byteMatchStatement(): Any? = unwrap(this).getByteMatchStatement()
+      override fun byteMatchStatement(): Any? = unwrap(this).getByteMatchStatement()
 
-      public override fun geoMatchStatement(): Any? = unwrap(this).getGeoMatchStatement()
+      override fun geoMatchStatement(): Any? = unwrap(this).getGeoMatchStatement()
 
-      public override fun ipSetReferenceStatement(): Any? =
-          unwrap(this).getIpSetReferenceStatement()
+      override fun ipSetReferenceStatement(): Any? = unwrap(this).getIpSetReferenceStatement()
 
-      public override fun labelMatchStatement(): Any? = unwrap(this).getLabelMatchStatement()
+      override fun labelMatchStatement(): Any? = unwrap(this).getLabelMatchStatement()
 
-      public override fun notStatement(): Any? = unwrap(this).getNotStatement()
+      override fun notStatement(): Any? = unwrap(this).getNotStatement()
 
-      public override fun orStatement(): Any? = unwrap(this).getOrStatement()
+      override fun orStatement(): Any? = unwrap(this).getOrStatement()
 
-      public override fun rateBasedStatement(): Any? = unwrap(this).getRateBasedStatement()
+      override fun rateBasedStatement(): Any? = unwrap(this).getRateBasedStatement()
 
-      public override fun regexMatchStatement(): Any? = unwrap(this).getRegexMatchStatement()
+      override fun regexMatchStatement(): Any? = unwrap(this).getRegexMatchStatement()
 
-      public override fun regexPatternSetReferenceStatement(): Any? =
+      override fun regexPatternSetReferenceStatement(): Any? =
           unwrap(this).getRegexPatternSetReferenceStatement()
 
-      public override fun sizeConstraintStatement(): Any? =
-          unwrap(this).getSizeConstraintStatement()
+      override fun sizeConstraintStatement(): Any? = unwrap(this).getSizeConstraintStatement()
 
-      public override fun sqliMatchStatement(): Any? = unwrap(this).getSqliMatchStatement()
+      override fun sqliMatchStatement(): Any? = unwrap(this).getSqliMatchStatement()
 
-      public override fun xssMatchStatement(): Any? = unwrap(this).getXssMatchStatement()
+      override fun xssMatchStatement(): Any? = unwrap(this).getXssMatchStatement()
     }
 
     public companion object {
@@ -1987,81 +1843,59 @@ public open class CfnRuleGroup internal constructor(
     public fun uriPath(): Any? = unwrap(this).getUriPath()
 
     public interface Builder {
-      public fun cookie(cookie: IResolvable) {
-      }
+      public fun cookie(cookie: IResolvable)
 
-      public fun cookie(cookie: RateLimitCookieProperty) {
-      }
+      public fun cookie(cookie: RateLimitCookieProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("55b22f42f92ee4166d1cbe6d228ecd33bfc2230078ba6aecf45580ab50cb5ff5")
-      public fun cookie(cookie: RateLimitCookieProperty.Builder.() -> Unit) {
-      }
+      public fun cookie(cookie: RateLimitCookieProperty.Builder.() -> Unit)
 
-      public fun forwardedIp(forwardedIp: Any) {
-      }
+      public fun forwardedIp(forwardedIp: Any)
 
-      public fun `header`(`header`: IResolvable) {
-      }
+      public fun `header`(`header`: IResolvable)
 
-      public fun `header`(`header`: RateLimitHeaderProperty) {
-      }
+      public fun `header`(`header`: RateLimitHeaderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6562f2228682bc6e2b661e4b54548c2c1d088540942ab6fd64ad3050c8f4cf74")
-      public fun `header`(`header`: RateLimitHeaderProperty.Builder.() -> Unit) {
-      }
+      public fun `header`(`header`: RateLimitHeaderProperty.Builder.() -> Unit)
 
-      public fun httpMethod(httpMethod: Any) {
-      }
+      public fun httpMethod(httpMethod: Any)
 
-      public fun ip(ip: Any) {
-      }
+      public fun ip(ip: Any)
 
-      public fun labelNamespace(labelNamespace: IResolvable) {
-      }
+      public fun labelNamespace(labelNamespace: IResolvable)
 
-      public fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty) {
-      }
+      public fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("462f6556cda43ce02a198ec04c8a27523800fea2a014292d9ef2127f8fd03f0f")
-      public
-          fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty.Builder.() -> Unit) {
-      }
+      public fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty.Builder.() -> Unit)
 
-      public fun queryArgument(queryArgument: IResolvable) {
-      }
+      public fun queryArgument(queryArgument: IResolvable)
 
-      public fun queryArgument(queryArgument: RateLimitQueryArgumentProperty) {
-      }
+      public fun queryArgument(queryArgument: RateLimitQueryArgumentProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a419c7be9e091c68d11d4693299510992345a72ec91adfd3873158c2a34fbea8")
-      public fun queryArgument(queryArgument: RateLimitQueryArgumentProperty.Builder.() -> Unit) {
-      }
+      public fun queryArgument(queryArgument: RateLimitQueryArgumentProperty.Builder.() -> Unit)
 
-      public fun queryString(queryString: IResolvable) {
-      }
+      public fun queryString(queryString: IResolvable)
 
-      public fun queryString(queryString: RateLimitQueryStringProperty) {
-      }
+      public fun queryString(queryString: RateLimitQueryStringProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4b69b326274f5afdd3f4e88bfefaed942d4dbb5cb89d76a227030e75e241db0e")
-      public fun queryString(queryString: RateLimitQueryStringProperty.Builder.() -> Unit) {
-      }
+      public fun queryString(queryString: RateLimitQueryStringProperty.Builder.() -> Unit)
 
-      public fun uriPath(uriPath: IResolvable) {
-      }
+      public fun uriPath(uriPath: IResolvable)
 
-      public fun uriPath(uriPath: RateLimitUriPathProperty) {
-      }
+      public fun uriPath(uriPath: RateLimitUriPathProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8f5655c6137be95b34ce4ab64e46b98f147382c959051b102e0061024707e3ec")
-      public fun uriPath(uriPath: RateLimitUriPathProperty.Builder.() -> Unit) {
-      }
+      public fun uriPath(uriPath: RateLimitUriPathProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2070,96 +1904,95 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementCustomKeyProperty.builder()
 
-      public override fun cookie(cookie: IResolvable) {
+      override fun cookie(cookie: IResolvable) {
         cdkBuilder.cookie(cookie.let(IResolvable::unwrap))
       }
 
-      public override fun cookie(cookie: RateLimitCookieProperty) {
+      override fun cookie(cookie: RateLimitCookieProperty) {
         cdkBuilder.cookie(cookie.let(RateLimitCookieProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("55b22f42f92ee4166d1cbe6d228ecd33bfc2230078ba6aecf45580ab50cb5ff5")
-      public override fun cookie(cookie: RateLimitCookieProperty.Builder.() -> Unit): Unit =
+      override fun cookie(cookie: RateLimitCookieProperty.Builder.() -> Unit): Unit =
           cookie(RateLimitCookieProperty(cookie))
 
-      public override fun forwardedIp(forwardedIp: Any) {
+      override fun forwardedIp(forwardedIp: Any) {
         cdkBuilder.forwardedIp(forwardedIp)
       }
 
-      public override fun `header`(`header`: IResolvable) {
+      override fun `header`(`header`: IResolvable) {
         cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
       }
 
-      public override fun `header`(`header`: RateLimitHeaderProperty) {
+      override fun `header`(`header`: RateLimitHeaderProperty) {
         cdkBuilder.`header`(`header`.let(RateLimitHeaderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6562f2228682bc6e2b661e4b54548c2c1d088540942ab6fd64ad3050c8f4cf74")
-      public override fun `header`(`header`: RateLimitHeaderProperty.Builder.() -> Unit): Unit =
+      override fun `header`(`header`: RateLimitHeaderProperty.Builder.() -> Unit): Unit =
           `header`(RateLimitHeaderProperty(`header`))
 
-      public override fun httpMethod(httpMethod: Any) {
+      override fun httpMethod(httpMethod: Any) {
         cdkBuilder.httpMethod(httpMethod)
       }
 
-      public override fun ip(ip: Any) {
+      override fun ip(ip: Any) {
         cdkBuilder.ip(ip)
       }
 
-      public override fun labelNamespace(labelNamespace: IResolvable) {
+      override fun labelNamespace(labelNamespace: IResolvable) {
         cdkBuilder.labelNamespace(labelNamespace.let(IResolvable::unwrap))
       }
 
-      public override fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty) {
+      override fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty) {
         cdkBuilder.labelNamespace(labelNamespace.let(RateLimitLabelNamespaceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("462f6556cda43ce02a198ec04c8a27523800fea2a014292d9ef2127f8fd03f0f")
-      public override
+      override
           fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty.Builder.() -> Unit):
           Unit = labelNamespace(RateLimitLabelNamespaceProperty(labelNamespace))
 
-      public override fun queryArgument(queryArgument: IResolvable) {
+      override fun queryArgument(queryArgument: IResolvable) {
         cdkBuilder.queryArgument(queryArgument.let(IResolvable::unwrap))
       }
 
-      public override fun queryArgument(queryArgument: RateLimitQueryArgumentProperty) {
+      override fun queryArgument(queryArgument: RateLimitQueryArgumentProperty) {
         cdkBuilder.queryArgument(queryArgument.let(RateLimitQueryArgumentProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a419c7be9e091c68d11d4693299510992345a72ec91adfd3873158c2a34fbea8")
-      public override
-          fun queryArgument(queryArgument: RateLimitQueryArgumentProperty.Builder.() -> Unit): Unit
-          = queryArgument(RateLimitQueryArgumentProperty(queryArgument))
+      override fun queryArgument(queryArgument: RateLimitQueryArgumentProperty.Builder.() -> Unit):
+          Unit = queryArgument(RateLimitQueryArgumentProperty(queryArgument))
 
-      public override fun queryString(queryString: IResolvable) {
+      override fun queryString(queryString: IResolvable) {
         cdkBuilder.queryString(queryString.let(IResolvable::unwrap))
       }
 
-      public override fun queryString(queryString: RateLimitQueryStringProperty) {
+      override fun queryString(queryString: RateLimitQueryStringProperty) {
         cdkBuilder.queryString(queryString.let(RateLimitQueryStringProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4b69b326274f5afdd3f4e88bfefaed942d4dbb5cb89d76a227030e75e241db0e")
-      public override fun queryString(queryString: RateLimitQueryStringProperty.Builder.() -> Unit):
-          Unit = queryString(RateLimitQueryStringProperty(queryString))
+      override fun queryString(queryString: RateLimitQueryStringProperty.Builder.() -> Unit): Unit =
+          queryString(RateLimitQueryStringProperty(queryString))
 
-      public override fun uriPath(uriPath: IResolvable) {
+      override fun uriPath(uriPath: IResolvable) {
         cdkBuilder.uriPath(uriPath.let(IResolvable::unwrap))
       }
 
-      public override fun uriPath(uriPath: RateLimitUriPathProperty) {
+      override fun uriPath(uriPath: RateLimitUriPathProperty) {
         cdkBuilder.uriPath(uriPath.let(RateLimitUriPathProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8f5655c6137be95b34ce4ab64e46b98f147382c959051b102e0061024707e3ec")
-      public override fun uriPath(uriPath: RateLimitUriPathProperty.Builder.() -> Unit): Unit =
+      override fun uriPath(uriPath: RateLimitUriPathProperty.Builder.() -> Unit): Unit =
           uriPath(RateLimitUriPathProperty(uriPath))
 
       public fun build():
@@ -2171,23 +2004,23 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementCustomKeyProperty,
     ) : RateBasedStatementCustomKeyProperty {
-      public override fun cookie(): Any? = unwrap(this).getCookie()
+      override fun cookie(): Any? = unwrap(this).getCookie()
 
-      public override fun forwardedIp(): Any? = unwrap(this).getForwardedIp()
+      override fun forwardedIp(): Any? = unwrap(this).getForwardedIp()
 
-      public override fun `header`(): Any? = unwrap(this).getHeader()
+      override fun `header`(): Any? = unwrap(this).getHeader()
 
-      public override fun httpMethod(): Any? = unwrap(this).getHttpMethod()
+      override fun httpMethod(): Any? = unwrap(this).getHttpMethod()
 
-      public override fun ip(): Any? = unwrap(this).getIp()
+      override fun ip(): Any? = unwrap(this).getIp()
 
-      public override fun labelNamespace(): Any? = unwrap(this).getLabelNamespace()
+      override fun labelNamespace(): Any? = unwrap(this).getLabelNamespace()
 
-      public override fun queryArgument(): Any? = unwrap(this).getQueryArgument()
+      override fun queryArgument(): Any? = unwrap(this).getQueryArgument()
 
-      public override fun queryString(): Any? = unwrap(this).getQueryString()
+      override fun queryString(): Any? = unwrap(this).getQueryString()
 
-      public override fun uriPath(): Any? = unwrap(this).getUriPath()
+      override fun uriPath(): Any? = unwrap(this).getUriPath()
     }
 
     public companion object {
@@ -2219,14 +2052,11 @@ public open class CfnRuleGroup internal constructor(
     public fun position(): String
 
     public interface Builder {
-      public fun fallbackBehavior(fallbackBehavior: String) {
-      }
+      public fun fallbackBehavior(fallbackBehavior: String)
 
-      public fun headerName(headerName: String) {
-      }
+      public fun headerName(headerName: String)
 
-      public fun position(position: String) {
-      }
+      public fun position(position: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2235,15 +2065,15 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetForwardedIPConfigurationProperty.builder()
 
-      public override fun fallbackBehavior(fallbackBehavior: String) {
+      override fun fallbackBehavior(fallbackBehavior: String) {
         cdkBuilder.fallbackBehavior(fallbackBehavior)
       }
 
-      public override fun headerName(headerName: String) {
+      override fun headerName(headerName: String) {
         cdkBuilder.headerName(headerName)
       }
 
-      public override fun position(position: String) {
+      override fun position(position: String) {
         cdkBuilder.position(position)
       }
 
@@ -2256,11 +2086,11 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetForwardedIPConfigurationProperty,
     ) : IPSetForwardedIPConfigurationProperty {
-      public override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
 
-      public override fun headerName(): String = unwrap(this).getHeaderName()
+      override fun headerName(): String = unwrap(this).getHeaderName()
 
-      public override fun position(): String = unwrap(this).getPosition()
+      override fun position(): String = unwrap(this).getPosition()
     }
 
     public companion object {
@@ -2290,21 +2120,17 @@ public open class CfnRuleGroup internal constructor(
     public fun ipSetForwardedIpConfig(): Any? = unwrap(this).getIpSetForwardedIpConfig()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IResolvable) {
-      }
+      public fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IResolvable)
 
       public
-          fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty) {
-      }
+          fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fee0efc830f80625d95a91debb07093187d37f3a8db09be387f35560590f0d96")
       public
-          fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2313,22 +2139,22 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetReferenceStatementProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IResolvable) {
+      override fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IResolvable) {
         cdkBuilder.ipSetForwardedIpConfig(ipSetForwardedIpConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty) {
         cdkBuilder.ipSetForwardedIpConfig(ipSetForwardedIpConfig.let(IPSetForwardedIPConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fee0efc830f80625d95a91debb07093187d37f3a8db09be387f35560590f0d96")
-      public override
+      override
           fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty.Builder.() -> Unit):
           Unit =
           ipSetForwardedIpConfig(IPSetForwardedIPConfigurationProperty(ipSetForwardedIpConfig))
@@ -2342,9 +2168,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.IPSetReferenceStatementProperty,
     ) : IPSetReferenceStatementProperty {
-      public override fun arn(): String = unwrap(this).getArn()
+      override fun arn(): String = unwrap(this).getArn()
 
-      public override fun ipSetForwardedIpConfig(): Any? = unwrap(this).getIpSetForwardedIpConfig()
+      override fun ipSetForwardedIpConfig(): Any? = unwrap(this).getIpSetForwardedIpConfig()
     }
 
     public companion object {
@@ -2371,11 +2197,9 @@ public open class CfnRuleGroup internal constructor(
     public fun statements(): Any
 
     public interface Builder {
-      public fun statements(statements: IResolvable) {
-      }
+      public fun statements(statements: IResolvable)
 
-      public fun statements(statements: List<Any>) {
-      }
+      public fun statements(statements: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2383,11 +2207,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty.builder()
 
-      public override fun statements(statements: IResolvable) {
+      override fun statements(statements: IResolvable) {
         cdkBuilder.statements(statements.let(IResolvable::unwrap))
       }
 
-      public override fun statements(statements: List<Any>) {
+      override fun statements(statements: List<Any>) {
         cdkBuilder.statements(statements)
       }
 
@@ -2399,7 +2223,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty,
     ) : OrStatementProperty {
-      public override fun statements(): Any = unwrap(this).getStatements()
+      override fun statements(): Any = unwrap(this).getStatements()
     }
 
     public companion object {
@@ -2434,31 +2258,23 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cdd402302b29c1a81a7d3bbe74b2e07df195a1a2ecc79ad6adf6b9023a48487c")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun positionalConstraint(positionalConstraint: String) {
-      }
+      public fun positionalConstraint(positionalConstraint: String)
 
-      public fun searchString(searchString: String) {
-      }
+      public fun searchString(searchString: String)
 
-      public fun searchStringBase64(searchStringBase64: String) {
-      }
+      public fun searchStringBase64(searchStringBase64: String)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2466,36 +2282,36 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cdd402302b29c1a81a7d3bbe74b2e07df195a1a2ecc79ad6adf6b9023a48487c")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun positionalConstraint(positionalConstraint: String) {
+      override fun positionalConstraint(positionalConstraint: String) {
         cdkBuilder.positionalConstraint(positionalConstraint)
       }
 
-      public override fun searchString(searchString: String) {
+      override fun searchString(searchString: String) {
         cdkBuilder.searchString(searchString)
       }
 
-      public override fun searchStringBase64(searchStringBase64: String) {
+      override fun searchStringBase64(searchStringBase64: String) {
         cdkBuilder.searchStringBase64(searchStringBase64)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -2508,15 +2324,15 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty,
     ) : ByteMatchStatementProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun positionalConstraint(): String = unwrap(this).getPositionalConstraint()
+      override fun positionalConstraint(): String = unwrap(this).getPositionalConstraint()
 
-      public override fun searchString(): String? = unwrap(this).getSearchString()
+      override fun searchString(): String? = unwrap(this).getSearchString()
 
-      public override fun searchStringBase64(): String? = unwrap(this).getSearchStringBase64()
+      override fun searchStringBase64(): String? = unwrap(this).getSearchStringBase64()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -2547,25 +2363,19 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eb40ce3911817478c43de73e702f6c1ca56a470dc33f39e4ca663ee4db2f78be")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun regexString(regexString: String) {
-      }
+      public fun regexString(regexString: String)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2573,28 +2383,28 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eb40ce3911817478c43de73e702f6c1ca56a470dc33f39e4ca663ee4db2f78be")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun regexString(regexString: String) {
+      override fun regexString(regexString: String) {
         cdkBuilder.regexString(regexString)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -2607,11 +2417,11 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty,
     ) : RegexMatchStatementProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun regexString(): String = unwrap(this).getRegexString()
+      override fun regexString(): String = unwrap(this).getRegexString()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -2638,17 +2448,14 @@ public open class CfnRuleGroup internal constructor(
     public fun immunityTimeProperty(): Any? = unwrap(this).getImmunityTimeProperty()
 
     public interface Builder {
-      public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
-      }
+      public fun immunityTimeProperty(immunityTimeProperty: IResolvable)
 
-      public fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
-      }
+      public fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25712aa626ae3a601c0c8fb1bdf61d71e0be3743f106c426601d52f166c580ec")
       public
-          fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty.Builder.() -> Unit) {
-      }
+          fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2656,17 +2463,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeConfigProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeConfigProperty.builder()
 
-      public override fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
+      override fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
         cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(IResolvable::unwrap))
       }
 
-      public override fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
+      override fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
         cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(ImmunityTimePropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25712aa626ae3a601c0c8fb1bdf61d71e0be3743f106c426601d52f166c580ec")
-      public override
+      override
           fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty.Builder.() -> Unit):
           Unit = immunityTimeProperty(ImmunityTimePropertyProperty(immunityTimeProperty))
 
@@ -2678,7 +2485,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeConfigProperty,
     ) : ChallengeConfigProperty {
-      public override fun immunityTimeProperty(): Any? = unwrap(this).getImmunityTimeProperty()
+      override fun immunityTimeProperty(): Any? = unwrap(this).getImmunityTimeProperty()
     }
 
     public companion object {
@@ -2707,11 +2514,9 @@ public open class CfnRuleGroup internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2719,11 +2524,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.TextTransformationProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.TextTransformationProperty.builder()
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -2736,9 +2541,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.TextTransformationProperty,
     ) : TextTransformationProperty {
-      public override fun priority(): Number = unwrap(this).getPriority()
+      override fun priority(): Number = unwrap(this).getPriority()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -2765,17 +2570,14 @@ public open class CfnRuleGroup internal constructor(
     public fun immunityTimeProperty(): Any? = unwrap(this).getImmunityTimeProperty()
 
     public interface Builder {
-      public fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
-      }
+      public fun immunityTimeProperty(immunityTimeProperty: IResolvable)
 
-      public fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
-      }
+      public fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a172e854a3c4319f474ed6bdb9a563321b7c9c1a3f6d04c8bb7394d5423b915e")
       public
-          fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty.Builder.() -> Unit) {
-      }
+          fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2783,17 +2585,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaConfigProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaConfigProperty.builder()
 
-      public override fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
+      override fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
         cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(IResolvable::unwrap))
       }
 
-      public override fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
+      override fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
         cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(ImmunityTimePropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a172e854a3c4319f474ed6bdb9a563321b7c9c1a3f6d04c8bb7394d5423b915e")
-      public override
+      override
           fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty.Builder.() -> Unit):
           Unit = immunityTimeProperty(ImmunityTimePropertyProperty(immunityTimeProperty))
 
@@ -2805,7 +2607,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaConfigProperty,
     ) : CaptchaConfigProperty {
-      public override fun immunityTimeProperty(): Any? = unwrap(this).getImmunityTimeProperty()
+      override fun immunityTimeProperty(): Any? = unwrap(this).getImmunityTimeProperty()
     }
 
     public companion object {
@@ -2832,17 +2634,14 @@ public open class CfnRuleGroup internal constructor(
     public fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
 
     public interface Builder {
-      public fun customRequestHandling(customRequestHandling: IResolvable) {
-      }
+      public fun customRequestHandling(customRequestHandling: IResolvable)
 
-      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-      }
+      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("791b1be31c13a12b3ccd0f9185ac3d0c71a8a444165a47156e8cf5e1b558a401")
       public
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit) {
-      }
+          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2850,18 +2649,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CountProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CountProperty.builder()
 
-      public override fun customRequestHandling(customRequestHandling: IResolvable) {
+      override fun customRequestHandling(customRequestHandling: IResolvable) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
+      override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("791b1be31c13a12b3ccd0f9185ac3d0c71a8a444165a47156e8cf5e1b558a401")
-      public override
+      override
           fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit):
           Unit = customRequestHandling(CustomRequestHandlingProperty(customRequestHandling))
 
@@ -2872,7 +2670,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CountProperty,
     ) : CountProperty {
-      public override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
+      override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
     }
 
     public companion object {
@@ -2899,8 +2697,7 @@ public open class CfnRuleGroup internal constructor(
     public fun oversizeHandling(): String? = unwrap(this).getOversizeHandling()
 
     public interface Builder {
-      public fun oversizeHandling(oversizeHandling: String) {
-      }
+      public fun oversizeHandling(oversizeHandling: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2908,7 +2705,7 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.BodyProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.BodyProperty.builder()
 
-      public override fun oversizeHandling(oversizeHandling: String) {
+      override fun oversizeHandling(oversizeHandling: String) {
         cdkBuilder.oversizeHandling(oversizeHandling)
       }
 
@@ -2919,7 +2716,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.BodyProperty,
     ) : BodyProperty {
-      public override fun oversizeHandling(): String? = unwrap(this).getOversizeHandling()
+      override fun oversizeHandling(): String? = unwrap(this).getOversizeHandling()
     }
 
     public companion object {
@@ -2945,11 +2742,9 @@ public open class CfnRuleGroup internal constructor(
     public fun insertHeaders(): Any
 
     public interface Builder {
-      public fun insertHeaders(insertHeaders: IResolvable) {
-      }
+      public fun insertHeaders(insertHeaders: IResolvable)
 
-      public fun insertHeaders(insertHeaders: List<Any>) {
-      }
+      public fun insertHeaders(insertHeaders: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2957,11 +2752,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty.builder()
 
-      public override fun insertHeaders(insertHeaders: IResolvable) {
+      override fun insertHeaders(insertHeaders: IResolvable) {
         cdkBuilder.insertHeaders(insertHeaders.let(IResolvable::unwrap))
       }
 
-      public override fun insertHeaders(insertHeaders: List<Any>) {
+      override fun insertHeaders(insertHeaders: List<Any>) {
         cdkBuilder.insertHeaders(insertHeaders)
       }
 
@@ -2974,7 +2769,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty,
     ) : CustomRequestHandlingProperty {
-      public override fun insertHeaders(): Any = unwrap(this).getInsertHeaders()
+      override fun insertHeaders(): Any = unwrap(this).getInsertHeaders()
     }
 
     public companion object {
@@ -3003,14 +2798,11 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3018,15 +2810,15 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -3038,9 +2830,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty,
     ) : RateLimitCookieProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -3069,11 +2861,9 @@ public open class CfnRuleGroup internal constructor(
     public fun headerName(): String
 
     public interface Builder {
-      public fun fallbackBehavior(fallbackBehavior: String) {
-      }
+      public fun fallbackBehavior(fallbackBehavior: String)
 
-      public fun headerName(headerName: String) {
-      }
+      public fun headerName(headerName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3082,11 +2872,11 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ForwardedIPConfigurationProperty.builder()
 
-      public override fun fallbackBehavior(fallbackBehavior: String) {
+      override fun fallbackBehavior(fallbackBehavior: String) {
         cdkBuilder.fallbackBehavior(fallbackBehavior)
       }
 
-      public override fun headerName(headerName: String) {
+      override fun headerName(headerName: String) {
         cdkBuilder.headerName(headerName)
       }
 
@@ -3099,9 +2889,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ForwardedIPConfigurationProperty,
     ) : ForwardedIPConfigurationProperty {
-      public override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
+      override fun fallbackBehavior(): String = unwrap(this).getFallbackBehavior()
 
-      public override fun headerName(): String = unwrap(this).getHeaderName()
+      override fun headerName(): String = unwrap(this).getHeaderName()
     }
 
     public companion object {
@@ -3128,17 +2918,14 @@ public open class CfnRuleGroup internal constructor(
     public fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
 
     public interface Builder {
-      public fun customRequestHandling(customRequestHandling: IResolvable) {
-      }
+      public fun customRequestHandling(customRequestHandling: IResolvable)
 
-      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-      }
+      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a5d98b21c1d35798283e3eb768a2465de92a428b3bcc6e60aaa0b69c1f119bc4")
       public
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit) {
-      }
+          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3146,18 +2933,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeProperty.builder()
 
-      public override fun customRequestHandling(customRequestHandling: IResolvable) {
+      override fun customRequestHandling(customRequestHandling: IResolvable) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
+      override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a5d98b21c1d35798283e3eb768a2465de92a428b3bcc6e60aaa0b69c1f119bc4")
-      public override
+      override
           fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit):
           Unit = customRequestHandling(CustomRequestHandlingProperty(customRequestHandling))
 
@@ -3168,7 +2954,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.ChallengeProperty,
     ) : ChallengeProperty {
-      public override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
+      override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
     }
 
     public companion object {
@@ -3197,11 +2983,9 @@ public open class CfnRuleGroup internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3209,11 +2993,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomHTTPHeaderProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomHTTPHeaderProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -3226,9 +3010,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomHTTPHeaderProperty,
     ) : CustomHTTPHeaderProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -3259,25 +3043,19 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a2377193f1c16e3206d2f39d8eec33c0c3f4e6036badf8868a13762c5b3d6e4e")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3286,28 +3064,28 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexPatternSetReferenceStatementProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a2377193f1c16e3206d2f39d8eec33c0c3f4e6036badf8868a13762c5b3d6e4e")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -3320,11 +3098,11 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexPatternSetReferenceStatementProperty,
     ) : RegexPatternSetReferenceStatementProperty {
-      public override fun arn(): String = unwrap(this).getArn()
+      override fun arn(): String = unwrap(this).getArn()
 
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -3354,11 +3132,9 @@ public open class CfnRuleGroup internal constructor(
     public fun contentType(): String
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
 
-      public fun contentType(contentType: String) {
-      }
+      public fun contentType(contentType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3366,11 +3142,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseBodyProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseBodyProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
-      public override fun contentType(contentType: String) {
+      override fun contentType(contentType: String) {
         cdkBuilder.contentType(contentType)
       }
 
@@ -3383,9 +3159,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseBodyProperty,
     ) : CustomResponseBodyProperty {
-      public override fun content(): String = unwrap(this).getContent()
+      override fun content(): String = unwrap(this).getContent()
 
-      public override fun contentType(): String = unwrap(this).getContentType()
+      override fun contentType(): String = unwrap(this).getContentType()
     }
 
     public companion object {
@@ -3414,22 +3190,17 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b617bbed9fdad39e816833cd6c4c77a1ae17137172debd310ea2595d90777376")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3437,24 +3208,24 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b617bbed9fdad39e816833cd6c4c77a1ae17137172debd310ea2595d90777376")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -3467,9 +3238,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty,
     ) : XssMatchStatementProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -3496,17 +3267,14 @@ public open class CfnRuleGroup internal constructor(
     public fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
 
     public interface Builder {
-      public fun customRequestHandling(customRequestHandling: IResolvable) {
-      }
+      public fun customRequestHandling(customRequestHandling: IResolvable)
 
-      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-      }
+      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab4f0859eb9840e581b7111a708ff3e97e8bb3087dc624f47b149e0643ef8b44")
       public
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit) {
-      }
+          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3514,18 +3282,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AllowProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AllowProperty.builder()
 
-      public override fun customRequestHandling(customRequestHandling: IResolvable) {
+      override fun customRequestHandling(customRequestHandling: IResolvable) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
+      override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ab4f0859eb9840e581b7111a708ff3e97e8bb3087dc624f47b149e0643ef8b44")
-      public override
+      override
           fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit):
           Unit = customRequestHandling(CustomRequestHandlingProperty(customRequestHandling))
 
@@ -3536,7 +3303,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.AllowProperty,
     ) : AllowProperty {
-      public override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
+      override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
     }
 
     public companion object {
@@ -3563,8 +3330,7 @@ public open class CfnRuleGroup internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3572,7 +3338,7 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleHeaderProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleHeaderProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -3584,7 +3350,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleHeaderProperty,
     ) : SingleHeaderProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -3615,22 +3381,17 @@ public open class CfnRuleGroup internal constructor(
     public fun oversizeHandling(): String
 
     public interface Builder {
-      public fun matchPattern(matchPattern: IResolvable) {
-      }
+      public fun matchPattern(matchPattern: IResolvable)
 
-      public fun matchPattern(matchPattern: CookieMatchPatternProperty) {
-      }
+      public fun matchPattern(matchPattern: CookieMatchPatternProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("33c7a4294d46b15314faa20cbc581a5299fe769d51328a38caa4a269c8f46a67")
-      public fun matchPattern(matchPattern: CookieMatchPatternProperty.Builder.() -> Unit) {
-      }
+      public fun matchPattern(matchPattern: CookieMatchPatternProperty.Builder.() -> Unit)
 
-      public fun matchScope(matchScope: String) {
-      }
+      public fun matchScope(matchScope: String)
 
-      public fun oversizeHandling(oversizeHandling: String) {
-      }
+      public fun oversizeHandling(oversizeHandling: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3638,24 +3399,24 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookiesProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookiesProperty.builder()
 
-      public override fun matchPattern(matchPattern: IResolvable) {
+      override fun matchPattern(matchPattern: IResolvable) {
         cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
       }
 
-      public override fun matchPattern(matchPattern: CookieMatchPatternProperty) {
+      override fun matchPattern(matchPattern: CookieMatchPatternProperty) {
         cdkBuilder.matchPattern(matchPattern.let(CookieMatchPatternProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("33c7a4294d46b15314faa20cbc581a5299fe769d51328a38caa4a269c8f46a67")
-      public override fun matchPattern(matchPattern: CookieMatchPatternProperty.Builder.() -> Unit):
-          Unit = matchPattern(CookieMatchPatternProperty(matchPattern))
+      override fun matchPattern(matchPattern: CookieMatchPatternProperty.Builder.() -> Unit): Unit =
+          matchPattern(CookieMatchPatternProperty(matchPattern))
 
-      public override fun matchScope(matchScope: String) {
+      override fun matchScope(matchScope: String) {
         cdkBuilder.matchScope(matchScope)
       }
 
-      public override fun oversizeHandling(oversizeHandling: String) {
+      override fun oversizeHandling(oversizeHandling: String) {
         cdkBuilder.oversizeHandling(oversizeHandling)
       }
 
@@ -3666,11 +3427,11 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookiesProperty,
     ) : CookiesProperty {
-      public override fun matchPattern(): Any = unwrap(this).getMatchPattern()
+      override fun matchPattern(): Any = unwrap(this).getMatchPattern()
 
-      public override fun matchScope(): String = unwrap(this).getMatchScope()
+      override fun matchScope(): String = unwrap(this).getMatchScope()
 
-      public override fun oversizeHandling(): String = unwrap(this).getOversizeHandling()
+      override fun oversizeHandling(): String = unwrap(this).getOversizeHandling()
     }
 
     public companion object {
@@ -3697,8 +3458,7 @@ public open class CfnRuleGroup internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3706,7 +3466,7 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleQueryArgumentProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleQueryArgumentProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -3719,7 +3479,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SingleQueryArgumentProperty,
     ) : SingleQueryArgumentProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -3748,11 +3508,9 @@ public open class CfnRuleGroup internal constructor(
     public fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
 
     public interface Builder {
-      public fun all(all: Any) {
-      }
+      public fun all(all: Any)
 
-      public fun includedPaths(includedPaths: List<String>) {
-      }
+      public fun includedPaths(includedPaths: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -3760,11 +3518,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty.builder()
 
-      public override fun all(all: Any) {
+      override fun all(all: Any) {
         cdkBuilder.all(all)
       }
 
-      public override fun includedPaths(includedPaths: List<String>) {
+      override fun includedPaths(includedPaths: List<String>) {
         cdkBuilder.includedPaths(includedPaths)
       }
 
@@ -3777,10 +3535,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty,
     ) : JsonMatchPatternProperty {
-      public override fun all(): Any? = unwrap(this).getAll()
+      override fun all(): Any? = unwrap(this).getAll()
 
-      public override fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?:
-          emptyList()
+      override fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
     }
 
     public companion object {
@@ -3807,11 +3564,9 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3819,11 +3574,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty.builder()
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -3836,7 +3591,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty,
     ) : RateLimitUriPathProperty {
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -3863,16 +3618,13 @@ public open class CfnRuleGroup internal constructor(
     public fun customResponse(): Any? = unwrap(this).getCustomResponse()
 
     public interface Builder {
-      public fun customResponse(customResponse: IResolvable) {
-      }
+      public fun customResponse(customResponse: IResolvable)
 
-      public fun customResponse(customResponse: CustomResponseProperty) {
-      }
+      public fun customResponse(customResponse: CustomResponseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a661143ecc23271f0e9bf9540d9034164117bf5f41099f43a8eb0cf4c1b20a3")
-      public fun customResponse(customResponse: CustomResponseProperty.Builder.() -> Unit) {
-      }
+      public fun customResponse(customResponse: CustomResponseProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3880,18 +3632,18 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty.builder()
 
-      public override fun customResponse(customResponse: IResolvable) {
+      override fun customResponse(customResponse: IResolvable) {
         cdkBuilder.customResponse(customResponse.let(IResolvable::unwrap))
       }
 
-      public override fun customResponse(customResponse: CustomResponseProperty) {
+      override fun customResponse(customResponse: CustomResponseProperty) {
         cdkBuilder.customResponse(customResponse.let(CustomResponseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a661143ecc23271f0e9bf9540d9034164117bf5f41099f43a8eb0cf4c1b20a3")
-      public override fun customResponse(customResponse: CustomResponseProperty.Builder.() -> Unit):
-          Unit = customResponse(CustomResponseProperty(customResponse))
+      override fun customResponse(customResponse: CustomResponseProperty.Builder.() -> Unit): Unit =
+          customResponse(CustomResponseProperty(customResponse))
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty =
           cdkBuilder.build()
@@ -3900,7 +3652,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.BlockProperty,
     ) : BlockProperty {
-      public override fun customResponse(): Any? = unwrap(this).getCustomResponse()
+      override fun customResponse(): Any? = unwrap(this).getCustomResponse()
     }
 
     public companion object {
@@ -3935,40 +3687,30 @@ public open class CfnRuleGroup internal constructor(
     public fun scopeDownStatement(): Any? = unwrap(this).getScopeDownStatement()
 
     public interface Builder {
-      public fun aggregateKeyType(aggregateKeyType: String) {
-      }
+      public fun aggregateKeyType(aggregateKeyType: String)
 
-      public fun customKeys(customKeys: IResolvable) {
-      }
+      public fun customKeys(customKeys: IResolvable)
 
-      public fun customKeys(customKeys: List<Any>) {
-      }
+      public fun customKeys(customKeys: List<Any>)
 
-      public fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
-      }
+      public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
 
-      public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
-      }
+      public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("66d6b4b34b8729fab7ced212e36788285f427e1a88ab1a93bd50f8f1c905f5c8")
       public
-          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit)
 
-      public fun limit(limit: Number) {
-      }
+      public fun limit(limit: Number)
 
-      public fun scopeDownStatement(scopeDownStatement: IResolvable) {
-      }
+      public fun scopeDownStatement(scopeDownStatement: IResolvable)
 
-      public fun scopeDownStatement(scopeDownStatement: StatementProperty) {
-      }
+      public fun scopeDownStatement(scopeDownStatement: StatementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("46c7c628fa6c373879f7fe437cda0831a075f3df8980c268da4be8cea4e8348b")
-      public fun scopeDownStatement(scopeDownStatement: StatementProperty.Builder.() -> Unit) {
-      }
+      public fun scopeDownStatement(scopeDownStatement: StatementProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3976,49 +3718,48 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty.builder()
 
-      public override fun aggregateKeyType(aggregateKeyType: String) {
+      override fun aggregateKeyType(aggregateKeyType: String) {
         cdkBuilder.aggregateKeyType(aggregateKeyType)
       }
 
-      public override fun customKeys(customKeys: IResolvable) {
+      override fun customKeys(customKeys: IResolvable) {
         cdkBuilder.customKeys(customKeys.let(IResolvable::unwrap))
       }
 
-      public override fun customKeys(customKeys: List<Any>) {
+      override fun customKeys(customKeys: List<Any>) {
         cdkBuilder.customKeys(customKeys)
       }
 
-      public override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
+      override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
       }
 
-      public override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
+      override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("66d6b4b34b8729fab7ced212e36788285f427e1a88ab1a93bd50f8f1c905f5c8")
-      public override
+      override
           fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty.Builder.() -> Unit):
           Unit = forwardedIpConfig(ForwardedIPConfigurationProperty(forwardedIpConfig))
 
-      public override fun limit(limit: Number) {
+      override fun limit(limit: Number) {
         cdkBuilder.limit(limit)
       }
 
-      public override fun scopeDownStatement(scopeDownStatement: IResolvable) {
+      override fun scopeDownStatement(scopeDownStatement: IResolvable) {
         cdkBuilder.scopeDownStatement(scopeDownStatement.let(IResolvable::unwrap))
       }
 
-      public override fun scopeDownStatement(scopeDownStatement: StatementProperty) {
+      override fun scopeDownStatement(scopeDownStatement: StatementProperty) {
         cdkBuilder.scopeDownStatement(scopeDownStatement.let(StatementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("46c7c628fa6c373879f7fe437cda0831a075f3df8980c268da4be8cea4e8348b")
-      public override
-          fun scopeDownStatement(scopeDownStatement: StatementProperty.Builder.() -> Unit): Unit =
-          scopeDownStatement(StatementProperty(scopeDownStatement))
+      override fun scopeDownStatement(scopeDownStatement: StatementProperty.Builder.() -> Unit):
+          Unit = scopeDownStatement(StatementProperty(scopeDownStatement))
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty =
@@ -4029,15 +3770,15 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateBasedStatementProperty,
     ) : RateBasedStatementProperty {
-      public override fun aggregateKeyType(): String = unwrap(this).getAggregateKeyType()
+      override fun aggregateKeyType(): String = unwrap(this).getAggregateKeyType()
 
-      public override fun customKeys(): Any? = unwrap(this).getCustomKeys()
+      override fun customKeys(): Any? = unwrap(this).getCustomKeys()
 
-      public override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
+      override fun forwardedIpConfig(): Any? = unwrap(this).getForwardedIpConfig()
 
-      public override fun limit(): Number = unwrap(this).getLimit()
+      override fun limit(): Number = unwrap(this).getLimit()
 
-      public override fun scopeDownStatement(): Any? = unwrap(this).getScopeDownStatement()
+      override fun scopeDownStatement(): Any? = unwrap(this).getScopeDownStatement()
     }
 
     public companion object {
@@ -4066,14 +3807,11 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4081,15 +3819,15 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -4101,9 +3839,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty,
     ) : RateLimitHeaderProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -4134,22 +3872,17 @@ public open class CfnRuleGroup internal constructor(
     public fun oversizeHandling(): String
 
     public interface Builder {
-      public fun matchPattern(matchPattern: IResolvable) {
-      }
+      public fun matchPattern(matchPattern: IResolvable)
 
-      public fun matchPattern(matchPattern: HeaderMatchPatternProperty) {
-      }
+      public fun matchPattern(matchPattern: HeaderMatchPatternProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4ca701f0e2a77272bf2f76e6d7688fc4f80233f972755f0c81b1e13bacd25f1d")
-      public fun matchPattern(matchPattern: HeaderMatchPatternProperty.Builder.() -> Unit) {
-      }
+      public fun matchPattern(matchPattern: HeaderMatchPatternProperty.Builder.() -> Unit)
 
-      public fun matchScope(matchScope: String) {
-      }
+      public fun matchScope(matchScope: String)
 
-      public fun oversizeHandling(oversizeHandling: String) {
-      }
+      public fun oversizeHandling(oversizeHandling: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4157,24 +3890,24 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeadersProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeadersProperty.builder()
 
-      public override fun matchPattern(matchPattern: IResolvable) {
+      override fun matchPattern(matchPattern: IResolvable) {
         cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
       }
 
-      public override fun matchPattern(matchPattern: HeaderMatchPatternProperty) {
+      override fun matchPattern(matchPattern: HeaderMatchPatternProperty) {
         cdkBuilder.matchPattern(matchPattern.let(HeaderMatchPatternProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4ca701f0e2a77272bf2f76e6d7688fc4f80233f972755f0c81b1e13bacd25f1d")
-      public override fun matchPattern(matchPattern: HeaderMatchPatternProperty.Builder.() -> Unit):
-          Unit = matchPattern(HeaderMatchPatternProperty(matchPattern))
+      override fun matchPattern(matchPattern: HeaderMatchPatternProperty.Builder.() -> Unit): Unit =
+          matchPattern(HeaderMatchPatternProperty(matchPattern))
 
-      public override fun matchScope(matchScope: String) {
+      override fun matchScope(matchScope: String) {
         cdkBuilder.matchScope(matchScope)
       }
 
-      public override fun oversizeHandling(oversizeHandling: String) {
+      override fun oversizeHandling(oversizeHandling: String) {
         cdkBuilder.oversizeHandling(oversizeHandling)
       }
 
@@ -4185,11 +3918,11 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeadersProperty,
     ) : HeadersProperty {
-      public override fun matchPattern(): Any = unwrap(this).getMatchPattern()
+      override fun matchPattern(): Any = unwrap(this).getMatchPattern()
 
-      public override fun matchScope(): String = unwrap(this).getMatchScope()
+      override fun matchScope(): String = unwrap(this).getMatchScope()
 
-      public override fun oversizeHandling(): String = unwrap(this).getOversizeHandling()
+      override fun oversizeHandling(): String = unwrap(this).getOversizeHandling()
     }
 
     public companion object {
@@ -4220,14 +3953,11 @@ public open class CfnRuleGroup internal constructor(
     public fun includedHeaders(): List<String> = unwrap(this).getIncludedHeaders() ?: emptyList()
 
     public interface Builder {
-      public fun all(all: Any) {
-      }
+      public fun all(all: Any)
 
-      public fun excludedHeaders(excludedHeaders: List<String>) {
-      }
+      public fun excludedHeaders(excludedHeaders: List<String>)
 
-      public fun includedHeaders(includedHeaders: List<String>) {
-      }
+      public fun includedHeaders(includedHeaders: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -4235,15 +3965,15 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty.builder()
 
-      public override fun all(all: Any) {
+      override fun all(all: Any) {
         cdkBuilder.all(all)
       }
 
-      public override fun excludedHeaders(excludedHeaders: List<String>) {
+      override fun excludedHeaders(excludedHeaders: List<String>) {
         cdkBuilder.excludedHeaders(excludedHeaders)
       }
 
-      public override fun includedHeaders(includedHeaders: List<String>) {
+      override fun includedHeaders(includedHeaders: List<String>) {
         cdkBuilder.includedHeaders(includedHeaders)
       }
 
@@ -4256,12 +3986,12 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty,
     ) : HeaderMatchPatternProperty {
-      public override fun all(): Any? = unwrap(this).getAll()
+      override fun all(): Any? = unwrap(this).getAll()
 
-      public override fun excludedHeaders(): List<String> = unwrap(this).getExcludedHeaders() ?:
+      override fun excludedHeaders(): List<String> = unwrap(this).getExcludedHeaders() ?:
           emptyList()
 
-      public override fun includedHeaders(): List<String> = unwrap(this).getIncludedHeaders() ?:
+      override fun includedHeaders(): List<String> = unwrap(this).getIncludedHeaders() ?:
           emptyList()
     }
 
@@ -4289,8 +4019,7 @@ public open class CfnRuleGroup internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4298,7 +4027,7 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelSummaryProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelSummaryProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -4310,7 +4039,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelSummaryProperty,
     ) : LabelSummaryProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -4337,8 +4066,7 @@ public open class CfnRuleGroup internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4346,7 +4074,7 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -4357,7 +4085,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.LabelProperty,
     ) : LabelProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -4384,11 +4112,9 @@ public open class CfnRuleGroup internal constructor(
     public fun statements(): Any
 
     public interface Builder {
-      public fun statements(statements: IResolvable) {
-      }
+      public fun statements(statements: IResolvable)
 
-      public fun statements(statements: List<Any>) {
-      }
+      public fun statements(statements: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4396,11 +4122,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty.builder()
 
-      public override fun statements(statements: IResolvable) {
+      override fun statements(statements: IResolvable) {
         cdkBuilder.statements(statements.let(IResolvable::unwrap))
       }
 
-      public override fun statements(statements: List<Any>) {
+      override fun statements(statements: List<Any>) {
         cdkBuilder.statements(statements)
       }
 
@@ -4412,7 +4138,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty,
     ) : AndStatementProperty {
-      public override fun statements(): Any = unwrap(this).getStatements()
+      override fun statements(): Any = unwrap(this).getStatements()
     }
 
     public companion object {
@@ -4441,14 +4167,11 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4457,15 +4180,15 @@ public open class CfnRuleGroup internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryArgumentProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -4478,9 +4201,9 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryArgumentProperty,
     ) : RateLimitQueryArgumentProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -4507,11 +4230,9 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4519,11 +4240,11 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty.builder()
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -4536,7 +4257,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty,
     ) : RateLimitQueryStringProperty {
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -4567,25 +4288,19 @@ public open class CfnRuleGroup internal constructor(
     public fun textTransformations(): Any
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5864dba30483c0a63f75efab73f312d58ebc84cc024408d3ae7ad3dadb4f450b")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun sensitivityLevel(sensitivityLevel: String) {
-      }
+      public fun sensitivityLevel(sensitivityLevel: String)
 
-      public fun textTransformations(textTransformations: IResolvable) {
-      }
+      public fun textTransformations(textTransformations: IResolvable)
 
-      public fun textTransformations(textTransformations: List<Any>) {
-      }
+      public fun textTransformations(textTransformations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -4593,28 +4308,28 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5864dba30483c0a63f75efab73f312d58ebc84cc024408d3ae7ad3dadb4f450b")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun sensitivityLevel(sensitivityLevel: String) {
+      override fun sensitivityLevel(sensitivityLevel: String) {
         cdkBuilder.sensitivityLevel(sensitivityLevel)
       }
 
-      public override fun textTransformations(textTransformations: IResolvable) {
+      override fun textTransformations(textTransformations: IResolvable) {
         cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
       }
 
-      public override fun textTransformations(textTransformations: List<Any>) {
+      override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
 
@@ -4627,11 +4342,11 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty,
     ) : SqliMatchStatementProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun sensitivityLevel(): String? = unwrap(this).getSensitivityLevel()
+      override fun sensitivityLevel(): String? = unwrap(this).getSensitivityLevel()
 
-      public override fun textTransformations(): Any = unwrap(this).getTextTransformations()
+      override fun textTransformations(): Any = unwrap(this).getTextTransformations()
     }
 
     public companion object {
@@ -4658,17 +4373,14 @@ public open class CfnRuleGroup internal constructor(
     public fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
 
     public interface Builder {
-      public fun customRequestHandling(customRequestHandling: IResolvable) {
-      }
+      public fun customRequestHandling(customRequestHandling: IResolvable)
 
-      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-      }
+      public fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dde15674439e2c8e007bbc8f6352e40468f1ae87a9a7ac0c04dec65372986592")
       public
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit) {
-      }
+          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4676,18 +4388,17 @@ public open class CfnRuleGroup internal constructor(
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaProperty.builder()
 
-      public override fun customRequestHandling(customRequestHandling: IResolvable) {
+      override fun customRequestHandling(customRequestHandling: IResolvable) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
+      override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
         cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dde15674439e2c8e007bbc8f6352e40468f1ae87a9a7ac0c04dec65372986592")
-      public override
+      override
           fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty.Builder.() -> Unit):
           Unit = customRequestHandling(CustomRequestHandlingProperty(customRequestHandling))
 
@@ -4698,7 +4409,7 @@ public open class CfnRuleGroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.wafv2.CfnRuleGroup.CaptchaProperty,
     ) : CaptchaProperty {
-      public override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
+      override fun customRequestHandling(): Any? = unwrap(this).getCustomRequestHandling()
     }
 
     public companion object {

@@ -45,17 +45,13 @@ public open class CfnLocalGatewayRoute internal constructor(
   }
 
   public interface Builder {
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
-    }
+    public fun localGatewayRouteTableId(localGatewayRouteTableId: String)
 
-    public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
-    }
+    public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String)
 
-    public fun networkInterfaceId(networkInterfaceId: String) {
-    }
+    public fun networkInterfaceId(networkInterfaceId: String)
   }
 
   private class BuilderImpl(
@@ -65,20 +61,19 @@ public open class CfnLocalGatewayRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute.Builder =
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute.Builder.create(scope, id)
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
+    override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
       cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
     }
 
-    public override
-        fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
+    override fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
       cdkBuilder.localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId)
     }
 
-    public override fun networkInterfaceId(networkInterfaceId: String) {
+    override fun networkInterfaceId(networkInterfaceId: String) {
       cdkBuilder.networkInterfaceId(networkInterfaceId)
     }
 

@@ -8,14 +8,12 @@ public interface QueryParameterMatchConfig {
   public fun queryParameterMatch(): CfnRoute.QueryParameterProperty
 
   public interface Builder {
-    public fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
-    }
+    public fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43b756913b6d339249175f1ff466e632b0864552cee341935e4f0536725218c8")
     public
-        fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty.Builder.() -> Unit) {
-    }
+        fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -23,13 +21,13 @@ public interface QueryParameterMatchConfig {
         software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig.Builder =
         software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig.builder()
 
-    public override fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
+    override fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
       cdkBuilder.queryParameterMatch(queryParameterMatch.let(CfnRoute.QueryParameterProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43b756913b6d339249175f1ff466e632b0864552cee341935e4f0536725218c8")
-    public override
+    override
         fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty.Builder.() -> Unit):
         Unit = queryParameterMatch(CfnRoute.QueryParameterProperty(queryParameterMatch))
 
@@ -40,7 +38,7 @@ public interface QueryParameterMatchConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig,
   ) : QueryParameterMatchConfig {
-    public override fun queryParameterMatch(): CfnRoute.QueryParameterProperty =
+    override fun queryParameterMatch(): CfnRoute.QueryParameterProperty =
         unwrap(this).getQueryParameterMatch().let(CfnRoute.QueryParameterProperty::wrap)
   }
 

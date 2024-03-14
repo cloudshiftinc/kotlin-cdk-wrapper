@@ -52,20 +52,15 @@ public open class CfnPublicTypeVersion internal constructor(
   }
 
   public interface Builder {
-    public fun arn(arn: String) {
-    }
+    public fun arn(arn: String)
 
-    public fun logDeliveryBucket(logDeliveryBucket: String) {
-    }
+    public fun logDeliveryBucket(logDeliveryBucket: String)
 
-    public fun publicVersionNumber(publicVersionNumber: String) {
-    }
+    public fun publicVersionNumber(publicVersionNumber: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun typeName(typeName: String) {
-    }
+    public fun typeName(typeName: String)
   }
 
   private class BuilderImpl(
@@ -77,23 +72,23 @@ public open class CfnPublicTypeVersion internal constructor(
         software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersion.Builder.create(scope,
         id)
 
-    public override fun arn(arn: String) {
+    override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
-    public override fun logDeliveryBucket(logDeliveryBucket: String) {
+    override fun logDeliveryBucket(logDeliveryBucket: String) {
       cdkBuilder.logDeliveryBucket(logDeliveryBucket)
     }
 
-    public override fun publicVersionNumber(publicVersionNumber: String) {
+    override fun publicVersionNumber(publicVersionNumber: String) {
       cdkBuilder.publicVersionNumber(publicVersionNumber)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun typeName(typeName: String) {
+    override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 

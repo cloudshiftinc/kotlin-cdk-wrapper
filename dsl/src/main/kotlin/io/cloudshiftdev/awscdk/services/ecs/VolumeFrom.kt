@@ -10,22 +10,20 @@ public interface VolumeFrom {
   public fun sourceContainer(): String
 
   public interface Builder {
-    public fun readOnly(readOnly: Boolean) {
-    }
+    public fun readOnly(readOnly: Boolean)
 
-    public fun sourceContainer(sourceContainer: String) {
-    }
+    public fun sourceContainer(sourceContainer: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.VolumeFrom.Builder =
         software.amazon.awscdk.services.ecs.VolumeFrom.builder()
 
-    public override fun readOnly(readOnly: Boolean) {
+    override fun readOnly(readOnly: Boolean) {
       cdkBuilder.readOnly(readOnly)
     }
 
-    public override fun sourceContainer(sourceContainer: String) {
+    override fun sourceContainer(sourceContainer: String) {
       cdkBuilder.sourceContainer(sourceContainer)
     }
 
@@ -35,9 +33,9 @@ public interface VolumeFrom {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.VolumeFrom,
   ) : VolumeFrom {
-    public override fun readOnly(): Boolean = unwrap(this).getReadOnly()
+    override fun readOnly(): Boolean = unwrap(this).getReadOnly()
 
-    public override fun sourceContainer(): String = unwrap(this).getSourceContainer()
+    override fun sourceContainer(): String = unwrap(this).getSourceContainer()
   }
 
   public companion object {

@@ -21,26 +21,25 @@ public interface IEmailIdentity : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.IEmailIdentity,
   ) : IEmailIdentity {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun emailIdentityArn(): String = unwrap(this).getEmailIdentityArn()
+    override fun emailIdentityArn(): String = unwrap(this).getEmailIdentityArn()
 
-    public override fun emailIdentityName(): String = unwrap(this).getEmailIdentityName()
+    override fun emailIdentityName(): String = unwrap(this).getEmailIdentityName()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grant(arg0: IGrantable, arg1: String): Grant =
+    override fun grant(arg0: IGrantable, arg1: String): Grant =
         unwrap(this).grant(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
 
-    public override fun grantSendEmail(arg0: IGrantable): Grant =
+    override fun grantSendEmail(arg0: IGrantable): Grant =
         unwrap(this).grantSendEmail(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

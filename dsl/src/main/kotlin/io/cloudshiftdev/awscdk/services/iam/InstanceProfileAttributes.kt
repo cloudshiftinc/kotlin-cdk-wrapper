@@ -9,22 +9,20 @@ public interface InstanceProfileAttributes {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun instanceProfileArn(instanceProfileArn: String) {
-    }
+    public fun instanceProfileArn(instanceProfileArn: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.iam.InstanceProfileAttributes.Builder =
         software.amazon.awscdk.services.iam.InstanceProfileAttributes.builder()
 
-    public override fun instanceProfileArn(instanceProfileArn: String) {
+    override fun instanceProfileArn(instanceProfileArn: String) {
       cdkBuilder.instanceProfileArn(instanceProfileArn)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -35,9 +33,9 @@ public interface InstanceProfileAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.InstanceProfileAttributes,
   ) : InstanceProfileAttributes {
-    public override fun instanceProfileArn(): String = unwrap(this).getInstanceProfileArn()
+    override fun instanceProfileArn(): String = unwrap(this).getInstanceProfileArn()
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 
   public companion object {

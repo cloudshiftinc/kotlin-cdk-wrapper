@@ -21,86 +21,76 @@ public interface RouteSpecConfig {
       unwrap(this).getTcpRouteSpec()?.let(CfnRoute.TcpRouteProperty::wrap)
 
   public interface Builder {
-    public fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty) {
-    }
+    public fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9ce79cd0bb676b0e3c199f23481a9466fa6603403a805cb29826b7dc79b40a7")
-    public fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty.Builder.() -> Unit) {
-    }
+    public fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty.Builder.() -> Unit)
 
-    public fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty) {
-    }
+    public fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d45a5745ff1c95df93aba4e7a9c560af6ab7628ff7da881d0987eec8cca355b0")
-    public fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit) {
-    }
+    public fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit)
 
-    public fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty) {
-    }
+    public fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15acab697a02daabb62fb291fb36e60df733831bab89d5ca7fe56a8812fa415f")
-    public fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit) {
-    }
+    public fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty) {
-    }
+    public fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0e2c72d361ff9c248f26683a22c463f75d83bbfd37256cd869cd48c84f23957")
-    public fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty.Builder.() -> Unit) {
-    }
+    public fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.RouteSpecConfig.Builder =
         software.amazon.awscdk.services.appmesh.RouteSpecConfig.builder()
 
-    public override fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty) {
+    override fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty) {
       cdkBuilder.grpcRouteSpec(grpcRouteSpec.let(CfnRoute.GrpcRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9ce79cd0bb676b0e3c199f23481a9466fa6603403a805cb29826b7dc79b40a7")
-    public override fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty.Builder.() -> Unit):
-        Unit = grpcRouteSpec(CfnRoute.GrpcRouteProperty(grpcRouteSpec))
+    override fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty.Builder.() -> Unit): Unit =
+        grpcRouteSpec(CfnRoute.GrpcRouteProperty(grpcRouteSpec))
 
-    public override fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty) {
+    override fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty) {
       cdkBuilder.http2RouteSpec(http2RouteSpec.let(CfnRoute.HttpRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d45a5745ff1c95df93aba4e7a9c560af6ab7628ff7da881d0987eec8cca355b0")
-    public override
-        fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit): Unit =
-        http2RouteSpec(CfnRoute.HttpRouteProperty(http2RouteSpec))
+    override fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit): Unit
+        = http2RouteSpec(CfnRoute.HttpRouteProperty(http2RouteSpec))
 
-    public override fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty) {
+    override fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty) {
       cdkBuilder.httpRouteSpec(httpRouteSpec.let(CfnRoute.HttpRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("15acab697a02daabb62fb291fb36e60df733831bab89d5ca7fe56a8812fa415f")
-    public override fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit):
-        Unit = httpRouteSpec(CfnRoute.HttpRouteProperty(httpRouteSpec))
+    override fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty.Builder.() -> Unit): Unit =
+        httpRouteSpec(CfnRoute.HttpRouteProperty(httpRouteSpec))
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty) {
+    override fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty) {
       cdkBuilder.tcpRouteSpec(tcpRouteSpec.let(CfnRoute.TcpRouteProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0e2c72d361ff9c248f26683a22c463f75d83bbfd37256cd869cd48c84f23957")
-    public override fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty.Builder.() -> Unit):
-        Unit = tcpRouteSpec(CfnRoute.TcpRouteProperty(tcpRouteSpec))
+    override fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty.Builder.() -> Unit): Unit =
+        tcpRouteSpec(CfnRoute.TcpRouteProperty(tcpRouteSpec))
 
     public fun build(): software.amazon.awscdk.services.appmesh.RouteSpecConfig = cdkBuilder.build()
   }
@@ -108,18 +98,18 @@ public interface RouteSpecConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpecConfig,
   ) : RouteSpecConfig {
-    public override fun grpcRouteSpec(): CfnRoute.GrpcRouteProperty? =
+    override fun grpcRouteSpec(): CfnRoute.GrpcRouteProperty? =
         unwrap(this).getGrpcRouteSpec()?.let(CfnRoute.GrpcRouteProperty::wrap)
 
-    public override fun http2RouteSpec(): CfnRoute.HttpRouteProperty? =
+    override fun http2RouteSpec(): CfnRoute.HttpRouteProperty? =
         unwrap(this).getHttp2RouteSpec()?.let(CfnRoute.HttpRouteProperty::wrap)
 
-    public override fun httpRouteSpec(): CfnRoute.HttpRouteProperty? =
+    override fun httpRouteSpec(): CfnRoute.HttpRouteProperty? =
         unwrap(this).getHttpRouteSpec()?.let(CfnRoute.HttpRouteProperty::wrap)
 
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
 
-    public override fun tcpRouteSpec(): CfnRoute.TcpRouteProperty? =
+    override fun tcpRouteSpec(): CfnRoute.TcpRouteProperty? =
         unwrap(this).getTcpRouteSpec()?.let(CfnRoute.TcpRouteProperty::wrap)
   }
 

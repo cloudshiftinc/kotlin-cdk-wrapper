@@ -65,27 +65,21 @@ public open class CfnDomain internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-    }
+    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable)
 
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4d16ac974d8a28511745e058ff5c8b8c4d693e620b140c0705ffaf6509c9e5c3")
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -95,32 +89,31 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.voiceid.CfnDomain.Builder =
         software.amazon.awscdk.services.voiceid.CfnDomain.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
+    override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4d16ac974d8a28511745e058ff5c8b8c4d693e620b140c0705ffaf6509c9e5c3")
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit):
         Unit =
         serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty(serverSideEncryptionConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -152,8 +145,7 @@ public open class CfnDomain internal constructor(
     public fun kmsKeyId(): String
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -162,7 +154,7 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.voiceid.CfnDomain.ServerSideEncryptionConfigurationProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -175,7 +167,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.voiceid.CfnDomain.ServerSideEncryptionConfigurationProperty,
     ) : ServerSideEncryptionConfigurationProperty {
-      public override fun kmsKeyId(): String = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String = unwrap(this).getKmsKeyId()
     }
 
     public companion object {

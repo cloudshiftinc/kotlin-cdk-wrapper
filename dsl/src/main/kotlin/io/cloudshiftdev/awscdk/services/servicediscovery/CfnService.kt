@@ -110,54 +110,40 @@ public open class CfnService internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun dnsConfig(dnsConfig: IResolvable) {
-    }
+    public fun dnsConfig(dnsConfig: IResolvable)
 
-    public fun dnsConfig(dnsConfig: DnsConfigProperty) {
-    }
+    public fun dnsConfig(dnsConfig: DnsConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f002efabd7962ee41501b0c21d1e615b899fe64a0ca2daa0e852ee50a84649fc")
-    public fun dnsConfig(dnsConfig: DnsConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dnsConfig(dnsConfig: DnsConfigProperty.Builder.() -> Unit)
 
-    public fun healthCheckConfig(healthCheckConfig: IResolvable) {
-    }
+    public fun healthCheckConfig(healthCheckConfig: IResolvable)
 
-    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-    }
+    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac2156a60e1455cc9620b2bd69d1ab3f2693489a2361975f1b938fe49bf58071")
-    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit) {
-    }
+    public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit)
 
-    public fun healthCheckCustomConfig(healthCheckCustomConfig: IResolvable) {
-    }
+    public fun healthCheckCustomConfig(healthCheckCustomConfig: IResolvable)
 
-    public fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty) {
-    }
+    public fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f6de31d733a25e3ecf040986ecff0a18b4ad9a6ba8cbd452732d3e1e91b76ab")
     public
-        fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty.Builder.() -> Unit) {
-    }
+        fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun namespaceId(namespaceId: String) {
-    }
+    public fun namespaceId(namespaceId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -167,65 +153,63 @@ public open class CfnService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicediscovery.CfnService.Builder =
         software.amazon.awscdk.services.servicediscovery.CfnService.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun dnsConfig(dnsConfig: IResolvable) {
+    override fun dnsConfig(dnsConfig: IResolvable) {
       cdkBuilder.dnsConfig(dnsConfig.let(IResolvable::unwrap))
     }
 
-    public override fun dnsConfig(dnsConfig: DnsConfigProperty) {
+    override fun dnsConfig(dnsConfig: DnsConfigProperty) {
       cdkBuilder.dnsConfig(dnsConfig.let(DnsConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f002efabd7962ee41501b0c21d1e615b899fe64a0ca2daa0e852ee50a84649fc")
-    public override fun dnsConfig(dnsConfig: DnsConfigProperty.Builder.() -> Unit): Unit =
+    override fun dnsConfig(dnsConfig: DnsConfigProperty.Builder.() -> Unit): Unit =
         dnsConfig(DnsConfigProperty(dnsConfig))
 
-    public override fun healthCheckConfig(healthCheckConfig: IResolvable) {
+    override fun healthCheckConfig(healthCheckConfig: IResolvable) {
       cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
     }
 
-    public override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
+    override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
       cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac2156a60e1455cc9620b2bd69d1ab3f2693489a2361975f1b938fe49bf58071")
-    public override
-        fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit): Unit
-        = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
+    override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit):
+        Unit = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
 
-    public override fun healthCheckCustomConfig(healthCheckCustomConfig: IResolvable) {
+    override fun healthCheckCustomConfig(healthCheckCustomConfig: IResolvable) {
       cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty) {
+    override fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty) {
       cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(HealthCheckCustomConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f6de31d733a25e3ecf040986ecff0a18b4ad9a6ba8cbd452732d3e1e91b76ab")
-    public override
+    override
         fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty.Builder.() -> Unit):
         Unit = healthCheckCustomConfig(HealthCheckCustomConfigProperty(healthCheckCustomConfig))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun namespaceId(namespaceId: String) {
+    override fun namespaceId(namespaceId: String) {
       cdkBuilder.namespaceId(namespaceId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -262,14 +246,11 @@ public open class CfnService internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun failureThreshold(failureThreshold: Number) {
-      }
+      public fun failureThreshold(failureThreshold: Number)
 
-      public fun resourcePath(resourcePath: String) {
-      }
+      public fun resourcePath(resourcePath: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -278,15 +259,15 @@ public open class CfnService internal constructor(
           =
           software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty.builder()
 
-      public override fun failureThreshold(failureThreshold: Number) {
+      override fun failureThreshold(failureThreshold: Number) {
         cdkBuilder.failureThreshold(failureThreshold)
       }
 
-      public override fun resourcePath(resourcePath: String) {
+      override fun resourcePath(resourcePath: String) {
         cdkBuilder.resourcePath(resourcePath)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -299,11 +280,11 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckConfigProperty,
     ) : HealthCheckConfigProperty {
-      public override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
 
-      public override fun resourcePath(): String? = unwrap(this).getResourcePath()
+      override fun resourcePath(): String? = unwrap(this).getResourcePath()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -334,17 +315,13 @@ public open class CfnService internal constructor(
     public fun routingPolicy(): String? = unwrap(this).getRoutingPolicy()
 
     public interface Builder {
-      public fun dnsRecords(dnsRecords: IResolvable) {
-      }
+      public fun dnsRecords(dnsRecords: IResolvable)
 
-      public fun dnsRecords(dnsRecords: List<Any>) {
-      }
+      public fun dnsRecords(dnsRecords: List<Any>)
 
-      public fun namespaceId(namespaceId: String) {
-      }
+      public fun namespaceId(namespaceId: String)
 
-      public fun routingPolicy(routingPolicy: String) {
-      }
+      public fun routingPolicy(routingPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -352,19 +329,19 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty.Builder =
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty.builder()
 
-      public override fun dnsRecords(dnsRecords: IResolvable) {
+      override fun dnsRecords(dnsRecords: IResolvable) {
         cdkBuilder.dnsRecords(dnsRecords.let(IResolvable::unwrap))
       }
 
-      public override fun dnsRecords(dnsRecords: List<Any>) {
+      override fun dnsRecords(dnsRecords: List<Any>) {
         cdkBuilder.dnsRecords(dnsRecords)
       }
 
-      public override fun namespaceId(namespaceId: String) {
+      override fun namespaceId(namespaceId: String) {
         cdkBuilder.namespaceId(namespaceId)
       }
 
-      public override fun routingPolicy(routingPolicy: String) {
+      override fun routingPolicy(routingPolicy: String) {
         cdkBuilder.routingPolicy(routingPolicy)
       }
 
@@ -377,11 +354,11 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsConfigProperty,
     ) : DnsConfigProperty {
-      public override fun dnsRecords(): Any = unwrap(this).getDnsRecords()
+      override fun dnsRecords(): Any = unwrap(this).getDnsRecords()
 
-      public override fun namespaceId(): String? = unwrap(this).getNamespaceId()
+      override fun namespaceId(): String? = unwrap(this).getNamespaceId()
 
-      public override fun routingPolicy(): String? = unwrap(this).getRoutingPolicy()
+      override fun routingPolicy(): String? = unwrap(this).getRoutingPolicy()
     }
 
     public companion object {
@@ -408,8 +385,7 @@ public open class CfnService internal constructor(
     public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
 
     public interface Builder {
-      public fun failureThreshold(failureThreshold: Number) {
-      }
+      public fun failureThreshold(failureThreshold: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -418,7 +394,7 @@ public open class CfnService internal constructor(
           =
           software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty.builder()
 
-      public override fun failureThreshold(failureThreshold: Number) {
+      override fun failureThreshold(failureThreshold: Number) {
         cdkBuilder.failureThreshold(failureThreshold)
       }
 
@@ -431,7 +407,7 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnService.HealthCheckCustomConfigProperty,
     ) : HealthCheckCustomConfigProperty {
-      public override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
+      override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
     }
 
     public companion object {
@@ -460,11 +436,9 @@ public open class CfnService internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun ttl(ttl: Number) {
-      }
+      public fun ttl(ttl: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -472,11 +446,11 @@ public open class CfnService internal constructor(
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty.Builder =
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty.builder()
 
-      public override fun ttl(ttl: Number) {
+      override fun ttl(ttl: Number) {
         cdkBuilder.ttl(ttl)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -489,9 +463,9 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnService.DnsRecordProperty,
     ) : DnsRecordProperty {
-      public override fun ttl(): Number = unwrap(this).getTtl()
+      override fun ttl(): Number = unwrap(this).getTtl()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

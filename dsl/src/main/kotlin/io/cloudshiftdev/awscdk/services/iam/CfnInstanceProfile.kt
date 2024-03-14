@@ -37,14 +37,11 @@ public open class CfnInstanceProfile internal constructor(
   }
 
   public interface Builder {
-    public fun instanceProfileName(instanceProfileName: String) {
-    }
+    public fun instanceProfileName(instanceProfileName: String)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun roles(roles: List<String>) {
-    }
+    public fun roles(roles: List<String>)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnInstanceProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnInstanceProfile.Builder =
         software.amazon.awscdk.services.iam.CfnInstanceProfile.Builder.create(scope, id)
 
-    public override fun instanceProfileName(instanceProfileName: String) {
+    override fun instanceProfileName(instanceProfileName: String) {
       cdkBuilder.instanceProfileName(instanceProfileName)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun roles(roles: List<String>) {
+    override fun roles(roles: List<String>) {
       cdkBuilder.roles(roles)
     }
 

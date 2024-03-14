@@ -107,44 +107,31 @@ public open class CfnDBInstance internal constructor(
   }
 
   public interface Builder {
-    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
-    }
+    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean)
 
-    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-    }
+    public fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-    }
+    public fun dbClusterIdentifier(dbClusterIdentifier: String)
 
-    public fun dbInstanceClass(dbInstanceClass: String) {
-    }
+    public fun dbInstanceClass(dbInstanceClass: String)
 
-    public fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
-    }
+    public fun dbInstanceIdentifier(dbInstanceIdentifier: String)
 
-    public fun dbParameterGroupName(dbParameterGroupName: String) {
-    }
+    public fun dbParameterGroupName(dbParameterGroupName: String)
 
-    public fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
-    }
+    public fun dbSnapshotIdentifier(dbSnapshotIdentifier: String)
 
-    public fun dbSubnetGroupName(dbSubnetGroupName: String) {
-    }
+    public fun dbSubnetGroupName(dbSubnetGroupName: String)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -154,55 +141,55 @@ public open class CfnDBInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.neptune.CfnDBInstance.Builder =
         software.amazon.awscdk.services.neptune.CfnDBInstance.Builder.create(scope, id)
 
-    public override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
+    override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: Boolean) {
       cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade)
     }
 
-    public override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
+    override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
       cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun dbClusterIdentifier(dbClusterIdentifier: String) {
+    override fun dbClusterIdentifier(dbClusterIdentifier: String) {
       cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
     }
 
-    public override fun dbInstanceClass(dbInstanceClass: String) {
+    override fun dbInstanceClass(dbInstanceClass: String) {
       cdkBuilder.dbInstanceClass(dbInstanceClass)
     }
 
-    public override fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
+    override fun dbInstanceIdentifier(dbInstanceIdentifier: String) {
       cdkBuilder.dbInstanceIdentifier(dbInstanceIdentifier)
     }
 
-    public override fun dbParameterGroupName(dbParameterGroupName: String) {
+    override fun dbParameterGroupName(dbParameterGroupName: String) {
       cdkBuilder.dbParameterGroupName(dbParameterGroupName)
     }
 
-    public override fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
+    override fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
       cdkBuilder.dbSnapshotIdentifier(dbSnapshotIdentifier)
     }
 
-    public override fun dbSubnetGroupName(dbSubnetGroupName: String) {
+    override fun dbSubnetGroupName(dbSubnetGroupName: String) {
       cdkBuilder.dbSubnetGroupName(dbSubnetGroupName)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

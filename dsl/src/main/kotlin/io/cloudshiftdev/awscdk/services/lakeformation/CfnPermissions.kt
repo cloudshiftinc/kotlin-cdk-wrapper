@@ -66,33 +66,25 @@ public open class CfnPermissions internal constructor(
       resource(ResourceProperty(`value`))
 
   public interface Builder {
-    public fun dataLakePrincipal(dataLakePrincipal: IResolvable) {
-    }
+    public fun dataLakePrincipal(dataLakePrincipal: IResolvable)
 
-    public fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty) {
-    }
+    public fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d14d5340514d6def66fd861c1839f5875d5a4725e3ee4ee0a253c952e91bacea")
-    public fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty.Builder.() -> Unit) {
-    }
+    public fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty.Builder.() -> Unit)
 
-    public fun permissions(permissions: List<String>) {
-    }
+    public fun permissions(permissions: List<String>)
 
-    public fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>) {
-    }
+    public fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>)
 
-    public fun resource(resource: IResolvable) {
-    }
+    public fun resource(resource: IResolvable)
 
-    public fun resource(resource: ResourceProperty) {
-    }
+    public fun resource(resource: ResourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("605cb1f3cd7839c0c21f1aa993c8991148c17ab756e86124b7df6f4b51a95609")
-    public fun resource(resource: ResourceProperty.Builder.() -> Unit) {
-    }
+    public fun resource(resource: ResourceProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -102,39 +94,38 @@ public open class CfnPermissions internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lakeformation.CfnPermissions.Builder =
         software.amazon.awscdk.services.lakeformation.CfnPermissions.Builder.create(scope, id)
 
-    public override fun dataLakePrincipal(dataLakePrincipal: IResolvable) {
+    override fun dataLakePrincipal(dataLakePrincipal: IResolvable) {
       cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(IResolvable::unwrap))
     }
 
-    public override fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty) {
+    override fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty) {
       cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(DataLakePrincipalProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d14d5340514d6def66fd861c1839f5875d5a4725e3ee4ee0a253c952e91bacea")
-    public override
-        fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty.Builder.() -> Unit): Unit
-        = dataLakePrincipal(DataLakePrincipalProperty(dataLakePrincipal))
+    override fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty.Builder.() -> Unit):
+        Unit = dataLakePrincipal(DataLakePrincipalProperty(dataLakePrincipal))
 
-    public override fun permissions(permissions: List<String>) {
+    override fun permissions(permissions: List<String>) {
       cdkBuilder.permissions(permissions)
     }
 
-    public override fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>) {
+    override fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>) {
       cdkBuilder.permissionsWithGrantOption(permissionsWithGrantOption)
     }
 
-    public override fun resource(resource: IResolvable) {
+    override fun resource(resource: IResolvable) {
       cdkBuilder.resource(resource.let(IResolvable::unwrap))
     }
 
-    public override fun resource(resource: ResourceProperty) {
+    override fun resource(resource: ResourceProperty) {
       cdkBuilder.resource(resource.let(ResourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("605cb1f3cd7839c0c21f1aa993c8991148c17ab756e86124b7df6f4b51a95609")
-    public override fun resource(resource: ResourceProperty.Builder.() -> Unit): Unit =
+    override fun resource(resource: ResourceProperty.Builder.() -> Unit): Unit =
         resource(ResourceProperty(resource))
 
     public fun build(): software.amazon.awscdk.services.lakeformation.CfnPermissions =
@@ -168,11 +159,9 @@ public open class CfnPermissions internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -181,11 +170,11 @@ public open class CfnPermissions internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.DatabaseResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -198,9 +187,9 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.DatabaseResourceProperty,
     ) : DatabaseResourceProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -233,52 +222,40 @@ public open class CfnPermissions internal constructor(
     public fun tableWithColumnsResource(): Any? = unwrap(this).getTableWithColumnsResource()
 
     public interface Builder {
-      public fun dataLocationResource(dataLocationResource: IResolvable) {
-      }
+      public fun dataLocationResource(dataLocationResource: IResolvable)
 
-      public fun dataLocationResource(dataLocationResource: DataLocationResourceProperty) {
-      }
+      public fun dataLocationResource(dataLocationResource: DataLocationResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d6411436c1ea8c4b37d5e2eb166ce9f794b976b9abed98ddb7d28fa0834de706")
       public
-          fun dataLocationResource(dataLocationResource: DataLocationResourceProperty.Builder.() -> Unit) {
-      }
+          fun dataLocationResource(dataLocationResource: DataLocationResourceProperty.Builder.() -> Unit)
 
-      public fun databaseResource(databaseResource: IResolvable) {
-      }
+      public fun databaseResource(databaseResource: IResolvable)
 
-      public fun databaseResource(databaseResource: DatabaseResourceProperty) {
-      }
+      public fun databaseResource(databaseResource: DatabaseResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7bf46bb069e66075fa4f807bd800fb94ef2081a1cf7d117522a2f6a777ec7cd8")
-      public fun databaseResource(databaseResource: DatabaseResourceProperty.Builder.() -> Unit) {
-      }
+      public fun databaseResource(databaseResource: DatabaseResourceProperty.Builder.() -> Unit)
 
-      public fun tableResource(tableResource: IResolvable) {
-      }
+      public fun tableResource(tableResource: IResolvable)
 
-      public fun tableResource(tableResource: TableResourceProperty) {
-      }
+      public fun tableResource(tableResource: TableResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a91a4f6b24ed2cda5195e0b77bbdb6caf22ad449f6803374aae8e569a1ec41ee")
-      public fun tableResource(tableResource: TableResourceProperty.Builder.() -> Unit) {
-      }
+      public fun tableResource(tableResource: TableResourceProperty.Builder.() -> Unit)
 
-      public fun tableWithColumnsResource(tableWithColumnsResource: IResolvable) {
-      }
+      public fun tableWithColumnsResource(tableWithColumnsResource: IResolvable)
 
       public
-          fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty) {
-      }
+          fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0eb048f9c24296bdbd87bd02a8c4ac14dbba3b9e8f258a7b1f22bd63ee1f9fa7")
       public
-          fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty.Builder.() -> Unit) {
-      }
+          fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -286,59 +263,58 @@ public open class CfnPermissions internal constructor(
           software.amazon.awscdk.services.lakeformation.CfnPermissions.ResourceProperty.Builder =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.ResourceProperty.builder()
 
-      public override fun dataLocationResource(dataLocationResource: IResolvable) {
+      override fun dataLocationResource(dataLocationResource: IResolvable) {
         cdkBuilder.dataLocationResource(dataLocationResource.let(IResolvable::unwrap))
       }
 
-      public override fun dataLocationResource(dataLocationResource: DataLocationResourceProperty) {
+      override fun dataLocationResource(dataLocationResource: DataLocationResourceProperty) {
         cdkBuilder.dataLocationResource(dataLocationResource.let(DataLocationResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d6411436c1ea8c4b37d5e2eb166ce9f794b976b9abed98ddb7d28fa0834de706")
-      public override
+      override
           fun dataLocationResource(dataLocationResource: DataLocationResourceProperty.Builder.() -> Unit):
           Unit = dataLocationResource(DataLocationResourceProperty(dataLocationResource))
 
-      public override fun databaseResource(databaseResource: IResolvable) {
+      override fun databaseResource(databaseResource: IResolvable) {
         cdkBuilder.databaseResource(databaseResource.let(IResolvable::unwrap))
       }
 
-      public override fun databaseResource(databaseResource: DatabaseResourceProperty) {
+      override fun databaseResource(databaseResource: DatabaseResourceProperty) {
         cdkBuilder.databaseResource(databaseResource.let(DatabaseResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7bf46bb069e66075fa4f807bd800fb94ef2081a1cf7d117522a2f6a777ec7cd8")
-      public override
-          fun databaseResource(databaseResource: DatabaseResourceProperty.Builder.() -> Unit): Unit
-          = databaseResource(DatabaseResourceProperty(databaseResource))
+      override fun databaseResource(databaseResource: DatabaseResourceProperty.Builder.() -> Unit):
+          Unit = databaseResource(DatabaseResourceProperty(databaseResource))
 
-      public override fun tableResource(tableResource: IResolvable) {
+      override fun tableResource(tableResource: IResolvable) {
         cdkBuilder.tableResource(tableResource.let(IResolvable::unwrap))
       }
 
-      public override fun tableResource(tableResource: TableResourceProperty) {
+      override fun tableResource(tableResource: TableResourceProperty) {
         cdkBuilder.tableResource(tableResource.let(TableResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a91a4f6b24ed2cda5195e0b77bbdb6caf22ad449f6803374aae8e569a1ec41ee")
-      public override fun tableResource(tableResource: TableResourceProperty.Builder.() -> Unit):
-          Unit = tableResource(TableResourceProperty(tableResource))
+      override fun tableResource(tableResource: TableResourceProperty.Builder.() -> Unit): Unit =
+          tableResource(TableResourceProperty(tableResource))
 
-      public override fun tableWithColumnsResource(tableWithColumnsResource: IResolvable) {
+      override fun tableWithColumnsResource(tableWithColumnsResource: IResolvable) {
         cdkBuilder.tableWithColumnsResource(tableWithColumnsResource.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty) {
         cdkBuilder.tableWithColumnsResource(tableWithColumnsResource.let(TableWithColumnsResourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0eb048f9c24296bdbd87bd02a8c4ac14dbba3b9e8f258a7b1f22bd63ee1f9fa7")
-      public override
+      override
           fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty.Builder.() -> Unit):
           Unit =
           tableWithColumnsResource(TableWithColumnsResourceProperty(tableWithColumnsResource))
@@ -352,14 +328,13 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.ResourceProperty,
     ) : ResourceProperty {
-      public override fun dataLocationResource(): Any? = unwrap(this).getDataLocationResource()
+      override fun dataLocationResource(): Any? = unwrap(this).getDataLocationResource()
 
-      public override fun databaseResource(): Any? = unwrap(this).getDatabaseResource()
+      override fun databaseResource(): Any? = unwrap(this).getDatabaseResource()
 
-      public override fun tableResource(): Any? = unwrap(this).getTableResource()
+      override fun tableResource(): Any? = unwrap(this).getTableResource()
 
-      public override fun tableWithColumnsResource(): Any? =
-          unwrap(this).getTableWithColumnsResource()
+      override fun tableWithColumnsResource(): Any? = unwrap(this).getTableWithColumnsResource()
     }
 
     public companion object {
@@ -388,11 +363,9 @@ public open class CfnPermissions internal constructor(
     public fun s3Resource(): String? = unwrap(this).getS3Resource()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun s3Resource(s3Resource: String) {
-      }
+      public fun s3Resource(s3Resource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -401,11 +374,11 @@ public open class CfnPermissions internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLocationResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun s3Resource(s3Resource: String) {
+      override fun s3Resource(s3Resource: String) {
         cdkBuilder.s3Resource(s3Resource)
       }
 
@@ -418,9 +391,9 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLocationResourceProperty,
     ) : DataLocationResourceProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun s3Resource(): String? = unwrap(this).getS3Resource()
+      override fun s3Resource(): String? = unwrap(this).getS3Resource()
     }
 
     public companion object {
@@ -455,28 +428,21 @@ public open class CfnPermissions internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun columnNames(columnNames: List<String>) {
-      }
+      public fun columnNames(columnNames: List<String>)
 
-      public fun columnWildcard(columnWildcard: IResolvable) {
-      }
+      public fun columnWildcard(columnWildcard: IResolvable)
 
-      public fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
-      }
+      public fun columnWildcard(columnWildcard: ColumnWildcardProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f1f43739d2600a999078da5d18436656f7e2cc0f6858d1846400a1ae88d1945")
-      public fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit) {
-      }
+      public fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -485,32 +451,32 @@ public open class CfnPermissions internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.TableWithColumnsResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun columnNames(columnNames: List<String>) {
+      override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
 
-      public override fun columnWildcard(columnWildcard: IResolvable) {
+      override fun columnWildcard(columnWildcard: IResolvable) {
         cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
       }
 
-      public override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
+      override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
         cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f1f43739d2600a999078da5d18436656f7e2cc0f6858d1846400a1ae88d1945")
-      public override fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit):
-          Unit = columnWildcard(ColumnWildcardProperty(columnWildcard))
+      override fun columnWildcard(columnWildcard: ColumnWildcardProperty.Builder.() -> Unit): Unit =
+          columnWildcard(ColumnWildcardProperty(columnWildcard))
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -523,15 +489,15 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.TableWithColumnsResourceProperty,
     ) : TableWithColumnsResourceProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
 
-      public override fun columnWildcard(): Any? = unwrap(this).getColumnWildcard()
+      override fun columnWildcard(): Any? = unwrap(this).getColumnWildcard()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -559,8 +525,7 @@ public open class CfnPermissions internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun excludedColumnNames(excludedColumnNames: List<String>) {
-      }
+      public fun excludedColumnNames(excludedColumnNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -569,7 +534,7 @@ public open class CfnPermissions internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.ColumnWildcardProperty.builder()
 
-      public override fun excludedColumnNames(excludedColumnNames: List<String>) {
+      override fun excludedColumnNames(excludedColumnNames: List<String>) {
         cdkBuilder.excludedColumnNames(excludedColumnNames)
       }
 
@@ -582,8 +547,8 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.ColumnWildcardProperty,
     ) : ColumnWildcardProperty {
-      public override fun excludedColumnNames(): List<String> =
-          unwrap(this).getExcludedColumnNames() ?: emptyList()
+      override fun excludedColumnNames(): List<String> = unwrap(this).getExcludedColumnNames() ?:
+          emptyList()
     }
 
     public companion object {
@@ -616,25 +581,19 @@ public open class CfnPermissions internal constructor(
     public fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tableWildcard(tableWildcard: IResolvable) {
-      }
+      public fun tableWildcard(tableWildcard: IResolvable)
 
-      public fun tableWildcard(tableWildcard: TableWildcardProperty) {
-      }
+      public fun tableWildcard(tableWildcard: TableWildcardProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("328be344fd6ec36d119d60130993428b05c5bd2d30fb548e31653bcdcdff9f9d")
-      public fun tableWildcard(tableWildcard: TableWildcardProperty.Builder.() -> Unit) {
-      }
+      public fun tableWildcard(tableWildcard: TableWildcardProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -643,30 +602,30 @@ public open class CfnPermissions internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.TableResourceProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tableWildcard(tableWildcard: IResolvable) {
+      override fun tableWildcard(tableWildcard: IResolvable) {
         cdkBuilder.tableWildcard(tableWildcard.let(IResolvable::unwrap))
       }
 
-      public override fun tableWildcard(tableWildcard: TableWildcardProperty) {
+      override fun tableWildcard(tableWildcard: TableWildcardProperty) {
         cdkBuilder.tableWildcard(tableWildcard.let(TableWildcardProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("328be344fd6ec36d119d60130993428b05c5bd2d30fb548e31653bcdcdff9f9d")
-      public override fun tableWildcard(tableWildcard: TableWildcardProperty.Builder.() -> Unit):
-          Unit = tableWildcard(TableWildcardProperty(tableWildcard))
+      override fun tableWildcard(tableWildcard: TableWildcardProperty.Builder.() -> Unit): Unit =
+          tableWildcard(TableWildcardProperty(tableWildcard))
 
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnPermissions.TableResourceProperty =
@@ -677,13 +636,13 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.TableResourceProperty,
     ) : TableResourceProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
+      override fun tableWildcard(): Any? = unwrap(this).getTableWildcard()
     }
 
     public companion object {
@@ -750,8 +709,7 @@ public open class CfnPermissions internal constructor(
         unwrap(this).getDataLakePrincipalIdentifier()
 
     public interface Builder {
-      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
-      }
+      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -760,7 +718,7 @@ public open class CfnPermissions internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLakePrincipalProperty.builder()
 
-      public override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
+      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
         cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
       }
 
@@ -773,7 +731,7 @@ public open class CfnPermissions internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnPermissions.DataLakePrincipalProperty,
     ) : DataLakePrincipalProperty {
-      public override fun dataLakePrincipalIdentifier(): String? =
+      override fun dataLakePrincipalIdentifier(): String? =
           unwrap(this).getDataLakePrincipalIdentifier()
     }
 

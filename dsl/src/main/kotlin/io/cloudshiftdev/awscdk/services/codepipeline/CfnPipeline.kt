@@ -139,67 +139,47 @@ public open class CfnPipeline internal constructor(
   }
 
   public interface Builder {
-    public fun artifactStore(artifactStore: IResolvable) {
-    }
+    public fun artifactStore(artifactStore: IResolvable)
 
-    public fun artifactStore(artifactStore: ArtifactStoreProperty) {
-    }
+    public fun artifactStore(artifactStore: ArtifactStoreProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad238c725f05707649514fdc6656ca88d63083455d9ed90d441eac83027d20da")
-    public fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit) {
-    }
+    public fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit)
 
-    public fun artifactStores(artifactStores: IResolvable) {
-    }
+    public fun artifactStores(artifactStores: IResolvable)
 
-    public fun artifactStores(artifactStores: List<Any>) {
-    }
+    public fun artifactStores(artifactStores: List<Any>)
 
-    public fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable) {
-    }
+    public fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable)
 
-    public fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>) {
-    }
+    public fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>)
 
-    public fun executionMode(executionMode: String) {
-    }
+    public fun executionMode(executionMode: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun pipelineType(pipelineType: String) {
-    }
+    public fun pipelineType(pipelineType: String)
 
-    public fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean) {
-    }
+    public fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean)
 
-    public fun restartExecutionOnUpdate(restartExecutionOnUpdate: IResolvable) {
-    }
+    public fun restartExecutionOnUpdate(restartExecutionOnUpdate: IResolvable)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun stages(stages: IResolvable) {
-    }
+    public fun stages(stages: IResolvable)
 
-    public fun stages(stages: List<Any>) {
-    }
+    public fun stages(stages: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun triggers(triggers: IResolvable) {
-    }
+    public fun triggers(triggers: IResolvable)
 
-    public fun triggers(triggers: List<Any>) {
-    }
+    public fun triggers(triggers: List<Any>)
 
-    public fun variables(variables: IResolvable) {
-    }
+    public fun variables(variables: IResolvable)
 
-    public fun variables(variables: List<Any>) {
-    }
+    public fun variables(variables: List<Any>)
   }
 
   private class BuilderImpl(
@@ -209,85 +189,84 @@ public open class CfnPipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.CfnPipeline.Builder =
         software.amazon.awscdk.services.codepipeline.CfnPipeline.Builder.create(scope, id)
 
-    public override fun artifactStore(artifactStore: IResolvable) {
+    override fun artifactStore(artifactStore: IResolvable) {
       cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
     }
 
-    public override fun artifactStore(artifactStore: ArtifactStoreProperty) {
+    override fun artifactStore(artifactStore: ArtifactStoreProperty) {
       cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad238c725f05707649514fdc6656ca88d63083455d9ed90d441eac83027d20da")
-    public override fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit): Unit
-        = artifactStore(ArtifactStoreProperty(artifactStore))
+    override fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit): Unit =
+        artifactStore(ArtifactStoreProperty(artifactStore))
 
-    public override fun artifactStores(artifactStores: IResolvable) {
+    override fun artifactStores(artifactStores: IResolvable) {
       cdkBuilder.artifactStores(artifactStores.let(IResolvable::unwrap))
     }
 
-    public override fun artifactStores(artifactStores: List<Any>) {
+    override fun artifactStores(artifactStores: List<Any>) {
       cdkBuilder.artifactStores(artifactStores)
     }
 
-    public override
-        fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable) {
+    override fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable) {
       cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.let(IResolvable::unwrap))
     }
 
-    public override fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>) {
+    override fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>) {
       cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions)
     }
 
-    public override fun executionMode(executionMode: String) {
+    override fun executionMode(executionMode: String) {
       cdkBuilder.executionMode(executionMode)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun pipelineType(pipelineType: String) {
+    override fun pipelineType(pipelineType: String) {
       cdkBuilder.pipelineType(pipelineType)
     }
 
-    public override fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean) {
+    override fun restartExecutionOnUpdate(restartExecutionOnUpdate: Boolean) {
       cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate)
     }
 
-    public override fun restartExecutionOnUpdate(restartExecutionOnUpdate: IResolvable) {
+    override fun restartExecutionOnUpdate(restartExecutionOnUpdate: IResolvable) {
       cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate.let(IResolvable::unwrap))
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun stages(stages: IResolvable) {
+    override fun stages(stages: IResolvable) {
       cdkBuilder.stages(stages.let(IResolvable::unwrap))
     }
 
-    public override fun stages(stages: List<Any>) {
+    override fun stages(stages: List<Any>) {
       cdkBuilder.stages(stages)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun triggers(triggers: IResolvable) {
+    override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
     }
 
-    public override fun triggers(triggers: List<Any>) {
+    override fun triggers(triggers: List<Any>) {
       cdkBuilder.triggers(triggers)
     }
 
-    public override fun variables(variables: IResolvable) {
+    override fun variables(variables: IResolvable) {
       cdkBuilder.variables(variables.let(IResolvable::unwrap))
     }
 
-    public override fun variables(variables: List<Any>) {
+    override fun variables(variables: List<Any>) {
       cdkBuilder.variables(variables)
     }
 
@@ -320,8 +299,7 @@ public open class CfnPipeline internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -329,7 +307,7 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -342,7 +320,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
     ) : OutputArtifactProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -371,11 +349,9 @@ public open class CfnPipeline internal constructor(
     public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
 
     public interface Builder {
-      public fun excludes(excludes: List<String>) {
-      }
+      public fun excludes(excludes: List<String>)
 
-      public fun includes(includes: List<String>) {
-      }
+      public fun includes(includes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -384,11 +360,11 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty.builder()
 
-      public override fun excludes(excludes: List<String>) {
+      override fun excludes(excludes: List<String>) {
         cdkBuilder.excludes(excludes)
       }
 
-      public override fun includes(includes: List<String>) {
+      override fun includes(includes: List<String>) {
         cdkBuilder.includes(includes)
       }
 
@@ -401,9 +377,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty,
     ) : GitTagFilterCriteriaProperty {
-      public override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
 
-      public override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
     }
 
     public companion object {
@@ -432,11 +408,9 @@ public open class CfnPipeline internal constructor(
     public fun stageName(): String
 
     public interface Builder {
-      public fun reason(reason: String) {
-      }
+      public fun reason(reason: String)
 
-      public fun stageName(stageName: String) {
-      }
+      public fun stageName(stageName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -444,11 +418,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty.builder()
 
-      public override fun reason(reason: String) {
+      override fun reason(reason: String) {
         cdkBuilder.reason(reason)
       }
 
-      public override fun stageName(stageName: String) {
+      override fun stageName(stageName: String) {
         cdkBuilder.stageName(stageName)
       }
 
@@ -461,9 +435,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty,
     ) : StageTransitionProperty {
-      public override fun reason(): String = unwrap(this).getReason()
+      override fun reason(): String = unwrap(this).getReason()
 
-      public override fun stageName(): String = unwrap(this).getStageName()
+      override fun stageName(): String = unwrap(this).getStageName()
     }
 
     public companion object {
@@ -494,20 +468,15 @@ public open class CfnPipeline internal constructor(
     public fun sourceActionName(): String
 
     public interface Builder {
-      public fun pullRequest(pullRequest: IResolvable) {
-      }
+      public fun pullRequest(pullRequest: IResolvable)
 
-      public fun pullRequest(pullRequest: List<Any>) {
-      }
+      public fun pullRequest(pullRequest: List<Any>)
 
-      public fun push(push: IResolvable) {
-      }
+      public fun push(push: IResolvable)
 
-      public fun push(push: List<Any>) {
-      }
+      public fun push(push: List<Any>)
 
-      public fun sourceActionName(sourceActionName: String) {
-      }
+      public fun sourceActionName(sourceActionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -516,23 +485,23 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty.builder()
 
-      public override fun pullRequest(pullRequest: IResolvable) {
+      override fun pullRequest(pullRequest: IResolvable) {
         cdkBuilder.pullRequest(pullRequest.let(IResolvable::unwrap))
       }
 
-      public override fun pullRequest(pullRequest: List<Any>) {
+      override fun pullRequest(pullRequest: List<Any>) {
         cdkBuilder.pullRequest(pullRequest)
       }
 
-      public override fun push(push: IResolvable) {
+      override fun push(push: IResolvable) {
         cdkBuilder.push(push.let(IResolvable::unwrap))
       }
 
-      public override fun push(push: List<Any>) {
+      override fun push(push: List<Any>) {
         cdkBuilder.push(push)
       }
 
-      public override fun sourceActionName(sourceActionName: String) {
+      override fun sourceActionName(sourceActionName: String) {
         cdkBuilder.sourceActionName(sourceActionName)
       }
 
@@ -545,11 +514,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty,
     ) : GitConfigurationProperty {
-      public override fun pullRequest(): Any? = unwrap(this).getPullRequest()
+      override fun pullRequest(): Any? = unwrap(this).getPullRequest()
 
-      public override fun push(): Any? = unwrap(this).getPush()
+      override fun push(): Any? = unwrap(this).getPush()
 
-      public override fun sourceActionName(): String = unwrap(this).getSourceActionName()
+      override fun sourceActionName(): String = unwrap(this).getSourceActionName()
     }
 
     public companion object {
@@ -576,8 +545,7 @@ public open class CfnPipeline internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -585,7 +553,7 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -598,7 +566,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty,
     ) : InputArtifactProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -627,19 +595,15 @@ public open class CfnPipeline internal constructor(
     public fun providerType(): String
 
     public interface Builder {
-      public fun gitConfiguration(gitConfiguration: IResolvable) {
-      }
+      public fun gitConfiguration(gitConfiguration: IResolvable)
 
-      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty) {
-      }
+      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51cb2b4e2bd58be2966f809a82c34fbd0a7affb16285727bcf432cf200ebb552")
-      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit)
 
-      public fun providerType(providerType: String) {
-      }
+      public fun providerType(providerType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -648,21 +612,20 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty.builder()
 
-      public override fun gitConfiguration(gitConfiguration: IResolvable) {
+      override fun gitConfiguration(gitConfiguration: IResolvable) {
         cdkBuilder.gitConfiguration(gitConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun gitConfiguration(gitConfiguration: GitConfigurationProperty) {
+      override fun gitConfiguration(gitConfiguration: GitConfigurationProperty) {
         cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51cb2b4e2bd58be2966f809a82c34fbd0a7affb16285727bcf432cf200ebb552")
-      public override
-          fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit): Unit
-          = gitConfiguration(GitConfigurationProperty(gitConfiguration))
+      override fun gitConfiguration(gitConfiguration: GitConfigurationProperty.Builder.() -> Unit):
+          Unit = gitConfiguration(GitConfigurationProperty(gitConfiguration))
 
-      public override fun providerType(providerType: String) {
+      override fun providerType(providerType: String) {
         cdkBuilder.providerType(providerType)
       }
 
@@ -675,9 +638,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty,
     ) : PipelineTriggerDeclarationProperty {
-      public override fun gitConfiguration(): Any? = unwrap(this).getGitConfiguration()
+      override fun gitConfiguration(): Any? = unwrap(this).getGitConfiguration()
 
-      public override fun providerType(): String = unwrap(this).getProviderType()
+      override fun providerType(): String = unwrap(this).getProviderType()
     }
 
     public companion object {
@@ -711,17 +674,13 @@ public open class CfnPipeline internal constructor(
     public fun version(): String
 
     public interface Builder {
-      public fun category(category: String) {
-      }
+      public fun category(category: String)
 
-      public fun owner(owner: String) {
-      }
+      public fun owner(owner: String)
 
-      public fun provider(provider: String) {
-      }
+      public fun provider(provider: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -729,19 +688,19 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty.builder()
 
-      public override fun category(category: String) {
+      override fun category(category: String) {
         cdkBuilder.category(category)
       }
 
-      public override fun owner(owner: String) {
+      override fun owner(owner: String) {
         cdkBuilder.owner(owner)
       }
 
-      public override fun provider(provider: String) {
+      override fun provider(provider: String) {
         cdkBuilder.provider(provider)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -754,13 +713,13 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty,
     ) : ActionTypeIdProperty {
-      public override fun category(): String = unwrap(this).getCategory()
+      override fun category(): String = unwrap(this).getCategory()
 
-      public override fun owner(): String = unwrap(this).getOwner()
+      override fun owner(): String = unwrap(this).getOwner()
 
-      public override fun provider(): String = unwrap(this).getProvider()
+      override fun provider(): String = unwrap(this).getProvider()
 
-      public override fun version(): String = unwrap(this).getVersion()
+      override fun version(): String = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -791,30 +750,23 @@ public open class CfnPipeline internal constructor(
     public fun filePaths(): Any? = unwrap(this).getFilePaths()
 
     public interface Builder {
-      public fun branches(branches: IResolvable) {
-      }
+      public fun branches(branches: IResolvable)
 
-      public fun branches(branches: GitBranchFilterCriteriaProperty) {
-      }
+      public fun branches(branches: GitBranchFilterCriteriaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("65cb80379ab7e3aa99eb8e992bafd8046bf7c6d0e0107faeefd4040cc6127ac2")
-      public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit) {
-      }
+      public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit)
 
-      public fun events(events: List<String>) {
-      }
+      public fun events(events: List<String>)
 
-      public fun filePaths(filePaths: IResolvable) {
-      }
+      public fun filePaths(filePaths: IResolvable)
 
-      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
-      }
+      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6d5bf2731910e29c1c9b8d2d2b130cde8712135db84adebde46c8d9a907d77a6")
-      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit) {
-      }
+      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -823,36 +775,35 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty.builder()
 
-      public override fun branches(branches: IResolvable) {
+      override fun branches(branches: IResolvable) {
         cdkBuilder.branches(branches.let(IResolvable::unwrap))
       }
 
-      public override fun branches(branches: GitBranchFilterCriteriaProperty) {
+      override fun branches(branches: GitBranchFilterCriteriaProperty) {
         cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("65cb80379ab7e3aa99eb8e992bafd8046bf7c6d0e0107faeefd4040cc6127ac2")
-      public override fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit):
-          Unit = branches(GitBranchFilterCriteriaProperty(branches))
+      override fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit): Unit =
+          branches(GitBranchFilterCriteriaProperty(branches))
 
-      public override fun events(events: List<String>) {
+      override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
 
-      public override fun filePaths(filePaths: IResolvable) {
+      override fun filePaths(filePaths: IResolvable) {
         cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
       }
 
-      public override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
+      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
         cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6d5bf2731910e29c1c9b8d2d2b130cde8712135db84adebde46c8d9a907d77a6")
-      public override
-          fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit): Unit =
-          filePaths(GitFilePathFilterCriteriaProperty(filePaths))
+      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit): Unit
+          = filePaths(GitFilePathFilterCriteriaProperty(filePaths))
 
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty =
@@ -863,11 +814,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty,
     ) : GitPullRequestFilterProperty {
-      public override fun branches(): Any? = unwrap(this).getBranches()
+      override fun branches(): Any? = unwrap(this).getBranches()
 
-      public override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
 
-      public override fun filePaths(): Any? = unwrap(this).getFilePaths()
+      override fun filePaths(): Any? = unwrap(this).getFilePaths()
     }
 
     public companion object {
@@ -896,19 +847,15 @@ public open class CfnPipeline internal constructor(
     public fun region(): String
 
     public interface Builder {
-      public fun artifactStore(artifactStore: IResolvable) {
-      }
+      public fun artifactStore(artifactStore: IResolvable)
 
-      public fun artifactStore(artifactStore: ArtifactStoreProperty) {
-      }
+      public fun artifactStore(artifactStore: ArtifactStoreProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("517dbcd794991f0a62ad3ab845d445462d9a0ab84342eb2be9405c85439e27e4")
-      public fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit) {
-      }
+      public fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -917,20 +864,20 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty.builder()
 
-      public override fun artifactStore(artifactStore: IResolvable) {
+      override fun artifactStore(artifactStore: IResolvable) {
         cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
       }
 
-      public override fun artifactStore(artifactStore: ArtifactStoreProperty) {
+      override fun artifactStore(artifactStore: ArtifactStoreProperty) {
         cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("517dbcd794991f0a62ad3ab845d445462d9a0ab84342eb2be9405c85439e27e4")
-      public override fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit):
-          Unit = artifactStore(ArtifactStoreProperty(artifactStore))
+      override fun artifactStore(artifactStore: ArtifactStoreProperty.Builder.() -> Unit): Unit =
+          artifactStore(ArtifactStoreProperty(artifactStore))
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -943,9 +890,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty,
     ) : ArtifactStoreMapProperty {
-      public override fun artifactStore(): Any = unwrap(this).getArtifactStore()
+      override fun artifactStore(): Any = unwrap(this).getArtifactStore()
 
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
     }
 
     public companion object {
@@ -976,22 +923,17 @@ public open class CfnPipeline internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun encryptionKey(encryptionKey: IResolvable) {
-      }
+      public fun encryptionKey(encryptionKey: IResolvable)
 
-      public fun encryptionKey(encryptionKey: EncryptionKeyProperty) {
-      }
+      public fun encryptionKey(encryptionKey: EncryptionKeyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6c3aa9f37ce17445bbdd9e12eadba2c8a2843a6a19324999d3445e9540089011")
-      public fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit) {
-      }
+      public fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -999,24 +941,24 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty.builder()
 
-      public override fun encryptionKey(encryptionKey: IResolvable) {
+      override fun encryptionKey(encryptionKey: IResolvable) {
         cdkBuilder.encryptionKey(encryptionKey.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionKey(encryptionKey: EncryptionKeyProperty) {
+      override fun encryptionKey(encryptionKey: EncryptionKeyProperty) {
         cdkBuilder.encryptionKey(encryptionKey.let(EncryptionKeyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6c3aa9f37ce17445bbdd9e12eadba2c8a2843a6a19324999d3445e9540089011")
-      public override fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit):
-          Unit = encryptionKey(EncryptionKeyProperty(encryptionKey))
+      override fun encryptionKey(encryptionKey: EncryptionKeyProperty.Builder.() -> Unit): Unit =
+          encryptionKey(EncryptionKeyProperty(encryptionKey))
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1029,11 +971,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty,
     ) : ArtifactStoreProperty {
-      public override fun encryptionKey(): Any? = unwrap(this).getEncryptionKey()
+      override fun encryptionKey(): Any? = unwrap(this).getEncryptionKey()
 
-      public override fun location(): String = unwrap(this).getLocation()
+      override fun location(): String = unwrap(this).getLocation()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1062,11 +1004,9 @@ public open class CfnPipeline internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1075,11 +1015,11 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1092,9 +1032,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty,
     ) : BlockerDeclarationProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1125,20 +1065,15 @@ public open class CfnPipeline internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun actions(actions: IResolvable) {
-      }
+      public fun actions(actions: IResolvable)
 
-      public fun actions(actions: List<Any>) {
-      }
+      public fun actions(actions: List<Any>)
 
-      public fun blockers(blockers: IResolvable) {
-      }
+      public fun blockers(blockers: IResolvable)
 
-      public fun blockers(blockers: List<Any>) {
-      }
+      public fun blockers(blockers: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1147,23 +1082,23 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty.builder()
 
-      public override fun actions(actions: IResolvable) {
+      override fun actions(actions: IResolvable) {
         cdkBuilder.actions(actions.let(IResolvable::unwrap))
       }
 
-      public override fun actions(actions: List<Any>) {
+      override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
 
-      public override fun blockers(blockers: IResolvable) {
+      override fun blockers(blockers: IResolvable) {
         cdkBuilder.blockers(blockers.let(IResolvable::unwrap))
       }
 
-      public override fun blockers(blockers: List<Any>) {
+      override fun blockers(blockers: List<Any>) {
         cdkBuilder.blockers(blockers)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1176,11 +1111,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty,
     ) : StageDeclarationProperty {
-      public override fun actions(): Any = unwrap(this).getActions()
+      override fun actions(): Any = unwrap(this).getActions()
 
-      public override fun blockers(): Any? = unwrap(this).getBlockers()
+      override fun blockers(): Any? = unwrap(this).getBlockers()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -1209,11 +1144,9 @@ public open class CfnPipeline internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1221,11 +1154,11 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1238,9 +1171,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty,
     ) : EncryptionKeyProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1283,46 +1216,33 @@ public open class CfnPipeline internal constructor(
     public fun runOrder(): Number? = unwrap(this).getRunOrder()
 
     public interface Builder {
-      public fun actionTypeId(actionTypeId: IResolvable) {
-      }
+      public fun actionTypeId(actionTypeId: IResolvable)
 
-      public fun actionTypeId(actionTypeId: ActionTypeIdProperty) {
-      }
+      public fun actionTypeId(actionTypeId: ActionTypeIdProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2092269ef9990e90dc63fe85f23371fa1920f3a0164d9fae3941e98a5e81871")
-      public fun actionTypeId(actionTypeId: ActionTypeIdProperty.Builder.() -> Unit) {
-      }
+      public fun actionTypeId(actionTypeId: ActionTypeIdProperty.Builder.() -> Unit)
 
-      public fun configuration(configuration: Any) {
-      }
+      public fun configuration(configuration: Any)
 
-      public fun inputArtifacts(inputArtifacts: IResolvable) {
-      }
+      public fun inputArtifacts(inputArtifacts: IResolvable)
 
-      public fun inputArtifacts(inputArtifacts: List<Any>) {
-      }
+      public fun inputArtifacts(inputArtifacts: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun outputArtifacts(outputArtifacts: IResolvable) {
-      }
+      public fun outputArtifacts(outputArtifacts: IResolvable)
 
-      public fun outputArtifacts(outputArtifacts: List<Any>) {
-      }
+      public fun outputArtifacts(outputArtifacts: List<Any>)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun runOrder(runOrder: Number) {
-      }
+      public fun runOrder(runOrder: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1331,56 +1251,56 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty.builder()
 
-      public override fun actionTypeId(actionTypeId: IResolvable) {
+      override fun actionTypeId(actionTypeId: IResolvable) {
         cdkBuilder.actionTypeId(actionTypeId.let(IResolvable::unwrap))
       }
 
-      public override fun actionTypeId(actionTypeId: ActionTypeIdProperty) {
+      override fun actionTypeId(actionTypeId: ActionTypeIdProperty) {
         cdkBuilder.actionTypeId(actionTypeId.let(ActionTypeIdProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2092269ef9990e90dc63fe85f23371fa1920f3a0164d9fae3941e98a5e81871")
-      public override fun actionTypeId(actionTypeId: ActionTypeIdProperty.Builder.() -> Unit): Unit
-          = actionTypeId(ActionTypeIdProperty(actionTypeId))
+      override fun actionTypeId(actionTypeId: ActionTypeIdProperty.Builder.() -> Unit): Unit =
+          actionTypeId(ActionTypeIdProperty(actionTypeId))
 
-      public override fun configuration(configuration: Any) {
+      override fun configuration(configuration: Any) {
         cdkBuilder.configuration(configuration)
       }
 
-      public override fun inputArtifacts(inputArtifacts: IResolvable) {
+      override fun inputArtifacts(inputArtifacts: IResolvable) {
         cdkBuilder.inputArtifacts(inputArtifacts.let(IResolvable::unwrap))
       }
 
-      public override fun inputArtifacts(inputArtifacts: List<Any>) {
+      override fun inputArtifacts(inputArtifacts: List<Any>) {
         cdkBuilder.inputArtifacts(inputArtifacts)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun outputArtifacts(outputArtifacts: IResolvable) {
+      override fun outputArtifacts(outputArtifacts: IResolvable) {
         cdkBuilder.outputArtifacts(outputArtifacts.let(IResolvable::unwrap))
       }
 
-      public override fun outputArtifacts(outputArtifacts: List<Any>) {
+      override fun outputArtifacts(outputArtifacts: List<Any>) {
         cdkBuilder.outputArtifacts(outputArtifacts)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun runOrder(runOrder: Number) {
+      override fun runOrder(runOrder: Number) {
         cdkBuilder.runOrder(runOrder)
       }
 
@@ -1393,23 +1313,23 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty,
     ) : ActionDeclarationProperty {
-      public override fun actionTypeId(): Any = unwrap(this).getActionTypeId()
+      override fun actionTypeId(): Any = unwrap(this).getActionTypeId()
 
-      public override fun configuration(): Any? = unwrap(this).getConfiguration()
+      override fun configuration(): Any? = unwrap(this).getConfiguration()
 
-      public override fun inputArtifacts(): Any? = unwrap(this).getInputArtifacts()
+      override fun inputArtifacts(): Any? = unwrap(this).getInputArtifacts()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun outputArtifacts(): Any? = unwrap(this).getOutputArtifacts()
+      override fun outputArtifacts(): Any? = unwrap(this).getOutputArtifacts()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun runOrder(): Number? = unwrap(this).getRunOrder()
+      override fun runOrder(): Number? = unwrap(this).getRunOrder()
     }
 
     public companion object {
@@ -1441,35 +1361,27 @@ public open class CfnPipeline internal constructor(
         unwrap(this).getTags()?.let(GitTagFilterCriteriaProperty::wrap)
 
     public interface Builder {
-      public fun branches(branches: IResolvable) {
-      }
+      public fun branches(branches: IResolvable)
 
-      public fun branches(branches: GitBranchFilterCriteriaProperty) {
-      }
+      public fun branches(branches: GitBranchFilterCriteriaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ddc8d1d60a7c59dd92f9a3fd0b948aabdedb5c2a813e665f3425b043167ecfa2")
-      public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit) {
-      }
+      public fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit)
 
-      public fun filePaths(filePaths: IResolvable) {
-      }
+      public fun filePaths(filePaths: IResolvable)
 
-      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
-      }
+      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2b1024504832e9322cad548b5af6f2fa09f8daa9df5ff97b0054f20f7aacb5e1")
-      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit) {
-      }
+      public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit)
 
-      public fun tags(tags: GitTagFilterCriteriaProperty) {
-      }
+      public fun tags(tags: GitTagFilterCriteriaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44cf19020829a8aec87bbe2965c6e33acffa44c7665020066918b4a1aceb2cb9")
-      public fun tags(tags: GitTagFilterCriteriaProperty.Builder.() -> Unit) {
-      }
+      public fun tags(tags: GitTagFilterCriteriaProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1477,40 +1389,39 @@ public open class CfnPipeline internal constructor(
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty.builder()
 
-      public override fun branches(branches: IResolvable) {
+      override fun branches(branches: IResolvable) {
         cdkBuilder.branches(branches.let(IResolvable::unwrap))
       }
 
-      public override fun branches(branches: GitBranchFilterCriteriaProperty) {
+      override fun branches(branches: GitBranchFilterCriteriaProperty) {
         cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ddc8d1d60a7c59dd92f9a3fd0b948aabdedb5c2a813e665f3425b043167ecfa2")
-      public override fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit):
-          Unit = branches(GitBranchFilterCriteriaProperty(branches))
+      override fun branches(branches: GitBranchFilterCriteriaProperty.Builder.() -> Unit): Unit =
+          branches(GitBranchFilterCriteriaProperty(branches))
 
-      public override fun filePaths(filePaths: IResolvable) {
+      override fun filePaths(filePaths: IResolvable) {
         cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
       }
 
-      public override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
+      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
         cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2b1024504832e9322cad548b5af6f2fa09f8daa9df5ff97b0054f20f7aacb5e1")
-      public override
-          fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit): Unit =
-          filePaths(GitFilePathFilterCriteriaProperty(filePaths))
+      override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty.Builder.() -> Unit): Unit
+          = filePaths(GitFilePathFilterCriteriaProperty(filePaths))
 
-      public override fun tags(tags: GitTagFilterCriteriaProperty) {
+      override fun tags(tags: GitTagFilterCriteriaProperty) {
         cdkBuilder.tags(tags.let(GitTagFilterCriteriaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44cf19020829a8aec87bbe2965c6e33acffa44c7665020066918b4a1aceb2cb9")
-      public override fun tags(tags: GitTagFilterCriteriaProperty.Builder.() -> Unit): Unit =
+      override fun tags(tags: GitTagFilterCriteriaProperty.Builder.() -> Unit): Unit =
           tags(GitTagFilterCriteriaProperty(tags))
 
       public fun build():
@@ -1522,11 +1433,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty,
     ) : GitPushFilterProperty {
-      public override fun branches(): Any? = unwrap(this).getBranches()
+      override fun branches(): Any? = unwrap(this).getBranches()
 
-      public override fun filePaths(): Any? = unwrap(this).getFilePaths()
+      override fun filePaths(): Any? = unwrap(this).getFilePaths()
 
-      public override fun tags(): GitTagFilterCriteriaProperty? =
+      override fun tags(): GitTagFilterCriteriaProperty? =
           unwrap(this).getTags()?.let(GitTagFilterCriteriaProperty::wrap)
     }
 
@@ -1558,14 +1469,11 @@ public open class CfnPipeline internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1574,15 +1482,15 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty.builder()
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1595,11 +1503,11 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty,
     ) : VariableDeclarationProperty {
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -1628,11 +1536,9 @@ public open class CfnPipeline internal constructor(
     public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
 
     public interface Builder {
-      public fun excludes(excludes: List<String>) {
-      }
+      public fun excludes(excludes: List<String>)
 
-      public fun includes(includes: List<String>) {
-      }
+      public fun includes(includes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1641,11 +1547,11 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty.builder()
 
-      public override fun excludes(excludes: List<String>) {
+      override fun excludes(excludes: List<String>) {
         cdkBuilder.excludes(excludes)
       }
 
-      public override fun includes(includes: List<String>) {
+      override fun includes(includes: List<String>) {
         cdkBuilder.includes(includes)
       }
 
@@ -1658,9 +1564,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty,
     ) : GitFilePathFilterCriteriaProperty {
-      public override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
 
-      public override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
     }
 
     public companion object {
@@ -1690,11 +1596,9 @@ public open class CfnPipeline internal constructor(
     public fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
 
     public interface Builder {
-      public fun excludes(excludes: List<String>) {
-      }
+      public fun excludes(excludes: List<String>)
 
-      public fun includes(includes: List<String>) {
-      }
+      public fun includes(includes: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1703,11 +1607,11 @@ public open class CfnPipeline internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty.builder()
 
-      public override fun excludes(excludes: List<String>) {
+      override fun excludes(excludes: List<String>) {
         cdkBuilder.excludes(excludes)
       }
 
-      public override fun includes(includes: List<String>) {
+      override fun includes(includes: List<String>) {
         cdkBuilder.includes(includes)
       }
 
@@ -1720,9 +1624,9 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty,
     ) : GitBranchFilterCriteriaProperty {
-      public override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
+      override fun excludes(): List<String> = unwrap(this).getExcludes() ?: emptyList()
 
-      public override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
+      override fun includes(): List<String> = unwrap(this).getIncludes() ?: emptyList()
     }
 
     public companion object {

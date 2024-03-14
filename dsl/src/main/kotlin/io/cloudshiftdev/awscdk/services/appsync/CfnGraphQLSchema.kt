@@ -36,14 +36,11 @@ public open class CfnGraphQLSchema internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun definition(definition: String) {
-    }
+    public fun definition(definition: String)
 
-    public fun definitionS3Location(definitionS3Location: String) {
-    }
+    public fun definitionS3Location(definitionS3Location: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnGraphQLSchema internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnGraphQLSchema.Builder =
         software.amazon.awscdk.services.appsync.CfnGraphQLSchema.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun definition(definition: String) {
+    override fun definition(definition: String) {
       cdkBuilder.definition(definition)
     }
 
-    public override fun definitionS3Location(definitionS3Location: String) {
+    override fun definitionS3Location(definitionS3Location: String) {
       cdkBuilder.definitionS3Location(definitionS3Location)
     }
 

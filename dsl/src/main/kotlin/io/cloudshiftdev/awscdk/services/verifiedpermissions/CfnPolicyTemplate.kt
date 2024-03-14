@@ -36,14 +36,11 @@ public open class CfnPolicyTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun policyStoreId(policyStoreId: String) {
-    }
+    public fun policyStoreId(policyStoreId: String)
 
-    public fun statement(statement: String) {
-    }
+    public fun statement(statement: String)
   }
 
   private class BuilderImpl(
@@ -55,15 +52,15 @@ public open class CfnPolicyTemplate internal constructor(
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyTemplate.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun policyStoreId(policyStoreId: String) {
+    override fun policyStoreId(policyStoreId: String) {
       cdkBuilder.policyStoreId(policyStoreId)
     }
 
-    public override fun statement(statement: String) {
+    override fun statement(statement: String) {
       cdkBuilder.statement(statement)
     }
 

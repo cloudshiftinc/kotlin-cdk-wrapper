@@ -19,27 +19,21 @@ public open class AccessPoint internal constructor(
       unwrap(this).getFileSystem().let(IFileSystem::wrap)
 
   public interface Builder {
-    public fun createAcl(createAcl: Acl) {
-    }
+    public fun createAcl(createAcl: Acl)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a479721a4dbf0a31026115d0afb2531beac62afe6bd95cef7af539766a1ad838")
-    public fun createAcl(createAcl: Acl.Builder.() -> Unit) {
-    }
+    public fun createAcl(createAcl: Acl.Builder.() -> Unit)
 
-    public fun fileSystem(fileSystem: IFileSystem) {
-    }
+    public fun fileSystem(fileSystem: IFileSystem)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun posixUser(posixUser: PosixUser) {
-    }
+    public fun posixUser(posixUser: PosixUser)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3411fc0775754d830ec49cde548af994953884e96ae0a273fb45ceaa8c2ca6b4")
-    public fun posixUser(posixUser: PosixUser.Builder.() -> Unit) {
-    }
+    public fun posixUser(posixUser: PosixUser.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -49,30 +43,29 @@ public open class AccessPoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.efs.AccessPoint.Builder =
         software.amazon.awscdk.services.efs.AccessPoint.Builder.create(scope, id)
 
-    public override fun createAcl(createAcl: Acl) {
+    override fun createAcl(createAcl: Acl) {
       cdkBuilder.createAcl(createAcl.let(Acl::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a479721a4dbf0a31026115d0afb2531beac62afe6bd95cef7af539766a1ad838")
-    public override fun createAcl(createAcl: Acl.Builder.() -> Unit): Unit =
-        createAcl(Acl(createAcl))
+    override fun createAcl(createAcl: Acl.Builder.() -> Unit): Unit = createAcl(Acl(createAcl))
 
-    public override fun fileSystem(fileSystem: IFileSystem) {
+    override fun fileSystem(fileSystem: IFileSystem) {
       cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun posixUser(posixUser: PosixUser) {
+    override fun posixUser(posixUser: PosixUser) {
       cdkBuilder.posixUser(posixUser.let(PosixUser::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3411fc0775754d830ec49cde548af994953884e96ae0a273fb45ceaa8c2ca6b4")
-    public override fun posixUser(posixUser: PosixUser.Builder.() -> Unit): Unit =
+    override fun posixUser(posixUser: PosixUser.Builder.() -> Unit): Unit =
         posixUser(PosixUser(posixUser))
 
     public fun build(): software.amazon.awscdk.services.efs.AccessPoint = cdkBuilder.build()

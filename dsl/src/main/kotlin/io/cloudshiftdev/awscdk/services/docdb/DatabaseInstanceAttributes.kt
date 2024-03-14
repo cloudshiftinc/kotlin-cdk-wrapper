@@ -12,29 +12,26 @@ public interface DatabaseInstanceAttributes {
   public fun port(): Number
 
   public interface Builder {
-    public fun instanceEndpointAddress(instanceEndpointAddress: String) {
-    }
+    public fun instanceEndpointAddress(instanceEndpointAddress: String)
 
-    public fun instanceIdentifier(instanceIdentifier: String) {
-    }
+    public fun instanceIdentifier(instanceIdentifier: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes.Builder
         = software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes.builder()
 
-    public override fun instanceEndpointAddress(instanceEndpointAddress: String) {
+    override fun instanceEndpointAddress(instanceEndpointAddress: String) {
       cdkBuilder.instanceEndpointAddress(instanceEndpointAddress)
     }
 
-    public override fun instanceIdentifier(instanceIdentifier: String) {
+    override fun instanceIdentifier(instanceIdentifier: String) {
       cdkBuilder.instanceIdentifier(instanceIdentifier)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
@@ -45,12 +42,11 @@ public interface DatabaseInstanceAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes,
   ) : DatabaseInstanceAttributes {
-    public override fun instanceEndpointAddress(): String =
-        unwrap(this).getInstanceEndpointAddress()
+    override fun instanceEndpointAddress(): String = unwrap(this).getInstanceEndpointAddress()
 
-    public override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
+    override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
   }
 
   public companion object {

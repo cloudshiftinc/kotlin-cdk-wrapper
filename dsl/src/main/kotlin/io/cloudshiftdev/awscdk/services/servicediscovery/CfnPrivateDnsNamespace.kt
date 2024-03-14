@@ -73,28 +73,21 @@ public open class CfnPrivateDnsNamespace internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun properties(properties: IResolvable) {
-    }
+    public fun properties(properties: IResolvable)
 
-    public fun properties(properties: PropertiesProperty) {
-    }
+    public fun properties(properties: PropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37d20c5908b9330638c1b162884abd671700210e4f48f304bb16afce36f04f35")
-    public fun properties(properties: PropertiesProperty.Builder.() -> Unit) {
-    }
+    public fun properties(properties: PropertiesProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpc(vpc: String) {
-    }
+    public fun vpc(vpc: String)
   }
 
   private class BuilderImpl(
@@ -106,32 +99,32 @@ public open class CfnPrivateDnsNamespace internal constructor(
         software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun properties(properties: IResolvable) {
+    override fun properties(properties: IResolvable) {
       cdkBuilder.properties(properties.let(IResolvable::unwrap))
     }
 
-    public override fun properties(properties: PropertiesProperty) {
+    override fun properties(properties: PropertiesProperty) {
       cdkBuilder.properties(properties.let(PropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37d20c5908b9330638c1b162884abd671700210e4f48f304bb16afce36f04f35")
-    public override fun properties(properties: PropertiesProperty.Builder.() -> Unit): Unit =
+    override fun properties(properties: PropertiesProperty.Builder.() -> Unit): Unit =
         properties(PropertiesProperty(properties))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpc(vpc: String) {
+    override fun vpc(vpc: String) {
       cdkBuilder.vpc(vpc)
     }
 
@@ -165,17 +158,14 @@ public open class CfnPrivateDnsNamespace internal constructor(
     public fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
 
     public interface Builder {
-      public fun dnsProperties(dnsProperties: IResolvable) {
-      }
+      public fun dnsProperties(dnsProperties: IResolvable)
 
-      public fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty) {
-      }
+      public fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44901fa38784f73d246bb8e19965e43c23ba275fb50754bc62f41212fa96f4ab")
       public
-          fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit) {
-      }
+          fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -184,17 +174,17 @@ public open class CfnPrivateDnsNamespace internal constructor(
           =
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty.builder()
 
-      public override fun dnsProperties(dnsProperties: IResolvable) {
+      override fun dnsProperties(dnsProperties: IResolvable) {
         cdkBuilder.dnsProperties(dnsProperties.let(IResolvable::unwrap))
       }
 
-      public override fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty) {
+      override fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty) {
         cdkBuilder.dnsProperties(dnsProperties.let(PrivateDnsPropertiesMutableProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44901fa38784f73d246bb8e19965e43c23ba275fb50754bc62f41212fa96f4ab")
-      public override
+      override
           fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit):
           Unit = dnsProperties(PrivateDnsPropertiesMutableProperty(dnsProperties))
 
@@ -207,7 +197,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty,
     ) : PropertiesProperty {
-      public override fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
+      override fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
     }
 
     public companion object {
@@ -234,8 +224,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
     public fun ttl(): Number? = unwrap(this).getTtl()
 
     public interface Builder {
-      public fun ttl(ttl: Number) {
-      }
+      public fun ttl(ttl: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -244,7 +233,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
           =
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty.builder()
 
-      public override fun ttl(ttl: Number) {
+      override fun ttl(ttl: Number) {
         cdkBuilder.ttl(ttl)
       }
 
@@ -257,7 +246,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty,
     ) : SOAProperty {
-      public override fun ttl(): Number? = unwrap(this).getTtl()
+      override fun ttl(): Number? = unwrap(this).getTtl()
     }
 
     public companion object {
@@ -284,16 +273,13 @@ public open class CfnPrivateDnsNamespace internal constructor(
     public fun soa(): Any? = unwrap(this).getSoa()
 
     public interface Builder {
-      public fun soa(soa: IResolvable) {
-      }
+      public fun soa(soa: IResolvable)
 
-      public fun soa(soa: SOAProperty) {
-      }
+      public fun soa(soa: SOAProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
-      public fun soa(soa: SOAProperty.Builder.() -> Unit) {
-      }
+      public fun soa(soa: SOAProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -302,17 +288,17 @@ public open class CfnPrivateDnsNamespace internal constructor(
           =
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.builder()
 
-      public override fun soa(soa: IResolvable) {
+      override fun soa(soa: IResolvable) {
         cdkBuilder.soa(soa.let(IResolvable::unwrap))
       }
 
-      public override fun soa(soa: SOAProperty) {
+      override fun soa(soa: SOAProperty) {
         cdkBuilder.soa(soa.let(SOAProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
-      public override fun soa(soa: SOAProperty.Builder.() -> Unit): Unit = soa(SOAProperty(soa))
+      override fun soa(soa: SOAProperty.Builder.() -> Unit): Unit = soa(SOAProperty(soa))
 
       public fun build():
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
@@ -323,7 +309,7 @@ public open class CfnPrivateDnsNamespace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
     ) : PrivateDnsPropertiesMutableProperty {
-      public override fun soa(): Any? = unwrap(this).getSoa()
+      override fun soa(): Any? = unwrap(this).getSoa()
     }
 
     public companion object {

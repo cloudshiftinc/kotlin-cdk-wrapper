@@ -18,58 +18,52 @@ public interface CustomAttributeConfig {
       unwrap(this).getStringConstraints()?.let(StringAttributeConstraints::wrap)
 
   public interface Builder {
-    public fun dataType(dataType: String) {
-    }
+    public fun dataType(dataType: String)
 
-    public fun mutable(mutable: Boolean) {
-    }
+    public fun mutable(mutable: Boolean)
 
-    public fun numberConstraints(numberConstraints: NumberAttributeConstraints) {
-    }
+    public fun numberConstraints(numberConstraints: NumberAttributeConstraints)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc1d50c4781e442cfecd0909e70e85a1efb3a024525c42b606ff1cb3dd1d5dab")
-    public fun numberConstraints(numberConstraints: NumberAttributeConstraints.Builder.() -> Unit) {
-    }
+    public fun numberConstraints(numberConstraints: NumberAttributeConstraints.Builder.() -> Unit)
 
-    public fun stringConstraints(stringConstraints: StringAttributeConstraints) {
-    }
+    public fun stringConstraints(stringConstraints: StringAttributeConstraints)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d05d82bd96940c511d159e415cfc197cce046c20e3eb09a0eb49924b42c36577")
-    public fun stringConstraints(stringConstraints: StringAttributeConstraints.Builder.() -> Unit) {
-    }
+    public fun stringConstraints(stringConstraints: StringAttributeConstraints.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CustomAttributeConfig.Builder =
         software.amazon.awscdk.services.cognito.CustomAttributeConfig.builder()
 
-    public override fun dataType(dataType: String) {
+    override fun dataType(dataType: String) {
       cdkBuilder.dataType(dataType)
     }
 
-    public override fun mutable(mutable: Boolean) {
+    override fun mutable(mutable: Boolean) {
       cdkBuilder.mutable(mutable)
     }
 
-    public override fun numberConstraints(numberConstraints: NumberAttributeConstraints) {
+    override fun numberConstraints(numberConstraints: NumberAttributeConstraints) {
       cdkBuilder.numberConstraints(numberConstraints.let(NumberAttributeConstraints::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc1d50c4781e442cfecd0909e70e85a1efb3a024525c42b606ff1cb3dd1d5dab")
-    public override
+    override
         fun numberConstraints(numberConstraints: NumberAttributeConstraints.Builder.() -> Unit):
         Unit = numberConstraints(NumberAttributeConstraints(numberConstraints))
 
-    public override fun stringConstraints(stringConstraints: StringAttributeConstraints) {
+    override fun stringConstraints(stringConstraints: StringAttributeConstraints) {
       cdkBuilder.stringConstraints(stringConstraints.let(StringAttributeConstraints::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d05d82bd96940c511d159e415cfc197cce046c20e3eb09a0eb49924b42c36577")
-    public override
+    override
         fun stringConstraints(stringConstraints: StringAttributeConstraints.Builder.() -> Unit):
         Unit = stringConstraints(StringAttributeConstraints(stringConstraints))
 
@@ -80,14 +74,14 @@ public interface CustomAttributeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.CustomAttributeConfig,
   ) : CustomAttributeConfig {
-    public override fun dataType(): String = unwrap(this).getDataType()
+    override fun dataType(): String = unwrap(this).getDataType()
 
-    public override fun mutable(): Boolean? = unwrap(this).getMutable()
+    override fun mutable(): Boolean? = unwrap(this).getMutable()
 
-    public override fun numberConstraints(): NumberAttributeConstraints? =
+    override fun numberConstraints(): NumberAttributeConstraints? =
         unwrap(this).getNumberConstraints()?.let(NumberAttributeConstraints::wrap)
 
-    public override fun stringConstraints(): StringAttributeConstraints? =
+    override fun stringConstraints(): StringAttributeConstraints? =
         unwrap(this).getStringConstraints()?.let(StringAttributeConstraints::wrap)
   }
 

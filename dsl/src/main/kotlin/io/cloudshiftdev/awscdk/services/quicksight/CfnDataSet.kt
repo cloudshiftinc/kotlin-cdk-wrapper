@@ -223,126 +223,91 @@ public open class CfnDataSet internal constructor(
   }
 
   public interface Builder {
-    public fun awsAccountId(awsAccountId: String) {
-    }
+    public fun awsAccountId(awsAccountId: String)
 
-    public fun columnGroups(columnGroups: IResolvable) {
-    }
+    public fun columnGroups(columnGroups: IResolvable)
 
-    public fun columnGroups(columnGroups: List<Any>) {
-    }
+    public fun columnGroups(columnGroups: List<Any>)
 
-    public fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable) {
-    }
+    public fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable)
 
-    public fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>) {
-    }
+    public fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>)
 
-    public fun dataSetId(dataSetId: String) {
-    }
+    public fun dataSetId(dataSetId: String)
 
-    public fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable) {
-    }
+    public fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable)
 
-    public
-        fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty) {
-    }
+    public fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1b11bbe24eafa6fe8be5693ba34a09f2b8c06e64b642fae3c4124b121a329b8e")
     public
-        fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty.Builder.() -> Unit) {
-    }
+        fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty.Builder.() -> Unit)
 
-    public fun dataSetUsageConfiguration(dataSetUsageConfiguration: IResolvable) {
-    }
+    public fun dataSetUsageConfiguration(dataSetUsageConfiguration: IResolvable)
 
     public
-        fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty) {
-    }
+        fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e74504af1fbf07a0fcc56d906fa7a031042df28284b6663483e5b97999e74d86")
     public
-        fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty.Builder.() -> Unit)
 
-    public fun datasetParameters(datasetParameters: IResolvable) {
-    }
+    public fun datasetParameters(datasetParameters: IResolvable)
 
-    public fun datasetParameters(datasetParameters: List<Any>) {
-    }
+    public fun datasetParameters(datasetParameters: List<Any>)
 
-    public fun fieldFolders(fieldFolders: IResolvable) {
-    }
+    public fun fieldFolders(fieldFolders: IResolvable)
 
-    public fun fieldFolders(fieldFolders: Map<String, Any>) {
-    }
+    public fun fieldFolders(fieldFolders: Map<String, Any>)
 
-    public fun importMode(importMode: String) {
-    }
+    public fun importMode(importMode: String)
 
-    public fun ingestionWaitPolicy(ingestionWaitPolicy: IResolvable) {
-    }
+    public fun ingestionWaitPolicy(ingestionWaitPolicy: IResolvable)
 
-    public fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty) {
-    }
+    public fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e9a06411827148f45b4562d2103434b0311c0f9d115d15413b42353b07b0dc6")
     public
-        fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty.Builder.() -> Unit) {
-    }
+        fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty.Builder.() -> Unit)
 
-    public fun logicalTableMap(logicalTableMap: IResolvable) {
-    }
+    public fun logicalTableMap(logicalTableMap: IResolvable)
 
-    public fun logicalTableMap(logicalTableMap: Map<String, Any>) {
-    }
+    public fun logicalTableMap(logicalTableMap: Map<String, Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun permissions(permissions: IResolvable) {
-    }
+    public fun permissions(permissions: IResolvable)
 
-    public fun permissions(permissions: List<Any>) {
-    }
+    public fun permissions(permissions: List<Any>)
 
-    public fun physicalTableMap(physicalTableMap: IResolvable) {
-    }
+    public fun physicalTableMap(physicalTableMap: IResolvable)
 
-    public fun physicalTableMap(physicalTableMap: Map<String, Any>) {
-    }
+    public fun physicalTableMap(physicalTableMap: Map<String, Any>)
 
-    public fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: IResolvable) {
-    }
+    public fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: IResolvable)
 
     public
-        fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty) {
-    }
+        fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72c8133ac76b705895da48093797a90a33b3f6b2239ca56e1b2b68b27d76ff3e")
     public
-        fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty.Builder.() -> Unit) {
-    }
+        fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty.Builder.() -> Unit)
 
-    public fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: IResolvable) {
-    }
+    public fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: IResolvable)
 
     public
-        fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty) {
-    }
+        fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48530a6bc1ae355140ee3d734117ed4ce35265abec30be91ecdfa5082105a3c9")
     public
-        fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -352,157 +317,157 @@ public open class CfnDataSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.quicksight.CfnDataSet.Builder =
         software.amazon.awscdk.services.quicksight.CfnDataSet.Builder.create(scope, id)
 
-    public override fun awsAccountId(awsAccountId: String) {
+    override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    public override fun columnGroups(columnGroups: IResolvable) {
+    override fun columnGroups(columnGroups: IResolvable) {
       cdkBuilder.columnGroups(columnGroups.let(IResolvable::unwrap))
     }
 
-    public override fun columnGroups(columnGroups: List<Any>) {
+    override fun columnGroups(columnGroups: List<Any>) {
       cdkBuilder.columnGroups(columnGroups)
     }
 
-    public override fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable) {
+    override fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable) {
       cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.let(IResolvable::unwrap))
     }
 
-    public override fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>) {
+    override fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>) {
       cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules)
     }
 
-    public override fun dataSetId(dataSetId: String) {
+    override fun dataSetId(dataSetId: String) {
       cdkBuilder.dataSetId(dataSetId)
     }
 
-    public override fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable) {
+    override fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable) {
       cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty) {
       cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(DataSetRefreshPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1b11bbe24eafa6fe8be5693ba34a09f2b8c06e64b642fae3c4124b121a329b8e")
-    public override
+    override
         fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty.Builder.() -> Unit):
         Unit = dataSetRefreshProperties(DataSetRefreshPropertiesProperty(dataSetRefreshProperties))
 
-    public override fun dataSetUsageConfiguration(dataSetUsageConfiguration: IResolvable) {
+    override fun dataSetUsageConfiguration(dataSetUsageConfiguration: IResolvable) {
       cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty) {
       cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(DataSetUsageConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e74504af1fbf07a0fcc56d906fa7a031042df28284b6663483e5b97999e74d86")
-    public override
+    override
         fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty.Builder.() -> Unit):
         Unit =
         dataSetUsageConfiguration(DataSetUsageConfigurationProperty(dataSetUsageConfiguration))
 
-    public override fun datasetParameters(datasetParameters: IResolvable) {
+    override fun datasetParameters(datasetParameters: IResolvable) {
       cdkBuilder.datasetParameters(datasetParameters.let(IResolvable::unwrap))
     }
 
-    public override fun datasetParameters(datasetParameters: List<Any>) {
+    override fun datasetParameters(datasetParameters: List<Any>) {
       cdkBuilder.datasetParameters(datasetParameters)
     }
 
-    public override fun fieldFolders(fieldFolders: IResolvable) {
+    override fun fieldFolders(fieldFolders: IResolvable) {
       cdkBuilder.fieldFolders(fieldFolders.let(IResolvable::unwrap))
     }
 
-    public override fun fieldFolders(fieldFolders: Map<String, Any>) {
+    override fun fieldFolders(fieldFolders: Map<String, Any>) {
       cdkBuilder.fieldFolders(fieldFolders)
     }
 
-    public override fun importMode(importMode: String) {
+    override fun importMode(importMode: String) {
       cdkBuilder.importMode(importMode)
     }
 
-    public override fun ingestionWaitPolicy(ingestionWaitPolicy: IResolvable) {
+    override fun ingestionWaitPolicy(ingestionWaitPolicy: IResolvable) {
       cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty) {
+    override fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty) {
       cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IngestionWaitPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e9a06411827148f45b4562d2103434b0311c0f9d115d15413b42353b07b0dc6")
-    public override
+    override
         fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty.Builder.() -> Unit):
         Unit = ingestionWaitPolicy(IngestionWaitPolicyProperty(ingestionWaitPolicy))
 
-    public override fun logicalTableMap(logicalTableMap: IResolvable) {
+    override fun logicalTableMap(logicalTableMap: IResolvable) {
       cdkBuilder.logicalTableMap(logicalTableMap.let(IResolvable::unwrap))
     }
 
-    public override fun logicalTableMap(logicalTableMap: Map<String, Any>) {
+    override fun logicalTableMap(logicalTableMap: Map<String, Any>) {
       cdkBuilder.logicalTableMap(logicalTableMap)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun permissions(permissions: IResolvable) {
+    override fun permissions(permissions: IResolvable) {
       cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
     }
 
-    public override fun permissions(permissions: List<Any>) {
+    override fun permissions(permissions: List<Any>) {
       cdkBuilder.permissions(permissions)
     }
 
-    public override fun physicalTableMap(physicalTableMap: IResolvable) {
+    override fun physicalTableMap(physicalTableMap: IResolvable) {
       cdkBuilder.physicalTableMap(physicalTableMap.let(IResolvable::unwrap))
     }
 
-    public override fun physicalTableMap(physicalTableMap: Map<String, Any>) {
+    override fun physicalTableMap(physicalTableMap: Map<String, Any>) {
       cdkBuilder.physicalTableMap(physicalTableMap)
     }
 
-    public override fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: IResolvable) {
+    override fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: IResolvable) {
       cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty) {
       cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(RowLevelPermissionDataSetProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72c8133ac76b705895da48093797a90a33b3f6b2239ca56e1b2b68b27d76ff3e")
-    public override
+    override
         fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty.Builder.() -> Unit):
         Unit =
         rowLevelPermissionDataSet(RowLevelPermissionDataSetProperty(rowLevelPermissionDataSet))
 
-    public override
+    override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: IResolvable) {
       cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty) {
       cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(RowLevelPermissionTagConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48530a6bc1ae355140ee3d734117ed4ce35265abec30be91ecdfa5082105a3c9")
-    public override
+    override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty.Builder.() -> Unit):
         Unit =
         rowLevelPermissionTagConfiguration(RowLevelPermissionTagConfigurationProperty(rowLevelPermissionTagConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -534,17 +499,14 @@ public open class CfnDataSet internal constructor(
     public fun geoSpatialColumnGroup(): Any? = unwrap(this).getGeoSpatialColumnGroup()
 
     public interface Builder {
-      public fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable) {
-      }
+      public fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable)
 
-      public fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty) {
-      }
+      public fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fbd4d291cd40db33396c220c06606a0b2373f738c9d3bde0ed15d8ffb7f3df7f")
       public
-          fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty.Builder.() -> Unit) {
-      }
+          fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -552,18 +514,17 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty.builder()
 
-      public override fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable) {
+      override fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable) {
         cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup.let(IResolvable::unwrap))
       }
 
-      public override
-          fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty) {
+      override fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty) {
         cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup.let(GeoSpatialColumnGroupProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fbd4d291cd40db33396c220c06606a0b2373f738c9d3bde0ed15d8ffb7f3df7f")
-      public override
+      override
           fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty.Builder.() -> Unit):
           Unit = geoSpatialColumnGroup(GeoSpatialColumnGroupProperty(geoSpatialColumnGroup))
 
@@ -575,7 +536,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnGroupProperty,
     ) : ColumnGroupProperty {
-      public override fun geoSpatialColumnGroup(): Any? = unwrap(this).getGeoSpatialColumnGroup()
+      override fun geoSpatialColumnGroup(): Any? = unwrap(this).getGeoSpatialColumnGroup()
     }
 
     public companion object {
@@ -606,14 +567,11 @@ public open class CfnDataSet internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun subType(subType: String) {
-      }
+      public fun subType(subType: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -621,15 +579,15 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun subType(subType: String) {
+      override fun subType(subType: String) {
         cdkBuilder.subType(subType)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -641,11 +599,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.InputColumnProperty,
     ) : InputColumnProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun subType(): String? = unwrap(this).getSubType()
+      override fun subType(): String? = unwrap(this).getSubType()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -672,8 +630,7 @@ public open class CfnDataSet internal constructor(
     public fun text(): String? = unwrap(this).getText()
 
     public interface Builder {
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
     }
 
     private class BuilderImpl : Builder {
@@ -681,7 +638,7 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty.builder()
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
@@ -694,7 +651,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnDescriptionProperty,
     ) : ColumnDescriptionProperty {
-      public override fun text(): String? = unwrap(this).getText()
+      override fun text(): String? = unwrap(this).getText()
     }
 
     public companion object {
@@ -725,14 +682,11 @@ public open class CfnDataSet internal constructor(
     public fun expression(): String
 
     public interface Builder {
-      public fun columnId(columnId: String) {
-      }
+      public fun columnId(columnId: String)
 
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -740,15 +694,15 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty.builder()
 
-      public override fun columnId(columnId: String) {
+      override fun columnId(columnId: String) {
         cdkBuilder.columnId(columnId)
       }
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
@@ -761,11 +715,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.CalculatedColumnProperty,
     ) : CalculatedColumnProperty {
-      public override fun columnId(): String = unwrap(this).getColumnId()
+      override fun columnId(): String = unwrap(this).getColumnId()
 
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
     }
 
     public companion object {
@@ -796,25 +750,19 @@ public open class CfnDataSet internal constructor(
     public fun uploadSettings(): Any? = unwrap(this).getUploadSettings()
 
     public interface Builder {
-      public fun dataSourceArn(dataSourceArn: String) {
-      }
+      public fun dataSourceArn(dataSourceArn: String)
 
-      public fun inputColumns(inputColumns: IResolvable) {
-      }
+      public fun inputColumns(inputColumns: IResolvable)
 
-      public fun inputColumns(inputColumns: List<Any>) {
-      }
+      public fun inputColumns(inputColumns: List<Any>)
 
-      public fun uploadSettings(uploadSettings: IResolvable) {
-      }
+      public fun uploadSettings(uploadSettings: IResolvable)
 
-      public fun uploadSettings(uploadSettings: UploadSettingsProperty) {
-      }
+      public fun uploadSettings(uploadSettings: UploadSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7e1c99ab7c68549c21ceb18a313feb7b90a976e2a3bccae8689a7e49a2a353a4")
-      public fun uploadSettings(uploadSettings: UploadSettingsProperty.Builder.() -> Unit) {
-      }
+      public fun uploadSettings(uploadSettings: UploadSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -822,30 +770,30 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty.builder()
 
-      public override fun dataSourceArn(dataSourceArn: String) {
+      override fun dataSourceArn(dataSourceArn: String) {
         cdkBuilder.dataSourceArn(dataSourceArn)
       }
 
-      public override fun inputColumns(inputColumns: IResolvable) {
+      override fun inputColumns(inputColumns: IResolvable) {
         cdkBuilder.inputColumns(inputColumns.let(IResolvable::unwrap))
       }
 
-      public override fun inputColumns(inputColumns: List<Any>) {
+      override fun inputColumns(inputColumns: List<Any>) {
         cdkBuilder.inputColumns(inputColumns)
       }
 
-      public override fun uploadSettings(uploadSettings: IResolvable) {
+      override fun uploadSettings(uploadSettings: IResolvable) {
         cdkBuilder.uploadSettings(uploadSettings.let(IResolvable::unwrap))
       }
 
-      public override fun uploadSettings(uploadSettings: UploadSettingsProperty) {
+      override fun uploadSettings(uploadSettings: UploadSettingsProperty) {
         cdkBuilder.uploadSettings(uploadSettings.let(UploadSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7e1c99ab7c68549c21ceb18a313feb7b90a976e2a3bccae8689a7e49a2a353a4")
-      public override fun uploadSettings(uploadSettings: UploadSettingsProperty.Builder.() -> Unit):
-          Unit = uploadSettings(UploadSettingsProperty(uploadSettings))
+      override fun uploadSettings(uploadSettings: UploadSettingsProperty.Builder.() -> Unit): Unit =
+          uploadSettings(UploadSettingsProperty(uploadSettings))
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty =
           cdkBuilder.build()
@@ -855,11 +803,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.S3SourceProperty,
     ) : S3SourceProperty {
-      public override fun dataSourceArn(): String = unwrap(this).getDataSourceArn()
+      override fun dataSourceArn(): String = unwrap(this).getDataSourceArn()
 
-      public override fun inputColumns(): Any = unwrap(this).getInputColumns()
+      override fun inputColumns(): Any = unwrap(this).getInputColumns()
 
-      public override fun uploadSettings(): Any? = unwrap(this).getUploadSettings()
+      override fun uploadSettings(): Any? = unwrap(this).getUploadSettings()
     }
 
     public companion object {
@@ -888,11 +836,9 @@ public open class CfnDataSet internal constructor(
     public fun principal(): String
 
     public interface Builder {
-      public fun actions(actions: List<String>) {
-      }
+      public fun actions(actions: List<String>)
 
-      public fun principal(principal: String) {
-      }
+      public fun principal(principal: String)
     }
 
     private class BuilderImpl : Builder {
@@ -900,11 +846,11 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty.builder()
 
-      public override fun actions(actions: List<String>) {
+      override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
 
-      public override fun principal(principal: String) {
+      override fun principal(principal: String) {
         cdkBuilder.principal(principal)
       }
 
@@ -917,9 +863,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty,
     ) : ResourcePermissionProperty {
-      public override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
 
-      public override fun principal(): String = unwrap(this).getPrincipal()
+      override fun principal(): String = unwrap(this).getPrincipal()
     }
 
     public companion object {
@@ -948,20 +894,15 @@ public open class CfnDataSet internal constructor(
     public fun columnGeographicRole(): String? = unwrap(this).getColumnGeographicRole()
 
     public interface Builder {
-      public fun columnDescription(columnDescription: IResolvable) {
-      }
+      public fun columnDescription(columnDescription: IResolvable)
 
-      public fun columnDescription(columnDescription: ColumnDescriptionProperty) {
-      }
+      public fun columnDescription(columnDescription: ColumnDescriptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03e5e3ca560aa97d41df505842459bdeaf0cd70b1d1271d530ee23614738cf74")
-      public
-          fun columnDescription(columnDescription: ColumnDescriptionProperty.Builder.() -> Unit) {
-      }
+      public fun columnDescription(columnDescription: ColumnDescriptionProperty.Builder.() -> Unit)
 
-      public fun columnGeographicRole(columnGeographicRole: String) {
-      }
+      public fun columnGeographicRole(columnGeographicRole: String)
     }
 
     private class BuilderImpl : Builder {
@@ -969,21 +910,21 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty.builder()
 
-      public override fun columnDescription(columnDescription: IResolvable) {
+      override fun columnDescription(columnDescription: IResolvable) {
         cdkBuilder.columnDescription(columnDescription.let(IResolvable::unwrap))
       }
 
-      public override fun columnDescription(columnDescription: ColumnDescriptionProperty) {
+      override fun columnDescription(columnDescription: ColumnDescriptionProperty) {
         cdkBuilder.columnDescription(columnDescription.let(ColumnDescriptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03e5e3ca560aa97d41df505842459bdeaf0cd70b1d1271d530ee23614738cf74")
-      public override
+      override
           fun columnDescription(columnDescription: ColumnDescriptionProperty.Builder.() -> Unit):
           Unit = columnDescription(ColumnDescriptionProperty(columnDescription))
 
-      public override fun columnGeographicRole(columnGeographicRole: String) {
+      override fun columnGeographicRole(columnGeographicRole: String) {
         cdkBuilder.columnGeographicRole(columnGeographicRole)
       }
 
@@ -995,9 +936,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnTagProperty,
     ) : ColumnTagProperty {
-      public override fun columnDescription(): Any? = unwrap(this).getColumnDescription()
+      override fun columnDescription(): Any? = unwrap(this).getColumnDescription()
 
-      public override fun columnGeographicRole(): String? = unwrap(this).getColumnGeographicRole()
+      override fun columnGeographicRole(): String? = unwrap(this).getColumnGeographicRole()
     }
 
     public companion object {
@@ -1024,8 +965,7 @@ public open class CfnDataSet internal constructor(
     public fun staticValues(): List<String> = unwrap(this).getStaticValues() ?: emptyList()
 
     public interface Builder {
-      public fun staticValues(staticValues: List<String>) {
-      }
+      public fun staticValues(staticValues: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1034,7 +974,7 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty.builder()
 
-      public override fun staticValues(staticValues: List<String>) {
+      override fun staticValues(staticValues: List<String>) {
         cdkBuilder.staticValues(staticValues)
       }
 
@@ -1047,8 +987,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty,
     ) : DateTimeDatasetParameterDefaultValuesProperty {
-      public override fun staticValues(): List<String> = unwrap(this).getStaticValues() ?:
-          emptyList()
+      override fun staticValues(): List<String> = unwrap(this).getStaticValues() ?: emptyList()
     }
 
     public companion object {
@@ -1082,17 +1021,13 @@ public open class CfnDataSet internal constructor(
     public fun tagMultiValueDelimiter(): String? = unwrap(this).getTagMultiValueDelimiter()
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun matchAllValue(matchAllValue: String) {
-      }
+      public fun matchAllValue(matchAllValue: String)
 
-      public fun tagKey(tagKey: String) {
-      }
+      public fun tagKey(tagKey: String)
 
-      public fun tagMultiValueDelimiter(tagMultiValueDelimiter: String) {
-      }
+      public fun tagMultiValueDelimiter(tagMultiValueDelimiter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1101,19 +1036,19 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagRuleProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun matchAllValue(matchAllValue: String) {
+      override fun matchAllValue(matchAllValue: String) {
         cdkBuilder.matchAllValue(matchAllValue)
       }
 
-      public override fun tagKey(tagKey: String) {
+      override fun tagKey(tagKey: String) {
         cdkBuilder.tagKey(tagKey)
       }
 
-      public override fun tagMultiValueDelimiter(tagMultiValueDelimiter: String) {
+      override fun tagMultiValueDelimiter(tagMultiValueDelimiter: String) {
         cdkBuilder.tagMultiValueDelimiter(tagMultiValueDelimiter)
       }
 
@@ -1126,14 +1061,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagRuleProperty,
     ) : RowLevelPermissionTagRuleProperty {
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun matchAllValue(): String? = unwrap(this).getMatchAllValue()
+      override fun matchAllValue(): String? = unwrap(this).getMatchAllValue()
 
-      public override fun tagKey(): String = unwrap(this).getTagKey()
+      override fun tagKey(): String = unwrap(this).getTagKey()
 
-      public override fun tagMultiValueDelimiter(): String? =
-          unwrap(this).getTagMultiValueDelimiter()
+      override fun tagMultiValueDelimiter(): String? = unwrap(this).getTagMultiValueDelimiter()
     }
 
     public companion object {
@@ -1174,88 +1108,67 @@ public open class CfnDataSet internal constructor(
     public fun tagColumnOperation(): Any? = unwrap(this).getTagColumnOperation()
 
     public interface Builder {
-      public fun castColumnTypeOperation(castColumnTypeOperation: IResolvable) {
-      }
+      public fun castColumnTypeOperation(castColumnTypeOperation: IResolvable)
 
-      public fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty) {
-      }
+      public fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eed6192ccc81b9d1e2ba7188ab20a8c6942e3e540378d23c73ed5b418ae69dbc")
       public
-          fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty.Builder.() -> Unit) {
-      }
+          fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty.Builder.() -> Unit)
 
-      public fun createColumnsOperation(createColumnsOperation: IResolvable) {
-      }
+      public fun createColumnsOperation(createColumnsOperation: IResolvable)
 
-      public fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty) {
-      }
+      public fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a1a600f06409b22e09c297d51a1d8063fe444a2cc35df8faa6d7612c921f25c")
       public
-          fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty.Builder.() -> Unit) {
-      }
+          fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty.Builder.() -> Unit)
 
-      public fun filterOperation(filterOperation: IResolvable) {
-      }
+      public fun filterOperation(filterOperation: IResolvable)
 
-      public fun filterOperation(filterOperation: FilterOperationProperty) {
-      }
+      public fun filterOperation(filterOperation: FilterOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8f4e4a130657fd54b048123fc35c452cc79ad12e12a6ee6133f286e6845f1598")
-      public fun filterOperation(filterOperation: FilterOperationProperty.Builder.() -> Unit) {
-      }
+      public fun filterOperation(filterOperation: FilterOperationProperty.Builder.() -> Unit)
 
-      public fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: IResolvable) {
-      }
+      public fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: IResolvable)
 
       public
-          fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty) {
-      }
+          fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21ab89056d9e1abb0f8cde30f2a70da44800cc1d476ede018f934876ae0ddc99")
       public
-          fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty.Builder.() -> Unit) {
-      }
+          fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty.Builder.() -> Unit)
 
-      public fun projectOperation(projectOperation: IResolvable) {
-      }
+      public fun projectOperation(projectOperation: IResolvable)
 
-      public fun projectOperation(projectOperation: ProjectOperationProperty) {
-      }
+      public fun projectOperation(projectOperation: ProjectOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("800bbecc32a653d442f5adaa61f1c4fb785664a0c403c790fcd16c02c32774f1")
-      public fun projectOperation(projectOperation: ProjectOperationProperty.Builder.() -> Unit) {
-      }
+      public fun projectOperation(projectOperation: ProjectOperationProperty.Builder.() -> Unit)
 
-      public fun renameColumnOperation(renameColumnOperation: IResolvable) {
-      }
+      public fun renameColumnOperation(renameColumnOperation: IResolvable)
 
-      public fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty) {
-      }
+      public fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e66963c9f5e77057bb144e2af341dcebdb67d6c055efb95d3db93b8eb933988")
       public
-          fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty.Builder.() -> Unit) {
-      }
+          fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty.Builder.() -> Unit)
 
-      public fun tagColumnOperation(tagColumnOperation: IResolvable) {
-      }
+      public fun tagColumnOperation(tagColumnOperation: IResolvable)
 
-      public fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty) {
-      }
+      public fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ffa3a41a8ce0be3fc3ac48146287259f6da2c6108486e8e158862d9beeae356e")
       public
-          fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty.Builder.() -> Unit) {
-      }
+          fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1263,107 +1176,103 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty.builder()
 
-      public override fun castColumnTypeOperation(castColumnTypeOperation: IResolvable) {
+      override fun castColumnTypeOperation(castColumnTypeOperation: IResolvable) {
         cdkBuilder.castColumnTypeOperation(castColumnTypeOperation.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty) {
         cdkBuilder.castColumnTypeOperation(castColumnTypeOperation.let(CastColumnTypeOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("eed6192ccc81b9d1e2ba7188ab20a8c6942e3e540378d23c73ed5b418ae69dbc")
-      public override
+      override
           fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty.Builder.() -> Unit):
           Unit = castColumnTypeOperation(CastColumnTypeOperationProperty(castColumnTypeOperation))
 
-      public override fun createColumnsOperation(createColumnsOperation: IResolvable) {
+      override fun createColumnsOperation(createColumnsOperation: IResolvable) {
         cdkBuilder.createColumnsOperation(createColumnsOperation.let(IResolvable::unwrap))
       }
 
-      public override
-          fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty) {
+      override fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty) {
         cdkBuilder.createColumnsOperation(createColumnsOperation.let(CreateColumnsOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a1a600f06409b22e09c297d51a1d8063fe444a2cc35df8faa6d7612c921f25c")
-      public override
+      override
           fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty.Builder.() -> Unit):
           Unit = createColumnsOperation(CreateColumnsOperationProperty(createColumnsOperation))
 
-      public override fun filterOperation(filterOperation: IResolvable) {
+      override fun filterOperation(filterOperation: IResolvable) {
         cdkBuilder.filterOperation(filterOperation.let(IResolvable::unwrap))
       }
 
-      public override fun filterOperation(filterOperation: FilterOperationProperty) {
+      override fun filterOperation(filterOperation: FilterOperationProperty) {
         cdkBuilder.filterOperation(filterOperation.let(FilterOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8f4e4a130657fd54b048123fc35c452cc79ad12e12a6ee6133f286e6845f1598")
-      public override
-          fun filterOperation(filterOperation: FilterOperationProperty.Builder.() -> Unit): Unit =
-          filterOperation(FilterOperationProperty(filterOperation))
+      override fun filterOperation(filterOperation: FilterOperationProperty.Builder.() -> Unit):
+          Unit = filterOperation(FilterOperationProperty(filterOperation))
 
-      public override
+      override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: IResolvable) {
         cdkBuilder.overrideDatasetParameterOperation(overrideDatasetParameterOperation.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty) {
         cdkBuilder.overrideDatasetParameterOperation(overrideDatasetParameterOperation.let(OverrideDatasetParameterOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21ab89056d9e1abb0f8cde30f2a70da44800cc1d476ede018f934876ae0ddc99")
-      public override
+      override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty.Builder.() -> Unit):
           Unit =
           overrideDatasetParameterOperation(OverrideDatasetParameterOperationProperty(overrideDatasetParameterOperation))
 
-      public override fun projectOperation(projectOperation: IResolvable) {
+      override fun projectOperation(projectOperation: IResolvable) {
         cdkBuilder.projectOperation(projectOperation.let(IResolvable::unwrap))
       }
 
-      public override fun projectOperation(projectOperation: ProjectOperationProperty) {
+      override fun projectOperation(projectOperation: ProjectOperationProperty) {
         cdkBuilder.projectOperation(projectOperation.let(ProjectOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("800bbecc32a653d442f5adaa61f1c4fb785664a0c403c790fcd16c02c32774f1")
-      public override
-          fun projectOperation(projectOperation: ProjectOperationProperty.Builder.() -> Unit): Unit
-          = projectOperation(ProjectOperationProperty(projectOperation))
+      override fun projectOperation(projectOperation: ProjectOperationProperty.Builder.() -> Unit):
+          Unit = projectOperation(ProjectOperationProperty(projectOperation))
 
-      public override fun renameColumnOperation(renameColumnOperation: IResolvable) {
+      override fun renameColumnOperation(renameColumnOperation: IResolvable) {
         cdkBuilder.renameColumnOperation(renameColumnOperation.let(IResolvable::unwrap))
       }
 
-      public override
-          fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty) {
+      override fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty) {
         cdkBuilder.renameColumnOperation(renameColumnOperation.let(RenameColumnOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e66963c9f5e77057bb144e2af341dcebdb67d6c055efb95d3db93b8eb933988")
-      public override
+      override
           fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty.Builder.() -> Unit):
           Unit = renameColumnOperation(RenameColumnOperationProperty(renameColumnOperation))
 
-      public override fun tagColumnOperation(tagColumnOperation: IResolvable) {
+      override fun tagColumnOperation(tagColumnOperation: IResolvable) {
         cdkBuilder.tagColumnOperation(tagColumnOperation.let(IResolvable::unwrap))
       }
 
-      public override fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty) {
+      override fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty) {
         cdkBuilder.tagColumnOperation(tagColumnOperation.let(TagColumnOperationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ffa3a41a8ce0be3fc3ac48146287259f6da2c6108486e8e158862d9beeae356e")
-      public override
+      override
           fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty.Builder.() -> Unit):
           Unit = tagColumnOperation(TagColumnOperationProperty(tagColumnOperation))
 
@@ -1376,21 +1285,20 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.TransformOperationProperty,
     ) : TransformOperationProperty {
-      public override fun castColumnTypeOperation(): Any? =
-          unwrap(this).getCastColumnTypeOperation()
+      override fun castColumnTypeOperation(): Any? = unwrap(this).getCastColumnTypeOperation()
 
-      public override fun createColumnsOperation(): Any? = unwrap(this).getCreateColumnsOperation()
+      override fun createColumnsOperation(): Any? = unwrap(this).getCreateColumnsOperation()
 
-      public override fun filterOperation(): Any? = unwrap(this).getFilterOperation()
+      override fun filterOperation(): Any? = unwrap(this).getFilterOperation()
 
-      public override fun overrideDatasetParameterOperation(): Any? =
+      override fun overrideDatasetParameterOperation(): Any? =
           unwrap(this).getOverrideDatasetParameterOperation()
 
-      public override fun projectOperation(): Any? = unwrap(this).getProjectOperation()
+      override fun projectOperation(): Any? = unwrap(this).getProjectOperation()
 
-      public override fun renameColumnOperation(): Any? = unwrap(this).getRenameColumnOperation()
+      override fun renameColumnOperation(): Any? = unwrap(this).getRenameColumnOperation()
 
-      public override fun tagColumnOperation(): Any? = unwrap(this).getTagColumnOperation()
+      override fun tagColumnOperation(): Any? = unwrap(this).getTagColumnOperation()
     }
 
     public companion object {
@@ -1417,8 +1325,7 @@ public open class CfnDataSet internal constructor(
     public fun conditionExpression(): String
 
     public interface Builder {
-      public fun conditionExpression(conditionExpression: String) {
-      }
+      public fun conditionExpression(conditionExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1426,7 +1333,7 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty.builder()
 
-      public override fun conditionExpression(conditionExpression: String) {
+      override fun conditionExpression(conditionExpression: String) {
         cdkBuilder.conditionExpression(conditionExpression)
       }
 
@@ -1439,7 +1346,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.FilterOperationProperty,
     ) : FilterOperationProperty {
-      public override fun conditionExpression(): String = unwrap(this).getConditionExpression()
+      override fun conditionExpression(): String = unwrap(this).getConditionExpression()
     }
 
     public companion object {
@@ -1466,11 +1373,9 @@ public open class CfnDataSet internal constructor(
     public fun uniqueKey(): Any? = unwrap(this).getUniqueKey()
 
     public interface Builder {
-      public fun uniqueKey(uniqueKey: Boolean) {
-      }
+      public fun uniqueKey(uniqueKey: Boolean)
 
-      public fun uniqueKey(uniqueKey: IResolvable) {
-      }
+      public fun uniqueKey(uniqueKey: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1478,11 +1383,11 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty.builder()
 
-      public override fun uniqueKey(uniqueKey: Boolean) {
+      override fun uniqueKey(uniqueKey: Boolean) {
         cdkBuilder.uniqueKey(uniqueKey)
       }
 
-      public override fun uniqueKey(uniqueKey: IResolvable) {
+      override fun uniqueKey(uniqueKey: IResolvable) {
         cdkBuilder.uniqueKey(uniqueKey.let(IResolvable::unwrap))
       }
 
@@ -1495,7 +1400,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinKeyPropertiesProperty,
     ) : JoinKeyPropertiesProperty {
-      public override fun uniqueKey(): Any? = unwrap(this).getUniqueKey()
+      override fun uniqueKey(): Any? = unwrap(this).getUniqueKey()
     }
 
     public companion object {
@@ -1528,26 +1433,20 @@ public open class CfnDataSet internal constructor(
     public fun valueType(): String
 
     public interface Builder {
-      public fun defaultValues(defaultValues: IResolvable) {
-      }
+      public fun defaultValues(defaultValues: IResolvable)
 
-      public fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty) {
-      }
+      public fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4d4ff0f93eb81d978ccb9a0fffb48162c91f0195f969e7d66d43669aff10713")
       public
-          fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty.Builder.() -> Unit) {
-      }
+          fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty.Builder.() -> Unit)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun valueType(valueType: String) {
-      }
+      public fun valueType(valueType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1556,30 +1455,29 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterProperty.builder()
 
-      public override fun defaultValues(defaultValues: IResolvable) {
+      override fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
       }
 
-      public override
-          fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty) {
+      override fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty) {
         cdkBuilder.defaultValues(defaultValues.let(DecimalDatasetParameterDefaultValuesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4d4ff0f93eb81d978ccb9a0fffb48162c91f0195f969e7d66d43669aff10713")
-      public override
+      override
           fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty.Builder.() -> Unit):
           Unit = defaultValues(DecimalDatasetParameterDefaultValuesProperty(defaultValues))
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun valueType(valueType: String) {
+      override fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)
       }
 
@@ -1592,13 +1490,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterProperty,
     ) : DecimalDatasetParameterProperty {
-      public override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
+      override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun valueType(): String = unwrap(this).getValueType()
+      override fun valueType(): String = unwrap(this).getValueType()
     }
 
     public companion object {
@@ -1629,14 +1527,11 @@ public open class CfnDataSet internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun columns(columns: List<String>) {
-      }
+      public fun columns(columns: List<String>)
 
-      public fun countryCode(countryCode: String) {
-      }
+      public fun countryCode(countryCode: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1645,15 +1540,15 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty.builder()
 
-      public override fun columns(columns: List<String>) {
+      override fun columns(columns: List<String>) {
         cdkBuilder.columns(columns)
       }
 
-      public override fun countryCode(countryCode: String) {
+      override fun countryCode(countryCode: String) {
         cdkBuilder.countryCode(countryCode)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -1666,11 +1561,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty,
     ) : GeoSpatialColumnGroupProperty {
-      public override fun columns(): List<String> = unwrap(this).getColumns() ?: emptyList()
+      override fun columns(): List<String> = unwrap(this).getColumns() ?: emptyList()
 
-      public override fun countryCode(): String? = unwrap(this).getCountryCode()
+      override fun countryCode(): String? = unwrap(this).getCountryCode()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -1701,22 +1596,17 @@ public open class CfnDataSet internal constructor(
     public fun parameterName(): String
 
     public interface Builder {
-      public fun newDefaultValues(newDefaultValues: IResolvable) {
-      }
+      public fun newDefaultValues(newDefaultValues: IResolvable)
 
-      public fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty) {
-      }
+      public fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ef0f6263592a20f89b8c5dd1b0789a6f47f1a6ccbfd7db5534de3efc9541d2b6")
-      public fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty.Builder.() -> Unit) {
-      }
+      public fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty.Builder.() -> Unit)
 
-      public fun newParameterName(newParameterName: String) {
-      }
+      public fun newParameterName(newParameterName: String)
 
-      public fun parameterName(parameterName: String) {
-      }
+      public fun parameterName(parameterName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1725,25 +1615,24 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.OverrideDatasetParameterOperationProperty.builder()
 
-      public override fun newDefaultValues(newDefaultValues: IResolvable) {
+      override fun newDefaultValues(newDefaultValues: IResolvable) {
         cdkBuilder.newDefaultValues(newDefaultValues.let(IResolvable::unwrap))
       }
 
-      public override fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty) {
+      override fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty) {
         cdkBuilder.newDefaultValues(newDefaultValues.let(NewDefaultValuesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ef0f6263592a20f89b8c5dd1b0789a6f47f1a6ccbfd7db5534de3efc9541d2b6")
-      public override
-          fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty.Builder.() -> Unit): Unit
-          = newDefaultValues(NewDefaultValuesProperty(newDefaultValues))
+      override fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty.Builder.() -> Unit):
+          Unit = newDefaultValues(NewDefaultValuesProperty(newDefaultValues))
 
-      public override fun newParameterName(newParameterName: String) {
+      override fun newParameterName(newParameterName: String) {
         cdkBuilder.newParameterName(newParameterName)
       }
 
-      public override fun parameterName(parameterName: String) {
+      override fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
       }
 
@@ -1756,11 +1645,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.OverrideDatasetParameterOperationProperty,
     ) : OverrideDatasetParameterOperationProperty {
-      public override fun newDefaultValues(): Any? = unwrap(this).getNewDefaultValues()
+      override fun newDefaultValues(): Any? = unwrap(this).getNewDefaultValues()
 
-      public override fun newParameterName(): String? = unwrap(this).getNewParameterName()
+      override fun newParameterName(): String? = unwrap(this).getNewParameterName()
 
-      public override fun parameterName(): String = unwrap(this).getParameterName()
+      override fun parameterName(): String = unwrap(this).getParameterName()
     }
 
     public companion object {
@@ -1796,20 +1685,15 @@ public open class CfnDataSet internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun formatVersion(formatVersion: String) {
-      }
+      public fun formatVersion(formatVersion: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun permissionPolicy(permissionPolicy: String) {
-      }
+      public fun permissionPolicy(permissionPolicy: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1818,23 +1702,23 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionDataSetProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun formatVersion(formatVersion: String) {
+      override fun formatVersion(formatVersion: String) {
         cdkBuilder.formatVersion(formatVersion)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun permissionPolicy(permissionPolicy: String) {
+      override fun permissionPolicy(permissionPolicy: String) {
         cdkBuilder.permissionPolicy(permissionPolicy)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -1847,15 +1731,15 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionDataSetProperty,
     ) : RowLevelPermissionDataSetProperty {
-      public override fun arn(): String = unwrap(this).getArn()
+      override fun arn(): String = unwrap(this).getArn()
 
-      public override fun formatVersion(): String? = unwrap(this).getFormatVersion()
+      override fun formatVersion(): String? = unwrap(this).getFormatVersion()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun permissionPolicy(): String = unwrap(this).getPermissionPolicy()
+      override fun permissionPolicy(): String = unwrap(this).getPermissionPolicy()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -1891,23 +1775,17 @@ public open class CfnDataSet internal constructor(
     public fun schema(): String? = unwrap(this).getSchema()
 
     public interface Builder {
-      public fun catalog(catalog: String) {
-      }
+      public fun catalog(catalog: String)
 
-      public fun dataSourceArn(dataSourceArn: String) {
-      }
+      public fun dataSourceArn(dataSourceArn: String)
 
-      public fun inputColumns(inputColumns: IResolvable) {
-      }
+      public fun inputColumns(inputColumns: IResolvable)
 
-      public fun inputColumns(inputColumns: List<Any>) {
-      }
+      public fun inputColumns(inputColumns: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun schema(schema: String) {
-      }
+      public fun schema(schema: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1915,27 +1793,27 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty.builder()
 
-      public override fun catalog(catalog: String) {
+      override fun catalog(catalog: String) {
         cdkBuilder.catalog(catalog)
       }
 
-      public override fun dataSourceArn(dataSourceArn: String) {
+      override fun dataSourceArn(dataSourceArn: String) {
         cdkBuilder.dataSourceArn(dataSourceArn)
       }
 
-      public override fun inputColumns(inputColumns: IResolvable) {
+      override fun inputColumns(inputColumns: IResolvable) {
         cdkBuilder.inputColumns(inputColumns.let(IResolvable::unwrap))
       }
 
-      public override fun inputColumns(inputColumns: List<Any>) {
+      override fun inputColumns(inputColumns: List<Any>) {
         cdkBuilder.inputColumns(inputColumns)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun schema(schema: String) {
+      override fun schema(schema: String) {
         cdkBuilder.schema(schema)
       }
 
@@ -1948,15 +1826,15 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.RelationalTableProperty,
     ) : RelationalTableProperty {
-      public override fun catalog(): String? = unwrap(this).getCatalog()
+      override fun catalog(): String? = unwrap(this).getCatalog()
 
-      public override fun dataSourceArn(): String = unwrap(this).getDataSourceArn()
+      override fun dataSourceArn(): String = unwrap(this).getDataSourceArn()
 
-      public override fun inputColumns(): Any = unwrap(this).getInputColumns()
+      override fun inputColumns(): Any = unwrap(this).getInputColumns()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun schema(): String? = unwrap(this).getSchema()
+      override fun schema(): String? = unwrap(this).getSchema()
     }
 
     public companion object {
@@ -1987,25 +1865,19 @@ public open class CfnDataSet internal constructor(
     public fun source(): Any
 
     public interface Builder {
-      public fun alias(alias: String) {
-      }
+      public fun alias(alias: String)
 
-      public fun dataTransforms(dataTransforms: IResolvable) {
-      }
+      public fun dataTransforms(dataTransforms: IResolvable)
 
-      public fun dataTransforms(dataTransforms: List<Any>) {
-      }
+      public fun dataTransforms(dataTransforms: List<Any>)
 
-      public fun source(source: IResolvable) {
-      }
+      public fun source(source: IResolvable)
 
-      public fun source(source: LogicalTableSourceProperty) {
-      }
+      public fun source(source: LogicalTableSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("985accfe8cb3d471c9f271f0ee7ccda2339d6feefba9b5a08cfc81a779ae5f57")
-      public fun source(source: LogicalTableSourceProperty.Builder.() -> Unit) {
-      }
+      public fun source(source: LogicalTableSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2013,29 +1885,29 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty.builder()
 
-      public override fun alias(alias: String) {
+      override fun alias(alias: String) {
         cdkBuilder.alias(alias)
       }
 
-      public override fun dataTransforms(dataTransforms: IResolvable) {
+      override fun dataTransforms(dataTransforms: IResolvable) {
         cdkBuilder.dataTransforms(dataTransforms.let(IResolvable::unwrap))
       }
 
-      public override fun dataTransforms(dataTransforms: List<Any>) {
+      override fun dataTransforms(dataTransforms: List<Any>) {
         cdkBuilder.dataTransforms(dataTransforms)
       }
 
-      public override fun source(source: IResolvable) {
+      override fun source(source: IResolvable) {
         cdkBuilder.source(source.let(IResolvable::unwrap))
       }
 
-      public override fun source(source: LogicalTableSourceProperty) {
+      override fun source(source: LogicalTableSourceProperty) {
         cdkBuilder.source(source.let(LogicalTableSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("985accfe8cb3d471c9f271f0ee7ccda2339d6feefba9b5a08cfc81a779ae5f57")
-      public override fun source(source: LogicalTableSourceProperty.Builder.() -> Unit): Unit =
+      override fun source(source: LogicalTableSourceProperty.Builder.() -> Unit): Unit =
           source(LogicalTableSourceProperty(source))
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty
@@ -2046,11 +1918,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableProperty,
     ) : LogicalTableProperty {
-      public override fun alias(): String = unwrap(this).getAlias()
+      override fun alias(): String = unwrap(this).getAlias()
 
-      public override fun dataTransforms(): Any? = unwrap(this).getDataTransforms()
+      override fun dataTransforms(): Any? = unwrap(this).getDataTransforms()
 
-      public override fun source(): Any = unwrap(this).getSource()
+      override fun source(): Any = unwrap(this).getSource()
     }
 
     public companion object {
@@ -2085,23 +1957,17 @@ public open class CfnDataSet internal constructor(
     public fun textQualifier(): String? = unwrap(this).getTextQualifier()
 
     public interface Builder {
-      public fun containsHeader(containsHeader: Boolean) {
-      }
+      public fun containsHeader(containsHeader: Boolean)
 
-      public fun containsHeader(containsHeader: IResolvable) {
-      }
+      public fun containsHeader(containsHeader: IResolvable)
 
-      public fun delimiter(delimiter: String) {
-      }
+      public fun delimiter(delimiter: String)
 
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
 
-      public fun startFromRow(startFromRow: Number) {
-      }
+      public fun startFromRow(startFromRow: Number)
 
-      public fun textQualifier(textQualifier: String) {
-      }
+      public fun textQualifier(textQualifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2109,27 +1975,27 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty.builder()
 
-      public override fun containsHeader(containsHeader: Boolean) {
+      override fun containsHeader(containsHeader: Boolean) {
         cdkBuilder.containsHeader(containsHeader)
       }
 
-      public override fun containsHeader(containsHeader: IResolvable) {
+      override fun containsHeader(containsHeader: IResolvable) {
         cdkBuilder.containsHeader(containsHeader.let(IResolvable::unwrap))
       }
 
-      public override fun delimiter(delimiter: String) {
+      override fun delimiter(delimiter: String) {
         cdkBuilder.delimiter(delimiter)
       }
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
-      public override fun startFromRow(startFromRow: Number) {
+      override fun startFromRow(startFromRow: Number) {
         cdkBuilder.startFromRow(startFromRow)
       }
 
-      public override fun textQualifier(textQualifier: String) {
+      override fun textQualifier(textQualifier: String) {
         cdkBuilder.textQualifier(textQualifier)
       }
 
@@ -2142,15 +2008,15 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.UploadSettingsProperty,
     ) : UploadSettingsProperty {
-      public override fun containsHeader(): Any? = unwrap(this).getContainsHeader()
+      override fun containsHeader(): Any? = unwrap(this).getContainsHeader()
 
-      public override fun delimiter(): String? = unwrap(this).getDelimiter()
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
 
-      public override fun format(): String? = unwrap(this).getFormat()
+      override fun format(): String? = unwrap(this).getFormat()
 
-      public override fun startFromRow(): Number? = unwrap(this).getStartFromRow()
+      override fun startFromRow(): Number? = unwrap(this).getStartFromRow()
 
-      public override fun textQualifier(): String? = unwrap(this).getTextQualifier()
+      override fun textQualifier(): String? = unwrap(this).getTextQualifier()
     }
 
     public companion object {
@@ -2183,54 +2049,42 @@ public open class CfnDataSet internal constructor(
     public fun stringDatasetParameter(): Any? = unwrap(this).getStringDatasetParameter()
 
     public interface Builder {
-      public fun dateTimeDatasetParameter(dateTimeDatasetParameter: IResolvable) {
-      }
+      public fun dateTimeDatasetParameter(dateTimeDatasetParameter: IResolvable)
 
       public
-          fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty) {
-      }
+          fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6330e56a4b08c037e5a0198b51c1a974e2d11af1bb08379c97c0f6aae67e16b")
       public
-          fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty.Builder.() -> Unit) {
-      }
+          fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty.Builder.() -> Unit)
 
-      public fun decimalDatasetParameter(decimalDatasetParameter: IResolvable) {
-      }
+      public fun decimalDatasetParameter(decimalDatasetParameter: IResolvable)
 
-      public fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty) {
-      }
+      public fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1634e53f113aed724cabad720b0fa19f4e316e4b1f7116b4cf0999c1bfe2aae2")
       public
-          fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty.Builder.() -> Unit) {
-      }
+          fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty.Builder.() -> Unit)
 
-      public fun integerDatasetParameter(integerDatasetParameter: IResolvable) {
-      }
+      public fun integerDatasetParameter(integerDatasetParameter: IResolvable)
 
-      public fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty) {
-      }
+      public fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40a5b0841ed1324c9c1a99dd407c95d8169daf3049187f30e0306f959955ebcb")
       public
-          fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty.Builder.() -> Unit) {
-      }
+          fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty.Builder.() -> Unit)
 
-      public fun stringDatasetParameter(stringDatasetParameter: IResolvable) {
-      }
+      public fun stringDatasetParameter(stringDatasetParameter: IResolvable)
 
-      public fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty) {
-      }
+      public fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e94bf3ec5d1ec0fc7536914e63dcc28a3d93ab61b8b6cf48eaa37438c83110e7")
       public
-          fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty.Builder.() -> Unit) {
-      }
+          fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2238,64 +2092,63 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty.builder()
 
-      public override fun dateTimeDatasetParameter(dateTimeDatasetParameter: IResolvable) {
+      override fun dateTimeDatasetParameter(dateTimeDatasetParameter: IResolvable) {
         cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty) {
         cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter.let(DateTimeDatasetParameterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b6330e56a4b08c037e5a0198b51c1a974e2d11af1bb08379c97c0f6aae67e16b")
-      public override
+      override
           fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty.Builder.() -> Unit):
           Unit =
           dateTimeDatasetParameter(DateTimeDatasetParameterProperty(dateTimeDatasetParameter))
 
-      public override fun decimalDatasetParameter(decimalDatasetParameter: IResolvable) {
+      override fun decimalDatasetParameter(decimalDatasetParameter: IResolvable) {
         cdkBuilder.decimalDatasetParameter(decimalDatasetParameter.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty) {
         cdkBuilder.decimalDatasetParameter(decimalDatasetParameter.let(DecimalDatasetParameterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1634e53f113aed724cabad720b0fa19f4e316e4b1f7116b4cf0999c1bfe2aae2")
-      public override
+      override
           fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty.Builder.() -> Unit):
           Unit = decimalDatasetParameter(DecimalDatasetParameterProperty(decimalDatasetParameter))
 
-      public override fun integerDatasetParameter(integerDatasetParameter: IResolvable) {
+      override fun integerDatasetParameter(integerDatasetParameter: IResolvable) {
         cdkBuilder.integerDatasetParameter(integerDatasetParameter.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty) {
         cdkBuilder.integerDatasetParameter(integerDatasetParameter.let(IntegerDatasetParameterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40a5b0841ed1324c9c1a99dd407c95d8169daf3049187f30e0306f959955ebcb")
-      public override
+      override
           fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty.Builder.() -> Unit):
           Unit = integerDatasetParameter(IntegerDatasetParameterProperty(integerDatasetParameter))
 
-      public override fun stringDatasetParameter(stringDatasetParameter: IResolvable) {
+      override fun stringDatasetParameter(stringDatasetParameter: IResolvable) {
         cdkBuilder.stringDatasetParameter(stringDatasetParameter.let(IResolvable::unwrap))
       }
 
-      public override
-          fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty) {
+      override fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty) {
         cdkBuilder.stringDatasetParameter(stringDatasetParameter.let(StringDatasetParameterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e94bf3ec5d1ec0fc7536914e63dcc28a3d93ab61b8b6cf48eaa37438c83110e7")
-      public override
+      override
           fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty.Builder.() -> Unit):
           Unit = stringDatasetParameter(StringDatasetParameterProperty(stringDatasetParameter))
 
@@ -2308,16 +2161,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DatasetParameterProperty,
     ) : DatasetParameterProperty {
-      public override fun dateTimeDatasetParameter(): Any? =
-          unwrap(this).getDateTimeDatasetParameter()
+      override fun dateTimeDatasetParameter(): Any? = unwrap(this).getDateTimeDatasetParameter()
 
-      public override fun decimalDatasetParameter(): Any? =
-          unwrap(this).getDecimalDatasetParameter()
+      override fun decimalDatasetParameter(): Any? = unwrap(this).getDecimalDatasetParameter()
 
-      public override fun integerDatasetParameter(): Any? =
-          unwrap(this).getIntegerDatasetParameter()
+      override fun integerDatasetParameter(): Any? = unwrap(this).getIntegerDatasetParameter()
 
-      public override fun stringDatasetParameter(): Any? = unwrap(this).getStringDatasetParameter()
+      override fun stringDatasetParameter(): Any? = unwrap(this).getStringDatasetParameter()
     }
 
     public companion object {
@@ -2352,23 +2202,17 @@ public open class CfnDataSet internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun dateTimeStaticValues(dateTimeStaticValues: List<String>) {
-      }
+      public fun dateTimeStaticValues(dateTimeStaticValues: List<String>)
 
-      public fun decimalStaticValues(decimalStaticValues: IResolvable) {
-      }
+      public fun decimalStaticValues(decimalStaticValues: IResolvable)
 
-      public fun decimalStaticValues(decimalStaticValues: List<Number>) {
-      }
+      public fun decimalStaticValues(decimalStaticValues: List<Number>)
 
-      public fun integerStaticValues(integerStaticValues: IResolvable) {
-      }
+      public fun integerStaticValues(integerStaticValues: IResolvable)
 
-      public fun integerStaticValues(integerStaticValues: List<Number>) {
-      }
+      public fun integerStaticValues(integerStaticValues: List<Number>)
 
-      public fun stringStaticValues(stringStaticValues: List<String>) {
-      }
+      public fun stringStaticValues(stringStaticValues: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2376,27 +2220,27 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty.builder()
 
-      public override fun dateTimeStaticValues(dateTimeStaticValues: List<String>) {
+      override fun dateTimeStaticValues(dateTimeStaticValues: List<String>) {
         cdkBuilder.dateTimeStaticValues(dateTimeStaticValues)
       }
 
-      public override fun decimalStaticValues(decimalStaticValues: IResolvable) {
+      override fun decimalStaticValues(decimalStaticValues: IResolvable) {
         cdkBuilder.decimalStaticValues(decimalStaticValues.let(IResolvable::unwrap))
       }
 
-      public override fun decimalStaticValues(decimalStaticValues: List<Number>) {
+      override fun decimalStaticValues(decimalStaticValues: List<Number>) {
         cdkBuilder.decimalStaticValues(decimalStaticValues)
       }
 
-      public override fun integerStaticValues(integerStaticValues: IResolvable) {
+      override fun integerStaticValues(integerStaticValues: IResolvable) {
         cdkBuilder.integerStaticValues(integerStaticValues.let(IResolvable::unwrap))
       }
 
-      public override fun integerStaticValues(integerStaticValues: List<Number>) {
+      override fun integerStaticValues(integerStaticValues: List<Number>) {
         cdkBuilder.integerStaticValues(integerStaticValues)
       }
 
-      public override fun stringStaticValues(stringStaticValues: List<String>) {
+      override fun stringStaticValues(stringStaticValues: List<String>) {
         cdkBuilder.stringStaticValues(stringStaticValues)
       }
 
@@ -2409,15 +2253,15 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty,
     ) : NewDefaultValuesProperty {
-      public override fun dateTimeStaticValues(): List<String> =
-          unwrap(this).getDateTimeStaticValues() ?: emptyList()
+      override fun dateTimeStaticValues(): List<String> = unwrap(this).getDateTimeStaticValues() ?:
+          emptyList()
 
-      public override fun decimalStaticValues(): Any? = unwrap(this).getDecimalStaticValues()
+      override fun decimalStaticValues(): Any? = unwrap(this).getDecimalStaticValues()
 
-      public override fun integerStaticValues(): Any? = unwrap(this).getIntegerStaticValues()
+      override fun integerStaticValues(): Any? = unwrap(this).getIntegerStaticValues()
 
-      public override fun stringStaticValues(): List<String> = unwrap(this).getStringStaticValues()
-          ?: emptyList()
+      override fun stringStaticValues(): List<String> = unwrap(this).getStringStaticValues() ?:
+          emptyList()
     }
 
     public companion object {
@@ -2448,17 +2292,13 @@ public open class CfnDataSet internal constructor(
     public fun tagRules(): Any
 
     public interface Builder {
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun tagRuleConfigurations(tagRuleConfigurations: Any) {
-      }
+      public fun tagRuleConfigurations(tagRuleConfigurations: Any)
 
-      public fun tagRules(tagRules: IResolvable) {
-      }
+      public fun tagRules(tagRules: IResolvable)
 
-      public fun tagRules(tagRules: List<Any>) {
-      }
+      public fun tagRules(tagRules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -2467,19 +2307,19 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty.builder()
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun tagRuleConfigurations(tagRuleConfigurations: Any) {
+      override fun tagRuleConfigurations(tagRuleConfigurations: Any) {
         cdkBuilder.tagRuleConfigurations(tagRuleConfigurations)
       }
 
-      public override fun tagRules(tagRules: IResolvable) {
+      override fun tagRules(tagRules: IResolvable) {
         cdkBuilder.tagRules(tagRules.let(IResolvable::unwrap))
       }
 
-      public override fun tagRules(tagRules: List<Any>) {
+      override fun tagRules(tagRules: List<Any>) {
         cdkBuilder.tagRules(tagRules)
       }
 
@@ -2492,11 +2332,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty,
     ) : RowLevelPermissionTagConfigurationProperty {
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun tagRuleConfigurations(): Any? = unwrap(this).getTagRuleConfigurations()
+      override fun tagRuleConfigurations(): Any? = unwrap(this).getTagRuleConfigurations()
 
-      public override fun tagRules(): Any = unwrap(this).getTagRules()
+      override fun tagRules(): Any = unwrap(this).getTagRules()
     }
 
     public companion object {
@@ -2526,11 +2366,9 @@ public open class CfnDataSet internal constructor(
     public fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
 
     public interface Builder {
-      public fun columnNames(columnNames: List<String>) {
-      }
+      public fun columnNames(columnNames: List<String>)
 
-      public fun principals(principals: List<String>) {
-      }
+      public fun principals(principals: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2539,11 +2377,11 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty.builder()
 
-      public override fun columnNames(columnNames: List<String>) {
+      override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
 
-      public override fun principals(principals: List<String>) {
+      override fun principals(principals: List<String>) {
         cdkBuilder.principals(principals)
       }
 
@@ -2556,9 +2394,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty,
     ) : ColumnLevelPermissionRuleProperty {
-      public override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
 
-      public override fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
+      override fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
     }
 
     public companion object {
@@ -2586,16 +2424,13 @@ public open class CfnDataSet internal constructor(
     public fun lookbackWindow(): Any? = unwrap(this).getLookbackWindow()
 
     public interface Builder {
-      public fun lookbackWindow(lookbackWindow: IResolvable) {
-      }
+      public fun lookbackWindow(lookbackWindow: IResolvable)
 
-      public fun lookbackWindow(lookbackWindow: LookbackWindowProperty) {
-      }
+      public fun lookbackWindow(lookbackWindow: LookbackWindowProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d076a231dab6dc3cf3a9fb65a3c9a1529398d973f5242a3f7841ec7d88b58222")
-      public fun lookbackWindow(lookbackWindow: LookbackWindowProperty.Builder.() -> Unit) {
-      }
+      public fun lookbackWindow(lookbackWindow: LookbackWindowProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2603,18 +2438,18 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty.builder()
 
-      public override fun lookbackWindow(lookbackWindow: IResolvable) {
+      override fun lookbackWindow(lookbackWindow: IResolvable) {
         cdkBuilder.lookbackWindow(lookbackWindow.let(IResolvable::unwrap))
       }
 
-      public override fun lookbackWindow(lookbackWindow: LookbackWindowProperty) {
+      override fun lookbackWindow(lookbackWindow: LookbackWindowProperty) {
         cdkBuilder.lookbackWindow(lookbackWindow.let(LookbackWindowProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d076a231dab6dc3cf3a9fb65a3c9a1529398d973f5242a3f7841ec7d88b58222")
-      public override fun lookbackWindow(lookbackWindow: LookbackWindowProperty.Builder.() -> Unit):
-          Unit = lookbackWindow(LookbackWindowProperty(lookbackWindow))
+      override fun lookbackWindow(lookbackWindow: LookbackWindowProperty.Builder.() -> Unit): Unit =
+          lookbackWindow(LookbackWindowProperty(lookbackWindow))
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty =
@@ -2625,7 +2460,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.IncrementalRefreshProperty,
     ) : IncrementalRefreshProperty {
-      public override fun lookbackWindow(): Any? = unwrap(this).getLookbackWindow()
+      override fun lookbackWindow(): Any? = unwrap(this).getLookbackWindow()
     }
 
     public companion object {
@@ -2658,17 +2493,13 @@ public open class CfnDataSet internal constructor(
     public fun subType(): String? = unwrap(this).getSubType()
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
 
-      public fun newColumnType(newColumnType: String) {
-      }
+      public fun newColumnType(newColumnType: String)
 
-      public fun subType(subType: String) {
-      }
+      public fun subType(subType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2677,19 +2508,19 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.CastColumnTypeOperationProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
-      public override fun newColumnType(newColumnType: String) {
+      override fun newColumnType(newColumnType: String) {
         cdkBuilder.newColumnType(newColumnType)
       }
 
-      public override fun subType(subType: String) {
+      override fun subType(subType: String) {
         cdkBuilder.subType(subType)
       }
 
@@ -2702,13 +2533,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.CastColumnTypeOperationProperty,
     ) : CastColumnTypeOperationProperty {
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun format(): String? = unwrap(this).getFormat()
+      override fun format(): String? = unwrap(this).getFormat()
 
-      public override fun newColumnType(): String = unwrap(this).getNewColumnType()
+      override fun newColumnType(): String = unwrap(this).getNewColumnType()
 
-      public override fun subType(): String? = unwrap(this).getSubType()
+      override fun subType(): String? = unwrap(this).getSubType()
     }
 
     public companion object {
@@ -2735,17 +2566,14 @@ public open class CfnDataSet internal constructor(
     public fun refreshConfiguration(): Any? = unwrap(this).getRefreshConfiguration()
 
     public interface Builder {
-      public fun refreshConfiguration(refreshConfiguration: IResolvable) {
-      }
+      public fun refreshConfiguration(refreshConfiguration: IResolvable)
 
-      public fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty) {
-      }
+      public fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d891b94496204b23a10ded06cb3c53dc1ea32e4458deafff5a702f6b82b61370")
       public
-          fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2754,17 +2582,17 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty.builder()
 
-      public override fun refreshConfiguration(refreshConfiguration: IResolvable) {
+      override fun refreshConfiguration(refreshConfiguration: IResolvable) {
         cdkBuilder.refreshConfiguration(refreshConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty) {
+      override fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty) {
         cdkBuilder.refreshConfiguration(refreshConfiguration.let(RefreshConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d891b94496204b23a10ded06cb3c53dc1ea32e4458deafff5a702f6b82b61370")
-      public override
+      override
           fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty.Builder.() -> Unit):
           Unit = refreshConfiguration(RefreshConfigurationProperty(refreshConfiguration))
 
@@ -2777,7 +2605,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetRefreshPropertiesProperty,
     ) : DataSetRefreshPropertiesProperty {
-      public override fun refreshConfiguration(): Any? = unwrap(this).getRefreshConfiguration()
+      override fun refreshConfiguration(): Any? = unwrap(this).getRefreshConfiguration()
     }
 
     public companion object {
@@ -2810,26 +2638,20 @@ public open class CfnDataSet internal constructor(
     public fun valueType(): String
 
     public interface Builder {
-      public fun defaultValues(defaultValues: IResolvable) {
-      }
+      public fun defaultValues(defaultValues: IResolvable)
 
-      public fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty) {
-      }
+      public fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2daeb77ff7c0cbcf3bdf7652790fef761fdb217132b7eb4fe84902632c02b9d1")
       public
-          fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty.Builder.() -> Unit) {
-      }
+          fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty.Builder.() -> Unit)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun valueType(valueType: String) {
-      }
+      public fun valueType(valueType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2838,30 +2660,29 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterProperty.builder()
 
-      public override fun defaultValues(defaultValues: IResolvable) {
+      override fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
       }
 
-      public override
-          fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty) {
+      override fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty) {
         cdkBuilder.defaultValues(defaultValues.let(IntegerDatasetParameterDefaultValuesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2daeb77ff7c0cbcf3bdf7652790fef761fdb217132b7eb4fe84902632c02b9d1")
-      public override
+      override
           fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty.Builder.() -> Unit):
           Unit = defaultValues(IntegerDatasetParameterDefaultValuesProperty(defaultValues))
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun valueType(valueType: String) {
+      override fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)
       }
 
@@ -2874,13 +2695,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterProperty,
     ) : IntegerDatasetParameterProperty {
-      public override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
+      override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun valueType(): String = unwrap(this).getValueType()
+      override fun valueType(): String = unwrap(this).getValueType()
     }
 
     public companion object {
@@ -2910,17 +2731,13 @@ public open class CfnDataSet internal constructor(
     public fun disableUseAsImportedSource(): Any? = unwrap(this).getDisableUseAsImportedSource()
 
     public interface Builder {
-      public fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: Boolean) {
-      }
+      public fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: Boolean)
 
-      public fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: IResolvable) {
-      }
+      public fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: IResolvable)
 
-      public fun disableUseAsImportedSource(disableUseAsImportedSource: Boolean) {
-      }
+      public fun disableUseAsImportedSource(disableUseAsImportedSource: Boolean)
 
-      public fun disableUseAsImportedSource(disableUseAsImportedSource: IResolvable) {
-      }
+      public fun disableUseAsImportedSource(disableUseAsImportedSource: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2929,20 +2746,19 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetUsageConfigurationProperty.builder()
 
-      public override fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: Boolean) {
+      override fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: Boolean) {
         cdkBuilder.disableUseAsDirectQuerySource(disableUseAsDirectQuerySource)
       }
 
-      public override
-          fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: IResolvable) {
+      override fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: IResolvable) {
         cdkBuilder.disableUseAsDirectQuerySource(disableUseAsDirectQuerySource.let(IResolvable::unwrap))
       }
 
-      public override fun disableUseAsImportedSource(disableUseAsImportedSource: Boolean) {
+      override fun disableUseAsImportedSource(disableUseAsImportedSource: Boolean) {
         cdkBuilder.disableUseAsImportedSource(disableUseAsImportedSource)
       }
 
-      public override fun disableUseAsImportedSource(disableUseAsImportedSource: IResolvable) {
+      override fun disableUseAsImportedSource(disableUseAsImportedSource: IResolvable) {
         cdkBuilder.disableUseAsImportedSource(disableUseAsImportedSource.let(IResolvable::unwrap))
       }
 
@@ -2955,11 +2771,10 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DataSetUsageConfigurationProperty,
     ) : DataSetUsageConfigurationProperty {
-      public override fun disableUseAsDirectQuerySource(): Any? =
+      override fun disableUseAsDirectQuerySource(): Any? =
           unwrap(this).getDisableUseAsDirectQuerySource()
 
-      public override fun disableUseAsImportedSource(): Any? =
-          unwrap(this).getDisableUseAsImportedSource()
+      override fun disableUseAsImportedSource(): Any? = unwrap(this).getDisableUseAsImportedSource()
     }
 
     public companion object {
@@ -2987,8 +2802,7 @@ public open class CfnDataSet internal constructor(
     public fun staticValues(): List<String> = unwrap(this).getStaticValues() ?: emptyList()
 
     public interface Builder {
-      public fun staticValues(staticValues: List<String>) {
-      }
+      public fun staticValues(staticValues: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2997,7 +2811,7 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty.builder()
 
-      public override fun staticValues(staticValues: List<String>) {
+      override fun staticValues(staticValues: List<String>) {
         cdkBuilder.staticValues(staticValues)
       }
 
@@ -3010,8 +2824,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty,
     ) : StringDatasetParameterDefaultValuesProperty {
-      public override fun staticValues(): List<String> = unwrap(this).getStaticValues() ?:
-          emptyList()
+      override fun staticValues(): List<String> = unwrap(this).getStaticValues() ?: emptyList()
     }
 
     public companion object {
@@ -3041,11 +2854,9 @@ public open class CfnDataSet internal constructor(
     public fun description(): String? = unwrap(this).getDescription()
 
     public interface Builder {
-      public fun columns(columns: List<String>) {
-      }
+      public fun columns(columns: List<String>)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3053,11 +2864,11 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty.builder()
 
-      public override fun columns(columns: List<String>) {
+      override fun columns(columns: List<String>) {
         cdkBuilder.columns(columns)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
@@ -3069,9 +2880,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.FieldFolderProperty,
     ) : FieldFolderProperty {
-      public override fun columns(): List<String> = unwrap(this).getColumns() ?: emptyList()
+      override fun columns(): List<String> = unwrap(this).getColumns() ?: emptyList()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
     }
 
     public companion object {
@@ -3100,14 +2911,11 @@ public open class CfnDataSet internal constructor(
     public fun waitForSpiceIngestion(): Any? = unwrap(this).getWaitForSpiceIngestion()
 
     public interface Builder {
-      public fun ingestionWaitTimeInHours(ingestionWaitTimeInHours: Number) {
-      }
+      public fun ingestionWaitTimeInHours(ingestionWaitTimeInHours: Number)
 
-      public fun waitForSpiceIngestion(waitForSpiceIngestion: Boolean) {
-      }
+      public fun waitForSpiceIngestion(waitForSpiceIngestion: Boolean)
 
-      public fun waitForSpiceIngestion(waitForSpiceIngestion: IResolvable) {
-      }
+      public fun waitForSpiceIngestion(waitForSpiceIngestion: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3116,15 +2924,15 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.IngestionWaitPolicyProperty.builder()
 
-      public override fun ingestionWaitTimeInHours(ingestionWaitTimeInHours: Number) {
+      override fun ingestionWaitTimeInHours(ingestionWaitTimeInHours: Number) {
         cdkBuilder.ingestionWaitTimeInHours(ingestionWaitTimeInHours)
       }
 
-      public override fun waitForSpiceIngestion(waitForSpiceIngestion: Boolean) {
+      override fun waitForSpiceIngestion(waitForSpiceIngestion: Boolean) {
         cdkBuilder.waitForSpiceIngestion(waitForSpiceIngestion)
       }
 
-      public override fun waitForSpiceIngestion(waitForSpiceIngestion: IResolvable) {
+      override fun waitForSpiceIngestion(waitForSpiceIngestion: IResolvable) {
         cdkBuilder.waitForSpiceIngestion(waitForSpiceIngestion.let(IResolvable::unwrap))
       }
 
@@ -3137,10 +2945,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.IngestionWaitPolicyProperty,
     ) : IngestionWaitPolicyProperty {
-      public override fun ingestionWaitTimeInHours(): Number? =
-          unwrap(this).getIngestionWaitTimeInHours()
+      override fun ingestionWaitTimeInHours(): Number? = unwrap(this).getIngestionWaitTimeInHours()
 
-      public override fun waitForSpiceIngestion(): Any? = unwrap(this).getWaitForSpiceIngestion()
+      override fun waitForSpiceIngestion(): Any? = unwrap(this).getWaitForSpiceIngestion()
     }
 
     public companion object {
@@ -3171,38 +2978,29 @@ public open class CfnDataSet internal constructor(
     public fun s3Source(): Any? = unwrap(this).getS3Source()
 
     public interface Builder {
-      public fun customSql(customSql: IResolvable) {
-      }
+      public fun customSql(customSql: IResolvable)
 
-      public fun customSql(customSql: CustomSqlProperty) {
-      }
+      public fun customSql(customSql: CustomSqlProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8de2d027c27adb7e5f1f7a599bce2a6399996a50fabec8fada20668496532c7c")
-      public fun customSql(customSql: CustomSqlProperty.Builder.() -> Unit) {
-      }
+      public fun customSql(customSql: CustomSqlProperty.Builder.() -> Unit)
 
-      public fun relationalTable(relationalTable: IResolvable) {
-      }
+      public fun relationalTable(relationalTable: IResolvable)
 
-      public fun relationalTable(relationalTable: RelationalTableProperty) {
-      }
+      public fun relationalTable(relationalTable: RelationalTableProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be2a184082d73e5397cfd6d7000e53e720afba2eab436dc45d9ec51f638b4d04")
-      public fun relationalTable(relationalTable: RelationalTableProperty.Builder.() -> Unit) {
-      }
+      public fun relationalTable(relationalTable: RelationalTableProperty.Builder.() -> Unit)
 
-      public fun s3Source(s3Source: IResolvable) {
-      }
+      public fun s3Source(s3Source: IResolvable)
 
-      public fun s3Source(s3Source: S3SourceProperty) {
-      }
+      public fun s3Source(s3Source: S3SourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5dfdad1d62a931b579a50d56da812a5bec396add755a6c823646e44fa76cd35f")
-      public fun s3Source(s3Source: S3SourceProperty.Builder.() -> Unit) {
-      }
+      public fun s3Source(s3Source: S3SourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3210,44 +3008,43 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty.builder()
 
-      public override fun customSql(customSql: IResolvable) {
+      override fun customSql(customSql: IResolvable) {
         cdkBuilder.customSql(customSql.let(IResolvable::unwrap))
       }
 
-      public override fun customSql(customSql: CustomSqlProperty) {
+      override fun customSql(customSql: CustomSqlProperty) {
         cdkBuilder.customSql(customSql.let(CustomSqlProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8de2d027c27adb7e5f1f7a599bce2a6399996a50fabec8fada20668496532c7c")
-      public override fun customSql(customSql: CustomSqlProperty.Builder.() -> Unit): Unit =
+      override fun customSql(customSql: CustomSqlProperty.Builder.() -> Unit): Unit =
           customSql(CustomSqlProperty(customSql))
 
-      public override fun relationalTable(relationalTable: IResolvable) {
+      override fun relationalTable(relationalTable: IResolvable) {
         cdkBuilder.relationalTable(relationalTable.let(IResolvable::unwrap))
       }
 
-      public override fun relationalTable(relationalTable: RelationalTableProperty) {
+      override fun relationalTable(relationalTable: RelationalTableProperty) {
         cdkBuilder.relationalTable(relationalTable.let(RelationalTableProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be2a184082d73e5397cfd6d7000e53e720afba2eab436dc45d9ec51f638b4d04")
-      public override
-          fun relationalTable(relationalTable: RelationalTableProperty.Builder.() -> Unit): Unit =
-          relationalTable(RelationalTableProperty(relationalTable))
+      override fun relationalTable(relationalTable: RelationalTableProperty.Builder.() -> Unit):
+          Unit = relationalTable(RelationalTableProperty(relationalTable))
 
-      public override fun s3Source(s3Source: IResolvable) {
+      override fun s3Source(s3Source: IResolvable) {
         cdkBuilder.s3Source(s3Source.let(IResolvable::unwrap))
       }
 
-      public override fun s3Source(s3Source: S3SourceProperty) {
+      override fun s3Source(s3Source: S3SourceProperty) {
         cdkBuilder.s3Source(s3Source.let(S3SourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5dfdad1d62a931b579a50d56da812a5bec396add755a6c823646e44fa76cd35f")
-      public override fun s3Source(s3Source: S3SourceProperty.Builder.() -> Unit): Unit =
+      override fun s3Source(s3Source: S3SourceProperty.Builder.() -> Unit): Unit =
           s3Source(S3SourceProperty(s3Source))
 
       public fun build():
@@ -3259,11 +3056,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.PhysicalTableProperty,
     ) : PhysicalTableProperty {
-      public override fun customSql(): Any? = unwrap(this).getCustomSql()
+      override fun customSql(): Any? = unwrap(this).getCustomSql()
 
-      public override fun relationalTable(): Any? = unwrap(this).getRelationalTable()
+      override fun relationalTable(): Any? = unwrap(this).getRelationalTable()
 
-      public override fun s3Source(): Any? = unwrap(this).getS3Source()
+      override fun s3Source(): Any? = unwrap(this).getS3Source()
     }
 
     public companion object {
@@ -3292,11 +3089,9 @@ public open class CfnDataSet internal constructor(
     public fun tags(): List<ColumnTagProperty>
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun tags(tags: List<ColumnTagProperty>) {
-      }
+      public fun tags(tags: List<ColumnTagProperty>)
     }
 
     private class BuilderImpl : Builder {
@@ -3304,11 +3099,11 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun tags(tags: List<ColumnTagProperty>) {
+      override fun tags(tags: List<ColumnTagProperty>) {
         cdkBuilder.tags(tags.map(ColumnTagProperty::unwrap))
       }
 
@@ -3321,9 +3116,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty,
     ) : TagColumnOperationProperty {
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun tags(): List<ColumnTagProperty> =
+      override fun tags(): List<ColumnTagProperty> =
           unwrap(this).getTags().map(ColumnTagProperty::wrap)
     }
 
@@ -3353,11 +3148,9 @@ public open class CfnDataSet internal constructor(
     public fun newColumnName(): String
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun newColumnName(newColumnName: String) {
-      }
+      public fun newColumnName(newColumnName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3366,11 +3159,11 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.RenameColumnOperationProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun newColumnName(newColumnName: String) {
+      override fun newColumnName(newColumnName: String) {
         cdkBuilder.newColumnName(newColumnName)
       }
 
@@ -3383,9 +3176,9 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.RenameColumnOperationProperty,
     ) : RenameColumnOperationProperty {
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun newColumnName(): String = unwrap(this).getNewColumnName()
+      override fun newColumnName(): String = unwrap(this).getNewColumnName()
     }
 
     public companion object {
@@ -3418,17 +3211,13 @@ public open class CfnDataSet internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun subType(subType: String) {
-      }
+      public fun subType(subType: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3436,19 +3225,19 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun subType(subType: String) {
+      override fun subType(subType: String) {
         cdkBuilder.subType(subType)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -3460,13 +3249,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.OutputColumnProperty,
     ) : OutputColumnProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun subType(): String? = unwrap(this).getSubType()
+      override fun subType(): String? = unwrap(this).getSubType()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -3503,41 +3292,31 @@ public open class CfnDataSet internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun leftJoinKeyProperties(leftJoinKeyProperties: IResolvable) {
-      }
+      public fun leftJoinKeyProperties(leftJoinKeyProperties: IResolvable)
 
-      public fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty) {
-      }
+      public fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f6bf66b353192d5d5f0d33473549da91857329984caf2c9af6d5b962e468cf3")
       public
-          fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty.Builder.() -> Unit)
 
-      public fun leftOperand(leftOperand: String) {
-      }
+      public fun leftOperand(leftOperand: String)
 
-      public fun onClause(onClause: String) {
-      }
+      public fun onClause(onClause: String)
 
-      public fun rightJoinKeyProperties(rightJoinKeyProperties: IResolvable) {
-      }
+      public fun rightJoinKeyProperties(rightJoinKeyProperties: IResolvable)
 
-      public fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty) {
-      }
+      public fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4672d23539b90c146309955541614b7a84ca676bdc60189367ca70eb534eca8e")
       public
-          fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty.Builder.() -> Unit)
 
-      public fun rightOperand(rightOperand: String) {
-      }
+      public fun rightOperand(rightOperand: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3545,48 +3324,47 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty.builder()
 
-      public override fun leftJoinKeyProperties(leftJoinKeyProperties: IResolvable) {
+      override fun leftJoinKeyProperties(leftJoinKeyProperties: IResolvable) {
         cdkBuilder.leftJoinKeyProperties(leftJoinKeyProperties.let(IResolvable::unwrap))
       }
 
-      public override fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty) {
+      override fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty) {
         cdkBuilder.leftJoinKeyProperties(leftJoinKeyProperties.let(JoinKeyPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f6bf66b353192d5d5f0d33473549da91857329984caf2c9af6d5b962e468cf3")
-      public override
+      override
           fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty.Builder.() -> Unit):
           Unit = leftJoinKeyProperties(JoinKeyPropertiesProperty(leftJoinKeyProperties))
 
-      public override fun leftOperand(leftOperand: String) {
+      override fun leftOperand(leftOperand: String) {
         cdkBuilder.leftOperand(leftOperand)
       }
 
-      public override fun onClause(onClause: String) {
+      override fun onClause(onClause: String) {
         cdkBuilder.onClause(onClause)
       }
 
-      public override fun rightJoinKeyProperties(rightJoinKeyProperties: IResolvable) {
+      override fun rightJoinKeyProperties(rightJoinKeyProperties: IResolvable) {
         cdkBuilder.rightJoinKeyProperties(rightJoinKeyProperties.let(IResolvable::unwrap))
       }
 
-      public override
-          fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty) {
+      override fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty) {
         cdkBuilder.rightJoinKeyProperties(rightJoinKeyProperties.let(JoinKeyPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4672d23539b90c146309955541614b7a84ca676bdc60189367ca70eb534eca8e")
-      public override
+      override
           fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty.Builder.() -> Unit):
           Unit = rightJoinKeyProperties(JoinKeyPropertiesProperty(rightJoinKeyProperties))
 
-      public override fun rightOperand(rightOperand: String) {
+      override fun rightOperand(rightOperand: String) {
         cdkBuilder.rightOperand(rightOperand)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -3599,17 +3377,17 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.JoinInstructionProperty,
     ) : JoinInstructionProperty {
-      public override fun leftJoinKeyProperties(): Any? = unwrap(this).getLeftJoinKeyProperties()
+      override fun leftJoinKeyProperties(): Any? = unwrap(this).getLeftJoinKeyProperties()
 
-      public override fun leftOperand(): String = unwrap(this).getLeftOperand()
+      override fun leftOperand(): String = unwrap(this).getLeftOperand()
 
-      public override fun onClause(): String = unwrap(this).getOnClause()
+      override fun onClause(): String = unwrap(this).getOnClause()
 
-      public override fun rightJoinKeyProperties(): Any? = unwrap(this).getRightJoinKeyProperties()
+      override fun rightJoinKeyProperties(): Any? = unwrap(this).getRightJoinKeyProperties()
 
-      public override fun rightOperand(): String = unwrap(this).getRightOperand()
+      override fun rightOperand(): String = unwrap(this).getRightOperand()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -3636,8 +3414,7 @@ public open class CfnDataSet internal constructor(
     public fun projectedColumns(): List<String>
 
     public interface Builder {
-      public fun projectedColumns(projectedColumns: List<String>) {
-      }
+      public fun projectedColumns(projectedColumns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -3645,7 +3422,7 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty.builder()
 
-      public override fun projectedColumns(projectedColumns: List<String>) {
+      override fun projectedColumns(projectedColumns: List<String>) {
         cdkBuilder.projectedColumns(projectedColumns)
       }
 
@@ -3658,7 +3435,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty,
     ) : ProjectOperationProperty {
-      public override fun projectedColumns(): List<String> = unwrap(this).getProjectedColumns() ?:
+      override fun projectedColumns(): List<String> = unwrap(this).getProjectedColumns() ?:
           emptyList()
     }
 
@@ -3686,11 +3463,9 @@ public open class CfnDataSet internal constructor(
     public fun staticValues(): Any? = unwrap(this).getStaticValues()
 
     public interface Builder {
-      public fun staticValues(staticValues: IResolvable) {
-      }
+      public fun staticValues(staticValues: IResolvable)
 
-      public fun staticValues(staticValues: List<Number>) {
-      }
+      public fun staticValues(staticValues: List<Number>)
     }
 
     private class BuilderImpl : Builder {
@@ -3699,11 +3474,11 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty.builder()
 
-      public override fun staticValues(staticValues: IResolvable) {
+      override fun staticValues(staticValues: IResolvable) {
         cdkBuilder.staticValues(staticValues.let(IResolvable::unwrap))
       }
 
-      public override fun staticValues(staticValues: List<Number>) {
+      override fun staticValues(staticValues: List<Number>) {
         cdkBuilder.staticValues(staticValues)
       }
 
@@ -3716,7 +3491,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty,
     ) : DecimalDatasetParameterDefaultValuesProperty {
-      public override fun staticValues(): Any? = unwrap(this).getStaticValues()
+      override fun staticValues(): Any? = unwrap(this).getStaticValues()
     }
 
     public companion object {
@@ -3744,11 +3519,9 @@ public open class CfnDataSet internal constructor(
     public fun columns(): Any
 
     public interface Builder {
-      public fun columns(columns: IResolvable) {
-      }
+      public fun columns(columns: IResolvable)
 
-      public fun columns(columns: List<Any>) {
-      }
+      public fun columns(columns: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -3757,11 +3530,11 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty.builder()
 
-      public override fun columns(columns: IResolvable) {
+      override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable::unwrap))
       }
 
-      public override fun columns(columns: List<Any>) {
+      override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
 
@@ -3774,7 +3547,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty,
     ) : CreateColumnsOperationProperty {
-      public override fun columns(): Any = unwrap(this).getColumns()
+      override fun columns(): Any = unwrap(this).getColumns()
     }
 
     public companion object {
@@ -3807,20 +3580,15 @@ public open class CfnDataSet internal constructor(
     public fun sqlQuery(): String
 
     public interface Builder {
-      public fun columns(columns: IResolvable) {
-      }
+      public fun columns(columns: IResolvable)
 
-      public fun columns(columns: List<Any>) {
-      }
+      public fun columns(columns: List<Any>)
 
-      public fun dataSourceArn(dataSourceArn: String) {
-      }
+      public fun dataSourceArn(dataSourceArn: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sqlQuery(sqlQuery: String) {
-      }
+      public fun sqlQuery(sqlQuery: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3828,23 +3596,23 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty.builder()
 
-      public override fun columns(columns: IResolvable) {
+      override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable::unwrap))
       }
 
-      public override fun columns(columns: List<Any>) {
+      override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
 
-      public override fun dataSourceArn(dataSourceArn: String) {
+      override fun dataSourceArn(dataSourceArn: String) {
         cdkBuilder.dataSourceArn(dataSourceArn)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sqlQuery(sqlQuery: String) {
+      override fun sqlQuery(sqlQuery: String) {
         cdkBuilder.sqlQuery(sqlQuery)
       }
 
@@ -3856,13 +3624,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty,
     ) : CustomSqlProperty {
-      public override fun columns(): Any = unwrap(this).getColumns()
+      override fun columns(): Any = unwrap(this).getColumns()
 
-      public override fun dataSourceArn(): String = unwrap(this).getDataSourceArn()
+      override fun dataSourceArn(): String = unwrap(this).getDataSourceArn()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun sqlQuery(): String = unwrap(this).getSqlQuery()
+      override fun sqlQuery(): String = unwrap(this).getSqlQuery()
     }
 
     public companion object {
@@ -3893,14 +3661,11 @@ public open class CfnDataSet internal constructor(
     public fun sizeUnit(): String? = unwrap(this).getSizeUnit()
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
 
-      public fun sizeUnit(sizeUnit: String) {
-      }
+      public fun sizeUnit(sizeUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3908,15 +3673,15 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
-      public override fun sizeUnit(sizeUnit: String) {
+      override fun sizeUnit(sizeUnit: String) {
         cdkBuilder.sizeUnit(sizeUnit)
       }
 
@@ -3929,11 +3694,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.LookbackWindowProperty,
     ) : LookbackWindowProperty {
-      public override fun columnName(): String? = unwrap(this).getColumnName()
+      override fun columnName(): String? = unwrap(this).getColumnName()
 
-      public override fun size(): Number? = unwrap(this).getSize()
+      override fun size(): Number? = unwrap(this).getSize()
 
-      public override fun sizeUnit(): String? = unwrap(this).getSizeUnit()
+      override fun sizeUnit(): String? = unwrap(this).getSizeUnit()
     }
 
     public companion object {
@@ -3966,26 +3731,20 @@ public open class CfnDataSet internal constructor(
     public fun valueType(): String
 
     public interface Builder {
-      public fun defaultValues(defaultValues: IResolvable) {
-      }
+      public fun defaultValues(defaultValues: IResolvable)
 
-      public fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty) {
-      }
+      public fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b730fe8fa5c0757a1266803319e3af2848421d9dbf9ce8d93af1f6b8fbffd1c")
       public
-          fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty.Builder.() -> Unit) {
-      }
+          fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty.Builder.() -> Unit)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun valueType(valueType: String) {
-      }
+      public fun valueType(valueType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3994,30 +3753,29 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterProperty.builder()
 
-      public override fun defaultValues(defaultValues: IResolvable) {
+      override fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
       }
 
-      public override
-          fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty) {
+      override fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty) {
         cdkBuilder.defaultValues(defaultValues.let(StringDatasetParameterDefaultValuesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b730fe8fa5c0757a1266803319e3af2848421d9dbf9ce8d93af1f6b8fbffd1c")
-      public override
+      override
           fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty.Builder.() -> Unit):
           Unit = defaultValues(StringDatasetParameterDefaultValuesProperty(defaultValues))
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun valueType(valueType: String) {
+      override fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)
       }
 
@@ -4030,13 +3788,13 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterProperty,
     ) : StringDatasetParameterProperty {
-      public override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
+      override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun valueType(): String = unwrap(this).getValueType()
+      override fun valueType(): String = unwrap(this).getValueType()
     }
 
     public companion object {
@@ -4067,22 +3825,17 @@ public open class CfnDataSet internal constructor(
     public fun physicalTableId(): String? = unwrap(this).getPhysicalTableId()
 
     public interface Builder {
-      public fun dataSetArn(dataSetArn: String) {
-      }
+      public fun dataSetArn(dataSetArn: String)
 
-      public fun joinInstruction(joinInstruction: IResolvable) {
-      }
+      public fun joinInstruction(joinInstruction: IResolvable)
 
-      public fun joinInstruction(joinInstruction: JoinInstructionProperty) {
-      }
+      public fun joinInstruction(joinInstruction: JoinInstructionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7ea6b5366702ab36457018199798fdc810eae14d8d5cdaf970720af73cb2df5")
-      public fun joinInstruction(joinInstruction: JoinInstructionProperty.Builder.() -> Unit) {
-      }
+      public fun joinInstruction(joinInstruction: JoinInstructionProperty.Builder.() -> Unit)
 
-      public fun physicalTableId(physicalTableId: String) {
-      }
+      public fun physicalTableId(physicalTableId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4090,25 +3843,24 @@ public open class CfnDataSet internal constructor(
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty.Builder =
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty.builder()
 
-      public override fun dataSetArn(dataSetArn: String) {
+      override fun dataSetArn(dataSetArn: String) {
         cdkBuilder.dataSetArn(dataSetArn)
       }
 
-      public override fun joinInstruction(joinInstruction: IResolvable) {
+      override fun joinInstruction(joinInstruction: IResolvable) {
         cdkBuilder.joinInstruction(joinInstruction.let(IResolvable::unwrap))
       }
 
-      public override fun joinInstruction(joinInstruction: JoinInstructionProperty) {
+      override fun joinInstruction(joinInstruction: JoinInstructionProperty) {
         cdkBuilder.joinInstruction(joinInstruction.let(JoinInstructionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7ea6b5366702ab36457018199798fdc810eae14d8d5cdaf970720af73cb2df5")
-      public override
-          fun joinInstruction(joinInstruction: JoinInstructionProperty.Builder.() -> Unit): Unit =
-          joinInstruction(JoinInstructionProperty(joinInstruction))
+      override fun joinInstruction(joinInstruction: JoinInstructionProperty.Builder.() -> Unit):
+          Unit = joinInstruction(JoinInstructionProperty(joinInstruction))
 
-      public override fun physicalTableId(physicalTableId: String) {
+      override fun physicalTableId(physicalTableId: String) {
         cdkBuilder.physicalTableId(physicalTableId)
       }
 
@@ -4121,11 +3873,11 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.LogicalTableSourceProperty,
     ) : LogicalTableSourceProperty {
-      public override fun dataSetArn(): String? = unwrap(this).getDataSetArn()
+      override fun dataSetArn(): String? = unwrap(this).getDataSetArn()
 
-      public override fun joinInstruction(): Any? = unwrap(this).getJoinInstruction()
+      override fun joinInstruction(): Any? = unwrap(this).getJoinInstruction()
 
-      public override fun physicalTableId(): String? = unwrap(this).getPhysicalTableId()
+      override fun physicalTableId(): String? = unwrap(this).getPhysicalTableId()
     }
 
     public companion object {
@@ -4160,29 +3912,22 @@ public open class CfnDataSet internal constructor(
     public fun valueType(): String
 
     public interface Builder {
-      public fun defaultValues(defaultValues: IResolvable) {
-      }
+      public fun defaultValues(defaultValues: IResolvable)
 
-      public fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty) {
-      }
+      public fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("18c7ba88abd5d85c222d29ce524830651a4b6470b535202ff31fcd450f7e03c7")
       public
-          fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty.Builder.() -> Unit) {
-      }
+          fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty.Builder.() -> Unit)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun timeGranularity(timeGranularity: String) {
-      }
+      public fun timeGranularity(timeGranularity: String)
 
-      public fun valueType(valueType: String) {
-      }
+      public fun valueType(valueType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4191,34 +3936,33 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterProperty.builder()
 
-      public override fun defaultValues(defaultValues: IResolvable) {
+      override fun defaultValues(defaultValues: IResolvable) {
         cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
       }
 
-      public override
-          fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty) {
+      override fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty) {
         cdkBuilder.defaultValues(defaultValues.let(DateTimeDatasetParameterDefaultValuesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("18c7ba88abd5d85c222d29ce524830651a4b6470b535202ff31fcd450f7e03c7")
-      public override
+      override
           fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty.Builder.() -> Unit):
           Unit = defaultValues(DateTimeDatasetParameterDefaultValuesProperty(defaultValues))
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun timeGranularity(timeGranularity: String) {
+      override fun timeGranularity(timeGranularity: String) {
         cdkBuilder.timeGranularity(timeGranularity)
       }
 
-      public override fun valueType(valueType: String) {
+      override fun valueType(valueType: String) {
         cdkBuilder.valueType(valueType)
       }
 
@@ -4231,15 +3975,15 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterProperty,
     ) : DateTimeDatasetParameterProperty {
-      public override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
+      override fun defaultValues(): Any? = unwrap(this).getDefaultValues()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun timeGranularity(): String? = unwrap(this).getTimeGranularity()
+      override fun timeGranularity(): String? = unwrap(this).getTimeGranularity()
 
-      public override fun valueType(): String = unwrap(this).getValueType()
+      override fun valueType(): String = unwrap(this).getValueType()
     }
 
     public companion object {
@@ -4266,11 +4010,9 @@ public open class CfnDataSet internal constructor(
     public fun staticValues(): Any? = unwrap(this).getStaticValues()
 
     public interface Builder {
-      public fun staticValues(staticValues: IResolvable) {
-      }
+      public fun staticValues(staticValues: IResolvable)
 
-      public fun staticValues(staticValues: List<Number>) {
-      }
+      public fun staticValues(staticValues: List<Number>)
     }
 
     private class BuilderImpl : Builder {
@@ -4279,11 +4021,11 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty.builder()
 
-      public override fun staticValues(staticValues: IResolvable) {
+      override fun staticValues(staticValues: IResolvable) {
         cdkBuilder.staticValues(staticValues.let(IResolvable::unwrap))
       }
 
-      public override fun staticValues(staticValues: List<Number>) {
+      override fun staticValues(staticValues: List<Number>) {
         cdkBuilder.staticValues(staticValues)
       }
 
@@ -4296,7 +4038,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty,
     ) : IntegerDatasetParameterDefaultValuesProperty {
-      public override fun staticValues(): Any? = unwrap(this).getStaticValues()
+      override fun staticValues(): Any? = unwrap(this).getStaticValues()
     }
 
     public companion object {
@@ -4324,17 +4066,14 @@ public open class CfnDataSet internal constructor(
     public fun incrementalRefresh(): Any? = unwrap(this).getIncrementalRefresh()
 
     public interface Builder {
-      public fun incrementalRefresh(incrementalRefresh: IResolvable) {
-      }
+      public fun incrementalRefresh(incrementalRefresh: IResolvable)
 
-      public fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty) {
-      }
+      public fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4cc1ee90b75ae38ef3dc53f2ef608e46b7e5bb8603b5a23b41319b65fd5c3eed")
       public
-          fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty.Builder.() -> Unit) {
-      }
+          fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -4343,17 +4082,17 @@ public open class CfnDataSet internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshConfigurationProperty.builder()
 
-      public override fun incrementalRefresh(incrementalRefresh: IResolvable) {
+      override fun incrementalRefresh(incrementalRefresh: IResolvable) {
         cdkBuilder.incrementalRefresh(incrementalRefresh.let(IResolvable::unwrap))
       }
 
-      public override fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty) {
+      override fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty) {
         cdkBuilder.incrementalRefresh(incrementalRefresh.let(IncrementalRefreshProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4cc1ee90b75ae38ef3dc53f2ef608e46b7e5bb8603b5a23b41319b65fd5c3eed")
-      public override
+      override
           fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty.Builder.() -> Unit):
           Unit = incrementalRefresh(IncrementalRefreshProperty(incrementalRefresh))
 
@@ -4366,7 +4105,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.RefreshConfigurationProperty,
     ) : RefreshConfigurationProperty {
-      public override fun incrementalRefresh(): Any? = unwrap(this).getIncrementalRefresh()
+      override fun incrementalRefresh(): Any? = unwrap(this).getIncrementalRefresh()
     }
 
     public companion object {

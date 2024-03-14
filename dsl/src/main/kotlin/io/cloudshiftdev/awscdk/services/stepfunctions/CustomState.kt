@@ -45,8 +45,7 @@ public open class CustomState internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun stateJson(stateJson: Map<String, Any>) {
-    }
+    public fun stateJson(stateJson: Map<String, Any>)
   }
 
   private class BuilderImpl(
@@ -56,7 +55,7 @@ public open class CustomState internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.CustomState.Builder =
         software.amazon.awscdk.services.stepfunctions.CustomState.Builder.create(scope, id)
 
-    public override fun stateJson(stateJson: Map<String, Any>) {
+    override fun stateJson(stateJson: Map<String, Any>) {
       cdkBuilder.stateJson(stateJson)
     }
 

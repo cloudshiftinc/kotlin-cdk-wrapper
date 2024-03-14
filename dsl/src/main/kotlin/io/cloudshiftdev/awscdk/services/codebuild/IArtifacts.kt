@@ -13,13 +13,13 @@ public interface IArtifacts {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts,
   ) : IArtifacts {
-    public override fun bind(arg0: Construct, arg1: IProject): ArtifactsConfig =
+    override fun bind(arg0: Construct, arg1: IProject): ArtifactsConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(IProject::unwrap)).let(ArtifactsConfig::wrap)
 
-    public override fun identifier(): String? = unwrap(this).getIdentifier()
+    override fun identifier(): String? = unwrap(this).getIdentifier()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

@@ -10,22 +10,20 @@ public interface OriginFailoverConfig {
   public fun statusCodes(): List<Number> = unwrap(this).getStatusCodes() ?: emptyList()
 
   public interface Builder {
-    public fun failoverOrigin(failoverOrigin: IOrigin) {
-    }
+    public fun failoverOrigin(failoverOrigin: IOrigin)
 
-    public fun statusCodes(statusCodes: List<Number>) {
-    }
+    public fun statusCodes(statusCodes: List<Number>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig.Builder
         = software.amazon.awscdk.services.cloudfront.OriginFailoverConfig.builder()
 
-    public override fun failoverOrigin(failoverOrigin: IOrigin) {
+    override fun failoverOrigin(failoverOrigin: IOrigin) {
       cdkBuilder.failoverOrigin(failoverOrigin.let(IOrigin::unwrap))
     }
 
-    public override fun statusCodes(statusCodes: List<Number>) {
+    override fun statusCodes(statusCodes: List<Number>) {
       cdkBuilder.statusCodes(statusCodes)
     }
 
@@ -36,10 +34,9 @@ public interface OriginFailoverConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.OriginFailoverConfig,
   ) : OriginFailoverConfig {
-    public override fun failoverOrigin(): IOrigin =
-        unwrap(this).getFailoverOrigin().let(IOrigin::wrap)
+    override fun failoverOrigin(): IOrigin = unwrap(this).getFailoverOrigin().let(IOrigin::wrap)
 
-    public override fun statusCodes(): List<Number> = unwrap(this).getStatusCodes() ?: emptyList()
+    override fun statusCodes(): List<Number> = unwrap(this).getStatusCodes() ?: emptyList()
   }
 
   public companion object {

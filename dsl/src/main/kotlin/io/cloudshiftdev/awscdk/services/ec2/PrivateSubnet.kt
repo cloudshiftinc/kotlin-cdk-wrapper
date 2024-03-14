@@ -12,23 +12,17 @@ public open class PrivateSubnet internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.PrivateSubnet,
 ) : Subnet(cdkObject), IPrivateSubnet {
   public interface Builder {
-    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
-    }
+    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
-    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
-    }
+    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -38,27 +32,27 @@ public open class PrivateSubnet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.PrivateSubnet.Builder =
         software.amazon.awscdk.services.ec2.PrivateSubnet.Builder.create(scope, id)
 
-    public override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
+    override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
       cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+    override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
-    public override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
+    override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
       cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

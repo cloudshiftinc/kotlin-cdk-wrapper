@@ -92,47 +92,35 @@ public open class CfnDataset internal constructor(
   }
 
   public interface Builder {
-    public fun format(format: String) {
-    }
+    public fun format(format: String)
 
-    public fun formatOptions(formatOptions: IResolvable) {
-    }
+    public fun formatOptions(formatOptions: IResolvable)
 
-    public fun formatOptions(formatOptions: FormatOptionsProperty) {
-    }
+    public fun formatOptions(formatOptions: FormatOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("874cb260c136b29df923454625d2ac47f83ded0a0beb8f9a1850b1e04aa32710")
-    public fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit)
 
-    public fun input(input: IResolvable) {
-    }
+    public fun input(input: IResolvable)
 
-    public fun input(input: InputProperty) {
-    }
+    public fun input(input: InputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("108d2365f7c1682fc89f15b96a6c32ce2fc142101de56356163530b012e3dfcc")
-    public fun input(input: InputProperty.Builder.() -> Unit) {
-    }
+    public fun input(input: InputProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun pathOptions(pathOptions: IResolvable) {
-    }
+    public fun pathOptions(pathOptions: IResolvable)
 
-    public fun pathOptions(pathOptions: PathOptionsProperty) {
-    }
+    public fun pathOptions(pathOptions: PathOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3ee845b91bbaf56745c111be9c1c7fc34dd4099fd53d16d1a5ed80e500402178")
-    public fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -142,54 +130,53 @@ public open class CfnDataset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnDataset.Builder =
         software.amazon.awscdk.services.databrew.CfnDataset.Builder.create(scope, id)
 
-    public override fun format(format: String) {
+    override fun format(format: String) {
       cdkBuilder.format(format)
     }
 
-    public override fun formatOptions(formatOptions: IResolvable) {
+    override fun formatOptions(formatOptions: IResolvable) {
       cdkBuilder.formatOptions(formatOptions.let(IResolvable::unwrap))
     }
 
-    public override fun formatOptions(formatOptions: FormatOptionsProperty) {
+    override fun formatOptions(formatOptions: FormatOptionsProperty) {
       cdkBuilder.formatOptions(formatOptions.let(FormatOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("874cb260c136b29df923454625d2ac47f83ded0a0beb8f9a1850b1e04aa32710")
-    public override fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit): Unit
-        = formatOptions(FormatOptionsProperty(formatOptions))
+    override fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit): Unit =
+        formatOptions(FormatOptionsProperty(formatOptions))
 
-    public override fun input(input: IResolvable) {
+    override fun input(input: IResolvable) {
       cdkBuilder.input(input.let(IResolvable::unwrap))
     }
 
-    public override fun input(input: InputProperty) {
+    override fun input(input: InputProperty) {
       cdkBuilder.input(input.let(InputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("108d2365f7c1682fc89f15b96a6c32ce2fc142101de56356163530b012e3dfcc")
-    public override fun input(input: InputProperty.Builder.() -> Unit): Unit =
-        input(InputProperty(input))
+    override fun input(input: InputProperty.Builder.() -> Unit): Unit = input(InputProperty(input))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun pathOptions(pathOptions: IResolvable) {
+    override fun pathOptions(pathOptions: IResolvable) {
       cdkBuilder.pathOptions(pathOptions.let(IResolvable::unwrap))
     }
 
-    public override fun pathOptions(pathOptions: PathOptionsProperty) {
+    override fun pathOptions(pathOptions: PathOptionsProperty) {
       cdkBuilder.pathOptions(pathOptions.let(PathOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3ee845b91bbaf56745c111be9c1c7fc34dd4099fd53d16d1a5ed80e500402178")
-    public override fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit): Unit =
+    override fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit): Unit =
         pathOptions(PathOptionsProperty(pathOptions))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -227,25 +214,19 @@ public open class CfnDataset internal constructor(
     public fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
 
-      public fun tempDirectory(tempDirectory: IResolvable) {
-      }
+      public fun tempDirectory(tempDirectory: IResolvable)
 
-      public fun tempDirectory(tempDirectory: S3LocationProperty) {
-      }
+      public fun tempDirectory(tempDirectory: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7db5116f34f01063a17d9e354c340b74563e60bf4041273549ecb5f743554a02")
-      public fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -254,30 +235,30 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
-      public override fun tempDirectory(tempDirectory: IResolvable) {
+      override fun tempDirectory(tempDirectory: IResolvable) {
         cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
       }
 
-      public override fun tempDirectory(tempDirectory: S3LocationProperty) {
+      override fun tempDirectory(tempDirectory: S3LocationProperty) {
         cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7db5116f34f01063a17d9e354c340b74563e60bf4041273549ecb5f743554a02")
-      public override fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit): Unit
-          = tempDirectory(S3LocationProperty(tempDirectory))
+      override fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit): Unit =
+          tempDirectory(S3LocationProperty(tempDirectory))
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty =
@@ -288,13 +269,13 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.DataCatalogInputDefinitionProperty,
     ) : DataCatalogInputDefinitionProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun tableName(): String? = unwrap(this).getTableName()
+      override fun tableName(): String? = unwrap(this).getTableName()
 
-      public override fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
+      override fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
     }
 
     public companion object {
@@ -328,25 +309,19 @@ public open class CfnDataset internal constructor(
     public fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
 
     public interface Builder {
-      public fun databaseTableName(databaseTableName: String) {
-      }
+      public fun databaseTableName(databaseTableName: String)
 
-      public fun glueConnectionName(glueConnectionName: String) {
-      }
+      public fun glueConnectionName(glueConnectionName: String)
 
-      public fun queryString(queryString: String) {
-      }
+      public fun queryString(queryString: String)
 
-      public fun tempDirectory(tempDirectory: IResolvable) {
-      }
+      public fun tempDirectory(tempDirectory: IResolvable)
 
-      public fun tempDirectory(tempDirectory: S3LocationProperty) {
-      }
+      public fun tempDirectory(tempDirectory: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d380b9aa4c10bb6f287271ebf8c3dd1d2ab5523fbe21bf543e78c7f770fd5ec6")
-      public fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -355,30 +330,30 @@ public open class CfnDataset internal constructor(
           =
           software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty.builder()
 
-      public override fun databaseTableName(databaseTableName: String) {
+      override fun databaseTableName(databaseTableName: String) {
         cdkBuilder.databaseTableName(databaseTableName)
       }
 
-      public override fun glueConnectionName(glueConnectionName: String) {
+      override fun glueConnectionName(glueConnectionName: String) {
         cdkBuilder.glueConnectionName(glueConnectionName)
       }
 
-      public override fun queryString(queryString: String) {
+      override fun queryString(queryString: String) {
         cdkBuilder.queryString(queryString)
       }
 
-      public override fun tempDirectory(tempDirectory: IResolvable) {
+      override fun tempDirectory(tempDirectory: IResolvable) {
         cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
       }
 
-      public override fun tempDirectory(tempDirectory: S3LocationProperty) {
+      override fun tempDirectory(tempDirectory: S3LocationProperty) {
         cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d380b9aa4c10bb6f287271ebf8c3dd1d2ab5523fbe21bf543e78c7f770fd5ec6")
-      public override fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit): Unit
-          = tempDirectory(S3LocationProperty(tempDirectory))
+      override fun tempDirectory(tempDirectory: S3LocationProperty.Builder.() -> Unit): Unit =
+          tempDirectory(S3LocationProperty(tempDirectory))
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty =
@@ -389,13 +364,13 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.DatabaseInputDefinitionProperty,
     ) : DatabaseInputDefinitionProperty {
-      public override fun databaseTableName(): String? = unwrap(this).getDatabaseTableName()
+      override fun databaseTableName(): String? = unwrap(this).getDatabaseTableName()
 
-      public override fun glueConnectionName(): String = unwrap(this).getGlueConnectionName()
+      override fun glueConnectionName(): String = unwrap(this).getGlueConnectionName()
 
-      public override fun queryString(): String? = unwrap(this).getQueryString()
+      override fun queryString(): String? = unwrap(this).getQueryString()
 
-      public override fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
+      override fun tempDirectory(): Any? = unwrap(this).getTempDirectory()
     }
 
     public companion object {
@@ -428,52 +403,40 @@ public open class CfnDataset internal constructor(
     public fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
 
     public interface Builder {
-      public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
-      }
+      public fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable)
 
       public
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
-      }
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8566d49d0da6d5e3c7dae41867fa0417df919b5a9a9cbe8fb3e02dd69f77448")
       public
-          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit)
 
-      public fun databaseInputDefinition(databaseInputDefinition: IResolvable) {
-      }
+      public fun databaseInputDefinition(databaseInputDefinition: IResolvable)
 
-      public fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty) {
-      }
+      public fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("20cc6c2cb67cf12e5153173813edf5a1f135894874e3ec92e723e02fa5999d7b")
       public
-          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit)
 
-      public fun metadata(metadata: IResolvable) {
-      }
+      public fun metadata(metadata: IResolvable)
 
-      public fun metadata(metadata: MetadataProperty) {
-      }
+      public fun metadata(metadata: MetadataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ebc2eecbbafc42972874374b2ff846e2fdf8dc1e0ebd9e1fa459c63dc026f334")
-      public fun metadata(metadata: MetadataProperty.Builder.() -> Unit) {
-      }
+      public fun metadata(metadata: MetadataProperty.Builder.() -> Unit)
 
-      public fun s3InputDefinition(s3InputDefinition: IResolvable) {
-      }
+      public fun s3InputDefinition(s3InputDefinition: IResolvable)
 
-      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
-      }
+      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("941083a48d82f5dc84d462af94aa87336a198a841d72148455b37296db306422")
-      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -481,63 +444,62 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.InputProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.InputProperty.builder()
 
-      public override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
+      override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
         cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
         cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8566d49d0da6d5e3c7dae41867fa0417df919b5a9a9cbe8fb3e02dd69f77448")
-      public override
+      override
           fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty.Builder.() -> Unit):
           Unit =
           dataCatalogInputDefinition(DataCatalogInputDefinitionProperty(dataCatalogInputDefinition))
 
-      public override fun databaseInputDefinition(databaseInputDefinition: IResolvable) {
+      override fun databaseInputDefinition(databaseInputDefinition: IResolvable) {
         cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty) {
         cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(DatabaseInputDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("20cc6c2cb67cf12e5153173813edf5a1f135894874e3ec92e723e02fa5999d7b")
-      public override
+      override
           fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty.Builder.() -> Unit):
           Unit = databaseInputDefinition(DatabaseInputDefinitionProperty(databaseInputDefinition))
 
-      public override fun metadata(metadata: IResolvable) {
+      override fun metadata(metadata: IResolvable) {
         cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
       }
 
-      public override fun metadata(metadata: MetadataProperty) {
+      override fun metadata(metadata: MetadataProperty) {
         cdkBuilder.metadata(metadata.let(MetadataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ebc2eecbbafc42972874374b2ff846e2fdf8dc1e0ebd9e1fa459c63dc026f334")
-      public override fun metadata(metadata: MetadataProperty.Builder.() -> Unit): Unit =
+      override fun metadata(metadata: MetadataProperty.Builder.() -> Unit): Unit =
           metadata(MetadataProperty(metadata))
 
-      public override fun s3InputDefinition(s3InputDefinition: IResolvable) {
+      override fun s3InputDefinition(s3InputDefinition: IResolvable) {
         cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
       }
 
-      public override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
+      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
         cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("941083a48d82f5dc84d462af94aa87336a198a841d72148455b37296db306422")
-      public override
-          fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit): Unit =
-          s3InputDefinition(S3LocationProperty(s3InputDefinition))
+      override fun s3InputDefinition(s3InputDefinition: S3LocationProperty.Builder.() -> Unit): Unit
+          = s3InputDefinition(S3LocationProperty(s3InputDefinition))
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.InputProperty =
           cdkBuilder.build()
@@ -546,15 +508,13 @@ public open class CfnDataset internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.InputProperty,
     ) : InputProperty {
-      public override fun dataCatalogInputDefinition(): Any? =
-          unwrap(this).getDataCatalogInputDefinition()
+      override fun dataCatalogInputDefinition(): Any? = unwrap(this).getDataCatalogInputDefinition()
 
-      public override fun databaseInputDefinition(): Any? =
-          unwrap(this).getDatabaseInputDefinition()
+      override fun databaseInputDefinition(): Any? = unwrap(this).getDatabaseInputDefinition()
 
-      public override fun metadata(): Any? = unwrap(this).getMetadata()
+      override fun metadata(): Any? = unwrap(this).getMetadata()
 
-      public override fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
+      override fun s3InputDefinition(): Any? = unwrap(this).getS3InputDefinition()
     }
 
     public companion object {
@@ -585,14 +545,11 @@ public open class CfnDataset internal constructor(
     public fun timezoneOffset(): String? = unwrap(this).getTimezoneOffset()
 
     public interface Builder {
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
 
-      public fun localeCode(localeCode: String) {
-      }
+      public fun localeCode(localeCode: String)
 
-      public fun timezoneOffset(timezoneOffset: String) {
-      }
+      public fun timezoneOffset(timezoneOffset: String)
     }
 
     private class BuilderImpl : Builder {
@@ -600,15 +557,15 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty.builder()
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
-      public override fun localeCode(localeCode: String) {
+      override fun localeCode(localeCode: String) {
         cdkBuilder.localeCode(localeCode)
       }
 
-      public override fun timezoneOffset(timezoneOffset: String) {
+      override fun timezoneOffset(timezoneOffset: String) {
         cdkBuilder.timezoneOffset(timezoneOffset)
       }
 
@@ -621,11 +578,11 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.DatetimeOptionsProperty,
     ) : DatetimeOptionsProperty {
-      public override fun format(): String = unwrap(this).getFormat()
+      override fun format(): String = unwrap(this).getFormat()
 
-      public override fun localeCode(): String? = unwrap(this).getLocaleCode()
+      override fun localeCode(): String? = unwrap(this).getLocaleCode()
 
-      public override fun timezoneOffset(): String? = unwrap(this).getTimezoneOffset()
+      override fun timezoneOffset(): String? = unwrap(this).getTimezoneOffset()
     }
 
     public companion object {
@@ -656,20 +613,15 @@ public open class CfnDataset internal constructor(
     public fun sheetNames(): List<String> = unwrap(this).getSheetNames() ?: emptyList()
 
     public interface Builder {
-      public fun headerRow(headerRow: Boolean) {
-      }
+      public fun headerRow(headerRow: Boolean)
 
-      public fun headerRow(headerRow: IResolvable) {
-      }
+      public fun headerRow(headerRow: IResolvable)
 
-      public fun sheetIndexes(sheetIndexes: IResolvable) {
-      }
+      public fun sheetIndexes(sheetIndexes: IResolvable)
 
-      public fun sheetIndexes(sheetIndexes: List<Number>) {
-      }
+      public fun sheetIndexes(sheetIndexes: List<Number>)
 
-      public fun sheetNames(sheetNames: List<String>) {
-      }
+      public fun sheetNames(sheetNames: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -677,23 +629,23 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty.builder()
 
-      public override fun headerRow(headerRow: Boolean) {
+      override fun headerRow(headerRow: Boolean) {
         cdkBuilder.headerRow(headerRow)
       }
 
-      public override fun headerRow(headerRow: IResolvable) {
+      override fun headerRow(headerRow: IResolvable) {
         cdkBuilder.headerRow(headerRow.let(IResolvable::unwrap))
       }
 
-      public override fun sheetIndexes(sheetIndexes: IResolvable) {
+      override fun sheetIndexes(sheetIndexes: IResolvable) {
         cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable::unwrap))
       }
 
-      public override fun sheetIndexes(sheetIndexes: List<Number>) {
+      override fun sheetIndexes(sheetIndexes: List<Number>) {
         cdkBuilder.sheetIndexes(sheetIndexes)
       }
 
-      public override fun sheetNames(sheetNames: List<String>) {
+      override fun sheetNames(sheetNames: List<String>) {
         cdkBuilder.sheetNames(sheetNames)
       }
 
@@ -705,11 +657,11 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty,
     ) : ExcelOptionsProperty {
-      public override fun headerRow(): Any? = unwrap(this).getHeaderRow()
+      override fun headerRow(): Any? = unwrap(this).getHeaderRow()
 
-      public override fun sheetIndexes(): Any? = unwrap(this).getSheetIndexes()
+      override fun sheetIndexes(): Any? = unwrap(this).getSheetIndexes()
 
-      public override fun sheetNames(): List<String> = unwrap(this).getSheetNames() ?: emptyList()
+      override fun sheetNames(): List<String> = unwrap(this).getSheetNames() ?: emptyList()
     }
 
     public companion object {
@@ -736,11 +688,9 @@ public open class CfnDataset internal constructor(
     public fun multiLine(): Any? = unwrap(this).getMultiLine()
 
     public interface Builder {
-      public fun multiLine(multiLine: Boolean) {
-      }
+      public fun multiLine(multiLine: Boolean)
 
-      public fun multiLine(multiLine: IResolvable) {
-      }
+      public fun multiLine(multiLine: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -748,11 +698,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty.builder()
 
-      public override fun multiLine(multiLine: Boolean) {
+      override fun multiLine(multiLine: Boolean) {
         cdkBuilder.multiLine(multiLine)
       }
 
-      public override fun multiLine(multiLine: IResolvable) {
+      override fun multiLine(multiLine: IResolvable) {
         cdkBuilder.multiLine(multiLine.let(IResolvable::unwrap))
       }
 
@@ -764,7 +714,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty,
     ) : JsonOptionsProperty {
-      public override fun multiLine(): Any? = unwrap(this).getMultiLine()
+      override fun multiLine(): Any? = unwrap(this).getMultiLine()
     }
 
     public companion object {
@@ -793,11 +743,9 @@ public open class CfnDataset internal constructor(
     public fun key(): String? = unwrap(this).getKey()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -805,11 +753,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -821,9 +769,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
     }
 
     public companion object {
@@ -854,38 +802,29 @@ public open class CfnDataset internal constructor(
     public fun json(): Any? = unwrap(this).getJson()
 
     public interface Builder {
-      public fun csv(csv: IResolvable) {
-      }
+      public fun csv(csv: IResolvable)
 
-      public fun csv(csv: CsvOptionsProperty) {
-      }
+      public fun csv(csv: CsvOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72b3633abe2138ad63e36be41f14b939d47953e017b72e053a3b74b20d72ca92")
-      public fun csv(csv: CsvOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun csv(csv: CsvOptionsProperty.Builder.() -> Unit)
 
-      public fun excel(excel: IResolvable) {
-      }
+      public fun excel(excel: IResolvable)
 
-      public fun excel(excel: ExcelOptionsProperty) {
-      }
+      public fun excel(excel: ExcelOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ddb615763391f8fb8cae4015adbeda24c1f2cf9f35c8f2ac4125a7b27823d3e8")
-      public fun excel(excel: ExcelOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun excel(excel: ExcelOptionsProperty.Builder.() -> Unit)
 
-      public fun json(json: IResolvable) {
-      }
+      public fun json(json: IResolvable)
 
-      public fun json(json: JsonOptionsProperty) {
-      }
+      public fun json(json: JsonOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cef95b3f0a6f8caccf791e87fb75cb078b786aca315950647c7fea8ca0e1b0e9")
-      public fun json(json: JsonOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun json(json: JsonOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -893,43 +832,43 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty.builder()
 
-      public override fun csv(csv: IResolvable) {
+      override fun csv(csv: IResolvable) {
         cdkBuilder.csv(csv.let(IResolvable::unwrap))
       }
 
-      public override fun csv(csv: CsvOptionsProperty) {
+      override fun csv(csv: CsvOptionsProperty) {
         cdkBuilder.csv(csv.let(CsvOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72b3633abe2138ad63e36be41f14b939d47953e017b72e053a3b74b20d72ca92")
-      public override fun csv(csv: CsvOptionsProperty.Builder.() -> Unit): Unit =
+      override fun csv(csv: CsvOptionsProperty.Builder.() -> Unit): Unit =
           csv(CsvOptionsProperty(csv))
 
-      public override fun excel(excel: IResolvable) {
+      override fun excel(excel: IResolvable) {
         cdkBuilder.excel(excel.let(IResolvable::unwrap))
       }
 
-      public override fun excel(excel: ExcelOptionsProperty) {
+      override fun excel(excel: ExcelOptionsProperty) {
         cdkBuilder.excel(excel.let(ExcelOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ddb615763391f8fb8cae4015adbeda24c1f2cf9f35c8f2ac4125a7b27823d3e8")
-      public override fun excel(excel: ExcelOptionsProperty.Builder.() -> Unit): Unit =
+      override fun excel(excel: ExcelOptionsProperty.Builder.() -> Unit): Unit =
           excel(ExcelOptionsProperty(excel))
 
-      public override fun json(json: IResolvable) {
+      override fun json(json: IResolvable) {
         cdkBuilder.json(json.let(IResolvable::unwrap))
       }
 
-      public override fun json(json: JsonOptionsProperty) {
+      override fun json(json: JsonOptionsProperty) {
         cdkBuilder.json(json.let(JsonOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cef95b3f0a6f8caccf791e87fb75cb078b786aca315950647c7fea8ca0e1b0e9")
-      public override fun json(json: JsonOptionsProperty.Builder.() -> Unit): Unit =
+      override fun json(json: JsonOptionsProperty.Builder.() -> Unit): Unit =
           json(JsonOptionsProperty(json))
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty
@@ -940,11 +879,11 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.FormatOptionsProperty,
     ) : FormatOptionsProperty {
-      public override fun csv(): Any? = unwrap(this).getCsv()
+      override fun csv(): Any? = unwrap(this).getCsv()
 
-      public override fun excel(): Any? = unwrap(this).getExcel()
+      override fun excel(): Any? = unwrap(this).getExcel()
 
-      public override fun json(): Any? = unwrap(this).getJson()
+      override fun json(): Any? = unwrap(this).getJson()
     }
 
     public companion object {
@@ -971,8 +910,7 @@ public open class CfnDataset internal constructor(
     public fun sourceArn(): String? = unwrap(this).getSourceArn()
 
     public interface Builder {
-      public fun sourceArn(sourceArn: String) {
-      }
+      public fun sourceArn(sourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -980,7 +918,7 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty.builder()
 
-      public override fun sourceArn(sourceArn: String) {
+      override fun sourceArn(sourceArn: String) {
         cdkBuilder.sourceArn(sourceArn)
       }
 
@@ -991,7 +929,7 @@ public open class CfnDataset internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnDataset.MetadataProperty,
     ) : MetadataProperty {
-      public override fun sourceArn(): String? = unwrap(this).getSourceArn()
+      override fun sourceArn(): String? = unwrap(this).getSourceArn()
     }
 
     public companion object {
@@ -1026,39 +964,29 @@ public open class CfnDataset internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun createColumn(createColumn: Boolean) {
-      }
+      public fun createColumn(createColumn: Boolean)
 
-      public fun createColumn(createColumn: IResolvable) {
-      }
+      public fun createColumn(createColumn: IResolvable)
 
-      public fun datetimeOptions(datetimeOptions: IResolvable) {
-      }
+      public fun datetimeOptions(datetimeOptions: IResolvable)
 
-      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty) {
-      }
+      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("65a6693a7649a5bea13eff57488531548e480e904d0e34b14bccc2e10bfe22a1")
-      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit)
 
-      public fun filter(filter: IResolvable) {
-      }
+      public fun filter(filter: IResolvable)
 
-      public fun filter(filter: FilterExpressionProperty) {
-      }
+      public fun filter(filter: FilterExpressionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("060097b92684df8d43ad40538370f633df18b34aab4452e06dbe5e5f69c7955f")
-      public fun filter(filter: FilterExpressionProperty.Builder.() -> Unit) {
-      }
+      public fun filter(filter: FilterExpressionProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1066,46 +994,45 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty.builder()
 
-      public override fun createColumn(createColumn: Boolean) {
+      override fun createColumn(createColumn: Boolean) {
         cdkBuilder.createColumn(createColumn)
       }
 
-      public override fun createColumn(createColumn: IResolvable) {
+      override fun createColumn(createColumn: IResolvable) {
         cdkBuilder.createColumn(createColumn.let(IResolvable::unwrap))
       }
 
-      public override fun datetimeOptions(datetimeOptions: IResolvable) {
+      override fun datetimeOptions(datetimeOptions: IResolvable) {
         cdkBuilder.datetimeOptions(datetimeOptions.let(IResolvable::unwrap))
       }
 
-      public override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty) {
+      override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty) {
         cdkBuilder.datetimeOptions(datetimeOptions.let(DatetimeOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("65a6693a7649a5bea13eff57488531548e480e904d0e34b14bccc2e10bfe22a1")
-      public override
-          fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit): Unit =
-          datetimeOptions(DatetimeOptionsProperty(datetimeOptions))
+      override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty.Builder.() -> Unit):
+          Unit = datetimeOptions(DatetimeOptionsProperty(datetimeOptions))
 
-      public override fun filter(filter: IResolvable) {
+      override fun filter(filter: IResolvable) {
         cdkBuilder.filter(filter.let(IResolvable::unwrap))
       }
 
-      public override fun filter(filter: FilterExpressionProperty) {
+      override fun filter(filter: FilterExpressionProperty) {
         cdkBuilder.filter(filter.let(FilterExpressionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("060097b92684df8d43ad40538370f633df18b34aab4452e06dbe5e5f69c7955f")
-      public override fun filter(filter: FilterExpressionProperty.Builder.() -> Unit): Unit =
+      override fun filter(filter: FilterExpressionProperty.Builder.() -> Unit): Unit =
           filter(FilterExpressionProperty(filter))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1118,15 +1045,15 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.DatasetParameterProperty,
     ) : DatasetParameterProperty {
-      public override fun createColumn(): Any? = unwrap(this).getCreateColumn()
+      override fun createColumn(): Any? = unwrap(this).getCreateColumn()
 
-      public override fun datetimeOptions(): Any? = unwrap(this).getDatetimeOptions()
+      override fun datetimeOptions(): Any? = unwrap(this).getDatetimeOptions()
 
-      public override fun filter(): Any? = unwrap(this).getFilter()
+      override fun filter(): Any? = unwrap(this).getFilter()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1157,34 +1084,26 @@ public open class CfnDataset internal constructor(
     public fun parameters(): Any? = unwrap(this).getParameters()
 
     public interface Builder {
-      public fun filesLimit(filesLimit: IResolvable) {
-      }
+      public fun filesLimit(filesLimit: IResolvable)
 
-      public fun filesLimit(filesLimit: FilesLimitProperty) {
-      }
+      public fun filesLimit(filesLimit: FilesLimitProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4786e8c86d4e79328ebc2fc4d2d315293199a3eebf60b0b821010811952d269")
-      public fun filesLimit(filesLimit: FilesLimitProperty.Builder.() -> Unit) {
-      }
+      public fun filesLimit(filesLimit: FilesLimitProperty.Builder.() -> Unit)
 
-      public fun lastModifiedDateCondition(lastModifiedDateCondition: IResolvable) {
-      }
+      public fun lastModifiedDateCondition(lastModifiedDateCondition: IResolvable)
 
-      public fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty) {
-      }
+      public fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("def082e8c0d710e215ee5d01b6afe8a975bcffa87410f4de1ae5b32e1813922b")
       public
-          fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty.Builder.() -> Unit) {
-      }
+          fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty.Builder.() -> Unit)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: List<Any>) {
-      }
+      public fun parameters(parameters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1192,39 +1111,38 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty.builder()
 
-      public override fun filesLimit(filesLimit: IResolvable) {
+      override fun filesLimit(filesLimit: IResolvable) {
         cdkBuilder.filesLimit(filesLimit.let(IResolvable::unwrap))
       }
 
-      public override fun filesLimit(filesLimit: FilesLimitProperty) {
+      override fun filesLimit(filesLimit: FilesLimitProperty) {
         cdkBuilder.filesLimit(filesLimit.let(FilesLimitProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d4786e8c86d4e79328ebc2fc4d2d315293199a3eebf60b0b821010811952d269")
-      public override fun filesLimit(filesLimit: FilesLimitProperty.Builder.() -> Unit): Unit =
+      override fun filesLimit(filesLimit: FilesLimitProperty.Builder.() -> Unit): Unit =
           filesLimit(FilesLimitProperty(filesLimit))
 
-      public override fun lastModifiedDateCondition(lastModifiedDateCondition: IResolvable) {
+      override fun lastModifiedDateCondition(lastModifiedDateCondition: IResolvable) {
         cdkBuilder.lastModifiedDateCondition(lastModifiedDateCondition.let(IResolvable::unwrap))
       }
 
-      public override
-          fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty) {
+      override fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty) {
         cdkBuilder.lastModifiedDateCondition(lastModifiedDateCondition.let(FilterExpressionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("def082e8c0d710e215ee5d01b6afe8a975bcffa87410f4de1ae5b32e1813922b")
-      public override
+      override
           fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty.Builder.() -> Unit):
           Unit = lastModifiedDateCondition(FilterExpressionProperty(lastModifiedDateCondition))
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: List<Any>) {
+      override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
 
@@ -1236,12 +1154,11 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty,
     ) : PathOptionsProperty {
-      public override fun filesLimit(): Any? = unwrap(this).getFilesLimit()
+      override fun filesLimit(): Any? = unwrap(this).getFilesLimit()
 
-      public override fun lastModifiedDateCondition(): Any? =
-          unwrap(this).getLastModifiedDateCondition()
+      override fun lastModifiedDateCondition(): Any? = unwrap(this).getLastModifiedDateCondition()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
     }
 
     public companion object {
@@ -1272,14 +1189,11 @@ public open class CfnDataset internal constructor(
     public fun orderedBy(): String? = unwrap(this).getOrderedBy()
 
     public interface Builder {
-      public fun maxFiles(maxFiles: Number) {
-      }
+      public fun maxFiles(maxFiles: Number)
 
-      public fun order(order: String) {
-      }
+      public fun order(order: String)
 
-      public fun orderedBy(orderedBy: String) {
-      }
+      public fun orderedBy(orderedBy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1287,15 +1201,15 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty.builder()
 
-      public override fun maxFiles(maxFiles: Number) {
+      override fun maxFiles(maxFiles: Number) {
         cdkBuilder.maxFiles(maxFiles)
       }
 
-      public override fun order(order: String) {
+      override fun order(order: String) {
         cdkBuilder.order(order)
       }
 
-      public override fun orderedBy(orderedBy: String) {
+      override fun orderedBy(orderedBy: String) {
         cdkBuilder.orderedBy(orderedBy)
       }
 
@@ -1307,11 +1221,11 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.FilesLimitProperty,
     ) : FilesLimitProperty {
-      public override fun maxFiles(): Number = unwrap(this).getMaxFiles()
+      override fun maxFiles(): Number = unwrap(this).getMaxFiles()
 
-      public override fun order(): String? = unwrap(this).getOrder()
+      override fun order(): String? = unwrap(this).getOrder()
 
-      public override fun orderedBy(): String? = unwrap(this).getOrderedBy()
+      override fun orderedBy(): String? = unwrap(this).getOrderedBy()
     }
 
     public companion object {
@@ -1340,19 +1254,15 @@ public open class CfnDataset internal constructor(
     public fun pathParameterName(): String
 
     public interface Builder {
-      public fun datasetParameter(datasetParameter: IResolvable) {
-      }
+      public fun datasetParameter(datasetParameter: IResolvable)
 
-      public fun datasetParameter(datasetParameter: DatasetParameterProperty) {
-      }
+      public fun datasetParameter(datasetParameter: DatasetParameterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bdfac5b4cc586d6a7701f0d1802143d360bccc8f10a61da5e4922fb28f109a1a")
-      public fun datasetParameter(datasetParameter: DatasetParameterProperty.Builder.() -> Unit) {
-      }
+      public fun datasetParameter(datasetParameter: DatasetParameterProperty.Builder.() -> Unit)
 
-      public fun pathParameterName(pathParameterName: String) {
-      }
+      public fun pathParameterName(pathParameterName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1360,21 +1270,20 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty.builder()
 
-      public override fun datasetParameter(datasetParameter: IResolvable) {
+      override fun datasetParameter(datasetParameter: IResolvable) {
         cdkBuilder.datasetParameter(datasetParameter.let(IResolvable::unwrap))
       }
 
-      public override fun datasetParameter(datasetParameter: DatasetParameterProperty) {
+      override fun datasetParameter(datasetParameter: DatasetParameterProperty) {
         cdkBuilder.datasetParameter(datasetParameter.let(DatasetParameterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bdfac5b4cc586d6a7701f0d1802143d360bccc8f10a61da5e4922fb28f109a1a")
-      public override
-          fun datasetParameter(datasetParameter: DatasetParameterProperty.Builder.() -> Unit): Unit
-          = datasetParameter(DatasetParameterProperty(datasetParameter))
+      override fun datasetParameter(datasetParameter: DatasetParameterProperty.Builder.() -> Unit):
+          Unit = datasetParameter(DatasetParameterProperty(datasetParameter))
 
-      public override fun pathParameterName(pathParameterName: String) {
+      override fun pathParameterName(pathParameterName: String) {
         cdkBuilder.pathParameterName(pathParameterName)
       }
 
@@ -1386,9 +1295,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.PathParameterProperty,
     ) : PathParameterProperty {
-      public override fun datasetParameter(): Any = unwrap(this).getDatasetParameter()
+      override fun datasetParameter(): Any = unwrap(this).getDatasetParameter()
 
-      public override fun pathParameterName(): String = unwrap(this).getPathParameterName()
+      override fun pathParameterName(): String = unwrap(this).getPathParameterName()
     }
 
     public companion object {
@@ -1417,14 +1326,11 @@ public open class CfnDataset internal constructor(
     public fun valuesMap(): Any
 
     public interface Builder {
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun valuesMap(valuesMap: IResolvable) {
-      }
+      public fun valuesMap(valuesMap: IResolvable)
 
-      public fun valuesMap(valuesMap: List<Any>) {
-      }
+      public fun valuesMap(valuesMap: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1432,15 +1338,15 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty.builder()
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun valuesMap(valuesMap: IResolvable) {
+      override fun valuesMap(valuesMap: IResolvable) {
         cdkBuilder.valuesMap(valuesMap.let(IResolvable::unwrap))
       }
 
-      public override fun valuesMap(valuesMap: List<Any>) {
+      override fun valuesMap(valuesMap: List<Any>) {
         cdkBuilder.valuesMap(valuesMap)
       }
 
@@ -1453,9 +1359,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty,
     ) : FilterExpressionProperty {
-      public override fun expression(): String = unwrap(this).getExpression()
+      override fun expression(): String = unwrap(this).getExpression()
 
-      public override fun valuesMap(): Any = unwrap(this).getValuesMap()
+      override fun valuesMap(): Any = unwrap(this).getValuesMap()
     }
 
     public companion object {
@@ -1484,14 +1390,11 @@ public open class CfnDataset internal constructor(
     public fun headerRow(): Any? = unwrap(this).getHeaderRow()
 
     public interface Builder {
-      public fun delimiter(delimiter: String) {
-      }
+      public fun delimiter(delimiter: String)
 
-      public fun headerRow(headerRow: Boolean) {
-      }
+      public fun headerRow(headerRow: Boolean)
 
-      public fun headerRow(headerRow: IResolvable) {
-      }
+      public fun headerRow(headerRow: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1499,15 +1402,15 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty.builder()
 
-      public override fun delimiter(delimiter: String) {
+      override fun delimiter(delimiter: String) {
         cdkBuilder.delimiter(delimiter)
       }
 
-      public override fun headerRow(headerRow: Boolean) {
+      override fun headerRow(headerRow: Boolean) {
         cdkBuilder.headerRow(headerRow)
       }
 
-      public override fun headerRow(headerRow: IResolvable) {
+      override fun headerRow(headerRow: IResolvable) {
         cdkBuilder.headerRow(headerRow.let(IResolvable::unwrap))
       }
 
@@ -1519,9 +1422,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty,
     ) : CsvOptionsProperty {
-      public override fun delimiter(): String? = unwrap(this).getDelimiter()
+      override fun delimiter(): String? = unwrap(this).getDelimiter()
 
-      public override fun headerRow(): Any? = unwrap(this).getHeaderRow()
+      override fun headerRow(): Any? = unwrap(this).getHeaderRow()
     }
 
     public companion object {
@@ -1550,11 +1453,9 @@ public open class CfnDataset internal constructor(
     public fun valueReference(): String
 
     public interface Builder {
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
 
-      public fun valueReference(valueReference: String) {
-      }
+      public fun valueReference(valueReference: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1562,11 +1463,11 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty.builder()
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
-      public override fun valueReference(valueReference: String) {
+      override fun valueReference(valueReference: String) {
         cdkBuilder.valueReference(valueReference)
       }
 
@@ -1578,9 +1479,9 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnDataset.FilterValueProperty,
     ) : FilterValueProperty {
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
 
-      public override fun valueReference(): String = unwrap(this).getValueReference()
+      override fun valueReference(): String = unwrap(this).getValueReference()
     }
 
     public companion object {

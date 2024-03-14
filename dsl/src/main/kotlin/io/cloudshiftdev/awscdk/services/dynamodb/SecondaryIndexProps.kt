@@ -13,29 +13,26 @@ public interface SecondaryIndexProps {
       unwrap(this).getProjectionType()?.let(ProjectionType::wrap)
 
   public interface Builder {
-    public fun indexName(indexName: String) {
-    }
+    public fun indexName(indexName: String)
 
-    public fun nonKeyAttributes(nonKeyAttributes: List<String>) {
-    }
+    public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
-    public fun projectionType(projectionType: ProjectionType) {
-    }
+    public fun projectionType(projectionType: ProjectionType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps.Builder =
         software.amazon.awscdk.services.dynamodb.SecondaryIndexProps.builder()
 
-    public override fun indexName(indexName: String) {
+    override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
     }
 
-    public override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
+    override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
       cdkBuilder.nonKeyAttributes(nonKeyAttributes)
     }
 
-    public override fun projectionType(projectionType: ProjectionType) {
+    override fun projectionType(projectionType: ProjectionType) {
       cdkBuilder.projectionType(projectionType.let(ProjectionType::unwrap))
     }
 
@@ -46,12 +43,12 @@ public interface SecondaryIndexProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps,
   ) : SecondaryIndexProps {
-    public override fun indexName(): String = unwrap(this).getIndexName()
+    override fun indexName(): String = unwrap(this).getIndexName()
 
-    public override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
+    override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
         emptyList()
 
-    public override fun projectionType(): ProjectionType? =
+    override fun projectionType(): ProjectionType? =
         unwrap(this).getProjectionType()?.let(ProjectionType::wrap)
   }
 

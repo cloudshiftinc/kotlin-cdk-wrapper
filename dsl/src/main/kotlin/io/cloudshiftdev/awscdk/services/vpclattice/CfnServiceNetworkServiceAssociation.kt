@@ -85,25 +85,19 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun dnsEntry(dnsEntry: IResolvable) {
-    }
+    public fun dnsEntry(dnsEntry: IResolvable)
 
-    public fun dnsEntry(dnsEntry: DnsEntryProperty) {
-    }
+    public fun dnsEntry(dnsEntry: DnsEntryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ad1387d452de79c879ccab8c9eb6ba9880df0588b344da8a7a79b571dad85f1")
-    public fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit) {
-    }
+    public fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit)
 
-    public fun serviceIdentifier(serviceIdentifier: String) {
-    }
+    public fun serviceIdentifier(serviceIdentifier: String)
 
-    public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
-    }
+    public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -115,28 +109,28 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.Builder.create(scope,
         id)
 
-    public override fun dnsEntry(dnsEntry: IResolvable) {
+    override fun dnsEntry(dnsEntry: IResolvable) {
       cdkBuilder.dnsEntry(dnsEntry.let(IResolvable::unwrap))
     }
 
-    public override fun dnsEntry(dnsEntry: DnsEntryProperty) {
+    override fun dnsEntry(dnsEntry: DnsEntryProperty) {
       cdkBuilder.dnsEntry(dnsEntry.let(DnsEntryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9ad1387d452de79c879ccab8c9eb6ba9880df0588b344da8a7a79b571dad85f1")
-    public override fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit): Unit =
+    override fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit): Unit =
         dnsEntry(DnsEntryProperty(dnsEntry))
 
-    public override fun serviceIdentifier(serviceIdentifier: String) {
+    override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
     }
 
-    public override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
+    override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
       cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -174,11 +168,9 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
     public fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
 
     public interface Builder {
-      public fun domainName(domainName: String) {
-      }
+      public fun domainName(domainName: String)
 
-      public fun hostedZoneId(hostedZoneId: String) {
-      }
+      public fun hostedZoneId(hostedZoneId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -187,11 +179,11 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
           =
           software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.DnsEntryProperty.builder()
 
-      public override fun domainName(domainName: String) {
+      override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)
       }
 
-      public override fun hostedZoneId(hostedZoneId: String) {
+      override fun hostedZoneId(hostedZoneId: String) {
         cdkBuilder.hostedZoneId(hostedZoneId)
       }
 
@@ -204,9 +196,9 @@ public open class CfnServiceNetworkServiceAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation.DnsEntryProperty,
     ) : DnsEntryProperty {
-      public override fun domainName(): String? = unwrap(this).getDomainName()
+      override fun domainName(): String? = unwrap(this).getDomainName()
 
-      public override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
+      override fun hostedZoneId(): String? = unwrap(this).getHostedZoneId()
     }
 
     public companion object {

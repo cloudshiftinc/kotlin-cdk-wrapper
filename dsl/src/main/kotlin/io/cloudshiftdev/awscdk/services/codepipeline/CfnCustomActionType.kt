@@ -110,58 +110,43 @@ public open class CfnCustomActionType internal constructor(
   }
 
   public interface Builder {
-    public fun category(category: String) {
-    }
+    public fun category(category: String)
 
-    public fun configurationProperties(configurationProperties: IResolvable) {
-    }
+    public fun configurationProperties(configurationProperties: IResolvable)
 
-    public fun configurationProperties(configurationProperties: List<Any>) {
-    }
+    public fun configurationProperties(configurationProperties: List<Any>)
 
-    public fun inputArtifactDetails(inputArtifactDetails: IResolvable) {
-    }
+    public fun inputArtifactDetails(inputArtifactDetails: IResolvable)
 
-    public fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty) {
-    }
+    public fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("380c062bcef39dbf9342bf4841e882b91132ec40b94655336d24309de3bb0244")
     public
-        fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty.Builder.() -> Unit) {
-    }
+        fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty.Builder.() -> Unit)
 
-    public fun outputArtifactDetails(outputArtifactDetails: IResolvable) {
-    }
+    public fun outputArtifactDetails(outputArtifactDetails: IResolvable)
 
-    public fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty) {
-    }
+    public fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a90a14ad5054c55a647d31790af6d09a9b2f40e2aae4353f23e4217cbf79a3fe")
     public
-        fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty.Builder.() -> Unit) {
-    }
+        fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty.Builder.() -> Unit)
 
-    public fun provider(provider: String) {
-    }
+    public fun provider(provider: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tings(settings: IResolvable) {
-    }
+    public fun tings(settings: IResolvable)
 
-    public fun tings(settings: SettingsProperty) {
-    }
+    public fun tings(settings: SettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66dba7e677bf870a75b236ff0b004c0bc110a4c4b2e371228cd57f32a20a1f6b")
-    public fun tings(settings: SettingsProperty.Builder.() -> Unit) {
-    }
+    public fun tings(settings: SettingsProperty.Builder.() -> Unit)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -171,68 +156,68 @@ public open class CfnCustomActionType internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.CfnCustomActionType.Builder
         = software.amazon.awscdk.services.codepipeline.CfnCustomActionType.Builder.create(scope, id)
 
-    public override fun category(category: String) {
+    override fun category(category: String) {
       cdkBuilder.category(category)
     }
 
-    public override fun configurationProperties(configurationProperties: IResolvable) {
+    override fun configurationProperties(configurationProperties: IResolvable) {
       cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
     }
 
-    public override fun configurationProperties(configurationProperties: List<Any>) {
+    override fun configurationProperties(configurationProperties: List<Any>) {
       cdkBuilder.configurationProperties(configurationProperties)
     }
 
-    public override fun inputArtifactDetails(inputArtifactDetails: IResolvable) {
+    override fun inputArtifactDetails(inputArtifactDetails: IResolvable) {
       cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(IResolvable::unwrap))
     }
 
-    public override fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty) {
+    override fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty) {
       cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(ArtifactDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("380c062bcef39dbf9342bf4841e882b91132ec40b94655336d24309de3bb0244")
-    public override
+    override
         fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty.Builder.() -> Unit):
         Unit = inputArtifactDetails(ArtifactDetailsProperty(inputArtifactDetails))
 
-    public override fun outputArtifactDetails(outputArtifactDetails: IResolvable) {
+    override fun outputArtifactDetails(outputArtifactDetails: IResolvable) {
       cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(IResolvable::unwrap))
     }
 
-    public override fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty) {
+    override fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty) {
       cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(ArtifactDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a90a14ad5054c55a647d31790af6d09a9b2f40e2aae4353f23e4217cbf79a3fe")
-    public override
+    override
         fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty.Builder.() -> Unit):
         Unit = outputArtifactDetails(ArtifactDetailsProperty(outputArtifactDetails))
 
-    public override fun provider(provider: String) {
+    override fun provider(provider: String) {
       cdkBuilder.provider(provider)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tings(settings: IResolvable) {
+    override fun tings(settings: IResolvable) {
       cdkBuilder.settings(settings.let(IResolvable::unwrap))
     }
 
-    public override fun tings(settings: SettingsProperty) {
+    override fun tings(settings: SettingsProperty) {
       cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66dba7e677bf870a75b236ff0b004c0bc110a4c4b2e371228cd57f32a20a1f6b")
-    public override fun tings(settings: SettingsProperty.Builder.() -> Unit): Unit =
+    override fun tings(settings: SettingsProperty.Builder.() -> Unit): Unit =
         tings(SettingsProperty(settings))
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -267,11 +252,9 @@ public open class CfnCustomActionType internal constructor(
     public fun minimumCount(): Number
 
     public interface Builder {
-      public fun maximumCount(maximumCount: Number) {
-      }
+      public fun maximumCount(maximumCount: Number)
 
-      public fun minimumCount(minimumCount: Number) {
-      }
+      public fun minimumCount(minimumCount: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -280,11 +263,11 @@ public open class CfnCustomActionType internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty.builder()
 
-      public override fun maximumCount(maximumCount: Number) {
+      override fun maximumCount(maximumCount: Number) {
         cdkBuilder.maximumCount(maximumCount)
       }
 
-      public override fun minimumCount(minimumCount: Number) {
+      override fun minimumCount(minimumCount: Number) {
         cdkBuilder.minimumCount(minimumCount)
       }
 
@@ -297,9 +280,9 @@ public open class CfnCustomActionType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ArtifactDetailsProperty,
     ) : ArtifactDetailsProperty {
-      public override fun maximumCount(): Number = unwrap(this).getMaximumCount()
+      override fun maximumCount(): Number = unwrap(this).getMaximumCount()
 
-      public override fun minimumCount(): Number = unwrap(this).getMinimumCount()
+      override fun minimumCount(): Number = unwrap(this).getMinimumCount()
     }
 
     public companion object {
@@ -332,17 +315,13 @@ public open class CfnCustomActionType internal constructor(
     public fun thirdPartyConfigurationUrl(): String? = unwrap(this).getThirdPartyConfigurationUrl()
 
     public interface Builder {
-      public fun entityUrlTemplate(entityUrlTemplate: String) {
-      }
+      public fun entityUrlTemplate(entityUrlTemplate: String)
 
-      public fun executionUrlTemplate(executionUrlTemplate: String) {
-      }
+      public fun executionUrlTemplate(executionUrlTemplate: String)
 
-      public fun revisionUrlTemplate(revisionUrlTemplate: String) {
-      }
+      public fun revisionUrlTemplate(revisionUrlTemplate: String)
 
-      public fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String) {
-      }
+      public fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -351,19 +330,19 @@ public open class CfnCustomActionType internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty.builder()
 
-      public override fun entityUrlTemplate(entityUrlTemplate: String) {
+      override fun entityUrlTemplate(entityUrlTemplate: String) {
         cdkBuilder.entityUrlTemplate(entityUrlTemplate)
       }
 
-      public override fun executionUrlTemplate(executionUrlTemplate: String) {
+      override fun executionUrlTemplate(executionUrlTemplate: String) {
         cdkBuilder.executionUrlTemplate(executionUrlTemplate)
       }
 
-      public override fun revisionUrlTemplate(revisionUrlTemplate: String) {
+      override fun revisionUrlTemplate(revisionUrlTemplate: String) {
         cdkBuilder.revisionUrlTemplate(revisionUrlTemplate)
       }
 
-      public override fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String) {
+      override fun thirdPartyConfigurationUrl(thirdPartyConfigurationUrl: String) {
         cdkBuilder.thirdPartyConfigurationUrl(thirdPartyConfigurationUrl)
       }
 
@@ -376,13 +355,13 @@ public open class CfnCustomActionType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.SettingsProperty,
     ) : SettingsProperty {
-      public override fun entityUrlTemplate(): String? = unwrap(this).getEntityUrlTemplate()
+      override fun entityUrlTemplate(): String? = unwrap(this).getEntityUrlTemplate()
 
-      public override fun executionUrlTemplate(): String? = unwrap(this).getExecutionUrlTemplate()
+      override fun executionUrlTemplate(): String? = unwrap(this).getExecutionUrlTemplate()
 
-      public override fun revisionUrlTemplate(): String? = unwrap(this).getRevisionUrlTemplate()
+      override fun revisionUrlTemplate(): String? = unwrap(this).getRevisionUrlTemplate()
 
-      public override fun thirdPartyConfigurationUrl(): String? =
+      override fun thirdPartyConfigurationUrl(): String? =
           unwrap(this).getThirdPartyConfigurationUrl()
     }
 
@@ -422,38 +401,27 @@ public open class CfnCustomActionType internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun key(key: Boolean) {
-      }
+      public fun key(key: Boolean)
 
-      public fun key(key: IResolvable) {
-      }
+      public fun key(key: IResolvable)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun queryable(queryable: Boolean) {
-      }
+      public fun queryable(queryable: Boolean)
 
-      public fun queryable(queryable: IResolvable) {
-      }
+      public fun queryable(queryable: IResolvable)
 
-      public fun required(required: Boolean) {
-      }
+      public fun required(required: Boolean)
 
-      public fun required(required: IResolvable) {
-      }
+      public fun required(required: IResolvable)
 
-      public fun secret(secret: Boolean) {
-      }
+      public fun secret(secret: Boolean)
 
-      public fun secret(secret: IResolvable) {
-      }
+      public fun secret(secret: IResolvable)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -462,47 +430,47 @@ public open class CfnCustomActionType internal constructor(
           =
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun key(key: Boolean) {
+      override fun key(key: Boolean) {
         cdkBuilder.key(key)
       }
 
-      public override fun key(key: IResolvable) {
+      override fun key(key: IResolvable) {
         cdkBuilder.key(key.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun queryable(queryable: Boolean) {
+      override fun queryable(queryable: Boolean) {
         cdkBuilder.queryable(queryable)
       }
 
-      public override fun queryable(queryable: IResolvable) {
+      override fun queryable(queryable: IResolvable) {
         cdkBuilder.queryable(queryable.let(IResolvable::unwrap))
       }
 
-      public override fun required(required: Boolean) {
+      override fun required(required: Boolean) {
         cdkBuilder.required(required)
       }
 
-      public override fun required(required: IResolvable) {
+      override fun required(required: IResolvable) {
         cdkBuilder.required(required.let(IResolvable::unwrap))
       }
 
-      public override fun secret(secret: Boolean) {
+      override fun secret(secret: Boolean) {
         cdkBuilder.secret(secret)
       }
 
-      public override fun secret(secret: IResolvable) {
+      override fun secret(secret: IResolvable) {
         cdkBuilder.secret(secret.let(IResolvable::unwrap))
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -515,19 +483,19 @@ public open class CfnCustomActionType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codepipeline.CfnCustomActionType.ConfigurationPropertiesProperty,
     ) : ConfigurationPropertiesProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun key(): Any = unwrap(this).getKey()
+      override fun key(): Any = unwrap(this).getKey()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun queryable(): Any? = unwrap(this).getQueryable()
+      override fun queryable(): Any? = unwrap(this).getQueryable()
 
-      public override fun required(): Any = unwrap(this).getRequired()
+      override fun required(): Any = unwrap(this).getRequired()
 
-      public override fun secret(): Any = unwrap(this).getSecret()
+      override fun secret(): Any = unwrap(this).getSecret()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

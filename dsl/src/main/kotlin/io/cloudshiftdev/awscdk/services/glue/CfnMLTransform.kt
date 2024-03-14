@@ -134,70 +134,51 @@ public open class CfnMLTransform internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun glueVersion(glueVersion: String) {
-    }
+    public fun glueVersion(glueVersion: String)
 
-    public fun inputRecordTables(inputRecordTables: IResolvable) {
-    }
+    public fun inputRecordTables(inputRecordTables: IResolvable)
 
-    public fun inputRecordTables(inputRecordTables: InputRecordTablesProperty) {
-    }
+    public fun inputRecordTables(inputRecordTables: InputRecordTablesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fca839ef9d1b62497d77256d22b07512a4a920922f8aa6f37e15f312aaa82c75")
-    public fun inputRecordTables(inputRecordTables: InputRecordTablesProperty.Builder.() -> Unit) {
-    }
+    public fun inputRecordTables(inputRecordTables: InputRecordTablesProperty.Builder.() -> Unit)
 
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun maxRetries(maxRetries: Number) {
-    }
+    public fun maxRetries(maxRetries: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun numberOfWorkers(numberOfWorkers: Number) {
-    }
+    public fun numberOfWorkers(numberOfWorkers: Number)
 
-    public fun role(role: String) {
-    }
+    public fun role(role: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun timeout(timeout: Number) {
-    }
+    public fun timeout(timeout: Number)
 
-    public fun transformEncryption(transformEncryption: IResolvable) {
-    }
+    public fun transformEncryption(transformEncryption: IResolvable)
 
-    public fun transformEncryption(transformEncryption: TransformEncryptionProperty) {
-    }
+    public fun transformEncryption(transformEncryption: TransformEncryptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b4c4be7710e625f57455d8cede56a9d6bb04bd35ce28cec13ebb09d79d53e11")
     public
-        fun transformEncryption(transformEncryption: TransformEncryptionProperty.Builder.() -> Unit) {
-    }
+        fun transformEncryption(transformEncryption: TransformEncryptionProperty.Builder.() -> Unit)
 
-    public fun transformParameters(transformParameters: IResolvable) {
-    }
+    public fun transformParameters(transformParameters: IResolvable)
 
-    public fun transformParameters(transformParameters: TransformParametersProperty) {
-    }
+    public fun transformParameters(transformParameters: TransformParametersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fed60572c4823d8272124aedabc053c220a64599b0630ba5a3c181911cfd7ec9")
     public
-        fun transformParameters(transformParameters: TransformParametersProperty.Builder.() -> Unit) {
-    }
+        fun transformParameters(transformParameters: TransformParametersProperty.Builder.() -> Unit)
 
-    public fun workerType(workerType: String) {
-    }
+    public fun workerType(workerType: String)
   }
 
   private class BuilderImpl(
@@ -207,85 +188,84 @@ public open class CfnMLTransform internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnMLTransform.Builder =
         software.amazon.awscdk.services.glue.CfnMLTransform.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun glueVersion(glueVersion: String) {
+    override fun glueVersion(glueVersion: String) {
       cdkBuilder.glueVersion(glueVersion)
     }
 
-    public override fun inputRecordTables(inputRecordTables: IResolvable) {
+    override fun inputRecordTables(inputRecordTables: IResolvable) {
       cdkBuilder.inputRecordTables(inputRecordTables.let(IResolvable::unwrap))
     }
 
-    public override fun inputRecordTables(inputRecordTables: InputRecordTablesProperty) {
+    override fun inputRecordTables(inputRecordTables: InputRecordTablesProperty) {
       cdkBuilder.inputRecordTables(inputRecordTables.let(InputRecordTablesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fca839ef9d1b62497d77256d22b07512a4a920922f8aa6f37e15f312aaa82c75")
-    public override
-        fun inputRecordTables(inputRecordTables: InputRecordTablesProperty.Builder.() -> Unit): Unit
-        = inputRecordTables(InputRecordTablesProperty(inputRecordTables))
+    override fun inputRecordTables(inputRecordTables: InputRecordTablesProperty.Builder.() -> Unit):
+        Unit = inputRecordTables(InputRecordTablesProperty(inputRecordTables))
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun maxRetries(maxRetries: Number) {
+    override fun maxRetries(maxRetries: Number) {
       cdkBuilder.maxRetries(maxRetries)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun numberOfWorkers(numberOfWorkers: Number) {
+    override fun numberOfWorkers(numberOfWorkers: Number) {
       cdkBuilder.numberOfWorkers(numberOfWorkers)
     }
 
-    public override fun role(role: String) {
+    override fun role(role: String) {
       cdkBuilder.role(role)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun timeout(timeout: Number) {
+    override fun timeout(timeout: Number) {
       cdkBuilder.timeout(timeout)
     }
 
-    public override fun transformEncryption(transformEncryption: IResolvable) {
+    override fun transformEncryption(transformEncryption: IResolvable) {
       cdkBuilder.transformEncryption(transformEncryption.let(IResolvable::unwrap))
     }
 
-    public override fun transformEncryption(transformEncryption: TransformEncryptionProperty) {
+    override fun transformEncryption(transformEncryption: TransformEncryptionProperty) {
       cdkBuilder.transformEncryption(transformEncryption.let(TransformEncryptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b4c4be7710e625f57455d8cede56a9d6bb04bd35ce28cec13ebb09d79d53e11")
-    public override
+    override
         fun transformEncryption(transformEncryption: TransformEncryptionProperty.Builder.() -> Unit):
         Unit = transformEncryption(TransformEncryptionProperty(transformEncryption))
 
-    public override fun transformParameters(transformParameters: IResolvable) {
+    override fun transformParameters(transformParameters: IResolvable) {
       cdkBuilder.transformParameters(transformParameters.let(IResolvable::unwrap))
     }
 
-    public override fun transformParameters(transformParameters: TransformParametersProperty) {
+    override fun transformParameters(transformParameters: TransformParametersProperty) {
       cdkBuilder.transformParameters(transformParameters.let(TransformParametersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fed60572c4823d8272124aedabc053c220a64599b0630ba5a3c181911cfd7ec9")
-    public override
+    override
         fun transformParameters(transformParameters: TransformParametersProperty.Builder.() -> Unit):
         Unit = transformParameters(TransformParametersProperty(transformParameters))
 
-    public override fun workerType(workerType: String) {
+    override fun workerType(workerType: String) {
       cdkBuilder.workerType(workerType)
     }
 
@@ -323,17 +303,13 @@ public open class CfnMLTransform internal constructor(
     public fun tableName(): String
 
     public interface Builder {
-      public fun catalogId(catalogId: String) {
-      }
+      public fun catalogId(catalogId: String)
 
-      public fun connectionName(connectionName: String) {
-      }
+      public fun connectionName(connectionName: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -341,19 +317,19 @@ public open class CfnMLTransform internal constructor(
           software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty.Builder =
           software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty.builder()
 
-      public override fun catalogId(catalogId: String) {
+      override fun catalogId(catalogId: String) {
         cdkBuilder.catalogId(catalogId)
       }
 
-      public override fun connectionName(connectionName: String) {
+      override fun connectionName(connectionName: String) {
         cdkBuilder.connectionName(connectionName)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -365,13 +341,13 @@ public open class CfnMLTransform internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnMLTransform.GlueTablesProperty,
     ) : GlueTablesProperty {
-      public override fun catalogId(): String? = unwrap(this).getCatalogId()
+      override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      public override fun connectionName(): String? = unwrap(this).getConnectionName()
+      override fun connectionName(): String? = unwrap(this).getConnectionName()
 
-      public override fun databaseName(): String = unwrap(this).getDatabaseName()
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
 
-      public override fun tableName(): String = unwrap(this).getTableName()
+      override fun tableName(): String = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -401,20 +377,16 @@ public open class CfnMLTransform internal constructor(
         unwrap(this).getTaskRunSecurityConfigurationName()
 
     public interface Builder {
-      public fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
-      }
+      public fun mlUserDataEncryption(mlUserDataEncryption: IResolvable)
 
-      public fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty) {
-      }
+      public fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6581c0127c03889021bdaa631f1ef422965b6cae92da1772aa113a216c632231")
       public
-          fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit) {
-      }
+          fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit)
 
-      public fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String) {
-      }
+      public fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -422,22 +394,21 @@ public open class CfnMLTransform internal constructor(
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty.Builder =
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty.builder()
 
-      public override fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
+      override fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
         cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(IResolvable::unwrap))
       }
 
-      public override fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty) {
+      override fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty) {
         cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(MLUserDataEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6581c0127c03889021bdaa631f1ef422965b6cae92da1772aa113a216c632231")
-      public override
+      override
           fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty.Builder.() -> Unit):
           Unit = mlUserDataEncryption(MLUserDataEncryptionProperty(mlUserDataEncryption))
 
-      public override
-          fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String) {
+      override fun taskRunSecurityConfigurationName(taskRunSecurityConfigurationName: String) {
         cdkBuilder.taskRunSecurityConfigurationName(taskRunSecurityConfigurationName)
       }
 
@@ -450,9 +421,9 @@ public open class CfnMLTransform internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformEncryptionProperty,
     ) : TransformEncryptionProperty {
-      public override fun mlUserDataEncryption(): Any? = unwrap(this).getMlUserDataEncryption()
+      override fun mlUserDataEncryption(): Any? = unwrap(this).getMlUserDataEncryption()
 
-      public override fun taskRunSecurityConfigurationName(): String? =
+      override fun taskRunSecurityConfigurationName(): String? =
           unwrap(this).getTaskRunSecurityConfigurationName()
     }
 
@@ -486,20 +457,15 @@ public open class CfnMLTransform internal constructor(
     public fun primaryKeyColumnName(): String
 
     public interface Builder {
-      public fun accuracyCostTradeoff(accuracyCostTradeoff: Number) {
-      }
+      public fun accuracyCostTradeoff(accuracyCostTradeoff: Number)
 
-      public fun enforceProvidedLabels(enforceProvidedLabels: Boolean) {
-      }
+      public fun enforceProvidedLabels(enforceProvidedLabels: Boolean)
 
-      public fun enforceProvidedLabels(enforceProvidedLabels: IResolvable) {
-      }
+      public fun enforceProvidedLabels(enforceProvidedLabels: IResolvable)
 
-      public fun precisionRecallTradeoff(precisionRecallTradeoff: Number) {
-      }
+      public fun precisionRecallTradeoff(precisionRecallTradeoff: Number)
 
-      public fun primaryKeyColumnName(primaryKeyColumnName: String) {
-      }
+      public fun primaryKeyColumnName(primaryKeyColumnName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -508,23 +474,23 @@ public open class CfnMLTransform internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnMLTransform.FindMatchesParametersProperty.builder()
 
-      public override fun accuracyCostTradeoff(accuracyCostTradeoff: Number) {
+      override fun accuracyCostTradeoff(accuracyCostTradeoff: Number) {
         cdkBuilder.accuracyCostTradeoff(accuracyCostTradeoff)
       }
 
-      public override fun enforceProvidedLabels(enforceProvidedLabels: Boolean) {
+      override fun enforceProvidedLabels(enforceProvidedLabels: Boolean) {
         cdkBuilder.enforceProvidedLabels(enforceProvidedLabels)
       }
 
-      public override fun enforceProvidedLabels(enforceProvidedLabels: IResolvable) {
+      override fun enforceProvidedLabels(enforceProvidedLabels: IResolvable) {
         cdkBuilder.enforceProvidedLabels(enforceProvidedLabels.let(IResolvable::unwrap))
       }
 
-      public override fun precisionRecallTradeoff(precisionRecallTradeoff: Number) {
+      override fun precisionRecallTradeoff(precisionRecallTradeoff: Number) {
         cdkBuilder.precisionRecallTradeoff(precisionRecallTradeoff)
       }
 
-      public override fun primaryKeyColumnName(primaryKeyColumnName: String) {
+      override fun primaryKeyColumnName(primaryKeyColumnName: String) {
         cdkBuilder.primaryKeyColumnName(primaryKeyColumnName)
       }
 
@@ -537,14 +503,13 @@ public open class CfnMLTransform internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnMLTransform.FindMatchesParametersProperty,
     ) : FindMatchesParametersProperty {
-      public override fun accuracyCostTradeoff(): Number? = unwrap(this).getAccuracyCostTradeoff()
+      override fun accuracyCostTradeoff(): Number? = unwrap(this).getAccuracyCostTradeoff()
 
-      public override fun enforceProvidedLabels(): Any? = unwrap(this).getEnforceProvidedLabels()
+      override fun enforceProvidedLabels(): Any? = unwrap(this).getEnforceProvidedLabels()
 
-      public override fun precisionRecallTradeoff(): Number? =
-          unwrap(this).getPrecisionRecallTradeoff()
+      override fun precisionRecallTradeoff(): Number? = unwrap(this).getPrecisionRecallTradeoff()
 
-      public override fun primaryKeyColumnName(): String = unwrap(this).getPrimaryKeyColumnName()
+      override fun primaryKeyColumnName(): String = unwrap(this).getPrimaryKeyColumnName()
     }
 
     public companion object {
@@ -573,20 +538,16 @@ public open class CfnMLTransform internal constructor(
     public fun transformType(): String
 
     public interface Builder {
-      public fun findMatchesParameters(findMatchesParameters: IResolvable) {
-      }
+      public fun findMatchesParameters(findMatchesParameters: IResolvable)
 
-      public fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty) {
-      }
+      public fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("055271c8dbf190a4491fabcaa7f3f2e1c134b79e0e44bc9a47180b08b617f409")
       public
-          fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty.Builder.() -> Unit) {
-      }
+          fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty.Builder.() -> Unit)
 
-      public fun transformType(transformType: String) {
-      }
+      public fun transformType(transformType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -594,22 +555,21 @@ public open class CfnMLTransform internal constructor(
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty.Builder =
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty.builder()
 
-      public override fun findMatchesParameters(findMatchesParameters: IResolvable) {
+      override fun findMatchesParameters(findMatchesParameters: IResolvable) {
         cdkBuilder.findMatchesParameters(findMatchesParameters.let(IResolvable::unwrap))
       }
 
-      public override
-          fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty) {
+      override fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty) {
         cdkBuilder.findMatchesParameters(findMatchesParameters.let(FindMatchesParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("055271c8dbf190a4491fabcaa7f3f2e1c134b79e0e44bc9a47180b08b617f409")
-      public override
+      override
           fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty.Builder.() -> Unit):
           Unit = findMatchesParameters(FindMatchesParametersProperty(findMatchesParameters))
 
-      public override fun transformType(transformType: String) {
+      override fun transformType(transformType: String) {
         cdkBuilder.transformType(transformType)
       }
 
@@ -622,9 +582,9 @@ public open class CfnMLTransform internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnMLTransform.TransformParametersProperty,
     ) : TransformParametersProperty {
-      public override fun findMatchesParameters(): Any? = unwrap(this).getFindMatchesParameters()
+      override fun findMatchesParameters(): Any? = unwrap(this).getFindMatchesParameters()
 
-      public override fun transformType(): String = unwrap(this).getTransformType()
+      override fun transformType(): String = unwrap(this).getTransformType()
     }
 
     public companion object {
@@ -653,11 +613,9 @@ public open class CfnMLTransform internal constructor(
     public fun mlUserDataEncryptionMode(): String
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String) {
-      }
+      public fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -665,11 +623,11 @@ public open class CfnMLTransform internal constructor(
           software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty.Builder =
           software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String) {
+      override fun mlUserDataEncryptionMode(mlUserDataEncryptionMode: String) {
         cdkBuilder.mlUserDataEncryptionMode(mlUserDataEncryptionMode)
       }
 
@@ -682,10 +640,9 @@ public open class CfnMLTransform internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnMLTransform.MLUserDataEncryptionProperty,
     ) : MLUserDataEncryptionProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun mlUserDataEncryptionMode(): String =
-          unwrap(this).getMlUserDataEncryptionMode()
+      override fun mlUserDataEncryptionMode(): String = unwrap(this).getMlUserDataEncryptionMode()
     }
 
     public companion object {
@@ -712,11 +669,9 @@ public open class CfnMLTransform internal constructor(
     public fun glueTables(): Any? = unwrap(this).getGlueTables()
 
     public interface Builder {
-      public fun glueTables(glueTables: IResolvable) {
-      }
+      public fun glueTables(glueTables: IResolvable)
 
-      public fun glueTables(glueTables: List<Any>) {
-      }
+      public fun glueTables(glueTables: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -724,11 +679,11 @@ public open class CfnMLTransform internal constructor(
           software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty.Builder =
           software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty.builder()
 
-      public override fun glueTables(glueTables: IResolvable) {
+      override fun glueTables(glueTables: IResolvable) {
         cdkBuilder.glueTables(glueTables.let(IResolvable::unwrap))
       }
 
-      public override fun glueTables(glueTables: List<Any>) {
+      override fun glueTables(glueTables: List<Any>) {
         cdkBuilder.glueTables(glueTables)
       }
 
@@ -741,7 +696,7 @@ public open class CfnMLTransform internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty,
     ) : InputRecordTablesProperty {
-      public override fun glueTables(): Any? = unwrap(this).getGlueTables()
+      override fun glueTables(): Any? = unwrap(this).getGlueTables()
     }
 
     public companion object {

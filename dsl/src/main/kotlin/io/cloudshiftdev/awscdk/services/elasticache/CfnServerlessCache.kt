@@ -169,77 +169,55 @@ public open class CfnServerlessCache internal constructor(
   }
 
   public interface Builder {
-    public fun cacheUsageLimits(cacheUsageLimits: IResolvable) {
-    }
+    public fun cacheUsageLimits(cacheUsageLimits: IResolvable)
 
-    public fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty) {
-    }
+    public fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("775c3a878237c535ebce61e5a18e85026371df6dacc4535b533a50e54c677b1f")
-    public fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty.Builder.() -> Unit) {
-    }
+    public fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty.Builder.() -> Unit)
 
-    public fun dailySnapshotTime(dailySnapshotTime: String) {
-    }
+    public fun dailySnapshotTime(dailySnapshotTime: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun endpoint(endpoint: IResolvable) {
-    }
+    public fun endpoint(endpoint: IResolvable)
 
-    public fun endpoint(endpoint: EndpointProperty) {
-    }
+    public fun endpoint(endpoint: EndpointProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef79e1aae0d852b865593d76f55442b01b155c7a978d4fb92ce9f36fd3cc7e2e")
-    public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit) {
-    }
+    public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun finalSnapshotName(finalSnapshotName: String) {
-    }
+    public fun finalSnapshotName(finalSnapshotName: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun majorEngineVersion(majorEngineVersion: String) {
-    }
+    public fun majorEngineVersion(majorEngineVersion: String)
 
-    public fun readerEndpoint(readerEndpoint: IResolvable) {
-    }
+    public fun readerEndpoint(readerEndpoint: IResolvable)
 
-    public fun readerEndpoint(readerEndpoint: EndpointProperty) {
-    }
+    public fun readerEndpoint(readerEndpoint: EndpointProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfcb09b74c5e854ce3f83494238282a55e3fba47b0f3083c274ab4f6a55eab55")
-    public fun readerEndpoint(readerEndpoint: EndpointProperty.Builder.() -> Unit) {
-    }
+    public fun readerEndpoint(readerEndpoint: EndpointProperty.Builder.() -> Unit)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun serverlessCacheName(serverlessCacheName: String) {
-    }
+    public fun serverlessCacheName(serverlessCacheName: String)
 
-    public fun snapshotArnsToRestore(snapshotArnsToRestore: List<String>) {
-    }
+    public fun snapshotArnsToRestore(snapshotArnsToRestore: List<String>)
 
-    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
-    }
+    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userGroupId(userGroupId: String) {
-    }
+    public fun userGroupId(userGroupId: String)
   }
 
   private class BuilderImpl(
@@ -249,95 +227,94 @@ public open class CfnServerlessCache internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnServerlessCache.Builder =
         software.amazon.awscdk.services.elasticache.CfnServerlessCache.Builder.create(scope, id)
 
-    public override fun cacheUsageLimits(cacheUsageLimits: IResolvable) {
+    override fun cacheUsageLimits(cacheUsageLimits: IResolvable) {
       cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(IResolvable::unwrap))
     }
 
-    public override fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty) {
+    override fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty) {
       cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(CacheUsageLimitsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("775c3a878237c535ebce61e5a18e85026371df6dacc4535b533a50e54c677b1f")
-    public override
-        fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty.Builder.() -> Unit): Unit =
-        cacheUsageLimits(CacheUsageLimitsProperty(cacheUsageLimits))
+    override fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty.Builder.() -> Unit):
+        Unit = cacheUsageLimits(CacheUsageLimitsProperty(cacheUsageLimits))
 
-    public override fun dailySnapshotTime(dailySnapshotTime: String) {
+    override fun dailySnapshotTime(dailySnapshotTime: String) {
       cdkBuilder.dailySnapshotTime(dailySnapshotTime)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun endpoint(endpoint: IResolvable) {
+    override fun endpoint(endpoint: IResolvable) {
       cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
     }
 
-    public override fun endpoint(endpoint: EndpointProperty) {
+    override fun endpoint(endpoint: EndpointProperty) {
       cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef79e1aae0d852b865593d76f55442b01b155c7a978d4fb92ce9f36fd3cc7e2e")
-    public override fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit): Unit =
+    override fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit): Unit =
         endpoint(EndpointProperty(endpoint))
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun finalSnapshotName(finalSnapshotName: String) {
+    override fun finalSnapshotName(finalSnapshotName: String) {
       cdkBuilder.finalSnapshotName(finalSnapshotName)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun majorEngineVersion(majorEngineVersion: String) {
+    override fun majorEngineVersion(majorEngineVersion: String) {
       cdkBuilder.majorEngineVersion(majorEngineVersion)
     }
 
-    public override fun readerEndpoint(readerEndpoint: IResolvable) {
+    override fun readerEndpoint(readerEndpoint: IResolvable) {
       cdkBuilder.readerEndpoint(readerEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun readerEndpoint(readerEndpoint: EndpointProperty) {
+    override fun readerEndpoint(readerEndpoint: EndpointProperty) {
       cdkBuilder.readerEndpoint(readerEndpoint.let(EndpointProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfcb09b74c5e854ce3f83494238282a55e3fba47b0f3083c274ab4f6a55eab55")
-    public override fun readerEndpoint(readerEndpoint: EndpointProperty.Builder.() -> Unit): Unit =
+    override fun readerEndpoint(readerEndpoint: EndpointProperty.Builder.() -> Unit): Unit =
         readerEndpoint(EndpointProperty(readerEndpoint))
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun serverlessCacheName(serverlessCacheName: String) {
+    override fun serverlessCacheName(serverlessCacheName: String) {
       cdkBuilder.serverlessCacheName(serverlessCacheName)
     }
 
-    public override fun snapshotArnsToRestore(snapshotArnsToRestore: List<String>) {
+    override fun snapshotArnsToRestore(snapshotArnsToRestore: List<String>) {
       cdkBuilder.snapshotArnsToRestore(snapshotArnsToRestore)
     }
 
-    public override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
+    override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
       cdkBuilder.snapshotRetentionLimit(snapshotRetentionLimit)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userGroupId(userGroupId: String) {
+    override fun userGroupId(userGroupId: String) {
       cdkBuilder.userGroupId(userGroupId)
     }
 
@@ -372,27 +349,21 @@ public open class CfnServerlessCache internal constructor(
     public fun ecpuPerSecond(): Any? = unwrap(this).getEcpuPerSecond()
 
     public interface Builder {
-      public fun dataStorage(dataStorage: IResolvable) {
-      }
+      public fun dataStorage(dataStorage: IResolvable)
 
-      public fun dataStorage(dataStorage: DataStorageProperty) {
-      }
+      public fun dataStorage(dataStorage: DataStorageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("327f9e8473d6550806eafa0fdfb3de96de78ca29bc969cd31e7761e0f9cab0b2")
-      public fun dataStorage(dataStorage: DataStorageProperty.Builder.() -> Unit) {
-      }
+      public fun dataStorage(dataStorage: DataStorageProperty.Builder.() -> Unit)
 
-      public fun ecpuPerSecond(ecpuPerSecond: IResolvable) {
-      }
+      public fun ecpuPerSecond(ecpuPerSecond: IResolvable)
 
-      public fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty) {
-      }
+      public fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d61e195d9aa7328e1967852fc8f4f6db0345faaf467cc8f527c6bd215607685d")
-      public fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty.Builder.() -> Unit) {
-      }
+      public fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -401,31 +372,31 @@ public open class CfnServerlessCache internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty.builder()
 
-      public override fun dataStorage(dataStorage: IResolvable) {
+      override fun dataStorage(dataStorage: IResolvable) {
         cdkBuilder.dataStorage(dataStorage.let(IResolvable::unwrap))
       }
 
-      public override fun dataStorage(dataStorage: DataStorageProperty) {
+      override fun dataStorage(dataStorage: DataStorageProperty) {
         cdkBuilder.dataStorage(dataStorage.let(DataStorageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("327f9e8473d6550806eafa0fdfb3de96de78ca29bc969cd31e7761e0f9cab0b2")
-      public override fun dataStorage(dataStorage: DataStorageProperty.Builder.() -> Unit): Unit =
+      override fun dataStorage(dataStorage: DataStorageProperty.Builder.() -> Unit): Unit =
           dataStorage(DataStorageProperty(dataStorage))
 
-      public override fun ecpuPerSecond(ecpuPerSecond: IResolvable) {
+      override fun ecpuPerSecond(ecpuPerSecond: IResolvable) {
         cdkBuilder.ecpuPerSecond(ecpuPerSecond.let(IResolvable::unwrap))
       }
 
-      public override fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty) {
+      override fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty) {
         cdkBuilder.ecpuPerSecond(ecpuPerSecond.let(ECPUPerSecondProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d61e195d9aa7328e1967852fc8f4f6db0345faaf467cc8f527c6bd215607685d")
-      public override fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty.Builder.() -> Unit):
-          Unit = ecpuPerSecond(ECPUPerSecondProperty(ecpuPerSecond))
+      override fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty.Builder.() -> Unit): Unit =
+          ecpuPerSecond(ECPUPerSecondProperty(ecpuPerSecond))
 
       public fun build():
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty =
@@ -436,9 +407,9 @@ public open class CfnServerlessCache internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty,
     ) : CacheUsageLimitsProperty {
-      public override fun dataStorage(): Any? = unwrap(this).getDataStorage()
+      override fun dataStorage(): Any? = unwrap(this).getDataStorage()
 
-      public override fun ecpuPerSecond(): Any? = unwrap(this).getEcpuPerSecond()
+      override fun ecpuPerSecond(): Any? = unwrap(this).getEcpuPerSecond()
     }
 
     public companion object {
@@ -465,8 +436,7 @@ public open class CfnServerlessCache internal constructor(
     public fun maximum(): Number
 
     public interface Builder {
-      public fun maximum(maximum: Number) {
-      }
+      public fun maximum(maximum: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -475,7 +445,7 @@ public open class CfnServerlessCache internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty.builder()
 
-      public override fun maximum(maximum: Number) {
+      override fun maximum(maximum: Number) {
         cdkBuilder.maximum(maximum)
       }
 
@@ -488,7 +458,7 @@ public open class CfnServerlessCache internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty,
     ) : ECPUPerSecondProperty {
-      public override fun maximum(): Number = unwrap(this).getMaximum()
+      override fun maximum(): Number = unwrap(this).getMaximum()
     }
 
     public companion object {
@@ -517,11 +487,9 @@ public open class CfnServerlessCache internal constructor(
     public fun port(): String? = unwrap(this).getPort()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun port(port: String) {
-      }
+      public fun port(port: String)
     }
 
     private class BuilderImpl : Builder {
@@ -529,11 +497,11 @@ public open class CfnServerlessCache internal constructor(
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty.Builder =
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun port(port: String) {
+      override fun port(port: String) {
         cdkBuilder.port(port)
       }
 
@@ -546,9 +514,9 @@ public open class CfnServerlessCache internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty,
     ) : EndpointProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun port(): String? = unwrap(this).getPort()
+      override fun port(): String? = unwrap(this).getPort()
     }
 
     public companion object {
@@ -577,11 +545,9 @@ public open class CfnServerlessCache internal constructor(
     public fun unit(): String
 
     public interface Builder {
-      public fun maximum(maximum: Number) {
-      }
+      public fun maximum(maximum: Number)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -590,11 +556,11 @@ public open class CfnServerlessCache internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty.builder()
 
-      public override fun maximum(maximum: Number) {
+      override fun maximum(maximum: Number) {
         cdkBuilder.maximum(maximum)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -607,9 +573,9 @@ public open class CfnServerlessCache internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty,
     ) : DataStorageProperty {
-      public override fun maximum(): Number = unwrap(this).getMaximum()
+      override fun maximum(): Number = unwrap(this).getMaximum()
 
-      public override fun unit(): String = unwrap(this).getUnit()
+      override fun unit(): String = unwrap(this).getUnit()
     }
 
     public companion object {

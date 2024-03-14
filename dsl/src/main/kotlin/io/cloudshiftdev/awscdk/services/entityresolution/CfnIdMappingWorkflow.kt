@@ -93,41 +93,30 @@ public open class CfnIdMappingWorkflow internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun idMappingTechniques(idMappingTechniques: IResolvable) {
-    }
+    public fun idMappingTechniques(idMappingTechniques: IResolvable)
 
-    public fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty) {
-    }
+    public fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adf133ccc4d3eb2dd97e1dc0865da29cc2840795e113f053f00da756e475a701")
     public
-        fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty.Builder.() -> Unit) {
-    }
+        fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty.Builder.() -> Unit)
 
-    public fun inputSourceConfig(inputSourceConfig: IResolvable) {
-    }
+    public fun inputSourceConfig(inputSourceConfig: IResolvable)
 
-    public fun inputSourceConfig(inputSourceConfig: List<Any>) {
-    }
+    public fun inputSourceConfig(inputSourceConfig: List<Any>)
 
-    public fun outputSourceConfig(outputSourceConfig: IResolvable) {
-    }
+    public fun outputSourceConfig(outputSourceConfig: IResolvable)
 
-    public fun outputSourceConfig(outputSourceConfig: List<Any>) {
-    }
+    public fun outputSourceConfig(outputSourceConfig: List<Any>)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workflowName(workflowName: String) {
-    }
+    public fun workflowName(workflowName: String)
   }
 
   private class BuilderImpl(
@@ -139,49 +128,49 @@ public open class CfnIdMappingWorkflow internal constructor(
         software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.Builder.create(scope,
         id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun idMappingTechniques(idMappingTechniques: IResolvable) {
+    override fun idMappingTechniques(idMappingTechniques: IResolvable) {
       cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable::unwrap))
     }
 
-    public override fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty) {
+    override fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty) {
       cdkBuilder.idMappingTechniques(idMappingTechniques.let(IdMappingTechniquesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adf133ccc4d3eb2dd97e1dc0865da29cc2840795e113f053f00da756e475a701")
-    public override
+    override
         fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty.Builder.() -> Unit):
         Unit = idMappingTechniques(IdMappingTechniquesProperty(idMappingTechniques))
 
-    public override fun inputSourceConfig(inputSourceConfig: IResolvable) {
+    override fun inputSourceConfig(inputSourceConfig: IResolvable) {
       cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override fun inputSourceConfig(inputSourceConfig: List<Any>) {
+    override fun inputSourceConfig(inputSourceConfig: List<Any>) {
       cdkBuilder.inputSourceConfig(inputSourceConfig)
     }
 
-    public override fun outputSourceConfig(outputSourceConfig: IResolvable) {
+    override fun outputSourceConfig(outputSourceConfig: IResolvable) {
       cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
     }
 
-    public override fun outputSourceConfig(outputSourceConfig: List<Any>) {
+    override fun outputSourceConfig(outputSourceConfig: List<Any>) {
       cdkBuilder.outputSourceConfig(outputSourceConfig)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workflowName(workflowName: String) {
+    override fun workflowName(workflowName: String) {
       cdkBuilder.workflowName(workflowName)
     }
 
@@ -217,11 +206,9 @@ public open class CfnIdMappingWorkflow internal constructor(
     public fun outputS3Path(): String
 
     public interface Builder {
-      public fun kmsArn(kmsArn: String) {
-      }
+      public fun kmsArn(kmsArn: String)
 
-      public fun outputS3Path(outputS3Path: String) {
-      }
+      public fun outputS3Path(outputS3Path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -230,11 +217,11 @@ public open class CfnIdMappingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty.builder()
 
-      public override fun kmsArn(kmsArn: String) {
+      override fun kmsArn(kmsArn: String) {
         cdkBuilder.kmsArn(kmsArn)
       }
 
-      public override fun outputS3Path(outputS3Path: String) {
+      override fun outputS3Path(outputS3Path: String) {
         cdkBuilder.outputS3Path(outputS3Path)
       }
 
@@ -247,9 +234,9 @@ public open class CfnIdMappingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowOutputSourceProperty,
     ) : IdMappingWorkflowOutputSourceProperty {
-      public override fun kmsArn(): String? = unwrap(this).getKmsArn()
+      override fun kmsArn(): String? = unwrap(this).getKmsArn()
 
-      public override fun outputS3Path(): String = unwrap(this).getOutputS3Path()
+      override fun outputS3Path(): String = unwrap(this).getOutputS3Path()
     }
 
     public companion object {
@@ -279,20 +266,16 @@ public open class CfnIdMappingWorkflow internal constructor(
     public fun providerProperties(): Any? = unwrap(this).getProviderProperties()
 
     public interface Builder {
-      public fun idMappingType(idMappingType: String) {
-      }
+      public fun idMappingType(idMappingType: String)
 
-      public fun providerProperties(providerProperties: IResolvable) {
-      }
+      public fun providerProperties(providerProperties: IResolvable)
 
-      public fun providerProperties(providerProperties: ProviderPropertiesProperty) {
-      }
+      public fun providerProperties(providerProperties: ProviderPropertiesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("99e7e4a7a6322b76ecdd8c18747c700ce11a2af0f1fbf4624e4560278e5486a8")
       public
-          fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit) {
-      }
+          fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -301,21 +284,21 @@ public open class CfnIdMappingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty.builder()
 
-      public override fun idMappingType(idMappingType: String) {
+      override fun idMappingType(idMappingType: String) {
         cdkBuilder.idMappingType(idMappingType)
       }
 
-      public override fun providerProperties(providerProperties: IResolvable) {
+      override fun providerProperties(providerProperties: IResolvable) {
         cdkBuilder.providerProperties(providerProperties.let(IResolvable::unwrap))
       }
 
-      public override fun providerProperties(providerProperties: ProviderPropertiesProperty) {
+      override fun providerProperties(providerProperties: ProviderPropertiesProperty) {
         cdkBuilder.providerProperties(providerProperties.let(ProviderPropertiesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("99e7e4a7a6322b76ecdd8c18747c700ce11a2af0f1fbf4624e4560278e5486a8")
-      public override
+      override
           fun providerProperties(providerProperties: ProviderPropertiesProperty.Builder.() -> Unit):
           Unit = providerProperties(ProviderPropertiesProperty(providerProperties))
 
@@ -328,9 +311,9 @@ public open class CfnIdMappingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingTechniquesProperty,
     ) : IdMappingTechniquesProperty {
-      public override fun idMappingType(): String? = unwrap(this).getIdMappingType()
+      override fun idMappingType(): String? = unwrap(this).getIdMappingType()
 
-      public override fun providerProperties(): Any? = unwrap(this).getProviderProperties()
+      override fun providerProperties(): Any? = unwrap(this).getProviderProperties()
     }
 
     public companion object {
@@ -359,11 +342,9 @@ public open class CfnIdMappingWorkflow internal constructor(
     public fun schemaArn(): String
 
     public interface Builder {
-      public fun inputSourceArn(inputSourceArn: String) {
-      }
+      public fun inputSourceArn(inputSourceArn: String)
 
-      public fun schemaArn(schemaArn: String) {
-      }
+      public fun schemaArn(schemaArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -372,11 +353,11 @@ public open class CfnIdMappingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty.builder()
 
-      public override fun inputSourceArn(inputSourceArn: String) {
+      override fun inputSourceArn(inputSourceArn: String) {
         cdkBuilder.inputSourceArn(inputSourceArn)
       }
 
-      public override fun schemaArn(schemaArn: String) {
+      override fun schemaArn(schemaArn: String) {
         cdkBuilder.schemaArn(schemaArn)
       }
 
@@ -389,9 +370,9 @@ public open class CfnIdMappingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IdMappingWorkflowInputSourceProperty,
     ) : IdMappingWorkflowInputSourceProperty {
-      public override fun inputSourceArn(): String = unwrap(this).getInputSourceArn()
+      override fun inputSourceArn(): String = unwrap(this).getInputSourceArn()
 
-      public override fun schemaArn(): String = unwrap(this).getSchemaArn()
+      override fun schemaArn(): String = unwrap(this).getSchemaArn()
     }
 
     public companion object {
@@ -424,27 +405,21 @@ public open class CfnIdMappingWorkflow internal constructor(
     public fun providerServiceArn(): String
 
     public interface Builder {
-      public fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
-      }
+      public fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable)
 
       public
-          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty) {
-      }
+          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feeb44c32e5e169bbc20b86683c24e01fa5232b3c89a44934e6a49038df773fd")
       public
-          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty.Builder.() -> Unit)
 
-      public fun providerConfiguration(providerConfiguration: IResolvable) {
-      }
+      public fun providerConfiguration(providerConfiguration: IResolvable)
 
-      public fun providerConfiguration(providerConfiguration: Map<String, String>) {
-      }
+      public fun providerConfiguration(providerConfiguration: Map<String, String>)
 
-      public fun providerServiceArn(providerServiceArn: String) {
-      }
+      public fun providerServiceArn(providerServiceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -453,32 +428,31 @@ public open class CfnIdMappingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty.builder()
 
-      public override
-          fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
+      override fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
         cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty) {
         cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IntermediateSourceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feeb44c32e5e169bbc20b86683c24e01fa5232b3c89a44934e6a49038df773fd")
-      public override
+      override
           fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty.Builder.() -> Unit):
           Unit =
           intermediateSourceConfiguration(IntermediateSourceConfigurationProperty(intermediateSourceConfiguration))
 
-      public override fun providerConfiguration(providerConfiguration: IResolvable) {
+      override fun providerConfiguration(providerConfiguration: IResolvable) {
         cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun providerConfiguration(providerConfiguration: Map<String, String>) {
+      override fun providerConfiguration(providerConfiguration: Map<String, String>) {
         cdkBuilder.providerConfiguration(providerConfiguration)
       }
 
-      public override fun providerServiceArn(providerServiceArn: String) {
+      override fun providerServiceArn(providerServiceArn: String) {
         cdkBuilder.providerServiceArn(providerServiceArn)
       }
 
@@ -491,12 +465,12 @@ public open class CfnIdMappingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.ProviderPropertiesProperty,
     ) : ProviderPropertiesProperty {
-      public override fun intermediateSourceConfiguration(): Any? =
+      override fun intermediateSourceConfiguration(): Any? =
           unwrap(this).getIntermediateSourceConfiguration()
 
-      public override fun providerConfiguration(): Any? = unwrap(this).getProviderConfiguration()
+      override fun providerConfiguration(): Any? = unwrap(this).getProviderConfiguration()
 
-      public override fun providerServiceArn(): String = unwrap(this).getProviderServiceArn()
+      override fun providerServiceArn(): String = unwrap(this).getProviderServiceArn()
     }
 
     public companion object {
@@ -523,8 +497,7 @@ public open class CfnIdMappingWorkflow internal constructor(
     public fun intermediateS3Path(): String
 
     public interface Builder {
-      public fun intermediateS3Path(intermediateS3Path: String) {
-      }
+      public fun intermediateS3Path(intermediateS3Path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -533,7 +506,7 @@ public open class CfnIdMappingWorkflow internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty.builder()
 
-      public override fun intermediateS3Path(intermediateS3Path: String) {
+      override fun intermediateS3Path(intermediateS3Path: String) {
         cdkBuilder.intermediateS3Path(intermediateS3Path)
       }
 
@@ -546,7 +519,7 @@ public open class CfnIdMappingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.IntermediateSourceConfigurationProperty,
     ) : IntermediateSourceConfigurationProperty {
-      public override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
+      override fun intermediateS3Path(): String = unwrap(this).getIntermediateS3Path()
     }
 
     public companion object {

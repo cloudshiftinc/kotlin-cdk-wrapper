@@ -17,16 +17,16 @@ public interface IEngine {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.IEngine,
   ) : IEngine {
-    public override fun defaultUsername(): String? = unwrap(this).getDefaultUsername()
+    override fun defaultUsername(): String? = unwrap(this).getDefaultUsername()
 
-    public override fun engineFamily(): String? = unwrap(this).getEngineFamily()
+    override fun engineFamily(): String? = unwrap(this).getEngineFamily()
 
-    public override fun engineType(): String = unwrap(this).getEngineType()
+    override fun engineType(): String = unwrap(this).getEngineType()
 
-    public override fun engineVersion(): EngineVersion? =
+    override fun engineVersion(): EngineVersion? =
         unwrap(this).getEngineVersion()?.let(EngineVersion::wrap)
 
-    public override fun parameterGroupFamily(): String? = unwrap(this).getParameterGroupFamily()
+    override fun parameterGroupFamily(): String? = unwrap(this).getParameterGroupFamily()
   }
 
   public companion object {

@@ -15,28 +15,21 @@ public open class UserPoolIdentityProviderFacebook internal constructor(
   public override fun providerName(): String = unwrap(this).getProviderName()
 
   public interface Builder {
-    public fun apiVersion(apiVersion: String) {
-    }
+    public fun apiVersion(apiVersion: String)
 
-    public fun attributeMapping(attributeMapping: AttributeMapping) {
-    }
+    public fun attributeMapping(attributeMapping: AttributeMapping)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66e55b7353157a9afdcd364ce341a60e452b3f85ed3419f60defad4c4fb3042a")
-    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit) {
-    }
+    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit)
 
-    public fun clientId(clientId: String) {
-    }
+    public fun clientId(clientId: String)
 
-    public fun clientSecret(clientSecret: String) {
-    }
+    public fun clientSecret(clientSecret: String)
 
-    public fun scopes(scopes: List<String>) {
-    }
+    public fun scopes(scopes: List<String>)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
   }
 
   private class BuilderImpl(
@@ -48,32 +41,32 @@ public open class UserPoolIdentityProviderFacebook internal constructor(
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderFacebook.Builder.create(scope,
         id)
 
-    public override fun apiVersion(apiVersion: String) {
+    override fun apiVersion(apiVersion: String) {
       cdkBuilder.apiVersion(apiVersion)
     }
 
-    public override fun attributeMapping(attributeMapping: AttributeMapping) {
+    override fun attributeMapping(attributeMapping: AttributeMapping) {
       cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66e55b7353157a9afdcd364ce341a60e452b3f85ed3419f60defad4c4fb3042a")
-    public override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit):
-        Unit = attributeMapping(AttributeMapping(attributeMapping))
+    override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit): Unit =
+        attributeMapping(AttributeMapping(attributeMapping))
 
-    public override fun clientId(clientId: String) {
+    override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
-    public override fun clientSecret(clientSecret: String) {
+    override fun clientSecret(clientSecret: String) {
       cdkBuilder.clientSecret(clientSecret)
     }
 
-    public override fun scopes(scopes: List<String>) {
+    override fun scopes(scopes: List<String>) {
       cdkBuilder.scopes(scopes)
     }
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 

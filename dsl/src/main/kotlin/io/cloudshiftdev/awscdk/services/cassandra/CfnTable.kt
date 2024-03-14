@@ -161,89 +161,64 @@ public open class CfnTable internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingSpecifications(autoScalingSpecifications: IResolvable) {
-    }
+    public fun autoScalingSpecifications(autoScalingSpecifications: IResolvable)
 
     public
-        fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty) {
-    }
+        fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e766f231662dc2566d0ae3bc2db9b0911ac936f7599d5b543ca9610d4f970383")
     public
-        fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty.Builder.() -> Unit)
 
-    public fun billingMode(billingMode: IResolvable) {
-    }
+    public fun billingMode(billingMode: IResolvable)
 
-    public fun billingMode(billingMode: BillingModeProperty) {
-    }
+    public fun billingMode(billingMode: BillingModeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67ee3519a80b06e9ad6c8f1ae08b363b5907d831f8e0d8fdf71b54ac1f4d6be4")
-    public fun billingMode(billingMode: BillingModeProperty.Builder.() -> Unit) {
-    }
+    public fun billingMode(billingMode: BillingModeProperty.Builder.() -> Unit)
 
-    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean) {
-    }
+    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean)
 
-    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
-    }
+    public fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable)
 
-    public fun clusteringKeyColumns(clusteringKeyColumns: IResolvable) {
-    }
+    public fun clusteringKeyColumns(clusteringKeyColumns: IResolvable)
 
-    public fun clusteringKeyColumns(clusteringKeyColumns: List<Any>) {
-    }
+    public fun clusteringKeyColumns(clusteringKeyColumns: List<Any>)
 
-    public fun defaultTimeToLive(defaultTimeToLive: Number) {
-    }
+    public fun defaultTimeToLive(defaultTimeToLive: Number)
 
-    public fun encryptionSpecification(encryptionSpecification: IResolvable) {
-    }
+    public fun encryptionSpecification(encryptionSpecification: IResolvable)
 
-    public fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty) {
-    }
+    public fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b052269454814355570c6aac83180d224f12e28d7e33efe86c977752a15163aa")
     public
-        fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty.Builder.() -> Unit)
 
-    public fun keyspaceName(keyspaceName: String) {
-    }
+    public fun keyspaceName(keyspaceName: String)
 
-    public fun partitionKeyColumns(partitionKeyColumns: IResolvable) {
-    }
+    public fun partitionKeyColumns(partitionKeyColumns: IResolvable)
 
-    public fun partitionKeyColumns(partitionKeyColumns: List<Any>) {
-    }
+    public fun partitionKeyColumns(partitionKeyColumns: List<Any>)
 
-    public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
-    }
+    public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean)
 
-    public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-    }
+    public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
 
-    public fun regularColumns(regularColumns: IResolvable) {
-    }
+    public fun regularColumns(regularColumns: IResolvable)
 
-    public fun regularColumns(regularColumns: List<Any>) {
-    }
+    public fun regularColumns(regularColumns: List<Any>)
 
-    public fun replicaSpecifications(replicaSpecifications: IResolvable) {
-    }
+    public fun replicaSpecifications(replicaSpecifications: IResolvable)
 
-    public fun replicaSpecifications(replicaSpecifications: List<Any>) {
-    }
+    public fun replicaSpecifications(replicaSpecifications: List<Any>)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -253,111 +228,110 @@ public open class CfnTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cassandra.CfnTable.Builder =
         software.amazon.awscdk.services.cassandra.CfnTable.Builder.create(scope, id)
 
-    public override fun autoScalingSpecifications(autoScalingSpecifications: IResolvable) {
+    override fun autoScalingSpecifications(autoScalingSpecifications: IResolvable) {
       cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty) {
       cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(AutoScalingSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e766f231662dc2566d0ae3bc2db9b0911ac936f7599d5b543ca9610d4f970383")
-    public override
+    override
         fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty.Builder.() -> Unit):
         Unit =
         autoScalingSpecifications(AutoScalingSpecificationProperty(autoScalingSpecifications))
 
-    public override fun billingMode(billingMode: IResolvable) {
+    override fun billingMode(billingMode: IResolvable) {
       cdkBuilder.billingMode(billingMode.let(IResolvable::unwrap))
     }
 
-    public override fun billingMode(billingMode: BillingModeProperty) {
+    override fun billingMode(billingMode: BillingModeProperty) {
       cdkBuilder.billingMode(billingMode.let(BillingModeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67ee3519a80b06e9ad6c8f1ae08b363b5907d831f8e0d8fdf71b54ac1f4d6be4")
-    public override fun billingMode(billingMode: BillingModeProperty.Builder.() -> Unit): Unit =
+    override fun billingMode(billingMode: BillingModeProperty.Builder.() -> Unit): Unit =
         billingMode(BillingModeProperty(billingMode))
 
-    public override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean) {
+    override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: Boolean) {
       cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled)
     }
 
-    public override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
+    override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
       cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun clusteringKeyColumns(clusteringKeyColumns: IResolvable) {
+    override fun clusteringKeyColumns(clusteringKeyColumns: IResolvable) {
       cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.let(IResolvable::unwrap))
     }
 
-    public override fun clusteringKeyColumns(clusteringKeyColumns: List<Any>) {
+    override fun clusteringKeyColumns(clusteringKeyColumns: List<Any>) {
       cdkBuilder.clusteringKeyColumns(clusteringKeyColumns)
     }
 
-    public override fun defaultTimeToLive(defaultTimeToLive: Number) {
+    override fun defaultTimeToLive(defaultTimeToLive: Number) {
       cdkBuilder.defaultTimeToLive(defaultTimeToLive)
     }
 
-    public override fun encryptionSpecification(encryptionSpecification: IResolvable) {
+    override fun encryptionSpecification(encryptionSpecification: IResolvable) {
       cdkBuilder.encryptionSpecification(encryptionSpecification.let(IResolvable::unwrap))
     }
 
-    public override
-        fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty) {
+    override fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty) {
       cdkBuilder.encryptionSpecification(encryptionSpecification.let(EncryptionSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b052269454814355570c6aac83180d224f12e28d7e33efe86c977752a15163aa")
-    public override
+    override
         fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty.Builder.() -> Unit):
         Unit = encryptionSpecification(EncryptionSpecificationProperty(encryptionSpecification))
 
-    public override fun keyspaceName(keyspaceName: String) {
+    override fun keyspaceName(keyspaceName: String) {
       cdkBuilder.keyspaceName(keyspaceName)
     }
 
-    public override fun partitionKeyColumns(partitionKeyColumns: IResolvable) {
+    override fun partitionKeyColumns(partitionKeyColumns: IResolvable) {
       cdkBuilder.partitionKeyColumns(partitionKeyColumns.let(IResolvable::unwrap))
     }
 
-    public override fun partitionKeyColumns(partitionKeyColumns: List<Any>) {
+    override fun partitionKeyColumns(partitionKeyColumns: List<Any>) {
       cdkBuilder.partitionKeyColumns(partitionKeyColumns)
     }
 
-    public override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
+    override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
       cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
     }
 
-    public override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
+    override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
       cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun regularColumns(regularColumns: IResolvable) {
+    override fun regularColumns(regularColumns: IResolvable) {
       cdkBuilder.regularColumns(regularColumns.let(IResolvable::unwrap))
     }
 
-    public override fun regularColumns(regularColumns: List<Any>) {
+    override fun regularColumns(regularColumns: List<Any>) {
       cdkBuilder.regularColumns(regularColumns)
     }
 
-    public override fun replicaSpecifications(replicaSpecifications: IResolvable) {
+    override fun replicaSpecifications(replicaSpecifications: IResolvable) {
       cdkBuilder.replicaSpecifications(replicaSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun replicaSpecifications(replicaSpecifications: List<Any>) {
+    override fun replicaSpecifications(replicaSpecifications: List<Any>) {
       cdkBuilder.replicaSpecifications(replicaSpecifications)
     }
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -391,18 +365,15 @@ public open class CfnTable internal constructor(
 
     public interface Builder {
       public
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
-      }
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable)
 
       public
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
-      }
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c0719136d5761003d3e30200cf94101b28345ce0596e84b87cc72daaeb879fb")
       public
-          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -410,19 +381,19 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty.builder()
 
-      public override
+      override
           fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
         cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
         cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c0719136d5761003d3e30200cf94101b28345ce0596e84b87cc72daaeb879fb")
-      public override
+      override
           fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty.Builder.() -> Unit):
           Unit =
           targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty(targetTrackingScalingPolicyConfiguration))
@@ -435,7 +406,7 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty,
     ) : ScalingPolicyProperty {
-      public override fun targetTrackingScalingPolicyConfiguration(): Any? =
+      override fun targetTrackingScalingPolicyConfiguration(): Any? =
           unwrap(this).getTargetTrackingScalingPolicyConfiguration()
     }
 
@@ -465,19 +436,15 @@ public open class CfnTable internal constructor(
     public fun orderBy(): String? = unwrap(this).getOrderBy()
 
     public interface Builder {
-      public fun column(column: IResolvable) {
-      }
+      public fun column(column: IResolvable)
 
-      public fun column(column: ColumnProperty) {
-      }
+      public fun column(column: ColumnProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1719c3c601457175d08dcf7402b4c82cda20c2e09b59385102ee0c6f5af0e8cb")
-      public fun column(column: ColumnProperty.Builder.() -> Unit) {
-      }
+      public fun column(column: ColumnProperty.Builder.() -> Unit)
 
-      public fun orderBy(orderBy: String) {
-      }
+      public fun orderBy(orderBy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -485,20 +452,20 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty.builder()
 
-      public override fun column(column: IResolvable) {
+      override fun column(column: IResolvable) {
         cdkBuilder.column(column.let(IResolvable::unwrap))
       }
 
-      public override fun column(column: ColumnProperty) {
+      override fun column(column: ColumnProperty) {
         cdkBuilder.column(column.let(ColumnProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1719c3c601457175d08dcf7402b4c82cda20c2e09b59385102ee0c6f5af0e8cb")
-      public override fun column(column: ColumnProperty.Builder.() -> Unit): Unit =
+      override fun column(column: ColumnProperty.Builder.() -> Unit): Unit =
           column(ColumnProperty(column))
 
-      public override fun orderBy(orderBy: String) {
+      override fun orderBy(orderBy: String) {
         cdkBuilder.orderBy(orderBy)
       }
 
@@ -511,9 +478,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty,
     ) : ClusteringKeyColumnProperty {
-      public override fun column(): Any = unwrap(this).getColumn()
+      override fun column(): Any = unwrap(this).getColumn()
 
-      public override fun orderBy(): String? = unwrap(this).getOrderBy()
+      override fun orderBy(): String? = unwrap(this).getOrderBy()
     }
 
     public companion object {
@@ -542,20 +509,16 @@ public open class CfnTable internal constructor(
     public fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun provisionedThroughput(provisionedThroughput: IResolvable) {
-      }
+      public fun provisionedThroughput(provisionedThroughput: IResolvable)
 
-      public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-      }
+      public fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6229fc1deb4ce36008eb6519392ee66844b20166c36bebacd90cc6680480125e")
       public
-          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit) {
-      }
+          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -563,22 +526,21 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun provisionedThroughput(provisionedThroughput: IResolvable) {
+      override fun provisionedThroughput(provisionedThroughput: IResolvable) {
         cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
       }
 
-      public override
-          fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
+      override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
         cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6229fc1deb4ce36008eb6519392ee66844b20166c36bebacd90cc6680480125e")
-      public override
+      override
           fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
           Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
 
@@ -590,9 +552,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty,
     ) : BillingModeProperty {
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
 
-      public override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
+      override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
     }
 
     public companion object {
@@ -621,29 +583,23 @@ public open class CfnTable internal constructor(
     public fun writeCapacityAutoScaling(): Any? = unwrap(this).getWriteCapacityAutoScaling()
 
     public interface Builder {
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
-      }
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable)
 
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
-      }
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("70e2f1cb5478a4cbae1d99c8d7df305cf0dcdd513f625d7ebc4c9c89e495ded8")
       public
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit) {
-      }
+          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
 
-      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable) {
-      }
+      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable)
 
-      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty) {
-      }
+      public fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fe683f396f3380315b3d21fe213e16fbe5bd7f327ac1abebef53993bc080cc5d")
       public
-          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit) {
-      }
+          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -652,33 +608,31 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty.builder()
 
-      public override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
         cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
         cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("70e2f1cb5478a4cbae1d99c8d7df305cf0dcdd513f625d7ebc4c9c89e495ded8")
-      public override
+      override
           fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
           Unit = readCapacityAutoScaling(AutoScalingSettingProperty(readCapacityAutoScaling))
 
-      public override fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable) {
+      override fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable) {
         cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty) {
+      override fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty) {
         cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fe683f396f3380315b3d21fe213e16fbe5bd7f327ac1abebef53993bc080cc5d")
-      public override
+      override
           fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
           Unit = writeCapacityAutoScaling(AutoScalingSettingProperty(writeCapacityAutoScaling))
 
@@ -691,11 +645,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty,
     ) : AutoScalingSpecificationProperty {
-      public override fun readCapacityAutoScaling(): Any? =
-          unwrap(this).getReadCapacityAutoScaling()
+      override fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
 
-      public override fun writeCapacityAutoScaling(): Any? =
-          unwrap(this).getWriteCapacityAutoScaling()
+      override fun writeCapacityAutoScaling(): Any? = unwrap(this).getWriteCapacityAutoScaling()
     }
 
     public companion object {
@@ -728,20 +680,15 @@ public open class CfnTable internal constructor(
     public fun targetValue(): Number
 
     public interface Builder {
-      public fun disableScaleIn(disableScaleIn: Boolean) {
-      }
+      public fun disableScaleIn(disableScaleIn: Boolean)
 
-      public fun disableScaleIn(disableScaleIn: IResolvable) {
-      }
+      public fun disableScaleIn(disableScaleIn: IResolvable)
 
-      public fun scaleInCooldown(scaleInCooldown: Number) {
-      }
+      public fun scaleInCooldown(scaleInCooldown: Number)
 
-      public fun scaleOutCooldown(scaleOutCooldown: Number) {
-      }
+      public fun scaleOutCooldown(scaleOutCooldown: Number)
 
-      public fun targetValue(targetValue: Number) {
-      }
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -750,23 +697,23 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty.builder()
 
-      public override fun disableScaleIn(disableScaleIn: Boolean) {
+      override fun disableScaleIn(disableScaleIn: Boolean) {
         cdkBuilder.disableScaleIn(disableScaleIn)
       }
 
-      public override fun disableScaleIn(disableScaleIn: IResolvable) {
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
         cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
       }
 
-      public override fun scaleInCooldown(scaleInCooldown: Number) {
+      override fun scaleInCooldown(scaleInCooldown: Number) {
         cdkBuilder.scaleInCooldown(scaleInCooldown)
       }
 
-      public override fun scaleOutCooldown(scaleOutCooldown: Number) {
+      override fun scaleOutCooldown(scaleOutCooldown: Number) {
         cdkBuilder.scaleOutCooldown(scaleOutCooldown)
       }
 
-      public override fun targetValue(targetValue: Number) {
+      override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
 
@@ -779,13 +726,13 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty,
     ) : TargetTrackingScalingPolicyConfigurationProperty {
-      public override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
 
-      public override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
+      override fun scaleInCooldown(): Number? = unwrap(this).getScaleInCooldown()
 
-      public override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
+      override fun scaleOutCooldown(): Number? = unwrap(this).getScaleOutCooldown()
 
-      public override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
@@ -817,23 +764,18 @@ public open class CfnTable internal constructor(
     public fun region(): String
 
     public interface Builder {
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
-      }
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable)
 
-      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
-      }
+      public fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7c8a80c817160ff83e18bab565ddc70e61f3fc146dcbb78e6ed386045600db9")
       public
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit) {
-      }
+          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit)
 
-      public fun readCapacityUnits(readCapacityUnits: Number) {
-      }
+      public fun readCapacityUnits(readCapacityUnits: Number)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -841,26 +783,25 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty.builder()
 
-      public override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
         cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
       }
 
-      public override
-          fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
+      override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
         cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7c8a80c817160ff83e18bab565ddc70e61f3fc146dcbb78e6ed386045600db9")
-      public override
+      override
           fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty.Builder.() -> Unit):
           Unit = readCapacityAutoScaling(AutoScalingSettingProperty(readCapacityAutoScaling))
 
-      public override fun readCapacityUnits(readCapacityUnits: Number) {
+      override fun readCapacityUnits(readCapacityUnits: Number) {
         cdkBuilder.readCapacityUnits(readCapacityUnits)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -873,12 +814,11 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty,
     ) : ReplicaSpecificationProperty {
-      public override fun readCapacityAutoScaling(): Any? =
-          unwrap(this).getReadCapacityAutoScaling()
+      override fun readCapacityAutoScaling(): Any? = unwrap(this).getReadCapacityAutoScaling()
 
-      public override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
+      override fun readCapacityUnits(): Number? = unwrap(this).getReadCapacityUnits()
 
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
     }
 
     public companion object {
@@ -907,11 +847,9 @@ public open class CfnTable internal constructor(
     public fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
 
     public interface Builder {
-      public fun encryptionType(encryptionType: String) {
-      }
+      public fun encryptionType(encryptionType: String)
 
-      public fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
-      }
+      public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -920,11 +858,11 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty.builder()
 
-      public override fun encryptionType(encryptionType: String) {
+      override fun encryptionType(encryptionType: String) {
         cdkBuilder.encryptionType(encryptionType)
       }
 
-      public override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+      override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
         cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
       }
 
@@ -937,9 +875,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty,
     ) : EncryptionSpecificationProperty {
-      public override fun encryptionType(): String = unwrap(this).getEncryptionType()
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
 
-      public override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
+      override fun kmsKeyIdentifier(): String? = unwrap(this).getKmsKeyIdentifier()
     }
 
     public companion object {
@@ -972,28 +910,21 @@ public open class CfnTable internal constructor(
     public fun scalingPolicy(): Any? = unwrap(this).getScalingPolicy()
 
     public interface Builder {
-      public fun autoScalingDisabled(autoScalingDisabled: Boolean) {
-      }
+      public fun autoScalingDisabled(autoScalingDisabled: Boolean)
 
-      public fun autoScalingDisabled(autoScalingDisabled: IResolvable) {
-      }
+      public fun autoScalingDisabled(autoScalingDisabled: IResolvable)
 
-      public fun maximumUnits(maximumUnits: Number) {
-      }
+      public fun maximumUnits(maximumUnits: Number)
 
-      public fun minimumUnits(minimumUnits: Number) {
-      }
+      public fun minimumUnits(minimumUnits: Number)
 
-      public fun scalingPolicy(scalingPolicy: IResolvable) {
-      }
+      public fun scalingPolicy(scalingPolicy: IResolvable)
 
-      public fun scalingPolicy(scalingPolicy: ScalingPolicyProperty) {
-      }
+      public fun scalingPolicy(scalingPolicy: ScalingPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("53d2bbef462e8fe3680a3f07236b4bd7c8adab847dcbe52a82a427c23baadb48")
-      public fun scalingPolicy(scalingPolicy: ScalingPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun scalingPolicy(scalingPolicy: ScalingPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1001,34 +932,34 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty.builder()
 
-      public override fun autoScalingDisabled(autoScalingDisabled: Boolean) {
+      override fun autoScalingDisabled(autoScalingDisabled: Boolean) {
         cdkBuilder.autoScalingDisabled(autoScalingDisabled)
       }
 
-      public override fun autoScalingDisabled(autoScalingDisabled: IResolvable) {
+      override fun autoScalingDisabled(autoScalingDisabled: IResolvable) {
         cdkBuilder.autoScalingDisabled(autoScalingDisabled.let(IResolvable::unwrap))
       }
 
-      public override fun maximumUnits(maximumUnits: Number) {
+      override fun maximumUnits(maximumUnits: Number) {
         cdkBuilder.maximumUnits(maximumUnits)
       }
 
-      public override fun minimumUnits(minimumUnits: Number) {
+      override fun minimumUnits(minimumUnits: Number) {
         cdkBuilder.minimumUnits(minimumUnits)
       }
 
-      public override fun scalingPolicy(scalingPolicy: IResolvable) {
+      override fun scalingPolicy(scalingPolicy: IResolvable) {
         cdkBuilder.scalingPolicy(scalingPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun scalingPolicy(scalingPolicy: ScalingPolicyProperty) {
+      override fun scalingPolicy(scalingPolicy: ScalingPolicyProperty) {
         cdkBuilder.scalingPolicy(scalingPolicy.let(ScalingPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("53d2bbef462e8fe3680a3f07236b4bd7c8adab847dcbe52a82a427c23baadb48")
-      public override fun scalingPolicy(scalingPolicy: ScalingPolicyProperty.Builder.() -> Unit):
-          Unit = scalingPolicy(ScalingPolicyProperty(scalingPolicy))
+      override fun scalingPolicy(scalingPolicy: ScalingPolicyProperty.Builder.() -> Unit): Unit =
+          scalingPolicy(ScalingPolicyProperty(scalingPolicy))
 
       public fun build():
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty =
@@ -1039,13 +970,13 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty,
     ) : AutoScalingSettingProperty {
-      public override fun autoScalingDisabled(): Any? = unwrap(this).getAutoScalingDisabled()
+      override fun autoScalingDisabled(): Any? = unwrap(this).getAutoScalingDisabled()
 
-      public override fun maximumUnits(): Number? = unwrap(this).getMaximumUnits()
+      override fun maximumUnits(): Number? = unwrap(this).getMaximumUnits()
 
-      public override fun minimumUnits(): Number? = unwrap(this).getMinimumUnits()
+      override fun minimumUnits(): Number? = unwrap(this).getMinimumUnits()
 
-      public override fun scalingPolicy(): Any? = unwrap(this).getScalingPolicy()
+      override fun scalingPolicy(): Any? = unwrap(this).getScalingPolicy()
     }
 
     public companion object {
@@ -1074,11 +1005,9 @@ public open class CfnTable internal constructor(
     public fun writeCapacityUnits(): Number
 
     public interface Builder {
-      public fun readCapacityUnits(readCapacityUnits: Number) {
-      }
+      public fun readCapacityUnits(readCapacityUnits: Number)
 
-      public fun writeCapacityUnits(writeCapacityUnits: Number) {
-      }
+      public fun writeCapacityUnits(writeCapacityUnits: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1086,11 +1015,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty.builder()
 
-      public override fun readCapacityUnits(readCapacityUnits: Number) {
+      override fun readCapacityUnits(readCapacityUnits: Number) {
         cdkBuilder.readCapacityUnits(readCapacityUnits)
       }
 
-      public override fun writeCapacityUnits(writeCapacityUnits: Number) {
+      override fun writeCapacityUnits(writeCapacityUnits: Number) {
         cdkBuilder.writeCapacityUnits(writeCapacityUnits)
       }
 
@@ -1103,9 +1032,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty,
     ) : ProvisionedThroughputProperty {
-      public override fun readCapacityUnits(): Number = unwrap(this).getReadCapacityUnits()
+      override fun readCapacityUnits(): Number = unwrap(this).getReadCapacityUnits()
 
-      public override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
+      override fun writeCapacityUnits(): Number = unwrap(this).getWriteCapacityUnits()
     }
 
     public companion object {
@@ -1134,11 +1063,9 @@ public open class CfnTable internal constructor(
     public fun columnType(): String
 
     public interface Builder {
-      public fun columnName(columnName: String) {
-      }
+      public fun columnName(columnName: String)
 
-      public fun columnType(columnType: String) {
-      }
+      public fun columnType(columnType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1146,11 +1073,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty.Builder =
           software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty.builder()
 
-      public override fun columnName(columnName: String) {
+      override fun columnName(columnName: String) {
         cdkBuilder.columnName(columnName)
       }
 
-      public override fun columnType(columnType: String) {
+      override fun columnType(columnType: String) {
         cdkBuilder.columnType(columnType)
       }
 
@@ -1161,9 +1088,9 @@ public open class CfnTable internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty,
     ) : ColumnProperty {
-      public override fun columnName(): String = unwrap(this).getColumnName()
+      override fun columnName(): String = unwrap(this).getColumnName()
 
-      public override fun columnType(): String = unwrap(this).getColumnType()
+      override fun columnType(): String = unwrap(this).getColumnType()
     }
 
     public companion object {

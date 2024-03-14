@@ -61,23 +61,17 @@ public open class CfnEnvironmentTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun encryptionKey(encryptionKey: String) {
-    }
+    public fun encryptionKey(encryptionKey: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun provisioning(provisioning: String) {
-    }
+    public fun provisioning(provisioning: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,27 +81,27 @@ public open class CfnEnvironmentTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.proton.CfnEnvironmentTemplate.Builder =
         software.amazon.awscdk.services.proton.CfnEnvironmentTemplate.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun encryptionKey(encryptionKey: String) {
+    override fun encryptionKey(encryptionKey: String) {
       cdkBuilder.encryptionKey(encryptionKey)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun provisioning(provisioning: String) {
+    override fun provisioning(provisioning: String) {
       cdkBuilder.provisioning(provisioning)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

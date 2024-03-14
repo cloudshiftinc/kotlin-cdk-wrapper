@@ -78,31 +78,23 @@ public open class CfnTable internal constructor(
   }
 
   public interface Builder {
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun magneticStoreWriteProperties(magneticStoreWriteProperties: Any) {
-    }
+    public fun magneticStoreWriteProperties(magneticStoreWriteProperties: Any)
 
-    public fun retentionProperties(retentionProperties: Any) {
-    }
+    public fun retentionProperties(retentionProperties: Any)
 
-    public fun schema(schema: IResolvable) {
-    }
+    public fun schema(schema: IResolvable)
 
-    public fun schema(schema: SchemaProperty) {
-    }
+    public fun schema(schema: SchemaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21bcbf5f6346b7e1bf71608e43f5642d4324e83cf893c4df218d01acd50a40e9")
-    public fun schema(schema: SchemaProperty.Builder.() -> Unit) {
-    }
+    public fun schema(schema: SchemaProperty.Builder.() -> Unit)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -112,36 +104,36 @@ public open class CfnTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.timestream.CfnTable.Builder =
         software.amazon.awscdk.services.timestream.CfnTable.Builder.create(scope, id)
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun magneticStoreWriteProperties(magneticStoreWriteProperties: Any) {
+    override fun magneticStoreWriteProperties(magneticStoreWriteProperties: Any) {
       cdkBuilder.magneticStoreWriteProperties(magneticStoreWriteProperties)
     }
 
-    public override fun retentionProperties(retentionProperties: Any) {
+    override fun retentionProperties(retentionProperties: Any) {
       cdkBuilder.retentionProperties(retentionProperties)
     }
 
-    public override fun schema(schema: IResolvable) {
+    override fun schema(schema: IResolvable) {
       cdkBuilder.schema(schema.let(IResolvable::unwrap))
     }
 
-    public override fun schema(schema: SchemaProperty) {
+    override fun schema(schema: SchemaProperty) {
       cdkBuilder.schema(schema.let(SchemaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21bcbf5f6346b7e1bf71608e43f5642d4324e83cf893c4df218d01acd50a40e9")
-    public override fun schema(schema: SchemaProperty.Builder.() -> Unit): Unit =
+    override fun schema(schema: SchemaProperty.Builder.() -> Unit): Unit =
         schema(SchemaProperty(schema))
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -176,24 +168,19 @@ public open class CfnTable internal constructor(
         unwrap(this).getMagneticStoreRejectedDataLocation()
 
     public interface Builder {
-      public fun enableMagneticStoreWrites(enableMagneticStoreWrites: Boolean) {
-      }
+      public fun enableMagneticStoreWrites(enableMagneticStoreWrites: Boolean)
 
-      public fun enableMagneticStoreWrites(enableMagneticStoreWrites: IResolvable) {
-      }
+      public fun enableMagneticStoreWrites(enableMagneticStoreWrites: IResolvable)
 
-      public fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: IResolvable) {
-      }
+      public fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: IResolvable)
 
       public
-          fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty) {
-      }
+          fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c569486247805444394ade6f2fe0afbacaa1cd8b23b4f320fb2d85c552783ecb")
       public
-          fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty.Builder.() -> Unit) {
-      }
+          fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -202,27 +189,27 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty.builder()
 
-      public override fun enableMagneticStoreWrites(enableMagneticStoreWrites: Boolean) {
+      override fun enableMagneticStoreWrites(enableMagneticStoreWrites: Boolean) {
         cdkBuilder.enableMagneticStoreWrites(enableMagneticStoreWrites)
       }
 
-      public override fun enableMagneticStoreWrites(enableMagneticStoreWrites: IResolvable) {
+      override fun enableMagneticStoreWrites(enableMagneticStoreWrites: IResolvable) {
         cdkBuilder.enableMagneticStoreWrites(enableMagneticStoreWrites.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: IResolvable) {
         cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty) {
         cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation.let(MagneticStoreRejectedDataLocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c569486247805444394ade6f2fe0afbacaa1cd8b23b4f320fb2d85c552783ecb")
-      public override
+      override
           fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty.Builder.() -> Unit):
           Unit =
           magneticStoreRejectedDataLocation(MagneticStoreRejectedDataLocationProperty(magneticStoreRejectedDataLocation))
@@ -236,10 +223,9 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty,
     ) : MagneticStoreWritePropertiesProperty {
-      public override fun enableMagneticStoreWrites(): Any =
-          unwrap(this).getEnableMagneticStoreWrites()
+      override fun enableMagneticStoreWrites(): Any = unwrap(this).getEnableMagneticStoreWrites()
 
-      public override fun magneticStoreRejectedDataLocation(): Any? =
+      override fun magneticStoreRejectedDataLocation(): Any? =
           unwrap(this).getMagneticStoreRejectedDataLocation()
     }
 
@@ -274,17 +260,13 @@ public open class CfnTable internal constructor(
     public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun encryptionOption(encryptionOption: String) {
-      }
+      public fun encryptionOption(encryptionOption: String)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun objectKeyPrefix(objectKeyPrefix: String) {
-      }
+      public fun objectKeyPrefix(objectKeyPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -292,19 +274,19 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty.Builder =
           software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun encryptionOption(encryptionOption: String) {
+      override fun encryptionOption(encryptionOption: String) {
         cdkBuilder.encryptionOption(encryptionOption)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun objectKeyPrefix(objectKeyPrefix: String) {
+      override fun objectKeyPrefix(objectKeyPrefix: String) {
         cdkBuilder.objectKeyPrefix(objectKeyPrefix)
       }
 
@@ -317,13 +299,13 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty,
     ) : S3ConfigurationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun encryptionOption(): String = unwrap(this).getEncryptionOption()
+      override fun encryptionOption(): String = unwrap(this).getEncryptionOption()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
+      override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
     }
 
     public companion object {
@@ -350,16 +332,13 @@ public open class CfnTable internal constructor(
     public fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
 
     public interface Builder {
-      public fun s3Configuration(s3Configuration: IResolvable) {
-      }
+      public fun s3Configuration(s3Configuration: IResolvable)
 
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-      }
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10e1eb1148b8aba7ae6adac45f114bd752ea2d64d79ab505728e036970edb4c7")
-      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -368,19 +347,18 @@ public open class CfnTable internal constructor(
           =
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty.builder()
 
-      public override fun s3Configuration(s3Configuration: IResolvable) {
+      override fun s3Configuration(s3Configuration: IResolvable) {
         cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
       }
 
-      public override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
         cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10e1eb1148b8aba7ae6adac45f114bd752ea2d64d79ab505728e036970edb4c7")
-      public override
-          fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit): Unit =
-          s3Configuration(S3ConfigurationProperty(s3Configuration))
+      override fun s3Configuration(s3Configuration: S3ConfigurationProperty.Builder.() -> Unit):
+          Unit = s3Configuration(S3ConfigurationProperty(s3Configuration))
 
       public fun build():
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
@@ -391,7 +369,7 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty,
     ) : MagneticStoreRejectedDataLocationProperty {
-      public override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
+      override fun s3Configuration(): Any? = unwrap(this).getS3Configuration()
     }
 
     public companion object {
@@ -423,14 +401,11 @@ public open class CfnTable internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun enforcementInRecord(enforcementInRecord: String) {
-      }
+      public fun enforcementInRecord(enforcementInRecord: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -438,15 +413,15 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty.Builder =
           software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty.builder()
 
-      public override fun enforcementInRecord(enforcementInRecord: String) {
+      override fun enforcementInRecord(enforcementInRecord: String) {
         cdkBuilder.enforcementInRecord(enforcementInRecord)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -458,11 +433,11 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty,
     ) : PartitionKeyProperty {
-      public override fun enforcementInRecord(): String? = unwrap(this).getEnforcementInRecord()
+      override fun enforcementInRecord(): String? = unwrap(this).getEnforcementInRecord()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -489,11 +464,9 @@ public open class CfnTable internal constructor(
     public fun compositePartitionKey(): Any? = unwrap(this).getCompositePartitionKey()
 
     public interface Builder {
-      public fun compositePartitionKey(compositePartitionKey: IResolvable) {
-      }
+      public fun compositePartitionKey(compositePartitionKey: IResolvable)
 
-      public fun compositePartitionKey(compositePartitionKey: List<Any>) {
-      }
+      public fun compositePartitionKey(compositePartitionKey: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -501,11 +474,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty.Builder =
           software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty.builder()
 
-      public override fun compositePartitionKey(compositePartitionKey: IResolvable) {
+      override fun compositePartitionKey(compositePartitionKey: IResolvable) {
         cdkBuilder.compositePartitionKey(compositePartitionKey.let(IResolvable::unwrap))
       }
 
-      public override fun compositePartitionKey(compositePartitionKey: List<Any>) {
+      override fun compositePartitionKey(compositePartitionKey: List<Any>) {
         cdkBuilder.compositePartitionKey(compositePartitionKey)
       }
 
@@ -516,7 +489,7 @@ public open class CfnTable internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty,
     ) : SchemaProperty {
-      public override fun compositePartitionKey(): Any? = unwrap(this).getCompositePartitionKey()
+      override fun compositePartitionKey(): Any? = unwrap(this).getCompositePartitionKey()
     }
 
     public companion object {
@@ -547,11 +520,9 @@ public open class CfnTable internal constructor(
         unwrap(this).getMemoryStoreRetentionPeriodInHours()
 
     public interface Builder {
-      public fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String) {
-      }
+      public fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String)
 
-      public fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String) {
-      }
+      public fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String)
     }
 
     private class BuilderImpl : Builder {
@@ -559,13 +530,11 @@ public open class CfnTable internal constructor(
           software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty.Builder =
           software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty.builder()
 
-      public override
-          fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String) {
+      override fun magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays: String) {
         cdkBuilder.magneticStoreRetentionPeriodInDays(magneticStoreRetentionPeriodInDays)
       }
 
-      public override
-          fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String) {
+      override fun memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours: String) {
         cdkBuilder.memoryStoreRetentionPeriodInHours(memoryStoreRetentionPeriodInHours)
       }
 
@@ -578,10 +547,10 @@ public open class CfnTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty,
     ) : RetentionPropertiesProperty {
-      public override fun magneticStoreRetentionPeriodInDays(): String? =
+      override fun magneticStoreRetentionPeriodInDays(): String? =
           unwrap(this).getMagneticStoreRetentionPeriodInDays()
 
-      public override fun memoryStoreRetentionPeriodInHours(): String? =
+      override fun memoryStoreRetentionPeriodInHours(): String? =
           unwrap(this).getMemoryStoreRetentionPeriodInHours()
     }
 

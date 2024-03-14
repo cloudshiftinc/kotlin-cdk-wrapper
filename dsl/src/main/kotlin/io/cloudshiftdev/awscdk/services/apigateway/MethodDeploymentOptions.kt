@@ -24,29 +24,21 @@ public interface MethodDeploymentOptions {
   public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
 
   public interface Builder {
-    public fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
-    }
+    public fun cacheDataEncrypted(cacheDataEncrypted: Boolean)
 
-    public fun cacheTtl(cacheTtl: Duration) {
-    }
+    public fun cacheTtl(cacheTtl: Duration)
 
-    public fun cachingEnabled(cachingEnabled: Boolean) {
-    }
+    public fun cachingEnabled(cachingEnabled: Boolean)
 
-    public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-    }
+    public fun dataTraceEnabled(dataTraceEnabled: Boolean)
 
-    public fun loggingLevel(loggingLevel: MethodLoggingLevel) {
-    }
+    public fun loggingLevel(loggingLevel: MethodLoggingLevel)
 
-    public fun metricsEnabled(metricsEnabled: Boolean) {
-    }
+    public fun metricsEnabled(metricsEnabled: Boolean)
 
-    public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-    }
+    public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
-    public fun throttlingRateLimit(throttlingRateLimit: Number) {
-    }
+    public fun throttlingRateLimit(throttlingRateLimit: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -54,35 +46,35 @@ public interface MethodDeploymentOptions {
         software.amazon.awscdk.services.apigateway.MethodDeploymentOptions.Builder =
         software.amazon.awscdk.services.apigateway.MethodDeploymentOptions.builder()
 
-    public override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
+    override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
       cdkBuilder.cacheDataEncrypted(cacheDataEncrypted)
     }
 
-    public override fun cacheTtl(cacheTtl: Duration) {
+    override fun cacheTtl(cacheTtl: Duration) {
       cdkBuilder.cacheTtl(cacheTtl.let(Duration::unwrap))
     }
 
-    public override fun cachingEnabled(cachingEnabled: Boolean) {
+    override fun cachingEnabled(cachingEnabled: Boolean) {
       cdkBuilder.cachingEnabled(cachingEnabled)
     }
 
-    public override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+    override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
       cdkBuilder.dataTraceEnabled(dataTraceEnabled)
     }
 
-    public override fun loggingLevel(loggingLevel: MethodLoggingLevel) {
+    override fun loggingLevel(loggingLevel: MethodLoggingLevel) {
       cdkBuilder.loggingLevel(loggingLevel.let(MethodLoggingLevel::unwrap))
     }
 
-    public override fun metricsEnabled(metricsEnabled: Boolean) {
+    override fun metricsEnabled(metricsEnabled: Boolean) {
       cdkBuilder.metricsEnabled(metricsEnabled)
     }
 
-    public override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+    override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
       cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
     }
 
-    public override fun throttlingRateLimit(throttlingRateLimit: Number) {
+    override fun throttlingRateLimit(throttlingRateLimit: Number) {
       cdkBuilder.throttlingRateLimit(throttlingRateLimit)
     }
 
@@ -93,22 +85,22 @@ public interface MethodDeploymentOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.MethodDeploymentOptions,
   ) : MethodDeploymentOptions {
-    public override fun cacheDataEncrypted(): Boolean? = unwrap(this).getCacheDataEncrypted()
+    override fun cacheDataEncrypted(): Boolean? = unwrap(this).getCacheDataEncrypted()
 
-    public override fun cacheTtl(): Duration? = unwrap(this).getCacheTtl()?.let(Duration::wrap)
+    override fun cacheTtl(): Duration? = unwrap(this).getCacheTtl()?.let(Duration::wrap)
 
-    public override fun cachingEnabled(): Boolean? = unwrap(this).getCachingEnabled()
+    override fun cachingEnabled(): Boolean? = unwrap(this).getCachingEnabled()
 
-    public override fun dataTraceEnabled(): Boolean? = unwrap(this).getDataTraceEnabled()
+    override fun dataTraceEnabled(): Boolean? = unwrap(this).getDataTraceEnabled()
 
-    public override fun loggingLevel(): MethodLoggingLevel? =
+    override fun loggingLevel(): MethodLoggingLevel? =
         unwrap(this).getLoggingLevel()?.let(MethodLoggingLevel::wrap)
 
-    public override fun metricsEnabled(): Boolean? = unwrap(this).getMetricsEnabled()
+    override fun metricsEnabled(): Boolean? = unwrap(this).getMetricsEnabled()
 
-    public override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+    override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
 
-    public override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+    override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
   }
 
   public companion object {

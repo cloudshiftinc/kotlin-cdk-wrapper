@@ -79,32 +79,23 @@ public open class CfnVPNConnection internal constructor(
   }
 
   public interface Builder {
-    public fun customerGatewayId(customerGatewayId: String) {
-    }
+    public fun customerGatewayId(customerGatewayId: String)
 
-    public fun staticRoutesOnly(staticRoutesOnly: Boolean) {
-    }
+    public fun staticRoutesOnly(staticRoutesOnly: Boolean)
 
-    public fun staticRoutesOnly(staticRoutesOnly: IResolvable) {
-    }
+    public fun staticRoutesOnly(staticRoutesOnly: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitGatewayId(transitGatewayId: String) {
-    }
+    public fun transitGatewayId(transitGatewayId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun vpnGatewayId(vpnGatewayId: String) {
-    }
+    public fun vpnGatewayId(vpnGatewayId: String)
 
-    public fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable) {
-    }
+    public fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable)
 
-    public fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>) {
-    }
+    public fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>)
   }
 
   private class BuilderImpl(
@@ -114,40 +105,39 @@ public open class CfnVPNConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPNConnection.Builder =
         software.amazon.awscdk.services.ec2.CfnVPNConnection.Builder.create(scope, id)
 
-    public override fun customerGatewayId(customerGatewayId: String) {
+    override fun customerGatewayId(customerGatewayId: String) {
       cdkBuilder.customerGatewayId(customerGatewayId)
     }
 
-    public override fun staticRoutesOnly(staticRoutesOnly: Boolean) {
+    override fun staticRoutesOnly(staticRoutesOnly: Boolean) {
       cdkBuilder.staticRoutesOnly(staticRoutesOnly)
     }
 
-    public override fun staticRoutesOnly(staticRoutesOnly: IResolvable) {
+    override fun staticRoutesOnly(staticRoutesOnly: IResolvable) {
       cdkBuilder.staticRoutesOnly(staticRoutesOnly.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitGatewayId(transitGatewayId: String) {
+    override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun vpnGatewayId(vpnGatewayId: String) {
+    override fun vpnGatewayId(vpnGatewayId: String) {
       cdkBuilder.vpnGatewayId(vpnGatewayId)
     }
 
-    public override
-        fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable) {
+    override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable) {
       cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>) {
+    override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>) {
       cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications)
     }
 
@@ -181,11 +171,9 @@ public open class CfnVPNConnection internal constructor(
     public fun tunnelInsideCidr(): String? = unwrap(this).getTunnelInsideCidr()
 
     public interface Builder {
-      public fun preSharedKey(preSharedKey: String) {
-      }
+      public fun preSharedKey(preSharedKey: String)
 
-      public fun tunnelInsideCidr(tunnelInsideCidr: String) {
-      }
+      public fun tunnelInsideCidr(tunnelInsideCidr: String)
     }
 
     private class BuilderImpl : Builder {
@@ -194,11 +182,11 @@ public open class CfnVPNConnection internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty.builder()
 
-      public override fun preSharedKey(preSharedKey: String) {
+      override fun preSharedKey(preSharedKey: String) {
         cdkBuilder.preSharedKey(preSharedKey)
       }
 
-      public override fun tunnelInsideCidr(tunnelInsideCidr: String) {
+      override fun tunnelInsideCidr(tunnelInsideCidr: String) {
         cdkBuilder.tunnelInsideCidr(tunnelInsideCidr)
       }
 
@@ -211,9 +199,9 @@ public open class CfnVPNConnection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty,
     ) : VpnTunnelOptionsSpecificationProperty {
-      public override fun preSharedKey(): String? = unwrap(this).getPreSharedKey()
+      override fun preSharedKey(): String? = unwrap(this).getPreSharedKey()
 
-      public override fun tunnelInsideCidr(): String? = unwrap(this).getTunnelInsideCidr()
+      override fun tunnelInsideCidr(): String? = unwrap(this).getTunnelInsideCidr()
     }
 
     public companion object {

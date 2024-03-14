@@ -42,11 +42,9 @@ public open class CfnModuleVersion internal constructor(
   }
 
   public interface Builder {
-    public fun moduleName(moduleName: String) {
-    }
+    public fun moduleName(moduleName: String)
 
-    public fun modulePackage(modulePackage: String) {
-    }
+    public fun modulePackage(modulePackage: String)
   }
 
   private class BuilderImpl(
@@ -56,11 +54,11 @@ public open class CfnModuleVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnModuleVersion.Builder =
         software.amazon.awscdk.CfnModuleVersion.Builder.create(scope, id)
 
-    public override fun moduleName(moduleName: String) {
+    override fun moduleName(moduleName: String) {
       cdkBuilder.moduleName(moduleName)
     }
 
-    public override fun modulePackage(modulePackage: String) {
+    override fun modulePackage(modulePackage: String) {
       cdkBuilder.modulePackage(modulePackage)
     }
 

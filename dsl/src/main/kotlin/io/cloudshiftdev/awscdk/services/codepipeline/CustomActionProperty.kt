@@ -20,26 +20,19 @@ public interface CustomActionProperty {
   public fun type(): String? = unwrap(this).getType()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun key(key: Boolean) {
-    }
+    public fun key(key: Boolean)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun queryable(queryable: Boolean) {
-    }
+    public fun queryable(queryable: Boolean)
 
-    public fun required(required: Boolean) {
-    }
+    public fun required(required: Boolean)
 
-    public fun secret(secret: Boolean) {
-    }
+    public fun secret(secret: Boolean)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
@@ -47,31 +40,31 @@ public interface CustomActionProperty {
         software.amazon.awscdk.services.codepipeline.CustomActionProperty.Builder =
         software.amazon.awscdk.services.codepipeline.CustomActionProperty.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun key(key: Boolean) {
+    override fun key(key: Boolean) {
       cdkBuilder.key(key)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun queryable(queryable: Boolean) {
+    override fun queryable(queryable: Boolean) {
       cdkBuilder.queryable(queryable)
     }
 
-    public override fun required(required: Boolean) {
+    override fun required(required: Boolean) {
       cdkBuilder.required(required)
     }
 
-    public override fun secret(secret: Boolean) {
+    override fun secret(secret: Boolean) {
       cdkBuilder.secret(secret)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -82,19 +75,19 @@ public interface CustomActionProperty {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.CustomActionProperty,
   ) : CustomActionProperty {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun key(): Boolean? = unwrap(this).getKey()
+    override fun key(): Boolean? = unwrap(this).getKey()
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun queryable(): Boolean? = unwrap(this).getQueryable()
+    override fun queryable(): Boolean? = unwrap(this).getQueryable()
 
-    public override fun required(): Boolean = unwrap(this).getRequired()
+    override fun required(): Boolean = unwrap(this).getRequired()
 
-    public override fun secret(): Boolean? = unwrap(this).getSecret()
+    override fun secret(): Boolean? = unwrap(this).getSecret()
 
-    public override fun type(): String? = unwrap(this).getType()
+    override fun type(): String? = unwrap(this).getType()
   }
 
   public companion object {

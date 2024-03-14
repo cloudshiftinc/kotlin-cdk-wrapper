@@ -35,14 +35,11 @@ public open class CfnResource internal constructor(
   }
 
   public interface Builder {
-    public fun parentId(parentId: String) {
-    }
+    public fun parentId(parentId: String)
 
-    public fun pathPart(pathPart: String) {
-    }
+    public fun pathPart(pathPart: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
   }
 
   private class BuilderImpl(
@@ -52,15 +49,15 @@ public open class CfnResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnResource.Builder =
         software.amazon.awscdk.services.apigateway.CfnResource.Builder.create(scope, id)
 
-    public override fun parentId(parentId: String) {
+    override fun parentId(parentId: String) {
       cdkBuilder.parentId(parentId)
     }
 
-    public override fun pathPart(pathPart: String) {
+    override fun pathPart(pathPart: String) {
       cdkBuilder.pathPart(pathPart)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 

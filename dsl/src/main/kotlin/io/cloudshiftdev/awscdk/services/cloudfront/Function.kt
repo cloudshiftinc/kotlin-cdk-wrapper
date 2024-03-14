@@ -20,20 +20,15 @@ public open class Function internal constructor(
   public open fun functionStage(): String = unwrap(this).getFunctionStage()
 
   public interface Builder {
-    public fun code(code: FunctionCode) {
-    }
+    public fun code(code: FunctionCode)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun keyValueStore(keyValueStore: IKeyValueStore) {
-    }
+    public fun keyValueStore(keyValueStore: IKeyValueStore)
 
-    public fun runtime(runtime: FunctionRuntime) {
-    }
+    public fun runtime(runtime: FunctionRuntime)
   }
 
   private class BuilderImpl(
@@ -43,23 +38,23 @@ public open class Function internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.Function.Builder =
         software.amazon.awscdk.services.cloudfront.Function.Builder.create(scope, id)
 
-    public override fun code(code: FunctionCode) {
+    override fun code(code: FunctionCode) {
       cdkBuilder.code(code.let(FunctionCode::unwrap))
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun keyValueStore(keyValueStore: IKeyValueStore) {
+    override fun keyValueStore(keyValueStore: IKeyValueStore) {
       cdkBuilder.keyValueStore(keyValueStore.let(IKeyValueStore::unwrap))
     }
 
-    public override fun runtime(runtime: FunctionRuntime) {
+    override fun runtime(runtime: FunctionRuntime) {
       cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
     }
 

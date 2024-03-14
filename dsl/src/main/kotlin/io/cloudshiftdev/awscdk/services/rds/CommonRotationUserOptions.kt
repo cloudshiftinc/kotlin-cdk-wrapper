@@ -28,61 +28,54 @@ public interface CommonRotationUserOptions {
       unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
 
   public interface Builder {
-    public fun automaticallyAfter(automaticallyAfter: Duration) {
-    }
+    public fun automaticallyAfter(automaticallyAfter: Duration)
 
-    public fun endpoint(endpoint: IInterfaceVpcEndpoint) {
-    }
+    public fun endpoint(endpoint: IInterfaceVpcEndpoint)
 
-    public fun excludeCharacters(excludeCharacters: String) {
-    }
+    public fun excludeCharacters(excludeCharacters: String)
 
-    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
-    }
+    public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b200c3d785e2d1316710b34f4ad38b694f599a3aadc2577bfeb61652e2e267b")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.CommonRotationUserOptions.Builder =
         software.amazon.awscdk.services.rds.CommonRotationUserOptions.builder()
 
-    public override fun automaticallyAfter(automaticallyAfter: Duration) {
+    override fun automaticallyAfter(automaticallyAfter: Duration) {
       cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
     }
 
-    public override fun endpoint(endpoint: IInterfaceVpcEndpoint) {
+    override fun endpoint(endpoint: IInterfaceVpcEndpoint) {
       cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint::unwrap))
     }
 
-    public override fun excludeCharacters(excludeCharacters: String) {
+    override fun excludeCharacters(excludeCharacters: String) {
       cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    public override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+    override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
       cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b200c3d785e2d1316710b34f4ad38b694f599a3aadc2577bfeb61652e2e267b")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.rds.CommonRotationUserOptions =
@@ -92,21 +85,20 @@ public interface CommonRotationUserOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.CommonRotationUserOptions,
   ) : CommonRotationUserOptions {
-    public override fun automaticallyAfter(): Duration? =
+    override fun automaticallyAfter(): Duration? =
         unwrap(this).getAutomaticallyAfter()?.let(Duration::wrap)
 
-    public override fun endpoint(): IInterfaceVpcEndpoint? =
+    override fun endpoint(): IInterfaceVpcEndpoint? =
         unwrap(this).getEndpoint()?.let(IInterfaceVpcEndpoint::wrap)
 
-    public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-    public override fun rotateImmediatelyOnUpdate(): Boolean? =
-        unwrap(this).getRotateImmediatelyOnUpdate()
+    override fun rotateImmediatelyOnUpdate(): Boolean? = unwrap(this).getRotateImmediatelyOnUpdate()
 
-    public override fun securityGroup(): ISecurityGroup? =
+    override fun securityGroup(): ISecurityGroup? =
         unwrap(this).getSecurityGroup()?.let(ISecurityGroup::wrap)
 
-    public override fun vpcSubnets(): SubnetSelection? =
+    override fun vpcSubnets(): SubnetSelection? =
         unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
   }
 

@@ -13,39 +13,35 @@ public interface RequestedSubnet {
   public fun subnetConstructId(): String
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun configuration(configuration: SubnetConfiguration) {
-    }
+    public fun configuration(configuration: SubnetConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3f87569b62eacfcfcda010420159d9d3ceee882f942f9f1a29533e4aac952cc")
-    public fun configuration(configuration: SubnetConfiguration.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: SubnetConfiguration.Builder.() -> Unit)
 
-    public fun subnetConstructId(subnetConstructId: String) {
-    }
+    public fun subnetConstructId(subnetConstructId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.RequestedSubnet.Builder =
         software.amazon.awscdk.services.ec2.RequestedSubnet.builder()
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun configuration(configuration: SubnetConfiguration) {
+    override fun configuration(configuration: SubnetConfiguration) {
       cdkBuilder.configuration(configuration.let(SubnetConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3f87569b62eacfcfcda010420159d9d3ceee882f942f9f1a29533e4aac952cc")
-    public override fun configuration(configuration: SubnetConfiguration.Builder.() -> Unit): Unit =
+    override fun configuration(configuration: SubnetConfiguration.Builder.() -> Unit): Unit =
         configuration(SubnetConfiguration(configuration))
 
-    public override fun subnetConstructId(subnetConstructId: String) {
+    override fun subnetConstructId(subnetConstructId: String) {
       cdkBuilder.subnetConstructId(subnetConstructId)
     }
 
@@ -55,12 +51,12 @@ public interface RequestedSubnet {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.RequestedSubnet,
   ) : RequestedSubnet {
-    public override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+    override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
 
-    public override fun configuration(): SubnetConfiguration =
+    override fun configuration(): SubnetConfiguration =
         unwrap(this).getConfiguration().let(SubnetConfiguration::wrap)
 
-    public override fun subnetConstructId(): String = unwrap(this).getSubnetConstructId()
+    override fun subnetConstructId(): String = unwrap(this).getSubnetConstructId()
   }
 
   public companion object {

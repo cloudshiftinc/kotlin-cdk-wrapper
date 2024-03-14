@@ -8,22 +8,20 @@ public interface ThroughputProps {
   public fun writeCapacity(): Capacity
 
   public interface Builder {
-    public fun readCapacity(readCapacity: Capacity) {
-    }
+    public fun readCapacity(readCapacity: Capacity)
 
-    public fun writeCapacity(writeCapacity: Capacity) {
-    }
+    public fun writeCapacity(writeCapacity: Capacity)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.ThroughputProps.Builder =
         software.amazon.awscdk.services.dynamodb.ThroughputProps.builder()
 
-    public override fun readCapacity(readCapacity: Capacity) {
+    override fun readCapacity(readCapacity: Capacity) {
       cdkBuilder.readCapacity(readCapacity.let(Capacity::unwrap))
     }
 
-    public override fun writeCapacity(writeCapacity: Capacity) {
+    override fun writeCapacity(writeCapacity: Capacity) {
       cdkBuilder.writeCapacity(writeCapacity.let(Capacity::unwrap))
     }
 
@@ -34,11 +32,9 @@ public interface ThroughputProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.ThroughputProps,
   ) : ThroughputProps {
-    public override fun readCapacity(): Capacity =
-        unwrap(this).getReadCapacity().let(Capacity::wrap)
+    override fun readCapacity(): Capacity = unwrap(this).getReadCapacity().let(Capacity::wrap)
 
-    public override fun writeCapacity(): Capacity =
-        unwrap(this).getWriteCapacity().let(Capacity::wrap)
+    override fun writeCapacity(): Capacity = unwrap(this).getWriteCapacity().let(Capacity::wrap)
   }
 
   public companion object {

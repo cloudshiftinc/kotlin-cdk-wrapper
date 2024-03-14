@@ -62,14 +62,11 @@ public open class CfnIPAMResourceDiscoveryAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun ipamId(ipamId: String) {
-    }
+    public fun ipamId(ipamId: String)
 
-    public fun ipamResourceDiscoveryId(ipamResourceDiscoveryId: String) {
-    }
+    public fun ipamResourceDiscoveryId(ipamResourceDiscoveryId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -81,15 +78,15 @@ public open class CfnIPAMResourceDiscoveryAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation.Builder.create(scope,
         id)
 
-    public override fun ipamId(ipamId: String) {
+    override fun ipamId(ipamId: String) {
       cdkBuilder.ipamId(ipamId)
     }
 
-    public override fun ipamResourceDiscoveryId(ipamResourceDiscoveryId: String) {
+    override fun ipamResourceDiscoveryId(ipamResourceDiscoveryId: String) {
       cdkBuilder.ipamResourceDiscoveryId(ipamResourceDiscoveryId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

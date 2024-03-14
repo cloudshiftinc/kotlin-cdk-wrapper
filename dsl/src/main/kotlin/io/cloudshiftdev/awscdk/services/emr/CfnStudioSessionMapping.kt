@@ -40,17 +40,13 @@ public open class CfnStudioSessionMapping internal constructor(
   }
 
   public interface Builder {
-    public fun identityName(identityName: String) {
-    }
+    public fun identityName(identityName: String)
 
-    public fun identityType(identityType: String) {
-    }
+    public fun identityType(identityType: String)
 
-    public fun sessionPolicyArn(sessionPolicyArn: String) {
-    }
+    public fun sessionPolicyArn(sessionPolicyArn: String)
 
-    public fun studioId(studioId: String) {
-    }
+    public fun studioId(studioId: String)
   }
 
   private class BuilderImpl(
@@ -60,19 +56,19 @@ public open class CfnStudioSessionMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emr.CfnStudioSessionMapping.Builder =
         software.amazon.awscdk.services.emr.CfnStudioSessionMapping.Builder.create(scope, id)
 
-    public override fun identityName(identityName: String) {
+    override fun identityName(identityName: String) {
       cdkBuilder.identityName(identityName)
     }
 
-    public override fun identityType(identityType: String) {
+    override fun identityType(identityType: String) {
       cdkBuilder.identityType(identityType)
     }
 
-    public override fun sessionPolicyArn(sessionPolicyArn: String) {
+    override fun sessionPolicyArn(sessionPolicyArn: String) {
       cdkBuilder.sessionPolicyArn(sessionPolicyArn)
     }
 
-    public override fun studioId(studioId: String) {
+    override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 

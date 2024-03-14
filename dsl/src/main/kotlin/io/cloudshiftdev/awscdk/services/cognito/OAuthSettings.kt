@@ -17,45 +17,40 @@ public interface OAuthSettings {
       emptyList()
 
   public interface Builder {
-    public fun callbackUrls(callbackUrls: List<String>) {
-    }
+    public fun callbackUrls(callbackUrls: List<String>)
 
-    public fun flows(flows: OAuthFlows) {
-    }
+    public fun flows(flows: OAuthFlows)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb93ec242576c1797aed90a7fd0d4beb2c24332026aa722bda799a62aa9f77fd")
-    public fun flows(flows: OAuthFlows.Builder.() -> Unit) {
-    }
+    public fun flows(flows: OAuthFlows.Builder.() -> Unit)
 
-    public fun logoutUrls(logoutUrls: List<String>) {
-    }
+    public fun logoutUrls(logoutUrls: List<String>)
 
-    public fun scopes(scopes: List<OAuthScope>) {
-    }
+    public fun scopes(scopes: List<OAuthScope>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.OAuthSettings.Builder =
         software.amazon.awscdk.services.cognito.OAuthSettings.builder()
 
-    public override fun callbackUrls(callbackUrls: List<String>) {
+    override fun callbackUrls(callbackUrls: List<String>) {
       cdkBuilder.callbackUrls(callbackUrls)
     }
 
-    public override fun flows(flows: OAuthFlows) {
+    override fun flows(flows: OAuthFlows) {
       cdkBuilder.flows(flows.let(OAuthFlows::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb93ec242576c1797aed90a7fd0d4beb2c24332026aa722bda799a62aa9f77fd")
-    public override fun flows(flows: OAuthFlows.Builder.() -> Unit): Unit = flows(OAuthFlows(flows))
+    override fun flows(flows: OAuthFlows.Builder.() -> Unit): Unit = flows(OAuthFlows(flows))
 
-    public override fun logoutUrls(logoutUrls: List<String>) {
+    override fun logoutUrls(logoutUrls: List<String>) {
       cdkBuilder.logoutUrls(logoutUrls)
     }
 
-    public override fun scopes(scopes: List<OAuthScope>) {
+    override fun scopes(scopes: List<OAuthScope>) {
       cdkBuilder.scopes(scopes.map(OAuthScope::unwrap))
     }
 
@@ -65,14 +60,14 @@ public interface OAuthSettings {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.OAuthSettings,
   ) : OAuthSettings {
-    public override fun callbackUrls(): List<String> = unwrap(this).getCallbackUrls() ?: emptyList()
+    override fun callbackUrls(): List<String> = unwrap(this).getCallbackUrls() ?: emptyList()
 
-    public override fun flows(): OAuthFlows? = unwrap(this).getFlows()?.let(OAuthFlows::wrap)
+    override fun flows(): OAuthFlows? = unwrap(this).getFlows()?.let(OAuthFlows::wrap)
 
-    public override fun logoutUrls(): List<String> = unwrap(this).getLogoutUrls() ?: emptyList()
+    override fun logoutUrls(): List<String> = unwrap(this).getLogoutUrls() ?: emptyList()
 
-    public override fun scopes(): List<OAuthScope> = unwrap(this).getScopes()?.map(OAuthScope::wrap)
-        ?: emptyList()
+    override fun scopes(): List<OAuthScope> = unwrap(this).getScopes()?.map(OAuthScope::wrap) ?:
+        emptyList()
   }
 
   public companion object {

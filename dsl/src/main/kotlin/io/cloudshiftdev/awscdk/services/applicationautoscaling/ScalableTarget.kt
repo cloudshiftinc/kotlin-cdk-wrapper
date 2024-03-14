@@ -56,23 +56,17 @@ public open class ScalableTarget internal constructor(
       = scaleToTrackMetric(id, BasicTargetTrackingScalingPolicyProps(props))
 
   public interface Builder {
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun scalableDimension(scalableDimension: String) {
-    }
+    public fun scalableDimension(scalableDimension: String)
 
-    public fun serviceNamespace(serviceNamespace: ServiceNamespace) {
-    }
+    public fun serviceNamespace(serviceNamespace: ServiceNamespace)
   }
 
   private class BuilderImpl(
@@ -84,27 +78,27 @@ public open class ScalableTarget internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.ScalableTarget.Builder.create(scope,
         id)
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun scalableDimension(scalableDimension: String) {
+    override fun scalableDimension(scalableDimension: String) {
       cdkBuilder.scalableDimension(scalableDimension)
     }
 
-    public override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
+    override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
       cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace::unwrap))
     }
 

@@ -32,80 +32,57 @@ public open class EcsRunTask internal constructor(
       unwrap(this).getConnections().let(Connections::wrap)
 
   public interface Builder {
-    public fun assignPublicIp(assignPublicIp: Boolean) {
-    }
+    public fun assignPublicIp(assignPublicIp: Boolean)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-    }
+    public fun containerOverrides(containerOverrides: List<ContainerOverride>)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("70ebe03278a53b551b732afadb0fad9fa84cad26998f0d5390edfd9bf918bd2e")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun launchTarget(launchTarget: IEcsLaunchTarget) {
-    }
+    public fun launchTarget(launchTarget: IEcsLaunchTarget)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun propagatedTagSource(propagatedTagSource: PropagatedTagSource) {
-    }
+    public fun propagatedTagSource(propagatedTagSource: PropagatedTagSource)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun revisionNumber(revisionNumber: Number) {
-    }
+    public fun revisionNumber(revisionNumber: Number)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun subnets(subnets: SubnetSelection) {
-    }
+    public fun subnets(subnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53ef47c4171694591a1bf3d57aaafc4fe3f6177bfc360a41d93d468a4f845a37")
-    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnets(subnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun taskDefinition(taskDefinition: TaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: TaskDefinition)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -115,99 +92,99 @@ public open class EcsRunTask internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask.Builder.create(scope, id)
 
-    public override fun assignPublicIp(assignPublicIp: Boolean) {
+    override fun assignPublicIp(assignPublicIp: Boolean) {
       cdkBuilder.assignPublicIp(assignPublicIp)
     }
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
+    override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
       cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("70ebe03278a53b551b732afadb0fad9fa84cad26998f0d5390edfd9bf918bd2e")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun launchTarget(launchTarget: IEcsLaunchTarget) {
+    override fun launchTarget(launchTarget: IEcsLaunchTarget) {
       cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget::unwrap))
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun propagatedTagSource(propagatedTagSource: PropagatedTagSource) {
+    override fun propagatedTagSource(propagatedTagSource: PropagatedTagSource) {
       cdkBuilder.propagatedTagSource(propagatedTagSource.let(PropagatedTagSource::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun revisionNumber(revisionNumber: Number) {
+    override fun revisionNumber(revisionNumber: Number) {
       cdkBuilder.revisionNumber(revisionNumber)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun subnets(subnets: SubnetSelection) {
+    override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53ef47c4171694591a1bf3d57aaafc4fe3f6177bfc360a41d93d468a4f845a37")
-    public override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
         subnets(SubnetSelection(subnets))
 
-    public override fun taskDefinition(taskDefinition: TaskDefinition) {
+    override fun taskDefinition(taskDefinition: TaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

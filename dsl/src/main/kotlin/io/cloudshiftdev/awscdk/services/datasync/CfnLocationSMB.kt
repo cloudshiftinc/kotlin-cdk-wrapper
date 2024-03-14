@@ -88,37 +88,27 @@ public open class CfnLocationSMB internal constructor(
   }
 
   public interface Builder {
-    public fun agentArns(agentArns: List<String>) {
-    }
+    public fun agentArns(agentArns: List<String>)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun mountOptions(mountOptions: IResolvable) {
-    }
+    public fun mountOptions(mountOptions: IResolvable)
 
-    public fun mountOptions(mountOptions: MountOptionsProperty) {
-    }
+    public fun mountOptions(mountOptions: MountOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51930ce9ee3cf3fe5eb351c76bcc50e4ab9e856db9e41ba2273cffed3ca556d5")
-    public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit)
 
-    public fun password(password: String) {
-    }
+    public fun password(password: String)
 
-    public fun serverHostname(serverHostname: String) {
-    }
+    public fun serverHostname(serverHostname: String)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun user(user: String) {
-    }
+    public fun user(user: String)
   }
 
   private class BuilderImpl(
@@ -128,44 +118,44 @@ public open class CfnLocationSMB internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationSMB.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationSMB.Builder.create(scope, id)
 
-    public override fun agentArns(agentArns: List<String>) {
+    override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun mountOptions(mountOptions: IResolvable) {
+    override fun mountOptions(mountOptions: IResolvable) {
       cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
     }
 
-    public override fun mountOptions(mountOptions: MountOptionsProperty) {
+    override fun mountOptions(mountOptions: MountOptionsProperty) {
       cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("51930ce9ee3cf3fe5eb351c76bcc50e4ab9e856db9e41ba2273cffed3ca556d5")
-    public override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
+    override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
         mountOptions(MountOptionsProperty(mountOptions))
 
-    public override fun password(password: String) {
+    override fun password(password: String) {
       cdkBuilder.password(password)
     }
 
-    public override fun serverHostname(serverHostname: String) {
+    override fun serverHostname(serverHostname: String) {
       cdkBuilder.serverHostname(serverHostname)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun user(user: String) {
+    override fun user(user: String) {
       cdkBuilder.user(user)
     }
 
@@ -197,8 +187,7 @@ public open class CfnLocationSMB internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -206,7 +195,7 @@ public open class CfnLocationSMB internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty.builder()
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -219,7 +208,7 @@ public open class CfnLocationSMB internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationSMB.MountOptionsProperty,
     ) : MountOptionsProperty {
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {

@@ -57,20 +57,15 @@ public open class CfnWorkspace internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun role(role: String) {
-    }
+    public fun role(role: String)
 
-    public fun s3Location(s3Location: String) {
-    }
+    public fun s3Location(s3Location: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun workspaceId(workspaceId: String) {
-    }
+    public fun workspaceId(workspaceId: String)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnWorkspace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iottwinmaker.CfnWorkspace.Builder =
         software.amazon.awscdk.services.iottwinmaker.CfnWorkspace.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun role(role: String) {
+    override fun role(role: String) {
       cdkBuilder.role(role)
     }
 
-    public override fun s3Location(s3Location: String) {
+    override fun s3Location(s3Location: String) {
       cdkBuilder.s3Location(s3Location)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun workspaceId(workspaceId: String) {
+    override fun workspaceId(workspaceId: String) {
       cdkBuilder.workspaceId(workspaceId)
     }
 

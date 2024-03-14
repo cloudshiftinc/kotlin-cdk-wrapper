@@ -40,17 +40,13 @@ public open class CfnPullThroughCacheRule internal constructor(
   }
 
   public interface Builder {
-    public fun credentialArn(credentialArn: String) {
-    }
+    public fun credentialArn(credentialArn: String)
 
-    public fun ecrRepositoryPrefix(ecrRepositoryPrefix: String) {
-    }
+    public fun ecrRepositoryPrefix(ecrRepositoryPrefix: String)
 
-    public fun upstreamRegistry(upstreamRegistry: String) {
-    }
+    public fun upstreamRegistry(upstreamRegistry: String)
 
-    public fun upstreamRegistryUrl(upstreamRegistryUrl: String) {
-    }
+    public fun upstreamRegistryUrl(upstreamRegistryUrl: String)
   }
 
   private class BuilderImpl(
@@ -60,19 +56,19 @@ public open class CfnPullThroughCacheRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule.Builder =
         software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule.Builder.create(scope, id)
 
-    public override fun credentialArn(credentialArn: String) {
+    override fun credentialArn(credentialArn: String) {
       cdkBuilder.credentialArn(credentialArn)
     }
 
-    public override fun ecrRepositoryPrefix(ecrRepositoryPrefix: String) {
+    override fun ecrRepositoryPrefix(ecrRepositoryPrefix: String) {
       cdkBuilder.ecrRepositoryPrefix(ecrRepositoryPrefix)
     }
 
-    public override fun upstreamRegistry(upstreamRegistry: String) {
+    override fun upstreamRegistry(upstreamRegistry: String) {
       cdkBuilder.upstreamRegistry(upstreamRegistry)
     }
 
-    public override fun upstreamRegistryUrl(upstreamRegistryUrl: String) {
+    override fun upstreamRegistryUrl(upstreamRegistryUrl: String) {
       cdkBuilder.upstreamRegistryUrl(upstreamRegistryUrl)
     }
 

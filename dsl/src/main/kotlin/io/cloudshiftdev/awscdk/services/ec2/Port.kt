@@ -14,36 +14,32 @@ public open class Port internal constructor(
   public open fun toRuleJson(): Any = unwrap(this).toRuleJson()
 
   public interface Builder {
-    public fun fromPort(fromPort: Number) {
-    }
+    public fun fromPort(fromPort: Number)
 
-    public fun protocol(protocol: Protocol) {
-    }
+    public fun protocol(protocol: Protocol)
 
-    public fun stringRepresentation(stringRepresentation: String) {
-    }
+    public fun stringRepresentation(stringRepresentation: String)
 
-    public fun toPort(toPort: Number) {
-    }
+    public fun toPort(toPort: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.Port.Builder =
         software.amazon.awscdk.services.ec2.Port.Builder.create()
 
-    public override fun fromPort(fromPort: Number) {
+    override fun fromPort(fromPort: Number) {
       cdkBuilder.fromPort(fromPort)
     }
 
-    public override fun protocol(protocol: Protocol) {
+    override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
-    public override fun stringRepresentation(stringRepresentation: String) {
+    override fun stringRepresentation(stringRepresentation: String) {
       cdkBuilder.stringRepresentation(stringRepresentation)
     }
 
-    public override fun toPort(toPort: Number) {
+    override fun toPort(toPort: Number) {
       cdkBuilder.toPort(toPort)
     }
 

@@ -35,11 +35,9 @@ public open class CfnWALWorkspace internal constructor(
   }
 
   public interface Builder {
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun walWorkspaceName(walWorkspaceName: String) {
-    }
+    public fun walWorkspaceName(walWorkspaceName: String)
   }
 
   private class BuilderImpl(
@@ -49,11 +47,11 @@ public open class CfnWALWorkspace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emr.CfnWALWorkspace.Builder =
         software.amazon.awscdk.services.emr.CfnWALWorkspace.Builder.create(scope, id)
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun walWorkspaceName(walWorkspaceName: String) {
+    override fun walWorkspaceName(walWorkspaceName: String) {
       cdkBuilder.walWorkspaceName(walWorkspaceName)
     }
 

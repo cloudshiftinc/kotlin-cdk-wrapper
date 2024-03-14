@@ -79,37 +79,27 @@ public open class CfnCampaign internal constructor(
   }
 
   public interface Builder {
-    public fun connectInstanceArn(connectInstanceArn: String) {
-    }
+    public fun connectInstanceArn(connectInstanceArn: String)
 
-    public fun dialerConfig(dialerConfig: IResolvable) {
-    }
+    public fun dialerConfig(dialerConfig: IResolvable)
 
-    public fun dialerConfig(dialerConfig: DialerConfigProperty) {
-    }
+    public fun dialerConfig(dialerConfig: DialerConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f55c809b3e8c0f3b83dab3a144dada3015026ada9a6a4d8d0e3905a638abf64")
-    public fun dialerConfig(dialerConfig: DialerConfigProperty.Builder.() -> Unit) {
-    }
+    public fun dialerConfig(dialerConfig: DialerConfigProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outboundCallConfig(outboundCallConfig: IResolvable) {
-    }
+    public fun outboundCallConfig(outboundCallConfig: IResolvable)
 
-    public fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty) {
-    }
+    public fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c8c96dc62df14c4127f1ecaff294064aab077816c13f7001d89338b6c13ff5b9")
-    public
-        fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty.Builder.() -> Unit) {
-    }
+    public fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -119,42 +109,42 @@ public open class CfnCampaign internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.Builder =
         software.amazon.awscdk.services.connectcampaigns.CfnCampaign.Builder.create(scope, id)
 
-    public override fun connectInstanceArn(connectInstanceArn: String) {
+    override fun connectInstanceArn(connectInstanceArn: String) {
       cdkBuilder.connectInstanceArn(connectInstanceArn)
     }
 
-    public override fun dialerConfig(dialerConfig: IResolvable) {
+    override fun dialerConfig(dialerConfig: IResolvable) {
       cdkBuilder.dialerConfig(dialerConfig.let(IResolvable::unwrap))
     }
 
-    public override fun dialerConfig(dialerConfig: DialerConfigProperty) {
+    override fun dialerConfig(dialerConfig: DialerConfigProperty) {
       cdkBuilder.dialerConfig(dialerConfig.let(DialerConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f55c809b3e8c0f3b83dab3a144dada3015026ada9a6a4d8d0e3905a638abf64")
-    public override fun dialerConfig(dialerConfig: DialerConfigProperty.Builder.() -> Unit): Unit =
+    override fun dialerConfig(dialerConfig: DialerConfigProperty.Builder.() -> Unit): Unit =
         dialerConfig(DialerConfigProperty(dialerConfig))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outboundCallConfig(outboundCallConfig: IResolvable) {
+    override fun outboundCallConfig(outboundCallConfig: IResolvable) {
       cdkBuilder.outboundCallConfig(outboundCallConfig.let(IResolvable::unwrap))
     }
 
-    public override fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty) {
+    override fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty) {
       cdkBuilder.outboundCallConfig(outboundCallConfig.let(OutboundCallConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c8c96dc62df14c4127f1ecaff294064aab077816c13f7001d89338b6c13ff5b9")
-    public override
+    override
         fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty.Builder.() -> Unit):
         Unit = outboundCallConfig(OutboundCallConfigProperty(outboundCallConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -187,11 +177,9 @@ public open class CfnCampaign internal constructor(
     public fun enableAnswerMachineDetection(): Any
 
     public interface Builder {
-      public fun enableAnswerMachineDetection(enableAnswerMachineDetection: Boolean) {
-      }
+      public fun enableAnswerMachineDetection(enableAnswerMachineDetection: Boolean)
 
-      public fun enableAnswerMachineDetection(enableAnswerMachineDetection: IResolvable) {
-      }
+      public fun enableAnswerMachineDetection(enableAnswerMachineDetection: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -200,11 +188,11 @@ public open class CfnCampaign internal constructor(
           =
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty.builder()
 
-      public override fun enableAnswerMachineDetection(enableAnswerMachineDetection: Boolean) {
+      override fun enableAnswerMachineDetection(enableAnswerMachineDetection: Boolean) {
         cdkBuilder.enableAnswerMachineDetection(enableAnswerMachineDetection)
       }
 
-      public override fun enableAnswerMachineDetection(enableAnswerMachineDetection: IResolvable) {
+      override fun enableAnswerMachineDetection(enableAnswerMachineDetection: IResolvable) {
         cdkBuilder.enableAnswerMachineDetection(enableAnswerMachineDetection.let(IResolvable::unwrap))
       }
 
@@ -217,7 +205,7 @@ public open class CfnCampaign internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty,
     ) : AnswerMachineDetectionConfigProperty {
-      public override fun enableAnswerMachineDetection(): Any =
+      override fun enableAnswerMachineDetection(): Any =
           unwrap(this).getEnableAnswerMachineDetection()
     }
 
@@ -246,8 +234,7 @@ public open class CfnCampaign internal constructor(
     public fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
 
     public interface Builder {
-      public fun dialingCapacity(dialingCapacity: Number) {
-      }
+      public fun dialingCapacity(dialingCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -256,7 +243,7 @@ public open class CfnCampaign internal constructor(
           =
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty.builder()
 
-      public override fun dialingCapacity(dialingCapacity: Number) {
+      override fun dialingCapacity(dialingCapacity: Number) {
         cdkBuilder.dialingCapacity(dialingCapacity)
       }
 
@@ -269,7 +256,7 @@ public open class CfnCampaign internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AgentlessDialerConfigProperty,
     ) : AgentlessDialerConfigProperty {
-      public override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
+      override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
     }
 
     public companion object {
@@ -302,27 +289,21 @@ public open class CfnCampaign internal constructor(
     public fun connectSourcePhoneNumber(): String? = unwrap(this).getConnectSourcePhoneNumber()
 
     public interface Builder {
-      public fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
-      }
+      public fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable)
 
       public
-          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty) {
-      }
+          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30b5821eb58e3395cd2d600c69a1fc9ca3fbab80d0f64fe4265499bbfaf82784")
       public
-          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit) {
-      }
+          fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit)
 
-      public fun connectContactFlowArn(connectContactFlowArn: String) {
-      }
+      public fun connectContactFlowArn(connectContactFlowArn: String)
 
-      public fun connectQueueArn(connectQueueArn: String) {
-      }
+      public fun connectQueueArn(connectQueueArn: String)
 
-      public fun connectSourcePhoneNumber(connectSourcePhoneNumber: String) {
-      }
+      public fun connectSourcePhoneNumber(connectSourcePhoneNumber: String)
     }
 
     private class BuilderImpl : Builder {
@@ -331,31 +312,31 @@ public open class CfnCampaign internal constructor(
           =
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty.builder()
 
-      public override fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
+      override fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
         cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty) {
         cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(AnswerMachineDetectionConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30b5821eb58e3395cd2d600c69a1fc9ca3fbab80d0f64fe4265499bbfaf82784")
-      public override
+      override
           fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty.Builder.() -> Unit):
           Unit =
           answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty(answerMachineDetectionConfig))
 
-      public override fun connectContactFlowArn(connectContactFlowArn: String) {
+      override fun connectContactFlowArn(connectContactFlowArn: String) {
         cdkBuilder.connectContactFlowArn(connectContactFlowArn)
       }
 
-      public override fun connectQueueArn(connectQueueArn: String) {
+      override fun connectQueueArn(connectQueueArn: String) {
         cdkBuilder.connectQueueArn(connectQueueArn)
       }
 
-      public override fun connectSourcePhoneNumber(connectSourcePhoneNumber: String) {
+      override fun connectSourcePhoneNumber(connectSourcePhoneNumber: String) {
         cdkBuilder.connectSourcePhoneNumber(connectSourcePhoneNumber)
       }
 
@@ -368,15 +349,14 @@ public open class CfnCampaign internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.OutboundCallConfigProperty,
     ) : OutboundCallConfigProperty {
-      public override fun answerMachineDetectionConfig(): Any? =
+      override fun answerMachineDetectionConfig(): Any? =
           unwrap(this).getAnswerMachineDetectionConfig()
 
-      public override fun connectContactFlowArn(): String = unwrap(this).getConnectContactFlowArn()
+      override fun connectContactFlowArn(): String = unwrap(this).getConnectContactFlowArn()
 
-      public override fun connectQueueArn(): String? = unwrap(this).getConnectQueueArn()
+      override fun connectQueueArn(): String? = unwrap(this).getConnectQueueArn()
 
-      public override fun connectSourcePhoneNumber(): String? =
-          unwrap(this).getConnectSourcePhoneNumber()
+      override fun connectSourcePhoneNumber(): String? = unwrap(this).getConnectSourcePhoneNumber()
     }
 
     public companion object {
@@ -407,41 +387,32 @@ public open class CfnCampaign internal constructor(
     public fun progressiveDialerConfig(): Any? = unwrap(this).getProgressiveDialerConfig()
 
     public interface Builder {
-      public fun agentlessDialerConfig(agentlessDialerConfig: IResolvable) {
-      }
+      public fun agentlessDialerConfig(agentlessDialerConfig: IResolvable)
 
-      public fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty) {
-      }
+      public fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b45977c5de4e7662314547f9d6ec3f9572397a61960db97c408fcf7651dd4fe6")
       public
-          fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty.Builder.() -> Unit) {
-      }
+          fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty.Builder.() -> Unit)
 
-      public fun predictiveDialerConfig(predictiveDialerConfig: IResolvable) {
-      }
+      public fun predictiveDialerConfig(predictiveDialerConfig: IResolvable)
 
-      public fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty) {
-      }
+      public fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83e453982aa0bff87c995c7b9d0c614bc3746d4e4c83d18172d9e4d3b9f42059")
       public
-          fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty.Builder.() -> Unit) {
-      }
+          fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty.Builder.() -> Unit)
 
-      public fun progressiveDialerConfig(progressiveDialerConfig: IResolvable) {
-      }
+      public fun progressiveDialerConfig(progressiveDialerConfig: IResolvable)
 
-      public fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty) {
-      }
+      public fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1a824f01e264afcdef0e7e56bc6fcedf0053fdc65017727ec0f7824869d40e46")
       public
-          fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty.Builder.() -> Unit) {
-      }
+          fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -450,48 +421,46 @@ public open class CfnCampaign internal constructor(
           =
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty.builder()
 
-      public override fun agentlessDialerConfig(agentlessDialerConfig: IResolvable) {
+      override fun agentlessDialerConfig(agentlessDialerConfig: IResolvable) {
         cdkBuilder.agentlessDialerConfig(agentlessDialerConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty) {
+      override fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty) {
         cdkBuilder.agentlessDialerConfig(agentlessDialerConfig.let(AgentlessDialerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b45977c5de4e7662314547f9d6ec3f9572397a61960db97c408fcf7651dd4fe6")
-      public override
+      override
           fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty.Builder.() -> Unit):
           Unit = agentlessDialerConfig(AgentlessDialerConfigProperty(agentlessDialerConfig))
 
-      public override fun predictiveDialerConfig(predictiveDialerConfig: IResolvable) {
+      override fun predictiveDialerConfig(predictiveDialerConfig: IResolvable) {
         cdkBuilder.predictiveDialerConfig(predictiveDialerConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty) {
+      override fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty) {
         cdkBuilder.predictiveDialerConfig(predictiveDialerConfig.let(PredictiveDialerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83e453982aa0bff87c995c7b9d0c614bc3746d4e4c83d18172d9e4d3b9f42059")
-      public override
+      override
           fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty.Builder.() -> Unit):
           Unit = predictiveDialerConfig(PredictiveDialerConfigProperty(predictiveDialerConfig))
 
-      public override fun progressiveDialerConfig(progressiveDialerConfig: IResolvable) {
+      override fun progressiveDialerConfig(progressiveDialerConfig: IResolvable) {
         cdkBuilder.progressiveDialerConfig(progressiveDialerConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty) {
         cdkBuilder.progressiveDialerConfig(progressiveDialerConfig.let(ProgressiveDialerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1a824f01e264afcdef0e7e56bc6fcedf0053fdc65017727ec0f7824869d40e46")
-      public override
+      override
           fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty.Builder.() -> Unit):
           Unit = progressiveDialerConfig(ProgressiveDialerConfigProperty(progressiveDialerConfig))
 
@@ -504,12 +473,11 @@ public open class CfnCampaign internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.DialerConfigProperty,
     ) : DialerConfigProperty {
-      public override fun agentlessDialerConfig(): Any? = unwrap(this).getAgentlessDialerConfig()
+      override fun agentlessDialerConfig(): Any? = unwrap(this).getAgentlessDialerConfig()
 
-      public override fun predictiveDialerConfig(): Any? = unwrap(this).getPredictiveDialerConfig()
+      override fun predictiveDialerConfig(): Any? = unwrap(this).getPredictiveDialerConfig()
 
-      public override fun progressiveDialerConfig(): Any? =
-          unwrap(this).getProgressiveDialerConfig()
+      override fun progressiveDialerConfig(): Any? = unwrap(this).getProgressiveDialerConfig()
     }
 
     public companion object {
@@ -538,11 +506,9 @@ public open class CfnCampaign internal constructor(
     public fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
 
     public interface Builder {
-      public fun bandwidthAllocation(bandwidthAllocation: Number) {
-      }
+      public fun bandwidthAllocation(bandwidthAllocation: Number)
 
-      public fun dialingCapacity(dialingCapacity: Number) {
-      }
+      public fun dialingCapacity(dialingCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -551,11 +517,11 @@ public open class CfnCampaign internal constructor(
           =
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.PredictiveDialerConfigProperty.builder()
 
-      public override fun bandwidthAllocation(bandwidthAllocation: Number) {
+      override fun bandwidthAllocation(bandwidthAllocation: Number) {
         cdkBuilder.bandwidthAllocation(bandwidthAllocation)
       }
 
-      public override fun dialingCapacity(dialingCapacity: Number) {
+      override fun dialingCapacity(dialingCapacity: Number) {
         cdkBuilder.dialingCapacity(dialingCapacity)
       }
 
@@ -568,9 +534,9 @@ public open class CfnCampaign internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.PredictiveDialerConfigProperty,
     ) : PredictiveDialerConfigProperty {
-      public override fun bandwidthAllocation(): Number = unwrap(this).getBandwidthAllocation()
+      override fun bandwidthAllocation(): Number = unwrap(this).getBandwidthAllocation()
 
-      public override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
+      override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
     }
 
     public companion object {
@@ -599,11 +565,9 @@ public open class CfnCampaign internal constructor(
     public fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
 
     public interface Builder {
-      public fun bandwidthAllocation(bandwidthAllocation: Number) {
-      }
+      public fun bandwidthAllocation(bandwidthAllocation: Number)
 
-      public fun dialingCapacity(dialingCapacity: Number) {
-      }
+      public fun dialingCapacity(dialingCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -612,11 +576,11 @@ public open class CfnCampaign internal constructor(
           =
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.ProgressiveDialerConfigProperty.builder()
 
-      public override fun bandwidthAllocation(bandwidthAllocation: Number) {
+      override fun bandwidthAllocation(bandwidthAllocation: Number) {
         cdkBuilder.bandwidthAllocation(bandwidthAllocation)
       }
 
-      public override fun dialingCapacity(dialingCapacity: Number) {
+      override fun dialingCapacity(dialingCapacity: Number) {
         cdkBuilder.dialingCapacity(dialingCapacity)
       }
 
@@ -629,9 +593,9 @@ public open class CfnCampaign internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.ProgressiveDialerConfigProperty,
     ) : ProgressiveDialerConfigProperty {
-      public override fun bandwidthAllocation(): Number = unwrap(this).getBandwidthAllocation()
+      override fun bandwidthAllocation(): Number = unwrap(this).getBandwidthAllocation()
 
-      public override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
+      override fun dialingCapacity(): Number? = unwrap(this).getDialingCapacity()
     }
 
     public companion object {

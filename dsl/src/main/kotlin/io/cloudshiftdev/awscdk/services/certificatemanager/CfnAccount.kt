@@ -39,18 +39,15 @@ public open class CfnAccount internal constructor(
   }
 
   public interface Builder {
-    public fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
-    }
+    public fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable)
 
     public
-        fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty) {
-    }
+        fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c0842bef1cd54d71866d8e9087bdbdfc9adda308f78261c7e89717540064bb2")
     public
-        fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -60,18 +57,18 @@ public open class CfnAccount internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.certificatemanager.CfnAccount.Builder =
         software.amazon.awscdk.services.certificatemanager.CfnAccount.Builder.create(scope, id)
 
-    public override fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
+    override fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
       cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty) {
       cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(ExpiryEventsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c0842bef1cd54d71866d8e9087bdbdfc9adda308f78261c7e89717540064bb2")
-    public override
+    override
         fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty.Builder.() -> Unit):
         Unit =
         expiryEventsConfiguration(ExpiryEventsConfigurationProperty(expiryEventsConfiguration))
@@ -105,8 +102,7 @@ public open class CfnAccount internal constructor(
     public fun daysBeforeExpiry(): Number? = unwrap(this).getDaysBeforeExpiry()
 
     public interface Builder {
-      public fun daysBeforeExpiry(daysBeforeExpiry: Number) {
-      }
+      public fun daysBeforeExpiry(daysBeforeExpiry: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -115,7 +111,7 @@ public open class CfnAccount internal constructor(
           =
           software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty.builder()
 
-      public override fun daysBeforeExpiry(daysBeforeExpiry: Number) {
+      override fun daysBeforeExpiry(daysBeforeExpiry: Number) {
         cdkBuilder.daysBeforeExpiry(daysBeforeExpiry)
       }
 
@@ -128,7 +124,7 @@ public open class CfnAccount internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.certificatemanager.CfnAccount.ExpiryEventsConfigurationProperty,
     ) : ExpiryEventsConfigurationProperty {
-      public override fun daysBeforeExpiry(): Number? = unwrap(this).getDaysBeforeExpiry()
+      override fun daysBeforeExpiry(): Number? = unwrap(this).getDaysBeforeExpiry()
     }
 
     public companion object {

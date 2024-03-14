@@ -16,21 +16,20 @@ public interface IAccessKey : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.IAccessKey,
   ) : IAccessKey {
-    public override fun accessKeyId(): String = unwrap(this).getAccessKeyId()
+    override fun accessKeyId(): String = unwrap(this).getAccessKeyId()
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun secretAccessKey(): SecretValue =
+    override fun secretAccessKey(): SecretValue =
         unwrap(this).getSecretAccessKey().let(SecretValue::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

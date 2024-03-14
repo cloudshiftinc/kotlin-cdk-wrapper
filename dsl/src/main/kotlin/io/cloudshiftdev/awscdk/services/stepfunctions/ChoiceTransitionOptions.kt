@@ -7,8 +7,7 @@ public interface ChoiceTransitionOptions {
   public fun comment(): String? = unwrap(this).getComment()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ChoiceTransitionOptions {
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions.builder()
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
@@ -27,7 +26,7 @@ public interface ChoiceTransitionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions,
   ) : ChoiceTransitionOptions {
-    public override fun comment(): String? = unwrap(this).getComment()
+    override fun comment(): String? = unwrap(this).getComment()
   }
 
   public companion object {

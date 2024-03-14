@@ -53,14 +53,11 @@ public open class CfnLocalGatewayRouteTable internal constructor(
   }
 
   public interface Builder {
-    public fun localGatewayId(localGatewayId: String) {
-    }
+    public fun localGatewayId(localGatewayId: String)
 
-    public fun mode(mode: String) {
-    }
+    public fun mode(mode: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -70,15 +67,15 @@ public open class CfnLocalGatewayRouteTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTable.Builder =
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTable.Builder.create(scope, id)
 
-    public override fun localGatewayId(localGatewayId: String) {
+    override fun localGatewayId(localGatewayId: String) {
       cdkBuilder.localGatewayId(localGatewayId)
     }
 
-    public override fun mode(mode: String) {
+    override fun mode(mode: String) {
       cdkBuilder.mode(mode)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

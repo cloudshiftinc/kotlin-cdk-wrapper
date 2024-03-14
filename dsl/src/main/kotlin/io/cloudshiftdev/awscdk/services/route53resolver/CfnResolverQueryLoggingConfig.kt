@@ -46,11 +46,9 @@ public open class CfnResolverQueryLoggingConfig internal constructor(
   }
 
   public interface Builder {
-    public fun destinationArn(destinationArn: String) {
-    }
+    public fun destinationArn(destinationArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -62,11 +60,11 @@ public open class CfnResolverQueryLoggingConfig internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig.Builder.create(scope,
         id)
 
-    public override fun destinationArn(destinationArn: String) {
+    override fun destinationArn(destinationArn: String) {
       cdkBuilder.destinationArn(destinationArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

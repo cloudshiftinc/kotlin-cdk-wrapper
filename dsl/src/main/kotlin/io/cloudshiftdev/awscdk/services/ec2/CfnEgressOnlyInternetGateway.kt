@@ -24,8 +24,7 @@ public open class CfnEgressOnlyInternetGateway internal constructor(
   }
 
   public interface Builder {
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -35,7 +34,7 @@ public open class CfnEgressOnlyInternetGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway.Builder
         = software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGateway.Builder.create(scope, id)
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

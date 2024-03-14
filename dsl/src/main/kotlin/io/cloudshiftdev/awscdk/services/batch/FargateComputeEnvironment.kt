@@ -54,46 +54,33 @@ public open class FargateComputeEnvironment internal constructor(
       unwrap(this).getUpdateToLatestImageVersion()
 
   public interface Builder {
-    public fun computeEnvironmentName(computeEnvironmentName: String) {
-    }
+    public fun computeEnvironmentName(computeEnvironmentName: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun maxvCpus(maxvCpus: Number) {
-    }
+    public fun maxvCpus(maxvCpus: Number)
 
-    public fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean) {
-    }
+    public fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
 
-    public fun spot(spot: Boolean) {
-    }
+    public fun spot(spot: Boolean)
 
-    public fun terminateOnUpdate(terminateOnUpdate: Boolean) {
-    }
+    public fun terminateOnUpdate(terminateOnUpdate: Boolean)
 
-    public fun updateTimeout(updateTimeout: Duration) {
-    }
+    public fun updateTimeout(updateTimeout: Duration)
 
-    public fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
-    }
+    public fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94c272473fb16c36eda9db12bc80246d124b20b018b8bca84d7c02eaa75f53fa")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -103,57 +90,57 @@ public open class FargateComputeEnvironment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.FargateComputeEnvironment.Builder
         = software.amazon.awscdk.services.batch.FargateComputeEnvironment.Builder.create(scope, id)
 
-    public override fun computeEnvironmentName(computeEnvironmentName: String) {
+    override fun computeEnvironmentName(computeEnvironmentName: String) {
       cdkBuilder.computeEnvironmentName(computeEnvironmentName)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun maxvCpus(maxvCpus: Number) {
+    override fun maxvCpus(maxvCpus: Number) {
       cdkBuilder.maxvCpus(maxvCpus)
     }
 
-    public override fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean) {
+    override fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean) {
       cdkBuilder.replaceComputeEnvironment(replaceComputeEnvironment)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 
-    public override fun spot(spot: Boolean) {
+    override fun spot(spot: Boolean) {
       cdkBuilder.spot(spot)
     }
 
-    public override fun terminateOnUpdate(terminateOnUpdate: Boolean) {
+    override fun terminateOnUpdate(terminateOnUpdate: Boolean) {
       cdkBuilder.terminateOnUpdate(terminateOnUpdate)
     }
 
-    public override fun updateTimeout(updateTimeout: Duration) {
+    override fun updateTimeout(updateTimeout: Duration) {
       cdkBuilder.updateTimeout(updateTimeout.let(Duration::unwrap))
     }
 
-    public override fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
+    override fun updateToLatestImageVersion(updateToLatestImageVersion: Boolean) {
       cdkBuilder.updateToLatestImageVersion(updateToLatestImageVersion)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94c272473fb16c36eda9db12bc80246d124b20b018b8bca84d7c02eaa75f53fa")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.batch.FargateComputeEnvironment =

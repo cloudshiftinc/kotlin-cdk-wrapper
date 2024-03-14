@@ -8,7 +8,7 @@ public interface IBucketNotificationDestination {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.IBucketNotificationDestination,
   ) : IBucketNotificationDestination {
-    public override fun bind(arg0: Construct, arg1: IBucket): BucketNotificationDestinationConfig =
+    override fun bind(arg0: Construct, arg1: IBucket): BucketNotificationDestinationConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)
   }

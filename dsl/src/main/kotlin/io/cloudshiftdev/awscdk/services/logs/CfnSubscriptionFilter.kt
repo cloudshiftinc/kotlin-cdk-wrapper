@@ -52,23 +52,17 @@ public open class CfnSubscriptionFilter internal constructor(
   }
 
   public interface Builder {
-    public fun destinationArn(destinationArn: String) {
-    }
+    public fun destinationArn(destinationArn: String)
 
-    public fun distribution(distribution: String) {
-    }
+    public fun distribution(distribution: String)
 
-    public fun filterName(filterName: String) {
-    }
+    public fun filterName(filterName: String)
 
-    public fun filterPattern(filterPattern: String) {
-    }
+    public fun filterPattern(filterPattern: String)
 
-    public fun logGroupName(logGroupName: String) {
-    }
+    public fun logGroupName(logGroupName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -78,27 +72,27 @@ public open class CfnSubscriptionFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnSubscriptionFilter.Builder =
         software.amazon.awscdk.services.logs.CfnSubscriptionFilter.Builder.create(scope, id)
 
-    public override fun destinationArn(destinationArn: String) {
+    override fun destinationArn(destinationArn: String) {
       cdkBuilder.destinationArn(destinationArn)
     }
 
-    public override fun distribution(distribution: String) {
+    override fun distribution(distribution: String) {
       cdkBuilder.distribution(distribution)
     }
 
-    public override fun filterName(filterName: String) {
+    override fun filterName(filterName: String) {
       cdkBuilder.filterName(filterName)
     }
 
-    public override fun filterPattern(filterPattern: String) {
+    override fun filterPattern(filterPattern: String) {
       cdkBuilder.filterPattern(filterPattern)
     }
 
-    public override fun logGroupName(logGroupName: String) {
+    override fun logGroupName(logGroupName: String) {
       cdkBuilder.logGroupName(logGroupName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

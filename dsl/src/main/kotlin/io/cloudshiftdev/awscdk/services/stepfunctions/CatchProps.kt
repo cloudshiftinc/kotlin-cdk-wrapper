@@ -10,22 +10,20 @@ public interface CatchProps {
   public fun resultPath(): String? = unwrap(this).getResultPath()
 
   public interface Builder {
-    public fun errors(errors: List<String>) {
-    }
+    public fun errors(errors: List<String>)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.CatchProps.Builder =
         software.amazon.awscdk.services.stepfunctions.CatchProps.builder()
 
-    public override fun errors(errors: List<String>) {
+    override fun errors(errors: List<String>) {
       cdkBuilder.errors(errors)
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
@@ -36,9 +34,9 @@ public interface CatchProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.CatchProps,
   ) : CatchProps {
-    public override fun errors(): List<String> = unwrap(this).getErrors() ?: emptyList()
+    override fun errors(): List<String> = unwrap(this).getErrors() ?: emptyList()
 
-    public override fun resultPath(): String? = unwrap(this).getResultPath()
+    override fun resultPath(): String? = unwrap(this).getResultPath()
   }
 
   public companion object {

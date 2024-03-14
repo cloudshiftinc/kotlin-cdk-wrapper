@@ -35,8 +35,7 @@ public open class CfnOrganization internal constructor(
   }
 
   public interface Builder {
-    public fun featureSet(featureSet: String) {
-    }
+    public fun featureSet(featureSet: String)
   }
 
   private class BuilderImpl(
@@ -46,7 +45,7 @@ public open class CfnOrganization internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.organizations.CfnOrganization.Builder =
         software.amazon.awscdk.services.organizations.CfnOrganization.Builder.create(scope, id)
 
-    public override fun featureSet(featureSet: String) {
+    override fun featureSet(featureSet: String) {
       cdkBuilder.featureSet(featureSet)
     }
 

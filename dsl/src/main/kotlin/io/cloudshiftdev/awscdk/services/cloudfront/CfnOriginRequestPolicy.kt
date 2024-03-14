@@ -41,18 +41,15 @@ public open class CfnOriginRequestPolicy internal constructor(
       Unit = originRequestPolicyConfig(OriginRequestPolicyConfigProperty(`value`))
 
   public interface Builder {
-    public fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
-    }
+    public fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable)
 
     public
-        fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty) {
-    }
+        fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("718e1855ddc4310816c9d042a20dc1906cbfa8a9f199a420b180c639b83855d2")
     public
-        fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty.Builder.() -> Unit) {
-    }
+        fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -63,18 +60,18 @@ public open class CfnOriginRequestPolicy internal constructor(
         software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.Builder =
         software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.Builder.create(scope, id)
 
-    public override fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
+    override fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
       cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty) {
       cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(OriginRequestPolicyConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("718e1855ddc4310816c9d042a20dc1906cbfa8a9f199a420b180c639b83855d2")
-    public override
+    override
         fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty.Builder.() -> Unit):
         Unit =
         originRequestPolicyConfig(OriginRequestPolicyConfigProperty(originRequestPolicyConfig))
@@ -116,45 +113,34 @@ public open class CfnOriginRequestPolicy internal constructor(
     public fun queryStringsConfig(): Any
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun cookiesConfig(cookiesConfig: IResolvable) {
-      }
+      public fun cookiesConfig(cookiesConfig: IResolvable)
 
-      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
-      }
+      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1335106fdfc8f035449e4314e1bcc9c09ae33b5be995f1b54ae8fa181bf24684")
-      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit) {
-      }
+      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit)
 
-      public fun headersConfig(headersConfig: IResolvable) {
-      }
+      public fun headersConfig(headersConfig: IResolvable)
 
-      public fun headersConfig(headersConfig: HeadersConfigProperty) {
-      }
+      public fun headersConfig(headersConfig: HeadersConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7231e27fb43bbb74dd27667dff9091b756ff94392dbecc842399ef98ecec854")
-      public fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit) {
-      }
+      public fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun queryStringsConfig(queryStringsConfig: IResolvable) {
-      }
+      public fun queryStringsConfig(queryStringsConfig: IResolvable)
 
-      public fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
-      }
+      public fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c408a9a2d988cdc3875e3fb60917fa135bb14539772c640f28e651c5f2412b78")
       public
-          fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty.Builder.() -> Unit) {
-      }
+          fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -163,51 +149,51 @@ public open class CfnOriginRequestPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun cookiesConfig(cookiesConfig: IResolvable) {
+      override fun cookiesConfig(cookiesConfig: IResolvable) {
         cdkBuilder.cookiesConfig(cookiesConfig.let(IResolvable::unwrap))
       }
 
-      public override fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
+      override fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
         cdkBuilder.cookiesConfig(cookiesConfig.let(CookiesConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1335106fdfc8f035449e4314e1bcc9c09ae33b5be995f1b54ae8fa181bf24684")
-      public override fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit):
-          Unit = cookiesConfig(CookiesConfigProperty(cookiesConfig))
+      override fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit): Unit =
+          cookiesConfig(CookiesConfigProperty(cookiesConfig))
 
-      public override fun headersConfig(headersConfig: IResolvable) {
+      override fun headersConfig(headersConfig: IResolvable) {
         cdkBuilder.headersConfig(headersConfig.let(IResolvable::unwrap))
       }
 
-      public override fun headersConfig(headersConfig: HeadersConfigProperty) {
+      override fun headersConfig(headersConfig: HeadersConfigProperty) {
         cdkBuilder.headersConfig(headersConfig.let(HeadersConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c7231e27fb43bbb74dd27667dff9091b756ff94392dbecc842399ef98ecec854")
-      public override fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit):
-          Unit = headersConfig(HeadersConfigProperty(headersConfig))
+      override fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit): Unit =
+          headersConfig(HeadersConfigProperty(headersConfig))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun queryStringsConfig(queryStringsConfig: IResolvable) {
+      override fun queryStringsConfig(queryStringsConfig: IResolvable) {
         cdkBuilder.queryStringsConfig(queryStringsConfig.let(IResolvable::unwrap))
       }
 
-      public override fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
+      override fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
         cdkBuilder.queryStringsConfig(queryStringsConfig.let(QueryStringsConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c408a9a2d988cdc3875e3fb60917fa135bb14539772c640f28e651c5f2412b78")
-      public override
+      override
           fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty.Builder.() -> Unit):
           Unit = queryStringsConfig(QueryStringsConfigProperty(queryStringsConfig))
 
@@ -220,15 +206,15 @@ public open class CfnOriginRequestPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty,
     ) : OriginRequestPolicyConfigProperty {
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun cookiesConfig(): Any = unwrap(this).getCookiesConfig()
+      override fun cookiesConfig(): Any = unwrap(this).getCookiesConfig()
 
-      public override fun headersConfig(): Any = unwrap(this).getHeadersConfig()
+      override fun headersConfig(): Any = unwrap(this).getHeadersConfig()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun queryStringsConfig(): Any = unwrap(this).getQueryStringsConfig()
+      override fun queryStringsConfig(): Any = unwrap(this).getQueryStringsConfig()
     }
 
     public companion object {
@@ -258,11 +244,9 @@ public open class CfnOriginRequestPolicy internal constructor(
     public fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
 
     public interface Builder {
-      public fun headerBehavior(headerBehavior: String) {
-      }
+      public fun headerBehavior(headerBehavior: String)
 
-      public fun headers(headers: List<String>) {
-      }
+      public fun headers(headers: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -271,11 +255,11 @@ public open class CfnOriginRequestPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty.builder()
 
-      public override fun headerBehavior(headerBehavior: String) {
+      override fun headerBehavior(headerBehavior: String) {
         cdkBuilder.headerBehavior(headerBehavior)
       }
 
-      public override fun headers(headers: List<String>) {
+      override fun headers(headers: List<String>) {
         cdkBuilder.headers(headers)
       }
 
@@ -288,9 +272,9 @@ public open class CfnOriginRequestPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.HeadersConfigProperty,
     ) : HeadersConfigProperty {
-      public override fun headerBehavior(): String = unwrap(this).getHeaderBehavior()
+      override fun headerBehavior(): String = unwrap(this).getHeaderBehavior()
 
-      public override fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
+      override fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
     }
 
     public companion object {
@@ -319,11 +303,9 @@ public open class CfnOriginRequestPolicy internal constructor(
     public fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
 
     public interface Builder {
-      public fun cookieBehavior(cookieBehavior: String) {
-      }
+      public fun cookieBehavior(cookieBehavior: String)
 
-      public fun cookies(cookies: List<String>) {
-      }
+      public fun cookies(cookies: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -332,11 +314,11 @@ public open class CfnOriginRequestPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty.builder()
 
-      public override fun cookieBehavior(cookieBehavior: String) {
+      override fun cookieBehavior(cookieBehavior: String) {
         cdkBuilder.cookieBehavior(cookieBehavior)
       }
 
-      public override fun cookies(cookies: List<String>) {
+      override fun cookies(cookies: List<String>) {
         cdkBuilder.cookies(cookies)
       }
 
@@ -349,9 +331,9 @@ public open class CfnOriginRequestPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.CookiesConfigProperty,
     ) : CookiesConfigProperty {
-      public override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
+      override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
 
-      public override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
+      override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
     }
 
     public companion object {
@@ -380,11 +362,9 @@ public open class CfnOriginRequestPolicy internal constructor(
     public fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?: emptyList()
 
     public interface Builder {
-      public fun queryStringBehavior(queryStringBehavior: String) {
-      }
+      public fun queryStringBehavior(queryStringBehavior: String)
 
-      public fun queryStrings(queryStrings: List<String>) {
-      }
+      public fun queryStrings(queryStrings: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -393,11 +373,11 @@ public open class CfnOriginRequestPolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty.builder()
 
-      public override fun queryStringBehavior(queryStringBehavior: String) {
+      override fun queryStringBehavior(queryStringBehavior: String) {
         cdkBuilder.queryStringBehavior(queryStringBehavior)
       }
 
-      public override fun queryStrings(queryStrings: List<String>) {
+      override fun queryStrings(queryStrings: List<String>) {
         cdkBuilder.queryStrings(queryStrings)
       }
 
@@ -410,10 +390,9 @@ public open class CfnOriginRequestPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy.QueryStringsConfigProperty,
     ) : QueryStringsConfigProperty {
-      public override fun queryStringBehavior(): String = unwrap(this).getQueryStringBehavior()
+      override fun queryStringBehavior(): String = unwrap(this).getQueryStringBehavior()
 
-      public override fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?:
-          emptyList()
+      override fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?: emptyList()
     }
 
     public companion object {

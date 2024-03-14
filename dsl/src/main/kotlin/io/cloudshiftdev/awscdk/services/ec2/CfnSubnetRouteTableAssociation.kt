@@ -30,11 +30,9 @@ public open class CfnSubnetRouteTableAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun routeTableId(routeTableId: String) {
-    }
+    public fun routeTableId(routeTableId: String)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnSubnetRouteTableAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation.Builder =
         software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation.Builder.create(scope, id)
 
-    public override fun routeTableId(routeTableId: String) {
+    override fun routeTableId(routeTableId: String) {
       cdkBuilder.routeTableId(routeTableId)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 

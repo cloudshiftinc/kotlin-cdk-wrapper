@@ -10,22 +10,20 @@ public interface ClientVpnEndpointAttributes {
   public fun securityGroups(): List<ISecurityGroup>
 
   public interface Builder {
-    public fun endpointId(endpointId: String) {
-    }
+    public fun endpointId(endpointId: String)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes.Builder
         = software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes.builder()
 
-    public override fun endpointId(endpointId: String) {
+    override fun endpointId(endpointId: String) {
       cdkBuilder.endpointId(endpointId)
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
@@ -36,9 +34,9 @@ public interface ClientVpnEndpointAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes,
   ) : ClientVpnEndpointAttributes {
-    public override fun endpointId(): String = unwrap(this).getEndpointId()
+    override fun endpointId(): String = unwrap(this).getEndpointId()
 
-    public override fun securityGroups(): List<ISecurityGroup> =
+    override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups().map(ISecurityGroup::wrap)
   }
 

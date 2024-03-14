@@ -55,20 +55,15 @@ public open class CfnDBSecurityGroup internal constructor(
   }
 
   public interface Builder {
-    public fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable) {
-    }
+    public fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable)
 
-    public fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>) {
-    }
+    public fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>)
 
-    public fun ec2VpcId(ec2VpcId: String) {
-    }
+    public fun ec2VpcId(ec2VpcId: String)
 
-    public fun groupDescription(groupDescription: String) {
-    }
+    public fun groupDescription(groupDescription: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,23 +73,23 @@ public open class CfnDBSecurityGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBSecurityGroup.Builder =
         software.amazon.awscdk.services.rds.CfnDBSecurityGroup.Builder.create(scope, id)
 
-    public override fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable) {
+    override fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable) {
       cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.let(IResolvable::unwrap))
     }
 
-    public override fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>) {
+    override fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>) {
       cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress)
     }
 
-    public override fun ec2VpcId(ec2VpcId: String) {
+    override fun ec2VpcId(ec2VpcId: String) {
       cdkBuilder.ec2VpcId(ec2VpcId)
     }
 
-    public override fun groupDescription(groupDescription: String) {
+    override fun groupDescription(groupDescription: String) {
       cdkBuilder.groupDescription(groupDescription)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -132,17 +127,13 @@ public open class CfnDBSecurityGroup internal constructor(
     public fun ec2SecurityGroupOwnerId(): String? = unwrap(this).getEc2SecurityGroupOwnerId()
 
     public interface Builder {
-      public fun cidrip(cidrip: String) {
-      }
+      public fun cidrip(cidrip: String)
 
-      public fun ec2SecurityGroupId(ec2SecurityGroupId: String) {
-      }
+      public fun ec2SecurityGroupId(ec2SecurityGroupId: String)
 
-      public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
-      }
+      public fun ec2SecurityGroupName(ec2SecurityGroupName: String)
 
-      public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
-      }
+      public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -150,19 +141,19 @@ public open class CfnDBSecurityGroup internal constructor(
           software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty.builder()
 
-      public override fun cidrip(cidrip: String) {
+      override fun cidrip(cidrip: String) {
         cdkBuilder.cidrip(cidrip)
       }
 
-      public override fun ec2SecurityGroupId(ec2SecurityGroupId: String) {
+      override fun ec2SecurityGroupId(ec2SecurityGroupId: String) {
         cdkBuilder.ec2SecurityGroupId(ec2SecurityGroupId)
       }
 
-      public override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
+      override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
         cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
       }
 
-      public override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
+      override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
         cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
       }
 
@@ -174,14 +165,13 @@ public open class CfnDBSecurityGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBSecurityGroup.IngressProperty,
     ) : IngressProperty {
-      public override fun cidrip(): String? = unwrap(this).getCidrip()
+      override fun cidrip(): String? = unwrap(this).getCidrip()
 
-      public override fun ec2SecurityGroupId(): String? = unwrap(this).getEc2SecurityGroupId()
+      override fun ec2SecurityGroupId(): String? = unwrap(this).getEc2SecurityGroupId()
 
-      public override fun ec2SecurityGroupName(): String? = unwrap(this).getEc2SecurityGroupName()
+      override fun ec2SecurityGroupName(): String? = unwrap(this).getEc2SecurityGroupName()
 
-      public override fun ec2SecurityGroupOwnerId(): String? =
-          unwrap(this).getEc2SecurityGroupOwnerId()
+      override fun ec2SecurityGroupOwnerId(): String? = unwrap(this).getEc2SecurityGroupOwnerId()
     }
 
     public companion object {

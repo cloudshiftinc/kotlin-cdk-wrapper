@@ -6,7 +6,7 @@ public interface IEventSourceDlq {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.IEventSourceDlq,
   ) : IEventSourceDlq {
-    public override fun bind(arg0: IEventSourceMapping, arg1: IFunction): DlqDestinationConfig =
+    override fun bind(arg0: IEventSourceMapping, arg1: IFunction): DlqDestinationConfig =
         unwrap(this).bind(arg0.let(IEventSourceMapping::unwrap),
         arg1.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
   }

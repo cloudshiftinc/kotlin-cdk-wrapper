@@ -62,20 +62,15 @@ public open class CfnDiscoverer internal constructor(
   }
 
   public interface Builder {
-    public fun crossAccount(crossAccount: Boolean) {
-    }
+    public fun crossAccount(crossAccount: Boolean)
 
-    public fun crossAccount(crossAccount: IResolvable) {
-    }
+    public fun crossAccount(crossAccount: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun sourceArn(sourceArn: String) {
-    }
+    public fun sourceArn(sourceArn: String)
 
-    public fun tags(tags: List<TagsEntryProperty>) {
-    }
+    public fun tags(tags: List<TagsEntryProperty>)
   }
 
   private class BuilderImpl(
@@ -85,23 +80,23 @@ public open class CfnDiscoverer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eventschemas.CfnDiscoverer.Builder =
         software.amazon.awscdk.services.eventschemas.CfnDiscoverer.Builder.create(scope, id)
 
-    public override fun crossAccount(crossAccount: Boolean) {
+    override fun crossAccount(crossAccount: Boolean) {
       cdkBuilder.crossAccount(crossAccount)
     }
 
-    public override fun crossAccount(crossAccount: IResolvable) {
+    override fun crossAccount(crossAccount: IResolvable) {
       cdkBuilder.crossAccount(crossAccount.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun sourceArn(sourceArn: String) {
+    override fun sourceArn(sourceArn: String) {
       cdkBuilder.sourceArn(sourceArn)
     }
 
-    public override fun tags(tags: List<TagsEntryProperty>) {
+    override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
@@ -136,11 +131,9 @@ public open class CfnDiscoverer internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -148,11 +141,11 @@ public open class CfnDiscoverer internal constructor(
           software.amazon.awscdk.services.eventschemas.CfnDiscoverer.TagsEntryProperty.Builder =
           software.amazon.awscdk.services.eventschemas.CfnDiscoverer.TagsEntryProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -165,9 +158,9 @@ public open class CfnDiscoverer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eventschemas.CfnDiscoverer.TagsEntryProperty,
     ) : TagsEntryProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

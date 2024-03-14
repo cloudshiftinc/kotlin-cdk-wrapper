@@ -8,36 +8,32 @@ public interface AlbControllerProps : AlbControllerOptions {
   public fun cluster(): Cluster
 
   public interface Builder {
-    public fun cluster(cluster: Cluster) {
-    }
+    public fun cluster(cluster: Cluster)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun repository(repository: String) {
-    }
+    public fun repository(repository: String)
 
-    public fun version(version: AlbControllerVersion) {
-    }
+    public fun version(version: AlbControllerVersion)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.AlbControllerProps.Builder =
         software.amazon.awscdk.services.eks.AlbControllerProps.builder()
 
-    public override fun cluster(cluster: Cluster) {
+    override fun cluster(cluster: Cluster) {
       cdkBuilder.cluster(cluster.let(Cluster::unwrap))
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun repository(repository: String) {
+    override fun repository(repository: String) {
       cdkBuilder.repository(repository)
     }
 
-    public override fun version(version: AlbControllerVersion) {
+    override fun version(version: AlbControllerVersion) {
       cdkBuilder.version(version.let(AlbControllerVersion::unwrap))
     }
 
@@ -47,13 +43,13 @@ public interface AlbControllerProps : AlbControllerOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.AlbControllerProps,
   ) : AlbControllerProps {
-    public override fun cluster(): Cluster = unwrap(this).getCluster().let(Cluster::wrap)
+    override fun cluster(): Cluster = unwrap(this).getCluster().let(Cluster::wrap)
 
-    public override fun policy(): Any? = unwrap(this).getPolicy()
+    override fun policy(): Any? = unwrap(this).getPolicy()
 
-    public override fun repository(): String? = unwrap(this).getRepository()
+    override fun repository(): String? = unwrap(this).getRepository()
 
-    public override fun version(): AlbControllerVersion =
+    override fun version(): AlbControllerVersion =
         unwrap(this).getVersion().let(AlbControllerVersion::wrap)
   }
 

@@ -80,38 +80,27 @@ public open class CfnSlackChannelConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun channelId(channelId: String) {
-    }
+    public fun channelId(channelId: String)
 
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun channelRoleArn(channelRoleArn: String) {
-    }
+    public fun channelRoleArn(channelRoleArn: String)
 
-    public fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: Boolean) {
-    }
+    public fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: Boolean)
 
-    public fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: IResolvable) {
-    }
+    public fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: IResolvable)
 
-    public fun notifyOnCaseSeverity(notifyOnCaseSeverity: String) {
-    }
+    public fun notifyOnCaseSeverity(notifyOnCaseSeverity: String)
 
-    public fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: Boolean) {
-    }
+    public fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: Boolean)
 
-    public fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: IResolvable) {
-    }
+    public fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: IResolvable)
 
-    public fun notifyOnResolveCase(notifyOnResolveCase: Boolean) {
-    }
+    public fun notifyOnResolveCase(notifyOnResolveCase: Boolean)
 
-    public fun notifyOnResolveCase(notifyOnResolveCase: IResolvable) {
-    }
+    public fun notifyOnResolveCase(notifyOnResolveCase: IResolvable)
 
-    public fun teamId(teamId: String) {
-    }
+    public fun teamId(teamId: String)
   }
 
   private class BuilderImpl(
@@ -123,48 +112,47 @@ public open class CfnSlackChannelConfiguration internal constructor(
         software.amazon.awscdk.services.supportapp.CfnSlackChannelConfiguration.Builder.create(scope,
         id)
 
-    public override fun channelId(channelId: String) {
+    override fun channelId(channelId: String) {
       cdkBuilder.channelId(channelId)
     }
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun channelRoleArn(channelRoleArn: String) {
+    override fun channelRoleArn(channelRoleArn: String) {
       cdkBuilder.channelRoleArn(channelRoleArn)
     }
 
-    public override fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: Boolean) {
+    override fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: Boolean) {
       cdkBuilder.notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase)
     }
 
-    public override
-        fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: IResolvable) {
+    override fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: IResolvable) {
       cdkBuilder.notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase.let(IResolvable::unwrap))
     }
 
-    public override fun notifyOnCaseSeverity(notifyOnCaseSeverity: String) {
+    override fun notifyOnCaseSeverity(notifyOnCaseSeverity: String) {
       cdkBuilder.notifyOnCaseSeverity(notifyOnCaseSeverity)
     }
 
-    public override fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: Boolean) {
+    override fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: Boolean) {
       cdkBuilder.notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase)
     }
 
-    public override fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: IResolvable) {
+    override fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: IResolvable) {
       cdkBuilder.notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase.let(IResolvable::unwrap))
     }
 
-    public override fun notifyOnResolveCase(notifyOnResolveCase: Boolean) {
+    override fun notifyOnResolveCase(notifyOnResolveCase: Boolean) {
       cdkBuilder.notifyOnResolveCase(notifyOnResolveCase)
     }
 
-    public override fun notifyOnResolveCase(notifyOnResolveCase: IResolvable) {
+    override fun notifyOnResolveCase(notifyOnResolveCase: IResolvable) {
       cdkBuilder.notifyOnResolveCase(notifyOnResolveCase.let(IResolvable::unwrap))
     }
 
-    public override fun teamId(teamId: String) {
+    override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)
     }
 

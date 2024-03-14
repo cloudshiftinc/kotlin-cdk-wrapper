@@ -54,22 +54,17 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun placementTemplate(placementTemplate: IResolvable) {
-    }
+    public fun placementTemplate(placementTemplate: IResolvable)
 
-    public fun placementTemplate(placementTemplate: PlacementTemplateProperty) {
-    }
+    public fun placementTemplate(placementTemplate: PlacementTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ac3a1f80fd46182218bfd96b96a0cfed1cbc7a13894f7464c96e24fa4a74f97")
-    public fun placementTemplate(placementTemplate: PlacementTemplateProperty.Builder.() -> Unit) {
-    }
+    public fun placementTemplate(placementTemplate: PlacementTemplateProperty.Builder.() -> Unit)
 
-    public fun projectName(projectName: String) {
-    }
+    public fun projectName(projectName: String)
   }
 
   private class BuilderImpl(
@@ -79,25 +74,24 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot1click.CfnProject.Builder =
         software.amazon.awscdk.services.iot1click.CfnProject.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun placementTemplate(placementTemplate: IResolvable) {
+    override fun placementTemplate(placementTemplate: IResolvable) {
       cdkBuilder.placementTemplate(placementTemplate.let(IResolvable::unwrap))
     }
 
-    public override fun placementTemplate(placementTemplate: PlacementTemplateProperty) {
+    override fun placementTemplate(placementTemplate: PlacementTemplateProperty) {
       cdkBuilder.placementTemplate(placementTemplate.let(PlacementTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ac3a1f80fd46182218bfd96b96a0cfed1cbc7a13894f7464c96e24fa4a74f97")
-    public override
-        fun placementTemplate(placementTemplate: PlacementTemplateProperty.Builder.() -> Unit): Unit
-        = placementTemplate(PlacementTemplateProperty(placementTemplate))
+    override fun placementTemplate(placementTemplate: PlacementTemplateProperty.Builder.() -> Unit):
+        Unit = placementTemplate(PlacementTemplateProperty(placementTemplate))
 
-    public override fun projectName(projectName: String) {
+    override fun projectName(projectName: String) {
       cdkBuilder.projectName(projectName)
     }
 
@@ -131,14 +125,11 @@ public open class CfnProject internal constructor(
     public fun deviceTemplates(): Any? = unwrap(this).getDeviceTemplates()
 
     public interface Builder {
-      public fun defaultAttributes(defaultAttributes: Any) {
-      }
+      public fun defaultAttributes(defaultAttributes: Any)
 
-      public fun deviceTemplates(deviceTemplates: IResolvable) {
-      }
+      public fun deviceTemplates(deviceTemplates: IResolvable)
 
-      public fun deviceTemplates(deviceTemplates: Map<String, Any>) {
-      }
+      public fun deviceTemplates(deviceTemplates: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -146,15 +137,15 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty.Builder =
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty.builder()
 
-      public override fun defaultAttributes(defaultAttributes: Any) {
+      override fun defaultAttributes(defaultAttributes: Any) {
         cdkBuilder.defaultAttributes(defaultAttributes)
       }
 
-      public override fun deviceTemplates(deviceTemplates: IResolvable) {
+      override fun deviceTemplates(deviceTemplates: IResolvable) {
         cdkBuilder.deviceTemplates(deviceTemplates.let(IResolvable::unwrap))
       }
 
-      public override fun deviceTemplates(deviceTemplates: Map<String, Any>) {
+      override fun deviceTemplates(deviceTemplates: Map<String, Any>) {
         cdkBuilder.deviceTemplates(deviceTemplates)
       }
 
@@ -167,9 +158,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot1click.CfnProject.PlacementTemplateProperty,
     ) : PlacementTemplateProperty {
-      public override fun defaultAttributes(): Any? = unwrap(this).getDefaultAttributes()
+      override fun defaultAttributes(): Any? = unwrap(this).getDefaultAttributes()
 
-      public override fun deviceTemplates(): Any? = unwrap(this).getDeviceTemplates()
+      override fun deviceTemplates(): Any? = unwrap(this).getDeviceTemplates()
     }
 
     public companion object {
@@ -198,11 +189,9 @@ public open class CfnProject internal constructor(
     public fun deviceType(): String? = unwrap(this).getDeviceType()
 
     public interface Builder {
-      public fun callbackOverrides(callbackOverrides: Any) {
-      }
+      public fun callbackOverrides(callbackOverrides: Any)
 
-      public fun deviceType(deviceType: String) {
-      }
+      public fun deviceType(deviceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -210,11 +199,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty.Builder =
           software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty.builder()
 
-      public override fun callbackOverrides(callbackOverrides: Any) {
+      override fun callbackOverrides(callbackOverrides: Any) {
         cdkBuilder.callbackOverrides(callbackOverrides)
       }
 
-      public override fun deviceType(deviceType: String) {
+      override fun deviceType(deviceType: String) {
         cdkBuilder.deviceType(deviceType)
       }
 
@@ -227,9 +216,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot1click.CfnProject.DeviceTemplateProperty,
     ) : DeviceTemplateProperty {
-      public override fun callbackOverrides(): Any? = unwrap(this).getCallbackOverrides()
+      override fun callbackOverrides(): Any? = unwrap(this).getCallbackOverrides()
 
-      public override fun deviceType(): String? = unwrap(this).getDeviceType()
+      override fun deviceType(): String? = unwrap(this).getDeviceType()
     }
 
     public companion object {

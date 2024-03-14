@@ -57,20 +57,15 @@ public open class CfnPodIdentityAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun serviceAccount(serviceAccount: String) {
-    }
+    public fun serviceAccount(serviceAccount: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnPodIdentityAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnPodIdentityAssociation.Builder =
         software.amazon.awscdk.services.eks.CfnPodIdentityAssociation.Builder.create(scope, id)
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun serviceAccount(serviceAccount: String) {
+    override fun serviceAccount(serviceAccount: String) {
       cdkBuilder.serviceAccount(serviceAccount)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

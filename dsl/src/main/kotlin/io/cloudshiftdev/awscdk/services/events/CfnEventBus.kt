@@ -54,17 +54,13 @@ public open class CfnEventBus internal constructor(
   }
 
   public interface Builder {
-    public fun eventSourceName(eventSourceName: String) {
-    }
+    public fun eventSourceName(eventSourceName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -74,19 +70,19 @@ public open class CfnEventBus internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.CfnEventBus.Builder =
         software.amazon.awscdk.services.events.CfnEventBus.Builder.create(scope, id)
 
-    public override fun eventSourceName(eventSourceName: String) {
+    override fun eventSourceName(eventSourceName: String) {
       cdkBuilder.eventSourceName(eventSourceName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

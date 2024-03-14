@@ -13,29 +13,21 @@ public open class DropSpamReceiptRule internal constructor(
   public open fun rule(): ReceiptRule = unwrap(this).getRule().let(ReceiptRule::wrap)
 
   public interface Builder {
-    public fun actions(actions: List<IReceiptRuleAction>) {
-    }
+    public fun actions(actions: List<IReceiptRuleAction>)
 
-    public fun after(after: IReceiptRule) {
-    }
+    public fun after(after: IReceiptRule)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun receiptRuleName(receiptRuleName: String) {
-    }
+    public fun receiptRuleName(receiptRuleName: String)
 
-    public fun recipients(recipients: List<String>) {
-    }
+    public fun recipients(recipients: List<String>)
 
-    public fun ruleSet(ruleSet: IReceiptRuleSet) {
-    }
+    public fun ruleSet(ruleSet: IReceiptRuleSet)
 
-    public fun scanEnabled(scanEnabled: Boolean) {
-    }
+    public fun scanEnabled(scanEnabled: Boolean)
 
-    public fun tlsPolicy(tlsPolicy: TlsPolicy) {
-    }
+    public fun tlsPolicy(tlsPolicy: TlsPolicy)
   }
 
   private class BuilderImpl(
@@ -45,35 +37,35 @@ public open class DropSpamReceiptRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.DropSpamReceiptRule.Builder =
         software.amazon.awscdk.services.ses.DropSpamReceiptRule.Builder.create(scope, id)
 
-    public override fun actions(actions: List<IReceiptRuleAction>) {
+    override fun actions(actions: List<IReceiptRuleAction>) {
       cdkBuilder.actions(actions.map(IReceiptRuleAction::unwrap))
     }
 
-    public override fun after(after: IReceiptRule) {
+    override fun after(after: IReceiptRule) {
       cdkBuilder.after(after.let(IReceiptRule::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun receiptRuleName(receiptRuleName: String) {
+    override fun receiptRuleName(receiptRuleName: String) {
       cdkBuilder.receiptRuleName(receiptRuleName)
     }
 
-    public override fun recipients(recipients: List<String>) {
+    override fun recipients(recipients: List<String>) {
       cdkBuilder.recipients(recipients)
     }
 
-    public override fun ruleSet(ruleSet: IReceiptRuleSet) {
+    override fun ruleSet(ruleSet: IReceiptRuleSet) {
       cdkBuilder.ruleSet(ruleSet.let(IReceiptRuleSet::unwrap))
     }
 
-    public override fun scanEnabled(scanEnabled: Boolean) {
+    override fun scanEnabled(scanEnabled: Boolean) {
       cdkBuilder.scanEnabled(scanEnabled)
     }
 
-    public override fun tlsPolicy(tlsPolicy: TlsPolicy) {
+    override fun tlsPolicy(tlsPolicy: TlsPolicy) {
       cdkBuilder.tlsPolicy(tlsPolicy.let(TlsPolicy::unwrap))
     }
 

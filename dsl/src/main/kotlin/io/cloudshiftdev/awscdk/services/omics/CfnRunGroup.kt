@@ -64,23 +64,17 @@ public open class CfnRunGroup internal constructor(
   }
 
   public interface Builder {
-    public fun maxCpus(maxCpus: Number) {
-    }
+    public fun maxCpus(maxCpus: Number)
 
-    public fun maxDuration(maxDuration: Number) {
-    }
+    public fun maxDuration(maxDuration: Number)
 
-    public fun maxGpus(maxGpus: Number) {
-    }
+    public fun maxGpus(maxGpus: Number)
 
-    public fun maxRuns(maxRuns: Number) {
-    }
+    public fun maxRuns(maxRuns: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -90,27 +84,27 @@ public open class CfnRunGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.omics.CfnRunGroup.Builder =
         software.amazon.awscdk.services.omics.CfnRunGroup.Builder.create(scope, id)
 
-    public override fun maxCpus(maxCpus: Number) {
+    override fun maxCpus(maxCpus: Number) {
       cdkBuilder.maxCpus(maxCpus)
     }
 
-    public override fun maxDuration(maxDuration: Number) {
+    override fun maxDuration(maxDuration: Number) {
       cdkBuilder.maxDuration(maxDuration)
     }
 
-    public override fun maxGpus(maxGpus: Number) {
+    override fun maxGpus(maxGpus: Number) {
       cdkBuilder.maxGpus(maxGpus)
     }
 
-    public override fun maxRuns(maxRuns: Number) {
+    override fun maxRuns(maxRuns: Number) {
       cdkBuilder.maxRuns(maxRuns)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

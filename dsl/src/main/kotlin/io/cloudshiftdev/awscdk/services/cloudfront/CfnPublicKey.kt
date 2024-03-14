@@ -39,16 +39,13 @@ public open class CfnPublicKey internal constructor(
       publicKeyConfig(PublicKeyConfigProperty(`value`))
 
   public interface Builder {
-    public fun publicKeyConfig(publicKeyConfig: IResolvable) {
-    }
+    public fun publicKeyConfig(publicKeyConfig: IResolvable)
 
-    public fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty) {
-    }
+    public fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("42e777796ad459c33fdafc47fe4a817807ae20a6174a38d3aa3ff93558bc3272")
-    public fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty.Builder.() -> Unit) {
-    }
+    public fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -58,19 +55,18 @@ public open class CfnPublicKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnPublicKey.Builder =
         software.amazon.awscdk.services.cloudfront.CfnPublicKey.Builder.create(scope, id)
 
-    public override fun publicKeyConfig(publicKeyConfig: IResolvable) {
+    override fun publicKeyConfig(publicKeyConfig: IResolvable) {
       cdkBuilder.publicKeyConfig(publicKeyConfig.let(IResolvable::unwrap))
     }
 
-    public override fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty) {
+    override fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty) {
       cdkBuilder.publicKeyConfig(publicKeyConfig.let(PublicKeyConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("42e777796ad459c33fdafc47fe4a817807ae20a6174a38d3aa3ff93558bc3272")
-    public override
-        fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty.Builder.() -> Unit): Unit =
-        publicKeyConfig(PublicKeyConfigProperty(publicKeyConfig))
+    override fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty.Builder.() -> Unit): Unit
+        = publicKeyConfig(PublicKeyConfigProperty(publicKeyConfig))
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CfnPublicKey = cdkBuilder.build()
   }
@@ -106,17 +102,13 @@ public open class CfnPublicKey internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun callerReference(callerReference: String) {
-      }
+      public fun callerReference(callerReference: String)
 
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun encodedKey(encodedKey: String) {
-      }
+      public fun encodedKey(encodedKey: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -124,19 +116,19 @@ public open class CfnPublicKey internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty.builder()
 
-      public override fun callerReference(callerReference: String) {
+      override fun callerReference(callerReference: String) {
         cdkBuilder.callerReference(callerReference)
       }
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun encodedKey(encodedKey: String) {
+      override fun encodedKey(encodedKey: String) {
         cdkBuilder.encodedKey(encodedKey)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -149,13 +141,13 @@ public open class CfnPublicKey internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty,
     ) : PublicKeyConfigProperty {
-      public override fun callerReference(): String = unwrap(this).getCallerReference()
+      override fun callerReference(): String = unwrap(this).getCallerReference()
 
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun encodedKey(): String = unwrap(this).getEncodedKey()
+      override fun encodedKey(): String = unwrap(this).getEncodedKey()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {

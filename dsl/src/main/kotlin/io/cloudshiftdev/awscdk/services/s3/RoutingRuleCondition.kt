@@ -9,22 +9,20 @@ public interface RoutingRuleCondition {
   public fun keyPrefixEquals(): String? = unwrap(this).getKeyPrefixEquals()
 
   public interface Builder {
-    public fun httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals: String) {
-    }
+    public fun httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals: String)
 
-    public fun keyPrefixEquals(keyPrefixEquals: String) {
-    }
+    public fun keyPrefixEquals(keyPrefixEquals: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.RoutingRuleCondition.Builder =
         software.amazon.awscdk.services.s3.RoutingRuleCondition.builder()
 
-    public override fun httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals: String) {
+    override fun httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals: String) {
       cdkBuilder.httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals)
     }
 
-    public override fun keyPrefixEquals(keyPrefixEquals: String) {
+    override fun keyPrefixEquals(keyPrefixEquals: String) {
       cdkBuilder.keyPrefixEquals(keyPrefixEquals)
     }
 
@@ -34,10 +32,10 @@ public interface RoutingRuleCondition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.RoutingRuleCondition,
   ) : RoutingRuleCondition {
-    public override fun httpErrorCodeReturnedEquals(): String? =
+    override fun httpErrorCodeReturnedEquals(): String? =
         unwrap(this).getHttpErrorCodeReturnedEquals()
 
-    public override fun keyPrefixEquals(): String? = unwrap(this).getKeyPrefixEquals()
+    override fun keyPrefixEquals(): String? = unwrap(this).getKeyPrefixEquals()
   }
 
   public companion object {

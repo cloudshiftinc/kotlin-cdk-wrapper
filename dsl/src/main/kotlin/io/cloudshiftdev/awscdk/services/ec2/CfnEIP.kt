@@ -63,23 +63,17 @@ public open class CfnEIP internal constructor(
   }
 
   public interface Builder {
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun networkBorderGroup(networkBorderGroup: String) {
-    }
+    public fun networkBorderGroup(networkBorderGroup: String)
 
-    public fun publicIpv4Pool(publicIpv4Pool: String) {
-    }
+    public fun publicIpv4Pool(publicIpv4Pool: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transferAddress(transferAddress: String) {
-    }
+    public fun transferAddress(transferAddress: String)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnEIP internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnEIP.Builder =
         software.amazon.awscdk.services.ec2.CfnEIP.Builder.create(scope, id)
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun networkBorderGroup(networkBorderGroup: String) {
+    override fun networkBorderGroup(networkBorderGroup: String) {
       cdkBuilder.networkBorderGroup(networkBorderGroup)
     }
 
-    public override fun publicIpv4Pool(publicIpv4Pool: String) {
+    override fun publicIpv4Pool(publicIpv4Pool: String) {
       cdkBuilder.publicIpv4Pool(publicIpv4Pool)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transferAddress(transferAddress: String) {
+    override fun transferAddress(transferAddress: String) {
       cdkBuilder.transferAddress(transferAddress)
     }
 

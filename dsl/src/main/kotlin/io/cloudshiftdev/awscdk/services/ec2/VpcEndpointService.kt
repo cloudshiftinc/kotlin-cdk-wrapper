@@ -28,18 +28,14 @@ public open class VpcEndpointService internal constructor(
   public override fun vpcEndpointServiceName(): String = unwrap(this).getVpcEndpointServiceName()
 
   public interface Builder {
-    public fun acceptanceRequired(acceptanceRequired: Boolean) {
-    }
+    public fun acceptanceRequired(acceptanceRequired: Boolean)
 
-    public fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>) {
-    }
+    public fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>)
 
-    public fun contributorInsights(contributorInsights: Boolean) {
-    }
+    public fun contributorInsights(contributorInsights: Boolean)
 
     public
-        fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>) {
-    }
+        fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>)
   }
 
   private class BuilderImpl(
@@ -49,19 +45,19 @@ public open class VpcEndpointService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpcEndpointService.Builder =
         software.amazon.awscdk.services.ec2.VpcEndpointService.Builder.create(scope, id)
 
-    public override fun acceptanceRequired(acceptanceRequired: Boolean) {
+    override fun acceptanceRequired(acceptanceRequired: Boolean) {
       cdkBuilder.acceptanceRequired(acceptanceRequired)
     }
 
-    public override fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>) {
+    override fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>) {
       cdkBuilder.allowedPrincipals(allowedPrincipals.map(ArnPrincipal::unwrap))
     }
 
-    public override fun contributorInsights(contributorInsights: Boolean) {
+    override fun contributorInsights(contributorInsights: Boolean) {
       cdkBuilder.contributorInsights(contributorInsights)
     }
 
-    public override
+    override
         fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>) {
       cdkBuilder.vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.map(IVpcEndpointServiceLoadBalancer::unwrap))
     }

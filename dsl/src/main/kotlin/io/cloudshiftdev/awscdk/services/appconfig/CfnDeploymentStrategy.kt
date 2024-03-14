@@ -75,29 +75,21 @@ public open class CfnDeploymentStrategy internal constructor(
   }
 
   public interface Builder {
-    public fun deploymentDurationInMinutes(deploymentDurationInMinutes: Number) {
-    }
+    public fun deploymentDurationInMinutes(deploymentDurationInMinutes: Number)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun finalBakeTimeInMinutes(finalBakeTimeInMinutes: Number) {
-    }
+    public fun finalBakeTimeInMinutes(finalBakeTimeInMinutes: Number)
 
-    public fun growthFactor(growthFactor: Number) {
-    }
+    public fun growthFactor(growthFactor: Number)
 
-    public fun growthType(growthType: String) {
-    }
+    public fun growthType(growthType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun replicateTo(replicateTo: String) {
-    }
+    public fun replicateTo(replicateTo: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -107,35 +99,35 @@ public open class CfnDeploymentStrategy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy.Builder
         = software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy.Builder.create(scope, id)
 
-    public override fun deploymentDurationInMinutes(deploymentDurationInMinutes: Number) {
+    override fun deploymentDurationInMinutes(deploymentDurationInMinutes: Number) {
       cdkBuilder.deploymentDurationInMinutes(deploymentDurationInMinutes)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun finalBakeTimeInMinutes(finalBakeTimeInMinutes: Number) {
+    override fun finalBakeTimeInMinutes(finalBakeTimeInMinutes: Number) {
       cdkBuilder.finalBakeTimeInMinutes(finalBakeTimeInMinutes)
     }
 
-    public override fun growthFactor(growthFactor: Number) {
+    override fun growthFactor(growthFactor: Number) {
       cdkBuilder.growthFactor(growthFactor)
     }
 
-    public override fun growthType(growthType: String) {
+    override fun growthType(growthType: String) {
       cdkBuilder.growthType(growthType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun replicateTo(replicateTo: String) {
+    override fun replicateTo(replicateTo: String) {
       cdkBuilder.replicateTo(replicateTo)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

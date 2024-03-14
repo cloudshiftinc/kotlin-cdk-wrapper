@@ -14,14 +14,11 @@ public open class ProductStack internal constructor(
   public override fun templateFile(): String = unwrap(this).getTemplateFile()
 
   public interface Builder {
-    public fun assetBucket(assetBucket: IBucket) {
-    }
+    public fun assetBucket(assetBucket: IBucket)
 
-    public fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
-    }
+    public fun serverSideEncryption(serverSideEncryption: ServerSideEncryption)
 
-    public fun serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId: String) {
-    }
+    public fun serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId: String)
   }
 
   private class BuilderImpl(
@@ -31,15 +28,15 @@ public open class ProductStack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicecatalog.ProductStack.Builder =
         software.amazon.awscdk.services.servicecatalog.ProductStack.Builder.create(scope, id)
 
-    public override fun assetBucket(assetBucket: IBucket) {
+    override fun assetBucket(assetBucket: IBucket) {
       cdkBuilder.assetBucket(assetBucket.let(IBucket::unwrap))
     }
 
-    public override fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
+    override fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
       cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption::unwrap))
     }
 
-    public override fun serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId: String) {
+    override fun serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId: String) {
       cdkBuilder.serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId)
     }
 

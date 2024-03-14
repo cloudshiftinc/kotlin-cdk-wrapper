@@ -9,22 +9,20 @@ public interface NotificationKeyFilter {
   public fun suffix(): String? = unwrap(this).getSuffix()
 
   public interface Builder {
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
 
-    public fun suffix(suffix: String) {
-    }
+    public fun suffix(suffix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.NotificationKeyFilter.Builder =
         software.amazon.awscdk.services.s3.NotificationKeyFilter.builder()
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
-    public override fun suffix(suffix: String) {
+    override fun suffix(suffix: String) {
       cdkBuilder.suffix(suffix)
     }
 
@@ -35,9 +33,9 @@ public interface NotificationKeyFilter {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.NotificationKeyFilter,
   ) : NotificationKeyFilter {
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
 
-    public override fun suffix(): String? = unwrap(this).getSuffix()
+    override fun suffix(): String? = unwrap(this).getSuffix()
   }
 
   public companion object {

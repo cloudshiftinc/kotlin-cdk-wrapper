@@ -41,17 +41,13 @@ public open class CfnNetworkPerformanceMetricSubscription internal constructor(
   }
 
   public interface Builder {
-    public fun destination(destination: String) {
-    }
+    public fun destination(destination: String)
 
-    public fun metric(metric: String) {
-    }
+    public fun metric(metric: String)
 
-    public fun source(source: String) {
-    }
+    public fun source(source: String)
 
-    public fun statistic(statistic: String) {
-    }
+    public fun statistic(statistic: String)
   }
 
   private class BuilderImpl(
@@ -63,19 +59,19 @@ public open class CfnNetworkPerformanceMetricSubscription internal constructor(
         software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription.Builder.create(scope,
         id)
 
-    public override fun destination(destination: String) {
+    override fun destination(destination: String) {
       cdkBuilder.destination(destination)
     }
 
-    public override fun metric(metric: String) {
+    override fun metric(metric: String) {
       cdkBuilder.metric(metric)
     }
 
-    public override fun source(source: String) {
+    override fun source(source: String) {
       cdkBuilder.source(source)
     }
 
-    public override fun statistic(statistic: String) {
+    override fun statistic(statistic: String) {
       cdkBuilder.statistic(statistic)
     }
 

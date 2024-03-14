@@ -61,23 +61,17 @@ public open class CfnRepositoryAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun connectionArn(connectionArn: String) {
-    }
+    public fun connectionArn(connectionArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun owner(owner: String) {
-    }
+    public fun owner(owner: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnRepositoryAssociation internal constructor(
         software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociation.Builder.create(scope,
         id)
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun connectionArn(connectionArn: String) {
+    override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun owner(owner: String) {
+    override fun owner(owner: String) {
       cdkBuilder.owner(owner)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

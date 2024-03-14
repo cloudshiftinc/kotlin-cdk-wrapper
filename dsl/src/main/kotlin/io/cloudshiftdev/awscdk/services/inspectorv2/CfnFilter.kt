@@ -57,25 +57,19 @@ public open class CfnFilter internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun filterAction(filterAction: String) {
-    }
+    public fun filterAction(filterAction: String)
 
-    public fun filterCriteria(filterCriteria: IResolvable) {
-    }
+    public fun filterCriteria(filterCriteria: IResolvable)
 
-    public fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
-    }
+    public fun filterCriteria(filterCriteria: FilterCriteriaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08f854474ba06437298904554fca2e2184655e6e921c8d82158da279150a1794")
-    public fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit) {
-    }
+    public fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -85,28 +79,28 @@ public open class CfnFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.inspectorv2.CfnFilter.Builder =
         software.amazon.awscdk.services.inspectorv2.CfnFilter.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun filterAction(filterAction: String) {
+    override fun filterAction(filterAction: String) {
       cdkBuilder.filterAction(filterAction)
     }
 
-    public override fun filterCriteria(filterCriteria: IResolvable) {
+    override fun filterCriteria(filterCriteria: IResolvable) {
       cdkBuilder.filterCriteria(filterCriteria.let(IResolvable::unwrap))
     }
 
-    public override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
+    override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
       cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08f854474ba06437298904554fca2e2184655e6e921c8d82158da279150a1794")
-    public override fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit):
-        Unit = filterCriteria(FilterCriteriaProperty(filterCriteria))
+    override fun filterCriteria(filterCriteria: FilterCriteriaProperty.Builder.() -> Unit): Unit =
+        filterCriteria(FilterCriteriaProperty(filterCriteria))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -140,11 +134,9 @@ public open class CfnFilter internal constructor(
     public fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
 
     public interface Builder {
-      public fun lowerInclusive(lowerInclusive: Number) {
-      }
+      public fun lowerInclusive(lowerInclusive: Number)
 
-      public fun upperInclusive(upperInclusive: Number) {
-      }
+      public fun upperInclusive(upperInclusive: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -152,11 +144,11 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty.builder()
 
-      public override fun lowerInclusive(lowerInclusive: Number) {
+      override fun lowerInclusive(lowerInclusive: Number) {
         cdkBuilder.lowerInclusive(lowerInclusive)
       }
 
-      public override fun upperInclusive(upperInclusive: Number) {
+      override fun upperInclusive(upperInclusive: Number) {
         cdkBuilder.upperInclusive(upperInclusive)
       }
 
@@ -168,9 +160,9 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.NumberFilterProperty,
     ) : NumberFilterProperty {
-      public override fun lowerInclusive(): Number? = unwrap(this).getLowerInclusive()
+      override fun lowerInclusive(): Number? = unwrap(this).getLowerInclusive()
 
-      public override fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
+      override fun upperInclusive(): Number? = unwrap(this).getUpperInclusive()
     }
 
     public companion object {
@@ -257,191 +249,129 @@ public open class CfnFilter internal constructor(
     public fun vulnerablePackages(): Any? = unwrap(this).getVulnerablePackages()
 
     public interface Builder {
-      public fun awsAccountId(awsAccountId: IResolvable) {
-      }
+      public fun awsAccountId(awsAccountId: IResolvable)
 
-      public fun awsAccountId(awsAccountId: List<Any>) {
-      }
+      public fun awsAccountId(awsAccountId: List<Any>)
 
-      public fun componentId(componentId: IResolvable) {
-      }
+      public fun componentId(componentId: IResolvable)
 
-      public fun componentId(componentId: List<Any>) {
-      }
+      public fun componentId(componentId: List<Any>)
 
-      public fun componentType(componentType: IResolvable) {
-      }
+      public fun componentType(componentType: IResolvable)
 
-      public fun componentType(componentType: List<Any>) {
-      }
+      public fun componentType(componentType: List<Any>)
 
-      public fun ec2InstanceImageId(ec2InstanceImageId: IResolvable) {
-      }
+      public fun ec2InstanceImageId(ec2InstanceImageId: IResolvable)
 
-      public fun ec2InstanceImageId(ec2InstanceImageId: List<Any>) {
-      }
+      public fun ec2InstanceImageId(ec2InstanceImageId: List<Any>)
 
-      public fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable) {
-      }
+      public fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable)
 
-      public fun ec2InstanceSubnetId(ec2InstanceSubnetId: List<Any>) {
-      }
+      public fun ec2InstanceSubnetId(ec2InstanceSubnetId: List<Any>)
 
-      public fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable) {
-      }
+      public fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable)
 
-      public fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>) {
-      }
+      public fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>)
 
-      public fun ecrImageArchitecture(ecrImageArchitecture: IResolvable) {
-      }
+      public fun ecrImageArchitecture(ecrImageArchitecture: IResolvable)
 
-      public fun ecrImageArchitecture(ecrImageArchitecture: List<Any>) {
-      }
+      public fun ecrImageArchitecture(ecrImageArchitecture: List<Any>)
 
-      public fun ecrImageHash(ecrImageHash: IResolvable) {
-      }
+      public fun ecrImageHash(ecrImageHash: IResolvable)
 
-      public fun ecrImageHash(ecrImageHash: List<Any>) {
-      }
+      public fun ecrImageHash(ecrImageHash: List<Any>)
 
-      public fun ecrImagePushedAt(ecrImagePushedAt: IResolvable) {
-      }
+      public fun ecrImagePushedAt(ecrImagePushedAt: IResolvable)
 
-      public fun ecrImagePushedAt(ecrImagePushedAt: List<Any>) {
-      }
+      public fun ecrImagePushedAt(ecrImagePushedAt: List<Any>)
 
-      public fun ecrImageRegistry(ecrImageRegistry: IResolvable) {
-      }
+      public fun ecrImageRegistry(ecrImageRegistry: IResolvable)
 
-      public fun ecrImageRegistry(ecrImageRegistry: List<Any>) {
-      }
+      public fun ecrImageRegistry(ecrImageRegistry: List<Any>)
 
-      public fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable) {
-      }
+      public fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable)
 
-      public fun ecrImageRepositoryName(ecrImageRepositoryName: List<Any>) {
-      }
+      public fun ecrImageRepositoryName(ecrImageRepositoryName: List<Any>)
 
-      public fun ecrImageTags(ecrImageTags: IResolvable) {
-      }
+      public fun ecrImageTags(ecrImageTags: IResolvable)
 
-      public fun ecrImageTags(ecrImageTags: List<Any>) {
-      }
+      public fun ecrImageTags(ecrImageTags: List<Any>)
 
-      public fun findingArn(findingArn: IResolvable) {
-      }
+      public fun findingArn(findingArn: IResolvable)
 
-      public fun findingArn(findingArn: List<Any>) {
-      }
+      public fun findingArn(findingArn: List<Any>)
 
-      public fun findingStatus(findingStatus: IResolvable) {
-      }
+      public fun findingStatus(findingStatus: IResolvable)
 
-      public fun findingStatus(findingStatus: List<Any>) {
-      }
+      public fun findingStatus(findingStatus: List<Any>)
 
-      public fun findingType(findingType: IResolvable) {
-      }
+      public fun findingType(findingType: IResolvable)
 
-      public fun findingType(findingType: List<Any>) {
-      }
+      public fun findingType(findingType: List<Any>)
 
-      public fun firstObservedAt(firstObservedAt: IResolvable) {
-      }
+      public fun firstObservedAt(firstObservedAt: IResolvable)
 
-      public fun firstObservedAt(firstObservedAt: List<Any>) {
-      }
+      public fun firstObservedAt(firstObservedAt: List<Any>)
 
-      public fun inspectorScore(inspectorScore: IResolvable) {
-      }
+      public fun inspectorScore(inspectorScore: IResolvable)
 
-      public fun inspectorScore(inspectorScore: List<Any>) {
-      }
+      public fun inspectorScore(inspectorScore: List<Any>)
 
-      public fun lastObservedAt(lastObservedAt: IResolvable) {
-      }
+      public fun lastObservedAt(lastObservedAt: IResolvable)
 
-      public fun lastObservedAt(lastObservedAt: List<Any>) {
-      }
+      public fun lastObservedAt(lastObservedAt: List<Any>)
 
-      public fun networkProtocol(networkProtocol: IResolvable) {
-      }
+      public fun networkProtocol(networkProtocol: IResolvable)
 
-      public fun networkProtocol(networkProtocol: List<Any>) {
-      }
+      public fun networkProtocol(networkProtocol: List<Any>)
 
-      public fun portRange(portRange: IResolvable) {
-      }
+      public fun portRange(portRange: IResolvable)
 
-      public fun portRange(portRange: List<Any>) {
-      }
+      public fun portRange(portRange: List<Any>)
 
-      public fun relatedVulnerabilities(relatedVulnerabilities: IResolvable) {
-      }
+      public fun relatedVulnerabilities(relatedVulnerabilities: IResolvable)
 
-      public fun relatedVulnerabilities(relatedVulnerabilities: List<Any>) {
-      }
+      public fun relatedVulnerabilities(relatedVulnerabilities: List<Any>)
 
-      public fun resourceId(resourceId: IResolvable) {
-      }
+      public fun resourceId(resourceId: IResolvable)
 
-      public fun resourceId(resourceId: List<Any>) {
-      }
+      public fun resourceId(resourceId: List<Any>)
 
-      public fun resourceTags(resourceTags: IResolvable) {
-      }
+      public fun resourceTags(resourceTags: IResolvable)
 
-      public fun resourceTags(resourceTags: List<Any>) {
-      }
+      public fun resourceTags(resourceTags: List<Any>)
 
-      public fun resourceType(resourceType: IResolvable) {
-      }
+      public fun resourceType(resourceType: IResolvable)
 
-      public fun resourceType(resourceType: List<Any>) {
-      }
+      public fun resourceType(resourceType: List<Any>)
 
-      public fun severity(severity: IResolvable) {
-      }
+      public fun severity(severity: IResolvable)
 
-      public fun severity(severity: List<Any>) {
-      }
+      public fun severity(severity: List<Any>)
 
-      public fun title(title: IResolvable) {
-      }
+      public fun title(title: IResolvable)
 
-      public fun title(title: List<Any>) {
-      }
+      public fun title(title: List<Any>)
 
-      public fun updatedAt(updatedAt: IResolvable) {
-      }
+      public fun updatedAt(updatedAt: IResolvable)
 
-      public fun updatedAt(updatedAt: List<Any>) {
-      }
+      public fun updatedAt(updatedAt: List<Any>)
 
-      public fun vendorSeverity(vendorSeverity: IResolvable) {
-      }
+      public fun vendorSeverity(vendorSeverity: IResolvable)
 
-      public fun vendorSeverity(vendorSeverity: List<Any>) {
-      }
+      public fun vendorSeverity(vendorSeverity: List<Any>)
 
-      public fun vulnerabilityId(vulnerabilityId: IResolvable) {
-      }
+      public fun vulnerabilityId(vulnerabilityId: IResolvable)
 
-      public fun vulnerabilityId(vulnerabilityId: List<Any>) {
-      }
+      public fun vulnerabilityId(vulnerabilityId: List<Any>)
 
-      public fun vulnerabilitySource(vulnerabilitySource: IResolvable) {
-      }
+      public fun vulnerabilitySource(vulnerabilitySource: IResolvable)
 
-      public fun vulnerabilitySource(vulnerabilitySource: List<Any>) {
-      }
+      public fun vulnerabilitySource(vulnerabilitySource: List<Any>)
 
-      public fun vulnerablePackages(vulnerablePackages: IResolvable) {
-      }
+      public fun vulnerablePackages(vulnerablePackages: IResolvable)
 
-      public fun vulnerablePackages(vulnerablePackages: List<Any>) {
-      }
+      public fun vulnerablePackages(vulnerablePackages: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -449,251 +379,251 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty.builder()
 
-      public override fun awsAccountId(awsAccountId: IResolvable) {
+      override fun awsAccountId(awsAccountId: IResolvable) {
         cdkBuilder.awsAccountId(awsAccountId.let(IResolvable::unwrap))
       }
 
-      public override fun awsAccountId(awsAccountId: List<Any>) {
+      override fun awsAccountId(awsAccountId: List<Any>) {
         cdkBuilder.awsAccountId(awsAccountId)
       }
 
-      public override fun componentId(componentId: IResolvable) {
+      override fun componentId(componentId: IResolvable) {
         cdkBuilder.componentId(componentId.let(IResolvable::unwrap))
       }
 
-      public override fun componentId(componentId: List<Any>) {
+      override fun componentId(componentId: List<Any>) {
         cdkBuilder.componentId(componentId)
       }
 
-      public override fun componentType(componentType: IResolvable) {
+      override fun componentType(componentType: IResolvable) {
         cdkBuilder.componentType(componentType.let(IResolvable::unwrap))
       }
 
-      public override fun componentType(componentType: List<Any>) {
+      override fun componentType(componentType: List<Any>) {
         cdkBuilder.componentType(componentType)
       }
 
-      public override fun ec2InstanceImageId(ec2InstanceImageId: IResolvable) {
+      override fun ec2InstanceImageId(ec2InstanceImageId: IResolvable) {
         cdkBuilder.ec2InstanceImageId(ec2InstanceImageId.let(IResolvable::unwrap))
       }
 
-      public override fun ec2InstanceImageId(ec2InstanceImageId: List<Any>) {
+      override fun ec2InstanceImageId(ec2InstanceImageId: List<Any>) {
         cdkBuilder.ec2InstanceImageId(ec2InstanceImageId)
       }
 
-      public override fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable) {
+      override fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable) {
         cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId.let(IResolvable::unwrap))
       }
 
-      public override fun ec2InstanceSubnetId(ec2InstanceSubnetId: List<Any>) {
+      override fun ec2InstanceSubnetId(ec2InstanceSubnetId: List<Any>) {
         cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId)
       }
 
-      public override fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable) {
+      override fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable) {
         cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId.let(IResolvable::unwrap))
       }
 
-      public override fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>) {
+      override fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>) {
         cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId)
       }
 
-      public override fun ecrImageArchitecture(ecrImageArchitecture: IResolvable) {
+      override fun ecrImageArchitecture(ecrImageArchitecture: IResolvable) {
         cdkBuilder.ecrImageArchitecture(ecrImageArchitecture.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImageArchitecture(ecrImageArchitecture: List<Any>) {
+      override fun ecrImageArchitecture(ecrImageArchitecture: List<Any>) {
         cdkBuilder.ecrImageArchitecture(ecrImageArchitecture)
       }
 
-      public override fun ecrImageHash(ecrImageHash: IResolvable) {
+      override fun ecrImageHash(ecrImageHash: IResolvable) {
         cdkBuilder.ecrImageHash(ecrImageHash.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImageHash(ecrImageHash: List<Any>) {
+      override fun ecrImageHash(ecrImageHash: List<Any>) {
         cdkBuilder.ecrImageHash(ecrImageHash)
       }
 
-      public override fun ecrImagePushedAt(ecrImagePushedAt: IResolvable) {
+      override fun ecrImagePushedAt(ecrImagePushedAt: IResolvable) {
         cdkBuilder.ecrImagePushedAt(ecrImagePushedAt.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImagePushedAt(ecrImagePushedAt: List<Any>) {
+      override fun ecrImagePushedAt(ecrImagePushedAt: List<Any>) {
         cdkBuilder.ecrImagePushedAt(ecrImagePushedAt)
       }
 
-      public override fun ecrImageRegistry(ecrImageRegistry: IResolvable) {
+      override fun ecrImageRegistry(ecrImageRegistry: IResolvable) {
         cdkBuilder.ecrImageRegistry(ecrImageRegistry.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImageRegistry(ecrImageRegistry: List<Any>) {
+      override fun ecrImageRegistry(ecrImageRegistry: List<Any>) {
         cdkBuilder.ecrImageRegistry(ecrImageRegistry)
       }
 
-      public override fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable) {
+      override fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable) {
         cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImageRepositoryName(ecrImageRepositoryName: List<Any>) {
+      override fun ecrImageRepositoryName(ecrImageRepositoryName: List<Any>) {
         cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName)
       }
 
-      public override fun ecrImageTags(ecrImageTags: IResolvable) {
+      override fun ecrImageTags(ecrImageTags: IResolvable) {
         cdkBuilder.ecrImageTags(ecrImageTags.let(IResolvable::unwrap))
       }
 
-      public override fun ecrImageTags(ecrImageTags: List<Any>) {
+      override fun ecrImageTags(ecrImageTags: List<Any>) {
         cdkBuilder.ecrImageTags(ecrImageTags)
       }
 
-      public override fun findingArn(findingArn: IResolvable) {
+      override fun findingArn(findingArn: IResolvable) {
         cdkBuilder.findingArn(findingArn.let(IResolvable::unwrap))
       }
 
-      public override fun findingArn(findingArn: List<Any>) {
+      override fun findingArn(findingArn: List<Any>) {
         cdkBuilder.findingArn(findingArn)
       }
 
-      public override fun findingStatus(findingStatus: IResolvable) {
+      override fun findingStatus(findingStatus: IResolvable) {
         cdkBuilder.findingStatus(findingStatus.let(IResolvable::unwrap))
       }
 
-      public override fun findingStatus(findingStatus: List<Any>) {
+      override fun findingStatus(findingStatus: List<Any>) {
         cdkBuilder.findingStatus(findingStatus)
       }
 
-      public override fun findingType(findingType: IResolvable) {
+      override fun findingType(findingType: IResolvable) {
         cdkBuilder.findingType(findingType.let(IResolvable::unwrap))
       }
 
-      public override fun findingType(findingType: List<Any>) {
+      override fun findingType(findingType: List<Any>) {
         cdkBuilder.findingType(findingType)
       }
 
-      public override fun firstObservedAt(firstObservedAt: IResolvable) {
+      override fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable::unwrap))
       }
 
-      public override fun firstObservedAt(firstObservedAt: List<Any>) {
+      override fun firstObservedAt(firstObservedAt: List<Any>) {
         cdkBuilder.firstObservedAt(firstObservedAt)
       }
 
-      public override fun inspectorScore(inspectorScore: IResolvable) {
+      override fun inspectorScore(inspectorScore: IResolvable) {
         cdkBuilder.inspectorScore(inspectorScore.let(IResolvable::unwrap))
       }
 
-      public override fun inspectorScore(inspectorScore: List<Any>) {
+      override fun inspectorScore(inspectorScore: List<Any>) {
         cdkBuilder.inspectorScore(inspectorScore)
       }
 
-      public override fun lastObservedAt(lastObservedAt: IResolvable) {
+      override fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable::unwrap))
       }
 
-      public override fun lastObservedAt(lastObservedAt: List<Any>) {
+      override fun lastObservedAt(lastObservedAt: List<Any>) {
         cdkBuilder.lastObservedAt(lastObservedAt)
       }
 
-      public override fun networkProtocol(networkProtocol: IResolvable) {
+      override fun networkProtocol(networkProtocol: IResolvable) {
         cdkBuilder.networkProtocol(networkProtocol.let(IResolvable::unwrap))
       }
 
-      public override fun networkProtocol(networkProtocol: List<Any>) {
+      override fun networkProtocol(networkProtocol: List<Any>) {
         cdkBuilder.networkProtocol(networkProtocol)
       }
 
-      public override fun portRange(portRange: IResolvable) {
+      override fun portRange(portRange: IResolvable) {
         cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
       }
 
-      public override fun portRange(portRange: List<Any>) {
+      override fun portRange(portRange: List<Any>) {
         cdkBuilder.portRange(portRange)
       }
 
-      public override fun relatedVulnerabilities(relatedVulnerabilities: IResolvable) {
+      override fun relatedVulnerabilities(relatedVulnerabilities: IResolvable) {
         cdkBuilder.relatedVulnerabilities(relatedVulnerabilities.let(IResolvable::unwrap))
       }
 
-      public override fun relatedVulnerabilities(relatedVulnerabilities: List<Any>) {
+      override fun relatedVulnerabilities(relatedVulnerabilities: List<Any>) {
         cdkBuilder.relatedVulnerabilities(relatedVulnerabilities)
       }
 
-      public override fun resourceId(resourceId: IResolvable) {
+      override fun resourceId(resourceId: IResolvable) {
         cdkBuilder.resourceId(resourceId.let(IResolvable::unwrap))
       }
 
-      public override fun resourceId(resourceId: List<Any>) {
+      override fun resourceId(resourceId: List<Any>) {
         cdkBuilder.resourceId(resourceId)
       }
 
-      public override fun resourceTags(resourceTags: IResolvable) {
+      override fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
       }
 
-      public override fun resourceTags(resourceTags: List<Any>) {
+      override fun resourceTags(resourceTags: List<Any>) {
         cdkBuilder.resourceTags(resourceTags)
       }
 
-      public override fun resourceType(resourceType: IResolvable) {
+      override fun resourceType(resourceType: IResolvable) {
         cdkBuilder.resourceType(resourceType.let(IResolvable::unwrap))
       }
 
-      public override fun resourceType(resourceType: List<Any>) {
+      override fun resourceType(resourceType: List<Any>) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun severity(severity: IResolvable) {
+      override fun severity(severity: IResolvable) {
         cdkBuilder.severity(severity.let(IResolvable::unwrap))
       }
 
-      public override fun severity(severity: List<Any>) {
+      override fun severity(severity: List<Any>) {
         cdkBuilder.severity(severity)
       }
 
-      public override fun title(title: IResolvable) {
+      override fun title(title: IResolvable) {
         cdkBuilder.title(title.let(IResolvable::unwrap))
       }
 
-      public override fun title(title: List<Any>) {
+      override fun title(title: List<Any>) {
         cdkBuilder.title(title)
       }
 
-      public override fun updatedAt(updatedAt: IResolvable) {
+      override fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt.let(IResolvable::unwrap))
       }
 
-      public override fun updatedAt(updatedAt: List<Any>) {
+      override fun updatedAt(updatedAt: List<Any>) {
         cdkBuilder.updatedAt(updatedAt)
       }
 
-      public override fun vendorSeverity(vendorSeverity: IResolvable) {
+      override fun vendorSeverity(vendorSeverity: IResolvable) {
         cdkBuilder.vendorSeverity(vendorSeverity.let(IResolvable::unwrap))
       }
 
-      public override fun vendorSeverity(vendorSeverity: List<Any>) {
+      override fun vendorSeverity(vendorSeverity: List<Any>) {
         cdkBuilder.vendorSeverity(vendorSeverity)
       }
 
-      public override fun vulnerabilityId(vulnerabilityId: IResolvable) {
+      override fun vulnerabilityId(vulnerabilityId: IResolvable) {
         cdkBuilder.vulnerabilityId(vulnerabilityId.let(IResolvable::unwrap))
       }
 
-      public override fun vulnerabilityId(vulnerabilityId: List<Any>) {
+      override fun vulnerabilityId(vulnerabilityId: List<Any>) {
         cdkBuilder.vulnerabilityId(vulnerabilityId)
       }
 
-      public override fun vulnerabilitySource(vulnerabilitySource: IResolvable) {
+      override fun vulnerabilitySource(vulnerabilitySource: IResolvable) {
         cdkBuilder.vulnerabilitySource(vulnerabilitySource.let(IResolvable::unwrap))
       }
 
-      public override fun vulnerabilitySource(vulnerabilitySource: List<Any>) {
+      override fun vulnerabilitySource(vulnerabilitySource: List<Any>) {
         cdkBuilder.vulnerabilitySource(vulnerabilitySource)
       }
 
-      public override fun vulnerablePackages(vulnerablePackages: IResolvable) {
+      override fun vulnerablePackages(vulnerablePackages: IResolvable) {
         cdkBuilder.vulnerablePackages(vulnerablePackages.let(IResolvable::unwrap))
       }
 
-      public override fun vulnerablePackages(vulnerablePackages: List<Any>) {
+      override fun vulnerablePackages(vulnerablePackages: List<Any>) {
         cdkBuilder.vulnerablePackages(vulnerablePackages)
       }
 
@@ -706,67 +636,67 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty,
     ) : FilterCriteriaProperty {
-      public override fun awsAccountId(): Any? = unwrap(this).getAwsAccountId()
+      override fun awsAccountId(): Any? = unwrap(this).getAwsAccountId()
 
-      public override fun componentId(): Any? = unwrap(this).getComponentId()
+      override fun componentId(): Any? = unwrap(this).getComponentId()
 
-      public override fun componentType(): Any? = unwrap(this).getComponentType()
+      override fun componentType(): Any? = unwrap(this).getComponentType()
 
-      public override fun ec2InstanceImageId(): Any? = unwrap(this).getEc2InstanceImageId()
+      override fun ec2InstanceImageId(): Any? = unwrap(this).getEc2InstanceImageId()
 
-      public override fun ec2InstanceSubnetId(): Any? = unwrap(this).getEc2InstanceSubnetId()
+      override fun ec2InstanceSubnetId(): Any? = unwrap(this).getEc2InstanceSubnetId()
 
-      public override fun ec2InstanceVpcId(): Any? = unwrap(this).getEc2InstanceVpcId()
+      override fun ec2InstanceVpcId(): Any? = unwrap(this).getEc2InstanceVpcId()
 
-      public override fun ecrImageArchitecture(): Any? = unwrap(this).getEcrImageArchitecture()
+      override fun ecrImageArchitecture(): Any? = unwrap(this).getEcrImageArchitecture()
 
-      public override fun ecrImageHash(): Any? = unwrap(this).getEcrImageHash()
+      override fun ecrImageHash(): Any? = unwrap(this).getEcrImageHash()
 
-      public override fun ecrImagePushedAt(): Any? = unwrap(this).getEcrImagePushedAt()
+      override fun ecrImagePushedAt(): Any? = unwrap(this).getEcrImagePushedAt()
 
-      public override fun ecrImageRegistry(): Any? = unwrap(this).getEcrImageRegistry()
+      override fun ecrImageRegistry(): Any? = unwrap(this).getEcrImageRegistry()
 
-      public override fun ecrImageRepositoryName(): Any? = unwrap(this).getEcrImageRepositoryName()
+      override fun ecrImageRepositoryName(): Any? = unwrap(this).getEcrImageRepositoryName()
 
-      public override fun ecrImageTags(): Any? = unwrap(this).getEcrImageTags()
+      override fun ecrImageTags(): Any? = unwrap(this).getEcrImageTags()
 
-      public override fun findingArn(): Any? = unwrap(this).getFindingArn()
+      override fun findingArn(): Any? = unwrap(this).getFindingArn()
 
-      public override fun findingStatus(): Any? = unwrap(this).getFindingStatus()
+      override fun findingStatus(): Any? = unwrap(this).getFindingStatus()
 
-      public override fun findingType(): Any? = unwrap(this).getFindingType()
+      override fun findingType(): Any? = unwrap(this).getFindingType()
 
-      public override fun firstObservedAt(): Any? = unwrap(this).getFirstObservedAt()
+      override fun firstObservedAt(): Any? = unwrap(this).getFirstObservedAt()
 
-      public override fun inspectorScore(): Any? = unwrap(this).getInspectorScore()
+      override fun inspectorScore(): Any? = unwrap(this).getInspectorScore()
 
-      public override fun lastObservedAt(): Any? = unwrap(this).getLastObservedAt()
+      override fun lastObservedAt(): Any? = unwrap(this).getLastObservedAt()
 
-      public override fun networkProtocol(): Any? = unwrap(this).getNetworkProtocol()
+      override fun networkProtocol(): Any? = unwrap(this).getNetworkProtocol()
 
-      public override fun portRange(): Any? = unwrap(this).getPortRange()
+      override fun portRange(): Any? = unwrap(this).getPortRange()
 
-      public override fun relatedVulnerabilities(): Any? = unwrap(this).getRelatedVulnerabilities()
+      override fun relatedVulnerabilities(): Any? = unwrap(this).getRelatedVulnerabilities()
 
-      public override fun resourceId(): Any? = unwrap(this).getResourceId()
+      override fun resourceId(): Any? = unwrap(this).getResourceId()
 
-      public override fun resourceTags(): Any? = unwrap(this).getResourceTags()
+      override fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
-      public override fun resourceType(): Any? = unwrap(this).getResourceType()
+      override fun resourceType(): Any? = unwrap(this).getResourceType()
 
-      public override fun severity(): Any? = unwrap(this).getSeverity()
+      override fun severity(): Any? = unwrap(this).getSeverity()
 
-      public override fun title(): Any? = unwrap(this).getTitle()
+      override fun title(): Any? = unwrap(this).getTitle()
 
-      public override fun updatedAt(): Any? = unwrap(this).getUpdatedAt()
+      override fun updatedAt(): Any? = unwrap(this).getUpdatedAt()
 
-      public override fun vendorSeverity(): Any? = unwrap(this).getVendorSeverity()
+      override fun vendorSeverity(): Any? = unwrap(this).getVendorSeverity()
 
-      public override fun vulnerabilityId(): Any? = unwrap(this).getVulnerabilityId()
+      override fun vulnerabilityId(): Any? = unwrap(this).getVulnerabilityId()
 
-      public override fun vulnerabilitySource(): Any? = unwrap(this).getVulnerabilitySource()
+      override fun vulnerabilitySource(): Any? = unwrap(this).getVulnerabilitySource()
 
-      public override fun vulnerablePackages(): Any? = unwrap(this).getVulnerablePackages()
+      override fun vulnerablePackages(): Any? = unwrap(this).getVulnerablePackages()
     }
 
     public companion object {
@@ -795,11 +725,9 @@ public open class CfnFilter internal constructor(
     public fun startInclusive(): Number? = unwrap(this).getStartInclusive()
 
     public interface Builder {
-      public fun endInclusive(endInclusive: Number) {
-      }
+      public fun endInclusive(endInclusive: Number)
 
-      public fun startInclusive(startInclusive: Number) {
-      }
+      public fun startInclusive(startInclusive: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -807,11 +735,11 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty.builder()
 
-      public override fun endInclusive(endInclusive: Number) {
+      override fun endInclusive(endInclusive: Number) {
         cdkBuilder.endInclusive(endInclusive)
       }
 
-      public override fun startInclusive(startInclusive: Number) {
+      override fun startInclusive(startInclusive: Number) {
         cdkBuilder.startInclusive(startInclusive)
       }
 
@@ -823,9 +751,9 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.DateFilterProperty,
     ) : DateFilterProperty {
-      public override fun endInclusive(): Number? = unwrap(this).getEndInclusive()
+      override fun endInclusive(): Number? = unwrap(this).getEndInclusive()
 
-      public override fun startInclusive(): Number? = unwrap(this).getStartInclusive()
+      override fun startInclusive(): Number? = unwrap(this).getStartInclusive()
     }
 
     public companion object {
@@ -862,71 +790,53 @@ public open class CfnFilter internal constructor(
     public fun version(): Any? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun architecture(architecture: IResolvable) {
-      }
+      public fun architecture(architecture: IResolvable)
 
-      public fun architecture(architecture: StringFilterProperty) {
-      }
+      public fun architecture(architecture: StringFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e41e0efcde2fee5e85dcca2dd10dd1f812ef4c3256616a41e1439ad4dbe06369")
-      public fun architecture(architecture: StringFilterProperty.Builder.() -> Unit) {
-      }
+      public fun architecture(architecture: StringFilterProperty.Builder.() -> Unit)
 
-      public fun epoch(epoch: IResolvable) {
-      }
+      public fun epoch(epoch: IResolvable)
 
-      public fun epoch(epoch: NumberFilterProperty) {
-      }
+      public fun epoch(epoch: NumberFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91a37ef05a7394d45e35142d71d779861fb1367645df5ef0d2a865d0dcb7cb64")
-      public fun epoch(epoch: NumberFilterProperty.Builder.() -> Unit) {
-      }
+      public fun epoch(epoch: NumberFilterProperty.Builder.() -> Unit)
 
-      public fun name(name: IResolvable) {
-      }
+      public fun name(name: IResolvable)
 
-      public fun name(name: StringFilterProperty) {
-      }
+      public fun name(name: StringFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c4a1ddf4552f0bed377ff0fe7710c1286653bc5a382a2e2bd32d52bf0334e58a")
-      public fun name(name: StringFilterProperty.Builder.() -> Unit) {
-      }
+      public fun name(name: StringFilterProperty.Builder.() -> Unit)
 
-      public fun release(release: IResolvable) {
-      }
+      public fun release(release: IResolvable)
 
-      public fun release(release: StringFilterProperty) {
-      }
+      public fun release(release: StringFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9fd74b0bc06670d4201aff5c055291fda7425f666b5a97083937fb9668c0d8c")
-      public fun release(release: StringFilterProperty.Builder.() -> Unit) {
-      }
+      public fun release(release: StringFilterProperty.Builder.() -> Unit)
 
-      public fun sourceLayerHash(sourceLayerHash: IResolvable) {
-      }
+      public fun sourceLayerHash(sourceLayerHash: IResolvable)
 
-      public fun sourceLayerHash(sourceLayerHash: StringFilterProperty) {
-      }
+      public fun sourceLayerHash(sourceLayerHash: StringFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("098e3d951d4bdc7c46fccdcee88664e4e900a0284195fe680536266cf4f89e98")
-      public fun sourceLayerHash(sourceLayerHash: StringFilterProperty.Builder.() -> Unit) {
-      }
+      public fun sourceLayerHash(sourceLayerHash: StringFilterProperty.Builder.() -> Unit)
 
-      public fun version(version: IResolvable) {
-      }
+      public fun version(version: IResolvable)
 
-      public fun version(version: StringFilterProperty) {
-      }
+      public fun version(version: StringFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7225fb18487ca5a2f0a0ac71bedf4bc41c3609f81185b01c540d7d54ce379c04")
-      public fun version(version: StringFilterProperty.Builder.() -> Unit) {
-      }
+      public fun version(version: StringFilterProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -934,82 +844,82 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty.builder()
 
-      public override fun architecture(architecture: IResolvable) {
+      override fun architecture(architecture: IResolvable) {
         cdkBuilder.architecture(architecture.let(IResolvable::unwrap))
       }
 
-      public override fun architecture(architecture: StringFilterProperty) {
+      override fun architecture(architecture: StringFilterProperty) {
         cdkBuilder.architecture(architecture.let(StringFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e41e0efcde2fee5e85dcca2dd10dd1f812ef4c3256616a41e1439ad4dbe06369")
-      public override fun architecture(architecture: StringFilterProperty.Builder.() -> Unit): Unit
-          = architecture(StringFilterProperty(architecture))
+      override fun architecture(architecture: StringFilterProperty.Builder.() -> Unit): Unit =
+          architecture(StringFilterProperty(architecture))
 
-      public override fun epoch(epoch: IResolvable) {
+      override fun epoch(epoch: IResolvable) {
         cdkBuilder.epoch(epoch.let(IResolvable::unwrap))
       }
 
-      public override fun epoch(epoch: NumberFilterProperty) {
+      override fun epoch(epoch: NumberFilterProperty) {
         cdkBuilder.epoch(epoch.let(NumberFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91a37ef05a7394d45e35142d71d779861fb1367645df5ef0d2a865d0dcb7cb64")
-      public override fun epoch(epoch: NumberFilterProperty.Builder.() -> Unit): Unit =
+      override fun epoch(epoch: NumberFilterProperty.Builder.() -> Unit): Unit =
           epoch(NumberFilterProperty(epoch))
 
-      public override fun name(name: IResolvable) {
+      override fun name(name: IResolvable) {
         cdkBuilder.name(name.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: StringFilterProperty) {
+      override fun name(name: StringFilterProperty) {
         cdkBuilder.name(name.let(StringFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c4a1ddf4552f0bed377ff0fe7710c1286653bc5a382a2e2bd32d52bf0334e58a")
-      public override fun name(name: StringFilterProperty.Builder.() -> Unit): Unit =
+      override fun name(name: StringFilterProperty.Builder.() -> Unit): Unit =
           name(StringFilterProperty(name))
 
-      public override fun release(release: IResolvable) {
+      override fun release(release: IResolvable) {
         cdkBuilder.release(release.let(IResolvable::unwrap))
       }
 
-      public override fun release(release: StringFilterProperty) {
+      override fun release(release: StringFilterProperty) {
         cdkBuilder.release(release.let(StringFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a9fd74b0bc06670d4201aff5c055291fda7425f666b5a97083937fb9668c0d8c")
-      public override fun release(release: StringFilterProperty.Builder.() -> Unit): Unit =
+      override fun release(release: StringFilterProperty.Builder.() -> Unit): Unit =
           release(StringFilterProperty(release))
 
-      public override fun sourceLayerHash(sourceLayerHash: IResolvable) {
+      override fun sourceLayerHash(sourceLayerHash: IResolvable) {
         cdkBuilder.sourceLayerHash(sourceLayerHash.let(IResolvable::unwrap))
       }
 
-      public override fun sourceLayerHash(sourceLayerHash: StringFilterProperty) {
+      override fun sourceLayerHash(sourceLayerHash: StringFilterProperty) {
         cdkBuilder.sourceLayerHash(sourceLayerHash.let(StringFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("098e3d951d4bdc7c46fccdcee88664e4e900a0284195fe680536266cf4f89e98")
-      public override fun sourceLayerHash(sourceLayerHash: StringFilterProperty.Builder.() -> Unit):
-          Unit = sourceLayerHash(StringFilterProperty(sourceLayerHash))
+      override fun sourceLayerHash(sourceLayerHash: StringFilterProperty.Builder.() -> Unit): Unit =
+          sourceLayerHash(StringFilterProperty(sourceLayerHash))
 
-      public override fun version(version: IResolvable) {
+      override fun version(version: IResolvable) {
         cdkBuilder.version(version.let(IResolvable::unwrap))
       }
 
-      public override fun version(version: StringFilterProperty) {
+      override fun version(version: StringFilterProperty) {
         cdkBuilder.version(version.let(StringFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7225fb18487ca5a2f0a0ac71bedf4bc41c3609f81185b01c540d7d54ce379c04")
-      public override fun version(version: StringFilterProperty.Builder.() -> Unit): Unit =
+      override fun version(version: StringFilterProperty.Builder.() -> Unit): Unit =
           version(StringFilterProperty(version))
 
       public fun build():
@@ -1021,17 +931,17 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PackageFilterProperty,
     ) : PackageFilterProperty {
-      public override fun architecture(): Any? = unwrap(this).getArchitecture()
+      override fun architecture(): Any? = unwrap(this).getArchitecture()
 
-      public override fun epoch(): Any? = unwrap(this).getEpoch()
+      override fun epoch(): Any? = unwrap(this).getEpoch()
 
-      public override fun name(): Any? = unwrap(this).getName()
+      override fun name(): Any? = unwrap(this).getName()
 
-      public override fun release(): Any? = unwrap(this).getRelease()
+      override fun release(): Any? = unwrap(this).getRelease()
 
-      public override fun sourceLayerHash(): Any? = unwrap(this).getSourceLayerHash()
+      override fun sourceLayerHash(): Any? = unwrap(this).getSourceLayerHash()
 
-      public override fun version(): Any? = unwrap(this).getVersion()
+      override fun version(): Any? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -1060,11 +970,9 @@ public open class CfnFilter internal constructor(
     public fun endInclusive(): Number? = unwrap(this).getEndInclusive()
 
     public interface Builder {
-      public fun beginInclusive(beginInclusive: Number) {
-      }
+      public fun beginInclusive(beginInclusive: Number)
 
-      public fun endInclusive(endInclusive: Number) {
-      }
+      public fun endInclusive(endInclusive: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1072,11 +980,11 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty.builder()
 
-      public override fun beginInclusive(beginInclusive: Number) {
+      override fun beginInclusive(beginInclusive: Number) {
         cdkBuilder.beginInclusive(beginInclusive)
       }
 
-      public override fun endInclusive(endInclusive: Number) {
+      override fun endInclusive(endInclusive: Number) {
         cdkBuilder.endInclusive(endInclusive)
       }
 
@@ -1089,9 +997,9 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.PortRangeFilterProperty,
     ) : PortRangeFilterProperty {
-      public override fun beginInclusive(): Number? = unwrap(this).getBeginInclusive()
+      override fun beginInclusive(): Number? = unwrap(this).getBeginInclusive()
 
-      public override fun endInclusive(): Number? = unwrap(this).getEndInclusive()
+      override fun endInclusive(): Number? = unwrap(this).getEndInclusive()
     }
 
     public companion object {
@@ -1120,11 +1028,9 @@ public open class CfnFilter internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun comparison(comparison: String) {
-      }
+      public fun comparison(comparison: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1132,11 +1038,11 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty.builder()
 
-      public override fun comparison(comparison: String) {
+      override fun comparison(comparison: String) {
         cdkBuilder.comparison(comparison)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1148,9 +1054,9 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.StringFilterProperty,
     ) : StringFilterProperty {
-      public override fun comparison(): String = unwrap(this).getComparison()
+      override fun comparison(): String = unwrap(this).getComparison()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1181,14 +1087,11 @@ public open class CfnFilter internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun comparison(comparison: String) {
-      }
+      public fun comparison(comparison: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1196,15 +1099,15 @@ public open class CfnFilter internal constructor(
           software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty.Builder =
           software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty.builder()
 
-      public override fun comparison(comparison: String) {
+      override fun comparison(comparison: String) {
         cdkBuilder.comparison(comparison)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1216,11 +1119,11 @@ public open class CfnFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnFilter.MapFilterProperty,
     ) : MapFilterProperty {
-      public override fun comparison(): String = unwrap(this).getComparison()
+      override fun comparison(): String = unwrap(this).getComparison()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

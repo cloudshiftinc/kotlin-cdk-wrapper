@@ -10,11 +10,9 @@ public interface CommonStringParameterAttributes {
   public fun simpleName(): Boolean? = unwrap(this).getSimpleName()
 
   public interface Builder {
-    public fun parameterName(parameterName: String) {
-    }
+    public fun parameterName(parameterName: String)
 
-    public fun simpleName(simpleName: Boolean) {
-    }
+    public fun simpleName(simpleName: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface CommonStringParameterAttributes {
         software.amazon.awscdk.services.ssm.CommonStringParameterAttributes.Builder =
         software.amazon.awscdk.services.ssm.CommonStringParameterAttributes.builder()
 
-    public override fun parameterName(parameterName: String) {
+    override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
-    public override fun simpleName(simpleName: Boolean) {
+    override fun simpleName(simpleName: Boolean) {
       cdkBuilder.simpleName(simpleName)
     }
 
@@ -37,9 +35,9 @@ public interface CommonStringParameterAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ssm.CommonStringParameterAttributes,
   ) : CommonStringParameterAttributes {
-    public override fun parameterName(): String = unwrap(this).getParameterName()
+    override fun parameterName(): String = unwrap(this).getParameterName()
 
-    public override fun simpleName(): Boolean? = unwrap(this).getSimpleName()
+    override fun simpleName(): Boolean? = unwrap(this).getSimpleName()
   }
 
   public companion object {

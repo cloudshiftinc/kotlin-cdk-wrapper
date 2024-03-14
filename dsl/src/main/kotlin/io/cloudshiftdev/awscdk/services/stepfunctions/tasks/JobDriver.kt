@@ -8,26 +8,24 @@ public interface JobDriver {
   public fun sparkSubmitJobDriver(): SparkSubmitJobDriver
 
   public interface Builder {
-    public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
-    }
+    public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd65666a6cd5e8d0877bea883bee5e98c04d753bb31b5c14947f8ae7155c0061")
-    public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver.Builder.() -> Unit) {
-    }
+    public fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.tasks.JobDriver.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.JobDriver.builder()
 
-    public override fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
+    override fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
       cdkBuilder.sparkSubmitJobDriver(sparkSubmitJobDriver.let(SparkSubmitJobDriver::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd65666a6cd5e8d0877bea883bee5e98c04d753bb31b5c14947f8ae7155c0061")
-    public override
+    override
         fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver.Builder.() -> Unit):
         Unit = sparkSubmitJobDriver(SparkSubmitJobDriver(sparkSubmitJobDriver))
 
@@ -38,7 +36,7 @@ public interface JobDriver {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDriver,
   ) : JobDriver {
-    public override fun sparkSubmitJobDriver(): SparkSubmitJobDriver =
+    override fun sparkSubmitJobDriver(): SparkSubmitJobDriver =
         unwrap(this).getSparkSubmitJobDriver().let(SparkSubmitJobDriver::wrap)
   }
 

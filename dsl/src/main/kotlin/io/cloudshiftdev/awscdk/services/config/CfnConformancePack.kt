@@ -66,29 +66,21 @@ public open class CfnConformancePack internal constructor(
   }
 
   public interface Builder {
-    public fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
-    }
+    public fun conformancePackInputParameters(conformancePackInputParameters: IResolvable)
 
-    public fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
-    }
+    public fun conformancePackInputParameters(conformancePackInputParameters: List<Any>)
 
-    public fun conformancePackName(conformancePackName: String) {
-    }
+    public fun conformancePackName(conformancePackName: String)
 
-    public fun deliveryS3Bucket(deliveryS3Bucket: String) {
-    }
+    public fun deliveryS3Bucket(deliveryS3Bucket: String)
 
-    public fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String) {
-    }
+    public fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String)
 
-    public fun templateBody(templateBody: String) {
-    }
+    public fun templateBody(templateBody: String)
 
-    public fun templateS3Uri(templateS3Uri: String) {
-    }
+    public fun templateS3Uri(templateS3Uri: String)
 
-    public fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any) {
-    }
+    public fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any)
   }
 
   private class BuilderImpl(
@@ -98,36 +90,35 @@ public open class CfnConformancePack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.config.CfnConformancePack.Builder =
         software.amazon.awscdk.services.config.CfnConformancePack.Builder.create(scope, id)
 
-    public override
-        fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
+    override fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
       cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.let(IResolvable::unwrap))
     }
 
-    public override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
+    override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
       cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
     }
 
-    public override fun conformancePackName(conformancePackName: String) {
+    override fun conformancePackName(conformancePackName: String) {
       cdkBuilder.conformancePackName(conformancePackName)
     }
 
-    public override fun deliveryS3Bucket(deliveryS3Bucket: String) {
+    override fun deliveryS3Bucket(deliveryS3Bucket: String) {
       cdkBuilder.deliveryS3Bucket(deliveryS3Bucket)
     }
 
-    public override fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String) {
+    override fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String) {
       cdkBuilder.deliveryS3KeyPrefix(deliveryS3KeyPrefix)
     }
 
-    public override fun templateBody(templateBody: String) {
+    override fun templateBody(templateBody: String) {
       cdkBuilder.templateBody(templateBody)
     }
 
-    public override fun templateS3Uri(templateS3Uri: String) {
+    override fun templateS3Uri(templateS3Uri: String) {
       cdkBuilder.templateS3Uri(templateS3Uri)
     }
 
-    public override fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any) {
+    override fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any) {
       cdkBuilder.templateSsmDocumentDetails(templateSsmDocumentDetails)
     }
 
@@ -162,11 +153,9 @@ public open class CfnConformancePack internal constructor(
     public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
     public interface Builder {
-      public fun documentName(documentName: String) {
-      }
+      public fun documentName(documentName: String)
 
-      public fun documentVersion(documentVersion: String) {
-      }
+      public fun documentVersion(documentVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -175,11 +164,11 @@ public open class CfnConformancePack internal constructor(
           =
           software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty.builder()
 
-      public override fun documentName(documentName: String) {
+      override fun documentName(documentName: String) {
         cdkBuilder.documentName(documentName)
       }
 
-      public override fun documentVersion(documentVersion: String) {
+      override fun documentVersion(documentVersion: String) {
         cdkBuilder.documentVersion(documentVersion)
       }
 
@@ -192,9 +181,9 @@ public open class CfnConformancePack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
     ) : TemplateSSMDocumentDetailsProperty {
-      public override fun documentName(): String? = unwrap(this).getDocumentName()
+      override fun documentName(): String? = unwrap(this).getDocumentName()
 
-      public override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
     }
 
     public companion object {
@@ -224,11 +213,9 @@ public open class CfnConformancePack internal constructor(
     public fun parameterValue(): String
 
     public interface Builder {
-      public fun parameterName(parameterName: String) {
-      }
+      public fun parameterName(parameterName: String)
 
-      public fun parameterValue(parameterValue: String) {
-      }
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -237,11 +224,11 @@ public open class CfnConformancePack internal constructor(
           =
           software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.builder()
 
-      public override fun parameterName(parameterName: String) {
+      override fun parameterName(parameterName: String) {
         cdkBuilder.parameterName(parameterName)
       }
 
-      public override fun parameterValue(parameterValue: String) {
+      override fun parameterValue(parameterValue: String) {
         cdkBuilder.parameterValue(parameterValue)
       }
 
@@ -254,9 +241,9 @@ public open class CfnConformancePack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
     ) : ConformancePackInputParameterProperty {
-      public override fun parameterName(): String = unwrap(this).getParameterName()
+      override fun parameterName(): String = unwrap(this).getParameterName()
 
-      public override fun parameterValue(): String = unwrap(this).getParameterValue()
+      override fun parameterValue(): String = unwrap(this).getParameterValue()
     }
 
     public companion object {

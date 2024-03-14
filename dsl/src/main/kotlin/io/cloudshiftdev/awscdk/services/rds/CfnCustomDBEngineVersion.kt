@@ -81,33 +81,23 @@ public open class CfnCustomDBEngineVersion internal constructor(
   }
 
   public interface Builder {
-    public
-        fun databaseInstallationFilesS3BucketName(databaseInstallationFilesS3BucketName: String) {
-    }
+    public fun databaseInstallationFilesS3BucketName(databaseInstallationFilesS3BucketName: String)
 
-    public fun databaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix: String) {
-    }
+    public fun databaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun manifest(manifest: String) {
-    }
+    public fun manifest(manifest: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -117,41 +107,40 @@ public open class CfnCustomDBEngineVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion.Builder =
         software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion.Builder.create(scope, id)
 
-    public override
+    override
         fun databaseInstallationFilesS3BucketName(databaseInstallationFilesS3BucketName: String) {
       cdkBuilder.databaseInstallationFilesS3BucketName(databaseInstallationFilesS3BucketName)
     }
 
-    public override
-        fun databaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix: String) {
+    override fun databaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix: String) {
       cdkBuilder.databaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun manifest(manifest: String) {
+    override fun manifest(manifest: String) {
       cdkBuilder.manifest(manifest)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

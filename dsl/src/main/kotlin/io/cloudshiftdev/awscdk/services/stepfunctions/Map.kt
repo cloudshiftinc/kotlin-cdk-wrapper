@@ -54,39 +54,28 @@ public open class Map internal constructor(
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>) {
-    }
+    public fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>)
 
-    public fun itemsPath(itemsPath: String) {
-    }
+    public fun itemsPath(itemsPath: String)
 
-    public fun maxConcurrency(maxConcurrency: Number) {
-    }
+    public fun maxConcurrency(maxConcurrency: Number)
 
-    public fun maxConcurrencyPath(maxConcurrencyPath: String) {
-    }
+    public fun maxConcurrencyPath(maxConcurrencyPath: String)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun parameters(parameters: kotlin.collections.Map<String, Any>) {
-    }
+    public fun parameters(parameters: kotlin.collections.Map<String, Any>)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
   }
 
   private class BuilderImpl(
@@ -96,48 +85,48 @@ public open class Map internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Map.Builder =
         software.amazon.awscdk.services.stepfunctions.Map.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>) {
+    override fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>) {
       cdkBuilder.itemSelector(itemSelector)
     }
 
-    public override fun itemsPath(itemsPath: String) {
+    override fun itemsPath(itemsPath: String) {
       cdkBuilder.itemsPath(itemsPath)
     }
 
-    public override fun maxConcurrency(maxConcurrency: Number) {
+    override fun maxConcurrency(maxConcurrency: Number) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
 
-    public override fun maxConcurrencyPath(maxConcurrencyPath: String) {
+    override fun maxConcurrencyPath(maxConcurrencyPath: String) {
       cdkBuilder.maxConcurrencyPath(maxConcurrencyPath)
     }
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun parameters(parameters: kotlin.collections.Map<String, Any>) {
+    override fun parameters(parameters: kotlin.collections.Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>) {
+    override fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 

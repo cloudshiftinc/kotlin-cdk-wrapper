@@ -76,7 +76,8 @@ internal object BuilderGenerator {
         )
 
         // the main build() function of the builder dsl
-        val buildFnBuilder = FunSpec.builder("build").returns(builderInfo.buildableClass.className)
+        val buildFnBuilder = FunSpec.builder("build")
+            .returns(builderInfo.buildableClass.className)
 
         if (builderInfo.cdkBuilderClass.deprecated) {
             builderInterfaceBuilder.addAnnotation(Annotations.Deprecated)
@@ -92,8 +93,15 @@ internal object BuilderGenerator {
         val cdkMethods = generator.generate(builderInfo.cdkBuilderClass, methods)
 
         cdkMethods.forEach {
-            builderInterfaceBuilder.addFunction(it.interfaceMethod)
-            builderImplBuilder.addFunction(it.implementationMethod)
+            val interfaceBuilder = it.interfaceMethod.toBuilder()
+            interfaceBuilder.modifiers.add(KModifier.ABSTRACT)
+            builderInterfaceBuilder.addFunction(interfaceBuilder.build())
+
+            val implBuilder = it.implementationMethod.toBuilder()
+            implBuilder.modifiers.remove(KModifier.OPEN)
+            implBuilder.modifiers.remove(KModifier.PUBLIC)
+            implBuilder.modifiers.add(KModifier.OVERRIDE)
+            builderImplBuilder.addFunction(implBuilder.build())
         }
 
 //

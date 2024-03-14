@@ -78,46 +78,35 @@ public open class CfnDeploymentConfig internal constructor(
       zonalConfig(ZonalConfigProperty(`value`))
 
   public interface Builder {
-    public fun computePlatform(computePlatform: String) {
-    }
+    public fun computePlatform(computePlatform: String)
 
-    public fun deploymentConfigName(deploymentConfigName: String) {
-    }
+    public fun deploymentConfigName(deploymentConfigName: String)
 
-    public fun minimumHealthyHosts(minimumHealthyHosts: IResolvable) {
-    }
+    public fun minimumHealthyHosts(minimumHealthyHosts: IResolvable)
 
-    public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty) {
-    }
+    public fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fbc1c3a565260c5d54a5ad16a4e966843b6eb67b2b603b17bf971baae214889a")
     public
-        fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty.Builder.() -> Unit) {
-    }
+        fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty.Builder.() -> Unit)
 
-    public fun trafficRoutingConfig(trafficRoutingConfig: IResolvable) {
-    }
+    public fun trafficRoutingConfig(trafficRoutingConfig: IResolvable)
 
-    public fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty) {
-    }
+    public fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6a790552c956f9a592a991f15d33e1a0de868fca97a9c3d960b1627e58e3eed")
     public
-        fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty.Builder.() -> Unit) {
-    }
+        fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty.Builder.() -> Unit)
 
-    public fun zonalConfig(zonalConfig: IResolvable) {
-    }
+    public fun zonalConfig(zonalConfig: IResolvable)
 
-    public fun zonalConfig(zonalConfig: ZonalConfigProperty) {
-    }
+    public fun zonalConfig(zonalConfig: ZonalConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82e38925318ba0657ddb028e58cbf24d5850549facc89820c13454720ce7d59a")
-    public fun zonalConfig(zonalConfig: ZonalConfigProperty.Builder.() -> Unit) {
-    }
+    public fun zonalConfig(zonalConfig: ZonalConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -127,53 +116,53 @@ public open class CfnDeploymentConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.Builder =
         software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.Builder.create(scope, id)
 
-    public override fun computePlatform(computePlatform: String) {
+    override fun computePlatform(computePlatform: String) {
       cdkBuilder.computePlatform(computePlatform)
     }
 
-    public override fun deploymentConfigName(deploymentConfigName: String) {
+    override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
-    public override fun minimumHealthyHosts(minimumHealthyHosts: IResolvable) {
+    override fun minimumHealthyHosts(minimumHealthyHosts: IResolvable) {
       cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(IResolvable::unwrap))
     }
 
-    public override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty) {
+    override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty) {
       cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHostsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fbc1c3a565260c5d54a5ad16a4e966843b6eb67b2b603b17bf971baae214889a")
-    public override
+    override
         fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty.Builder.() -> Unit):
         Unit = minimumHealthyHosts(MinimumHealthyHostsProperty(minimumHealthyHosts))
 
-    public override fun trafficRoutingConfig(trafficRoutingConfig: IResolvable) {
+    override fun trafficRoutingConfig(trafficRoutingConfig: IResolvable) {
       cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty) {
+    override fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty) {
       cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(TrafficRoutingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6a790552c956f9a592a991f15d33e1a0de868fca97a9c3d960b1627e58e3eed")
-    public override
+    override
         fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty.Builder.() -> Unit):
         Unit = trafficRoutingConfig(TrafficRoutingConfigProperty(trafficRoutingConfig))
 
-    public override fun zonalConfig(zonalConfig: IResolvable) {
+    override fun zonalConfig(zonalConfig: IResolvable) {
       cdkBuilder.zonalConfig(zonalConfig.let(IResolvable::unwrap))
     }
 
-    public override fun zonalConfig(zonalConfig: ZonalConfigProperty) {
+    override fun zonalConfig(zonalConfig: ZonalConfigProperty) {
       cdkBuilder.zonalConfig(zonalConfig.let(ZonalConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82e38925318ba0657ddb028e58cbf24d5850549facc89820c13454720ce7d59a")
-    public override fun zonalConfig(zonalConfig: ZonalConfigProperty.Builder.() -> Unit): Unit =
+    override fun zonalConfig(zonalConfig: ZonalConfigProperty.Builder.() -> Unit): Unit =
         zonalConfig(ZonalConfigProperty(zonalConfig))
 
     public fun build(): software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig =
@@ -210,24 +199,19 @@ public open class CfnDeploymentConfig internal constructor(
     public fun monitorDurationInSeconds(): Number? = unwrap(this).getMonitorDurationInSeconds()
 
     public interface Builder {
-      public fun firstZoneMonitorDurationInSeconds(firstZoneMonitorDurationInSeconds: Number) {
-      }
+      public fun firstZoneMonitorDurationInSeconds(firstZoneMonitorDurationInSeconds: Number)
 
-      public fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: IResolvable) {
-      }
+      public fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: IResolvable)
 
       public
-          fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty) {
-      }
+          fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87ea626ac55620d1f14ed70d11d4095a689636449fcbd66960aef032eaead7b5")
       public
-          fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty.Builder.() -> Unit) {
-      }
+          fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty.Builder.() -> Unit)
 
-      public fun monitorDurationInSeconds(monitorDurationInSeconds: Number) {
-      }
+      public fun monitorDurationInSeconds(monitorDurationInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -236,28 +220,27 @@ public open class CfnDeploymentConfig internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty.builder()
 
-      public override
-          fun firstZoneMonitorDurationInSeconds(firstZoneMonitorDurationInSeconds: Number) {
+      override fun firstZoneMonitorDurationInSeconds(firstZoneMonitorDurationInSeconds: Number) {
         cdkBuilder.firstZoneMonitorDurationInSeconds(firstZoneMonitorDurationInSeconds)
       }
 
-      public override fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: IResolvable) {
+      override fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: IResolvable) {
         cdkBuilder.minimumHealthyHostsPerZone(minimumHealthyHostsPerZone.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty) {
         cdkBuilder.minimumHealthyHostsPerZone(minimumHealthyHostsPerZone.let(MinimumHealthyHostsPerZoneProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87ea626ac55620d1f14ed70d11d4095a689636449fcbd66960aef032eaead7b5")
-      public override
+      override
           fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty.Builder.() -> Unit):
           Unit =
           minimumHealthyHostsPerZone(MinimumHealthyHostsPerZoneProperty(minimumHealthyHostsPerZone))
 
-      public override fun monitorDurationInSeconds(monitorDurationInSeconds: Number) {
+      override fun monitorDurationInSeconds(monitorDurationInSeconds: Number) {
         cdkBuilder.monitorDurationInSeconds(monitorDurationInSeconds)
       }
 
@@ -270,14 +253,12 @@ public open class CfnDeploymentConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.ZonalConfigProperty,
     ) : ZonalConfigProperty {
-      public override fun firstZoneMonitorDurationInSeconds(): Number? =
+      override fun firstZoneMonitorDurationInSeconds(): Number? =
           unwrap(this).getFirstZoneMonitorDurationInSeconds()
 
-      public override fun minimumHealthyHostsPerZone(): Any? =
-          unwrap(this).getMinimumHealthyHostsPerZone()
+      override fun minimumHealthyHostsPerZone(): Any? = unwrap(this).getMinimumHealthyHostsPerZone()
 
-      public override fun monitorDurationInSeconds(): Number? =
-          unwrap(this).getMonitorDurationInSeconds()
+      override fun monitorDurationInSeconds(): Number? = unwrap(this).getMonitorDurationInSeconds()
     }
 
     public companion object {
@@ -306,11 +287,9 @@ public open class CfnDeploymentConfig internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -319,11 +298,11 @@ public open class CfnDeploymentConfig internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -336,9 +315,9 @@ public open class CfnDeploymentConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty,
     ) : MinimumHealthyHostsProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -367,11 +346,9 @@ public open class CfnDeploymentConfig internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -380,11 +357,11 @@ public open class CfnDeploymentConfig internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -397,9 +374,9 @@ public open class CfnDeploymentConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsPerZoneProperty,
     ) : MinimumHealthyHostsPerZoneProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -431,30 +408,23 @@ public open class CfnDeploymentConfig internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun timeBasedCanary(timeBasedCanary: IResolvable) {
-      }
+      public fun timeBasedCanary(timeBasedCanary: IResolvable)
 
-      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty) {
-      }
+      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32115ce6e20e117c8f464c1a8cda6c2d27b8944c439b7ad12d2637c1b9038c35")
-      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit) {
-      }
+      public fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit)
 
-      public fun timeBasedLinear(timeBasedLinear: IResolvable) {
-      }
+      public fun timeBasedLinear(timeBasedLinear: IResolvable)
 
-      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty) {
-      }
+      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ed05caad02b178f12e9a278512f7f6967e67dc19d57dcbdc419a042bcafa27f")
-      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit) {
-      }
+      public fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -463,35 +433,33 @@ public open class CfnDeploymentConfig internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty.builder()
 
-      public override fun timeBasedCanary(timeBasedCanary: IResolvable) {
+      override fun timeBasedCanary(timeBasedCanary: IResolvable) {
         cdkBuilder.timeBasedCanary(timeBasedCanary.let(IResolvable::unwrap))
       }
 
-      public override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty) {
+      override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty) {
         cdkBuilder.timeBasedCanary(timeBasedCanary.let(TimeBasedCanaryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("32115ce6e20e117c8f464c1a8cda6c2d27b8944c439b7ad12d2637c1b9038c35")
-      public override
-          fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit): Unit =
-          timeBasedCanary(TimeBasedCanaryProperty(timeBasedCanary))
+      override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty.Builder.() -> Unit):
+          Unit = timeBasedCanary(TimeBasedCanaryProperty(timeBasedCanary))
 
-      public override fun timeBasedLinear(timeBasedLinear: IResolvable) {
+      override fun timeBasedLinear(timeBasedLinear: IResolvable) {
         cdkBuilder.timeBasedLinear(timeBasedLinear.let(IResolvable::unwrap))
       }
 
-      public override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty) {
+      override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty) {
         cdkBuilder.timeBasedLinear(timeBasedLinear.let(TimeBasedLinearProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5ed05caad02b178f12e9a278512f7f6967e67dc19d57dcbdc419a042bcafa27f")
-      public override
-          fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit): Unit =
-          timeBasedLinear(TimeBasedLinearProperty(timeBasedLinear))
+      override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty.Builder.() -> Unit):
+          Unit = timeBasedLinear(TimeBasedLinearProperty(timeBasedLinear))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -504,11 +472,11 @@ public open class CfnDeploymentConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TrafficRoutingConfigProperty,
     ) : TrafficRoutingConfigProperty {
-      public override fun timeBasedCanary(): Any? = unwrap(this).getTimeBasedCanary()
+      override fun timeBasedCanary(): Any? = unwrap(this).getTimeBasedCanary()
 
-      public override fun timeBasedLinear(): Any? = unwrap(this).getTimeBasedLinear()
+      override fun timeBasedLinear(): Any? = unwrap(this).getTimeBasedLinear()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -537,11 +505,9 @@ public open class CfnDeploymentConfig internal constructor(
     public fun linearPercentage(): Number
 
     public interface Builder {
-      public fun linearInterval(linearInterval: Number) {
-      }
+      public fun linearInterval(linearInterval: Number)
 
-      public fun linearPercentage(linearPercentage: Number) {
-      }
+      public fun linearPercentage(linearPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -550,11 +516,11 @@ public open class CfnDeploymentConfig internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty.builder()
 
-      public override fun linearInterval(linearInterval: Number) {
+      override fun linearInterval(linearInterval: Number) {
         cdkBuilder.linearInterval(linearInterval)
       }
 
-      public override fun linearPercentage(linearPercentage: Number) {
+      override fun linearPercentage(linearPercentage: Number) {
         cdkBuilder.linearPercentage(linearPercentage)
       }
 
@@ -567,9 +533,9 @@ public open class CfnDeploymentConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedLinearProperty,
     ) : TimeBasedLinearProperty {
-      public override fun linearInterval(): Number = unwrap(this).getLinearInterval()
+      override fun linearInterval(): Number = unwrap(this).getLinearInterval()
 
-      public override fun linearPercentage(): Number = unwrap(this).getLinearPercentage()
+      override fun linearPercentage(): Number = unwrap(this).getLinearPercentage()
     }
 
     public companion object {
@@ -598,11 +564,9 @@ public open class CfnDeploymentConfig internal constructor(
     public fun canaryPercentage(): Number
 
     public interface Builder {
-      public fun canaryInterval(canaryInterval: Number) {
-      }
+      public fun canaryInterval(canaryInterval: Number)
 
-      public fun canaryPercentage(canaryPercentage: Number) {
-      }
+      public fun canaryPercentage(canaryPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -611,11 +575,11 @@ public open class CfnDeploymentConfig internal constructor(
           =
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty.builder()
 
-      public override fun canaryInterval(canaryInterval: Number) {
+      override fun canaryInterval(canaryInterval: Number) {
         cdkBuilder.canaryInterval(canaryInterval)
       }
 
-      public override fun canaryPercentage(canaryPercentage: Number) {
+      override fun canaryPercentage(canaryPercentage: Number) {
         cdkBuilder.canaryPercentage(canaryPercentage)
       }
 
@@ -628,9 +592,9 @@ public open class CfnDeploymentConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.TimeBasedCanaryProperty,
     ) : TimeBasedCanaryProperty {
-      public override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
+      override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
 
-      public override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
+      override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
     }
 
     public companion object {

@@ -27,77 +27,67 @@ public interface LustreConfiguration {
       unwrap(this).getWeeklyMaintenanceStartTime()?.let(LustreMaintenanceTime::wrap)
 
   public interface Builder {
-    public fun autoImportPolicy(autoImportPolicy: LustreAutoImportPolicy) {
-    }
+    public fun autoImportPolicy(autoImportPolicy: LustreAutoImportPolicy)
 
-    public fun dataCompressionType(dataCompressionType: LustreDataCompressionType) {
-    }
+    public fun dataCompressionType(dataCompressionType: LustreDataCompressionType)
 
-    public fun deploymentType(deploymentType: LustreDeploymentType) {
-    }
+    public fun deploymentType(deploymentType: LustreDeploymentType)
 
-    public fun exportPath(exportPath: String) {
-    }
+    public fun exportPath(exportPath: String)
 
-    public fun importPath(importPath: String) {
-    }
+    public fun importPath(importPath: String)
 
-    public fun importedFileChunkSizeMiB(importedFileChunkSizeMiB: Number) {
-    }
+    public fun importedFileChunkSizeMiB(importedFileChunkSizeMiB: Number)
 
-    public fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
-    }
+    public fun perUnitStorageThroughput(perUnitStorageThroughput: Number)
 
-    public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime) {
-    }
+    public fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1343833c242fcc61da33ba57517a2aefb662f1b43aafc47411fe6741b730a2e")
     public
-        fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime.Builder.() -> Unit) {
-    }
+        fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.fsx.LustreConfiguration.Builder =
         software.amazon.awscdk.services.fsx.LustreConfiguration.builder()
 
-    public override fun autoImportPolicy(autoImportPolicy: LustreAutoImportPolicy) {
+    override fun autoImportPolicy(autoImportPolicy: LustreAutoImportPolicy) {
       cdkBuilder.autoImportPolicy(autoImportPolicy.let(LustreAutoImportPolicy::unwrap))
     }
 
-    public override fun dataCompressionType(dataCompressionType: LustreDataCompressionType) {
+    override fun dataCompressionType(dataCompressionType: LustreDataCompressionType) {
       cdkBuilder.dataCompressionType(dataCompressionType.let(LustreDataCompressionType::unwrap))
     }
 
-    public override fun deploymentType(deploymentType: LustreDeploymentType) {
+    override fun deploymentType(deploymentType: LustreDeploymentType) {
       cdkBuilder.deploymentType(deploymentType.let(LustreDeploymentType::unwrap))
     }
 
-    public override fun exportPath(exportPath: String) {
+    override fun exportPath(exportPath: String) {
       cdkBuilder.exportPath(exportPath)
     }
 
-    public override fun importPath(importPath: String) {
+    override fun importPath(importPath: String) {
       cdkBuilder.importPath(importPath)
     }
 
-    public override fun importedFileChunkSizeMiB(importedFileChunkSizeMiB: Number) {
+    override fun importedFileChunkSizeMiB(importedFileChunkSizeMiB: Number) {
       cdkBuilder.importedFileChunkSizeMiB(importedFileChunkSizeMiB)
     }
 
-    public override fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
+    override fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
       cdkBuilder.perUnitStorageThroughput(perUnitStorageThroughput)
     }
 
-    public override
-        fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime) {
+    override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime) {
       cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime.let(LustreMaintenanceTime::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e1343833c242fcc61da33ba57517a2aefb662f1b43aafc47411fe6741b730a2e")
-    public override
+    override
         fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime.Builder.() -> Unit):
         Unit = weeklyMaintenanceStartTime(LustreMaintenanceTime(weeklyMaintenanceStartTime))
 
@@ -107,26 +97,24 @@ public interface LustreConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.fsx.LustreConfiguration,
   ) : LustreConfiguration {
-    public override fun autoImportPolicy(): LustreAutoImportPolicy? =
+    override fun autoImportPolicy(): LustreAutoImportPolicy? =
         unwrap(this).getAutoImportPolicy()?.let(LustreAutoImportPolicy::wrap)
 
-    public override fun dataCompressionType(): LustreDataCompressionType? =
+    override fun dataCompressionType(): LustreDataCompressionType? =
         unwrap(this).getDataCompressionType()?.let(LustreDataCompressionType::wrap)
 
-    public override fun deploymentType(): LustreDeploymentType =
+    override fun deploymentType(): LustreDeploymentType =
         unwrap(this).getDeploymentType().let(LustreDeploymentType::wrap)
 
-    public override fun exportPath(): String? = unwrap(this).getExportPath()
+    override fun exportPath(): String? = unwrap(this).getExportPath()
 
-    public override fun importPath(): String? = unwrap(this).getImportPath()
+    override fun importPath(): String? = unwrap(this).getImportPath()
 
-    public override fun importedFileChunkSizeMiB(): Number? =
-        unwrap(this).getImportedFileChunkSizeMiB()
+    override fun importedFileChunkSizeMiB(): Number? = unwrap(this).getImportedFileChunkSizeMiB()
 
-    public override fun perUnitStorageThroughput(): Number? =
-        unwrap(this).getPerUnitStorageThroughput()
+    override fun perUnitStorageThroughput(): Number? = unwrap(this).getPerUnitStorageThroughput()
 
-    public override fun weeklyMaintenanceStartTime(): LustreMaintenanceTime? =
+    override fun weeklyMaintenanceStartTime(): LustreMaintenanceTime? =
         unwrap(this).getWeeklyMaintenanceStartTime()?.let(LustreMaintenanceTime::wrap)
   }
 

@@ -8,15 +8,14 @@ public interface SdkCallsPolicyOptions {
   public fun resources(): List<String>
 
   public interface Builder {
-    public fun resources(resources: List<String>) {
-    }
+    public fun resources(resources: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.customresources.SdkCallsPolicyOptions.Builder =
         software.amazon.awscdk.customresources.SdkCallsPolicyOptions.builder()
 
-    public override fun resources(resources: List<String>) {
+    override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
@@ -27,7 +26,7 @@ public interface SdkCallsPolicyOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.customresources.SdkCallsPolicyOptions,
   ) : SdkCallsPolicyOptions {
-    public override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+    override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
   }
 
   public companion object {

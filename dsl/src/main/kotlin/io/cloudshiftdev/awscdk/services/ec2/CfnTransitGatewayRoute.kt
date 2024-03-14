@@ -51,20 +51,15 @@ public open class CfnTransitGatewayRoute internal constructor(
   }
 
   public interface Builder {
-    public fun blackhole(blackhole: Boolean) {
-    }
+    public fun blackhole(blackhole: Boolean)
 
-    public fun blackhole(blackhole: IResolvable) {
-    }
+    public fun blackhole(blackhole: IResolvable)
 
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
-    }
+    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String)
 
-    public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
-    }
+    public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String)
   }
 
   private class BuilderImpl(
@@ -74,23 +69,23 @@ public open class CfnTransitGatewayRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTransitGatewayRoute.Builder =
         software.amazon.awscdk.services.ec2.CfnTransitGatewayRoute.Builder.create(scope, id)
 
-    public override fun blackhole(blackhole: Boolean) {
+    override fun blackhole(blackhole: Boolean) {
       cdkBuilder.blackhole(blackhole)
     }
 
-    public override fun blackhole(blackhole: IResolvable) {
+    override fun blackhole(blackhole: IResolvable) {
       cdkBuilder.blackhole(blackhole.let(IResolvable::unwrap))
     }
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
+    override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
       cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
     }
 
-    public override fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
+    override fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
       cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
     }
 

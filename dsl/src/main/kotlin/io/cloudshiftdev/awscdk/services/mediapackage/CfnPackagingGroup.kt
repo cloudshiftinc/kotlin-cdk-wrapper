@@ -73,33 +73,25 @@ public open class CfnPackagingGroup internal constructor(
   }
 
   public interface Builder {
-    public fun authorization(authorization: IResolvable) {
-    }
+    public fun authorization(authorization: IResolvable)
 
-    public fun authorization(authorization: AuthorizationProperty) {
-    }
+    public fun authorization(authorization: AuthorizationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e221a21f62544a45d07d0a67454c628e7b836e81ed13ec14bf2896c52d9c6bd")
-    public fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit) {
-    }
+    public fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit)
 
-    public fun egressAccessLogs(egressAccessLogs: IResolvable) {
-    }
+    public fun egressAccessLogs(egressAccessLogs: IResolvable)
 
-    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
-    }
+    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f5eb1f003827cf2ebf3ec2e3053e750252a1826628d0a46903431f6fa94e78d")
-    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -109,38 +101,37 @@ public open class CfnPackagingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.Builder =
         software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.Builder.create(scope, id)
 
-    public override fun authorization(authorization: IResolvable) {
+    override fun authorization(authorization: IResolvable) {
       cdkBuilder.authorization(authorization.let(IResolvable::unwrap))
     }
 
-    public override fun authorization(authorization: AuthorizationProperty) {
+    override fun authorization(authorization: AuthorizationProperty) {
       cdkBuilder.authorization(authorization.let(AuthorizationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e221a21f62544a45d07d0a67454c628e7b836e81ed13ec14bf2896c52d9c6bd")
-    public override fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit): Unit
-        = authorization(AuthorizationProperty(authorization))
+    override fun authorization(authorization: AuthorizationProperty.Builder.() -> Unit): Unit =
+        authorization(AuthorizationProperty(authorization))
 
-    public override fun egressAccessLogs(egressAccessLogs: IResolvable) {
+    override fun egressAccessLogs(egressAccessLogs: IResolvable) {
       cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable::unwrap))
     }
 
-    public override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
+    override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
       cdkBuilder.egressAccessLogs(egressAccessLogs.let(LogConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f5eb1f003827cf2ebf3ec2e3053e750252a1826628d0a46903431f6fa94e78d")
-    public override
-        fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit): Unit =
-        egressAccessLogs(LogConfigurationProperty(egressAccessLogs))
+    override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit):
+        Unit = egressAccessLogs(LogConfigurationProperty(egressAccessLogs))
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -175,11 +166,9 @@ public open class CfnPackagingGroup internal constructor(
     public fun secretsRoleArn(): String
 
     public interface Builder {
-      public fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
-      }
+      public fun cdnIdentifierSecret(cdnIdentifierSecret: String)
 
-      public fun secretsRoleArn(secretsRoleArn: String) {
-      }
+      public fun secretsRoleArn(secretsRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -188,11 +177,11 @@ public open class CfnPackagingGroup internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty.builder()
 
-      public override fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
+      override fun cdnIdentifierSecret(cdnIdentifierSecret: String) {
         cdkBuilder.cdnIdentifierSecret(cdnIdentifierSecret)
       }
 
-      public override fun secretsRoleArn(secretsRoleArn: String) {
+      override fun secretsRoleArn(secretsRoleArn: String) {
         cdkBuilder.secretsRoleArn(secretsRoleArn)
       }
 
@@ -205,9 +194,9 @@ public open class CfnPackagingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.AuthorizationProperty,
     ) : AuthorizationProperty {
-      public override fun cdnIdentifierSecret(): String = unwrap(this).getCdnIdentifierSecret()
+      override fun cdnIdentifierSecret(): String = unwrap(this).getCdnIdentifierSecret()
 
-      public override fun secretsRoleArn(): String = unwrap(this).getSecretsRoleArn()
+      override fun secretsRoleArn(): String = unwrap(this).getSecretsRoleArn()
     }
 
     public companion object {
@@ -234,8 +223,7 @@ public open class CfnPackagingGroup internal constructor(
     public fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
     public interface Builder {
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -244,7 +232,7 @@ public open class CfnPackagingGroup internal constructor(
           =
           software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty.builder()
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
@@ -257,7 +245,7 @@ public open class CfnPackagingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnPackagingGroup.LogConfigurationProperty,
     ) : LogConfigurationProperty {
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
     }
 
     public companion object {

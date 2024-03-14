@@ -23,35 +23,25 @@ public open class Ec2TaskDefinition internal constructor(
       ContainerDefinitionOptions(props))
 
   public interface Builder {
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
-    }
+    public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>)
 
-    public fun ipcMode(ipcMode: IpcMode) {
-    }
+    public fun ipcMode(ipcMode: IpcMode)
 
-    public fun networkMode(networkMode: NetworkMode) {
-    }
+    public fun networkMode(networkMode: NetworkMode)
 
-    public fun pidMode(pidMode: PidMode) {
-    }
+    public fun pidMode(pidMode: PidMode)
 
-    public fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-    }
+    public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
-    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-    }
+    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration)
 
-    public fun taskRole(taskRole: IRole) {
-    }
+    public fun taskRole(taskRole: IRole)
 
-    public fun volumes(volumes: List<Volume>) {
-    }
+    public fun volumes(volumes: List<Volume>)
   }
 
   private class BuilderImpl(
@@ -61,43 +51,43 @@ public open class Ec2TaskDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.Ec2TaskDefinition.Builder =
         software.amazon.awscdk.services.ecs.Ec2TaskDefinition.Builder.create(scope, id)
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
+    override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
     }
 
-    public override fun ipcMode(ipcMode: IpcMode) {
+    override fun ipcMode(ipcMode: IpcMode) {
       cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
     }
 
-    public override fun networkMode(networkMode: NetworkMode) {
+    override fun networkMode(networkMode: NetworkMode) {
       cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
     }
 
-    public override fun pidMode(pidMode: PidMode) {
+    override fun pidMode(pidMode: PidMode) {
       cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
     }
 
-    public override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
+    override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
-    public override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
+    override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
       cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
     }
 
-    public override fun taskRole(taskRole: IRole) {
+    override fun taskRole(taskRole: IRole) {
       cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
     }
 
-    public override fun volumes(volumes: List<Volume>) {
+    override fun volumes(volumes: List<Volume>) {
       cdkBuilder.volumes(volumes.map(Volume::unwrap))
     }
 

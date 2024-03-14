@@ -9,11 +9,9 @@ public interface EncryptionConfiguration {
   public fun encryptionOption(): EncryptionOption
 
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun encryptionOption(encryptionOption: EncryptionOption) {
-    }
+    public fun encryptionOption(encryptionOption: EncryptionOption)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface EncryptionConfiguration {
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.builder()
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun encryptionOption(encryptionOption: EncryptionOption) {
+    override fun encryptionOption(encryptionOption: EncryptionOption) {
       cdkBuilder.encryptionOption(encryptionOption.let(EncryptionOption::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface EncryptionConfiguration {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration,
   ) : EncryptionConfiguration {
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun encryptionOption(): EncryptionOption =
+    override fun encryptionOption(): EncryptionOption =
         unwrap(this).getEncryptionOption().let(EncryptionOption::wrap)
   }
 

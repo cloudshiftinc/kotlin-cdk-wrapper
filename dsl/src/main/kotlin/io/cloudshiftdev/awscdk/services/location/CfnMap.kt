@@ -76,28 +76,21 @@ public open class CfnMap internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: MapConfigurationProperty) {
-    }
+    public fun configuration(configuration: MapConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18e1cd3843bc1dff5c3e6ee70ca7afa1d72f5ecd09d554cc7bc1b6ccb92db904")
-    public fun configuration(configuration: MapConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: MapConfigurationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun mapName(mapName: String) {
-    }
+    public fun mapName(mapName: String)
 
-    public fun pricingPlan(pricingPlan: String) {
-    }
+    public fun pricingPlan(pricingPlan: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -107,32 +100,32 @@ public open class CfnMap internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.location.CfnMap.Builder =
         software.amazon.awscdk.services.location.CfnMap.Builder.create(scope, id)
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: MapConfigurationProperty) {
+    override fun configuration(configuration: MapConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(MapConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18e1cd3843bc1dff5c3e6ee70ca7afa1d72f5ecd09d554cc7bc1b6ccb92db904")
-    public override fun configuration(configuration: MapConfigurationProperty.Builder.() -> Unit):
-        Unit = configuration(MapConfigurationProperty(configuration))
+    override fun configuration(configuration: MapConfigurationProperty.Builder.() -> Unit): Unit =
+        configuration(MapConfigurationProperty(configuration))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun mapName(mapName: String) {
+    override fun mapName(mapName: String) {
       cdkBuilder.mapName(mapName)
     }
 
-    public override fun pricingPlan(pricingPlan: String) {
+    override fun pricingPlan(pricingPlan: String) {
       cdkBuilder.pricingPlan(pricingPlan)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -168,14 +161,11 @@ public open class CfnMap internal constructor(
     public fun style(): String
 
     public interface Builder {
-      public fun customLayers(customLayers: List<String>) {
-      }
+      public fun customLayers(customLayers: List<String>)
 
-      public fun politicalView(politicalView: String) {
-      }
+      public fun politicalView(politicalView: String)
 
-      public fun style(style: String) {
-      }
+      public fun style(style: String)
     }
 
     private class BuilderImpl : Builder {
@@ -183,15 +173,15 @@ public open class CfnMap internal constructor(
           software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty.Builder =
           software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty.builder()
 
-      public override fun customLayers(customLayers: List<String>) {
+      override fun customLayers(customLayers: List<String>) {
         cdkBuilder.customLayers(customLayers)
       }
 
-      public override fun politicalView(politicalView: String) {
+      override fun politicalView(politicalView: String) {
         cdkBuilder.politicalView(politicalView)
       }
 
-      public override fun style(style: String) {
+      override fun style(style: String) {
         cdkBuilder.style(style)
       }
 
@@ -203,12 +193,11 @@ public open class CfnMap internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.location.CfnMap.MapConfigurationProperty,
     ) : MapConfigurationProperty {
-      public override fun customLayers(): List<String> = unwrap(this).getCustomLayers() ?:
-          emptyList()
+      override fun customLayers(): List<String> = unwrap(this).getCustomLayers() ?: emptyList()
 
-      public override fun politicalView(): String? = unwrap(this).getPoliticalView()
+      override fun politicalView(): String? = unwrap(this).getPoliticalView()
 
-      public override fun style(): String = unwrap(this).getStyle()
+      override fun style(): String = unwrap(this).getStyle()
     }
 
     public companion object {

@@ -107,54 +107,40 @@ public open class CfnAppBlock internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun packagingType(packagingType: String) {
-    }
+    public fun packagingType(packagingType: String)
 
-    public fun postSetupScriptDetails(postSetupScriptDetails: IResolvable) {
-    }
+    public fun postSetupScriptDetails(postSetupScriptDetails: IResolvable)
 
-    public fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty) {
-    }
+    public fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0261eb80ac8d55b73ee29b146ce1d646eb5819f177742e5c2f23ed9bbe524184")
     public
-        fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit) {
-    }
+        fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit)
 
-    public fun sourceS3Location(sourceS3Location: IResolvable) {
-    }
+    public fun sourceS3Location(sourceS3Location: IResolvable)
 
-    public fun sourceS3Location(sourceS3Location: S3LocationProperty) {
-    }
+    public fun sourceS3Location(sourceS3Location: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("060d0dd50b3f7cd7d93df0c357873251449b8988d54269f8c6cce069f5039165")
-    public fun sourceS3Location(sourceS3Location: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun sourceS3Location(sourceS3Location: S3LocationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun upScriptDetails(setupScriptDetails: IResolvable) {
-    }
+    public fun upScriptDetails(setupScriptDetails: IResolvable)
 
-    public fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty) {
-    }
+    public fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b7acea0a2b75f58dc64d95ddd807c88fa359b8dae5432710bdd03baec04bf7e4")
-    public fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -164,66 +150,65 @@ public open class CfnAppBlock internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnAppBlock.Builder =
         software.amazon.awscdk.services.appstream.CfnAppBlock.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun packagingType(packagingType: String) {
+    override fun packagingType(packagingType: String) {
       cdkBuilder.packagingType(packagingType)
     }
 
-    public override fun postSetupScriptDetails(postSetupScriptDetails: IResolvable) {
+    override fun postSetupScriptDetails(postSetupScriptDetails: IResolvable) {
       cdkBuilder.postSetupScriptDetails(postSetupScriptDetails.let(IResolvable::unwrap))
     }
 
-    public override fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty) {
+    override fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty) {
       cdkBuilder.postSetupScriptDetails(postSetupScriptDetails.let(ScriptDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0261eb80ac8d55b73ee29b146ce1d646eb5819f177742e5c2f23ed9bbe524184")
-    public override
+    override
         fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit):
         Unit = postSetupScriptDetails(ScriptDetailsProperty(postSetupScriptDetails))
 
-    public override fun sourceS3Location(sourceS3Location: IResolvable) {
+    override fun sourceS3Location(sourceS3Location: IResolvable) {
       cdkBuilder.sourceS3Location(sourceS3Location.let(IResolvable::unwrap))
     }
 
-    public override fun sourceS3Location(sourceS3Location: S3LocationProperty) {
+    override fun sourceS3Location(sourceS3Location: S3LocationProperty) {
       cdkBuilder.sourceS3Location(sourceS3Location.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("060d0dd50b3f7cd7d93df0c357873251449b8988d54269f8c6cce069f5039165")
-    public override fun sourceS3Location(sourceS3Location: S3LocationProperty.Builder.() -> Unit):
-        Unit = sourceS3Location(S3LocationProperty(sourceS3Location))
+    override fun sourceS3Location(sourceS3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+        sourceS3Location(S3LocationProperty(sourceS3Location))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun upScriptDetails(setupScriptDetails: IResolvable) {
+    override fun upScriptDetails(setupScriptDetails: IResolvable) {
       cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))
     }
 
-    public override fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty) {
+    override fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty) {
       cdkBuilder.setupScriptDetails(setupScriptDetails.let(ScriptDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b7acea0a2b75f58dc64d95ddd807c88fa359b8dae5432710bdd03baec04bf7e4")
-    public override
-        fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit): Unit =
-        upScriptDetails(ScriptDetailsProperty(setupScriptDetails))
+    override fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit): Unit
+        = upScriptDetails(ScriptDetailsProperty(setupScriptDetails))
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnAppBlock = cdkBuilder.build()
   }
@@ -255,11 +240,9 @@ public open class CfnAppBlock internal constructor(
     public fun s3Key(): String? = unwrap(this).getS3Key()
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -267,11 +250,11 @@ public open class CfnAppBlock internal constructor(
           software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
@@ -283,9 +266,9 @@ public open class CfnAppBlock internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnAppBlock.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String? = unwrap(this).getS3Key()
+      override fun s3Key(): String? = unwrap(this).getS3Key()
     }
 
     public companion object {
@@ -318,25 +301,19 @@ public open class CfnAppBlock internal constructor(
     public fun timeoutInSeconds(): Number
 
     public interface Builder {
-      public fun executableParameters(executableParameters: String) {
-      }
+      public fun executableParameters(executableParameters: String)
 
-      public fun executablePath(executablePath: String) {
-      }
+      public fun executablePath(executablePath: String)
 
-      public fun scriptS3Location(scriptS3Location: IResolvable) {
-      }
+      public fun scriptS3Location(scriptS3Location: IResolvable)
 
-      public fun scriptS3Location(scriptS3Location: S3LocationProperty) {
-      }
+      public fun scriptS3Location(scriptS3Location: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb15631ef25ec0ab9e92de22f1b2fbc0f3822a3921383f3efb5193afbdd6f4f0")
-      public fun scriptS3Location(scriptS3Location: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun scriptS3Location(scriptS3Location: S3LocationProperty.Builder.() -> Unit)
 
-      public fun timeoutInSeconds(timeoutInSeconds: Number) {
-      }
+      public fun timeoutInSeconds(timeoutInSeconds: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -344,28 +321,28 @@ public open class CfnAppBlock internal constructor(
           software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty.builder()
 
-      public override fun executableParameters(executableParameters: String) {
+      override fun executableParameters(executableParameters: String) {
         cdkBuilder.executableParameters(executableParameters)
       }
 
-      public override fun executablePath(executablePath: String) {
+      override fun executablePath(executablePath: String) {
         cdkBuilder.executablePath(executablePath)
       }
 
-      public override fun scriptS3Location(scriptS3Location: IResolvable) {
+      override fun scriptS3Location(scriptS3Location: IResolvable) {
         cdkBuilder.scriptS3Location(scriptS3Location.let(IResolvable::unwrap))
       }
 
-      public override fun scriptS3Location(scriptS3Location: S3LocationProperty) {
+      override fun scriptS3Location(scriptS3Location: S3LocationProperty) {
         cdkBuilder.scriptS3Location(scriptS3Location.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb15631ef25ec0ab9e92de22f1b2fbc0f3822a3921383f3efb5193afbdd6f4f0")
-      public override fun scriptS3Location(scriptS3Location: S3LocationProperty.Builder.() -> Unit):
-          Unit = scriptS3Location(S3LocationProperty(scriptS3Location))
+      override fun scriptS3Location(scriptS3Location: S3LocationProperty.Builder.() -> Unit): Unit =
+          scriptS3Location(S3LocationProperty(scriptS3Location))
 
-      public override fun timeoutInSeconds(timeoutInSeconds: Number) {
+      override fun timeoutInSeconds(timeoutInSeconds: Number) {
         cdkBuilder.timeoutInSeconds(timeoutInSeconds)
       }
 
@@ -378,13 +355,13 @@ public open class CfnAppBlock internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnAppBlock.ScriptDetailsProperty,
     ) : ScriptDetailsProperty {
-      public override fun executableParameters(): String? = unwrap(this).getExecutableParameters()
+      override fun executableParameters(): String? = unwrap(this).getExecutableParameters()
 
-      public override fun executablePath(): String = unwrap(this).getExecutablePath()
+      override fun executablePath(): String = unwrap(this).getExecutablePath()
 
-      public override fun scriptS3Location(): Any = unwrap(this).getScriptS3Location()
+      override fun scriptS3Location(): Any = unwrap(this).getScriptS3Location()
 
-      public override fun timeoutInSeconds(): Number = unwrap(this).getTimeoutInSeconds()
+      override fun timeoutInSeconds(): Number = unwrap(this).getTimeoutInSeconds()
     }
 
     public companion object {

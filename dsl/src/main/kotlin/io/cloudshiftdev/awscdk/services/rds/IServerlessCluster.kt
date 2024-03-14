@@ -27,35 +27,32 @@ public interface IServerlessCluster : IResource, IConnectable, ISecretAttachment
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.IServerlessCluster,
   ) : IServerlessCluster {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
+    override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
         unwrap(this).asSecretAttachmentTarget().let(SecretAttachmentTargetProps::wrap)
 
-    public override fun clusterArn(): String = unwrap(this).getClusterArn()
+    override fun clusterArn(): String = unwrap(this).getClusterArn()
 
-    public override fun clusterEndpoint(): Endpoint =
-        unwrap(this).getClusterEndpoint().let(Endpoint::wrap)
+    override fun clusterEndpoint(): Endpoint = unwrap(this).getClusterEndpoint().let(Endpoint::wrap)
 
-    public override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+    override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
 
-    public override fun clusterReadEndpoint(): Endpoint =
+    override fun clusterReadEndpoint(): Endpoint =
         unwrap(this).getClusterReadEndpoint().let(Endpoint::wrap)
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantDataApiAccess(arg0: IGrantable): Grant =
+    override fun grantDataApiAccess(arg0: IGrantable): Grant =
         unwrap(this).grantDataApiAccess(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

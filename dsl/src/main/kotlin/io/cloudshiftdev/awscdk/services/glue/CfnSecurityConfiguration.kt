@@ -45,20 +45,16 @@ public open class CfnSecurityConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-    }
+    public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
-    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-    }
+    public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e2d661c7cb5a046f1cf3d25eb041a3a6944de9e98a6509743c41f60ca94ed073")
     public
-        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -68,22 +64,21 @@ public open class CfnSecurityConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.Builder =
         software.amazon.awscdk.services.glue.CfnSecurityConfiguration.Builder.create(scope, id)
 
-    public override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+    override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
+    override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
       cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e2d661c7cb5a046f1cf3d25eb041a3a6944de9e98a6509743c41f60ca94ed073")
-    public override
+    override
         fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
         Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -120,35 +115,27 @@ public open class CfnSecurityConfiguration internal constructor(
     public fun s3Encryptions(): Any? = unwrap(this).getS3Encryptions()
 
     public interface Builder {
-      public fun cloudWatchEncryption(cloudWatchEncryption: IResolvable) {
-      }
+      public fun cloudWatchEncryption(cloudWatchEncryption: IResolvable)
 
-      public fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty) {
-      }
+      public fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5af6550f41429b699a193a796c9b24ca0ecfabb293a337f25a4adfad5abbdcee")
       public
-          fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty.Builder.() -> Unit)
 
-      public fun jobBookmarksEncryption(jobBookmarksEncryption: IResolvable) {
-      }
+      public fun jobBookmarksEncryption(jobBookmarksEncryption: IResolvable)
 
-      public fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty) {
-      }
+      public fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b122dc9d6bb91334ed916d535ba76b49f737643531468b50059ee1f377af3fac")
       public
-          fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty.Builder.() -> Unit) {
-      }
+          fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty.Builder.() -> Unit)
 
-      public fun s3Encryptions(s3Encryptions: IResolvable) {
-      }
+      public fun s3Encryptions(s3Encryptions: IResolvable)
 
-      public fun s3Encryptions(s3Encryptions: List<Any>) {
-      }
+      public fun s3Encryptions(s3Encryptions: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -157,40 +144,39 @@ public open class CfnSecurityConfiguration internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty.builder()
 
-      public override fun cloudWatchEncryption(cloudWatchEncryption: IResolvable) {
+      override fun cloudWatchEncryption(cloudWatchEncryption: IResolvable) {
         cdkBuilder.cloudWatchEncryption(cloudWatchEncryption.let(IResolvable::unwrap))
       }
 
-      public override fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty) {
+      override fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty) {
         cdkBuilder.cloudWatchEncryption(cloudWatchEncryption.let(CloudWatchEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5af6550f41429b699a193a796c9b24ca0ecfabb293a337f25a4adfad5abbdcee")
-      public override
+      override
           fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty.Builder.() -> Unit):
           Unit = cloudWatchEncryption(CloudWatchEncryptionProperty(cloudWatchEncryption))
 
-      public override fun jobBookmarksEncryption(jobBookmarksEncryption: IResolvable) {
+      override fun jobBookmarksEncryption(jobBookmarksEncryption: IResolvable) {
         cdkBuilder.jobBookmarksEncryption(jobBookmarksEncryption.let(IResolvable::unwrap))
       }
 
-      public override
-          fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty) {
+      override fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty) {
         cdkBuilder.jobBookmarksEncryption(jobBookmarksEncryption.let(JobBookmarksEncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b122dc9d6bb91334ed916d535ba76b49f737643531468b50059ee1f377af3fac")
-      public override
+      override
           fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty.Builder.() -> Unit):
           Unit = jobBookmarksEncryption(JobBookmarksEncryptionProperty(jobBookmarksEncryption))
 
-      public override fun s3Encryptions(s3Encryptions: IResolvable) {
+      override fun s3Encryptions(s3Encryptions: IResolvable) {
         cdkBuilder.s3Encryptions(s3Encryptions.let(IResolvable::unwrap))
       }
 
-      public override fun s3Encryptions(s3Encryptions: List<Any>) {
+      override fun s3Encryptions(s3Encryptions: List<Any>) {
         cdkBuilder.s3Encryptions(s3Encryptions)
       }
 
@@ -203,11 +189,11 @@ public open class CfnSecurityConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty,
     ) : EncryptionConfigurationProperty {
-      public override fun cloudWatchEncryption(): Any? = unwrap(this).getCloudWatchEncryption()
+      override fun cloudWatchEncryption(): Any? = unwrap(this).getCloudWatchEncryption()
 
-      public override fun jobBookmarksEncryption(): Any? = unwrap(this).getJobBookmarksEncryption()
+      override fun jobBookmarksEncryption(): Any? = unwrap(this).getJobBookmarksEncryption()
 
-      public override fun s3Encryptions(): Any? = unwrap(this).getS3Encryptions()
+      override fun s3Encryptions(): Any? = unwrap(this).getS3Encryptions()
     }
 
     public companion object {
@@ -236,11 +222,9 @@ public open class CfnSecurityConfiguration internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
-      }
+      public fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -249,11 +233,11 @@ public open class CfnSecurityConfiguration internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty.builder()
 
-      public override fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
+      override fun cloudWatchEncryptionMode(cloudWatchEncryptionMode: String) {
         cdkBuilder.cloudWatchEncryptionMode(cloudWatchEncryptionMode)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -266,10 +250,9 @@ public open class CfnSecurityConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty,
     ) : CloudWatchEncryptionProperty {
-      public override fun cloudWatchEncryptionMode(): String? =
-          unwrap(this).getCloudWatchEncryptionMode()
+      override fun cloudWatchEncryptionMode(): String? = unwrap(this).getCloudWatchEncryptionMode()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
@@ -298,11 +281,9 @@ public open class CfnSecurityConfiguration internal constructor(
     public fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
 
     public interface Builder {
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
 
-      public fun s3EncryptionMode(s3EncryptionMode: String) {
-      }
+      public fun s3EncryptionMode(s3EncryptionMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -311,11 +292,11 @@ public open class CfnSecurityConfiguration internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty.builder()
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      public override fun s3EncryptionMode(s3EncryptionMode: String) {
+      override fun s3EncryptionMode(s3EncryptionMode: String) {
         cdkBuilder.s3EncryptionMode(s3EncryptionMode)
       }
 
@@ -328,9 +309,9 @@ public open class CfnSecurityConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty,
     ) : S3EncryptionProperty {
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
-      public override fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
+      override fun s3EncryptionMode(): String? = unwrap(this).getS3EncryptionMode()
     }
 
     public companion object {
@@ -359,11 +340,9 @@ public open class CfnSecurityConfiguration internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String) {
-      }
+      public fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -372,11 +351,11 @@ public open class CfnSecurityConfiguration internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty.builder()
 
-      public override fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String) {
+      override fun jobBookmarksEncryptionMode(jobBookmarksEncryptionMode: String) {
         cdkBuilder.jobBookmarksEncryptionMode(jobBookmarksEncryptionMode)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -389,10 +368,10 @@ public open class CfnSecurityConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty,
     ) : JobBookmarksEncryptionProperty {
-      public override fun jobBookmarksEncryptionMode(): String? =
+      override fun jobBookmarksEncryptionMode(): String? =
           unwrap(this).getJobBookmarksEncryptionMode()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {

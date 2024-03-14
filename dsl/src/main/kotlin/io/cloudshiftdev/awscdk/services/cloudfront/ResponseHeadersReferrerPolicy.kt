@@ -9,11 +9,9 @@ public interface ResponseHeadersReferrerPolicy {
   public fun referrerPolicy(): HeadersReferrerPolicy
 
   public interface Builder {
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
 
-    public fun referrerPolicy(referrerPolicy: HeadersReferrerPolicy) {
-    }
+    public fun referrerPolicy(referrerPolicy: HeadersReferrerPolicy)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface ResponseHeadersReferrerPolicy {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy.builder()
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
-    public override fun referrerPolicy(referrerPolicy: HeadersReferrerPolicy) {
+    override fun referrerPolicy(referrerPolicy: HeadersReferrerPolicy) {
       cdkBuilder.referrerPolicy(referrerPolicy.let(HeadersReferrerPolicy::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface ResponseHeadersReferrerPolicy {
     internal val cdkObject:
         software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy,
   ) : ResponseHeadersReferrerPolicy {
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
 
-    public override fun referrerPolicy(): HeadersReferrerPolicy =
+    override fun referrerPolicy(): HeadersReferrerPolicy =
         unwrap(this).getReferrerPolicy().let(HeadersReferrerPolicy::wrap)
   }
 

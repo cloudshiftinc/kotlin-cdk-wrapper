@@ -12,38 +12,27 @@ public open class CnameRecord internal constructor(
   private val cdkObject: software.amazon.awscdk.services.route53.CnameRecord,
 ) : RecordSet(cdkObject) {
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun deleteExisting(deleteExisting: Boolean) {
-    }
+    public fun deleteExisting(deleteExisting: Boolean)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun geoLocation(geoLocation: GeoLocation) {
-    }
+    public fun geoLocation(geoLocation: GeoLocation)
 
-    public fun identifier(setIdentifier: String) {
-    }
+    public fun identifier(setIdentifier: String)
 
-    public fun multiValueAnswer(multiValueAnswer: Boolean) {
-    }
+    public fun multiValueAnswer(multiValueAnswer: Boolean)
 
-    public fun recordName(recordName: String) {
-    }
+    public fun recordName(recordName: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun ttl(ttl: Duration) {
-    }
+    public fun ttl(ttl: Duration)
 
-    public fun weight(weight: Number) {
-    }
+    public fun weight(weight: Number)
 
-    public fun zone(zone: IHostedZone) {
-    }
+    public fun zone(zone: IHostedZone)
   }
 
   private class BuilderImpl(
@@ -53,47 +42,47 @@ public open class CnameRecord internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CnameRecord.Builder =
         software.amazon.awscdk.services.route53.CnameRecord.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun deleteExisting(deleteExisting: Boolean) {
+    override fun deleteExisting(deleteExisting: Boolean) {
       cdkBuilder.deleteExisting(deleteExisting)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun geoLocation(geoLocation: GeoLocation) {
+    override fun geoLocation(geoLocation: GeoLocation) {
       cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
     }
 
-    public override fun identifier(setIdentifier: String) {
+    override fun identifier(setIdentifier: String) {
       cdkBuilder.setIdentifier(setIdentifier)
     }
 
-    public override fun multiValueAnswer(multiValueAnswer: Boolean) {
+    override fun multiValueAnswer(multiValueAnswer: Boolean) {
       cdkBuilder.multiValueAnswer(multiValueAnswer)
     }
 
-    public override fun recordName(recordName: String) {
+    override fun recordName(recordName: String) {
       cdkBuilder.recordName(recordName)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun ttl(ttl: Duration) {
+    override fun ttl(ttl: Duration) {
       cdkBuilder.ttl(ttl.let(Duration::unwrap))
     }
 
-    public override fun weight(weight: Number) {
+    override fun weight(weight: Number) {
       cdkBuilder.weight(weight)
     }
 
-    public override fun zone(zone: IHostedZone) {
+    override fun zone(zone: IHostedZone) {
       cdkBuilder.zone(zone.let(IHostedZone::unwrap))
     }
 

@@ -7,8 +7,7 @@ public interface LambdaDeploymentConfigImportProps {
   public fun deploymentConfigName(): String
 
   public interface Builder {
-    public fun deploymentConfigName(deploymentConfigName: String) {
-    }
+    public fun deploymentConfigName(deploymentConfigName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface LambdaDeploymentConfigImportProps {
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.builder()
 
-    public override fun deploymentConfigName(deploymentConfigName: String) {
+    override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
@@ -28,7 +27,7 @@ public interface LambdaDeploymentConfigImportProps {
     internal val cdkObject:
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
   ) : LambdaDeploymentConfigImportProps {
-    public override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
+    override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
   }
 
   public companion object {

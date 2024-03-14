@@ -43,17 +43,13 @@ public open class CfnSubnetCidrBlock internal constructor(
   }
 
   public interface Builder {
-    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
-    public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
-    }
+    public fun ipv6IpamPoolId(ipv6IpamPoolId: String)
 
-    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
-    }
+    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -63,19 +59,19 @@ public open class CfnSubnetCidrBlock internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock.Builder =
         software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock.Builder.create(scope, id)
 
-    public override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+    override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
-    public override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
+    override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
       cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
     }
 
-    public override fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
+    override fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
       cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 

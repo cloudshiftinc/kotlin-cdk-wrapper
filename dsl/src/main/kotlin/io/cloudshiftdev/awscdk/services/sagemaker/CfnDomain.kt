@@ -139,63 +139,46 @@ public open class CfnDomain internal constructor(
   }
 
   public interface Builder {
-    public fun appNetworkAccessType(appNetworkAccessType: String) {
-    }
+    public fun appNetworkAccessType(appNetworkAccessType: String)
 
-    public fun appSecurityGroupManagement(appSecurityGroupManagement: String) {
-    }
+    public fun appSecurityGroupManagement(appSecurityGroupManagement: String)
 
-    public fun authMode(authMode: String) {
-    }
+    public fun authMode(authMode: String)
 
-    public fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
-    }
+    public fun defaultSpaceSettings(defaultSpaceSettings: IResolvable)
 
-    public fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty) {
-    }
+    public fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0541aea2d9023d83138fd5d19ec34eb6bca50e6dcc332eb676c49b71ec567f81")
     public
-        fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty.Builder.() -> Unit) {
-    }
+        fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty.Builder.() -> Unit)
 
-    public fun defaultUserSettings(defaultUserSettings: IResolvable) {
-    }
+    public fun defaultUserSettings(defaultUserSettings: IResolvable)
 
-    public fun defaultUserSettings(defaultUserSettings: UserSettingsProperty) {
-    }
+    public fun defaultUserSettings(defaultUserSettings: UserSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67693a8dc439c00e3a65fd42feb54d1ef2cc19dc96b32eefca9bc368ad820bbe")
-    public fun defaultUserSettings(defaultUserSettings: UserSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun defaultUserSettings(defaultUserSettings: UserSettingsProperty.Builder.() -> Unit)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainSettings(domainSettings: IResolvable) {
-    }
+    public fun domainSettings(domainSettings: IResolvable)
 
-    public fun domainSettings(domainSettings: DomainSettingsProperty) {
-    }
+    public fun domainSettings(domainSettings: DomainSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97bc89f7e4a4c3d6a51d1471420dc3788d7f132c548680140caa8cd6b902723c")
-    public fun domainSettings(domainSettings: DomainSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun domainSettings(domainSettings: DomainSettingsProperty.Builder.() -> Unit)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -205,76 +188,75 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnDomain.Builder =
         software.amazon.awscdk.services.sagemaker.CfnDomain.Builder.create(scope, id)
 
-    public override fun appNetworkAccessType(appNetworkAccessType: String) {
+    override fun appNetworkAccessType(appNetworkAccessType: String) {
       cdkBuilder.appNetworkAccessType(appNetworkAccessType)
     }
 
-    public override fun appSecurityGroupManagement(appSecurityGroupManagement: String) {
+    override fun appSecurityGroupManagement(appSecurityGroupManagement: String) {
       cdkBuilder.appSecurityGroupManagement(appSecurityGroupManagement)
     }
 
-    public override fun authMode(authMode: String) {
+    override fun authMode(authMode: String) {
       cdkBuilder.authMode(authMode)
     }
 
-    public override fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
+    override fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
       cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(IResolvable::unwrap))
     }
 
-    public override fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty) {
+    override fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty) {
       cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(DefaultSpaceSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0541aea2d9023d83138fd5d19ec34eb6bca50e6dcc332eb676c49b71ec567f81")
-    public override
+    override
         fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty.Builder.() -> Unit):
         Unit = defaultSpaceSettings(DefaultSpaceSettingsProperty(defaultSpaceSettings))
 
-    public override fun defaultUserSettings(defaultUserSettings: IResolvable) {
+    override fun defaultUserSettings(defaultUserSettings: IResolvable) {
       cdkBuilder.defaultUserSettings(defaultUserSettings.let(IResolvable::unwrap))
     }
 
-    public override fun defaultUserSettings(defaultUserSettings: UserSettingsProperty) {
+    override fun defaultUserSettings(defaultUserSettings: UserSettingsProperty) {
       cdkBuilder.defaultUserSettings(defaultUserSettings.let(UserSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67693a8dc439c00e3a65fd42feb54d1ef2cc19dc96b32eefca9bc368ad820bbe")
-    public override
-        fun defaultUserSettings(defaultUserSettings: UserSettingsProperty.Builder.() -> Unit): Unit
-        = defaultUserSettings(UserSettingsProperty(defaultUserSettings))
+    override fun defaultUserSettings(defaultUserSettings: UserSettingsProperty.Builder.() -> Unit):
+        Unit = defaultUserSettings(UserSettingsProperty(defaultUserSettings))
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainSettings(domainSettings: IResolvable) {
+    override fun domainSettings(domainSettings: IResolvable) {
       cdkBuilder.domainSettings(domainSettings.let(IResolvable::unwrap))
     }
 
-    public override fun domainSettings(domainSettings: DomainSettingsProperty) {
+    override fun domainSettings(domainSettings: DomainSettingsProperty) {
       cdkBuilder.domainSettings(domainSettings.let(DomainSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97bc89f7e4a4c3d6a51d1471420dc3788d7f132c548680140caa8cd6b902723c")
-    public override fun domainSettings(domainSettings: DomainSettingsProperty.Builder.() -> Unit):
-        Unit = domainSettings(DomainSettingsProperty(domainSettings))
+    override fun domainSettings(domainSettings: DomainSettingsProperty.Builder.() -> Unit): Unit =
+        domainSettings(DomainSettingsProperty(domainSettings))
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -312,17 +294,13 @@ public open class CfnDomain internal constructor(
     public fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
 
     public interface Builder {
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun lifecycleConfigArn(lifecycleConfigArn: String) {
-      }
+      public fun lifecycleConfigArn(lifecycleConfigArn: String)
 
-      public fun sageMakerImageArn(sageMakerImageArn: String) {
-      }
+      public fun sageMakerImageArn(sageMakerImageArn: String)
 
-      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
-      }
+      public fun sageMakerImageVersionArn(sageMakerImageVersionArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -330,19 +308,19 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty.builder()
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun lifecycleConfigArn(lifecycleConfigArn: String) {
+      override fun lifecycleConfigArn(lifecycleConfigArn: String) {
         cdkBuilder.lifecycleConfigArn(lifecycleConfigArn)
       }
 
-      public override fun sageMakerImageArn(sageMakerImageArn: String) {
+      override fun sageMakerImageArn(sageMakerImageArn: String) {
         cdkBuilder.sageMakerImageArn(sageMakerImageArn)
       }
 
-      public override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
+      override fun sageMakerImageVersionArn(sageMakerImageVersionArn: String) {
         cdkBuilder.sageMakerImageVersionArn(sageMakerImageVersionArn)
       }
 
@@ -354,14 +332,13 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.ResourceSpecProperty,
     ) : ResourceSpecProperty {
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
+      override fun lifecycleConfigArn(): String? = unwrap(this).getLifecycleConfigArn()
 
-      public override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
+      override fun sageMakerImageArn(): String? = unwrap(this).getSageMakerImageArn()
 
-      public override fun sageMakerImageVersionArn(): String? =
-          unwrap(this).getSageMakerImageVersionArn()
+      override fun sageMakerImageVersionArn(): String? = unwrap(this).getSageMakerImageVersionArn()
     }
 
     public companion object {
@@ -388,16 +365,13 @@ public open class CfnDomain internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16529f01fa91e18098e31e0efd963479f78925d3a88a89427ddee33f55f07774")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -406,17 +380,17 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty.builder()
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16529f01fa91e18098e31e0efd963479f78925d3a88a89427ddee33f55f07774")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -429,7 +403,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterServerAppSettingsProperty,
     ) : JupyterServerAppSettingsProperty {
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {
@@ -458,22 +432,17 @@ public open class CfnDomain internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun customImages(customImages: IResolvable) {
-      }
+      public fun customImages(customImages: IResolvable)
 
-      public fun customImages(customImages: List<Any>) {
-      }
+      public fun customImages(customImages: List<Any>)
 
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a47ccaafec05cc6573ffbbd54efb5b81febc9dd592ca52e01555b507a1d44cf2")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -482,25 +451,25 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty.builder()
 
-      public override fun customImages(customImages: IResolvable) {
+      override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
       }
 
-      public override fun customImages(customImages: List<Any>) {
+      override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a47ccaafec05cc6573ffbbd54efb5b81febc9dd592ca52e01555b507a1d44cf2")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -513,9 +482,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.KernelGatewayAppSettingsProperty,
     ) : KernelGatewayAppSettingsProperty {
-      public override fun customImages(): Any? = unwrap(this).getCustomImages()
+      override fun customImages(): Any? = unwrap(this).getCustomImages()
 
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {
@@ -547,32 +516,25 @@ public open class CfnDomain internal constructor(
     public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
 
     public interface Builder {
-      public fun dockerSettings(dockerSettings: IResolvable) {
-      }
+      public fun dockerSettings(dockerSettings: IResolvable)
 
-      public fun dockerSettings(dockerSettings: DockerSettingsProperty) {
-      }
+      public fun dockerSettings(dockerSettings: DockerSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93ef0e9d4e8ab8c25f1dacd8a12798de73fea998b847b67fee5327f6c7af6f6e")
-      public fun dockerSettings(dockerSettings: DockerSettingsProperty.Builder.() -> Unit) {
-      }
+      public fun dockerSettings(dockerSettings: DockerSettingsProperty.Builder.() -> Unit)
 
-      public fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: IResolvable) {
-      }
+      public fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: IResolvable)
 
       public
-          fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty) {
-      }
+          fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("daf8ea9aafb59fc0d391303fa53d911f3d3db72aabed73685861fa5f8fa4501b")
       public
-          fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty.Builder.() -> Unit) {
-      }
+          fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty.Builder.() -> Unit)
 
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -580,37 +542,36 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty.builder()
 
-      public override fun dockerSettings(dockerSettings: IResolvable) {
+      override fun dockerSettings(dockerSettings: IResolvable) {
         cdkBuilder.dockerSettings(dockerSettings.let(IResolvable::unwrap))
       }
 
-      public override fun dockerSettings(dockerSettings: DockerSettingsProperty) {
+      override fun dockerSettings(dockerSettings: DockerSettingsProperty) {
         cdkBuilder.dockerSettings(dockerSettings.let(DockerSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93ef0e9d4e8ab8c25f1dacd8a12798de73fea998b847b67fee5327f6c7af6f6e")
-      public override fun dockerSettings(dockerSettings: DockerSettingsProperty.Builder.() -> Unit):
-          Unit = dockerSettings(DockerSettingsProperty(dockerSettings))
+      override fun dockerSettings(dockerSettings: DockerSettingsProperty.Builder.() -> Unit): Unit =
+          dockerSettings(DockerSettingsProperty(dockerSettings))
 
-      public override
-          fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: IResolvable) {
+      override fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: IResolvable) {
         cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty) {
         cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings.let(RStudioServerProDomainSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("daf8ea9aafb59fc0d391303fa53d911f3d3db72aabed73685861fa5f8fa4501b")
-      public override
+      override
           fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty.Builder.() -> Unit):
           Unit =
           rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty(rStudioServerProDomainSettings))
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
@@ -622,12 +583,12 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty,
     ) : DomainSettingsProperty {
-      public override fun dockerSettings(): Any? = unwrap(this).getDockerSettings()
+      override fun dockerSettings(): Any? = unwrap(this).getDockerSettings()
 
-      public override fun rStudioServerProDomainSettings(): Any? =
+      override fun rStudioServerProDomainSettings(): Any? =
           unwrap(this).getRStudioServerProDomainSettings()
 
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
     }
 
@@ -662,31 +623,23 @@ public open class CfnDomain internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun codeRepositories(codeRepositories: IResolvable) {
-      }
+      public fun codeRepositories(codeRepositories: IResolvable)
 
-      public fun codeRepositories(codeRepositories: List<Any>) {
-      }
+      public fun codeRepositories(codeRepositories: List<Any>)
 
-      public fun customImages(customImages: IResolvable) {
-      }
+      public fun customImages(customImages: IResolvable)
 
-      public fun customImages(customImages: List<Any>) {
-      }
+      public fun customImages(customImages: List<Any>)
 
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("266454404c3559506035e15f27dc96253bd259f3afcf56558668eea5984c9728")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
-      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
-      }
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -695,37 +648,37 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty.builder()
 
-      public override fun codeRepositories(codeRepositories: IResolvable) {
+      override fun codeRepositories(codeRepositories: IResolvable) {
         cdkBuilder.codeRepositories(codeRepositories.let(IResolvable::unwrap))
       }
 
-      public override fun codeRepositories(codeRepositories: List<Any>) {
+      override fun codeRepositories(codeRepositories: List<Any>) {
         cdkBuilder.codeRepositories(codeRepositories)
       }
 
-      public override fun customImages(customImages: IResolvable) {
+      override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
       }
 
-      public override fun customImages(customImages: List<Any>) {
+      override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("266454404c3559506035e15f27dc96253bd259f3afcf56558668eea5984c9728")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
-      public override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
         cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
       }
 
@@ -738,14 +691,14 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty,
     ) : JupyterLabAppSettingsProperty {
-      public override fun codeRepositories(): Any? = unwrap(this).getCodeRepositories()
+      override fun codeRepositories(): Any? = unwrap(this).getCodeRepositories()
 
-      public override fun customImages(): Any? = unwrap(this).getCustomImages()
+      override fun customImages(): Any? = unwrap(this).getCustomImages()
 
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
-      public override fun lifecycleConfigArns(): List<String> =
-          unwrap(this).getLifecycleConfigArns() ?: emptyList()
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
@@ -774,22 +727,17 @@ public open class CfnDomain internal constructor(
     public fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
     public interface Builder {
-      public fun customImages(customImages: IResolvable) {
-      }
+      public fun customImages(customImages: IResolvable)
 
-      public fun customImages(customImages: List<Any>) {
-      }
+      public fun customImages(customImages: List<Any>)
 
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a627ac087547f2fa8011456158e16dc224536d2876b05ab54de322e83484b78")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -797,25 +745,25 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty.builder()
 
-      public override fun customImages(customImages: IResolvable) {
+      override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
       }
 
-      public override fun customImages(customImages: List<Any>) {
+      override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a627ac087547f2fa8011456158e16dc224536d2876b05ab54de322e83484b78")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
@@ -828,9 +776,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.RSessionAppSettingsProperty,
     ) : RSessionAppSettingsProperty {
-      public override fun customImages(): Any? = unwrap(this).getCustomImages()
+      override fun customImages(): Any? = unwrap(this).getCustomImages()
 
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
     }
 
     public companion object {
@@ -863,25 +811,19 @@ public open class CfnDomain internal constructor(
     public fun rStudioPackageManagerUrl(): String? = unwrap(this).getRStudioPackageManagerUrl()
 
     public interface Builder {
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72a63478d8ec45d9581a7adbbbc76ad8ca6e261c1076d4ddd8e9a5aa058a1698")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
-      public fun domainExecutionRoleArn(domainExecutionRoleArn: String) {
-      }
+      public fun domainExecutionRoleArn(domainExecutionRoleArn: String)
 
-      public fun rStudioConnectUrl(rStudioConnectUrl: String) {
-      }
+      public fun rStudioConnectUrl(rStudioConnectUrl: String)
 
-      public fun rStudioPackageManagerUrl(rStudioPackageManagerUrl: String) {
-      }
+      public fun rStudioPackageManagerUrl(rStudioPackageManagerUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -890,29 +832,29 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProDomainSettingsProperty.builder()
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72a63478d8ec45d9581a7adbbbc76ad8ca6e261c1076d4ddd8e9a5aa058a1698")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
-      public override fun domainExecutionRoleArn(domainExecutionRoleArn: String) {
+      override fun domainExecutionRoleArn(domainExecutionRoleArn: String) {
         cdkBuilder.domainExecutionRoleArn(domainExecutionRoleArn)
       }
 
-      public override fun rStudioConnectUrl(rStudioConnectUrl: String) {
+      override fun rStudioConnectUrl(rStudioConnectUrl: String) {
         cdkBuilder.rStudioConnectUrl(rStudioConnectUrl)
       }
 
-      public override fun rStudioPackageManagerUrl(rStudioPackageManagerUrl: String) {
+      override fun rStudioPackageManagerUrl(rStudioPackageManagerUrl: String) {
         cdkBuilder.rStudioPackageManagerUrl(rStudioPackageManagerUrl)
       }
 
@@ -925,15 +867,13 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProDomainSettingsProperty,
     ) : RStudioServerProDomainSettingsProperty {
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
-      public override fun domainExecutionRoleArn(): String =
-          unwrap(this).getDomainExecutionRoleArn()
+      override fun domainExecutionRoleArn(): String = unwrap(this).getDomainExecutionRoleArn()
 
-      public override fun rStudioConnectUrl(): String? = unwrap(this).getRStudioConnectUrl()
+      override fun rStudioConnectUrl(): String? = unwrap(this).getRStudioConnectUrl()
 
-      public override fun rStudioPackageManagerUrl(): String? =
-          unwrap(this).getRStudioPackageManagerUrl()
+      override fun rStudioPackageManagerUrl(): String? = unwrap(this).getRStudioPackageManagerUrl()
     }
 
     public companion object {
@@ -964,11 +904,9 @@ public open class CfnDomain internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun enableDockerAccess(enableDockerAccess: String) {
-      }
+      public fun enableDockerAccess(enableDockerAccess: String)
 
-      public fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>) {
-      }
+      public fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -976,11 +914,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty.builder()
 
-      public override fun enableDockerAccess(enableDockerAccess: String) {
+      override fun enableDockerAccess(enableDockerAccess: String) {
         cdkBuilder.enableDockerAccess(enableDockerAccess)
       }
 
-      public override fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>) {
+      override fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>) {
         cdkBuilder.vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts)
       }
 
@@ -992,10 +930,10 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty,
     ) : DockerSettingsProperty {
-      public override fun enableDockerAccess(): String? = unwrap(this).getEnableDockerAccess()
+      override fun enableDockerAccess(): String? = unwrap(this).getEnableDockerAccess()
 
-      public override fun vpcOnlyTrustedAccounts(): List<String> =
-          unwrap(this).getVpcOnlyTrustedAccounts() ?: emptyList()
+      override fun vpcOnlyTrustedAccounts(): List<String> = unwrap(this).getVpcOnlyTrustedAccounts()
+          ?: emptyList()
     }
 
     public companion object {
@@ -1024,11 +962,9 @@ public open class CfnDomain internal constructor(
     public fun userGroup(): String? = unwrap(this).getUserGroup()
 
     public interface Builder {
-      public fun accessStatus(accessStatus: String) {
-      }
+      public fun accessStatus(accessStatus: String)
 
-      public fun userGroup(userGroup: String) {
-      }
+      public fun userGroup(userGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1037,11 +973,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty.builder()
 
-      public override fun accessStatus(accessStatus: String) {
+      override fun accessStatus(accessStatus: String) {
         cdkBuilder.accessStatus(accessStatus)
       }
 
-      public override fun userGroup(userGroup: String) {
+      override fun userGroup(userGroup: String) {
         cdkBuilder.userGroup(userGroup)
       }
 
@@ -1054,9 +990,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.RStudioServerProAppSettingsProperty,
     ) : RStudioServerProAppSettingsProperty {
-      public override fun accessStatus(): String? = unwrap(this).getAccessStatus()
+      override fun accessStatus(): String? = unwrap(this).getAccessStatus()
 
-      public override fun userGroup(): String? = unwrap(this).getUserGroup()
+      override fun userGroup(): String? = unwrap(this).getUserGroup()
     }
 
     public companion object {
@@ -1084,17 +1020,14 @@ public open class CfnDomain internal constructor(
     public fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
 
     public interface Builder {
-      public fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
-      }
+      public fun efsFileSystemConfig(efsFileSystemConfig: IResolvable)
 
-      public fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
-      }
+      public fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51d19063b8418bdcc7fb6317565668cc527b6fd40ba7621f9328e0ac5ac8d994")
       public
-          fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit) {
-      }
+          fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1103,17 +1036,17 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty.builder()
 
-      public override fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
+      override fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
         cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable::unwrap))
       }
 
-      public override fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
+      override fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
         cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51d19063b8418bdcc7fb6317565668cc527b6fd40ba7621f9328e0ac5ac8d994")
-      public override
+      override
           fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty.Builder.() -> Unit):
           Unit = efsFileSystemConfig(EFSFileSystemConfigProperty(efsFileSystemConfig))
 
@@ -1126,7 +1059,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomFileSystemConfigProperty,
     ) : CustomFileSystemConfigProperty {
-      public override fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
+      override fun efsFileSystemConfig(): Any? = unwrap(this).getEfsFileSystemConfig()
     }
 
     public companion object {
@@ -1157,14 +1090,11 @@ public open class CfnDomain internal constructor(
     public fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
 
     public interface Builder {
-      public fun appImageConfigName(appImageConfigName: String) {
-      }
+      public fun appImageConfigName(appImageConfigName: String)
 
-      public fun imageName(imageName: String) {
-      }
+      public fun imageName(imageName: String)
 
-      public fun imageVersionNumber(imageVersionNumber: Number) {
-      }
+      public fun imageVersionNumber(imageVersionNumber: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1172,15 +1102,15 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty.builder()
 
-      public override fun appImageConfigName(appImageConfigName: String) {
+      override fun appImageConfigName(appImageConfigName: String) {
         cdkBuilder.appImageConfigName(appImageConfigName)
       }
 
-      public override fun imageName(imageName: String) {
+      override fun imageName(imageName: String) {
         cdkBuilder.imageName(imageName)
       }
 
-      public override fun imageVersionNumber(imageVersionNumber: Number) {
+      override fun imageVersionNumber(imageVersionNumber: Number) {
         cdkBuilder.imageVersionNumber(imageVersionNumber)
       }
 
@@ -1192,11 +1122,11 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomImageProperty,
     ) : CustomImageProperty {
-      public override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
+      override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
 
-      public override fun imageName(): String = unwrap(this).getImageName()
+      override fun imageName(): String = unwrap(this).getImageName()
 
-      public override fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
+      override fun imageVersionNumber(): Number? = unwrap(this).getImageVersionNumber()
     }
 
     public companion object {
@@ -1223,8 +1153,7 @@ public open class CfnDomain internal constructor(
     public fun repositoryUrl(): String
 
     public interface Builder {
-      public fun repositoryUrl(repositoryUrl: String) {
-      }
+      public fun repositoryUrl(repositoryUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1232,7 +1161,7 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty.builder()
 
-      public override fun repositoryUrl(repositoryUrl: String) {
+      override fun repositoryUrl(repositoryUrl: String) {
         cdkBuilder.repositoryUrl(repositoryUrl)
       }
 
@@ -1244,7 +1173,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeRepositoryProperty,
     ) : CodeRepositoryProperty {
-      public override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
+      override fun repositoryUrl(): String = unwrap(this).getRepositoryUrl()
     }
 
     public companion object {
@@ -1273,11 +1202,9 @@ public open class CfnDomain internal constructor(
     public fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
 
     public interface Builder {
-      public fun fileSystemId(fileSystemId: String) {
-      }
+      public fun fileSystemId(fileSystemId: String)
 
-      public fun fileSystemPath(fileSystemPath: String) {
-      }
+      public fun fileSystemPath(fileSystemPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1285,11 +1212,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty.builder()
 
-      public override fun fileSystemId(fileSystemId: String) {
+      override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
-      public override fun fileSystemPath(fileSystemPath: String) {
+      override fun fileSystemPath(fileSystemPath: String) {
         cdkBuilder.fileSystemPath(fileSystemPath)
       }
 
@@ -1302,9 +1229,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.EFSFileSystemConfigProperty,
     ) : EFSFileSystemConfigProperty {
-      public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
-      public override fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
+      override fun fileSystemPath(): String? = unwrap(this).getFileSystemPath()
     }
 
     public companion object {
@@ -1333,11 +1260,9 @@ public open class CfnDomain internal constructor(
     public fun uid(): Number
 
     public interface Builder {
-      public fun gid(gid: Number) {
-      }
+      public fun gid(gid: Number)
 
-      public fun uid(uid: Number) {
-      }
+      public fun uid(uid: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1346,11 +1271,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty.builder()
 
-      public override fun gid(gid: Number) {
+      override fun gid(gid: Number) {
         cdkBuilder.gid(gid)
       }
 
-      public override fun uid(uid: Number) {
+      override fun uid(uid: Number) {
         cdkBuilder.uid(uid)
       }
 
@@ -1363,9 +1288,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.CustomPosixUserConfigProperty,
     ) : CustomPosixUserConfigProperty {
-      public override fun gid(): Number = unwrap(this).getGid()
+      override fun gid(): Number = unwrap(this).getGid()
 
-      public override fun uid(): Number = unwrap(this).getUid()
+      override fun uid(): Number = unwrap(this).getUid()
     }
 
     public companion object {
@@ -1395,19 +1320,15 @@ public open class CfnDomain internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("961a4ba4cd6ca5198b7d476da95436026be65e6edf209e7e7897180d63d719c3")
-      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit) {
-      }
+      public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
-      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
-      }
+      public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1416,21 +1337,21 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty.builder()
 
-      public override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
+      override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
       }
 
-      public override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
+      override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("961a4ba4cd6ca5198b7d476da95436026be65e6edf209e7e7897180d63d719c3")
-      public override
+      override
           fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit):
           Unit = defaultResourceSpec(ResourceSpecProperty(defaultResourceSpec))
 
-      public override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
+      override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
         cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
       }
 
@@ -1443,10 +1364,10 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty,
     ) : CodeEditorAppSettingsProperty {
-      public override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
+      override fun defaultResourceSpec(): Any? = unwrap(this).getDefaultResourceSpec()
 
-      public override fun lifecycleConfigArns(): List<String> =
-          unwrap(this).getLifecycleConfigArns() ?: emptyList()
+      override fun lifecycleConfigArns(): List<String> = unwrap(this).getLifecycleConfigArns() ?:
+          emptyList()
     }
 
     public companion object {
@@ -1475,11 +1396,9 @@ public open class CfnDomain internal constructor(
     public fun maximumEbsVolumeSizeInGb(): Number
 
     public interface Builder {
-      public fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
-      }
+      public fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number)
 
-      public fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
-      }
+      public fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1488,11 +1407,11 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty.builder()
 
-      public override fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
+      override fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
         cdkBuilder.defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb)
       }
 
-      public override fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
+      override fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
         cdkBuilder.maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb)
       }
 
@@ -1505,11 +1424,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty,
     ) : DefaultEbsStorageSettingsProperty {
-      public override fun defaultEbsVolumeSizeInGb(): Number =
-          unwrap(this).getDefaultEbsVolumeSizeInGb()
+      override fun defaultEbsVolumeSizeInGb(): Number = unwrap(this).getDefaultEbsVolumeSizeInGb()
 
-      public override fun maximumEbsVolumeSizeInGb(): Number =
-          unwrap(this).getMaximumEbsVolumeSizeInGb()
+      override fun maximumEbsVolumeSizeInGb(): Number = unwrap(this).getMaximumEbsVolumeSizeInGb()
     }
 
     public companion object {
@@ -1563,133 +1480,100 @@ public open class CfnDomain internal constructor(
     public fun studioWebPortal(): String? = unwrap(this).getStudioWebPortal()
 
     public interface Builder {
-      public fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
-      }
+      public fun codeEditorAppSettings(codeEditorAppSettings: IResolvable)
 
-      public fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty) {
-      }
+      public fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4efe1cbcf116b00bf28ee2dea6f2e7016d8969fc73b002a063cb1fa3d4de7a47")
       public
-          fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty.Builder.() -> Unit)
 
-      public fun customFileSystemConfigs(customFileSystemConfigs: IResolvable) {
-      }
+      public fun customFileSystemConfigs(customFileSystemConfigs: IResolvable)
 
-      public fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
-      }
+      public fun customFileSystemConfigs(customFileSystemConfigs: List<Any>)
 
-      public fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
-      }
+      public fun customPosixUserConfig(customPosixUserConfig: IResolvable)
 
-      public fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty) {
-      }
+      public fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7bee93cda65afaeafe67b14506c41615fd81e0789bb79e798e5b9288ffc9fa40")
       public
-          fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty.Builder.() -> Unit) {
-      }
+          fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty.Builder.() -> Unit)
 
-      public fun defaultLandingUri(defaultLandingUri: String) {
-      }
+      public fun defaultLandingUri(defaultLandingUri: String)
 
-      public fun executionRole(executionRole: String) {
-      }
+      public fun executionRole(executionRole: String)
 
-      public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
-      }
+      public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable)
 
-      public fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty) {
-      }
+      public fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f3b69c867059c09728cf81b6b719b840463a94d379ae6f52619fa454c24c7d4")
       public
-          fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty.Builder.() -> Unit)
 
-      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-      }
+      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable)
 
       public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-      }
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5216496e30a90adc157724786ace371107aee769a065a245cacae930fa5b2899")
       public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit)
 
-      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-      }
+      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable)
 
       public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-      }
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b4d814192f96e3065098606ab1cc4616e36486c9f14952a07ba7f26a3c51370c")
       public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
 
-      public fun rSessionAppSettings(rSessionAppSettings: IResolvable) {
-      }
+      public fun rSessionAppSettings(rSessionAppSettings: IResolvable)
 
-      public fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty) {
-      }
+      public fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b81f78fa82c9334f24ab7a4ad9a3b8a2f1adaf4e91696e79d83a9b27793fabca")
       public
-          fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty.Builder.() -> Unit)
 
-      public fun rStudioServerProAppSettings(rStudioServerProAppSettings: IResolvable) {
-      }
+      public fun rStudioServerProAppSettings(rStudioServerProAppSettings: IResolvable)
 
       public
-          fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty) {
-      }
+          fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfbb9e77b11195350c75cd55642c7472fb755619bbe3f65ccbc8780c7b4a8063")
       public
-          fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty.Builder.() -> Unit)
 
-      public fun securityGroups(securityGroups: List<String>) {
-      }
+      public fun securityGroups(securityGroups: List<String>)
 
-      public fun sharingSettings(sharingSettings: IResolvable) {
-      }
+      public fun sharingSettings(sharingSettings: IResolvable)
 
-      public fun sharingSettings(sharingSettings: SharingSettingsProperty) {
-      }
+      public fun sharingSettings(sharingSettings: SharingSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c1f110e5a5c496b5a1af40ba1b094eeaa34ed4f7f1f095fd2c54606d0c7b86a")
-      public fun sharingSettings(sharingSettings: SharingSettingsProperty.Builder.() -> Unit) {
-      }
+      public fun sharingSettings(sharingSettings: SharingSettingsProperty.Builder.() -> Unit)
 
-      public fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
-      }
+      public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
 
-      public fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty) {
-      }
+      public fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a3aae4112a7de18e3c56555dbe10493634a6f69dfe8f103aab3796ca359b6f1")
       public
-          fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty.Builder.() -> Unit) {
-      }
+          fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty.Builder.() -> Unit)
 
-      public fun studioWebPortal(studioWebPortal: String) {
-      }
+      public fun studioWebPortal(studioWebPortal: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1697,163 +1581,158 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty.builder()
 
-      public override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
+      override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
         cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
-          fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty) {
+      override fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty) {
         cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(CodeEditorAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4efe1cbcf116b00bf28ee2dea6f2e7016d8969fc73b002a063cb1fa3d4de7a47")
-      public override
+      override
           fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty.Builder.() -> Unit):
           Unit = codeEditorAppSettings(CodeEditorAppSettingsProperty(codeEditorAppSettings))
 
-      public override fun customFileSystemConfigs(customFileSystemConfigs: IResolvable) {
+      override fun customFileSystemConfigs(customFileSystemConfigs: IResolvable) {
         cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.let(IResolvable::unwrap))
       }
 
-      public override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
+      override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
         cdkBuilder.customFileSystemConfigs(customFileSystemConfigs)
       }
 
-      public override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
+      override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
         cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty) {
+      override fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty) {
         cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(CustomPosixUserConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7bee93cda65afaeafe67b14506c41615fd81e0789bb79e798e5b9288ffc9fa40")
-      public override
+      override
           fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty.Builder.() -> Unit):
           Unit = customPosixUserConfig(CustomPosixUserConfigProperty(customPosixUserConfig))
 
-      public override fun defaultLandingUri(defaultLandingUri: String) {
+      override fun defaultLandingUri(defaultLandingUri: String) {
         cdkBuilder.defaultLandingUri(defaultLandingUri)
       }
 
-      public override fun executionRole(executionRole: String) {
+      override fun executionRole(executionRole: String) {
         cdkBuilder.executionRole(executionRole)
       }
 
-      public override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
+      override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
-          fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty) {
+      override fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(JupyterLabAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f3b69c867059c09728cf81b6b719b840463a94d379ae6f52619fa454c24c7d4")
-      public override
+      override
           fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty.Builder.() -> Unit):
           Unit = jupyterLabAppSettings(JupyterLabAppSettingsProperty(jupyterLabAppSettings))
 
-      public override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
+      override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
         cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
         cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5216496e30a90adc157724786ace371107aee769a065a245cacae930fa5b2899")
-      public override
+      override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit):
           Unit =
           jupyterServerAppSettings(JupyterServerAppSettingsProperty(jupyterServerAppSettings))
 
-      public override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
+      override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b4d814192f96e3065098606ab1cc4616e36486c9f14952a07ba7f26a3c51370c")
-      public override
+      override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit):
           Unit =
           kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
 
-      public override fun rSessionAppSettings(rSessionAppSettings: IResolvable) {
+      override fun rSessionAppSettings(rSessionAppSettings: IResolvable) {
         cdkBuilder.rSessionAppSettings(rSessionAppSettings.let(IResolvable::unwrap))
       }
 
-      public override fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty) {
+      override fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty) {
         cdkBuilder.rSessionAppSettings(rSessionAppSettings.let(RSessionAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b81f78fa82c9334f24ab7a4ad9a3b8a2f1adaf4e91696e79d83a9b27793fabca")
-      public override
+      override
           fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty.Builder.() -> Unit):
           Unit = rSessionAppSettings(RSessionAppSettingsProperty(rSessionAppSettings))
 
-      public override fun rStudioServerProAppSettings(rStudioServerProAppSettings: IResolvable) {
+      override fun rStudioServerProAppSettings(rStudioServerProAppSettings: IResolvable) {
         cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty) {
         cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(RStudioServerProAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bfbb9e77b11195350c75cd55642c7472fb755619bbe3f65ccbc8780c7b4a8063")
-      public override
+      override
           fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty.Builder.() -> Unit):
           Unit =
           rStudioServerProAppSettings(RStudioServerProAppSettingsProperty(rStudioServerProAppSettings))
 
-      public override fun securityGroups(securityGroups: List<String>) {
+      override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
-      public override fun sharingSettings(sharingSettings: IResolvable) {
+      override fun sharingSettings(sharingSettings: IResolvable) {
         cdkBuilder.sharingSettings(sharingSettings.let(IResolvable::unwrap))
       }
 
-      public override fun sharingSettings(sharingSettings: SharingSettingsProperty) {
+      override fun sharingSettings(sharingSettings: SharingSettingsProperty) {
         cdkBuilder.sharingSettings(sharingSettings.let(SharingSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c1f110e5a5c496b5a1af40ba1b094eeaa34ed4f7f1f095fd2c54606d0c7b86a")
-      public override
-          fun sharingSettings(sharingSettings: SharingSettingsProperty.Builder.() -> Unit): Unit =
-          sharingSettings(SharingSettingsProperty(sharingSettings))
+      override fun sharingSettings(sharingSettings: SharingSettingsProperty.Builder.() -> Unit):
+          Unit = sharingSettings(SharingSettingsProperty(sharingSettings))
 
-      public override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
+      override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
         cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable::unwrap))
       }
 
-      public override
-          fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty) {
+      override fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty) {
         cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(DefaultSpaceStorageSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a3aae4112a7de18e3c56555dbe10493634a6f69dfe8f103aab3796ca359b6f1")
-      public override
+      override
           fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty.Builder.() -> Unit):
           Unit = spaceStorageSettings(DefaultSpaceStorageSettingsProperty(spaceStorageSettings))
 
-      public override fun studioWebPortal(studioWebPortal: String) {
+      override fun studioWebPortal(studioWebPortal: String) {
         cdkBuilder.studioWebPortal(studioWebPortal)
       }
 
@@ -1865,38 +1744,34 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.UserSettingsProperty,
     ) : UserSettingsProperty {
-      public override fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
+      override fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
 
-      public override fun customFileSystemConfigs(): Any? =
-          unwrap(this).getCustomFileSystemConfigs()
+      override fun customFileSystemConfigs(): Any? = unwrap(this).getCustomFileSystemConfigs()
 
-      public override fun customPosixUserConfig(): Any? = unwrap(this).getCustomPosixUserConfig()
+      override fun customPosixUserConfig(): Any? = unwrap(this).getCustomPosixUserConfig()
 
-      public override fun defaultLandingUri(): String? = unwrap(this).getDefaultLandingUri()
+      override fun defaultLandingUri(): String? = unwrap(this).getDefaultLandingUri()
 
-      public override fun executionRole(): String = unwrap(this).getExecutionRole()
+      override fun executionRole(): String = unwrap(this).getExecutionRole()
 
-      public override fun jupyterLabAppSettings(): Any? = unwrap(this).getJupyterLabAppSettings()
+      override fun jupyterLabAppSettings(): Any? = unwrap(this).getJupyterLabAppSettings()
 
-      public override fun jupyterServerAppSettings(): Any? =
-          unwrap(this).getJupyterServerAppSettings()
+      override fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
 
-      public override fun kernelGatewayAppSettings(): Any? =
-          unwrap(this).getKernelGatewayAppSettings()
+      override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
 
-      public override fun rSessionAppSettings(): Any? = unwrap(this).getRSessionAppSettings()
+      override fun rSessionAppSettings(): Any? = unwrap(this).getRSessionAppSettings()
 
-      public override fun rStudioServerProAppSettings(): Any? =
+      override fun rStudioServerProAppSettings(): Any? =
           unwrap(this).getRStudioServerProAppSettings()
 
-      public override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?:
-          emptyList()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      public override fun sharingSettings(): Any? = unwrap(this).getSharingSettings()
+      override fun sharingSettings(): Any? = unwrap(this).getSharingSettings()
 
-      public override fun spaceStorageSettings(): Any? = unwrap(this).getSpaceStorageSettings()
+      override fun spaceStorageSettings(): Any? = unwrap(this).getSpaceStorageSettings()
 
-      public override fun studioWebPortal(): String? = unwrap(this).getStudioWebPortal()
+      override fun studioWebPortal(): String? = unwrap(this).getStudioWebPortal()
     }
 
     public companion object {
@@ -1923,18 +1798,15 @@ public open class CfnDomain internal constructor(
     public fun defaultEbsStorageSettings(): Any? = unwrap(this).getDefaultEbsStorageSettings()
 
     public interface Builder {
-      public fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
-      }
+      public fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable)
 
       public
-          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty) {
-      }
+          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
       public
-          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit) {
-      }
+          fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1943,18 +1815,18 @@ public open class CfnDomain internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty.builder()
 
-      public override fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
+      override fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
         cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty) {
         cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
-      public override
+      override
           fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty.Builder.() -> Unit):
           Unit =
           defaultEbsStorageSettings(DefaultEbsStorageSettingsProperty(defaultEbsStorageSettings))
@@ -1968,8 +1840,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty,
     ) : DefaultSpaceStorageSettingsProperty {
-      public override fun defaultEbsStorageSettings(): Any? =
-          unwrap(this).getDefaultEbsStorageSettings()
+      override fun defaultEbsStorageSettings(): Any? = unwrap(this).getDefaultEbsStorageSettings()
     }
 
     public companion object {
@@ -2003,37 +1874,29 @@ public open class CfnDomain internal constructor(
     public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
     public interface Builder {
-      public fun executionRole(executionRole: String) {
-      }
+      public fun executionRole(executionRole: String)
 
-      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-      }
+      public fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable)
 
       public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-      }
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("05ce34e60196679116a9944bb5f40ddbeceb3301b86e4b3f2dd1541883bf3ee1")
       public
-          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit)
 
-      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-      }
+      public fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable)
 
       public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-      }
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("460295676976450cdae2cda859fd7bce6c46c68c626bdf664e452eb8d49fe133")
       public
-          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit) {
-      }
+          fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
 
-      public fun securityGroups(securityGroups: List<String>) {
-      }
+      public fun securityGroups(securityGroups: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2041,43 +1904,43 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty.builder()
 
-      public override fun executionRole(executionRole: String) {
+      override fun executionRole(executionRole: String) {
         cdkBuilder.executionRole(executionRole)
       }
 
-      public override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
+      override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
         cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
         cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("05ce34e60196679116a9944bb5f40ddbeceb3301b86e4b3f2dd1541883bf3ee1")
-      public override
+      override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty.Builder.() -> Unit):
           Unit =
           jupyterServerAppSettings(JupyterServerAppSettingsProperty(jupyterServerAppSettings))
 
-      public override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
+      override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
         cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("460295676976450cdae2cda859fd7bce6c46c68c626bdf664e452eb8d49fe133")
-      public override
+      override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit):
           Unit =
           kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
 
-      public override fun securityGroups(securityGroups: List<String>) {
+      override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
@@ -2090,16 +1953,13 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty,
     ) : DefaultSpaceSettingsProperty {
-      public override fun executionRole(): String = unwrap(this).getExecutionRole()
+      override fun executionRole(): String = unwrap(this).getExecutionRole()
 
-      public override fun jupyterServerAppSettings(): Any? =
-          unwrap(this).getJupyterServerAppSettings()
+      override fun jupyterServerAppSettings(): Any? = unwrap(this).getJupyterServerAppSettings()
 
-      public override fun kernelGatewayAppSettings(): Any? =
-          unwrap(this).getKernelGatewayAppSettings()
+      override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
 
-      public override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?:
-          emptyList()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
     }
 
     public companion object {
@@ -2130,14 +1990,11 @@ public open class CfnDomain internal constructor(
     public fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
 
     public interface Builder {
-      public fun notebookOutputOption(notebookOutputOption: String) {
-      }
+      public fun notebookOutputOption(notebookOutputOption: String)
 
-      public fun s3KmsKeyId(s3KmsKeyId: String) {
-      }
+      public fun s3KmsKeyId(s3KmsKeyId: String)
 
-      public fun s3OutputPath(s3OutputPath: String) {
-      }
+      public fun s3OutputPath(s3OutputPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2145,15 +2002,15 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty.Builder =
           software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty.builder()
 
-      public override fun notebookOutputOption(notebookOutputOption: String) {
+      override fun notebookOutputOption(notebookOutputOption: String) {
         cdkBuilder.notebookOutputOption(notebookOutputOption)
       }
 
-      public override fun s3KmsKeyId(s3KmsKeyId: String) {
+      override fun s3KmsKeyId(s3KmsKeyId: String) {
         cdkBuilder.s3KmsKeyId(s3KmsKeyId)
       }
 
-      public override fun s3OutputPath(s3OutputPath: String) {
+      override fun s3OutputPath(s3OutputPath: String) {
         cdkBuilder.s3OutputPath(s3OutputPath)
       }
 
@@ -2166,11 +2023,11 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnDomain.SharingSettingsProperty,
     ) : SharingSettingsProperty {
-      public override fun notebookOutputOption(): String? = unwrap(this).getNotebookOutputOption()
+      override fun notebookOutputOption(): String? = unwrap(this).getNotebookOutputOption()
 
-      public override fun s3KmsKeyId(): String? = unwrap(this).getS3KmsKeyId()
+      override fun s3KmsKeyId(): String? = unwrap(this).getS3KmsKeyId()
 
-      public override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
+      override fun s3OutputPath(): String? = unwrap(this).getS3OutputPath()
     }
 
     public companion object {

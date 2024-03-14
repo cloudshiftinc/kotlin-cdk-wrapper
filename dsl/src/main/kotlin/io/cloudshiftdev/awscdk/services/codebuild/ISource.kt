@@ -16,15 +16,15 @@ public interface ISource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.ISource,
   ) : ISource {
-    public override fun badgeSupported(): Boolean = unwrap(this).getBadgeSupported()
+    override fun badgeSupported(): Boolean = unwrap(this).getBadgeSupported()
 
-    public override fun bind(arg0: Construct, arg1: IProject): SourceConfig =
+    override fun bind(arg0: Construct, arg1: IProject): SourceConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(IProject::unwrap)).let(SourceConfig::wrap)
 
-    public override fun identifier(): String? = unwrap(this).getIdentifier()
+    override fun identifier(): String? = unwrap(this).getIdentifier()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

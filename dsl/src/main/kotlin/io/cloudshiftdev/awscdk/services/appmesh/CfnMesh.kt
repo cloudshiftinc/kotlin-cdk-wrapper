@@ -66,22 +66,17 @@ public open class CfnMesh internal constructor(
   }
 
   public interface Builder {
-    public fun meshName(meshName: String) {
-    }
+    public fun meshName(meshName: String)
 
-    public fun spec(spec: IResolvable) {
-    }
+    public fun spec(spec: IResolvable)
 
-    public fun spec(spec: MeshSpecProperty) {
-    }
+    public fun spec(spec: MeshSpecProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44f512b8c042be862110c86fe0886eed35ca758820d713e0f0058dcf407b07ec")
-    public fun spec(spec: MeshSpecProperty.Builder.() -> Unit) {
-    }
+    public fun spec(spec: MeshSpecProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -91,24 +86,24 @@ public open class CfnMesh internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnMesh.Builder =
         software.amazon.awscdk.services.appmesh.CfnMesh.Builder.create(scope, id)
 
-    public override fun meshName(meshName: String) {
+    override fun meshName(meshName: String) {
       cdkBuilder.meshName(meshName)
     }
 
-    public override fun spec(spec: IResolvable) {
+    override fun spec(spec: IResolvable) {
       cdkBuilder.spec(spec.let(IResolvable::unwrap))
     }
 
-    public override fun spec(spec: MeshSpecProperty) {
+    override fun spec(spec: MeshSpecProperty) {
       cdkBuilder.spec(spec.let(MeshSpecProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44f512b8c042be862110c86fe0886eed35ca758820d713e0f0058dcf407b07ec")
-    public override fun spec(spec: MeshSpecProperty.Builder.() -> Unit): Unit =
+    override fun spec(spec: MeshSpecProperty.Builder.() -> Unit): Unit =
         spec(MeshSpecProperty(spec))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -140,8 +135,7 @@ public open class CfnMesh internal constructor(
     public fun ipPreference(): String? = unwrap(this).getIpPreference()
 
     public interface Builder {
-      public fun ipPreference(ipPreference: String) {
-      }
+      public fun ipPreference(ipPreference: String)
     }
 
     private class BuilderImpl : Builder {
@@ -149,7 +143,7 @@ public open class CfnMesh internal constructor(
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty.builder()
 
-      public override fun ipPreference(ipPreference: String) {
+      override fun ipPreference(ipPreference: String) {
         cdkBuilder.ipPreference(ipPreference)
       }
 
@@ -162,7 +156,7 @@ public open class CfnMesh internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty,
     ) : MeshServiceDiscoveryProperty {
-      public override fun ipPreference(): String? = unwrap(this).getIpPreference()
+      override fun ipPreference(): String? = unwrap(this).getIpPreference()
     }
 
     public companion object {
@@ -189,8 +183,7 @@ public open class CfnMesh internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -198,7 +191,7 @@ public open class CfnMesh internal constructor(
           software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -209,7 +202,7 @@ public open class CfnMesh internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty,
     ) : EgressFilterProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -238,28 +231,21 @@ public open class CfnMesh internal constructor(
     public fun serviceDiscovery(): Any? = unwrap(this).getServiceDiscovery()
 
     public interface Builder {
-      public fun egressFilter(egressFilter: IResolvable) {
-      }
+      public fun egressFilter(egressFilter: IResolvable)
 
-      public fun egressFilter(egressFilter: EgressFilterProperty) {
-      }
+      public fun egressFilter(egressFilter: EgressFilterProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("434960f3f5302cfc58ecbc63c003e3a27508adf23053398f9d203587f1b2c4b4")
-      public fun egressFilter(egressFilter: EgressFilterProperty.Builder.() -> Unit) {
-      }
+      public fun egressFilter(egressFilter: EgressFilterProperty.Builder.() -> Unit)
 
-      public fun serviceDiscovery(serviceDiscovery: IResolvable) {
-      }
+      public fun serviceDiscovery(serviceDiscovery: IResolvable)
 
-      public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty) {
-      }
+      public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78908713b26e8e55cd54c92a84f59957af4676699050c81f7f296fc4e8da97fe")
-      public
-          fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty.Builder.() -> Unit) {
-      }
+      public fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -267,30 +253,30 @@ public open class CfnMesh internal constructor(
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty.builder()
 
-      public override fun egressFilter(egressFilter: IResolvable) {
+      override fun egressFilter(egressFilter: IResolvable) {
         cdkBuilder.egressFilter(egressFilter.let(IResolvable::unwrap))
       }
 
-      public override fun egressFilter(egressFilter: EgressFilterProperty) {
+      override fun egressFilter(egressFilter: EgressFilterProperty) {
         cdkBuilder.egressFilter(egressFilter.let(EgressFilterProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("434960f3f5302cfc58ecbc63c003e3a27508adf23053398f9d203587f1b2c4b4")
-      public override fun egressFilter(egressFilter: EgressFilterProperty.Builder.() -> Unit): Unit
-          = egressFilter(EgressFilterProperty(egressFilter))
+      override fun egressFilter(egressFilter: EgressFilterProperty.Builder.() -> Unit): Unit =
+          egressFilter(EgressFilterProperty(egressFilter))
 
-      public override fun serviceDiscovery(serviceDiscovery: IResolvable) {
+      override fun serviceDiscovery(serviceDiscovery: IResolvable) {
         cdkBuilder.serviceDiscovery(serviceDiscovery.let(IResolvable::unwrap))
       }
 
-      public override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty) {
+      override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty) {
         cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscoveryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78908713b26e8e55cd54c92a84f59957af4676699050c81f7f296fc4e8da97fe")
-      public override
+      override
           fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty.Builder.() -> Unit):
           Unit = serviceDiscovery(MeshServiceDiscoveryProperty(serviceDiscovery))
 
@@ -301,9 +287,9 @@ public open class CfnMesh internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty,
     ) : MeshSpecProperty {
-      public override fun egressFilter(): Any? = unwrap(this).getEgressFilter()
+      override fun egressFilter(): Any? = unwrap(this).getEgressFilter()
 
-      public override fun serviceDiscovery(): Any? = unwrap(this).getServiceDiscovery()
+      override fun serviceDiscovery(): Any? = unwrap(this).getServiceDiscovery()
     }
 
     public companion object {

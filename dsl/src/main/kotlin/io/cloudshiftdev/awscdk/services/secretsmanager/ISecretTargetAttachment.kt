@@ -22,67 +22,65 @@ public interface ISecretTargetAttachment : ISecret {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretTargetAttachment,
   ) : ISecretTargetAttachment {
-    public override fun addRotationSchedule(arg0: String, arg1: RotationScheduleOptions):
-        RotationSchedule = unwrap(this).addRotationSchedule(arg0,
+    override fun addRotationSchedule(arg0: String, arg1: RotationScheduleOptions): RotationSchedule
+        = unwrap(this).addRotationSchedule(arg0,
         arg1.let(RotationScheduleOptions::unwrap)).let(RotationSchedule::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0185182b072761e632ab5e240b4f879efc97dadb0634fcd1f5cbd5e0c49fe563")
-    public override fun addRotationSchedule(arg0: String,
+    override fun addRotationSchedule(arg0: String,
         arg1: RotationScheduleOptions.Builder.() -> Unit): RotationSchedule =
         addRotationSchedule(arg0, RotationScheduleOptions(arg1))
 
-    public override fun addToResourcePolicy(arg0: PolicyStatement): AddToResourcePolicyResult =
+    override fun addToResourcePolicy(arg0: PolicyStatement): AddToResourcePolicyResult =
         unwrap(this).addToResourcePolicy(arg0.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
-    public override fun addToResourcePolicy(arg0: PolicyStatement.Builder.() -> Unit):
+    override fun addToResourcePolicy(arg0: PolicyStatement.Builder.() -> Unit):
         AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(arg0))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun attach(arg0: ISecretAttachmentTarget): ISecret =
+    override fun attach(arg0: ISecretAttachmentTarget): ISecret =
         unwrap(this).attach(arg0.let(ISecretAttachmentTarget::unwrap)).let(ISecret::wrap)
 
-    public override fun denyAccountRootDelete() {
+    override fun denyAccountRootDelete() {
       unwrap(this).denyAccountRootDelete()
     }
 
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantRead(arg0: IGrantable): Grant =
+    override fun grantRead(arg0: IGrantable): Grant =
         unwrap(this).grantRead(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantRead(arg0: IGrantable, arg1: List<String>): Grant =
+    override fun grantRead(arg0: IGrantable, arg1: List<String>): Grant =
         unwrap(this).grantRead(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
 
-    public override fun grantWrite(arg0: IGrantable): Grant =
+    override fun grantWrite(arg0: IGrantable): Grant =
         unwrap(this).grantWrite(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun secretArn(): String = unwrap(this).getSecretArn()
+    override fun secretArn(): String = unwrap(this).getSecretArn()
 
-    public override fun secretFullArn(): String? = unwrap(this).getSecretFullArn()
+    override fun secretFullArn(): String? = unwrap(this).getSecretFullArn()
 
-    public override fun secretName(): String = unwrap(this).getSecretName()
+    override fun secretName(): String = unwrap(this).getSecretName()
 
-    public override fun secretTargetAttachmentSecretArn(): String =
+    override fun secretTargetAttachmentSecretArn(): String =
         unwrap(this).getSecretTargetAttachmentSecretArn()
 
-    public override fun secretValue(): SecretValue =
-        unwrap(this).getSecretValue().let(SecretValue::wrap)
+    override fun secretValue(): SecretValue = unwrap(this).getSecretValue().let(SecretValue::wrap)
 
-    public override fun secretValueFromJson(arg0: String): SecretValue =
+    override fun secretValueFromJson(arg0: String): SecretValue =
         unwrap(this).secretValueFromJson(arg0).let(SecretValue::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

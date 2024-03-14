@@ -94,42 +94,31 @@ public open class CfnRoute internal constructor(
       uriPathRoute(UriPathRouteInputProperty(`value`))
 
   public interface Builder {
-    public fun applicationIdentifier(applicationIdentifier: String) {
-    }
+    public fun applicationIdentifier(applicationIdentifier: String)
 
-    public fun defaultRoute(defaultRoute: IResolvable) {
-    }
+    public fun defaultRoute(defaultRoute: IResolvable)
 
-    public fun defaultRoute(defaultRoute: DefaultRouteInputProperty) {
-    }
+    public fun defaultRoute(defaultRoute: DefaultRouteInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca106e9831e28b258c6a2cd5396f4b7d9726213f7a085efab4a2304461b4084a")
-    public fun defaultRoute(defaultRoute: DefaultRouteInputProperty.Builder.() -> Unit) {
-    }
+    public fun defaultRoute(defaultRoute: DefaultRouteInputProperty.Builder.() -> Unit)
 
-    public fun environmentIdentifier(environmentIdentifier: String) {
-    }
+    public fun environmentIdentifier(environmentIdentifier: String)
 
-    public fun routeType(routeType: String) {
-    }
+    public fun routeType(routeType: String)
 
-    public fun serviceIdentifier(serviceIdentifier: String) {
-    }
+    public fun serviceIdentifier(serviceIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun uriPathRoute(uriPathRoute: IResolvable) {
-    }
+    public fun uriPathRoute(uriPathRoute: IResolvable)
 
-    public fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty) {
-    }
+    public fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b80c88766ed37adf2d5d8261d64bab5cfc07f8aee3d6690638691521de18a34")
-    public fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty.Builder.() -> Unit) {
-    }
+    public fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -139,51 +128,51 @@ public open class CfnRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.refactorspaces.CfnRoute.Builder =
         software.amazon.awscdk.services.refactorspaces.CfnRoute.Builder.create(scope, id)
 
-    public override fun applicationIdentifier(applicationIdentifier: String) {
+    override fun applicationIdentifier(applicationIdentifier: String) {
       cdkBuilder.applicationIdentifier(applicationIdentifier)
     }
 
-    public override fun defaultRoute(defaultRoute: IResolvable) {
+    override fun defaultRoute(defaultRoute: IResolvable) {
       cdkBuilder.defaultRoute(defaultRoute.let(IResolvable::unwrap))
     }
 
-    public override fun defaultRoute(defaultRoute: DefaultRouteInputProperty) {
+    override fun defaultRoute(defaultRoute: DefaultRouteInputProperty) {
       cdkBuilder.defaultRoute(defaultRoute.let(DefaultRouteInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca106e9831e28b258c6a2cd5396f4b7d9726213f7a085efab4a2304461b4084a")
-    public override fun defaultRoute(defaultRoute: DefaultRouteInputProperty.Builder.() -> Unit):
-        Unit = defaultRoute(DefaultRouteInputProperty(defaultRoute))
+    override fun defaultRoute(defaultRoute: DefaultRouteInputProperty.Builder.() -> Unit): Unit =
+        defaultRoute(DefaultRouteInputProperty(defaultRoute))
 
-    public override fun environmentIdentifier(environmentIdentifier: String) {
+    override fun environmentIdentifier(environmentIdentifier: String) {
       cdkBuilder.environmentIdentifier(environmentIdentifier)
     }
 
-    public override fun routeType(routeType: String) {
+    override fun routeType(routeType: String) {
       cdkBuilder.routeType(routeType)
     }
 
-    public override fun serviceIdentifier(serviceIdentifier: String) {
+    override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun uriPathRoute(uriPathRoute: IResolvable) {
+    override fun uriPathRoute(uriPathRoute: IResolvable) {
       cdkBuilder.uriPathRoute(uriPathRoute.let(IResolvable::unwrap))
     }
 
-    public override fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty) {
+    override fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty) {
       cdkBuilder.uriPathRoute(uriPathRoute.let(UriPathRouteInputProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b80c88766ed37adf2d5d8261d64bab5cfc07f8aee3d6690638691521de18a34")
-    public override fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty.Builder.() -> Unit):
-        Unit = uriPathRoute(UriPathRouteInputProperty(uriPathRoute))
+    override fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty.Builder.() -> Unit): Unit =
+        uriPathRoute(UriPathRouteInputProperty(uriPathRoute))
 
     public fun build(): software.amazon.awscdk.services.refactorspaces.CfnRoute = cdkBuilder.build()
   }
@@ -221,26 +210,19 @@ public open class CfnRoute internal constructor(
     public fun sourcePath(): String? = unwrap(this).getSourcePath()
 
     public interface Builder {
-      public fun activationState(activationState: String) {
-      }
+      public fun activationState(activationState: String)
 
-      public fun appendSourcePath(appendSourcePath: Boolean) {
-      }
+      public fun appendSourcePath(appendSourcePath: Boolean)
 
-      public fun appendSourcePath(appendSourcePath: IResolvable) {
-      }
+      public fun appendSourcePath(appendSourcePath: IResolvable)
 
-      public fun includeChildPaths(includeChildPaths: Boolean) {
-      }
+      public fun includeChildPaths(includeChildPaths: Boolean)
 
-      public fun includeChildPaths(includeChildPaths: IResolvable) {
-      }
+      public fun includeChildPaths(includeChildPaths: IResolvable)
 
-      public fun methods(methods: List<String>) {
-      }
+      public fun methods(methods: List<String>)
 
-      public fun sourcePath(sourcePath: String) {
-      }
+      public fun sourcePath(sourcePath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -249,31 +231,31 @@ public open class CfnRoute internal constructor(
           =
           software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty.builder()
 
-      public override fun activationState(activationState: String) {
+      override fun activationState(activationState: String) {
         cdkBuilder.activationState(activationState)
       }
 
-      public override fun appendSourcePath(appendSourcePath: Boolean) {
+      override fun appendSourcePath(appendSourcePath: Boolean) {
         cdkBuilder.appendSourcePath(appendSourcePath)
       }
 
-      public override fun appendSourcePath(appendSourcePath: IResolvable) {
+      override fun appendSourcePath(appendSourcePath: IResolvable) {
         cdkBuilder.appendSourcePath(appendSourcePath.let(IResolvable::unwrap))
       }
 
-      public override fun includeChildPaths(includeChildPaths: Boolean) {
+      override fun includeChildPaths(includeChildPaths: Boolean) {
         cdkBuilder.includeChildPaths(includeChildPaths)
       }
 
-      public override fun includeChildPaths(includeChildPaths: IResolvable) {
+      override fun includeChildPaths(includeChildPaths: IResolvable) {
         cdkBuilder.includeChildPaths(includeChildPaths.let(IResolvable::unwrap))
       }
 
-      public override fun methods(methods: List<String>) {
+      override fun methods(methods: List<String>) {
         cdkBuilder.methods(methods)
       }
 
-      public override fun sourcePath(sourcePath: String) {
+      override fun sourcePath(sourcePath: String) {
         cdkBuilder.sourcePath(sourcePath)
       }
 
@@ -286,15 +268,15 @@ public open class CfnRoute internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.refactorspaces.CfnRoute.UriPathRouteInputProperty,
     ) : UriPathRouteInputProperty {
-      public override fun activationState(): String = unwrap(this).getActivationState()
+      override fun activationState(): String = unwrap(this).getActivationState()
 
-      public override fun appendSourcePath(): Any? = unwrap(this).getAppendSourcePath()
+      override fun appendSourcePath(): Any? = unwrap(this).getAppendSourcePath()
 
-      public override fun includeChildPaths(): Any? = unwrap(this).getIncludeChildPaths()
+      override fun includeChildPaths(): Any? = unwrap(this).getIncludeChildPaths()
 
-      public override fun methods(): List<String> = unwrap(this).getMethods() ?: emptyList()
+      override fun methods(): List<String> = unwrap(this).getMethods() ?: emptyList()
 
-      public override fun sourcePath(): String? = unwrap(this).getSourcePath()
+      override fun sourcePath(): String? = unwrap(this).getSourcePath()
     }
 
     public companion object {
@@ -321,8 +303,7 @@ public open class CfnRoute internal constructor(
     public fun activationState(): String
 
     public interface Builder {
-      public fun activationState(activationState: String) {
-      }
+      public fun activationState(activationState: String)
     }
 
     private class BuilderImpl : Builder {
@@ -331,7 +312,7 @@ public open class CfnRoute internal constructor(
           =
           software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty.builder()
 
-      public override fun activationState(activationState: String) {
+      override fun activationState(activationState: String) {
         cdkBuilder.activationState(activationState)
       }
 
@@ -344,7 +325,7 @@ public open class CfnRoute internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.refactorspaces.CfnRoute.DefaultRouteInputProperty,
     ) : DefaultRouteInputProperty {
-      public override fun activationState(): String = unwrap(this).getActivationState()
+      override fun activationState(): String = unwrap(this).getActivationState()
     }
 
     public companion object {

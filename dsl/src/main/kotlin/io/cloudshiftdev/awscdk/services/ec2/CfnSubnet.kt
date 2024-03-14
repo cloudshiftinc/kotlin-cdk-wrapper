@@ -165,68 +165,47 @@ public open class CfnSubnet internal constructor(
   }
 
   public interface Builder {
-    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
-    }
+    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean)
 
-    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: IResolvable) {
-    }
+    public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: IResolvable)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun availabilityZoneId(availabilityZoneId: String) {
-    }
+    public fun availabilityZoneId(availabilityZoneId: String)
 
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun enableDns64(enableDns64: Boolean) {
-    }
+    public fun enableDns64(enableDns64: Boolean)
 
-    public fun enableDns64(enableDns64: IResolvable) {
-    }
+    public fun enableDns64(enableDns64: IResolvable)
 
-    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
-    }
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String)
 
-    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
-    }
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number)
 
-    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
-    public fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>) {
-    }
+    public fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>)
 
-    public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
-    }
+    public fun ipv6IpamPoolId(ipv6IpamPoolId: String)
 
-    public fun ipv6Native(ipv6Native: Boolean) {
-    }
+    public fun ipv6Native(ipv6Native: Boolean)
 
-    public fun ipv6Native(ipv6Native: IResolvable) {
-    }
+    public fun ipv6Native(ipv6Native: IResolvable)
 
-    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
-    }
+    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number)
 
-    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
-    }
+    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean)
 
-    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable) {
-    }
+    public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable)
 
-    public fun outpostArn(outpostArn: String) {
-    }
+    public fun outpostArn(outpostArn: String)
 
-    public fun privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch: Any) {
-    }
+    public fun privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -236,87 +215,87 @@ public open class CfnSubnet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnSubnet.Builder =
         software.amazon.awscdk.services.ec2.CfnSubnet.Builder.create(scope, id)
 
-    public override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
+    override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
       cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation)
     }
 
-    public override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: IResolvable) {
+    override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: IResolvable) {
       cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation.let(IResolvable::unwrap))
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun availabilityZoneId(availabilityZoneId: String) {
+    override fun availabilityZoneId(availabilityZoneId: String) {
       cdkBuilder.availabilityZoneId(availabilityZoneId)
     }
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun enableDns64(enableDns64: Boolean) {
+    override fun enableDns64(enableDns64: Boolean) {
       cdkBuilder.enableDns64(enableDns64)
     }
 
-    public override fun enableDns64(enableDns64: IResolvable) {
+    override fun enableDns64(enableDns64: IResolvable) {
       cdkBuilder.enableDns64(enableDns64.let(IResolvable::unwrap))
     }
 
-    public override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+    override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
       cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
     }
 
-    public override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+    override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
       cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
     }
 
-    public override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+    override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
-    public override fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>) {
+    override fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>) {
       cdkBuilder.ipv6CidrBlocks(ipv6CidrBlocks)
     }
 
-    public override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
+    override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
       cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
     }
 
-    public override fun ipv6Native(ipv6Native: Boolean) {
+    override fun ipv6Native(ipv6Native: Boolean) {
       cdkBuilder.ipv6Native(ipv6Native)
     }
 
-    public override fun ipv6Native(ipv6Native: IResolvable) {
+    override fun ipv6Native(ipv6Native: IResolvable) {
       cdkBuilder.ipv6Native(ipv6Native.let(IResolvable::unwrap))
     }
 
-    public override fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
+    override fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
       cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
     }
 
-    public override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
+    override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
       cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
     }
 
-    public override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable) {
+    override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable) {
       cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch.let(IResolvable::unwrap))
     }
 
-    public override fun outpostArn(outpostArn: String) {
+    override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
 
-    public override fun privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch: Any) {
+    override fun privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch: Any) {
       cdkBuilder.privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -353,20 +332,15 @@ public open class CfnSubnet internal constructor(
     public fun hostnameType(): String? = unwrap(this).getHostnameType()
 
     public interface Builder {
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
-      }
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean)
 
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-      }
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable)
 
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
-      }
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean)
 
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-      }
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable)
 
-      public fun hostnameType(hostnameType: String) {
-      }
+      public fun hostnameType(hostnameType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -375,25 +349,23 @@ public open class CfnSubnet internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty.builder()
 
-      public override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
         cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
       }
 
-      public override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
         cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
       }
 
-      public override
-          fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
         cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
       }
 
-      public override
-          fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
         cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
       }
 
-      public override fun hostnameType(hostnameType: String) {
+      override fun hostnameType(hostnameType: String) {
         cdkBuilder.hostnameType(hostnameType)
       }
 
@@ -406,13 +378,13 @@ public open class CfnSubnet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty,
     ) : PrivateDnsNameOptionsOnLaunchProperty {
-      public override fun enableResourceNameDnsARecord(): Any? =
+      override fun enableResourceNameDnsARecord(): Any? =
           unwrap(this).getEnableResourceNameDnsARecord()
 
-      public override fun enableResourceNameDnsAaaaRecord(): Any? =
+      override fun enableResourceNameDnsAaaaRecord(): Any? =
           unwrap(this).getEnableResourceNameDnsAaaaRecord()
 
-      public override fun hostnameType(): String? = unwrap(this).getHostnameType()
+      override fun hostnameType(): String? = unwrap(this).getHostnameType()
     }
 
     public companion object {

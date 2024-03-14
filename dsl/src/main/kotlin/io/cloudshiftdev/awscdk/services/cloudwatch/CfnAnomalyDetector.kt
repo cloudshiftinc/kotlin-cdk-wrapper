@@ -101,57 +101,43 @@ public open class CfnAnomalyDetector internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: ConfigurationProperty) {
-    }
+    public fun configuration(configuration: ConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("797cce49dc543cfe5e3f9e833b9c2ad1c909f309227adc72f42b6e6222575c75")
-    public fun configuration(configuration: ConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: ConfigurationProperty.Builder.() -> Unit)
 
-    public fun dimensions(dimensions: IResolvable) {
-    }
+    public fun dimensions(dimensions: IResolvable)
 
-    public fun dimensions(dimensions: List<Any>) {
-    }
+    public fun dimensions(dimensions: List<Any>)
 
-    public fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable) {
-    }
+    public fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable)
 
     public
-        fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty) {
-    }
+        fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc259d6444ba8391f78b1aa77a7f081024cf6ee5c02ba0fcc16e3f778afaa600")
     public
-        fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty.Builder.() -> Unit) {
-    }
+        fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty.Builder.() -> Unit)
 
-    public fun metricName(metricName: String) {
-    }
+    public fun metricName(metricName: String)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: IResolvable) {
-    }
+    public fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: IResolvable)
 
     public
-        fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty) {
-    }
+        fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93ae06367673102e5f23ee5bca9b43e8d18819a21025ef41618bb5e3d12d2353")
     public
-        fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty.Builder.() -> Unit) {
-    }
+        fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty.Builder.() -> Unit)
 
-    public fun stat(stat: String) {
-    }
+    public fun stat(stat: String)
   }
 
   private class BuilderImpl(
@@ -161,68 +147,68 @@ public open class CfnAnomalyDetector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.Builder.create(scope, id)
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: ConfigurationProperty) {
+    override fun configuration(configuration: ConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(ConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("797cce49dc543cfe5e3f9e833b9c2ad1c909f309227adc72f42b6e6222575c75")
-    public override fun configuration(configuration: ConfigurationProperty.Builder.() -> Unit): Unit
-        = configuration(ConfigurationProperty(configuration))
+    override fun configuration(configuration: ConfigurationProperty.Builder.() -> Unit): Unit =
+        configuration(ConfigurationProperty(configuration))
 
-    public override fun dimensions(dimensions: IResolvable) {
+    override fun dimensions(dimensions: IResolvable) {
       cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
     }
 
-    public override fun dimensions(dimensions: List<Any>) {
+    override fun dimensions(dimensions: List<Any>) {
       cdkBuilder.dimensions(dimensions)
     }
 
-    public override fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable) {
+    override fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable) {
       cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty) {
       cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(MetricMathAnomalyDetectorProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc259d6444ba8391f78b1aa77a7f081024cf6ee5c02ba0fcc16e3f778afaa600")
-    public override
+    override
         fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty.Builder.() -> Unit):
         Unit =
         metricMathAnomalyDetector(MetricMathAnomalyDetectorProperty(metricMathAnomalyDetector))
 
-    public override fun metricName(metricName: String) {
+    override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: IResolvable) {
+    override fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: IResolvable) {
       cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty) {
       cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(SingleMetricAnomalyDetectorProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93ae06367673102e5f23ee5bca9b43e8d18819a21025ef41618bb5e3d12d2353")
-    public override
+    override
         fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty.Builder.() -> Unit):
         Unit =
         singleMetricAnomalyDetector(SingleMetricAnomalyDetectorProperty(singleMetricAnomalyDetector))
 
-    public override fun stat(stat: String) {
+    override fun stat(stat: String) {
       cdkBuilder.stat(stat)
     }
 
@@ -267,37 +253,27 @@ public open class CfnAnomalyDetector internal constructor(
     public fun returnData(): Any? = unwrap(this).getReturnData()
 
     public interface Builder {
-      public fun accountId(accountId: String) {
-      }
+      public fun accountId(accountId: String)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun label(label: String) {
-      }
+      public fun label(label: String)
 
-      public fun metricStat(metricStat: IResolvable) {
-      }
+      public fun metricStat(metricStat: IResolvable)
 
-      public fun metricStat(metricStat: MetricStatProperty) {
-      }
+      public fun metricStat(metricStat: MetricStatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b15486ff93bfa529642e3e885e2223c2807ed9b7fc6975b10a8e05734cbd12cd")
-      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit) {
-      }
+      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit)
 
-      public fun period(period: Number) {
-      }
+      public fun period(period: Number)
 
-      public fun returnData(returnData: Boolean) {
-      }
+      public fun returnData(returnData: Boolean)
 
-      public fun returnData(returnData: IResolvable) {
-      }
+      public fun returnData(returnData: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -306,44 +282,44 @@ public open class CfnAnomalyDetector internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty.builder()
 
-      public override fun accountId(accountId: String) {
+      override fun accountId(accountId: String) {
         cdkBuilder.accountId(accountId)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun label(label: String) {
+      override fun label(label: String) {
         cdkBuilder.label(label)
       }
 
-      public override fun metricStat(metricStat: IResolvable) {
+      override fun metricStat(metricStat: IResolvable) {
         cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
       }
 
-      public override fun metricStat(metricStat: MetricStatProperty) {
+      override fun metricStat(metricStat: MetricStatProperty) {
         cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b15486ff93bfa529642e3e885e2223c2807ed9b7fc6975b10a8e05734cbd12cd")
-      public override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
+      override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
           metricStat(MetricStatProperty(metricStat))
 
-      public override fun period(period: Number) {
+      override fun period(period: Number) {
         cdkBuilder.period(period)
       }
 
-      public override fun returnData(returnData: Boolean) {
+      override fun returnData(returnData: Boolean) {
         cdkBuilder.returnData(returnData)
       }
 
-      public override fun returnData(returnData: IResolvable) {
+      override fun returnData(returnData: IResolvable) {
         cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
       }
 
@@ -356,19 +332,19 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricDataQueryProperty,
     ) : MetricDataQueryProperty {
-      public override fun accountId(): String? = unwrap(this).getAccountId()
+      override fun accountId(): String? = unwrap(this).getAccountId()
 
-      public override fun expression(): String? = unwrap(this).getExpression()
+      override fun expression(): String? = unwrap(this).getExpression()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun label(): String? = unwrap(this).getLabel()
+      override fun label(): String? = unwrap(this).getLabel()
 
-      public override fun metricStat(): Any? = unwrap(this).getMetricStat()
+      override fun metricStat(): Any? = unwrap(this).getMetricStat()
 
-      public override fun period(): Number? = unwrap(this).getPeriod()
+      override fun period(): Number? = unwrap(this).getPeriod()
 
-      public override fun returnData(): Any? = unwrap(this).getReturnData()
+      override fun returnData(): Any? = unwrap(this).getReturnData()
     }
 
     public companion object {
@@ -401,20 +377,15 @@ public open class CfnAnomalyDetector internal constructor(
     public fun stat(): String? = unwrap(this).getStat()
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun stat(stat: String) {
-      }
+      public fun stat(stat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -423,23 +394,23 @@ public open class CfnAnomalyDetector internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun stat(stat: String) {
+      override fun stat(stat: String) {
         cdkBuilder.stat(stat)
       }
 
@@ -452,13 +423,13 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty,
     ) : SingleMetricAnomalyDetectorProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String? = unwrap(this).getMetricName()
+      override fun metricName(): String? = unwrap(this).getMetricName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun stat(): String? = unwrap(this).getStat()
+      override fun stat(): String? = unwrap(this).getStat()
     }
 
     public companion object {
@@ -492,25 +463,19 @@ public open class CfnAnomalyDetector internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun metric(metric: IResolvable) {
-      }
+      public fun metric(metric: IResolvable)
 
-      public fun metric(metric: MetricProperty) {
-      }
+      public fun metric(metric: MetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("081c7eab5b33fe49cd3958a08060052a45aeca231d05a19eb3bbd383cc9628d3")
-      public fun metric(metric: MetricProperty.Builder.() -> Unit) {
-      }
+      public fun metric(metric: MetricProperty.Builder.() -> Unit)
 
-      public fun period(period: Number) {
-      }
+      public fun period(period: Number)
 
-      public fun stat(stat: String) {
-      }
+      public fun stat(stat: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -518,28 +483,28 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty.builder()
 
-      public override fun metric(metric: IResolvable) {
+      override fun metric(metric: IResolvable) {
         cdkBuilder.metric(metric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: MetricProperty) {
+      override fun metric(metric: MetricProperty) {
         cdkBuilder.metric(metric.let(MetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("081c7eab5b33fe49cd3958a08060052a45aeca231d05a19eb3bbd383cc9628d3")
-      public override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
+      override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
           metric(MetricProperty(metric))
 
-      public override fun period(period: Number) {
+      override fun period(period: Number) {
         cdkBuilder.period(period)
       }
 
-      public override fun stat(stat: String) {
+      override fun stat(stat: String) {
         cdkBuilder.stat(stat)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -552,13 +517,13 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricStatProperty,
     ) : MetricStatProperty {
-      public override fun metric(): Any = unwrap(this).getMetric()
+      override fun metric(): Any = unwrap(this).getMetric()
 
-      public override fun period(): Number = unwrap(this).getPeriod()
+      override fun period(): Number = unwrap(this).getPeriod()
 
-      public override fun stat(): String = unwrap(this).getStat()
+      override fun stat(): String = unwrap(this).getStat()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -587,11 +552,9 @@ public open class CfnAnomalyDetector internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -599,11 +562,11 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -616,9 +579,9 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.DimensionProperty,
     ) : DimensionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -645,11 +608,9 @@ public open class CfnAnomalyDetector internal constructor(
     public fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
 
     public interface Builder {
-      public fun metricDataQueries(metricDataQueries: IResolvable) {
-      }
+      public fun metricDataQueries(metricDataQueries: IResolvable)
 
-      public fun metricDataQueries(metricDataQueries: List<Any>) {
-      }
+      public fun metricDataQueries(metricDataQueries: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -658,11 +619,11 @@ public open class CfnAnomalyDetector internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.builder()
 
-      public override fun metricDataQueries(metricDataQueries: IResolvable) {
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
         cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
       }
 
-      public override fun metricDataQueries(metricDataQueries: List<Any>) {
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
 
@@ -675,7 +636,7 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty,
     ) : MetricMathAnomalyDetectorProperty {
-      public override fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
+      override fun metricDataQueries(): Any? = unwrap(this).getMetricDataQueries()
     }
 
     public companion object {
@@ -705,14 +666,11 @@ public open class CfnAnomalyDetector internal constructor(
     public fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
 
     public interface Builder {
-      public fun excludedTimeRanges(excludedTimeRanges: IResolvable) {
-      }
+      public fun excludedTimeRanges(excludedTimeRanges: IResolvable)
 
-      public fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
-      }
+      public fun excludedTimeRanges(excludedTimeRanges: List<Any>)
 
-      public fun metricTimeZone(metricTimeZone: String) {
-      }
+      public fun metricTimeZone(metricTimeZone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -721,15 +679,15 @@ public open class CfnAnomalyDetector internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty.builder()
 
-      public override fun excludedTimeRanges(excludedTimeRanges: IResolvable) {
+      override fun excludedTimeRanges(excludedTimeRanges: IResolvable) {
         cdkBuilder.excludedTimeRanges(excludedTimeRanges.let(IResolvable::unwrap))
       }
 
-      public override fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
+      override fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
         cdkBuilder.excludedTimeRanges(excludedTimeRanges)
       }
 
-      public override fun metricTimeZone(metricTimeZone: String) {
+      override fun metricTimeZone(metricTimeZone: String) {
         cdkBuilder.metricTimeZone(metricTimeZone)
       }
 
@@ -742,9 +700,9 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.ConfigurationProperty,
     ) : ConfigurationProperty {
-      public override fun excludedTimeRanges(): Any? = unwrap(this).getExcludedTimeRanges()
+      override fun excludedTimeRanges(): Any? = unwrap(this).getExcludedTimeRanges()
 
-      public override fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
+      override fun metricTimeZone(): String? = unwrap(this).getMetricTimeZone()
     }
 
     public companion object {
@@ -775,17 +733,13 @@ public open class CfnAnomalyDetector internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -793,19 +747,19 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -818,11 +772,11 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricProperty,
     ) : MetricProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
@@ -851,11 +805,9 @@ public open class CfnAnomalyDetector internal constructor(
     public fun startTime(): String
 
     public interface Builder {
-      public fun endTime(endTime: String) {
-      }
+      public fun endTime(endTime: String)
 
-      public fun startTime(startTime: String) {
-      }
+      public fun startTime(startTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -863,11 +815,11 @@ public open class CfnAnomalyDetector internal constructor(
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty.Builder =
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty.builder()
 
-      public override fun endTime(endTime: String) {
+      override fun endTime(endTime: String) {
         cdkBuilder.endTime(endTime)
       }
 
-      public override fun startTime(startTime: String) {
+      override fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)
       }
 
@@ -880,9 +832,9 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.RangeProperty,
     ) : RangeProperty {
-      public override fun endTime(): String = unwrap(this).getEndTime()
+      override fun endTime(): String = unwrap(this).getEndTime()
 
-      public override fun startTime(): String = unwrap(this).getStartTime()
+      override fun startTime(): String = unwrap(this).getStartTime()
     }
 
     public companion object {

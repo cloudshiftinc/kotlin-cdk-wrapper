@@ -38,14 +38,11 @@ public open class CfnStandard internal constructor(
   }
 
   public interface Builder {
-    public fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
-    }
+    public fun disabledStandardsControls(disabledStandardsControls: IResolvable)
 
-    public fun disabledStandardsControls(disabledStandardsControls: List<Any>) {
-    }
+    public fun disabledStandardsControls(disabledStandardsControls: List<Any>)
 
-    public fun standardsArn(standardsArn: String) {
-    }
+    public fun standardsArn(standardsArn: String)
   }
 
   private class BuilderImpl(
@@ -55,15 +52,15 @@ public open class CfnStandard internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.securityhub.CfnStandard.Builder =
         software.amazon.awscdk.services.securityhub.CfnStandard.Builder.create(scope, id)
 
-    public override fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
+    override fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
       cdkBuilder.disabledStandardsControls(disabledStandardsControls.let(IResolvable::unwrap))
     }
 
-    public override fun disabledStandardsControls(disabledStandardsControls: List<Any>) {
+    override fun disabledStandardsControls(disabledStandardsControls: List<Any>) {
       cdkBuilder.disabledStandardsControls(disabledStandardsControls)
     }
 
-    public override fun standardsArn(standardsArn: String) {
+    override fun standardsArn(standardsArn: String) {
       cdkBuilder.standardsArn(standardsArn)
     }
 
@@ -97,11 +94,9 @@ public open class CfnStandard internal constructor(
     public fun standardsControlArn(): String
 
     public interface Builder {
-      public fun reason(reason: String) {
-      }
+      public fun reason(reason: String)
 
-      public fun standardsControlArn(standardsControlArn: String) {
-      }
+      public fun standardsControlArn(standardsControlArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -109,11 +104,11 @@ public open class CfnStandard internal constructor(
           software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty.Builder =
           software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty.builder()
 
-      public override fun reason(reason: String) {
+      override fun reason(reason: String) {
         cdkBuilder.reason(reason)
       }
 
-      public override fun standardsControlArn(standardsControlArn: String) {
+      override fun standardsControlArn(standardsControlArn: String) {
         cdkBuilder.standardsControlArn(standardsControlArn)
       }
 
@@ -126,9 +121,9 @@ public open class CfnStandard internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.securityhub.CfnStandard.StandardsControlProperty,
     ) : StandardsControlProperty {
-      public override fun reason(): String? = unwrap(this).getReason()
+      override fun reason(): String? = unwrap(this).getReason()
 
-      public override fun standardsControlArn(): String = unwrap(this).getStandardsControlArn()
+      override fun standardsControlArn(): String = unwrap(this).getStandardsControlArn()
     }
 
     public companion object {

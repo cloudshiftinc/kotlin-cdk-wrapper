@@ -17,50 +17,44 @@ public interface CronOptions {
   public fun year(): String? = unwrap(this).getYear()
 
   public interface Builder {
-    public fun day(day: String) {
-    }
+    public fun day(day: String)
 
-    public fun hour(hour: String) {
-    }
+    public fun hour(hour: String)
 
-    public fun minute(minute: String) {
-    }
+    public fun minute(minute: String)
 
-    public fun month(month: String) {
-    }
+    public fun month(month: String)
 
-    public fun weekDay(weekDay: String) {
-    }
+    public fun weekDay(weekDay: String)
 
-    public fun year(year: String) {
-    }
+    public fun year(year: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.CronOptions.Builder =
         software.amazon.awscdk.services.events.CronOptions.builder()
 
-    public override fun day(day: String) {
+    override fun day(day: String) {
       cdkBuilder.day(day)
     }
 
-    public override fun hour(hour: String) {
+    override fun hour(hour: String) {
       cdkBuilder.hour(hour)
     }
 
-    public override fun minute(minute: String) {
+    override fun minute(minute: String) {
       cdkBuilder.minute(minute)
     }
 
-    public override fun month(month: String) {
+    override fun month(month: String) {
       cdkBuilder.month(month)
     }
 
-    public override fun weekDay(weekDay: String) {
+    override fun weekDay(weekDay: String) {
       cdkBuilder.weekDay(weekDay)
     }
 
-    public override fun year(year: String) {
+    override fun year(year: String) {
       cdkBuilder.year(year)
     }
 
@@ -70,17 +64,17 @@ public interface CronOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.CronOptions,
   ) : CronOptions {
-    public override fun day(): String? = unwrap(this).getDay()
+    override fun day(): String? = unwrap(this).getDay()
 
-    public override fun hour(): String? = unwrap(this).getHour()
+    override fun hour(): String? = unwrap(this).getHour()
 
-    public override fun minute(): String? = unwrap(this).getMinute()
+    override fun minute(): String? = unwrap(this).getMinute()
 
-    public override fun month(): String? = unwrap(this).getMonth()
+    override fun month(): String? = unwrap(this).getMonth()
 
-    public override fun weekDay(): String? = unwrap(this).getWeekDay()
+    override fun weekDay(): String? = unwrap(this).getWeekDay()
 
-    public override fun year(): String? = unwrap(this).getYear()
+    override fun year(): String? = unwrap(this).getYear()
   }
 
   public companion object {

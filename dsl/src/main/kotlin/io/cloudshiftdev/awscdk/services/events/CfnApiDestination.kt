@@ -56,23 +56,17 @@ public open class CfnApiDestination internal constructor(
   }
 
   public interface Builder {
-    public fun connectionArn(connectionArn: String) {
-    }
+    public fun connectionArn(connectionArn: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun httpMethod(httpMethod: String) {
-    }
+    public fun httpMethod(httpMethod: String)
 
-    public fun invocationEndpoint(invocationEndpoint: String) {
-    }
+    public fun invocationEndpoint(invocationEndpoint: String)
 
-    public fun invocationRateLimitPerSecond(invocationRateLimitPerSecond: Number) {
-    }
+    public fun invocationRateLimitPerSecond(invocationRateLimitPerSecond: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -82,27 +76,27 @@ public open class CfnApiDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.events.CfnApiDestination.Builder =
         software.amazon.awscdk.services.events.CfnApiDestination.Builder.create(scope, id)
 
-    public override fun connectionArn(connectionArn: String) {
+    override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun httpMethod(httpMethod: String) {
+    override fun httpMethod(httpMethod: String) {
       cdkBuilder.httpMethod(httpMethod)
     }
 
-    public override fun invocationEndpoint(invocationEndpoint: String) {
+    override fun invocationEndpoint(invocationEndpoint: String) {
       cdkBuilder.invocationEndpoint(invocationEndpoint)
     }
 
-    public override fun invocationRateLimitPerSecond(invocationRateLimitPerSecond: Number) {
+    override fun invocationRateLimitPerSecond(invocationRateLimitPerSecond: Number) {
       cdkBuilder.invocationRateLimitPerSecond(invocationRateLimitPerSecond)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

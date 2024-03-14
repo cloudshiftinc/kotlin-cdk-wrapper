@@ -10,11 +10,9 @@ public interface ArtifactsBucketLocation {
   public fun prefix(): String? = unwrap(this).getPrefix()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface ArtifactsBucketLocation {
         software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation.Builder =
         software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
@@ -37,9 +35,9 @@ public interface ArtifactsBucketLocation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation,
   ) : ArtifactsBucketLocation {
-    public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
   }
 
   public companion object {

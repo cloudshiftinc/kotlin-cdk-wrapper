@@ -13,29 +13,26 @@ public interface FirelensOptions {
   public fun enableEcsLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
 
   public interface Builder {
-    public fun configFileType(configFileType: FirelensConfigFileType) {
-    }
+    public fun configFileType(configFileType: FirelensConfigFileType)
 
-    public fun configFileValue(configFileValue: String) {
-    }
+    public fun configFileValue(configFileValue: String)
 
-    public fun enableEcsLogMetadata(enableEcsLogMetadata: Boolean) {
-    }
+    public fun enableEcsLogMetadata(enableEcsLogMetadata: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.FirelensOptions.Builder =
         software.amazon.awscdk.services.ecs.FirelensOptions.builder()
 
-    public override fun configFileType(configFileType: FirelensConfigFileType) {
+    override fun configFileType(configFileType: FirelensConfigFileType) {
       cdkBuilder.configFileType(configFileType.let(FirelensConfigFileType::unwrap))
     }
 
-    public override fun configFileValue(configFileValue: String) {
+    override fun configFileValue(configFileValue: String) {
       cdkBuilder.configFileValue(configFileValue)
     }
 
-    public override fun enableEcsLogMetadata(enableEcsLogMetadata: Boolean) {
+    override fun enableEcsLogMetadata(enableEcsLogMetadata: Boolean) {
       cdkBuilder.enableEcsLogMetadata(enableEcsLogMetadata)
     }
 
@@ -45,12 +42,12 @@ public interface FirelensOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.FirelensOptions,
   ) : FirelensOptions {
-    public override fun configFileType(): FirelensConfigFileType? =
+    override fun configFileType(): FirelensConfigFileType? =
         unwrap(this).getConfigFileType()?.let(FirelensConfigFileType::wrap)
 
-    public override fun configFileValue(): String? = unwrap(this).getConfigFileValue()
+    override fun configFileValue(): String? = unwrap(this).getConfigFileValue()
 
-    public override fun enableEcsLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
+    override fun enableEcsLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
   }
 
   public companion object {

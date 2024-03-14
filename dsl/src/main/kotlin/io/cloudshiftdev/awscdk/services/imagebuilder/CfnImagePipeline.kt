@@ -156,80 +156,58 @@ public open class CfnImagePipeline internal constructor(
   }
 
   public interface Builder {
-    public fun containerRecipeArn(containerRecipeArn: String) {
-    }
+    public fun containerRecipeArn(containerRecipeArn: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun distributionConfigurationArn(distributionConfigurationArn: String) {
-    }
+    public fun distributionConfigurationArn(distributionConfigurationArn: String)
 
-    public fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: Boolean) {
-    }
+    public fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: Boolean)
 
-    public fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
-    }
+    public fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable)
 
-    public fun executionRole(executionRole: String) {
-    }
+    public fun executionRole(executionRole: String)
 
-    public fun imageRecipeArn(imageRecipeArn: String) {
-    }
+    public fun imageRecipeArn(imageRecipeArn: String)
 
-    public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-    }
+    public fun imageScanningConfiguration(imageScanningConfiguration: IResolvable)
 
     public
-        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty) {
-    }
+        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11442dfdc4183acd29e5f0fccdd4e704774642ac47dfbfec821b7c2dfd34783f")
     public
-        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty.Builder.() -> Unit)
 
-    public fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
-    }
+    public fun imageTestsConfiguration(imageTestsConfiguration: IResolvable)
 
-    public fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty) {
-    }
+    public fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f06bc5e0172e4692aaf1f8e8fb4491d0621c4914b86ffb88b48fbaeed88d373")
     public
-        fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty.Builder.() -> Unit)
 
-    public fun infrastructureConfigurationArn(infrastructureConfigurationArn: String) {
-    }
+    public fun infrastructureConfigurationArn(infrastructureConfigurationArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: ScheduleProperty) {
-    }
+    public fun schedule(schedule: ScheduleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("550c02478abf4b076ba196d92ce7c38ea5f12a9dc60f9c8ff990319790c07569")
-    public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: ScheduleProperty.Builder.() -> Unit)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun workflows(workflows: IResolvable) {
-    }
+    public fun workflows(workflows: IResolvable)
 
-    public fun workflows(workflows: List<Any>) {
-    }
+    public fun workflows(workflows: List<Any>)
   }
 
   private class BuilderImpl(
@@ -239,99 +217,98 @@ public open class CfnImagePipeline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.Builder =
         software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.Builder.create(scope, id)
 
-    public override fun containerRecipeArn(containerRecipeArn: String) {
+    override fun containerRecipeArn(containerRecipeArn: String) {
       cdkBuilder.containerRecipeArn(containerRecipeArn)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun distributionConfigurationArn(distributionConfigurationArn: String) {
+    override fun distributionConfigurationArn(distributionConfigurationArn: String) {
       cdkBuilder.distributionConfigurationArn(distributionConfigurationArn)
     }
 
-    public override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: Boolean) {
+    override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: Boolean) {
       cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled)
     }
 
-    public override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
+    override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
       cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun executionRole(executionRole: String) {
+    override fun executionRole(executionRole: String) {
       cdkBuilder.executionRole(executionRole)
     }
 
-    public override fun imageRecipeArn(imageRecipeArn: String) {
+    override fun imageRecipeArn(imageRecipeArn: String) {
       cdkBuilder.imageRecipeArn(imageRecipeArn)
     }
 
-    public override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
+    override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
       cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty) {
       cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(ImageScanningConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11442dfdc4183acd29e5f0fccdd4e704774642ac47dfbfec821b7c2dfd34783f")
-    public override
+    override
         fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty.Builder.() -> Unit):
         Unit =
         imageScanningConfiguration(ImageScanningConfigurationProperty(imageScanningConfiguration))
 
-    public override fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
+    override fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
       cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty) {
+    override fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty) {
       cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(ImageTestsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f06bc5e0172e4692aaf1f8e8fb4491d0621c4914b86ffb88b48fbaeed88d373")
-    public override
+    override
         fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty.Builder.() -> Unit):
         Unit = imageTestsConfiguration(ImageTestsConfigurationProperty(imageTestsConfiguration))
 
-    public override fun infrastructureConfigurationArn(infrastructureConfigurationArn: String) {
+    override fun infrastructureConfigurationArn(infrastructureConfigurationArn: String) {
       cdkBuilder.infrastructureConfigurationArn(infrastructureConfigurationArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: ScheduleProperty) {
+    override fun schedule(schedule: ScheduleProperty) {
       cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("550c02478abf4b076ba196d92ce7c38ea5f12a9dc60f9c8ff990319790c07569")
-    public override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
+    override fun schedule(schedule: ScheduleProperty.Builder.() -> Unit): Unit =
         schedule(ScheduleProperty(schedule))
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun workflows(workflows: IResolvable) {
+    override fun workflows(workflows: IResolvable) {
       cdkBuilder.workflows(workflows.let(IResolvable::unwrap))
     }
 
-    public override fun workflows(workflows: List<Any>) {
+    override fun workflows(workflows: List<Any>) {
       cdkBuilder.workflows(workflows)
     }
 
@@ -366,11 +343,9 @@ public open class CfnImagePipeline internal constructor(
     public fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: List<String>) {
-      }
+      public fun `value`(`value`: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -379,11 +354,11 @@ public open class CfnImagePipeline internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: List<String>) {
+      override fun `value`(`value`: List<String>) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -396,9 +371,9 @@ public open class CfnImagePipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty,
     ) : WorkflowParameterProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
     }
 
     public companion object {
@@ -431,20 +406,15 @@ public open class CfnImagePipeline internal constructor(
     public fun workflowArn(): String? = unwrap(this).getWorkflowArn()
 
     public interface Builder {
-      public fun onFailure(onFailure: String) {
-      }
+      public fun onFailure(onFailure: String)
 
-      public fun parallelGroup(parallelGroup: String) {
-      }
+      public fun parallelGroup(parallelGroup: String)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: List<Any>) {
-      }
+      public fun parameters(parameters: List<Any>)
 
-      public fun workflowArn(workflowArn: String) {
-      }
+      public fun workflowArn(workflowArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -453,23 +423,23 @@ public open class CfnImagePipeline internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty.builder()
 
-      public override fun onFailure(onFailure: String) {
+      override fun onFailure(onFailure: String) {
         cdkBuilder.onFailure(onFailure)
       }
 
-      public override fun parallelGroup(parallelGroup: String) {
+      override fun parallelGroup(parallelGroup: String) {
         cdkBuilder.parallelGroup(parallelGroup)
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: List<Any>) {
+      override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
 
-      public override fun workflowArn(workflowArn: String) {
+      override fun workflowArn(workflowArn: String) {
         cdkBuilder.workflowArn(workflowArn)
       }
 
@@ -482,13 +452,13 @@ public open class CfnImagePipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowConfigurationProperty,
     ) : WorkflowConfigurationProperty {
-      public override fun onFailure(): String? = unwrap(this).getOnFailure()
+      override fun onFailure(): String? = unwrap(this).getOnFailure()
 
-      public override fun parallelGroup(): String? = unwrap(this).getParallelGroup()
+      override fun parallelGroup(): String? = unwrap(this).getParallelGroup()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun workflowArn(): String? = unwrap(this).getWorkflowArn()
+      override fun workflowArn(): String? = unwrap(this).getWorkflowArn()
     }
 
     public companion object {
@@ -517,14 +487,11 @@ public open class CfnImagePipeline internal constructor(
     public fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
 
     public interface Builder {
-      public fun imageTestsEnabled(imageTestsEnabled: Boolean) {
-      }
+      public fun imageTestsEnabled(imageTestsEnabled: Boolean)
 
-      public fun imageTestsEnabled(imageTestsEnabled: IResolvable) {
-      }
+      public fun imageTestsEnabled(imageTestsEnabled: IResolvable)
 
-      public fun timeoutMinutes(timeoutMinutes: Number) {
-      }
+      public fun timeoutMinutes(timeoutMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -533,15 +500,15 @@ public open class CfnImagePipeline internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty.builder()
 
-      public override fun imageTestsEnabled(imageTestsEnabled: Boolean) {
+      override fun imageTestsEnabled(imageTestsEnabled: Boolean) {
         cdkBuilder.imageTestsEnabled(imageTestsEnabled)
       }
 
-      public override fun imageTestsEnabled(imageTestsEnabled: IResolvable) {
+      override fun imageTestsEnabled(imageTestsEnabled: IResolvable) {
         cdkBuilder.imageTestsEnabled(imageTestsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun timeoutMinutes(timeoutMinutes: Number) {
+      override fun timeoutMinutes(timeoutMinutes: Number) {
         cdkBuilder.timeoutMinutes(timeoutMinutes)
       }
 
@@ -554,9 +521,9 @@ public open class CfnImagePipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageTestsConfigurationProperty,
     ) : ImageTestsConfigurationProperty {
-      public override fun imageTestsEnabled(): Any? = unwrap(this).getImageTestsEnabled()
+      override fun imageTestsEnabled(): Any? = unwrap(this).getImageTestsEnabled()
 
-      public override fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
+      override fun timeoutMinutes(): Number? = unwrap(this).getTimeoutMinutes()
     }
 
     public companion object {
@@ -585,11 +552,9 @@ public open class CfnImagePipeline internal constructor(
     public fun repositoryName(): String? = unwrap(this).getRepositoryName()
 
     public interface Builder {
-      public fun containerTags(containerTags: List<String>) {
-      }
+      public fun containerTags(containerTags: List<String>)
 
-      public fun repositoryName(repositoryName: String) {
-      }
+      public fun repositoryName(repositoryName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -598,11 +563,11 @@ public open class CfnImagePipeline internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty.builder()
 
-      public override fun containerTags(containerTags: List<String>) {
+      override fun containerTags(containerTags: List<String>) {
         cdkBuilder.containerTags(containerTags)
       }
 
-      public override fun repositoryName(repositoryName: String) {
+      override fun repositoryName(repositoryName: String) {
         cdkBuilder.repositoryName(repositoryName)
       }
 
@@ -615,10 +580,9 @@ public open class CfnImagePipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.EcrConfigurationProperty,
     ) : EcrConfigurationProperty {
-      public override fun containerTags(): List<String> = unwrap(this).getContainerTags() ?:
-          emptyList()
+      override fun containerTags(): List<String> = unwrap(this).getContainerTags() ?: emptyList()
 
-      public override fun repositoryName(): String? = unwrap(this).getRepositoryName()
+      override fun repositoryName(): String? = unwrap(this).getRepositoryName()
     }
 
     public companion object {
@@ -648,11 +612,9 @@ public open class CfnImagePipeline internal constructor(
     public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
 
     public interface Builder {
-      public fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String) {
-      }
+      public fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String)
 
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -660,11 +622,11 @@ public open class CfnImagePipeline internal constructor(
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty.Builder =
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty.builder()
 
-      public override fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String) {
+      override fun pipelineExecutionStartCondition(pipelineExecutionStartCondition: String) {
         cdkBuilder.pipelineExecutionStartCondition(pipelineExecutionStartCondition)
       }
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -677,10 +639,10 @@ public open class CfnImagePipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ScheduleProperty,
     ) : ScheduleProperty {
-      public override fun pipelineExecutionStartCondition(): String? =
+      override fun pipelineExecutionStartCondition(): String? =
           unwrap(this).getPipelineExecutionStartCondition()
 
-      public override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -709,22 +671,17 @@ public open class CfnImagePipeline internal constructor(
     public fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
 
     public interface Builder {
-      public fun ecrConfiguration(ecrConfiguration: IResolvable) {
-      }
+      public fun ecrConfiguration(ecrConfiguration: IResolvable)
 
-      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty) {
-      }
+      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a59d1a658ca357e27cecfc747c2a97b351b22f1eebc075e1fcf2258b78a0a8bd")
-      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit)
 
-      public fun imageScanningEnabled(imageScanningEnabled: Boolean) {
-      }
+      public fun imageScanningEnabled(imageScanningEnabled: Boolean)
 
-      public fun imageScanningEnabled(imageScanningEnabled: IResolvable) {
-      }
+      public fun imageScanningEnabled(imageScanningEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -733,25 +690,24 @@ public open class CfnImagePipeline internal constructor(
           =
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty.builder()
 
-      public override fun ecrConfiguration(ecrConfiguration: IResolvable) {
+      override fun ecrConfiguration(ecrConfiguration: IResolvable) {
         cdkBuilder.ecrConfiguration(ecrConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty) {
+      override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty) {
         cdkBuilder.ecrConfiguration(ecrConfiguration.let(EcrConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a59d1a658ca357e27cecfc747c2a97b351b22f1eebc075e1fcf2258b78a0a8bd")
-      public override
-          fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit): Unit
-          = ecrConfiguration(EcrConfigurationProperty(ecrConfiguration))
+      override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty.Builder.() -> Unit):
+          Unit = ecrConfiguration(EcrConfigurationProperty(ecrConfiguration))
 
-      public override fun imageScanningEnabled(imageScanningEnabled: Boolean) {
+      override fun imageScanningEnabled(imageScanningEnabled: Boolean) {
         cdkBuilder.imageScanningEnabled(imageScanningEnabled)
       }
 
-      public override fun imageScanningEnabled(imageScanningEnabled: IResolvable) {
+      override fun imageScanningEnabled(imageScanningEnabled: IResolvable) {
         cdkBuilder.imageScanningEnabled(imageScanningEnabled.let(IResolvable::unwrap))
       }
 
@@ -764,9 +720,9 @@ public open class CfnImagePipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.ImageScanningConfigurationProperty,
     ) : ImageScanningConfigurationProperty {
-      public override fun ecrConfiguration(): Any? = unwrap(this).getEcrConfiguration()
+      override fun ecrConfiguration(): Any? = unwrap(this).getEcrConfiguration()
 
-      public override fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
+      override fun imageScanningEnabled(): Any? = unwrap(this).getImageScanningEnabled()
     }
 
     public companion object {

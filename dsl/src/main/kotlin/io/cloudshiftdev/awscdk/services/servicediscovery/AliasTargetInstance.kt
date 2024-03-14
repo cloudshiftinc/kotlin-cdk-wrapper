@@ -16,17 +16,13 @@ public open class AliasTargetInstance internal constructor(
   public override fun service(): IService = unwrap(this).getService().let(IService::wrap)
 
   public interface Builder {
-    public fun customAttributes(customAttributes: Map<String, String>) {
-    }
+    public fun customAttributes(customAttributes: Map<String, String>)
 
-    public fun dnsName(dnsName: String) {
-    }
+    public fun dnsName(dnsName: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun service(service: IService) {
-    }
+    public fun service(service: IService)
   }
 
   private class BuilderImpl(
@@ -38,19 +34,19 @@ public open class AliasTargetInstance internal constructor(
         software.amazon.awscdk.services.servicediscovery.AliasTargetInstance.Builder.create(scope,
         id)
 
-    public override fun customAttributes(customAttributes: Map<String, String>) {
+    override fun customAttributes(customAttributes: Map<String, String>) {
       cdkBuilder.customAttributes(customAttributes)
     }
 
-    public override fun dnsName(dnsName: String) {
+    override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun service(service: IService) {
+    override fun service(service: IService) {
       cdkBuilder.service(service.let(IService::unwrap))
     }
 

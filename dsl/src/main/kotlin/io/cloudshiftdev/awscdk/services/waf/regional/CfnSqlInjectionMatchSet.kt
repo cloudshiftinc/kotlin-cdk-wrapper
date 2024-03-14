@@ -39,14 +39,11 @@ public open class CfnSqlInjectionMatchSet internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
-    }
+    public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable)
 
-    public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
-    }
+    public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>)
   }
 
   private class BuilderImpl(
@@ -58,15 +55,15 @@ public open class CfnSqlInjectionMatchSet internal constructor(
         software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.Builder.create(scope,
         id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
+    override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
       cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples.let(IResolvable::unwrap))
     }
 
-    public override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
+    override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
       cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
     }
 
@@ -102,19 +99,15 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     public fun textTransformation(): String
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0329257087ae83ced0d438bda6498a47db7d7efbcb5002097eb20c0b81c1e1b8")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun textTransformation(textTransformation: String) {
-      }
+      public fun textTransformation(textTransformation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -123,20 +116,20 @@ public open class CfnSqlInjectionMatchSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0329257087ae83ced0d438bda6498a47db7d7efbcb5002097eb20c0b81c1e1b8")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun textTransformation(textTransformation: String) {
+      override fun textTransformation(textTransformation: String) {
         cdkBuilder.textTransformation(textTransformation)
       }
 
@@ -149,9 +142,9 @@ public open class CfnSqlInjectionMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty,
     ) : SqlInjectionMatchTupleProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun textTransformation(): String = unwrap(this).getTextTransformation()
+      override fun textTransformation(): String = unwrap(this).getTextTransformation()
     }
 
     public companion object {
@@ -180,11 +173,9 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun `data`(`data`: String) {
-      }
+      public fun `data`(`data`: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -193,11 +184,11 @@ public open class CfnSqlInjectionMatchSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.FieldToMatchProperty.builder()
 
-      public override fun `data`(`data`: String) {
+      override fun `data`(`data`: String) {
         cdkBuilder.`data`(`data`)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -210,9 +201,9 @@ public open class CfnSqlInjectionMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet.FieldToMatchProperty,
     ) : FieldToMatchProperty {
-      public override fun `data`(): String? = unwrap(this).getData()
+      override fun `data`(): String? = unwrap(this).getData()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

@@ -7,8 +7,7 @@ public interface ResponseCustomHeadersBehavior {
   public fun customHeaders(): List<ResponseCustomHeader>
 
   public interface Builder {
-    public fun customHeaders(customHeaders: List<ResponseCustomHeader>) {
-    }
+    public fun customHeaders(customHeaders: List<ResponseCustomHeader>)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ResponseCustomHeadersBehavior {
         software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior.builder()
 
-    public override fun customHeaders(customHeaders: List<ResponseCustomHeader>) {
+    override fun customHeaders(customHeaders: List<ResponseCustomHeader>) {
       cdkBuilder.customHeaders(customHeaders.map(ResponseCustomHeader::unwrap))
     }
 
@@ -28,7 +27,7 @@ public interface ResponseCustomHeadersBehavior {
     internal val cdkObject:
         software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior,
   ) : ResponseCustomHeadersBehavior {
-    public override fun customHeaders(): List<ResponseCustomHeader> =
+    override fun customHeaders(): List<ResponseCustomHeader> =
         unwrap(this).getCustomHeaders().map(ResponseCustomHeader::wrap)
   }
 

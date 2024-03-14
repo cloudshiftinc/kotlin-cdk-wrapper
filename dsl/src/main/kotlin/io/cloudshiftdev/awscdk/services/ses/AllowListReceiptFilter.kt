@@ -10,8 +10,7 @@ public open class AllowListReceiptFilter internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilter,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun ips(ips: List<String>) {
-    }
+    public fun ips(ips: List<String>)
   }
 
   private class BuilderImpl(
@@ -21,7 +20,7 @@ public open class AllowListReceiptFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.AllowListReceiptFilter.Builder =
         software.amazon.awscdk.services.ses.AllowListReceiptFilter.Builder.create(scope, id)
 
-    public override fun ips(ips: List<String>) {
+    override fun ips(ips: List<String>) {
       cdkBuilder.ips(ips)
     }
 

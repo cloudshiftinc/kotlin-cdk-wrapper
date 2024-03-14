@@ -96,48 +96,35 @@ public open class CfnResourceDataSync internal constructor(
   }
 
   public interface Builder {
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun bucketPrefix(bucketPrefix: String) {
-    }
+    public fun bucketPrefix(bucketPrefix: String)
 
-    public fun bucketRegion(bucketRegion: String) {
-    }
+    public fun bucketRegion(bucketRegion: String)
 
-    public fun kmsKeyArn(kmsKeyArn: String) {
-    }
+    public fun kmsKeyArn(kmsKeyArn: String)
 
-    public fun s3Destination(s3Destination: IResolvable) {
-    }
+    public fun s3Destination(s3Destination: IResolvable)
 
-    public fun s3Destination(s3Destination: S3DestinationProperty) {
-    }
+    public fun s3Destination(s3Destination: S3DestinationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c378387d02085c81c4b97cfbbed7f69a5025cddd7a2441d77d7d685cae1c0ed2")
-    public fun s3Destination(s3Destination: S3DestinationProperty.Builder.() -> Unit) {
-    }
+    public fun s3Destination(s3Destination: S3DestinationProperty.Builder.() -> Unit)
 
-    public fun syncFormat(syncFormat: String) {
-    }
+    public fun syncFormat(syncFormat: String)
 
-    public fun syncName(syncName: String) {
-    }
+    public fun syncName(syncName: String)
 
-    public fun syncSource(syncSource: IResolvable) {
-    }
+    public fun syncSource(syncSource: IResolvable)
 
-    public fun syncSource(syncSource: SyncSourceProperty) {
-    }
+    public fun syncSource(syncSource: SyncSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e14b005fb825862d912ca43eb369a99982a83b0e4689af10cd3f1c5f5f71498")
-    public fun syncSource(syncSource: SyncSourceProperty.Builder.() -> Unit) {
-    }
+    public fun syncSource(syncSource: SyncSourceProperty.Builder.() -> Unit)
 
-    public fun syncType(syncType: String) {
-    }
+    public fun syncType(syncType: String)
   }
 
   private class BuilderImpl(
@@ -147,57 +134,57 @@ public open class CfnResourceDataSync internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnResourceDataSync.Builder =
         software.amazon.awscdk.services.ssm.CfnResourceDataSync.Builder.create(scope, id)
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun bucketPrefix(bucketPrefix: String) {
+    override fun bucketPrefix(bucketPrefix: String) {
       cdkBuilder.bucketPrefix(bucketPrefix)
     }
 
-    public override fun bucketRegion(bucketRegion: String) {
+    override fun bucketRegion(bucketRegion: String) {
       cdkBuilder.bucketRegion(bucketRegion)
     }
 
-    public override fun kmsKeyArn(kmsKeyArn: String) {
+    override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
-    public override fun s3Destination(s3Destination: IResolvable) {
+    override fun s3Destination(s3Destination: IResolvable) {
       cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
     }
 
-    public override fun s3Destination(s3Destination: S3DestinationProperty) {
+    override fun s3Destination(s3Destination: S3DestinationProperty) {
       cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c378387d02085c81c4b97cfbbed7f69a5025cddd7a2441d77d7d685cae1c0ed2")
-    public override fun s3Destination(s3Destination: S3DestinationProperty.Builder.() -> Unit): Unit
-        = s3Destination(S3DestinationProperty(s3Destination))
+    override fun s3Destination(s3Destination: S3DestinationProperty.Builder.() -> Unit): Unit =
+        s3Destination(S3DestinationProperty(s3Destination))
 
-    public override fun syncFormat(syncFormat: String) {
+    override fun syncFormat(syncFormat: String) {
       cdkBuilder.syncFormat(syncFormat)
     }
 
-    public override fun syncName(syncName: String) {
+    override fun syncName(syncName: String) {
       cdkBuilder.syncName(syncName)
     }
 
-    public override fun syncSource(syncSource: IResolvable) {
+    override fun syncSource(syncSource: IResolvable) {
       cdkBuilder.syncSource(syncSource.let(IResolvable::unwrap))
     }
 
-    public override fun syncSource(syncSource: SyncSourceProperty) {
+    override fun syncSource(syncSource: SyncSourceProperty) {
       cdkBuilder.syncSource(syncSource.let(SyncSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e14b005fb825862d912ca43eb369a99982a83b0e4689af10cd3f1c5f5f71498")
-    public override fun syncSource(syncSource: SyncSourceProperty.Builder.() -> Unit): Unit =
+    override fun syncSource(syncSource: SyncSourceProperty.Builder.() -> Unit): Unit =
         syncSource(SyncSourceProperty(syncSource))
 
-    public override fun syncType(syncType: String) {
+    override fun syncType(syncType: String) {
       cdkBuilder.syncType(syncType)
     }
 
@@ -232,11 +219,9 @@ public open class CfnResourceDataSync internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun organizationSourceType(organizationSourceType: String) {
-      }
+      public fun organizationSourceType(organizationSourceType: String)
 
-      public fun organizationalUnits(organizationalUnits: List<String>) {
-      }
+      public fun organizationalUnits(organizationalUnits: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -245,11 +230,11 @@ public open class CfnResourceDataSync internal constructor(
           =
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty.builder()
 
-      public override fun organizationSourceType(organizationSourceType: String) {
+      override fun organizationSourceType(organizationSourceType: String) {
         cdkBuilder.organizationSourceType(organizationSourceType)
       }
 
-      public override fun organizationalUnits(organizationalUnits: List<String>) {
+      override fun organizationalUnits(organizationalUnits: List<String>) {
         cdkBuilder.organizationalUnits(organizationalUnits)
       }
 
@@ -262,11 +247,10 @@ public open class CfnResourceDataSync internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty,
     ) : AwsOrganizationsSourceProperty {
-      public override fun organizationSourceType(): String =
-          unwrap(this).getOrganizationSourceType()
+      override fun organizationSourceType(): String = unwrap(this).getOrganizationSourceType()
 
-      public override fun organizationalUnits(): List<String> =
-          unwrap(this).getOrganizationalUnits() ?: emptyList()
+      override fun organizationalUnits(): List<String> = unwrap(this).getOrganizationalUnits() ?:
+          emptyList()
     }
 
     public companion object {
@@ -301,20 +285,15 @@ public open class CfnResourceDataSync internal constructor(
     public fun syncFormat(): String
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun bucketRegion(bucketRegion: String) {
-      }
+      public fun bucketRegion(bucketRegion: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
 
-      public fun syncFormat(syncFormat: String) {
-      }
+      public fun syncFormat(syncFormat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -322,23 +301,23 @@ public open class CfnResourceDataSync internal constructor(
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun bucketRegion(bucketRegion: String) {
+      override fun bucketRegion(bucketRegion: String) {
         cdkBuilder.bucketRegion(bucketRegion)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
-      public override fun syncFormat(syncFormat: String) {
+      override fun syncFormat(syncFormat: String) {
         cdkBuilder.syncFormat(syncFormat)
       }
 
@@ -351,15 +330,15 @@ public open class CfnResourceDataSync internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.S3DestinationProperty,
     ) : S3DestinationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun bucketRegion(): String = unwrap(this).getBucketRegion()
+      override fun bucketRegion(): String = unwrap(this).getBucketRegion()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
-      public override fun syncFormat(): String = unwrap(this).getSyncFormat()
+      override fun syncFormat(): String = unwrap(this).getSyncFormat()
     }
 
     public companion object {
@@ -392,29 +371,22 @@ public open class CfnResourceDataSync internal constructor(
     public fun sourceType(): String
 
     public interface Builder {
-      public fun awsOrganizationsSource(awsOrganizationsSource: IResolvable) {
-      }
+      public fun awsOrganizationsSource(awsOrganizationsSource: IResolvable)
 
-      public fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty) {
-      }
+      public fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88e6d3855aee2ba6fd38c8dd0a81e6ed5bcc2164ffa523c9dc2e0708b28e2bdf")
       public
-          fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty.Builder.() -> Unit) {
-      }
+          fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty.Builder.() -> Unit)
 
-      public fun includeFutureRegions(includeFutureRegions: Boolean) {
-      }
+      public fun includeFutureRegions(includeFutureRegions: Boolean)
 
-      public fun includeFutureRegions(includeFutureRegions: IResolvable) {
-      }
+      public fun includeFutureRegions(includeFutureRegions: IResolvable)
 
-      public fun sourceRegions(sourceRegions: List<String>) {
-      }
+      public fun sourceRegions(sourceRegions: List<String>)
 
-      public fun sourceType(sourceType: String) {
-      }
+      public fun sourceType(sourceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -422,34 +394,33 @@ public open class CfnResourceDataSync internal constructor(
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty.builder()
 
-      public override fun awsOrganizationsSource(awsOrganizationsSource: IResolvable) {
+      override fun awsOrganizationsSource(awsOrganizationsSource: IResolvable) {
         cdkBuilder.awsOrganizationsSource(awsOrganizationsSource.let(IResolvable::unwrap))
       }
 
-      public override
-          fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty) {
+      override fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty) {
         cdkBuilder.awsOrganizationsSource(awsOrganizationsSource.let(AwsOrganizationsSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88e6d3855aee2ba6fd38c8dd0a81e6ed5bcc2164ffa523c9dc2e0708b28e2bdf")
-      public override
+      override
           fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty.Builder.() -> Unit):
           Unit = awsOrganizationsSource(AwsOrganizationsSourceProperty(awsOrganizationsSource))
 
-      public override fun includeFutureRegions(includeFutureRegions: Boolean) {
+      override fun includeFutureRegions(includeFutureRegions: Boolean) {
         cdkBuilder.includeFutureRegions(includeFutureRegions)
       }
 
-      public override fun includeFutureRegions(includeFutureRegions: IResolvable) {
+      override fun includeFutureRegions(includeFutureRegions: IResolvable) {
         cdkBuilder.includeFutureRegions(includeFutureRegions.let(IResolvable::unwrap))
       }
 
-      public override fun sourceRegions(sourceRegions: List<String>) {
+      override fun sourceRegions(sourceRegions: List<String>) {
         cdkBuilder.sourceRegions(sourceRegions)
       }
 
-      public override fun sourceType(sourceType: String) {
+      override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
       }
 
@@ -461,14 +432,13 @@ public open class CfnResourceDataSync internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.SyncSourceProperty,
     ) : SyncSourceProperty {
-      public override fun awsOrganizationsSource(): Any? = unwrap(this).getAwsOrganizationsSource()
+      override fun awsOrganizationsSource(): Any? = unwrap(this).getAwsOrganizationsSource()
 
-      public override fun includeFutureRegions(): Any? = unwrap(this).getIncludeFutureRegions()
+      override fun includeFutureRegions(): Any? = unwrap(this).getIncludeFutureRegions()
 
-      public override fun sourceRegions(): List<String> = unwrap(this).getSourceRegions() ?:
-          emptyList()
+      override fun sourceRegions(): List<String> = unwrap(this).getSourceRegions() ?: emptyList()
 
-      public override fun sourceType(): String = unwrap(this).getSourceType()
+      override fun sourceType(): String = unwrap(this).getSourceType()
     }
 
     public companion object {

@@ -56,14 +56,11 @@ public open class CfnIPAMScope internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun ipamId(ipamId: String) {
-    }
+    public fun ipamId(ipamId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -73,15 +70,15 @@ public open class CfnIPAMScope internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnIPAMScope.Builder =
         software.amazon.awscdk.services.ec2.CfnIPAMScope.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun ipamId(ipamId: String) {
+    override fun ipamId(ipamId: String) {
       cdkBuilder.ipamId(ipamId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

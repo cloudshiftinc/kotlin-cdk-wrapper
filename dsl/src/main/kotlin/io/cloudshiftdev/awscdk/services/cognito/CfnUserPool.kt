@@ -289,177 +289,129 @@ public open class CfnUserPool internal constructor(
       Unit = verificationMessageTemplate(VerificationMessageTemplateProperty(`value`))
 
   public interface Builder {
-    public fun accountRecoverySetting(accountRecoverySetting: IResolvable) {
-    }
+    public fun accountRecoverySetting(accountRecoverySetting: IResolvable)
 
-    public fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty) {
-    }
+    public fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9216516402b768e12eee63936587d1ecdce6a2999312cef66624ac3826f8ed8")
     public
-        fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty.Builder.() -> Unit) {
-    }
+        fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty.Builder.() -> Unit)
 
-    public fun adminCreateUserConfig(adminCreateUserConfig: IResolvable) {
-    }
+    public fun adminCreateUserConfig(adminCreateUserConfig: IResolvable)
 
-    public fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty) {
-    }
+    public fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc3fe1657f113035c8cfe9214c57b409c4a8c5814c069ddcd2b9042f8dbf7fcb")
     public
-        fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty.Builder.() -> Unit) {
-    }
+        fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty.Builder.() -> Unit)
 
-    public fun aliasAttributes(aliasAttributes: List<String>) {
-    }
+    public fun aliasAttributes(aliasAttributes: List<String>)
 
-    public fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>) {
-    }
+    public fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>)
 
-    public fun deletionProtection(deletionProtection: String) {
-    }
+    public fun deletionProtection(deletionProtection: String)
 
-    public fun deviceConfiguration(deviceConfiguration: IResolvable) {
-    }
+    public fun deviceConfiguration(deviceConfiguration: IResolvable)
 
-    public fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty) {
-    }
+    public fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89ba3c98bf6a69cd5b04af03f903f98c4287e73fe625f2b789c6bea737ca17dc")
     public
-        fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty.Builder.() -> Unit)
 
-    public fun emailConfiguration(emailConfiguration: IResolvable) {
-    }
+    public fun emailConfiguration(emailConfiguration: IResolvable)
 
-    public fun emailConfiguration(emailConfiguration: EmailConfigurationProperty) {
-    }
+    public fun emailConfiguration(emailConfiguration: EmailConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54c1c70858e1a62cb0aac10d296ec1ddc0a2b81ea7aa388ace4cc2b06d92b352")
-    public
-        fun emailConfiguration(emailConfiguration: EmailConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun emailConfiguration(emailConfiguration: EmailConfigurationProperty.Builder.() -> Unit)
 
-    public fun emailVerificationMessage(emailVerificationMessage: String) {
-    }
+    public fun emailVerificationMessage(emailVerificationMessage: String)
 
-    public fun emailVerificationSubject(emailVerificationSubject: String) {
-    }
+    public fun emailVerificationSubject(emailVerificationSubject: String)
 
-    public fun enabledMfas(enabledMfas: List<String>) {
-    }
+    public fun enabledMfas(enabledMfas: List<String>)
 
-    public fun lambdaConfig(lambdaConfig: IResolvable) {
-    }
+    public fun lambdaConfig(lambdaConfig: IResolvable)
 
-    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
-    }
+    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce9ebed52e53df7caf415c831c615f3e079dc4af05892a8d790b56ffbaf46753")
-    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit) {
-    }
+    public fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit)
 
-    public fun mfaConfiguration(mfaConfiguration: String) {
-    }
+    public fun mfaConfiguration(mfaConfiguration: String)
 
-    public fun policies(policies: IResolvable) {
-    }
+    public fun policies(policies: IResolvable)
 
-    public fun policies(policies: PoliciesProperty) {
-    }
+    public fun policies(policies: PoliciesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2314ae1357fcdad41bc2dff9235f62b786cb7031cd62319f510d5ece0d71b8d6")
-    public fun policies(policies: PoliciesProperty.Builder.() -> Unit) {
-    }
+    public fun policies(policies: PoliciesProperty.Builder.() -> Unit)
 
-    public fun schema(schema: IResolvable) {
-    }
+    public fun schema(schema: IResolvable)
 
-    public fun schema(schema: List<Any>) {
-    }
+    public fun schema(schema: List<Any>)
 
-    public fun smsAuthenticationMessage(smsAuthenticationMessage: String) {
-    }
+    public fun smsAuthenticationMessage(smsAuthenticationMessage: String)
 
-    public fun smsConfiguration(smsConfiguration: IResolvable) {
-    }
+    public fun smsConfiguration(smsConfiguration: IResolvable)
 
-    public fun smsConfiguration(smsConfiguration: SmsConfigurationProperty) {
-    }
+    public fun smsConfiguration(smsConfiguration: SmsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ea364adb12244e589a60f32213c0b23b344aaebba234adf4fa4a99113a2d5fe")
-    public fun smsConfiguration(smsConfiguration: SmsConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun smsConfiguration(smsConfiguration: SmsConfigurationProperty.Builder.() -> Unit)
 
-    public fun smsVerificationMessage(smsVerificationMessage: String) {
-    }
+    public fun smsVerificationMessage(smsVerificationMessage: String)
 
-    public fun userAttributeUpdateSettings(userAttributeUpdateSettings: IResolvable) {
-    }
+    public fun userAttributeUpdateSettings(userAttributeUpdateSettings: IResolvable)
 
     public
-        fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty) {
-    }
+        fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b7175a49101d9224b2ba59105a9d196736ddf87f371a6727f5f8eb0ed1963bcb")
     public
-        fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty.Builder.() -> Unit) {
-    }
+        fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty.Builder.() -> Unit)
 
-    public fun userPoolAddOns(userPoolAddOns: IResolvable) {
-    }
+    public fun userPoolAddOns(userPoolAddOns: IResolvable)
 
-    public fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty) {
-    }
+    public fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0bd77391868ae9ce3d79949e6cf67dab1ff5ea9c26501d144ac9963e691697c")
-    public fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty.Builder.() -> Unit) {
-    }
+    public fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty.Builder.() -> Unit)
 
-    public fun userPoolName(userPoolName: String) {
-    }
+    public fun userPoolName(userPoolName: String)
 
-    public fun userPoolTags(userPoolTags: Any) {
-    }
+    public fun userPoolTags(userPoolTags: Any)
 
-    public fun usernameAttributes(usernameAttributes: List<String>) {
-    }
+    public fun usernameAttributes(usernameAttributes: List<String>)
 
-    public fun usernameConfiguration(usernameConfiguration: IResolvable) {
-    }
+    public fun usernameConfiguration(usernameConfiguration: IResolvable)
 
-    public fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty) {
-    }
+    public fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5532e61a25d6f32e948ead823d706a13cc63936fd365e336428c65d754fa6931")
     public
-        fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty.Builder.() -> Unit)
 
-    public fun verificationMessageTemplate(verificationMessageTemplate: IResolvable) {
-    }
+    public fun verificationMessageTemplate(verificationMessageTemplate: IResolvable)
 
     public
-        fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty) {
-    }
+        fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("562526c03ebc016af3ef3117fb389f2040d3aab89ab5facbe2931bdfdfa0cd7a")
     public
-        fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty.Builder.() -> Unit) {
-    }
+        fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -469,216 +421,212 @@ public open class CfnUserPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CfnUserPool.Builder =
         software.amazon.awscdk.services.cognito.CfnUserPool.Builder.create(scope, id)
 
-    public override fun accountRecoverySetting(accountRecoverySetting: IResolvable) {
+    override fun accountRecoverySetting(accountRecoverySetting: IResolvable) {
       cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(IResolvable::unwrap))
     }
 
-    public override
-        fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty) {
+    override fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty) {
       cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(AccountRecoverySettingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9216516402b768e12eee63936587d1ecdce6a2999312cef66624ac3826f8ed8")
-    public override
+    override
         fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty.Builder.() -> Unit):
         Unit = accountRecoverySetting(AccountRecoverySettingProperty(accountRecoverySetting))
 
-    public override fun adminCreateUserConfig(adminCreateUserConfig: IResolvable) {
+    override fun adminCreateUserConfig(adminCreateUserConfig: IResolvable) {
       cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(IResolvable::unwrap))
     }
 
-    public override
-        fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty) {
+    override fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty) {
       cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(AdminCreateUserConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc3fe1657f113035c8cfe9214c57b409c4a8c5814c069ddcd2b9042f8dbf7fcb")
-    public override
+    override
         fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty.Builder.() -> Unit):
         Unit = adminCreateUserConfig(AdminCreateUserConfigProperty(adminCreateUserConfig))
 
-    public override fun aliasAttributes(aliasAttributes: List<String>) {
+    override fun aliasAttributes(aliasAttributes: List<String>) {
       cdkBuilder.aliasAttributes(aliasAttributes)
     }
 
-    public override fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>) {
+    override fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>) {
       cdkBuilder.autoVerifiedAttributes(autoVerifiedAttributes)
     }
 
-    public override fun deletionProtection(deletionProtection: String) {
+    override fun deletionProtection(deletionProtection: String) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deviceConfiguration(deviceConfiguration: IResolvable) {
+    override fun deviceConfiguration(deviceConfiguration: IResolvable) {
       cdkBuilder.deviceConfiguration(deviceConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty) {
+    override fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty) {
       cdkBuilder.deviceConfiguration(deviceConfiguration.let(DeviceConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89ba3c98bf6a69cd5b04af03f903f98c4287e73fe625f2b789c6bea737ca17dc")
-    public override
+    override
         fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty.Builder.() -> Unit):
         Unit = deviceConfiguration(DeviceConfigurationProperty(deviceConfiguration))
 
-    public override fun emailConfiguration(emailConfiguration: IResolvable) {
+    override fun emailConfiguration(emailConfiguration: IResolvable) {
       cdkBuilder.emailConfiguration(emailConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun emailConfiguration(emailConfiguration: EmailConfigurationProperty) {
+    override fun emailConfiguration(emailConfiguration: EmailConfigurationProperty) {
       cdkBuilder.emailConfiguration(emailConfiguration.let(EmailConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54c1c70858e1a62cb0aac10d296ec1ddc0a2b81ea7aa388ace4cc2b06d92b352")
-    public override
+    override
         fun emailConfiguration(emailConfiguration: EmailConfigurationProperty.Builder.() -> Unit):
         Unit = emailConfiguration(EmailConfigurationProperty(emailConfiguration))
 
-    public override fun emailVerificationMessage(emailVerificationMessage: String) {
+    override fun emailVerificationMessage(emailVerificationMessage: String) {
       cdkBuilder.emailVerificationMessage(emailVerificationMessage)
     }
 
-    public override fun emailVerificationSubject(emailVerificationSubject: String) {
+    override fun emailVerificationSubject(emailVerificationSubject: String) {
       cdkBuilder.emailVerificationSubject(emailVerificationSubject)
     }
 
-    public override fun enabledMfas(enabledMfas: List<String>) {
+    override fun enabledMfas(enabledMfas: List<String>) {
       cdkBuilder.enabledMfas(enabledMfas)
     }
 
-    public override fun lambdaConfig(lambdaConfig: IResolvable) {
+    override fun lambdaConfig(lambdaConfig: IResolvable) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
     }
 
-    public override fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
+    override fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(LambdaConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce9ebed52e53df7caf415c831c615f3e079dc4af05892a8d790b56ffbaf46753")
-    public override fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit): Unit =
+    override fun lambdaConfig(lambdaConfig: LambdaConfigProperty.Builder.() -> Unit): Unit =
         lambdaConfig(LambdaConfigProperty(lambdaConfig))
 
-    public override fun mfaConfiguration(mfaConfiguration: String) {
+    override fun mfaConfiguration(mfaConfiguration: String) {
       cdkBuilder.mfaConfiguration(mfaConfiguration)
     }
 
-    public override fun policies(policies: IResolvable) {
+    override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable::unwrap))
     }
 
-    public override fun policies(policies: PoliciesProperty) {
+    override fun policies(policies: PoliciesProperty) {
       cdkBuilder.policies(policies.let(PoliciesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2314ae1357fcdad41bc2dff9235f62b786cb7031cd62319f510d5ece0d71b8d6")
-    public override fun policies(policies: PoliciesProperty.Builder.() -> Unit): Unit =
+    override fun policies(policies: PoliciesProperty.Builder.() -> Unit): Unit =
         policies(PoliciesProperty(policies))
 
-    public override fun schema(schema: IResolvable) {
+    override fun schema(schema: IResolvable) {
       cdkBuilder.schema(schema.let(IResolvable::unwrap))
     }
 
-    public override fun schema(schema: List<Any>) {
+    override fun schema(schema: List<Any>) {
       cdkBuilder.schema(schema)
     }
 
-    public override fun smsAuthenticationMessage(smsAuthenticationMessage: String) {
+    override fun smsAuthenticationMessage(smsAuthenticationMessage: String) {
       cdkBuilder.smsAuthenticationMessage(smsAuthenticationMessage)
     }
 
-    public override fun smsConfiguration(smsConfiguration: IResolvable) {
+    override fun smsConfiguration(smsConfiguration: IResolvable) {
       cdkBuilder.smsConfiguration(smsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun smsConfiguration(smsConfiguration: SmsConfigurationProperty) {
+    override fun smsConfiguration(smsConfiguration: SmsConfigurationProperty) {
       cdkBuilder.smsConfiguration(smsConfiguration.let(SmsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ea364adb12244e589a60f32213c0b23b344aaebba234adf4fa4a99113a2d5fe")
-    public override
-        fun smsConfiguration(smsConfiguration: SmsConfigurationProperty.Builder.() -> Unit): Unit =
-        smsConfiguration(SmsConfigurationProperty(smsConfiguration))
+    override fun smsConfiguration(smsConfiguration: SmsConfigurationProperty.Builder.() -> Unit):
+        Unit = smsConfiguration(SmsConfigurationProperty(smsConfiguration))
 
-    public override fun smsVerificationMessage(smsVerificationMessage: String) {
+    override fun smsVerificationMessage(smsVerificationMessage: String) {
       cdkBuilder.smsVerificationMessage(smsVerificationMessage)
     }
 
-    public override fun userAttributeUpdateSettings(userAttributeUpdateSettings: IResolvable) {
+    override fun userAttributeUpdateSettings(userAttributeUpdateSettings: IResolvable) {
       cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty) {
       cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(UserAttributeUpdateSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b7175a49101d9224b2ba59105a9d196736ddf87f371a6727f5f8eb0ed1963bcb")
-    public override
+    override
         fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty.Builder.() -> Unit):
         Unit =
         userAttributeUpdateSettings(UserAttributeUpdateSettingsProperty(userAttributeUpdateSettings))
 
-    public override fun userPoolAddOns(userPoolAddOns: IResolvable) {
+    override fun userPoolAddOns(userPoolAddOns: IResolvable) {
       cdkBuilder.userPoolAddOns(userPoolAddOns.let(IResolvable::unwrap))
     }
 
-    public override fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty) {
+    override fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty) {
       cdkBuilder.userPoolAddOns(userPoolAddOns.let(UserPoolAddOnsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0bd77391868ae9ce3d79949e6cf67dab1ff5ea9c26501d144ac9963e691697c")
-    public override fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty.Builder.() -> Unit):
-        Unit = userPoolAddOns(UserPoolAddOnsProperty(userPoolAddOns))
+    override fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty.Builder.() -> Unit): Unit =
+        userPoolAddOns(UserPoolAddOnsProperty(userPoolAddOns))
 
-    public override fun userPoolName(userPoolName: String) {
+    override fun userPoolName(userPoolName: String) {
       cdkBuilder.userPoolName(userPoolName)
     }
 
-    public override fun userPoolTags(userPoolTags: Any) {
+    override fun userPoolTags(userPoolTags: Any) {
       cdkBuilder.userPoolTags(userPoolTags)
     }
 
-    public override fun usernameAttributes(usernameAttributes: List<String>) {
+    override fun usernameAttributes(usernameAttributes: List<String>) {
       cdkBuilder.usernameAttributes(usernameAttributes)
     }
 
-    public override fun usernameConfiguration(usernameConfiguration: IResolvable) {
+    override fun usernameConfiguration(usernameConfiguration: IResolvable) {
       cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
-        fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty) {
+    override fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty) {
       cdkBuilder.usernameConfiguration(usernameConfiguration.let(UsernameConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5532e61a25d6f32e948ead823d706a13cc63936fd365e336428c65d754fa6931")
-    public override
+    override
         fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty.Builder.() -> Unit):
         Unit = usernameConfiguration(UsernameConfigurationProperty(usernameConfiguration))
 
-    public override fun verificationMessageTemplate(verificationMessageTemplate: IResolvable) {
+    override fun verificationMessageTemplate(verificationMessageTemplate: IResolvable) {
       cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty) {
       cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(VerificationMessageTemplateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("562526c03ebc016af3ef3117fb389f2040d3aab89ab5facbe2931bdfdfa0cd7a")
-    public override
+    override
         fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty.Builder.() -> Unit):
         Unit =
         verificationMessageTemplate(VerificationMessageTemplateProperty(verificationMessageTemplate))
@@ -713,11 +661,9 @@ public open class CfnUserPool internal constructor(
     public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
 
     public interface Builder {
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
 
-      public fun lambdaVersion(lambdaVersion: String) {
-      }
+      public fun lambdaVersion(lambdaVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -725,11 +671,11 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty.builder()
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
-      public override fun lambdaVersion(lambdaVersion: String) {
+      override fun lambdaVersion(lambdaVersion: String) {
         cdkBuilder.lambdaVersion(lambdaVersion)
       }
 
@@ -742,9 +688,9 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomEmailSenderProperty,
     ) : CustomEmailSenderProperty {
-      public override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
 
-      public override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
+      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
     }
 
     public companion object {
@@ -775,26 +721,20 @@ public open class CfnUserPool internal constructor(
     public fun unusedAccountValidityDays(): Number? = unwrap(this).getUnusedAccountValidityDays()
 
     public interface Builder {
-      public fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: Boolean) {
-      }
+      public fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: Boolean)
 
-      public fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable) {
-      }
+      public fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable)
 
-      public fun inviteMessageTemplate(inviteMessageTemplate: IResolvable) {
-      }
+      public fun inviteMessageTemplate(inviteMessageTemplate: IResolvable)
 
-      public fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty) {
-      }
+      public fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("38297d4306f52423c4829c35a479cbb5637fb1fab09e621dfe29a31956988a22")
       public
-          fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty.Builder.() -> Unit) {
-      }
+          fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty.Builder.() -> Unit)
 
-      public fun unusedAccountValidityDays(unusedAccountValidityDays: Number) {
-      }
+      public fun unusedAccountValidityDays(unusedAccountValidityDays: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -803,30 +743,29 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty.builder()
 
-      public override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: Boolean) {
+      override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: Boolean) {
         cdkBuilder.allowAdminCreateUserOnly(allowAdminCreateUserOnly)
       }
 
-      public override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable) {
+      override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable) {
         cdkBuilder.allowAdminCreateUserOnly(allowAdminCreateUserOnly.let(IResolvable::unwrap))
       }
 
-      public override fun inviteMessageTemplate(inviteMessageTemplate: IResolvable) {
+      override fun inviteMessageTemplate(inviteMessageTemplate: IResolvable) {
         cdkBuilder.inviteMessageTemplate(inviteMessageTemplate.let(IResolvable::unwrap))
       }
 
-      public override
-          fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty) {
+      override fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty) {
         cdkBuilder.inviteMessageTemplate(inviteMessageTemplate.let(InviteMessageTemplateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("38297d4306f52423c4829c35a479cbb5637fb1fab09e621dfe29a31956988a22")
-      public override
+      override
           fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty.Builder.() -> Unit):
           Unit = inviteMessageTemplate(InviteMessageTemplateProperty(inviteMessageTemplate))
 
-      public override fun unusedAccountValidityDays(unusedAccountValidityDays: Number) {
+      override fun unusedAccountValidityDays(unusedAccountValidityDays: Number) {
         cdkBuilder.unusedAccountValidityDays(unusedAccountValidityDays)
       }
 
@@ -839,12 +778,11 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty,
     ) : AdminCreateUserConfigProperty {
-      public override fun allowAdminCreateUserOnly(): Any? =
-          unwrap(this).getAllowAdminCreateUserOnly()
+      override fun allowAdminCreateUserOnly(): Any? = unwrap(this).getAllowAdminCreateUserOnly()
 
-      public override fun inviteMessageTemplate(): Any? = unwrap(this).getInviteMessageTemplate()
+      override fun inviteMessageTemplate(): Any? = unwrap(this).getInviteMessageTemplate()
 
-      public override fun unusedAccountValidityDays(): Number? =
+      override fun unusedAccountValidityDays(): Number? =
           unwrap(this).getUnusedAccountValidityDays()
     }
 
@@ -883,35 +821,25 @@ public open class CfnUserPool internal constructor(
         unwrap(this).getTemporaryPasswordValidityDays()
 
     public interface Builder {
-      public fun minimumLength(minimumLength: Number) {
-      }
+      public fun minimumLength(minimumLength: Number)
 
-      public fun requireLowercase(requireLowercase: Boolean) {
-      }
+      public fun requireLowercase(requireLowercase: Boolean)
 
-      public fun requireLowercase(requireLowercase: IResolvable) {
-      }
+      public fun requireLowercase(requireLowercase: IResolvable)
 
-      public fun requireNumbers(requireNumbers: Boolean) {
-      }
+      public fun requireNumbers(requireNumbers: Boolean)
 
-      public fun requireNumbers(requireNumbers: IResolvable) {
-      }
+      public fun requireNumbers(requireNumbers: IResolvable)
 
-      public fun requireSymbols(requireSymbols: Boolean) {
-      }
+      public fun requireSymbols(requireSymbols: Boolean)
 
-      public fun requireSymbols(requireSymbols: IResolvable) {
-      }
+      public fun requireSymbols(requireSymbols: IResolvable)
 
-      public fun requireUppercase(requireUppercase: Boolean) {
-      }
+      public fun requireUppercase(requireUppercase: Boolean)
 
-      public fun requireUppercase(requireUppercase: IResolvable) {
-      }
+      public fun requireUppercase(requireUppercase: IResolvable)
 
-      public fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number) {
-      }
+      public fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -919,43 +847,43 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty.builder()
 
-      public override fun minimumLength(minimumLength: Number) {
+      override fun minimumLength(minimumLength: Number) {
         cdkBuilder.minimumLength(minimumLength)
       }
 
-      public override fun requireLowercase(requireLowercase: Boolean) {
+      override fun requireLowercase(requireLowercase: Boolean) {
         cdkBuilder.requireLowercase(requireLowercase)
       }
 
-      public override fun requireLowercase(requireLowercase: IResolvable) {
+      override fun requireLowercase(requireLowercase: IResolvable) {
         cdkBuilder.requireLowercase(requireLowercase.let(IResolvable::unwrap))
       }
 
-      public override fun requireNumbers(requireNumbers: Boolean) {
+      override fun requireNumbers(requireNumbers: Boolean) {
         cdkBuilder.requireNumbers(requireNumbers)
       }
 
-      public override fun requireNumbers(requireNumbers: IResolvable) {
+      override fun requireNumbers(requireNumbers: IResolvable) {
         cdkBuilder.requireNumbers(requireNumbers.let(IResolvable::unwrap))
       }
 
-      public override fun requireSymbols(requireSymbols: Boolean) {
+      override fun requireSymbols(requireSymbols: Boolean) {
         cdkBuilder.requireSymbols(requireSymbols)
       }
 
-      public override fun requireSymbols(requireSymbols: IResolvable) {
+      override fun requireSymbols(requireSymbols: IResolvable) {
         cdkBuilder.requireSymbols(requireSymbols.let(IResolvable::unwrap))
       }
 
-      public override fun requireUppercase(requireUppercase: Boolean) {
+      override fun requireUppercase(requireUppercase: Boolean) {
         cdkBuilder.requireUppercase(requireUppercase)
       }
 
-      public override fun requireUppercase(requireUppercase: IResolvable) {
+      override fun requireUppercase(requireUppercase: IResolvable) {
         cdkBuilder.requireUppercase(requireUppercase.let(IResolvable::unwrap))
       }
 
-      public override fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number) {
+      override fun temporaryPasswordValidityDays(temporaryPasswordValidityDays: Number) {
         cdkBuilder.temporaryPasswordValidityDays(temporaryPasswordValidityDays)
       }
 
@@ -967,17 +895,17 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty,
     ) : PasswordPolicyProperty {
-      public override fun minimumLength(): Number? = unwrap(this).getMinimumLength()
+      override fun minimumLength(): Number? = unwrap(this).getMinimumLength()
 
-      public override fun requireLowercase(): Any? = unwrap(this).getRequireLowercase()
+      override fun requireLowercase(): Any? = unwrap(this).getRequireLowercase()
 
-      public override fun requireNumbers(): Any? = unwrap(this).getRequireNumbers()
+      override fun requireNumbers(): Any? = unwrap(this).getRequireNumbers()
 
-      public override fun requireSymbols(): Any? = unwrap(this).getRequireSymbols()
+      override fun requireSymbols(): Any? = unwrap(this).getRequireSymbols()
 
-      public override fun requireUppercase(): Any? = unwrap(this).getRequireUppercase()
+      override fun requireUppercase(): Any? = unwrap(this).getRequireUppercase()
 
-      public override fun temporaryPasswordValidityDays(): Number? =
+      override fun temporaryPasswordValidityDays(): Number? =
           unwrap(this).getTemporaryPasswordValidityDays()
     }
 
@@ -1007,11 +935,9 @@ public open class CfnUserPool internal constructor(
     public fun minLength(): String? = unwrap(this).getMinLength()
 
     public interface Builder {
-      public fun maxLength(maxLength: String) {
-      }
+      public fun maxLength(maxLength: String)
 
-      public fun minLength(minLength: String) {
-      }
+      public fun minLength(minLength: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1020,11 +946,11 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty.builder()
 
-      public override fun maxLength(maxLength: String) {
+      override fun maxLength(maxLength: String) {
         cdkBuilder.maxLength(maxLength)
       }
 
-      public override fun minLength(minLength: String) {
+      override fun minLength(minLength: String) {
         cdkBuilder.minLength(minLength)
       }
 
@@ -1037,9 +963,9 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty,
     ) : StringAttributeConstraintsProperty {
-      public override fun maxLength(): String? = unwrap(this).getMaxLength()
+      override fun maxLength(): String? = unwrap(this).getMaxLength()
 
-      public override fun minLength(): String? = unwrap(this).getMinLength()
+      override fun minLength(): String? = unwrap(this).getMinLength()
     }
 
     public companion object {
@@ -1070,17 +996,13 @@ public open class CfnUserPool internal constructor(
         unwrap(this).getDeviceOnlyRememberedOnUserPrompt()
 
     public interface Builder {
-      public fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: Boolean) {
-      }
+      public fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: Boolean)
 
-      public fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: IResolvable) {
-      }
+      public fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: IResolvable)
 
-      public fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: Boolean) {
-      }
+      public fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: Boolean)
 
-      public fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: IResolvable) {
-      }
+      public fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1088,21 +1010,19 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty.builder()
 
-      public override fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: Boolean) {
+      override fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: Boolean) {
         cdkBuilder.challengeRequiredOnNewDevice(challengeRequiredOnNewDevice)
       }
 
-      public override fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: IResolvable) {
+      override fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: IResolvable) {
         cdkBuilder.challengeRequiredOnNewDevice(challengeRequiredOnNewDevice.let(IResolvable::unwrap))
       }
 
-      public override
-          fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: Boolean) {
+      override fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: Boolean) {
         cdkBuilder.deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt)
       }
 
-      public override
-          fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: IResolvable) {
+      override fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: IResolvable) {
         cdkBuilder.deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt.let(IResolvable::unwrap))
       }
 
@@ -1115,10 +1035,10 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty,
     ) : DeviceConfigurationProperty {
-      public override fun challengeRequiredOnNewDevice(): Any? =
+      override fun challengeRequiredOnNewDevice(): Any? =
           unwrap(this).getChallengeRequiredOnNewDevice()
 
-      public override fun deviceOnlyRememberedOnUserPrompt(): Any? =
+      override fun deviceOnlyRememberedOnUserPrompt(): Any? =
           unwrap(this).getDeviceOnlyRememberedOnUserPrompt()
     }
 
@@ -1146,16 +1066,13 @@ public open class CfnUserPool internal constructor(
     public fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
 
     public interface Builder {
-      public fun passwordPolicy(passwordPolicy: IResolvable) {
-      }
+      public fun passwordPolicy(passwordPolicy: IResolvable)
 
-      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty) {
-      }
+      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("397bfa55c66c4e794868359ddbcc20b3f495bd76ce469f761741f1d76a32bde2")
-      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1163,18 +1080,18 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty.builder()
 
-      public override fun passwordPolicy(passwordPolicy: IResolvable) {
+      override fun passwordPolicy(passwordPolicy: IResolvable) {
         cdkBuilder.passwordPolicy(passwordPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty) {
+      override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty) {
         cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("397bfa55c66c4e794868359ddbcc20b3f495bd76ce469f761741f1d76a32bde2")
-      public override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit):
-          Unit = passwordPolicy(PasswordPolicyProperty(passwordPolicy))
+      override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty.Builder.() -> Unit): Unit =
+          passwordPolicy(PasswordPolicyProperty(passwordPolicy))
 
       public fun build(): software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty =
           cdkBuilder.build()
@@ -1183,7 +1100,7 @@ public open class CfnUserPool internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty,
     ) : PoliciesProperty {
-      public override fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
+      override fun passwordPolicy(): Any? = unwrap(this).getPasswordPolicy()
     }
 
     public companion object {
@@ -1222,55 +1139,41 @@ public open class CfnUserPool internal constructor(
     public fun stringAttributeConstraints(): Any? = unwrap(this).getStringAttributeConstraints()
 
     public interface Builder {
-      public fun attributeDataType(attributeDataType: String) {
-      }
+      public fun attributeDataType(attributeDataType: String)
 
-      public fun developerOnlyAttribute(developerOnlyAttribute: Boolean) {
-      }
+      public fun developerOnlyAttribute(developerOnlyAttribute: Boolean)
 
-      public fun developerOnlyAttribute(developerOnlyAttribute: IResolvable) {
-      }
+      public fun developerOnlyAttribute(developerOnlyAttribute: IResolvable)
 
-      public fun mutable(mutable: Boolean) {
-      }
+      public fun mutable(mutable: Boolean)
 
-      public fun mutable(mutable: IResolvable) {
-      }
+      public fun mutable(mutable: IResolvable)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun numberAttributeConstraints(numberAttributeConstraints: IResolvable) {
-      }
+      public fun numberAttributeConstraints(numberAttributeConstraints: IResolvable)
 
       public
-          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty) {
-      }
+          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5d6d36ad43793a320eae4a5a3a75086074c7f0622688e783ff944948317db17")
       public
-          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit) {
-      }
+          fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit)
 
-      public fun required(required: Boolean) {
-      }
+      public fun required(required: Boolean)
 
-      public fun required(required: IResolvable) {
-      }
+      public fun required(required: IResolvable)
 
-      public fun stringAttributeConstraints(stringAttributeConstraints: IResolvable) {
-      }
+      public fun stringAttributeConstraints(stringAttributeConstraints: IResolvable)
 
       public
-          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty) {
-      }
+          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17300017bb16bdaac29a5b06982973316c96674bb0349c363884b0bded8cfc97")
       public
-          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit) {
-      }
+          fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1278,66 +1181,66 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty.builder()
 
-      public override fun attributeDataType(attributeDataType: String) {
+      override fun attributeDataType(attributeDataType: String) {
         cdkBuilder.attributeDataType(attributeDataType)
       }
 
-      public override fun developerOnlyAttribute(developerOnlyAttribute: Boolean) {
+      override fun developerOnlyAttribute(developerOnlyAttribute: Boolean) {
         cdkBuilder.developerOnlyAttribute(developerOnlyAttribute)
       }
 
-      public override fun developerOnlyAttribute(developerOnlyAttribute: IResolvable) {
+      override fun developerOnlyAttribute(developerOnlyAttribute: IResolvable) {
         cdkBuilder.developerOnlyAttribute(developerOnlyAttribute.let(IResolvable::unwrap))
       }
 
-      public override fun mutable(mutable: Boolean) {
+      override fun mutable(mutable: Boolean) {
         cdkBuilder.mutable(mutable)
       }
 
-      public override fun mutable(mutable: IResolvable) {
+      override fun mutable(mutable: IResolvable) {
         cdkBuilder.mutable(mutable.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun numberAttributeConstraints(numberAttributeConstraints: IResolvable) {
+      override fun numberAttributeConstraints(numberAttributeConstraints: IResolvable) {
         cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty) {
         cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(NumberAttributeConstraintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d5d6d36ad43793a320eae4a5a3a75086074c7f0622688e783ff944948317db17")
-      public override
+      override
           fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty.Builder.() -> Unit):
           Unit =
           numberAttributeConstraints(NumberAttributeConstraintsProperty(numberAttributeConstraints))
 
-      public override fun required(required: Boolean) {
+      override fun required(required: Boolean) {
         cdkBuilder.required(required)
       }
 
-      public override fun required(required: IResolvable) {
+      override fun required(required: IResolvable) {
         cdkBuilder.required(required.let(IResolvable::unwrap))
       }
 
-      public override fun stringAttributeConstraints(stringAttributeConstraints: IResolvable) {
+      override fun stringAttributeConstraints(stringAttributeConstraints: IResolvable) {
         cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty) {
         cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(StringAttributeConstraintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17300017bb16bdaac29a5b06982973316c96674bb0349c363884b0bded8cfc97")
-      public override
+      override
           fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty.Builder.() -> Unit):
           Unit =
           stringAttributeConstraints(StringAttributeConstraintsProperty(stringAttributeConstraints))
@@ -1351,21 +1254,19 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty,
     ) : SchemaAttributeProperty {
-      public override fun attributeDataType(): String? = unwrap(this).getAttributeDataType()
+      override fun attributeDataType(): String? = unwrap(this).getAttributeDataType()
 
-      public override fun developerOnlyAttribute(): Any? = unwrap(this).getDeveloperOnlyAttribute()
+      override fun developerOnlyAttribute(): Any? = unwrap(this).getDeveloperOnlyAttribute()
 
-      public override fun mutable(): Any? = unwrap(this).getMutable()
+      override fun mutable(): Any? = unwrap(this).getMutable()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun numberAttributeConstraints(): Any? =
-          unwrap(this).getNumberAttributeConstraints()
+      override fun numberAttributeConstraints(): Any? = unwrap(this).getNumberAttributeConstraints()
 
-      public override fun required(): Any? = unwrap(this).getRequired()
+      override fun required(): Any? = unwrap(this).getRequired()
 
-      public override fun stringAttributeConstraints(): Any? =
-          unwrap(this).getStringAttributeConstraints()
+      override fun stringAttributeConstraints(): Any? = unwrap(this).getStringAttributeConstraints()
     }
 
     public companion object {
@@ -1392,11 +1293,9 @@ public open class CfnUserPool internal constructor(
     public fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
 
     public interface Builder {
-      public fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
-      }
+      public fun recoveryMechanisms(recoveryMechanisms: IResolvable)
 
-      public fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
-      }
+      public fun recoveryMechanisms(recoveryMechanisms: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1405,11 +1304,11 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty.builder()
 
-      public override fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
+      override fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
         cdkBuilder.recoveryMechanisms(recoveryMechanisms.let(IResolvable::unwrap))
       }
 
-      public override fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
+      override fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
         cdkBuilder.recoveryMechanisms(recoveryMechanisms)
       }
 
@@ -1422,7 +1321,7 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty,
     ) : AccountRecoverySettingProperty {
-      public override fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
+      override fun recoveryMechanisms(): Any? = unwrap(this).getRecoveryMechanisms()
     }
 
     public companion object {
@@ -1451,11 +1350,9 @@ public open class CfnUserPool internal constructor(
     public fun minValue(): String? = unwrap(this).getMinValue()
 
     public interface Builder {
-      public fun maxValue(maxValue: String) {
-      }
+      public fun maxValue(maxValue: String)
 
-      public fun minValue(minValue: String) {
-      }
+      public fun minValue(minValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1464,11 +1361,11 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty.builder()
 
-      public override fun maxValue(maxValue: String) {
+      override fun maxValue(maxValue: String) {
         cdkBuilder.maxValue(maxValue)
       }
 
-      public override fun minValue(minValue: String) {
+      override fun minValue(minValue: String) {
         cdkBuilder.minValue(minValue)
       }
 
@@ -1481,9 +1378,9 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty,
     ) : NumberAttributeConstraintsProperty {
-      public override fun maxValue(): String? = unwrap(this).getMaxValue()
+      override fun maxValue(): String? = unwrap(this).getMaxValue()
 
-      public override fun minValue(): String? = unwrap(this).getMinValue()
+      override fun minValue(): String? = unwrap(this).getMinValue()
     }
 
     public companion object {
@@ -1515,14 +1412,11 @@ public open class CfnUserPool internal constructor(
     public fun snsRegion(): String? = unwrap(this).getSnsRegion()
 
     public interface Builder {
-      public fun externalId(externalId: String) {
-      }
+      public fun externalId(externalId: String)
 
-      public fun snsCallerArn(snsCallerArn: String) {
-      }
+      public fun snsCallerArn(snsCallerArn: String)
 
-      public fun snsRegion(snsRegion: String) {
-      }
+      public fun snsRegion(snsRegion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1530,15 +1424,15 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty.builder()
 
-      public override fun externalId(externalId: String) {
+      override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
-      public override fun snsCallerArn(snsCallerArn: String) {
+      override fun snsCallerArn(snsCallerArn: String) {
         cdkBuilder.snsCallerArn(snsCallerArn)
       }
 
-      public override fun snsRegion(snsRegion: String) {
+      override fun snsRegion(snsRegion: String) {
         cdkBuilder.snsRegion(snsRegion)
       }
 
@@ -1551,11 +1445,11 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty,
     ) : SmsConfigurationProperty {
-      public override fun externalId(): String? = unwrap(this).getExternalId()
+      override fun externalId(): String? = unwrap(this).getExternalId()
 
-      public override fun snsCallerArn(): String? = unwrap(this).getSnsCallerArn()
+      override fun snsCallerArn(): String? = unwrap(this).getSnsCallerArn()
 
-      public override fun snsRegion(): String? = unwrap(this).getSnsRegion()
+      override fun snsRegion(): String? = unwrap(this).getSnsRegion()
     }
 
     public companion object {
@@ -1584,11 +1478,9 @@ public open class CfnUserPool internal constructor(
     public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
 
     public interface Builder {
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
 
-      public fun lambdaVersion(lambdaVersion: String) {
-      }
+      public fun lambdaVersion(lambdaVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1596,11 +1488,11 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty.builder()
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
-      public override fun lambdaVersion(lambdaVersion: String) {
+      override fun lambdaVersion(lambdaVersion: String) {
         cdkBuilder.lambdaVersion(lambdaVersion)
       }
 
@@ -1613,9 +1505,9 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.CustomSMSSenderProperty,
     ) : CustomSMSSenderProperty {
-      public override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
 
-      public override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
+      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
     }
 
     public companion object {
@@ -1652,23 +1544,17 @@ public open class CfnUserPool internal constructor(
     public fun smsMessage(): String? = unwrap(this).getSmsMessage()
 
     public interface Builder {
-      public fun defaultEmailOption(defaultEmailOption: String) {
-      }
+      public fun defaultEmailOption(defaultEmailOption: String)
 
-      public fun emailMessage(emailMessage: String) {
-      }
+      public fun emailMessage(emailMessage: String)
 
-      public fun emailMessageByLink(emailMessageByLink: String) {
-      }
+      public fun emailMessageByLink(emailMessageByLink: String)
 
-      public fun emailSubject(emailSubject: String) {
-      }
+      public fun emailSubject(emailSubject: String)
 
-      public fun emailSubjectByLink(emailSubjectByLink: String) {
-      }
+      public fun emailSubjectByLink(emailSubjectByLink: String)
 
-      public fun smsMessage(smsMessage: String) {
-      }
+      public fun smsMessage(smsMessage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1677,27 +1563,27 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty.builder()
 
-      public override fun defaultEmailOption(defaultEmailOption: String) {
+      override fun defaultEmailOption(defaultEmailOption: String) {
         cdkBuilder.defaultEmailOption(defaultEmailOption)
       }
 
-      public override fun emailMessage(emailMessage: String) {
+      override fun emailMessage(emailMessage: String) {
         cdkBuilder.emailMessage(emailMessage)
       }
 
-      public override fun emailMessageByLink(emailMessageByLink: String) {
+      override fun emailMessageByLink(emailMessageByLink: String) {
         cdkBuilder.emailMessageByLink(emailMessageByLink)
       }
 
-      public override fun emailSubject(emailSubject: String) {
+      override fun emailSubject(emailSubject: String) {
         cdkBuilder.emailSubject(emailSubject)
       }
 
-      public override fun emailSubjectByLink(emailSubjectByLink: String) {
+      override fun emailSubjectByLink(emailSubjectByLink: String) {
         cdkBuilder.emailSubjectByLink(emailSubjectByLink)
       }
 
-      public override fun smsMessage(smsMessage: String) {
+      override fun smsMessage(smsMessage: String) {
         cdkBuilder.smsMessage(smsMessage)
       }
 
@@ -1710,17 +1596,17 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.VerificationMessageTemplateProperty,
     ) : VerificationMessageTemplateProperty {
-      public override fun defaultEmailOption(): String? = unwrap(this).getDefaultEmailOption()
+      override fun defaultEmailOption(): String? = unwrap(this).getDefaultEmailOption()
 
-      public override fun emailMessage(): String? = unwrap(this).getEmailMessage()
+      override fun emailMessage(): String? = unwrap(this).getEmailMessage()
 
-      public override fun emailMessageByLink(): String? = unwrap(this).getEmailMessageByLink()
+      override fun emailMessageByLink(): String? = unwrap(this).getEmailMessageByLink()
 
-      public override fun emailSubject(): String? = unwrap(this).getEmailSubject()
+      override fun emailSubject(): String? = unwrap(this).getEmailSubject()
 
-      public override fun emailSubjectByLink(): String? = unwrap(this).getEmailSubjectByLink()
+      override fun emailSubjectByLink(): String? = unwrap(this).getEmailSubjectByLink()
 
-      public override fun smsMessage(): String? = unwrap(this).getSmsMessage()
+      override fun smsMessage(): String? = unwrap(this).getSmsMessage()
     }
 
     public companion object {
@@ -1756,20 +1642,15 @@ public open class CfnUserPool internal constructor(
     public fun sourceArn(): String? = unwrap(this).getSourceArn()
 
     public interface Builder {
-      public fun configurationSet(configurationSet: String) {
-      }
+      public fun configurationSet(configurationSet: String)
 
-      public fun emailSendingAccount(emailSendingAccount: String) {
-      }
+      public fun emailSendingAccount(emailSendingAccount: String)
 
-      public fun from(from: String) {
-      }
+      public fun from(from: String)
 
-      public fun replyToEmailAddress(replyToEmailAddress: String) {
-      }
+      public fun replyToEmailAddress(replyToEmailAddress: String)
 
-      public fun sourceArn(sourceArn: String) {
-      }
+      public fun sourceArn(sourceArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1777,23 +1658,23 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty.builder()
 
-      public override fun configurationSet(configurationSet: String) {
+      override fun configurationSet(configurationSet: String) {
         cdkBuilder.configurationSet(configurationSet)
       }
 
-      public override fun emailSendingAccount(emailSendingAccount: String) {
+      override fun emailSendingAccount(emailSendingAccount: String) {
         cdkBuilder.emailSendingAccount(emailSendingAccount)
       }
 
-      public override fun from(from: String) {
+      override fun from(from: String) {
         cdkBuilder.from(from)
       }
 
-      public override fun replyToEmailAddress(replyToEmailAddress: String) {
+      override fun replyToEmailAddress(replyToEmailAddress: String) {
         cdkBuilder.replyToEmailAddress(replyToEmailAddress)
       }
 
-      public override fun sourceArn(sourceArn: String) {
+      override fun sourceArn(sourceArn: String) {
         cdkBuilder.sourceArn(sourceArn)
       }
 
@@ -1806,15 +1687,15 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty,
     ) : EmailConfigurationProperty {
-      public override fun configurationSet(): String? = unwrap(this).getConfigurationSet()
+      override fun configurationSet(): String? = unwrap(this).getConfigurationSet()
 
-      public override fun emailSendingAccount(): String? = unwrap(this).getEmailSendingAccount()
+      override fun emailSendingAccount(): String? = unwrap(this).getEmailSendingAccount()
 
-      public override fun from(): String? = unwrap(this).getFrom()
+      override fun from(): String? = unwrap(this).getFrom()
 
-      public override fun replyToEmailAddress(): String? = unwrap(this).getReplyToEmailAddress()
+      override fun replyToEmailAddress(): String? = unwrap(this).getReplyToEmailAddress()
 
-      public override fun sourceArn(): String? = unwrap(this).getSourceArn()
+      override fun sourceArn(): String? = unwrap(this).getSourceArn()
     }
 
     public companion object {
@@ -1841,11 +1722,9 @@ public open class CfnUserPool internal constructor(
     public fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
 
     public interface Builder {
-      public fun caseSensitive(caseSensitive: Boolean) {
-      }
+      public fun caseSensitive(caseSensitive: Boolean)
 
-      public fun caseSensitive(caseSensitive: IResolvable) {
-      }
+      public fun caseSensitive(caseSensitive: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1854,11 +1733,11 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty.builder()
 
-      public override fun caseSensitive(caseSensitive: Boolean) {
+      override fun caseSensitive(caseSensitive: Boolean) {
         cdkBuilder.caseSensitive(caseSensitive)
       }
 
-      public override fun caseSensitive(caseSensitive: IResolvable) {
+      override fun caseSensitive(caseSensitive: IResolvable) {
         cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
       }
 
@@ -1871,7 +1750,7 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.UsernameConfigurationProperty,
     ) : UsernameConfigurationProperty {
-      public override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
+      override fun caseSensitive(): Any? = unwrap(this).getCaseSensitive()
     }
 
     public companion object {
@@ -1900,11 +1779,9 @@ public open class CfnUserPool internal constructor(
     public fun priority(): Number? = unwrap(this).getPriority()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1912,11 +1789,11 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
@@ -1928,9 +1805,9 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.RecoveryOptionProperty,
     ) : RecoveryOptionProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun priority(): Number? = unwrap(this).getPriority()
+      override fun priority(): Number? = unwrap(this).getPriority()
     }
 
     public companion object {
@@ -1984,74 +1861,53 @@ public open class CfnUserPool internal constructor(
         unwrap(this).getVerifyAuthChallengeResponse()
 
     public interface Builder {
-      public fun createAuthChallenge(createAuthChallenge: String) {
-      }
+      public fun createAuthChallenge(createAuthChallenge: String)
 
-      public fun customEmailSender(customEmailSender: IResolvable) {
-      }
+      public fun customEmailSender(customEmailSender: IResolvable)
 
-      public fun customEmailSender(customEmailSender: CustomEmailSenderProperty) {
-      }
+      public fun customEmailSender(customEmailSender: CustomEmailSenderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca7d9e137c25f2c1d15eb3a299c9a56a4b0019d8bba232c57c2e9fb5d5bafb60")
-      public
-          fun customEmailSender(customEmailSender: CustomEmailSenderProperty.Builder.() -> Unit) {
-      }
+      public fun customEmailSender(customEmailSender: CustomEmailSenderProperty.Builder.() -> Unit)
 
-      public fun customMessage(customMessage: String) {
-      }
+      public fun customMessage(customMessage: String)
 
-      public fun customSmsSender(customSmsSender: IResolvable) {
-      }
+      public fun customSmsSender(customSmsSender: IResolvable)
 
-      public fun customSmsSender(customSmsSender: CustomSMSSenderProperty) {
-      }
+      public fun customSmsSender(customSmsSender: CustomSMSSenderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("54486d32cdda0d945d81186fbb052e94a2a17aa61e72dfffc11105186277a85a")
-      public fun customSmsSender(customSmsSender: CustomSMSSenderProperty.Builder.() -> Unit) {
-      }
+      public fun customSmsSender(customSmsSender: CustomSMSSenderProperty.Builder.() -> Unit)
 
-      public fun defineAuthChallenge(defineAuthChallenge: String) {
-      }
+      public fun defineAuthChallenge(defineAuthChallenge: String)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun postAuthentication(postAuthentication: String) {
-      }
+      public fun postAuthentication(postAuthentication: String)
 
-      public fun postConfirmation(postConfirmation: String) {
-      }
+      public fun postConfirmation(postConfirmation: String)
 
-      public fun preAuthentication(preAuthentication: String) {
-      }
+      public fun preAuthentication(preAuthentication: String)
 
-      public fun preSignUp(preSignUp: String) {
-      }
+      public fun preSignUp(preSignUp: String)
 
-      public fun preTokenGeneration(preTokenGeneration: String) {
-      }
+      public fun preTokenGeneration(preTokenGeneration: String)
 
-      public fun preTokenGenerationConfig(preTokenGenerationConfig: IResolvable) {
-      }
+      public fun preTokenGenerationConfig(preTokenGenerationConfig: IResolvable)
 
       public
-          fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty) {
-      }
+          fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c425a8910dea4d16cc4bf204847a407cf8f4e8c879c77e5567cd60d70cc82e0")
       public
-          fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty.Builder.() -> Unit) {
-      }
+          fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty.Builder.() -> Unit)
 
-      public fun userMigration(userMigration: String) {
-      }
+      public fun userMigration(userMigration: String)
 
-      public fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: String) {
-      }
+      public fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2059,91 +1915,90 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty.builder()
 
-      public override fun createAuthChallenge(createAuthChallenge: String) {
+      override fun createAuthChallenge(createAuthChallenge: String) {
         cdkBuilder.createAuthChallenge(createAuthChallenge)
       }
 
-      public override fun customEmailSender(customEmailSender: IResolvable) {
+      override fun customEmailSender(customEmailSender: IResolvable) {
         cdkBuilder.customEmailSender(customEmailSender.let(IResolvable::unwrap))
       }
 
-      public override fun customEmailSender(customEmailSender: CustomEmailSenderProperty) {
+      override fun customEmailSender(customEmailSender: CustomEmailSenderProperty) {
         cdkBuilder.customEmailSender(customEmailSender.let(CustomEmailSenderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca7d9e137c25f2c1d15eb3a299c9a56a4b0019d8bba232c57c2e9fb5d5bafb60")
-      public override
+      override
           fun customEmailSender(customEmailSender: CustomEmailSenderProperty.Builder.() -> Unit):
           Unit = customEmailSender(CustomEmailSenderProperty(customEmailSender))
 
-      public override fun customMessage(customMessage: String) {
+      override fun customMessage(customMessage: String) {
         cdkBuilder.customMessage(customMessage)
       }
 
-      public override fun customSmsSender(customSmsSender: IResolvable) {
+      override fun customSmsSender(customSmsSender: IResolvable) {
         cdkBuilder.customSmsSender(customSmsSender.let(IResolvable::unwrap))
       }
 
-      public override fun customSmsSender(customSmsSender: CustomSMSSenderProperty) {
+      override fun customSmsSender(customSmsSender: CustomSMSSenderProperty) {
         cdkBuilder.customSmsSender(customSmsSender.let(CustomSMSSenderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("54486d32cdda0d945d81186fbb052e94a2a17aa61e72dfffc11105186277a85a")
-      public override
-          fun customSmsSender(customSmsSender: CustomSMSSenderProperty.Builder.() -> Unit): Unit =
-          customSmsSender(CustomSMSSenderProperty(customSmsSender))
+      override fun customSmsSender(customSmsSender: CustomSMSSenderProperty.Builder.() -> Unit):
+          Unit = customSmsSender(CustomSMSSenderProperty(customSmsSender))
 
-      public override fun defineAuthChallenge(defineAuthChallenge: String) {
+      override fun defineAuthChallenge(defineAuthChallenge: String) {
         cdkBuilder.defineAuthChallenge(defineAuthChallenge)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun postAuthentication(postAuthentication: String) {
+      override fun postAuthentication(postAuthentication: String) {
         cdkBuilder.postAuthentication(postAuthentication)
       }
 
-      public override fun postConfirmation(postConfirmation: String) {
+      override fun postConfirmation(postConfirmation: String) {
         cdkBuilder.postConfirmation(postConfirmation)
       }
 
-      public override fun preAuthentication(preAuthentication: String) {
+      override fun preAuthentication(preAuthentication: String) {
         cdkBuilder.preAuthentication(preAuthentication)
       }
 
-      public override fun preSignUp(preSignUp: String) {
+      override fun preSignUp(preSignUp: String) {
         cdkBuilder.preSignUp(preSignUp)
       }
 
-      public override fun preTokenGeneration(preTokenGeneration: String) {
+      override fun preTokenGeneration(preTokenGeneration: String) {
         cdkBuilder.preTokenGeneration(preTokenGeneration)
       }
 
-      public override fun preTokenGenerationConfig(preTokenGenerationConfig: IResolvable) {
+      override fun preTokenGenerationConfig(preTokenGenerationConfig: IResolvable) {
         cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty) {
         cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig.let(PreTokenGenerationConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c425a8910dea4d16cc4bf204847a407cf8f4e8c879c77e5567cd60d70cc82e0")
-      public override
+      override
           fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty.Builder.() -> Unit):
           Unit =
           preTokenGenerationConfig(PreTokenGenerationConfigProperty(preTokenGenerationConfig))
 
-      public override fun userMigration(userMigration: String) {
+      override fun userMigration(userMigration: String) {
         cdkBuilder.userMigration(userMigration)
       }
 
-      public override fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: String) {
+      override fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: String) {
         cdkBuilder.verifyAuthChallengeResponse(verifyAuthChallengeResponse)
       }
 
@@ -2155,34 +2010,33 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty,
     ) : LambdaConfigProperty {
-      public override fun createAuthChallenge(): String? = unwrap(this).getCreateAuthChallenge()
+      override fun createAuthChallenge(): String? = unwrap(this).getCreateAuthChallenge()
 
-      public override fun customEmailSender(): Any? = unwrap(this).getCustomEmailSender()
+      override fun customEmailSender(): Any? = unwrap(this).getCustomEmailSender()
 
-      public override fun customMessage(): String? = unwrap(this).getCustomMessage()
+      override fun customMessage(): String? = unwrap(this).getCustomMessage()
 
-      public override fun customSmsSender(): Any? = unwrap(this).getCustomSmsSender()
+      override fun customSmsSender(): Any? = unwrap(this).getCustomSmsSender()
 
-      public override fun defineAuthChallenge(): String? = unwrap(this).getDefineAuthChallenge()
+      override fun defineAuthChallenge(): String? = unwrap(this).getDefineAuthChallenge()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun postAuthentication(): String? = unwrap(this).getPostAuthentication()
+      override fun postAuthentication(): String? = unwrap(this).getPostAuthentication()
 
-      public override fun postConfirmation(): String? = unwrap(this).getPostConfirmation()
+      override fun postConfirmation(): String? = unwrap(this).getPostConfirmation()
 
-      public override fun preAuthentication(): String? = unwrap(this).getPreAuthentication()
+      override fun preAuthentication(): String? = unwrap(this).getPreAuthentication()
 
-      public override fun preSignUp(): String? = unwrap(this).getPreSignUp()
+      override fun preSignUp(): String? = unwrap(this).getPreSignUp()
 
-      public override fun preTokenGeneration(): String? = unwrap(this).getPreTokenGeneration()
+      override fun preTokenGeneration(): String? = unwrap(this).getPreTokenGeneration()
 
-      public override fun preTokenGenerationConfig(): Any? =
-          unwrap(this).getPreTokenGenerationConfig()
+      override fun preTokenGenerationConfig(): Any? = unwrap(this).getPreTokenGenerationConfig()
 
-      public override fun userMigration(): String? = unwrap(this).getUserMigration()
+      override fun userMigration(): String? = unwrap(this).getUserMigration()
 
-      public override fun verifyAuthChallengeResponse(): String? =
+      override fun verifyAuthChallengeResponse(): String? =
           unwrap(this).getVerifyAuthChallengeResponse()
     }
 
@@ -2212,11 +2066,9 @@ public open class CfnUserPool internal constructor(
     public fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
 
     public interface Builder {
-      public fun lambdaArn(lambdaArn: String) {
-      }
+      public fun lambdaArn(lambdaArn: String)
 
-      public fun lambdaVersion(lambdaVersion: String) {
-      }
+      public fun lambdaVersion(lambdaVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2225,11 +2077,11 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty.builder()
 
-      public override fun lambdaArn(lambdaArn: String) {
+      override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
-      public override fun lambdaVersion(lambdaVersion: String) {
+      override fun lambdaVersion(lambdaVersion: String) {
         cdkBuilder.lambdaVersion(lambdaVersion)
       }
 
@@ -2242,9 +2094,9 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.PreTokenGenerationConfigProperty,
     ) : PreTokenGenerationConfigProperty {
-      public override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
+      override fun lambdaArn(): String? = unwrap(this).getLambdaArn()
 
-      public override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
+      override fun lambdaVersion(): String? = unwrap(this).getLambdaVersion()
     }
 
     public companion object {
@@ -2275,14 +2127,11 @@ public open class CfnUserPool internal constructor(
     public fun smsMessage(): String? = unwrap(this).getSmsMessage()
 
     public interface Builder {
-      public fun emailMessage(emailMessage: String) {
-      }
+      public fun emailMessage(emailMessage: String)
 
-      public fun emailSubject(emailSubject: String) {
-      }
+      public fun emailSubject(emailSubject: String)
 
-      public fun smsMessage(smsMessage: String) {
-      }
+      public fun smsMessage(smsMessage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2291,15 +2140,15 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty.builder()
 
-      public override fun emailMessage(emailMessage: String) {
+      override fun emailMessage(emailMessage: String) {
         cdkBuilder.emailMessage(emailMessage)
       }
 
-      public override fun emailSubject(emailSubject: String) {
+      override fun emailSubject(emailSubject: String) {
         cdkBuilder.emailSubject(emailSubject)
       }
 
-      public override fun smsMessage(smsMessage: String) {
+      override fun smsMessage(smsMessage: String) {
         cdkBuilder.smsMessage(smsMessage)
       }
 
@@ -2312,11 +2161,11 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty,
     ) : InviteMessageTemplateProperty {
-      public override fun emailMessage(): String? = unwrap(this).getEmailMessage()
+      override fun emailMessage(): String? = unwrap(this).getEmailMessage()
 
-      public override fun emailSubject(): String? = unwrap(this).getEmailSubject()
+      override fun emailSubject(): String? = unwrap(this).getEmailSubject()
 
-      public override fun smsMessage(): String? = unwrap(this).getSmsMessage()
+      override fun smsMessage(): String? = unwrap(this).getSmsMessage()
     }
 
     public companion object {
@@ -2344,8 +2193,7 @@ public open class CfnUserPool internal constructor(
 
     public interface Builder {
       public
-          fun attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate: List<String>) {
-      }
+          fun attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -2354,7 +2202,7 @@ public open class CfnUserPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty.builder()
 
-      public override
+      override
           fun attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate: List<String>) {
         cdkBuilder.attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate)
       }
@@ -2368,7 +2216,7 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty,
     ) : UserAttributeUpdateSettingsProperty {
-      public override fun attributesRequireVerificationBeforeUpdate(): List<String> =
+      override fun attributesRequireVerificationBeforeUpdate(): List<String> =
           unwrap(this).getAttributesRequireVerificationBeforeUpdate() ?: emptyList()
     }
 
@@ -2397,8 +2245,7 @@ public open class CfnUserPool internal constructor(
     public fun advancedSecurityMode(): String? = unwrap(this).getAdvancedSecurityMode()
 
     public interface Builder {
-      public fun advancedSecurityMode(advancedSecurityMode: String) {
-      }
+      public fun advancedSecurityMode(advancedSecurityMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2406,7 +2253,7 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty.builder()
 
-      public override fun advancedSecurityMode(advancedSecurityMode: String) {
+      override fun advancedSecurityMode(advancedSecurityMode: String) {
         cdkBuilder.advancedSecurityMode(advancedSecurityMode)
       }
 
@@ -2418,7 +2265,7 @@ public open class CfnUserPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPool.UserPoolAddOnsProperty,
     ) : UserPoolAddOnsProperty {
-      public override fun advancedSecurityMode(): String? = unwrap(this).getAdvancedSecurityMode()
+      override fun advancedSecurityMode(): String? = unwrap(this).getAdvancedSecurityMode()
     }
 
     public companion object {

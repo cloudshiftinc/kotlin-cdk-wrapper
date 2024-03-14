@@ -129,59 +129,43 @@ public open class CfnMigrationProject internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceProfileArn(instanceProfileArn: String) {
-    }
+    public fun instanceProfileArn(instanceProfileArn: String)
 
-    public fun instanceProfileIdentifier(instanceProfileIdentifier: String) {
-    }
+    public fun instanceProfileIdentifier(instanceProfileIdentifier: String)
 
-    public fun instanceProfileName(instanceProfileName: String) {
-    }
+    public fun instanceProfileName(instanceProfileName: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun migrationProjectCreationTime(migrationProjectCreationTime: String) {
-    }
+    public fun migrationProjectCreationTime(migrationProjectCreationTime: String)
 
-    public fun migrationProjectIdentifier(migrationProjectIdentifier: String) {
-    }
+    public fun migrationProjectIdentifier(migrationProjectIdentifier: String)
 
-    public fun migrationProjectName(migrationProjectName: String) {
-    }
+    public fun migrationProjectName(migrationProjectName: String)
 
     public
-        fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: IResolvable) {
-    }
+        fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: IResolvable)
 
     public
-        fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty) {
-    }
+        fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("84a92f567083155da430c6daef80fa05ef799b413046f64455802538986c4714")
     public
-        fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty.Builder.() -> Unit) {
-    }
+        fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty.Builder.() -> Unit)
 
-    public fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: IResolvable) {
-    }
+    public fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: IResolvable)
 
-    public fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>) {
-    }
+    public fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable) {
-    }
+    public fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable)
 
-    public fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>) {
-    }
+    public fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>)
 
-    public fun transformationRules(transformationRules: String) {
-    }
+    public fun transformationRules(transformationRules: String)
   }
 
   private class BuilderImpl(
@@ -191,73 +175,73 @@ public open class CfnMigrationProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnMigrationProject.Builder =
         software.amazon.awscdk.services.dms.CfnMigrationProject.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceProfileArn(instanceProfileArn: String) {
+    override fun instanceProfileArn(instanceProfileArn: String) {
       cdkBuilder.instanceProfileArn(instanceProfileArn)
     }
 
-    public override fun instanceProfileIdentifier(instanceProfileIdentifier: String) {
+    override fun instanceProfileIdentifier(instanceProfileIdentifier: String) {
       cdkBuilder.instanceProfileIdentifier(instanceProfileIdentifier)
     }
 
-    public override fun instanceProfileName(instanceProfileName: String) {
+    override fun instanceProfileName(instanceProfileName: String) {
       cdkBuilder.instanceProfileName(instanceProfileName)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun migrationProjectCreationTime(migrationProjectCreationTime: String) {
+    override fun migrationProjectCreationTime(migrationProjectCreationTime: String) {
       cdkBuilder.migrationProjectCreationTime(migrationProjectCreationTime)
     }
 
-    public override fun migrationProjectIdentifier(migrationProjectIdentifier: String) {
+    override fun migrationProjectIdentifier(migrationProjectIdentifier: String) {
       cdkBuilder.migrationProjectIdentifier(migrationProjectIdentifier)
     }
 
-    public override fun migrationProjectName(migrationProjectName: String) {
+    override fun migrationProjectName(migrationProjectName: String) {
       cdkBuilder.migrationProjectName(migrationProjectName)
     }
 
-    public override
+    override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: IResolvable) {
       cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty) {
       cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(SchemaConversionApplicationAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("84a92f567083155da430c6daef80fa05ef799b413046f64455802538986c4714")
-    public override
+    override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty.Builder.() -> Unit):
         Unit =
         schemaConversionApplicationAttributes(SchemaConversionApplicationAttributesProperty(schemaConversionApplicationAttributes))
 
-    public override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: IResolvable) {
+    override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: IResolvable) {
       cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.let(IResolvable::unwrap))
     }
 
-    public override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>) {
+    override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>) {
       cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable) {
+    override fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable) {
       cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.let(IResolvable::unwrap))
     }
 
-    public override fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>) {
+    override fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>) {
       cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors)
     }
 
-    public override fun transformationRules(transformationRules: String) {
+    override fun transformationRules(transformationRules: String) {
       cdkBuilder.transformationRules(transformationRules)
     }
 
@@ -298,20 +282,15 @@ public open class CfnMigrationProject internal constructor(
     public fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
 
     public interface Builder {
-      public fun dataProviderArn(dataProviderArn: String) {
-      }
+      public fun dataProviderArn(dataProviderArn: String)
 
-      public fun dataProviderIdentifier(dataProviderIdentifier: String) {
-      }
+      public fun dataProviderIdentifier(dataProviderIdentifier: String)
 
-      public fun dataProviderName(dataProviderName: String) {
-      }
+      public fun dataProviderName(dataProviderName: String)
 
-      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
-      }
+      public fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String)
 
-      public fun secretsManagerSecretId(secretsManagerSecretId: String) {
-      }
+      public fun secretsManagerSecretId(secretsManagerSecretId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -320,23 +299,23 @@ public open class CfnMigrationProject internal constructor(
           =
           software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty.builder()
 
-      public override fun dataProviderArn(dataProviderArn: String) {
+      override fun dataProviderArn(dataProviderArn: String) {
         cdkBuilder.dataProviderArn(dataProviderArn)
       }
 
-      public override fun dataProviderIdentifier(dataProviderIdentifier: String) {
+      override fun dataProviderIdentifier(dataProviderIdentifier: String) {
         cdkBuilder.dataProviderIdentifier(dataProviderIdentifier)
       }
 
-      public override fun dataProviderName(dataProviderName: String) {
+      override fun dataProviderName(dataProviderName: String) {
         cdkBuilder.dataProviderName(dataProviderName)
       }
 
-      public override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
+      override fun secretsManagerAccessRoleArn(secretsManagerAccessRoleArn: String) {
         cdkBuilder.secretsManagerAccessRoleArn(secretsManagerAccessRoleArn)
       }
 
-      public override fun secretsManagerSecretId(secretsManagerSecretId: String) {
+      override fun secretsManagerSecretId(secretsManagerSecretId: String) {
         cdkBuilder.secretsManagerSecretId(secretsManagerSecretId)
       }
 
@@ -349,18 +328,16 @@ public open class CfnMigrationProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty,
     ) : DataProviderDescriptorProperty {
-      public override fun dataProviderArn(): String? = unwrap(this).getDataProviderArn()
+      override fun dataProviderArn(): String? = unwrap(this).getDataProviderArn()
 
-      public override fun dataProviderIdentifier(): String? =
-          unwrap(this).getDataProviderIdentifier()
+      override fun dataProviderIdentifier(): String? = unwrap(this).getDataProviderIdentifier()
 
-      public override fun dataProviderName(): String? = unwrap(this).getDataProviderName()
+      override fun dataProviderName(): String? = unwrap(this).getDataProviderName()
 
-      public override fun secretsManagerAccessRoleArn(): String? =
+      override fun secretsManagerAccessRoleArn(): String? =
           unwrap(this).getSecretsManagerAccessRoleArn()
 
-      public override fun secretsManagerSecretId(): String? =
-          unwrap(this).getSecretsManagerSecretId()
+      override fun secretsManagerSecretId(): String? = unwrap(this).getSecretsManagerSecretId()
     }
 
     public companion object {
@@ -389,11 +366,9 @@ public open class CfnMigrationProject internal constructor(
     public fun s3BucketRoleArn(): String? = unwrap(this).getS3BucketRoleArn()
 
     public interface Builder {
-      public fun s3BucketPath(s3BucketPath: String) {
-      }
+      public fun s3BucketPath(s3BucketPath: String)
 
-      public fun s3BucketRoleArn(s3BucketRoleArn: String) {
-      }
+      public fun s3BucketRoleArn(s3BucketRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -402,11 +377,11 @@ public open class CfnMigrationProject internal constructor(
           =
           software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty.builder()
 
-      public override fun s3BucketPath(s3BucketPath: String) {
+      override fun s3BucketPath(s3BucketPath: String) {
         cdkBuilder.s3BucketPath(s3BucketPath)
       }
 
-      public override fun s3BucketRoleArn(s3BucketRoleArn: String) {
+      override fun s3BucketRoleArn(s3BucketRoleArn: String) {
         cdkBuilder.s3BucketRoleArn(s3BucketRoleArn)
       }
 
@@ -419,9 +394,9 @@ public open class CfnMigrationProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty,
     ) : SchemaConversionApplicationAttributesProperty {
-      public override fun s3BucketPath(): String? = unwrap(this).getS3BucketPath()
+      override fun s3BucketPath(): String? = unwrap(this).getS3BucketPath()
 
-      public override fun s3BucketRoleArn(): String? = unwrap(this).getS3BucketRoleArn()
+      override fun s3BucketRoleArn(): String? = unwrap(this).getS3BucketRoleArn()
     }
 
     public companion object {

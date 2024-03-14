@@ -66,20 +66,15 @@ public open class CfnEndpointAuthorization internal constructor(
   }
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun force(force: Boolean) {
-    }
+    public fun force(force: Boolean)
 
-    public fun force(force: IResolvable) {
-    }
+    public fun force(force: IResolvable)
 
-    public fun vpcIds(vpcIds: List<String>) {
-    }
+    public fun vpcIds(vpcIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -90,23 +85,23 @@ public open class CfnEndpointAuthorization internal constructor(
         software.amazon.awscdk.services.redshift.CfnEndpointAuthorization.Builder =
         software.amazon.awscdk.services.redshift.CfnEndpointAuthorization.Builder.create(scope, id)
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun force(force: Boolean) {
+    override fun force(force: Boolean) {
       cdkBuilder.force(force)
     }
 
-    public override fun force(force: IResolvable) {
+    override fun force(force: IResolvable) {
       cdkBuilder.force(force.let(IResolvable::unwrap))
     }
 
-    public override fun vpcIds(vpcIds: List<String>) {
+    override fun vpcIds(vpcIds: List<String>) {
       cdkBuilder.vpcIds(vpcIds)
     }
 

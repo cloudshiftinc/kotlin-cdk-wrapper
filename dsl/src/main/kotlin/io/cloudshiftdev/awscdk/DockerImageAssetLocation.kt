@@ -11,29 +11,26 @@ public interface DockerImageAssetLocation {
   public fun repositoryName(): String
 
   public interface Builder {
-    public fun imageTag(imageTag: String) {
-    }
+    public fun imageTag(imageTag: String)
 
-    public fun imageUri(imageUri: String) {
-    }
+    public fun imageUri(imageUri: String)
 
-    public fun repositoryName(repositoryName: String) {
-    }
+    public fun repositoryName(repositoryName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.DockerImageAssetLocation.Builder =
         software.amazon.awscdk.DockerImageAssetLocation.builder()
 
-    public override fun imageTag(imageTag: String) {
+    override fun imageTag(imageTag: String) {
       cdkBuilder.imageTag(imageTag)
     }
 
-    public override fun imageUri(imageUri: String) {
+    override fun imageUri(imageUri: String) {
       cdkBuilder.imageUri(imageUri)
     }
 
-    public override fun repositoryName(repositoryName: String) {
+    override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
 
@@ -43,11 +40,11 @@ public interface DockerImageAssetLocation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.DockerImageAssetLocation,
   ) : DockerImageAssetLocation {
-    public override fun imageTag(): String? = unwrap(this).getImageTag()
+    override fun imageTag(): String? = unwrap(this).getImageTag()
 
-    public override fun imageUri(): String = unwrap(this).getImageUri()
+    override fun imageUri(): String = unwrap(this).getImageUri()
 
-    public override fun repositoryName(): String = unwrap(this).getRepositoryName()
+    override fun repositoryName(): String = unwrap(this).getRepositoryName()
   }
 
   public companion object {

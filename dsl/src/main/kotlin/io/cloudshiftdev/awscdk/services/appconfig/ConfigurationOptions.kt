@@ -24,57 +24,50 @@ public interface ConfigurationOptions {
       emptyList()
 
   public interface Builder {
-    public fun deployTo(deployTo: List<IEnvironment>) {
-    }
+    public fun deployTo(deployTo: List<IEnvironment>)
 
-    public fun deploymentKey(deploymentKey: IKey) {
-    }
+    public fun deploymentKey(deploymentKey: IKey)
 
-    public fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
-    }
+    public fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun type(type: ConfigurationType) {
-    }
+    public fun type(type: ConfigurationType)
 
-    public fun validators(validators: List<IValidator>) {
-    }
+    public fun validators(validators: List<IValidator>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.ConfigurationOptions.Builder =
         software.amazon.awscdk.services.appconfig.ConfigurationOptions.builder()
 
-    public override fun deployTo(deployTo: List<IEnvironment>) {
+    override fun deployTo(deployTo: List<IEnvironment>) {
       cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
     }
 
-    public override fun deploymentKey(deploymentKey: IKey) {
+    override fun deploymentKey(deploymentKey: IKey) {
       cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
     }
 
-    public override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
+    override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
       cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun type(type: ConfigurationType) {
+    override fun type(type: ConfigurationType) {
       cdkBuilder.type(type.let(ConfigurationType::unwrap))
     }
 
-    public override fun validators(validators: List<IValidator>) {
+    override fun validators(validators: List<IValidator>) {
       cdkBuilder.validators(validators.map(IValidator::unwrap))
     }
 
@@ -85,22 +78,21 @@ public interface ConfigurationOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationOptions,
   ) : ConfigurationOptions {
-    public override fun deployTo(): List<IEnvironment> =
+    override fun deployTo(): List<IEnvironment> =
         unwrap(this).getDeployTo()?.map(IEnvironment::wrap) ?: emptyList()
 
-    public override fun deploymentKey(): IKey? = unwrap(this).getDeploymentKey()?.let(IKey::wrap)
+    override fun deploymentKey(): IKey? = unwrap(this).getDeploymentKey()?.let(IKey::wrap)
 
-    public override fun deploymentStrategy(): IDeploymentStrategy? =
+    override fun deploymentStrategy(): IDeploymentStrategy? =
         unwrap(this).getDeploymentStrategy()?.let(IDeploymentStrategy::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
-    public override fun type(): ConfigurationType? =
-        unwrap(this).getType()?.let(ConfigurationType::wrap)
+    override fun type(): ConfigurationType? = unwrap(this).getType()?.let(ConfigurationType::wrap)
 
-    public override fun validators(): List<IValidator> =
+    override fun validators(): List<IValidator> =
         unwrap(this).getValidators()?.map(IValidator::wrap) ?: emptyList()
   }
 

@@ -192,101 +192,72 @@ public open class CfnNodegroup internal constructor(
   }
 
   public interface Builder {
-    public fun amiType(amiType: String) {
-    }
+    public fun amiType(amiType: String)
 
-    public fun capacityType(capacityType: String) {
-    }
+    public fun capacityType(capacityType: String)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun diskSize(diskSize: Number) {
-    }
+    public fun diskSize(diskSize: Number)
 
-    public fun forceUpdateEnabled(forceUpdateEnabled: Boolean) {
-    }
+    public fun forceUpdateEnabled(forceUpdateEnabled: Boolean)
 
-    public fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
-    }
+    public fun forceUpdateEnabled(forceUpdateEnabled: IResolvable)
 
-    public fun instanceTypes(instanceTypes: List<String>) {
-    }
+    public fun instanceTypes(instanceTypes: List<String>)
 
-    public fun labels(labels: IResolvable) {
-    }
+    public fun labels(labels: IResolvable)
 
-    public fun labels(labels: Map<String, String>) {
-    }
+    public fun labels(labels: Map<String, String>)
 
-    public fun launchTemplate(launchTemplate: IResolvable) {
-    }
+    public fun launchTemplate(launchTemplate: IResolvable)
 
-    public fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
-    }
+    public fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5068e50e47e72b3ca242878b66224aab505a0ee1fd81a4c5f18f7fa09be6ffbb")
     public
-        fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit) {
-    }
+        fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
 
-    public fun nodeRole(nodeRole: String) {
-    }
+    public fun nodeRole(nodeRole: String)
 
-    public fun nodegroupName(nodegroupName: String) {
-    }
+    public fun nodegroupName(nodegroupName: String)
 
-    public fun releaseVersion(releaseVersion: String) {
-    }
+    public fun releaseVersion(releaseVersion: String)
 
-    public fun remoteAccess(remoteAccess: IResolvable) {
-    }
+    public fun remoteAccess(remoteAccess: IResolvable)
 
-    public fun remoteAccess(remoteAccess: RemoteAccessProperty) {
-    }
+    public fun remoteAccess(remoteAccess: RemoteAccessProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82542f9443ef3a2998f13604cf218be5d421703ca8bd76e7665b75614c9a70bb")
-    public fun remoteAccess(remoteAccess: RemoteAccessProperty.Builder.() -> Unit) {
-    }
+    public fun remoteAccess(remoteAccess: RemoteAccessProperty.Builder.() -> Unit)
 
-    public fun scalingConfig(scalingConfig: IResolvable) {
-    }
+    public fun scalingConfig(scalingConfig: IResolvable)
 
-    public fun scalingConfig(scalingConfig: ScalingConfigProperty) {
-    }
+    public fun scalingConfig(scalingConfig: ScalingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4d474cf15f29677c1e2f73f1335826830b07542e05be7dce571165d79bfd1c7b")
-    public fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit) {
-    }
+    public fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit)
 
-    public fun subnets(subnets: List<String>) {
-    }
+    public fun subnets(subnets: List<String>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun taints(taints: IResolvable) {
-    }
+    public fun taints(taints: IResolvable)
 
-    public fun taints(taints: List<Any>) {
-    }
+    public fun taints(taints: List<Any>)
 
-    public fun updateConfig(updateConfig: IResolvable) {
-    }
+    public fun updateConfig(updateConfig: IResolvable)
 
-    public fun updateConfig(updateConfig: UpdateConfigProperty) {
-    }
+    public fun updateConfig(updateConfig: UpdateConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10744ef3f8e694462160026bb5d9bfd15ba5bf27ea2f4c0c27caa1bb5194d743")
-    public fun updateConfig(updateConfig: UpdateConfigProperty.Builder.() -> Unit) {
-    }
+    public fun updateConfig(updateConfig: UpdateConfigProperty.Builder.() -> Unit)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -296,124 +267,124 @@ public open class CfnNodegroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnNodegroup.Builder =
         software.amazon.awscdk.services.eks.CfnNodegroup.Builder.create(scope, id)
 
-    public override fun amiType(amiType: String) {
+    override fun amiType(amiType: String) {
       cdkBuilder.amiType(amiType)
     }
 
-    public override fun capacityType(capacityType: String) {
+    override fun capacityType(capacityType: String) {
       cdkBuilder.capacityType(capacityType)
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun diskSize(diskSize: Number) {
+    override fun diskSize(diskSize: Number) {
       cdkBuilder.diskSize(diskSize)
     }
 
-    public override fun forceUpdateEnabled(forceUpdateEnabled: Boolean) {
+    override fun forceUpdateEnabled(forceUpdateEnabled: Boolean) {
       cdkBuilder.forceUpdateEnabled(forceUpdateEnabled)
     }
 
-    public override fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
+    override fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
       cdkBuilder.forceUpdateEnabled(forceUpdateEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun instanceTypes(instanceTypes: List<String>) {
+    override fun instanceTypes(instanceTypes: List<String>) {
       cdkBuilder.instanceTypes(instanceTypes)
     }
 
-    public override fun labels(labels: IResolvable) {
+    override fun labels(labels: IResolvable) {
       cdkBuilder.labels(labels.let(IResolvable::unwrap))
     }
 
-    public override fun labels(labels: Map<String, String>) {
+    override fun labels(labels: Map<String, String>) {
       cdkBuilder.labels(labels)
     }
 
-    public override fun launchTemplate(launchTemplate: IResolvable) {
+    override fun launchTemplate(launchTemplate: IResolvable) {
       cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
     }
 
-    public override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
+    override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
       cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5068e50e47e72b3ca242878b66224aab505a0ee1fd81a4c5f18f7fa09be6ffbb")
-    public override
+    override
         fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
         Unit = launchTemplate(LaunchTemplateSpecificationProperty(launchTemplate))
 
-    public override fun nodeRole(nodeRole: String) {
+    override fun nodeRole(nodeRole: String) {
       cdkBuilder.nodeRole(nodeRole)
     }
 
-    public override fun nodegroupName(nodegroupName: String) {
+    override fun nodegroupName(nodegroupName: String) {
       cdkBuilder.nodegroupName(nodegroupName)
     }
 
-    public override fun releaseVersion(releaseVersion: String) {
+    override fun releaseVersion(releaseVersion: String) {
       cdkBuilder.releaseVersion(releaseVersion)
     }
 
-    public override fun remoteAccess(remoteAccess: IResolvable) {
+    override fun remoteAccess(remoteAccess: IResolvable) {
       cdkBuilder.remoteAccess(remoteAccess.let(IResolvable::unwrap))
     }
 
-    public override fun remoteAccess(remoteAccess: RemoteAccessProperty) {
+    override fun remoteAccess(remoteAccess: RemoteAccessProperty) {
       cdkBuilder.remoteAccess(remoteAccess.let(RemoteAccessProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("82542f9443ef3a2998f13604cf218be5d421703ca8bd76e7665b75614c9a70bb")
-    public override fun remoteAccess(remoteAccess: RemoteAccessProperty.Builder.() -> Unit): Unit =
+    override fun remoteAccess(remoteAccess: RemoteAccessProperty.Builder.() -> Unit): Unit =
         remoteAccess(RemoteAccessProperty(remoteAccess))
 
-    public override fun scalingConfig(scalingConfig: IResolvable) {
+    override fun scalingConfig(scalingConfig: IResolvable) {
       cdkBuilder.scalingConfig(scalingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun scalingConfig(scalingConfig: ScalingConfigProperty) {
+    override fun scalingConfig(scalingConfig: ScalingConfigProperty) {
       cdkBuilder.scalingConfig(scalingConfig.let(ScalingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4d474cf15f29677c1e2f73f1335826830b07542e05be7dce571165d79bfd1c7b")
-    public override fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit): Unit
-        = scalingConfig(ScalingConfigProperty(scalingConfig))
+    override fun scalingConfig(scalingConfig: ScalingConfigProperty.Builder.() -> Unit): Unit =
+        scalingConfig(ScalingConfigProperty(scalingConfig))
 
-    public override fun subnets(subnets: List<String>) {
+    override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun taints(taints: IResolvable) {
+    override fun taints(taints: IResolvable) {
       cdkBuilder.taints(taints.let(IResolvable::unwrap))
     }
 
-    public override fun taints(taints: List<Any>) {
+    override fun taints(taints: List<Any>) {
       cdkBuilder.taints(taints)
     }
 
-    public override fun updateConfig(updateConfig: IResolvable) {
+    override fun updateConfig(updateConfig: IResolvable) {
       cdkBuilder.updateConfig(updateConfig.let(IResolvable::unwrap))
     }
 
-    public override fun updateConfig(updateConfig: UpdateConfigProperty) {
+    override fun updateConfig(updateConfig: UpdateConfigProperty) {
       cdkBuilder.updateConfig(updateConfig.let(UpdateConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10744ef3f8e694462160026bb5d9bfd15ba5bf27ea2f4c0c27caa1bb5194d743")
-    public override fun updateConfig(updateConfig: UpdateConfigProperty.Builder.() -> Unit): Unit =
+    override fun updateConfig(updateConfig: UpdateConfigProperty.Builder.() -> Unit): Unit =
         updateConfig(UpdateConfigProperty(updateConfig))
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -449,29 +420,26 @@ public open class CfnNodegroup internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun effect(effect: String) {
-      }
+      public fun effect(effect: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty.Builder
           = software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty.builder()
 
-      public override fun effect(effect: String) {
+      override fun effect(effect: String) {
         cdkBuilder.effect(effect)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -482,11 +450,11 @@ public open class CfnNodegroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty,
     ) : TaintProperty {
-      public override fun effect(): String? = unwrap(this).getEffect()
+      override fun effect(): String? = unwrap(this).getEffect()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -516,14 +484,11 @@ public open class CfnNodegroup internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -532,15 +497,15 @@ public open class CfnNodegroup internal constructor(
           =
           software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -553,11 +518,11 @@ public open class CfnNodegroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty,
     ) : LaunchTemplateSpecificationProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -588,11 +553,9 @@ public open class CfnNodegroup internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun ec2SshKey(ec2SshKey: String) {
-      }
+      public fun ec2SshKey(ec2SshKey: String)
 
-      public fun sourceSecurityGroups(sourceSecurityGroups: List<String>) {
-      }
+      public fun sourceSecurityGroups(sourceSecurityGroups: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -600,11 +563,11 @@ public open class CfnNodegroup internal constructor(
           software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty.Builder =
           software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty.builder()
 
-      public override fun ec2SshKey(ec2SshKey: String) {
+      override fun ec2SshKey(ec2SshKey: String) {
         cdkBuilder.ec2SshKey(ec2SshKey)
       }
 
-      public override fun sourceSecurityGroups(sourceSecurityGroups: List<String>) {
+      override fun sourceSecurityGroups(sourceSecurityGroups: List<String>) {
         cdkBuilder.sourceSecurityGroups(sourceSecurityGroups)
       }
 
@@ -615,10 +578,10 @@ public open class CfnNodegroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty,
     ) : RemoteAccessProperty {
-      public override fun ec2SshKey(): String = unwrap(this).getEc2SshKey()
+      override fun ec2SshKey(): String = unwrap(this).getEc2SshKey()
 
-      public override fun sourceSecurityGroups(): List<String> =
-          unwrap(this).getSourceSecurityGroups() ?: emptyList()
+      override fun sourceSecurityGroups(): List<String> = unwrap(this).getSourceSecurityGroups() ?:
+          emptyList()
     }
 
     public companion object {
@@ -647,11 +610,9 @@ public open class CfnNodegroup internal constructor(
     public fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
 
     public interface Builder {
-      public fun maxUnavailable(maxUnavailable: Number) {
-      }
+      public fun maxUnavailable(maxUnavailable: Number)
 
-      public fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
-      }
+      public fun maxUnavailablePercentage(maxUnavailablePercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -659,11 +620,11 @@ public open class CfnNodegroup internal constructor(
           software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty.builder()
 
-      public override fun maxUnavailable(maxUnavailable: Number) {
+      override fun maxUnavailable(maxUnavailable: Number) {
         cdkBuilder.maxUnavailable(maxUnavailable)
       }
 
-      public override fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
+      override fun maxUnavailablePercentage(maxUnavailablePercentage: Number) {
         cdkBuilder.maxUnavailablePercentage(maxUnavailablePercentage)
       }
 
@@ -674,10 +635,9 @@ public open class CfnNodegroup internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty,
     ) : UpdateConfigProperty {
-      public override fun maxUnavailable(): Number? = unwrap(this).getMaxUnavailable()
+      override fun maxUnavailable(): Number? = unwrap(this).getMaxUnavailable()
 
-      public override fun maxUnavailablePercentage(): Number? =
-          unwrap(this).getMaxUnavailablePercentage()
+      override fun maxUnavailablePercentage(): Number? = unwrap(this).getMaxUnavailablePercentage()
     }
 
     public companion object {
@@ -708,14 +668,11 @@ public open class CfnNodegroup internal constructor(
     public fun minSize(): Number? = unwrap(this).getMinSize()
 
     public interface Builder {
-      public fun desiredSize(desiredSize: Number) {
-      }
+      public fun desiredSize(desiredSize: Number)
 
-      public fun maxSize(maxSize: Number) {
-      }
+      public fun maxSize(maxSize: Number)
 
-      public fun minSize(minSize: Number) {
-      }
+      public fun minSize(minSize: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -723,15 +680,15 @@ public open class CfnNodegroup internal constructor(
           software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty.builder()
 
-      public override fun desiredSize(desiredSize: Number) {
+      override fun desiredSize(desiredSize: Number) {
         cdkBuilder.desiredSize(desiredSize)
       }
 
-      public override fun maxSize(maxSize: Number) {
+      override fun maxSize(maxSize: Number) {
         cdkBuilder.maxSize(maxSize)
       }
 
-      public override fun minSize(minSize: Number) {
+      override fun minSize(minSize: Number) {
         cdkBuilder.minSize(minSize)
       }
 
@@ -743,11 +700,11 @@ public open class CfnNodegroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty,
     ) : ScalingConfigProperty {
-      public override fun desiredSize(): Number? = unwrap(this).getDesiredSize()
+      override fun desiredSize(): Number? = unwrap(this).getDesiredSize()
 
-      public override fun maxSize(): Number? = unwrap(this).getMaxSize()
+      override fun maxSize(): Number? = unwrap(this).getMaxSize()
 
-      public override fun minSize(): Number? = unwrap(this).getMinSize()
+      override fun minSize(): Number? = unwrap(this).getMinSize()
     }
 
     public companion object {

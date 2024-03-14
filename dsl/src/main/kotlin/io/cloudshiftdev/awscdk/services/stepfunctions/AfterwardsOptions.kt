@@ -9,22 +9,20 @@ public interface AfterwardsOptions {
   public fun includeOtherwise(): Boolean? = unwrap(this).getIncludeOtherwise()
 
   public interface Builder {
-    public fun includeErrorHandlers(includeErrorHandlers: Boolean) {
-    }
+    public fun includeErrorHandlers(includeErrorHandlers: Boolean)
 
-    public fun includeOtherwise(includeOtherwise: Boolean) {
-    }
+    public fun includeOtherwise(includeOtherwise: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions.Builder
         = software.amazon.awscdk.services.stepfunctions.AfterwardsOptions.builder()
 
-    public override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
+    override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
       cdkBuilder.includeErrorHandlers(includeErrorHandlers)
     }
 
-    public override fun includeOtherwise(includeOtherwise: Boolean) {
+    override fun includeOtherwise(includeOtherwise: Boolean) {
       cdkBuilder.includeOtherwise(includeOtherwise)
     }
 
@@ -35,9 +33,9 @@ public interface AfterwardsOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.AfterwardsOptions,
   ) : AfterwardsOptions {
-    public override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
+    override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
 
-    public override fun includeOtherwise(): Boolean? = unwrap(this).getIncludeOtherwise()
+    override fun includeOtherwise(): Boolean? = unwrap(this).getIncludeOtherwise()
   }
 
   public companion object {

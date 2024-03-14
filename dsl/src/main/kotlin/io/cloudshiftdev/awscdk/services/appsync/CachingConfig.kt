@@ -11,22 +11,20 @@ public interface CachingConfig {
   public fun ttl(): Duration
 
   public interface Builder {
-    public fun cachingKeys(cachingKeys: List<String>) {
-    }
+    public fun cachingKeys(cachingKeys: List<String>)
 
-    public fun ttl(ttl: Duration) {
-    }
+    public fun ttl(ttl: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CachingConfig.Builder =
         software.amazon.awscdk.services.appsync.CachingConfig.builder()
 
-    public override fun cachingKeys(cachingKeys: List<String>) {
+    override fun cachingKeys(cachingKeys: List<String>) {
       cdkBuilder.cachingKeys(cachingKeys)
     }
 
-    public override fun ttl(ttl: Duration) {
+    override fun ttl(ttl: Duration) {
       cdkBuilder.ttl(ttl.let(Duration::unwrap))
     }
 
@@ -36,9 +34,9 @@ public interface CachingConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.CachingConfig,
   ) : CachingConfig {
-    public override fun cachingKeys(): List<String> = unwrap(this).getCachingKeys() ?: emptyList()
+    override fun cachingKeys(): List<String> = unwrap(this).getCachingKeys() ?: emptyList()
 
-    public override fun ttl(): Duration = unwrap(this).getTtl().let(Duration::wrap)
+    override fun ttl(): Duration = unwrap(this).getTtl().let(Duration::wrap)
   }
 
   public companion object {

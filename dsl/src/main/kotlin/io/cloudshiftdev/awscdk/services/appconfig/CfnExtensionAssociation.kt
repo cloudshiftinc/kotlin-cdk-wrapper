@@ -69,23 +69,17 @@ public open class CfnExtensionAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun extensionIdentifier(extensionIdentifier: String) {
-    }
+    public fun extensionIdentifier(extensionIdentifier: String)
 
-    public fun extensionVersionNumber(extensionVersionNumber: Number) {
-    }
+    public fun extensionVersionNumber(extensionVersionNumber: Number)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -96,27 +90,27 @@ public open class CfnExtensionAssociation internal constructor(
         software.amazon.awscdk.services.appconfig.CfnExtensionAssociation.Builder =
         software.amazon.awscdk.services.appconfig.CfnExtensionAssociation.Builder.create(scope, id)
 
-    public override fun extensionIdentifier(extensionIdentifier: String) {
+    override fun extensionIdentifier(extensionIdentifier: String) {
       cdkBuilder.extensionIdentifier(extensionIdentifier)
     }
 
-    public override fun extensionVersionNumber(extensionVersionNumber: Number) {
+    override fun extensionVersionNumber(extensionVersionNumber: Number) {
       cdkBuilder.extensionVersionNumber(extensionVersionNumber)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

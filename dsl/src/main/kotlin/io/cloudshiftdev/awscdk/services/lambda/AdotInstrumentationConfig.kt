@@ -8,22 +8,20 @@ public interface AdotInstrumentationConfig {
   public fun layerVersion(): AdotLayerVersion
 
   public interface Builder {
-    public fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
-    }
+    public fun execWrapper(execWrapper: AdotLambdaExecWrapper)
 
-    public fun layerVersion(layerVersion: AdotLayerVersion) {
-    }
+    public fun layerVersion(layerVersion: AdotLayerVersion)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig.Builder
         = software.amazon.awscdk.services.lambda.AdotInstrumentationConfig.builder()
 
-    public override fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
+    override fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
       cdkBuilder.execWrapper(execWrapper.let(AdotLambdaExecWrapper::unwrap))
     }
 
-    public override fun layerVersion(layerVersion: AdotLayerVersion) {
+    override fun layerVersion(layerVersion: AdotLayerVersion) {
       cdkBuilder.layerVersion(layerVersion.let(AdotLayerVersion::unwrap))
     }
 
@@ -34,10 +32,10 @@ public interface AdotInstrumentationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.AdotInstrumentationConfig,
   ) : AdotInstrumentationConfig {
-    public override fun execWrapper(): AdotLambdaExecWrapper =
+    override fun execWrapper(): AdotLambdaExecWrapper =
         unwrap(this).getExecWrapper().let(AdotLambdaExecWrapper::wrap)
 
-    public override fun layerVersion(): AdotLayerVersion =
+    override fun layerVersion(): AdotLayerVersion =
         unwrap(this).getLayerVersion().let(AdotLayerVersion::wrap)
   }
 

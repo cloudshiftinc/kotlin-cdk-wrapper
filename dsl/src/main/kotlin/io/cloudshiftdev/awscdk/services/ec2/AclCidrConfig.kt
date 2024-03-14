@@ -9,22 +9,20 @@ public interface AclCidrConfig {
   public fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
 
   public interface Builder {
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AclCidrConfig.Builder =
         software.amazon.awscdk.services.ec2.AclCidrConfig.builder()
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+    override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
@@ -34,9 +32,9 @@ public interface AclCidrConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AclCidrConfig,
   ) : AclCidrConfig {
-    public override fun cidrBlock(): String? = unwrap(this).getCidrBlock()
+    override fun cidrBlock(): String? = unwrap(this).getCidrBlock()
 
-    public override fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
+    override fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
   }
 
   public companion object {

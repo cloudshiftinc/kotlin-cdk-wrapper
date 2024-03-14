@@ -10,22 +10,20 @@ public interface ZoneDelegationOptions {
   public fun ttl(): Duration? = unwrap(this).getTtl()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun ttl(ttl: Duration) {
-    }
+    public fun ttl(ttl: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.ZoneDelegationOptions.Builder =
         software.amazon.awscdk.services.route53.ZoneDelegationOptions.builder()
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun ttl(ttl: Duration) {
+    override fun ttl(ttl: Duration) {
       cdkBuilder.ttl(ttl.let(Duration::unwrap))
     }
 
@@ -36,9 +34,9 @@ public interface ZoneDelegationOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.ZoneDelegationOptions,
   ) : ZoneDelegationOptions {
-    public override fun comment(): String? = unwrap(this).getComment()
+    override fun comment(): String? = unwrap(this).getComment()
 
-    public override fun ttl(): Duration? = unwrap(this).getTtl()?.let(Duration::wrap)
+    override fun ttl(): Duration? = unwrap(this).getTtl()?.let(Duration::wrap)
   }
 
   public companion object {

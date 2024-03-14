@@ -36,20 +36,15 @@ public open class HttpRoute internal constructor(
   public override fun routeId(): String = unwrap(this).getRouteId()
 
   public interface Builder {
-    public fun authorizationScopes(authorizationScopes: List<String>) {
-    }
+    public fun authorizationScopes(authorizationScopes: List<String>)
 
-    public fun authorizer(authorizer: IHttpRouteAuthorizer) {
-    }
+    public fun authorizer(authorizer: IHttpRouteAuthorizer)
 
-    public fun httpApi(httpApi: IHttpApi) {
-    }
+    public fun httpApi(httpApi: IHttpApi)
 
-    public fun integration(integration: HttpRouteIntegration) {
-    }
+    public fun integration(integration: HttpRouteIntegration)
 
-    public fun routeKey(routeKey: HttpRouteKey) {
-    }
+    public fun routeKey(routeKey: HttpRouteKey)
   }
 
   private class BuilderImpl(
@@ -59,23 +54,23 @@ public open class HttpRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpRoute.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpRoute.Builder.create(scope, id)
 
-    public override fun authorizationScopes(authorizationScopes: List<String>) {
+    override fun authorizationScopes(authorizationScopes: List<String>) {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
-    public override fun authorizer(authorizer: IHttpRouteAuthorizer) {
+    override fun authorizer(authorizer: IHttpRouteAuthorizer) {
       cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer::unwrap))
     }
 
-    public override fun httpApi(httpApi: IHttpApi) {
+    override fun httpApi(httpApi: IHttpApi) {
       cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
     }
 
-    public override fun integration(integration: HttpRouteIntegration) {
+    override fun integration(integration: HttpRouteIntegration) {
       cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
     }
 
-    public override fun routeKey(routeKey: HttpRouteKey) {
+    override fun routeKey(routeKey: HttpRouteKey) {
       cdkBuilder.routeKey(routeKey.let(HttpRouteKey::unwrap))
     }
 

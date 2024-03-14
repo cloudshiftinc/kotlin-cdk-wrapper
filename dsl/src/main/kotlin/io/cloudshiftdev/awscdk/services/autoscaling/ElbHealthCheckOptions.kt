@@ -7,8 +7,7 @@ public interface ElbHealthCheckOptions {
   public fun grace(): Duration
 
   public interface Builder {
-    public fun grace(grace: Duration) {
-    }
+    public fun grace(grace: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ElbHealthCheckOptions {
         software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions.Builder =
         software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions.builder()
 
-    public override fun grace(grace: Duration) {
+    override fun grace(grace: Duration) {
       cdkBuilder.grace(grace.let(Duration::unwrap))
     }
 
@@ -27,7 +26,7 @@ public interface ElbHealthCheckOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions,
   ) : ElbHealthCheckOptions {
-    public override fun grace(): Duration = unwrap(this).getGrace().let(Duration::wrap)
+    override fun grace(): Duration = unwrap(this).getGrace().let(Duration::wrap)
   }
 
   public companion object {

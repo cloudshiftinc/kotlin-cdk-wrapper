@@ -17,11 +17,9 @@ public open class SecretValue internal constructor(
   public open fun unsafeUnwrap(): String = unwrap(this).unsafeUnwrap()
 
   public interface Builder {
-    public fun stackTrace(stackTrace: Boolean) {
-    }
+    public fun stackTrace(stackTrace: Boolean)
 
-    public fun typeHint(typeHint: ResolutionTypeHint) {
-    }
+    public fun typeHint(typeHint: ResolutionTypeHint)
   }
 
   private class BuilderImpl(
@@ -30,11 +28,11 @@ public open class SecretValue internal constructor(
     private val cdkBuilder: software.amazon.awscdk.SecretValue.Builder =
         software.amazon.awscdk.SecretValue.Builder.create(protectedValue)
 
-    public override fun stackTrace(stackTrace: Boolean) {
+    override fun stackTrace(stackTrace: Boolean) {
       cdkBuilder.stackTrace(stackTrace)
     }
 
-    public override fun typeHint(typeHint: ResolutionTypeHint) {
+    override fun typeHint(typeHint: ResolutionTypeHint) {
       cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint::unwrap))
     }
 

@@ -79,32 +79,24 @@ public open class CfnRoom internal constructor(
   }
 
   public interface Builder {
-    public fun loggingConfigurationIdentifiers(loggingConfigurationIdentifiers: List<String>) {
-    }
+    public fun loggingConfigurationIdentifiers(loggingConfigurationIdentifiers: List<String>)
 
-    public fun maximumMessageLength(maximumMessageLength: Number) {
-    }
+    public fun maximumMessageLength(maximumMessageLength: Number)
 
-    public fun maximumMessageRatePerSecond(maximumMessageRatePerSecond: Number) {
-    }
+    public fun maximumMessageRatePerSecond(maximumMessageRatePerSecond: Number)
 
-    public fun messageReviewHandler(messageReviewHandler: IResolvable) {
-    }
+    public fun messageReviewHandler(messageReviewHandler: IResolvable)
 
-    public fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty) {
-    }
+    public fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e81b16974c7ad0a6acdf5a37615c7459552040bc7b0daa1c70fc56505d6925b")
     public
-        fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty.Builder.() -> Unit) {
-    }
+        fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -114,38 +106,37 @@ public open class CfnRoom internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivschat.CfnRoom.Builder =
         software.amazon.awscdk.services.ivschat.CfnRoom.Builder.create(scope, id)
 
-    public override
-        fun loggingConfigurationIdentifiers(loggingConfigurationIdentifiers: List<String>) {
+    override fun loggingConfigurationIdentifiers(loggingConfigurationIdentifiers: List<String>) {
       cdkBuilder.loggingConfigurationIdentifiers(loggingConfigurationIdentifiers)
     }
 
-    public override fun maximumMessageLength(maximumMessageLength: Number) {
+    override fun maximumMessageLength(maximumMessageLength: Number) {
       cdkBuilder.maximumMessageLength(maximumMessageLength)
     }
 
-    public override fun maximumMessageRatePerSecond(maximumMessageRatePerSecond: Number) {
+    override fun maximumMessageRatePerSecond(maximumMessageRatePerSecond: Number) {
       cdkBuilder.maximumMessageRatePerSecond(maximumMessageRatePerSecond)
     }
 
-    public override fun messageReviewHandler(messageReviewHandler: IResolvable) {
+    override fun messageReviewHandler(messageReviewHandler: IResolvable) {
       cdkBuilder.messageReviewHandler(messageReviewHandler.let(IResolvable::unwrap))
     }
 
-    public override fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty) {
+    override fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty) {
       cdkBuilder.messageReviewHandler(messageReviewHandler.let(MessageReviewHandlerProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3e81b16974c7ad0a6acdf5a37615c7459552040bc7b0daa1c70fc56505d6925b")
-    public override
+    override
         fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty.Builder.() -> Unit):
         Unit = messageReviewHandler(MessageReviewHandlerProperty(messageReviewHandler))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -179,11 +170,9 @@ public open class CfnRoom internal constructor(
     public fun uri(): String? = unwrap(this).getUri()
 
     public interface Builder {
-      public fun fallbackResult(fallbackResult: String) {
-      }
+      public fun fallbackResult(fallbackResult: String)
 
-      public fun uri(uri: String) {
-      }
+      public fun uri(uri: String)
     }
 
     private class BuilderImpl : Builder {
@@ -191,11 +180,11 @@ public open class CfnRoom internal constructor(
           software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty.Builder =
           software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty.builder()
 
-      public override fun fallbackResult(fallbackResult: String) {
+      override fun fallbackResult(fallbackResult: String) {
         cdkBuilder.fallbackResult(fallbackResult)
       }
 
-      public override fun uri(uri: String) {
+      override fun uri(uri: String) {
         cdkBuilder.uri(uri)
       }
 
@@ -208,9 +197,9 @@ public open class CfnRoom internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty,
     ) : MessageReviewHandlerProperty {
-      public override fun fallbackResult(): String? = unwrap(this).getFallbackResult()
+      override fun fallbackResult(): String? = unwrap(this).getFallbackResult()
 
-      public override fun uri(): String? = unwrap(this).getUri()
+      override fun uri(): String? = unwrap(this).getUri()
     }
 
     public companion object {

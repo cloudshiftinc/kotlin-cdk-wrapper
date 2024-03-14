@@ -104,44 +104,31 @@ public open class CfnReplicationTask internal constructor(
   }
 
   public interface Builder {
-    public fun cdcStartPosition(cdcStartPosition: String) {
-    }
+    public fun cdcStartPosition(cdcStartPosition: String)
 
-    public fun cdcStartTime(cdcStartTime: Number) {
-    }
+    public fun cdcStartTime(cdcStartTime: Number)
 
-    public fun cdcStopPosition(cdcStopPosition: String) {
-    }
+    public fun cdcStopPosition(cdcStopPosition: String)
 
-    public fun migrationType(migrationType: String) {
-    }
+    public fun migrationType(migrationType: String)
 
-    public fun replicationInstanceArn(replicationInstanceArn: String) {
-    }
+    public fun replicationInstanceArn(replicationInstanceArn: String)
 
-    public fun replicationTaskIdentifier(replicationTaskIdentifier: String) {
-    }
+    public fun replicationTaskIdentifier(replicationTaskIdentifier: String)
 
-    public fun replicationTaskSettings(replicationTaskSettings: String) {
-    }
+    public fun replicationTaskSettings(replicationTaskSettings: String)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
 
-    public fun sourceEndpointArn(sourceEndpointArn: String) {
-    }
+    public fun sourceEndpointArn(sourceEndpointArn: String)
 
-    public fun tableMappings(tableMappings: String) {
-    }
+    public fun tableMappings(tableMappings: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetEndpointArn(targetEndpointArn: String) {
-    }
+    public fun targetEndpointArn(targetEndpointArn: String)
 
-    public fun taskData(taskData: String) {
-    }
+    public fun taskData(taskData: String)
   }
 
   private class BuilderImpl(
@@ -151,55 +138,55 @@ public open class CfnReplicationTask internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnReplicationTask.Builder =
         software.amazon.awscdk.services.dms.CfnReplicationTask.Builder.create(scope, id)
 
-    public override fun cdcStartPosition(cdcStartPosition: String) {
+    override fun cdcStartPosition(cdcStartPosition: String) {
       cdkBuilder.cdcStartPosition(cdcStartPosition)
     }
 
-    public override fun cdcStartTime(cdcStartTime: Number) {
+    override fun cdcStartTime(cdcStartTime: Number) {
       cdkBuilder.cdcStartTime(cdcStartTime)
     }
 
-    public override fun cdcStopPosition(cdcStopPosition: String) {
+    override fun cdcStopPosition(cdcStopPosition: String) {
       cdkBuilder.cdcStopPosition(cdcStopPosition)
     }
 
-    public override fun migrationType(migrationType: String) {
+    override fun migrationType(migrationType: String) {
       cdkBuilder.migrationType(migrationType)
     }
 
-    public override fun replicationInstanceArn(replicationInstanceArn: String) {
+    override fun replicationInstanceArn(replicationInstanceArn: String) {
       cdkBuilder.replicationInstanceArn(replicationInstanceArn)
     }
 
-    public override fun replicationTaskIdentifier(replicationTaskIdentifier: String) {
+    override fun replicationTaskIdentifier(replicationTaskIdentifier: String) {
       cdkBuilder.replicationTaskIdentifier(replicationTaskIdentifier)
     }
 
-    public override fun replicationTaskSettings(replicationTaskSettings: String) {
+    override fun replicationTaskSettings(replicationTaskSettings: String) {
       cdkBuilder.replicationTaskSettings(replicationTaskSettings)
     }
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 
-    public override fun sourceEndpointArn(sourceEndpointArn: String) {
+    override fun sourceEndpointArn(sourceEndpointArn: String) {
       cdkBuilder.sourceEndpointArn(sourceEndpointArn)
     }
 
-    public override fun tableMappings(tableMappings: String) {
+    override fun tableMappings(tableMappings: String) {
       cdkBuilder.tableMappings(tableMappings)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetEndpointArn(targetEndpointArn: String) {
+    override fun targetEndpointArn(targetEndpointArn: String) {
       cdkBuilder.targetEndpointArn(targetEndpointArn)
     }
 
-    public override fun taskData(taskData: String) {
+    override fun taskData(taskData: String) {
       cdkBuilder.taskData(taskData)
     }
 

@@ -89,39 +89,30 @@ public open class CfnMembership internal constructor(
   }
 
   public interface Builder {
-    public fun collaborationIdentifier(collaborationIdentifier: String) {
-    }
+    public fun collaborationIdentifier(collaborationIdentifier: String)
 
-    public fun defaultResultConfiguration(defaultResultConfiguration: IResolvable) {
-    }
+    public fun defaultResultConfiguration(defaultResultConfiguration: IResolvable)
 
     public
-        fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty) {
-    }
+        fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff10055830626e7a3e8e88058441fda25c39c687a5dc20f0ad94ad925fbcf884")
     public
-        fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty.Builder.() -> Unit)
 
-    public fun paymentConfiguration(paymentConfiguration: IResolvable) {
-    }
+    public fun paymentConfiguration(paymentConfiguration: IResolvable)
 
-    public fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty) {
-    }
+    public fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9448e8539ccbb7c90896b2c06fdc1dc42d633ae9b6cd07facc40e0ff0d79fe3b")
     public
-        fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty.Builder.() -> Unit)
 
-    public fun queryLogStatus(queryLogStatus: String) {
-    }
+    public fun queryLogStatus(queryLogStatus: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -131,46 +122,46 @@ public open class CfnMembership internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cleanrooms.CfnMembership.Builder =
         software.amazon.awscdk.services.cleanrooms.CfnMembership.Builder.create(scope, id)
 
-    public override fun collaborationIdentifier(collaborationIdentifier: String) {
+    override fun collaborationIdentifier(collaborationIdentifier: String) {
       cdkBuilder.collaborationIdentifier(collaborationIdentifier)
     }
 
-    public override fun defaultResultConfiguration(defaultResultConfiguration: IResolvable) {
+    override fun defaultResultConfiguration(defaultResultConfiguration: IResolvable) {
       cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty) {
       cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(MembershipProtectedQueryResultConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff10055830626e7a3e8e88058441fda25c39c687a5dc20f0ad94ad925fbcf884")
-    public override
+    override
         fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty.Builder.() -> Unit):
         Unit =
         defaultResultConfiguration(MembershipProtectedQueryResultConfigurationProperty(defaultResultConfiguration))
 
-    public override fun paymentConfiguration(paymentConfiguration: IResolvable) {
+    override fun paymentConfiguration(paymentConfiguration: IResolvable) {
       cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty) {
       cdkBuilder.paymentConfiguration(paymentConfiguration.let(MembershipPaymentConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9448e8539ccbb7c90896b2c06fdc1dc42d633ae9b6cd07facc40e0ff0d79fe3b")
-    public override
+    override
         fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty.Builder.() -> Unit):
         Unit = paymentConfiguration(MembershipPaymentConfigurationProperty(paymentConfiguration))
 
-    public override fun queryLogStatus(queryLogStatus: String) {
+    override fun queryLogStatus(queryLogStatus: String) {
       cdkBuilder.queryLogStatus(queryLogStatus)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -203,17 +194,14 @@ public open class CfnMembership internal constructor(
     public fun queryCompute(): Any
 
     public interface Builder {
-      public fun queryCompute(queryCompute: IResolvable) {
-      }
+      public fun queryCompute(queryCompute: IResolvable)
 
-      public fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty) {
-      }
+      public fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("99db9738787f7ef099be61fcf4a886932773ebc185510d1ce209505a4bf570fe")
       public
-          fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty.Builder.() -> Unit) {
-      }
+          fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -222,17 +210,17 @@ public open class CfnMembership internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty.builder()
 
-      public override fun queryCompute(queryCompute: IResolvable) {
+      override fun queryCompute(queryCompute: IResolvable) {
         cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
       }
 
-      public override fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty) {
+      override fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty) {
         cdkBuilder.queryCompute(queryCompute.let(MembershipQueryComputePaymentConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("99db9738787f7ef099be61fcf4a886932773ebc185510d1ce209505a4bf570fe")
-      public override
+      override
           fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty.Builder.() -> Unit):
           Unit = queryCompute(MembershipQueryComputePaymentConfigProperty(queryCompute))
 
@@ -245,7 +233,7 @@ public open class CfnMembership internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipPaymentConfigurationProperty,
     ) : MembershipPaymentConfigurationProperty {
-      public override fun queryCompute(): Any = unwrap(this).getQueryCompute()
+      override fun queryCompute(): Any = unwrap(this).getQueryCompute()
     }
 
     public companion object {
@@ -277,14 +265,11 @@ public open class CfnMembership internal constructor(
     public fun resultFormat(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun keyPrefix(keyPrefix: String) {
-      }
+      public fun keyPrefix(keyPrefix: String)
 
-      public fun resultFormat(resultFormat: String) {
-      }
+      public fun resultFormat(resultFormat: String)
     }
 
     private class BuilderImpl : Builder {
@@ -293,15 +278,15 @@ public open class CfnMembership internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun keyPrefix(keyPrefix: String) {
+      override fun keyPrefix(keyPrefix: String) {
         cdkBuilder.keyPrefix(keyPrefix)
       }
 
-      public override fun resultFormat(resultFormat: String) {
+      override fun resultFormat(resultFormat: String) {
         cdkBuilder.resultFormat(resultFormat)
       }
 
@@ -314,11 +299,11 @@ public open class CfnMembership internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnMembership.ProtectedQueryS3OutputConfigurationProperty,
     ) : ProtectedQueryS3OutputConfigurationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
+      override fun keyPrefix(): String? = unwrap(this).getKeyPrefix()
 
-      public override fun resultFormat(): String = unwrap(this).getResultFormat()
+      override fun resultFormat(): String = unwrap(this).getResultFormat()
     }
 
     public companion object {
@@ -346,11 +331,9 @@ public open class CfnMembership internal constructor(
     public fun isResponsible(): Any
 
     public interface Builder {
-      public fun isResponsible(isResponsible: Boolean) {
-      }
+      public fun isResponsible(isResponsible: Boolean)
 
-      public fun isResponsible(isResponsible: IResolvable) {
-      }
+      public fun isResponsible(isResponsible: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -359,11 +342,11 @@ public open class CfnMembership internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty.builder()
 
-      public override fun isResponsible(isResponsible: Boolean) {
+      override fun isResponsible(isResponsible: Boolean) {
         cdkBuilder.isResponsible(isResponsible)
       }
 
-      public override fun isResponsible(isResponsible: IResolvable) {
+      override fun isResponsible(isResponsible: IResolvable) {
         cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
       }
 
@@ -376,7 +359,7 @@ public open class CfnMembership internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipQueryComputePaymentConfigProperty,
     ) : MembershipQueryComputePaymentConfigProperty {
-      public override fun isResponsible(): Any = unwrap(this).getIsResponsible()
+      override fun isResponsible(): Any = unwrap(this).getIsResponsible()
     }
 
     public companion object {
@@ -406,21 +389,17 @@ public open class CfnMembership internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun outputConfiguration(outputConfiguration: IResolvable) {
-      }
+      public fun outputConfiguration(outputConfiguration: IResolvable)
 
       public
-          fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty) {
-      }
+          fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93a26914910069f23c97364d93aff5d276755a5650cbd67e26be4291735331f4")
       public
-          fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty.Builder.() -> Unit)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -429,23 +408,23 @@ public open class CfnMembership internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty.builder()
 
-      public override fun outputConfiguration(outputConfiguration: IResolvable) {
+      override fun outputConfiguration(outputConfiguration: IResolvable) {
         cdkBuilder.outputConfiguration(outputConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty) {
         cdkBuilder.outputConfiguration(outputConfiguration.let(MembershipProtectedQueryOutputConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93a26914910069f23c97364d93aff5d276755a5650cbd67e26be4291735331f4")
-      public override
+      override
           fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty.Builder.() -> Unit):
           Unit =
           outputConfiguration(MembershipProtectedQueryOutputConfigurationProperty(outputConfiguration))
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -458,9 +437,9 @@ public open class CfnMembership internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryResultConfigurationProperty,
     ) : MembershipProtectedQueryResultConfigurationProperty {
-      public override fun outputConfiguration(): Any = unwrap(this).getOutputConfiguration()
+      override fun outputConfiguration(): Any = unwrap(this).getOutputConfiguration()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -488,16 +467,13 @@ public open class CfnMembership internal constructor(
     public fun s3(): Any
 
     public interface Builder {
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
-      }
+      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
-      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -506,18 +482,18 @@ public open class CfnMembership internal constructor(
           =
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty.builder()
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
+      override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
         cdkBuilder.s3(s3.let(ProtectedQueryS3OutputConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b2597a2165549dafd127ba9eee175ac3ddd48f847c4150eae23d54c4edf57e86")
-      public override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit):
-          Unit = s3(ProtectedQueryS3OutputConfigurationProperty(s3))
+      override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty.Builder.() -> Unit): Unit =
+          s3(ProtectedQueryS3OutputConfigurationProperty(s3))
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty
@@ -528,7 +504,7 @@ public open class CfnMembership internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnMembership.MembershipProtectedQueryOutputConfigurationProperty,
     ) : MembershipProtectedQueryOutputConfigurationProperty {
-      public override fun s3(): Any = unwrap(this).getS3()
+      override fun s3(): Any = unwrap(this).getS3()
     }
 
     public companion object {

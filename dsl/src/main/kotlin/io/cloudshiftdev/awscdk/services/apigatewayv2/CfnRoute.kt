@@ -100,44 +100,31 @@ public open class CfnRoute internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun apiKeyRequired(apiKeyRequired: Boolean) {
-    }
+    public fun apiKeyRequired(apiKeyRequired: Boolean)
 
-    public fun apiKeyRequired(apiKeyRequired: IResolvable) {
-    }
+    public fun apiKeyRequired(apiKeyRequired: IResolvable)
 
-    public fun authorizationScopes(authorizationScopes: List<String>) {
-    }
+    public fun authorizationScopes(authorizationScopes: List<String>)
 
-    public fun authorizationType(authorizationType: String) {
-    }
+    public fun authorizationType(authorizationType: String)
 
-    public fun authorizerId(authorizerId: String) {
-    }
+    public fun authorizerId(authorizerId: String)
 
-    public fun modelSelectionExpression(modelSelectionExpression: String) {
-    }
+    public fun modelSelectionExpression(modelSelectionExpression: String)
 
-    public fun operationName(operationName: String) {
-    }
+    public fun operationName(operationName: String)
 
-    public fun requestModels(requestModels: Any) {
-    }
+    public fun requestModels(requestModels: Any)
 
-    public fun requestParameters(requestParameters: Any) {
-    }
+    public fun requestParameters(requestParameters: Any)
 
-    public fun routeKey(routeKey: String) {
-    }
+    public fun routeKey(routeKey: String)
 
-    public fun routeResponseSelectionExpression(routeResponseSelectionExpression: String) {
-    }
+    public fun routeResponseSelectionExpression(routeResponseSelectionExpression: String)
 
-    public fun target(target: String) {
-    }
+    public fun target(target: String)
   }
 
   private class BuilderImpl(
@@ -147,55 +134,55 @@ public open class CfnRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnRoute.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnRoute.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun apiKeyRequired(apiKeyRequired: Boolean) {
+    override fun apiKeyRequired(apiKeyRequired: Boolean) {
       cdkBuilder.apiKeyRequired(apiKeyRequired)
     }
 
-    public override fun apiKeyRequired(apiKeyRequired: IResolvable) {
+    override fun apiKeyRequired(apiKeyRequired: IResolvable) {
       cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable::unwrap))
     }
 
-    public override fun authorizationScopes(authorizationScopes: List<String>) {
+    override fun authorizationScopes(authorizationScopes: List<String>) {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
-    public override fun authorizationType(authorizationType: String) {
+    override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)
     }
 
-    public override fun authorizerId(authorizerId: String) {
+    override fun authorizerId(authorizerId: String) {
       cdkBuilder.authorizerId(authorizerId)
     }
 
-    public override fun modelSelectionExpression(modelSelectionExpression: String) {
+    override fun modelSelectionExpression(modelSelectionExpression: String) {
       cdkBuilder.modelSelectionExpression(modelSelectionExpression)
     }
 
-    public override fun operationName(operationName: String) {
+    override fun operationName(operationName: String) {
       cdkBuilder.operationName(operationName)
     }
 
-    public override fun requestModels(requestModels: Any) {
+    override fun requestModels(requestModels: Any) {
       cdkBuilder.requestModels(requestModels)
     }
 
-    public override fun requestParameters(requestParameters: Any) {
+    override fun requestParameters(requestParameters: Any) {
       cdkBuilder.requestParameters(requestParameters)
     }
 
-    public override fun routeKey(routeKey: String) {
+    override fun routeKey(routeKey: String) {
       cdkBuilder.routeKey(routeKey)
     }
 
-    public override fun routeResponseSelectionExpression(routeResponseSelectionExpression: String) {
+    override fun routeResponseSelectionExpression(routeResponseSelectionExpression: String) {
       cdkBuilder.routeResponseSelectionExpression(routeResponseSelectionExpression)
     }
 
-    public override fun target(target: String) {
+    override fun target(target: String) {
       cdkBuilder.target(target)
     }
 
@@ -227,11 +214,9 @@ public open class CfnRoute internal constructor(
     public fun required(): Any
 
     public interface Builder {
-      public fun required(required: Boolean) {
-      }
+      public fun required(required: Boolean)
 
-      public fun required(required: IResolvable) {
-      }
+      public fun required(required: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -240,11 +225,11 @@ public open class CfnRoute internal constructor(
           =
           software.amazon.awscdk.services.apigatewayv2.CfnRoute.ParameterConstraintsProperty.builder()
 
-      public override fun required(required: Boolean) {
+      override fun required(required: Boolean) {
         cdkBuilder.required(required)
       }
 
-      public override fun required(required: IResolvable) {
+      override fun required(required: IResolvable) {
         cdkBuilder.required(required.let(IResolvable::unwrap))
       }
 
@@ -257,7 +242,7 @@ public open class CfnRoute internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnRoute.ParameterConstraintsProperty,
     ) : ParameterConstraintsProperty {
-      public override fun required(): Any = unwrap(this).getRequired()
+      override fun required(): Any = unwrap(this).getRequired()
     }
 
     public companion object {

@@ -49,22 +49,17 @@ public open class CfnRefreshSchedule internal constructor(
       schedule(RefreshScheduleMapProperty(`value`))
 
   public interface Builder {
-    public fun awsAccountId(awsAccountId: String) {
-    }
+    public fun awsAccountId(awsAccountId: String)
 
-    public fun dataSetId(dataSetId: String) {
-    }
+    public fun dataSetId(dataSetId: String)
 
-    public fun schedule(schedule: IResolvable) {
-    }
+    public fun schedule(schedule: IResolvable)
 
-    public fun schedule(schedule: RefreshScheduleMapProperty) {
-    }
+    public fun schedule(schedule: RefreshScheduleMapProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("52e693c9de60b1b324b06a83450970e99c0a671b7ca88308bc21570e1c0e3734")
-    public fun schedule(schedule: RefreshScheduleMapProperty.Builder.() -> Unit) {
-    }
+    public fun schedule(schedule: RefreshScheduleMapProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -74,25 +69,25 @@ public open class CfnRefreshSchedule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.Builder =
         software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.Builder.create(scope, id)
 
-    public override fun awsAccountId(awsAccountId: String) {
+    override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
     }
 
-    public override fun dataSetId(dataSetId: String) {
+    override fun dataSetId(dataSetId: String) {
       cdkBuilder.dataSetId(dataSetId)
     }
 
-    public override fun schedule(schedule: IResolvable) {
+    override fun schedule(schedule: IResolvable) {
       cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
     }
 
-    public override fun schedule(schedule: RefreshScheduleMapProperty) {
+    override fun schedule(schedule: RefreshScheduleMapProperty) {
       cdkBuilder.schedule(schedule.let(RefreshScheduleMapProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("52e693c9de60b1b324b06a83450970e99c0a671b7ca88308bc21570e1c0e3734")
-    public override fun schedule(schedule: RefreshScheduleMapProperty.Builder.() -> Unit): Unit =
+    override fun schedule(schedule: RefreshScheduleMapProperty.Builder.() -> Unit): Unit =
         schedule(RefreshScheduleMapProperty(schedule))
 
     public fun build(): software.amazon.awscdk.services.quicksight.CfnRefreshSchedule =
@@ -130,25 +125,19 @@ public open class CfnRefreshSchedule internal constructor(
     public fun timeZone(): String? = unwrap(this).getTimeZone()
 
     public interface Builder {
-      public fun interval(interval: String) {
-      }
+      public fun interval(interval: String)
 
-      public fun refreshOnDay(refreshOnDay: IResolvable) {
-      }
+      public fun refreshOnDay(refreshOnDay: IResolvable)
 
-      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty) {
-      }
+      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2aabefabd2b49635906ee287c73e7cab744c88a7bdfcfa93bfe65dda8f54d64e")
-      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit) {
-      }
+      public fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit)
 
-      public fun timeOfTheDay(timeOfTheDay: String) {
-      }
+      public fun timeOfTheDay(timeOfTheDay: String)
 
-      public fun timeZone(timeZone: String) {
-      }
+      public fun timeZone(timeZone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -157,28 +146,28 @@ public open class CfnRefreshSchedule internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty.builder()
 
-      public override fun interval(interval: String) {
+      override fun interval(interval: String) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun refreshOnDay(refreshOnDay: IResolvable) {
+      override fun refreshOnDay(refreshOnDay: IResolvable) {
         cdkBuilder.refreshOnDay(refreshOnDay.let(IResolvable::unwrap))
       }
 
-      public override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty) {
+      override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty) {
         cdkBuilder.refreshOnDay(refreshOnDay.let(RefreshOnDayProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2aabefabd2b49635906ee287c73e7cab744c88a7bdfcfa93bfe65dda8f54d64e")
-      public override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit): Unit
-          = refreshOnDay(RefreshOnDayProperty(refreshOnDay))
+      override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty.Builder.() -> Unit): Unit =
+          refreshOnDay(RefreshOnDayProperty(refreshOnDay))
 
-      public override fun timeOfTheDay(timeOfTheDay: String) {
+      override fun timeOfTheDay(timeOfTheDay: String) {
         cdkBuilder.timeOfTheDay(timeOfTheDay)
       }
 
-      public override fun timeZone(timeZone: String) {
+      override fun timeZone(timeZone: String) {
         cdkBuilder.timeZone(timeZone)
       }
 
@@ -191,13 +180,13 @@ public open class CfnRefreshSchedule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.ScheduleFrequencyProperty,
     ) : ScheduleFrequencyProperty {
-      public override fun interval(): String? = unwrap(this).getInterval()
+      override fun interval(): String? = unwrap(this).getInterval()
 
-      public override fun refreshOnDay(): Any? = unwrap(this).getRefreshOnDay()
+      override fun refreshOnDay(): Any? = unwrap(this).getRefreshOnDay()
 
-      public override fun timeOfTheDay(): String? = unwrap(this).getTimeOfTheDay()
+      override fun timeOfTheDay(): String? = unwrap(this).getTimeOfTheDay()
 
-      public override fun timeZone(): String? = unwrap(this).getTimeZone()
+      override fun timeZone(): String? = unwrap(this).getTimeZone()
     }
 
     public companion object {
@@ -226,11 +215,9 @@ public open class CfnRefreshSchedule internal constructor(
     public fun dayOfWeek(): String? = unwrap(this).getDayOfWeek()
 
     public interface Builder {
-      public fun dayOfMonth(dayOfMonth: String) {
-      }
+      public fun dayOfMonth(dayOfMonth: String)
 
-      public fun dayOfWeek(dayOfWeek: String) {
-      }
+      public fun dayOfWeek(dayOfWeek: String)
     }
 
     private class BuilderImpl : Builder {
@@ -239,11 +226,11 @@ public open class CfnRefreshSchedule internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty.builder()
 
-      public override fun dayOfMonth(dayOfMonth: String) {
+      override fun dayOfMonth(dayOfMonth: String) {
         cdkBuilder.dayOfMonth(dayOfMonth)
       }
 
-      public override fun dayOfWeek(dayOfWeek: String) {
+      override fun dayOfWeek(dayOfWeek: String) {
         cdkBuilder.dayOfWeek(dayOfWeek)
       }
 
@@ -256,9 +243,9 @@ public open class CfnRefreshSchedule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshOnDayProperty,
     ) : RefreshOnDayProperty {
-      public override fun dayOfMonth(): String? = unwrap(this).getDayOfMonth()
+      override fun dayOfMonth(): String? = unwrap(this).getDayOfMonth()
 
-      public override fun dayOfWeek(): String? = unwrap(this).getDayOfWeek()
+      override fun dayOfWeek(): String? = unwrap(this).getDayOfWeek()
     }
 
     public companion object {
@@ -291,26 +278,19 @@ public open class CfnRefreshSchedule internal constructor(
     public fun startAfterDateTime(): String? = unwrap(this).getStartAfterDateTime()
 
     public interface Builder {
-      public fun refreshType(refreshType: String) {
-      }
+      public fun refreshType(refreshType: String)
 
-      public fun scheduleFrequency(scheduleFrequency: IResolvable) {
-      }
+      public fun scheduleFrequency(scheduleFrequency: IResolvable)
 
-      public fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty) {
-      }
+      public fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd298fed8f8ced1e9e3f632ed02bbb645481d7e8f484bb4a92d79efaf1a1e651")
-      public
-          fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty.Builder.() -> Unit) {
-      }
+      public fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty.Builder.() -> Unit)
 
-      public fun scheduleId(scheduleId: String) {
-      }
+      public fun scheduleId(scheduleId: String)
 
-      public fun startAfterDateTime(startAfterDateTime: String) {
-      }
+      public fun startAfterDateTime(startAfterDateTime: String)
     }
 
     private class BuilderImpl : Builder {
@@ -319,29 +299,29 @@ public open class CfnRefreshSchedule internal constructor(
           =
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty.builder()
 
-      public override fun refreshType(refreshType: String) {
+      override fun refreshType(refreshType: String) {
         cdkBuilder.refreshType(refreshType)
       }
 
-      public override fun scheduleFrequency(scheduleFrequency: IResolvable) {
+      override fun scheduleFrequency(scheduleFrequency: IResolvable) {
         cdkBuilder.scheduleFrequency(scheduleFrequency.let(IResolvable::unwrap))
       }
 
-      public override fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty) {
+      override fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty) {
         cdkBuilder.scheduleFrequency(scheduleFrequency.let(ScheduleFrequencyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd298fed8f8ced1e9e3f632ed02bbb645481d7e8f484bb4a92d79efaf1a1e651")
-      public override
+      override
           fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty.Builder.() -> Unit):
           Unit = scheduleFrequency(ScheduleFrequencyProperty(scheduleFrequency))
 
-      public override fun scheduleId(scheduleId: String) {
+      override fun scheduleId(scheduleId: String) {
         cdkBuilder.scheduleId(scheduleId)
       }
 
-      public override fun startAfterDateTime(startAfterDateTime: String) {
+      override fun startAfterDateTime(startAfterDateTime: String) {
         cdkBuilder.startAfterDateTime(startAfterDateTime)
       }
 
@@ -354,13 +334,13 @@ public open class CfnRefreshSchedule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnRefreshSchedule.RefreshScheduleMapProperty,
     ) : RefreshScheduleMapProperty {
-      public override fun refreshType(): String? = unwrap(this).getRefreshType()
+      override fun refreshType(): String? = unwrap(this).getRefreshType()
 
-      public override fun scheduleFrequency(): Any? = unwrap(this).getScheduleFrequency()
+      override fun scheduleFrequency(): Any? = unwrap(this).getScheduleFrequency()
 
-      public override fun scheduleId(): String? = unwrap(this).getScheduleId()
+      override fun scheduleId(): String? = unwrap(this).getScheduleId()
 
-      public override fun startAfterDateTime(): String? = unwrap(this).getStartAfterDateTime()
+      override fun startAfterDateTime(): String? = unwrap(this).getStartAfterDateTime()
     }
 
     public companion object {

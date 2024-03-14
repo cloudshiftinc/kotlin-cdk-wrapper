@@ -9,11 +9,9 @@ public interface NumberAttributeConstraints {
   public fun min(): Number? = unwrap(this).getMin()
 
   public interface Builder {
-    public fun max(max: Number) {
-    }
+    public fun max(max: Number)
 
-    public fun min(min: Number) {
-    }
+    public fun min(min: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface NumberAttributeConstraints {
         software.amazon.awscdk.services.cognito.NumberAttributeConstraints.Builder =
         software.amazon.awscdk.services.cognito.NumberAttributeConstraints.builder()
 
-    public override fun max(max: Number) {
+    override fun max(max: Number) {
       cdkBuilder.max(max)
     }
 
-    public override fun min(min: Number) {
+    override fun min(min: Number) {
       cdkBuilder.min(min)
     }
 
@@ -36,9 +34,9 @@ public interface NumberAttributeConstraints {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.NumberAttributeConstraints,
   ) : NumberAttributeConstraints {
-    public override fun max(): Number? = unwrap(this).getMax()
+    override fun max(): Number? = unwrap(this).getMax()
 
-    public override fun min(): Number? = unwrap(this).getMin()
+    override fun min(): Number? = unwrap(this).getMin()
   }
 
   public companion object {

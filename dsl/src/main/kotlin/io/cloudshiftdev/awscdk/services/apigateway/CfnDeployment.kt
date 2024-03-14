@@ -76,38 +76,28 @@ public open class CfnDeployment internal constructor(
   }
 
   public interface Builder {
-    public fun deploymentCanarySettings(deploymentCanarySettings: IResolvable) {
-    }
+    public fun deploymentCanarySettings(deploymentCanarySettings: IResolvable)
 
-    public
-        fun deploymentCanarySettings(deploymentCanarySettings: DeploymentCanarySettingsProperty) {
-    }
+    public fun deploymentCanarySettings(deploymentCanarySettings: DeploymentCanarySettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21ca97cf0bfe9c1d1a8e979a091cf9b903730552a61247da8173598a65b875e7")
     public
-        fun deploymentCanarySettings(deploymentCanarySettings: DeploymentCanarySettingsProperty.Builder.() -> Unit) {
-    }
+        fun deploymentCanarySettings(deploymentCanarySettings: DeploymentCanarySettingsProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
 
-    public fun stageDescription(stageDescription: IResolvable) {
-    }
+    public fun stageDescription(stageDescription: IResolvable)
 
-    public fun stageDescription(stageDescription: StageDescriptionProperty) {
-    }
+    public fun stageDescription(stageDescription: StageDescriptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e7de6599aa5bbb04a85de443363a03d57d178779fe82e4ad4710eb5076fe1fd")
-    public fun stageDescription(stageDescription: StageDescriptionProperty.Builder.() -> Unit) {
-    }
+    public fun stageDescription(stageDescription: StageDescriptionProperty.Builder.() -> Unit)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl(
@@ -117,44 +107,43 @@ public open class CfnDeployment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnDeployment.Builder =
         software.amazon.awscdk.services.apigateway.CfnDeployment.Builder.create(scope, id)
 
-    public override fun deploymentCanarySettings(deploymentCanarySettings: IResolvable) {
+    override fun deploymentCanarySettings(deploymentCanarySettings: IResolvable) {
       cdkBuilder.deploymentCanarySettings(deploymentCanarySettings.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun deploymentCanarySettings(deploymentCanarySettings: DeploymentCanarySettingsProperty) {
       cdkBuilder.deploymentCanarySettings(deploymentCanarySettings.let(DeploymentCanarySettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21ca97cf0bfe9c1d1a8e979a091cf9b903730552a61247da8173598a65b875e7")
-    public override
+    override
         fun deploymentCanarySettings(deploymentCanarySettings: DeploymentCanarySettingsProperty.Builder.() -> Unit):
         Unit = deploymentCanarySettings(DeploymentCanarySettingsProperty(deploymentCanarySettings))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
-    public override fun stageDescription(stageDescription: IResolvable) {
+    override fun stageDescription(stageDescription: IResolvable) {
       cdkBuilder.stageDescription(stageDescription.let(IResolvable::unwrap))
     }
 
-    public override fun stageDescription(stageDescription: StageDescriptionProperty) {
+    override fun stageDescription(stageDescription: StageDescriptionProperty) {
       cdkBuilder.stageDescription(stageDescription.let(StageDescriptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e7de6599aa5bbb04a85de443363a03d57d178779fe82e4ad4710eb5076fe1fd")
-    public override
-        fun stageDescription(stageDescription: StageDescriptionProperty.Builder.() -> Unit): Unit =
-        stageDescription(StageDescriptionProperty(stageDescription))
+    override fun stageDescription(stageDescription: StageDescriptionProperty.Builder.() -> Unit):
+        Unit = stageDescription(StageDescriptionProperty(stageDescription))
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
@@ -223,102 +212,71 @@ public open class CfnDeployment internal constructor(
     public fun variables(): Any? = unwrap(this).getVariables()
 
     public interface Builder {
-      public fun accessLogSetting(accessLogSetting: IResolvable) {
-      }
+      public fun accessLogSetting(accessLogSetting: IResolvable)
 
-      public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
-      }
+      public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("476e53c17a3b38067a9a4f0ebc1b0b130141d08358a93bf466e1945f63cf7472")
-      public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit) {
-      }
+      public fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit)
 
-      public fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
-      }
+      public fun cacheClusterEnabled(cacheClusterEnabled: Boolean)
 
-      public fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
-      }
+      public fun cacheClusterEnabled(cacheClusterEnabled: IResolvable)
 
-      public fun cacheClusterSize(cacheClusterSize: String) {
-      }
+      public fun cacheClusterSize(cacheClusterSize: String)
 
-      public fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
-      }
+      public fun cacheDataEncrypted(cacheDataEncrypted: Boolean)
 
-      public fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
-      }
+      public fun cacheDataEncrypted(cacheDataEncrypted: IResolvable)
 
-      public fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
-      }
+      public fun cacheTtlInSeconds(cacheTtlInSeconds: Number)
 
-      public fun cachingEnabled(cachingEnabled: Boolean) {
-      }
+      public fun cachingEnabled(cachingEnabled: Boolean)
 
-      public fun cachingEnabled(cachingEnabled: IResolvable) {
-      }
+      public fun cachingEnabled(cachingEnabled: IResolvable)
 
-      public fun canarySetting(canarySetting: IResolvable) {
-      }
+      public fun canarySetting(canarySetting: IResolvable)
 
-      public fun canarySetting(canarySetting: CanarySettingProperty) {
-      }
+      public fun canarySetting(canarySetting: CanarySettingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8948c21342fa6203010c93bd677f84e3fb2e90cc6c8fb095b4ad6010817b89f1")
-      public fun canarySetting(canarySetting: CanarySettingProperty.Builder.() -> Unit) {
-      }
+      public fun canarySetting(canarySetting: CanarySettingProperty.Builder.() -> Unit)
 
-      public fun clientCertificateId(clientCertificateId: String) {
-      }
+      public fun clientCertificateId(clientCertificateId: String)
 
-      public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
 
-      public fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun documentationVersion(documentationVersion: String) {
-      }
+      public fun documentationVersion(documentationVersion: String)
 
-      public fun loggingLevel(loggingLevel: String) {
-      }
+      public fun loggingLevel(loggingLevel: String)
 
-      public fun methodSettings(methodSettings: IResolvable) {
-      }
+      public fun methodSettings(methodSettings: IResolvable)
 
-      public fun methodSettings(methodSettings: List<Any>) {
-      }
+      public fun methodSettings(methodSettings: List<Any>)
 
-      public fun metricsEnabled(metricsEnabled: Boolean) {
-      }
+      public fun metricsEnabled(metricsEnabled: Boolean)
 
-      public fun metricsEnabled(metricsEnabled: IResolvable) {
-      }
+      public fun metricsEnabled(metricsEnabled: IResolvable)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
 
-      public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-      }
+      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
-      public fun throttlingRateLimit(throttlingRateLimit: Number) {
-      }
+      public fun throttlingRateLimit(throttlingRateLimit: Number)
 
-      public fun tracingEnabled(tracingEnabled: Boolean) {
-      }
+      public fun tracingEnabled(tracingEnabled: Boolean)
 
-      public fun tracingEnabled(tracingEnabled: IResolvable) {
-      }
+      public fun tracingEnabled(tracingEnabled: IResolvable)
 
-      public fun variables(variables: IResolvable) {
-      }
+      public fun variables(variables: IResolvable)
 
-      public fun variables(variables: Map<String, String>) {
-      }
+      public fun variables(variables: Map<String, String>)
     }
 
     private class BuilderImpl : Builder {
@@ -327,130 +285,129 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty.builder()
 
-      public override fun accessLogSetting(accessLogSetting: IResolvable) {
+      override fun accessLogSetting(accessLogSetting: IResolvable) {
         cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
       }
 
-      public override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
+      override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
         cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("476e53c17a3b38067a9a4f0ebc1b0b130141d08358a93bf466e1945f63cf7472")
-      public override
-          fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit): Unit
-          = accessLogSetting(AccessLogSettingProperty(accessLogSetting))
+      override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty.Builder.() -> Unit):
+          Unit = accessLogSetting(AccessLogSettingProperty(accessLogSetting))
 
-      public override fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
+      override fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
         cdkBuilder.cacheClusterEnabled(cacheClusterEnabled)
       }
 
-      public override fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
+      override fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
         cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun cacheClusterSize(cacheClusterSize: String) {
+      override fun cacheClusterSize(cacheClusterSize: String) {
         cdkBuilder.cacheClusterSize(cacheClusterSize)
       }
 
-      public override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
+      override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
         cdkBuilder.cacheDataEncrypted(cacheDataEncrypted)
       }
 
-      public override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
+      override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
         cdkBuilder.cacheDataEncrypted(cacheDataEncrypted.let(IResolvable::unwrap))
       }
 
-      public override fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
+      override fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
         cdkBuilder.cacheTtlInSeconds(cacheTtlInSeconds)
       }
 
-      public override fun cachingEnabled(cachingEnabled: Boolean) {
+      override fun cachingEnabled(cachingEnabled: Boolean) {
         cdkBuilder.cachingEnabled(cachingEnabled)
       }
 
-      public override fun cachingEnabled(cachingEnabled: IResolvable) {
+      override fun cachingEnabled(cachingEnabled: IResolvable) {
         cdkBuilder.cachingEnabled(cachingEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun canarySetting(canarySetting: IResolvable) {
+      override fun canarySetting(canarySetting: IResolvable) {
         cdkBuilder.canarySetting(canarySetting.let(IResolvable::unwrap))
       }
 
-      public override fun canarySetting(canarySetting: CanarySettingProperty) {
+      override fun canarySetting(canarySetting: CanarySettingProperty) {
         cdkBuilder.canarySetting(canarySetting.let(CanarySettingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8948c21342fa6203010c93bd677f84e3fb2e90cc6c8fb095b4ad6010817b89f1")
-      public override fun canarySetting(canarySetting: CanarySettingProperty.Builder.() -> Unit):
-          Unit = canarySetting(CanarySettingProperty(canarySetting))
+      override fun canarySetting(canarySetting: CanarySettingProperty.Builder.() -> Unit): Unit =
+          canarySetting(CanarySettingProperty(canarySetting))
 
-      public override fun clientCertificateId(clientCertificateId: String) {
+      override fun clientCertificateId(clientCertificateId: String) {
         cdkBuilder.clientCertificateId(clientCertificateId)
       }
 
-      public override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled)
       }
 
-      public override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
+      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun documentationVersion(documentationVersion: String) {
+      override fun documentationVersion(documentationVersion: String) {
         cdkBuilder.documentationVersion(documentationVersion)
       }
 
-      public override fun loggingLevel(loggingLevel: String) {
+      override fun loggingLevel(loggingLevel: String) {
         cdkBuilder.loggingLevel(loggingLevel)
       }
 
-      public override fun methodSettings(methodSettings: IResolvable) {
+      override fun methodSettings(methodSettings: IResolvable) {
         cdkBuilder.methodSettings(methodSettings.let(IResolvable::unwrap))
       }
 
-      public override fun methodSettings(methodSettings: List<Any>) {
+      override fun methodSettings(methodSettings: List<Any>) {
         cdkBuilder.methodSettings(methodSettings)
       }
 
-      public override fun metricsEnabled(metricsEnabled: Boolean) {
+      override fun metricsEnabled(metricsEnabled: Boolean) {
         cdkBuilder.metricsEnabled(metricsEnabled)
       }
 
-      public override fun metricsEnabled(metricsEnabled: IResolvable) {
+      override fun metricsEnabled(metricsEnabled: IResolvable) {
         cdkBuilder.metricsEnabled(metricsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
-      public override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
         cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
       }
 
-      public override fun throttlingRateLimit(throttlingRateLimit: Number) {
+      override fun throttlingRateLimit(throttlingRateLimit: Number) {
         cdkBuilder.throttlingRateLimit(throttlingRateLimit)
       }
 
-      public override fun tracingEnabled(tracingEnabled: Boolean) {
+      override fun tracingEnabled(tracingEnabled: Boolean) {
         cdkBuilder.tracingEnabled(tracingEnabled)
       }
 
-      public override fun tracingEnabled(tracingEnabled: IResolvable) {
+      override fun tracingEnabled(tracingEnabled: IResolvable) {
         cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun variables(variables: IResolvable) {
+      override fun variables(variables: IResolvable) {
         cdkBuilder.variables(variables.let(IResolvable::unwrap))
       }
 
-      public override fun variables(variables: Map<String, String>) {
+      override fun variables(variables: Map<String, String>) {
         cdkBuilder.variables(variables)
       }
 
@@ -463,44 +420,43 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnDeployment.StageDescriptionProperty,
     ) : StageDescriptionProperty {
-      public override fun accessLogSetting(): Any? = unwrap(this).getAccessLogSetting()
+      override fun accessLogSetting(): Any? = unwrap(this).getAccessLogSetting()
 
-      public override fun cacheClusterEnabled(): Any? = unwrap(this).getCacheClusterEnabled()
+      override fun cacheClusterEnabled(): Any? = unwrap(this).getCacheClusterEnabled()
 
-      public override fun cacheClusterSize(): String? = unwrap(this).getCacheClusterSize()
+      override fun cacheClusterSize(): String? = unwrap(this).getCacheClusterSize()
 
-      public override fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
+      override fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
 
-      public override fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
+      override fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
 
-      public override fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
+      override fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
 
-      public override fun canarySetting(): Any? = unwrap(this).getCanarySetting()
+      override fun canarySetting(): Any? = unwrap(this).getCanarySetting()
 
-      public override fun clientCertificateId(): String? = unwrap(this).getClientCertificateId()
+      override fun clientCertificateId(): String? = unwrap(this).getClientCertificateId()
 
-      public override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun documentationVersion(): String? = unwrap(this).getDocumentationVersion()
+      override fun documentationVersion(): String? = unwrap(this).getDocumentationVersion()
 
-      public override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
 
-      public override fun methodSettings(): Any? = unwrap(this).getMethodSettings()
+      override fun methodSettings(): Any? = unwrap(this).getMethodSettings()
 
-      public override fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
+      override fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
-      public override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
 
-      public override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
 
-      public override fun tracingEnabled(): Any? = unwrap(this).getTracingEnabled()
+      override fun tracingEnabled(): Any? = unwrap(this).getTracingEnabled()
 
-      public override fun variables(): Any? = unwrap(this).getVariables()
+      override fun variables(): Any? = unwrap(this).getVariables()
     }
 
     public companion object {
@@ -531,20 +487,15 @@ public open class CfnDeployment internal constructor(
     public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
 
     public interface Builder {
-      public fun percentTraffic(percentTraffic: Number) {
-      }
+      public fun percentTraffic(percentTraffic: Number)
 
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-      }
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
 
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-      }
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
 
-      public fun useStageCache(useStageCache: Boolean) {
-      }
+      public fun useStageCache(useStageCache: Boolean)
 
-      public fun useStageCache(useStageCache: IResolvable) {
-      }
+      public fun useStageCache(useStageCache: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -553,23 +504,23 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty.builder()
 
-      public override fun percentTraffic(percentTraffic: Number) {
+      override fun percentTraffic(percentTraffic: Number) {
         cdkBuilder.percentTraffic(percentTraffic)
       }
 
-      public override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
         cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
       }
 
-      public override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
         cdkBuilder.stageVariableOverrides(stageVariableOverrides)
       }
 
-      public override fun useStageCache(useStageCache: Boolean) {
+      override fun useStageCache(useStageCache: Boolean) {
         cdkBuilder.useStageCache(useStageCache)
       }
 
-      public override fun useStageCache(useStageCache: IResolvable) {
+      override fun useStageCache(useStageCache: IResolvable) {
         cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
       }
 
@@ -582,11 +533,11 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnDeployment.DeploymentCanarySettingsProperty,
     ) : DeploymentCanarySettingsProperty {
-      public override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
 
-      public override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
 
-      public override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
     }
 
     public companion object {
@@ -615,11 +566,9 @@ public open class CfnDeployment internal constructor(
     public fun format(): String? = unwrap(this).getFormat()
 
     public interface Builder {
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
 
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
     }
 
     private class BuilderImpl : Builder {
@@ -628,11 +577,11 @@ public open class CfnDeployment internal constructor(
           =
           software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty.builder()
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
@@ -645,9 +594,9 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnDeployment.AccessLogSettingProperty,
     ) : AccessLogSettingProperty {
-      public override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
 
-      public override fun format(): String? = unwrap(this).getFormat()
+      override fun format(): String? = unwrap(this).getFormat()
     }
 
     public companion object {
@@ -692,47 +641,33 @@ public open class CfnDeployment internal constructor(
     public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
 
     public interface Builder {
-      public fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
-      }
+      public fun cacheDataEncrypted(cacheDataEncrypted: Boolean)
 
-      public fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
-      }
+      public fun cacheDataEncrypted(cacheDataEncrypted: IResolvable)
 
-      public fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
-      }
+      public fun cacheTtlInSeconds(cacheTtlInSeconds: Number)
 
-      public fun cachingEnabled(cachingEnabled: Boolean) {
-      }
+      public fun cachingEnabled(cachingEnabled: Boolean)
 
-      public fun cachingEnabled(cachingEnabled: IResolvable) {
-      }
+      public fun cachingEnabled(cachingEnabled: IResolvable)
 
-      public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
 
-      public fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
 
-      public fun httpMethod(httpMethod: String) {
-      }
+      public fun httpMethod(httpMethod: String)
 
-      public fun loggingLevel(loggingLevel: String) {
-      }
+      public fun loggingLevel(loggingLevel: String)
 
-      public fun metricsEnabled(metricsEnabled: Boolean) {
-      }
+      public fun metricsEnabled(metricsEnabled: Boolean)
 
-      public fun metricsEnabled(metricsEnabled: IResolvable) {
-      }
+      public fun metricsEnabled(metricsEnabled: IResolvable)
 
-      public fun resourcePath(resourcePath: String) {
-      }
+      public fun resourcePath(resourcePath: String)
 
-      public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-      }
+      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
-      public fun throttlingRateLimit(throttlingRateLimit: Number) {
-      }
+      public fun throttlingRateLimit(throttlingRateLimit: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -740,59 +675,59 @@ public open class CfnDeployment internal constructor(
           software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty.builder()
 
-      public override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
+      override fun cacheDataEncrypted(cacheDataEncrypted: Boolean) {
         cdkBuilder.cacheDataEncrypted(cacheDataEncrypted)
       }
 
-      public override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
+      override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
         cdkBuilder.cacheDataEncrypted(cacheDataEncrypted.let(IResolvable::unwrap))
       }
 
-      public override fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
+      override fun cacheTtlInSeconds(cacheTtlInSeconds: Number) {
         cdkBuilder.cacheTtlInSeconds(cacheTtlInSeconds)
       }
 
-      public override fun cachingEnabled(cachingEnabled: Boolean) {
+      override fun cachingEnabled(cachingEnabled: Boolean) {
         cdkBuilder.cachingEnabled(cachingEnabled)
       }
 
-      public override fun cachingEnabled(cachingEnabled: IResolvable) {
+      override fun cachingEnabled(cachingEnabled: IResolvable) {
         cdkBuilder.cachingEnabled(cachingEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled)
       }
 
-      public override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
+      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun httpMethod(httpMethod: String) {
+      override fun httpMethod(httpMethod: String) {
         cdkBuilder.httpMethod(httpMethod)
       }
 
-      public override fun loggingLevel(loggingLevel: String) {
+      override fun loggingLevel(loggingLevel: String) {
         cdkBuilder.loggingLevel(loggingLevel)
       }
 
-      public override fun metricsEnabled(metricsEnabled: Boolean) {
+      override fun metricsEnabled(metricsEnabled: Boolean) {
         cdkBuilder.metricsEnabled(metricsEnabled)
       }
 
-      public override fun metricsEnabled(metricsEnabled: IResolvable) {
+      override fun metricsEnabled(metricsEnabled: IResolvable) {
         cdkBuilder.metricsEnabled(metricsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun resourcePath(resourcePath: String) {
+      override fun resourcePath(resourcePath: String) {
         cdkBuilder.resourcePath(resourcePath)
       }
 
-      public override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
         cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
       }
 
-      public override fun throttlingRateLimit(throttlingRateLimit: Number) {
+      override fun throttlingRateLimit(throttlingRateLimit: Number) {
         cdkBuilder.throttlingRateLimit(throttlingRateLimit)
       }
 
@@ -805,25 +740,25 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnDeployment.MethodSettingProperty,
     ) : MethodSettingProperty {
-      public override fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
+      override fun cacheDataEncrypted(): Any? = unwrap(this).getCacheDataEncrypted()
 
-      public override fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
+      override fun cacheTtlInSeconds(): Number? = unwrap(this).getCacheTtlInSeconds()
 
-      public override fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
+      override fun cachingEnabled(): Any? = unwrap(this).getCachingEnabled()
 
-      public override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
 
-      public override fun httpMethod(): String? = unwrap(this).getHttpMethod()
+      override fun httpMethod(): String? = unwrap(this).getHttpMethod()
 
-      public override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
 
-      public override fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
+      override fun metricsEnabled(): Any? = unwrap(this).getMetricsEnabled()
 
-      public override fun resourcePath(): String? = unwrap(this).getResourcePath()
+      override fun resourcePath(): String? = unwrap(this).getResourcePath()
 
-      public override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
 
-      public override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
     }
 
     public companion object {
@@ -854,20 +789,15 @@ public open class CfnDeployment internal constructor(
     public fun useStageCache(): Any? = unwrap(this).getUseStageCache()
 
     public interface Builder {
-      public fun percentTraffic(percentTraffic: Number) {
-      }
+      public fun percentTraffic(percentTraffic: Number)
 
-      public fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-      }
+      public fun stageVariableOverrides(stageVariableOverrides: IResolvable)
 
-      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
-      }
+      public fun stageVariableOverrides(stageVariableOverrides: Map<String, String>)
 
-      public fun useStageCache(useStageCache: Boolean) {
-      }
+      public fun useStageCache(useStageCache: Boolean)
 
-      public fun useStageCache(useStageCache: IResolvable) {
-      }
+      public fun useStageCache(useStageCache: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -875,23 +805,23 @@ public open class CfnDeployment internal constructor(
           software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty.builder()
 
-      public override fun percentTraffic(percentTraffic: Number) {
+      override fun percentTraffic(percentTraffic: Number) {
         cdkBuilder.percentTraffic(percentTraffic)
       }
 
-      public override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
+      override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
         cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
       }
 
-      public override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
+      override fun stageVariableOverrides(stageVariableOverrides: Map<String, String>) {
         cdkBuilder.stageVariableOverrides(stageVariableOverrides)
       }
 
-      public override fun useStageCache(useStageCache: Boolean) {
+      override fun useStageCache(useStageCache: Boolean) {
         cdkBuilder.useStageCache(useStageCache)
       }
 
-      public override fun useStageCache(useStageCache: IResolvable) {
+      override fun useStageCache(useStageCache: IResolvable) {
         cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
       }
 
@@ -904,11 +834,11 @@ public open class CfnDeployment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnDeployment.CanarySettingProperty,
     ) : CanarySettingProperty {
-      public override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
+      override fun percentTraffic(): Number? = unwrap(this).getPercentTraffic()
 
-      public override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
+      override fun stageVariableOverrides(): Any? = unwrap(this).getStageVariableOverrides()
 
-      public override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
+      override fun useStageCache(): Any? = unwrap(this).getUseStageCache()
     }
 
     public companion object {

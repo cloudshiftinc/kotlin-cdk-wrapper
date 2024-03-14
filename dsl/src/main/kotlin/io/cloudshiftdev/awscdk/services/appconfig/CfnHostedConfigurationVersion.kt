@@ -61,26 +61,19 @@ public open class CfnHostedConfigurationVersion internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun configurationProfileId(configurationProfileId: String) {
-    }
+    public fun configurationProfileId(configurationProfileId: String)
 
-    public fun content(content: String) {
-    }
+    public fun content(content: String)
 
-    public fun contentType(contentType: String) {
-    }
+    public fun contentType(contentType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun latestVersionNumber(latestVersionNumber: Number) {
-    }
+    public fun latestVersionNumber(latestVersionNumber: Number)
 
-    public fun versionLabel(versionLabel: String) {
-    }
+    public fun versionLabel(versionLabel: String)
   }
 
   private class BuilderImpl(
@@ -92,31 +85,31 @@ public open class CfnHostedConfigurationVersion internal constructor(
         software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion.Builder.create(scope,
         id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun configurationProfileId(configurationProfileId: String) {
+    override fun configurationProfileId(configurationProfileId: String) {
       cdkBuilder.configurationProfileId(configurationProfileId)
     }
 
-    public override fun content(content: String) {
+    override fun content(content: String) {
       cdkBuilder.content(content)
     }
 
-    public override fun contentType(contentType: String) {
+    override fun contentType(contentType: String) {
       cdkBuilder.contentType(contentType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun latestVersionNumber(latestVersionNumber: Number) {
+    override fun latestVersionNumber(latestVersionNumber: Number) {
       cdkBuilder.latestVersionNumber(latestVersionNumber)
     }
 
-    public override fun versionLabel(versionLabel: String) {
+    override fun versionLabel(versionLabel: String) {
       cdkBuilder.versionLabel(versionLabel)
     }
 

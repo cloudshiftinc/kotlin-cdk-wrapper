@@ -63,29 +63,21 @@ public open class CfnGlobalCluster internal constructor(
   }
 
   public interface Builder {
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun deletionProtection(deletionProtection: IResolvable) {
-    }
+    public fun deletionProtection(deletionProtection: IResolvable)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun globalClusterIdentifier(globalClusterIdentifier: String) {
-    }
+    public fun globalClusterIdentifier(globalClusterIdentifier: String)
 
-    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
-    }
+    public fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun storageEncrypted(storageEncrypted: IResolvable) {
-    }
+    public fun storageEncrypted(storageEncrypted: IResolvable)
   }
 
   private class BuilderImpl(
@@ -95,35 +87,35 @@ public open class CfnGlobalCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnGlobalCluster.Builder =
         software.amazon.awscdk.services.rds.CfnGlobalCluster.Builder.create(scope, id)
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun deletionProtection(deletionProtection: IResolvable) {
+    override fun deletionProtection(deletionProtection: IResolvable) {
       cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun globalClusterIdentifier(globalClusterIdentifier: String) {
+    override fun globalClusterIdentifier(globalClusterIdentifier: String) {
       cdkBuilder.globalClusterIdentifier(globalClusterIdentifier)
     }
 
-    public override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
+    override fun sourceDbClusterIdentifier(sourceDbClusterIdentifier: String) {
       cdkBuilder.sourceDbClusterIdentifier(sourceDbClusterIdentifier)
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun storageEncrypted(storageEncrypted: IResolvable) {
+    override fun storageEncrypted(storageEncrypted: IResolvable) {
       cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
     }
 

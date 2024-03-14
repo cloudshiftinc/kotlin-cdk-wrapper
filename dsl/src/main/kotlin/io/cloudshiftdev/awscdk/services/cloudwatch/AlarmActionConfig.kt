@@ -7,15 +7,14 @@ public interface AlarmActionConfig {
   public fun alarmActionArn(): String
 
   public interface Builder {
-    public fun alarmActionArn(alarmActionArn: String) {
-    }
+    public fun alarmActionArn(alarmActionArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.Builder =
         software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.builder()
 
-    public override fun alarmActionArn(alarmActionArn: String) {
+    override fun alarmActionArn(alarmActionArn: String) {
       cdkBuilder.alarmActionArn(alarmActionArn)
     }
 
@@ -26,7 +25,7 @@ public interface AlarmActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
   ) : AlarmActionConfig {
-    public override fun alarmActionArn(): String = unwrap(this).getAlarmActionArn()
+    override fun alarmActionArn(): String = unwrap(this).getAlarmActionArn()
   }
 
   public companion object {

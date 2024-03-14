@@ -9,22 +9,20 @@ public interface AclIcmp {
   public fun type(): Number? = unwrap(this).getType()
 
   public interface Builder {
-    public fun code(code: Number) {
-    }
+    public fun code(code: Number)
 
-    public fun type(type: Number) {
-    }
+    public fun type(type: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AclIcmp.Builder =
         software.amazon.awscdk.services.ec2.AclIcmp.builder()
 
-    public override fun code(code: Number) {
+    override fun code(code: Number) {
       cdkBuilder.code(code)
     }
 
-    public override fun type(type: Number) {
+    override fun type(type: Number) {
       cdkBuilder.type(type)
     }
 
@@ -34,9 +32,9 @@ public interface AclIcmp {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.AclIcmp,
   ) : AclIcmp {
-    public override fun code(): Number? = unwrap(this).getCode()
+    override fun code(): Number? = unwrap(this).getCode()
 
-    public override fun type(): Number? = unwrap(this).getType()
+    override fun type(): Number? = unwrap(this).getType()
   }
 
   public companion object {

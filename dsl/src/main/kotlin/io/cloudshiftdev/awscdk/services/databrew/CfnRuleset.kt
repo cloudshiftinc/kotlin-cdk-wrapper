@@ -63,23 +63,17 @@ public open class CfnRuleset internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun rules(rules: IResolvable) {
-    }
+    public fun rules(rules: IResolvable)
 
-    public fun rules(rules: List<Any>) {
-    }
+    public fun rules(rules: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetArn(targetArn: String) {
-    }
+    public fun targetArn(targetArn: String)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnRuleset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnRuleset.Builder =
         software.amazon.awscdk.services.databrew.CfnRuleset.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun rules(rules: IResolvable) {
+    override fun rules(rules: IResolvable) {
       cdkBuilder.rules(rules.let(IResolvable::unwrap))
     }
 
-    public override fun rules(rules: List<Any>) {
+    override fun rules(rules: List<Any>) {
       cdkBuilder.rules(rules)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetArn(targetArn: String) {
+    override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
     }
 
@@ -145,14 +139,11 @@ public open class CfnRuleset internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -160,15 +151,15 @@ public open class CfnRuleset internal constructor(
           software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -179,11 +170,11 @@ public open class CfnRuleset internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.ThresholdProperty,
     ) : ThresholdProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -212,11 +203,9 @@ public open class CfnRuleset internal constructor(
     public fun valueReference(): String
 
     public interface Builder {
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
 
-      public fun valueReference(valueReference: String) {
-      }
+      public fun valueReference(valueReference: String)
     }
 
     private class BuilderImpl : Builder {
@@ -224,11 +213,11 @@ public open class CfnRuleset internal constructor(
           software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty.builder()
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
-      public override fun valueReference(valueReference: String) {
+      override fun valueReference(valueReference: String) {
         cdkBuilder.valueReference(valueReference)
       }
 
@@ -241,9 +230,9 @@ public open class CfnRuleset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnRuleset.SubstitutionValueProperty,
     ) : SubstitutionValueProperty {
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
 
-      public override fun valueReference(): String = unwrap(this).getValueReference()
+      override fun valueReference(): String = unwrap(this).getValueReference()
     }
 
     public companion object {
@@ -272,11 +261,9 @@ public open class CfnRuleset internal constructor(
     public fun regex(): String? = unwrap(this).getRegex()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun regex(regex: String) {
-      }
+      public fun regex(regex: String)
     }
 
     private class BuilderImpl : Builder {
@@ -284,11 +271,11 @@ public open class CfnRuleset internal constructor(
           software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun regex(regex: String) {
+      override fun regex(regex: String) {
         cdkBuilder.regex(regex)
       }
 
@@ -300,9 +287,9 @@ public open class CfnRuleset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnRuleset.ColumnSelectorProperty,
     ) : ColumnSelectorProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun regex(): String? = unwrap(this).getRegex()
+      override fun regex(): String? = unwrap(this).getRegex()
     }
 
     public companion object {
@@ -339,40 +326,29 @@ public open class CfnRuleset internal constructor(
     public fun threshold(): Any? = unwrap(this).getThreshold()
 
     public interface Builder {
-      public fun checkExpression(checkExpression: String) {
-      }
+      public fun checkExpression(checkExpression: String)
 
-      public fun columnSelectors(columnSelectors: IResolvable) {
-      }
+      public fun columnSelectors(columnSelectors: IResolvable)
 
-      public fun columnSelectors(columnSelectors: List<Any>) {
-      }
+      public fun columnSelectors(columnSelectors: List<Any>)
 
-      public fun disabled(disabled: Boolean) {
-      }
+      public fun disabled(disabled: Boolean)
 
-      public fun disabled(disabled: IResolvable) {
-      }
+      public fun disabled(disabled: IResolvable)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun substitutionMap(substitutionMap: IResolvable) {
-      }
+      public fun substitutionMap(substitutionMap: IResolvable)
 
-      public fun substitutionMap(substitutionMap: List<Any>) {
-      }
+      public fun substitutionMap(substitutionMap: List<Any>)
 
-      public fun threshold(threshold: IResolvable) {
-      }
+      public fun threshold(threshold: IResolvable)
 
-      public fun threshold(threshold: ThresholdProperty) {
-      }
+      public fun threshold(threshold: ThresholdProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10f3ea622e386b6e5f6e793d4987d8ed5e432916db51f7cd69d3466eeb1ea208")
-      public fun threshold(threshold: ThresholdProperty.Builder.() -> Unit) {
-      }
+      public fun threshold(threshold: ThresholdProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -380,49 +356,49 @@ public open class CfnRuleset internal constructor(
           software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty.builder()
 
-      public override fun checkExpression(checkExpression: String) {
+      override fun checkExpression(checkExpression: String) {
         cdkBuilder.checkExpression(checkExpression)
       }
 
-      public override fun columnSelectors(columnSelectors: IResolvable) {
+      override fun columnSelectors(columnSelectors: IResolvable) {
         cdkBuilder.columnSelectors(columnSelectors.let(IResolvable::unwrap))
       }
 
-      public override fun columnSelectors(columnSelectors: List<Any>) {
+      override fun columnSelectors(columnSelectors: List<Any>) {
         cdkBuilder.columnSelectors(columnSelectors)
       }
 
-      public override fun disabled(disabled: Boolean) {
+      override fun disabled(disabled: Boolean) {
         cdkBuilder.disabled(disabled)
       }
 
-      public override fun disabled(disabled: IResolvable) {
+      override fun disabled(disabled: IResolvable) {
         cdkBuilder.disabled(disabled.let(IResolvable::unwrap))
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun substitutionMap(substitutionMap: IResolvable) {
+      override fun substitutionMap(substitutionMap: IResolvable) {
         cdkBuilder.substitutionMap(substitutionMap.let(IResolvable::unwrap))
       }
 
-      public override fun substitutionMap(substitutionMap: List<Any>) {
+      override fun substitutionMap(substitutionMap: List<Any>) {
         cdkBuilder.substitutionMap(substitutionMap)
       }
 
-      public override fun threshold(threshold: IResolvable) {
+      override fun threshold(threshold: IResolvable) {
         cdkBuilder.threshold(threshold.let(IResolvable::unwrap))
       }
 
-      public override fun threshold(threshold: ThresholdProperty) {
+      override fun threshold(threshold: ThresholdProperty) {
         cdkBuilder.threshold(threshold.let(ThresholdProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10f3ea622e386b6e5f6e793d4987d8ed5e432916db51f7cd69d3466eeb1ea208")
-      public override fun threshold(threshold: ThresholdProperty.Builder.() -> Unit): Unit =
+      override fun threshold(threshold: ThresholdProperty.Builder.() -> Unit): Unit =
           threshold(ThresholdProperty(threshold))
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty =
@@ -432,17 +408,17 @@ public open class CfnRuleset internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnRuleset.RuleProperty,
     ) : RuleProperty {
-      public override fun checkExpression(): String = unwrap(this).getCheckExpression()
+      override fun checkExpression(): String = unwrap(this).getCheckExpression()
 
-      public override fun columnSelectors(): Any? = unwrap(this).getColumnSelectors()
+      override fun columnSelectors(): Any? = unwrap(this).getColumnSelectors()
 
-      public override fun disabled(): Any? = unwrap(this).getDisabled()
+      override fun disabled(): Any? = unwrap(this).getDisabled()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun substitutionMap(): Any? = unwrap(this).getSubstitutionMap()
+      override fun substitutionMap(): Any? = unwrap(this).getSubstitutionMap()
 
-      public override fun threshold(): Any? = unwrap(this).getThreshold()
+      override fun threshold(): Any? = unwrap(this).getThreshold()
     }
 
     public companion object {

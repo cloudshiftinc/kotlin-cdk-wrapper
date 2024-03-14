@@ -66,25 +66,19 @@ public open class CfnAllowList internal constructor(
   }
 
   public interface Builder {
-    public fun criteria(criteria: IResolvable) {
-    }
+    public fun criteria(criteria: IResolvable)
 
-    public fun criteria(criteria: CriteriaProperty) {
-    }
+    public fun criteria(criteria: CriteriaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("81a1354b1254e1098cedc1a694d217bd9777405cc6505b1e846e87c2ce43e950")
-    public fun criteria(criteria: CriteriaProperty.Builder.() -> Unit) {
-    }
+    public fun criteria(criteria: CriteriaProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -94,28 +88,28 @@ public open class CfnAllowList internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.macie.CfnAllowList.Builder =
         software.amazon.awscdk.services.macie.CfnAllowList.Builder.create(scope, id)
 
-    public override fun criteria(criteria: IResolvable) {
+    override fun criteria(criteria: IResolvable) {
       cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
     }
 
-    public override fun criteria(criteria: CriteriaProperty) {
+    override fun criteria(criteria: CriteriaProperty) {
       cdkBuilder.criteria(criteria.let(CriteriaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("81a1354b1254e1098cedc1a694d217bd9777405cc6505b1e846e87c2ce43e950")
-    public override fun criteria(criteria: CriteriaProperty.Builder.() -> Unit): Unit =
+    override fun criteria(criteria: CriteriaProperty.Builder.() -> Unit): Unit =
         criteria(CriteriaProperty(criteria))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -149,11 +143,9 @@ public open class CfnAllowList internal constructor(
     public fun objectKey(): String
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun objectKey(objectKey: String) {
-      }
+      public fun objectKey(objectKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -161,11 +153,11 @@ public open class CfnAllowList internal constructor(
           software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty.Builder =
           software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun objectKey(objectKey: String) {
+      override fun objectKey(objectKey: String) {
         cdkBuilder.objectKey(objectKey)
       }
 
@@ -177,9 +169,9 @@ public open class CfnAllowList internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.macie.CfnAllowList.S3WordsListProperty,
     ) : S3WordsListProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun objectKey(): String = unwrap(this).getObjectKey()
+      override fun objectKey(): String = unwrap(this).getObjectKey()
     }
 
     public companion object {
@@ -208,19 +200,15 @@ public open class CfnAllowList internal constructor(
     public fun s3WordsList(): Any? = unwrap(this).getS3WordsList()
 
     public interface Builder {
-      public fun regex(regex: String) {
-      }
+      public fun regex(regex: String)
 
-      public fun s3WordsList(s3WordsList: IResolvable) {
-      }
+      public fun s3WordsList(s3WordsList: IResolvable)
 
-      public fun s3WordsList(s3WordsList: S3WordsListProperty) {
-      }
+      public fun s3WordsList(s3WordsList: S3WordsListProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("827e7817016e7a855e7b5ac67984754f084dd8d4ef5e93d841164f34cbfe219a")
-      public fun s3WordsList(s3WordsList: S3WordsListProperty.Builder.() -> Unit) {
-      }
+      public fun s3WordsList(s3WordsList: S3WordsListProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -228,21 +216,21 @@ public open class CfnAllowList internal constructor(
           software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty.Builder =
           software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty.builder()
 
-      public override fun regex(regex: String) {
+      override fun regex(regex: String) {
         cdkBuilder.regex(regex)
       }
 
-      public override fun s3WordsList(s3WordsList: IResolvable) {
+      override fun s3WordsList(s3WordsList: IResolvable) {
         cdkBuilder.s3WordsList(s3WordsList.let(IResolvable::unwrap))
       }
 
-      public override fun s3WordsList(s3WordsList: S3WordsListProperty) {
+      override fun s3WordsList(s3WordsList: S3WordsListProperty) {
         cdkBuilder.s3WordsList(s3WordsList.let(S3WordsListProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("827e7817016e7a855e7b5ac67984754f084dd8d4ef5e93d841164f34cbfe219a")
-      public override fun s3WordsList(s3WordsList: S3WordsListProperty.Builder.() -> Unit): Unit =
+      override fun s3WordsList(s3WordsList: S3WordsListProperty.Builder.() -> Unit): Unit =
           s3WordsList(S3WordsListProperty(s3WordsList))
 
       public fun build(): software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty =
@@ -252,9 +240,9 @@ public open class CfnAllowList internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.macie.CfnAllowList.CriteriaProperty,
     ) : CriteriaProperty {
-      public override fun regex(): String? = unwrap(this).getRegex()
+      override fun regex(): String? = unwrap(this).getRegex()
 
-      public override fun s3WordsList(): Any? = unwrap(this).getS3WordsList()
+      override fun s3WordsList(): Any? = unwrap(this).getS3WordsList()
     }
 
     public companion object {

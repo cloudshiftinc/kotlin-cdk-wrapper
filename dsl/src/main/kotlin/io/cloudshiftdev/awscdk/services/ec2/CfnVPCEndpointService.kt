@@ -62,26 +62,19 @@ public open class CfnVPCEndpointService internal constructor(
   }
 
   public interface Builder {
-    public fun acceptanceRequired(acceptanceRequired: Boolean) {
-    }
+    public fun acceptanceRequired(acceptanceRequired: Boolean)
 
-    public fun acceptanceRequired(acceptanceRequired: IResolvable) {
-    }
+    public fun acceptanceRequired(acceptanceRequired: IResolvable)
 
-    public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
-    }
+    public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean)
 
-    public fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable) {
-    }
+    public fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable)
 
-    public fun gatewayLoadBalancerArns(gatewayLoadBalancerArns: List<String>) {
-    }
+    public fun gatewayLoadBalancerArns(gatewayLoadBalancerArns: List<String>)
 
-    public fun networkLoadBalancerArns(networkLoadBalancerArns: List<String>) {
-    }
+    public fun networkLoadBalancerArns(networkLoadBalancerArns: List<String>)
 
-    public fun payerResponsibility(payerResponsibility: String) {
-    }
+    public fun payerResponsibility(payerResponsibility: String)
   }
 
   private class BuilderImpl(
@@ -91,31 +84,31 @@ public open class CfnVPCEndpointService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCEndpointService.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCEndpointService.Builder.create(scope, id)
 
-    public override fun acceptanceRequired(acceptanceRequired: Boolean) {
+    override fun acceptanceRequired(acceptanceRequired: Boolean) {
       cdkBuilder.acceptanceRequired(acceptanceRequired)
     }
 
-    public override fun acceptanceRequired(acceptanceRequired: IResolvable) {
+    override fun acceptanceRequired(acceptanceRequired: IResolvable) {
       cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable::unwrap))
     }
 
-    public override fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
+    override fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
       cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
     }
 
-    public override fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable) {
+    override fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable) {
       cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun gatewayLoadBalancerArns(gatewayLoadBalancerArns: List<String>) {
+    override fun gatewayLoadBalancerArns(gatewayLoadBalancerArns: List<String>) {
       cdkBuilder.gatewayLoadBalancerArns(gatewayLoadBalancerArns)
     }
 
-    public override fun networkLoadBalancerArns(networkLoadBalancerArns: List<String>) {
+    override fun networkLoadBalancerArns(networkLoadBalancerArns: List<String>) {
       cdkBuilder.networkLoadBalancerArns(networkLoadBalancerArns)
     }
 
-    public override fun payerResponsibility(payerResponsibility: String) {
+    override fun payerResponsibility(payerResponsibility: String) {
       cdkBuilder.payerResponsibility(payerResponsibility)
     }
 

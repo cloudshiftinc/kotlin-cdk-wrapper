@@ -50,17 +50,13 @@ public open class CfnSignalingChannel internal constructor(
   }
 
   public interface Builder {
-    public fun messageTtlSeconds(messageTtlSeconds: Number) {
-    }
+    public fun messageTtlSeconds(messageTtlSeconds: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -70,19 +66,19 @@ public open class CfnSignalingChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel.Builder
         = software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel.Builder.create(scope, id)
 
-    public override fun messageTtlSeconds(messageTtlSeconds: Number) {
+    override fun messageTtlSeconds(messageTtlSeconds: Number) {
       cdkBuilder.messageTtlSeconds(messageTtlSeconds)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

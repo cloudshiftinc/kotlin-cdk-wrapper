@@ -13,29 +13,26 @@ public interface LoggingConfiguration {
   public fun prefix(): String? = unwrap(this).getPrefix()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun includeCookies(includeCookies: Boolean) {
-    }
+    public fun includeCookies(includeCookies: Boolean)
 
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.LoggingConfiguration.Builder
         = software.amazon.awscdk.services.cloudfront.LoggingConfiguration.builder()
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun includeCookies(includeCookies: Boolean) {
+    override fun includeCookies(includeCookies: Boolean) {
       cdkBuilder.includeCookies(includeCookies)
     }
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
@@ -46,11 +43,11 @@ public interface LoggingConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.LoggingConfiguration,
   ) : LoggingConfiguration {
-    public override fun bucket(): IBucket? = unwrap(this).getBucket()?.let(IBucket::wrap)
+    override fun bucket(): IBucket? = unwrap(this).getBucket()?.let(IBucket::wrap)
 
-    public override fun includeCookies(): Boolean? = unwrap(this).getIncludeCookies()
+    override fun includeCookies(): Boolean? = unwrap(this).getIncludeCookies()
 
-    public override fun prefix(): String? = unwrap(this).getPrefix()
+    override fun prefix(): String? = unwrap(this).getPrefix()
   }
 
   public companion object {

@@ -10,9 +10,9 @@ public interface IClientVpnConnectionHandler {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IClientVpnConnectionHandler,
   ) : IClientVpnConnectionHandler {
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-    public override fun functionName(): String = unwrap(this).getFunctionName()
+    override fun functionName(): String = unwrap(this).getFunctionName()
   }
 
   public companion object {

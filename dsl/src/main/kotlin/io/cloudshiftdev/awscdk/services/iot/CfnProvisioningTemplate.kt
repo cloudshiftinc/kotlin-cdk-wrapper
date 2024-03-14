@@ -91,41 +91,29 @@ public open class CfnProvisioningTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun preProvisioningHook(preProvisioningHook: IResolvable) {
-    }
+    public fun preProvisioningHook(preProvisioningHook: IResolvable)
 
-    public fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty) {
-    }
+    public fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("859854171f55f7301674cd68e0ca7c8cae08b6697bf440a98b5295633c0c207e")
-    public
-        fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty.Builder.() -> Unit) {
-    }
+    public fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty.Builder.() -> Unit)
 
-    public fun provisioningRoleArn(provisioningRoleArn: String) {
-    }
+    public fun provisioningRoleArn(provisioningRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun templateBody(templateBody: String) {
-    }
+    public fun templateBody(templateBody: String)
 
-    public fun templateName(templateName: String) {
-    }
+    public fun templateName(templateName: String)
 
-    public fun templateType(templateType: String) {
-    }
+    public fun templateType(templateType: String)
   }
 
   private class BuilderImpl(
@@ -135,49 +123,49 @@ public open class CfnProvisioningTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnProvisioningTemplate.Builder =
         software.amazon.awscdk.services.iot.CfnProvisioningTemplate.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun preProvisioningHook(preProvisioningHook: IResolvable) {
+    override fun preProvisioningHook(preProvisioningHook: IResolvable) {
       cdkBuilder.preProvisioningHook(preProvisioningHook.let(IResolvable::unwrap))
     }
 
-    public override fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty) {
+    override fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty) {
       cdkBuilder.preProvisioningHook(preProvisioningHook.let(ProvisioningHookProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("859854171f55f7301674cd68e0ca7c8cae08b6697bf440a98b5295633c0c207e")
-    public override
+    override
         fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty.Builder.() -> Unit):
         Unit = preProvisioningHook(ProvisioningHookProperty(preProvisioningHook))
 
-    public override fun provisioningRoleArn(provisioningRoleArn: String) {
+    override fun provisioningRoleArn(provisioningRoleArn: String) {
       cdkBuilder.provisioningRoleArn(provisioningRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun templateBody(templateBody: String) {
+    override fun templateBody(templateBody: String) {
       cdkBuilder.templateBody(templateBody)
     }
 
-    public override fun templateName(templateName: String) {
+    override fun templateName(templateName: String) {
       cdkBuilder.templateName(templateName)
     }
 
-    public override fun templateType(templateType: String) {
+    override fun templateType(templateType: String) {
       cdkBuilder.templateType(templateType)
     }
 
@@ -212,11 +200,9 @@ public open class CfnProvisioningTemplate internal constructor(
     public fun targetArn(): String? = unwrap(this).getTargetArn()
 
     public interface Builder {
-      public fun payloadVersion(payloadVersion: String) {
-      }
+      public fun payloadVersion(payloadVersion: String)
 
-      public fun targetArn(targetArn: String) {
-      }
+      public fun targetArn(targetArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -225,11 +211,11 @@ public open class CfnProvisioningTemplate internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty.builder()
 
-      public override fun payloadVersion(payloadVersion: String) {
+      override fun payloadVersion(payloadVersion: String) {
         cdkBuilder.payloadVersion(payloadVersion)
       }
 
-      public override fun targetArn(targetArn: String) {
+      override fun targetArn(targetArn: String) {
         cdkBuilder.targetArn(targetArn)
       }
 
@@ -242,9 +228,9 @@ public open class CfnProvisioningTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnProvisioningTemplate.ProvisioningHookProperty,
     ) : ProvisioningHookProperty {
-      public override fun payloadVersion(): String? = unwrap(this).getPayloadVersion()
+      override fun payloadVersion(): String? = unwrap(this).getPayloadVersion()
 
-      public override fun targetArn(): String? = unwrap(this).getTargetArn()
+      override fun targetArn(): String? = unwrap(this).getTargetArn()
     }
 
     public companion object {

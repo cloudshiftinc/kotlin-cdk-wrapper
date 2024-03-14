@@ -114,57 +114,41 @@ public open class CfnInstanceGroupConfig internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-    }
+    public fun autoScalingPolicy(autoScalingPolicy: IResolvable)
 
-    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-    }
+    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd88ae6c4f06f17baab5b23770cd6888d70dabae31bd89baad6c5babd94ffa21")
-    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit) {
-    }
+    public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit)
 
-    public fun bidPrice(bidPrice: String) {
-    }
+    public fun bidPrice(bidPrice: String)
 
-    public fun configurations(configurations: IResolvable) {
-    }
+    public fun configurations(configurations: IResolvable)
 
-    public fun configurations(configurations: List<Any>) {
-    }
+    public fun configurations(configurations: List<Any>)
 
-    public fun customAmiId(customAmiId: String) {
-    }
+    public fun customAmiId(customAmiId: String)
 
-    public fun ebsConfiguration(ebsConfiguration: IResolvable) {
-    }
+    public fun ebsConfiguration(ebsConfiguration: IResolvable)
 
-    public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-    }
+    public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10da914fab90d1dd604ab7d79e6cf336e54f95c0ebfdc9e325f2bf8429e83cb0")
-    public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit)
 
-    public fun instanceCount(instanceCount: Number) {
-    }
+    public fun instanceCount(instanceCount: Number)
 
-    public fun instanceRole(instanceRole: String) {
-    }
+    public fun instanceRole(instanceRole: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun jobFlowId(jobFlowId: String) {
-    }
+    public fun jobFlowId(jobFlowId: String)
 
-    public fun market(market: String) {
-    }
+    public fun market(market: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -174,71 +158,69 @@ public open class CfnInstanceGroupConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.Builder =
         software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.Builder.create(scope, id)
 
-    public override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
+    override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
       cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
+    override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
       cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd88ae6c4f06f17baab5b23770cd6888d70dabae31bd89baad6c5babd94ffa21")
-    public override
-        fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit): Unit
-        = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
+    override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit):
+        Unit = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
 
-    public override fun bidPrice(bidPrice: String) {
+    override fun bidPrice(bidPrice: String) {
       cdkBuilder.bidPrice(bidPrice)
     }
 
-    public override fun configurations(configurations: IResolvable) {
+    override fun configurations(configurations: IResolvable) {
       cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
     }
 
-    public override fun configurations(configurations: List<Any>) {
+    override fun configurations(configurations: List<Any>) {
       cdkBuilder.configurations(configurations)
     }
 
-    public override fun customAmiId(customAmiId: String) {
+    override fun customAmiId(customAmiId: String) {
       cdkBuilder.customAmiId(customAmiId)
     }
 
-    public override fun ebsConfiguration(ebsConfiguration: IResolvable) {
+    override fun ebsConfiguration(ebsConfiguration: IResolvable) {
       cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
+    override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
       cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10da914fab90d1dd604ab7d79e6cf336e54f95c0ebfdc9e325f2bf8429e83cb0")
-    public override
-        fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit): Unit =
-        ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
+    override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty.Builder.() -> Unit):
+        Unit = ebsConfiguration(EbsConfigurationProperty(ebsConfiguration))
 
-    public override fun instanceCount(instanceCount: Number) {
+    override fun instanceCount(instanceCount: Number) {
       cdkBuilder.instanceCount(instanceCount)
     }
 
-    public override fun instanceRole(instanceRole: String) {
+    override fun instanceRole(instanceRole: String) {
       cdkBuilder.instanceRole(instanceRole)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun jobFlowId(jobFlowId: String) {
+    override fun jobFlowId(jobFlowId: String) {
       cdkBuilder.jobFlowId(jobFlowId)
     }
 
-    public override fun market(market: String) {
+    override fun market(market: String) {
       cdkBuilder.market(market)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -275,14 +257,11 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun scalingAdjustment(): Number
 
     public interface Builder {
-      public fun adjustmentType(adjustmentType: String) {
-      }
+      public fun adjustmentType(adjustmentType: String)
 
-      public fun coolDown(coolDown: Number) {
-      }
+      public fun coolDown(coolDown: Number)
 
-      public fun scalingAdjustment(scalingAdjustment: Number) {
-      }
+      public fun scalingAdjustment(scalingAdjustment: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -291,15 +270,15 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty.builder()
 
-      public override fun adjustmentType(adjustmentType: String) {
+      override fun adjustmentType(adjustmentType: String) {
         cdkBuilder.adjustmentType(adjustmentType)
       }
 
-      public override fun coolDown(coolDown: Number) {
+      override fun coolDown(coolDown: Number) {
         cdkBuilder.coolDown(coolDown)
       }
 
-      public override fun scalingAdjustment(scalingAdjustment: Number) {
+      override fun scalingAdjustment(scalingAdjustment: Number) {
         cdkBuilder.scalingAdjustment(scalingAdjustment)
       }
 
@@ -312,11 +291,11 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty,
     ) : SimpleScalingPolicyConfigurationProperty {
-      public override fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
+      override fun adjustmentType(): String? = unwrap(this).getAdjustmentType()
 
-      public override fun coolDown(): Number? = unwrap(this).getCoolDown()
+      override fun coolDown(): Number? = unwrap(this).getCoolDown()
 
-      public override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
+      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
     }
 
     public companion object {
@@ -346,11 +325,9 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun minCapacity(): Number
 
     public interface Builder {
-      public fun maxCapacity(maxCapacity: Number) {
-      }
+      public fun maxCapacity(maxCapacity: Number)
 
-      public fun minCapacity(minCapacity: Number) {
-      }
+      public fun minCapacity(minCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -359,11 +336,11 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty.builder()
 
-      public override fun maxCapacity(maxCapacity: Number) {
+      override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
       }
 
-      public override fun minCapacity(minCapacity: Number) {
+      override fun minCapacity(minCapacity: Number) {
         cdkBuilder.minCapacity(minCapacity)
       }
 
@@ -376,9 +353,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty,
     ) : ScalingConstraintsProperty {
-      public override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
+      override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
 
-      public override fun minCapacity(): Number = unwrap(this).getMinCapacity()
+      override fun minCapacity(): Number = unwrap(this).getMinCapacity()
     }
 
     public companion object {
@@ -407,20 +384,16 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
 
     public interface Builder {
-      public fun volumeSpecification(volumeSpecification: IResolvable) {
-      }
+      public fun volumeSpecification(volumeSpecification: IResolvable)
 
-      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-      }
+      public fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8399936429f874eedde1fb8ebf36c6005862947edb9047af93bba4e2933689f6")
       public
-          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit)
 
-      public fun volumesPerInstance(volumesPerInstance: Number) {
-      }
+      public fun volumesPerInstance(volumesPerInstance: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -429,21 +402,21 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.builder()
 
-      public override fun volumeSpecification(volumeSpecification: IResolvable) {
+      override fun volumeSpecification(volumeSpecification: IResolvable) {
         cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
       }
 
-      public override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
+      override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
         cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8399936429f874eedde1fb8ebf36c6005862947edb9047af93bba4e2933689f6")
-      public override
+      override
           fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty.Builder.() -> Unit):
           Unit = volumeSpecification(VolumeSpecificationProperty(volumeSpecification))
 
-      public override fun volumesPerInstance(volumesPerInstance: Number) {
+      override fun volumesPerInstance(volumesPerInstance: Number) {
         cdkBuilder.volumesPerInstance(volumesPerInstance)
       }
 
@@ -456,9 +429,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty,
     ) : EbsBlockDeviceConfigProperty {
-      public override fun volumeSpecification(): Any = unwrap(this).getVolumeSpecification()
+      override fun volumeSpecification(): Any = unwrap(this).getVolumeSpecification()
 
-      public override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
+      override fun volumesPerInstance(): Number? = unwrap(this).getVolumesPerInstance()
     }
 
     public companion object {
@@ -485,18 +458,15 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun cloudWatchAlarmDefinition(): Any
 
     public interface Builder {
-      public fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
-      }
+      public fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable)
 
       public
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
-      }
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("92cd633a19dd947577f74d812aa0c1d86eb6eeff63302bf3443be123681c8c74")
       public
-          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -505,18 +475,18 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty.builder()
 
-      public override fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
+      override fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
         cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
         cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("92cd633a19dd947577f74d812aa0c1d86eb6eeff63302bf3443be123681c8c74")
-      public override
+      override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty.Builder.() -> Unit):
           Unit =
           cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty(cloudWatchAlarmDefinition))
@@ -530,8 +500,7 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty,
     ) : ScalingTriggerProperty {
-      public override fun cloudWatchAlarmDefinition(): Any =
-          unwrap(this).getCloudWatchAlarmDefinition()
+      override fun cloudWatchAlarmDefinition(): Any = unwrap(this).getCloudWatchAlarmDefinition()
     }
 
     public companion object {
@@ -564,33 +533,25 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun trigger(): Any
 
     public interface Builder {
-      public fun action(action: IResolvable) {
-      }
+      public fun action(action: IResolvable)
 
-      public fun action(action: ScalingActionProperty) {
-      }
+      public fun action(action: ScalingActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5be4adc4ad3b93edcb0dade3bf50215d364d7cebb6acaf9cb97a0ca0925400b5")
-      public fun action(action: ScalingActionProperty.Builder.() -> Unit) {
-      }
+      public fun action(action: ScalingActionProperty.Builder.() -> Unit)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun trigger(trigger: IResolvable) {
-      }
+      public fun trigger(trigger: IResolvable)
 
-      public fun trigger(trigger: ScalingTriggerProperty) {
-      }
+      public fun trigger(trigger: ScalingTriggerProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e4d96ac0cbfebcef3807e3b8d913b449a32564081bed6cf769acd7a5902dc643")
-      public fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit) {
-      }
+      public fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -598,38 +559,38 @@ public open class CfnInstanceGroupConfig internal constructor(
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty.Builder =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty.builder()
 
-      public override fun action(action: IResolvable) {
+      override fun action(action: IResolvable) {
         cdkBuilder.action(action.let(IResolvable::unwrap))
       }
 
-      public override fun action(action: ScalingActionProperty) {
+      override fun action(action: ScalingActionProperty) {
         cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5be4adc4ad3b93edcb0dade3bf50215d364d7cebb6acaf9cb97a0ca0925400b5")
-      public override fun action(action: ScalingActionProperty.Builder.() -> Unit): Unit =
+      override fun action(action: ScalingActionProperty.Builder.() -> Unit): Unit =
           action(ScalingActionProperty(action))
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun trigger(trigger: IResolvable) {
+      override fun trigger(trigger: IResolvable) {
         cdkBuilder.trigger(trigger.let(IResolvable::unwrap))
       }
 
-      public override fun trigger(trigger: ScalingTriggerProperty) {
+      override fun trigger(trigger: ScalingTriggerProperty) {
         cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e4d96ac0cbfebcef3807e3b8d913b449a32564081bed6cf769acd7a5902dc643")
-      public override fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit): Unit =
+      override fun trigger(trigger: ScalingTriggerProperty.Builder.() -> Unit): Unit =
           trigger(ScalingTriggerProperty(trigger))
 
       public fun build():
@@ -641,13 +602,13 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty,
     ) : ScalingRuleProperty {
-      public override fun action(): Any = unwrap(this).getAction()
+      override fun action(): Any = unwrap(this).getAction()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun trigger(): Any = unwrap(this).getTrigger()
+      override fun trigger(): Any = unwrap(this).getTrigger()
     }
 
     public companion object {
@@ -680,17 +641,13 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun volumeType(): String
 
     public interface Builder {
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun sizeInGb(sizeInGb: Number) {
-      }
+      public fun sizeInGb(sizeInGb: Number)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -699,19 +656,19 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty.builder()
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun sizeInGb(sizeInGb: Number) {
+      override fun sizeInGb(sizeInGb: Number) {
         cdkBuilder.sizeInGb(sizeInGb)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -724,13 +681,13 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty,
     ) : VolumeSpecificationProperty {
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun sizeInGb(): Number = unwrap(this).getSizeInGb()
+      override fun sizeInGb(): Number = unwrap(this).getSizeInGb()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
 
-      public override fun volumeType(): String = unwrap(this).getVolumeType()
+      override fun volumeType(): String = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -759,11 +716,9 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -772,11 +727,11 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -789,9 +744,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty,
     ) : MetricDimensionProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -820,22 +775,17 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun rules(): Any
 
     public interface Builder {
-      public fun constraints(constraints: IResolvable) {
-      }
+      public fun constraints(constraints: IResolvable)
 
-      public fun constraints(constraints: ScalingConstraintsProperty) {
-      }
+      public fun constraints(constraints: ScalingConstraintsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01406679afd1c42bc4036bdc27379e34d686b0628cb2ae42b0b0ae00bd22e65d")
-      public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit) {
-      }
+      public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit)
 
-      public fun rules(rules: IResolvable) {
-      }
+      public fun rules(rules: IResolvable)
 
-      public fun rules(rules: List<Any>) {
-      }
+      public fun rules(rules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -844,24 +794,24 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty.builder()
 
-      public override fun constraints(constraints: IResolvable) {
+      override fun constraints(constraints: IResolvable) {
         cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
       }
 
-      public override fun constraints(constraints: ScalingConstraintsProperty) {
+      override fun constraints(constraints: ScalingConstraintsProperty) {
         cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01406679afd1c42bc4036bdc27379e34d686b0628cb2ae42b0b0ae00bd22e65d")
-      public override fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit):
-          Unit = constraints(ScalingConstraintsProperty(constraints))
+      override fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit): Unit =
+          constraints(ScalingConstraintsProperty(constraints))
 
-      public override fun rules(rules: IResolvable) {
+      override fun rules(rules: IResolvable) {
         cdkBuilder.rules(rules.let(IResolvable::unwrap))
       }
 
-      public override fun rules(rules: List<Any>) {
+      override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
 
@@ -874,9 +824,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty,
     ) : AutoScalingPolicyProperty {
-      public override fun constraints(): Any = unwrap(this).getConstraints()
+      override fun constraints(): Any = unwrap(this).getConstraints()
 
-      public override fun rules(): Any = unwrap(this).getRules()
+      override fun rules(): Any = unwrap(this).getRules()
     }
 
     public companion object {
@@ -907,20 +857,15 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun configurations(): Any? = unwrap(this).getConfigurations()
 
     public interface Builder {
-      public fun classification(classification: String) {
-      }
+      public fun classification(classification: String)
 
-      public fun configurationProperties(configurationProperties: IResolvable) {
-      }
+      public fun configurationProperties(configurationProperties: IResolvable)
 
-      public fun configurationProperties(configurationProperties: Map<String, String>) {
-      }
+      public fun configurationProperties(configurationProperties: Map<String, String>)
 
-      public fun configurations(configurations: IResolvable) {
-      }
+      public fun configurations(configurations: IResolvable)
 
-      public fun configurations(configurations: List<Any>) {
-      }
+      public fun configurations(configurations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -928,23 +873,23 @@ public open class CfnInstanceGroupConfig internal constructor(
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty.Builder =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty.builder()
 
-      public override fun classification(classification: String) {
+      override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
-      public override fun configurationProperties(configurationProperties: IResolvable) {
+      override fun configurationProperties(configurationProperties: IResolvable) {
         cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
       }
 
-      public override fun configurationProperties(configurationProperties: Map<String, String>) {
+      override fun configurationProperties(configurationProperties: Map<String, String>) {
         cdkBuilder.configurationProperties(configurationProperties)
       }
 
-      public override fun configurations(configurations: IResolvable) {
+      override fun configurations(configurations: IResolvable) {
         cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
       }
 
-      public override fun configurations(configurations: List<Any>) {
+      override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
 
@@ -957,12 +902,11 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty,
     ) : ConfigurationProperty {
-      public override fun classification(): String? = unwrap(this).getClassification()
+      override fun classification(): String? = unwrap(this).getClassification()
 
-      public override fun configurationProperties(): Any? =
-          unwrap(this).getConfigurationProperties()
+      override fun configurationProperties(): Any? = unwrap(this).getConfigurationProperties()
 
-      public override fun configurations(): Any? = unwrap(this).getConfigurations()
+      override fun configurations(): Any? = unwrap(this).getConfigurations()
     }
 
     public companion object {
@@ -1005,35 +949,25 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun comparisonOperator(comparisonOperator: String) {
-      }
+      public fun comparisonOperator(comparisonOperator: String)
 
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun evaluationPeriods(evaluationPeriods: Number) {
-      }
+      public fun evaluationPeriods(evaluationPeriods: Number)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun period(period: Number) {
-      }
+      public fun period(period: Number)
 
-      public fun statistic(statistic: String) {
-      }
+      public fun statistic(statistic: String)
 
-      public fun threshold(threshold: Number) {
-      }
+      public fun threshold(threshold: Number)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1042,43 +976,43 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.builder()
 
-      public override fun comparisonOperator(comparisonOperator: String) {
+      override fun comparisonOperator(comparisonOperator: String) {
         cdkBuilder.comparisonOperator(comparisonOperator)
       }
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun evaluationPeriods(evaluationPeriods: Number) {
+      override fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun period(period: Number) {
+      override fun period(period: Number) {
         cdkBuilder.period(period)
       }
 
-      public override fun statistic(statistic: String) {
+      override fun statistic(statistic: String) {
         cdkBuilder.statistic(statistic)
       }
 
-      public override fun threshold(threshold: Number) {
+      override fun threshold(threshold: Number) {
         cdkBuilder.threshold(threshold)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -1091,23 +1025,23 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty,
     ) : CloudWatchAlarmDefinitionProperty {
-      public override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
+      override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
 
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
+      override fun evaluationPeriods(): Number? = unwrap(this).getEvaluationPeriods()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun namespace(): String? = unwrap(this).getNamespace()
+      override fun namespace(): String? = unwrap(this).getNamespace()
 
-      public override fun period(): Number = unwrap(this).getPeriod()
+      override fun period(): Number = unwrap(this).getPeriod()
 
-      public override fun statistic(): String? = unwrap(this).getStatistic()
+      override fun statistic(): String? = unwrap(this).getStatistic()
 
-      public override fun threshold(): Number = unwrap(this).getThreshold()
+      override fun threshold(): Number = unwrap(this).getThreshold()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -1137,21 +1071,17 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun simpleScalingPolicyConfiguration(): Any
 
     public interface Builder {
-      public fun market(market: String) {
-      }
+      public fun market(market: String)
 
-      public fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
-      }
+      public fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable)
 
       public
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
-      }
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b4e742cbe99e2be6df8555644d40367564190d0d7e0bbad9cb163fa5a0c378c")
       public
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1159,23 +1089,22 @@ public open class CfnInstanceGroupConfig internal constructor(
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty.Builder =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty.builder()
 
-      public override fun market(market: String) {
+      override fun market(market: String) {
         cdkBuilder.market(market)
       }
 
-      public override
-          fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
+      override fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
         cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
         cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1b4e742cbe99e2be6df8555644d40367564190d0d7e0bbad9cb163fa5a0c378c")
-      public override
+      override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty.Builder.() -> Unit):
           Unit =
           simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty(simpleScalingPolicyConfiguration))
@@ -1189,9 +1118,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty,
     ) : ScalingActionProperty {
-      public override fun market(): String? = unwrap(this).getMarket()
+      override fun market(): String? = unwrap(this).getMarket()
 
-      public override fun simpleScalingPolicyConfiguration(): Any =
+      override fun simpleScalingPolicyConfiguration(): Any =
           unwrap(this).getSimpleScalingPolicyConfiguration()
     }
 
@@ -1221,17 +1150,13 @@ public open class CfnInstanceGroupConfig internal constructor(
     public fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
     public interface Builder {
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-      }
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable)
 
-      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-      }
+      public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
 
-      public fun ebsOptimized(ebsOptimized: Boolean) {
-      }
+      public fun ebsOptimized(ebsOptimized: Boolean)
 
-      public fun ebsOptimized(ebsOptimized: IResolvable) {
-      }
+      public fun ebsOptimized(ebsOptimized: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1240,19 +1165,19 @@ public open class CfnInstanceGroupConfig internal constructor(
           =
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty.builder()
 
-      public override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
       }
 
-      public override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
+      override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
       }
 
-      public override fun ebsOptimized(ebsOptimized: Boolean) {
+      override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
       }
 
-      public override fun ebsOptimized(ebsOptimized: IResolvable) {
+      override fun ebsOptimized(ebsOptimized: IResolvable) {
         cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
       }
 
@@ -1265,9 +1190,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty,
     ) : EbsConfigurationProperty {
-      public override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
+      override fun ebsBlockDeviceConfigs(): Any? = unwrap(this).getEbsBlockDeviceConfigs()
 
-      public override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
     }
 
     public companion object {

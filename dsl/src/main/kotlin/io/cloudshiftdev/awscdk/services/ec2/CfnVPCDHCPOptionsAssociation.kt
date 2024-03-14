@@ -28,11 +28,9 @@ public open class CfnVPCDHCPOptionsAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun dhcpOptionsId(dhcpOptionsId: String) {
-    }
+    public fun dhcpOptionsId(dhcpOptionsId: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnVPCDHCPOptionsAssociation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation.Builder
         = software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation.Builder.create(scope, id)
 
-    public override fun dhcpOptionsId(dhcpOptionsId: String) {
+    override fun dhcpOptionsId(dhcpOptionsId: String) {
       cdkBuilder.dhcpOptionsId(dhcpOptionsId)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

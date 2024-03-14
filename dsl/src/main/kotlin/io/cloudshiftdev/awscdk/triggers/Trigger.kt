@@ -21,23 +21,17 @@ public open class Trigger internal constructor(
   }
 
   public interface Builder {
-    public fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>) {
-    }
+    public fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>)
 
-    public fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>) {
-    }
+    public fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>)
 
-    public fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
-    }
+    public fun executeOnHandlerChange(executeOnHandlerChange: Boolean)
 
-    public fun handler(handler: Function) {
-    }
+    public fun handler(handler: Function)
 
-    public fun invocationType(invocationType: InvocationType) {
-    }
+    public fun invocationType(invocationType: InvocationType)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -47,27 +41,27 @@ public open class Trigger internal constructor(
     private val cdkBuilder: software.amazon.awscdk.triggers.Trigger.Builder =
         software.amazon.awscdk.triggers.Trigger.Builder.create(scope, id)
 
-    public override fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>) {
+    override fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>) {
       cdkBuilder.executeAfter(executeAfter.map(CloudshiftdevConstructsConstruct::unwrap))
     }
 
-    public override fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>) {
+    override fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>) {
       cdkBuilder.executeBefore(executeBefore.map(CloudshiftdevConstructsConstruct::unwrap))
     }
 
-    public override fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
+    override fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
       cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)
     }
 
-    public override fun handler(handler: Function) {
+    override fun handler(handler: Function) {
       cdkBuilder.handler(handler.let(Function::unwrap))
     }
 
-    public override fun invocationType(invocationType: InvocationType) {
+    override fun invocationType(invocationType: InvocationType) {
       cdkBuilder.invocationType(invocationType.let(InvocationType::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 

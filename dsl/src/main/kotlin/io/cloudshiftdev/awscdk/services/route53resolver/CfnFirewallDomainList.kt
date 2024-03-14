@@ -66,17 +66,13 @@ public open class CfnFirewallDomainList internal constructor(
   }
 
   public interface Builder {
-    public fun domainFileUrl(domainFileUrl: String) {
-    }
+    public fun domainFileUrl(domainFileUrl: String)
 
-    public fun domains(domains: List<String>) {
-    }
+    public fun domains(domains: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -88,19 +84,19 @@ public open class CfnFirewallDomainList internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList.Builder.create(scope,
         id)
 
-    public override fun domainFileUrl(domainFileUrl: String) {
+    override fun domainFileUrl(domainFileUrl: String) {
       cdkBuilder.domainFileUrl(domainFileUrl)
     }
 
-    public override fun domains(domains: List<String>) {
+    override fun domains(domains: List<String>) {
       cdkBuilder.domains(domains)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

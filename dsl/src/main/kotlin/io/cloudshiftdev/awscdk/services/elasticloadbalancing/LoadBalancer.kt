@@ -52,46 +52,34 @@ public open class LoadBalancer internal constructor(
       unwrap(this).getLoadBalancerSourceSecurityGroupOwnerAlias()
 
   public interface Builder {
-    public
-        fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty) {
-    }
+    public fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc15462f5800028ee0a73413d8b335b4c9e1cb463c6aa6f737fbb07b0abf0e5a")
     public
-        fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty.Builder.() -> Unit) {
-    }
+        fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty.Builder.() -> Unit)
 
-    public fun crossZone(crossZone: Boolean) {
-    }
+    public fun crossZone(crossZone: Boolean)
 
-    public fun healthCheck(healthCheck: HealthCheck) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("65a99da1eca4ee4376bd14619a95df3d7c739a2d0c286c02a3d8077f18049e33")
-    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
 
-    public fun internetFacing(internetFacing: Boolean) {
-    }
+    public fun internetFacing(internetFacing: Boolean)
 
-    public fun listeners(listeners: List<LoadBalancerListener>) {
-    }
+    public fun listeners(listeners: List<LoadBalancerListener>)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b46623007ae2024844912d743e1a99d7ddcac10babc527493533fc1010a669d9")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun targets(targets: List<ILoadBalancerTarget>) {
-    }
+    public fun targets(targets: List<ILoadBalancerTarget>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -102,52 +90,52 @@ public open class LoadBalancer internal constructor(
         software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer.Builder =
         software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer.Builder.create(scope, id)
 
-    public override
+    override
         fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty) {
       cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc15462f5800028ee0a73413d8b335b4c9e1cb463c6aa6f737fbb07b0abf0e5a")
-    public override
+    override
         fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty.Builder.() -> Unit):
         Unit = accessLoggingPolicy(CfnLoadBalancer.AccessLoggingPolicyProperty(accessLoggingPolicy))
 
-    public override fun crossZone(crossZone: Boolean) {
+    override fun crossZone(crossZone: Boolean) {
       cdkBuilder.crossZone(crossZone)
     }
 
-    public override fun healthCheck(healthCheck: HealthCheck) {
+    override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("65a99da1eca4ee4376bd14619a95df3d7c739a2d0c286c02a3d8077f18049e33")
-    public override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
 
-    public override fun internetFacing(internetFacing: Boolean) {
+    override fun internetFacing(internetFacing: Boolean) {
       cdkBuilder.internetFacing(internetFacing)
     }
 
-    public override fun listeners(listeners: List<LoadBalancerListener>) {
+    override fun listeners(listeners: List<LoadBalancerListener>) {
       cdkBuilder.listeners(listeners.map(LoadBalancerListener::unwrap))
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b46623007ae2024844912d743e1a99d7ddcac10babc527493533fc1010a669d9")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun targets(targets: List<ILoadBalancerTarget>) {
+    override fun targets(targets: List<ILoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(ILoadBalancerTarget::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

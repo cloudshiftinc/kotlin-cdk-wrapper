@@ -42,14 +42,11 @@ public open class CfnTrustStoreRevocation internal constructor(
   }
 
   public interface Builder {
-    public fun revocationContents(revocationContents: IResolvable) {
-    }
+    public fun revocationContents(revocationContents: IResolvable)
 
-    public fun revocationContents(revocationContents: List<Any>) {
-    }
+    public fun revocationContents(revocationContents: List<Any>)
 
-    public fun trustStoreArn(trustStoreArn: String) {
-    }
+    public fun trustStoreArn(trustStoreArn: String)
   }
 
   private class BuilderImpl(
@@ -61,15 +58,15 @@ public open class CfnTrustStoreRevocation internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.Builder.create(scope,
         id)
 
-    public override fun revocationContents(revocationContents: IResolvable) {
+    override fun revocationContents(revocationContents: IResolvable) {
       cdkBuilder.revocationContents(revocationContents.let(IResolvable::unwrap))
     }
 
-    public override fun revocationContents(revocationContents: List<Any>) {
+    override fun revocationContents(revocationContents: List<Any>) {
       cdkBuilder.revocationContents(revocationContents)
     }
 
-    public override fun trustStoreArn(trustStoreArn: String) {
+    override fun trustStoreArn(trustStoreArn: String) {
       cdkBuilder.trustStoreArn(trustStoreArn)
     }
 
@@ -111,17 +108,13 @@ public open class CfnTrustStoreRevocation internal constructor(
     public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
     public interface Builder {
-      public fun revocationType(revocationType: String) {
-      }
+      public fun revocationType(revocationType: String)
 
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
 
-      public fun s3ObjectVersion(s3ObjectVersion: String) {
-      }
+      public fun s3ObjectVersion(s3ObjectVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -130,19 +123,19 @@ public open class CfnTrustStoreRevocation internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty.builder()
 
-      public override fun revocationType(revocationType: String) {
+      override fun revocationType(revocationType: String) {
         cdkBuilder.revocationType(revocationType)
       }
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
-      public override fun s3ObjectVersion(s3ObjectVersion: String) {
+      override fun s3ObjectVersion(s3ObjectVersion: String) {
         cdkBuilder.s3ObjectVersion(s3ObjectVersion)
       }
 
@@ -155,13 +148,13 @@ public open class CfnTrustStoreRevocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.RevocationContentProperty,
     ) : RevocationContentProperty {
-      public override fun revocationType(): String? = unwrap(this).getRevocationType()
+      override fun revocationType(): String? = unwrap(this).getRevocationType()
 
-      public override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String? = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String? = unwrap(this).getS3Key()
+      override fun s3Key(): String? = unwrap(this).getS3Key()
 
-      public override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
+      override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
     }
 
     public companion object {
@@ -194,17 +187,13 @@ public open class CfnTrustStoreRevocation internal constructor(
     public fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
 
     public interface Builder {
-      public fun numberOfRevokedEntries(numberOfRevokedEntries: Number) {
-      }
+      public fun numberOfRevokedEntries(numberOfRevokedEntries: Number)
 
-      public fun revocationId(revocationId: String) {
-      }
+      public fun revocationId(revocationId: String)
 
-      public fun revocationType(revocationType: String) {
-      }
+      public fun revocationType(revocationType: String)
 
-      public fun trustStoreArn(trustStoreArn: String) {
-      }
+      public fun trustStoreArn(trustStoreArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,19 +202,19 @@ public open class CfnTrustStoreRevocation internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty.builder()
 
-      public override fun numberOfRevokedEntries(numberOfRevokedEntries: Number) {
+      override fun numberOfRevokedEntries(numberOfRevokedEntries: Number) {
         cdkBuilder.numberOfRevokedEntries(numberOfRevokedEntries)
       }
 
-      public override fun revocationId(revocationId: String) {
+      override fun revocationId(revocationId: String) {
         cdkBuilder.revocationId(revocationId)
       }
 
-      public override fun revocationType(revocationType: String) {
+      override fun revocationType(revocationType: String) {
         cdkBuilder.revocationType(revocationType)
       }
 
-      public override fun trustStoreArn(trustStoreArn: String) {
+      override fun trustStoreArn(trustStoreArn: String) {
         cdkBuilder.trustStoreArn(trustStoreArn)
       }
 
@@ -238,14 +227,13 @@ public open class CfnTrustStoreRevocation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation.TrustStoreRevocationProperty,
     ) : TrustStoreRevocationProperty {
-      public override fun numberOfRevokedEntries(): Number? =
-          unwrap(this).getNumberOfRevokedEntries()
+      override fun numberOfRevokedEntries(): Number? = unwrap(this).getNumberOfRevokedEntries()
 
-      public override fun revocationId(): String? = unwrap(this).getRevocationId()
+      override fun revocationId(): String? = unwrap(this).getRevocationId()
 
-      public override fun revocationType(): String? = unwrap(this).getRevocationType()
+      override fun revocationType(): String? = unwrap(this).getRevocationType()
 
-      public override fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
+      override fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
     }
 
     public companion object {

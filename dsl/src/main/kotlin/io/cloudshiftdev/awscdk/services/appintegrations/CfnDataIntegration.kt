@@ -97,45 +97,33 @@ public open class CfnDataIntegration internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun fileConfiguration(fileConfiguration: IResolvable) {
-    }
+    public fun fileConfiguration(fileConfiguration: IResolvable)
 
-    public fun fileConfiguration(fileConfiguration: FileConfigurationProperty) {
-    }
+    public fun fileConfiguration(fileConfiguration: FileConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0d3ae32aa8666f3c6576bb12199758f0d36515a44406953f1c58bc5ca298af5")
-    public fun fileConfiguration(fileConfiguration: FileConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun fileConfiguration(fileConfiguration: FileConfigurationProperty.Builder.() -> Unit)
 
-    public fun kmsKey(kmsKey: String) {
-    }
+    public fun kmsKey(kmsKey: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun objectConfiguration(objectConfiguration: Any) {
-    }
+    public fun objectConfiguration(objectConfiguration: Any)
 
-    public fun scheduleConfig(scheduleConfig: IResolvable) {
-    }
+    public fun scheduleConfig(scheduleConfig: IResolvable)
 
-    public fun scheduleConfig(scheduleConfig: ScheduleConfigProperty) {
-    }
+    public fun scheduleConfig(scheduleConfig: ScheduleConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e19c75c75946003dc2287b741c14dc1d829aedfd5a3d81ce0b4c9da014ce1a1f")
-    public fun scheduleConfig(scheduleConfig: ScheduleConfigProperty.Builder.() -> Unit) {
-    }
+    public fun scheduleConfig(scheduleConfig: ScheduleConfigProperty.Builder.() -> Unit)
 
-    public fun sourceUri(sourceUri: String) {
-    }
+    public fun sourceUri(sourceUri: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -146,54 +134,53 @@ public open class CfnDataIntegration internal constructor(
         software.amazon.awscdk.services.appintegrations.CfnDataIntegration.Builder =
         software.amazon.awscdk.services.appintegrations.CfnDataIntegration.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun fileConfiguration(fileConfiguration: IResolvable) {
+    override fun fileConfiguration(fileConfiguration: IResolvable) {
       cdkBuilder.fileConfiguration(fileConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun fileConfiguration(fileConfiguration: FileConfigurationProperty) {
+    override fun fileConfiguration(fileConfiguration: FileConfigurationProperty) {
       cdkBuilder.fileConfiguration(fileConfiguration.let(FileConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c0d3ae32aa8666f3c6576bb12199758f0d36515a44406953f1c58bc5ca298af5")
-    public override
-        fun fileConfiguration(fileConfiguration: FileConfigurationProperty.Builder.() -> Unit): Unit
-        = fileConfiguration(FileConfigurationProperty(fileConfiguration))
+    override fun fileConfiguration(fileConfiguration: FileConfigurationProperty.Builder.() -> Unit):
+        Unit = fileConfiguration(FileConfigurationProperty(fileConfiguration))
 
-    public override fun kmsKey(kmsKey: String) {
+    override fun kmsKey(kmsKey: String) {
       cdkBuilder.kmsKey(kmsKey)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun objectConfiguration(objectConfiguration: Any) {
+    override fun objectConfiguration(objectConfiguration: Any) {
       cdkBuilder.objectConfiguration(objectConfiguration)
     }
 
-    public override fun scheduleConfig(scheduleConfig: IResolvable) {
+    override fun scheduleConfig(scheduleConfig: IResolvable) {
       cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable::unwrap))
     }
 
-    public override fun scheduleConfig(scheduleConfig: ScheduleConfigProperty) {
+    override fun scheduleConfig(scheduleConfig: ScheduleConfigProperty) {
       cdkBuilder.scheduleConfig(scheduleConfig.let(ScheduleConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e19c75c75946003dc2287b741c14dc1d829aedfd5a3d81ce0b4c9da014ce1a1f")
-    public override fun scheduleConfig(scheduleConfig: ScheduleConfigProperty.Builder.() -> Unit):
-        Unit = scheduleConfig(ScheduleConfigProperty(scheduleConfig))
+    override fun scheduleConfig(scheduleConfig: ScheduleConfigProperty.Builder.() -> Unit): Unit =
+        scheduleConfig(ScheduleConfigProperty(scheduleConfig))
 
-    public override fun sourceUri(sourceUri: String) {
+    override fun sourceUri(sourceUri: String) {
       cdkBuilder.sourceUri(sourceUri)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -231,14 +218,11 @@ public open class CfnDataIntegration internal constructor(
     public fun scheduleExpression(): String
 
     public interface Builder {
-      public fun firstExecutionFrom(firstExecutionFrom: String) {
-      }
+      public fun firstExecutionFrom(firstExecutionFrom: String)
 
-      public fun `object`(`object`: String) {
-      }
+      public fun `object`(`object`: String)
 
-      public fun scheduleExpression(scheduleExpression: String) {
-      }
+      public fun scheduleExpression(scheduleExpression: String)
     }
 
     private class BuilderImpl : Builder {
@@ -247,15 +231,15 @@ public open class CfnDataIntegration internal constructor(
           =
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty.builder()
 
-      public override fun firstExecutionFrom(firstExecutionFrom: String) {
+      override fun firstExecutionFrom(firstExecutionFrom: String) {
         cdkBuilder.firstExecutionFrom(firstExecutionFrom)
       }
 
-      public override fun `object`(`object`: String) {
+      override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
       }
 
-      public override fun scheduleExpression(scheduleExpression: String) {
+      override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
       }
 
@@ -268,11 +252,11 @@ public open class CfnDataIntegration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty,
     ) : ScheduleConfigProperty {
-      public override fun firstExecutionFrom(): String? = unwrap(this).getFirstExecutionFrom()
+      override fun firstExecutionFrom(): String? = unwrap(this).getFirstExecutionFrom()
 
-      public override fun `object`(): String? = unwrap(this).getObject()
+      override fun `object`(): String? = unwrap(this).getObject()
 
-      public override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
     }
 
     public companion object {
@@ -301,11 +285,9 @@ public open class CfnDataIntegration internal constructor(
     public fun folders(): List<String>
 
     public interface Builder {
-      public fun filters(filters: Any) {
-      }
+      public fun filters(filters: Any)
 
-      public fun folders(folders: List<String>) {
-      }
+      public fun folders(folders: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -314,11 +296,11 @@ public open class CfnDataIntegration internal constructor(
           =
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty.builder()
 
-      public override fun filters(filters: Any) {
+      override fun filters(filters: Any) {
         cdkBuilder.filters(filters)
       }
 
-      public override fun folders(folders: List<String>) {
+      override fun folders(folders: List<String>) {
         cdkBuilder.folders(folders)
       }
 
@@ -331,9 +313,9 @@ public open class CfnDataIntegration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty,
     ) : FileConfigurationProperty {
-      public override fun filters(): Any? = unwrap(this).getFilters()
+      override fun filters(): Any? = unwrap(this).getFilters()
 
-      public override fun folders(): List<String> = unwrap(this).getFolders() ?: emptyList()
+      override fun folders(): List<String> = unwrap(this).getFolders() ?: emptyList()
     }
 
     public companion object {

@@ -9,11 +9,9 @@ public interface BindHookTargetOptions {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun lifecycleHook(lifecycleHook: LifecycleHook) {
-    }
+    public fun lifecycleHook(lifecycleHook: LifecycleHook)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface BindHookTargetOptions {
         software.amazon.awscdk.services.autoscaling.BindHookTargetOptions.Builder =
         software.amazon.awscdk.services.autoscaling.BindHookTargetOptions.builder()
 
-    public override fun lifecycleHook(lifecycleHook: LifecycleHook) {
+    override fun lifecycleHook(lifecycleHook: LifecycleHook) {
       cdkBuilder.lifecycleHook(lifecycleHook.let(LifecycleHook::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -36,10 +34,10 @@ public interface BindHookTargetOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.BindHookTargetOptions,
   ) : BindHookTargetOptions {
-    public override fun lifecycleHook(): LifecycleHook =
+    override fun lifecycleHook(): LifecycleHook =
         unwrap(this).getLifecycleHook().let(LifecycleHook::wrap)
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 
   public companion object {

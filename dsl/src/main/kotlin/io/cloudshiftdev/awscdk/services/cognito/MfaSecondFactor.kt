@@ -9,22 +9,20 @@ public interface MfaSecondFactor {
   public fun sms(): Boolean
 
   public interface Builder {
-    public fun otp(otp: Boolean) {
-    }
+    public fun otp(otp: Boolean)
 
-    public fun sms(sms: Boolean) {
-    }
+    public fun sms(sms: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.MfaSecondFactor.Builder =
         software.amazon.awscdk.services.cognito.MfaSecondFactor.builder()
 
-    public override fun otp(otp: Boolean) {
+    override fun otp(otp: Boolean) {
       cdkBuilder.otp(otp)
     }
 
-    public override fun sms(sms: Boolean) {
+    override fun sms(sms: Boolean) {
       cdkBuilder.sms(sms)
     }
 
@@ -34,9 +32,9 @@ public interface MfaSecondFactor {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.MfaSecondFactor,
   ) : MfaSecondFactor {
-    public override fun otp(): Boolean = unwrap(this).getOtp()
+    override fun otp(): Boolean = unwrap(this).getOtp()
 
-    public override fun sms(): Boolean = unwrap(this).getSms()
+    override fun sms(): Boolean = unwrap(this).getSms()
   }
 
   public companion object {

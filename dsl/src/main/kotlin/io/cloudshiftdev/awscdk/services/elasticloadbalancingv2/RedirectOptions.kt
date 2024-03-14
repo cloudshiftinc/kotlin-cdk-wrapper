@@ -18,23 +18,17 @@ public interface RedirectOptions {
   public fun query(): String? = unwrap(this).getQuery()
 
   public interface Builder {
-    public fun host(host: String) {
-    }
+    public fun host(host: String)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun permanent(permanent: Boolean) {
-    }
+    public fun permanent(permanent: Boolean)
 
-    public fun port(port: String) {
-    }
+    public fun port(port: String)
 
-    public fun protocol(protocol: String) {
-    }
+    public fun protocol(protocol: String)
 
-    public fun query(query: String) {
-    }
+    public fun query(query: String)
   }
 
   private class BuilderImpl : Builder {
@@ -42,27 +36,27 @@ public interface RedirectOptions {
         software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions.builder()
 
-    public override fun host(host: String) {
+    override fun host(host: String) {
       cdkBuilder.host(host)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun permanent(permanent: Boolean) {
+    override fun permanent(permanent: Boolean) {
       cdkBuilder.permanent(permanent)
     }
 
-    public override fun port(port: String) {
+    override fun port(port: String) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: String) {
+    override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun query(query: String) {
+    override fun query(query: String) {
       cdkBuilder.query(query)
     }
 
@@ -73,17 +67,17 @@ public interface RedirectOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.RedirectOptions,
   ) : RedirectOptions {
-    public override fun host(): String? = unwrap(this).getHost()
+    override fun host(): String? = unwrap(this).getHost()
 
-    public override fun path(): String? = unwrap(this).getPath()
+    override fun path(): String? = unwrap(this).getPath()
 
-    public override fun permanent(): Boolean? = unwrap(this).getPermanent()
+    override fun permanent(): Boolean? = unwrap(this).getPermanent()
 
-    public override fun port(): String? = unwrap(this).getPort()
+    override fun port(): String? = unwrap(this).getPort()
 
-    public override fun protocol(): String? = unwrap(this).getProtocol()
+    override fun protocol(): String? = unwrap(this).getProtocol()
 
-    public override fun query(): String? = unwrap(this).getQuery()
+    override fun query(): String? = unwrap(this).getQuery()
   }
 
   public companion object {

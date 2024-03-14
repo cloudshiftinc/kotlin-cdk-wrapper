@@ -48,38 +48,27 @@ public open class DnsValidatedCertificate internal constructor(
 
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
-    public fun certificateName(certificateName: String) {
-    }
+    public fun certificateName(certificateName: String)
 
-    public fun cleanupRoute53Records(cleanupRoute53Records: Boolean) {
-    }
+    public fun cleanupRoute53Records(cleanupRoute53Records: Boolean)
 
-    public fun customResourceRole(customResourceRole: IRole) {
-    }
+    public fun customResourceRole(customResourceRole: IRole)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun hostedZone(hostedZone: IHostedZone) {
-    }
+    public fun hostedZone(hostedZone: IHostedZone)
 
-    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-    }
+    public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun route53Endpoint(route53Endpoint: String) {
-    }
+    public fun route53Endpoint(route53Endpoint: String)
 
-    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
-    }
+    public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
 
-    public fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
-    }
+    public fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean)
 
-    public fun validation(validation: CertificateValidation) {
-    }
+    public fun validation(validation: CertificateValidation)
   }
 
   private class BuilderImpl(
@@ -91,47 +80,47 @@ public open class DnsValidatedCertificate internal constructor(
         software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate.Builder.create(scope,
         id)
 
-    public override fun certificateName(certificateName: String) {
+    override fun certificateName(certificateName: String) {
       cdkBuilder.certificateName(certificateName)
     }
 
-    public override fun cleanupRoute53Records(cleanupRoute53Records: Boolean) {
+    override fun cleanupRoute53Records(cleanupRoute53Records: Boolean) {
       cdkBuilder.cleanupRoute53Records(cleanupRoute53Records)
     }
 
-    public override fun customResourceRole(customResourceRole: IRole) {
+    override fun customResourceRole(customResourceRole: IRole) {
       cdkBuilder.customResourceRole(customResourceRole.let(IRole::unwrap))
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun hostedZone(hostedZone: IHostedZone) {
+    override fun hostedZone(hostedZone: IHostedZone) {
       cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
     }
 
-    public override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
+    override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
       cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun route53Endpoint(route53Endpoint: String) {
+    override fun route53Endpoint(route53Endpoint: String) {
       cdkBuilder.route53Endpoint(route53Endpoint)
     }
 
-    public override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
+    override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
 
-    public override fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
+    override fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
       cdkBuilder.transparencyLoggingEnabled(transparencyLoggingEnabled)
     }
 
-    public override fun validation(validation: CertificateValidation) {
+    override fun validation(validation: CertificateValidation) {
       cdkBuilder.validation(validation.let(CertificateValidation::unwrap))
     }
 

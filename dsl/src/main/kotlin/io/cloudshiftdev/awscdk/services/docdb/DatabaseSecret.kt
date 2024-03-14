@@ -12,20 +12,15 @@ public open class DatabaseSecret internal constructor(
   private val cdkObject: software.amazon.awscdk.services.docdb.DatabaseSecret,
 ) : Secret(cdkObject) {
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun excludeCharacters(excludeCharacters: String) {
-    }
+    public fun excludeCharacters(excludeCharacters: String)
 
-    public fun masterSecret(masterSecret: ISecret) {
-    }
+    public fun masterSecret(masterSecret: ISecret)
 
-    public fun secretName(secretName: String) {
-    }
+    public fun secretName(secretName: String)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -35,23 +30,23 @@ public open class DatabaseSecret internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdb.DatabaseSecret.Builder =
         software.amazon.awscdk.services.docdb.DatabaseSecret.Builder.create(scope, id)
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun excludeCharacters(excludeCharacters: String) {
+    override fun excludeCharacters(excludeCharacters: String) {
       cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    public override fun masterSecret(masterSecret: ISecret) {
+    override fun masterSecret(masterSecret: ISecret) {
       cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
     }
 
-    public override fun secretName(secretName: String) {
+    override fun secretName(secretName: String) {
       cdkBuilder.secretName(secretName)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 

@@ -89,37 +89,27 @@ public open class CfnDataProvider internal constructor(
   }
 
   public interface Builder {
-    public fun dataProviderIdentifier(dataProviderIdentifier: String) {
-    }
+    public fun dataProviderIdentifier(dataProviderIdentifier: String)
 
-    public fun dataProviderName(dataProviderName: String) {
-    }
+    public fun dataProviderName(dataProviderName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun exactSettings(exactSettings: Boolean) {
-    }
+    public fun exactSettings(exactSettings: Boolean)
 
-    public fun exactSettings(exactSettings: IResolvable) {
-    }
+    public fun exactSettings(exactSettings: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tings(settings: IResolvable) {
-    }
+    public fun tings(settings: IResolvable)
 
-    public fun tings(settings: SettingsProperty) {
-    }
+    public fun tings(settings: SettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c39604e34fcba258422b1df3816092070b4c839ccb0f3d3f90ea77f4a50919e")
-    public fun tings(settings: SettingsProperty.Builder.() -> Unit) {
-    }
+    public fun tings(settings: SettingsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -129,45 +119,45 @@ public open class CfnDataProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnDataProvider.Builder =
         software.amazon.awscdk.services.dms.CfnDataProvider.Builder.create(scope, id)
 
-    public override fun dataProviderIdentifier(dataProviderIdentifier: String) {
+    override fun dataProviderIdentifier(dataProviderIdentifier: String) {
       cdkBuilder.dataProviderIdentifier(dataProviderIdentifier)
     }
 
-    public override fun dataProviderName(dataProviderName: String) {
+    override fun dataProviderName(dataProviderName: String) {
       cdkBuilder.dataProviderName(dataProviderName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun exactSettings(exactSettings: Boolean) {
+    override fun exactSettings(exactSettings: Boolean) {
       cdkBuilder.exactSettings(exactSettings)
     }
 
-    public override fun exactSettings(exactSettings: IResolvable) {
+    override fun exactSettings(exactSettings: IResolvable) {
       cdkBuilder.exactSettings(exactSettings.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tings(settings: IResolvable) {
+    override fun tings(settings: IResolvable) {
       cdkBuilder.settings(settings.let(IResolvable::unwrap))
     }
 
-    public override fun tings(settings: SettingsProperty) {
+    override fun tings(settings: SettingsProperty) {
       cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c39604e34fcba258422b1df3816092070b4c839ccb0f3d3f90ea77f4a50919e")
-    public override fun tings(settings: SettingsProperty.Builder.() -> Unit): Unit =
+    override fun tings(settings: SettingsProperty.Builder.() -> Unit): Unit =
         tings(SettingsProperty(settings))
 
     public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider = cdkBuilder.build()
@@ -198,17 +188,14 @@ public open class CfnDataProvider internal constructor(
     public fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
 
     public interface Builder {
-      public fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
-      }
+      public fun postgreSqlSettings(postgreSqlSettings: IResolvable)
 
-      public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
-      }
+      public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
       public
-          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit) {
-      }
+          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -216,17 +203,17 @@ public open class CfnDataProvider internal constructor(
           software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.builder()
 
-      public override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
+      override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
         cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
       }
 
-      public override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
+      override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
         cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
-      public override
+      override
           fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit):
           Unit = postgreSqlSettings(PostgreSqlSettingsProperty(postgreSqlSettings))
 
@@ -237,7 +224,7 @@ public open class CfnDataProvider internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty,
     ) : SettingsProperty {
-      public override fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
+      override fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
     }
 
     public companion object {
@@ -272,20 +259,15 @@ public open class CfnDataProvider internal constructor(
     public fun sslMode(): String? = unwrap(this).getSslMode()
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun serverName(serverName: String) {
-      }
+      public fun serverName(serverName: String)
 
-      public fun sslMode(sslMode: String) {
-      }
+      public fun sslMode(sslMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -293,23 +275,23 @@ public open class CfnDataProvider internal constructor(
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty.Builder =
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun serverName(serverName: String) {
+      override fun serverName(serverName: String) {
         cdkBuilder.serverName(serverName)
       }
 
-      public override fun sslMode(sslMode: String) {
+      override fun sslMode(sslMode: String) {
         cdkBuilder.sslMode(sslMode)
       }
 
@@ -322,15 +304,15 @@ public open class CfnDataProvider internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty,
     ) : PostgreSqlSettingsProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun serverName(): String? = unwrap(this).getServerName()
+      override fun serverName(): String? = unwrap(this).getServerName()
 
-      public override fun sslMode(): String? = unwrap(this).getSslMode()
+      override fun sslMode(): String? = unwrap(this).getSslMode()
     }
 
     public companion object {

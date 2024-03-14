@@ -41,39 +41,29 @@ public open class BackupVault internal constructor(
       unwrap(this).grant(grantee.let(IGrantable::unwrap), actions).let(Grant::wrap)
 
   public interface Builder {
-    public fun accessPolicy(accessPolicy: PolicyDocument) {
-    }
+    public fun accessPolicy(accessPolicy: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("300aa7cbfdf6d896a21f7e35992336f28e09bd473bace3ea72e84b46ced4a2df")
-    public fun accessPolicy(accessPolicy: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun accessPolicy(accessPolicy: PolicyDocument.Builder.() -> Unit)
 
-    public fun backupVaultName(backupVaultName: String) {
-    }
+    public fun backupVaultName(backupVaultName: String)
 
-    public fun blockRecoveryPointDeletion(blockRecoveryPointDeletion: Boolean) {
-    }
+    public fun blockRecoveryPointDeletion(blockRecoveryPointDeletion: Boolean)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun lockConfiguration(lockConfiguration: LockConfiguration) {
-    }
+    public fun lockConfiguration(lockConfiguration: LockConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf8503a03f95ef9fb6ebebe12304a5acfc4e2828a77d35540b88b2695e6c6a92")
-    public fun lockConfiguration(lockConfiguration: LockConfiguration.Builder.() -> Unit) {
-    }
+    public fun lockConfiguration(lockConfiguration: LockConfiguration.Builder.() -> Unit)
 
-    public fun notificationEvents(notificationEvents: List<BackupVaultEvents>) {
-    }
+    public fun notificationEvents(notificationEvents: List<BackupVaultEvents>)
 
-    public fun notificationTopic(notificationTopic: ITopic) {
-    }
+    public fun notificationTopic(notificationTopic: ITopic)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
   }
 
   private class BuilderImpl(
@@ -83,45 +73,45 @@ public open class BackupVault internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupVault.Builder =
         software.amazon.awscdk.services.backup.BackupVault.Builder.create(scope, id)
 
-    public override fun accessPolicy(accessPolicy: PolicyDocument) {
+    override fun accessPolicy(accessPolicy: PolicyDocument) {
       cdkBuilder.accessPolicy(accessPolicy.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("300aa7cbfdf6d896a21f7e35992336f28e09bd473bace3ea72e84b46ced4a2df")
-    public override fun accessPolicy(accessPolicy: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun accessPolicy(accessPolicy: PolicyDocument.Builder.() -> Unit): Unit =
         accessPolicy(PolicyDocument(accessPolicy))
 
-    public override fun backupVaultName(backupVaultName: String) {
+    override fun backupVaultName(backupVaultName: String) {
       cdkBuilder.backupVaultName(backupVaultName)
     }
 
-    public override fun blockRecoveryPointDeletion(blockRecoveryPointDeletion: Boolean) {
+    override fun blockRecoveryPointDeletion(blockRecoveryPointDeletion: Boolean) {
       cdkBuilder.blockRecoveryPointDeletion(blockRecoveryPointDeletion)
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun lockConfiguration(lockConfiguration: LockConfiguration) {
+    override fun lockConfiguration(lockConfiguration: LockConfiguration) {
       cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bf8503a03f95ef9fb6ebebe12304a5acfc4e2828a77d35540b88b2695e6c6a92")
-    public override fun lockConfiguration(lockConfiguration: LockConfiguration.Builder.() -> Unit):
-        Unit = lockConfiguration(LockConfiguration(lockConfiguration))
+    override fun lockConfiguration(lockConfiguration: LockConfiguration.Builder.() -> Unit): Unit =
+        lockConfiguration(LockConfiguration(lockConfiguration))
 
-    public override fun notificationEvents(notificationEvents: List<BackupVaultEvents>) {
+    override fun notificationEvents(notificationEvents: List<BackupVaultEvents>) {
       cdkBuilder.notificationEvents(notificationEvents.map(BackupVaultEvents::unwrap))
     }
 
-    public override fun notificationTopic(notificationTopic: ITopic) {
+    override fun notificationTopic(notificationTopic: ITopic) {
       cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 

@@ -30,11 +30,9 @@ public open class CfnThingPrincipalAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
 
-    public fun thingName(thingName: String) {
-    }
+    public fun thingName(thingName: String)
   }
 
   private class BuilderImpl(
@@ -44,11 +42,11 @@ public open class CfnThingPrincipalAttachment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment.Builder
         = software.amazon.awscdk.services.iot.CfnThingPrincipalAttachment.Builder.create(scope, id)
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 
-    public override fun thingName(thingName: String) {
+    override fun thingName(thingName: String) {
       cdkBuilder.thingName(thingName)
     }
 

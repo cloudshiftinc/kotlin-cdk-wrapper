@@ -7,15 +7,14 @@ public interface ActionConfig {
   public fun configuration(): Any? = unwrap(this).getConfiguration()
 
   public interface Builder {
-    public fun configuration(configuration: Any) {
-    }
+    public fun configuration(configuration: Any)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.ActionConfig.Builder =
         software.amazon.awscdk.services.codepipeline.ActionConfig.builder()
 
-    public override fun configuration(configuration: Any) {
+    override fun configuration(configuration: Any) {
       cdkBuilder.configuration(configuration)
     }
 
@@ -26,7 +25,7 @@ public interface ActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.ActionConfig,
   ) : ActionConfig {
-    public override fun configuration(): Any? = unwrap(this).getConfiguration()
+    override fun configuration(): Any? = unwrap(this).getConfiguration()
   }
 
   public companion object {

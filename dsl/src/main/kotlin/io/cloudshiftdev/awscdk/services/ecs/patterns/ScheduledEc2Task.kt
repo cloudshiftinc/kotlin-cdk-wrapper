@@ -28,60 +28,45 @@ public open class ScheduledEc2Task internal constructor(
       unwrap(this).getTaskDefinition().let(Ec2TaskDefinition::wrap)
 
   public interface Builder {
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun desiredTaskCount(desiredTaskCount: Number) {
-    }
+    public fun desiredTaskCount(desiredTaskCount: Number)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun propagateTags(propagateTags: PropagatedTagSource) {
-    }
+    public fun propagateTags(propagateTags: PropagatedTagSource)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
 
-    public fun schedule(schedule: Schedule) {
-    }
+    public fun schedule(schedule: Schedule)
 
     public
-        fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions) {
-    }
+        fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19234eeeeaf7c92d99fae6056ff1bdc8334d09f4d97bc9e71c4afbb743f228c1")
     public
-        fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions.Builder.() -> Unit) {
-    }
+        fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions.Builder.() -> Unit)
 
     public
-        fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions) {
-    }
+        fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6797958a33bd73206192c65a1051a6979562a3f816de1fa50dd6a37376513cbf")
     public
-        fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions.Builder.() -> Unit) {
-    }
+        fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions.Builder.() -> Unit)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun subnetSelection(subnetSelection: SubnetSelection) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6c095d78f456ca3c66fb168570b1caef9e29f550f04efbedb8ac8ca8704675b")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    public fun tags(tags: List<Tag>) {
-    }
+    public fun tags(tags: List<Tag>)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -91,72 +76,72 @@ public open class ScheduledEc2Task internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task.Builder =
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task.Builder.create(scope, id)
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun desiredTaskCount(desiredTaskCount: Number) {
+    override fun desiredTaskCount(desiredTaskCount: Number) {
       cdkBuilder.desiredTaskCount(desiredTaskCount)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun propagateTags(propagateTags: PropagatedTagSource) {
+    override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
-    public override fun schedule(schedule: Schedule) {
+    override fun schedule(schedule: Schedule) {
       cdkBuilder.schedule(schedule.let(Schedule::unwrap))
     }
 
-    public override
+    override
         fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions) {
       cdkBuilder.scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions.let(ScheduledEc2TaskDefinitionOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19234eeeeaf7c92d99fae6056ff1bdc8334d09f4d97bc9e71c4afbb743f228c1")
-    public override
+    override
         fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions.Builder.() -> Unit):
         Unit =
         scheduledEc2TaskDefinitionOptions(ScheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions))
 
-    public override
+    override
         fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions) {
       cdkBuilder.scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions.let(ScheduledEc2TaskImageOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6797958a33bd73206192c65a1051a6979562a3f816de1fa50dd6a37376513cbf")
-    public override
+    override
         fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions.Builder.() -> Unit):
         Unit =
         scheduledEc2TaskImageOptions(ScheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions))
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun subnetSelection(subnetSelection: SubnetSelection) {
+    override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6c095d78f456ca3c66fb168570b1caef9e29f550f04efbedb8ac8ca8704675b")
-    public override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
 
-    public override fun tags(tags: List<Tag>) {
+    override fun tags(tags: List<Tag>) {
       cdkBuilder.tags(tags.map(Tag::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

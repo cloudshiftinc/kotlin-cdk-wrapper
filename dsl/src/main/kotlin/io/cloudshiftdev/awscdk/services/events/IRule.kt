@@ -15,20 +15,19 @@ public interface IRule : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.IRule,
   ) : IRule {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun ruleArn(): String = unwrap(this).getRuleArn()
+    override fun ruleArn(): String = unwrap(this).getRuleArn()
 
-    public override fun ruleName(): String = unwrap(this).getRuleName()
+    override fun ruleName(): String = unwrap(this).getRuleName()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

@@ -63,38 +63,30 @@ public open class CfnCodeDeployBlueGreenHook internal constructor(
       trafficRoutingConfig(CfnTrafficRoutingConfig(`value`))
 
   public interface Builder {
-    public fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
-    }
+    public fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2942ee11ea6a57ebe0c2645198c9fb7a2b6814640b751575ce2816ffb3a970cd")
     public
-        fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions.Builder.() -> Unit) {
-    }
+        fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions.Builder.() -> Unit)
 
-    public fun applications(applications: List<CfnCodeDeployBlueGreenApplication>) {
-    }
+    public fun applications(applications: List<CfnCodeDeployBlueGreenApplication>)
 
-    public fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {
-    }
+    public fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("35bbc097d9e2b40b18625b08e25f624da081705f1612bef8803388ecfbcaffaf")
     public
-        fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks.Builder.() -> Unit) {
-    }
+        fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks.Builder.() -> Unit)
 
-    public fun serviceRole(serviceRole: String) {
-    }
+    public fun serviceRole(serviceRole: String)
 
-    public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
-    }
+    public fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b8b7a942d34f0b578b07c9f5b5b9cb941a8181809736d58b79a15c1dd7c0e61")
     public
-        fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig.Builder.() -> Unit) {
-    }
+        fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -104,43 +96,42 @@ public open class CfnCodeDeployBlueGreenHook internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenHook.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenHook.Builder.create(scope, id)
 
-    public override
-        fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
+    override fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
       cdkBuilder.additionalOptions(additionalOptions.let(CfnCodeDeployBlueGreenAdditionalOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2942ee11ea6a57ebe0c2645198c9fb7a2b6814640b751575ce2816ffb3a970cd")
-    public override
+    override
         fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions.Builder.() -> Unit):
         Unit = additionalOptions(CfnCodeDeployBlueGreenAdditionalOptions(additionalOptions))
 
-    public override fun applications(applications: List<CfnCodeDeployBlueGreenApplication>) {
+    override fun applications(applications: List<CfnCodeDeployBlueGreenApplication>) {
       cdkBuilder.applications(applications.map(CfnCodeDeployBlueGreenApplication::unwrap))
     }
 
-    public override
+    override
         fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {
       cdkBuilder.lifecycleEventHooks(lifecycleEventHooks.let(CfnCodeDeployBlueGreenLifecycleEventHooks::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("35bbc097d9e2b40b18625b08e25f624da081705f1612bef8803388ecfbcaffaf")
-    public override
+    override
         fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks.Builder.() -> Unit):
         Unit = lifecycleEventHooks(CfnCodeDeployBlueGreenLifecycleEventHooks(lifecycleEventHooks))
 
-    public override fun serviceRole(serviceRole: String) {
+    override fun serviceRole(serviceRole: String) {
       cdkBuilder.serviceRole(serviceRole)
     }
 
-    public override fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
+    override fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
       cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnTrafficRoutingConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b8b7a942d34f0b578b07c9f5b5b9cb941a8181809736d58b79a15c1dd7c0e61")
-    public override
+    override
         fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig.Builder.() -> Unit):
         Unit = trafficRoutingConfig(CfnTrafficRoutingConfig(trafficRoutingConfig))
 

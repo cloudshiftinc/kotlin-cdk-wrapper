@@ -115,41 +115,29 @@ public open class CfnPortal internal constructor(
   }
 
   public interface Builder {
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
-    public fun authenticationType(authenticationType: String) {
-    }
+    public fun authenticationType(authenticationType: String)
 
-    public fun browserSettingsArn(browserSettingsArn: String) {
-    }
+    public fun browserSettingsArn(browserSettingsArn: String)
 
-    public fun customerManagedKey(customerManagedKey: String) {
-    }
+    public fun customerManagedKey(customerManagedKey: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun ipAccessSettingsArn(ipAccessSettingsArn: String) {
-    }
+    public fun ipAccessSettingsArn(ipAccessSettingsArn: String)
 
-    public fun networkSettingsArn(networkSettingsArn: String) {
-    }
+    public fun networkSettingsArn(networkSettingsArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trustStoreArn(trustStoreArn: String) {
-    }
+    public fun trustStoreArn(trustStoreArn: String)
 
-    public fun userAccessLoggingSettingsArn(userAccessLoggingSettingsArn: String) {
-    }
+    public fun userAccessLoggingSettingsArn(userAccessLoggingSettingsArn: String)
 
-    public fun userSettingsArn(userSettingsArn: String) {
-    }
+    public fun userSettingsArn(userSettingsArn: String)
   }
 
   private class BuilderImpl(
@@ -159,52 +147,51 @@ public open class CfnPortal internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.workspacesweb.CfnPortal.Builder =
         software.amazon.awscdk.services.workspacesweb.CfnPortal.Builder.create(scope, id)
 
-    public override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
     }
 
-    public override
-        fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
-    public override fun authenticationType(authenticationType: String) {
+    override fun authenticationType(authenticationType: String) {
       cdkBuilder.authenticationType(authenticationType)
     }
 
-    public override fun browserSettingsArn(browserSettingsArn: String) {
+    override fun browserSettingsArn(browserSettingsArn: String) {
       cdkBuilder.browserSettingsArn(browserSettingsArn)
     }
 
-    public override fun customerManagedKey(customerManagedKey: String) {
+    override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun ipAccessSettingsArn(ipAccessSettingsArn: String) {
+    override fun ipAccessSettingsArn(ipAccessSettingsArn: String) {
       cdkBuilder.ipAccessSettingsArn(ipAccessSettingsArn)
     }
 
-    public override fun networkSettingsArn(networkSettingsArn: String) {
+    override fun networkSettingsArn(networkSettingsArn: String) {
       cdkBuilder.networkSettingsArn(networkSettingsArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trustStoreArn(trustStoreArn: String) {
+    override fun trustStoreArn(trustStoreArn: String) {
       cdkBuilder.trustStoreArn(trustStoreArn)
     }
 
-    public override fun userAccessLoggingSettingsArn(userAccessLoggingSettingsArn: String) {
+    override fun userAccessLoggingSettingsArn(userAccessLoggingSettingsArn: String) {
       cdkBuilder.userAccessLoggingSettingsArn(userAccessLoggingSettingsArn)
     }
 
-    public override fun userSettingsArn(userSettingsArn: String) {
+    override fun userSettingsArn(userSettingsArn: String) {
       cdkBuilder.userSettingsArn(userSettingsArn)
     }
 

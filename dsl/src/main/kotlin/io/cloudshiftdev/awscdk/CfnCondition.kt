@@ -20,8 +20,7 @@ public open class CfnCondition internal constructor(
       unwrap(this).resolve(_context.let(IResolveContext::unwrap))
 
   public interface Builder {
-    public fun expression(expression: ICfnConditionExpression) {
-    }
+    public fun expression(expression: ICfnConditionExpression)
   }
 
   private class BuilderImpl(
@@ -31,7 +30,7 @@ public open class CfnCondition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnCondition.Builder =
         software.amazon.awscdk.CfnCondition.Builder.create(scope, id)
 
-    public override fun expression(expression: ICfnConditionExpression) {
+    override fun expression(expression: ICfnConditionExpression) {
       cdkBuilder.expression(expression.let(ICfnConditionExpression::unwrap))
     }
 

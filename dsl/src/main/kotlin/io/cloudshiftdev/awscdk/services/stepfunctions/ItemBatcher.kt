@@ -16,43 +16,38 @@ public open class ItemBatcher internal constructor(
       emptyList()
 
   public interface Builder {
-    public fun batchInput(batchInput: ObjectNode) {
-    }
+    public fun batchInput(batchInput: ObjectNode)
 
-    public fun maxInputBytesPerBatch(maxInputBytesPerBatch: Number) {
-    }
+    public fun maxInputBytesPerBatch(maxInputBytesPerBatch: Number)
 
-    public fun maxInputBytesPerBatchPath(maxInputBytesPerBatchPath: String) {
-    }
+    public fun maxInputBytesPerBatchPath(maxInputBytesPerBatchPath: String)
 
-    public fun maxItemsPerBatch(maxItemsPerBatch: Number) {
-    }
+    public fun maxItemsPerBatch(maxItemsPerBatch: Number)
 
-    public fun maxItemsPerBatchPath(maxItemsPerBatchPath: String) {
-    }
+    public fun maxItemsPerBatchPath(maxItemsPerBatchPath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.ItemBatcher.Builder =
         software.amazon.awscdk.services.stepfunctions.ItemBatcher.Builder.create()
 
-    public override fun batchInput(batchInput: ObjectNode) {
+    override fun batchInput(batchInput: ObjectNode) {
       cdkBuilder.batchInput(batchInput)
     }
 
-    public override fun maxInputBytesPerBatch(maxInputBytesPerBatch: Number) {
+    override fun maxInputBytesPerBatch(maxInputBytesPerBatch: Number) {
       cdkBuilder.maxInputBytesPerBatch(maxInputBytesPerBatch)
     }
 
-    public override fun maxInputBytesPerBatchPath(maxInputBytesPerBatchPath: String) {
+    override fun maxInputBytesPerBatchPath(maxInputBytesPerBatchPath: String) {
       cdkBuilder.maxInputBytesPerBatchPath(maxInputBytesPerBatchPath)
     }
 
-    public override fun maxItemsPerBatch(maxItemsPerBatch: Number) {
+    override fun maxItemsPerBatch(maxItemsPerBatch: Number) {
       cdkBuilder.maxItemsPerBatch(maxItemsPerBatch)
     }
 
-    public override fun maxItemsPerBatchPath(maxItemsPerBatchPath: String) {
+    override fun maxItemsPerBatchPath(maxItemsPerBatchPath: String) {
       cdkBuilder.maxItemsPerBatchPath(maxItemsPerBatchPath)
     }
 

@@ -36,14 +36,11 @@ public open class CfnGroup internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun identityStoreId(identityStoreId: String) {
-    }
+    public fun identityStoreId(identityStoreId: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.identitystore.CfnGroup.Builder =
         software.amazon.awscdk.services.identitystore.CfnGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun identityStoreId(identityStoreId: String) {
+    override fun identityStoreId(identityStoreId: String) {
       cdkBuilder.identityStoreId(identityStoreId)
     }
 

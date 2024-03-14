@@ -37,8 +37,7 @@ public open class ParameterMapping internal constructor(
 
   public companion object {
     public open fun fromObject(obj: Map<String, MappingValue>): ParameterMapping =
-        software.amazon.awscdk.services.apigatewayv2.ParameterMapping.fromObject(obj.mapValues {
-        MappingValue.unwrap(it.value)}).let(ParameterMapping::wrap)
+        software.amazon.awscdk.services.apigatewayv2.ParameterMapping.fromObject(obj.mapValues{MappingValue.unwrap(it.value)}).let(ParameterMapping::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.ParameterMapping):
         ParameterMapping = ParameterMapping(cdkObject)

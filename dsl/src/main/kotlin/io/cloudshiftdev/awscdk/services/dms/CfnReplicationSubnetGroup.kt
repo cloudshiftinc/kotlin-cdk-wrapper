@@ -51,17 +51,13 @@ public open class CfnReplicationSubnetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun replicationSubnetGroupDescription(replicationSubnetGroupDescription: String) {
-    }
+    public fun replicationSubnetGroupDescription(replicationSubnetGroupDescription: String)
 
-    public fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
-    }
+    public fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -71,20 +67,19 @@ public open class CfnReplicationSubnetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup.Builder =
         software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup.Builder.create(scope, id)
 
-    public override
-        fun replicationSubnetGroupDescription(replicationSubnetGroupDescription: String) {
+    override fun replicationSubnetGroupDescription(replicationSubnetGroupDescription: String) {
       cdkBuilder.replicationSubnetGroupDescription(replicationSubnetGroupDescription)
     }
 
-    public override fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
+    override fun replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier: String) {
       cdkBuilder.replicationSubnetGroupIdentifier(replicationSubnetGroupIdentifier)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

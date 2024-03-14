@@ -14,36 +14,32 @@ public interface OpenIdConnectConfig {
   public fun tokenExpiryFromIssue(): Number? = unwrap(this).getTokenExpiryFromIssue()
 
   public interface Builder {
-    public fun clientId(clientId: String) {
-    }
+    public fun clientId(clientId: String)
 
-    public fun oidcProvider(oidcProvider: String) {
-    }
+    public fun oidcProvider(oidcProvider: String)
 
-    public fun tokenExpiryFromAuth(tokenExpiryFromAuth: Number) {
-    }
+    public fun tokenExpiryFromAuth(tokenExpiryFromAuth: Number)
 
-    public fun tokenExpiryFromIssue(tokenExpiryFromIssue: Number) {
-    }
+    public fun tokenExpiryFromIssue(tokenExpiryFromIssue: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.OpenIdConnectConfig.Builder =
         software.amazon.awscdk.services.appsync.OpenIdConnectConfig.builder()
 
-    public override fun clientId(clientId: String) {
+    override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
-    public override fun oidcProvider(oidcProvider: String) {
+    override fun oidcProvider(oidcProvider: String) {
       cdkBuilder.oidcProvider(oidcProvider)
     }
 
-    public override fun tokenExpiryFromAuth(tokenExpiryFromAuth: Number) {
+    override fun tokenExpiryFromAuth(tokenExpiryFromAuth: Number) {
       cdkBuilder.tokenExpiryFromAuth(tokenExpiryFromAuth)
     }
 
-    public override fun tokenExpiryFromIssue(tokenExpiryFromIssue: Number) {
+    override fun tokenExpiryFromIssue(tokenExpiryFromIssue: Number) {
       cdkBuilder.tokenExpiryFromIssue(tokenExpiryFromIssue)
     }
 
@@ -54,13 +50,13 @@ public interface OpenIdConnectConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.OpenIdConnectConfig,
   ) : OpenIdConnectConfig {
-    public override fun clientId(): String? = unwrap(this).getClientId()
+    override fun clientId(): String? = unwrap(this).getClientId()
 
-    public override fun oidcProvider(): String = unwrap(this).getOidcProvider()
+    override fun oidcProvider(): String = unwrap(this).getOidcProvider()
 
-    public override fun tokenExpiryFromAuth(): Number? = unwrap(this).getTokenExpiryFromAuth()
+    override fun tokenExpiryFromAuth(): Number? = unwrap(this).getTokenExpiryFromAuth()
 
-    public override fun tokenExpiryFromIssue(): Number? = unwrap(this).getTokenExpiryFromIssue()
+    override fun tokenExpiryFromIssue(): Number? = unwrap(this).getTokenExpiryFromIssue()
   }
 
   public companion object {

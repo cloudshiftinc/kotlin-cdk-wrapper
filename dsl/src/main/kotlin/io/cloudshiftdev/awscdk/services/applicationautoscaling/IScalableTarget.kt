@@ -13,18 +13,17 @@ public interface IScalableTarget : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.applicationautoscaling.IScalableTarget,
   ) : IScalableTarget {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun scalableTargetId(): String = unwrap(this).getScalableTargetId()
+    override fun scalableTargetId(): String = unwrap(this).getScalableTargetId()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

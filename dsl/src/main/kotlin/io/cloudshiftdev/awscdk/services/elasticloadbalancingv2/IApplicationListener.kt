@@ -45,63 +45,60 @@ public interface IApplicationListener : IListener, IConnectable {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener,
   ) : IApplicationListener {
-    public override fun addAction(arg0: String, arg1: AddApplicationActionProps) {
+    override fun addAction(arg0: String, arg1: AddApplicationActionProps) {
       unwrap(this).addAction(arg0, arg1.let(AddApplicationActionProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38982a24904e19a27775083a0236be2eab0ffadce58e1eb48572062d8567e700")
-    public override fun addAction(arg0: String, arg1: AddApplicationActionProps.Builder.() -> Unit):
-        Unit = addAction(arg0, AddApplicationActionProps(arg1))
+    override fun addAction(arg0: String, arg1: AddApplicationActionProps.Builder.() -> Unit): Unit =
+        addAction(arg0, AddApplicationActionProps(arg1))
 
-    public override fun addCertificates(arg0: String, arg1: List<IListenerCertificate>) {
+    override fun addCertificates(arg0: String, arg1: List<IListenerCertificate>) {
       unwrap(this).addCertificates(arg0, arg1.map(IListenerCertificate::unwrap))
     }
 
-    public override fun addTargetGroups(arg0: String, arg1: AddApplicationTargetGroupsProps) {
+    override fun addTargetGroups(arg0: String, arg1: AddApplicationTargetGroupsProps) {
       unwrap(this).addTargetGroups(arg0, arg1.let(AddApplicationTargetGroupsProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("23d206697af6cd2df80791ed22c62995c4f5c61f025a8e8fccb2df80290df232")
-    public override fun addTargetGroups(arg0: String,
+    override fun addTargetGroups(arg0: String,
         arg1: AddApplicationTargetGroupsProps.Builder.() -> Unit): Unit = addTargetGroups(arg0,
         AddApplicationTargetGroupsProps(arg1))
 
-    public override fun addTargets(arg0: String, arg1: AddApplicationTargetsProps):
-        ApplicationTargetGroup = unwrap(this).addTargets(arg0,
+    override fun addTargets(arg0: String, arg1: AddApplicationTargetsProps): ApplicationTargetGroup
+        = unwrap(this).addTargets(arg0,
         arg1.let(AddApplicationTargetsProps::unwrap)).let(ApplicationTargetGroup::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("65353b2aaa4d44b3413ee899b6257e24f21c3f8adbdf472376980f2c10a0a327")
-    public override fun addTargets(arg0: String,
-        arg1: AddApplicationTargetsProps.Builder.() -> Unit): ApplicationTargetGroup =
-        addTargets(arg0, AddApplicationTargetsProps(arg1))
+    override fun addTargets(arg0: String, arg1: AddApplicationTargetsProps.Builder.() -> Unit):
+        ApplicationTargetGroup = addTargets(arg0, AddApplicationTargetsProps(arg1))
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun listenerArn(): String = unwrap(this).getListenerArn()
+    override fun listenerArn(): String = unwrap(this).getListenerArn()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun registerConnectable(arg0: IConnectable, arg1: Port) {
+    override fun registerConnectable(arg0: IConnectable, arg1: Port) {
       unwrap(this).registerConnectable(arg0.let(IConnectable::unwrap), arg1.let(Port::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bcc196a279cd8df29b10150b2d6fcd0fb653d88666d4c7b6871b5f67e18a087a")
-    public override fun registerConnectable(arg0: IConnectable, arg1: Port.Builder.() -> Unit): Unit
-        = registerConnectable(arg0, Port(arg1))
+    override fun registerConnectable(arg0: IConnectable, arg1: Port.Builder.() -> Unit): Unit =
+        registerConnectable(arg0, Port(arg1))
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

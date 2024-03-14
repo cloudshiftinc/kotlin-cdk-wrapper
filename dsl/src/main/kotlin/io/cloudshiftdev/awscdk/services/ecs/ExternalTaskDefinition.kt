@@ -23,23 +23,17 @@ public open class ExternalTaskDefinition internal constructor(
       Unit = addInferenceAccelerator(InferenceAccelerator(_inferenceAccelerator))
 
   public interface Builder {
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun networkMode(networkMode: NetworkMode) {
-    }
+    public fun networkMode(networkMode: NetworkMode)
 
-    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-    }
+    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration)
 
-    public fun taskRole(taskRole: IRole) {
-    }
+    public fun taskRole(taskRole: IRole)
 
-    public fun volumes(volumes: List<Volume>) {
-    }
+    public fun volumes(volumes: List<Volume>)
   }
 
   private class BuilderImpl(
@@ -49,27 +43,27 @@ public open class ExternalTaskDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ExternalTaskDefinition.Builder =
         software.amazon.awscdk.services.ecs.ExternalTaskDefinition.Builder.create(scope, id)
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun networkMode(networkMode: NetworkMode) {
+    override fun networkMode(networkMode: NetworkMode) {
       cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
     }
 
-    public override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
+    override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
       cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
     }
 
-    public override fun taskRole(taskRole: IRole) {
+    override fun taskRole(taskRole: IRole) {
       cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
     }
 
-    public override fun volumes(volumes: List<Volume>) {
+    override fun volumes(volumes: List<Volume>) {
       cdkBuilder.volumes(volumes.map(Volume::unwrap))
     }
 

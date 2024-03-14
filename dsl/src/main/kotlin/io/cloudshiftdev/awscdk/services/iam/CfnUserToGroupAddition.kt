@@ -31,11 +31,9 @@ public open class CfnUserToGroupAddition internal constructor(
   }
 
   public interface Builder {
-    public fun groupName(groupName: String) {
-    }
+    public fun groupName(groupName: String)
 
-    public fun users(users: List<String>) {
-    }
+    public fun users(users: List<String>)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnUserToGroupAddition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnUserToGroupAddition.Builder =
         software.amazon.awscdk.services.iam.CfnUserToGroupAddition.Builder.create(scope, id)
 
-    public override fun groupName(groupName: String) {
+    override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
-    public override fun users(users: List<String>) {
+    override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
 

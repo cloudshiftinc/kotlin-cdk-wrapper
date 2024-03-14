@@ -44,35 +44,25 @@ public open class EksJobDefinition internal constructor(
   public override fun useHostNetwork(): Boolean? = unwrap(this).getUseHostNetwork()
 
   public interface Builder {
-    public fun container(container: EksContainerDefinition) {
-    }
+    public fun container(container: EksContainerDefinition)
 
-    public fun dnsPolicy(dnsPolicy: DnsPolicy) {
-    }
+    public fun dnsPolicy(dnsPolicy: DnsPolicy)
 
-    public fun jobDefinitionName(jobDefinitionName: String) {
-    }
+    public fun jobDefinitionName(jobDefinitionName: String)
 
-    public fun parameters(parameters: Map<String, Any>) {
-    }
+    public fun parameters(parameters: Map<String, Any>)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
 
-    public fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-    }
+    public fun retryStrategies(retryStrategies: List<RetryStrategy>)
 
-    public fun schedulingPriority(schedulingPriority: Number) {
-    }
+    public fun schedulingPriority(schedulingPriority: Number)
 
-    public fun serviceAccount(serviceAccount: String) {
-    }
+    public fun serviceAccount(serviceAccount: String)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun useHostNetwork(useHostNetwork: Boolean) {
-    }
+    public fun useHostNetwork(useHostNetwork: Boolean)
   }
 
   private class BuilderImpl(
@@ -82,43 +72,43 @@ public open class EksJobDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.EksJobDefinition.Builder =
         software.amazon.awscdk.services.batch.EksJobDefinition.Builder.create(scope, id)
 
-    public override fun container(container: EksContainerDefinition) {
+    override fun container(container: EksContainerDefinition) {
       cdkBuilder.container(container.let(EksContainerDefinition::unwrap))
     }
 
-    public override fun dnsPolicy(dnsPolicy: DnsPolicy) {
+    override fun dnsPolicy(dnsPolicy: DnsPolicy) {
       cdkBuilder.dnsPolicy(dnsPolicy.let(DnsPolicy::unwrap))
     }
 
-    public override fun jobDefinitionName(jobDefinitionName: String) {
+    override fun jobDefinitionName(jobDefinitionName: String) {
       cdkBuilder.jobDefinitionName(jobDefinitionName)
     }
 
-    public override fun parameters(parameters: Map<String, Any>) {
+    override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 
-    public override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
+    override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
       cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
     }
 
-    public override fun schedulingPriority(schedulingPriority: Number) {
+    override fun schedulingPriority(schedulingPriority: Number) {
       cdkBuilder.schedulingPriority(schedulingPriority)
     }
 
-    public override fun serviceAccount(serviceAccount: String) {
+    override fun serviceAccount(serviceAccount: String) {
       cdkBuilder.serviceAccount(serviceAccount)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun useHostNetwork(useHostNetwork: Boolean) {
+    override fun useHostNetwork(useHostNetwork: Boolean) {
       cdkBuilder.useHostNetwork(useHostNetwork)
     }
 

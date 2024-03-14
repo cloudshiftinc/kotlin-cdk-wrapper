@@ -103,59 +103,43 @@ public open class CfnBridge internal constructor(
   }
 
   public interface Builder {
-    public fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
-    }
+    public fun egressGatewayBridge(egressGatewayBridge: IResolvable)
 
-    public fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty) {
-    }
+    public fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fb4e47ca6e679dc8a042e36f6f677bb466453247f12689dee9a713dc94ee64e5")
     public
-        fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty.Builder.() -> Unit) {
-    }
+        fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty.Builder.() -> Unit)
 
-    public fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
-    }
+    public fun ingressGatewayBridge(ingressGatewayBridge: IResolvable)
 
-    public fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty) {
-    }
+    public fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("79ee9332cc61112458697a9323457833ddf24d8bb615b3fb77d585d5ef31c910")
     public
-        fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty.Builder.() -> Unit) {
-    }
+        fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outputs(outputs: IResolvable) {
-    }
+    public fun outputs(outputs: IResolvable)
 
-    public fun outputs(outputs: List<Any>) {
-    }
+    public fun outputs(outputs: List<Any>)
 
-    public fun placementArn(placementArn: String) {
-    }
+    public fun placementArn(placementArn: String)
 
-    public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
-    }
+    public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable)
 
-    public fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
-    }
+    public fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7040cbc2c28d5d704b49433fec10cbe8b1f77470dcaa5c83df6fab2ed2295b2f")
-    public
-        fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty.Builder.() -> Unit)
 
-    public fun sources(sources: IResolvable) {
-    }
+    public fun sources(sources: IResolvable)
 
-    public fun sources(sources: List<Any>) {
-    }
+    public fun sources(sources: List<Any>)
   }
 
   private class BuilderImpl(
@@ -165,69 +149,69 @@ public open class CfnBridge internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnBridge.Builder =
         software.amazon.awscdk.services.mediaconnect.CfnBridge.Builder.create(scope, id)
 
-    public override fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
+    override fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
       cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable::unwrap))
     }
 
-    public override fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty) {
+    override fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty) {
       cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(EgressGatewayBridgeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fb4e47ca6e679dc8a042e36f6f677bb466453247f12689dee9a713dc94ee64e5")
-    public override
+    override
         fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty.Builder.() -> Unit):
         Unit = egressGatewayBridge(EgressGatewayBridgeProperty(egressGatewayBridge))
 
-    public override fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
+    override fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
       cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable::unwrap))
     }
 
-    public override fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty) {
+    override fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty) {
       cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IngressGatewayBridgeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("79ee9332cc61112458697a9323457833ddf24d8bb615b3fb77d585d5ef31c910")
-    public override
+    override
         fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty.Builder.() -> Unit):
         Unit = ingressGatewayBridge(IngressGatewayBridgeProperty(ingressGatewayBridge))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outputs(outputs: IResolvable) {
+    override fun outputs(outputs: IResolvable) {
       cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
     }
 
-    public override fun outputs(outputs: List<Any>) {
+    override fun outputs(outputs: List<Any>) {
       cdkBuilder.outputs(outputs)
     }
 
-    public override fun placementArn(placementArn: String) {
+    override fun placementArn(placementArn: String) {
       cdkBuilder.placementArn(placementArn)
     }
 
-    public override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
+    override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
       cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
+    override fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
       cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(FailoverConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7040cbc2c28d5d704b49433fec10cbe8b1f77470dcaa5c83df6fab2ed2295b2f")
-    public override
+    override
         fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty.Builder.() -> Unit):
         Unit = sourceFailoverConfig(FailoverConfigProperty(sourceFailoverConfig))
 
-    public override fun sources(sources: IResolvable) {
+    override fun sources(sources: IResolvable) {
       cdkBuilder.sources(sources.let(IResolvable::unwrap))
     }
 
-    public override fun sources(sources: List<Any>) {
+    override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
 
@@ -269,23 +253,17 @@ public open class CfnBridge internal constructor(
     public fun ttl(): Number
 
     public interface Builder {
-      public fun ipAddress(ipAddress: String) {
-      }
+      public fun ipAddress(ipAddress: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun networkName(networkName: String) {
-      }
+      public fun networkName(networkName: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun ttl(ttl: Number) {
-      }
+      public fun ttl(ttl: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -294,27 +272,27 @@ public open class CfnBridge internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty.builder()
 
-      public override fun ipAddress(ipAddress: String) {
+      override fun ipAddress(ipAddress: String) {
         cdkBuilder.ipAddress(ipAddress)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun networkName(networkName: String) {
+      override fun networkName(networkName: String) {
         cdkBuilder.networkName(networkName)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun ttl(ttl: Number) {
+      override fun ttl(ttl: Number) {
         cdkBuilder.ttl(ttl)
       }
 
@@ -327,17 +305,17 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkOutputProperty,
     ) : BridgeNetworkOutputProperty {
-      public override fun ipAddress(): String = unwrap(this).getIpAddress()
+      override fun ipAddress(): String = unwrap(this).getIpAddress()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun networkName(): String = unwrap(this).getNetworkName()
+      override fun networkName(): String = unwrap(this).getNetworkName()
 
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun ttl(): Number = unwrap(this).getTtl()
+      override fun ttl(): Number = unwrap(this).getTtl()
     }
 
     public companion object {
@@ -368,22 +346,17 @@ public open class CfnBridge internal constructor(
     public fun state(): String? = unwrap(this).getState()
 
     public interface Builder {
-      public fun failoverMode(failoverMode: String) {
-      }
+      public fun failoverMode(failoverMode: String)
 
-      public fun sourcePriority(sourcePriority: IResolvable) {
-      }
+      public fun sourcePriority(sourcePriority: IResolvable)
 
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty) {
-      }
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit) {
-      }
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit)
 
-      public fun state(state: String) {
-      }
+      public fun state(state: String)
     }
 
     private class BuilderImpl : Builder {
@@ -391,24 +364,24 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty.builder()
 
-      public override fun failoverMode(failoverMode: String) {
+      override fun failoverMode(failoverMode: String) {
         cdkBuilder.failoverMode(failoverMode)
       }
 
-      public override fun sourcePriority(sourcePriority: IResolvable) {
+      override fun sourcePriority(sourcePriority: IResolvable) {
         cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
       }
 
-      public override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
         cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7418a01e3373546a55fa87100fa1ffc695721eb0587c200ba81655dc45139f31")
-      public override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit):
-          Unit = sourcePriority(SourcePriorityProperty(sourcePriority))
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit): Unit =
+          sourcePriority(SourcePriorityProperty(sourcePriority))
 
-      public override fun state(state: String) {
+      override fun state(state: String) {
         cdkBuilder.state(state)
       }
 
@@ -421,11 +394,11 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.FailoverConfigProperty,
     ) : FailoverConfigProperty {
-      public override fun failoverMode(): String = unwrap(this).getFailoverMode()
+      override fun failoverMode(): String = unwrap(this).getFailoverMode()
 
-      public override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
+      override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
 
-      public override fun state(): String? = unwrap(this).getState()
+      override fun state(): String? = unwrap(this).getState()
     }
 
     public companion object {
@@ -452,8 +425,7 @@ public open class CfnBridge internal constructor(
     public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
     public interface Builder {
-      public fun vpcInterfaceName(vpcInterfaceName: String) {
-      }
+      public fun vpcInterfaceName(vpcInterfaceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -462,7 +434,7 @@ public open class CfnBridge internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty.builder()
 
-      public override fun vpcInterfaceName(vpcInterfaceName: String) {
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
       }
 
@@ -475,7 +447,7 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.VpcInterfaceAttachmentProperty,
     ) : VpcInterfaceAttachmentProperty {
-      public override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
     }
 
     public companion object {
@@ -510,20 +482,15 @@ public open class CfnBridge internal constructor(
     public fun protocol(): String
 
     public interface Builder {
-      public fun multicastIp(multicastIp: String) {
-      }
+      public fun multicastIp(multicastIp: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun networkName(networkName: String) {
-      }
+      public fun networkName(networkName: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -532,23 +499,23 @@ public open class CfnBridge internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty.builder()
 
-      public override fun multicastIp(multicastIp: String) {
+      override fun multicastIp(multicastIp: String) {
         cdkBuilder.multicastIp(multicastIp)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun networkName(networkName: String) {
+      override fun networkName(networkName: String) {
         cdkBuilder.networkName(networkName)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -561,15 +528,15 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeNetworkSourceProperty,
     ) : BridgeNetworkSourceProperty {
-      public override fun multicastIp(): String = unwrap(this).getMulticastIp()
+      override fun multicastIp(): String = unwrap(this).getMulticastIp()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun networkName(): String = unwrap(this).getNetworkName()
+      override fun networkName(): String = unwrap(this).getNetworkName()
 
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
     }
 
     public companion object {
@@ -598,27 +565,21 @@ public open class CfnBridge internal constructor(
     public fun networkSource(): Any? = unwrap(this).getNetworkSource()
 
     public interface Builder {
-      public fun flowSource(flowSource: IResolvable) {
-      }
+      public fun flowSource(flowSource: IResolvable)
 
-      public fun flowSource(flowSource: BridgeFlowSourceProperty) {
-      }
+      public fun flowSource(flowSource: BridgeFlowSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45d2eff2fd255d30ed98d40feff6e53f403ac34a4c7daf243a57686b87e54af5")
-      public fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit) {
-      }
+      public fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit)
 
-      public fun networkSource(networkSource: IResolvable) {
-      }
+      public fun networkSource(networkSource: IResolvable)
 
-      public fun networkSource(networkSource: BridgeNetworkSourceProperty) {
-      }
+      public fun networkSource(networkSource: BridgeNetworkSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6ca4ea347a4cdfc805830fcde7e6f90b961d0460b8b8db96c5c78aa12aaeccc7")
-      public fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit) {
-      }
+      public fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -626,32 +587,31 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty.builder()
 
-      public override fun flowSource(flowSource: IResolvable) {
+      override fun flowSource(flowSource: IResolvable) {
         cdkBuilder.flowSource(flowSource.let(IResolvable::unwrap))
       }
 
-      public override fun flowSource(flowSource: BridgeFlowSourceProperty) {
+      override fun flowSource(flowSource: BridgeFlowSourceProperty) {
         cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45d2eff2fd255d30ed98d40feff6e53f403ac34a4c7daf243a57686b87e54af5")
-      public override fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit): Unit
-          = flowSource(BridgeFlowSourceProperty(flowSource))
+      override fun flowSource(flowSource: BridgeFlowSourceProperty.Builder.() -> Unit): Unit =
+          flowSource(BridgeFlowSourceProperty(flowSource))
 
-      public override fun networkSource(networkSource: IResolvable) {
+      override fun networkSource(networkSource: IResolvable) {
         cdkBuilder.networkSource(networkSource.let(IResolvable::unwrap))
       }
 
-      public override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
+      override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
         cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6ca4ea347a4cdfc805830fcde7e6f90b961d0460b8b8db96c5c78aa12aaeccc7")
-      public override
-          fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit): Unit =
-          networkSource(BridgeNetworkSourceProperty(networkSource))
+      override fun networkSource(networkSource: BridgeNetworkSourceProperty.Builder.() -> Unit):
+          Unit = networkSource(BridgeNetworkSourceProperty(networkSource))
 
       public fun build():
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty =
@@ -662,9 +622,9 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeSourceProperty,
     ) : BridgeSourceProperty {
-      public override fun flowSource(): Any? = unwrap(this).getFlowSource()
+      override fun flowSource(): Any? = unwrap(this).getFlowSource()
 
-      public override fun networkSource(): Any? = unwrap(this).getNetworkSource()
+      override fun networkSource(): Any? = unwrap(this).getNetworkSource()
     }
 
     public companion object {
@@ -691,8 +651,7 @@ public open class CfnBridge internal constructor(
     public fun primarySource(): String? = unwrap(this).getPrimarySource()
 
     public interface Builder {
-      public fun primarySource(primarySource: String) {
-      }
+      public fun primarySource(primarySource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -700,7 +659,7 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty.builder()
 
-      public override fun primarySource(primarySource: String) {
+      override fun primarySource(primarySource: String) {
         cdkBuilder.primarySource(primarySource)
       }
 
@@ -713,7 +672,7 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.SourcePriorityProperty,
     ) : SourcePriorityProperty {
-      public override fun primarySource(): String? = unwrap(this).getPrimarySource()
+      override fun primarySource(): String? = unwrap(this).getPrimarySource()
     }
 
     public companion object {
@@ -744,24 +703,19 @@ public open class CfnBridge internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun flowArn(flowArn: String) {
-      }
+      public fun flowArn(flowArn: String)
 
-      public fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
-      }
+      public fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable)
 
       public
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-      }
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
       public
-          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit) {
-      }
+          fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -769,27 +723,27 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty.builder()
 
-      public override fun flowArn(flowArn: String) {
+      override fun flowArn(flowArn: String) {
         cdkBuilder.flowArn(flowArn)
       }
 
-      public override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
+      override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
         cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
         cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d23f1afc5e019a814f9266f05f382243aa3930501625b26daa562ac61008c25")
-      public override
+      override
           fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
           Unit =
           flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty(flowVpcInterfaceAttachment))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -802,12 +756,11 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeFlowSourceProperty,
     ) : BridgeFlowSourceProperty {
-      public override fun flowArn(): String = unwrap(this).getFlowArn()
+      override fun flowArn(): String = unwrap(this).getFlowArn()
 
-      public override fun flowVpcInterfaceAttachment(): Any? =
-          unwrap(this).getFlowVpcInterfaceAttachment()
+      override fun flowVpcInterfaceAttachment(): Any? = unwrap(this).getFlowVpcInterfaceAttachment()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -834,8 +787,7 @@ public open class CfnBridge internal constructor(
     public fun maxBitrate(): Number
 
     public interface Builder {
-      public fun maxBitrate(maxBitrate: Number) {
-      }
+      public fun maxBitrate(maxBitrate: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -844,7 +796,7 @@ public open class CfnBridge internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty.builder()
 
-      public override fun maxBitrate(maxBitrate: Number) {
+      override fun maxBitrate(maxBitrate: Number) {
         cdkBuilder.maxBitrate(maxBitrate)
       }
 
@@ -857,7 +809,7 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.EgressGatewayBridgeProperty,
     ) : EgressGatewayBridgeProperty {
-      public override fun maxBitrate(): Number = unwrap(this).getMaxBitrate()
+      override fun maxBitrate(): Number = unwrap(this).getMaxBitrate()
     }
 
     public companion object {
@@ -884,16 +836,13 @@ public open class CfnBridge internal constructor(
     public fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
 
     public interface Builder {
-      public fun networkOutput(networkOutput: IResolvable) {
-      }
+      public fun networkOutput(networkOutput: IResolvable)
 
-      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
-      }
+      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
-      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit) {
-      }
+      public fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -901,19 +850,18 @@ public open class CfnBridge internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty.builder()
 
-      public override fun networkOutput(networkOutput: IResolvable) {
+      override fun networkOutput(networkOutput: IResolvable) {
         cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
       }
 
-      public override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
+      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
         cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("78717ab00e5fb8eb26b94f79a4a0b158b7039dd47d8f8bfec02c150daa38fc97")
-      public override
-          fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit): Unit =
-          networkOutput(BridgeNetworkOutputProperty(networkOutput))
+      override fun networkOutput(networkOutput: BridgeNetworkOutputProperty.Builder.() -> Unit):
+          Unit = networkOutput(BridgeNetworkOutputProperty(networkOutput))
 
       public fun build():
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty =
@@ -924,7 +872,7 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.BridgeOutputProperty,
     ) : BridgeOutputProperty {
-      public override fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
+      override fun networkOutput(): Any? = unwrap(this).getNetworkOutput()
     }
 
     public companion object {
@@ -953,11 +901,9 @@ public open class CfnBridge internal constructor(
     public fun maxOutputs(): Number
 
     public interface Builder {
-      public fun maxBitrate(maxBitrate: Number) {
-      }
+      public fun maxBitrate(maxBitrate: Number)
 
-      public fun maxOutputs(maxOutputs: Number) {
-      }
+      public fun maxOutputs(maxOutputs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -966,11 +912,11 @@ public open class CfnBridge internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty.builder()
 
-      public override fun maxBitrate(maxBitrate: Number) {
+      override fun maxBitrate(maxBitrate: Number) {
         cdkBuilder.maxBitrate(maxBitrate)
       }
 
-      public override fun maxOutputs(maxOutputs: Number) {
+      override fun maxOutputs(maxOutputs: Number) {
         cdkBuilder.maxOutputs(maxOutputs)
       }
 
@@ -983,9 +929,9 @@ public open class CfnBridge internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnBridge.IngressGatewayBridgeProperty,
     ) : IngressGatewayBridgeProperty {
-      public override fun maxBitrate(): Number = unwrap(this).getMaxBitrate()
+      override fun maxBitrate(): Number = unwrap(this).getMaxBitrate()
 
-      public override fun maxOutputs(): Number = unwrap(this).getMaxOutputs()
+      override fun maxOutputs(): Number = unwrap(this).getMaxOutputs()
     }
 
     public companion object {

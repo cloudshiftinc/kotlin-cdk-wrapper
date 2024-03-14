@@ -54,23 +54,17 @@ public open class CfnLaunchRoleConstraint internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun localRoleName(localRoleName: String) {
-    }
+    public fun localRoleName(localRoleName: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -82,27 +76,27 @@ public open class CfnLaunchRoleConstraint internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun localRoleName(localRoleName: String) {
+    override fun localRoleName(localRoleName: String) {
       cdkBuilder.localRoleName(localRoleName)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

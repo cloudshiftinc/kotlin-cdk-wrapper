@@ -45,20 +45,16 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       = referenceDataSource(ReferenceDataSourceProperty(`value`))
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun referenceDataSource(referenceDataSource: IResolvable) {
-    }
+    public fun referenceDataSource(referenceDataSource: IResolvable)
 
-    public fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty) {
-    }
+    public fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df30e3ce0e156151be61871d468c650edb2ec61634a8d8111f4e4b0618f7a291")
     public
-        fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty.Builder.() -> Unit) {
-    }
+        fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -71,21 +67,21 @@ public open class CfnApplicationReferenceDataSource internal constructor(
         software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.Builder.create(scope,
         id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun referenceDataSource(referenceDataSource: IResolvable) {
+    override fun referenceDataSource(referenceDataSource: IResolvable) {
       cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable::unwrap))
     }
 
-    public override fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty) {
+    override fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty) {
       cdkBuilder.referenceDataSource(referenceDataSource.let(ReferenceDataSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df30e3ce0e156151be61871d468c650edb2ec61634a8d8111f4e4b0618f7a291")
-    public override
+    override
         fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty.Builder.() -> Unit):
         Unit = referenceDataSource(ReferenceDataSourceProperty(referenceDataSource))
 
@@ -125,14 +121,11 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun sqlType(): String
 
     public interface Builder {
-      public fun mapping(mapping: String) {
-      }
+      public fun mapping(mapping: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun sqlType(sqlType: String) {
-      }
+      public fun sqlType(sqlType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -141,15 +134,15 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.RecordColumnProperty.builder()
 
-      public override fun mapping(mapping: String) {
+      override fun mapping(mapping: String) {
         cdkBuilder.mapping(mapping)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun sqlType(sqlType: String) {
+      override fun sqlType(sqlType: String) {
         cdkBuilder.sqlType(sqlType)
       }
 
@@ -162,11 +155,11 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.RecordColumnProperty,
     ) : RecordColumnProperty {
-      public override fun mapping(): String? = unwrap(this).getMapping()
+      override fun mapping(): String? = unwrap(this).getMapping()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun sqlType(): String = unwrap(this).getSqlType()
+      override fun sqlType(): String = unwrap(this).getSqlType()
     }
 
     public companion object {
@@ -197,25 +190,19 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun recordFormat(): Any
 
     public interface Builder {
-      public fun recordColumns(recordColumns: IResolvable) {
-      }
+      public fun recordColumns(recordColumns: IResolvable)
 
-      public fun recordColumns(recordColumns: List<Any>) {
-      }
+      public fun recordColumns(recordColumns: List<Any>)
 
-      public fun recordEncoding(recordEncoding: String) {
-      }
+      public fun recordEncoding(recordEncoding: String)
 
-      public fun recordFormat(recordFormat: IResolvable) {
-      }
+      public fun recordFormat(recordFormat: IResolvable)
 
-      public fun recordFormat(recordFormat: RecordFormatProperty) {
-      }
+      public fun recordFormat(recordFormat: RecordFormatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ad5fc688ec5975832b7b296d89ee7a2d98609325b5c3499a6e92deae04c1ec7")
-      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit) {
-      }
+      public fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -224,30 +211,30 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.ReferenceSchemaProperty.builder()
 
-      public override fun recordColumns(recordColumns: IResolvable) {
+      override fun recordColumns(recordColumns: IResolvable) {
         cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
       }
 
-      public override fun recordColumns(recordColumns: List<Any>) {
+      override fun recordColumns(recordColumns: List<Any>) {
         cdkBuilder.recordColumns(recordColumns)
       }
 
-      public override fun recordEncoding(recordEncoding: String) {
+      override fun recordEncoding(recordEncoding: String) {
         cdkBuilder.recordEncoding(recordEncoding)
       }
 
-      public override fun recordFormat(recordFormat: IResolvable) {
+      override fun recordFormat(recordFormat: IResolvable) {
         cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
       }
 
-      public override fun recordFormat(recordFormat: RecordFormatProperty) {
+      override fun recordFormat(recordFormat: RecordFormatProperty) {
         cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ad5fc688ec5975832b7b296d89ee7a2d98609325b5c3499a6e92deae04c1ec7")
-      public override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit
-          = recordFormat(RecordFormatProperty(recordFormat))
+      override fun recordFormat(recordFormat: RecordFormatProperty.Builder.() -> Unit): Unit =
+          recordFormat(RecordFormatProperty(recordFormat))
 
       public fun build():
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.ReferenceSchemaProperty
@@ -258,11 +245,11 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.ReferenceSchemaProperty,
     ) : ReferenceSchemaProperty {
-      public override fun recordColumns(): Any = unwrap(this).getRecordColumns()
+      override fun recordColumns(): Any = unwrap(this).getRecordColumns()
 
-      public override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
+      override fun recordEncoding(): String? = unwrap(this).getRecordEncoding()
 
-      public override fun recordFormat(): Any = unwrap(this).getRecordFormat()
+      override fun recordFormat(): Any = unwrap(this).getRecordFormat()
     }
 
     public companion object {
@@ -291,11 +278,9 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun fileKey(): String
 
     public interface Builder {
-      public fun bucketArn(bucketArn: String) {
-      }
+      public fun bucketArn(bucketArn: String)
 
-      public fun fileKey(fileKey: String) {
-      }
+      public fun fileKey(fileKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -304,11 +289,11 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty.builder()
 
-      public override fun bucketArn(bucketArn: String) {
+      override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
-      public override fun fileKey(fileKey: String) {
+      override fun fileKey(fileKey: String) {
         cdkBuilder.fileKey(fileKey)
       }
 
@@ -321,9 +306,9 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty,
     ) : S3ReferenceDataSourceProperty {
-      public override fun bucketArn(): String = unwrap(this).getBucketArn()
+      override fun bucketArn(): String = unwrap(this).getBucketArn()
 
-      public override fun fileKey(): String = unwrap(this).getFileKey()
+      override fun fileKey(): String = unwrap(this).getFileKey()
     }
 
     public companion object {
@@ -354,31 +339,24 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun tableName(): String? = unwrap(this).getTableName()
 
     public interface Builder {
-      public fun referenceSchema(referenceSchema: IResolvable) {
-      }
+      public fun referenceSchema(referenceSchema: IResolvable)
 
-      public fun referenceSchema(referenceSchema: ReferenceSchemaProperty) {
-      }
+      public fun referenceSchema(referenceSchema: ReferenceSchemaProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f1f1eb3ef0a12cd0207325d6f406fc787a0ff25833604ea774fbce3b2fd0fb27")
-      public fun referenceSchema(referenceSchema: ReferenceSchemaProperty.Builder.() -> Unit) {
-      }
+      public fun referenceSchema(referenceSchema: ReferenceSchemaProperty.Builder.() -> Unit)
 
-      public fun s3ReferenceDataSource(s3ReferenceDataSource: IResolvable) {
-      }
+      public fun s3ReferenceDataSource(s3ReferenceDataSource: IResolvable)
 
-      public fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty) {
-      }
+      public fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bddd3fded82ba897505e650553e1e903639334894983a50213b7dab546c7aa07")
       public
-          fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty.Builder.() -> Unit) {
-      }
+          fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty.Builder.() -> Unit)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -387,36 +365,34 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty.builder()
 
-      public override fun referenceSchema(referenceSchema: IResolvable) {
+      override fun referenceSchema(referenceSchema: IResolvable) {
         cdkBuilder.referenceSchema(referenceSchema.let(IResolvable::unwrap))
       }
 
-      public override fun referenceSchema(referenceSchema: ReferenceSchemaProperty) {
+      override fun referenceSchema(referenceSchema: ReferenceSchemaProperty) {
         cdkBuilder.referenceSchema(referenceSchema.let(ReferenceSchemaProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f1f1eb3ef0a12cd0207325d6f406fc787a0ff25833604ea774fbce3b2fd0fb27")
-      public override
-          fun referenceSchema(referenceSchema: ReferenceSchemaProperty.Builder.() -> Unit): Unit =
-          referenceSchema(ReferenceSchemaProperty(referenceSchema))
+      override fun referenceSchema(referenceSchema: ReferenceSchemaProperty.Builder.() -> Unit):
+          Unit = referenceSchema(ReferenceSchemaProperty(referenceSchema))
 
-      public override fun s3ReferenceDataSource(s3ReferenceDataSource: IResolvable) {
+      override fun s3ReferenceDataSource(s3ReferenceDataSource: IResolvable) {
         cdkBuilder.s3ReferenceDataSource(s3ReferenceDataSource.let(IResolvable::unwrap))
       }
 
-      public override
-          fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty) {
+      override fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty) {
         cdkBuilder.s3ReferenceDataSource(s3ReferenceDataSource.let(S3ReferenceDataSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bddd3fded82ba897505e650553e1e903639334894983a50213b7dab546c7aa07")
-      public override
+      override
           fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty.Builder.() -> Unit):
           Unit = s3ReferenceDataSource(S3ReferenceDataSourceProperty(s3ReferenceDataSource))
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -429,11 +405,11 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.ReferenceDataSourceProperty,
     ) : ReferenceDataSourceProperty {
-      public override fun referenceSchema(): Any = unwrap(this).getReferenceSchema()
+      override fun referenceSchema(): Any = unwrap(this).getReferenceSchema()
 
-      public override fun s3ReferenceDataSource(): Any? = unwrap(this).getS3ReferenceDataSource()
+      override fun s3ReferenceDataSource(): Any? = unwrap(this).getS3ReferenceDataSource()
 
-      public override fun tableName(): String? = unwrap(this).getTableName()
+      override fun tableName(): String? = unwrap(this).getTableName()
     }
 
     public companion object {
@@ -462,20 +438,15 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun recordFormatType(): String
 
     public interface Builder {
-      public fun mappingParameters(mappingParameters: IResolvable) {
-      }
+      public fun mappingParameters(mappingParameters: IResolvable)
 
-      public fun mappingParameters(mappingParameters: MappingParametersProperty) {
-      }
+      public fun mappingParameters(mappingParameters: MappingParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("37159c986c21d759fe99dffd6523102daec72c90d8fa9f4c03c5c10ae4564091")
-      public
-          fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit) {
-      }
+      public fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit)
 
-      public fun recordFormatType(recordFormatType: String) {
-      }
+      public fun recordFormatType(recordFormatType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -484,21 +455,21 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.RecordFormatProperty.builder()
 
-      public override fun mappingParameters(mappingParameters: IResolvable) {
+      override fun mappingParameters(mappingParameters: IResolvable) {
         cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
       }
 
-      public override fun mappingParameters(mappingParameters: MappingParametersProperty) {
+      override fun mappingParameters(mappingParameters: MappingParametersProperty) {
         cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("37159c986c21d759fe99dffd6523102daec72c90d8fa9f4c03c5c10ae4564091")
-      public override
+      override
           fun mappingParameters(mappingParameters: MappingParametersProperty.Builder.() -> Unit):
           Unit = mappingParameters(MappingParametersProperty(mappingParameters))
 
-      public override fun recordFormatType(recordFormatType: String) {
+      override fun recordFormatType(recordFormatType: String) {
         cdkBuilder.recordFormatType(recordFormatType)
       }
 
@@ -511,9 +482,9 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.RecordFormatProperty,
     ) : RecordFormatProperty {
-      public override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
+      override fun mappingParameters(): Any? = unwrap(this).getMappingParameters()
 
-      public override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
+      override fun recordFormatType(): String = unwrap(this).getRecordFormatType()
     }
 
     public companion object {
@@ -542,29 +513,23 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
 
     public interface Builder {
-      public fun csvMappingParameters(csvMappingParameters: IResolvable) {
-      }
+      public fun csvMappingParameters(csvMappingParameters: IResolvable)
 
-      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-      }
+      public fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ae27f27af09322e92080972529d31a4be8b755d878414dc348e3fde44ab3baaf")
       public
-          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit) {
-      }
+          fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit)
 
-      public fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-      }
+      public fun jsonMappingParameters(jsonMappingParameters: IResolvable)
 
-      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-      }
+      public fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c5d6900c90265d86ca7a7f5228b319efa89428015effdb4d3257270cb862684")
       public
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit) {
-      }
+          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -573,32 +538,31 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.MappingParametersProperty.builder()
 
-      public override fun csvMappingParameters(csvMappingParameters: IResolvable) {
+      override fun csvMappingParameters(csvMappingParameters: IResolvable) {
         cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
       }
 
-      public override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
+      override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
         cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ae27f27af09322e92080972529d31a4be8b755d878414dc348e3fde44ab3baaf")
-      public override
+      override
           fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty.Builder.() -> Unit):
           Unit = csvMappingParameters(CSVMappingParametersProperty(csvMappingParameters))
 
-      public override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
+      override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
         cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
       }
 
-      public override
-          fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
+      override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
         cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1c5d6900c90265d86ca7a7f5228b319efa89428015effdb4d3257270cb862684")
-      public override
+      override
           fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty.Builder.() -> Unit):
           Unit = jsonMappingParameters(JSONMappingParametersProperty(jsonMappingParameters))
 
@@ -611,9 +575,9 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.MappingParametersProperty,
     ) : MappingParametersProperty {
-      public override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
+      override fun csvMappingParameters(): Any? = unwrap(this).getCsvMappingParameters()
 
-      public override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
+      override fun jsonMappingParameters(): Any? = unwrap(this).getJsonMappingParameters()
     }
 
     public companion object {
@@ -640,8 +604,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun recordRowPath(): String
 
     public interface Builder {
-      public fun recordRowPath(recordRowPath: String) {
-      }
+      public fun recordRowPath(recordRowPath: String)
     }
 
     private class BuilderImpl : Builder {
@@ -650,7 +613,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.JSONMappingParametersProperty.builder()
 
-      public override fun recordRowPath(recordRowPath: String) {
+      override fun recordRowPath(recordRowPath: String) {
         cdkBuilder.recordRowPath(recordRowPath)
       }
 
@@ -663,7 +626,7 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.JSONMappingParametersProperty,
     ) : JSONMappingParametersProperty {
-      public override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
+      override fun recordRowPath(): String = unwrap(this).getRecordRowPath()
     }
 
     public companion object {
@@ -692,11 +655,9 @@ public open class CfnApplicationReferenceDataSource internal constructor(
     public fun recordRowDelimiter(): String
 
     public interface Builder {
-      public fun recordColumnDelimiter(recordColumnDelimiter: String) {
-      }
+      public fun recordColumnDelimiter(recordColumnDelimiter: String)
 
-      public fun recordRowDelimiter(recordRowDelimiter: String) {
-      }
+      public fun recordRowDelimiter(recordRowDelimiter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -705,11 +666,11 @@ public open class CfnApplicationReferenceDataSource internal constructor(
           =
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.CSVMappingParametersProperty.builder()
 
-      public override fun recordColumnDelimiter(recordColumnDelimiter: String) {
+      override fun recordColumnDelimiter(recordColumnDelimiter: String) {
         cdkBuilder.recordColumnDelimiter(recordColumnDelimiter)
       }
 
-      public override fun recordRowDelimiter(recordRowDelimiter: String) {
+      override fun recordRowDelimiter(recordRowDelimiter: String) {
         cdkBuilder.recordRowDelimiter(recordRowDelimiter)
       }
 
@@ -722,9 +683,9 @@ public open class CfnApplicationReferenceDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource.CSVMappingParametersProperty,
     ) : CSVMappingParametersProperty {
-      public override fun recordColumnDelimiter(): String = unwrap(this).getRecordColumnDelimiter()
+      override fun recordColumnDelimiter(): String = unwrap(this).getRecordColumnDelimiter()
 
-      public override fun recordRowDelimiter(): String = unwrap(this).getRecordRowDelimiter()
+      override fun recordRowDelimiter(): String = unwrap(this).getRecordRowDelimiter()
     }
 
     public companion object {

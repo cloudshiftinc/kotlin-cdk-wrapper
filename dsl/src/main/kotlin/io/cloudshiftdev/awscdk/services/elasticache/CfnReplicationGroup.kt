@@ -325,146 +325,99 @@ public open class CfnReplicationGroup internal constructor(
   }
 
   public interface Builder {
-    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
-    }
+    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean)
 
-    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
-    }
+    public fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable)
 
-    public fun authToken(authToken: String) {
-    }
+    public fun authToken(authToken: String)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
-    }
+    public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean)
 
-    public fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
-    }
+    public fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable)
 
-    public fun cacheNodeType(cacheNodeType: String) {
-    }
+    public fun cacheNodeType(cacheNodeType: String)
 
-    public fun cacheParameterGroupName(cacheParameterGroupName: String) {
-    }
+    public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
-    public fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>) {
-    }
+    public fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>)
 
-    public fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
-    }
+    public fun cacheSubnetGroupName(cacheSubnetGroupName: String)
 
-    public fun clusterMode(clusterMode: String) {
-    }
+    public fun clusterMode(clusterMode: String)
 
-    public fun dataTieringEnabled(dataTieringEnabled: Boolean) {
-    }
+    public fun dataTieringEnabled(dataTieringEnabled: Boolean)
 
-    public fun dataTieringEnabled(dataTieringEnabled: IResolvable) {
-    }
+    public fun dataTieringEnabled(dataTieringEnabled: IResolvable)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun globalReplicationGroupId(globalReplicationGroupId: String) {
-    }
+    public fun globalReplicationGroupId(globalReplicationGroupId: String)
 
-    public fun ipDiscovery(ipDiscovery: String) {
-    }
+    public fun ipDiscovery(ipDiscovery: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
-    }
+    public fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable)
 
-    public fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
-    }
+    public fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>)
 
-    public fun multiAzEnabled(multiAzEnabled: Boolean) {
-    }
+    public fun multiAzEnabled(multiAzEnabled: Boolean)
 
-    public fun multiAzEnabled(multiAzEnabled: IResolvable) {
-    }
+    public fun multiAzEnabled(multiAzEnabled: IResolvable)
 
-    public fun networkType(networkType: String) {
-    }
+    public fun networkType(networkType: String)
 
-    public fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable) {
-    }
+    public fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable)
 
-    public fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>) {
-    }
+    public fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>)
 
-    public fun notificationTopicArn(notificationTopicArn: String) {
-    }
+    public fun notificationTopicArn(notificationTopicArn: String)
 
-    public fun numCacheClusters(numCacheClusters: Number) {
-    }
+    public fun numCacheClusters(numCacheClusters: Number)
 
-    public fun numNodeGroups(numNodeGroups: Number) {
-    }
+    public fun numNodeGroups(numNodeGroups: Number)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredCacheClusterAZs(preferredCacheClusterAZs: List<String>) {
-    }
+    public fun preferredCacheClusterAZs(preferredCacheClusterAZs: List<String>)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun primaryClusterId(primaryClusterId: String) {
-    }
+    public fun primaryClusterId(primaryClusterId: String)
 
-    public fun replicasPerNodeGroup(replicasPerNodeGroup: Number) {
-    }
+    public fun replicasPerNodeGroup(replicasPerNodeGroup: Number)
 
-    public fun replicationGroupDescription(replicationGroupDescription: String) {
-    }
+    public fun replicationGroupDescription(replicationGroupDescription: String)
 
-    public fun replicationGroupId(replicationGroupId: String) {
-    }
+    public fun replicationGroupId(replicationGroupId: String)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun snapshotArns(snapshotArns: List<String>) {
-    }
+    public fun snapshotArns(snapshotArns: List<String>)
 
-    public fun snapshotName(snapshotName: String) {
-    }
+    public fun snapshotName(snapshotName: String)
 
-    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
-    }
+    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number)
 
-    public fun snapshotWindow(snapshotWindow: String) {
-    }
+    public fun snapshotWindow(snapshotWindow: String)
 
-    public fun snapshottingClusterId(snapshottingClusterId: String) {
-    }
+    public fun snapshottingClusterId(snapshottingClusterId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
-    }
+    public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean)
 
-    public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-    }
+    public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable)
 
-    public fun transitEncryptionMode(transitEncryptionMode: String) {
-    }
+    public fun transitEncryptionMode(transitEncryptionMode: String)
 
-    public fun userGroupIds(userGroupIds: List<String>) {
-    }
+    public fun userGroupIds(userGroupIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -474,191 +427,191 @@ public open class CfnReplicationGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnReplicationGroup.Builder
         = software.amazon.awscdk.services.elasticache.CfnReplicationGroup.Builder.create(scope, id)
 
-    public override fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
+    override fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean) {
       cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled)
     }
 
-    public override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
+    override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
       cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun authToken(authToken: String) {
+    override fun authToken(authToken: String) {
       cdkBuilder.authToken(authToken)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
+    override fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
       cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled)
     }
 
-    public override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
+    override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
       cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun cacheNodeType(cacheNodeType: String) {
+    override fun cacheNodeType(cacheNodeType: String) {
       cdkBuilder.cacheNodeType(cacheNodeType)
     }
 
-    public override fun cacheParameterGroupName(cacheParameterGroupName: String) {
+    override fun cacheParameterGroupName(cacheParameterGroupName: String) {
       cdkBuilder.cacheParameterGroupName(cacheParameterGroupName)
     }
 
-    public override fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>) {
+    override fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>) {
       cdkBuilder.cacheSecurityGroupNames(cacheSecurityGroupNames)
     }
 
-    public override fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
+    override fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
       cdkBuilder.cacheSubnetGroupName(cacheSubnetGroupName)
     }
 
-    public override fun clusterMode(clusterMode: String) {
+    override fun clusterMode(clusterMode: String) {
       cdkBuilder.clusterMode(clusterMode)
     }
 
-    public override fun dataTieringEnabled(dataTieringEnabled: Boolean) {
+    override fun dataTieringEnabled(dataTieringEnabled: Boolean) {
       cdkBuilder.dataTieringEnabled(dataTieringEnabled)
     }
 
-    public override fun dataTieringEnabled(dataTieringEnabled: IResolvable) {
+    override fun dataTieringEnabled(dataTieringEnabled: IResolvable) {
       cdkBuilder.dataTieringEnabled(dataTieringEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun globalReplicationGroupId(globalReplicationGroupId: String) {
+    override fun globalReplicationGroupId(globalReplicationGroupId: String) {
       cdkBuilder.globalReplicationGroupId(globalReplicationGroupId)
     }
 
-    public override fun ipDiscovery(ipDiscovery: String) {
+    override fun ipDiscovery(ipDiscovery: String) {
       cdkBuilder.ipDiscovery(ipDiscovery)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
+    override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
       cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
+    override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
       cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
     }
 
-    public override fun multiAzEnabled(multiAzEnabled: Boolean) {
+    override fun multiAzEnabled(multiAzEnabled: Boolean) {
       cdkBuilder.multiAzEnabled(multiAzEnabled)
     }
 
-    public override fun multiAzEnabled(multiAzEnabled: IResolvable) {
+    override fun multiAzEnabled(multiAzEnabled: IResolvable) {
       cdkBuilder.multiAzEnabled(multiAzEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun networkType(networkType: String) {
+    override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
 
-    public override fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable) {
+    override fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable) {
       cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>) {
+    override fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>) {
       cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration)
     }
 
-    public override fun notificationTopicArn(notificationTopicArn: String) {
+    override fun notificationTopicArn(notificationTopicArn: String) {
       cdkBuilder.notificationTopicArn(notificationTopicArn)
     }
 
-    public override fun numCacheClusters(numCacheClusters: Number) {
+    override fun numCacheClusters(numCacheClusters: Number) {
       cdkBuilder.numCacheClusters(numCacheClusters)
     }
 
-    public override fun numNodeGroups(numNodeGroups: Number) {
+    override fun numNodeGroups(numNodeGroups: Number) {
       cdkBuilder.numNodeGroups(numNodeGroups)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredCacheClusterAZs(preferredCacheClusterAZs: List<String>) {
+    override fun preferredCacheClusterAZs(preferredCacheClusterAZs: List<String>) {
       cdkBuilder.preferredCacheClusterAZs(preferredCacheClusterAZs)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun primaryClusterId(primaryClusterId: String) {
+    override fun primaryClusterId(primaryClusterId: String) {
       cdkBuilder.primaryClusterId(primaryClusterId)
     }
 
-    public override fun replicasPerNodeGroup(replicasPerNodeGroup: Number) {
+    override fun replicasPerNodeGroup(replicasPerNodeGroup: Number) {
       cdkBuilder.replicasPerNodeGroup(replicasPerNodeGroup)
     }
 
-    public override fun replicationGroupDescription(replicationGroupDescription: String) {
+    override fun replicationGroupDescription(replicationGroupDescription: String) {
       cdkBuilder.replicationGroupDescription(replicationGroupDescription)
     }
 
-    public override fun replicationGroupId(replicationGroupId: String) {
+    override fun replicationGroupId(replicationGroupId: String) {
       cdkBuilder.replicationGroupId(replicationGroupId)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun snapshotArns(snapshotArns: List<String>) {
+    override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
 
-    public override fun snapshotName(snapshotName: String) {
+    override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)
     }
 
-    public override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
+    override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
       cdkBuilder.snapshotRetentionLimit(snapshotRetentionLimit)
     }
 
-    public override fun snapshotWindow(snapshotWindow: String) {
+    override fun snapshotWindow(snapshotWindow: String) {
       cdkBuilder.snapshotWindow(snapshotWindow)
     }
 
-    public override fun snapshottingClusterId(snapshottingClusterId: String) {
+    override fun snapshottingClusterId(snapshottingClusterId: String) {
       cdkBuilder.snapshottingClusterId(snapshottingClusterId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
+    override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled)
     }
 
-    public override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
+    override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun transitEncryptionMode(transitEncryptionMode: String) {
+    override fun transitEncryptionMode(transitEncryptionMode: String) {
       cdkBuilder.transitEncryptionMode(transitEncryptionMode)
     }
 
-    public override fun userGroupIds(userGroupIds: List<String>) {
+    override fun userGroupIds(userGroupIds: List<String>) {
       cdkBuilder.userGroupIds(userGroupIds)
     }
 
@@ -691,8 +644,7 @@ public open class CfnReplicationGroup internal constructor(
     public fun deliveryStream(): String
 
     public interface Builder {
-      public fun deliveryStream(deliveryStream: String) {
-      }
+      public fun deliveryStream(deliveryStream: String)
     }
 
     private class BuilderImpl : Builder {
@@ -701,7 +653,7 @@ public open class CfnReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty.builder()
 
-      public override fun deliveryStream(deliveryStream: String) {
+      override fun deliveryStream(deliveryStream: String) {
         cdkBuilder.deliveryStream(deliveryStream)
       }
 
@@ -714,7 +666,7 @@ public open class CfnReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.KinesisFirehoseDestinationDetailsProperty,
     ) : KinesisFirehoseDestinationDetailsProperty {
-      public override fun deliveryStream(): String = unwrap(this).getDeliveryStream()
+      override fun deliveryStream(): String = unwrap(this).getDeliveryStream()
     }
 
     public companion object {
@@ -748,26 +700,20 @@ public open class CfnReplicationGroup internal constructor(
     public fun logType(): String
 
     public interface Builder {
-      public fun destinationDetails(destinationDetails: IResolvable) {
-      }
+      public fun destinationDetails(destinationDetails: IResolvable)
 
-      public fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
-      }
+      public fun destinationDetails(destinationDetails: DestinationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac403f668fc7e8e4373285dfb7c3f76cce364b31c49c3319d1b6d16e9fce7414")
       public
-          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit)
 
-      public fun destinationType(destinationType: String) {
-      }
+      public fun destinationType(destinationType: String)
 
-      public fun logFormat(logFormat: String) {
-      }
+      public fun logFormat(logFormat: String)
 
-      public fun logType(logType: String) {
-      }
+      public fun logType(logType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -776,29 +722,29 @@ public open class CfnReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.LogDeliveryConfigurationRequestProperty.builder()
 
-      public override fun destinationDetails(destinationDetails: IResolvable) {
+      override fun destinationDetails(destinationDetails: IResolvable) {
         cdkBuilder.destinationDetails(destinationDetails.let(IResolvable::unwrap))
       }
 
-      public override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
+      override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
         cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac403f668fc7e8e4373285dfb7c3f76cce364b31c49c3319d1b6d16e9fce7414")
-      public override
+      override
           fun destinationDetails(destinationDetails: DestinationDetailsProperty.Builder.() -> Unit):
           Unit = destinationDetails(DestinationDetailsProperty(destinationDetails))
 
-      public override fun destinationType(destinationType: String) {
+      override fun destinationType(destinationType: String) {
         cdkBuilder.destinationType(destinationType)
       }
 
-      public override fun logFormat(logFormat: String) {
+      override fun logFormat(logFormat: String) {
         cdkBuilder.logFormat(logFormat)
       }
 
-      public override fun logType(logType: String) {
+      override fun logType(logType: String) {
         cdkBuilder.logType(logType)
       }
 
@@ -811,13 +757,13 @@ public open class CfnReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.LogDeliveryConfigurationRequestProperty,
     ) : LogDeliveryConfigurationRequestProperty {
-      public override fun destinationDetails(): Any = unwrap(this).getDestinationDetails()
+      override fun destinationDetails(): Any = unwrap(this).getDestinationDetails()
 
-      public override fun destinationType(): String = unwrap(this).getDestinationType()
+      override fun destinationType(): String = unwrap(this).getDestinationType()
 
-      public override fun logFormat(): String = unwrap(this).getLogFormat()
+      override fun logFormat(): String = unwrap(this).getLogFormat()
 
-      public override fun logType(): String = unwrap(this).getLogType()
+      override fun logType(): String = unwrap(this).getLogType()
     }
 
     public companion object {
@@ -854,20 +800,15 @@ public open class CfnReplicationGroup internal constructor(
     public fun slots(): String? = unwrap(this).getSlots()
 
     public interface Builder {
-      public fun nodeGroupId(nodeGroupId: String) {
-      }
+      public fun nodeGroupId(nodeGroupId: String)
 
-      public fun primaryAvailabilityZone(primaryAvailabilityZone: String) {
-      }
+      public fun primaryAvailabilityZone(primaryAvailabilityZone: String)
 
-      public fun replicaAvailabilityZones(replicaAvailabilityZones: List<String>) {
-      }
+      public fun replicaAvailabilityZones(replicaAvailabilityZones: List<String>)
 
-      public fun replicaCount(replicaCount: Number) {
-      }
+      public fun replicaCount(replicaCount: Number)
 
-      public fun slots(slots: String) {
-      }
+      public fun slots(slots: String)
     }
 
     private class BuilderImpl : Builder {
@@ -876,23 +817,23 @@ public open class CfnReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty.builder()
 
-      public override fun nodeGroupId(nodeGroupId: String) {
+      override fun nodeGroupId(nodeGroupId: String) {
         cdkBuilder.nodeGroupId(nodeGroupId)
       }
 
-      public override fun primaryAvailabilityZone(primaryAvailabilityZone: String) {
+      override fun primaryAvailabilityZone(primaryAvailabilityZone: String) {
         cdkBuilder.primaryAvailabilityZone(primaryAvailabilityZone)
       }
 
-      public override fun replicaAvailabilityZones(replicaAvailabilityZones: List<String>) {
+      override fun replicaAvailabilityZones(replicaAvailabilityZones: List<String>) {
         cdkBuilder.replicaAvailabilityZones(replicaAvailabilityZones)
       }
 
-      public override fun replicaCount(replicaCount: Number) {
+      override fun replicaCount(replicaCount: Number) {
         cdkBuilder.replicaCount(replicaCount)
       }
 
-      public override fun slots(slots: String) {
+      override fun slots(slots: String) {
         cdkBuilder.slots(slots)
       }
 
@@ -905,17 +846,16 @@ public open class CfnReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty,
     ) : NodeGroupConfigurationProperty {
-      public override fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
+      override fun nodeGroupId(): String? = unwrap(this).getNodeGroupId()
 
-      public override fun primaryAvailabilityZone(): String? =
-          unwrap(this).getPrimaryAvailabilityZone()
+      override fun primaryAvailabilityZone(): String? = unwrap(this).getPrimaryAvailabilityZone()
 
-      public override fun replicaAvailabilityZones(): List<String> =
+      override fun replicaAvailabilityZones(): List<String> =
           unwrap(this).getReplicaAvailabilityZones() ?: emptyList()
 
-      public override fun replicaCount(): Number? = unwrap(this).getReplicaCount()
+      override fun replicaCount(): Number? = unwrap(this).getReplicaCount()
 
-      public override fun slots(): String? = unwrap(this).getSlots()
+      override fun slots(): String? = unwrap(this).getSlots()
     }
 
     public companion object {
@@ -942,8 +882,7 @@ public open class CfnReplicationGroup internal constructor(
     public fun logGroup(): String
 
     public interface Builder {
-      public fun logGroup(logGroup: String) {
-      }
+      public fun logGroup(logGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -952,7 +891,7 @@ public open class CfnReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty.builder()
 
-      public override fun logGroup(logGroup: String) {
+      override fun logGroup(logGroup: String) {
         cdkBuilder.logGroup(logGroup)
       }
 
@@ -965,7 +904,7 @@ public open class CfnReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.CloudWatchLogsDestinationDetailsProperty,
     ) : CloudWatchLogsDestinationDetailsProperty {
-      public override fun logGroup(): String = unwrap(this).getLogGroup()
+      override fun logGroup(): String = unwrap(this).getLogGroup()
     }
 
     public companion object {
@@ -995,31 +934,25 @@ public open class CfnReplicationGroup internal constructor(
     public fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
 
     public interface Builder {
-      public fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
-      }
+      public fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable)
 
       public
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
-      }
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c0fab66a7b11abd79b203e0c3dcd007cb3c43e229073b97666d0f57dd609f1a")
       public
-          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit)
 
-      public fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
-      }
+      public fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable)
 
       public
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
-      }
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7e9071715f9eb9442b214016e6a2cd9f3d2d209b1f152746058d8f7ab17ec8a4")
       public
-          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit) {
-      }
+          fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1028,34 +961,34 @@ public open class CfnReplicationGroup internal constructor(
           =
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty.builder()
 
-      public override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
+      override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
         cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
         cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2c0fab66a7b11abd79b203e0c3dcd007cb3c43e229073b97666d0f57dd609f1a")
-      public override
+      override
           fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty.Builder.() -> Unit):
           Unit =
           cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty(cloudWatchLogsDetails))
 
-      public override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
+      override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
         cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
         cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7e9071715f9eb9442b214016e6a2cd9f3d2d209b1f152746058d8f7ab17ec8a4")
-      public override
+      override
           fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty.Builder.() -> Unit):
           Unit =
           kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty(kinesisFirehoseDetails))
@@ -1069,9 +1002,9 @@ public open class CfnReplicationGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.DestinationDetailsProperty,
     ) : DestinationDetailsProperty {
-      public override fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
+      override fun cloudWatchLogsDetails(): Any? = unwrap(this).getCloudWatchLogsDetails()
 
-      public override fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
+      override fun kinesisFirehoseDetails(): Any? = unwrap(this).getKinesisFirehoseDetails()
     }
 
     public companion object {

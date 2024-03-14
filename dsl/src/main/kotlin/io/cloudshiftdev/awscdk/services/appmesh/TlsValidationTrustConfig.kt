@@ -9,28 +9,26 @@ public interface TlsValidationTrustConfig {
 
   public interface Builder {
     public
-        fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty) {
-    }
+        fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f3761029aeee45f9e93536bbc797ae362b78e888146f6ea5e2b3da424f3578ec")
     public
-        fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty.Builder.() -> Unit) {
-    }
+        fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig.Builder
         = software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig.builder()
 
-    public override
+    override
         fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty) {
       cdkBuilder.tlsValidationTrust(tlsValidationTrust.let(CfnVirtualNode.TlsValidationContextTrustProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f3761029aeee45f9e93536bbc797ae362b78e888146f6ea5e2b3da424f3578ec")
-    public override
+    override
         fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty.Builder.() -> Unit):
         Unit =
         tlsValidationTrust(CfnVirtualNode.TlsValidationContextTrustProperty(tlsValidationTrust))
@@ -42,7 +40,7 @@ public interface TlsValidationTrustConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig,
   ) : TlsValidationTrustConfig {
-    public override fun tlsValidationTrust(): CfnVirtualNode.TlsValidationContextTrustProperty =
+    override fun tlsValidationTrust(): CfnVirtualNode.TlsValidationContextTrustProperty =
         unwrap(this).getTlsValidationTrust().let(CfnVirtualNode.TlsValidationContextTrustProperty::wrap)
   }
 

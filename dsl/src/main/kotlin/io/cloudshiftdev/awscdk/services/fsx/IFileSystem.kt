@@ -10,10 +10,9 @@ public interface IFileSystem : IConnectable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.fsx.IFileSystem,
   ) : IFileSystem {
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
 
-    public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+    override fun fileSystemId(): String = unwrap(this).getFileSystemId()
   }
 
   public companion object {

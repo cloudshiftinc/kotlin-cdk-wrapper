@@ -39,14 +39,11 @@ public open class CfnByteMatchSet internal constructor(
   }
 
   public interface Builder {
-    public fun byteMatchTuples(byteMatchTuples: IResolvable) {
-    }
+    public fun byteMatchTuples(byteMatchTuples: IResolvable)
 
-    public fun byteMatchTuples(byteMatchTuples: List<Any>) {
-    }
+    public fun byteMatchTuples(byteMatchTuples: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnByteMatchSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.Builder =
         software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.Builder.create(scope, id)
 
-    public override fun byteMatchTuples(byteMatchTuples: IResolvable) {
+    override fun byteMatchTuples(byteMatchTuples: IResolvable) {
       cdkBuilder.byteMatchTuples(byteMatchTuples.let(IResolvable::unwrap))
     }
 
-    public override fun byteMatchTuples(byteMatchTuples: List<Any>) {
+    override fun byteMatchTuples(byteMatchTuples: List<Any>) {
       cdkBuilder.byteMatchTuples(byteMatchTuples)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -105,28 +102,21 @@ public open class CfnByteMatchSet internal constructor(
     public fun textTransformation(): String
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("707acbb9af795be8650a72d4653d6e4e6a7fc0c2c2bb4cb1d10d23edd24e98f3")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun positionalConstraint(positionalConstraint: String) {
-      }
+      public fun positionalConstraint(positionalConstraint: String)
 
-      public fun targetString(targetString: String) {
-      }
+      public fun targetString(targetString: String)
 
-      public fun targetStringBase64(targetStringBase64: String) {
-      }
+      public fun targetStringBase64(targetStringBase64: String)
 
-      public fun textTransformation(textTransformation: String) {
-      }
+      public fun textTransformation(textTransformation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -135,32 +125,32 @@ public open class CfnByteMatchSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.ByteMatchTupleProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("707acbb9af795be8650a72d4653d6e4e6a7fc0c2c2bb4cb1d10d23edd24e98f3")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun positionalConstraint(positionalConstraint: String) {
+      override fun positionalConstraint(positionalConstraint: String) {
         cdkBuilder.positionalConstraint(positionalConstraint)
       }
 
-      public override fun targetString(targetString: String) {
+      override fun targetString(targetString: String) {
         cdkBuilder.targetString(targetString)
       }
 
-      public override fun targetStringBase64(targetStringBase64: String) {
+      override fun targetStringBase64(targetStringBase64: String) {
         cdkBuilder.targetStringBase64(targetStringBase64)
       }
 
-      public override fun textTransformation(textTransformation: String) {
+      override fun textTransformation(textTransformation: String) {
         cdkBuilder.textTransformation(textTransformation)
       }
 
@@ -173,15 +163,15 @@ public open class CfnByteMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.ByteMatchTupleProperty,
     ) : ByteMatchTupleProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun positionalConstraint(): String = unwrap(this).getPositionalConstraint()
+      override fun positionalConstraint(): String = unwrap(this).getPositionalConstraint()
 
-      public override fun targetString(): String? = unwrap(this).getTargetString()
+      override fun targetString(): String? = unwrap(this).getTargetString()
 
-      public override fun targetStringBase64(): String? = unwrap(this).getTargetStringBase64()
+      override fun targetStringBase64(): String? = unwrap(this).getTargetStringBase64()
 
-      public override fun textTransformation(): String = unwrap(this).getTextTransformation()
+      override fun textTransformation(): String = unwrap(this).getTextTransformation()
     }
 
     public companion object {
@@ -210,11 +200,9 @@ public open class CfnByteMatchSet internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun `data`(`data`: String) {
-      }
+      public fun `data`(`data`: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -223,11 +211,11 @@ public open class CfnByteMatchSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.FieldToMatchProperty.builder()
 
-      public override fun `data`(`data`: String) {
+      override fun `data`(`data`: String) {
         cdkBuilder.`data`(`data`)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -240,9 +228,9 @@ public open class CfnByteMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.FieldToMatchProperty,
     ) : FieldToMatchProperty {
-      public override fun `data`(): String? = unwrap(this).getData()
+      override fun `data`(): String? = unwrap(this).getData()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

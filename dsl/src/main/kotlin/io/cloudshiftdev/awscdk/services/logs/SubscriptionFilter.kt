@@ -10,17 +10,13 @@ public open class SubscriptionFilter internal constructor(
   private val cdkObject: software.amazon.awscdk.services.logs.SubscriptionFilter,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun destination(destination: ILogSubscriptionDestination) {
-    }
+    public fun destination(destination: ILogSubscriptionDestination)
 
-    public fun filterName(filterName: String) {
-    }
+    public fun filterName(filterName: String)
 
-    public fun filterPattern(filterPattern: IFilterPattern) {
-    }
+    public fun filterPattern(filterPattern: IFilterPattern)
 
-    public fun logGroup(logGroup: ILogGroup) {
-    }
+    public fun logGroup(logGroup: ILogGroup)
   }
 
   private class BuilderImpl(
@@ -30,19 +26,19 @@ public open class SubscriptionFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.SubscriptionFilter.Builder =
         software.amazon.awscdk.services.logs.SubscriptionFilter.Builder.create(scope, id)
 
-    public override fun destination(destination: ILogSubscriptionDestination) {
+    override fun destination(destination: ILogSubscriptionDestination) {
       cdkBuilder.destination(destination.let(ILogSubscriptionDestination::unwrap))
     }
 
-    public override fun filterName(filterName: String) {
+    override fun filterName(filterName: String) {
       cdkBuilder.filterName(filterName)
     }
 
-    public override fun filterPattern(filterPattern: IFilterPattern) {
+    override fun filterPattern(filterPattern: IFilterPattern) {
       cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
     }
 
-    public override fun logGroup(logGroup: ILogGroup) {
+    override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 

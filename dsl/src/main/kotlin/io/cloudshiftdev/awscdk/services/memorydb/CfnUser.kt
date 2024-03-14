@@ -52,17 +52,13 @@ public open class CfnUser internal constructor(
   }
 
   public interface Builder {
-    public fun accessString(accessString: String) {
-    }
+    public fun accessString(accessString: String)
 
-    public fun authenticationMode(authenticationMode: Any) {
-    }
+    public fun authenticationMode(authenticationMode: Any)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -72,19 +68,19 @@ public open class CfnUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.memorydb.CfnUser.Builder =
         software.amazon.awscdk.services.memorydb.CfnUser.Builder.create(scope, id)
 
-    public override fun accessString(accessString: String) {
+    override fun accessString(accessString: String) {
       cdkBuilder.accessString(accessString)
     }
 
-    public override fun authenticationMode(authenticationMode: Any) {
+    override fun authenticationMode(authenticationMode: Any) {
       cdkBuilder.authenticationMode(authenticationMode)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 
@@ -118,11 +114,9 @@ public open class CfnUser internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun passwords(passwords: List<String>) {
-      }
+      public fun passwords(passwords: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -130,11 +124,11 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.memorydb.CfnUser.AuthenticationModeProperty.Builder =
           software.amazon.awscdk.services.memorydb.CfnUser.AuthenticationModeProperty.builder()
 
-      public override fun passwords(passwords: List<String>) {
+      override fun passwords(passwords: List<String>) {
         cdkBuilder.passwords(passwords)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -147,9 +141,9 @@ public open class CfnUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.memorydb.CfnUser.AuthenticationModeProperty,
     ) : AuthenticationModeProperty {
-      public override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
+      override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

@@ -40,17 +40,13 @@ public open class CfnKeySigningKey internal constructor(
   }
 
   public interface Builder {
-    public fun hostedZoneId(hostedZoneId: String) {
-    }
+    public fun hostedZoneId(hostedZoneId: String)
 
-    public fun keyManagementServiceArn(keyManagementServiceArn: String) {
-    }
+    public fun keyManagementServiceArn(keyManagementServiceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
   }
 
   private class BuilderImpl(
@@ -60,19 +56,19 @@ public open class CfnKeySigningKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnKeySigningKey.Builder =
         software.amazon.awscdk.services.route53.CfnKeySigningKey.Builder.create(scope, id)
 
-    public override fun hostedZoneId(hostedZoneId: String) {
+    override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 
-    public override fun keyManagementServiceArn(keyManagementServiceArn: String) {
+    override fun keyManagementServiceArn(keyManagementServiceArn: String) {
       cdkBuilder.keyManagementServiceArn(keyManagementServiceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 

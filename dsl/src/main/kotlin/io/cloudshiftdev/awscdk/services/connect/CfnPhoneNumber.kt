@@ -69,26 +69,19 @@ public open class CfnPhoneNumber internal constructor(
   }
 
   public interface Builder {
-    public fun countryCode(countryCode: String) {
-    }
+    public fun countryCode(countryCode: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun prefix(prefix: String) {
-    }
+    public fun prefix(prefix: String)
 
-    public fun sourcePhoneNumberArn(sourcePhoneNumberArn: String) {
-    }
+    public fun sourcePhoneNumberArn(sourcePhoneNumberArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetArn(targetArn: String) {
-    }
+    public fun targetArn(targetArn: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -98,31 +91,31 @@ public open class CfnPhoneNumber internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnPhoneNumber.Builder =
         software.amazon.awscdk.services.connect.CfnPhoneNumber.Builder.create(scope, id)
 
-    public override fun countryCode(countryCode: String) {
+    override fun countryCode(countryCode: String) {
       cdkBuilder.countryCode(countryCode)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun prefix(prefix: String) {
+    override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
 
-    public override fun sourcePhoneNumberArn(sourcePhoneNumberArn: String) {
+    override fun sourcePhoneNumberArn(sourcePhoneNumberArn: String) {
       cdkBuilder.sourcePhoneNumberArn(sourcePhoneNumberArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetArn(targetArn: String) {
+    override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

@@ -11,17 +11,13 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
   public fun events(): List<PipelineNotificationEvents>
 
   public interface Builder {
-    public fun detailType(detailType: DetailType) {
-    }
+    public fun detailType(detailType: DetailType)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun events(events: List<PipelineNotificationEvents>) {
-    }
+    public fun events(events: List<PipelineNotificationEvents>)
 
-    public fun notificationRuleName(notificationRuleName: String) {
-    }
+    public fun notificationRuleName(notificationRuleName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -29,19 +25,19 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
         software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions.Builder =
         software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions.builder()
 
-    public override fun detailType(detailType: DetailType) {
+    override fun detailType(detailType: DetailType) {
       cdkBuilder.detailType(detailType.let(DetailType::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun events(events: List<PipelineNotificationEvents>) {
+    override fun events(events: List<PipelineNotificationEvents>) {
       cdkBuilder.events(events.map(PipelineNotificationEvents::unwrap))
     }
 
-    public override fun notificationRuleName(notificationRuleName: String) {
+    override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)
     }
 
@@ -52,15 +48,14 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions,
   ) : PipelineNotifyOnOptions {
-    public override fun detailType(): DetailType? =
-        unwrap(this).getDetailType()?.let(DetailType::wrap)
+    override fun detailType(): DetailType? = unwrap(this).getDetailType()?.let(DetailType::wrap)
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun events(): List<PipelineNotificationEvents> =
+    override fun events(): List<PipelineNotificationEvents> =
         unwrap(this).getEvents().map(PipelineNotificationEvents::wrap)
 
-    public override fun notificationRuleName(): String? = unwrap(this).getNotificationRuleName()
+    override fun notificationRuleName(): String? = unwrap(this).getNotificationRuleName()
   }
 
   public companion object {

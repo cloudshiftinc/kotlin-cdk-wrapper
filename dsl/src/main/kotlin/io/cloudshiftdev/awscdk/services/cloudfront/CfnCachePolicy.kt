@@ -42,16 +42,13 @@ public open class CfnCachePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
-    }
+    public fun cachePolicyConfig(cachePolicyConfig: IResolvable)
 
-    public fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty) {
-    }
+    public fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fda54e25ac114759a639535f6dbaf9669165446bd1b2f9c3b537ceb0eced2e3")
-    public fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty.Builder.() -> Unit) {
-    }
+    public fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -61,19 +58,18 @@ public open class CfnCachePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.Builder =
         software.amazon.awscdk.services.cloudfront.CfnCachePolicy.Builder.create(scope, id)
 
-    public override fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
+    override fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
       cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(IResolvable::unwrap))
     }
 
-    public override fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty) {
+    override fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty) {
       cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(CachePolicyConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0fda54e25ac114759a639535f6dbaf9669165446bd1b2f9c3b537ceb0eced2e3")
-    public override
-        fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty.Builder.() -> Unit): Unit
-        = cachePolicyConfig(CachePolicyConfigProperty(cachePolicyConfig))
+    override fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty.Builder.() -> Unit):
+        Unit = cachePolicyConfig(CachePolicyConfigProperty(cachePolicyConfig))
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CfnCachePolicy =
         cdkBuilder.build()
@@ -106,11 +102,9 @@ public open class CfnCachePolicy internal constructor(
     public fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
 
     public interface Builder {
-      public fun headerBehavior(headerBehavior: String) {
-      }
+      public fun headerBehavior(headerBehavior: String)
 
-      public fun headers(headers: List<String>) {
-      }
+      public fun headers(headers: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -118,11 +112,11 @@ public open class CfnCachePolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty.builder()
 
-      public override fun headerBehavior(headerBehavior: String) {
+      override fun headerBehavior(headerBehavior: String) {
         cdkBuilder.headerBehavior(headerBehavior)
       }
 
-      public override fun headers(headers: List<String>) {
+      override fun headers(headers: List<String>) {
         cdkBuilder.headers(headers)
       }
 
@@ -135,9 +129,9 @@ public open class CfnCachePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty,
     ) : HeadersConfigProperty {
-      public override fun headerBehavior(): String = unwrap(this).getHeaderBehavior()
+      override fun headerBehavior(): String = unwrap(this).getHeaderBehavior()
 
-      public override fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
+      override fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
     }
 
     public companion object {
@@ -172,51 +166,38 @@ public open class CfnCachePolicy internal constructor(
     public fun queryStringsConfig(): Any
 
     public interface Builder {
-      public fun cookiesConfig(cookiesConfig: IResolvable) {
-      }
+      public fun cookiesConfig(cookiesConfig: IResolvable)
 
-      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
-      }
+      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cd73846cce71a0b5ddc21e71b0389d3a5f0b8a86832fe7ab38b9e11c3c050129")
-      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit) {
-      }
+      public fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit)
 
-      public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
-      }
+      public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean)
 
-      public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: IResolvable) {
-      }
+      public fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: IResolvable)
 
-      public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
-      }
+      public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean)
 
-      public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: IResolvable) {
-      }
+      public fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: IResolvable)
 
-      public fun headersConfig(headersConfig: IResolvable) {
-      }
+      public fun headersConfig(headersConfig: IResolvable)
 
-      public fun headersConfig(headersConfig: HeadersConfigProperty) {
-      }
+      public fun headersConfig(headersConfig: HeadersConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45c52ffde49eb8eb105709b889f144604b1745146eb4d92c5ab4efc984ed406b")
-      public fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit) {
-      }
+      public fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit)
 
-      public fun queryStringsConfig(queryStringsConfig: IResolvable) {
-      }
+      public fun queryStringsConfig(queryStringsConfig: IResolvable)
 
-      public fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
-      }
+      public fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91e895acf57abba00224b945c1c7b5a23ebc86968d55485206445b4be7aca139")
       public
-          fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty.Builder.() -> Unit) {
-      }
+          fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -225,59 +206,59 @@ public open class CfnCachePolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty.builder()
 
-      public override fun cookiesConfig(cookiesConfig: IResolvable) {
+      override fun cookiesConfig(cookiesConfig: IResolvable) {
         cdkBuilder.cookiesConfig(cookiesConfig.let(IResolvable::unwrap))
       }
 
-      public override fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
+      override fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
         cdkBuilder.cookiesConfig(cookiesConfig.let(CookiesConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cd73846cce71a0b5ddc21e71b0389d3a5f0b8a86832fe7ab38b9e11c3c050129")
-      public override fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit):
-          Unit = cookiesConfig(CookiesConfigProperty(cookiesConfig))
+      override fun cookiesConfig(cookiesConfig: CookiesConfigProperty.Builder.() -> Unit): Unit =
+          cookiesConfig(CookiesConfigProperty(cookiesConfig))
 
-      public override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
+      override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: Boolean) {
         cdkBuilder.enableAcceptEncodingBrotli(enableAcceptEncodingBrotli)
       }
 
-      public override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: IResolvable) {
+      override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: IResolvable) {
         cdkBuilder.enableAcceptEncodingBrotli(enableAcceptEncodingBrotli.let(IResolvable::unwrap))
       }
 
-      public override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
+      override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: Boolean) {
         cdkBuilder.enableAcceptEncodingGzip(enableAcceptEncodingGzip)
       }
 
-      public override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: IResolvable) {
+      override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: IResolvable) {
         cdkBuilder.enableAcceptEncodingGzip(enableAcceptEncodingGzip.let(IResolvable::unwrap))
       }
 
-      public override fun headersConfig(headersConfig: IResolvable) {
+      override fun headersConfig(headersConfig: IResolvable) {
         cdkBuilder.headersConfig(headersConfig.let(IResolvable::unwrap))
       }
 
-      public override fun headersConfig(headersConfig: HeadersConfigProperty) {
+      override fun headersConfig(headersConfig: HeadersConfigProperty) {
         cdkBuilder.headersConfig(headersConfig.let(HeadersConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45c52ffde49eb8eb105709b889f144604b1745146eb4d92c5ab4efc984ed406b")
-      public override fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit):
-          Unit = headersConfig(HeadersConfigProperty(headersConfig))
+      override fun headersConfig(headersConfig: HeadersConfigProperty.Builder.() -> Unit): Unit =
+          headersConfig(HeadersConfigProperty(headersConfig))
 
-      public override fun queryStringsConfig(queryStringsConfig: IResolvable) {
+      override fun queryStringsConfig(queryStringsConfig: IResolvable) {
         cdkBuilder.queryStringsConfig(queryStringsConfig.let(IResolvable::unwrap))
       }
 
-      public override fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
+      override fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
         cdkBuilder.queryStringsConfig(queryStringsConfig.let(QueryStringsConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91e895acf57abba00224b945c1c7b5a23ebc86968d55485206445b4be7aca139")
-      public override
+      override
           fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty.Builder.() -> Unit):
           Unit = queryStringsConfig(QueryStringsConfigProperty(queryStringsConfig))
 
@@ -290,17 +271,15 @@ public open class CfnCachePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty,
     ) : ParametersInCacheKeyAndForwardedToOriginProperty {
-      public override fun cookiesConfig(): Any = unwrap(this).getCookiesConfig()
+      override fun cookiesConfig(): Any = unwrap(this).getCookiesConfig()
 
-      public override fun enableAcceptEncodingBrotli(): Any? =
-          unwrap(this).getEnableAcceptEncodingBrotli()
+      override fun enableAcceptEncodingBrotli(): Any? = unwrap(this).getEnableAcceptEncodingBrotli()
 
-      public override fun enableAcceptEncodingGzip(): Any =
-          unwrap(this).getEnableAcceptEncodingGzip()
+      override fun enableAcceptEncodingGzip(): Any = unwrap(this).getEnableAcceptEncodingGzip()
 
-      public override fun headersConfig(): Any = unwrap(this).getHeadersConfig()
+      override fun headersConfig(): Any = unwrap(this).getHeadersConfig()
 
-      public override fun queryStringsConfig(): Any = unwrap(this).getQueryStringsConfig()
+      override fun queryStringsConfig(): Any = unwrap(this).getQueryStringsConfig()
     }
 
     public companion object {
@@ -330,11 +309,9 @@ public open class CfnCachePolicy internal constructor(
     public fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
 
     public interface Builder {
-      public fun cookieBehavior(cookieBehavior: String) {
-      }
+      public fun cookieBehavior(cookieBehavior: String)
 
-      public fun cookies(cookies: List<String>) {
-      }
+      public fun cookies(cookies: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -342,11 +319,11 @@ public open class CfnCachePolicy internal constructor(
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty.Builder =
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty.builder()
 
-      public override fun cookieBehavior(cookieBehavior: String) {
+      override fun cookieBehavior(cookieBehavior: String) {
         cdkBuilder.cookieBehavior(cookieBehavior)
       }
 
-      public override fun cookies(cookies: List<String>) {
+      override fun cookies(cookies: List<String>) {
         cdkBuilder.cookies(cookies)
       }
 
@@ -359,9 +336,9 @@ public open class CfnCachePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty,
     ) : CookiesConfigProperty {
-      public override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
+      override fun cookieBehavior(): String = unwrap(this).getCookieBehavior()
 
-      public override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
+      override fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
     }
 
     public companion object {
@@ -390,11 +367,9 @@ public open class CfnCachePolicy internal constructor(
     public fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?: emptyList()
 
     public interface Builder {
-      public fun queryStringBehavior(queryStringBehavior: String) {
-      }
+      public fun queryStringBehavior(queryStringBehavior: String)
 
-      public fun queryStrings(queryStrings: List<String>) {
-      }
+      public fun queryStrings(queryStrings: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -403,11 +378,11 @@ public open class CfnCachePolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty.builder()
 
-      public override fun queryStringBehavior(queryStringBehavior: String) {
+      override fun queryStringBehavior(queryStringBehavior: String) {
         cdkBuilder.queryStringBehavior(queryStringBehavior)
       }
 
-      public override fun queryStrings(queryStrings: List<String>) {
+      override fun queryStrings(queryStrings: List<String>) {
         cdkBuilder.queryStrings(queryStrings)
       }
 
@@ -420,10 +395,9 @@ public open class CfnCachePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty,
     ) : QueryStringsConfigProperty {
-      public override fun queryStringBehavior(): String = unwrap(this).getQueryStringBehavior()
+      override fun queryStringBehavior(): String = unwrap(this).getQueryStringBehavior()
 
-      public override fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?:
-          emptyList()
+      override fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?: emptyList()
     }
 
     public companion object {
@@ -460,34 +434,26 @@ public open class CfnCachePolicy internal constructor(
     public fun parametersInCacheKeyAndForwardedToOrigin(): Any
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
 
-      public fun defaultTtl(defaultTtl: Number) {
-      }
+      public fun defaultTtl(defaultTtl: Number)
 
-      public fun maxTtl(maxTtl: Number) {
-      }
+      public fun maxTtl(maxTtl: Number)
 
-      public fun minTtl(minTtl: Number) {
-      }
+      public fun minTtl(minTtl: Number)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
       public
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable) {
-      }
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable)
 
       public
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty) {
-      }
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f89df2634fea665831b079caea320d3657ed6ac143669c7ff2ec8b99e6c38256")
       public
-          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit) {
-      }
+          fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -496,39 +462,39 @@ public open class CfnCachePolicy internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
-      public override fun defaultTtl(defaultTtl: Number) {
+      override fun defaultTtl(defaultTtl: Number) {
         cdkBuilder.defaultTtl(defaultTtl)
       }
 
-      public override fun maxTtl(maxTtl: Number) {
+      override fun maxTtl(maxTtl: Number) {
         cdkBuilder.maxTtl(maxTtl)
       }
 
-      public override fun minTtl(minTtl: Number) {
+      override fun minTtl(minTtl: Number) {
         cdkBuilder.minTtl(minTtl)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override
+      override
           fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable) {
         cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty) {
         cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(ParametersInCacheKeyAndForwardedToOriginProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f89df2634fea665831b079caea320d3657ed6ac143669c7ff2ec8b99e6c38256")
-      public override
+      override
           fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty.Builder.() -> Unit):
           Unit =
           parametersInCacheKeyAndForwardedToOrigin(ParametersInCacheKeyAndForwardedToOriginProperty(parametersInCacheKeyAndForwardedToOrigin))
@@ -542,17 +508,17 @@ public open class CfnCachePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty,
     ) : CachePolicyConfigProperty {
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
 
-      public override fun defaultTtl(): Number = unwrap(this).getDefaultTtl()
+      override fun defaultTtl(): Number = unwrap(this).getDefaultTtl()
 
-      public override fun maxTtl(): Number = unwrap(this).getMaxTtl()
+      override fun maxTtl(): Number = unwrap(this).getMaxTtl()
 
-      public override fun minTtl(): Number = unwrap(this).getMinTtl()
+      override fun minTtl(): Number = unwrap(this).getMinTtl()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun parametersInCacheKeyAndForwardedToOrigin(): Any =
+      override fun parametersInCacheKeyAndForwardedToOrigin(): Any =
           unwrap(this).getParametersInCacheKeyAndForwardedToOrigin()
     }
 

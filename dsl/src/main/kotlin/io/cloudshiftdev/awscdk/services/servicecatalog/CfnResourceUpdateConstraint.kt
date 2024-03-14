@@ -49,20 +49,15 @@ public open class CfnResourceUpdateConstraint internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
 
-    public fun tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct: String) {
-    }
+    public fun tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct: String)
   }
 
   private class BuilderImpl(
@@ -74,23 +69,23 @@ public open class CfnResourceUpdateConstraint internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
-    public override fun tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct: String) {
+    override fun tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct: String) {
       cdkBuilder.tagUpdateOnProvisionedProduct(tagUpdateOnProvisionedProduct)
     }
 

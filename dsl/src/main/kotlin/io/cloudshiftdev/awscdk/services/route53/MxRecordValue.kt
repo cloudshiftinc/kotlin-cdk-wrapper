@@ -10,22 +10,20 @@ public interface MxRecordValue {
   public fun priority(): Number
 
   public interface Builder {
-    public fun hostName(hostName: String) {
-    }
+    public fun hostName(hostName: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.MxRecordValue.Builder =
         software.amazon.awscdk.services.route53.MxRecordValue.builder()
 
-    public override fun hostName(hostName: String) {
+    override fun hostName(hostName: String) {
       cdkBuilder.hostName(hostName)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
@@ -35,9 +33,9 @@ public interface MxRecordValue {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.MxRecordValue,
   ) : MxRecordValue {
-    public override fun hostName(): String = unwrap(this).getHostName()
+    override fun hostName(): String = unwrap(this).getHostName()
 
-    public override fun priority(): Number = unwrap(this).getPriority()
+    override fun priority(): Number = unwrap(this).getPriority()
   }
 
   public companion object {

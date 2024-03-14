@@ -33,59 +33,52 @@ public open class NatInstanceProviderV2 internal constructor(
       unwrap(this).getSecurityGroup().let(ISecurityGroup::wrap)
 
   public interface Builder {
-    public fun creditSpecification(creditSpecification: CpuCredits) {
-    }
+    public fun creditSpecification(creditSpecification: CpuCredits)
 
-    public fun defaultAllowedTraffic(defaultAllowedTraffic: NatTrafficDirection) {
-    }
+    public fun defaultAllowedTraffic(defaultAllowedTraffic: NatTrafficDirection)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun keyPair(keyPair: IKeyPair) {
-    }
+    public fun keyPair(keyPair: IKeyPair)
 
-    public fun machineImage(machineImage: IMachineImage) {
-    }
+    public fun machineImage(machineImage: IMachineImage)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NatInstanceProviderV2.Builder =
         software.amazon.awscdk.services.ec2.NatInstanceProviderV2.Builder.create()
 
-    public override fun creditSpecification(creditSpecification: CpuCredits) {
+    override fun creditSpecification(creditSpecification: CpuCredits) {
       cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits::unwrap))
     }
 
-    public override fun defaultAllowedTraffic(defaultAllowedTraffic: NatTrafficDirection) {
+    override fun defaultAllowedTraffic(defaultAllowedTraffic: NatTrafficDirection) {
       cdkBuilder.defaultAllowedTraffic(defaultAllowedTraffic.let(NatTrafficDirection::unwrap))
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun keyPair(keyPair: IKeyPair) {
+    override fun keyPair(keyPair: IKeyPair) {
       cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
     }
 
-    public override fun machineImage(machineImage: IMachineImage) {
+    override fun machineImage(machineImage: IMachineImage) {
       cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 

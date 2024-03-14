@@ -6,7 +6,7 @@ public interface IReceiptRuleAction {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.IReceiptRuleAction,
   ) : IReceiptRuleAction {
-    public override fun bind(arg0: IReceiptRule): ReceiptRuleActionConfig =
+    override fun bind(arg0: IReceiptRule): ReceiptRuleActionConfig =
         unwrap(this).bind(arg0.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
   }
 

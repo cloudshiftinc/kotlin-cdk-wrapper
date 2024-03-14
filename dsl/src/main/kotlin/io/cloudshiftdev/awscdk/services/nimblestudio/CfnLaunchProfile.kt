@@ -88,38 +88,28 @@ public open class CfnLaunchProfile internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun ec2SubnetIds(ec2SubnetIds: List<String>) {
-    }
+    public fun ec2SubnetIds(ec2SubnetIds: List<String>)
 
-    public fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>) {
-    }
+    public fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun streamConfiguration(streamConfiguration: IResolvable) {
-    }
+    public fun streamConfiguration(streamConfiguration: IResolvable)
 
-    public fun streamConfiguration(streamConfiguration: StreamConfigurationProperty) {
-    }
+    public fun streamConfiguration(streamConfiguration: StreamConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b3698d518770f3d74705b416bc81e2434819c2c071182060cb23be9cccdc6f03")
     public
-        fun streamConfiguration(streamConfiguration: StreamConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun streamConfiguration(streamConfiguration: StreamConfigurationProperty.Builder.() -> Unit)
 
-    public fun studioComponentIds(studioComponentIds: List<String>) {
-    }
+    public fun studioComponentIds(studioComponentIds: List<String>)
 
-    public fun studioId(studioId: String) {
-    }
+    public fun studioId(studioId: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -129,45 +119,45 @@ public open class CfnLaunchProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.Builder =
         software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
+    override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
       cdkBuilder.ec2SubnetIds(ec2SubnetIds)
     }
 
-    public override fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>) {
+    override fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>) {
       cdkBuilder.launchProfileProtocolVersions(launchProfileProtocolVersions)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun streamConfiguration(streamConfiguration: IResolvable) {
+    override fun streamConfiguration(streamConfiguration: IResolvable) {
       cdkBuilder.streamConfiguration(streamConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun streamConfiguration(streamConfiguration: StreamConfigurationProperty) {
+    override fun streamConfiguration(streamConfiguration: StreamConfigurationProperty) {
       cdkBuilder.streamConfiguration(streamConfiguration.let(StreamConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b3698d518770f3d74705b416bc81e2434819c2c071182060cb23be9cccdc6f03")
-    public override
+    override
         fun streamConfiguration(streamConfiguration: StreamConfigurationProperty.Builder.() -> Unit):
         Unit = streamConfiguration(StreamConfigurationProperty(streamConfiguration))
 
-    public override fun studioComponentIds(studioComponentIds: List<String>) {
+    override fun studioComponentIds(studioComponentIds: List<String>) {
       cdkBuilder.studioComponentIds(studioComponentIds)
     }
 
-    public override fun studioId(studioId: String) {
+    override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -204,14 +194,11 @@ public open class CfnLaunchProfile internal constructor(
     public fun throughput(): Number? = unwrap(this).getThroughput()
 
     public interface Builder {
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -220,15 +207,15 @@ public open class CfnLaunchProfile internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty.builder()
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
@@ -241,11 +228,11 @@ public open class CfnLaunchProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty,
     ) : VolumeConfigurationProperty {
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun size(): Number? = unwrap(this).getSize()
+      override fun size(): Number? = unwrap(this).getSize()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
     }
 
     public companion object {
@@ -291,62 +278,46 @@ public open class CfnLaunchProfile internal constructor(
     public fun volumeConfiguration(): Any? = unwrap(this).getVolumeConfiguration()
 
     public interface Builder {
-      public fun automaticTerminationMode(automaticTerminationMode: String) {
-      }
+      public fun automaticTerminationMode(automaticTerminationMode: String)
 
-      public fun clipboardMode(clipboardMode: String) {
-      }
+      public fun clipboardMode(clipboardMode: String)
 
-      public fun ec2InstanceTypes(ec2InstanceTypes: List<String>) {
-      }
+      public fun ec2InstanceTypes(ec2InstanceTypes: List<String>)
 
-      public fun maxSessionLengthInMinutes(maxSessionLengthInMinutes: Number) {
-      }
+      public fun maxSessionLengthInMinutes(maxSessionLengthInMinutes: Number)
 
-      public fun maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes: Number) {
-      }
+      public fun maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes: Number)
 
-      public fun sessionBackup(sessionBackup: IResolvable) {
-      }
+      public fun sessionBackup(sessionBackup: IResolvable)
 
-      public fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty) {
-      }
+      public fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ddc4c021317db72cacf355d33a0c36a14aca572e2f04692d19d4565d4472214")
       public
-          fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty.Builder.() -> Unit) {
-      }
+          fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty.Builder.() -> Unit)
 
-      public fun sessionPersistenceMode(sessionPersistenceMode: String) {
-      }
+      public fun sessionPersistenceMode(sessionPersistenceMode: String)
 
-      public fun sessionStorage(sessionStorage: IResolvable) {
-      }
+      public fun sessionStorage(sessionStorage: IResolvable)
 
-      public fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty) {
-      }
+      public fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cf2fcfb08f02da9561ce6289f8628c8d85bbd7c1be0d4d3ea22f5b6921890323")
       public
-          fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty.Builder.() -> Unit) {
-      }
+          fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty.Builder.() -> Unit)
 
-      public fun streamingImageIds(streamingImageIds: List<String>) {
-      }
+      public fun streamingImageIds(streamingImageIds: List<String>)
 
-      public fun volumeConfiguration(volumeConfiguration: IResolvable) {
-      }
+      public fun volumeConfiguration(volumeConfiguration: IResolvable)
 
-      public fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty) {
-      }
+      public fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("afd8c78b11abc1309c12b60352c63def2d14cf73b2a59c3faa574426649e5b85")
       public
-          fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -355,75 +326,73 @@ public open class CfnLaunchProfile internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty.builder()
 
-      public override fun automaticTerminationMode(automaticTerminationMode: String) {
+      override fun automaticTerminationMode(automaticTerminationMode: String) {
         cdkBuilder.automaticTerminationMode(automaticTerminationMode)
       }
 
-      public override fun clipboardMode(clipboardMode: String) {
+      override fun clipboardMode(clipboardMode: String) {
         cdkBuilder.clipboardMode(clipboardMode)
       }
 
-      public override fun ec2InstanceTypes(ec2InstanceTypes: List<String>) {
+      override fun ec2InstanceTypes(ec2InstanceTypes: List<String>) {
         cdkBuilder.ec2InstanceTypes(ec2InstanceTypes)
       }
 
-      public override fun maxSessionLengthInMinutes(maxSessionLengthInMinutes: Number) {
+      override fun maxSessionLengthInMinutes(maxSessionLengthInMinutes: Number) {
         cdkBuilder.maxSessionLengthInMinutes(maxSessionLengthInMinutes)
       }
 
-      public override
-          fun maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes: Number) {
+      override fun maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes: Number) {
         cdkBuilder.maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes)
       }
 
-      public override fun sessionBackup(sessionBackup: IResolvable) {
+      override fun sessionBackup(sessionBackup: IResolvable) {
         cdkBuilder.sessionBackup(sessionBackup.let(IResolvable::unwrap))
       }
 
-      public override fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty) {
+      override fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty) {
         cdkBuilder.sessionBackup(sessionBackup.let(StreamConfigurationSessionBackupProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ddc4c021317db72cacf355d33a0c36a14aca572e2f04692d19d4565d4472214")
-      public override
+      override
           fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty.Builder.() -> Unit):
           Unit = sessionBackup(StreamConfigurationSessionBackupProperty(sessionBackup))
 
-      public override fun sessionPersistenceMode(sessionPersistenceMode: String) {
+      override fun sessionPersistenceMode(sessionPersistenceMode: String) {
         cdkBuilder.sessionPersistenceMode(sessionPersistenceMode)
       }
 
-      public override fun sessionStorage(sessionStorage: IResolvable) {
+      override fun sessionStorage(sessionStorage: IResolvable) {
         cdkBuilder.sessionStorage(sessionStorage.let(IResolvable::unwrap))
       }
 
-      public override
-          fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty) {
+      override fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty) {
         cdkBuilder.sessionStorage(sessionStorage.let(StreamConfigurationSessionStorageProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cf2fcfb08f02da9561ce6289f8628c8d85bbd7c1be0d4d3ea22f5b6921890323")
-      public override
+      override
           fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty.Builder.() -> Unit):
           Unit = sessionStorage(StreamConfigurationSessionStorageProperty(sessionStorage))
 
-      public override fun streamingImageIds(streamingImageIds: List<String>) {
+      override fun streamingImageIds(streamingImageIds: List<String>) {
         cdkBuilder.streamingImageIds(streamingImageIds)
       }
 
-      public override fun volumeConfiguration(volumeConfiguration: IResolvable) {
+      override fun volumeConfiguration(volumeConfiguration: IResolvable) {
         cdkBuilder.volumeConfiguration(volumeConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty) {
+      override fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty) {
         cdkBuilder.volumeConfiguration(volumeConfiguration.let(VolumeConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("afd8c78b11abc1309c12b60352c63def2d14cf73b2a59c3faa574426649e5b85")
-      public override
+      override
           fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty.Builder.() -> Unit):
           Unit = volumeConfiguration(VolumeConfigurationProperty(volumeConfiguration))
 
@@ -436,31 +405,29 @@ public open class CfnLaunchProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty,
     ) : StreamConfigurationProperty {
-      public override fun automaticTerminationMode(): String? =
-          unwrap(this).getAutomaticTerminationMode()
+      override fun automaticTerminationMode(): String? = unwrap(this).getAutomaticTerminationMode()
 
-      public override fun clipboardMode(): String = unwrap(this).getClipboardMode()
+      override fun clipboardMode(): String = unwrap(this).getClipboardMode()
 
-      public override fun ec2InstanceTypes(): List<String> = unwrap(this).getEc2InstanceTypes() ?:
+      override fun ec2InstanceTypes(): List<String> = unwrap(this).getEc2InstanceTypes() ?:
           emptyList()
 
-      public override fun maxSessionLengthInMinutes(): Number? =
+      override fun maxSessionLengthInMinutes(): Number? =
           unwrap(this).getMaxSessionLengthInMinutes()
 
-      public override fun maxStoppedSessionLengthInMinutes(): Number? =
+      override fun maxStoppedSessionLengthInMinutes(): Number? =
           unwrap(this).getMaxStoppedSessionLengthInMinutes()
 
-      public override fun sessionBackup(): Any? = unwrap(this).getSessionBackup()
+      override fun sessionBackup(): Any? = unwrap(this).getSessionBackup()
 
-      public override fun sessionPersistenceMode(): String? =
-          unwrap(this).getSessionPersistenceMode()
+      override fun sessionPersistenceMode(): String? = unwrap(this).getSessionPersistenceMode()
 
-      public override fun sessionStorage(): Any? = unwrap(this).getSessionStorage()
+      override fun sessionStorage(): Any? = unwrap(this).getSessionStorage()
 
-      public override fun streamingImageIds(): List<String> = unwrap(this).getStreamingImageIds() ?:
+      override fun streamingImageIds(): List<String> = unwrap(this).getStreamingImageIds() ?:
           emptyList()
 
-      public override fun volumeConfiguration(): Any? = unwrap(this).getVolumeConfiguration()
+      override fun volumeConfiguration(): Any? = unwrap(this).getVolumeConfiguration()
     }
 
     public companion object {
@@ -489,11 +456,9 @@ public open class CfnLaunchProfile internal constructor(
     public fun windows(): String? = unwrap(this).getWindows()
 
     public interface Builder {
-      public fun linux(linux: String) {
-      }
+      public fun linux(linux: String)
 
-      public fun windows(windows: String) {
-      }
+      public fun windows(windows: String)
     }
 
     private class BuilderImpl : Builder {
@@ -502,11 +467,11 @@ public open class CfnLaunchProfile internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty.builder()
 
-      public override fun linux(linux: String) {
+      override fun linux(linux: String) {
         cdkBuilder.linux(linux)
       }
 
-      public override fun windows(windows: String) {
+      override fun windows(windows: String) {
         cdkBuilder.windows(windows)
       }
 
@@ -519,9 +484,9 @@ public open class CfnLaunchProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty,
     ) : StreamingSessionStorageRootProperty {
-      public override fun linux(): String? = unwrap(this).getLinux()
+      override fun linux(): String? = unwrap(this).getLinux()
 
-      public override fun windows(): String? = unwrap(this).getWindows()
+      override fun windows(): String? = unwrap(this).getWindows()
     }
 
     public companion object {
@@ -551,19 +516,15 @@ public open class CfnLaunchProfile internal constructor(
     public fun root(): Any? = unwrap(this).getRoot()
 
     public interface Builder {
-      public fun mode(mode: List<String>) {
-      }
+      public fun mode(mode: List<String>)
 
-      public fun root(root: IResolvable) {
-      }
+      public fun root(root: IResolvable)
 
-      public fun root(root: StreamingSessionStorageRootProperty) {
-      }
+      public fun root(root: StreamingSessionStorageRootProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc0c44feeeddfb6ec40191a44a0bf186008b7d44aa76d4f9f40d5b30baab837d")
-      public fun root(root: StreamingSessionStorageRootProperty.Builder.() -> Unit) {
-      }
+      public fun root(root: StreamingSessionStorageRootProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -572,21 +533,21 @@ public open class CfnLaunchProfile internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty.builder()
 
-      public override fun mode(mode: List<String>) {
+      override fun mode(mode: List<String>) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun root(root: IResolvable) {
+      override fun root(root: IResolvable) {
         cdkBuilder.root(root.let(IResolvable::unwrap))
       }
 
-      public override fun root(root: StreamingSessionStorageRootProperty) {
+      override fun root(root: StreamingSessionStorageRootProperty) {
         cdkBuilder.root(root.let(StreamingSessionStorageRootProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bc0c44feeeddfb6ec40191a44a0bf186008b7d44aa76d4f9f40d5b30baab837d")
-      public override fun root(root: StreamingSessionStorageRootProperty.Builder.() -> Unit): Unit =
+      override fun root(root: StreamingSessionStorageRootProperty.Builder.() -> Unit): Unit =
           root(StreamingSessionStorageRootProperty(root))
 
       public fun build():
@@ -598,9 +559,9 @@ public open class CfnLaunchProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty,
     ) : StreamConfigurationSessionStorageProperty {
-      public override fun mode(): List<String> = unwrap(this).getMode() ?: emptyList()
+      override fun mode(): List<String> = unwrap(this).getMode() ?: emptyList()
 
-      public override fun root(): Any? = unwrap(this).getRoot()
+      override fun root(): Any? = unwrap(this).getRoot()
     }
 
     public companion object {
@@ -630,11 +591,9 @@ public open class CfnLaunchProfile internal constructor(
     public fun mode(): String? = unwrap(this).getMode()
 
     public interface Builder {
-      public fun maxBackupsToRetain(maxBackupsToRetain: Number) {
-      }
+      public fun maxBackupsToRetain(maxBackupsToRetain: Number)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -643,11 +602,11 @@ public open class CfnLaunchProfile internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty.builder()
 
-      public override fun maxBackupsToRetain(maxBackupsToRetain: Number) {
+      override fun maxBackupsToRetain(maxBackupsToRetain: Number) {
         cdkBuilder.maxBackupsToRetain(maxBackupsToRetain)
       }
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
@@ -660,9 +619,9 @@ public open class CfnLaunchProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty,
     ) : StreamConfigurationSessionBackupProperty {
-      public override fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
+      override fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
 
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
     }
 
     public companion object {

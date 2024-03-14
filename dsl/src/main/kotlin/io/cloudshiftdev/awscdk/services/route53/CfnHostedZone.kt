@@ -82,40 +82,29 @@ public open class CfnHostedZone internal constructor(
   }
 
   public interface Builder {
-    public fun hostedZoneConfig(hostedZoneConfig: IResolvable) {
-    }
+    public fun hostedZoneConfig(hostedZoneConfig: IResolvable)
 
-    public fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty) {
-    }
+    public fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf6d2fd2ccbcb97d5d9641544ccb5faf470a34337d7035c5365a3729b521b0c3")
-    public fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty.Builder.() -> Unit) {
-    }
+    public fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty.Builder.() -> Unit)
 
-    public fun hostedZoneTags(hostedZoneTags: List<HostedZoneTagProperty>) {
-    }
+    public fun hostedZoneTags(hostedZoneTags: List<HostedZoneTagProperty>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun queryLoggingConfig(queryLoggingConfig: IResolvable) {
-    }
+    public fun queryLoggingConfig(queryLoggingConfig: IResolvable)
 
-    public fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty) {
-    }
+    public fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3b0b16f06ec058da9c9f85788ccf6a4e7407a109dfb778d25b1f2338ce86c99")
-    public
-        fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty.Builder.() -> Unit) {
-    }
+    public fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty.Builder.() -> Unit)
 
-    public fun vpcs(vpcs: IResolvable) {
-    }
+    public fun vpcs(vpcs: IResolvable)
 
-    public fun vpcs(vpcs: List<Any>) {
-    }
+    public fun vpcs(vpcs: List<Any>)
   }
 
   private class BuilderImpl(
@@ -125,47 +114,46 @@ public open class CfnHostedZone internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnHostedZone.Builder =
         software.amazon.awscdk.services.route53.CfnHostedZone.Builder.create(scope, id)
 
-    public override fun hostedZoneConfig(hostedZoneConfig: IResolvable) {
+    override fun hostedZoneConfig(hostedZoneConfig: IResolvable) {
       cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(IResolvable::unwrap))
     }
 
-    public override fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty) {
+    override fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty) {
       cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(HostedZoneConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf6d2fd2ccbcb97d5d9641544ccb5faf470a34337d7035c5365a3729b521b0c3")
-    public override
-        fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty.Builder.() -> Unit): Unit =
-        hostedZoneConfig(HostedZoneConfigProperty(hostedZoneConfig))
+    override fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty.Builder.() -> Unit):
+        Unit = hostedZoneConfig(HostedZoneConfigProperty(hostedZoneConfig))
 
-    public override fun hostedZoneTags(hostedZoneTags: List<HostedZoneTagProperty>) {
+    override fun hostedZoneTags(hostedZoneTags: List<HostedZoneTagProperty>) {
       cdkBuilder.hostedZoneTags(hostedZoneTags.map(HostedZoneTagProperty::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun queryLoggingConfig(queryLoggingConfig: IResolvable) {
+    override fun queryLoggingConfig(queryLoggingConfig: IResolvable) {
       cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty) {
+    override fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty) {
       cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(QueryLoggingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3b0b16f06ec058da9c9f85788ccf6a4e7407a109dfb778d25b1f2338ce86c99")
-    public override
+    override
         fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty.Builder.() -> Unit):
         Unit = queryLoggingConfig(QueryLoggingConfigProperty(queryLoggingConfig))
 
-    public override fun vpcs(vpcs: IResolvable) {
+    override fun vpcs(vpcs: IResolvable) {
       cdkBuilder.vpcs(vpcs.let(IResolvable::unwrap))
     }
 
-    public override fun vpcs(vpcs: List<Any>) {
+    override fun vpcs(vpcs: List<Any>) {
       cdkBuilder.vpcs(vpcs)
     }
 
@@ -197,8 +185,7 @@ public open class CfnHostedZone internal constructor(
     public fun cloudWatchLogsLogGroupArn(): String
 
     public interface Builder {
-      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
-      }
+      public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -206,7 +193,7 @@ public open class CfnHostedZone internal constructor(
           software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty.builder()
 
-      public override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
+      override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
         cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
       }
 
@@ -219,8 +206,7 @@ public open class CfnHostedZone internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty,
     ) : QueryLoggingConfigProperty {
-      public override fun cloudWatchLogsLogGroupArn(): String =
-          unwrap(this).getCloudWatchLogsLogGroupArn()
+      override fun cloudWatchLogsLogGroupArn(): String = unwrap(this).getCloudWatchLogsLogGroupArn()
     }
 
     public companion object {
@@ -249,11 +235,9 @@ public open class CfnHostedZone internal constructor(
     public fun vpcRegion(): String
 
     public interface Builder {
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
 
-      public fun vpcRegion(vpcRegion: String) {
-      }
+      public fun vpcRegion(vpcRegion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,11 +245,11 @@ public open class CfnHostedZone internal constructor(
           software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty.builder()
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
-      public override fun vpcRegion(vpcRegion: String) {
+      override fun vpcRegion(vpcRegion: String) {
         cdkBuilder.vpcRegion(vpcRegion)
       }
 
@@ -276,9 +260,9 @@ public open class CfnHostedZone internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty,
     ) : VPCProperty {
-      public override fun vpcId(): String = unwrap(this).getVpcId()
+      override fun vpcId(): String = unwrap(this).getVpcId()
 
-      public override fun vpcRegion(): String = unwrap(this).getVpcRegion()
+      override fun vpcRegion(): String = unwrap(this).getVpcRegion()
     }
 
     public companion object {
@@ -307,11 +291,9 @@ public open class CfnHostedZone internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -319,11 +301,11 @@ public open class CfnHostedZone internal constructor(
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -336,9 +318,9 @@ public open class CfnHostedZone internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty,
     ) : HostedZoneTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -365,8 +347,7 @@ public open class CfnHostedZone internal constructor(
     public fun comment(): String? = unwrap(this).getComment()
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
     }
 
     private class BuilderImpl : Builder {
@@ -374,7 +355,7 @@ public open class CfnHostedZone internal constructor(
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty.Builder =
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
@@ -387,7 +368,7 @@ public open class CfnHostedZone internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty,
     ) : HostedZoneConfigProperty {
-      public override fun comment(): String? = unwrap(this).getComment()
+      override fun comment(): String? = unwrap(this).getComment()
     }
 
     public companion object {

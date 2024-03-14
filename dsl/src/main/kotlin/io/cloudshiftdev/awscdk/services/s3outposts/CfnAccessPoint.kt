@@ -55,25 +55,19 @@ public open class CfnAccessPoint internal constructor(
       vpcConfiguration(VpcConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun bucket(bucket: String) {
-    }
+    public fun bucket(bucket: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("976c8b71b8c4dac1e1cfbe46758d9b84a482e26bcb0925e996378f22936c0789")
-    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -83,31 +77,30 @@ public open class CfnAccessPoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3outposts.CfnAccessPoint.Builder =
         software.amazon.awscdk.services.s3outposts.CfnAccessPoint.Builder.create(scope, id)
 
-    public override fun bucket(bucket: String) {
+    override fun bucket(bucket: String) {
       cdkBuilder.bucket(bucket)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+    override fun vpcConfiguration(vpcConfiguration: IResolvable) {
       cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
+    override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
       cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("976c8b71b8c4dac1e1cfbe46758d9b84a482e26bcb0925e996378f22936c0789")
-    public override
-        fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit): Unit =
-        vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
+    override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit):
+        Unit = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
 
     public fun build(): software.amazon.awscdk.services.s3outposts.CfnAccessPoint =
         cdkBuilder.build()
@@ -138,8 +131,7 @@ public open class CfnAccessPoint internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -148,7 +140,7 @@ public open class CfnAccessPoint internal constructor(
           =
           software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty.builder()
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -161,7 +153,7 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3outposts.CfnAccessPoint.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {

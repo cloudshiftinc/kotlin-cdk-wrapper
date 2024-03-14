@@ -13,29 +13,26 @@ public interface ServiceConnectProps {
       unwrap(this).getServices()?.map(ServiceConnectService::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun logDriver(logDriver: LogDriver) {
-    }
+    public fun logDriver(logDriver: LogDriver)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun services(services: List<ServiceConnectService>) {
-    }
+    public fun services(services: List<ServiceConnectService>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ServiceConnectProps.Builder =
         software.amazon.awscdk.services.ecs.ServiceConnectProps.builder()
 
-    public override fun logDriver(logDriver: LogDriver) {
+    override fun logDriver(logDriver: LogDriver) {
       cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun services(services: List<ServiceConnectService>) {
+    override fun services(services: List<ServiceConnectService>) {
       cdkBuilder.services(services.map(ServiceConnectService::unwrap))
     }
 
@@ -45,11 +42,11 @@ public interface ServiceConnectProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ServiceConnectProps,
   ) : ServiceConnectProps {
-    public override fun logDriver(): LogDriver? = unwrap(this).getLogDriver()?.let(LogDriver::wrap)
+    override fun logDriver(): LogDriver? = unwrap(this).getLogDriver()?.let(LogDriver::wrap)
 
-    public override fun namespace(): String? = unwrap(this).getNamespace()
+    override fun namespace(): String? = unwrap(this).getNamespace()
 
-    public override fun services(): List<ServiceConnectService> =
+    override fun services(): List<ServiceConnectService> =
         unwrap(this).getServices()?.map(ServiceConnectService::wrap) ?: emptyList()
   }
 

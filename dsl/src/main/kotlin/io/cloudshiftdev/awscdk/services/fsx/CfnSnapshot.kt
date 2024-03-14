@@ -45,14 +45,11 @@ public open class CfnSnapshot internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun volumeId(volumeId: String) {
-    }
+    public fun volumeId(volumeId: String)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnSnapshot internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.fsx.CfnSnapshot.Builder =
         software.amazon.awscdk.services.fsx.CfnSnapshot.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun volumeId(volumeId: String) {
+    override fun volumeId(volumeId: String) {
       cdkBuilder.volumeId(volumeId)
     }
 

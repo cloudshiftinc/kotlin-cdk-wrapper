@@ -10,39 +10,35 @@ public interface HttpDataSourceOptions : DataSourceOptions {
       unwrap(this).getAuthorizationConfig()?.let(AwsIamConfig::wrap)
 
   public interface Builder {
-    public fun authorizationConfig(authorizationConfig: AwsIamConfig) {
-    }
+    public fun authorizationConfig(authorizationConfig: AwsIamConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17d553a9e8bba7dd7cadc025198b46f845a52abeaa352034b0f1f270306bbaf1")
-    public fun authorizationConfig(authorizationConfig: AwsIamConfig.Builder.() -> Unit) {
-    }
+    public fun authorizationConfig(authorizationConfig: AwsIamConfig.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.HttpDataSourceOptions.Builder =
         software.amazon.awscdk.services.appsync.HttpDataSourceOptions.builder()
 
-    public override fun authorizationConfig(authorizationConfig: AwsIamConfig) {
+    override fun authorizationConfig(authorizationConfig: AwsIamConfig) {
       cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("17d553a9e8bba7dd7cadc025198b46f845a52abeaa352034b0f1f270306bbaf1")
-    public override fun authorizationConfig(authorizationConfig: AwsIamConfig.Builder.() -> Unit):
-        Unit = authorizationConfig(AwsIamConfig(authorizationConfig))
+    override fun authorizationConfig(authorizationConfig: AwsIamConfig.Builder.() -> Unit): Unit =
+        authorizationConfig(AwsIamConfig(authorizationConfig))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -53,12 +49,12 @@ public interface HttpDataSourceOptions : DataSourceOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceOptions,
   ) : HttpDataSourceOptions {
-    public override fun authorizationConfig(): AwsIamConfig? =
+    override fun authorizationConfig(): AwsIamConfig? =
         unwrap(this).getAuthorizationConfig()?.let(AwsIamConfig::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

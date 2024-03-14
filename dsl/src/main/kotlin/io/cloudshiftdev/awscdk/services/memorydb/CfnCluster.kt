@@ -208,94 +208,65 @@ public open class CfnCluster internal constructor(
   }
 
   public interface Builder {
-    public fun aclName(aclName: String) {
-    }
+    public fun aclName(aclName: String)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
-    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-    }
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
-    public fun clusterEndpoint(clusterEndpoint: IResolvable) {
-    }
+    public fun clusterEndpoint(clusterEndpoint: IResolvable)
 
-    public fun clusterEndpoint(clusterEndpoint: EndpointProperty) {
-    }
+    public fun clusterEndpoint(clusterEndpoint: EndpointProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4d33203bee7e089e4fbdd81588dfcceea6441e02214de6749a98f01dd1955f8d")
-    public fun clusterEndpoint(clusterEndpoint: EndpointProperty.Builder.() -> Unit) {
-    }
+    public fun clusterEndpoint(clusterEndpoint: EndpointProperty.Builder.() -> Unit)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun dataTiering(dataTiering: String) {
-    }
+    public fun dataTiering(dataTiering: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun finalSnapshotName(finalSnapshotName: String) {
-    }
+    public fun finalSnapshotName(finalSnapshotName: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun maintenanceWindow(maintenanceWindow: String) {
-    }
+    public fun maintenanceWindow(maintenanceWindow: String)
 
-    public fun nodeType(nodeType: String) {
-    }
+    public fun nodeType(nodeType: String)
 
-    public fun numReplicasPerShard(numReplicasPerShard: Number) {
-    }
+    public fun numReplicasPerShard(numReplicasPerShard: Number)
 
-    public fun numShards(numShards: Number) {
-    }
+    public fun numShards(numShards: Number)
 
-    public fun parameterGroupName(parameterGroupName: String) {
-    }
+    public fun parameterGroupName(parameterGroupName: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun snapshotArns(snapshotArns: List<String>) {
-    }
+    public fun snapshotArns(snapshotArns: List<String>)
 
-    public fun snapshotName(snapshotName: String) {
-    }
+    public fun snapshotName(snapshotName: String)
 
-    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
-    }
+    public fun snapshotRetentionLimit(snapshotRetentionLimit: Number)
 
-    public fun snapshotWindow(snapshotWindow: String) {
-    }
+    public fun snapshotWindow(snapshotWindow: String)
 
-    public fun snsTopicArn(snsTopicArn: String) {
-    }
+    public fun snsTopicArn(snsTopicArn: String)
 
-    public fun snsTopicStatus(snsTopicStatus: String) {
-    }
+    public fun snsTopicStatus(snsTopicStatus: String)
 
-    public fun subnetGroupName(subnetGroupName: String) {
-    }
+    public fun subnetGroupName(subnetGroupName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tlsEnabled(tlsEnabled: Boolean) {
-    }
+    public fun tlsEnabled(tlsEnabled: Boolean)
 
-    public fun tlsEnabled(tlsEnabled: IResolvable) {
-    }
+    public fun tlsEnabled(tlsEnabled: IResolvable)
   }
 
   private class BuilderImpl(
@@ -305,120 +276,120 @@ public open class CfnCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.memorydb.CfnCluster.Builder =
         software.amazon.awscdk.services.memorydb.CfnCluster.Builder.create(scope, id)
 
-    public override fun aclName(aclName: String) {
+    override fun aclName(aclName: String) {
       cdkBuilder.aclName(aclName)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
-    public override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
     }
 
-    public override fun clusterEndpoint(clusterEndpoint: IResolvable) {
+    override fun clusterEndpoint(clusterEndpoint: IResolvable) {
       cdkBuilder.clusterEndpoint(clusterEndpoint.let(IResolvable::unwrap))
     }
 
-    public override fun clusterEndpoint(clusterEndpoint: EndpointProperty) {
+    override fun clusterEndpoint(clusterEndpoint: EndpointProperty) {
       cdkBuilder.clusterEndpoint(clusterEndpoint.let(EndpointProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4d33203bee7e089e4fbdd81588dfcceea6441e02214de6749a98f01dd1955f8d")
-    public override fun clusterEndpoint(clusterEndpoint: EndpointProperty.Builder.() -> Unit): Unit
-        = clusterEndpoint(EndpointProperty(clusterEndpoint))
+    override fun clusterEndpoint(clusterEndpoint: EndpointProperty.Builder.() -> Unit): Unit =
+        clusterEndpoint(EndpointProperty(clusterEndpoint))
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun dataTiering(dataTiering: String) {
+    override fun dataTiering(dataTiering: String) {
       cdkBuilder.dataTiering(dataTiering)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun finalSnapshotName(finalSnapshotName: String) {
+    override fun finalSnapshotName(finalSnapshotName: String) {
       cdkBuilder.finalSnapshotName(finalSnapshotName)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun maintenanceWindow(maintenanceWindow: String) {
+    override fun maintenanceWindow(maintenanceWindow: String) {
       cdkBuilder.maintenanceWindow(maintenanceWindow)
     }
 
-    public override fun nodeType(nodeType: String) {
+    override fun nodeType(nodeType: String) {
       cdkBuilder.nodeType(nodeType)
     }
 
-    public override fun numReplicasPerShard(numReplicasPerShard: Number) {
+    override fun numReplicasPerShard(numReplicasPerShard: Number) {
       cdkBuilder.numReplicasPerShard(numReplicasPerShard)
     }
 
-    public override fun numShards(numShards: Number) {
+    override fun numShards(numShards: Number) {
       cdkBuilder.numShards(numShards)
     }
 
-    public override fun parameterGroupName(parameterGroupName: String) {
+    override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun snapshotArns(snapshotArns: List<String>) {
+    override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
 
-    public override fun snapshotName(snapshotName: String) {
+    override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)
     }
 
-    public override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
+    override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
       cdkBuilder.snapshotRetentionLimit(snapshotRetentionLimit)
     }
 
-    public override fun snapshotWindow(snapshotWindow: String) {
+    override fun snapshotWindow(snapshotWindow: String) {
       cdkBuilder.snapshotWindow(snapshotWindow)
     }
 
-    public override fun snsTopicArn(snsTopicArn: String) {
+    override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
 
-    public override fun snsTopicStatus(snsTopicStatus: String) {
+    override fun snsTopicStatus(snsTopicStatus: String) {
       cdkBuilder.snsTopicStatus(snsTopicStatus)
     }
 
-    public override fun subnetGroupName(subnetGroupName: String) {
+    override fun subnetGroupName(subnetGroupName: String) {
       cdkBuilder.subnetGroupName(subnetGroupName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tlsEnabled(tlsEnabled: Boolean) {
+    override fun tlsEnabled(tlsEnabled: Boolean) {
       cdkBuilder.tlsEnabled(tlsEnabled)
     }
 
-    public override fun tlsEnabled(tlsEnabled: IResolvable) {
+    override fun tlsEnabled(tlsEnabled: IResolvable) {
       cdkBuilder.tlsEnabled(tlsEnabled.let(IResolvable::unwrap))
     }
 
@@ -452,11 +423,9 @@ public open class CfnCluster internal constructor(
     public fun port(): Number? = unwrap(this).getPort()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -464,11 +433,11 @@ public open class CfnCluster internal constructor(
           software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty.Builder =
           software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
@@ -479,9 +448,9 @@ public open class CfnCluster internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.memorydb.CfnCluster.EndpointProperty,
     ) : EndpointProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
     }
 
     public companion object {

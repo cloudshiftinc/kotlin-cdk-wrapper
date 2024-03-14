@@ -133,63 +133,45 @@ public open class CfnFunctionConfiguration internal constructor(
       syncConfig(SyncConfigProperty(`value`))
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun code(code: String) {
-    }
+    public fun code(code: String)
 
-    public fun codeS3Location(codeS3Location: String) {
-    }
+    public fun codeS3Location(codeS3Location: String)
 
-    public fun dataSourceName(dataSourceName: String) {
-    }
+    public fun dataSourceName(dataSourceName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun functionVersion(functionVersion: String) {
-    }
+    public fun functionVersion(functionVersion: String)
 
-    public fun maxBatchSize(maxBatchSize: Number) {
-    }
+    public fun maxBatchSize(maxBatchSize: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun requestMappingTemplate(requestMappingTemplate: String) {
-    }
+    public fun requestMappingTemplate(requestMappingTemplate: String)
 
-    public fun requestMappingTemplateS3Location(requestMappingTemplateS3Location: String) {
-    }
+    public fun requestMappingTemplateS3Location(requestMappingTemplateS3Location: String)
 
-    public fun responseMappingTemplate(responseMappingTemplate: String) {
-    }
+    public fun responseMappingTemplate(responseMappingTemplate: String)
 
-    public fun responseMappingTemplateS3Location(responseMappingTemplateS3Location: String) {
-    }
+    public fun responseMappingTemplateS3Location(responseMappingTemplateS3Location: String)
 
-    public fun runtime(runtime: IResolvable) {
-    }
+    public fun runtime(runtime: IResolvable)
 
-    public fun runtime(runtime: AppSyncRuntimeProperty) {
-    }
+    public fun runtime(runtime: AppSyncRuntimeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aee9cb0c2eac2e09640b5ced407af5454fe685886a2105445fdb2d8de57a1d82")
-    public fun runtime(runtime: AppSyncRuntimeProperty.Builder.() -> Unit) {
-    }
+    public fun runtime(runtime: AppSyncRuntimeProperty.Builder.() -> Unit)
 
-    public fun syncConfig(syncConfig: IResolvable) {
-    }
+    public fun syncConfig(syncConfig: IResolvable)
 
-    public fun syncConfig(syncConfig: SyncConfigProperty) {
-    }
+    public fun syncConfig(syncConfig: SyncConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3450b107b4f5a5b21242e26c0a0af06c4f469169b4ef550e40f90630e7386c4d")
-    public fun syncConfig(syncConfig: SyncConfigProperty.Builder.() -> Unit) {
-    }
+    public fun syncConfig(syncConfig: SyncConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -199,79 +181,78 @@ public open class CfnFunctionConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.Builder
         = software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun code(code: String) {
+    override fun code(code: String) {
       cdkBuilder.code(code)
     }
 
-    public override fun codeS3Location(codeS3Location: String) {
+    override fun codeS3Location(codeS3Location: String) {
       cdkBuilder.codeS3Location(codeS3Location)
     }
 
-    public override fun dataSourceName(dataSourceName: String) {
+    override fun dataSourceName(dataSourceName: String) {
       cdkBuilder.dataSourceName(dataSourceName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun functionVersion(functionVersion: String) {
+    override fun functionVersion(functionVersion: String) {
       cdkBuilder.functionVersion(functionVersion)
     }
 
-    public override fun maxBatchSize(maxBatchSize: Number) {
+    override fun maxBatchSize(maxBatchSize: Number) {
       cdkBuilder.maxBatchSize(maxBatchSize)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun requestMappingTemplate(requestMappingTemplate: String) {
+    override fun requestMappingTemplate(requestMappingTemplate: String) {
       cdkBuilder.requestMappingTemplate(requestMappingTemplate)
     }
 
-    public override fun requestMappingTemplateS3Location(requestMappingTemplateS3Location: String) {
+    override fun requestMappingTemplateS3Location(requestMappingTemplateS3Location: String) {
       cdkBuilder.requestMappingTemplateS3Location(requestMappingTemplateS3Location)
     }
 
-    public override fun responseMappingTemplate(responseMappingTemplate: String) {
+    override fun responseMappingTemplate(responseMappingTemplate: String) {
       cdkBuilder.responseMappingTemplate(responseMappingTemplate)
     }
 
-    public override
-        fun responseMappingTemplateS3Location(responseMappingTemplateS3Location: String) {
+    override fun responseMappingTemplateS3Location(responseMappingTemplateS3Location: String) {
       cdkBuilder.responseMappingTemplateS3Location(responseMappingTemplateS3Location)
     }
 
-    public override fun runtime(runtime: IResolvable) {
+    override fun runtime(runtime: IResolvable) {
       cdkBuilder.runtime(runtime.let(IResolvable::unwrap))
     }
 
-    public override fun runtime(runtime: AppSyncRuntimeProperty) {
+    override fun runtime(runtime: AppSyncRuntimeProperty) {
       cdkBuilder.runtime(runtime.let(AppSyncRuntimeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aee9cb0c2eac2e09640b5ced407af5454fe685886a2105445fdb2d8de57a1d82")
-    public override fun runtime(runtime: AppSyncRuntimeProperty.Builder.() -> Unit): Unit =
+    override fun runtime(runtime: AppSyncRuntimeProperty.Builder.() -> Unit): Unit =
         runtime(AppSyncRuntimeProperty(runtime))
 
-    public override fun syncConfig(syncConfig: IResolvable) {
+    override fun syncConfig(syncConfig: IResolvable) {
       cdkBuilder.syncConfig(syncConfig.let(IResolvable::unwrap))
     }
 
-    public override fun syncConfig(syncConfig: SyncConfigProperty) {
+    override fun syncConfig(syncConfig: SyncConfigProperty) {
       cdkBuilder.syncConfig(syncConfig.let(SyncConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3450b107b4f5a5b21242e26c0a0af06c4f469169b4ef550e40f90630e7386c4d")
-    public override fun syncConfig(syncConfig: SyncConfigProperty.Builder.() -> Unit): Unit =
+    override fun syncConfig(syncConfig: SyncConfigProperty.Builder.() -> Unit): Unit =
         syncConfig(SyncConfigProperty(syncConfig))
 
     public fun build(): software.amazon.awscdk.services.appsync.CfnFunctionConfiguration =
@@ -307,24 +288,19 @@ public open class CfnFunctionConfiguration internal constructor(
     public fun lambdaConflictHandlerConfig(): Any? = unwrap(this).getLambdaConflictHandlerConfig()
 
     public interface Builder {
-      public fun conflictDetection(conflictDetection: String) {
-      }
+      public fun conflictDetection(conflictDetection: String)
 
-      public fun conflictHandler(conflictHandler: String) {
-      }
+      public fun conflictHandler(conflictHandler: String)
 
-      public fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
-      }
+      public fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable)
 
       public
-          fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty) {
-      }
+          fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47ad2842ecf8112948437414f67c14c27c4b47f5312b81cf98b245cd5a28ebc2")
       public
-          fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty.Builder.() -> Unit) {
-      }
+          fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -333,26 +309,26 @@ public open class CfnFunctionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty.builder()
 
-      public override fun conflictDetection(conflictDetection: String) {
+      override fun conflictDetection(conflictDetection: String) {
         cdkBuilder.conflictDetection(conflictDetection)
       }
 
-      public override fun conflictHandler(conflictHandler: String) {
+      override fun conflictHandler(conflictHandler: String) {
         cdkBuilder.conflictHandler(conflictHandler)
       }
 
-      public override fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
+      override fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
         cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty) {
         cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(LambdaConflictHandlerConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47ad2842ecf8112948437414f67c14c27c4b47f5312b81cf98b245cd5a28ebc2")
-      public override
+      override
           fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty.Builder.() -> Unit):
           Unit =
           lambdaConflictHandlerConfig(LambdaConflictHandlerConfigProperty(lambdaConflictHandlerConfig))
@@ -366,11 +342,11 @@ public open class CfnFunctionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty,
     ) : SyncConfigProperty {
-      public override fun conflictDetection(): String = unwrap(this).getConflictDetection()
+      override fun conflictDetection(): String = unwrap(this).getConflictDetection()
 
-      public override fun conflictHandler(): String? = unwrap(this).getConflictHandler()
+      override fun conflictHandler(): String? = unwrap(this).getConflictHandler()
 
-      public override fun lambdaConflictHandlerConfig(): Any? =
+      override fun lambdaConflictHandlerConfig(): Any? =
           unwrap(this).getLambdaConflictHandlerConfig()
     }
 
@@ -398,8 +374,7 @@ public open class CfnFunctionConfiguration internal constructor(
     public fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
 
     public interface Builder {
-      public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
-      }
+      public fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -408,7 +383,7 @@ public open class CfnFunctionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.builder()
 
-      public override fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
+      override fun lambdaConflictHandlerArn(lambdaConflictHandlerArn: String) {
         cdkBuilder.lambdaConflictHandlerArn(lambdaConflictHandlerArn)
       }
 
@@ -421,8 +396,7 @@ public open class CfnFunctionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty,
     ) : LambdaConflictHandlerConfigProperty {
-      public override fun lambdaConflictHandlerArn(): String? =
-          unwrap(this).getLambdaConflictHandlerArn()
+      override fun lambdaConflictHandlerArn(): String? = unwrap(this).getLambdaConflictHandlerArn()
     }
 
     public companion object {
@@ -452,11 +426,9 @@ public open class CfnFunctionConfiguration internal constructor(
     public fun runtimeVersion(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun runtimeVersion(runtimeVersion: String) {
-      }
+      public fun runtimeVersion(runtimeVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -465,11 +437,11 @@ public open class CfnFunctionConfiguration internal constructor(
           =
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun runtimeVersion(runtimeVersion: String) {
+      override fun runtimeVersion(runtimeVersion: String) {
         cdkBuilder.runtimeVersion(runtimeVersion)
       }
 
@@ -482,9 +454,9 @@ public open class CfnFunctionConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty,
     ) : AppSyncRuntimeProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
+      override fun runtimeVersion(): String = unwrap(this).getRuntimeVersion()
     }
 
     public companion object {

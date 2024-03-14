@@ -11,11 +11,9 @@ public open class BitBucketSourceCredentials internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun password(password: SecretValue) {
-    }
+    public fun password(password: SecretValue)
 
-    public fun username(username: SecretValue) {
-    }
+    public fun username(username: SecretValue)
   }
 
   private class BuilderImpl(
@@ -27,11 +25,11 @@ public open class BitBucketSourceCredentials internal constructor(
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials.Builder.create(scope,
         id)
 
-    public override fun password(password: SecretValue) {
+    override fun password(password: SecretValue) {
       cdkBuilder.password(password.let(SecretValue::unwrap))
     }
 
-    public override fun username(username: SecretValue) {
+    override fun username(username: SecretValue) {
       cdkBuilder.username(username.let(SecretValue::unwrap))
     }
 

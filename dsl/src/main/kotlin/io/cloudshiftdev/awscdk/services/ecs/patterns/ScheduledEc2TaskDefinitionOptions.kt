@@ -7,8 +7,7 @@ public interface ScheduledEc2TaskDefinitionOptions {
   public fun taskDefinition(): Ec2TaskDefinition
 
   public interface Builder {
-    public fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: Ec2TaskDefinition)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface ScheduledEc2TaskDefinitionOptions {
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions.Builder =
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions.builder()
 
-    public override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
+    override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))
     }
 
@@ -29,7 +28,7 @@ public interface ScheduledEc2TaskDefinitionOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions,
   ) : ScheduledEc2TaskDefinitionOptions {
-    public override fun taskDefinition(): Ec2TaskDefinition =
+    override fun taskDefinition(): Ec2TaskDefinition =
         unwrap(this).getTaskDefinition().let(Ec2TaskDefinition::wrap)
   }
 

@@ -8,14 +8,11 @@ public interface AddApplicationActionProps : AddRuleProps {
   public fun action(): ListenerAction
 
   public interface Builder {
-    public fun action(action: ListenerAction) {
-    }
+    public fun action(action: ListenerAction)
 
-    public fun conditions(conditions: List<ListenerCondition>) {
-    }
+    public fun conditions(conditions: List<ListenerCondition>)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -23,15 +20,15 @@ public interface AddApplicationActionProps : AddRuleProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActionProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActionProps.builder()
 
-    public override fun action(action: ListenerAction) {
+    override fun action(action: ListenerAction) {
       cdkBuilder.action(action.let(ListenerAction::unwrap))
     }
 
-    public override fun conditions(conditions: List<ListenerCondition>) {
+    override fun conditions(conditions: List<ListenerCondition>) {
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
@@ -44,13 +41,12 @@ public interface AddApplicationActionProps : AddRuleProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActionProps,
   ) : AddApplicationActionProps {
-    public override fun action(): ListenerAction =
-        unwrap(this).getAction().let(ListenerAction::wrap)
+    override fun action(): ListenerAction = unwrap(this).getAction().let(ListenerAction::wrap)
 
-    public override fun conditions(): List<ListenerCondition> =
+    override fun conditions(): List<ListenerCondition> =
         unwrap(this).getConditions()?.map(ListenerCondition::wrap) ?: emptyList()
 
-    public override fun priority(): Number? = unwrap(this).getPriority()
+    override fun priority(): Number? = unwrap(this).getPriority()
   }
 
   public companion object {

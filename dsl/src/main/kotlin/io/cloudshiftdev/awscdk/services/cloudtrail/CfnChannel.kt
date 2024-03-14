@@ -55,20 +55,15 @@ public open class CfnChannel internal constructor(
   }
 
   public interface Builder {
-    public fun destinations(destinations: IResolvable) {
-    }
+    public fun destinations(destinations: IResolvable)
 
-    public fun destinations(destinations: List<Any>) {
-    }
+    public fun destinations(destinations: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun source(source: String) {
-    }
+    public fun source(source: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,23 +73,23 @@ public open class CfnChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudtrail.CfnChannel.Builder =
         software.amazon.awscdk.services.cloudtrail.CfnChannel.Builder.create(scope, id)
 
-    public override fun destinations(destinations: IResolvable) {
+    override fun destinations(destinations: IResolvable) {
       cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
     }
 
-    public override fun destinations(destinations: List<Any>) {
+    override fun destinations(destinations: List<Any>) {
       cdkBuilder.destinations(destinations)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun source(source: String) {
+    override fun source(source: String) {
       cdkBuilder.source(source)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -128,11 +123,9 @@ public open class CfnChannel internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -140,11 +133,11 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty.Builder =
           software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty.builder()
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -156,9 +149,9 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudtrail.CfnChannel.DestinationProperty,
     ) : DestinationProperty {
-      public override fun location(): String = unwrap(this).getLocation()
+      override fun location(): String = unwrap(this).getLocation()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

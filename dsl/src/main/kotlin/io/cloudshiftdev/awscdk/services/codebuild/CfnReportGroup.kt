@@ -75,31 +75,23 @@ public open class CfnReportGroup internal constructor(
   }
 
   public interface Builder {
-    public fun deleteReports(deleteReports: Boolean) {
-    }
+    public fun deleteReports(deleteReports: Boolean)
 
-    public fun deleteReports(deleteReports: IResolvable) {
-    }
+    public fun deleteReports(deleteReports: IResolvable)
 
-    public fun exportConfig(exportConfig: IResolvable) {
-    }
+    public fun exportConfig(exportConfig: IResolvable)
 
-    public fun exportConfig(exportConfig: ReportExportConfigProperty) {
-    }
+    public fun exportConfig(exportConfig: ReportExportConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cfa6125674745828975a38ffec20be585fad7e9227e52c899bf030b971cac495")
-    public fun exportConfig(exportConfig: ReportExportConfigProperty.Builder.() -> Unit) {
-    }
+    public fun exportConfig(exportConfig: ReportExportConfigProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -109,36 +101,36 @@ public open class CfnReportGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.CfnReportGroup.Builder =
         software.amazon.awscdk.services.codebuild.CfnReportGroup.Builder.create(scope, id)
 
-    public override fun deleteReports(deleteReports: Boolean) {
+    override fun deleteReports(deleteReports: Boolean) {
       cdkBuilder.deleteReports(deleteReports)
     }
 
-    public override fun deleteReports(deleteReports: IResolvable) {
+    override fun deleteReports(deleteReports: IResolvable) {
       cdkBuilder.deleteReports(deleteReports.let(IResolvable::unwrap))
     }
 
-    public override fun exportConfig(exportConfig: IResolvable) {
+    override fun exportConfig(exportConfig: IResolvable) {
       cdkBuilder.exportConfig(exportConfig.let(IResolvable::unwrap))
     }
 
-    public override fun exportConfig(exportConfig: ReportExportConfigProperty) {
+    override fun exportConfig(exportConfig: ReportExportConfigProperty) {
       cdkBuilder.exportConfig(exportConfig.let(ReportExportConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cfa6125674745828975a38ffec20be585fad7e9227e52c899bf030b971cac495")
-    public override fun exportConfig(exportConfig: ReportExportConfigProperty.Builder.() -> Unit):
-        Unit = exportConfig(ReportExportConfigProperty(exportConfig))
+    override fun exportConfig(exportConfig: ReportExportConfigProperty.Builder.() -> Unit): Unit =
+        exportConfig(ReportExportConfigProperty(exportConfig))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -173,19 +165,15 @@ public open class CfnReportGroup internal constructor(
     public fun s3Destination(): Any? = unwrap(this).getS3Destination()
 
     public interface Builder {
-      public fun exportConfigType(exportConfigType: String) {
-      }
+      public fun exportConfigType(exportConfigType: String)
 
-      public fun s3Destination(s3Destination: IResolvable) {
-      }
+      public fun s3Destination(s3Destination: IResolvable)
 
-      public fun s3Destination(s3Destination: S3ReportExportConfigProperty) {
-      }
+      public fun s3Destination(s3Destination: S3ReportExportConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("29c4a28a99304714e987aae310598437035e5dbf4ed325d630307bf19085cf04")
-      public fun s3Destination(s3Destination: S3ReportExportConfigProperty.Builder.() -> Unit) {
-      }
+      public fun s3Destination(s3Destination: S3ReportExportConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -194,23 +182,22 @@ public open class CfnReportGroup internal constructor(
           =
           software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty.builder()
 
-      public override fun exportConfigType(exportConfigType: String) {
+      override fun exportConfigType(exportConfigType: String) {
         cdkBuilder.exportConfigType(exportConfigType)
       }
 
-      public override fun s3Destination(s3Destination: IResolvable) {
+      override fun s3Destination(s3Destination: IResolvable) {
         cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
       }
 
-      public override fun s3Destination(s3Destination: S3ReportExportConfigProperty) {
+      override fun s3Destination(s3Destination: S3ReportExportConfigProperty) {
         cdkBuilder.s3Destination(s3Destination.let(S3ReportExportConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("29c4a28a99304714e987aae310598437035e5dbf4ed325d630307bf19085cf04")
-      public override
-          fun s3Destination(s3Destination: S3ReportExportConfigProperty.Builder.() -> Unit): Unit =
-          s3Destination(S3ReportExportConfigProperty(s3Destination))
+      override fun s3Destination(s3Destination: S3ReportExportConfigProperty.Builder.() -> Unit):
+          Unit = s3Destination(S3ReportExportConfigProperty(s3Destination))
 
       public fun build():
           software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty =
@@ -221,9 +208,9 @@ public open class CfnReportGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty,
     ) : ReportExportConfigProperty {
-      public override fun exportConfigType(): String = unwrap(this).getExportConfigType()
+      override fun exportConfigType(): String = unwrap(this).getExportConfigType()
 
-      public override fun s3Destination(): Any? = unwrap(this).getS3Destination()
+      override fun s3Destination(): Any? = unwrap(this).getS3Destination()
     }
 
     public companion object {
@@ -260,26 +247,19 @@ public open class CfnReportGroup internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun bucketOwner(bucketOwner: String) {
-      }
+      public fun bucketOwner(bucketOwner: String)
 
-      public fun encryptionDisabled(encryptionDisabled: Boolean) {
-      }
+      public fun encryptionDisabled(encryptionDisabled: Boolean)
 
-      public fun encryptionDisabled(encryptionDisabled: IResolvable) {
-      }
+      public fun encryptionDisabled(encryptionDisabled: IResolvable)
 
-      public fun encryptionKey(encryptionKey: String) {
-      }
+      public fun encryptionKey(encryptionKey: String)
 
-      public fun packaging(packaging: String) {
-      }
+      public fun packaging(packaging: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -288,31 +268,31 @@ public open class CfnReportGroup internal constructor(
           =
           software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun bucketOwner(bucketOwner: String) {
+      override fun bucketOwner(bucketOwner: String) {
         cdkBuilder.bucketOwner(bucketOwner)
       }
 
-      public override fun encryptionDisabled(encryptionDisabled: Boolean) {
+      override fun encryptionDisabled(encryptionDisabled: Boolean) {
         cdkBuilder.encryptionDisabled(encryptionDisabled)
       }
 
-      public override fun encryptionDisabled(encryptionDisabled: IResolvable) {
+      override fun encryptionDisabled(encryptionDisabled: IResolvable) {
         cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable::unwrap))
       }
 
-      public override fun encryptionKey(encryptionKey: String) {
+      override fun encryptionKey(encryptionKey: String) {
         cdkBuilder.encryptionKey(encryptionKey)
       }
 
-      public override fun packaging(packaging: String) {
+      override fun packaging(packaging: String) {
         cdkBuilder.packaging(packaging)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -325,17 +305,17 @@ public open class CfnReportGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty,
     ) : S3ReportExportConfigProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
+      override fun bucketOwner(): String? = unwrap(this).getBucketOwner()
 
-      public override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
+      override fun encryptionDisabled(): Any? = unwrap(this).getEncryptionDisabled()
 
-      public override fun encryptionKey(): String? = unwrap(this).getEncryptionKey()
+      override fun encryptionKey(): String? = unwrap(this).getEncryptionKey()
 
-      public override fun packaging(): String? = unwrap(this).getPackaging()
+      override fun packaging(): String? = unwrap(this).getPackaging()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {

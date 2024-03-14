@@ -54,20 +54,15 @@ public open class CfnWorkflow internal constructor(
   }
 
   public interface Builder {
-    public fun defaultRunProperties(defaultRunProperties: Any) {
-    }
+    public fun defaultRunProperties(defaultRunProperties: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun maxConcurrentRuns(maxConcurrentRuns: Number) {
-    }
+    public fun maxConcurrentRuns(maxConcurrentRuns: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -77,23 +72,23 @@ public open class CfnWorkflow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnWorkflow.Builder =
         software.amazon.awscdk.services.glue.CfnWorkflow.Builder.create(scope, id)
 
-    public override fun defaultRunProperties(defaultRunProperties: Any) {
+    override fun defaultRunProperties(defaultRunProperties: Any) {
       cdkBuilder.defaultRunProperties(defaultRunProperties)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
+    override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
       cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 

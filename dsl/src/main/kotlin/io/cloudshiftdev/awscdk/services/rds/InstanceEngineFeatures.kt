@@ -9,22 +9,20 @@ public interface InstanceEngineFeatures {
   public fun s3Import(): String? = unwrap(this).getS3Import()
 
   public interface Builder {
-    public fun s3Export(s3Export: String) {
-    }
+    public fun s3Export(s3Export: String)
 
-    public fun s3Import(s3Import: String) {
-    }
+    public fun s3Import(s3Import: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.InstanceEngineFeatures.Builder =
         software.amazon.awscdk.services.rds.InstanceEngineFeatures.builder()
 
-    public override fun s3Export(s3Export: String) {
+    override fun s3Export(s3Export: String) {
       cdkBuilder.s3Export(s3Export)
     }
 
-    public override fun s3Import(s3Import: String) {
+    override fun s3Import(s3Import: String) {
       cdkBuilder.s3Import(s3Import)
     }
 
@@ -35,9 +33,9 @@ public interface InstanceEngineFeatures {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.InstanceEngineFeatures,
   ) : InstanceEngineFeatures {
-    public override fun s3Export(): String? = unwrap(this).getS3Export()
+    override fun s3Export(): String? = unwrap(this).getS3Export()
 
-    public override fun s3Import(): String? = unwrap(this).getS3Import()
+    override fun s3Import(): String? = unwrap(this).getS3Import()
   }
 
   public companion object {

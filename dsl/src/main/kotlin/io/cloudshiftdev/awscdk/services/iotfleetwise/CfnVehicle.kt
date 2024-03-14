@@ -72,26 +72,19 @@ public open class CfnVehicle internal constructor(
   }
 
   public interface Builder {
-    public fun associationBehavior(associationBehavior: String) {
-    }
+    public fun associationBehavior(associationBehavior: String)
 
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: Map<String, String>) {
-    }
+    public fun attributes(attributes: Map<String, String>)
 
-    public fun decoderManifestArn(decoderManifestArn: String) {
-    }
+    public fun decoderManifestArn(decoderManifestArn: String)
 
-    public fun modelManifestArn(modelManifestArn: String) {
-    }
+    public fun modelManifestArn(modelManifestArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -101,31 +94,31 @@ public open class CfnVehicle internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotfleetwise.CfnVehicle.Builder =
         software.amazon.awscdk.services.iotfleetwise.CfnVehicle.Builder.create(scope, id)
 
-    public override fun associationBehavior(associationBehavior: String) {
+    override fun associationBehavior(associationBehavior: String) {
       cdkBuilder.associationBehavior(associationBehavior)
     }
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: Map<String, String>) {
+    override fun attributes(attributes: Map<String, String>) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun decoderManifestArn(decoderManifestArn: String) {
+    override fun decoderManifestArn(decoderManifestArn: String) {
       cdkBuilder.decoderManifestArn(decoderManifestArn)
     }
 
-    public override fun modelManifestArn(modelManifestArn: String) {
+    override fun modelManifestArn(modelManifestArn: String) {
       cdkBuilder.modelManifestArn(modelManifestArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

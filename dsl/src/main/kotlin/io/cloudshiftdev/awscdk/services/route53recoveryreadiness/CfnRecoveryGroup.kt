@@ -43,14 +43,11 @@ public open class CfnRecoveryGroup internal constructor(
   }
 
   public interface Builder {
-    public fun cells(cells: List<String>) {
-    }
+    public fun cells(cells: List<String>)
 
-    public fun recoveryGroupName(recoveryGroupName: String) {
-    }
+    public fun recoveryGroupName(recoveryGroupName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -62,15 +59,15 @@ public open class CfnRecoveryGroup internal constructor(
         software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup.Builder.create(scope,
         id)
 
-    public override fun cells(cells: List<String>) {
+    override fun cells(cells: List<String>) {
       cdkBuilder.cells(cells)
     }
 
-    public override fun recoveryGroupName(recoveryGroupName: String) {
+    override fun recoveryGroupName(recoveryGroupName: String) {
       cdkBuilder.recoveryGroupName(recoveryGroupName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

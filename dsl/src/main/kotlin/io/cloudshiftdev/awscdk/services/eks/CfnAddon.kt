@@ -80,32 +80,23 @@ public open class CfnAddon internal constructor(
   }
 
   public interface Builder {
-    public fun addonName(addonName: String) {
-    }
+    public fun addonName(addonName: String)
 
-    public fun addonVersion(addonVersion: String) {
-    }
+    public fun addonVersion(addonVersion: String)
 
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun configurationValues(configurationValues: String) {
-    }
+    public fun configurationValues(configurationValues: String)
 
-    public fun preserveOnDelete(preserveOnDelete: Boolean) {
-    }
+    public fun preserveOnDelete(preserveOnDelete: Boolean)
 
-    public fun preserveOnDelete(preserveOnDelete: IResolvable) {
-    }
+    public fun preserveOnDelete(preserveOnDelete: IResolvable)
 
-    public fun resolveConflicts(resolveConflicts: String) {
-    }
+    public fun resolveConflicts(resolveConflicts: String)
 
-    public fun serviceAccountRoleArn(serviceAccountRoleArn: String) {
-    }
+    public fun serviceAccountRoleArn(serviceAccountRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -115,39 +106,39 @@ public open class CfnAddon internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnAddon.Builder =
         software.amazon.awscdk.services.eks.CfnAddon.Builder.create(scope, id)
 
-    public override fun addonName(addonName: String) {
+    override fun addonName(addonName: String) {
       cdkBuilder.addonName(addonName)
     }
 
-    public override fun addonVersion(addonVersion: String) {
+    override fun addonVersion(addonVersion: String) {
       cdkBuilder.addonVersion(addonVersion)
     }
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun configurationValues(configurationValues: String) {
+    override fun configurationValues(configurationValues: String) {
       cdkBuilder.configurationValues(configurationValues)
     }
 
-    public override fun preserveOnDelete(preserveOnDelete: Boolean) {
+    override fun preserveOnDelete(preserveOnDelete: Boolean) {
       cdkBuilder.preserveOnDelete(preserveOnDelete)
     }
 
-    public override fun preserveOnDelete(preserveOnDelete: IResolvable) {
+    override fun preserveOnDelete(preserveOnDelete: IResolvable) {
       cdkBuilder.preserveOnDelete(preserveOnDelete.let(IResolvable::unwrap))
     }
 
-    public override fun resolveConflicts(resolveConflicts: String) {
+    override fun resolveConflicts(resolveConflicts: String) {
       cdkBuilder.resolveConflicts(resolveConflicts)
     }
 
-    public override fun serviceAccountRoleArn(serviceAccountRoleArn: String) {
+    override fun serviceAccountRoleArn(serviceAccountRoleArn: String) {
       cdkBuilder.serviceAccountRoleArn(serviceAccountRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

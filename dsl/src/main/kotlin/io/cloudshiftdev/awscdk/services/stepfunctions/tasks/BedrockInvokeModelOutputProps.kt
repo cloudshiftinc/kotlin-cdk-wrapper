@@ -9,13 +9,11 @@ public interface BedrockInvokeModelOutputProps {
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
 
   public interface Builder {
-    public fun s3Location(s3Location: Location) {
-    }
+    public fun s3Location(s3Location: Location)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e5257a3476a510565c590204e38431da4e61b6b37c4c561db431ef52d6de54db")
-    public fun s3Location(s3Location: Location.Builder.() -> Unit) {
-    }
+    public fun s3Location(s3Location: Location.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -23,13 +21,13 @@ public interface BedrockInvokeModelOutputProps {
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps.builder()
 
-    public override fun s3Location(s3Location: Location) {
+    override fun s3Location(s3Location: Location) {
       cdkBuilder.s3Location(s3Location.let(Location::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e5257a3476a510565c590204e38431da4e61b6b37c4c561db431ef52d6de54db")
-    public override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
+    override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
         s3Location(Location(s3Location))
 
     public fun build():
@@ -41,7 +39,7 @@ public interface BedrockInvokeModelOutputProps {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelOutputProps,
   ) : BedrockInvokeModelOutputProps {
-    public override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+    override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
   }
 
   public companion object {

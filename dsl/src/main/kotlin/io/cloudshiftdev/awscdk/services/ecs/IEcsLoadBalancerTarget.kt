@@ -14,20 +14,18 @@ public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.IEcsLoadBalancerTarget,
   ) : IEcsLoadBalancerTarget {
-    public override fun attachToApplicationTargetGroup(arg0: IApplicationTargetGroup):
+    override fun attachToApplicationTargetGroup(arg0: IApplicationTargetGroup):
         LoadBalancerTargetProps =
         unwrap(this).attachToApplicationTargetGroup(arg0.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
 
-    public override fun attachToClassicLb(arg0: LoadBalancer) {
+    override fun attachToClassicLb(arg0: LoadBalancer) {
       unwrap(this).attachToClassicLB(arg0.let(LoadBalancer::unwrap))
     }
 
-    public override fun attachToNetworkTargetGroup(arg0: INetworkTargetGroup):
-        LoadBalancerTargetProps =
+    override fun attachToNetworkTargetGroup(arg0: INetworkTargetGroup): LoadBalancerTargetProps =
         unwrap(this).attachToNetworkTargetGroup(arg0.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
 
-    public override fun connections(): Connections =
-        unwrap(this).getConnections().let(Connections::wrap)
+    override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
   }
 
   public companion object {

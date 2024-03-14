@@ -43,14 +43,11 @@ public open class CfnTrafficMirrorFilter internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun networkServices(networkServices: List<String>) {
-    }
+    public fun networkServices(networkServices: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -60,15 +57,15 @@ public open class CfnTrafficMirrorFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter.Builder =
         software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilter.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun networkServices(networkServices: List<String>) {
+    override fun networkServices(networkServices: List<String>) {
       cdkBuilder.networkServices(networkServices)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

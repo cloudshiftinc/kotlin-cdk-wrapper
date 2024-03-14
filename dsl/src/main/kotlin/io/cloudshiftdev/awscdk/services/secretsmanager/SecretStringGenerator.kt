@@ -27,35 +27,25 @@ public interface SecretStringGenerator {
   public fun secretStringTemplate(): String? = unwrap(this).getSecretStringTemplate()
 
   public interface Builder {
-    public fun excludeCharacters(excludeCharacters: String) {
-    }
+    public fun excludeCharacters(excludeCharacters: String)
 
-    public fun excludeLowercase(excludeLowercase: Boolean) {
-    }
+    public fun excludeLowercase(excludeLowercase: Boolean)
 
-    public fun excludeNumbers(excludeNumbers: Boolean) {
-    }
+    public fun excludeNumbers(excludeNumbers: Boolean)
 
-    public fun excludePunctuation(excludePunctuation: Boolean) {
-    }
+    public fun excludePunctuation(excludePunctuation: Boolean)
 
-    public fun excludeUppercase(excludeUppercase: Boolean) {
-    }
+    public fun excludeUppercase(excludeUppercase: Boolean)
 
-    public fun generateStringKey(generateStringKey: String) {
-    }
+    public fun generateStringKey(generateStringKey: String)
 
-    public fun includeSpace(includeSpace: Boolean) {
-    }
+    public fun includeSpace(includeSpace: Boolean)
 
-    public fun passwordLength(passwordLength: Number) {
-    }
+    public fun passwordLength(passwordLength: Number)
 
-    public fun requireEachIncludedType(requireEachIncludedType: Boolean) {
-    }
+    public fun requireEachIncludedType(requireEachIncludedType: Boolean)
 
-    public fun secretStringTemplate(secretStringTemplate: String) {
-    }
+    public fun secretStringTemplate(secretStringTemplate: String)
   }
 
   private class BuilderImpl : Builder {
@@ -63,43 +53,43 @@ public interface SecretStringGenerator {
         software.amazon.awscdk.services.secretsmanager.SecretStringGenerator.Builder =
         software.amazon.awscdk.services.secretsmanager.SecretStringGenerator.builder()
 
-    public override fun excludeCharacters(excludeCharacters: String) {
+    override fun excludeCharacters(excludeCharacters: String) {
       cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    public override fun excludeLowercase(excludeLowercase: Boolean) {
+    override fun excludeLowercase(excludeLowercase: Boolean) {
       cdkBuilder.excludeLowercase(excludeLowercase)
     }
 
-    public override fun excludeNumbers(excludeNumbers: Boolean) {
+    override fun excludeNumbers(excludeNumbers: Boolean) {
       cdkBuilder.excludeNumbers(excludeNumbers)
     }
 
-    public override fun excludePunctuation(excludePunctuation: Boolean) {
+    override fun excludePunctuation(excludePunctuation: Boolean) {
       cdkBuilder.excludePunctuation(excludePunctuation)
     }
 
-    public override fun excludeUppercase(excludeUppercase: Boolean) {
+    override fun excludeUppercase(excludeUppercase: Boolean) {
       cdkBuilder.excludeUppercase(excludeUppercase)
     }
 
-    public override fun generateStringKey(generateStringKey: String) {
+    override fun generateStringKey(generateStringKey: String) {
       cdkBuilder.generateStringKey(generateStringKey)
     }
 
-    public override fun includeSpace(includeSpace: Boolean) {
+    override fun includeSpace(includeSpace: Boolean) {
       cdkBuilder.includeSpace(includeSpace)
     }
 
-    public override fun passwordLength(passwordLength: Number) {
+    override fun passwordLength(passwordLength: Number) {
       cdkBuilder.passwordLength(passwordLength)
     }
 
-    public override fun requireEachIncludedType(requireEachIncludedType: Boolean) {
+    override fun requireEachIncludedType(requireEachIncludedType: Boolean) {
       cdkBuilder.requireEachIncludedType(requireEachIncludedType)
     }
 
-    public override fun secretStringTemplate(secretStringTemplate: String) {
+    override fun secretStringTemplate(secretStringTemplate: String) {
       cdkBuilder.secretStringTemplate(secretStringTemplate)
     }
 
@@ -110,26 +100,25 @@ public interface SecretStringGenerator {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringGenerator,
   ) : SecretStringGenerator {
-    public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-    public override fun excludeLowercase(): Boolean? = unwrap(this).getExcludeLowercase()
+    override fun excludeLowercase(): Boolean? = unwrap(this).getExcludeLowercase()
 
-    public override fun excludeNumbers(): Boolean? = unwrap(this).getExcludeNumbers()
+    override fun excludeNumbers(): Boolean? = unwrap(this).getExcludeNumbers()
 
-    public override fun excludePunctuation(): Boolean? = unwrap(this).getExcludePunctuation()
+    override fun excludePunctuation(): Boolean? = unwrap(this).getExcludePunctuation()
 
-    public override fun excludeUppercase(): Boolean? = unwrap(this).getExcludeUppercase()
+    override fun excludeUppercase(): Boolean? = unwrap(this).getExcludeUppercase()
 
-    public override fun generateStringKey(): String? = unwrap(this).getGenerateStringKey()
+    override fun generateStringKey(): String? = unwrap(this).getGenerateStringKey()
 
-    public override fun includeSpace(): Boolean? = unwrap(this).getIncludeSpace()
+    override fun includeSpace(): Boolean? = unwrap(this).getIncludeSpace()
 
-    public override fun passwordLength(): Number? = unwrap(this).getPasswordLength()
+    override fun passwordLength(): Number? = unwrap(this).getPasswordLength()
 
-    public override fun requireEachIncludedType(): Boolean? =
-        unwrap(this).getRequireEachIncludedType()
+    override fun requireEachIncludedType(): Boolean? = unwrap(this).getRequireEachIncludedType()
 
-    public override fun secretStringTemplate(): String? = unwrap(this).getSecretStringTemplate()
+    override fun secretStringTemplate(): String? = unwrap(this).getSecretStringTemplate()
   }
 
   public companion object {

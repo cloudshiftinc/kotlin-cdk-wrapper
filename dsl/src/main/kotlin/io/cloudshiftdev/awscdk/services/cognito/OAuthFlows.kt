@@ -11,29 +11,26 @@ public interface OAuthFlows {
   public fun implicitCodeGrant(): Boolean? = unwrap(this).getImplicitCodeGrant()
 
   public interface Builder {
-    public fun authorizationCodeGrant(authorizationCodeGrant: Boolean) {
-    }
+    public fun authorizationCodeGrant(authorizationCodeGrant: Boolean)
 
-    public fun clientCredentials(clientCredentials: Boolean) {
-    }
+    public fun clientCredentials(clientCredentials: Boolean)
 
-    public fun implicitCodeGrant(implicitCodeGrant: Boolean) {
-    }
+    public fun implicitCodeGrant(implicitCodeGrant: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.OAuthFlows.Builder =
         software.amazon.awscdk.services.cognito.OAuthFlows.builder()
 
-    public override fun authorizationCodeGrant(authorizationCodeGrant: Boolean) {
+    override fun authorizationCodeGrant(authorizationCodeGrant: Boolean) {
       cdkBuilder.authorizationCodeGrant(authorizationCodeGrant)
     }
 
-    public override fun clientCredentials(clientCredentials: Boolean) {
+    override fun clientCredentials(clientCredentials: Boolean) {
       cdkBuilder.clientCredentials(clientCredentials)
     }
 
-    public override fun implicitCodeGrant(implicitCodeGrant: Boolean) {
+    override fun implicitCodeGrant(implicitCodeGrant: Boolean) {
       cdkBuilder.implicitCodeGrant(implicitCodeGrant)
     }
 
@@ -43,12 +40,11 @@ public interface OAuthFlows {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.OAuthFlows,
   ) : OAuthFlows {
-    public override fun authorizationCodeGrant(): Boolean? =
-        unwrap(this).getAuthorizationCodeGrant()
+    override fun authorizationCodeGrant(): Boolean? = unwrap(this).getAuthorizationCodeGrant()
 
-    public override fun clientCredentials(): Boolean? = unwrap(this).getClientCredentials()
+    override fun clientCredentials(): Boolean? = unwrap(this).getClientCredentials()
 
-    public override fun implicitCodeGrant(): Boolean? = unwrap(this).getImplicitCodeGrant()
+    override fun implicitCodeGrant(): Boolean? = unwrap(this).getImplicitCodeGrant()
   }
 
   public companion object {

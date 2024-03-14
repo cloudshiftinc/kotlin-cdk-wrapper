@@ -12,14 +12,11 @@ public open class PublicKey internal constructor(
   public override fun publicKeyId(): String = unwrap(this).getPublicKeyId()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun encodedKey(encodedKey: String) {
-    }
+    public fun encodedKey(encodedKey: String)
 
-    public fun publicKeyName(publicKeyName: String) {
-    }
+    public fun publicKeyName(publicKeyName: String)
   }
 
   private class BuilderImpl(
@@ -29,15 +26,15 @@ public open class PublicKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.PublicKey.Builder =
         software.amazon.awscdk.services.cloudfront.PublicKey.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun encodedKey(encodedKey: String) {
+    override fun encodedKey(encodedKey: String) {
       cdkBuilder.encodedKey(encodedKey)
     }
 
-    public override fun publicKeyName(publicKeyName: String) {
+    override fun publicKeyName(publicKeyName: String) {
       cdkBuilder.publicKeyName(publicKeyName)
     }
 

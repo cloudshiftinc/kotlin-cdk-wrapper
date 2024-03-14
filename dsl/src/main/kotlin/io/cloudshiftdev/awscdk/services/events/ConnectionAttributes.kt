@@ -11,29 +11,26 @@ public interface ConnectionAttributes {
   public fun connectionSecretArn(): String
 
   public interface Builder {
-    public fun connectionArn(connectionArn: String) {
-    }
+    public fun connectionArn(connectionArn: String)
 
-    public fun connectionName(connectionName: String) {
-    }
+    public fun connectionName(connectionName: String)
 
-    public fun connectionSecretArn(connectionSecretArn: String) {
-    }
+    public fun connectionSecretArn(connectionSecretArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.ConnectionAttributes.Builder =
         software.amazon.awscdk.services.events.ConnectionAttributes.builder()
 
-    public override fun connectionArn(connectionArn: String) {
+    override fun connectionArn(connectionArn: String) {
       cdkBuilder.connectionArn(connectionArn)
     }
 
-    public override fun connectionName(connectionName: String) {
+    override fun connectionName(connectionName: String) {
       cdkBuilder.connectionName(connectionName)
     }
 
-    public override fun connectionSecretArn(connectionSecretArn: String) {
+    override fun connectionSecretArn(connectionSecretArn: String) {
       cdkBuilder.connectionSecretArn(connectionSecretArn)
     }
 
@@ -44,11 +41,11 @@ public interface ConnectionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.ConnectionAttributes,
   ) : ConnectionAttributes {
-    public override fun connectionArn(): String = unwrap(this).getConnectionArn()
+    override fun connectionArn(): String = unwrap(this).getConnectionArn()
 
-    public override fun connectionName(): String = unwrap(this).getConnectionName()
+    override fun connectionName(): String = unwrap(this).getConnectionName()
 
-    public override fun connectionSecretArn(): String = unwrap(this).getConnectionSecretArn()
+    override fun connectionSecretArn(): String = unwrap(this).getConnectionSecretArn()
   }
 
   public companion object {

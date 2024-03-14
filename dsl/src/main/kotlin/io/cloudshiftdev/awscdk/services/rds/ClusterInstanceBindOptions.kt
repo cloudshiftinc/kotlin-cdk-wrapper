@@ -20,43 +20,38 @@ public interface ClusterInstanceBindOptions {
   public fun subnetGroup(): ISubnetGroup? = unwrap(this).getSubnetGroup()?.let(ISubnetGroup::wrap)
 
   public interface Builder {
-    public fun monitoringInterval(monitoringInterval: Duration) {
-    }
+    public fun monitoringInterval(monitoringInterval: Duration)
 
-    public fun monitoringRole(monitoringRole: IRole) {
-    }
+    public fun monitoringRole(monitoringRole: IRole)
 
-    public fun promotionTier(promotionTier: Number) {
-    }
+    public fun promotionTier(promotionTier: Number)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun subnetGroup(subnetGroup: ISubnetGroup) {
-    }
+    public fun subnetGroup(subnetGroup: ISubnetGroup)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ClusterInstanceBindOptions.Builder =
         software.amazon.awscdk.services.rds.ClusterInstanceBindOptions.builder()
 
-    public override fun monitoringInterval(monitoringInterval: Duration) {
+    override fun monitoringInterval(monitoringInterval: Duration) {
       cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
     }
 
-    public override fun monitoringRole(monitoringRole: IRole) {
+    override fun monitoringRole(monitoringRole: IRole) {
       cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
     }
 
-    public override fun promotionTier(promotionTier: Number) {
+    override fun promotionTier(promotionTier: Number) {
       cdkBuilder.promotionTier(promotionTier)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun subnetGroup(subnetGroup: ISubnetGroup) {
+    override fun subnetGroup(subnetGroup: ISubnetGroup) {
       cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
     }
 
@@ -67,18 +62,17 @@ public interface ClusterInstanceBindOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceBindOptions,
   ) : ClusterInstanceBindOptions {
-    public override fun monitoringInterval(): Duration? =
+    override fun monitoringInterval(): Duration? =
         unwrap(this).getMonitoringInterval()?.let(Duration::wrap)
 
-    public override fun monitoringRole(): IRole? =
-        unwrap(this).getMonitoringRole()?.let(IRole::wrap)
+    override fun monitoringRole(): IRole? = unwrap(this).getMonitoringRole()?.let(IRole::wrap)
 
-    public override fun promotionTier(): Number? = unwrap(this).getPromotionTier()
+    override fun promotionTier(): Number? = unwrap(this).getPromotionTier()
 
-    public override fun removalPolicy(): RemovalPolicy? =
+    override fun removalPolicy(): RemovalPolicy? =
         unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
 
-    public override fun subnetGroup(): ISubnetGroup? =
+    override fun subnetGroup(): ISubnetGroup? =
         unwrap(this).getSubnetGroup()?.let(ISubnetGroup::wrap)
   }
 

@@ -12,29 +12,26 @@ public interface KubectlProviderAttributes {
   public fun kubectlRoleArn(): String
 
   public interface Builder {
-    public fun functionArn(functionArn: String) {
-    }
+    public fun functionArn(functionArn: String)
 
-    public fun handlerRole(handlerRole: IRole) {
-    }
+    public fun handlerRole(handlerRole: IRole)
 
-    public fun kubectlRoleArn(kubectlRoleArn: String) {
-    }
+    public fun kubectlRoleArn(kubectlRoleArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubectlProviderAttributes.Builder =
         software.amazon.awscdk.services.eks.KubectlProviderAttributes.builder()
 
-    public override fun functionArn(functionArn: String) {
+    override fun functionArn(functionArn: String) {
       cdkBuilder.functionArn(functionArn)
     }
 
-    public override fun handlerRole(handlerRole: IRole) {
+    override fun handlerRole(handlerRole: IRole) {
       cdkBuilder.handlerRole(handlerRole.let(IRole::unwrap))
     }
 
-    public override fun kubectlRoleArn(kubectlRoleArn: String) {
+    override fun kubectlRoleArn(kubectlRoleArn: String) {
       cdkBuilder.kubectlRoleArn(kubectlRoleArn)
     }
 
@@ -45,11 +42,11 @@ public interface KubectlProviderAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.KubectlProviderAttributes,
   ) : KubectlProviderAttributes {
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-    public override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
+    override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
 
-    public override fun kubectlRoleArn(): String = unwrap(this).getKubectlRoleArn()
+    override fun kubectlRoleArn(): String = unwrap(this).getKubectlRoleArn()
   }
 
   public companion object {

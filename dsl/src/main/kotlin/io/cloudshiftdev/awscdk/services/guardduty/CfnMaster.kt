@@ -34,14 +34,11 @@ public open class CfnMaster internal constructor(
   }
 
   public interface Builder {
-    public fun detectorId(detectorId: String) {
-    }
+    public fun detectorId(detectorId: String)
 
-    public fun invitationId(invitationId: String) {
-    }
+    public fun invitationId(invitationId: String)
 
-    public fun masterId(masterId: String) {
-    }
+    public fun masterId(masterId: String)
   }
 
   private class BuilderImpl(
@@ -51,15 +48,15 @@ public open class CfnMaster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.guardduty.CfnMaster.Builder =
         software.amazon.awscdk.services.guardduty.CfnMaster.Builder.create(scope, id)
 
-    public override fun detectorId(detectorId: String) {
+    override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
     }
 
-    public override fun invitationId(invitationId: String) {
+    override fun invitationId(invitationId: String) {
       cdkBuilder.invitationId(invitationId)
     }
 
-    public override fun masterId(masterId: String) {
+    override fun masterId(masterId: String) {
       cdkBuilder.masterId(masterId)
     }
 

@@ -8,7 +8,7 @@ public interface IVariable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IVariable,
   ) : IVariable {
-    public override fun toJson(): Any = unwrap(this).toJson()
+    override fun toJson(): Any = unwrap(this).toJson()
   }
 
   public companion object {

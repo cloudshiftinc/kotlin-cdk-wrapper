@@ -84,39 +84,29 @@ public open class CfnStream internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun retentionPeriodHours(retentionPeriodHours: Number) {
-    }
+    public fun retentionPeriodHours(retentionPeriodHours: Number)
 
-    public fun shardCount(shardCount: Number) {
-    }
+    public fun shardCount(shardCount: Number)
 
-    public fun streamEncryption(streamEncryption: IResolvable) {
-    }
+    public fun streamEncryption(streamEncryption: IResolvable)
 
-    public fun streamEncryption(streamEncryption: StreamEncryptionProperty) {
-    }
+    public fun streamEncryption(streamEncryption: StreamEncryptionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13144c49d575e3934185ca810fda708916113c21ab18297ad3c3810ee15617ff")
-    public fun streamEncryption(streamEncryption: StreamEncryptionProperty.Builder.() -> Unit) {
-    }
+    public fun streamEncryption(streamEncryption: StreamEncryptionProperty.Builder.() -> Unit)
 
-    public fun streamModeDetails(streamModeDetails: IResolvable) {
-    }
+    public fun streamModeDetails(streamModeDetails: IResolvable)
 
-    public fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty) {
-    }
+    public fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("88c9ad7dc25f819c3732b2119e267de19d8b6b442bcabf2ab6ed2ae9a306d457")
-    public fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -126,47 +116,45 @@ public open class CfnStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kinesis.CfnStream.Builder =
         software.amazon.awscdk.services.kinesis.CfnStream.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun retentionPeriodHours(retentionPeriodHours: Number) {
+    override fun retentionPeriodHours(retentionPeriodHours: Number) {
       cdkBuilder.retentionPeriodHours(retentionPeriodHours)
     }
 
-    public override fun shardCount(shardCount: Number) {
+    override fun shardCount(shardCount: Number) {
       cdkBuilder.shardCount(shardCount)
     }
 
-    public override fun streamEncryption(streamEncryption: IResolvable) {
+    override fun streamEncryption(streamEncryption: IResolvable) {
       cdkBuilder.streamEncryption(streamEncryption.let(IResolvable::unwrap))
     }
 
-    public override fun streamEncryption(streamEncryption: StreamEncryptionProperty) {
+    override fun streamEncryption(streamEncryption: StreamEncryptionProperty) {
       cdkBuilder.streamEncryption(streamEncryption.let(StreamEncryptionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13144c49d575e3934185ca810fda708916113c21ab18297ad3c3810ee15617ff")
-    public override
-        fun streamEncryption(streamEncryption: StreamEncryptionProperty.Builder.() -> Unit): Unit =
-        streamEncryption(StreamEncryptionProperty(streamEncryption))
+    override fun streamEncryption(streamEncryption: StreamEncryptionProperty.Builder.() -> Unit):
+        Unit = streamEncryption(StreamEncryptionProperty(streamEncryption))
 
-    public override fun streamModeDetails(streamModeDetails: IResolvable) {
+    override fun streamModeDetails(streamModeDetails: IResolvable) {
       cdkBuilder.streamModeDetails(streamModeDetails.let(IResolvable::unwrap))
     }
 
-    public override fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty) {
+    override fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty) {
       cdkBuilder.streamModeDetails(streamModeDetails.let(StreamModeDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("88c9ad7dc25f819c3732b2119e267de19d8b6b442bcabf2ab6ed2ae9a306d457")
-    public override
-        fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty.Builder.() -> Unit): Unit
-        = streamModeDetails(StreamModeDetailsProperty(streamModeDetails))
+    override fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty.Builder.() -> Unit):
+        Unit = streamModeDetails(StreamModeDetailsProperty(streamModeDetails))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -198,8 +186,7 @@ public open class CfnStream internal constructor(
     public fun streamMode(): String
 
     public interface Builder {
-      public fun streamMode(streamMode: String) {
-      }
+      public fun streamMode(streamMode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -207,7 +194,7 @@ public open class CfnStream internal constructor(
           software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty.Builder =
           software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty.builder()
 
-      public override fun streamMode(streamMode: String) {
+      override fun streamMode(streamMode: String) {
         cdkBuilder.streamMode(streamMode)
       }
 
@@ -220,7 +207,7 @@ public open class CfnStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty,
     ) : StreamModeDetailsProperty {
-      public override fun streamMode(): String = unwrap(this).getStreamMode()
+      override fun streamMode(): String = unwrap(this).getStreamMode()
     }
 
     public companion object {
@@ -249,11 +236,9 @@ public open class CfnStream internal constructor(
     public fun keyId(): String
 
     public interface Builder {
-      public fun encryptionType(encryptionType: String) {
-      }
+      public fun encryptionType(encryptionType: String)
 
-      public fun keyId(keyId: String) {
-      }
+      public fun keyId(keyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,11 +246,11 @@ public open class CfnStream internal constructor(
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty.Builder =
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty.builder()
 
-      public override fun encryptionType(encryptionType: String) {
+      override fun encryptionType(encryptionType: String) {
         cdkBuilder.encryptionType(encryptionType)
       }
 
-      public override fun keyId(keyId: String) {
+      override fun keyId(keyId: String) {
         cdkBuilder.keyId(keyId)
       }
 
@@ -277,9 +262,9 @@ public open class CfnStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty,
     ) : StreamEncryptionProperty {
-      public override fun encryptionType(): String = unwrap(this).getEncryptionType()
+      override fun encryptionType(): String = unwrap(this).getEncryptionType()
 
-      public override fun keyId(): String = unwrap(this).getKeyId()
+      override fun keyId(): String = unwrap(this).getKeyId()
     }
 
     public companion object {

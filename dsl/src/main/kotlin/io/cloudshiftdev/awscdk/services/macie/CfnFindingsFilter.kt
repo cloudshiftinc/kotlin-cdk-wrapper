@@ -81,31 +81,23 @@ public open class CfnFindingsFilter internal constructor(
   }
 
   public interface Builder {
-    public fun action(action: String) {
-    }
+    public fun action(action: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun findingCriteria(findingCriteria: IResolvable) {
-    }
+    public fun findingCriteria(findingCriteria: IResolvable)
 
-    public fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
-    }
+    public fun findingCriteria(findingCriteria: FindingCriteriaProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("767dc9bf15d13dd8584a0157137877d33d45f5684d3bb57911a95e3f545fedbe")
-    public fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit) {
-    }
+    public fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun position(position: Number) {
-    }
+    public fun position(position: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -115,37 +107,36 @@ public open class CfnFindingsFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.macie.CfnFindingsFilter.Builder =
         software.amazon.awscdk.services.macie.CfnFindingsFilter.Builder.create(scope, id)
 
-    public override fun action(action: String) {
+    override fun action(action: String) {
       cdkBuilder.action(action)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun findingCriteria(findingCriteria: IResolvable) {
+    override fun findingCriteria(findingCriteria: IResolvable) {
       cdkBuilder.findingCriteria(findingCriteria.let(IResolvable::unwrap))
     }
 
-    public override fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
+    override fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
       cdkBuilder.findingCriteria(findingCriteria.let(FindingCriteriaProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("767dc9bf15d13dd8584a0157137877d33d45f5684d3bb57911a95e3f545fedbe")
-    public override
-        fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit): Unit =
-        findingCriteria(FindingCriteriaProperty(findingCriteria))
+    override fun findingCriteria(findingCriteria: FindingCriteriaProperty.Builder.() -> Unit): Unit
+        = findingCriteria(FindingCriteriaProperty(findingCriteria))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun position(position: Number) {
+    override fun position(position: Number) {
       cdkBuilder.position(position)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -179,11 +170,9 @@ public open class CfnFindingsFilter internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -192,11 +181,11 @@ public open class CfnFindingsFilter internal constructor(
           =
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -209,9 +198,9 @@ public open class CfnFindingsFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingsFilterListItemProperty,
     ) : FindingsFilterListItemProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -238,11 +227,9 @@ public open class CfnFindingsFilter internal constructor(
     public fun criterion(): Any? = unwrap(this).getCriterion()
 
     public interface Builder {
-      public fun criterion(criterion: IResolvable) {
-      }
+      public fun criterion(criterion: IResolvable)
 
-      public fun criterion(criterion: Map<String, Any>) {
-      }
+      public fun criterion(criterion: Map<String, Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -250,11 +237,11 @@ public open class CfnFindingsFilter internal constructor(
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty.Builder =
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty.builder()
 
-      public override fun criterion(criterion: IResolvable) {
+      override fun criterion(criterion: IResolvable) {
         cdkBuilder.criterion(criterion.let(IResolvable::unwrap))
       }
 
-      public override fun criterion(criterion: Map<String, Any>) {
+      override fun criterion(criterion: Map<String, Any>) {
         cdkBuilder.criterion(criterion)
       }
 
@@ -267,7 +254,7 @@ public open class CfnFindingsFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.macie.CfnFindingsFilter.FindingCriteriaProperty,
     ) : FindingCriteriaProperty {
-      public override fun criterion(): Any? = unwrap(this).getCriterion()
+      override fun criterion(): Any? = unwrap(this).getCriterion()
     }
 
     public companion object {
@@ -304,23 +291,17 @@ public open class CfnFindingsFilter internal constructor(
     public fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
 
     public interface Builder {
-      public fun eq(eq: List<String>) {
-      }
+      public fun eq(eq: List<String>)
 
-      public fun gt(gt: Number) {
-      }
+      public fun gt(gt: Number)
 
-      public fun gte(gte: Number) {
-      }
+      public fun gte(gte: Number)
 
-      public fun lt(lt: Number) {
-      }
+      public fun lt(lt: Number)
 
-      public fun lte(lte: Number) {
-      }
+      public fun lte(lte: Number)
 
-      public fun neq(neq: List<String>) {
-      }
+      public fun neq(neq: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -329,27 +310,27 @@ public open class CfnFindingsFilter internal constructor(
           =
           software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty.builder()
 
-      public override fun eq(eq: List<String>) {
+      override fun eq(eq: List<String>) {
         cdkBuilder.eq(eq)
       }
 
-      public override fun gt(gt: Number) {
+      override fun gt(gt: Number) {
         cdkBuilder.gt(gt)
       }
 
-      public override fun gte(gte: Number) {
+      override fun gte(gte: Number) {
         cdkBuilder.gte(gte)
       }
 
-      public override fun lt(lt: Number) {
+      override fun lt(lt: Number) {
         cdkBuilder.lt(lt)
       }
 
-      public override fun lte(lte: Number) {
+      override fun lte(lte: Number) {
         cdkBuilder.lte(lte)
       }
 
-      public override fun neq(neq: List<String>) {
+      override fun neq(neq: List<String>) {
         cdkBuilder.neq(neq)
       }
 
@@ -362,17 +343,17 @@ public open class CfnFindingsFilter internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty,
     ) : CriterionAdditionalPropertiesProperty {
-      public override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
+      override fun eq(): List<String> = unwrap(this).getEq() ?: emptyList()
 
-      public override fun gt(): Number? = unwrap(this).getGt()
+      override fun gt(): Number? = unwrap(this).getGt()
 
-      public override fun gte(): Number? = unwrap(this).getGte()
+      override fun gte(): Number? = unwrap(this).getGte()
 
-      public override fun lt(): Number? = unwrap(this).getLt()
+      override fun lt(): Number? = unwrap(this).getLt()
 
-      public override fun lte(): Number? = unwrap(this).getLte()
+      override fun lte(): Number? = unwrap(this).getLte()
 
-      public override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
+      override fun neq(): List<String> = unwrap(this).getNeq() ?: emptyList()
     }
 
     public companion object {

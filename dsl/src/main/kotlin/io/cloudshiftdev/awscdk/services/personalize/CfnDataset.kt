@@ -61,28 +61,21 @@ public open class CfnDataset internal constructor(
   }
 
   public interface Builder {
-    public fun datasetGroupArn(datasetGroupArn: String) {
-    }
+    public fun datasetGroupArn(datasetGroupArn: String)
 
-    public fun datasetImportJob(datasetImportJob: IResolvable) {
-    }
+    public fun datasetImportJob(datasetImportJob: IResolvable)
 
-    public fun datasetImportJob(datasetImportJob: DatasetImportJobProperty) {
-    }
+    public fun datasetImportJob(datasetImportJob: DatasetImportJobProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00047c50505b44a350b3b5aa2091fd9d26178e854fdd5befa5ed5863515933a6")
-    public fun datasetImportJob(datasetImportJob: DatasetImportJobProperty.Builder.() -> Unit) {
-    }
+    public fun datasetImportJob(datasetImportJob: DatasetImportJobProperty.Builder.() -> Unit)
 
-    public fun datasetType(datasetType: String) {
-    }
+    public fun datasetType(datasetType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun schemaArn(schemaArn: String) {
-    }
+    public fun schemaArn(schemaArn: String)
   }
 
   private class BuilderImpl(
@@ -92,33 +85,32 @@ public open class CfnDataset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.personalize.CfnDataset.Builder =
         software.amazon.awscdk.services.personalize.CfnDataset.Builder.create(scope, id)
 
-    public override fun datasetGroupArn(datasetGroupArn: String) {
+    override fun datasetGroupArn(datasetGroupArn: String) {
       cdkBuilder.datasetGroupArn(datasetGroupArn)
     }
 
-    public override fun datasetImportJob(datasetImportJob: IResolvable) {
+    override fun datasetImportJob(datasetImportJob: IResolvable) {
       cdkBuilder.datasetImportJob(datasetImportJob.let(IResolvable::unwrap))
     }
 
-    public override fun datasetImportJob(datasetImportJob: DatasetImportJobProperty) {
+    override fun datasetImportJob(datasetImportJob: DatasetImportJobProperty) {
       cdkBuilder.datasetImportJob(datasetImportJob.let(DatasetImportJobProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00047c50505b44a350b3b5aa2091fd9d26178e854fdd5befa5ed5863515933a6")
-    public override
-        fun datasetImportJob(datasetImportJob: DatasetImportJobProperty.Builder.() -> Unit): Unit =
-        datasetImportJob(DatasetImportJobProperty(datasetImportJob))
+    override fun datasetImportJob(datasetImportJob: DatasetImportJobProperty.Builder.() -> Unit):
+        Unit = datasetImportJob(DatasetImportJobProperty(datasetImportJob))
 
-    public override fun datasetType(datasetType: String) {
+    override fun datasetType(datasetType: String) {
       cdkBuilder.datasetType(datasetType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun schemaArn(schemaArn: String) {
+    override fun schemaArn(schemaArn: String) {
       cdkBuilder.schemaArn(schemaArn)
     }
 
@@ -150,8 +142,7 @@ public open class CfnDataset internal constructor(
     public fun dataLocation(): String? = unwrap(this).getDataLocation()
 
     public interface Builder {
-      public fun dataLocation(dataLocation: String) {
-      }
+      public fun dataLocation(dataLocation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -159,7 +150,7 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty.Builder =
           software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty.builder()
 
-      public override fun dataLocation(dataLocation: String) {
+      override fun dataLocation(dataLocation: String) {
         cdkBuilder.dataLocation(dataLocation)
       }
 
@@ -171,7 +162,7 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.personalize.CfnDataset.DataSourceProperty,
     ) : DataSourceProperty {
-      public override fun dataLocation(): String? = unwrap(this).getDataLocation()
+      override fun dataLocation(): String? = unwrap(this).getDataLocation()
     }
 
     public companion object {
@@ -206,20 +197,15 @@ public open class CfnDataset internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun dataSource(dataSource: Any) {
-      }
+      public fun dataSource(dataSource: Any)
 
-      public fun datasetArn(datasetArn: String) {
-      }
+      public fun datasetArn(datasetArn: String)
 
-      public fun datasetImportJobArn(datasetImportJobArn: String) {
-      }
+      public fun datasetImportJobArn(datasetImportJobArn: String)
 
-      public fun jobName(jobName: String) {
-      }
+      public fun jobName(jobName: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -227,23 +213,23 @@ public open class CfnDataset internal constructor(
           software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty.Builder =
           software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty.builder()
 
-      public override fun dataSource(dataSource: Any) {
+      override fun dataSource(dataSource: Any) {
         cdkBuilder.dataSource(dataSource)
       }
 
-      public override fun datasetArn(datasetArn: String) {
+      override fun datasetArn(datasetArn: String) {
         cdkBuilder.datasetArn(datasetArn)
       }
 
-      public override fun datasetImportJobArn(datasetImportJobArn: String) {
+      override fun datasetImportJobArn(datasetImportJobArn: String) {
         cdkBuilder.datasetImportJobArn(datasetImportJobArn)
       }
 
-      public override fun jobName(jobName: String) {
+      override fun jobName(jobName: String) {
         cdkBuilder.jobName(jobName)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -256,15 +242,15 @@ public open class CfnDataset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.personalize.CfnDataset.DatasetImportJobProperty,
     ) : DatasetImportJobProperty {
-      public override fun dataSource(): Any? = unwrap(this).getDataSource()
+      override fun dataSource(): Any? = unwrap(this).getDataSource()
 
-      public override fun datasetArn(): String? = unwrap(this).getDatasetArn()
+      override fun datasetArn(): String? = unwrap(this).getDatasetArn()
 
-      public override fun datasetImportJobArn(): String? = unwrap(this).getDatasetImportJobArn()
+      override fun datasetImportJobArn(): String? = unwrap(this).getDatasetImportJobArn()
 
-      public override fun jobName(): String? = unwrap(this).getJobName()
+      override fun jobName(): String? = unwrap(this).getJobName()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {

@@ -9,22 +9,20 @@ public interface GatewayRouteBaseProps {
   public fun routeSpec(): GatewayRouteSpec
 
   public interface Builder {
-    public fun gatewayRouteName(gatewayRouteName: String) {
-    }
+    public fun gatewayRouteName(gatewayRouteName: String)
 
-    public fun routeSpec(routeSpec: GatewayRouteSpec) {
-    }
+    public fun routeSpec(routeSpec: GatewayRouteSpec)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps.builder()
 
-    public override fun gatewayRouteName(gatewayRouteName: String) {
+    override fun gatewayRouteName(gatewayRouteName: String) {
       cdkBuilder.gatewayRouteName(gatewayRouteName)
     }
 
-    public override fun routeSpec(routeSpec: GatewayRouteSpec) {
+    override fun routeSpec(routeSpec: GatewayRouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec::unwrap))
     }
 
@@ -35,9 +33,9 @@ public interface GatewayRouteBaseProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps,
   ) : GatewayRouteBaseProps {
-    public override fun gatewayRouteName(): String? = unwrap(this).getGatewayRouteName()
+    override fun gatewayRouteName(): String? = unwrap(this).getGatewayRouteName()
 
-    public override fun routeSpec(): GatewayRouteSpec =
+    override fun routeSpec(): GatewayRouteSpec =
         unwrap(this).getRouteSpec().let(GatewayRouteSpec::wrap)
   }
 

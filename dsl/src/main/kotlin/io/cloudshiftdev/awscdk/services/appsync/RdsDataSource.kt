@@ -12,26 +12,19 @@ public open class RdsDataSource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.RdsDataSource,
 ) : BackedDataSource(cdkObject) {
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun databaseName(databaseName: String) {
-    }
+    public fun databaseName(databaseName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun secretStore(secretStore: ISecret) {
-    }
+    public fun secretStore(secretStore: ISecret)
 
-    public fun serverlessCluster(serverlessCluster: IServerlessCluster) {
-    }
+    public fun serverlessCluster(serverlessCluster: IServerlessCluster)
 
-    public fun serviceRole(serviceRole: IRole) {
-    }
+    public fun serviceRole(serviceRole: IRole)
   }
 
   private class BuilderImpl(
@@ -41,31 +34,31 @@ public open class RdsDataSource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.RdsDataSource.Builder =
         software.amazon.awscdk.services.appsync.RdsDataSource.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun databaseName(databaseName: String) {
+    override fun databaseName(databaseName: String) {
       cdkBuilder.databaseName(databaseName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun secretStore(secretStore: ISecret) {
+    override fun secretStore(secretStore: ISecret) {
       cdkBuilder.secretStore(secretStore.let(ISecret::unwrap))
     }
 
-    public override fun serverlessCluster(serverlessCluster: IServerlessCluster) {
+    override fun serverlessCluster(serverlessCluster: IServerlessCluster) {
       cdkBuilder.serverlessCluster(serverlessCluster.let(IServerlessCluster::unwrap))
     }
 
-    public override fun serviceRole(serviceRole: IRole) {
+    override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
     }
 

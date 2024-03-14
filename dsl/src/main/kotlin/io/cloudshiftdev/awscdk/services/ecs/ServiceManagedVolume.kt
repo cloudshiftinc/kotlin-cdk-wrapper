@@ -33,17 +33,14 @@ public open class ServiceManagedVolume internal constructor(
   public open fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration) {
-    }
+    public fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea3547ee438cda0cc5e4fe5ef7e42e212364219a5e436646e0668cd317a40bba")
     public
-        fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration.Builder.() -> Unit) {
-    }
+        fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -53,17 +50,17 @@ public open class ServiceManagedVolume internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.ServiceManagedVolume.Builder =
         software.amazon.awscdk.services.ecs.ServiceManagedVolume.Builder.create(scope, id)
 
-    public override fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration) {
+    override fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration) {
       cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfiguration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea3547ee438cda0cc5e4fe5ef7e42e212364219a5e436646e0668cd317a40bba")
-    public override
+    override
         fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration.Builder.() -> Unit):
         Unit = managedEbsVolume(ServiceManagedEBSVolumeConfiguration(managedEbsVolume))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

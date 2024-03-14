@@ -81,31 +81,23 @@ public open class CfnListener internal constructor(
   }
 
   public interface Builder {
-    public fun defaultAction(defaultAction: IResolvable) {
-    }
+    public fun defaultAction(defaultAction: IResolvable)
 
-    public fun defaultAction(defaultAction: DefaultActionProperty) {
-    }
+    public fun defaultAction(defaultAction: DefaultActionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("33f9974638aaca0476dbf3be4f753ed548ae2ee3c024ba639f27f21ab1aadac1")
-    public fun defaultAction(defaultAction: DefaultActionProperty.Builder.() -> Unit) {
-    }
+    public fun defaultAction(defaultAction: DefaultActionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun protocol(protocol: String) {
-    }
+    public fun protocol(protocol: String)
 
-    public fun serviceIdentifier(serviceIdentifier: String) {
-    }
+    public fun serviceIdentifier(serviceIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -115,36 +107,36 @@ public open class CfnListener internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.vpclattice.CfnListener.Builder =
         software.amazon.awscdk.services.vpclattice.CfnListener.Builder.create(scope, id)
 
-    public override fun defaultAction(defaultAction: IResolvable) {
+    override fun defaultAction(defaultAction: IResolvable) {
       cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
     }
 
-    public override fun defaultAction(defaultAction: DefaultActionProperty) {
+    override fun defaultAction(defaultAction: DefaultActionProperty) {
       cdkBuilder.defaultAction(defaultAction.let(DefaultActionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("33f9974638aaca0476dbf3be4f753ed548ae2ee3c024ba639f27f21ab1aadac1")
-    public override fun defaultAction(defaultAction: DefaultActionProperty.Builder.() -> Unit): Unit
-        = defaultAction(DefaultActionProperty(defaultAction))
+    override fun defaultAction(defaultAction: DefaultActionProperty.Builder.() -> Unit): Unit =
+        defaultAction(DefaultActionProperty(defaultAction))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun protocol(protocol: String) {
+    override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun serviceIdentifier(serviceIdentifier: String) {
+    override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -178,11 +170,9 @@ public open class CfnListener internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun targetGroupIdentifier(targetGroupIdentifier: String) {
-      }
+      public fun targetGroupIdentifier(targetGroupIdentifier: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -191,11 +181,11 @@ public open class CfnListener internal constructor(
           =
           software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty.builder()
 
-      public override fun targetGroupIdentifier(targetGroupIdentifier: String) {
+      override fun targetGroupIdentifier(targetGroupIdentifier: String) {
         cdkBuilder.targetGroupIdentifier(targetGroupIdentifier)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -208,9 +198,9 @@ public open class CfnListener internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnListener.WeightedTargetGroupProperty,
     ) : WeightedTargetGroupProperty {
-      public override fun targetGroupIdentifier(): String = unwrap(this).getTargetGroupIdentifier()
+      override fun targetGroupIdentifier(): String = unwrap(this).getTargetGroupIdentifier()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {
@@ -237,8 +227,7 @@ public open class CfnListener internal constructor(
     public fun statusCode(): Number
 
     public interface Builder {
-      public fun statusCode(statusCode: Number) {
-      }
+      public fun statusCode(statusCode: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -246,7 +235,7 @@ public open class CfnListener internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty.builder()
 
-      public override fun statusCode(statusCode: Number) {
+      override fun statusCode(statusCode: Number) {
         cdkBuilder.statusCode(statusCode)
       }
 
@@ -259,7 +248,7 @@ public open class CfnListener internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnListener.FixedResponseProperty,
     ) : FixedResponseProperty {
-      public override fun statusCode(): Number = unwrap(this).getStatusCode()
+      override fun statusCode(): Number = unwrap(this).getStatusCode()
     }
 
     public companion object {
@@ -286,11 +275,9 @@ public open class CfnListener internal constructor(
     public fun targetGroups(): Any
 
     public interface Builder {
-      public fun targetGroups(targetGroups: IResolvable) {
-      }
+      public fun targetGroups(targetGroups: IResolvable)
 
-      public fun targetGroups(targetGroups: List<Any>) {
-      }
+      public fun targetGroups(targetGroups: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -298,11 +285,11 @@ public open class CfnListener internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty.builder()
 
-      public override fun targetGroups(targetGroups: IResolvable) {
+      override fun targetGroups(targetGroups: IResolvable) {
         cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
       }
 
-      public override fun targetGroups(targetGroups: List<Any>) {
+      override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
 
@@ -314,7 +301,7 @@ public open class CfnListener internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty,
     ) : ForwardProperty {
-      public override fun targetGroups(): Any = unwrap(this).getTargetGroups()
+      override fun targetGroups(): Any = unwrap(this).getTargetGroups()
     }
 
     public companion object {
@@ -343,27 +330,21 @@ public open class CfnListener internal constructor(
     public fun forward(): Any? = unwrap(this).getForward()
 
     public interface Builder {
-      public fun fixedResponse(fixedResponse: IResolvable) {
-      }
+      public fun fixedResponse(fixedResponse: IResolvable)
 
-      public fun fixedResponse(fixedResponse: FixedResponseProperty) {
-      }
+      public fun fixedResponse(fixedResponse: FixedResponseProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4a3c9d278551eceb1d3b5e6deea7e01050cea016d10c69bda85c5b446a47bfd4")
-      public fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit) {
-      }
+      public fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit)
 
-      public fun forward(forward: IResolvable) {
-      }
+      public fun forward(forward: IResolvable)
 
-      public fun forward(forward: ForwardProperty) {
-      }
+      public fun forward(forward: ForwardProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("692ec0d7935e4ac6fa2636c9d8edd0862e863336a5c647f4cdd8e16c4866fa47")
-      public fun forward(forward: ForwardProperty.Builder.() -> Unit) {
-      }
+      public fun forward(forward: ForwardProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -371,30 +352,30 @@ public open class CfnListener internal constructor(
           software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty.Builder =
           software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty.builder()
 
-      public override fun fixedResponse(fixedResponse: IResolvable) {
+      override fun fixedResponse(fixedResponse: IResolvable) {
         cdkBuilder.fixedResponse(fixedResponse.let(IResolvable::unwrap))
       }
 
-      public override fun fixedResponse(fixedResponse: FixedResponseProperty) {
+      override fun fixedResponse(fixedResponse: FixedResponseProperty) {
         cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4a3c9d278551eceb1d3b5e6deea7e01050cea016d10c69bda85c5b446a47bfd4")
-      public override fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit):
-          Unit = fixedResponse(FixedResponseProperty(fixedResponse))
+      override fun fixedResponse(fixedResponse: FixedResponseProperty.Builder.() -> Unit): Unit =
+          fixedResponse(FixedResponseProperty(fixedResponse))
 
-      public override fun forward(forward: IResolvable) {
+      override fun forward(forward: IResolvable) {
         cdkBuilder.forward(forward.let(IResolvable::unwrap))
       }
 
-      public override fun forward(forward: ForwardProperty) {
+      override fun forward(forward: ForwardProperty) {
         cdkBuilder.forward(forward.let(ForwardProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("692ec0d7935e4ac6fa2636c9d8edd0862e863336a5c647f4cdd8e16c4866fa47")
-      public override fun forward(forward: ForwardProperty.Builder.() -> Unit): Unit =
+      override fun forward(forward: ForwardProperty.Builder.() -> Unit): Unit =
           forward(ForwardProperty(forward))
 
       public fun build():
@@ -406,9 +387,9 @@ public open class CfnListener internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.vpclattice.CfnListener.DefaultActionProperty,
     ) : DefaultActionProperty {
-      public override fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
+      override fun fixedResponse(): Any? = unwrap(this).getFixedResponse()
 
-      public override fun forward(): Any? = unwrap(this).getForward()
+      override fun forward(): Any? = unwrap(this).getForward()
     }
 
     public companion object {

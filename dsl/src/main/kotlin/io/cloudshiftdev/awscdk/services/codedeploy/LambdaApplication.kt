@@ -14,8 +14,7 @@ public open class LambdaApplication internal constructor(
   public override fun applicationName(): String = unwrap(this).getApplicationName()
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
   }
 
   private class BuilderImpl(
@@ -25,7 +24,7 @@ public open class LambdaApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder.create(scope, id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 

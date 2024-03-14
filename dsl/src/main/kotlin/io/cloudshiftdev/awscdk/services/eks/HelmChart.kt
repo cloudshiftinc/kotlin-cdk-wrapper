@@ -22,41 +22,29 @@ public open class HelmChart internal constructor(
   public open fun version(): String? = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun chart(chart: String) {
-    }
+    public fun chart(chart: String)
 
-    public fun chartAsset(chartAsset: Asset) {
-    }
+    public fun chartAsset(chartAsset: Asset)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun createNamespace(createNamespace: Boolean) {
-    }
+    public fun createNamespace(createNamespace: Boolean)
 
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun release(release: String) {
-    }
+    public fun release(release: String)
 
-    public fun repository(repository: String) {
-    }
+    public fun repository(repository: String)
 
-    public fun skipCrds(skipCrds: Boolean) {
-    }
+    public fun skipCrds(skipCrds: Boolean)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun values(values: Map<String, Any>) {
-    }
+    public fun values(values: Map<String, Any>)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
 
-    public fun wait(wait: Boolean) {
-    }
+    public fun wait(wait: Boolean)
   }
 
   private class BuilderImpl(
@@ -66,51 +54,51 @@ public open class HelmChart internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.HelmChart.Builder =
         software.amazon.awscdk.services.eks.HelmChart.Builder.create(scope, id)
 
-    public override fun chart(chart: String) {
+    override fun chart(chart: String) {
       cdkBuilder.chart(chart)
     }
 
-    public override fun chartAsset(chartAsset: Asset) {
+    override fun chartAsset(chartAsset: Asset) {
       cdkBuilder.chartAsset(chartAsset.let(Asset::unwrap))
     }
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun createNamespace(createNamespace: Boolean) {
+    override fun createNamespace(createNamespace: Boolean) {
       cdkBuilder.createNamespace(createNamespace)
     }
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun release(release: String) {
+    override fun release(release: String) {
       cdkBuilder.release(release)
     }
 
-    public override fun repository(repository: String) {
+    override fun repository(repository: String) {
       cdkBuilder.repository(repository)
     }
 
-    public override fun skipCrds(skipCrds: Boolean) {
+    override fun skipCrds(skipCrds: Boolean) {
       cdkBuilder.skipCrds(skipCrds)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun values(values: Map<String, Any>) {
+    override fun values(values: Map<String, Any>) {
       cdkBuilder.values(values)
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
-    public override fun wait(wait: Boolean) {
+    override fun wait(wait: Boolean) {
       cdkBuilder.wait(wait)
     }
 

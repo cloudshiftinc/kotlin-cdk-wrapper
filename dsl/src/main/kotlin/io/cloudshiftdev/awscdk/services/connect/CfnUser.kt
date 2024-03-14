@@ -120,57 +120,41 @@ public open class CfnUser internal constructor(
   }
 
   public interface Builder {
-    public fun directoryUserId(directoryUserId: String) {
-    }
+    public fun directoryUserId(directoryUserId: String)
 
-    public fun hierarchyGroupArn(hierarchyGroupArn: String) {
-    }
+    public fun hierarchyGroupArn(hierarchyGroupArn: String)
 
-    public fun identityInfo(identityInfo: IResolvable) {
-    }
+    public fun identityInfo(identityInfo: IResolvable)
 
-    public fun identityInfo(identityInfo: UserIdentityInfoProperty) {
-    }
+    public fun identityInfo(identityInfo: UserIdentityInfoProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d38519efe9ab8819df44aad45dd3fcf21a2f035505d17447ebc022a463c8ceaa")
-    public fun identityInfo(identityInfo: UserIdentityInfoProperty.Builder.() -> Unit) {
-    }
+    public fun identityInfo(identityInfo: UserIdentityInfoProperty.Builder.() -> Unit)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun password(password: String) {
-    }
+    public fun password(password: String)
 
-    public fun phoneConfig(phoneConfig: IResolvable) {
-    }
+    public fun phoneConfig(phoneConfig: IResolvable)
 
-    public fun phoneConfig(phoneConfig: UserPhoneConfigProperty) {
-    }
+    public fun phoneConfig(phoneConfig: UserPhoneConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5a5cc7ef2d9aa0d6fcefd7d98b71f5717effba00a526aae27e382ca3fb1dde29")
-    public fun phoneConfig(phoneConfig: UserPhoneConfigProperty.Builder.() -> Unit) {
-    }
+    public fun phoneConfig(phoneConfig: UserPhoneConfigProperty.Builder.() -> Unit)
 
-    public fun routingProfileArn(routingProfileArn: String) {
-    }
+    public fun routingProfileArn(routingProfileArn: String)
 
-    public fun securityProfileArns(securityProfileArns: List<String>) {
-    }
+    public fun securityProfileArns(securityProfileArns: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userProficiencies(userProficiencies: IResolvable) {
-    }
+    public fun userProficiencies(userProficiencies: IResolvable)
 
-    public fun userProficiencies(userProficiencies: List<Any>) {
-    }
+    public fun userProficiencies(userProficiencies: List<Any>)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl(
@@ -180,69 +164,69 @@ public open class CfnUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnUser.Builder =
         software.amazon.awscdk.services.connect.CfnUser.Builder.create(scope, id)
 
-    public override fun directoryUserId(directoryUserId: String) {
+    override fun directoryUserId(directoryUserId: String) {
       cdkBuilder.directoryUserId(directoryUserId)
     }
 
-    public override fun hierarchyGroupArn(hierarchyGroupArn: String) {
+    override fun hierarchyGroupArn(hierarchyGroupArn: String) {
       cdkBuilder.hierarchyGroupArn(hierarchyGroupArn)
     }
 
-    public override fun identityInfo(identityInfo: IResolvable) {
+    override fun identityInfo(identityInfo: IResolvable) {
       cdkBuilder.identityInfo(identityInfo.let(IResolvable::unwrap))
     }
 
-    public override fun identityInfo(identityInfo: UserIdentityInfoProperty) {
+    override fun identityInfo(identityInfo: UserIdentityInfoProperty) {
       cdkBuilder.identityInfo(identityInfo.let(UserIdentityInfoProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d38519efe9ab8819df44aad45dd3fcf21a2f035505d17447ebc022a463c8ceaa")
-    public override fun identityInfo(identityInfo: UserIdentityInfoProperty.Builder.() -> Unit):
-        Unit = identityInfo(UserIdentityInfoProperty(identityInfo))
+    override fun identityInfo(identityInfo: UserIdentityInfoProperty.Builder.() -> Unit): Unit =
+        identityInfo(UserIdentityInfoProperty(identityInfo))
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun password(password: String) {
+    override fun password(password: String) {
       cdkBuilder.password(password)
     }
 
-    public override fun phoneConfig(phoneConfig: IResolvable) {
+    override fun phoneConfig(phoneConfig: IResolvable) {
       cdkBuilder.phoneConfig(phoneConfig.let(IResolvable::unwrap))
     }
 
-    public override fun phoneConfig(phoneConfig: UserPhoneConfigProperty) {
+    override fun phoneConfig(phoneConfig: UserPhoneConfigProperty) {
       cdkBuilder.phoneConfig(phoneConfig.let(UserPhoneConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5a5cc7ef2d9aa0d6fcefd7d98b71f5717effba00a526aae27e382ca3fb1dde29")
-    public override fun phoneConfig(phoneConfig: UserPhoneConfigProperty.Builder.() -> Unit): Unit =
+    override fun phoneConfig(phoneConfig: UserPhoneConfigProperty.Builder.() -> Unit): Unit =
         phoneConfig(UserPhoneConfigProperty(phoneConfig))
 
-    public override fun routingProfileArn(routingProfileArn: String) {
+    override fun routingProfileArn(routingProfileArn: String) {
       cdkBuilder.routingProfileArn(routingProfileArn)
     }
 
-    public override fun securityProfileArns(securityProfileArns: List<String>) {
+    override fun securityProfileArns(securityProfileArns: List<String>) {
       cdkBuilder.securityProfileArns(securityProfileArns)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userProficiencies(userProficiencies: IResolvable) {
+    override fun userProficiencies(userProficiencies: IResolvable) {
       cdkBuilder.userProficiencies(userProficiencies.let(IResolvable::unwrap))
     }
 
-    public override fun userProficiencies(userProficiencies: List<Any>) {
+    override fun userProficiencies(userProficiencies: List<Any>) {
       cdkBuilder.userProficiencies(userProficiencies)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 
@@ -282,20 +266,15 @@ public open class CfnUser internal constructor(
     public fun secondaryEmail(): String? = unwrap(this).getSecondaryEmail()
 
     public interface Builder {
-      public fun email(email: String) {
-      }
+      public fun email(email: String)
 
-      public fun firstName(firstName: String) {
-      }
+      public fun firstName(firstName: String)
 
-      public fun lastName(lastName: String) {
-      }
+      public fun lastName(lastName: String)
 
-      public fun mobile(mobile: String) {
-      }
+      public fun mobile(mobile: String)
 
-      public fun secondaryEmail(secondaryEmail: String) {
-      }
+      public fun secondaryEmail(secondaryEmail: String)
     }
 
     private class BuilderImpl : Builder {
@@ -303,23 +282,23 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty.Builder =
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty.builder()
 
-      public override fun email(email: String) {
+      override fun email(email: String) {
         cdkBuilder.email(email)
       }
 
-      public override fun firstName(firstName: String) {
+      override fun firstName(firstName: String) {
         cdkBuilder.firstName(firstName)
       }
 
-      public override fun lastName(lastName: String) {
+      override fun lastName(lastName: String) {
         cdkBuilder.lastName(lastName)
       }
 
-      public override fun mobile(mobile: String) {
+      override fun mobile(mobile: String) {
         cdkBuilder.mobile(mobile)
       }
 
-      public override fun secondaryEmail(secondaryEmail: String) {
+      override fun secondaryEmail(secondaryEmail: String) {
         cdkBuilder.secondaryEmail(secondaryEmail)
       }
 
@@ -331,15 +310,15 @@ public open class CfnUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty,
     ) : UserIdentityInfoProperty {
-      public override fun email(): String? = unwrap(this).getEmail()
+      override fun email(): String? = unwrap(this).getEmail()
 
-      public override fun firstName(): String? = unwrap(this).getFirstName()
+      override fun firstName(): String? = unwrap(this).getFirstName()
 
-      public override fun lastName(): String? = unwrap(this).getLastName()
+      override fun lastName(): String? = unwrap(this).getLastName()
 
-      public override fun mobile(): String? = unwrap(this).getMobile()
+      override fun mobile(): String? = unwrap(this).getMobile()
 
-      public override fun secondaryEmail(): String? = unwrap(this).getSecondaryEmail()
+      override fun secondaryEmail(): String? = unwrap(this).getSecondaryEmail()
     }
 
     public companion object {
@@ -370,14 +349,11 @@ public open class CfnUser internal constructor(
     public fun level(): Number
 
     public interface Builder {
-      public fun attributeName(attributeName: String) {
-      }
+      public fun attributeName(attributeName: String)
 
-      public fun attributeValue(attributeValue: String) {
-      }
+      public fun attributeValue(attributeValue: String)
 
-      public fun level(level: Number) {
-      }
+      public fun level(level: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -385,15 +361,15 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty.Builder =
           software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty.builder()
 
-      public override fun attributeName(attributeName: String) {
+      override fun attributeName(attributeName: String) {
         cdkBuilder.attributeName(attributeName)
       }
 
-      public override fun attributeValue(attributeValue: String) {
+      override fun attributeValue(attributeValue: String) {
         cdkBuilder.attributeValue(attributeValue)
       }
 
-      public override fun level(level: Number) {
+      override fun level(level: Number) {
         cdkBuilder.level(level)
       }
 
@@ -405,11 +381,11 @@ public open class CfnUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty,
     ) : UserProficiencyProperty {
-      public override fun attributeName(): String = unwrap(this).getAttributeName()
+      override fun attributeName(): String = unwrap(this).getAttributeName()
 
-      public override fun attributeValue(): String = unwrap(this).getAttributeValue()
+      override fun attributeValue(): String = unwrap(this).getAttributeValue()
 
-      public override fun level(): Number = unwrap(this).getLevel()
+      override fun level(): Number = unwrap(this).getLevel()
     }
 
     public companion object {
@@ -442,20 +418,15 @@ public open class CfnUser internal constructor(
     public fun phoneType(): String
 
     public interface Builder {
-      public fun afterContactWorkTimeLimit(afterContactWorkTimeLimit: Number) {
-      }
+      public fun afterContactWorkTimeLimit(afterContactWorkTimeLimit: Number)
 
-      public fun autoAccept(autoAccept: Boolean) {
-      }
+      public fun autoAccept(autoAccept: Boolean)
 
-      public fun autoAccept(autoAccept: IResolvable) {
-      }
+      public fun autoAccept(autoAccept: IResolvable)
 
-      public fun deskPhoneNumber(deskPhoneNumber: String) {
-      }
+      public fun deskPhoneNumber(deskPhoneNumber: String)
 
-      public fun phoneType(phoneType: String) {
-      }
+      public fun phoneType(phoneType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -463,23 +434,23 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty.Builder =
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty.builder()
 
-      public override fun afterContactWorkTimeLimit(afterContactWorkTimeLimit: Number) {
+      override fun afterContactWorkTimeLimit(afterContactWorkTimeLimit: Number) {
         cdkBuilder.afterContactWorkTimeLimit(afterContactWorkTimeLimit)
       }
 
-      public override fun autoAccept(autoAccept: Boolean) {
+      override fun autoAccept(autoAccept: Boolean) {
         cdkBuilder.autoAccept(autoAccept)
       }
 
-      public override fun autoAccept(autoAccept: IResolvable) {
+      override fun autoAccept(autoAccept: IResolvable) {
         cdkBuilder.autoAccept(autoAccept.let(IResolvable::unwrap))
       }
 
-      public override fun deskPhoneNumber(deskPhoneNumber: String) {
+      override fun deskPhoneNumber(deskPhoneNumber: String) {
         cdkBuilder.deskPhoneNumber(deskPhoneNumber)
       }
 
-      public override fun phoneType(phoneType: String) {
+      override fun phoneType(phoneType: String) {
         cdkBuilder.phoneType(phoneType)
       }
 
@@ -491,14 +462,14 @@ public open class CfnUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty,
     ) : UserPhoneConfigProperty {
-      public override fun afterContactWorkTimeLimit(): Number? =
+      override fun afterContactWorkTimeLimit(): Number? =
           unwrap(this).getAfterContactWorkTimeLimit()
 
-      public override fun autoAccept(): Any? = unwrap(this).getAutoAccept()
+      override fun autoAccept(): Any? = unwrap(this).getAutoAccept()
 
-      public override fun deskPhoneNumber(): String? = unwrap(this).getDeskPhoneNumber()
+      override fun deskPhoneNumber(): String? = unwrap(this).getDeskPhoneNumber()
 
-      public override fun phoneType(): String = unwrap(this).getPhoneType()
+      override fun phoneType(): String = unwrap(this).getPhoneType()
     }
 
     public companion object {

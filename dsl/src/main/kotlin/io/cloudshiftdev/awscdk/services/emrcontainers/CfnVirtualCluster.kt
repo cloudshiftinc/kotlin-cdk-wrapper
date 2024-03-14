@@ -58,22 +58,17 @@ public open class CfnVirtualCluster internal constructor(
   }
 
   public interface Builder {
-    public fun containerProvider(containerProvider: IResolvable) {
-    }
+    public fun containerProvider(containerProvider: IResolvable)
 
-    public fun containerProvider(containerProvider: ContainerProviderProperty) {
-    }
+    public fun containerProvider(containerProvider: ContainerProviderProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e89df576ee0d06994e7056ae49e61090d8197040e42065ef0f40f4e78a3d4cd")
-    public fun containerProvider(containerProvider: ContainerProviderProperty.Builder.() -> Unit) {
-    }
+    public fun containerProvider(containerProvider: ContainerProviderProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -83,25 +78,24 @@ public open class CfnVirtualCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.Builder
         = software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.Builder.create(scope, id)
 
-    public override fun containerProvider(containerProvider: IResolvable) {
+    override fun containerProvider(containerProvider: IResolvable) {
       cdkBuilder.containerProvider(containerProvider.let(IResolvable::unwrap))
     }
 
-    public override fun containerProvider(containerProvider: ContainerProviderProperty) {
+    override fun containerProvider(containerProvider: ContainerProviderProperty) {
       cdkBuilder.containerProvider(containerProvider.let(ContainerProviderProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2e89df576ee0d06994e7056ae49e61090d8197040e42065ef0f40f4e78a3d4cd")
-    public override
-        fun containerProvider(containerProvider: ContainerProviderProperty.Builder.() -> Unit): Unit
-        = containerProvider(ContainerProviderProperty(containerProvider))
+    override fun containerProvider(containerProvider: ContainerProviderProperty.Builder.() -> Unit):
+        Unit = containerProvider(ContainerProviderProperty(containerProvider))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -134,8 +128,7 @@ public open class CfnVirtualCluster internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -143,7 +136,7 @@ public open class CfnVirtualCluster internal constructor(
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty.Builder =
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty.builder()
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -156,7 +149,7 @@ public open class CfnVirtualCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty,
     ) : EksInfoProperty {
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
@@ -187,22 +180,17 @@ public open class CfnVirtualCluster internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun info(info: IResolvable) {
-      }
+      public fun info(info: IResolvable)
 
-      public fun info(info: ContainerInfoProperty) {
-      }
+      public fun info(info: ContainerInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ffa976c868c8531fc2f2117b620b1cb75fb826367a1a24556c5720ed57e4fceb")
-      public fun info(info: ContainerInfoProperty.Builder.() -> Unit) {
-      }
+      public fun info(info: ContainerInfoProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -211,24 +199,24 @@ public open class CfnVirtualCluster internal constructor(
           =
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun info(info: IResolvable) {
+      override fun info(info: IResolvable) {
         cdkBuilder.info(info.let(IResolvable::unwrap))
       }
 
-      public override fun info(info: ContainerInfoProperty) {
+      override fun info(info: ContainerInfoProperty) {
         cdkBuilder.info(info.let(ContainerInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ffa976c868c8531fc2f2117b620b1cb75fb826367a1a24556c5720ed57e4fceb")
-      public override fun info(info: ContainerInfoProperty.Builder.() -> Unit): Unit =
+      override fun info(info: ContainerInfoProperty.Builder.() -> Unit): Unit =
           info(ContainerInfoProperty(info))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -241,11 +229,11 @@ public open class CfnVirtualCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty,
     ) : ContainerProviderProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun info(): Any = unwrap(this).getInfo()
+      override fun info(): Any = unwrap(this).getInfo()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -272,16 +260,13 @@ public open class CfnVirtualCluster internal constructor(
     public fun eksInfo(): Any
 
     public interface Builder {
-      public fun eksInfo(eksInfo: IResolvable) {
-      }
+      public fun eksInfo(eksInfo: IResolvable)
 
-      public fun eksInfo(eksInfo: EksInfoProperty) {
-      }
+      public fun eksInfo(eksInfo: EksInfoProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6ff6de1923c0ff91cb430fdd5391a7aa62c04bdbe1f675b3d5693174d18029c")
-      public fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit) {
-      }
+      public fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -290,17 +275,17 @@ public open class CfnVirtualCluster internal constructor(
           =
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty.builder()
 
-      public override fun eksInfo(eksInfo: IResolvable) {
+      override fun eksInfo(eksInfo: IResolvable) {
         cdkBuilder.eksInfo(eksInfo.let(IResolvable::unwrap))
       }
 
-      public override fun eksInfo(eksInfo: EksInfoProperty) {
+      override fun eksInfo(eksInfo: EksInfoProperty) {
         cdkBuilder.eksInfo(eksInfo.let(EksInfoProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f6ff6de1923c0ff91cb430fdd5391a7aa62c04bdbe1f675b3d5693174d18029c")
-      public override fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit): Unit =
+      override fun eksInfo(eksInfo: EksInfoProperty.Builder.() -> Unit): Unit =
           eksInfo(EksInfoProperty(eksInfo))
 
       public fun build():
@@ -312,7 +297,7 @@ public open class CfnVirtualCluster internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty,
     ) : ContainerInfoProperty {
-      public override fun eksInfo(): Any = unwrap(this).getEksInfo()
+      override fun eksInfo(): Any = unwrap(this).getEksInfo()
     }
 
     public companion object {

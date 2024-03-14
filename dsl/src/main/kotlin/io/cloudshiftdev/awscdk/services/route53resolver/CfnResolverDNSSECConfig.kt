@@ -28,8 +28,7 @@ public open class CfnResolverDNSSECConfig internal constructor(
   }
 
   public interface Builder {
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
   }
 
   private class BuilderImpl(
@@ -41,7 +40,7 @@ public open class CfnResolverDNSSECConfig internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig.Builder.create(scope,
         id)
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 

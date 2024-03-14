@@ -11,22 +11,20 @@ public interface EcrDockerCredentialOptions {
       unwrap(this).getUsages()?.map(DockerCredentialUsage::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun assumeRole(assumeRole: IRole) {
-    }
+    public fun assumeRole(assumeRole: IRole)
 
-    public fun usages(usages: List<DockerCredentialUsage>) {
-    }
+    public fun usages(usages: List<DockerCredentialUsage>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions.Builder =
         software.amazon.awscdk.pipelines.EcrDockerCredentialOptions.builder()
 
-    public override fun assumeRole(assumeRole: IRole) {
+    override fun assumeRole(assumeRole: IRole) {
       cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
     }
 
-    public override fun usages(usages: List<DockerCredentialUsage>) {
+    override fun usages(usages: List<DockerCredentialUsage>) {
       cdkBuilder.usages(usages.map(DockerCredentialUsage::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface EcrDockerCredentialOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions,
   ) : EcrDockerCredentialOptions {
-    public override fun assumeRole(): IRole? = unwrap(this).getAssumeRole()?.let(IRole::wrap)
+    override fun assumeRole(): IRole? = unwrap(this).getAssumeRole()?.let(IRole::wrap)
 
-    public override fun usages(): List<DockerCredentialUsage> =
+    override fun usages(): List<DockerCredentialUsage> =
         unwrap(this).getUsages()?.map(DockerCredentialUsage::wrap) ?: emptyList()
   }
 

@@ -8,7 +8,7 @@ public interface IAlarmAction {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction,
   ) : IAlarmAction {
-    public override fun bind(arg0: Construct, arg1: IAlarm): AlarmActionConfig =
+    override fun bind(arg0: Construct, arg1: IAlarm): AlarmActionConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
   }

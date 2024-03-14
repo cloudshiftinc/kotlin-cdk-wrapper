@@ -9,11 +9,9 @@ public interface TransformS3DataSource {
   public fun s3Uri(): String
 
   public interface Builder {
-    public fun s3DataType(s3DataType: S3DataType) {
-    }
+    public fun s3DataType(s3DataType: S3DataType)
 
-    public fun s3Uri(s3Uri: String) {
-    }
+    public fun s3Uri(s3Uri: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface TransformS3DataSource {
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource.builder()
 
-    public override fun s3DataType(s3DataType: S3DataType) {
+    override fun s3DataType(s3DataType: S3DataType) {
       cdkBuilder.s3DataType(s3DataType.let(S3DataType::unwrap))
     }
 
-    public override fun s3Uri(s3Uri: String) {
+    override fun s3Uri(s3Uri: String) {
       cdkBuilder.s3Uri(s3Uri)
     }
 
@@ -37,10 +35,9 @@ public interface TransformS3DataSource {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource,
   ) : TransformS3DataSource {
-    public override fun s3DataType(): S3DataType? =
-        unwrap(this).getS3DataType()?.let(S3DataType::wrap)
+    override fun s3DataType(): S3DataType? = unwrap(this).getS3DataType()?.let(S3DataType::wrap)
 
-    public override fun s3Uri(): String = unwrap(this).getS3Uri()
+    override fun s3Uri(): String = unwrap(this).getS3Uri()
   }
 
   public companion object {

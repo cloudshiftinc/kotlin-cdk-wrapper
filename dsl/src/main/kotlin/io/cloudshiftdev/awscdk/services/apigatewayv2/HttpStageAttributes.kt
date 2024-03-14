@@ -7,22 +7,20 @@ public interface HttpStageAttributes : StageAttributes {
   public fun api(): IHttpApi
 
   public interface Builder {
-    public fun api(api: IHttpApi) {
-    }
+    public fun api(api: IHttpApi)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes.Builder
         = software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes.builder()
 
-    public override fun api(api: IHttpApi) {
+    override fun api(api: IHttpApi) {
       cdkBuilder.api(api.let(IHttpApi::unwrap))
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
@@ -33,9 +31,9 @@ public interface HttpStageAttributes : StageAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes,
   ) : HttpStageAttributes {
-    public override fun api(): IHttpApi = unwrap(this).getApi().let(IHttpApi::wrap)
+    override fun api(): IHttpApi = unwrap(this).getApi().let(IHttpApi::wrap)
 
-    public override fun stageName(): String = unwrap(this).getStageName()
+    override fun stageName(): String = unwrap(this).getStageName()
   }
 
   public companion object {

@@ -41,92 +41,80 @@ public interface IntegrationOptions {
   public fun vpcLink(): IVpcLink? = unwrap(this).getVpcLink()?.let(IVpcLink::wrap)
 
   public interface Builder {
-    public fun cacheKeyParameters(cacheKeyParameters: List<String>) {
-    }
+    public fun cacheKeyParameters(cacheKeyParameters: List<String>)
 
-    public fun cacheNamespace(cacheNamespace: String) {
-    }
+    public fun cacheNamespace(cacheNamespace: String)
 
-    public fun connectionType(connectionType: ConnectionType) {
-    }
+    public fun connectionType(connectionType: ConnectionType)
 
-    public fun contentHandling(contentHandling: ContentHandling) {
-    }
+    public fun contentHandling(contentHandling: ContentHandling)
 
-    public fun credentialsPassthrough(credentialsPassthrough: Boolean) {
-    }
+    public fun credentialsPassthrough(credentialsPassthrough: Boolean)
 
-    public fun credentialsRole(credentialsRole: IRole) {
-    }
+    public fun credentialsRole(credentialsRole: IRole)
 
-    public fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
-    }
+    public fun integrationResponses(integrationResponses: List<IntegrationResponse>)
 
-    public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-    }
+    public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior)
 
-    public fun requestParameters(requestParameters: Map<String, String>) {
-    }
+    public fun requestParameters(requestParameters: Map<String, String>)
 
-    public fun requestTemplates(requestTemplates: Map<String, String>) {
-    }
+    public fun requestTemplates(requestTemplates: Map<String, String>)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun vpcLink(vpcLink: IVpcLink) {
-    }
+    public fun vpcLink(vpcLink: IVpcLink)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.IntegrationOptions.Builder =
         software.amazon.awscdk.services.apigateway.IntegrationOptions.builder()
 
-    public override fun cacheKeyParameters(cacheKeyParameters: List<String>) {
+    override fun cacheKeyParameters(cacheKeyParameters: List<String>) {
       cdkBuilder.cacheKeyParameters(cacheKeyParameters)
     }
 
-    public override fun cacheNamespace(cacheNamespace: String) {
+    override fun cacheNamespace(cacheNamespace: String) {
       cdkBuilder.cacheNamespace(cacheNamespace)
     }
 
-    public override fun connectionType(connectionType: ConnectionType) {
+    override fun connectionType(connectionType: ConnectionType) {
       cdkBuilder.connectionType(connectionType.let(ConnectionType::unwrap))
     }
 
-    public override fun contentHandling(contentHandling: ContentHandling) {
+    override fun contentHandling(contentHandling: ContentHandling) {
       cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
     }
 
-    public override fun credentialsPassthrough(credentialsPassthrough: Boolean) {
+    override fun credentialsPassthrough(credentialsPassthrough: Boolean) {
       cdkBuilder.credentialsPassthrough(credentialsPassthrough)
     }
 
-    public override fun credentialsRole(credentialsRole: IRole) {
+    override fun credentialsRole(credentialsRole: IRole) {
       cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
     }
 
-    public override fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
+    override fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
       cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse::unwrap))
     }
 
-    public override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
+    override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
       cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
     }
 
-    public override fun requestParameters(requestParameters: Map<String, String>) {
+    override fun requestParameters(requestParameters: Map<String, String>) {
       cdkBuilder.requestParameters(requestParameters)
     }
 
-    public override fun requestTemplates(requestTemplates: Map<String, String>) {
+    override fun requestTemplates(requestTemplates: Map<String, String>) {
       cdkBuilder.requestTemplates(requestTemplates)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun vpcLink(vpcLink: IVpcLink) {
+    override fun vpcLink(vpcLink: IVpcLink) {
       cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
     }
 
@@ -137,38 +125,36 @@ public interface IntegrationOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.IntegrationOptions,
   ) : IntegrationOptions {
-    public override fun cacheKeyParameters(): List<String> = unwrap(this).getCacheKeyParameters() ?:
+    override fun cacheKeyParameters(): List<String> = unwrap(this).getCacheKeyParameters() ?:
         emptyList()
 
-    public override fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
+    override fun cacheNamespace(): String? = unwrap(this).getCacheNamespace()
 
-    public override fun connectionType(): ConnectionType? =
+    override fun connectionType(): ConnectionType? =
         unwrap(this).getConnectionType()?.let(ConnectionType::wrap)
 
-    public override fun contentHandling(): ContentHandling? =
+    override fun contentHandling(): ContentHandling? =
         unwrap(this).getContentHandling()?.let(ContentHandling::wrap)
 
-    public override fun credentialsPassthrough(): Boolean? =
-        unwrap(this).getCredentialsPassthrough()
+    override fun credentialsPassthrough(): Boolean? = unwrap(this).getCredentialsPassthrough()
 
-    public override fun credentialsRole(): IRole? =
-        unwrap(this).getCredentialsRole()?.let(IRole::wrap)
+    override fun credentialsRole(): IRole? = unwrap(this).getCredentialsRole()?.let(IRole::wrap)
 
-    public override fun integrationResponses(): List<IntegrationResponse> =
+    override fun integrationResponses(): List<IntegrationResponse> =
         unwrap(this).getIntegrationResponses()?.map(IntegrationResponse::wrap) ?: emptyList()
 
-    public override fun passthroughBehavior(): PassthroughBehavior? =
+    override fun passthroughBehavior(): PassthroughBehavior? =
         unwrap(this).getPassthroughBehavior()?.let(PassthroughBehavior::wrap)
 
-    public override fun requestParameters(): Map<String, String> =
-        unwrap(this).getRequestParameters() ?: emptyMap()
+    override fun requestParameters(): Map<String, String> = unwrap(this).getRequestParameters() ?:
+        emptyMap()
 
-    public override fun requestTemplates(): Map<String, String> = unwrap(this).getRequestTemplates()
-        ?: emptyMap()
+    override fun requestTemplates(): Map<String, String> = unwrap(this).getRequestTemplates() ?:
+        emptyMap()
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun vpcLink(): IVpcLink? = unwrap(this).getVpcLink()?.let(IVpcLink::wrap)
+    override fun vpcLink(): IVpcLink? = unwrap(this).getVpcLink()?.let(IVpcLink::wrap)
   }
 
   public companion object {

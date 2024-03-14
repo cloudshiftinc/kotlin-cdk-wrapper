@@ -29,29 +29,21 @@ public open class KeyPair internal constructor(
   public override fun type(): KeyPairType? = unwrap(this).getType()?.let(KeyPairType::wrap)
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun environmentFromArn(environmentFromArn: String) {
-    }
+    public fun environmentFromArn(environmentFromArn: String)
 
-    public fun format(format: KeyPairFormat) {
-    }
+    public fun format(format: KeyPairFormat)
 
-    public fun keyPairName(keyPairName: String) {
-    }
+    public fun keyPairName(keyPairName: String)
 
-    public fun physicalName(physicalName: String) {
-    }
+    public fun physicalName(physicalName: String)
 
-    public fun publicKeyMaterial(publicKeyMaterial: String) {
-    }
+    public fun publicKeyMaterial(publicKeyMaterial: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun type(type: KeyPairType) {
-    }
+    public fun type(type: KeyPairType)
   }
 
   private class BuilderImpl(
@@ -61,35 +53,35 @@ public open class KeyPair internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.KeyPair.Builder =
         software.amazon.awscdk.services.ec2.KeyPair.Builder.create(scope, id)
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun environmentFromArn(environmentFromArn: String) {
+    override fun environmentFromArn(environmentFromArn: String) {
       cdkBuilder.environmentFromArn(environmentFromArn)
     }
 
-    public override fun format(format: KeyPairFormat) {
+    override fun format(format: KeyPairFormat) {
       cdkBuilder.format(format.let(KeyPairFormat::unwrap))
     }
 
-    public override fun keyPairName(keyPairName: String) {
+    override fun keyPairName(keyPairName: String) {
       cdkBuilder.keyPairName(keyPairName)
     }
 
-    public override fun physicalName(physicalName: String) {
+    override fun physicalName(physicalName: String) {
       cdkBuilder.physicalName(physicalName)
     }
 
-    public override fun publicKeyMaterial(publicKeyMaterial: String) {
+    override fun publicKeyMaterial(publicKeyMaterial: String) {
       cdkBuilder.publicKeyMaterial(publicKeyMaterial)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun type(type: KeyPairType) {
+    override fun type(type: KeyPairType) {
       cdkBuilder.type(type.let(KeyPairType::unwrap))
     }
 

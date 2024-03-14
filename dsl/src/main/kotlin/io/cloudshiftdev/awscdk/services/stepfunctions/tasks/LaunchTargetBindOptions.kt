@@ -10,11 +10,9 @@ public interface LaunchTargetBindOptions {
   public fun taskDefinition(): ITaskDefinition
 
   public interface Builder {
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun taskDefinition(taskDefinition: ITaskDefinition) {
-    }
+    public fun taskDefinition(taskDefinition: ITaskDefinition)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface LaunchTargetBindOptions {
         software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions.builder()
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun taskDefinition(taskDefinition: ITaskDefinition) {
+    override fun taskDefinition(taskDefinition: ITaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition::unwrap))
     }
 
@@ -38,9 +36,9 @@ public interface LaunchTargetBindOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions,
   ) : LaunchTargetBindOptions {
-    public override fun cluster(): ICluster? = unwrap(this).getCluster()?.let(ICluster::wrap)
+    override fun cluster(): ICluster? = unwrap(this).getCluster()?.let(ICluster::wrap)
 
-    public override fun taskDefinition(): ITaskDefinition =
+    override fun taskDefinition(): ITaskDefinition =
         unwrap(this).getTaskDefinition().let(ITaskDefinition::wrap)
   }
 

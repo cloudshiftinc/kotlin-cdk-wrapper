@@ -113,52 +113,37 @@ public open class CfnEnvironment internal constructor(
   }
 
   public interface Builder {
-    public fun applicationName(applicationName: String) {
-    }
+    public fun applicationName(applicationName: String)
 
-    public fun cnamePrefix(cnamePrefix: String) {
-    }
+    public fun cnamePrefix(cnamePrefix: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun operationsRole(operationsRole: String) {
-    }
+    public fun operationsRole(operationsRole: String)
 
-    public fun optionSettings(optionSettings: IResolvable) {
-    }
+    public fun optionSettings(optionSettings: IResolvable)
 
-    public fun optionSettings(optionSettings: List<Any>) {
-    }
+    public fun optionSettings(optionSettings: List<Any>)
 
-    public fun platformArn(platformArn: String) {
-    }
+    public fun platformArn(platformArn: String)
 
-    public fun solutionStackName(solutionStackName: String) {
-    }
+    public fun solutionStackName(solutionStackName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun templateName(templateName: String) {
-    }
+    public fun templateName(templateName: String)
 
-    public fun tier(tier: IResolvable) {
-    }
+    public fun tier(tier: IResolvable)
 
-    public fun tier(tier: TierProperty) {
-    }
+    public fun tier(tier: TierProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da8a7b4f68c3a6fb28e3ae16f58ad6cc5abb1b5b4ce910ac21f323e9497a3e51")
-    public fun tier(tier: TierProperty.Builder.() -> Unit) {
-    }
+    public fun tier(tier: TierProperty.Builder.() -> Unit)
 
-    public fun versionLabel(versionLabel: String) {
-    }
+    public fun versionLabel(versionLabel: String)
   }
 
   private class BuilderImpl(
@@ -168,63 +153,63 @@ public open class CfnEnvironment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.Builder
         = software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.Builder.create(scope, id)
 
-    public override fun applicationName(applicationName: String) {
+    override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
-    public override fun cnamePrefix(cnamePrefix: String) {
+    override fun cnamePrefix(cnamePrefix: String) {
       cdkBuilder.cnamePrefix(cnamePrefix)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun operationsRole(operationsRole: String) {
+    override fun operationsRole(operationsRole: String) {
       cdkBuilder.operationsRole(operationsRole)
     }
 
-    public override fun optionSettings(optionSettings: IResolvable) {
+    override fun optionSettings(optionSettings: IResolvable) {
       cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
     }
 
-    public override fun optionSettings(optionSettings: List<Any>) {
+    override fun optionSettings(optionSettings: List<Any>) {
       cdkBuilder.optionSettings(optionSettings)
     }
 
-    public override fun platformArn(platformArn: String) {
+    override fun platformArn(platformArn: String) {
       cdkBuilder.platformArn(platformArn)
     }
 
-    public override fun solutionStackName(solutionStackName: String) {
+    override fun solutionStackName(solutionStackName: String) {
       cdkBuilder.solutionStackName(solutionStackName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun templateName(templateName: String) {
+    override fun templateName(templateName: String) {
       cdkBuilder.templateName(templateName)
     }
 
-    public override fun tier(tier: IResolvable) {
+    override fun tier(tier: IResolvable) {
       cdkBuilder.tier(tier.let(IResolvable::unwrap))
     }
 
-    public override fun tier(tier: TierProperty) {
+    override fun tier(tier: TierProperty) {
       cdkBuilder.tier(tier.let(TierProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("da8a7b4f68c3a6fb28e3ae16f58ad6cc5abb1b5b4ce910ac21f323e9497a3e51")
-    public override fun tier(tier: TierProperty.Builder.() -> Unit): Unit = tier(TierProperty(tier))
+    override fun tier(tier: TierProperty.Builder.() -> Unit): Unit = tier(TierProperty(tier))
 
-    public override fun versionLabel(versionLabel: String) {
+    override fun versionLabel(versionLabel: String) {
       cdkBuilder.versionLabel(versionLabel)
     }
 
@@ -261,14 +246,11 @@ public open class CfnEnvironment internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -276,15 +258,15 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty.Builder =
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -297,11 +279,11 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty,
     ) : TierProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -334,17 +316,13 @@ public open class CfnEnvironment internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun optionName(optionName: String) {
-      }
+      public fun optionName(optionName: String)
 
-      public fun resourceName(resourceName: String) {
-      }
+      public fun resourceName(resourceName: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -353,19 +331,19 @@ public open class CfnEnvironment internal constructor(
           =
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty.builder()
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun optionName(optionName: String) {
+      override fun optionName(optionName: String) {
         cdkBuilder.optionName(optionName)
       }
 
-      public override fun resourceName(resourceName: String) {
+      override fun resourceName(resourceName: String) {
         cdkBuilder.resourceName(resourceName)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -378,13 +356,13 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty,
     ) : OptionSettingProperty {
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
 
-      public override fun optionName(): String = unwrap(this).getOptionName()
+      override fun optionName(): String = unwrap(this).getOptionName()
 
-      public override fun resourceName(): String? = unwrap(this).getResourceName()
+      override fun resourceName(): String? = unwrap(this).getResourceName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

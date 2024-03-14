@@ -56,20 +56,15 @@ public open class CfnFleet internal constructor(
   }
 
   public interface Builder {
-    public fun baseCapacity(baseCapacity: Number) {
-    }
+    public fun baseCapacity(baseCapacity: Number)
 
-    public fun computeType(computeType: String) {
-    }
+    public fun computeType(computeType: String)
 
-    public fun environmentType(environmentType: String) {
-    }
+    public fun environmentType(environmentType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -79,23 +74,23 @@ public open class CfnFleet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.CfnFleet.Builder =
         software.amazon.awscdk.services.codebuild.CfnFleet.Builder.create(scope, id)
 
-    public override fun baseCapacity(baseCapacity: Number) {
+    override fun baseCapacity(baseCapacity: Number) {
       cdkBuilder.baseCapacity(baseCapacity)
     }
 
-    public override fun computeType(computeType: String) {
+    override fun computeType(computeType: String) {
       cdkBuilder.computeType(computeType)
     }
 
-    public override fun environmentType(environmentType: String) {
+    override fun environmentType(environmentType: String) {
       cdkBuilder.environmentType(environmentType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

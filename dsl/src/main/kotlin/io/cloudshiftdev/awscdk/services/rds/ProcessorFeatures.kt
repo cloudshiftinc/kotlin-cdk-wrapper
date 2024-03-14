@@ -9,22 +9,20 @@ public interface ProcessorFeatures {
   public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
 
   public interface Builder {
-    public fun coreCount(coreCount: Number) {
-    }
+    public fun coreCount(coreCount: Number)
 
-    public fun threadsPerCore(threadsPerCore: Number) {
-    }
+    public fun threadsPerCore(threadsPerCore: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ProcessorFeatures.Builder =
         software.amazon.awscdk.services.rds.ProcessorFeatures.builder()
 
-    public override fun coreCount(coreCount: Number) {
+    override fun coreCount(coreCount: Number) {
       cdkBuilder.coreCount(coreCount)
     }
 
-    public override fun threadsPerCore(threadsPerCore: Number) {
+    override fun threadsPerCore(threadsPerCore: Number) {
       cdkBuilder.threadsPerCore(threadsPerCore)
     }
 
@@ -34,9 +32,9 @@ public interface ProcessorFeatures {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures,
   ) : ProcessorFeatures {
-    public override fun coreCount(): Number? = unwrap(this).getCoreCount()
+    override fun coreCount(): Number? = unwrap(this).getCoreCount()
 
-    public override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+    override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
   }
 
   public companion object {

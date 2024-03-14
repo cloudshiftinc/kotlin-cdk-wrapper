@@ -49,20 +49,15 @@ public open class CfnUserPoolResourceServer internal constructor(
   }
 
   public interface Builder {
-    public fun identifier(identifier: String) {
-    }
+    public fun identifier(identifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun scopes(scopes: IResolvable) {
-    }
+    public fun scopes(scopes: IResolvable)
 
-    public fun scopes(scopes: List<Any>) {
-    }
+    public fun scopes(scopes: List<Any>)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl(
@@ -73,23 +68,23 @@ public open class CfnUserPoolResourceServer internal constructor(
         software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.Builder =
         software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.Builder.create(scope, id)
 
-    public override fun identifier(identifier: String) {
+    override fun identifier(identifier: String) {
       cdkBuilder.identifier(identifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun scopes(scopes: IResolvable) {
+    override fun scopes(scopes: IResolvable) {
       cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
     }
 
-    public override fun scopes(scopes: List<Any>) {
+    override fun scopes(scopes: List<Any>) {
       cdkBuilder.scopes(scopes)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
@@ -124,11 +119,9 @@ public open class CfnUserPoolResourceServer internal constructor(
     public fun scopeName(): String
 
     public interface Builder {
-      public fun scopeDescription(scopeDescription: String) {
-      }
+      public fun scopeDescription(scopeDescription: String)
 
-      public fun scopeName(scopeName: String) {
-      }
+      public fun scopeName(scopeName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -137,11 +130,11 @@ public open class CfnUserPoolResourceServer internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty.builder()
 
-      public override fun scopeDescription(scopeDescription: String) {
+      override fun scopeDescription(scopeDescription: String) {
         cdkBuilder.scopeDescription(scopeDescription)
       }
 
-      public override fun scopeName(scopeName: String) {
+      override fun scopeName(scopeName: String) {
         cdkBuilder.scopeName(scopeName)
       }
 
@@ -154,9 +147,9 @@ public open class CfnUserPoolResourceServer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer.ResourceServerScopeTypeProperty,
     ) : ResourceServerScopeTypeProperty {
-      public override fun scopeDescription(): String = unwrap(this).getScopeDescription()
+      override fun scopeDescription(): String = unwrap(this).getScopeDescription()
 
-      public override fun scopeName(): String = unwrap(this).getScopeName()
+      override fun scopeName(): String = unwrap(this).getScopeName()
     }
 
     public companion object {

@@ -13,49 +13,44 @@ public interface AccessLogConfig {
 
   public interface Builder {
     public
-        fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
-    }
+        fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("31692470dacc90bc3e527d462b2d0309a24a4027b21c724a359ea1bcb8389855")
     public
-        fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder.() -> Unit) {
-    }
+        fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder.() -> Unit)
 
-    public fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty) {
-    }
+    public fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c8911635fcfe0190553a5f9e21ab70e568d572b85c98c968563bc77ca18cbd9")
     public
-        fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty.Builder.() -> Unit) {
-    }
+        fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.AccessLogConfig.Builder =
         software.amazon.awscdk.services.appmesh.AccessLogConfig.builder()
 
-    public override
+    override
         fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
       cdkBuilder.virtualGatewayAccessLog(virtualGatewayAccessLog.let(CfnVirtualGateway.VirtualGatewayAccessLogProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("31692470dacc90bc3e527d462b2d0309a24a4027b21c724a359ea1bcb8389855")
-    public override
+    override
         fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder.() -> Unit):
         Unit =
         virtualGatewayAccessLog(CfnVirtualGateway.VirtualGatewayAccessLogProperty(virtualGatewayAccessLog))
 
-    public override
-        fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty) {
+    override fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty) {
       cdkBuilder.virtualNodeAccessLog(virtualNodeAccessLog.let(CfnVirtualNode.AccessLogProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7c8911635fcfe0190553a5f9e21ab70e568d572b85c98c968563bc77ca18cbd9")
-    public override
+    override
         fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty.Builder.() -> Unit):
         Unit = virtualNodeAccessLog(CfnVirtualNode.AccessLogProperty(virtualNodeAccessLog))
 
@@ -65,11 +60,10 @@ public interface AccessLogConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.AccessLogConfig,
   ) : AccessLogConfig {
-    public override fun virtualGatewayAccessLog():
-        CfnVirtualGateway.VirtualGatewayAccessLogProperty? =
+    override fun virtualGatewayAccessLog(): CfnVirtualGateway.VirtualGatewayAccessLogProperty? =
         unwrap(this).getVirtualGatewayAccessLog()?.let(CfnVirtualGateway.VirtualGatewayAccessLogProperty::wrap)
 
-    public override fun virtualNodeAccessLog(): CfnVirtualNode.AccessLogProperty? =
+    override fun virtualNodeAccessLog(): CfnVirtualNode.AccessLogProperty? =
         unwrap(this).getVirtualNodeAccessLog()?.let(CfnVirtualNode.AccessLogProperty::wrap)
   }
 

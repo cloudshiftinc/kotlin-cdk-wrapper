@@ -6,7 +6,7 @@ public interface ICustomAttribute {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.ICustomAttribute,
   ) : ICustomAttribute {
-    public override fun bind(): CustomAttributeConfig =
+    override fun bind(): CustomAttributeConfig =
         unwrap(this).bind().let(CustomAttributeConfig::wrap)
   }
 

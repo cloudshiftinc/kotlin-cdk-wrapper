@@ -89,38 +89,27 @@ public open class CfnAuthorizer internal constructor(
   }
 
   public interface Builder {
-    public fun authorizerFunctionArn(authorizerFunctionArn: String) {
-    }
+    public fun authorizerFunctionArn(authorizerFunctionArn: String)
 
-    public fun authorizerName(authorizerName: String) {
-    }
+    public fun authorizerName(authorizerName: String)
 
-    public fun enableCachingForHttp(enableCachingForHttp: Boolean) {
-    }
+    public fun enableCachingForHttp(enableCachingForHttp: Boolean)
 
-    public fun enableCachingForHttp(enableCachingForHttp: IResolvable) {
-    }
+    public fun enableCachingForHttp(enableCachingForHttp: IResolvable)
 
-    public fun signingDisabled(signingDisabled: Boolean) {
-    }
+    public fun signingDisabled(signingDisabled: Boolean)
 
-    public fun signingDisabled(signingDisabled: IResolvable) {
-    }
+    public fun signingDisabled(signingDisabled: IResolvable)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tokenKeyName(tokenKeyName: String) {
-    }
+    public fun tokenKeyName(tokenKeyName: String)
 
-    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
-    }
+    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable)
 
-    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>) {
-    }
+    public fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -130,47 +119,47 @@ public open class CfnAuthorizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnAuthorizer.Builder =
         software.amazon.awscdk.services.iot.CfnAuthorizer.Builder.create(scope, id)
 
-    public override fun authorizerFunctionArn(authorizerFunctionArn: String) {
+    override fun authorizerFunctionArn(authorizerFunctionArn: String) {
       cdkBuilder.authorizerFunctionArn(authorizerFunctionArn)
     }
 
-    public override fun authorizerName(authorizerName: String) {
+    override fun authorizerName(authorizerName: String) {
       cdkBuilder.authorizerName(authorizerName)
     }
 
-    public override fun enableCachingForHttp(enableCachingForHttp: Boolean) {
+    override fun enableCachingForHttp(enableCachingForHttp: Boolean) {
       cdkBuilder.enableCachingForHttp(enableCachingForHttp)
     }
 
-    public override fun enableCachingForHttp(enableCachingForHttp: IResolvable) {
+    override fun enableCachingForHttp(enableCachingForHttp: IResolvable) {
       cdkBuilder.enableCachingForHttp(enableCachingForHttp.let(IResolvable::unwrap))
     }
 
-    public override fun signingDisabled(signingDisabled: Boolean) {
+    override fun signingDisabled(signingDisabled: Boolean) {
       cdkBuilder.signingDisabled(signingDisabled)
     }
 
-    public override fun signingDisabled(signingDisabled: IResolvable) {
+    override fun signingDisabled(signingDisabled: IResolvable) {
       cdkBuilder.signingDisabled(signingDisabled.let(IResolvable::unwrap))
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tokenKeyName(tokenKeyName: String) {
+    override fun tokenKeyName(tokenKeyName: String) {
       cdkBuilder.tokenKeyName(tokenKeyName)
     }
 
-    public override fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
+    override fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
       cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable::unwrap))
     }
 
-    public override fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>) {
+    override fun tokenSigningPublicKeys(tokenSigningPublicKeys: Map<String, String>) {
       cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys)
     }
 

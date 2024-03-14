@@ -9,11 +9,9 @@ public interface ResponseHeadersFrameOptions {
   public fun `override`(): Boolean
 
   public interface Builder {
-    public fun frameOption(frameOption: HeadersFrameOption) {
-    }
+    public fun frameOption(frameOption: HeadersFrameOption)
 
-    public fun `override`(`override`: Boolean) {
-    }
+    public fun `override`(`override`: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface ResponseHeadersFrameOptions {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions.builder()
 
-    public override fun frameOption(frameOption: HeadersFrameOption) {
+    override fun frameOption(frameOption: HeadersFrameOption) {
       cdkBuilder.frameOption(frameOption.let(HeadersFrameOption::unwrap))
     }
 
-    public override fun `override`(`override`: Boolean) {
+    override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
 
@@ -36,10 +34,10 @@ public interface ResponseHeadersFrameOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersFrameOptions,
   ) : ResponseHeadersFrameOptions {
-    public override fun frameOption(): HeadersFrameOption =
+    override fun frameOption(): HeadersFrameOption =
         unwrap(this).getFrameOption().let(HeadersFrameOption::wrap)
 
-    public override fun `override`(): Boolean = unwrap(this).getOverride()
+    override fun `override`(): Boolean = unwrap(this).getOverride()
   }
 
   public companion object {

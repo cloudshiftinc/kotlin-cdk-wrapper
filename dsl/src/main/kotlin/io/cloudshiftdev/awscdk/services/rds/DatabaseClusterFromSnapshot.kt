@@ -53,7 +53,7 @@ public open class DatabaseClusterFromSnapshot internal constructor(
       SecretRotation = addRotationSingleUser(RotationSingleUserOptions(options))
 
   public open fun cloudwatchLogGroups(): Map<String, ILogGroup> =
-      unwrap(this).getCloudwatchLogGroups().mapValues { ILogGroup.wrap(it.value)} ?: emptyMap()
+      unwrap(this).getCloudwatchLogGroups().mapValues{ILogGroup.wrap(it.value)} ?: emptyMap()
 
   public override fun clusterEndpoint(): Endpoint =
       unwrap(this).getClusterEndpoint().let(Endpoint::wrap)
@@ -114,156 +114,109 @@ public open class DatabaseClusterFromSnapshot internal constructor(
       unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
 
   public interface Builder {
-    public fun backtrackWindow(backtrackWindow: Duration) {
-    }
+    public fun backtrackWindow(backtrackWindow: Duration)
 
-    public fun backup(backup: BackupProps) {
-    }
+    public fun backup(backup: BackupProps)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1adb134a32e72472583d4c505224d10a7e95ade94c6ab5ea49c656eed6ae8b5b")
-    public fun backup(backup: BackupProps.Builder.() -> Unit) {
-    }
+    public fun backup(backup: BackupProps.Builder.() -> Unit)
 
-    public fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
-    }
+    public fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>)
 
-    public fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
-    }
+    public fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays)
 
-    public fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
-    }
+    public fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole)
 
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
-    public fun defaultDatabaseName(defaultDatabaseName: String) {
-    }
+    public fun defaultDatabaseName(defaultDatabaseName: String)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun domainRole(domainRole: IRole) {
-    }
+    public fun domainRole(domainRole: IRole)
 
-    public fun enableDataApi(enableDataApi: Boolean) {
-    }
+    public fun enableDataApi(enableDataApi: Boolean)
 
-    public fun engine(engine: IClusterEngine) {
-    }
+    public fun engine(engine: IClusterEngine)
 
-    public fun iamAuthentication(iamAuthentication: Boolean) {
-    }
+    public fun iamAuthentication(iamAuthentication: Boolean)
 
-    public fun instanceIdentifierBase(instanceIdentifierBase: String) {
-    }
+    public fun instanceIdentifierBase(instanceIdentifierBase: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun instanceProps(instanceProps: InstanceProps) {
-    }
+    public fun instanceProps(instanceProps: InstanceProps)
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a03a0e700852020576b1b85226cdaec0837d276e854f2e607e66810e8a4bc75c")
-    public fun instanceProps(instanceProps: InstanceProps.Builder.() -> Unit) {
-    }
+    public fun instanceProps(instanceProps: InstanceProps.Builder.() -> Unit)
 
-    public fun instanceUpdateBehaviour(instanceUpdateBehaviour: InstanceUpdateBehaviour) {
-    }
+    public fun instanceUpdateBehaviour(instanceUpdateBehaviour: InstanceUpdateBehaviour)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun instances(instances: Number) {
-    }
+    public fun instances(instances: Number)
 
-    public fun monitoringInterval(monitoringInterval: Duration) {
-    }
+    public fun monitoringInterval(monitoringInterval: Duration)
 
-    public fun monitoringRole(monitoringRole: IRole) {
-    }
+    public fun monitoringRole(monitoringRole: IRole)
 
-    public fun networkType(networkType: NetworkType) {
-    }
+    public fun networkType(networkType: NetworkType)
 
-    public fun parameterGroup(parameterGroup: IParameterGroup) {
-    }
+    public fun parameterGroup(parameterGroup: IParameterGroup)
 
-    public fun parameters(parameters: Map<String, String>) {
-    }
+    public fun parameters(parameters: Map<String, String>)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun readers(readers: List<IClusterInstance>) {
-    }
+    public fun readers(readers: List<IClusterInstance>)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
-    }
+    public fun s3ExportBuckets(s3ExportBuckets: List<IBucket>)
 
-    public fun s3ExportRole(s3ExportRole: IRole) {
-    }
+    public fun s3ExportRole(s3ExportRole: IRole)
 
-    public fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
-    }
+    public fun s3ImportBuckets(s3ImportBuckets: List<IBucket>)
 
-    public fun s3ImportRole(s3ImportRole: IRole) {
-    }
+    public fun s3ImportRole(s3ImportRole: IRole)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun serverlessV2MaxCapacity(serverlessV2MaxCapacity: Number) {
-    }
+    public fun serverlessV2MaxCapacity(serverlessV2MaxCapacity: Number)
 
-    public fun serverlessV2MinCapacity(serverlessV2MinCapacity: Number) {
-    }
+    public fun serverlessV2MinCapacity(serverlessV2MinCapacity: Number)
 
-    public fun snapshotCredentials(snapshotCredentials: SnapshotCredentials) {
-    }
+    public fun snapshotCredentials(snapshotCredentials: SnapshotCredentials)
 
-    public fun snapshotIdentifier(snapshotIdentifier: String) {
-    }
+    public fun snapshotIdentifier(snapshotIdentifier: String)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun storageEncryptionKey(storageEncryptionKey: IKey) {
-    }
+    public fun storageEncryptionKey(storageEncryptionKey: IKey)
 
-    public fun storageType(storageType: DBClusterStorageType) {
-    }
+    public fun storageType(storageType: DBClusterStorageType)
 
-    public fun subnetGroup(subnetGroup: ISubnetGroup) {
-    }
+    public fun subnetGroup(subnetGroup: ISubnetGroup)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4fb99f1a5ecd4912fdd943e6616bcac1dbd939cdf5992bdff129f24c94f9bfe")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun writer(writer: IClusterInstance) {
-    }
+    public fun writer(writer: IClusterInstance)
   }
 
   private class BuilderImpl(
@@ -273,198 +226,197 @@ public open class DatabaseClusterFromSnapshot internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshot.Builder
         = software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshot.Builder.create(scope, id)
 
-    public override fun backtrackWindow(backtrackWindow: Duration) {
+    override fun backtrackWindow(backtrackWindow: Duration) {
       cdkBuilder.backtrackWindow(backtrackWindow.let(Duration::unwrap))
     }
 
-    public override fun backup(backup: BackupProps) {
+    override fun backup(backup: BackupProps) {
       cdkBuilder.backup(backup.let(BackupProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1adb134a32e72472583d4c505224d10a7e95ade94c6ab5ea49c656eed6ae8b5b")
-    public override fun backup(backup: BackupProps.Builder.() -> Unit): Unit =
-        backup(BackupProps(backup))
+    override fun backup(backup: BackupProps.Builder.() -> Unit): Unit = backup(BackupProps(backup))
 
-    public override fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
+    override fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
       cdkBuilder.cloudwatchLogsExports(cloudwatchLogsExports)
     }
 
-    public override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
+    override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
       cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
+    override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
       cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole::unwrap))
     }
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
-    public override fun defaultDatabaseName(defaultDatabaseName: String) {
+    override fun defaultDatabaseName(defaultDatabaseName: String) {
       cdkBuilder.defaultDatabaseName(defaultDatabaseName)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun domainRole(domainRole: IRole) {
+    override fun domainRole(domainRole: IRole) {
       cdkBuilder.domainRole(domainRole.let(IRole::unwrap))
     }
 
-    public override fun enableDataApi(enableDataApi: Boolean) {
+    override fun enableDataApi(enableDataApi: Boolean) {
       cdkBuilder.enableDataApi(enableDataApi)
     }
 
-    public override fun engine(engine: IClusterEngine) {
+    override fun engine(engine: IClusterEngine) {
       cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
     }
 
-    public override fun iamAuthentication(iamAuthentication: Boolean) {
+    override fun iamAuthentication(iamAuthentication: Boolean) {
       cdkBuilder.iamAuthentication(iamAuthentication)
     }
 
-    public override fun instanceIdentifierBase(instanceIdentifierBase: String) {
+    override fun instanceIdentifierBase(instanceIdentifierBase: String) {
       cdkBuilder.instanceIdentifierBase(instanceIdentifierBase)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun instanceProps(instanceProps: InstanceProps) {
+    override fun instanceProps(instanceProps: InstanceProps) {
       cdkBuilder.instanceProps(instanceProps.let(InstanceProps::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a03a0e700852020576b1b85226cdaec0837d276e854f2e607e66810e8a4bc75c")
-    public override fun instanceProps(instanceProps: InstanceProps.Builder.() -> Unit): Unit =
+    override fun instanceProps(instanceProps: InstanceProps.Builder.() -> Unit): Unit =
         instanceProps(InstanceProps(instanceProps))
 
-    public override fun instanceUpdateBehaviour(instanceUpdateBehaviour: InstanceUpdateBehaviour) {
+    override fun instanceUpdateBehaviour(instanceUpdateBehaviour: InstanceUpdateBehaviour) {
       cdkBuilder.instanceUpdateBehaviour(instanceUpdateBehaviour.let(InstanceUpdateBehaviour::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun instances(instances: Number) {
+    override fun instances(instances: Number) {
       cdkBuilder.instances(instances)
     }
 
-    public override fun monitoringInterval(monitoringInterval: Duration) {
+    override fun monitoringInterval(monitoringInterval: Duration) {
       cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
     }
 
-    public override fun monitoringRole(monitoringRole: IRole) {
+    override fun monitoringRole(monitoringRole: IRole) {
       cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
     }
 
-    public override fun networkType(networkType: NetworkType) {
+    override fun networkType(networkType: NetworkType) {
       cdkBuilder.networkType(networkType.let(NetworkType::unwrap))
     }
 
-    public override fun parameterGroup(parameterGroup: IParameterGroup) {
+    override fun parameterGroup(parameterGroup: IParameterGroup) {
       cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
     }
 
-    public override fun parameters(parameters: Map<String, String>) {
+    override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun readers(readers: List<IClusterInstance>) {
+    override fun readers(readers: List<IClusterInstance>) {
       cdkBuilder.readers(readers.map(IClusterInstance::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
+    override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
       cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
     }
 
-    public override fun s3ExportRole(s3ExportRole: IRole) {
+    override fun s3ExportRole(s3ExportRole: IRole) {
       cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
     }
 
-    public override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
+    override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
       cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
     }
 
-    public override fun s3ImportRole(s3ImportRole: IRole) {
+    override fun s3ImportRole(s3ImportRole: IRole) {
       cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
     }
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun serverlessV2MaxCapacity(serverlessV2MaxCapacity: Number) {
+    override fun serverlessV2MaxCapacity(serverlessV2MaxCapacity: Number) {
       cdkBuilder.serverlessV2MaxCapacity(serverlessV2MaxCapacity)
     }
 
-    public override fun serverlessV2MinCapacity(serverlessV2MinCapacity: Number) {
+    override fun serverlessV2MinCapacity(serverlessV2MinCapacity: Number) {
       cdkBuilder.serverlessV2MinCapacity(serverlessV2MinCapacity)
     }
 
-    public override fun snapshotCredentials(snapshotCredentials: SnapshotCredentials) {
+    override fun snapshotCredentials(snapshotCredentials: SnapshotCredentials) {
       cdkBuilder.snapshotCredentials(snapshotCredentials.let(SnapshotCredentials::unwrap))
     }
 
-    public override fun snapshotIdentifier(snapshotIdentifier: String) {
+    override fun snapshotIdentifier(snapshotIdentifier: String) {
       cdkBuilder.snapshotIdentifier(snapshotIdentifier)
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun storageEncryptionKey(storageEncryptionKey: IKey) {
+    override fun storageEncryptionKey(storageEncryptionKey: IKey) {
       cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey::unwrap))
     }
 
-    public override fun storageType(storageType: DBClusterStorageType) {
+    override fun storageType(storageType: DBClusterStorageType) {
       cdkBuilder.storageType(storageType.let(DBClusterStorageType::unwrap))
     }
 
-    public override fun subnetGroup(subnetGroup: ISubnetGroup) {
+    override fun subnetGroup(subnetGroup: ISubnetGroup) {
       cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4fb99f1a5ecd4912fdd943e6616bcac1dbd939cdf5992bdff129f24c94f9bfe")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
-    public override fun writer(writer: IClusterInstance) {
+    override fun writer(writer: IClusterInstance) {
       cdkBuilder.writer(writer.let(IClusterInstance::unwrap))
     }
 

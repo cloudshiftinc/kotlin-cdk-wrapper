@@ -121,54 +121,39 @@ public open class CfnMonitor internal constructor(
   }
 
   public interface Builder {
-    public fun healthEventsConfig(healthEventsConfig: IResolvable) {
-    }
+    public fun healthEventsConfig(healthEventsConfig: IResolvable)
 
-    public fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty) {
-    }
+    public fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b05a560a3c40f38371339032cfd1a3ffdeb5ffb50a6de313facf159c12d1e230")
-    public
-        fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty.Builder.() -> Unit) {
-    }
+    public fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty.Builder.() -> Unit)
 
-    public fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
-    }
+    public fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable)
 
     public
-        fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty) {
-    }
+        fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89746903b7257412fcb57282231d673b152595e7bb530f29d5ff2306c6f9ec45")
     public
-        fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty.Builder.() -> Unit) {
-    }
+        fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty.Builder.() -> Unit)
 
-    public fun maxCityNetworksToMonitor(maxCityNetworksToMonitor: Number) {
-    }
+    public fun maxCityNetworksToMonitor(maxCityNetworksToMonitor: Number)
 
-    public fun monitorName(monitorName: String) {
-    }
+    public fun monitorName(monitorName: String)
 
-    public fun resources(resources: List<String>) {
-    }
+    public fun resources(resources: List<String>)
 
-    public fun resourcesToAdd(resourcesToAdd: List<String>) {
-    }
+    public fun resourcesToAdd(resourcesToAdd: List<String>)
 
-    public fun resourcesToRemove(resourcesToRemove: List<String>) {
-    }
+    public fun resourcesToRemove(resourcesToRemove: List<String>)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
-    }
+    public fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number)
   }
 
   private class BuilderImpl(
@@ -178,66 +163,65 @@ public open class CfnMonitor internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.internetmonitor.CfnMonitor.Builder =
         software.amazon.awscdk.services.internetmonitor.CfnMonitor.Builder.create(scope, id)
 
-    public override fun healthEventsConfig(healthEventsConfig: IResolvable) {
+    override fun healthEventsConfig(healthEventsConfig: IResolvable) {
       cdkBuilder.healthEventsConfig(healthEventsConfig.let(IResolvable::unwrap))
     }
 
-    public override fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty) {
+    override fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty) {
       cdkBuilder.healthEventsConfig(healthEventsConfig.let(HealthEventsConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b05a560a3c40f38371339032cfd1a3ffdeb5ffb50a6de313facf159c12d1e230")
-    public override
+    override
         fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty.Builder.() -> Unit):
         Unit = healthEventsConfig(HealthEventsConfigProperty(healthEventsConfig))
 
-    public override
-        fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
+    override fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
       cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty) {
       cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(InternetMeasurementsLogDeliveryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89746903b7257412fcb57282231d673b152595e7bb530f29d5ff2306c6f9ec45")
-    public override
+    override
         fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty.Builder.() -> Unit):
         Unit =
         internetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryProperty(internetMeasurementsLogDelivery))
 
-    public override fun maxCityNetworksToMonitor(maxCityNetworksToMonitor: Number) {
+    override fun maxCityNetworksToMonitor(maxCityNetworksToMonitor: Number) {
       cdkBuilder.maxCityNetworksToMonitor(maxCityNetworksToMonitor)
     }
 
-    public override fun monitorName(monitorName: String) {
+    override fun monitorName(monitorName: String) {
       cdkBuilder.monitorName(monitorName)
     }
 
-    public override fun resources(resources: List<String>) {
+    override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
-    public override fun resourcesToAdd(resourcesToAdd: List<String>) {
+    override fun resourcesToAdd(resourcesToAdd: List<String>) {
       cdkBuilder.resourcesToAdd(resourcesToAdd)
     }
 
-    public override fun resourcesToRemove(resourcesToRemove: List<String>) {
+    override fun resourcesToRemove(resourcesToRemove: List<String>) {
       cdkBuilder.resourcesToRemove(resourcesToRemove)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
+    override fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
       cdkBuilder.trafficPercentageToMonitor(trafficPercentageToMonitor)
     }
 
@@ -270,16 +254,13 @@ public open class CfnMonitor internal constructor(
     public fun s3Config(): Any? = unwrap(this).getS3Config()
 
     public interface Builder {
-      public fun s3Config(s3Config: IResolvable) {
-      }
+      public fun s3Config(s3Config: IResolvable)
 
-      public fun s3Config(s3Config: S3ConfigProperty) {
-      }
+      public fun s3Config(s3Config: S3ConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("806473c078150cff44843a2e841fd644c6433b21ed4a82bf9c18f8bc71440ce7")
-      public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit) {
-      }
+      public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -288,17 +269,17 @@ public open class CfnMonitor internal constructor(
           =
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty.builder()
 
-      public override fun s3Config(s3Config: IResolvable) {
+      override fun s3Config(s3Config: IResolvable) {
         cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
       }
 
-      public override fun s3Config(s3Config: S3ConfigProperty) {
+      override fun s3Config(s3Config: S3ConfigProperty) {
         cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("806473c078150cff44843a2e841fd644c6433b21ed4a82bf9c18f8bc71440ce7")
-      public override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
+      override fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit): Unit =
           s3Config(S3ConfigProperty(s3Config))
 
       public fun build():
@@ -310,7 +291,7 @@ public open class CfnMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.InternetMeasurementsLogDeliveryProperty,
     ) : InternetMeasurementsLogDeliveryProperty {
-      public override fun s3Config(): Any? = unwrap(this).getS3Config()
+      override fun s3Config(): Any? = unwrap(this).getS3Config()
     }
 
     public companion object {
@@ -347,38 +328,29 @@ public open class CfnMonitor internal constructor(
 
     public interface Builder {
       public
-          fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: IResolvable) {
-      }
+          fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: IResolvable)
 
       public
-          fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty) {
-      }
+          fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a0c13a3e98e1125fdec76581c1a10eeedb8810d4776780bca07934c54057722a")
       public
-          fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty.Builder.() -> Unit) {
-      }
+          fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty.Builder.() -> Unit)
 
-      public fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
-      }
+      public fun availabilityScoreThreshold(availabilityScoreThreshold: Number)
 
-      public
-          fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: IResolvable) {
-      }
+      public fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: IResolvable)
 
       public
-          fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty) {
-      }
+          fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5b7de77bf4a936610dc8e6edc25a19431e452e7e7dc8d5e6f65e0501c938ead8")
       public
-          fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty.Builder.() -> Unit) {
-      }
+          fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty.Builder.() -> Unit)
 
-      public fun performanceScoreThreshold(performanceScoreThreshold: Number) {
-      }
+      public fun performanceScoreThreshold(performanceScoreThreshold: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -387,45 +359,45 @@ public open class CfnMonitor internal constructor(
           =
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty.builder()
 
-      public override
+      override
           fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: IResolvable) {
         cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty) {
         cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig.let(LocalHealthEventsConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a0c13a3e98e1125fdec76581c1a10eeedb8810d4776780bca07934c54057722a")
-      public override
+      override
           fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty.Builder.() -> Unit):
           Unit =
           availabilityLocalHealthEventsConfig(LocalHealthEventsConfigProperty(availabilityLocalHealthEventsConfig))
 
-      public override fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
+      override fun availabilityScoreThreshold(availabilityScoreThreshold: Number) {
         cdkBuilder.availabilityScoreThreshold(availabilityScoreThreshold)
       }
 
-      public override
+      override
           fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: IResolvable) {
         cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty) {
         cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig.let(LocalHealthEventsConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5b7de77bf4a936610dc8e6edc25a19431e452e7e7dc8d5e6f65e0501c938ead8")
-      public override
+      override
           fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty.Builder.() -> Unit):
           Unit =
           performanceLocalHealthEventsConfig(LocalHealthEventsConfigProperty(performanceLocalHealthEventsConfig))
 
-      public override fun performanceScoreThreshold(performanceScoreThreshold: Number) {
+      override fun performanceScoreThreshold(performanceScoreThreshold: Number) {
         cdkBuilder.performanceScoreThreshold(performanceScoreThreshold)
       }
 
@@ -438,16 +410,16 @@ public open class CfnMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.HealthEventsConfigProperty,
     ) : HealthEventsConfigProperty {
-      public override fun availabilityLocalHealthEventsConfig(): Any? =
+      override fun availabilityLocalHealthEventsConfig(): Any? =
           unwrap(this).getAvailabilityLocalHealthEventsConfig()
 
-      public override fun availabilityScoreThreshold(): Number? =
+      override fun availabilityScoreThreshold(): Number? =
           unwrap(this).getAvailabilityScoreThreshold()
 
-      public override fun performanceLocalHealthEventsConfig(): Any? =
+      override fun performanceLocalHealthEventsConfig(): Any? =
           unwrap(this).getPerformanceLocalHealthEventsConfig()
 
-      public override fun performanceScoreThreshold(): Number? =
+      override fun performanceScoreThreshold(): Number? =
           unwrap(this).getPerformanceScoreThreshold()
     }
 
@@ -479,14 +451,11 @@ public open class CfnMonitor internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun healthScoreThreshold(healthScoreThreshold: Number) {
-      }
+      public fun healthScoreThreshold(healthScoreThreshold: Number)
 
-      public fun minTrafficImpact(minTrafficImpact: Number) {
-      }
+      public fun minTrafficImpact(minTrafficImpact: Number)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -495,15 +464,15 @@ public open class CfnMonitor internal constructor(
           =
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty.builder()
 
-      public override fun healthScoreThreshold(healthScoreThreshold: Number) {
+      override fun healthScoreThreshold(healthScoreThreshold: Number) {
         cdkBuilder.healthScoreThreshold(healthScoreThreshold)
       }
 
-      public override fun minTrafficImpact(minTrafficImpact: Number) {
+      override fun minTrafficImpact(minTrafficImpact: Number) {
         cdkBuilder.minTrafficImpact(minTrafficImpact)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -516,11 +485,11 @@ public open class CfnMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.LocalHealthEventsConfigProperty,
     ) : LocalHealthEventsConfigProperty {
-      public override fun healthScoreThreshold(): Number? = unwrap(this).getHealthScoreThreshold()
+      override fun healthScoreThreshold(): Number? = unwrap(this).getHealthScoreThreshold()
 
-      public override fun minTrafficImpact(): Number? = unwrap(this).getMinTrafficImpact()
+      override fun minTrafficImpact(): Number? = unwrap(this).getMinTrafficImpact()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -551,14 +520,11 @@ public open class CfnMonitor internal constructor(
     public fun logDeliveryStatus(): String? = unwrap(this).getLogDeliveryStatus()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun bucketPrefix(bucketPrefix: String) {
-      }
+      public fun bucketPrefix(bucketPrefix: String)
 
-      public fun logDeliveryStatus(logDeliveryStatus: String) {
-      }
+      public fun logDeliveryStatus(logDeliveryStatus: String)
     }
 
     private class BuilderImpl : Builder {
@@ -566,15 +532,15 @@ public open class CfnMonitor internal constructor(
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty.Builder =
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun bucketPrefix(bucketPrefix: String) {
+      override fun bucketPrefix(bucketPrefix: String) {
         cdkBuilder.bucketPrefix(bucketPrefix)
       }
 
-      public override fun logDeliveryStatus(logDeliveryStatus: String) {
+      override fun logDeliveryStatus(logDeliveryStatus: String) {
         cdkBuilder.logDeliveryStatus(logDeliveryStatus)
       }
 
@@ -587,11 +553,11 @@ public open class CfnMonitor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.internetmonitor.CfnMonitor.S3ConfigProperty,
     ) : S3ConfigProperty {
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
+      override fun bucketPrefix(): String? = unwrap(this).getBucketPrefix()
 
-      public override fun logDeliveryStatus(): String? = unwrap(this).getLogDeliveryStatus()
+      override fun logDeliveryStatus(): String? = unwrap(this).getLogDeliveryStatus()
     }
 
     public companion object {

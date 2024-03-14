@@ -163,90 +163,64 @@ public open class CfnClientVpnEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun authenticationOptions(authenticationOptions: IResolvable) {
-    }
+    public fun authenticationOptions(authenticationOptions: IResolvable)
 
-    public fun authenticationOptions(authenticationOptions: List<Any>) {
-    }
+    public fun authenticationOptions(authenticationOptions: List<Any>)
 
-    public fun clientCidrBlock(clientCidrBlock: String) {
-    }
+    public fun clientCidrBlock(clientCidrBlock: String)
 
-    public fun clientConnectOptions(clientConnectOptions: IResolvable) {
-    }
+    public fun clientConnectOptions(clientConnectOptions: IResolvable)
 
-    public fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty) {
-    }
+    public fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecfde4af8328f55323d65ff362c60188b5d32150fa7bbfd0f4905659fd43abef")
     public
-        fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty.Builder.() -> Unit) {
-    }
+        fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty.Builder.() -> Unit)
 
-    public fun clientLoginBannerOptions(clientLoginBannerOptions: IResolvable) {
-    }
+    public fun clientLoginBannerOptions(clientLoginBannerOptions: IResolvable)
 
-    public
-        fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty) {
-    }
+    public fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("534c8cf6787e1c7734bb9a74c718957c9d027686609d72d3f6a593936263da6c")
     public
-        fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty.Builder.() -> Unit) {
-    }
+        fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty.Builder.() -> Unit)
 
-    public fun connectionLogOptions(connectionLogOptions: IResolvable) {
-    }
+    public fun connectionLogOptions(connectionLogOptions: IResolvable)
 
-    public fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty) {
-    }
+    public fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7982c3c0c85a9d1ddd3761028b13917e59c123fedc5465ce42490e50a08f2661")
     public
-        fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty.Builder.() -> Unit) {
-    }
+        fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun dnsServers(dnsServers: List<String>) {
-    }
+    public fun dnsServers(dnsServers: List<String>)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun selfServicePortal(selfServicePortal: String) {
-    }
+    public fun selfServicePortal(selfServicePortal: String)
 
-    public fun serverCertificateArn(serverCertificateArn: String) {
-    }
+    public fun serverCertificateArn(serverCertificateArn: String)
 
-    public fun sessionTimeoutHours(sessionTimeoutHours: Number) {
-    }
+    public fun sessionTimeoutHours(sessionTimeoutHours: Number)
 
-    public fun splitTunnel(splitTunnel: Boolean) {
-    }
+    public fun splitTunnel(splitTunnel: Boolean)
 
-    public fun splitTunnel(splitTunnel: IResolvable) {
-    }
+    public fun splitTunnel(splitTunnel: IResolvable)
 
-    public fun tagSpecifications(tagSpecifications: IResolvable) {
-    }
+    public fun tagSpecifications(tagSpecifications: IResolvable)
 
-    public fun tagSpecifications(tagSpecifications: List<Any>) {
-    }
+    public fun tagSpecifications(tagSpecifications: List<Any>)
 
-    public fun transportProtocol(transportProtocol: String) {
-    }
+    public fun transportProtocol(transportProtocol: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
 
-    public fun vpnPort(vpnPort: Number) {
-    }
+    public fun vpnPort(vpnPort: Number)
   }
 
   private class BuilderImpl(
@@ -256,110 +230,110 @@ public open class CfnClientVpnEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.Builder =
         software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.Builder.create(scope, id)
 
-    public override fun authenticationOptions(authenticationOptions: IResolvable) {
+    override fun authenticationOptions(authenticationOptions: IResolvable) {
       cdkBuilder.authenticationOptions(authenticationOptions.let(IResolvable::unwrap))
     }
 
-    public override fun authenticationOptions(authenticationOptions: List<Any>) {
+    override fun authenticationOptions(authenticationOptions: List<Any>) {
       cdkBuilder.authenticationOptions(authenticationOptions)
     }
 
-    public override fun clientCidrBlock(clientCidrBlock: String) {
+    override fun clientCidrBlock(clientCidrBlock: String) {
       cdkBuilder.clientCidrBlock(clientCidrBlock)
     }
 
-    public override fun clientConnectOptions(clientConnectOptions: IResolvable) {
+    override fun clientConnectOptions(clientConnectOptions: IResolvable) {
       cdkBuilder.clientConnectOptions(clientConnectOptions.let(IResolvable::unwrap))
     }
 
-    public override fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty) {
+    override fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty) {
       cdkBuilder.clientConnectOptions(clientConnectOptions.let(ClientConnectOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecfde4af8328f55323d65ff362c60188b5d32150fa7bbfd0f4905659fd43abef")
-    public override
+    override
         fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty.Builder.() -> Unit):
         Unit = clientConnectOptions(ClientConnectOptionsProperty(clientConnectOptions))
 
-    public override fun clientLoginBannerOptions(clientLoginBannerOptions: IResolvable) {
+    override fun clientLoginBannerOptions(clientLoginBannerOptions: IResolvable) {
       cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty) {
       cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(ClientLoginBannerOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("534c8cf6787e1c7734bb9a74c718957c9d027686609d72d3f6a593936263da6c")
-    public override
+    override
         fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty.Builder.() -> Unit):
         Unit = clientLoginBannerOptions(ClientLoginBannerOptionsProperty(clientLoginBannerOptions))
 
-    public override fun connectionLogOptions(connectionLogOptions: IResolvable) {
+    override fun connectionLogOptions(connectionLogOptions: IResolvable) {
       cdkBuilder.connectionLogOptions(connectionLogOptions.let(IResolvable::unwrap))
     }
 
-    public override fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty) {
+    override fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty) {
       cdkBuilder.connectionLogOptions(connectionLogOptions.let(ConnectionLogOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7982c3c0c85a9d1ddd3761028b13917e59c123fedc5465ce42490e50a08f2661")
-    public override
+    override
         fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty.Builder.() -> Unit):
         Unit = connectionLogOptions(ConnectionLogOptionsProperty(connectionLogOptions))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun dnsServers(dnsServers: List<String>) {
+    override fun dnsServers(dnsServers: List<String>) {
       cdkBuilder.dnsServers(dnsServers)
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun selfServicePortal(selfServicePortal: String) {
+    override fun selfServicePortal(selfServicePortal: String) {
       cdkBuilder.selfServicePortal(selfServicePortal)
     }
 
-    public override fun serverCertificateArn(serverCertificateArn: String) {
+    override fun serverCertificateArn(serverCertificateArn: String) {
       cdkBuilder.serverCertificateArn(serverCertificateArn)
     }
 
-    public override fun sessionTimeoutHours(sessionTimeoutHours: Number) {
+    override fun sessionTimeoutHours(sessionTimeoutHours: Number) {
       cdkBuilder.sessionTimeoutHours(sessionTimeoutHours)
     }
 
-    public override fun splitTunnel(splitTunnel: Boolean) {
+    override fun splitTunnel(splitTunnel: Boolean) {
       cdkBuilder.splitTunnel(splitTunnel)
     }
 
-    public override fun splitTunnel(splitTunnel: IResolvable) {
+    override fun splitTunnel(splitTunnel: IResolvable) {
       cdkBuilder.splitTunnel(splitTunnel.let(IResolvable::unwrap))
     }
 
-    public override fun tagSpecifications(tagSpecifications: IResolvable) {
+    override fun tagSpecifications(tagSpecifications: IResolvable) {
       cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun tagSpecifications(tagSpecifications: List<Any>) {
+    override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
 
-    public override fun transportProtocol(transportProtocol: String) {
+    override fun transportProtocol(transportProtocol: String) {
       cdkBuilder.transportProtocol(transportProtocol)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
-    public override fun vpnPort(vpnPort: Number) {
+    override fun vpnPort(vpnPort: Number) {
       cdkBuilder.vpnPort(vpnPort)
     }
 
@@ -394,11 +368,9 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun tags(): List<CfnTag>
 
     public interface Builder {
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -407,11 +379,11 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty.builder()
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -424,9 +396,9 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty,
     ) : TagSpecificationProperty {
-      public override fun resourceType(): String = unwrap(this).getResourceType()
+      override fun resourceType(): String = unwrap(this).getResourceType()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags().map(CfnTag::wrap)
+      override fun tags(): List<CfnTag> = unwrap(this).getTags().map(CfnTag::wrap)
     }
 
     public companion object {
@@ -453,8 +425,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun directoryId(): String
 
     public interface Builder {
-      public fun directoryId(directoryId: String) {
-      }
+      public fun directoryId(directoryId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -463,7 +434,7 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty.builder()
 
-      public override fun directoryId(directoryId: String) {
+      override fun directoryId(directoryId: String) {
         cdkBuilder.directoryId(directoryId)
       }
 
@@ -476,7 +447,7 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty,
     ) : DirectoryServiceAuthenticationRequestProperty {
-      public override fun directoryId(): String = unwrap(this).getDirectoryId()
+      override fun directoryId(): String = unwrap(this).getDirectoryId()
     }
 
     public companion object {
@@ -510,46 +481,36 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun activeDirectory(activeDirectory: IResolvable) {
-      }
+      public fun activeDirectory(activeDirectory: IResolvable)
 
-      public fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty) {
-      }
+      public fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cc257b6734e4ae7777c750b840a04697dd4df6ba827ee4749b938fd48f9680de")
       public
-          fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty.Builder.() -> Unit) {
-      }
+          fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty.Builder.() -> Unit)
 
-      public fun federatedAuthentication(federatedAuthentication: IResolvable) {
-      }
+      public fun federatedAuthentication(federatedAuthentication: IResolvable)
 
       public
-          fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty) {
-      }
+          fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("05a61c4449bef3d2027ab433b9d03ca560b38b6c44cd4fd0fa395a0f80c95452")
       public
-          fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty.Builder.() -> Unit) {
-      }
+          fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty.Builder.() -> Unit)
 
-      public fun mutualAuthentication(mutualAuthentication: IResolvable) {
-      }
+      public fun mutualAuthentication(mutualAuthentication: IResolvable)
 
       public
-          fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty) {
-      }
+          fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79da6d6721aaa6683ffc81ed8bda33622d5a1c42e4a59c51b575db7edf2cb612")
       public
-          fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty.Builder.() -> Unit) {
-      }
+          fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -558,54 +519,53 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty.builder()
 
-      public override fun activeDirectory(activeDirectory: IResolvable) {
+      override fun activeDirectory(activeDirectory: IResolvable) {
         cdkBuilder.activeDirectory(activeDirectory.let(IResolvable::unwrap))
       }
 
-      public override
-          fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty) {
+      override fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty) {
         cdkBuilder.activeDirectory(activeDirectory.let(DirectoryServiceAuthenticationRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cc257b6734e4ae7777c750b840a04697dd4df6ba827ee4749b938fd48f9680de")
-      public override
+      override
           fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty.Builder.() -> Unit):
           Unit = activeDirectory(DirectoryServiceAuthenticationRequestProperty(activeDirectory))
 
-      public override fun federatedAuthentication(federatedAuthentication: IResolvable) {
+      override fun federatedAuthentication(federatedAuthentication: IResolvable) {
         cdkBuilder.federatedAuthentication(federatedAuthentication.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty) {
         cdkBuilder.federatedAuthentication(federatedAuthentication.let(FederatedAuthenticationRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("05a61c4449bef3d2027ab433b9d03ca560b38b6c44cd4fd0fa395a0f80c95452")
-      public override
+      override
           fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty.Builder.() -> Unit):
           Unit =
           federatedAuthentication(FederatedAuthenticationRequestProperty(federatedAuthentication))
 
-      public override fun mutualAuthentication(mutualAuthentication: IResolvable) {
+      override fun mutualAuthentication(mutualAuthentication: IResolvable) {
         cdkBuilder.mutualAuthentication(mutualAuthentication.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty) {
         cdkBuilder.mutualAuthentication(mutualAuthentication.let(CertificateAuthenticationRequestProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79da6d6721aaa6683ffc81ed8bda33622d5a1c42e4a59c51b575db7edf2cb612")
-      public override
+      override
           fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty.Builder.() -> Unit):
           Unit =
           mutualAuthentication(CertificateAuthenticationRequestProperty(mutualAuthentication))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -618,14 +578,13 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty,
     ) : ClientAuthenticationRequestProperty {
-      public override fun activeDirectory(): Any? = unwrap(this).getActiveDirectory()
+      override fun activeDirectory(): Any? = unwrap(this).getActiveDirectory()
 
-      public override fun federatedAuthentication(): Any? =
-          unwrap(this).getFederatedAuthentication()
+      override fun federatedAuthentication(): Any? = unwrap(this).getFederatedAuthentication()
 
-      public override fun mutualAuthentication(): Any? = unwrap(this).getMutualAuthentication()
+      override fun mutualAuthentication(): Any? = unwrap(this).getMutualAuthentication()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -655,14 +614,11 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun bannerText(bannerText: String) {
-      }
+      public fun bannerText(bannerText: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -671,15 +627,15 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty.builder()
 
-      public override fun bannerText(bannerText: String) {
+      override fun bannerText(bannerText: String) {
         cdkBuilder.bannerText(bannerText)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -692,9 +648,9 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty,
     ) : ClientLoginBannerOptionsProperty {
-      public override fun bannerText(): String? = unwrap(this).getBannerText()
+      override fun bannerText(): String? = unwrap(this).getBannerText()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -725,17 +681,13 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun enabled(): Any
 
     public interface Builder {
-      public fun cloudwatchLogGroup(cloudwatchLogGroup: String) {
-      }
+      public fun cloudwatchLogGroup(cloudwatchLogGroup: String)
 
-      public fun cloudwatchLogStream(cloudwatchLogStream: String) {
-      }
+      public fun cloudwatchLogStream(cloudwatchLogStream: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -744,19 +696,19 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty.builder()
 
-      public override fun cloudwatchLogGroup(cloudwatchLogGroup: String) {
+      override fun cloudwatchLogGroup(cloudwatchLogGroup: String) {
         cdkBuilder.cloudwatchLogGroup(cloudwatchLogGroup)
       }
 
-      public override fun cloudwatchLogStream(cloudwatchLogStream: String) {
+      override fun cloudwatchLogStream(cloudwatchLogStream: String) {
         cdkBuilder.cloudwatchLogStream(cloudwatchLogStream)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -769,11 +721,11 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty,
     ) : ConnectionLogOptionsProperty {
-      public override fun cloudwatchLogGroup(): String? = unwrap(this).getCloudwatchLogGroup()
+      override fun cloudwatchLogGroup(): String? = unwrap(this).getCloudwatchLogGroup()
 
-      public override fun cloudwatchLogStream(): String? = unwrap(this).getCloudwatchLogStream()
+      override fun cloudwatchLogStream(): String? = unwrap(this).getCloudwatchLogStream()
 
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -802,11 +754,9 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun selfServiceSamlProviderArn(): String? = unwrap(this).getSelfServiceSamlProviderArn()
 
     public interface Builder {
-      public fun samlProviderArn(samlProviderArn: String) {
-      }
+      public fun samlProviderArn(samlProviderArn: String)
 
-      public fun selfServiceSamlProviderArn(selfServiceSamlProviderArn: String) {
-      }
+      public fun selfServiceSamlProviderArn(selfServiceSamlProviderArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -815,11 +765,11 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty.builder()
 
-      public override fun samlProviderArn(samlProviderArn: String) {
+      override fun samlProviderArn(samlProviderArn: String) {
         cdkBuilder.samlProviderArn(samlProviderArn)
       }
 
-      public override fun selfServiceSamlProviderArn(selfServiceSamlProviderArn: String) {
+      override fun selfServiceSamlProviderArn(selfServiceSamlProviderArn: String) {
         cdkBuilder.selfServiceSamlProviderArn(selfServiceSamlProviderArn)
       }
 
@@ -832,9 +782,9 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty,
     ) : FederatedAuthenticationRequestProperty {
-      public override fun samlProviderArn(): String = unwrap(this).getSamlProviderArn()
+      override fun samlProviderArn(): String = unwrap(this).getSamlProviderArn()
 
-      public override fun selfServiceSamlProviderArn(): String? =
+      override fun selfServiceSamlProviderArn(): String? =
           unwrap(this).getSelfServiceSamlProviderArn()
     }
 
@@ -863,8 +813,7 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun clientRootCertificateChainArn(): String
 
     public interface Builder {
-      public fun clientRootCertificateChainArn(clientRootCertificateChainArn: String) {
-      }
+      public fun clientRootCertificateChainArn(clientRootCertificateChainArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -873,7 +822,7 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty.builder()
 
-      public override fun clientRootCertificateChainArn(clientRootCertificateChainArn: String) {
+      override fun clientRootCertificateChainArn(clientRootCertificateChainArn: String) {
         cdkBuilder.clientRootCertificateChainArn(clientRootCertificateChainArn)
       }
 
@@ -886,7 +835,7 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty,
     ) : CertificateAuthenticationRequestProperty {
-      public override fun clientRootCertificateChainArn(): String =
+      override fun clientRootCertificateChainArn(): String =
           unwrap(this).getClientRootCertificateChainArn()
     }
 
@@ -917,14 +866,11 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun lambdaFunctionArn(lambdaFunctionArn: String) {
-      }
+      public fun lambdaFunctionArn(lambdaFunctionArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -933,15 +879,15 @@ public open class CfnClientVpnEndpoint internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun lambdaFunctionArn(lambdaFunctionArn: String) {
+      override fun lambdaFunctionArn(lambdaFunctionArn: String) {
         cdkBuilder.lambdaFunctionArn(lambdaFunctionArn)
       }
 
@@ -954,9 +900,9 @@ public open class CfnClientVpnEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty,
     ) : ClientConnectOptionsProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
+      override fun lambdaFunctionArn(): String? = unwrap(this).getLambdaFunctionArn()
     }
 
     public companion object {

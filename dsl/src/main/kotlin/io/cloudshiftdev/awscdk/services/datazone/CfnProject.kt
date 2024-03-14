@@ -51,17 +51,13 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainIdentifier(domainIdentifier: String) {
-    }
+    public fun domainIdentifier(domainIdentifier: String)
 
-    public fun glossaryTerms(glossaryTerms: List<String>) {
-    }
+    public fun glossaryTerms(glossaryTerms: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -71,19 +67,19 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datazone.CfnProject.Builder =
         software.amazon.awscdk.services.datazone.CfnProject.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainIdentifier(domainIdentifier: String) {
+    override fun domainIdentifier(domainIdentifier: String) {
       cdkBuilder.domainIdentifier(domainIdentifier)
     }
 
-    public override fun glossaryTerms(glossaryTerms: List<String>) {
+    override fun glossaryTerms(glossaryTerms: List<String>) {
       cdkBuilder.glossaryTerms(glossaryTerms)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 

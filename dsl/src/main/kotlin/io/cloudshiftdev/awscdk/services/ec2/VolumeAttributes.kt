@@ -12,29 +12,26 @@ public interface VolumeAttributes {
   public fun volumeId(): String
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun volumeId(volumeId: String) {
-    }
+    public fun volumeId(volumeId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VolumeAttributes.Builder =
         software.amazon.awscdk.services.ec2.VolumeAttributes.builder()
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun volumeId(volumeId: String) {
+    override fun volumeId(volumeId: String) {
       cdkBuilder.volumeId(volumeId)
     }
 
@@ -44,11 +41,11 @@ public interface VolumeAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VolumeAttributes,
   ) : VolumeAttributes {
-    public override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
+    override fun availabilityZone(): String = unwrap(this).getAvailabilityZone()
 
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun volumeId(): String = unwrap(this).getVolumeId()
+    override fun volumeId(): String = unwrap(this).getVolumeId()
   }
 
   public companion object {

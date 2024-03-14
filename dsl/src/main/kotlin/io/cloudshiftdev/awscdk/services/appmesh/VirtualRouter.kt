@@ -27,14 +27,11 @@ public open class VirtualRouter internal constructor(
   public override fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
 
   public interface Builder {
-    public fun listeners(listeners: List<VirtualRouterListener>) {
-    }
+    public fun listeners(listeners: List<VirtualRouterListener>)
 
-    public fun mesh(mesh: IMesh) {
-    }
+    public fun mesh(mesh: IMesh)
 
-    public fun virtualRouterName(virtualRouterName: String) {
-    }
+    public fun virtualRouterName(virtualRouterName: String)
   }
 
   private class BuilderImpl(
@@ -44,15 +41,15 @@ public open class VirtualRouter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualRouter.Builder =
         software.amazon.awscdk.services.appmesh.VirtualRouter.Builder.create(scope, id)
 
-    public override fun listeners(listeners: List<VirtualRouterListener>) {
+    override fun listeners(listeners: List<VirtualRouterListener>) {
       cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
     }
 
-    public override fun mesh(mesh: IMesh) {
+    override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
-    public override fun virtualRouterName(virtualRouterName: String) {
+    override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)
     }
 

@@ -73,31 +73,23 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun datasetName(datasetName: String) {
-    }
+    public fun datasetName(datasetName: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun recipeName(recipeName: String) {
-    }
+    public fun recipeName(recipeName: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun sample(sample: IResolvable) {
-    }
+    public fun sample(sample: IResolvable)
 
-    public fun sample(sample: SampleProperty) {
-    }
+    public fun sample(sample: SampleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c3d5139527d6c03889a0fefa8ee2540297e40f654309f3677204b85a64024a2d")
-    public fun sample(sample: SampleProperty.Builder.() -> Unit) {
-    }
+    public fun sample(sample: SampleProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -107,36 +99,36 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.databrew.CfnProject.Builder =
         software.amazon.awscdk.services.databrew.CfnProject.Builder.create(scope, id)
 
-    public override fun datasetName(datasetName: String) {
+    override fun datasetName(datasetName: String) {
       cdkBuilder.datasetName(datasetName)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun recipeName(recipeName: String) {
+    override fun recipeName(recipeName: String) {
       cdkBuilder.recipeName(recipeName)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun sample(sample: IResolvable) {
+    override fun sample(sample: IResolvable) {
       cdkBuilder.sample(sample.let(IResolvable::unwrap))
     }
 
-    public override fun sample(sample: SampleProperty) {
+    override fun sample(sample: SampleProperty) {
       cdkBuilder.sample(sample.let(SampleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c3d5139527d6c03889a0fefa8ee2540297e40f654309f3677204b85a64024a2d")
-    public override fun sample(sample: SampleProperty.Builder.() -> Unit): Unit =
+    override fun sample(sample: SampleProperty.Builder.() -> Unit): Unit =
         sample(SampleProperty(sample))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -170,11 +162,9 @@ public open class CfnProject internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -182,11 +172,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.databrew.CfnProject.SampleProperty.Builder =
           software.amazon.awscdk.services.databrew.CfnProject.SampleProperty.builder()
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -197,9 +187,9 @@ public open class CfnProject internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.databrew.CfnProject.SampleProperty,
     ) : SampleProperty {
-      public override fun size(): Number? = unwrap(this).getSize()
+      override fun size(): Number? = unwrap(this).getSize()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

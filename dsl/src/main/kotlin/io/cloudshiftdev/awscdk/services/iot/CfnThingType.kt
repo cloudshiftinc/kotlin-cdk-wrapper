@@ -69,29 +69,22 @@ public open class CfnThingType internal constructor(
       = thingTypeProperties(ThingTypePropertiesProperty(`value`))
 
   public interface Builder {
-    public fun deprecateThingType(deprecateThingType: Boolean) {
-    }
+    public fun deprecateThingType(deprecateThingType: Boolean)
 
-    public fun deprecateThingType(deprecateThingType: IResolvable) {
-    }
+    public fun deprecateThingType(deprecateThingType: IResolvable)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun thingTypeName(thingTypeName: String) {
-    }
+    public fun thingTypeName(thingTypeName: String)
 
-    public fun thingTypeProperties(thingTypeProperties: IResolvable) {
-    }
+    public fun thingTypeProperties(thingTypeProperties: IResolvable)
 
-    public fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty) {
-    }
+    public fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7aeaad2d462d2485cf682674aca0c5c899bf8351fd37f923fabf37f643588bce")
     public
-        fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty.Builder.() -> Unit) {
-    }
+        fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -101,33 +94,33 @@ public open class CfnThingType internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnThingType.Builder =
         software.amazon.awscdk.services.iot.CfnThingType.Builder.create(scope, id)
 
-    public override fun deprecateThingType(deprecateThingType: Boolean) {
+    override fun deprecateThingType(deprecateThingType: Boolean) {
       cdkBuilder.deprecateThingType(deprecateThingType)
     }
 
-    public override fun deprecateThingType(deprecateThingType: IResolvable) {
+    override fun deprecateThingType(deprecateThingType: IResolvable) {
       cdkBuilder.deprecateThingType(deprecateThingType.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun thingTypeName(thingTypeName: String) {
+    override fun thingTypeName(thingTypeName: String) {
       cdkBuilder.thingTypeName(thingTypeName)
     }
 
-    public override fun thingTypeProperties(thingTypeProperties: IResolvable) {
+    override fun thingTypeProperties(thingTypeProperties: IResolvable) {
       cdkBuilder.thingTypeProperties(thingTypeProperties.let(IResolvable::unwrap))
     }
 
-    public override fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty) {
+    override fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty) {
       cdkBuilder.thingTypeProperties(thingTypeProperties.let(ThingTypePropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7aeaad2d462d2485cf682674aca0c5c899bf8351fd37f923fabf37f643588bce")
-    public override
+    override
         fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty.Builder.() -> Unit):
         Unit = thingTypeProperties(ThingTypePropertiesProperty(thingTypeProperties))
 
@@ -162,11 +155,9 @@ public open class CfnThingType internal constructor(
     public fun thingTypeDescription(): String? = unwrap(this).getThingTypeDescription()
 
     public interface Builder {
-      public fun searchableAttributes(searchableAttributes: List<String>) {
-      }
+      public fun searchableAttributes(searchableAttributes: List<String>)
 
-      public fun thingTypeDescription(thingTypeDescription: String) {
-      }
+      public fun thingTypeDescription(thingTypeDescription: String)
     }
 
     private class BuilderImpl : Builder {
@@ -174,11 +165,11 @@ public open class CfnThingType internal constructor(
           software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty.Builder =
           software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty.builder()
 
-      public override fun searchableAttributes(searchableAttributes: List<String>) {
+      override fun searchableAttributes(searchableAttributes: List<String>) {
         cdkBuilder.searchableAttributes(searchableAttributes)
       }
 
-      public override fun thingTypeDescription(thingTypeDescription: String) {
+      override fun thingTypeDescription(thingTypeDescription: String) {
         cdkBuilder.thingTypeDescription(thingTypeDescription)
       }
 
@@ -191,10 +182,10 @@ public open class CfnThingType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty,
     ) : ThingTypePropertiesProperty {
-      public override fun searchableAttributes(): List<String> =
-          unwrap(this).getSearchableAttributes() ?: emptyList()
+      override fun searchableAttributes(): List<String> = unwrap(this).getSearchableAttributes() ?:
+          emptyList()
 
-      public override fun thingTypeDescription(): String? = unwrap(this).getThingTypeDescription()
+      override fun thingTypeDescription(): String? = unwrap(this).getThingTypeDescription()
     }
 
     public companion object {

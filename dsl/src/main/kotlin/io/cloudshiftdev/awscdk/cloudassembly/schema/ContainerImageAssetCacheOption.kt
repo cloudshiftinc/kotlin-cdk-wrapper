@@ -10,11 +10,9 @@ public interface ContainerImageAssetCacheOption {
   public fun type(): String
 
   public interface Builder {
-    public fun params(params: Map<String, String>) {
-    }
+    public fun params(params: Map<String, String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface ContainerImageAssetCacheOption {
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption.Builder =
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption.builder()
 
-    public override fun params(params: Map<String, String>) {
+    override fun params(params: Map<String, String>) {
       cdkBuilder.params(params)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -38,9 +36,9 @@ public interface ContainerImageAssetCacheOption {
     internal val cdkObject:
         software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption,
   ) : ContainerImageAssetCacheOption {
-    public override fun params(): Map<String, String> = unwrap(this).getParams() ?: emptyMap()
+    override fun params(): Map<String, String> = unwrap(this).getParams() ?: emptyMap()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

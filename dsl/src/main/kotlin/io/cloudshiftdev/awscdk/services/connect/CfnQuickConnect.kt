@@ -70,29 +70,21 @@ public open class CfnQuickConnect internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun quickConnectConfig(quickConnectConfig: IResolvable) {
-    }
+    public fun quickConnectConfig(quickConnectConfig: IResolvable)
 
-    public fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty) {
-    }
+    public fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66facc532a2e04b3aeb9c446901372563a69d59c013e8aab2c125b1fdcf2ec41")
-    public
-        fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty.Builder.() -> Unit) {
-    }
+    public fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -102,33 +94,33 @@ public open class CfnQuickConnect internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnQuickConnect.Builder =
         software.amazon.awscdk.services.connect.CfnQuickConnect.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun quickConnectConfig(quickConnectConfig: IResolvable) {
+    override fun quickConnectConfig(quickConnectConfig: IResolvable) {
       cdkBuilder.quickConnectConfig(quickConnectConfig.let(IResolvable::unwrap))
     }
 
-    public override fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty) {
+    override fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty) {
       cdkBuilder.quickConnectConfig(quickConnectConfig.let(QuickConnectConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66facc532a2e04b3aeb9c446901372563a69d59c013e8aab2c125b1fdcf2ec41")
-    public override
+    override
         fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty.Builder.() -> Unit):
         Unit = quickConnectConfig(QuickConnectConfigProperty(quickConnectConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -160,8 +152,7 @@ public open class CfnQuickConnect internal constructor(
     public fun phoneNumber(): String
 
     public interface Builder {
-      public fun phoneNumber(phoneNumber: String) {
-      }
+      public fun phoneNumber(phoneNumber: String)
     }
 
     private class BuilderImpl : Builder {
@@ -170,7 +161,7 @@ public open class CfnQuickConnect internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty.builder()
 
-      public override fun phoneNumber(phoneNumber: String) {
+      override fun phoneNumber(phoneNumber: String) {
         cdkBuilder.phoneNumber(phoneNumber)
       }
 
@@ -183,7 +174,7 @@ public open class CfnQuickConnect internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnQuickConnect.PhoneNumberQuickConnectConfigProperty,
     ) : PhoneNumberQuickConnectConfigProperty {
-      public override fun phoneNumber(): String = unwrap(this).getPhoneNumber()
+      override fun phoneNumber(): String = unwrap(this).getPhoneNumber()
     }
 
     public companion object {
@@ -217,42 +208,31 @@ public open class CfnQuickConnect internal constructor(
     public fun userConfig(): Any? = unwrap(this).getUserConfig()
 
     public interface Builder {
-      public fun phoneConfig(phoneConfig: IResolvable) {
-      }
+      public fun phoneConfig(phoneConfig: IResolvable)
 
-      public fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty) {
-      }
+      public fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cd908e480eaaa1a415c0cfc241b89017d858ffe71e52b69ee36a7549850ea97")
-      public
-          fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty.Builder.() -> Unit) {
-      }
+      public fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty.Builder.() -> Unit)
 
-      public fun queueConfig(queueConfig: IResolvable) {
-      }
+      public fun queueConfig(queueConfig: IResolvable)
 
-      public fun queueConfig(queueConfig: QueueQuickConnectConfigProperty) {
-      }
+      public fun queueConfig(queueConfig: QueueQuickConnectConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b017bd39c984da0288194f7ee2258d3baea9f333ac105fbfca15bd258043ebac")
-      public fun queueConfig(queueConfig: QueueQuickConnectConfigProperty.Builder.() -> Unit) {
-      }
+      public fun queueConfig(queueConfig: QueueQuickConnectConfigProperty.Builder.() -> Unit)
 
-      public fun quickConnectType(quickConnectType: String) {
-      }
+      public fun quickConnectType(quickConnectType: String)
 
-      public fun userConfig(userConfig: IResolvable) {
-      }
+      public fun userConfig(userConfig: IResolvable)
 
-      public fun userConfig(userConfig: UserQuickConnectConfigProperty) {
-      }
+      public fun userConfig(userConfig: UserQuickConnectConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("841daf7430e31b2285dd0f375fab0519cc1a3755c3297f1c297f9761ce90cf40")
-      public fun userConfig(userConfig: UserQuickConnectConfigProperty.Builder.() -> Unit) {
-      }
+      public fun userConfig(userConfig: UserQuickConnectConfigProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -261,50 +241,49 @@ public open class CfnQuickConnect internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty.builder()
 
-      public override fun phoneConfig(phoneConfig: IResolvable) {
+      override fun phoneConfig(phoneConfig: IResolvable) {
         cdkBuilder.phoneConfig(phoneConfig.let(IResolvable::unwrap))
       }
 
-      public override fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty) {
+      override fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty) {
         cdkBuilder.phoneConfig(phoneConfig.let(PhoneNumberQuickConnectConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5cd908e480eaaa1a415c0cfc241b89017d858ffe71e52b69ee36a7549850ea97")
-      public override
+      override
           fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty.Builder.() -> Unit):
           Unit = phoneConfig(PhoneNumberQuickConnectConfigProperty(phoneConfig))
 
-      public override fun queueConfig(queueConfig: IResolvable) {
+      override fun queueConfig(queueConfig: IResolvable) {
         cdkBuilder.queueConfig(queueConfig.let(IResolvable::unwrap))
       }
 
-      public override fun queueConfig(queueConfig: QueueQuickConnectConfigProperty) {
+      override fun queueConfig(queueConfig: QueueQuickConnectConfigProperty) {
         cdkBuilder.queueConfig(queueConfig.let(QueueQuickConnectConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b017bd39c984da0288194f7ee2258d3baea9f333ac105fbfca15bd258043ebac")
-      public override
-          fun queueConfig(queueConfig: QueueQuickConnectConfigProperty.Builder.() -> Unit): Unit =
-          queueConfig(QueueQuickConnectConfigProperty(queueConfig))
+      override fun queueConfig(queueConfig: QueueQuickConnectConfigProperty.Builder.() -> Unit):
+          Unit = queueConfig(QueueQuickConnectConfigProperty(queueConfig))
 
-      public override fun quickConnectType(quickConnectType: String) {
+      override fun quickConnectType(quickConnectType: String) {
         cdkBuilder.quickConnectType(quickConnectType)
       }
 
-      public override fun userConfig(userConfig: IResolvable) {
+      override fun userConfig(userConfig: IResolvable) {
         cdkBuilder.userConfig(userConfig.let(IResolvable::unwrap))
       }
 
-      public override fun userConfig(userConfig: UserQuickConnectConfigProperty) {
+      override fun userConfig(userConfig: UserQuickConnectConfigProperty) {
         cdkBuilder.userConfig(userConfig.let(UserQuickConnectConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("841daf7430e31b2285dd0f375fab0519cc1a3755c3297f1c297f9761ce90cf40")
-      public override fun userConfig(userConfig: UserQuickConnectConfigProperty.Builder.() -> Unit):
-          Unit = userConfig(UserQuickConnectConfigProperty(userConfig))
+      override fun userConfig(userConfig: UserQuickConnectConfigProperty.Builder.() -> Unit): Unit =
+          userConfig(UserQuickConnectConfigProperty(userConfig))
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty =
@@ -315,13 +294,13 @@ public open class CfnQuickConnect internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnQuickConnect.QuickConnectConfigProperty,
     ) : QuickConnectConfigProperty {
-      public override fun phoneConfig(): Any? = unwrap(this).getPhoneConfig()
+      override fun phoneConfig(): Any? = unwrap(this).getPhoneConfig()
 
-      public override fun queueConfig(): Any? = unwrap(this).getQueueConfig()
+      override fun queueConfig(): Any? = unwrap(this).getQueueConfig()
 
-      public override fun quickConnectType(): String = unwrap(this).getQuickConnectType()
+      override fun quickConnectType(): String = unwrap(this).getQuickConnectType()
 
-      public override fun userConfig(): Any? = unwrap(this).getUserConfig()
+      override fun userConfig(): Any? = unwrap(this).getUserConfig()
     }
 
     public companion object {
@@ -350,11 +329,9 @@ public open class CfnQuickConnect internal constructor(
     public fun userArn(): String
 
     public interface Builder {
-      public fun contactFlowArn(contactFlowArn: String) {
-      }
+      public fun contactFlowArn(contactFlowArn: String)
 
-      public fun userArn(userArn: String) {
-      }
+      public fun userArn(userArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -363,11 +340,11 @@ public open class CfnQuickConnect internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty.builder()
 
-      public override fun contactFlowArn(contactFlowArn: String) {
+      override fun contactFlowArn(contactFlowArn: String) {
         cdkBuilder.contactFlowArn(contactFlowArn)
       }
 
-      public override fun userArn(userArn: String) {
+      override fun userArn(userArn: String) {
         cdkBuilder.userArn(userArn)
       }
 
@@ -380,9 +357,9 @@ public open class CfnQuickConnect internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnQuickConnect.UserQuickConnectConfigProperty,
     ) : UserQuickConnectConfigProperty {
-      public override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
+      override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
 
-      public override fun userArn(): String = unwrap(this).getUserArn()
+      override fun userArn(): String = unwrap(this).getUserArn()
     }
 
     public companion object {
@@ -411,11 +388,9 @@ public open class CfnQuickConnect internal constructor(
     public fun queueArn(): String
 
     public interface Builder {
-      public fun contactFlowArn(contactFlowArn: String) {
-      }
+      public fun contactFlowArn(contactFlowArn: String)
 
-      public fun queueArn(queueArn: String) {
-      }
+      public fun queueArn(queueArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -424,11 +399,11 @@ public open class CfnQuickConnect internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty.builder()
 
-      public override fun contactFlowArn(contactFlowArn: String) {
+      override fun contactFlowArn(contactFlowArn: String) {
         cdkBuilder.contactFlowArn(contactFlowArn)
       }
 
-      public override fun queueArn(queueArn: String) {
+      override fun queueArn(queueArn: String) {
         cdkBuilder.queueArn(queueArn)
       }
 
@@ -441,9 +416,9 @@ public open class CfnQuickConnect internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnQuickConnect.QueueQuickConnectConfigProperty,
     ) : QueueQuickConnectConfigProperty {
-      public override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
+      override fun contactFlowArn(): String = unwrap(this).getContactFlowArn()
 
-      public override fun queueArn(): String = unwrap(this).getQueueArn()
+      override fun queueArn(): String = unwrap(this).getQueueArn()
     }
 
     public companion object {

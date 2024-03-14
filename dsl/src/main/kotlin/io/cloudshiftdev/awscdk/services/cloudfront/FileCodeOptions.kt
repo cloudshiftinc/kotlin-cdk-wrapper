@@ -7,15 +7,14 @@ public interface FileCodeOptions {
   public fun filePath(): String
 
   public interface Builder {
-    public fun filePath(filePath: String) {
-    }
+    public fun filePath(filePath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FileCodeOptions.Builder =
         software.amazon.awscdk.services.cloudfront.FileCodeOptions.builder()
 
-    public override fun filePath(filePath: String) {
+    override fun filePath(filePath: String) {
       cdkBuilder.filePath(filePath)
     }
 
@@ -26,7 +25,7 @@ public interface FileCodeOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.FileCodeOptions,
   ) : FileCodeOptions {
-    public override fun filePath(): String = unwrap(this).getFilePath()
+    override fun filePath(): String = unwrap(this).getFilePath()
   }
 
   public companion object {

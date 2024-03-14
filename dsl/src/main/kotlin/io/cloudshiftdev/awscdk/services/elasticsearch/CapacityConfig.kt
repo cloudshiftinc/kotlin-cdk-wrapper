@@ -27,28 +27,22 @@ public interface CapacityConfig {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun dataNodeInstanceType(dataNodeInstanceType: String) {
-    }
+    public fun dataNodeInstanceType(dataNodeInstanceType: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun dataNodes(dataNodes: Number) {
-    }
+    public fun dataNodes(dataNodes: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun masterNodeInstanceType(masterNodeInstanceType: String) {
-    }
+    public fun masterNodeInstanceType(masterNodeInstanceType: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun masterNodes(masterNodes: Number) {
-    }
+    public fun masterNodes(masterNodes: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun warmInstanceType(warmInstanceType: String) {
-    }
+    public fun warmInstanceType(warmInstanceType: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun warmNodes(warmNodes: Number) {
-    }
+    public fun warmNodes(warmNodes: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -56,32 +50,32 @@ public interface CapacityConfig {
         software.amazon.awscdk.services.elasticsearch.CapacityConfig.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun dataNodeInstanceType(dataNodeInstanceType: String) {
+    override fun dataNodeInstanceType(dataNodeInstanceType: String) {
       cdkBuilder.dataNodeInstanceType(dataNodeInstanceType)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun dataNodes(dataNodes: Number) {
+    override fun dataNodes(dataNodes: Number) {
       cdkBuilder.dataNodes(dataNodes)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun masterNodeInstanceType(masterNodeInstanceType: String) {
+    override fun masterNodeInstanceType(masterNodeInstanceType: String) {
       cdkBuilder.masterNodeInstanceType(masterNodeInstanceType)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun masterNodes(masterNodes: Number) {
+    override fun masterNodes(masterNodes: Number) {
       cdkBuilder.masterNodes(masterNodes)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun warmInstanceType(warmInstanceType: String) {
+    override fun warmInstanceType(warmInstanceType: String) {
       cdkBuilder.warmInstanceType(warmInstanceType)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun warmNodes(warmNodes: Number) {
+    override fun warmNodes(warmNodes: Number) {
       cdkBuilder.warmNodes(warmNodes)
     }
 
@@ -93,22 +87,22 @@ public interface CapacityConfig {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.CapacityConfig,
   ) : CapacityConfig {
     @Deprecated(message = "deprecated in CDK")
-    public override fun dataNodeInstanceType(): String? = unwrap(this).getDataNodeInstanceType()
+    override fun dataNodeInstanceType(): String? = unwrap(this).getDataNodeInstanceType()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun dataNodes(): Number? = unwrap(this).getDataNodes()
+    override fun dataNodes(): Number? = unwrap(this).getDataNodes()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun masterNodeInstanceType(): String? = unwrap(this).getMasterNodeInstanceType()
+    override fun masterNodeInstanceType(): String? = unwrap(this).getMasterNodeInstanceType()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun masterNodes(): Number? = unwrap(this).getMasterNodes()
+    override fun masterNodes(): Number? = unwrap(this).getMasterNodes()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun warmInstanceType(): String? = unwrap(this).getWarmInstanceType()
+    override fun warmInstanceType(): String? = unwrap(this).getWarmInstanceType()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun warmNodes(): Number? = unwrap(this).getWarmNodes()
+    override fun warmNodes(): Number? = unwrap(this).getWarmNodes()
   }
 
   public companion object {

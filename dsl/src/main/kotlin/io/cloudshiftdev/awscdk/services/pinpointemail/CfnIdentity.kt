@@ -95,35 +95,25 @@ public open class CfnIdentity internal constructor(
   }
 
   public interface Builder {
-    public fun dkimSigningEnabled(dkimSigningEnabled: Boolean) {
-    }
+    public fun dkimSigningEnabled(dkimSigningEnabled: Boolean)
 
-    public fun dkimSigningEnabled(dkimSigningEnabled: IResolvable) {
-    }
+    public fun dkimSigningEnabled(dkimSigningEnabled: IResolvable)
 
-    public fun feedbackForwardingEnabled(feedbackForwardingEnabled: Boolean) {
-    }
+    public fun feedbackForwardingEnabled(feedbackForwardingEnabled: Boolean)
 
-    public fun feedbackForwardingEnabled(feedbackForwardingEnabled: IResolvable) {
-    }
+    public fun feedbackForwardingEnabled(feedbackForwardingEnabled: IResolvable)
 
-    public fun mailFromAttributes(mailFromAttributes: IResolvable) {
-    }
+    public fun mailFromAttributes(mailFromAttributes: IResolvable)
 
-    public fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
-    }
+    public fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8453518f907ad724d13149546a0012a7042eed12ce92092d934e6c47399c20ed")
-    public
-        fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty.Builder.() -> Unit) {
-    }
+    public fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -133,41 +123,41 @@ public open class CfnIdentity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpointemail.CfnIdentity.Builder =
         software.amazon.awscdk.services.pinpointemail.CfnIdentity.Builder.create(scope, id)
 
-    public override fun dkimSigningEnabled(dkimSigningEnabled: Boolean) {
+    override fun dkimSigningEnabled(dkimSigningEnabled: Boolean) {
       cdkBuilder.dkimSigningEnabled(dkimSigningEnabled)
     }
 
-    public override fun dkimSigningEnabled(dkimSigningEnabled: IResolvable) {
+    override fun dkimSigningEnabled(dkimSigningEnabled: IResolvable) {
       cdkBuilder.dkimSigningEnabled(dkimSigningEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun feedbackForwardingEnabled(feedbackForwardingEnabled: Boolean) {
+    override fun feedbackForwardingEnabled(feedbackForwardingEnabled: Boolean) {
       cdkBuilder.feedbackForwardingEnabled(feedbackForwardingEnabled)
     }
 
-    public override fun feedbackForwardingEnabled(feedbackForwardingEnabled: IResolvable) {
+    override fun feedbackForwardingEnabled(feedbackForwardingEnabled: IResolvable) {
       cdkBuilder.feedbackForwardingEnabled(feedbackForwardingEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun mailFromAttributes(mailFromAttributes: IResolvable) {
+    override fun mailFromAttributes(mailFromAttributes: IResolvable) {
       cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable::unwrap))
     }
 
-    public override fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
+    override fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
       cdkBuilder.mailFromAttributes(mailFromAttributes.let(MailFromAttributesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8453518f907ad724d13149546a0012a7042eed12ce92092d934e6c47399c20ed")
-    public override
+    override
         fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty.Builder.() -> Unit):
         Unit = mailFromAttributes(MailFromAttributesProperty(mailFromAttributes))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -202,11 +192,9 @@ public open class CfnIdentity internal constructor(
     public fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
 
     public interface Builder {
-      public fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
-      }
+      public fun behaviorOnMxFailure(behaviorOnMxFailure: String)
 
-      public fun mailFromDomain(mailFromDomain: String) {
-      }
+      public fun mailFromDomain(mailFromDomain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -215,11 +203,11 @@ public open class CfnIdentity internal constructor(
           =
           software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty.builder()
 
-      public override fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
+      override fun behaviorOnMxFailure(behaviorOnMxFailure: String) {
         cdkBuilder.behaviorOnMxFailure(behaviorOnMxFailure)
       }
 
-      public override fun mailFromDomain(mailFromDomain: String) {
+      override fun mailFromDomain(mailFromDomain: String) {
         cdkBuilder.mailFromDomain(mailFromDomain)
       }
 
@@ -232,9 +220,9 @@ public open class CfnIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pinpointemail.CfnIdentity.MailFromAttributesProperty,
     ) : MailFromAttributesProperty {
-      public override fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
+      override fun behaviorOnMxFailure(): String? = unwrap(this).getBehaviorOnMxFailure()
 
-      public override fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
+      override fun mailFromDomain(): String? = unwrap(this).getMailFromDomain()
     }
 
     public companion object {

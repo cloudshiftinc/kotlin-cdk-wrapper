@@ -15,77 +15,68 @@ public interface MetadataEntryResult : MetadataEntry {
   public fun path(): String
 
   public interface Builder {
-    public fun `data`(`data`: String) {
-    }
+    public fun `data`(`data`: String)
 
-    public fun `data`(`data`: FileAssetMetadataEntry) {
-    }
+    public fun `data`(`data`: FileAssetMetadataEntry)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21032671b9fd8716bfa04fb75b91a465e21e525e6bd0142e4ec3f68c59add044")
-    public fun `data`(`data`: FileAssetMetadataEntry.Builder.() -> Unit) {
-    }
+    public fun `data`(`data`: FileAssetMetadataEntry.Builder.() -> Unit)
 
-    public fun `data`(`data`: ContainerImageAssetMetadataEntry) {
-    }
+    public fun `data`(`data`: ContainerImageAssetMetadataEntry)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f31e5c47b3e381ad8ea96d00aab02e299b353aa9c5ef9bfb5c2e428b3578437")
-    public fun `data`(`data`: ContainerImageAssetMetadataEntry.Builder.() -> Unit) {
-    }
+    public fun `data`(`data`: ContainerImageAssetMetadataEntry.Builder.() -> Unit)
 
-    public fun `data`(`data`: List<Tag>) {
-    }
+    public fun `data`(`data`: List<Tag>)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun trace(trace: List<String>) {
-    }
+    public fun trace(trace: List<String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cxapi.MetadataEntryResult.Builder =
         software.amazon.awscdk.cxapi.MetadataEntryResult.builder()
 
-    public override fun `data`(`data`: String) {
+    override fun `data`(`data`: String) {
       cdkBuilder.`data`(`data`)
     }
 
-    public override fun `data`(`data`: FileAssetMetadataEntry) {
+    override fun `data`(`data`: FileAssetMetadataEntry) {
       cdkBuilder.`data`(`data`.let(FileAssetMetadataEntry::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21032671b9fd8716bfa04fb75b91a465e21e525e6bd0142e4ec3f68c59add044")
-    public override fun `data`(`data`: FileAssetMetadataEntry.Builder.() -> Unit): Unit =
+    override fun `data`(`data`: FileAssetMetadataEntry.Builder.() -> Unit): Unit =
         `data`(FileAssetMetadataEntry(`data`))
 
-    public override fun `data`(`data`: ContainerImageAssetMetadataEntry) {
+    override fun `data`(`data`: ContainerImageAssetMetadataEntry) {
       cdkBuilder.`data`(`data`.let(ContainerImageAssetMetadataEntry::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f31e5c47b3e381ad8ea96d00aab02e299b353aa9c5ef9bfb5c2e428b3578437")
-    public override fun `data`(`data`: ContainerImageAssetMetadataEntry.Builder.() -> Unit): Unit =
+    override fun `data`(`data`: ContainerImageAssetMetadataEntry.Builder.() -> Unit): Unit =
         `data`(ContainerImageAssetMetadataEntry(`data`))
 
-    public override fun `data`(`data`: List<Tag>) {
+    override fun `data`(`data`: List<Tag>) {
       cdkBuilder.`data`(`data`.map(Tag::unwrap))
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun trace(trace: List<String>) {
+    override fun trace(trace: List<String>) {
       cdkBuilder.trace(trace)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -95,13 +86,13 @@ public interface MetadataEntryResult : MetadataEntry {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cxapi.MetadataEntryResult,
   ) : MetadataEntryResult {
-    public override fun `data`(): Any? = unwrap(this).getData()
+    override fun `data`(): Any? = unwrap(this).getData()
 
-    public override fun path(): String = unwrap(this).getPath()
+    override fun path(): String = unwrap(this).getPath()
 
-    public override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
+    override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
 
-    public override fun type(): String = unwrap(this).getType()
+    override fun type(): String = unwrap(this).getType()
   }
 
   public companion object {

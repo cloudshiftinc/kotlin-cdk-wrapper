@@ -25,61 +25,44 @@ public open class UserPoolClient internal constructor(
       unwrap(this).getUserPoolClientSecret().let(SecretValue::wrap)
 
   public interface Builder {
-    public fun accessTokenValidity(accessTokenValidity: Duration) {
-    }
+    public fun accessTokenValidity(accessTokenValidity: Duration)
 
-    public fun authFlows(authFlows: AuthFlow) {
-    }
+    public fun authFlows(authFlows: AuthFlow)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ba14b3785c393a90f5f7281966ce647938ca9352287cfa5fa83557e18297ed19")
-    public fun authFlows(authFlows: AuthFlow.Builder.() -> Unit) {
-    }
+    public fun authFlows(authFlows: AuthFlow.Builder.() -> Unit)
 
-    public fun authSessionValidity(authSessionValidity: Duration) {
-    }
+    public fun authSessionValidity(authSessionValidity: Duration)
 
-    public fun disableOAuth(disableOAuth: Boolean) {
-    }
+    public fun disableOAuth(disableOAuth: Boolean)
 
-    public fun enableTokenRevocation(enableTokenRevocation: Boolean) {
-    }
+    public fun enableTokenRevocation(enableTokenRevocation: Boolean)
 
-    public fun generateSecret(generateSecret: Boolean) {
-    }
+    public fun generateSecret(generateSecret: Boolean)
 
-    public fun idTokenValidity(idTokenValidity: Duration) {
-    }
+    public fun idTokenValidity(idTokenValidity: Duration)
 
-    public fun oAuth(oAuth: OAuthSettings) {
-    }
+    public fun oAuth(oAuth: OAuthSettings)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("22e0c75887cff0caf44dc059347f5d22050bdcb0bfcc6b08a98f5c506aa29a0c")
-    public fun oAuth(oAuth: OAuthSettings.Builder.() -> Unit) {
-    }
+    public fun oAuth(oAuth: OAuthSettings.Builder.() -> Unit)
 
-    public fun preventUserExistenceErrors(preventUserExistenceErrors: Boolean) {
-    }
+    public fun preventUserExistenceErrors(preventUserExistenceErrors: Boolean)
 
-    public fun readAttributes(readAttributes: ClientAttributes) {
-    }
+    public fun readAttributes(readAttributes: ClientAttributes)
 
-    public fun refreshTokenValidity(refreshTokenValidity: Duration) {
-    }
+    public fun refreshTokenValidity(refreshTokenValidity: Duration)
 
     public
-        fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>) {
-    }
+        fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
 
-    public fun userPoolClientName(userPoolClientName: String) {
-    }
+    public fun userPoolClientName(userPoolClientName: String)
 
-    public fun writeAttributes(writeAttributes: ClientAttributes) {
-    }
+    public fun writeAttributes(writeAttributes: ClientAttributes)
   }
 
   private class BuilderImpl(
@@ -89,74 +72,73 @@ public open class UserPoolClient internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.UserPoolClient.Builder =
         software.amazon.awscdk.services.cognito.UserPoolClient.Builder.create(scope, id)
 
-    public override fun accessTokenValidity(accessTokenValidity: Duration) {
+    override fun accessTokenValidity(accessTokenValidity: Duration) {
       cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration::unwrap))
     }
 
-    public override fun authFlows(authFlows: AuthFlow) {
+    override fun authFlows(authFlows: AuthFlow) {
       cdkBuilder.authFlows(authFlows.let(AuthFlow::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ba14b3785c393a90f5f7281966ce647938ca9352287cfa5fa83557e18297ed19")
-    public override fun authFlows(authFlows: AuthFlow.Builder.() -> Unit): Unit =
+    override fun authFlows(authFlows: AuthFlow.Builder.() -> Unit): Unit =
         authFlows(AuthFlow(authFlows))
 
-    public override fun authSessionValidity(authSessionValidity: Duration) {
+    override fun authSessionValidity(authSessionValidity: Duration) {
       cdkBuilder.authSessionValidity(authSessionValidity.let(Duration::unwrap))
     }
 
-    public override fun disableOAuth(disableOAuth: Boolean) {
+    override fun disableOAuth(disableOAuth: Boolean) {
       cdkBuilder.disableOAuth(disableOAuth)
     }
 
-    public override fun enableTokenRevocation(enableTokenRevocation: Boolean) {
+    override fun enableTokenRevocation(enableTokenRevocation: Boolean) {
       cdkBuilder.enableTokenRevocation(enableTokenRevocation)
     }
 
-    public override fun generateSecret(generateSecret: Boolean) {
+    override fun generateSecret(generateSecret: Boolean) {
       cdkBuilder.generateSecret(generateSecret)
     }
 
-    public override fun idTokenValidity(idTokenValidity: Duration) {
+    override fun idTokenValidity(idTokenValidity: Duration) {
       cdkBuilder.idTokenValidity(idTokenValidity.let(Duration::unwrap))
     }
 
-    public override fun oAuth(oAuth: OAuthSettings) {
+    override fun oAuth(oAuth: OAuthSettings) {
       cdkBuilder.oAuth(oAuth.let(OAuthSettings::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("22e0c75887cff0caf44dc059347f5d22050bdcb0bfcc6b08a98f5c506aa29a0c")
-    public override fun oAuth(oAuth: OAuthSettings.Builder.() -> Unit): Unit =
-        oAuth(OAuthSettings(oAuth))
+    override fun oAuth(oAuth: OAuthSettings.Builder.() -> Unit): Unit = oAuth(OAuthSettings(oAuth))
 
-    public override fun preventUserExistenceErrors(preventUserExistenceErrors: Boolean) {
+    override fun preventUserExistenceErrors(preventUserExistenceErrors: Boolean) {
       cdkBuilder.preventUserExistenceErrors(preventUserExistenceErrors)
     }
 
-    public override fun readAttributes(readAttributes: ClientAttributes) {
+    override fun readAttributes(readAttributes: ClientAttributes) {
       cdkBuilder.readAttributes(readAttributes.let(ClientAttributes::unwrap))
     }
 
-    public override fun refreshTokenValidity(refreshTokenValidity: Duration) {
+    override fun refreshTokenValidity(refreshTokenValidity: Duration) {
       cdkBuilder.refreshTokenValidity(refreshTokenValidity.let(Duration::unwrap))
     }
 
-    public override
+    override
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>) {
       cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider::unwrap))
     }
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 
-    public override fun userPoolClientName(userPoolClientName: String) {
+    override fun userPoolClientName(userPoolClientName: String) {
       cdkBuilder.userPoolClientName(userPoolClientName)
     }
 
-    public override fun writeAttributes(writeAttributes: ClientAttributes) {
+    override fun writeAttributes(writeAttributes: ClientAttributes) {
       cdkBuilder.writeAttributes(writeAttributes.let(ClientAttributes::unwrap))
     }
 

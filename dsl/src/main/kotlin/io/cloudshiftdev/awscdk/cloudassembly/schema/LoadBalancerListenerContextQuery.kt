@@ -20,32 +20,23 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
   public fun region(): String
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun listenerArn(listenerArn: String) {
-    }
+    public fun listenerArn(listenerArn: String)
 
-    public fun listenerPort(listenerPort: Number) {
-    }
+    public fun listenerPort(listenerPort: Number)
 
-    public fun listenerProtocol(listenerProtocol: LoadBalancerListenerProtocol) {
-    }
+    public fun listenerProtocol(listenerProtocol: LoadBalancerListenerProtocol)
 
-    public fun loadBalancerArn(loadBalancerArn: String) {
-    }
+    public fun loadBalancerArn(loadBalancerArn: String)
 
-    public fun loadBalancerTags(loadBalancerTags: List<Tag>) {
-    }
+    public fun loadBalancerTags(loadBalancerTags: List<Tag>)
 
-    public fun loadBalancerType(loadBalancerType: LoadBalancerType) {
-    }
+    public fun loadBalancerType(loadBalancerType: LoadBalancerType)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
   }
 
   private class BuilderImpl : Builder {
@@ -53,39 +44,39 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerListenerContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerListenerContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun listenerArn(listenerArn: String) {
+    override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
     }
 
-    public override fun listenerPort(listenerPort: Number) {
+    override fun listenerPort(listenerPort: Number) {
       cdkBuilder.listenerPort(listenerPort)
     }
 
-    public override fun listenerProtocol(listenerProtocol: LoadBalancerListenerProtocol) {
+    override fun listenerProtocol(listenerProtocol: LoadBalancerListenerProtocol) {
       cdkBuilder.listenerProtocol(listenerProtocol.let(LoadBalancerListenerProtocol::unwrap))
     }
 
-    public override fun loadBalancerArn(loadBalancerArn: String) {
+    override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
-    public override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
+    override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag::unwrap))
     }
 
-    public override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
+    override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
       cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType::unwrap))
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
@@ -97,26 +88,26 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
     internal val cdkObject:
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerListenerContextQuery,
   ) : LoadBalancerListenerContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun listenerArn(): String? = unwrap(this).getListenerArn()
+    override fun listenerArn(): String? = unwrap(this).getListenerArn()
 
-    public override fun listenerPort(): Number? = unwrap(this).getListenerPort()
+    override fun listenerPort(): Number? = unwrap(this).getListenerPort()
 
-    public override fun listenerProtocol(): LoadBalancerListenerProtocol? =
+    override fun listenerProtocol(): LoadBalancerListenerProtocol? =
         unwrap(this).getListenerProtocol()?.let(LoadBalancerListenerProtocol::wrap)
 
-    public override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerTags(): List<Tag> =
-        unwrap(this).getLoadBalancerTags()?.map(Tag::wrap) ?: emptyList()
+    override fun loadBalancerTags(): List<Tag> = unwrap(this).getLoadBalancerTags()?.map(Tag::wrap)
+        ?: emptyList()
 
-    public override fun loadBalancerType(): LoadBalancerType =
+    override fun loadBalancerType(): LoadBalancerType =
         unwrap(this).getLoadBalancerType().let(LoadBalancerType::wrap)
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
   }
 
   public companion object {

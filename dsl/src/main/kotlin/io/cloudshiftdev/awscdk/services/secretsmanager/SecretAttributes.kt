@@ -12,29 +12,26 @@ public interface SecretAttributes {
   public fun secretPartialArn(): String? = unwrap(this).getSecretPartialArn()
 
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun secretCompleteArn(secretCompleteArn: String) {
-    }
+    public fun secretCompleteArn(secretCompleteArn: String)
 
-    public fun secretPartialArn(secretPartialArn: String) {
-    }
+    public fun secretPartialArn(secretPartialArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.SecretAttributes.Builder
         = software.amazon.awscdk.services.secretsmanager.SecretAttributes.builder()
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun secretCompleteArn(secretCompleteArn: String) {
+    override fun secretCompleteArn(secretCompleteArn: String) {
       cdkBuilder.secretCompleteArn(secretCompleteArn)
     }
 
-    public override fun secretPartialArn(secretPartialArn: String) {
+    override fun secretPartialArn(secretPartialArn: String) {
       cdkBuilder.secretPartialArn(secretPartialArn)
     }
 
@@ -45,11 +42,11 @@ public interface SecretAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttributes,
   ) : SecretAttributes {
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun secretCompleteArn(): String? = unwrap(this).getSecretCompleteArn()
+    override fun secretCompleteArn(): String? = unwrap(this).getSecretCompleteArn()
 
-    public override fun secretPartialArn(): String? = unwrap(this).getSecretPartialArn()
+    override fun secretPartialArn(): String? = unwrap(this).getSecretPartialArn()
   }
 
   public companion object {

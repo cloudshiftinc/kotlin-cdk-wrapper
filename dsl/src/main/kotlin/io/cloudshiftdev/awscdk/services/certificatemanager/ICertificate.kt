@@ -26,29 +26,27 @@ public interface ICertificate : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.certificatemanager.ICertificate,
   ) : ICertificate {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+    override fun certificateArn(): String = unwrap(this).getCertificateArn()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun metricDaysToExpiry(): Metric =
-        unwrap(this).metricDaysToExpiry().let(Metric::wrap)
+    override fun metricDaysToExpiry(): Metric = unwrap(this).metricDaysToExpiry().let(Metric::wrap)
 
-    public override fun metricDaysToExpiry(arg0: MetricOptions): Metric =
+    override fun metricDaysToExpiry(arg0: MetricOptions): Metric =
         unwrap(this).metricDaysToExpiry(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3ad895c8ac7bc6d03bba3058600c1021b398f352b3a3b16493165686a37bd590")
-    public override fun metricDaysToExpiry(arg0: MetricOptions.Builder.() -> Unit): Metric =
+    override fun metricDaysToExpiry(arg0: MetricOptions.Builder.() -> Unit): Metric =
         metricDaysToExpiry(MetricOptions(arg0))
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

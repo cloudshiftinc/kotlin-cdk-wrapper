@@ -88,35 +88,25 @@ public open class CfnConfigurationProfile internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
-    }
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
 
-    public fun locationUri(locationUri: String) {
-    }
+    public fun locationUri(locationUri: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun retrievalRoleArn(retrievalRoleArn: String) {
-    }
+    public fun retrievalRoleArn(retrievalRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun validators(validators: IResolvable) {
-    }
+    public fun validators(validators: IResolvable)
 
-    public fun validators(validators: List<Any>) {
-    }
+    public fun validators(validators: List<Any>)
   }
 
   private class BuilderImpl(
@@ -127,43 +117,43 @@ public open class CfnConfigurationProfile internal constructor(
         software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.Builder =
         software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
       cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
 
-    public override fun locationUri(locationUri: String) {
+    override fun locationUri(locationUri: String) {
       cdkBuilder.locationUri(locationUri)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun retrievalRoleArn(retrievalRoleArn: String) {
+    override fun retrievalRoleArn(retrievalRoleArn: String) {
       cdkBuilder.retrievalRoleArn(retrievalRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun validators(validators: IResolvable) {
+    override fun validators(validators: IResolvable) {
       cdkBuilder.validators(validators.let(IResolvable::unwrap))
     }
 
-    public override fun validators(validators: List<Any>) {
+    override fun validators(validators: List<Any>) {
       cdkBuilder.validators(validators)
     }
 
@@ -198,11 +188,9 @@ public open class CfnConfigurationProfile internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun content(content: String) {
-      }
+      public fun content(content: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -211,11 +199,11 @@ public open class CfnConfigurationProfile internal constructor(
           =
           software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty.builder()
 
-      public override fun content(content: String) {
+      override fun content(content: String) {
         cdkBuilder.content(content)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -228,9 +216,9 @@ public open class CfnConfigurationProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appconfig.CfnConfigurationProfile.ValidatorsProperty,
     ) : ValidatorsProperty {
-      public override fun content(): String? = unwrap(this).getContent()
+      override fun content(): String? = unwrap(this).getContent()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

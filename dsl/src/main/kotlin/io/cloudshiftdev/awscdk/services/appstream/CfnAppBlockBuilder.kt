@@ -116,52 +116,37 @@ public open class CfnAppBlockBuilder internal constructor(
       vpcConfig(VpcConfigProperty(`value`))
 
   public interface Builder {
-    public fun accessEndpoints(accessEndpoints: IResolvable) {
-    }
+    public fun accessEndpoints(accessEndpoints: IResolvable)
 
-    public fun accessEndpoints(accessEndpoints: List<Any>) {
-    }
+    public fun accessEndpoints(accessEndpoints: List<Any>)
 
-    public fun appBlockArns(appBlockArns: List<String>) {
-    }
+    public fun appBlockArns(appBlockArns: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
-    }
+    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean)
 
-    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-    }
+    public fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable)
 
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcConfig(vpcConfig: IResolvable) {
-    }
+    public fun vpcConfig(vpcConfig: IResolvable)
 
-    public fun vpcConfig(vpcConfig: VpcConfigProperty) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3cfc0a6de75123b3c9c88168a415957bc3f8003b7dee385825c191b78bff81ef")
-    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -171,65 +156,65 @@ public open class CfnAppBlockBuilder internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.Builder =
         software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.Builder.create(scope, id)
 
-    public override fun accessEndpoints(accessEndpoints: IResolvable) {
+    override fun accessEndpoints(accessEndpoints: IResolvable) {
       cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
     }
 
-    public override fun accessEndpoints(accessEndpoints: List<Any>) {
+    override fun accessEndpoints(accessEndpoints: List<Any>) {
       cdkBuilder.accessEndpoints(accessEndpoints)
     }
 
-    public override fun appBlockArns(appBlockArns: List<String>) {
+    override fun appBlockArns(appBlockArns: List<String>) {
       cdkBuilder.appBlockArns(appBlockArns)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
+    override fun enableDefaultInternetAccess(enableDefaultInternetAccess: Boolean) {
       cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess)
     }
 
-    public override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
+    override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
       cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
     }
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: IResolvable) {
+    override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty) {
+    override fun vpcConfig(vpcConfig: VpcConfigProperty) {
       cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3cfc0a6de75123b3c9c88168a415957bc3f8003b7dee385825c191b78bff81ef")
-    public override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
+    override fun vpcConfig(vpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit =
         vpcConfig(VpcConfigProperty(vpcConfig))
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnAppBlockBuilder =
@@ -263,11 +248,9 @@ public open class CfnAppBlockBuilder internal constructor(
     public fun vpceId(): String
 
     public interface Builder {
-      public fun endpointType(endpointType: String) {
-      }
+      public fun endpointType(endpointType: String)
 
-      public fun vpceId(vpceId: String) {
-      }
+      public fun vpceId(vpceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -276,11 +259,11 @@ public open class CfnAppBlockBuilder internal constructor(
           =
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty.builder()
 
-      public override fun endpointType(endpointType: String) {
+      override fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
       }
 
-      public override fun vpceId(vpceId: String) {
+      override fun vpceId(vpceId: String) {
         cdkBuilder.vpceId(vpceId)
       }
 
@@ -293,9 +276,9 @@ public open class CfnAppBlockBuilder internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.AccessEndpointProperty,
     ) : AccessEndpointProperty {
-      public override fun endpointType(): String = unwrap(this).getEndpointType()
+      override fun endpointType(): String = unwrap(this).getEndpointType()
 
-      public override fun vpceId(): String = unwrap(this).getVpceId()
+      override fun vpceId(): String = unwrap(this).getVpceId()
     }
 
     public companion object {
@@ -324,11 +307,9 @@ public open class CfnAppBlockBuilder internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -336,11 +317,11 @@ public open class CfnAppBlockBuilder internal constructor(
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -353,10 +334,10 @@ public open class CfnAppBlockBuilder internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty,
     ) : VpcConfigProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {

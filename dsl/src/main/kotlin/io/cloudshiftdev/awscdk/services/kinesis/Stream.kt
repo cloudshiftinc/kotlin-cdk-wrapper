@@ -259,23 +259,17 @@ public open class Stream internal constructor(
   public override fun streamName(): String = unwrap(this).getStreamName()
 
   public interface Builder {
-    public fun encryption(encryption: StreamEncryption) {
-    }
+    public fun encryption(encryption: StreamEncryption)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun retentionPeriod(retentionPeriod: Duration) {
-    }
+    public fun retentionPeriod(retentionPeriod: Duration)
 
-    public fun shardCount(shardCount: Number) {
-    }
+    public fun shardCount(shardCount: Number)
 
-    public fun streamMode(streamMode: StreamMode) {
-    }
+    public fun streamMode(streamMode: StreamMode)
 
-    public fun streamName(streamName: String) {
-    }
+    public fun streamName(streamName: String)
   }
 
   private class BuilderImpl(
@@ -285,27 +279,27 @@ public open class Stream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kinesis.Stream.Builder =
         software.amazon.awscdk.services.kinesis.Stream.Builder.create(scope, id)
 
-    public override fun encryption(encryption: StreamEncryption) {
+    override fun encryption(encryption: StreamEncryption) {
       cdkBuilder.encryption(encryption.let(StreamEncryption::unwrap))
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun retentionPeriod(retentionPeriod: Duration) {
+    override fun retentionPeriod(retentionPeriod: Duration) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
     }
 
-    public override fun shardCount(shardCount: Number) {
+    override fun shardCount(shardCount: Number) {
       cdkBuilder.shardCount(shardCount)
     }
 
-    public override fun streamMode(streamMode: StreamMode) {
+    override fun streamMode(streamMode: StreamMode) {
       cdkBuilder.streamMode(streamMode.let(StreamMode::unwrap))
     }
 
-    public override fun streamName(streamName: String) {
+    override fun streamName(streamName: String) {
       cdkBuilder.streamName(streamName)
     }
 

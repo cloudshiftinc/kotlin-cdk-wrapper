@@ -24,17 +24,13 @@ public open class PrefixList internal constructor(
   public open fun version(): Number = unwrap(this).getVersion()
 
   public interface Builder {
-    public fun addressFamily(addressFamily: AddressFamily) {
-    }
+    public fun addressFamily(addressFamily: AddressFamily)
 
-    public fun entries(entries: List<CfnPrefixList.EntryProperty>) {
-    }
+    public fun entries(entries: List<CfnPrefixList.EntryProperty>)
 
-    public fun maxEntries(maxEntries: Number) {
-    }
+    public fun maxEntries(maxEntries: Number)
 
-    public fun prefixListName(prefixListName: String) {
-    }
+    public fun prefixListName(prefixListName: String)
   }
 
   private class BuilderImpl(
@@ -44,19 +40,19 @@ public open class PrefixList internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.PrefixList.Builder =
         software.amazon.awscdk.services.ec2.PrefixList.Builder.create(scope, id)
 
-    public override fun addressFamily(addressFamily: AddressFamily) {
+    override fun addressFamily(addressFamily: AddressFamily) {
       cdkBuilder.addressFamily(addressFamily.let(AddressFamily::unwrap))
     }
 
-    public override fun entries(entries: List<CfnPrefixList.EntryProperty>) {
+    override fun entries(entries: List<CfnPrefixList.EntryProperty>) {
       cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty::unwrap))
     }
 
-    public override fun maxEntries(maxEntries: Number) {
+    override fun maxEntries(maxEntries: Number) {
       cdkBuilder.maxEntries(maxEntries)
     }
 
-    public override fun prefixListName(prefixListName: String) {
+    override fun prefixListName(prefixListName: String) {
       cdkBuilder.prefixListName(prefixListName)
     }
 

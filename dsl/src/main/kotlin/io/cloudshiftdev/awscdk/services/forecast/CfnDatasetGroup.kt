@@ -49,17 +49,13 @@ public open class CfnDatasetGroup internal constructor(
   }
 
   public interface Builder {
-    public fun datasetArns(datasetArns: List<String>) {
-    }
+    public fun datasetArns(datasetArns: List<String>)
 
-    public fun datasetGroupName(datasetGroupName: String) {
-    }
+    public fun datasetGroupName(datasetGroupName: String)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnDatasetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.forecast.CfnDatasetGroup.Builder =
         software.amazon.awscdk.services.forecast.CfnDatasetGroup.Builder.create(scope, id)
 
-    public override fun datasetArns(datasetArns: List<String>) {
+    override fun datasetArns(datasetArns: List<String>) {
       cdkBuilder.datasetArns(datasetArns)
     }
 
-    public override fun datasetGroupName(datasetGroupName: String) {
+    override fun datasetGroupName(datasetGroupName: String) {
       cdkBuilder.datasetGroupName(datasetGroupName)
     }
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

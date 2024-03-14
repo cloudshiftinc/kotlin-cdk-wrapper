@@ -152,80 +152,57 @@ public open class CfnFileSystem internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZoneName(availabilityZoneName: String) {
-    }
+    public fun availabilityZoneName(availabilityZoneName: String)
 
-    public fun backupPolicy(backupPolicy: IResolvable) {
-    }
+    public fun backupPolicy(backupPolicy: IResolvable)
 
-    public fun backupPolicy(backupPolicy: BackupPolicyProperty) {
-    }
+    public fun backupPolicy(backupPolicy: BackupPolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75c2068fea33f46f0b81ec9b3167482f1b33d2850483e2128410e2ec3c6e5797")
-    public fun backupPolicy(backupPolicy: BackupPolicyProperty.Builder.() -> Unit) {
-    }
+    public fun backupPolicy(backupPolicy: BackupPolicyProperty.Builder.() -> Unit)
 
-    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
-    }
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean)
 
-    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
-    }
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable)
 
-    public fun encrypted(encrypted: Boolean) {
-    }
+    public fun encrypted(encrypted: Boolean)
 
-    public fun encrypted(encrypted: IResolvable) {
-    }
+    public fun encrypted(encrypted: IResolvable)
 
-    public fun fileSystemPolicy(fileSystemPolicy: Any) {
-    }
+    public fun fileSystemPolicy(fileSystemPolicy: Any)
 
-    public fun fileSystemProtection(fileSystemProtection: IResolvable) {
-    }
+    public fun fileSystemProtection(fileSystemProtection: IResolvable)
 
-    public fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty) {
-    }
+    public fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fe219d089f6ecb2b40f3cf37e0616ea4fb81907fb8a89fd945425744d7e1c922")
     public
-        fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty.Builder.() -> Unit) {
-    }
+        fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty.Builder.() -> Unit)
 
-    public fun fileSystemTags(fileSystemTags: List<ElasticFileSystemTagProperty>) {
-    }
+    public fun fileSystemTags(fileSystemTags: List<ElasticFileSystemTagProperty>)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun lifecyclePolicies(lifecyclePolicies: IResolvable) {
-    }
+    public fun lifecyclePolicies(lifecyclePolicies: IResolvable)
 
-    public fun lifecyclePolicies(lifecyclePolicies: List<Any>) {
-    }
+    public fun lifecyclePolicies(lifecyclePolicies: List<Any>)
 
-    public fun performanceMode(performanceMode: String) {
-    }
+    public fun performanceMode(performanceMode: String)
 
-    public fun provisionedThroughputInMibps(provisionedThroughputInMibps: Number) {
-    }
+    public fun provisionedThroughputInMibps(provisionedThroughputInMibps: Number)
 
-    public fun replicationConfiguration(replicationConfiguration: IResolvable) {
-    }
+    public fun replicationConfiguration(replicationConfiguration: IResolvable)
 
-    public
-        fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
-    }
+    public fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a98676449aff2b6dc6f8e4f8d8b593e443b3e6102fe0793e2d7f90a4427d8cd8")
     public
-        fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty.Builder.() -> Unit)
 
-    public fun throughputMode(throughputMode: String) {
-    }
+    public fun throughputMode(throughputMode: String)
   }
 
   private class BuilderImpl(
@@ -235,98 +212,97 @@ public open class CfnFileSystem internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.efs.CfnFileSystem.Builder =
         software.amazon.awscdk.services.efs.CfnFileSystem.Builder.create(scope, id)
 
-    public override fun availabilityZoneName(availabilityZoneName: String) {
+    override fun availabilityZoneName(availabilityZoneName: String) {
       cdkBuilder.availabilityZoneName(availabilityZoneName)
     }
 
-    public override fun backupPolicy(backupPolicy: IResolvable) {
+    override fun backupPolicy(backupPolicy: IResolvable) {
       cdkBuilder.backupPolicy(backupPolicy.let(IResolvable::unwrap))
     }
 
-    public override fun backupPolicy(backupPolicy: BackupPolicyProperty) {
+    override fun backupPolicy(backupPolicy: BackupPolicyProperty) {
       cdkBuilder.backupPolicy(backupPolicy.let(BackupPolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75c2068fea33f46f0b81ec9b3167482f1b33d2850483e2128410e2ec3c6e5797")
-    public override fun backupPolicy(backupPolicy: BackupPolicyProperty.Builder.() -> Unit): Unit =
+    override fun backupPolicy(backupPolicy: BackupPolicyProperty.Builder.() -> Unit): Unit =
         backupPolicy(BackupPolicyProperty(backupPolicy))
 
-    public override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
+    override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
       cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck)
     }
 
-    public override
-        fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
+    override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
       cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable::unwrap))
     }
 
-    public override fun encrypted(encrypted: Boolean) {
+    override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
     }
 
-    public override fun encrypted(encrypted: IResolvable) {
+    override fun encrypted(encrypted: IResolvable) {
       cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
     }
 
-    public override fun fileSystemPolicy(fileSystemPolicy: Any) {
+    override fun fileSystemPolicy(fileSystemPolicy: Any) {
       cdkBuilder.fileSystemPolicy(fileSystemPolicy)
     }
 
-    public override fun fileSystemProtection(fileSystemProtection: IResolvable) {
+    override fun fileSystemProtection(fileSystemProtection: IResolvable) {
       cdkBuilder.fileSystemProtection(fileSystemProtection.let(IResolvable::unwrap))
     }
 
-    public override fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty) {
+    override fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty) {
       cdkBuilder.fileSystemProtection(fileSystemProtection.let(FileSystemProtectionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fe219d089f6ecb2b40f3cf37e0616ea4fb81907fb8a89fd945425744d7e1c922")
-    public override
+    override
         fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty.Builder.() -> Unit):
         Unit = fileSystemProtection(FileSystemProtectionProperty(fileSystemProtection))
 
-    public override fun fileSystemTags(fileSystemTags: List<ElasticFileSystemTagProperty>) {
+    override fun fileSystemTags(fileSystemTags: List<ElasticFileSystemTagProperty>) {
       cdkBuilder.fileSystemTags(fileSystemTags.map(ElasticFileSystemTagProperty::unwrap))
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun lifecyclePolicies(lifecyclePolicies: IResolvable) {
+    override fun lifecyclePolicies(lifecyclePolicies: IResolvable) {
       cdkBuilder.lifecyclePolicies(lifecyclePolicies.let(IResolvable::unwrap))
     }
 
-    public override fun lifecyclePolicies(lifecyclePolicies: List<Any>) {
+    override fun lifecyclePolicies(lifecyclePolicies: List<Any>) {
       cdkBuilder.lifecyclePolicies(lifecyclePolicies)
     }
 
-    public override fun performanceMode(performanceMode: String) {
+    override fun performanceMode(performanceMode: String) {
       cdkBuilder.performanceMode(performanceMode)
     }
 
-    public override fun provisionedThroughputInMibps(provisionedThroughputInMibps: Number) {
+    override fun provisionedThroughputInMibps(provisionedThroughputInMibps: Number) {
       cdkBuilder.provisionedThroughputInMibps(provisionedThroughputInMibps)
     }
 
-    public override fun replicationConfiguration(replicationConfiguration: IResolvable) {
+    override fun replicationConfiguration(replicationConfiguration: IResolvable) {
       cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
       cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a98676449aff2b6dc6f8e4f8d8b593e443b3e6102fe0793e2d7f90a4427d8cd8")
-    public override
+    override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty.Builder.() -> Unit):
         Unit = replicationConfiguration(ReplicationConfigurationProperty(replicationConfiguration))
 
-    public override fun throughputMode(throughputMode: String) {
+    override fun throughputMode(throughputMode: String) {
       cdkBuilder.throughputMode(throughputMode)
     }
 
@@ -359,8 +335,7 @@ public open class CfnFileSystem internal constructor(
         unwrap(this).getReplicationOverwriteProtection()
 
     public interface Builder {
-      public fun replicationOverwriteProtection(replicationOverwriteProtection: String) {
-      }
+      public fun replicationOverwriteProtection(replicationOverwriteProtection: String)
     }
 
     private class BuilderImpl : Builder {
@@ -368,7 +343,7 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty.Builder =
           software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty.builder()
 
-      public override fun replicationOverwriteProtection(replicationOverwriteProtection: String) {
+      override fun replicationOverwriteProtection(replicationOverwriteProtection: String) {
         cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection)
       }
 
@@ -381,7 +356,7 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnFileSystem.FileSystemProtectionProperty,
     ) : FileSystemProtectionProperty {
-      public override fun replicationOverwriteProtection(): String? =
+      override fun replicationOverwriteProtection(): String? =
           unwrap(this).getReplicationOverwriteProtection()
     }
 
@@ -411,11 +386,9 @@ public open class CfnFileSystem internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -423,11 +396,11 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.Builder =
           software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -440,9 +413,9 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnFileSystem.ElasticFileSystemTagProperty,
     ) : ElasticFileSystemTagProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -475,17 +448,13 @@ public open class CfnFileSystem internal constructor(
     public fun region(): String? = unwrap(this).getRegion()
 
     public interface Builder {
-      public fun availabilityZoneName(availabilityZoneName: String) {
-      }
+      public fun availabilityZoneName(availabilityZoneName: String)
 
-      public fun fileSystemId(fileSystemId: String) {
-      }
+      public fun fileSystemId(fileSystemId: String)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
     }
 
     private class BuilderImpl : Builder {
@@ -493,19 +462,19 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.Builder =
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.builder()
 
-      public override fun availabilityZoneName(availabilityZoneName: String) {
+      override fun availabilityZoneName(availabilityZoneName: String) {
         cdkBuilder.availabilityZoneName(availabilityZoneName)
       }
 
-      public override fun fileSystemId(fileSystemId: String) {
+      override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
@@ -518,13 +487,13 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
     ) : ReplicationDestinationProperty {
-      public override fun availabilityZoneName(): String? = unwrap(this).getAvailabilityZoneName()
+      override fun availabilityZoneName(): String? = unwrap(this).getAvailabilityZoneName()
 
-      public override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+      override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
     }
 
     public companion object {
@@ -556,14 +525,11 @@ public open class CfnFileSystem internal constructor(
         unwrap(this).getTransitionToPrimaryStorageClass()
 
     public interface Builder {
-      public fun transitionToArchive(transitionToArchive: String) {
-      }
+      public fun transitionToArchive(transitionToArchive: String)
 
-      public fun transitionToIa(transitionToIa: String) {
-      }
+      public fun transitionToIa(transitionToIa: String)
 
-      public fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String) {
-      }
+      public fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String)
     }
 
     private class BuilderImpl : Builder {
@@ -571,15 +537,15 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty.Builder =
           software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty.builder()
 
-      public override fun transitionToArchive(transitionToArchive: String) {
+      override fun transitionToArchive(transitionToArchive: String) {
         cdkBuilder.transitionToArchive(transitionToArchive)
       }
 
-      public override fun transitionToIa(transitionToIa: String) {
+      override fun transitionToIa(transitionToIa: String) {
         cdkBuilder.transitionToIa(transitionToIa)
       }
 
-      public override fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String) {
+      override fun transitionToPrimaryStorageClass(transitionToPrimaryStorageClass: String) {
         cdkBuilder.transitionToPrimaryStorageClass(transitionToPrimaryStorageClass)
       }
 
@@ -591,11 +557,11 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnFileSystem.LifecyclePolicyProperty,
     ) : LifecyclePolicyProperty {
-      public override fun transitionToArchive(): String? = unwrap(this).getTransitionToArchive()
+      override fun transitionToArchive(): String? = unwrap(this).getTransitionToArchive()
 
-      public override fun transitionToIa(): String? = unwrap(this).getTransitionToIa()
+      override fun transitionToIa(): String? = unwrap(this).getTransitionToIa()
 
-      public override fun transitionToPrimaryStorageClass(): String? =
+      override fun transitionToPrimaryStorageClass(): String? =
           unwrap(this).getTransitionToPrimaryStorageClass()
     }
 
@@ -623,11 +589,9 @@ public open class CfnFileSystem internal constructor(
     public fun destinations(): Any? = unwrap(this).getDestinations()
 
     public interface Builder {
-      public fun destinations(destinations: IResolvable) {
-      }
+      public fun destinations(destinations: IResolvable)
 
-      public fun destinations(destinations: List<Any>) {
-      }
+      public fun destinations(destinations: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -636,11 +600,11 @@ public open class CfnFileSystem internal constructor(
           =
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty.builder()
 
-      public override fun destinations(destinations: IResolvable) {
+      override fun destinations(destinations: IResolvable) {
         cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
       }
 
-      public override fun destinations(destinations: List<Any>) {
+      override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
 
@@ -653,7 +617,7 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty,
     ) : ReplicationConfigurationProperty {
-      public override fun destinations(): Any? = unwrap(this).getDestinations()
+      override fun destinations(): Any? = unwrap(this).getDestinations()
     }
 
     public companion object {
@@ -680,8 +644,7 @@ public open class CfnFileSystem internal constructor(
     public fun status(): String
 
     public interface Builder {
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -689,7 +652,7 @@ public open class CfnFileSystem internal constructor(
           software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.Builder =
           software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty.builder()
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -701,7 +664,7 @@ public open class CfnFileSystem internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.efs.CfnFileSystem.BackupPolicyProperty,
     ) : BackupPolicyProperty {
-      public override fun status(): String = unwrap(this).getStatus()
+      override fun status(): String = unwrap(this).getStatus()
     }
 
     public companion object {

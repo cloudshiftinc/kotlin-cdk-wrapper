@@ -114,50 +114,35 @@ public open class CfnKey internal constructor(
   }
 
   public interface Builder {
-    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
-    }
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean)
 
-    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
-    }
+    public fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enableKeyRotation(enableKeyRotation: Boolean) {
-    }
+    public fun enableKeyRotation(enableKeyRotation: Boolean)
 
-    public fun enableKeyRotation(enableKeyRotation: IResolvable) {
-    }
+    public fun enableKeyRotation(enableKeyRotation: IResolvable)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun keyPolicy(keyPolicy: Any) {
-    }
+    public fun keyPolicy(keyPolicy: Any)
 
-    public fun keySpec(keySpec: String) {
-    }
+    public fun keySpec(keySpec: String)
 
-    public fun keyUsage(keyUsage: String) {
-    }
+    public fun keyUsage(keyUsage: String)
 
-    public fun multiRegion(multiRegion: Boolean) {
-    }
+    public fun multiRegion(multiRegion: Boolean)
 
-    public fun multiRegion(multiRegion: IResolvable) {
-    }
+    public fun multiRegion(multiRegion: IResolvable)
 
-    public fun origin(origin: String) {
-    }
+    public fun origin(origin: String)
 
-    public fun pendingWindowInDays(pendingWindowInDays: Number) {
-    }
+    public fun pendingWindowInDays(pendingWindowInDays: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -167,64 +152,63 @@ public open class CfnKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kms.CfnKey.Builder =
         software.amazon.awscdk.services.kms.CfnKey.Builder.create(scope, id)
 
-    public override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
+    override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: Boolean) {
       cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck)
     }
 
-    public override
-        fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
+    override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
       cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enableKeyRotation(enableKeyRotation: Boolean) {
+    override fun enableKeyRotation(enableKeyRotation: Boolean) {
       cdkBuilder.enableKeyRotation(enableKeyRotation)
     }
 
-    public override fun enableKeyRotation(enableKeyRotation: IResolvable) {
+    override fun enableKeyRotation(enableKeyRotation: IResolvable) {
       cdkBuilder.enableKeyRotation(enableKeyRotation.let(IResolvable::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun keyPolicy(keyPolicy: Any) {
+    override fun keyPolicy(keyPolicy: Any) {
       cdkBuilder.keyPolicy(keyPolicy)
     }
 
-    public override fun keySpec(keySpec: String) {
+    override fun keySpec(keySpec: String) {
       cdkBuilder.keySpec(keySpec)
     }
 
-    public override fun keyUsage(keyUsage: String) {
+    override fun keyUsage(keyUsage: String) {
       cdkBuilder.keyUsage(keyUsage)
     }
 
-    public override fun multiRegion(multiRegion: Boolean) {
+    override fun multiRegion(multiRegion: Boolean) {
       cdkBuilder.multiRegion(multiRegion)
     }
 
-    public override fun multiRegion(multiRegion: IResolvable) {
+    override fun multiRegion(multiRegion: IResolvable) {
       cdkBuilder.multiRegion(multiRegion.let(IResolvable::unwrap))
     }
 
-    public override fun origin(origin: String) {
+    override fun origin(origin: String) {
       cdkBuilder.origin(origin)
     }
 
-    public override fun pendingWindowInDays(pendingWindowInDays: Number) {
+    override fun pendingWindowInDays(pendingWindowInDays: Number) {
       cdkBuilder.pendingWindowInDays(pendingWindowInDays)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

@@ -17,23 +17,17 @@ public open class NotificationRule internal constructor(
   public override fun notificationRuleArn(): String = unwrap(this).getNotificationRuleArn()
 
   public interface Builder {
-    public fun detailType(detailType: DetailType) {
-    }
+    public fun detailType(detailType: DetailType)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun events(events: List<String>) {
-    }
+    public fun events(events: List<String>)
 
-    public fun notificationRuleName(notificationRuleName: String) {
-    }
+    public fun notificationRuleName(notificationRuleName: String)
 
-    public fun source(source: INotificationRuleSource) {
-    }
+    public fun source(source: INotificationRuleSource)
 
-    public fun targets(targets: List<INotificationRuleTarget>) {
-    }
+    public fun targets(targets: List<INotificationRuleTarget>)
   }
 
   private class BuilderImpl(
@@ -45,27 +39,27 @@ public open class NotificationRule internal constructor(
         software.amazon.awscdk.services.codestarnotifications.NotificationRule.Builder.create(scope,
         id)
 
-    public override fun detailType(detailType: DetailType) {
+    override fun detailType(detailType: DetailType) {
       cdkBuilder.detailType(detailType.let(DetailType::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun events(events: List<String>) {
+    override fun events(events: List<String>) {
       cdkBuilder.events(events)
     }
 
-    public override fun notificationRuleName(notificationRuleName: String) {
+    override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)
     }
 
-    public override fun source(source: INotificationRuleSource) {
+    override fun source(source: INotificationRuleSource) {
       cdkBuilder.source(source.let(INotificationRuleSource::unwrap))
     }
 
-    public override fun targets(targets: List<INotificationRuleTarget>) {
+    override fun targets(targets: List<INotificationRuleTarget>) {
       cdkBuilder.targets(targets.map(INotificationRuleTarget::unwrap))
     }
 

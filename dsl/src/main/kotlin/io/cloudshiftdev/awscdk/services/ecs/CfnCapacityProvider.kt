@@ -56,24 +56,18 @@ public open class CfnCapacityProvider internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable) {
-    }
+    public fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable)
 
-    public
-        fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty) {
-    }
+    public fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("68422f447be91b9c3be8c755876526eb33f3c5b41cae3e978f5f6d9e0be64f83")
     public
-        fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty.Builder.() -> Unit) {
-    }
+        fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -83,26 +77,26 @@ public open class CfnCapacityProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnCapacityProvider.Builder =
         software.amazon.awscdk.services.ecs.CfnCapacityProvider.Builder.create(scope, id)
 
-    public override fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable) {
+    override fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable) {
       cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty) {
       cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(AutoScalingGroupProviderProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("68422f447be91b9c3be8c755876526eb33f3c5b41cae3e978f5f6d9e0be64f83")
-    public override
+    override
         fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty.Builder.() -> Unit):
         Unit = autoScalingGroupProvider(AutoScalingGroupProviderProperty(autoScalingGroupProvider))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -142,20 +136,15 @@ public open class CfnCapacityProvider internal constructor(
     public fun targetCapacity(): Number? = unwrap(this).getTargetCapacity()
 
     public interface Builder {
-      public fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
-      }
+      public fun instanceWarmupPeriod(instanceWarmupPeriod: Number)
 
-      public fun maximumScalingStepSize(maximumScalingStepSize: Number) {
-      }
+      public fun maximumScalingStepSize(maximumScalingStepSize: Number)
 
-      public fun minimumScalingStepSize(minimumScalingStepSize: Number) {
-      }
+      public fun minimumScalingStepSize(minimumScalingStepSize: Number)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun targetCapacity(targetCapacity: Number) {
-      }
+      public fun targetCapacity(targetCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -163,23 +152,23 @@ public open class CfnCapacityProvider internal constructor(
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty.Builder =
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty.builder()
 
-      public override fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
+      override fun instanceWarmupPeriod(instanceWarmupPeriod: Number) {
         cdkBuilder.instanceWarmupPeriod(instanceWarmupPeriod)
       }
 
-      public override fun maximumScalingStepSize(maximumScalingStepSize: Number) {
+      override fun maximumScalingStepSize(maximumScalingStepSize: Number) {
         cdkBuilder.maximumScalingStepSize(maximumScalingStepSize)
       }
 
-      public override fun minimumScalingStepSize(minimumScalingStepSize: Number) {
+      override fun minimumScalingStepSize(minimumScalingStepSize: Number) {
         cdkBuilder.minimumScalingStepSize(minimumScalingStepSize)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun targetCapacity(targetCapacity: Number) {
+      override fun targetCapacity(targetCapacity: Number) {
         cdkBuilder.targetCapacity(targetCapacity)
       }
 
@@ -192,17 +181,15 @@ public open class CfnCapacityProvider internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.ManagedScalingProperty,
     ) : ManagedScalingProperty {
-      public override fun instanceWarmupPeriod(): Number? = unwrap(this).getInstanceWarmupPeriod()
+      override fun instanceWarmupPeriod(): Number? = unwrap(this).getInstanceWarmupPeriod()
 
-      public override fun maximumScalingStepSize(): Number? =
-          unwrap(this).getMaximumScalingStepSize()
+      override fun maximumScalingStepSize(): Number? = unwrap(this).getMaximumScalingStepSize()
 
-      public override fun minimumScalingStepSize(): Number? =
-          unwrap(this).getMinimumScalingStepSize()
+      override fun minimumScalingStepSize(): Number? = unwrap(this).getMinimumScalingStepSize()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun targetCapacity(): Number? = unwrap(this).getTargetCapacity()
+      override fun targetCapacity(): Number? = unwrap(this).getTargetCapacity()
     }
 
     public companion object {
@@ -236,25 +223,19 @@ public open class CfnCapacityProvider internal constructor(
         unwrap(this).getManagedTerminationProtection()
 
     public interface Builder {
-      public fun autoScalingGroupArn(autoScalingGroupArn: String) {
-      }
+      public fun autoScalingGroupArn(autoScalingGroupArn: String)
 
-      public fun managedDraining(managedDraining: String) {
-      }
+      public fun managedDraining(managedDraining: String)
 
-      public fun managedScaling(managedScaling: IResolvable) {
-      }
+      public fun managedScaling(managedScaling: IResolvable)
 
-      public fun managedScaling(managedScaling: ManagedScalingProperty) {
-      }
+      public fun managedScaling(managedScaling: ManagedScalingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44931cd342e50c37549dae89b6cbbe6b4f5f8ec40770076d154685503c77bd15")
-      public fun managedScaling(managedScaling: ManagedScalingProperty.Builder.() -> Unit) {
-      }
+      public fun managedScaling(managedScaling: ManagedScalingProperty.Builder.() -> Unit)
 
-      public fun managedTerminationProtection(managedTerminationProtection: String) {
-      }
+      public fun managedTerminationProtection(managedTerminationProtection: String)
     }
 
     private class BuilderImpl : Builder {
@@ -263,28 +244,28 @@ public open class CfnCapacityProvider internal constructor(
           =
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty.builder()
 
-      public override fun autoScalingGroupArn(autoScalingGroupArn: String) {
+      override fun autoScalingGroupArn(autoScalingGroupArn: String) {
         cdkBuilder.autoScalingGroupArn(autoScalingGroupArn)
       }
 
-      public override fun managedDraining(managedDraining: String) {
+      override fun managedDraining(managedDraining: String) {
         cdkBuilder.managedDraining(managedDraining)
       }
 
-      public override fun managedScaling(managedScaling: IResolvable) {
+      override fun managedScaling(managedScaling: IResolvable) {
         cdkBuilder.managedScaling(managedScaling.let(IResolvable::unwrap))
       }
 
-      public override fun managedScaling(managedScaling: ManagedScalingProperty) {
+      override fun managedScaling(managedScaling: ManagedScalingProperty) {
         cdkBuilder.managedScaling(managedScaling.let(ManagedScalingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("44931cd342e50c37549dae89b6cbbe6b4f5f8ec40770076d154685503c77bd15")
-      public override fun managedScaling(managedScaling: ManagedScalingProperty.Builder.() -> Unit):
-          Unit = managedScaling(ManagedScalingProperty(managedScaling))
+      override fun managedScaling(managedScaling: ManagedScalingProperty.Builder.() -> Unit): Unit =
+          managedScaling(ManagedScalingProperty(managedScaling))
 
-      public override fun managedTerminationProtection(managedTerminationProtection: String) {
+      override fun managedTerminationProtection(managedTerminationProtection: String) {
         cdkBuilder.managedTerminationProtection(managedTerminationProtection)
       }
 
@@ -297,13 +278,13 @@ public open class CfnCapacityProvider internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecs.CfnCapacityProvider.AutoScalingGroupProviderProperty,
     ) : AutoScalingGroupProviderProperty {
-      public override fun autoScalingGroupArn(): String = unwrap(this).getAutoScalingGroupArn()
+      override fun autoScalingGroupArn(): String = unwrap(this).getAutoScalingGroupArn()
 
-      public override fun managedDraining(): String? = unwrap(this).getManagedDraining()
+      override fun managedDraining(): String? = unwrap(this).getManagedDraining()
 
-      public override fun managedScaling(): Any? = unwrap(this).getManagedScaling()
+      override fun managedScaling(): Any? = unwrap(this).getManagedScaling()
 
-      public override fun managedTerminationProtection(): String? =
+      override fun managedTerminationProtection(): String? =
           unwrap(this).getManagedTerminationProtection()
     }
 

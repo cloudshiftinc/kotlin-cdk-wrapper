@@ -71,28 +71,21 @@ public open class CfnLocationFSxOpenZFS internal constructor(
   }
 
   public interface Builder {
-    public fun fsxFilesystemArn(fsxFilesystemArn: String) {
-    }
+    public fun fsxFilesystemArn(fsxFilesystemArn: String)
 
-    public fun protocol(protocol: IResolvable) {
-    }
+    public fun protocol(protocol: IResolvable)
 
-    public fun protocol(protocol: ProtocolProperty) {
-    }
+    public fun protocol(protocol: ProtocolProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca2396111d82e0f56f870246bb6151ae72c1c9ad7f89902c5572bc5c0b637af9")
-    public fun protocol(protocol: ProtocolProperty.Builder.() -> Unit) {
-    }
+    public fun protocol(protocol: ProtocolProperty.Builder.() -> Unit)
 
-    public fun securityGroupArns(securityGroupArns: List<String>) {
-    }
+    public fun securityGroupArns(securityGroupArns: List<String>)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -102,32 +95,32 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.Builder.create(scope, id)
 
-    public override fun fsxFilesystemArn(fsxFilesystemArn: String) {
+    override fun fsxFilesystemArn(fsxFilesystemArn: String) {
       cdkBuilder.fsxFilesystemArn(fsxFilesystemArn)
     }
 
-    public override fun protocol(protocol: IResolvable) {
+    override fun protocol(protocol: IResolvable) {
       cdkBuilder.protocol(protocol.let(IResolvable::unwrap))
     }
 
-    public override fun protocol(protocol: ProtocolProperty) {
+    override fun protocol(protocol: ProtocolProperty) {
       cdkBuilder.protocol(protocol.let(ProtocolProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca2396111d82e0f56f870246bb6151ae72c1c9ad7f89902c5572bc5c0b637af9")
-    public override fun protocol(protocol: ProtocolProperty.Builder.() -> Unit): Unit =
+    override fun protocol(protocol: ProtocolProperty.Builder.() -> Unit): Unit =
         protocol(ProtocolProperty(protocol))
 
-    public override fun securityGroupArns(securityGroupArns: List<String>) {
+    override fun securityGroupArns(securityGroupArns: List<String>) {
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -160,8 +153,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -170,7 +162,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
           =
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty.builder()
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -183,7 +175,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.MountOptionsProperty,
     ) : MountOptionsProperty {
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -210,16 +202,13 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     public fun nfs(): Any? = unwrap(this).getNfs()
 
     public interface Builder {
-      public fun nfs(nfs: IResolvable) {
-      }
+      public fun nfs(nfs: IResolvable)
 
-      public fun nfs(nfs: NFSProperty) {
-      }
+      public fun nfs(nfs: NFSProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95fc6ba73f6163e17969e0763e3c24480654ace62c9055b8e8b9ba4eb0fc261a")
-      public fun nfs(nfs: NFSProperty.Builder.() -> Unit) {
-      }
+      public fun nfs(nfs: NFSProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -227,17 +216,17 @@ public open class CfnLocationFSxOpenZFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty.builder()
 
-      public override fun nfs(nfs: IResolvable) {
+      override fun nfs(nfs: IResolvable) {
         cdkBuilder.nfs(nfs.let(IResolvable::unwrap))
       }
 
-      public override fun nfs(nfs: NFSProperty) {
+      override fun nfs(nfs: NFSProperty) {
         cdkBuilder.nfs(nfs.let(NFSProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("95fc6ba73f6163e17969e0763e3c24480654ace62c9055b8e8b9ba4eb0fc261a")
-      public override fun nfs(nfs: NFSProperty.Builder.() -> Unit): Unit = nfs(NFSProperty(nfs))
+      override fun nfs(nfs: NFSProperty.Builder.() -> Unit): Unit = nfs(NFSProperty(nfs))
 
       public fun build():
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty =
@@ -248,7 +237,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.ProtocolProperty,
     ) : ProtocolProperty {
-      public override fun nfs(): Any? = unwrap(this).getNfs()
+      override fun nfs(): Any? = unwrap(this).getNfs()
     }
 
     public companion object {
@@ -275,16 +264,13 @@ public open class CfnLocationFSxOpenZFS internal constructor(
     public fun mountOptions(): Any
 
     public interface Builder {
-      public fun mountOptions(mountOptions: IResolvable) {
-      }
+      public fun mountOptions(mountOptions: IResolvable)
 
-      public fun mountOptions(mountOptions: MountOptionsProperty) {
-      }
+      public fun mountOptions(mountOptions: MountOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87b84a95a8857f96d24ce753066896f675992aaf5cec72080ff786cd7ebb64ce")
-      public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -292,18 +278,18 @@ public open class CfnLocationFSxOpenZFS internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty.builder()
 
-      public override fun mountOptions(mountOptions: IResolvable) {
+      override fun mountOptions(mountOptions: IResolvable) {
         cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
       }
 
-      public override fun mountOptions(mountOptions: MountOptionsProperty) {
+      override fun mountOptions(mountOptions: MountOptionsProperty) {
         cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87b84a95a8857f96d24ce753066896f675992aaf5cec72080ff786cd7ebb64ce")
-      public override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit
-          = mountOptions(MountOptionsProperty(mountOptions))
+      override fun mountOptions(mountOptions: MountOptionsProperty.Builder.() -> Unit): Unit =
+          mountOptions(MountOptionsProperty(mountOptions))
 
       public fun build(): software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty
           = cdkBuilder.build()
@@ -313,7 +299,7 @@ public open class CfnLocationFSxOpenZFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS.NFSProperty,
     ) : NFSProperty {
-      public override fun mountOptions(): Any = unwrap(this).getMountOptions()
+      override fun mountOptions(): Any = unwrap(this).getMountOptions()
     }
 
     public companion object {

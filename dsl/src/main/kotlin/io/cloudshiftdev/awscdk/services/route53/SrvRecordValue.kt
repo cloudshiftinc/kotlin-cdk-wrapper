@@ -14,36 +14,32 @@ public interface SrvRecordValue {
   public fun weight(): Number
 
   public interface Builder {
-    public fun hostName(hostName: String) {
-    }
+    public fun hostName(hostName: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun weight(weight: Number) {
-    }
+    public fun weight(weight: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.SrvRecordValue.Builder =
         software.amazon.awscdk.services.route53.SrvRecordValue.builder()
 
-    public override fun hostName(hostName: String) {
+    override fun hostName(hostName: String) {
       cdkBuilder.hostName(hostName)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun weight(weight: Number) {
+    override fun weight(weight: Number) {
       cdkBuilder.weight(weight)
     }
 
@@ -53,13 +49,13 @@ public interface SrvRecordValue {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.SrvRecordValue,
   ) : SrvRecordValue {
-    public override fun hostName(): String = unwrap(this).getHostName()
+    override fun hostName(): String = unwrap(this).getHostName()
 
-    public override fun port(): Number = unwrap(this).getPort()
+    override fun port(): Number = unwrap(this).getPort()
 
-    public override fun priority(): Number = unwrap(this).getPriority()
+    override fun priority(): Number = unwrap(this).getPriority()
 
-    public override fun weight(): Number = unwrap(this).getWeight()
+    override fun weight(): Number = unwrap(this).getWeight()
   }
 
   public companion object {

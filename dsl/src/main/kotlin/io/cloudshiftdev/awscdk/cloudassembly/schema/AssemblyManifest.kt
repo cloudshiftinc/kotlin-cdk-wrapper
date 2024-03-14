@@ -1,15 +1,8 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
-import kotlin.String
-import kotlin.Suppress
-import kotlin.Unit
-import kotlin.collections.List
-import kotlin.collections.Map
-import kotlin.jvm.JvmName
-
 public interface AssemblyManifest {
-  public fun artifacts(): Map<String, ArtifactManifest> = unwrap(this).getArtifacts()?.mapValues {
-      ArtifactManifest.wrap(it.value)} ?: emptyMap()
+  public fun artifacts(): Map<String, ArtifactManifest> =
+      unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
 
   public fun missing(): List<MissingContext> = unwrap(this).getMissing()?.map(MissingContext::wrap)
       ?: emptyList()
@@ -19,46 +12,41 @@ public interface AssemblyManifest {
   public fun version(): String
 
   public interface Builder {
-    public fun artifacts(artifacts: Map<String, ArtifactManifest>) {
-    }
+    public fun artifacts(artifacts: Map<String, ArtifactManifest>)
 
-    public fun missing(missing: List<MissingContext>) {
-    }
+    public fun missing(missing: List<MissingContext>)
 
-    public fun runtime(runtime: RuntimeInfo) {
-    }
+    public fun runtime(runtime: RuntimeInfo)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2fbe00ae4a039ff3c7f57bbb0cdea243308a2334a847904cd126a6e8b6a47d86")
-    public fun runtime(runtime: RuntimeInfo.Builder.() -> Unit) {
-    }
+    public fun runtime(runtime: RuntimeInfo.Builder.() -> Unit)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.AssemblyManifest.Builder =
         software.amazon.awscdk.cloudassembly.schema.AssemblyManifest.builder()
 
-    public override fun artifacts(artifacts: Map<String, ArtifactManifest>) {
-      cdkBuilder.artifacts(artifacts.mapValues { ArtifactManifest.unwrap(it.value)})
+    override fun artifacts(artifacts: Map<String, ArtifactManifest>) {
+      cdkBuilder.artifacts(artifacts.mapValues{ArtifactManifest.unwrap(it.value)})
     }
 
-    public override fun missing(missing: List<MissingContext>) {
+    override fun missing(missing: List<MissingContext>) {
       cdkBuilder.missing(missing.map(MissingContext::unwrap))
     }
 
-    public override fun runtime(runtime: RuntimeInfo) {
+    override fun runtime(runtime: RuntimeInfo) {
       cdkBuilder.runtime(runtime.let(RuntimeInfo::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2fbe00ae4a039ff3c7f57bbb0cdea243308a2334a847904cd126a6e8b6a47d86")
-    public override fun runtime(runtime: RuntimeInfo.Builder.() -> Unit): Unit =
+    override fun runtime(runtime: RuntimeInfo.Builder.() -> Unit): Unit =
         runtime(RuntimeInfo(runtime))
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -69,15 +57,15 @@ public interface AssemblyManifest {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.AssemblyManifest,
   ) : AssemblyManifest {
-    public override fun artifacts(): Map<String, ArtifactManifest> =
-        unwrap(this).getArtifacts()?.mapValues { ArtifactManifest.wrap(it.value)} ?: emptyMap()
+    override fun artifacts(): Map<String, ArtifactManifest> =
+        unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
 
-    public override fun missing(): List<MissingContext> =
+    override fun missing(): List<MissingContext> =
         unwrap(this).getMissing()?.map(MissingContext::wrap) ?: emptyList()
 
-    public override fun runtime(): RuntimeInfo? = unwrap(this).getRuntime()?.let(RuntimeInfo::wrap)
+    override fun runtime(): RuntimeInfo? = unwrap(this).getRuntime()?.let(RuntimeInfo::wrap)
 
-    public override fun version(): String = unwrap(this).getVersion()
+    override fun version(): String = unwrap(this).getVersion()
   }
 
   public companion object {

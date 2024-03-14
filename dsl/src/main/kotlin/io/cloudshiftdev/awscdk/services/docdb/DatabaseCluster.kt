@@ -74,92 +74,65 @@ public open class DatabaseCluster internal constructor(
   public override fun securityGroupId(): String = unwrap(this).getSecurityGroupId()
 
   public interface Builder {
-    public fun backup(backup: BackupProps) {
-    }
+    public fun backup(backup: BackupProps)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c96b7df7819668cd86079d0487b9e2f82c8b347b3683ead131c1b3fe19811fac")
-    public fun backup(backup: BackupProps.Builder.() -> Unit) {
-    }
+    public fun backup(backup: BackupProps.Builder.() -> Unit)
 
-    public fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
-    }
+    public fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays)
 
-    public fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole) {
-    }
+    public fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole)
 
-    public fun dbClusterName(dbClusterName: String) {
-    }
+    public fun dbClusterName(dbClusterName: String)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
-    }
+    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun exportAuditLogsToCloudWatch(exportAuditLogsToCloudWatch: Boolean) {
-    }
+    public fun exportAuditLogsToCloudWatch(exportAuditLogsToCloudWatch: Boolean)
 
-    public fun exportProfilerLogsToCloudWatch(exportProfilerLogsToCloudWatch: Boolean) {
-    }
+    public fun exportProfilerLogsToCloudWatch(exportProfilerLogsToCloudWatch: Boolean)
 
-    public fun instanceIdentifierBase(instanceIdentifierBase: String) {
-    }
+    public fun instanceIdentifierBase(instanceIdentifierBase: String)
 
-    public fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
-    }
+    public fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy)
 
-    public fun instanceType(instanceType: InstanceType) {
-    }
+    public fun instanceType(instanceType: InstanceType)
 
-    public fun instances(instances: Number) {
-    }
+    public fun instances(instances: Number)
 
-    public fun kmsKey(kmsKey: IKey) {
-    }
+    public fun kmsKey(kmsKey: IKey)
 
-    public fun masterUser(masterUser: Login) {
-    }
+    public fun masterUser(masterUser: Login)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38d2499bd6d916c15f6314c69c7931f6bfc68daf7e26bf4c71c60bda60e8605a")
-    public fun masterUser(masterUser: Login.Builder.() -> Unit) {
-    }
+    public fun masterUser(masterUser: Login.Builder.() -> Unit)
 
-    public fun parameterGroup(parameterGroup: IClusterParameterGroup) {
-    }
+    public fun parameterGroup(parameterGroup: IClusterParameterGroup)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
-    }
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
-    }
+    public fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy)
 
-    public fun storageEncrypted(storageEncrypted: Boolean) {
-    }
+    public fun storageEncrypted(storageEncrypted: Boolean)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("091172f9d8b70d03d056ac667cf52b06f2f8d009b9a8a20e165048f3805a713a")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -169,115 +142,114 @@ public open class DatabaseCluster internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.docdb.DatabaseCluster.Builder =
         software.amazon.awscdk.services.docdb.DatabaseCluster.Builder.create(scope, id)
 
-    public override fun backup(backup: BackupProps) {
+    override fun backup(backup: BackupProps) {
       cdkBuilder.backup(backup.let(BackupProps::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c96b7df7819668cd86079d0487b9e2f82c8b347b3683ead131c1b3fe19811fac")
-    public override fun backup(backup: BackupProps.Builder.() -> Unit): Unit =
-        backup(BackupProps(backup))
+    override fun backup(backup: BackupProps.Builder.() -> Unit): Unit = backup(BackupProps(backup))
 
-    public override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
+    override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
       cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole) {
+    override fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole) {
       cdkBuilder.cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole.let(IRole::unwrap))
     }
 
-    public override fun dbClusterName(dbClusterName: String) {
+    override fun dbClusterName(dbClusterName: String) {
       cdkBuilder.dbClusterName(dbClusterName)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
+    override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
       cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun exportAuditLogsToCloudWatch(exportAuditLogsToCloudWatch: Boolean) {
+    override fun exportAuditLogsToCloudWatch(exportAuditLogsToCloudWatch: Boolean) {
       cdkBuilder.exportAuditLogsToCloudWatch(exportAuditLogsToCloudWatch)
     }
 
-    public override fun exportProfilerLogsToCloudWatch(exportProfilerLogsToCloudWatch: Boolean) {
+    override fun exportProfilerLogsToCloudWatch(exportProfilerLogsToCloudWatch: Boolean) {
       cdkBuilder.exportProfilerLogsToCloudWatch(exportProfilerLogsToCloudWatch)
     }
 
-    public override fun instanceIdentifierBase(instanceIdentifierBase: String) {
+    override fun instanceIdentifierBase(instanceIdentifierBase: String) {
       cdkBuilder.instanceIdentifierBase(instanceIdentifierBase)
     }
 
-    public override fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
+    override fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
       cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun instanceType(instanceType: InstanceType) {
+    override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
     }
 
-    public override fun instances(instances: Number) {
+    override fun instances(instances: Number) {
       cdkBuilder.instances(instances)
     }
 
-    public override fun kmsKey(kmsKey: IKey) {
+    override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
     }
 
-    public override fun masterUser(masterUser: Login) {
+    override fun masterUser(masterUser: Login) {
       cdkBuilder.masterUser(masterUser.let(Login::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38d2499bd6d916c15f6314c69c7931f6bfc68daf7e26bf4c71c60bda60e8605a")
-    public override fun masterUser(masterUser: Login.Builder.() -> Unit): Unit =
+    override fun masterUser(masterUser: Login.Builder.() -> Unit): Unit =
         masterUser(Login(masterUser))
 
-    public override fun parameterGroup(parameterGroup: IClusterParameterGroup) {
+    override fun parameterGroup(parameterGroup: IClusterParameterGroup) {
       cdkBuilder.parameterGroup(parameterGroup.let(IClusterParameterGroup::unwrap))
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
+    override fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
       cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun storageEncrypted(storageEncrypted: Boolean) {
+    override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("091172f9d8b70d03d056ac667cf52b06f2f8d009b9a8a20e165048f3805a713a")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.docdb.DatabaseCluster = cdkBuilder.build()

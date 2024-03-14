@@ -21,50 +21,44 @@ public interface CustomResourceProviderOptions {
   public fun useCfnResponseWrapper(): Boolean? = unwrap(this).getUseCfnResponseWrapper()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun memorySize(memorySize: Size) {
-    }
+    public fun memorySize(memorySize: Size)
 
-    public fun policyStatements(policyStatements: List<Any>) {
-    }
+    public fun policyStatements(policyStatements: List<Any>)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun useCfnResponseWrapper(useCfnResponseWrapper: Boolean) {
-    }
+    public fun useCfnResponseWrapper(useCfnResponseWrapper: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CustomResourceProviderOptions.Builder =
         software.amazon.awscdk.CustomResourceProviderOptions.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun memorySize(memorySize: Size) {
+    override fun memorySize(memorySize: Size) {
       cdkBuilder.memorySize(memorySize.let(Size::unwrap))
     }
 
-    public override fun policyStatements(policyStatements: List<Any>) {
+    override fun policyStatements(policyStatements: List<Any>) {
       cdkBuilder.policyStatements(policyStatements)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun useCfnResponseWrapper(useCfnResponseWrapper: Boolean) {
+    override fun useCfnResponseWrapper(useCfnResponseWrapper: Boolean) {
       cdkBuilder.useCfnResponseWrapper(useCfnResponseWrapper)
     }
 
@@ -74,19 +68,17 @@ public interface CustomResourceProviderOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CustomResourceProviderOptions,
   ) : CustomResourceProviderOptions {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?:
-        emptyMap()
+    override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?: emptyMap()
 
-    public override fun memorySize(): Size? = unwrap(this).getMemorySize()?.let(Size::wrap)
+    override fun memorySize(): Size? = unwrap(this).getMemorySize()?.let(Size::wrap)
 
-    public override fun policyStatements(): List<Any> = unwrap(this).getPolicyStatements() ?:
-        emptyList()
+    override fun policyStatements(): List<Any> = unwrap(this).getPolicyStatements() ?: emptyList()
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
-    public override fun useCfnResponseWrapper(): Boolean? = unwrap(this).getUseCfnResponseWrapper()
+    override fun useCfnResponseWrapper(): Boolean? = unwrap(this).getUseCfnResponseWrapper()
   }
 
   public companion object {

@@ -6,15 +6,14 @@ public interface DestinationOptions {
   public fun type(): DestinationType
 
   public interface Builder {
-    public fun type(type: DestinationType) {
-    }
+    public fun type(type: DestinationType)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.DestinationOptions.Builder =
         software.amazon.awscdk.services.lambda.DestinationOptions.builder()
 
-    public override fun type(type: DestinationType) {
+    override fun type(type: DestinationType) {
       cdkBuilder.type(type.let(DestinationType::unwrap))
     }
 
@@ -25,7 +24,7 @@ public interface DestinationOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.DestinationOptions,
   ) : DestinationOptions {
-    public override fun type(): DestinationType = unwrap(this).getType().let(DestinationType::wrap)
+    override fun type(): DestinationType = unwrap(this).getType().let(DestinationType::wrap)
   }
 
   public companion object {

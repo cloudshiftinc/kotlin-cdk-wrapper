@@ -64,20 +64,15 @@ public open class CfnAutoScalingConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun autoScalingConfigurationName(autoScalingConfigurationName: String) {
-    }
+    public fun autoScalingConfigurationName(autoScalingConfigurationName: String)
 
-    public fun maxConcurrency(maxConcurrency: Number) {
-    }
+    public fun maxConcurrency(maxConcurrency: Number)
 
-    public fun maxSize(maxSize: Number) {
-    }
+    public fun maxSize(maxSize: Number)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -89,23 +84,23 @@ public open class CfnAutoScalingConfiguration internal constructor(
         software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration.Builder.create(scope,
         id)
 
-    public override fun autoScalingConfigurationName(autoScalingConfigurationName: String) {
+    override fun autoScalingConfigurationName(autoScalingConfigurationName: String) {
       cdkBuilder.autoScalingConfigurationName(autoScalingConfigurationName)
     }
 
-    public override fun maxConcurrency(maxConcurrency: Number) {
+    override fun maxConcurrency(maxConcurrency: Number) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
 
-    public override fun maxSize(maxSize: Number) {
+    override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

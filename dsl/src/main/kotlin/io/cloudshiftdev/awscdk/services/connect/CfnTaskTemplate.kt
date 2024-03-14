@@ -97,41 +97,29 @@ public open class CfnTaskTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun clientToken(clientToken: String) {
-    }
+    public fun clientToken(clientToken: String)
 
-    public fun constraints(constraints: Any) {
-    }
+    public fun constraints(constraints: Any)
 
-    public fun contactFlowArn(contactFlowArn: String) {
-    }
+    public fun contactFlowArn(contactFlowArn: String)
 
-    public fun defaults(defaults: IResolvable) {
-    }
+    public fun defaults(defaults: IResolvable)
 
-    public fun defaults(defaults: List<Any>) {
-    }
+    public fun defaults(defaults: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun fields(fields: IResolvable) {
-    }
+    public fun fields(fields: IResolvable)
 
-    public fun fields(fields: List<Any>) {
-    }
+    public fun fields(fields: List<Any>)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -141,51 +129,51 @@ public open class CfnTaskTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.connect.CfnTaskTemplate.Builder =
         software.amazon.awscdk.services.connect.CfnTaskTemplate.Builder.create(scope, id)
 
-    public override fun clientToken(clientToken: String) {
+    override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
 
-    public override fun constraints(constraints: Any) {
+    override fun constraints(constraints: Any) {
       cdkBuilder.constraints(constraints)
     }
 
-    public override fun contactFlowArn(contactFlowArn: String) {
+    override fun contactFlowArn(contactFlowArn: String) {
       cdkBuilder.contactFlowArn(contactFlowArn)
     }
 
-    public override fun defaults(defaults: IResolvable) {
+    override fun defaults(defaults: IResolvable) {
       cdkBuilder.defaults(defaults.let(IResolvable::unwrap))
     }
 
-    public override fun defaults(defaults: List<Any>) {
+    override fun defaults(defaults: List<Any>) {
       cdkBuilder.defaults(defaults)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun fields(fields: IResolvable) {
+    override fun fields(fields: IResolvable) {
       cdkBuilder.fields(fields.let(IResolvable::unwrap))
     }
 
-    public override fun fields(fields: List<Any>) {
+    override fun fields(fields: List<Any>) {
       cdkBuilder.fields(fields)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -217,16 +205,13 @@ public open class CfnTaskTemplate internal constructor(
     public fun id(): Any
 
     public interface Builder {
-      public fun id(id: IResolvable) {
-      }
+      public fun id(id: IResolvable)
 
-      public fun id(id: FieldIdentifierProperty) {
-      }
+      public fun id(id: FieldIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8836cf4a1cef8abe32a187435262548eed16cd66a6b525ff3eae5b51c84deacf")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -235,17 +220,17 @@ public open class CfnTaskTemplate internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty.builder()
 
-      public override fun id(id: IResolvable) {
+      override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
 
-      public override fun id(id: FieldIdentifierProperty) {
+      override fun id(id: FieldIdentifierProperty) {
         cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8836cf4a1cef8abe32a187435262548eed16cd66a6b525ff3eae5b51c84deacf")
-      public override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
           id(FieldIdentifierProperty(id))
 
       public fun build():
@@ -257,7 +242,7 @@ public open class CfnTaskTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnTaskTemplate.RequiredFieldInfoProperty,
     ) : RequiredFieldInfoProperty {
-      public override fun id(): Any = unwrap(this).getId()
+      override fun id(): Any = unwrap(this).getId()
     }
 
     public companion object {
@@ -288,23 +273,17 @@ public open class CfnTaskTemplate internal constructor(
     public fun requiredFields(): Any? = unwrap(this).getRequiredFields()
 
     public interface Builder {
-      public fun invisibleFields(invisibleFields: IResolvable) {
-      }
+      public fun invisibleFields(invisibleFields: IResolvable)
 
-      public fun invisibleFields(invisibleFields: List<Any>) {
-      }
+      public fun invisibleFields(invisibleFields: List<Any>)
 
-      public fun readOnlyFields(readOnlyFields: IResolvable) {
-      }
+      public fun readOnlyFields(readOnlyFields: IResolvable)
 
-      public fun readOnlyFields(readOnlyFields: List<Any>) {
-      }
+      public fun readOnlyFields(readOnlyFields: List<Any>)
 
-      public fun requiredFields(requiredFields: IResolvable) {
-      }
+      public fun requiredFields(requiredFields: IResolvable)
 
-      public fun requiredFields(requiredFields: List<Any>) {
-      }
+      public fun requiredFields(requiredFields: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -312,27 +291,27 @@ public open class CfnTaskTemplate internal constructor(
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty.Builder =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty.builder()
 
-      public override fun invisibleFields(invisibleFields: IResolvable) {
+      override fun invisibleFields(invisibleFields: IResolvable) {
         cdkBuilder.invisibleFields(invisibleFields.let(IResolvable::unwrap))
       }
 
-      public override fun invisibleFields(invisibleFields: List<Any>) {
+      override fun invisibleFields(invisibleFields: List<Any>) {
         cdkBuilder.invisibleFields(invisibleFields)
       }
 
-      public override fun readOnlyFields(readOnlyFields: IResolvable) {
+      override fun readOnlyFields(readOnlyFields: IResolvable) {
         cdkBuilder.readOnlyFields(readOnlyFields.let(IResolvable::unwrap))
       }
 
-      public override fun readOnlyFields(readOnlyFields: List<Any>) {
+      override fun readOnlyFields(readOnlyFields: List<Any>) {
         cdkBuilder.readOnlyFields(readOnlyFields)
       }
 
-      public override fun requiredFields(requiredFields: IResolvable) {
+      override fun requiredFields(requiredFields: IResolvable) {
         cdkBuilder.requiredFields(requiredFields.let(IResolvable::unwrap))
       }
 
-      public override fun requiredFields(requiredFields: List<Any>) {
+      override fun requiredFields(requiredFields: List<Any>) {
         cdkBuilder.requiredFields(requiredFields)
       }
 
@@ -345,11 +324,11 @@ public open class CfnTaskTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty,
     ) : ConstraintsProperty {
-      public override fun invisibleFields(): Any? = unwrap(this).getInvisibleFields()
+      override fun invisibleFields(): Any? = unwrap(this).getInvisibleFields()
 
-      public override fun readOnlyFields(): Any? = unwrap(this).getReadOnlyFields()
+      override fun readOnlyFields(): Any? = unwrap(this).getReadOnlyFields()
 
-      public override fun requiredFields(): Any? = unwrap(this).getRequiredFields()
+      override fun requiredFields(): Any? = unwrap(this).getRequiredFields()
     }
 
     public companion object {
@@ -376,16 +355,13 @@ public open class CfnTaskTemplate internal constructor(
     public fun id(): Any
 
     public interface Builder {
-      public fun id(id: IResolvable) {
-      }
+      public fun id(id: IResolvable)
 
-      public fun id(id: FieldIdentifierProperty) {
-      }
+      public fun id(id: FieldIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("62689dfc63505ec8df9de67e713658e1b9f5019543d4f2c930a752c0e12feb1a")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -394,17 +370,17 @@ public open class CfnTaskTemplate internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty.builder()
 
-      public override fun id(id: IResolvable) {
+      override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
 
-      public override fun id(id: FieldIdentifierProperty) {
+      override fun id(id: FieldIdentifierProperty) {
         cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("62689dfc63505ec8df9de67e713658e1b9f5019543d4f2c930a752c0e12feb1a")
-      public override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
           id(FieldIdentifierProperty(id))
 
       public fun build():
@@ -416,7 +392,7 @@ public open class CfnTaskTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ReadOnlyFieldInfoProperty,
     ) : ReadOnlyFieldInfoProperty {
-      public override fun id(): Any = unwrap(this).getId()
+      override fun id(): Any = unwrap(this).getId()
     }
 
     public companion object {
@@ -443,16 +419,13 @@ public open class CfnTaskTemplate internal constructor(
     public fun id(): Any
 
     public interface Builder {
-      public fun id(id: IResolvable) {
-      }
+      public fun id(id: IResolvable)
 
-      public fun id(id: FieldIdentifierProperty) {
-      }
+      public fun id(id: FieldIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("595a9185f3657f68dc84ba9a245b870ebf1d340eca4be71300cb705dffa39baf")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -461,17 +434,17 @@ public open class CfnTaskTemplate internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty.builder()
 
-      public override fun id(id: IResolvable) {
+      override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
 
-      public override fun id(id: FieldIdentifierProperty) {
+      override fun id(id: FieldIdentifierProperty) {
         cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("595a9185f3657f68dc84ba9a245b870ebf1d340eca4be71300cb705dffa39baf")
-      public override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
           id(FieldIdentifierProperty(id))
 
       public fun build():
@@ -483,7 +456,7 @@ public open class CfnTaskTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnTaskTemplate.InvisibleFieldInfoProperty,
     ) : InvisibleFieldInfoProperty {
-      public override fun id(): Any = unwrap(this).getId()
+      override fun id(): Any = unwrap(this).getId()
     }
 
     public companion object {
@@ -512,19 +485,15 @@ public open class CfnTaskTemplate internal constructor(
     public fun id(): Any
 
     public interface Builder {
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun id(id: IResolvable) {
-      }
+      public fun id(id: IResolvable)
 
-      public fun id(id: FieldIdentifierProperty) {
-      }
+      public fun id(id: FieldIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a641d5821b49176a7de21161e83fed0f337327041ba007397f80149101d69a4")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -533,21 +502,21 @@ public open class CfnTaskTemplate internal constructor(
           =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty.builder()
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun id(id: IResolvable) {
+      override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
 
-      public override fun id(id: FieldIdentifierProperty) {
+      override fun id(id: FieldIdentifierProperty) {
         cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7a641d5821b49176a7de21161e83fed0f337327041ba007397f80149101d69a4")
-      public override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
           id(FieldIdentifierProperty(id))
 
       public fun build():
@@ -559,9 +528,9 @@ public open class CfnTaskTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnTaskTemplate.DefaultFieldValueProperty,
     ) : DefaultFieldValueProperty {
-      public override fun defaultValue(): String = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String = unwrap(this).getDefaultValue()
 
-      public override fun id(): Any = unwrap(this).getId()
+      override fun id(): Any = unwrap(this).getId()
     }
 
     public companion object {
@@ -588,8 +557,7 @@ public open class CfnTaskTemplate internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -597,7 +565,7 @@ public open class CfnTaskTemplate internal constructor(
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty.Builder =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -610,7 +578,7 @@ public open class CfnTaskTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldIdentifierProperty,
     ) : FieldIdentifierProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -644,25 +612,19 @@ public open class CfnTaskTemplate internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun id(id: IResolvable) {
-      }
+      public fun id(id: IResolvable)
 
-      public fun id(id: FieldIdentifierProperty) {
-      }
+      public fun id(id: FieldIdentifierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8abd2ef8cb7d810f8ff05bbbc72275cbd60f0a6e284373767670f54b8b76e42")
-      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit) {
-      }
+      public fun id(id: FieldIdentifierProperty.Builder.() -> Unit)
 
-      public fun singleSelectOptions(singleSelectOptions: List<String>) {
-      }
+      public fun singleSelectOptions(singleSelectOptions: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -670,28 +632,28 @@ public open class CfnTaskTemplate internal constructor(
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty.Builder =
           software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun id(id: IResolvable) {
+      override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
 
-      public override fun id(id: FieldIdentifierProperty) {
+      override fun id(id: FieldIdentifierProperty) {
         cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e8abd2ef8cb7d810f8ff05bbbc72275cbd60f0a6e284373767670f54b8b76e42")
-      public override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
+      override fun id(id: FieldIdentifierProperty.Builder.() -> Unit): Unit =
           id(FieldIdentifierProperty(id))
 
-      public override fun singleSelectOptions(singleSelectOptions: List<String>) {
+      override fun singleSelectOptions(singleSelectOptions: List<String>) {
         cdkBuilder.singleSelectOptions(singleSelectOptions)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -702,14 +664,14 @@ public open class CfnTaskTemplate internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.connect.CfnTaskTemplate.FieldProperty,
     ) : FieldProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun id(): Any = unwrap(this).getId()
+      override fun id(): Any = unwrap(this).getId()
 
-      public override fun singleSelectOptions(): List<String> =
-          unwrap(this).getSingleSelectOptions() ?: emptyList()
+      override fun singleSelectOptions(): List<String> = unwrap(this).getSingleSelectOptions() ?:
+          emptyList()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

@@ -49,23 +49,18 @@ public open class CfnLoggingConfiguration internal constructor(
       Unit = loggingConfiguration(LoggingConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun firewallArn(firewallArn: String) {
-    }
+    public fun firewallArn(firewallArn: String)
 
-    public fun firewallName(firewallName: String) {
-    }
+    public fun firewallName(firewallName: String)
 
-    public fun loggingConfiguration(loggingConfiguration: IResolvable) {
-    }
+    public fun loggingConfiguration(loggingConfiguration: IResolvable)
 
-    public fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-    }
+    public fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4df15cf2f8b365e2efb5e9098a896046bc1524f972d46c534dff35fcc5548328")
     public
-        fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -77,25 +72,25 @@ public open class CfnLoggingConfiguration internal constructor(
         software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.Builder.create(scope,
         id)
 
-    public override fun firewallArn(firewallArn: String) {
+    override fun firewallArn(firewallArn: String) {
       cdkBuilder.firewallArn(firewallArn)
     }
 
-    public override fun firewallName(firewallName: String) {
+    override fun firewallName(firewallName: String) {
       cdkBuilder.firewallName(firewallName)
     }
 
-    public override fun loggingConfiguration(loggingConfiguration: IResolvable) {
+    override fun loggingConfiguration(loggingConfiguration: IResolvable) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
+    override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4df15cf2f8b365e2efb5e9098a896046bc1524f972d46c534dff35fcc5548328")
-    public override
+    override
         fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit):
         Unit = loggingConfiguration(LoggingConfigurationProperty(loggingConfiguration))
 
@@ -133,17 +128,13 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun logType(): String
 
     public interface Builder {
-      public fun logDestination(logDestination: IResolvable) {
-      }
+      public fun logDestination(logDestination: IResolvable)
 
-      public fun logDestination(logDestination: Map<String, String>) {
-      }
+      public fun logDestination(logDestination: Map<String, String>)
 
-      public fun logDestinationType(logDestinationType: String) {
-      }
+      public fun logDestinationType(logDestinationType: String)
 
-      public fun logType(logType: String) {
-      }
+      public fun logType(logType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -152,19 +143,19 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty.builder()
 
-      public override fun logDestination(logDestination: IResolvable) {
+      override fun logDestination(logDestination: IResolvable) {
         cdkBuilder.logDestination(logDestination.let(IResolvable::unwrap))
       }
 
-      public override fun logDestination(logDestination: Map<String, String>) {
+      override fun logDestination(logDestination: Map<String, String>) {
         cdkBuilder.logDestination(logDestination)
       }
 
-      public override fun logDestinationType(logDestinationType: String) {
+      override fun logDestinationType(logDestinationType: String) {
         cdkBuilder.logDestinationType(logDestinationType)
       }
 
-      public override fun logType(logType: String) {
+      override fun logType(logType: String) {
         cdkBuilder.logType(logType)
       }
 
@@ -177,11 +168,11 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LogDestinationConfigProperty,
     ) : LogDestinationConfigProperty {
-      public override fun logDestination(): Any = unwrap(this).getLogDestination()
+      override fun logDestination(): Any = unwrap(this).getLogDestination()
 
-      public override fun logDestinationType(): String = unwrap(this).getLogDestinationType()
+      override fun logDestinationType(): String = unwrap(this).getLogDestinationType()
 
-      public override fun logType(): String = unwrap(this).getLogType()
+      override fun logType(): String = unwrap(this).getLogType()
     }
 
     public companion object {
@@ -208,11 +199,9 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun logDestinationConfigs(): Any
 
     public interface Builder {
-      public fun logDestinationConfigs(logDestinationConfigs: IResolvable) {
-      }
+      public fun logDestinationConfigs(logDestinationConfigs: IResolvable)
 
-      public fun logDestinationConfigs(logDestinationConfigs: List<Any>) {
-      }
+      public fun logDestinationConfigs(logDestinationConfigs: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -221,11 +210,11 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty.builder()
 
-      public override fun logDestinationConfigs(logDestinationConfigs: IResolvable) {
+      override fun logDestinationConfigs(logDestinationConfigs: IResolvable) {
         cdkBuilder.logDestinationConfigs(logDestinationConfigs.let(IResolvable::unwrap))
       }
 
-      public override fun logDestinationConfigs(logDestinationConfigs: List<Any>) {
+      override fun logDestinationConfigs(logDestinationConfigs: List<Any>) {
         cdkBuilder.logDestinationConfigs(logDestinationConfigs)
       }
 
@@ -238,7 +227,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty,
     ) : LoggingConfigurationProperty {
-      public override fun logDestinationConfigs(): Any = unwrap(this).getLogDestinationConfigs()
+      override fun logDestinationConfigs(): Any = unwrap(this).getLogDestinationConfigs()
     }
 
     public companion object {

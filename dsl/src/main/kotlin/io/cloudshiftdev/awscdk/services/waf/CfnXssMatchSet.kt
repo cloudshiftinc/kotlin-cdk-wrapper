@@ -39,14 +39,11 @@ public open class CfnXssMatchSet internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun xssMatchTuples(xssMatchTuples: IResolvable) {
-    }
+    public fun xssMatchTuples(xssMatchTuples: IResolvable)
 
-    public fun xssMatchTuples(xssMatchTuples: List<Any>) {
-    }
+    public fun xssMatchTuples(xssMatchTuples: List<Any>)
   }
 
   private class BuilderImpl(
@@ -56,15 +53,15 @@ public open class CfnXssMatchSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.CfnXssMatchSet.Builder =
         software.amazon.awscdk.services.waf.CfnXssMatchSet.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun xssMatchTuples(xssMatchTuples: IResolvable) {
+    override fun xssMatchTuples(xssMatchTuples: IResolvable) {
       cdkBuilder.xssMatchTuples(xssMatchTuples.let(IResolvable::unwrap))
     }
 
-    public override fun xssMatchTuples(xssMatchTuples: List<Any>) {
+    override fun xssMatchTuples(xssMatchTuples: List<Any>) {
       cdkBuilder.xssMatchTuples(xssMatchTuples)
     }
 
@@ -98,11 +95,9 @@ public open class CfnXssMatchSet internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun `data`(`data`: String) {
-      }
+      public fun `data`(`data`: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -110,11 +105,11 @@ public open class CfnXssMatchSet internal constructor(
           software.amazon.awscdk.services.waf.CfnXssMatchSet.FieldToMatchProperty.Builder =
           software.amazon.awscdk.services.waf.CfnXssMatchSet.FieldToMatchProperty.builder()
 
-      public override fun `data`(`data`: String) {
+      override fun `data`(`data`: String) {
         cdkBuilder.`data`(`data`)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -126,9 +121,9 @@ public open class CfnXssMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.CfnXssMatchSet.FieldToMatchProperty,
     ) : FieldToMatchProperty {
-      public override fun `data`(): String? = unwrap(this).getData()
+      override fun `data`(): String? = unwrap(this).getData()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -157,19 +152,15 @@ public open class CfnXssMatchSet internal constructor(
     public fun textTransformation(): String
 
     public interface Builder {
-      public fun fieldToMatch(fieldToMatch: IResolvable) {
-      }
+      public fun fieldToMatch(fieldToMatch: IResolvable)
 
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47bb5ca2e33d29003271aa6e4129db59963d3136a0030377a4713b27f87971ac")
-      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
-      }
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit)
 
-      public fun textTransformation(textTransformation: String) {
-      }
+      public fun textTransformation(textTransformation: String)
     }
 
     private class BuilderImpl : Builder {
@@ -177,20 +168,20 @@ public open class CfnXssMatchSet internal constructor(
           software.amazon.awscdk.services.waf.CfnXssMatchSet.XssMatchTupleProperty.Builder =
           software.amazon.awscdk.services.waf.CfnXssMatchSet.XssMatchTupleProperty.builder()
 
-      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+      override fun fieldToMatch(fieldToMatch: IResolvable) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
       }
 
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
         cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47bb5ca2e33d29003271aa6e4129db59963d3136a0030377a4713b27f87971ac")
-      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
-          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+      override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit =
+          fieldToMatch(FieldToMatchProperty(fieldToMatch))
 
-      public override fun textTransformation(textTransformation: String) {
+      override fun textTransformation(textTransformation: String) {
         cdkBuilder.textTransformation(textTransformation)
       }
 
@@ -202,9 +193,9 @@ public open class CfnXssMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.CfnXssMatchSet.XssMatchTupleProperty,
     ) : XssMatchTupleProperty {
-      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+      override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
 
-      public override fun textTransformation(): String = unwrap(this).getTextTransformation()
+      override fun textTransformation(): String = unwrap(this).getTextTransformation()
     }
 
     public companion object {

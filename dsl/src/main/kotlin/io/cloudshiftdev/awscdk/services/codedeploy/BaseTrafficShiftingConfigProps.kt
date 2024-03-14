@@ -10,11 +10,9 @@ public interface BaseTrafficShiftingConfigProps {
   public fun percentage(): Number
 
   public interface Builder {
-    public fun interval(interval: Duration) {
-    }
+    public fun interval(interval: Duration)
 
-    public fun percentage(percentage: Number) {
-    }
+    public fun percentage(percentage: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface BaseTrafficShiftingConfigProps {
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps.Builder =
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps.builder()
 
-    public override fun interval(interval: Duration) {
+    override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
-    public override fun percentage(percentage: Number) {
+    override fun percentage(percentage: Number) {
       cdkBuilder.percentage(percentage)
     }
 
@@ -38,9 +36,9 @@ public interface BaseTrafficShiftingConfigProps {
     internal val cdkObject:
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps,
   ) : BaseTrafficShiftingConfigProps {
-    public override fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
+    override fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
 
-    public override fun percentage(): Number = unwrap(this).getPercentage()
+    override fun percentage(): Number = unwrap(this).getPercentage()
   }
 
   public companion object {

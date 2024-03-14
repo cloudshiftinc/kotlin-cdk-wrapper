@@ -82,31 +82,23 @@ public open class CfnMultiplex internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
-    public fun destinations(destinations: IResolvable) {
-    }
+    public fun destinations(destinations: IResolvable)
 
-    public fun destinations(destinations: List<Any>) {
-    }
+    public fun destinations(destinations: List<Any>)
 
-    public fun multiplexSettings(multiplexSettings: IResolvable) {
-    }
+    public fun multiplexSettings(multiplexSettings: IResolvable)
 
-    public fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty) {
-    }
+    public fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f48a3161dab0e0572a7a8b048700145d2d36e6dc63d0a03419f9b9db2492680c")
-    public fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -116,37 +108,36 @@ public open class CfnMultiplex internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnMultiplex.Builder =
         software.amazon.awscdk.services.medialive.CfnMultiplex.Builder.create(scope, id)
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
-    public override fun destinations(destinations: IResolvable) {
+    override fun destinations(destinations: IResolvable) {
       cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
     }
 
-    public override fun destinations(destinations: List<Any>) {
+    override fun destinations(destinations: List<Any>) {
       cdkBuilder.destinations(destinations)
     }
 
-    public override fun multiplexSettings(multiplexSettings: IResolvable) {
+    override fun multiplexSettings(multiplexSettings: IResolvable) {
       cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable::unwrap))
     }
 
-    public override fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty) {
+    override fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty) {
       cdkBuilder.multiplexSettings(multiplexSettings.let(MultiplexSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f48a3161dab0e0572a7a8b048700145d2d36e6dc63d0a03419f9b9db2492680c")
-    public override
-        fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty.Builder.() -> Unit): Unit
-        = multiplexSettings(MultiplexSettingsProperty(multiplexSettings))
+    override fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty.Builder.() -> Unit):
+        Unit = multiplexSettings(MultiplexSettingsProperty(multiplexSettings))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -178,8 +169,7 @@ public open class CfnMultiplex internal constructor(
     public fun entitlementArn(): String? = unwrap(this).getEntitlementArn()
 
     public interface Builder {
-      public fun entitlementArn(entitlementArn: String) {
-      }
+      public fun entitlementArn(entitlementArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -188,7 +178,7 @@ public open class CfnMultiplex internal constructor(
           =
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty.builder()
 
-      public override fun entitlementArn(entitlementArn: String) {
+      override fun entitlementArn(entitlementArn: String) {
         cdkBuilder.entitlementArn(entitlementArn)
       }
 
@@ -201,7 +191,7 @@ public open class CfnMultiplex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty,
     ) : MultiplexMediaConnectOutputDestinationSettingsProperty {
-      public override fun entitlementArn(): String? = unwrap(this).getEntitlementArn()
+      override fun entitlementArn(): String? = unwrap(this).getEntitlementArn()
     }
 
     public companion object {
@@ -237,17 +227,13 @@ public open class CfnMultiplex internal constructor(
         unwrap(this).getTransportStreamReservedBitrate()
 
     public interface Builder {
-      public fun maximumVideoBufferDelayMilliseconds(maximumVideoBufferDelayMilliseconds: Number) {
-      }
+      public fun maximumVideoBufferDelayMilliseconds(maximumVideoBufferDelayMilliseconds: Number)
 
-      public fun transportStreamBitrate(transportStreamBitrate: Number) {
-      }
+      public fun transportStreamBitrate(transportStreamBitrate: Number)
 
-      public fun transportStreamId(transportStreamId: Number) {
-      }
+      public fun transportStreamId(transportStreamId: Number)
 
-      public fun transportStreamReservedBitrate(transportStreamReservedBitrate: Number) {
-      }
+      public fun transportStreamReservedBitrate(transportStreamReservedBitrate: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -255,20 +241,20 @@ public open class CfnMultiplex internal constructor(
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty.builder()
 
-      public override
+      override
           fun maximumVideoBufferDelayMilliseconds(maximumVideoBufferDelayMilliseconds: Number) {
         cdkBuilder.maximumVideoBufferDelayMilliseconds(maximumVideoBufferDelayMilliseconds)
       }
 
-      public override fun transportStreamBitrate(transportStreamBitrate: Number) {
+      override fun transportStreamBitrate(transportStreamBitrate: Number) {
         cdkBuilder.transportStreamBitrate(transportStreamBitrate)
       }
 
-      public override fun transportStreamId(transportStreamId: Number) {
+      override fun transportStreamId(transportStreamId: Number) {
         cdkBuilder.transportStreamId(transportStreamId)
       }
 
-      public override fun transportStreamReservedBitrate(transportStreamReservedBitrate: Number) {
+      override fun transportStreamReservedBitrate(transportStreamReservedBitrate: Number) {
         cdkBuilder.transportStreamReservedBitrate(transportStreamReservedBitrate)
       }
 
@@ -281,15 +267,14 @@ public open class CfnMultiplex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty,
     ) : MultiplexSettingsProperty {
-      public override fun maximumVideoBufferDelayMilliseconds(): Number? =
+      override fun maximumVideoBufferDelayMilliseconds(): Number? =
           unwrap(this).getMaximumVideoBufferDelayMilliseconds()
 
-      public override fun transportStreamBitrate(): Number =
-          unwrap(this).getTransportStreamBitrate()
+      override fun transportStreamBitrate(): Number = unwrap(this).getTransportStreamBitrate()
 
-      public override fun transportStreamId(): Number = unwrap(this).getTransportStreamId()
+      override fun transportStreamId(): Number = unwrap(this).getTransportStreamId()
 
-      public override fun transportStreamReservedBitrate(): Number? =
+      override fun transportStreamReservedBitrate(): Number? =
           unwrap(this).getTransportStreamReservedBitrate()
     }
 
@@ -319,18 +304,15 @@ public open class CfnMultiplex internal constructor(
 
     public interface Builder {
       public
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable) {
-      }
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable)
 
       public
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty) {
-      }
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2569c3f12cb772a27991b1621a83c9f430ff4d781d3da6fbd420a85060180260")
       public
-          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit) {
-      }
+          fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -339,19 +321,19 @@ public open class CfnMultiplex internal constructor(
           =
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty.builder()
 
-      public override
+      override
           fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable) {
         cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty) {
         cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(MultiplexMediaConnectOutputDestinationSettingsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2569c3f12cb772a27991b1621a83c9f430ff4d781d3da6fbd420a85060180260")
-      public override
+      override
           fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty.Builder.() -> Unit):
           Unit =
           multiplexMediaConnectOutputDestinationSettings(MultiplexMediaConnectOutputDestinationSettingsProperty(multiplexMediaConnectOutputDestinationSettings))
@@ -365,7 +347,7 @@ public open class CfnMultiplex internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty,
     ) : MultiplexOutputDestinationProperty {
-      public override fun multiplexMediaConnectOutputDestinationSettings(): Any? =
+      override fun multiplexMediaConnectOutputDestinationSettings(): Any? =
           unwrap(this).getMultiplexMediaConnectOutputDestinationSettings()
     }
 

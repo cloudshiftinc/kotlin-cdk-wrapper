@@ -26,26 +26,19 @@ public open class ConfigurationSet internal constructor(
   public override fun configurationSetName(): String = unwrap(this).getConfigurationSetName()
 
   public interface Builder {
-    public fun configurationSetName(configurationSetName: String) {
-    }
+    public fun configurationSetName(configurationSetName: String)
 
-    public fun customTrackingRedirectDomain(customTrackingRedirectDomain: String) {
-    }
+    public fun customTrackingRedirectDomain(customTrackingRedirectDomain: String)
 
-    public fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool) {
-    }
+    public fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool)
 
-    public fun reputationMetrics(reputationMetrics: Boolean) {
-    }
+    public fun reputationMetrics(reputationMetrics: Boolean)
 
-    public fun sendingEnabled(sendingEnabled: Boolean) {
-    }
+    public fun sendingEnabled(sendingEnabled: Boolean)
 
-    public fun suppressionReasons(suppressionReasons: SuppressionReasons) {
-    }
+    public fun suppressionReasons(suppressionReasons: SuppressionReasons)
 
-    public fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy) {
-    }
+    public fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy)
   }
 
   private class BuilderImpl(
@@ -55,31 +48,31 @@ public open class ConfigurationSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.ConfigurationSet.Builder =
         software.amazon.awscdk.services.ses.ConfigurationSet.Builder.create(scope, id)
 
-    public override fun configurationSetName(configurationSetName: String) {
+    override fun configurationSetName(configurationSetName: String) {
       cdkBuilder.configurationSetName(configurationSetName)
     }
 
-    public override fun customTrackingRedirectDomain(customTrackingRedirectDomain: String) {
+    override fun customTrackingRedirectDomain(customTrackingRedirectDomain: String) {
       cdkBuilder.customTrackingRedirectDomain(customTrackingRedirectDomain)
     }
 
-    public override fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool) {
+    override fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool) {
       cdkBuilder.dedicatedIpPool(dedicatedIpPool.let(IDedicatedIpPool::unwrap))
     }
 
-    public override fun reputationMetrics(reputationMetrics: Boolean) {
+    override fun reputationMetrics(reputationMetrics: Boolean) {
       cdkBuilder.reputationMetrics(reputationMetrics)
     }
 
-    public override fun sendingEnabled(sendingEnabled: Boolean) {
+    override fun sendingEnabled(sendingEnabled: Boolean) {
       cdkBuilder.sendingEnabled(sendingEnabled)
     }
 
-    public override fun suppressionReasons(suppressionReasons: SuppressionReasons) {
+    override fun suppressionReasons(suppressionReasons: SuppressionReasons) {
       cdkBuilder.suppressionReasons(suppressionReasons.let(SuppressionReasons::unwrap))
     }
 
-    public override fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy) {
+    override fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy) {
       cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy::unwrap))
     }
 

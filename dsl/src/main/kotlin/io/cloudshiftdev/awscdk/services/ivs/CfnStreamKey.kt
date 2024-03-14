@@ -39,11 +39,9 @@ public open class CfnStreamKey internal constructor(
   }
 
   public interface Builder {
-    public fun channelArn(channelArn: String) {
-    }
+    public fun channelArn(channelArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -53,11 +51,11 @@ public open class CfnStreamKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ivs.CfnStreamKey.Builder =
         software.amazon.awscdk.services.ivs.CfnStreamKey.Builder.create(scope, id)
 
-    public override fun channelArn(channelArn: String) {
+    override fun channelArn(channelArn: String) {
       cdkBuilder.channelArn(channelArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

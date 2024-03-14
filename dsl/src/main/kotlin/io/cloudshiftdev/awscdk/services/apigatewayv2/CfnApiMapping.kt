@@ -42,17 +42,13 @@ public open class CfnApiMapping internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun apiMappingKey(apiMappingKey: String) {
-    }
+    public fun apiMappingKey(apiMappingKey: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun stage(stage: String) {
-    }
+    public fun stage(stage: String)
   }
 
   private class BuilderImpl(
@@ -62,19 +58,19 @@ public open class CfnApiMapping internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnApiMapping.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnApiMapping.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun apiMappingKey(apiMappingKey: String) {
+    override fun apiMappingKey(apiMappingKey: String) {
       cdkBuilder.apiMappingKey(apiMappingKey)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun stage(stage: String) {
+    override fun stage(stage: String) {
       cdkBuilder.stage(stage)
     }
 

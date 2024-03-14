@@ -17,22 +17,21 @@ public interface IConnection : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.IConnection,
   ) : IConnection {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun connectionArn(): String = unwrap(this).getConnectionArn()
+    override fun connectionArn(): String = unwrap(this).getConnectionArn()
 
-    public override fun connectionName(): String = unwrap(this).getConnectionName()
+    override fun connectionName(): String = unwrap(this).getConnectionName()
 
-    public override fun connectionSecretArn(): String = unwrap(this).getConnectionSecretArn()
+    override fun connectionSecretArn(): String = unwrap(this).getConnectionSecretArn()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

@@ -19,54 +19,47 @@ public interface EfsVolumeConfiguration {
   public fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
 
   public interface Builder {
-    public fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
-    }
+    public fun authorizationConfig(authorizationConfig: AuthorizationConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80a8c257fd515eb33be01d31bda37823a6289b072ab0c2f096de3cfce94dd8eb")
-    public fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit) {
-    }
+    public fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit)
 
-    public fun fileSystemId(fileSystemId: String) {
-    }
+    public fun fileSystemId(fileSystemId: String)
 
-    public fun rootDirectory(rootDirectory: String) {
-    }
+    public fun rootDirectory(rootDirectory: String)
 
-    public fun transitEncryption(transitEncryption: String) {
-    }
+    public fun transitEncryption(transitEncryption: String)
 
-    public fun transitEncryptionPort(transitEncryptionPort: Number) {
-    }
+    public fun transitEncryptionPort(transitEncryptionPort: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration.Builder =
         software.amazon.awscdk.services.ecs.EfsVolumeConfiguration.builder()
 
-    public override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
+    override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
       cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80a8c257fd515eb33be01d31bda37823a6289b072ab0c2f096de3cfce94dd8eb")
-    public override
-        fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit): Unit =
-        authorizationConfig(AuthorizationConfig(authorizationConfig))
+    override fun authorizationConfig(authorizationConfig: AuthorizationConfig.Builder.() -> Unit):
+        Unit = authorizationConfig(AuthorizationConfig(authorizationConfig))
 
-    public override fun fileSystemId(fileSystemId: String) {
+    override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
-    public override fun rootDirectory(rootDirectory: String) {
+    override fun rootDirectory(rootDirectory: String) {
       cdkBuilder.rootDirectory(rootDirectory)
     }
 
-    public override fun transitEncryption(transitEncryption: String) {
+    override fun transitEncryption(transitEncryption: String) {
       cdkBuilder.transitEncryption(transitEncryption)
     }
 
-    public override fun transitEncryptionPort(transitEncryptionPort: Number) {
+    override fun transitEncryptionPort(transitEncryptionPort: Number) {
       cdkBuilder.transitEncryptionPort(transitEncryptionPort)
     }
 
@@ -77,16 +70,16 @@ public interface EfsVolumeConfiguration {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.EfsVolumeConfiguration,
   ) : EfsVolumeConfiguration {
-    public override fun authorizationConfig(): AuthorizationConfig? =
+    override fun authorizationConfig(): AuthorizationConfig? =
         unwrap(this).getAuthorizationConfig()?.let(AuthorizationConfig::wrap)
 
-    public override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+    override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
-    public override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
+    override fun rootDirectory(): String? = unwrap(this).getRootDirectory()
 
-    public override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
+    override fun transitEncryption(): String? = unwrap(this).getTransitEncryption()
 
-    public override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
+    override fun transitEncryptionPort(): Number? = unwrap(this).getTransitEncryptionPort()
   }
 
   public companion object {

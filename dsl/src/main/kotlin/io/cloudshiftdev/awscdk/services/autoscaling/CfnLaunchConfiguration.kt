@@ -163,82 +163,57 @@ public open class CfnLaunchConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
-    public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-    }
+    public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable)
 
-    public fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-    }
+    public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
 
-    public fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-    }
+    public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
-    public fun classicLinkVpcId(classicLinkVpcId: String) {
-    }
+    public fun classicLinkVpcId(classicLinkVpcId: String)
 
-    public fun classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups: List<String>) {
-    }
+    public fun classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups: List<String>)
 
-    public fun ebsOptimized(ebsOptimized: Boolean) {
-    }
+    public fun ebsOptimized(ebsOptimized: Boolean)
 
-    public fun ebsOptimized(ebsOptimized: IResolvable) {
-    }
+    public fun ebsOptimized(ebsOptimized: IResolvable)
 
-    public fun iamInstanceProfile(iamInstanceProfile: String) {
-    }
+    public fun iamInstanceProfile(iamInstanceProfile: String)
 
-    public fun imageId(imageId: String) {
-    }
+    public fun imageId(imageId: String)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun instanceMonitoring(instanceMonitoring: Boolean) {
-    }
+    public fun instanceMonitoring(instanceMonitoring: Boolean)
 
-    public fun instanceMonitoring(instanceMonitoring: IResolvable) {
-    }
+    public fun instanceMonitoring(instanceMonitoring: IResolvable)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun kernelId(kernelId: String) {
-    }
+    public fun kernelId(kernelId: String)
 
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun launchConfigurationName(launchConfigurationName: String) {
-    }
+    public fun launchConfigurationName(launchConfigurationName: String)
 
-    public fun metadataOptions(metadataOptions: IResolvable) {
-    }
+    public fun metadataOptions(metadataOptions: IResolvable)
 
-    public fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
-    }
+    public fun metadataOptions(metadataOptions: MetadataOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("513551109ed8d0f72b2ca5220ce06aa5107153969a922074ef35f22729c3ff38")
-    public fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit)
 
-    public fun placementTenancy(placementTenancy: String) {
-    }
+    public fun placementTenancy(placementTenancy: String)
 
-    public fun ramDiskId(ramDiskId: String) {
-    }
+    public fun ramDiskId(ramDiskId: String)
 
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun spotPrice(spotPrice: String) {
-    }
+    public fun spotPrice(spotPrice: String)
 
-    public fun userData(userData: String) {
-    }
+    public fun userData(userData: String)
   }
 
   private class BuilderImpl(
@@ -249,105 +224,104 @@ public open class CfnLaunchConfiguration internal constructor(
         software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.Builder =
         software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.Builder.create(scope, id)
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
     }
 
-    public override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
+    override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
       cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
     }
 
-    public override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+    override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
     }
 
-    public override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+    override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
 
-    public override fun classicLinkVpcId(classicLinkVpcId: String) {
+    override fun classicLinkVpcId(classicLinkVpcId: String) {
       cdkBuilder.classicLinkVpcId(classicLinkVpcId)
     }
 
-    public override fun classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups: List<String>) {
+    override fun classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups: List<String>) {
       cdkBuilder.classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups)
     }
 
-    public override fun ebsOptimized(ebsOptimized: Boolean) {
+    override fun ebsOptimized(ebsOptimized: Boolean) {
       cdkBuilder.ebsOptimized(ebsOptimized)
     }
 
-    public override fun ebsOptimized(ebsOptimized: IResolvable) {
+    override fun ebsOptimized(ebsOptimized: IResolvable) {
       cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
     }
 
-    public override fun iamInstanceProfile(iamInstanceProfile: String) {
+    override fun iamInstanceProfile(iamInstanceProfile: String) {
       cdkBuilder.iamInstanceProfile(iamInstanceProfile)
     }
 
-    public override fun imageId(imageId: String) {
+    override fun imageId(imageId: String) {
       cdkBuilder.imageId(imageId)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun instanceMonitoring(instanceMonitoring: Boolean) {
+    override fun instanceMonitoring(instanceMonitoring: Boolean) {
       cdkBuilder.instanceMonitoring(instanceMonitoring)
     }
 
-    public override fun instanceMonitoring(instanceMonitoring: IResolvable) {
+    override fun instanceMonitoring(instanceMonitoring: IResolvable) {
       cdkBuilder.instanceMonitoring(instanceMonitoring.let(IResolvable::unwrap))
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun kernelId(kernelId: String) {
+    override fun kernelId(kernelId: String) {
       cdkBuilder.kernelId(kernelId)
     }
 
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun launchConfigurationName(launchConfigurationName: String) {
+    override fun launchConfigurationName(launchConfigurationName: String) {
       cdkBuilder.launchConfigurationName(launchConfigurationName)
     }
 
-    public override fun metadataOptions(metadataOptions: IResolvable) {
+    override fun metadataOptions(metadataOptions: IResolvable) {
       cdkBuilder.metadataOptions(metadataOptions.let(IResolvable::unwrap))
     }
 
-    public override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
+    override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
       cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("513551109ed8d0f72b2ca5220ce06aa5107153969a922074ef35f22729c3ff38")
-    public override
-        fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit): Unit =
-        metadataOptions(MetadataOptionsProperty(metadataOptions))
+    override fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit): Unit
+        = metadataOptions(MetadataOptionsProperty(metadataOptions))
 
-    public override fun placementTenancy(placementTenancy: String) {
+    override fun placementTenancy(placementTenancy: String) {
       cdkBuilder.placementTenancy(placementTenancy)
     }
 
-    public override fun ramDiskId(ramDiskId: String) {
+    override fun ramDiskId(ramDiskId: String) {
       cdkBuilder.ramDiskId(ramDiskId)
     }
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun spotPrice(spotPrice: String) {
+    override fun spotPrice(spotPrice: String) {
       cdkBuilder.spotPrice(spotPrice)
     }
 
-    public override fun userData(userData: String) {
+    override fun userData(userData: String) {
       cdkBuilder.userData(userData)
     }
 
@@ -393,32 +367,23 @@ public open class CfnLaunchConfiguration internal constructor(
     public fun volumeType(): String? = unwrap(this).getVolumeType()
 
     public interface Builder {
-      public fun deleteOnTermination(deleteOnTermination: Boolean) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
 
-      public fun encrypted(encrypted: Boolean) {
-      }
+      public fun encrypted(encrypted: Boolean)
 
-      public fun encrypted(encrypted: IResolvable) {
-      }
+      public fun encrypted(encrypted: IResolvable)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun snapshotId(snapshotId: String) {
-      }
+      public fun snapshotId(snapshotId: String)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
 
-      public fun volumeSize(volumeSize: Number) {
-      }
+      public fun volumeSize(volumeSize: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -427,39 +392,39 @@ public open class CfnLaunchConfiguration internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty.builder()
 
-      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
         cdkBuilder.deleteOnTermination(deleteOnTermination)
       }
 
-      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
         cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
       }
 
-      public override fun encrypted(encrypted: Boolean) {
+      override fun encrypted(encrypted: Boolean) {
         cdkBuilder.encrypted(encrypted)
       }
 
-      public override fun encrypted(encrypted: IResolvable) {
+      override fun encrypted(encrypted: IResolvable) {
         cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun snapshotId(snapshotId: String) {
+      override fun snapshotId(snapshotId: String) {
         cdkBuilder.snapshotId(snapshotId)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
-      public override fun volumeSize(volumeSize: Number) {
+      override fun volumeSize(volumeSize: Number) {
         cdkBuilder.volumeSize(volumeSize)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -472,19 +437,19 @@ public open class CfnLaunchConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceProperty,
     ) : BlockDeviceProperty {
-      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
 
-      public override fun encrypted(): Any? = unwrap(this).getEncrypted()
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
 
-      public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
-      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -517,28 +482,21 @@ public open class CfnLaunchConfiguration internal constructor(
     public fun virtualName(): String? = unwrap(this).getVirtualName()
 
     public interface Builder {
-      public fun deviceName(deviceName: String) {
-      }
+      public fun deviceName(deviceName: String)
 
-      public fun ebs(ebs: IResolvable) {
-      }
+      public fun ebs(ebs: IResolvable)
 
-      public fun ebs(ebs: BlockDeviceProperty) {
-      }
+      public fun ebs(ebs: BlockDeviceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("498defb44b04ba985a3da13c5cac0272c5dcbe8289a5c5d25a4116cc88bcada7")
-      public fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit) {
-      }
+      public fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit)
 
-      public fun noDevice(noDevice: Boolean) {
-      }
+      public fun noDevice(noDevice: Boolean)
 
-      public fun noDevice(noDevice: IResolvable) {
-      }
+      public fun noDevice(noDevice: IResolvable)
 
-      public fun virtualName(virtualName: String) {
-      }
+      public fun virtualName(virtualName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -547,32 +505,32 @@ public open class CfnLaunchConfiguration internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty.builder()
 
-      public override fun deviceName(deviceName: String) {
+      override fun deviceName(deviceName: String) {
         cdkBuilder.deviceName(deviceName)
       }
 
-      public override fun ebs(ebs: IResolvable) {
+      override fun ebs(ebs: IResolvable) {
         cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
       }
 
-      public override fun ebs(ebs: BlockDeviceProperty) {
+      override fun ebs(ebs: BlockDeviceProperty) {
         cdkBuilder.ebs(ebs.let(BlockDeviceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("498defb44b04ba985a3da13c5cac0272c5dcbe8289a5c5d25a4116cc88bcada7")
-      public override fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit): Unit =
+      override fun ebs(ebs: BlockDeviceProperty.Builder.() -> Unit): Unit =
           ebs(BlockDeviceProperty(ebs))
 
-      public override fun noDevice(noDevice: Boolean) {
+      override fun noDevice(noDevice: Boolean) {
         cdkBuilder.noDevice(noDevice)
       }
 
-      public override fun noDevice(noDevice: IResolvable) {
+      override fun noDevice(noDevice: IResolvable) {
         cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
       }
 
-      public override fun virtualName(virtualName: String) {
+      override fun virtualName(virtualName: String) {
         cdkBuilder.virtualName(virtualName)
       }
 
@@ -585,13 +543,13 @@ public open class CfnLaunchConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.BlockDeviceMappingProperty,
     ) : BlockDeviceMappingProperty {
-      public override fun deviceName(): String = unwrap(this).getDeviceName()
+      override fun deviceName(): String = unwrap(this).getDeviceName()
 
-      public override fun ebs(): Any? = unwrap(this).getEbs()
+      override fun ebs(): Any? = unwrap(this).getEbs()
 
-      public override fun noDevice(): Any? = unwrap(this).getNoDevice()
+      override fun noDevice(): Any? = unwrap(this).getNoDevice()
 
-      public override fun virtualName(): String? = unwrap(this).getVirtualName()
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
     }
 
     public companion object {
@@ -622,14 +580,11 @@ public open class CfnLaunchConfiguration internal constructor(
     public fun httpTokens(): String? = unwrap(this).getHttpTokens()
 
     public interface Builder {
-      public fun httpEndpoint(httpEndpoint: String) {
-      }
+      public fun httpEndpoint(httpEndpoint: String)
 
-      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
-      }
+      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
 
-      public fun httpTokens(httpTokens: String) {
-      }
+      public fun httpTokens(httpTokens: String)
     }
 
     private class BuilderImpl : Builder {
@@ -638,15 +593,15 @@ public open class CfnLaunchConfiguration internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty.builder()
 
-      public override fun httpEndpoint(httpEndpoint: String) {
+      override fun httpEndpoint(httpEndpoint: String) {
         cdkBuilder.httpEndpoint(httpEndpoint)
       }
 
-      public override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
+      override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
         cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
       }
 
-      public override fun httpTokens(httpTokens: String) {
+      override fun httpTokens(httpTokens: String) {
         cdkBuilder.httpTokens(httpTokens)
       }
 
@@ -659,12 +614,11 @@ public open class CfnLaunchConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration.MetadataOptionsProperty,
     ) : MetadataOptionsProperty {
-      public override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
+      override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
 
-      public override fun httpPutResponseHopLimit(): Number? =
-          unwrap(this).getHttpPutResponseHopLimit()
+      override fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
 
-      public override fun httpTokens(): String? = unwrap(this).getHttpTokens()
+      override fun httpTokens(): String? = unwrap(this).getHttpTokens()
     }
 
     public companion object {

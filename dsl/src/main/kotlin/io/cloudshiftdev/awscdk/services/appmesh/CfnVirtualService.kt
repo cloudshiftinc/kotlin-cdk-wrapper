@@ -80,28 +80,21 @@ public open class CfnVirtualService internal constructor(
   }
 
   public interface Builder {
-    public fun meshName(meshName: String) {
-    }
+    public fun meshName(meshName: String)
 
-    public fun meshOwner(meshOwner: String) {
-    }
+    public fun meshOwner(meshOwner: String)
 
-    public fun spec(spec: IResolvable) {
-    }
+    public fun spec(spec: IResolvable)
 
-    public fun spec(spec: VirtualServiceSpecProperty) {
-    }
+    public fun spec(spec: VirtualServiceSpecProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("725d27703784655cbab56a5a6c4a42f43b35da8e5395db2235e44a653e109ec7")
-    public fun spec(spec: VirtualServiceSpecProperty.Builder.() -> Unit) {
-    }
+    public fun spec(spec: VirtualServiceSpecProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun virtualServiceName(virtualServiceName: String) {
-    }
+    public fun virtualServiceName(virtualServiceName: String)
   }
 
   private class BuilderImpl(
@@ -111,32 +104,32 @@ public open class CfnVirtualService internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnVirtualService.Builder =
         software.amazon.awscdk.services.appmesh.CfnVirtualService.Builder.create(scope, id)
 
-    public override fun meshName(meshName: String) {
+    override fun meshName(meshName: String) {
       cdkBuilder.meshName(meshName)
     }
 
-    public override fun meshOwner(meshOwner: String) {
+    override fun meshOwner(meshOwner: String) {
       cdkBuilder.meshOwner(meshOwner)
     }
 
-    public override fun spec(spec: IResolvable) {
+    override fun spec(spec: IResolvable) {
       cdkBuilder.spec(spec.let(IResolvable::unwrap))
     }
 
-    public override fun spec(spec: VirtualServiceSpecProperty) {
+    override fun spec(spec: VirtualServiceSpecProperty) {
       cdkBuilder.spec(spec.let(VirtualServiceSpecProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("725d27703784655cbab56a5a6c4a42f43b35da8e5395db2235e44a653e109ec7")
-    public override fun spec(spec: VirtualServiceSpecProperty.Builder.() -> Unit): Unit =
+    override fun spec(spec: VirtualServiceSpecProperty.Builder.() -> Unit): Unit =
         spec(VirtualServiceSpecProperty(spec))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun virtualServiceName(virtualServiceName: String) {
+    override fun virtualServiceName(virtualServiceName: String) {
       cdkBuilder.virtualServiceName(virtualServiceName)
     }
 
@@ -169,8 +162,7 @@ public open class CfnVirtualService internal constructor(
     public fun virtualRouterName(): String
 
     public interface Builder {
-      public fun virtualRouterName(virtualRouterName: String) {
-      }
+      public fun virtualRouterName(virtualRouterName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -179,7 +171,7 @@ public open class CfnVirtualService internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty.builder()
 
-      public override fun virtualRouterName(virtualRouterName: String) {
+      override fun virtualRouterName(virtualRouterName: String) {
         cdkBuilder.virtualRouterName(virtualRouterName)
       }
 
@@ -192,7 +184,7 @@ public open class CfnVirtualService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualRouterServiceProviderProperty,
     ) : VirtualRouterServiceProviderProperty {
-      public override fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
+      override fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
     }
 
     public companion object {
@@ -220,16 +212,13 @@ public open class CfnVirtualService internal constructor(
     public fun provider(): Any? = unwrap(this).getProvider()
 
     public interface Builder {
-      public fun provider(provider: IResolvable) {
-      }
+      public fun provider(provider: IResolvable)
 
-      public fun provider(provider: VirtualServiceProviderProperty) {
-      }
+      public fun provider(provider: VirtualServiceProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a5be125943c2d263251b9970832fd54b9bf6428012a7cd8159bb29b0ff201dec")
-      public fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit) {
-      }
+      public fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -238,18 +227,18 @@ public open class CfnVirtualService internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty.builder()
 
-      public override fun provider(provider: IResolvable) {
+      override fun provider(provider: IResolvable) {
         cdkBuilder.provider(provider.let(IResolvable::unwrap))
       }
 
-      public override fun provider(provider: VirtualServiceProviderProperty) {
+      override fun provider(provider: VirtualServiceProviderProperty) {
         cdkBuilder.provider(provider.let(VirtualServiceProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a5be125943c2d263251b9970832fd54b9bf6428012a7cd8159bb29b0ff201dec")
-      public override fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit):
-          Unit = provider(VirtualServiceProviderProperty(provider))
+      override fun provider(provider: VirtualServiceProviderProperty.Builder.() -> Unit): Unit =
+          provider(VirtualServiceProviderProperty(provider))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty =
@@ -260,7 +249,7 @@ public open class CfnVirtualService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceSpecProperty,
     ) : VirtualServiceSpecProperty {
-      public override fun provider(): Any? = unwrap(this).getProvider()
+      override fun provider(): Any? = unwrap(this).getProvider()
     }
 
     public companion object {
@@ -289,28 +278,22 @@ public open class CfnVirtualService internal constructor(
     public fun virtualRouter(): Any? = unwrap(this).getVirtualRouter()
 
     public interface Builder {
-      public fun virtualNode(virtualNode: IResolvable) {
-      }
+      public fun virtualNode(virtualNode: IResolvable)
 
-      public fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty) {
-      }
+      public fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c36e41f187199632cbbeaf4e501f3881b630db774fa0a5a47e343bf0db68c4b")
-      public fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty.Builder.() -> Unit) {
-      }
+      public fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty.Builder.() -> Unit)
 
-      public fun virtualRouter(virtualRouter: IResolvable) {
-      }
+      public fun virtualRouter(virtualRouter: IResolvable)
 
-      public fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty) {
-      }
+      public fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bffc8c5e4d3b4fc7ba849b41ba9f285e4cfa816dd9b4ed70c273c9de61860507")
       public
-          fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty.Builder.() -> Unit) {
-      }
+          fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -319,31 +302,30 @@ public open class CfnVirtualService internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty.builder()
 
-      public override fun virtualNode(virtualNode: IResolvable) {
+      override fun virtualNode(virtualNode: IResolvable) {
         cdkBuilder.virtualNode(virtualNode.let(IResolvable::unwrap))
       }
 
-      public override fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty) {
+      override fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty) {
         cdkBuilder.virtualNode(virtualNode.let(VirtualNodeServiceProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3c36e41f187199632cbbeaf4e501f3881b630db774fa0a5a47e343bf0db68c4b")
-      public override
-          fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty.Builder.() -> Unit): Unit
-          = virtualNode(VirtualNodeServiceProviderProperty(virtualNode))
+      override fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty.Builder.() -> Unit):
+          Unit = virtualNode(VirtualNodeServiceProviderProperty(virtualNode))
 
-      public override fun virtualRouter(virtualRouter: IResolvable) {
+      override fun virtualRouter(virtualRouter: IResolvable) {
         cdkBuilder.virtualRouter(virtualRouter.let(IResolvable::unwrap))
       }
 
-      public override fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty) {
+      override fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty) {
         cdkBuilder.virtualRouter(virtualRouter.let(VirtualRouterServiceProviderProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bffc8c5e4d3b4fc7ba849b41ba9f285e4cfa816dd9b4ed70c273c9de61860507")
-      public override
+      override
           fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty.Builder.() -> Unit):
           Unit = virtualRouter(VirtualRouterServiceProviderProperty(virtualRouter))
 
@@ -356,9 +338,9 @@ public open class CfnVirtualService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualServiceProviderProperty,
     ) : VirtualServiceProviderProperty {
-      public override fun virtualNode(): Any? = unwrap(this).getVirtualNode()
+      override fun virtualNode(): Any? = unwrap(this).getVirtualNode()
 
-      public override fun virtualRouter(): Any? = unwrap(this).getVirtualRouter()
+      override fun virtualRouter(): Any? = unwrap(this).getVirtualRouter()
     }
 
     public companion object {
@@ -385,8 +367,7 @@ public open class CfnVirtualService internal constructor(
     public fun virtualNodeName(): String
 
     public interface Builder {
-      public fun virtualNodeName(virtualNodeName: String) {
-      }
+      public fun virtualNodeName(virtualNodeName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -395,7 +376,7 @@ public open class CfnVirtualService internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty.builder()
 
-      public override fun virtualNodeName(virtualNodeName: String) {
+      override fun virtualNodeName(virtualNodeName: String) {
         cdkBuilder.virtualNodeName(virtualNodeName)
       }
 
@@ -408,7 +389,7 @@ public open class CfnVirtualService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualService.VirtualNodeServiceProviderProperty,
     ) : VirtualNodeServiceProviderProperty {
-      public override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
+      override fun virtualNodeName(): String = unwrap(this).getVirtualNodeName()
     }
 
     public companion object {

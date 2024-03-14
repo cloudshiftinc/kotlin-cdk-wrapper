@@ -96,47 +96,35 @@ public open class CfnSafetyRule internal constructor(
   }
 
   public interface Builder {
-    public fun assertionRule(assertionRule: IResolvable) {
-    }
+    public fun assertionRule(assertionRule: IResolvable)
 
-    public fun assertionRule(assertionRule: AssertionRuleProperty) {
-    }
+    public fun assertionRule(assertionRule: AssertionRuleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("186b309aa6ebe3b2679b8546e369a7e8a0a2b6129a17050605aeacfd9971ab74")
-    public fun assertionRule(assertionRule: AssertionRuleProperty.Builder.() -> Unit) {
-    }
+    public fun assertionRule(assertionRule: AssertionRuleProperty.Builder.() -> Unit)
 
-    public fun controlPanelArn(controlPanelArn: String) {
-    }
+    public fun controlPanelArn(controlPanelArn: String)
 
-    public fun gatingRule(gatingRule: IResolvable) {
-    }
+    public fun gatingRule(gatingRule: IResolvable)
 
-    public fun gatingRule(gatingRule: GatingRuleProperty) {
-    }
+    public fun gatingRule(gatingRule: GatingRuleProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38748a228e93e98b70b10d493d909939dbe988b5cfd4cdca14b2e21fa727a1e7")
-    public fun gatingRule(gatingRule: GatingRuleProperty.Builder.() -> Unit) {
-    }
+    public fun gatingRule(gatingRule: GatingRuleProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun ruleConfig(ruleConfig: IResolvable) {
-    }
+    public fun ruleConfig(ruleConfig: IResolvable)
 
-    public fun ruleConfig(ruleConfig: RuleConfigProperty) {
-    }
+    public fun ruleConfig(ruleConfig: RuleConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4623aa1709d6b596c85e289ae2b6c3b6b09955006887d6c00ac8fabc70b5fff0")
-    public fun ruleConfig(ruleConfig: RuleConfigProperty.Builder.() -> Unit) {
-    }
+    public fun ruleConfig(ruleConfig: RuleConfigProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -148,54 +136,54 @@ public open class CfnSafetyRule internal constructor(
         software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.Builder.create(scope,
         id)
 
-    public override fun assertionRule(assertionRule: IResolvable) {
+    override fun assertionRule(assertionRule: IResolvable) {
       cdkBuilder.assertionRule(assertionRule.let(IResolvable::unwrap))
     }
 
-    public override fun assertionRule(assertionRule: AssertionRuleProperty) {
+    override fun assertionRule(assertionRule: AssertionRuleProperty) {
       cdkBuilder.assertionRule(assertionRule.let(AssertionRuleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("186b309aa6ebe3b2679b8546e369a7e8a0a2b6129a17050605aeacfd9971ab74")
-    public override fun assertionRule(assertionRule: AssertionRuleProperty.Builder.() -> Unit): Unit
-        = assertionRule(AssertionRuleProperty(assertionRule))
+    override fun assertionRule(assertionRule: AssertionRuleProperty.Builder.() -> Unit): Unit =
+        assertionRule(AssertionRuleProperty(assertionRule))
 
-    public override fun controlPanelArn(controlPanelArn: String) {
+    override fun controlPanelArn(controlPanelArn: String) {
       cdkBuilder.controlPanelArn(controlPanelArn)
     }
 
-    public override fun gatingRule(gatingRule: IResolvable) {
+    override fun gatingRule(gatingRule: IResolvable) {
       cdkBuilder.gatingRule(gatingRule.let(IResolvable::unwrap))
     }
 
-    public override fun gatingRule(gatingRule: GatingRuleProperty) {
+    override fun gatingRule(gatingRule: GatingRuleProperty) {
       cdkBuilder.gatingRule(gatingRule.let(GatingRuleProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38748a228e93e98b70b10d493d909939dbe988b5cfd4cdca14b2e21fa727a1e7")
-    public override fun gatingRule(gatingRule: GatingRuleProperty.Builder.() -> Unit): Unit =
+    override fun gatingRule(gatingRule: GatingRuleProperty.Builder.() -> Unit): Unit =
         gatingRule(GatingRuleProperty(gatingRule))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun ruleConfig(ruleConfig: IResolvable) {
+    override fun ruleConfig(ruleConfig: IResolvable) {
       cdkBuilder.ruleConfig(ruleConfig.let(IResolvable::unwrap))
     }
 
-    public override fun ruleConfig(ruleConfig: RuleConfigProperty) {
+    override fun ruleConfig(ruleConfig: RuleConfigProperty) {
       cdkBuilder.ruleConfig(ruleConfig.let(RuleConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4623aa1709d6b596c85e289ae2b6c3b6b09955006887d6c00ac8fabc70b5fff0")
-    public override fun ruleConfig(ruleConfig: RuleConfigProperty.Builder.() -> Unit): Unit =
+    override fun ruleConfig(ruleConfig: RuleConfigProperty.Builder.() -> Unit): Unit =
         ruleConfig(RuleConfigProperty(ruleConfig))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -233,17 +221,13 @@ public open class CfnSafetyRule internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun inverted(inverted: Boolean) {
-      }
+      public fun inverted(inverted: Boolean)
 
-      public fun inverted(inverted: IResolvable) {
-      }
+      public fun inverted(inverted: IResolvable)
 
-      public fun threshold(threshold: Number) {
-      }
+      public fun threshold(threshold: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -252,19 +236,19 @@ public open class CfnSafetyRule internal constructor(
           =
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty.builder()
 
-      public override fun inverted(inverted: Boolean) {
+      override fun inverted(inverted: Boolean) {
         cdkBuilder.inverted(inverted)
       }
 
-      public override fun inverted(inverted: IResolvable) {
+      override fun inverted(inverted: IResolvable) {
         cdkBuilder.inverted(inverted.let(IResolvable::unwrap))
       }
 
-      public override fun threshold(threshold: Number) {
+      override fun threshold(threshold: Number) {
         cdkBuilder.threshold(threshold)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -277,11 +261,11 @@ public open class CfnSafetyRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty,
     ) : RuleConfigProperty {
-      public override fun inverted(): Any = unwrap(this).getInverted()
+      override fun inverted(): Any = unwrap(this).getInverted()
 
-      public override fun threshold(): Number = unwrap(this).getThreshold()
+      override fun threshold(): Number = unwrap(this).getThreshold()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -312,14 +296,11 @@ public open class CfnSafetyRule internal constructor(
     public fun waitPeriodMs(): Number
 
     public interface Builder {
-      public fun gatingControls(gatingControls: List<String>) {
-      }
+      public fun gatingControls(gatingControls: List<String>)
 
-      public fun targetControls(targetControls: List<String>) {
-      }
+      public fun targetControls(targetControls: List<String>)
 
-      public fun waitPeriodMs(waitPeriodMs: Number) {
-      }
+      public fun waitPeriodMs(waitPeriodMs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -328,15 +309,15 @@ public open class CfnSafetyRule internal constructor(
           =
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty.builder()
 
-      public override fun gatingControls(gatingControls: List<String>) {
+      override fun gatingControls(gatingControls: List<String>) {
         cdkBuilder.gatingControls(gatingControls)
       }
 
-      public override fun targetControls(targetControls: List<String>) {
+      override fun targetControls(targetControls: List<String>) {
         cdkBuilder.targetControls(targetControls)
       }
 
-      public override fun waitPeriodMs(waitPeriodMs: Number) {
+      override fun waitPeriodMs(waitPeriodMs: Number) {
         cdkBuilder.waitPeriodMs(waitPeriodMs)
       }
 
@@ -349,13 +330,11 @@ public open class CfnSafetyRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
     ) : GatingRuleProperty {
-      public override fun gatingControls(): List<String> = unwrap(this).getGatingControls() ?:
-          emptyList()
+      override fun gatingControls(): List<String> = unwrap(this).getGatingControls() ?: emptyList()
 
-      public override fun targetControls(): List<String> = unwrap(this).getTargetControls() ?:
-          emptyList()
+      override fun targetControls(): List<String> = unwrap(this).getTargetControls() ?: emptyList()
 
-      public override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
+      override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
     }
 
     public companion object {
@@ -384,11 +363,9 @@ public open class CfnSafetyRule internal constructor(
     public fun waitPeriodMs(): Number
 
     public interface Builder {
-      public fun assertedControls(assertedControls: List<String>) {
-      }
+      public fun assertedControls(assertedControls: List<String>)
 
-      public fun waitPeriodMs(waitPeriodMs: Number) {
-      }
+      public fun waitPeriodMs(waitPeriodMs: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -397,11 +374,11 @@ public open class CfnSafetyRule internal constructor(
           =
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty.builder()
 
-      public override fun assertedControls(assertedControls: List<String>) {
+      override fun assertedControls(assertedControls: List<String>) {
         cdkBuilder.assertedControls(assertedControls)
       }
 
-      public override fun waitPeriodMs(waitPeriodMs: Number) {
+      override fun waitPeriodMs(waitPeriodMs: Number) {
         cdkBuilder.waitPeriodMs(waitPeriodMs)
       }
 
@@ -414,10 +391,10 @@ public open class CfnSafetyRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
     ) : AssertionRuleProperty {
-      public override fun assertedControls(): List<String> = unwrap(this).getAssertedControls() ?:
+      override fun assertedControls(): List<String> = unwrap(this).getAssertedControls() ?:
           emptyList()
 
-      public override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
+      override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
     }
 
     public companion object {

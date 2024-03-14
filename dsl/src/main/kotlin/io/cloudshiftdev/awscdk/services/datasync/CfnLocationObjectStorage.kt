@@ -88,35 +88,25 @@ public open class CfnLocationObjectStorage internal constructor(
   }
 
   public interface Builder {
-    public fun accessKey(accessKey: String) {
-    }
+    public fun accessKey(accessKey: String)
 
-    public fun agentArns(agentArns: List<String>) {
-    }
+    public fun agentArns(agentArns: List<String>)
 
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun secretKey(secretKey: String) {
-    }
+    public fun secretKey(secretKey: String)
 
-    public fun serverCertificate(serverCertificate: String) {
-    }
+    public fun serverCertificate(serverCertificate: String)
 
-    public fun serverHostname(serverHostname: String) {
-    }
+    public fun serverHostname(serverHostname: String)
 
-    public fun serverPort(serverPort: Number) {
-    }
+    public fun serverPort(serverPort: Number)
 
-    public fun serverProtocol(serverProtocol: String) {
-    }
+    public fun serverProtocol(serverProtocol: String)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -127,43 +117,43 @@ public open class CfnLocationObjectStorage internal constructor(
         software.amazon.awscdk.services.datasync.CfnLocationObjectStorage.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationObjectStorage.Builder.create(scope, id)
 
-    public override fun accessKey(accessKey: String) {
+    override fun accessKey(accessKey: String) {
       cdkBuilder.accessKey(accessKey)
     }
 
-    public override fun agentArns(agentArns: List<String>) {
+    override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun secretKey(secretKey: String) {
+    override fun secretKey(secretKey: String) {
       cdkBuilder.secretKey(secretKey)
     }
 
-    public override fun serverCertificate(serverCertificate: String) {
+    override fun serverCertificate(serverCertificate: String) {
       cdkBuilder.serverCertificate(serverCertificate)
     }
 
-    public override fun serverHostname(serverHostname: String) {
+    override fun serverHostname(serverHostname: String) {
       cdkBuilder.serverHostname(serverHostname)
     }
 
-    public override fun serverPort(serverPort: Number) {
+    override fun serverPort(serverPort: Number) {
       cdkBuilder.serverPort(serverPort)
     }
 
-    public override fun serverProtocol(serverProtocol: String) {
+    override fun serverProtocol(serverProtocol: String) {
       cdkBuilder.serverProtocol(serverProtocol)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

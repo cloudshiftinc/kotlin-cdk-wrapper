@@ -8,15 +8,14 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
       unwrap(this).getTerminationWaitTimeInMinutes()
 
   public interface Builder {
-    public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
-    }
+    public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.builder()
 
-    public override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
+    override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
       cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
     }
 
@@ -27,7 +26,7 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions,
   ) : CfnCodeDeployBlueGreenAdditionalOptions {
-    public override fun terminationWaitTimeInMinutes(): Number? =
+    override fun terminationWaitTimeInMinutes(): Number? =
         unwrap(this).getTerminationWaitTimeInMinutes()
   }
 

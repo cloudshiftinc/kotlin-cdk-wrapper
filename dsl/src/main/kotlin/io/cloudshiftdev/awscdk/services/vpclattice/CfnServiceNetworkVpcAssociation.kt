@@ -64,17 +64,13 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
-    }
+    public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcIdentifier(vpcIdentifier: String) {
-    }
+    public fun vpcIdentifier(vpcIdentifier: String)
   }
 
   private class BuilderImpl(
@@ -86,19 +82,19 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation.Builder.create(scope,
         id)
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
+    override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
       cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcIdentifier(vpcIdentifier: String) {
+    override fun vpcIdentifier(vpcIdentifier: String) {
       cdkBuilder.vpcIdentifier(vpcIdentifier)
     }
 

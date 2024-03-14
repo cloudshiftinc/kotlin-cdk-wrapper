@@ -6,7 +6,7 @@ public interface ITaggable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ITaggable,
   ) : ITaggable {
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+    override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
   }
 
   public companion object {

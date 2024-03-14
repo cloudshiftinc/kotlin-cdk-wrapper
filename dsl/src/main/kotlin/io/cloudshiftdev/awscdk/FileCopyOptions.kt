@@ -13,29 +13,26 @@ public interface FileCopyOptions {
   public fun ignoreMode(): IgnoreMode? = unwrap(this).getIgnoreMode()?.let(IgnoreMode::wrap)
 
   public interface Builder {
-    public fun exclude(exclude: List<String>) {
-    }
+    public fun exclude(exclude: List<String>)
 
-    public fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-    }
+    public fun followSymlinks(followSymlinks: SymlinkFollowMode)
 
-    public fun ignoreMode(ignoreMode: IgnoreMode) {
-    }
+    public fun ignoreMode(ignoreMode: IgnoreMode)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.FileCopyOptions.Builder =
         software.amazon.awscdk.FileCopyOptions.builder()
 
-    public override fun exclude(exclude: List<String>) {
+    override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
 
-    public override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
+    override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
       cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
     }
 
-    public override fun ignoreMode(ignoreMode: IgnoreMode) {
+    override fun ignoreMode(ignoreMode: IgnoreMode) {
       cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
     }
 
@@ -45,13 +42,12 @@ public interface FileCopyOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.FileCopyOptions,
   ) : FileCopyOptions {
-    public override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+    override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
 
-    public override fun followSymlinks(): SymlinkFollowMode? =
+    override fun followSymlinks(): SymlinkFollowMode? =
         unwrap(this).getFollowSymlinks()?.let(SymlinkFollowMode::wrap)
 
-    public override fun ignoreMode(): IgnoreMode? =
-        unwrap(this).getIgnoreMode()?.let(IgnoreMode::wrap)
+    override fun ignoreMode(): IgnoreMode? = unwrap(this).getIgnoreMode()?.let(IgnoreMode::wrap)
   }
 
   public companion object {

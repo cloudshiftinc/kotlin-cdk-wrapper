@@ -26,23 +26,17 @@ public open class FlowLog internal constructor(
   public open fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
   public interface Builder {
-    public fun destination(destination: FlowLogDestination) {
-    }
+    public fun destination(destination: FlowLogDestination)
 
-    public fun flowLogName(flowLogName: String) {
-    }
+    public fun flowLogName(flowLogName: String)
 
-    public fun logFormat(logFormat: List<LogFormat>) {
-    }
+    public fun logFormat(logFormat: List<LogFormat>)
 
-    public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
-    }
+    public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval)
 
-    public fun resourceType(resourceType: FlowLogResourceType) {
-    }
+    public fun resourceType(resourceType: FlowLogResourceType)
 
-    public fun trafficType(trafficType: FlowLogTrafficType) {
-    }
+    public fun trafficType(trafficType: FlowLogTrafficType)
   }
 
   private class BuilderImpl(
@@ -52,28 +46,27 @@ public open class FlowLog internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.FlowLog.Builder =
         software.amazon.awscdk.services.ec2.FlowLog.Builder.create(scope, id)
 
-    public override fun destination(destination: FlowLogDestination) {
+    override fun destination(destination: FlowLogDestination) {
       cdkBuilder.destination(destination.let(FlowLogDestination::unwrap))
     }
 
-    public override fun flowLogName(flowLogName: String) {
+    override fun flowLogName(flowLogName: String) {
       cdkBuilder.flowLogName(flowLogName)
     }
 
-    public override fun logFormat(logFormat: List<LogFormat>) {
+    override fun logFormat(logFormat: List<LogFormat>) {
       cdkBuilder.logFormat(logFormat.map(LogFormat::unwrap))
     }
 
-    public override
-        fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
+    override fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
       cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval::unwrap))
     }
 
-    public override fun resourceType(resourceType: FlowLogResourceType) {
+    override fun resourceType(resourceType: FlowLogResourceType) {
       cdkBuilder.resourceType(resourceType.let(FlowLogResourceType::unwrap))
     }
 
-    public override fun trafficType(trafficType: FlowLogTrafficType) {
+    override fun trafficType(trafficType: FlowLogTrafficType) {
       cdkBuilder.trafficType(trafficType.let(FlowLogTrafficType::unwrap))
     }
 

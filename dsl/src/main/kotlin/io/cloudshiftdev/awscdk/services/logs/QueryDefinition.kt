@@ -15,19 +15,15 @@ public open class QueryDefinition internal constructor(
   public open fun queryDefinitionId(): String = unwrap(this).getQueryDefinitionId()
 
   public interface Builder {
-    public fun logGroups(logGroups: List<ILogGroup>) {
-    }
+    public fun logGroups(logGroups: List<ILogGroup>)
 
-    public fun queryDefinitionName(queryDefinitionName: String) {
-    }
+    public fun queryDefinitionName(queryDefinitionName: String)
 
-    public fun queryString(queryString: QueryString) {
-    }
+    public fun queryString(queryString: QueryString)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4eaf5fbf6d9c40672ed6a0d4ad30cb03e413ed50343ede6e3f399854f51f174")
-    public fun queryString(queryString: QueryString.Builder.() -> Unit) {
-    }
+    public fun queryString(queryString: QueryString.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -37,21 +33,21 @@ public open class QueryDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.QueryDefinition.Builder =
         software.amazon.awscdk.services.logs.QueryDefinition.Builder.create(scope, id)
 
-    public override fun logGroups(logGroups: List<ILogGroup>) {
+    override fun logGroups(logGroups: List<ILogGroup>) {
       cdkBuilder.logGroups(logGroups.map(ILogGroup::unwrap))
     }
 
-    public override fun queryDefinitionName(queryDefinitionName: String) {
+    override fun queryDefinitionName(queryDefinitionName: String) {
       cdkBuilder.queryDefinitionName(queryDefinitionName)
     }
 
-    public override fun queryString(queryString: QueryString) {
+    override fun queryString(queryString: QueryString) {
       cdkBuilder.queryString(queryString.let(QueryString::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e4eaf5fbf6d9c40672ed6a0d4ad30cb03e413ed50343ede6e3f399854f51f174")
-    public override fun queryString(queryString: QueryString.Builder.() -> Unit): Unit =
+    override fun queryString(queryString: QueryString.Builder.() -> Unit): Unit =
         queryString(QueryString(queryString))
 
     public fun build(): software.amazon.awscdk.services.logs.QueryDefinition = cdkBuilder.build()

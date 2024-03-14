@@ -93,35 +93,25 @@ public open class CfnWorkflow internal constructor(
   }
 
   public interface Builder {
-    public fun accelerators(accelerators: String) {
-    }
+    public fun accelerators(accelerators: String)
 
-    public fun definitionUri(definitionUri: String) {
-    }
+    public fun definitionUri(definitionUri: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun main(main: String) {
-    }
+    public fun main(main: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun parameterTemplate(parameterTemplate: IResolvable) {
-    }
+    public fun parameterTemplate(parameterTemplate: IResolvable)
 
-    public fun parameterTemplate(parameterTemplate: Map<String, Any>) {
-    }
+    public fun parameterTemplate(parameterTemplate: Map<String, Any>)
 
-    public fun storageCapacity(storageCapacity: Number) {
-    }
+    public fun storageCapacity(storageCapacity: Number)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -131,43 +121,43 @@ public open class CfnWorkflow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.omics.CfnWorkflow.Builder =
         software.amazon.awscdk.services.omics.CfnWorkflow.Builder.create(scope, id)
 
-    public override fun accelerators(accelerators: String) {
+    override fun accelerators(accelerators: String) {
       cdkBuilder.accelerators(accelerators)
     }
 
-    public override fun definitionUri(definitionUri: String) {
+    override fun definitionUri(definitionUri: String) {
       cdkBuilder.definitionUri(definitionUri)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun main(main: String) {
+    override fun main(main: String) {
       cdkBuilder.main(main)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun parameterTemplate(parameterTemplate: IResolvable) {
+    override fun parameterTemplate(parameterTemplate: IResolvable) {
       cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable::unwrap))
     }
 
-    public override fun parameterTemplate(parameterTemplate: Map<String, Any>) {
+    override fun parameterTemplate(parameterTemplate: Map<String, Any>) {
       cdkBuilder.parameterTemplate(parameterTemplate)
     }
 
-    public override fun storageCapacity(storageCapacity: Number) {
+    override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -201,14 +191,11 @@ public open class CfnWorkflow internal constructor(
     public fun optional(): Any? = unwrap(this).getOptional()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun optional(optional: Boolean) {
-      }
+      public fun optional(optional: Boolean)
 
-      public fun optional(optional: IResolvable) {
-      }
+      public fun optional(optional: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -216,15 +203,15 @@ public open class CfnWorkflow internal constructor(
           software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty.Builder =
           software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun optional(optional: Boolean) {
+      override fun optional(optional: Boolean) {
         cdkBuilder.optional(optional)
       }
 
-      public override fun optional(optional: IResolvable) {
+      override fun optional(optional: IResolvable) {
         cdkBuilder.optional(optional.let(IResolvable::unwrap))
       }
 
@@ -237,9 +224,9 @@ public open class CfnWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty,
     ) : WorkflowParameterProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun optional(): Any? = unwrap(this).getOptional()
+      override fun optional(): Any? = unwrap(this).getOptional()
     }
 
     public companion object {

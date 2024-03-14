@@ -23,71 +23,62 @@ public open class EfsVolume internal constructor(
   public open fun useJobRole(): Boolean? = unwrap(this).getUseJobRole()
 
   public interface Builder {
-    public fun accessPointId(accessPointId: String) {
-    }
+    public fun accessPointId(accessPointId: String)
 
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun enableTransitEncryption(enableTransitEncryption: Boolean) {
-    }
+    public fun enableTransitEncryption(enableTransitEncryption: Boolean)
 
-    public fun fileSystem(fileSystem: IFileSystem) {
-    }
+    public fun fileSystem(fileSystem: IFileSystem)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readonly(readonly: Boolean) {
-    }
+    public fun readonly(readonly: Boolean)
 
-    public fun rootDirectory(rootDirectory: String) {
-    }
+    public fun rootDirectory(rootDirectory: String)
 
-    public fun transitEncryptionPort(transitEncryptionPort: Number) {
-    }
+    public fun transitEncryptionPort(transitEncryptionPort: Number)
 
-    public fun useJobRole(useJobRole: Boolean) {
-    }
+    public fun useJobRole(useJobRole: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.EfsVolume.Builder =
         software.amazon.awscdk.services.batch.EfsVolume.Builder.create()
 
-    public override fun accessPointId(accessPointId: String) {
+    override fun accessPointId(accessPointId: String) {
       cdkBuilder.accessPointId(accessPointId)
     }
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun enableTransitEncryption(enableTransitEncryption: Boolean) {
+    override fun enableTransitEncryption(enableTransitEncryption: Boolean) {
       cdkBuilder.enableTransitEncryption(enableTransitEncryption)
     }
 
-    public override fun fileSystem(fileSystem: IFileSystem) {
+    override fun fileSystem(fileSystem: IFileSystem) {
       cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readonly(readonly: Boolean) {
+    override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
 
-    public override fun rootDirectory(rootDirectory: String) {
+    override fun rootDirectory(rootDirectory: String) {
       cdkBuilder.rootDirectory(rootDirectory)
     }
 
-    public override fun transitEncryptionPort(transitEncryptionPort: Number) {
+    override fun transitEncryptionPort(transitEncryptionPort: Number) {
       cdkBuilder.transitEncryptionPort(transitEncryptionPort)
     }
 
-    public override fun useJobRole(useJobRole: Boolean) {
+    override fun useJobRole(useJobRole: Boolean) {
       cdkBuilder.useJobRole(useJobRole)
     }
 

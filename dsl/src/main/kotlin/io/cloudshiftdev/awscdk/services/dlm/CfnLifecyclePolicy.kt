@@ -131,63 +131,45 @@ public open class CfnLifecyclePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun copyTags(copyTags: Boolean) {
-    }
+    public fun copyTags(copyTags: Boolean)
 
-    public fun copyTags(copyTags: IResolvable) {
-    }
+    public fun copyTags(copyTags: IResolvable)
 
-    public fun createInterval(createInterval: Number) {
-    }
+    public fun createInterval(createInterval: Number)
 
-    public fun crossRegionCopyTargets(crossRegionCopyTargets: Any) {
-    }
+    public fun crossRegionCopyTargets(crossRegionCopyTargets: Any)
 
-    public fun defaultPolicy(defaultPolicy: String) {
-    }
+    public fun defaultPolicy(defaultPolicy: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun exclusions(exclusions: IResolvable) {
-    }
+    public fun exclusions(exclusions: IResolvable)
 
-    public fun exclusions(exclusions: ExclusionsProperty) {
-    }
+    public fun exclusions(exclusions: ExclusionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("417e5709901c173f3458bad230ac75cfff8db50ed3b536d683412a8e62a76d22")
-    public fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit) {
-    }
+    public fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit)
 
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun extendDeletion(extendDeletion: Boolean) {
-    }
+    public fun extendDeletion(extendDeletion: Boolean)
 
-    public fun extendDeletion(extendDeletion: IResolvable) {
-    }
+    public fun extendDeletion(extendDeletion: IResolvable)
 
-    public fun policyDetails(policyDetails: IResolvable) {
-    }
+    public fun policyDetails(policyDetails: IResolvable)
 
-    public fun policyDetails(policyDetails: PolicyDetailsProperty) {
-    }
+    public fun policyDetails(policyDetails: PolicyDetailsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ddf21f53e23f44a93e1aa8317fd8f4e69e074d10761bd83c4869006ef3c64f76")
-    public fun policyDetails(policyDetails: PolicyDetailsProperty.Builder.() -> Unit) {
-    }
+    public fun policyDetails(policyDetails: PolicyDetailsProperty.Builder.() -> Unit)
 
-    public fun retainInterval(retainInterval: Number) {
-    }
+    public fun retainInterval(retainInterval: Number)
 
-    public fun state(state: String) {
-    }
+    public fun state(state: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -197,77 +179,77 @@ public open class CfnLifecyclePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.Builder =
         software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.Builder.create(scope, id)
 
-    public override fun copyTags(copyTags: Boolean) {
+    override fun copyTags(copyTags: Boolean) {
       cdkBuilder.copyTags(copyTags)
     }
 
-    public override fun copyTags(copyTags: IResolvable) {
+    override fun copyTags(copyTags: IResolvable) {
       cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
     }
 
-    public override fun createInterval(createInterval: Number) {
+    override fun createInterval(createInterval: Number) {
       cdkBuilder.createInterval(createInterval)
     }
 
-    public override fun crossRegionCopyTargets(crossRegionCopyTargets: Any) {
+    override fun crossRegionCopyTargets(crossRegionCopyTargets: Any) {
       cdkBuilder.crossRegionCopyTargets(crossRegionCopyTargets)
     }
 
-    public override fun defaultPolicy(defaultPolicy: String) {
+    override fun defaultPolicy(defaultPolicy: String) {
       cdkBuilder.defaultPolicy(defaultPolicy)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun exclusions(exclusions: IResolvable) {
+    override fun exclusions(exclusions: IResolvable) {
       cdkBuilder.exclusions(exclusions.let(IResolvable::unwrap))
     }
 
-    public override fun exclusions(exclusions: ExclusionsProperty) {
+    override fun exclusions(exclusions: ExclusionsProperty) {
       cdkBuilder.exclusions(exclusions.let(ExclusionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("417e5709901c173f3458bad230ac75cfff8db50ed3b536d683412a8e62a76d22")
-    public override fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit): Unit =
+    override fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit): Unit =
         exclusions(ExclusionsProperty(exclusions))
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun extendDeletion(extendDeletion: Boolean) {
+    override fun extendDeletion(extendDeletion: Boolean) {
       cdkBuilder.extendDeletion(extendDeletion)
     }
 
-    public override fun extendDeletion(extendDeletion: IResolvable) {
+    override fun extendDeletion(extendDeletion: IResolvable) {
       cdkBuilder.extendDeletion(extendDeletion.let(IResolvable::unwrap))
     }
 
-    public override fun policyDetails(policyDetails: IResolvable) {
+    override fun policyDetails(policyDetails: IResolvable) {
       cdkBuilder.policyDetails(policyDetails.let(IResolvable::unwrap))
     }
 
-    public override fun policyDetails(policyDetails: PolicyDetailsProperty) {
+    override fun policyDetails(policyDetails: PolicyDetailsProperty) {
       cdkBuilder.policyDetails(policyDetails.let(PolicyDetailsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ddf21f53e23f44a93e1aa8317fd8f4e69e074d10761bd83c4869006ef3c64f76")
-    public override fun policyDetails(policyDetails: PolicyDetailsProperty.Builder.() -> Unit): Unit
-        = policyDetails(PolicyDetailsProperty(policyDetails))
+    override fun policyDetails(policyDetails: PolicyDetailsProperty.Builder.() -> Unit): Unit =
+        policyDetails(PolicyDetailsProperty(policyDetails))
 
-    public override fun retainInterval(retainInterval: Number) {
+    override fun retainInterval(retainInterval: Number) {
       cdkBuilder.retainInterval(retainInterval)
     }
 
-    public override fun state(state: String) {
+    override fun state(state: String) {
       cdkBuilder.state(state)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -303,14 +285,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
 
     public interface Builder {
-      public fun count(count: Number) {
-      }
+      public fun count(count: Number)
 
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -318,15 +297,15 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetainRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetainRuleProperty.builder()
 
-      public override fun count(count: Number) {
+      override fun count(count: Number) {
         cdkBuilder.count(count)
       }
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
@@ -338,11 +317,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetainRuleProperty,
     ) : RetainRuleProperty {
-      public override fun count(): Number? = unwrap(this).getCount()
+      override fun count(): Number? = unwrap(this).getCount()
 
-      public override fun interval(): Number? = unwrap(this).getInterval()
+      override fun interval(): Number? = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
     }
 
     public companion object {
@@ -373,14 +352,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun snapshotOwner(): List<String>
 
     public interface Builder {
-      public fun descriptionRegex(descriptionRegex: String) {
-      }
+      public fun descriptionRegex(descriptionRegex: String)
 
-      public fun eventType(eventType: String) {
-      }
+      public fun eventType(eventType: String)
 
-      public fun snapshotOwner(snapshotOwner: List<String>) {
-      }
+      public fun snapshotOwner(snapshotOwner: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -388,15 +364,15 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty.builder()
 
-      public override fun descriptionRegex(descriptionRegex: String) {
+      override fun descriptionRegex(descriptionRegex: String) {
         cdkBuilder.descriptionRegex(descriptionRegex)
       }
 
-      public override fun eventType(eventType: String) {
+      override fun eventType(eventType: String) {
         cdkBuilder.eventType(eventType)
       }
 
-      public override fun snapshotOwner(snapshotOwner: List<String>) {
+      override fun snapshotOwner(snapshotOwner: List<String>) {
         cdkBuilder.snapshotOwner(snapshotOwner)
       }
 
@@ -409,12 +385,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty,
     ) : EventParametersProperty {
-      public override fun descriptionRegex(): String? = unwrap(this).getDescriptionRegex()
+      override fun descriptionRegex(): String? = unwrap(this).getDescriptionRegex()
 
-      public override fun eventType(): String = unwrap(this).getEventType()
+      override fun eventType(): String = unwrap(this).getEventType()
 
-      public override fun snapshotOwner(): List<String> = unwrap(this).getSnapshotOwner() ?:
-          emptyList()
+      override fun snapshotOwner(): List<String> = unwrap(this).getSnapshotOwner() ?: emptyList()
     }
 
     public companion object {
@@ -443,14 +418,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun crossRegionCopy(crossRegionCopy: IResolvable) {
-      }
+      public fun crossRegionCopy(crossRegionCopy: IResolvable)
 
-      public fun crossRegionCopy(crossRegionCopy: List<Any>) {
-      }
+      public fun crossRegionCopy(crossRegionCopy: List<Any>)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -458,15 +430,15 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ActionProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ActionProperty.builder()
 
-      public override fun crossRegionCopy(crossRegionCopy: IResolvable) {
+      override fun crossRegionCopy(crossRegionCopy: IResolvable) {
         cdkBuilder.crossRegionCopy(crossRegionCopy.let(IResolvable::unwrap))
       }
 
-      public override fun crossRegionCopy(crossRegionCopy: List<Any>) {
+      override fun crossRegionCopy(crossRegionCopy: List<Any>) {
         cdkBuilder.crossRegionCopy(crossRegionCopy)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -477,9 +449,9 @@ public open class CfnLifecyclePolicy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ActionProperty,
     ) : ActionProperty {
-      public override fun crossRegionCopy(): Any = unwrap(this).getCrossRegionCopy()
+      override fun crossRegionCopy(): Any = unwrap(this).getCrossRegionCopy()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -510,23 +482,17 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun noReboot(): Any? = unwrap(this).getNoReboot()
 
     public interface Builder {
-      public fun excludeBootVolume(excludeBootVolume: Boolean) {
-      }
+      public fun excludeBootVolume(excludeBootVolume: Boolean)
 
-      public fun excludeBootVolume(excludeBootVolume: IResolvable) {
-      }
+      public fun excludeBootVolume(excludeBootVolume: IResolvable)
 
-      public fun excludeDataVolumeTags(excludeDataVolumeTags: IResolvable) {
-      }
+      public fun excludeDataVolumeTags(excludeDataVolumeTags: IResolvable)
 
-      public fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>) {
-      }
+      public fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>)
 
-      public fun noReboot(noReboot: Boolean) {
-      }
+      public fun noReboot(noReboot: Boolean)
 
-      public fun noReboot(noReboot: IResolvable) {
-      }
+      public fun noReboot(noReboot: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -534,27 +500,27 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty.builder()
 
-      public override fun excludeBootVolume(excludeBootVolume: Boolean) {
+      override fun excludeBootVolume(excludeBootVolume: Boolean) {
         cdkBuilder.excludeBootVolume(excludeBootVolume)
       }
 
-      public override fun excludeBootVolume(excludeBootVolume: IResolvable) {
+      override fun excludeBootVolume(excludeBootVolume: IResolvable) {
         cdkBuilder.excludeBootVolume(excludeBootVolume.let(IResolvable::unwrap))
       }
 
-      public override fun excludeDataVolumeTags(excludeDataVolumeTags: IResolvable) {
+      override fun excludeDataVolumeTags(excludeDataVolumeTags: IResolvable) {
         cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags.let(IResolvable::unwrap))
       }
 
-      public override fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>) {
+      override fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>) {
         cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags)
       }
 
-      public override fun noReboot(noReboot: Boolean) {
+      override fun noReboot(noReboot: Boolean) {
         cdkBuilder.noReboot(noReboot)
       }
 
-      public override fun noReboot(noReboot: IResolvable) {
+      override fun noReboot(noReboot: IResolvable) {
         cdkBuilder.noReboot(noReboot.let(IResolvable::unwrap))
       }
 
@@ -566,11 +532,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty,
     ) : ParametersProperty {
-      public override fun excludeBootVolume(): Any? = unwrap(this).getExcludeBootVolume()
+      override fun excludeBootVolume(): Any? = unwrap(this).getExcludeBootVolume()
 
-      public override fun excludeDataVolumeTags(): Any? = unwrap(this).getExcludeDataVolumeTags()
+      override fun excludeDataVolumeTags(): Any? = unwrap(this).getExcludeDataVolumeTags()
 
-      public override fun noReboot(): Any? = unwrap(this).getNoReboot()
+      override fun noReboot(): Any? = unwrap(this).getNoReboot()
     }
 
     public companion object {
@@ -599,19 +565,15 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: EventParametersProperty) {
-      }
+      public fun parameters(parameters: EventParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca1a8456c119a6ab5e78a9fe2209d5e66ecc1d392e84cfbb43a437e6349e6d39")
-      public fun parameters(parameters: EventParametersProperty.Builder.() -> Unit) {
-      }
+      public fun parameters(parameters: EventParametersProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -619,20 +581,20 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventSourceProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventSourceProperty.builder()
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: EventParametersProperty) {
+      override fun parameters(parameters: EventParametersProperty) {
         cdkBuilder.parameters(parameters.let(EventParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ca1a8456c119a6ab5e78a9fe2209d5e66ecc1d392e84cfbb43a437e6349e6d39")
-      public override fun parameters(parameters: EventParametersProperty.Builder.() -> Unit): Unit =
+      override fun parameters(parameters: EventParametersProperty.Builder.() -> Unit): Unit =
           parameters(EventParametersProperty(parameters))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -644,9 +606,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventSourceProperty,
     ) : EventSourceProperty {
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -675,11 +637,9 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun intervalUnit(): String
 
     public interface Builder {
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -688,11 +648,11 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty.builder()
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
@@ -705,9 +665,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyDeprecateRuleProperty,
     ) : CrossRegionCopyDeprecateRuleProperty {
-      public override fun interval(): Number = unwrap(this).getInterval()
+      override fun interval(): Number = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String = unwrap(this).getIntervalUnit()
     }
 
     public companion object {
@@ -739,14 +699,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun unshareIntervalUnit(): String? = unwrap(this).getUnshareIntervalUnit()
 
     public interface Builder {
-      public fun targetAccounts(targetAccounts: List<String>) {
-      }
+      public fun targetAccounts(targetAccounts: List<String>)
 
-      public fun unshareInterval(unshareInterval: Number) {
-      }
+      public fun unshareInterval(unshareInterval: Number)
 
-      public fun unshareIntervalUnit(unshareIntervalUnit: String) {
-      }
+      public fun unshareIntervalUnit(unshareIntervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -754,15 +711,15 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ShareRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ShareRuleProperty.builder()
 
-      public override fun targetAccounts(targetAccounts: List<String>) {
+      override fun targetAccounts(targetAccounts: List<String>) {
         cdkBuilder.targetAccounts(targetAccounts)
       }
 
-      public override fun unshareInterval(unshareInterval: Number) {
+      override fun unshareInterval(unshareInterval: Number) {
         cdkBuilder.unshareInterval(unshareInterval)
       }
 
-      public override fun unshareIntervalUnit(unshareIntervalUnit: String) {
+      override fun unshareIntervalUnit(unshareIntervalUnit: String) {
         cdkBuilder.unshareIntervalUnit(unshareIntervalUnit)
       }
 
@@ -774,12 +731,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ShareRuleProperty,
     ) : ShareRuleProperty {
-      public override fun targetAccounts(): List<String> = unwrap(this).getTargetAccounts() ?:
-          emptyList()
+      override fun targetAccounts(): List<String> = unwrap(this).getTargetAccounts() ?: emptyList()
 
-      public override fun unshareInterval(): Number? = unwrap(this).getUnshareInterval()
+      override fun unshareInterval(): Number? = unwrap(this).getUnshareInterval()
 
-      public override fun unshareIntervalUnit(): String? = unwrap(this).getUnshareIntervalUnit()
+      override fun unshareIntervalUnit(): String? = unwrap(this).getUnshareIntervalUnit()
     }
 
     public companion object {
@@ -813,17 +769,13 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
 
     public interface Builder {
-      public fun availabilityZones(availabilityZones: List<String>) {
-      }
+      public fun availabilityZones(availabilityZones: List<String>)
 
-      public fun count(count: Number) {
-      }
+      public fun count(count: Number)
 
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -831,19 +783,19 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.FastRestoreRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.FastRestoreRuleProperty.builder()
 
-      public override fun availabilityZones(availabilityZones: List<String>) {
+      override fun availabilityZones(availabilityZones: List<String>) {
         cdkBuilder.availabilityZones(availabilityZones)
       }
 
-      public override fun count(count: Number) {
+      override fun count(count: Number) {
         cdkBuilder.count(count)
       }
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
@@ -856,14 +808,14 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.FastRestoreRuleProperty,
     ) : FastRestoreRuleProperty {
-      public override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
+      override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
           emptyList()
 
-      public override fun count(): Number? = unwrap(this).getCount()
+      override fun count(): Number? = unwrap(this).getCount()
 
-      public override fun interval(): Number? = unwrap(this).getInterval()
+      override fun interval(): Number? = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
     }
 
     public companion object {
@@ -894,14 +846,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
 
     public interface Builder {
-      public fun count(count: Number) {
-      }
+      public fun count(count: Number)
 
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -910,15 +859,15 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetentionArchiveTierProperty.builder()
 
-      public override fun count(count: Number) {
+      override fun count(count: Number) {
         cdkBuilder.count(count)
       }
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
@@ -931,11 +880,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.RetentionArchiveTierProperty,
     ) : RetentionArchiveTierProperty {
-      public override fun count(): Number? = unwrap(this).getCount()
+      override fun count(): Number? = unwrap(this).getCount()
 
-      public override fun interval(): Number? = unwrap(this).getInterval()
+      override fun interval(): Number? = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
     }
 
     public companion object {
@@ -982,93 +931,67 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun variableTags(): Any? = unwrap(this).getVariableTags()
 
     public interface Builder {
-      public fun archiveRule(archiveRule: IResolvable) {
-      }
+      public fun archiveRule(archiveRule: IResolvable)
 
-      public fun archiveRule(archiveRule: ArchiveRuleProperty) {
-      }
+      public fun archiveRule(archiveRule: ArchiveRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("825dead620cc6ea08a641afcd158f0cc401bd80dfd5c87605bacaf652b0ce3a1")
-      public fun archiveRule(archiveRule: ArchiveRuleProperty.Builder.() -> Unit) {
-      }
+      public fun archiveRule(archiveRule: ArchiveRuleProperty.Builder.() -> Unit)
 
-      public fun copyTags(copyTags: Boolean) {
-      }
+      public fun copyTags(copyTags: Boolean)
 
-      public fun copyTags(copyTags: IResolvable) {
-      }
+      public fun copyTags(copyTags: IResolvable)
 
-      public fun createRule(createRule: IResolvable) {
-      }
+      public fun createRule(createRule: IResolvable)
 
-      public fun createRule(createRule: CreateRuleProperty) {
-      }
+      public fun createRule(createRule: CreateRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("54891bc79136e1c87930dfbd441d43e610d3d82bccfced6e1bdf038d422a97b8")
-      public fun createRule(createRule: CreateRuleProperty.Builder.() -> Unit) {
-      }
+      public fun createRule(createRule: CreateRuleProperty.Builder.() -> Unit)
 
-      public fun crossRegionCopyRules(crossRegionCopyRules: IResolvable) {
-      }
+      public fun crossRegionCopyRules(crossRegionCopyRules: IResolvable)
 
-      public fun crossRegionCopyRules(crossRegionCopyRules: List<Any>) {
-      }
+      public fun crossRegionCopyRules(crossRegionCopyRules: List<Any>)
 
-      public fun deprecateRule(deprecateRule: IResolvable) {
-      }
+      public fun deprecateRule(deprecateRule: IResolvable)
 
-      public fun deprecateRule(deprecateRule: DeprecateRuleProperty) {
-      }
+      public fun deprecateRule(deprecateRule: DeprecateRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb7a0258a6a743ee09f1b22132dea6f3341e66f8726bb797909b7292faed4270")
-      public fun deprecateRule(deprecateRule: DeprecateRuleProperty.Builder.() -> Unit) {
-      }
+      public fun deprecateRule(deprecateRule: DeprecateRuleProperty.Builder.() -> Unit)
 
-      public fun fastRestoreRule(fastRestoreRule: IResolvable) {
-      }
+      public fun fastRestoreRule(fastRestoreRule: IResolvable)
 
-      public fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty) {
-      }
+      public fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e27b9391e7a38b3c973427c0f60208402a121bef2c15bbc3199f4c686769530a")
-      public fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty.Builder.() -> Unit) {
-      }
+      public fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun retainRule(retainRule: IResolvable) {
-      }
+      public fun retainRule(retainRule: IResolvable)
 
-      public fun retainRule(retainRule: RetainRuleProperty) {
-      }
+      public fun retainRule(retainRule: RetainRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("98893537e56c00100b0f8d465996d0e9a2d0071e41103b84fb051fa0820b0529")
-      public fun retainRule(retainRule: RetainRuleProperty.Builder.() -> Unit) {
-      }
+      public fun retainRule(retainRule: RetainRuleProperty.Builder.() -> Unit)
 
-      public fun shareRules(shareRules: IResolvable) {
-      }
+      public fun shareRules(shareRules: IResolvable)
 
-      public fun shareRules(shareRules: List<Any>) {
-      }
+      public fun shareRules(shareRules: List<Any>)
 
-      public fun tagsToAdd(tagsToAdd: IResolvable) {
-      }
+      public fun tagsToAdd(tagsToAdd: IResolvable)
 
-      public fun tagsToAdd(tagsToAdd: List<Any>) {
-      }
+      public fun tagsToAdd(tagsToAdd: List<Any>)
 
-      public fun variableTags(variableTags: IResolvable) {
-      }
+      public fun variableTags(variableTags: IResolvable)
 
-      public fun variableTags(variableTags: List<Any>) {
-      }
+      public fun variableTags(variableTags: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1076,113 +999,112 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty.builder()
 
-      public override fun archiveRule(archiveRule: IResolvable) {
+      override fun archiveRule(archiveRule: IResolvable) {
         cdkBuilder.archiveRule(archiveRule.let(IResolvable::unwrap))
       }
 
-      public override fun archiveRule(archiveRule: ArchiveRuleProperty) {
+      override fun archiveRule(archiveRule: ArchiveRuleProperty) {
         cdkBuilder.archiveRule(archiveRule.let(ArchiveRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("825dead620cc6ea08a641afcd158f0cc401bd80dfd5c87605bacaf652b0ce3a1")
-      public override fun archiveRule(archiveRule: ArchiveRuleProperty.Builder.() -> Unit): Unit =
+      override fun archiveRule(archiveRule: ArchiveRuleProperty.Builder.() -> Unit): Unit =
           archiveRule(ArchiveRuleProperty(archiveRule))
 
-      public override fun copyTags(copyTags: Boolean) {
+      override fun copyTags(copyTags: Boolean) {
         cdkBuilder.copyTags(copyTags)
       }
 
-      public override fun copyTags(copyTags: IResolvable) {
+      override fun copyTags(copyTags: IResolvable) {
         cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
       }
 
-      public override fun createRule(createRule: IResolvable) {
+      override fun createRule(createRule: IResolvable) {
         cdkBuilder.createRule(createRule.let(IResolvable::unwrap))
       }
 
-      public override fun createRule(createRule: CreateRuleProperty) {
+      override fun createRule(createRule: CreateRuleProperty) {
         cdkBuilder.createRule(createRule.let(CreateRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("54891bc79136e1c87930dfbd441d43e610d3d82bccfced6e1bdf038d422a97b8")
-      public override fun createRule(createRule: CreateRuleProperty.Builder.() -> Unit): Unit =
+      override fun createRule(createRule: CreateRuleProperty.Builder.() -> Unit): Unit =
           createRule(CreateRuleProperty(createRule))
 
-      public override fun crossRegionCopyRules(crossRegionCopyRules: IResolvable) {
+      override fun crossRegionCopyRules(crossRegionCopyRules: IResolvable) {
         cdkBuilder.crossRegionCopyRules(crossRegionCopyRules.let(IResolvable::unwrap))
       }
 
-      public override fun crossRegionCopyRules(crossRegionCopyRules: List<Any>) {
+      override fun crossRegionCopyRules(crossRegionCopyRules: List<Any>) {
         cdkBuilder.crossRegionCopyRules(crossRegionCopyRules)
       }
 
-      public override fun deprecateRule(deprecateRule: IResolvable) {
+      override fun deprecateRule(deprecateRule: IResolvable) {
         cdkBuilder.deprecateRule(deprecateRule.let(IResolvable::unwrap))
       }
 
-      public override fun deprecateRule(deprecateRule: DeprecateRuleProperty) {
+      override fun deprecateRule(deprecateRule: DeprecateRuleProperty) {
         cdkBuilder.deprecateRule(deprecateRule.let(DeprecateRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb7a0258a6a743ee09f1b22132dea6f3341e66f8726bb797909b7292faed4270")
-      public override fun deprecateRule(deprecateRule: DeprecateRuleProperty.Builder.() -> Unit):
-          Unit = deprecateRule(DeprecateRuleProperty(deprecateRule))
+      override fun deprecateRule(deprecateRule: DeprecateRuleProperty.Builder.() -> Unit): Unit =
+          deprecateRule(DeprecateRuleProperty(deprecateRule))
 
-      public override fun fastRestoreRule(fastRestoreRule: IResolvable) {
+      override fun fastRestoreRule(fastRestoreRule: IResolvable) {
         cdkBuilder.fastRestoreRule(fastRestoreRule.let(IResolvable::unwrap))
       }
 
-      public override fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty) {
+      override fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty) {
         cdkBuilder.fastRestoreRule(fastRestoreRule.let(FastRestoreRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e27b9391e7a38b3c973427c0f60208402a121bef2c15bbc3199f4c686769530a")
-      public override
-          fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty.Builder.() -> Unit): Unit =
-          fastRestoreRule(FastRestoreRuleProperty(fastRestoreRule))
+      override fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty.Builder.() -> Unit):
+          Unit = fastRestoreRule(FastRestoreRuleProperty(fastRestoreRule))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun retainRule(retainRule: IResolvable) {
+      override fun retainRule(retainRule: IResolvable) {
         cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
       }
 
-      public override fun retainRule(retainRule: RetainRuleProperty) {
+      override fun retainRule(retainRule: RetainRuleProperty) {
         cdkBuilder.retainRule(retainRule.let(RetainRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("98893537e56c00100b0f8d465996d0e9a2d0071e41103b84fb051fa0820b0529")
-      public override fun retainRule(retainRule: RetainRuleProperty.Builder.() -> Unit): Unit =
+      override fun retainRule(retainRule: RetainRuleProperty.Builder.() -> Unit): Unit =
           retainRule(RetainRuleProperty(retainRule))
 
-      public override fun shareRules(shareRules: IResolvable) {
+      override fun shareRules(shareRules: IResolvable) {
         cdkBuilder.shareRules(shareRules.let(IResolvable::unwrap))
       }
 
-      public override fun shareRules(shareRules: List<Any>) {
+      override fun shareRules(shareRules: List<Any>) {
         cdkBuilder.shareRules(shareRules)
       }
 
-      public override fun tagsToAdd(tagsToAdd: IResolvable) {
+      override fun tagsToAdd(tagsToAdd: IResolvable) {
         cdkBuilder.tagsToAdd(tagsToAdd.let(IResolvable::unwrap))
       }
 
-      public override fun tagsToAdd(tagsToAdd: List<Any>) {
+      override fun tagsToAdd(tagsToAdd: List<Any>) {
         cdkBuilder.tagsToAdd(tagsToAdd)
       }
 
-      public override fun variableTags(variableTags: IResolvable) {
+      override fun variableTags(variableTags: IResolvable) {
         cdkBuilder.variableTags(variableTags.let(IResolvable::unwrap))
       }
 
-      public override fun variableTags(variableTags: List<Any>) {
+      override fun variableTags(variableTags: List<Any>) {
         cdkBuilder.variableTags(variableTags)
       }
 
@@ -1194,27 +1116,27 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty,
     ) : ScheduleProperty {
-      public override fun archiveRule(): Any? = unwrap(this).getArchiveRule()
+      override fun archiveRule(): Any? = unwrap(this).getArchiveRule()
 
-      public override fun copyTags(): Any? = unwrap(this).getCopyTags()
+      override fun copyTags(): Any? = unwrap(this).getCopyTags()
 
-      public override fun createRule(): Any? = unwrap(this).getCreateRule()
+      override fun createRule(): Any? = unwrap(this).getCreateRule()
 
-      public override fun crossRegionCopyRules(): Any? = unwrap(this).getCrossRegionCopyRules()
+      override fun crossRegionCopyRules(): Any? = unwrap(this).getCrossRegionCopyRules()
 
-      public override fun deprecateRule(): Any? = unwrap(this).getDeprecateRule()
+      override fun deprecateRule(): Any? = unwrap(this).getDeprecateRule()
 
-      public override fun fastRestoreRule(): Any? = unwrap(this).getFastRestoreRule()
+      override fun fastRestoreRule(): Any? = unwrap(this).getFastRestoreRule()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun retainRule(): Any? = unwrap(this).getRetainRule()
+      override fun retainRule(): Any? = unwrap(this).getRetainRule()
 
-      public override fun shareRules(): Any? = unwrap(this).getShareRules()
+      override fun shareRules(): Any? = unwrap(this).getShareRules()
 
-      public override fun tagsToAdd(): Any? = unwrap(this).getTagsToAdd()
+      override fun tagsToAdd(): Any? = unwrap(this).getTagsToAdd()
 
-      public override fun variableTags(): Any? = unwrap(this).getVariableTags()
+      override fun variableTags(): Any? = unwrap(this).getVariableTags()
     }
 
     public companion object {
@@ -1241,16 +1163,13 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun retainRule(): Any
 
     public interface Builder {
-      public fun retainRule(retainRule: IResolvable) {
-      }
+      public fun retainRule(retainRule: IResolvable)
 
-      public fun retainRule(retainRule: ArchiveRetainRuleProperty) {
-      }
+      public fun retainRule(retainRule: ArchiveRetainRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("22112598039fa0891c015794eab927b32a7c3cace5a3606f9960cb6a144f4b1e")
-      public fun retainRule(retainRule: ArchiveRetainRuleProperty.Builder.() -> Unit) {
-      }
+      public fun retainRule(retainRule: ArchiveRetainRuleProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1258,18 +1177,18 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty.builder()
 
-      public override fun retainRule(retainRule: IResolvable) {
+      override fun retainRule(retainRule: IResolvable) {
         cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
       }
 
-      public override fun retainRule(retainRule: ArchiveRetainRuleProperty) {
+      override fun retainRule(retainRule: ArchiveRetainRuleProperty) {
         cdkBuilder.retainRule(retainRule.let(ArchiveRetainRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("22112598039fa0891c015794eab927b32a7c3cace5a3606f9960cb6a144f4b1e")
-      public override fun retainRule(retainRule: ArchiveRetainRuleProperty.Builder.() -> Unit): Unit
-          = retainRule(ArchiveRetainRuleProperty(retainRule))
+      override fun retainRule(retainRule: ArchiveRetainRuleProperty.Builder.() -> Unit): Unit =
+          retainRule(ArchiveRetainRuleProperty(retainRule))
 
       public fun build(): software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty
           = cdkBuilder.build()
@@ -1279,7 +1198,7 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRuleProperty,
     ) : ArchiveRuleProperty {
-      public override fun retainRule(): Any = unwrap(this).getRetainRule()
+      override fun retainRule(): Any = unwrap(this).getRetainRule()
     }
 
     public companion object {
@@ -1316,26 +1235,19 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun times(): List<String> = unwrap(this).getTimes() ?: emptyList()
 
     public interface Builder {
-      public fun cronExpression(cronExpression: String) {
-      }
+      public fun cronExpression(cronExpression: String)
 
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
 
-      public fun location(location: String) {
-      }
+      public fun location(location: String)
 
-      public fun scripts(scripts: IResolvable) {
-      }
+      public fun scripts(scripts: IResolvable)
 
-      public fun scripts(scripts: List<Any>) {
-      }
+      public fun scripts(scripts: List<Any>)
 
-      public fun times(times: List<String>) {
-      }
+      public fun times(times: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1343,31 +1255,31 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty.builder()
 
-      public override fun cronExpression(cronExpression: String) {
+      override fun cronExpression(cronExpression: String) {
         cdkBuilder.cronExpression(cronExpression)
       }
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
-      public override fun location(location: String) {
+      override fun location(location: String) {
         cdkBuilder.location(location)
       }
 
-      public override fun scripts(scripts: IResolvable) {
+      override fun scripts(scripts: IResolvable) {
         cdkBuilder.scripts(scripts.let(IResolvable::unwrap))
       }
 
-      public override fun scripts(scripts: List<Any>) {
+      override fun scripts(scripts: List<Any>) {
         cdkBuilder.scripts(scripts)
       }
 
-      public override fun times(times: List<String>) {
+      override fun times(times: List<String>) {
         cdkBuilder.times(times)
       }
 
@@ -1379,17 +1291,17 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty,
     ) : CreateRuleProperty {
-      public override fun cronExpression(): String? = unwrap(this).getCronExpression()
+      override fun cronExpression(): String? = unwrap(this).getCronExpression()
 
-      public override fun interval(): Number? = unwrap(this).getInterval()
+      override fun interval(): Number? = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
 
-      public override fun location(): String? = unwrap(this).getLocation()
+      override fun location(): String? = unwrap(this).getLocation()
 
-      public override fun scripts(): Any? = unwrap(this).getScripts()
+      override fun scripts(): Any? = unwrap(this).getScripts()
 
-      public override fun times(): List<String> = unwrap(this).getTimes() ?: emptyList()
+      override fun times(): List<String> = unwrap(this).getTimes() ?: emptyList()
     }
 
     public companion object {
@@ -1427,26 +1339,19 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun stages(): List<String> = unwrap(this).getStages() ?: emptyList()
 
     public interface Builder {
-      public fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: Boolean) {
-      }
+      public fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: Boolean)
 
-      public fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: IResolvable) {
-      }
+      public fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: IResolvable)
 
-      public fun executionHandler(executionHandler: String) {
-      }
+      public fun executionHandler(executionHandler: String)
 
-      public fun executionHandlerService(executionHandlerService: String) {
-      }
+      public fun executionHandlerService(executionHandlerService: String)
 
-      public fun executionTimeout(executionTimeout: Number) {
-      }
+      public fun executionTimeout(executionTimeout: Number)
 
-      public fun maximumRetryCount(maximumRetryCount: Number) {
-      }
+      public fun maximumRetryCount(maximumRetryCount: Number)
 
-      public fun stages(stages: List<String>) {
-      }
+      public fun stages(stages: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1454,33 +1359,31 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty.builder()
 
-      public override
-          fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: Boolean) {
+      override fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: Boolean) {
         cdkBuilder.executeOperationOnScriptFailure(executeOperationOnScriptFailure)
       }
 
-      public override
-          fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: IResolvable) {
+      override fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: IResolvable) {
         cdkBuilder.executeOperationOnScriptFailure(executeOperationOnScriptFailure.let(IResolvable::unwrap))
       }
 
-      public override fun executionHandler(executionHandler: String) {
+      override fun executionHandler(executionHandler: String) {
         cdkBuilder.executionHandler(executionHandler)
       }
 
-      public override fun executionHandlerService(executionHandlerService: String) {
+      override fun executionHandlerService(executionHandlerService: String) {
         cdkBuilder.executionHandlerService(executionHandlerService)
       }
 
-      public override fun executionTimeout(executionTimeout: Number) {
+      override fun executionTimeout(executionTimeout: Number) {
         cdkBuilder.executionTimeout(executionTimeout)
       }
 
-      public override fun maximumRetryCount(maximumRetryCount: Number) {
+      override fun maximumRetryCount(maximumRetryCount: Number) {
         cdkBuilder.maximumRetryCount(maximumRetryCount)
       }
 
-      public override fun stages(stages: List<String>) {
+      override fun stages(stages: List<String>) {
         cdkBuilder.stages(stages)
       }
 
@@ -1491,19 +1394,18 @@ public open class CfnLifecyclePolicy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty,
     ) : ScriptProperty {
-      public override fun executeOperationOnScriptFailure(): Any? =
+      override fun executeOperationOnScriptFailure(): Any? =
           unwrap(this).getExecuteOperationOnScriptFailure()
 
-      public override fun executionHandler(): String? = unwrap(this).getExecutionHandler()
+      override fun executionHandler(): String? = unwrap(this).getExecutionHandler()
 
-      public override fun executionHandlerService(): String? =
-          unwrap(this).getExecutionHandlerService()
+      override fun executionHandlerService(): String? = unwrap(this).getExecutionHandlerService()
 
-      public override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
+      override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
 
-      public override fun maximumRetryCount(): Number? = unwrap(this).getMaximumRetryCount()
+      override fun maximumRetryCount(): Number? = unwrap(this).getMaximumRetryCount()
 
-      public override fun stages(): List<String> = unwrap(this).getStages() ?: emptyList()
+      override fun stages(): List<String> = unwrap(this).getStages() ?: emptyList()
     }
 
     public companion object {
@@ -1542,49 +1444,36 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun targetRegion(): String? = unwrap(this).getTargetRegion()
 
     public interface Builder {
-      public fun cmkArn(cmkArn: String) {
-      }
+      public fun cmkArn(cmkArn: String)
 
-      public fun copyTags(copyTags: Boolean) {
-      }
+      public fun copyTags(copyTags: Boolean)
 
-      public fun copyTags(copyTags: IResolvable) {
-      }
+      public fun copyTags(copyTags: IResolvable)
 
-      public fun deprecateRule(deprecateRule: IResolvable) {
-      }
+      public fun deprecateRule(deprecateRule: IResolvable)
 
-      public fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty) {
-      }
+      public fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03e611e77205c99955185e3196c511607f8e5072ade57cabcd9b0cb66b22ae65")
       public
-          fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty.Builder.() -> Unit) {
-      }
+          fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty.Builder.() -> Unit)
 
-      public fun encrypted(encrypted: Boolean) {
-      }
+      public fun encrypted(encrypted: Boolean)
 
-      public fun encrypted(encrypted: IResolvable) {
-      }
+      public fun encrypted(encrypted: IResolvable)
 
-      public fun retainRule(retainRule: IResolvable) {
-      }
+      public fun retainRule(retainRule: IResolvable)
 
-      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
-      }
+      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("167e01da92a571d38b2ea00ebe7df6e195e691b240f448676b5a2ca926bbda1d")
-      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit) {
-      }
+      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
 
-      public fun targetRegion(targetRegion: String) {
-      }
+      public fun targetRegion(targetRegion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1593,59 +1482,58 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRuleProperty.builder()
 
-      public override fun cmkArn(cmkArn: String) {
+      override fun cmkArn(cmkArn: String) {
         cdkBuilder.cmkArn(cmkArn)
       }
 
-      public override fun copyTags(copyTags: Boolean) {
+      override fun copyTags(copyTags: Boolean) {
         cdkBuilder.copyTags(copyTags)
       }
 
-      public override fun copyTags(copyTags: IResolvable) {
+      override fun copyTags(copyTags: IResolvable) {
         cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
       }
 
-      public override fun deprecateRule(deprecateRule: IResolvable) {
+      override fun deprecateRule(deprecateRule: IResolvable) {
         cdkBuilder.deprecateRule(deprecateRule.let(IResolvable::unwrap))
       }
 
-      public override fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty) {
+      override fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty) {
         cdkBuilder.deprecateRule(deprecateRule.let(CrossRegionCopyDeprecateRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("03e611e77205c99955185e3196c511607f8e5072ade57cabcd9b0cb66b22ae65")
-      public override
+      override
           fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty.Builder.() -> Unit):
           Unit = deprecateRule(CrossRegionCopyDeprecateRuleProperty(deprecateRule))
 
-      public override fun encrypted(encrypted: Boolean) {
+      override fun encrypted(encrypted: Boolean) {
         cdkBuilder.encrypted(encrypted)
       }
 
-      public override fun encrypted(encrypted: IResolvable) {
+      override fun encrypted(encrypted: IResolvable) {
         cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
       }
 
-      public override fun retainRule(retainRule: IResolvable) {
+      override fun retainRule(retainRule: IResolvable) {
         cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
       }
 
-      public override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
+      override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
         cdkBuilder.retainRule(retainRule.let(CrossRegionCopyRetainRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("167e01da92a571d38b2ea00ebe7df6e195e691b240f448676b5a2ca926bbda1d")
-      public override
-          fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit): Unit =
-          retainRule(CrossRegionCopyRetainRuleProperty(retainRule))
+      override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit):
+          Unit = retainRule(CrossRegionCopyRetainRuleProperty(retainRule))
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
-      public override fun targetRegion(targetRegion: String) {
+      override fun targetRegion(targetRegion: String) {
         cdkBuilder.targetRegion(targetRegion)
       }
 
@@ -1658,19 +1546,19 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRuleProperty,
     ) : CrossRegionCopyRuleProperty {
-      public override fun cmkArn(): String? = unwrap(this).getCmkArn()
+      override fun cmkArn(): String? = unwrap(this).getCmkArn()
 
-      public override fun copyTags(): Any? = unwrap(this).getCopyTags()
+      override fun copyTags(): Any? = unwrap(this).getCopyTags()
 
-      public override fun deprecateRule(): Any? = unwrap(this).getDeprecateRule()
+      override fun deprecateRule(): Any? = unwrap(this).getDeprecateRule()
 
-      public override fun encrypted(): Any = unwrap(this).getEncrypted()
+      override fun encrypted(): Any = unwrap(this).getEncrypted()
 
-      public override fun retainRule(): Any? = unwrap(this).getRetainRule()
+      override fun retainRule(): Any? = unwrap(this).getRetainRule()
 
-      public override fun target(): String? = unwrap(this).getTarget()
+      override fun target(): String? = unwrap(this).getTarget()
 
-      public override fun targetRegion(): String? = unwrap(this).getTargetRegion()
+      override fun targetRegion(): String? = unwrap(this).getTargetRegion()
     }
 
     public companion object {
@@ -1728,92 +1616,65 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun targetTags(): Any? = unwrap(this).getTargetTags()
 
     public interface Builder {
-      public fun actions(actions: IResolvable) {
-      }
+      public fun actions(actions: IResolvable)
 
-      public fun actions(actions: List<Any>) {
-      }
+      public fun actions(actions: List<Any>)
 
-      public fun copyTags(copyTags: Boolean) {
-      }
+      public fun copyTags(copyTags: Boolean)
 
-      public fun copyTags(copyTags: IResolvable) {
-      }
+      public fun copyTags(copyTags: IResolvable)
 
-      public fun createInterval(createInterval: Number) {
-      }
+      public fun createInterval(createInterval: Number)
 
-      public fun crossRegionCopyTargets(crossRegionCopyTargets: Any) {
-      }
+      public fun crossRegionCopyTargets(crossRegionCopyTargets: Any)
 
-      public fun eventSource(eventSource: IResolvable) {
-      }
+      public fun eventSource(eventSource: IResolvable)
 
-      public fun eventSource(eventSource: EventSourceProperty) {
-      }
+      public fun eventSource(eventSource: EventSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba83ec6e9b31ee2c9c1ff3156958ae645319be35d35de2f973f49684befb2366")
-      public fun eventSource(eventSource: EventSourceProperty.Builder.() -> Unit) {
-      }
+      public fun eventSource(eventSource: EventSourceProperty.Builder.() -> Unit)
 
-      public fun exclusions(exclusions: IResolvable) {
-      }
+      public fun exclusions(exclusions: IResolvable)
 
-      public fun exclusions(exclusions: ExclusionsProperty) {
-      }
+      public fun exclusions(exclusions: ExclusionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a23751e6286540ce8214da2c5c32d2b4241adcd6b610e271b7f8c8022ef2e737")
-      public fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit) {
-      }
+      public fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit)
 
-      public fun extendDeletion(extendDeletion: Boolean) {
-      }
+      public fun extendDeletion(extendDeletion: Boolean)
 
-      public fun extendDeletion(extendDeletion: IResolvable) {
-      }
+      public fun extendDeletion(extendDeletion: IResolvable)
 
-      public fun parameters(parameters: IResolvable) {
-      }
+      public fun parameters(parameters: IResolvable)
 
-      public fun parameters(parameters: ParametersProperty) {
-      }
+      public fun parameters(parameters: ParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6937457773f3f964d1feaeee552709969c224187e8424aedf46a7bdf9a5e6def")
-      public fun parameters(parameters: ParametersProperty.Builder.() -> Unit) {
-      }
+      public fun parameters(parameters: ParametersProperty.Builder.() -> Unit)
 
-      public fun policyLanguage(policyLanguage: String) {
-      }
+      public fun policyLanguage(policyLanguage: String)
 
-      public fun policyType(policyType: String) {
-      }
+      public fun policyType(policyType: String)
 
-      public fun resourceLocations(resourceLocations: List<String>) {
-      }
+      public fun resourceLocations(resourceLocations: List<String>)
 
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun resourceTypes(resourceTypes: List<String>) {
-      }
+      public fun resourceTypes(resourceTypes: List<String>)
 
-      public fun retainInterval(retainInterval: Number) {
-      }
+      public fun retainInterval(retainInterval: Number)
 
-      public fun schedules(schedules: IResolvable) {
-      }
+      public fun schedules(schedules: IResolvable)
 
-      public fun schedules(schedules: List<Any>) {
-      }
+      public fun schedules(schedules: List<Any>)
 
-      public fun targetTags(targetTags: IResolvable) {
-      }
+      public fun targetTags(targetTags: IResolvable)
 
-      public fun targetTags(targetTags: List<Any>) {
-      }
+      public fun targetTags(targetTags: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1821,114 +1682,114 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty.builder()
 
-      public override fun actions(actions: IResolvable) {
+      override fun actions(actions: IResolvable) {
         cdkBuilder.actions(actions.let(IResolvable::unwrap))
       }
 
-      public override fun actions(actions: List<Any>) {
+      override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
 
-      public override fun copyTags(copyTags: Boolean) {
+      override fun copyTags(copyTags: Boolean) {
         cdkBuilder.copyTags(copyTags)
       }
 
-      public override fun copyTags(copyTags: IResolvable) {
+      override fun copyTags(copyTags: IResolvable) {
         cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
       }
 
-      public override fun createInterval(createInterval: Number) {
+      override fun createInterval(createInterval: Number) {
         cdkBuilder.createInterval(createInterval)
       }
 
-      public override fun crossRegionCopyTargets(crossRegionCopyTargets: Any) {
+      override fun crossRegionCopyTargets(crossRegionCopyTargets: Any) {
         cdkBuilder.crossRegionCopyTargets(crossRegionCopyTargets)
       }
 
-      public override fun eventSource(eventSource: IResolvable) {
+      override fun eventSource(eventSource: IResolvable) {
         cdkBuilder.eventSource(eventSource.let(IResolvable::unwrap))
       }
 
-      public override fun eventSource(eventSource: EventSourceProperty) {
+      override fun eventSource(eventSource: EventSourceProperty) {
         cdkBuilder.eventSource(eventSource.let(EventSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ba83ec6e9b31ee2c9c1ff3156958ae645319be35d35de2f973f49684befb2366")
-      public override fun eventSource(eventSource: EventSourceProperty.Builder.() -> Unit): Unit =
+      override fun eventSource(eventSource: EventSourceProperty.Builder.() -> Unit): Unit =
           eventSource(EventSourceProperty(eventSource))
 
-      public override fun exclusions(exclusions: IResolvable) {
+      override fun exclusions(exclusions: IResolvable) {
         cdkBuilder.exclusions(exclusions.let(IResolvable::unwrap))
       }
 
-      public override fun exclusions(exclusions: ExclusionsProperty) {
+      override fun exclusions(exclusions: ExclusionsProperty) {
         cdkBuilder.exclusions(exclusions.let(ExclusionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a23751e6286540ce8214da2c5c32d2b4241adcd6b610e271b7f8c8022ef2e737")
-      public override fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit): Unit =
+      override fun exclusions(exclusions: ExclusionsProperty.Builder.() -> Unit): Unit =
           exclusions(ExclusionsProperty(exclusions))
 
-      public override fun extendDeletion(extendDeletion: Boolean) {
+      override fun extendDeletion(extendDeletion: Boolean) {
         cdkBuilder.extendDeletion(extendDeletion)
       }
 
-      public override fun extendDeletion(extendDeletion: IResolvable) {
+      override fun extendDeletion(extendDeletion: IResolvable) {
         cdkBuilder.extendDeletion(extendDeletion.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: IResolvable) {
+      override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
 
-      public override fun parameters(parameters: ParametersProperty) {
+      override fun parameters(parameters: ParametersProperty) {
         cdkBuilder.parameters(parameters.let(ParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6937457773f3f964d1feaeee552709969c224187e8424aedf46a7bdf9a5e6def")
-      public override fun parameters(parameters: ParametersProperty.Builder.() -> Unit): Unit =
+      override fun parameters(parameters: ParametersProperty.Builder.() -> Unit): Unit =
           parameters(ParametersProperty(parameters))
 
-      public override fun policyLanguage(policyLanguage: String) {
+      override fun policyLanguage(policyLanguage: String) {
         cdkBuilder.policyLanguage(policyLanguage)
       }
 
-      public override fun policyType(policyType: String) {
+      override fun policyType(policyType: String) {
         cdkBuilder.policyType(policyType)
       }
 
-      public override fun resourceLocations(resourceLocations: List<String>) {
+      override fun resourceLocations(resourceLocations: List<String>) {
         cdkBuilder.resourceLocations(resourceLocations)
       }
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun resourceTypes(resourceTypes: List<String>) {
+      override fun resourceTypes(resourceTypes: List<String>) {
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
-      public override fun retainInterval(retainInterval: Number) {
+      override fun retainInterval(retainInterval: Number) {
         cdkBuilder.retainInterval(retainInterval)
       }
 
-      public override fun schedules(schedules: IResolvable) {
+      override fun schedules(schedules: IResolvable) {
         cdkBuilder.schedules(schedules.let(IResolvable::unwrap))
       }
 
-      public override fun schedules(schedules: List<Any>) {
+      override fun schedules(schedules: List<Any>) {
         cdkBuilder.schedules(schedules)
       }
 
-      public override fun targetTags(targetTags: IResolvable) {
+      override fun targetTags(targetTags: IResolvable) {
         cdkBuilder.targetTags(targetTags.let(IResolvable::unwrap))
       }
 
-      public override fun targetTags(targetTags: List<Any>) {
+      override fun targetTags(targetTags: List<Any>) {
         cdkBuilder.targetTags(targetTags)
       }
 
@@ -1941,39 +1802,38 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty,
     ) : PolicyDetailsProperty {
-      public override fun actions(): Any? = unwrap(this).getActions()
+      override fun actions(): Any? = unwrap(this).getActions()
 
-      public override fun copyTags(): Any? = unwrap(this).getCopyTags()
+      override fun copyTags(): Any? = unwrap(this).getCopyTags()
 
-      public override fun createInterval(): Number? = unwrap(this).getCreateInterval()
+      override fun createInterval(): Number? = unwrap(this).getCreateInterval()
 
-      public override fun crossRegionCopyTargets(): Any? = unwrap(this).getCrossRegionCopyTargets()
+      override fun crossRegionCopyTargets(): Any? = unwrap(this).getCrossRegionCopyTargets()
 
-      public override fun eventSource(): Any? = unwrap(this).getEventSource()
+      override fun eventSource(): Any? = unwrap(this).getEventSource()
 
-      public override fun exclusions(): Any? = unwrap(this).getExclusions()
+      override fun exclusions(): Any? = unwrap(this).getExclusions()
 
-      public override fun extendDeletion(): Any? = unwrap(this).getExtendDeletion()
+      override fun extendDeletion(): Any? = unwrap(this).getExtendDeletion()
 
-      public override fun parameters(): Any? = unwrap(this).getParameters()
+      override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public override fun policyLanguage(): String? = unwrap(this).getPolicyLanguage()
+      override fun policyLanguage(): String? = unwrap(this).getPolicyLanguage()
 
-      public override fun policyType(): String? = unwrap(this).getPolicyType()
+      override fun policyType(): String? = unwrap(this).getPolicyType()
 
-      public override fun resourceLocations(): List<String> = unwrap(this).getResourceLocations() ?:
+      override fun resourceLocations(): List<String> = unwrap(this).getResourceLocations() ?:
           emptyList()
 
-      public override fun resourceType(): String? = unwrap(this).getResourceType()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
-      public override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?:
-          emptyList()
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
 
-      public override fun retainInterval(): Number? = unwrap(this).getRetainInterval()
+      override fun retainInterval(): Number? = unwrap(this).getRetainInterval()
 
-      public override fun schedules(): Any? = unwrap(this).getSchedules()
+      override fun schedules(): Any? = unwrap(this).getSchedules()
 
-      public override fun targetTags(): Any? = unwrap(this).getTargetTags()
+      override fun targetTags(): Any? = unwrap(this).getTargetTags()
     }
 
     public companion object {
@@ -2002,14 +1862,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun encrypted(): Any
 
     public interface Builder {
-      public fun cmkArn(cmkArn: String) {
-      }
+      public fun cmkArn(cmkArn: String)
 
-      public fun encrypted(encrypted: Boolean) {
-      }
+      public fun encrypted(encrypted: Boolean)
 
-      public fun encrypted(encrypted: IResolvable) {
-      }
+      public fun encrypted(encrypted: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2018,15 +1875,15 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EncryptionConfigurationProperty.builder()
 
-      public override fun cmkArn(cmkArn: String) {
+      override fun cmkArn(cmkArn: String) {
         cdkBuilder.cmkArn(cmkArn)
       }
 
-      public override fun encrypted(encrypted: Boolean) {
+      override fun encrypted(encrypted: Boolean) {
         cdkBuilder.encrypted(encrypted)
       }
 
-      public override fun encrypted(encrypted: IResolvable) {
+      override fun encrypted(encrypted: IResolvable) {
         cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
       }
 
@@ -2039,9 +1896,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EncryptionConfigurationProperty,
     ) : EncryptionConfigurationProperty {
-      public override fun cmkArn(): String? = unwrap(this).getCmkArn()
+      override fun cmkArn(): String? = unwrap(this).getCmkArn()
 
-      public override fun encrypted(): Any = unwrap(this).getEncrypted()
+      override fun encrypted(): Any = unwrap(this).getEncrypted()
     }
 
     public companion object {
@@ -2072,31 +1929,24 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun target(): String
 
     public interface Builder {
-      public fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      }
+      public fun encryptionConfiguration(encryptionConfiguration: IResolvable)
 
-      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      }
+      public fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ec0c4d606144d14816230ec6cb342ec91c9aef5c6720797c2392ea371d6ffb2")
       public
-          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit)
 
-      public fun retainRule(retainRule: IResolvable) {
-      }
+      public fun retainRule(retainRule: IResolvable)
 
-      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
-      }
+      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01c511487298cb6a01fe90405edf763c8ef3ed3435b1796e0359f3636ce44851")
-      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit) {
-      }
+      public fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2105,36 +1955,35 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyActionProperty.builder()
 
-      public override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
+      override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
         cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ec0c4d606144d14816230ec6cb342ec91c9aef5c6720797c2392ea371d6ffb2")
-      public override
+      override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty.Builder.() -> Unit):
           Unit = encryptionConfiguration(EncryptionConfigurationProperty(encryptionConfiguration))
 
-      public override fun retainRule(retainRule: IResolvable) {
+      override fun retainRule(retainRule: IResolvable) {
         cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
       }
 
-      public override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
+      override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
         cdkBuilder.retainRule(retainRule.let(CrossRegionCopyRetainRuleProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("01c511487298cb6a01fe90405edf763c8ef3ed3435b1796e0359f3636ce44851")
-      public override
-          fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit): Unit =
-          retainRule(CrossRegionCopyRetainRuleProperty(retainRule))
+      override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty.Builder.() -> Unit):
+          Unit = retainRule(CrossRegionCopyRetainRuleProperty(retainRule))
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
@@ -2147,11 +1996,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyActionProperty,
     ) : CrossRegionCopyActionProperty {
-      public override fun encryptionConfiguration(): Any = unwrap(this).getEncryptionConfiguration()
+      override fun encryptionConfiguration(): Any = unwrap(this).getEncryptionConfiguration()
 
-      public override fun retainRule(): Any? = unwrap(this).getRetainRule()
+      override fun retainRule(): Any? = unwrap(this).getRetainRule()
 
-      public override fun target(): String = unwrap(this).getTarget()
+      override fun target(): String = unwrap(this).getTarget()
     }
 
     public companion object {
@@ -2182,17 +2031,13 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun excludeVolumeTypes(): Any? = unwrap(this).getExcludeVolumeTypes()
 
     public interface Builder {
-      public fun excludeBootVolumes(excludeBootVolumes: Boolean) {
-      }
+      public fun excludeBootVolumes(excludeBootVolumes: Boolean)
 
-      public fun excludeBootVolumes(excludeBootVolumes: IResolvable) {
-      }
+      public fun excludeBootVolumes(excludeBootVolumes: IResolvable)
 
-      public fun excludeTags(excludeTags: Any) {
-      }
+      public fun excludeTags(excludeTags: Any)
 
-      public fun excludeVolumeTypes(excludeVolumeTypes: Any) {
-      }
+      public fun excludeVolumeTypes(excludeVolumeTypes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2200,19 +2045,19 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ExclusionsProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ExclusionsProperty.builder()
 
-      public override fun excludeBootVolumes(excludeBootVolumes: Boolean) {
+      override fun excludeBootVolumes(excludeBootVolumes: Boolean) {
         cdkBuilder.excludeBootVolumes(excludeBootVolumes)
       }
 
-      public override fun excludeBootVolumes(excludeBootVolumes: IResolvable) {
+      override fun excludeBootVolumes(excludeBootVolumes: IResolvable) {
         cdkBuilder.excludeBootVolumes(excludeBootVolumes.let(IResolvable::unwrap))
       }
 
-      public override fun excludeTags(excludeTags: Any) {
+      override fun excludeTags(excludeTags: Any) {
         cdkBuilder.excludeTags(excludeTags)
       }
 
-      public override fun excludeVolumeTypes(excludeVolumeTypes: Any) {
+      override fun excludeVolumeTypes(excludeVolumeTypes: Any) {
         cdkBuilder.excludeVolumeTypes(excludeVolumeTypes)
       }
 
@@ -2224,11 +2069,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ExclusionsProperty,
     ) : ExclusionsProperty {
-      public override fun excludeBootVolumes(): Any? = unwrap(this).getExcludeBootVolumes()
+      override fun excludeBootVolumes(): Any? = unwrap(this).getExcludeBootVolumes()
 
-      public override fun excludeTags(): Any? = unwrap(this).getExcludeTags()
+      override fun excludeTags(): Any? = unwrap(this).getExcludeTags()
 
-      public override fun excludeVolumeTypes(): Any? = unwrap(this).getExcludeVolumeTypes()
+      override fun excludeVolumeTypes(): Any? = unwrap(this).getExcludeVolumeTypes()
     }
 
     public companion object {
@@ -2255,17 +2100,14 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun retentionArchiveTier(): Any
 
     public interface Builder {
-      public fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
-      }
+      public fun retentionArchiveTier(retentionArchiveTier: IResolvable)
 
-      public fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty) {
-      }
+      public fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("551dbf48b425648dc22b6154e42ca2745b9d79670853ce1e7d0b5f107735a6d9")
       public
-          fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty.Builder.() -> Unit) {
-      }
+          fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2273,17 +2115,17 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRetainRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRetainRuleProperty.builder()
 
-      public override fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
+      override fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
         cdkBuilder.retentionArchiveTier(retentionArchiveTier.let(IResolvable::unwrap))
       }
 
-      public override fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty) {
+      override fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty) {
         cdkBuilder.retentionArchiveTier(retentionArchiveTier.let(RetentionArchiveTierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("551dbf48b425648dc22b6154e42ca2745b9d79670853ce1e7d0b5f107735a6d9")
-      public override
+      override
           fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty.Builder.() -> Unit):
           Unit = retentionArchiveTier(RetentionArchiveTierProperty(retentionArchiveTier))
 
@@ -2296,7 +2138,7 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ArchiveRetainRuleProperty,
     ) : ArchiveRetainRuleProperty {
-      public override fun retentionArchiveTier(): Any = unwrap(this).getRetentionArchiveTier()
+      override fun retentionArchiveTier(): Any = unwrap(this).getRetentionArchiveTier()
     }
 
     public companion object {
@@ -2325,11 +2167,9 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun intervalUnit(): String
 
     public interface Builder {
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2338,11 +2178,11 @@ public open class CfnLifecyclePolicy internal constructor(
           =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRetainRuleProperty.builder()
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
@@ -2355,9 +2195,9 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CrossRegionCopyRetainRuleProperty,
     ) : CrossRegionCopyRetainRuleProperty {
-      public override fun interval(): Number = unwrap(this).getInterval()
+      override fun interval(): Number = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String = unwrap(this).getIntervalUnit()
     }
 
     public companion object {
@@ -2389,14 +2229,11 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
 
     public interface Builder {
-      public fun count(count: Number) {
-      }
+      public fun count(count: Number)
 
-      public fun interval(interval: Number) {
-      }
+      public fun interval(interval: Number)
 
-      public fun intervalUnit(intervalUnit: String) {
-      }
+      public fun intervalUnit(intervalUnit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2404,15 +2241,15 @@ public open class CfnLifecyclePolicy internal constructor(
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.DeprecateRuleProperty.Builder =
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.DeprecateRuleProperty.builder()
 
-      public override fun count(count: Number) {
+      override fun count(count: Number) {
         cdkBuilder.count(count)
       }
 
-      public override fun interval(interval: Number) {
+      override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
       }
 
-      public override fun intervalUnit(intervalUnit: String) {
+      override fun intervalUnit(intervalUnit: String) {
         cdkBuilder.intervalUnit(intervalUnit)
       }
 
@@ -2425,11 +2262,11 @@ public open class CfnLifecyclePolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.DeprecateRuleProperty,
     ) : DeprecateRuleProperty {
-      public override fun count(): Number? = unwrap(this).getCount()
+      override fun count(): Number? = unwrap(this).getCount()
 
-      public override fun interval(): Number? = unwrap(this).getInterval()
+      override fun interval(): Number? = unwrap(this).getInterval()
 
-      public override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
+      override fun intervalUnit(): String? = unwrap(this).getIntervalUnit()
     }
 
     public companion object {

@@ -9,11 +9,9 @@ public interface IncludedNestedStack {
   public fun stack(): NestedStack
 
   public interface Builder {
-    public fun includedTemplate(includedTemplate: CfnInclude) {
-    }
+    public fun includedTemplate(includedTemplate: CfnInclude)
 
-    public fun stack(stack: NestedStack) {
-    }
+    public fun stack(stack: NestedStack)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface IncludedNestedStack {
         software.amazon.awscdk.cloudformation.include.IncludedNestedStack.Builder =
         software.amazon.awscdk.cloudformation.include.IncludedNestedStack.builder()
 
-    public override fun includedTemplate(includedTemplate: CfnInclude) {
+    override fun includedTemplate(includedTemplate: CfnInclude) {
       cdkBuilder.includedTemplate(includedTemplate.let(CfnInclude::unwrap))
     }
 
-    public override fun stack(stack: NestedStack) {
+    override fun stack(stack: NestedStack) {
       cdkBuilder.stack(stack.let(NestedStack::unwrap))
     }
 
@@ -36,10 +34,10 @@ public interface IncludedNestedStack {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudformation.include.IncludedNestedStack,
   ) : IncludedNestedStack {
-    public override fun includedTemplate(): CfnInclude =
+    override fun includedTemplate(): CfnInclude =
         unwrap(this).getIncludedTemplate().let(CfnInclude::wrap)
 
-    public override fun stack(): NestedStack = unwrap(this).getStack().let(NestedStack::wrap)
+    override fun stack(): NestedStack = unwrap(this).getStack().let(NestedStack::wrap)
   }
 
   public companion object {

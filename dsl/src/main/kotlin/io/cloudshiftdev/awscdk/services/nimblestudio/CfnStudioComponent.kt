@@ -119,56 +119,39 @@ public open class CfnStudioComponent internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: StudioComponentConfigurationProperty) {
-    }
+    public fun configuration(configuration: StudioComponentConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4f6ee60322ab1a583f5a893b4f9363f4fee46ad969093a7220b7fc5676aee35")
-    public
-        fun configuration(configuration: StudioComponentConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: StudioComponentConfigurationProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>) {
-    }
+    public fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>)
 
-    public fun initializationScripts(initializationScripts: IResolvable) {
-    }
+    public fun initializationScripts(initializationScripts: IResolvable)
 
-    public fun initializationScripts(initializationScripts: List<Any>) {
-    }
+    public fun initializationScripts(initializationScripts: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun runtimeRoleArn(runtimeRoleArn: String) {
-    }
+    public fun runtimeRoleArn(runtimeRoleArn: String)
 
-    public fun scriptParameters(scriptParameters: IResolvable) {
-    }
+    public fun scriptParameters(scriptParameters: IResolvable)
 
-    public fun scriptParameters(scriptParameters: List<Any>) {
-    }
+    public fun scriptParameters(scriptParameters: List<Any>)
 
-    public fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
-    }
+    public fun secureInitializationRoleArn(secureInitializationRoleArn: String)
 
-    public fun studioId(studioId: String) {
-    }
+    public fun studioId(studioId: String)
 
-    public fun subtype(subtype: String) {
-    }
+    public fun subtype(subtype: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -178,69 +161,69 @@ public open class CfnStudioComponent internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.Builder
         = software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.Builder.create(scope, id)
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: StudioComponentConfigurationProperty) {
+    override fun configuration(configuration: StudioComponentConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(StudioComponentConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c4f6ee60322ab1a583f5a893b4f9363f4fee46ad969093a7220b7fc5676aee35")
-    public override
+    override
         fun configuration(configuration: StudioComponentConfigurationProperty.Builder.() -> Unit):
         Unit = configuration(StudioComponentConfigurationProperty(configuration))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>) {
+    override fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>) {
       cdkBuilder.ec2SecurityGroupIds(ec2SecurityGroupIds)
     }
 
-    public override fun initializationScripts(initializationScripts: IResolvable) {
+    override fun initializationScripts(initializationScripts: IResolvable) {
       cdkBuilder.initializationScripts(initializationScripts.let(IResolvable::unwrap))
     }
 
-    public override fun initializationScripts(initializationScripts: List<Any>) {
+    override fun initializationScripts(initializationScripts: List<Any>) {
       cdkBuilder.initializationScripts(initializationScripts)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun runtimeRoleArn(runtimeRoleArn: String) {
+    override fun runtimeRoleArn(runtimeRoleArn: String) {
       cdkBuilder.runtimeRoleArn(runtimeRoleArn)
     }
 
-    public override fun scriptParameters(scriptParameters: IResolvable) {
+    override fun scriptParameters(scriptParameters: IResolvable) {
       cdkBuilder.scriptParameters(scriptParameters.let(IResolvable::unwrap))
     }
 
-    public override fun scriptParameters(scriptParameters: List<Any>) {
+    override fun scriptParameters(scriptParameters: List<Any>) {
       cdkBuilder.scriptParameters(scriptParameters)
     }
 
-    public override fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
+    override fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
       cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)
     }
 
-    public override fun studioId(studioId: String) {
+    override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 
-    public override fun subtype(subtype: String) {
+    override fun subtype(subtype: String) {
       cdkBuilder.subtype(subtype)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -281,20 +264,15 @@ public open class CfnStudioComponent internal constructor(
     public fun windowsMountDrive(): String? = unwrap(this).getWindowsMountDrive()
 
     public interface Builder {
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
 
-      public fun fileSystemId(fileSystemId: String) {
-      }
+      public fun fileSystemId(fileSystemId: String)
 
-      public fun linuxMountPoint(linuxMountPoint: String) {
-      }
+      public fun linuxMountPoint(linuxMountPoint: String)
 
-      public fun shareName(shareName: String) {
-      }
+      public fun shareName(shareName: String)
 
-      public fun windowsMountDrive(windowsMountDrive: String) {
-      }
+      public fun windowsMountDrive(windowsMountDrive: String)
     }
 
     private class BuilderImpl : Builder {
@@ -303,23 +281,23 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty.builder()
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
-      public override fun fileSystemId(fileSystemId: String) {
+      override fun fileSystemId(fileSystemId: String) {
         cdkBuilder.fileSystemId(fileSystemId)
       }
 
-      public override fun linuxMountPoint(linuxMountPoint: String) {
+      override fun linuxMountPoint(linuxMountPoint: String) {
         cdkBuilder.linuxMountPoint(linuxMountPoint)
       }
 
-      public override fun shareName(shareName: String) {
+      override fun shareName(shareName: String) {
         cdkBuilder.shareName(shareName)
       }
 
-      public override fun windowsMountDrive(windowsMountDrive: String) {
+      override fun windowsMountDrive(windowsMountDrive: String) {
         cdkBuilder.windowsMountDrive(windowsMountDrive)
       }
 
@@ -332,15 +310,15 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.SharedFileSystemConfigurationProperty,
     ) : SharedFileSystemConfigurationProperty {
-      public override fun endpoint(): String? = unwrap(this).getEndpoint()
+      override fun endpoint(): String? = unwrap(this).getEndpoint()
 
-      public override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+      override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
 
-      public override fun linuxMountPoint(): String? = unwrap(this).getLinuxMountPoint()
+      override fun linuxMountPoint(): String? = unwrap(this).getLinuxMountPoint()
 
-      public override fun shareName(): String? = unwrap(this).getShareName()
+      override fun shareName(): String? = unwrap(this).getShareName()
 
-      public override fun windowsMountDrive(): String? = unwrap(this).getWindowsMountDrive()
+      override fun windowsMountDrive(): String? = unwrap(this).getWindowsMountDrive()
     }
 
     public companion object {
@@ -370,11 +348,9 @@ public open class CfnStudioComponent internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -383,11 +359,11 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -400,9 +376,9 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ScriptParameterKeyValueProperty,
     ) : ScriptParameterKeyValueProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -431,11 +407,9 @@ public open class CfnStudioComponent internal constructor(
     public fun endpoint(): String? = unwrap(this).getEndpoint()
 
     public interface Builder {
-      public fun activeDirectoryUser(activeDirectoryUser: String) {
-      }
+      public fun activeDirectoryUser(activeDirectoryUser: String)
 
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -444,11 +418,11 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty.builder()
 
-      public override fun activeDirectoryUser(activeDirectoryUser: String) {
+      override fun activeDirectoryUser(activeDirectoryUser: String) {
         cdkBuilder.activeDirectoryUser(activeDirectoryUser)
       }
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
@@ -461,9 +435,9 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ComputeFarmConfigurationProperty,
     ) : ComputeFarmConfigurationProperty {
-      public override fun activeDirectoryUser(): String? = unwrap(this).getActiveDirectoryUser()
+      override fun activeDirectoryUser(): String? = unwrap(this).getActiveDirectoryUser()
 
-      public override fun endpoint(): String? = unwrap(this).getEndpoint()
+      override fun endpoint(): String? = unwrap(this).getEndpoint()
     }
 
     public companion object {
@@ -497,17 +471,13 @@ public open class CfnStudioComponent internal constructor(
     public fun script(): String? = unwrap(this).getScript()
 
     public interface Builder {
-      public fun launchProfileProtocolVersion(launchProfileProtocolVersion: String) {
-      }
+      public fun launchProfileProtocolVersion(launchProfileProtocolVersion: String)
 
-      public fun platform(platform: String) {
-      }
+      public fun platform(platform: String)
 
-      public fun runContext(runContext: String) {
-      }
+      public fun runContext(runContext: String)
 
-      public fun script(script: String) {
-      }
+      public fun script(script: String)
     }
 
     private class BuilderImpl : Builder {
@@ -516,19 +486,19 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty.builder()
 
-      public override fun launchProfileProtocolVersion(launchProfileProtocolVersion: String) {
+      override fun launchProfileProtocolVersion(launchProfileProtocolVersion: String) {
         cdkBuilder.launchProfileProtocolVersion(launchProfileProtocolVersion)
       }
 
-      public override fun platform(platform: String) {
+      override fun platform(platform: String) {
         cdkBuilder.platform(platform)
       }
 
-      public override fun runContext(runContext: String) {
+      override fun runContext(runContext: String) {
         cdkBuilder.runContext(runContext)
       }
 
-      public override fun script(script: String) {
+      override fun script(script: String) {
         cdkBuilder.script(script)
       }
 
@@ -541,14 +511,14 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentInitializationScriptProperty,
     ) : StudioComponentInitializationScriptProperty {
-      public override fun launchProfileProtocolVersion(): String? =
+      override fun launchProfileProtocolVersion(): String? =
           unwrap(this).getLaunchProfileProtocolVersion()
 
-      public override fun platform(): String? = unwrap(this).getPlatform()
+      override fun platform(): String? = unwrap(this).getPlatform()
 
-      public override fun runContext(): String? = unwrap(this).getRunContext()
+      override fun runContext(): String? = unwrap(this).getRunContext()
 
-      public override fun script(): String? = unwrap(this).getScript()
+      override fun script(): String? = unwrap(this).getScript()
     }
 
     public companion object {
@@ -581,17 +551,13 @@ public open class CfnStudioComponent internal constructor(
         unwrap(this).getOrganizationalUnitDistinguishedName()
 
     public interface Builder {
-      public fun computerAttributes(computerAttributes: IResolvable) {
-      }
+      public fun computerAttributes(computerAttributes: IResolvable)
 
-      public fun computerAttributes(computerAttributes: List<Any>) {
-      }
+      public fun computerAttributes(computerAttributes: List<Any>)
 
-      public fun directoryId(directoryId: String) {
-      }
+      public fun directoryId(directoryId: String)
 
-      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
-      }
+      public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -600,19 +566,19 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty.builder()
 
-      public override fun computerAttributes(computerAttributes: IResolvable) {
+      override fun computerAttributes(computerAttributes: IResolvable) {
         cdkBuilder.computerAttributes(computerAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun computerAttributes(computerAttributes: List<Any>) {
+      override fun computerAttributes(computerAttributes: List<Any>) {
         cdkBuilder.computerAttributes(computerAttributes)
       }
 
-      public override fun directoryId(directoryId: String) {
+      override fun directoryId(directoryId: String) {
         cdkBuilder.directoryId(directoryId)
       }
 
-      public override
+      override
           fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String) {
         cdkBuilder.organizationalUnitDistinguishedName(organizationalUnitDistinguishedName)
       }
@@ -626,11 +592,11 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryConfigurationProperty,
     ) : ActiveDirectoryConfigurationProperty {
-      public override fun computerAttributes(): Any? = unwrap(this).getComputerAttributes()
+      override fun computerAttributes(): Any? = unwrap(this).getComputerAttributes()
 
-      public override fun directoryId(): String? = unwrap(this).getDirectoryId()
+      override fun directoryId(): String? = unwrap(this).getDirectoryId()
 
-      public override fun organizationalUnitDistinguishedName(): String? =
+      override fun organizationalUnitDistinguishedName(): String? =
           unwrap(this).getOrganizationalUnitDistinguishedName()
     }
 
@@ -659,8 +625,7 @@ public open class CfnStudioComponent internal constructor(
     public fun endpoint(): String? = unwrap(this).getEndpoint()
 
     public interface Builder {
-      public fun endpoint(endpoint: String) {
-      }
+      public fun endpoint(endpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -669,7 +634,7 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty.builder()
 
-      public override fun endpoint(endpoint: String) {
+      override fun endpoint(endpoint: String) {
         cdkBuilder.endpoint(endpoint)
       }
 
@@ -682,7 +647,7 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.LicenseServiceConfigurationProperty,
     ) : LicenseServiceConfigurationProperty {
-      public override fun endpoint(): String? = unwrap(this).getEndpoint()
+      override fun endpoint(): String? = unwrap(this).getEndpoint()
     }
 
     public companion object {
@@ -717,57 +682,45 @@ public open class CfnStudioComponent internal constructor(
         unwrap(this).getSharedFileSystemConfiguration()
 
     public interface Builder {
-      public fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
-      }
+      public fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable)
 
       public
-          fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty) {
-      }
+          fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("580fc56564d1496b95a674cf508b6ee811b62e9ae9506daac7a54c20a4228b82")
       public
-          fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty.Builder.() -> Unit)
 
-      public fun computeFarmConfiguration(computeFarmConfiguration: IResolvable) {
-      }
+      public fun computeFarmConfiguration(computeFarmConfiguration: IResolvable)
 
       public
-          fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty) {
-      }
+          fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("147a6b54528749e907c7b2cd4e79aa46eb7a7d67177215e5a1555910ca5a5bd8")
       public
-          fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty.Builder.() -> Unit)
 
-      public fun licenseServiceConfiguration(licenseServiceConfiguration: IResolvable) {
-      }
+      public fun licenseServiceConfiguration(licenseServiceConfiguration: IResolvable)
 
       public
-          fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty) {
-      }
+          fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ac55785be2829fd2629089442fa098ee586a27c836596dad9e9eba208c9ddae")
       public
-          fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty.Builder.() -> Unit)
 
-      public fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: IResolvable) {
-      }
+      public fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: IResolvable)
 
       public
-          fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty) {
-      }
+          fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ddfcf3613f82db83ae2e014d3eaa7711b83328afb37079ba3df1de236f9a3d5")
       public
-          fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -776,67 +729,66 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty.builder()
 
-      public override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
+      override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
         cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty) {
         cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(ActiveDirectoryConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("580fc56564d1496b95a674cf508b6ee811b62e9ae9506daac7a54c20a4228b82")
-      public override
+      override
           fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty.Builder.() -> Unit):
           Unit =
           activeDirectoryConfiguration(ActiveDirectoryConfigurationProperty(activeDirectoryConfiguration))
 
-      public override fun computeFarmConfiguration(computeFarmConfiguration: IResolvable) {
+      override fun computeFarmConfiguration(computeFarmConfiguration: IResolvable) {
         cdkBuilder.computeFarmConfiguration(computeFarmConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty) {
         cdkBuilder.computeFarmConfiguration(computeFarmConfiguration.let(ComputeFarmConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("147a6b54528749e907c7b2cd4e79aa46eb7a7d67177215e5a1555910ca5a5bd8")
-      public override
+      override
           fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty.Builder.() -> Unit):
           Unit =
           computeFarmConfiguration(ComputeFarmConfigurationProperty(computeFarmConfiguration))
 
-      public override fun licenseServiceConfiguration(licenseServiceConfiguration: IResolvable) {
+      override fun licenseServiceConfiguration(licenseServiceConfiguration: IResolvable) {
         cdkBuilder.licenseServiceConfiguration(licenseServiceConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty) {
         cdkBuilder.licenseServiceConfiguration(licenseServiceConfiguration.let(LicenseServiceConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ac55785be2829fd2629089442fa098ee586a27c836596dad9e9eba208c9ddae")
-      public override
+      override
           fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty.Builder.() -> Unit):
           Unit =
           licenseServiceConfiguration(LicenseServiceConfigurationProperty(licenseServiceConfiguration))
 
-      public override
-          fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: IResolvable) {
+      override fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: IResolvable) {
         cdkBuilder.sharedFileSystemConfiguration(sharedFileSystemConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty) {
         cdkBuilder.sharedFileSystemConfiguration(sharedFileSystemConfiguration.let(SharedFileSystemConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ddfcf3613f82db83ae2e014d3eaa7711b83328afb37079ba3df1de236f9a3d5")
-      public override
+      override
           fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty.Builder.() -> Unit):
           Unit =
           sharedFileSystemConfiguration(SharedFileSystemConfigurationProperty(sharedFileSystemConfiguration))
@@ -850,16 +802,15 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.StudioComponentConfigurationProperty,
     ) : StudioComponentConfigurationProperty {
-      public override fun activeDirectoryConfiguration(): Any? =
+      override fun activeDirectoryConfiguration(): Any? =
           unwrap(this).getActiveDirectoryConfiguration()
 
-      public override fun computeFarmConfiguration(): Any? =
-          unwrap(this).getComputeFarmConfiguration()
+      override fun computeFarmConfiguration(): Any? = unwrap(this).getComputeFarmConfiguration()
 
-      public override fun licenseServiceConfiguration(): Any? =
+      override fun licenseServiceConfiguration(): Any? =
           unwrap(this).getLicenseServiceConfiguration()
 
-      public override fun sharedFileSystemConfiguration(): Any? =
+      override fun sharedFileSystemConfiguration(): Any? =
           unwrap(this).getSharedFileSystemConfiguration()
     }
 
@@ -890,11 +841,9 @@ public open class CfnStudioComponent internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -903,11 +852,11 @@ public open class CfnStudioComponent internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -920,9 +869,9 @@ public open class CfnStudioComponent internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStudioComponent.ActiveDirectoryComputerAttributeProperty,
     ) : ActiveDirectoryComputerAttributeProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

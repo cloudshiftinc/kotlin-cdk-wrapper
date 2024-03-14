@@ -67,26 +67,19 @@ public open class CfnFargateProfile internal constructor(
   }
 
   public interface Builder {
-    public fun clusterName(clusterName: String) {
-    }
+    public fun clusterName(clusterName: String)
 
-    public fun fargateProfileName(fargateProfileName: String) {
-    }
+    public fun fargateProfileName(fargateProfileName: String)
 
-    public fun podExecutionRoleArn(podExecutionRoleArn: String) {
-    }
+    public fun podExecutionRoleArn(podExecutionRoleArn: String)
 
-    public fun selectors(selectors: IResolvable) {
-    }
+    public fun selectors(selectors: IResolvable)
 
-    public fun selectors(selectors: List<Any>) {
-    }
+    public fun selectors(selectors: List<Any>)
 
-    public fun subnets(subnets: List<String>) {
-    }
+    public fun subnets(subnets: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -96,31 +89,31 @@ public open class CfnFargateProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.CfnFargateProfile.Builder =
         software.amazon.awscdk.services.eks.CfnFargateProfile.Builder.create(scope, id)
 
-    public override fun clusterName(clusterName: String) {
+    override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
 
-    public override fun fargateProfileName(fargateProfileName: String) {
+    override fun fargateProfileName(fargateProfileName: String) {
       cdkBuilder.fargateProfileName(fargateProfileName)
     }
 
-    public override fun podExecutionRoleArn(podExecutionRoleArn: String) {
+    override fun podExecutionRoleArn(podExecutionRoleArn: String) {
       cdkBuilder.podExecutionRoleArn(podExecutionRoleArn)
     }
 
-    public override fun selectors(selectors: IResolvable) {
+    override fun selectors(selectors: IResolvable) {
       cdkBuilder.selectors(selectors.let(IResolvable::unwrap))
     }
 
-    public override fun selectors(selectors: List<Any>) {
+    override fun selectors(selectors: List<Any>) {
       cdkBuilder.selectors(selectors)
     }
 
-    public override fun subnets(subnets: List<String>) {
+    override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -154,11 +147,9 @@ public open class CfnFargateProfile internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -166,11 +157,11 @@ public open class CfnFargateProfile internal constructor(
           software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty.Builder =
           software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -181,9 +172,9 @@ public open class CfnFargateProfile internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.eks.CfnFargateProfile.LabelProperty,
     ) : LabelProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -212,14 +203,11 @@ public open class CfnFargateProfile internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun labels(labels: IResolvable) {
-      }
+      public fun labels(labels: IResolvable)
 
-      public fun labels(labels: List<Any>) {
-      }
+      public fun labels(labels: List<Any>)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -227,15 +215,15 @@ public open class CfnFargateProfile internal constructor(
           software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty.Builder =
           software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty.builder()
 
-      public override fun labels(labels: IResolvable) {
+      override fun labels(labels: IResolvable) {
         cdkBuilder.labels(labels.let(IResolvable::unwrap))
       }
 
-      public override fun labels(labels: List<Any>) {
+      override fun labels(labels: List<Any>) {
         cdkBuilder.labels(labels)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -247,9 +235,9 @@ public open class CfnFargateProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eks.CfnFargateProfile.SelectorProperty,
     ) : SelectorProperty {
-      public override fun labels(): Any? = unwrap(this).getLabels()
+      override fun labels(): Any? = unwrap(this).getLabels()
 
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {

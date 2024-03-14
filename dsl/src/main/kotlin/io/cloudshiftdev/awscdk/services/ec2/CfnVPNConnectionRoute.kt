@@ -28,11 +28,9 @@ public open class CfnVPNConnectionRoute internal constructor(
   }
 
   public interface Builder {
-    public fun destinationCidrBlock(destinationCidrBlock: String) {
-    }
+    public fun destinationCidrBlock(destinationCidrBlock: String)
 
-    public fun vpnConnectionId(vpnConnectionId: String) {
-    }
+    public fun vpnConnectionId(vpnConnectionId: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnVPNConnectionRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPNConnectionRoute.Builder =
         software.amazon.awscdk.services.ec2.CfnVPNConnectionRoute.Builder.create(scope, id)
 
-    public override fun destinationCidrBlock(destinationCidrBlock: String) {
+    override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
     }
 
-    public override fun vpnConnectionId(vpnConnectionId: String) {
+    override fun vpnConnectionId(vpnConnectionId: String) {
       cdkBuilder.vpnConnectionId(vpnConnectionId)
     }
 

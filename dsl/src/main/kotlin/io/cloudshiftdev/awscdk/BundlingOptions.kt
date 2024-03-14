@@ -37,106 +37,92 @@ public interface BundlingOptions {
   public fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
 
   public interface Builder {
-    public fun bundlingFileAccess(bundlingFileAccess: BundlingFileAccess) {
-    }
+    public fun bundlingFileAccess(bundlingFileAccess: BundlingFileAccess)
 
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun entrypoint(entrypoint: List<String>) {
-    }
+    public fun entrypoint(entrypoint: List<String>)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun image(image: DockerImage) {
-    }
+    public fun image(image: DockerImage)
 
-    public fun local(local: ILocalBundling) {
-    }
+    public fun local(local: ILocalBundling)
 
-    public fun network(network: String) {
-    }
+    public fun network(network: String)
 
-    public fun outputType(outputType: BundlingOutput) {
-    }
+    public fun outputType(outputType: BundlingOutput)
 
-    public fun platform(platform: String) {
-    }
+    public fun platform(platform: String)
 
-    public fun securityOpt(securityOpt: String) {
-    }
+    public fun securityOpt(securityOpt: String)
 
-    public fun user(user: String) {
-    }
+    public fun user(user: String)
 
-    public fun volumes(volumes: List<DockerVolume>) {
-    }
+    public fun volumes(volumes: List<DockerVolume>)
 
-    public fun volumesFrom(volumesFrom: List<String>) {
-    }
+    public fun volumesFrom(volumesFrom: List<String>)
 
-    public fun workingDirectory(workingDirectory: String) {
-    }
+    public fun workingDirectory(workingDirectory: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.BundlingOptions.Builder =
         software.amazon.awscdk.BundlingOptions.builder()
 
-    public override fun bundlingFileAccess(bundlingFileAccess: BundlingFileAccess) {
+    override fun bundlingFileAccess(bundlingFileAccess: BundlingFileAccess) {
       cdkBuilder.bundlingFileAccess(bundlingFileAccess.let(BundlingFileAccess::unwrap))
     }
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun entrypoint(entrypoint: List<String>) {
+    override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun image(image: DockerImage) {
+    override fun image(image: DockerImage) {
       cdkBuilder.image(image.let(DockerImage::unwrap))
     }
 
-    public override fun local(local: ILocalBundling) {
+    override fun local(local: ILocalBundling) {
       cdkBuilder.local(local.let(ILocalBundling::unwrap))
     }
 
-    public override fun network(network: String) {
+    override fun network(network: String) {
       cdkBuilder.network(network)
     }
 
-    public override fun outputType(outputType: BundlingOutput) {
+    override fun outputType(outputType: BundlingOutput) {
       cdkBuilder.outputType(outputType.let(BundlingOutput::unwrap))
     }
 
-    public override fun platform(platform: String) {
+    override fun platform(platform: String) {
       cdkBuilder.platform(platform)
     }
 
-    public override fun securityOpt(securityOpt: String) {
+    override fun securityOpt(securityOpt: String) {
       cdkBuilder.securityOpt(securityOpt)
     }
 
-    public override fun user(user: String) {
+    override fun user(user: String) {
       cdkBuilder.user(user)
     }
 
-    public override fun volumes(volumes: List<DockerVolume>) {
+    override fun volumes(volumes: List<DockerVolume>) {
       cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
     }
 
-    public override fun volumesFrom(volumesFrom: List<String>) {
+    override fun volumesFrom(volumesFrom: List<String>) {
       cdkBuilder.volumesFrom(volumesFrom)
     }
 
-    public override fun workingDirectory(workingDirectory: String) {
+    override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)
     }
 
@@ -146,38 +132,36 @@ public interface BundlingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.BundlingOptions,
   ) : BundlingOptions {
-    public override fun bundlingFileAccess(): BundlingFileAccess? =
+    override fun bundlingFileAccess(): BundlingFileAccess? =
         unwrap(this).getBundlingFileAccess()?.let(BundlingFileAccess::wrap)
 
-    public override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+    override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-    public override fun entrypoint(): List<String> = unwrap(this).getEntrypoint() ?: emptyList()
+    override fun entrypoint(): List<String> = unwrap(this).getEntrypoint() ?: emptyList()
 
-    public override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?:
-        emptyMap()
+    override fun environment(): Map<String, String> = unwrap(this).getEnvironment() ?: emptyMap()
 
-    public override fun image(): DockerImage = unwrap(this).getImage().let(DockerImage::wrap)
+    override fun image(): DockerImage = unwrap(this).getImage().let(DockerImage::wrap)
 
-    public override fun local(): ILocalBundling? =
-        unwrap(this).getLocal()?.let(ILocalBundling::wrap)
+    override fun local(): ILocalBundling? = unwrap(this).getLocal()?.let(ILocalBundling::wrap)
 
-    public override fun network(): String? = unwrap(this).getNetwork()
+    override fun network(): String? = unwrap(this).getNetwork()
 
-    public override fun outputType(): BundlingOutput? =
+    override fun outputType(): BundlingOutput? =
         unwrap(this).getOutputType()?.let(BundlingOutput::wrap)
 
-    public override fun platform(): String? = unwrap(this).getPlatform()
+    override fun platform(): String? = unwrap(this).getPlatform()
 
-    public override fun securityOpt(): String? = unwrap(this).getSecurityOpt()
+    override fun securityOpt(): String? = unwrap(this).getSecurityOpt()
 
-    public override fun user(): String? = unwrap(this).getUser()
+    override fun user(): String? = unwrap(this).getUser()
 
-    public override fun volumes(): List<DockerVolume> =
-        unwrap(this).getVolumes()?.map(DockerVolume::wrap) ?: emptyList()
+    override fun volumes(): List<DockerVolume> = unwrap(this).getVolumes()?.map(DockerVolume::wrap)
+        ?: emptyList()
 
-    public override fun volumesFrom(): List<String> = unwrap(this).getVolumesFrom() ?: emptyList()
+    override fun volumesFrom(): List<String> = unwrap(this).getVolumesFrom() ?: emptyList()
 
-    public override fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
+    override fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
   }
 
   public companion object {

@@ -11,17 +11,13 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
   public fun events(): List<RepositoryNotificationEvents>
 
   public interface Builder {
-    public fun detailType(detailType: DetailType) {
-    }
+    public fun detailType(detailType: DetailType)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun events(events: List<RepositoryNotificationEvents>) {
-    }
+    public fun events(events: List<RepositoryNotificationEvents>)
 
-    public fun notificationRuleName(notificationRuleName: String) {
-    }
+    public fun notificationRuleName(notificationRuleName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -29,19 +25,19 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
         software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions.Builder =
         software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions.builder()
 
-    public override fun detailType(detailType: DetailType) {
+    override fun detailType(detailType: DetailType) {
       cdkBuilder.detailType(detailType.let(DetailType::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun events(events: List<RepositoryNotificationEvents>) {
+    override fun events(events: List<RepositoryNotificationEvents>) {
       cdkBuilder.events(events.map(RepositoryNotificationEvents::unwrap))
     }
 
-    public override fun notificationRuleName(notificationRuleName: String) {
+    override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)
     }
 
@@ -52,15 +48,14 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions,
   ) : RepositoryNotifyOnOptions {
-    public override fun detailType(): DetailType? =
-        unwrap(this).getDetailType()?.let(DetailType::wrap)
+    override fun detailType(): DetailType? = unwrap(this).getDetailType()?.let(DetailType::wrap)
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun events(): List<RepositoryNotificationEvents> =
+    override fun events(): List<RepositoryNotificationEvents> =
         unwrap(this).getEvents().map(RepositoryNotificationEvents::wrap)
 
-    public override fun notificationRuleName(): String? = unwrap(this).getNotificationRuleName()
+    override fun notificationRuleName(): String? = unwrap(this).getNotificationRuleName()
   }
 
   public companion object {

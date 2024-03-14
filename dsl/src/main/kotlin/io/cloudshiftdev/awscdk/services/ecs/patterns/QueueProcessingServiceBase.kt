@@ -29,8 +29,8 @@ public abstract class QueueProcessingServiceBase internal constructor(
   public open fun scalingSteps(): List<ScalingInterval> =
       unwrap(this).getScalingSteps().map(ScalingInterval::wrap)
 
-  public open fun secrets(): Map<String, Secret> = unwrap(this).getSecrets()?.mapValues {
-      Secret.wrap(it.value)} ?: emptyMap()
+  public open fun secrets(): Map<String, Secret> =
+      unwrap(this).getSecrets()?.mapValues{Secret.wrap(it.value)} ?: emptyMap()
 
   public open fun sqsQueue(): IQueue = unwrap(this).getSqsQueue().let(IQueue::wrap)
 

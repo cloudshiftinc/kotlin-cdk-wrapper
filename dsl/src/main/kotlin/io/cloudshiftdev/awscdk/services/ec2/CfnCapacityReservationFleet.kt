@@ -95,44 +95,31 @@ public open class CfnCapacityReservationFleet internal constructor(
   }
 
   public interface Builder {
-    public fun allocationStrategy(allocationStrategy: String) {
-    }
+    public fun allocationStrategy(allocationStrategy: String)
 
-    public fun endDate(endDate: String) {
-    }
+    public fun endDate(endDate: String)
 
-    public fun instanceMatchCriteria(instanceMatchCriteria: String) {
-    }
+    public fun instanceMatchCriteria(instanceMatchCriteria: String)
 
-    public fun instanceTypeSpecifications(instanceTypeSpecifications: IResolvable) {
-    }
+    public fun instanceTypeSpecifications(instanceTypeSpecifications: IResolvable)
 
-    public fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>) {
-    }
+    public fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>)
 
-    public fun noRemoveEndDate(noRemoveEndDate: Boolean) {
-    }
+    public fun noRemoveEndDate(noRemoveEndDate: Boolean)
 
-    public fun noRemoveEndDate(noRemoveEndDate: IResolvable) {
-    }
+    public fun noRemoveEndDate(noRemoveEndDate: IResolvable)
 
-    public fun removeEndDate(removeEndDate: Boolean) {
-    }
+    public fun removeEndDate(removeEndDate: Boolean)
 
-    public fun removeEndDate(removeEndDate: IResolvable) {
-    }
+    public fun removeEndDate(removeEndDate: IResolvable)
 
-    public fun tagSpecifications(tagSpecifications: IResolvable) {
-    }
+    public fun tagSpecifications(tagSpecifications: IResolvable)
 
-    public fun tagSpecifications(tagSpecifications: List<Any>) {
-    }
+    public fun tagSpecifications(tagSpecifications: List<Any>)
 
-    public fun tenancy(tenancy: String) {
-    }
+    public fun tenancy(tenancy: String)
 
-    public fun totalTargetCapacity(totalTargetCapacity: Number) {
-    }
+    public fun totalTargetCapacity(totalTargetCapacity: Number)
   }
 
   private class BuilderImpl(
@@ -142,55 +129,55 @@ public open class CfnCapacityReservationFleet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.Builder
         = software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.Builder.create(scope, id)
 
-    public override fun allocationStrategy(allocationStrategy: String) {
+    override fun allocationStrategy(allocationStrategy: String) {
       cdkBuilder.allocationStrategy(allocationStrategy)
     }
 
-    public override fun endDate(endDate: String) {
+    override fun endDate(endDate: String) {
       cdkBuilder.endDate(endDate)
     }
 
-    public override fun instanceMatchCriteria(instanceMatchCriteria: String) {
+    override fun instanceMatchCriteria(instanceMatchCriteria: String) {
       cdkBuilder.instanceMatchCriteria(instanceMatchCriteria)
     }
 
-    public override fun instanceTypeSpecifications(instanceTypeSpecifications: IResolvable) {
+    override fun instanceTypeSpecifications(instanceTypeSpecifications: IResolvable) {
       cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>) {
+    override fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>) {
       cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications)
     }
 
-    public override fun noRemoveEndDate(noRemoveEndDate: Boolean) {
+    override fun noRemoveEndDate(noRemoveEndDate: Boolean) {
       cdkBuilder.noRemoveEndDate(noRemoveEndDate)
     }
 
-    public override fun noRemoveEndDate(noRemoveEndDate: IResolvable) {
+    override fun noRemoveEndDate(noRemoveEndDate: IResolvable) {
       cdkBuilder.noRemoveEndDate(noRemoveEndDate.let(IResolvable::unwrap))
     }
 
-    public override fun removeEndDate(removeEndDate: Boolean) {
+    override fun removeEndDate(removeEndDate: Boolean) {
       cdkBuilder.removeEndDate(removeEndDate)
     }
 
-    public override fun removeEndDate(removeEndDate: IResolvable) {
+    override fun removeEndDate(removeEndDate: IResolvable) {
       cdkBuilder.removeEndDate(removeEndDate.let(IResolvable::unwrap))
     }
 
-    public override fun tagSpecifications(tagSpecifications: IResolvable) {
+    override fun tagSpecifications(tagSpecifications: IResolvable) {
       cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun tagSpecifications(tagSpecifications: List<Any>) {
+    override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
 
-    public override fun tenancy(tenancy: String) {
+    override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
     }
 
-    public override fun totalTargetCapacity(totalTargetCapacity: Number) {
+    override fun totalTargetCapacity(totalTargetCapacity: Number) {
       cdkBuilder.totalTargetCapacity(totalTargetCapacity)
     }
 
@@ -225,11 +212,9 @@ public open class CfnCapacityReservationFleet internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -238,11 +223,11 @@ public open class CfnCapacityReservationFleet internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty.builder()
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -255,10 +240,9 @@ public open class CfnCapacityReservationFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty,
     ) : TagSpecificationProperty {
-      public override fun resourceType(): String? = unwrap(this).getResourceType()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -297,29 +281,21 @@ public open class CfnCapacityReservationFleet internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun availabilityZoneId(availabilityZoneId: String) {
-      }
+      public fun availabilityZoneId(availabilityZoneId: String)
 
-      public fun ebsOptimized(ebsOptimized: Boolean) {
-      }
+      public fun ebsOptimized(ebsOptimized: Boolean)
 
-      public fun ebsOptimized(ebsOptimized: IResolvable) {
-      }
+      public fun ebsOptimized(ebsOptimized: IResolvable)
 
-      public fun instancePlatform(instancePlatform: String) {
-      }
+      public fun instancePlatform(instancePlatform: String)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -328,35 +304,35 @@ public open class CfnCapacityReservationFleet internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun availabilityZoneId(availabilityZoneId: String) {
+      override fun availabilityZoneId(availabilityZoneId: String) {
         cdkBuilder.availabilityZoneId(availabilityZoneId)
       }
 
-      public override fun ebsOptimized(ebsOptimized: Boolean) {
+      override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
       }
 
-      public override fun ebsOptimized(ebsOptimized: IResolvable) {
+      override fun ebsOptimized(ebsOptimized: IResolvable) {
         cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
       }
 
-      public override fun instancePlatform(instancePlatform: String) {
+      override fun instancePlatform(instancePlatform: String) {
         cdkBuilder.instancePlatform(instancePlatform)
       }
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -369,19 +345,19 @@ public open class CfnCapacityReservationFleet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.InstanceTypeSpecificationProperty,
     ) : InstanceTypeSpecificationProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun availabilityZoneId(): String? = unwrap(this).getAvailabilityZoneId()
+      override fun availabilityZoneId(): String? = unwrap(this).getAvailabilityZoneId()
 
-      public override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
-      public override fun instancePlatform(): String? = unwrap(this).getInstancePlatform()
+      override fun instancePlatform(): String? = unwrap(this).getInstancePlatform()
 
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun priority(): Number? = unwrap(this).getPriority()
+      override fun priority(): Number? = unwrap(this).getPriority()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {

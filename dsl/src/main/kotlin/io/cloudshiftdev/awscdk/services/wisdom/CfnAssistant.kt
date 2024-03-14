@@ -73,30 +73,23 @@ public open class CfnAssistant internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-    }
+    public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable)
 
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b927a22fbcb8f1bd706654383d90ea62756fa45306ce7b09c58424394d9ceba4")
     public
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -106,36 +99,35 @@ public open class CfnAssistant internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wisdom.CfnAssistant.Builder =
         software.amazon.awscdk.services.wisdom.CfnAssistant.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override
-        fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
+    override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
       cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b927a22fbcb8f1bd706654383d90ea62756fa45306ce7b09c58424394d9ceba4")
-    public override
+    override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty.Builder.() -> Unit):
         Unit =
         serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty(serverSideEncryptionConfiguration))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -167,8 +159,7 @@ public open class CfnAssistant internal constructor(
     public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
     public interface Builder {
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -177,7 +168,7 @@ public open class CfnAssistant internal constructor(
           =
           software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty.builder()
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
@@ -190,7 +181,7 @@ public open class CfnAssistant internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wisdom.CfnAssistant.ServerSideEncryptionConfigurationProperty,
     ) : ServerSideEncryptionConfigurationProperty {
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
     }
 
     public companion object {

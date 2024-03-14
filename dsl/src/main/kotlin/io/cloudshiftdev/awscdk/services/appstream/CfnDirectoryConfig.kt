@@ -67,38 +67,30 @@ public open class CfnDirectoryConfig internal constructor(
       Unit = serviceAccountCredentials(ServiceAccountCredentialsProperty(`value`))
 
   public interface Builder {
-    public fun certificateBasedAuthProperties(certificateBasedAuthProperties: IResolvable) {
-    }
+    public fun certificateBasedAuthProperties(certificateBasedAuthProperties: IResolvable)
 
     public
-        fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty) {
-    }
+        fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("07e6d87a6faf9170028e72ab6676e76579aef55404ac67cd78d7a182f56ea872")
     public
-        fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty.Builder.() -> Unit) {
-    }
+        fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty.Builder.() -> Unit)
 
-    public fun directoryName(directoryName: String) {
-    }
+    public fun directoryName(directoryName: String)
 
     public
-        fun organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames: List<String>) {
-    }
+        fun organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames: List<String>)
 
-    public fun serviceAccountCredentials(serviceAccountCredentials: IResolvable) {
-    }
+    public fun serviceAccountCredentials(serviceAccountCredentials: IResolvable)
 
     public
-        fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty) {
-    }
+        fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b5a0c83adc83a14fb99d0a0505704c2a65f27695fe7b75e36d0429547fa893c6")
     public
-        fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty.Builder.() -> Unit) {
-    }
+        fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -108,44 +100,43 @@ public open class CfnDirectoryConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnDirectoryConfig.Builder =
         software.amazon.awscdk.services.appstream.CfnDirectoryConfig.Builder.create(scope, id)
 
-    public override
-        fun certificateBasedAuthProperties(certificateBasedAuthProperties: IResolvable) {
+    override fun certificateBasedAuthProperties(certificateBasedAuthProperties: IResolvable) {
       cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty) {
       cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(CertificateBasedAuthPropertiesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("07e6d87a6faf9170028e72ab6676e76579aef55404ac67cd78d7a182f56ea872")
-    public override
+    override
         fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty.Builder.() -> Unit):
         Unit =
         certificateBasedAuthProperties(CertificateBasedAuthPropertiesProperty(certificateBasedAuthProperties))
 
-    public override fun directoryName(directoryName: String) {
+    override fun directoryName(directoryName: String) {
       cdkBuilder.directoryName(directoryName)
     }
 
-    public override
+    override
         fun organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames: List<String>) {
       cdkBuilder.organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames)
     }
 
-    public override fun serviceAccountCredentials(serviceAccountCredentials: IResolvable) {
+    override fun serviceAccountCredentials(serviceAccountCredentials: IResolvable) {
       cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty) {
       cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(ServiceAccountCredentialsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b5a0c83adc83a14fb99d0a0505704c2a65f27695fe7b75e36d0429547fa893c6")
-    public override
+    override
         fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty.Builder.() -> Unit):
         Unit =
         serviceAccountCredentials(ServiceAccountCredentialsProperty(serviceAccountCredentials))
@@ -181,11 +172,9 @@ public open class CfnDirectoryConfig internal constructor(
     public fun accountPassword(): String
 
     public interface Builder {
-      public fun accountName(accountName: String) {
-      }
+      public fun accountName(accountName: String)
 
-      public fun accountPassword(accountPassword: String) {
-      }
+      public fun accountPassword(accountPassword: String)
     }
 
     private class BuilderImpl : Builder {
@@ -194,11 +183,11 @@ public open class CfnDirectoryConfig internal constructor(
           =
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty.builder()
 
-      public override fun accountName(accountName: String) {
+      override fun accountName(accountName: String) {
         cdkBuilder.accountName(accountName)
       }
 
-      public override fun accountPassword(accountPassword: String) {
+      override fun accountPassword(accountPassword: String) {
         cdkBuilder.accountPassword(accountPassword)
       }
 
@@ -211,9 +200,9 @@ public open class CfnDirectoryConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.ServiceAccountCredentialsProperty,
     ) : ServiceAccountCredentialsProperty {
-      public override fun accountName(): String = unwrap(this).getAccountName()
+      override fun accountName(): String = unwrap(this).getAccountName()
 
-      public override fun accountPassword(): String = unwrap(this).getAccountPassword()
+      override fun accountPassword(): String = unwrap(this).getAccountPassword()
     }
 
     public companion object {
@@ -243,11 +232,9 @@ public open class CfnDirectoryConfig internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun certificateAuthorityArn(certificateAuthorityArn: String) {
-      }
+      public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -256,11 +243,11 @@ public open class CfnDirectoryConfig internal constructor(
           =
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty.builder()
 
-      public override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+      override fun certificateAuthorityArn(certificateAuthorityArn: String) {
         cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -273,10 +260,9 @@ public open class CfnDirectoryConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty,
     ) : CertificateBasedAuthPropertiesProperty {
-      public override fun certificateAuthorityArn(): String? =
-          unwrap(this).getCertificateAuthorityArn()
+      override fun certificateAuthorityArn(): String? = unwrap(this).getCertificateAuthorityArn()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {

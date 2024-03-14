@@ -12,20 +12,15 @@ public open class OriginRequestPolicy internal constructor(
   public override fun originRequestPolicyId(): String = unwrap(this).getOriginRequestPolicyId()
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun cookieBehavior(cookieBehavior: OriginRequestCookieBehavior) {
-    }
+    public fun cookieBehavior(cookieBehavior: OriginRequestCookieBehavior)
 
-    public fun headerBehavior(headerBehavior: OriginRequestHeaderBehavior) {
-    }
+    public fun headerBehavior(headerBehavior: OriginRequestHeaderBehavior)
 
-    public fun originRequestPolicyName(originRequestPolicyName: String) {
-    }
+    public fun originRequestPolicyName(originRequestPolicyName: String)
 
-    public fun queryStringBehavior(queryStringBehavior: OriginRequestQueryStringBehavior) {
-    }
+    public fun queryStringBehavior(queryStringBehavior: OriginRequestQueryStringBehavior)
   }
 
   private class BuilderImpl(
@@ -35,23 +30,23 @@ public open class OriginRequestPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.Builder =
         software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun cookieBehavior(cookieBehavior: OriginRequestCookieBehavior) {
+    override fun cookieBehavior(cookieBehavior: OriginRequestCookieBehavior) {
       cdkBuilder.cookieBehavior(cookieBehavior.let(OriginRequestCookieBehavior::unwrap))
     }
 
-    public override fun headerBehavior(headerBehavior: OriginRequestHeaderBehavior) {
+    override fun headerBehavior(headerBehavior: OriginRequestHeaderBehavior) {
       cdkBuilder.headerBehavior(headerBehavior.let(OriginRequestHeaderBehavior::unwrap))
     }
 
-    public override fun originRequestPolicyName(originRequestPolicyName: String) {
+    override fun originRequestPolicyName(originRequestPolicyName: String) {
       cdkBuilder.originRequestPolicyName(originRequestPolicyName)
     }
 
-    public override fun queryStringBehavior(queryStringBehavior: OriginRequestQueryStringBehavior) {
+    override fun queryStringBehavior(queryStringBehavior: OriginRequestQueryStringBehavior) {
       cdkBuilder.queryStringBehavior(queryStringBehavior.let(OriginRequestQueryStringBehavior::unwrap))
     }
 

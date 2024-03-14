@@ -37,14 +37,11 @@ public open class CfnGeoMatchSet internal constructor(
   }
 
   public interface Builder {
-    public fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
-    }
+    public fun geoMatchConstraints(geoMatchConstraints: IResolvable)
 
-    public fun geoMatchConstraints(geoMatchConstraints: List<Any>) {
-    }
+    public fun geoMatchConstraints(geoMatchConstraints: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnGeoMatchSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.Builder =
         software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.Builder.create(scope, id)
 
-    public override fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
+    override fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
       cdkBuilder.geoMatchConstraints(geoMatchConstraints.let(IResolvable::unwrap))
     }
 
-    public override fun geoMatchConstraints(geoMatchConstraints: List<Any>) {
+    override fun geoMatchConstraints(geoMatchConstraints: List<Any>) {
       cdkBuilder.geoMatchConstraints(geoMatchConstraints)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -97,11 +94,9 @@ public open class CfnGeoMatchSet internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -110,11 +105,11 @@ public open class CfnGeoMatchSet internal constructor(
           =
           software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -127,9 +122,9 @@ public open class CfnGeoMatchSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet.GeoMatchConstraintProperty,
     ) : GeoMatchConstraintProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

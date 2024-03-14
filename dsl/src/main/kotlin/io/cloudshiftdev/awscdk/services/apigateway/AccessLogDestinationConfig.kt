@@ -7,8 +7,7 @@ public interface AccessLogDestinationConfig {
   public fun destinationArn(): String
 
   public interface Builder {
-    public fun destinationArn(destinationArn: String) {
-    }
+    public fun destinationArn(destinationArn: String)
   }
 
   private class BuilderImpl : Builder {
@@ -16,7 +15,7 @@ public interface AccessLogDestinationConfig {
         software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig.Builder =
         software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig.builder()
 
-    public override fun destinationArn(destinationArn: String) {
+    override fun destinationArn(destinationArn: String) {
       cdkBuilder.destinationArn(destinationArn)
     }
 
@@ -27,7 +26,7 @@ public interface AccessLogDestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig,
   ) : AccessLogDestinationConfig {
-    public override fun destinationArn(): String = unwrap(this).getDestinationArn()
+    override fun destinationArn(): String = unwrap(this).getDestinationArn()
   }
 
   public companion object {

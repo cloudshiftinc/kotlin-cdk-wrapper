@@ -82,28 +82,21 @@ public open class CfnVirtualNode internal constructor(
   }
 
   public interface Builder {
-    public fun meshName(meshName: String) {
-    }
+    public fun meshName(meshName: String)
 
-    public fun meshOwner(meshOwner: String) {
-    }
+    public fun meshOwner(meshOwner: String)
 
-    public fun spec(spec: IResolvable) {
-    }
+    public fun spec(spec: IResolvable)
 
-    public fun spec(spec: VirtualNodeSpecProperty) {
-    }
+    public fun spec(spec: VirtualNodeSpecProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1155f49a4f07152dc7878b95fb5bfab1a0c3e50c20c9713c79e31d05776f1ee6")
-    public fun spec(spec: VirtualNodeSpecProperty.Builder.() -> Unit) {
-    }
+    public fun spec(spec: VirtualNodeSpecProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun virtualNodeName(virtualNodeName: String) {
-    }
+    public fun virtualNodeName(virtualNodeName: String)
   }
 
   private class BuilderImpl(
@@ -113,32 +106,32 @@ public open class CfnVirtualNode internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnVirtualNode.Builder =
         software.amazon.awscdk.services.appmesh.CfnVirtualNode.Builder.create(scope, id)
 
-    public override fun meshName(meshName: String) {
+    override fun meshName(meshName: String) {
       cdkBuilder.meshName(meshName)
     }
 
-    public override fun meshOwner(meshOwner: String) {
+    override fun meshOwner(meshOwner: String) {
       cdkBuilder.meshOwner(meshOwner)
     }
 
-    public override fun spec(spec: IResolvable) {
+    override fun spec(spec: IResolvable) {
       cdkBuilder.spec(spec.let(IResolvable::unwrap))
     }
 
-    public override fun spec(spec: VirtualNodeSpecProperty) {
+    override fun spec(spec: VirtualNodeSpecProperty) {
       cdkBuilder.spec(spec.let(VirtualNodeSpecProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1155f49a4f07152dc7878b95fb5bfab1a0c3e50c20c9713c79e31d05776f1ee6")
-    public override fun spec(spec: VirtualNodeSpecProperty.Builder.() -> Unit): Unit =
+    override fun spec(spec: VirtualNodeSpecProperty.Builder.() -> Unit): Unit =
         spec(VirtualNodeSpecProperty(spec))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun virtualNodeName(virtualNodeName: String) {
+    override fun virtualNodeName(virtualNodeName: String) {
       cdkBuilder.virtualNodeName(virtualNodeName)
     }
 
@@ -170,8 +163,7 @@ public open class CfnVirtualNode internal constructor(
     public fun certificateAuthorityArns(): List<String>
 
     public interface Builder {
-      public fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
-      }
+      public fun certificateAuthorityArns(certificateAuthorityArns: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -180,7 +172,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty.builder()
 
-      public override fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
+      override fun certificateAuthorityArns(certificateAuthorityArns: List<String>) {
         cdkBuilder.certificateAuthorityArns(certificateAuthorityArns)
       }
 
@@ -193,7 +185,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty,
     ) : TlsValidationContextAcmTrustProperty {
-      public override fun certificateAuthorityArns(): List<String> =
+      override fun certificateAuthorityArns(): List<String> =
           unwrap(this).getCertificateAuthorityArns() ?: emptyList()
     }
 
@@ -224,27 +216,21 @@ public open class CfnVirtualNode internal constructor(
     public fun perRequest(): Any? = unwrap(this).getPerRequest()
 
     public interface Builder {
-      public fun idle(idle: IResolvable) {
-      }
+      public fun idle(idle: IResolvable)
 
-      public fun idle(idle: DurationProperty) {
-      }
+      public fun idle(idle: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a2f3e48fe5f784e249dbd62ccb6d52a3c4d1e206053d4dd61b1b0226c7e0eba6")
-      public fun idle(idle: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun idle(idle: DurationProperty.Builder.() -> Unit)
 
-      public fun perRequest(perRequest: IResolvable) {
-      }
+      public fun perRequest(perRequest: IResolvable)
 
-      public fun perRequest(perRequest: DurationProperty) {
-      }
+      public fun perRequest(perRequest: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a4ffbaa43003f5b92e407476af9a078f5806499ab4d93b1de0978b4e5ebcd64")
-      public fun perRequest(perRequest: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun perRequest(perRequest: DurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -252,30 +238,30 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty.builder()
 
-      public override fun idle(idle: IResolvable) {
+      override fun idle(idle: IResolvable) {
         cdkBuilder.idle(idle.let(IResolvable::unwrap))
       }
 
-      public override fun idle(idle: DurationProperty) {
+      override fun idle(idle: DurationProperty) {
         cdkBuilder.idle(idle.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a2f3e48fe5f784e249dbd62ccb6d52a3c4d1e206053d4dd61b1b0226c7e0eba6")
-      public override fun idle(idle: DurationProperty.Builder.() -> Unit): Unit =
+      override fun idle(idle: DurationProperty.Builder.() -> Unit): Unit =
           idle(DurationProperty(idle))
 
-      public override fun perRequest(perRequest: IResolvable) {
+      override fun perRequest(perRequest: IResolvable) {
         cdkBuilder.perRequest(perRequest.let(IResolvable::unwrap))
       }
 
-      public override fun perRequest(perRequest: DurationProperty) {
+      override fun perRequest(perRequest: DurationProperty) {
         cdkBuilder.perRequest(perRequest.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9a4ffbaa43003f5b92e407476af9a078f5806499ab4d93b1de0978b4e5ebcd64")
-      public override fun perRequest(perRequest: DurationProperty.Builder.() -> Unit): Unit =
+      override fun perRequest(perRequest: DurationProperty.Builder.() -> Unit): Unit =
           perRequest(DurationProperty(perRequest))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty
@@ -286,9 +272,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HttpTimeoutProperty,
     ) : HttpTimeoutProperty {
-      public override fun idle(): Any? = unwrap(this).getIdle()
+      override fun idle(): Any? = unwrap(this).getIdle()
 
-      public override fun perRequest(): Any? = unwrap(this).getPerRequest()
+      override fun perRequest(): Any? = unwrap(this).getPerRequest()
     }
 
     public companion object {
@@ -315,16 +301,13 @@ public open class CfnVirtualNode internal constructor(
     public fun `file`(): Any? = unwrap(this).getFile()
 
     public interface Builder {
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: FileAccessLogProperty) {
-      }
+      public fun `file`(`file`: FileAccessLogProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("77a047efa54dbe4f6bd35e41f99e0b994b871af1fe1cd5f0d009d1c2c47a2962")
-      public fun `file`(`file`: FileAccessLogProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: FileAccessLogProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -332,17 +315,17 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty.builder()
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: FileAccessLogProperty) {
+      override fun `file`(`file`: FileAccessLogProperty) {
         cdkBuilder.`file`(`file`.let(FileAccessLogProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("77a047efa54dbe4f6bd35e41f99e0b994b871af1fe1cd5f0d009d1c2c47a2962")
-      public override fun `file`(`file`: FileAccessLogProperty.Builder.() -> Unit): Unit =
+      override fun `file`(`file`: FileAccessLogProperty.Builder.() -> Unit): Unit =
           `file`(FileAccessLogProperty(`file`))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty =
@@ -353,7 +336,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AccessLogProperty,
     ) : AccessLogProperty {
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
     }
 
     public companion object {
@@ -380,8 +363,7 @@ public open class CfnVirtualNode internal constructor(
     public fun certificateChain(): String
 
     public interface Builder {
-      public fun certificateChain(certificateChain: String) {
-      }
+      public fun certificateChain(certificateChain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -390,7 +372,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextFileTrustProperty.builder()
 
-      public override fun certificateChain(certificateChain: String) {
+      override fun certificateChain(certificateChain: String) {
         cdkBuilder.certificateChain(certificateChain)
       }
 
@@ -403,7 +385,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextFileTrustProperty,
     ) : TlsValidationContextFileTrustProperty {
-      public override fun certificateChain(): String = unwrap(this).getCertificateChain()
+      override fun certificateChain(): String = unwrap(this).getCertificateChain()
     }
 
     public companion object {
@@ -431,8 +413,7 @@ public open class CfnVirtualNode internal constructor(
     public fun secretName(): String
 
     public interface Builder {
-      public fun secretName(secretName: String) {
-      }
+      public fun secretName(secretName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -441,7 +422,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsSdsCertificateProperty.builder()
 
-      public override fun secretName(secretName: String) {
+      override fun secretName(secretName: String) {
         cdkBuilder.secretName(secretName)
       }
 
@@ -454,7 +435,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsSdsCertificateProperty,
     ) : ListenerTlsSdsCertificateProperty {
-      public override fun secretName(): String = unwrap(this).getSecretName()
+      override fun secretName(): String = unwrap(this).getSecretName()
     }
 
     public companion object {
@@ -482,16 +463,13 @@ public open class CfnVirtualNode internal constructor(
     public fun tls(): Any? = unwrap(this).getTls()
 
     public interface Builder {
-      public fun tls(tls: IResolvable) {
-      }
+      public fun tls(tls: IResolvable)
 
-      public fun tls(tls: ClientPolicyTlsProperty) {
-      }
+      public fun tls(tls: ClientPolicyTlsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6e457bcfa4301806bc603707bed028637b0f3e6140ab3f94a7f2bce997ede57f")
-      public fun tls(tls: ClientPolicyTlsProperty.Builder.() -> Unit) {
-      }
+      public fun tls(tls: ClientPolicyTlsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -499,17 +477,17 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty.builder()
 
-      public override fun tls(tls: IResolvable) {
+      override fun tls(tls: IResolvable) {
         cdkBuilder.tls(tls.let(IResolvable::unwrap))
       }
 
-      public override fun tls(tls: ClientPolicyTlsProperty) {
+      override fun tls(tls: ClientPolicyTlsProperty) {
         cdkBuilder.tls(tls.let(ClientPolicyTlsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6e457bcfa4301806bc603707bed028637b0f3e6140ab3f94a7f2bce997ede57f")
-      public override fun tls(tls: ClientPolicyTlsProperty.Builder.() -> Unit): Unit =
+      override fun tls(tls: ClientPolicyTlsProperty.Builder.() -> Unit): Unit =
           tls(ClientPolicyTlsProperty(tls))
 
       public fun build():
@@ -521,7 +499,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyProperty,
     ) : ClientPolicyProperty {
-      public override fun tls(): Any? = unwrap(this).getTls()
+      override fun tls(): Any? = unwrap(this).getTls()
     }
 
     public companion object {
@@ -548,8 +526,7 @@ public open class CfnVirtualNode internal constructor(
     public fun certificateArn(): String
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -558,7 +535,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsAcmCertificateProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
@@ -571,7 +548,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsAcmCertificateProperty,
     ) : ListenerTlsAcmCertificateProperty {
-      public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String = unwrap(this).getCertificateArn()
     }
 
     public companion object {
@@ -601,19 +578,15 @@ public open class CfnVirtualNode internal constructor(
     public fun path(): String
 
     public interface Builder {
-      public fun format(format: IResolvable) {
-      }
+      public fun format(format: IResolvable)
 
-      public fun format(format: LoggingFormatProperty) {
-      }
+      public fun format(format: LoggingFormatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b235caa145ca773f775f76940aff30e31dc76f06c6ef5577b6a0326b5350a3ec")
-      public fun format(format: LoggingFormatProperty.Builder.() -> Unit) {
-      }
+      public fun format(format: LoggingFormatProperty.Builder.() -> Unit)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -621,20 +594,20 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty.builder()
 
-      public override fun format(format: IResolvable) {
+      override fun format(format: IResolvable) {
         cdkBuilder.format(format.let(IResolvable::unwrap))
       }
 
-      public override fun format(format: LoggingFormatProperty) {
+      override fun format(format: LoggingFormatProperty) {
         cdkBuilder.format(format.let(LoggingFormatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b235caa145ca773f775f76940aff30e31dc76f06c6ef5577b6a0326b5350a3ec")
-      public override fun format(format: LoggingFormatProperty.Builder.() -> Unit): Unit =
+      override fun format(format: LoggingFormatProperty.Builder.() -> Unit): Unit =
           format(LoggingFormatProperty(format))
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -647,9 +620,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.FileAccessLogProperty,
     ) : FileAccessLogProperty {
-      public override fun format(): Any? = unwrap(this).getFormat()
+      override fun format(): Any? = unwrap(this).getFormat()
 
-      public override fun path(): String = unwrap(this).getPath()
+      override fun path(): String = unwrap(this).getPath()
     }
 
     public companion object {
@@ -678,14 +651,11 @@ public open class CfnVirtualNode internal constructor(
     public fun text(): String? = unwrap(this).getText()
 
     public interface Builder {
-      public fun json(json: IResolvable) {
-      }
+      public fun json(json: IResolvable)
 
-      public fun json(json: List<Any>) {
-      }
+      public fun json(json: List<Any>)
 
-      public fun text(text: String) {
-      }
+      public fun text(text: String)
     }
 
     private class BuilderImpl : Builder {
@@ -693,15 +663,15 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty.builder()
 
-      public override fun json(json: IResolvable) {
+      override fun json(json: IResolvable) {
         cdkBuilder.json(json.let(IResolvable::unwrap))
       }
 
-      public override fun json(json: List<Any>) {
+      override fun json(json: List<Any>) {
         cdkBuilder.json(json)
       }
 
-      public override fun text(text: String) {
+      override fun text(text: String) {
         cdkBuilder.text(text)
       }
 
@@ -714,9 +684,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingFormatProperty,
     ) : LoggingFormatProperty {
-      public override fun json(): Any? = unwrap(this).getJson()
+      override fun json(): Any? = unwrap(this).getJson()
 
-      public override fun text(): String? = unwrap(this).getText()
+      override fun text(): String? = unwrap(this).getText()
     }
 
     public companion object {
@@ -749,20 +719,15 @@ public open class CfnVirtualNode internal constructor(
     public fun serviceName(): String
 
     public interface Builder {
-      public fun attributes(attributes: IResolvable) {
-      }
+      public fun attributes(attributes: IResolvable)
 
-      public fun attributes(attributes: List<Any>) {
-      }
+      public fun attributes(attributes: List<Any>)
 
-      public fun ipPreference(ipPreference: String) {
-      }
+      public fun ipPreference(ipPreference: String)
 
-      public fun namespaceName(namespaceName: String) {
-      }
+      public fun namespaceName(namespaceName: String)
 
-      public fun serviceName(serviceName: String) {
-      }
+      public fun serviceName(serviceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -771,23 +736,23 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty.builder()
 
-      public override fun attributes(attributes: IResolvable) {
+      override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
-      public override fun attributes(attributes: List<Any>) {
+      override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
 
-      public override fun ipPreference(ipPreference: String) {
+      override fun ipPreference(ipPreference: String) {
         cdkBuilder.ipPreference(ipPreference)
       }
 
-      public override fun namespaceName(namespaceName: String) {
+      override fun namespaceName(namespaceName: String) {
         cdkBuilder.namespaceName(namespaceName)
       }
 
-      public override fun serviceName(serviceName: String) {
+      override fun serviceName(serviceName: String) {
         cdkBuilder.serviceName(serviceName)
       }
 
@@ -800,13 +765,13 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty,
     ) : AwsCloudMapServiceDiscoveryProperty {
-      public override fun attributes(): Any? = unwrap(this).getAttributes()
+      override fun attributes(): Any? = unwrap(this).getAttributes()
 
-      public override fun ipPreference(): String? = unwrap(this).getIpPreference()
+      override fun ipPreference(): String? = unwrap(this).getIpPreference()
 
-      public override fun namespaceName(): String = unwrap(this).getNamespaceName()
+      override fun namespaceName(): String = unwrap(this).getNamespaceName()
 
-      public override fun serviceName(): String = unwrap(this).getServiceName()
+      override fun serviceName(): String = unwrap(this).getServiceName()
     }
 
     public companion object {
@@ -834,16 +799,13 @@ public open class CfnVirtualNode internal constructor(
     public fun accessLog(): Any? = unwrap(this).getAccessLog()
 
     public interface Builder {
-      public fun accessLog(accessLog: IResolvable) {
-      }
+      public fun accessLog(accessLog: IResolvable)
 
-      public fun accessLog(accessLog: AccessLogProperty) {
-      }
+      public fun accessLog(accessLog: AccessLogProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a35f0f98ded7a2bd9905d69c135fe419b32fd83db36df883dded919d62b585dd")
-      public fun accessLog(accessLog: AccessLogProperty.Builder.() -> Unit) {
-      }
+      public fun accessLog(accessLog: AccessLogProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -851,17 +813,17 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty.builder()
 
-      public override fun accessLog(accessLog: IResolvable) {
+      override fun accessLog(accessLog: IResolvable) {
         cdkBuilder.accessLog(accessLog.let(IResolvable::unwrap))
       }
 
-      public override fun accessLog(accessLog: AccessLogProperty) {
+      override fun accessLog(accessLog: AccessLogProperty) {
         cdkBuilder.accessLog(accessLog.let(AccessLogProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a35f0f98ded7a2bd9905d69c135fe419b32fd83db36df883dded919d62b585dd")
-      public override fun accessLog(accessLog: AccessLogProperty.Builder.() -> Unit): Unit =
+      override fun accessLog(accessLog: AccessLogProperty.Builder.() -> Unit): Unit =
           accessLog(AccessLogProperty(accessLog))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty =
@@ -872,7 +834,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.LoggingProperty,
     ) : LoggingProperty {
-      public override fun accessLog(): Any? = unwrap(this).getAccessLog()
+      override fun accessLog(): Any? = unwrap(this).getAccessLog()
     }
 
     public companion object {
@@ -899,8 +861,7 @@ public open class CfnVirtualNode internal constructor(
     public fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
 
     public interface Builder {
-      public fun exact(exact: List<String>) {
-      }
+      public fun exact(exact: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -909,7 +870,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty.builder()
 
-      public override fun exact(exact: List<String>) {
+      override fun exact(exact: List<String>) {
         cdkBuilder.exact(exact)
       }
 
@@ -922,7 +883,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty,
     ) : SubjectAlternativeNameMatchersProperty {
-      public override fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
+      override fun exact(): List<String> = unwrap(this).getExact() ?: emptyList()
     }
 
     public companion object {
@@ -952,28 +913,22 @@ public open class CfnVirtualNode internal constructor(
     public fun trust(): Any
 
     public interface Builder {
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
 
-      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edc06a6797214a405c22d9acce7c7f1acb2bfbdb52657dcab08d01ef2ae82b3c")
       public
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit) {
-      }
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
 
-      public fun trust(trust: IResolvable) {
-      }
+      public fun trust(trust: IResolvable)
 
-      public fun trust(trust: ListenerTlsValidationContextTrustProperty) {
-      }
+      public fun trust(trust: ListenerTlsValidationContextTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c8f9cbc6a44f432cb74fd5cb2ae2ba93efbd7535b4ace97cf387e0b803dd7212")
-      public fun trust(trust: ListenerTlsValidationContextTrustProperty.Builder.() -> Unit) {
-      }
+      public fun trust(trust: ListenerTlsValidationContextTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -982,34 +937,33 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty.builder()
 
-      public override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("edc06a6797214a405c22d9acce7c7f1acb2bfbdb52657dcab08d01ef2ae82b3c")
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
           Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
 
-      public override fun trust(trust: IResolvable) {
+      override fun trust(trust: IResolvable) {
         cdkBuilder.trust(trust.let(IResolvable::unwrap))
       }
 
-      public override fun trust(trust: ListenerTlsValidationContextTrustProperty) {
+      override fun trust(trust: ListenerTlsValidationContextTrustProperty) {
         cdkBuilder.trust(trust.let(ListenerTlsValidationContextTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c8f9cbc6a44f432cb74fd5cb2ae2ba93efbd7535b4ace97cf387e0b803dd7212")
-      public override
-          fun trust(trust: ListenerTlsValidationContextTrustProperty.Builder.() -> Unit): Unit =
-          trust(ListenerTlsValidationContextTrustProperty(trust))
+      override fun trust(trust: ListenerTlsValidationContextTrustProperty.Builder.() -> Unit): Unit
+          = trust(ListenerTlsValidationContextTrustProperty(trust))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty
@@ -1020,10 +974,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextProperty,
     ) : ListenerTlsValidationContextProperty {
-      public override fun subjectAlternativeNames(): Any? =
-          unwrap(this).getSubjectAlternativeNames()
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
 
-      public override fun trust(): Any = unwrap(this).getTrust()
+      override fun trust(): Any = unwrap(this).getTrust()
     }
 
     public companion object {
@@ -1051,8 +1004,7 @@ public open class CfnVirtualNode internal constructor(
     public fun maxRequests(): Number
 
     public interface Builder {
-      public fun maxRequests(maxRequests: Number) {
-      }
+      public fun maxRequests(maxRequests: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1061,7 +1013,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeGrpcConnectionPoolProperty.builder()
 
-      public override fun maxRequests(maxRequests: Number) {
+      override fun maxRequests(maxRequests: Number) {
         cdkBuilder.maxRequests(maxRequests)
       }
 
@@ -1074,7 +1026,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeGrpcConnectionPoolProperty,
     ) : VirtualNodeGrpcConnectionPoolProperty {
-      public override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
     }
 
     public companion object {
@@ -1108,39 +1060,29 @@ public open class CfnVirtualNode internal constructor(
     public fun validation(): Any
 
     public interface Builder {
-      public fun certificate(certificate: IResolvable) {
-      }
+      public fun certificate(certificate: IResolvable)
 
-      public fun certificate(certificate: ClientTlsCertificateProperty) {
-      }
+      public fun certificate(certificate: ClientTlsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f1308834fc19d7fc2de1cdaf4e6ba553f82ed9303e831028cacbf0dedef967b")
-      public fun certificate(certificate: ClientTlsCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun certificate(certificate: ClientTlsCertificateProperty.Builder.() -> Unit)
 
-      public fun enforce(enforce: Boolean) {
-      }
+      public fun enforce(enforce: Boolean)
 
-      public fun enforce(enforce: IResolvable) {
-      }
+      public fun enforce(enforce: IResolvable)
 
-      public fun ports(ports: IResolvable) {
-      }
+      public fun ports(ports: IResolvable)
 
-      public fun ports(ports: List<Number>) {
-      }
+      public fun ports(ports: List<Number>)
 
-      public fun validation(validation: IResolvable) {
-      }
+      public fun validation(validation: IResolvable)
 
-      public fun validation(validation: TlsValidationContextProperty) {
-      }
+      public fun validation(validation: TlsValidationContextProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52251e4e5cf1a4945988da2a08bc8a38c4b08b204471dd117c172382e28c6f5f")
-      public fun validation(validation: TlsValidationContextProperty.Builder.() -> Unit) {
-      }
+      public fun validation(validation: TlsValidationContextProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1148,47 +1090,47 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty.builder()
 
-      public override fun certificate(certificate: IResolvable) {
+      override fun certificate(certificate: IResolvable) {
         cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
       }
 
-      public override fun certificate(certificate: ClientTlsCertificateProperty) {
+      override fun certificate(certificate: ClientTlsCertificateProperty) {
         cdkBuilder.certificate(certificate.let(ClientTlsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6f1308834fc19d7fc2de1cdaf4e6ba553f82ed9303e831028cacbf0dedef967b")
-      public override fun certificate(certificate: ClientTlsCertificateProperty.Builder.() -> Unit):
-          Unit = certificate(ClientTlsCertificateProperty(certificate))
+      override fun certificate(certificate: ClientTlsCertificateProperty.Builder.() -> Unit): Unit =
+          certificate(ClientTlsCertificateProperty(certificate))
 
-      public override fun enforce(enforce: Boolean) {
+      override fun enforce(enforce: Boolean) {
         cdkBuilder.enforce(enforce)
       }
 
-      public override fun enforce(enforce: IResolvable) {
+      override fun enforce(enforce: IResolvable) {
         cdkBuilder.enforce(enforce.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: IResolvable) {
+      override fun ports(ports: IResolvable) {
         cdkBuilder.ports(ports.let(IResolvable::unwrap))
       }
 
-      public override fun ports(ports: List<Number>) {
+      override fun ports(ports: List<Number>) {
         cdkBuilder.ports(ports)
       }
 
-      public override fun validation(validation: IResolvable) {
+      override fun validation(validation: IResolvable) {
         cdkBuilder.validation(validation.let(IResolvable::unwrap))
       }
 
-      public override fun validation(validation: TlsValidationContextProperty) {
+      override fun validation(validation: TlsValidationContextProperty) {
         cdkBuilder.validation(validation.let(TlsValidationContextProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52251e4e5cf1a4945988da2a08bc8a38c4b08b204471dd117c172382e28c6f5f")
-      public override fun validation(validation: TlsValidationContextProperty.Builder.() -> Unit):
-          Unit = validation(TlsValidationContextProperty(validation))
+      override fun validation(validation: TlsValidationContextProperty.Builder.() -> Unit): Unit =
+          validation(TlsValidationContextProperty(validation))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty =
@@ -1199,13 +1141,13 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientPolicyTlsProperty,
     ) : ClientPolicyTlsProperty {
-      public override fun certificate(): Any? = unwrap(this).getCertificate()
+      override fun certificate(): Any? = unwrap(this).getCertificate()
 
-      public override fun enforce(): Any? = unwrap(this).getEnforce()
+      override fun enforce(): Any? = unwrap(this).getEnforce()
 
-      public override fun ports(): Any? = unwrap(this).getPorts()
+      override fun ports(): Any? = unwrap(this).getPorts()
 
-      public override fun validation(): Any = unwrap(this).getValidation()
+      override fun validation(): Any = unwrap(this).getValidation()
     }
 
     public companion object {
@@ -1236,38 +1178,29 @@ public open class CfnVirtualNode internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun acm(acm: IResolvable) {
-      }
+      public fun acm(acm: IResolvable)
 
-      public fun acm(acm: ListenerTlsAcmCertificateProperty) {
-      }
+      public fun acm(acm: ListenerTlsAcmCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb032ee5102ad80e953ad2ce55b834aa42e25e80b7ff85776f6fa47e9ebfb403")
-      public fun acm(acm: ListenerTlsAcmCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun acm(acm: ListenerTlsAcmCertificateProperty.Builder.() -> Unit)
 
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: ListenerTlsFileCertificateProperty) {
-      }
+      public fun `file`(`file`: ListenerTlsFileCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("74fad4106711e75536bcbf59b5fd58437dc9a98979579dc2f7c7ac7a876bd97c")
-      public fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: ListenerTlsSdsCertificateProperty) {
-      }
+      public fun sds(sds: ListenerTlsSdsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c82a3641aca69e99c1d0e545d21e29720899db03c76f37ab907a7b496c450a10")
-      public fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1276,43 +1209,43 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsCertificateProperty.builder()
 
-      public override fun acm(acm: IResolvable) {
+      override fun acm(acm: IResolvable) {
         cdkBuilder.acm(acm.let(IResolvable::unwrap))
       }
 
-      public override fun acm(acm: ListenerTlsAcmCertificateProperty) {
+      override fun acm(acm: ListenerTlsAcmCertificateProperty) {
         cdkBuilder.acm(acm.let(ListenerTlsAcmCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bb032ee5102ad80e953ad2ce55b834aa42e25e80b7ff85776f6fa47e9ebfb403")
-      public override fun acm(acm: ListenerTlsAcmCertificateProperty.Builder.() -> Unit): Unit =
+      override fun acm(acm: ListenerTlsAcmCertificateProperty.Builder.() -> Unit): Unit =
           acm(ListenerTlsAcmCertificateProperty(acm))
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: ListenerTlsFileCertificateProperty) {
+      override fun `file`(`file`: ListenerTlsFileCertificateProperty) {
         cdkBuilder.`file`(`file`.let(ListenerTlsFileCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("74fad4106711e75536bcbf59b5fd58437dc9a98979579dc2f7c7ac7a876bd97c")
-      public override fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit):
-          Unit = `file`(ListenerTlsFileCertificateProperty(`file`))
+      override fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit): Unit =
+          `file`(ListenerTlsFileCertificateProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: ListenerTlsSdsCertificateProperty) {
+      override fun sds(sds: ListenerTlsSdsCertificateProperty) {
         cdkBuilder.sds(sds.let(ListenerTlsSdsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c82a3641aca69e99c1d0e545d21e29720899db03c76f37ab907a7b496c450a10")
-      public override fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit): Unit =
+      override fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit): Unit =
           sds(ListenerTlsSdsCertificateProperty(sds))
 
       public fun build():
@@ -1324,11 +1257,11 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsCertificateProperty,
     ) : ListenerTlsCertificateProperty {
-      public override fun acm(): Any? = unwrap(this).getAcm()
+      override fun acm(): Any? = unwrap(this).getAcm()
 
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -1361,49 +1294,37 @@ public open class CfnVirtualNode internal constructor(
     public fun tcp(): Any? = unwrap(this).getTcp()
 
     public interface Builder {
-      public fun grpc(grpc: IResolvable) {
-      }
+      public fun grpc(grpc: IResolvable)
 
-      public fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty) {
-      }
+      public fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28974c9fe5f41ea5caad4092771fd829ab391c7effd1481770a6d4e6ae948c68")
-      public fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun http(http: IResolvable) {
-      }
+      public fun http(http: IResolvable)
 
-      public fun http(http: VirtualNodeHttpConnectionPoolProperty) {
-      }
+      public fun http(http: VirtualNodeHttpConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("710d3775ee0701901c1c87a294918f36b97a7e8b73c0ed6e5c74d48b9fc15889")
-      public fun http(http: VirtualNodeHttpConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun http(http: VirtualNodeHttpConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun http2(http2: IResolvable) {
-      }
+      public fun http2(http2: IResolvable)
 
-      public fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty) {
-      }
+      public fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c61792de0aa041e7cf5c767a0b49fa9b652f59742fb071d8a3e72d0db73aa56")
-      public fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun tcp(tcp: IResolvable) {
-      }
+      public fun tcp(tcp: IResolvable)
 
-      public fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty) {
-      }
+      public fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fb0def611e45703cfc80421c772a7a82487c79e2f0cff1f064cd444fcca638f")
-      public fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty.Builder.() -> Unit) {
-      }
+      public fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1412,56 +1333,56 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeConnectionPoolProperty.builder()
 
-      public override fun grpc(grpc: IResolvable) {
+      override fun grpc(grpc: IResolvable) {
         cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
       }
 
-      public override fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty) {
+      override fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty) {
         cdkBuilder.grpc(grpc.let(VirtualNodeGrpcConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28974c9fe5f41ea5caad4092771fd829ab391c7effd1481770a6d4e6ae948c68")
-      public override fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty.Builder.() -> Unit): Unit
-          = grpc(VirtualNodeGrpcConnectionPoolProperty(grpc))
+      override fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty.Builder.() -> Unit): Unit =
+          grpc(VirtualNodeGrpcConnectionPoolProperty(grpc))
 
-      public override fun http(http: IResolvable) {
+      override fun http(http: IResolvable) {
         cdkBuilder.http(http.let(IResolvable::unwrap))
       }
 
-      public override fun http(http: VirtualNodeHttpConnectionPoolProperty) {
+      override fun http(http: VirtualNodeHttpConnectionPoolProperty) {
         cdkBuilder.http(http.let(VirtualNodeHttpConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("710d3775ee0701901c1c87a294918f36b97a7e8b73c0ed6e5c74d48b9fc15889")
-      public override fun http(http: VirtualNodeHttpConnectionPoolProperty.Builder.() -> Unit): Unit
-          = http(VirtualNodeHttpConnectionPoolProperty(http))
+      override fun http(http: VirtualNodeHttpConnectionPoolProperty.Builder.() -> Unit): Unit =
+          http(VirtualNodeHttpConnectionPoolProperty(http))
 
-      public override fun http2(http2: IResolvable) {
+      override fun http2(http2: IResolvable) {
         cdkBuilder.http2(http2.let(IResolvable::unwrap))
       }
 
-      public override fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty) {
+      override fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty) {
         cdkBuilder.http2(http2.let(VirtualNodeHttp2ConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4c61792de0aa041e7cf5c767a0b49fa9b652f59742fb071d8a3e72d0db73aa56")
-      public override fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty.Builder.() -> Unit):
-          Unit = http2(VirtualNodeHttp2ConnectionPoolProperty(http2))
+      override fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty.Builder.() -> Unit): Unit =
+          http2(VirtualNodeHttp2ConnectionPoolProperty(http2))
 
-      public override fun tcp(tcp: IResolvable) {
+      override fun tcp(tcp: IResolvable) {
         cdkBuilder.tcp(tcp.let(IResolvable::unwrap))
       }
 
-      public override fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty) {
+      override fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty) {
         cdkBuilder.tcp(tcp.let(VirtualNodeTcpConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5fb0def611e45703cfc80421c772a7a82487c79e2f0cff1f064cd444fcca638f")
-      public override fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty.Builder.() -> Unit): Unit =
+      override fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty.Builder.() -> Unit): Unit =
           tcp(VirtualNodeTcpConnectionPoolProperty(tcp))
 
       public fun build():
@@ -1473,13 +1394,13 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeConnectionPoolProperty,
     ) : VirtualNodeConnectionPoolProperty {
-      public override fun grpc(): Any? = unwrap(this).getGrpc()
+      override fun grpc(): Any? = unwrap(this).getGrpc()
 
-      public override fun http(): Any? = unwrap(this).getHttp()
+      override fun http(): Any? = unwrap(this).getHttp()
 
-      public override fun http2(): Any? = unwrap(this).getHttp2()
+      override fun http2(): Any? = unwrap(this).getHttp2()
 
-      public override fun tcp(): Any? = unwrap(this).getTcp()
+      override fun tcp(): Any? = unwrap(this).getTcp()
     }
 
     public companion object {
@@ -1509,11 +1430,9 @@ public open class CfnVirtualNode internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1521,11 +1440,11 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty.builder()
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1537,9 +1456,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DurationProperty,
     ) : DurationProperty {
-      public override fun unit(): String = unwrap(this).getUnit()
+      override fun unit(): String = unwrap(this).getUnit()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1576,72 +1495,54 @@ public open class CfnVirtualNode internal constructor(
     public fun tls(): Any? = unwrap(this).getTls()
 
     public interface Builder {
-      public fun connectionPool(connectionPool: IResolvable) {
-      }
+      public fun connectionPool(connectionPool: IResolvable)
 
-      public fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty) {
-      }
+      public fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73e8bb2088b07f1d9c17f979646d8caac2840f3c300b54d8ece5dc4e2dc29cdc")
       public
-          fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty.Builder.() -> Unit) {
-      }
+          fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty.Builder.() -> Unit)
 
-      public fun healthCheck(healthCheck: IResolvable) {
-      }
+      public fun healthCheck(healthCheck: IResolvable)
 
-      public fun healthCheck(healthCheck: HealthCheckProperty) {
-      }
+      public fun healthCheck(healthCheck: HealthCheckProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("610909536009ea3eb8f02b76bcc5d28f01ecb6ef2da3be37c321acd89b42f00b")
-      public fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit) {
-      }
+      public fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit)
 
-      public fun outlierDetection(outlierDetection: IResolvable) {
-      }
+      public fun outlierDetection(outlierDetection: IResolvable)
 
-      public fun outlierDetection(outlierDetection: OutlierDetectionProperty) {
-      }
+      public fun outlierDetection(outlierDetection: OutlierDetectionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efa48cf3186219ec8ba58de0ca22dba76fb8b02bee554c5e3928ede7f82343e0")
-      public fun outlierDetection(outlierDetection: OutlierDetectionProperty.Builder.() -> Unit) {
-      }
+      public fun outlierDetection(outlierDetection: OutlierDetectionProperty.Builder.() -> Unit)
 
-      public fun portMapping(portMapping: IResolvable) {
-      }
+      public fun portMapping(portMapping: IResolvable)
 
-      public fun portMapping(portMapping: PortMappingProperty) {
-      }
+      public fun portMapping(portMapping: PortMappingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a9ffae0ca6685027997ecf8c0f50d78da5f5be9757ddf54526a3adfb2adeffe")
-      public fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit) {
-      }
+      public fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit)
 
-      public fun timeout(timeout: IResolvable) {
-      }
+      public fun timeout(timeout: IResolvable)
 
-      public fun timeout(timeout: ListenerTimeoutProperty) {
-      }
+      public fun timeout(timeout: ListenerTimeoutProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("297ae121626d7760558e8ac310372c9625a8836052094f88a2ba4837a1305a16")
-      public fun timeout(timeout: ListenerTimeoutProperty.Builder.() -> Unit) {
-      }
+      public fun timeout(timeout: ListenerTimeoutProperty.Builder.() -> Unit)
 
-      public fun tls(tls: IResolvable) {
-      }
+      public fun tls(tls: IResolvable)
 
-      public fun tls(tls: ListenerTlsProperty) {
-      }
+      public fun tls(tls: ListenerTlsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0008091fd2d52098801ae827f99c4c6aecd3332fb40603851df92a3eeb7cc68f")
-      public fun tls(tls: ListenerTlsProperty.Builder.() -> Unit) {
-      }
+      public fun tls(tls: ListenerTlsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1649,84 +1550,83 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty.builder()
 
-      public override fun connectionPool(connectionPool: IResolvable) {
+      override fun connectionPool(connectionPool: IResolvable) {
         cdkBuilder.connectionPool(connectionPool.let(IResolvable::unwrap))
       }
 
-      public override fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty) {
+      override fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty) {
         cdkBuilder.connectionPool(connectionPool.let(VirtualNodeConnectionPoolProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73e8bb2088b07f1d9c17f979646d8caac2840f3c300b54d8ece5dc4e2dc29cdc")
-      public override
+      override
           fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty.Builder.() -> Unit):
           Unit = connectionPool(VirtualNodeConnectionPoolProperty(connectionPool))
 
-      public override fun healthCheck(healthCheck: IResolvable) {
+      override fun healthCheck(healthCheck: IResolvable) {
         cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
       }
 
-      public override fun healthCheck(healthCheck: HealthCheckProperty) {
+      override fun healthCheck(healthCheck: HealthCheckProperty) {
         cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("610909536009ea3eb8f02b76bcc5d28f01ecb6ef2da3be37c321acd89b42f00b")
-      public override fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit): Unit =
+      override fun healthCheck(healthCheck: HealthCheckProperty.Builder.() -> Unit): Unit =
           healthCheck(HealthCheckProperty(healthCheck))
 
-      public override fun outlierDetection(outlierDetection: IResolvable) {
+      override fun outlierDetection(outlierDetection: IResolvable) {
         cdkBuilder.outlierDetection(outlierDetection.let(IResolvable::unwrap))
       }
 
-      public override fun outlierDetection(outlierDetection: OutlierDetectionProperty) {
+      override fun outlierDetection(outlierDetection: OutlierDetectionProperty) {
         cdkBuilder.outlierDetection(outlierDetection.let(OutlierDetectionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("efa48cf3186219ec8ba58de0ca22dba76fb8b02bee554c5e3928ede7f82343e0")
-      public override
-          fun outlierDetection(outlierDetection: OutlierDetectionProperty.Builder.() -> Unit): Unit
-          = outlierDetection(OutlierDetectionProperty(outlierDetection))
+      override fun outlierDetection(outlierDetection: OutlierDetectionProperty.Builder.() -> Unit):
+          Unit = outlierDetection(OutlierDetectionProperty(outlierDetection))
 
-      public override fun portMapping(portMapping: IResolvable) {
+      override fun portMapping(portMapping: IResolvable) {
         cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
       }
 
-      public override fun portMapping(portMapping: PortMappingProperty) {
+      override fun portMapping(portMapping: PortMappingProperty) {
         cdkBuilder.portMapping(portMapping.let(PortMappingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a9ffae0ca6685027997ecf8c0f50d78da5f5be9757ddf54526a3adfb2adeffe")
-      public override fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit): Unit =
+      override fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit): Unit =
           portMapping(PortMappingProperty(portMapping))
 
-      public override fun timeout(timeout: IResolvable) {
+      override fun timeout(timeout: IResolvable) {
         cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
       }
 
-      public override fun timeout(timeout: ListenerTimeoutProperty) {
+      override fun timeout(timeout: ListenerTimeoutProperty) {
         cdkBuilder.timeout(timeout.let(ListenerTimeoutProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("297ae121626d7760558e8ac310372c9625a8836052094f88a2ba4837a1305a16")
-      public override fun timeout(timeout: ListenerTimeoutProperty.Builder.() -> Unit): Unit =
+      override fun timeout(timeout: ListenerTimeoutProperty.Builder.() -> Unit): Unit =
           timeout(ListenerTimeoutProperty(timeout))
 
-      public override fun tls(tls: IResolvable) {
+      override fun tls(tls: IResolvable) {
         cdkBuilder.tls(tls.let(IResolvable::unwrap))
       }
 
-      public override fun tls(tls: ListenerTlsProperty) {
+      override fun tls(tls: ListenerTlsProperty) {
         cdkBuilder.tls(tls.let(ListenerTlsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0008091fd2d52098801ae827f99c4c6aecd3332fb40603851df92a3eeb7cc68f")
-      public override fun tls(tls: ListenerTlsProperty.Builder.() -> Unit): Unit =
+      override fun tls(tls: ListenerTlsProperty.Builder.() -> Unit): Unit =
           tls(ListenerTlsProperty(tls))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty =
@@ -1737,17 +1637,17 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerProperty,
     ) : ListenerProperty {
-      public override fun connectionPool(): Any? = unwrap(this).getConnectionPool()
+      override fun connectionPool(): Any? = unwrap(this).getConnectionPool()
 
-      public override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
+      override fun healthCheck(): Any? = unwrap(this).getHealthCheck()
 
-      public override fun outlierDetection(): Any? = unwrap(this).getOutlierDetection()
+      override fun outlierDetection(): Any? = unwrap(this).getOutlierDetection()
 
-      public override fun portMapping(): Any = unwrap(this).getPortMapping()
+      override fun portMapping(): Any = unwrap(this).getPortMapping()
 
-      public override fun timeout(): Any? = unwrap(this).getTimeout()
+      override fun timeout(): Any? = unwrap(this).getTimeout()
 
-      public override fun tls(): Any? = unwrap(this).getTls()
+      override fun tls(): Any? = unwrap(this).getTls()
     }
 
     public companion object {
@@ -1776,11 +1676,9 @@ public open class CfnVirtualNode internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1788,11 +1686,11 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1805,9 +1703,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.JsonFormatRefProperty,
     ) : JsonFormatRefProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1836,27 +1734,21 @@ public open class CfnVirtualNode internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: TlsValidationContextFileTrustProperty) {
-      }
+      public fun `file`(`file`: TlsValidationContextFileTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("620bb98ce49c51057e2bf1be641b9c5f54afa1d2fa0f7d061d3190010ad556b8")
-      public fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: TlsValidationContextSdsTrustProperty) {
-      }
+      public fun sds(sds: TlsValidationContextSdsTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a0fa3c2e113d57cb6586f5dd27bc894489a059a0e7b77a0f92b1cce375da7328")
-      public fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1865,30 +1757,30 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextTrustProperty.builder()
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: TlsValidationContextFileTrustProperty) {
+      override fun `file`(`file`: TlsValidationContextFileTrustProperty) {
         cdkBuilder.`file`(`file`.let(TlsValidationContextFileTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("620bb98ce49c51057e2bf1be641b9c5f54afa1d2fa0f7d061d3190010ad556b8")
-      public override fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit):
-          Unit = `file`(TlsValidationContextFileTrustProperty(`file`))
+      override fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit): Unit =
+          `file`(TlsValidationContextFileTrustProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: TlsValidationContextSdsTrustProperty) {
+      override fun sds(sds: TlsValidationContextSdsTrustProperty) {
         cdkBuilder.sds(sds.let(TlsValidationContextSdsTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a0fa3c2e113d57cb6586f5dd27bc894489a059a0e7b77a0f92b1cce375da7328")
-      public override fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit): Unit =
+      override fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit): Unit =
           sds(TlsValidationContextSdsTrustProperty(sds))
 
       public fun build():
@@ -1900,9 +1792,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsValidationContextTrustProperty,
     ) : ListenerTlsValidationContextTrustProperty {
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -1938,50 +1830,37 @@ public open class CfnVirtualNode internal constructor(
     public fun serviceDiscovery(): Any? = unwrap(this).getServiceDiscovery()
 
     public interface Builder {
-      public fun backendDefaults(backendDefaults: IResolvable) {
-      }
+      public fun backendDefaults(backendDefaults: IResolvable)
 
-      public fun backendDefaults(backendDefaults: BackendDefaultsProperty) {
-      }
+      public fun backendDefaults(backendDefaults: BackendDefaultsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93c3429e7267bbe197b1993db796cff2ee93608dd5dc9265b57428a20d027d41")
-      public fun backendDefaults(backendDefaults: BackendDefaultsProperty.Builder.() -> Unit) {
-      }
+      public fun backendDefaults(backendDefaults: BackendDefaultsProperty.Builder.() -> Unit)
 
-      public fun backends(backends: IResolvable) {
-      }
+      public fun backends(backends: IResolvable)
 
-      public fun backends(backends: List<Any>) {
-      }
+      public fun backends(backends: List<Any>)
 
-      public fun listeners(listeners: IResolvable) {
-      }
+      public fun listeners(listeners: IResolvable)
 
-      public fun listeners(listeners: List<Any>) {
-      }
+      public fun listeners(listeners: List<Any>)
 
-      public fun logging(logging: IResolvable) {
-      }
+      public fun logging(logging: IResolvable)
 
-      public fun logging(logging: LoggingProperty) {
-      }
+      public fun logging(logging: LoggingProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6441afb3d8eb2098051cfdb3da250f0894bb2b65ac3918ec37dbf49f66a0feb3")
-      public fun logging(logging: LoggingProperty.Builder.() -> Unit) {
-      }
+      public fun logging(logging: LoggingProperty.Builder.() -> Unit)
 
-      public fun serviceDiscovery(serviceDiscovery: IResolvable) {
-      }
+      public fun serviceDiscovery(serviceDiscovery: IResolvable)
 
-      public fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty) {
-      }
+      public fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87f3a53ccc7e8f18b7a781960027007b7d263e276f31f2c1caa0c5b74cefef6b")
-      public fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty.Builder.() -> Unit) {
-      }
+      public fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1989,62 +1868,60 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty.builder()
 
-      public override fun backendDefaults(backendDefaults: IResolvable) {
+      override fun backendDefaults(backendDefaults: IResolvable) {
         cdkBuilder.backendDefaults(backendDefaults.let(IResolvable::unwrap))
       }
 
-      public override fun backendDefaults(backendDefaults: BackendDefaultsProperty) {
+      override fun backendDefaults(backendDefaults: BackendDefaultsProperty) {
         cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaultsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93c3429e7267bbe197b1993db796cff2ee93608dd5dc9265b57428a20d027d41")
-      public override
-          fun backendDefaults(backendDefaults: BackendDefaultsProperty.Builder.() -> Unit): Unit =
-          backendDefaults(BackendDefaultsProperty(backendDefaults))
+      override fun backendDefaults(backendDefaults: BackendDefaultsProperty.Builder.() -> Unit):
+          Unit = backendDefaults(BackendDefaultsProperty(backendDefaults))
 
-      public override fun backends(backends: IResolvable) {
+      override fun backends(backends: IResolvable) {
         cdkBuilder.backends(backends.let(IResolvable::unwrap))
       }
 
-      public override fun backends(backends: List<Any>) {
+      override fun backends(backends: List<Any>) {
         cdkBuilder.backends(backends)
       }
 
-      public override fun listeners(listeners: IResolvable) {
+      override fun listeners(listeners: IResolvable) {
         cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
       }
 
-      public override fun listeners(listeners: List<Any>) {
+      override fun listeners(listeners: List<Any>) {
         cdkBuilder.listeners(listeners)
       }
 
-      public override fun logging(logging: IResolvable) {
+      override fun logging(logging: IResolvable) {
         cdkBuilder.logging(logging.let(IResolvable::unwrap))
       }
 
-      public override fun logging(logging: LoggingProperty) {
+      override fun logging(logging: LoggingProperty) {
         cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6441afb3d8eb2098051cfdb3da250f0894bb2b65ac3918ec37dbf49f66a0feb3")
-      public override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
+      override fun logging(logging: LoggingProperty.Builder.() -> Unit): Unit =
           logging(LoggingProperty(logging))
 
-      public override fun serviceDiscovery(serviceDiscovery: IResolvable) {
+      override fun serviceDiscovery(serviceDiscovery: IResolvable) {
         cdkBuilder.serviceDiscovery(serviceDiscovery.let(IResolvable::unwrap))
       }
 
-      public override fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty) {
+      override fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty) {
         cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscoveryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("87f3a53ccc7e8f18b7a781960027007b7d263e276f31f2c1caa0c5b74cefef6b")
-      public override
-          fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty.Builder.() -> Unit): Unit
-          = serviceDiscovery(ServiceDiscoveryProperty(serviceDiscovery))
+      override fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty.Builder.() -> Unit):
+          Unit = serviceDiscovery(ServiceDiscoveryProperty(serviceDiscovery))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty =
@@ -2055,15 +1932,15 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeSpecProperty,
     ) : VirtualNodeSpecProperty {
-      public override fun backendDefaults(): Any? = unwrap(this).getBackendDefaults()
+      override fun backendDefaults(): Any? = unwrap(this).getBackendDefaults()
 
-      public override fun backends(): Any? = unwrap(this).getBackends()
+      override fun backends(): Any? = unwrap(this).getBackends()
 
-      public override fun listeners(): Any? = unwrap(this).getListeners()
+      override fun listeners(): Any? = unwrap(this).getListeners()
 
-      public override fun logging(): Any? = unwrap(this).getLogging()
+      override fun logging(): Any? = unwrap(this).getLogging()
 
-      public override fun serviceDiscovery(): Any? = unwrap(this).getServiceDiscovery()
+      override fun serviceDiscovery(): Any? = unwrap(this).getServiceDiscovery()
     }
 
     public companion object {
@@ -2090,8 +1967,7 @@ public open class CfnVirtualNode internal constructor(
     public fun maxConnections(): Number
 
     public interface Builder {
-      public fun maxConnections(maxConnections: Number) {
-      }
+      public fun maxConnections(maxConnections: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2100,7 +1976,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty.builder()
 
-      public override fun maxConnections(maxConnections: Number) {
+      override fun maxConnections(maxConnections: Number) {
         cdkBuilder.maxConnections(maxConnections)
       }
 
@@ -2113,7 +1989,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeTcpConnectionPoolProperty,
     ) : VirtualNodeTcpConnectionPoolProperty {
-      public override fun maxConnections(): Number = unwrap(this).getMaxConnections()
+      override fun maxConnections(): Number = unwrap(this).getMaxConnections()
     }
 
     public companion object {
@@ -2141,16 +2017,13 @@ public open class CfnVirtualNode internal constructor(
     public fun virtualService(): Any? = unwrap(this).getVirtualService()
 
     public interface Builder {
-      public fun virtualService(virtualService: IResolvable) {
-      }
+      public fun virtualService(virtualService: IResolvable)
 
-      public fun virtualService(virtualService: VirtualServiceBackendProperty) {
-      }
+      public fun virtualService(virtualService: VirtualServiceBackendProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c45154c7b732c8f59abc0fb00ae92eae74b98e93f2cff81eb01385b916a79fb")
-      public fun virtualService(virtualService: VirtualServiceBackendProperty.Builder.() -> Unit) {
-      }
+      public fun virtualService(virtualService: VirtualServiceBackendProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2158,19 +2031,18 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty.builder()
 
-      public override fun virtualService(virtualService: IResolvable) {
+      override fun virtualService(virtualService: IResolvable) {
         cdkBuilder.virtualService(virtualService.let(IResolvable::unwrap))
       }
 
-      public override fun virtualService(virtualService: VirtualServiceBackendProperty) {
+      override fun virtualService(virtualService: VirtualServiceBackendProperty) {
         cdkBuilder.virtualService(virtualService.let(VirtualServiceBackendProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c45154c7b732c8f59abc0fb00ae92eae74b98e93f2cff81eb01385b916a79fb")
-      public override
-          fun virtualService(virtualService: VirtualServiceBackendProperty.Builder.() -> Unit): Unit
-          = virtualService(VirtualServiceBackendProperty(virtualService))
+      override fun virtualService(virtualService: VirtualServiceBackendProperty.Builder.() -> Unit):
+          Unit = virtualService(VirtualServiceBackendProperty(virtualService))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty =
           cdkBuilder.build()
@@ -2180,7 +2052,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendProperty,
     ) : BackendProperty {
-      public override fun virtualService(): Any? = unwrap(this).getVirtualService()
+      override fun virtualService(): Any? = unwrap(this).getVirtualService()
     }
 
     public companion object {
@@ -2209,11 +2081,9 @@ public open class CfnVirtualNode internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2222,11 +2092,11 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapInstanceAttributeProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -2239,9 +2109,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.AwsCloudMapInstanceAttributeProperty,
     ) : AwsCloudMapInstanceAttributeProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -2273,30 +2143,23 @@ public open class CfnVirtualNode internal constructor(
     public fun validation(): Any? = unwrap(this).getValidation()
 
     public interface Builder {
-      public fun certificate(certificate: IResolvable) {
-      }
+      public fun certificate(certificate: IResolvable)
 
-      public fun certificate(certificate: ListenerTlsCertificateProperty) {
-      }
+      public fun certificate(certificate: ListenerTlsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("15a66daa66c3b460d194e3fe5bc22be0a14ffea04b50cf2142dd0d8be36258b5")
-      public fun certificate(certificate: ListenerTlsCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun certificate(certificate: ListenerTlsCertificateProperty.Builder.() -> Unit)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun validation(validation: IResolvable) {
-      }
+      public fun validation(validation: IResolvable)
 
-      public fun validation(validation: ListenerTlsValidationContextProperty) {
-      }
+      public fun validation(validation: ListenerTlsValidationContextProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("36ab8e075abb74c1fa39f8eee4d5f3d39a37610e664f68a221417bfb3fc5132b")
-      public fun validation(validation: ListenerTlsValidationContextProperty.Builder.() -> Unit) {
-      }
+      public fun validation(validation: ListenerTlsValidationContextProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2304,37 +2167,35 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty.builder()
 
-      public override fun certificate(certificate: IResolvable) {
+      override fun certificate(certificate: IResolvable) {
         cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
       }
 
-      public override fun certificate(certificate: ListenerTlsCertificateProperty) {
+      override fun certificate(certificate: ListenerTlsCertificateProperty) {
         cdkBuilder.certificate(certificate.let(ListenerTlsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("15a66daa66c3b460d194e3fe5bc22be0a14ffea04b50cf2142dd0d8be36258b5")
-      public override
-          fun certificate(certificate: ListenerTlsCertificateProperty.Builder.() -> Unit): Unit =
-          certificate(ListenerTlsCertificateProperty(certificate))
+      override fun certificate(certificate: ListenerTlsCertificateProperty.Builder.() -> Unit): Unit
+          = certificate(ListenerTlsCertificateProperty(certificate))
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun validation(validation: IResolvable) {
+      override fun validation(validation: IResolvable) {
         cdkBuilder.validation(validation.let(IResolvable::unwrap))
       }
 
-      public override fun validation(validation: ListenerTlsValidationContextProperty) {
+      override fun validation(validation: ListenerTlsValidationContextProperty) {
         cdkBuilder.validation(validation.let(ListenerTlsValidationContextProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("36ab8e075abb74c1fa39f8eee4d5f3d39a37610e664f68a221417bfb3fc5132b")
-      public override
-          fun validation(validation: ListenerTlsValidationContextProperty.Builder.() -> Unit): Unit
-          = validation(ListenerTlsValidationContextProperty(validation))
+      override fun validation(validation: ListenerTlsValidationContextProperty.Builder.() -> Unit):
+          Unit = validation(ListenerTlsValidationContextProperty(validation))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty
           = cdkBuilder.build()
@@ -2344,11 +2205,11 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsProperty,
     ) : ListenerTlsProperty {
-      public override fun certificate(): Any = unwrap(this).getCertificate()
+      override fun certificate(): Any = unwrap(this).getCertificate()
 
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
 
-      public override fun validation(): Any? = unwrap(this).getValidation()
+      override fun validation(): Any? = unwrap(this).getValidation()
     }
 
     public companion object {
@@ -2377,19 +2238,15 @@ public open class CfnVirtualNode internal constructor(
     public fun virtualServiceName(): String
 
     public interface Builder {
-      public fun clientPolicy(clientPolicy: IResolvable) {
-      }
+      public fun clientPolicy(clientPolicy: IResolvable)
 
-      public fun clientPolicy(clientPolicy: ClientPolicyProperty) {
-      }
+      public fun clientPolicy(clientPolicy: ClientPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("022f978780cab0ef15845ab544ecf5221e76f3617033f5630cf66211959b3666")
-      public fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit)
 
-      public fun virtualServiceName(virtualServiceName: String) {
-      }
+      public fun virtualServiceName(virtualServiceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2398,20 +2255,20 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualServiceBackendProperty.builder()
 
-      public override fun clientPolicy(clientPolicy: IResolvable) {
+      override fun clientPolicy(clientPolicy: IResolvable) {
         cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun clientPolicy(clientPolicy: ClientPolicyProperty) {
+      override fun clientPolicy(clientPolicy: ClientPolicyProperty) {
         cdkBuilder.clientPolicy(clientPolicy.let(ClientPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("022f978780cab0ef15845ab544ecf5221e76f3617033f5630cf66211959b3666")
-      public override fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit): Unit
-          = clientPolicy(ClientPolicyProperty(clientPolicy))
+      override fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit): Unit =
+          clientPolicy(ClientPolicyProperty(clientPolicy))
 
-      public override fun virtualServiceName(virtualServiceName: String) {
+      override fun virtualServiceName(virtualServiceName: String) {
         cdkBuilder.virtualServiceName(virtualServiceName)
       }
 
@@ -2424,9 +2281,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualServiceBackendProperty,
     ) : VirtualServiceBackendProperty {
-      public override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
+      override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
 
-      public override fun virtualServiceName(): String = unwrap(this).getVirtualServiceName()
+      override fun virtualServiceName(): String = unwrap(this).getVirtualServiceName()
     }
 
     public companion object {
@@ -2455,11 +2312,9 @@ public open class CfnVirtualNode internal constructor(
     public fun protocol(): String
 
     public interface Builder {
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2467,11 +2322,11 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty.builder()
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
@@ -2483,9 +2338,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.PortMappingProperty,
     ) : PortMappingProperty {
-      public override fun port(): Number = unwrap(this).getPort()
+      override fun port(): Number = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
     }
 
     public companion object {
@@ -2514,27 +2369,21 @@ public open class CfnVirtualNode internal constructor(
     public fun perRequest(): Any? = unwrap(this).getPerRequest()
 
     public interface Builder {
-      public fun idle(idle: IResolvable) {
-      }
+      public fun idle(idle: IResolvable)
 
-      public fun idle(idle: DurationProperty) {
-      }
+      public fun idle(idle: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("90b25b27f96c7e2df24ce038e0a897063f89275adfac0b54881036c661e0e80b")
-      public fun idle(idle: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun idle(idle: DurationProperty.Builder.() -> Unit)
 
-      public fun perRequest(perRequest: IResolvable) {
-      }
+      public fun perRequest(perRequest: IResolvable)
 
-      public fun perRequest(perRequest: DurationProperty) {
-      }
+      public fun perRequest(perRequest: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("266c0d44ee846fcab305abe9d71f1af2ec6a53d4d89660754765ee39a43917cd")
-      public fun perRequest(perRequest: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun perRequest(perRequest: DurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2542,30 +2391,30 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty.builder()
 
-      public override fun idle(idle: IResolvable) {
+      override fun idle(idle: IResolvable) {
         cdkBuilder.idle(idle.let(IResolvable::unwrap))
       }
 
-      public override fun idle(idle: DurationProperty) {
+      override fun idle(idle: DurationProperty) {
         cdkBuilder.idle(idle.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("90b25b27f96c7e2df24ce038e0a897063f89275adfac0b54881036c661e0e80b")
-      public override fun idle(idle: DurationProperty.Builder.() -> Unit): Unit =
+      override fun idle(idle: DurationProperty.Builder.() -> Unit): Unit =
           idle(DurationProperty(idle))
 
-      public override fun perRequest(perRequest: IResolvable) {
+      override fun perRequest(perRequest: IResolvable) {
         cdkBuilder.perRequest(perRequest.let(IResolvable::unwrap))
       }
 
-      public override fun perRequest(perRequest: DurationProperty) {
+      override fun perRequest(perRequest: DurationProperty) {
         cdkBuilder.perRequest(perRequest.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("266c0d44ee846fcab305abe9d71f1af2ec6a53d4d89660754765ee39a43917cd")
-      public override fun perRequest(perRequest: DurationProperty.Builder.() -> Unit): Unit =
+      override fun perRequest(perRequest: DurationProperty.Builder.() -> Unit): Unit =
           perRequest(DurationProperty(perRequest))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty
@@ -2576,9 +2425,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.GrpcTimeoutProperty,
     ) : GrpcTimeoutProperty {
-      public override fun idle(): Any? = unwrap(this).getIdle()
+      override fun idle(): Any? = unwrap(this).getIdle()
 
-      public override fun perRequest(): Any? = unwrap(this).getPerRequest()
+      override fun perRequest(): Any? = unwrap(this).getPerRequest()
     }
 
     public companion object {
@@ -2607,11 +2456,9 @@ public open class CfnVirtualNode internal constructor(
     public fun privateKey(): String
 
     public interface Builder {
-      public fun certificateChain(certificateChain: String) {
-      }
+      public fun certificateChain(certificateChain: String)
 
-      public fun privateKey(privateKey: String) {
-      }
+      public fun privateKey(privateKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2620,11 +2467,11 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsFileCertificateProperty.builder()
 
-      public override fun certificateChain(certificateChain: String) {
+      override fun certificateChain(certificateChain: String) {
         cdkBuilder.certificateChain(certificateChain)
       }
 
-      public override fun privateKey(privateKey: String) {
+      override fun privateKey(privateKey: String) {
         cdkBuilder.privateKey(privateKey)
       }
 
@@ -2637,9 +2484,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTlsFileCertificateProperty,
     ) : ListenerTlsFileCertificateProperty {
-      public override fun certificateChain(): String = unwrap(this).getCertificateChain()
+      override fun certificateChain(): String = unwrap(this).getCertificateChain()
 
-      public override fun privateKey(): String = unwrap(this).getPrivateKey()
+      override fun privateKey(): String = unwrap(this).getPrivateKey()
     }
 
     public companion object {
@@ -2669,28 +2516,22 @@ public open class CfnVirtualNode internal constructor(
     public fun trust(): Any
 
     public interface Builder {
-      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
 
-      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-      }
+      public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2fbac1c9e17d90922149c31c7fa1e1e1a4509bfe76c8b013c33c69fa977e3697")
       public
-          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit) {
-      }
+          fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit)
 
-      public fun trust(trust: IResolvable) {
-      }
+      public fun trust(trust: IResolvable)
 
-      public fun trust(trust: TlsValidationContextTrustProperty) {
-      }
+      public fun trust(trust: TlsValidationContextTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c010c0c915933602efc06c66a1d3dbf78856d82cf99b1638743b881d342f088a")
-      public fun trust(trust: TlsValidationContextTrustProperty.Builder.() -> Unit) {
-      }
+      public fun trust(trust: TlsValidationContextTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2699,32 +2540,32 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextProperty.builder()
 
-      public override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
+      override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2fbac1c9e17d90922149c31c7fa1e1e1a4509bfe76c8b013c33c69fa977e3697")
-      public override
+      override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty.Builder.() -> Unit):
           Unit = subjectAlternativeNames(SubjectAlternativeNamesProperty(subjectAlternativeNames))
 
-      public override fun trust(trust: IResolvable) {
+      override fun trust(trust: IResolvable) {
         cdkBuilder.trust(trust.let(IResolvable::unwrap))
       }
 
-      public override fun trust(trust: TlsValidationContextTrustProperty) {
+      override fun trust(trust: TlsValidationContextTrustProperty) {
         cdkBuilder.trust(trust.let(TlsValidationContextTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c010c0c915933602efc06c66a1d3dbf78856d82cf99b1638743b881d342f088a")
-      public override fun trust(trust: TlsValidationContextTrustProperty.Builder.() -> Unit): Unit =
+      override fun trust(trust: TlsValidationContextTrustProperty.Builder.() -> Unit): Unit =
           trust(TlsValidationContextTrustProperty(trust))
 
       public fun build():
@@ -2736,10 +2577,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextProperty,
     ) : TlsValidationContextProperty {
-      public override fun subjectAlternativeNames(): Any? =
-          unwrap(this).getSubjectAlternativeNames()
+      override fun subjectAlternativeNames(): Any? = unwrap(this).getSubjectAlternativeNames()
 
-      public override fun trust(): Any = unwrap(this).getTrust()
+      override fun trust(): Any = unwrap(this).getTrust()
     }
 
     public companion object {
@@ -2770,38 +2610,29 @@ public open class CfnVirtualNode internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun acm(acm: IResolvable) {
-      }
+      public fun acm(acm: IResolvable)
 
-      public fun acm(acm: TlsValidationContextAcmTrustProperty) {
-      }
+      public fun acm(acm: TlsValidationContextAcmTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb63f15a5cad48e41bf4fe1e5f2aa2ae1aeda3bc331063aadec52e56a1e06a08")
-      public fun acm(acm: TlsValidationContextAcmTrustProperty.Builder.() -> Unit) {
-      }
+      public fun acm(acm: TlsValidationContextAcmTrustProperty.Builder.() -> Unit)
 
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: TlsValidationContextFileTrustProperty) {
-      }
+      public fun `file`(`file`: TlsValidationContextFileTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6597900f308a602deef50656d736b7ddb34b29ef5b3a7cb8a83e55d8de744860")
-      public fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: TlsValidationContextSdsTrustProperty) {
-      }
+      public fun sds(sds: TlsValidationContextSdsTrustProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d24627abc7e81d199764f87dccbc7e922ddeeee1622a06fda7588dc04cd2bd4a")
-      public fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2810,43 +2641,43 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextTrustProperty.builder()
 
-      public override fun acm(acm: IResolvable) {
+      override fun acm(acm: IResolvable) {
         cdkBuilder.acm(acm.let(IResolvable::unwrap))
       }
 
-      public override fun acm(acm: TlsValidationContextAcmTrustProperty) {
+      override fun acm(acm: TlsValidationContextAcmTrustProperty) {
         cdkBuilder.acm(acm.let(TlsValidationContextAcmTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fb63f15a5cad48e41bf4fe1e5f2aa2ae1aeda3bc331063aadec52e56a1e06a08")
-      public override fun acm(acm: TlsValidationContextAcmTrustProperty.Builder.() -> Unit): Unit =
+      override fun acm(acm: TlsValidationContextAcmTrustProperty.Builder.() -> Unit): Unit =
           acm(TlsValidationContextAcmTrustProperty(acm))
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: TlsValidationContextFileTrustProperty) {
+      override fun `file`(`file`: TlsValidationContextFileTrustProperty) {
         cdkBuilder.`file`(`file`.let(TlsValidationContextFileTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6597900f308a602deef50656d736b7ddb34b29ef5b3a7cb8a83e55d8de744860")
-      public override fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit):
-          Unit = `file`(TlsValidationContextFileTrustProperty(`file`))
+      override fun `file`(`file`: TlsValidationContextFileTrustProperty.Builder.() -> Unit): Unit =
+          `file`(TlsValidationContextFileTrustProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: TlsValidationContextSdsTrustProperty) {
+      override fun sds(sds: TlsValidationContextSdsTrustProperty) {
         cdkBuilder.sds(sds.let(TlsValidationContextSdsTrustProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d24627abc7e81d199764f87dccbc7e922ddeeee1622a06fda7588dc04cd2bd4a")
-      public override fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit): Unit =
+      override fun sds(sds: TlsValidationContextSdsTrustProperty.Builder.() -> Unit): Unit =
           sds(TlsValidationContextSdsTrustProperty(sds))
 
       public fun build():
@@ -2858,11 +2689,11 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextTrustProperty,
     ) : TlsValidationContextTrustProperty {
-      public override fun acm(): Any? = unwrap(this).getAcm()
+      override fun acm(): Any? = unwrap(this).getAcm()
 
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -2890,8 +2721,7 @@ public open class CfnVirtualNode internal constructor(
     public fun secretName(): String
 
     public interface Builder {
-      public fun secretName(secretName: String) {
-      }
+      public fun secretName(secretName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2900,7 +2730,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextSdsTrustProperty.builder()
 
-      public override fun secretName(secretName: String) {
+      override fun secretName(secretName: String) {
         cdkBuilder.secretName(secretName)
       }
 
@@ -2913,7 +2743,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextSdsTrustProperty,
     ) : TlsValidationContextSdsTrustProperty {
-      public override fun secretName(): String = unwrap(this).getSecretName()
+      override fun secretName(): String = unwrap(this).getSecretName()
     }
 
     public companion object {
@@ -2941,16 +2771,13 @@ public open class CfnVirtualNode internal constructor(
     public fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
 
     public interface Builder {
-      public fun clientPolicy(clientPolicy: IResolvable) {
-      }
+      public fun clientPolicy(clientPolicy: IResolvable)
 
-      public fun clientPolicy(clientPolicy: ClientPolicyProperty) {
-      }
+      public fun clientPolicy(clientPolicy: ClientPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ec82bae459447564b82e97e36187eb807c00ee08eac5befe6bb4c7f379c5866d")
-      public fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2958,18 +2785,18 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty.builder()
 
-      public override fun clientPolicy(clientPolicy: IResolvable) {
+      override fun clientPolicy(clientPolicy: IResolvable) {
         cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun clientPolicy(clientPolicy: ClientPolicyProperty) {
+      override fun clientPolicy(clientPolicy: ClientPolicyProperty) {
         cdkBuilder.clientPolicy(clientPolicy.let(ClientPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ec82bae459447564b82e97e36187eb807c00ee08eac5befe6bb4c7f379c5866d")
-      public override fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit): Unit
-          = clientPolicy(ClientPolicyProperty(clientPolicy))
+      override fun clientPolicy(clientPolicy: ClientPolicyProperty.Builder.() -> Unit): Unit =
+          clientPolicy(ClientPolicyProperty(clientPolicy))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty =
@@ -2980,7 +2807,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.BackendDefaultsProperty,
     ) : BackendDefaultsProperty {
-      public override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
+      override fun clientPolicy(): Any? = unwrap(this).getClientPolicy()
     }
 
     public companion object {
@@ -3011,14 +2838,11 @@ public open class CfnVirtualNode internal constructor(
     public fun responseType(): String? = unwrap(this).getResponseType()
 
     public interface Builder {
-      public fun hostname(hostname: String) {
-      }
+      public fun hostname(hostname: String)
 
-      public fun ipPreference(ipPreference: String) {
-      }
+      public fun ipPreference(ipPreference: String)
 
-      public fun responseType(responseType: String) {
-      }
+      public fun responseType(responseType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3027,15 +2851,15 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DnsServiceDiscoveryProperty.builder()
 
-      public override fun hostname(hostname: String) {
+      override fun hostname(hostname: String) {
         cdkBuilder.hostname(hostname)
       }
 
-      public override fun ipPreference(ipPreference: String) {
+      override fun ipPreference(ipPreference: String) {
         cdkBuilder.ipPreference(ipPreference)
       }
 
-      public override fun responseType(responseType: String) {
+      override fun responseType(responseType: String) {
         cdkBuilder.responseType(responseType)
       }
 
@@ -3048,11 +2872,11 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.DnsServiceDiscoveryProperty,
     ) : DnsServiceDiscoveryProperty {
-      public override fun hostname(): String = unwrap(this).getHostname()
+      override fun hostname(): String = unwrap(this).getHostname()
 
-      public override fun ipPreference(): String? = unwrap(this).getIpPreference()
+      override fun ipPreference(): String? = unwrap(this).getIpPreference()
 
-      public override fun responseType(): String? = unwrap(this).getResponseType()
+      override fun responseType(): String? = unwrap(this).getResponseType()
     }
 
     public companion object {
@@ -3079,16 +2903,13 @@ public open class CfnVirtualNode internal constructor(
     public fun idle(): Any? = unwrap(this).getIdle()
 
     public interface Builder {
-      public fun idle(idle: IResolvable) {
-      }
+      public fun idle(idle: IResolvable)
 
-      public fun idle(idle: DurationProperty) {
-      }
+      public fun idle(idle: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1202822280c7976ca3248e5db1a8cd0d1890e751704b05a427555359639593d4")
-      public fun idle(idle: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun idle(idle: DurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3096,17 +2917,17 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty.builder()
 
-      public override fun idle(idle: IResolvable) {
+      override fun idle(idle: IResolvable) {
         cdkBuilder.idle(idle.let(IResolvable::unwrap))
       }
 
-      public override fun idle(idle: DurationProperty) {
+      override fun idle(idle: DurationProperty) {
         cdkBuilder.idle(idle.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1202822280c7976ca3248e5db1a8cd0d1890e751704b05a427555359639593d4")
-      public override fun idle(idle: DurationProperty.Builder.() -> Unit): Unit =
+      override fun idle(idle: DurationProperty.Builder.() -> Unit): Unit =
           idle(DurationProperty(idle))
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty
@@ -3117,7 +2938,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TcpTimeoutProperty,
     ) : TcpTimeoutProperty {
-      public override fun idle(): Any? = unwrap(this).getIdle()
+      override fun idle(): Any? = unwrap(this).getIdle()
     }
 
     public companion object {
@@ -3146,27 +2967,21 @@ public open class CfnVirtualNode internal constructor(
     public fun dns(): Any? = unwrap(this).getDns()
 
     public interface Builder {
-      public fun awsCloudMap(awsCloudMap: IResolvable) {
-      }
+      public fun awsCloudMap(awsCloudMap: IResolvable)
 
-      public fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty) {
-      }
+      public fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f4452b939a9d3b4aa9934695f09cb4d64015d289bd0701da15ccf4ca562756d")
-      public fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit) {
-      }
+      public fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit)
 
-      public fun dns(dns: IResolvable) {
-      }
+      public fun dns(dns: IResolvable)
 
-      public fun dns(dns: DnsServiceDiscoveryProperty) {
-      }
+      public fun dns(dns: DnsServiceDiscoveryProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e79e4905cd9f949ff7be9422a85e0a6091b615a3075d869480e67de3930a3937")
-      public fun dns(dns: DnsServiceDiscoveryProperty.Builder.() -> Unit) {
-      }
+      public fun dns(dns: DnsServiceDiscoveryProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3174,31 +2989,30 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty.builder()
 
-      public override fun awsCloudMap(awsCloudMap: IResolvable) {
+      override fun awsCloudMap(awsCloudMap: IResolvable) {
         cdkBuilder.awsCloudMap(awsCloudMap.let(IResolvable::unwrap))
       }
 
-      public override fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty) {
+      override fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty) {
         cdkBuilder.awsCloudMap(awsCloudMap.let(AwsCloudMapServiceDiscoveryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4f4452b939a9d3b4aa9934695f09cb4d64015d289bd0701da15ccf4ca562756d")
-      public override
-          fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit): Unit
-          = awsCloudMap(AwsCloudMapServiceDiscoveryProperty(awsCloudMap))
+      override fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty.Builder.() -> Unit):
+          Unit = awsCloudMap(AwsCloudMapServiceDiscoveryProperty(awsCloudMap))
 
-      public override fun dns(dns: IResolvable) {
+      override fun dns(dns: IResolvable) {
         cdkBuilder.dns(dns.let(IResolvable::unwrap))
       }
 
-      public override fun dns(dns: DnsServiceDiscoveryProperty) {
+      override fun dns(dns: DnsServiceDiscoveryProperty) {
         cdkBuilder.dns(dns.let(DnsServiceDiscoveryProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e79e4905cd9f949ff7be9422a85e0a6091b615a3075d869480e67de3930a3937")
-      public override fun dns(dns: DnsServiceDiscoveryProperty.Builder.() -> Unit): Unit =
+      override fun dns(dns: DnsServiceDiscoveryProperty.Builder.() -> Unit): Unit =
           dns(DnsServiceDiscoveryProperty(dns))
 
       public fun build():
@@ -3210,9 +3024,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ServiceDiscoveryProperty,
     ) : ServiceDiscoveryProperty {
-      public override fun awsCloudMap(): Any? = unwrap(this).getAwsCloudMap()
+      override fun awsCloudMap(): Any? = unwrap(this).getAwsCloudMap()
 
-      public override fun dns(): Any? = unwrap(this).getDns()
+      override fun dns(): Any? = unwrap(this).getDns()
     }
 
     public companion object {
@@ -3239,16 +3053,13 @@ public open class CfnVirtualNode internal constructor(
     public fun match(): Any
 
     public interface Builder {
-      public fun match(match: IResolvable) {
-      }
+      public fun match(match: IResolvable)
 
-      public fun match(match: SubjectAlternativeNameMatchersProperty) {
-      }
+      public fun match(match: SubjectAlternativeNameMatchersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d75a28480f58e64c5c9aef98fb928d9df770b21bd41a24aa274293535ab4932")
-      public fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit) {
-      }
+      public fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3257,18 +3068,18 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty.builder()
 
-      public override fun match(match: IResolvable) {
+      override fun match(match: IResolvable) {
         cdkBuilder.match(match.let(IResolvable::unwrap))
       }
 
-      public override fun match(match: SubjectAlternativeNameMatchersProperty) {
+      override fun match(match: SubjectAlternativeNameMatchersProperty) {
         cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d75a28480f58e64c5c9aef98fb928d9df770b21bd41a24aa274293535ab4932")
-      public override fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit):
-          Unit = match(SubjectAlternativeNameMatchersProperty(match))
+      override fun match(match: SubjectAlternativeNameMatchersProperty.Builder.() -> Unit): Unit =
+          match(SubjectAlternativeNameMatchersProperty(match))
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty =
@@ -3279,7 +3090,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNamesProperty,
     ) : SubjectAlternativeNamesProperty {
-      public override fun match(): Any = unwrap(this).getMatch()
+      override fun match(): Any = unwrap(this).getMatch()
     }
 
     public companion object {
@@ -3308,11 +3119,9 @@ public open class CfnVirtualNode internal constructor(
     public fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
 
     public interface Builder {
-      public fun maxConnections(maxConnections: Number) {
-      }
+      public fun maxConnections(maxConnections: Number)
 
-      public fun maxPendingRequests(maxPendingRequests: Number) {
-      }
+      public fun maxPendingRequests(maxPendingRequests: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3321,11 +3130,11 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty.builder()
 
-      public override fun maxConnections(maxConnections: Number) {
+      override fun maxConnections(maxConnections: Number) {
         cdkBuilder.maxConnections(maxConnections)
       }
 
-      public override fun maxPendingRequests(maxPendingRequests: Number) {
+      override fun maxPendingRequests(maxPendingRequests: Number) {
         cdkBuilder.maxPendingRequests(maxPendingRequests)
       }
 
@@ -3338,9 +3147,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty,
     ) : VirtualNodeHttpConnectionPoolProperty {
-      public override fun maxConnections(): Number = unwrap(this).getMaxConnections()
+      override fun maxConnections(): Number = unwrap(this).getMaxConnections()
 
-      public override fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
+      override fun maxPendingRequests(): Number? = unwrap(this).getMaxPendingRequests()
     }
 
     public companion object {
@@ -3374,33 +3183,25 @@ public open class CfnVirtualNode internal constructor(
     public fun maxServerErrors(): Number
 
     public interface Builder {
-      public fun baseEjectionDuration(baseEjectionDuration: IResolvable) {
-      }
+      public fun baseEjectionDuration(baseEjectionDuration: IResolvable)
 
-      public fun baseEjectionDuration(baseEjectionDuration: DurationProperty) {
-      }
+      public fun baseEjectionDuration(baseEjectionDuration: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0867a5ae648b42fd076947eb99dfd241a5aecb6a534ba6a6d59ba9bd2717b04f")
-      public fun baseEjectionDuration(baseEjectionDuration: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun baseEjectionDuration(baseEjectionDuration: DurationProperty.Builder.() -> Unit)
 
-      public fun interval(interval: IResolvable) {
-      }
+      public fun interval(interval: IResolvable)
 
-      public fun interval(interval: DurationProperty) {
-      }
+      public fun interval(interval: DurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27d118dd24b02a9b9c8cd6e041185ff348351f81340827bd053f9e032927a5c3")
-      public fun interval(interval: DurationProperty.Builder.() -> Unit) {
-      }
+      public fun interval(interval: DurationProperty.Builder.() -> Unit)
 
-      public fun maxEjectionPercent(maxEjectionPercent: Number) {
-      }
+      public fun maxEjectionPercent(maxEjectionPercent: Number)
 
-      public fun maxServerErrors(maxServerErrors: Number) {
-      }
+      public fun maxServerErrors(maxServerErrors: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3408,38 +3209,37 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty.builder()
 
-      public override fun baseEjectionDuration(baseEjectionDuration: IResolvable) {
+      override fun baseEjectionDuration(baseEjectionDuration: IResolvable) {
         cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(IResolvable::unwrap))
       }
 
-      public override fun baseEjectionDuration(baseEjectionDuration: DurationProperty) {
+      override fun baseEjectionDuration(baseEjectionDuration: DurationProperty) {
         cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0867a5ae648b42fd076947eb99dfd241a5aecb6a534ba6a6d59ba9bd2717b04f")
-      public override
-          fun baseEjectionDuration(baseEjectionDuration: DurationProperty.Builder.() -> Unit): Unit
-          = baseEjectionDuration(DurationProperty(baseEjectionDuration))
+      override fun baseEjectionDuration(baseEjectionDuration: DurationProperty.Builder.() -> Unit):
+          Unit = baseEjectionDuration(DurationProperty(baseEjectionDuration))
 
-      public override fun interval(interval: IResolvable) {
+      override fun interval(interval: IResolvable) {
         cdkBuilder.interval(interval.let(IResolvable::unwrap))
       }
 
-      public override fun interval(interval: DurationProperty) {
+      override fun interval(interval: DurationProperty) {
         cdkBuilder.interval(interval.let(DurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27d118dd24b02a9b9c8cd6e041185ff348351f81340827bd053f9e032927a5c3")
-      public override fun interval(interval: DurationProperty.Builder.() -> Unit): Unit =
+      override fun interval(interval: DurationProperty.Builder.() -> Unit): Unit =
           interval(DurationProperty(interval))
 
-      public override fun maxEjectionPercent(maxEjectionPercent: Number) {
+      override fun maxEjectionPercent(maxEjectionPercent: Number) {
         cdkBuilder.maxEjectionPercent(maxEjectionPercent)
       }
 
-      public override fun maxServerErrors(maxServerErrors: Number) {
+      override fun maxServerErrors(maxServerErrors: Number) {
         cdkBuilder.maxServerErrors(maxServerErrors)
       }
 
@@ -3452,13 +3252,13 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.OutlierDetectionProperty,
     ) : OutlierDetectionProperty {
-      public override fun baseEjectionDuration(): Any = unwrap(this).getBaseEjectionDuration()
+      override fun baseEjectionDuration(): Any = unwrap(this).getBaseEjectionDuration()
 
-      public override fun interval(): Any = unwrap(this).getInterval()
+      override fun interval(): Any = unwrap(this).getInterval()
 
-      public override fun maxEjectionPercent(): Number = unwrap(this).getMaxEjectionPercent()
+      override fun maxEjectionPercent(): Number = unwrap(this).getMaxEjectionPercent()
 
-      public override fun maxServerErrors(): Number = unwrap(this).getMaxServerErrors()
+      override fun maxServerErrors(): Number = unwrap(this).getMaxServerErrors()
     }
 
     public companion object {
@@ -3487,27 +3287,21 @@ public open class CfnVirtualNode internal constructor(
     public fun sds(): Any? = unwrap(this).getSds()
 
     public interface Builder {
-      public fun `file`(`file`: IResolvable) {
-      }
+      public fun `file`(`file`: IResolvable)
 
-      public fun `file`(`file`: ListenerTlsFileCertificateProperty) {
-      }
+      public fun `file`(`file`: ListenerTlsFileCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("89dca484bf00da5c3810ab17ce2c7fd790d5f2cb61f116d8e1691f971a7974de")
-      public fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit)
 
-      public fun sds(sds: IResolvable) {
-      }
+      public fun sds(sds: IResolvable)
 
-      public fun sds(sds: ListenerTlsSdsCertificateProperty) {
-      }
+      public fun sds(sds: ListenerTlsSdsCertificateProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f178bacd4f943b1f35bfc93258a12bc42329f24ada864adbe4f0230c8eec7dc1")
-      public fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit) {
-      }
+      public fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3516,30 +3310,30 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientTlsCertificateProperty.builder()
 
-      public override fun `file`(`file`: IResolvable) {
+      override fun `file`(`file`: IResolvable) {
         cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
       }
 
-      public override fun `file`(`file`: ListenerTlsFileCertificateProperty) {
+      override fun `file`(`file`: ListenerTlsFileCertificateProperty) {
         cdkBuilder.`file`(`file`.let(ListenerTlsFileCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("89dca484bf00da5c3810ab17ce2c7fd790d5f2cb61f116d8e1691f971a7974de")
-      public override fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit):
-          Unit = `file`(ListenerTlsFileCertificateProperty(`file`))
+      override fun `file`(`file`: ListenerTlsFileCertificateProperty.Builder.() -> Unit): Unit =
+          `file`(ListenerTlsFileCertificateProperty(`file`))
 
-      public override fun sds(sds: IResolvable) {
+      override fun sds(sds: IResolvable) {
         cdkBuilder.sds(sds.let(IResolvable::unwrap))
       }
 
-      public override fun sds(sds: ListenerTlsSdsCertificateProperty) {
+      override fun sds(sds: ListenerTlsSdsCertificateProperty) {
         cdkBuilder.sds(sds.let(ListenerTlsSdsCertificateProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f178bacd4f943b1f35bfc93258a12bc42329f24ada864adbe4f0230c8eec7dc1")
-      public override fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit): Unit =
+      override fun sds(sds: ListenerTlsSdsCertificateProperty.Builder.() -> Unit): Unit =
           sds(ListenerTlsSdsCertificateProperty(sds))
 
       public fun build():
@@ -3551,9 +3345,9 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ClientTlsCertificateProperty,
     ) : ClientTlsCertificateProperty {
-      public override fun `file`(): Any? = unwrap(this).getFile()
+      override fun `file`(): Any? = unwrap(this).getFile()
 
-      public override fun sds(): Any? = unwrap(this).getSds()
+      override fun sds(): Any? = unwrap(this).getSds()
     }
 
     public companion object {
@@ -3580,8 +3374,7 @@ public open class CfnVirtualNode internal constructor(
     public fun maxRequests(): Number
 
     public interface Builder {
-      public fun maxRequests(maxRequests: Number) {
-      }
+      public fun maxRequests(maxRequests: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3590,7 +3383,7 @@ public open class CfnVirtualNode internal constructor(
           =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty.builder()
 
-      public override fun maxRequests(maxRequests: Number) {
+      override fun maxRequests(maxRequests: Number) {
         cdkBuilder.maxRequests(maxRequests)
       }
 
@@ -3603,7 +3396,7 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.VirtualNodeHttp2ConnectionPoolProperty,
     ) : VirtualNodeHttp2ConnectionPoolProperty {
-      public override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+      override fun maxRequests(): Number = unwrap(this).getMaxRequests()
     }
 
     public companion object {
@@ -3643,26 +3436,19 @@ public open class CfnVirtualNode internal constructor(
     public fun unhealthyThreshold(): Number
 
     public interface Builder {
-      public fun healthyThreshold(healthyThreshold: Number) {
-      }
+      public fun healthyThreshold(healthyThreshold: Number)
 
-      public fun intervalMillis(intervalMillis: Number) {
-      }
+      public fun intervalMillis(intervalMillis: Number)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun timeoutMillis(timeoutMillis: Number) {
-      }
+      public fun timeoutMillis(timeoutMillis: Number)
 
-      public fun unhealthyThreshold(unhealthyThreshold: Number) {
-      }
+      public fun unhealthyThreshold(unhealthyThreshold: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3670,31 +3456,31 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty.builder()
 
-      public override fun healthyThreshold(healthyThreshold: Number) {
+      override fun healthyThreshold(healthyThreshold: Number) {
         cdkBuilder.healthyThreshold(healthyThreshold)
       }
 
-      public override fun intervalMillis(intervalMillis: Number) {
+      override fun intervalMillis(intervalMillis: Number) {
         cdkBuilder.intervalMillis(intervalMillis)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun timeoutMillis(timeoutMillis: Number) {
+      override fun timeoutMillis(timeoutMillis: Number) {
         cdkBuilder.timeoutMillis(timeoutMillis)
       }
 
-      public override fun unhealthyThreshold(unhealthyThreshold: Number) {
+      override fun unhealthyThreshold(unhealthyThreshold: Number) {
         cdkBuilder.unhealthyThreshold(unhealthyThreshold)
       }
 
@@ -3706,19 +3492,19 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.HealthCheckProperty,
     ) : HealthCheckProperty {
-      public override fun healthyThreshold(): Number = unwrap(this).getHealthyThreshold()
+      override fun healthyThreshold(): Number = unwrap(this).getHealthyThreshold()
 
-      public override fun intervalMillis(): Number = unwrap(this).getIntervalMillis()
+      override fun intervalMillis(): Number = unwrap(this).getIntervalMillis()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun protocol(): String = unwrap(this).getProtocol()
+      override fun protocol(): String = unwrap(this).getProtocol()
 
-      public override fun timeoutMillis(): Number = unwrap(this).getTimeoutMillis()
+      override fun timeoutMillis(): Number = unwrap(this).getTimeoutMillis()
 
-      public override fun unhealthyThreshold(): Number = unwrap(this).getUnhealthyThreshold()
+      override fun unhealthyThreshold(): Number = unwrap(this).getUnhealthyThreshold()
     }
 
     public companion object {
@@ -3751,49 +3537,37 @@ public open class CfnVirtualNode internal constructor(
     public fun tcp(): Any? = unwrap(this).getTcp()
 
     public interface Builder {
-      public fun grpc(grpc: IResolvable) {
-      }
+      public fun grpc(grpc: IResolvable)
 
-      public fun grpc(grpc: GrpcTimeoutProperty) {
-      }
+      public fun grpc(grpc: GrpcTimeoutProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24ab94bdef721a1d71e64b1366e6fa97856af0605600c4386e2b3a4d3bee9b92")
-      public fun grpc(grpc: GrpcTimeoutProperty.Builder.() -> Unit) {
-      }
+      public fun grpc(grpc: GrpcTimeoutProperty.Builder.() -> Unit)
 
-      public fun http(http: IResolvable) {
-      }
+      public fun http(http: IResolvable)
 
-      public fun http(http: HttpTimeoutProperty) {
-      }
+      public fun http(http: HttpTimeoutProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ec837eab74e9ee033aded64202fddce06d4c51d521c77b554e3b17d74c2afcdf")
-      public fun http(http: HttpTimeoutProperty.Builder.() -> Unit) {
-      }
+      public fun http(http: HttpTimeoutProperty.Builder.() -> Unit)
 
-      public fun http2(http2: IResolvable) {
-      }
+      public fun http2(http2: IResolvable)
 
-      public fun http2(http2: HttpTimeoutProperty) {
-      }
+      public fun http2(http2: HttpTimeoutProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ecd650fe52c88cc09a88346ca59cdd8ee5cb66f5e62241a9f55df42e85e5ae76")
-      public fun http2(http2: HttpTimeoutProperty.Builder.() -> Unit) {
-      }
+      public fun http2(http2: HttpTimeoutProperty.Builder.() -> Unit)
 
-      public fun tcp(tcp: IResolvable) {
-      }
+      public fun tcp(tcp: IResolvable)
 
-      public fun tcp(tcp: TcpTimeoutProperty) {
-      }
+      public fun tcp(tcp: TcpTimeoutProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2367403a8ddfd6a378681f9db77a7303388e580a270a1a2f8e7fc4b2c32ce07a")
-      public fun tcp(tcp: TcpTimeoutProperty.Builder.() -> Unit) {
-      }
+      public fun tcp(tcp: TcpTimeoutProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3801,56 +3575,56 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty.Builder =
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty.builder()
 
-      public override fun grpc(grpc: IResolvable) {
+      override fun grpc(grpc: IResolvable) {
         cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
       }
 
-      public override fun grpc(grpc: GrpcTimeoutProperty) {
+      override fun grpc(grpc: GrpcTimeoutProperty) {
         cdkBuilder.grpc(grpc.let(GrpcTimeoutProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("24ab94bdef721a1d71e64b1366e6fa97856af0605600c4386e2b3a4d3bee9b92")
-      public override fun grpc(grpc: GrpcTimeoutProperty.Builder.() -> Unit): Unit =
+      override fun grpc(grpc: GrpcTimeoutProperty.Builder.() -> Unit): Unit =
           grpc(GrpcTimeoutProperty(grpc))
 
-      public override fun http(http: IResolvable) {
+      override fun http(http: IResolvable) {
         cdkBuilder.http(http.let(IResolvable::unwrap))
       }
 
-      public override fun http(http: HttpTimeoutProperty) {
+      override fun http(http: HttpTimeoutProperty) {
         cdkBuilder.http(http.let(HttpTimeoutProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ec837eab74e9ee033aded64202fddce06d4c51d521c77b554e3b17d74c2afcdf")
-      public override fun http(http: HttpTimeoutProperty.Builder.() -> Unit): Unit =
+      override fun http(http: HttpTimeoutProperty.Builder.() -> Unit): Unit =
           http(HttpTimeoutProperty(http))
 
-      public override fun http2(http2: IResolvable) {
+      override fun http2(http2: IResolvable) {
         cdkBuilder.http2(http2.let(IResolvable::unwrap))
       }
 
-      public override fun http2(http2: HttpTimeoutProperty) {
+      override fun http2(http2: HttpTimeoutProperty) {
         cdkBuilder.http2(http2.let(HttpTimeoutProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ecd650fe52c88cc09a88346ca59cdd8ee5cb66f5e62241a9f55df42e85e5ae76")
-      public override fun http2(http2: HttpTimeoutProperty.Builder.() -> Unit): Unit =
+      override fun http2(http2: HttpTimeoutProperty.Builder.() -> Unit): Unit =
           http2(HttpTimeoutProperty(http2))
 
-      public override fun tcp(tcp: IResolvable) {
+      override fun tcp(tcp: IResolvable) {
         cdkBuilder.tcp(tcp.let(IResolvable::unwrap))
       }
 
-      public override fun tcp(tcp: TcpTimeoutProperty) {
+      override fun tcp(tcp: TcpTimeoutProperty) {
         cdkBuilder.tcp(tcp.let(TcpTimeoutProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2367403a8ddfd6a378681f9db77a7303388e580a270a1a2f8e7fc4b2c32ce07a")
-      public override fun tcp(tcp: TcpTimeoutProperty.Builder.() -> Unit): Unit =
+      override fun tcp(tcp: TcpTimeoutProperty.Builder.() -> Unit): Unit =
           tcp(TcpTimeoutProperty(tcp))
 
       public fun build():
@@ -3862,13 +3636,13 @@ public open class CfnVirtualNode internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.ListenerTimeoutProperty,
     ) : ListenerTimeoutProperty {
-      public override fun grpc(): Any? = unwrap(this).getGrpc()
+      override fun grpc(): Any? = unwrap(this).getGrpc()
 
-      public override fun http(): Any? = unwrap(this).getHttp()
+      override fun http(): Any? = unwrap(this).getHttp()
 
-      public override fun http2(): Any? = unwrap(this).getHttp2()
+      override fun http2(): Any? = unwrap(this).getHttp2()
 
-      public override fun tcp(): Any? = unwrap(this).getTcp()
+      override fun tcp(): Any? = unwrap(this).getTcp()
     }
 
     public companion object {

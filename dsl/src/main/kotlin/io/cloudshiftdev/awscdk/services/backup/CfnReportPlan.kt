@@ -57,20 +57,15 @@ public open class CfnReportPlan internal constructor(
   }
 
   public interface Builder {
-    public fun reportDeliveryChannel(reportDeliveryChannel: Any) {
-    }
+    public fun reportDeliveryChannel(reportDeliveryChannel: Any)
 
-    public fun reportPlanDescription(reportPlanDescription: String) {
-    }
+    public fun reportPlanDescription(reportPlanDescription: String)
 
-    public fun reportPlanName(reportPlanName: String) {
-    }
+    public fun reportPlanName(reportPlanName: String)
 
-    public fun reportPlanTags(reportPlanTags: List<CfnTag>) {
-    }
+    public fun reportPlanTags(reportPlanTags: List<CfnTag>)
 
-    public fun reportSetting(reportSetting: Any) {
-    }
+    public fun reportSetting(reportSetting: Any)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnReportPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnReportPlan.Builder =
         software.amazon.awscdk.services.backup.CfnReportPlan.Builder.create(scope, id)
 
-    public override fun reportDeliveryChannel(reportDeliveryChannel: Any) {
+    override fun reportDeliveryChannel(reportDeliveryChannel: Any) {
       cdkBuilder.reportDeliveryChannel(reportDeliveryChannel)
     }
 
-    public override fun reportPlanDescription(reportPlanDescription: String) {
+    override fun reportPlanDescription(reportPlanDescription: String) {
       cdkBuilder.reportPlanDescription(reportPlanDescription)
     }
 
-    public override fun reportPlanName(reportPlanName: String) {
+    override fun reportPlanName(reportPlanName: String) {
       cdkBuilder.reportPlanName(reportPlanName)
     }
 
-    public override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
+    override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
       cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
     }
 
-    public override fun reportSetting(reportSetting: Any) {
+    override fun reportSetting(reportSetting: Any) {
       cdkBuilder.reportSetting(reportSetting)
     }
 
@@ -132,14 +127,11 @@ public open class CfnReportPlan internal constructor(
     public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
     public interface Builder {
-      public fun formats(formats: List<String>) {
-      }
+      public fun formats(formats: List<String>)
 
-      public fun s3BucketName(s3BucketName: String) {
-      }
+      public fun s3BucketName(s3BucketName: String)
 
-      public fun s3KeyPrefix(s3KeyPrefix: String) {
-      }
+      public fun s3KeyPrefix(s3KeyPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -148,15 +140,15 @@ public open class CfnReportPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty.builder()
 
-      public override fun formats(formats: List<String>) {
+      override fun formats(formats: List<String>) {
         cdkBuilder.formats(formats)
       }
 
-      public override fun s3BucketName(s3BucketName: String) {
+      override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
       }
 
-      public override fun s3KeyPrefix(s3KeyPrefix: String) {
+      override fun s3KeyPrefix(s3KeyPrefix: String) {
         cdkBuilder.s3KeyPrefix(s3KeyPrefix)
       }
 
@@ -169,11 +161,11 @@ public open class CfnReportPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty,
     ) : ReportDeliveryChannelProperty {
-      public override fun formats(): List<String> = unwrap(this).getFormats() ?: emptyList()
+      override fun formats(): List<String> = unwrap(this).getFormats() ?: emptyList()
 
-      public override fun s3BucketName(): String = unwrap(this).getS3BucketName()
+      override fun s3BucketName(): String = unwrap(this).getS3BucketName()
 
-      public override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
+      override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
     }
 
     public companion object {
@@ -209,20 +201,15 @@ public open class CfnReportPlan internal constructor(
     public fun reportTemplate(): String
 
     public interface Builder {
-      public fun accounts(accounts: List<String>) {
-      }
+      public fun accounts(accounts: List<String>)
 
-      public fun frameworkArns(frameworkArns: List<String>) {
-      }
+      public fun frameworkArns(frameworkArns: List<String>)
 
-      public fun organizationUnits(organizationUnits: List<String>) {
-      }
+      public fun organizationUnits(organizationUnits: List<String>)
 
-      public fun regions(regions: List<String>) {
-      }
+      public fun regions(regions: List<String>)
 
-      public fun reportTemplate(reportTemplate: String) {
-      }
+      public fun reportTemplate(reportTemplate: String)
     }
 
     private class BuilderImpl : Builder {
@@ -230,23 +217,23 @@ public open class CfnReportPlan internal constructor(
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty.Builder =
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty.builder()
 
-      public override fun accounts(accounts: List<String>) {
+      override fun accounts(accounts: List<String>) {
         cdkBuilder.accounts(accounts)
       }
 
-      public override fun frameworkArns(frameworkArns: List<String>) {
+      override fun frameworkArns(frameworkArns: List<String>) {
         cdkBuilder.frameworkArns(frameworkArns)
       }
 
-      public override fun organizationUnits(organizationUnits: List<String>) {
+      override fun organizationUnits(organizationUnits: List<String>) {
         cdkBuilder.organizationUnits(organizationUnits)
       }
 
-      public override fun regions(regions: List<String>) {
+      override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
 
-      public override fun reportTemplate(reportTemplate: String) {
+      override fun reportTemplate(reportTemplate: String) {
         cdkBuilder.reportTemplate(reportTemplate)
       }
 
@@ -258,17 +245,16 @@ public open class CfnReportPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty,
     ) : ReportSettingProperty {
-      public override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
+      override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
 
-      public override fun frameworkArns(): List<String> = unwrap(this).getFrameworkArns() ?:
+      override fun frameworkArns(): List<String> = unwrap(this).getFrameworkArns() ?: emptyList()
+
+      override fun organizationUnits(): List<String> = unwrap(this).getOrganizationUnits() ?:
           emptyList()
 
-      public override fun organizationUnits(): List<String> = unwrap(this).getOrganizationUnits() ?:
-          emptyList()
+      override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
 
-      public override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
-
-      public override fun reportTemplate(): String = unwrap(this).getReportTemplate()
+      override fun reportTemplate(): String = unwrap(this).getReportTemplate()
     }
 
     public companion object {

@@ -72,31 +72,23 @@ public open class CfnDataQualityRuleset internal constructor(
       targetTable(DataQualityTargetTableProperty(`value`))
 
   public interface Builder {
-    public fun clientToken(clientToken: String) {
-    }
+    public fun clientToken(clientToken: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun ruleset(ruleset: String) {
-    }
+    public fun ruleset(ruleset: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun targetTable(targetTable: IResolvable) {
-    }
+    public fun targetTable(targetTable: IResolvable)
 
-    public fun targetTable(targetTable: DataQualityTargetTableProperty) {
-    }
+    public fun targetTable(targetTable: DataQualityTargetTableProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d1c2f10db8f3a409fb5d22a6fb506a0411855f3941cbc59f934a4c87a94eb52")
-    public fun targetTable(targetTable: DataQualityTargetTableProperty.Builder.() -> Unit) {
-    }
+    public fun targetTable(targetTable: DataQualityTargetTableProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -106,38 +98,38 @@ public open class CfnDataQualityRuleset internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnDataQualityRuleset.Builder =
         software.amazon.awscdk.services.glue.CfnDataQualityRuleset.Builder.create(scope, id)
 
-    public override fun clientToken(clientToken: String) {
+    override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun ruleset(ruleset: String) {
+    override fun ruleset(ruleset: String) {
       cdkBuilder.ruleset(ruleset)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun targetTable(targetTable: IResolvable) {
+    override fun targetTable(targetTable: IResolvable) {
       cdkBuilder.targetTable(targetTable.let(IResolvable::unwrap))
     }
 
-    public override fun targetTable(targetTable: DataQualityTargetTableProperty) {
+    override fun targetTable(targetTable: DataQualityTargetTableProperty) {
       cdkBuilder.targetTable(targetTable.let(DataQualityTargetTableProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6d1c2f10db8f3a409fb5d22a6fb506a0411855f3941cbc59f934a4c87a94eb52")
-    public override fun targetTable(targetTable: DataQualityTargetTableProperty.Builder.() -> Unit):
-        Unit = targetTable(DataQualityTargetTableProperty(targetTable))
+    override fun targetTable(targetTable: DataQualityTargetTableProperty.Builder.() -> Unit): Unit =
+        targetTable(DataQualityTargetTableProperty(targetTable))
 
     public fun build(): software.amazon.awscdk.services.glue.CfnDataQualityRuleset =
         cdkBuilder.build()
@@ -170,11 +162,9 @@ public open class CfnDataQualityRuleset internal constructor(
     public fun tableName(): String? = unwrap(this).getTableName()
 
     public interface Builder {
-      public fun databaseName(databaseName: String) {
-      }
+      public fun databaseName(databaseName: String)
 
-      public fun tableName(tableName: String) {
-      }
+      public fun tableName(tableName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -183,11 +173,11 @@ public open class CfnDataQualityRuleset internal constructor(
           =
           software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty.builder()
 
-      public override fun databaseName(databaseName: String) {
+      override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
       }
 
-      public override fun tableName(tableName: String) {
+      override fun tableName(tableName: String) {
         cdkBuilder.tableName(tableName)
       }
 
@@ -200,9 +190,9 @@ public open class CfnDataQualityRuleset internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty,
     ) : DataQualityTargetTableProperty {
-      public override fun databaseName(): String? = unwrap(this).getDatabaseName()
+      override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public override fun tableName(): String? = unwrap(this).getTableName()
+      override fun tableName(): String? = unwrap(this).getTableName()
     }
 
     public companion object {

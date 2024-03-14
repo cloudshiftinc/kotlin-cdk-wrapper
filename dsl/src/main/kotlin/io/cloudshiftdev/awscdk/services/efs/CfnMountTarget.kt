@@ -45,17 +45,13 @@ public open class CfnMountTarget internal constructor(
   }
 
   public interface Builder {
-    public fun fileSystemId(fileSystemId: String) {
-    }
+    public fun fileSystemId(fileSystemId: String)
 
-    public fun ipAddress(ipAddress: String) {
-    }
+    public fun ipAddress(ipAddress: String)
 
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
   }
 
   private class BuilderImpl(
@@ -65,19 +61,19 @@ public open class CfnMountTarget internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.efs.CfnMountTarget.Builder =
         software.amazon.awscdk.services.efs.CfnMountTarget.Builder.create(scope, id)
 
-    public override fun fileSystemId(fileSystemId: String) {
+    override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
-    public override fun ipAddress(ipAddress: String) {
+    override fun ipAddress(ipAddress: String) {
       cdkBuilder.ipAddress(ipAddress)
     }
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 

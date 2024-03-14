@@ -26,71 +26,62 @@ public interface EventPattern {
   public fun version(): List<String> = unwrap(this).getVersion() ?: emptyList()
 
   public interface Builder {
-    public fun account(account: List<String>) {
-    }
+    public fun account(account: List<String>)
 
-    public fun detail(detail: Map<String, Any>) {
-    }
+    public fun detail(detail: Map<String, Any>)
 
-    public fun detailType(detailType: List<String>) {
-    }
+    public fun detailType(detailType: List<String>)
 
-    public fun id(id: List<String>) {
-    }
+    public fun id(id: List<String>)
 
-    public fun region(region: List<String>) {
-    }
+    public fun region(region: List<String>)
 
-    public fun resources(resources: List<String>) {
-    }
+    public fun resources(resources: List<String>)
 
-    public fun source(source: List<String>) {
-    }
+    public fun source(source: List<String>)
 
-    public fun time(time: List<String>) {
-    }
+    public fun time(time: List<String>)
 
-    public fun version(version: List<String>) {
-    }
+    public fun version(version: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.EventPattern.Builder =
         software.amazon.awscdk.services.events.EventPattern.builder()
 
-    public override fun account(account: List<String>) {
+    override fun account(account: List<String>) {
       cdkBuilder.account(account)
     }
 
-    public override fun detail(detail: Map<String, Any>) {
+    override fun detail(detail: Map<String, Any>) {
       cdkBuilder.detail(detail)
     }
 
-    public override fun detailType(detailType: List<String>) {
+    override fun detailType(detailType: List<String>) {
       cdkBuilder.detailType(detailType)
     }
 
-    public override fun id(id: List<String>) {
+    override fun id(id: List<String>) {
       cdkBuilder.id(id)
     }
 
-    public override fun region(region: List<String>) {
+    override fun region(region: List<String>) {
       cdkBuilder.region(region)
     }
 
-    public override fun resources(resources: List<String>) {
+    override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
-    public override fun source(source: List<String>) {
+    override fun source(source: List<String>) {
       cdkBuilder.source(source)
     }
 
-    public override fun time(time: List<String>) {
+    override fun time(time: List<String>) {
       cdkBuilder.time(time)
     }
 
-    public override fun version(version: List<String>) {
+    override fun version(version: List<String>) {
       cdkBuilder.version(version)
     }
 
@@ -100,23 +91,23 @@ public interface EventPattern {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.events.EventPattern,
   ) : EventPattern {
-    public override fun account(): List<String> = unwrap(this).getAccount() ?: emptyList()
+    override fun account(): List<String> = unwrap(this).getAccount() ?: emptyList()
 
-    public override fun detail(): Map<String, Any> = unwrap(this).getDetail() ?: emptyMap()
+    override fun detail(): Map<String, Any> = unwrap(this).getDetail() ?: emptyMap()
 
-    public override fun detailType(): List<String> = unwrap(this).getDetailType() ?: emptyList()
+    override fun detailType(): List<String> = unwrap(this).getDetailType() ?: emptyList()
 
-    public override fun id(): List<String> = unwrap(this).getId() ?: emptyList()
+    override fun id(): List<String> = unwrap(this).getId() ?: emptyList()
 
-    public override fun region(): List<String> = unwrap(this).getRegion() ?: emptyList()
+    override fun region(): List<String> = unwrap(this).getRegion() ?: emptyList()
 
-    public override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+    override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
-    public override fun source(): List<String> = unwrap(this).getSource() ?: emptyList()
+    override fun source(): List<String> = unwrap(this).getSource() ?: emptyList()
 
-    public override fun time(): List<String> = unwrap(this).getTime() ?: emptyList()
+    override fun time(): List<String> = unwrap(this).getTime() ?: emptyList()
 
-    public override fun version(): List<String> = unwrap(this).getVersion() ?: emptyList()
+    override fun version(): List<String> = unwrap(this).getVersion() ?: emptyList()
   }
 
   public companion object {

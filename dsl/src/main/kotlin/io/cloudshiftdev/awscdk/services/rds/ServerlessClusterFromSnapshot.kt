@@ -45,63 +45,45 @@ public open class ServerlessClusterFromSnapshot internal constructor(
   public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
   public interface Builder {
-    public fun backupRetention(backupRetention: Duration) {
-    }
+    public fun backupRetention(backupRetention: Duration)
 
-    public fun clusterIdentifier(clusterIdentifier: String) {
-    }
+    public fun clusterIdentifier(clusterIdentifier: String)
 
-    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
-    }
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
-    public fun credentials(credentials: SnapshotCredentials) {
-    }
+    public fun credentials(credentials: SnapshotCredentials)
 
-    public fun defaultDatabaseName(defaultDatabaseName: String) {
-    }
+    public fun defaultDatabaseName(defaultDatabaseName: String)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun enableDataApi(enableDataApi: Boolean) {
-    }
+    public fun enableDataApi(enableDataApi: Boolean)
 
-    public fun engine(engine: IClusterEngine) {
-    }
+    public fun engine(engine: IClusterEngine)
 
-    public fun parameterGroup(parameterGroup: IParameterGroup) {
-    }
+    public fun parameterGroup(parameterGroup: IParameterGroup)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun scaling(scaling: ServerlessScalingOptions) {
-    }
+    public fun scaling(scaling: ServerlessScalingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53e76e2fe905de025512a2c88106847dd295dff7a28c55de23468e23112c8d08")
-    public fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit) {
-    }
+    public fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit)
 
-    public fun securityGroups(securityGroups: List<ISecurityGroup>) {
-    }
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    public fun snapshotIdentifier(snapshotIdentifier: String) {
-    }
+    public fun snapshotIdentifier(snapshotIdentifier: String)
 
-    public fun subnetGroup(subnetGroup: ISubnetGroup) {
-    }
+    public fun subnetGroup(subnetGroup: ISubnetGroup)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("34e7f91f75217a3c85f879442387381bf78e7e6cb28791ef921393214eed8bea")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -112,78 +94,78 @@ public open class ServerlessClusterFromSnapshot internal constructor(
         software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot.Builder =
         software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot.Builder.create(scope, id)
 
-    public override fun backupRetention(backupRetention: Duration) {
+    override fun backupRetention(backupRetention: Duration) {
       cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
     }
 
-    public override fun clusterIdentifier(clusterIdentifier: String) {
+    override fun clusterIdentifier(clusterIdentifier: String) {
       cdkBuilder.clusterIdentifier(clusterIdentifier)
     }
 
-    public override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
-    public override fun credentials(credentials: SnapshotCredentials) {
+    override fun credentials(credentials: SnapshotCredentials) {
       cdkBuilder.credentials(credentials.let(SnapshotCredentials::unwrap))
     }
 
-    public override fun defaultDatabaseName(defaultDatabaseName: String) {
+    override fun defaultDatabaseName(defaultDatabaseName: String) {
       cdkBuilder.defaultDatabaseName(defaultDatabaseName)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun enableDataApi(enableDataApi: Boolean) {
+    override fun enableDataApi(enableDataApi: Boolean) {
       cdkBuilder.enableDataApi(enableDataApi)
     }
 
-    public override fun engine(engine: IClusterEngine) {
+    override fun engine(engine: IClusterEngine) {
       cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
     }
 
-    public override fun parameterGroup(parameterGroup: IParameterGroup) {
+    override fun parameterGroup(parameterGroup: IParameterGroup) {
       cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun scaling(scaling: ServerlessScalingOptions) {
+    override fun scaling(scaling: ServerlessScalingOptions) {
       cdkBuilder.scaling(scaling.let(ServerlessScalingOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53e76e2fe905de025512a2c88106847dd295dff7a28c55de23468e23112c8d08")
-    public override fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit): Unit =
+    override fun scaling(scaling: ServerlessScalingOptions.Builder.() -> Unit): Unit =
         scaling(ServerlessScalingOptions(scaling))
 
-    public override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
-    public override fun snapshotIdentifier(snapshotIdentifier: String) {
+    override fun snapshotIdentifier(snapshotIdentifier: String) {
       cdkBuilder.snapshotIdentifier(snapshotIdentifier)
     }
 
-    public override fun subnetGroup(subnetGroup: ISubnetGroup) {
+    override fun subnetGroup(subnetGroup: ISubnetGroup) {
       cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("34e7f91f75217a3c85f879442387381bf78e7e6cb28791ef921393214eed8bea")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot =

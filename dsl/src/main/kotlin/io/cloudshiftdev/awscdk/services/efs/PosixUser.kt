@@ -12,29 +12,26 @@ public interface PosixUser {
   public fun uid(): String
 
   public interface Builder {
-    public fun gid(gid: String) {
-    }
+    public fun gid(gid: String)
 
-    public fun secondaryGids(secondaryGids: List<String>) {
-    }
+    public fun secondaryGids(secondaryGids: List<String>)
 
-    public fun uid(uid: String) {
-    }
+    public fun uid(uid: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.efs.PosixUser.Builder =
         software.amazon.awscdk.services.efs.PosixUser.builder()
 
-    public override fun gid(gid: String) {
+    override fun gid(gid: String) {
       cdkBuilder.gid(gid)
     }
 
-    public override fun secondaryGids(secondaryGids: List<String>) {
+    override fun secondaryGids(secondaryGids: List<String>) {
       cdkBuilder.secondaryGids(secondaryGids)
     }
 
-    public override fun uid(uid: String) {
+    override fun uid(uid: String) {
       cdkBuilder.uid(uid)
     }
 
@@ -44,12 +41,11 @@ public interface PosixUser {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.efs.PosixUser,
   ) : PosixUser {
-    public override fun gid(): String = unwrap(this).getGid()
+    override fun gid(): String = unwrap(this).getGid()
 
-    public override fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?:
-        emptyList()
+    override fun secondaryGids(): List<String> = unwrap(this).getSecondaryGids() ?: emptyList()
 
-    public override fun uid(): String = unwrap(this).getUid()
+    override fun uid(): String = unwrap(this).getUid()
   }
 
   public companion object {

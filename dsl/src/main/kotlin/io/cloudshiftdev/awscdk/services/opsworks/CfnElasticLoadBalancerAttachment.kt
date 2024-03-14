@@ -30,11 +30,9 @@ public open class CfnElasticLoadBalancerAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun elasticLoadBalancerName(elasticLoadBalancerName: String) {
-    }
+    public fun elasticLoadBalancerName(elasticLoadBalancerName: String)
 
-    public fun layerId(layerId: String) {
-    }
+    public fun layerId(layerId: String)
   }
 
   private class BuilderImpl(
@@ -46,11 +44,11 @@ public open class CfnElasticLoadBalancerAttachment internal constructor(
         software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment.Builder.create(scope,
         id)
 
-    public override fun elasticLoadBalancerName(elasticLoadBalancerName: String) {
+    override fun elasticLoadBalancerName(elasticLoadBalancerName: String) {
       cdkBuilder.elasticLoadBalancerName(elasticLoadBalancerName)
     }
 
-    public override fun layerId(layerId: String) {
+    override fun layerId(layerId: String) {
       cdkBuilder.layerId(layerId)
     }
 

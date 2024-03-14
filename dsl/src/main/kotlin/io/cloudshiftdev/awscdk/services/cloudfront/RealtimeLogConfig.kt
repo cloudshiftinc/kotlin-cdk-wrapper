@@ -16,17 +16,13 @@ public open class RealtimeLogConfig internal constructor(
   public override fun realtimeLogConfigName(): String = unwrap(this).getRealtimeLogConfigName()
 
   public interface Builder {
-    public fun endPoints(endPoints: List<Endpoint>) {
-    }
+    public fun endPoints(endPoints: List<Endpoint>)
 
-    public fun fields(fields: List<String>) {
-    }
+    public fun fields(fields: List<String>)
 
-    public fun realtimeLogConfigName(realtimeLogConfigName: String) {
-    }
+    public fun realtimeLogConfigName(realtimeLogConfigName: String)
 
-    public fun samplingRate(samplingRate: Number) {
-    }
+    public fun samplingRate(samplingRate: Number)
   }
 
   private class BuilderImpl(
@@ -36,19 +32,19 @@ public open class RealtimeLogConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.RealtimeLogConfig.Builder =
         software.amazon.awscdk.services.cloudfront.RealtimeLogConfig.Builder.create(scope, id)
 
-    public override fun endPoints(endPoints: List<Endpoint>) {
+    override fun endPoints(endPoints: List<Endpoint>) {
       cdkBuilder.endPoints(endPoints.map(Endpoint::unwrap))
     }
 
-    public override fun fields(fields: List<String>) {
+    override fun fields(fields: List<String>) {
       cdkBuilder.fields(fields)
     }
 
-    public override fun realtimeLogConfigName(realtimeLogConfigName: String) {
+    override fun realtimeLogConfigName(realtimeLogConfigName: String) {
       cdkBuilder.realtimeLogConfigName(realtimeLogConfigName)
     }
 
-    public override fun samplingRate(samplingRate: Number) {
+    override fun samplingRate(samplingRate: Number) {
       cdkBuilder.samplingRate(samplingRate)
     }
 

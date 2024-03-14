@@ -16,36 +16,32 @@ public interface PolicyValidationPluginReportBeta1 {
   public fun violations(): List<PolicyViolationBeta1>
 
   public interface Builder {
-    public fun metadata(metadata: Map<String, String>) {
-    }
+    public fun metadata(metadata: Map<String, String>)
 
-    public fun pluginVersion(pluginVersion: String) {
-    }
+    public fun pluginVersion(pluginVersion: String)
 
-    public fun success(success: Boolean) {
-    }
+    public fun success(success: Boolean)
 
-    public fun violations(violations: List<PolicyViolationBeta1>) {
-    }
+    public fun violations(violations: List<PolicyViolationBeta1>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.PolicyValidationPluginReportBeta1.Builder =
         software.amazon.awscdk.PolicyValidationPluginReportBeta1.builder()
 
-    public override fun metadata(metadata: Map<String, String>) {
+    override fun metadata(metadata: Map<String, String>) {
       cdkBuilder.metadata(metadata)
     }
 
-    public override fun pluginVersion(pluginVersion: String) {
+    override fun pluginVersion(pluginVersion: String) {
       cdkBuilder.pluginVersion(pluginVersion)
     }
 
-    public override fun success(success: Boolean) {
+    override fun success(success: Boolean) {
       cdkBuilder.success(success)
     }
 
-    public override fun violations(violations: List<PolicyViolationBeta1>) {
+    override fun violations(violations: List<PolicyViolationBeta1>) {
       cdkBuilder.violations(violations.map(PolicyViolationBeta1::unwrap))
     }
 
@@ -56,13 +52,13 @@ public interface PolicyValidationPluginReportBeta1 {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.PolicyValidationPluginReportBeta1,
   ) : PolicyValidationPluginReportBeta1 {
-    public override fun metadata(): Map<String, String> = unwrap(this).getMetadata() ?: emptyMap()
+    override fun metadata(): Map<String, String> = unwrap(this).getMetadata() ?: emptyMap()
 
-    public override fun pluginVersion(): String? = unwrap(this).getPluginVersion()
+    override fun pluginVersion(): String? = unwrap(this).getPluginVersion()
 
-    public override fun success(): Boolean = unwrap(this).getSuccess()
+    override fun success(): Boolean = unwrap(this).getSuccess()
 
-    public override fun violations(): List<PolicyViolationBeta1> =
+    override fun violations(): List<PolicyViolationBeta1> =
         unwrap(this).getViolations().map(PolicyViolationBeta1::wrap)
   }
 

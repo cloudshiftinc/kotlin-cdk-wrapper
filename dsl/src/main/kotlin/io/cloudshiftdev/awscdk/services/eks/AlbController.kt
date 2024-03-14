@@ -12,17 +12,13 @@ public open class AlbController internal constructor(
   private val cdkObject: software.amazon.awscdk.services.eks.AlbController,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
-    public fun cluster(cluster: Cluster) {
-    }
+    public fun cluster(cluster: Cluster)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun repository(repository: String) {
-    }
+    public fun repository(repository: String)
 
-    public fun version(version: AlbControllerVersion) {
-    }
+    public fun version(version: AlbControllerVersion)
   }
 
   private class BuilderImpl(
@@ -32,19 +28,19 @@ public open class AlbController internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.AlbController.Builder =
         software.amazon.awscdk.services.eks.AlbController.Builder.create(scope, id)
 
-    public override fun cluster(cluster: Cluster) {
+    override fun cluster(cluster: Cluster) {
       cdkBuilder.cluster(cluster.let(Cluster::unwrap))
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun repository(repository: String) {
+    override fun repository(repository: String) {
       cdkBuilder.repository(repository)
     }
 
-    public override fun version(version: AlbControllerVersion) {
+    override fun version(version: AlbControllerVersion) {
       cdkBuilder.version(version.let(AlbControllerVersion::unwrap))
     }
 

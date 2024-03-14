@@ -56,22 +56,17 @@ public open class CfnSchedulingPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun fairsharePolicy(fairsharePolicy: IResolvable) {
-    }
+    public fun fairsharePolicy(fairsharePolicy: IResolvable)
 
-    public fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty) {
-    }
+    public fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("62f06a0b5b52fb1318708cc740c9dcf623307c96501bdeface2fff8746888e96")
-    public fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty.Builder.() -> Unit) {
-    }
+    public fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -81,25 +76,24 @@ public open class CfnSchedulingPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.Builder =
         software.amazon.awscdk.services.batch.CfnSchedulingPolicy.Builder.create(scope, id)
 
-    public override fun fairsharePolicy(fairsharePolicy: IResolvable) {
+    override fun fairsharePolicy(fairsharePolicy: IResolvable) {
       cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable::unwrap))
     }
 
-    public override fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty) {
+    override fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty) {
       cdkBuilder.fairsharePolicy(fairsharePolicy.let(FairsharePolicyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("62f06a0b5b52fb1318708cc740c9dcf623307c96501bdeface2fff8746888e96")
-    public override
-        fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty.Builder.() -> Unit): Unit =
-        fairsharePolicy(FairsharePolicyProperty(fairsharePolicy))
+    override fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty.Builder.() -> Unit): Unit
+        = fairsharePolicy(FairsharePolicyProperty(fairsharePolicy))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -134,11 +128,9 @@ public open class CfnSchedulingPolicy internal constructor(
     public fun weightFactor(): Number? = unwrap(this).getWeightFactor()
 
     public interface Builder {
-      public fun shareIdentifier(shareIdentifier: String) {
-      }
+      public fun shareIdentifier(shareIdentifier: String)
 
-      public fun weightFactor(weightFactor: Number) {
-      }
+      public fun weightFactor(weightFactor: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -147,11 +139,11 @@ public open class CfnSchedulingPolicy internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty.builder()
 
-      public override fun shareIdentifier(shareIdentifier: String) {
+      override fun shareIdentifier(shareIdentifier: String) {
         cdkBuilder.shareIdentifier(shareIdentifier)
       }
 
-      public override fun weightFactor(weightFactor: Number) {
+      override fun weightFactor(weightFactor: Number) {
         cdkBuilder.weightFactor(weightFactor)
       }
 
@@ -164,9 +156,9 @@ public open class CfnSchedulingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty,
     ) : ShareAttributesProperty {
-      public override fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
+      override fun shareIdentifier(): String? = unwrap(this).getShareIdentifier()
 
-      public override fun weightFactor(): Number? = unwrap(this).getWeightFactor()
+      override fun weightFactor(): Number? = unwrap(this).getWeightFactor()
     }
 
     public companion object {
@@ -197,17 +189,13 @@ public open class CfnSchedulingPolicy internal constructor(
     public fun shareDistribution(): Any? = unwrap(this).getShareDistribution()
 
     public interface Builder {
-      public fun computeReservation(computeReservation: Number) {
-      }
+      public fun computeReservation(computeReservation: Number)
 
-      public fun shareDecaySeconds(shareDecaySeconds: Number) {
-      }
+      public fun shareDecaySeconds(shareDecaySeconds: Number)
 
-      public fun shareDistribution(shareDistribution: IResolvable) {
-      }
+      public fun shareDistribution(shareDistribution: IResolvable)
 
-      public fun shareDistribution(shareDistribution: List<Any>) {
-      }
+      public fun shareDistribution(shareDistribution: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -216,19 +204,19 @@ public open class CfnSchedulingPolicy internal constructor(
           =
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty.builder()
 
-      public override fun computeReservation(computeReservation: Number) {
+      override fun computeReservation(computeReservation: Number) {
         cdkBuilder.computeReservation(computeReservation)
       }
 
-      public override fun shareDecaySeconds(shareDecaySeconds: Number) {
+      override fun shareDecaySeconds(shareDecaySeconds: Number) {
         cdkBuilder.shareDecaySeconds(shareDecaySeconds)
       }
 
-      public override fun shareDistribution(shareDistribution: IResolvable) {
+      override fun shareDistribution(shareDistribution: IResolvable) {
         cdkBuilder.shareDistribution(shareDistribution.let(IResolvable::unwrap))
       }
 
-      public override fun shareDistribution(shareDistribution: List<Any>) {
+      override fun shareDistribution(shareDistribution: List<Any>) {
         cdkBuilder.shareDistribution(shareDistribution)
       }
 
@@ -241,11 +229,11 @@ public open class CfnSchedulingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty,
     ) : FairsharePolicyProperty {
-      public override fun computeReservation(): Number? = unwrap(this).getComputeReservation()
+      override fun computeReservation(): Number? = unwrap(this).getComputeReservation()
 
-      public override fun shareDecaySeconds(): Number? = unwrap(this).getShareDecaySeconds()
+      override fun shareDecaySeconds(): Number? = unwrap(this).getShareDecaySeconds()
 
-      public override fun shareDistribution(): Any? = unwrap(this).getShareDistribution()
+      override fun shareDistribution(): Any? = unwrap(this).getShareDistribution()
     }
 
     public companion object {

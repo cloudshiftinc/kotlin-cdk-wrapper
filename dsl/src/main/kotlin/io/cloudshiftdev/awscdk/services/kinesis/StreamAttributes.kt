@@ -10,22 +10,20 @@ public interface StreamAttributes {
   public fun streamArn(): String
 
   public interface Builder {
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun streamArn(streamArn: String) {
-    }
+    public fun streamArn(streamArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.kinesis.StreamAttributes.Builder =
         software.amazon.awscdk.services.kinesis.StreamAttributes.builder()
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun streamArn(streamArn: String) {
+    override fun streamArn(streamArn: String) {
       cdkBuilder.streamArn(streamArn)
     }
 
@@ -36,9 +34,9 @@ public interface StreamAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.kinesis.StreamAttributes,
   ) : StreamAttributes {
-    public override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    public override fun streamArn(): String = unwrap(this).getStreamArn()
+    override fun streamArn(): String = unwrap(this).getStreamArn()
   }
 
   public companion object {

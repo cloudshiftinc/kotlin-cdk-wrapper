@@ -6,7 +6,7 @@ public interface ITaskDefinitionExtension {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension,
   ) : ITaskDefinitionExtension {
-    public override fun extend(arg0: TaskDefinition) {
+    override fun extend(arg0: TaskDefinition) {
       unwrap(this).extend(arg0.let(TaskDefinition::unwrap))
     }
   }

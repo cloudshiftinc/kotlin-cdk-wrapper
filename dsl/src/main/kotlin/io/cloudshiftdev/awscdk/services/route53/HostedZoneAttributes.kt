@@ -9,22 +9,20 @@ public interface HostedZoneAttributes {
   public fun zoneName(): String
 
   public interface Builder {
-    public fun hostedZoneId(hostedZoneId: String) {
-    }
+    public fun hostedZoneId(hostedZoneId: String)
 
-    public fun zoneName(zoneName: String) {
-    }
+    public fun zoneName(zoneName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53.HostedZoneAttributes.Builder =
         software.amazon.awscdk.services.route53.HostedZoneAttributes.builder()
 
-    public override fun hostedZoneId(hostedZoneId: String) {
+    override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 
-    public override fun zoneName(zoneName: String) {
+    override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)
     }
 
@@ -35,9 +33,9 @@ public interface HostedZoneAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.HostedZoneAttributes,
   ) : HostedZoneAttributes {
-    public override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
+    override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
 
-    public override fun zoneName(): String = unwrap(this).getZoneName()
+    override fun zoneName(): String = unwrap(this).getZoneName()
   }
 
   public companion object {

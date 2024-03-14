@@ -55,32 +55,23 @@ public open class Alias internal constructor(
   public override fun version(): IVersion = unwrap(this).getVersion().let(IVersion::wrap)
 
   public interface Builder {
-    public fun additionalVersions(additionalVersions: List<VersionWeight>) {
-    }
+    public fun additionalVersions(additionalVersions: List<VersionWeight>)
 
-    public fun aliasName(aliasName: String) {
-    }
+    public fun aliasName(aliasName: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun maxEventAge(maxEventAge: Duration) {
-    }
+    public fun maxEventAge(maxEventAge: Duration)
 
-    public fun onFailure(onFailure: IDestination) {
-    }
+    public fun onFailure(onFailure: IDestination)
 
-    public fun onSuccess(onSuccess: IDestination) {
-    }
+    public fun onSuccess(onSuccess: IDestination)
 
-    public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
-    }
+    public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number)
 
-    public fun retryAttempts(retryAttempts: Number) {
-    }
+    public fun retryAttempts(retryAttempts: Number)
 
-    public fun version(version: IVersion) {
-    }
+    public fun version(version: IVersion)
   }
 
   private class BuilderImpl(
@@ -90,39 +81,39 @@ public open class Alias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.Alias.Builder =
         software.amazon.awscdk.services.lambda.Alias.Builder.create(scope, id)
 
-    public override fun additionalVersions(additionalVersions: List<VersionWeight>) {
+    override fun additionalVersions(additionalVersions: List<VersionWeight>) {
       cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight::unwrap))
     }
 
-    public override fun aliasName(aliasName: String) {
+    override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun maxEventAge(maxEventAge: Duration) {
+    override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
     }
 
-    public override fun onFailure(onFailure: IDestination) {
+    override fun onFailure(onFailure: IDestination) {
       cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
     }
 
-    public override fun onSuccess(onSuccess: IDestination) {
+    override fun onSuccess(onSuccess: IDestination) {
       cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
     }
 
-    public override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
+    override fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
       cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
     }
 
-    public override fun retryAttempts(retryAttempts: Number) {
+    override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }
 
-    public override fun version(version: IVersion) {
+    override fun version(version: IVersion) {
       cdkBuilder.version(version.let(IVersion::unwrap))
     }
 

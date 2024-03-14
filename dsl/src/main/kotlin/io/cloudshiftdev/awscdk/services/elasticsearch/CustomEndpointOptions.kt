@@ -19,16 +19,13 @@ public interface CustomEndpointOptions {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun certificate(certificate: ICertificate) {
-    }
+    public fun certificate(certificate: ICertificate)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun hostedZone(hostedZone: IHostedZone) {
-    }
+    public fun hostedZone(hostedZone: IHostedZone)
   }
 
   private class BuilderImpl : Builder {
@@ -37,17 +34,17 @@ public interface CustomEndpointOptions {
         software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun certificate(certificate: ICertificate) {
+    override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun hostedZone(hostedZone: IHostedZone) {
+    override fun hostedZone(hostedZone: IHostedZone) {
       cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
     }
 
@@ -59,15 +56,14 @@ public interface CustomEndpointOptions {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions,
   ) : CustomEndpointOptions {
     @Deprecated(message = "deprecated in CDK")
-    public override fun certificate(): ICertificate? =
+    override fun certificate(): ICertificate? =
         unwrap(this).getCertificate()?.let(ICertificate::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun domainName(): String = unwrap(this).getDomainName()
+    override fun domainName(): String = unwrap(this).getDomainName()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun hostedZone(): IHostedZone? =
-        unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
+    override fun hostedZone(): IHostedZone? = unwrap(this).getHostedZone()?.let(IHostedZone::wrap)
   }
 
   public companion object {

@@ -8,7 +8,7 @@ public interface IVpcEndpointServiceLoadBalancer {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IVpcEndpointServiceLoadBalancer,
   ) : IVpcEndpointServiceLoadBalancer {
-    public override fun loadBalancerArn(): String = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String = unwrap(this).getLoadBalancerArn()
   }
 
   public companion object {

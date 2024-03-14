@@ -69,23 +69,17 @@ public open class CfnProfile internal constructor(
   }
 
   public interface Builder {
-    public fun businessName(businessName: String) {
-    }
+    public fun businessName(businessName: String)
 
-    public fun email(email: String) {
-    }
+    public fun email(email: String)
 
-    public fun logging(logging: String) {
-    }
+    public fun logging(logging: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun phone(phone: String) {
-    }
+    public fun phone(phone: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -95,27 +89,27 @@ public open class CfnProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.b2bi.CfnProfile.Builder =
         software.amazon.awscdk.services.b2bi.CfnProfile.Builder.create(scope, id)
 
-    public override fun businessName(businessName: String) {
+    override fun businessName(businessName: String) {
       cdkBuilder.businessName(businessName)
     }
 
-    public override fun email(email: String) {
+    override fun email(email: String) {
       cdkBuilder.email(email)
     }
 
-    public override fun logging(logging: String) {
+    override fun logging(logging: String) {
       cdkBuilder.logging(logging)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun phone(phone: String) {
+    override fun phone(phone: String) {
       cdkBuilder.phone(phone)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

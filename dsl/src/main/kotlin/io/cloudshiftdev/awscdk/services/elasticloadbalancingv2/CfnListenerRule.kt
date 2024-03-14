@@ -61,23 +61,17 @@ public open class CfnListenerRule internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: IResolvable) {
-    }
+    public fun actions(actions: IResolvable)
 
-    public fun actions(actions: List<Any>) {
-    }
+    public fun actions(actions: List<Any>)
 
-    public fun conditions(conditions: IResolvable) {
-    }
+    public fun conditions(conditions: IResolvable)
 
-    public fun conditions(conditions: List<Any>) {
-    }
+    public fun conditions(conditions: List<Any>)
 
-    public fun listenerArn(listenerArn: String) {
-    }
+    public fun listenerArn(listenerArn: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnListenerRule internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.Builder.create(scope,
         id)
 
-    public override fun actions(actions: IResolvable) {
+    override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable::unwrap))
     }
 
-    public override fun actions(actions: List<Any>) {
+    override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun conditions(conditions: IResolvable) {
+    override fun conditions(conditions: IResolvable) {
       cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
     }
 
-    public override fun conditions(conditions: List<Any>) {
+    override fun conditions(conditions: List<Any>) {
       cdkBuilder.conditions(conditions)
     }
 
-    public override fun listenerArn(listenerArn: String) {
+    override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
@@ -153,23 +147,17 @@ public open class CfnListenerRule internal constructor(
     public fun statusCode(): String
 
     public interface Builder {
-      public fun host(host: String) {
-      }
+      public fun host(host: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
 
-      public fun port(port: String) {
-      }
+      public fun port(port: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun query(query: String) {
-      }
+      public fun query(query: String)
 
-      public fun statusCode(statusCode: String) {
-      }
+      public fun statusCode(statusCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -178,27 +166,27 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty.builder()
 
-      public override fun host(host: String) {
+      override fun host(host: String) {
         cdkBuilder.host(host)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
-      public override fun port(port: String) {
+      override fun port(port: String) {
         cdkBuilder.port(port)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun query(query: String) {
+      override fun query(query: String) {
         cdkBuilder.query(query)
       }
 
-      public override fun statusCode(statusCode: String) {
+      override fun statusCode(statusCode: String) {
         cdkBuilder.statusCode(statusCode)
       }
 
@@ -211,17 +199,17 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty,
     ) : RedirectConfigProperty {
-      public override fun host(): String? = unwrap(this).getHost()
+      override fun host(): String? = unwrap(this).getHost()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
 
-      public override fun port(): String? = unwrap(this).getPort()
+      override fun port(): String? = unwrap(this).getPort()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
 
-      public override fun query(): String? = unwrap(this).getQuery()
+      override fun query(): String? = unwrap(this).getQuery()
 
-      public override fun statusCode(): String = unwrap(this).getStatusCode()
+      override fun statusCode(): String = unwrap(this).getStatusCode()
     }
 
     public companion object {
@@ -262,73 +250,55 @@ public open class CfnListenerRule internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun authenticateCognitoConfig(authenticateCognitoConfig: IResolvable) {
-      }
+      public fun authenticateCognitoConfig(authenticateCognitoConfig: IResolvable)
 
       public
-          fun authenticateCognitoConfig(authenticateCognitoConfig: AuthenticateCognitoConfigProperty) {
-      }
+          fun authenticateCognitoConfig(authenticateCognitoConfig: AuthenticateCognitoConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("378d76cb2e2575288ef5df66fa14f71c0678b9ab6ae162163eb146b97192db7c")
       public
-          fun authenticateCognitoConfig(authenticateCognitoConfig: AuthenticateCognitoConfigProperty.Builder.() -> Unit) {
-      }
+          fun authenticateCognitoConfig(authenticateCognitoConfig: AuthenticateCognitoConfigProperty.Builder.() -> Unit)
 
-      public fun authenticateOidcConfig(authenticateOidcConfig: IResolvable) {
-      }
+      public fun authenticateOidcConfig(authenticateOidcConfig: IResolvable)
 
-      public fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty) {
-      }
+      public fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be8fbd647e89028c48807d2deca6a6d3defb75b5e15a25146fca7dd7d3bdd073")
       public
-          fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty.Builder.() -> Unit) {
-      }
+          fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty.Builder.() -> Unit)
 
-      public fun fixedResponseConfig(fixedResponseConfig: IResolvable) {
-      }
+      public fun fixedResponseConfig(fixedResponseConfig: IResolvable)
 
-      public fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty) {
-      }
+      public fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0043a9a4d68d3c72e55b5bfbddc78b332dcd268ac9c3b9033dd36530c6995975")
       public
-          fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty.Builder.() -> Unit) {
-      }
+          fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty.Builder.() -> Unit)
 
-      public fun forwardConfig(forwardConfig: IResolvable) {
-      }
+      public fun forwardConfig(forwardConfig: IResolvable)
 
-      public fun forwardConfig(forwardConfig: ForwardConfigProperty) {
-      }
+      public fun forwardConfig(forwardConfig: ForwardConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("11fd118fb9d2b4ce3a3509fa89b339f5e61454798d30be6f7d56e2eddcfa9b1f")
-      public fun forwardConfig(forwardConfig: ForwardConfigProperty.Builder.() -> Unit) {
-      }
+      public fun forwardConfig(forwardConfig: ForwardConfigProperty.Builder.() -> Unit)
 
-      public fun order(order: Number) {
-      }
+      public fun order(order: Number)
 
-      public fun redirectConfig(redirectConfig: IResolvable) {
-      }
+      public fun redirectConfig(redirectConfig: IResolvable)
 
-      public fun redirectConfig(redirectConfig: RedirectConfigProperty) {
-      }
+      public fun redirectConfig(redirectConfig: RedirectConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("347e35c9ecda80593b305009ccbd0ecba03227fdd5b10911275978d2d4aed55c")
-      public fun redirectConfig(redirectConfig: RedirectConfigProperty.Builder.() -> Unit) {
-      }
+      public fun redirectConfig(redirectConfig: RedirectConfigProperty.Builder.() -> Unit)
 
-      public fun targetGroupArn(targetGroupArn: String) {
-      }
+      public fun targetGroupArn(targetGroupArn: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,86 +307,85 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ActionProperty.builder()
 
-      public override fun authenticateCognitoConfig(authenticateCognitoConfig: IResolvable) {
+      override fun authenticateCognitoConfig(authenticateCognitoConfig: IResolvable) {
         cdkBuilder.authenticateCognitoConfig(authenticateCognitoConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun authenticateCognitoConfig(authenticateCognitoConfig: AuthenticateCognitoConfigProperty) {
         cdkBuilder.authenticateCognitoConfig(authenticateCognitoConfig.let(AuthenticateCognitoConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("378d76cb2e2575288ef5df66fa14f71c0678b9ab6ae162163eb146b97192db7c")
-      public override
+      override
           fun authenticateCognitoConfig(authenticateCognitoConfig: AuthenticateCognitoConfigProperty.Builder.() -> Unit):
           Unit =
           authenticateCognitoConfig(AuthenticateCognitoConfigProperty(authenticateCognitoConfig))
 
-      public override fun authenticateOidcConfig(authenticateOidcConfig: IResolvable) {
+      override fun authenticateOidcConfig(authenticateOidcConfig: IResolvable) {
         cdkBuilder.authenticateOidcConfig(authenticateOidcConfig.let(IResolvable::unwrap))
       }
 
-      public override
-          fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty) {
+      override fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty) {
         cdkBuilder.authenticateOidcConfig(authenticateOidcConfig.let(AuthenticateOidcConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be8fbd647e89028c48807d2deca6a6d3defb75b5e15a25146fca7dd7d3bdd073")
-      public override
+      override
           fun authenticateOidcConfig(authenticateOidcConfig: AuthenticateOidcConfigProperty.Builder.() -> Unit):
           Unit = authenticateOidcConfig(AuthenticateOidcConfigProperty(authenticateOidcConfig))
 
-      public override fun fixedResponseConfig(fixedResponseConfig: IResolvable) {
+      override fun fixedResponseConfig(fixedResponseConfig: IResolvable) {
         cdkBuilder.fixedResponseConfig(fixedResponseConfig.let(IResolvable::unwrap))
       }
 
-      public override fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty) {
+      override fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty) {
         cdkBuilder.fixedResponseConfig(fixedResponseConfig.let(FixedResponseConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0043a9a4d68d3c72e55b5bfbddc78b332dcd268ac9c3b9033dd36530c6995975")
-      public override
+      override
           fun fixedResponseConfig(fixedResponseConfig: FixedResponseConfigProperty.Builder.() -> Unit):
           Unit = fixedResponseConfig(FixedResponseConfigProperty(fixedResponseConfig))
 
-      public override fun forwardConfig(forwardConfig: IResolvable) {
+      override fun forwardConfig(forwardConfig: IResolvable) {
         cdkBuilder.forwardConfig(forwardConfig.let(IResolvable::unwrap))
       }
 
-      public override fun forwardConfig(forwardConfig: ForwardConfigProperty) {
+      override fun forwardConfig(forwardConfig: ForwardConfigProperty) {
         cdkBuilder.forwardConfig(forwardConfig.let(ForwardConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("11fd118fb9d2b4ce3a3509fa89b339f5e61454798d30be6f7d56e2eddcfa9b1f")
-      public override fun forwardConfig(forwardConfig: ForwardConfigProperty.Builder.() -> Unit):
-          Unit = forwardConfig(ForwardConfigProperty(forwardConfig))
+      override fun forwardConfig(forwardConfig: ForwardConfigProperty.Builder.() -> Unit): Unit =
+          forwardConfig(ForwardConfigProperty(forwardConfig))
 
-      public override fun order(order: Number) {
+      override fun order(order: Number) {
         cdkBuilder.order(order)
       }
 
-      public override fun redirectConfig(redirectConfig: IResolvable) {
+      override fun redirectConfig(redirectConfig: IResolvable) {
         cdkBuilder.redirectConfig(redirectConfig.let(IResolvable::unwrap))
       }
 
-      public override fun redirectConfig(redirectConfig: RedirectConfigProperty) {
+      override fun redirectConfig(redirectConfig: RedirectConfigProperty) {
         cdkBuilder.redirectConfig(redirectConfig.let(RedirectConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("347e35c9ecda80593b305009ccbd0ecba03227fdd5b10911275978d2d4aed55c")
-      public override fun redirectConfig(redirectConfig: RedirectConfigProperty.Builder.() -> Unit):
-          Unit = redirectConfig(RedirectConfigProperty(redirectConfig))
+      override fun redirectConfig(redirectConfig: RedirectConfigProperty.Builder.() -> Unit): Unit =
+          redirectConfig(RedirectConfigProperty(redirectConfig))
 
-      public override fun targetGroupArn(targetGroupArn: String) {
+      override fun targetGroupArn(targetGroupArn: String) {
         cdkBuilder.targetGroupArn(targetGroupArn)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -429,22 +398,21 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ActionProperty,
     ) : ActionProperty {
-      public override fun authenticateCognitoConfig(): Any? =
-          unwrap(this).getAuthenticateCognitoConfig()
+      override fun authenticateCognitoConfig(): Any? = unwrap(this).getAuthenticateCognitoConfig()
 
-      public override fun authenticateOidcConfig(): Any? = unwrap(this).getAuthenticateOidcConfig()
+      override fun authenticateOidcConfig(): Any? = unwrap(this).getAuthenticateOidcConfig()
 
-      public override fun fixedResponseConfig(): Any? = unwrap(this).getFixedResponseConfig()
+      override fun fixedResponseConfig(): Any? = unwrap(this).getFixedResponseConfig()
 
-      public override fun forwardConfig(): Any? = unwrap(this).getForwardConfig()
+      override fun forwardConfig(): Any? = unwrap(this).getForwardConfig()
 
-      public override fun order(): Number? = unwrap(this).getOrder()
+      override fun order(): Number? = unwrap(this).getOrder()
 
-      public override fun redirectConfig(): Any? = unwrap(this).getRedirectConfig()
+      override fun redirectConfig(): Any? = unwrap(this).getRedirectConfig()
 
-      public override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
+      override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -471,11 +439,9 @@ public open class CfnListenerRule internal constructor(
     public fun values(): Any? = unwrap(this).getValues()
 
     public interface Builder {
-      public fun values(values: IResolvable) {
-      }
+      public fun values(values: IResolvable)
 
-      public fun values(values: List<Any>) {
-      }
+      public fun values(values: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -484,11 +450,11 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty.builder()
 
-      public override fun values(values: IResolvable) {
+      override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
 
-      public override fun values(values: List<Any>) {
+      override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
 
@@ -501,7 +467,7 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty,
     ) : QueryStringConfigProperty {
-      public override fun values(): Any? = unwrap(this).getValues()
+      override fun values(): Any? = unwrap(this).getValues()
     }
 
     public companion object {
@@ -528,8 +494,7 @@ public open class CfnListenerRule internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -538,7 +503,7 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty.builder()
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -551,7 +516,7 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty,
     ) : PathPatternConfigProperty {
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -580,14 +545,11 @@ public open class CfnListenerRule internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun durationSeconds(durationSeconds: Number) {
-      }
+      public fun durationSeconds(durationSeconds: Number)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -596,15 +558,15 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty.builder()
 
-      public override fun durationSeconds(durationSeconds: Number) {
+      override fun durationSeconds(durationSeconds: Number) {
         cdkBuilder.durationSeconds(durationSeconds)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -617,9 +579,9 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty,
     ) : TargetGroupStickinessConfigProperty {
-      public override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
+      override fun durationSeconds(): Number? = unwrap(this).getDurationSeconds()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -649,11 +611,9 @@ public open class CfnListenerRule internal constructor(
     public fun weight(): Number? = unwrap(this).getWeight()
 
     public interface Builder {
-      public fun targetGroupArn(targetGroupArn: String) {
-      }
+      public fun targetGroupArn(targetGroupArn: String)
 
-      public fun weight(weight: Number) {
-      }
+      public fun weight(weight: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -662,11 +622,11 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty.builder()
 
-      public override fun targetGroupArn(targetGroupArn: String) {
+      override fun targetGroupArn(targetGroupArn: String) {
         cdkBuilder.targetGroupArn(targetGroupArn)
       }
 
-      public override fun weight(weight: Number) {
+      override fun weight(weight: Number) {
         cdkBuilder.weight(weight)
       }
 
@@ -679,9 +639,9 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty,
     ) : TargetGroupTupleProperty {
-      public override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
+      override fun targetGroupArn(): String? = unwrap(this).getTargetGroupArn()
 
-      public override fun weight(): Number? = unwrap(this).getWeight()
+      override fun weight(): Number? = unwrap(this).getWeight()
     }
 
     public companion object {
@@ -722,80 +682,58 @@ public open class CfnListenerRule internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun `field`(`field`: String) {
-      }
+      public fun `field`(`field`: String)
 
-      public fun hostHeaderConfig(hostHeaderConfig: IResolvable) {
-      }
+      public fun hostHeaderConfig(hostHeaderConfig: IResolvable)
 
-      public fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty) {
-      }
+      public fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a9d3934c46b2887dcd4030a8dd4f0b1ab037ccdd11c8851f6c6f5ccd31ffe8f")
-      public fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty.Builder.() -> Unit) {
-      }
+      public fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty.Builder.() -> Unit)
 
-      public fun httpHeaderConfig(httpHeaderConfig: IResolvable) {
-      }
+      public fun httpHeaderConfig(httpHeaderConfig: IResolvable)
 
-      public fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty) {
-      }
+      public fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2654036ebad02cf3518a9cb92038f87de2a79fa02bcfc4380ea875d7ddebd5a")
-      public fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty.Builder.() -> Unit) {
-      }
+      public fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty.Builder.() -> Unit)
 
-      public fun httpRequestMethodConfig(httpRequestMethodConfig: IResolvable) {
-      }
+      public fun httpRequestMethodConfig(httpRequestMethodConfig: IResolvable)
 
-      public fun httpRequestMethodConfig(httpRequestMethodConfig: HttpRequestMethodConfigProperty) {
-      }
+      public fun httpRequestMethodConfig(httpRequestMethodConfig: HttpRequestMethodConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8177321ae54582f5b62ecc7be5e4f6abd31aebf954a0265e5c5134032e60f5cf")
       public
-          fun httpRequestMethodConfig(httpRequestMethodConfig: HttpRequestMethodConfigProperty.Builder.() -> Unit) {
-      }
+          fun httpRequestMethodConfig(httpRequestMethodConfig: HttpRequestMethodConfigProperty.Builder.() -> Unit)
 
-      public fun pathPatternConfig(pathPatternConfig: IResolvable) {
-      }
+      public fun pathPatternConfig(pathPatternConfig: IResolvable)
 
-      public fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty) {
-      }
+      public fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6997fe58d1b50a439136930b30ed5927e3072f0777072a081fa7612b42cdfa7b")
-      public
-          fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty.Builder.() -> Unit) {
-      }
+      public fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty.Builder.() -> Unit)
 
-      public fun queryStringConfig(queryStringConfig: IResolvable) {
-      }
+      public fun queryStringConfig(queryStringConfig: IResolvable)
 
-      public fun queryStringConfig(queryStringConfig: QueryStringConfigProperty) {
-      }
+      public fun queryStringConfig(queryStringConfig: QueryStringConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82897a687b5ea53096160d48383110ba1c0563bf1618b31f58a2734bbb0adbd5")
-      public
-          fun queryStringConfig(queryStringConfig: QueryStringConfigProperty.Builder.() -> Unit) {
-      }
+      public fun queryStringConfig(queryStringConfig: QueryStringConfigProperty.Builder.() -> Unit)
 
-      public fun sourceIpConfig(sourceIpConfig: IResolvable) {
-      }
+      public fun sourceIpConfig(sourceIpConfig: IResolvable)
 
-      public fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty) {
-      }
+      public fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("13e80fa32ee413fe9c4c30fa4989582cb5a1b13afdd202b62beeb9614d8f5bd6")
-      public fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty.Builder.() -> Unit) {
-      }
+      public fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty.Builder.() -> Unit)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -804,95 +742,93 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty.builder()
 
-      public override fun `field`(`field`: String) {
+      override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
       }
 
-      public override fun hostHeaderConfig(hostHeaderConfig: IResolvable) {
+      override fun hostHeaderConfig(hostHeaderConfig: IResolvable) {
         cdkBuilder.hostHeaderConfig(hostHeaderConfig.let(IResolvable::unwrap))
       }
 
-      public override fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty) {
+      override fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty) {
         cdkBuilder.hostHeaderConfig(hostHeaderConfig.let(HostHeaderConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3a9d3934c46b2887dcd4030a8dd4f0b1ab037ccdd11c8851f6c6f5ccd31ffe8f")
-      public override
-          fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty.Builder.() -> Unit): Unit
-          = hostHeaderConfig(HostHeaderConfigProperty(hostHeaderConfig))
+      override fun hostHeaderConfig(hostHeaderConfig: HostHeaderConfigProperty.Builder.() -> Unit):
+          Unit = hostHeaderConfig(HostHeaderConfigProperty(hostHeaderConfig))
 
-      public override fun httpHeaderConfig(httpHeaderConfig: IResolvable) {
+      override fun httpHeaderConfig(httpHeaderConfig: IResolvable) {
         cdkBuilder.httpHeaderConfig(httpHeaderConfig.let(IResolvable::unwrap))
       }
 
-      public override fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty) {
+      override fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty) {
         cdkBuilder.httpHeaderConfig(httpHeaderConfig.let(HttpHeaderConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2654036ebad02cf3518a9cb92038f87de2a79fa02bcfc4380ea875d7ddebd5a")
-      public override
-          fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty.Builder.() -> Unit): Unit
-          = httpHeaderConfig(HttpHeaderConfigProperty(httpHeaderConfig))
+      override fun httpHeaderConfig(httpHeaderConfig: HttpHeaderConfigProperty.Builder.() -> Unit):
+          Unit = httpHeaderConfig(HttpHeaderConfigProperty(httpHeaderConfig))
 
-      public override fun httpRequestMethodConfig(httpRequestMethodConfig: IResolvable) {
+      override fun httpRequestMethodConfig(httpRequestMethodConfig: IResolvable) {
         cdkBuilder.httpRequestMethodConfig(httpRequestMethodConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun httpRequestMethodConfig(httpRequestMethodConfig: HttpRequestMethodConfigProperty) {
         cdkBuilder.httpRequestMethodConfig(httpRequestMethodConfig.let(HttpRequestMethodConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8177321ae54582f5b62ecc7be5e4f6abd31aebf954a0265e5c5134032e60f5cf")
-      public override
+      override
           fun httpRequestMethodConfig(httpRequestMethodConfig: HttpRequestMethodConfigProperty.Builder.() -> Unit):
           Unit = httpRequestMethodConfig(HttpRequestMethodConfigProperty(httpRequestMethodConfig))
 
-      public override fun pathPatternConfig(pathPatternConfig: IResolvable) {
+      override fun pathPatternConfig(pathPatternConfig: IResolvable) {
         cdkBuilder.pathPatternConfig(pathPatternConfig.let(IResolvable::unwrap))
       }
 
-      public override fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty) {
+      override fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty) {
         cdkBuilder.pathPatternConfig(pathPatternConfig.let(PathPatternConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6997fe58d1b50a439136930b30ed5927e3072f0777072a081fa7612b42cdfa7b")
-      public override
+      override
           fun pathPatternConfig(pathPatternConfig: PathPatternConfigProperty.Builder.() -> Unit):
           Unit = pathPatternConfig(PathPatternConfigProperty(pathPatternConfig))
 
-      public override fun queryStringConfig(queryStringConfig: IResolvable) {
+      override fun queryStringConfig(queryStringConfig: IResolvable) {
         cdkBuilder.queryStringConfig(queryStringConfig.let(IResolvable::unwrap))
       }
 
-      public override fun queryStringConfig(queryStringConfig: QueryStringConfigProperty) {
+      override fun queryStringConfig(queryStringConfig: QueryStringConfigProperty) {
         cdkBuilder.queryStringConfig(queryStringConfig.let(QueryStringConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82897a687b5ea53096160d48383110ba1c0563bf1618b31f58a2734bbb0adbd5")
-      public override
+      override
           fun queryStringConfig(queryStringConfig: QueryStringConfigProperty.Builder.() -> Unit):
           Unit = queryStringConfig(QueryStringConfigProperty(queryStringConfig))
 
-      public override fun sourceIpConfig(sourceIpConfig: IResolvable) {
+      override fun sourceIpConfig(sourceIpConfig: IResolvable) {
         cdkBuilder.sourceIpConfig(sourceIpConfig.let(IResolvable::unwrap))
       }
 
-      public override fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty) {
+      override fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty) {
         cdkBuilder.sourceIpConfig(sourceIpConfig.let(SourceIpConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("13e80fa32ee413fe9c4c30fa4989582cb5a1b13afdd202b62beeb9614d8f5bd6")
-      public override fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty.Builder.() -> Unit):
-          Unit = sourceIpConfig(SourceIpConfigProperty(sourceIpConfig))
+      override fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty.Builder.() -> Unit): Unit =
+          sourceIpConfig(SourceIpConfigProperty(sourceIpConfig))
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -905,22 +841,21 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty,
     ) : RuleConditionProperty {
-      public override fun `field`(): String? = unwrap(this).getField()
+      override fun `field`(): String? = unwrap(this).getField()
 
-      public override fun hostHeaderConfig(): Any? = unwrap(this).getHostHeaderConfig()
+      override fun hostHeaderConfig(): Any? = unwrap(this).getHostHeaderConfig()
 
-      public override fun httpHeaderConfig(): Any? = unwrap(this).getHttpHeaderConfig()
+      override fun httpHeaderConfig(): Any? = unwrap(this).getHttpHeaderConfig()
 
-      public override fun httpRequestMethodConfig(): Any? =
-          unwrap(this).getHttpRequestMethodConfig()
+      override fun httpRequestMethodConfig(): Any? = unwrap(this).getHttpRequestMethodConfig()
 
-      public override fun pathPatternConfig(): Any? = unwrap(this).getPathPatternConfig()
+      override fun pathPatternConfig(): Any? = unwrap(this).getPathPatternConfig()
 
-      public override fun queryStringConfig(): Any? = unwrap(this).getQueryStringConfig()
+      override fun queryStringConfig(): Any? = unwrap(this).getQueryStringConfig()
 
-      public override fun sourceIpConfig(): Any? = unwrap(this).getSourceIpConfig()
+      override fun sourceIpConfig(): Any? = unwrap(this).getSourceIpConfig()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -949,11 +884,9 @@ public open class CfnListenerRule internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -962,11 +895,11 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -979,9 +912,9 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty,
     ) : QueryStringKeyValueProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1008,8 +941,7 @@ public open class CfnListenerRule internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1018,7 +950,7 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty.builder()
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -1031,7 +963,7 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty,
     ) : HttpRequestMethodConfigProperty {
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -1060,24 +992,19 @@ public open class CfnListenerRule internal constructor(
     public fun targetGroups(): Any? = unwrap(this).getTargetGroups()
 
     public interface Builder {
-      public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
-      }
+      public fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable)
 
       public
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty) {
-      }
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8346cc062be8b2d02d334cf94fabe9c105928903dc00dd8ad5a858022fdf5d88")
       public
-          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit) {
-      }
+          fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit)
 
-      public fun targetGroups(targetGroups: IResolvable) {
-      }
+      public fun targetGroups(targetGroups: IResolvable)
 
-      public fun targetGroups(targetGroups: List<Any>) {
-      }
+      public fun targetGroups(targetGroups: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1086,27 +1013,27 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty.builder()
 
-      public override fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
+      override fun targetGroupStickinessConfig(targetGroupStickinessConfig: IResolvable) {
         cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty) {
         cdkBuilder.targetGroupStickinessConfig(targetGroupStickinessConfig.let(TargetGroupStickinessConfigProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8346cc062be8b2d02d334cf94fabe9c105928903dc00dd8ad5a858022fdf5d88")
-      public override
+      override
           fun targetGroupStickinessConfig(targetGroupStickinessConfig: TargetGroupStickinessConfigProperty.Builder.() -> Unit):
           Unit =
           targetGroupStickinessConfig(TargetGroupStickinessConfigProperty(targetGroupStickinessConfig))
 
-      public override fun targetGroups(targetGroups: IResolvable) {
+      override fun targetGroups(targetGroups: IResolvable) {
         cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
       }
 
-      public override fun targetGroups(targetGroups: List<Any>) {
+      override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
 
@@ -1119,10 +1046,10 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty,
     ) : ForwardConfigProperty {
-      public override fun targetGroupStickinessConfig(): Any? =
+      override fun targetGroupStickinessConfig(): Any? =
           unwrap(this).getTargetGroupStickinessConfig()
 
-      public override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
+      override fun targetGroups(): Any? = unwrap(this).getTargetGroups()
     }
 
     public companion object {
@@ -1151,11 +1078,9 @@ public open class CfnListenerRule internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun httpHeaderName(httpHeaderName: String) {
-      }
+      public fun httpHeaderName(httpHeaderName: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1164,11 +1089,11 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty.builder()
 
-      public override fun httpHeaderName(httpHeaderName: String) {
+      override fun httpHeaderName(httpHeaderName: String) {
         cdkBuilder.httpHeaderName(httpHeaderName)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -1181,9 +1106,9 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty,
     ) : HttpHeaderConfigProperty {
-      public override fun httpHeaderName(): String? = unwrap(this).getHttpHeaderName()
+      override fun httpHeaderName(): String? = unwrap(this).getHttpHeaderName()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -1225,33 +1150,24 @@ public open class CfnListenerRule internal constructor(
     public fun userPoolDomain(): String
 
     public interface Builder {
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-      }
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
 
       public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-      }
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
 
-      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
-      }
+      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
 
-      public fun scope(scope: String) {
-      }
+      public fun scope(scope: String)
 
-      public fun sessionCookieName(sessionCookieName: String) {
-      }
+      public fun sessionCookieName(sessionCookieName: String)
 
-      public fun sessionTimeout(sessionTimeout: Number) {
-      }
+      public fun sessionTimeout(sessionTimeout: Number)
 
-      public fun userPoolArn(userPoolArn: String) {
-      }
+      public fun userPoolArn(userPoolArn: String)
 
-      public fun userPoolClientId(userPoolClientId: String) {
-      }
+      public fun userPoolClientId(userPoolClientId: String)
 
-      public fun userPoolDomain(userPoolDomain: String) {
-      }
+      public fun userPoolDomain(userPoolDomain: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1260,41 +1176,40 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty.builder()
 
-      public override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
         cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
         cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
       }
 
-      public override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
+      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
         cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
       }
 
-      public override fun scope(scope: String) {
+      override fun scope(scope: String) {
         cdkBuilder.scope(scope)
       }
 
-      public override fun sessionCookieName(sessionCookieName: String) {
+      override fun sessionCookieName(sessionCookieName: String) {
         cdkBuilder.sessionCookieName(sessionCookieName)
       }
 
-      public override fun sessionTimeout(sessionTimeout: Number) {
+      override fun sessionTimeout(sessionTimeout: Number) {
         cdkBuilder.sessionTimeout(sessionTimeout)
       }
 
-      public override fun userPoolArn(userPoolArn: String) {
+      override fun userPoolArn(userPoolArn: String) {
         cdkBuilder.userPoolArn(userPoolArn)
       }
 
-      public override fun userPoolClientId(userPoolClientId: String) {
+      override fun userPoolClientId(userPoolClientId: String) {
         cdkBuilder.userPoolClientId(userPoolClientId)
       }
 
-      public override fun userPoolDomain(userPoolDomain: String) {
+      override fun userPoolDomain(userPoolDomain: String) {
         cdkBuilder.userPoolDomain(userPoolDomain)
       }
 
@@ -1307,23 +1222,22 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty,
     ) : AuthenticateCognitoConfigProperty {
-      public override fun authenticationRequestExtraParams(): Any? =
+      override fun authenticationRequestExtraParams(): Any? =
           unwrap(this).getAuthenticationRequestExtraParams()
 
-      public override fun onUnauthenticatedRequest(): String? =
-          unwrap(this).getOnUnauthenticatedRequest()
+      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
 
-      public override fun scope(): String? = unwrap(this).getScope()
+      override fun scope(): String? = unwrap(this).getScope()
 
-      public override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
 
-      public override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
 
-      public override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
+      override fun userPoolArn(): String = unwrap(this).getUserPoolArn()
 
-      public override fun userPoolClientId(): String = unwrap(this).getUserPoolClientId()
+      override fun userPoolClientId(): String = unwrap(this).getUserPoolClientId()
 
-      public override fun userPoolDomain(): String = unwrap(this).getUserPoolDomain()
+      override fun userPoolDomain(): String = unwrap(this).getUserPoolDomain()
     }
 
     public companion object {
@@ -1351,8 +1265,7 @@ public open class CfnListenerRule internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1361,7 +1274,7 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty.builder()
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -1374,7 +1287,7 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty,
     ) : HostHeaderConfigProperty {
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -1401,8 +1314,7 @@ public open class CfnListenerRule internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -1411,7 +1323,7 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty.builder()
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -1424,7 +1336,7 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty,
     ) : SourceIpConfigProperty {
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -1474,48 +1386,34 @@ public open class CfnListenerRule internal constructor(
     public fun userInfoEndpoint(): String
 
     public interface Builder {
-      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
-      }
+      public fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable)
 
       public
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
-      }
+          fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>)
 
-      public fun authorizationEndpoint(authorizationEndpoint: String) {
-      }
+      public fun authorizationEndpoint(authorizationEndpoint: String)
 
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun clientSecret(clientSecret: String) {
-      }
+      public fun clientSecret(clientSecret: String)
 
-      public fun issuer(issuer: String) {
-      }
+      public fun issuer(issuer: String)
 
-      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
-      }
+      public fun onUnauthenticatedRequest(onUnauthenticatedRequest: String)
 
-      public fun scope(scope: String) {
-      }
+      public fun scope(scope: String)
 
-      public fun sessionCookieName(sessionCookieName: String) {
-      }
+      public fun sessionCookieName(sessionCookieName: String)
 
-      public fun sessionTimeout(sessionTimeout: Number) {
-      }
+      public fun sessionTimeout(sessionTimeout: Number)
 
-      public fun tokenEndpoint(tokenEndpoint: String) {
-      }
+      public fun tokenEndpoint(tokenEndpoint: String)
 
-      public fun useExistingClientSecret(useExistingClientSecret: Boolean) {
-      }
+      public fun useExistingClientSecret(useExistingClientSecret: Boolean)
 
-      public fun useExistingClientSecret(useExistingClientSecret: IResolvable) {
-      }
+      public fun useExistingClientSecret(useExistingClientSecret: IResolvable)
 
-      public fun userInfoEndpoint(userInfoEndpoint: String) {
-      }
+      public fun userInfoEndpoint(userInfoEndpoint: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1524,61 +1422,60 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty.builder()
 
-      public override
-          fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
+      override fun authenticationRequestExtraParams(authenticationRequestExtraParams: IResolvable) {
         cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun authenticationRequestExtraParams(authenticationRequestExtraParams: Map<String, String>) {
         cdkBuilder.authenticationRequestExtraParams(authenticationRequestExtraParams)
       }
 
-      public override fun authorizationEndpoint(authorizationEndpoint: String) {
+      override fun authorizationEndpoint(authorizationEndpoint: String) {
         cdkBuilder.authorizationEndpoint(authorizationEndpoint)
       }
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun clientSecret(clientSecret: String) {
+      override fun clientSecret(clientSecret: String) {
         cdkBuilder.clientSecret(clientSecret)
       }
 
-      public override fun issuer(issuer: String) {
+      override fun issuer(issuer: String) {
         cdkBuilder.issuer(issuer)
       }
 
-      public override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
+      override fun onUnauthenticatedRequest(onUnauthenticatedRequest: String) {
         cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest)
       }
 
-      public override fun scope(scope: String) {
+      override fun scope(scope: String) {
         cdkBuilder.scope(scope)
       }
 
-      public override fun sessionCookieName(sessionCookieName: String) {
+      override fun sessionCookieName(sessionCookieName: String) {
         cdkBuilder.sessionCookieName(sessionCookieName)
       }
 
-      public override fun sessionTimeout(sessionTimeout: Number) {
+      override fun sessionTimeout(sessionTimeout: Number) {
         cdkBuilder.sessionTimeout(sessionTimeout)
       }
 
-      public override fun tokenEndpoint(tokenEndpoint: String) {
+      override fun tokenEndpoint(tokenEndpoint: String) {
         cdkBuilder.tokenEndpoint(tokenEndpoint)
       }
 
-      public override fun useExistingClientSecret(useExistingClientSecret: Boolean) {
+      override fun useExistingClientSecret(useExistingClientSecret: Boolean) {
         cdkBuilder.useExistingClientSecret(useExistingClientSecret)
       }
 
-      public override fun useExistingClientSecret(useExistingClientSecret: IResolvable) {
+      override fun useExistingClientSecret(useExistingClientSecret: IResolvable) {
         cdkBuilder.useExistingClientSecret(useExistingClientSecret.let(IResolvable::unwrap))
       }
 
-      public override fun userInfoEndpoint(userInfoEndpoint: String) {
+      override fun userInfoEndpoint(userInfoEndpoint: String) {
         cdkBuilder.userInfoEndpoint(userInfoEndpoint)
       }
 
@@ -1591,32 +1488,30 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty,
     ) : AuthenticateOidcConfigProperty {
-      public override fun authenticationRequestExtraParams(): Any? =
+      override fun authenticationRequestExtraParams(): Any? =
           unwrap(this).getAuthenticationRequestExtraParams()
 
-      public override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
+      override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
 
-      public override fun clientId(): String = unwrap(this).getClientId()
+      override fun clientId(): String = unwrap(this).getClientId()
 
-      public override fun clientSecret(): String? = unwrap(this).getClientSecret()
+      override fun clientSecret(): String? = unwrap(this).getClientSecret()
 
-      public override fun issuer(): String = unwrap(this).getIssuer()
+      override fun issuer(): String = unwrap(this).getIssuer()
 
-      public override fun onUnauthenticatedRequest(): String? =
-          unwrap(this).getOnUnauthenticatedRequest()
+      override fun onUnauthenticatedRequest(): String? = unwrap(this).getOnUnauthenticatedRequest()
 
-      public override fun scope(): String? = unwrap(this).getScope()
+      override fun scope(): String? = unwrap(this).getScope()
 
-      public override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
+      override fun sessionCookieName(): String? = unwrap(this).getSessionCookieName()
 
-      public override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
+      override fun sessionTimeout(): Number? = unwrap(this).getSessionTimeout()
 
-      public override fun tokenEndpoint(): String = unwrap(this).getTokenEndpoint()
+      override fun tokenEndpoint(): String = unwrap(this).getTokenEndpoint()
 
-      public override fun useExistingClientSecret(): Any? =
-          unwrap(this).getUseExistingClientSecret()
+      override fun useExistingClientSecret(): Any? = unwrap(this).getUseExistingClientSecret()
 
-      public override fun userInfoEndpoint(): String = unwrap(this).getUserInfoEndpoint()
+      override fun userInfoEndpoint(): String = unwrap(this).getUserInfoEndpoint()
     }
 
     public companion object {
@@ -1647,14 +1542,11 @@ public open class CfnListenerRule internal constructor(
     public fun statusCode(): String
 
     public interface Builder {
-      public fun contentType(contentType: String) {
-      }
+      public fun contentType(contentType: String)
 
-      public fun messageBody(messageBody: String) {
-      }
+      public fun messageBody(messageBody: String)
 
-      public fun statusCode(statusCode: String) {
-      }
+      public fun statusCode(statusCode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1663,15 +1555,15 @@ public open class CfnListenerRule internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty.builder()
 
-      public override fun contentType(contentType: String) {
+      override fun contentType(contentType: String) {
         cdkBuilder.contentType(contentType)
       }
 
-      public override fun messageBody(messageBody: String) {
+      override fun messageBody(messageBody: String) {
         cdkBuilder.messageBody(messageBody)
       }
 
-      public override fun statusCode(statusCode: String) {
+      override fun statusCode(statusCode: String) {
         cdkBuilder.statusCode(statusCode)
       }
 
@@ -1684,11 +1576,11 @@ public open class CfnListenerRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty,
     ) : FixedResponseConfigProperty {
-      public override fun contentType(): String? = unwrap(this).getContentType()
+      override fun contentType(): String? = unwrap(this).getContentType()
 
-      public override fun messageBody(): String? = unwrap(this).getMessageBody()
+      override fun messageBody(): String? = unwrap(this).getMessageBody()
 
-      public override fun statusCode(): String = unwrap(this).getStatusCode()
+      override fun statusCode(): String = unwrap(this).getStatusCode()
     }
 
     public companion object {

@@ -37,14 +37,11 @@ public open class CfnIntegrationAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun integrationArn(integrationArn: String) {
-    }
+    public fun integrationArn(integrationArn: String)
 
-    public fun integrationType(integrationType: String) {
-    }
+    public fun integrationType(integrationType: String)
   }
 
   private class BuilderImpl(
@@ -55,15 +52,15 @@ public open class CfnIntegrationAssociation internal constructor(
         software.amazon.awscdk.services.connect.CfnIntegrationAssociation.Builder =
         software.amazon.awscdk.services.connect.CfnIntegrationAssociation.Builder.create(scope, id)
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun integrationArn(integrationArn: String) {
+    override fun integrationArn(integrationArn: String) {
       cdkBuilder.integrationArn(integrationArn)
     }
 
-    public override fun integrationType(integrationType: String) {
+    override fun integrationType(integrationType: String) {
       cdkBuilder.integrationType(integrationType)
     }
 

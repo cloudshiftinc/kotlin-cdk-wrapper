@@ -62,23 +62,17 @@ public open class CfnEnabledBaseline internal constructor(
   }
 
   public interface Builder {
-    public fun baselineIdentifier(baselineIdentifier: String) {
-    }
+    public fun baselineIdentifier(baselineIdentifier: String)
 
-    public fun baselineVersion(baselineVersion: String) {
-    }
+    public fun baselineVersion(baselineVersion: String)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: List<Any>) {
-    }
+    public fun parameters(parameters: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetIdentifier(targetIdentifier: String) {
-    }
+    public fun targetIdentifier(targetIdentifier: String)
   }
 
   private class BuilderImpl(
@@ -88,27 +82,27 @@ public open class CfnEnabledBaseline internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.controltower.CfnEnabledBaseline.Builder
         = software.amazon.awscdk.services.controltower.CfnEnabledBaseline.Builder.create(scope, id)
 
-    public override fun baselineIdentifier(baselineIdentifier: String) {
+    override fun baselineIdentifier(baselineIdentifier: String) {
       cdkBuilder.baselineIdentifier(baselineIdentifier)
     }
 
-    public override fun baselineVersion(baselineVersion: String) {
+    override fun baselineVersion(baselineVersion: String) {
       cdkBuilder.baselineVersion(baselineVersion)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: List<Any>) {
+    override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetIdentifier(targetIdentifier: String) {
+    override fun targetIdentifier(targetIdentifier: String) {
       cdkBuilder.targetIdentifier(targetIdentifier)
     }
 
@@ -143,11 +137,9 @@ public open class CfnEnabledBaseline internal constructor(
     public fun `value`(): Any? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: Any) {
-      }
+      public fun `value`(`value`: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -156,11 +148,11 @@ public open class CfnEnabledBaseline internal constructor(
           =
           software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: Any) {
+      override fun `value`(`value`: Any) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -173,9 +165,9 @@ public open class CfnEnabledBaseline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty,
     ) : ParameterProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): Any? = unwrap(this).getValue()
+      override fun `value`(): Any? = unwrap(this).getValue()
     }
 
     public companion object {

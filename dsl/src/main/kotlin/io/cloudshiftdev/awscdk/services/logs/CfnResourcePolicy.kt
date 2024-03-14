@@ -28,11 +28,9 @@ public open class CfnResourcePolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: String) {
-    }
+    public fun policyDocument(policyDocument: String)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
   }
 
   private class BuilderImpl(
@@ -42,11 +40,11 @@ public open class CfnResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnResourcePolicy.Builder =
         software.amazon.awscdk.services.logs.CfnResourcePolicy.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: String) {
+    override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 

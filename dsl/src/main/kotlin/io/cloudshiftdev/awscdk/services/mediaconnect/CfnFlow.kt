@@ -74,34 +74,25 @@ public open class CfnFlow internal constructor(
       sourceFailoverConfig(FailoverConfigProperty(`value`))
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun source(source: IResolvable) {
-    }
+    public fun source(source: IResolvable)
 
-    public fun source(source: SourceProperty) {
-    }
+    public fun source(source: SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("035c5b8913aae2921a893416990a1e83d27fded454beb33081c792d1e91f189c")
-    public fun source(source: SourceProperty.Builder.() -> Unit) {
-    }
+    public fun source(source: SourceProperty.Builder.() -> Unit)
 
-    public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
-    }
+    public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable)
 
-    public fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
-    }
+    public fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5abeb077251f47edc02bd2b28a08721f306e31d06bd4f4b2bbc800e2fc3b9141")
-    public
-        fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty.Builder.() -> Unit) {
-    }
+    public fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -111,38 +102,38 @@ public open class CfnFlow internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconnect.CfnFlow.Builder =
         software.amazon.awscdk.services.mediaconnect.CfnFlow.Builder.create(scope, id)
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun source(source: IResolvable) {
+    override fun source(source: IResolvable) {
       cdkBuilder.source(source.let(IResolvable::unwrap))
     }
 
-    public override fun source(source: SourceProperty) {
+    override fun source(source: SourceProperty) {
       cdkBuilder.source(source.let(SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("035c5b8913aae2921a893416990a1e83d27fded454beb33081c792d1e91f189c")
-    public override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
+    override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
         source(SourceProperty(source))
 
-    public override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
+    override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
       cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable::unwrap))
     }
 
-    public override fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
+    override fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
       cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(FailoverConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5abeb077251f47edc02bd2b28a08721f306e31d06bd4f4b2bbc800e2fc3b9141")
-    public override
+    override
         fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty.Builder.() -> Unit):
         Unit = sourceFailoverConfig(FailoverConfigProperty(sourceFailoverConfig))
 
@@ -174,8 +165,7 @@ public open class CfnFlow internal constructor(
     public fun primarySource(): String
 
     public interface Builder {
-      public fun primarySource(primarySource: String) {
-      }
+      public fun primarySource(primarySource: String)
     }
 
     private class BuilderImpl : Builder {
@@ -183,7 +173,7 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty.builder()
 
-      public override fun primarySource(primarySource: String) {
+      override fun primarySource(primarySource: String) {
         cdkBuilder.primarySource(primarySource)
       }
 
@@ -196,7 +186,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourcePriorityProperty,
     ) : SourcePriorityProperty {
-      public override fun primarySource(): String = unwrap(this).getPrimarySource()
+      override fun primarySource(): String = unwrap(this).getPrimarySource()
     }
 
     public companion object {
@@ -229,25 +219,19 @@ public open class CfnFlow internal constructor(
     public fun state(): String? = unwrap(this).getState()
 
     public interface Builder {
-      public fun failoverMode(failoverMode: String) {
-      }
+      public fun failoverMode(failoverMode: String)
 
-      public fun recoveryWindow(recoveryWindow: Number) {
-      }
+      public fun recoveryWindow(recoveryWindow: Number)
 
-      public fun sourcePriority(sourcePriority: IResolvable) {
-      }
+      public fun sourcePriority(sourcePriority: IResolvable)
 
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty) {
-      }
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
-      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit) {
-      }
+      public fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit)
 
-      public fun state(state: String) {
-      }
+      public fun state(state: String)
     }
 
     private class BuilderImpl : Builder {
@@ -255,28 +239,28 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty.builder()
 
-      public override fun failoverMode(failoverMode: String) {
+      override fun failoverMode(failoverMode: String) {
         cdkBuilder.failoverMode(failoverMode)
       }
 
-      public override fun recoveryWindow(recoveryWindow: Number) {
+      override fun recoveryWindow(recoveryWindow: Number) {
         cdkBuilder.recoveryWindow(recoveryWindow)
       }
 
-      public override fun sourcePriority(sourcePriority: IResolvable) {
+      override fun sourcePriority(sourcePriority: IResolvable) {
         cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
       }
 
-      public override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
         cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("433bb811abbc6de8c47e56b6bda3581404f5d13ff508958578003f78c0329544")
-      public override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit):
-          Unit = sourcePriority(SourcePriorityProperty(sourcePriority))
+      override fun sourcePriority(sourcePriority: SourcePriorityProperty.Builder.() -> Unit): Unit =
+          sourcePriority(SourcePriorityProperty(sourcePriority))
 
-      public override fun state(state: String) {
+      override fun state(state: String) {
         cdkBuilder.state(state)
       }
 
@@ -289,13 +273,13 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlow.FailoverConfigProperty,
     ) : FailoverConfigProperty {
-      public override fun failoverMode(): String? = unwrap(this).getFailoverMode()
+      override fun failoverMode(): String? = unwrap(this).getFailoverMode()
 
-      public override fun recoveryWindow(): Number? = unwrap(this).getRecoveryWindow()
+      override fun recoveryWindow(): Number? = unwrap(this).getRecoveryWindow()
 
-      public override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
+      override fun sourcePriority(): Any? = unwrap(this).getSourcePriority()
 
-      public override fun state(): String? = unwrap(this).getState()
+      override fun state(): String? = unwrap(this).getState()
     }
 
     public companion object {
@@ -339,32 +323,23 @@ public open class CfnFlow internal constructor(
     public fun url(): String? = unwrap(this).getUrl()
 
     public interface Builder {
-      public fun algorithm(algorithm: String) {
-      }
+      public fun algorithm(algorithm: String)
 
-      public fun constantInitializationVector(constantInitializationVector: String) {
-      }
+      public fun constantInitializationVector(constantInitializationVector: String)
 
-      public fun deviceId(deviceId: String) {
-      }
+      public fun deviceId(deviceId: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun resourceId(resourceId: String) {
-      }
+      public fun resourceId(resourceId: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
     }
 
     private class BuilderImpl : Builder {
@@ -372,39 +347,39 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty.builder()
 
-      public override fun algorithm(algorithm: String) {
+      override fun algorithm(algorithm: String) {
         cdkBuilder.algorithm(algorithm)
       }
 
-      public override fun constantInitializationVector(constantInitializationVector: String) {
+      override fun constantInitializationVector(constantInitializationVector: String) {
         cdkBuilder.constantInitializationVector(constantInitializationVector)
       }
 
-      public override fun deviceId(deviceId: String) {
+      override fun deviceId(deviceId: String) {
         cdkBuilder.deviceId(deviceId)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun resourceId(resourceId: String) {
+      override fun resourceId(resourceId: String) {
         cdkBuilder.resourceId(resourceId)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
@@ -416,24 +391,24 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlow.EncryptionProperty,
     ) : EncryptionProperty {
-      public override fun algorithm(): String? = unwrap(this).getAlgorithm()
+      override fun algorithm(): String? = unwrap(this).getAlgorithm()
 
-      public override fun constantInitializationVector(): String? =
+      override fun constantInitializationVector(): String? =
           unwrap(this).getConstantInitializationVector()
 
-      public override fun deviceId(): String? = unwrap(this).getDeviceId()
+      override fun deviceId(): String? = unwrap(this).getDeviceId()
 
-      public override fun keyType(): String? = unwrap(this).getKeyType()
+      override fun keyType(): String? = unwrap(this).getKeyType()
 
-      public override fun region(): String? = unwrap(this).getRegion()
+      override fun region(): String? = unwrap(this).getRegion()
 
-      public override fun resourceId(): String? = unwrap(this).getResourceId()
+      override fun resourceId(): String? = unwrap(this).getResourceId()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
     }
 
     public companion object {
@@ -498,82 +473,58 @@ public open class CfnFlow internal constructor(
     public fun whitelistCidr(): String? = unwrap(this).getWhitelistCidr()
 
     public interface Builder {
-      public fun decryption(decryption: IResolvable) {
-      }
+      public fun decryption(decryption: IResolvable)
 
-      public fun decryption(decryption: EncryptionProperty) {
-      }
+      public fun decryption(decryption: EncryptionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4736f95280944e4bcd40573c2195bc3caddc65327139bf37b054c53d7db418bc")
-      public fun decryption(decryption: EncryptionProperty.Builder.() -> Unit) {
-      }
+      public fun decryption(decryption: EncryptionProperty.Builder.() -> Unit)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun entitlementArn(entitlementArn: String) {
-      }
+      public fun entitlementArn(entitlementArn: String)
 
-      public fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
-      }
+      public fun gatewayBridgeSource(gatewayBridgeSource: IResolvable)
 
-      public fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty) {
-      }
+      public fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("59af1f5ef7b61a09b7066cb3d6d56bbcc153a0fef7d5dae13da07b5541281d90")
       public
-          fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty.Builder.() -> Unit) {
-      }
+          fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty.Builder.() -> Unit)
 
-      public fun ingestIp(ingestIp: String) {
-      }
+      public fun ingestIp(ingestIp: String)
 
-      public fun ingestPort(ingestPort: Number) {
-      }
+      public fun ingestPort(ingestPort: Number)
 
-      public fun maxBitrate(maxBitrate: Number) {
-      }
+      public fun maxBitrate(maxBitrate: Number)
 
-      public fun maxLatency(maxLatency: Number) {
-      }
+      public fun maxLatency(maxLatency: Number)
 
-      public fun minLatency(minLatency: Number) {
-      }
+      public fun minLatency(minLatency: Number)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun protocol(protocol: String) {
-      }
+      public fun protocol(protocol: String)
 
-      public fun senderControlPort(senderControlPort: Number) {
-      }
+      public fun senderControlPort(senderControlPort: Number)
 
-      public fun senderIpAddress(senderIpAddress: String) {
-      }
+      public fun senderIpAddress(senderIpAddress: String)
 
-      public fun sourceArn(sourceArn: String) {
-      }
+      public fun sourceArn(sourceArn: String)
 
-      public fun sourceIngestPort(sourceIngestPort: String) {
-      }
+      public fun sourceIngestPort(sourceIngestPort: String)
 
-      public fun sourceListenerAddress(sourceListenerAddress: String) {
-      }
+      public fun sourceListenerAddress(sourceListenerAddress: String)
 
-      public fun sourceListenerPort(sourceListenerPort: Number) {
-      }
+      public fun sourceListenerPort(sourceListenerPort: Number)
 
-      public fun streamId(streamId: String) {
-      }
+      public fun streamId(streamId: String)
 
-      public fun vpcInterfaceName(vpcInterfaceName: String) {
-      }
+      public fun vpcInterfaceName(vpcInterfaceName: String)
 
-      public fun whitelistCidr(whitelistCidr: String) {
-      }
+      public fun whitelistCidr(whitelistCidr: String)
     }
 
     private class BuilderImpl : Builder {
@@ -581,102 +532,102 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty.builder()
 
-      public override fun decryption(decryption: IResolvable) {
+      override fun decryption(decryption: IResolvable) {
         cdkBuilder.decryption(decryption.let(IResolvable::unwrap))
       }
 
-      public override fun decryption(decryption: EncryptionProperty) {
+      override fun decryption(decryption: EncryptionProperty) {
         cdkBuilder.decryption(decryption.let(EncryptionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4736f95280944e4bcd40573c2195bc3caddc65327139bf37b054c53d7db418bc")
-      public override fun decryption(decryption: EncryptionProperty.Builder.() -> Unit): Unit =
+      override fun decryption(decryption: EncryptionProperty.Builder.() -> Unit): Unit =
           decryption(EncryptionProperty(decryption))
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun entitlementArn(entitlementArn: String) {
+      override fun entitlementArn(entitlementArn: String) {
         cdkBuilder.entitlementArn(entitlementArn)
       }
 
-      public override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
+      override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
         cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable::unwrap))
       }
 
-      public override fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty) {
+      override fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty) {
         cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(GatewayBridgeSourceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("59af1f5ef7b61a09b7066cb3d6d56bbcc153a0fef7d5dae13da07b5541281d90")
-      public override
+      override
           fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty.Builder.() -> Unit):
           Unit = gatewayBridgeSource(GatewayBridgeSourceProperty(gatewayBridgeSource))
 
-      public override fun ingestIp(ingestIp: String) {
+      override fun ingestIp(ingestIp: String) {
         cdkBuilder.ingestIp(ingestIp)
       }
 
-      public override fun ingestPort(ingestPort: Number) {
+      override fun ingestPort(ingestPort: Number) {
         cdkBuilder.ingestPort(ingestPort)
       }
 
-      public override fun maxBitrate(maxBitrate: Number) {
+      override fun maxBitrate(maxBitrate: Number) {
         cdkBuilder.maxBitrate(maxBitrate)
       }
 
-      public override fun maxLatency(maxLatency: Number) {
+      override fun maxLatency(maxLatency: Number) {
         cdkBuilder.maxLatency(maxLatency)
       }
 
-      public override fun minLatency(minLatency: Number) {
+      override fun minLatency(minLatency: Number) {
         cdkBuilder.minLatency(minLatency)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun protocol(protocol: String) {
+      override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
 
-      public override fun senderControlPort(senderControlPort: Number) {
+      override fun senderControlPort(senderControlPort: Number) {
         cdkBuilder.senderControlPort(senderControlPort)
       }
 
-      public override fun senderIpAddress(senderIpAddress: String) {
+      override fun senderIpAddress(senderIpAddress: String) {
         cdkBuilder.senderIpAddress(senderIpAddress)
       }
 
-      public override fun sourceArn(sourceArn: String) {
+      override fun sourceArn(sourceArn: String) {
         cdkBuilder.sourceArn(sourceArn)
       }
 
-      public override fun sourceIngestPort(sourceIngestPort: String) {
+      override fun sourceIngestPort(sourceIngestPort: String) {
         cdkBuilder.sourceIngestPort(sourceIngestPort)
       }
 
-      public override fun sourceListenerAddress(sourceListenerAddress: String) {
+      override fun sourceListenerAddress(sourceListenerAddress: String) {
         cdkBuilder.sourceListenerAddress(sourceListenerAddress)
       }
 
-      public override fun sourceListenerPort(sourceListenerPort: Number) {
+      override fun sourceListenerPort(sourceListenerPort: Number) {
         cdkBuilder.sourceListenerPort(sourceListenerPort)
       }
 
-      public override fun streamId(streamId: String) {
+      override fun streamId(streamId: String) {
         cdkBuilder.streamId(streamId)
       }
 
-      public override fun vpcInterfaceName(vpcInterfaceName: String) {
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
       }
 
-      public override fun whitelistCidr(whitelistCidr: String) {
+      override fun whitelistCidr(whitelistCidr: String) {
         cdkBuilder.whitelistCidr(whitelistCidr)
       }
 
@@ -687,45 +638,45 @@ public open class CfnFlow internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceProperty,
     ) : SourceProperty {
-      public override fun decryption(): Any? = unwrap(this).getDecryption()
+      override fun decryption(): Any? = unwrap(this).getDecryption()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun entitlementArn(): String? = unwrap(this).getEntitlementArn()
+      override fun entitlementArn(): String? = unwrap(this).getEntitlementArn()
 
-      public override fun gatewayBridgeSource(): Any? = unwrap(this).getGatewayBridgeSource()
+      override fun gatewayBridgeSource(): Any? = unwrap(this).getGatewayBridgeSource()
 
-      public override fun ingestIp(): String? = unwrap(this).getIngestIp()
+      override fun ingestIp(): String? = unwrap(this).getIngestIp()
 
-      public override fun ingestPort(): Number? = unwrap(this).getIngestPort()
+      override fun ingestPort(): Number? = unwrap(this).getIngestPort()
 
-      public override fun maxBitrate(): Number? = unwrap(this).getMaxBitrate()
+      override fun maxBitrate(): Number? = unwrap(this).getMaxBitrate()
 
-      public override fun maxLatency(): Number? = unwrap(this).getMaxLatency()
+      override fun maxLatency(): Number? = unwrap(this).getMaxLatency()
 
-      public override fun minLatency(): Number? = unwrap(this).getMinLatency()
+      override fun minLatency(): Number? = unwrap(this).getMinLatency()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun protocol(): String? = unwrap(this).getProtocol()
+      override fun protocol(): String? = unwrap(this).getProtocol()
 
-      public override fun senderControlPort(): Number? = unwrap(this).getSenderControlPort()
+      override fun senderControlPort(): Number? = unwrap(this).getSenderControlPort()
 
-      public override fun senderIpAddress(): String? = unwrap(this).getSenderIpAddress()
+      override fun senderIpAddress(): String? = unwrap(this).getSenderIpAddress()
 
-      public override fun sourceArn(): String? = unwrap(this).getSourceArn()
+      override fun sourceArn(): String? = unwrap(this).getSourceArn()
 
-      public override fun sourceIngestPort(): String? = unwrap(this).getSourceIngestPort()
+      override fun sourceIngestPort(): String? = unwrap(this).getSourceIngestPort()
 
-      public override fun sourceListenerAddress(): String? = unwrap(this).getSourceListenerAddress()
+      override fun sourceListenerAddress(): String? = unwrap(this).getSourceListenerAddress()
 
-      public override fun sourceListenerPort(): Number? = unwrap(this).getSourceListenerPort()
+      override fun sourceListenerPort(): Number? = unwrap(this).getSourceListenerPort()
 
-      public override fun streamId(): String? = unwrap(this).getStreamId()
+      override fun streamId(): String? = unwrap(this).getStreamId()
 
-      public override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
-      public override fun whitelistCidr(): String? = unwrap(this).getWhitelistCidr()
+      override fun whitelistCidr(): String? = unwrap(this).getWhitelistCidr()
     }
 
     public companion object {
@@ -754,20 +705,16 @@ public open class CfnFlow internal constructor(
     public fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
 
     public interface Builder {
-      public fun bridgeArn(bridgeArn: String) {
-      }
+      public fun bridgeArn(bridgeArn: String)
 
-      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-      }
+      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable)
 
-      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-      }
+      public fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e668c114dc639e8388a9195b1759d7621f6ce9cfc3d911d80839d3a718ad09a1")
       public
-          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit) {
-      }
+          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -775,22 +722,21 @@ public open class CfnFlow internal constructor(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty.Builder =
           software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty.builder()
 
-      public override fun bridgeArn(bridgeArn: String) {
+      override fun bridgeArn(bridgeArn: String) {
         cdkBuilder.bridgeArn(bridgeArn)
       }
 
-      public override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
+      override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
         cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
       }
 
-      public override
-          fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
+      override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
         cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e668c114dc639e8388a9195b1759d7621f6ce9cfc3d911d80839d3a718ad09a1")
-      public override
+      override
           fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty.Builder.() -> Unit):
           Unit = vpcInterfaceAttachment(VpcInterfaceAttachmentProperty(vpcInterfaceAttachment))
 
@@ -803,9 +749,9 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlow.GatewayBridgeSourceProperty,
     ) : GatewayBridgeSourceProperty {
-      public override fun bridgeArn(): String = unwrap(this).getBridgeArn()
+      override fun bridgeArn(): String = unwrap(this).getBridgeArn()
 
-      public override fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
+      override fun vpcInterfaceAttachment(): Any? = unwrap(this).getVpcInterfaceAttachment()
     }
 
     public companion object {
@@ -832,8 +778,7 @@ public open class CfnFlow internal constructor(
     public fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
 
     public interface Builder {
-      public fun vpcInterfaceName(vpcInterfaceName: String) {
-      }
+      public fun vpcInterfaceName(vpcInterfaceName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -842,7 +787,7 @@ public open class CfnFlow internal constructor(
           =
           software.amazon.awscdk.services.mediaconnect.CfnFlow.VpcInterfaceAttachmentProperty.builder()
 
-      public override fun vpcInterfaceName(vpcInterfaceName: String) {
+      override fun vpcInterfaceName(vpcInterfaceName: String) {
         cdkBuilder.vpcInterfaceName(vpcInterfaceName)
       }
 
@@ -855,7 +800,7 @@ public open class CfnFlow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconnect.CfnFlow.VpcInterfaceAttachmentProperty,
     ) : VpcInterfaceAttachmentProperty {
-      public override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
+      override fun vpcInterfaceName(): String? = unwrap(this).getVpcInterfaceName()
     }
 
     public companion object {

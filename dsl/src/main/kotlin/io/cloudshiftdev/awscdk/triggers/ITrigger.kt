@@ -12,15 +12,15 @@ public interface ITrigger : IConstruct {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.triggers.ITrigger,
   ) : ITrigger {
-    public override fun executeAfter(arg0: Construct) {
+    override fun executeAfter(arg0: Construct) {
       unwrap(this).executeAfter(arg0.let(Construct::unwrap))
     }
 
-    public override fun executeBefore(arg0: Construct) {
+    override fun executeBefore(arg0: Construct) {
       unwrap(this).executeBefore(arg0.let(Construct::unwrap))
     }
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
   }
 
   public companion object {

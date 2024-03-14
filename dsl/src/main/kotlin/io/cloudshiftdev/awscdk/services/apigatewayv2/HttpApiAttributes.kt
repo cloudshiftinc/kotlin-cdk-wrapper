@@ -9,22 +9,20 @@ public interface HttpApiAttributes {
   public fun httpApiId(): String
 
   public interface Builder {
-    public fun apiEndpoint(apiEndpoint: String) {
-    }
+    public fun apiEndpoint(apiEndpoint: String)
 
-    public fun httpApiId(httpApiId: String) {
-    }
+    public fun httpApiId(httpApiId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes.builder()
 
-    public override fun apiEndpoint(apiEndpoint: String) {
+    override fun apiEndpoint(apiEndpoint: String) {
       cdkBuilder.apiEndpoint(apiEndpoint)
     }
 
-    public override fun httpApiId(httpApiId: String) {
+    override fun httpApiId(httpApiId: String) {
       cdkBuilder.httpApiId(httpApiId)
     }
 
@@ -35,9 +33,9 @@ public interface HttpApiAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApiAttributes,
   ) : HttpApiAttributes {
-    public override fun apiEndpoint(): String? = unwrap(this).getApiEndpoint()
+    override fun apiEndpoint(): String? = unwrap(this).getApiEndpoint()
 
-    public override fun httpApiId(): String = unwrap(this).getHttpApiId()
+    override fun httpApiId(): String = unwrap(this).getHttpApiId()
   }
 
   public companion object {

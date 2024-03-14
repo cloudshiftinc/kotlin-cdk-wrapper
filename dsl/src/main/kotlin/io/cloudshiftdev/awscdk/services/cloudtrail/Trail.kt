@@ -109,50 +109,35 @@ public open class Trail internal constructor(
   public open fun trailSnsTopicArn(): String = unwrap(this).getTrailSnsTopicArn()
 
   public interface Builder {
-    public fun bucket(bucket: IBucket) {
-    }
+    public fun bucket(bucket: IBucket)
 
-    public fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
-    }
+    public fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup)
 
-    public fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
-    }
+    public fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays)
 
-    public fun enableFileValidation(enableFileValidation: Boolean) {
-    }
+    public fun enableFileValidation(enableFileValidation: Boolean)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
-    }
+    public fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean)
 
-    public fun insightTypes(insightTypes: List<InsightType>) {
-    }
+    public fun insightTypes(insightTypes: List<InsightType>)
 
-    public fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
-    }
+    public fun isMultiRegionTrail(isMultiRegionTrail: Boolean)
 
-    public fun isOrganizationTrail(isOrganizationTrail: Boolean) {
-    }
+    public fun isOrganizationTrail(isOrganizationTrail: Boolean)
 
-    public fun managementEvents(managementEvents: ReadWriteType) {
-    }
+    public fun managementEvents(managementEvents: ReadWriteType)
 
-    public fun orgId(orgId: String) {
-    }
+    public fun orgId(orgId: String)
 
-    public fun s3KeyPrefix(s3KeyPrefix: String) {
-    }
+    public fun s3KeyPrefix(s3KeyPrefix: String)
 
-    public fun sendToCloudWatchLogs(sendToCloudWatchLogs: Boolean) {
-    }
+    public fun sendToCloudWatchLogs(sendToCloudWatchLogs: Boolean)
 
-    public fun snsTopic(snsTopic: ITopic) {
-    }
+    public fun snsTopic(snsTopic: ITopic)
 
-    public fun trailName(trailName: String) {
-    }
+    public fun trailName(trailName: String)
   }
 
   private class BuilderImpl(
@@ -162,63 +147,63 @@ public open class Trail internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudtrail.Trail.Builder =
         software.amazon.awscdk.services.cloudtrail.Trail.Builder.create(scope, id)
 
-    public override fun bucket(bucket: IBucket) {
+    override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
-    public override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
+    override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
       cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup::unwrap))
     }
 
-    public override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
+    override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
       cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays::unwrap))
     }
 
-    public override fun enableFileValidation(enableFileValidation: Boolean) {
+    override fun enableFileValidation(enableFileValidation: Boolean) {
       cdkBuilder.enableFileValidation(enableFileValidation)
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
+    override fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
       cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents)
     }
 
-    public override fun insightTypes(insightTypes: List<InsightType>) {
+    override fun insightTypes(insightTypes: List<InsightType>) {
       cdkBuilder.insightTypes(insightTypes.map(InsightType::unwrap))
     }
 
-    public override fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
+    override fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
       cdkBuilder.isMultiRegionTrail(isMultiRegionTrail)
     }
 
-    public override fun isOrganizationTrail(isOrganizationTrail: Boolean) {
+    override fun isOrganizationTrail(isOrganizationTrail: Boolean) {
       cdkBuilder.isOrganizationTrail(isOrganizationTrail)
     }
 
-    public override fun managementEvents(managementEvents: ReadWriteType) {
+    override fun managementEvents(managementEvents: ReadWriteType) {
       cdkBuilder.managementEvents(managementEvents.let(ReadWriteType::unwrap))
     }
 
-    public override fun orgId(orgId: String) {
+    override fun orgId(orgId: String) {
       cdkBuilder.orgId(orgId)
     }
 
-    public override fun s3KeyPrefix(s3KeyPrefix: String) {
+    override fun s3KeyPrefix(s3KeyPrefix: String) {
       cdkBuilder.s3KeyPrefix(s3KeyPrefix)
     }
 
-    public override fun sendToCloudWatchLogs(sendToCloudWatchLogs: Boolean) {
+    override fun sendToCloudWatchLogs(sendToCloudWatchLogs: Boolean) {
       cdkBuilder.sendToCloudWatchLogs(sendToCloudWatchLogs)
     }
 
-    public override fun snsTopic(snsTopic: ITopic) {
+    override fun snsTopic(snsTopic: ITopic) {
       cdkBuilder.snsTopic(snsTopic.let(ITopic::unwrap))
     }
 
-    public override fun trailName(trailName: String) {
+    override fun trailName(trailName: String) {
       cdkBuilder.trailName(trailName)
     }
 

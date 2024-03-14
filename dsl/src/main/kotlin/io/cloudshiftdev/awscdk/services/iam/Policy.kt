@@ -42,31 +42,23 @@ public open class Policy internal constructor(
   public override fun policyName(): String = unwrap(this).getPolicyName()
 
   public interface Builder {
-    public fun document(document: PolicyDocument) {
-    }
+    public fun document(document: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b5f8c6030ff03cf2b0e6f84a0f4d897c709ef521a1ca98a4ce97147236626a0c")
-    public fun document(document: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun document(document: PolicyDocument.Builder.() -> Unit)
 
-    public fun force(force: Boolean) {
-    }
+    public fun force(force: Boolean)
 
-    public fun groups(groups: List<IGroup>) {
-    }
+    public fun groups(groups: List<IGroup>)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun roles(roles: List<IRole>) {
-    }
+    public fun roles(roles: List<IRole>)
 
-    public fun statements(statements: List<PolicyStatement>) {
-    }
+    public fun statements(statements: List<PolicyStatement>)
 
-    public fun users(users: List<IUser>) {
-    }
+    public fun users(users: List<IUser>)
   }
 
   private class BuilderImpl(
@@ -76,36 +68,36 @@ public open class Policy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.Policy.Builder =
         software.amazon.awscdk.services.iam.Policy.Builder.create(scope, id)
 
-    public override fun document(document: PolicyDocument) {
+    override fun document(document: PolicyDocument) {
       cdkBuilder.document(document.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b5f8c6030ff03cf2b0e6f84a0f4d897c709ef521a1ca98a4ce97147236626a0c")
-    public override fun document(document: PolicyDocument.Builder.() -> Unit): Unit =
+    override fun document(document: PolicyDocument.Builder.() -> Unit): Unit =
         document(PolicyDocument(document))
 
-    public override fun force(force: Boolean) {
+    override fun force(force: Boolean) {
       cdkBuilder.force(force)
     }
 
-    public override fun groups(groups: List<IGroup>) {
+    override fun groups(groups: List<IGroup>) {
       cdkBuilder.groups(groups.map(IGroup::unwrap))
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun roles(roles: List<IRole>) {
+    override fun roles(roles: List<IRole>) {
       cdkBuilder.roles(roles.map(IRole::unwrap))
     }
 
-    public override fun statements(statements: List<PolicyStatement>) {
+    override fun statements(statements: List<PolicyStatement>) {
       cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
     }
 
-    public override fun users(users: List<IUser>) {
+    override fun users(users: List<IUser>) {
       cdkBuilder.users(users.map(IUser::unwrap))
     }
 

@@ -108,43 +108,31 @@ public open class CfnDetector internal constructor(
   }
 
   public interface Builder {
-    public fun associatedModels(associatedModels: IResolvable) {
-    }
+    public fun associatedModels(associatedModels: IResolvable)
 
-    public fun associatedModels(associatedModels: List<Any>) {
-    }
+    public fun associatedModels(associatedModels: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun detectorId(detectorId: String) {
-    }
+    public fun detectorId(detectorId: String)
 
-    public fun detectorVersionStatus(detectorVersionStatus: String) {
-    }
+    public fun detectorVersionStatus(detectorVersionStatus: String)
 
-    public fun eventType(eventType: IResolvable) {
-    }
+    public fun eventType(eventType: IResolvable)
 
-    public fun eventType(eventType: EventTypeProperty) {
-    }
+    public fun eventType(eventType: EventTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1908bdf3c79730411659f2ed378d0a4ec38565e5f69568f793a845c4056359a0")
-    public fun eventType(eventType: EventTypeProperty.Builder.() -> Unit) {
-    }
+    public fun eventType(eventType: EventTypeProperty.Builder.() -> Unit)
 
-    public fun ruleExecutionMode(ruleExecutionMode: String) {
-    }
+    public fun ruleExecutionMode(ruleExecutionMode: String)
 
-    public fun rules(rules: IResolvable) {
-    }
+    public fun rules(rules: IResolvable)
 
-    public fun rules(rules: List<Any>) {
-    }
+    public fun rules(rules: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -154,52 +142,52 @@ public open class CfnDetector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.frauddetector.CfnDetector.Builder =
         software.amazon.awscdk.services.frauddetector.CfnDetector.Builder.create(scope, id)
 
-    public override fun associatedModels(associatedModels: IResolvable) {
+    override fun associatedModels(associatedModels: IResolvable) {
       cdkBuilder.associatedModels(associatedModels.let(IResolvable::unwrap))
     }
 
-    public override fun associatedModels(associatedModels: List<Any>) {
+    override fun associatedModels(associatedModels: List<Any>) {
       cdkBuilder.associatedModels(associatedModels)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun detectorId(detectorId: String) {
+    override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
     }
 
-    public override fun detectorVersionStatus(detectorVersionStatus: String) {
+    override fun detectorVersionStatus(detectorVersionStatus: String) {
       cdkBuilder.detectorVersionStatus(detectorVersionStatus)
     }
 
-    public override fun eventType(eventType: IResolvable) {
+    override fun eventType(eventType: IResolvable) {
       cdkBuilder.eventType(eventType.let(IResolvable::unwrap))
     }
 
-    public override fun eventType(eventType: EventTypeProperty) {
+    override fun eventType(eventType: EventTypeProperty) {
       cdkBuilder.eventType(eventType.let(EventTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1908bdf3c79730411659f2ed378d0a4ec38565e5f69568f793a845c4056359a0")
-    public override fun eventType(eventType: EventTypeProperty.Builder.() -> Unit): Unit =
+    override fun eventType(eventType: EventTypeProperty.Builder.() -> Unit): Unit =
         eventType(EventTypeProperty(eventType))
 
-    public override fun ruleExecutionMode(ruleExecutionMode: String) {
+    override fun ruleExecutionMode(ruleExecutionMode: String) {
       cdkBuilder.ruleExecutionMode(ruleExecutionMode)
     }
 
-    public override fun rules(rules: IResolvable) {
+    override fun rules(rules: IResolvable) {
       cdkBuilder.rules(rules.let(IResolvable::unwrap))
     }
 
-    public override fun rules(rules: List<Any>) {
+    override fun rules(rules: List<Any>) {
       cdkBuilder.rules(rules)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -244,29 +232,21 @@ public open class CfnDetector internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun `inline`(`inline`: Boolean) {
-      }
+      public fun `inline`(`inline`: Boolean)
 
-      public fun `inline`(`inline`: IResolvable) {
-      }
+      public fun `inline`(`inline`: IResolvable)
 
-      public fun lastUpdatedTime(lastUpdatedTime: String) {
-      }
+      public fun lastUpdatedTime(lastUpdatedTime: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -274,35 +254,35 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun `inline`(`inline`: Boolean) {
+      override fun `inline`(`inline`: Boolean) {
         cdkBuilder.`inline`(`inline`)
       }
 
-      public override fun `inline`(`inline`: IResolvable) {
+      override fun `inline`(`inline`: IResolvable) {
         cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
       }
 
-      public override fun lastUpdatedTime(lastUpdatedTime: String) {
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -314,20 +294,19 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty,
     ) : LabelProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun `inline`(): Any? = unwrap(this).getInline()
+      override fun `inline`(): Any? = unwrap(this).getInline()
 
-      public override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -372,47 +351,33 @@ public open class CfnDetector internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun entityTypes(entityTypes: IResolvable) {
-      }
+      public fun entityTypes(entityTypes: IResolvable)
 
-      public fun entityTypes(entityTypes: List<Any>) {
-      }
+      public fun entityTypes(entityTypes: List<Any>)
 
-      public fun eventVariables(eventVariables: IResolvable) {
-      }
+      public fun eventVariables(eventVariables: IResolvable)
 
-      public fun eventVariables(eventVariables: List<Any>) {
-      }
+      public fun eventVariables(eventVariables: List<Any>)
 
-      public fun `inline`(`inline`: Boolean) {
-      }
+      public fun `inline`(`inline`: Boolean)
 
-      public fun `inline`(`inline`: IResolvable) {
-      }
+      public fun `inline`(`inline`: IResolvable)
 
-      public fun labels(labels: IResolvable) {
-      }
+      public fun labels(labels: IResolvable)
 
-      public fun labels(labels: List<Any>) {
-      }
+      public fun labels(labels: List<Any>)
 
-      public fun lastUpdatedTime(lastUpdatedTime: String) {
-      }
+      public fun lastUpdatedTime(lastUpdatedTime: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -420,59 +385,59 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun entityTypes(entityTypes: IResolvable) {
+      override fun entityTypes(entityTypes: IResolvable) {
         cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
       }
 
-      public override fun entityTypes(entityTypes: List<Any>) {
+      override fun entityTypes(entityTypes: List<Any>) {
         cdkBuilder.entityTypes(entityTypes)
       }
 
-      public override fun eventVariables(eventVariables: IResolvable) {
+      override fun eventVariables(eventVariables: IResolvable) {
         cdkBuilder.eventVariables(eventVariables.let(IResolvable::unwrap))
       }
 
-      public override fun eventVariables(eventVariables: List<Any>) {
+      override fun eventVariables(eventVariables: List<Any>) {
         cdkBuilder.eventVariables(eventVariables)
       }
 
-      public override fun `inline`(`inline`: Boolean) {
+      override fun `inline`(`inline`: Boolean) {
         cdkBuilder.`inline`(`inline`)
       }
 
-      public override fun `inline`(`inline`: IResolvable) {
+      override fun `inline`(`inline`: IResolvable) {
         cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
       }
 
-      public override fun labels(labels: IResolvable) {
+      override fun labels(labels: IResolvable) {
         cdkBuilder.labels(labels.let(IResolvable::unwrap))
       }
 
-      public override fun labels(labels: List<Any>) {
+      override fun labels(labels: List<Any>) {
         cdkBuilder.labels(labels)
       }
 
-      public override fun lastUpdatedTime(lastUpdatedTime: String) {
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -485,26 +450,25 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty,
     ) : EventTypeProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun entityTypes(): Any? = unwrap(this).getEntityTypes()
+      override fun entityTypes(): Any? = unwrap(this).getEntityTypes()
 
-      public override fun eventVariables(): Any? = unwrap(this).getEventVariables()
+      override fun eventVariables(): Any? = unwrap(this).getEventVariables()
 
-      public override fun `inline`(): Any? = unwrap(this).getInline()
+      override fun `inline`(): Any? = unwrap(this).getInline()
 
-      public override fun labels(): Any? = unwrap(this).getLabels()
+      override fun labels(): Any? = unwrap(this).getLabels()
 
-      public override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -543,29 +507,21 @@ public open class CfnDetector internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun `inline`(`inline`: Boolean) {
-      }
+      public fun `inline`(`inline`: Boolean)
 
-      public fun `inline`(`inline`: IResolvable) {
-      }
+      public fun `inline`(`inline`: IResolvable)
 
-      public fun lastUpdatedTime(lastUpdatedTime: String) {
-      }
+      public fun lastUpdatedTime(lastUpdatedTime: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -573,35 +529,35 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun `inline`(`inline`: Boolean) {
+      override fun `inline`(`inline`: Boolean) {
         cdkBuilder.`inline`(`inline`)
       }
 
-      public override fun `inline`(`inline`: IResolvable) {
+      override fun `inline`(`inline`: IResolvable) {
         cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
       }
 
-      public override fun lastUpdatedTime(lastUpdatedTime: String) {
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -613,20 +569,19 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty,
     ) : OutcomeProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun `inline`(): Any? = unwrap(this).getInline()
+      override fun `inline`(): Any? = unwrap(this).getInline()
 
-      public override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -673,41 +628,29 @@ public open class CfnDetector internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun detectorId(detectorId: String) {
-      }
+      public fun detectorId(detectorId: String)
 
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun language(language: String) {
-      }
+      public fun language(language: String)
 
-      public fun lastUpdatedTime(lastUpdatedTime: String) {
-      }
+      public fun lastUpdatedTime(lastUpdatedTime: String)
 
-      public fun outcomes(outcomes: IResolvable) {
-      }
+      public fun outcomes(outcomes: IResolvable)
 
-      public fun outcomes(outcomes: List<Any>) {
-      }
+      public fun outcomes(outcomes: List<Any>)
 
-      public fun ruleId(ruleId: String) {
-      }
+      public fun ruleId(ruleId: String)
 
-      public fun ruleVersion(ruleVersion: String) {
-      }
+      public fun ruleVersion(ruleVersion: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -715,51 +658,51 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun detectorId(detectorId: String) {
+      override fun detectorId(detectorId: String) {
         cdkBuilder.detectorId(detectorId)
       }
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun language(language: String) {
+      override fun language(language: String) {
         cdkBuilder.language(language)
       }
 
-      public override fun lastUpdatedTime(lastUpdatedTime: String) {
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
-      public override fun outcomes(outcomes: IResolvable) {
+      override fun outcomes(outcomes: IResolvable) {
         cdkBuilder.outcomes(outcomes.let(IResolvable::unwrap))
       }
 
-      public override fun outcomes(outcomes: List<Any>) {
+      override fun outcomes(outcomes: List<Any>) {
         cdkBuilder.outcomes(outcomes)
       }
 
-      public override fun ruleId(ruleId: String) {
+      override fun ruleId(ruleId: String) {
         cdkBuilder.ruleId(ruleId)
       }
 
-      public override fun ruleVersion(ruleVersion: String) {
+      override fun ruleVersion(ruleVersion: String) {
         cdkBuilder.ruleVersion(ruleVersion)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -771,28 +714,27 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty,
     ) : RuleProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun detectorId(): String? = unwrap(this).getDetectorId()
+      override fun detectorId(): String? = unwrap(this).getDetectorId()
 
-      public override fun expression(): String? = unwrap(this).getExpression()
+      override fun expression(): String? = unwrap(this).getExpression()
 
-      public override fun language(): String? = unwrap(this).getLanguage()
+      override fun language(): String? = unwrap(this).getLanguage()
 
-      public override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
-      public override fun outcomes(): Any? = unwrap(this).getOutcomes()
+      override fun outcomes(): Any? = unwrap(this).getOutcomes()
 
-      public override fun ruleId(): String? = unwrap(this).getRuleId()
+      override fun ruleId(): String? = unwrap(this).getRuleId()
 
-      public override fun ruleVersion(): String? = unwrap(this).getRuleVersion()
+      override fun ruleVersion(): String? = unwrap(this).getRuleVersion()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -819,8 +761,7 @@ public open class CfnDetector internal constructor(
     public fun arn(): String? = unwrap(this).getArn()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -828,7 +769,7 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
@@ -840,7 +781,7 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.ModelProperty,
     ) : ModelProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
     }
 
     public companion object {
@@ -879,29 +820,21 @@ public open class CfnDetector internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun `inline`(`inline`: Boolean) {
-      }
+      public fun `inline`(`inline`: Boolean)
 
-      public fun `inline`(`inline`: IResolvable) {
-      }
+      public fun `inline`(`inline`: IResolvable)
 
-      public fun lastUpdatedTime(lastUpdatedTime: String) {
-      }
+      public fun lastUpdatedTime(lastUpdatedTime: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -909,35 +842,35 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun `inline`(`inline`: Boolean) {
+      override fun `inline`(`inline`: Boolean) {
         cdkBuilder.`inline`(`inline`)
       }
 
-      public override fun `inline`(`inline`: IResolvable) {
+      override fun `inline`(`inline`: IResolvable) {
         cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
       }
 
-      public override fun lastUpdatedTime(lastUpdatedTime: String) {
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -950,20 +883,19 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty,
     ) : EntityTypeProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun `inline`(): Any? = unwrap(this).getInline()
+      override fun `inline`(): Any? = unwrap(this).getInline()
 
-      public override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -1010,41 +942,29 @@ public open class CfnDetector internal constructor(
     public fun variableType(): String? = unwrap(this).getVariableType()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun createdTime(createdTime: String) {
-      }
+      public fun createdTime(createdTime: String)
 
-      public fun dataSource(dataSource: String) {
-      }
+      public fun dataSource(dataSource: String)
 
-      public fun dataType(dataType: String) {
-      }
+      public fun dataType(dataType: String)
 
-      public fun defaultValue(defaultValue: String) {
-      }
+      public fun defaultValue(defaultValue: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun `inline`(`inline`: Boolean) {
-      }
+      public fun `inline`(`inline`: Boolean)
 
-      public fun `inline`(`inline`: IResolvable) {
-      }
+      public fun `inline`(`inline`: IResolvable)
 
-      public fun lastUpdatedTime(lastUpdatedTime: String) {
-      }
+      public fun lastUpdatedTime(lastUpdatedTime: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
 
-      public fun variableType(variableType: String) {
-      }
+      public fun variableType(variableType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1052,51 +972,51 @@ public open class CfnDetector internal constructor(
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty.Builder =
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun createdTime(createdTime: String) {
+      override fun createdTime(createdTime: String) {
         cdkBuilder.createdTime(createdTime)
       }
 
-      public override fun dataSource(dataSource: String) {
+      override fun dataSource(dataSource: String) {
         cdkBuilder.dataSource(dataSource)
       }
 
-      public override fun dataType(dataType: String) {
+      override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
       }
 
-      public override fun defaultValue(defaultValue: String) {
+      override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun `inline`(`inline`: Boolean) {
+      override fun `inline`(`inline`: Boolean) {
         cdkBuilder.`inline`(`inline`)
       }
 
-      public override fun `inline`(`inline`: IResolvable) {
+      override fun `inline`(`inline`: IResolvable) {
         cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
       }
 
-      public override fun lastUpdatedTime(lastUpdatedTime: String) {
+      override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
-      public override fun variableType(variableType: String) {
+      override fun variableType(variableType: String) {
         cdkBuilder.variableType(variableType)
       }
 
@@ -1109,28 +1029,27 @@ public open class CfnDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventVariableProperty,
     ) : EventVariableProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun createdTime(): String? = unwrap(this).getCreatedTime()
+      override fun createdTime(): String? = unwrap(this).getCreatedTime()
 
-      public override fun dataSource(): String? = unwrap(this).getDataSource()
+      override fun dataSource(): String? = unwrap(this).getDataSource()
 
-      public override fun dataType(): String? = unwrap(this).getDataType()
+      override fun dataType(): String? = unwrap(this).getDataType()
 
-      public override fun defaultValue(): String? = unwrap(this).getDefaultValue()
+      override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun `inline`(): Any? = unwrap(this).getInline()
+      override fun `inline`(): Any? = unwrap(this).getInline()
 
-      public override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
+      override fun lastUpdatedTime(): String? = unwrap(this).getLastUpdatedTime()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
-      public override fun variableType(): String? = unwrap(this).getVariableType()
+      override fun variableType(): String? = unwrap(this).getVariableType()
     }
 
     public companion object {

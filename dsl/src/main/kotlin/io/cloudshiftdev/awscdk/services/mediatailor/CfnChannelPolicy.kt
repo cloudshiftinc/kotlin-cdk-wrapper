@@ -29,11 +29,9 @@ public open class CfnChannelPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun channelName(channelName: String) {
-    }
+    public fun channelName(channelName: String)
 
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
   }
 
   private class BuilderImpl(
@@ -43,11 +41,11 @@ public open class CfnChannelPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediatailor.CfnChannelPolicy.Builder =
         software.amazon.awscdk.services.mediatailor.CfnChannelPolicy.Builder.create(scope, id)
 
-    public override fun channelName(channelName: String) {
+    override fun channelName(channelName: String) {
       cdkBuilder.channelName(channelName)
     }
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 

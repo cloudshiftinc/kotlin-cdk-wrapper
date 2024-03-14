@@ -17,27 +17,21 @@ public interface BaseServiceProps {
   public fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
-    }
+    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72e6b83c0e8ae1629814f5b74e8ad5d009b746750cd9037b71f18e953b828b0b")
-    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit) {
-    }
+    public fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun healthCheck(healthCheck: HealthCheckConfig) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckConfig)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3f501478e6138abbef549cc2ab803805eadec4aa7eeca59c0fdecb247435c2b")
-    public fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit) {
-    }
+    public fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
@@ -45,30 +39,29 @@ public interface BaseServiceProps {
         software.amazon.awscdk.services.servicediscovery.BaseServiceProps.Builder =
         software.amazon.awscdk.services.servicediscovery.BaseServiceProps.builder()
 
-    public override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
+    override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
       cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72e6b83c0e8ae1629814f5b74e8ad5d009b746750cd9037b71f18e953b828b0b")
-    public override
-        fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit): Unit =
-        customHealthCheck(HealthCheckCustomConfig(customHealthCheck))
+    override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig.Builder.() -> Unit):
+        Unit = customHealthCheck(HealthCheckCustomConfig(customHealthCheck))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun healthCheck(healthCheck: HealthCheckConfig) {
+    override fun healthCheck(healthCheck: HealthCheckConfig) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3f501478e6138abbef549cc2ab803805eadec4aa7eeca59c0fdecb247435c2b")
-    public override fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit): Unit =
+    override fun healthCheck(healthCheck: HealthCheckConfig.Builder.() -> Unit): Unit =
         healthCheck(HealthCheckConfig(healthCheck))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -79,15 +72,15 @@ public interface BaseServiceProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicediscovery.BaseServiceProps,
   ) : BaseServiceProps {
-    public override fun customHealthCheck(): HealthCheckCustomConfig? =
+    override fun customHealthCheck(): HealthCheckCustomConfig? =
         unwrap(this).getCustomHealthCheck()?.let(HealthCheckCustomConfig::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun healthCheck(): HealthCheckConfig? =
+    override fun healthCheck(): HealthCheckConfig? =
         unwrap(this).getHealthCheck()?.let(HealthCheckConfig::wrap)
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

@@ -92,47 +92,35 @@ public open class CfnChannel internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun egressAccessLogs(egressAccessLogs: IResolvable) {
-    }
+    public fun egressAccessLogs(egressAccessLogs: IResolvable)
 
-    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
-    }
+    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9bc4e83f696f474d194475eef3cdd052f78dac16858f80a86e40597b5f6dee93")
-    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit)
 
-    public fun hlsIngest(hlsIngest: IResolvable) {
-    }
+    public fun hlsIngest(hlsIngest: IResolvable)
 
-    public fun hlsIngest(hlsIngest: HlsIngestProperty) {
-    }
+    public fun hlsIngest(hlsIngest: HlsIngestProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce45ba853ca8be3bd9aaafb4a65d0f49b8ab1a9bcd8a3458828730810b0a45ad")
-    public fun hlsIngest(hlsIngest: HlsIngestProperty.Builder.() -> Unit) {
-    }
+    public fun hlsIngest(hlsIngest: HlsIngestProperty.Builder.() -> Unit)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun ingressAccessLogs(ingressAccessLogs: IResolvable) {
-    }
+    public fun ingressAccessLogs(ingressAccessLogs: IResolvable)
 
-    public fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty) {
-    }
+    public fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a1cc6a4df1a4648db43d3aff87ead5bb75c6d116955a455cb6f77090b6136e8b")
-    public fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -142,56 +130,54 @@ public open class CfnChannel internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediapackage.CfnChannel.Builder =
         software.amazon.awscdk.services.mediapackage.CfnChannel.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun egressAccessLogs(egressAccessLogs: IResolvable) {
+    override fun egressAccessLogs(egressAccessLogs: IResolvable) {
       cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable::unwrap))
     }
 
-    public override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
+    override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
       cdkBuilder.egressAccessLogs(egressAccessLogs.let(LogConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9bc4e83f696f474d194475eef3cdd052f78dac16858f80a86e40597b5f6dee93")
-    public override
-        fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit): Unit =
-        egressAccessLogs(LogConfigurationProperty(egressAccessLogs))
+    override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty.Builder.() -> Unit):
+        Unit = egressAccessLogs(LogConfigurationProperty(egressAccessLogs))
 
-    public override fun hlsIngest(hlsIngest: IResolvable) {
+    override fun hlsIngest(hlsIngest: IResolvable) {
       cdkBuilder.hlsIngest(hlsIngest.let(IResolvable::unwrap))
     }
 
-    public override fun hlsIngest(hlsIngest: HlsIngestProperty) {
+    override fun hlsIngest(hlsIngest: HlsIngestProperty) {
       cdkBuilder.hlsIngest(hlsIngest.let(HlsIngestProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce45ba853ca8be3bd9aaafb4a65d0f49b8ab1a9bcd8a3458828730810b0a45ad")
-    public override fun hlsIngest(hlsIngest: HlsIngestProperty.Builder.() -> Unit): Unit =
+    override fun hlsIngest(hlsIngest: HlsIngestProperty.Builder.() -> Unit): Unit =
         hlsIngest(HlsIngestProperty(hlsIngest))
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun ingressAccessLogs(ingressAccessLogs: IResolvable) {
+    override fun ingressAccessLogs(ingressAccessLogs: IResolvable) {
       cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(IResolvable::unwrap))
     }
 
-    public override fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty) {
+    override fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty) {
       cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(LogConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a1cc6a4df1a4648db43d3aff87ead5bb75c6d116955a455cb6f77090b6136e8b")
-    public override
-        fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty.Builder.() -> Unit): Unit
-        = ingressAccessLogs(LogConfigurationProperty(ingressAccessLogs))
+    override fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty.Builder.() -> Unit):
+        Unit = ingressAccessLogs(LogConfigurationProperty(ingressAccessLogs))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -229,17 +215,13 @@ public open class CfnChannel internal constructor(
     public fun username(): String
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -247,19 +229,19 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty.Builder =
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -272,13 +254,13 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty,
     ) : IngestEndpointProperty {
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun url(): String = unwrap(this).getUrl()
+      override fun url(): String = unwrap(this).getUrl()
 
-      public override fun username(): String = unwrap(this).getUsername()
+      override fun username(): String = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -305,11 +287,9 @@ public open class CfnChannel internal constructor(
     public fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
 
     public interface Builder {
-      public fun ingestEndpoints(ingestEndpoints: IResolvable) {
-      }
+      public fun ingestEndpoints(ingestEndpoints: IResolvable)
 
-      public fun ingestEndpoints(ingestEndpoints: List<Any>) {
-      }
+      public fun ingestEndpoints(ingestEndpoints: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -317,11 +297,11 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty.Builder =
           software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty.builder()
 
-      public override fun ingestEndpoints(ingestEndpoints: IResolvable) {
+      override fun ingestEndpoints(ingestEndpoints: IResolvable) {
         cdkBuilder.ingestEndpoints(ingestEndpoints.let(IResolvable::unwrap))
       }
 
-      public override fun ingestEndpoints(ingestEndpoints: List<Any>) {
+      override fun ingestEndpoints(ingestEndpoints: List<Any>) {
         cdkBuilder.ingestEndpoints(ingestEndpoints)
       }
 
@@ -333,7 +313,7 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty,
     ) : HlsIngestProperty {
-      public override fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
+      override fun ingestEndpoints(): Any? = unwrap(this).getIngestEndpoints()
     }
 
     public companion object {
@@ -360,8 +340,7 @@ public open class CfnChannel internal constructor(
     public fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
     public interface Builder {
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -369,7 +348,7 @@ public open class CfnChannel internal constructor(
           software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty.Builder =
           software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty.builder()
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
@@ -382,7 +361,7 @@ public open class CfnChannel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty,
     ) : LogConfigurationProperty {
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
     }
 
     public companion object {

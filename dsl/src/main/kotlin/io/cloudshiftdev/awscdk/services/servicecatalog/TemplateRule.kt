@@ -14,29 +14,26 @@ public interface TemplateRule {
   public fun ruleName(): String
 
   public interface Builder {
-    public fun assertions(assertions: List<TemplateRuleAssertion>) {
-    }
+    public fun assertions(assertions: List<TemplateRuleAssertion>)
 
-    public fun condition(condition: ICfnRuleConditionExpression) {
-    }
+    public fun condition(condition: ICfnRuleConditionExpression)
 
-    public fun ruleName(ruleName: String) {
-    }
+    public fun ruleName(ruleName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.servicecatalog.TemplateRule.Builder =
         software.amazon.awscdk.services.servicecatalog.TemplateRule.builder()
 
-    public override fun assertions(assertions: List<TemplateRuleAssertion>) {
+    override fun assertions(assertions: List<TemplateRuleAssertion>) {
       cdkBuilder.assertions(assertions.map(TemplateRuleAssertion::unwrap))
     }
 
-    public override fun condition(condition: ICfnRuleConditionExpression) {
+    override fun condition(condition: ICfnRuleConditionExpression) {
       cdkBuilder.condition(condition.let(ICfnRuleConditionExpression::unwrap))
     }
 
-    public override fun ruleName(ruleName: String) {
+    override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)
     }
 
@@ -47,13 +44,13 @@ public interface TemplateRule {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRule,
   ) : TemplateRule {
-    public override fun assertions(): List<TemplateRuleAssertion> =
+    override fun assertions(): List<TemplateRuleAssertion> =
         unwrap(this).getAssertions().map(TemplateRuleAssertion::wrap)
 
-    public override fun condition(): ICfnRuleConditionExpression? =
+    override fun condition(): ICfnRuleConditionExpression? =
         unwrap(this).getCondition()?.let(ICfnRuleConditionExpression::wrap)
 
-    public override fun ruleName(): String = unwrap(this).getRuleName()
+    override fun ruleName(): String = unwrap(this).getRuleName()
   }
 
   public companion object {

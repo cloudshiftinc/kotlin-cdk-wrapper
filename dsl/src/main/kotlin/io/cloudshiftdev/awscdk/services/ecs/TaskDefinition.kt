@@ -128,55 +128,39 @@ public open class TaskDefinition internal constructor(
   public override fun taskRole(): IRole = unwrap(this).getTaskRole().let(IRole::wrap)
 
   public interface Builder {
-    public fun compatibility(compatibility: Compatibility) {
-    }
+    public fun compatibility(compatibility: Compatibility)
 
-    public fun cpu(cpu: String) {
-    }
+    public fun cpu(cpu: String)
 
-    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
-    }
+    public fun ephemeralStorageGiB(ephemeralStorageGiB: Number)
 
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
-    }
+    public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>)
 
-    public fun ipcMode(ipcMode: IpcMode) {
-    }
+    public fun ipcMode(ipcMode: IpcMode)
 
-    public fun memoryMiB(memoryMiB: String) {
-    }
+    public fun memoryMiB(memoryMiB: String)
 
-    public fun networkMode(networkMode: NetworkMode) {
-    }
+    public fun networkMode(networkMode: NetworkMode)
 
-    public fun pidMode(pidMode: PidMode) {
-    }
+    public fun pidMode(pidMode: PidMode)
 
-    public fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-    }
+    public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
-    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-    }
+    public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration)
 
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2ff86d615eead154754b56faf36a13fe8e205c4641867bc32276e89999f71c9")
-    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit) {
-    }
+    public fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit)
 
-    public fun taskRole(taskRole: IRole) {
-    }
+    public fun taskRole(taskRole: IRole)
 
-    public fun volumes(volumes: List<Volume>) {
-    }
+    public fun volumes(volumes: List<Volume>)
   }
 
   private class BuilderImpl(
@@ -186,68 +170,68 @@ public open class TaskDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.TaskDefinition.Builder =
         software.amazon.awscdk.services.ecs.TaskDefinition.Builder.create(scope, id)
 
-    public override fun compatibility(compatibility: Compatibility) {
+    override fun compatibility(compatibility: Compatibility) {
       cdkBuilder.compatibility(compatibility.let(Compatibility::unwrap))
     }
 
-    public override fun cpu(cpu: String) {
+    override fun cpu(cpu: String) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
+    override fun ephemeralStorageGiB(ephemeralStorageGiB: Number) {
       cdkBuilder.ephemeralStorageGiB(ephemeralStorageGiB)
     }
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
+    override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
     }
 
-    public override fun ipcMode(ipcMode: IpcMode) {
+    override fun ipcMode(ipcMode: IpcMode) {
       cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
     }
 
-    public override fun memoryMiB(memoryMiB: String) {
+    override fun memoryMiB(memoryMiB: String) {
       cdkBuilder.memoryMiB(memoryMiB)
     }
 
-    public override fun networkMode(networkMode: NetworkMode) {
+    override fun networkMode(networkMode: NetworkMode) {
       cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
     }
 
-    public override fun pidMode(pidMode: PidMode) {
+    override fun pidMode(pidMode: PidMode) {
       cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
     }
 
-    public override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
+    override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
-    public override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
+    override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
       cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
     }
 
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
       cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2ff86d615eead154754b56faf36a13fe8e205c4641867bc32276e89999f71c9")
-    public override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
+    override fun runtimePlatform(runtimePlatform: RuntimePlatform.Builder.() -> Unit): Unit =
         runtimePlatform(RuntimePlatform(runtimePlatform))
 
-    public override fun taskRole(taskRole: IRole) {
+    override fun taskRole(taskRole: IRole) {
       cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
     }
 
-    public override fun volumes(volumes: List<Volume>) {
+    override fun volumes(volumes: List<Volume>) {
       cdkBuilder.volumes(volumes.map(Volume::unwrap))
     }
 

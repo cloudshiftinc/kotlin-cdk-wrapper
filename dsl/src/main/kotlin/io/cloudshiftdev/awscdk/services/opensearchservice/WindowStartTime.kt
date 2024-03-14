@@ -9,11 +9,9 @@ public interface WindowStartTime {
   public fun minutes(): Number
 
   public interface Builder {
-    public fun hours(hours: Number) {
-    }
+    public fun hours(hours: Number)
 
-    public fun minutes(minutes: Number) {
-    }
+    public fun minutes(minutes: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface WindowStartTime {
         software.amazon.awscdk.services.opensearchservice.WindowStartTime.Builder =
         software.amazon.awscdk.services.opensearchservice.WindowStartTime.builder()
 
-    public override fun hours(hours: Number) {
+    override fun hours(hours: Number) {
       cdkBuilder.hours(hours)
     }
 
-    public override fun minutes(minutes: Number) {
+    override fun minutes(minutes: Number) {
       cdkBuilder.minutes(minutes)
     }
 
@@ -36,9 +34,9 @@ public interface WindowStartTime {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.opensearchservice.WindowStartTime,
   ) : WindowStartTime {
-    public override fun hours(): Number = unwrap(this).getHours()
+    override fun hours(): Number = unwrap(this).getHours()
 
-    public override fun minutes(): Number = unwrap(this).getMinutes()
+    override fun minutes(): Number = unwrap(this).getMinutes()
   }
 
   public companion object {

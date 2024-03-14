@@ -9,11 +9,9 @@ public interface HttpRouteAuthorizerBindOptions {
   public fun scope(): Construct
 
   public interface Builder {
-    public fun route(route: IHttpRoute) {
-    }
+    public fun route(route: IHttpRoute)
 
-    public fun scope(scope: Construct) {
-    }
+    public fun scope(scope: Construct)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface HttpRouteAuthorizerBindOptions {
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions.builder()
 
-    public override fun route(route: IHttpRoute) {
+    override fun route(route: IHttpRoute) {
       cdkBuilder.route(route.let(IHttpRoute::unwrap))
     }
 
-    public override fun scope(scope: Construct) {
+    override fun scope(scope: Construct) {
       cdkBuilder.scope(scope.let(Construct::unwrap))
     }
 
@@ -37,9 +35,9 @@ public interface HttpRouteAuthorizerBindOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions,
   ) : HttpRouteAuthorizerBindOptions {
-    public override fun route(): IHttpRoute = unwrap(this).getRoute().let(IHttpRoute::wrap)
+    override fun route(): IHttpRoute = unwrap(this).getRoute().let(IHttpRoute::wrap)
 
-    public override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
+    override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
   }
 
   public companion object {

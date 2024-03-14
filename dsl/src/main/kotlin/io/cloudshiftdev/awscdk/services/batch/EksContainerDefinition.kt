@@ -57,59 +57,41 @@ public open class EksContainerDefinition internal constructor(
   public override fun volumes(): List<EksVolume> = unwrap(this).getVolumes().map(EksVolume::wrap)
 
   public interface Builder {
-    public fun args(args: List<String>) {
-    }
+    public fun args(args: List<String>)
 
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun cpuLimit(cpuLimit: Number) {
-    }
+    public fun cpuLimit(cpuLimit: Number)
 
-    public fun cpuReservation(cpuReservation: Number) {
-    }
+    public fun cpuReservation(cpuReservation: Number)
 
-    public fun env(env: Map<String, String>) {
-    }
+    public fun env(env: Map<String, String>)
 
-    public fun gpuLimit(gpuLimit: Number) {
-    }
+    public fun gpuLimit(gpuLimit: Number)
 
-    public fun gpuReservation(gpuReservation: Number) {
-    }
+    public fun gpuReservation(gpuReservation: Number)
 
-    public fun image(image: ContainerImage) {
-    }
+    public fun image(image: ContainerImage)
 
-    public fun imagePullPolicy(imagePullPolicy: ImagePullPolicy) {
-    }
+    public fun imagePullPolicy(imagePullPolicy: ImagePullPolicy)
 
-    public fun memoryLimit(memoryLimit: Size) {
-    }
+    public fun memoryLimit(memoryLimit: Size)
 
-    public fun memoryReservation(memoryReservation: Size) {
-    }
+    public fun memoryReservation(memoryReservation: Size)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun privileged(privileged: Boolean) {
-    }
+    public fun privileged(privileged: Boolean)
 
-    public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
-    }
+    public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean)
 
-    public fun runAsGroup(runAsGroup: Number) {
-    }
+    public fun runAsGroup(runAsGroup: Number)
 
-    public fun runAsRoot(runAsRoot: Boolean) {
-    }
+    public fun runAsRoot(runAsRoot: Boolean)
 
-    public fun runAsUser(runAsUser: Number) {
-    }
+    public fun runAsUser(runAsUser: Number)
 
-    public fun volumes(volumes: List<EksVolume>) {
-    }
+    public fun volumes(volumes: List<EksVolume>)
   }
 
   private class BuilderImpl(
@@ -119,75 +101,75 @@ public open class EksContainerDefinition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.EksContainerDefinition.Builder =
         software.amazon.awscdk.services.batch.EksContainerDefinition.Builder.create(scope, id)
 
-    public override fun args(args: List<String>) {
+    override fun args(args: List<String>) {
       cdkBuilder.args(args)
     }
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun cpuLimit(cpuLimit: Number) {
+    override fun cpuLimit(cpuLimit: Number) {
       cdkBuilder.cpuLimit(cpuLimit)
     }
 
-    public override fun cpuReservation(cpuReservation: Number) {
+    override fun cpuReservation(cpuReservation: Number) {
       cdkBuilder.cpuReservation(cpuReservation)
     }
 
-    public override fun env(env: Map<String, String>) {
+    override fun env(env: Map<String, String>) {
       cdkBuilder.env(env)
     }
 
-    public override fun gpuLimit(gpuLimit: Number) {
+    override fun gpuLimit(gpuLimit: Number) {
       cdkBuilder.gpuLimit(gpuLimit)
     }
 
-    public override fun gpuReservation(gpuReservation: Number) {
+    override fun gpuReservation(gpuReservation: Number) {
       cdkBuilder.gpuReservation(gpuReservation)
     }
 
-    public override fun image(image: ContainerImage) {
+    override fun image(image: ContainerImage) {
       cdkBuilder.image(image.let(ContainerImage::unwrap))
     }
 
-    public override fun imagePullPolicy(imagePullPolicy: ImagePullPolicy) {
+    override fun imagePullPolicy(imagePullPolicy: ImagePullPolicy) {
       cdkBuilder.imagePullPolicy(imagePullPolicy.let(ImagePullPolicy::unwrap))
     }
 
-    public override fun memoryLimit(memoryLimit: Size) {
+    override fun memoryLimit(memoryLimit: Size) {
       cdkBuilder.memoryLimit(memoryLimit.let(Size::unwrap))
     }
 
-    public override fun memoryReservation(memoryReservation: Size) {
+    override fun memoryReservation(memoryReservation: Size) {
       cdkBuilder.memoryReservation(memoryReservation.let(Size::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun privileged(privileged: Boolean) {
+    override fun privileged(privileged: Boolean) {
       cdkBuilder.privileged(privileged)
     }
 
-    public override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
+    override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
       cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
     }
 
-    public override fun runAsGroup(runAsGroup: Number) {
+    override fun runAsGroup(runAsGroup: Number) {
       cdkBuilder.runAsGroup(runAsGroup)
     }
 
-    public override fun runAsRoot(runAsRoot: Boolean) {
+    override fun runAsRoot(runAsRoot: Boolean) {
       cdkBuilder.runAsRoot(runAsRoot)
     }
 
-    public override fun runAsUser(runAsUser: Number) {
+    override fun runAsUser(runAsUser: Number) {
       cdkBuilder.runAsUser(runAsUser)
     }
 
-    public override fun volumes(volumes: List<EksVolume>) {
+    override fun volumes(volumes: List<EksVolume>) {
       cdkBuilder.volumes(volumes.map(EksVolume::unwrap))
     }
 

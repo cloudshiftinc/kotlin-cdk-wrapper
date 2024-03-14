@@ -71,26 +71,19 @@ public open class CfnConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun authenticationStrategy(authenticationStrategy: String) {
-    }
+    public fun authenticationStrategy(authenticationStrategy: String)
 
-    public fun `data`(`data`: String) {
-    }
+    public fun `data`(`data`: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engineType(engineType: String) {
-    }
+    public fun engineType(engineType: String)
 
-    public fun engineVersion(engineVersion: String) {
-    }
+    public fun engineVersion(engineVersion: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<TagsEntryProperty>) {
-    }
+    public fun tags(tags: List<TagsEntryProperty>)
   }
 
   private class BuilderImpl(
@@ -100,31 +93,31 @@ public open class CfnConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amazonmq.CfnConfiguration.Builder =
         software.amazon.awscdk.services.amazonmq.CfnConfiguration.Builder.create(scope, id)
 
-    public override fun authenticationStrategy(authenticationStrategy: String) {
+    override fun authenticationStrategy(authenticationStrategy: String) {
       cdkBuilder.authenticationStrategy(authenticationStrategy)
     }
 
-    public override fun `data`(`data`: String) {
+    override fun `data`(`data`: String) {
       cdkBuilder.`data`(`data`)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engineType(engineType: String) {
+    override fun engineType(engineType: String) {
       cdkBuilder.engineType(engineType)
     }
 
-    public override fun engineVersion(engineVersion: String) {
+    override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<TagsEntryProperty>) {
+    override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
@@ -159,11 +152,9 @@ public open class CfnConfiguration internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -171,11 +162,11 @@ public open class CfnConfiguration internal constructor(
           software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty.Builder =
           software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -188,9 +179,9 @@ public open class CfnConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty,
     ) : TagsEntryProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

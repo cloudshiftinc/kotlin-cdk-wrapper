@@ -30,71 +30,62 @@ public interface ParamsAndSecretsOptions {
       unwrap(this).getSecretsManagerTtl()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun cacheEnabled(cacheEnabled: Boolean) {
-    }
+    public fun cacheEnabled(cacheEnabled: Boolean)
 
-    public fun cacheSize(cacheSize: Number) {
-    }
+    public fun cacheSize(cacheSize: Number)
 
-    public fun httpPort(httpPort: Number) {
-    }
+    public fun httpPort(httpPort: Number)
 
-    public fun logLevel(logLevel: ParamsAndSecretsLogLevel) {
-    }
+    public fun logLevel(logLevel: ParamsAndSecretsLogLevel)
 
-    public fun maxConnections(maxConnections: Number) {
-    }
+    public fun maxConnections(maxConnections: Number)
 
-    public fun parameterStoreTimeout(parameterStoreTimeout: Duration) {
-    }
+    public fun parameterStoreTimeout(parameterStoreTimeout: Duration)
 
-    public fun parameterStoreTtl(parameterStoreTtl: Duration) {
-    }
+    public fun parameterStoreTtl(parameterStoreTtl: Duration)
 
-    public fun secretsManagerTimeout(secretsManagerTimeout: Duration) {
-    }
+    public fun secretsManagerTimeout(secretsManagerTimeout: Duration)
 
-    public fun secretsManagerTtl(secretsManagerTtl: Duration) {
-    }
+    public fun secretsManagerTtl(secretsManagerTtl: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions.Builder =
         software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions.builder()
 
-    public override fun cacheEnabled(cacheEnabled: Boolean) {
+    override fun cacheEnabled(cacheEnabled: Boolean) {
       cdkBuilder.cacheEnabled(cacheEnabled)
     }
 
-    public override fun cacheSize(cacheSize: Number) {
+    override fun cacheSize(cacheSize: Number) {
       cdkBuilder.cacheSize(cacheSize)
     }
 
-    public override fun httpPort(httpPort: Number) {
+    override fun httpPort(httpPort: Number) {
       cdkBuilder.httpPort(httpPort)
     }
 
-    public override fun logLevel(logLevel: ParamsAndSecretsLogLevel) {
+    override fun logLevel(logLevel: ParamsAndSecretsLogLevel) {
       cdkBuilder.logLevel(logLevel.let(ParamsAndSecretsLogLevel::unwrap))
     }
 
-    public override fun maxConnections(maxConnections: Number) {
+    override fun maxConnections(maxConnections: Number) {
       cdkBuilder.maxConnections(maxConnections)
     }
 
-    public override fun parameterStoreTimeout(parameterStoreTimeout: Duration) {
+    override fun parameterStoreTimeout(parameterStoreTimeout: Duration) {
       cdkBuilder.parameterStoreTimeout(parameterStoreTimeout.let(Duration::unwrap))
     }
 
-    public override fun parameterStoreTtl(parameterStoreTtl: Duration) {
+    override fun parameterStoreTtl(parameterStoreTtl: Duration) {
       cdkBuilder.parameterStoreTtl(parameterStoreTtl.let(Duration::unwrap))
     }
 
-    public override fun secretsManagerTimeout(secretsManagerTimeout: Duration) {
+    override fun secretsManagerTimeout(secretsManagerTimeout: Duration) {
       cdkBuilder.secretsManagerTimeout(secretsManagerTimeout.let(Duration::unwrap))
     }
 
-    public override fun secretsManagerTtl(secretsManagerTtl: Duration) {
+    override fun secretsManagerTtl(secretsManagerTtl: Duration) {
       cdkBuilder.secretsManagerTtl(secretsManagerTtl.let(Duration::unwrap))
     }
 
@@ -105,27 +96,27 @@ public interface ParamsAndSecretsOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions,
   ) : ParamsAndSecretsOptions {
-    public override fun cacheEnabled(): Boolean? = unwrap(this).getCacheEnabled()
+    override fun cacheEnabled(): Boolean? = unwrap(this).getCacheEnabled()
 
-    public override fun cacheSize(): Number? = unwrap(this).getCacheSize()
+    override fun cacheSize(): Number? = unwrap(this).getCacheSize()
 
-    public override fun httpPort(): Number? = unwrap(this).getHttpPort()
+    override fun httpPort(): Number? = unwrap(this).getHttpPort()
 
-    public override fun logLevel(): ParamsAndSecretsLogLevel? =
+    override fun logLevel(): ParamsAndSecretsLogLevel? =
         unwrap(this).getLogLevel()?.let(ParamsAndSecretsLogLevel::wrap)
 
-    public override fun maxConnections(): Number? = unwrap(this).getMaxConnections()
+    override fun maxConnections(): Number? = unwrap(this).getMaxConnections()
 
-    public override fun parameterStoreTimeout(): Duration? =
+    override fun parameterStoreTimeout(): Duration? =
         unwrap(this).getParameterStoreTimeout()?.let(Duration::wrap)
 
-    public override fun parameterStoreTtl(): Duration? =
+    override fun parameterStoreTtl(): Duration? =
         unwrap(this).getParameterStoreTtl()?.let(Duration::wrap)
 
-    public override fun secretsManagerTimeout(): Duration? =
+    override fun secretsManagerTimeout(): Duration? =
         unwrap(this).getSecretsManagerTimeout()?.let(Duration::wrap)
 
-    public override fun secretsManagerTtl(): Duration? =
+    override fun secretsManagerTtl(): Duration? =
         unwrap(this).getSecretsManagerTtl()?.let(Duration::wrap)
   }
 

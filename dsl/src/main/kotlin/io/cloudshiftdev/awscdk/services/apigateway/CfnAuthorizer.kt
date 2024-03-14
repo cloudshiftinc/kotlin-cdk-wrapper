@@ -82,35 +82,25 @@ public open class CfnAuthorizer internal constructor(
   }
 
   public interface Builder {
-    public fun authType(authType: String) {
-    }
+    public fun authType(authType: String)
 
-    public fun authorizerCredentials(authorizerCredentials: String) {
-    }
+    public fun authorizerCredentials(authorizerCredentials: String)
 
-    public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
-    }
+    public fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number)
 
-    public fun authorizerUri(authorizerUri: String) {
-    }
+    public fun authorizerUri(authorizerUri: String)
 
-    public fun identitySource(identitySource: String) {
-    }
+    public fun identitySource(identitySource: String)
 
-    public fun identityValidationExpression(identityValidationExpression: String) {
-    }
+    public fun identityValidationExpression(identityValidationExpression: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun providerArns(providerArns: List<String>) {
-    }
+    public fun providerArns(providerArns: List<String>)
 
-    public fun restApiId(restApiId: String) {
-    }
+    public fun restApiId(restApiId: String)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -120,43 +110,43 @@ public open class CfnAuthorizer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnAuthorizer.Builder =
         software.amazon.awscdk.services.apigateway.CfnAuthorizer.Builder.create(scope, id)
 
-    public override fun authType(authType: String) {
+    override fun authType(authType: String) {
       cdkBuilder.authType(authType)
     }
 
-    public override fun authorizerCredentials(authorizerCredentials: String) {
+    override fun authorizerCredentials(authorizerCredentials: String) {
       cdkBuilder.authorizerCredentials(authorizerCredentials)
     }
 
-    public override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
+    override fun authorizerResultTtlInSeconds(authorizerResultTtlInSeconds: Number) {
       cdkBuilder.authorizerResultTtlInSeconds(authorizerResultTtlInSeconds)
     }
 
-    public override fun authorizerUri(authorizerUri: String) {
+    override fun authorizerUri(authorizerUri: String) {
       cdkBuilder.authorizerUri(authorizerUri)
     }
 
-    public override fun identitySource(identitySource: String) {
+    override fun identitySource(identitySource: String) {
       cdkBuilder.identitySource(identitySource)
     }
 
-    public override fun identityValidationExpression(identityValidationExpression: String) {
+    override fun identityValidationExpression(identityValidationExpression: String) {
       cdkBuilder.identityValidationExpression(identityValidationExpression)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun providerArns(providerArns: List<String>) {
+    override fun providerArns(providerArns: List<String>) {
       cdkBuilder.providerArns(providerArns)
     }
 
-    public override fun restApiId(restApiId: String) {
+    override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 

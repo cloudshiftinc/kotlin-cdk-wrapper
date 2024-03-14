@@ -67,29 +67,21 @@ public open class CfnLaunchTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun launchTemplateData(launchTemplateData: IResolvable) {
-    }
+    public fun launchTemplateData(launchTemplateData: IResolvable)
 
-    public fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty) {
-    }
+    public fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5fc18067754864f0fa773cab73d5bca9bb457987000eb5ce581f15be00c87a8d")
-    public
-        fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty.Builder.() -> Unit) {
-    }
+    public fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty.Builder.() -> Unit)
 
-    public fun launchTemplateName(launchTemplateName: String) {
-    }
+    public fun launchTemplateName(launchTemplateName: String)
 
-    public fun tagSpecifications(tagSpecifications: IResolvable) {
-    }
+    public fun tagSpecifications(tagSpecifications: IResolvable)
 
-    public fun tagSpecifications(tagSpecifications: List<Any>) {
-    }
+    public fun tagSpecifications(tagSpecifications: List<Any>)
 
-    public fun versionDescription(versionDescription: String) {
-    }
+    public fun versionDescription(versionDescription: String)
   }
 
   private class BuilderImpl(
@@ -99,33 +91,33 @@ public open class CfnLaunchTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Builder =
         software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Builder.create(scope, id)
 
-    public override fun launchTemplateData(launchTemplateData: IResolvable) {
+    override fun launchTemplateData(launchTemplateData: IResolvable) {
       cdkBuilder.launchTemplateData(launchTemplateData.let(IResolvable::unwrap))
     }
 
-    public override fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty) {
+    override fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty) {
       cdkBuilder.launchTemplateData(launchTemplateData.let(LaunchTemplateDataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5fc18067754864f0fa773cab73d5bca9bb457987000eb5ce581f15be00c87a8d")
-    public override
+    override
         fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty.Builder.() -> Unit):
         Unit = launchTemplateData(LaunchTemplateDataProperty(launchTemplateData))
 
-    public override fun launchTemplateName(launchTemplateName: String) {
+    override fun launchTemplateName(launchTemplateName: String) {
       cdkBuilder.launchTemplateName(launchTemplateName)
     }
 
-    public override fun tagSpecifications(tagSpecifications: IResolvable) {
+    override fun tagSpecifications(tagSpecifications: IResolvable) {
       cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun tagSpecifications(tagSpecifications: List<Any>) {
+    override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
 
-    public override fun versionDescription(versionDescription: String) {
+    override fun versionDescription(versionDescription: String) {
       cdkBuilder.versionDescription(versionDescription)
     }
 
@@ -157,11 +149,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -169,11 +159,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnclaveOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnclaveOptionsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -186,7 +176,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnclaveOptionsProperty,
     ) : EnclaveOptionsProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -215,11 +205,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -228,11 +216,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -245,9 +233,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceCountProperty,
     ) : NetworkInterfaceCountProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -283,20 +271,15 @@ public open class CfnLaunchTemplate internal constructor(
     public fun validUntil(): String? = unwrap(this).getValidUntil()
 
     public interface Builder {
-      public fun blockDurationMinutes(blockDurationMinutes: Number) {
-      }
+      public fun blockDurationMinutes(blockDurationMinutes: Number)
 
-      public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
-      }
+      public fun instanceInterruptionBehavior(instanceInterruptionBehavior: String)
 
-      public fun maxPrice(maxPrice: String) {
-      }
+      public fun maxPrice(maxPrice: String)
 
-      public fun spotInstanceType(spotInstanceType: String) {
-      }
+      public fun spotInstanceType(spotInstanceType: String)
 
-      public fun validUntil(validUntil: String) {
-      }
+      public fun validUntil(validUntil: String)
     }
 
     private class BuilderImpl : Builder {
@@ -304,23 +287,23 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty.builder()
 
-      public override fun blockDurationMinutes(blockDurationMinutes: Number) {
+      override fun blockDurationMinutes(blockDurationMinutes: Number) {
         cdkBuilder.blockDurationMinutes(blockDurationMinutes)
       }
 
-      public override fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
+      override fun instanceInterruptionBehavior(instanceInterruptionBehavior: String) {
         cdkBuilder.instanceInterruptionBehavior(instanceInterruptionBehavior)
       }
 
-      public override fun maxPrice(maxPrice: String) {
+      override fun maxPrice(maxPrice: String) {
         cdkBuilder.maxPrice(maxPrice)
       }
 
-      public override fun spotInstanceType(spotInstanceType: String) {
+      override fun spotInstanceType(spotInstanceType: String) {
         cdkBuilder.spotInstanceType(spotInstanceType)
       }
 
-      public override fun validUntil(validUntil: String) {
+      override fun validUntil(validUntil: String) {
         cdkBuilder.validUntil(validUntil)
       }
 
@@ -332,16 +315,16 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.SpotOptionsProperty,
     ) : SpotOptionsProperty {
-      public override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
+      override fun blockDurationMinutes(): Number? = unwrap(this).getBlockDurationMinutes()
 
-      public override fun instanceInterruptionBehavior(): String? =
+      override fun instanceInterruptionBehavior(): String? =
           unwrap(this).getInstanceInterruptionBehavior()
 
-      public override fun maxPrice(): String? = unwrap(this).getMaxPrice()
+      override fun maxPrice(): String? = unwrap(this).getMaxPrice()
 
-      public override fun spotInstanceType(): String? = unwrap(this).getSpotInstanceType()
+      override fun spotInstanceType(): String? = unwrap(this).getSpotInstanceType()
 
-      public override fun validUntil(): String? = unwrap(this).getValidUntil()
+      override fun validUntil(): String? = unwrap(this).getValidUntil()
     }
 
     public companion object {
@@ -430,238 +413,172 @@ public open class CfnLaunchTemplate internal constructor(
     public fun userData(): String? = unwrap(this).getUserData()
 
     public interface Builder {
-      public fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      }
+      public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
 
-      public fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      }
+      public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
-      public fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
-      }
+      public fun capacityReservationSpecification(capacityReservationSpecification: IResolvable)
 
       public
-          fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty) {
-      }
+          fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7538c816f6b8ad00a2d467e58e27594cdd64e0cd65cc1a1e0c894ee8e5b165a0")
       public
-          fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty.Builder.() -> Unit)
 
-      public fun cpuOptions(cpuOptions: IResolvable) {
-      }
+      public fun cpuOptions(cpuOptions: IResolvable)
 
-      public fun cpuOptions(cpuOptions: CpuOptionsProperty) {
-      }
+      public fun cpuOptions(cpuOptions: CpuOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("259e3b5c06cb5bf8c8108e0c786375e6a9cea676a84ba635b0c1c801565c8c24")
-      public fun cpuOptions(cpuOptions: CpuOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun cpuOptions(cpuOptions: CpuOptionsProperty.Builder.() -> Unit)
 
-      public fun creditSpecification(creditSpecification: IResolvable) {
-      }
+      public fun creditSpecification(creditSpecification: IResolvable)
 
-      public fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
-      }
+      public fun creditSpecification(creditSpecification: CreditSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c519e21ccdfb01d70cdf605a898774b356db73d7a867105c93e7548d3dbbd7f5")
       public
-          fun creditSpecification(creditSpecification: CreditSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun creditSpecification(creditSpecification: CreditSpecificationProperty.Builder.() -> Unit)
 
-      public fun disableApiStop(disableApiStop: Boolean) {
-      }
+      public fun disableApiStop(disableApiStop: Boolean)
 
-      public fun disableApiStop(disableApiStop: IResolvable) {
-      }
+      public fun disableApiStop(disableApiStop: IResolvable)
 
-      public fun disableApiTermination(disableApiTermination: Boolean) {
-      }
+      public fun disableApiTermination(disableApiTermination: Boolean)
 
-      public fun disableApiTermination(disableApiTermination: IResolvable) {
-      }
+      public fun disableApiTermination(disableApiTermination: IResolvable)
 
-      public fun ebsOptimized(ebsOptimized: Boolean) {
-      }
+      public fun ebsOptimized(ebsOptimized: Boolean)
 
-      public fun ebsOptimized(ebsOptimized: IResolvable) {
-      }
+      public fun ebsOptimized(ebsOptimized: IResolvable)
 
-      public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
-      }
+      public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable)
 
-      public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
-      }
+      public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>)
 
-      public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
-      }
+      public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable)
 
-      public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
-      }
+      public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>)
 
-      public fun enclaveOptions(enclaveOptions: IResolvable) {
-      }
+      public fun enclaveOptions(enclaveOptions: IResolvable)
 
-      public fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
-      }
+      public fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07d1a4d0253198ddd3f5824e73df1255a4da4abfb9fb30dfb987a7cc2b9a138")
-      public fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty.Builder.() -> Unit)
 
-      public fun hibernationOptions(hibernationOptions: IResolvable) {
-      }
+      public fun hibernationOptions(hibernationOptions: IResolvable)
 
-      public fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
-      }
+      public fun hibernationOptions(hibernationOptions: HibernationOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28e8f416c301f684b2caa0ff660d3316808d2aaa191bdf45a914e96dabfbc4a0")
       public
-          fun hibernationOptions(hibernationOptions: HibernationOptionsProperty.Builder.() -> Unit) {
-      }
+          fun hibernationOptions(hibernationOptions: HibernationOptionsProperty.Builder.() -> Unit)
 
-      public fun iamInstanceProfile(iamInstanceProfile: IResolvable) {
-      }
+      public fun iamInstanceProfile(iamInstanceProfile: IResolvable)
 
-      public fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty) {
-      }
+      public fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1bbd8df00cc9b5b637bda4de3be852174f5893db1acc2b1a7713ee0c97e67ffb")
       public
-          fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty.Builder.() -> Unit) {
-      }
+          fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty.Builder.() -> Unit)
 
-      public fun imageId(imageId: String) {
-      }
+      public fun imageId(imageId: String)
 
-      public fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: String) {
-      }
+      public fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: String)
 
-      public fun instanceMarketOptions(instanceMarketOptions: IResolvable) {
-      }
+      public fun instanceMarketOptions(instanceMarketOptions: IResolvable)
 
-      public fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty) {
-      }
+      public fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43a96f45291c6fafa8312eb816699be708763915c3331c65bd8212a0c3f434c4")
       public
-          fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty.Builder.() -> Unit) {
-      }
+          fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty.Builder.() -> Unit)
 
-      public fun instanceRequirements(instanceRequirements: IResolvable) {
-      }
+      public fun instanceRequirements(instanceRequirements: IResolvable)
 
-      public fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
-      }
+      public fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4d761b0fa81c0457ee3edbe90ca24a6f1e9229459537600d3502abd9d657fd03")
       public
-          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit) {
-      }
+          fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit)
 
-      public fun instanceType(instanceType: String) {
-      }
+      public fun instanceType(instanceType: String)
 
-      public fun kernelId(kernelId: String) {
-      }
+      public fun kernelId(kernelId: String)
 
-      public fun keyName(keyName: String) {
-      }
+      public fun keyName(keyName: String)
 
-      public fun licenseSpecifications(licenseSpecifications: IResolvable) {
-      }
+      public fun licenseSpecifications(licenseSpecifications: IResolvable)
 
-      public fun licenseSpecifications(licenseSpecifications: List<Any>) {
-      }
+      public fun licenseSpecifications(licenseSpecifications: List<Any>)
 
-      public fun maintenanceOptions(maintenanceOptions: IResolvable) {
-      }
+      public fun maintenanceOptions(maintenanceOptions: IResolvable)
 
-      public fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty) {
-      }
+      public fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc0929a282bb2fbc3977ef24433a08c1d37f4f2836f2a7220650d33b4c6539dc")
       public
-          fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty.Builder.() -> Unit) {
-      }
+          fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty.Builder.() -> Unit)
 
-      public fun metadataOptions(metadataOptions: IResolvable) {
-      }
+      public fun metadataOptions(metadataOptions: IResolvable)
 
-      public fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
-      }
+      public fun metadataOptions(metadataOptions: MetadataOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac7fc838a77a9a6a23cb745f94ea114a1de9fd91a5d1d8d5c34039bb5f711bb2")
-      public fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit)
 
-      public fun monitoring(monitoring: IResolvable) {
-      }
+      public fun monitoring(monitoring: IResolvable)
 
-      public fun monitoring(monitoring: MonitoringProperty) {
-      }
+      public fun monitoring(monitoring: MonitoringProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2b77ed06d1cbb2ea112e6d6c0f98c421f7023ac656e2cb4be028d127207d434c")
-      public fun monitoring(monitoring: MonitoringProperty.Builder.() -> Unit) {
-      }
+      public fun monitoring(monitoring: MonitoringProperty.Builder.() -> Unit)
 
-      public fun networkInterfaces(networkInterfaces: IResolvable) {
-      }
+      public fun networkInterfaces(networkInterfaces: IResolvable)
 
-      public fun networkInterfaces(networkInterfaces: List<Any>) {
-      }
+      public fun networkInterfaces(networkInterfaces: List<Any>)
 
-      public fun placement(placement: IResolvable) {
-      }
+      public fun placement(placement: IResolvable)
 
-      public fun placement(placement: PlacementProperty) {
-      }
+      public fun placement(placement: PlacementProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("006e5a78cf2eeb9a54e00593775b245bdc307414cd0aa8805e7078b297666637")
-      public fun placement(placement: PlacementProperty.Builder.() -> Unit) {
-      }
+      public fun placement(placement: PlacementProperty.Builder.() -> Unit)
 
-      public fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
-      }
+      public fun privateDnsNameOptions(privateDnsNameOptions: IResolvable)
 
-      public fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
-      }
+      public fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f8642d14e3161f7a43afabda8cbae0433ded3780822d98553845b48be10a2ef4")
       public
-          fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty.Builder.() -> Unit) {
-      }
+          fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty.Builder.() -> Unit)
 
-      public fun ramDiskId(ramDiskId: String) {
-      }
+      public fun ramDiskId(ramDiskId: String)
 
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun securityGroups(securityGroups: List<String>) {
-      }
+      public fun securityGroups(securityGroups: List<String>)
 
-      public fun tagSpecifications(tagSpecifications: IResolvable) {
-      }
+      public fun tagSpecifications(tagSpecifications: IResolvable)
 
-      public fun tagSpecifications(tagSpecifications: List<Any>) {
-      }
+      public fun tagSpecifications(tagSpecifications: List<Any>)
 
-      public fun userData(userData: String) {
-      }
+      public fun userData(userData: String)
     }
 
     private class BuilderImpl : Builder {
@@ -669,295 +586,290 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateDataProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateDataProperty.builder()
 
-      public override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+      override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
         cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
       }
 
-      public override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+      override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
         cdkBuilder.blockDeviceMappings(blockDeviceMappings)
       }
 
-      public override
-          fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
+      override fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
         cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty) {
         cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(CapacityReservationSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7538c816f6b8ad00a2d467e58e27594cdd64e0cd65cc1a1e0c894ee8e5b165a0")
-      public override
+      override
           fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty.Builder.() -> Unit):
           Unit =
           capacityReservationSpecification(CapacityReservationSpecificationProperty(capacityReservationSpecification))
 
-      public override fun cpuOptions(cpuOptions: IResolvable) {
+      override fun cpuOptions(cpuOptions: IResolvable) {
         cdkBuilder.cpuOptions(cpuOptions.let(IResolvable::unwrap))
       }
 
-      public override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
+      override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
         cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("259e3b5c06cb5bf8c8108e0c786375e6a9cea676a84ba635b0c1c801565c8c24")
-      public override fun cpuOptions(cpuOptions: CpuOptionsProperty.Builder.() -> Unit): Unit =
+      override fun cpuOptions(cpuOptions: CpuOptionsProperty.Builder.() -> Unit): Unit =
           cpuOptions(CpuOptionsProperty(cpuOptions))
 
-      public override fun creditSpecification(creditSpecification: IResolvable) {
+      override fun creditSpecification(creditSpecification: IResolvable) {
         cdkBuilder.creditSpecification(creditSpecification.let(IResolvable::unwrap))
       }
 
-      public override fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
+      override fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
         cdkBuilder.creditSpecification(creditSpecification.let(CreditSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c519e21ccdfb01d70cdf605a898774b356db73d7a867105c93e7548d3dbbd7f5")
-      public override
+      override
           fun creditSpecification(creditSpecification: CreditSpecificationProperty.Builder.() -> Unit):
           Unit = creditSpecification(CreditSpecificationProperty(creditSpecification))
 
-      public override fun disableApiStop(disableApiStop: Boolean) {
+      override fun disableApiStop(disableApiStop: Boolean) {
         cdkBuilder.disableApiStop(disableApiStop)
       }
 
-      public override fun disableApiStop(disableApiStop: IResolvable) {
+      override fun disableApiStop(disableApiStop: IResolvable) {
         cdkBuilder.disableApiStop(disableApiStop.let(IResolvable::unwrap))
       }
 
-      public override fun disableApiTermination(disableApiTermination: Boolean) {
+      override fun disableApiTermination(disableApiTermination: Boolean) {
         cdkBuilder.disableApiTermination(disableApiTermination)
       }
 
-      public override fun disableApiTermination(disableApiTermination: IResolvable) {
+      override fun disableApiTermination(disableApiTermination: IResolvable) {
         cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable::unwrap))
       }
 
-      public override fun ebsOptimized(ebsOptimized: Boolean) {
+      override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
       }
 
-      public override fun ebsOptimized(ebsOptimized: IResolvable) {
+      override fun ebsOptimized(ebsOptimized: IResolvable) {
         cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
       }
 
-      public override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
+      override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable::unwrap))
       }
 
-      public override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
+      override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
       }
 
-      public override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
+      override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
       }
 
-      public override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
+      override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
       }
 
-      public override fun enclaveOptions(enclaveOptions: IResolvable) {
+      override fun enclaveOptions(enclaveOptions: IResolvable) {
         cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
       }
 
-      public override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
+      override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
         cdkBuilder.enclaveOptions(enclaveOptions.let(EnclaveOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07d1a4d0253198ddd3f5824e73df1255a4da4abfb9fb30dfb987a7cc2b9a138")
-      public override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty.Builder.() -> Unit):
-          Unit = enclaveOptions(EnclaveOptionsProperty(enclaveOptions))
+      override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty.Builder.() -> Unit): Unit =
+          enclaveOptions(EnclaveOptionsProperty(enclaveOptions))
 
-      public override fun hibernationOptions(hibernationOptions: IResolvable) {
+      override fun hibernationOptions(hibernationOptions: IResolvable) {
         cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable::unwrap))
       }
 
-      public override fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
+      override fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
         cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("28e8f416c301f684b2caa0ff660d3316808d2aaa191bdf45a914e96dabfbc4a0")
-      public override
+      override
           fun hibernationOptions(hibernationOptions: HibernationOptionsProperty.Builder.() -> Unit):
           Unit = hibernationOptions(HibernationOptionsProperty(hibernationOptions))
 
-      public override fun iamInstanceProfile(iamInstanceProfile: IResolvable) {
+      override fun iamInstanceProfile(iamInstanceProfile: IResolvable) {
         cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IResolvable::unwrap))
       }
 
-      public override fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty) {
+      override fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty) {
         cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IamInstanceProfileProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1bbd8df00cc9b5b637bda4de3be852174f5893db1acc2b1a7713ee0c97e67ffb")
-      public override
+      override
           fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty.Builder.() -> Unit):
           Unit = iamInstanceProfile(IamInstanceProfileProperty(iamInstanceProfile))
 
-      public override fun imageId(imageId: String) {
+      override fun imageId(imageId: String) {
         cdkBuilder.imageId(imageId)
       }
 
-      public override
-          fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: String) {
+      override fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: String) {
         cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior)
       }
 
-      public override fun instanceMarketOptions(instanceMarketOptions: IResolvable) {
+      override fun instanceMarketOptions(instanceMarketOptions: IResolvable) {
         cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(IResolvable::unwrap))
       }
 
-      public override
-          fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty) {
+      override fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty) {
         cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(InstanceMarketOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("43a96f45291c6fafa8312eb816699be708763915c3331c65bd8212a0c3f434c4")
-      public override
+      override
           fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty.Builder.() -> Unit):
           Unit = instanceMarketOptions(InstanceMarketOptionsProperty(instanceMarketOptions))
 
-      public override fun instanceRequirements(instanceRequirements: IResolvable) {
+      override fun instanceRequirements(instanceRequirements: IResolvable) {
         cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
       }
 
-      public override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
+      override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
         cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4d761b0fa81c0457ee3edbe90ca24a6f1e9229459537600d3502abd9d657fd03")
-      public override
+      override
           fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty.Builder.() -> Unit):
           Unit = instanceRequirements(InstanceRequirementsProperty(instanceRequirements))
 
-      public override fun instanceType(instanceType: String) {
+      override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
-      public override fun kernelId(kernelId: String) {
+      override fun kernelId(kernelId: String) {
         cdkBuilder.kernelId(kernelId)
       }
 
-      public override fun keyName(keyName: String) {
+      override fun keyName(keyName: String) {
         cdkBuilder.keyName(keyName)
       }
 
-      public override fun licenseSpecifications(licenseSpecifications: IResolvable) {
+      override fun licenseSpecifications(licenseSpecifications: IResolvable) {
         cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable::unwrap))
       }
 
-      public override fun licenseSpecifications(licenseSpecifications: List<Any>) {
+      override fun licenseSpecifications(licenseSpecifications: List<Any>) {
         cdkBuilder.licenseSpecifications(licenseSpecifications)
       }
 
-      public override fun maintenanceOptions(maintenanceOptions: IResolvable) {
+      override fun maintenanceOptions(maintenanceOptions: IResolvable) {
         cdkBuilder.maintenanceOptions(maintenanceOptions.let(IResolvable::unwrap))
       }
 
-      public override fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty) {
+      override fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty) {
         cdkBuilder.maintenanceOptions(maintenanceOptions.let(MaintenanceOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc0929a282bb2fbc3977ef24433a08c1d37f4f2836f2a7220650d33b4c6539dc")
-      public override
+      override
           fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty.Builder.() -> Unit):
           Unit = maintenanceOptions(MaintenanceOptionsProperty(maintenanceOptions))
 
-      public override fun metadataOptions(metadataOptions: IResolvable) {
+      override fun metadataOptions(metadataOptions: IResolvable) {
         cdkBuilder.metadataOptions(metadataOptions.let(IResolvable::unwrap))
       }
 
-      public override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
+      override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
         cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac7fc838a77a9a6a23cb745f94ea114a1de9fd91a5d1d8d5c34039bb5f711bb2")
-      public override
-          fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit): Unit =
-          metadataOptions(MetadataOptionsProperty(metadataOptions))
+      override fun metadataOptions(metadataOptions: MetadataOptionsProperty.Builder.() -> Unit):
+          Unit = metadataOptions(MetadataOptionsProperty(metadataOptions))
 
-      public override fun monitoring(monitoring: IResolvable) {
+      override fun monitoring(monitoring: IResolvable) {
         cdkBuilder.monitoring(monitoring.let(IResolvable::unwrap))
       }
 
-      public override fun monitoring(monitoring: MonitoringProperty) {
+      override fun monitoring(monitoring: MonitoringProperty) {
         cdkBuilder.monitoring(monitoring.let(MonitoringProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2b77ed06d1cbb2ea112e6d6c0f98c421f7023ac656e2cb4be028d127207d434c")
-      public override fun monitoring(monitoring: MonitoringProperty.Builder.() -> Unit): Unit =
+      override fun monitoring(monitoring: MonitoringProperty.Builder.() -> Unit): Unit =
           monitoring(MonitoringProperty(monitoring))
 
-      public override fun networkInterfaces(networkInterfaces: IResolvable) {
+      override fun networkInterfaces(networkInterfaces: IResolvable) {
         cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
       }
 
-      public override fun networkInterfaces(networkInterfaces: List<Any>) {
+      override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
 
-      public override fun placement(placement: IResolvable) {
+      override fun placement(placement: IResolvable) {
         cdkBuilder.placement(placement.let(IResolvable::unwrap))
       }
 
-      public override fun placement(placement: PlacementProperty) {
+      override fun placement(placement: PlacementProperty) {
         cdkBuilder.placement(placement.let(PlacementProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("006e5a78cf2eeb9a54e00593775b245bdc307414cd0aa8805e7078b297666637")
-      public override fun placement(placement: PlacementProperty.Builder.() -> Unit): Unit =
+      override fun placement(placement: PlacementProperty.Builder.() -> Unit): Unit =
           placement(PlacementProperty(placement))
 
-      public override fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
+      override fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
         cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable::unwrap))
       }
 
-      public override
-          fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
+      override fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
         cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(PrivateDnsNameOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f8642d14e3161f7a43afabda8cbae0433ded3780822d98553845b48be10a2ef4")
-      public override
+      override
           fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty.Builder.() -> Unit):
           Unit = privateDnsNameOptions(PrivateDnsNameOptionsProperty(privateDnsNameOptions))
 
-      public override fun ramDiskId(ramDiskId: String) {
+      override fun ramDiskId(ramDiskId: String) {
         cdkBuilder.ramDiskId(ramDiskId)
       }
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun securityGroups(securityGroups: List<String>) {
+      override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
-      public override fun tagSpecifications(tagSpecifications: IResolvable) {
+      override fun tagSpecifications(tagSpecifications: IResolvable) {
         cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
       }
 
-      public override fun tagSpecifications(tagSpecifications: List<Any>) {
+      override fun tagSpecifications(tagSpecifications: List<Any>) {
         cdkBuilder.tagSpecifications(tagSpecifications)
       }
 
-      public override fun userData(userData: String) {
+      override fun userData(userData: String) {
         cdkBuilder.userData(userData)
       }
 
@@ -970,73 +882,71 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateDataProperty,
     ) : LaunchTemplateDataProperty {
-      public override fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
+      override fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
 
-      public override fun capacityReservationSpecification(): Any? =
+      override fun capacityReservationSpecification(): Any? =
           unwrap(this).getCapacityReservationSpecification()
 
-      public override fun cpuOptions(): Any? = unwrap(this).getCpuOptions()
+      override fun cpuOptions(): Any? = unwrap(this).getCpuOptions()
 
-      public override fun creditSpecification(): Any? = unwrap(this).getCreditSpecification()
+      override fun creditSpecification(): Any? = unwrap(this).getCreditSpecification()
 
-      public override fun disableApiStop(): Any? = unwrap(this).getDisableApiStop()
+      override fun disableApiStop(): Any? = unwrap(this).getDisableApiStop()
 
-      public override fun disableApiTermination(): Any? = unwrap(this).getDisableApiTermination()
+      override fun disableApiTermination(): Any? = unwrap(this).getDisableApiTermination()
 
-      public override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+      override fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
-      public override fun elasticGpuSpecifications(): Any? =
-          unwrap(this).getElasticGpuSpecifications()
+      override fun elasticGpuSpecifications(): Any? = unwrap(this).getElasticGpuSpecifications()
 
-      public override fun elasticInferenceAccelerators(): Any? =
+      override fun elasticInferenceAccelerators(): Any? =
           unwrap(this).getElasticInferenceAccelerators()
 
-      public override fun enclaveOptions(): Any? = unwrap(this).getEnclaveOptions()
+      override fun enclaveOptions(): Any? = unwrap(this).getEnclaveOptions()
 
-      public override fun hibernationOptions(): Any? = unwrap(this).getHibernationOptions()
+      override fun hibernationOptions(): Any? = unwrap(this).getHibernationOptions()
 
-      public override fun iamInstanceProfile(): Any? = unwrap(this).getIamInstanceProfile()
+      override fun iamInstanceProfile(): Any? = unwrap(this).getIamInstanceProfile()
 
-      public override fun imageId(): String? = unwrap(this).getImageId()
+      override fun imageId(): String? = unwrap(this).getImageId()
 
-      public override fun instanceInitiatedShutdownBehavior(): String? =
+      override fun instanceInitiatedShutdownBehavior(): String? =
           unwrap(this).getInstanceInitiatedShutdownBehavior()
 
-      public override fun instanceMarketOptions(): Any? = unwrap(this).getInstanceMarketOptions()
+      override fun instanceMarketOptions(): Any? = unwrap(this).getInstanceMarketOptions()
 
-      public override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
+      override fun instanceRequirements(): Any? = unwrap(this).getInstanceRequirements()
 
-      public override fun instanceType(): String? = unwrap(this).getInstanceType()
+      override fun instanceType(): String? = unwrap(this).getInstanceType()
 
-      public override fun kernelId(): String? = unwrap(this).getKernelId()
+      override fun kernelId(): String? = unwrap(this).getKernelId()
 
-      public override fun keyName(): String? = unwrap(this).getKeyName()
+      override fun keyName(): String? = unwrap(this).getKeyName()
 
-      public override fun licenseSpecifications(): Any? = unwrap(this).getLicenseSpecifications()
+      override fun licenseSpecifications(): Any? = unwrap(this).getLicenseSpecifications()
 
-      public override fun maintenanceOptions(): Any? = unwrap(this).getMaintenanceOptions()
+      override fun maintenanceOptions(): Any? = unwrap(this).getMaintenanceOptions()
 
-      public override fun metadataOptions(): Any? = unwrap(this).getMetadataOptions()
+      override fun metadataOptions(): Any? = unwrap(this).getMetadataOptions()
 
-      public override fun monitoring(): Any? = unwrap(this).getMonitoring()
+      override fun monitoring(): Any? = unwrap(this).getMonitoring()
 
-      public override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
+      override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
 
-      public override fun placement(): Any? = unwrap(this).getPlacement()
+      override fun placement(): Any? = unwrap(this).getPlacement()
 
-      public override fun privateDnsNameOptions(): Any? = unwrap(this).getPrivateDnsNameOptions()
+      override fun privateDnsNameOptions(): Any? = unwrap(this).getPrivateDnsNameOptions()
 
-      public override fun ramDiskId(): String? = unwrap(this).getRamDiskId()
+      override fun ramDiskId(): String? = unwrap(this).getRamDiskId()
 
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?:
-          emptyList()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      public override fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
+      override fun tagSpecifications(): Any? = unwrap(this).getTagSpecifications()
 
-      public override fun userData(): String? = unwrap(this).getUserData()
+      override fun userData(): String? = unwrap(this).getUserData()
     }
 
     public companion object {
@@ -1066,11 +976,9 @@ public open class CfnLaunchTemplate internal constructor(
         unwrap(this).getCapacityReservationResourceGroupArn()
 
     public interface Builder {
-      public fun capacityReservationId(capacityReservationId: String) {
-      }
+      public fun capacityReservationId(capacityReservationId: String)
 
-      public fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String) {
-      }
+      public fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1079,11 +987,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty.builder()
 
-      public override fun capacityReservationId(capacityReservationId: String) {
+      override fun capacityReservationId(capacityReservationId: String) {
         cdkBuilder.capacityReservationId(capacityReservationId)
       }
 
-      public override
+      override
           fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String) {
         cdkBuilder.capacityReservationResourceGroupArn(capacityReservationResourceGroupArn)
       }
@@ -1097,9 +1005,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationTargetProperty,
     ) : CapacityReservationTargetProperty {
-      public override fun capacityReservationId(): String? = unwrap(this).getCapacityReservationId()
+      override fun capacityReservationId(): String? = unwrap(this).getCapacityReservationId()
 
-      public override fun capacityReservationResourceGroupArn(): String? =
+      override fun capacityReservationResourceGroupArn(): String? =
           unwrap(this).getCapacityReservationResourceGroupArn()
     }
 
@@ -1128,8 +1036,7 @@ public open class CfnLaunchTemplate internal constructor(
     public fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
 
     public interface Builder {
-      public fun ipv4Prefix(ipv4Prefix: String) {
-      }
+      public fun ipv4Prefix(ipv4Prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1138,7 +1045,7 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty.builder()
 
-      public override fun ipv4Prefix(ipv4Prefix: String) {
+      override fun ipv4Prefix(ipv4Prefix: String) {
         cdkBuilder.ipv4Prefix(ipv4Prefix)
       }
 
@@ -1151,7 +1058,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv4PrefixSpecificationProperty,
     ) : Ipv4PrefixSpecificationProperty {
-      public override fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
+      override fun ipv4Prefix(): String? = unwrap(this).getIpv4Prefix()
     }
 
     public companion object {
@@ -1180,11 +1087,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1193,11 +1098,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -1210,9 +1115,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorTotalMemoryMiBProperty,
     ) : AcceleratorTotalMemoryMiBProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -1284,114 +1189,80 @@ public open class CfnLaunchTemplate internal constructor(
     public fun subnetId(): String? = unwrap(this).getSubnetId()
 
     public interface Builder {
-      public fun associateCarrierIpAddress(associateCarrierIpAddress: Boolean) {
-      }
+      public fun associateCarrierIpAddress(associateCarrierIpAddress: Boolean)
 
-      public fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
-      }
+      public fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable)
 
-      public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
-      }
+      public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
 
-      public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-      }
+      public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable)
 
-      public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
-      }
+      public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable)
 
       public
-          fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty) {
-      }
+          fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c6f4a87772b9bd415feeb96a63199cd3ff7731701e8a84031a75b567fdae520a")
       public
-          fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty.Builder.() -> Unit)
 
-      public fun deleteOnTermination(deleteOnTermination: Boolean) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun deviceIndex(deviceIndex: Number) {
-      }
+      public fun deviceIndex(deviceIndex: Number)
 
-      public fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
-      }
+      public fun enaSrdSpecification(enaSrdSpecification: IResolvable)
 
-      public fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
-      }
+      public fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dde402339dbd4f7d544b0811410463367a3fbedfd09e5cfd914ab9ec1d85c378")
       public
-          fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit)
 
-      public fun groups(groups: List<String>) {
-      }
+      public fun groups(groups: List<String>)
 
-      public fun interfaceType(interfaceType: String) {
-      }
+      public fun interfaceType(interfaceType: String)
 
-      public fun ipv4PrefixCount(ipv4PrefixCount: Number) {
-      }
+      public fun ipv4PrefixCount(ipv4PrefixCount: Number)
 
-      public fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
-      }
+      public fun ipv4Prefixes(ipv4Prefixes: IResolvable)
 
-      public fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
-      }
+      public fun ipv4Prefixes(ipv4Prefixes: List<Any>)
 
-      public fun ipv6AddressCount(ipv6AddressCount: Number) {
-      }
+      public fun ipv6AddressCount(ipv6AddressCount: Number)
 
-      public fun ipv6Addresses(ipv6Addresses: IResolvable) {
-      }
+      public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
-      public fun ipv6Addresses(ipv6Addresses: List<Any>) {
-      }
+      public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
-      public fun ipv6PrefixCount(ipv6PrefixCount: Number) {
-      }
+      public fun ipv6PrefixCount(ipv6PrefixCount: Number)
 
-      public fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
-      }
+      public fun ipv6Prefixes(ipv6Prefixes: IResolvable)
 
-      public fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
-      }
+      public fun ipv6Prefixes(ipv6Prefixes: List<Any>)
 
-      public fun networkCardIndex(networkCardIndex: Number) {
-      }
+      public fun networkCardIndex(networkCardIndex: Number)
 
-      public fun networkInterfaceId(networkInterfaceId: String) {
-      }
+      public fun networkInterfaceId(networkInterfaceId: String)
 
-      public fun primaryIpv6(primaryIpv6: Boolean) {
-      }
+      public fun primaryIpv6(primaryIpv6: Boolean)
 
-      public fun primaryIpv6(primaryIpv6: IResolvable) {
-      }
+      public fun primaryIpv6(primaryIpv6: IResolvable)
 
-      public fun privateIpAddress(privateIpAddress: String) {
-      }
+      public fun privateIpAddress(privateIpAddress: String)
 
-      public fun privateIpAddresses(privateIpAddresses: IResolvable) {
-      }
+      public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
-      public fun privateIpAddresses(privateIpAddresses: List<Any>) {
-      }
+      public fun privateIpAddresses(privateIpAddresses: List<Any>)
 
-      public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
-      }
+      public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1399,146 +1270,145 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty.builder()
 
-      public override fun associateCarrierIpAddress(associateCarrierIpAddress: Boolean) {
+      override fun associateCarrierIpAddress(associateCarrierIpAddress: Boolean) {
         cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress)
       }
 
-      public override fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
+      override fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
         cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress.let(IResolvable::unwrap))
       }
 
-      public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+      override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
         cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
       }
 
-      public override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
+      override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
         cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
       }
 
-      public override
-          fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
+      override fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
         cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty) {
         cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(ConnectionTrackingSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c6f4a87772b9bd415feeb96a63199cd3ff7731701e8a84031a75b567fdae520a")
-      public override
+      override
           fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty.Builder.() -> Unit):
           Unit =
           connectionTrackingSpecification(ConnectionTrackingSpecificationProperty(connectionTrackingSpecification))
 
-      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
         cdkBuilder.deleteOnTermination(deleteOnTermination)
       }
 
-      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
         cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun deviceIndex(deviceIndex: Number) {
+      override fun deviceIndex(deviceIndex: Number) {
         cdkBuilder.deviceIndex(deviceIndex)
       }
 
-      public override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
+      override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
         cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable::unwrap))
       }
 
-      public override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
+      override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
         cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dde402339dbd4f7d544b0811410463367a3fbedfd09e5cfd914ab9ec1d85c378")
-      public override
+      override
           fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty.Builder.() -> Unit):
           Unit = enaSrdSpecification(EnaSrdSpecificationProperty(enaSrdSpecification))
 
-      public override fun groups(groups: List<String>) {
+      override fun groups(groups: List<String>) {
         cdkBuilder.groups(groups)
       }
 
-      public override fun interfaceType(interfaceType: String) {
+      override fun interfaceType(interfaceType: String) {
         cdkBuilder.interfaceType(interfaceType)
       }
 
-      public override fun ipv4PrefixCount(ipv4PrefixCount: Number) {
+      override fun ipv4PrefixCount(ipv4PrefixCount: Number) {
         cdkBuilder.ipv4PrefixCount(ipv4PrefixCount)
       }
 
-      public override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
+      override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
         cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable::unwrap))
       }
 
-      public override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
+      override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
         cdkBuilder.ipv4Prefixes(ipv4Prefixes)
       }
 
-      public override fun ipv6AddressCount(ipv6AddressCount: Number) {
+      override fun ipv6AddressCount(ipv6AddressCount: Number) {
         cdkBuilder.ipv6AddressCount(ipv6AddressCount)
       }
 
-      public override fun ipv6Addresses(ipv6Addresses: IResolvable) {
+      override fun ipv6Addresses(ipv6Addresses: IResolvable) {
         cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
       }
 
-      public override fun ipv6Addresses(ipv6Addresses: List<Any>) {
+      override fun ipv6Addresses(ipv6Addresses: List<Any>) {
         cdkBuilder.ipv6Addresses(ipv6Addresses)
       }
 
-      public override fun ipv6PrefixCount(ipv6PrefixCount: Number) {
+      override fun ipv6PrefixCount(ipv6PrefixCount: Number) {
         cdkBuilder.ipv6PrefixCount(ipv6PrefixCount)
       }
 
-      public override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
+      override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
         cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable::unwrap))
       }
 
-      public override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
+      override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
         cdkBuilder.ipv6Prefixes(ipv6Prefixes)
       }
 
-      public override fun networkCardIndex(networkCardIndex: Number) {
+      override fun networkCardIndex(networkCardIndex: Number) {
         cdkBuilder.networkCardIndex(networkCardIndex)
       }
 
-      public override fun networkInterfaceId(networkInterfaceId: String) {
+      override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
 
-      public override fun primaryIpv6(primaryIpv6: Boolean) {
+      override fun primaryIpv6(primaryIpv6: Boolean) {
         cdkBuilder.primaryIpv6(primaryIpv6)
       }
 
-      public override fun primaryIpv6(primaryIpv6: IResolvable) {
+      override fun primaryIpv6(primaryIpv6: IResolvable) {
         cdkBuilder.primaryIpv6(primaryIpv6.let(IResolvable::unwrap))
       }
 
-      public override fun privateIpAddress(privateIpAddress: String) {
+      override fun privateIpAddress(privateIpAddress: String) {
         cdkBuilder.privateIpAddress(privateIpAddress)
       }
 
-      public override fun privateIpAddresses(privateIpAddresses: IResolvable) {
+      override fun privateIpAddresses(privateIpAddresses: IResolvable) {
         cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
       }
 
-      public override fun privateIpAddresses(privateIpAddresses: List<Any>) {
+      override fun privateIpAddresses(privateIpAddresses: List<Any>) {
         cdkBuilder.privateIpAddresses(privateIpAddresses)
       }
 
-      public override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
+      override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
         cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -1551,53 +1421,51 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkInterfaceProperty,
     ) : NetworkInterfaceProperty {
-      public override fun associateCarrierIpAddress(): Any? =
-          unwrap(this).getAssociateCarrierIpAddress()
+      override fun associateCarrierIpAddress(): Any? = unwrap(this).getAssociateCarrierIpAddress()
 
-      public override fun associatePublicIpAddress(): Any? =
-          unwrap(this).getAssociatePublicIpAddress()
+      override fun associatePublicIpAddress(): Any? = unwrap(this).getAssociatePublicIpAddress()
 
-      public override fun connectionTrackingSpecification(): Any? =
+      override fun connectionTrackingSpecification(): Any? =
           unwrap(this).getConnectionTrackingSpecification()
 
-      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
+      override fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
 
-      public override fun enaSrdSpecification(): Any? = unwrap(this).getEnaSrdSpecification()
+      override fun enaSrdSpecification(): Any? = unwrap(this).getEnaSrdSpecification()
 
-      public override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
+      override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
 
-      public override fun interfaceType(): String? = unwrap(this).getInterfaceType()
+      override fun interfaceType(): String? = unwrap(this).getInterfaceType()
 
-      public override fun ipv4PrefixCount(): Number? = unwrap(this).getIpv4PrefixCount()
+      override fun ipv4PrefixCount(): Number? = unwrap(this).getIpv4PrefixCount()
 
-      public override fun ipv4Prefixes(): Any? = unwrap(this).getIpv4Prefixes()
+      override fun ipv4Prefixes(): Any? = unwrap(this).getIpv4Prefixes()
 
-      public override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
+      override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
-      public override fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
+      override fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
 
-      public override fun ipv6PrefixCount(): Number? = unwrap(this).getIpv6PrefixCount()
+      override fun ipv6PrefixCount(): Number? = unwrap(this).getIpv6PrefixCount()
 
-      public override fun ipv6Prefixes(): Any? = unwrap(this).getIpv6Prefixes()
+      override fun ipv6Prefixes(): Any? = unwrap(this).getIpv6Prefixes()
 
-      public override fun networkCardIndex(): Number? = unwrap(this).getNetworkCardIndex()
+      override fun networkCardIndex(): Number? = unwrap(this).getNetworkCardIndex()
 
-      public override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
 
-      public override fun primaryIpv6(): Any? = unwrap(this).getPrimaryIpv6()
+      override fun primaryIpv6(): Any? = unwrap(this).getPrimaryIpv6()
 
-      public override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
-      public override fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
+      override fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
 
-      public override fun secondaryPrivateIpAddressCount(): Number? =
+      override fun secondaryPrivateIpAddressCount(): Number? =
           unwrap(this).getSecondaryPrivateIpAddressCount()
 
-      public override fun subnetId(): String? = unwrap(this).getSubnetId()
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
     }
 
     public companion object {
@@ -1626,11 +1494,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1639,11 +1505,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -1656,9 +1522,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TotalLocalStorageGBProperty,
     ) : TotalLocalStorageGBProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -1685,8 +1551,7 @@ public open class CfnLaunchTemplate internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1695,7 +1560,7 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1708,7 +1573,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ElasticGpuSpecificationProperty,
     ) : ElasticGpuSpecificationProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -1737,11 +1602,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun count(count: Number) {
-      }
+      public fun count(count: Number)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1750,11 +1613,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty.builder()
 
-      public override fun count(count: Number) {
+      override fun count(count: Number) {
         cdkBuilder.count(count)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -1767,9 +1630,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateElasticInferenceAcceleratorProperty,
     ) : LaunchTemplateElasticInferenceAcceleratorProperty {
-      public override fun count(): Number? = unwrap(this).getCount()
+      override fun count(): Number? = unwrap(this).getCount()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -1811,35 +1674,25 @@ public open class CfnLaunchTemplate internal constructor(
     public fun volumeType(): String? = unwrap(this).getVolumeType()
 
     public interface Builder {
-      public fun deleteOnTermination(deleteOnTermination: Boolean) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: Boolean)
 
-      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      }
+      public fun deleteOnTermination(deleteOnTermination: IResolvable)
 
-      public fun encrypted(encrypted: Boolean) {
-      }
+      public fun encrypted(encrypted: Boolean)
 
-      public fun encrypted(encrypted: IResolvable) {
-      }
+      public fun encrypted(encrypted: IResolvable)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun snapshotId(snapshotId: String) {
-      }
+      public fun snapshotId(snapshotId: String)
 
-      public fun throughput(throughput: Number) {
-      }
+      public fun throughput(throughput: Number)
 
-      public fun volumeSize(volumeSize: Number) {
-      }
+      public fun volumeSize(volumeSize: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1847,43 +1700,43 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty.builder()
 
-      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+      override fun deleteOnTermination(deleteOnTermination: Boolean) {
         cdkBuilder.deleteOnTermination(deleteOnTermination)
       }
 
-      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      override fun deleteOnTermination(deleteOnTermination: IResolvable) {
         cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
       }
 
-      public override fun encrypted(encrypted: Boolean) {
+      override fun encrypted(encrypted: Boolean) {
         cdkBuilder.encrypted(encrypted)
       }
 
-      public override fun encrypted(encrypted: IResolvable) {
+      override fun encrypted(encrypted: IResolvable) {
         cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun snapshotId(snapshotId: String) {
+      override fun snapshotId(snapshotId: String) {
         cdkBuilder.snapshotId(snapshotId)
       }
 
-      public override fun throughput(throughput: Number) {
+      override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
       }
 
-      public override fun volumeSize(volumeSize: Number) {
+      override fun volumeSize(volumeSize: Number) {
         cdkBuilder.volumeSize(volumeSize)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -1894,21 +1747,21 @@ public open class CfnLaunchTemplate internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EbsProperty,
     ) : EbsProperty {
-      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+      override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
 
-      public override fun encrypted(): Any? = unwrap(this).getEncrypted()
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+      override fun snapshotId(): String? = unwrap(this).getSnapshotId()
 
-      public override fun throughput(): Number? = unwrap(this).getThroughput()
+      override fun throughput(): Number? = unwrap(this).getThroughput()
 
-      public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+      override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
-      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -1937,19 +1790,15 @@ public open class CfnLaunchTemplate internal constructor(
     public fun spotOptions(): Any? = unwrap(this).getSpotOptions()
 
     public interface Builder {
-      public fun marketType(marketType: String) {
-      }
+      public fun marketType(marketType: String)
 
-      public fun spotOptions(spotOptions: IResolvable) {
-      }
+      public fun spotOptions(spotOptions: IResolvable)
 
-      public fun spotOptions(spotOptions: SpotOptionsProperty) {
-      }
+      public fun spotOptions(spotOptions: SpotOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f744c35a1804b7b20099c6d3a34b26802557f5b5ffb6c6f41595d1880bb85894")
-      public fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1958,21 +1807,21 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty.builder()
 
-      public override fun marketType(marketType: String) {
+      override fun marketType(marketType: String) {
         cdkBuilder.marketType(marketType)
       }
 
-      public override fun spotOptions(spotOptions: IResolvable) {
+      override fun spotOptions(spotOptions: IResolvable) {
         cdkBuilder.spotOptions(spotOptions.let(IResolvable::unwrap))
       }
 
-      public override fun spotOptions(spotOptions: SpotOptionsProperty) {
+      override fun spotOptions(spotOptions: SpotOptionsProperty) {
         cdkBuilder.spotOptions(spotOptions.let(SpotOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f744c35a1804b7b20099c6d3a34b26802557f5b5ffb6c6f41595d1880bb85894")
-      public override fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit): Unit =
+      override fun spotOptions(spotOptions: SpotOptionsProperty.Builder.() -> Unit): Unit =
           spotOptions(SpotOptionsProperty(spotOptions))
 
       public fun build():
@@ -1984,9 +1833,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceMarketOptionsProperty,
     ) : InstanceMarketOptionsProperty {
-      public override fun marketType(): String? = unwrap(this).getMarketType()
+      override fun marketType(): String? = unwrap(this).getMarketType()
 
-      public override fun spotOptions(): Any? = unwrap(this).getSpotOptions()
+      override fun spotOptions(): Any? = unwrap(this).getSpotOptions()
     }
 
     public companion object {
@@ -2017,14 +1866,11 @@ public open class CfnLaunchTemplate internal constructor(
     public fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
 
     public interface Builder {
-      public fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
-      }
+      public fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number)
 
-      public fun udpStreamTimeout(udpStreamTimeout: Number) {
-      }
+      public fun udpStreamTimeout(udpStreamTimeout: Number)
 
-      public fun udpTimeout(udpTimeout: Number) {
-      }
+      public fun udpTimeout(udpTimeout: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2033,15 +1879,15 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty.builder()
 
-      public override fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
+      override fun tcpEstablishedTimeout(tcpEstablishedTimeout: Number) {
         cdkBuilder.tcpEstablishedTimeout(tcpEstablishedTimeout)
       }
 
-      public override fun udpStreamTimeout(udpStreamTimeout: Number) {
+      override fun udpStreamTimeout(udpStreamTimeout: Number) {
         cdkBuilder.udpStreamTimeout(udpStreamTimeout)
       }
 
-      public override fun udpTimeout(udpTimeout: Number) {
+      override fun udpTimeout(udpTimeout: Number) {
         cdkBuilder.udpTimeout(udpTimeout)
       }
 
@@ -2054,11 +1900,11 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ConnectionTrackingSpecificationProperty,
     ) : ConnectionTrackingSpecificationProperty {
-      public override fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
+      override fun tcpEstablishedTimeout(): Number? = unwrap(this).getTcpEstablishedTimeout()
 
-      public override fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
+      override fun udpStreamTimeout(): Number? = unwrap(this).getUdpStreamTimeout()
 
-      public override fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
+      override fun udpTimeout(): Number? = unwrap(this).getUdpTimeout()
     }
 
     public companion object {
@@ -2086,11 +1932,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun configured(): Any? = unwrap(this).getConfigured()
 
     public interface Builder {
-      public fun configured(configured: Boolean) {
-      }
+      public fun configured(configured: Boolean)
 
-      public fun configured(configured: IResolvable) {
-      }
+      public fun configured(configured: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -2098,11 +1942,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty.builder()
 
-      public override fun configured(configured: Boolean) {
+      override fun configured(configured: Boolean) {
         cdkBuilder.configured(configured)
       }
 
-      public override fun configured(configured: IResolvable) {
+      override fun configured(configured: IResolvable) {
         cdkBuilder.configured(configured.let(IResolvable::unwrap))
       }
 
@@ -2115,7 +1959,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.HibernationOptionsProperty,
     ) : HibernationOptionsProperty {
-      public override fun configured(): Any? = unwrap(this).getConfigured()
+      override fun configured(): Any? = unwrap(this).getConfigured()
     }
 
     public companion object {
@@ -2144,11 +1988,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun name(): String? = unwrap(this).getName()
 
     public interface Builder {
-      public fun arn(arn: String) {
-      }
+      public fun arn(arn: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2156,11 +1998,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty.builder()
 
-      public override fun arn(arn: String) {
+      override fun arn(arn: String) {
         cdkBuilder.arn(arn)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -2173,9 +2015,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.IamInstanceProfileProperty,
     ) : IamInstanceProfileProperty {
-      public override fun arn(): String? = unwrap(this).getArn()
+      override fun arn(): String? = unwrap(this).getArn()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
     }
 
     public companion object {
@@ -2202,8 +2044,7 @@ public open class CfnLaunchTemplate internal constructor(
     public fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
 
     public interface Builder {
-      public fun ipv6Prefix(ipv6Prefix: String) {
-      }
+      public fun ipv6Prefix(ipv6Prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2212,7 +2053,7 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty.builder()
 
-      public override fun ipv6Prefix(ipv6Prefix: String) {
+      override fun ipv6Prefix(ipv6Prefix: String) {
         cdkBuilder.ipv6Prefix(ipv6Prefix)
       }
 
@@ -2225,7 +2066,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6PrefixSpecificationProperty,
     ) : Ipv6PrefixSpecificationProperty {
-      public override fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
+      override fun ipv6Prefix(): String? = unwrap(this).getIpv6Prefix()
     }
 
     public companion object {
@@ -2257,20 +2098,15 @@ public open class CfnLaunchTemplate internal constructor(
     public fun hostnameType(): String? = unwrap(this).getHostnameType()
 
     public interface Builder {
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
-      }
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean)
 
-      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-      }
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable)
 
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
-      }
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean)
 
-      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-      }
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable)
 
-      public fun hostnameType(hostnameType: String) {
-      }
+      public fun hostnameType(hostnameType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2279,25 +2115,23 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty.builder()
 
-      public override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
         cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
       }
 
-      public override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
+      override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
         cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
       }
 
-      public override
-          fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
         cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
       }
 
-      public override
-          fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
+      override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
         cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
       }
 
-      public override fun hostnameType(hostnameType: String) {
+      override fun hostnameType(hostnameType: String) {
         cdkBuilder.hostnameType(hostnameType)
       }
 
@@ -2310,13 +2144,13 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateDnsNameOptionsProperty,
     ) : PrivateDnsNameOptionsProperty {
-      public override fun enableResourceNameDnsARecord(): Any? =
+      override fun enableResourceNameDnsARecord(): Any? =
           unwrap(this).getEnableResourceNameDnsARecord()
 
-      public override fun enableResourceNameDnsAaaaRecord(): Any? =
+      override fun enableResourceNameDnsAaaaRecord(): Any? =
           unwrap(this).getEnableResourceNameDnsAaaaRecord()
 
-      public override fun hostnameType(): String? = unwrap(this).getHostnameType()
+      override fun hostnameType(): String? = unwrap(this).getHostnameType()
     }
 
     public companion object {
@@ -2351,20 +2185,15 @@ public open class CfnLaunchTemplate internal constructor(
     public fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
 
     public interface Builder {
-      public fun httpEndpoint(httpEndpoint: String) {
-      }
+      public fun httpEndpoint(httpEndpoint: String)
 
-      public fun httpProtocolIpv6(httpProtocolIpv6: String) {
-      }
+      public fun httpProtocolIpv6(httpProtocolIpv6: String)
 
-      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
-      }
+      public fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number)
 
-      public fun httpTokens(httpTokens: String) {
-      }
+      public fun httpTokens(httpTokens: String)
 
-      public fun instanceMetadataTags(instanceMetadataTags: String) {
-      }
+      public fun instanceMetadataTags(instanceMetadataTags: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2372,23 +2201,23 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty.builder()
 
-      public override fun httpEndpoint(httpEndpoint: String) {
+      override fun httpEndpoint(httpEndpoint: String) {
         cdkBuilder.httpEndpoint(httpEndpoint)
       }
 
-      public override fun httpProtocolIpv6(httpProtocolIpv6: String) {
+      override fun httpProtocolIpv6(httpProtocolIpv6: String) {
         cdkBuilder.httpProtocolIpv6(httpProtocolIpv6)
       }
 
-      public override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
+      override fun httpPutResponseHopLimit(httpPutResponseHopLimit: Number) {
         cdkBuilder.httpPutResponseHopLimit(httpPutResponseHopLimit)
       }
 
-      public override fun httpTokens(httpTokens: String) {
+      override fun httpTokens(httpTokens: String) {
         cdkBuilder.httpTokens(httpTokens)
       }
 
-      public override fun instanceMetadataTags(instanceMetadataTags: String) {
+      override fun instanceMetadataTags(instanceMetadataTags: String) {
         cdkBuilder.instanceMetadataTags(instanceMetadataTags)
       }
 
@@ -2401,16 +2230,15 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MetadataOptionsProperty,
     ) : MetadataOptionsProperty {
-      public override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
+      override fun httpEndpoint(): String? = unwrap(this).getHttpEndpoint()
 
-      public override fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
+      override fun httpProtocolIpv6(): String? = unwrap(this).getHttpProtocolIpv6()
 
-      public override fun httpPutResponseHopLimit(): Number? =
-          unwrap(this).getHttpPutResponseHopLimit()
+      override fun httpPutResponseHopLimit(): Number? = unwrap(this).getHttpPutResponseHopLimit()
 
-      public override fun httpTokens(): String? = unwrap(this).getHttpTokens()
+      override fun httpTokens(): String? = unwrap(this).getHttpTokens()
 
-      public override fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
+      override fun instanceMetadataTags(): String? = unwrap(this).getInstanceMetadataTags()
     }
 
     public companion object {
@@ -2437,8 +2265,7 @@ public open class CfnLaunchTemplate internal constructor(
     public fun cpuCredits(): String? = unwrap(this).getCpuCredits()
 
     public interface Builder {
-      public fun cpuCredits(cpuCredits: String) {
-      }
+      public fun cpuCredits(cpuCredits: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2447,7 +2274,7 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty.builder()
 
-      public override fun cpuCredits(cpuCredits: String) {
+      override fun cpuCredits(cpuCredits: String) {
         cdkBuilder.cpuCredits(cpuCredits)
       }
 
@@ -2460,7 +2287,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CreditSpecificationProperty,
     ) : CreditSpecificationProperty {
-      public override fun cpuCredits(): String? = unwrap(this).getCpuCredits()
+      override fun cpuCredits(): String? = unwrap(this).getCpuCredits()
     }
 
     public companion object {
@@ -2489,11 +2316,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2501,11 +2326,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -2518,9 +2343,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryGiBPerVCpuProperty,
     ) : MemoryGiBPerVCpuProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -2549,11 +2374,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2562,11 +2385,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -2579,9 +2402,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.NetworkBandwidthGbpsProperty,
     ) : NetworkBandwidthGbpsProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -2610,11 +2433,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -2622,11 +2443,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty.builder()
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -2639,10 +2460,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty,
     ) : TagSpecificationProperty {
-      public override fun resourceType(): String? = unwrap(this).getResourceType()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -2723,162 +2543,119 @@ public open class CfnLaunchTemplate internal constructor(
     public fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
 
     public interface Builder {
-      public fun acceleratorCount(acceleratorCount: IResolvable) {
-      }
+      public fun acceleratorCount(acceleratorCount: IResolvable)
 
-      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty) {
-      }
+      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6d22fd76cabe48f089b8c237bc1c7ec9426e15e6717e466b208f0fbcf8978aa")
-      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit) {
-      }
+      public fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit)
 
-      public fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
-      }
+      public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
 
-      public fun acceleratorNames(acceleratorNames: List<String>) {
-      }
+      public fun acceleratorNames(acceleratorNames: List<String>)
 
-      public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-      }
+      public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
 
       public
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty) {
-      }
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("687315408c1bb56ead021b0c0a5a9e16088665e100a889fb74ce71abbd43fa22")
       public
-          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit) {
-      }
+          fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit)
 
-      public fun acceleratorTypes(acceleratorTypes: List<String>) {
-      }
+      public fun acceleratorTypes(acceleratorTypes: List<String>)
 
-      public fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
-      }
+      public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
 
-      public fun bareMetal(bareMetal: String) {
-      }
+      public fun bareMetal(bareMetal: String)
 
-      public fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-      }
+      public fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable)
 
       public
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty) {
-      }
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("99ce2f9d06f918c623b5226bc75b8d59bcc2dbe40fb6a6ce2e63c42d1f8391a1")
       public
-          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit) {
-      }
+          fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit)
 
-      public fun burstablePerformance(burstablePerformance: String) {
-      }
+      public fun burstablePerformance(burstablePerformance: String)
 
-      public fun cpuManufacturers(cpuManufacturers: List<String>) {
-      }
+      public fun cpuManufacturers(cpuManufacturers: List<String>)
 
-      public fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
-      }
+      public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
 
-      public fun instanceGenerations(instanceGenerations: List<String>) {
-      }
+      public fun instanceGenerations(instanceGenerations: List<String>)
 
-      public fun localStorage(localStorage: String) {
-      }
+      public fun localStorage(localStorage: String)
 
-      public fun localStorageTypes(localStorageTypes: List<String>) {
-      }
+      public fun localStorageTypes(localStorageTypes: List<String>)
 
       public
-          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
-      }
+          fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
 
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-      }
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable)
 
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty) {
-      }
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39bcea6b054460d3a4f72bf8e85c617b9de2d27b154012b8b2ffbae654835453")
-      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit) {
-      }
+      public fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit)
 
-      public fun memoryMiB(memoryMiB: IResolvable) {
-      }
+      public fun memoryMiB(memoryMiB: IResolvable)
 
-      public fun memoryMiB(memoryMiB: MemoryMiBProperty) {
-      }
+      public fun memoryMiB(memoryMiB: MemoryMiBProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2be30fd8478496bd807b2a12ef67cfe0b5fc5f22ee2e40f86594c093e02e6352")
-      public fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit) {
-      }
+      public fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit)
 
-      public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-      }
+      public fun networkBandwidthGbps(networkBandwidthGbps: IResolvable)
 
-      public fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty) {
-      }
+      public fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1827db3ce1bb2f184bd37966238ca76dc315b92780edbf8056c5fc90eda9c716")
       public
-          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit) {
-      }
+          fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit)
 
-      public fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-      }
+      public fun networkInterfaceCount(networkInterfaceCount: IResolvable)
 
-      public fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty) {
-      }
+      public fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fde96b2e0debdfcc33f8a0d0943f348612d4a2d2bfba0d2761c2738bdb344082")
       public
-          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit) {
-      }
+          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit)
 
       public
-          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number) {
-      }
+          fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number)
 
-      public fun requireHibernateSupport(requireHibernateSupport: Boolean) {
-      }
+      public fun requireHibernateSupport(requireHibernateSupport: Boolean)
 
-      public fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-      }
+      public fun requireHibernateSupport(requireHibernateSupport: IResolvable)
 
       public
-          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
-      }
+          fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number)
 
-      public fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-      }
+      public fun totalLocalStorageGb(totalLocalStorageGb: IResolvable)
 
-      public fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty) {
-      }
+      public fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ced7d39abec56d68911dca344eb452396b66dd2240deef63392ea726ad8b8a4")
       public
-          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit) {
-      }
+          fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit)
 
-      public fun vCpuCount(vCpuCount: IResolvable) {
-      }
+      public fun vCpuCount(vCpuCount: IResolvable)
 
-      public fun vCpuCount(vCpuCount: VCpuCountProperty) {
-      }
+      public fun vCpuCount(vCpuCount: VCpuCountProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("510e27b3bf93ab1beb810d076c1533945e97fbf0fa819abd7c204fae624cfaa0")
-      public fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit) {
-      }
+      public fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -2887,200 +2664,197 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty.builder()
 
-      public override fun acceleratorCount(acceleratorCount: IResolvable) {
+      override fun acceleratorCount(acceleratorCount: IResolvable) {
         cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
       }
 
-      public override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty) {
+      override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty) {
         cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6d22fd76cabe48f089b8c237bc1c7ec9426e15e6717e466b208f0fbcf8978aa")
-      public override
-          fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit): Unit
-          = acceleratorCount(AcceleratorCountProperty(acceleratorCount))
+      override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty.Builder.() -> Unit):
+          Unit = acceleratorCount(AcceleratorCountProperty(acceleratorCount))
 
-      public override fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
+      override fun acceleratorManufacturers(acceleratorManufacturers: List<String>) {
         cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
       }
 
-      public override fun acceleratorNames(acceleratorNames: List<String>) {
+      override fun acceleratorNames(acceleratorNames: List<String>) {
         cdkBuilder.acceleratorNames(acceleratorNames)
       }
 
-      public override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
+      override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("687315408c1bb56ead021b0c0a5a9e16088665e100a889fb74ce71abbd43fa22")
-      public override
+      override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty.Builder.() -> Unit):
           Unit =
           acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBProperty(acceleratorTotalMemoryMiB))
 
-      public override fun acceleratorTypes(acceleratorTypes: List<String>) {
+      override fun acceleratorTypes(acceleratorTypes: List<String>) {
         cdkBuilder.acceleratorTypes(acceleratorTypes)
       }
 
-      public override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
+      override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
         cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
       }
 
-      public override fun bareMetal(bareMetal: String) {
+      override fun bareMetal(bareMetal: String) {
         cdkBuilder.bareMetal(bareMetal)
       }
 
-      public override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
+      override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
         cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty) {
         cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("99ce2f9d06f918c623b5226bc75b8d59bcc2dbe40fb6a6ce2e63c42d1f8391a1")
-      public override
+      override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit):
           Unit =
           baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty(baselineEbsBandwidthMbps))
 
-      public override fun burstablePerformance(burstablePerformance: String) {
+      override fun burstablePerformance(burstablePerformance: String) {
         cdkBuilder.burstablePerformance(burstablePerformance)
       }
 
-      public override fun cpuManufacturers(cpuManufacturers: List<String>) {
+      override fun cpuManufacturers(cpuManufacturers: List<String>) {
         cdkBuilder.cpuManufacturers(cpuManufacturers)
       }
 
-      public override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
+      override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
         cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
       }
 
-      public override fun instanceGenerations(instanceGenerations: List<String>) {
+      override fun instanceGenerations(instanceGenerations: List<String>) {
         cdkBuilder.instanceGenerations(instanceGenerations)
       }
 
-      public override fun localStorage(localStorage: String) {
+      override fun localStorage(localStorage: String) {
         cdkBuilder.localStorage(localStorage)
       }
 
-      public override fun localStorageTypes(localStorageTypes: List<String>) {
+      override fun localStorageTypes(localStorageTypes: List<String>) {
         cdkBuilder.localStorageTypes(localStorageTypes)
       }
 
-      public override
+      override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
         cdkBuilder.maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice)
       }
 
-      public override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
         cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
       }
 
-      public override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty) {
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty) {
         cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("39bcea6b054460d3a4f72bf8e85c617b9de2d27b154012b8b2ffbae654835453")
-      public override
-          fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit): Unit
-          = memoryGiBPerVCpu(MemoryGiBPerVCpuProperty(memoryGiBPerVCpu))
+      override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty.Builder.() -> Unit):
+          Unit = memoryGiBPerVCpu(MemoryGiBPerVCpuProperty(memoryGiBPerVCpu))
 
-      public override fun memoryMiB(memoryMiB: IResolvable) {
+      override fun memoryMiB(memoryMiB: IResolvable) {
         cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
       }
 
-      public override fun memoryMiB(memoryMiB: MemoryMiBProperty) {
+      override fun memoryMiB(memoryMiB: MemoryMiBProperty) {
         cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2be30fd8478496bd807b2a12ef67cfe0b5fc5f22ee2e40f86594c093e02e6352")
-      public override fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit): Unit =
+      override fun memoryMiB(memoryMiB: MemoryMiBProperty.Builder.() -> Unit): Unit =
           memoryMiB(MemoryMiBProperty(memoryMiB))
 
-      public override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
+      override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
         cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
       }
 
-      public override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty) {
+      override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty) {
         cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1827db3ce1bb2f184bd37966238ca76dc315b92780edbf8056c5fc90eda9c716")
-      public override
+      override
           fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty.Builder.() -> Unit):
           Unit = networkBandwidthGbps(NetworkBandwidthGbpsProperty(networkBandwidthGbps))
 
-      public override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
+      override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
         cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
       }
 
-      public override
-          fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty) {
+      override fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty) {
         cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fde96b2e0debdfcc33f8a0d0943f348612d4a2d2bfba0d2761c2738bdb344082")
-      public override
+      override
           fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty.Builder.() -> Unit):
           Unit = networkInterfaceCount(NetworkInterfaceCountProperty(networkInterfaceCount))
 
-      public override
+      override
           fun onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice: Number) {
         cdkBuilder.onDemandMaxPricePercentageOverLowestPrice(onDemandMaxPricePercentageOverLowestPrice)
       }
 
-      public override fun requireHibernateSupport(requireHibernateSupport: Boolean) {
+      override fun requireHibernateSupport(requireHibernateSupport: Boolean) {
         cdkBuilder.requireHibernateSupport(requireHibernateSupport)
       }
 
-      public override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
+      override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
         cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice: Number) {
         cdkBuilder.spotMaxPricePercentageOverLowestPrice(spotMaxPricePercentageOverLowestPrice)
       }
 
-      public override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
+      override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
         cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
       }
 
-      public override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty) {
+      override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty) {
         cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ced7d39abec56d68911dca344eb452396b66dd2240deef63392ea726ad8b8a4")
-      public override
+      override
           fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty.Builder.() -> Unit):
           Unit = totalLocalStorageGb(TotalLocalStorageGBProperty(totalLocalStorageGb))
 
-      public override fun vCpuCount(vCpuCount: IResolvable) {
+      override fun vCpuCount(vCpuCount: IResolvable) {
         cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
       }
 
-      public override fun vCpuCount(vCpuCount: VCpuCountProperty) {
+      override fun vCpuCount(vCpuCount: VCpuCountProperty) {
         cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("510e27b3bf93ab1beb810d076c1533945e97fbf0fa819abd7c204fae624cfaa0")
-      public override fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit): Unit =
+      override fun vCpuCount(vCpuCount: VCpuCountProperty.Builder.() -> Unit): Unit =
           vCpuCount(VCpuCountProperty(vCpuCount))
 
       public fun build():
@@ -3092,67 +2866,64 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.InstanceRequirementsProperty,
     ) : InstanceRequirementsProperty {
-      public override fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
+      override fun acceleratorCount(): Any? = unwrap(this).getAcceleratorCount()
 
-      public override fun acceleratorManufacturers(): List<String> =
+      override fun acceleratorManufacturers(): List<String> =
           unwrap(this).getAcceleratorManufacturers() ?: emptyList()
 
-      public override fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?:
+      override fun acceleratorNames(): List<String> = unwrap(this).getAcceleratorNames() ?:
           emptyList()
 
-      public override fun acceleratorTotalMemoryMiB(): Any? =
-          unwrap(this).getAcceleratorTotalMemoryMiB()
+      override fun acceleratorTotalMemoryMiB(): Any? = unwrap(this).getAcceleratorTotalMemoryMiB()
 
-      public override fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
+      override fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
           emptyList()
 
-      public override fun allowedInstanceTypes(): List<String> =
-          unwrap(this).getAllowedInstanceTypes() ?: emptyList()
-
-      public override fun bareMetal(): String? = unwrap(this).getBareMetal()
-
-      public override fun baselineEbsBandwidthMbps(): Any? =
-          unwrap(this).getBaselineEbsBandwidthMbps()
-
-      public override fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
-
-      public override fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?:
+      override fun allowedInstanceTypes(): List<String> = unwrap(this).getAllowedInstanceTypes() ?:
           emptyList()
 
-      public override fun excludedInstanceTypes(): List<String> =
-          unwrap(this).getExcludedInstanceTypes() ?: emptyList()
+      override fun bareMetal(): String? = unwrap(this).getBareMetal()
 
-      public override fun instanceGenerations(): List<String> =
-          unwrap(this).getInstanceGenerations() ?: emptyList()
+      override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
 
-      public override fun localStorage(): String? = unwrap(this).getLocalStorage()
+      override fun burstablePerformance(): String? = unwrap(this).getBurstablePerformance()
 
-      public override fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
+      override fun cpuManufacturers(): List<String> = unwrap(this).getCpuManufacturers() ?:
           emptyList()
 
-      public override fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
+      override fun excludedInstanceTypes(): List<String> = unwrap(this).getExcludedInstanceTypes()
+          ?: emptyList()
+
+      override fun instanceGenerations(): List<String> = unwrap(this).getInstanceGenerations() ?:
+          emptyList()
+
+      override fun localStorage(): String? = unwrap(this).getLocalStorage()
+
+      override fun localStorageTypes(): List<String> = unwrap(this).getLocalStorageTypes() ?:
+          emptyList()
+
+      override fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(): Number? =
           unwrap(this).getMaxSpotPriceAsPercentageOfOptimalOnDemandPrice()
 
-      public override fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
+      override fun memoryGiBPerVCpu(): Any? = unwrap(this).getMemoryGiBPerVCpu()
 
-      public override fun memoryMiB(): Any? = unwrap(this).getMemoryMiB()
+      override fun memoryMiB(): Any? = unwrap(this).getMemoryMiB()
 
-      public override fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
+      override fun networkBandwidthGbps(): Any? = unwrap(this).getNetworkBandwidthGbps()
 
-      public override fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
+      override fun networkInterfaceCount(): Any? = unwrap(this).getNetworkInterfaceCount()
 
-      public override fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
+      override fun onDemandMaxPricePercentageOverLowestPrice(): Number? =
           unwrap(this).getOnDemandMaxPricePercentageOverLowestPrice()
 
-      public override fun requireHibernateSupport(): Any? =
-          unwrap(this).getRequireHibernateSupport()
+      override fun requireHibernateSupport(): Any? = unwrap(this).getRequireHibernateSupport()
 
-      public override fun spotMaxPricePercentageOverLowestPrice(): Number? =
+      override fun spotMaxPricePercentageOverLowestPrice(): Number? =
           unwrap(this).getSpotMaxPricePercentageOverLowestPrice()
 
-      public override fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
+      override fun totalLocalStorageGb(): Any? = unwrap(this).getTotalLocalStorageGb()
 
-      public override fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
+      override fun vCpuCount(): Any? = unwrap(this).getVCpuCount()
     }
 
     public companion object {
@@ -3179,11 +2950,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
 
     public interface Builder {
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
-      }
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean)
 
-      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
-      }
+      public fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3192,11 +2961,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty.builder()
 
-      public override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: Boolean) {
         cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled)
       }
 
-      public override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
+      override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
         cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
       }
 
@@ -3209,7 +2978,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdUdpSpecificationProperty,
     ) : EnaSrdUdpSpecificationProperty {
-      public override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
+      override fun enaSrdUdpEnabled(): Any? = unwrap(this).getEnaSrdUdpEnabled()
     }
 
     public companion object {
@@ -3239,21 +3008,17 @@ public open class CfnLaunchTemplate internal constructor(
     public fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
 
     public interface Builder {
-      public fun capacityReservationPreference(capacityReservationPreference: String) {
-      }
+      public fun capacityReservationPreference(capacityReservationPreference: String)
 
-      public fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
-      }
+      public fun capacityReservationTarget(capacityReservationTarget: IResolvable)
 
       public
-          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty) {
-      }
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("13509a6123938dcb67ae290a6c4220f1dfb5f0a1121bea480151b94202eb2fdc")
       public
-          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit) {
-      }
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3262,22 +3027,22 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty.builder()
 
-      public override fun capacityReservationPreference(capacityReservationPreference: String) {
+      override fun capacityReservationPreference(capacityReservationPreference: String) {
         cdkBuilder.capacityReservationPreference(capacityReservationPreference)
       }
 
-      public override fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
+      override fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
         cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty) {
         cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(CapacityReservationTargetProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("13509a6123938dcb67ae290a6c4220f1dfb5f0a1121bea480151b94202eb2fdc")
-      public override
+      override
           fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit):
           Unit =
           capacityReservationTarget(CapacityReservationTargetProperty(capacityReservationTarget))
@@ -3291,11 +3056,10 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CapacityReservationSpecificationProperty,
     ) : CapacityReservationSpecificationProperty {
-      public override fun capacityReservationPreference(): String? =
+      override fun capacityReservationPreference(): String? =
           unwrap(this).getCapacityReservationPreference()
 
-      public override fun capacityReservationTarget(): Any? =
-          unwrap(this).getCapacityReservationTarget()
+      override fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
     }
 
     public companion object {
@@ -3325,11 +3089,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3338,11 +3100,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -3355,9 +3117,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty,
     ) : BaselineEbsBandwidthMbpsProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -3386,11 +3148,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3398,11 +3158,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -3414,9 +3174,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.VCpuCountProperty,
     ) : VCpuCountProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -3445,11 +3205,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun rebootMigration(): String? = unwrap(this).getRebootMigration()
 
     public interface Builder {
-      public fun autoRecovery(autoRecovery: String) {
-      }
+      public fun autoRecovery(autoRecovery: String)
 
-      public fun rebootMigration(rebootMigration: String) {
-      }
+      public fun rebootMigration(rebootMigration: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3457,11 +3215,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty.builder()
 
-      public override fun autoRecovery(autoRecovery: String) {
+      override fun autoRecovery(autoRecovery: String) {
         cdkBuilder.autoRecovery(autoRecovery)
       }
 
-      public override fun rebootMigration(rebootMigration: String) {
+      override fun rebootMigration(rebootMigration: String) {
         cdkBuilder.rebootMigration(rebootMigration)
       }
 
@@ -3474,9 +3232,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MaintenanceOptionsProperty,
     ) : MaintenanceOptionsProperty {
-      public override fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
+      override fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
 
-      public override fun rebootMigration(): String? = unwrap(this).getRebootMigration()
+      override fun rebootMigration(): String? = unwrap(this).getRebootMigration()
     }
 
     public companion object {
@@ -3505,23 +3263,18 @@ public open class CfnLaunchTemplate internal constructor(
     public fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
 
     public interface Builder {
-      public fun enaSrdEnabled(enaSrdEnabled: Boolean) {
-      }
+      public fun enaSrdEnabled(enaSrdEnabled: Boolean)
 
-      public fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
-      }
+      public fun enaSrdEnabled(enaSrdEnabled: IResolvable)
 
-      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
-      }
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable)
 
-      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
-      }
+      public fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dd7cd088ca722e28b6bce1ce2139206df9bf6fb92063da1c5b497af55aa9ffb4")
       public
-          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3530,26 +3283,25 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty.builder()
 
-      public override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
+      override fun enaSrdEnabled(enaSrdEnabled: Boolean) {
         cdkBuilder.enaSrdEnabled(enaSrdEnabled)
       }
 
-      public override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
+      override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
         cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
         cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable::unwrap))
       }
 
-      public override
-          fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
+      override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
         cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dd7cd088ca722e28b6bce1ce2139206df9bf6fb92063da1c5b497af55aa9ffb4")
-      public override
+      override
           fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty.Builder.() -> Unit):
           Unit = enaSrdUdpSpecification(EnaSrdUdpSpecificationProperty(enaSrdUdpSpecification))
 
@@ -3562,9 +3314,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.EnaSrdSpecificationProperty,
     ) : EnaSrdSpecificationProperty {
-      public override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
+      override fun enaSrdEnabled(): Any? = unwrap(this).getEnaSrdEnabled()
 
-      public override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
+      override fun enaSrdUdpSpecification(): Any? = unwrap(this).getEnaSrdUdpSpecification()
     }
 
     public companion object {
@@ -3591,11 +3343,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -3603,11 +3353,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
@@ -3619,7 +3369,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty,
     ) : MonitoringProperty {
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
     public companion object {
@@ -3648,11 +3398,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3660,11 +3408,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -3676,9 +3424,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MemoryMiBProperty,
     ) : MemoryMiBProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -3707,14 +3455,11 @@ public open class CfnLaunchTemplate internal constructor(
     public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
     public interface Builder {
-      public fun primary(primary: Boolean) {
-      }
+      public fun primary(primary: Boolean)
 
-      public fun primary(primary: IResolvable) {
-      }
+      public fun primary(primary: IResolvable)
 
-      public fun privateIpAddress(privateIpAddress: String) {
-      }
+      public fun privateIpAddress(privateIpAddress: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3722,15 +3467,15 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty.builder()
 
-      public override fun primary(primary: Boolean) {
+      override fun primary(primary: Boolean) {
         cdkBuilder.primary(primary)
       }
 
-      public override fun primary(primary: IResolvable) {
+      override fun primary(primary: IResolvable) {
         cdkBuilder.primary(primary.let(IResolvable::unwrap))
       }
 
-      public override fun privateIpAddress(privateIpAddress: String) {
+      override fun privateIpAddress(privateIpAddress: String) {
         cdkBuilder.privateIpAddress(privateIpAddress)
       }
 
@@ -3742,9 +3487,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty,
     ) : PrivateIpAddProperty {
-      public override fun primary(): Any? = unwrap(this).getPrimary()
+      override fun primary(): Any? = unwrap(this).getPrimary()
 
-      public override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
     }
 
     public companion object {
@@ -3775,14 +3520,11 @@ public open class CfnLaunchTemplate internal constructor(
     public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
 
     public interface Builder {
-      public fun amdSevSnp(amdSevSnp: String) {
-      }
+      public fun amdSevSnp(amdSevSnp: String)
 
-      public fun coreCount(coreCount: Number) {
-      }
+      public fun coreCount(coreCount: Number)
 
-      public fun threadsPerCore(threadsPerCore: Number) {
-      }
+      public fun threadsPerCore(threadsPerCore: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3790,15 +3532,15 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty.builder()
 
-      public override fun amdSevSnp(amdSevSnp: String) {
+      override fun amdSevSnp(amdSevSnp: String) {
         cdkBuilder.amdSevSnp(amdSevSnp)
       }
 
-      public override fun coreCount(coreCount: Number) {
+      override fun coreCount(coreCount: Number) {
         cdkBuilder.coreCount(coreCount)
       }
 
-      public override fun threadsPerCore(threadsPerCore: Number) {
+      override fun threadsPerCore(threadsPerCore: Number) {
         cdkBuilder.threadsPerCore(threadsPerCore)
       }
 
@@ -3810,11 +3552,11 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuOptionsProperty,
     ) : CpuOptionsProperty {
-      public override fun amdSevSnp(): String? = unwrap(this).getAmdSevSnp()
+      override fun amdSevSnp(): String? = unwrap(this).getAmdSevSnp()
 
-      public override fun coreCount(): Number? = unwrap(this).getCoreCount()
+      override fun coreCount(): Number? = unwrap(this).getCoreCount()
 
-      public override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+      override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
     }
 
     public companion object {
@@ -3843,11 +3585,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -3856,11 +3596,11 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty.builder()
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -3873,10 +3613,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty,
     ) : LaunchTemplateTagSpecificationProperty {
-      public override fun resourceType(): String? = unwrap(this).getResourceType()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {
@@ -3906,11 +3645,9 @@ public open class CfnLaunchTemplate internal constructor(
     public fun min(): Number? = unwrap(this).getMin()
 
     public interface Builder {
-      public fun max(max: Number) {
-      }
+      public fun max(max: Number)
 
-      public fun min(min: Number) {
-      }
+      public fun min(min: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3918,11 +3655,11 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty.builder()
 
-      public override fun max(max: Number) {
+      override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
-      public override fun min(min: Number) {
+      override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
@@ -3935,9 +3672,9 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.AcceleratorCountProperty,
     ) : AcceleratorCountProperty {
-      public override fun max(): Number? = unwrap(this).getMax()
+      override fun max(): Number? = unwrap(this).getMax()
 
-      public override fun min(): Number? = unwrap(this).getMin()
+      override fun min(): Number? = unwrap(this).getMin()
     }
 
     public companion object {
@@ -3964,8 +3701,7 @@ public open class CfnLaunchTemplate internal constructor(
     public fun ipv6Address(): String? = unwrap(this).getIpv6Address()
 
     public interface Builder {
-      public fun ipv6Address(ipv6Address: String) {
-      }
+      public fun ipv6Address(ipv6Address: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3973,7 +3709,7 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty.builder()
 
-      public override fun ipv6Address(ipv6Address: String) {
+      override fun ipv6Address(ipv6Address: String) {
         cdkBuilder.ipv6Address(ipv6Address)
       }
 
@@ -3984,7 +3720,7 @@ public open class CfnLaunchTemplate internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.Ipv6AddProperty,
     ) : Ipv6AddProperty {
-      public override fun ipv6Address(): String? = unwrap(this).getIpv6Address()
+      override fun ipv6Address(): String? = unwrap(this).getIpv6Address()
     }
 
     public companion object {
@@ -4011,8 +3747,7 @@ public open class CfnLaunchTemplate internal constructor(
     public fun licenseConfigurationArn(): String? = unwrap(this).getLicenseConfigurationArn()
 
     public interface Builder {
-      public fun licenseConfigurationArn(licenseConfigurationArn: String) {
-      }
+      public fun licenseConfigurationArn(licenseConfigurationArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4021,7 +3756,7 @@ public open class CfnLaunchTemplate internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty.builder()
 
-      public override fun licenseConfigurationArn(licenseConfigurationArn: String) {
+      override fun licenseConfigurationArn(licenseConfigurationArn: String) {
         cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
       }
 
@@ -4034,8 +3769,7 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LicenseSpecificationProperty,
     ) : LicenseSpecificationProperty {
-      public override fun licenseConfigurationArn(): String? =
-          unwrap(this).getLicenseConfigurationArn()
+      override fun licenseConfigurationArn(): String? = unwrap(this).getLicenseConfigurationArn()
     }
 
     public companion object {
@@ -4078,32 +3812,23 @@ public open class CfnLaunchTemplate internal constructor(
     public fun tenancy(): String? = unwrap(this).getTenancy()
 
     public interface Builder {
-      public fun affinity(affinity: String) {
-      }
+      public fun affinity(affinity: String)
 
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun groupId(groupId: String) {
-      }
+      public fun groupId(groupId: String)
 
-      public fun groupName(groupName: String) {
-      }
+      public fun groupName(groupName: String)
 
-      public fun hostId(hostId: String) {
-      }
+      public fun hostId(hostId: String)
 
-      public fun hostResourceGroupArn(hostResourceGroupArn: String) {
-      }
+      public fun hostResourceGroupArn(hostResourceGroupArn: String)
 
-      public fun partitionNumber(partitionNumber: Number) {
-      }
+      public fun partitionNumber(partitionNumber: Number)
 
-      public fun spreadDomain(spreadDomain: String) {
-      }
+      public fun spreadDomain(spreadDomain: String)
 
-      public fun tenancy(tenancy: String) {
-      }
+      public fun tenancy(tenancy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4111,39 +3836,39 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PlacementProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PlacementProperty.builder()
 
-      public override fun affinity(affinity: String) {
+      override fun affinity(affinity: String) {
         cdkBuilder.affinity(affinity)
       }
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun groupId(groupId: String) {
+      override fun groupId(groupId: String) {
         cdkBuilder.groupId(groupId)
       }
 
-      public override fun groupName(groupName: String) {
+      override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
       }
 
-      public override fun hostId(hostId: String) {
+      override fun hostId(hostId: String) {
         cdkBuilder.hostId(hostId)
       }
 
-      public override fun hostResourceGroupArn(hostResourceGroupArn: String) {
+      override fun hostResourceGroupArn(hostResourceGroupArn: String) {
         cdkBuilder.hostResourceGroupArn(hostResourceGroupArn)
       }
 
-      public override fun partitionNumber(partitionNumber: Number) {
+      override fun partitionNumber(partitionNumber: Number) {
         cdkBuilder.partitionNumber(partitionNumber)
       }
 
-      public override fun spreadDomain(spreadDomain: String) {
+      override fun spreadDomain(spreadDomain: String) {
         cdkBuilder.spreadDomain(spreadDomain)
       }
 
-      public override fun tenancy(tenancy: String) {
+      override fun tenancy(tenancy: String) {
         cdkBuilder.tenancy(tenancy)
       }
 
@@ -4155,23 +3880,23 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PlacementProperty,
     ) : PlacementProperty {
-      public override fun affinity(): String? = unwrap(this).getAffinity()
+      override fun affinity(): String? = unwrap(this).getAffinity()
 
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun groupId(): String? = unwrap(this).getGroupId()
+      override fun groupId(): String? = unwrap(this).getGroupId()
 
-      public override fun groupName(): String? = unwrap(this).getGroupName()
+      override fun groupName(): String? = unwrap(this).getGroupName()
 
-      public override fun hostId(): String? = unwrap(this).getHostId()
+      override fun hostId(): String? = unwrap(this).getHostId()
 
-      public override fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
+      override fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
 
-      public override fun partitionNumber(): Number? = unwrap(this).getPartitionNumber()
+      override fun partitionNumber(): Number? = unwrap(this).getPartitionNumber()
 
-      public override fun spreadDomain(): String? = unwrap(this).getSpreadDomain()
+      override fun spreadDomain(): String? = unwrap(this).getSpreadDomain()
 
-      public override fun tenancy(): String? = unwrap(this).getTenancy()
+      override fun tenancy(): String? = unwrap(this).getTenancy()
     }
 
     public companion object {
@@ -4204,25 +3929,19 @@ public open class CfnLaunchTemplate internal constructor(
     public fun virtualName(): String? = unwrap(this).getVirtualName()
 
     public interface Builder {
-      public fun deviceName(deviceName: String) {
-      }
+      public fun deviceName(deviceName: String)
 
-      public fun ebs(ebs: IResolvable) {
-      }
+      public fun ebs(ebs: IResolvable)
 
-      public fun ebs(ebs: EbsProperty) {
-      }
+      public fun ebs(ebs: EbsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("13d6ae31b3c9294cb1f107c22c338c808581bedefec428957e26694bbbfd5a89")
-      public fun ebs(ebs: EbsProperty.Builder.() -> Unit) {
-      }
+      public fun ebs(ebs: EbsProperty.Builder.() -> Unit)
 
-      public fun noDevice(noDevice: String) {
-      }
+      public fun noDevice(noDevice: String)
 
-      public fun virtualName(virtualName: String) {
-      }
+      public fun virtualName(virtualName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4230,27 +3949,27 @@ public open class CfnLaunchTemplate internal constructor(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty.builder()
 
-      public override fun deviceName(deviceName: String) {
+      override fun deviceName(deviceName: String) {
         cdkBuilder.deviceName(deviceName)
       }
 
-      public override fun ebs(ebs: IResolvable) {
+      override fun ebs(ebs: IResolvable) {
         cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
       }
 
-      public override fun ebs(ebs: EbsProperty) {
+      override fun ebs(ebs: EbsProperty) {
         cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("13d6ae31b3c9294cb1f107c22c338c808581bedefec428957e26694bbbfd5a89")
-      public override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
+      override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
 
-      public override fun noDevice(noDevice: String) {
+      override fun noDevice(noDevice: String) {
         cdkBuilder.noDevice(noDevice)
       }
 
-      public override fun virtualName(virtualName: String) {
+      override fun virtualName(virtualName: String) {
         cdkBuilder.virtualName(virtualName)
       }
 
@@ -4263,13 +3982,13 @@ public open class CfnLaunchTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BlockDeviceMappingProperty,
     ) : BlockDeviceMappingProperty {
-      public override fun deviceName(): String? = unwrap(this).getDeviceName()
+      override fun deviceName(): String? = unwrap(this).getDeviceName()
 
-      public override fun ebs(): Any? = unwrap(this).getEbs()
+      override fun ebs(): Any? = unwrap(this).getEbs()
 
-      public override fun noDevice(): String? = unwrap(this).getNoDevice()
+      override fun noDevice(): String? = unwrap(this).getNoDevice()
 
-      public override fun virtualName(): String? = unwrap(this).getVirtualName()
+      override fun virtualName(): String? = unwrap(this).getVirtualName()
     }
 
     public companion object {

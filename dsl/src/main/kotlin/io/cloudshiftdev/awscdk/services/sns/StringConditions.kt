@@ -14,36 +14,32 @@ public interface StringConditions {
   public fun matchSuffixes(): List<String> = unwrap(this).getMatchSuffixes() ?: emptyList()
 
   public interface Builder {
-    public fun allowlist(allowlist: List<String>) {
-    }
+    public fun allowlist(allowlist: List<String>)
 
-    public fun denylist(denylist: List<String>) {
-    }
+    public fun denylist(denylist: List<String>)
 
-    public fun matchPrefixes(matchPrefixes: List<String>) {
-    }
+    public fun matchPrefixes(matchPrefixes: List<String>)
 
-    public fun matchSuffixes(matchSuffixes: List<String>) {
-    }
+    public fun matchSuffixes(matchSuffixes: List<String>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.sns.StringConditions.Builder =
         software.amazon.awscdk.services.sns.StringConditions.builder()
 
-    public override fun allowlist(allowlist: List<String>) {
+    override fun allowlist(allowlist: List<String>) {
       cdkBuilder.allowlist(allowlist)
     }
 
-    public override fun denylist(denylist: List<String>) {
+    override fun denylist(denylist: List<String>) {
       cdkBuilder.denylist(denylist)
     }
 
-    public override fun matchPrefixes(matchPrefixes: List<String>) {
+    override fun matchPrefixes(matchPrefixes: List<String>) {
       cdkBuilder.matchPrefixes(matchPrefixes)
     }
 
-    public override fun matchSuffixes(matchSuffixes: List<String>) {
+    override fun matchSuffixes(matchSuffixes: List<String>) {
       cdkBuilder.matchSuffixes(matchSuffixes)
     }
 
@@ -53,15 +49,13 @@ public interface StringConditions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sns.StringConditions,
   ) : StringConditions {
-    public override fun allowlist(): List<String> = unwrap(this).getAllowlist() ?: emptyList()
+    override fun allowlist(): List<String> = unwrap(this).getAllowlist() ?: emptyList()
 
-    public override fun denylist(): List<String> = unwrap(this).getDenylist() ?: emptyList()
+    override fun denylist(): List<String> = unwrap(this).getDenylist() ?: emptyList()
 
-    public override fun matchPrefixes(): List<String> = unwrap(this).getMatchPrefixes() ?:
-        emptyList()
+    override fun matchPrefixes(): List<String> = unwrap(this).getMatchPrefixes() ?: emptyList()
 
-    public override fun matchSuffixes(): List<String> = unwrap(this).getMatchSuffixes() ?:
-        emptyList()
+    override fun matchSuffixes(): List<String> = unwrap(this).getMatchSuffixes() ?: emptyList()
   }
 
   public companion object {

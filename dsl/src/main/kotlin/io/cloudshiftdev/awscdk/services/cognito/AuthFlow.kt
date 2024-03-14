@@ -13,36 +13,32 @@ public interface AuthFlow {
   public fun userSrp(): Boolean? = unwrap(this).getUserSrp()
 
   public interface Builder {
-    public fun adminUserPassword(adminUserPassword: Boolean) {
-    }
+    public fun adminUserPassword(adminUserPassword: Boolean)
 
-    public fun custom(custom: Boolean) {
-    }
+    public fun custom(custom: Boolean)
 
-    public fun userPassword(userPassword: Boolean) {
-    }
+    public fun userPassword(userPassword: Boolean)
 
-    public fun userSrp(userSrp: Boolean) {
-    }
+    public fun userSrp(userSrp: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.AuthFlow.Builder =
         software.amazon.awscdk.services.cognito.AuthFlow.builder()
 
-    public override fun adminUserPassword(adminUserPassword: Boolean) {
+    override fun adminUserPassword(adminUserPassword: Boolean) {
       cdkBuilder.adminUserPassword(adminUserPassword)
     }
 
-    public override fun custom(custom: Boolean) {
+    override fun custom(custom: Boolean) {
       cdkBuilder.custom(custom)
     }
 
-    public override fun userPassword(userPassword: Boolean) {
+    override fun userPassword(userPassword: Boolean) {
       cdkBuilder.userPassword(userPassword)
     }
 
-    public override fun userSrp(userSrp: Boolean) {
+    override fun userSrp(userSrp: Boolean) {
       cdkBuilder.userSrp(userSrp)
     }
 
@@ -52,13 +48,13 @@ public interface AuthFlow {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.AuthFlow,
   ) : AuthFlow {
-    public override fun adminUserPassword(): Boolean? = unwrap(this).getAdminUserPassword()
+    override fun adminUserPassword(): Boolean? = unwrap(this).getAdminUserPassword()
 
-    public override fun custom(): Boolean? = unwrap(this).getCustom()
+    override fun custom(): Boolean? = unwrap(this).getCustom()
 
-    public override fun userPassword(): Boolean? = unwrap(this).getUserPassword()
+    override fun userPassword(): Boolean? = unwrap(this).getUserPassword()
 
-    public override fun userSrp(): Boolean? = unwrap(this).getUserSrp()
+    override fun userSrp(): Boolean? = unwrap(this).getUserSrp()
   }
 
   public companion object {

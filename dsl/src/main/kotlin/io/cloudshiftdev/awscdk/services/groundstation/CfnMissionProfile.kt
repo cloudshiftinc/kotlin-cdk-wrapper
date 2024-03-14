@@ -104,43 +104,31 @@ public open class CfnMissionProfile internal constructor(
   }
 
   public interface Builder {
-    public fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number) {
-    }
+    public fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number)
 
-    public fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number) {
-    }
+    public fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number)
 
-    public fun dataflowEdges(dataflowEdges: IResolvable) {
-    }
+    public fun dataflowEdges(dataflowEdges: IResolvable)
 
-    public fun dataflowEdges(dataflowEdges: List<Any>) {
-    }
+    public fun dataflowEdges(dataflowEdges: List<Any>)
 
-    public fun minimumViableContactDurationSeconds(minimumViableContactDurationSeconds: Number) {
-    }
+    public fun minimumViableContactDurationSeconds(minimumViableContactDurationSeconds: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun streamsKmsKey(streamsKmsKey: IResolvable) {
-    }
+    public fun streamsKmsKey(streamsKmsKey: IResolvable)
 
-    public fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty) {
-    }
+    public fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a09ec7ec13e230f3f45aa7de99c440ccde072210f485be7f3c016e1744c5370")
-    public fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty.Builder.() -> Unit) {
-    }
+    public fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty.Builder.() -> Unit)
 
-    public fun streamsKmsRole(streamsKmsRole: String) {
-    }
+    public fun streamsKmsRole(streamsKmsRole: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trackingConfigArn(trackingConfigArn: String) {
-    }
+    public fun trackingConfigArn(trackingConfigArn: String)
   }
 
   private class BuilderImpl(
@@ -150,53 +138,52 @@ public open class CfnMissionProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.groundstation.CfnMissionProfile.Builder
         = software.amazon.awscdk.services.groundstation.CfnMissionProfile.Builder.create(scope, id)
 
-    public override fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number) {
+    override fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number) {
       cdkBuilder.contactPostPassDurationSeconds(contactPostPassDurationSeconds)
     }
 
-    public override fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number) {
+    override fun contactPrePassDurationSeconds(contactPrePassDurationSeconds: Number) {
       cdkBuilder.contactPrePassDurationSeconds(contactPrePassDurationSeconds)
     }
 
-    public override fun dataflowEdges(dataflowEdges: IResolvable) {
+    override fun dataflowEdges(dataflowEdges: IResolvable) {
       cdkBuilder.dataflowEdges(dataflowEdges.let(IResolvable::unwrap))
     }
 
-    public override fun dataflowEdges(dataflowEdges: List<Any>) {
+    override fun dataflowEdges(dataflowEdges: List<Any>) {
       cdkBuilder.dataflowEdges(dataflowEdges)
     }
 
-    public override
-        fun minimumViableContactDurationSeconds(minimumViableContactDurationSeconds: Number) {
+    override fun minimumViableContactDurationSeconds(minimumViableContactDurationSeconds: Number) {
       cdkBuilder.minimumViableContactDurationSeconds(minimumViableContactDurationSeconds)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun streamsKmsKey(streamsKmsKey: IResolvable) {
+    override fun streamsKmsKey(streamsKmsKey: IResolvable) {
       cdkBuilder.streamsKmsKey(streamsKmsKey.let(IResolvable::unwrap))
     }
 
-    public override fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty) {
+    override fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty) {
       cdkBuilder.streamsKmsKey(streamsKmsKey.let(StreamsKmsKeyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9a09ec7ec13e230f3f45aa7de99c440ccde072210f485be7f3c016e1744c5370")
-    public override fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty.Builder.() -> Unit): Unit
-        = streamsKmsKey(StreamsKmsKeyProperty(streamsKmsKey))
+    override fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty.Builder.() -> Unit): Unit =
+        streamsKmsKey(StreamsKmsKeyProperty(streamsKmsKey))
 
-    public override fun streamsKmsRole(streamsKmsRole: String) {
+    override fun streamsKmsRole(streamsKmsRole: String) {
       cdkBuilder.streamsKmsRole(streamsKmsRole)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trackingConfigArn(trackingConfigArn: String) {
+    override fun trackingConfigArn(trackingConfigArn: String) {
       cdkBuilder.trackingConfigArn(trackingConfigArn)
     }
 
@@ -231,11 +218,9 @@ public open class CfnMissionProfile internal constructor(
     public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     public interface Builder {
-      public fun kmsAliasArn(kmsAliasArn: String) {
-      }
+      public fun kmsAliasArn(kmsAliasArn: String)
 
-      public fun kmsKeyArn(kmsKeyArn: String) {
-      }
+      public fun kmsKeyArn(kmsKeyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -244,11 +229,11 @@ public open class CfnMissionProfile internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty.builder()
 
-      public override fun kmsAliasArn(kmsAliasArn: String) {
+      override fun kmsAliasArn(kmsAliasArn: String) {
         cdkBuilder.kmsAliasArn(kmsAliasArn)
       }
 
-      public override fun kmsKeyArn(kmsKeyArn: String) {
+      override fun kmsKeyArn(kmsKeyArn: String) {
         cdkBuilder.kmsKeyArn(kmsKeyArn)
       }
 
@@ -261,9 +246,9 @@ public open class CfnMissionProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.StreamsKmsKeyProperty,
     ) : StreamsKmsKeyProperty {
-      public override fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
+      override fun kmsAliasArn(): String? = unwrap(this).getKmsAliasArn()
 
-      public override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
+      override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
     }
 
     public companion object {
@@ -292,11 +277,9 @@ public open class CfnMissionProfile internal constructor(
     public fun source(): String? = unwrap(this).getSource()
 
     public interface Builder {
-      public fun destination(destination: String) {
-      }
+      public fun destination(destination: String)
 
-      public fun source(source: String) {
-      }
+      public fun source(source: String)
     }
 
     private class BuilderImpl : Builder {
@@ -305,11 +288,11 @@ public open class CfnMissionProfile internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty.builder()
 
-      public override fun destination(destination: String) {
+      override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
-      public override fun source(source: String) {
+      override fun source(source: String) {
         cdkBuilder.source(source)
       }
 
@@ -322,9 +305,9 @@ public open class CfnMissionProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnMissionProfile.DataflowEdgeProperty,
     ) : DataflowEdgeProperty {
-      public override fun destination(): String? = unwrap(this).getDestination()
+      override fun destination(): String? = unwrap(this).getDestination()
 
-      public override fun source(): String? = unwrap(this).getSource()
+      override fun source(): String? = unwrap(this).getSource()
     }
 
     public companion object {

@@ -76,29 +76,21 @@ public open class CfnResourceShare internal constructor(
   }
 
   public interface Builder {
-    public fun allowExternalPrincipals(allowExternalPrincipals: Boolean) {
-    }
+    public fun allowExternalPrincipals(allowExternalPrincipals: Boolean)
 
-    public fun allowExternalPrincipals(allowExternalPrincipals: IResolvable) {
-    }
+    public fun allowExternalPrincipals(allowExternalPrincipals: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun permissionArns(permissionArns: List<String>) {
-    }
+    public fun permissionArns(permissionArns: List<String>)
 
-    public fun principals(principals: List<String>) {
-    }
+    public fun principals(principals: List<String>)
 
-    public fun resourceArns(resourceArns: List<String>) {
-    }
+    public fun resourceArns(resourceArns: List<String>)
 
-    public fun sources(sources: List<String>) {
-    }
+    public fun sources(sources: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -108,35 +100,35 @@ public open class CfnResourceShare internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ram.CfnResourceShare.Builder =
         software.amazon.awscdk.services.ram.CfnResourceShare.Builder.create(scope, id)
 
-    public override fun allowExternalPrincipals(allowExternalPrincipals: Boolean) {
+    override fun allowExternalPrincipals(allowExternalPrincipals: Boolean) {
       cdkBuilder.allowExternalPrincipals(allowExternalPrincipals)
     }
 
-    public override fun allowExternalPrincipals(allowExternalPrincipals: IResolvable) {
+    override fun allowExternalPrincipals(allowExternalPrincipals: IResolvable) {
       cdkBuilder.allowExternalPrincipals(allowExternalPrincipals.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun permissionArns(permissionArns: List<String>) {
+    override fun permissionArns(permissionArns: List<String>) {
       cdkBuilder.permissionArns(permissionArns)
     }
 
-    public override fun principals(principals: List<String>) {
+    override fun principals(principals: List<String>) {
       cdkBuilder.principals(principals)
     }
 
-    public override fun resourceArns(resourceArns: List<String>) {
+    override fun resourceArns(resourceArns: List<String>) {
       cdkBuilder.resourceArns(resourceArns)
     }
 
-    public override fun sources(sources: List<String>) {
+    override fun sources(sources: List<String>) {
       cdkBuilder.sources(sources)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

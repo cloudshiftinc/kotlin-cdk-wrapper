@@ -45,18 +45,15 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
 
   public interface Builder {
     public
-        fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
-    }
+        fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable)
 
     public
-        fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty) {
-    }
+        fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28c90048f16f52b40cd40d4ddcecb0c5d4d6f1d87f42079013bc849831f96be6")
     public
-        fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty.Builder.() -> Unit) {
-    }
+        fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -68,19 +65,19 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
         software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.Builder.create(scope,
         id)
 
-    public override
+    override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
       cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty) {
       cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(CloudFrontOriginAccessIdentityConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("28c90048f16f52b40cd40d4ddcecb0c5d4d6f1d87f42079013bc849831f96be6")
-    public override
+    override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty.Builder.() -> Unit):
         Unit =
         cloudFrontOriginAccessIdentityConfig(CloudFrontOriginAccessIdentityConfigProperty(cloudFrontOriginAccessIdentityConfig))
@@ -116,8 +113,7 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
     public fun comment(): String
 
     public interface Builder {
-      public fun comment(comment: String) {
-      }
+      public fun comment(comment: String)
     }
 
     private class BuilderImpl : Builder {
@@ -126,7 +122,7 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
           =
           software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty.builder()
 
-      public override fun comment(comment: String) {
+      override fun comment(comment: String) {
         cdkBuilder.comment(comment)
       }
 
@@ -139,7 +135,7 @@ public open class CfnCloudFrontOriginAccessIdentity internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty,
     ) : CloudFrontOriginAccessIdentityConfigProperty {
-      public override fun comment(): String = unwrap(this).getComment()
+      override fun comment(): String = unwrap(this).getComment()
     }
 
     public companion object {

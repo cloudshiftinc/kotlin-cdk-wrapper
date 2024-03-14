@@ -9,22 +9,20 @@ public interface BlockDevice {
   public fun volume(): BlockDeviceVolume
 
   public interface Builder {
-    public fun deviceName(deviceName: String) {
-    }
+    public fun deviceName(deviceName: String)
 
-    public fun volume(volume: BlockDeviceVolume) {
-    }
+    public fun volume(volume: BlockDeviceVolume)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.BlockDevice.Builder =
         software.amazon.awscdk.services.autoscaling.BlockDevice.builder()
 
-    public override fun deviceName(deviceName: String) {
+    override fun deviceName(deviceName: String) {
       cdkBuilder.deviceName(deviceName)
     }
 
-    public override fun volume(volume: BlockDeviceVolume) {
+    override fun volume(volume: BlockDeviceVolume) {
       cdkBuilder.volume(volume.let(BlockDeviceVolume::unwrap))
     }
 
@@ -34,10 +32,9 @@ public interface BlockDevice {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.BlockDevice,
   ) : BlockDevice {
-    public override fun deviceName(): String = unwrap(this).getDeviceName()
+    override fun deviceName(): String = unwrap(this).getDeviceName()
 
-    public override fun volume(): BlockDeviceVolume =
-        unwrap(this).getVolume().let(BlockDeviceVolume::wrap)
+    override fun volume(): BlockDeviceVolume = unwrap(this).getVolume().let(BlockDeviceVolume::wrap)
   }
 
   public companion object {

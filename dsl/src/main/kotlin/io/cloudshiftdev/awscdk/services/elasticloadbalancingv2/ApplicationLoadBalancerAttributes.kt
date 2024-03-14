@@ -21,23 +21,17 @@ public interface ApplicationLoadBalancerAttributes {
   public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
   public interface Builder {
-    public fun loadBalancerArn(loadBalancerArn: String) {
-    }
+    public fun loadBalancerArn(loadBalancerArn: String)
 
-    public fun loadBalancerCanonicalHostedZoneId(loadBalancerCanonicalHostedZoneId: String) {
-    }
+    public fun loadBalancerCanonicalHostedZoneId(loadBalancerCanonicalHostedZoneId: String)
 
-    public fun loadBalancerDnsName(loadBalancerDnsName: String) {
-    }
+    public fun loadBalancerDnsName(loadBalancerDnsName: String)
 
-    public fun securityGroupAllowsAllOutbound(securityGroupAllowsAllOutbound: Boolean) {
-    }
+    public fun securityGroupAllowsAllOutbound(securityGroupAllowsAllOutbound: Boolean)
 
-    public fun securityGroupId(securityGroupId: String) {
-    }
+    public fun securityGroupId(securityGroupId: String)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl : Builder {
@@ -46,28 +40,27 @@ public interface ApplicationLoadBalancerAttributes {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes.builder()
 
-    public override fun loadBalancerArn(loadBalancerArn: String) {
+    override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
-    public override
-        fun loadBalancerCanonicalHostedZoneId(loadBalancerCanonicalHostedZoneId: String) {
+    override fun loadBalancerCanonicalHostedZoneId(loadBalancerCanonicalHostedZoneId: String) {
       cdkBuilder.loadBalancerCanonicalHostedZoneId(loadBalancerCanonicalHostedZoneId)
     }
 
-    public override fun loadBalancerDnsName(loadBalancerDnsName: String) {
+    override fun loadBalancerDnsName(loadBalancerDnsName: String) {
       cdkBuilder.loadBalancerDnsName(loadBalancerDnsName)
     }
 
-    public override fun securityGroupAllowsAllOutbound(securityGroupAllowsAllOutbound: Boolean) {
+    override fun securityGroupAllowsAllOutbound(securityGroupAllowsAllOutbound: Boolean) {
       cdkBuilder.securityGroupAllowsAllOutbound(securityGroupAllowsAllOutbound)
     }
 
-    public override fun securityGroupId(securityGroupId: String) {
+    override fun securityGroupId(securityGroupId: String) {
       cdkBuilder.securityGroupId(securityGroupId)
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
@@ -80,19 +73,19 @@ public interface ApplicationLoadBalancerAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes,
   ) : ApplicationLoadBalancerAttributes {
-    public override fun loadBalancerArn(): String = unwrap(this).getLoadBalancerArn()
+    override fun loadBalancerArn(): String = unwrap(this).getLoadBalancerArn()
 
-    public override fun loadBalancerCanonicalHostedZoneId(): String? =
+    override fun loadBalancerCanonicalHostedZoneId(): String? =
         unwrap(this).getLoadBalancerCanonicalHostedZoneId()
 
-    public override fun loadBalancerDnsName(): String? = unwrap(this).getLoadBalancerDnsName()
+    override fun loadBalancerDnsName(): String? = unwrap(this).getLoadBalancerDnsName()
 
-    public override fun securityGroupAllowsAllOutbound(): Boolean? =
+    override fun securityGroupAllowsAllOutbound(): Boolean? =
         unwrap(this).getSecurityGroupAllowsAllOutbound()
 
-    public override fun securityGroupId(): String = unwrap(this).getSecurityGroupId()
+    override fun securityGroupId(): String = unwrap(this).getSecurityGroupId()
 
-    public override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
+    override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
   }
 
   public companion object {

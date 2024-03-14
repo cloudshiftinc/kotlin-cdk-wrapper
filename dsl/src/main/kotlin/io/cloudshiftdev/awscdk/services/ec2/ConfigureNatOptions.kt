@@ -11,29 +11,26 @@ public interface ConfigureNatOptions {
   public fun vpc(): Vpc
 
   public interface Builder {
-    public fun natSubnets(natSubnets: List<PublicSubnet>) {
-    }
+    public fun natSubnets(natSubnets: List<PublicSubnet>)
 
-    public fun privateSubnets(privateSubnets: List<PrivateSubnet>) {
-    }
+    public fun privateSubnets(privateSubnets: List<PrivateSubnet>)
 
-    public fun vpc(vpc: Vpc) {
-    }
+    public fun vpc(vpc: Vpc)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.ConfigureNatOptions.Builder =
         software.amazon.awscdk.services.ec2.ConfigureNatOptions.builder()
 
-    public override fun natSubnets(natSubnets: List<PublicSubnet>) {
+    override fun natSubnets(natSubnets: List<PublicSubnet>) {
       cdkBuilder.natSubnets(natSubnets.map(PublicSubnet::unwrap))
     }
 
-    public override fun privateSubnets(privateSubnets: List<PrivateSubnet>) {
+    override fun privateSubnets(privateSubnets: List<PrivateSubnet>) {
       cdkBuilder.privateSubnets(privateSubnets.map(PrivateSubnet::unwrap))
     }
 
-    public override fun vpc(vpc: Vpc) {
+    override fun vpc(vpc: Vpc) {
       cdkBuilder.vpc(vpc.let(Vpc::unwrap))
     }
 
@@ -43,13 +40,13 @@ public interface ConfigureNatOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.ConfigureNatOptions,
   ) : ConfigureNatOptions {
-    public override fun natSubnets(): List<PublicSubnet> =
+    override fun natSubnets(): List<PublicSubnet> =
         unwrap(this).getNatSubnets().map(PublicSubnet::wrap)
 
-    public override fun privateSubnets(): List<PrivateSubnet> =
+    override fun privateSubnets(): List<PrivateSubnet> =
         unwrap(this).getPrivateSubnets().map(PrivateSubnet::wrap)
 
-    public override fun vpc(): Vpc = unwrap(this).getVpc().let(Vpc::wrap)
+    override fun vpc(): Vpc = unwrap(this).getVpc().let(Vpc::wrap)
   }
 
   public companion object {

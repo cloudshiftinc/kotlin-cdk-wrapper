@@ -11,29 +11,26 @@ public interface CloudWatchDimension {
   public fun source(): CloudWatchDimensionSource
 
   public interface Builder {
-    public fun defaultValue(defaultValue: String) {
-    }
+    public fun defaultValue(defaultValue: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun source(source: CloudWatchDimensionSource) {
-    }
+    public fun source(source: CloudWatchDimensionSource)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.CloudWatchDimension.Builder =
         software.amazon.awscdk.services.ses.CloudWatchDimension.builder()
 
-    public override fun defaultValue(defaultValue: String) {
+    override fun defaultValue(defaultValue: String) {
       cdkBuilder.defaultValue(defaultValue)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun source(source: CloudWatchDimensionSource) {
+    override fun source(source: CloudWatchDimensionSource) {
       cdkBuilder.source(source.let(CloudWatchDimensionSource::unwrap))
     }
 
@@ -43,11 +40,11 @@ public interface CloudWatchDimension {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.CloudWatchDimension,
   ) : CloudWatchDimension {
-    public override fun defaultValue(): String = unwrap(this).getDefaultValue()
+    override fun defaultValue(): String = unwrap(this).getDefaultValue()
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun source(): CloudWatchDimensionSource =
+    override fun source(): CloudWatchDimensionSource =
         unwrap(this).getSource().let(CloudWatchDimensionSource::wrap)
   }
 

@@ -128,80 +128,56 @@ public open class Vpc internal constructor(
   public override fun vpnGatewayId(): String? = unwrap(this).getVpnGatewayId()
 
   public interface Builder {
-    public fun availabilityZones(availabilityZones: List<String>) {
-    }
+    public fun availabilityZones(availabilityZones: List<String>)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun cidr(cidr: String) {
-    }
+    public fun cidr(cidr: String)
 
-    public fun createInternetGateway(createInternetGateway: Boolean) {
-    }
+    public fun createInternetGateway(createInternetGateway: Boolean)
 
-    public fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy) {
-    }
+    public fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy)
 
-    public fun enableDnsHostnames(enableDnsHostnames: Boolean) {
-    }
+    public fun enableDnsHostnames(enableDnsHostnames: Boolean)
 
-    public fun enableDnsSupport(enableDnsSupport: Boolean) {
-    }
+    public fun enableDnsSupport(enableDnsSupport: Boolean)
 
-    public fun flowLogs(flowLogs: Map<String, FlowLogOptions>) {
-    }
+    public fun flowLogs(flowLogs: Map<String, FlowLogOptions>)
 
-    public fun gatewayEndpoints(gatewayEndpoints: Map<String, GatewayVpcEndpointOptions>) {
-    }
+    public fun gatewayEndpoints(gatewayEndpoints: Map<String, GatewayVpcEndpointOptions>)
 
-    public fun ipAddresses(ipAddresses: IIpAddresses) {
-    }
+    public fun ipAddresses(ipAddresses: IIpAddresses)
 
-    public fun ipProtocol(ipProtocol: IpProtocol) {
-    }
+    public fun ipProtocol(ipProtocol: IpProtocol)
 
-    public fun ipv6Addresses(ipv6Addresses: IIpv6Addresses) {
-    }
+    public fun ipv6Addresses(ipv6Addresses: IIpv6Addresses)
 
-    public fun maxAzs(maxAzs: Number) {
-    }
+    public fun maxAzs(maxAzs: Number)
 
-    public fun natGatewayProvider(natGatewayProvider: NatProvider) {
-    }
+    public fun natGatewayProvider(natGatewayProvider: NatProvider)
 
-    public fun natGatewaySubnets(natGatewaySubnets: SubnetSelection) {
-    }
+    public fun natGatewaySubnets(natGatewaySubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd126bbf35ef771f13980b947b33075c4f461eb29e9008839010fa6db310f4b5")
-    public fun natGatewaySubnets(natGatewaySubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun natGatewaySubnets(natGatewaySubnets: SubnetSelection.Builder.() -> Unit)
 
-    public fun natGateways(natGateways: Number) {
-    }
+    public fun natGateways(natGateways: Number)
 
-    public fun reservedAzs(reservedAzs: Number) {
-    }
+    public fun reservedAzs(reservedAzs: Number)
 
-    public fun restrictDefaultSecurityGroup(restrictDefaultSecurityGroup: Boolean) {
-    }
+    public fun restrictDefaultSecurityGroup(restrictDefaultSecurityGroup: Boolean)
 
-    public fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>) {
-    }
+    public fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>)
 
-    public fun vpcName(vpcName: String) {
-    }
+    public fun vpcName(vpcName: String)
 
-    public fun vpnConnections(vpnConnections: Map<String, VpnConnectionOptions>) {
-    }
+    public fun vpnConnections(vpnConnections: Map<String, VpnConnectionOptions>)
 
-    public fun vpnGateway(vpnGateway: Boolean) {
-    }
+    public fun vpnGateway(vpnGateway: Boolean)
 
-    public fun vpnGatewayAsn(vpnGatewayAsn: Number) {
-    }
+    public fun vpnGatewayAsn(vpnGatewayAsn: Number)
 
-    public fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
-    }
+    public fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>)
   }
 
   private class BuilderImpl(
@@ -211,102 +187,101 @@ public open class Vpc internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.Vpc.Builder =
         software.amazon.awscdk.services.ec2.Vpc.Builder.create(scope, id)
 
-    public override fun availabilityZones(availabilityZones: List<String>) {
+    override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun cidr(cidr: String) {
+    override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
-    public override fun createInternetGateway(createInternetGateway: Boolean) {
+    override fun createInternetGateway(createInternetGateway: Boolean) {
       cdkBuilder.createInternetGateway(createInternetGateway)
     }
 
-    public override fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy) {
+    override fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy) {
       cdkBuilder.defaultInstanceTenancy(defaultInstanceTenancy.let(DefaultInstanceTenancy::unwrap))
     }
 
-    public override fun enableDnsHostnames(enableDnsHostnames: Boolean) {
+    override fun enableDnsHostnames(enableDnsHostnames: Boolean) {
       cdkBuilder.enableDnsHostnames(enableDnsHostnames)
     }
 
-    public override fun enableDnsSupport(enableDnsSupport: Boolean) {
+    override fun enableDnsSupport(enableDnsSupport: Boolean) {
       cdkBuilder.enableDnsSupport(enableDnsSupport)
     }
 
-    public override fun flowLogs(flowLogs: Map<String, FlowLogOptions>) {
-      cdkBuilder.flowLogs(flowLogs.mapValues { FlowLogOptions.unwrap(it.value)})
+    override fun flowLogs(flowLogs: Map<String, FlowLogOptions>) {
+      cdkBuilder.flowLogs(flowLogs.mapValues{FlowLogOptions.unwrap(it.value)})
     }
 
-    public override fun gatewayEndpoints(gatewayEndpoints: Map<String, GatewayVpcEndpointOptions>) {
-      cdkBuilder.gatewayEndpoints(gatewayEndpoints.mapValues {
-          GatewayVpcEndpointOptions.unwrap(it.value)})
+    override fun gatewayEndpoints(gatewayEndpoints: Map<String, GatewayVpcEndpointOptions>) {
+      cdkBuilder.gatewayEndpoints(gatewayEndpoints.mapValues{GatewayVpcEndpointOptions.unwrap(it.value)})
     }
 
-    public override fun ipAddresses(ipAddresses: IIpAddresses) {
+    override fun ipAddresses(ipAddresses: IIpAddresses) {
       cdkBuilder.ipAddresses(ipAddresses.let(IIpAddresses::unwrap))
     }
 
-    public override fun ipProtocol(ipProtocol: IpProtocol) {
+    override fun ipProtocol(ipProtocol: IpProtocol) {
       cdkBuilder.ipProtocol(ipProtocol.let(IpProtocol::unwrap))
     }
 
-    public override fun ipv6Addresses(ipv6Addresses: IIpv6Addresses) {
+    override fun ipv6Addresses(ipv6Addresses: IIpv6Addresses) {
       cdkBuilder.ipv6Addresses(ipv6Addresses.let(IIpv6Addresses::unwrap))
     }
 
-    public override fun maxAzs(maxAzs: Number) {
+    override fun maxAzs(maxAzs: Number) {
       cdkBuilder.maxAzs(maxAzs)
     }
 
-    public override fun natGatewayProvider(natGatewayProvider: NatProvider) {
+    override fun natGatewayProvider(natGatewayProvider: NatProvider) {
       cdkBuilder.natGatewayProvider(natGatewayProvider.let(NatProvider::unwrap))
     }
 
-    public override fun natGatewaySubnets(natGatewaySubnets: SubnetSelection) {
+    override fun natGatewaySubnets(natGatewaySubnets: SubnetSelection) {
       cdkBuilder.natGatewaySubnets(natGatewaySubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd126bbf35ef771f13980b947b33075c4f461eb29e9008839010fa6db310f4b5")
-    public override fun natGatewaySubnets(natGatewaySubnets: SubnetSelection.Builder.() -> Unit):
-        Unit = natGatewaySubnets(SubnetSelection(natGatewaySubnets))
+    override fun natGatewaySubnets(natGatewaySubnets: SubnetSelection.Builder.() -> Unit): Unit =
+        natGatewaySubnets(SubnetSelection(natGatewaySubnets))
 
-    public override fun natGateways(natGateways: Number) {
+    override fun natGateways(natGateways: Number) {
       cdkBuilder.natGateways(natGateways)
     }
 
-    public override fun reservedAzs(reservedAzs: Number) {
+    override fun reservedAzs(reservedAzs: Number) {
       cdkBuilder.reservedAzs(reservedAzs)
     }
 
-    public override fun restrictDefaultSecurityGroup(restrictDefaultSecurityGroup: Boolean) {
+    override fun restrictDefaultSecurityGroup(restrictDefaultSecurityGroup: Boolean) {
       cdkBuilder.restrictDefaultSecurityGroup(restrictDefaultSecurityGroup)
     }
 
-    public override fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>) {
+    override fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>) {
       cdkBuilder.subnetConfiguration(subnetConfiguration.map(SubnetConfiguration::unwrap))
     }
 
-    public override fun vpcName(vpcName: String) {
+    override fun vpcName(vpcName: String) {
       cdkBuilder.vpcName(vpcName)
     }
 
-    public override fun vpnConnections(vpnConnections: Map<String, VpnConnectionOptions>) {
-      cdkBuilder.vpnConnections(vpnConnections.mapValues { VpnConnectionOptions.unwrap(it.value)})
+    override fun vpnConnections(vpnConnections: Map<String, VpnConnectionOptions>) {
+      cdkBuilder.vpnConnections(vpnConnections.mapValues{VpnConnectionOptions.unwrap(it.value)})
     }
 
-    public override fun vpnGateway(vpnGateway: Boolean) {
+    override fun vpnGateway(vpnGateway: Boolean) {
       cdkBuilder.vpnGateway(vpnGateway)
     }
 
-    public override fun vpnGatewayAsn(vpnGatewayAsn: Number) {
+    override fun vpnGatewayAsn(vpnGatewayAsn: Number) {
       cdkBuilder.vpnGatewayAsn(vpnGatewayAsn)
     }
 
-    public override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
+    override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
       cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
     }
 

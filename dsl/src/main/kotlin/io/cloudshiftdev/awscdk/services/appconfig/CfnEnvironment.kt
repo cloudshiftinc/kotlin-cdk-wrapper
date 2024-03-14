@@ -61,23 +61,17 @@ public open class CfnEnvironment internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun monitors(monitors: IResolvable) {
-    }
+    public fun monitors(monitors: IResolvable)
 
-    public fun monitors(monitors: List<Any>) {
-    }
+    public fun monitors(monitors: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,27 +81,27 @@ public open class CfnEnvironment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.CfnEnvironment.Builder =
         software.amazon.awscdk.services.appconfig.CfnEnvironment.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun monitors(monitors: IResolvable) {
+    override fun monitors(monitors: IResolvable) {
       cdkBuilder.monitors(monitors.let(IResolvable::unwrap))
     }
 
-    public override fun monitors(monitors: List<Any>) {
+    override fun monitors(monitors: List<Any>) {
       cdkBuilder.monitors(monitors)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -142,11 +136,9 @@ public open class CfnEnvironment internal constructor(
     public fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
 
     public interface Builder {
-      public fun alarmArn(alarmArn: String) {
-      }
+      public fun alarmArn(alarmArn: String)
 
-      public fun alarmRoleArn(alarmRoleArn: String) {
-      }
+      public fun alarmRoleArn(alarmRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -154,11 +146,11 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty.Builder =
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty.builder()
 
-      public override fun alarmArn(alarmArn: String) {
+      override fun alarmArn(alarmArn: String) {
         cdkBuilder.alarmArn(alarmArn)
       }
 
-      public override fun alarmRoleArn(alarmRoleArn: String) {
+      override fun alarmRoleArn(alarmRoleArn: String) {
         cdkBuilder.alarmRoleArn(alarmRoleArn)
       }
 
@@ -170,9 +162,9 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorProperty,
     ) : MonitorProperty {
-      public override fun alarmArn(): String = unwrap(this).getAlarmArn()
+      override fun alarmArn(): String = unwrap(this).getAlarmArn()
 
-      public override fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
+      override fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
     }
 
     public companion object {
@@ -201,11 +193,9 @@ public open class CfnEnvironment internal constructor(
     public fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
 
     public interface Builder {
-      public fun alarmArn(alarmArn: String) {
-      }
+      public fun alarmArn(alarmArn: String)
 
-      public fun alarmRoleArn(alarmRoleArn: String) {
-      }
+      public fun alarmRoleArn(alarmRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -213,11 +203,11 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty.Builder =
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty.builder()
 
-      public override fun alarmArn(alarmArn: String) {
+      override fun alarmArn(alarmArn: String) {
         cdkBuilder.alarmArn(alarmArn)
       }
 
-      public override fun alarmRoleArn(alarmRoleArn: String) {
+      override fun alarmRoleArn(alarmRoleArn: String) {
         cdkBuilder.alarmRoleArn(alarmRoleArn)
       }
 
@@ -229,9 +219,9 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appconfig.CfnEnvironment.MonitorsProperty,
     ) : MonitorsProperty {
-      public override fun alarmArn(): String? = unwrap(this).getAlarmArn()
+      override fun alarmArn(): String? = unwrap(this).getAlarmArn()
 
-      public override fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
+      override fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
     }
 
     public companion object {

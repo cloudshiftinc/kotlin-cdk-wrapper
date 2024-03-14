@@ -11,43 +11,38 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
   public fun sizeLimit(): Size? = unwrap(this).getSizeLimit()?.let(Size::wrap)
 
   public interface Builder {
-    public fun medium(medium: EmptyDirMediumType) {
-    }
+    public fun medium(medium: EmptyDirMediumType)
 
-    public fun mountPath(mountPath: String) {
-    }
+    public fun mountPath(mountPath: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readonly(readonly: Boolean) {
-    }
+    public fun readonly(readonly: Boolean)
 
-    public fun sizeLimit(sizeLimit: Size) {
-    }
+    public fun sizeLimit(sizeLimit: Size)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.EmptyDirVolumeOptions.Builder =
         software.amazon.awscdk.services.batch.EmptyDirVolumeOptions.builder()
 
-    public override fun medium(medium: EmptyDirMediumType) {
+    override fun medium(medium: EmptyDirMediumType) {
       cdkBuilder.medium(medium.let(EmptyDirMediumType::unwrap))
     }
 
-    public override fun mountPath(mountPath: String) {
+    override fun mountPath(mountPath: String) {
       cdkBuilder.mountPath(mountPath)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readonly(readonly: Boolean) {
+    override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
 
-    public override fun sizeLimit(sizeLimit: Size) {
+    override fun sizeLimit(sizeLimit: Size) {
       cdkBuilder.sizeLimit(sizeLimit.let(Size::unwrap))
     }
 
@@ -58,16 +53,16 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolumeOptions,
   ) : EmptyDirVolumeOptions {
-    public override fun medium(): EmptyDirMediumType? =
+    override fun medium(): EmptyDirMediumType? =
         unwrap(this).getMedium()?.let(EmptyDirMediumType::wrap)
 
-    public override fun mountPath(): String? = unwrap(this).getMountPath()
+    override fun mountPath(): String? = unwrap(this).getMountPath()
 
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun readonly(): Boolean? = unwrap(this).getReadonly()
+    override fun readonly(): Boolean? = unwrap(this).getReadonly()
 
-    public override fun sizeLimit(): Size? = unwrap(this).getSizeLimit()?.let(Size::wrap)
+    override fun sizeLimit(): Size? = unwrap(this).getSizeLimit()?.let(Size::wrap)
   }
 
   public companion object {

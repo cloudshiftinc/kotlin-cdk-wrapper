@@ -153,78 +153,56 @@ public open class CfnStack internal constructor(
   }
 
   public interface Builder {
-    public fun accessEndpoints(accessEndpoints: IResolvable) {
-    }
+    public fun accessEndpoints(accessEndpoints: IResolvable)
 
-    public fun accessEndpoints(accessEndpoints: List<Any>) {
-    }
+    public fun accessEndpoints(accessEndpoints: List<Any>)
 
-    public fun applicationSettings(applicationSettings: IResolvable) {
-    }
+    public fun applicationSettings(applicationSettings: IResolvable)
 
-    public fun applicationSettings(applicationSettings: ApplicationSettingsProperty) {
-    }
+    public fun applicationSettings(applicationSettings: ApplicationSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5521ad540d558a6fa627e935cb49c5305b635b45c5dbc7afd88c845843101b7a")
     public
-        fun applicationSettings(applicationSettings: ApplicationSettingsProperty.Builder.() -> Unit) {
-    }
+        fun applicationSettings(applicationSettings: ApplicationSettingsProperty.Builder.() -> Unit)
 
-    public fun attributesToDelete(attributesToDelete: List<String>) {
-    }
+    public fun attributesToDelete(attributesToDelete: List<String>)
 
-    public fun deleteStorageConnectors(deleteStorageConnectors: Boolean) {
-    }
+    public fun deleteStorageConnectors(deleteStorageConnectors: Boolean)
 
-    public fun deleteStorageConnectors(deleteStorageConnectors: IResolvable) {
-    }
+    public fun deleteStorageConnectors(deleteStorageConnectors: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
 
-    public fun embedHostDomains(embedHostDomains: List<String>) {
-    }
+    public fun embedHostDomains(embedHostDomains: List<String>)
 
-    public fun feedbackUrl(feedbackUrl: String) {
-    }
+    public fun feedbackUrl(feedbackUrl: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun redirectUrl(redirectUrl: String) {
-    }
+    public fun redirectUrl(redirectUrl: String)
 
-    public fun storageConnectors(storageConnectors: IResolvable) {
-    }
+    public fun storageConnectors(storageConnectors: IResolvable)
 
-    public fun storageConnectors(storageConnectors: List<Any>) {
-    }
+    public fun storageConnectors(storageConnectors: List<Any>)
 
-    public fun streamingExperienceSettings(streamingExperienceSettings: IResolvable) {
-    }
+    public fun streamingExperienceSettings(streamingExperienceSettings: IResolvable)
 
     public
-        fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty) {
-    }
+        fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e3723ba6e054771664539223e2397dd47bc378c2e7c6b849153c4ceef8c001d")
     public
-        fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty.Builder.() -> Unit) {
-    }
+        fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userSettings(userSettings: IResolvable) {
-    }
+    public fun userSettings(userSettings: IResolvable)
 
-    public fun userSettings(userSettings: List<Any>) {
-    }
+    public fun userSettings(userSettings: List<Any>)
   }
 
   private class BuilderImpl(
@@ -234,97 +212,97 @@ public open class CfnStack internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appstream.CfnStack.Builder =
         software.amazon.awscdk.services.appstream.CfnStack.Builder.create(scope, id)
 
-    public override fun accessEndpoints(accessEndpoints: IResolvable) {
+    override fun accessEndpoints(accessEndpoints: IResolvable) {
       cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
     }
 
-    public override fun accessEndpoints(accessEndpoints: List<Any>) {
+    override fun accessEndpoints(accessEndpoints: List<Any>) {
       cdkBuilder.accessEndpoints(accessEndpoints)
     }
 
-    public override fun applicationSettings(applicationSettings: IResolvable) {
+    override fun applicationSettings(applicationSettings: IResolvable) {
       cdkBuilder.applicationSettings(applicationSettings.let(IResolvable::unwrap))
     }
 
-    public override fun applicationSettings(applicationSettings: ApplicationSettingsProperty) {
+    override fun applicationSettings(applicationSettings: ApplicationSettingsProperty) {
       cdkBuilder.applicationSettings(applicationSettings.let(ApplicationSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5521ad540d558a6fa627e935cb49c5305b635b45c5dbc7afd88c845843101b7a")
-    public override
+    override
         fun applicationSettings(applicationSettings: ApplicationSettingsProperty.Builder.() -> Unit):
         Unit = applicationSettings(ApplicationSettingsProperty(applicationSettings))
 
-    public override fun attributesToDelete(attributesToDelete: List<String>) {
+    override fun attributesToDelete(attributesToDelete: List<String>) {
       cdkBuilder.attributesToDelete(attributesToDelete)
     }
 
-    public override fun deleteStorageConnectors(deleteStorageConnectors: Boolean) {
+    override fun deleteStorageConnectors(deleteStorageConnectors: Boolean) {
       cdkBuilder.deleteStorageConnectors(deleteStorageConnectors)
     }
 
-    public override fun deleteStorageConnectors(deleteStorageConnectors: IResolvable) {
+    override fun deleteStorageConnectors(deleteStorageConnectors: IResolvable) {
       cdkBuilder.deleteStorageConnectors(deleteStorageConnectors.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
-    public override fun embedHostDomains(embedHostDomains: List<String>) {
+    override fun embedHostDomains(embedHostDomains: List<String>) {
       cdkBuilder.embedHostDomains(embedHostDomains)
     }
 
-    public override fun feedbackUrl(feedbackUrl: String) {
+    override fun feedbackUrl(feedbackUrl: String) {
       cdkBuilder.feedbackUrl(feedbackUrl)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun redirectUrl(redirectUrl: String) {
+    override fun redirectUrl(redirectUrl: String) {
       cdkBuilder.redirectUrl(redirectUrl)
     }
 
-    public override fun storageConnectors(storageConnectors: IResolvable) {
+    override fun storageConnectors(storageConnectors: IResolvable) {
       cdkBuilder.storageConnectors(storageConnectors.let(IResolvable::unwrap))
     }
 
-    public override fun storageConnectors(storageConnectors: List<Any>) {
+    override fun storageConnectors(storageConnectors: List<Any>) {
       cdkBuilder.storageConnectors(storageConnectors)
     }
 
-    public override fun streamingExperienceSettings(streamingExperienceSettings: IResolvable) {
+    override fun streamingExperienceSettings(streamingExperienceSettings: IResolvable) {
       cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty) {
       cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(StreamingExperienceSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5e3723ba6e054771664539223e2397dd47bc378c2e7c6b849153c4ceef8c001d")
-    public override
+    override
         fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty.Builder.() -> Unit):
         Unit =
         streamingExperienceSettings(StreamingExperienceSettingsProperty(streamingExperienceSettings))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userSettings(userSettings: IResolvable) {
+    override fun userSettings(userSettings: IResolvable) {
       cdkBuilder.userSettings(userSettings.let(IResolvable::unwrap))
     }
 
-    public override fun userSettings(userSettings: List<Any>) {
+    override fun userSettings(userSettings: List<Any>) {
       cdkBuilder.userSettings(userSettings)
     }
 
@@ -358,14 +336,11 @@ public open class CfnStack internal constructor(
     public fun settingsGroup(): String? = unwrap(this).getSettingsGroup()
 
     public interface Builder {
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun tingsGroup(settingsGroup: String) {
-      }
+      public fun tingsGroup(settingsGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -373,15 +348,15 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty.builder()
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun tingsGroup(settingsGroup: String) {
+      override fun tingsGroup(settingsGroup: String) {
         cdkBuilder.settingsGroup(settingsGroup)
       }
 
@@ -394,9 +369,9 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnStack.ApplicationSettingsProperty,
     ) : ApplicationSettingsProperty {
-      public override fun enabled(): Any = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
-      public override fun settingsGroup(): String? = unwrap(this).getSettingsGroup()
+      override fun settingsGroup(): String? = unwrap(this).getSettingsGroup()
     }
 
     public companion object {
@@ -425,11 +400,9 @@ public open class CfnStack internal constructor(
     public fun vpceId(): String
 
     public interface Builder {
-      public fun endpointType(endpointType: String) {
-      }
+      public fun endpointType(endpointType: String)
 
-      public fun vpceId(vpceId: String) {
-      }
+      public fun vpceId(vpceId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -437,11 +410,11 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty.builder()
 
-      public override fun endpointType(endpointType: String) {
+      override fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
       }
 
-      public override fun vpceId(vpceId: String) {
+      override fun vpceId(vpceId: String) {
         cdkBuilder.vpceId(vpceId)
       }
 
@@ -453,9 +426,9 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnStack.AccessEndpointProperty,
     ) : AccessEndpointProperty {
-      public override fun endpointType(): String = unwrap(this).getEndpointType()
+      override fun endpointType(): String = unwrap(this).getEndpointType()
 
-      public override fun vpceId(): String = unwrap(this).getVpceId()
+      override fun vpceId(): String = unwrap(this).getVpceId()
     }
 
     public companion object {
@@ -486,14 +459,11 @@ public open class CfnStack internal constructor(
     public fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
 
     public interface Builder {
-      public fun connectorType(connectorType: String) {
-      }
+      public fun connectorType(connectorType: String)
 
-      public fun domains(domains: List<String>) {
-      }
+      public fun domains(domains: List<String>)
 
-      public fun resourceIdentifier(resourceIdentifier: String) {
-      }
+      public fun resourceIdentifier(resourceIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -501,15 +471,15 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty.builder()
 
-      public override fun connectorType(connectorType: String) {
+      override fun connectorType(connectorType: String) {
         cdkBuilder.connectorType(connectorType)
       }
 
-      public override fun domains(domains: List<String>) {
+      override fun domains(domains: List<String>) {
         cdkBuilder.domains(domains)
       }
 
-      public override fun resourceIdentifier(resourceIdentifier: String) {
+      override fun resourceIdentifier(resourceIdentifier: String) {
         cdkBuilder.resourceIdentifier(resourceIdentifier)
       }
 
@@ -522,11 +492,11 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnStack.StorageConnectorProperty,
     ) : StorageConnectorProperty {
-      public override fun connectorType(): String = unwrap(this).getConnectorType()
+      override fun connectorType(): String = unwrap(this).getConnectorType()
 
-      public override fun domains(): List<String> = unwrap(this).getDomains() ?: emptyList()
+      override fun domains(): List<String> = unwrap(this).getDomains() ?: emptyList()
 
-      public override fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
+      override fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
     }
 
     public companion object {
@@ -557,14 +527,11 @@ public open class CfnStack internal constructor(
     public fun permission(): String
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
 
-      public fun maximumLength(maximumLength: Number) {
-      }
+      public fun maximumLength(maximumLength: Number)
 
-      public fun permission(permission: String) {
-      }
+      public fun permission(permission: String)
     }
 
     private class BuilderImpl : Builder {
@@ -572,15 +539,15 @@ public open class CfnStack internal constructor(
           software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty.Builder =
           software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
-      public override fun maximumLength(maximumLength: Number) {
+      override fun maximumLength(maximumLength: Number) {
         cdkBuilder.maximumLength(maximumLength)
       }
 
-      public override fun permission(permission: String) {
+      override fun permission(permission: String) {
         cdkBuilder.permission(permission)
       }
 
@@ -592,11 +559,11 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnStack.UserSettingProperty,
     ) : UserSettingProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
 
-      public override fun maximumLength(): Number? = unwrap(this).getMaximumLength()
+      override fun maximumLength(): Number? = unwrap(this).getMaximumLength()
 
-      public override fun permission(): String = unwrap(this).getPermission()
+      override fun permission(): String = unwrap(this).getPermission()
     }
 
     public companion object {
@@ -623,8 +590,7 @@ public open class CfnStack internal constructor(
     public fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
 
     public interface Builder {
-      public fun preferredProtocol(preferredProtocol: String) {
-      }
+      public fun preferredProtocol(preferredProtocol: String)
     }
 
     private class BuilderImpl : Builder {
@@ -633,7 +599,7 @@ public open class CfnStack internal constructor(
           =
           software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty.builder()
 
-      public override fun preferredProtocol(preferredProtocol: String) {
+      override fun preferredProtocol(preferredProtocol: String) {
         cdkBuilder.preferredProtocol(preferredProtocol)
       }
 
@@ -646,7 +612,7 @@ public open class CfnStack internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.appstream.CfnStack.StreamingExperienceSettingsProperty,
     ) : StreamingExperienceSettingsProperty {
-      public override fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
+      override fun preferredProtocol(): String? = unwrap(this).getPreferredProtocol()
     }
 
     public companion object {

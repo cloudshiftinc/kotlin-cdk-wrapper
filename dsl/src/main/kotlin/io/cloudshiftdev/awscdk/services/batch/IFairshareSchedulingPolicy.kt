@@ -19,26 +19,25 @@ public interface IFairshareSchedulingPolicy : ISchedulingPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.IFairshareSchedulingPolicy,
   ) : IFairshareSchedulingPolicy {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun computeReservation(): Number? = unwrap(this).getComputeReservation()
+    override fun computeReservation(): Number? = unwrap(this).getComputeReservation()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun schedulingPolicyArn(): String = unwrap(this).getSchedulingPolicyArn()
+    override fun schedulingPolicyArn(): String = unwrap(this).getSchedulingPolicyArn()
 
-    public override fun schedulingPolicyName(): String = unwrap(this).getSchedulingPolicyName()
+    override fun schedulingPolicyName(): String = unwrap(this).getSchedulingPolicyName()
 
-    public override fun shareDecay(): Duration? = unwrap(this).getShareDecay()?.let(Duration::wrap)
+    override fun shareDecay(): Duration? = unwrap(this).getShareDecay()?.let(Duration::wrap)
 
-    public override fun shares(): List<Share> = unwrap(this).getShares().map(Share::wrap)
+    override fun shares(): List<Share> = unwrap(this).getShares().map(Share::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

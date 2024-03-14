@@ -8,14 +8,11 @@ public interface AssetManifestProperties : AssetManifestOptions {
   public fun `file`(): String
 
   public interface Builder {
-    public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
-    }
+    public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String)
 
-    public fun `file`(`file`: String) {
-    }
+    public fun `file`(`file`: String)
 
-    public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
-    }
+    public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -23,16 +20,15 @@ public interface AssetManifestProperties : AssetManifestOptions {
         software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties.Builder =
         software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties.builder()
 
-    public override
-        fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
+    override fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
       cdkBuilder.bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter)
     }
 
-    public override fun `file`(`file`: String) {
+    override fun `file`(`file`: String) {
       cdkBuilder.`file`(`file`)
     }
 
-    public override fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
+    override fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
       cdkBuilder.requiresBootstrapStackVersion(requiresBootstrapStackVersion)
     }
 
@@ -43,12 +39,12 @@ public interface AssetManifestProperties : AssetManifestOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties,
   ) : AssetManifestProperties {
-    public override fun bootstrapStackVersionSsmParameter(): String? =
+    override fun bootstrapStackVersionSsmParameter(): String? =
         unwrap(this).getBootstrapStackVersionSsmParameter()
 
-    public override fun `file`(): String = unwrap(this).getFile()
+    override fun `file`(): String = unwrap(this).getFile()
 
-    public override fun requiresBootstrapStackVersion(): Number? =
+    override fun requiresBootstrapStackVersion(): Number? =
         unwrap(this).getRequiresBootstrapStackVersion()
   }
 

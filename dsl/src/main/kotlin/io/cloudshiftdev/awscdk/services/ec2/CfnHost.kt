@@ -66,29 +66,21 @@ public open class CfnHost internal constructor(
   }
 
   public interface Builder {
-    public fun assetId(assetId: String) {
-    }
+    public fun assetId(assetId: String)
 
-    public fun autoPlacement(autoPlacement: String) {
-    }
+    public fun autoPlacement(autoPlacement: String)
 
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun hostMaintenance(hostMaintenance: String) {
-    }
+    public fun hostMaintenance(hostMaintenance: String)
 
-    public fun hostRecovery(hostRecovery: String) {
-    }
+    public fun hostRecovery(hostRecovery: String)
 
-    public fun instanceFamily(instanceFamily: String) {
-    }
+    public fun instanceFamily(instanceFamily: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun outpostArn(outpostArn: String) {
-    }
+    public fun outpostArn(outpostArn: String)
   }
 
   private class BuilderImpl(
@@ -98,35 +90,35 @@ public open class CfnHost internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnHost.Builder =
         software.amazon.awscdk.services.ec2.CfnHost.Builder.create(scope, id)
 
-    public override fun assetId(assetId: String) {
+    override fun assetId(assetId: String) {
       cdkBuilder.assetId(assetId)
     }
 
-    public override fun autoPlacement(autoPlacement: String) {
+    override fun autoPlacement(autoPlacement: String) {
       cdkBuilder.autoPlacement(autoPlacement)
     }
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun hostMaintenance(hostMaintenance: String) {
+    override fun hostMaintenance(hostMaintenance: String) {
       cdkBuilder.hostMaintenance(hostMaintenance)
     }
 
-    public override fun hostRecovery(hostRecovery: String) {
+    override fun hostRecovery(hostRecovery: String) {
       cdkBuilder.hostRecovery(hostRecovery)
     }
 
-    public override fun instanceFamily(instanceFamily: String) {
+    override fun instanceFamily(instanceFamily: String) {
       cdkBuilder.instanceFamily(instanceFamily)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun outpostArn(outpostArn: String) {
+    override fun outpostArn(outpostArn: String) {
       cdkBuilder.outpostArn(outpostArn)
     }
 

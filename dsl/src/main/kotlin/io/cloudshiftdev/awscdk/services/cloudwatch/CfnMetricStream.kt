@@ -105,44 +105,31 @@ public open class CfnMetricStream internal constructor(
   }
 
   public interface Builder {
-    public fun excludeFilters(excludeFilters: IResolvable) {
-    }
+    public fun excludeFilters(excludeFilters: IResolvable)
 
-    public fun excludeFilters(excludeFilters: List<Any>) {
-    }
+    public fun excludeFilters(excludeFilters: List<Any>)
 
-    public fun firehoseArn(firehoseArn: String) {
-    }
+    public fun firehoseArn(firehoseArn: String)
 
-    public fun includeFilters(includeFilters: IResolvable) {
-    }
+    public fun includeFilters(includeFilters: IResolvable)
 
-    public fun includeFilters(includeFilters: List<Any>) {
-    }
+    public fun includeFilters(includeFilters: List<Any>)
 
-    public fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: Boolean) {
-    }
+    public fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: Boolean)
 
-    public fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: IResolvable) {
-    }
+    public fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun outputFormat(outputFormat: String) {
-    }
+    public fun outputFormat(outputFormat: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun statisticsConfigurations(statisticsConfigurations: IResolvable) {
-    }
+    public fun statisticsConfigurations(statisticsConfigurations: IResolvable)
 
-    public fun statisticsConfigurations(statisticsConfigurations: List<Any>) {
-    }
+    public fun statisticsConfigurations(statisticsConfigurations: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -152,55 +139,55 @@ public open class CfnMetricStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnMetricStream.Builder.create(scope, id)
 
-    public override fun excludeFilters(excludeFilters: IResolvable) {
+    override fun excludeFilters(excludeFilters: IResolvable) {
       cdkBuilder.excludeFilters(excludeFilters.let(IResolvable::unwrap))
     }
 
-    public override fun excludeFilters(excludeFilters: List<Any>) {
+    override fun excludeFilters(excludeFilters: List<Any>) {
       cdkBuilder.excludeFilters(excludeFilters)
     }
 
-    public override fun firehoseArn(firehoseArn: String) {
+    override fun firehoseArn(firehoseArn: String) {
       cdkBuilder.firehoseArn(firehoseArn)
     }
 
-    public override fun includeFilters(includeFilters: IResolvable) {
+    override fun includeFilters(includeFilters: IResolvable) {
       cdkBuilder.includeFilters(includeFilters.let(IResolvable::unwrap))
     }
 
-    public override fun includeFilters(includeFilters: List<Any>) {
+    override fun includeFilters(includeFilters: List<Any>) {
       cdkBuilder.includeFilters(includeFilters)
     }
 
-    public override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: Boolean) {
+    override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: Boolean) {
       cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics)
     }
 
-    public override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: IResolvable) {
+    override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: IResolvable) {
       cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun outputFormat(outputFormat: String) {
+    override fun outputFormat(outputFormat: String) {
       cdkBuilder.outputFormat(outputFormat)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun statisticsConfigurations(statisticsConfigurations: IResolvable) {
+    override fun statisticsConfigurations(statisticsConfigurations: IResolvable) {
       cdkBuilder.statisticsConfigurations(statisticsConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun statisticsConfigurations(statisticsConfigurations: List<Any>) {
+    override fun statisticsConfigurations(statisticsConfigurations: List<Any>) {
       cdkBuilder.statisticsConfigurations(statisticsConfigurations)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -235,14 +222,11 @@ public open class CfnMetricStream internal constructor(
     public fun includeMetrics(): Any
 
     public interface Builder {
-      public fun additionalStatistics(additionalStatistics: List<String>) {
-      }
+      public fun additionalStatistics(additionalStatistics: List<String>)
 
-      public fun includeMetrics(includeMetrics: IResolvable) {
-      }
+      public fun includeMetrics(includeMetrics: IResolvable)
 
-      public fun includeMetrics(includeMetrics: List<Any>) {
-      }
+      public fun includeMetrics(includeMetrics: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -251,15 +235,15 @@ public open class CfnMetricStream internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty.builder()
 
-      public override fun additionalStatistics(additionalStatistics: List<String>) {
+      override fun additionalStatistics(additionalStatistics: List<String>) {
         cdkBuilder.additionalStatistics(additionalStatistics)
       }
 
-      public override fun includeMetrics(includeMetrics: IResolvable) {
+      override fun includeMetrics(includeMetrics: IResolvable) {
         cdkBuilder.includeMetrics(includeMetrics.let(IResolvable::unwrap))
       }
 
-      public override fun includeMetrics(includeMetrics: List<Any>) {
+      override fun includeMetrics(includeMetrics: List<Any>) {
         cdkBuilder.includeMetrics(includeMetrics)
       }
 
@@ -272,10 +256,10 @@ public open class CfnMetricStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
     ) : MetricStreamStatisticsConfigurationProperty {
-      public override fun additionalStatistics(): List<String> =
-          unwrap(this).getAdditionalStatistics() ?: emptyList()
+      override fun additionalStatistics(): List<String> = unwrap(this).getAdditionalStatistics() ?:
+          emptyList()
 
-      public override fun includeMetrics(): Any = unwrap(this).getIncludeMetrics()
+      override fun includeMetrics(): Any = unwrap(this).getIncludeMetrics()
     }
 
     public companion object {
@@ -305,11 +289,9 @@ public open class CfnMetricStream internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -318,11 +300,11 @@ public open class CfnMetricStream internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty.builder()
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -335,9 +317,9 @@ public open class CfnMetricStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty,
     ) : MetricStreamStatisticsMetricProperty {
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
@@ -367,11 +349,9 @@ public open class CfnMetricStream internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun metricNames(metricNames: List<String>) {
-      }
+      public fun metricNames(metricNames: List<String>)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -380,11 +360,11 @@ public open class CfnMetricStream internal constructor(
           =
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty.builder()
 
-      public override fun metricNames(metricNames: List<String>) {
+      override fun metricNames(metricNames: List<String>) {
         cdkBuilder.metricNames(metricNames)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -397,9 +377,9 @@ public open class CfnMetricStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty,
     ) : MetricStreamFilterProperty {
-      public override fun metricNames(): List<String> = unwrap(this).getMetricNames() ?: emptyList()
+      override fun metricNames(): List<String> = unwrap(this).getMetricNames() ?: emptyList()
 
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {

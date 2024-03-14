@@ -62,20 +62,15 @@ public open class CfnSchemaMapping internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun mappedInputFields(mappedInputFields: IResolvable) {
-    }
+    public fun mappedInputFields(mappedInputFields: IResolvable)
 
-    public fun mappedInputFields(mappedInputFields: List<Any>) {
-    }
+    public fun mappedInputFields(mappedInputFields: List<Any>)
 
-    public fun schemaName(schemaName: String) {
-    }
+    public fun schemaName(schemaName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -86,23 +81,23 @@ public open class CfnSchemaMapping internal constructor(
         software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.Builder =
         software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun mappedInputFields(mappedInputFields: IResolvable) {
+    override fun mappedInputFields(mappedInputFields: IResolvable) {
       cdkBuilder.mappedInputFields(mappedInputFields.let(IResolvable::unwrap))
     }
 
-    public override fun mappedInputFields(mappedInputFields: List<Any>) {
+    override fun mappedInputFields(mappedInputFields: List<Any>) {
       cdkBuilder.mappedInputFields(mappedInputFields)
     }
 
-    public override fun schemaName(schemaName: String) {
+    override fun schemaName(schemaName: String) {
       cdkBuilder.schemaName(schemaName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -143,20 +138,15 @@ public open class CfnSchemaMapping internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun fieldName(fieldName: String) {
-      }
+      public fun fieldName(fieldName: String)
 
-      public fun groupName(groupName: String) {
-      }
+      public fun groupName(groupName: String)
 
-      public fun matchKey(matchKey: String) {
-      }
+      public fun matchKey(matchKey: String)
 
-      public fun subType(subType: String) {
-      }
+      public fun subType(subType: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -165,23 +155,23 @@ public open class CfnSchemaMapping internal constructor(
           =
           software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty.builder()
 
-      public override fun fieldName(fieldName: String) {
+      override fun fieldName(fieldName: String) {
         cdkBuilder.fieldName(fieldName)
       }
 
-      public override fun groupName(groupName: String) {
+      override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
       }
 
-      public override fun matchKey(matchKey: String) {
+      override fun matchKey(matchKey: String) {
         cdkBuilder.matchKey(matchKey)
       }
 
-      public override fun subType(subType: String) {
+      override fun subType(subType: String) {
         cdkBuilder.subType(subType)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -194,15 +184,15 @@ public open class CfnSchemaMapping internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty,
     ) : SchemaInputAttributeProperty {
-      public override fun fieldName(): String = unwrap(this).getFieldName()
+      override fun fieldName(): String = unwrap(this).getFieldName()
 
-      public override fun groupName(): String? = unwrap(this).getGroupName()
+      override fun groupName(): String? = unwrap(this).getGroupName()
 
-      public override fun matchKey(): String? = unwrap(this).getMatchKey()
+      override fun matchKey(): String? = unwrap(this).getMatchKey()
 
-      public override fun subType(): String? = unwrap(this).getSubType()
+      override fun subType(): String? = unwrap(this).getSubType()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

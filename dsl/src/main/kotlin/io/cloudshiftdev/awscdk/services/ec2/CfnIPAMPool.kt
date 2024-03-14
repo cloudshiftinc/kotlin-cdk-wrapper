@@ -169,73 +169,51 @@ public open class CfnIPAMPool internal constructor(
   }
 
   public interface Builder {
-    public fun addressFamily(addressFamily: String) {
-    }
+    public fun addressFamily(addressFamily: String)
 
-    public fun allocationDefaultNetmaskLength(allocationDefaultNetmaskLength: Number) {
-    }
+    public fun allocationDefaultNetmaskLength(allocationDefaultNetmaskLength: Number)
 
-    public fun allocationMaxNetmaskLength(allocationMaxNetmaskLength: Number) {
-    }
+    public fun allocationMaxNetmaskLength(allocationMaxNetmaskLength: Number)
 
-    public fun allocationMinNetmaskLength(allocationMinNetmaskLength: Number) {
-    }
+    public fun allocationMinNetmaskLength(allocationMinNetmaskLength: Number)
 
-    public fun allocationResourceTags(allocationResourceTags: IResolvable) {
-    }
+    public fun allocationResourceTags(allocationResourceTags: IResolvable)
 
-    public fun allocationResourceTags(allocationResourceTags: List<Any>) {
-    }
+    public fun allocationResourceTags(allocationResourceTags: List<Any>)
 
-    public fun autoImport(autoImport: Boolean) {
-    }
+    public fun autoImport(autoImport: Boolean)
 
-    public fun autoImport(autoImport: IResolvable) {
-    }
+    public fun autoImport(autoImport: IResolvable)
 
-    public fun awsService(awsService: String) {
-    }
+    public fun awsService(awsService: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun ipamScopeId(ipamScopeId: String) {
-    }
+    public fun ipamScopeId(ipamScopeId: String)
 
-    public fun locale(locale: String) {
-    }
+    public fun locale(locale: String)
 
-    public fun provisionedCidrs(provisionedCidrs: IResolvable) {
-    }
+    public fun provisionedCidrs(provisionedCidrs: IResolvable)
 
-    public fun provisionedCidrs(provisionedCidrs: List<Any>) {
-    }
+    public fun provisionedCidrs(provisionedCidrs: List<Any>)
 
-    public fun publicIpSource(publicIpSource: String) {
-    }
+    public fun publicIpSource(publicIpSource: String)
 
-    public fun publiclyAdvertisable(publiclyAdvertisable: Boolean) {
-    }
+    public fun publiclyAdvertisable(publiclyAdvertisable: Boolean)
 
-    public fun publiclyAdvertisable(publiclyAdvertisable: IResolvable) {
-    }
+    public fun publiclyAdvertisable(publiclyAdvertisable: IResolvable)
 
-    public fun sourceIpamPoolId(sourceIpamPoolId: String) {
-    }
+    public fun sourceIpamPoolId(sourceIpamPoolId: String)
 
-    public fun sourceResource(sourceResource: IResolvable) {
-    }
+    public fun sourceResource(sourceResource: IResolvable)
 
-    public fun sourceResource(sourceResource: SourceResourceProperty) {
-    }
+    public fun sourceResource(sourceResource: SourceResourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef83e558225eb21dddf1d39328df53c2bd0b498f2d5a26d4bc20ea20a24682a6")
-    public fun sourceResource(sourceResource: SourceResourceProperty.Builder.() -> Unit) {
-    }
+    public fun sourceResource(sourceResource: SourceResourceProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -245,92 +223,92 @@ public open class CfnIPAMPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnIPAMPool.Builder =
         software.amazon.awscdk.services.ec2.CfnIPAMPool.Builder.create(scope, id)
 
-    public override fun addressFamily(addressFamily: String) {
+    override fun addressFamily(addressFamily: String) {
       cdkBuilder.addressFamily(addressFamily)
     }
 
-    public override fun allocationDefaultNetmaskLength(allocationDefaultNetmaskLength: Number) {
+    override fun allocationDefaultNetmaskLength(allocationDefaultNetmaskLength: Number) {
       cdkBuilder.allocationDefaultNetmaskLength(allocationDefaultNetmaskLength)
     }
 
-    public override fun allocationMaxNetmaskLength(allocationMaxNetmaskLength: Number) {
+    override fun allocationMaxNetmaskLength(allocationMaxNetmaskLength: Number) {
       cdkBuilder.allocationMaxNetmaskLength(allocationMaxNetmaskLength)
     }
 
-    public override fun allocationMinNetmaskLength(allocationMinNetmaskLength: Number) {
+    override fun allocationMinNetmaskLength(allocationMinNetmaskLength: Number) {
       cdkBuilder.allocationMinNetmaskLength(allocationMinNetmaskLength)
     }
 
-    public override fun allocationResourceTags(allocationResourceTags: IResolvable) {
+    override fun allocationResourceTags(allocationResourceTags: IResolvable) {
       cdkBuilder.allocationResourceTags(allocationResourceTags.let(IResolvable::unwrap))
     }
 
-    public override fun allocationResourceTags(allocationResourceTags: List<Any>) {
+    override fun allocationResourceTags(allocationResourceTags: List<Any>) {
       cdkBuilder.allocationResourceTags(allocationResourceTags)
     }
 
-    public override fun autoImport(autoImport: Boolean) {
+    override fun autoImport(autoImport: Boolean) {
       cdkBuilder.autoImport(autoImport)
     }
 
-    public override fun autoImport(autoImport: IResolvable) {
+    override fun autoImport(autoImport: IResolvable) {
       cdkBuilder.autoImport(autoImport.let(IResolvable::unwrap))
     }
 
-    public override fun awsService(awsService: String) {
+    override fun awsService(awsService: String) {
       cdkBuilder.awsService(awsService)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun ipamScopeId(ipamScopeId: String) {
+    override fun ipamScopeId(ipamScopeId: String) {
       cdkBuilder.ipamScopeId(ipamScopeId)
     }
 
-    public override fun locale(locale: String) {
+    override fun locale(locale: String) {
       cdkBuilder.locale(locale)
     }
 
-    public override fun provisionedCidrs(provisionedCidrs: IResolvable) {
+    override fun provisionedCidrs(provisionedCidrs: IResolvable) {
       cdkBuilder.provisionedCidrs(provisionedCidrs.let(IResolvable::unwrap))
     }
 
-    public override fun provisionedCidrs(provisionedCidrs: List<Any>) {
+    override fun provisionedCidrs(provisionedCidrs: List<Any>) {
       cdkBuilder.provisionedCidrs(provisionedCidrs)
     }
 
-    public override fun publicIpSource(publicIpSource: String) {
+    override fun publicIpSource(publicIpSource: String) {
       cdkBuilder.publicIpSource(publicIpSource)
     }
 
-    public override fun publiclyAdvertisable(publiclyAdvertisable: Boolean) {
+    override fun publiclyAdvertisable(publiclyAdvertisable: Boolean) {
       cdkBuilder.publiclyAdvertisable(publiclyAdvertisable)
     }
 
-    public override fun publiclyAdvertisable(publiclyAdvertisable: IResolvable) {
+    override fun publiclyAdvertisable(publiclyAdvertisable: IResolvable) {
       cdkBuilder.publiclyAdvertisable(publiclyAdvertisable.let(IResolvable::unwrap))
     }
 
-    public override fun sourceIpamPoolId(sourceIpamPoolId: String) {
+    override fun sourceIpamPoolId(sourceIpamPoolId: String) {
       cdkBuilder.sourceIpamPoolId(sourceIpamPoolId)
     }
 
-    public override fun sourceResource(sourceResource: IResolvable) {
+    override fun sourceResource(sourceResource: IResolvable) {
       cdkBuilder.sourceResource(sourceResource.let(IResolvable::unwrap))
     }
 
-    public override fun sourceResource(sourceResource: SourceResourceProperty) {
+    override fun sourceResource(sourceResource: SourceResourceProperty) {
       cdkBuilder.sourceResource(sourceResource.let(SourceResourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef83e558225eb21dddf1d39328df53c2bd0b498f2d5a26d4bc20ea20a24682a6")
-    public override fun sourceResource(sourceResource: SourceResourceProperty.Builder.() -> Unit):
-        Unit = sourceResource(SourceResourceProperty(sourceResource))
+    override fun sourceResource(sourceResource: SourceResourceProperty.Builder.() -> Unit): Unit =
+        sourceResource(SourceResourceProperty(sourceResource))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -362,8 +340,7 @@ public open class CfnIPAMPool internal constructor(
     public fun cidr(): String
 
     public interface Builder {
-      public fun cidr(cidr: String) {
-      }
+      public fun cidr(cidr: String)
     }
 
     private class BuilderImpl : Builder {
@@ -371,7 +348,7 @@ public open class CfnIPAMPool internal constructor(
           software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty.builder()
 
-      public override fun cidr(cidr: String) {
+      override fun cidr(cidr: String) {
         cdkBuilder.cidr(cidr)
       }
 
@@ -383,7 +360,7 @@ public open class CfnIPAMPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnIPAMPool.ProvisionedCidrProperty,
     ) : ProvisionedCidrProperty {
-      public override fun cidr(): String = unwrap(this).getCidr()
+      override fun cidr(): String = unwrap(this).getCidr()
     }
 
     public companion object {
@@ -416,17 +393,13 @@ public open class CfnIPAMPool internal constructor(
     public fun resourceType(): String
 
     public interface Builder {
-      public fun resourceId(resourceId: String) {
-      }
+      public fun resourceId(resourceId: String)
 
-      public fun resourceOwner(resourceOwner: String) {
-      }
+      public fun resourceOwner(resourceOwner: String)
 
-      public fun resourceRegion(resourceRegion: String) {
-      }
+      public fun resourceRegion(resourceRegion: String)
 
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -434,19 +407,19 @@ public open class CfnIPAMPool internal constructor(
           software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty.builder()
 
-      public override fun resourceId(resourceId: String) {
+      override fun resourceId(resourceId: String) {
         cdkBuilder.resourceId(resourceId)
       }
 
-      public override fun resourceOwner(resourceOwner: String) {
+      override fun resourceOwner(resourceOwner: String) {
         cdkBuilder.resourceOwner(resourceOwner)
       }
 
-      public override fun resourceRegion(resourceRegion: String) {
+      override fun resourceRegion(resourceRegion: String) {
         cdkBuilder.resourceRegion(resourceRegion)
       }
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
@@ -458,13 +431,13 @@ public open class CfnIPAMPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnIPAMPool.SourceResourceProperty,
     ) : SourceResourceProperty {
-      public override fun resourceId(): String = unwrap(this).getResourceId()
+      override fun resourceId(): String = unwrap(this).getResourceId()
 
-      public override fun resourceOwner(): String = unwrap(this).getResourceOwner()
+      override fun resourceOwner(): String = unwrap(this).getResourceOwner()
 
-      public override fun resourceRegion(): String = unwrap(this).getResourceRegion()
+      override fun resourceRegion(): String = unwrap(this).getResourceRegion()
 
-      public override fun resourceType(): String = unwrap(this).getResourceType()
+      override fun resourceType(): String = unwrap(this).getResourceType()
     }
 
     public companion object {

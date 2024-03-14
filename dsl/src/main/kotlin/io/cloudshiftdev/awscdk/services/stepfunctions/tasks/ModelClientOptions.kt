@@ -11,11 +11,9 @@ public interface ModelClientOptions {
       unwrap(this).getInvocationsTimeout()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun invocationsMaxRetries(invocationsMaxRetries: Number) {
-    }
+    public fun invocationsMaxRetries(invocationsMaxRetries: Number)
 
-    public fun invocationsTimeout(invocationsTimeout: Duration) {
-    }
+    public fun invocationsTimeout(invocationsTimeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -23,11 +21,11 @@ public interface ModelClientOptions {
         software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions.builder()
 
-    public override fun invocationsMaxRetries(invocationsMaxRetries: Number) {
+    override fun invocationsMaxRetries(invocationsMaxRetries: Number) {
       cdkBuilder.invocationsMaxRetries(invocationsMaxRetries)
     }
 
-    public override fun invocationsTimeout(invocationsTimeout: Duration) {
+    override fun invocationsTimeout(invocationsTimeout: Duration) {
       cdkBuilder.invocationsTimeout(invocationsTimeout.let(Duration::unwrap))
     }
 
@@ -38,9 +36,9 @@ public interface ModelClientOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions,
   ) : ModelClientOptions {
-    public override fun invocationsMaxRetries(): Number? = unwrap(this).getInvocationsMaxRetries()
+    override fun invocationsMaxRetries(): Number? = unwrap(this).getInvocationsMaxRetries()
 
-    public override fun invocationsTimeout(): Duration? =
+    override fun invocationsTimeout(): Duration? =
         unwrap(this).getInvocationsTimeout()?.let(Duration::wrap)
   }
 

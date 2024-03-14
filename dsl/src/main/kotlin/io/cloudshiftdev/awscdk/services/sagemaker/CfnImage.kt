@@ -55,20 +55,15 @@ public open class CfnImage internal constructor(
   }
 
   public interface Builder {
-    public fun imageDescription(imageDescription: String) {
-    }
+    public fun imageDescription(imageDescription: String)
 
-    public fun imageDisplayName(imageDisplayName: String) {
-    }
+    public fun imageDisplayName(imageDisplayName: String)
 
-    public fun imageName(imageName: String) {
-    }
+    public fun imageName(imageName: String)
 
-    public fun imageRoleArn(imageRoleArn: String) {
-    }
+    public fun imageRoleArn(imageRoleArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -78,23 +73,23 @@ public open class CfnImage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnImage.Builder =
         software.amazon.awscdk.services.sagemaker.CfnImage.Builder.create(scope, id)
 
-    public override fun imageDescription(imageDescription: String) {
+    override fun imageDescription(imageDescription: String) {
       cdkBuilder.imageDescription(imageDescription)
     }
 
-    public override fun imageDisplayName(imageDisplayName: String) {
+    override fun imageDisplayName(imageDisplayName: String) {
       cdkBuilder.imageDisplayName(imageDisplayName)
     }
 
-    public override fun imageName(imageName: String) {
+    override fun imageName(imageName: String) {
       cdkBuilder.imageName(imageName)
     }
 
-    public override fun imageRoleArn(imageRoleArn: String) {
+    override fun imageRoleArn(imageRoleArn: String) {
       cdkBuilder.imageRoleArn(imageRoleArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

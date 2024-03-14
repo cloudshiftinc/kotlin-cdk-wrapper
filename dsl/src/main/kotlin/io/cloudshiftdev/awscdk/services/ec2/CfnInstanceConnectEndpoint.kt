@@ -63,23 +63,17 @@ public open class CfnInstanceConnectEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun clientToken(clientToken: String) {
-    }
+    public fun clientToken(clientToken: String)
 
-    public fun preserveClientIp(preserveClientIp: Boolean) {
-    }
+    public fun preserveClientIp(preserveClientIp: Boolean)
 
-    public fun preserveClientIp(preserveClientIp: IResolvable) {
-    }
+    public fun preserveClientIp(preserveClientIp: IResolvable)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -89,27 +83,27 @@ public open class CfnInstanceConnectEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint.Builder =
         software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint.Builder.create(scope, id)
 
-    public override fun clientToken(clientToken: String) {
+    override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
 
-    public override fun preserveClientIp(preserveClientIp: Boolean) {
+    override fun preserveClientIp(preserveClientIp: Boolean) {
       cdkBuilder.preserveClientIp(preserveClientIp)
     }
 
-    public override fun preserveClientIp(preserveClientIp: IResolvable) {
+    override fun preserveClientIp(preserveClientIp: IResolvable) {
       cdkBuilder.preserveClientIp(preserveClientIp.let(IResolvable::unwrap))
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

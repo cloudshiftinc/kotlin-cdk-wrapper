@@ -135,58 +135,41 @@ public open class CfnCloudFormationProduct internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun distributor(distributor: String) {
-    }
+    public fun distributor(distributor: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun owner(owner: String) {
-    }
+    public fun owner(owner: String)
 
-    public fun productType(productType: String) {
-    }
+    public fun productType(productType: String)
 
-    public fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable) {
-    }
+    public fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable)
 
-    public fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>) {
-    }
+    public fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>)
 
-    public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean) {
-    }
+    public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean)
 
-    public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable) {
-    }
+    public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable)
 
-    public fun sourceConnection(sourceConnection: IResolvable) {
-    }
+    public fun sourceConnection(sourceConnection: IResolvable)
 
-    public fun sourceConnection(sourceConnection: SourceConnectionProperty) {
-    }
+    public fun sourceConnection(sourceConnection: SourceConnectionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6cff10ddcf3be0f1cd49992c4b0f8bb297910e7d596f39cfdab4e7c43de6b5f")
-    public fun sourceConnection(sourceConnection: SourceConnectionProperty.Builder.() -> Unit) {
-    }
+    public fun sourceConnection(sourceConnection: SourceConnectionProperty.Builder.() -> Unit)
 
-    public fun supportDescription(supportDescription: String) {
-    }
+    public fun supportDescription(supportDescription: String)
 
-    public fun supportEmail(supportEmail: String) {
-    }
+    public fun supportEmail(supportEmail: String)
 
-    public fun supportUrl(supportUrl: String) {
-    }
+    public fun supportUrl(supportUrl: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -198,74 +181,72 @@ public open class CfnCloudFormationProduct internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun distributor(distributor: String) {
+    override fun distributor(distributor: String) {
       cdkBuilder.distributor(distributor)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun owner(owner: String) {
+    override fun owner(owner: String) {
       cdkBuilder.owner(owner)
     }
 
-    public override fun productType(productType: String) {
+    override fun productType(productType: String) {
       cdkBuilder.productType(productType)
     }
 
-    public override
-        fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable) {
+    override fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable) {
       cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.let(IResolvable::unwrap))
     }
 
-    public override fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>) {
+    override fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>) {
       cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters)
     }
 
-    public override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean) {
+    override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean) {
       cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts)
     }
 
-    public override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable) {
+    override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable) {
       cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts.let(IResolvable::unwrap))
     }
 
-    public override fun sourceConnection(sourceConnection: IResolvable) {
+    override fun sourceConnection(sourceConnection: IResolvable) {
       cdkBuilder.sourceConnection(sourceConnection.let(IResolvable::unwrap))
     }
 
-    public override fun sourceConnection(sourceConnection: SourceConnectionProperty) {
+    override fun sourceConnection(sourceConnection: SourceConnectionProperty) {
       cdkBuilder.sourceConnection(sourceConnection.let(SourceConnectionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6cff10ddcf3be0f1cd49992c4b0f8bb297910e7d596f39cfdab4e7c43de6b5f")
-    public override
-        fun sourceConnection(sourceConnection: SourceConnectionProperty.Builder.() -> Unit): Unit =
-        sourceConnection(SourceConnectionProperty(sourceConnection))
+    override fun sourceConnection(sourceConnection: SourceConnectionProperty.Builder.() -> Unit):
+        Unit = sourceConnection(SourceConnectionProperty(sourceConnection))
 
-    public override fun supportDescription(supportDescription: String) {
+    override fun supportDescription(supportDescription: String) {
       cdkBuilder.supportDescription(supportDescription)
     }
 
-    public override fun supportEmail(supportEmail: String) {
+    override fun supportEmail(supportEmail: String) {
       cdkBuilder.supportEmail(supportEmail)
     }
 
-    public override fun supportUrl(supportUrl: String) {
+    override fun supportUrl(supportUrl: String) {
       cdkBuilder.supportUrl(supportUrl)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -307,23 +288,17 @@ public open class CfnCloudFormationProduct internal constructor(
     public fun type(): String? = unwrap(this).getType()
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun disableTemplateValidation(disableTemplateValidation: Boolean) {
-      }
+      public fun disableTemplateValidation(disableTemplateValidation: Boolean)
 
-      public fun disableTemplateValidation(disableTemplateValidation: IResolvable) {
-      }
+      public fun disableTemplateValidation(disableTemplateValidation: IResolvable)
 
-      public fun info(info: Any) {
-      }
+      public fun info(info: Any)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -332,27 +307,27 @@ public open class CfnCloudFormationProduct internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun disableTemplateValidation(disableTemplateValidation: Boolean) {
+      override fun disableTemplateValidation(disableTemplateValidation: Boolean) {
         cdkBuilder.disableTemplateValidation(disableTemplateValidation)
       }
 
-      public override fun disableTemplateValidation(disableTemplateValidation: IResolvable) {
+      override fun disableTemplateValidation(disableTemplateValidation: IResolvable) {
         cdkBuilder.disableTemplateValidation(disableTemplateValidation.let(IResolvable::unwrap))
       }
 
-      public override fun info(info: Any) {
+      override fun info(info: Any) {
         cdkBuilder.info(info)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -365,16 +340,15 @@ public open class CfnCloudFormationProduct internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty,
     ) : ProvisioningArtifactPropertiesProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun disableTemplateValidation(): Any? =
-          unwrap(this).getDisableTemplateValidation()
+      override fun disableTemplateValidation(): Any? = unwrap(this).getDisableTemplateValidation()
 
-      public override fun info(): Any = unwrap(this).getInfo()
+      override fun info(): Any = unwrap(this).getInfo()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {
@@ -408,17 +382,13 @@ public open class CfnCloudFormationProduct internal constructor(
     public fun repository(): String
 
     public interface Builder {
-      public fun artifactPath(artifactPath: String) {
-      }
+      public fun artifactPath(artifactPath: String)
 
-      public fun branch(branch: String) {
-      }
+      public fun branch(branch: String)
 
-      public fun connectionArn(connectionArn: String) {
-      }
+      public fun connectionArn(connectionArn: String)
 
-      public fun repository(repository: String) {
-      }
+      public fun repository(repository: String)
     }
 
     private class BuilderImpl : Builder {
@@ -427,19 +397,19 @@ public open class CfnCloudFormationProduct internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty.builder()
 
-      public override fun artifactPath(artifactPath: String) {
+      override fun artifactPath(artifactPath: String) {
         cdkBuilder.artifactPath(artifactPath)
       }
 
-      public override fun branch(branch: String) {
+      override fun branch(branch: String) {
         cdkBuilder.branch(branch)
       }
 
-      public override fun connectionArn(connectionArn: String) {
+      override fun connectionArn(connectionArn: String) {
         cdkBuilder.connectionArn(connectionArn)
       }
 
-      public override fun repository(repository: String) {
+      override fun repository(repository: String) {
         cdkBuilder.repository(repository)
       }
 
@@ -452,13 +422,13 @@ public open class CfnCloudFormationProduct internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.CodeStarParametersProperty,
     ) : CodeStarParametersProperty {
-      public override fun artifactPath(): String = unwrap(this).getArtifactPath()
+      override fun artifactPath(): String = unwrap(this).getArtifactPath()
 
-      public override fun branch(): String = unwrap(this).getBranch()
+      override fun branch(): String = unwrap(this).getBranch()
 
-      public override fun connectionArn(): String = unwrap(this).getConnectionArn()
+      override fun connectionArn(): String = unwrap(this).getConnectionArn()
 
-      public override fun repository(): String = unwrap(this).getRepository()
+      override fun repository(): String = unwrap(this).getRepository()
     }
 
     public companion object {
@@ -485,16 +455,13 @@ public open class CfnCloudFormationProduct internal constructor(
     public fun codeStar(): Any? = unwrap(this).getCodeStar()
 
     public interface Builder {
-      public fun codeStar(codeStar: IResolvable) {
-      }
+      public fun codeStar(codeStar: IResolvable)
 
-      public fun codeStar(codeStar: CodeStarParametersProperty) {
-      }
+      public fun codeStar(codeStar: CodeStarParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4535c19f9c126f48c42ff0a7c4dd97d57374d914f7acd5c03106fed30edddd8b")
-      public fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit) {
-      }
+      public fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -503,17 +470,17 @@ public open class CfnCloudFormationProduct internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty.builder()
 
-      public override fun codeStar(codeStar: IResolvable) {
+      override fun codeStar(codeStar: IResolvable) {
         cdkBuilder.codeStar(codeStar.let(IResolvable::unwrap))
       }
 
-      public override fun codeStar(codeStar: CodeStarParametersProperty) {
+      override fun codeStar(codeStar: CodeStarParametersProperty) {
         cdkBuilder.codeStar(codeStar.let(CodeStarParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4535c19f9c126f48c42ff0a7c4dd97d57374d914f7acd5c03106fed30edddd8b")
-      public override fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit): Unit =
+      override fun codeStar(codeStar: CodeStarParametersProperty.Builder.() -> Unit): Unit =
           codeStar(CodeStarParametersProperty(codeStar))
 
       public fun build():
@@ -525,7 +492,7 @@ public open class CfnCloudFormationProduct internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.ConnectionParametersProperty,
     ) : ConnectionParametersProperty {
-      public override fun codeStar(): Any? = unwrap(this).getCodeStar()
+      override fun codeStar(): Any? = unwrap(this).getCodeStar()
     }
 
     public companion object {
@@ -554,20 +521,16 @@ public open class CfnCloudFormationProduct internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun connectionParameters(connectionParameters: IResolvable) {
-      }
+      public fun connectionParameters(connectionParameters: IResolvable)
 
-      public fun connectionParameters(connectionParameters: ConnectionParametersProperty) {
-      }
+      public fun connectionParameters(connectionParameters: ConnectionParametersProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91e8b9c506db905bed859bcb46d9e4023c14486820356214116cac00209d0817")
       public
-          fun connectionParameters(connectionParameters: ConnectionParametersProperty.Builder.() -> Unit) {
-      }
+          fun connectionParameters(connectionParameters: ConnectionParametersProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -576,21 +539,21 @@ public open class CfnCloudFormationProduct internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty.builder()
 
-      public override fun connectionParameters(connectionParameters: IResolvable) {
+      override fun connectionParameters(connectionParameters: IResolvable) {
         cdkBuilder.connectionParameters(connectionParameters.let(IResolvable::unwrap))
       }
 
-      public override fun connectionParameters(connectionParameters: ConnectionParametersProperty) {
+      override fun connectionParameters(connectionParameters: ConnectionParametersProperty) {
         cdkBuilder.connectionParameters(connectionParameters.let(ConnectionParametersProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("91e8b9c506db905bed859bcb46d9e4023c14486820356214116cac00209d0817")
-      public override
+      override
           fun connectionParameters(connectionParameters: ConnectionParametersProperty.Builder.() -> Unit):
           Unit = connectionParameters(ConnectionParametersProperty(connectionParameters))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -603,9 +566,9 @@ public open class CfnCloudFormationProduct internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct.SourceConnectionProperty,
     ) : SourceConnectionProperty {
-      public override fun connectionParameters(): Any = unwrap(this).getConnectionParameters()
+      override fun connectionParameters(): Any = unwrap(this).getConnectionParameters()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

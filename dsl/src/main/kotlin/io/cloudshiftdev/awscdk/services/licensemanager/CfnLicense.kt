@@ -129,70 +129,50 @@ public open class CfnLicense internal constructor(
       validity(ValidityDateFormatProperty(`value`))
 
   public interface Builder {
-    public fun beneficiary(beneficiary: String) {
-    }
+    public fun beneficiary(beneficiary: String)
 
-    public fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
-    }
+    public fun consumptionConfiguration(consumptionConfiguration: IResolvable)
 
-    public
-        fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty) {
-    }
+    public fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c381d3007db790ac6ebe995147719eaff4f7a7474f744d357cf799ca507facf5")
     public
-        fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty.Builder.() -> Unit)
 
-    public fun entitlements(entitlements: IResolvable) {
-    }
+    public fun entitlements(entitlements: IResolvable)
 
-    public fun entitlements(entitlements: List<Any>) {
-    }
+    public fun entitlements(entitlements: List<Any>)
 
-    public fun homeRegion(homeRegion: String) {
-    }
+    public fun homeRegion(homeRegion: String)
 
-    public fun issuer(issuer: IResolvable) {
-    }
+    public fun issuer(issuer: IResolvable)
 
-    public fun issuer(issuer: IssuerDataProperty) {
-    }
+    public fun issuer(issuer: IssuerDataProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3b2d010e90f715de699d60a129aeec6f7ac92a4faf1d4e51fa354509b02b5f94")
-    public fun issuer(issuer: IssuerDataProperty.Builder.() -> Unit) {
-    }
+    public fun issuer(issuer: IssuerDataProperty.Builder.() -> Unit)
 
-    public fun licenseMetadata(licenseMetadata: IResolvable) {
-    }
+    public fun licenseMetadata(licenseMetadata: IResolvable)
 
-    public fun licenseMetadata(licenseMetadata: List<Any>) {
-    }
+    public fun licenseMetadata(licenseMetadata: List<Any>)
 
-    public fun licenseName(licenseName: String) {
-    }
+    public fun licenseName(licenseName: String)
 
-    public fun productName(productName: String) {
-    }
+    public fun productName(productName: String)
 
-    public fun productSku(productSku: String) {
-    }
+    public fun productSku(productSku: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun validity(validity: IResolvable) {
-    }
+    public fun validity(validity: IResolvable)
 
-    public fun validity(validity: ValidityDateFormatProperty) {
-    }
+    public fun validity(validity: ValidityDateFormatProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b49fdc58228a7e055f6a063c67168019576b3a8b23cbc543b8083466e26e70aa")
-    public fun validity(validity: ValidityDateFormatProperty.Builder.() -> Unit) {
-    }
+    public fun validity(validity: ValidityDateFormatProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -202,85 +182,85 @@ public open class CfnLicense internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.licensemanager.CfnLicense.Builder =
         software.amazon.awscdk.services.licensemanager.CfnLicense.Builder.create(scope, id)
 
-    public override fun beneficiary(beneficiary: String) {
+    override fun beneficiary(beneficiary: String) {
       cdkBuilder.beneficiary(beneficiary)
     }
 
-    public override fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
+    override fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
       cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty) {
       cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(ConsumptionConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c381d3007db790ac6ebe995147719eaff4f7a7474f744d357cf799ca507facf5")
-    public override
+    override
         fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty.Builder.() -> Unit):
         Unit = consumptionConfiguration(ConsumptionConfigurationProperty(consumptionConfiguration))
 
-    public override fun entitlements(entitlements: IResolvable) {
+    override fun entitlements(entitlements: IResolvable) {
       cdkBuilder.entitlements(entitlements.let(IResolvable::unwrap))
     }
 
-    public override fun entitlements(entitlements: List<Any>) {
+    override fun entitlements(entitlements: List<Any>) {
       cdkBuilder.entitlements(entitlements)
     }
 
-    public override fun homeRegion(homeRegion: String) {
+    override fun homeRegion(homeRegion: String) {
       cdkBuilder.homeRegion(homeRegion)
     }
 
-    public override fun issuer(issuer: IResolvable) {
+    override fun issuer(issuer: IResolvable) {
       cdkBuilder.issuer(issuer.let(IResolvable::unwrap))
     }
 
-    public override fun issuer(issuer: IssuerDataProperty) {
+    override fun issuer(issuer: IssuerDataProperty) {
       cdkBuilder.issuer(issuer.let(IssuerDataProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3b2d010e90f715de699d60a129aeec6f7ac92a4faf1d4e51fa354509b02b5f94")
-    public override fun issuer(issuer: IssuerDataProperty.Builder.() -> Unit): Unit =
+    override fun issuer(issuer: IssuerDataProperty.Builder.() -> Unit): Unit =
         issuer(IssuerDataProperty(issuer))
 
-    public override fun licenseMetadata(licenseMetadata: IResolvable) {
+    override fun licenseMetadata(licenseMetadata: IResolvable) {
       cdkBuilder.licenseMetadata(licenseMetadata.let(IResolvable::unwrap))
     }
 
-    public override fun licenseMetadata(licenseMetadata: List<Any>) {
+    override fun licenseMetadata(licenseMetadata: List<Any>) {
       cdkBuilder.licenseMetadata(licenseMetadata)
     }
 
-    public override fun licenseName(licenseName: String) {
+    override fun licenseName(licenseName: String) {
       cdkBuilder.licenseName(licenseName)
     }
 
-    public override fun productName(productName: String) {
+    override fun productName(productName: String) {
       cdkBuilder.productName(productName)
     }
 
-    public override fun productSku(productSku: String) {
+    override fun productSku(productSku: String) {
       cdkBuilder.productSku(productSku)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun validity(validity: IResolvable) {
+    override fun validity(validity: IResolvable) {
       cdkBuilder.validity(validity.let(IResolvable::unwrap))
     }
 
-    public override fun validity(validity: ValidityDateFormatProperty) {
+    override fun validity(validity: ValidityDateFormatProperty) {
       cdkBuilder.validity(validity.let(ValidityDateFormatProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b49fdc58228a7e055f6a063c67168019576b3a8b23cbc543b8083466e26e70aa")
-    public override fun validity(validity: ValidityDateFormatProperty.Builder.() -> Unit): Unit =
+    override fun validity(validity: ValidityDateFormatProperty.Builder.() -> Unit): Unit =
         validity(ValidityDateFormatProperty(validity))
 
     public fun build(): software.amazon.awscdk.services.licensemanager.CfnLicense =
@@ -312,8 +292,7 @@ public open class CfnLicense internal constructor(
     public fun maxTimeToLiveInMinutes(): Number
 
     public interface Builder {
-      public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
-      }
+      public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -322,7 +301,7 @@ public open class CfnLicense internal constructor(
           =
           software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty.builder()
 
-      public override fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
+      override fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
         cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
       }
 
@@ -335,8 +314,7 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty,
     ) : ProvisionalConfigurationProperty {
-      public override fun maxTimeToLiveInMinutes(): Number =
-          unwrap(this).getMaxTimeToLiveInMinutes()
+      override fun maxTimeToLiveInMinutes(): Number = unwrap(this).getMaxTimeToLiveInMinutes()
     }
 
     public companion object {
@@ -365,11 +343,9 @@ public open class CfnLicense internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -377,11 +353,11 @@ public open class CfnLicense internal constructor(
           software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty.Builder =
           software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -393,9 +369,9 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty,
     ) : MetadataProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -432,29 +408,21 @@ public open class CfnLicense internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun allowCheckIn(allowCheckIn: Boolean) {
-      }
+      public fun allowCheckIn(allowCheckIn: Boolean)
 
-      public fun allowCheckIn(allowCheckIn: IResolvable) {
-      }
+      public fun allowCheckIn(allowCheckIn: IResolvable)
 
-      public fun maxCount(maxCount: Number) {
-      }
+      public fun maxCount(maxCount: Number)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun overage(overage: Boolean) {
-      }
+      public fun overage(overage: Boolean)
 
-      public fun overage(overage: IResolvable) {
-      }
+      public fun overage(overage: IResolvable)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -462,35 +430,35 @@ public open class CfnLicense internal constructor(
           software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty.Builder =
           software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty.builder()
 
-      public override fun allowCheckIn(allowCheckIn: Boolean) {
+      override fun allowCheckIn(allowCheckIn: Boolean) {
         cdkBuilder.allowCheckIn(allowCheckIn)
       }
 
-      public override fun allowCheckIn(allowCheckIn: IResolvable) {
+      override fun allowCheckIn(allowCheckIn: IResolvable) {
         cdkBuilder.allowCheckIn(allowCheckIn.let(IResolvable::unwrap))
       }
 
-      public override fun maxCount(maxCount: Number) {
+      override fun maxCount(maxCount: Number) {
         cdkBuilder.maxCount(maxCount)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun overage(overage: Boolean) {
+      override fun overage(overage: Boolean) {
         cdkBuilder.overage(overage)
       }
 
-      public override fun overage(overage: IResolvable) {
+      override fun overage(overage: IResolvable) {
         cdkBuilder.overage(overage.let(IResolvable::unwrap))
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -503,17 +471,17 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty,
     ) : EntitlementProperty {
-      public override fun allowCheckIn(): Any? = unwrap(this).getAllowCheckIn()
+      override fun allowCheckIn(): Any? = unwrap(this).getAllowCheckIn()
 
-      public override fun maxCount(): Number? = unwrap(this).getMaxCount()
+      override fun maxCount(): Number? = unwrap(this).getMaxCount()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun overage(): Any? = unwrap(this).getOverage()
+      override fun overage(): Any? = unwrap(this).getOverage()
 
-      public override fun unit(): String = unwrap(this).getUnit()
+      override fun unit(): String = unwrap(this).getUnit()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {
@@ -542,11 +510,9 @@ public open class CfnLicense internal constructor(
     public fun end(): String
 
     public interface Builder {
-      public fun begin(begin: String) {
-      }
+      public fun begin(begin: String)
 
-      public fun end(end: String) {
-      }
+      public fun end(end: String)
     }
 
     private class BuilderImpl : Builder {
@@ -555,11 +521,11 @@ public open class CfnLicense internal constructor(
           =
           software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty.builder()
 
-      public override fun begin(begin: String) {
+      override fun begin(begin: String) {
         cdkBuilder.begin(begin)
       }
 
-      public override fun end(end: String) {
+      override fun end(end: String) {
         cdkBuilder.end(end)
       }
 
@@ -572,9 +538,9 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty,
     ) : ValidityDateFormatProperty {
-      public override fun begin(): String = unwrap(this).getBegin()
+      override fun begin(): String = unwrap(this).getBegin()
 
-      public override fun end(): String = unwrap(this).getEnd()
+      override fun end(): String = unwrap(this).getEnd()
     }
 
     public companion object {
@@ -603,11 +569,9 @@ public open class CfnLicense internal constructor(
     public fun signKey(): String? = unwrap(this).getSignKey()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun signKey(signKey: String) {
-      }
+      public fun signKey(signKey: String)
     }
 
     private class BuilderImpl : Builder {
@@ -615,11 +579,11 @@ public open class CfnLicense internal constructor(
           software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty.Builder =
           software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun signKey(signKey: String) {
+      override fun signKey(signKey: String) {
         cdkBuilder.signKey(signKey)
       }
 
@@ -632,9 +596,9 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty,
     ) : IssuerDataProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun signKey(): String? = unwrap(this).getSignKey()
+      override fun signKey(): String? = unwrap(this).getSignKey()
     }
 
     public companion object {
@@ -663,14 +627,11 @@ public open class CfnLicense internal constructor(
     public fun maxTimeToLiveInMinutes(): Number
 
     public interface Builder {
-      public fun allowEarlyCheckIn(allowEarlyCheckIn: Boolean) {
-      }
+      public fun allowEarlyCheckIn(allowEarlyCheckIn: Boolean)
 
-      public fun allowEarlyCheckIn(allowEarlyCheckIn: IResolvable) {
-      }
+      public fun allowEarlyCheckIn(allowEarlyCheckIn: IResolvable)
 
-      public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
-      }
+      public fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -679,15 +640,15 @@ public open class CfnLicense internal constructor(
           =
           software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty.builder()
 
-      public override fun allowEarlyCheckIn(allowEarlyCheckIn: Boolean) {
+      override fun allowEarlyCheckIn(allowEarlyCheckIn: Boolean) {
         cdkBuilder.allowEarlyCheckIn(allowEarlyCheckIn)
       }
 
-      public override fun allowEarlyCheckIn(allowEarlyCheckIn: IResolvable) {
+      override fun allowEarlyCheckIn(allowEarlyCheckIn: IResolvable) {
         cdkBuilder.allowEarlyCheckIn(allowEarlyCheckIn.let(IResolvable::unwrap))
       }
 
-      public override fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
+      override fun maxTimeToLiveInMinutes(maxTimeToLiveInMinutes: Number) {
         cdkBuilder.maxTimeToLiveInMinutes(maxTimeToLiveInMinutes)
       }
 
@@ -700,10 +661,9 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty,
     ) : BorrowConfigurationProperty {
-      public override fun allowEarlyCheckIn(): Any = unwrap(this).getAllowEarlyCheckIn()
+      override fun allowEarlyCheckIn(): Any = unwrap(this).getAllowEarlyCheckIn()
 
-      public override fun maxTimeToLiveInMinutes(): Number =
-          unwrap(this).getMaxTimeToLiveInMinutes()
+      override fun maxTimeToLiveInMinutes(): Number = unwrap(this).getMaxTimeToLiveInMinutes()
     }
 
     public companion object {
@@ -734,33 +694,26 @@ public open class CfnLicense internal constructor(
     public fun renewType(): String? = unwrap(this).getRenewType()
 
     public interface Builder {
-      public fun borrowConfiguration(borrowConfiguration: IResolvable) {
-      }
+      public fun borrowConfiguration(borrowConfiguration: IResolvable)
 
-      public fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty) {
-      }
+      public fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e17b42d180bed9064b92db2ed67943a13fd53dba08f9509bb51af24a6728592a")
       public
-          fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty.Builder.() -> Unit)
 
-      public fun provisionalConfiguration(provisionalConfiguration: IResolvable) {
-      }
+      public fun provisionalConfiguration(provisionalConfiguration: IResolvable)
 
       public
-          fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty) {
-      }
+          fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("deec56397e9f8598e97e6b157023f292b91f6df1781d03d5b810783919c042c3")
       public
-          fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty.Builder.() -> Unit)
 
-      public fun renewType(renewType: String) {
-      }
+      public fun renewType(renewType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -769,37 +722,37 @@ public open class CfnLicense internal constructor(
           =
           software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty.builder()
 
-      public override fun borrowConfiguration(borrowConfiguration: IResolvable) {
+      override fun borrowConfiguration(borrowConfiguration: IResolvable) {
         cdkBuilder.borrowConfiguration(borrowConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty) {
+      override fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty) {
         cdkBuilder.borrowConfiguration(borrowConfiguration.let(BorrowConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e17b42d180bed9064b92db2ed67943a13fd53dba08f9509bb51af24a6728592a")
-      public override
+      override
           fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty.Builder.() -> Unit):
           Unit = borrowConfiguration(BorrowConfigurationProperty(borrowConfiguration))
 
-      public override fun provisionalConfiguration(provisionalConfiguration: IResolvable) {
+      override fun provisionalConfiguration(provisionalConfiguration: IResolvable) {
         cdkBuilder.provisionalConfiguration(provisionalConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty) {
         cdkBuilder.provisionalConfiguration(provisionalConfiguration.let(ProvisionalConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("deec56397e9f8598e97e6b157023f292b91f6df1781d03d5b810783919c042c3")
-      public override
+      override
           fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty.Builder.() -> Unit):
           Unit =
           provisionalConfiguration(ProvisionalConfigurationProperty(provisionalConfiguration))
 
-      public override fun renewType(renewType: String) {
+      override fun renewType(renewType: String) {
         cdkBuilder.renewType(renewType)
       }
 
@@ -812,12 +765,11 @@ public open class CfnLicense internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty,
     ) : ConsumptionConfigurationProperty {
-      public override fun borrowConfiguration(): Any? = unwrap(this).getBorrowConfiguration()
+      override fun borrowConfiguration(): Any? = unwrap(this).getBorrowConfiguration()
 
-      public override fun provisionalConfiguration(): Any? =
-          unwrap(this).getProvisionalConfiguration()
+      override fun provisionalConfiguration(): Any? = unwrap(this).getProvisionalConfiguration()
 
-      public override fun renewType(): String? = unwrap(this).getRenewType()
+      override fun renewType(): String? = unwrap(this).getRenewType()
     }
 
     public companion object {

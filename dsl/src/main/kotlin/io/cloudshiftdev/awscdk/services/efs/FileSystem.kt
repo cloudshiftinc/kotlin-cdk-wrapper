@@ -69,71 +69,50 @@ public open class FileSystem internal constructor(
       unwrap(this).getMountTargetsAvailable().let(IDependable::wrap)
 
   public interface Builder {
-    public fun allowAnonymousAccess(allowAnonymousAccess: Boolean) {
-    }
+    public fun allowAnonymousAccess(allowAnonymousAccess: Boolean)
 
-    public fun enableAutomaticBackups(enableAutomaticBackups: Boolean) {
-    }
+    public fun enableAutomaticBackups(enableAutomaticBackups: Boolean)
 
-    public fun encrypted(encrypted: Boolean) {
-    }
+    public fun encrypted(encrypted: Boolean)
 
-    public fun fileSystemName(fileSystemName: String) {
-    }
+    public fun fileSystemName(fileSystemName: String)
 
-    public fun fileSystemPolicy(fileSystemPolicy: PolicyDocument) {
-    }
+    public fun fileSystemPolicy(fileSystemPolicy: PolicyDocument)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("936124fbdf6b3c84db4a15b4d30374f0293d7e22961a7ba4b09fb74e5493c288")
-    public fun fileSystemPolicy(fileSystemPolicy: PolicyDocument.Builder.() -> Unit) {
-    }
+    public fun fileSystemPolicy(fileSystemPolicy: PolicyDocument.Builder.() -> Unit)
 
-    public fun kmsKey(kmsKey: IKey) {
-    }
+    public fun kmsKey(kmsKey: IKey)
 
-    public fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicy) {
-    }
+    public fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicy)
 
-    public fun oneZone(oneZone: Boolean) {
-    }
+    public fun oneZone(oneZone: Boolean)
 
-    public
-        fun outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy: OutOfInfrequentAccessPolicy) {
-    }
+    public fun outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy: OutOfInfrequentAccessPolicy)
 
-    public fun performanceMode(performanceMode: PerformanceMode) {
-    }
+    public fun performanceMode(performanceMode: PerformanceMode)
 
-    public fun provisionedThroughputPerSecond(provisionedThroughputPerSecond: Size) {
-    }
+    public fun provisionedThroughputPerSecond(provisionedThroughputPerSecond: Size)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
     public
-        fun replicationOverwriteProtection(replicationOverwriteProtection: ReplicationOverwriteProtection) {
-    }
+        fun replicationOverwriteProtection(replicationOverwriteProtection: ReplicationOverwriteProtection)
 
-    public fun securityGroup(securityGroup: ISecurityGroup) {
-    }
+    public fun securityGroup(securityGroup: ISecurityGroup)
 
-    public fun throughputMode(throughputMode: ThroughputMode) {
-    }
+    public fun throughputMode(throughputMode: ThroughputMode)
 
-    public fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy) {
-    }
+    public fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e822441263bb51dd2dcccf879bb057ca24273424f0b9396fbc659cb3cf008239")
-    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit) {
-    }
+    public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -143,88 +122,88 @@ public open class FileSystem internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.efs.FileSystem.Builder =
         software.amazon.awscdk.services.efs.FileSystem.Builder.create(scope, id)
 
-    public override fun allowAnonymousAccess(allowAnonymousAccess: Boolean) {
+    override fun allowAnonymousAccess(allowAnonymousAccess: Boolean) {
       cdkBuilder.allowAnonymousAccess(allowAnonymousAccess)
     }
 
-    public override fun enableAutomaticBackups(enableAutomaticBackups: Boolean) {
+    override fun enableAutomaticBackups(enableAutomaticBackups: Boolean) {
       cdkBuilder.enableAutomaticBackups(enableAutomaticBackups)
     }
 
-    public override fun encrypted(encrypted: Boolean) {
+    override fun encrypted(encrypted: Boolean) {
       cdkBuilder.encrypted(encrypted)
     }
 
-    public override fun fileSystemName(fileSystemName: String) {
+    override fun fileSystemName(fileSystemName: String) {
       cdkBuilder.fileSystemName(fileSystemName)
     }
 
-    public override fun fileSystemPolicy(fileSystemPolicy: PolicyDocument) {
+    override fun fileSystemPolicy(fileSystemPolicy: PolicyDocument) {
       cdkBuilder.fileSystemPolicy(fileSystemPolicy.let(PolicyDocument::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("936124fbdf6b3c84db4a15b4d30374f0293d7e22961a7ba4b09fb74e5493c288")
-    public override fun fileSystemPolicy(fileSystemPolicy: PolicyDocument.Builder.() -> Unit): Unit
-        = fileSystemPolicy(PolicyDocument(fileSystemPolicy))
+    override fun fileSystemPolicy(fileSystemPolicy: PolicyDocument.Builder.() -> Unit): Unit =
+        fileSystemPolicy(PolicyDocument(fileSystemPolicy))
 
-    public override fun kmsKey(kmsKey: IKey) {
+    override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
     }
 
-    public override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicy) {
+    override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicy) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicy::unwrap))
     }
 
-    public override fun oneZone(oneZone: Boolean) {
+    override fun oneZone(oneZone: Boolean) {
       cdkBuilder.oneZone(oneZone)
     }
 
-    public override
+    override
         fun outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy: OutOfInfrequentAccessPolicy) {
       cdkBuilder.outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy.let(OutOfInfrequentAccessPolicy::unwrap))
     }
 
-    public override fun performanceMode(performanceMode: PerformanceMode) {
+    override fun performanceMode(performanceMode: PerformanceMode) {
       cdkBuilder.performanceMode(performanceMode.let(PerformanceMode::unwrap))
     }
 
-    public override fun provisionedThroughputPerSecond(provisionedThroughputPerSecond: Size) {
+    override fun provisionedThroughputPerSecond(provisionedThroughputPerSecond: Size) {
       cdkBuilder.provisionedThroughputPerSecond(provisionedThroughputPerSecond.let(Size::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override
+    override
         fun replicationOverwriteProtection(replicationOverwriteProtection: ReplicationOverwriteProtection) {
       cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection.let(ReplicationOverwriteProtection::unwrap))
     }
 
-    public override fun securityGroup(securityGroup: ISecurityGroup) {
+    override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
 
-    public override fun throughputMode(throughputMode: ThroughputMode) {
+    override fun throughputMode(throughputMode: ThroughputMode) {
       cdkBuilder.throughputMode(throughputMode.let(ThroughputMode::unwrap))
     }
 
-    public override fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy) {
+    override fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy) {
       cdkBuilder.transitionToArchivePolicy(transitionToArchivePolicy.let(LifecyclePolicy::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e822441263bb51dd2dcccf879bb057ca24273424f0b9396fbc659cb3cf008239")
-    public override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
+    override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
     public fun build(): software.amazon.awscdk.services.efs.FileSystem = cdkBuilder.build()

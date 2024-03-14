@@ -35,24 +35,19 @@ public open class UserPoolDomain internal constructor(
       String = signInUrl(client, SignInUrlOptions(options))
 
   public interface Builder {
-    public fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
-    }
+    public fun cognitoDomain(cognitoDomain: CognitoDomainOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("974887aefd4b5de147eb00e9c0eb24fcb3e389c98e00bd5e3e345ca23d6881c7")
-    public fun cognitoDomain(cognitoDomain: CognitoDomainOptions.Builder.() -> Unit) {
-    }
+    public fun cognitoDomain(cognitoDomain: CognitoDomainOptions.Builder.() -> Unit)
 
-    public fun customDomain(customDomain: CustomDomainOptions) {
-    }
+    public fun customDomain(customDomain: CustomDomainOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b96f3b76d1a0792b2db97811e072124454ea754c392879b0b317ae4cdd98107")
-    public fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit) {
-    }
+    public fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
   }
 
   private class BuilderImpl(
@@ -62,25 +57,25 @@ public open class UserPoolDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.UserPoolDomain.Builder =
         software.amazon.awscdk.services.cognito.UserPoolDomain.Builder.create(scope, id)
 
-    public override fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
+    override fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
       cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("974887aefd4b5de147eb00e9c0eb24fcb3e389c98e00bd5e3e345ca23d6881c7")
-    public override fun cognitoDomain(cognitoDomain: CognitoDomainOptions.Builder.() -> Unit): Unit
-        = cognitoDomain(CognitoDomainOptions(cognitoDomain))
+    override fun cognitoDomain(cognitoDomain: CognitoDomainOptions.Builder.() -> Unit): Unit =
+        cognitoDomain(CognitoDomainOptions(cognitoDomain))
 
-    public override fun customDomain(customDomain: CustomDomainOptions) {
+    override fun customDomain(customDomain: CustomDomainOptions) {
       cdkBuilder.customDomain(customDomain.let(CustomDomainOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9b96f3b76d1a0792b2db97811e072124454ea754c392879b0b317ae4cdd98107")
-    public override fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit): Unit =
+    override fun customDomain(customDomain: CustomDomainOptions.Builder.() -> Unit): Unit =
         customDomain(CustomDomainOptions(customDomain))
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 

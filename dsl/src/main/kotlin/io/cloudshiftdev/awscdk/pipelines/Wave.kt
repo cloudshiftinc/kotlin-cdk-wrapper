@@ -40,11 +40,9 @@ public open class Wave internal constructor(
       unwrap(this).getStages().map(StageDeployment::wrap)
 
   public interface Builder {
-    public fun post(post: List<Step>) {
-    }
+    public fun post(post: List<Step>)
 
-    public fun pre(pre: List<Step>) {
-    }
+    public fun pre(pre: List<Step>)
   }
 
   private class BuilderImpl(
@@ -53,11 +51,11 @@ public open class Wave internal constructor(
     private val cdkBuilder: software.amazon.awscdk.pipelines.Wave.Builder =
         software.amazon.awscdk.pipelines.Wave.Builder.create(id)
 
-    public override fun post(post: List<Step>) {
+    override fun post(post: List<Step>) {
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
-    public override fun pre(pre: List<Step>) {
+    override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
 

@@ -13,14 +13,11 @@ public interface SparkSubmitJobDriver {
   public fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
 
   public interface Builder {
-    public fun entryPoint(entryPoint: TaskInput) {
-    }
+    public fun entryPoint(entryPoint: TaskInput)
 
-    public fun entryPointArguments(entryPointArguments: TaskInput) {
-    }
+    public fun entryPointArguments(entryPointArguments: TaskInput)
 
-    public fun sparkSubmitParameters(sparkSubmitParameters: String) {
-    }
+    public fun sparkSubmitParameters(sparkSubmitParameters: String)
   }
 
   private class BuilderImpl : Builder {
@@ -28,15 +25,15 @@ public interface SparkSubmitJobDriver {
         software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver.builder()
 
-    public override fun entryPoint(entryPoint: TaskInput) {
+    override fun entryPoint(entryPoint: TaskInput) {
       cdkBuilder.entryPoint(entryPoint.let(TaskInput::unwrap))
     }
 
-    public override fun entryPointArguments(entryPointArguments: TaskInput) {
+    override fun entryPointArguments(entryPointArguments: TaskInput) {
       cdkBuilder.entryPointArguments(entryPointArguments.let(TaskInput::unwrap))
     }
 
-    public override fun sparkSubmitParameters(sparkSubmitParameters: String) {
+    override fun sparkSubmitParameters(sparkSubmitParameters: String) {
       cdkBuilder.sparkSubmitParameters(sparkSubmitParameters)
     }
 
@@ -48,12 +45,12 @@ public interface SparkSubmitJobDriver {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver,
   ) : SparkSubmitJobDriver {
-    public override fun entryPoint(): TaskInput = unwrap(this).getEntryPoint().let(TaskInput::wrap)
+    override fun entryPoint(): TaskInput = unwrap(this).getEntryPoint().let(TaskInput::wrap)
 
-    public override fun entryPointArguments(): TaskInput? =
+    override fun entryPointArguments(): TaskInput? =
         unwrap(this).getEntryPointArguments()?.let(TaskInput::wrap)
 
-    public override fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
+    override fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
   }
 
   public companion object {

@@ -10,29 +10,26 @@ public open class LustreMaintenanceTime internal constructor(
   public open fun toTimestamp(): String = unwrap(this).toTimestamp()
 
   public interface Builder {
-    public fun day(day: Weekday) {
-    }
+    public fun day(day: Weekday)
 
-    public fun hour(hour: Number) {
-    }
+    public fun hour(hour: Number)
 
-    public fun minute(minute: Number) {
-    }
+    public fun minute(minute: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.fsx.LustreMaintenanceTime.Builder =
         software.amazon.awscdk.services.fsx.LustreMaintenanceTime.Builder.create()
 
-    public override fun day(day: Weekday) {
+    override fun day(day: Weekday) {
       cdkBuilder.day(day.let(Weekday::unwrap))
     }
 
-    public override fun hour(hour: Number) {
+    override fun hour(hour: Number) {
       cdkBuilder.hour(hour)
     }
 
-    public override fun minute(minute: Number) {
+    override fun minute(minute: Number) {
       cdkBuilder.minute(minute)
     }
 

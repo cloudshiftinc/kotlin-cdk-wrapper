@@ -54,25 +54,19 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
   }
 
   public interface Builder {
-    public fun accessRights(accessRights: IResolvable) {
-    }
+    public fun accessRights(accessRights: IResolvable)
 
-    public fun accessRights(accessRights: AccessRightsProperty) {
-    }
+    public fun accessRights(accessRights: AccessRightsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3154abc80697ff539e3d8f90809f827be838479098259ed8b2b6a017eaadaae5")
-    public fun accessRights(accessRights: AccessRightsProperty.Builder.() -> Unit) {
-    }
+    public fun accessRights(accessRights: AccessRightsProperty.Builder.() -> Unit)
 
-    public fun groupDisplayName(groupDisplayName: String) {
-    }
+    public fun groupDisplayName(groupDisplayName: String)
 
-    public fun groupSecurityIdentifier(groupSecurityIdentifier: String) {
-    }
+    public fun groupSecurityIdentifier(groupSecurityIdentifier: String)
 
-    public fun templateArn(templateArn: String) {
-    }
+    public fun templateArn(templateArn: String)
   }
 
   private class BuilderImpl(
@@ -84,28 +78,28 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
         software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.Builder.create(scope,
         id)
 
-    public override fun accessRights(accessRights: IResolvable) {
+    override fun accessRights(accessRights: IResolvable) {
       cdkBuilder.accessRights(accessRights.let(IResolvable::unwrap))
     }
 
-    public override fun accessRights(accessRights: AccessRightsProperty) {
+    override fun accessRights(accessRights: AccessRightsProperty) {
       cdkBuilder.accessRights(accessRights.let(AccessRightsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3154abc80697ff539e3d8f90809f827be838479098259ed8b2b6a017eaadaae5")
-    public override fun accessRights(accessRights: AccessRightsProperty.Builder.() -> Unit): Unit =
+    override fun accessRights(accessRights: AccessRightsProperty.Builder.() -> Unit): Unit =
         accessRights(AccessRightsProperty(accessRights))
 
-    public override fun groupDisplayName(groupDisplayName: String) {
+    override fun groupDisplayName(groupDisplayName: String) {
       cdkBuilder.groupDisplayName(groupDisplayName)
     }
 
-    public override fun groupSecurityIdentifier(groupSecurityIdentifier: String) {
+    override fun groupSecurityIdentifier(groupSecurityIdentifier: String) {
       cdkBuilder.groupSecurityIdentifier(groupSecurityIdentifier)
     }
 
-    public override fun templateArn(templateArn: String) {
+    override fun templateArn(templateArn: String) {
       cdkBuilder.templateArn(templateArn)
     }
 
@@ -143,11 +137,9 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
     public fun enroll(): String? = unwrap(this).getEnroll()
 
     public interface Builder {
-      public fun autoEnroll(autoEnroll: String) {
-      }
+      public fun autoEnroll(autoEnroll: String)
 
-      public fun enroll(enroll: String) {
-      }
+      public fun enroll(enroll: String)
     }
 
     private class BuilderImpl : Builder {
@@ -156,11 +148,11 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
           =
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty.builder()
 
-      public override fun autoEnroll(autoEnroll: String) {
+      override fun autoEnroll(autoEnroll: String) {
         cdkBuilder.autoEnroll(autoEnroll)
       }
 
-      public override fun enroll(enroll: String) {
+      override fun enroll(enroll: String) {
         cdkBuilder.enroll(enroll)
       }
 
@@ -173,9 +165,9 @@ public open class CfnTemplateGroupAccessControlEntry internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry.AccessRightsProperty,
     ) : AccessRightsProperty {
-      public override fun autoEnroll(): String? = unwrap(this).getAutoEnroll()
+      override fun autoEnroll(): String? = unwrap(this).getAutoEnroll()
 
-      public override fun enroll(): String? = unwrap(this).getEnroll()
+      override fun enroll(): String? = unwrap(this).getEnroll()
     }
 
     public companion object {

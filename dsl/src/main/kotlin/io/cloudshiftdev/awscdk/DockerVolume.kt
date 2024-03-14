@@ -12,29 +12,26 @@ public interface DockerVolume {
   public fun hostPath(): String
 
   public interface Builder {
-    public fun consistency(consistency: DockerVolumeConsistency) {
-    }
+    public fun consistency(consistency: DockerVolumeConsistency)
 
-    public fun containerPath(containerPath: String) {
-    }
+    public fun containerPath(containerPath: String)
 
-    public fun hostPath(hostPath: String) {
-    }
+    public fun hostPath(hostPath: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.DockerVolume.Builder =
         software.amazon.awscdk.DockerVolume.builder()
 
-    public override fun consistency(consistency: DockerVolumeConsistency) {
+    override fun consistency(consistency: DockerVolumeConsistency) {
       cdkBuilder.consistency(consistency.let(DockerVolumeConsistency::unwrap))
     }
 
-    public override fun containerPath(containerPath: String) {
+    override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
-    public override fun hostPath(hostPath: String) {
+    override fun hostPath(hostPath: String) {
       cdkBuilder.hostPath(hostPath)
     }
 
@@ -44,12 +41,12 @@ public interface DockerVolume {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.DockerVolume,
   ) : DockerVolume {
-    public override fun consistency(): DockerVolumeConsistency? =
+    override fun consistency(): DockerVolumeConsistency? =
         unwrap(this).getConsistency()?.let(DockerVolumeConsistency::wrap)
 
-    public override fun containerPath(): String = unwrap(this).getContainerPath()
+    override fun containerPath(): String = unwrap(this).getContainerPath()
 
-    public override fun hostPath(): String = unwrap(this).getHostPath()
+    override fun hostPath(): String = unwrap(this).getHostPath()
   }
 
   public companion object {

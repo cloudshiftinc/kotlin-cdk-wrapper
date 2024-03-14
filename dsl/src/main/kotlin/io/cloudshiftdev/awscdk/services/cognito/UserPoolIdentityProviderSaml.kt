@@ -16,28 +16,21 @@ public open class UserPoolIdentityProviderSaml internal constructor(
   public override fun providerName(): String = unwrap(this).getProviderName()
 
   public interface Builder {
-    public fun attributeMapping(attributeMapping: AttributeMapping) {
-    }
+    public fun attributeMapping(attributeMapping: AttributeMapping)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f3771ad72297d21014e17d52c30c5f392224535d2f3ee940dc37713e13e6ce65")
-    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit) {
-    }
+    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit)
 
-    public fun identifiers(identifiers: List<String>) {
-    }
+    public fun identifiers(identifiers: List<String>)
 
-    public fun idpSignout(idpSignout: Boolean) {
-    }
+    public fun idpSignout(idpSignout: Boolean)
 
-    public fun metadata(metadata: UserPoolIdentityProviderSamlMetadata) {
-    }
+    public fun metadata(metadata: UserPoolIdentityProviderSamlMetadata)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
   }
 
   private class BuilderImpl(
@@ -49,32 +42,32 @@ public open class UserPoolIdentityProviderSaml internal constructor(
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSaml.Builder.create(scope,
         id)
 
-    public override fun attributeMapping(attributeMapping: AttributeMapping) {
+    override fun attributeMapping(attributeMapping: AttributeMapping) {
       cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f3771ad72297d21014e17d52c30c5f392224535d2f3ee940dc37713e13e6ce65")
-    public override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit):
-        Unit = attributeMapping(AttributeMapping(attributeMapping))
+    override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit): Unit =
+        attributeMapping(AttributeMapping(attributeMapping))
 
-    public override fun identifiers(identifiers: List<String>) {
+    override fun identifiers(identifiers: List<String>) {
       cdkBuilder.identifiers(identifiers)
     }
 
-    public override fun idpSignout(idpSignout: Boolean) {
+    override fun idpSignout(idpSignout: Boolean) {
       cdkBuilder.idpSignout(idpSignout)
     }
 
-    public override fun metadata(metadata: UserPoolIdentityProviderSamlMetadata) {
+    override fun metadata(metadata: UserPoolIdentityProviderSamlMetadata) {
       cdkBuilder.metadata(metadata.let(UserPoolIdentityProviderSamlMetadata::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 

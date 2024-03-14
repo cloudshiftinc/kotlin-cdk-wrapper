@@ -12,20 +12,15 @@ public open class WarmPool internal constructor(
   private val cdkObject: software.amazon.awscdk.services.autoscaling.WarmPool,
 ) : Resource(cdkObject) {
   public interface Builder {
-    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-    }
+    public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
-    public fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
-    }
+    public fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number)
 
-    public fun minSize(minSize: Number) {
-    }
+    public fun minSize(minSize: Number)
 
-    public fun poolState(poolState: PoolState) {
-    }
+    public fun poolState(poolState: PoolState)
 
-    public fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
-    }
+    public fun reuseOnScaleIn(reuseOnScaleIn: Boolean)
   }
 
   private class BuilderImpl(
@@ -35,23 +30,23 @@ public open class WarmPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.WarmPool.Builder =
         software.amazon.awscdk.services.autoscaling.WarmPool.Builder.create(scope, id)
 
-    public override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
+    override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
       cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
     }
 
-    public override fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
+    override fun maxGroupPreparedCapacity(maxGroupPreparedCapacity: Number) {
       cdkBuilder.maxGroupPreparedCapacity(maxGroupPreparedCapacity)
     }
 
-    public override fun minSize(minSize: Number) {
+    override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
-    public override fun poolState(poolState: PoolState) {
+    override fun poolState(poolState: PoolState) {
       cdkBuilder.poolState(poolState.let(PoolState::unwrap))
     }
 
-    public override fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
+    override fun reuseOnScaleIn(reuseOnScaleIn: Boolean) {
       cdkBuilder.reuseOnScaleIn(reuseOnScaleIn)
     }
 

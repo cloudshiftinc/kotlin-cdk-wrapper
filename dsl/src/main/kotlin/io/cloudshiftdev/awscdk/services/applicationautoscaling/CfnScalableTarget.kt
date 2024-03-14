@@ -87,40 +87,29 @@ public open class CfnScalableTarget internal constructor(
       suspendedState(SuspendedStateProperty(`value`))
 
   public interface Builder {
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun minCapacity(minCapacity: Number) {
-    }
+    public fun minCapacity(minCapacity: Number)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun scalableDimension(scalableDimension: String) {
-    }
+    public fun scalableDimension(scalableDimension: String)
 
-    public fun scheduledActions(scheduledActions: IResolvable) {
-    }
+    public fun scheduledActions(scheduledActions: IResolvable)
 
-    public fun scheduledActions(scheduledActions: List<Any>) {
-    }
+    public fun scheduledActions(scheduledActions: List<Any>)
 
-    public fun serviceNamespace(serviceNamespace: String) {
-    }
+    public fun serviceNamespace(serviceNamespace: String)
 
-    public fun suspendedState(suspendedState: IResolvable) {
-    }
+    public fun suspendedState(suspendedState: IResolvable)
 
-    public fun suspendedState(suspendedState: SuspendedStateProperty) {
-    }
+    public fun suspendedState(suspendedState: SuspendedStateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c92426d58a0bb3038e5237116a2c51832511f958c67e91a4530463faf342ae7")
-    public fun suspendedState(suspendedState: SuspendedStateProperty.Builder.() -> Unit) {
-    }
+    public fun suspendedState(suspendedState: SuspendedStateProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -132,50 +121,50 @@ public open class CfnScalableTarget internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.Builder.create(scope,
         id)
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun minCapacity(minCapacity: Number) {
+    override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun scalableDimension(scalableDimension: String) {
+    override fun scalableDimension(scalableDimension: String) {
       cdkBuilder.scalableDimension(scalableDimension)
     }
 
-    public override fun scheduledActions(scheduledActions: IResolvable) {
+    override fun scheduledActions(scheduledActions: IResolvable) {
       cdkBuilder.scheduledActions(scheduledActions.let(IResolvable::unwrap))
     }
 
-    public override fun scheduledActions(scheduledActions: List<Any>) {
+    override fun scheduledActions(scheduledActions: List<Any>) {
       cdkBuilder.scheduledActions(scheduledActions)
     }
 
-    public override fun serviceNamespace(serviceNamespace: String) {
+    override fun serviceNamespace(serviceNamespace: String) {
       cdkBuilder.serviceNamespace(serviceNamespace)
     }
 
-    public override fun suspendedState(suspendedState: IResolvable) {
+    override fun suspendedState(suspendedState: IResolvable) {
       cdkBuilder.suspendedState(suspendedState.let(IResolvable::unwrap))
     }
 
-    public override fun suspendedState(suspendedState: SuspendedStateProperty) {
+    override fun suspendedState(suspendedState: SuspendedStateProperty) {
       cdkBuilder.suspendedState(suspendedState.let(SuspendedStateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c92426d58a0bb3038e5237116a2c51832511f958c67e91a4530463faf342ae7")
-    public override fun suspendedState(suspendedState: SuspendedStateProperty.Builder.() -> Unit):
-        Unit = suspendedState(SuspendedStateProperty(suspendedState))
+    override fun suspendedState(suspendedState: SuspendedStateProperty.Builder.() -> Unit): Unit =
+        suspendedState(SuspendedStateProperty(suspendedState))
 
     public fun build(): software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget =
         cdkBuilder.build()
@@ -217,38 +206,28 @@ public open class CfnScalableTarget internal constructor(
     public fun timezone(): String? = unwrap(this).getTimezone()
 
     public interface Builder {
-      public fun endTime(endTime: IResolvable) {
-      }
+      public fun endTime(endTime: IResolvable)
 
-      public fun endTime(endTime: Instant) {
-      }
+      public fun endTime(endTime: Instant)
 
-      public fun scalableTargetAction(scalableTargetAction: IResolvable) {
-      }
+      public fun scalableTargetAction(scalableTargetAction: IResolvable)
 
-      public fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty) {
-      }
+      public fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c45c5e02e114c4c156e6b8b2796dcd8489a0ff765695bba8a8cf4a9185118fe9")
       public
-          fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty.Builder.() -> Unit) {
-      }
+          fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty.Builder.() -> Unit)
 
-      public fun schedule(schedule: String) {
-      }
+      public fun schedule(schedule: String)
 
-      public fun scheduledActionName(scheduledActionName: String) {
-      }
+      public fun scheduledActionName(scheduledActionName: String)
 
-      public fun startTime(startTime: IResolvable) {
-      }
+      public fun startTime(startTime: IResolvable)
 
-      public fun startTime(startTime: Instant) {
-      }
+      public fun startTime(startTime: Instant)
 
-      public fun timezone(timezone: String) {
-      }
+      public fun timezone(timezone: String)
     }
 
     private class BuilderImpl : Builder {
@@ -257,45 +236,45 @@ public open class CfnScalableTarget internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty.builder()
 
-      public override fun endTime(endTime: IResolvable) {
+      override fun endTime(endTime: IResolvable) {
         cdkBuilder.endTime(endTime.let(IResolvable::unwrap))
       }
 
-      public override fun endTime(endTime: Instant) {
+      override fun endTime(endTime: Instant) {
         cdkBuilder.endTime(endTime)
       }
 
-      public override fun scalableTargetAction(scalableTargetAction: IResolvable) {
+      override fun scalableTargetAction(scalableTargetAction: IResolvable) {
         cdkBuilder.scalableTargetAction(scalableTargetAction.let(IResolvable::unwrap))
       }
 
-      public override fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty) {
+      override fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty) {
         cdkBuilder.scalableTargetAction(scalableTargetAction.let(ScalableTargetActionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c45c5e02e114c4c156e6b8b2796dcd8489a0ff765695bba8a8cf4a9185118fe9")
-      public override
+      override
           fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty.Builder.() -> Unit):
           Unit = scalableTargetAction(ScalableTargetActionProperty(scalableTargetAction))
 
-      public override fun schedule(schedule: String) {
+      override fun schedule(schedule: String) {
         cdkBuilder.schedule(schedule)
       }
 
-      public override fun scheduledActionName(scheduledActionName: String) {
+      override fun scheduledActionName(scheduledActionName: String) {
         cdkBuilder.scheduledActionName(scheduledActionName)
       }
 
-      public override fun startTime(startTime: IResolvable) {
+      override fun startTime(startTime: IResolvable) {
         cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
       }
 
-      public override fun startTime(startTime: Instant) {
+      override fun startTime(startTime: Instant) {
         cdkBuilder.startTime(startTime)
       }
 
-      public override fun timezone(timezone: String) {
+      override fun timezone(timezone: String) {
         cdkBuilder.timezone(timezone)
       }
 
@@ -308,17 +287,17 @@ public open class CfnScalableTarget internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty,
     ) : ScheduledActionProperty {
-      public override fun endTime(): Any? = unwrap(this).getEndTime()
+      override fun endTime(): Any? = unwrap(this).getEndTime()
 
-      public override fun scalableTargetAction(): Any? = unwrap(this).getScalableTargetAction()
+      override fun scalableTargetAction(): Any? = unwrap(this).getScalableTargetAction()
 
-      public override fun schedule(): String = unwrap(this).getSchedule()
+      override fun schedule(): String = unwrap(this).getSchedule()
 
-      public override fun scheduledActionName(): String = unwrap(this).getScheduledActionName()
+      override fun scheduledActionName(): String = unwrap(this).getScheduledActionName()
 
-      public override fun startTime(): Any? = unwrap(this).getStartTime()
+      override fun startTime(): Any? = unwrap(this).getStartTime()
 
-      public override fun timezone(): String? = unwrap(this).getTimezone()
+      override fun timezone(): String? = unwrap(this).getTimezone()
     }
 
     public companion object {
@@ -349,23 +328,17 @@ public open class CfnScalableTarget internal constructor(
     public fun scheduledScalingSuspended(): Any? = unwrap(this).getScheduledScalingSuspended()
 
     public interface Builder {
-      public fun dynamicScalingInSuspended(dynamicScalingInSuspended: Boolean) {
-      }
+      public fun dynamicScalingInSuspended(dynamicScalingInSuspended: Boolean)
 
-      public fun dynamicScalingInSuspended(dynamicScalingInSuspended: IResolvable) {
-      }
+      public fun dynamicScalingInSuspended(dynamicScalingInSuspended: IResolvable)
 
-      public fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: Boolean) {
-      }
+      public fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: Boolean)
 
-      public fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: IResolvable) {
-      }
+      public fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: IResolvable)
 
-      public fun scheduledScalingSuspended(scheduledScalingSuspended: Boolean) {
-      }
+      public fun scheduledScalingSuspended(scheduledScalingSuspended: Boolean)
 
-      public fun scheduledScalingSuspended(scheduledScalingSuspended: IResolvable) {
-      }
+      public fun scheduledScalingSuspended(scheduledScalingSuspended: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -374,27 +347,27 @@ public open class CfnScalableTarget internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty.builder()
 
-      public override fun dynamicScalingInSuspended(dynamicScalingInSuspended: Boolean) {
+      override fun dynamicScalingInSuspended(dynamicScalingInSuspended: Boolean) {
         cdkBuilder.dynamicScalingInSuspended(dynamicScalingInSuspended)
       }
 
-      public override fun dynamicScalingInSuspended(dynamicScalingInSuspended: IResolvable) {
+      override fun dynamicScalingInSuspended(dynamicScalingInSuspended: IResolvable) {
         cdkBuilder.dynamicScalingInSuspended(dynamicScalingInSuspended.let(IResolvable::unwrap))
       }
 
-      public override fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: Boolean) {
+      override fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: Boolean) {
         cdkBuilder.dynamicScalingOutSuspended(dynamicScalingOutSuspended)
       }
 
-      public override fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: IResolvable) {
+      override fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: IResolvable) {
         cdkBuilder.dynamicScalingOutSuspended(dynamicScalingOutSuspended.let(IResolvable::unwrap))
       }
 
-      public override fun scheduledScalingSuspended(scheduledScalingSuspended: Boolean) {
+      override fun scheduledScalingSuspended(scheduledScalingSuspended: Boolean) {
         cdkBuilder.scheduledScalingSuspended(scheduledScalingSuspended)
       }
 
-      public override fun scheduledScalingSuspended(scheduledScalingSuspended: IResolvable) {
+      override fun scheduledScalingSuspended(scheduledScalingSuspended: IResolvable) {
         cdkBuilder.scheduledScalingSuspended(scheduledScalingSuspended.let(IResolvable::unwrap))
       }
 
@@ -407,14 +380,11 @@ public open class CfnScalableTarget internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty,
     ) : SuspendedStateProperty {
-      public override fun dynamicScalingInSuspended(): Any? =
-          unwrap(this).getDynamicScalingInSuspended()
+      override fun dynamicScalingInSuspended(): Any? = unwrap(this).getDynamicScalingInSuspended()
 
-      public override fun dynamicScalingOutSuspended(): Any? =
-          unwrap(this).getDynamicScalingOutSuspended()
+      override fun dynamicScalingOutSuspended(): Any? = unwrap(this).getDynamicScalingOutSuspended()
 
-      public override fun scheduledScalingSuspended(): Any? =
-          unwrap(this).getScheduledScalingSuspended()
+      override fun scheduledScalingSuspended(): Any? = unwrap(this).getScheduledScalingSuspended()
     }
 
     public companion object {
@@ -443,11 +413,9 @@ public open class CfnScalableTarget internal constructor(
     public fun minCapacity(): Number? = unwrap(this).getMinCapacity()
 
     public interface Builder {
-      public fun maxCapacity(maxCapacity: Number) {
-      }
+      public fun maxCapacity(maxCapacity: Number)
 
-      public fun minCapacity(minCapacity: Number) {
-      }
+      public fun minCapacity(minCapacity: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -456,11 +424,11 @@ public open class CfnScalableTarget internal constructor(
           =
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty.builder()
 
-      public override fun maxCapacity(maxCapacity: Number) {
+      override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
       }
 
-      public override fun minCapacity(minCapacity: Number) {
+      override fun minCapacity(minCapacity: Number) {
         cdkBuilder.minCapacity(minCapacity)
       }
 
@@ -473,9 +441,9 @@ public open class CfnScalableTarget internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty,
     ) : ScalableTargetActionProperty {
-      public override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
 
-      public override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
+      override fun minCapacity(): Number? = unwrap(this).getMinCapacity()
     }
 
     public companion object {

@@ -9,22 +9,20 @@ public interface RouteAttributes {
   public fun virtualRouter(): IVirtualRouter
 
   public interface Builder {
-    public fun routeName(routeName: String) {
-    }
+    public fun routeName(routeName: String)
 
-    public fun virtualRouter(virtualRouter: IVirtualRouter) {
-    }
+    public fun virtualRouter(virtualRouter: IVirtualRouter)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.RouteAttributes.Builder =
         software.amazon.awscdk.services.appmesh.RouteAttributes.builder()
 
-    public override fun routeName(routeName: String) {
+    override fun routeName(routeName: String) {
       cdkBuilder.routeName(routeName)
     }
 
-    public override fun virtualRouter(virtualRouter: IVirtualRouter) {
+    override fun virtualRouter(virtualRouter: IVirtualRouter) {
       cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap))
     }
 
@@ -34,9 +32,9 @@ public interface RouteAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.RouteAttributes,
   ) : RouteAttributes {
-    public override fun routeName(): String = unwrap(this).getRouteName()
+    override fun routeName(): String = unwrap(this).getRouteName()
 
-    public override fun virtualRouter(): IVirtualRouter =
+    override fun virtualRouter(): IVirtualRouter =
         unwrap(this).getVirtualRouter().let(IVirtualRouter::wrap)
   }
 

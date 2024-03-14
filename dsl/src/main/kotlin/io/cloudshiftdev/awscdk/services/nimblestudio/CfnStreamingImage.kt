@@ -70,20 +70,15 @@ public open class CfnStreamingImage internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun ec2ImageId(ec2ImageId: String) {
-    }
+    public fun ec2ImageId(ec2ImageId: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun studioId(studioId: String) {
-    }
+    public fun studioId(studioId: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -93,23 +88,23 @@ public open class CfnStreamingImage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.Builder =
         software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun ec2ImageId(ec2ImageId: String) {
+    override fun ec2ImageId(ec2ImageId: String) {
       cdkBuilder.ec2ImageId(ec2ImageId)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun studioId(studioId: String) {
+    override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -144,11 +139,9 @@ public open class CfnStreamingImage internal constructor(
     public fun keyType(): String
 
     public interface Builder {
-      public fun keyArn(keyArn: String) {
-      }
+      public fun keyArn(keyArn: String)
 
-      public fun keyType(keyType: String) {
-      }
+      public fun keyType(keyType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -157,11 +150,11 @@ public open class CfnStreamingImage internal constructor(
           =
           software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty.builder()
 
-      public override fun keyArn(keyArn: String) {
+      override fun keyArn(keyArn: String) {
         cdkBuilder.keyArn(keyArn)
       }
 
-      public override fun keyType(keyType: String) {
+      override fun keyType(keyType: String) {
         cdkBuilder.keyType(keyType)
       }
 
@@ -174,9 +167,9 @@ public open class CfnStreamingImage internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnStreamingImage.StreamingImageEncryptionConfigurationProperty,
     ) : StreamingImageEncryptionConfigurationProperty {
-      public override fun keyArn(): String? = unwrap(this).getKeyArn()
+      override fun keyArn(): String? = unwrap(this).getKeyArn()
 
-      public override fun keyType(): String = unwrap(this).getKeyType()
+      override fun keyType(): String = unwrap(this).getKeyType()
     }
 
     public companion object {

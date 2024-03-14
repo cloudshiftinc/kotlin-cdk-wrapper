@@ -22,20 +22,15 @@ public open class ReportGroup internal constructor(
   public override fun reportGroupName(): String = unwrap(this).getReportGroupName()
 
   public interface Builder {
-    public fun exportBucket(exportBucket: IBucket) {
-    }
+    public fun exportBucket(exportBucket: IBucket)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun reportGroupName(reportGroupName: String) {
-    }
+    public fun reportGroupName(reportGroupName: String)
 
-    public fun type(type: ReportGroupType) {
-    }
+    public fun type(type: ReportGroupType)
 
-    public fun zipExport(zipExport: Boolean) {
-    }
+    public fun zipExport(zipExport: Boolean)
   }
 
   private class BuilderImpl(
@@ -45,23 +40,23 @@ public open class ReportGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.ReportGroup.Builder =
         software.amazon.awscdk.services.codebuild.ReportGroup.Builder.create(scope, id)
 
-    public override fun exportBucket(exportBucket: IBucket) {
+    override fun exportBucket(exportBucket: IBucket) {
       cdkBuilder.exportBucket(exportBucket.let(IBucket::unwrap))
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun reportGroupName(reportGroupName: String) {
+    override fun reportGroupName(reportGroupName: String) {
       cdkBuilder.reportGroupName(reportGroupName)
     }
 
-    public override fun type(type: ReportGroupType) {
+    override fun type(type: ReportGroupType) {
       cdkBuilder.type(type.let(ReportGroupType::unwrap))
     }
 
-    public override fun zipExport(zipExport: Boolean) {
+    override fun zipExport(zipExport: Boolean) {
       cdkBuilder.zipExport(zipExport)
     }
 

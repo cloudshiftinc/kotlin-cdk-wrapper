@@ -9,11 +9,9 @@ public interface NestedCloudAssemblyProperties {
   public fun displayName(): String? = unwrap(this).getDisplayName()
 
   public interface Builder {
-    public fun directoryName(directoryName: String) {
-    }
+    public fun directoryName(directoryName: String)
 
-    public fun displayName(displayName: String) {
-    }
+    public fun displayName(displayName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface NestedCloudAssemblyProperties {
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties.Builder =
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties.builder()
 
-    public override fun directoryName(directoryName: String) {
+    override fun directoryName(directoryName: String) {
       cdkBuilder.directoryName(directoryName)
     }
 
-    public override fun displayName(displayName: String) {
+    override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
@@ -37,9 +35,9 @@ public interface NestedCloudAssemblyProperties {
     internal val cdkObject:
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties,
   ) : NestedCloudAssemblyProperties {
-    public override fun directoryName(): String = unwrap(this).getDirectoryName()
+    override fun directoryName(): String = unwrap(this).getDirectoryName()
 
-    public override fun displayName(): String? = unwrap(this).getDisplayName()
+    override fun displayName(): String? = unwrap(this).getDisplayName()
   }
 
   public companion object {

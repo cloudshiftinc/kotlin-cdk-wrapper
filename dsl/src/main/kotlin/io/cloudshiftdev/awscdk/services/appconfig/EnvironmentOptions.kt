@@ -13,29 +13,26 @@ public interface EnvironmentOptions {
       emptyList()
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environmentName(environmentName: String) {
-    }
+    public fun environmentName(environmentName: String)
 
-    public fun monitors(monitors: List<Monitor>) {
-    }
+    public fun monitors(monitors: List<Monitor>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.EnvironmentOptions.Builder =
         software.amazon.awscdk.services.appconfig.EnvironmentOptions.builder()
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environmentName(environmentName: String) {
+    override fun environmentName(environmentName: String) {
       cdkBuilder.environmentName(environmentName)
     }
 
-    public override fun monitors(monitors: List<Monitor>) {
+    override fun monitors(monitors: List<Monitor>) {
       cdkBuilder.monitors(monitors.map(Monitor::unwrap))
     }
 
@@ -46,12 +43,12 @@ public interface EnvironmentOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentOptions,
   ) : EnvironmentOptions {
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun environmentName(): String? = unwrap(this).getEnvironmentName()
+    override fun environmentName(): String? = unwrap(this).getEnvironmentName()
 
-    public override fun monitors(): List<Monitor> = unwrap(this).getMonitors()?.map(Monitor::wrap)
-        ?: emptyList()
+    override fun monitors(): List<Monitor> = unwrap(this).getMonitors()?.map(Monitor::wrap) ?:
+        emptyList()
   }
 
   public companion object {

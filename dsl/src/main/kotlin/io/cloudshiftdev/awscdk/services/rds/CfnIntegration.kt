@@ -71,26 +71,19 @@ public open class CfnIntegration internal constructor(
   }
 
   public interface Builder {
-    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
-    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
-    }
+    public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
-    public fun integrationName(integrationName: String) {
-    }
+    public fun integrationName(integrationName: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun sourceArn(sourceArn: String) {
-    }
+    public fun sourceArn(sourceArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetArn(targetArn: String) {
-    }
+    public fun targetArn(targetArn: String)
   }
 
   private class BuilderImpl(
@@ -100,32 +93,31 @@ public open class CfnIntegration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnIntegration.Builder =
         software.amazon.awscdk.services.rds.CfnIntegration.Builder.create(scope, id)
 
-    public override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
     }
 
-    public override
-        fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
+    override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
     }
 
-    public override fun integrationName(integrationName: String) {
+    override fun integrationName(integrationName: String) {
       cdkBuilder.integrationName(integrationName)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun sourceArn(sourceArn: String) {
+    override fun sourceArn(sourceArn: String) {
       cdkBuilder.sourceArn(sourceArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetArn(targetArn: String) {
+    override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
     }
 

@@ -68,26 +68,19 @@ public open class CfnDevicePool internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun maxDevices(maxDevices: Number) {
-    }
+    public fun maxDevices(maxDevices: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun projectArn(projectArn: String) {
-    }
+    public fun projectArn(projectArn: String)
 
-    public fun rules(rules: IResolvable) {
-    }
+    public fun rules(rules: IResolvable)
 
-    public fun rules(rules: List<Any>) {
-    }
+    public fun rules(rules: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -97,31 +90,31 @@ public open class CfnDevicePool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.devicefarm.CfnDevicePool.Builder =
         software.amazon.awscdk.services.devicefarm.CfnDevicePool.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun maxDevices(maxDevices: Number) {
+    override fun maxDevices(maxDevices: Number) {
       cdkBuilder.maxDevices(maxDevices)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun projectArn(projectArn: String) {
+    override fun projectArn(projectArn: String) {
       cdkBuilder.projectArn(projectArn)
     }
 
-    public override fun rules(rules: IResolvable) {
+    override fun rules(rules: IResolvable) {
       cdkBuilder.rules(rules.let(IResolvable::unwrap))
     }
 
-    public override fun rules(rules: List<Any>) {
+    override fun rules(rules: List<Any>) {
       cdkBuilder.rules(rules)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -158,14 +151,11 @@ public open class CfnDevicePool internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun attribute(attribute: String) {
-      }
+      public fun attribute(attribute: String)
 
-      public fun `operator`(`operator`: String) {
-      }
+      public fun `operator`(`operator`: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -173,15 +163,15 @@ public open class CfnDevicePool internal constructor(
           software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty.Builder =
           software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty.builder()
 
-      public override fun attribute(attribute: String) {
+      override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
       }
 
-      public override fun `operator`(`operator`: String) {
+      override fun `operator`(`operator`: String) {
         cdkBuilder.`operator`(`operator`)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -192,11 +182,11 @@ public open class CfnDevicePool internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.devicefarm.CfnDevicePool.RuleProperty,
     ) : RuleProperty {
-      public override fun attribute(): String? = unwrap(this).getAttribute()
+      override fun attribute(): String? = unwrap(this).getAttribute()
 
-      public override fun `operator`(): String? = unwrap(this).getOperator()
+      override fun `operator`(): String? = unwrap(this).getOperator()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

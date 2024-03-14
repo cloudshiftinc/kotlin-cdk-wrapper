@@ -60,31 +60,23 @@ public open class CfnPolicyStore internal constructor(
       validationSettings(ValidationSettingsProperty(`value`))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun schema(schema: IResolvable) {
-    }
+    public fun schema(schema: IResolvable)
 
-    public fun schema(schema: SchemaDefinitionProperty) {
-    }
+    public fun schema(schema: SchemaDefinitionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b4c172f1184091b77bdb38cb2c4b045b34ee206d879153ed1e0c328dc12a8e4")
-    public fun schema(schema: SchemaDefinitionProperty.Builder.() -> Unit) {
-    }
+    public fun schema(schema: SchemaDefinitionProperty.Builder.() -> Unit)
 
-    public fun validationSettings(validationSettings: IResolvable) {
-    }
+    public fun validationSettings(validationSettings: IResolvable)
 
-    public fun validationSettings(validationSettings: ValidationSettingsProperty) {
-    }
+    public fun validationSettings(validationSettings: ValidationSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a939b3acbcc541a7865e358016c9d553cdf3a8bb0dfac3f3afb0c2172bcc43b3")
-    public
-        fun validationSettings(validationSettings: ValidationSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun validationSettings(validationSettings: ValidationSettingsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -95,34 +87,34 @@ public open class CfnPolicyStore internal constructor(
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.Builder =
         software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun schema(schema: IResolvable) {
+    override fun schema(schema: IResolvable) {
       cdkBuilder.schema(schema.let(IResolvable::unwrap))
     }
 
-    public override fun schema(schema: SchemaDefinitionProperty) {
+    override fun schema(schema: SchemaDefinitionProperty) {
       cdkBuilder.schema(schema.let(SchemaDefinitionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b4c172f1184091b77bdb38cb2c4b045b34ee206d879153ed1e0c328dc12a8e4")
-    public override fun schema(schema: SchemaDefinitionProperty.Builder.() -> Unit): Unit =
+    override fun schema(schema: SchemaDefinitionProperty.Builder.() -> Unit): Unit =
         schema(SchemaDefinitionProperty(schema))
 
-    public override fun validationSettings(validationSettings: IResolvable) {
+    override fun validationSettings(validationSettings: IResolvable) {
       cdkBuilder.validationSettings(validationSettings.let(IResolvable::unwrap))
     }
 
-    public override fun validationSettings(validationSettings: ValidationSettingsProperty) {
+    override fun validationSettings(validationSettings: ValidationSettingsProperty) {
       cdkBuilder.validationSettings(validationSettings.let(ValidationSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a939b3acbcc541a7865e358016c9d553cdf3a8bb0dfac3f3afb0c2172bcc43b3")
-    public override
+    override
         fun validationSettings(validationSettings: ValidationSettingsProperty.Builder.() -> Unit):
         Unit = validationSettings(ValidationSettingsProperty(validationSettings))
 
@@ -156,8 +148,7 @@ public open class CfnPolicyStore internal constructor(
     public fun mode(): String
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -166,7 +157,7 @@ public open class CfnPolicyStore internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
@@ -179,7 +170,7 @@ public open class CfnPolicyStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.ValidationSettingsProperty,
     ) : ValidationSettingsProperty {
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
     }
 
     public companion object {
@@ -206,8 +197,7 @@ public open class CfnPolicyStore internal constructor(
     public fun cedarJson(): String? = unwrap(this).getCedarJson()
 
     public interface Builder {
-      public fun cedarJson(cedarJson: String) {
-      }
+      public fun cedarJson(cedarJson: String)
     }
 
     private class BuilderImpl : Builder {
@@ -216,7 +206,7 @@ public open class CfnPolicyStore internal constructor(
           =
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty.builder()
 
-      public override fun cedarJson(cedarJson: String) {
+      override fun cedarJson(cedarJson: String) {
         cdkBuilder.cedarJson(cedarJson)
       }
 
@@ -229,7 +219,7 @@ public open class CfnPolicyStore internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore.SchemaDefinitionProperty,
     ) : SchemaDefinitionProperty {
-      public override fun cedarJson(): String? = unwrap(this).getCedarJson()
+      override fun cedarJson(): String? = unwrap(this).getCedarJson()
     }
 
     public companion object {

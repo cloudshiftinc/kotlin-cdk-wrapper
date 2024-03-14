@@ -33,17 +33,13 @@ public open class FairshareSchedulingPolicy internal constructor(
   public override fun shares(): List<Share> = unwrap(this).getShares().map(Share::wrap)
 
   public interface Builder {
-    public fun computeReservation(computeReservation: Number) {
-    }
+    public fun computeReservation(computeReservation: Number)
 
-    public fun schedulingPolicyName(schedulingPolicyName: String) {
-    }
+    public fun schedulingPolicyName(schedulingPolicyName: String)
 
-    public fun shareDecay(shareDecay: Duration) {
-    }
+    public fun shareDecay(shareDecay: Duration)
 
-    public fun shares(shares: List<Share>) {
-    }
+    public fun shares(shares: List<Share>)
   }
 
   private class BuilderImpl(
@@ -53,19 +49,19 @@ public open class FairshareSchedulingPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.batch.FairshareSchedulingPolicy.Builder
         = software.amazon.awscdk.services.batch.FairshareSchedulingPolicy.Builder.create(scope, id)
 
-    public override fun computeReservation(computeReservation: Number) {
+    override fun computeReservation(computeReservation: Number) {
       cdkBuilder.computeReservation(computeReservation)
     }
 
-    public override fun schedulingPolicyName(schedulingPolicyName: String) {
+    override fun schedulingPolicyName(schedulingPolicyName: String) {
       cdkBuilder.schedulingPolicyName(schedulingPolicyName)
     }
 
-    public override fun shareDecay(shareDecay: Duration) {
+    override fun shareDecay(shareDecay: Duration) {
       cdkBuilder.shareDecay(shareDecay.let(Duration::unwrap))
     }
 
-    public override fun shares(shares: List<Share>) {
+    override fun shares(shares: List<Share>) {
       cdkBuilder.shares(shares.map(Share::unwrap))
     }
 

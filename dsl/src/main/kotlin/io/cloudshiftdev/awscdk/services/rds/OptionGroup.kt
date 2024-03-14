@@ -24,19 +24,16 @@ public open class OptionGroup internal constructor(
       Boolean = addConfiguration(OptionConfiguration(configuration))
 
   public open fun optionConnections(): Map<String, Connections> =
-      unwrap(this).getOptionConnections().mapValues { Connections.wrap(it.value)} ?: emptyMap()
+      unwrap(this).getOptionConnections().mapValues{Connections.wrap(it.value)} ?: emptyMap()
 
   public override fun optionGroupName(): String = unwrap(this).getOptionGroupName()
 
   public interface Builder {
-    public fun configurations(configurations: List<OptionConfiguration>) {
-    }
+    public fun configurations(configurations: List<OptionConfiguration>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun engine(engine: IInstanceEngine) {
-    }
+    public fun engine(engine: IInstanceEngine)
   }
 
   private class BuilderImpl(
@@ -46,15 +43,15 @@ public open class OptionGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.OptionGroup.Builder =
         software.amazon.awscdk.services.rds.OptionGroup.Builder.create(scope, id)
 
-    public override fun configurations(configurations: List<OptionConfiguration>) {
+    override fun configurations(configurations: List<OptionConfiguration>) {
       cdkBuilder.configurations(configurations.map(OptionConfiguration::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun engine(engine: IInstanceEngine) {
+    override fun engine(engine: IInstanceEngine) {
       cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
     }
 

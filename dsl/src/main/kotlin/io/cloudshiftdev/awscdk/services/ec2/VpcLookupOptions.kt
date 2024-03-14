@@ -23,64 +23,56 @@ public interface VpcLookupOptions {
   public fun vpcName(): String? = unwrap(this).getVpcName()
 
   public interface Builder {
-    public fun isDefault(isDefault: Boolean) {
-    }
+    public fun isDefault(isDefault: Boolean)
 
-    public fun ownerAccountId(ownerAccountId: String) {
-    }
+    public fun ownerAccountId(ownerAccountId: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun returnVpnGateways(returnVpnGateways: Boolean) {
-    }
+    public fun returnVpnGateways(returnVpnGateways: Boolean)
 
-    public fun subnetGroupNameTag(subnetGroupNameTag: String) {
-    }
+    public fun subnetGroupNameTag(subnetGroupNameTag: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
 
-    public fun vpcName(vpcName: String) {
-    }
+    public fun vpcName(vpcName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpcLookupOptions.Builder =
         software.amazon.awscdk.services.ec2.VpcLookupOptions.builder()
 
-    public override fun isDefault(isDefault: Boolean) {
+    override fun isDefault(isDefault: Boolean) {
       cdkBuilder.isDefault(isDefault)
     }
 
-    public override fun ownerAccountId(ownerAccountId: String) {
+    override fun ownerAccountId(ownerAccountId: String) {
       cdkBuilder.ownerAccountId(ownerAccountId)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun returnVpnGateways(returnVpnGateways: Boolean) {
+    override fun returnVpnGateways(returnVpnGateways: Boolean) {
       cdkBuilder.returnVpnGateways(returnVpnGateways)
     }
 
-    public override fun subnetGroupNameTag(subnetGroupNameTag: String) {
+    override fun subnetGroupNameTag(subnetGroupNameTag: String) {
       cdkBuilder.subnetGroupNameTag(subnetGroupNameTag)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
-    public override fun vpcName(vpcName: String) {
+    override fun vpcName(vpcName: String) {
       cdkBuilder.vpcName(vpcName)
     }
 
@@ -90,21 +82,21 @@ public interface VpcLookupOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpcLookupOptions,
   ) : VpcLookupOptions {
-    public override fun isDefault(): Boolean? = unwrap(this).getIsDefault()
+    override fun isDefault(): Boolean? = unwrap(this).getIsDefault()
 
-    public override fun ownerAccountId(): String? = unwrap(this).getOwnerAccountId()
+    override fun ownerAccountId(): String? = unwrap(this).getOwnerAccountId()
 
-    public override fun region(): String? = unwrap(this).getRegion()
+    override fun region(): String? = unwrap(this).getRegion()
 
-    public override fun returnVpnGateways(): Boolean? = unwrap(this).getReturnVpnGateways()
+    override fun returnVpnGateways(): Boolean? = unwrap(this).getReturnVpnGateways()
 
-    public override fun subnetGroupNameTag(): String? = unwrap(this).getSubnetGroupNameTag()
+    override fun subnetGroupNameTag(): String? = unwrap(this).getSubnetGroupNameTag()
 
-    public override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
+    override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
-    public override fun vpcId(): String? = unwrap(this).getVpcId()
+    override fun vpcId(): String? = unwrap(this).getVpcId()
 
-    public override fun vpcName(): String? = unwrap(this).getVpcName()
+    override fun vpcName(): String? = unwrap(this).getVpcName()
   }
 
   public companion object {

@@ -12,14 +12,11 @@ public interface BasePathMappingOptions {
   public fun stage(): Stage? = unwrap(this).getStage()?.let(Stage::wrap)
 
   public interface Builder {
-    public fun attachToStage(attachToStage: Boolean) {
-    }
+    public fun attachToStage(attachToStage: Boolean)
 
-    public fun basePath(basePath: String) {
-    }
+    public fun basePath(basePath: String)
 
-    public fun stage(stage: Stage) {
-    }
+    public fun stage(stage: Stage)
   }
 
   private class BuilderImpl : Builder {
@@ -27,15 +24,15 @@ public interface BasePathMappingOptions {
         software.amazon.awscdk.services.apigateway.BasePathMappingOptions.Builder =
         software.amazon.awscdk.services.apigateway.BasePathMappingOptions.builder()
 
-    public override fun attachToStage(attachToStage: Boolean) {
+    override fun attachToStage(attachToStage: Boolean) {
       cdkBuilder.attachToStage(attachToStage)
     }
 
-    public override fun basePath(basePath: String) {
+    override fun basePath(basePath: String) {
       cdkBuilder.basePath(basePath)
     }
 
-    public override fun stage(stage: Stage) {
+    override fun stage(stage: Stage) {
       cdkBuilder.stage(stage.let(Stage::unwrap))
     }
 
@@ -46,11 +43,11 @@ public interface BasePathMappingOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.BasePathMappingOptions,
   ) : BasePathMappingOptions {
-    public override fun attachToStage(): Boolean? = unwrap(this).getAttachToStage()
+    override fun attachToStage(): Boolean? = unwrap(this).getAttachToStage()
 
-    public override fun basePath(): String? = unwrap(this).getBasePath()
+    override fun basePath(): String? = unwrap(this).getBasePath()
 
-    public override fun stage(): Stage? = unwrap(this).getStage()?.let(Stage::wrap)
+    override fun stage(): Stage? = unwrap(this).getStage()?.let(Stage::wrap)
   }
 
   public companion object {

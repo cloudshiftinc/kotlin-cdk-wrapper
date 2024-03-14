@@ -6,8 +6,7 @@ public interface IFileSetProducer {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.IFileSetProducer,
   ) : IFileSetProducer {
-    public override fun primaryOutput(): FileSet? =
-        unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
+    override fun primaryOutput(): FileSet? = unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
   }
 
   public companion object {

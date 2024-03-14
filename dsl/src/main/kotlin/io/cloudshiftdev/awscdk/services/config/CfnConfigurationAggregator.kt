@@ -71,30 +71,23 @@ public open class CfnConfigurationAggregator internal constructor(
   }
 
   public interface Builder {
-    public fun accountAggregationSources(accountAggregationSources: IResolvable) {
-    }
+    public fun accountAggregationSources(accountAggregationSources: IResolvable)
 
-    public fun accountAggregationSources(accountAggregationSources: List<Any>) {
-    }
+    public fun accountAggregationSources(accountAggregationSources: List<Any>)
 
-    public fun configurationAggregatorName(configurationAggregatorName: String) {
-    }
+    public fun configurationAggregatorName(configurationAggregatorName: String)
 
-    public fun organizationAggregationSource(organizationAggregationSource: IResolvable) {
-    }
+    public fun organizationAggregationSource(organizationAggregationSource: IResolvable)
 
     public
-        fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty) {
-    }
+        fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3509e85095ae5bff2927a190fde99bc83d3b089327ecf5c1f27c545eddd03ada")
     public
-        fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty.Builder.() -> Unit) {
-    }
+        fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -105,35 +98,35 @@ public open class CfnConfigurationAggregator internal constructor(
         software.amazon.awscdk.services.config.CfnConfigurationAggregator.Builder =
         software.amazon.awscdk.services.config.CfnConfigurationAggregator.Builder.create(scope, id)
 
-    public override fun accountAggregationSources(accountAggregationSources: IResolvable) {
+    override fun accountAggregationSources(accountAggregationSources: IResolvable) {
       cdkBuilder.accountAggregationSources(accountAggregationSources.let(IResolvable::unwrap))
     }
 
-    public override fun accountAggregationSources(accountAggregationSources: List<Any>) {
+    override fun accountAggregationSources(accountAggregationSources: List<Any>) {
       cdkBuilder.accountAggregationSources(accountAggregationSources)
     }
 
-    public override fun configurationAggregatorName(configurationAggregatorName: String) {
+    override fun configurationAggregatorName(configurationAggregatorName: String) {
       cdkBuilder.configurationAggregatorName(configurationAggregatorName)
     }
 
-    public override fun organizationAggregationSource(organizationAggregationSource: IResolvable) {
+    override fun organizationAggregationSource(organizationAggregationSource: IResolvable) {
       cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty) {
       cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(OrganizationAggregationSourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3509e85095ae5bff2927a190fde99bc83d3b089327ecf5c1f27c545eddd03ada")
-    public override
+    override
         fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty.Builder.() -> Unit):
         Unit =
         organizationAggregationSource(OrganizationAggregationSourceProperty(organizationAggregationSource))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -170,17 +163,13 @@ public open class CfnConfigurationAggregator internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun allAwsRegions(allAwsRegions: Boolean) {
-      }
+      public fun allAwsRegions(allAwsRegions: Boolean)
 
-      public fun allAwsRegions(allAwsRegions: IResolvable) {
-      }
+      public fun allAwsRegions(allAwsRegions: IResolvable)
 
-      public fun awsRegions(awsRegions: List<String>) {
-      }
+      public fun awsRegions(awsRegions: List<String>)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -189,19 +178,19 @@ public open class CfnConfigurationAggregator internal constructor(
           =
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty.builder()
 
-      public override fun allAwsRegions(allAwsRegions: Boolean) {
+      override fun allAwsRegions(allAwsRegions: Boolean) {
         cdkBuilder.allAwsRegions(allAwsRegions)
       }
 
-      public override fun allAwsRegions(allAwsRegions: IResolvable) {
+      override fun allAwsRegions(allAwsRegions: IResolvable) {
         cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable::unwrap))
       }
 
-      public override fun awsRegions(awsRegions: List<String>) {
+      override fun awsRegions(awsRegions: List<String>) {
         cdkBuilder.awsRegions(awsRegions)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -214,11 +203,11 @@ public open class CfnConfigurationAggregator internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.OrganizationAggregationSourceProperty,
     ) : OrganizationAggregationSourceProperty {
-      public override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
+      override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
 
-      public override fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
+      override fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {
@@ -250,17 +239,13 @@ public open class CfnConfigurationAggregator internal constructor(
     public fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
 
     public interface Builder {
-      public fun accountIds(accountIds: List<String>) {
-      }
+      public fun accountIds(accountIds: List<String>)
 
-      public fun allAwsRegions(allAwsRegions: Boolean) {
-      }
+      public fun allAwsRegions(allAwsRegions: Boolean)
 
-      public fun allAwsRegions(allAwsRegions: IResolvable) {
-      }
+      public fun allAwsRegions(allAwsRegions: IResolvable)
 
-      public fun awsRegions(awsRegions: List<String>) {
-      }
+      public fun awsRegions(awsRegions: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -269,19 +254,19 @@ public open class CfnConfigurationAggregator internal constructor(
           =
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty.builder()
 
-      public override fun accountIds(accountIds: List<String>) {
+      override fun accountIds(accountIds: List<String>) {
         cdkBuilder.accountIds(accountIds)
       }
 
-      public override fun allAwsRegions(allAwsRegions: Boolean) {
+      override fun allAwsRegions(allAwsRegions: Boolean) {
         cdkBuilder.allAwsRegions(allAwsRegions)
       }
 
-      public override fun allAwsRegions(allAwsRegions: IResolvable) {
+      override fun allAwsRegions(allAwsRegions: IResolvable) {
         cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable::unwrap))
       }
 
-      public override fun awsRegions(awsRegions: List<String>) {
+      override fun awsRegions(awsRegions: List<String>) {
         cdkBuilder.awsRegions(awsRegions)
       }
 
@@ -294,11 +279,11 @@ public open class CfnConfigurationAggregator internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty,
     ) : AccountAggregationSourceProperty {
-      public override fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+      override fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
 
-      public override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
+      override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
 
-      public override fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
+      override fun awsRegions(): List<String> = unwrap(this).getAwsRegions() ?: emptyList()
     }
 
     public companion object {

@@ -39,11 +39,9 @@ public open class CfnResolverQueryLoggingConfigAssociation internal constructor(
   }
 
   public interface Builder {
-    public fun resolverQueryLogConfigId(resolverQueryLogConfigId: String) {
-    }
+    public fun resolverQueryLogConfigId(resolverQueryLogConfigId: String)
 
-    public fun resourceId(resourceId: String) {
-    }
+    public fun resourceId(resourceId: String)
   }
 
   private class BuilderImpl(
@@ -56,11 +54,11 @@ public open class CfnResolverQueryLoggingConfigAssociation internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation.Builder.create(scope,
         id)
 
-    public override fun resolverQueryLogConfigId(resolverQueryLogConfigId: String) {
+    override fun resolverQueryLogConfigId(resolverQueryLogConfigId: String) {
       cdkBuilder.resolverQueryLogConfigId(resolverQueryLogConfigId)
     }
 
-    public override fun resourceId(resourceId: String) {
+    override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 

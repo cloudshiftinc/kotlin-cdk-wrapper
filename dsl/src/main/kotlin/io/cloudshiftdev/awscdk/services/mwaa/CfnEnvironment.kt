@@ -214,92 +214,65 @@ public open class CfnEnvironment internal constructor(
   }
 
   public interface Builder {
-    public fun airflowConfigurationOptions(airflowConfigurationOptions: Any) {
-    }
+    public fun airflowConfigurationOptions(airflowConfigurationOptions: Any)
 
-    public fun airflowVersion(airflowVersion: String) {
-    }
+    public fun airflowVersion(airflowVersion: String)
 
-    public fun dagS3Path(dagS3Path: String) {
-    }
+    public fun dagS3Path(dagS3Path: String)
 
-    public fun endpointManagement(endpointManagement: String) {
-    }
+    public fun endpointManagement(endpointManagement: String)
 
-    public fun environmentClass(environmentClass: String) {
-    }
+    public fun environmentClass(environmentClass: String)
 
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun kmsKey(kmsKey: String) {
-    }
+    public fun kmsKey(kmsKey: String)
 
-    public fun loggingConfiguration(loggingConfiguration: IResolvable) {
-    }
+    public fun loggingConfiguration(loggingConfiguration: IResolvable)
 
-    public fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-    }
+    public fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("99a7a60d5549be3670ca52741505fe0a1ca11f802c63b27b9c2738515d4155df")
     public
-        fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit)
 
-    public fun maxWorkers(maxWorkers: Number) {
-    }
+    public fun maxWorkers(maxWorkers: Number)
 
-    public fun minWorkers(minWorkers: Number) {
-    }
+    public fun minWorkers(minWorkers: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun networkConfiguration(networkConfiguration: IResolvable) {
-    }
+    public fun networkConfiguration(networkConfiguration: IResolvable)
 
-    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-    }
+    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea4dc89fc98a15a9806bff385274d0b15b175cd8a5bbf0fe46cadc5429b92588")
     public
-        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit)
 
-    public fun pluginsS3ObjectVersion(pluginsS3ObjectVersion: String) {
-    }
+    public fun pluginsS3ObjectVersion(pluginsS3ObjectVersion: String)
 
-    public fun pluginsS3Path(pluginsS3Path: String) {
-    }
+    public fun pluginsS3Path(pluginsS3Path: String)
 
-    public fun requirementsS3ObjectVersion(requirementsS3ObjectVersion: String) {
-    }
+    public fun requirementsS3ObjectVersion(requirementsS3ObjectVersion: String)
 
-    public fun requirementsS3Path(requirementsS3Path: String) {
-    }
+    public fun requirementsS3Path(requirementsS3Path: String)
 
-    public fun schedulers(schedulers: Number) {
-    }
+    public fun schedulers(schedulers: Number)
 
-    public fun sourceBucketArn(sourceBucketArn: String) {
-    }
+    public fun sourceBucketArn(sourceBucketArn: String)
 
-    public fun startupScriptS3ObjectVersion(startupScriptS3ObjectVersion: String) {
-    }
+    public fun startupScriptS3ObjectVersion(startupScriptS3ObjectVersion: String)
 
-    public fun startupScriptS3Path(startupScriptS3Path: String) {
-    }
+    public fun startupScriptS3Path(startupScriptS3Path: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun webserverAccessMode(webserverAccessMode: String) {
-    }
+    public fun webserverAccessMode(webserverAccessMode: String)
 
-    public fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String) {
-    }
+    public fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String)
   }
 
   private class BuilderImpl(
@@ -309,115 +282,115 @@ public open class CfnEnvironment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mwaa.CfnEnvironment.Builder =
         software.amazon.awscdk.services.mwaa.CfnEnvironment.Builder.create(scope, id)
 
-    public override fun airflowConfigurationOptions(airflowConfigurationOptions: Any) {
+    override fun airflowConfigurationOptions(airflowConfigurationOptions: Any) {
       cdkBuilder.airflowConfigurationOptions(airflowConfigurationOptions)
     }
 
-    public override fun airflowVersion(airflowVersion: String) {
+    override fun airflowVersion(airflowVersion: String) {
       cdkBuilder.airflowVersion(airflowVersion)
     }
 
-    public override fun dagS3Path(dagS3Path: String) {
+    override fun dagS3Path(dagS3Path: String) {
       cdkBuilder.dagS3Path(dagS3Path)
     }
 
-    public override fun endpointManagement(endpointManagement: String) {
+    override fun endpointManagement(endpointManagement: String) {
       cdkBuilder.endpointManagement(endpointManagement)
     }
 
-    public override fun environmentClass(environmentClass: String) {
+    override fun environmentClass(environmentClass: String) {
       cdkBuilder.environmentClass(environmentClass)
     }
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun kmsKey(kmsKey: String) {
+    override fun kmsKey(kmsKey: String) {
       cdkBuilder.kmsKey(kmsKey)
     }
 
-    public override fun loggingConfiguration(loggingConfiguration: IResolvable) {
+    override fun loggingConfiguration(loggingConfiguration: IResolvable) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
+    override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
       cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("99a7a60d5549be3670ca52741505fe0a1ca11f802c63b27b9c2738515d4155df")
-    public override
+    override
         fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty.Builder.() -> Unit):
         Unit = loggingConfiguration(LoggingConfigurationProperty(loggingConfiguration))
 
-    public override fun maxWorkers(maxWorkers: Number) {
+    override fun maxWorkers(maxWorkers: Number) {
       cdkBuilder.maxWorkers(maxWorkers)
     }
 
-    public override fun minWorkers(minWorkers: Number) {
+    override fun minWorkers(minWorkers: Number) {
       cdkBuilder.minWorkers(minWorkers)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun networkConfiguration(networkConfiguration: IResolvable) {
+    override fun networkConfiguration(networkConfiguration: IResolvable) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
+    override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea4dc89fc98a15a9806bff385274d0b15b175cd8a5bbf0fe46cadc5429b92588")
-    public override
+    override
         fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit):
         Unit = networkConfiguration(NetworkConfigurationProperty(networkConfiguration))
 
-    public override fun pluginsS3ObjectVersion(pluginsS3ObjectVersion: String) {
+    override fun pluginsS3ObjectVersion(pluginsS3ObjectVersion: String) {
       cdkBuilder.pluginsS3ObjectVersion(pluginsS3ObjectVersion)
     }
 
-    public override fun pluginsS3Path(pluginsS3Path: String) {
+    override fun pluginsS3Path(pluginsS3Path: String) {
       cdkBuilder.pluginsS3Path(pluginsS3Path)
     }
 
-    public override fun requirementsS3ObjectVersion(requirementsS3ObjectVersion: String) {
+    override fun requirementsS3ObjectVersion(requirementsS3ObjectVersion: String) {
       cdkBuilder.requirementsS3ObjectVersion(requirementsS3ObjectVersion)
     }
 
-    public override fun requirementsS3Path(requirementsS3Path: String) {
+    override fun requirementsS3Path(requirementsS3Path: String) {
       cdkBuilder.requirementsS3Path(requirementsS3Path)
     }
 
-    public override fun schedulers(schedulers: Number) {
+    override fun schedulers(schedulers: Number) {
       cdkBuilder.schedulers(schedulers)
     }
 
-    public override fun sourceBucketArn(sourceBucketArn: String) {
+    override fun sourceBucketArn(sourceBucketArn: String) {
       cdkBuilder.sourceBucketArn(sourceBucketArn)
     }
 
-    public override fun startupScriptS3ObjectVersion(startupScriptS3ObjectVersion: String) {
+    override fun startupScriptS3ObjectVersion(startupScriptS3ObjectVersion: String) {
       cdkBuilder.startupScriptS3ObjectVersion(startupScriptS3ObjectVersion)
     }
 
-    public override fun startupScriptS3Path(startupScriptS3Path: String) {
+    override fun startupScriptS3Path(startupScriptS3Path: String) {
       cdkBuilder.startupScriptS3Path(startupScriptS3Path)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun webserverAccessMode(webserverAccessMode: String) {
+    override fun webserverAccessMode(webserverAccessMode: String) {
       cdkBuilder.webserverAccessMode(webserverAccessMode)
     }
 
-    public override fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String) {
+    override fun weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart: String) {
       cdkBuilder.weeklyMaintenanceWindowStart(weeklyMaintenanceWindowStart)
     }
 
@@ -457,63 +430,46 @@ public open class CfnEnvironment internal constructor(
     public fun workerLogs(): Any? = unwrap(this).getWorkerLogs()
 
     public interface Builder {
-      public fun dagProcessingLogs(dagProcessingLogs: IResolvable) {
-      }
+      public fun dagProcessingLogs(dagProcessingLogs: IResolvable)
 
-      public fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty) {
-      }
+      public fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1330f7c2b8e957ece7d3f6d63b8e92b8bd0cb2f4e727176b706cd8a77c679735")
       public
-          fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit)
 
-      public fun schedulerLogs(schedulerLogs: IResolvable) {
-      }
+      public fun schedulerLogs(schedulerLogs: IResolvable)
 
-      public fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty) {
-      }
+      public fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73e3e873b4c948aba5941ca638f6ee43fe683de1dfd86839ffdbcd9dc98fe3f6")
-      public
-          fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit)
 
-      public fun taskLogs(taskLogs: IResolvable) {
-      }
+      public fun taskLogs(taskLogs: IResolvable)
 
-      public fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty) {
-      }
+      public fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8a283a4f04f2890bdc485fdb461988647ae261ca78d3d9463cd916a5f9d3da19")
-      public fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit)
 
-      public fun webserverLogs(webserverLogs: IResolvable) {
-      }
+      public fun webserverLogs(webserverLogs: IResolvable)
 
-      public fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty) {
-      }
+      public fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3042a5be32bb2f4a801c944e3ddc5345a36678e5820c0655a3e5bbf5df7f8a71")
-      public
-          fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit)
 
-      public fun workerLogs(workerLogs: IResolvable) {
-      }
+      public fun workerLogs(workerLogs: IResolvable)
 
-      public fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty) {
-      }
+      public fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("663473f1a66947d758bb986bca1649a2c63d636a684bb8ae0cda9440fb485e36")
-      public fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -521,74 +477,73 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty.Builder =
           software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty.builder()
 
-      public override fun dagProcessingLogs(dagProcessingLogs: IResolvable) {
+      override fun dagProcessingLogs(dagProcessingLogs: IResolvable) {
         cdkBuilder.dagProcessingLogs(dagProcessingLogs.let(IResolvable::unwrap))
       }
 
-      public override fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty) {
+      override fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty) {
         cdkBuilder.dagProcessingLogs(dagProcessingLogs.let(ModuleLoggingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1330f7c2b8e957ece7d3f6d63b8e92b8bd0cb2f4e727176b706cd8a77c679735")
-      public override
+      override
           fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit):
           Unit = dagProcessingLogs(ModuleLoggingConfigurationProperty(dagProcessingLogs))
 
-      public override fun schedulerLogs(schedulerLogs: IResolvable) {
+      override fun schedulerLogs(schedulerLogs: IResolvable) {
         cdkBuilder.schedulerLogs(schedulerLogs.let(IResolvable::unwrap))
       }
 
-      public override fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty) {
+      override fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty) {
         cdkBuilder.schedulerLogs(schedulerLogs.let(ModuleLoggingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("73e3e873b4c948aba5941ca638f6ee43fe683de1dfd86839ffdbcd9dc98fe3f6")
-      public override
+      override
           fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit):
           Unit = schedulerLogs(ModuleLoggingConfigurationProperty(schedulerLogs))
 
-      public override fun taskLogs(taskLogs: IResolvable) {
+      override fun taskLogs(taskLogs: IResolvable) {
         cdkBuilder.taskLogs(taskLogs.let(IResolvable::unwrap))
       }
 
-      public override fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty) {
+      override fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty) {
         cdkBuilder.taskLogs(taskLogs.let(ModuleLoggingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8a283a4f04f2890bdc485fdb461988647ae261ca78d3d9463cd916a5f9d3da19")
-      public override fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit):
-          Unit = taskLogs(ModuleLoggingConfigurationProperty(taskLogs))
+      override fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit): Unit =
+          taskLogs(ModuleLoggingConfigurationProperty(taskLogs))
 
-      public override fun webserverLogs(webserverLogs: IResolvable) {
+      override fun webserverLogs(webserverLogs: IResolvable) {
         cdkBuilder.webserverLogs(webserverLogs.let(IResolvable::unwrap))
       }
 
-      public override fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty) {
+      override fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty) {
         cdkBuilder.webserverLogs(webserverLogs.let(ModuleLoggingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3042a5be32bb2f4a801c944e3ddc5345a36678e5820c0655a3e5bbf5df7f8a71")
-      public override
+      override
           fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit):
           Unit = webserverLogs(ModuleLoggingConfigurationProperty(webserverLogs))
 
-      public override fun workerLogs(workerLogs: IResolvable) {
+      override fun workerLogs(workerLogs: IResolvable) {
         cdkBuilder.workerLogs(workerLogs.let(IResolvable::unwrap))
       }
 
-      public override fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty) {
+      override fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty) {
         cdkBuilder.workerLogs(workerLogs.let(ModuleLoggingConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("663473f1a66947d758bb986bca1649a2c63d636a684bb8ae0cda9440fb485e36")
-      public override
-          fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit): Unit =
-          workerLogs(ModuleLoggingConfigurationProperty(workerLogs))
+      override fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty.Builder.() -> Unit):
+          Unit = workerLogs(ModuleLoggingConfigurationProperty(workerLogs))
 
       public fun build():
           software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty =
@@ -599,15 +554,15 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mwaa.CfnEnvironment.LoggingConfigurationProperty,
     ) : LoggingConfigurationProperty {
-      public override fun dagProcessingLogs(): Any? = unwrap(this).getDagProcessingLogs()
+      override fun dagProcessingLogs(): Any? = unwrap(this).getDagProcessingLogs()
 
-      public override fun schedulerLogs(): Any? = unwrap(this).getSchedulerLogs()
+      override fun schedulerLogs(): Any? = unwrap(this).getSchedulerLogs()
 
-      public override fun taskLogs(): Any? = unwrap(this).getTaskLogs()
+      override fun taskLogs(): Any? = unwrap(this).getTaskLogs()
 
-      public override fun webserverLogs(): Any? = unwrap(this).getWebserverLogs()
+      override fun webserverLogs(): Any? = unwrap(this).getWebserverLogs()
 
-      public override fun workerLogs(): Any? = unwrap(this).getWorkerLogs()
+      override fun workerLogs(): Any? = unwrap(this).getWorkerLogs()
     }
 
     public companion object {
@@ -636,11 +591,9 @@ public open class CfnEnvironment internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -648,11 +601,11 @@ public open class CfnEnvironment internal constructor(
           software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty.Builder =
           software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -665,10 +618,10 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mwaa.CfnEnvironment.NetworkConfigurationProperty,
     ) : NetworkConfigurationProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -699,17 +652,13 @@ public open class CfnEnvironment internal constructor(
     public fun logLevel(): String? = unwrap(this).getLogLevel()
 
     public interface Builder {
-      public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
-      }
+      public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
-      public fun enabled(enabled: Boolean) {
-      }
+      public fun enabled(enabled: Boolean)
 
-      public fun enabled(enabled: IResolvable) {
-      }
+      public fun enabled(enabled: IResolvable)
 
-      public fun logLevel(logLevel: String) {
-      }
+      public fun logLevel(logLevel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -718,19 +667,19 @@ public open class CfnEnvironment internal constructor(
           =
           software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty.builder()
 
-      public override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
+      override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
         cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
       }
 
-      public override fun enabled(enabled: Boolean) {
+      override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
-      public override fun enabled(enabled: IResolvable) {
+      override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
 
-      public override fun logLevel(logLevel: String) {
+      override fun logLevel(logLevel: String) {
         cdkBuilder.logLevel(logLevel)
       }
 
@@ -743,11 +692,11 @@ public open class CfnEnvironment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mwaa.CfnEnvironment.ModuleLoggingConfigurationProperty,
     ) : ModuleLoggingConfigurationProperty {
-      public override fun cloudWatchLogGroupArn(): String? = unwrap(this).getCloudWatchLogGroupArn()
+      override fun cloudWatchLogGroupArn(): String? = unwrap(this).getCloudWatchLogGroupArn()
 
-      public override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any? = unwrap(this).getEnabled()
 
-      public override fun logLevel(): String? = unwrap(this).getLogLevel()
+      override fun logLevel(): String? = unwrap(this).getLogLevel()
     }
 
     public companion object {

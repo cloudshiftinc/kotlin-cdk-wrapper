@@ -11,29 +11,26 @@ public interface Acl {
   public fun permissions(): String
 
   public interface Builder {
-    public fun ownerGid(ownerGid: String) {
-    }
+    public fun ownerGid(ownerGid: String)
 
-    public fun ownerUid(ownerUid: String) {
-    }
+    public fun ownerUid(ownerUid: String)
 
-    public fun permissions(permissions: String) {
-    }
+    public fun permissions(permissions: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.efs.Acl.Builder =
         software.amazon.awscdk.services.efs.Acl.builder()
 
-    public override fun ownerGid(ownerGid: String) {
+    override fun ownerGid(ownerGid: String) {
       cdkBuilder.ownerGid(ownerGid)
     }
 
-    public override fun ownerUid(ownerUid: String) {
+    override fun ownerUid(ownerUid: String) {
       cdkBuilder.ownerUid(ownerUid)
     }
 
-    public override fun permissions(permissions: String) {
+    override fun permissions(permissions: String) {
       cdkBuilder.permissions(permissions)
     }
 
@@ -43,11 +40,11 @@ public interface Acl {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.efs.Acl,
   ) : Acl {
-    public override fun ownerGid(): String = unwrap(this).getOwnerGid()
+    override fun ownerGid(): String = unwrap(this).getOwnerGid()
 
-    public override fun ownerUid(): String = unwrap(this).getOwnerUid()
+    override fun ownerUid(): String = unwrap(this).getOwnerUid()
 
-    public override fun permissions(): String = unwrap(this).getPermissions()
+    override fun permissions(): String = unwrap(this).getPermissions()
   }
 
   public companion object {

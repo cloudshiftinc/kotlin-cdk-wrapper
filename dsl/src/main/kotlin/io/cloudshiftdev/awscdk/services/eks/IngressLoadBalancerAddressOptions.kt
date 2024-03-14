@@ -6,11 +6,9 @@ import kotlin.Unit
 
 public interface IngressLoadBalancerAddressOptions : ServiceLoadBalancerAddressOptions {
   public interface Builder {
-    public fun namespace(namespace: String) {
-    }
+    public fun namespace(namespace: String)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -18,11 +16,11 @@ public interface IngressLoadBalancerAddressOptions : ServiceLoadBalancerAddressO
         software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions.Builder =
         software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions.builder()
 
-    public override fun namespace(namespace: String) {
+    override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
@@ -33,9 +31,9 @@ public interface IngressLoadBalancerAddressOptions : ServiceLoadBalancerAddressO
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions,
   ) : IngressLoadBalancerAddressOptions {
-    public override fun namespace(): String? = unwrap(this).getNamespace()
+    override fun namespace(): String? = unwrap(this).getNamespace()
 
-    public override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

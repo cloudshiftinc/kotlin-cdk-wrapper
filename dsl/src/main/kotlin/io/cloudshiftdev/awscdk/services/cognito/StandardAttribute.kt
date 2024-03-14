@@ -9,22 +9,20 @@ public interface StandardAttribute {
   public fun required(): Boolean? = unwrap(this).getRequired()
 
   public interface Builder {
-    public fun mutable(mutable: Boolean) {
-    }
+    public fun mutable(mutable: Boolean)
 
-    public fun required(required: Boolean) {
-    }
+    public fun required(required: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.StandardAttribute.Builder =
         software.amazon.awscdk.services.cognito.StandardAttribute.builder()
 
-    public override fun mutable(mutable: Boolean) {
+    override fun mutable(mutable: Boolean) {
       cdkBuilder.mutable(mutable)
     }
 
-    public override fun required(required: Boolean) {
+    override fun required(required: Boolean) {
       cdkBuilder.required(required)
     }
 
@@ -35,9 +33,9 @@ public interface StandardAttribute {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.StandardAttribute,
   ) : StandardAttribute {
-    public override fun mutable(): Boolean? = unwrap(this).getMutable()
+    override fun mutable(): Boolean? = unwrap(this).getMutable()
 
-    public override fun required(): Boolean? = unwrap(this).getRequired()
+    override fun required(): Boolean? = unwrap(this).getRequired()
   }
 
   public companion object {

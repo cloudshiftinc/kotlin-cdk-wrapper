@@ -69,25 +69,19 @@ public open class CfnScript internal constructor(
   }
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun storageLocation(storageLocation: IResolvable) {
-    }
+    public fun storageLocation(storageLocation: IResolvable)
 
-    public fun storageLocation(storageLocation: S3LocationProperty) {
-    }
+    public fun storageLocation(storageLocation: S3LocationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c70351e4878855f3f6dc7e9aaf7c9e3b746c27e61ebb2615139fb9e39b9b92b")
-    public fun storageLocation(storageLocation: S3LocationProperty.Builder.() -> Unit) {
-    }
+    public fun storageLocation(storageLocation: S3LocationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun version(version: String) {
-    }
+    public fun version(version: String)
   }
 
   private class BuilderImpl(
@@ -97,28 +91,28 @@ public open class CfnScript internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnScript.Builder =
         software.amazon.awscdk.services.gamelift.CfnScript.Builder.create(scope, id)
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun storageLocation(storageLocation: IResolvable) {
+    override fun storageLocation(storageLocation: IResolvable) {
       cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
     }
 
-    public override fun storageLocation(storageLocation: S3LocationProperty) {
+    override fun storageLocation(storageLocation: S3LocationProperty) {
       cdkBuilder.storageLocation(storageLocation.let(S3LocationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c70351e4878855f3f6dc7e9aaf7c9e3b746c27e61ebb2615139fb9e39b9b92b")
-    public override fun storageLocation(storageLocation: S3LocationProperty.Builder.() -> Unit):
-        Unit = storageLocation(S3LocationProperty(storageLocation))
+    override fun storageLocation(storageLocation: S3LocationProperty.Builder.() -> Unit): Unit =
+        storageLocation(S3LocationProperty(storageLocation))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun version(version: String) {
+    override fun version(version: String) {
       cdkBuilder.version(version)
     }
 
@@ -156,17 +150,13 @@ public open class CfnScript internal constructor(
     public fun roleArn(): String
 
     public interface Builder {
-      public fun bucket(bucket: String) {
-      }
+      public fun bucket(bucket: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun objectVersion(objectVersion: String) {
-      }
+      public fun objectVersion(objectVersion: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -174,19 +164,19 @@ public open class CfnScript internal constructor(
           software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty.builder()
 
-      public override fun bucket(bucket: String) {
+      override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun objectVersion(objectVersion: String) {
+      override fun objectVersion(objectVersion: String) {
         cdkBuilder.objectVersion(objectVersion)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -197,13 +187,13 @@ public open class CfnScript internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.gamelift.CfnScript.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucket(): String = unwrap(this).getBucket()
+      override fun bucket(): String = unwrap(this).getBucket()
 
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+      override fun objectVersion(): String? = unwrap(this).getObjectVersion()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
     public companion object {

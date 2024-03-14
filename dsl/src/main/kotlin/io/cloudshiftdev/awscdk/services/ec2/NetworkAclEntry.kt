@@ -14,26 +14,19 @@ public open class NetworkAclEntry internal constructor(
       unwrap(this).getNetworkAcl().let(INetworkAcl::wrap)
 
   public interface Builder {
-    public fun cidr(cidr: AclCidr) {
-    }
+    public fun cidr(cidr: AclCidr)
 
-    public fun direction(direction: TrafficDirection) {
-    }
+    public fun direction(direction: TrafficDirection)
 
-    public fun networkAcl(networkAcl: INetworkAcl) {
-    }
+    public fun networkAcl(networkAcl: INetworkAcl)
 
-    public fun networkAclEntryName(networkAclEntryName: String) {
-    }
+    public fun networkAclEntryName(networkAclEntryName: String)
 
-    public fun ruleAction(ruleAction: Action) {
-    }
+    public fun ruleAction(ruleAction: Action)
 
-    public fun ruleNumber(ruleNumber: Number) {
-    }
+    public fun ruleNumber(ruleNumber: Number)
 
-    public fun traffic(traffic: AclTraffic) {
-    }
+    public fun traffic(traffic: AclTraffic)
   }
 
   private class BuilderImpl(
@@ -43,31 +36,31 @@ public open class NetworkAclEntry internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NetworkAclEntry.Builder =
         software.amazon.awscdk.services.ec2.NetworkAclEntry.Builder.create(scope, id)
 
-    public override fun cidr(cidr: AclCidr) {
+    override fun cidr(cidr: AclCidr) {
       cdkBuilder.cidr(cidr.let(AclCidr::unwrap))
     }
 
-    public override fun direction(direction: TrafficDirection) {
+    override fun direction(direction: TrafficDirection) {
       cdkBuilder.direction(direction.let(TrafficDirection::unwrap))
     }
 
-    public override fun networkAcl(networkAcl: INetworkAcl) {
+    override fun networkAcl(networkAcl: INetworkAcl) {
       cdkBuilder.networkAcl(networkAcl.let(INetworkAcl::unwrap))
     }
 
-    public override fun networkAclEntryName(networkAclEntryName: String) {
+    override fun networkAclEntryName(networkAclEntryName: String) {
       cdkBuilder.networkAclEntryName(networkAclEntryName)
     }
 
-    public override fun ruleAction(ruleAction: Action) {
+    override fun ruleAction(ruleAction: Action) {
       cdkBuilder.ruleAction(ruleAction.let(Action::unwrap))
     }
 
-    public override fun ruleNumber(ruleNumber: Number) {
+    override fun ruleNumber(ruleNumber: Number) {
       cdkBuilder.ruleNumber(ruleNumber)
     }
 
-    public override fun traffic(traffic: AclTraffic) {
+    override fun traffic(traffic: AclTraffic) {
       cdkBuilder.traffic(traffic.let(AclTraffic::unwrap))
     }
 

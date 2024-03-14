@@ -11,29 +11,26 @@ public open class Variable internal constructor(
   public open fun variableName(): String = unwrap(this).getVariableName()
 
   public interface Builder {
-    public fun defaultValue(defaultValue: String) {
-    }
+    public fun defaultValue(defaultValue: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun variableName(variableName: String) {
-    }
+    public fun variableName(variableName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.Variable.Builder =
         software.amazon.awscdk.services.codepipeline.Variable.Builder.create()
 
-    public override fun defaultValue(defaultValue: String) {
+    override fun defaultValue(defaultValue: String) {
       cdkBuilder.defaultValue(defaultValue)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun variableName(variableName: String) {
+    override fun variableName(variableName: String) {
       cdkBuilder.variableName(variableName)
     }
 

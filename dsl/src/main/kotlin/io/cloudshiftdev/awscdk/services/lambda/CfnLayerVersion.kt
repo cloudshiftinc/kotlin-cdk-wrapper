@@ -70,31 +70,23 @@ public open class CfnLayerVersion internal constructor(
   }
 
   public interface Builder {
-    public fun compatibleArchitectures(compatibleArchitectures: List<String>) {
-    }
+    public fun compatibleArchitectures(compatibleArchitectures: List<String>)
 
-    public fun compatibleRuntimes(compatibleRuntimes: List<String>) {
-    }
+    public fun compatibleRuntimes(compatibleRuntimes: List<String>)
 
-    public fun content(content: IResolvable) {
-    }
+    public fun content(content: IResolvable)
 
-    public fun content(content: ContentProperty) {
-    }
+    public fun content(content: ContentProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d9f4b6b8e6a4340d0fd83dea8fc7f5f98bb8cc60c16fc293abaa52663a51e15")
-    public fun content(content: ContentProperty.Builder.() -> Unit) {
-    }
+    public fun content(content: ContentProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun layerName(layerName: String) {
-    }
+    public fun layerName(layerName: String)
 
-    public fun licenseInfo(licenseInfo: String) {
-    }
+    public fun licenseInfo(licenseInfo: String)
   }
 
   private class BuilderImpl(
@@ -104,36 +96,36 @@ public open class CfnLayerVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CfnLayerVersion.Builder =
         software.amazon.awscdk.services.lambda.CfnLayerVersion.Builder.create(scope, id)
 
-    public override fun compatibleArchitectures(compatibleArchitectures: List<String>) {
+    override fun compatibleArchitectures(compatibleArchitectures: List<String>) {
       cdkBuilder.compatibleArchitectures(compatibleArchitectures)
     }
 
-    public override fun compatibleRuntimes(compatibleRuntimes: List<String>) {
+    override fun compatibleRuntimes(compatibleRuntimes: List<String>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes)
     }
 
-    public override fun content(content: IResolvable) {
+    override fun content(content: IResolvable) {
       cdkBuilder.content(content.let(IResolvable::unwrap))
     }
 
-    public override fun content(content: ContentProperty) {
+    override fun content(content: ContentProperty) {
       cdkBuilder.content(content.let(ContentProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d9f4b6b8e6a4340d0fd83dea8fc7f5f98bb8cc60c16fc293abaa52663a51e15")
-    public override fun content(content: ContentProperty.Builder.() -> Unit): Unit =
+    override fun content(content: ContentProperty.Builder.() -> Unit): Unit =
         content(ContentProperty(content))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun layerName(layerName: String) {
+    override fun layerName(layerName: String) {
       cdkBuilder.layerName(layerName)
     }
 
-    public override fun licenseInfo(licenseInfo: String) {
+    override fun licenseInfo(licenseInfo: String) {
       cdkBuilder.licenseInfo(licenseInfo)
     }
 
@@ -169,14 +161,11 @@ public open class CfnLayerVersion internal constructor(
     public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
     public interface Builder {
-      public fun s3Bucket(s3Bucket: String) {
-      }
+      public fun s3Bucket(s3Bucket: String)
 
-      public fun s3Key(s3Key: String) {
-      }
+      public fun s3Key(s3Key: String)
 
-      public fun s3ObjectVersion(s3ObjectVersion: String) {
-      }
+      public fun s3ObjectVersion(s3ObjectVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -184,15 +173,15 @@ public open class CfnLayerVersion internal constructor(
           software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty.Builder =
           software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty.builder()
 
-      public override fun s3Bucket(s3Bucket: String) {
+      override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
-      public override fun s3Key(s3Key: String) {
+      override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
-      public override fun s3ObjectVersion(s3ObjectVersion: String) {
+      override fun s3ObjectVersion(s3ObjectVersion: String) {
         cdkBuilder.s3ObjectVersion(s3ObjectVersion)
       }
 
@@ -204,11 +193,11 @@ public open class CfnLayerVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lambda.CfnLayerVersion.ContentProperty,
     ) : ContentProperty {
-      public override fun s3Bucket(): String = unwrap(this).getS3Bucket()
+      override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
-      public override fun s3Key(): String = unwrap(this).getS3Key()
+      override fun s3Key(): String = unwrap(this).getS3Key()
 
-      public override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
+      override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
     }
 
     public companion object {

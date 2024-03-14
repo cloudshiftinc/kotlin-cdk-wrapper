@@ -77,37 +77,28 @@ public open class CfnProject internal constructor(
   }
 
   public interface Builder {
-    public fun appConfigResource(appConfigResource: IResolvable) {
-    }
+    public fun appConfigResource(appConfigResource: IResolvable)
 
-    public fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty) {
-    }
+    public fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c58780625dbccb6ada80e2fdecd5fa7458ecfa7e3b72b67e9e56897231e88c8")
     public
-        fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty.Builder.() -> Unit) {
-    }
+        fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty.Builder.() -> Unit)
 
-    public fun dataDelivery(dataDelivery: IResolvable) {
-    }
+    public fun dataDelivery(dataDelivery: IResolvable)
 
-    public fun dataDelivery(dataDelivery: DataDeliveryObjectProperty) {
-    }
+    public fun dataDelivery(dataDelivery: DataDeliveryObjectProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb85785ee2aedddaff00d956283467969b245ea062d5a0993529891592acec7a")
-    public fun dataDelivery(dataDelivery: DataDeliveryObjectProperty.Builder.() -> Unit) {
-    }
+    public fun dataDelivery(dataDelivery: DataDeliveryObjectProperty.Builder.() -> Unit)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -117,42 +108,42 @@ public open class CfnProject internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.evidently.CfnProject.Builder =
         software.amazon.awscdk.services.evidently.CfnProject.Builder.create(scope, id)
 
-    public override fun appConfigResource(appConfigResource: IResolvable) {
+    override fun appConfigResource(appConfigResource: IResolvable) {
       cdkBuilder.appConfigResource(appConfigResource.let(IResolvable::unwrap))
     }
 
-    public override fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty) {
+    override fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty) {
       cdkBuilder.appConfigResource(appConfigResource.let(AppConfigResourceObjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c58780625dbccb6ada80e2fdecd5fa7458ecfa7e3b72b67e9e56897231e88c8")
-    public override
+    override
         fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty.Builder.() -> Unit):
         Unit = appConfigResource(AppConfigResourceObjectProperty(appConfigResource))
 
-    public override fun dataDelivery(dataDelivery: IResolvable) {
+    override fun dataDelivery(dataDelivery: IResolvable) {
       cdkBuilder.dataDelivery(dataDelivery.let(IResolvable::unwrap))
     }
 
-    public override fun dataDelivery(dataDelivery: DataDeliveryObjectProperty) {
+    override fun dataDelivery(dataDelivery: DataDeliveryObjectProperty) {
       cdkBuilder.dataDelivery(dataDelivery.let(DataDeliveryObjectProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb85785ee2aedddaff00d956283467969b245ea062d5a0993529891592acec7a")
-    public override fun dataDelivery(dataDelivery: DataDeliveryObjectProperty.Builder.() -> Unit):
-        Unit = dataDelivery(DataDeliveryObjectProperty(dataDelivery))
+    override fun dataDelivery(dataDelivery: DataDeliveryObjectProperty.Builder.() -> Unit): Unit =
+        dataDelivery(DataDeliveryObjectProperty(dataDelivery))
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -186,11 +177,9 @@ public open class CfnProject internal constructor(
     public fun environmentId(): String
 
     public interface Builder {
-      public fun applicationId(applicationId: String) {
-      }
+      public fun applicationId(applicationId: String)
 
-      public fun environmentId(environmentId: String) {
-      }
+      public fun environmentId(environmentId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -199,11 +188,11 @@ public open class CfnProject internal constructor(
           =
           software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty.builder()
 
-      public override fun applicationId(applicationId: String) {
+      override fun applicationId(applicationId: String) {
         cdkBuilder.applicationId(applicationId)
       }
 
-      public override fun environmentId(environmentId: String) {
+      override fun environmentId(environmentId: String) {
         cdkBuilder.environmentId(environmentId)
       }
 
@@ -216,9 +205,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnProject.AppConfigResourceObjectProperty,
     ) : AppConfigResourceObjectProperty {
-      public override fun applicationId(): String = unwrap(this).getApplicationId()
+      override fun applicationId(): String = unwrap(this).getApplicationId()
 
-      public override fun environmentId(): String = unwrap(this).getEnvironmentId()
+      override fun environmentId(): String = unwrap(this).getEnvironmentId()
     }
 
     public companion object {
@@ -247,19 +236,15 @@ public open class CfnProject internal constructor(
     public fun s3(): Any? = unwrap(this).getS3()
 
     public interface Builder {
-      public fun logGroup(logGroup: String) {
-      }
+      public fun logGroup(logGroup: String)
 
-      public fun s3(s3: IResolvable) {
-      }
+      public fun s3(s3: IResolvable)
 
-      public fun s3(s3: S3DestinationProperty) {
-      }
+      public fun s3(s3: S3DestinationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16c6cc3d94b00ed1f82f8c65caa3cf1eaafd4892d08efd06b911c8f71164cda9")
-      public fun s3(s3: S3DestinationProperty.Builder.() -> Unit) {
-      }
+      public fun s3(s3: S3DestinationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -267,21 +252,21 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty.builder()
 
-      public override fun logGroup(logGroup: String) {
+      override fun logGroup(logGroup: String) {
         cdkBuilder.logGroup(logGroup)
       }
 
-      public override fun s3(s3: IResolvable) {
+      override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable::unwrap))
       }
 
-      public override fun s3(s3: S3DestinationProperty) {
+      override fun s3(s3: S3DestinationProperty) {
         cdkBuilder.s3(s3.let(S3DestinationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16c6cc3d94b00ed1f82f8c65caa3cf1eaafd4892d08efd06b911c8f71164cda9")
-      public override fun s3(s3: S3DestinationProperty.Builder.() -> Unit): Unit =
+      override fun s3(s3: S3DestinationProperty.Builder.() -> Unit): Unit =
           s3(S3DestinationProperty(s3))
 
       public fun build():
@@ -293,9 +278,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnProject.DataDeliveryObjectProperty,
     ) : DataDeliveryObjectProperty {
-      public override fun logGroup(): String? = unwrap(this).getLogGroup()
+      override fun logGroup(): String? = unwrap(this).getLogGroup()
 
-      public override fun s3(): Any? = unwrap(this).getS3()
+      override fun s3(): Any? = unwrap(this).getS3()
     }
 
     public companion object {
@@ -324,11 +309,9 @@ public open class CfnProject internal constructor(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun prefix(prefix: String) {
-      }
+      public fun prefix(prefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -336,11 +319,11 @@ public open class CfnProject internal constructor(
           software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty.Builder =
           software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun prefix(prefix: String) {
+      override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
@@ -352,9 +335,9 @@ public open class CfnProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.evidently.CfnProject.S3DestinationProperty,
     ) : S3DestinationProperty {
-      public override fun bucketName(): String = unwrap(this).getBucketName()
+      override fun bucketName(): String = unwrap(this).getBucketName()
 
-      public override fun prefix(): String? = unwrap(this).getPrefix()
+      override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
     public companion object {

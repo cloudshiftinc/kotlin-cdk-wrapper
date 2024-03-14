@@ -8,8 +8,7 @@ public interface NetworkForwardOptions {
       unwrap(this).getStickinessDuration()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun stickinessDuration(stickinessDuration: Duration) {
-    }
+    public fun stickinessDuration(stickinessDuration: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -17,7 +16,7 @@ public interface NetworkForwardOptions {
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions.builder()
 
-    public override fun stickinessDuration(stickinessDuration: Duration) {
+    override fun stickinessDuration(stickinessDuration: Duration) {
       cdkBuilder.stickinessDuration(stickinessDuration.let(Duration::unwrap))
     }
 
@@ -29,7 +28,7 @@ public interface NetworkForwardOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions,
   ) : NetworkForwardOptions {
-    public override fun stickinessDuration(): Duration? =
+    override fun stickinessDuration(): Duration? =
         unwrap(this).getStickinessDuration()?.let(Duration::wrap)
   }
 

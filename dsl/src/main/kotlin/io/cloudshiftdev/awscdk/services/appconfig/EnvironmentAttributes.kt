@@ -17,43 +17,38 @@ public interface EnvironmentAttributes {
   public fun name(): String? = unwrap(this).getName()
 
   public interface Builder {
-    public fun application(application: IApplication) {
-    }
+    public fun application(application: IApplication)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun environmentId(environmentId: String) {
-    }
+    public fun environmentId(environmentId: String)
 
-    public fun monitors(monitors: List<Monitor>) {
-    }
+    public fun monitors(monitors: List<Monitor>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appconfig.EnvironmentAttributes.Builder
         = software.amazon.awscdk.services.appconfig.EnvironmentAttributes.builder()
 
-    public override fun application(application: IApplication) {
+    override fun application(application: IApplication) {
       cdkBuilder.application(application.let(IApplication::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun environmentId(environmentId: String) {
+    override fun environmentId(environmentId: String) {
       cdkBuilder.environmentId(environmentId)
     }
 
-    public override fun monitors(monitors: List<Monitor>) {
+    override fun monitors(monitors: List<Monitor>) {
       cdkBuilder.monitors(monitors.map(Monitor::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -64,17 +59,16 @@ public interface EnvironmentAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentAttributes,
   ) : EnvironmentAttributes {
-    public override fun application(): IApplication =
-        unwrap(this).getApplication().let(IApplication::wrap)
+    override fun application(): IApplication = unwrap(this).getApplication().let(IApplication::wrap)
 
-    public override fun description(): String? = unwrap(this).getDescription()
+    override fun description(): String? = unwrap(this).getDescription()
 
-    public override fun environmentId(): String = unwrap(this).getEnvironmentId()
+    override fun environmentId(): String = unwrap(this).getEnvironmentId()
 
-    public override fun monitors(): List<Monitor> = unwrap(this).getMonitors()?.map(Monitor::wrap)
-        ?: emptyList()
+    override fun monitors(): List<Monitor> = unwrap(this).getMonitors()?.map(Monitor::wrap) ?:
+        emptyList()
 
-    public override fun name(): String? = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
   }
 
   public companion object {

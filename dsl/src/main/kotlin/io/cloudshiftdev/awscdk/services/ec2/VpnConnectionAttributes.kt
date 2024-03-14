@@ -14,36 +14,32 @@ public interface VpnConnectionAttributes {
   public fun vpnId(): String
 
   public interface Builder {
-    public fun customerGatewayAsn(customerGatewayAsn: Number) {
-    }
+    public fun customerGatewayAsn(customerGatewayAsn: Number)
 
-    public fun customerGatewayId(customerGatewayId: String) {
-    }
+    public fun customerGatewayId(customerGatewayId: String)
 
-    public fun customerGatewayIp(customerGatewayIp: String) {
-    }
+    public fun customerGatewayIp(customerGatewayIp: String)
 
-    public fun vpnId(vpnId: String) {
-    }
+    public fun vpnId(vpnId: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnConnectionAttributes.Builder =
         software.amazon.awscdk.services.ec2.VpnConnectionAttributes.builder()
 
-    public override fun customerGatewayAsn(customerGatewayAsn: Number) {
+    override fun customerGatewayAsn(customerGatewayAsn: Number) {
       cdkBuilder.customerGatewayAsn(customerGatewayAsn)
     }
 
-    public override fun customerGatewayId(customerGatewayId: String) {
+    override fun customerGatewayId(customerGatewayId: String) {
       cdkBuilder.customerGatewayId(customerGatewayId)
     }
 
-    public override fun customerGatewayIp(customerGatewayIp: String) {
+    override fun customerGatewayIp(customerGatewayIp: String) {
       cdkBuilder.customerGatewayIp(customerGatewayIp)
     }
 
-    public override fun vpnId(vpnId: String) {
+    override fun vpnId(vpnId: String) {
       cdkBuilder.vpnId(vpnId)
     }
 
@@ -54,13 +50,13 @@ public interface VpnConnectionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionAttributes,
   ) : VpnConnectionAttributes {
-    public override fun customerGatewayAsn(): Number = unwrap(this).getCustomerGatewayAsn()
+    override fun customerGatewayAsn(): Number = unwrap(this).getCustomerGatewayAsn()
 
-    public override fun customerGatewayId(): String = unwrap(this).getCustomerGatewayId()
+    override fun customerGatewayId(): String = unwrap(this).getCustomerGatewayId()
 
-    public override fun customerGatewayIp(): String = unwrap(this).getCustomerGatewayIp()
+    override fun customerGatewayIp(): String = unwrap(this).getCustomerGatewayIp()
 
-    public override fun vpnId(): String = unwrap(this).getVpnId()
+    override fun vpnId(): String = unwrap(this).getVpnId()
   }
 
   public companion object {

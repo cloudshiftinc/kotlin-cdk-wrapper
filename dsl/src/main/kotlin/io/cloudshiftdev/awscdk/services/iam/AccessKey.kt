@@ -17,14 +17,11 @@ public open class AccessKey internal constructor(
       unwrap(this).getSecretAccessKey().let(SecretValue::wrap)
 
   public interface Builder {
-    public fun serial(serial: Number) {
-    }
+    public fun serial(serial: Number)
 
-    public fun status(status: AccessKeyStatus) {
-    }
+    public fun status(status: AccessKeyStatus)
 
-    public fun user(user: IUser) {
-    }
+    public fun user(user: IUser)
   }
 
   private class BuilderImpl(
@@ -34,15 +31,15 @@ public open class AccessKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.AccessKey.Builder =
         software.amazon.awscdk.services.iam.AccessKey.Builder.create(scope, id)
 
-    public override fun serial(serial: Number) {
+    override fun serial(serial: Number) {
       cdkBuilder.serial(serial)
     }
 
-    public override fun status(status: AccessKeyStatus) {
+    override fun status(status: AccessKeyStatus) {
       cdkBuilder.status(status.let(AccessKeyStatus::unwrap))
     }
 
-    public override fun user(user: IUser) {
+    override fun user(user: IUser) {
       cdkBuilder.user(user.let(IUser::unwrap))
     }
 

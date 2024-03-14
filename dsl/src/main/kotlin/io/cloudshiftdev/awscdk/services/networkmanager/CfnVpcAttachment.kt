@@ -106,40 +106,30 @@ public open class CfnVpcAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun coreNetworkId(coreNetworkId: String) {
-    }
+    public fun coreNetworkId(coreNetworkId: String)
 
-    public fun options(options: IResolvable) {
-    }
+    public fun options(options: IResolvable)
 
-    public fun options(options: VpcOptionsProperty) {
-    }
+    public fun options(options: VpcOptionsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6eacb9293db63e6186b9b8dd6e9c5fe8aa22c9ceeb6cce74db1a42b2d3b3c998")
-    public fun options(options: VpcOptionsProperty.Builder.() -> Unit) {
-    }
+    public fun options(options: VpcOptionsProperty.Builder.() -> Unit)
 
-    public fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-    }
+    public fun proposedSegmentChange(proposedSegmentChange: IResolvable)
 
-    public fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
-    }
+    public fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad6df3611e86e18a84c20a6d40323432db1b1213cd55e3f7ae0a0b4320a85d6b")
     public
-        fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit) {
-    }
+        fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit)
 
-    public fun subnetArns(subnetArns: List<String>) {
-    }
+    public fun subnetArns(subnetArns: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun vpcArn(vpcArn: String) {
-    }
+    public fun vpcArn(vpcArn: String)
   }
 
   private class BuilderImpl(
@@ -149,47 +139,46 @@ public open class CfnVpcAttachment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.Builder
         = software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.Builder.create(scope, id)
 
-    public override fun coreNetworkId(coreNetworkId: String) {
+    override fun coreNetworkId(coreNetworkId: String) {
       cdkBuilder.coreNetworkId(coreNetworkId)
     }
 
-    public override fun options(options: IResolvable) {
+    override fun options(options: IResolvable) {
       cdkBuilder.options(options.let(IResolvable::unwrap))
     }
 
-    public override fun options(options: VpcOptionsProperty) {
+    override fun options(options: VpcOptionsProperty) {
       cdkBuilder.options(options.let(VpcOptionsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6eacb9293db63e6186b9b8dd6e9c5fe8aa22c9ceeb6cce74db1a42b2d3b3c998")
-    public override fun options(options: VpcOptionsProperty.Builder.() -> Unit): Unit =
+    override fun options(options: VpcOptionsProperty.Builder.() -> Unit): Unit =
         options(VpcOptionsProperty(options))
 
-    public override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
+    override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
       cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
     }
 
-    public override
-        fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
+    override fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
       cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ad6df3611e86e18a84c20a6d40323432db1b1213cd55e3f7ae0a0b4320a85d6b")
-    public override
+    override
         fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit):
         Unit = proposedSegmentChange(ProposedSegmentChangeProperty(proposedSegmentChange))
 
-    public override fun subnetArns(subnetArns: List<String>) {
+    override fun subnetArns(subnetArns: List<String>) {
       cdkBuilder.subnetArns(subnetArns)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun vpcArn(vpcArn: String) {
+    override fun vpcArn(vpcArn: String) {
       cdkBuilder.vpcArn(vpcArn)
     }
 
@@ -224,17 +213,13 @@ public open class CfnVpcAttachment internal constructor(
     public fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
 
     public interface Builder {
-      public fun applianceModeSupport(applianceModeSupport: Boolean) {
-      }
+      public fun applianceModeSupport(applianceModeSupport: Boolean)
 
-      public fun applianceModeSupport(applianceModeSupport: IResolvable) {
-      }
+      public fun applianceModeSupport(applianceModeSupport: IResolvable)
 
-      public fun ipv6Support(ipv6Support: Boolean) {
-      }
+      public fun ipv6Support(ipv6Support: Boolean)
 
-      public fun ipv6Support(ipv6Support: IResolvable) {
-      }
+      public fun ipv6Support(ipv6Support: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -243,19 +228,19 @@ public open class CfnVpcAttachment internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty.builder()
 
-      public override fun applianceModeSupport(applianceModeSupport: Boolean) {
+      override fun applianceModeSupport(applianceModeSupport: Boolean) {
         cdkBuilder.applianceModeSupport(applianceModeSupport)
       }
 
-      public override fun applianceModeSupport(applianceModeSupport: IResolvable) {
+      override fun applianceModeSupport(applianceModeSupport: IResolvable) {
         cdkBuilder.applianceModeSupport(applianceModeSupport.let(IResolvable::unwrap))
       }
 
-      public override fun ipv6Support(ipv6Support: Boolean) {
+      override fun ipv6Support(ipv6Support: Boolean) {
         cdkBuilder.ipv6Support(ipv6Support)
       }
 
-      public override fun ipv6Support(ipv6Support: IResolvable) {
+      override fun ipv6Support(ipv6Support: IResolvable) {
         cdkBuilder.ipv6Support(ipv6Support.let(IResolvable::unwrap))
       }
 
@@ -268,9 +253,9 @@ public open class CfnVpcAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.VpcOptionsProperty,
     ) : VpcOptionsProperty {
-      public override fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
+      override fun applianceModeSupport(): Any? = unwrap(this).getApplianceModeSupport()
 
-      public override fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
+      override fun ipv6Support(): Any? = unwrap(this).getIpv6Support()
     }
 
     public companion object {
@@ -301,14 +286,11 @@ public open class CfnVpcAttachment internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
-      }
+      public fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number)
 
-      public fun segmentName(segmentName: String) {
-      }
+      public fun segmentName(segmentName: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -317,15 +299,15 @@ public open class CfnVpcAttachment internal constructor(
           =
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty.builder()
 
-      public override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
+      override fun attachmentPolicyRuleNumber(attachmentPolicyRuleNumber: Number) {
         cdkBuilder.attachmentPolicyRuleNumber(attachmentPolicyRuleNumber)
       }
 
-      public override fun segmentName(segmentName: String) {
+      override fun segmentName(segmentName: String) {
         cdkBuilder.segmentName(segmentName)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -338,13 +320,12 @@ public open class CfnVpcAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty,
     ) : ProposedSegmentChangeProperty {
-      public override fun attachmentPolicyRuleNumber(): Number? =
+      override fun attachmentPolicyRuleNumber(): Number? =
           unwrap(this).getAttachmentPolicyRuleNumber()
 
-      public override fun segmentName(): String? = unwrap(this).getSegmentName()
+      override fun segmentName(): String? = unwrap(this).getSegmentName()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {

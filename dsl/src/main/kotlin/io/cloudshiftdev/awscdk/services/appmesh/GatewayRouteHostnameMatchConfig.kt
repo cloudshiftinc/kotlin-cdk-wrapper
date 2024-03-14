@@ -8,14 +8,12 @@ public interface GatewayRouteHostnameMatchConfig {
   public fun hostnameMatch(): CfnGatewayRoute.GatewayRouteHostnameMatchProperty
 
   public interface Builder {
-    public fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
-    }
+    public fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66e199f5cd8312912ac210b0b0df2c995400d4198db87b42467f6b441ab49127")
     public
-        fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Builder.() -> Unit) {
-    }
+        fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -23,14 +21,13 @@ public interface GatewayRouteHostnameMatchConfig {
         software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig.builder()
 
-    public override
-        fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
+    override fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
       cdkBuilder.hostnameMatch(hostnameMatch.let(CfnGatewayRoute.GatewayRouteHostnameMatchProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66e199f5cd8312912ac210b0b0df2c995400d4198db87b42467f6b441ab49127")
-    public override
+    override
         fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Builder.() -> Unit):
         Unit = hostnameMatch(CfnGatewayRoute.GatewayRouteHostnameMatchProperty(hostnameMatch))
 
@@ -41,7 +38,7 @@ public interface GatewayRouteHostnameMatchConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig,
   ) : GatewayRouteHostnameMatchConfig {
-    public override fun hostnameMatch(): CfnGatewayRoute.GatewayRouteHostnameMatchProperty =
+    override fun hostnameMatch(): CfnGatewayRoute.GatewayRouteHostnameMatchProperty =
         unwrap(this).getHostnameMatch().let(CfnGatewayRoute.GatewayRouteHostnameMatchProperty::wrap)
   }
 

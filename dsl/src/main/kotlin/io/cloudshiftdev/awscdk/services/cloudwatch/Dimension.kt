@@ -10,22 +10,20 @@ public interface Dimension {
   public fun `value`(): Any
 
   public interface Builder {
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun `value`(`value`: Any) {
-    }
+    public fun `value`(`value`: Any)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.Dimension.Builder =
         software.amazon.awscdk.services.cloudwatch.Dimension.builder()
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun `value`(`value`: Any) {
+    override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
 
@@ -35,9 +33,9 @@ public interface Dimension {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension,
   ) : Dimension {
-    public override fun name(): String = unwrap(this).getName()
+    override fun name(): String = unwrap(this).getName()
 
-    public override fun `value`(): Any = unwrap(this).getValue()
+    override fun `value`(): Any = unwrap(this).getValue()
   }
 
   public companion object {

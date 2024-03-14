@@ -90,38 +90,27 @@ public open class CfnCompositeAlarm internal constructor(
   }
 
   public interface Builder {
-    public fun actionsEnabled(actionsEnabled: Boolean) {
-    }
+    public fun actionsEnabled(actionsEnabled: Boolean)
 
-    public fun actionsEnabled(actionsEnabled: IResolvable) {
-    }
+    public fun actionsEnabled(actionsEnabled: IResolvable)
 
-    public fun actionsSuppressor(actionsSuppressor: String) {
-    }
+    public fun actionsSuppressor(actionsSuppressor: String)
 
-    public fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Number) {
-    }
+    public fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Number)
 
-    public fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Number) {
-    }
+    public fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Number)
 
-    public fun alarmActions(alarmActions: List<String>) {
-    }
+    public fun alarmActions(alarmActions: List<String>)
 
-    public fun alarmDescription(alarmDescription: String) {
-    }
+    public fun alarmDescription(alarmDescription: String)
 
-    public fun alarmName(alarmName: String) {
-    }
+    public fun alarmName(alarmName: String)
 
-    public fun alarmRule(alarmRule: String) {
-    }
+    public fun alarmRule(alarmRule: String)
 
-    public fun insufficientDataActions(insufficientDataActions: List<String>) {
-    }
+    public fun insufficientDataActions(insufficientDataActions: List<String>)
 
-    public fun okActions(okActions: List<String>) {
-    }
+    public fun okActions(okActions: List<String>)
   }
 
   private class BuilderImpl(
@@ -131,47 +120,47 @@ public open class CfnCompositeAlarm internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm.Builder =
         software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm.Builder.create(scope, id)
 
-    public override fun actionsEnabled(actionsEnabled: Boolean) {
+    override fun actionsEnabled(actionsEnabled: Boolean) {
       cdkBuilder.actionsEnabled(actionsEnabled)
     }
 
-    public override fun actionsEnabled(actionsEnabled: IResolvable) {
+    override fun actionsEnabled(actionsEnabled: IResolvable) {
       cdkBuilder.actionsEnabled(actionsEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun actionsSuppressor(actionsSuppressor: String) {
+    override fun actionsSuppressor(actionsSuppressor: String) {
       cdkBuilder.actionsSuppressor(actionsSuppressor)
     }
 
-    public override fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Number) {
+    override fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Number) {
       cdkBuilder.actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod)
     }
 
-    public override fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Number) {
+    override fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Number) {
       cdkBuilder.actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod)
     }
 
-    public override fun alarmActions(alarmActions: List<String>) {
+    override fun alarmActions(alarmActions: List<String>) {
       cdkBuilder.alarmActions(alarmActions)
     }
 
-    public override fun alarmDescription(alarmDescription: String) {
+    override fun alarmDescription(alarmDescription: String) {
       cdkBuilder.alarmDescription(alarmDescription)
     }
 
-    public override fun alarmName(alarmName: String) {
+    override fun alarmName(alarmName: String) {
       cdkBuilder.alarmName(alarmName)
     }
 
-    public override fun alarmRule(alarmRule: String) {
+    override fun alarmRule(alarmRule: String) {
       cdkBuilder.alarmRule(alarmRule)
     }
 
-    public override fun insufficientDataActions(insufficientDataActions: List<String>) {
+    override fun insufficientDataActions(insufficientDataActions: List<String>) {
       cdkBuilder.insufficientDataActions(insufficientDataActions)
     }
 
-    public override fun okActions(okActions: List<String>) {
+    override fun okActions(okActions: List<String>) {
       cdkBuilder.okActions(okActions)
     }
 

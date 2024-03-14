@@ -163,59 +163,41 @@ public open class CfnNamespace internal constructor(
   }
 
   public interface Builder {
-    public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
-    }
+    public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String)
 
-    public fun adminUserPassword(adminUserPassword: String) {
-    }
+    public fun adminUserPassword(adminUserPassword: String)
 
-    public fun adminUsername(adminUsername: String) {
-    }
+    public fun adminUsername(adminUsername: String)
 
-    public fun dbName(dbName: String) {
-    }
+    public fun dbName(dbName: String)
 
-    public fun defaultIamRoleArn(defaultIamRoleArn: String) {
-    }
+    public fun defaultIamRoleArn(defaultIamRoleArn: String)
 
-    public fun finalSnapshotName(finalSnapshotName: String) {
-    }
+    public fun finalSnapshotName(finalSnapshotName: String)
 
-    public fun finalSnapshotRetentionPeriod(finalSnapshotRetentionPeriod: Number) {
-    }
+    public fun finalSnapshotRetentionPeriod(finalSnapshotRetentionPeriod: Number)
 
-    public fun iamRoles(iamRoles: List<String>) {
-    }
+    public fun iamRoles(iamRoles: List<String>)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun logExports(logExports: List<String>) {
-    }
+    public fun logExports(logExports: List<String>)
 
-    public fun manageAdminPassword(manageAdminPassword: Boolean) {
-    }
+    public fun manageAdminPassword(manageAdminPassword: Boolean)
 
-    public fun manageAdminPassword(manageAdminPassword: IResolvable) {
-    }
+    public fun manageAdminPassword(manageAdminPassword: IResolvable)
 
-    public fun namespaceName(namespaceName: String) {
-    }
+    public fun namespaceName(namespaceName: String)
 
-    public fun namespaceResourcePolicy(namespaceResourcePolicy: Any) {
-    }
+    public fun namespaceResourcePolicy(namespaceResourcePolicy: Any)
 
-    public fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String) {
-    }
+    public fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String)
 
-    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
-    }
+    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable)
 
-    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>) {
-    }
+    public fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -225,75 +207,75 @@ public open class CfnNamespace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.Builder
         = software.amazon.awscdk.services.redshiftserverless.CfnNamespace.Builder.create(scope, id)
 
-    public override fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
+    override fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
       cdkBuilder.adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId)
     }
 
-    public override fun adminUserPassword(adminUserPassword: String) {
+    override fun adminUserPassword(adminUserPassword: String) {
       cdkBuilder.adminUserPassword(adminUserPassword)
     }
 
-    public override fun adminUsername(adminUsername: String) {
+    override fun adminUsername(adminUsername: String) {
       cdkBuilder.adminUsername(adminUsername)
     }
 
-    public override fun dbName(dbName: String) {
+    override fun dbName(dbName: String) {
       cdkBuilder.dbName(dbName)
     }
 
-    public override fun defaultIamRoleArn(defaultIamRoleArn: String) {
+    override fun defaultIamRoleArn(defaultIamRoleArn: String) {
       cdkBuilder.defaultIamRoleArn(defaultIamRoleArn)
     }
 
-    public override fun finalSnapshotName(finalSnapshotName: String) {
+    override fun finalSnapshotName(finalSnapshotName: String) {
       cdkBuilder.finalSnapshotName(finalSnapshotName)
     }
 
-    public override fun finalSnapshotRetentionPeriod(finalSnapshotRetentionPeriod: Number) {
+    override fun finalSnapshotRetentionPeriod(finalSnapshotRetentionPeriod: Number) {
       cdkBuilder.finalSnapshotRetentionPeriod(finalSnapshotRetentionPeriod)
     }
 
-    public override fun iamRoles(iamRoles: List<String>) {
+    override fun iamRoles(iamRoles: List<String>) {
       cdkBuilder.iamRoles(iamRoles)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun logExports(logExports: List<String>) {
+    override fun logExports(logExports: List<String>) {
       cdkBuilder.logExports(logExports)
     }
 
-    public override fun manageAdminPassword(manageAdminPassword: Boolean) {
+    override fun manageAdminPassword(manageAdminPassword: Boolean) {
       cdkBuilder.manageAdminPassword(manageAdminPassword)
     }
 
-    public override fun manageAdminPassword(manageAdminPassword: IResolvable) {
+    override fun manageAdminPassword(manageAdminPassword: IResolvable) {
       cdkBuilder.manageAdminPassword(manageAdminPassword.let(IResolvable::unwrap))
     }
 
-    public override fun namespaceName(namespaceName: String) {
+    override fun namespaceName(namespaceName: String) {
       cdkBuilder.namespaceName(namespaceName)
     }
 
-    public override fun namespaceResourcePolicy(namespaceResourcePolicy: Any) {
+    override fun namespaceResourcePolicy(namespaceResourcePolicy: Any) {
       cdkBuilder.namespaceResourcePolicy(namespaceResourcePolicy)
     }
 
-    public override fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String) {
+    override fun redshiftIdcApplicationArn(redshiftIdcApplicationArn: String) {
       cdkBuilder.redshiftIdcApplicationArn(redshiftIdcApplicationArn)
     }
 
-    public override fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
+    override fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
       cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>) {
+    override fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>) {
       cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -351,44 +333,31 @@ public open class CfnNamespace internal constructor(
     public fun status(): String? = unwrap(this).getStatus()
 
     public interface Builder {
-      public fun adminPasswordSecretArn(adminPasswordSecretArn: String) {
-      }
+      public fun adminPasswordSecretArn(adminPasswordSecretArn: String)
 
-      public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
-      }
+      public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String)
 
-      public fun adminUsername(adminUsername: String) {
-      }
+      public fun adminUsername(adminUsername: String)
 
-      public fun creationDate(creationDate: String) {
-      }
+      public fun creationDate(creationDate: String)
 
-      public fun dbName(dbName: String) {
-      }
+      public fun dbName(dbName: String)
 
-      public fun defaultIamRoleArn(defaultIamRoleArn: String) {
-      }
+      public fun defaultIamRoleArn(defaultIamRoleArn: String)
 
-      public fun iamRoles(iamRoles: List<String>) {
-      }
+      public fun iamRoles(iamRoles: List<String>)
 
-      public fun kmsKeyId(kmsKeyId: String) {
-      }
+      public fun kmsKeyId(kmsKeyId: String)
 
-      public fun logExports(logExports: List<String>) {
-      }
+      public fun logExports(logExports: List<String>)
 
-      public fun namespaceArn(namespaceArn: String) {
-      }
+      public fun namespaceArn(namespaceArn: String)
 
-      public fun namespaceId(namespaceId: String) {
-      }
+      public fun namespaceId(namespaceId: String)
 
-      public fun namespaceName(namespaceName: String) {
-      }
+      public fun namespaceName(namespaceName: String)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -397,55 +366,55 @@ public open class CfnNamespace internal constructor(
           =
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty.builder()
 
-      public override fun adminPasswordSecretArn(adminPasswordSecretArn: String) {
+      override fun adminPasswordSecretArn(adminPasswordSecretArn: String) {
         cdkBuilder.adminPasswordSecretArn(adminPasswordSecretArn)
       }
 
-      public override fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
+      override fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String) {
         cdkBuilder.adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId)
       }
 
-      public override fun adminUsername(adminUsername: String) {
+      override fun adminUsername(adminUsername: String) {
         cdkBuilder.adminUsername(adminUsername)
       }
 
-      public override fun creationDate(creationDate: String) {
+      override fun creationDate(creationDate: String) {
         cdkBuilder.creationDate(creationDate)
       }
 
-      public override fun dbName(dbName: String) {
+      override fun dbName(dbName: String) {
         cdkBuilder.dbName(dbName)
       }
 
-      public override fun defaultIamRoleArn(defaultIamRoleArn: String) {
+      override fun defaultIamRoleArn(defaultIamRoleArn: String) {
         cdkBuilder.defaultIamRoleArn(defaultIamRoleArn)
       }
 
-      public override fun iamRoles(iamRoles: List<String>) {
+      override fun iamRoles(iamRoles: List<String>) {
         cdkBuilder.iamRoles(iamRoles)
       }
 
-      public override fun kmsKeyId(kmsKeyId: String) {
+      override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
 
-      public override fun logExports(logExports: List<String>) {
+      override fun logExports(logExports: List<String>) {
         cdkBuilder.logExports(logExports)
       }
 
-      public override fun namespaceArn(namespaceArn: String) {
+      override fun namespaceArn(namespaceArn: String) {
         cdkBuilder.namespaceArn(namespaceArn)
       }
 
-      public override fun namespaceId(namespaceId: String) {
+      override fun namespaceId(namespaceId: String) {
         cdkBuilder.namespaceId(namespaceId)
       }
 
-      public override fun namespaceName(namespaceName: String) {
+      override fun namespaceName(namespaceName: String) {
         cdkBuilder.namespaceName(namespaceName)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
@@ -458,33 +427,32 @@ public open class CfnNamespace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.NamespaceProperty,
     ) : NamespaceProperty {
-      public override fun adminPasswordSecretArn(): String? =
-          unwrap(this).getAdminPasswordSecretArn()
+      override fun adminPasswordSecretArn(): String? = unwrap(this).getAdminPasswordSecretArn()
 
-      public override fun adminPasswordSecretKmsKeyId(): String? =
+      override fun adminPasswordSecretKmsKeyId(): String? =
           unwrap(this).getAdminPasswordSecretKmsKeyId()
 
-      public override fun adminUsername(): String? = unwrap(this).getAdminUsername()
+      override fun adminUsername(): String? = unwrap(this).getAdminUsername()
 
-      public override fun creationDate(): String? = unwrap(this).getCreationDate()
+      override fun creationDate(): String? = unwrap(this).getCreationDate()
 
-      public override fun dbName(): String? = unwrap(this).getDbName()
+      override fun dbName(): String? = unwrap(this).getDbName()
 
-      public override fun defaultIamRoleArn(): String? = unwrap(this).getDefaultIamRoleArn()
+      override fun defaultIamRoleArn(): String? = unwrap(this).getDefaultIamRoleArn()
 
-      public override fun iamRoles(): List<String> = unwrap(this).getIamRoles() ?: emptyList()
+      override fun iamRoles(): List<String> = unwrap(this).getIamRoles() ?: emptyList()
 
-      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+      override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
 
-      public override fun logExports(): List<String> = unwrap(this).getLogExports() ?: emptyList()
+      override fun logExports(): List<String> = unwrap(this).getLogExports() ?: emptyList()
 
-      public override fun namespaceArn(): String? = unwrap(this).getNamespaceArn()
+      override fun namespaceArn(): String? = unwrap(this).getNamespaceArn()
 
-      public override fun namespaceId(): String? = unwrap(this).getNamespaceId()
+      override fun namespaceId(): String? = unwrap(this).getNamespaceId()
 
-      public override fun namespaceName(): String? = unwrap(this).getNamespaceName()
+      override fun namespaceName(): String? = unwrap(this).getNamespaceName()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {
@@ -515,14 +483,11 @@ public open class CfnNamespace internal constructor(
     public fun snapshotRetentionPeriod(): Number? = unwrap(this).getSnapshotRetentionPeriod()
 
     public interface Builder {
-      public fun destinationKmsKeyId(destinationKmsKeyId: String) {
-      }
+      public fun destinationKmsKeyId(destinationKmsKeyId: String)
 
-      public fun destinationRegion(destinationRegion: String) {
-      }
+      public fun destinationRegion(destinationRegion: String)
 
-      public fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number) {
-      }
+      public fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -531,15 +496,15 @@ public open class CfnNamespace internal constructor(
           =
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty.builder()
 
-      public override fun destinationKmsKeyId(destinationKmsKeyId: String) {
+      override fun destinationKmsKeyId(destinationKmsKeyId: String) {
         cdkBuilder.destinationKmsKeyId(destinationKmsKeyId)
       }
 
-      public override fun destinationRegion(destinationRegion: String) {
+      override fun destinationRegion(destinationRegion: String) {
         cdkBuilder.destinationRegion(destinationRegion)
       }
 
-      public override fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number) {
+      override fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number) {
         cdkBuilder.snapshotRetentionPeriod(snapshotRetentionPeriod)
       }
 
@@ -552,12 +517,11 @@ public open class CfnNamespace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty,
     ) : SnapshotCopyConfigurationProperty {
-      public override fun destinationKmsKeyId(): String? = unwrap(this).getDestinationKmsKeyId()
+      override fun destinationKmsKeyId(): String? = unwrap(this).getDestinationKmsKeyId()
 
-      public override fun destinationRegion(): String = unwrap(this).getDestinationRegion()
+      override fun destinationRegion(): String = unwrap(this).getDestinationRegion()
 
-      public override fun snapshotRetentionPeriod(): Number? =
-          unwrap(this).getSnapshotRetentionPeriod()
+      override fun snapshotRetentionPeriod(): Number? = unwrap(this).getSnapshotRetentionPeriod()
     }
 
     public companion object {

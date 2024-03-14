@@ -13,12 +13,11 @@ public interface IChainable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.IChainable,
   ) : IChainable {
-    public override fun endStates(): List<INextable> =
-        unwrap(this).getEndStates().map(INextable::wrap)
+    override fun endStates(): List<INextable> = unwrap(this).getEndStates().map(INextable::wrap)
 
-    public override fun id(): String = unwrap(this).getId()
+    override fun id(): String = unwrap(this).getId()
 
-    public override fun startState(): State = unwrap(this).getStartState().let(State::wrap)
+    override fun startState(): State = unwrap(this).getStartState().let(State::wrap)
   }
 
   public companion object {

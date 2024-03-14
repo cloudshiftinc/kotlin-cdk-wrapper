@@ -82,32 +82,23 @@ public open class CfnUser internal constructor(
   }
 
   public interface Builder {
-    public fun accessString(accessString: String) {
-    }
+    public fun accessString(accessString: String)
 
-    public fun authenticationMode(authenticationMode: Any) {
-    }
+    public fun authenticationMode(authenticationMode: Any)
 
-    public fun engine(engine: String) {
-    }
+    public fun engine(engine: String)
 
-    public fun noPasswordRequired(noPasswordRequired: Boolean) {
-    }
+    public fun noPasswordRequired(noPasswordRequired: Boolean)
 
-    public fun noPasswordRequired(noPasswordRequired: IResolvable) {
-    }
+    public fun noPasswordRequired(noPasswordRequired: IResolvable)
 
-    public fun passwords(passwords: List<String>) {
-    }
+    public fun passwords(passwords: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userId(userId: String) {
-    }
+    public fun userId(userId: String)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -117,39 +108,39 @@ public open class CfnUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnUser.Builder =
         software.amazon.awscdk.services.elasticache.CfnUser.Builder.create(scope, id)
 
-    public override fun accessString(accessString: String) {
+    override fun accessString(accessString: String) {
       cdkBuilder.accessString(accessString)
     }
 
-    public override fun authenticationMode(authenticationMode: Any) {
+    override fun authenticationMode(authenticationMode: Any) {
       cdkBuilder.authenticationMode(authenticationMode)
     }
 
-    public override fun engine(engine: String) {
+    override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
-    public override fun noPasswordRequired(noPasswordRequired: Boolean) {
+    override fun noPasswordRequired(noPasswordRequired: Boolean) {
       cdkBuilder.noPasswordRequired(noPasswordRequired)
     }
 
-    public override fun noPasswordRequired(noPasswordRequired: IResolvable) {
+    override fun noPasswordRequired(noPasswordRequired: IResolvable) {
       cdkBuilder.noPasswordRequired(noPasswordRequired.let(IResolvable::unwrap))
     }
 
-    public override fun passwords(passwords: List<String>) {
+    override fun passwords(passwords: List<String>) {
       cdkBuilder.passwords(passwords)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userId(userId: String) {
+    override fun userId(userId: String) {
       cdkBuilder.userId(userId)
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 
@@ -183,11 +174,9 @@ public open class CfnUser internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun passwords(passwords: List<String>) {
-      }
+      public fun passwords(passwords: List<String>)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -195,11 +184,11 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty.Builder =
           software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty.builder()
 
-      public override fun passwords(passwords: List<String>) {
+      override fun passwords(passwords: List<String>) {
         cdkBuilder.passwords(passwords)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -212,9 +201,9 @@ public open class CfnUser internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty,
     ) : AuthenticationModeProperty {
-      public override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
+      override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

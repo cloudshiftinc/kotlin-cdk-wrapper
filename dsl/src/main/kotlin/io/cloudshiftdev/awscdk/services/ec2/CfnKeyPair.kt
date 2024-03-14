@@ -57,20 +57,15 @@ public open class CfnKeyPair internal constructor(
   }
 
   public interface Builder {
-    public fun keyFormat(keyFormat: String) {
-    }
+    public fun keyFormat(keyFormat: String)
 
-    public fun keyName(keyName: String) {
-    }
+    public fun keyName(keyName: String)
 
-    public fun keyType(keyType: String) {
-    }
+    public fun keyType(keyType: String)
 
-    public fun publicKeyMaterial(publicKeyMaterial: String) {
-    }
+    public fun publicKeyMaterial(publicKeyMaterial: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -80,23 +75,23 @@ public open class CfnKeyPair internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnKeyPair.Builder =
         software.amazon.awscdk.services.ec2.CfnKeyPair.Builder.create(scope, id)
 
-    public override fun keyFormat(keyFormat: String) {
+    override fun keyFormat(keyFormat: String) {
       cdkBuilder.keyFormat(keyFormat)
     }
 
-    public override fun keyName(keyName: String) {
+    override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
     }
 
-    public override fun keyType(keyType: String) {
+    override fun keyType(keyType: String) {
       cdkBuilder.keyType(keyType)
     }
 
-    public override fun publicKeyMaterial(publicKeyMaterial: String) {
+    override fun publicKeyMaterial(publicKeyMaterial: String) {
       cdkBuilder.publicKeyMaterial(publicKeyMaterial)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

@@ -17,23 +17,17 @@ public interface SecurityGroupContextQuery {
   public fun vpcId(): String? = unwrap(this).getVpcId()
 
   public interface Builder {
-    public fun account(account: String) {
-    }
+    public fun account(account: String)
 
-    public fun lookupRoleArn(lookupRoleArn: String) {
-    }
+    public fun lookupRoleArn(lookupRoleArn: String)
 
-    public fun region(region: String) {
-    }
+    public fun region(region: String)
 
-    public fun securityGroupId(securityGroupId: String) {
-    }
+    public fun securityGroupId(securityGroupId: String)
 
-    public fun securityGroupName(securityGroupName: String) {
-    }
+    public fun securityGroupName(securityGroupName: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -41,27 +35,27 @@ public interface SecurityGroupContextQuery {
         software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery.builder()
 
-    public override fun account(account: String) {
+    override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
-    public override fun lookupRoleArn(lookupRoleArn: String) {
+    override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
-    public override fun region(region: String) {
+    override fun region(region: String) {
       cdkBuilder.region(region)
     }
 
-    public override fun securityGroupId(securityGroupId: String) {
+    override fun securityGroupId(securityGroupId: String) {
       cdkBuilder.securityGroupId(securityGroupId)
     }
 
-    public override fun securityGroupName(securityGroupName: String) {
+    override fun securityGroupName(securityGroupName: String) {
       cdkBuilder.securityGroupName(securityGroupName)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
@@ -72,17 +66,17 @@ public interface SecurityGroupContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery,
   ) : SecurityGroupContextQuery {
-    public override fun account(): String = unwrap(this).getAccount()
+    override fun account(): String = unwrap(this).getAccount()
 
-    public override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
+    override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
-    public override fun region(): String = unwrap(this).getRegion()
+    override fun region(): String = unwrap(this).getRegion()
 
-    public override fun securityGroupId(): String? = unwrap(this).getSecurityGroupId()
+    override fun securityGroupId(): String? = unwrap(this).getSecurityGroupId()
 
-    public override fun securityGroupName(): String? = unwrap(this).getSecurityGroupName()
+    override fun securityGroupName(): String? = unwrap(this).getSecurityGroupName()
 
-    public override fun vpcId(): String? = unwrap(this).getVpcId()
+    override fun vpcId(): String? = unwrap(this).getVpcId()
   }
 
   public companion object {

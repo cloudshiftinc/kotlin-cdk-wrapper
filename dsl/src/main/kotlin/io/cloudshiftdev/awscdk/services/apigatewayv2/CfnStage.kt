@@ -122,61 +122,43 @@ public open class CfnStage internal constructor(
   }
 
   public interface Builder {
-    public fun accessLogSettings(accessLogSettings: IResolvable) {
-    }
+    public fun accessLogSettings(accessLogSettings: IResolvable)
 
-    public fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty) {
-    }
+    public fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a58ef6b84df182458625ad5f5f83d70249107a2184b05370a82781dc33fec2d1")
-    public fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty.Builder.() -> Unit)
 
-    public fun accessPolicyId(accessPolicyId: String) {
-    }
+    public fun accessPolicyId(accessPolicyId: String)
 
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun autoDeploy(autoDeploy: Boolean) {
-    }
+    public fun autoDeploy(autoDeploy: Boolean)
 
-    public fun autoDeploy(autoDeploy: IResolvable) {
-    }
+    public fun autoDeploy(autoDeploy: IResolvable)
 
-    public fun clientCertificateId(clientCertificateId: String) {
-    }
+    public fun clientCertificateId(clientCertificateId: String)
 
-    public fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-    }
+    public fun defaultRouteSettings(defaultRouteSettings: IResolvable)
 
-    public fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
-    }
+    public fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee5d80c6370f78f22f429a8ee919098e4cc1e9bd6b3678cd5eb41fbaad58f70c")
-    public
-        fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty.Builder.() -> Unit)
 
-    public fun deploymentId(deploymentId: String) {
-    }
+    public fun deploymentId(deploymentId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun routeSettings(routeSettings: Any) {
-    }
+    public fun routeSettings(routeSettings: Any)
 
-    public fun stageName(stageName: String) {
-    }
+    public fun stageName(stageName: String)
 
-    public fun stageVariables(stageVariables: Any) {
-    }
+    public fun stageVariables(stageVariables: Any)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -186,75 +168,74 @@ public open class CfnStage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnStage.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnStage.Builder.create(scope, id)
 
-    public override fun accessLogSettings(accessLogSettings: IResolvable) {
+    override fun accessLogSettings(accessLogSettings: IResolvable) {
       cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable::unwrap))
     }
 
-    public override fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty) {
+    override fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty) {
       cdkBuilder.accessLogSettings(accessLogSettings.let(AccessLogSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a58ef6b84df182458625ad5f5f83d70249107a2184b05370a82781dc33fec2d1")
-    public override
-        fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty.Builder.() -> Unit): Unit
-        = accessLogSettings(AccessLogSettingsProperty(accessLogSettings))
+    override fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty.Builder.() -> Unit):
+        Unit = accessLogSettings(AccessLogSettingsProperty(accessLogSettings))
 
-    public override fun accessPolicyId(accessPolicyId: String) {
+    override fun accessPolicyId(accessPolicyId: String) {
       cdkBuilder.accessPolicyId(accessPolicyId)
     }
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun autoDeploy(autoDeploy: Boolean) {
+    override fun autoDeploy(autoDeploy: Boolean) {
       cdkBuilder.autoDeploy(autoDeploy)
     }
 
-    public override fun autoDeploy(autoDeploy: IResolvable) {
+    override fun autoDeploy(autoDeploy: IResolvable) {
       cdkBuilder.autoDeploy(autoDeploy.let(IResolvable::unwrap))
     }
 
-    public override fun clientCertificateId(clientCertificateId: String) {
+    override fun clientCertificateId(clientCertificateId: String) {
       cdkBuilder.clientCertificateId(clientCertificateId)
     }
 
-    public override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
+    override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
       cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
     }
 
-    public override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
+    override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
       cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee5d80c6370f78f22f429a8ee919098e4cc1e9bd6b3678cd5eb41fbaad58f70c")
-    public override
+    override
         fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty.Builder.() -> Unit):
         Unit = defaultRouteSettings(RouteSettingsProperty(defaultRouteSettings))
 
-    public override fun deploymentId(deploymentId: String) {
+    override fun deploymentId(deploymentId: String) {
       cdkBuilder.deploymentId(deploymentId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun routeSettings(routeSettings: Any) {
+    override fun routeSettings(routeSettings: Any) {
       cdkBuilder.routeSettings(routeSettings)
     }
 
-    public override fun stageName(stageName: String) {
+    override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
 
-    public override fun stageVariables(stageVariables: Any) {
+    override fun stageVariables(stageVariables: Any) {
       cdkBuilder.stageVariables(stageVariables)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
@@ -294,26 +275,19 @@ public open class CfnStage internal constructor(
     public fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
 
     public interface Builder {
-      public fun dataTraceEnabled(dataTraceEnabled: Boolean) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: Boolean)
 
-      public fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-      }
+      public fun dataTraceEnabled(dataTraceEnabled: IResolvable)
 
-      public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
-      }
+      public fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean)
 
-      public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-      }
+      public fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable)
 
-      public fun loggingLevel(loggingLevel: String) {
-      }
+      public fun loggingLevel(loggingLevel: String)
 
-      public fun throttlingBurstLimit(throttlingBurstLimit: Number) {
-      }
+      public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
-      public fun throttlingRateLimit(throttlingRateLimit: Number) {
-      }
+      public fun throttlingRateLimit(throttlingRateLimit: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -321,31 +295,31 @@ public open class CfnStage internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty.Builder =
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty.builder()
 
-      public override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
+      override fun dataTraceEnabled(dataTraceEnabled: Boolean) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled)
       }
 
-      public override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
+      override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
         cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
+      override fun detailedMetricsEnabled(detailedMetricsEnabled: Boolean) {
         cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled)
       }
 
-      public override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
+      override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
         cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
       }
 
-      public override fun loggingLevel(loggingLevel: String) {
+      override fun loggingLevel(loggingLevel: String) {
         cdkBuilder.loggingLevel(loggingLevel)
       }
 
-      public override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
+      override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
         cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)
       }
 
-      public override fun throttlingRateLimit(throttlingRateLimit: Number) {
+      override fun throttlingRateLimit(throttlingRateLimit: Number) {
         cdkBuilder.throttlingRateLimit(throttlingRateLimit)
       }
 
@@ -358,15 +332,15 @@ public open class CfnStage internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnStage.RouteSettingsProperty,
     ) : RouteSettingsProperty {
-      public override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
+      override fun dataTraceEnabled(): Any? = unwrap(this).getDataTraceEnabled()
 
-      public override fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
+      override fun detailedMetricsEnabled(): Any? = unwrap(this).getDetailedMetricsEnabled()
 
-      public override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
+      override fun loggingLevel(): String? = unwrap(this).getLoggingLevel()
 
-      public override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
+      override fun throttlingBurstLimit(): Number? = unwrap(this).getThrottlingBurstLimit()
 
-      public override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
+      override fun throttlingRateLimit(): Number? = unwrap(this).getThrottlingRateLimit()
     }
 
     public companion object {
@@ -395,11 +369,9 @@ public open class CfnStage internal constructor(
     public fun format(): String? = unwrap(this).getFormat()
 
     public interface Builder {
-      public fun destinationArn(destinationArn: String) {
-      }
+      public fun destinationArn(destinationArn: String)
 
-      public fun format(format: String) {
-      }
+      public fun format(format: String)
     }
 
     private class BuilderImpl : Builder {
@@ -407,11 +379,11 @@ public open class CfnStage internal constructor(
           software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty.Builder =
           software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty.builder()
 
-      public override fun destinationArn(destinationArn: String) {
+      override fun destinationArn(destinationArn: String) {
         cdkBuilder.destinationArn(destinationArn)
       }
 
-      public override fun format(format: String) {
+      override fun format(format: String) {
         cdkBuilder.format(format)
       }
 
@@ -424,9 +396,9 @@ public open class CfnStage internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnStage.AccessLogSettingsProperty,
     ) : AccessLogSettingsProperty {
-      public override fun destinationArn(): String? = unwrap(this).getDestinationArn()
+      override fun destinationArn(): String? = unwrap(this).getDestinationArn()
 
-      public override fun format(): String? = unwrap(this).getFormat()
+      override fun format(): String? = unwrap(this).getFormat()
     }
 
     public companion object {

@@ -16,37 +16,32 @@ public interface BootstrapRole {
       unwrap(this).getRequiresBootstrapStackVersion()
 
   public interface Builder {
-    public fun arn(arn: String) {
-    }
+    public fun arn(arn: String)
 
-    public fun assumeRoleExternalId(assumeRoleExternalId: String) {
-    }
+    public fun assumeRoleExternalId(assumeRoleExternalId: String)
 
-    public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
-    }
+    public fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String)
 
-    public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
-    }
+    public fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.BootstrapRole.Builder =
         software.amazon.awscdk.cloudassembly.schema.BootstrapRole.builder()
 
-    public override fun arn(arn: String) {
+    override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
-    public override fun assumeRoleExternalId(assumeRoleExternalId: String) {
+    override fun assumeRoleExternalId(assumeRoleExternalId: String) {
       cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
     }
 
-    public override
-        fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
+    override fun bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter: String) {
       cdkBuilder.bootstrapStackVersionSsmParameter(bootstrapStackVersionSsmParameter)
     }
 
-    public override fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
+    override fun requiresBootstrapStackVersion(requiresBootstrapStackVersion: Number) {
       cdkBuilder.requiresBootstrapStackVersion(requiresBootstrapStackVersion)
     }
 
@@ -57,14 +52,14 @@ public interface BootstrapRole {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.BootstrapRole,
   ) : BootstrapRole {
-    public override fun arn(): String = unwrap(this).getArn()
+    override fun arn(): String = unwrap(this).getArn()
 
-    public override fun assumeRoleExternalId(): String? = unwrap(this).getAssumeRoleExternalId()
+    override fun assumeRoleExternalId(): String? = unwrap(this).getAssumeRoleExternalId()
 
-    public override fun bootstrapStackVersionSsmParameter(): String? =
+    override fun bootstrapStackVersionSsmParameter(): String? =
         unwrap(this).getBootstrapStackVersionSsmParameter()
 
-    public override fun requiresBootstrapStackVersion(): Number? =
+    override fun requiresBootstrapStackVersion(): Number? =
         unwrap(this).getRequiresBootstrapStackVersion()
   }
 

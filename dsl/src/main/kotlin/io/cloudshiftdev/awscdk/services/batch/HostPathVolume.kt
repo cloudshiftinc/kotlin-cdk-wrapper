@@ -11,36 +11,32 @@ public open class HostPathVolume internal constructor(
   public open fun path(): String = unwrap(this).getPath()
 
   public interface Builder {
-    public fun hostPath(hostPath: String) {
-    }
+    public fun hostPath(hostPath: String)
 
-    public fun mountPath(mountPath: String) {
-    }
+    public fun mountPath(mountPath: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun readonly(readonly: Boolean) {
-    }
+    public fun readonly(readonly: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.HostPathVolume.Builder =
         software.amazon.awscdk.services.batch.HostPathVolume.Builder.create()
 
-    public override fun hostPath(hostPath: String) {
+    override fun hostPath(hostPath: String) {
       cdkBuilder.hostPath(hostPath)
     }
 
-    public override fun mountPath(mountPath: String) {
+    override fun mountPath(mountPath: String) {
       cdkBuilder.mountPath(mountPath)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun readonly(readonly: Boolean) {
+    override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
 

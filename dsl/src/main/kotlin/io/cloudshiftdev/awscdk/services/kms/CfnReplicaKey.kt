@@ -71,26 +71,19 @@ public open class CfnReplicaKey internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun keyPolicy(keyPolicy: Any) {
-    }
+    public fun keyPolicy(keyPolicy: Any)
 
-    public fun pendingWindowInDays(pendingWindowInDays: Number) {
-    }
+    public fun pendingWindowInDays(pendingWindowInDays: Number)
 
-    public fun primaryKeyArn(primaryKeyArn: String) {
-    }
+    public fun primaryKeyArn(primaryKeyArn: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -100,31 +93,31 @@ public open class CfnReplicaKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.kms.CfnReplicaKey.Builder =
         software.amazon.awscdk.services.kms.CfnReplicaKey.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun keyPolicy(keyPolicy: Any) {
+    override fun keyPolicy(keyPolicy: Any) {
       cdkBuilder.keyPolicy(keyPolicy)
     }
 
-    public override fun pendingWindowInDays(pendingWindowInDays: Number) {
+    override fun pendingWindowInDays(pendingWindowInDays: Number) {
       cdkBuilder.pendingWindowInDays(pendingWindowInDays)
     }
 
-    public override fun primaryKeyArn(primaryKeyArn: String) {
+    override fun primaryKeyArn(primaryKeyArn: String) {
       cdkBuilder.primaryKeyArn(primaryKeyArn)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

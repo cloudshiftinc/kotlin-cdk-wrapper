@@ -34,14 +34,11 @@ public open class CfnPrimaryTaskSet internal constructor(
   }
 
   public interface Builder {
-    public fun cluster(cluster: String) {
-    }
+    public fun cluster(cluster: String)
 
-    public fun service(service: String) {
-    }
+    public fun service(service: String)
 
-    public fun taskSetId(taskSetId: String) {
-    }
+    public fun taskSetId(taskSetId: String)
   }
 
   private class BuilderImpl(
@@ -51,15 +48,15 @@ public open class CfnPrimaryTaskSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet.Builder =
         software.amazon.awscdk.services.ecs.CfnPrimaryTaskSet.Builder.create(scope, id)
 
-    public override fun cluster(cluster: String) {
+    override fun cluster(cluster: String) {
       cdkBuilder.cluster(cluster)
     }
 
-    public override fun service(service: String) {
+    override fun service(service: String) {
       cdkBuilder.service(service)
     }
 
-    public override fun taskSetId(taskSetId: String) {
+    override fun taskSetId(taskSetId: String) {
       cdkBuilder.taskSetId(taskSetId)
     }
 

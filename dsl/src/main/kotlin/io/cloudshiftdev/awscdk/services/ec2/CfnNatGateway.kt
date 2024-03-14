@@ -83,32 +83,23 @@ public open class CfnNatGateway internal constructor(
   }
 
   public interface Builder {
-    public fun allocationId(allocationId: String) {
-    }
+    public fun allocationId(allocationId: String)
 
-    public fun connectivityType(connectivityType: String) {
-    }
+    public fun connectivityType(connectivityType: String)
 
-    public fun maxDrainDurationSeconds(maxDrainDurationSeconds: Number) {
-    }
+    public fun maxDrainDurationSeconds(maxDrainDurationSeconds: Number)
 
-    public fun privateIpAddress(privateIpAddress: String) {
-    }
+    public fun privateIpAddress(privateIpAddress: String)
 
-    public fun secondaryAllocationIds(secondaryAllocationIds: List<String>) {
-    }
+    public fun secondaryAllocationIds(secondaryAllocationIds: List<String>)
 
-    public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
-    }
+    public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
-    public fun secondaryPrivateIpAddresses(secondaryPrivateIpAddresses: List<String>) {
-    }
+    public fun secondaryPrivateIpAddresses(secondaryPrivateIpAddresses: List<String>)
 
-    public fun subnetId(subnetId: String) {
-    }
+    public fun subnetId(subnetId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -118,39 +109,39 @@ public open class CfnNatGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnNatGateway.Builder =
         software.amazon.awscdk.services.ec2.CfnNatGateway.Builder.create(scope, id)
 
-    public override fun allocationId(allocationId: String) {
+    override fun allocationId(allocationId: String) {
       cdkBuilder.allocationId(allocationId)
     }
 
-    public override fun connectivityType(connectivityType: String) {
+    override fun connectivityType(connectivityType: String) {
       cdkBuilder.connectivityType(connectivityType)
     }
 
-    public override fun maxDrainDurationSeconds(maxDrainDurationSeconds: Number) {
+    override fun maxDrainDurationSeconds(maxDrainDurationSeconds: Number) {
       cdkBuilder.maxDrainDurationSeconds(maxDrainDurationSeconds)
     }
 
-    public override fun privateIpAddress(privateIpAddress: String) {
+    override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
 
-    public override fun secondaryAllocationIds(secondaryAllocationIds: List<String>) {
+    override fun secondaryAllocationIds(secondaryAllocationIds: List<String>) {
       cdkBuilder.secondaryAllocationIds(secondaryAllocationIds)
     }
 
-    public override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
+    override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
       cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
     }
 
-    public override fun secondaryPrivateIpAddresses(secondaryPrivateIpAddresses: List<String>) {
+    override fun secondaryPrivateIpAddresses(secondaryPrivateIpAddresses: List<String>) {
       cdkBuilder.secondaryPrivateIpAddresses(secondaryPrivateIpAddresses)
     }
 
-    public override fun subnetId(subnetId: String) {
+    override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

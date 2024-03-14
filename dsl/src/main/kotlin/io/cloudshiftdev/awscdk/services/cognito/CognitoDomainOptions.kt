@@ -7,15 +7,14 @@ public interface CognitoDomainOptions {
   public fun domainPrefix(): String
 
   public interface Builder {
-    public fun domainPrefix(domainPrefix: String) {
-    }
+    public fun domainPrefix(domainPrefix: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CognitoDomainOptions.Builder =
         software.amazon.awscdk.services.cognito.CognitoDomainOptions.builder()
 
-    public override fun domainPrefix(domainPrefix: String) {
+    override fun domainPrefix(domainPrefix: String) {
       cdkBuilder.domainPrefix(domainPrefix)
     }
 
@@ -26,7 +25,7 @@ public interface CognitoDomainOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions,
   ) : CognitoDomainOptions {
-    public override fun domainPrefix(): String = unwrap(this).getDomainPrefix()
+    override fun domainPrefix(): String = unwrap(this).getDomainPrefix()
   }
 
   public companion object {

@@ -61,23 +61,17 @@ public open class CfnServerCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun certificateBody(certificateBody: String) {
-    }
+    public fun certificateBody(certificateBody: String)
 
-    public fun certificateChain(certificateChain: String) {
-    }
+    public fun certificateChain(certificateChain: String)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun privateKey(privateKey: String) {
-    }
+    public fun privateKey(privateKey: String)
 
-    public fun serverCertificateName(serverCertificateName: String) {
-    }
+    public fun serverCertificateName(serverCertificateName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -87,27 +81,27 @@ public open class CfnServerCertificate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnServerCertificate.Builder =
         software.amazon.awscdk.services.iam.CfnServerCertificate.Builder.create(scope, id)
 
-    public override fun certificateBody(certificateBody: String) {
+    override fun certificateBody(certificateBody: String) {
       cdkBuilder.certificateBody(certificateBody)
     }
 
-    public override fun certificateChain(certificateChain: String) {
+    override fun certificateChain(certificateChain: String) {
       cdkBuilder.certificateChain(certificateChain)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun privateKey(privateKey: String) {
+    override fun privateKey(privateKey: String) {
       cdkBuilder.privateKey(privateKey)
     }
 
-    public override fun serverCertificateName(serverCertificateName: String) {
+    override fun serverCertificateName(serverCertificateName: String) {
       cdkBuilder.serverCertificateName(serverCertificateName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

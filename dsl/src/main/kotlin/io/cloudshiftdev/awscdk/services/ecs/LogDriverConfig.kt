@@ -14,29 +14,26 @@ public interface LogDriverConfig {
       unwrap(this).getSecretOptions()?.map(CfnTaskDefinition.SecretProperty::wrap) ?: emptyList()
 
   public interface Builder {
-    public fun logDriver(logDriver: String) {
-    }
+    public fun logDriver(logDriver: String)
 
-    public fun options(options: Map<String, String>) {
-    }
+    public fun options(options: Map<String, String>)
 
-    public fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>) {
-    }
+    public fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.LogDriverConfig.Builder =
         software.amazon.awscdk.services.ecs.LogDriverConfig.builder()
 
-    public override fun logDriver(logDriver: String) {
+    override fun logDriver(logDriver: String) {
       cdkBuilder.logDriver(logDriver)
     }
 
-    public override fun options(options: Map<String, String>) {
+    override fun options(options: Map<String, String>) {
       cdkBuilder.options(options)
     }
 
-    public override fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>) {
+    override fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>) {
       cdkBuilder.secretOptions(secretOptions.map(CfnTaskDefinition.SecretProperty::unwrap))
     }
 
@@ -46,11 +43,11 @@ public interface LogDriverConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.LogDriverConfig,
   ) : LogDriverConfig {
-    public override fun logDriver(): String = unwrap(this).getLogDriver()
+    override fun logDriver(): String = unwrap(this).getLogDriver()
 
-    public override fun options(): Map<String, String> = unwrap(this).getOptions() ?: emptyMap()
+    override fun options(): Map<String, String> = unwrap(this).getOptions() ?: emptyMap()
 
-    public override fun secretOptions(): List<CfnTaskDefinition.SecretProperty> =
+    override fun secretOptions(): List<CfnTaskDefinition.SecretProperty> =
         unwrap(this).getSecretOptions()?.map(CfnTaskDefinition.SecretProperty::wrap) ?: emptyList()
   }
 

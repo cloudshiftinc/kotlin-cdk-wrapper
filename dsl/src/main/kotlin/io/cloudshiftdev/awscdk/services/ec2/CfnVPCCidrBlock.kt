@@ -81,35 +81,25 @@ public open class CfnVPCCidrBlock internal constructor(
   }
 
   public interface Builder {
-    public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean) {
-    }
+    public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean)
 
-    public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
-    }
+    public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable)
 
-    public fun cidrBlock(cidrBlock: String) {
-    }
+    public fun cidrBlock(cidrBlock: String)
 
-    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
-    }
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String)
 
-    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
-    }
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number)
 
-    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
-    public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
-    }
+    public fun ipv6IpamPoolId(ipv6IpamPoolId: String)
 
-    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
-    }
+    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number)
 
-    public fun ipv6Pool(ipv6Pool: String) {
-    }
+    public fun ipv6Pool(ipv6Pool: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -119,43 +109,43 @@ public open class CfnVPCCidrBlock internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCCidrBlock.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCCidrBlock.Builder.create(scope, id)
 
-    public override fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean) {
+    override fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean) {
       cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock)
     }
 
-    public override fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
+    override fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
       cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock.let(IResolvable::unwrap))
     }
 
-    public override fun cidrBlock(cidrBlock: String) {
+    override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
-    public override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+    override fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
       cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
     }
 
-    public override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+    override fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
       cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
     }
 
-    public override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+    override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
-    public override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
+    override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
       cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
     }
 
-    public override fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
+    override fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
       cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
     }
 
-    public override fun ipv6Pool(ipv6Pool: String) {
+    override fun ipv6Pool(ipv6Pool: String) {
       cdkBuilder.ipv6Pool(ipv6Pool)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

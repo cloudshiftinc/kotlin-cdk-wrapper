@@ -70,23 +70,17 @@ public open class CfnDBProxyEndpoint internal constructor(
   }
 
   public interface Builder {
-    public fun dbProxyEndpointName(dbProxyEndpointName: String) {
-    }
+    public fun dbProxyEndpointName(dbProxyEndpointName: String)
 
-    public fun dbProxyName(dbProxyName: String) {
-    }
+    public fun dbProxyName(dbProxyName: String)
 
-    public fun tags(tags: List<TagFormatProperty>) {
-    }
+    public fun tags(tags: List<TagFormatProperty>)
 
-    public fun targetRole(targetRole: String) {
-    }
+    public fun targetRole(targetRole: String)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
 
-    public fun vpcSubnetIds(vpcSubnetIds: List<String>) {
-    }
+    public fun vpcSubnetIds(vpcSubnetIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -96,27 +90,27 @@ public open class CfnDBProxyEndpoint internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.Builder =
         software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.Builder.create(scope, id)
 
-    public override fun dbProxyEndpointName(dbProxyEndpointName: String) {
+    override fun dbProxyEndpointName(dbProxyEndpointName: String) {
       cdkBuilder.dbProxyEndpointName(dbProxyEndpointName)
     }
 
-    public override fun dbProxyName(dbProxyName: String) {
+    override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
     }
 
-    public override fun tags(tags: List<TagFormatProperty>) {
+    override fun tags(tags: List<TagFormatProperty>) {
       cdkBuilder.tags(tags.map(TagFormatProperty::unwrap))
     }
 
-    public override fun targetRole(targetRole: String) {
+    override fun targetRole(targetRole: String) {
       cdkBuilder.targetRole(targetRole)
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
-    public override fun vpcSubnetIds(vpcSubnetIds: List<String>) {
+    override fun vpcSubnetIds(vpcSubnetIds: List<String>) {
       cdkBuilder.vpcSubnetIds(vpcSubnetIds)
     }
 
@@ -150,11 +144,9 @@ public open class CfnDBProxyEndpoint internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -162,11 +154,11 @@ public open class CfnDBProxyEndpoint internal constructor(
           software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -178,9 +170,9 @@ public open class CfnDBProxyEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rds.CfnDBProxyEndpoint.TagFormatProperty,
     ) : TagFormatProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

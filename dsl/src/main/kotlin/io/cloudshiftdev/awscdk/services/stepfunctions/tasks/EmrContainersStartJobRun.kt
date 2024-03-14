@@ -27,82 +27,59 @@ public open class EmrContainersStartJobRun internal constructor(
       unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
 
   public interface Builder {
-    public fun applicationConfig(applicationConfig: List<ApplicationConfiguration>) {
-    }
+    public fun applicationConfig(applicationConfig: List<ApplicationConfiguration>)
 
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
-    public fun credentials(credentials: Credentials) {
-    }
+    public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8b3da2b4031a0fbb88f274e003d39f32e03f223d156002935aa9496039fbb580")
-    public fun credentials(credentials: Credentials.Builder.() -> Unit) {
-    }
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
-    public fun executionRole(executionRole: IRole) {
-    }
+    public fun executionRole(executionRole: IRole)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun heartbeat(heartbeat: Duration) {
-    }
+    public fun heartbeat(heartbeat: Duration)
 
-    public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-    }
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
 
-    public fun inputPath(inputPath: String) {
-    }
+    public fun inputPath(inputPath: String)
 
-    public fun integrationPattern(integrationPattern: IntegrationPattern) {
-    }
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
 
-    public fun jobDriver(jobDriver: JobDriver) {
-    }
+    public fun jobDriver(jobDriver: JobDriver)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("324dccdccb01290b4209a243d6efdc9da5d8fc543ba1505e6a8ae1317f36126c")
-    public fun jobDriver(jobDriver: JobDriver.Builder.() -> Unit) {
-    }
+    public fun jobDriver(jobDriver: JobDriver.Builder.() -> Unit)
 
-    public fun jobName(jobName: String) {
-    }
+    public fun jobName(jobName: String)
 
-    public fun monitoring(monitoring: Monitoring) {
-    }
+    public fun monitoring(monitoring: Monitoring)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3fc52187966051a33869f2f4c7b100d8a0d3a4facddd9b92073410b125f265c0")
-    public fun monitoring(monitoring: Monitoring.Builder.() -> Unit) {
-    }
+    public fun monitoring(monitoring: Monitoring.Builder.() -> Unit)
 
-    public fun outputPath(outputPath: String) {
-    }
+    public fun outputPath(outputPath: String)
 
-    public fun releaseLabel(releaseLabel: ReleaseLabel) {
-    }
+    public fun releaseLabel(releaseLabel: ReleaseLabel)
 
-    public fun resultPath(resultPath: String) {
-    }
+    public fun resultPath(resultPath: String)
 
-    public fun resultSelector(resultSelector: Map<String, Any>) {
-    }
+    public fun resultSelector(resultSelector: Map<String, Any>)
 
-    public fun stateName(stateName: String) {
-    }
+    public fun stateName(stateName: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun taskTimeout(taskTimeout: Timeout) {
-    }
+    public fun taskTimeout(taskTimeout: Timeout)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun virtualCluster(virtualCluster: VirtualClusterInput) {
-    }
+    public fun virtualCluster(virtualCluster: VirtualClusterInput)
   }
 
   private class BuilderImpl(
@@ -114,100 +91,100 @@ public open class EmrContainersStartJobRun internal constructor(
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun.Builder.create(scope,
         id)
 
-    public override fun applicationConfig(applicationConfig: List<ApplicationConfiguration>) {
+    override fun applicationConfig(applicationConfig: List<ApplicationConfiguration>) {
       cdkBuilder.applicationConfig(applicationConfig.map(ApplicationConfiguration::unwrap))
     }
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
-    public override fun credentials(credentials: Credentials) {
+    override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8b3da2b4031a0fbb88f274e003d39f32e03f223d156002935aa9496039fbb580")
-    public override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
         credentials(Credentials(credentials))
 
-    public override fun executionRole(executionRole: IRole) {
+    override fun executionRole(executionRole: IRole) {
       cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun heartbeat(heartbeat: Duration) {
+    override fun heartbeat(heartbeat: Duration) {
       cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
     }
 
-    public override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
       cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
     }
 
-    public override fun inputPath(inputPath: String) {
+    override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
-    public override fun integrationPattern(integrationPattern: IntegrationPattern) {
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
       cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
     }
 
-    public override fun jobDriver(jobDriver: JobDriver) {
+    override fun jobDriver(jobDriver: JobDriver) {
       cdkBuilder.jobDriver(jobDriver.let(JobDriver::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("324dccdccb01290b4209a243d6efdc9da5d8fc543ba1505e6a8ae1317f36126c")
-    public override fun jobDriver(jobDriver: JobDriver.Builder.() -> Unit): Unit =
+    override fun jobDriver(jobDriver: JobDriver.Builder.() -> Unit): Unit =
         jobDriver(JobDriver(jobDriver))
 
-    public override fun jobName(jobName: String) {
+    override fun jobName(jobName: String) {
       cdkBuilder.jobName(jobName)
     }
 
-    public override fun monitoring(monitoring: Monitoring) {
+    override fun monitoring(monitoring: Monitoring) {
       cdkBuilder.monitoring(monitoring.let(Monitoring::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3fc52187966051a33869f2f4c7b100d8a0d3a4facddd9b92073410b125f265c0")
-    public override fun monitoring(monitoring: Monitoring.Builder.() -> Unit): Unit =
+    override fun monitoring(monitoring: Monitoring.Builder.() -> Unit): Unit =
         monitoring(Monitoring(monitoring))
 
-    public override fun outputPath(outputPath: String) {
+    override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
-    public override fun releaseLabel(releaseLabel: ReleaseLabel) {
+    override fun releaseLabel(releaseLabel: ReleaseLabel) {
       cdkBuilder.releaseLabel(releaseLabel.let(ReleaseLabel::unwrap))
     }
 
-    public override fun resultPath(resultPath: String) {
+    override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)
     }
 
-    public override fun resultSelector(resultSelector: Map<String, Any>) {
+    override fun resultSelector(resultSelector: Map<String, Any>) {
       cdkBuilder.resultSelector(resultSelector)
     }
 
-    public override fun stateName(stateName: String) {
+    override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun taskTimeout(taskTimeout: Timeout) {
+    override fun taskTimeout(taskTimeout: Timeout) {
       cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun virtualCluster(virtualCluster: VirtualClusterInput) {
+    override fun virtualCluster(virtualCluster: VirtualClusterInput) {
       cdkBuilder.virtualCluster(virtualCluster.let(VirtualClusterInput::unwrap))
     }
 

@@ -114,53 +114,37 @@ public open class CfnDataLakeSettings internal constructor(
   }
 
   public interface Builder {
-    public fun admins(admins: IResolvable) {
-    }
+    public fun admins(admins: IResolvable)
 
-    public fun admins(admins: List<Any>) {
-    }
+    public fun admins(admins: List<Any>)
 
-    public fun allowExternalDataFiltering(allowExternalDataFiltering: Boolean) {
-    }
+    public fun allowExternalDataFiltering(allowExternalDataFiltering: Boolean)
 
-    public fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable) {
-    }
+    public fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable)
 
-    public fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: Boolean) {
-    }
+    public fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: Boolean)
 
-    public fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable) {
-    }
+    public fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable)
 
-    public fun authorizedSessionTagValueList(authorizedSessionTagValueList: List<String>) {
-    }
+    public fun authorizedSessionTagValueList(authorizedSessionTagValueList: List<String>)
 
-    public fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: IResolvable) {
-    }
+    public fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: IResolvable)
 
-    public fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: List<Any>) {
-    }
+    public fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: List<Any>)
 
-    public fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
-    }
+    public fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable)
 
-    public fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
-    }
+    public fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>)
 
-    public fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable) {
-    }
+    public fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable)
 
-    public fun externalDataFilteringAllowList(externalDataFilteringAllowList: List<Any>) {
-    }
+    public fun externalDataFilteringAllowList(externalDataFilteringAllowList: List<Any>)
 
-    public fun mutationType(mutationType: String) {
-    }
+    public fun mutationType(mutationType: String)
 
-    public fun parameters(parameters: Any) {
-    }
+    public fun parameters(parameters: Any)
 
-    public fun trustedResourceOwners(trustedResourceOwners: List<String>) {
-    }
+    public fun trustedResourceOwners(trustedResourceOwners: List<String>)
   }
 
   private class BuilderImpl(
@@ -171,72 +155,67 @@ public open class CfnDataLakeSettings internal constructor(
         software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.Builder =
         software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.Builder.create(scope, id)
 
-    public override fun admins(admins: IResolvable) {
+    override fun admins(admins: IResolvable) {
       cdkBuilder.admins(admins.let(IResolvable::unwrap))
     }
 
-    public override fun admins(admins: List<Any>) {
+    override fun admins(admins: List<Any>) {
       cdkBuilder.admins(admins)
     }
 
-    public override fun allowExternalDataFiltering(allowExternalDataFiltering: Boolean) {
+    override fun allowExternalDataFiltering(allowExternalDataFiltering: Boolean) {
       cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering)
     }
 
-    public override fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable) {
+    override fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable) {
       cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering.let(IResolvable::unwrap))
     }
 
-    public override
-        fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: Boolean) {
+    override fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: Boolean) {
       cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess)
     }
 
-    public override
-        fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable) {
+    override fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable) {
       cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess.let(IResolvable::unwrap))
     }
 
-    public override fun authorizedSessionTagValueList(authorizedSessionTagValueList: List<String>) {
+    override fun authorizedSessionTagValueList(authorizedSessionTagValueList: List<String>) {
       cdkBuilder.authorizedSessionTagValueList(authorizedSessionTagValueList)
     }
 
-    public override
-        fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: IResolvable) {
+    override fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: IResolvable) {
       cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.let(IResolvable::unwrap))
     }
 
-    public override
-        fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: List<Any>) {
+    override fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: List<Any>) {
       cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions)
     }
 
-    public override fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
+    override fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
       cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable::unwrap))
     }
 
-    public override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
+    override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
       cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
     }
 
-    public override
-        fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable) {
+    override fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable) {
       cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.let(IResolvable::unwrap))
     }
 
-    public override fun externalDataFilteringAllowList(externalDataFilteringAllowList: List<Any>) {
+    override fun externalDataFilteringAllowList(externalDataFilteringAllowList: List<Any>) {
       cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList)
     }
 
-    public override fun mutationType(mutationType: String) {
+    override fun mutationType(mutationType: String) {
       cdkBuilder.mutationType(mutationType)
     }
 
-    public override fun parameters(parameters: Any) {
+    override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun trustedResourceOwners(trustedResourceOwners: List<String>) {
+    override fun trustedResourceOwners(trustedResourceOwners: List<String>) {
       cdkBuilder.trustedResourceOwners(trustedResourceOwners)
     }
 
@@ -271,19 +250,15 @@ public open class CfnDataLakeSettings internal constructor(
     public fun principal(): Any
 
     public interface Builder {
-      public fun permissions(permissions: List<String>) {
-      }
+      public fun permissions(permissions: List<String>)
 
-      public fun principal(principal: IResolvable) {
-      }
+      public fun principal(principal: IResolvable)
 
-      public fun principal(principal: DataLakePrincipalProperty) {
-      }
+      public fun principal(principal: DataLakePrincipalProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("222db79a76a46d52f0df1a9d6b10094f0536f5fc5b6e298e00d0109b2bab14cf")
-      public fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit) {
-      }
+      public fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -292,21 +267,21 @@ public open class CfnDataLakeSettings internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty.builder()
 
-      public override fun permissions(permissions: List<String>) {
+      override fun permissions(permissions: List<String>) {
         cdkBuilder.permissions(permissions)
       }
 
-      public override fun principal(principal: IResolvable) {
+      override fun principal(principal: IResolvable) {
         cdkBuilder.principal(principal.let(IResolvable::unwrap))
       }
 
-      public override fun principal(principal: DataLakePrincipalProperty) {
+      override fun principal(principal: DataLakePrincipalProperty) {
         cdkBuilder.principal(principal.let(DataLakePrincipalProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("222db79a76a46d52f0df1a9d6b10094f0536f5fc5b6e298e00d0109b2bab14cf")
-      public override fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit): Unit =
+      override fun principal(principal: DataLakePrincipalProperty.Builder.() -> Unit): Unit =
           principal(DataLakePrincipalProperty(principal))
 
       public fun build():
@@ -318,9 +293,9 @@ public open class CfnDataLakeSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty,
     ) : PrincipalPermissionsProperty {
-      public override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
+      override fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
 
-      public override fun principal(): Any = unwrap(this).getPrincipal()
+      override fun principal(): Any = unwrap(this).getPrincipal()
     }
 
     public companion object {
@@ -347,8 +322,7 @@ public open class CfnDataLakeSettings internal constructor(
     public fun dataLakePrincipalIdentifier(): String
 
     public interface Builder {
-      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
-      }
+      public fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String)
     }
 
     private class BuilderImpl : Builder {
@@ -357,7 +331,7 @@ public open class CfnDataLakeSettings internal constructor(
           =
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty.builder()
 
-      public override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
+      override fun dataLakePrincipalIdentifier(dataLakePrincipalIdentifier: String) {
         cdkBuilder.dataLakePrincipalIdentifier(dataLakePrincipalIdentifier)
       }
 
@@ -370,7 +344,7 @@ public open class CfnDataLakeSettings internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty,
     ) : DataLakePrincipalProperty {
-      public override fun dataLakePrincipalIdentifier(): String =
+      override fun dataLakePrincipalIdentifier(): String =
           unwrap(this).getDataLakePrincipalIdentifier()
     }
 

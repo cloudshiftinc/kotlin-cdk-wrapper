@@ -51,17 +51,13 @@ public open class CfnAttributeGroup internal constructor(
   }
 
   public interface Builder {
-    public fun attributes(attributes: Any) {
-    }
+    public fun attributes(attributes: Any)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -73,19 +69,19 @@ public open class CfnAttributeGroup internal constructor(
         software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup.Builder.create(scope,
         id)
 
-    public override fun attributes(attributes: Any) {
+    override fun attributes(attributes: Any) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

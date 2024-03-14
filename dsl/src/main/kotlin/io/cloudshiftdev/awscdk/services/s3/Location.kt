@@ -11,29 +11,26 @@ public interface Location {
   public fun objectVersion(): String? = unwrap(this).getObjectVersion()
 
   public interface Builder {
-    public fun bucketName(bucketName: String) {
-    }
+    public fun bucketName(bucketName: String)
 
-    public fun objectKey(objectKey: String) {
-    }
+    public fun objectKey(objectKey: String)
 
-    public fun objectVersion(objectVersion: String) {
-    }
+    public fun objectVersion(objectVersion: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.Location.Builder =
         software.amazon.awscdk.services.s3.Location.builder()
 
-    public override fun bucketName(bucketName: String) {
+    override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
-    public override fun objectKey(objectKey: String) {
+    override fun objectKey(objectKey: String) {
       cdkBuilder.objectKey(objectKey)
     }
 
-    public override fun objectVersion(objectVersion: String) {
+    override fun objectVersion(objectVersion: String) {
       cdkBuilder.objectVersion(objectVersion)
     }
 
@@ -43,11 +40,11 @@ public interface Location {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.Location,
   ) : Location {
-    public override fun bucketName(): String = unwrap(this).getBucketName()
+    override fun bucketName(): String = unwrap(this).getBucketName()
 
-    public override fun objectKey(): String = unwrap(this).getObjectKey()
+    override fun objectKey(): String = unwrap(this).getObjectKey()
 
-    public override fun objectVersion(): String? = unwrap(this).getObjectVersion()
+    override fun objectVersion(): String? = unwrap(this).getObjectVersion()
   }
 
   public companion object {

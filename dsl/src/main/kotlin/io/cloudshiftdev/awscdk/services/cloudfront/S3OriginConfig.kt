@@ -18,43 +18,38 @@ public interface S3OriginConfig {
   public fun s3BucketSource(): IBucket
 
   public interface Builder {
-    public fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity) {
-    }
+    public fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity)
 
-    public fun originHeaders(originHeaders: Map<String, String>) {
-    }
+    public fun originHeaders(originHeaders: Map<String, String>)
 
-    public fun originPath(originPath: String) {
-    }
+    public fun originPath(originPath: String)
 
-    public fun originShieldRegion(originShieldRegion: String) {
-    }
+    public fun originShieldRegion(originShieldRegion: String)
 
-    public fun s3BucketSource(s3BucketSource: IBucket) {
-    }
+    public fun s3BucketSource(s3BucketSource: IBucket)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.S3OriginConfig.Builder =
         software.amazon.awscdk.services.cloudfront.S3OriginConfig.builder()
 
-    public override fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity) {
+    override fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity) {
       cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity::unwrap))
     }
 
-    public override fun originHeaders(originHeaders: Map<String, String>) {
+    override fun originHeaders(originHeaders: Map<String, String>) {
       cdkBuilder.originHeaders(originHeaders)
     }
 
-    public override fun originPath(originPath: String) {
+    override fun originPath(originPath: String) {
       cdkBuilder.originPath(originPath)
     }
 
-    public override fun originShieldRegion(originShieldRegion: String) {
+    override fun originShieldRegion(originShieldRegion: String) {
       cdkBuilder.originShieldRegion(originShieldRegion)
     }
 
-    public override fun s3BucketSource(s3BucketSource: IBucket) {
+    override fun s3BucketSource(s3BucketSource: IBucket) {
       cdkBuilder.s3BucketSource(s3BucketSource.let(IBucket::unwrap))
     }
 
@@ -65,18 +60,17 @@ public interface S3OriginConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.S3OriginConfig,
   ) : S3OriginConfig {
-    public override fun originAccessIdentity(): IOriginAccessIdentity? =
+    override fun originAccessIdentity(): IOriginAccessIdentity? =
         unwrap(this).getOriginAccessIdentity()?.let(IOriginAccessIdentity::wrap)
 
-    public override fun originHeaders(): Map<String, String> = unwrap(this).getOriginHeaders() ?:
+    override fun originHeaders(): Map<String, String> = unwrap(this).getOriginHeaders() ?:
         emptyMap()
 
-    public override fun originPath(): String? = unwrap(this).getOriginPath()
+    override fun originPath(): String? = unwrap(this).getOriginPath()
 
-    public override fun originShieldRegion(): String? = unwrap(this).getOriginShieldRegion()
+    override fun originShieldRegion(): String? = unwrap(this).getOriginShieldRegion()
 
-    public override fun s3BucketSource(): IBucket =
-        unwrap(this).getS3BucketSource().let(IBucket::wrap)
+    override fun s3BucketSource(): IBucket = unwrap(this).getS3BucketSource().let(IBucket::wrap)
   }
 
   public companion object {

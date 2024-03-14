@@ -111,48 +111,35 @@ public open class CfnNetworkInsightsPath internal constructor(
   }
 
   public interface Builder {
-    public fun destination(destination: String) {
-    }
+    public fun destination(destination: String)
 
-    public fun destinationIp(destinationIp: String) {
-    }
+    public fun destinationIp(destinationIp: String)
 
-    public fun destinationPort(destinationPort: Number) {
-    }
+    public fun destinationPort(destinationPort: Number)
 
-    public fun filterAtDestination(filterAtDestination: IResolvable) {
-    }
+    public fun filterAtDestination(filterAtDestination: IResolvable)
 
-    public fun filterAtDestination(filterAtDestination: PathFilterProperty) {
-    }
+    public fun filterAtDestination(filterAtDestination: PathFilterProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6fc130fe57308efc3533736b34dac6c768021dee3a12c125c4af637efd2dfd29")
-    public fun filterAtDestination(filterAtDestination: PathFilterProperty.Builder.() -> Unit) {
-    }
+    public fun filterAtDestination(filterAtDestination: PathFilterProperty.Builder.() -> Unit)
 
-    public fun filterAtSource(filterAtSource: IResolvable) {
-    }
+    public fun filterAtSource(filterAtSource: IResolvable)
 
-    public fun filterAtSource(filterAtSource: PathFilterProperty) {
-    }
+    public fun filterAtSource(filterAtSource: PathFilterProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38704953e7735b78475c41a7ccf525fb6e132f5f4e23a8fb04bf1c9d6d18eb63")
-    public fun filterAtSource(filterAtSource: PathFilterProperty.Builder.() -> Unit) {
-    }
+    public fun filterAtSource(filterAtSource: PathFilterProperty.Builder.() -> Unit)
 
-    public fun protocol(protocol: String) {
-    }
+    public fun protocol(protocol: String)
 
-    public fun source(source: String) {
-    }
+    public fun source(source: String)
 
-    public fun sourceIp(sourceIp: String) {
-    }
+    public fun sourceIp(sourceIp: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -162,58 +149,57 @@ public open class CfnNetworkInsightsPath internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.Builder.create(scope, id)
 
-    public override fun destination(destination: String) {
+    override fun destination(destination: String) {
       cdkBuilder.destination(destination)
     }
 
-    public override fun destinationIp(destinationIp: String) {
+    override fun destinationIp(destinationIp: String) {
       cdkBuilder.destinationIp(destinationIp)
     }
 
-    public override fun destinationPort(destinationPort: Number) {
+    override fun destinationPort(destinationPort: Number) {
       cdkBuilder.destinationPort(destinationPort)
     }
 
-    public override fun filterAtDestination(filterAtDestination: IResolvable) {
+    override fun filterAtDestination(filterAtDestination: IResolvable) {
       cdkBuilder.filterAtDestination(filterAtDestination.let(IResolvable::unwrap))
     }
 
-    public override fun filterAtDestination(filterAtDestination: PathFilterProperty) {
+    override fun filterAtDestination(filterAtDestination: PathFilterProperty) {
       cdkBuilder.filterAtDestination(filterAtDestination.let(PathFilterProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6fc130fe57308efc3533736b34dac6c768021dee3a12c125c4af637efd2dfd29")
-    public override
-        fun filterAtDestination(filterAtDestination: PathFilterProperty.Builder.() -> Unit): Unit =
-        filterAtDestination(PathFilterProperty(filterAtDestination))
+    override fun filterAtDestination(filterAtDestination: PathFilterProperty.Builder.() -> Unit):
+        Unit = filterAtDestination(PathFilterProperty(filterAtDestination))
 
-    public override fun filterAtSource(filterAtSource: IResolvable) {
+    override fun filterAtSource(filterAtSource: IResolvable) {
       cdkBuilder.filterAtSource(filterAtSource.let(IResolvable::unwrap))
     }
 
-    public override fun filterAtSource(filterAtSource: PathFilterProperty) {
+    override fun filterAtSource(filterAtSource: PathFilterProperty) {
       cdkBuilder.filterAtSource(filterAtSource.let(PathFilterProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("38704953e7735b78475c41a7ccf525fb6e132f5f4e23a8fb04bf1c9d6d18eb63")
-    public override fun filterAtSource(filterAtSource: PathFilterProperty.Builder.() -> Unit): Unit
-        = filterAtSource(PathFilterProperty(filterAtSource))
+    override fun filterAtSource(filterAtSource: PathFilterProperty.Builder.() -> Unit): Unit =
+        filterAtSource(PathFilterProperty(filterAtSource))
 
-    public override fun protocol(protocol: String) {
+    override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
     }
 
-    public override fun source(source: String) {
+    override fun source(source: String) {
       cdkBuilder.source(source)
     }
 
-    public override fun sourceIp(sourceIp: String) {
+    override fun sourceIp(sourceIp: String) {
       cdkBuilder.sourceIp(sourceIp)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -252,34 +238,26 @@ public open class CfnNetworkInsightsPath internal constructor(
     public fun sourcePortRange(): Any? = unwrap(this).getSourcePortRange()
 
     public interface Builder {
-      public fun destinationAddress(destinationAddress: String) {
-      }
+      public fun destinationAddress(destinationAddress: String)
 
-      public fun destinationPortRange(destinationPortRange: IResolvable) {
-      }
+      public fun destinationPortRange(destinationPortRange: IResolvable)
 
-      public fun destinationPortRange(destinationPortRange: FilterPortRangeProperty) {
-      }
+      public fun destinationPortRange(destinationPortRange: FilterPortRangeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d2e3d751dbdd68807cdb605a72c7006ea486c9202424100dbd476d58321fb565")
       public
-          fun destinationPortRange(destinationPortRange: FilterPortRangeProperty.Builder.() -> Unit) {
-      }
+          fun destinationPortRange(destinationPortRange: FilterPortRangeProperty.Builder.() -> Unit)
 
-      public fun sourceAddress(sourceAddress: String) {
-      }
+      public fun sourceAddress(sourceAddress: String)
 
-      public fun sourcePortRange(sourcePortRange: IResolvable) {
-      }
+      public fun sourcePortRange(sourcePortRange: IResolvable)
 
-      public fun sourcePortRange(sourcePortRange: FilterPortRangeProperty) {
-      }
+      public fun sourcePortRange(sourcePortRange: FilterPortRangeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82cb8eb403d87ec69322d186a73a64fce9267a481e349f0eb4dd921267b55e2d")
-      public fun sourcePortRange(sourcePortRange: FilterPortRangeProperty.Builder.() -> Unit) {
-      }
+      public fun sourcePortRange(sourcePortRange: FilterPortRangeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -287,41 +265,40 @@ public open class CfnNetworkInsightsPath internal constructor(
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty.builder()
 
-      public override fun destinationAddress(destinationAddress: String) {
+      override fun destinationAddress(destinationAddress: String) {
         cdkBuilder.destinationAddress(destinationAddress)
       }
 
-      public override fun destinationPortRange(destinationPortRange: IResolvable) {
+      override fun destinationPortRange(destinationPortRange: IResolvable) {
         cdkBuilder.destinationPortRange(destinationPortRange.let(IResolvable::unwrap))
       }
 
-      public override fun destinationPortRange(destinationPortRange: FilterPortRangeProperty) {
+      override fun destinationPortRange(destinationPortRange: FilterPortRangeProperty) {
         cdkBuilder.destinationPortRange(destinationPortRange.let(FilterPortRangeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d2e3d751dbdd68807cdb605a72c7006ea486c9202424100dbd476d58321fb565")
-      public override
+      override
           fun destinationPortRange(destinationPortRange: FilterPortRangeProperty.Builder.() -> Unit):
           Unit = destinationPortRange(FilterPortRangeProperty(destinationPortRange))
 
-      public override fun sourceAddress(sourceAddress: String) {
+      override fun sourceAddress(sourceAddress: String) {
         cdkBuilder.sourceAddress(sourceAddress)
       }
 
-      public override fun sourcePortRange(sourcePortRange: IResolvable) {
+      override fun sourcePortRange(sourcePortRange: IResolvable) {
         cdkBuilder.sourcePortRange(sourcePortRange.let(IResolvable::unwrap))
       }
 
-      public override fun sourcePortRange(sourcePortRange: FilterPortRangeProperty) {
+      override fun sourcePortRange(sourcePortRange: FilterPortRangeProperty) {
         cdkBuilder.sourcePortRange(sourcePortRange.let(FilterPortRangeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82cb8eb403d87ec69322d186a73a64fce9267a481e349f0eb4dd921267b55e2d")
-      public override
-          fun sourcePortRange(sourcePortRange: FilterPortRangeProperty.Builder.() -> Unit): Unit =
-          sourcePortRange(FilterPortRangeProperty(sourcePortRange))
+      override fun sourcePortRange(sourcePortRange: FilterPortRangeProperty.Builder.() -> Unit):
+          Unit = sourcePortRange(FilterPortRangeProperty(sourcePortRange))
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty =
@@ -332,13 +309,13 @@ public open class CfnNetworkInsightsPath internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty,
     ) : PathFilterProperty {
-      public override fun destinationAddress(): String? = unwrap(this).getDestinationAddress()
+      override fun destinationAddress(): String? = unwrap(this).getDestinationAddress()
 
-      public override fun destinationPortRange(): Any? = unwrap(this).getDestinationPortRange()
+      override fun destinationPortRange(): Any? = unwrap(this).getDestinationPortRange()
 
-      public override fun sourceAddress(): String? = unwrap(this).getSourceAddress()
+      override fun sourceAddress(): String? = unwrap(this).getSourceAddress()
 
-      public override fun sourcePortRange(): Any? = unwrap(this).getSourcePortRange()
+      override fun sourcePortRange(): Any? = unwrap(this).getSourcePortRange()
     }
 
     public companion object {
@@ -367,11 +344,9 @@ public open class CfnNetworkInsightsPath internal constructor(
     public fun toPort(): Number? = unwrap(this).getToPort()
 
     public interface Builder {
-      public fun fromPort(fromPort: Number) {
-      }
+      public fun fromPort(fromPort: Number)
 
-      public fun toPort(toPort: Number) {
-      }
+      public fun toPort(toPort: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -380,11 +355,11 @@ public open class CfnNetworkInsightsPath internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty.builder()
 
-      public override fun fromPort(fromPort: Number) {
+      override fun fromPort(fromPort: Number) {
         cdkBuilder.fromPort(fromPort)
       }
 
-      public override fun toPort(toPort: Number) {
+      override fun toPort(toPort: Number) {
         cdkBuilder.toPort(toPort)
       }
 
@@ -397,9 +372,9 @@ public open class CfnNetworkInsightsPath internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty,
     ) : FilterPortRangeProperty {
-      public override fun fromPort(): Number? = unwrap(this).getFromPort()
+      override fun fromPort(): Number? = unwrap(this).getFromPort()
 
-      public override fun toPort(): Number? = unwrap(this).getToPort()
+      override fun toPort(): Number? = unwrap(this).getToPort()
     }
 
     public companion object {

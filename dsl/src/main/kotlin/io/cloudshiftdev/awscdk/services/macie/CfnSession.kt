@@ -33,11 +33,9 @@ public open class CfnSession internal constructor(
   }
 
   public interface Builder {
-    public fun findingPublishingFrequency(findingPublishingFrequency: String) {
-    }
+    public fun findingPublishingFrequency(findingPublishingFrequency: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
   }
 
   private class BuilderImpl(
@@ -47,11 +45,11 @@ public open class CfnSession internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.macie.CfnSession.Builder =
         software.amazon.awscdk.services.macie.CfnSession.Builder.create(scope, id)
 
-    public override fun findingPublishingFrequency(findingPublishingFrequency: String) {
+    override fun findingPublishingFrequency(findingPublishingFrequency: String) {
       cdkBuilder.findingPublishingFrequency(findingPublishingFrequency)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 

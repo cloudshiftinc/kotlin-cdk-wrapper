@@ -66,25 +66,19 @@ public open class CfnResourceVersion internal constructor(
   }
 
   public interface Builder {
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun loggingConfig(loggingConfig: IResolvable) {
-    }
+    public fun loggingConfig(loggingConfig: IResolvable)
 
-    public fun loggingConfig(loggingConfig: LoggingConfigProperty) {
-    }
+    public fun loggingConfig(loggingConfig: LoggingConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10ec3fec1acf1d1aa9b49f4f1698b9b0f234e4248c80ce4ca2272fb706d600b9")
-    public fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit) {
-    }
+    public fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit)
 
-    public fun schemaHandlerPackage(schemaHandlerPackage: String) {
-    }
+    public fun schemaHandlerPackage(schemaHandlerPackage: String)
 
-    public fun typeName(typeName: String) {
-    }
+    public fun typeName(typeName: String)
   }
 
   private class BuilderImpl(
@@ -95,28 +89,28 @@ public open class CfnResourceVersion internal constructor(
         software.amazon.awscdk.services.cloudformation.CfnResourceVersion.Builder =
         software.amazon.awscdk.services.cloudformation.CfnResourceVersion.Builder.create(scope, id)
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun loggingConfig(loggingConfig: IResolvable) {
+    override fun loggingConfig(loggingConfig: IResolvable) {
       cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
     }
 
-    public override fun loggingConfig(loggingConfig: LoggingConfigProperty) {
+    override fun loggingConfig(loggingConfig: LoggingConfigProperty) {
       cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10ec3fec1acf1d1aa9b49f4f1698b9b0f234e4248c80ce4ca2272fb706d600b9")
-    public override fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit): Unit
-        = loggingConfig(LoggingConfigProperty(loggingConfig))
+    override fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit): Unit =
+        loggingConfig(LoggingConfigProperty(loggingConfig))
 
-    public override fun schemaHandlerPackage(schemaHandlerPackage: String) {
+    override fun schemaHandlerPackage(schemaHandlerPackage: String) {
       cdkBuilder.schemaHandlerPackage(schemaHandlerPackage)
     }
 
-    public override fun typeName(typeName: String) {
+    override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 
@@ -151,11 +145,9 @@ public open class CfnResourceVersion internal constructor(
     public fun logRoleArn(): String? = unwrap(this).getLogRoleArn()
 
     public interface Builder {
-      public fun logGroupName(logGroupName: String) {
-      }
+      public fun logGroupName(logGroupName: String)
 
-      public fun logRoleArn(logRoleArn: String) {
-      }
+      public fun logRoleArn(logRoleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -164,11 +156,11 @@ public open class CfnResourceVersion internal constructor(
           =
           software.amazon.awscdk.services.cloudformation.CfnResourceVersion.LoggingConfigProperty.builder()
 
-      public override fun logGroupName(logGroupName: String) {
+      override fun logGroupName(logGroupName: String) {
         cdkBuilder.logGroupName(logGroupName)
       }
 
-      public override fun logRoleArn(logRoleArn: String) {
+      override fun logRoleArn(logRoleArn: String) {
         cdkBuilder.logRoleArn(logRoleArn)
       }
 
@@ -181,9 +173,9 @@ public open class CfnResourceVersion internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudformation.CfnResourceVersion.LoggingConfigProperty,
     ) : LoggingConfigProperty {
-      public override fun logGroupName(): String? = unwrap(this).getLogGroupName()
+      override fun logGroupName(): String? = unwrap(this).getLogGroupName()
 
-      public override fun logRoleArn(): String? = unwrap(this).getLogRoleArn()
+      override fun logRoleArn(): String? = unwrap(this).getLogRoleArn()
     }
 
     public companion object {

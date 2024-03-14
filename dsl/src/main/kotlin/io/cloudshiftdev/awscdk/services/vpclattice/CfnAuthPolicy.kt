@@ -31,11 +31,9 @@ public open class CfnAuthPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policy(policy: Any) {
-    }
+    public fun policy(policy: Any)
 
-    public fun resourceIdentifier(resourceIdentifier: String) {
-    }
+    public fun resourceIdentifier(resourceIdentifier: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnAuthPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.vpclattice.CfnAuthPolicy.Builder =
         software.amazon.awscdk.services.vpclattice.CfnAuthPolicy.Builder.create(scope, id)
 
-    public override fun policy(policy: Any) {
+    override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
-    public override fun resourceIdentifier(resourceIdentifier: String) {
+    override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
     }
 

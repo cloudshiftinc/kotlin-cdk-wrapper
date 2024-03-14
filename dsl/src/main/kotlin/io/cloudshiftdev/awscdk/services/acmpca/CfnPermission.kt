@@ -41,17 +41,13 @@ public open class CfnPermission internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: List<String>) {
-    }
+    public fun actions(actions: List<String>)
 
-    public fun certificateAuthorityArn(certificateAuthorityArn: String) {
-    }
+    public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
-    public fun principal(principal: String) {
-    }
+    public fun principal(principal: String)
 
-    public fun sourceAccount(sourceAccount: String) {
-    }
+    public fun sourceAccount(sourceAccount: String)
   }
 
   private class BuilderImpl(
@@ -61,19 +57,19 @@ public open class CfnPermission internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.acmpca.CfnPermission.Builder =
         software.amazon.awscdk.services.acmpca.CfnPermission.Builder.create(scope, id)
 
-    public override fun actions(actions: List<String>) {
+    override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun certificateAuthorityArn(certificateAuthorityArn: String) {
+    override fun certificateAuthorityArn(certificateAuthorityArn: String) {
       cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)
     }
 
-    public override fun principal(principal: String) {
+    override fun principal(principal: String) {
       cdkBuilder.principal(principal)
     }
 
-    public override fun sourceAccount(sourceAccount: String) {
+    override fun sourceAccount(sourceAccount: String) {
       cdkBuilder.sourceAccount(sourceAccount)
     }
 

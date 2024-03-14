@@ -49,17 +49,13 @@ public open class CfnRuleGroupsNamespace internal constructor(
   }
 
   public interface Builder {
-    public fun `data`(`data`: String) {
-    }
+    public fun `data`(`data`: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workspace(workspace: String) {
-    }
+    public fun workspace(workspace: String)
   }
 
   private class BuilderImpl(
@@ -69,19 +65,19 @@ public open class CfnRuleGroupsNamespace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace.Builder =
         software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace.Builder.create(scope, id)
 
-    public override fun `data`(`data`: String) {
+    override fun `data`(`data`: String) {
       cdkBuilder.`data`(`data`)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workspace(workspace: String) {
+    override fun workspace(workspace: String) {
       cdkBuilder.workspace(workspace)
     }
 

@@ -15,21 +15,20 @@ public interface ILoadBalancerV2 : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2,
   ) : ILoadBalancerV2 {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun loadBalancerCanonicalHostedZoneId(): String =
+    override fun loadBalancerCanonicalHostedZoneId(): String =
         unwrap(this).getLoadBalancerCanonicalHostedZoneId()
 
-    public override fun loadBalancerDnsName(): String = unwrap(this).getLoadBalancerDnsName()
+    override fun loadBalancerDnsName(): String = unwrap(this).getLoadBalancerDnsName()
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

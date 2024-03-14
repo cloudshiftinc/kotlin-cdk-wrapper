@@ -42,17 +42,13 @@ public open class CfnClusterSecurityGroupIngress internal constructor(
   }
 
   public interface Builder {
-    public fun cidrip(cidrip: String) {
-    }
+    public fun cidrip(cidrip: String)
 
-    public fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
-    }
+    public fun clusterSecurityGroupName(clusterSecurityGroupName: String)
 
-    public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
-    }
+    public fun ec2SecurityGroupName(ec2SecurityGroupName: String)
 
-    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
-    }
+    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String)
   }
 
   private class BuilderImpl(
@@ -64,19 +60,19 @@ public open class CfnClusterSecurityGroupIngress internal constructor(
         software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngress.Builder.create(scope,
         id)
 
-    public override fun cidrip(cidrip: String) {
+    override fun cidrip(cidrip: String) {
       cdkBuilder.cidrip(cidrip)
     }
 
-    public override fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
+    override fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
       cdkBuilder.clusterSecurityGroupName(clusterSecurityGroupName)
     }
 
-    public override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
+    override fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
       cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
     }
 
-    public override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
+    override fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
       cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
     }
 

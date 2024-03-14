@@ -35,14 +35,11 @@ public open class CfnInstance internal constructor(
   }
 
   public interface Builder {
-    public fun instanceAttributes(instanceAttributes: Any) {
-    }
+    public fun instanceAttributes(instanceAttributes: Any)
 
-    public fun instanceId(instanceId: String) {
-    }
+    public fun instanceId(instanceId: String)
 
-    public fun serviceId(serviceId: String) {
-    }
+    public fun serviceId(serviceId: String)
   }
 
   private class BuilderImpl(
@@ -52,15 +49,15 @@ public open class CfnInstance internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicediscovery.CfnInstance.Builder =
         software.amazon.awscdk.services.servicediscovery.CfnInstance.Builder.create(scope, id)
 
-    public override fun instanceAttributes(instanceAttributes: Any) {
+    override fun instanceAttributes(instanceAttributes: Any) {
       cdkBuilder.instanceAttributes(instanceAttributes)
     }
 
-    public override fun instanceId(instanceId: String) {
+    override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
 
-    public override fun serviceId(serviceId: String) {
+    override fun serviceId(serviceId: String) {
       cdkBuilder.serviceId(serviceId)
     }
 

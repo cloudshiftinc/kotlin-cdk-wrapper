@@ -60,22 +60,17 @@ public open class CfnDeviceProfile internal constructor(
   }
 
   public interface Builder {
-    public fun loRaWan(loRaWan: IResolvable) {
-    }
+    public fun loRaWan(loRaWan: IResolvable)
 
-    public fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43d18a99c6fb09138d364c62a84567fa24f505a0db0725063028f05af9e6abe6")
-    public fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty.Builder.() -> Unit) {
-    }
+    public fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -85,24 +80,24 @@ public open class CfnDeviceProfile internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.Builder =
         software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.Builder.create(scope, id)
 
-    public override fun loRaWan(loRaWan: IResolvable) {
+    override fun loRaWan(loRaWan: IResolvable) {
       cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
     }
 
-    public override fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty) {
+    override fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty) {
       cdkBuilder.loRaWan(loRaWan.let(LoRaWANDeviceProfileProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("43d18a99c6fb09138d364c62a84567fa24f505a0db0725063028f05af9e6abe6")
-    public override fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty.Builder.() -> Unit): Unit =
+    override fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty.Builder.() -> Unit): Unit =
         loRaWan(LoRaWANDeviceProfileProperty(loRaWan))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -171,77 +166,53 @@ public open class CfnDeviceProfile internal constructor(
     public fun supportsJoin(): Any? = unwrap(this).getSupportsJoin()
 
     public interface Builder {
-      public fun classBTimeout(classBTimeout: Number) {
-      }
+      public fun classBTimeout(classBTimeout: Number)
 
-      public fun classCTimeout(classCTimeout: Number) {
-      }
+      public fun classCTimeout(classCTimeout: Number)
 
-      public fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable) {
-      }
+      public fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable)
 
-      public fun factoryPresetFreqsList(factoryPresetFreqsList: List<Number>) {
-      }
+      public fun factoryPresetFreqsList(factoryPresetFreqsList: List<Number>)
 
-      public fun macVersion(macVersion: String) {
-      }
+      public fun macVersion(macVersion: String)
 
-      public fun maxDutyCycle(maxDutyCycle: Number) {
-      }
+      public fun maxDutyCycle(maxDutyCycle: Number)
 
-      public fun maxEirp(maxEirp: Number) {
-      }
+      public fun maxEirp(maxEirp: Number)
 
-      public fun pingSlotDr(pingSlotDr: Number) {
-      }
+      public fun pingSlotDr(pingSlotDr: Number)
 
-      public fun pingSlotFreq(pingSlotFreq: Number) {
-      }
+      public fun pingSlotFreq(pingSlotFreq: Number)
 
-      public fun pingSlotPeriod(pingSlotPeriod: Number) {
-      }
+      public fun pingSlotPeriod(pingSlotPeriod: Number)
 
-      public fun regParamsRevision(regParamsRevision: String) {
-      }
+      public fun regParamsRevision(regParamsRevision: String)
 
-      public fun rfRegion(rfRegion: String) {
-      }
+      public fun rfRegion(rfRegion: String)
 
-      public fun rxDataRate2(rxDataRate2: Number) {
-      }
+      public fun rxDataRate2(rxDataRate2: Number)
 
-      public fun rxDelay1(rxDelay1: Number) {
-      }
+      public fun rxDelay1(rxDelay1: Number)
 
-      public fun rxDrOffset1(rxDrOffset1: Number) {
-      }
+      public fun rxDrOffset1(rxDrOffset1: Number)
 
-      public fun rxFreq2(rxFreq2: Number) {
-      }
+      public fun rxFreq2(rxFreq2: Number)
 
-      public fun supports32BitFCnt(supports32BitFCnt: Boolean) {
-      }
+      public fun supports32BitFCnt(supports32BitFCnt: Boolean)
 
-      public fun supports32BitFCnt(supports32BitFCnt: IResolvable) {
-      }
+      public fun supports32BitFCnt(supports32BitFCnt: IResolvable)
 
-      public fun supportsClassB(supportsClassB: Boolean) {
-      }
+      public fun supportsClassB(supportsClassB: Boolean)
 
-      public fun supportsClassB(supportsClassB: IResolvable) {
-      }
+      public fun supportsClassB(supportsClassB: IResolvable)
 
-      public fun supportsClassC(supportsClassC: Boolean) {
-      }
+      public fun supportsClassC(supportsClassC: Boolean)
 
-      public fun supportsClassC(supportsClassC: IResolvable) {
-      }
+      public fun supportsClassC(supportsClassC: IResolvable)
 
-      public fun supportsJoin(supportsJoin: Boolean) {
-      }
+      public fun supportsJoin(supportsJoin: Boolean)
 
-      public fun supportsJoin(supportsJoin: IResolvable) {
-      }
+      public fun supportsJoin(supportsJoin: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -250,99 +221,99 @@ public open class CfnDeviceProfile internal constructor(
           =
           software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.LoRaWANDeviceProfileProperty.builder()
 
-      public override fun classBTimeout(classBTimeout: Number) {
+      override fun classBTimeout(classBTimeout: Number) {
         cdkBuilder.classBTimeout(classBTimeout)
       }
 
-      public override fun classCTimeout(classCTimeout: Number) {
+      override fun classCTimeout(classCTimeout: Number) {
         cdkBuilder.classCTimeout(classCTimeout)
       }
 
-      public override fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable) {
+      override fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable) {
         cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList.let(IResolvable::unwrap))
       }
 
-      public override fun factoryPresetFreqsList(factoryPresetFreqsList: List<Number>) {
+      override fun factoryPresetFreqsList(factoryPresetFreqsList: List<Number>) {
         cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList)
       }
 
-      public override fun macVersion(macVersion: String) {
+      override fun macVersion(macVersion: String) {
         cdkBuilder.macVersion(macVersion)
       }
 
-      public override fun maxDutyCycle(maxDutyCycle: Number) {
+      override fun maxDutyCycle(maxDutyCycle: Number) {
         cdkBuilder.maxDutyCycle(maxDutyCycle)
       }
 
-      public override fun maxEirp(maxEirp: Number) {
+      override fun maxEirp(maxEirp: Number) {
         cdkBuilder.maxEirp(maxEirp)
       }
 
-      public override fun pingSlotDr(pingSlotDr: Number) {
+      override fun pingSlotDr(pingSlotDr: Number) {
         cdkBuilder.pingSlotDr(pingSlotDr)
       }
 
-      public override fun pingSlotFreq(pingSlotFreq: Number) {
+      override fun pingSlotFreq(pingSlotFreq: Number) {
         cdkBuilder.pingSlotFreq(pingSlotFreq)
       }
 
-      public override fun pingSlotPeriod(pingSlotPeriod: Number) {
+      override fun pingSlotPeriod(pingSlotPeriod: Number) {
         cdkBuilder.pingSlotPeriod(pingSlotPeriod)
       }
 
-      public override fun regParamsRevision(regParamsRevision: String) {
+      override fun regParamsRevision(regParamsRevision: String) {
         cdkBuilder.regParamsRevision(regParamsRevision)
       }
 
-      public override fun rfRegion(rfRegion: String) {
+      override fun rfRegion(rfRegion: String) {
         cdkBuilder.rfRegion(rfRegion)
       }
 
-      public override fun rxDataRate2(rxDataRate2: Number) {
+      override fun rxDataRate2(rxDataRate2: Number) {
         cdkBuilder.rxDataRate2(rxDataRate2)
       }
 
-      public override fun rxDelay1(rxDelay1: Number) {
+      override fun rxDelay1(rxDelay1: Number) {
         cdkBuilder.rxDelay1(rxDelay1)
       }
 
-      public override fun rxDrOffset1(rxDrOffset1: Number) {
+      override fun rxDrOffset1(rxDrOffset1: Number) {
         cdkBuilder.rxDrOffset1(rxDrOffset1)
       }
 
-      public override fun rxFreq2(rxFreq2: Number) {
+      override fun rxFreq2(rxFreq2: Number) {
         cdkBuilder.rxFreq2(rxFreq2)
       }
 
-      public override fun supports32BitFCnt(supports32BitFCnt: Boolean) {
+      override fun supports32BitFCnt(supports32BitFCnt: Boolean) {
         cdkBuilder.supports32BitFCnt(supports32BitFCnt)
       }
 
-      public override fun supports32BitFCnt(supports32BitFCnt: IResolvable) {
+      override fun supports32BitFCnt(supports32BitFCnt: IResolvable) {
         cdkBuilder.supports32BitFCnt(supports32BitFCnt.let(IResolvable::unwrap))
       }
 
-      public override fun supportsClassB(supportsClassB: Boolean) {
+      override fun supportsClassB(supportsClassB: Boolean) {
         cdkBuilder.supportsClassB(supportsClassB)
       }
 
-      public override fun supportsClassB(supportsClassB: IResolvable) {
+      override fun supportsClassB(supportsClassB: IResolvable) {
         cdkBuilder.supportsClassB(supportsClassB.let(IResolvable::unwrap))
       }
 
-      public override fun supportsClassC(supportsClassC: Boolean) {
+      override fun supportsClassC(supportsClassC: Boolean) {
         cdkBuilder.supportsClassC(supportsClassC)
       }
 
-      public override fun supportsClassC(supportsClassC: IResolvable) {
+      override fun supportsClassC(supportsClassC: IResolvable) {
         cdkBuilder.supportsClassC(supportsClassC.let(IResolvable::unwrap))
       }
 
-      public override fun supportsJoin(supportsJoin: Boolean) {
+      override fun supportsJoin(supportsJoin: Boolean) {
         cdkBuilder.supportsJoin(supportsJoin)
       }
 
-      public override fun supportsJoin(supportsJoin: IResolvable) {
+      override fun supportsJoin(supportsJoin: IResolvable) {
         cdkBuilder.supportsJoin(supportsJoin.let(IResolvable::unwrap))
       }
 
@@ -355,43 +326,43 @@ public open class CfnDeviceProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotwireless.CfnDeviceProfile.LoRaWANDeviceProfileProperty,
     ) : LoRaWANDeviceProfileProperty {
-      public override fun classBTimeout(): Number? = unwrap(this).getClassBTimeout()
+      override fun classBTimeout(): Number? = unwrap(this).getClassBTimeout()
 
-      public override fun classCTimeout(): Number? = unwrap(this).getClassCTimeout()
+      override fun classCTimeout(): Number? = unwrap(this).getClassCTimeout()
 
-      public override fun factoryPresetFreqsList(): Any? = unwrap(this).getFactoryPresetFreqsList()
+      override fun factoryPresetFreqsList(): Any? = unwrap(this).getFactoryPresetFreqsList()
 
-      public override fun macVersion(): String? = unwrap(this).getMacVersion()
+      override fun macVersion(): String? = unwrap(this).getMacVersion()
 
-      public override fun maxDutyCycle(): Number? = unwrap(this).getMaxDutyCycle()
+      override fun maxDutyCycle(): Number? = unwrap(this).getMaxDutyCycle()
 
-      public override fun maxEirp(): Number? = unwrap(this).getMaxEirp()
+      override fun maxEirp(): Number? = unwrap(this).getMaxEirp()
 
-      public override fun pingSlotDr(): Number? = unwrap(this).getPingSlotDr()
+      override fun pingSlotDr(): Number? = unwrap(this).getPingSlotDr()
 
-      public override fun pingSlotFreq(): Number? = unwrap(this).getPingSlotFreq()
+      override fun pingSlotFreq(): Number? = unwrap(this).getPingSlotFreq()
 
-      public override fun pingSlotPeriod(): Number? = unwrap(this).getPingSlotPeriod()
+      override fun pingSlotPeriod(): Number? = unwrap(this).getPingSlotPeriod()
 
-      public override fun regParamsRevision(): String? = unwrap(this).getRegParamsRevision()
+      override fun regParamsRevision(): String? = unwrap(this).getRegParamsRevision()
 
-      public override fun rfRegion(): String? = unwrap(this).getRfRegion()
+      override fun rfRegion(): String? = unwrap(this).getRfRegion()
 
-      public override fun rxDataRate2(): Number? = unwrap(this).getRxDataRate2()
+      override fun rxDataRate2(): Number? = unwrap(this).getRxDataRate2()
 
-      public override fun rxDelay1(): Number? = unwrap(this).getRxDelay1()
+      override fun rxDelay1(): Number? = unwrap(this).getRxDelay1()
 
-      public override fun rxDrOffset1(): Number? = unwrap(this).getRxDrOffset1()
+      override fun rxDrOffset1(): Number? = unwrap(this).getRxDrOffset1()
 
-      public override fun rxFreq2(): Number? = unwrap(this).getRxFreq2()
+      override fun rxFreq2(): Number? = unwrap(this).getRxFreq2()
 
-      public override fun supports32BitFCnt(): Any? = unwrap(this).getSupports32BitFCnt()
+      override fun supports32BitFCnt(): Any? = unwrap(this).getSupports32BitFCnt()
 
-      public override fun supportsClassB(): Any? = unwrap(this).getSupportsClassB()
+      override fun supportsClassB(): Any? = unwrap(this).getSupportsClassB()
 
-      public override fun supportsClassC(): Any? = unwrap(this).getSupportsClassC()
+      override fun supportsClassC(): Any? = unwrap(this).getSupportsClassC()
 
-      public override fun supportsJoin(): Any? = unwrap(this).getSupportsJoin()
+      override fun supportsJoin(): Any? = unwrap(this).getSupportsJoin()
     }
 
     public companion object {

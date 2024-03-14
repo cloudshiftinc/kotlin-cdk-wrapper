@@ -51,20 +51,15 @@ public open class CfnLaunchNotificationConstraint internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun notificationArns(notificationArns: List<String>) {
-    }
+    public fun notificationArns(notificationArns: List<String>)
 
-    public fun portfolioId(portfolioId: String) {
-    }
+    public fun portfolioId(portfolioId: String)
 
-    public fun productId(productId: String) {
-    }
+    public fun productId(productId: String)
   }
 
   private class BuilderImpl(
@@ -76,23 +71,23 @@ public open class CfnLaunchNotificationConstraint internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraint.Builder.create(scope,
         id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun notificationArns(notificationArns: List<String>) {
+    override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
 
-    public override fun portfolioId(portfolioId: String) {
+    override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
-    public override fun productId(productId: String) {
+    override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 

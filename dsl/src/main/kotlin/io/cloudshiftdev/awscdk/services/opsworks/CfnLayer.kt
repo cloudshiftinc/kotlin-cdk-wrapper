@@ -204,110 +204,78 @@ public open class CfnLayer internal constructor(
   }
 
   public interface Builder {
-    public fun attributes(attributes: IResolvable) {
-    }
+    public fun attributes(attributes: IResolvable)
 
-    public fun attributes(attributes: Map<String, String>) {
-    }
+    public fun attributes(attributes: Map<String, String>)
 
-    public fun autoAssignElasticIps(autoAssignElasticIps: Boolean) {
-    }
+    public fun autoAssignElasticIps(autoAssignElasticIps: Boolean)
 
-    public fun autoAssignElasticIps(autoAssignElasticIps: IResolvable) {
-    }
+    public fun autoAssignElasticIps(autoAssignElasticIps: IResolvable)
 
-    public fun autoAssignPublicIps(autoAssignPublicIps: Boolean) {
-    }
+    public fun autoAssignPublicIps(autoAssignPublicIps: Boolean)
 
-    public fun autoAssignPublicIps(autoAssignPublicIps: IResolvable) {
-    }
+    public fun autoAssignPublicIps(autoAssignPublicIps: IResolvable)
 
-    public fun customInstanceProfileArn(customInstanceProfileArn: String) {
-    }
+    public fun customInstanceProfileArn(customInstanceProfileArn: String)
 
-    public fun customJson(customJson: Any) {
-    }
+    public fun customJson(customJson: Any)
 
-    public fun customRecipes(customRecipes: IResolvable) {
-    }
+    public fun customRecipes(customRecipes: IResolvable)
 
-    public fun customRecipes(customRecipes: RecipesProperty) {
-    }
+    public fun customRecipes(customRecipes: RecipesProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("83070b06fe28ef87c0df7331304021d0187bbeecda558eae821e7c0f11716b1b")
-    public fun customRecipes(customRecipes: RecipesProperty.Builder.() -> Unit) {
-    }
+    public fun customRecipes(customRecipes: RecipesProperty.Builder.() -> Unit)
 
-    public fun customSecurityGroupIds(customSecurityGroupIds: List<String>) {
-    }
+    public fun customSecurityGroupIds(customSecurityGroupIds: List<String>)
 
-    public fun enableAutoHealing(enableAutoHealing: Boolean) {
-    }
+    public fun enableAutoHealing(enableAutoHealing: Boolean)
 
-    public fun enableAutoHealing(enableAutoHealing: IResolvable) {
-    }
+    public fun enableAutoHealing(enableAutoHealing: IResolvable)
 
-    public fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean) {
-    }
+    public fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean)
 
-    public fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
-    }
+    public fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable)
 
-    public fun lifecycleEventConfiguration(lifecycleEventConfiguration: IResolvable) {
-    }
+    public fun lifecycleEventConfiguration(lifecycleEventConfiguration: IResolvable)
 
     public
-        fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty) {
-    }
+        fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9cfe03c735b50e01df06229337d8df96730c8d22d4711a4fc5002b328edcee4")
     public
-        fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty.Builder.() -> Unit)
 
-    public fun loadBasedAutoScaling(loadBasedAutoScaling: IResolvable) {
-    }
+    public fun loadBasedAutoScaling(loadBasedAutoScaling: IResolvable)
 
-    public fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty) {
-    }
+    public fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("671c26bd97fcf55213bf45b05b04f31b88c41667f1af0a8b21ab011d83bb7a76")
     public
-        fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty.Builder.() -> Unit) {
-    }
+        fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun packages(packages: List<String>) {
-    }
+    public fun packages(packages: List<String>)
 
-    public fun shortname(shortname: String) {
-    }
+    public fun shortname(shortname: String)
 
-    public fun stackId(stackId: String) {
-    }
+    public fun stackId(stackId: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun useEbsOptimizedInstances(useEbsOptimizedInstances: Boolean) {
-    }
+    public fun useEbsOptimizedInstances(useEbsOptimizedInstances: Boolean)
 
-    public fun useEbsOptimizedInstances(useEbsOptimizedInstances: IResolvable) {
-    }
+    public fun useEbsOptimizedInstances(useEbsOptimizedInstances: IResolvable)
 
-    public fun volumeConfigurations(volumeConfigurations: IResolvable) {
-    }
+    public fun volumeConfigurations(volumeConfigurations: IResolvable)
 
-    public fun volumeConfigurations(volumeConfigurations: List<Any>) {
-    }
+    public fun volumeConfigurations(volumeConfigurations: List<Any>)
   }
 
   private class BuilderImpl(
@@ -317,138 +285,138 @@ public open class CfnLayer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.opsworks.CfnLayer.Builder =
         software.amazon.awscdk.services.opsworks.CfnLayer.Builder.create(scope, id)
 
-    public override fun attributes(attributes: IResolvable) {
+    override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
     }
 
-    public override fun attributes(attributes: Map<String, String>) {
+    override fun attributes(attributes: Map<String, String>) {
       cdkBuilder.attributes(attributes)
     }
 
-    public override fun autoAssignElasticIps(autoAssignElasticIps: Boolean) {
+    override fun autoAssignElasticIps(autoAssignElasticIps: Boolean) {
       cdkBuilder.autoAssignElasticIps(autoAssignElasticIps)
     }
 
-    public override fun autoAssignElasticIps(autoAssignElasticIps: IResolvable) {
+    override fun autoAssignElasticIps(autoAssignElasticIps: IResolvable) {
       cdkBuilder.autoAssignElasticIps(autoAssignElasticIps.let(IResolvable::unwrap))
     }
 
-    public override fun autoAssignPublicIps(autoAssignPublicIps: Boolean) {
+    override fun autoAssignPublicIps(autoAssignPublicIps: Boolean) {
       cdkBuilder.autoAssignPublicIps(autoAssignPublicIps)
     }
 
-    public override fun autoAssignPublicIps(autoAssignPublicIps: IResolvable) {
+    override fun autoAssignPublicIps(autoAssignPublicIps: IResolvable) {
       cdkBuilder.autoAssignPublicIps(autoAssignPublicIps.let(IResolvable::unwrap))
     }
 
-    public override fun customInstanceProfileArn(customInstanceProfileArn: String) {
+    override fun customInstanceProfileArn(customInstanceProfileArn: String) {
       cdkBuilder.customInstanceProfileArn(customInstanceProfileArn)
     }
 
-    public override fun customJson(customJson: Any) {
+    override fun customJson(customJson: Any) {
       cdkBuilder.customJson(customJson)
     }
 
-    public override fun customRecipes(customRecipes: IResolvable) {
+    override fun customRecipes(customRecipes: IResolvable) {
       cdkBuilder.customRecipes(customRecipes.let(IResolvable::unwrap))
     }
 
-    public override fun customRecipes(customRecipes: RecipesProperty) {
+    override fun customRecipes(customRecipes: RecipesProperty) {
       cdkBuilder.customRecipes(customRecipes.let(RecipesProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("83070b06fe28ef87c0df7331304021d0187bbeecda558eae821e7c0f11716b1b")
-    public override fun customRecipes(customRecipes: RecipesProperty.Builder.() -> Unit): Unit =
+    override fun customRecipes(customRecipes: RecipesProperty.Builder.() -> Unit): Unit =
         customRecipes(RecipesProperty(customRecipes))
 
-    public override fun customSecurityGroupIds(customSecurityGroupIds: List<String>) {
+    override fun customSecurityGroupIds(customSecurityGroupIds: List<String>) {
       cdkBuilder.customSecurityGroupIds(customSecurityGroupIds)
     }
 
-    public override fun enableAutoHealing(enableAutoHealing: Boolean) {
+    override fun enableAutoHealing(enableAutoHealing: Boolean) {
       cdkBuilder.enableAutoHealing(enableAutoHealing)
     }
 
-    public override fun enableAutoHealing(enableAutoHealing: IResolvable) {
+    override fun enableAutoHealing(enableAutoHealing: IResolvable) {
       cdkBuilder.enableAutoHealing(enableAutoHealing.let(IResolvable::unwrap))
     }
 
-    public override fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean) {
+    override fun installUpdatesOnBoot(installUpdatesOnBoot: Boolean) {
       cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot)
     }
 
-    public override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
+    override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
       cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable::unwrap))
     }
 
-    public override fun lifecycleEventConfiguration(lifecycleEventConfiguration: IResolvable) {
+    override fun lifecycleEventConfiguration(lifecycleEventConfiguration: IResolvable) {
       cdkBuilder.lifecycleEventConfiguration(lifecycleEventConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty) {
       cdkBuilder.lifecycleEventConfiguration(lifecycleEventConfiguration.let(LifecycleEventConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9cfe03c735b50e01df06229337d8df96730c8d22d4711a4fc5002b328edcee4")
-    public override
+    override
         fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty.Builder.() -> Unit):
         Unit =
         lifecycleEventConfiguration(LifecycleEventConfigurationProperty(lifecycleEventConfiguration))
 
-    public override fun loadBasedAutoScaling(loadBasedAutoScaling: IResolvable) {
+    override fun loadBasedAutoScaling(loadBasedAutoScaling: IResolvable) {
       cdkBuilder.loadBasedAutoScaling(loadBasedAutoScaling.let(IResolvable::unwrap))
     }
 
-    public override fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty) {
+    override fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty) {
       cdkBuilder.loadBasedAutoScaling(loadBasedAutoScaling.let(LoadBasedAutoScalingProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("671c26bd97fcf55213bf45b05b04f31b88c41667f1af0a8b21ab011d83bb7a76")
-    public override
+    override
         fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty.Builder.() -> Unit):
         Unit = loadBasedAutoScaling(LoadBasedAutoScalingProperty(loadBasedAutoScaling))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun packages(packages: List<String>) {
+    override fun packages(packages: List<String>) {
       cdkBuilder.packages(packages)
     }
 
-    public override fun shortname(shortname: String) {
+    override fun shortname(shortname: String) {
       cdkBuilder.shortname(shortname)
     }
 
-    public override fun stackId(stackId: String) {
+    override fun stackId(stackId: String) {
       cdkBuilder.stackId(stackId)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun useEbsOptimizedInstances(useEbsOptimizedInstances: Boolean) {
+    override fun useEbsOptimizedInstances(useEbsOptimizedInstances: Boolean) {
       cdkBuilder.useEbsOptimizedInstances(useEbsOptimizedInstances)
     }
 
-    public override fun useEbsOptimizedInstances(useEbsOptimizedInstances: IResolvable) {
+    override fun useEbsOptimizedInstances(useEbsOptimizedInstances: IResolvable) {
       cdkBuilder.useEbsOptimizedInstances(useEbsOptimizedInstances.let(IResolvable::unwrap))
     }
 
-    public override fun volumeConfigurations(volumeConfigurations: IResolvable) {
+    override fun volumeConfigurations(volumeConfigurations: IResolvable) {
       cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun volumeConfigurations(volumeConfigurations: List<Any>) {
+    override fun volumeConfigurations(volumeConfigurations: List<Any>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations)
     }
 
@@ -490,23 +458,17 @@ public open class CfnLayer internal constructor(
     public fun thresholdsWaitTime(): Number? = unwrap(this).getThresholdsWaitTime()
 
     public interface Builder {
-      public fun cpuThreshold(cpuThreshold: Number) {
-      }
+      public fun cpuThreshold(cpuThreshold: Number)
 
-      public fun ignoreMetricsTime(ignoreMetricsTime: Number) {
-      }
+      public fun ignoreMetricsTime(ignoreMetricsTime: Number)
 
-      public fun instanceCount(instanceCount: Number) {
-      }
+      public fun instanceCount(instanceCount: Number)
 
-      public fun loadThreshold(loadThreshold: Number) {
-      }
+      public fun loadThreshold(loadThreshold: Number)
 
-      public fun memoryThreshold(memoryThreshold: Number) {
-      }
+      public fun memoryThreshold(memoryThreshold: Number)
 
-      public fun thresholdsWaitTime(thresholdsWaitTime: Number) {
-      }
+      public fun thresholdsWaitTime(thresholdsWaitTime: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -514,27 +476,27 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty.builder()
 
-      public override fun cpuThreshold(cpuThreshold: Number) {
+      override fun cpuThreshold(cpuThreshold: Number) {
         cdkBuilder.cpuThreshold(cpuThreshold)
       }
 
-      public override fun ignoreMetricsTime(ignoreMetricsTime: Number) {
+      override fun ignoreMetricsTime(ignoreMetricsTime: Number) {
         cdkBuilder.ignoreMetricsTime(ignoreMetricsTime)
       }
 
-      public override fun instanceCount(instanceCount: Number) {
+      override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)
       }
 
-      public override fun loadThreshold(loadThreshold: Number) {
+      override fun loadThreshold(loadThreshold: Number) {
         cdkBuilder.loadThreshold(loadThreshold)
       }
 
-      public override fun memoryThreshold(memoryThreshold: Number) {
+      override fun memoryThreshold(memoryThreshold: Number) {
         cdkBuilder.memoryThreshold(memoryThreshold)
       }
 
-      public override fun thresholdsWaitTime(thresholdsWaitTime: Number) {
+      override fun thresholdsWaitTime(thresholdsWaitTime: Number) {
         cdkBuilder.thresholdsWaitTime(thresholdsWaitTime)
       }
 
@@ -547,17 +509,17 @@ public open class CfnLayer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnLayer.AutoScalingThresholdsProperty,
     ) : AutoScalingThresholdsProperty {
-      public override fun cpuThreshold(): Number? = unwrap(this).getCpuThreshold()
+      override fun cpuThreshold(): Number? = unwrap(this).getCpuThreshold()
 
-      public override fun ignoreMetricsTime(): Number? = unwrap(this).getIgnoreMetricsTime()
+      override fun ignoreMetricsTime(): Number? = unwrap(this).getIgnoreMetricsTime()
 
-      public override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
+      override fun instanceCount(): Number? = unwrap(this).getInstanceCount()
 
-      public override fun loadThreshold(): Number? = unwrap(this).getLoadThreshold()
+      override fun loadThreshold(): Number? = unwrap(this).getLoadThreshold()
 
-      public override fun memoryThreshold(): Number? = unwrap(this).getMemoryThreshold()
+      override fun memoryThreshold(): Number? = unwrap(this).getMemoryThreshold()
 
-      public override fun thresholdsWaitTime(): Number? = unwrap(this).getThresholdsWaitTime()
+      override fun thresholdsWaitTime(): Number? = unwrap(this).getThresholdsWaitTime()
     }
 
     public companion object {
@@ -584,18 +546,15 @@ public open class CfnLayer internal constructor(
     public fun shutdownEventConfiguration(): Any? = unwrap(this).getShutdownEventConfiguration()
 
     public interface Builder {
-      public fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
-      }
+      public fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable)
 
       public
-          fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty) {
-      }
+          fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("623d73a9a99a95e14394bdc7c031e0b34a162762be601099054abf7bb03a2646")
       public
-          fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -604,18 +563,18 @@ public open class CfnLayer internal constructor(
           =
           software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty.builder()
 
-      public override fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
+      override fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
         cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty) {
         cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration.let(ShutdownEventConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("623d73a9a99a95e14394bdc7c031e0b34a162762be601099054abf7bb03a2646")
-      public override
+      override
           fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty.Builder.() -> Unit):
           Unit =
           shutdownEventConfiguration(ShutdownEventConfigurationProperty(shutdownEventConfiguration))
@@ -629,8 +588,7 @@ public open class CfnLayer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnLayer.LifecycleEventConfigurationProperty,
     ) : LifecycleEventConfigurationProperty {
-      public override fun shutdownEventConfiguration(): Any? =
-          unwrap(this).getShutdownEventConfiguration()
+      override fun shutdownEventConfiguration(): Any? = unwrap(this).getShutdownEventConfiguration()
     }
 
     public companion object {
@@ -666,20 +624,15 @@ public open class CfnLayer internal constructor(
     public fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
 
     public interface Builder {
-      public fun configure(configure: List<String>) {
-      }
+      public fun configure(configure: List<String>)
 
-      public fun deploy(deploy: List<String>) {
-      }
+      public fun deploy(deploy: List<String>)
 
-      public fun shutdown(shutdown: List<String>) {
-      }
+      public fun shutdown(shutdown: List<String>)
 
-      public fun undeploy(undeploy: List<String>) {
-      }
+      public fun undeploy(undeploy: List<String>)
 
-      public fun up(setup: List<String>) {
-      }
+      public fun up(setup: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -687,23 +640,23 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty.builder()
 
-      public override fun configure(configure: List<String>) {
+      override fun configure(configure: List<String>) {
         cdkBuilder.configure(configure)
       }
 
-      public override fun deploy(deploy: List<String>) {
+      override fun deploy(deploy: List<String>) {
         cdkBuilder.deploy(deploy)
       }
 
-      public override fun shutdown(shutdown: List<String>) {
+      override fun shutdown(shutdown: List<String>) {
         cdkBuilder.shutdown(shutdown)
       }
 
-      public override fun undeploy(undeploy: List<String>) {
+      override fun undeploy(undeploy: List<String>) {
         cdkBuilder.undeploy(undeploy)
       }
 
-      public override fun up(setup: List<String>) {
+      override fun up(setup: List<String>) {
         cdkBuilder.setup(setup)
       }
 
@@ -714,15 +667,15 @@ public open class CfnLayer internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty,
     ) : RecipesProperty {
-      public override fun configure(): List<String> = unwrap(this).getConfigure() ?: emptyList()
+      override fun configure(): List<String> = unwrap(this).getConfigure() ?: emptyList()
 
-      public override fun deploy(): List<String> = unwrap(this).getDeploy() ?: emptyList()
+      override fun deploy(): List<String> = unwrap(this).getDeploy() ?: emptyList()
 
-      public override fun setup(): List<String> = unwrap(this).getSetup() ?: emptyList()
+      override fun setup(): List<String> = unwrap(this).getSetup() ?: emptyList()
 
-      public override fun shutdown(): List<String> = unwrap(this).getShutdown() ?: emptyList()
+      override fun shutdown(): List<String> = unwrap(this).getShutdown() ?: emptyList()
 
-      public override fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
+      override fun undeploy(): List<String> = unwrap(this).getUndeploy() ?: emptyList()
     }
 
     public companion object {
@@ -753,33 +706,25 @@ public open class CfnLayer internal constructor(
     public fun upScaling(): Any? = unwrap(this).getUpScaling()
 
     public interface Builder {
-      public fun downScaling(downScaling: IResolvable) {
-      }
+      public fun downScaling(downScaling: IResolvable)
 
-      public fun downScaling(downScaling: AutoScalingThresholdsProperty) {
-      }
+      public fun downScaling(downScaling: AutoScalingThresholdsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f9cda7a5b9775e3f009d9a6d189c785654f2ecd2ae9d640b1d53e089103a9535")
-      public fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit) {
-      }
+      public fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit)
 
-      public fun enable(enable: Boolean) {
-      }
+      public fun enable(enable: Boolean)
 
-      public fun enable(enable: IResolvable) {
-      }
+      public fun enable(enable: IResolvable)
 
-      public fun upScaling(upScaling: IResolvable) {
-      }
+      public fun upScaling(upScaling: IResolvable)
 
-      public fun upScaling(upScaling: AutoScalingThresholdsProperty) {
-      }
+      public fun upScaling(upScaling: AutoScalingThresholdsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e98bf6335bbca94e6f468a1b112e8bd884eff09cac00c5118212d2e46a79fce4")
-      public fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit) {
-      }
+      public fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -787,40 +732,39 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty.builder()
 
-      public override fun downScaling(downScaling: IResolvable) {
+      override fun downScaling(downScaling: IResolvable) {
         cdkBuilder.downScaling(downScaling.let(IResolvable::unwrap))
       }
 
-      public override fun downScaling(downScaling: AutoScalingThresholdsProperty) {
+      override fun downScaling(downScaling: AutoScalingThresholdsProperty) {
         cdkBuilder.downScaling(downScaling.let(AutoScalingThresholdsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f9cda7a5b9775e3f009d9a6d189c785654f2ecd2ae9d640b1d53e089103a9535")
-      public override
-          fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit =
-          downScaling(AutoScalingThresholdsProperty(downScaling))
+      override fun downScaling(downScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit
+          = downScaling(AutoScalingThresholdsProperty(downScaling))
 
-      public override fun enable(enable: Boolean) {
+      override fun enable(enable: Boolean) {
         cdkBuilder.enable(enable)
       }
 
-      public override fun enable(enable: IResolvable) {
+      override fun enable(enable: IResolvable) {
         cdkBuilder.enable(enable.let(IResolvable::unwrap))
       }
 
-      public override fun upScaling(upScaling: IResolvable) {
+      override fun upScaling(upScaling: IResolvable) {
         cdkBuilder.upScaling(upScaling.let(IResolvable::unwrap))
       }
 
-      public override fun upScaling(upScaling: AutoScalingThresholdsProperty) {
+      override fun upScaling(upScaling: AutoScalingThresholdsProperty) {
         cdkBuilder.upScaling(upScaling.let(AutoScalingThresholdsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e98bf6335bbca94e6f468a1b112e8bd884eff09cac00c5118212d2e46a79fce4")
-      public override fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit):
-          Unit = upScaling(AutoScalingThresholdsProperty(upScaling))
+      override fun upScaling(upScaling: AutoScalingThresholdsProperty.Builder.() -> Unit): Unit =
+          upScaling(AutoScalingThresholdsProperty(upScaling))
 
       public fun build():
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty =
@@ -831,11 +775,11 @@ public open class CfnLayer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnLayer.LoadBasedAutoScalingProperty,
     ) : LoadBasedAutoScalingProperty {
-      public override fun downScaling(): Any? = unwrap(this).getDownScaling()
+      override fun downScaling(): Any? = unwrap(this).getDownScaling()
 
-      public override fun enable(): Any? = unwrap(this).getEnable()
+      override fun enable(): Any? = unwrap(this).getEnable()
 
-      public override fun upScaling(): Any? = unwrap(this).getUpScaling()
+      override fun upScaling(): Any? = unwrap(this).getUpScaling()
     }
 
     public companion object {
@@ -874,29 +818,21 @@ public open class CfnLayer internal constructor(
     public fun volumeType(): String? = unwrap(this).getVolumeType()
 
     public interface Builder {
-      public fun encrypted(encrypted: Boolean) {
-      }
+      public fun encrypted(encrypted: Boolean)
 
-      public fun encrypted(encrypted: IResolvable) {
-      }
+      public fun encrypted(encrypted: IResolvable)
 
-      public fun iops(iops: Number) {
-      }
+      public fun iops(iops: Number)
 
-      public fun mountPoint(mountPoint: String) {
-      }
+      public fun mountPoint(mountPoint: String)
 
-      public fun numberOfDisks(numberOfDisks: Number) {
-      }
+      public fun numberOfDisks(numberOfDisks: Number)
 
-      public fun raidLevel(raidLevel: Number) {
-      }
+      public fun raidLevel(raidLevel: Number)
 
-      public fun size(size: Number) {
-      }
+      public fun size(size: Number)
 
-      public fun volumeType(volumeType: String) {
-      }
+      public fun volumeType(volumeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -904,35 +840,35 @@ public open class CfnLayer internal constructor(
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty.Builder =
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty.builder()
 
-      public override fun encrypted(encrypted: Boolean) {
+      override fun encrypted(encrypted: Boolean) {
         cdkBuilder.encrypted(encrypted)
       }
 
-      public override fun encrypted(encrypted: IResolvable) {
+      override fun encrypted(encrypted: IResolvable) {
         cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
       }
 
-      public override fun iops(iops: Number) {
+      override fun iops(iops: Number) {
         cdkBuilder.iops(iops)
       }
 
-      public override fun mountPoint(mountPoint: String) {
+      override fun mountPoint(mountPoint: String) {
         cdkBuilder.mountPoint(mountPoint)
       }
 
-      public override fun numberOfDisks(numberOfDisks: Number) {
+      override fun numberOfDisks(numberOfDisks: Number) {
         cdkBuilder.numberOfDisks(numberOfDisks)
       }
 
-      public override fun raidLevel(raidLevel: Number) {
+      override fun raidLevel(raidLevel: Number) {
         cdkBuilder.raidLevel(raidLevel)
       }
 
-      public override fun size(size: Number) {
+      override fun size(size: Number) {
         cdkBuilder.size(size)
       }
 
-      public override fun volumeType(volumeType: String) {
+      override fun volumeType(volumeType: String) {
         cdkBuilder.volumeType(volumeType)
       }
 
@@ -945,19 +881,19 @@ public open class CfnLayer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnLayer.VolumeConfigurationProperty,
     ) : VolumeConfigurationProperty {
-      public override fun encrypted(): Any? = unwrap(this).getEncrypted()
+      override fun encrypted(): Any? = unwrap(this).getEncrypted()
 
-      public override fun iops(): Number? = unwrap(this).getIops()
+      override fun iops(): Number? = unwrap(this).getIops()
 
-      public override fun mountPoint(): String? = unwrap(this).getMountPoint()
+      override fun mountPoint(): String? = unwrap(this).getMountPoint()
 
-      public override fun numberOfDisks(): Number? = unwrap(this).getNumberOfDisks()
+      override fun numberOfDisks(): Number? = unwrap(this).getNumberOfDisks()
 
-      public override fun raidLevel(): Number? = unwrap(this).getRaidLevel()
+      override fun raidLevel(): Number? = unwrap(this).getRaidLevel()
 
-      public override fun size(): Number? = unwrap(this).getSize()
+      override fun size(): Number? = unwrap(this).getSize()
 
-      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+      override fun volumeType(): String? = unwrap(this).getVolumeType()
     }
 
     public companion object {
@@ -987,14 +923,11 @@ public open class CfnLayer internal constructor(
     public fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
 
     public interface Builder {
-      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
-      }
+      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean)
 
-      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
-      }
+      public fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable)
 
-      public fun executionTimeout(executionTimeout: Number) {
-      }
+      public fun executionTimeout(executionTimeout: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1003,17 +936,15 @@ public open class CfnLayer internal constructor(
           =
           software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty.builder()
 
-      public override
-          fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
+      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: Boolean) {
         cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained)
       }
 
-      public override
-          fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
+      override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
         cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable::unwrap))
       }
 
-      public override fun executionTimeout(executionTimeout: Number) {
+      override fun executionTimeout(executionTimeout: Number) {
         cdkBuilder.executionTimeout(executionTimeout)
       }
 
@@ -1026,10 +957,10 @@ public open class CfnLayer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.opsworks.CfnLayer.ShutdownEventConfigurationProperty,
     ) : ShutdownEventConfigurationProperty {
-      public override fun delayUntilElbConnectionsDrained(): Any? =
+      override fun delayUntilElbConnectionsDrained(): Any? =
           unwrap(this).getDelayUntilElbConnectionsDrained()
 
-      public override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
+      override fun executionTimeout(): Number? = unwrap(this).getExecutionTimeout()
     }
 
     public companion object {

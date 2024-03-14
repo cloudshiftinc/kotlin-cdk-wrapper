@@ -32,11 +32,9 @@ public open class CfnTransitGatewayRouteTablePropagation internal constructor(
   }
 
   public interface Builder {
-    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
-    }
+    public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String)
 
-    public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
-    }
+    public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String)
   }
 
   private class BuilderImpl(
@@ -48,11 +46,11 @@ public open class CfnTransitGatewayRouteTablePropagation internal constructor(
         software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagation.Builder.create(scope,
         id)
 
-    public override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
+    override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
       cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
     }
 
-    public override fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
+    override fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
       cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
     }
 

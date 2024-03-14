@@ -125,63 +125,45 @@ public open class CfnIdentityPool internal constructor(
   }
 
   public interface Builder {
-    public fun allowClassicFlow(allowClassicFlow: Boolean) {
-    }
+    public fun allowClassicFlow(allowClassicFlow: Boolean)
 
-    public fun allowClassicFlow(allowClassicFlow: IResolvable) {
-    }
+    public fun allowClassicFlow(allowClassicFlow: IResolvable)
 
-    public fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: Boolean) {
-    }
+    public fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: Boolean)
 
-    public fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: IResolvable) {
-    }
+    public fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: IResolvable)
 
-    public fun cognitoEvents(cognitoEvents: Any) {
-    }
+    public fun cognitoEvents(cognitoEvents: Any)
 
-    public fun cognitoIdentityProviders(cognitoIdentityProviders: IResolvable) {
-    }
+    public fun cognitoIdentityProviders(cognitoIdentityProviders: IResolvable)
 
-    public fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>) {
-    }
+    public fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>)
 
-    public fun cognitoStreams(cognitoStreams: IResolvable) {
-    }
+    public fun cognitoStreams(cognitoStreams: IResolvable)
 
-    public fun cognitoStreams(cognitoStreams: CognitoStreamsProperty) {
-    }
+    public fun cognitoStreams(cognitoStreams: CognitoStreamsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eb7b28bad24809a271d41e21c713d6fad090f0b50d4de21405b2607e954d38d3")
-    public fun cognitoStreams(cognitoStreams: CognitoStreamsProperty.Builder.() -> Unit) {
-    }
+    public fun cognitoStreams(cognitoStreams: CognitoStreamsProperty.Builder.() -> Unit)
 
-    public fun developerProviderName(developerProviderName: String) {
-    }
+    public fun developerProviderName(developerProviderName: String)
 
-    public fun identityPoolName(identityPoolName: String) {
-    }
+    public fun identityPoolName(identityPoolName: String)
 
-    public fun openIdConnectProviderArns(openIdConnectProviderArns: List<String>) {
-    }
+    public fun openIdConnectProviderArns(openIdConnectProviderArns: List<String>)
 
-    public fun pushSync(pushSync: IResolvable) {
-    }
+    public fun pushSync(pushSync: IResolvable)
 
-    public fun pushSync(pushSync: PushSyncProperty) {
-    }
+    public fun pushSync(pushSync: PushSyncProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ab1604b65b10c62917c7a1248716a843ab7b22445c7854708a8209b63596cff1")
-    public fun pushSync(pushSync: PushSyncProperty.Builder.() -> Unit) {
-    }
+    public fun pushSync(pushSync: PushSyncProperty.Builder.() -> Unit)
 
-    public fun samlProviderArns(samlProviderArns: List<String>) {
-    }
+    public fun samlProviderArns(samlProviderArns: List<String>)
 
-    public fun supportedLoginProviders(supportedLoginProviders: Any) {
-    }
+    public fun supportedLoginProviders(supportedLoginProviders: Any)
   }
 
   private class BuilderImpl(
@@ -191,78 +173,77 @@ public open class CfnIdentityPool internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CfnIdentityPool.Builder =
         software.amazon.awscdk.services.cognito.CfnIdentityPool.Builder.create(scope, id)
 
-    public override fun allowClassicFlow(allowClassicFlow: Boolean) {
+    override fun allowClassicFlow(allowClassicFlow: Boolean) {
       cdkBuilder.allowClassicFlow(allowClassicFlow)
     }
 
-    public override fun allowClassicFlow(allowClassicFlow: IResolvable) {
+    override fun allowClassicFlow(allowClassicFlow: IResolvable) {
       cdkBuilder.allowClassicFlow(allowClassicFlow.let(IResolvable::unwrap))
     }
 
-    public override fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: Boolean) {
+    override fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: Boolean) {
       cdkBuilder.allowUnauthenticatedIdentities(allowUnauthenticatedIdentities)
     }
 
-    public override
-        fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: IResolvable) {
+    override fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: IResolvable) {
       cdkBuilder.allowUnauthenticatedIdentities(allowUnauthenticatedIdentities.let(IResolvable::unwrap))
     }
 
-    public override fun cognitoEvents(cognitoEvents: Any) {
+    override fun cognitoEvents(cognitoEvents: Any) {
       cdkBuilder.cognitoEvents(cognitoEvents)
     }
 
-    public override fun cognitoIdentityProviders(cognitoIdentityProviders: IResolvable) {
+    override fun cognitoIdentityProviders(cognitoIdentityProviders: IResolvable) {
       cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.let(IResolvable::unwrap))
     }
 
-    public override fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>) {
+    override fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>) {
       cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders)
     }
 
-    public override fun cognitoStreams(cognitoStreams: IResolvable) {
+    override fun cognitoStreams(cognitoStreams: IResolvable) {
       cdkBuilder.cognitoStreams(cognitoStreams.let(IResolvable::unwrap))
     }
 
-    public override fun cognitoStreams(cognitoStreams: CognitoStreamsProperty) {
+    override fun cognitoStreams(cognitoStreams: CognitoStreamsProperty) {
       cdkBuilder.cognitoStreams(cognitoStreams.let(CognitoStreamsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eb7b28bad24809a271d41e21c713d6fad090f0b50d4de21405b2607e954d38d3")
-    public override fun cognitoStreams(cognitoStreams: CognitoStreamsProperty.Builder.() -> Unit):
-        Unit = cognitoStreams(CognitoStreamsProperty(cognitoStreams))
+    override fun cognitoStreams(cognitoStreams: CognitoStreamsProperty.Builder.() -> Unit): Unit =
+        cognitoStreams(CognitoStreamsProperty(cognitoStreams))
 
-    public override fun developerProviderName(developerProviderName: String) {
+    override fun developerProviderName(developerProviderName: String) {
       cdkBuilder.developerProviderName(developerProviderName)
     }
 
-    public override fun identityPoolName(identityPoolName: String) {
+    override fun identityPoolName(identityPoolName: String) {
       cdkBuilder.identityPoolName(identityPoolName)
     }
 
-    public override fun openIdConnectProviderArns(openIdConnectProviderArns: List<String>) {
+    override fun openIdConnectProviderArns(openIdConnectProviderArns: List<String>) {
       cdkBuilder.openIdConnectProviderArns(openIdConnectProviderArns)
     }
 
-    public override fun pushSync(pushSync: IResolvable) {
+    override fun pushSync(pushSync: IResolvable) {
       cdkBuilder.pushSync(pushSync.let(IResolvable::unwrap))
     }
 
-    public override fun pushSync(pushSync: PushSyncProperty) {
+    override fun pushSync(pushSync: PushSyncProperty) {
       cdkBuilder.pushSync(pushSync.let(PushSyncProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ab1604b65b10c62917c7a1248716a843ab7b22445c7854708a8209b63596cff1")
-    public override fun pushSync(pushSync: PushSyncProperty.Builder.() -> Unit): Unit =
+    override fun pushSync(pushSync: PushSyncProperty.Builder.() -> Unit): Unit =
         pushSync(PushSyncProperty(pushSync))
 
-    public override fun samlProviderArns(samlProviderArns: List<String>) {
+    override fun samlProviderArns(samlProviderArns: List<String>) {
       cdkBuilder.samlProviderArns(samlProviderArns)
     }
 
-    public override fun supportedLoginProviders(supportedLoginProviders: Any) {
+    override fun supportedLoginProviders(supportedLoginProviders: Any) {
       cdkBuilder.supportedLoginProviders(supportedLoginProviders)
     }
 
@@ -298,17 +279,13 @@ public open class CfnIdentityPool internal constructor(
     public fun serverSideTokenCheck(): Any? = unwrap(this).getServerSideTokenCheck()
 
     public interface Builder {
-      public fun clientId(clientId: String) {
-      }
+      public fun clientId(clientId: String)
 
-      public fun providerName(providerName: String) {
-      }
+      public fun providerName(providerName: String)
 
-      public fun serverSideTokenCheck(serverSideTokenCheck: Boolean) {
-      }
+      public fun serverSideTokenCheck(serverSideTokenCheck: Boolean)
 
-      public fun serverSideTokenCheck(serverSideTokenCheck: IResolvable) {
-      }
+      public fun serverSideTokenCheck(serverSideTokenCheck: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -317,19 +294,19 @@ public open class CfnIdentityPool internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty.builder()
 
-      public override fun clientId(clientId: String) {
+      override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
-      public override fun providerName(providerName: String) {
+      override fun providerName(providerName: String) {
         cdkBuilder.providerName(providerName)
       }
 
-      public override fun serverSideTokenCheck(serverSideTokenCheck: Boolean) {
+      override fun serverSideTokenCheck(serverSideTokenCheck: Boolean) {
         cdkBuilder.serverSideTokenCheck(serverSideTokenCheck)
       }
 
-      public override fun serverSideTokenCheck(serverSideTokenCheck: IResolvable) {
+      override fun serverSideTokenCheck(serverSideTokenCheck: IResolvable) {
         cdkBuilder.serverSideTokenCheck(serverSideTokenCheck.let(IResolvable::unwrap))
       }
 
@@ -342,11 +319,11 @@ public open class CfnIdentityPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty,
     ) : CognitoIdentityProviderProperty {
-      public override fun clientId(): String = unwrap(this).getClientId()
+      override fun clientId(): String = unwrap(this).getClientId()
 
-      public override fun providerName(): String = unwrap(this).getProviderName()
+      override fun providerName(): String = unwrap(this).getProviderName()
 
-      public override fun serverSideTokenCheck(): Any? = unwrap(this).getServerSideTokenCheck()
+      override fun serverSideTokenCheck(): Any? = unwrap(this).getServerSideTokenCheck()
     }
 
     public companion object {
@@ -377,14 +354,11 @@ public open class CfnIdentityPool internal constructor(
     public fun streamingStatus(): String? = unwrap(this).getStreamingStatus()
 
     public interface Builder {
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun streamName(streamName: String) {
-      }
+      public fun streamName(streamName: String)
 
-      public fun streamingStatus(streamingStatus: String) {
-      }
+      public fun streamingStatus(streamingStatus: String)
     }
 
     private class BuilderImpl : Builder {
@@ -392,15 +366,15 @@ public open class CfnIdentityPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty.builder()
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun streamName(streamName: String) {
+      override fun streamName(streamName: String) {
         cdkBuilder.streamName(streamName)
       }
 
-      public override fun streamingStatus(streamingStatus: String) {
+      override fun streamingStatus(streamingStatus: String) {
         cdkBuilder.streamingStatus(streamingStatus)
       }
 
@@ -413,11 +387,11 @@ public open class CfnIdentityPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty,
     ) : CognitoStreamsProperty {
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      public override fun streamName(): String? = unwrap(this).getStreamName()
+      override fun streamName(): String? = unwrap(this).getStreamName()
 
-      public override fun streamingStatus(): String? = unwrap(this).getStreamingStatus()
+      override fun streamingStatus(): String? = unwrap(this).getStreamingStatus()
     }
 
     public companion object {
@@ -446,11 +420,9 @@ public open class CfnIdentityPool internal constructor(
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
     public interface Builder {
-      public fun applicationArns(applicationArns: List<String>) {
-      }
+      public fun applicationArns(applicationArns: List<String>)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -458,11 +430,11 @@ public open class CfnIdentityPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty.Builder =
           software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty.builder()
 
-      public override fun applicationArns(applicationArns: List<String>) {
+      override fun applicationArns(applicationArns: List<String>) {
         cdkBuilder.applicationArns(applicationArns)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
@@ -474,10 +446,10 @@ public open class CfnIdentityPool internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty,
     ) : PushSyncProperty {
-      public override fun applicationArns(): List<String> = unwrap(this).getApplicationArns() ?:
+      override fun applicationArns(): List<String> = unwrap(this).getApplicationArns() ?:
           emptyList()
 
-      public override fun roleArn(): String? = unwrap(this).getRoleArn()
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
     public companion object {

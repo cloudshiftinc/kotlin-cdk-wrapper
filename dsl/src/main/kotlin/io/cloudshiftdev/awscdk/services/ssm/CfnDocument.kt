@@ -93,41 +93,29 @@ public open class CfnDocument internal constructor(
   }
 
   public interface Builder {
-    public fun attachments(attachments: IResolvable) {
-    }
+    public fun attachments(attachments: IResolvable)
 
-    public fun attachments(attachments: List<Any>) {
-    }
+    public fun attachments(attachments: List<Any>)
 
-    public fun content(content: Any) {
-    }
+    public fun content(content: Any)
 
-    public fun documentFormat(documentFormat: String) {
-    }
+    public fun documentFormat(documentFormat: String)
 
-    public fun documentType(documentType: String) {
-    }
+    public fun documentType(documentType: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun requires(requires: IResolvable) {
-    }
+    public fun requires(requires: IResolvable)
 
-    public fun requires(requires: List<Any>) {
-    }
+    public fun requires(requires: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetType(targetType: String) {
-    }
+    public fun targetType(targetType: String)
 
-    public fun updateMethod(updateMethod: String) {
-    }
+    public fun updateMethod(updateMethod: String)
 
-    public fun versionName(versionName: String) {
-    }
+    public fun versionName(versionName: String)
   }
 
   private class BuilderImpl(
@@ -137,51 +125,51 @@ public open class CfnDocument internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnDocument.Builder =
         software.amazon.awscdk.services.ssm.CfnDocument.Builder.create(scope, id)
 
-    public override fun attachments(attachments: IResolvable) {
+    override fun attachments(attachments: IResolvable) {
       cdkBuilder.attachments(attachments.let(IResolvable::unwrap))
     }
 
-    public override fun attachments(attachments: List<Any>) {
+    override fun attachments(attachments: List<Any>) {
       cdkBuilder.attachments(attachments)
     }
 
-    public override fun content(content: Any) {
+    override fun content(content: Any) {
       cdkBuilder.content(content)
     }
 
-    public override fun documentFormat(documentFormat: String) {
+    override fun documentFormat(documentFormat: String) {
       cdkBuilder.documentFormat(documentFormat)
     }
 
-    public override fun documentType(documentType: String) {
+    override fun documentType(documentType: String) {
       cdkBuilder.documentType(documentType)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun requires(requires: IResolvable) {
+    override fun requires(requires: IResolvable) {
       cdkBuilder.requires(requires.let(IResolvable::unwrap))
     }
 
-    public override fun requires(requires: List<Any>) {
+    override fun requires(requires: List<Any>) {
       cdkBuilder.requires(requires)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetType(targetType: String) {
+    override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
 
-    public override fun updateMethod(updateMethod: String) {
+    override fun updateMethod(updateMethod: String) {
       cdkBuilder.updateMethod(updateMethod)
     }
 
-    public override fun versionName(versionName: String) {
+    override fun versionName(versionName: String) {
       cdkBuilder.versionName(versionName)
     }
 
@@ -217,14 +205,11 @@ public open class CfnDocument internal constructor(
     public fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun values(values: List<String>) {
-      }
+      public fun values(values: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -232,15 +217,15 @@ public open class CfnDocument internal constructor(
           software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun values(values: List<String>) {
+      override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
 
@@ -252,11 +237,11 @@ public open class CfnDocument internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty,
     ) : AttachmentsSourceProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
     }
 
     public companion object {
@@ -285,11 +270,9 @@ public open class CfnDocument internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -297,11 +280,11 @@ public open class CfnDocument internal constructor(
           software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty.Builder =
           software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -313,9 +296,9 @@ public open class CfnDocument internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty,
     ) : DocumentRequiresProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {

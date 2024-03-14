@@ -25,11 +25,11 @@ public interface IDestination {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.IDestination,
   ) : IDestination {
-    public override fun bind(arg0: Construct, arg1: IFunction): DestinationConfig =
+    override fun bind(arg0: Construct, arg1: IFunction): DestinationConfig =
         unwrap(this).bind(arg0.let(Construct::unwrap),
         arg1.let(IFunction::unwrap)).let(DestinationConfig::wrap)
 
-    public override fun bind(
+    override fun bind(
       arg0: Construct,
       arg1: IFunction,
       arg2: DestinationOptions,
@@ -39,7 +39,7 @@ public interface IDestination {
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d6ad4acfbba31901bb8135560633af5578e09f84d84123fa0dbea6b67295dd3")
-    public override fun bind(
+    override fun bind(
       arg0: Construct,
       arg1: IFunction,
       arg2: DestinationOptions.Builder.() -> Unit,

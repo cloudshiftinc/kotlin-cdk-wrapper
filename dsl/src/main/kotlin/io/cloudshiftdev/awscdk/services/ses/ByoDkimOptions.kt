@@ -12,29 +12,26 @@ public interface ByoDkimOptions {
   public fun selector(): String
 
   public interface Builder {
-    public fun privateKey(privateKey: SecretValue) {
-    }
+    public fun privateKey(privateKey: SecretValue)
 
-    public fun publicKey(publicKey: String) {
-    }
+    public fun publicKey(publicKey: String)
 
-    public fun selector(selector: String) {
-    }
+    public fun selector(selector: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ses.ByoDkimOptions.Builder =
         software.amazon.awscdk.services.ses.ByoDkimOptions.builder()
 
-    public override fun privateKey(privateKey: SecretValue) {
+    override fun privateKey(privateKey: SecretValue) {
       cdkBuilder.privateKey(privateKey.let(SecretValue::unwrap))
     }
 
-    public override fun publicKey(publicKey: String) {
+    override fun publicKey(publicKey: String) {
       cdkBuilder.publicKey(publicKey)
     }
 
-    public override fun selector(selector: String) {
+    override fun selector(selector: String) {
       cdkBuilder.selector(selector)
     }
 
@@ -44,12 +41,11 @@ public interface ByoDkimOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.ByoDkimOptions,
   ) : ByoDkimOptions {
-    public override fun privateKey(): SecretValue =
-        unwrap(this).getPrivateKey().let(SecretValue::wrap)
+    override fun privateKey(): SecretValue = unwrap(this).getPrivateKey().let(SecretValue::wrap)
 
-    public override fun publicKey(): String? = unwrap(this).getPublicKey()
+    override fun publicKey(): String? = unwrap(this).getPublicKey()
 
-    public override fun selector(): String = unwrap(this).getSelector()
+    override fun selector(): String = unwrap(this).getSelector()
   }
 
   public companion object {

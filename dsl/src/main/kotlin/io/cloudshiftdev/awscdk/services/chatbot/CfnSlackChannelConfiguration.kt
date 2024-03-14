@@ -75,32 +75,23 @@ public open class CfnSlackChannelConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun configurationName(configurationName: String) {
-    }
+    public fun configurationName(configurationName: String)
 
-    public fun guardrailPolicies(guardrailPolicies: List<String>) {
-    }
+    public fun guardrailPolicies(guardrailPolicies: List<String>)
 
-    public fun iamRoleArn(iamRoleArn: String) {
-    }
+    public fun iamRoleArn(iamRoleArn: String)
 
-    public fun loggingLevel(loggingLevel: String) {
-    }
+    public fun loggingLevel(loggingLevel: String)
 
-    public fun slackChannelId(slackChannelId: String) {
-    }
+    public fun slackChannelId(slackChannelId: String)
 
-    public fun slackWorkspaceId(slackWorkspaceId: String) {
-    }
+    public fun slackWorkspaceId(slackWorkspaceId: String)
 
-    public fun snsTopicArns(snsTopicArns: List<String>) {
-    }
+    public fun snsTopicArns(snsTopicArns: List<String>)
 
-    public fun userRoleRequired(userRoleRequired: Boolean) {
-    }
+    public fun userRoleRequired(userRoleRequired: Boolean)
 
-    public fun userRoleRequired(userRoleRequired: IResolvable) {
-    }
+    public fun userRoleRequired(userRoleRequired: IResolvable)
   }
 
   private class BuilderImpl(
@@ -112,39 +103,39 @@ public open class CfnSlackChannelConfiguration internal constructor(
         software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration.Builder.create(scope,
         id)
 
-    public override fun configurationName(configurationName: String) {
+    override fun configurationName(configurationName: String) {
       cdkBuilder.configurationName(configurationName)
     }
 
-    public override fun guardrailPolicies(guardrailPolicies: List<String>) {
+    override fun guardrailPolicies(guardrailPolicies: List<String>) {
       cdkBuilder.guardrailPolicies(guardrailPolicies)
     }
 
-    public override fun iamRoleArn(iamRoleArn: String) {
+    override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
 
-    public override fun loggingLevel(loggingLevel: String) {
+    override fun loggingLevel(loggingLevel: String) {
       cdkBuilder.loggingLevel(loggingLevel)
     }
 
-    public override fun slackChannelId(slackChannelId: String) {
+    override fun slackChannelId(slackChannelId: String) {
       cdkBuilder.slackChannelId(slackChannelId)
     }
 
-    public override fun slackWorkspaceId(slackWorkspaceId: String) {
+    override fun slackWorkspaceId(slackWorkspaceId: String) {
       cdkBuilder.slackWorkspaceId(slackWorkspaceId)
     }
 
-    public override fun snsTopicArns(snsTopicArns: List<String>) {
+    override fun snsTopicArns(snsTopicArns: List<String>) {
       cdkBuilder.snsTopicArns(snsTopicArns)
     }
 
-    public override fun userRoleRequired(userRoleRequired: Boolean) {
+    override fun userRoleRequired(userRoleRequired: Boolean) {
       cdkBuilder.userRoleRequired(userRoleRequired)
     }
 
-    public override fun userRoleRequired(userRoleRequired: IResolvable) {
+    override fun userRoleRequired(userRoleRequired: IResolvable) {
       cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable::unwrap))
     }
 

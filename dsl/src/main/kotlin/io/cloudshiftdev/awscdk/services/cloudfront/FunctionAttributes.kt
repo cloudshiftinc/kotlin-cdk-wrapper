@@ -11,29 +11,26 @@ public interface FunctionAttributes {
   public fun functionRuntime(): String? = unwrap(this).getFunctionRuntime()
 
   public interface Builder {
-    public fun functionArn(functionArn: String) {
-    }
+    public fun functionArn(functionArn: String)
 
-    public fun functionName(functionName: String) {
-    }
+    public fun functionName(functionName: String)
 
-    public fun functionRuntime(functionRuntime: String) {
-    }
+    public fun functionRuntime(functionRuntime: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FunctionAttributes.Builder =
         software.amazon.awscdk.services.cloudfront.FunctionAttributes.builder()
 
-    public override fun functionArn(functionArn: String) {
+    override fun functionArn(functionArn: String) {
       cdkBuilder.functionArn(functionArn)
     }
 
-    public override fun functionName(functionName: String) {
+    override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
-    public override fun functionRuntime(functionRuntime: String) {
+    override fun functionRuntime(functionRuntime: String) {
       cdkBuilder.functionRuntime(functionRuntime)
     }
 
@@ -44,11 +41,11 @@ public interface FunctionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAttributes,
   ) : FunctionAttributes {
-    public override fun functionArn(): String = unwrap(this).getFunctionArn()
+    override fun functionArn(): String = unwrap(this).getFunctionArn()
 
-    public override fun functionName(): String = unwrap(this).getFunctionName()
+    override fun functionName(): String = unwrap(this).getFunctionName()
 
-    public override fun functionRuntime(): String? = unwrap(this).getFunctionRuntime()
+    override fun functionRuntime(): String? = unwrap(this).getFunctionRuntime()
   }
 
   public companion object {

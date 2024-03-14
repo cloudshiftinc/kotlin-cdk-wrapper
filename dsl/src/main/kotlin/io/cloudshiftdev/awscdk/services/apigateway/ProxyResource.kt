@@ -40,36 +40,28 @@ public open class ProxyResource internal constructor(
   public open fun anyMethod(): Method? = unwrap(this).getAnyMethod()?.let(Method::wrap)
 
   public interface Builder {
-    public fun anyMethod(anyMethod: Boolean) {
-    }
+    public fun anyMethod(anyMethod: Boolean)
 
-    public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-    }
+    public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e5474dad7daa98359d3d4354ed335e2c0ed0d75940d96e8de2eb5cc00d278aa")
     public
-        fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit) {
-    }
+        fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit)
 
-    public fun defaultIntegration(defaultIntegration: Integration) {
-    }
+    public fun defaultIntegration(defaultIntegration: Integration)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("16c9192ff88b3b2ea5e0ee3864ccda493f2dd9cc6e89e22f27072702904d6749")
-    public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit) {
-    }
+    public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit)
 
-    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-    }
+    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66352d63561f184a2e3095d4cf647c994c40d34726c1b29bc7f3a86abc5045d8")
-    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit) {
-    }
+    public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit)
 
-    public fun parent(parent: IResource) {
-    }
+    public fun parent(parent: IResource)
   }
 
   private class BuilderImpl(
@@ -79,40 +71,39 @@ public open class ProxyResource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ProxyResource.Builder =
         software.amazon.awscdk.services.apigateway.ProxyResource.Builder.create(scope, id)
 
-    public override fun anyMethod(anyMethod: Boolean) {
+    override fun anyMethod(anyMethod: Boolean) {
       cdkBuilder.anyMethod(anyMethod)
     }
 
-    public override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
+    override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
       cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7e5474dad7daa98359d3d4354ed335e2c0ed0d75940d96e8de2eb5cc00d278aa")
-    public override
+    override
         fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit):
         Unit = defaultCorsPreflightOptions(CorsOptions(defaultCorsPreflightOptions))
 
-    public override fun defaultIntegration(defaultIntegration: Integration) {
+    override fun defaultIntegration(defaultIntegration: Integration) {
       cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("16c9192ff88b3b2ea5e0ee3864ccda493f2dd9cc6e89e22f27072702904d6749")
-    public override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit
-        = defaultIntegration(Integration(defaultIntegration))
+    override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit =
+        defaultIntegration(Integration(defaultIntegration))
 
-    public override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
+    override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
       cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66352d63561f184a2e3095d4cf647c994c40d34726c1b29bc7f3a86abc5045d8")
-    public override
-        fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit =
-        defaultMethodOptions(MethodOptions(defaultMethodOptions))
+    override fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit
+        = defaultMethodOptions(MethodOptions(defaultMethodOptions))
 
-    public override fun parent(parent: IResource) {
+    override fun parent(parent: IResource) {
       cdkBuilder.parent(parent.let(IResource::unwrap))
     }
 

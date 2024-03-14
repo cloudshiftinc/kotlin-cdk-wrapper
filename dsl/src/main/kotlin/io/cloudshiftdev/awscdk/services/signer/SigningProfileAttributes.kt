@@ -9,22 +9,20 @@ public interface SigningProfileAttributes {
   public fun signingProfileVersion(): String
 
   public interface Builder {
-    public fun signingProfileName(signingProfileName: String) {
-    }
+    public fun signingProfileName(signingProfileName: String)
 
-    public fun signingProfileVersion(signingProfileVersion: String) {
-    }
+    public fun signingProfileVersion(signingProfileVersion: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.signer.SigningProfileAttributes.Builder
         = software.amazon.awscdk.services.signer.SigningProfileAttributes.builder()
 
-    public override fun signingProfileName(signingProfileName: String) {
+    override fun signingProfileName(signingProfileName: String) {
       cdkBuilder.signingProfileName(signingProfileName)
     }
 
-    public override fun signingProfileVersion(signingProfileVersion: String) {
+    override fun signingProfileVersion(signingProfileVersion: String) {
       cdkBuilder.signingProfileVersion(signingProfileVersion)
     }
 
@@ -35,9 +33,9 @@ public interface SigningProfileAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.signer.SigningProfileAttributes,
   ) : SigningProfileAttributes {
-    public override fun signingProfileName(): String = unwrap(this).getSigningProfileName()
+    override fun signingProfileName(): String = unwrap(this).getSigningProfileName()
 
-    public override fun signingProfileVersion(): String = unwrap(this).getSigningProfileVersion()
+    override fun signingProfileVersion(): String = unwrap(this).getSigningProfileVersion()
   }
 
   public companion object {

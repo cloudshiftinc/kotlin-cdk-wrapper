@@ -53,17 +53,13 @@ public open class CfnDeliveryDestination internal constructor(
   }
 
   public interface Builder {
-    public fun deliveryDestinationPolicy(deliveryDestinationPolicy: Any) {
-    }
+    public fun deliveryDestinationPolicy(deliveryDestinationPolicy: Any)
 
-    public fun destinationResourceArn(destinationResourceArn: String) {
-    }
+    public fun destinationResourceArn(destinationResourceArn: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -73,19 +69,19 @@ public open class CfnDeliveryDestination internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnDeliveryDestination.Builder =
         software.amazon.awscdk.services.logs.CfnDeliveryDestination.Builder.create(scope, id)
 
-    public override fun deliveryDestinationPolicy(deliveryDestinationPolicy: Any) {
+    override fun deliveryDestinationPolicy(deliveryDestinationPolicy: Any) {
       cdkBuilder.deliveryDestinationPolicy(deliveryDestinationPolicy)
     }
 
-    public override fun destinationResourceArn(destinationResourceArn: String) {
+    override fun destinationResourceArn(destinationResourceArn: String) {
       cdkBuilder.destinationResourceArn(destinationResourceArn)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

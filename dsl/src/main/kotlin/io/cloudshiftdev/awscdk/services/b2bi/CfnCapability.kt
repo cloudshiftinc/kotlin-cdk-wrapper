@@ -78,31 +78,23 @@ public open class CfnCapability internal constructor(
   }
 
   public interface Builder {
-    public fun configuration(configuration: IResolvable) {
-    }
+    public fun configuration(configuration: IResolvable)
 
-    public fun configuration(configuration: CapabilityConfigurationProperty) {
-    }
+    public fun configuration(configuration: CapabilityConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53c3559d53849f639cc9f05cf1c37555296d5a8cb869318f56e0676c5c793f81")
-    public fun configuration(configuration: CapabilityConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun configuration(configuration: CapabilityConfigurationProperty.Builder.() -> Unit)
 
-    public fun instructionsDocuments(instructionsDocuments: IResolvable) {
-    }
+    public fun instructionsDocuments(instructionsDocuments: IResolvable)
 
-    public fun instructionsDocuments(instructionsDocuments: List<Any>) {
-    }
+    public fun instructionsDocuments(instructionsDocuments: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
   }
 
   private class BuilderImpl(
@@ -112,37 +104,36 @@ public open class CfnCapability internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.b2bi.CfnCapability.Builder =
         software.amazon.awscdk.services.b2bi.CfnCapability.Builder.create(scope, id)
 
-    public override fun configuration(configuration: IResolvable) {
+    override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
-    public override fun configuration(configuration: CapabilityConfigurationProperty) {
+    override fun configuration(configuration: CapabilityConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(CapabilityConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53c3559d53849f639cc9f05cf1c37555296d5a8cb869318f56e0676c5c793f81")
-    public override
-        fun configuration(configuration: CapabilityConfigurationProperty.Builder.() -> Unit): Unit =
-        configuration(CapabilityConfigurationProperty(configuration))
+    override fun configuration(configuration: CapabilityConfigurationProperty.Builder.() -> Unit):
+        Unit = configuration(CapabilityConfigurationProperty(configuration))
 
-    public override fun instructionsDocuments(instructionsDocuments: IResolvable) {
+    override fun instructionsDocuments(instructionsDocuments: IResolvable) {
       cdkBuilder.instructionsDocuments(instructionsDocuments.let(IResolvable::unwrap))
     }
 
-    public override fun instructionsDocuments(instructionsDocuments: List<Any>) {
+    override fun instructionsDocuments(instructionsDocuments: List<Any>) {
       cdkBuilder.instructionsDocuments(instructionsDocuments)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
@@ -174,16 +165,13 @@ public open class CfnCapability internal constructor(
     public fun edi(): Any
 
     public interface Builder {
-      public fun edi(edi: IResolvable) {
-      }
+      public fun edi(edi: IResolvable)
 
-      public fun edi(edi: EdiConfigurationProperty) {
-      }
+      public fun edi(edi: EdiConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94d8f4fe2c5f0410e138a92ce9520289809defd53587b984a78e7511307ad324")
-      public fun edi(edi: EdiConfigurationProperty.Builder.() -> Unit) {
-      }
+      public fun edi(edi: EdiConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -192,17 +180,17 @@ public open class CfnCapability internal constructor(
           =
           software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty.builder()
 
-      public override fun edi(edi: IResolvable) {
+      override fun edi(edi: IResolvable) {
         cdkBuilder.edi(edi.let(IResolvable::unwrap))
       }
 
-      public override fun edi(edi: EdiConfigurationProperty) {
+      override fun edi(edi: EdiConfigurationProperty) {
         cdkBuilder.edi(edi.let(EdiConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94d8f4fe2c5f0410e138a92ce9520289809defd53587b984a78e7511307ad324")
-      public override fun edi(edi: EdiConfigurationProperty.Builder.() -> Unit): Unit =
+      override fun edi(edi: EdiConfigurationProperty.Builder.() -> Unit): Unit =
           edi(EdiConfigurationProperty(edi))
 
       public fun build():
@@ -214,7 +202,7 @@ public open class CfnCapability internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.b2bi.CfnCapability.CapabilityConfigurationProperty,
     ) : CapabilityConfigurationProperty {
-      public override fun edi(): Any = unwrap(this).getEdi()
+      override fun edi(): Any = unwrap(this).getEdi()
     }
 
     public companion object {
@@ -243,11 +231,9 @@ public open class CfnCapability internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun transactionSet(transactionSet: String) {
-      }
+      public fun transactionSet(transactionSet: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -255,11 +241,11 @@ public open class CfnCapability internal constructor(
           software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty.builder()
 
-      public override fun transactionSet(transactionSet: String) {
+      override fun transactionSet(transactionSet: String) {
         cdkBuilder.transactionSet(transactionSet)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -270,9 +256,9 @@ public open class CfnCapability internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.X12DetailsProperty,
     ) : X12DetailsProperty {
-      public override fun transactionSet(): String? = unwrap(this).getTransactionSet()
+      override fun transactionSet(): String? = unwrap(this).getTransactionSet()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -305,41 +291,31 @@ public open class CfnCapability internal constructor(
     public fun type(): Any
 
     public interface Builder {
-      public fun inputLocation(inputLocation: IResolvable) {
-      }
+      public fun inputLocation(inputLocation: IResolvable)
 
-      public fun inputLocation(inputLocation: S3LocationProperty) {
-      }
+      public fun inputLocation(inputLocation: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9711a48fef29876bea8efa2203e11c23bfeee8eaf7ef107551b482f7c094b3a6")
-      public fun inputLocation(inputLocation: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun inputLocation(inputLocation: S3LocationProperty.Builder.() -> Unit)
 
-      public fun outputLocation(outputLocation: IResolvable) {
-      }
+      public fun outputLocation(outputLocation: IResolvable)
 
-      public fun outputLocation(outputLocation: S3LocationProperty) {
-      }
+      public fun outputLocation(outputLocation: S3LocationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c322b01a9a16e6080ed97f50aa47e91385bea666c445f1d73e82bfbc616a364d")
-      public fun outputLocation(outputLocation: S3LocationProperty.Builder.() -> Unit) {
-      }
+      public fun outputLocation(outputLocation: S3LocationProperty.Builder.() -> Unit)
 
-      public fun transformerId(transformerId: String) {
-      }
+      public fun transformerId(transformerId: String)
 
-      public fun type(type: IResolvable) {
-      }
+      public fun type(type: IResolvable)
 
-      public fun type(type: EdiTypeProperty) {
-      }
+      public fun type(type: EdiTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16fb75b5b13232d13ec3662e92ea290c48516c04a866312d107eb1e18c51c0b4")
-      public fun type(type: EdiTypeProperty.Builder.() -> Unit) {
-      }
+      public fun type(type: EdiTypeProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -347,47 +323,47 @@ public open class CfnCapability internal constructor(
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty.builder()
 
-      public override fun inputLocation(inputLocation: IResolvable) {
+      override fun inputLocation(inputLocation: IResolvable) {
         cdkBuilder.inputLocation(inputLocation.let(IResolvable::unwrap))
       }
 
-      public override fun inputLocation(inputLocation: S3LocationProperty) {
+      override fun inputLocation(inputLocation: S3LocationProperty) {
         cdkBuilder.inputLocation(inputLocation.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9711a48fef29876bea8efa2203e11c23bfeee8eaf7ef107551b482f7c094b3a6")
-      public override fun inputLocation(inputLocation: S3LocationProperty.Builder.() -> Unit): Unit
-          = inputLocation(S3LocationProperty(inputLocation))
+      override fun inputLocation(inputLocation: S3LocationProperty.Builder.() -> Unit): Unit =
+          inputLocation(S3LocationProperty(inputLocation))
 
-      public override fun outputLocation(outputLocation: IResolvable) {
+      override fun outputLocation(outputLocation: IResolvable) {
         cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
       }
 
-      public override fun outputLocation(outputLocation: S3LocationProperty) {
+      override fun outputLocation(outputLocation: S3LocationProperty) {
         cdkBuilder.outputLocation(outputLocation.let(S3LocationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c322b01a9a16e6080ed97f50aa47e91385bea666c445f1d73e82bfbc616a364d")
-      public override fun outputLocation(outputLocation: S3LocationProperty.Builder.() -> Unit):
-          Unit = outputLocation(S3LocationProperty(outputLocation))
+      override fun outputLocation(outputLocation: S3LocationProperty.Builder.() -> Unit): Unit =
+          outputLocation(S3LocationProperty(outputLocation))
 
-      public override fun transformerId(transformerId: String) {
+      override fun transformerId(transformerId: String) {
         cdkBuilder.transformerId(transformerId)
       }
 
-      public override fun type(type: IResolvable) {
+      override fun type(type: IResolvable) {
         cdkBuilder.type(type.let(IResolvable::unwrap))
       }
 
-      public override fun type(type: EdiTypeProperty) {
+      override fun type(type: EdiTypeProperty) {
         cdkBuilder.type(type.let(EdiTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("16fb75b5b13232d13ec3662e92ea290c48516c04a866312d107eb1e18c51c0b4")
-      public override fun type(type: EdiTypeProperty.Builder.() -> Unit): Unit =
+      override fun type(type: EdiTypeProperty.Builder.() -> Unit): Unit =
           type(EdiTypeProperty(type))
 
       public fun build():
@@ -399,13 +375,13 @@ public open class CfnCapability internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty,
     ) : EdiConfigurationProperty {
-      public override fun inputLocation(): Any = unwrap(this).getInputLocation()
+      override fun inputLocation(): Any = unwrap(this).getInputLocation()
 
-      public override fun outputLocation(): Any = unwrap(this).getOutputLocation()
+      override fun outputLocation(): Any = unwrap(this).getOutputLocation()
 
-      public override fun transformerId(): String = unwrap(this).getTransformerId()
+      override fun transformerId(): String = unwrap(this).getTransformerId()
 
-      public override fun type(): Any = unwrap(this).getType()
+      override fun type(): Any = unwrap(this).getType()
     }
 
     public companion object {
@@ -432,16 +408,13 @@ public open class CfnCapability internal constructor(
     public fun x12Details(): Any
 
     public interface Builder {
-      public fun x12Details(x12Details: IResolvable) {
-      }
+      public fun x12Details(x12Details: IResolvable)
 
-      public fun x12Details(x12Details: X12DetailsProperty) {
-      }
+      public fun x12Details(x12Details: X12DetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a23b4587c8e9ebabd3a19d1f1afbff5ed1f74627cc0c6a1bd285efac39369168")
-      public fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit) {
-      }
+      public fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -449,17 +422,17 @@ public open class CfnCapability internal constructor(
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty.builder()
 
-      public override fun x12Details(x12Details: IResolvable) {
+      override fun x12Details(x12Details: IResolvable) {
         cdkBuilder.x12Details(x12Details.let(IResolvable::unwrap))
       }
 
-      public override fun x12Details(x12Details: X12DetailsProperty) {
+      override fun x12Details(x12Details: X12DetailsProperty) {
         cdkBuilder.x12Details(x12Details.let(X12DetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a23b4587c8e9ebabd3a19d1f1afbff5ed1f74627cc0c6a1bd285efac39369168")
-      public override fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit): Unit =
+      override fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit): Unit =
           x12Details(X12DetailsProperty(x12Details))
 
       public fun build(): software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty =
@@ -469,7 +442,7 @@ public open class CfnCapability internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty,
     ) : EdiTypeProperty {
-      public override fun x12Details(): Any = unwrap(this).getX12Details()
+      override fun x12Details(): Any = unwrap(this).getX12Details()
     }
 
     public companion object {
@@ -498,11 +471,9 @@ public open class CfnCapability internal constructor(
     public fun key(): String? = unwrap(this).getKey()
 
     public interface Builder {
-      public fun bucketName(bucketName: String) {
-      }
+      public fun bucketName(bucketName: String)
 
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
     }
 
     private class BuilderImpl : Builder {
@@ -510,11 +481,11 @@ public open class CfnCapability internal constructor(
           software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty.builder()
 
-      public override fun bucketName(bucketName: String) {
+      override fun bucketName(bucketName: String) {
         cdkBuilder.bucketName(bucketName)
       }
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
@@ -525,9 +496,9 @@ public open class CfnCapability internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.b2bi.CfnCapability.S3LocationProperty,
     ) : S3LocationProperty {
-      public override fun bucketName(): String? = unwrap(this).getBucketName()
+      override fun bucketName(): String? = unwrap(this).getBucketName()
 
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
     }
 
     public companion object {

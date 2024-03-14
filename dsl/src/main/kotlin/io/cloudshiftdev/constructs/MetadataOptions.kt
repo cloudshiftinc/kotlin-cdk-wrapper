@@ -10,22 +10,20 @@ public interface MetadataOptions {
   public fun traceFromFunction(): Any? = unwrap(this).getTraceFromFunction()
 
   public interface Builder {
-    public fun stackTrace(stackTrace: Boolean) {
-    }
+    public fun stackTrace(stackTrace: Boolean)
 
-    public fun traceFromFunction(traceFromFunction: Any) {
-    }
+    public fun traceFromFunction(traceFromFunction: Any)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.constructs.MetadataOptions.Builder =
         software.constructs.MetadataOptions.builder()
 
-    public override fun stackTrace(stackTrace: Boolean) {
+    override fun stackTrace(stackTrace: Boolean) {
       cdkBuilder.stackTrace(stackTrace)
     }
 
-    public override fun traceFromFunction(traceFromFunction: Any) {
+    override fun traceFromFunction(traceFromFunction: Any) {
       cdkBuilder.traceFromFunction(traceFromFunction)
     }
 
@@ -35,9 +33,9 @@ public interface MetadataOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.constructs.MetadataOptions,
   ) : MetadataOptions {
-    public override fun stackTrace(): Boolean? = unwrap(this).getStackTrace()
+    override fun stackTrace(): Boolean? = unwrap(this).getStackTrace()
 
-    public override fun traceFromFunction(): Any? = unwrap(this).getTraceFromFunction()
+    override fun traceFromFunction(): Any? = unwrap(this).getTraceFromFunction()
   }
 
   public companion object {

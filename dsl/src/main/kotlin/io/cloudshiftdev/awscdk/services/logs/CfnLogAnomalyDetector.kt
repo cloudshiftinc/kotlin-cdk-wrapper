@@ -71,26 +71,19 @@ public open class CfnLogAnomalyDetector internal constructor(
   }
 
   public interface Builder {
-    public fun accountId(accountId: String) {
-    }
+    public fun accountId(accountId: String)
 
-    public fun anomalyVisibilityTime(anomalyVisibilityTime: Number) {
-    }
+    public fun anomalyVisibilityTime(anomalyVisibilityTime: Number)
 
-    public fun detectorName(detectorName: String) {
-    }
+    public fun detectorName(detectorName: String)
 
-    public fun evaluationFrequency(evaluationFrequency: String) {
-    }
+    public fun evaluationFrequency(evaluationFrequency: String)
 
-    public fun filterPattern(filterPattern: String) {
-    }
+    public fun filterPattern(filterPattern: String)
 
-    public fun kmsKeyId(kmsKeyId: String) {
-    }
+    public fun kmsKeyId(kmsKeyId: String)
 
-    public fun logGroupArnList(logGroupArnList: List<String>) {
-    }
+    public fun logGroupArnList(logGroupArnList: List<String>)
   }
 
   private class BuilderImpl(
@@ -100,31 +93,31 @@ public open class CfnLogAnomalyDetector internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnLogAnomalyDetector.Builder =
         software.amazon.awscdk.services.logs.CfnLogAnomalyDetector.Builder.create(scope, id)
 
-    public override fun accountId(accountId: String) {
+    override fun accountId(accountId: String) {
       cdkBuilder.accountId(accountId)
     }
 
-    public override fun anomalyVisibilityTime(anomalyVisibilityTime: Number) {
+    override fun anomalyVisibilityTime(anomalyVisibilityTime: Number) {
       cdkBuilder.anomalyVisibilityTime(anomalyVisibilityTime)
     }
 
-    public override fun detectorName(detectorName: String) {
+    override fun detectorName(detectorName: String) {
       cdkBuilder.detectorName(detectorName)
     }
 
-    public override fun evaluationFrequency(evaluationFrequency: String) {
+    override fun evaluationFrequency(evaluationFrequency: String) {
       cdkBuilder.evaluationFrequency(evaluationFrequency)
     }
 
-    public override fun filterPattern(filterPattern: String) {
+    override fun filterPattern(filterPattern: String) {
       cdkBuilder.filterPattern(filterPattern)
     }
 
-    public override fun kmsKeyId(kmsKeyId: String) {
+    override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
 
-    public override fun logGroupArnList(logGroupArnList: List<String>) {
+    override fun logGroupArnList(logGroupArnList: List<String>) {
       cdkBuilder.logGroupArnList(logGroupArnList)
     }
 

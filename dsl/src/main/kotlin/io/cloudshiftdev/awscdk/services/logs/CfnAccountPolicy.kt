@@ -48,20 +48,15 @@ public open class CfnAccountPolicy internal constructor(
   }
 
   public interface Builder {
-    public fun policyDocument(policyDocument: String) {
-    }
+    public fun policyDocument(policyDocument: String)
 
-    public fun policyName(policyName: String) {
-    }
+    public fun policyName(policyName: String)
 
-    public fun policyType(policyType: String) {
-    }
+    public fun policyType(policyType: String)
 
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun selectionCriteria(selectionCriteria: String) {
-    }
+    public fun selectionCriteria(selectionCriteria: String)
   }
 
   private class BuilderImpl(
@@ -71,23 +66,23 @@ public open class CfnAccountPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.logs.CfnAccountPolicy.Builder =
         software.amazon.awscdk.services.logs.CfnAccountPolicy.Builder.create(scope, id)
 
-    public override fun policyDocument(policyDocument: String) {
+    override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
-    public override fun policyName(policyName: String) {
+    override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
 
-    public override fun policyType(policyType: String) {
+    override fun policyType(policyType: String) {
       cdkBuilder.policyType(policyType)
     }
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun selectionCriteria(selectionCriteria: String) {
+    override fun selectionCriteria(selectionCriteria: String) {
       cdkBuilder.selectionCriteria(selectionCriteria)
     }
 

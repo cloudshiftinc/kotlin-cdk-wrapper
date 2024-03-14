@@ -113,46 +113,33 @@ public open class CfnPricingRule internal constructor(
   }
 
   public interface Builder {
-    public fun billingEntity(billingEntity: String) {
-    }
+    public fun billingEntity(billingEntity: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun modifierPercentage(modifierPercentage: Number) {
-    }
+    public fun modifierPercentage(modifierPercentage: Number)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun operation(operation: String) {
-    }
+    public fun operation(operation: String)
 
-    public fun scope(scope: String) {
-    }
+    public fun scope(scope: String)
 
-    public fun service(service: String) {
-    }
+    public fun service(service: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tiering(tiering: IResolvable) {
-    }
+    public fun tiering(tiering: IResolvable)
 
-    public fun tiering(tiering: TieringProperty) {
-    }
+    public fun tiering(tiering: TieringProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("39c4d567580d2fcfd35bf97cd19eb8b6199b758d5fb2766cf70606df78d6df2f")
-    public fun tiering(tiering: TieringProperty.Builder.() -> Unit) {
-    }
+    public fun tiering(tiering: TieringProperty.Builder.() -> Unit)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun usageType(usageType: String) {
-    }
+    public fun usageType(usageType: String)
   }
 
   private class BuilderImpl(
@@ -162,56 +149,56 @@ public open class CfnPricingRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.billingconductor.CfnPricingRule.Builder
         = software.amazon.awscdk.services.billingconductor.CfnPricingRule.Builder.create(scope, id)
 
-    public override fun billingEntity(billingEntity: String) {
+    override fun billingEntity(billingEntity: String) {
       cdkBuilder.billingEntity(billingEntity)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun modifierPercentage(modifierPercentage: Number) {
+    override fun modifierPercentage(modifierPercentage: Number) {
       cdkBuilder.modifierPercentage(modifierPercentage)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun operation(operation: String) {
+    override fun operation(operation: String) {
       cdkBuilder.operation(operation)
     }
 
-    public override fun scope(scope: String) {
+    override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
-    public override fun service(service: String) {
+    override fun service(service: String) {
       cdkBuilder.service(service)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tiering(tiering: IResolvable) {
+    override fun tiering(tiering: IResolvable) {
       cdkBuilder.tiering(tiering.let(IResolvable::unwrap))
     }
 
-    public override fun tiering(tiering: TieringProperty) {
+    override fun tiering(tiering: TieringProperty) {
       cdkBuilder.tiering(tiering.let(TieringProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("39c4d567580d2fcfd35bf97cd19eb8b6199b758d5fb2766cf70606df78d6df2f")
-    public override fun tiering(tiering: TieringProperty.Builder.() -> Unit): Unit =
+    override fun tiering(tiering: TieringProperty.Builder.() -> Unit): Unit =
         tiering(TieringProperty(tiering))
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun usageType(usageType: String) {
+    override fun usageType(usageType: String) {
       cdkBuilder.usageType(usageType)
     }
 
@@ -244,11 +231,9 @@ public open class CfnPricingRule internal constructor(
     public fun activated(): Any
 
     public interface Builder {
-      public fun activated(activated: Boolean) {
-      }
+      public fun activated(activated: Boolean)
 
-      public fun activated(activated: IResolvable) {
-      }
+      public fun activated(activated: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -256,11 +241,11 @@ public open class CfnPricingRule internal constructor(
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty.Builder =
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty.builder()
 
-      public override fun activated(activated: Boolean) {
+      override fun activated(activated: Boolean) {
         cdkBuilder.activated(activated)
       }
 
-      public override fun activated(activated: IResolvable) {
+      override fun activated(activated: IResolvable) {
         cdkBuilder.activated(activated.let(IResolvable::unwrap))
       }
 
@@ -273,7 +258,7 @@ public open class CfnPricingRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.FreeTierProperty,
     ) : FreeTierProperty {
-      public override fun activated(): Any = unwrap(this).getActivated()
+      override fun activated(): Any = unwrap(this).getActivated()
     }
 
     public companion object {
@@ -300,16 +285,13 @@ public open class CfnPricingRule internal constructor(
     public fun freeTier(): Any? = unwrap(this).getFreeTier()
 
     public interface Builder {
-      public fun freeTier(freeTier: IResolvable) {
-      }
+      public fun freeTier(freeTier: IResolvable)
 
-      public fun freeTier(freeTier: FreeTierProperty) {
-      }
+      public fun freeTier(freeTier: FreeTierProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b769e8df57b6486c6a4fd8d9d82cd8fe24425f18e2d4bf345ce5ef1f57878dd3")
-      public fun freeTier(freeTier: FreeTierProperty.Builder.() -> Unit) {
-      }
+      public fun freeTier(freeTier: FreeTierProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -317,17 +299,17 @@ public open class CfnPricingRule internal constructor(
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty.Builder =
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty.builder()
 
-      public override fun freeTier(freeTier: IResolvable) {
+      override fun freeTier(freeTier: IResolvable) {
         cdkBuilder.freeTier(freeTier.let(IResolvable::unwrap))
       }
 
-      public override fun freeTier(freeTier: FreeTierProperty) {
+      override fun freeTier(freeTier: FreeTierProperty) {
         cdkBuilder.freeTier(freeTier.let(FreeTierProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b769e8df57b6486c6a4fd8d9d82cd8fe24425f18e2d4bf345ce5ef1f57878dd3")
-      public override fun freeTier(freeTier: FreeTierProperty.Builder.() -> Unit): Unit =
+      override fun freeTier(freeTier: FreeTierProperty.Builder.() -> Unit): Unit =
           freeTier(FreeTierProperty(freeTier))
 
       public fun build():
@@ -339,7 +321,7 @@ public open class CfnPricingRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.billingconductor.CfnPricingRule.TieringProperty,
     ) : TieringProperty {
-      public override fun freeTier(): Any? = unwrap(this).getFreeTier()
+      override fun freeTier(): Any? = unwrap(this).getFreeTier()
     }
 
     public companion object {

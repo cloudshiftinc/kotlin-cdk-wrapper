@@ -53,17 +53,13 @@ public open class CfnConnection internal constructor(
   }
 
   public interface Builder {
-    public fun connectionName(connectionName: String) {
-    }
+    public fun connectionName(connectionName: String)
 
-    public fun hostArn(hostArn: String) {
-    }
+    public fun hostArn(hostArn: String)
 
-    public fun providerType(providerType: String) {
-    }
+    public fun providerType(providerType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -74,19 +70,19 @@ public open class CfnConnection internal constructor(
         software.amazon.awscdk.services.codestarconnections.CfnConnection.Builder =
         software.amazon.awscdk.services.codestarconnections.CfnConnection.Builder.create(scope, id)
 
-    public override fun connectionName(connectionName: String) {
+    override fun connectionName(connectionName: String) {
       cdkBuilder.connectionName(connectionName)
     }
 
-    public override fun hostArn(hostArn: String) {
+    override fun hostArn(hostArn: String) {
       cdkBuilder.hostArn(hostArn)
     }
 
-    public override fun providerType(providerType: String) {
+    override fun providerType(providerType: String) {
       cdkBuilder.providerType(providerType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

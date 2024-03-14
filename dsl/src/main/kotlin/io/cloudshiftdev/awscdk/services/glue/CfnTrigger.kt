@@ -116,58 +116,42 @@ public open class CfnTrigger internal constructor(
   }
 
   public interface Builder {
-    public fun actions(actions: IResolvable) {
-    }
+    public fun actions(actions: IResolvable)
 
-    public fun actions(actions: List<Any>) {
-    }
+    public fun actions(actions: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
-    }
+    public fun eventBatchingCondition(eventBatchingCondition: IResolvable)
 
-    public fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty) {
-    }
+    public fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7278c0637d7ff3a0fce804c7246b18af2dbe03cc954e7a2baff78791cf900b47")
     public
-        fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty.Builder.() -> Unit) {
-    }
+        fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty.Builder.() -> Unit)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun predicate(predicate: IResolvable) {
-    }
+    public fun predicate(predicate: IResolvable)
 
-    public fun predicate(predicate: PredicateProperty) {
-    }
+    public fun predicate(predicate: PredicateProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cbcadeabe28dcb7d3e5fdda448dd4d3bd87ce8fb1a70b9ca1c8c3e294d2a844c")
-    public fun predicate(predicate: PredicateProperty.Builder.() -> Unit) {
-    }
+    public fun predicate(predicate: PredicateProperty.Builder.() -> Unit)
 
-    public fun schedule(schedule: String) {
-    }
+    public fun schedule(schedule: String)
 
-    public fun startOnCreation(startOnCreation: Boolean) {
-    }
+    public fun startOnCreation(startOnCreation: Boolean)
 
-    public fun startOnCreation(startOnCreation: IResolvable) {
-    }
+    public fun startOnCreation(startOnCreation: IResolvable)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun workflowName(workflowName: String) {
-    }
+    public fun workflowName(workflowName: String)
   }
 
   private class BuilderImpl(
@@ -177,71 +161,70 @@ public open class CfnTrigger internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTrigger.Builder =
         software.amazon.awscdk.services.glue.CfnTrigger.Builder.create(scope, id)
 
-    public override fun actions(actions: IResolvable) {
+    override fun actions(actions: IResolvable) {
       cdkBuilder.actions(actions.let(IResolvable::unwrap))
     }
 
-    public override fun actions(actions: List<Any>) {
+    override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
+    override fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
       cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(IResolvable::unwrap))
     }
 
-    public override
-        fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty) {
+    override fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty) {
       cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(EventBatchingConditionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7278c0637d7ff3a0fce804c7246b18af2dbe03cc954e7a2baff78791cf900b47")
-    public override
+    override
         fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty.Builder.() -> Unit):
         Unit = eventBatchingCondition(EventBatchingConditionProperty(eventBatchingCondition))
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun predicate(predicate: IResolvable) {
+    override fun predicate(predicate: IResolvable) {
       cdkBuilder.predicate(predicate.let(IResolvable::unwrap))
     }
 
-    public override fun predicate(predicate: PredicateProperty) {
+    override fun predicate(predicate: PredicateProperty) {
       cdkBuilder.predicate(predicate.let(PredicateProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cbcadeabe28dcb7d3e5fdda448dd4d3bd87ce8fb1a70b9ca1c8c3e294d2a844c")
-    public override fun predicate(predicate: PredicateProperty.Builder.() -> Unit): Unit =
+    override fun predicate(predicate: PredicateProperty.Builder.() -> Unit): Unit =
         predicate(PredicateProperty(predicate))
 
-    public override fun schedule(schedule: String) {
+    override fun schedule(schedule: String) {
       cdkBuilder.schedule(schedule)
     }
 
-    public override fun startOnCreation(startOnCreation: Boolean) {
+    override fun startOnCreation(startOnCreation: Boolean) {
       cdkBuilder.startOnCreation(startOnCreation)
     }
 
-    public override fun startOnCreation(startOnCreation: IResolvable) {
+    override fun startOnCreation(startOnCreation: IResolvable) {
       cdkBuilder.startOnCreation(startOnCreation.let(IResolvable::unwrap))
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun workflowName(workflowName: String) {
+    override fun workflowName(workflowName: String) {
       cdkBuilder.workflowName(workflowName)
     }
 
@@ -283,69 +266,61 @@ public open class CfnTrigger internal constructor(
     public fun timeout(): Number? = unwrap(this).getTimeout()
 
     public interface Builder {
-      public fun arguments(arguments: Any) {
-      }
+      public fun arguments(arguments: Any)
 
-      public fun crawlerName(crawlerName: String) {
-      }
+      public fun crawlerName(crawlerName: String)
 
-      public fun jobName(jobName: String) {
-      }
+      public fun jobName(jobName: String)
 
-      public fun notificationProperty(notificationProperty: IResolvable) {
-      }
+      public fun notificationProperty(notificationProperty: IResolvable)
 
-      public fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
-      }
+      public fun notificationProperty(notificationProperty: NotificationPropertyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67d942a337878632a7155a8861a9d8ba5da45d910ab542bc94aa976aff03c77f")
       public
-          fun notificationProperty(notificationProperty: NotificationPropertyProperty.Builder.() -> Unit) {
-      }
+          fun notificationProperty(notificationProperty: NotificationPropertyProperty.Builder.() -> Unit)
 
-      public fun securityConfiguration(securityConfiguration: String) {
-      }
+      public fun securityConfiguration(securityConfiguration: String)
 
-      public fun timeout(timeout: Number) {
-      }
+      public fun timeout(timeout: Number)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty.Builder
           = software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty.builder()
 
-      public override fun arguments(arguments: Any) {
+      override fun arguments(arguments: Any) {
         cdkBuilder.arguments(arguments)
       }
 
-      public override fun crawlerName(crawlerName: String) {
+      override fun crawlerName(crawlerName: String) {
         cdkBuilder.crawlerName(crawlerName)
       }
 
-      public override fun jobName(jobName: String) {
+      override fun jobName(jobName: String) {
         cdkBuilder.jobName(jobName)
       }
 
-      public override fun notificationProperty(notificationProperty: IResolvable) {
+      override fun notificationProperty(notificationProperty: IResolvable) {
         cdkBuilder.notificationProperty(notificationProperty.let(IResolvable::unwrap))
       }
 
-      public override fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
+      override fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
         cdkBuilder.notificationProperty(notificationProperty.let(NotificationPropertyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("67d942a337878632a7155a8861a9d8ba5da45d910ab542bc94aa976aff03c77f")
-      public override
+      override
           fun notificationProperty(notificationProperty: NotificationPropertyProperty.Builder.() -> Unit):
           Unit = notificationProperty(NotificationPropertyProperty(notificationProperty))
 
-      public override fun securityConfiguration(securityConfiguration: String) {
+      override fun securityConfiguration(securityConfiguration: String) {
         cdkBuilder.securityConfiguration(securityConfiguration)
       }
 
-      public override fun timeout(timeout: Number) {
+      override fun timeout(timeout: Number) {
         cdkBuilder.timeout(timeout)
       }
 
@@ -356,17 +331,17 @@ public open class CfnTrigger internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ActionProperty,
     ) : ActionProperty {
-      public override fun arguments(): Any? = unwrap(this).getArguments()
+      override fun arguments(): Any? = unwrap(this).getArguments()
 
-      public override fun crawlerName(): String? = unwrap(this).getCrawlerName()
+      override fun crawlerName(): String? = unwrap(this).getCrawlerName()
 
-      public override fun jobName(): String? = unwrap(this).getJobName()
+      override fun jobName(): String? = unwrap(this).getJobName()
 
-      public override fun notificationProperty(): Any? = unwrap(this).getNotificationProperty()
+      override fun notificationProperty(): Any? = unwrap(this).getNotificationProperty()
 
-      public override fun securityConfiguration(): String? = unwrap(this).getSecurityConfiguration()
+      override fun securityConfiguration(): String? = unwrap(this).getSecurityConfiguration()
 
-      public override fun timeout(): Number? = unwrap(this).getTimeout()
+      override fun timeout(): Number? = unwrap(this).getTimeout()
     }
 
     public companion object {
@@ -394,11 +369,9 @@ public open class CfnTrigger internal constructor(
     public fun batchWindow(): Number? = unwrap(this).getBatchWindow()
 
     public interface Builder {
-      public fun batchSize(batchSize: Number) {
-      }
+      public fun batchSize(batchSize: Number)
 
-      public fun batchWindow(batchWindow: Number) {
-      }
+      public fun batchWindow(batchWindow: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -406,11 +379,11 @@ public open class CfnTrigger internal constructor(
           software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty.Builder =
           software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty.builder()
 
-      public override fun batchSize(batchSize: Number) {
+      override fun batchSize(batchSize: Number) {
         cdkBuilder.batchSize(batchSize)
       }
 
-      public override fun batchWindow(batchWindow: Number) {
+      override fun batchWindow(batchWindow: Number) {
         cdkBuilder.batchWindow(batchWindow)
       }
 
@@ -423,9 +396,9 @@ public open class CfnTrigger internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnTrigger.EventBatchingConditionProperty,
     ) : EventBatchingConditionProperty {
-      public override fun batchSize(): Number = unwrap(this).getBatchSize()
+      override fun batchSize(): Number = unwrap(this).getBatchSize()
 
-      public override fun batchWindow(): Number? = unwrap(this).getBatchWindow()
+      override fun batchWindow(): Number? = unwrap(this).getBatchWindow()
     }
 
     public companion object {
@@ -452,8 +425,7 @@ public open class CfnTrigger internal constructor(
     public fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
 
     public interface Builder {
-      public fun notifyDelayAfter(notifyDelayAfter: Number) {
-      }
+      public fun notifyDelayAfter(notifyDelayAfter: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -461,7 +433,7 @@ public open class CfnTrigger internal constructor(
           software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty.Builder =
           software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty.builder()
 
-      public override fun notifyDelayAfter(notifyDelayAfter: Number) {
+      override fun notifyDelayAfter(notifyDelayAfter: Number) {
         cdkBuilder.notifyDelayAfter(notifyDelayAfter)
       }
 
@@ -474,7 +446,7 @@ public open class CfnTrigger internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.glue.CfnTrigger.NotificationPropertyProperty,
     ) : NotificationPropertyProperty {
-      public override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
+      override fun notifyDelayAfter(): Number? = unwrap(this).getNotifyDelayAfter()
     }
 
     public companion object {
@@ -503,14 +475,11 @@ public open class CfnTrigger internal constructor(
     public fun logical(): String? = unwrap(this).getLogical()
 
     public interface Builder {
-      public fun conditions(conditions: IResolvable) {
-      }
+      public fun conditions(conditions: IResolvable)
 
-      public fun conditions(conditions: List<Any>) {
-      }
+      public fun conditions(conditions: List<Any>)
 
-      public fun logical(logical: String) {
-      }
+      public fun logical(logical: String)
     }
 
     private class BuilderImpl : Builder {
@@ -518,15 +487,15 @@ public open class CfnTrigger internal constructor(
           software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty.Builder =
           software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty.builder()
 
-      public override fun conditions(conditions: IResolvable) {
+      override fun conditions(conditions: IResolvable) {
         cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
       }
 
-      public override fun conditions(conditions: List<Any>) {
+      override fun conditions(conditions: List<Any>) {
         cdkBuilder.conditions(conditions)
       }
 
-      public override fun logical(logical: String) {
+      override fun logical(logical: String) {
         cdkBuilder.logical(logical)
       }
 
@@ -537,9 +506,9 @@ public open class CfnTrigger internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.PredicateProperty,
     ) : PredicateProperty {
-      public override fun conditions(): Any? = unwrap(this).getConditions()
+      override fun conditions(): Any? = unwrap(this).getConditions()
 
-      public override fun logical(): String? = unwrap(this).getLogical()
+      override fun logical(): String? = unwrap(this).getLogical()
     }
 
     public companion object {
@@ -574,20 +543,15 @@ public open class CfnTrigger internal constructor(
     public fun state(): String? = unwrap(this).getState()
 
     public interface Builder {
-      public fun crawlState(crawlState: String) {
-      }
+      public fun crawlState(crawlState: String)
 
-      public fun crawlerName(crawlerName: String) {
-      }
+      public fun crawlerName(crawlerName: String)
 
-      public fun jobName(jobName: String) {
-      }
+      public fun jobName(jobName: String)
 
-      public fun logicalOperator(logicalOperator: String) {
-      }
+      public fun logicalOperator(logicalOperator: String)
 
-      public fun state(state: String) {
-      }
+      public fun state(state: String)
     }
 
     private class BuilderImpl : Builder {
@@ -595,23 +559,23 @@ public open class CfnTrigger internal constructor(
           software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty.Builder =
           software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty.builder()
 
-      public override fun crawlState(crawlState: String) {
+      override fun crawlState(crawlState: String) {
         cdkBuilder.crawlState(crawlState)
       }
 
-      public override fun crawlerName(crawlerName: String) {
+      override fun crawlerName(crawlerName: String) {
         cdkBuilder.crawlerName(crawlerName)
       }
 
-      public override fun jobName(jobName: String) {
+      override fun jobName(jobName: String) {
         cdkBuilder.jobName(jobName)
       }
 
-      public override fun logicalOperator(logicalOperator: String) {
+      override fun logicalOperator(logicalOperator: String) {
         cdkBuilder.logicalOperator(logicalOperator)
       }
 
-      public override fun state(state: String) {
+      override fun state(state: String) {
         cdkBuilder.state(state)
       }
 
@@ -622,15 +586,15 @@ public open class CfnTrigger internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.glue.CfnTrigger.ConditionProperty,
     ) : ConditionProperty {
-      public override fun crawlState(): String? = unwrap(this).getCrawlState()
+      override fun crawlState(): String? = unwrap(this).getCrawlState()
 
-      public override fun crawlerName(): String? = unwrap(this).getCrawlerName()
+      override fun crawlerName(): String? = unwrap(this).getCrawlerName()
 
-      public override fun jobName(): String? = unwrap(this).getJobName()
+      override fun jobName(): String? = unwrap(this).getJobName()
 
-      public override fun logicalOperator(): String? = unwrap(this).getLogicalOperator()
+      override fun logicalOperator(): String? = unwrap(this).getLogicalOperator()
 
-      public override fun state(): String? = unwrap(this).getState()
+      override fun state(): String? = unwrap(this).getState()
     }
 
     public companion object {

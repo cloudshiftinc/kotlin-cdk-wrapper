@@ -120,55 +120,39 @@ public open class CfnInput internal constructor(
       vpc(InputVpcRequestProperty(`value`))
 
   public interface Builder {
-    public fun destinations(destinations: IResolvable) {
-    }
+    public fun destinations(destinations: IResolvable)
 
-    public fun destinations(destinations: List<Any>) {
-    }
+    public fun destinations(destinations: List<Any>)
 
-    public fun inputDevices(inputDevices: IResolvable) {
-    }
+    public fun inputDevices(inputDevices: IResolvable)
 
-    public fun inputDevices(inputDevices: List<Any>) {
-    }
+    public fun inputDevices(inputDevices: List<Any>)
 
-    public fun inputSecurityGroups(inputSecurityGroups: List<String>) {
-    }
+    public fun inputSecurityGroups(inputSecurityGroups: List<String>)
 
-    public fun mediaConnectFlows(mediaConnectFlows: IResolvable) {
-    }
+    public fun mediaConnectFlows(mediaConnectFlows: IResolvable)
 
-    public fun mediaConnectFlows(mediaConnectFlows: List<Any>) {
-    }
+    public fun mediaConnectFlows(mediaConnectFlows: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun sources(sources: IResolvable) {
-    }
+    public fun sources(sources: IResolvable)
 
-    public fun sources(sources: List<Any>) {
-    }
+    public fun sources(sources: List<Any>)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun type(type: String) {
-    }
+    public fun type(type: String)
 
-    public fun vpc(vpc: IResolvable) {
-    }
+    public fun vpc(vpc: IResolvable)
 
-    public fun vpc(vpc: InputVpcRequestProperty) {
-    }
+    public fun vpc(vpc: InputVpcRequestProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03d253b7a9d0d961b54013dff17b8657adbf7a55284ff688e0186c8c9f1a9123")
-    public fun vpc(vpc: InputVpcRequestProperty.Builder.() -> Unit) {
-    }
+    public fun vpc(vpc: InputVpcRequestProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -178,69 +162,69 @@ public open class CfnInput internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnInput.Builder =
         software.amazon.awscdk.services.medialive.CfnInput.Builder.create(scope, id)
 
-    public override fun destinations(destinations: IResolvable) {
+    override fun destinations(destinations: IResolvable) {
       cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
     }
 
-    public override fun destinations(destinations: List<Any>) {
+    override fun destinations(destinations: List<Any>) {
       cdkBuilder.destinations(destinations)
     }
 
-    public override fun inputDevices(inputDevices: IResolvable) {
+    override fun inputDevices(inputDevices: IResolvable) {
       cdkBuilder.inputDevices(inputDevices.let(IResolvable::unwrap))
     }
 
-    public override fun inputDevices(inputDevices: List<Any>) {
+    override fun inputDevices(inputDevices: List<Any>) {
       cdkBuilder.inputDevices(inputDevices)
     }
 
-    public override fun inputSecurityGroups(inputSecurityGroups: List<String>) {
+    override fun inputSecurityGroups(inputSecurityGroups: List<String>) {
       cdkBuilder.inputSecurityGroups(inputSecurityGroups)
     }
 
-    public override fun mediaConnectFlows(mediaConnectFlows: IResolvable) {
+    override fun mediaConnectFlows(mediaConnectFlows: IResolvable) {
       cdkBuilder.mediaConnectFlows(mediaConnectFlows.let(IResolvable::unwrap))
     }
 
-    public override fun mediaConnectFlows(mediaConnectFlows: List<Any>) {
+    override fun mediaConnectFlows(mediaConnectFlows: List<Any>) {
       cdkBuilder.mediaConnectFlows(mediaConnectFlows)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun sources(sources: IResolvable) {
+    override fun sources(sources: IResolvable) {
       cdkBuilder.sources(sources.let(IResolvable::unwrap))
     }
 
-    public override fun sources(sources: List<Any>) {
+    override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun type(type: String) {
+    override fun type(type: String) {
       cdkBuilder.type(type)
     }
 
-    public override fun vpc(vpc: IResolvable) {
+    override fun vpc(vpc: IResolvable) {
       cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
     }
 
-    public override fun vpc(vpc: InputVpcRequestProperty) {
+    override fun vpc(vpc: InputVpcRequestProperty) {
       cdkBuilder.vpc(vpc.let(InputVpcRequestProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03d253b7a9d0d961b54013dff17b8657adbf7a55284ff688e0186c8c9f1a9123")
-    public override fun vpc(vpc: InputVpcRequestProperty.Builder.() -> Unit): Unit =
+    override fun vpc(vpc: InputVpcRequestProperty.Builder.() -> Unit): Unit =
         vpc(InputVpcRequestProperty(vpc))
 
     public fun build(): software.amazon.awscdk.services.medialive.CfnInput = cdkBuilder.build()
@@ -275,14 +259,11 @@ public open class CfnInput internal constructor(
     public fun username(): String? = unwrap(this).getUsername()
 
     public interface Builder {
-      public fun passwordParam(passwordParam: String) {
-      }
+      public fun passwordParam(passwordParam: String)
 
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -290,15 +271,15 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty.builder()
 
-      public override fun passwordParam(passwordParam: String) {
+      override fun passwordParam(passwordParam: String) {
         cdkBuilder.passwordParam(passwordParam)
       }
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -311,11 +292,11 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInput.InputSourceRequestProperty,
     ) : InputSourceRequestProperty {
-      public override fun passwordParam(): String? = unwrap(this).getPasswordParam()
+      override fun passwordParam(): String? = unwrap(this).getPasswordParam()
 
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
 
-      public override fun username(): String? = unwrap(this).getUsername()
+      override fun username(): String? = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -344,11 +325,9 @@ public open class CfnInput internal constructor(
     public fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -356,11 +335,11 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -372,10 +351,10 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty,
     ) : InputVpcRequestProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -402,8 +381,7 @@ public open class CfnInput internal constructor(
     public fun id(): String? = unwrap(this).getId()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
@@ -411,7 +389,7 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
@@ -424,7 +402,7 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty,
     ) : InputDeviceSettingsProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
     }
 
     public companion object {
@@ -451,8 +429,7 @@ public open class CfnInput internal constructor(
     public fun id(): String? = unwrap(this).getId()
 
     public interface Builder {
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
     }
 
     private class BuilderImpl : Builder {
@@ -460,7 +437,7 @@ public open class CfnInput internal constructor(
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty.builder()
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
@@ -473,7 +450,7 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceRequestProperty,
     ) : InputDeviceRequestProperty {
-      public override fun id(): String? = unwrap(this).getId()
+      override fun id(): String? = unwrap(this).getId()
     }
 
     public companion object {
@@ -500,8 +477,7 @@ public open class CfnInput internal constructor(
     public fun streamName(): String? = unwrap(this).getStreamName()
 
     public interface Builder {
-      public fun streamName(streamName: String) {
-      }
+      public fun streamName(streamName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -510,7 +486,7 @@ public open class CfnInput internal constructor(
           =
           software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.builder()
 
-      public override fun streamName(streamName: String) {
+      override fun streamName(streamName: String) {
         cdkBuilder.streamName(streamName)
       }
 
@@ -523,7 +499,7 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
     ) : InputDestinationRequestProperty {
-      public override fun streamName(): String? = unwrap(this).getStreamName()
+      override fun streamName(): String? = unwrap(this).getStreamName()
     }
 
     public companion object {
@@ -550,8 +526,7 @@ public open class CfnInput internal constructor(
     public fun flowArn(): String? = unwrap(this).getFlowArn()
 
     public interface Builder {
-      public fun flowArn(flowArn: String) {
-      }
+      public fun flowArn(flowArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -560,7 +535,7 @@ public open class CfnInput internal constructor(
           =
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty.builder()
 
-      public override fun flowArn(flowArn: String) {
+      override fun flowArn(flowArn: String) {
         cdkBuilder.flowArn(flowArn)
       }
 
@@ -573,7 +548,7 @@ public open class CfnInput internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty,
     ) : MediaConnectFlowRequestProperty {
-      public override fun flowArn(): String? = unwrap(this).getFlowArn()
+      override fun flowArn(): String? = unwrap(this).getFlowArn()
     }
 
     public companion object {

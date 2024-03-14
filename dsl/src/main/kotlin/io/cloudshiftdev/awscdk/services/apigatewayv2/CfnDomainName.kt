@@ -68,29 +68,22 @@ public open class CfnDomainName internal constructor(
   }
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
-    }
+    public fun domainNameConfigurations(domainNameConfigurations: IResolvable)
 
-    public fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
-    }
+    public fun domainNameConfigurations(domainNameConfigurations: List<Any>)
 
-    public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-    }
+    public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
 
-    public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-    }
+    public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
     public
-        fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit) {
-    }
+        fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -100,34 +93,33 @@ public open class CfnDomainName internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.Builder =
         software.amazon.awscdk.services.apigatewayv2.CfnDomainName.Builder.create(scope, id)
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
+    override fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
       cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable::unwrap))
     }
 
-    public override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
+    override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
       cdkBuilder.domainNameConfigurations(domainNameConfigurations)
     }
 
-    public override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
+    override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
       cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
     }
 
-    public override
-        fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
+    override fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
       cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
-    public override
+    override
         fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit):
         Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
@@ -169,20 +161,15 @@ public open class CfnDomainName internal constructor(
     public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
 
-      public fun certificateName(certificateName: String) {
-      }
+      public fun certificateName(certificateName: String)
 
-      public fun endpointType(endpointType: String) {
-      }
+      public fun endpointType(endpointType: String)
 
-      public fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String) {
-      }
+      public fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String)
 
-      public fun securityPolicy(securityPolicy: String) {
-      }
+      public fun securityPolicy(securityPolicy: String)
     }
 
     private class BuilderImpl : Builder {
@@ -191,24 +178,24 @@ public open class CfnDomainName internal constructor(
           =
           software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
-      public override fun certificateName(certificateName: String) {
+      override fun certificateName(certificateName: String) {
         cdkBuilder.certificateName(certificateName)
       }
 
-      public override fun endpointType(endpointType: String) {
+      override fun endpointType(endpointType: String) {
         cdkBuilder.endpointType(endpointType)
       }
 
-      public override
+      override
           fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String) {
         cdkBuilder.ownershipVerificationCertificateArn(ownershipVerificationCertificateArn)
       }
 
-      public override fun securityPolicy(securityPolicy: String) {
+      override fun securityPolicy(securityPolicy: String) {
         cdkBuilder.securityPolicy(securityPolicy)
       }
 
@@ -221,16 +208,16 @@ public open class CfnDomainName internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty,
     ) : DomainNameConfigurationProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
-      public override fun certificateName(): String? = unwrap(this).getCertificateName()
+      override fun certificateName(): String? = unwrap(this).getCertificateName()
 
-      public override fun endpointType(): String? = unwrap(this).getEndpointType()
+      override fun endpointType(): String? = unwrap(this).getEndpointType()
 
-      public override fun ownershipVerificationCertificateArn(): String? =
+      override fun ownershipVerificationCertificateArn(): String? =
           unwrap(this).getOwnershipVerificationCertificateArn()
 
-      public override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
     }
 
     public companion object {
@@ -259,11 +246,9 @@ public open class CfnDomainName internal constructor(
     public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
 
     public interface Builder {
-      public fun truststoreUri(truststoreUri: String) {
-      }
+      public fun truststoreUri(truststoreUri: String)
 
-      public fun truststoreVersion(truststoreVersion: String) {
-      }
+      public fun truststoreVersion(truststoreVersion: String)
     }
 
     private class BuilderImpl : Builder {
@@ -272,11 +257,11 @@ public open class CfnDomainName internal constructor(
           =
           software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty.builder()
 
-      public override fun truststoreUri(truststoreUri: String) {
+      override fun truststoreUri(truststoreUri: String) {
         cdkBuilder.truststoreUri(truststoreUri)
       }
 
-      public override fun truststoreVersion(truststoreVersion: String) {
+      override fun truststoreVersion(truststoreVersion: String) {
         cdkBuilder.truststoreVersion(truststoreVersion)
       }
 
@@ -289,9 +274,9 @@ public open class CfnDomainName internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty,
     ) : MutualTlsAuthenticationProperty {
-      public override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
 
-      public override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+      override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
     }
 
     public companion object {

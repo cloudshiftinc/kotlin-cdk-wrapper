@@ -67,35 +67,27 @@ public open class CfnMember internal constructor(
   }
 
   public interface Builder {
-    public fun invitationId(invitationId: String) {
-    }
+    public fun invitationId(invitationId: String)
 
-    public fun memberConfiguration(memberConfiguration: IResolvable) {
-    }
+    public fun memberConfiguration(memberConfiguration: IResolvable)
 
-    public fun memberConfiguration(memberConfiguration: MemberConfigurationProperty) {
-    }
+    public fun memberConfiguration(memberConfiguration: MemberConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19fa8a7d67747633bb1899828e09039b0c6804f6c4091c3bee870507b04f9ccb")
     public
-        fun memberConfiguration(memberConfiguration: MemberConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun memberConfiguration(memberConfiguration: MemberConfigurationProperty.Builder.() -> Unit)
 
-    public fun networkConfiguration(networkConfiguration: IResolvable) {
-    }
+    public fun networkConfiguration(networkConfiguration: IResolvable)
 
-    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-    }
+    public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5a8ed69e40a7259bad3ff11dc97008319d48902bad94b785e5c3f609442c293f")
     public
-        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit)
 
-    public fun networkId(networkId: String) {
-    }
+    public fun networkId(networkId: String)
   }
 
   private class BuilderImpl(
@@ -105,39 +97,39 @@ public open class CfnMember internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.managedblockchain.CfnMember.Builder =
         software.amazon.awscdk.services.managedblockchain.CfnMember.Builder.create(scope, id)
 
-    public override fun invitationId(invitationId: String) {
+    override fun invitationId(invitationId: String) {
       cdkBuilder.invitationId(invitationId)
     }
 
-    public override fun memberConfiguration(memberConfiguration: IResolvable) {
+    override fun memberConfiguration(memberConfiguration: IResolvable) {
       cdkBuilder.memberConfiguration(memberConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun memberConfiguration(memberConfiguration: MemberConfigurationProperty) {
+    override fun memberConfiguration(memberConfiguration: MemberConfigurationProperty) {
       cdkBuilder.memberConfiguration(memberConfiguration.let(MemberConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19fa8a7d67747633bb1899828e09039b0c6804f6c4091c3bee870507b04f9ccb")
-    public override
+    override
         fun memberConfiguration(memberConfiguration: MemberConfigurationProperty.Builder.() -> Unit):
         Unit = memberConfiguration(MemberConfigurationProperty(memberConfiguration))
 
-    public override fun networkConfiguration(networkConfiguration: IResolvable) {
+    override fun networkConfiguration(networkConfiguration: IResolvable) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
+    override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5a8ed69e40a7259bad3ff11dc97008319d48902bad94b785e5c3f609442c293f")
-    public override
+    override
         fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit):
         Unit = networkConfiguration(NetworkConfigurationProperty(networkConfiguration))
 
-    public override fun networkId(networkId: String) {
+    override fun networkId(networkId: String) {
       cdkBuilder.networkId(networkId)
     }
 
@@ -174,14 +166,11 @@ public open class CfnMember internal constructor(
     public fun thresholdPercentage(): Number? = unwrap(this).getThresholdPercentage()
 
     public interface Builder {
-      public fun proposalDurationInHours(proposalDurationInHours: Number) {
-      }
+      public fun proposalDurationInHours(proposalDurationInHours: Number)
 
-      public fun thresholdComparator(thresholdComparator: String) {
-      }
+      public fun thresholdComparator(thresholdComparator: String)
 
-      public fun thresholdPercentage(thresholdPercentage: Number) {
-      }
+      public fun thresholdPercentage(thresholdPercentage: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -190,15 +179,15 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty.builder()
 
-      public override fun proposalDurationInHours(proposalDurationInHours: Number) {
+      override fun proposalDurationInHours(proposalDurationInHours: Number) {
         cdkBuilder.proposalDurationInHours(proposalDurationInHours)
       }
 
-      public override fun thresholdComparator(thresholdComparator: String) {
+      override fun thresholdComparator(thresholdComparator: String) {
         cdkBuilder.thresholdComparator(thresholdComparator)
       }
 
-      public override fun thresholdPercentage(thresholdPercentage: Number) {
+      override fun thresholdPercentage(thresholdPercentage: Number) {
         cdkBuilder.thresholdPercentage(thresholdPercentage)
       }
 
@@ -211,12 +200,11 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.ApprovalThresholdPolicyProperty,
     ) : ApprovalThresholdPolicyProperty {
-      public override fun proposalDurationInHours(): Number? =
-          unwrap(this).getProposalDurationInHours()
+      override fun proposalDurationInHours(): Number? = unwrap(this).getProposalDurationInHours()
 
-      public override fun thresholdComparator(): String? = unwrap(this).getThresholdComparator()
+      override fun thresholdComparator(): String? = unwrap(this).getThresholdComparator()
 
-      public override fun thresholdPercentage(): Number? = unwrap(this).getThresholdPercentage()
+      override fun thresholdPercentage(): Number? = unwrap(this).getThresholdPercentage()
     }
 
     public companion object {
@@ -247,24 +235,19 @@ public open class CfnMember internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun memberFrameworkConfiguration(memberFrameworkConfiguration: IResolvable) {
-      }
+      public fun memberFrameworkConfiguration(memberFrameworkConfiguration: IResolvable)
 
       public
-          fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty) {
-      }
+          fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6cffad2b009361d2e9c1eaf09696c669a50fea7836c4859b0d6200e8927d11e1")
       public
-          fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty.Builder.() -> Unit)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -273,27 +256,27 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun memberFrameworkConfiguration(memberFrameworkConfiguration: IResolvable) {
+      override fun memberFrameworkConfiguration(memberFrameworkConfiguration: IResolvable) {
         cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty) {
         cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration.let(MemberFrameworkConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6cffad2b009361d2e9c1eaf09696c669a50fea7836c4859b0d6200e8927d11e1")
-      public override
+      override
           fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty.Builder.() -> Unit):
           Unit =
           memberFrameworkConfiguration(MemberFrameworkConfigurationProperty(memberFrameworkConfiguration))
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -306,12 +289,12 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberConfigurationProperty,
     ) : MemberConfigurationProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun memberFrameworkConfiguration(): Any? =
+      override fun memberFrameworkConfiguration(): Any? =
           unwrap(this).getMemberFrameworkConfiguration()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -349,41 +332,31 @@ public open class CfnMember internal constructor(
     public fun votingPolicy(): Any
 
     public interface Builder {
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun framework(framework: String) {
-      }
+      public fun framework(framework: String)
 
-      public fun frameworkVersion(frameworkVersion: String) {
-      }
+      public fun frameworkVersion(frameworkVersion: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun networkFrameworkConfiguration(networkFrameworkConfiguration: IResolvable) {
-      }
+      public fun networkFrameworkConfiguration(networkFrameworkConfiguration: IResolvable)
 
       public
-          fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty) {
-      }
+          fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bacded8dd6675d03acb70e2bda8dfbd3ade76beeb5eaf73cf9a547d9ad05c94d")
       public
-          fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty.Builder.() -> Unit)
 
-      public fun votingPolicy(votingPolicy: IResolvable) {
-      }
+      public fun votingPolicy(votingPolicy: IResolvable)
 
-      public fun votingPolicy(votingPolicy: VotingPolicyProperty) {
-      }
+      public fun votingPolicy(votingPolicy: VotingPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("589679952e668736505c572d46bc4c108bdfc44d137efdb263fd5c9fed272177")
-      public fun votingPolicy(votingPolicy: VotingPolicyProperty.Builder.() -> Unit) {
-      }
+      public fun votingPolicy(votingPolicy: VotingPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -392,51 +365,50 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty.builder()
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun framework(framework: String) {
+      override fun framework(framework: String) {
         cdkBuilder.framework(framework)
       }
 
-      public override fun frameworkVersion(frameworkVersion: String) {
+      override fun frameworkVersion(frameworkVersion: String) {
         cdkBuilder.frameworkVersion(frameworkVersion)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override
-          fun networkFrameworkConfiguration(networkFrameworkConfiguration: IResolvable) {
+      override fun networkFrameworkConfiguration(networkFrameworkConfiguration: IResolvable) {
         cdkBuilder.networkFrameworkConfiguration(networkFrameworkConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty) {
         cdkBuilder.networkFrameworkConfiguration(networkFrameworkConfiguration.let(NetworkFrameworkConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bacded8dd6675d03acb70e2bda8dfbd3ade76beeb5eaf73cf9a547d9ad05c94d")
-      public override
+      override
           fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty.Builder.() -> Unit):
           Unit =
           networkFrameworkConfiguration(NetworkFrameworkConfigurationProperty(networkFrameworkConfiguration))
 
-      public override fun votingPolicy(votingPolicy: IResolvable) {
+      override fun votingPolicy(votingPolicy: IResolvable) {
         cdkBuilder.votingPolicy(votingPolicy.let(IResolvable::unwrap))
       }
 
-      public override fun votingPolicy(votingPolicy: VotingPolicyProperty) {
+      override fun votingPolicy(votingPolicy: VotingPolicyProperty) {
         cdkBuilder.votingPolicy(votingPolicy.let(VotingPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("589679952e668736505c572d46bc4c108bdfc44d137efdb263fd5c9fed272177")
-      public override fun votingPolicy(votingPolicy: VotingPolicyProperty.Builder.() -> Unit): Unit
-          = votingPolicy(VotingPolicyProperty(votingPolicy))
+      override fun votingPolicy(votingPolicy: VotingPolicyProperty.Builder.() -> Unit): Unit =
+          votingPolicy(VotingPolicyProperty(votingPolicy))
 
       public fun build():
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty =
@@ -447,18 +419,18 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkConfigurationProperty,
     ) : NetworkConfigurationProperty {
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun framework(): String = unwrap(this).getFramework()
+      override fun framework(): String = unwrap(this).getFramework()
 
-      public override fun frameworkVersion(): String = unwrap(this).getFrameworkVersion()
+      override fun frameworkVersion(): String = unwrap(this).getFrameworkVersion()
 
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun networkFrameworkConfiguration(): Any? =
+      override fun networkFrameworkConfiguration(): Any? =
           unwrap(this).getNetworkFrameworkConfiguration()
 
-      public override fun votingPolicy(): Any = unwrap(this).getVotingPolicy()
+      override fun votingPolicy(): Any = unwrap(this).getVotingPolicy()
     }
 
     public companion object {
@@ -485,8 +457,7 @@ public open class CfnMember internal constructor(
     public fun edition(): String
 
     public interface Builder {
-      public fun edition(edition: String) {
-      }
+      public fun edition(edition: String)
     }
 
     private class BuilderImpl : Builder {
@@ -495,7 +466,7 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty.builder()
 
-      public override fun edition(edition: String) {
+      override fun edition(edition: String) {
         cdkBuilder.edition(edition)
       }
 
@@ -508,7 +479,7 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFabricConfigurationProperty,
     ) : NetworkFabricConfigurationProperty {
-      public override fun edition(): String = unwrap(this).getEdition()
+      override fun edition(): String = unwrap(this).getEdition()
     }
 
     public companion object {
@@ -536,17 +507,14 @@ public open class CfnMember internal constructor(
     public fun approvalThresholdPolicy(): Any? = unwrap(this).getApprovalThresholdPolicy()
 
     public interface Builder {
-      public fun approvalThresholdPolicy(approvalThresholdPolicy: IResolvable) {
-      }
+      public fun approvalThresholdPolicy(approvalThresholdPolicy: IResolvable)
 
-      public fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty) {
-      }
+      public fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ff3823482d8569df4315391fafa2f2e59ff5ee291eea70dabe5ed444a20a689")
       public
-          fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty.Builder.() -> Unit) {
-      }
+          fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -554,18 +522,18 @@ public open class CfnMember internal constructor(
           software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty.Builder =
           software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty.builder()
 
-      public override fun approvalThresholdPolicy(approvalThresholdPolicy: IResolvable) {
+      override fun approvalThresholdPolicy(approvalThresholdPolicy: IResolvable) {
         cdkBuilder.approvalThresholdPolicy(approvalThresholdPolicy.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty) {
         cdkBuilder.approvalThresholdPolicy(approvalThresholdPolicy.let(ApprovalThresholdPolicyProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3ff3823482d8569df4315391fafa2f2e59ff5ee291eea70dabe5ed444a20a689")
-      public override
+      override
           fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty.Builder.() -> Unit):
           Unit = approvalThresholdPolicy(ApprovalThresholdPolicyProperty(approvalThresholdPolicy))
 
@@ -578,8 +546,7 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.VotingPolicyProperty,
     ) : VotingPolicyProperty {
-      public override fun approvalThresholdPolicy(): Any? =
-          unwrap(this).getApprovalThresholdPolicy()
+      override fun approvalThresholdPolicy(): Any? = unwrap(this).getApprovalThresholdPolicy()
     }
 
     public companion object {
@@ -606,18 +573,15 @@ public open class CfnMember internal constructor(
     public fun memberFabricConfiguration(): Any? = unwrap(this).getMemberFabricConfiguration()
 
     public interface Builder {
-      public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
-      }
+      public fun memberFabricConfiguration(memberFabricConfiguration: IResolvable)
 
       public
-          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty) {
-      }
+          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac243ffca22c14be7eac106cca3853c1972358665ec67aa7e75bef27844b52fb")
       public
-          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -626,18 +590,18 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty.builder()
 
-      public override fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
+      override fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
         cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty) {
         cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(MemberFabricConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ac243ffca22c14be7eac106cca3853c1972358665ec67aa7e75bef27844b52fb")
-      public override
+      override
           fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty.Builder.() -> Unit):
           Unit =
           memberFabricConfiguration(MemberFabricConfigurationProperty(memberFabricConfiguration))
@@ -651,8 +615,7 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFrameworkConfigurationProperty,
     ) : MemberFrameworkConfigurationProperty {
-      public override fun memberFabricConfiguration(): Any? =
-          unwrap(this).getMemberFabricConfiguration()
+      override fun memberFabricConfiguration(): Any? = unwrap(this).getMemberFabricConfiguration()
     }
 
     public companion object {
@@ -682,11 +645,9 @@ public open class CfnMember internal constructor(
     public fun adminUsername(): String
 
     public interface Builder {
-      public fun adminPassword(adminPassword: String) {
-      }
+      public fun adminPassword(adminPassword: String)
 
-      public fun adminUsername(adminUsername: String) {
-      }
+      public fun adminUsername(adminUsername: String)
     }
 
     private class BuilderImpl : Builder {
@@ -695,11 +656,11 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty.builder()
 
-      public override fun adminPassword(adminPassword: String) {
+      override fun adminPassword(adminPassword: String) {
         cdkBuilder.adminPassword(adminPassword)
       }
 
-      public override fun adminUsername(adminUsername: String) {
+      override fun adminUsername(adminUsername: String) {
         cdkBuilder.adminUsername(adminUsername)
       }
 
@@ -712,9 +673,9 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.MemberFabricConfigurationProperty,
     ) : MemberFabricConfigurationProperty {
-      public override fun adminPassword(): String = unwrap(this).getAdminPassword()
+      override fun adminPassword(): String = unwrap(this).getAdminPassword()
 
-      public override fun adminUsername(): String = unwrap(this).getAdminUsername()
+      override fun adminUsername(): String = unwrap(this).getAdminUsername()
     }
 
     public companion object {
@@ -742,18 +703,15 @@ public open class CfnMember internal constructor(
     public fun networkFabricConfiguration(): Any? = unwrap(this).getNetworkFabricConfiguration()
 
     public interface Builder {
-      public fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
-      }
+      public fun networkFabricConfiguration(networkFabricConfiguration: IResolvable)
 
       public
-          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty) {
-      }
+          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4491c5e51465df27d1fafff65e7d7024932678b533f6339c9920deace3998cfa")
       public
-          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit) {
-      }
+          fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -762,18 +720,18 @@ public open class CfnMember internal constructor(
           =
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty.builder()
 
-      public override fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
+      override fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
         cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty) {
         cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(NetworkFabricConfigurationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4491c5e51465df27d1fafff65e7d7024932678b533f6339c9920deace3998cfa")
-      public override
+      override
           fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty.Builder.() -> Unit):
           Unit =
           networkFabricConfiguration(NetworkFabricConfigurationProperty(networkFabricConfiguration))
@@ -787,8 +745,7 @@ public open class CfnMember internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.managedblockchain.CfnMember.NetworkFrameworkConfigurationProperty,
     ) : NetworkFrameworkConfigurationProperty {
-      public override fun networkFabricConfiguration(): Any? =
-          unwrap(this).getNetworkFabricConfiguration()
+      override fun networkFabricConfiguration(): Any? = unwrap(this).getNetworkFabricConfiguration()
     }
 
     public companion object {

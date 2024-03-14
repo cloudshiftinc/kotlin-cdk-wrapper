@@ -55,23 +55,17 @@ public open class CfnServiceAction internal constructor(
   }
 
   public interface Builder {
-    public fun acceptLanguage(acceptLanguage: String) {
-    }
+    public fun acceptLanguage(acceptLanguage: String)
 
-    public fun definition(definition: IResolvable) {
-    }
+    public fun definition(definition: IResolvable)
 
-    public fun definition(definition: List<Any>) {
-    }
+    public fun definition(definition: List<Any>)
 
-    public fun definitionType(definitionType: String) {
-    }
+    public fun definitionType(definitionType: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
   }
 
   private class BuilderImpl(
@@ -81,27 +75,27 @@ public open class CfnServiceAction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.servicecatalog.CfnServiceAction.Builder
         = software.amazon.awscdk.services.servicecatalog.CfnServiceAction.Builder.create(scope, id)
 
-    public override fun acceptLanguage(acceptLanguage: String) {
+    override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
-    public override fun definition(definition: IResolvable) {
+    override fun definition(definition: IResolvable) {
       cdkBuilder.definition(definition.let(IResolvable::unwrap))
     }
 
-    public override fun definition(definition: List<Any>) {
+    override fun definition(definition: List<Any>) {
       cdkBuilder.definition(definition)
     }
 
-    public override fun definitionType(definitionType: String) {
+    override fun definitionType(definitionType: String) {
       cdkBuilder.definitionType(definitionType)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
@@ -136,11 +130,9 @@ public open class CfnServiceAction internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -149,11 +141,11 @@ public open class CfnServiceAction internal constructor(
           =
           software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -166,9 +158,9 @@ public open class CfnServiceAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.servicecatalog.CfnServiceAction.DefinitionParameterProperty,
     ) : DefinitionParameterProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

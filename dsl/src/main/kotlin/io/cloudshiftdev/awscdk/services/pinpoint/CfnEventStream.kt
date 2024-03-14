@@ -36,14 +36,11 @@ public open class CfnEventStream internal constructor(
   }
 
   public interface Builder {
-    public fun applicationId(applicationId: String) {
-    }
+    public fun applicationId(applicationId: String)
 
-    public fun destinationStreamArn(destinationStreamArn: String) {
-    }
+    public fun destinationStreamArn(destinationStreamArn: String)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnEventStream internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.pinpoint.CfnEventStream.Builder =
         software.amazon.awscdk.services.pinpoint.CfnEventStream.Builder.create(scope, id)
 
-    public override fun applicationId(applicationId: String) {
+    override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
     }
 
-    public override fun destinationStreamArn(destinationStreamArn: String) {
+    override fun destinationStreamArn(destinationStreamArn: String) {
       cdkBuilder.destinationStreamArn(destinationStreamArn)
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 

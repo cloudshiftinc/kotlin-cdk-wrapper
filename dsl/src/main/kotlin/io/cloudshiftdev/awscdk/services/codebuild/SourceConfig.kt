@@ -14,51 +14,45 @@ public interface SourceConfig {
   public fun sourceVersion(): String? = unwrap(this).getSourceVersion()
 
   public interface Builder {
-    public fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty) {
-    }
+    public fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b31c6f8103008d0a0fd22ef541ca8b7a1510d8e9223b9981e7ec113f82127ddc")
-    public fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty.Builder.() -> Unit) {
-    }
+    public fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty.Builder.() -> Unit)
 
-    public fun sourceProperty(sourceProperty: CfnProject.SourceProperty) {
-    }
+    public fun sourceProperty(sourceProperty: CfnProject.SourceProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1cfceff0ac51b0021f8ad41227a9cafc14b8aa237334fd1191424d2aa70f6d22")
-    public fun sourceProperty(sourceProperty: CfnProject.SourceProperty.Builder.() -> Unit) {
-    }
+    public fun sourceProperty(sourceProperty: CfnProject.SourceProperty.Builder.() -> Unit)
 
-    public fun sourceVersion(sourceVersion: String) {
-    }
+    public fun sourceVersion(sourceVersion: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.SourceConfig.Builder =
         software.amazon.awscdk.services.codebuild.SourceConfig.builder()
 
-    public override fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty) {
+    override fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty) {
       cdkBuilder.buildTriggers(buildTriggers.let(CfnProject.ProjectTriggersProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b31c6f8103008d0a0fd22ef541ca8b7a1510d8e9223b9981e7ec113f82127ddc")
-    public override
+    override
         fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty.Builder.() -> Unit):
         Unit = buildTriggers(CfnProject.ProjectTriggersProperty(buildTriggers))
 
-    public override fun sourceProperty(sourceProperty: CfnProject.SourceProperty) {
+    override fun sourceProperty(sourceProperty: CfnProject.SourceProperty) {
       cdkBuilder.sourceProperty(sourceProperty.let(CfnProject.SourceProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1cfceff0ac51b0021f8ad41227a9cafc14b8aa237334fd1191424d2aa70f6d22")
-    public override
-        fun sourceProperty(sourceProperty: CfnProject.SourceProperty.Builder.() -> Unit): Unit =
-        sourceProperty(CfnProject.SourceProperty(sourceProperty))
+    override fun sourceProperty(sourceProperty: CfnProject.SourceProperty.Builder.() -> Unit): Unit
+        = sourceProperty(CfnProject.SourceProperty(sourceProperty))
 
-    public override fun sourceVersion(sourceVersion: String) {
+    override fun sourceVersion(sourceVersion: String) {
       cdkBuilder.sourceVersion(sourceVersion)
     }
 
@@ -68,13 +62,13 @@ public interface SourceConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.SourceConfig,
   ) : SourceConfig {
-    public override fun buildTriggers(): CfnProject.ProjectTriggersProperty? =
+    override fun buildTriggers(): CfnProject.ProjectTriggersProperty? =
         unwrap(this).getBuildTriggers()?.let(CfnProject.ProjectTriggersProperty::wrap)
 
-    public override fun sourceProperty(): CfnProject.SourceProperty =
+    override fun sourceProperty(): CfnProject.SourceProperty =
         unwrap(this).getSourceProperty().let(CfnProject.SourceProperty::wrap)
 
-    public override fun sourceVersion(): String? = unwrap(this).getSourceVersion()
+    override fun sourceVersion(): String? = unwrap(this).getSourceVersion()
   }
 
   public companion object {

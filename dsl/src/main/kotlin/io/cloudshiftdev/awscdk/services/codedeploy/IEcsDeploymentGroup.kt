@@ -19,26 +19,25 @@ public interface IEcsDeploymentGroup : IResource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.IEcsDeploymentGroup,
   ) : IEcsDeploymentGroup {
-    public override fun application(): IEcsApplication =
+    override fun application(): IEcsApplication =
         unwrap(this).getApplication().let(IEcsApplication::wrap)
 
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun deploymentConfig(): IEcsDeploymentConfig =
+    override fun deploymentConfig(): IEcsDeploymentConfig =
         unwrap(this).getDeploymentConfig().let(IEcsDeploymentConfig::wrap)
 
-    public override fun deploymentGroupArn(): String = unwrap(this).getDeploymentGroupArn()
+    override fun deploymentGroupArn(): String = unwrap(this).getDeploymentGroupArn()
 
-    public override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
+    override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 
   public companion object {

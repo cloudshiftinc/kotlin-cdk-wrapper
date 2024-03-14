@@ -36,14 +36,11 @@ public open class CfnVPCGatewayAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun internetGatewayId(internetGatewayId: String) {
-    }
+    public fun internetGatewayId(internetGatewayId: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
 
-    public fun vpnGatewayId(vpnGatewayId: String) {
-    }
+    public fun vpnGatewayId(vpnGatewayId: String)
   }
 
   private class BuilderImpl(
@@ -53,15 +50,15 @@ public open class CfnVPCGatewayAttachment internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment.Builder.create(scope, id)
 
-    public override fun internetGatewayId(internetGatewayId: String) {
+    override fun internetGatewayId(internetGatewayId: String) {
       cdkBuilder.internetGatewayId(internetGatewayId)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 
-    public override fun vpnGatewayId(vpnGatewayId: String) {
+    override fun vpnGatewayId(vpnGatewayId: String) {
       cdkBuilder.vpnGatewayId(vpnGatewayId)
     }
 

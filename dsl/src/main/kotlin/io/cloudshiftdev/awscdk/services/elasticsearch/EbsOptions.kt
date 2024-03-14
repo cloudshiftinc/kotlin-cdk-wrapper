@@ -23,20 +23,16 @@ public interface EbsOptions {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun iops(iops: Number) {
-    }
+    public fun iops(iops: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun volumeSize(volumeSize: Number) {
-    }
+    public fun volumeSize(volumeSize: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun volumeType(volumeType: EbsDeviceVolumeType) {
-    }
+    public fun volumeType(volumeType: EbsDeviceVolumeType)
   }
 
   private class BuilderImpl : Builder {
@@ -44,22 +40,22 @@ public interface EbsOptions {
         software.amazon.awscdk.services.elasticsearch.EbsOptions.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun iops(iops: Number) {
+    override fun iops(iops: Number) {
       cdkBuilder.iops(iops)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun volumeSize(volumeSize: Number) {
+    override fun volumeSize(volumeSize: Number) {
       cdkBuilder.volumeSize(volumeSize)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun volumeType(volumeType: EbsDeviceVolumeType) {
+    override fun volumeType(volumeType: EbsDeviceVolumeType) {
       cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
     }
 
@@ -71,16 +67,16 @@ public interface EbsOptions {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions,
   ) : EbsOptions {
     @Deprecated(message = "deprecated in CDK")
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun iops(): Number? = unwrap(this).getIops()
+    override fun iops(): Number? = unwrap(this).getIops()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+    override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun volumeType(): EbsDeviceVolumeType? =
+    override fun volumeType(): EbsDeviceVolumeType? =
         unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
   }
 

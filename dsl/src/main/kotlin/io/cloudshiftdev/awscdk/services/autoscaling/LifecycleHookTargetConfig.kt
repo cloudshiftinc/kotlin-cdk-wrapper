@@ -10,11 +10,9 @@ public interface LifecycleHookTargetConfig {
   public fun notificationTargetArn(): String
 
   public interface Builder {
-    public fun createdRole(createdRole: IRole) {
-    }
+    public fun createdRole(createdRole: IRole)
 
-    public fun notificationTargetArn(notificationTargetArn: String) {
-    }
+    public fun notificationTargetArn(notificationTargetArn: String)
   }
 
   private class BuilderImpl : Builder {
@@ -22,11 +20,11 @@ public interface LifecycleHookTargetConfig {
         software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig.Builder =
         software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig.builder()
 
-    public override fun createdRole(createdRole: IRole) {
+    override fun createdRole(createdRole: IRole) {
       cdkBuilder.createdRole(createdRole.let(IRole::unwrap))
     }
 
-    public override fun notificationTargetArn(notificationTargetArn: String) {
+    override fun notificationTargetArn(notificationTargetArn: String) {
       cdkBuilder.notificationTargetArn(notificationTargetArn)
     }
 
@@ -37,9 +35,9 @@ public interface LifecycleHookTargetConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig,
   ) : LifecycleHookTargetConfig {
-    public override fun createdRole(): IRole = unwrap(this).getCreatedRole().let(IRole::wrap)
+    override fun createdRole(): IRole = unwrap(this).getCreatedRole().let(IRole::wrap)
 
-    public override fun notificationTargetArn(): String = unwrap(this).getNotificationTargetArn()
+    override fun notificationTargetArn(): String = unwrap(this).getNotificationTargetArn()
   }
 
   public companion object {

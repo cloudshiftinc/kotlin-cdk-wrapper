@@ -146,44 +146,32 @@ public open class StateMachine internal constructor(
       unwrap(this).getStateMachineType().let(StateMachineType::wrap)
 
   public interface Builder {
-    public fun comment(comment: String) {
-    }
+    public fun comment(comment: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun definition(definition: IChainable) {
-    }
+    public fun definition(definition: IChainable)
 
-    public fun definitionBody(definitionBody: DefinitionBody) {
-    }
+    public fun definitionBody(definitionBody: DefinitionBody)
 
-    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
-    }
+    public fun definitionSubstitutions(definitionSubstitutions: Map<String, String>)
 
-    public fun logs(logs: LogOptions) {
-    }
+    public fun logs(logs: LogOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1cf9b118a37d2e328e6dc08efec907bf9a3a25fbc8a16192944d752c34c758d1")
-    public fun logs(logs: LogOptions.Builder.() -> Unit) {
-    }
+    public fun logs(logs: LogOptions.Builder.() -> Unit)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
 
-    public fun stateMachineName(stateMachineName: String) {
-    }
+    public fun stateMachineName(stateMachineName: String)
 
-    public fun stateMachineType(stateMachineType: StateMachineType) {
-    }
+    public fun stateMachineType(stateMachineType: StateMachineType)
 
-    public fun timeout(timeout: Duration) {
-    }
+    public fun timeout(timeout: Duration)
 
-    public fun tracingEnabled(tracingEnabled: Boolean) {
-    }
+    public fun tracingEnabled(tracingEnabled: Boolean)
   }
 
   private class BuilderImpl(
@@ -193,52 +181,52 @@ public open class StateMachine internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.StateMachine.Builder =
         software.amazon.awscdk.services.stepfunctions.StateMachine.Builder.create(scope, id)
 
-    public override fun comment(comment: String) {
+    override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun definition(definition: IChainable) {
+    override fun definition(definition: IChainable) {
       cdkBuilder.definition(definition.let(IChainable::unwrap))
     }
 
-    public override fun definitionBody(definitionBody: DefinitionBody) {
+    override fun definitionBody(definitionBody: DefinitionBody) {
       cdkBuilder.definitionBody(definitionBody.let(DefinitionBody::unwrap))
     }
 
-    public override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
+    override fun definitionSubstitutions(definitionSubstitutions: Map<String, String>) {
       cdkBuilder.definitionSubstitutions(definitionSubstitutions)
     }
 
-    public override fun logs(logs: LogOptions) {
+    override fun logs(logs: LogOptions) {
       cdkBuilder.logs(logs.let(LogOptions::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1cf9b118a37d2e328e6dc08efec907bf9a3a25fbc8a16192944d752c34c758d1")
-    public override fun logs(logs: LogOptions.Builder.() -> Unit): Unit = logs(LogOptions(logs))
+    override fun logs(logs: LogOptions.Builder.() -> Unit): Unit = logs(LogOptions(logs))
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
-    public override fun stateMachineName(stateMachineName: String) {
+    override fun stateMachineName(stateMachineName: String) {
       cdkBuilder.stateMachineName(stateMachineName)
     }
 
-    public override fun stateMachineType(stateMachineType: StateMachineType) {
+    override fun stateMachineType(stateMachineType: StateMachineType) {
       cdkBuilder.stateMachineType(stateMachineType.let(StateMachineType::unwrap))
     }
 
-    public override fun timeout(timeout: Duration) {
+    override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
-    public override fun tracingEnabled(tracingEnabled: Boolean) {
+    override fun tracingEnabled(tracingEnabled: Boolean) {
       cdkBuilder.tracingEnabled(tracingEnabled)
     }
 

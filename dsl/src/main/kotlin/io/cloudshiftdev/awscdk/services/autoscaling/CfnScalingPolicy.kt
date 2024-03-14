@@ -119,61 +119,45 @@ public open class CfnScalingPolicy internal constructor(
       Unit = targetTrackingConfiguration(TargetTrackingConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun adjustmentType(adjustmentType: String) {
-    }
+    public fun adjustmentType(adjustmentType: String)
 
-    public fun autoScalingGroupName(autoScalingGroupName: String) {
-    }
+    public fun autoScalingGroupName(autoScalingGroupName: String)
 
-    public fun cooldown(cooldown: String) {
-    }
+    public fun cooldown(cooldown: String)
 
-    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
-    }
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number)
 
-    public fun metricAggregationType(metricAggregationType: String) {
-    }
+    public fun metricAggregationType(metricAggregationType: String)
 
-    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
-    }
+    public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
-    public fun policyType(policyType: String) {
-    }
+    public fun policyType(policyType: String)
 
-    public fun predictiveScalingConfiguration(predictiveScalingConfiguration: IResolvable) {
-    }
+    public fun predictiveScalingConfiguration(predictiveScalingConfiguration: IResolvable)
 
     public
-        fun predictiveScalingConfiguration(predictiveScalingConfiguration: PredictiveScalingConfigurationProperty) {
-    }
+        fun predictiveScalingConfiguration(predictiveScalingConfiguration: PredictiveScalingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df515687985a1b0d75a0c7b985ee0b0e126b753fb4edc1ae20d56f9ece23d6da")
     public
-        fun predictiveScalingConfiguration(predictiveScalingConfiguration: PredictiveScalingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun predictiveScalingConfiguration(predictiveScalingConfiguration: PredictiveScalingConfigurationProperty.Builder.() -> Unit)
 
-    public fun scalingAdjustment(scalingAdjustment: Number) {
-    }
+    public fun scalingAdjustment(scalingAdjustment: Number)
 
-    public fun stepAdjustments(stepAdjustments: IResolvable) {
-    }
+    public fun stepAdjustments(stepAdjustments: IResolvable)
 
-    public fun stepAdjustments(stepAdjustments: List<Any>) {
-    }
+    public fun stepAdjustments(stepAdjustments: List<Any>)
 
-    public fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
-    }
+    public fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable)
 
     public
-        fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty) {
-    }
+        fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("724ced6e567fa25d80fb5b723a9a990a7e73ab2b762cb275319b42df5c51f868")
     public
-        fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -183,75 +167,74 @@ public open class CfnScalingPolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.Builder =
         software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.Builder.create(scope, id)
 
-    public override fun adjustmentType(adjustmentType: String) {
+    override fun adjustmentType(adjustmentType: String) {
       cdkBuilder.adjustmentType(adjustmentType)
     }
 
-    public override fun autoScalingGroupName(autoScalingGroupName: String) {
+    override fun autoScalingGroupName(autoScalingGroupName: String) {
       cdkBuilder.autoScalingGroupName(autoScalingGroupName)
     }
 
-    public override fun cooldown(cooldown: String) {
+    override fun cooldown(cooldown: String) {
       cdkBuilder.cooldown(cooldown)
     }
 
-    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
+    override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
       cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
     }
 
-    public override fun metricAggregationType(metricAggregationType: String) {
+    override fun metricAggregationType(metricAggregationType: String) {
       cdkBuilder.metricAggregationType(metricAggregationType)
     }
 
-    public override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
+    override fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number) {
       cdkBuilder.minAdjustmentMagnitude(minAdjustmentMagnitude)
     }
 
-    public override fun policyType(policyType: String) {
+    override fun policyType(policyType: String) {
       cdkBuilder.policyType(policyType)
     }
 
-    public override
-        fun predictiveScalingConfiguration(predictiveScalingConfiguration: IResolvable) {
+    override fun predictiveScalingConfiguration(predictiveScalingConfiguration: IResolvable) {
       cdkBuilder.predictiveScalingConfiguration(predictiveScalingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun predictiveScalingConfiguration(predictiveScalingConfiguration: PredictiveScalingConfigurationProperty) {
       cdkBuilder.predictiveScalingConfiguration(predictiveScalingConfiguration.let(PredictiveScalingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df515687985a1b0d75a0c7b985ee0b0e126b753fb4edc1ae20d56f9ece23d6da")
-    public override
+    override
         fun predictiveScalingConfiguration(predictiveScalingConfiguration: PredictiveScalingConfigurationProperty.Builder.() -> Unit):
         Unit =
         predictiveScalingConfiguration(PredictiveScalingConfigurationProperty(predictiveScalingConfiguration))
 
-    public override fun scalingAdjustment(scalingAdjustment: Number) {
+    override fun scalingAdjustment(scalingAdjustment: Number) {
       cdkBuilder.scalingAdjustment(scalingAdjustment)
     }
 
-    public override fun stepAdjustments(stepAdjustments: IResolvable) {
+    override fun stepAdjustments(stepAdjustments: IResolvable) {
       cdkBuilder.stepAdjustments(stepAdjustments.let(IResolvable::unwrap))
     }
 
-    public override fun stepAdjustments(stepAdjustments: List<Any>) {
+    override fun stepAdjustments(stepAdjustments: List<Any>) {
       cdkBuilder.stepAdjustments(stepAdjustments)
     }
 
-    public override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
+    override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
       cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty) {
       cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(TargetTrackingConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("724ced6e567fa25d80fb5b723a9a990a7e73ab2b762cb275319b42df5c51f868")
-    public override
+    override
         fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty.Builder.() -> Unit):
         Unit =
         targetTrackingConfiguration(TargetTrackingConfigurationProperty(targetTrackingConfiguration))
@@ -287,11 +270,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
 
     public interface Builder {
-      public fun predefinedMetricType(predefinedMetricType: String) {
-      }
+      public fun predefinedMetricType(predefinedMetricType: String)
 
-      public fun resourceLabel(resourceLabel: String) {
-      }
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -300,11 +281,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty.builder()
 
-      public override fun predefinedMetricType(predefinedMetricType: String) {
+      override fun predefinedMetricType(predefinedMetricType: String) {
         cdkBuilder.predefinedMetricType(predefinedMetricType)
       }
 
-      public override fun resourceLabel(resourceLabel: String) {
+      override fun resourceLabel(resourceLabel: String) {
         cdkBuilder.resourceLabel(resourceLabel)
       }
 
@@ -317,9 +298,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredefinedMetricSpecificationProperty,
     ) : PredefinedMetricSpecificationProperty {
-      public override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
 
-      public override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
@@ -355,23 +336,17 @@ public open class CfnScalingPolicy internal constructor(
     public fun schedulingBufferTime(): Number? = unwrap(this).getSchedulingBufferTime()
 
     public interface Builder {
-      public fun maxCapacityBreachBehavior(maxCapacityBreachBehavior: String) {
-      }
+      public fun maxCapacityBreachBehavior(maxCapacityBreachBehavior: String)
 
-      public fun maxCapacityBuffer(maxCapacityBuffer: Number) {
-      }
+      public fun maxCapacityBuffer(maxCapacityBuffer: Number)
 
-      public fun metricSpecifications(metricSpecifications: IResolvable) {
-      }
+      public fun metricSpecifications(metricSpecifications: IResolvable)
 
-      public fun metricSpecifications(metricSpecifications: List<Any>) {
-      }
+      public fun metricSpecifications(metricSpecifications: List<Any>)
 
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
 
-      public fun schedulingBufferTime(schedulingBufferTime: Number) {
-      }
+      public fun schedulingBufferTime(schedulingBufferTime: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -380,27 +355,27 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty.builder()
 
-      public override fun maxCapacityBreachBehavior(maxCapacityBreachBehavior: String) {
+      override fun maxCapacityBreachBehavior(maxCapacityBreachBehavior: String) {
         cdkBuilder.maxCapacityBreachBehavior(maxCapacityBreachBehavior)
       }
 
-      public override fun maxCapacityBuffer(maxCapacityBuffer: Number) {
+      override fun maxCapacityBuffer(maxCapacityBuffer: Number) {
         cdkBuilder.maxCapacityBuffer(maxCapacityBuffer)
       }
 
-      public override fun metricSpecifications(metricSpecifications: IResolvable) {
+      override fun metricSpecifications(metricSpecifications: IResolvable) {
         cdkBuilder.metricSpecifications(metricSpecifications.let(IResolvable::unwrap))
       }
 
-      public override fun metricSpecifications(metricSpecifications: List<Any>) {
+      override fun metricSpecifications(metricSpecifications: List<Any>) {
         cdkBuilder.metricSpecifications(metricSpecifications)
       }
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
-      public override fun schedulingBufferTime(schedulingBufferTime: Number) {
+      override fun schedulingBufferTime(schedulingBufferTime: Number) {
         cdkBuilder.schedulingBufferTime(schedulingBufferTime)
       }
 
@@ -413,16 +388,16 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingConfigurationProperty,
     ) : PredictiveScalingConfigurationProperty {
-      public override fun maxCapacityBreachBehavior(): String? =
+      override fun maxCapacityBreachBehavior(): String? =
           unwrap(this).getMaxCapacityBreachBehavior()
 
-      public override fun maxCapacityBuffer(): Number? = unwrap(this).getMaxCapacityBuffer()
+      override fun maxCapacityBuffer(): Number? = unwrap(this).getMaxCapacityBuffer()
 
-      public override fun metricSpecifications(): Any = unwrap(this).getMetricSpecifications()
+      override fun metricSpecifications(): Any = unwrap(this).getMetricSpecifications()
 
-      public override fun mode(): String? = unwrap(this).getMode()
+      override fun mode(): String? = unwrap(this).getMode()
 
-      public override fun schedulingBufferTime(): Number? = unwrap(this).getSchedulingBufferTime()
+      override fun schedulingBufferTime(): Number? = unwrap(this).getSchedulingBufferTime()
     }
 
     public companion object {
@@ -454,17 +429,13 @@ public open class CfnScalingPolicy internal constructor(
     public fun namespace(): String
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
     }
 
     private class BuilderImpl : Builder {
@@ -472,19 +443,19 @@ public open class CfnScalingPolicy internal constructor(
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty.Builder =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
@@ -497,11 +468,11 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricProperty,
     ) : MetricProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
     }
 
     public companion object {
@@ -530,11 +501,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
 
     public interface Builder {
-      public fun predefinedMetricType(predefinedMetricType: String) {
-      }
+      public fun predefinedMetricType(predefinedMetricType: String)
 
-      public fun resourceLabel(resourceLabel: String) {
-      }
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -543,11 +512,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty.builder()
 
-      public override fun predefinedMetricType(predefinedMetricType: String) {
+      override fun predefinedMetricType(predefinedMetricType: String) {
         cdkBuilder.predefinedMetricType(predefinedMetricType)
       }
 
-      public override fun resourceLabel(resourceLabel: String) {
+      override fun resourceLabel(resourceLabel: String) {
         cdkBuilder.resourceLabel(resourceLabel)
       }
 
@@ -560,9 +529,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty,
     ) : PredictiveScalingPredefinedLoadMetricProperty {
-      public override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
 
-      public override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
@@ -598,40 +567,31 @@ public open class CfnScalingPolicy internal constructor(
     public fun targetValue(): Number
 
     public interface Builder {
-      public fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
-      }
+      public fun customizedMetricSpecification(customizedMetricSpecification: IResolvable)
 
       public
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
-      }
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83dd031259827e7824397d7cebd1c1b86c5ebb6853125782ef749e24dc2a8873")
       public
-          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit)
 
-      public fun disableScaleIn(disableScaleIn: Boolean) {
-      }
+      public fun disableScaleIn(disableScaleIn: Boolean)
 
-      public fun disableScaleIn(disableScaleIn: IResolvable) {
-      }
+      public fun disableScaleIn(disableScaleIn: IResolvable)
 
-      public fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
-      }
+      public fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable)
 
       public
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
-      }
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51e88284f33083fc80bec682feb058834859f43bacfa566a36af4b217680ddb7")
       public
-          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit) {
-      }
+          fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit)
 
-      public fun targetValue(targetValue: Number) {
-      }
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -640,49 +600,47 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty.builder()
 
-      public override
-          fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
+      override fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
         cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
         cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(CustomizedMetricSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("83dd031259827e7824397d7cebd1c1b86c5ebb6853125782ef749e24dc2a8873")
-      public override
+      override
           fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty.Builder.() -> Unit):
           Unit =
           customizedMetricSpecification(CustomizedMetricSpecificationProperty(customizedMetricSpecification))
 
-      public override fun disableScaleIn(disableScaleIn: Boolean) {
+      override fun disableScaleIn(disableScaleIn: Boolean) {
         cdkBuilder.disableScaleIn(disableScaleIn)
       }
 
-      public override fun disableScaleIn(disableScaleIn: IResolvable) {
+      override fun disableScaleIn(disableScaleIn: IResolvable) {
         cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
       }
 
-      public override
-          fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
+      override fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
         cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
         cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(PredefinedMetricSpecificationProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("51e88284f33083fc80bec682feb058834859f43bacfa566a36af4b217680ddb7")
-      public override
+      override
           fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty.Builder.() -> Unit):
           Unit =
           predefinedMetricSpecification(PredefinedMetricSpecificationProperty(predefinedMetricSpecification))
 
-      public override fun targetValue(targetValue: Number) {
+      override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
 
@@ -695,15 +653,15 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.TargetTrackingConfigurationProperty,
     ) : TargetTrackingConfigurationProperty {
-      public override fun customizedMetricSpecification(): Any? =
+      override fun customizedMetricSpecification(): Any? =
           unwrap(this).getCustomizedMetricSpecification()
 
-      public override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
+      override fun disableScaleIn(): Any? = unwrap(this).getDisableScaleIn()
 
-      public override fun predefinedMetricSpecification(): Any? =
+      override fun predefinedMetricSpecification(): Any? =
           unwrap(this).getPredefinedMetricSpecification()
 
-      public override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
@@ -735,22 +693,17 @@ public open class CfnScalingPolicy internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun metric(metric: IResolvable) {
-      }
+      public fun metric(metric: IResolvable)
 
-      public fun metric(metric: MetricProperty) {
-      }
+      public fun metric(metric: MetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("02e2e53201330f186b1c6d129c240294222496d09fb3c522376d60fa73d64964")
-      public fun metric(metric: MetricProperty.Builder.() -> Unit) {
-      }
+      public fun metric(metric: MetricProperty.Builder.() -> Unit)
 
-      public fun stat(stat: String) {
-      }
+      public fun stat(stat: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -758,24 +711,24 @@ public open class CfnScalingPolicy internal constructor(
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty.Builder =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty.builder()
 
-      public override fun metric(metric: IResolvable) {
+      override fun metric(metric: IResolvable) {
         cdkBuilder.metric(metric.let(IResolvable::unwrap))
       }
 
-      public override fun metric(metric: MetricProperty) {
+      override fun metric(metric: MetricProperty) {
         cdkBuilder.metric(metric.let(MetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("02e2e53201330f186b1c6d129c240294222496d09fb3c522376d60fa73d64964")
-      public override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
+      override fun metric(metric: MetricProperty.Builder.() -> Unit): Unit =
           metric(MetricProperty(metric))
 
-      public override fun stat(stat: String) {
+      override fun stat(stat: String) {
         cdkBuilder.stat(stat)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -788,11 +741,11 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricStatProperty,
     ) : MetricStatProperty {
-      public override fun metric(): Any = unwrap(this).getMetric()
+      override fun metric(): Any = unwrap(this).getMetric()
 
-      public override fun stat(): String = unwrap(this).getStat()
+      override fun stat(): String = unwrap(this).getStat()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -823,14 +776,11 @@ public open class CfnScalingPolicy internal constructor(
     public fun scalingAdjustment(): Number
 
     public interface Builder {
-      public fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
-      }
+      public fun metricIntervalLowerBound(metricIntervalLowerBound: Number)
 
-      public fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
-      }
+      public fun metricIntervalUpperBound(metricIntervalUpperBound: Number)
 
-      public fun scalingAdjustment(scalingAdjustment: Number) {
-      }
+      public fun scalingAdjustment(scalingAdjustment: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -839,15 +789,15 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty.builder()
 
-      public override fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
+      override fun metricIntervalLowerBound(metricIntervalLowerBound: Number) {
         cdkBuilder.metricIntervalLowerBound(metricIntervalLowerBound)
       }
 
-      public override fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
+      override fun metricIntervalUpperBound(metricIntervalUpperBound: Number) {
         cdkBuilder.metricIntervalUpperBound(metricIntervalUpperBound)
       }
 
-      public override fun scalingAdjustment(scalingAdjustment: Number) {
+      override fun scalingAdjustment(scalingAdjustment: Number) {
         cdkBuilder.scalingAdjustment(scalingAdjustment)
       }
 
@@ -860,13 +810,11 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.StepAdjustmentProperty,
     ) : StepAdjustmentProperty {
-      public override fun metricIntervalLowerBound(): Number? =
-          unwrap(this).getMetricIntervalLowerBound()
+      override fun metricIntervalLowerBound(): Number? = unwrap(this).getMetricIntervalLowerBound()
 
-      public override fun metricIntervalUpperBound(): Number? =
-          unwrap(this).getMetricIntervalUpperBound()
+      override fun metricIntervalUpperBound(): Number? = unwrap(this).getMetricIntervalUpperBound()
 
-      public override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
+      override fun scalingAdjustment(): Number = unwrap(this).getScalingAdjustment()
     }
 
     public companion object {
@@ -895,11 +843,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
 
     public interface Builder {
-      public fun predefinedMetricType(predefinedMetricType: String) {
-      }
+      public fun predefinedMetricType(predefinedMetricType: String)
 
-      public fun resourceLabel(resourceLabel: String) {
-      }
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -908,11 +854,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty.builder()
 
-      public override fun predefinedMetricType(predefinedMetricType: String) {
+      override fun predefinedMetricType(predefinedMetricType: String) {
         cdkBuilder.predefinedMetricType(predefinedMetricType)
       }
 
-      public override fun resourceLabel(resourceLabel: String) {
+      override fun resourceLabel(resourceLabel: String) {
         cdkBuilder.resourceLabel(resourceLabel)
       }
 
@@ -925,9 +871,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedScalingMetricProperty,
     ) : PredictiveScalingPredefinedScalingMetricProperty {
-      public override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
 
-      public override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
@@ -955,11 +901,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun metricDataQueries(): Any
 
     public interface Builder {
-      public fun metricDataQueries(metricDataQueries: IResolvable) {
-      }
+      public fun metricDataQueries(metricDataQueries: IResolvable)
 
-      public fun metricDataQueries(metricDataQueries: List<Any>) {
-      }
+      public fun metricDataQueries(metricDataQueries: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -968,11 +912,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty.builder()
 
-      public override fun metricDataQueries(metricDataQueries: IResolvable) {
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
         cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
       }
 
-      public override fun metricDataQueries(metricDataQueries: List<Any>) {
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
 
@@ -985,7 +929,7 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty,
     ) : PredictiveScalingCustomizedCapacityMetricProperty {
-      public override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
+      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
     }
 
     public companion object {
@@ -1032,88 +976,69 @@ public open class CfnScalingPolicy internal constructor(
 
     public interface Builder {
       public
-          fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: IResolvable) {
-      }
+          fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: IResolvable)
 
       public
-          fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: PredictiveScalingCustomizedCapacityMetricProperty) {
-      }
+          fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: PredictiveScalingCustomizedCapacityMetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("576825e68ad5c44bf88fbc5865ff958e76c17dfcb07ffe704e92d3e00535a5da")
       public
-          fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: PredictiveScalingCustomizedCapacityMetricProperty.Builder.() -> Unit) {
-      }
+          fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: PredictiveScalingCustomizedCapacityMetricProperty.Builder.() -> Unit)
 
-      public fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: IResolvable) {
-      }
+      public fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: IResolvable)
 
       public
-          fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: PredictiveScalingCustomizedLoadMetricProperty) {
-      }
+          fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: PredictiveScalingCustomizedLoadMetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c43aaf6eba755c957c78045e5a3615cdbaab0b207ed862c19dfdc2db186a0680")
       public
-          fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: PredictiveScalingCustomizedLoadMetricProperty.Builder.() -> Unit) {
-      }
+          fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: PredictiveScalingCustomizedLoadMetricProperty.Builder.() -> Unit)
 
       public
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable) {
-      }
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable)
 
       public
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: PredictiveScalingCustomizedScalingMetricProperty) {
-      }
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: PredictiveScalingCustomizedScalingMetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5bc0decdd0c5a06475fdec6a82987d218c1ab1dcbfdb4d137a053f6414f359af")
       public
-          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: PredictiveScalingCustomizedScalingMetricProperty.Builder.() -> Unit) {
-      }
+          fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: PredictiveScalingCustomizedScalingMetricProperty.Builder.() -> Unit)
 
-      public fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: IResolvable) {
-      }
+      public fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: IResolvable)
 
       public
-          fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredictiveScalingPredefinedLoadMetricProperty) {
-      }
+          fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredictiveScalingPredefinedLoadMetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1a4be592dea838fd0cf6431d144f8e90aeec0ebce2f64591cd563ff1b8f1c6f")
       public
-          fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredictiveScalingPredefinedLoadMetricProperty.Builder.() -> Unit) {
-      }
+          fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredictiveScalingPredefinedLoadMetricProperty.Builder.() -> Unit)
 
-      public fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: IResolvable) {
-      }
+      public fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: IResolvable)
 
       public
-          fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: PredictiveScalingPredefinedMetricPairProperty) {
-      }
+          fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: PredictiveScalingPredefinedMetricPairProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd9691cb9834b6e49475da172e8452248c66494e725217bddac0c76b041f89af")
       public
-          fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: PredictiveScalingPredefinedMetricPairProperty.Builder.() -> Unit) {
-      }
+          fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: PredictiveScalingPredefinedMetricPairProperty.Builder.() -> Unit)
 
       public
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable) {
-      }
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable)
 
       public
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredictiveScalingPredefinedScalingMetricProperty) {
-      }
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredictiveScalingPredefinedScalingMetricProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6af039d4f8ed0dd8a79430c288494b7aea540bf320cd40247f8ba956c924827")
       public
-          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredictiveScalingPredefinedScalingMetricProperty.Builder.() -> Unit) {
-      }
+          fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredictiveScalingPredefinedScalingMetricProperty.Builder.() -> Unit)
 
-      public fun targetValue(targetValue: Number) {
-      }
+      public fun targetValue(targetValue: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1122,109 +1047,109 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingMetricSpecificationProperty.builder()
 
-      public override
+      override
           fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: IResolvable) {
         cdkBuilder.customizedCapacityMetricSpecification(customizedCapacityMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: PredictiveScalingCustomizedCapacityMetricProperty) {
         cdkBuilder.customizedCapacityMetricSpecification(customizedCapacityMetricSpecification.let(PredictiveScalingCustomizedCapacityMetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("576825e68ad5c44bf88fbc5865ff958e76c17dfcb07ffe704e92d3e00535a5da")
-      public override
+      override
           fun customizedCapacityMetricSpecification(customizedCapacityMetricSpecification: PredictiveScalingCustomizedCapacityMetricProperty.Builder.() -> Unit):
           Unit =
           customizedCapacityMetricSpecification(PredictiveScalingCustomizedCapacityMetricProperty(customizedCapacityMetricSpecification))
 
-      public override
+      override
           fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: IResolvable) {
         cdkBuilder.customizedLoadMetricSpecification(customizedLoadMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: PredictiveScalingCustomizedLoadMetricProperty) {
         cdkBuilder.customizedLoadMetricSpecification(customizedLoadMetricSpecification.let(PredictiveScalingCustomizedLoadMetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c43aaf6eba755c957c78045e5a3615cdbaab0b207ed862c19dfdc2db186a0680")
-      public override
+      override
           fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: PredictiveScalingCustomizedLoadMetricProperty.Builder.() -> Unit):
           Unit =
           customizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetricProperty(customizedLoadMetricSpecification))
 
-      public override
+      override
           fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable) {
         cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: PredictiveScalingCustomizedScalingMetricProperty) {
         cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(PredictiveScalingCustomizedScalingMetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5bc0decdd0c5a06475fdec6a82987d218c1ab1dcbfdb4d137a053f6414f359af")
-      public override
+      override
           fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: PredictiveScalingCustomizedScalingMetricProperty.Builder.() -> Unit):
           Unit =
           customizedScalingMetricSpecification(PredictiveScalingCustomizedScalingMetricProperty(customizedScalingMetricSpecification))
 
-      public override
+      override
           fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: IResolvable) {
         cdkBuilder.predefinedLoadMetricSpecification(predefinedLoadMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredictiveScalingPredefinedLoadMetricProperty) {
         cdkBuilder.predefinedLoadMetricSpecification(predefinedLoadMetricSpecification.let(PredictiveScalingPredefinedLoadMetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1a4be592dea838fd0cf6431d144f8e90aeec0ebce2f64591cd563ff1b8f1c6f")
-      public override
+      override
           fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredictiveScalingPredefinedLoadMetricProperty.Builder.() -> Unit):
           Unit =
           predefinedLoadMetricSpecification(PredictiveScalingPredefinedLoadMetricProperty(predefinedLoadMetricSpecification))
 
-      public override
+      override
           fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: IResolvable) {
         cdkBuilder.predefinedMetricPairSpecification(predefinedMetricPairSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: PredictiveScalingPredefinedMetricPairProperty) {
         cdkBuilder.predefinedMetricPairSpecification(predefinedMetricPairSpecification.let(PredictiveScalingPredefinedMetricPairProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bd9691cb9834b6e49475da172e8452248c66494e725217bddac0c76b041f89af")
-      public override
+      override
           fun predefinedMetricPairSpecification(predefinedMetricPairSpecification: PredictiveScalingPredefinedMetricPairProperty.Builder.() -> Unit):
           Unit =
           predefinedMetricPairSpecification(PredictiveScalingPredefinedMetricPairProperty(predefinedMetricPairSpecification))
 
-      public override
+      override
           fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable) {
         cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredictiveScalingPredefinedScalingMetricProperty) {
         cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(PredictiveScalingPredefinedScalingMetricProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6af039d4f8ed0dd8a79430c288494b7aea540bf320cd40247f8ba956c924827")
-      public override
+      override
           fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredictiveScalingPredefinedScalingMetricProperty.Builder.() -> Unit):
           Unit =
           predefinedScalingMetricSpecification(PredictiveScalingPredefinedScalingMetricProperty(predefinedScalingMetricSpecification))
 
-      public override fun targetValue(targetValue: Number) {
+      override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
 
@@ -1237,25 +1162,25 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingMetricSpecificationProperty,
     ) : PredictiveScalingMetricSpecificationProperty {
-      public override fun customizedCapacityMetricSpecification(): Any? =
+      override fun customizedCapacityMetricSpecification(): Any? =
           unwrap(this).getCustomizedCapacityMetricSpecification()
 
-      public override fun customizedLoadMetricSpecification(): Any? =
+      override fun customizedLoadMetricSpecification(): Any? =
           unwrap(this).getCustomizedLoadMetricSpecification()
 
-      public override fun customizedScalingMetricSpecification(): Any? =
+      override fun customizedScalingMetricSpecification(): Any? =
           unwrap(this).getCustomizedScalingMetricSpecification()
 
-      public override fun predefinedLoadMetricSpecification(): Any? =
+      override fun predefinedLoadMetricSpecification(): Any? =
           unwrap(this).getPredefinedLoadMetricSpecification()
 
-      public override fun predefinedMetricPairSpecification(): Any? =
+      override fun predefinedMetricPairSpecification(): Any? =
           unwrap(this).getPredefinedMetricPairSpecification()
 
-      public override fun predefinedScalingMetricSpecification(): Any? =
+      override fun predefinedScalingMetricSpecification(): Any? =
           unwrap(this).getPredefinedScalingMetricSpecification()
 
-      public override fun targetValue(): Number = unwrap(this).getTargetValue()
+      override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
     public companion object {
@@ -1283,11 +1208,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun metricDataQueries(): Any
 
     public interface Builder {
-      public fun metricDataQueries(metricDataQueries: IResolvable) {
-      }
+      public fun metricDataQueries(metricDataQueries: IResolvable)
 
-      public fun metricDataQueries(metricDataQueries: List<Any>) {
-      }
+      public fun metricDataQueries(metricDataQueries: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1296,11 +1219,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty.builder()
 
-      public override fun metricDataQueries(metricDataQueries: IResolvable) {
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
         cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
       }
 
-      public override fun metricDataQueries(metricDataQueries: List<Any>) {
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
 
@@ -1313,7 +1236,7 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty,
     ) : PredictiveScalingCustomizedLoadMetricProperty {
-      public override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
+      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
     }
 
     public companion object {
@@ -1343,11 +1266,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun resourceLabel(): String? = unwrap(this).getResourceLabel()
 
     public interface Builder {
-      public fun predefinedMetricType(predefinedMetricType: String) {
-      }
+      public fun predefinedMetricType(predefinedMetricType: String)
 
-      public fun resourceLabel(resourceLabel: String) {
-      }
+      public fun resourceLabel(resourceLabel: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1356,11 +1277,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty.builder()
 
-      public override fun predefinedMetricType(predefinedMetricType: String) {
+      override fun predefinedMetricType(predefinedMetricType: String) {
         cdkBuilder.predefinedMetricType(predefinedMetricType)
       }
 
-      public override fun resourceLabel(resourceLabel: String) {
+      override fun resourceLabel(resourceLabel: String) {
         cdkBuilder.resourceLabel(resourceLabel)
       }
 
@@ -1373,9 +1294,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty,
     ) : PredictiveScalingPredefinedMetricPairProperty {
-      public override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
+      override fun predefinedMetricType(): String = unwrap(this).getPredefinedMetricType()
 
-      public override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
+      override fun resourceLabel(): String? = unwrap(this).getResourceLabel()
     }
 
     public companion object {
@@ -1411,31 +1332,23 @@ public open class CfnScalingPolicy internal constructor(
     public fun returnData(): Any? = unwrap(this).getReturnData()
 
     public interface Builder {
-      public fun expression(expression: String) {
-      }
+      public fun expression(expression: String)
 
-      public fun id(id: String) {
-      }
+      public fun id(id: String)
 
-      public fun label(label: String) {
-      }
+      public fun label(label: String)
 
-      public fun metricStat(metricStat: IResolvable) {
-      }
+      public fun metricStat(metricStat: IResolvable)
 
-      public fun metricStat(metricStat: MetricStatProperty) {
-      }
+      public fun metricStat(metricStat: MetricStatProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aad7379b19e59aad13eae5a77bc24a5686a03816ddbcf207d55a39aac5ecbc5e")
-      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit) {
-      }
+      public fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit)
 
-      public fun returnData(returnData: Boolean) {
-      }
+      public fun returnData(returnData: Boolean)
 
-      public fun returnData(returnData: IResolvable) {
-      }
+      public fun returnData(returnData: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1444,36 +1357,36 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty.builder()
 
-      public override fun expression(expression: String) {
+      override fun expression(expression: String) {
         cdkBuilder.expression(expression)
       }
 
-      public override fun id(id: String) {
+      override fun id(id: String) {
         cdkBuilder.id(id)
       }
 
-      public override fun label(label: String) {
+      override fun label(label: String) {
         cdkBuilder.label(label)
       }
 
-      public override fun metricStat(metricStat: IResolvable) {
+      override fun metricStat(metricStat: IResolvable) {
         cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
       }
 
-      public override fun metricStat(metricStat: MetricStatProperty) {
+      override fun metricStat(metricStat: MetricStatProperty) {
         cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aad7379b19e59aad13eae5a77bc24a5686a03816ddbcf207d55a39aac5ecbc5e")
-      public override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
+      override fun metricStat(metricStat: MetricStatProperty.Builder.() -> Unit): Unit =
           metricStat(MetricStatProperty(metricStat))
 
-      public override fun returnData(returnData: Boolean) {
+      override fun returnData(returnData: Boolean) {
         cdkBuilder.returnData(returnData)
       }
 
-      public override fun returnData(returnData: IResolvable) {
+      override fun returnData(returnData: IResolvable) {
         cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
       }
 
@@ -1486,15 +1399,15 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDataQueryProperty,
     ) : MetricDataQueryProperty {
-      public override fun expression(): String? = unwrap(this).getExpression()
+      override fun expression(): String? = unwrap(this).getExpression()
 
-      public override fun id(): String = unwrap(this).getId()
+      override fun id(): String = unwrap(this).getId()
 
-      public override fun label(): String? = unwrap(this).getLabel()
+      override fun label(): String? = unwrap(this).getLabel()
 
-      public override fun metricStat(): Any? = unwrap(this).getMetricStat()
+      override fun metricStat(): Any? = unwrap(this).getMetricStat()
 
-      public override fun returnData(): Any? = unwrap(this).getReturnData()
+      override fun returnData(): Any? = unwrap(this).getReturnData()
     }
 
     public companion object {
@@ -1529,23 +1442,17 @@ public open class CfnScalingPolicy internal constructor(
     public fun unit(): String? = unwrap(this).getUnit()
 
     public interface Builder {
-      public fun dimensions(dimensions: IResolvable) {
-      }
+      public fun dimensions(dimensions: IResolvable)
 
-      public fun dimensions(dimensions: List<Any>) {
-      }
+      public fun dimensions(dimensions: List<Any>)
 
-      public fun metricName(metricName: String) {
-      }
+      public fun metricName(metricName: String)
 
-      public fun namespace(namespace: String) {
-      }
+      public fun namespace(namespace: String)
 
-      public fun statistic(statistic: String) {
-      }
+      public fun statistic(statistic: String)
 
-      public fun unit(unit: String) {
-      }
+      public fun unit(unit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1554,27 +1461,27 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty.builder()
 
-      public override fun dimensions(dimensions: IResolvable) {
+      override fun dimensions(dimensions: IResolvable) {
         cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
       }
 
-      public override fun dimensions(dimensions: List<Any>) {
+      override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
 
-      public override fun metricName(metricName: String) {
+      override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
 
-      public override fun namespace(namespace: String) {
+      override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
       }
 
-      public override fun statistic(statistic: String) {
+      override fun statistic(statistic: String) {
         cdkBuilder.statistic(statistic)
       }
 
-      public override fun unit(unit: String) {
+      override fun unit(unit: String) {
         cdkBuilder.unit(unit)
       }
 
@@ -1587,15 +1494,15 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.CustomizedMetricSpecificationProperty,
     ) : CustomizedMetricSpecificationProperty {
-      public override fun dimensions(): Any? = unwrap(this).getDimensions()
+      override fun dimensions(): Any? = unwrap(this).getDimensions()
 
-      public override fun metricName(): String = unwrap(this).getMetricName()
+      override fun metricName(): String = unwrap(this).getMetricName()
 
-      public override fun namespace(): String = unwrap(this).getNamespace()
+      override fun namespace(): String = unwrap(this).getNamespace()
 
-      public override fun statistic(): String = unwrap(this).getStatistic()
+      override fun statistic(): String = unwrap(this).getStatistic()
 
-      public override fun unit(): String? = unwrap(this).getUnit()
+      override fun unit(): String? = unwrap(this).getUnit()
     }
 
     public companion object {
@@ -1623,11 +1530,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun metricDataQueries(): Any
 
     public interface Builder {
-      public fun metricDataQueries(metricDataQueries: IResolvable) {
-      }
+      public fun metricDataQueries(metricDataQueries: IResolvable)
 
-      public fun metricDataQueries(metricDataQueries: List<Any>) {
-      }
+      public fun metricDataQueries(metricDataQueries: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -1636,11 +1541,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty.builder()
 
-      public override fun metricDataQueries(metricDataQueries: IResolvable) {
+      override fun metricDataQueries(metricDataQueries: IResolvable) {
         cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
       }
 
-      public override fun metricDataQueries(metricDataQueries: List<Any>) {
+      override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
 
@@ -1653,7 +1558,7 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty,
     ) : PredictiveScalingCustomizedScalingMetricProperty {
-      public override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
+      override fun metricDataQueries(): Any = unwrap(this).getMetricDataQueries()
     }
 
     public companion object {
@@ -1683,11 +1588,9 @@ public open class CfnScalingPolicy internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1696,11 +1599,11 @@ public open class CfnScalingPolicy internal constructor(
           =
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -1713,9 +1616,9 @@ public open class CfnScalingPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.MetricDimensionProperty,
     ) : MetricDimensionProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {

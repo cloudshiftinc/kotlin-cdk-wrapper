@@ -37,120 +37,83 @@ public open class QueueProcessingEc2Service internal constructor(
 
   public interface Builder {
     public
-        fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-    }
+        fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-    }
+    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1eb7aa4699ab36b0fdc52879df2df932e1f23f9c71c88f49b89662c44eb855a1")
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit) {
-    }
+    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit)
 
-    public fun cluster(cluster: ICluster) {
-    }
+    public fun cluster(cluster: ICluster)
 
-    public fun command(command: List<String>) {
-    }
+    public fun command(command: List<String>)
 
-    public fun containerName(containerName: String) {
-    }
+    public fun containerName(containerName: String)
 
-    public fun cooldown(cooldown: Duration) {
-    }
+    public fun cooldown(cooldown: Duration)
 
-    public fun cpu(cpu: Number) {
-    }
+    public fun cpu(cpu: Number)
 
-    public fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
-    }
+    public fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number)
 
-    public fun deploymentController(deploymentController: DeploymentController) {
-    }
+    public fun deploymentController(deploymentController: DeploymentController)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ede7043074bb86a7a8192d6554577c5337ac2bf1a8e8a68f62deef21fc822e99")
-    public fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit) {
-    }
+    public fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit)
 
-    public fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
-    }
+    public fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean)
 
-    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
-    }
+    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
-    public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
-    }
+    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
-    public fun enableLogging(enableLogging: Boolean) {
-    }
+    public fun enableLogging(enableLogging: Boolean)
 
-    public fun environment(environment: Map<String, String>) {
-    }
+    public fun environment(environment: Map<String, String>)
 
-    public fun family(family: String) {
-    }
+    public fun family(family: String)
 
-    public fun gpuCount(gpuCount: Number) {
-    }
+    public fun gpuCount(gpuCount: Number)
 
-    public fun image(image: ContainerImage) {
-    }
+    public fun image(image: ContainerImage)
 
-    public fun logDriver(logDriver: LogDriver) {
-    }
+    public fun logDriver(logDriver: LogDriver)
 
-    public fun maxHealthyPercent(maxHealthyPercent: Number) {
-    }
+    public fun maxHealthyPercent(maxHealthyPercent: Number)
 
-    public fun maxReceiveCount(maxReceiveCount: Number) {
-    }
+    public fun maxReceiveCount(maxReceiveCount: Number)
 
-    public fun maxScalingCapacity(maxScalingCapacity: Number) {
-    }
+    public fun maxScalingCapacity(maxScalingCapacity: Number)
 
-    public fun memoryLimitMiB(memoryLimitMiB: Number) {
-    }
+    public fun memoryLimitMiB(memoryLimitMiB: Number)
 
-    public fun memoryReservationMiB(memoryReservationMiB: Number) {
-    }
+    public fun memoryReservationMiB(memoryReservationMiB: Number)
 
-    public fun minHealthyPercent(minHealthyPercent: Number) {
-    }
+    public fun minHealthyPercent(minHealthyPercent: Number)
 
-    public fun minScalingCapacity(minScalingCapacity: Number) {
-    }
+    public fun minScalingCapacity(minScalingCapacity: Number)
 
-    public fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-    }
+    public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
-    public fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-    }
+    public fun placementStrategies(placementStrategies: List<PlacementStrategy>)
 
-    public fun propagateTags(propagateTags: PropagatedTagSource) {
-    }
+    public fun propagateTags(propagateTags: PropagatedTagSource)
 
-    public fun queue(queue: IQueue) {
-    }
+    public fun queue(queue: IQueue)
 
-    public fun retentionPeriod(retentionPeriod: Duration) {
-    }
+    public fun retentionPeriod(retentionPeriod: Duration)
 
-    public fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-    }
+    public fun scalingSteps(scalingSteps: List<ScalingInterval>)
 
-    public fun secrets(secrets: Map<String, Secret>) {
-    }
+    public fun secrets(secrets: Map<String, Secret>)
 
-    public fun serviceName(serviceName: String) {
-    }
+    public fun serviceName(serviceName: String)
 
-    public fun visibilityTimeout(visibilityTimeout: Duration) {
-    }
+    public fun visibilityTimeout(visibilityTimeout: Duration)
 
-    public fun vpc(vpc: IVpc) {
-    }
+    public fun vpc(vpc: IVpc)
   }
 
   private class BuilderImpl(
@@ -162,155 +125,155 @@ public open class QueueProcessingEc2Service internal constructor(
         software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2Service.Builder.create(scope,
         id)
 
-    public override
+    override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
 
-    public override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
+    override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1eb7aa4699ab36b0fdc52879df2df932e1f23f9c71c88f49b89662c44eb855a1")
-    public override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit):
-        Unit = circuitBreaker(DeploymentCircuitBreaker(circuitBreaker))
+    override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker.Builder.() -> Unit): Unit =
+        circuitBreaker(DeploymentCircuitBreaker(circuitBreaker))
 
-    public override fun cluster(cluster: ICluster) {
+    override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }
 
-    public override fun command(command: List<String>) {
+    override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
 
-    public override fun containerName(containerName: String) {
+    override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
     }
 
-    public override fun cooldown(cooldown: Duration) {
+    override fun cooldown(cooldown: Duration) {
       cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
     }
 
-    public override fun cpu(cpu: Number) {
+    override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
     }
 
-    public override fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
+    override fun cpuTargetUtilizationPercent(cpuTargetUtilizationPercent: Number) {
       cdkBuilder.cpuTargetUtilizationPercent(cpuTargetUtilizationPercent)
     }
 
-    public override fun deploymentController(deploymentController: DeploymentController) {
+    override fun deploymentController(deploymentController: DeploymentController) {
       cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ede7043074bb86a7a8192d6554577c5337ac2bf1a8e8a68f62deef21fc822e99")
-    public override
+    override
         fun deploymentController(deploymentController: DeploymentController.Builder.() -> Unit):
         Unit = deploymentController(DeploymentController(deploymentController))
 
-    public override fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
+    override fun disableCpuBasedScaling(disableCpuBasedScaling: Boolean) {
       cdkBuilder.disableCpuBasedScaling(disableCpuBasedScaling)
     }
 
-    public override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
+    override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
       cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
     }
 
-    public override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
       cdkBuilder.enableExecuteCommand(enableExecuteCommand)
     }
 
-    public override fun enableLogging(enableLogging: Boolean) {
+    override fun enableLogging(enableLogging: Boolean) {
       cdkBuilder.enableLogging(enableLogging)
     }
 
-    public override fun environment(environment: Map<String, String>) {
+    override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
     }
 
-    public override fun family(family: String) {
+    override fun family(family: String) {
       cdkBuilder.family(family)
     }
 
-    public override fun gpuCount(gpuCount: Number) {
+    override fun gpuCount(gpuCount: Number) {
       cdkBuilder.gpuCount(gpuCount)
     }
 
-    public override fun image(image: ContainerImage) {
+    override fun image(image: ContainerImage) {
       cdkBuilder.image(image.let(ContainerImage::unwrap))
     }
 
-    public override fun logDriver(logDriver: LogDriver) {
+    override fun logDriver(logDriver: LogDriver) {
       cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
     }
 
-    public override fun maxHealthyPercent(maxHealthyPercent: Number) {
+    override fun maxHealthyPercent(maxHealthyPercent: Number) {
       cdkBuilder.maxHealthyPercent(maxHealthyPercent)
     }
 
-    public override fun maxReceiveCount(maxReceiveCount: Number) {
+    override fun maxReceiveCount(maxReceiveCount: Number) {
       cdkBuilder.maxReceiveCount(maxReceiveCount)
     }
 
-    public override fun maxScalingCapacity(maxScalingCapacity: Number) {
+    override fun maxScalingCapacity(maxScalingCapacity: Number) {
       cdkBuilder.maxScalingCapacity(maxScalingCapacity)
     }
 
-    public override fun memoryLimitMiB(memoryLimitMiB: Number) {
+    override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
     }
 
-    public override fun memoryReservationMiB(memoryReservationMiB: Number) {
+    override fun memoryReservationMiB(memoryReservationMiB: Number) {
       cdkBuilder.memoryReservationMiB(memoryReservationMiB)
     }
 
-    public override fun minHealthyPercent(minHealthyPercent: Number) {
+    override fun minHealthyPercent(minHealthyPercent: Number) {
       cdkBuilder.minHealthyPercent(minHealthyPercent)
     }
 
-    public override fun minScalingCapacity(minScalingCapacity: Number) {
+    override fun minScalingCapacity(minScalingCapacity: Number) {
       cdkBuilder.minScalingCapacity(minScalingCapacity)
     }
 
-    public override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
+    override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
-    public override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
+    override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
       cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
     }
 
-    public override fun propagateTags(propagateTags: PropagatedTagSource) {
+    override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
     }
 
-    public override fun queue(queue: IQueue) {
+    override fun queue(queue: IQueue) {
       cdkBuilder.queue(queue.let(IQueue::unwrap))
     }
 
-    public override fun retentionPeriod(retentionPeriod: Duration) {
+    override fun retentionPeriod(retentionPeriod: Duration) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
     }
 
-    public override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
+    override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
 
-    public override fun secrets(secrets: Map<String, Secret>) {
-      cdkBuilder.secrets(secrets.mapValues { Secret.unwrap(it.value)})
+    override fun secrets(secrets: Map<String, Secret>) {
+      cdkBuilder.secrets(secrets.mapValues{Secret.unwrap(it.value)})
     }
 
-    public override fun serviceName(serviceName: String) {
+    override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
     }
 
-    public override fun visibilityTimeout(visibilityTimeout: Duration) {
+    override fun visibilityTimeout(visibilityTimeout: Duration) {
       cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration::unwrap))
     }
 
-    public override fun vpc(vpc: IVpc) {
+    override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 

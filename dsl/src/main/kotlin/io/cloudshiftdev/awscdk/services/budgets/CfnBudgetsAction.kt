@@ -94,48 +94,35 @@ public open class CfnBudgetsAction internal constructor(
   }
 
   public interface Builder {
-    public fun actionThreshold(actionThreshold: IResolvable) {
-    }
+    public fun actionThreshold(actionThreshold: IResolvable)
 
-    public fun actionThreshold(actionThreshold: ActionThresholdProperty) {
-    }
+    public fun actionThreshold(actionThreshold: ActionThresholdProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d431faf93eadd4eb9e269a6ee1f104fce786914616d64023a9442ca2f259e5a8")
-    public fun actionThreshold(actionThreshold: ActionThresholdProperty.Builder.() -> Unit) {
-    }
+    public fun actionThreshold(actionThreshold: ActionThresholdProperty.Builder.() -> Unit)
 
-    public fun actionType(actionType: String) {
-    }
+    public fun actionType(actionType: String)
 
-    public fun approvalModel(approvalModel: String) {
-    }
+    public fun approvalModel(approvalModel: String)
 
-    public fun budgetName(budgetName: String) {
-    }
+    public fun budgetName(budgetName: String)
 
-    public fun definition(definition: IResolvable) {
-    }
+    public fun definition(definition: IResolvable)
 
-    public fun definition(definition: DefinitionProperty) {
-    }
+    public fun definition(definition: DefinitionProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f1823ac6b0807d50de040e9648221813ce97cd1481fa360eb133bac1b036cc24")
-    public fun definition(definition: DefinitionProperty.Builder.() -> Unit) {
-    }
+    public fun definition(definition: DefinitionProperty.Builder.() -> Unit)
 
-    public fun executionRoleArn(executionRoleArn: String) {
-    }
+    public fun executionRoleArn(executionRoleArn: String)
 
-    public fun notificationType(notificationType: String) {
-    }
+    public fun notificationType(notificationType: String)
 
-    public fun subscribers(subscribers: IResolvable) {
-    }
+    public fun subscribers(subscribers: IResolvable)
 
-    public fun subscribers(subscribers: List<Any>) {
-    }
+    public fun subscribers(subscribers: List<Any>)
   }
 
   private class BuilderImpl(
@@ -145,58 +132,57 @@ public open class CfnBudgetsAction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.budgets.CfnBudgetsAction.Builder =
         software.amazon.awscdk.services.budgets.CfnBudgetsAction.Builder.create(scope, id)
 
-    public override fun actionThreshold(actionThreshold: IResolvable) {
+    override fun actionThreshold(actionThreshold: IResolvable) {
       cdkBuilder.actionThreshold(actionThreshold.let(IResolvable::unwrap))
     }
 
-    public override fun actionThreshold(actionThreshold: ActionThresholdProperty) {
+    override fun actionThreshold(actionThreshold: ActionThresholdProperty) {
       cdkBuilder.actionThreshold(actionThreshold.let(ActionThresholdProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d431faf93eadd4eb9e269a6ee1f104fce786914616d64023a9442ca2f259e5a8")
-    public override
-        fun actionThreshold(actionThreshold: ActionThresholdProperty.Builder.() -> Unit): Unit =
-        actionThreshold(ActionThresholdProperty(actionThreshold))
+    override fun actionThreshold(actionThreshold: ActionThresholdProperty.Builder.() -> Unit): Unit
+        = actionThreshold(ActionThresholdProperty(actionThreshold))
 
-    public override fun actionType(actionType: String) {
+    override fun actionType(actionType: String) {
       cdkBuilder.actionType(actionType)
     }
 
-    public override fun approvalModel(approvalModel: String) {
+    override fun approvalModel(approvalModel: String) {
       cdkBuilder.approvalModel(approvalModel)
     }
 
-    public override fun budgetName(budgetName: String) {
+    override fun budgetName(budgetName: String) {
       cdkBuilder.budgetName(budgetName)
     }
 
-    public override fun definition(definition: IResolvable) {
+    override fun definition(definition: IResolvable) {
       cdkBuilder.definition(definition.let(IResolvable::unwrap))
     }
 
-    public override fun definition(definition: DefinitionProperty) {
+    override fun definition(definition: DefinitionProperty) {
       cdkBuilder.definition(definition.let(DefinitionProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f1823ac6b0807d50de040e9648221813ce97cd1481fa360eb133bac1b036cc24")
-    public override fun definition(definition: DefinitionProperty.Builder.() -> Unit): Unit =
+    override fun definition(definition: DefinitionProperty.Builder.() -> Unit): Unit =
         definition(DefinitionProperty(definition))
 
-    public override fun executionRoleArn(executionRoleArn: String) {
+    override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
     }
 
-    public override fun notificationType(notificationType: String) {
+    override fun notificationType(notificationType: String) {
       cdkBuilder.notificationType(notificationType)
     }
 
-    public override fun subscribers(subscribers: IResolvable) {
+    override fun subscribers(subscribers: IResolvable) {
       cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
     }
 
-    public override fun subscribers(subscribers: List<Any>) {
+    override fun subscribers(subscribers: List<Any>) {
       cdkBuilder.subscribers(subscribers)
     }
 
@@ -233,14 +219,11 @@ public open class CfnBudgetsAction internal constructor(
     public fun subtype(): String
 
     public interface Builder {
-      public fun instanceIds(instanceIds: List<String>) {
-      }
+      public fun instanceIds(instanceIds: List<String>)
 
-      public fun region(region: String) {
-      }
+      public fun region(region: String)
 
-      public fun subtype(subtype: String) {
-      }
+      public fun subtype(subtype: String)
     }
 
     private class BuilderImpl : Builder {
@@ -249,15 +232,15 @@ public open class CfnBudgetsAction internal constructor(
           =
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty.builder()
 
-      public override fun instanceIds(instanceIds: List<String>) {
+      override fun instanceIds(instanceIds: List<String>) {
         cdkBuilder.instanceIds(instanceIds)
       }
 
-      public override fun region(region: String) {
+      override fun region(region: String) {
         cdkBuilder.region(region)
       }
 
-      public override fun subtype(subtype: String) {
+      override fun subtype(subtype: String) {
         cdkBuilder.subtype(subtype)
       }
 
@@ -270,11 +253,11 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
     ) : SsmActionDefinitionProperty {
-      public override fun instanceIds(): List<String> = unwrap(this).getInstanceIds() ?: emptyList()
+      override fun instanceIds(): List<String> = unwrap(this).getInstanceIds() ?: emptyList()
 
-      public override fun region(): String = unwrap(this).getRegion()
+      override fun region(): String = unwrap(this).getRegion()
 
-      public override fun subtype(): String = unwrap(this).getSubtype()
+      override fun subtype(): String = unwrap(this).getSubtype()
     }
 
     public companion object {
@@ -303,11 +286,9 @@ public open class CfnBudgetsAction internal constructor(
     public fun `value`(): Number
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun `value`(`value`: Number) {
-      }
+      public fun `value`(`value`: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -315,11 +296,11 @@ public open class CfnBudgetsAction internal constructor(
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty.Builder =
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun `value`(`value`: Number) {
+      override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -332,9 +313,9 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ActionThresholdProperty,
     ) : ActionThresholdProperty {
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
 
-      public override fun `value`(): Number = unwrap(this).getValue()
+      override fun `value`(): Number = unwrap(this).getValue()
     }
 
     public companion object {
@@ -365,41 +346,32 @@ public open class CfnBudgetsAction internal constructor(
     public fun ssmActionDefinition(): Any? = unwrap(this).getSsmActionDefinition()
 
     public interface Builder {
-      public fun iamActionDefinition(iamActionDefinition: IResolvable) {
-      }
+      public fun iamActionDefinition(iamActionDefinition: IResolvable)
 
-      public fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty) {
-      }
+      public fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c52ca7820a6fe284fd0ea3d9afc93f16bddfe032234b3317f714efc21f60583a")
       public
-          fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty.Builder.() -> Unit)
 
-      public fun scpActionDefinition(scpActionDefinition: IResolvable) {
-      }
+      public fun scpActionDefinition(scpActionDefinition: IResolvable)
 
-      public fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty) {
-      }
+      public fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9ff7d807d0531c6d4fa23ee7b3b44b9d6dc0cdd12a9c3129aa626e806c7876a")
       public
-          fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty.Builder.() -> Unit)
 
-      public fun ssmActionDefinition(ssmActionDefinition: IResolvable) {
-      }
+      public fun ssmActionDefinition(ssmActionDefinition: IResolvable)
 
-      public fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty) {
-      }
+      public fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82fccf1fba528ea2ee3866085585fe779fc0b8a34dc7177e1aa514be8ce3bcc1")
       public
-          fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty.Builder.() -> Unit) {
-      }
+          fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -407,45 +379,45 @@ public open class CfnBudgetsAction internal constructor(
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty.Builder =
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty.builder()
 
-      public override fun iamActionDefinition(iamActionDefinition: IResolvable) {
+      override fun iamActionDefinition(iamActionDefinition: IResolvable) {
         cdkBuilder.iamActionDefinition(iamActionDefinition.let(IResolvable::unwrap))
       }
 
-      public override fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty) {
+      override fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty) {
         cdkBuilder.iamActionDefinition(iamActionDefinition.let(IamActionDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c52ca7820a6fe284fd0ea3d9afc93f16bddfe032234b3317f714efc21f60583a")
-      public override
+      override
           fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty.Builder.() -> Unit):
           Unit = iamActionDefinition(IamActionDefinitionProperty(iamActionDefinition))
 
-      public override fun scpActionDefinition(scpActionDefinition: IResolvable) {
+      override fun scpActionDefinition(scpActionDefinition: IResolvable) {
         cdkBuilder.scpActionDefinition(scpActionDefinition.let(IResolvable::unwrap))
       }
 
-      public override fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty) {
+      override fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty) {
         cdkBuilder.scpActionDefinition(scpActionDefinition.let(ScpActionDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c9ff7d807d0531c6d4fa23ee7b3b44b9d6dc0cdd12a9c3129aa626e806c7876a")
-      public override
+      override
           fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty.Builder.() -> Unit):
           Unit = scpActionDefinition(ScpActionDefinitionProperty(scpActionDefinition))
 
-      public override fun ssmActionDefinition(ssmActionDefinition: IResolvable) {
+      override fun ssmActionDefinition(ssmActionDefinition: IResolvable) {
         cdkBuilder.ssmActionDefinition(ssmActionDefinition.let(IResolvable::unwrap))
       }
 
-      public override fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty) {
+      override fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty) {
         cdkBuilder.ssmActionDefinition(ssmActionDefinition.let(SsmActionDefinitionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("82fccf1fba528ea2ee3866085585fe779fc0b8a34dc7177e1aa514be8ce3bcc1")
-      public override
+      override
           fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty.Builder.() -> Unit):
           Unit = ssmActionDefinition(SsmActionDefinitionProperty(ssmActionDefinition))
 
@@ -458,11 +430,11 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.DefinitionProperty,
     ) : DefinitionProperty {
-      public override fun iamActionDefinition(): Any? = unwrap(this).getIamActionDefinition()
+      override fun iamActionDefinition(): Any? = unwrap(this).getIamActionDefinition()
 
-      public override fun scpActionDefinition(): Any? = unwrap(this).getScpActionDefinition()
+      override fun scpActionDefinition(): Any? = unwrap(this).getScpActionDefinition()
 
-      public override fun ssmActionDefinition(): Any? = unwrap(this).getSsmActionDefinition()
+      override fun ssmActionDefinition(): Any? = unwrap(this).getSsmActionDefinition()
     }
 
     public companion object {
@@ -491,11 +463,9 @@ public open class CfnBudgetsAction internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -503,11 +473,11 @@ public open class CfnBudgetsAction internal constructor(
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty.Builder =
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -520,9 +490,9 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SubscriberProperty,
     ) : SubscriberProperty {
-      public override fun address(): String = unwrap(this).getAddress()
+      override fun address(): String = unwrap(this).getAddress()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -555,17 +525,13 @@ public open class CfnBudgetsAction internal constructor(
     public fun users(): List<String> = unwrap(this).getUsers() ?: emptyList()
 
     public interface Builder {
-      public fun groups(groups: List<String>) {
-      }
+      public fun groups(groups: List<String>)
 
-      public fun policyArn(policyArn: String) {
-      }
+      public fun policyArn(policyArn: String)
 
-      public fun roles(roles: List<String>) {
-      }
+      public fun roles(roles: List<String>)
 
-      public fun users(users: List<String>) {
-      }
+      public fun users(users: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -574,19 +540,19 @@ public open class CfnBudgetsAction internal constructor(
           =
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty.builder()
 
-      public override fun groups(groups: List<String>) {
+      override fun groups(groups: List<String>) {
         cdkBuilder.groups(groups)
       }
 
-      public override fun policyArn(policyArn: String) {
+      override fun policyArn(policyArn: String) {
         cdkBuilder.policyArn(policyArn)
       }
 
-      public override fun roles(roles: List<String>) {
+      override fun roles(roles: List<String>) {
         cdkBuilder.roles(roles)
       }
 
-      public override fun users(users: List<String>) {
+      override fun users(users: List<String>) {
         cdkBuilder.users(users)
       }
 
@@ -599,13 +565,13 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty,
     ) : IamActionDefinitionProperty {
-      public override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
+      override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
 
-      public override fun policyArn(): String = unwrap(this).getPolicyArn()
+      override fun policyArn(): String = unwrap(this).getPolicyArn()
 
-      public override fun roles(): List<String> = unwrap(this).getRoles() ?: emptyList()
+      override fun roles(): List<String> = unwrap(this).getRoles() ?: emptyList()
 
-      public override fun users(): List<String> = unwrap(this).getUsers() ?: emptyList()
+      override fun users(): List<String> = unwrap(this).getUsers() ?: emptyList()
     }
 
     public companion object {
@@ -634,11 +600,9 @@ public open class CfnBudgetsAction internal constructor(
     public fun targetIds(): List<String>
 
     public interface Builder {
-      public fun policyId(policyId: String) {
-      }
+      public fun policyId(policyId: String)
 
-      public fun targetIds(targetIds: List<String>) {
-      }
+      public fun targetIds(targetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -647,11 +611,11 @@ public open class CfnBudgetsAction internal constructor(
           =
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty.builder()
 
-      public override fun policyId(policyId: String) {
+      override fun policyId(policyId: String) {
         cdkBuilder.policyId(policyId)
       }
 
-      public override fun targetIds(targetIds: List<String>) {
+      override fun targetIds(targetIds: List<String>) {
         cdkBuilder.targetIds(targetIds)
       }
 
@@ -664,9 +628,9 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty,
     ) : ScpActionDefinitionProperty {
-      public override fun policyId(): String = unwrap(this).getPolicyId()
+      override fun policyId(): String = unwrap(this).getPolicyId()
 
-      public override fun targetIds(): List<String> = unwrap(this).getTargetIds() ?: emptyList()
+      override fun targetIds(): List<String> = unwrap(this).getTargetIds() ?: emptyList()
     }
 
     public companion object {

@@ -11,22 +11,20 @@ public interface LayerVersionAttributes {
   public fun layerVersionArn(): String
 
   public interface Builder {
-    public fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
-    }
+    public fun compatibleRuntimes(compatibleRuntimes: List<Runtime>)
 
-    public fun layerVersionArn(layerVersionArn: String) {
-    }
+    public fun layerVersionArn(layerVersionArn: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.LayerVersionAttributes.Builder =
         software.amazon.awscdk.services.lambda.LayerVersionAttributes.builder()
 
-    public override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
+    override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
     }
 
-    public override fun layerVersionArn(layerVersionArn: String) {
+    override fun layerVersionArn(layerVersionArn: String) {
       cdkBuilder.layerVersionArn(layerVersionArn)
     }
 
@@ -37,10 +35,10 @@ public interface LayerVersionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.LayerVersionAttributes,
   ) : LayerVersionAttributes {
-    public override fun compatibleRuntimes(): List<Runtime> =
+    override fun compatibleRuntimes(): List<Runtime> =
         unwrap(this).getCompatibleRuntimes()?.map(Runtime::wrap) ?: emptyList()
 
-    public override fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
+    override fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
   }
 
   public companion object {

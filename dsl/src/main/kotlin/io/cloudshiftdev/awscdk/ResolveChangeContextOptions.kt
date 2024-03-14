@@ -9,22 +9,20 @@ public interface ResolveChangeContextOptions {
   public fun removeEmpty(): Boolean? = unwrap(this).getRemoveEmpty()
 
   public interface Builder {
-    public fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean) {
-    }
+    public fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean)
 
-    public fun removeEmpty(removeEmpty: Boolean) {
-    }
+    public fun removeEmpty(removeEmpty: Boolean)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.ResolveChangeContextOptions.Builder =
         software.amazon.awscdk.ResolveChangeContextOptions.builder()
 
-    public override fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean) {
+    override fun allowIntrinsicKeys(allowIntrinsicKeys: Boolean) {
       cdkBuilder.allowIntrinsicKeys(allowIntrinsicKeys)
     }
 
-    public override fun removeEmpty(removeEmpty: Boolean) {
+    override fun removeEmpty(removeEmpty: Boolean) {
       cdkBuilder.removeEmpty(removeEmpty)
     }
 
@@ -34,9 +32,9 @@ public interface ResolveChangeContextOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ResolveChangeContextOptions,
   ) : ResolveChangeContextOptions {
-    public override fun allowIntrinsicKeys(): Boolean? = unwrap(this).getAllowIntrinsicKeys()
+    override fun allowIntrinsicKeys(): Boolean? = unwrap(this).getAllowIntrinsicKeys()
 
-    public override fun removeEmpty(): Boolean? = unwrap(this).getRemoveEmpty()
+    override fun removeEmpty(): Boolean? = unwrap(this).getRemoveEmpty()
   }
 
   public companion object {

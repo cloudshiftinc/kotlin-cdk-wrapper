@@ -106,44 +106,31 @@ public open class CfnDBProxy internal constructor(
   }
 
   public interface Builder {
-    public fun auth(auth: IResolvable) {
-    }
+    public fun auth(auth: IResolvable)
 
-    public fun auth(auth: List<Any>) {
-    }
+    public fun auth(auth: List<Any>)
 
-    public fun dbProxyName(dbProxyName: String) {
-    }
+    public fun dbProxyName(dbProxyName: String)
 
-    public fun debugLogging(debugLogging: Boolean) {
-    }
+    public fun debugLogging(debugLogging: Boolean)
 
-    public fun debugLogging(debugLogging: IResolvable) {
-    }
+    public fun debugLogging(debugLogging: IResolvable)
 
-    public fun engineFamily(engineFamily: String) {
-    }
+    public fun engineFamily(engineFamily: String)
 
-    public fun idleClientTimeout(idleClientTimeout: Number) {
-    }
+    public fun idleClientTimeout(idleClientTimeout: Number)
 
-    public fun requireTls(requireTls: Boolean) {
-    }
+    public fun requireTls(requireTls: Boolean)
 
-    public fun requireTls(requireTls: IResolvable) {
-    }
+    public fun requireTls(requireTls: IResolvable)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun tags(tags: List<TagFormatProperty>) {
-    }
+    public fun tags(tags: List<TagFormatProperty>)
 
-    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
-    }
+    public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
 
-    public fun vpcSubnetIds(vpcSubnetIds: List<String>) {
-    }
+    public fun vpcSubnetIds(vpcSubnetIds: List<String>)
   }
 
   private class BuilderImpl(
@@ -153,55 +140,55 @@ public open class CfnDBProxy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.CfnDBProxy.Builder =
         software.amazon.awscdk.services.rds.CfnDBProxy.Builder.create(scope, id)
 
-    public override fun auth(auth: IResolvable) {
+    override fun auth(auth: IResolvable) {
       cdkBuilder.auth(auth.let(IResolvable::unwrap))
     }
 
-    public override fun auth(auth: List<Any>) {
+    override fun auth(auth: List<Any>) {
       cdkBuilder.auth(auth)
     }
 
-    public override fun dbProxyName(dbProxyName: String) {
+    override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
     }
 
-    public override fun debugLogging(debugLogging: Boolean) {
+    override fun debugLogging(debugLogging: Boolean) {
       cdkBuilder.debugLogging(debugLogging)
     }
 
-    public override fun debugLogging(debugLogging: IResolvable) {
+    override fun debugLogging(debugLogging: IResolvable) {
       cdkBuilder.debugLogging(debugLogging.let(IResolvable::unwrap))
     }
 
-    public override fun engineFamily(engineFamily: String) {
+    override fun engineFamily(engineFamily: String) {
       cdkBuilder.engineFamily(engineFamily)
     }
 
-    public override fun idleClientTimeout(idleClientTimeout: Number) {
+    override fun idleClientTimeout(idleClientTimeout: Number) {
       cdkBuilder.idleClientTimeout(idleClientTimeout)
     }
 
-    public override fun requireTls(requireTls: Boolean) {
+    override fun requireTls(requireTls: Boolean) {
       cdkBuilder.requireTls(requireTls)
     }
 
-    public override fun requireTls(requireTls: IResolvable) {
+    override fun requireTls(requireTls: IResolvable) {
       cdkBuilder.requireTls(requireTls.let(IResolvable::unwrap))
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun tags(tags: List<TagFormatProperty>) {
+    override fun tags(tags: List<TagFormatProperty>) {
       cdkBuilder.tags(tags.map(TagFormatProperty::unwrap))
     }
 
-    public override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
+    override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
-    public override fun vpcSubnetIds(vpcSubnetIds: List<String>) {
+    override fun vpcSubnetIds(vpcSubnetIds: List<String>) {
       cdkBuilder.vpcSubnetIds(vpcSubnetIds)
     }
 
@@ -241,20 +228,15 @@ public open class CfnDBProxy internal constructor(
     public fun secretArn(): String? = unwrap(this).getSecretArn()
 
     public interface Builder {
-      public fun authScheme(authScheme: String) {
-      }
+      public fun authScheme(authScheme: String)
 
-      public fun clientPasswordAuthType(clientPasswordAuthType: String) {
-      }
+      public fun clientPasswordAuthType(clientPasswordAuthType: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
 
-      public fun iamAuth(iamAuth: String) {
-      }
+      public fun iamAuth(iamAuth: String)
 
-      public fun secretArn(secretArn: String) {
-      }
+      public fun secretArn(secretArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -262,23 +244,23 @@ public open class CfnDBProxy internal constructor(
           software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty.builder()
 
-      public override fun authScheme(authScheme: String) {
+      override fun authScheme(authScheme: String) {
         cdkBuilder.authScheme(authScheme)
       }
 
-      public override fun clientPasswordAuthType(clientPasswordAuthType: String) {
+      override fun clientPasswordAuthType(clientPasswordAuthType: String) {
         cdkBuilder.clientPasswordAuthType(clientPasswordAuthType)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
-      public override fun iamAuth(iamAuth: String) {
+      override fun iamAuth(iamAuth: String) {
         cdkBuilder.iamAuth(iamAuth)
       }
 
-      public override fun secretArn(secretArn: String) {
+      override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
       }
 
@@ -289,16 +271,15 @@ public open class CfnDBProxy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty,
     ) : AuthFormatProperty {
-      public override fun authScheme(): String? = unwrap(this).getAuthScheme()
+      override fun authScheme(): String? = unwrap(this).getAuthScheme()
 
-      public override fun clientPasswordAuthType(): String? =
-          unwrap(this).getClientPasswordAuthType()
+      override fun clientPasswordAuthType(): String? = unwrap(this).getClientPasswordAuthType()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
 
-      public override fun iamAuth(): String? = unwrap(this).getIamAuth()
+      override fun iamAuth(): String? = unwrap(this).getIamAuth()
 
-      public override fun secretArn(): String? = unwrap(this).getSecretArn()
+      override fun secretArn(): String? = unwrap(this).getSecretArn()
     }
 
     public companion object {
@@ -327,11 +308,9 @@ public open class CfnDBProxy internal constructor(
     public fun `value`(): String? = unwrap(this).getValue()
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -339,11 +318,11 @@ public open class CfnDBProxy internal constructor(
           software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty.Builder =
           software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -354,9 +333,9 @@ public open class CfnDBProxy internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty,
     ) : TagFormatProperty {
-      public override fun key(): String? = unwrap(this).getKey()
+      override fun key(): String? = unwrap(this).getKey()
 
-      public override fun `value`(): String? = unwrap(this).getValue()
+      override fun `value`(): String? = unwrap(this).getValue()
     }
 
     public companion object {

@@ -16,14 +16,11 @@ public open class VpcEndpointServiceDomainName internal constructor(
   }
 
   public interface Builder {
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun endpointService(endpointService: IVpcEndpointService) {
-    }
+    public fun endpointService(endpointService: IVpcEndpointService)
 
-    public fun publicHostedZone(publicHostedZone: IPublicHostedZone) {
-    }
+    public fun publicHostedZone(publicHostedZone: IPublicHostedZone)
   }
 
   private class BuilderImpl(
@@ -35,15 +32,15 @@ public open class VpcEndpointServiceDomainName internal constructor(
         software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName.Builder.create(scope,
         id)
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun endpointService(endpointService: IVpcEndpointService) {
+    override fun endpointService(endpointService: IVpcEndpointService) {
       cdkBuilder.endpointService(endpointService.let(IVpcEndpointService::unwrap))
     }
 
-    public override fun publicHostedZone(publicHostedZone: IPublicHostedZone) {
+    override fun publicHostedZone(publicHostedZone: IPublicHostedZone) {
       cdkBuilder.publicHostedZone(publicHostedZone.let(IPublicHostedZone::unwrap))
     }
 

@@ -87,80 +87,57 @@ public open class Table internal constructor(
   public override fun tableStreamArn(): String? = unwrap(this).getTableStreamArn()
 
   public interface Builder {
-    public fun billingMode(billingMode: BillingMode) {
-    }
+    public fun billingMode(billingMode: BillingMode)
 
-    public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
-    }
+    public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean)
 
-    public fun deletionProtection(deletionProtection: Boolean) {
-    }
+    public fun deletionProtection(deletionProtection: Boolean)
 
-    public fun encryption(encryption: TableEncryption) {
-    }
+    public fun encryption(encryption: TableEncryption)
 
-    public fun encryptionKey(encryptionKey: IKey) {
-    }
+    public fun encryptionKey(encryptionKey: IKey)
 
-    public fun importSource(importSource: ImportSourceSpecification) {
-    }
+    public fun importSource(importSource: ImportSourceSpecification)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca2f70bbf86ecde413627217be1d1e3d8fdc03a709cc0c706605cdcb1bf7f7d6")
-    public fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit) {
-    }
+    public fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit)
 
-    public fun kinesisStream(kinesisStream: IStream) {
-    }
+    public fun kinesisStream(kinesisStream: IStream)
 
-    public fun partitionKey(partitionKey: Attribute) {
-    }
+    public fun partitionKey(partitionKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73e27f78e8d2e12f325d6d5e093919fbdc99062bf2df8bac245822de05c0bd5b")
-    public fun partitionKey(partitionKey: Attribute.Builder.() -> Unit) {
-    }
+    public fun partitionKey(partitionKey: Attribute.Builder.() -> Unit)
 
-    public fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
-    }
+    public fun pointInTimeRecovery(pointInTimeRecovery: Boolean)
 
-    public fun readCapacity(readCapacity: Number) {
-    }
+    public fun readCapacity(readCapacity: Number)
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    }
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
 
-    public fun replicationRegions(replicationRegions: List<String>) {
-    }
+    public fun replicationRegions(replicationRegions: List<String>)
 
-    public fun replicationTimeout(replicationTimeout: Duration) {
-    }
+    public fun replicationTimeout(replicationTimeout: Duration)
 
-    public fun sortKey(sortKey: Attribute) {
-    }
+    public fun sortKey(sortKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89c5f7f943bcf4ae622e2bec85e4287402b229325cb3f71be2ef432328ee9c23")
-    public fun sortKey(sortKey: Attribute.Builder.() -> Unit) {
-    }
+    public fun sortKey(sortKey: Attribute.Builder.() -> Unit)
 
-    public fun stream(stream: StreamViewType) {
-    }
+    public fun stream(stream: StreamViewType)
 
-    public fun tableClass(tableClass: TableClass) {
-    }
+    public fun tableClass(tableClass: TableClass)
 
-    public fun tableName(tableName: String) {
-    }
+    public fun tableName(tableName: String)
 
-    public fun timeToLiveAttribute(timeToLiveAttribute: String) {
-    }
+    public fun timeToLiveAttribute(timeToLiveAttribute: String)
 
-    public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
-    }
+    public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean)
 
-    public fun writeCapacity(writeCapacity: Number) {
-    }
+    public fun writeCapacity(writeCapacity: Number)
   }
 
   private class BuilderImpl(
@@ -170,98 +147,97 @@ public open class Table internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.Table.Builder =
         software.amazon.awscdk.services.dynamodb.Table.Builder.create(scope, id)
 
-    public override fun billingMode(billingMode: BillingMode) {
+    override fun billingMode(billingMode: BillingMode) {
       cdkBuilder.billingMode(billingMode.let(BillingMode::unwrap))
     }
 
-    public override fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
+    override fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
       cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
     }
 
-    public override fun deletionProtection(deletionProtection: Boolean) {
+    override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
     }
 
-    public override fun encryption(encryption: TableEncryption) {
+    override fun encryption(encryption: TableEncryption) {
       cdkBuilder.encryption(encryption.let(TableEncryption::unwrap))
     }
 
-    public override fun encryptionKey(encryptionKey: IKey) {
+    override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
-    public override fun importSource(importSource: ImportSourceSpecification) {
+    override fun importSource(importSource: ImportSourceSpecification) {
       cdkBuilder.importSource(importSource.let(ImportSourceSpecification::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca2f70bbf86ecde413627217be1d1e3d8fdc03a709cc0c706605cdcb1bf7f7d6")
-    public override fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit):
-        Unit = importSource(ImportSourceSpecification(importSource))
+    override fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit): Unit =
+        importSource(ImportSourceSpecification(importSource))
 
-    public override fun kinesisStream(kinesisStream: IStream) {
+    override fun kinesisStream(kinesisStream: IStream) {
       cdkBuilder.kinesisStream(kinesisStream.let(IStream::unwrap))
     }
 
-    public override fun partitionKey(partitionKey: Attribute) {
+    override fun partitionKey(partitionKey: Attribute) {
       cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73e27f78e8d2e12f325d6d5e093919fbdc99062bf2df8bac245822de05c0bd5b")
-    public override fun partitionKey(partitionKey: Attribute.Builder.() -> Unit): Unit =
+    override fun partitionKey(partitionKey: Attribute.Builder.() -> Unit): Unit =
         partitionKey(Attribute(partitionKey))
 
-    public override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
+    override fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
       cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
     }
 
-    public override fun readCapacity(readCapacity: Number) {
+    override fun readCapacity(readCapacity: Number) {
       cdkBuilder.readCapacity(readCapacity)
     }
 
-    public override fun removalPolicy(removalPolicy: RemovalPolicy) {
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
 
-    public override fun replicationRegions(replicationRegions: List<String>) {
+    override fun replicationRegions(replicationRegions: List<String>) {
       cdkBuilder.replicationRegions(replicationRegions)
     }
 
-    public override fun replicationTimeout(replicationTimeout: Duration) {
+    override fun replicationTimeout(replicationTimeout: Duration) {
       cdkBuilder.replicationTimeout(replicationTimeout.let(Duration::unwrap))
     }
 
-    public override fun sortKey(sortKey: Attribute) {
+    override fun sortKey(sortKey: Attribute) {
       cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("89c5f7f943bcf4ae622e2bec85e4287402b229325cb3f71be2ef432328ee9c23")
-    public override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit =
-        sortKey(Attribute(sortKey))
+    override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit = sortKey(Attribute(sortKey))
 
-    public override fun stream(stream: StreamViewType) {
+    override fun stream(stream: StreamViewType) {
       cdkBuilder.stream(stream.let(StreamViewType::unwrap))
     }
 
-    public override fun tableClass(tableClass: TableClass) {
+    override fun tableClass(tableClass: TableClass) {
       cdkBuilder.tableClass(tableClass.let(TableClass::unwrap))
     }
 
-    public override fun tableName(tableName: String) {
+    override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
 
-    public override fun timeToLiveAttribute(timeToLiveAttribute: String) {
+    override fun timeToLiveAttribute(timeToLiveAttribute: String) {
       cdkBuilder.timeToLiveAttribute(timeToLiveAttribute)
     }
 
-    public override fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
+    override fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
       cdkBuilder.waitForReplicationToFinish(waitForReplicationToFinish)
     }
 
-    public override fun writeCapacity(writeCapacity: Number) {
+    override fun writeCapacity(writeCapacity: Number) {
       cdkBuilder.writeCapacity(writeCapacity)
     }
 

@@ -37,14 +37,11 @@ public open class CfnParameterGroup internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun parameterGroupName(parameterGroupName: String) {
-    }
+    public fun parameterGroupName(parameterGroupName: String)
 
-    public fun parameterNameValues(parameterNameValues: Any) {
-    }
+    public fun parameterNameValues(parameterNameValues: Any)
   }
 
   private class BuilderImpl(
@@ -54,15 +51,15 @@ public open class CfnParameterGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.dax.CfnParameterGroup.Builder =
         software.amazon.awscdk.services.dax.CfnParameterGroup.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun parameterGroupName(parameterGroupName: String) {
+    override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
 
-    public override fun parameterNameValues(parameterNameValues: Any) {
+    override fun parameterNameValues(parameterNameValues: Any) {
       cdkBuilder.parameterNameValues(parameterNameValues)
     }
 

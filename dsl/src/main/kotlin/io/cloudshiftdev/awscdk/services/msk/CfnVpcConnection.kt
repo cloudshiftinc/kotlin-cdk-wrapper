@@ -60,23 +60,17 @@ public open class CfnVpcConnection internal constructor(
   }
 
   public interface Builder {
-    public fun authentication(authentication: String) {
-    }
+    public fun authentication(authentication: String)
 
-    public fun clientSubnets(clientSubnets: List<String>) {
-    }
+    public fun clientSubnets(clientSubnets: List<String>)
 
-    public fun securityGroups(securityGroups: List<String>) {
-    }
+    public fun securityGroups(securityGroups: List<String>)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun targetClusterArn(targetClusterArn: String) {
-    }
+    public fun targetClusterArn(targetClusterArn: String)
 
-    public fun vpcId(vpcId: String) {
-    }
+    public fun vpcId(vpcId: String)
   }
 
   private class BuilderImpl(
@@ -86,27 +80,27 @@ public open class CfnVpcConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.msk.CfnVpcConnection.Builder =
         software.amazon.awscdk.services.msk.CfnVpcConnection.Builder.create(scope, id)
 
-    public override fun authentication(authentication: String) {
+    override fun authentication(authentication: String) {
       cdkBuilder.authentication(authentication)
     }
 
-    public override fun clientSubnets(clientSubnets: List<String>) {
+    override fun clientSubnets(clientSubnets: List<String>) {
       cdkBuilder.clientSubnets(clientSubnets)
     }
 
-    public override fun securityGroups(securityGroups: List<String>) {
+    override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun targetClusterArn(targetClusterArn: String) {
+    override fun targetClusterArn(targetClusterArn: String) {
       cdkBuilder.targetClusterArn(targetClusterArn)
     }
 
-    public override fun vpcId(vpcId: String) {
+    override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
 

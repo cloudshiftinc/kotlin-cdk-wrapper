@@ -73,28 +73,21 @@ public open class CfnLocationFSxONTAP internal constructor(
   }
 
   public interface Builder {
-    public fun protocol(protocol: IResolvable) {
-    }
+    public fun protocol(protocol: IResolvable)
 
-    public fun protocol(protocol: ProtocolProperty) {
-    }
+    public fun protocol(protocol: ProtocolProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7641b926322602b576aaffe49c086d0d25de6353417991882e2bb2c85ffb8dbd")
-    public fun protocol(protocol: ProtocolProperty.Builder.() -> Unit) {
-    }
+    public fun protocol(protocol: ProtocolProperty.Builder.() -> Unit)
 
-    public fun securityGroupArns(securityGroupArns: List<String>) {
-    }
+    public fun securityGroupArns(securityGroupArns: List<String>)
 
-    public fun storageVirtualMachineArn(storageVirtualMachineArn: String) {
-    }
+    public fun storageVirtualMachineArn(storageVirtualMachineArn: String)
 
-    public fun subdirectory(subdirectory: String) {
-    }
+    public fun subdirectory(subdirectory: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -104,32 +97,32 @@ public open class CfnLocationFSxONTAP internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.Builder =
         software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.Builder.create(scope, id)
 
-    public override fun protocol(protocol: IResolvable) {
+    override fun protocol(protocol: IResolvable) {
       cdkBuilder.protocol(protocol.let(IResolvable::unwrap))
     }
 
-    public override fun protocol(protocol: ProtocolProperty) {
+    override fun protocol(protocol: ProtocolProperty) {
       cdkBuilder.protocol(protocol.let(ProtocolProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7641b926322602b576aaffe49c086d0d25de6353417991882e2bb2c85ffb8dbd")
-    public override fun protocol(protocol: ProtocolProperty.Builder.() -> Unit): Unit =
+    override fun protocol(protocol: ProtocolProperty.Builder.() -> Unit): Unit =
         protocol(ProtocolProperty(protocol))
 
-    public override fun securityGroupArns(securityGroupArns: List<String>) {
+    override fun securityGroupArns(securityGroupArns: List<String>) {
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
-    public override fun storageVirtualMachineArn(storageVirtualMachineArn: String) {
+    override fun storageVirtualMachineArn(storageVirtualMachineArn: String) {
       cdkBuilder.storageVirtualMachineArn(storageVirtualMachineArn)
     }
 
-    public override fun subdirectory(subdirectory: String) {
+    override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -162,8 +155,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -172,7 +164,7 @@ public open class CfnLocationFSxONTAP internal constructor(
           =
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty.builder()
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -185,7 +177,7 @@ public open class CfnLocationFSxONTAP internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SmbMountOptionsProperty,
     ) : SmbMountOptionsProperty {
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -212,16 +204,13 @@ public open class CfnLocationFSxONTAP internal constructor(
     public fun mountOptions(): Any
 
     public interface Builder {
-      public fun mountOptions(mountOptions: IResolvable) {
-      }
+      public fun mountOptions(mountOptions: IResolvable)
 
-      public fun mountOptions(mountOptions: NfsMountOptionsProperty) {
-      }
+      public fun mountOptions(mountOptions: NfsMountOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("033f4be26885125e4eadaf1dd772bb9201c4c29cbcf806a8b9cc513bbf365fa7")
-      public fun mountOptions(mountOptions: NfsMountOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun mountOptions(mountOptions: NfsMountOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -229,18 +218,18 @@ public open class CfnLocationFSxONTAP internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty.builder()
 
-      public override fun mountOptions(mountOptions: IResolvable) {
+      override fun mountOptions(mountOptions: IResolvable) {
         cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
       }
 
-      public override fun mountOptions(mountOptions: NfsMountOptionsProperty) {
+      override fun mountOptions(mountOptions: NfsMountOptionsProperty) {
         cdkBuilder.mountOptions(mountOptions.let(NfsMountOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("033f4be26885125e4eadaf1dd772bb9201c4c29cbcf806a8b9cc513bbf365fa7")
-      public override fun mountOptions(mountOptions: NfsMountOptionsProperty.Builder.() -> Unit):
-          Unit = mountOptions(NfsMountOptionsProperty(mountOptions))
+      override fun mountOptions(mountOptions: NfsMountOptionsProperty.Builder.() -> Unit): Unit =
+          mountOptions(NfsMountOptionsProperty(mountOptions))
 
       public fun build(): software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty =
           cdkBuilder.build()
@@ -250,7 +239,7 @@ public open class CfnLocationFSxONTAP internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NFSProperty,
     ) : NFSProperty {
-      public override fun mountOptions(): Any = unwrap(this).getMountOptions()
+      override fun mountOptions(): Any = unwrap(this).getMountOptions()
     }
 
     public companion object {
@@ -277,8 +266,7 @@ public open class CfnLocationFSxONTAP internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -287,7 +275,7 @@ public open class CfnLocationFSxONTAP internal constructor(
           =
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty.builder()
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -300,7 +288,7 @@ public open class CfnLocationFSxONTAP internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.NfsMountOptionsProperty,
     ) : NfsMountOptionsProperty {
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -329,27 +317,21 @@ public open class CfnLocationFSxONTAP internal constructor(
     public fun smb(): Any? = unwrap(this).getSmb()
 
     public interface Builder {
-      public fun nfs(nfs: IResolvable) {
-      }
+      public fun nfs(nfs: IResolvable)
 
-      public fun nfs(nfs: NFSProperty) {
-      }
+      public fun nfs(nfs: NFSProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("06b224cb9409b415fb5e24827f5dfcea7b3d9bf295bcef0b39a174100f85e1c6")
-      public fun nfs(nfs: NFSProperty.Builder.() -> Unit) {
-      }
+      public fun nfs(nfs: NFSProperty.Builder.() -> Unit)
 
-      public fun smb(smb: IResolvable) {
-      }
+      public fun smb(smb: IResolvable)
 
-      public fun smb(smb: SMBProperty) {
-      }
+      public fun smb(smb: SMBProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f717d73cab6ad0a60e71361da9a2ab93603b509210d4c0deb60ee4cb1d98bbec")
-      public fun smb(smb: SMBProperty.Builder.() -> Unit) {
-      }
+      public fun smb(smb: SMBProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -357,29 +339,29 @@ public open class CfnLocationFSxONTAP internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty.builder()
 
-      public override fun nfs(nfs: IResolvable) {
+      override fun nfs(nfs: IResolvable) {
         cdkBuilder.nfs(nfs.let(IResolvable::unwrap))
       }
 
-      public override fun nfs(nfs: NFSProperty) {
+      override fun nfs(nfs: NFSProperty) {
         cdkBuilder.nfs(nfs.let(NFSProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("06b224cb9409b415fb5e24827f5dfcea7b3d9bf295bcef0b39a174100f85e1c6")
-      public override fun nfs(nfs: NFSProperty.Builder.() -> Unit): Unit = nfs(NFSProperty(nfs))
+      override fun nfs(nfs: NFSProperty.Builder.() -> Unit): Unit = nfs(NFSProperty(nfs))
 
-      public override fun smb(smb: IResolvable) {
+      override fun smb(smb: IResolvable) {
         cdkBuilder.smb(smb.let(IResolvable::unwrap))
       }
 
-      public override fun smb(smb: SMBProperty) {
+      override fun smb(smb: SMBProperty) {
         cdkBuilder.smb(smb.let(SMBProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f717d73cab6ad0a60e71361da9a2ab93603b509210d4c0deb60ee4cb1d98bbec")
-      public override fun smb(smb: SMBProperty.Builder.() -> Unit): Unit = smb(SMBProperty(smb))
+      override fun smb(smb: SMBProperty.Builder.() -> Unit): Unit = smb(SMBProperty(smb))
 
       public fun build():
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty =
@@ -390,9 +372,9 @@ public open class CfnLocationFSxONTAP internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.ProtocolProperty,
     ) : ProtocolProperty {
-      public override fun nfs(): Any? = unwrap(this).getNfs()
+      override fun nfs(): Any? = unwrap(this).getNfs()
 
-      public override fun smb(): Any? = unwrap(this).getSmb()
+      override fun smb(): Any? = unwrap(this).getSmb()
     }
 
     public companion object {
@@ -425,25 +407,19 @@ public open class CfnLocationFSxONTAP internal constructor(
     public fun user(): String
 
     public interface Builder {
-      public fun domain(domain: String) {
-      }
+      public fun domain(domain: String)
 
-      public fun mountOptions(mountOptions: IResolvable) {
-      }
+      public fun mountOptions(mountOptions: IResolvable)
 
-      public fun mountOptions(mountOptions: SmbMountOptionsProperty) {
-      }
+      public fun mountOptions(mountOptions: SmbMountOptionsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("97d502a9fa55737f807ba05f319d7aeeaa18f7474c96932ae50515bbd8b0740c")
-      public fun mountOptions(mountOptions: SmbMountOptionsProperty.Builder.() -> Unit) {
-      }
+      public fun mountOptions(mountOptions: SmbMountOptionsProperty.Builder.() -> Unit)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun user(user: String) {
-      }
+      public fun user(user: String)
     }
 
     private class BuilderImpl : Builder {
@@ -451,28 +427,28 @@ public open class CfnLocationFSxONTAP internal constructor(
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty.Builder =
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty.builder()
 
-      public override fun domain(domain: String) {
+      override fun domain(domain: String) {
         cdkBuilder.domain(domain)
       }
 
-      public override fun mountOptions(mountOptions: IResolvable) {
+      override fun mountOptions(mountOptions: IResolvable) {
         cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
       }
 
-      public override fun mountOptions(mountOptions: SmbMountOptionsProperty) {
+      override fun mountOptions(mountOptions: SmbMountOptionsProperty) {
         cdkBuilder.mountOptions(mountOptions.let(SmbMountOptionsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("97d502a9fa55737f807ba05f319d7aeeaa18f7474c96932ae50515bbd8b0740c")
-      public override fun mountOptions(mountOptions: SmbMountOptionsProperty.Builder.() -> Unit):
-          Unit = mountOptions(SmbMountOptionsProperty(mountOptions))
+      override fun mountOptions(mountOptions: SmbMountOptionsProperty.Builder.() -> Unit): Unit =
+          mountOptions(SmbMountOptionsProperty(mountOptions))
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun user(user: String) {
+      override fun user(user: String) {
         cdkBuilder.user(user)
       }
 
@@ -484,13 +460,13 @@ public open class CfnLocationFSxONTAP internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP.SMBProperty,
     ) : SMBProperty {
-      public override fun domain(): String? = unwrap(this).getDomain()
+      override fun domain(): String? = unwrap(this).getDomain()
 
-      public override fun mountOptions(): Any = unwrap(this).getMountOptions()
+      override fun mountOptions(): Any = unwrap(this).getMountOptions()
 
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun user(): String = unwrap(this).getUser()
+      override fun user(): String = unwrap(this).getUser()
     }
 
     public companion object {

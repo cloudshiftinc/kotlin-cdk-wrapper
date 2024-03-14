@@ -19,43 +19,38 @@ public interface LaunchTemplateSpotOptions {
   public fun validUntil(): Expiration? = unwrap(this).getValidUntil()?.let(Expiration::wrap)
 
   public interface Builder {
-    public fun blockDuration(blockDuration: Duration) {
-    }
+    public fun blockDuration(blockDuration: Duration)
 
-    public fun interruptionBehavior(interruptionBehavior: SpotInstanceInterruption) {
-    }
+    public fun interruptionBehavior(interruptionBehavior: SpotInstanceInterruption)
 
-    public fun maxPrice(maxPrice: Number) {
-    }
+    public fun maxPrice(maxPrice: Number)
 
-    public fun requestType(requestType: SpotRequestType) {
-    }
+    public fun requestType(requestType: SpotRequestType)
 
-    public fun validUntil(validUntil: Expiration) {
-    }
+    public fun validUntil(validUntil: Expiration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions.Builder =
         software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions.builder()
 
-    public override fun blockDuration(blockDuration: Duration) {
+    override fun blockDuration(blockDuration: Duration) {
       cdkBuilder.blockDuration(blockDuration.let(Duration::unwrap))
     }
 
-    public override fun interruptionBehavior(interruptionBehavior: SpotInstanceInterruption) {
+    override fun interruptionBehavior(interruptionBehavior: SpotInstanceInterruption) {
       cdkBuilder.interruptionBehavior(interruptionBehavior.let(SpotInstanceInterruption::unwrap))
     }
 
-    public override fun maxPrice(maxPrice: Number) {
+    override fun maxPrice(maxPrice: Number) {
       cdkBuilder.maxPrice(maxPrice)
     }
 
-    public override fun requestType(requestType: SpotRequestType) {
+    override fun requestType(requestType: SpotRequestType) {
       cdkBuilder.requestType(requestType.let(SpotRequestType::unwrap))
     }
 
-    public override fun validUntil(validUntil: Expiration) {
+    override fun validUntil(validUntil: Expiration) {
       cdkBuilder.validUntil(validUntil.let(Expiration::unwrap))
     }
 
@@ -66,19 +61,17 @@ public interface LaunchTemplateSpotOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions,
   ) : LaunchTemplateSpotOptions {
-    public override fun blockDuration(): Duration? =
-        unwrap(this).getBlockDuration()?.let(Duration::wrap)
+    override fun blockDuration(): Duration? = unwrap(this).getBlockDuration()?.let(Duration::wrap)
 
-    public override fun interruptionBehavior(): SpotInstanceInterruption? =
+    override fun interruptionBehavior(): SpotInstanceInterruption? =
         unwrap(this).getInterruptionBehavior()?.let(SpotInstanceInterruption::wrap)
 
-    public override fun maxPrice(): Number? = unwrap(this).getMaxPrice()
+    override fun maxPrice(): Number? = unwrap(this).getMaxPrice()
 
-    public override fun requestType(): SpotRequestType? =
+    override fun requestType(): SpotRequestType? =
         unwrap(this).getRequestType()?.let(SpotRequestType::wrap)
 
-    public override fun validUntil(): Expiration? =
-        unwrap(this).getValidUntil()?.let(Expiration::wrap)
+    override fun validUntil(): Expiration? = unwrap(this).getValidUntil()?.let(Expiration::wrap)
   }
 
   public companion object {

@@ -17,29 +17,22 @@ public open class UserPoolIdentityProviderGoogle internal constructor(
   public override fun providerName(): String = unwrap(this).getProviderName()
 
   public interface Builder {
-    public fun attributeMapping(attributeMapping: AttributeMapping) {
-    }
+    public fun attributeMapping(attributeMapping: AttributeMapping)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b299248357b6ace644c21afff62e9dcb1eba6fe23e8a4f4d91ce66316ccf9d0a")
-    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit) {
-    }
+    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit)
 
-    public fun clientId(clientId: String) {
-    }
+    public fun clientId(clientId: String)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun clientSecret(clientSecret: String) {
-    }
+    public fun clientSecret(clientSecret: String)
 
-    public fun clientSecretValue(clientSecretValue: SecretValue) {
-    }
+    public fun clientSecretValue(clientSecretValue: SecretValue)
 
-    public fun scopes(scopes: List<String>) {
-    }
+    public fun scopes(scopes: List<String>)
 
-    public fun userPool(userPool: IUserPool) {
-    }
+    public fun userPool(userPool: IUserPool)
   }
 
   private class BuilderImpl(
@@ -51,33 +44,33 @@ public open class UserPoolIdentityProviderGoogle internal constructor(
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle.Builder.create(scope,
         id)
 
-    public override fun attributeMapping(attributeMapping: AttributeMapping) {
+    override fun attributeMapping(attributeMapping: AttributeMapping) {
       cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b299248357b6ace644c21afff62e9dcb1eba6fe23e8a4f4d91ce66316ccf9d0a")
-    public override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit):
-        Unit = attributeMapping(AttributeMapping(attributeMapping))
+    override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit): Unit =
+        attributeMapping(AttributeMapping(attributeMapping))
 
-    public override fun clientId(clientId: String) {
+    override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun clientSecret(clientSecret: String) {
+    override fun clientSecret(clientSecret: String) {
       cdkBuilder.clientSecret(clientSecret)
     }
 
-    public override fun clientSecretValue(clientSecretValue: SecretValue) {
+    override fun clientSecretValue(clientSecretValue: SecretValue) {
       cdkBuilder.clientSecretValue(clientSecretValue.let(SecretValue::unwrap))
     }
 
-    public override fun scopes(scopes: List<String>) {
+    override fun scopes(scopes: List<String>) {
       cdkBuilder.scopes(scopes)
     }
 
-    public override fun userPool(userPool: IUserPool) {
+    override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
     }
 

@@ -9,22 +9,20 @@ public interface CustomTestOptions {
   public fun handler(): String
 
   public interface Builder {
-    public fun code(code: Code) {
-    }
+    public fun code(code: Code)
 
-    public fun handler(handler: String) {
-    }
+    public fun handler(handler: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.CustomTestOptions.Builder =
         software.amazon.awscdk.services.synthetics.CustomTestOptions.builder()
 
-    public override fun code(code: Code) {
+    override fun code(code: Code) {
       cdkBuilder.code(code.let(Code::unwrap))
     }
 
-    public override fun handler(handler: String) {
+    override fun handler(handler: String) {
       cdkBuilder.handler(handler)
     }
 
@@ -35,9 +33,9 @@ public interface CustomTestOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.synthetics.CustomTestOptions,
   ) : CustomTestOptions {
-    public override fun code(): Code = unwrap(this).getCode().let(Code::wrap)
+    override fun code(): Code = unwrap(this).getCode().let(Code::wrap)
 
-    public override fun handler(): String = unwrap(this).getHandler()
+    override fun handler(): String = unwrap(this).getHandler()
   }
 
   public companion object {

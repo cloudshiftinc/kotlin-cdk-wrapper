@@ -86,31 +86,23 @@ public open class CfnDomain internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainExecutionRole(domainExecutionRole: String) {
-    }
+    public fun domainExecutionRole(domainExecutionRole: String)
 
-    public fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
-    }
+    public fun kmsKeyIdentifier(kmsKeyIdentifier: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun singleSignOn(singleSignOn: IResolvable) {
-    }
+    public fun singleSignOn(singleSignOn: IResolvable)
 
-    public fun singleSignOn(singleSignOn: SingleSignOnProperty) {
-    }
+    public fun singleSignOn(singleSignOn: SingleSignOnProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6adb1e434f0d2756f8c41bacbf5ec78c9a577d076b52aa3ad1bd491c81e6cfcd")
-    public fun singleSignOn(singleSignOn: SingleSignOnProperty.Builder.() -> Unit) {
-    }
+    public fun singleSignOn(singleSignOn: SingleSignOnProperty.Builder.() -> Unit)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -120,36 +112,36 @@ public open class CfnDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.datazone.CfnDomain.Builder =
         software.amazon.awscdk.services.datazone.CfnDomain.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainExecutionRole(domainExecutionRole: String) {
+    override fun domainExecutionRole(domainExecutionRole: String) {
       cdkBuilder.domainExecutionRole(domainExecutionRole)
     }
 
-    public override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
+    override fun kmsKeyIdentifier(kmsKeyIdentifier: String) {
       cdkBuilder.kmsKeyIdentifier(kmsKeyIdentifier)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun singleSignOn(singleSignOn: IResolvable) {
+    override fun singleSignOn(singleSignOn: IResolvable) {
       cdkBuilder.singleSignOn(singleSignOn.let(IResolvable::unwrap))
     }
 
-    public override fun singleSignOn(singleSignOn: SingleSignOnProperty) {
+    override fun singleSignOn(singleSignOn: SingleSignOnProperty) {
       cdkBuilder.singleSignOn(singleSignOn.let(SingleSignOnProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6adb1e434f0d2756f8c41bacbf5ec78c9a577d076b52aa3ad1bd491c81e6cfcd")
-    public override fun singleSignOn(singleSignOn: SingleSignOnProperty.Builder.() -> Unit): Unit =
+    override fun singleSignOn(singleSignOn: SingleSignOnProperty.Builder.() -> Unit): Unit =
         singleSignOn(SingleSignOnProperty(singleSignOn))
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -183,11 +175,9 @@ public open class CfnDomain internal constructor(
     public fun userAssignment(): String? = unwrap(this).getUserAssignment()
 
     public interface Builder {
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
 
-      public fun userAssignment(userAssignment: String) {
-      }
+      public fun userAssignment(userAssignment: String)
     }
 
     private class BuilderImpl : Builder {
@@ -195,11 +185,11 @@ public open class CfnDomain internal constructor(
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty.Builder =
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty.builder()
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
-      public override fun userAssignment(userAssignment: String) {
+      override fun userAssignment(userAssignment: String) {
         cdkBuilder.userAssignment(userAssignment)
       }
 
@@ -211,9 +201,9 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datazone.CfnDomain.SingleSignOnProperty,
     ) : SingleSignOnProperty {
-      public override fun type(): String? = unwrap(this).getType()
+      override fun type(): String? = unwrap(this).getType()
 
-      public override fun userAssignment(): String? = unwrap(this).getUserAssignment()
+      override fun userAssignment(): String? = unwrap(this).getUserAssignment()
     }
 
     public companion object {

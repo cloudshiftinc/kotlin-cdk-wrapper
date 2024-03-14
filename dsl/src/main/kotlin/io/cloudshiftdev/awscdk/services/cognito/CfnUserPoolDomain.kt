@@ -52,23 +52,18 @@ public open class CfnUserPoolDomain internal constructor(
   }
 
   public interface Builder {
-    public fun customDomainConfig(customDomainConfig: IResolvable) {
-    }
+    public fun customDomainConfig(customDomainConfig: IResolvable)
 
-    public fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty) {
-    }
+    public fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3cf6387ed90ec3bbfadd8ec8bba7bed73b53ba81c79e21cfa5ebaf2158605e86")
     public
-        fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty.Builder.() -> Unit) {
-    }
+        fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty.Builder.() -> Unit)
 
-    public fun domain(domain: String) {
-    }
+    public fun domain(domain: String)
 
-    public fun userPoolId(userPoolId: String) {
-    }
+    public fun userPoolId(userPoolId: String)
   }
 
   private class BuilderImpl(
@@ -78,25 +73,25 @@ public open class CfnUserPoolDomain internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CfnUserPoolDomain.Builder =
         software.amazon.awscdk.services.cognito.CfnUserPoolDomain.Builder.create(scope, id)
 
-    public override fun customDomainConfig(customDomainConfig: IResolvable) {
+    override fun customDomainConfig(customDomainConfig: IResolvable) {
       cdkBuilder.customDomainConfig(customDomainConfig.let(IResolvable::unwrap))
     }
 
-    public override fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty) {
+    override fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty) {
       cdkBuilder.customDomainConfig(customDomainConfig.let(CustomDomainConfigTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3cf6387ed90ec3bbfadd8ec8bba7bed73b53ba81c79e21cfa5ebaf2158605e86")
-    public override
+    override
         fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty.Builder.() -> Unit):
         Unit = customDomainConfig(CustomDomainConfigTypeProperty(customDomainConfig))
 
-    public override fun domain(domain: String) {
+    override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
-    public override fun userPoolId(userPoolId: String) {
+    override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
 
@@ -129,8 +124,7 @@ public open class CfnUserPoolDomain internal constructor(
     public fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -139,7 +133,7 @@ public open class CfnUserPoolDomain internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
@@ -152,7 +146,7 @@ public open class CfnUserPoolDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnUserPoolDomain.CustomDomainConfigTypeProperty,
     ) : CustomDomainConfigTypeProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
     }
 
     public companion object {

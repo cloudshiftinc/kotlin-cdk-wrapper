@@ -37,11 +37,9 @@ public open class CfnDirectoryRegistration internal constructor(
   }
 
   public interface Builder {
-    public fun directoryId(directoryId: String) {
-    }
+    public fun directoryId(directoryId: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -53,11 +51,11 @@ public open class CfnDirectoryRegistration internal constructor(
         software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistration.Builder.create(scope,
         id)
 
-    public override fun directoryId(directoryId: String) {
+    override fun directoryId(directoryId: String) {
       cdkBuilder.directoryId(directoryId)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 

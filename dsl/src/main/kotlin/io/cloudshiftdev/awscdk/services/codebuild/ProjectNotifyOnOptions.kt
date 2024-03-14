@@ -11,36 +11,32 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
   public fun events(): List<ProjectNotificationEvents>
 
   public interface Builder {
-    public fun detailType(detailType: DetailType) {
-    }
+    public fun detailType(detailType: DetailType)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun events(events: List<ProjectNotificationEvents>) {
-    }
+    public fun events(events: List<ProjectNotificationEvents>)
 
-    public fun notificationRuleName(notificationRuleName: String) {
-    }
+    public fun notificationRuleName(notificationRuleName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.ProjectNotifyOnOptions.Builder
         = software.amazon.awscdk.services.codebuild.ProjectNotifyOnOptions.builder()
 
-    public override fun detailType(detailType: DetailType) {
+    override fun detailType(detailType: DetailType) {
       cdkBuilder.detailType(detailType.let(DetailType::unwrap))
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun events(events: List<ProjectNotificationEvents>) {
+    override fun events(events: List<ProjectNotificationEvents>) {
       cdkBuilder.events(events.map(ProjectNotificationEvents::unwrap))
     }
 
-    public override fun notificationRuleName(notificationRuleName: String) {
+    override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)
     }
 
@@ -51,15 +47,14 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.ProjectNotifyOnOptions,
   ) : ProjectNotifyOnOptions {
-    public override fun detailType(): DetailType? =
-        unwrap(this).getDetailType()?.let(DetailType::wrap)
+    override fun detailType(): DetailType? = unwrap(this).getDetailType()?.let(DetailType::wrap)
 
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    public override fun events(): List<ProjectNotificationEvents> =
+    override fun events(): List<ProjectNotificationEvents> =
         unwrap(this).getEvents().map(ProjectNotificationEvents::wrap)
 
-    public override fun notificationRuleName(): String? = unwrap(this).getNotificationRuleName()
+    override fun notificationRuleName(): String? = unwrap(this).getNotificationRuleName()
   }
 
   public companion object {

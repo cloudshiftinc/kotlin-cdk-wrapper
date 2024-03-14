@@ -21,29 +21,21 @@ public open class AppsyncFunction internal constructor(
   public open fun functionName(): String = unwrap(this).getFunctionName()
 
   public interface Builder {
-    public fun api(api: IGraphqlApi) {
-    }
+    public fun api(api: IGraphqlApi)
 
-    public fun code(code: Code) {
-    }
+    public fun code(code: Code)
 
-    public fun dataSource(dataSource: BaseDataSource) {
-    }
+    public fun dataSource(dataSource: BaseDataSource)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-    }
+    public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate)
 
-    public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-    }
+    public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate)
 
-    public fun runtime(runtime: FunctionRuntime) {
-    }
+    public fun runtime(runtime: FunctionRuntime)
   }
 
   private class BuilderImpl(
@@ -53,35 +45,35 @@ public open class AppsyncFunction internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.AppsyncFunction.Builder =
         software.amazon.awscdk.services.appsync.AppsyncFunction.Builder.create(scope, id)
 
-    public override fun api(api: IGraphqlApi) {
+    override fun api(api: IGraphqlApi) {
       cdkBuilder.api(api.let(IGraphqlApi::unwrap))
     }
 
-    public override fun code(code: Code) {
+    override fun code(code: Code) {
       cdkBuilder.code(code.let(Code::unwrap))
     }
 
-    public override fun dataSource(dataSource: BaseDataSource) {
+    override fun dataSource(dataSource: BaseDataSource) {
       cdkBuilder.dataSource(dataSource.let(BaseDataSource::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
+    override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
       cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))
     }
 
-    public override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
+    override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
       cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate::unwrap))
     }
 
-    public override fun runtime(runtime: FunctionRuntime) {
+    override fun runtime(runtime: FunctionRuntime) {
       cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
     }
 

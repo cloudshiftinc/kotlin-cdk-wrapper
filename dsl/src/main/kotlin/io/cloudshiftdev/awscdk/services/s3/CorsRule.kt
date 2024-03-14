@@ -19,50 +19,44 @@ public interface CorsRule {
   public fun maxAge(): Number? = unwrap(this).getMaxAge()
 
   public interface Builder {
-    public fun allowedHeaders(allowedHeaders: List<String>) {
-    }
+    public fun allowedHeaders(allowedHeaders: List<String>)
 
-    public fun allowedMethods(allowedMethods: List<HttpMethods>) {
-    }
+    public fun allowedMethods(allowedMethods: List<HttpMethods>)
 
-    public fun allowedOrigins(allowedOrigins: List<String>) {
-    }
+    public fun allowedOrigins(allowedOrigins: List<String>)
 
-    public fun exposedHeaders(exposedHeaders: List<String>) {
-    }
+    public fun exposedHeaders(exposedHeaders: List<String>)
 
-    public fun id(id: String) {
-    }
+    public fun id(id: String)
 
-    public fun maxAge(maxAge: Number) {
-    }
+    public fun maxAge(maxAge: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.s3.CorsRule.Builder =
         software.amazon.awscdk.services.s3.CorsRule.builder()
 
-    public override fun allowedHeaders(allowedHeaders: List<String>) {
+    override fun allowedHeaders(allowedHeaders: List<String>) {
       cdkBuilder.allowedHeaders(allowedHeaders)
     }
 
-    public override fun allowedMethods(allowedMethods: List<HttpMethods>) {
+    override fun allowedMethods(allowedMethods: List<HttpMethods>) {
       cdkBuilder.allowedMethods(allowedMethods.map(HttpMethods::unwrap))
     }
 
-    public override fun allowedOrigins(allowedOrigins: List<String>) {
+    override fun allowedOrigins(allowedOrigins: List<String>) {
       cdkBuilder.allowedOrigins(allowedOrigins)
     }
 
-    public override fun exposedHeaders(exposedHeaders: List<String>) {
+    override fun exposedHeaders(exposedHeaders: List<String>) {
       cdkBuilder.exposedHeaders(exposedHeaders)
     }
 
-    public override fun id(id: String) {
+    override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
-    public override fun maxAge(maxAge: Number) {
+    override fun maxAge(maxAge: Number) {
       cdkBuilder.maxAge(maxAge)
     }
 
@@ -72,21 +66,18 @@ public interface CorsRule {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.CorsRule,
   ) : CorsRule {
-    public override fun allowedHeaders(): List<String> = unwrap(this).getAllowedHeaders() ?:
-        emptyList()
+    override fun allowedHeaders(): List<String> = unwrap(this).getAllowedHeaders() ?: emptyList()
 
-    public override fun allowedMethods(): List<HttpMethods> =
+    override fun allowedMethods(): List<HttpMethods> =
         unwrap(this).getAllowedMethods().map(HttpMethods::wrap)
 
-    public override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins() ?:
-        emptyList()
+    override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins() ?: emptyList()
 
-    public override fun exposedHeaders(): List<String> = unwrap(this).getExposedHeaders() ?:
-        emptyList()
+    override fun exposedHeaders(): List<String> = unwrap(this).getExposedHeaders() ?: emptyList()
 
-    public override fun id(): String? = unwrap(this).getId()
+    override fun id(): String? = unwrap(this).getId()
 
-    public override fun maxAge(): Number? = unwrap(this).getMaxAge()
+    override fun maxAge(): Number? = unwrap(this).getMaxAge()
   }
 
   public companion object {

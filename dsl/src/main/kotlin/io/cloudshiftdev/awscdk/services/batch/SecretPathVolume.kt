@@ -13,43 +13,38 @@ public open class SecretPathVolume internal constructor(
   public open fun secretName(): String = unwrap(this).getSecretName()
 
   public interface Builder {
-    public fun mountPath(mountPath: String) {
-    }
+    public fun mountPath(mountPath: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun optional(optional: Boolean) {
-    }
+    public fun optional(optional: Boolean)
 
-    public fun readonly(readonly: Boolean) {
-    }
+    public fun readonly(readonly: Boolean)
 
-    public fun secretName(secretName: String) {
-    }
+    public fun secretName(secretName: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.batch.SecretPathVolume.Builder =
         software.amazon.awscdk.services.batch.SecretPathVolume.Builder.create()
 
-    public override fun mountPath(mountPath: String) {
+    override fun mountPath(mountPath: String) {
       cdkBuilder.mountPath(mountPath)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun optional(optional: Boolean) {
+    override fun optional(optional: Boolean) {
       cdkBuilder.optional(optional)
     }
 
-    public override fun readonly(readonly: Boolean) {
+    override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
 
-    public override fun secretName(secretName: String) {
+    override fun secretName(secretName: String) {
       cdkBuilder.secretName(secretName)
     }
 

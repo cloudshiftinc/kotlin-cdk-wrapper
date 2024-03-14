@@ -92,37 +92,27 @@ public open class CfnTransformer internal constructor(
   }
 
   public interface Builder {
-    public fun ediType(ediType: IResolvable) {
-    }
+    public fun ediType(ediType: IResolvable)
 
-    public fun ediType(ediType: EdiTypeProperty) {
-    }
+    public fun ediType(ediType: EdiTypeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("656a19a9bb53086dd23f8198400500ac9d17071d7bf257e96ea303635530af67")
-    public fun ediType(ediType: EdiTypeProperty.Builder.() -> Unit) {
-    }
+    public fun ediType(ediType: EdiTypeProperty.Builder.() -> Unit)
 
-    public fun fileFormat(fileFormat: String) {
-    }
+    public fun fileFormat(fileFormat: String)
 
-    public fun mappingTemplate(mappingTemplate: String) {
-    }
+    public fun mappingTemplate(mappingTemplate: String)
 
-    public fun modifiedAt(modifiedAt: String) {
-    }
+    public fun modifiedAt(modifiedAt: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun sampleDocument(sampleDocument: String) {
-    }
+    public fun sampleDocument(sampleDocument: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -132,44 +122,44 @@ public open class CfnTransformer internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.b2bi.CfnTransformer.Builder =
         software.amazon.awscdk.services.b2bi.CfnTransformer.Builder.create(scope, id)
 
-    public override fun ediType(ediType: IResolvable) {
+    override fun ediType(ediType: IResolvable) {
       cdkBuilder.ediType(ediType.let(IResolvable::unwrap))
     }
 
-    public override fun ediType(ediType: EdiTypeProperty) {
+    override fun ediType(ediType: EdiTypeProperty) {
       cdkBuilder.ediType(ediType.let(EdiTypeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("656a19a9bb53086dd23f8198400500ac9d17071d7bf257e96ea303635530af67")
-    public override fun ediType(ediType: EdiTypeProperty.Builder.() -> Unit): Unit =
+    override fun ediType(ediType: EdiTypeProperty.Builder.() -> Unit): Unit =
         ediType(EdiTypeProperty(ediType))
 
-    public override fun fileFormat(fileFormat: String) {
+    override fun fileFormat(fileFormat: String) {
       cdkBuilder.fileFormat(fileFormat)
     }
 
-    public override fun mappingTemplate(mappingTemplate: String) {
+    override fun mappingTemplate(mappingTemplate: String) {
       cdkBuilder.mappingTemplate(mappingTemplate)
     }
 
-    public override fun modifiedAt(modifiedAt: String) {
+    override fun modifiedAt(modifiedAt: String) {
       cdkBuilder.modifiedAt(modifiedAt)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun sampleDocument(sampleDocument: String) {
+    override fun sampleDocument(sampleDocument: String) {
       cdkBuilder.sampleDocument(sampleDocument)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -203,11 +193,9 @@ public open class CfnTransformer internal constructor(
     public fun version(): String? = unwrap(this).getVersion()
 
     public interface Builder {
-      public fun transactionSet(transactionSet: String) {
-      }
+      public fun transactionSet(transactionSet: String)
 
-      public fun version(version: String) {
-      }
+      public fun version(version: String)
     }
 
     private class BuilderImpl : Builder {
@@ -215,11 +203,11 @@ public open class CfnTransformer internal constructor(
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty.builder()
 
-      public override fun transactionSet(transactionSet: String) {
+      override fun transactionSet(transactionSet: String) {
         cdkBuilder.transactionSet(transactionSet)
       }
 
-      public override fun version(version: String) {
+      override fun version(version: String) {
         cdkBuilder.version(version)
       }
 
@@ -231,9 +219,9 @@ public open class CfnTransformer internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty,
     ) : X12DetailsProperty {
-      public override fun transactionSet(): String? = unwrap(this).getTransactionSet()
+      override fun transactionSet(): String? = unwrap(this).getTransactionSet()
 
-      public override fun version(): String? = unwrap(this).getVersion()
+      override fun version(): String? = unwrap(this).getVersion()
     }
 
     public companion object {
@@ -260,16 +248,13 @@ public open class CfnTransformer internal constructor(
     public fun x12Details(): Any
 
     public interface Builder {
-      public fun x12Details(x12Details: IResolvable) {
-      }
+      public fun x12Details(x12Details: IResolvable)
 
-      public fun x12Details(x12Details: X12DetailsProperty) {
-      }
+      public fun x12Details(x12Details: X12DetailsProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0e7f53f7c8b93292a1154273d61bb66f75775193f21594f4971c63075e5ebc9a")
-      public fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit) {
-      }
+      public fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -277,17 +262,17 @@ public open class CfnTransformer internal constructor(
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty.builder()
 
-      public override fun x12Details(x12Details: IResolvable) {
+      override fun x12Details(x12Details: IResolvable) {
         cdkBuilder.x12Details(x12Details.let(IResolvable::unwrap))
       }
 
-      public override fun x12Details(x12Details: X12DetailsProperty) {
+      override fun x12Details(x12Details: X12DetailsProperty) {
         cdkBuilder.x12Details(x12Details.let(X12DetailsProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0e7f53f7c8b93292a1154273d61bb66f75775193f21594f4971c63075e5ebc9a")
-      public override fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit): Unit =
+      override fun x12Details(x12Details: X12DetailsProperty.Builder.() -> Unit): Unit =
           x12Details(X12DetailsProperty(x12Details))
 
       public fun build(): software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty =
@@ -297,7 +282,7 @@ public open class CfnTransformer internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty,
     ) : EdiTypeProperty {
-      public override fun x12Details(): Any = unwrap(this).getX12Details()
+      override fun x12Details(): Any = unwrap(this).getX12Details()
     }
 
     public companion object {

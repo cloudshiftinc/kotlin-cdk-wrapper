@@ -68,23 +68,17 @@ public open class CfnPrefixList internal constructor(
   }
 
   public interface Builder {
-    public fun addressFamily(addressFamily: String) {
-    }
+    public fun addressFamily(addressFamily: String)
 
-    public fun entries(entries: IResolvable) {
-    }
+    public fun entries(entries: IResolvable)
 
-    public fun entries(entries: List<Any>) {
-    }
+    public fun entries(entries: List<Any>)
 
-    public fun maxEntries(maxEntries: Number) {
-    }
+    public fun maxEntries(maxEntries: Number)
 
-    public fun prefixListName(prefixListName: String) {
-    }
+    public fun prefixListName(prefixListName: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -94,27 +88,27 @@ public open class CfnPrefixList internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnPrefixList.Builder =
         software.amazon.awscdk.services.ec2.CfnPrefixList.Builder.create(scope, id)
 
-    public override fun addressFamily(addressFamily: String) {
+    override fun addressFamily(addressFamily: String) {
       cdkBuilder.addressFamily(addressFamily)
     }
 
-    public override fun entries(entries: IResolvable) {
+    override fun entries(entries: IResolvable) {
       cdkBuilder.entries(entries.let(IResolvable::unwrap))
     }
 
-    public override fun entries(entries: List<Any>) {
+    override fun entries(entries: List<Any>) {
       cdkBuilder.entries(entries)
     }
 
-    public override fun maxEntries(maxEntries: Number) {
+    override fun maxEntries(maxEntries: Number) {
       cdkBuilder.maxEntries(maxEntries)
     }
 
-    public override fun prefixListName(prefixListName: String) {
+    override fun prefixListName(prefixListName: String) {
       cdkBuilder.prefixListName(prefixListName)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -148,11 +142,9 @@ public open class CfnPrefixList internal constructor(
     public fun description(): String? = unwrap(this).getDescription()
 
     public interface Builder {
-      public fun cidr(cidr: String) {
-      }
+      public fun cidr(cidr: String)
 
-      public fun description(description: String) {
-      }
+      public fun description(description: String)
     }
 
     private class BuilderImpl : Builder {
@@ -160,11 +152,11 @@ public open class CfnPrefixList internal constructor(
           software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty.builder()
 
-      public override fun cidr(cidr: String) {
+      override fun cidr(cidr: String) {
         cdkBuilder.cidr(cidr)
       }
 
-      public override fun description(description: String) {
+      override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
@@ -175,9 +167,9 @@ public open class CfnPrefixList internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ec2.CfnPrefixList.EntryProperty,
     ) : EntryProperty {
-      public override fun cidr(): String = unwrap(this).getCidr()
+      override fun cidr(): String = unwrap(this).getCidr()
 
-      public override fun description(): String? = unwrap(this).getDescription()
+      override fun description(): String? = unwrap(this).getDescription()
     }
 
     public companion object {

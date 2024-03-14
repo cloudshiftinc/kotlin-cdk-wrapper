@@ -46,17 +46,13 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
   }
 
   public interface Builder {
-    public fun identityPoolId(identityPoolId: String) {
-    }
+    public fun identityPoolId(identityPoolId: String)
 
-    public fun roleMappings(roleMappings: IResolvable) {
-    }
+    public fun roleMappings(roleMappings: IResolvable)
 
-    public fun roleMappings(roleMappings: Map<String, Any>) {
-    }
+    public fun roleMappings(roleMappings: Map<String, Any>)
 
-    public fun roles(roles: Any) {
-    }
+    public fun roles(roles: Any)
   }
 
   private class BuilderImpl(
@@ -68,19 +64,19 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
         software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.Builder.create(scope,
         id)
 
-    public override fun identityPoolId(identityPoolId: String) {
+    override fun identityPoolId(identityPoolId: String) {
       cdkBuilder.identityPoolId(identityPoolId)
     }
 
-    public override fun roleMappings(roleMappings: IResolvable) {
+    override fun roleMappings(roleMappings: IResolvable) {
       cdkBuilder.roleMappings(roleMappings.let(IResolvable::unwrap))
     }
 
-    public override fun roleMappings(roleMappings: Map<String, Any>) {
+    override fun roleMappings(roleMappings: Map<String, Any>) {
       cdkBuilder.roleMappings(roleMappings)
     }
 
-    public override fun roles(roles: Any) {
+    override fun roles(roles: Any) {
       cdkBuilder.roles(roles)
     }
 
@@ -114,11 +110,9 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
     public fun rules(): Any
 
     public interface Builder {
-      public fun rules(rules: IResolvable) {
-      }
+      public fun rules(rules: IResolvable)
 
-      public fun rules(rules: List<Any>) {
-      }
+      public fun rules(rules: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -127,11 +121,11 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.builder()
 
-      public override fun rules(rules: IResolvable) {
+      override fun rules(rules: IResolvable) {
         cdkBuilder.rules(rules.let(IResolvable::unwrap))
       }
 
-      public override fun rules(rules: List<Any>) {
+      override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
 
@@ -144,7 +138,7 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty,
     ) : RulesConfigurationTypeProperty {
-      public override fun rules(): Any = unwrap(this).getRules()
+      override fun rules(): Any = unwrap(this).getRules()
     }
 
     public companion object {
@@ -177,17 +171,13 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun claim(claim: String) {
-      }
+      public fun claim(claim: String)
 
-      public fun matchType(matchType: String) {
-      }
+      public fun matchType(matchType: String)
 
-      public fun roleArn(roleArn: String) {
-      }
+      public fun roleArn(roleArn: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -196,19 +186,19 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty.builder()
 
-      public override fun claim(claim: String) {
+      override fun claim(claim: String) {
         cdkBuilder.claim(claim)
       }
 
-      public override fun matchType(matchType: String) {
+      override fun matchType(matchType: String) {
         cdkBuilder.matchType(matchType)
       }
 
-      public override fun roleArn(roleArn: String) {
+      override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -221,13 +211,13 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty,
     ) : MappingRuleProperty {
-      public override fun claim(): String = unwrap(this).getClaim()
+      override fun claim(): String = unwrap(this).getClaim()
 
-      public override fun matchType(): String = unwrap(this).getMatchType()
+      override fun matchType(): String = unwrap(this).getMatchType()
 
-      public override fun roleArn(): String = unwrap(this).getRoleArn()
+      override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -260,26 +250,20 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun ambiguousRoleResolution(ambiguousRoleResolution: String) {
-      }
+      public fun ambiguousRoleResolution(ambiguousRoleResolution: String)
 
-      public fun identityProvider(identityProvider: String) {
-      }
+      public fun identityProvider(identityProvider: String)
 
-      public fun rulesConfiguration(rulesConfiguration: IResolvable) {
-      }
+      public fun rulesConfiguration(rulesConfiguration: IResolvable)
 
-      public fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty) {
-      }
+      public fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("34b2423d58ded2152c85df2c07e9e7361b18364114635054c986d2e0974afe0a")
       public
-          fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty.Builder.() -> Unit) {
-      }
+          fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty.Builder.() -> Unit)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -288,29 +272,29 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
           =
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty.builder()
 
-      public override fun ambiguousRoleResolution(ambiguousRoleResolution: String) {
+      override fun ambiguousRoleResolution(ambiguousRoleResolution: String) {
         cdkBuilder.ambiguousRoleResolution(ambiguousRoleResolution)
       }
 
-      public override fun identityProvider(identityProvider: String) {
+      override fun identityProvider(identityProvider: String) {
         cdkBuilder.identityProvider(identityProvider)
       }
 
-      public override fun rulesConfiguration(rulesConfiguration: IResolvable) {
+      override fun rulesConfiguration(rulesConfiguration: IResolvable) {
         cdkBuilder.rulesConfiguration(rulesConfiguration.let(IResolvable::unwrap))
       }
 
-      public override fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty) {
+      override fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty) {
         cdkBuilder.rulesConfiguration(rulesConfiguration.let(RulesConfigurationTypeProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("34b2423d58ded2152c85df2c07e9e7361b18364114635054c986d2e0974afe0a")
-      public override
+      override
           fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty.Builder.() -> Unit):
           Unit = rulesConfiguration(RulesConfigurationTypeProperty(rulesConfiguration))
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -323,14 +307,13 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty,
     ) : RoleMappingProperty {
-      public override fun ambiguousRoleResolution(): String? =
-          unwrap(this).getAmbiguousRoleResolution()
+      override fun ambiguousRoleResolution(): String? = unwrap(this).getAmbiguousRoleResolution()
 
-      public override fun identityProvider(): String? = unwrap(this).getIdentityProvider()
+      override fun identityProvider(): String? = unwrap(this).getIdentityProvider()
 
-      public override fun rulesConfiguration(): Any? = unwrap(this).getRulesConfiguration()
+      override fun rulesConfiguration(): Any? = unwrap(this).getRulesConfiguration()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

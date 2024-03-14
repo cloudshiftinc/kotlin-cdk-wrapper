@@ -15,12 +15,10 @@ public interface ZoneAwarenessConfig {
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
-    public fun availabilityZoneCount(availabilityZoneCount: Number) {
-    }
+    public fun availabilityZoneCount(availabilityZoneCount: Number)
 
     @Deprecated(message = "deprecated in CDK")
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -29,12 +27,12 @@ public interface ZoneAwarenessConfig {
         software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig.builder()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun availabilityZoneCount(availabilityZoneCount: Number) {
+    override fun availabilityZoneCount(availabilityZoneCount: Number) {
       cdkBuilder.availabilityZoneCount(availabilityZoneCount)
     }
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
@@ -46,10 +44,10 @@ public interface ZoneAwarenessConfig {
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig,
   ) : ZoneAwarenessConfig {
     @Deprecated(message = "deprecated in CDK")
-    public override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
+    override fun availabilityZoneCount(): Number? = unwrap(this).getAvailabilityZoneCount()
 
     @Deprecated(message = "deprecated in CDK")
-    public override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
   }
 
   public companion object {

@@ -16,17 +16,13 @@ public interface AlgorithmSpecification {
       unwrap(this).getTrainingInputMode()?.let(InputMode::wrap)
 
   public interface Builder {
-    public fun algorithmName(algorithmName: String) {
-    }
+    public fun algorithmName(algorithmName: String)
 
-    public fun metricDefinitions(metricDefinitions: List<MetricDefinition>) {
-    }
+    public fun metricDefinitions(metricDefinitions: List<MetricDefinition>)
 
-    public fun trainingImage(trainingImage: DockerImage) {
-    }
+    public fun trainingImage(trainingImage: DockerImage)
 
-    public fun trainingInputMode(trainingInputMode: InputMode) {
-    }
+    public fun trainingInputMode(trainingInputMode: InputMode)
   }
 
   private class BuilderImpl : Builder {
@@ -34,19 +30,19 @@ public interface AlgorithmSpecification {
         software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification.builder()
 
-    public override fun algorithmName(algorithmName: String) {
+    override fun algorithmName(algorithmName: String) {
       cdkBuilder.algorithmName(algorithmName)
     }
 
-    public override fun metricDefinitions(metricDefinitions: List<MetricDefinition>) {
+    override fun metricDefinitions(metricDefinitions: List<MetricDefinition>) {
       cdkBuilder.metricDefinitions(metricDefinitions.map(MetricDefinition::unwrap))
     }
 
-    public override fun trainingImage(trainingImage: DockerImage) {
+    override fun trainingImage(trainingImage: DockerImage) {
       cdkBuilder.trainingImage(trainingImage.let(DockerImage::unwrap))
     }
 
-    public override fun trainingInputMode(trainingInputMode: InputMode) {
+    override fun trainingInputMode(trainingInputMode: InputMode) {
       cdkBuilder.trainingInputMode(trainingInputMode.let(InputMode::unwrap))
     }
 
@@ -58,15 +54,15 @@ public interface AlgorithmSpecification {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification,
   ) : AlgorithmSpecification {
-    public override fun algorithmName(): String? = unwrap(this).getAlgorithmName()
+    override fun algorithmName(): String? = unwrap(this).getAlgorithmName()
 
-    public override fun metricDefinitions(): List<MetricDefinition> =
+    override fun metricDefinitions(): List<MetricDefinition> =
         unwrap(this).getMetricDefinitions()?.map(MetricDefinition::wrap) ?: emptyList()
 
-    public override fun trainingImage(): DockerImage? =
+    override fun trainingImage(): DockerImage? =
         unwrap(this).getTrainingImage()?.let(DockerImage::wrap)
 
-    public override fun trainingInputMode(): InputMode? =
+    override fun trainingInputMode(): InputMode? =
         unwrap(this).getTrainingInputMode()?.let(InputMode::wrap)
   }
 

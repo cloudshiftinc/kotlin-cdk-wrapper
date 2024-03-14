@@ -72,23 +72,17 @@ public open class CfnAccelerator internal constructor(
   }
 
   public interface Builder {
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun ipAddressType(ipAddressType: String) {
-    }
+    public fun ipAddressType(ipAddressType: String)
 
-    public fun ipAddresses(ipAddresses: List<String>) {
-    }
+    public fun ipAddresses(ipAddresses: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -98,27 +92,27 @@ public open class CfnAccelerator internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.CfnAccelerator.Builder
         = software.amazon.awscdk.services.globalaccelerator.CfnAccelerator.Builder.create(scope, id)
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun ipAddressType(ipAddressType: String) {
+    override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
     }
 
-    public override fun ipAddresses(ipAddresses: List<String>) {
+    override fun ipAddresses(ipAddresses: List<String>) {
       cdkBuilder.ipAddresses(ipAddresses)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 

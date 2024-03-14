@@ -90,38 +90,27 @@ public open class CfnNotificationRule internal constructor(
   }
 
   public interface Builder {
-    public fun createdBy(createdBy: String) {
-    }
+    public fun createdBy(createdBy: String)
 
-    public fun detailType(detailType: String) {
-    }
+    public fun detailType(detailType: String)
 
-    public fun eventTypeId(eventTypeId: String) {
-    }
+    public fun eventTypeId(eventTypeId: String)
 
-    public fun eventTypeIds(eventTypeIds: List<String>) {
-    }
+    public fun eventTypeIds(eventTypeIds: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun resource(resource: String) {
-    }
+    public fun resource(resource: String)
 
-    public fun status(status: String) {
-    }
+    public fun status(status: String)
 
-    public fun tags(tags: Map<String, String>) {
-    }
+    public fun tags(tags: Map<String, String>)
 
-    public fun targetAddress(targetAddress: String) {
-    }
+    public fun targetAddress(targetAddress: String)
 
-    public fun targets(targets: IResolvable) {
-    }
+    public fun targets(targets: IResolvable)
 
-    public fun targets(targets: List<Any>) {
-    }
+    public fun targets(targets: List<Any>)
   }
 
   private class BuilderImpl(
@@ -133,47 +122,47 @@ public open class CfnNotificationRule internal constructor(
         software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule.Builder.create(scope,
         id)
 
-    public override fun createdBy(createdBy: String) {
+    override fun createdBy(createdBy: String) {
       cdkBuilder.createdBy(createdBy)
     }
 
-    public override fun detailType(detailType: String) {
+    override fun detailType(detailType: String) {
       cdkBuilder.detailType(detailType)
     }
 
-    public override fun eventTypeId(eventTypeId: String) {
+    override fun eventTypeId(eventTypeId: String) {
       cdkBuilder.eventTypeId(eventTypeId)
     }
 
-    public override fun eventTypeIds(eventTypeIds: List<String>) {
+    override fun eventTypeIds(eventTypeIds: List<String>) {
       cdkBuilder.eventTypeIds(eventTypeIds)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun resource(resource: String) {
+    override fun resource(resource: String) {
       cdkBuilder.resource(resource)
     }
 
-    public override fun status(status: String) {
+    override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
-    public override fun tags(tags: Map<String, String>) {
+    override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun targetAddress(targetAddress: String) {
+    override fun targetAddress(targetAddress: String) {
       cdkBuilder.targetAddress(targetAddress)
     }
 
-    public override fun targets(targets: IResolvable) {
+    override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
 
-    public override fun targets(targets: List<Any>) {
+    override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
 
@@ -210,11 +199,9 @@ public open class CfnNotificationRule internal constructor(
     public fun targetType(): String
 
     public interface Builder {
-      public fun targetAddress(targetAddress: String) {
-      }
+      public fun targetAddress(targetAddress: String)
 
-      public fun targetType(targetType: String) {
-      }
+      public fun targetType(targetType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -223,11 +210,11 @@ public open class CfnNotificationRule internal constructor(
           =
           software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule.TargetProperty.builder()
 
-      public override fun targetAddress(targetAddress: String) {
+      override fun targetAddress(targetAddress: String) {
         cdkBuilder.targetAddress(targetAddress)
       }
 
-      public override fun targetType(targetType: String) {
+      override fun targetType(targetType: String) {
         cdkBuilder.targetType(targetType)
       }
 
@@ -240,9 +227,9 @@ public open class CfnNotificationRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule.TargetProperty,
     ) : TargetProperty {
-      public override fun targetAddress(): String = unwrap(this).getTargetAddress()
+      override fun targetAddress(): String = unwrap(this).getTargetAddress()
 
-      public override fun targetType(): String = unwrap(this).getTargetType()
+      override fun targetType(): String = unwrap(this).getTargetType()
     }
 
     public companion object {

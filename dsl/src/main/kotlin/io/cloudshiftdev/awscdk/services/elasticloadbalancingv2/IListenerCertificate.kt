@@ -9,7 +9,7 @@ public interface IListenerCertificate {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
   ) : IListenerCertificate {
-    public override fun certificateArn(): String = unwrap(this).getCertificateArn()
+    override fun certificateArn(): String = unwrap(this).getCertificateArn()
   }
 
   public companion object {

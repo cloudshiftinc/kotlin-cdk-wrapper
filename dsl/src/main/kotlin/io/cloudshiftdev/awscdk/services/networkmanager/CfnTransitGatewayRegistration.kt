@@ -29,11 +29,9 @@ public open class CfnTransitGatewayRegistration internal constructor(
   }
 
   public interface Builder {
-    public fun globalNetworkId(globalNetworkId: String) {
-    }
+    public fun globalNetworkId(globalNetworkId: String)
 
-    public fun transitGatewayArn(transitGatewayArn: String) {
-    }
+    public fun transitGatewayArn(transitGatewayArn: String)
   }
 
   private class BuilderImpl(
@@ -45,11 +43,11 @@ public open class CfnTransitGatewayRegistration internal constructor(
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration.Builder.create(scope,
         id)
 
-    public override fun globalNetworkId(globalNetworkId: String) {
+    override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
-    public override fun transitGatewayArn(transitGatewayArn: String) {
+    override fun transitGatewayArn(transitGatewayArn: String) {
       cdkBuilder.transitGatewayArn(transitGatewayArn)
     }
 

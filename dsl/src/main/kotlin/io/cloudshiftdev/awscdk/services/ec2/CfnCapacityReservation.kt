@@ -125,53 +125,37 @@ public open class CfnCapacityReservation internal constructor(
   }
 
   public interface Builder {
-    public fun availabilityZone(availabilityZone: String) {
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    public fun ebsOptimized(ebsOptimized: Boolean) {
-    }
+    public fun ebsOptimized(ebsOptimized: Boolean)
 
-    public fun ebsOptimized(ebsOptimized: IResolvable) {
-    }
+    public fun ebsOptimized(ebsOptimized: IResolvable)
 
-    public fun endDate(endDate: String) {
-    }
+    public fun endDate(endDate: String)
 
-    public fun endDateType(endDateType: String) {
-    }
+    public fun endDateType(endDateType: String)
 
-    public fun ephemeralStorage(ephemeralStorage: Boolean) {
-    }
+    public fun ephemeralStorage(ephemeralStorage: Boolean)
 
-    public fun ephemeralStorage(ephemeralStorage: IResolvable) {
-    }
+    public fun ephemeralStorage(ephemeralStorage: IResolvable)
 
-    public fun instanceCount(instanceCount: Number) {
-    }
+    public fun instanceCount(instanceCount: Number)
 
-    public fun instanceMatchCriteria(instanceMatchCriteria: String) {
-    }
+    public fun instanceMatchCriteria(instanceMatchCriteria: String)
 
-    public fun instancePlatform(instancePlatform: String) {
-    }
+    public fun instancePlatform(instancePlatform: String)
 
-    public fun instanceType(instanceType: String) {
-    }
+    public fun instanceType(instanceType: String)
 
-    public fun outPostArn(outPostArn: String) {
-    }
+    public fun outPostArn(outPostArn: String)
 
-    public fun placementGroupArn(placementGroupArn: String) {
-    }
+    public fun placementGroupArn(placementGroupArn: String)
 
-    public fun tagSpecifications(tagSpecifications: IResolvable) {
-    }
+    public fun tagSpecifications(tagSpecifications: IResolvable)
 
-    public fun tagSpecifications(tagSpecifications: List<Any>) {
-    }
+    public fun tagSpecifications(tagSpecifications: List<Any>)
 
-    public fun tenancy(tenancy: String) {
-    }
+    public fun tenancy(tenancy: String)
   }
 
   private class BuilderImpl(
@@ -181,67 +165,67 @@ public open class CfnCapacityReservation internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnCapacityReservation.Builder =
         software.amazon.awscdk.services.ec2.CfnCapacityReservation.Builder.create(scope, id)
 
-    public override fun availabilityZone(availabilityZone: String) {
+    override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
-    public override fun ebsOptimized(ebsOptimized: Boolean) {
+    override fun ebsOptimized(ebsOptimized: Boolean) {
       cdkBuilder.ebsOptimized(ebsOptimized)
     }
 
-    public override fun ebsOptimized(ebsOptimized: IResolvable) {
+    override fun ebsOptimized(ebsOptimized: IResolvable) {
       cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
     }
 
-    public override fun endDate(endDate: String) {
+    override fun endDate(endDate: String) {
       cdkBuilder.endDate(endDate)
     }
 
-    public override fun endDateType(endDateType: String) {
+    override fun endDateType(endDateType: String) {
       cdkBuilder.endDateType(endDateType)
     }
 
-    public override fun ephemeralStorage(ephemeralStorage: Boolean) {
+    override fun ephemeralStorage(ephemeralStorage: Boolean) {
       cdkBuilder.ephemeralStorage(ephemeralStorage)
     }
 
-    public override fun ephemeralStorage(ephemeralStorage: IResolvable) {
+    override fun ephemeralStorage(ephemeralStorage: IResolvable) {
       cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
     }
 
-    public override fun instanceCount(instanceCount: Number) {
+    override fun instanceCount(instanceCount: Number) {
       cdkBuilder.instanceCount(instanceCount)
     }
 
-    public override fun instanceMatchCriteria(instanceMatchCriteria: String) {
+    override fun instanceMatchCriteria(instanceMatchCriteria: String) {
       cdkBuilder.instanceMatchCriteria(instanceMatchCriteria)
     }
 
-    public override fun instancePlatform(instancePlatform: String) {
+    override fun instancePlatform(instancePlatform: String) {
       cdkBuilder.instancePlatform(instancePlatform)
     }
 
-    public override fun instanceType(instanceType: String) {
+    override fun instanceType(instanceType: String) {
       cdkBuilder.instanceType(instanceType)
     }
 
-    public override fun outPostArn(outPostArn: String) {
+    override fun outPostArn(outPostArn: String) {
       cdkBuilder.outPostArn(outPostArn)
     }
 
-    public override fun placementGroupArn(placementGroupArn: String) {
+    override fun placementGroupArn(placementGroupArn: String) {
       cdkBuilder.placementGroupArn(placementGroupArn)
     }
 
-    public override fun tagSpecifications(tagSpecifications: IResolvable) {
+    override fun tagSpecifications(tagSpecifications: IResolvable) {
       cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
     }
 
-    public override fun tagSpecifications(tagSpecifications: List<Any>) {
+    override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
 
-    public override fun tenancy(tenancy: String) {
+    override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
     }
 
@@ -276,11 +260,9 @@ public open class CfnCapacityReservation internal constructor(
     public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     public interface Builder {
-      public fun resourceType(resourceType: String) {
-      }
+      public fun resourceType(resourceType: String)
 
-      public fun tags(tags: List<CfnTag>) {
-      }
+      public fun tags(tags: List<CfnTag>)
     }
 
     private class BuilderImpl : Builder {
@@ -289,11 +271,11 @@ public open class CfnCapacityReservation internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnCapacityReservation.TagSpecificationProperty.builder()
 
-      public override fun resourceType(resourceType: String) {
+      override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
 
-      public override fun tags(tags: List<CfnTag>) {
+      override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
 
@@ -306,10 +288,9 @@ public open class CfnCapacityReservation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnCapacityReservation.TagSpecificationProperty,
     ) : TagSpecificationProperty {
-      public override fun resourceType(): String? = unwrap(this).getResourceType()
+      override fun resourceType(): String? = unwrap(this).getResourceType()
 
-      public override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?:
-          emptyList()
+      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
     }
 
     public companion object {

@@ -96,44 +96,33 @@ public open class CfnAccessGrant internal constructor(
   }
 
   public interface Builder {
-    public fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: IResolvable) {
-    }
+    public fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: IResolvable)
 
     public
-        fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty) {
-    }
+        fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d72d55b8d1a00d3acf0a7ff1012e5b0c3f5aab5487ac42f3f1075d4e2d68f8b")
     public
-        fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty.Builder.() -> Unit) {
-    }
+        fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty.Builder.() -> Unit)
 
-    public fun accessGrantsLocationId(accessGrantsLocationId: String) {
-    }
+    public fun accessGrantsLocationId(accessGrantsLocationId: String)
 
-    public fun applicationArn(applicationArn: String) {
-    }
+    public fun applicationArn(applicationArn: String)
 
-    public fun grantee(grantee: IResolvable) {
-    }
+    public fun grantee(grantee: IResolvable)
 
-    public fun grantee(grantee: GranteeProperty) {
-    }
+    public fun grantee(grantee: GranteeProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0cb1414c75d8990c1a763de672fb6d01d405b4007e03ba307ff359247434b375")
-    public fun grantee(grantee: GranteeProperty.Builder.() -> Unit) {
-    }
+    public fun grantee(grantee: GranteeProperty.Builder.() -> Unit)
 
-    public fun permission(permission: String) {
-    }
+    public fun permission(permission: String)
 
-    public fun s3PrefixType(s3PrefixType: String) {
-    }
+    public fun s3PrefixType(s3PrefixType: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -143,53 +132,52 @@ public open class CfnAccessGrant internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.s3.CfnAccessGrant.Builder =
         software.amazon.awscdk.services.s3.CfnAccessGrant.Builder.create(scope, id)
 
-    public override
-        fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: IResolvable) {
+    override fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: IResolvable) {
       cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(IResolvable::unwrap))
     }
 
-    public override
+    override
         fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty) {
       cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(AccessGrantsLocationConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3d72d55b8d1a00d3acf0a7ff1012e5b0c3f5aab5487ac42f3f1075d4e2d68f8b")
-    public override
+    override
         fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty.Builder.() -> Unit):
         Unit =
         accessGrantsLocationConfiguration(AccessGrantsLocationConfigurationProperty(accessGrantsLocationConfiguration))
 
-    public override fun accessGrantsLocationId(accessGrantsLocationId: String) {
+    override fun accessGrantsLocationId(accessGrantsLocationId: String) {
       cdkBuilder.accessGrantsLocationId(accessGrantsLocationId)
     }
 
-    public override fun applicationArn(applicationArn: String) {
+    override fun applicationArn(applicationArn: String) {
       cdkBuilder.applicationArn(applicationArn)
     }
 
-    public override fun grantee(grantee: IResolvable) {
+    override fun grantee(grantee: IResolvable) {
       cdkBuilder.grantee(grantee.let(IResolvable::unwrap))
     }
 
-    public override fun grantee(grantee: GranteeProperty) {
+    override fun grantee(grantee: GranteeProperty) {
       cdkBuilder.grantee(grantee.let(GranteeProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0cb1414c75d8990c1a763de672fb6d01d405b4007e03ba307ff359247434b375")
-    public override fun grantee(grantee: GranteeProperty.Builder.() -> Unit): Unit =
+    override fun grantee(grantee: GranteeProperty.Builder.() -> Unit): Unit =
         grantee(GranteeProperty(grantee))
 
-    public override fun permission(permission: String) {
+    override fun permission(permission: String) {
       cdkBuilder.permission(permission)
     }
 
-    public override fun s3PrefixType(s3PrefixType: String) {
+    override fun s3PrefixType(s3PrefixType: String) {
       cdkBuilder.s3PrefixType(s3PrefixType)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -221,8 +209,7 @@ public open class CfnAccessGrant internal constructor(
     public fun s3SubPrefix(): String
 
     public interface Builder {
-      public fun s3SubPrefix(s3SubPrefix: String) {
-      }
+      public fun s3SubPrefix(s3SubPrefix: String)
     }
 
     private class BuilderImpl : Builder {
@@ -231,7 +218,7 @@ public open class CfnAccessGrant internal constructor(
           =
           software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty.builder()
 
-      public override fun s3SubPrefix(s3SubPrefix: String) {
+      override fun s3SubPrefix(s3SubPrefix: String) {
         cdkBuilder.s3SubPrefix(s3SubPrefix)
       }
 
@@ -244,7 +231,7 @@ public open class CfnAccessGrant internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3.CfnAccessGrant.AccessGrantsLocationConfigurationProperty,
     ) : AccessGrantsLocationConfigurationProperty {
-      public override fun s3SubPrefix(): String = unwrap(this).getS3SubPrefix()
+      override fun s3SubPrefix(): String = unwrap(this).getS3SubPrefix()
     }
 
     public companion object {
@@ -274,11 +261,9 @@ public open class CfnAccessGrant internal constructor(
     public fun granteeType(): String
 
     public interface Builder {
-      public fun granteeIdentifier(granteeIdentifier: String) {
-      }
+      public fun granteeIdentifier(granteeIdentifier: String)
 
-      public fun granteeType(granteeType: String) {
-      }
+      public fun granteeType(granteeType: String)
     }
 
     private class BuilderImpl : Builder {
@@ -286,11 +271,11 @@ public open class CfnAccessGrant internal constructor(
           software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty.Builder =
           software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty.builder()
 
-      public override fun granteeIdentifier(granteeIdentifier: String) {
+      override fun granteeIdentifier(granteeIdentifier: String) {
         cdkBuilder.granteeIdentifier(granteeIdentifier)
       }
 
-      public override fun granteeType(granteeType: String) {
+      override fun granteeType(granteeType: String) {
         cdkBuilder.granteeType(granteeType)
       }
 
@@ -301,9 +286,9 @@ public open class CfnAccessGrant internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrant.GranteeProperty,
     ) : GranteeProperty {
-      public override fun granteeIdentifier(): String = unwrap(this).getGranteeIdentifier()
+      override fun granteeIdentifier(): String = unwrap(this).getGranteeIdentifier()
 
-      public override fun granteeType(): String = unwrap(this).getGranteeType()
+      override fun granteeType(): String = unwrap(this).getGranteeType()
     }
 
     public companion object {

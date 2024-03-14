@@ -103,47 +103,34 @@ public open class CfnPermissionSet internal constructor(
   }
 
   public interface Builder {
-    public fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable) {
-    }
+    public fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable)
 
-    public fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>) {
-    }
+    public fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun inlinePolicy(inlinePolicy: Any) {
-    }
+    public fun inlinePolicy(inlinePolicy: Any)
 
-    public fun instanceArn(instanceArn: String) {
-    }
+    public fun instanceArn(instanceArn: String)
 
-    public fun managedPolicies(managedPolicies: List<String>) {
-    }
+    public fun managedPolicies(managedPolicies: List<String>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun permissionsBoundary(permissionsBoundary: IResolvable) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: IResolvable)
 
-    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b2b281fcd686446b3f09daa41b872dc6e753e0375a9adcd7db672c7edd7a792")
     public
-        fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty.Builder.() -> Unit) {
-    }
+        fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty.Builder.() -> Unit)
 
-    public fun relayStateType(relayStateType: String) {
-    }
+    public fun relayStateType(relayStateType: String)
 
-    public fun sessionDuration(sessionDuration: String) {
-    }
+    public fun sessionDuration(sessionDuration: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -153,59 +140,57 @@ public open class CfnPermissionSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.sso.CfnPermissionSet.Builder =
         software.amazon.awscdk.services.sso.CfnPermissionSet.Builder.create(scope, id)
 
-    public override
-        fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable) {
+    override fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable) {
       cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.let(IResolvable::unwrap))
     }
 
-    public override
-        fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>) {
+    override fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>) {
       cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun inlinePolicy(inlinePolicy: Any) {
+    override fun inlinePolicy(inlinePolicy: Any) {
       cdkBuilder.inlinePolicy(inlinePolicy)
     }
 
-    public override fun instanceArn(instanceArn: String) {
+    override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
     }
 
-    public override fun managedPolicies(managedPolicies: List<String>) {
+    override fun managedPolicies(managedPolicies: List<String>) {
       cdkBuilder.managedPolicies(managedPolicies)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: IResolvable) {
+    override fun permissionsBoundary(permissionsBoundary: IResolvable) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(IResolvable::unwrap))
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty) {
+    override fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty) {
       cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundaryProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6b2b281fcd686446b3f09daa41b872dc6e753e0375a9adcd7db672c7edd7a792")
-    public override
+    override
         fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty.Builder.() -> Unit):
         Unit = permissionsBoundary(PermissionsBoundaryProperty(permissionsBoundary))
 
-    public override fun relayStateType(relayStateType: String) {
+    override fun relayStateType(relayStateType: String) {
       cdkBuilder.relayStateType(relayStateType)
     }
 
-    public override fun sessionDuration(sessionDuration: String) {
+    override fun sessionDuration(sessionDuration: String) {
       cdkBuilder.sessionDuration(sessionDuration)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -240,21 +225,17 @@ public open class CfnPermissionSet internal constructor(
     public fun managedPolicyArn(): String? = unwrap(this).getManagedPolicyArn()
 
     public interface Builder {
-      public fun customerManagedPolicyReference(customerManagedPolicyReference: IResolvable) {
-      }
+      public fun customerManagedPolicyReference(customerManagedPolicyReference: IResolvable)
 
       public
-          fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty) {
-      }
+          fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1966918747bd1a2b8f3efd6711b8ee888d72bbb3a1b39999a072ea1761c9702e")
       public
-          fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty.Builder.() -> Unit) {
-      }
+          fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty.Builder.() -> Unit)
 
-      public fun managedPolicyArn(managedPolicyArn: String) {
-      }
+      public fun managedPolicyArn(managedPolicyArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -262,24 +243,23 @@ public open class CfnPermissionSet internal constructor(
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty.Builder =
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty.builder()
 
-      public override
-          fun customerManagedPolicyReference(customerManagedPolicyReference: IResolvable) {
+      override fun customerManagedPolicyReference(customerManagedPolicyReference: IResolvable) {
         cdkBuilder.customerManagedPolicyReference(customerManagedPolicyReference.let(IResolvable::unwrap))
       }
 
-      public override
+      override
           fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty) {
         cdkBuilder.customerManagedPolicyReference(customerManagedPolicyReference.let(CustomerManagedPolicyReferenceProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1966918747bd1a2b8f3efd6711b8ee888d72bbb3a1b39999a072ea1761c9702e")
-      public override
+      override
           fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty.Builder.() -> Unit):
           Unit =
           customerManagedPolicyReference(CustomerManagedPolicyReferenceProperty(customerManagedPolicyReference))
 
-      public override fun managedPolicyArn(managedPolicyArn: String) {
+      override fun managedPolicyArn(managedPolicyArn: String) {
         cdkBuilder.managedPolicyArn(managedPolicyArn)
       }
 
@@ -292,10 +272,10 @@ public open class CfnPermissionSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sso.CfnPermissionSet.PermissionsBoundaryProperty,
     ) : PermissionsBoundaryProperty {
-      public override fun customerManagedPolicyReference(): Any? =
+      override fun customerManagedPolicyReference(): Any? =
           unwrap(this).getCustomerManagedPolicyReference()
 
-      public override fun managedPolicyArn(): String? = unwrap(this).getManagedPolicyArn()
+      override fun managedPolicyArn(): String? = unwrap(this).getManagedPolicyArn()
     }
 
     public companion object {
@@ -324,11 +304,9 @@ public open class CfnPermissionSet internal constructor(
     public fun path(): String? = unwrap(this).getPath()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun path(path: String) {
-      }
+      public fun path(path: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,11 +315,11 @@ public open class CfnPermissionSet internal constructor(
           =
           software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun path(path: String) {
+      override fun path(path: String) {
         cdkBuilder.path(path)
       }
 
@@ -354,9 +332,9 @@ public open class CfnPermissionSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sso.CfnPermissionSet.CustomerManagedPolicyReferenceProperty,
     ) : CustomerManagedPolicyReferenceProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun path(): String? = unwrap(this).getPath()
+      override fun path(): String? = unwrap(this).getPath()
     }
 
     public companion object {

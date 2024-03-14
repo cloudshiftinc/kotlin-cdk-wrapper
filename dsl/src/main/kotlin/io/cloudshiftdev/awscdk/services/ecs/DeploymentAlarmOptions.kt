@@ -6,15 +6,14 @@ public interface DeploymentAlarmOptions {
   public fun behavior(): AlarmBehavior? = unwrap(this).getBehavior()?.let(AlarmBehavior::wrap)
 
   public interface Builder {
-    public fun behavior(behavior: AlarmBehavior) {
-    }
+    public fun behavior(behavior: AlarmBehavior)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions.Builder =
         software.amazon.awscdk.services.ecs.DeploymentAlarmOptions.builder()
 
-    public override fun behavior(behavior: AlarmBehavior) {
+    override fun behavior(behavior: AlarmBehavior) {
       cdkBuilder.behavior(behavior.let(AlarmBehavior::unwrap))
     }
 
@@ -25,8 +24,7 @@ public interface DeploymentAlarmOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions,
   ) : DeploymentAlarmOptions {
-    public override fun behavior(): AlarmBehavior? =
-        unwrap(this).getBehavior()?.let(AlarmBehavior::wrap)
+    override fun behavior(): AlarmBehavior? = unwrap(this).getBehavior()?.let(AlarmBehavior::wrap)
   }
 
   public companion object {

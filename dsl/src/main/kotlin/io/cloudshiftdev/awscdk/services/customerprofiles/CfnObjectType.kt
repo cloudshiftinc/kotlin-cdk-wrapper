@@ -112,47 +112,33 @@ public open class CfnObjectType internal constructor(
   }
 
   public interface Builder {
-    public fun allowProfileCreation(allowProfileCreation: Boolean) {
-    }
+    public fun allowProfileCreation(allowProfileCreation: Boolean)
 
-    public fun allowProfileCreation(allowProfileCreation: IResolvable) {
-    }
+    public fun allowProfileCreation(allowProfileCreation: IResolvable)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun domainName(domainName: String) {
-    }
+    public fun domainName(domainName: String)
 
-    public fun encryptionKey(encryptionKey: String) {
-    }
+    public fun encryptionKey(encryptionKey: String)
 
-    public fun expirationDays(expirationDays: Number) {
-    }
+    public fun expirationDays(expirationDays: Number)
 
-    public fun fields(fields: IResolvable) {
-    }
+    public fun fields(fields: IResolvable)
 
-    public fun fields(fields: List<Any>) {
-    }
+    public fun fields(fields: List<Any>)
 
-    public fun keys(keys: IResolvable) {
-    }
+    public fun keys(keys: IResolvable)
 
-    public fun keys(keys: List<Any>) {
-    }
+    public fun keys(keys: List<Any>)
 
-    public fun objectTypeName(objectTypeName: String) {
-    }
+    public fun objectTypeName(objectTypeName: String)
 
-    public fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String) {
-    }
+    public fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun templateId(templateId: String) {
-    }
+    public fun templateId(templateId: String)
   }
 
   private class BuilderImpl(
@@ -162,59 +148,59 @@ public open class CfnObjectType internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.customerprofiles.CfnObjectType.Builder =
         software.amazon.awscdk.services.customerprofiles.CfnObjectType.Builder.create(scope, id)
 
-    public override fun allowProfileCreation(allowProfileCreation: Boolean) {
+    override fun allowProfileCreation(allowProfileCreation: Boolean) {
       cdkBuilder.allowProfileCreation(allowProfileCreation)
     }
 
-    public override fun allowProfileCreation(allowProfileCreation: IResolvable) {
+    override fun allowProfileCreation(allowProfileCreation: IResolvable) {
       cdkBuilder.allowProfileCreation(allowProfileCreation.let(IResolvable::unwrap))
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun domainName(domainName: String) {
+    override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
 
-    public override fun encryptionKey(encryptionKey: String) {
+    override fun encryptionKey(encryptionKey: String) {
       cdkBuilder.encryptionKey(encryptionKey)
     }
 
-    public override fun expirationDays(expirationDays: Number) {
+    override fun expirationDays(expirationDays: Number) {
       cdkBuilder.expirationDays(expirationDays)
     }
 
-    public override fun fields(fields: IResolvable) {
+    override fun fields(fields: IResolvable) {
       cdkBuilder.fields(fields.let(IResolvable::unwrap))
     }
 
-    public override fun fields(fields: List<Any>) {
+    override fun fields(fields: List<Any>) {
       cdkBuilder.fields(fields)
     }
 
-    public override fun keys(keys: IResolvable) {
+    override fun keys(keys: IResolvable) {
       cdkBuilder.keys(keys.let(IResolvable::unwrap))
     }
 
-    public override fun keys(keys: List<Any>) {
+    override fun keys(keys: List<Any>) {
       cdkBuilder.keys(keys)
     }
 
-    public override fun objectTypeName(objectTypeName: String) {
+    override fun objectTypeName(objectTypeName: String) {
       cdkBuilder.objectTypeName(objectTypeName)
     }
 
-    public override fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String) {
+    override fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String) {
       cdkBuilder.sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun templateId(templateId: String) {
+    override fun templateId(templateId: String) {
       cdkBuilder.templateId(templateId)
     }
 
@@ -250,11 +236,9 @@ public open class CfnObjectType internal constructor(
         emptyList()
 
     public interface Builder {
-      public fun fieldNames(fieldNames: List<String>) {
-      }
+      public fun fieldNames(fieldNames: List<String>)
 
-      public fun standardIdentifiers(standardIdentifiers: List<String>) {
-      }
+      public fun standardIdentifiers(standardIdentifiers: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -263,11 +247,11 @@ public open class CfnObjectType internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty.builder()
 
-      public override fun fieldNames(fieldNames: List<String>) {
+      override fun fieldNames(fieldNames: List<String>) {
         cdkBuilder.fieldNames(fieldNames)
       }
 
-      public override fun standardIdentifiers(standardIdentifiers: List<String>) {
+      override fun standardIdentifiers(standardIdentifiers: List<String>) {
         cdkBuilder.standardIdentifiers(standardIdentifiers)
       }
 
@@ -280,10 +264,10 @@ public open class CfnObjectType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty,
     ) : ObjectTypeKeyProperty {
-      public override fun fieldNames(): List<String> = unwrap(this).getFieldNames() ?: emptyList()
+      override fun fieldNames(): List<String> = unwrap(this).getFieldNames() ?: emptyList()
 
-      public override fun standardIdentifiers(): List<String> =
-          unwrap(this).getStandardIdentifiers() ?: emptyList()
+      override fun standardIdentifiers(): List<String> = unwrap(this).getStandardIdentifiers() ?:
+          emptyList()
     }
 
     public companion object {
@@ -312,19 +296,15 @@ public open class CfnObjectType internal constructor(
     public fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun objectTypeField(objectTypeField: IResolvable) {
-      }
+      public fun objectTypeField(objectTypeField: IResolvable)
 
-      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty) {
-      }
+      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a36b474874f8982034c00f59853506f065262c2bd05f5ce8aa93d6089d5ceb5")
-      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit) {
-      }
+      public fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -332,23 +312,22 @@ public open class CfnObjectType internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty.Builder =
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun objectTypeField(objectTypeField: IResolvable) {
+      override fun objectTypeField(objectTypeField: IResolvable) {
         cdkBuilder.objectTypeField(objectTypeField.let(IResolvable::unwrap))
       }
 
-      public override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty) {
+      override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty) {
         cdkBuilder.objectTypeField(objectTypeField.let(ObjectTypeFieldProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a36b474874f8982034c00f59853506f065262c2bd05f5ce8aa93d6089d5ceb5")
-      public override
-          fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit): Unit =
-          objectTypeField(ObjectTypeFieldProperty(objectTypeField))
+      override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty.Builder.() -> Unit):
+          Unit = objectTypeField(ObjectTypeFieldProperty(objectTypeField))
 
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty =
@@ -359,9 +338,9 @@ public open class CfnObjectType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.FieldMapProperty,
     ) : FieldMapProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
+      override fun objectTypeField(): Any? = unwrap(this).getObjectTypeField()
     }
 
     public companion object {
@@ -392,14 +371,11 @@ public open class CfnObjectType internal constructor(
     public fun target(): String? = unwrap(this).getTarget()
 
     public interface Builder {
-      public fun contentType(contentType: String) {
-      }
+      public fun contentType(contentType: String)
 
-      public fun source(source: String) {
-      }
+      public fun source(source: String)
 
-      public fun target(target: String) {
-      }
+      public fun target(target: String)
     }
 
     private class BuilderImpl : Builder {
@@ -408,15 +384,15 @@ public open class CfnObjectType internal constructor(
           =
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty.builder()
 
-      public override fun contentType(contentType: String) {
+      override fun contentType(contentType: String) {
         cdkBuilder.contentType(contentType)
       }
 
-      public override fun source(source: String) {
+      override fun source(source: String) {
         cdkBuilder.source(source)
       }
 
-      public override fun target(target: String) {
+      override fun target(target: String) {
         cdkBuilder.target(target)
       }
 
@@ -429,11 +405,11 @@ public open class CfnObjectType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeFieldProperty,
     ) : ObjectTypeFieldProperty {
-      public override fun contentType(): String? = unwrap(this).getContentType()
+      override fun contentType(): String? = unwrap(this).getContentType()
 
-      public override fun source(): String? = unwrap(this).getSource()
+      override fun source(): String? = unwrap(this).getSource()
 
-      public override fun target(): String? = unwrap(this).getTarget()
+      override fun target(): String? = unwrap(this).getTarget()
     }
 
     public companion object {
@@ -462,14 +438,11 @@ public open class CfnObjectType internal constructor(
     public fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
-      }
+      public fun objectTypeKeyList(objectTypeKeyList: IResolvable)
 
-      public fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
-      }
+      public fun objectTypeKeyList(objectTypeKeyList: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -477,15 +450,15 @@ public open class CfnObjectType internal constructor(
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty.Builder =
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
+      override fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
         cdkBuilder.objectTypeKeyList(objectTypeKeyList.let(IResolvable::unwrap))
       }
 
-      public override fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
+      override fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
         cdkBuilder.objectTypeKeyList(objectTypeKeyList)
       }
 
@@ -498,9 +471,9 @@ public open class CfnObjectType internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty,
     ) : KeyMapProperty {
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
+      override fun objectTypeKeyList(): Any? = unwrap(this).getObjectTypeKeyList()
     }
 
     public companion object {

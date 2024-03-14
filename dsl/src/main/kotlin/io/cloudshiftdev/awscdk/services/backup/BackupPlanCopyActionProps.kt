@@ -12,29 +12,26 @@ public interface BackupPlanCopyActionProps {
       unwrap(this).getMoveToColdStorageAfter()?.let(Duration::wrap)
 
   public interface Builder {
-    public fun deleteAfter(deleteAfter: Duration) {
-    }
+    public fun deleteAfter(deleteAfter: Duration)
 
-    public fun destinationBackupVault(destinationBackupVault: IBackupVault) {
-    }
+    public fun destinationBackupVault(destinationBackupVault: IBackupVault)
 
-    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-    }
+    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.backup.BackupPlanCopyActionProps.Builder
         = software.amazon.awscdk.services.backup.BackupPlanCopyActionProps.builder()
 
-    public override fun deleteAfter(deleteAfter: Duration) {
+    override fun deleteAfter(deleteAfter: Duration) {
       cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))
     }
 
-    public override fun destinationBackupVault(destinationBackupVault: IBackupVault) {
+    override fun destinationBackupVault(destinationBackupVault: IBackupVault) {
       cdkBuilder.destinationBackupVault(destinationBackupVault.let(IBackupVault::unwrap))
     }
 
-    public override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
+    override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
       cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration::unwrap))
     }
 
@@ -45,13 +42,12 @@ public interface BackupPlanCopyActionProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.backup.BackupPlanCopyActionProps,
   ) : BackupPlanCopyActionProps {
-    public override fun deleteAfter(): Duration? =
-        unwrap(this).getDeleteAfter()?.let(Duration::wrap)
+    override fun deleteAfter(): Duration? = unwrap(this).getDeleteAfter()?.let(Duration::wrap)
 
-    public override fun destinationBackupVault(): IBackupVault =
+    override fun destinationBackupVault(): IBackupVault =
         unwrap(this).getDestinationBackupVault().let(IBackupVault::wrap)
 
-    public override fun moveToColdStorageAfter(): Duration? =
+    override fun moveToColdStorageAfter(): Duration? =
         unwrap(this).getMoveToColdStorageAfter()?.let(Duration::wrap)
   }
 

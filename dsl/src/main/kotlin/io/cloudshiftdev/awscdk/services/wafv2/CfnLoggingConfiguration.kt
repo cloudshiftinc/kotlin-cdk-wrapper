@@ -53,20 +53,15 @@ public open class CfnLoggingConfiguration internal constructor(
   }
 
   public interface Builder {
-    public fun logDestinationConfigs(logDestinationConfigs: List<String>) {
-    }
+    public fun logDestinationConfigs(logDestinationConfigs: List<String>)
 
-    public fun loggingFilter(loggingFilter: Any) {
-    }
+    public fun loggingFilter(loggingFilter: Any)
 
-    public fun redactedFields(redactedFields: IResolvable) {
-    }
+    public fun redactedFields(redactedFields: IResolvable)
 
-    public fun redactedFields(redactedFields: List<Any>) {
-    }
+    public fun redactedFields(redactedFields: List<Any>)
 
-    public fun resourceArn(resourceArn: String) {
-    }
+    public fun resourceArn(resourceArn: String)
   }
 
   private class BuilderImpl(
@@ -76,23 +71,23 @@ public open class CfnLoggingConfiguration internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.Builder =
         software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.Builder.create(scope, id)
 
-    public override fun logDestinationConfigs(logDestinationConfigs: List<String>) {
+    override fun logDestinationConfigs(logDestinationConfigs: List<String>) {
       cdkBuilder.logDestinationConfigs(logDestinationConfigs)
     }
 
-    public override fun loggingFilter(loggingFilter: Any) {
+    override fun loggingFilter(loggingFilter: Any) {
       cdkBuilder.loggingFilter(loggingFilter)
     }
 
-    public override fun redactedFields(redactedFields: IResolvable) {
+    override fun redactedFields(redactedFields: IResolvable) {
       cdkBuilder.redactedFields(redactedFields.let(IResolvable::unwrap))
     }
 
-    public override fun redactedFields(redactedFields: List<Any>) {
+    override fun redactedFields(redactedFields: List<Any>) {
       cdkBuilder.redactedFields(redactedFields)
     }
 
-    public override fun resourceArn(resourceArn: String) {
+    override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
 
@@ -125,8 +120,7 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun labelName(): String
 
     public interface Builder {
-      public fun labelName(labelName: String) {
-      }
+      public fun labelName(labelName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -135,7 +129,7 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty.builder()
 
-      public override fun labelName(labelName: String) {
+      override fun labelName(labelName: String) {
         cdkBuilder.labelName(labelName)
       }
 
@@ -148,7 +142,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LabelNameConditionProperty,
     ) : LabelNameConditionProperty {
-      public override fun labelName(): String = unwrap(this).getLabelName()
+      override fun labelName(): String = unwrap(this).getLabelName()
     }
 
     public companion object {
@@ -179,17 +173,13 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun requirement(): String
 
     public interface Builder {
-      public fun behavior(behavior: String) {
-      }
+      public fun behavior(behavior: String)
 
-      public fun conditions(conditions: IResolvable) {
-      }
+      public fun conditions(conditions: IResolvable)
 
-      public fun conditions(conditions: List<Any>) {
-      }
+      public fun conditions(conditions: List<Any>)
 
-      public fun requirement(requirement: String) {
-      }
+      public fun requirement(requirement: String)
     }
 
     private class BuilderImpl : Builder {
@@ -197,19 +187,19 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty.builder()
 
-      public override fun behavior(behavior: String) {
+      override fun behavior(behavior: String) {
         cdkBuilder.behavior(behavior)
       }
 
-      public override fun conditions(conditions: IResolvable) {
+      override fun conditions(conditions: IResolvable) {
         cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
       }
 
-      public override fun conditions(conditions: List<Any>) {
+      override fun conditions(conditions: List<Any>) {
         cdkBuilder.conditions(conditions)
       }
 
-      public override fun requirement(requirement: String) {
+      override fun requirement(requirement: String) {
         cdkBuilder.requirement(requirement)
       }
 
@@ -222,11 +212,11 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FilterProperty,
     ) : FilterProperty {
-      public override fun behavior(): String = unwrap(this).getBehavior()
+      override fun behavior(): String = unwrap(this).getBehavior()
 
-      public override fun conditions(): Any = unwrap(this).getConditions()
+      override fun conditions(): Any = unwrap(this).getConditions()
 
-      public override fun requirement(): String = unwrap(this).getRequirement()
+      override fun requirement(): String = unwrap(this).getRequirement()
     }
 
     public companion object {
@@ -255,14 +245,11 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun filters(): Any
 
     public interface Builder {
-      public fun defaultBehavior(defaultBehavior: String) {
-      }
+      public fun defaultBehavior(defaultBehavior: String)
 
-      public fun filters(filters: IResolvable) {
-      }
+      public fun filters(filters: IResolvable)
 
-      public fun filters(filters: List<Any>) {
-      }
+      public fun filters(filters: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -271,15 +258,15 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty.builder()
 
-      public override fun defaultBehavior(defaultBehavior: String) {
+      override fun defaultBehavior(defaultBehavior: String) {
         cdkBuilder.defaultBehavior(defaultBehavior)
       }
 
-      public override fun filters(filters: IResolvable) {
+      override fun filters(filters: IResolvable) {
         cdkBuilder.filters(filters.let(IResolvable::unwrap))
       }
 
-      public override fun filters(filters: List<Any>) {
+      override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
 
@@ -292,9 +279,9 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty,
     ) : LoggingFilterProperty {
-      public override fun defaultBehavior(): String = unwrap(this).getDefaultBehavior()
+      override fun defaultBehavior(): String = unwrap(this).getDefaultBehavior()
 
-      public override fun filters(): Any = unwrap(this).getFilters()
+      override fun filters(): Any = unwrap(this).getFilters()
     }
 
     public companion object {
@@ -321,8 +308,7 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun name(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
     }
 
     private class BuilderImpl : Builder {
@@ -331,7 +317,7 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
@@ -344,7 +330,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.SingleHeaderProperty,
     ) : SingleHeaderProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
     }
 
     public companion object {
@@ -373,28 +359,22 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun labelNameCondition(): Any? = unwrap(this).getLabelNameCondition()
 
     public interface Builder {
-      public fun actionCondition(actionCondition: IResolvable) {
-      }
+      public fun actionCondition(actionCondition: IResolvable)
 
-      public fun actionCondition(actionCondition: ActionConditionProperty) {
-      }
+      public fun actionCondition(actionCondition: ActionConditionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b3cd5e6627685433dd5fb1edd61d760fdeaaf76940ac0b738602063754b5759")
-      public fun actionCondition(actionCondition: ActionConditionProperty.Builder.() -> Unit) {
-      }
+      public fun actionCondition(actionCondition: ActionConditionProperty.Builder.() -> Unit)
 
-      public fun labelNameCondition(labelNameCondition: IResolvable) {
-      }
+      public fun labelNameCondition(labelNameCondition: IResolvable)
 
-      public fun labelNameCondition(labelNameCondition: LabelNameConditionProperty) {
-      }
+      public fun labelNameCondition(labelNameCondition: LabelNameConditionProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c2ef676ac8836bd83691849c0052441a394f30aa7e8af8a052f1c99f452d30c")
       public
-          fun labelNameCondition(labelNameCondition: LabelNameConditionProperty.Builder.() -> Unit) {
-      }
+          fun labelNameCondition(labelNameCondition: LabelNameConditionProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -402,31 +382,30 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty.builder()
 
-      public override fun actionCondition(actionCondition: IResolvable) {
+      override fun actionCondition(actionCondition: IResolvable) {
         cdkBuilder.actionCondition(actionCondition.let(IResolvable::unwrap))
       }
 
-      public override fun actionCondition(actionCondition: ActionConditionProperty) {
+      override fun actionCondition(actionCondition: ActionConditionProperty) {
         cdkBuilder.actionCondition(actionCondition.let(ActionConditionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3b3cd5e6627685433dd5fb1edd61d760fdeaaf76940ac0b738602063754b5759")
-      public override
-          fun actionCondition(actionCondition: ActionConditionProperty.Builder.() -> Unit): Unit =
-          actionCondition(ActionConditionProperty(actionCondition))
+      override fun actionCondition(actionCondition: ActionConditionProperty.Builder.() -> Unit):
+          Unit = actionCondition(ActionConditionProperty(actionCondition))
 
-      public override fun labelNameCondition(labelNameCondition: IResolvable) {
+      override fun labelNameCondition(labelNameCondition: IResolvable) {
         cdkBuilder.labelNameCondition(labelNameCondition.let(IResolvable::unwrap))
       }
 
-      public override fun labelNameCondition(labelNameCondition: LabelNameConditionProperty) {
+      override fun labelNameCondition(labelNameCondition: LabelNameConditionProperty) {
         cdkBuilder.labelNameCondition(labelNameCondition.let(LabelNameConditionProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c2ef676ac8836bd83691849c0052441a394f30aa7e8af8a052f1c99f452d30c")
-      public override
+      override
           fun labelNameCondition(labelNameCondition: LabelNameConditionProperty.Builder.() -> Unit):
           Unit = labelNameCondition(LabelNameConditionProperty(labelNameCondition))
 
@@ -439,9 +418,9 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ConditionProperty,
     ) : ConditionProperty {
-      public override fun actionCondition(): Any? = unwrap(this).getActionCondition()
+      override fun actionCondition(): Any? = unwrap(this).getActionCondition()
 
-      public override fun labelNameCondition(): Any? = unwrap(this).getLabelNameCondition()
+      override fun labelNameCondition(): Any? = unwrap(this).getLabelNameCondition()
     }
 
     public companion object {
@@ -468,8 +447,7 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun action(): String
 
     public interface Builder {
-      public fun action(action: String) {
-      }
+      public fun action(action: String)
     }
 
     private class BuilderImpl : Builder {
@@ -478,7 +456,7 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty.builder()
 
-      public override fun action(action: String) {
+      override fun action(action: String) {
         cdkBuilder.action(action)
       }
 
@@ -491,7 +469,7 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.ActionConditionProperty,
     ) : ActionConditionProperty {
-      public override fun action(): String = unwrap(this).getAction()
+      override fun action(): String = unwrap(this).getAction()
     }
 
     public companion object {
@@ -526,20 +504,15 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun uriPath(): Any? = unwrap(this).getUriPath()
 
     public interface Builder {
-      public fun jsonBody(jsonBody: Any) {
-      }
+      public fun jsonBody(jsonBody: Any)
 
-      public fun method(method: Any) {
-      }
+      public fun method(method: Any)
 
-      public fun queryString(queryString: Any) {
-      }
+      public fun queryString(queryString: Any)
 
-      public fun singleHeader(singleHeader: Any) {
-      }
+      public fun singleHeader(singleHeader: Any)
 
-      public fun uriPath(uriPath: Any) {
-      }
+      public fun uriPath(uriPath: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -548,23 +521,23 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty.builder()
 
-      public override fun jsonBody(jsonBody: Any) {
+      override fun jsonBody(jsonBody: Any) {
         cdkBuilder.jsonBody(jsonBody)
       }
 
-      public override fun method(method: Any) {
+      override fun method(method: Any) {
         cdkBuilder.method(method)
       }
 
-      public override fun queryString(queryString: Any) {
+      override fun queryString(queryString: Any) {
         cdkBuilder.queryString(queryString)
       }
 
-      public override fun singleHeader(singleHeader: Any) {
+      override fun singleHeader(singleHeader: Any) {
         cdkBuilder.singleHeader(singleHeader)
       }
 
-      public override fun uriPath(uriPath: Any) {
+      override fun uriPath(uriPath: Any) {
         cdkBuilder.uriPath(uriPath)
       }
 
@@ -577,15 +550,15 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.FieldToMatchProperty,
     ) : FieldToMatchProperty {
-      public override fun jsonBody(): Any? = unwrap(this).getJsonBody()
+      override fun jsonBody(): Any? = unwrap(this).getJsonBody()
 
-      public override fun method(): Any? = unwrap(this).getMethod()
+      override fun method(): Any? = unwrap(this).getMethod()
 
-      public override fun queryString(): Any? = unwrap(this).getQueryString()
+      override fun queryString(): Any? = unwrap(this).getQueryString()
 
-      public override fun singleHeader(): Any? = unwrap(this).getSingleHeader()
+      override fun singleHeader(): Any? = unwrap(this).getSingleHeader()
 
-      public override fun uriPath(): Any? = unwrap(this).getUriPath()
+      override fun uriPath(): Any? = unwrap(this).getUriPath()
     }
 
     public companion object {
@@ -614,11 +587,9 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
 
     public interface Builder {
-      public fun all(all: Any) {
-      }
+      public fun all(all: Any)
 
-      public fun includedPaths(includedPaths: List<String>) {
-      }
+      public fun includedPaths(includedPaths: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -627,11 +598,11 @@ public open class CfnLoggingConfiguration internal constructor(
           =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty.builder()
 
-      public override fun all(all: Any) {
+      override fun all(all: Any) {
         cdkBuilder.all(all)
       }
 
-      public override fun includedPaths(includedPaths: List<String>) {
+      override fun includedPaths(includedPaths: List<String>) {
         cdkBuilder.includedPaths(includedPaths)
       }
 
@@ -644,10 +615,9 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty,
     ) : MatchPatternProperty {
-      public override fun all(): Any? = unwrap(this).getAll()
+      override fun all(): Any? = unwrap(this).getAll()
 
-      public override fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?:
-          emptyList()
+      override fun includedPaths(): List<String> = unwrap(this).getIncludedPaths() ?: emptyList()
     }
 
     public companion object {
@@ -678,22 +648,17 @@ public open class CfnLoggingConfiguration internal constructor(
     public fun matchScope(): String
 
     public interface Builder {
-      public fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
-      }
+      public fun invalidFallbackBehavior(invalidFallbackBehavior: String)
 
-      public fun matchPattern(matchPattern: IResolvable) {
-      }
+      public fun matchPattern(matchPattern: IResolvable)
 
-      public fun matchPattern(matchPattern: MatchPatternProperty) {
-      }
+      public fun matchPattern(matchPattern: MatchPatternProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47b476afe276952959a64bd7d77e5444c8c854c6ae0d48aed8f259844a9e3648")
-      public fun matchPattern(matchPattern: MatchPatternProperty.Builder.() -> Unit) {
-      }
+      public fun matchPattern(matchPattern: MatchPatternProperty.Builder.() -> Unit)
 
-      public fun matchScope(matchScope: String) {
-      }
+      public fun matchScope(matchScope: String)
     }
 
     private class BuilderImpl : Builder {
@@ -701,24 +666,24 @@ public open class CfnLoggingConfiguration internal constructor(
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty.Builder =
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty.builder()
 
-      public override fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
+      override fun invalidFallbackBehavior(invalidFallbackBehavior: String) {
         cdkBuilder.invalidFallbackBehavior(invalidFallbackBehavior)
       }
 
-      public override fun matchPattern(matchPattern: IResolvable) {
+      override fun matchPattern(matchPattern: IResolvable) {
         cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
       }
 
-      public override fun matchPattern(matchPattern: MatchPatternProperty) {
+      override fun matchPattern(matchPattern: MatchPatternProperty) {
         cdkBuilder.matchPattern(matchPattern.let(MatchPatternProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("47b476afe276952959a64bd7d77e5444c8c854c6ae0d48aed8f259844a9e3648")
-      public override fun matchPattern(matchPattern: MatchPatternProperty.Builder.() -> Unit): Unit
-          = matchPattern(MatchPatternProperty(matchPattern))
+      override fun matchPattern(matchPattern: MatchPatternProperty.Builder.() -> Unit): Unit =
+          matchPattern(MatchPatternProperty(matchPattern))
 
-      public override fun matchScope(matchScope: String) {
+      override fun matchScope(matchScope: String) {
         cdkBuilder.matchScope(matchScope)
       }
 
@@ -731,12 +696,11 @@ public open class CfnLoggingConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.JsonBodyProperty,
     ) : JsonBodyProperty {
-      public override fun invalidFallbackBehavior(): String? =
-          unwrap(this).getInvalidFallbackBehavior()
+      override fun invalidFallbackBehavior(): String? = unwrap(this).getInvalidFallbackBehavior()
 
-      public override fun matchPattern(): Any = unwrap(this).getMatchPattern()
+      override fun matchPattern(): Any = unwrap(this).getMatchPattern()
 
-      public override fun matchScope(): String = unwrap(this).getMatchScope()
+      override fun matchScope(): String = unwrap(this).getMatchScope()
     }
 
     public companion object {

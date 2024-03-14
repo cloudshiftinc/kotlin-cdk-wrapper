@@ -10,33 +10,30 @@ public interface ThrottlingPerMethod {
   public fun throttle(): ThrottleSettings
 
   public interface Builder {
-    public fun method(method: Method) {
-    }
+    public fun method(method: Method)
 
-    public fun throttle(throttle: ThrottleSettings) {
-    }
+    public fun throttle(throttle: ThrottleSettings)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb76cd9a6b35574df0b500df70b6e031e0e5c49c85d132912a5aa2121608cdb0")
-    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit) {
-    }
+    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ThrottlingPerMethod.Builder =
         software.amazon.awscdk.services.apigateway.ThrottlingPerMethod.builder()
 
-    public override fun method(method: Method) {
+    override fun method(method: Method) {
       cdkBuilder.method(method.let(Method::unwrap))
     }
 
-    public override fun throttle(throttle: ThrottleSettings) {
+    override fun throttle(throttle: ThrottleSettings) {
       cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb76cd9a6b35574df0b500df70b6e031e0e5c49c85d132912a5aa2121608cdb0")
-    public override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
+    override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
         throttle(ThrottleSettings(throttle))
 
     public fun build(): software.amazon.awscdk.services.apigateway.ThrottlingPerMethod =
@@ -46,9 +43,9 @@ public interface ThrottlingPerMethod {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ThrottlingPerMethod,
   ) : ThrottlingPerMethod {
-    public override fun method(): Method = unwrap(this).getMethod().let(Method::wrap)
+    override fun method(): Method = unwrap(this).getMethod().let(Method::wrap)
 
-    public override fun throttle(): ThrottleSettings =
+    override fun throttle(): ThrottleSettings =
         unwrap(this).getThrottle().let(ThrottleSettings::wrap)
   }
 

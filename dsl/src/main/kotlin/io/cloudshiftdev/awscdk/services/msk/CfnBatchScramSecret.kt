@@ -29,11 +29,9 @@ public open class CfnBatchScramSecret internal constructor(
   }
 
   public interface Builder {
-    public fun clusterArn(clusterArn: String) {
-    }
+    public fun clusterArn(clusterArn: String)
 
-    public fun secretArnList(secretArnList: List<String>) {
-    }
+    public fun secretArnList(secretArnList: List<String>)
   }
 
   private class BuilderImpl(
@@ -43,11 +41,11 @@ public open class CfnBatchScramSecret internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.msk.CfnBatchScramSecret.Builder =
         software.amazon.awscdk.services.msk.CfnBatchScramSecret.Builder.create(scope, id)
 
-    public override fun clusterArn(clusterArn: String) {
+    override fun clusterArn(clusterArn: String) {
       cdkBuilder.clusterArn(clusterArn)
     }
 
-    public override fun secretArnList(secretArnList: List<String>) {
+    override fun secretArnList(secretArnList: List<String>) {
       cdkBuilder.secretArnList(secretArnList)
     }
 

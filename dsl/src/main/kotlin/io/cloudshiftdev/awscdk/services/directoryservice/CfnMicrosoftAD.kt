@@ -88,40 +88,29 @@ public open class CfnMicrosoftAD internal constructor(
       vpcSettings(VpcSettingsProperty(`value`))
 
   public interface Builder {
-    public fun createAlias(createAlias: Boolean) {
-    }
+    public fun createAlias(createAlias: Boolean)
 
-    public fun createAlias(createAlias: IResolvable) {
-    }
+    public fun createAlias(createAlias: IResolvable)
 
-    public fun edition(edition: String) {
-    }
+    public fun edition(edition: String)
 
-    public fun enableSso(enableSso: Boolean) {
-    }
+    public fun enableSso(enableSso: Boolean)
 
-    public fun enableSso(enableSso: IResolvable) {
-    }
+    public fun enableSso(enableSso: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun password(password: String) {
-    }
+    public fun password(password: String)
 
-    public fun shortName(shortName: String) {
-    }
+    public fun shortName(shortName: String)
 
-    public fun vpcSettings(vpcSettings: IResolvable) {
-    }
+    public fun vpcSettings(vpcSettings: IResolvable)
 
-    public fun vpcSettings(vpcSettings: VpcSettingsProperty) {
-    }
+    public fun vpcSettings(vpcSettings: VpcSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2517bf878b722d8257bf82c412000e68a26bc458a8c5dc345dced022bef50eab")
-    public fun vpcSettings(vpcSettings: VpcSettingsProperty.Builder.() -> Unit) {
-    }
+    public fun vpcSettings(vpcSettings: VpcSettingsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -131,49 +120,49 @@ public open class CfnMicrosoftAD internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.Builder
         = software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.Builder.create(scope, id)
 
-    public override fun createAlias(createAlias: Boolean) {
+    override fun createAlias(createAlias: Boolean) {
       cdkBuilder.createAlias(createAlias)
     }
 
-    public override fun createAlias(createAlias: IResolvable) {
+    override fun createAlias(createAlias: IResolvable) {
       cdkBuilder.createAlias(createAlias.let(IResolvable::unwrap))
     }
 
-    public override fun edition(edition: String) {
+    override fun edition(edition: String) {
       cdkBuilder.edition(edition)
     }
 
-    public override fun enableSso(enableSso: Boolean) {
+    override fun enableSso(enableSso: Boolean) {
       cdkBuilder.enableSso(enableSso)
     }
 
-    public override fun enableSso(enableSso: IResolvable) {
+    override fun enableSso(enableSso: IResolvable) {
       cdkBuilder.enableSso(enableSso.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun password(password: String) {
+    override fun password(password: String) {
       cdkBuilder.password(password)
     }
 
-    public override fun shortName(shortName: String) {
+    override fun shortName(shortName: String) {
       cdkBuilder.shortName(shortName)
     }
 
-    public override fun vpcSettings(vpcSettings: IResolvable) {
+    override fun vpcSettings(vpcSettings: IResolvable) {
       cdkBuilder.vpcSettings(vpcSettings.let(IResolvable::unwrap))
     }
 
-    public override fun vpcSettings(vpcSettings: VpcSettingsProperty) {
+    override fun vpcSettings(vpcSettings: VpcSettingsProperty) {
       cdkBuilder.vpcSettings(vpcSettings.let(VpcSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2517bf878b722d8257bf82c412000e68a26bc458a8c5dc345dced022bef50eab")
-    public override fun vpcSettings(vpcSettings: VpcSettingsProperty.Builder.() -> Unit): Unit =
+    override fun vpcSettings(vpcSettings: VpcSettingsProperty.Builder.() -> Unit): Unit =
         vpcSettings(VpcSettingsProperty(vpcSettings))
 
     public fun build(): software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD =
@@ -207,11 +196,9 @@ public open class CfnMicrosoftAD internal constructor(
     public fun vpcId(): String
 
     public interface Builder {
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -220,11 +207,11 @@ public open class CfnMicrosoftAD internal constructor(
           =
           software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty.builder()
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -237,9 +224,9 @@ public open class CfnMicrosoftAD internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty,
     ) : VpcSettingsProperty {
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
-      public override fun vpcId(): String = unwrap(this).getVpcId()
+      override fun vpcId(): String = unwrap(this).getVpcId()
     }
 
     public companion object {

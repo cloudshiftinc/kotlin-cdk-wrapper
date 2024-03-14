@@ -41,14 +41,11 @@ public open class CfnApiKey internal constructor(
   }
 
   public interface Builder {
-    public fun apiId(apiId: String) {
-    }
+    public fun apiId(apiId: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun expires(expires: Number) {
-    }
+    public fun expires(expires: Number)
   }
 
   private class BuilderImpl(
@@ -58,15 +55,15 @@ public open class CfnApiKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnApiKey.Builder =
         software.amazon.awscdk.services.appsync.CfnApiKey.Builder.create(scope, id)
 
-    public override fun apiId(apiId: String) {
+    override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun expires(expires: Number) {
+    override fun expires(expires: Number) {
       cdkBuilder.expires(expires)
     }
 

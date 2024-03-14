@@ -105,47 +105,34 @@ public open class CfnJobTemplate internal constructor(
   }
 
   public interface Builder {
-    public fun accelerationSettings(accelerationSettings: IResolvable) {
-    }
+    public fun accelerationSettings(accelerationSettings: IResolvable)
 
-    public fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty) {
-    }
+    public fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("71826123168d5fa0ad81f034744e0fd2541d75930c20fcfd4edf9b5fc23a313e")
     public
-        fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty.Builder.() -> Unit) {
-    }
+        fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty.Builder.() -> Unit)
 
-    public fun category(category: String) {
-    }
+    public fun category(category: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun hopDestinations(hopDestinations: IResolvable) {
-    }
+    public fun hopDestinations(hopDestinations: IResolvable)
 
-    public fun hopDestinations(hopDestinations: List<Any>) {
-    }
+    public fun hopDestinations(hopDestinations: List<Any>)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun priority(priority: Number) {
-    }
+    public fun priority(priority: Number)
 
-    public fun queue(queue: String) {
-    }
+    public fun queue(queue: String)
 
-    public fun statusUpdateInterval(statusUpdateInterval: String) {
-    }
+    public fun statusUpdateInterval(statusUpdateInterval: String)
 
-    public fun tags(tags: Any) {
-    }
+    public fun tags(tags: Any)
 
-    public fun tingsJson(settingsJson: Any) {
-    }
+    public fun tingsJson(settingsJson: Any)
   }
 
   private class BuilderImpl(
@@ -155,57 +142,57 @@ public open class CfnJobTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.Builder =
         software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.Builder.create(scope, id)
 
-    public override fun accelerationSettings(accelerationSettings: IResolvable) {
+    override fun accelerationSettings(accelerationSettings: IResolvable) {
       cdkBuilder.accelerationSettings(accelerationSettings.let(IResolvable::unwrap))
     }
 
-    public override fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty) {
+    override fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty) {
       cdkBuilder.accelerationSettings(accelerationSettings.let(AccelerationSettingsProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("71826123168d5fa0ad81f034744e0fd2541d75930c20fcfd4edf9b5fc23a313e")
-    public override
+    override
         fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty.Builder.() -> Unit):
         Unit = accelerationSettings(AccelerationSettingsProperty(accelerationSettings))
 
-    public override fun category(category: String) {
+    override fun category(category: String) {
       cdkBuilder.category(category)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun hopDestinations(hopDestinations: IResolvable) {
+    override fun hopDestinations(hopDestinations: IResolvable) {
       cdkBuilder.hopDestinations(hopDestinations.let(IResolvable::unwrap))
     }
 
-    public override fun hopDestinations(hopDestinations: List<Any>) {
+    override fun hopDestinations(hopDestinations: List<Any>) {
       cdkBuilder.hopDestinations(hopDestinations)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun priority(priority: Number) {
+    override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
 
-    public override fun queue(queue: String) {
+    override fun queue(queue: String) {
       cdkBuilder.queue(queue)
     }
 
-    public override fun statusUpdateInterval(statusUpdateInterval: String) {
+    override fun statusUpdateInterval(statusUpdateInterval: String) {
       cdkBuilder.statusUpdateInterval(statusUpdateInterval)
     }
 
-    public override fun tags(tags: Any) {
+    override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
-    public override fun tingsJson(settingsJson: Any) {
+    override fun tingsJson(settingsJson: Any) {
       cdkBuilder.settingsJson(settingsJson)
     }
 
@@ -238,8 +225,7 @@ public open class CfnJobTemplate internal constructor(
     public fun mode(): String
 
     public interface Builder {
-      public fun mode(mode: String) {
-      }
+      public fun mode(mode: String)
     }
 
     private class BuilderImpl : Builder {
@@ -248,7 +234,7 @@ public open class CfnJobTemplate internal constructor(
           =
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty.builder()
 
-      public override fun mode(mode: String) {
+      override fun mode(mode: String) {
         cdkBuilder.mode(mode)
       }
 
@@ -261,7 +247,7 @@ public open class CfnJobTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty,
     ) : AccelerationSettingsProperty {
-      public override fun mode(): String = unwrap(this).getMode()
+      override fun mode(): String = unwrap(this).getMode()
     }
 
     public companion object {
@@ -292,14 +278,11 @@ public open class CfnJobTemplate internal constructor(
     public fun waitMinutes(): Number? = unwrap(this).getWaitMinutes()
 
     public interface Builder {
-      public fun priority(priority: Number) {
-      }
+      public fun priority(priority: Number)
 
-      public fun queue(queue: String) {
-      }
+      public fun queue(queue: String)
 
-      public fun waitMinutes(waitMinutes: Number) {
-      }
+      public fun waitMinutes(waitMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -308,15 +291,15 @@ public open class CfnJobTemplate internal constructor(
           =
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty.builder()
 
-      public override fun priority(priority: Number) {
+      override fun priority(priority: Number) {
         cdkBuilder.priority(priority)
       }
 
-      public override fun queue(queue: String) {
+      override fun queue(queue: String) {
         cdkBuilder.queue(queue)
       }
 
-      public override fun waitMinutes(waitMinutes: Number) {
+      override fun waitMinutes(waitMinutes: Number) {
         cdkBuilder.waitMinutes(waitMinutes)
       }
 
@@ -329,11 +312,11 @@ public open class CfnJobTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty,
     ) : HopDestinationProperty {
-      public override fun priority(): Number? = unwrap(this).getPriority()
+      override fun priority(): Number? = unwrap(this).getPriority()
 
-      public override fun queue(): String? = unwrap(this).getQueue()
+      override fun queue(): String? = unwrap(this).getQueue()
 
-      public override fun waitMinutes(): Number? = unwrap(this).getWaitMinutes()
+      override fun waitMinutes(): Number? = unwrap(this).getWaitMinutes()
     }
 
     public companion object {

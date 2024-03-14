@@ -151,75 +151,53 @@ public open class CfnBranch internal constructor(
   }
 
   public interface Builder {
-    public fun appId(appId: String) {
-    }
+    public fun appId(appId: String)
 
-    public fun backend(backend: IResolvable) {
-    }
+    public fun backend(backend: IResolvable)
 
-    public fun backend(backend: BackendProperty) {
-    }
+    public fun backend(backend: BackendProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("99ab4a4914f072f0a0e0c21db94a5879d3b7a68a5b44fd2af1d426d83f87aef0")
-    public fun backend(backend: BackendProperty.Builder.() -> Unit) {
-    }
+    public fun backend(backend: BackendProperty.Builder.() -> Unit)
 
-    public fun basicAuthConfig(basicAuthConfig: IResolvable) {
-    }
+    public fun basicAuthConfig(basicAuthConfig: IResolvable)
 
-    public fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty) {
-    }
+    public fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9df38851042ee64d5330a6663621351e0c985ce359f43958a67e42387d97f56b")
-    public fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty.Builder.() -> Unit) {
-    }
+    public fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty.Builder.() -> Unit)
 
-    public fun branchName(branchName: String) {
-    }
+    public fun branchName(branchName: String)
 
-    public fun buildSpec(buildSpec: String) {
-    }
+    public fun buildSpec(buildSpec: String)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun enableAutoBuild(enableAutoBuild: Boolean) {
-    }
+    public fun enableAutoBuild(enableAutoBuild: Boolean)
 
-    public fun enableAutoBuild(enableAutoBuild: IResolvable) {
-    }
+    public fun enableAutoBuild(enableAutoBuild: IResolvable)
 
-    public fun enablePerformanceMode(enablePerformanceMode: Boolean) {
-    }
+    public fun enablePerformanceMode(enablePerformanceMode: Boolean)
 
-    public fun enablePerformanceMode(enablePerformanceMode: IResolvable) {
-    }
+    public fun enablePerformanceMode(enablePerformanceMode: IResolvable)
 
-    public fun enablePullRequestPreview(enablePullRequestPreview: Boolean) {
-    }
+    public fun enablePullRequestPreview(enablePullRequestPreview: Boolean)
 
-    public fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
-    }
+    public fun enablePullRequestPreview(enablePullRequestPreview: IResolvable)
 
-    public fun environmentVariables(environmentVariables: IResolvable) {
-    }
+    public fun environmentVariables(environmentVariables: IResolvable)
 
-    public fun environmentVariables(environmentVariables: List<Any>) {
-    }
+    public fun environmentVariables(environmentVariables: List<Any>)
 
-    public fun framework(framework: String) {
-    }
+    public fun framework(framework: String)
 
-    public fun pullRequestEnvironmentName(pullRequestEnvironmentName: String) {
-    }
+    public fun pullRequestEnvironmentName(pullRequestEnvironmentName: String)
 
-    public fun stage(stage: String) {
-    }
+    public fun stage(stage: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
   }
 
   private class BuilderImpl(
@@ -229,94 +207,93 @@ public open class CfnBranch internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.amplify.CfnBranch.Builder =
         software.amazon.awscdk.services.amplify.CfnBranch.Builder.create(scope, id)
 
-    public override fun appId(appId: String) {
+    override fun appId(appId: String) {
       cdkBuilder.appId(appId)
     }
 
-    public override fun backend(backend: IResolvable) {
+    override fun backend(backend: IResolvable) {
       cdkBuilder.backend(backend.let(IResolvable::unwrap))
     }
 
-    public override fun backend(backend: BackendProperty) {
+    override fun backend(backend: BackendProperty) {
       cdkBuilder.backend(backend.let(BackendProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("99ab4a4914f072f0a0e0c21db94a5879d3b7a68a5b44fd2af1d426d83f87aef0")
-    public override fun backend(backend: BackendProperty.Builder.() -> Unit): Unit =
+    override fun backend(backend: BackendProperty.Builder.() -> Unit): Unit =
         backend(BackendProperty(backend))
 
-    public override fun basicAuthConfig(basicAuthConfig: IResolvable) {
+    override fun basicAuthConfig(basicAuthConfig: IResolvable) {
       cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
     }
 
-    public override fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty) {
+    override fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty) {
       cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9df38851042ee64d5330a6663621351e0c985ce359f43958a67e42387d97f56b")
-    public override
-        fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty.Builder.() -> Unit): Unit =
-        basicAuthConfig(BasicAuthConfigProperty(basicAuthConfig))
+    override fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty.Builder.() -> Unit): Unit
+        = basicAuthConfig(BasicAuthConfigProperty(basicAuthConfig))
 
-    public override fun branchName(branchName: String) {
+    override fun branchName(branchName: String) {
       cdkBuilder.branchName(branchName)
     }
 
-    public override fun buildSpec(buildSpec: String) {
+    override fun buildSpec(buildSpec: String) {
       cdkBuilder.buildSpec(buildSpec)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun enableAutoBuild(enableAutoBuild: Boolean) {
+    override fun enableAutoBuild(enableAutoBuild: Boolean) {
       cdkBuilder.enableAutoBuild(enableAutoBuild)
     }
 
-    public override fun enableAutoBuild(enableAutoBuild: IResolvable) {
+    override fun enableAutoBuild(enableAutoBuild: IResolvable) {
       cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable::unwrap))
     }
 
-    public override fun enablePerformanceMode(enablePerformanceMode: Boolean) {
+    override fun enablePerformanceMode(enablePerformanceMode: Boolean) {
       cdkBuilder.enablePerformanceMode(enablePerformanceMode)
     }
 
-    public override fun enablePerformanceMode(enablePerformanceMode: IResolvable) {
+    override fun enablePerformanceMode(enablePerformanceMode: IResolvable) {
       cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable::unwrap))
     }
 
-    public override fun enablePullRequestPreview(enablePullRequestPreview: Boolean) {
+    override fun enablePullRequestPreview(enablePullRequestPreview: Boolean) {
       cdkBuilder.enablePullRequestPreview(enablePullRequestPreview)
     }
 
-    public override fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
+    override fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
       cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable::unwrap))
     }
 
-    public override fun environmentVariables(environmentVariables: IResolvable) {
+    override fun environmentVariables(environmentVariables: IResolvable) {
       cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
     }
 
-    public override fun environmentVariables(environmentVariables: List<Any>) {
+    override fun environmentVariables(environmentVariables: List<Any>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 
-    public override fun framework(framework: String) {
+    override fun framework(framework: String) {
       cdkBuilder.framework(framework)
     }
 
-    public override fun pullRequestEnvironmentName(pullRequestEnvironmentName: String) {
+    override fun pullRequestEnvironmentName(pullRequestEnvironmentName: String) {
       cdkBuilder.pullRequestEnvironmentName(pullRequestEnvironmentName)
     }
 
-    public override fun stage(stage: String) {
+    override fun stage(stage: String) {
       cdkBuilder.stage(stage)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
@@ -352,17 +329,13 @@ public open class CfnBranch internal constructor(
     public fun username(): String
 
     public interface Builder {
-      public fun enableBasicAuth(enableBasicAuth: Boolean) {
-      }
+      public fun enableBasicAuth(enableBasicAuth: Boolean)
 
-      public fun enableBasicAuth(enableBasicAuth: IResolvable) {
-      }
+      public fun enableBasicAuth(enableBasicAuth: IResolvable)
 
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun username(username: String) {
-      }
+      public fun username(username: String)
     }
 
     private class BuilderImpl : Builder {
@@ -370,19 +343,19 @@ public open class CfnBranch internal constructor(
           software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty.Builder =
           software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty.builder()
 
-      public override fun enableBasicAuth(enableBasicAuth: Boolean) {
+      override fun enableBasicAuth(enableBasicAuth: Boolean) {
         cdkBuilder.enableBasicAuth(enableBasicAuth)
       }
 
-      public override fun enableBasicAuth(enableBasicAuth: IResolvable) {
+      override fun enableBasicAuth(enableBasicAuth: IResolvable) {
         cdkBuilder.enableBasicAuth(enableBasicAuth.let(IResolvable::unwrap))
       }
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun username(username: String) {
+      override fun username(username: String) {
         cdkBuilder.username(username)
       }
 
@@ -394,11 +367,11 @@ public open class CfnBranch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplify.CfnBranch.BasicAuthConfigProperty,
     ) : BasicAuthConfigProperty {
-      public override fun enableBasicAuth(): Any? = unwrap(this).getEnableBasicAuth()
+      override fun enableBasicAuth(): Any? = unwrap(this).getEnableBasicAuth()
 
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun username(): String = unwrap(this).getUsername()
+      override fun username(): String = unwrap(this).getUsername()
     }
 
     public companion object {
@@ -427,11 +400,9 @@ public open class CfnBranch internal constructor(
     public fun `value`(): String
 
     public interface Builder {
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun `value`(`value`: String) {
-      }
+      public fun `value`(`value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -439,11 +410,11 @@ public open class CfnBranch internal constructor(
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty.Builder =
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty.builder()
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun `value`(`value`: String) {
+      override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -456,9 +427,9 @@ public open class CfnBranch internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplify.CfnBranch.EnvironmentVariableProperty,
     ) : EnvironmentVariableProperty {
-      public override fun name(): String = unwrap(this).getName()
+      override fun name(): String = unwrap(this).getName()
 
-      public override fun `value`(): String = unwrap(this).getValue()
+      override fun `value`(): String = unwrap(this).getValue()
     }
 
     public companion object {
@@ -485,8 +456,7 @@ public open class CfnBranch internal constructor(
     public fun stackArn(): String? = unwrap(this).getStackArn()
 
     public interface Builder {
-      public fun stackArn(stackArn: String) {
-      }
+      public fun stackArn(stackArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -494,7 +464,7 @@ public open class CfnBranch internal constructor(
           software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty.Builder =
           software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty.builder()
 
-      public override fun stackArn(stackArn: String) {
+      override fun stackArn(stackArn: String) {
         cdkBuilder.stackArn(stackArn)
       }
 
@@ -505,7 +475,7 @@ public open class CfnBranch internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.amplify.CfnBranch.BackendProperty,
     ) : BackendProperty {
-      public override fun stackArn(): String? = unwrap(this).getStackArn()
+      override fun stackArn(): String? = unwrap(this).getStackArn()
     }
 
     public companion object {

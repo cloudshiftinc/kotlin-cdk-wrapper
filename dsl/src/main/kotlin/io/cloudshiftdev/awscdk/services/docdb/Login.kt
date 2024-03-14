@@ -17,43 +17,38 @@ public interface Login {
   public fun username(): String
 
   public interface Builder {
-    public fun excludeCharacters(excludeCharacters: String) {
-    }
+    public fun excludeCharacters(excludeCharacters: String)
 
-    public fun kmsKey(kmsKey: IKey) {
-    }
+    public fun kmsKey(kmsKey: IKey)
 
-    public fun password(password: SecretValue) {
-    }
+    public fun password(password: SecretValue)
 
-    public fun secretName(secretName: String) {
-    }
+    public fun secretName(secretName: String)
 
-    public fun username(username: String) {
-    }
+    public fun username(username: String)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.docdb.Login.Builder =
         software.amazon.awscdk.services.docdb.Login.builder()
 
-    public override fun excludeCharacters(excludeCharacters: String) {
+    override fun excludeCharacters(excludeCharacters: String) {
       cdkBuilder.excludeCharacters(excludeCharacters)
     }
 
-    public override fun kmsKey(kmsKey: IKey) {
+    override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
     }
 
-    public override fun password(password: SecretValue) {
+    override fun password(password: SecretValue) {
       cdkBuilder.password(password.let(SecretValue::unwrap))
     }
 
-    public override fun secretName(secretName: String) {
+    override fun secretName(secretName: String) {
       cdkBuilder.secretName(secretName)
     }
 
-    public override fun username(username: String) {
+    override fun username(username: String) {
       cdkBuilder.username(username)
     }
 
@@ -63,16 +58,15 @@ public interface Login {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.docdb.Login,
   ) : Login {
-    public override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-    public override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
+    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
-    public override fun password(): SecretValue? =
-        unwrap(this).getPassword()?.let(SecretValue::wrap)
+    override fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
 
-    public override fun secretName(): String? = unwrap(this).getSecretName()
+    override fun secretName(): String? = unwrap(this).getSecretName()
 
-    public override fun username(): String = unwrap(this).getUsername()
+    override fun username(): String = unwrap(this).getUsername()
   }
 
   public companion object {

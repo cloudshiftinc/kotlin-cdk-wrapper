@@ -58,29 +58,21 @@ public open class CustomRule internal constructor(
       Rule = onReEvaluationStatus(id, OnEventOptions(options))
 
   public interface Builder {
-    public fun configRuleName(configRuleName: String) {
-    }
+    public fun configRuleName(configRuleName: String)
 
-    public fun configurationChanges(configurationChanges: Boolean) {
-    }
+    public fun configurationChanges(configurationChanges: Boolean)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun inputParameters(inputParameters: Map<String, Any>) {
-    }
+    public fun inputParameters(inputParameters: Map<String, Any>)
 
-    public fun lambdaFunction(lambdaFunction: IFunction) {
-    }
+    public fun lambdaFunction(lambdaFunction: IFunction)
 
-    public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-    }
+    public fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency)
 
-    public fun periodic(periodic: Boolean) {
-    }
+    public fun periodic(periodic: Boolean)
 
-    public fun ruleScope(ruleScope: RuleScope) {
-    }
+    public fun ruleScope(ruleScope: RuleScope)
   }
 
   private class BuilderImpl(
@@ -90,36 +82,35 @@ public open class CustomRule internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.config.CustomRule.Builder =
         software.amazon.awscdk.services.config.CustomRule.Builder.create(scope, id)
 
-    public override fun configRuleName(configRuleName: String) {
+    override fun configRuleName(configRuleName: String) {
       cdkBuilder.configRuleName(configRuleName)
     }
 
-    public override fun configurationChanges(configurationChanges: Boolean) {
+    override fun configurationChanges(configurationChanges: Boolean) {
       cdkBuilder.configurationChanges(configurationChanges)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun inputParameters(inputParameters: Map<String, Any>) {
+    override fun inputParameters(inputParameters: Map<String, Any>) {
       cdkBuilder.inputParameters(inputParameters)
     }
 
-    public override fun lambdaFunction(lambdaFunction: IFunction) {
+    override fun lambdaFunction(lambdaFunction: IFunction) {
       cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction::unwrap))
     }
 
-    public override
-        fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
+    override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
       cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
     }
 
-    public override fun periodic(periodic: Boolean) {
+    override fun periodic(periodic: Boolean) {
       cdkBuilder.periodic(periodic)
     }
 
-    public override fun ruleScope(ruleScope: RuleScope) {
+    override fun ruleScope(ruleScope: RuleScope) {
       cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
     }
 

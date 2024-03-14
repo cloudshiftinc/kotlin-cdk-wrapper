@@ -26,29 +26,21 @@ public interface WebSocketRouteIntegrationConfig {
   public fun uri(): String
 
   public interface Builder {
-    public fun credentialsRole(credentialsRole: IRole) {
-    }
+    public fun credentialsRole(credentialsRole: IRole)
 
-    public fun method(method: String) {
-    }
+    public fun method(method: String)
 
-    public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-    }
+    public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior)
 
-    public fun requestParameters(requestParameters: Map<String, String>) {
-    }
+    public fun requestParameters(requestParameters: Map<String, String>)
 
-    public fun requestTemplates(requestTemplates: Map<String, String>) {
-    }
+    public fun requestTemplates(requestTemplates: Map<String, String>)
 
-    public fun templateSelectionExpression(templateSelectionExpression: String) {
-    }
+    public fun templateSelectionExpression(templateSelectionExpression: String)
 
-    public fun type(type: WebSocketIntegrationType) {
-    }
+    public fun type(type: WebSocketIntegrationType)
 
-    public fun uri(uri: String) {
-    }
+    public fun uri(uri: String)
   }
 
   private class BuilderImpl : Builder {
@@ -56,35 +48,35 @@ public interface WebSocketRouteIntegrationConfig {
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig.builder()
 
-    public override fun credentialsRole(credentialsRole: IRole) {
+    override fun credentialsRole(credentialsRole: IRole) {
       cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
     }
 
-    public override fun method(method: String) {
+    override fun method(method: String) {
       cdkBuilder.method(method)
     }
 
-    public override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
+    override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
       cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
     }
 
-    public override fun requestParameters(requestParameters: Map<String, String>) {
+    override fun requestParameters(requestParameters: Map<String, String>) {
       cdkBuilder.requestParameters(requestParameters)
     }
 
-    public override fun requestTemplates(requestTemplates: Map<String, String>) {
+    override fun requestTemplates(requestTemplates: Map<String, String>) {
       cdkBuilder.requestTemplates(requestTemplates)
     }
 
-    public override fun templateSelectionExpression(templateSelectionExpression: String) {
+    override fun templateSelectionExpression(templateSelectionExpression: String) {
       cdkBuilder.templateSelectionExpression(templateSelectionExpression)
     }
 
-    public override fun type(type: WebSocketIntegrationType) {
+    override fun type(type: WebSocketIntegrationType) {
       cdkBuilder.type(type.let(WebSocketIntegrationType::unwrap))
     }
 
-    public override fun uri(uri: String) {
+    override fun uri(uri: String) {
       cdkBuilder.uri(uri)
     }
 
@@ -96,27 +88,26 @@ public interface WebSocketRouteIntegrationConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig,
   ) : WebSocketRouteIntegrationConfig {
-    public override fun credentialsRole(): IRole? =
-        unwrap(this).getCredentialsRole()?.let(IRole::wrap)
+    override fun credentialsRole(): IRole? = unwrap(this).getCredentialsRole()?.let(IRole::wrap)
 
-    public override fun method(): String? = unwrap(this).getMethod()
+    override fun method(): String? = unwrap(this).getMethod()
 
-    public override fun passthroughBehavior(): PassthroughBehavior? =
+    override fun passthroughBehavior(): PassthroughBehavior? =
         unwrap(this).getPassthroughBehavior()?.let(PassthroughBehavior::wrap)
 
-    public override fun requestParameters(): Map<String, String> =
-        unwrap(this).getRequestParameters() ?: emptyMap()
+    override fun requestParameters(): Map<String, String> = unwrap(this).getRequestParameters() ?:
+        emptyMap()
 
-    public override fun requestTemplates(): Map<String, String> = unwrap(this).getRequestTemplates()
-        ?: emptyMap()
+    override fun requestTemplates(): Map<String, String> = unwrap(this).getRequestTemplates() ?:
+        emptyMap()
 
-    public override fun templateSelectionExpression(): String? =
+    override fun templateSelectionExpression(): String? =
         unwrap(this).getTemplateSelectionExpression()
 
-    public override fun type(): WebSocketIntegrationType =
+    override fun type(): WebSocketIntegrationType =
         unwrap(this).getType().let(WebSocketIntegrationType::wrap)
 
-    public override fun uri(): String = unwrap(this).getUri()
+    override fun uri(): String = unwrap(this).getUri()
   }
 
   public companion object {

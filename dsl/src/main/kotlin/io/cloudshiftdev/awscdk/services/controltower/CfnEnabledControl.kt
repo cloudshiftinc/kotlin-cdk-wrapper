@@ -53,20 +53,15 @@ public open class CfnEnabledControl internal constructor(
   }
 
   public interface Builder {
-    public fun controlIdentifier(controlIdentifier: String) {
-    }
+    public fun controlIdentifier(controlIdentifier: String)
 
-    public fun parameters(parameters: IResolvable) {
-    }
+    public fun parameters(parameters: IResolvable)
 
-    public fun parameters(parameters: List<Any>) {
-    }
+    public fun parameters(parameters: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun targetIdentifier(targetIdentifier: String) {
-    }
+    public fun targetIdentifier(targetIdentifier: String)
   }
 
   private class BuilderImpl(
@@ -76,23 +71,23 @@ public open class CfnEnabledControl internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.controltower.CfnEnabledControl.Builder =
         software.amazon.awscdk.services.controltower.CfnEnabledControl.Builder.create(scope, id)
 
-    public override fun controlIdentifier(controlIdentifier: String) {
+    override fun controlIdentifier(controlIdentifier: String) {
       cdkBuilder.controlIdentifier(controlIdentifier)
     }
 
-    public override fun parameters(parameters: IResolvable) {
+    override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
 
-    public override fun parameters(parameters: List<Any>) {
+    override fun parameters(parameters: List<Any>) {
       cdkBuilder.parameters(parameters)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun targetIdentifier(targetIdentifier: String) {
+    override fun targetIdentifier(targetIdentifier: String) {
       cdkBuilder.targetIdentifier(targetIdentifier)
     }
 
@@ -127,11 +122,9 @@ public open class CfnEnabledControl internal constructor(
     public fun `value`(): Any
 
     public interface Builder {
-      public fun key(key: String) {
-      }
+      public fun key(key: String)
 
-      public fun `value`(`value`: Any) {
-      }
+      public fun `value`(`value`: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -140,11 +133,11 @@ public open class CfnEnabledControl internal constructor(
           =
           software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty.builder()
 
-      public override fun key(key: String) {
+      override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
-      public override fun `value`(`value`: Any) {
+      override fun `value`(`value`: Any) {
         cdkBuilder.`value`(`value`)
       }
 
@@ -157,9 +150,9 @@ public open class CfnEnabledControl internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty,
     ) : EnabledControlParameterProperty {
-      public override fun key(): String = unwrap(this).getKey()
+      override fun key(): String = unwrap(this).getKey()
 
-      public override fun `value`(): Any = unwrap(this).getValue()
+      override fun `value`(): Any = unwrap(this).getValue()
     }
 
     public companion object {

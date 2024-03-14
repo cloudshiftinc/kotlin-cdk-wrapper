@@ -9,11 +9,9 @@ public interface LinearTrafficRoutingConfig {
   public fun linearPercentage(): Number
 
   public interface Builder {
-    public fun linearInterval(linearInterval: Number) {
-    }
+    public fun linearInterval(linearInterval: Number)
 
-    public fun linearPercentage(linearPercentage: Number) {
-    }
+    public fun linearPercentage(linearPercentage: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -21,11 +19,11 @@ public interface LinearTrafficRoutingConfig {
         software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig.Builder =
         software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig.builder()
 
-    public override fun linearInterval(linearInterval: Number) {
+    override fun linearInterval(linearInterval: Number) {
       cdkBuilder.linearInterval(linearInterval)
     }
 
-    public override fun linearPercentage(linearPercentage: Number) {
+    override fun linearPercentage(linearPercentage: Number) {
       cdkBuilder.linearPercentage(linearPercentage)
     }
 
@@ -36,9 +34,9 @@ public interface LinearTrafficRoutingConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig,
   ) : LinearTrafficRoutingConfig {
-    public override fun linearInterval(): Number = unwrap(this).getLinearInterval()
+    override fun linearInterval(): Number = unwrap(this).getLinearInterval()
 
-    public override fun linearPercentage(): Number = unwrap(this).getLinearPercentage()
+    override fun linearPercentage(): Number = unwrap(this).getLinearPercentage()
   }
 
   public companion object {

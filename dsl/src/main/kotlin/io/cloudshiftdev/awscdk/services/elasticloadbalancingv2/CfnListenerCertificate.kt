@@ -38,14 +38,11 @@ public open class CfnListenerCertificate internal constructor(
   }
 
   public interface Builder {
-    public fun certificates(certificates: IResolvable) {
-    }
+    public fun certificates(certificates: IResolvable)
 
-    public fun certificates(certificates: List<Any>) {
-    }
+    public fun certificates(certificates: List<Any>)
 
-    public fun listenerArn(listenerArn: String) {
-    }
+    public fun listenerArn(listenerArn: String)
   }
 
   private class BuilderImpl(
@@ -57,15 +54,15 @@ public open class CfnListenerCertificate internal constructor(
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.Builder.create(scope,
         id)
 
-    public override fun certificates(certificates: IResolvable) {
+    override fun certificates(certificates: IResolvable) {
       cdkBuilder.certificates(certificates.let(IResolvable::unwrap))
     }
 
-    public override fun certificates(certificates: List<Any>) {
+    override fun certificates(certificates: List<Any>) {
       cdkBuilder.certificates(certificates)
     }
 
-    public override fun listenerArn(listenerArn: String) {
+    override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
     }
 
@@ -101,8 +98,7 @@ public open class CfnListenerCertificate internal constructor(
     public fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
     public interface Builder {
-      public fun certificateArn(certificateArn: String) {
-      }
+      public fun certificateArn(certificateArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -111,7 +107,7 @@ public open class CfnListenerCertificate internal constructor(
           =
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty.builder()
 
-      public override fun certificateArn(certificateArn: String) {
+      override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
       }
 
@@ -124,7 +120,7 @@ public open class CfnListenerCertificate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate.CertificateProperty,
     ) : CertificateProperty {
-      public override fun certificateArn(): String? = unwrap(this).getCertificateArn()
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
     }
 
     public companion object {

@@ -49,22 +49,17 @@ public open class CfnAlias internal constructor(
       routingStrategy(RoutingStrategyProperty(`value`))
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun routingStrategy(routingStrategy: IResolvable) {
-    }
+    public fun routingStrategy(routingStrategy: IResolvable)
 
-    public fun routingStrategy(routingStrategy: RoutingStrategyProperty) {
-    }
+    public fun routingStrategy(routingStrategy: RoutingStrategyProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48db2f8128a66631467a218444363fbda68842721f78cbfaf41860c50d6f2b2b")
-    public fun routingStrategy(routingStrategy: RoutingStrategyProperty.Builder.() -> Unit) {
-    }
+    public fun routingStrategy(routingStrategy: RoutingStrategyProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -74,27 +69,26 @@ public open class CfnAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnAlias.Builder =
         software.amazon.awscdk.services.gamelift.CfnAlias.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun routingStrategy(routingStrategy: IResolvable) {
+    override fun routingStrategy(routingStrategy: IResolvable) {
       cdkBuilder.routingStrategy(routingStrategy.let(IResolvable::unwrap))
     }
 
-    public override fun routingStrategy(routingStrategy: RoutingStrategyProperty) {
+    override fun routingStrategy(routingStrategy: RoutingStrategyProperty) {
       cdkBuilder.routingStrategy(routingStrategy.let(RoutingStrategyProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48db2f8128a66631467a218444363fbda68842721f78cbfaf41860c50d6f2b2b")
-    public override
-        fun routingStrategy(routingStrategy: RoutingStrategyProperty.Builder.() -> Unit): Unit =
-        routingStrategy(RoutingStrategyProperty(routingStrategy))
+    override fun routingStrategy(routingStrategy: RoutingStrategyProperty.Builder.() -> Unit): Unit
+        = routingStrategy(RoutingStrategyProperty(routingStrategy))
 
     public fun build(): software.amazon.awscdk.services.gamelift.CfnAlias = cdkBuilder.build()
   }
@@ -128,14 +122,11 @@ public open class CfnAlias internal constructor(
     public fun type(): String
 
     public interface Builder {
-      public fun fleetId(fleetId: String) {
-      }
+      public fun fleetId(fleetId: String)
 
-      public fun message(message: String) {
-      }
+      public fun message(message: String)
 
-      public fun type(type: String) {
-      }
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -143,15 +134,15 @@ public open class CfnAlias internal constructor(
           software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty.Builder =
           software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty.builder()
 
-      public override fun fleetId(fleetId: String) {
+      override fun fleetId(fleetId: String) {
         cdkBuilder.fleetId(fleetId)
       }
 
-      public override fun message(message: String) {
+      override fun message(message: String) {
         cdkBuilder.message(message)
       }
 
-      public override fun type(type: String) {
+      override fun type(type: String) {
         cdkBuilder.type(type)
       }
 
@@ -163,11 +154,11 @@ public open class CfnAlias internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnAlias.RoutingStrategyProperty,
     ) : RoutingStrategyProperty {
-      public override fun fleetId(): String? = unwrap(this).getFleetId()
+      override fun fleetId(): String? = unwrap(this).getFleetId()
 
-      public override fun message(): String? = unwrap(this).getMessage()
+      override fun message(): String? = unwrap(this).getMessage()
 
-      public override fun type(): String = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {

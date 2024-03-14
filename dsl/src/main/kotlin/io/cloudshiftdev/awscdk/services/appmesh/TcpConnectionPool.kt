@@ -7,15 +7,14 @@ public interface TcpConnectionPool {
   public fun maxConnections(): Number
 
   public interface Builder {
-    public fun maxConnections(maxConnections: Number) {
-    }
+    public fun maxConnections(maxConnections: Number)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TcpConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.TcpConnectionPool.builder()
 
-    public override fun maxConnections(maxConnections: Number) {
+    override fun maxConnections(maxConnections: Number) {
       cdkBuilder.maxConnections(maxConnections)
     }
 
@@ -26,7 +25,7 @@ public interface TcpConnectionPool {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TcpConnectionPool,
   ) : TcpConnectionPool {
-    public override fun maxConnections(): Number = unwrap(this).getMaxConnections()
+    override fun maxConnections(): Number = unwrap(this).getMaxConnections()
   }
 
   public companion object {

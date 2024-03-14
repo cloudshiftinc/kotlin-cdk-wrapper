@@ -62,23 +62,17 @@ public open class CfnCRL internal constructor(
   }
 
   public interface Builder {
-    public fun crlData(crlData: String) {
-    }
+    public fun crlData(crlData: String)
 
-    public fun enabled(enabled: Boolean) {
-    }
+    public fun enabled(enabled: Boolean)
 
-    public fun enabled(enabled: IResolvable) {
-    }
+    public fun enabled(enabled: IResolvable)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun trustAnchorArn(trustAnchorArn: String) {
-    }
+    public fun trustAnchorArn(trustAnchorArn: String)
   }
 
   private class BuilderImpl(
@@ -88,27 +82,27 @@ public open class CfnCRL internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rolesanywhere.CfnCRL.Builder =
         software.amazon.awscdk.services.rolesanywhere.CfnCRL.Builder.create(scope, id)
 
-    public override fun crlData(crlData: String) {
+    override fun crlData(crlData: String) {
       cdkBuilder.crlData(crlData)
     }
 
-    public override fun enabled(enabled: Boolean) {
+    override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
-    public override fun enabled(enabled: IResolvable) {
+    override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun trustAnchorArn(trustAnchorArn: String) {
+    override fun trustAnchorArn(trustAnchorArn: String) {
       cdkBuilder.trustAnchorArn(trustAnchorArn)
     }
 

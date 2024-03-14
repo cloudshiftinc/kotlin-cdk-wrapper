@@ -155,47 +155,33 @@ public open class CfnWorkgroup internal constructor(
   }
 
   public interface Builder {
-    public fun baseCapacity(baseCapacity: Number) {
-    }
+    public fun baseCapacity(baseCapacity: Number)
 
-    public fun configParameters(configParameters: IResolvable) {
-    }
+    public fun configParameters(configParameters: IResolvable)
 
-    public fun configParameters(configParameters: List<Any>) {
-    }
+    public fun configParameters(configParameters: List<Any>)
 
-    public fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
-    }
+    public fun enhancedVpcRouting(enhancedVpcRouting: Boolean)
 
-    public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-    }
+    public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable)
 
-    public fun maxCapacity(maxCapacity: Number) {
-    }
+    public fun maxCapacity(maxCapacity: Number)
 
-    public fun namespaceName(namespaceName: String) {
-    }
+    public fun namespaceName(namespaceName: String)
 
-    public fun port(port: Number) {
-    }
+    public fun port(port: Number)
 
-    public fun publiclyAccessible(publiclyAccessible: Boolean) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-    public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-    }
+    public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-    public fun securityGroupIds(securityGroupIds: List<String>) {
-    }
+    public fun securityGroupIds(securityGroupIds: List<String>)
 
-    public fun subnetIds(subnetIds: List<String>) {
-    }
+    public fun subnetIds(subnetIds: List<String>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun workgroupName(workgroupName: String) {
-    }
+    public fun workgroupName(workgroupName: String)
   }
 
   private class BuilderImpl(
@@ -205,59 +191,59 @@ public open class CfnWorkgroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.Builder
         = software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.Builder.create(scope, id)
 
-    public override fun baseCapacity(baseCapacity: Number) {
+    override fun baseCapacity(baseCapacity: Number) {
       cdkBuilder.baseCapacity(baseCapacity)
     }
 
-    public override fun configParameters(configParameters: IResolvable) {
+    override fun configParameters(configParameters: IResolvable) {
       cdkBuilder.configParameters(configParameters.let(IResolvable::unwrap))
     }
 
-    public override fun configParameters(configParameters: List<Any>) {
+    override fun configParameters(configParameters: List<Any>) {
       cdkBuilder.configParameters(configParameters)
     }
 
-    public override fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
+    override fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
       cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
     }
 
-    public override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
+    override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
       cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
     }
 
-    public override fun maxCapacity(maxCapacity: Number) {
+    override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
-    public override fun namespaceName(namespaceName: String) {
+    override fun namespaceName(namespaceName: String) {
       cdkBuilder.namespaceName(namespaceName)
     }
 
-    public override fun port(port: Number) {
+    override fun port(port: Number) {
       cdkBuilder.port(port)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+    override fun publiclyAccessible(publiclyAccessible: Boolean) {
       cdkBuilder.publiclyAccessible(publiclyAccessible)
     }
 
-    public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+    override fun publiclyAccessible(publiclyAccessible: IResolvable) {
       cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
     }
 
-    public override fun securityGroupIds(securityGroupIds: List<String>) {
+    override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
-    public override fun subnetIds(subnetIds: List<String>) {
+    override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun workgroupName(workgroupName: String) {
+    override fun workgroupName(workgroupName: String) {
       cdkBuilder.workgroupName(workgroupName)
     }
 
@@ -292,11 +278,9 @@ public open class CfnWorkgroup internal constructor(
     public fun parameterValue(): String? = unwrap(this).getParameterValue()
 
     public interface Builder {
-      public fun parameterKey(parameterKey: String) {
-      }
+      public fun parameterKey(parameterKey: String)
 
-      public fun parameterValue(parameterValue: String) {
-      }
+      public fun parameterValue(parameterValue: String)
     }
 
     private class BuilderImpl : Builder {
@@ -305,11 +289,11 @@ public open class CfnWorkgroup internal constructor(
           =
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty.builder()
 
-      public override fun parameterKey(parameterKey: String) {
+      override fun parameterKey(parameterKey: String) {
         cdkBuilder.parameterKey(parameterKey)
       }
 
-      public override fun parameterValue(parameterValue: String) {
+      override fun parameterValue(parameterValue: String) {
         cdkBuilder.parameterValue(parameterValue)
       }
 
@@ -322,9 +306,9 @@ public open class CfnWorkgroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.ConfigParameterProperty,
     ) : ConfigParameterProperty {
-      public override fun parameterKey(): String? = unwrap(this).getParameterKey()
+      override fun parameterKey(): String? = unwrap(this).getParameterKey()
 
-      public override fun parameterValue(): String? = unwrap(this).getParameterValue()
+      override fun parameterValue(): String? = unwrap(this).getParameterValue()
     }
 
     public companion object {
@@ -357,17 +341,13 @@ public open class CfnWorkgroup internal constructor(
     public fun subnetId(): String? = unwrap(this).getSubnetId()
 
     public interface Builder {
-      public fun availabilityZone(availabilityZone: String) {
-      }
+      public fun availabilityZone(availabilityZone: String)
 
-      public fun networkInterfaceId(networkInterfaceId: String) {
-      }
+      public fun networkInterfaceId(networkInterfaceId: String)
 
-      public fun privateIpAddress(privateIpAddress: String) {
-      }
+      public fun privateIpAddress(privateIpAddress: String)
 
-      public fun subnetId(subnetId: String) {
-      }
+      public fun subnetId(subnetId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -376,19 +356,19 @@ public open class CfnWorkgroup internal constructor(
           =
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty.builder()
 
-      public override fun availabilityZone(availabilityZone: String) {
+      override fun availabilityZone(availabilityZone: String) {
         cdkBuilder.availabilityZone(availabilityZone)
       }
 
-      public override fun networkInterfaceId(networkInterfaceId: String) {
+      override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
 
-      public override fun privateIpAddress(privateIpAddress: String) {
+      override fun privateIpAddress(privateIpAddress: String) {
         cdkBuilder.privateIpAddress(privateIpAddress)
       }
 
-      public override fun subnetId(subnetId: String) {
+      override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
       }
 
@@ -401,13 +381,13 @@ public open class CfnWorkgroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.NetworkInterfaceProperty,
     ) : NetworkInterfaceProperty {
-      public override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
 
-      public override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+      override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
 
-      public override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+      override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
-      public override fun subnetId(): String? = unwrap(this).getSubnetId()
+      override fun subnetId(): String? = unwrap(this).getSubnetId()
     }
 
     public companion object {
@@ -438,17 +418,13 @@ public open class CfnWorkgroup internal constructor(
     public fun vpcEndpoints(): Any? = unwrap(this).getVpcEndpoints()
 
     public interface Builder {
-      public fun address(address: String) {
-      }
+      public fun address(address: String)
 
-      public fun port(port: Number) {
-      }
+      public fun port(port: Number)
 
-      public fun vpcEndpoints(vpcEndpoints: IResolvable) {
-      }
+      public fun vpcEndpoints(vpcEndpoints: IResolvable)
 
-      public fun vpcEndpoints(vpcEndpoints: List<Any>) {
-      }
+      public fun vpcEndpoints(vpcEndpoints: List<Any>)
     }
 
     private class BuilderImpl : Builder {
@@ -456,19 +432,19 @@ public open class CfnWorkgroup internal constructor(
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty.Builder =
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty.builder()
 
-      public override fun address(address: String) {
+      override fun address(address: String) {
         cdkBuilder.address(address)
       }
 
-      public override fun port(port: Number) {
+      override fun port(port: Number) {
         cdkBuilder.port(port)
       }
 
-      public override fun vpcEndpoints(vpcEndpoints: IResolvable) {
+      override fun vpcEndpoints(vpcEndpoints: IResolvable) {
         cdkBuilder.vpcEndpoints(vpcEndpoints.let(IResolvable::unwrap))
       }
 
-      public override fun vpcEndpoints(vpcEndpoints: List<Any>) {
+      override fun vpcEndpoints(vpcEndpoints: List<Any>) {
         cdkBuilder.vpcEndpoints(vpcEndpoints)
       }
 
@@ -481,11 +457,11 @@ public open class CfnWorkgroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty,
     ) : EndpointProperty {
-      public override fun address(): String? = unwrap(this).getAddress()
+      override fun address(): String? = unwrap(this).getAddress()
 
-      public override fun port(): Number? = unwrap(this).getPort()
+      override fun port(): Number? = unwrap(this).getPort()
 
-      public override fun vpcEndpoints(): Any? = unwrap(this).getVpcEndpoints()
+      override fun vpcEndpoints(): Any? = unwrap(this).getVpcEndpoints()
     }
 
     public companion object {
@@ -516,17 +492,13 @@ public open class CfnWorkgroup internal constructor(
     public fun vpcId(): String? = unwrap(this).getVpcId()
 
     public interface Builder {
-      public fun networkInterfaces(networkInterfaces: IResolvable) {
-      }
+      public fun networkInterfaces(networkInterfaces: IResolvable)
 
-      public fun networkInterfaces(networkInterfaces: List<Any>) {
-      }
+      public fun networkInterfaces(networkInterfaces: List<Any>)
 
-      public fun vpcEndpointId(vpcEndpointId: String) {
-      }
+      public fun vpcEndpointId(vpcEndpointId: String)
 
-      public fun vpcId(vpcId: String) {
-      }
+      public fun vpcId(vpcId: String)
     }
 
     private class BuilderImpl : Builder {
@@ -535,19 +507,19 @@ public open class CfnWorkgroup internal constructor(
           =
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty.builder()
 
-      public override fun networkInterfaces(networkInterfaces: IResolvable) {
+      override fun networkInterfaces(networkInterfaces: IResolvable) {
         cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
       }
 
-      public override fun networkInterfaces(networkInterfaces: List<Any>) {
+      override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
 
-      public override fun vpcEndpointId(vpcEndpointId: String) {
+      override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)
       }
 
-      public override fun vpcId(vpcId: String) {
+      override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
       }
 
@@ -560,11 +532,11 @@ public open class CfnWorkgroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.VpcEndpointProperty,
     ) : VpcEndpointProperty {
-      public override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
+      override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
 
-      public override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
+      override fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
 
-      public override fun vpcId(): String? = unwrap(this).getVpcId()
+      override fun vpcId(): String? = unwrap(this).getVpcId()
     }
 
     public companion object {
@@ -617,64 +589,45 @@ public open class CfnWorkgroup internal constructor(
     public fun workgroupName(): String? = unwrap(this).getWorkgroupName()
 
     public interface Builder {
-      public fun baseCapacity(baseCapacity: Number) {
-      }
+      public fun baseCapacity(baseCapacity: Number)
 
-      public fun configParameters(configParameters: IResolvable) {
-      }
+      public fun configParameters(configParameters: IResolvable)
 
-      public fun configParameters(configParameters: List<Any>) {
-      }
+      public fun configParameters(configParameters: List<Any>)
 
-      public fun creationDate(creationDate: String) {
-      }
+      public fun creationDate(creationDate: String)
 
-      public fun endpoint(endpoint: IResolvable) {
-      }
+      public fun endpoint(endpoint: IResolvable)
 
-      public fun endpoint(endpoint: EndpointProperty) {
-      }
+      public fun endpoint(endpoint: EndpointProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e3a0436ce967cae2579973bb1658315839784ca8a1fc6e5283acc57981b310e")
-      public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit) {
-      }
+      public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit)
 
-      public fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
-      }
+      public fun enhancedVpcRouting(enhancedVpcRouting: Boolean)
 
-      public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-      }
+      public fun enhancedVpcRouting(enhancedVpcRouting: IResolvable)
 
-      public fun maxCapacity(maxCapacity: Number) {
-      }
+      public fun maxCapacity(maxCapacity: Number)
 
-      public fun namespaceName(namespaceName: String) {
-      }
+      public fun namespaceName(namespaceName: String)
 
-      public fun publiclyAccessible(publiclyAccessible: Boolean) {
-      }
+      public fun publiclyAccessible(publiclyAccessible: Boolean)
 
-      public fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      }
+      public fun publiclyAccessible(publiclyAccessible: IResolvable)
 
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun status(status: String) {
-      }
+      public fun status(status: String)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
 
-      public fun workgroupArn(workgroupArn: String) {
-      }
+      public fun workgroupArn(workgroupArn: String)
 
-      public fun workgroupId(workgroupId: String) {
-      }
+      public fun workgroupId(workgroupId: String)
 
-      public fun workgroupName(workgroupName: String) {
-      }
+      public fun workgroupName(workgroupName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -683,80 +636,80 @@ public open class CfnWorkgroup internal constructor(
           =
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty.builder()
 
-      public override fun baseCapacity(baseCapacity: Number) {
+      override fun baseCapacity(baseCapacity: Number) {
         cdkBuilder.baseCapacity(baseCapacity)
       }
 
-      public override fun configParameters(configParameters: IResolvable) {
+      override fun configParameters(configParameters: IResolvable) {
         cdkBuilder.configParameters(configParameters.let(IResolvable::unwrap))
       }
 
-      public override fun configParameters(configParameters: List<Any>) {
+      override fun configParameters(configParameters: List<Any>) {
         cdkBuilder.configParameters(configParameters)
       }
 
-      public override fun creationDate(creationDate: String) {
+      override fun creationDate(creationDate: String) {
         cdkBuilder.creationDate(creationDate)
       }
 
-      public override fun endpoint(endpoint: IResolvable) {
+      override fun endpoint(endpoint: IResolvable) {
         cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
       }
 
-      public override fun endpoint(endpoint: EndpointProperty) {
+      override fun endpoint(endpoint: EndpointProperty) {
         cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e3a0436ce967cae2579973bb1658315839784ca8a1fc6e5283acc57981b310e")
-      public override fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit): Unit =
+      override fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit): Unit =
           endpoint(EndpointProperty(endpoint))
 
-      public override fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
+      override fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
         cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
       }
 
-      public override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
+      override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
         cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
       }
 
-      public override fun maxCapacity(maxCapacity: Number) {
+      override fun maxCapacity(maxCapacity: Number) {
         cdkBuilder.maxCapacity(maxCapacity)
       }
 
-      public override fun namespaceName(namespaceName: String) {
+      override fun namespaceName(namespaceName: String) {
         cdkBuilder.namespaceName(namespaceName)
       }
 
-      public override fun publiclyAccessible(publiclyAccessible: Boolean) {
+      override fun publiclyAccessible(publiclyAccessible: Boolean) {
         cdkBuilder.publiclyAccessible(publiclyAccessible)
       }
 
-      public override fun publiclyAccessible(publiclyAccessible: IResolvable) {
+      override fun publiclyAccessible(publiclyAccessible: IResolvable) {
         cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
       }
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun status(status: String) {
+      override fun status(status: String) {
         cdkBuilder.status(status)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
-      public override fun workgroupArn(workgroupArn: String) {
+      override fun workgroupArn(workgroupArn: String) {
         cdkBuilder.workgroupArn(workgroupArn)
       }
 
-      public override fun workgroupId(workgroupId: String) {
+      override fun workgroupId(workgroupId: String) {
         cdkBuilder.workgroupId(workgroupId)
       }
 
-      public override fun workgroupName(workgroupName: String) {
+      override fun workgroupName(workgroupName: String) {
         cdkBuilder.workgroupName(workgroupName)
       }
 
@@ -769,34 +722,34 @@ public open class CfnWorkgroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.WorkgroupProperty,
     ) : WorkgroupProperty {
-      public override fun baseCapacity(): Number? = unwrap(this).getBaseCapacity()
+      override fun baseCapacity(): Number? = unwrap(this).getBaseCapacity()
 
-      public override fun configParameters(): Any? = unwrap(this).getConfigParameters()
+      override fun configParameters(): Any? = unwrap(this).getConfigParameters()
 
-      public override fun creationDate(): String? = unwrap(this).getCreationDate()
+      override fun creationDate(): String? = unwrap(this).getCreationDate()
 
-      public override fun endpoint(): Any? = unwrap(this).getEndpoint()
+      override fun endpoint(): Any? = unwrap(this).getEndpoint()
 
-      public override fun enhancedVpcRouting(): Any? = unwrap(this).getEnhancedVpcRouting()
+      override fun enhancedVpcRouting(): Any? = unwrap(this).getEnhancedVpcRouting()
 
-      public override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
 
-      public override fun namespaceName(): String? = unwrap(this).getNamespaceName()
+      override fun namespaceName(): String? = unwrap(this).getNamespaceName()
 
-      public override fun publiclyAccessible(): Any? = unwrap(this).getPubliclyAccessible()
+      override fun publiclyAccessible(): Any? = unwrap(this).getPubliclyAccessible()
 
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun status(): String? = unwrap(this).getStatus()
+      override fun status(): String? = unwrap(this).getStatus()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
-      public override fun workgroupArn(): String? = unwrap(this).getWorkgroupArn()
+      override fun workgroupArn(): String? = unwrap(this).getWorkgroupArn()
 
-      public override fun workgroupId(): String? = unwrap(this).getWorkgroupId()
+      override fun workgroupId(): String? = unwrap(this).getWorkgroupId()
 
-      public override fun workgroupName(): String? = unwrap(this).getWorkgroupName()
+      override fun workgroupName(): String? = unwrap(this).getWorkgroupName()
     }
 
     public companion object {

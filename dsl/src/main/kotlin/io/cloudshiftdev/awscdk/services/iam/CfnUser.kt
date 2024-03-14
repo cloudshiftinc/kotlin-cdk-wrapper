@@ -92,40 +92,29 @@ public open class CfnUser internal constructor(
   }
 
   public interface Builder {
-    public fun groups(groups: List<String>) {
-    }
+    public fun groups(groups: List<String>)
 
-    public fun loginProfile(loginProfile: IResolvable) {
-    }
+    public fun loginProfile(loginProfile: IResolvable)
 
-    public fun loginProfile(loginProfile: LoginProfileProperty) {
-    }
+    public fun loginProfile(loginProfile: LoginProfileProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e416b96c582056f728935e6aefb15f393a8ba15e7b3efc35a0017decd484631")
-    public fun loginProfile(loginProfile: LoginProfileProperty.Builder.() -> Unit) {
-    }
+    public fun loginProfile(loginProfile: LoginProfileProperty.Builder.() -> Unit)
 
-    public fun managedPolicyArns(managedPolicyArns: List<String>) {
-    }
+    public fun managedPolicyArns(managedPolicyArns: List<String>)
 
-    public fun path(path: String) {
-    }
+    public fun path(path: String)
 
-    public fun permissionsBoundary(permissionsBoundary: String) {
-    }
+    public fun permissionsBoundary(permissionsBoundary: String)
 
-    public fun policies(policies: IResolvable) {
-    }
+    public fun policies(policies: IResolvable)
 
-    public fun policies(policies: List<Any>) {
-    }
+    public fun policies(policies: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun userName(userName: String) {
-    }
+    public fun userName(userName: String)
   }
 
   private class BuilderImpl(
@@ -135,48 +124,48 @@ public open class CfnUser internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnUser.Builder =
         software.amazon.awscdk.services.iam.CfnUser.Builder.create(scope, id)
 
-    public override fun groups(groups: List<String>) {
+    override fun groups(groups: List<String>) {
       cdkBuilder.groups(groups)
     }
 
-    public override fun loginProfile(loginProfile: IResolvable) {
+    override fun loginProfile(loginProfile: IResolvable) {
       cdkBuilder.loginProfile(loginProfile.let(IResolvable::unwrap))
     }
 
-    public override fun loginProfile(loginProfile: LoginProfileProperty) {
+    override fun loginProfile(loginProfile: LoginProfileProperty) {
       cdkBuilder.loginProfile(loginProfile.let(LoginProfileProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e416b96c582056f728935e6aefb15f393a8ba15e7b3efc35a0017decd484631")
-    public override fun loginProfile(loginProfile: LoginProfileProperty.Builder.() -> Unit): Unit =
+    override fun loginProfile(loginProfile: LoginProfileProperty.Builder.() -> Unit): Unit =
         loginProfile(LoginProfileProperty(loginProfile))
 
-    public override fun managedPolicyArns(managedPolicyArns: List<String>) {
+    override fun managedPolicyArns(managedPolicyArns: List<String>) {
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
-    public override fun path(path: String) {
+    override fun path(path: String) {
       cdkBuilder.path(path)
     }
 
-    public override fun permissionsBoundary(permissionsBoundary: String) {
+    override fun permissionsBoundary(permissionsBoundary: String) {
       cdkBuilder.permissionsBoundary(permissionsBoundary)
     }
 
-    public override fun policies(policies: IResolvable) {
+    override fun policies(policies: IResolvable) {
       cdkBuilder.policies(policies.let(IResolvable::unwrap))
     }
 
-    public override fun policies(policies: List<Any>) {
+    override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun userName(userName: String) {
+    override fun userName(userName: String) {
       cdkBuilder.userName(userName)
     }
 
@@ -210,14 +199,11 @@ public open class CfnUser internal constructor(
     public fun passwordResetRequired(): Any? = unwrap(this).getPasswordResetRequired()
 
     public interface Builder {
-      public fun password(password: String) {
-      }
+      public fun password(password: String)
 
-      public fun passwordResetRequired(passwordResetRequired: Boolean) {
-      }
+      public fun passwordResetRequired(passwordResetRequired: Boolean)
 
-      public fun passwordResetRequired(passwordResetRequired: IResolvable) {
-      }
+      public fun passwordResetRequired(passwordResetRequired: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -225,15 +211,15 @@ public open class CfnUser internal constructor(
           software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty.Builder =
           software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty.builder()
 
-      public override fun password(password: String) {
+      override fun password(password: String) {
         cdkBuilder.password(password)
       }
 
-      public override fun passwordResetRequired(passwordResetRequired: Boolean) {
+      override fun passwordResetRequired(passwordResetRequired: Boolean) {
         cdkBuilder.passwordResetRequired(passwordResetRequired)
       }
 
-      public override fun passwordResetRequired(passwordResetRequired: IResolvable) {
+      override fun passwordResetRequired(passwordResetRequired: IResolvable) {
         cdkBuilder.passwordResetRequired(passwordResetRequired.let(IResolvable::unwrap))
       }
 
@@ -244,9 +230,9 @@ public open class CfnUser internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty,
     ) : LoginProfileProperty {
-      public override fun password(): String = unwrap(this).getPassword()
+      override fun password(): String = unwrap(this).getPassword()
 
-      public override fun passwordResetRequired(): Any? = unwrap(this).getPasswordResetRequired()
+      override fun passwordResetRequired(): Any? = unwrap(this).getPasswordResetRequired()
     }
 
     public companion object {
@@ -275,22 +261,20 @@ public open class CfnUser internal constructor(
     public fun policyName(): String
 
     public interface Builder {
-      public fun policyDocument(policyDocument: Any) {
-      }
+      public fun policyDocument(policyDocument: Any)
 
-      public fun policyName(policyName: String) {
-      }
+      public fun policyName(policyName: String)
     }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty.Builder =
           software.amazon.awscdk.services.iam.CfnUser.PolicyProperty.builder()
 
-      public override fun policyDocument(policyDocument: Any) {
+      override fun policyDocument(policyDocument: Any) {
         cdkBuilder.policyDocument(policyDocument)
       }
 
-      public override fun policyName(policyName: String) {
+      override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
       }
 
@@ -301,9 +285,9 @@ public open class CfnUser internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty,
     ) : PolicyProperty {
-      public override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
+      override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
 
-      public override fun policyName(): String = unwrap(this).getPolicyName()
+      override fun policyName(): String = unwrap(this).getPolicyName()
     }
 
     public companion object {

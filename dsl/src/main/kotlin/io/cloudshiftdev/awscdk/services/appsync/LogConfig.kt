@@ -18,43 +18,38 @@ public interface LogConfig {
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
   public interface Builder {
-    public fun excludeVerboseContent(excludeVerboseContent: Boolean) {
-    }
+    public fun excludeVerboseContent(excludeVerboseContent: Boolean)
 
-    public fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
-    }
+    public fun excludeVerboseContent(excludeVerboseContent: IResolvable)
 
-    public fun fieldLogLevel(fieldLogLevel: FieldLogLevel) {
-    }
+    public fun fieldLogLevel(fieldLogLevel: FieldLogLevel)
 
-    public fun retention(retention: RetentionDays) {
-    }
+    public fun retention(retention: RetentionDays)
 
-    public fun role(role: IRole) {
-    }
+    public fun role(role: IRole)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.LogConfig.Builder =
         software.amazon.awscdk.services.appsync.LogConfig.builder()
 
-    public override fun excludeVerboseContent(excludeVerboseContent: Boolean) {
+    override fun excludeVerboseContent(excludeVerboseContent: Boolean) {
       cdkBuilder.excludeVerboseContent(excludeVerboseContent)
     }
 
-    public override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
+    override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
       cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable::unwrap))
     }
 
-    public override fun fieldLogLevel(fieldLogLevel: FieldLogLevel) {
+    override fun fieldLogLevel(fieldLogLevel: FieldLogLevel) {
       cdkBuilder.fieldLogLevel(fieldLogLevel.let(FieldLogLevel::unwrap))
     }
 
-    public override fun retention(retention: RetentionDays) {
+    override fun retention(retention: RetentionDays) {
       cdkBuilder.retention(retention.let(RetentionDays::unwrap))
     }
 
-    public override fun role(role: IRole) {
+    override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
 
@@ -64,15 +59,14 @@ public interface LogConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.LogConfig,
   ) : LogConfig {
-    public override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
+    override fun excludeVerboseContent(): Any? = unwrap(this).getExcludeVerboseContent()
 
-    public override fun fieldLogLevel(): FieldLogLevel? =
+    override fun fieldLogLevel(): FieldLogLevel? =
         unwrap(this).getFieldLogLevel()?.let(FieldLogLevel::wrap)
 
-    public override fun retention(): RetentionDays? =
-        unwrap(this).getRetention()?.let(RetentionDays::wrap)
+    override fun retention(): RetentionDays? = unwrap(this).getRetention()?.let(RetentionDays::wrap)
 
-    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+    override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 
   public companion object {

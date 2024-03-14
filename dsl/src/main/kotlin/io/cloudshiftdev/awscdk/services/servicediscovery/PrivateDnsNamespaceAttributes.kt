@@ -11,14 +11,11 @@ public interface PrivateDnsNamespaceAttributes {
   public fun namespaceName(): String
 
   public interface Builder {
-    public fun namespaceArn(namespaceArn: String) {
-    }
+    public fun namespaceArn(namespaceArn: String)
 
-    public fun namespaceId(namespaceId: String) {
-    }
+    public fun namespaceId(namespaceId: String)
 
-    public fun namespaceName(namespaceName: String) {
-    }
+    public fun namespaceName(namespaceName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,15 +23,15 @@ public interface PrivateDnsNamespaceAttributes {
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes.Builder =
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes.builder()
 
-    public override fun namespaceArn(namespaceArn: String) {
+    override fun namespaceArn(namespaceArn: String) {
       cdkBuilder.namespaceArn(namespaceArn)
     }
 
-    public override fun namespaceId(namespaceId: String) {
+    override fun namespaceId(namespaceId: String) {
       cdkBuilder.namespaceId(namespaceId)
     }
 
-    public override fun namespaceName(namespaceName: String) {
+    override fun namespaceName(namespaceName: String) {
       cdkBuilder.namespaceName(namespaceName)
     }
 
@@ -47,11 +44,11 @@ public interface PrivateDnsNamespaceAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes,
   ) : PrivateDnsNamespaceAttributes {
-    public override fun namespaceArn(): String = unwrap(this).getNamespaceArn()
+    override fun namespaceArn(): String = unwrap(this).getNamespaceArn()
 
-    public override fun namespaceId(): String = unwrap(this).getNamespaceId()
+    override fun namespaceId(): String = unwrap(this).getNamespaceId()
 
-    public override fun namespaceName(): String = unwrap(this).getNamespaceName()
+    override fun namespaceName(): String = unwrap(this).getNamespaceName()
   }
 
   public companion object {

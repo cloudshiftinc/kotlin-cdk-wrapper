@@ -72,29 +72,21 @@ public open class CfnGroupVersion internal constructor(
   }
 
   public interface Builder {
-    public fun connectorDefinitionVersionArn(connectorDefinitionVersionArn: String) {
-    }
+    public fun connectorDefinitionVersionArn(connectorDefinitionVersionArn: String)
 
-    public fun coreDefinitionVersionArn(coreDefinitionVersionArn: String) {
-    }
+    public fun coreDefinitionVersionArn(coreDefinitionVersionArn: String)
 
-    public fun deviceDefinitionVersionArn(deviceDefinitionVersionArn: String) {
-    }
+    public fun deviceDefinitionVersionArn(deviceDefinitionVersionArn: String)
 
-    public fun functionDefinitionVersionArn(functionDefinitionVersionArn: String) {
-    }
+    public fun functionDefinitionVersionArn(functionDefinitionVersionArn: String)
 
-    public fun groupId(groupId: String) {
-    }
+    public fun groupId(groupId: String)
 
-    public fun loggerDefinitionVersionArn(loggerDefinitionVersionArn: String) {
-    }
+    public fun loggerDefinitionVersionArn(loggerDefinitionVersionArn: String)
 
-    public fun resourceDefinitionVersionArn(resourceDefinitionVersionArn: String) {
-    }
+    public fun resourceDefinitionVersionArn(resourceDefinitionVersionArn: String)
 
-    public fun subscriptionDefinitionVersionArn(subscriptionDefinitionVersionArn: String) {
-    }
+    public fun subscriptionDefinitionVersionArn(subscriptionDefinitionVersionArn: String)
   }
 
   private class BuilderImpl(
@@ -104,35 +96,35 @@ public open class CfnGroupVersion internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.greengrass.CfnGroupVersion.Builder =
         software.amazon.awscdk.services.greengrass.CfnGroupVersion.Builder.create(scope, id)
 
-    public override fun connectorDefinitionVersionArn(connectorDefinitionVersionArn: String) {
+    override fun connectorDefinitionVersionArn(connectorDefinitionVersionArn: String) {
       cdkBuilder.connectorDefinitionVersionArn(connectorDefinitionVersionArn)
     }
 
-    public override fun coreDefinitionVersionArn(coreDefinitionVersionArn: String) {
+    override fun coreDefinitionVersionArn(coreDefinitionVersionArn: String) {
       cdkBuilder.coreDefinitionVersionArn(coreDefinitionVersionArn)
     }
 
-    public override fun deviceDefinitionVersionArn(deviceDefinitionVersionArn: String) {
+    override fun deviceDefinitionVersionArn(deviceDefinitionVersionArn: String) {
       cdkBuilder.deviceDefinitionVersionArn(deviceDefinitionVersionArn)
     }
 
-    public override fun functionDefinitionVersionArn(functionDefinitionVersionArn: String) {
+    override fun functionDefinitionVersionArn(functionDefinitionVersionArn: String) {
       cdkBuilder.functionDefinitionVersionArn(functionDefinitionVersionArn)
     }
 
-    public override fun groupId(groupId: String) {
+    override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
     }
 
-    public override fun loggerDefinitionVersionArn(loggerDefinitionVersionArn: String) {
+    override fun loggerDefinitionVersionArn(loggerDefinitionVersionArn: String) {
       cdkBuilder.loggerDefinitionVersionArn(loggerDefinitionVersionArn)
     }
 
-    public override fun resourceDefinitionVersionArn(resourceDefinitionVersionArn: String) {
+    override fun resourceDefinitionVersionArn(resourceDefinitionVersionArn: String) {
       cdkBuilder.resourceDefinitionVersionArn(resourceDefinitionVersionArn)
     }
 
-    public override fun subscriptionDefinitionVersionArn(subscriptionDefinitionVersionArn: String) {
+    override fun subscriptionDefinitionVersionArn(subscriptionDefinitionVersionArn: String) {
       cdkBuilder.subscriptionDefinitionVersionArn(subscriptionDefinitionVersionArn)
     }
 

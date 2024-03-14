@@ -14,30 +14,29 @@ public interface IStringParameter : IParameter {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ssm.IStringParameter,
   ) : IStringParameter {
-    public override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    public override fun env(): ResourceEnvironment =
-        unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    public override fun grantRead(arg0: IGrantable): Grant =
+    override fun grantRead(arg0: IGrantable): Grant =
         unwrap(this).grantRead(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun grantWrite(arg0: IGrantable): Grant =
+    override fun grantWrite(arg0: IGrantable): Grant =
         unwrap(this).grantWrite(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
 
-    public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    public override fun parameterArn(): String = unwrap(this).getParameterArn()
+    override fun parameterArn(): String = unwrap(this).getParameterArn()
 
-    public override fun parameterName(): String = unwrap(this).getParameterName()
+    override fun parameterName(): String = unwrap(this).getParameterName()
 
-    public override fun parameterType(): String = unwrap(this).getParameterType()
+    override fun parameterType(): String = unwrap(this).getParameterType()
 
-    public override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    public override fun stringValue(): String = unwrap(this).getStringValue()
+    override fun stringValue(): String = unwrap(this).getStringValue()
   }
 
   public companion object {

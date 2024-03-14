@@ -73,20 +73,15 @@ public open class CfnIPAM internal constructor(
   }
 
   public interface Builder {
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun operatingRegions(operatingRegions: IResolvable) {
-    }
+    public fun operatingRegions(operatingRegions: IResolvable)
 
-    public fun operatingRegions(operatingRegions: List<Any>) {
-    }
+    public fun operatingRegions(operatingRegions: List<Any>)
 
-    public fun tags(tags: List<CfnTag>) {
-    }
+    public fun tags(tags: List<CfnTag>)
 
-    public fun tier(tier: String) {
-    }
+    public fun tier(tier: String)
   }
 
   private class BuilderImpl(
@@ -96,23 +91,23 @@ public open class CfnIPAM internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnIPAM.Builder =
         software.amazon.awscdk.services.ec2.CfnIPAM.Builder.create(scope, id)
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun operatingRegions(operatingRegions: IResolvable) {
+    override fun operatingRegions(operatingRegions: IResolvable) {
       cdkBuilder.operatingRegions(operatingRegions.let(IResolvable::unwrap))
     }
 
-    public override fun operatingRegions(operatingRegions: List<Any>) {
+    override fun operatingRegions(operatingRegions: List<Any>) {
       cdkBuilder.operatingRegions(operatingRegions)
     }
 
-    public override fun tags(tags: List<CfnTag>) {
+    override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    public override fun tier(tier: String) {
+    override fun tier(tier: String) {
       cdkBuilder.tier(tier)
     }
 
@@ -144,8 +139,7 @@ public open class CfnIPAM internal constructor(
     public fun regionName(): String
 
     public interface Builder {
-      public fun regionName(regionName: String) {
-      }
+      public fun regionName(regionName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -153,7 +147,7 @@ public open class CfnIPAM internal constructor(
           software.amazon.awscdk.services.ec2.CfnIPAM.IpamOperatingRegionProperty.Builder =
           software.amazon.awscdk.services.ec2.CfnIPAM.IpamOperatingRegionProperty.builder()
 
-      public override fun regionName(regionName: String) {
+      override fun regionName(regionName: String) {
         cdkBuilder.regionName(regionName)
       }
 
@@ -165,7 +159,7 @@ public open class CfnIPAM internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnIPAM.IpamOperatingRegionProperty,
     ) : IpamOperatingRegionProperty {
-      public override fun regionName(): String = unwrap(this).getRegionName()
+      override fun regionName(): String = unwrap(this).getRegionName()
     }
 
     public companion object {

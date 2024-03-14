@@ -176,84 +176,60 @@ public open class CfnWorkspace internal constructor(
       vpcConfiguration(VpcConfigurationProperty(`value`))
 
   public interface Builder {
-    public fun accountAccessType(accountAccessType: String) {
-    }
+    public fun accountAccessType(accountAccessType: String)
 
-    public fun authenticationProviders(authenticationProviders: List<String>) {
-    }
+    public fun authenticationProviders(authenticationProviders: List<String>)
 
-    public fun clientToken(clientToken: String) {
-    }
+    public fun clientToken(clientToken: String)
 
-    public fun dataSources(dataSources: List<String>) {
-    }
+    public fun dataSources(dataSources: List<String>)
 
-    public fun description(description: String) {
-    }
+    public fun description(description: String)
 
-    public fun grafanaVersion(grafanaVersion: String) {
-    }
+    public fun grafanaVersion(grafanaVersion: String)
 
-    public fun name(name: String) {
-    }
+    public fun name(name: String)
 
-    public fun networkAccessControl(networkAccessControl: IResolvable) {
-    }
+    public fun networkAccessControl(networkAccessControl: IResolvable)
 
-    public fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty) {
-    }
+    public fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df2922984192277a6cb4babdf86c15baf8ea0664de96e9273ca37d3ccaf3d04d")
     public
-        fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty.Builder.() -> Unit) {
-    }
+        fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty.Builder.() -> Unit)
 
-    public fun notificationDestinations(notificationDestinations: List<String>) {
-    }
+    public fun notificationDestinations(notificationDestinations: List<String>)
 
-    public fun organizationRoleName(organizationRoleName: String) {
-    }
+    public fun organizationRoleName(organizationRoleName: String)
 
-    public fun organizationalUnits(organizationalUnits: List<String>) {
-    }
+    public fun organizationalUnits(organizationalUnits: List<String>)
 
-    public fun permissionType(permissionType: String) {
-    }
+    public fun permissionType(permissionType: String)
 
-    public fun pluginAdminEnabled(pluginAdminEnabled: Boolean) {
-    }
+    public fun pluginAdminEnabled(pluginAdminEnabled: Boolean)
 
-    public fun pluginAdminEnabled(pluginAdminEnabled: IResolvable) {
-    }
+    public fun pluginAdminEnabled(pluginAdminEnabled: IResolvable)
 
-    public fun roleArn(roleArn: String) {
-    }
+    public fun roleArn(roleArn: String)
 
-    public fun samlConfiguration(samlConfiguration: IResolvable) {
-    }
+    public fun samlConfiguration(samlConfiguration: IResolvable)
 
-    public fun samlConfiguration(samlConfiguration: SamlConfigurationProperty) {
-    }
+    public fun samlConfiguration(samlConfiguration: SamlConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19f9da4b10020d14cb5d2bc9761e2de07ca9b315e7d18d487e8454cf8b620839")
-    public fun samlConfiguration(samlConfiguration: SamlConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun samlConfiguration(samlConfiguration: SamlConfigurationProperty.Builder.() -> Unit)
 
-    public fun stackSetName(stackSetName: String) {
-    }
+    public fun stackSetName(stackSetName: String)
 
-    public fun vpcConfiguration(vpcConfiguration: IResolvable) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: IResolvable)
 
-    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e2b9aa7bdef0230100506279e9d2fd971b43162c1bd618c02fec5efd930d5b25")
-    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit) {
-    }
+    public fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -263,107 +239,105 @@ public open class CfnWorkspace internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.grafana.CfnWorkspace.Builder =
         software.amazon.awscdk.services.grafana.CfnWorkspace.Builder.create(scope, id)
 
-    public override fun accountAccessType(accountAccessType: String) {
+    override fun accountAccessType(accountAccessType: String) {
       cdkBuilder.accountAccessType(accountAccessType)
     }
 
-    public override fun authenticationProviders(authenticationProviders: List<String>) {
+    override fun authenticationProviders(authenticationProviders: List<String>) {
       cdkBuilder.authenticationProviders(authenticationProviders)
     }
 
-    public override fun clientToken(clientToken: String) {
+    override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
 
-    public override fun dataSources(dataSources: List<String>) {
+    override fun dataSources(dataSources: List<String>) {
       cdkBuilder.dataSources(dataSources)
     }
 
-    public override fun description(description: String) {
+    override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
-    public override fun grafanaVersion(grafanaVersion: String) {
+    override fun grafanaVersion(grafanaVersion: String) {
       cdkBuilder.grafanaVersion(grafanaVersion)
     }
 
-    public override fun name(name: String) {
+    override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
-    public override fun networkAccessControl(networkAccessControl: IResolvable) {
+    override fun networkAccessControl(networkAccessControl: IResolvable) {
       cdkBuilder.networkAccessControl(networkAccessControl.let(IResolvable::unwrap))
     }
 
-    public override fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty) {
+    override fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty) {
       cdkBuilder.networkAccessControl(networkAccessControl.let(NetworkAccessControlProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df2922984192277a6cb4babdf86c15baf8ea0664de96e9273ca37d3ccaf3d04d")
-    public override
+    override
         fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty.Builder.() -> Unit):
         Unit = networkAccessControl(NetworkAccessControlProperty(networkAccessControl))
 
-    public override fun notificationDestinations(notificationDestinations: List<String>) {
+    override fun notificationDestinations(notificationDestinations: List<String>) {
       cdkBuilder.notificationDestinations(notificationDestinations)
     }
 
-    public override fun organizationRoleName(organizationRoleName: String) {
+    override fun organizationRoleName(organizationRoleName: String) {
       cdkBuilder.organizationRoleName(organizationRoleName)
     }
 
-    public override fun organizationalUnits(organizationalUnits: List<String>) {
+    override fun organizationalUnits(organizationalUnits: List<String>) {
       cdkBuilder.organizationalUnits(organizationalUnits)
     }
 
-    public override fun permissionType(permissionType: String) {
+    override fun permissionType(permissionType: String) {
       cdkBuilder.permissionType(permissionType)
     }
 
-    public override fun pluginAdminEnabled(pluginAdminEnabled: Boolean) {
+    override fun pluginAdminEnabled(pluginAdminEnabled: Boolean) {
       cdkBuilder.pluginAdminEnabled(pluginAdminEnabled)
     }
 
-    public override fun pluginAdminEnabled(pluginAdminEnabled: IResolvable) {
+    override fun pluginAdminEnabled(pluginAdminEnabled: IResolvable) {
       cdkBuilder.pluginAdminEnabled(pluginAdminEnabled.let(IResolvable::unwrap))
     }
 
-    public override fun roleArn(roleArn: String) {
+    override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
-    public override fun samlConfiguration(samlConfiguration: IResolvable) {
+    override fun samlConfiguration(samlConfiguration: IResolvable) {
       cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun samlConfiguration(samlConfiguration: SamlConfigurationProperty) {
+    override fun samlConfiguration(samlConfiguration: SamlConfigurationProperty) {
       cdkBuilder.samlConfiguration(samlConfiguration.let(SamlConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("19f9da4b10020d14cb5d2bc9761e2de07ca9b315e7d18d487e8454cf8b620839")
-    public override
-        fun samlConfiguration(samlConfiguration: SamlConfigurationProperty.Builder.() -> Unit): Unit
-        = samlConfiguration(SamlConfigurationProperty(samlConfiguration))
+    override fun samlConfiguration(samlConfiguration: SamlConfigurationProperty.Builder.() -> Unit):
+        Unit = samlConfiguration(SamlConfigurationProperty(samlConfiguration))
 
-    public override fun stackSetName(stackSetName: String) {
+    override fun stackSetName(stackSetName: String) {
       cdkBuilder.stackSetName(stackSetName)
     }
 
-    public override fun vpcConfiguration(vpcConfiguration: IResolvable) {
+    override fun vpcConfiguration(vpcConfiguration: IResolvable) {
       cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
     }
 
-    public override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
+    override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
       cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
     }
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e2b9aa7bdef0230100506279e9d2fd971b43162c1bd618c02fec5efd930d5b25")
-    public override
-        fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit): Unit =
-        vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
+    override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty.Builder.() -> Unit):
+        Unit = vpcConfiguration(VpcConfigurationProperty(vpcConfiguration))
 
     public fun build(): software.amazon.awscdk.services.grafana.CfnWorkspace = cdkBuilder.build()
   }
@@ -403,23 +377,17 @@ public open class CfnWorkspace internal constructor(
     public fun role(): String? = unwrap(this).getRole()
 
     public interface Builder {
-      public fun email(email: String) {
-      }
+      public fun email(email: String)
 
-      public fun groups(groups: String) {
-      }
+      public fun groups(groups: String)
 
-      public fun login(login: String) {
-      }
+      public fun login(login: String)
 
-      public fun name(name: String) {
-      }
+      public fun name(name: String)
 
-      public fun org(org: String) {
-      }
+      public fun org(org: String)
 
-      public fun role(role: String) {
-      }
+      public fun role(role: String)
     }
 
     private class BuilderImpl : Builder {
@@ -427,27 +395,27 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty.Builder =
           software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty.builder()
 
-      public override fun email(email: String) {
+      override fun email(email: String) {
         cdkBuilder.email(email)
       }
 
-      public override fun groups(groups: String) {
+      override fun groups(groups: String) {
         cdkBuilder.groups(groups)
       }
 
-      public override fun login(login: String) {
+      override fun login(login: String) {
         cdkBuilder.login(login)
       }
 
-      public override fun name(name: String) {
+      override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
-      public override fun org(org: String) {
+      override fun org(org: String) {
         cdkBuilder.org(org)
       }
 
-      public override fun role(role: String) {
+      override fun role(role: String) {
         cdkBuilder.role(role)
       }
 
@@ -460,17 +428,17 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.AssertionAttributesProperty,
     ) : AssertionAttributesProperty {
-      public override fun email(): String? = unwrap(this).getEmail()
+      override fun email(): String? = unwrap(this).getEmail()
 
-      public override fun groups(): String? = unwrap(this).getGroups()
+      override fun groups(): String? = unwrap(this).getGroups()
 
-      public override fun login(): String? = unwrap(this).getLogin()
+      override fun login(): String? = unwrap(this).getLogin()
 
-      public override fun name(): String? = unwrap(this).getName()
+      override fun name(): String? = unwrap(this).getName()
 
-      public override fun org(): String? = unwrap(this).getOrg()
+      override fun org(): String? = unwrap(this).getOrg()
 
-      public override fun role(): String? = unwrap(this).getRole()
+      override fun role(): String? = unwrap(this).getRole()
     }
 
     public companion object {
@@ -499,11 +467,9 @@ public open class CfnWorkspace internal constructor(
     public fun xml(): String? = unwrap(this).getXml()
 
     public interface Builder {
-      public fun url(url: String) {
-      }
+      public fun url(url: String)
 
-      public fun xml(xml: String) {
-      }
+      public fun xml(xml: String)
     }
 
     private class BuilderImpl : Builder {
@@ -511,11 +477,11 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty.Builder =
           software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty.builder()
 
-      public override fun url(url: String) {
+      override fun url(url: String) {
         cdkBuilder.url(url)
       }
 
-      public override fun xml(xml: String) {
+      override fun xml(xml: String) {
         cdkBuilder.xml(xml)
       }
 
@@ -527,9 +493,9 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.IdpMetadataProperty,
     ) : IdpMetadataProperty {
-      public override fun url(): String? = unwrap(this).getUrl()
+      override fun url(): String? = unwrap(this).getUrl()
 
-      public override fun xml(): String? = unwrap(this).getXml()
+      override fun xml(): String? = unwrap(this).getXml()
     }
 
     public companion object {
@@ -565,45 +531,34 @@ public open class CfnWorkspace internal constructor(
     public fun roleValues(): Any? = unwrap(this).getRoleValues()
 
     public interface Builder {
-      public fun allowedOrganizations(allowedOrganizations: List<String>) {
-      }
+      public fun allowedOrganizations(allowedOrganizations: List<String>)
 
-      public fun assertionAttributes(assertionAttributes: IResolvable) {
-      }
+      public fun assertionAttributes(assertionAttributes: IResolvable)
 
-      public fun assertionAttributes(assertionAttributes: AssertionAttributesProperty) {
-      }
+      public fun assertionAttributes(assertionAttributes: AssertionAttributesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("04e8718853837bb26880a91e92d3c04665c0bb5204515f23f9cde811673e1eb2")
       public
-          fun assertionAttributes(assertionAttributes: AssertionAttributesProperty.Builder.() -> Unit) {
-      }
+          fun assertionAttributes(assertionAttributes: AssertionAttributesProperty.Builder.() -> Unit)
 
-      public fun idpMetadata(idpMetadata: IResolvable) {
-      }
+      public fun idpMetadata(idpMetadata: IResolvable)
 
-      public fun idpMetadata(idpMetadata: IdpMetadataProperty) {
-      }
+      public fun idpMetadata(idpMetadata: IdpMetadataProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21db845b00d8cebed8b48c0525e0e7ebc5800bc202c0bb6bbed0a2f90ba0fdaa")
-      public fun idpMetadata(idpMetadata: IdpMetadataProperty.Builder.() -> Unit) {
-      }
+      public fun idpMetadata(idpMetadata: IdpMetadataProperty.Builder.() -> Unit)
 
-      public fun loginValidityDuration(loginValidityDuration: Number) {
-      }
+      public fun loginValidityDuration(loginValidityDuration: Number)
 
-      public fun roleValues(roleValues: IResolvable) {
-      }
+      public fun roleValues(roleValues: IResolvable)
 
-      public fun roleValues(roleValues: RoleValuesProperty) {
-      }
+      public fun roleValues(roleValues: RoleValuesProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ceb493a89a71363274d243185fa55a080b787a7563005bb6ca53f91798daa70")
-      public fun roleValues(roleValues: RoleValuesProperty.Builder.() -> Unit) {
-      }
+      public fun roleValues(roleValues: RoleValuesProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -611,52 +566,52 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty.Builder =
           software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty.builder()
 
-      public override fun allowedOrganizations(allowedOrganizations: List<String>) {
+      override fun allowedOrganizations(allowedOrganizations: List<String>) {
         cdkBuilder.allowedOrganizations(allowedOrganizations)
       }
 
-      public override fun assertionAttributes(assertionAttributes: IResolvable) {
+      override fun assertionAttributes(assertionAttributes: IResolvable) {
         cdkBuilder.assertionAttributes(assertionAttributes.let(IResolvable::unwrap))
       }
 
-      public override fun assertionAttributes(assertionAttributes: AssertionAttributesProperty) {
+      override fun assertionAttributes(assertionAttributes: AssertionAttributesProperty) {
         cdkBuilder.assertionAttributes(assertionAttributes.let(AssertionAttributesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("04e8718853837bb26880a91e92d3c04665c0bb5204515f23f9cde811673e1eb2")
-      public override
+      override
           fun assertionAttributes(assertionAttributes: AssertionAttributesProperty.Builder.() -> Unit):
           Unit = assertionAttributes(AssertionAttributesProperty(assertionAttributes))
 
-      public override fun idpMetadata(idpMetadata: IResolvable) {
+      override fun idpMetadata(idpMetadata: IResolvable) {
         cdkBuilder.idpMetadata(idpMetadata.let(IResolvable::unwrap))
       }
 
-      public override fun idpMetadata(idpMetadata: IdpMetadataProperty) {
+      override fun idpMetadata(idpMetadata: IdpMetadataProperty) {
         cdkBuilder.idpMetadata(idpMetadata.let(IdpMetadataProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21db845b00d8cebed8b48c0525e0e7ebc5800bc202c0bb6bbed0a2f90ba0fdaa")
-      public override fun idpMetadata(idpMetadata: IdpMetadataProperty.Builder.() -> Unit): Unit =
+      override fun idpMetadata(idpMetadata: IdpMetadataProperty.Builder.() -> Unit): Unit =
           idpMetadata(IdpMetadataProperty(idpMetadata))
 
-      public override fun loginValidityDuration(loginValidityDuration: Number) {
+      override fun loginValidityDuration(loginValidityDuration: Number) {
         cdkBuilder.loginValidityDuration(loginValidityDuration)
       }
 
-      public override fun roleValues(roleValues: IResolvable) {
+      override fun roleValues(roleValues: IResolvable) {
         cdkBuilder.roleValues(roleValues.let(IResolvable::unwrap))
       }
 
-      public override fun roleValues(roleValues: RoleValuesProperty) {
+      override fun roleValues(roleValues: RoleValuesProperty) {
         cdkBuilder.roleValues(roleValues.let(RoleValuesProperty::unwrap))
       }
 
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9ceb493a89a71363274d243185fa55a080b787a7563005bb6ca53f91798daa70")
-      public override fun roleValues(roleValues: RoleValuesProperty.Builder.() -> Unit): Unit =
+      override fun roleValues(roleValues: RoleValuesProperty.Builder.() -> Unit): Unit =
           roleValues(RoleValuesProperty(roleValues))
 
       public fun build():
@@ -668,16 +623,16 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.SamlConfigurationProperty,
     ) : SamlConfigurationProperty {
-      public override fun allowedOrganizations(): List<String> =
-          unwrap(this).getAllowedOrganizations() ?: emptyList()
+      override fun allowedOrganizations(): List<String> = unwrap(this).getAllowedOrganizations() ?:
+          emptyList()
 
-      public override fun assertionAttributes(): Any? = unwrap(this).getAssertionAttributes()
+      override fun assertionAttributes(): Any? = unwrap(this).getAssertionAttributes()
 
-      public override fun idpMetadata(): Any = unwrap(this).getIdpMetadata()
+      override fun idpMetadata(): Any = unwrap(this).getIdpMetadata()
 
-      public override fun loginValidityDuration(): Number? = unwrap(this).getLoginValidityDuration()
+      override fun loginValidityDuration(): Number? = unwrap(this).getLoginValidityDuration()
 
-      public override fun roleValues(): Any? = unwrap(this).getRoleValues()
+      override fun roleValues(): Any? = unwrap(this).getRoleValues()
     }
 
     public companion object {
@@ -706,11 +661,9 @@ public open class CfnWorkspace internal constructor(
     public fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
 
     public interface Builder {
-      public fun prefixListIds(prefixListIds: List<String>) {
-      }
+      public fun prefixListIds(prefixListIds: List<String>)
 
-      public fun vpceIds(vpceIds: List<String>) {
-      }
+      public fun vpceIds(vpceIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -719,11 +672,11 @@ public open class CfnWorkspace internal constructor(
           =
           software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty.builder()
 
-      public override fun prefixListIds(prefixListIds: List<String>) {
+      override fun prefixListIds(prefixListIds: List<String>) {
         cdkBuilder.prefixListIds(prefixListIds)
       }
 
-      public override fun vpceIds(vpceIds: List<String>) {
+      override fun vpceIds(vpceIds: List<String>) {
         cdkBuilder.vpceIds(vpceIds)
       }
 
@@ -736,10 +689,9 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty,
     ) : NetworkAccessControlProperty {
-      public override fun prefixListIds(): List<String> = unwrap(this).getPrefixListIds() ?:
-          emptyList()
+      override fun prefixListIds(): List<String> = unwrap(this).getPrefixListIds() ?: emptyList()
 
-      public override fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
+      override fun vpceIds(): List<String> = unwrap(this).getVpceIds() ?: emptyList()
     }
 
     public companion object {
@@ -768,11 +720,9 @@ public open class CfnWorkspace internal constructor(
     public fun subnetIds(): List<String>
 
     public interface Builder {
-      public fun securityGroupIds(securityGroupIds: List<String>) {
-      }
+      public fun securityGroupIds(securityGroupIds: List<String>)
 
-      public fun subnetIds(subnetIds: List<String>) {
-      }
+      public fun subnetIds(subnetIds: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -780,11 +730,11 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty.Builder =
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty.builder()
 
-      public override fun securityGroupIds(securityGroupIds: List<String>) {
+      override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
-      public override fun subnetIds(subnetIds: List<String>) {
+      override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
 
@@ -797,10 +747,10 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      public override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      public override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
     }
 
     public companion object {
@@ -829,11 +779,9 @@ public open class CfnWorkspace internal constructor(
     public fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
 
     public interface Builder {
-      public fun admin(admin: List<String>) {
-      }
+      public fun admin(admin: List<String>)
 
-      public fun editor(editor: List<String>) {
-      }
+      public fun editor(editor: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -841,11 +789,11 @@ public open class CfnWorkspace internal constructor(
           software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty.Builder =
           software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty.builder()
 
-      public override fun admin(admin: List<String>) {
+      override fun admin(admin: List<String>) {
         cdkBuilder.admin(admin)
       }
 
-      public override fun editor(editor: List<String>) {
+      override fun editor(editor: List<String>) {
         cdkBuilder.editor(editor)
       }
 
@@ -857,9 +805,9 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty,
     ) : RoleValuesProperty {
-      public override fun admin(): List<String> = unwrap(this).getAdmin() ?: emptyList()
+      override fun admin(): List<String> = unwrap(this).getAdmin() ?: emptyList()
 
-      public override fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
+      override fun editor(): List<String> = unwrap(this).getEditor() ?: emptyList()
     }
 
     public companion object {
